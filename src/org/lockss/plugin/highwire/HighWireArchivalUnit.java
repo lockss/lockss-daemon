@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.37 2003-10-24 07:39:01 eaalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.38 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for pause time in Highwire crawling.
    */
-  public static final String AUPARAM_PAUSE_TIME = "pause_time";
+  public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   /**
@@ -62,21 +62,15 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public static final String AUPARAM_USE_CRAWL_WINDOW = "use_crawl_window";
   private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
 
-  private static final String EXPECTED_URL_PATH = "/";
 
   protected Logger logger = Logger.getLogger(LOG_NAME);
-  private long pauseMS;
 
   private int volume;
-  private URL base;
 
-  public static final String AUPARAM_NC_INTERVAL = "nc_interval";
-  private static final long DEFAULT_NC_INTERVAL = 14 * Constants.DAY;;
+  public static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
+  private static final long DEFAULT_NEW_CONTENT_CRAWL = 14 * Constants.DAY;;
 
-  private long ncCrawlInterval;
   private boolean useCrawlWindow;
-
-
 
   /**
    * Standard constructor for HighWireArchivalUnit.
@@ -87,73 +81,6 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     super(myPlugin);
   }
 
-
-  public void setConfiguration(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    super.setConfiguration(config);
-
-    logger.debug3("Changing config: "+config);
-
-    if (config == null) {
-      throw new ArchivalUnit.ConfigurationException("Null configInfo");
-    }
-    String urlStr = config.get(HighWirePlugin.AUPARAM_BASE_URL);
-    if (urlStr == null) {
-      throw new
-	ArchivalUnit.ConfigurationException("No configuration value for "+
-					    HighWirePlugin.AUPARAM_BASE_URL);
-    }
-    String volStr = config.get(HighWirePlugin.AUPARAM_VOL);
-    if (volStr == null) {
-      throw new
-	ArchivalUnit.ConfigurationException("No configuration value for "+
-					    HighWirePlugin.AUPARAM_VOL);
-    }
-
-    try {
-      this.base = new URL(urlStr);
-      this.volume = Integer.parseInt(volStr);
-
-    } catch (MalformedURLException murle) {
-      throw new
-	ArchivalUnit.ConfigurationException("Bad base URL", murle);
-    } catch (NumberFormatException e) {
-      throw new
-	ArchivalUnit.ConfigurationException("Bad volume number", e);
-    }
-    if (base == null) {
-      throw new ArchivalUnit.ConfigurationException("Null base url");
-    } if (volume < 0) {
-      throw new ArchivalUnit.ConfigurationException("Negative volume");
-    } if (!EXPECTED_URL_PATH.equals(base.getPath())) {
-      throw new ArchivalUnit.ConfigurationException("Url has illegal path: "+
-						    base.getPath());
-    }
-
-    useCrawlWindow = config.getBoolean(AUPARAM_USE_CRAWL_WINDOW,
-                                       DEFAULT_USE_CRAWL_WINDOW);
-    logger.debug3("Setting 'use crawl window' to "+useCrawlWindow);
-
-    try {
-      this.crawlSpec = makeCrawlSpec(base, volume);
-    } catch (REException e) {
-      // tk - not right.  Illegal RE is caused by internal error, not config
-      // error
-      throw new ArchivalUnit.ConfigurationException("Illegal RE", e);
-    }
-
-    pauseMS = config.getTimeInterval(AUPARAM_PAUSE_TIME, DEFAULT_PAUSE_TIME);
-    // make sure we never return less than the default
-    pauseMS = Math.max(pauseMS,DEFAULT_PAUSE_TIME);
-    logger.debug3("Set pause value to "+pauseMS);
-
-
-    ncCrawlInterval = config.getTimeInterval(AUPARAM_NC_INTERVAL,
-					     DEFAULT_NC_INTERVAL);
-    logger.debug3("Set new content crawl interval to "+ncCrawlInterval);
-
-  }
-
   public FilterRule getFilterRule(String mimeType) {
     if ("text/html".equals(mimeType)) {
       return new HighWireFilterRule();
@@ -161,22 +88,36 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return null;
   }
 
-  public String getManifestPage() {
-    return makeStartUrl(base, volume);
+  protected void setAuParams(Configuration config)
+      throws ConfigurationException {
+
+    volume = configMap.getInt(HighWirePlugin.AUPARAM_VOL, -1);
+    if (volume < 0) {
+      throw new ConfigurationException("Negative volume");
+    }
+    useCrawlWindow = config.getBoolean(AUPARAM_USE_CRAWL_WINDOW,
+                                       DEFAULT_USE_CRAWL_WINDOW);
+    logger.debug3("Setting 'use crawl window' to " + useCrawlWindow);
   }
 
-  private CrawlSpec makeCrawlSpec(URL base, int volume) throws REException {
-    CrawlRule rule = makeRules(base, volume);
-    CrawlSpec spec = new CrawlSpec(makeStartUrl(base, volume), rule);
+
+  protected CrawlSpec makeCrawlSpec() throws REException {
+    CrawlRule rule = makeRules();
+    CrawlSpec spec = new CrawlSpec(startUrlString, rule);
     if (useCrawlWindow) {
       spec.setCrawlWindow(makeCrawlWindow());
     }
     return spec;
   }
 
-  String makeStartUrl(URL base, int volume) {
+  protected String makeName() {
+    String host = baseUrl.getHost();
+    return host + ", vol. " + volume;
+  }
+
+  protected String makeStartUrl() {
     StringBuffer sb = new StringBuffer();
-    sb.append(base.toString());
+    sb.append(baseUrl.toString());
     sb.append("lockss-volume");
     sb.append(volume);
     sb.append(".shtml");
@@ -184,17 +125,15 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return sb.toString();
   }
 
-  private CrawlRule makeRules(URL urlRoot, int volume)
+  protected CrawlRule makeRules()
       throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
 
-    rules.add(new CrawlRules.RE("^" + urlRoot.toString(),
+    rules.add(new CrawlRules.RE("^" + baseUrl.toString(),
 				CrawlRules.RE.NO_MATCH_EXCLUDE));
-    rules.add(new CrawlRules.RE(urlRoot.toString()+"lockss-volume"+
-				volume+".shtml",
-				incl));
+    rules.add(new CrawlRules.RE(startUrlString, incl));
     rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
     rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
     rules.add(new CrawlRules.RE(".*adclick.*", excl));
@@ -224,45 +163,11 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
                                      null);
   }
 
-  public Collection getUrlStems() {
-    try {
-      URL stem = new URL(base.getProtocol(), base.getHost(), base.getPort(),
-			 "");
-      return ListUtil.list(stem.toString());
-    } catch (MalformedURLException e) {
-      return Collections.EMPTY_LIST;
-    }
-  }
-
-  public long getFetchDelay() {
-    return pauseMS;
-  }
-
-  public String getName() {
-    //     String host = StringUtil.trimHostName(base.getHost());
-    String host = base.getHost();
-    return host + ", vol. " + volume;
-  }
-
   public int getVolumeNumber() {
     return volume;
   }
 
   public URL getBaseUrl() {
-    return base;
-  }
-
-  public boolean shouldCrawlForNewContent(AuState aus) {
-    long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
-    logger.debug("Deciding whether to do new content crawl for "+aus);
-    if (aus.getLastCrawlTime() == 0 ||
-	timeDiff > (ncCrawlInterval)) {
-      return true;
-    }
-    return false;
-  }
-
-  public List getNewContentCrawlUrls() {
-    return ListUtil.list(makeStartUrl(base, volume));
+    return baseUrl;
   }
 }

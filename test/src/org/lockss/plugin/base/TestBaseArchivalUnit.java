@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.9 2003-10-14 22:42:52 eaalto Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.10 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -218,21 +218,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       super(myPlugin);
     }
 
-    public String getName() {
+    protected String makeName() {
       return "MockBaseArchivalUnit";
-    }
-
-    public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-                                            CachedUrlSetSpec cuss) {
-      throw new UnsupportedOperationException("Not supported.");
-    }
-
-    public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-      throw new UnsupportedOperationException("Not supported.");
-    }
-
-    public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-      throw new UnsupportedOperationException("Not supported.");
     }
 
     public List getNewContentCrawlUrls() {
@@ -249,6 +236,19 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     public FilterRule getFilterRule(String mimeType) {
       throw new UnsupportedOperationException("Not implemented");
+    }
+
+    protected CrawlRule makeRules() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    protected String makeStartUrl() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    protected void setAuParams(Configuration config) throws
+        ConfigurationException {
+      // ok to do nothing - so do nothing.
     }
 
   }

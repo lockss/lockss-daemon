@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.3 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.4 2003-11-07 04:12:01 clairegriffin Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class TestIeeeArchivalUnit
         new RangeCachedUrlSetSpec(base.toString()));
 
     // start url - should be cached
-    url = ieeeAu.makeStartUrl(base, PUB_NUMBER, VOL_YEAR);
+    url = ieeeAu.makeStartUrl();
     shouldCacheTest(url, true, ieeeAu, cus);
 
     // issue index page - should be cached
@@ -167,7 +167,7 @@ public class TestIeeeArchivalUnit
         "xpl/RecentIssue.jsp?puNumber=" + PUB_NUMBER + "&year=" + VOL_YEAR;
     URL base = new URL(ROOT_URL);
     IeeeArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
-    assertEquals(expected, ieeeAu.makeStartUrl(base, PUB_NUMBER, VOL_YEAR));
+    assertEquals(expected, ieeeAu.makeStartUrl());
   }
 
   public void testGetUrlStems() throws Exception {

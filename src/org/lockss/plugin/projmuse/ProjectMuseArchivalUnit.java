@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.16 2003-10-28 23:45:43 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.17 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -52,136 +52,23 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
-  static final String AUPARAM_NEW_CONTENT_CRAWL = "nc_interval";
+  static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
   private static final long DEFAULT_NEW_CONTENT_CRAWL = 2 * Constants.WEEK;
 
   /**
    * Configuration parameter for pause time between fetchs.
    */
-  public static final String AUPARAM_PAUSE_TIME = "pause_time";
+  public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
   private static final long DEFAULT_PAUSE_TIME = 6 * Constants.SECOND;
-
-  private static final String EXPECTED_URL_PATH = "/";
 
   protected Logger logger = Logger.getLogger("ProjectMusePlugin");
 
-  private URL baseUrl; // the base Url for the volume
   private int volume; // the volume index
   private String journalDir;
-  private long pauseTime; // the time to pause between fetchs
-  private long newContentCrawlIntv; // the new content crawl interval
 
   protected ProjectMuseArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
-  }
-
-  public Collection getUrlStems() {
-    try {
-      URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
-                         baseUrl.getPort(), "");
-      return ListUtil.list(stem.toString());
-    } catch (MalformedURLException e) {
-      return Collections.EMPTY_LIST;
-    }
-  }
-
-  public String getName() {
-    StringBuffer name = new StringBuffer(baseUrl.getHost());
-    name.append(", ");
-    name.append(journalDir);
-    name.append(", vol. ");
-    name.append(volume);
-    return name.toString();
-  }
-
-  public List getNewContentCrawlUrls() {
-    return ListUtil.list(makeStartUrl(baseUrl, journalDir, volume));
-  }
-
-  public long getFetchDelay() {
-    // make sure that pause time is never less than default
-    return Math.max(pauseTime, DEFAULT_PAUSE_TIME);
-  }
-
-  public void setConfiguration(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    super.setConfiguration(config);
-    String exception;
-
-    if (config == null) {
-      throw new ConfigurationException("Null configInfo");
-    }
-
-    // get the base url string
-    String urlStr = config.get(ProjectMusePlugin.AUPARAM_BASE_URL);
-    if (urlStr == null) {
-      exception = "No configuration value for " +
-          ProjectMusePlugin.AUPARAM_BASE_URL;
-      throw new ConfigurationException(exception);
-    }
-
-    // get the volume string
-    String volStr = config.get(ProjectMusePlugin.AUPARAM_VOL);
-    if (volStr == null) {
-      exception = "No configuration value for " + ProjectMusePlugin.AUPARAM_VOL;
-      throw new ConfigurationException(exception);
-    }
-
-    // get the journal directory
-    journalDir = config.get(ProjectMusePlugin.AUPARAM_JOURNAL_DIR);
-    if ((journalDir == null) || (journalDir.equals(""))) {
-      exception = "No configuration value for " +
-          ProjectMusePlugin.AUPARAM_JOURNAL_DIR;
-      throw new ConfigurationException(exception);
-    }
-
-    // turn them into appropriate types
-    try {
-      baseUrl = new URL(urlStr);
-      volume = Integer.parseInt(volStr);
-
-    } catch (MalformedURLException murle) {
-      throw new ConfigurationException("Bad base URL", murle);
-    } catch (NumberFormatException e) {
-      throw new
-	ArchivalUnit.ConfigurationException("Bad volume number", e);
-    }
-
-    if (baseUrl == null) {
-      throw new ConfigurationException("Null base url");
-    }
-    if (volume < 0) {
-      throw new ConfigurationException("Negative volume");
-    }
-    if (!EXPECTED_URL_PATH.equals(baseUrl.getPath())) {
-      logger.error("Illegal path: "+baseUrl.getPath() + ", expected: " +
-                   EXPECTED_URL_PATH);
-      throw new ConfigurationException("Url has illegal path: " +
-                                       baseUrl.getPath() + ", expected: " +
-                                       EXPECTED_URL_PATH);
-    }
-
-    // make our crawl spec
-    try {
-      crawlSpec = makeCrawlSpec(baseUrl, volume);
-    } catch (REException e) {
-      throw new ConfigurationException("Illegal RE", e);
-    }
-
-    // get the pause time
-    pauseTime = config.getTimeInterval(AUPARAM_PAUSE_TIME, DEFAULT_PAUSE_TIME);
-    logger.debug2("Set pause value to " + pauseTime);
-
-    // get the new content crawl interval
-    newContentCrawlIntv = config.getTimeInterval(AUPARAM_NEW_CONTENT_CRAWL,
-                                                 DEFAULT_NEW_CONTENT_CRAWL);
-    logger.debug2("Set new content crawl interval to " + newContentCrawlIntv);
-  }
-
-  private CrawlSpec makeCrawlSpec(URL base, int volume) throws REException {
-
-    CrawlRule rule = makeRules(base, journalDir, volume);
-    return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule);
+    defaultFetchDelay = DEFAULT_PAUSE_TIME;
   }
 
   /**
@@ -196,17 +83,38 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     return null;
   }
 
-  public String getManifestPage() {
-    return makeStartUrl(baseUrl, journalDir, volume);
+  protected void setAuParams(Configuration config)
+      throws ConfigurationException {
+    // get the base url string
+    volume = configMap.getInt(ProjectMusePlugin.AUPARAM_VOL, -1);
+    if (volume < 0) {
+      throw new ConfigurationException("Negative volume");
+    }
+
+    // get the journal directory
+    journalDir = configMap.getString(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, null);
+
   }
 
-  String makeStartUrl(URL base, String journal, int volume) {
+
+  protected String makeName() {
+    StringBuffer name = new StringBuffer(baseUrl.getHost());
+    name.append(", ");
+    name.append(journalDir);
+    name.append(", vol. ");
+    name.append(volume);
+    return name.toString();
+  }
+
+
+
+  protected String makeStartUrl() {
     String ret;
     StringBuffer sb = new StringBuffer();
-    sb.append(base.toString());
+    sb.append(baseUrl.toString());
     // always 3 digit?
     sb.append("journals/");
-    sb.append(journal);
+    sb.append(journalDir);
     sb.append("/v");
     if (volume < 100) {
       // make 'v66' into 'v066' and 'v1' into 'v001'
@@ -223,27 +131,19 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     return ret;
   }
 
-  private CrawlRule makeRules(URL urlRoot, String journal, int volume)
+  protected CrawlRule makeRules()
       throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
-    rules.add(new CrawlRules.RE("^" + urlRoot.toString(), CrawlRules.RE.NO_MATCH_EXCLUDE));
-    rules.add(new CrawlRules.RE(makeStartUrl(urlRoot, journal, volume), incl));
-    rules.add(new CrawlRules.RE(urlRoot.toString() +
-                                "journals/"+journal+"/toc/[a-zA-Z]*" + volume +
+    String urlRoot = baseUrl.toString();
+    rules.add(new CrawlRules.RE("^" + urlRoot, CrawlRules.RE.NO_MATCH_EXCLUDE));
+    rules.add(new CrawlRules.RE(startUrlString, incl));
+    rules.add(new CrawlRules.RE(urlRoot +
+                                "journals/"+journalDir+"/toc/[a-zA-Z]*" + volume +
                                 "\\..*", incl));
-    rules.add(new CrawlRules.RE(urlRoot.toString() + "images/.*", incl));
+    rules.add(new CrawlRules.RE(urlRoot + "images/.*", incl));
     return new CrawlRules.FirstMatch(rules);
   }
 
-  public boolean shouldCrawlForNewContent(AuState aus) {
-    long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
-    logger.debug("Deciding whether to do new content crawl for "+aus);
-    if (aus.getLastCrawlTime() == 0 ||
-        timeDiff > (newContentCrawlIntv)) {
-      return true;
-    }
-    return false;
-  }
 }

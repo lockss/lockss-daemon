@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.1 2003-10-14 22:45:21 eaalto Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -140,7 +140,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
     String expectedStr = ROOT_URL+"lockss-volume3.html";
     EmlsArchivalUnit eAu = makeAu(url, 3);
-    assertEquals(expectedStr, eAu.makeStartUrl(url, 3));
+    assertEquals(expectedStr, eAu.makeStartUrl());
   }
 
   public void testBadPathInUrlThrowsException() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.2 2003-09-26 23:52:16 eaalto Exp $
+ * $Id: IeeePlugin.java,v 1.3 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -56,20 +56,12 @@ public class IeeePlugin extends BasePlugin {
     PU_NUMBER.setDescription("IEEE publication Number(e.g. '2').");
   }
 
-  static final ConfigParamDescr JOURNAL_YEAR = new ConfigParamDescr();
-  static {
-    JOURNAL_YEAR.setKey("volume_year");
-    JOURNAL_YEAR.setDisplayName("Volume Year");
-    JOURNAL_YEAR.setType(ConfigParamDescr.TYPE_INT);
-    JOURNAL_YEAR.setSize(4);
-    JOURNAL_YEAR.setDescription("Year of volume in form 2003 not 03");
-  }
   private static String PLUGIN_NAME = "IEEE";
   private static String CURRENT_VERSION= "Pre-release";
 
   static final ConfigParamDescr PD_BASE = ConfigParamDescr.BASE_URL;
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
-  static final ConfigParamDescr PD_YEAR = JOURNAL_YEAR;
+  static final ConfigParamDescr PD_YEAR = ConfigParamDescr.YEAR;
   static final ConfigParamDescr PD_PUNUM = PU_NUMBER;
 
 
@@ -88,32 +80,22 @@ public class IeeePlugin extends BasePlugin {
       AUPARAM_YEAR, "2003"}
   };
 
+  public void initPlugin(LockssDaemon daemon){
+    super.initPlugin(daemon);
+    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+                                   ListUtil.list(PD_BASE, PD_PUNUM, PD_YEAR));
+    configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
+                                   ListUtil.list(AUPARAM_BASE_URL, AUPARAM_PUNUM, AUPARAM_YEAR));
+    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
+  }
+
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new IeeeArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public void initPlugin(LockssDaemon daemon) {
-    super.initPlugin(daemon);
-    setTitleConfig(titleSpec);
-  }
-
-  public String getPluginName() {
-    return PLUGIN_NAME;
-  }
-
-  public String getVersion() {
-    return CURRENT_VERSION;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_PUNUM, PD_YEAR);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_PUNUM, AUPARAM_YEAR);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.3 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestAcsPlugin.java,v 1.4 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class TestAcsPlugin extends LockssTestCase {
                                AcsPlugin.ARTICLE_URL,
                                AcsPlugin.JOURNAL_KEY,
 			       ConfigParamDescr.VOLUME_NUMBER,
-                               AcsPlugin.JOURNAL_YEAR),
+                               ConfigParamDescr.YEAR),
 		 plugin.getAuConfigProperties());
   }
 
@@ -111,7 +111,7 @@ public class TestAcsPlugin extends LockssTestCase {
                                AcsPlugin.ARTICLE_URL.getKey(),
                                AcsPlugin.JOURNAL_KEY.getKey(),
 			       ConfigParamDescr.VOLUME_NUMBER.getKey(),
-                               AcsPlugin.JOURNAL_YEAR.getKey()),
+                               ConfigParamDescr.YEAR.getKey()),
 		 plugin.getDefiningConfigKeys());
   }
 

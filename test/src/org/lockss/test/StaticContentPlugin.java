@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.17 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: StaticContentPlugin.java,v 1.18 2003-11-07 04:12:01 clairegriffin Exp $
  */
 
 /*
@@ -94,13 +94,13 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 				       CachedUrlSetSpec cuss) {
     return new SCUS(owner, cuss);
   }
-  
+
   public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
     CachedUrl res = (CachedUrl)cuMap.get(url);;
     log.debug("makeCachedUrl(" + url + ") = " + res);
     return (CachedUrl)cuMap.get(url);
   }
-  
+
   public org.lockss.plugin.UrlCacher makeUrlCacher(CachedUrlSet owner,
 						   String url) {
     throw new UnsupportedOperationException("Not implemented");
@@ -113,13 +113,17 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       super(myPlugin);
     }
 
-    public void setConfiguration(Configuration config)
-	throws ArchivalUnit.ConfigurationException {
-      super.setConfiguration(config);
+    protected String makeName() {
+      return "Static Content AU";
     }
 
-    public String getName() {
-      return "Static Content AU";
+    protected String makeStartUrl() {
+      throw new UnsupportedOperationException("Not Implemented");
+    }
+
+    protected void setAuParams(Configuration config)
+        throws ConfigurationException {
+     // do nothing - don't throw
     }
 
     public boolean shouldBeCached(String url) {
@@ -134,20 +138,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-//     public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-//       return new SCUS(this, cuss);
-//     }
-
-//     public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-//       CachedUrl res = (CachedUrl)cuMap.get(url);;
-//       log.debug("makeCachedUrl(" + url + ") = " + res);
-//       return (CachedUrl)cuMap.get(url);
-//     }
-
-//     public org.lockss.plugin.UrlCacher makeUrlCacher(CachedUrlSet owner,
-//         String url) {
-//       throw new UnsupportedOperationException("Not implemented");
-//     }
 
     public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
 					    CachedUrlSetSpec cuss) {
@@ -190,6 +180,12 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     public String toString() {
       return "[sau: " + cuMap + "]";
     }
+
+    protected CrawlRule makeRules() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+
   }
 
   public class SCU extends BaseCachedUrl {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.38 2003-10-14 22:42:52 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.39 2003-11-07 04:11:59 clairegriffin Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
 import java.text.SimpleDateFormat;
 import java.io.*;
+import java.net.*;
+import org.lockss.daemon.Configuration.*;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -93,24 +95,43 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
 
+  public static final String NEW_CONTENT_CRAWL_KEY = "nc_interval";
+  public static final String PAUSE_TIME_KEY = "pause_time";
+
   public static final String PERMISSION_STRING =
   "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
+  public static final long
+      DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
   protected Plugin plugin;
   protected CrawlSpec crawlSpec;
   private String idStr = null;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
+  protected String expectedUrlPath = "/";
+  protected long minFetchDelay = 6 * Constants.SECOND;
+  protected long fetchDelay;
+  protected long defaultFetchDelay = DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
+  protected String startUrlString;
+  protected long newContentCrawlIntv;
+  protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
+  protected URL baseUrl; // the base Url for the volume
+  protected String auName;
+
   protected long nextPollInterval = -1;
   protected double curTopLevelPollProb = -1;
 
   protected Configuration auConfig;
+  protected ExternalizableMap configMap;
 
   private String auId = null;
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
+    if(myPlugin != null) {
+      configMap = ( (BasePlugin) myPlugin).getConfigurationMap();
+    }
   }
 
   /**
@@ -126,6 +147,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       checkLegalConfigChange(config);
     }
     auConfig = config;
+    if(config == null) {
+      throw new ConfigurationException("Null Configuration");
+    }
+    // TODO: Fix this hack put in for Simulated Plugin support
+    if(okToConfig()) {
+      loadDefiningConfig(config);
+      setAuParams(config);
+      setBaseAuParams(config);
+    }
   }
 
   public Configuration getConfiguration() {
@@ -145,6 +175,64 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 					 +". old: "+oldVal+" new: "+newVal);
       }
     }
+  }
+  private boolean okToConfig() {
+    List descrList = plugin.getAuConfigProperties();
+    Iterator it = descrList.iterator();
+    if(it.hasNext() && it.next() instanceof ConfigParamDescr)
+      return true;
+    return false;
+  }
+
+  void loadDefiningConfig(Configuration config) throws ConfigurationException {
+    List descrList = plugin.getAuConfigProperties();
+    for (Iterator it = descrList.iterator(); it.hasNext(); ) {
+      ConfigParamDescr descr = (ConfigParamDescr) it.next();
+      String key = descr.getKey();
+      switch (descr.getType()) {
+        case ConfigParamDescr.TYPE_INT:
+          int i_val = loadConfigInt(key, config);
+          configMap.putInt(key, i_val);
+          break;
+        case ConfigParamDescr.TYPE_STRING:
+          String s_val = loadConfigString(key, config);
+          configMap.putString(key, s_val);
+          break;
+        case ConfigParamDescr.TYPE_URL:
+          URL u_val = loadConfigUrl(key, config);
+          configMap.putUrl(key, u_val);
+          break;
+      }
+    }
+  }
+
+  protected void setBaseAuParams(Configuration config)
+      throws ConfigurationException {
+    // get the base url string
+    baseUrl = configMap.getUrl(ConfigParamDescr.BASE_URL.getKey(), null);
+
+    // get the fetch delay
+    fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
+    fetchDelay = Math.min(fetchDelay, minFetchDelay);
+    logger.debug2("Set fetch delay to " + fetchDelay);
+
+    // get the new content crawl interval
+    newContentCrawlIntv = config.getTimeInterval(NEW_CONTENT_CRAWL_KEY,
+                                                 defaultContentCrawlIntv);
+    logger.debug2("Set new content crawl interval to " + newContentCrawlIntv);
+
+    // make the start url
+    startUrlString = makeStartUrl();
+
+    // make our crawl spec
+    try {
+      crawlSpec = makeCrawlSpec();
+    } catch (REException e) {
+      throw new ConfigurationException("Illegal RE", e);
+    }
+
+    // make our name
+    auName = makeName();
   }
 
   /**
@@ -191,6 +279,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return crawlSpec;
   }
 
+  public Collection getUrlStems() {
+    try {
+      URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
+                         baseUrl.getPort(), "");
+      return ListUtil.list(stem.toString());
+    } catch (MalformedURLException e) {
+      return Collections.EMPTY_LIST;
+    }
+  }
+
   LRUMap crawlSpecCache = new LRUMap(1000);
   int hits = 0;
   int misses = 0;
@@ -220,17 +318,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return misses;
   }
 
-//   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-//     return cachedUrlSetFactory(this, cuss);
-//   }
-
-//   public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-//     return cachedUrlFactory(owner, url);
-//   }
-
-//   public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-//     return urlCacherFactory(owner, url);
-//   }
 
   /**
    * Return the CachedUrlSet representing the entire contents
@@ -256,12 +343,32 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public long getFetchDelay() {
-    return DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
+    return fetchDelay;
   }
 
   public String toString() {
     return "[BAU: "+getAuId()+"]";
   }
+
+  public String getManifestPage() {
+    return startUrlString;
+  }
+
+  public String getName() {
+    return auName;
+  }
+
+  protected CrawlSpec makeCrawlSpec() throws REException {
+
+    CrawlRule rule = makeRules();
+    return new CrawlSpec(startUrlString, rule);
+  }
+
+  abstract protected void setAuParams(Configuration config)
+      throws ConfigurationException;
+  abstract protected CrawlRule makeRules() throws REException;
+  abstract protected String makeStartUrl();
+  abstract protected String makeName();
 
   /**
    * Simplified implementation which returns true if a crawl has never
@@ -270,7 +377,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff no crawl done
    */
   public boolean shouldCrawlForNewContent(AuState aus) {
-    if (aus.getLastCrawlTime() <= 0) {
+    long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
+    logger.debug("Deciding whether to do new content crawl for "+aus);
+    if (aus.getLastCrawlTime() == 0 || timeDiff > (newContentCrawlIntv)) {
       return true;
     }
     return false;
@@ -355,10 +464,63 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return null, since we don't filter by default
    */
   public FilterRule getFilterRule(String mimeType) {
-    logger.debug3("BaseArchivalUnit.getFilterRule called, returning null");
+    logger.debug3("BaseArchivalUnit - returning default value of null");
     return null;
   }
 
+  public List getNewContentCrawlUrls() {
+    return ListUtil.list(startUrlString);
+  }
+
+  // utility methods for configuration management
+  protected URL loadConfigUrl(String urlKey, Configuration config) throws
+      ConfigurationException {
+    URL url = null;
+
+    String urlStr = config.get(urlKey);
+    if (urlStr == null) {
+      throw new ConfigurationException("No configuration value for " + urlKey);
+    }
+    try {
+      url = new URL(urlStr);
+    }
+    catch (MalformedURLException murle) {
+      throw new ConfigurationException("Bad URL for " + urlKey, murle);
+    }
+    if (url == null) {
+      throw new ConfigurationException("Null url for " + urlKey);
+    }
+    if (!expectedUrlPath.equals(url.getPath())) {
+      throw new ConfigurationException("Url has illegal path: " +
+                                       url.getPath() + ", expected: " +
+                                       expectedUrlPath);
+    }
+
+    return url;
+  }
+
+  protected int loadConfigInt(String intKey, Configuration config) throws
+      ConfigurationException {
+    int value = -1;
+    try {
+      value = config.getInt(intKey);
+    }
+    catch (InvalidParam ip) {
+      String msg = "Invalid config param: " + ip.getMessage();
+      throw new ConfigurationException(msg);
+    }
+    return value;
+  }
+
+  protected String loadConfigString(String strKey, Configuration config) throws
+      ConfigurationException {
+    String value = null;
+    value = config.get(strKey);
+    if(value == null) {
+      throw new ConfigurationException("Null String for " + strKey);
+    }
+    return value;
+  }
 
   void checkNextPollInterval() {
     Configuration config = Configuration.getCurrentConfig();
@@ -409,13 +571,4 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
     return curProb;
   }
-
-//   protected void pause(long milliseconds) {
-//     logger.debug3("Pausing for "+milliseconds+" milliseconds");
-//     try {
-//       Thread thread = Thread.currentThread();
-//       thread.sleep(milliseconds);
-//     } catch (InterruptedException ie) {
-//     }
-//   }
 }

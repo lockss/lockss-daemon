@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.7 2003-10-10 19:21:45 eaalto Exp $
+ * $Id: AcsArchivalUnit.java,v 1.8 2003-11-07 04:11:59 clairegriffin Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import gnu.regexp.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.state.*;
+import org.lockss.daemon.Configuration.*;
 
 /**
  * <p>AcsArchivalUnit: The Archival Unit Class for American Chemical Society
@@ -55,46 +56,74 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
-  static final String AUPARAM_NEW_CONTENT_CRAWL = "nc_interval";
+  static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
   private static final long DEFAULT_NEW_CONTENT_CRAWL= 2 * Constants.WEEK;
 
   /**
    * Configuration parameter for pause time between fetchs.
    */
-  public static final String AUPARAM_PAUSE_TIME = "pause_time";
+  public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
-
-
-  private static final String EXPECTED_URL_PATH = "/";
 
   protected Logger logger = Logger.getLogger("AcsArchivalUnit");
 
-  private URL baseUrl;              // the base rrl for the volume
   private URL articleUrl;           // the base url for the articles
   private int volume;               // the volume index
   private String journalKey;        // the key used to specify the journal
-  private int year;              // the year of the volume
-  private long pauseTime;           // the time to pause between fetchs
-  private long newContentCrawlIntv; // the new content crawl interval
-
-  String startUrlString;    // the starting url string;
-
+  private int year;                 // the year of the volume
 
   protected AcsArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
   }
 
-  public Collection getUrlStems() {
-    try {
-      URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
-                         baseUrl.getPort(), "");
-      return ListUtil.list(stem.toString());
-    } catch (MalformedURLException e) {
-      return Collections.EMPTY_LIST;
+
+  protected void setAuParams(Configuration config)
+      throws ConfigurationException {
+    // get the article root url
+    articleUrl = configMap.getUrl(AcsPlugin.AUPARAM_ARTICLE_URL, null);
+
+    // get the journal key
+    journalKey = configMap.getString(AcsPlugin.AUPARAM_JOURNAL_KEY, null);
+
+    // get the volume string
+    volume = loadConfigInt(AcsPlugin.AUPARAM_VOL, config);
+    if (volume < 0) {
+      throw new ConfigurationException("Negative volume");
     }
+
+    // get the volume year
+    year = loadConfigInt(AcsPlugin.AUPARAM_YEAR, config);
+    if (year < 1900) {
+      throw new ConfigurationException("Year out of range - must be after 1900");
+    }
+
+    defaultFetchDelay = DEFAULT_PAUSE_TIME;
+    defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL;
   }
 
-  public String getName() {
+  protected String makeStartUrl() {
+    String ret;
+    StringBuffer sb = new StringBuffer();
+    sb.append(baseUrl.toString());
+    sb.append("acs/journals/toc.njs_select_issue?in_coden=");
+    sb.append(journalKey);
+    sb.append("&in_volume=");
+    sb.append(volume);
+    sb.append("&in_decade=");
+    sb.append(year - (year%10));
+    ret = sb.toString();
+    logger.debug("starting url is "+ ret);
+    return ret;
+  }
+
+  protected CrawlSpec makeCrawlSpec()
+      throws REException {
+
+    CrawlRule rule = makeRules();
+    return new CrawlSpec(startUrlString, rule, 2);
+  }
+
+  protected String makeName() {
     StringBuffer name = new StringBuffer(baseUrl.getHost());
     name.append(", ");
     name.append(journalKey);
@@ -104,173 +133,20 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
   }
 
 
-  public List getNewContentCrawlUrls() {
-    return ListUtil.list(makeStartUrl(baseUrl, journalKey, volume, year));
-  }
-
-  public long getFetchDelay() {
-    // make sure that pause time is never less than default
-    return Math.max(pauseTime, DEFAULT_PAUSE_TIME);
-  }
-
-  public void setConfiguration(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    super.setConfiguration(config);
-    String exception;
-
-    if (config == null) {
-      throw new ConfigurationException("Null configInfo");
-    }
-
-    // get the volume root url string
-    String urlStr = config.get(AcsPlugin.AUPARAM_BASE_URL);
-    if (urlStr == null) {
-      exception = "No configuration value for " + AcsPlugin.AUPARAM_BASE_URL;
-      throw new ConfigurationException(exception);
-    }
-
-    // get the article root url string
-    String issueStr = config.get(AcsPlugin.AUPARAM_ARTICLE_URL);
-    if (issueStr == null) {
-      exception = "No configuration value for " + AcsPlugin.AUPARAM_ARTICLE_URL;
-      throw new ConfigurationException(exception);
-    }
-
-    // get the journal key
-    journalKey = config.get(AcsPlugin.AUPARAM_JOURNAL_KEY);
-    if ((journalKey == null) || (journalKey.equals(""))) {
-      exception = "No configuration value for " +
-          AcsPlugin.AUPARAM_JOURNAL_KEY;
-      throw new ConfigurationException(exception);
-    }
-
-    // get the volume string
-    String volStr = config.get(AcsPlugin.AUPARAM_VOL);
-    if (volStr == null) {
-      exception = "No Configuration value for " + AcsPlugin.AUPARAM_VOL;
-      throw new ConfigurationException(exception);
-    }
-    // get the volume year
-    String yearStr = config.get(AcsPlugin.AUPARAM_YEAR);
-    if(yearStr == null) {
-      exception = "No Configuration value for " + AcsPlugin.AUPARAM_YEAR;
-      throw new ConfigurationException(exception);
-    }
-
-    // turn them into appropriate types
-    try {
-      baseUrl = new URL(urlStr);
-      articleUrl = new URL(issueStr);
-      volume = Integer.parseInt(volStr);
-      year = Integer.parseInt(yearStr);
-
-    } catch (MalformedURLException murle) {
-      exception = AcsPlugin.AUPARAM_BASE_URL+ " set to a bad url "+ urlStr;
-      throw new ConfigurationException(exception, murle);
-    }
-
-    // validity  checks
-    if (baseUrl == null) {
-      throw new ConfigurationException("Null base url");
-    }
-    if (articleUrl == null) {
-      throw new ConfigurationException("Null article url");
-    }
-    if (volume < 0) {
-      throw new ConfigurationException("Negative volume");
-    }
-    if (year < 2003) {
-      throw new ConfigurationException("Year out of range - must be after 2003");
-    }
-    if (!EXPECTED_URL_PATH.equals(baseUrl.getPath())) {
-      throw new ConfigurationException("Url has illegal path: " +
-                                       baseUrl.getPath());
-    }
-    if (!EXPECTED_URL_PATH.equals(articleUrl.getPath())) {
-      throw new ConfigurationException("Url has illegal path: " +
-                                       articleUrl.getPath());
-    }
-    // calculate the starting url string
-    startUrlString = makeStartUrl(baseUrl, journalKey, volume, year);
-
-    // make our crawl spec
-    try {
-      crawlSpec = makeCrawlSpec(baseUrl, journalKey, volume);
-    } catch (REException e) {
-      throw new ConfigurationException("Illegal RE", e);
-    }
-
-    // get the pause time
-    pauseTime = config.getTimeInterval(AUPARAM_PAUSE_TIME, DEFAULT_PAUSE_TIME);
-    logger.debug3("Set pause value to "+pauseTime);
-
-
-    // get the new content crawl interval
-    newContentCrawlIntv = config.getTimeInterval(AUPARAM_NEW_CONTENT_CRAWL,
-                                             DEFAULT_NEW_CONTENT_CRAWL);
-    logger.debug3("Set new content crawl interval to "+ newContentCrawlIntv);
-
-  }
-
-  public String getManifestPage() {
-    return startUrlString;
-  }
-
-  public boolean shouldCrawlForNewContent(AuState aus) {
-    long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
-    logger.debug("Deciding whether to do new content crawl for "+aus);
-    if (aus.getLastCrawlTime() == 0 || timeDiff > (newContentCrawlIntv)) {
-      return true;
-    }
-    return false;
-  }
-
-  /**
-   * @param mimeType the mime type
-   * @return null since we're not currently filtering Muse content
-   */
-  public FilterRule getFilterRule(String mimeType) {
-    return null;
-  }
-
-
-  String makeStartUrl(URL base, String jkey, int volume, int vol_year) {
-    String ret;
-    StringBuffer sb = new StringBuffer();
-    sb.append(base.toString());
-    sb.append("acs/journals/toc.njs_select_issue?in_coden=");
-    sb.append(jkey);
-    sb.append("&in_volume=");
-    sb.append(volume);
-    sb.append("&in_decade=");
-    sb.append(vol_year - (vol_year%10));
-    ret = sb.toString();
-    logger.debug("starting url is "+ ret);
-    return ret;
-  }
-
-  private CrawlSpec makeCrawlSpec(URL base, String jkey, int volume)
-      throws REException {
-
-    CrawlRule rule = makeRules(base, jkey, volume);
-    return new CrawlSpec(startUrlString, rule, 2);
-  }
-
-  private CrawlRule makeRules(URL urlRoot, String jkey, int volume)
-      throws REException {
+  protected CrawlRule makeRules() throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
     String artRoot = articleUrl.toString();
-    String idxRoot = urlRoot.toString();
+    String idxRoot = baseUrl.toString();
 
     // include our journal volume table of contents page
 
     rules.add(new CrawlRules.RE(idxRoot+"acs/journals/toc.njs_select.*in_coden="
-                                +jkey +".*in_volume=" + volume + ".*", incl));
+                                +journalKey +".*in_volume=" + volume + ".*", incl));
 
     // include our volume's issue table of contents pages
-    rules.add(new CrawlRules.RE(idxRoot +"acs/journals/toc.page.*incoden=" + jkey
+    rules.add(new CrawlRules.RE(idxRoot +"acs/journals/toc.page.*incoden=" + journalKey
                                 + ".*involume=" + volume, incl));
 
     // exclude everything else not part of the article root
@@ -282,9 +158,9 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE(artRoot + ".*.css", incl)); // style sheets
 
     // include the articles for this journal and volume
-    rules.add(new CrawlRules.RE(artRoot + ".*incoden=" + jkey
+    rules.add(new CrawlRules.RE(artRoot + ".*incoden=" + journalKey
                                 + ".*involume=" + volume, incl));
-    rules.add(new CrawlRules.RE(artRoot + "cgi-bin/article.cgi.*" +jkey
+    rules.add(new CrawlRules.RE(artRoot + "cgi-bin/article.cgi.*" +journalKey
                                 + "/" + year +"/" + volume + "/.*", incl));
     // to include the abstracts uncomment this line
     /*rules.add(new CrawlRules.RE(artRoot +"cgi-bin/abstract.cgi.*"+jkey

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.31 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.32 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -129,9 +129,9 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testStartUrlConstruction() throws Exception {
     URL url = new URL("http://www.example.com/");
-    String expectedStr = "http://www.example.com/lockss-volume123.shtml";
+    String expectedStr = "http://www.example.com/lockss-volume10.shtml";
     HighWireArchivalUnit hwau = makeAu(url, 10);
-    assertEquals(expectedStr, hwau.makeStartUrl(url, 123));
+    assertEquals(expectedStr, hwau.makeStartUrl());
   }
 
   public void testPathInUrlThrowsException() throws Exception {

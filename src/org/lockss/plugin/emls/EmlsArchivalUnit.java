@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsArchivalUnit.java,v 1.1 2003-10-14 22:45:21 eaalto Exp $
+ * $Id: EmlsArchivalUnit.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -51,169 +51,73 @@ public class EmlsArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
-  static final String AUPARAM_NEW_CONTENT_CRAWL = "nc_interval";
+  static final String AUPARAM_NEW_CONTENT_CRAWL = NEW_CONTENT_CRAWL_KEY;
   private static final long DEFAULT_NEW_CONTENT_CRAWL = 2 * Constants.WEEK;
 
   /**
    * Configuration parameter for pause time between fetchs.
    */
-  public static final String AUPARAM_PAUSE_TIME = "pause_time";
+  public static final String AUPARAM_PAUSE_TIME = PAUSE_TIME_KEY;
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
-
-  private static final String EXPECTED_URL_PATH = "/emls/";
 
   protected Logger logger = Logger.getLogger("EmlsPlugin");
 
-  private URL baseUrl; // the base Url for the volume
   private int volume; // the volume number
-  private long pauseTime; // the time to pause between fetchs
-  private long newContentCrawlIntv; // the new content crawl interval
 
-  protected EmlsArchivalUnit(Plugin myPlugin) {
+  public EmlsArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
+    expectedUrlPath = "/emls/";
   }
 
-  public Collection getUrlStems() {
-    try {
-      URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
-                         baseUrl.getPort(), "");
-      return ListUtil.list(stem.toString());
-    } catch (MalformedURLException e) {
-      return Collections.EMPTY_LIST;
+
+  public void setAuParams(Configuration config)
+      throws ConfigurationException {
+
+
+    // get the volume string
+    volume = configMap.getInt(EmlsPlugin.AUPARAM_VOL, -1);
+    if (volume <= 0) {
+      throw new ConfigurationException("Invalid volume: "+volume);
     }
   }
 
-  public String getName() {
+  protected String makeName() {
     StringBuffer name = new StringBuffer(baseUrl.getHost());
     name.append(", vol. ");
     name.append(volume);
     return name.toString();
   }
-
-  public List getNewContentCrawlUrls() {
-    return ListUtil.list(makeStartUrl(baseUrl, volume));
-  }
-
-  public long getFetchDelay() {
-    // make sure that pause time is never less than default
-    return Math.max(pauseTime, DEFAULT_PAUSE_TIME);
-  }
-
-  public void setConfiguration(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    super.setConfiguration(config);
-    String exception;
-
-    if (config == null) {
-      throw new ConfigurationException("Null configInfo");
-    }
-
-    // get the base url string
-    String urlStr = config.get(EmlsPlugin.AUPARAM_BASE_URL);
-    if (urlStr == null) {
-      exception = "No configuration value for " +
-          EmlsPlugin.AUPARAM_BASE_URL;
-      throw new ConfigurationException(exception);
-    }
-
-    // get the volume string
-    String volStr = config.get(EmlsPlugin.AUPARAM_VOL);
-    if (volStr == null) {
-      exception = "No Configuration value for " + EmlsPlugin.AUPARAM_VOL;
-      throw new ConfigurationException(exception);
-    }
-
-    // turn them into appropriate types
-    try {
-      baseUrl = new URL(urlStr);
-      volume = Integer.parseInt(volStr);
-    } catch (MalformedURLException murle) {
-      throw new ConfigurationException("Bad base URL", murle);
-    } catch (NumberFormatException e) {
-      throw new ArchivalUnit.ConfigurationException("Bad volume number", e);
-    }
-
-    if (baseUrl == null) {
-      throw new ConfigurationException("Null base url");
-    }
-
-    if (volume <= 0) {
-      throw new ConfigurationException("Invalid volume: "+volume);
-    }
-
-    if (!EXPECTED_URL_PATH.equals(baseUrl.getPath())) {
-      logger.error("Illegal path: "+baseUrl.getPath() + ", expected: " +
-                   EXPECTED_URL_PATH);
-      throw new ConfigurationException("Url has illegal path: " +
-                                       baseUrl.getPath() + ", expected: " +
-                                       EXPECTED_URL_PATH);
-    }
-
-    // make our crawl spec
-    try {
-      crawlSpec = makeCrawlSpec(baseUrl, volume);
-    } catch (REException e) {
-      throw new ConfigurationException("Illegal RE", e);
-    }
-
-    // get the pause time
-    pauseTime = config.getTimeInterval(AUPARAM_PAUSE_TIME, DEFAULT_PAUSE_TIME);
-    logger.debug2("Set pause value to " + pauseTime);
-
-    // get the new content crawl interval
-    newContentCrawlIntv = config.getTimeInterval(AUPARAM_NEW_CONTENT_CRAWL,
-                                                 DEFAULT_NEW_CONTENT_CRAWL);
-    logger.debug2("Set new content crawl interval to " + newContentCrawlIntv);
-  }
-
-  private CrawlSpec makeCrawlSpec(URL base, int vol) throws REException {
-    CrawlRule rule = makeRules(base, vol);
-    return new CrawlSpec(makeStartUrl(base, vol), rule);
-  }
-
-  public String getManifestPage() {
-    return makeStartUrl(baseUrl, volume);
-  }
-
-  String makeStartUrl(URL base, int vol) {
+  protected String makeStartUrl() {
     String ret;
     StringBuffer sb = new StringBuffer();
-    sb.append(base.toString());
+    sb.append(baseUrl.toString());
     sb.append("lockss-volume");
-    sb.append(vol);
+    sb.append(volume);
     sb.append(".html");
     ret = sb.toString();
     logger.debug("starting url is " + ret);
     return ret;
   }
 
-  private CrawlRule makeRules(URL urlRoot, int vol) throws REException {
+  protected CrawlRule makeRules() throws REException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
-    String baseUrl = urlRoot.toString();
-    StringBuffer buffer = new StringBuffer(baseUrl);
-    if (vol < 10) {
+    String rootUrl = baseUrl.toString();
+    StringBuffer buffer = new StringBuffer(rootUrl);
+    if (volume < 10) {
       // pad out vol
       buffer.append("0");
     }
-    buffer.append(vol);
+    buffer.append(volume);
     buffer.append("-[0-9]+/.*");
 
     String volBaseRE = buffer.toString();
-    rules.add(new CrawlRules.RE("^" + baseUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    rules.add(new CrawlRules.RE(makeStartUrl(urlRoot, vol), incl));
+    rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
+    rules.add(new CrawlRules.RE(startUrlString, incl));
     rules.add(new CrawlRules.RE(volBaseRE, incl));
-    rules.add(new CrawlRules.RE(baseUrl + ".*\\.gif", incl));
+    rules.add(new CrawlRules.RE(rootUrl + ".*\\.gif", incl));
     return new CrawlRules.FirstMatch(rules);
   }
 
-  public boolean shouldCrawlForNewContent(AuState aus) {
-    long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
-    logger.debug("Deciding whether to do new content crawl for "+aus);
-    if (aus.getLastCrawlTime() == 0 || timeDiff > (newContentCrawlIntv)) {
-      return true;
-    }
-    return false;
-  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.4 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: AcsPlugin.java,v 1.5 2003-11-07 04:11:59 clairegriffin Exp $
  */
 
 /*
@@ -60,18 +60,9 @@ public class AcsPlugin extends BasePlugin {
   static {
     ARTICLE_URL.setKey("article_url");
     ARTICLE_URL.setDisplayName("Article URL");
-    ARTICLE_URL.setType(ConfigParamDescr.TYPE_STRING);
+    ARTICLE_URL.setType(ConfigParamDescr.TYPE_URL);
     ARTICLE_URL.setSize(40);
     ARTICLE_URL.setDescription("base url for articles");
-  }
-
-  static final ConfigParamDescr JOURNAL_YEAR = new ConfigParamDescr();
-  static {
-    JOURNAL_YEAR.setKey("volume_year");
-    JOURNAL_YEAR.setDisplayName("Volume Year");
-    JOURNAL_YEAR.setType(ConfigParamDescr.TYPE_INT);
-    JOURNAL_YEAR.setSize(4);
-    JOURNAL_YEAR.setDescription("Year of volume in form 2003 not 03");
   }
 
   private static String PLUGIN_NAME = "ACS";
@@ -81,7 +72,7 @@ public class AcsPlugin extends BasePlugin {
   static final ConfigParamDescr PD_JKEY = JOURNAL_KEY;
   static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
   static final ConfigParamDescr PD_ARTICLE = ARTICLE_URL;
-  static final ConfigParamDescr PD_YEAR = JOURNAL_YEAR;
+  static final ConfigParamDescr PD_YEAR = ConfigParamDescr.YEAR;
 
   // public only so test methods can use them
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
@@ -99,33 +90,25 @@ public class AcsPlugin extends BasePlugin {
     AUPARAM_YEAR, "2003"}
   };
 
+  public void initPlugin(LockssDaemon daemon){
+    super.initPlugin(daemon);
+    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+                                   ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY,
+                                                 PD_VOL, PD_YEAR));
+    configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
+                                   ListUtil.list(AUPARAM_BASE_URL,
+                                                 AUPARAM_ARTICLE_URL,
+                                                 AUPARAM_JOURNAL_KEY,
+                                                 AUPARAM_VOL, AUPARAM_YEAR));
+    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
+  }
+
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new AcsArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
   }
-
-  public void initPlugin(LockssDaemon daemon) {
-    super.initPlugin(daemon);
-    setTitleConfig(titleSpec);
-  }
-
-  public String getPluginName() {
-    return PLUGIN_NAME;
-  }
-
-  public String getVersion() {
-    return CURRENT_VERSION;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_ARTICLE, PD_JKEY, PD_VOL, PD_YEAR);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_ARTICLE_URL,
-                         AUPARAM_JOURNAL_KEY, AUPARAM_VOL, AUPARAM_YEAR);
-  }
-
 }

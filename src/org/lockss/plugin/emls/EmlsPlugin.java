@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsPlugin.java,v 1.1 2003-10-14 22:45:21 eaalto Exp $
+ * $Id: EmlsPlugin.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.ListUtil;
 import org.lockss.app.LockssDaemon;
+import java.util.List;
 
 /**
  * <p>EmlsPlugin: Plugin class for the Early Modern Literary Studies Plugin</p>
@@ -60,32 +61,22 @@ public class EmlsPlugin extends BasePlugin {
     }
   };
 
+  public void initPlugin(LockssDaemon daemon){
+    super.initPlugin(daemon);
+    configurationMap.putString(CM_NAME_KEY, PLUGIN_NAME);
+    configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
+    configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
+                                   ListUtil.list(PD_BASE, PD_VOL));
+    configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
+                                   ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL));
+    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
+  }
+
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = new EmlsArchivalUnit(this);
     au.setConfiguration(auConfig);
     return au;
-  }
-
-  public void initPlugin(LockssDaemon daemon) {
-    super.initPlugin(daemon);
-    setTitleConfig(titleSpec);
-  }
-
-  public String getPluginName() {
-    return PLUGIN_NAME;
-  }
-
-  public String getVersion() {
-    return CURRENT_VERSION;
-  }
-
-  public List getAuConfigProperties() {
-    return ListUtil.list(PD_BASE, PD_VOL);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.5 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.6 2003-11-07 04:12:00 clairegriffin Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class TestAcsArchivalUnit
         new RangeCachedUrlSetSpec(base_url.toString()));
 
     // start url - should be cached
-    url = acsAu.startUrlString;
+    url = acsAu.makeStartUrl();
     shouldCacheTest(url, true, acsAu, cus);
 
     // issue index page - should be cached
@@ -217,7 +217,7 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     AcsArchivalUnit acsAu = makeAu(base, a_url, JOURNAL_KEY, VOL_ID, VOL_YEAR);
-    assertEquals(expected, acsAu.makeStartUrl(base, JOURNAL_KEY, VOL_ID, VOL_YEAR));
+    assertEquals(expected, acsAu.makeStartUrl());
   }
 
   public void testGetUrlStems() throws Exception {
