@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestApp.java,v 1.4 2004-09-27 22:38:32 smorabito Exp $
+ * $Id: CrawlRuleTestApp.java,v 1.5 2004-10-21 22:08:19 troberts Exp $
  */
 
 /*
@@ -116,9 +116,9 @@ public class CrawlRuleTestApp {
       }
       long delay = config.getLong(CRAWL_DELAY_PROP, DEFAULT_CRAWL_DELAY);
       String base_url = config.get(BASE_URL_PROP);
-      CrawlSpec spec = new CrawlSpec(base_url,
-                                     makeRules(config, base_url),
-                                     config.getInt("BASE_CRAWL_DEPTH", 1));
+      CrawlSpec spec =
+	new SpiderCrawlSpec(base_url, makeRules(config, base_url),
+			    config.getInt("BASE_CRAWL_DEPTH", 1));
       CrawlRuleTester tester = new CrawlRuleTester(output_file, crawl_depth,
           delay, base_url, spec);
       tester.run();
