@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.9 2004-10-23 01:38:21 clairegriffin Exp $
+ * $Id: DefinablePlugin.java,v 1.10 2005-03-23 17:03:25 troberts Exp $
  */
 
 /*
@@ -78,7 +78,8 @@ public class DefinablePlugin extends BasePlugin {
     initPlugin(daemon, extMapName, this.getClass().getClassLoader());
   }
 
-  public void initPlugin(LockssDaemon daemon, String extMapName, ClassLoader loader)
+  public void initPlugin(LockssDaemon daemon, String extMapName,
+			 ClassLoader loader)
       throws FileNotFoundException {
     mapName = extMapName;
     this.classLoader = loader;
@@ -101,8 +102,8 @@ public class DefinablePlugin extends BasePlugin {
   }
 
   public List getAuConfigDescrs() throws InvalidDefinitionException {
-    List auConfigDescrs = (List) definitionMap.getCollection(
-        CM_CONFIG_PROPS_KEY, null);
+    List auConfigDescrs =
+      (List) definitionMap.getCollection(CM_CONFIG_PROPS_KEY, null);
     if (auConfigDescrs == null) {
       throw new InvalidDefinitionException(mapName +
                                            " missing ConfigParamDescrs");
@@ -112,8 +113,8 @@ public class DefinablePlugin extends BasePlugin {
 
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    DefinableArchivalUnit au = new DefinableArchivalUnit(this,
-        definitionMap, classLoader);
+    DefinableArchivalUnit au =
+      new DefinableArchivalUnit(this, definitionMap, classLoader);
     au.setConfiguration(auConfig);
     return au;
   }
