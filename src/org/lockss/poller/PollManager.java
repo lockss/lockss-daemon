@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.146 2004-10-02 13:33:43 dshr Exp $
+ * $Id: PollManager.java,v 1.147 2004-10-11 05:43:22 tlipkis Exp $
  */
 
 /*
@@ -59,30 +59,43 @@ import org.lockss.alert.*;
 public class PollManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
-  static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
-      "poll.expireRecent";
-  static final String PARAM_VERIFY_EXPIRATION = Configuration.PREFIX +
-      "poll.expireVerifier";
+  protected static Logger theLog = Logger.getLogger("PollManager");
+
+  static final String PREFIX = Configuration.PREFIX + "poll.";
+  static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";
+  static final String PARAM_VERIFY_EXPIRATION = PREFIX + "expireVerifier";
 
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
   static final long DEFAULT_VERIFY_EXPIRATION = 6 * Constants.HOUR;
 
-  private static PollManager theManager = null;
-  protected static Logger theLog = Logger.getLogger("PollManager");
-  private static LcapDatagramRouter.MessageHandler  m_msgHandler;
+  // Items are moved between thePolls and theRecentPolls, so it's simplest
+  // to synchronize all accesses on a single object.  That object is
+  // currently thePolls, which is itself synchronized.
+
   private static Hashtable thePolls = new Hashtable();
+
+  // all accesses must be synchronized on pollMapLock
+  private static FixedTimedMap theRecentPolls =
+    new FixedTimedMap(DEFAULT_RECENT_EXPIRATION);
+
+  private static Object pollMapLock = thePolls;
+
   private static VariableTimedMap theVerifiers = new VariableTimedMap();
-  private static VariableTimedMap theRecentPolls = new VariableTimedMap();
+
+
+  private static LockssRandom theRandom = new LockssRandom();
+
+  private static PollManager theManager = null;
+  private static LcapDatagramRouter.MessageHandler  m_msgHandler;
   private static IdentityManager theIDManager;
   private static HashService theHashService;
-  private static LockssRandom theRandom = new LockssRandom();
   private static LcapDatagramRouter theRouter = null;
   private AlertManager theAlertManager = null;
   private static SystemMetrics theSystemMetrics = null;
 
   // our configuration variables
-  protected static long m_recentPollExpireTime;
-  protected static long m_verifierExpireTime;
+  protected static long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
+  protected static long m_verifierExpireTime = DEFAULT_VERIFY_EXPIRATION;
 
   // The PollFactory instances
   PollFactory [] pf = {
@@ -154,22 +167,28 @@ public class PollManager
    * @param au the AU
    */
   public void cancelAuPolls(ArchivalUnit au) {
-    Iterator it = thePolls.values().iterator();
-    while (it.hasNext()) {
+    // first collect polls to cancel
+    Set toCancel = new HashSet();
+    synchronized (pollMapLock) {
+      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+	PollManagerEntry pme = (PollManagerEntry) it.next();
+	ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
+	if (pau == au && !pme.isPollCompleted()) {
+	  toCancel.add(pme);
+	}
+      }
+    }
+    // then actually cancel them while not holding lock
+    for (Iterator it = toCancel.iterator(); it.hasNext(); ) {
       PollManagerEntry pme = (PollManagerEntry) it.next();
       ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
-      if (pau == au) {
-        if (!pme.isPollCompleted()) {
-          theHashService.cancelAuHashes(pau);
-          pme.poll.stopPoll();
-        }
-      }
+      theHashService.cancelAuHashes(pau);
+      pme.poll.stopPoll();
     }
   }
 
   /**
    * Call a poll.  Only used by the tree walk.
-   * @param polltype one of <code>Poll.{NAME,CONTENT,VERIFY}_POLL</code>
    * @param pollspec the <code>PollSpec</code> that defines the subject of
    *                 the <code>Poll</code>.
    * @return true if the poll was successfuly called.
@@ -210,11 +229,12 @@ public class PollManager
    * @return true if we have a poll which is running that matches pollspec
    */
   public boolean isPollRunning(int type, PollSpec spec) {
-    Iterator it = thePolls.values().iterator();
-    while(it.hasNext()) {
-      PollManagerEntry pme = (PollManagerEntry)it.next();
-      if(pme.isSamePoll(type,spec)) {
-        return !pme.isPollCompleted();
+    synchronized (pollMapLock) {
+      for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
+	PollManagerEntry pme = (PollManagerEntry)it.next();
+	if(pme.isSamePoll(type,spec)) {
+	  return !pme.isPollCompleted();
+	}
       }
     }
     return false;
@@ -223,6 +243,17 @@ public class PollManager
   /** Return the PollManagerEntry for the poll with the specified key. */
   public PollManagerEntry getPollManagerEntry(String key) {
     return (PollManagerEntry)thePolls.get(key);
+  }
+
+  /** Find the poll either in current or recent polls */
+  PollManagerEntry getCurrentOrRecentPollEntry(String key) {
+    synchronized (pollMapLock) {
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      if(pme == null) {
+	pme = (PollManagerEntry)theRecentPolls.get(key);
+      }
+      return pme;
+    }
   }
 
   public ActivityRegulator.Lock acquirePollLock(Object key) {
@@ -243,18 +274,20 @@ public class PollManager
    * @param key the identifier key of the poll to suspend
    */
   public void suspendPoll(String key) {
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme == null) {
-      pme = (PollManagerEntry) theRecentPolls.get(key);
-      if(pme == null) {
-        theLog.debug2("ignoring suspend request for unknown key " + key);
-        return;
+    PollManagerEntry pme;
+    synchronized (pollMapLock) {
+      pme = getCurrentOrRecentPollEntry(key);
+      if (pme != null) {
+	theRecentPolls.remove(key);
+	thePolls.put(key, pme);
+	pme.setPollSuspended();
       }
-      theRecentPolls.remove(key);
-      thePolls.put(key, pme);
     }
-    pme.setPollSuspended();
-    theLog.debug("suspended poll " + key);
+    if (pme == null) {
+      theLog.debug2("ignoring suspend request for unknown key " + key);
+    } else {
+      theLog.debug("suspended poll " + key);
+    }
   }
 
 
@@ -306,16 +339,13 @@ public class PollManager
    * @throws IOException thrown if the poll was unsuccessfully created
    */
   void handleIncomingMessage(LcapMessage msg) throws IOException {
-    theLog.info("Got a message: " + msg);
+    if (theLog.isDebug2()) theLog.debug2("Got a message: " + msg);
     if(isDuplicateMessage(msg)) {
       theLog.debug3("Dropping duplicate message:" + msg);
       return;
     }
     String key = msg.getKey();
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme == null) {
-      pme = (PollManagerEntry)theRecentPolls.get(key);
-    }
+    PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
         theLog.debug("Message received after poll was closed." + msg);
@@ -354,7 +384,6 @@ public class PollManager
     }
     return ret;
   }
-
 
   /**
    * make a new poll of the type and version defined by the incoming message.
@@ -425,15 +454,15 @@ public class PollManager
         }
       } else {
         int activity = pollFact.getPollActivity(spec, this);
-	theLog.debug("About to get ActivityRegulator from " + theDaemon +
-		     " for " + au.toString());
 	ActivityRegulator ar = theDaemon.getActivityRegulator(au);
 	if (ar == null) {
-	  theLog.debug("Activity regulator null for au: " + au.toString());
+	  theLog.warning("Activity regulator null for au: " + au.toString());
 	  return null;
 	}
-	theLog.debug("about to get lock for " + cus.toString() + " act " +
-		  activity + " expire " + expiration);
+	if (theLog.isDebug2()) {
+	  theLog.debug2("about to get lock for " + cus.toString() + " act " +
+			activity + " expire " + expiration);
+	}
         lock = ar.getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
           theLog.debug("New poll aborted due to activity lock.");
@@ -507,7 +536,9 @@ public class PollManager
     // we don't want this one to be in conflict with it.
     PollTally tally = pme.poll.getVoteTally();
     pme.setPollCompleted();
-    theRecentPolls.put(key, pme,Deadline.in(m_recentPollExpireTime));
+    synchronized (pollMapLock) {
+      theRecentPolls.put(key, pme);
+    }
     if (tally.getType() != Poll.VERIFY_POLL) {
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("sending completed poll results " + tally);
@@ -527,16 +558,21 @@ public class PollManager
 
   /**
    * getActivePollSpecIterator returns an Iterator over the set of
-   * PollSpec instances which currently have active polls.
+   * PollSpec instances which currently have active polls on the given au.
    * @return Iterator over set of PollSpec
    */
-  protected Iterator getActivePollSpecIterator(BasePoll poll) {
+  protected Iterator getActivePollSpecIterator(ArchivalUnit au,
+					       BasePoll dontIncludePoll) {
     Set pollspecs = new HashSet();
-    Iterator iter = thePolls.values().iterator();
-    while (iter.hasNext()) {
-      PollManagerEntry pme = (PollManagerEntry)iter.next();
-      if (pme.poll != poll && !pme.isPollCompleted()) {
-	pollspecs.add(pme.poll.getPollSpec());
+    synchronized (pollMapLock) {
+      for (Iterator iter = thePolls.values().iterator(); iter.hasNext(); ) {
+	PollManagerEntry pme = (PollManagerEntry)iter.next();
+	ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
+	if (pau == au &&
+	    pme.poll != dontIncludePoll &&
+	    !pme.isPollCompleted()) {
+	  pollspecs.add(pme.poll.getPollSpec());
+	}
       }
     }
     return (pollspecs.iterator());
@@ -579,7 +615,10 @@ public class PollManager
    */
   byte[] getSecret(byte[] verifier) {
     String ver = String.valueOf(B64Code.encode(verifier));
-    String sec = (String)theVerifiers.get(ver);
+    String sec;
+    synchronized (theVerifiers) {
+      sec = (String)theVerifiers.get(ver);
+    }
     if (sec != null && sec.length() > 0) {
       return (B64Code.decode(sec.toCharArray()));
     }
@@ -677,12 +716,14 @@ public class PollManager
   private boolean isDuplicateMessage(LcapMessage msg) {
     byte[] verifier = msg.getVerifier();
     String ver = String.valueOf(B64Code.encode(verifier));
+    // lock paranoia - access (synchronized) thePolls outside theVerifiers lock
+    boolean havePoll = thePolls.contains(msg.getKey());
+
     synchronized (theVerifiers) {
       String secret = (String)theVerifiers.get(ver);
       // if we have a secret and we don't have a poll
       // we made the original message but haven't made a poll yet
-      if(!StringUtil.isNullString(secret) &&
-         !thePolls.contains(msg.getKey())) {
+      if(!StringUtil.isNullString(secret) && !havePoll) {
         return false;
       }
       else if(secret == null) { // we didn't make the verifier-we don't have a secret
@@ -696,10 +737,15 @@ public class PollManager
   public void setConfig(Configuration newConfig,
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
-    m_recentPollExpireTime = newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
-        DEFAULT_RECENT_EXPIRATION);
-    m_verifierExpireTime = newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
-                                        DEFAULT_VERIFY_EXPIRATION);
+    if (changedKeys.contains(PREFIX)) {
+      m_recentPollExpireTime =
+	newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
+				  DEFAULT_RECENT_EXPIRATION);
+      theRecentPolls.setInterval(m_recentPollExpireTime);
+      m_verifierExpireTime =
+	newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
+				  DEFAULT_VERIFY_EXPIRATION);
+    }
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
 	pf[i].setConfig(newConfig, oldConfig, changedKeys);
@@ -728,23 +774,19 @@ public class PollManager
 //--------------- PollerStatus Accessors -----------------------------
   Iterator getPolls() {
     Map polls = new HashMap();
-    polls.putAll(thePolls);
-    polls.putAll(theRecentPolls);
-    return Collections.unmodifiableMap(polls).values().iterator();
+    synchronized (pollMapLock) {
+      polls.putAll(thePolls);
+      polls.putAll(theRecentPolls);
+    }
+    return polls.values().iterator();
   }
 
   BasePoll getPoll(String key) {
-    BasePoll poll = null;
-
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme == null) {
-      pme = (PollManagerEntry) theRecentPolls.get(key);
-    }
+    PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
     if(pme != null) {
-      poll =  pme.poll;
+      return pme.poll;
     }
-
-    return poll;
+    return null;
   }
 
 //-------------- TestPollManager Accessors ----------------------------
@@ -769,7 +811,10 @@ public class PollManager
   }
 
   boolean isPollClosed(String key) {
-    PollManagerEntry pme = (PollManagerEntry)theRecentPolls.get(key);
+    PollManagerEntry pme;
+    synchronized (pollMapLock) {
+      pme = (PollManagerEntry)theRecentPolls.get(key);
+    }
     return (pme != null) ? pme.isPollCompleted() : false;
   }
 
