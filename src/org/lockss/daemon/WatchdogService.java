@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.3 2003-05-24 01:14:09 tal Exp $
+ * $Id: WatchdogService.java,v 1.4 2003-05-26 03:47:59 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -45,13 +45,13 @@ public class WatchdogService extends BaseLockssManager {
   // It would be simpler to do this with a thread, but using the TimerQueue
   // ensures that the watchdog isn't poked if the TimerQueue dies.
 
-  static final String PARAM_PLATFORM_WDOG_FILE =
-    Configuration.PARAM_PLATFORM_PIDFILE;
-  static final String PARAM_PLATFORM_WDOG_INTERVAL =
-    Configuration.PLATFORM + "watchdog.interval";
+  static final String PREFIX = Configuration.PLATFORM + "watchdog.";
+
+  static final String PARAM_PLATFORM_WDOG_FILE = PREFIX + "file";
+  static final String PARAM_PLATFORM_WDOG_INTERVAL = PREFIX + "interval";
   static final long DEFAULT_PLATFORM_WDOG_INTERVAL = Constants.HOUR;
 
-  protected static Logger log = Logger.getLogger("WatchdogService");
+  protected static Logger log = Logger.getLogger("PlatformWatchdog");
   private File watchedFile = null;
   private boolean enabled = false;
   private long interval;
@@ -63,22 +63,19 @@ public class WatchdogService extends BaseLockssManager {
     if (changedKeys.contains(PARAM_PLATFORM_WDOG_FILE) ||
 	changedKeys.contains(PARAM_PLATFORM_WDOG_INTERVAL)) {
       String name = config.get(PARAM_PLATFORM_WDOG_FILE);
-      if (name != null) {
+      interval = config.getTimeInterval(PARAM_PLATFORM_WDOG_INTERVAL,
+					DEFAULT_PLATFORM_WDOG_INTERVAL);
+      if (!StringUtil.isNullString(name) && interval > 0) {
 	watchedFile = new File(name);
-	interval = config.getTimeInterval(PARAM_PLATFORM_WDOG_INTERVAL,
-					  DEFAULT_PLATFORM_WDOG_INTERVAL);
 	log.info("Platform watchdog interval: " +
 		 StringUtil.timeIntervalToString(interval) +
 		 ", file: " + watchedFile);
-	if (!watchedFile.exists()) {
-	  log.warning("Watchdog file does not exist");
-	}
 	if (theDaemon.isDaemonRunning()) {
 	  enable();
 	}
       } else {
-	watchedFile = null;
 	disable();
+	watchedFile = null;
       }
     }
   }
@@ -99,36 +96,70 @@ public class WatchdogService extends BaseLockssManager {
   }
 
   private synchronized void enable() {
-    disable();			      // First, ensure no current timer req
+    stopRunning();		      // First, ensure no current timer req
     enabled = true;
     woof();
   }
 
   private synchronized void disable() {
+    if (enabled) {
+      log.info("Disabling watchdog");
+    }
+    stopRunning();
+    if (watchedFile != null && watchedFile.exists()) {
+      try {
+	watchedFile.delete();
+      } catch (Exception e) {
+      }
+    }
+  }
+
+  private void stopRunning() {
     enabled = false;
     if (req != null) {
       TimerQueue.cancel(req);
     }
   }
 
+  // TimerQueue callback.  Not inline because don't need a new instance
+  // each time.
+  private TimerQueue.Callback timerCallback =
+    new TimerQueue.Callback() {
+      public void timerExpired(Object cookie) {
+	woof();
+      }};
+
+  // Touch the watchdog file, schedule a timer event for the next one.  If
+  // can't update time on file, try to delete it so platform will know
+  // we're not running.
   private synchronized void woof() {
     log.debug2("woof");
     req = null;
-    if (enabled) {
-      if (watchedFile != null) {
-	try {
-	  watchedFile.setLastModified(TimeBase.nowMs());
-	} catch (Exception e) {
-	  log.warning("Couldn't update platform watchdog file: " +
-		      e.toString());
+    if (watchedFile != null) {
+      String verbing = "testing existence of"; // for error msg
+      try {
+	if (!watchedFile.exists()) {
+	  verbing = "creating";
+	  if (watchedFile.createNewFile()) {
+	    log.debug("Created watchdog file: " + watchedFile.toString());
+	  } else {
+	    log.warning("Couldn't create watchdog file: " +
+			watchedFile.toString());
+	    disable();
+	  }
 	}
+	verbing = "setting last-modified time of";
+	if (!watchedFile.setLastModified(TimeBase.nowMs())) {
+	  disable();
+	}
+      } catch (Exception e) {
+	log.warning("Error " + verbing + " platform watchdog file: " +
+		    watchedFile.toString() + ": " + e.toString());
+	disable();
       }
-      req = TimerQueue.schedule(Deadline.in(interval),
-				new TimerQueue.Callback() {
-				  public void timerExpired(Object cookie) {
-				    woof();
-				  }},
-				null);
+    }
+    if (enabled) {
+      req = TimerQueue.schedule(Deadline.in(interval), timerCallback, null);
     }
   }
 }

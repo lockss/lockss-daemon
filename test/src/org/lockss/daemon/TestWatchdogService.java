@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.3 2003-05-24 01:14:09 tal Exp $
+ * $Id: TestWatchdogService.java,v 1.4 2003-05-26 03:47:59 tal Exp $
  */
 
 /*
@@ -63,33 +63,42 @@ public class TestWatchdogService extends LockssTestCase {
     super.tearDown();
   }
 
+  private void config(String file, String interval) {
+    Properties props = new Properties();
+    props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, file);
+    props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, interval);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+  }
+
   // ensure it doesn't do anything untoward when it's not configured
   public void testWdogOff() throws Exception {
+    config("", "0");
+    wdog.startService();
+    config("", "1");
+    wdog.startService();
+    config("foo", "0");
     wdog.startService();
   }
 
-  // nor if the file doesn't exist
-  public void testNoFile() throws Exception {
-    String tmpfile = "/tmp/nexist-pas";
-    assertFalse(new File(tmpfile).exists());
+  public void testCreate() throws Exception {
+    // arrange for a file that doesn't exist
+    File tmpfile = FileUtil.tempFile("wdog");
+    tmpfile.delete();
+    assertFalse(tmpfile.exists());
 
-    // configure a 1 second watchdog
-    Properties props = new Properties();
-    props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, tmpfile.toString());
-    props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, "10s");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    // Configure and start a watchdog.
+    // It should go off once and create the file
+    config(tmpfile.toString(), "1s");
     TimeBase.setSimulated(9000);
     wdog.startService();
+    assertTrue(tmpfile.exists());
   }
 
   public void testWdogOn() throws Exception {
     File tmpfile = FileUtil.tempFile("wdog");
 
     // configure a 10 second watchdog
-    Properties props = new Properties();
-    props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, tmpfile.toString());
-    props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, "10s");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
+    config(tmpfile.toString(), "10s");
 
     TimeBase.setSimulated(9000);
     wdog.startService();
@@ -100,12 +109,24 @@ public class TestWatchdogService extends LockssTestCase {
 
     // 9 seconds later, it shouldn't get updated
     TimeBase.step(9000);
-    TimerUtil.guaranteedSleep(50);
     assertEquals(e1, tmpfile.lastModified());
 
     // 1 more second later, it should be updated again
     TimeBase.step(1000);
-    long e2 = TimeBase.nowMs();
-    assertEquals(e2, tmpfile.lastModified());
+    assertEquals(TimeBase.nowMs(), tmpfile.lastModified());
+  }
+
+  public void testDisable() throws Exception {
+    File tmpfile = FileUtil.tempFile("wdog");
+
+    // configure a 10 second watchdog
+    config(tmpfile.toString(), "10s");
+
+    wdog.startService();
+    assertTrue(tmpfile.exists());
+
+    // now unconfigure it.  the file should be deleted
+    config(tmpfile.toString(), "0");
+    assertFalse(tmpfile.exists());
   }
 }
