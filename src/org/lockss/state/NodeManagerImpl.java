@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.91 2003-04-10 01:24:35 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.92 2003-04-10 03:30:49 claire Exp $
  */
 
 /*
@@ -324,13 +324,13 @@ public class NodeManagerImpl
       // if agree
       if (results.isMyPoll()) {
         // if poll is mine
+        logger.debug2("won name poll, calling content poll on subnodes.");
         try {
-          logger.debug2("won name poll, calling content poll on subnodes.");
           callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
           pollState.status = PollState.WON;
         }
-        catch (IOException e) {
-          logger.error("IO error scheduling content polls.", e);
+        catch (IOException ex) {
+          logger.debug2("unable to start content poll, setting status to ERR_IO");
           pollState.status = PollState.ERR_IO;
         }
       }
@@ -401,7 +401,7 @@ public class NodeManagerImpl
       case PollState.RUNNING:
         // if this poll should be running make sure it is running.
         if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
-          recallLastPoll(lastPollSpec, lastHistory);
+          callLastPoll(lastPollSpec, lastHistory);
           return true;
         }
         break;
@@ -424,11 +424,10 @@ public class NodeManagerImpl
         // if we ended with an error and it was our poll,
         // we need to recall this poll.
         if (lastHistory.getOurPoll()) {
-          recallLastPoll(lastPollSpec, lastHistory);
+          callLastPoll(lastPollSpec, lastHistory);
           return true;
         }
     }
-    ;
     return false;
   }
 
@@ -441,37 +440,16 @@ public class NodeManagerImpl
     return "";
   }
 
-  void recallLastPoll(PollSpec spec, PollState lastPoll) {
-    if (lastPoll.type == Poll.CONTENT_POLL) {
-      callContentPoll(spec);
-    }
-    else if (lastPoll.type == Poll.NAME_POLL) {
-      callNamePoll(spec);
-    }
-  }
 
-  void callContentPoll(PollSpec spec) {
+  void callTopLevelPoll() {
+    PollSpec spec = new PollSpec(managedAu.getAUCachedUrlSet());
     try {
-      logger.debug2("Calling a content poll on " + spec);
+      logger.debug2("Calling a top level poll on " + spec);
       pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
     }
     catch (IOException ioe) {
-      logger.error("Excption calling content poll on " + spec, ioe);
+      logger.error("Exception calling top level poll on " + spec, ioe);
     }
-  }
-
-  void callNamePoll(PollSpec spec) {
-    try {
-      logger.debug2("Calling a name poll on " + spec);
-      pollManager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
-    }
-    catch (IOException ioe) {
-      logger.error("Excption calling name poll on " + spec, ioe);
-    }
-  }
-
-  void callTopLevelPoll() {
-    callContentPoll(new PollSpec(managedAu.getAUCachedUrlSet()));
   }
 
   private void closePoll(PollState pollState, long duration, Collection votes,
@@ -560,35 +538,67 @@ public class NodeManagerImpl
     List childList = convertChildrenToCUSList(children);
     // Divide the list in two and call two new content polls
     if (childList.size() > 4) {
-      String base = cus.getUrl();
       int mid = childList.size() / 2;
 
       // the first half of the list
       String lwr = ( (CachedUrlSet) childList.get(0)).getUrl();
-      lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
       String upr = ( (CachedUrlSet) childList.get(mid)).getUrl();
-      upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
-      callContentPoll(new PollSpec(cus, lwr, upr));
+      callContentPoll(cus, lwr, upr);
 
       // the second half of the list
       lwr = ( (CachedUrlSet) childList.get(mid + 1)).getUrl();
-      lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
-      upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).
-          getUrl();
-      upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
-      callContentPoll(new PollSpec(cus, lwr, upr));
+      upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).getUrl();
+      callContentPoll(cus, lwr, upr);
     }
     else if (childList.size() > 0) {
       logger.debug2("less than 4 items, calling content poll on all items.");
       for (int i = 0; i < childList.size(); i++) {
-        callContentPoll(new PollSpec( (CachedUrlSet) childList.get(i)));
+        callContentPoll((CachedUrlSet) childList.get(i), null, null);
       }
     }
     // content poll for this node's content alone
-    PollSpec pspec = new PollSpec(cus, RangeCachedUrlSetSpec.SINGLE_NODE_RANGE,
-                                  null);
-    logger.debug2("calling single node content poll on " + pspec);
-    pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, pspec);
+    callContentPoll(cus, RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null);
+  }
+
+  private void callContentPoll(CachedUrlSet cus, String lwr, String upr) throws
+      IOException {
+    String base = cus.getUrl();
+    if(lwr != null) {
+      lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
+    }
+    if(upr != null) {
+      upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
+    }
+    PollSpec spec = new PollSpec(cus, lwr, upr);
+    logger.debug2("Calling a content poll on " + spec);
+    pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+  }
+
+  private void callLastPoll(PollSpec spec, PollState lastPoll) {
+    try {
+      if (lastPoll.type == Poll.CONTENT_POLL) {
+        logger.debug2("Calling a content poll on " + spec);
+        pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+      }
+      else if (lastPoll.type == Poll.NAME_POLL) {
+        logger.debug2("Calling a name poll on " + spec);
+        pollManager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
+      }
+    }
+    catch (IOException ioe) {
+      logger.error("Exception calling poll on " + spec, ioe);
+    }
+  }
+
+
+  private void callNamePoll(PollSpec spec) {
+    try {
+      logger.debug2("Calling a name poll on " + spec);
+      pollManager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
+    }
+    catch (IOException ioe) {
+      logger.error("Excption calling name poll on " + spec, ioe);
+    }
   }
 
   private List convertChildrenToCUSList(Iterator children) {
@@ -613,19 +623,25 @@ public class NodeManagerImpl
 
   private boolean hasDamage(CachedUrlSet cus, int pollType) {
     boolean hasDamage = false;
-    Iterator it = null;
+    Iterator childIt = null;
     switch (pollType) {
       case Poll.CONTENT_POLL:
-        it = cus.treeIterator();
+        childIt = cus.treeIterator();
         break;
       case Poll.NAME_POLL:
-        it = cus.flatSetIterator();
+        childIt = cus.flatSetIterator();
         break;
     }
-    List childList = convertChildrenToCUSList(it);
-    Iterator childIt = childList.iterator();
     while (childIt.hasNext()) {
-      CachedUrlSet child_cus = (CachedUrlSet) childIt.next();
+      CachedUrlSetNode child = (CachedUrlSetNode) childIt.next();
+      CachedUrlSet child_cus;
+      if(child instanceof CachedUrlSet) {
+        child_cus = (CachedUrlSet) child;
+      }
+      else{
+        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
+        child_cus = ( (BaseArchivalUnit) managedAu).makeCachedUrlSet(rSpec);
+      }
       NodeState nodeState = getNodeState(child_cus);
       PollHistory pollHistory = nodeState.getLastPollHistory();
       if (pollHistory != null &&
