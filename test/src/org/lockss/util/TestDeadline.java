@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.4 2002-12-15 00:11:38 tal Exp $
+ * $Id: TestDeadline.java,v 1.5 2002-12-16 00:59:01 tal Exp $
  */
 
 /*
@@ -102,7 +102,6 @@ public class TestDeadline extends LockssTestCase {
       Date start = new Date();
       intr = interruptMeIn(TIMEOUT_SHOULDNT);
       Deadline t = Deadline.in(100);
-      assertTrue(!t.expired());
       while (!t.expired()) {
 	try {
 	  t.sleep();
