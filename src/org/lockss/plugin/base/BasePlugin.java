@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.19 2004-01-27 04:07:09 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.20 2004-02-03 02:03:13 clairegriffin Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public abstract class BasePlugin
   protected PluginManager pluginMgr;
   protected Collection aus = new ArrayList();
   protected Map titleConfigMap;
+  protected CacheExceptionMap exceptionMap = new CacheExceptionMap();
+
   /**
    * Must invoke this constructor in plugin subclass.
    */
@@ -237,4 +239,13 @@ public abstract class BasePlugin
   public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
     return new BaseUrlCacher(owner, url);
   }
+
+  /**
+   * return the CacheExceptionMap to use with this plugin
+   * @return CacheExceptionMap
+   */
+  public CacheExceptionMap getExceptionMap() {
+    return exceptionMap;
+  }
+
 }

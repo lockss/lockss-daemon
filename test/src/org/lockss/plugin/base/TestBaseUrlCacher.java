@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.11 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.12 2004-02-03 02:03:14 clairegriffin Exp $
  */
 
 /*
@@ -142,8 +142,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     cacher._headers = null;
     try {
       cacher.cache();
-      fail("Should have thrown CachingException.");
-    } catch (BaseUrlCacher.CachingException ce) { }
+      fail("Should have thrown NullPointerException.");
+    } catch (NullPointerException npe) { }
     assertFalse(cacher.wasStored);
 
     // no exceptions from null inputstream
@@ -176,6 +176,28 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     props = url.getProperties();
     assertTrue(props.getProperty("test1").equals("value1"));
+  }
+
+  public void testCheckConnection() {
+    MyMockHttpURLConnection  conn = new MyMockHttpURLConnection();
+    conn.setResponseCode(200);
+    conn.setResponseMessage("OK");
+    try {
+      cacher.checkConnectException(conn);
+    }
+    catch (IOException ex) {
+      assertTrue("Unexpected exception", ex == null);
+    }
+
+    conn.setResponseCode(401);
+    conn.setResponseMessage("Unauthorized");
+    try {
+      cacher.checkConnectException(conn);
+    }
+    catch (IOException ex) {
+      assertTrue("Expected exception", ex != null);
+    }
+
   }
 
   public static void main(String[] argv) {
@@ -225,11 +247,37 @@ public class TestBaseUrlCacher extends LockssTestCase {
       super.storeContent(input, headers);
       wasStored = true;
     }
+
   }
 
   private class MyMockArchivalUnit extends MockArchivalUnit {
     public void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
+    }
+  }
+
+  private class MyMockHttpURLConnection extends MockHttpURLConnection {
+    private int m_responseCode;
+    private String m_responseMessage;
+
+    public MyMockHttpURLConnection() {
+
+    }
+
+    public int  getResponseCode() {
+      return m_responseCode;
+    }
+
+    public String getResponseMessage() {
+      return m_responseMessage;
+    }
+
+    public void setResponseCode(int responseCode) {
+      m_responseCode = responseCode;
+    }
+
+    public void setResponseMessage(String message) {
+      m_responseMessage = message;
     }
   }
 }

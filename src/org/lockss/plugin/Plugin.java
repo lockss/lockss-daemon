@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.20 2004-01-31 22:54:07 tlipkis Exp $
+ * $Id: Plugin.java,v 1.21 2004-02-03 02:03:13 clairegriffin Exp $
  */
 
 /*
@@ -33,8 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
-import org.lockss.daemon.*;
+
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 
 /**
  * Interface required by a plugin to be used by the lockss daemon.  All
@@ -158,6 +159,5 @@ public interface Plugin {
    * @return a {@link UrlCacher} object representing the url.
    */
   public UrlCacher makeUrlCacher(CachedUrlSet owner, String url);
-
 
 }

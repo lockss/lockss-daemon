@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.19 2003-12-19 01:33:24 eaalto Exp $
+ * $Id: BaseUrlCacher.java,v 1.20 2004-02-03 02:03:13 clairegriffin Exp $
  */
 
 /*
@@ -34,11 +34,12 @@ package org.lockss.plugin.base;
 
 import java.io.*;
 import java.net.*;
-import java.util.Properties;
-import org.lockss.plugin.*;
-import org.lockss.util.*;
-import org.lockss.repository.*;
+import java.util.*;
+
 import org.lockss.app.*;
+import org.lockss.plugin.*;
+import org.lockss.repository.*;
+import org.lockss.util.*;
 
 /**
  * Base class for UrlCachers.  Utilizes the LockssRepository for caching, and
@@ -51,7 +52,7 @@ public class BaseUrlCacher implements UrlCacher {
   private URLConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
   private LockssRepository repository;
-
+  private CacheExceptionMap exceptionMap;
   private static final String HEADER_PREFIX = "_header";
 
 
@@ -60,6 +61,7 @@ public class BaseUrlCacher implements UrlCacher {
     this.url = url;
     ArchivalUnit au = owner.getArchivalUnit();
     repository = au.getPlugin().getDaemon().getLockssRepository(au);
+    exceptionMap = ((BasePlugin)au.getPlugin()).getExceptionMap();
   }
 
   /**
@@ -141,8 +143,9 @@ public class BaseUrlCacher implements UrlCacher {
       // null input indicates unmodified content, so skip caching
       Properties headers = getUncachedProperties();
       if (headers == null) {
-        logger.error("Received null headers for url '" + url + "'.");
-        throw new CachingException("Received null headers.");
+        String err = "Received null headers for url '" + url + "'.";
+        logger.error(err);
+        throw new NullPointerException(err);
       }
       storeContent(input, headers);
     }
@@ -151,13 +154,19 @@ public class BaseUrlCacher implements UrlCacher {
   protected void storeContent(InputStream input, Properties headers)
       throws IOException {
     logger.debug3("Caching url '"+url+"'");
-    RepositoryNode leaf = repository.createNewNode(url);
-    leaf.makeNewVersion();
+    RepositoryNode leaf = null;
+    try {
+      leaf = repository.createNewNode(url);
+      leaf.makeNewVersion();
 
-    OutputStream os = leaf.getNewOutputStream();
-    StreamUtil.copy(input, os);
-    os.close();
-    input.close();
+      OutputStream os = leaf.getNewOutputStream();
+      StreamUtil.copy(input, os);
+      os.close();
+      input.close();
+    }
+    catch (IOException ex) {
+      throw exceptionMap.getRepositoryException(ex.getMessage());
+    }
 
     leaf.setNewProperties(headers);
 
@@ -225,18 +234,26 @@ public class BaseUrlCacher implements UrlCacher {
     return props;
   }
 
-  private void openConnection() throws IOException {
-    if (conn==null) {
-      URL urlO = new URL(url);
-      conn = urlO.openConnection();
-      conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+  void checkConnectException(URLConnection conn) throws IOException {
+    if(conn instanceof HttpURLConnection) {
+      CacheException c_ex = exceptionMap.checkException((HttpURLConnection)conn);
+      if(c_ex != null) {
+        throw c_ex;
+      }
     }
   }
 
-
-  public static class CachingException extends IOException {
-    public CachingException(String msg) {
-      super(msg);
+  private void openConnection() throws IOException {
+    if (conn==null) {
+      try {
+        URL urlO = new URL(url);
+        conn = urlO.openConnection();
+      }
+      catch (IOException ex) {
+        throw exceptionMap.getHostException(ex.getMessage());
+      }
+      conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+      checkConnectException(conn);
     }
   }
 }
