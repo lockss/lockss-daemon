@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.9 2003-02-21 21:53:28 aalto Exp $
+ * $Id: MockCachedUrl.java,v 1.10 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.OutputStream;
 import java.io.IOException;
 import java.util.Properties;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * This is a mock version of <code>CachedUrl</code> used for testing

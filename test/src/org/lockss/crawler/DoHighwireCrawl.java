@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.11 2003-02-20 22:30:34 tal Exp $
+ * $Id: DoHighwireCrawl.java,v 1.12 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.crawler;
 import java.util.*;
 import java.net.URL;
 import org.lockss.daemon.*;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.plugin.highwire.*;
 import org.lockss.proxy.ProxyHandler;
 import org.lockss.util.Deadline;

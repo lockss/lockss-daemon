@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.2 2003-02-06 00:51:45 aalto Exp $
+ * $Id: HistoryRepository.java,v 1.3 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.state;
 
 import java.util.List;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * HistoryRepository is an inner layer of the NodeManager which handles the actual

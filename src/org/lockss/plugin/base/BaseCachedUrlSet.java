@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.11 2003-02-21 22:51:02 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.1 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -30,8 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon;
+package org.lockss.plugin.base;
 
+import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 /**
  * Abstract base class for CachedUrlSets.

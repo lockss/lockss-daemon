@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.5 2003-02-10 23:46:00 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.6 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.state.NodeState;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
+import org.lockss.plugin.*;
 
 
 /**

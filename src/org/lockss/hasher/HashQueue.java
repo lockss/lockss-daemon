@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.14 2002-12-16 06:58:47 tal Exp $
+ * $Id: HashQueue.java,v 1.15 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.text.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 class HashQueue implements Serializable {
   static final String PREFIX = Configuration.PREFIX + "hasher.";

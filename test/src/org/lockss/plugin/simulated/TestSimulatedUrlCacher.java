@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.6 2003-01-03 22:42:54 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.7 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.Properties;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedUrlCacher

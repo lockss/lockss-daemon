@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.9 2003-02-20 02:23:40 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.10 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -34,19 +34,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.io.*;
-import java.util.*;
-import org.lockss.util.Logger;
-import org.lockss.util.ListUtil;
-import org.lockss.repository.*;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.daemon.Configuration;
 import java.net.MalformedURLException;
+import java.util.*;
+
 import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.mapping.Mapping;
-import org.lockss.util.FileLocationUtil;
+
+import org.lockss.util.*;
+import org.lockss.repository.*;
+import org.lockss.daemon.Configuration;
 import org.lockss.app.*;
-import org.lockss.daemon.ArchivalUnit;
+import org.lockss.plugin.*;
 
 
 /**

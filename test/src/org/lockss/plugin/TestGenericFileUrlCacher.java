@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.8 2002-11-27 20:30:09 aalto Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.9 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.StreamUtil;
 import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.plugin.base.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher

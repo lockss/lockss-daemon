@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.3 2003-01-13 17:11:29 tal Exp $
+ * $Id: TestLcapComm.java,v 1.4 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.io.*;
 import java.net.*;
 import junit.framework.TestCase;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -135,7 +136,7 @@ public class TestLcapComm extends LockssTestCase {
     assertEquals(testPort, sent.getPort());
     assertEquals(testPktData, sent.getData());
   }
-  
+
   public void testMulticastSend() throws Exception {
     assertTrue(ssock.getSentPackets().isEmpty());
     comm.send(testSend, (ArchivalUnit)null);
@@ -145,7 +146,7 @@ public class TestLcapComm extends LockssTestCase {
     assertEquals(config.getInt(PARAM_MULTI_PORT), sent.getPort());
     assertEquals(testPktData, sent.getData());
   }
-  
+
   public void testUnicastReceive() throws Exception {
     assertTrue(rcvdMsgs.isEmpty());
     System.err.println(ByteArray.toHexString(testPacket.getData()));
@@ -191,7 +192,7 @@ public class TestLcapComm extends LockssTestCase {
     List msocks = new ArrayList();
     List usocks = new ArrayList();
     List ssocks = new ArrayList();
-    
+
     public LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
 					    InetAddress group,
 					    int port)

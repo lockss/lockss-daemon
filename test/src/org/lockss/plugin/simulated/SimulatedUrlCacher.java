@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.5 2003-01-03 22:42:54 aalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.6 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
 
 /**
  * This is the UrlCacher object for the SimulatedPlugin

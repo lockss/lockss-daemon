@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileUrlCacher.java,v 1.1 2002-10-23 23:51:10 aalto Exp $
+ * $Id: MockGenericFileUrlCacher.java,v 1.2 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.test;
 import java.io.*;
 import java.util.Properties;
 import org.lockss.plugin.GenericFileUrlCacher;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 
 /**
  * This is a mock version of <code>UrlCacher</code> used for testing

@@ -1,6 +1,6 @@
 package org.lockss.app;
 
-public class LockssDaemonException extends Exception {
+public class LockssDaemonException extends RuntimeException {
 
   public LockssDaemonException() {
     super();

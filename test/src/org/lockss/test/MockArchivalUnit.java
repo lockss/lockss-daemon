@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.14 2003-02-22 03:01:34 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.15 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
+import org.lockss.plugin.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.23 2003-02-21 22:51:02 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.24 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * This is a mock version of <code>CachedUrlSet</code> used for testing

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.17 2003-02-13 06:28:52 claire Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.18 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.Configuration;
 import org.lockss.daemon.TestConfiguration;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl

@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.2 2003-02-11 00:58:16 aalto Exp $
+ * $Id: AuStateBean.java,v 1.3 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import org.lockss.daemon.ArchivalUnit;
+import org.lockss.plugin.ArchivalUnit;
 
 /**
  * AuStateBean is a settable version of AuState used purely for

@@ -38,6 +38,7 @@ import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.GenericFileCachedUrlSet;
 import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.plugin.*;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   public static final long WEEK_MS = 1000 * 60 * 60 * 24 * 7;

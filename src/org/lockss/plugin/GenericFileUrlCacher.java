@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.11 2003-02-11 00:58:16 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.12 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Properties;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.repository.*;
+import org.lockss.plugin.base.*;
 
 /**
  * This is an abstract file implementation of UrlCacher which uses the

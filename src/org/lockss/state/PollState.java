@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.10 2003-02-13 06:28:52 claire Exp $
+ * $Id: PollState.java,v 1.11 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -28,7 +28,7 @@
 package org.lockss.state;
 
 import java.util.Iterator;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.util.Deadline;
 
 /**

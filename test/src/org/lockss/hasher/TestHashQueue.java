@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.6 2002-12-02 23:16:26 tal Exp $
+ * $Id: TestHashQueue.java,v 1.7 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.plugin.*;
 
 
 /**

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.7 2003-02-20 00:57:28 claire Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.8 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
 import org.lockss.test.*;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.daemon.TestConfiguration;
 import org.lockss.util.*;
 import org.exolab.castor.mapping.Mapping;

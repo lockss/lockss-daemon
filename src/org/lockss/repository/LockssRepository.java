@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.9 2003-02-11 00:58:16 aalto Exp $
+ * $Id: LockssRepository.java,v 1.10 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.repository;
 
 import java.net.MalformedURLException;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * LockssRepository is used to organize the urls being cached.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.4 2003-02-13 06:28:52 claire Exp $
+ * $Id: TestNodeStateImpl.java,v 1.5 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -28,7 +28,7 @@
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.test.*;
 import org.lockss.util.CollectionUtil;
 import java.io.*;

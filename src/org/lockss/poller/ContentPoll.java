@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.24 2003-02-11 23:57:01 claire Exp $
+* $Id: ContentPoll.java,v 1.25 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.mortbay.util.B64Code;
+import org.lockss.plugin.*;
 
 /**
  * class which represents a content poll

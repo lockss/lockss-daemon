@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollHistoryImpl.java,v 1.2 2003-02-13 06:28:52 claire Exp $
+ * $Id: TestPollHistoryImpl.java,v 1.3 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.test.LockssTestCase;
 import org.lockss.poller.Poll;
 

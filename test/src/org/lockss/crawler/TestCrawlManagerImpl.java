@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.3 2003-02-10 23:46:00 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.4 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import junit.framework.TestCase;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.state.*;
+import org.lockss.plugin.*;
 
 /**
  */

@@ -1,5 +1,5 @@
 /*
- * $Id: FileLocationUtil.java,v 1.3 2003-02-05 23:32:58 aalto Exp $
+ * $Id: FileLocationUtil.java,v 1.4 2003-02-24 22:13:42 claire Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -31,11 +31,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
-import org.lockss.daemon.ArchivalUnit;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.lockss.plugin.*;
 /**
  * Create a list of Object from a call list.
  */

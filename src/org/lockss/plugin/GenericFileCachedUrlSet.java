@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.22 2003-02-21 21:53:28 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.23 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -34,16 +34,18 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.*;
-import java.security.MessageDigest;
+import java.security.*;
 import java.net.MalformedURLException;
+
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import org.lockss.poller.PollManager;
-import org.lockss.util.TimeBase;
-import java.security.*;
 import org.lockss.protocol.*;
+import org.lockss.plugin.*;
+import org.lockss.plugin.base.*;
+import org.lockss.plugin.base.BaseCachedUrlSet;
 
 /**
  * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.16 2003-02-07 19:15:48 aalto Exp $
+ * $Id: LcapComm.java,v 1.17 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
 import org.lockss.app.*;
+import org.lockss.plugin.*;
 
 /**
  * LcapComm implements the routing parts of the LCAP protocol, using

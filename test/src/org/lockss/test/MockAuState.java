@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.1 2003-02-10 23:45:31 troberts Exp $
+ * $Id: MockAuState.java,v 1.2 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import org.lockss.daemon.*;
 import org.lockss.state.*;
+import org.lockss.plugin.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
@@ -47,7 +48,7 @@ public class MockAuState extends AuState {
   public MockAuState(ArchivalUnit au, long lastCrawlTime) {
     super(au, lastCrawlTime);
   }
-  
+
   public ArchivalUnit getArchivalUnit() {
     return au;
   }
@@ -56,7 +57,7 @@ public class MockAuState extends AuState {
     return lastCrawlTime;
   }
 
-  
+
 
 }
 

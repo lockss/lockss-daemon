@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.4 2003-02-20 22:29:39 tal Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.5 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.test.MockCachedUrlSetSpec;
 import org.lockss.plugin.*;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.plugin.base.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing

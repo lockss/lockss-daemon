@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.3 2003-02-20 01:37:23 aalto Exp $
+ * $Id: TestGenericNameHasher.java,v 1.4 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 public class TestGenericNameHasher extends TestCase {
   private static final char DELIMITER = '\n';

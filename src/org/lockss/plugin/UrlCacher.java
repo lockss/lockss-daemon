@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.9 2003-02-21 21:53:28 aalto Exp $
+ * $Id: UrlCacher.java,v 1.1 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -30,40 +30,46 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon;
-
+package org.lockss.plugin;
 import java.io.*;
 import java.util.Properties;
 
+import org.lockss.daemon.*;
+
 /**
- * <code>CachedUrl</code> is used to access the contents and
- * meta-information of a single cached url.  The contents and
- * meta-information represented by any particular <code>CachedUrl</code>
- * instance are immutable, thus no locking or synchronization is required
- * by readers.  Any new content obtained for the url (<i>eg</i>, by a new
- * crawl or a repair) will be visible only via a newly obtained
- * <code>CachedUrl</code>.
- *
- * <code>CachedUrl</code> is implemented by the plug-in, which provides a
- * static method taking a String url and returning an object implementing
- * the <code>CachedUrl</code> interface.
- *
- * @author  David S. H. Rosenthal
- * @see UrlCacher
- * @version 0.0 */
-public interface CachedUrl extends CachedUrlSetNode {
+ * UrlCacher is used to store the contents and
+ * meta-information of a single url being cached.  It is implemented by the
+ * plug-in, which provides a static method taking a String url and
+ * returning an object implementing the UrlCacher interface.
+ */
+public interface UrlCacher {
     /**
-     * Get an object from which the content of the url can be read
-     * from the cache.
-     * @return a <code>InputStream</code> object from which the
-     *         unfiltered content of the cached url can be read.
+     * Return the url being represented
+     * @return the <code>String</code> url being represented.
      */
-    public InputStream openForReading();
+    public String getUrl();
     /**
-     * Get the properties attached to the url in the cache, if any.
-     * @return the <code>Properties</code> object attached to the
-     *         url.  If no properties have been attached, an
-     *         empty <code>Properties</code> object is returned.
+     * Return the {@link CachedUrlSet} to which this UrlCacher belongs.
+     * @return the parent set
      */
-    public Properties getProperties();
+    public CachedUrlSet getCachedUrlSet();
+    /**
+     * Return <code>true</code> if the underlying url is one that
+     * the plug-in believes should be preserved.
+     * @return <code>true</code> if the underlying url is one that
+     *         the plug-in believes should be preserved.
+     */
+    public boolean shouldBeCached();
+    /**
+     * Return a {@link CachedUrl} for the content stored.  May be
+     * called only after the content is completely written.
+     * @return {@link CachedUrl} for the content stored.
+     */
+    public CachedUrl getCachedUrl();
+
+    /**
+     * Copies the content and properties from the source into the cache.
+     * @throws java.io.IOException on many possible I/O problems.
+     */
+    public void cache() throws IOException;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.12 2003-02-21 22:51:02 aalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.13 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -76,6 +76,7 @@ import java.net.URL;
 import java.net.MalformedURLException;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * The crawler.

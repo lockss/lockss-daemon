@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.8 2003-02-07 19:15:48 aalto Exp $
+ * $Id: HashService.java,v 1.9 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.plugin.*;
 
 /**
  * API for content and name hashing services.

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.35 2003-02-21 22:51:02 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.36 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ import org.lockss.repository.LockssRepository;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.app.*;
 import java.net.URL;
+import org.lockss.plugin.base.*;
+import org.lockss.plugin.*;
 
 /**
  * Implementation of the NodeManager.

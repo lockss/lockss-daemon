@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.3 2003-02-20 02:23:40 aalto Exp $
+* $Id: MockPollManager.java,v 1.4 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -35,9 +35,10 @@ package org.lockss.test;
 import java.io.IOException;
 import java.util.Hashtable;
 import org.lockss.app.*;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.poller.PollManager;
 import org.lockss.protocol.LcapMessage;
+import org.lockss.plugin.*;
 
 /**
  * Mock override of the PollManager

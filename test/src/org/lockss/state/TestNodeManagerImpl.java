@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.25 2003-02-20 02:23:40 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.26 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.HashService;
+import org.lockss.plugin.*;
 
 public class TestNodeManagerImpl
     extends LockssTestCase {

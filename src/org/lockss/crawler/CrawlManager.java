@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.6 2003-02-19 00:38:06 aalto Exp $
+ * $Id: CrawlManager.java,v 1.7 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 import java.net.URL;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
+import org.lockss.plugin.*;
 
 /**
  * This is the interface for the object which will sit between the crawler

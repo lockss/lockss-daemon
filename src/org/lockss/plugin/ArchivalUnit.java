@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.13 2003-02-20 22:26:05 tal Exp $
+ * $Id: ArchivalUnit.java,v 1.1 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -30,10 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon;
+package org.lockss.plugin;
 import gnu.regexp.*;
 import java.util.*;
 import org.lockss.state.*;
+import org.lockss.daemon.*;
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit

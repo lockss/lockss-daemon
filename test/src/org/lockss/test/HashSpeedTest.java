@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.2 2003-02-06 05:16:07 claire Exp $
+ * $Id: HashSpeedTest.java,v 1.3 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.poller.PollManager;
 import org.lockss.crawler.GoslingCrawlerImpl;
 import org.lockss.util.Deadline;
 import org.lockss.protocol.*;
+import org.lockss.plugin.*;
 
 public class HashSpeedTest extends LockssTestCase {
   private SimulatedArchivalUnit sau;

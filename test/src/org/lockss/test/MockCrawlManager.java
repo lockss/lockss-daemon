@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.2 2003-02-19 00:38:06 aalto Exp $
+ * $Id: MockCrawlManager.java,v 1.3 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.URL;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.crawler.CrawlManager;
 
 

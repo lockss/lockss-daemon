@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileLocationUtil.java,v 1.2 2003-02-05 23:32:57 aalto Exp $
+ * $Id: TestFileLocationUtil.java,v 1.3 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.net.MalformedURLException;
 import org.lockss.util.*;
 import org.lockss.test.LockssTestCase;
 import org.lockss.test.MockArchivalUnit;
-import org.lockss.daemon.ArchivalUnit;
+import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl

@@ -11,7 +11,6 @@ import org.lockss.proxy.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
-import org.lockss.daemon.ArchivalUnit;
 
 public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.36 2003-02-22 03:01:57 claire Exp $
+ * $Id: NamePoll.java,v 1.37 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * @author Claire Griffin

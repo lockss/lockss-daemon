@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.8 2003-02-21 21:53:29 aalto Exp $
+ * $Id: GenericHasher.java,v 1.9 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.security.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * General class to handle content hashing

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.6 2003-01-03 22:42:54 aalto Exp $
+ * $Id: BaseCachedUrl.java,v 1.1 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -30,51 +30,54 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.daemon;
-
+package org.lockss.plugin.base;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 import java.util.Properties;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
-/**
- * Abstract base class for UrlCachers.
- * Plugins may extend this to get some common UrlCacher functionality.
+/** Abstract base class for CachedUrls.
+ * Plugins may extend this to get some common CachedUrl functionality.
  */
-public abstract class BaseUrlCacher implements UrlCacher {
+public abstract class BaseCachedUrl implements CachedUrl {
   protected CachedUrlSet cus;
   protected String url;
 
   /**
    * Must invoke this constructor in plugin subclass.
-   * @param owner the CachedUrlSet which ownes the url
-   * @param url the url string
+   * @param owner the CachedUrlSet owner
+   * @param url the url
    */
-  protected BaseUrlCacher(CachedUrlSet owner, String url) {
+  protected BaseCachedUrl(CachedUrlSet owner, String url) {
     this.cus = owner;
     this.url = url;
   }
 
-  /**
-   * Return the URL in string form
-   * @return the url string
-   */
   public String getUrl() {
     return url;
   }
 
+  public int getType() {
+    return CachedUrlSetNode.TYPE_CACHED_URL;
+  }
+
+  public boolean isLeaf() {
+    return true;
+  }
+
   /**
-   * Overrides normal <code>toString()</code> to return a string like
-   * "BUC: <url>"
-   * @return the class-url string
+   * Overrides normal <code>toString()</code> to return a string like "BCU: <url>"
+   * @return the string form
    */
   public String toString() {
-    return "[BUC: "+url+"]";
+    return "[BCU: "+url+"]";
   }
 
   /**
    * Return the CachedUrlSet to which this CachedUrl belongs.
-   * @return the owner CachedUrlSet
+   * @return the CachedUrlSet
    */
   public CachedUrlSet getCachedUrlSet() {
     return cus;
@@ -82,43 +85,10 @@ public abstract class BaseUrlCacher implements UrlCacher {
 
   /**
    * Return the ArchivalUnit to which this CachedUrl belongs.
-   * @return the owner ArchivalUnit
+   * @return the ArchivalUnit
    */
   public ArchivalUnit getArchivalUnit() {
     CachedUrlSet cus = getCachedUrlSet();
-    return cus.getArchivalUnit();
+    return cus != null ? cus.getArchivalUnit() : null;
   }
-
-  /**
-   * Return <code>true</code> if the underlying url is one that
-   * the plug-in believes should be preserved.
-   * @return a boolean indicating if it should be cached
-   */
-  public boolean shouldBeCached() {
-    return getArchivalUnit().shouldBeCached(getUrl());
-  }
-
-  /**
-   * Return a CachedUrl for the content stored.  May be
-   * called only after the content is completely written.
-   * @return CachedUrl for the content stored.
-   */
-  public CachedUrl getCachedUrl() {
-    return getCachedUrlSet().makeCachedUrl(getUrl());
-  }
-
-  /**
-   * Copy the content and properties from the source into the cache
-   * @throws IOException
-   */
-  public void cache() throws IOException {
-    storeContent(getUncachedInputStream(),
-		 getUncachedProperties());
-  }
-
-  protected abstract void storeContent(InputStream input,
-				       Properties props)
-      throws IOException;
-  protected abstract InputStream getUncachedInputStream() throws IOException;
-  protected abstract Properties getUncachedProperties() throws IOException;
 }

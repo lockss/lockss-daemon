@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.8 2003-02-21 21:53:28 aalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.9 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.util.TimeBase;
+import org.lockss.plugin.*;
 
 public class TestGenericContentHasher extends LockssTestCase {
   private static final char DELIMITER='&';

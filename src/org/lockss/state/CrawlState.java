@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.2 2003-01-16 01:44:45 aalto Exp $
+ * $Id: CrawlState.java,v 1.3 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.Iterator;
-import org.lockss.daemon.CachedUrlSet;
+import org.lockss.plugin.CachedUrlSet;
 import org.lockss.util.Deadline;
 
 /**

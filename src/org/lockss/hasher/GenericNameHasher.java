@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.5 2003-02-21 21:53:29 aalto Exp $
+ * $Id: GenericNameHasher.java,v 1.6 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.security.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * General class to handle name hashing

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.18 2003-02-21 21:53:28 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.19 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.plugin.PluginManager;
 import java.security.*;
+import org.lockss.plugin.*;
 
 /**
  * Test class for functional tests on the content.

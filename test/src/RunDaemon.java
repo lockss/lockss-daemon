@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.17 2003-02-13 06:28:52 claire Exp $
+ * $Id: RunDaemon.java,v 1.18 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -44,8 +44,10 @@ import org.lockss.util.*;
 import org.lockss.crawler.*;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.PluginManager;
+import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.*;
 
-public class RunDaemon {
+public class RunDaemon extends LockssDaemon {
   private static final String DEFAULT_DIR_PATH = "./";
 
   static final String PARAM_CACHE_LOCATION =
@@ -58,7 +60,6 @@ public class RunDaemon {
   private static Logger log = Logger.getLogger("RunDaemon");
 
   private SimulatedArchivalUnit sau = null;
-  private List propUrls = null;
   private String dirPath = null;
   private PollManager pollManager = null;
 
@@ -73,26 +74,16 @@ public class RunDaemon {
     } catch (Throwable e) {
       System.err.println("Exception thrown in main loop:");
       e.printStackTrace();
-    } finally {
-//        System.err.println("Exiting");
-//        System.exit(0);
     }
   }
 
-  RunDaemon(List propUrls){
-    this.propUrls = propUrls;
+  protected RunDaemon(List propUrls){
+    super(propUrls);
   }
 
-  public void runDaemon() {
-    MockLockssDaemon daemon = new MockLockssDaemon(propUrls);
-    Configuration.startHandler(propUrls);
-    System.err.println("Sleeping so config can get set");
-    Configuration.waitConfig();
-    System.err.println("Awake");
-
-    daemon.getHashService().startService();
-    daemon.getCommManager();
-    pollManager = daemon.getPollManager();
+  public void runDaemon() throws Exception {
+    super.runDaemon();
+    pollManager = getPollManager();
     dirPath =
       Configuration.getParam(PARAM_CACHE_LOCATION, DEFAULT_DIR_PATH);
     boolean shouldCallPoll =
@@ -100,7 +91,7 @@ public class RunDaemon {
 				    false);
 
     sau = new SimulatedArchivalUnit(dirPath);
-    daemon.getPluginManager().registerArchivalUnit(sau);
+    getPluginManager().registerArchivalUnit(sau);
 
     int poll_type = Configuration.getIntParam(PARAM_POLL_TYPE,
         LcapMessage.CONTENT_POLL_REQ);
@@ -111,14 +102,12 @@ public class RunDaemon {
       try {
 	Thread.currentThread().sleep(1000);
         String url = "http://www.example.com/";
-        ArchivalUnit au = daemon.getPluginManager().findArchivalUnit(url);
+        ArchivalUnit au = getPluginManager().findArchivalUnit(url);
         CachedUrlSet cus = au.makeCachedUrlSet(url, null, null);
 	pollManager.requestPoll(cus, null, null, poll_type);
       } catch (Exception e) {
 	e.printStackTrace();
       }
-    }
-    else {
     }
   }
 

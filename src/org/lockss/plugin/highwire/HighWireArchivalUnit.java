@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.6 2003-02-20 22:29:39 tal Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.7 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
+import org.lockss.plugin.base.*;
 
 /**
  * This is a first cut at making a HighWire plugin

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.21 2003-02-24 18:39:53 tal Exp $
+ * $Id: NullPlugin.java,v 1.22 2003-02-24 22:13:43 claire Exp $
  */
 
 /*
@@ -78,22 +78,22 @@ public class NullPlugin {
       return null;
     }
 
-    public String getAUIdFromConfig(Configuration config) 
-	throws org.lockss.daemon.ArchivalUnit.ConfigurationException {
+    public String getAUIdFromConfig(Configuration config)
+	throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
       return null;
     }
 
-    public org.lockss.daemon.ArchivalUnit configureAU(Configuration config)
-	throws org.lockss.daemon.ArchivalUnit.ConfigurationException {
+    public org.lockss.plugin.ArchivalUnit configureAU(Configuration config)
+	throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
       return null;
     }
 
-    public org.lockss.daemon.ArchivalUnit createAU(Configuration auConfig)
-	throws org.lockss.daemon.ArchivalUnit.ConfigurationException {
+    public org.lockss.plugin.ArchivalUnit createAU(Configuration auConfig)
+	throws org.lockss.plugin.ArchivalUnit.ConfigurationException {
       return null;
     }
 
-    public org.lockss.daemon.ArchivalUnit getAU(String auId) {
+    public org.lockss.plugin.ArchivalUnit getAU(String auId) {
       return null;
     }
 
@@ -106,7 +106,7 @@ public class NullPlugin {
    * Base class for test <code>CachedUrl</code>s.  Default methods do nothing
    * or return constants.
    */
-  public static class CachedUrl implements org.lockss.daemon.CachedUrl {
+  public static class CachedUrl implements org.lockss.plugin.CachedUrl {
 
     protected CachedUrl() {
     }
@@ -144,7 +144,7 @@ public class NullPlugin {
    * Base class for test <code>UrlCacher</code>s.  Default methods do nothing
    * or return constants.
    */
-  public static class UrlCacher implements org.lockss.daemon.UrlCacher {
+  public static class UrlCacher implements org.lockss.plugin.UrlCacher {
     private String url;
     private String contents = null;
     private Properties props = new Properties();
@@ -156,7 +156,7 @@ public class NullPlugin {
       return null;
     }
 
-    public org.lockss.daemon.CachedUrlSet getCachedUrlSet() {
+    public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
       return null;
     }
 
@@ -164,7 +164,7 @@ public class NullPlugin {
       return "[NullPlugin.UrlCacher]";
     }
 
-    public org.lockss.daemon.CachedUrl getCachedUrl() {
+    public org.lockss.plugin.CachedUrl getCachedUrl() {
       return new CachedUrl();
     }
 
@@ -192,7 +192,7 @@ public class NullPlugin {
    * Base class for test <code>CachedUrlSet</code>s.  Default methods do
    * nothing or return constants or empty enumerations.
    */
-  public static class CachedUrlSet implements org.lockss.daemon.CachedUrlSet {
+  public static class CachedUrlSet implements org.lockss.plugin.CachedUrlSet {
 
     public String toString() {
       return "[NullPlugin.CachedUrlSet]";
@@ -202,7 +202,7 @@ public class NullPlugin {
       return null;
     }
 
-    public org.lockss.daemon.ArchivalUnit getArchivalUnit() {
+    public org.lockss.plugin.ArchivalUnit getArchivalUnit() {
       return null;
     }
 
@@ -247,11 +247,11 @@ public class NullPlugin {
       return false;
     }
 
-    public org.lockss.daemon.CachedUrl makeCachedUrl(String url) {
+    public org.lockss.plugin.CachedUrl makeCachedUrl(String url) {
       return new CachedUrl();
     }
 
-    public org.lockss.daemon.UrlCacher makeUrlCacher(String url) {
+    public org.lockss.plugin.UrlCacher makeUrlCacher(String url) {
       return new UrlCacher();
     }
 
@@ -269,18 +269,18 @@ public class NullPlugin {
   }
 
   public static class ArchivalUnit
-    implements org.lockss.daemon.ArchivalUnit {
+    implements org.lockss.plugin.ArchivalUnit {
 
     public void setConfiguration(Configuration config) {
     }
 
-    public org.lockss.daemon.CachedUrlSet makeCachedUrlSet(String url,
+    public org.lockss.plugin.CachedUrlSet makeCachedUrlSet(String url,
 							   String lwrBound,
                                                            String uprBound) {
       return null;
     }
 
-    public org.lockss.daemon.CachedUrlSet getAUCachedUrlSet() {
+    public org.lockss.plugin.CachedUrlSet getAUCachedUrlSet() {
       return null;
     }
 

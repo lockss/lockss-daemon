@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.8 2003-02-11 00:58:16 aalto Exp $
+ * $Id: NodeManager.java,v 1.9 2003-02-24 22:13:42 claire Exp $
  */
 
 /*
@@ -33,10 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.Iterator;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.poller.Poll;
-import org.lockss.daemon.ArchivalUnit;
-import org.lockss.util.Deadline;
+import org.lockss.plugin.*;
+import org.lockss.poller.*;
+import org.lockss.util.*;
 
 /**
  * NodeManager handles all nodes in a given system.  It retrieves and stores

@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.5 2003-01-07 01:55:52 troberts Exp $
+ * $Id: Crawler.java,v 1.6 2003-02-24 22:13:41 claire Exp $
  */
 
 /*
@@ -31,9 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
+
 import java.io.IOException;
 import java.util.*;
-import org.lockss.util.Deadline;
+import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
  * This interface is implemented by the generic LOCKSS daemon.
