@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.10 2002-11-26 02:21:36 claire Exp $
+* $Id: PollManager.java,v 1.11 2002-11-27 00:55:49 claire Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ public class PollManager {
          (opcode == LcapMessage.CONTENT_POLL_REQ)) {
 
         if(alongside) { // only verify polls are allowed
-          theLog.debug("attempt to run new content or name poll alongside content poll");
+          theLog.debug("conflict new content or name poll alongside content poll");
           return p.getCachedUrlSet();
         }
 
@@ -273,7 +273,7 @@ public class PollManager {
               continue;
             }
           }
-          theLog.debug("attempt to run new name poll above or below content poll");
+          theLog.debug("conflict new name poll above or below content poll");
           return p.getCachedUrlSet();
         }
       }
@@ -282,7 +282,7 @@ public class PollManager {
       if((opcode == LcapMessage.NAME_POLL_REP) ||
          (opcode == LcapMessage.NAME_POLL_REQ)) {
         if(alongside) { // only verify polls are allowed
-          theLog.debug("attempt to run new content or name poll alongside name poll");
+          theLog.debug("conflict new content or name poll alongside name poll");
           return p.getCachedUrlSet();
         }
         if(above) { // only reg exp polls are allowed
@@ -292,12 +292,12 @@ public class PollManager {
               continue;
             }
           }
-          theLog.debug("attempt to run new name poll above name poll");
+          theLog.debug("conflict new name poll above name poll");
           return p.getCachedUrlSet();
         }
 
         if(below) { // always a conflict
-          theLog.debug("attempt to run new poll below name poll");
+          theLog.debug("conflict new poll below name poll");
           return p.getCachedUrlSet();
         }
       }

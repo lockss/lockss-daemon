@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.20 2002-11-26 02:21:36 claire Exp $
+ * $Id: Poll.java,v 1.21 2002-11-27 00:55:49 claire Exp $
  */
 
 /*
@@ -129,9 +129,9 @@ public abstract class Poll {
    */
   public String toString() {
     StringBuffer sb = new StringBuffer("[Poll: ");
-    sb.append("m_url");
+    sb.append("url set:");
     sb.append(" ");
-    sb.append(m_regExp);
+    sb.append(m_urlSet.toString());
     sb.append(" ");
     sb.append(m_msg.getOpcode());
     sb.append(" key:");
@@ -282,17 +282,14 @@ public abstract class Poll {
     }
   }
 
-
-  /**
+   /**
    * start the poll.
    */
   void startPoll() {
     if(m_pollstate != PS_INITING)
       return;
     Deadline pt = Deadline.in(m_msg.getDuration());
-    MessageDigest hasher = PollManager.getHasher();
-    hasher.update(m_challenge, 0, m_challenge.length);
-    hasher.update(m_verifier, 0, m_verifier.length);
+    MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
     if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
       m_pollstate = ERR_SCHEDULE_HASH;
       stopPoll();
@@ -300,7 +297,7 @@ public abstract class Poll {
     }
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
     m_pollstate = PS_WAIT_HASH;
- }
+  }
 
   /**
    * cast our vote in the current poll
@@ -331,11 +328,10 @@ public abstract class Poll {
     m_pollstate = have_quorum ? PS_COMPLETE : ERR_NO_QUORUM;
 
     if(isErrorState()) {
-      // notify node manager of failed poll
+      // XXX - notify node manager of failed poll
       m_pollstate = PS_COMPLETE;
     }
     else if(m_pollstate == PS_WAIT_TALLY){
-      // notify the node manager of tally results
       tally();
     }
     PollManager.closeThePoll(m_key);
@@ -383,6 +379,15 @@ public abstract class Poll {
   }
 
 
+  MessageDigest getInitedHasher(byte[] challenge, byte[] verifier) {
+    MessageDigest hasher = PollManager.getHasher();
+    hasher.update(challenge, 0, challenge.length);
+    hasher.update(verifier, 0, verifier.length);
+    log.debug("hashing: C[" +String.valueOf(B64Code.encode(m_challenge)) + "] "
+            +"V[" + String.valueOf(B64Code.encode(m_verifier)) + "]");
+    return hasher;
+  }
+
   class PollHashCallback implements HashService.Callback {
 
     /**
@@ -405,7 +410,7 @@ public abstract class Poll {
 
       if(hash_completed)  {
         m_hash  = hasher.digest();
-	log.debug("Hash on "+urlset+" complete: "+
+	log.debug("Hash on " + urlset + " complete: "+
                   String.valueOf(B64Code.encode(m_hash)));
         scheduleVote();
       }

@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.16 2002-11-26 02:21:36 claire Exp $
+* $Id: VerifyPoll.java,v 1.17 2002-11-27 00:55:49 claire Exp $
  */
 
 /*
@@ -84,13 +84,13 @@ class VerifyPoll extends Poll {
 
 
   /**
-   * schedule the hash for this poll.
+   * schedule the hash for this poll - this is a no-op provided for completeness.
    * @param hasher the MessageDigest used to hash the content
    * @param timer the Deadline by which we must complete
    * @param key the Object which will be returned from the hasher. Always the
    * message which triggered the hash
    * @param callback the hashing callback to use on return
-   * @return true if hash successfully completed.
+   * @return true we never do anything here
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer,
                                 Object key, HashService.Callback callback) {
@@ -105,25 +105,21 @@ class VerifyPoll extends Poll {
   void startPoll() {
     // if someone else called the poll, we verify and we're done
     log.debug("Starting new verify poll:" + m_key);
-    Deadline pt;
-    long end_time = m_deadline.getExpirationTime();
 
-    if(m_caller != null && !m_caller.isLocalIdentity()) {
-       pt = Deadline.atRandomBefore(end_time);
-    }
-    else {
-      pt = Deadline.at(end_time);
-      m_pollstate = PS_WAIT_TALLY;
-    }
+    Deadline pt = Deadline.atRandomBefore(m_deadline);
+
     TimerQueue.schedule(pt, new PollTimerCallback(), this);
   }
+
 
   /**
    * finish the poll once the deadline has expired
    */
   void stopPoll() {
+    // if we didn't call the poll
     if(m_pollstate != PS_WAIT_TALLY) {
       try {
+        // send our reply message
         replyVerify(m_msg);
       }
       catch (IOException ex) {
@@ -132,6 +128,7 @@ class VerifyPoll extends Poll {
     }
     super.stopPoll();
   }
+
 
   /**
    * tally the poll results
@@ -161,9 +158,11 @@ class VerifyPoll extends Poll {
     hasher.update(hashed, 0, hashed.length);
     byte[] HofHashed = hasher.digest();
     if(!Arrays.equals(challenge, HofHashed))  {
+      log.debug("verify vote disagreed");
       handleDisagreeVote(msg);
     }
     else  {
+      log.debug("verify vote agreed.");
       handleAgreeVote(msg);
     }
     return true;
@@ -175,7 +174,7 @@ class VerifyPoll extends Poll {
     String regexp = new String(msg.getRegExp());
     int opcode = LcapMessage.VERIFY_POLL_REQ;
 
-    log.debug("Requesting a verify poll");
+    log.debug("Calling a verify poll...");
 
     LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
         regexp,
@@ -189,8 +188,10 @@ class VerifyPoll extends Poll {
         LcapIdentity.getLocalIdentity());
     LcapIdentity originator = msg.getOriginID();
     LcapComm.sendMessageTo(msg, Plugin.findArchivalUnit(url), originator);
+
+    log.debug("Creating a local poll instance...");
     Poll poll = PollManager.findPoll(reqmsg);
-    log.debug("Calling start on new verify poll");
+    poll.m_pollstate = PS_WAIT_TALLY;
     poll.startPoll();
   }
 
@@ -203,7 +204,7 @@ class VerifyPoll extends Poll {
         LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
         LcapIdentity.getLocalIdentity());
-
+    log.debug("sending our verification reply.");
     LcapIdentity originator = msg.getOriginID();
     LcapComm.sendMessageTo(repmsg, Plugin.findArchivalUnit(msg.getTargetUrl()),
                            originator);
