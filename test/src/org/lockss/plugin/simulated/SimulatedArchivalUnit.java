@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.18 2003-03-08 04:35:53 tal Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.19 2003-03-17 08:33:15 tal Exp $
  */
 
 /*
@@ -131,7 +131,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   public String getName() {
-    return fileRoot;
+    return "Simulated Content: " + fileRoot;
   }
 
   // public methods
