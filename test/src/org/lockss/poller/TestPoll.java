@@ -22,6 +22,8 @@ public class TestPoll extends TestCase {
   private static long testduration = 5 * 60 *60 *1000; /* 5 min */
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
+  private static String[] testentries1 = {"test1.doc", "test3.doc", "test4.doc"};
+
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;
   static {
@@ -156,6 +158,41 @@ public class TestPoll extends TestCase {
     assertEquals(0, p.m_tally.wtDisagree);
   }
 
+  public void testNamePollTally() {
+    NamePoll np = (NamePoll)testpolls[0];
+    LcapMessage agree_msg = np.getMessage();
+    LcapMessage disagree_msg = null;
+
+    // add our vote
+    np.m_tally.addVote(np.makeVote(np.getMessage(), true));
+
+    try {
+      agree_msg = LcapMessage.makeReplyMsg(agree_msg,agree_msg.getHashed(),
+          agree_msg.getVerifier(), testentries,LcapMessage.NAME_POLL_REP,
+          testduration, testID);
+
+      disagree_msg = LcapMessage.makeReplyMsg(agree_msg,
+          pollmanager.generateRandomBytes(),
+          pollmanager.generateRandomBytes(),
+           testentries1,LcapMessage.NAME_POLL_REP,
+          testduration, testID);
+    }
+    catch (IOException ex) {
+      fail("unable to generate a name poll reply");
+    }
+    np.m_tally.addVote(np.makeVote(agree_msg, true));
+    np.m_tally.addVote(np.makeVote(agree_msg, true));
+
+    np.m_tally.addVote(np.makeVote(disagree_msg, false));
+    np.m_tally.addVote(np.makeVote(disagree_msg,false));
+    np.m_tally.addVote(np.makeVote(disagree_msg, false));
+    np.m_tally.addVote(np.makeVote(disagree_msg,false));
+
+
+
+  }
+
+
   /** test for method vote(..) */
   public void testVote() {
     Poll p = testpolls[1];
@@ -168,9 +205,6 @@ public class TestPoll extends TestCase {
     }
   }
 
-  /** test for method startPoll(..) */
-  public void testStartPoll() {
-  }
 
   /** test for method voteInPoll(..) */
   public void testVoteInPoll() {
