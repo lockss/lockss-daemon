@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.1 2003-06-05 21:48:59 troberts Exp $
+ * $Id: TestCharRing.java,v 1.2 2003-06-05 21:53:13 troberts Exp $
  */
 
 /*
@@ -34,10 +34,10 @@ package org.lockss.util;
 import org.lockss.test.*;
 
 public class TestCharRing extends LockssTestCase {
-  RingArray ra;
+  CharRing ra;
 
   public void setUp() {
-    ra = new RingArray(5);
+    ra = new CharRing(5);
     ra.add('a');
     ra.add('b');
     ra.add('c');
@@ -48,15 +48,15 @@ public class TestCharRing extends LockssTestCase {
 
   public void testBadSizeThrows() {
     try {
-      RingArray ra = new RingArray(0);
-      fail("Trying to create a RingArray with a size of "
+      CharRing ra = new CharRing(0);
+      fail("Trying to create a CharRing with a size of "
 	   +"zero should have thrown");
     } catch (IllegalArgumentException e) {
     }
   }
 
   public void testCapacityIsCorrect() {
-    RingArray ra = new RingArray(5);
+    CharRing ra = new CharRing(5);
     assertEquals(5, ra.capacity());
   }
 
@@ -71,7 +71,7 @@ public class TestCharRing extends LockssTestCase {
   public void testAddingTooManyThrows() {
     try {
       ra.add('f');
-      fail("Adding a 6th element to a 5 element RingArray should have thrown");
+      fail("Adding a 6th element to a 5 element CharRing should have thrown");
     } catch (UnsupportedOperationException e) {
     }
   }
