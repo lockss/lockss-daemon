@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.64 2004-10-18 03:40:32 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.65 2005-01-05 09:46:56 tlipkis Exp $
  */
 
 /*
@@ -355,10 +355,9 @@ public class LockssRepositoryImpl
       throw new LockssRepository.RepositoryStateException(
           "Couldn't load param.");
     }
-    String repoDir = extendCacheLocation(root);
-    String auDir = LockssRepositoryImpl.mapAuToFileLocation(repoDir, au);
+    String auDir = LockssRepositoryImpl.mapAuToFileLocation(root, au);
     logger.debug("repo: " + auDir + ", au: " + au.getName());
-    staticCacheLocation = repoDir;
+    staticCacheLocation = extendCacheLocation(root);
     return new LockssRepositoryImpl(auDir);
   }
 
@@ -408,12 +407,12 @@ public class LockssRepositoryImpl
    * into directory names. This maps a given au to directories, using the
    * cache root as the base.  Given an au with PluginId of 'plugin' and AuId
    * of 'au', it would return the string '<rootLocation>/plugin/au/'.
-   * @param rootLocation the root for all ArchivalUnits
+   * @param cachePath the root for all ArchivalUnits
    * @param au the ArchivalUnit to resolve
    * @return the directory location
    */
-  public static String mapAuToFileLocation(String rootLocation, ArchivalUnit au) {
-    return getAuDir(au, rootLocation);
+  public static String mapAuToFileLocation(String repoRoot, ArchivalUnit au) {
+    return getAuDir(au, repoRoot, true);
   }
 
   /**
@@ -452,29 +451,53 @@ public class LockssRepositoryImpl
   // name mapping functions
 
   /**
+   * Return true iff a repository for the auid exists under the root
+   * @param auid
+   * @param repoRoot the repository root
+   * @return true iff a repository for the auid exists
+   */
+  static boolean doesAuDirExist(String auid, String repoRoot) {
+    return null != getAuDir(auid, repoRoot, false);
+  }
+
+  /**
    * Finds the directory for this AU.  If none found in the map, designates
    * a new dir for it.
    * @param au the AU
    * @param repoCachePath the cache path
    * @return the dir String
    */
-  static String getAuDir(ArchivalUnit au, String repoCachePath) {
+  static String getAuDir(ArchivalUnit au, String repoRoot, boolean create) {
+    return getAuDir(au.getAuId(), repoRoot, create);
+  }
+
+  /**
+   * Finds the directory for this AU.  If none found in the map, designates
+   * a new dir for it.
+   * @param au the AU
+   * @param repoCachePath the cache path
+   * @return the dir String
+   */
+  static String getAuDir(String auid, String repoRoot, boolean create) {
+    String repoCachePath = extendCacheLocation(repoRoot);
     if (nameMap == null) {
       nameMap = new HashMap();
     }
-    String auKey = au.getAuId();
-    String auPathSlash = (String)nameMap.get(auKey);
+    String auPathSlash = (String)nameMap.get(auid);
     if (auPathSlash != null) {
       return auPathSlash;
     }
-    LocalRepository localRepo = getLocalRepository(au);
+    LocalRepository localRepo = getLocalRepository(repoRoot);
     Map aumap = localRepo.getAuMap();
-    auPathSlash = (String)aumap.get(auKey);
+    auPathSlash = (String)aumap.get(auid);
     if (auPathSlash != null) {
-      nameMap.put(auKey, auPathSlash);
+      nameMap.put(auid, auPathSlash);
       return auPathSlash;
     }
-    logger.debug3("Creating new au directory for '" + auKey + "'.");
+    if (!create) {
+      return null;
+    }
+    logger.debug3("Creating new au directory for '" + auid + "'.");
     String auDir = lastPluginDir;
     for (int cnt = 10000; cnt > 0; cnt--) {
       // loop through looking for an available dir
@@ -484,12 +507,12 @@ public class LockssRepositoryImpl
 	String auPath = testDir.toString();
 	logger.debug3("New au directory: "+auPath);
 	auPathSlash = auPath + File.separator;
-	nameMap.put(auKey, auPathSlash);
+	nameMap.put(auid, auPathSlash);
 	// write the new au property file to the new dir
 	// XXX this data should be backed up elsewhere to avoid single-point
 	// corruption
 	Properties idProps = new Properties();
-	idProps.setProperty(AU_ID_PROP, au.getAuId());
+	idProps.setProperty(AU_ID_PROP, auid);
 	saveAuIdProperties(auPath, idProps);
 	return auPathSlash;
       } else {
@@ -502,7 +525,10 @@ public class LockssRepositoryImpl
   }
 
   static LocalRepository getLocalRepository(ArchivalUnit au) {
-    String repoRoot = getRepositoryRoot(au);
+    return getLocalRepository(getRepositoryRoot(au));
+  }
+
+  static LocalRepository getLocalRepository(String repoRoot) {
     LocalRepository localRepo =
       (LocalRepository)localRepositories.get(repoRoot);
     if (localRepo == null) {
