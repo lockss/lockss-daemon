@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.103 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.104 2004-01-29 01:46:24 eaalto Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
@@ -48,7 +47,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private MockPollManager pollManager;
   private MockCrawlManager crawlManager;
   private HistoryRepository historyRepo;
-  private List urlList = null;
   private Poll namePoll = null;
   private Poll contentPoll = null;
   private Random random = new Random();
@@ -955,19 +953,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
 
     TimeBase.setReal();
-  }
-
-  public void testStatusRegistration() {
-    assertTrue(nodeManager.registeredAccessors);
-
-    NodeManagerImpl nodeManager2 = new NodeManagerImpl(new MockArchivalUnit());
-    assertTrue(nodeManager2.registeredAccessors);
-    // unregister is disabled, so are its tests
-//     nodeManager2.initService(theDaemon);
-//     nodeManager2.startService();
-
-//     nodeManager2.stopService();
-//     assertFalse(nodeManager2.registeredAccessors);
   }
 
   private void stateCheckTest(NodeState node, int pollType,

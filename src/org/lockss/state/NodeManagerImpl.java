@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.162 2004-01-12 06:22:55 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.163 2004-01-29 01:46:30 eaalto Exp $
  */
 
 /*
@@ -116,23 +116,6 @@ public class NodeManagerImpl
 
     treeWalkHandler = new TreeWalkHandler(this, theDaemon);
     treeWalkHandler.start();
-
-    // register our status (only once)
-    if (!registeredAccessors) {
-      StatusService statusServ = theDaemon.getStatusService();
-      NodeManagerStatus nmStatus = new NodeManagerStatus(theDaemon);
-
-      statusServ.registerStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME,
-                                        new NodeManagerStatus.ServiceStatus());
-      statusServ.registerStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME,
-                                        new NodeManagerStatus.ManagerStatus());
-
-      statusServ.registerStatusAccessor(NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME,
-                                        new NodeManagerStatus.PollHistoryStatus());
-      registeredAccessors = true;
-      logger.debug2("Status accessors registered.");
-    }
-
     logger.debug2("NodeManager successfully started");
   }
 
@@ -142,22 +125,6 @@ public class NodeManagerImpl
     activeNodes.clear();
     damagedNodes.clear();
     nodeCache.clear();
-
-    // unregister our status accessors
-    List nodeMgrs = theDaemon.getAllNodeManagers();
-    // Not appropriate to unregister status accessors just because a single
-    // instance of the AU manager is stopping.
-    if (false && registeredAccessors) {
-      StatusService statusServ = theDaemon.getStatusService();
-      statusServ.unregisterStatusAccessor(NodeManagerStatus.
-                                          SERVICE_STATUS_TABLE_NAME);
-      statusServ.unregisterStatusAccessor(NodeManagerStatus.
-                                          MANAGER_STATUS_TABLE_NAME);
-      statusServ.unregisterStatusAccessor(NodeManagerStatus.
-                                          POLLHISTORY_STATUS_TABLE_NAME);
-      registeredAccessors = false;
-      logger.debug2("Status accessors unregistered.");
-    }
 
     super.stopService();
     logger.debug2("NodeManager successfully stopped");
@@ -219,7 +186,7 @@ public class NodeManagerImpl
         PollSpec pollSpec = new PollSpec(state.getCachedUrlSet(),
                                          poll.getLwrBound(),
                                          poll.getUprBound());
-        // if poll isn't running at it was our poll
+        // if poll isn't running and it was our poll
         if (!pollManager.isPollRunning(poll.getType(), pollSpec)) {
           // transfer dead poll to history and let treewalk handle it
           // set duration to the deadline of the dead poll
@@ -850,8 +817,9 @@ public class NodeManagerImpl
   }
 
   /**
-   * Looks at the state of the node, and takes appropriate action (if
-   * 'reportOnly' is false).
+   * Looks at the state of the node, and takes appropriate action.  It calls
+   * polls only if 'reportOnly' is false, though some conditions, such as
+   * needing a top-level poll, do cause the state to change regardless.
    * @param lastOrCurrentPoll the most recent poll (could be active)
    * @param results the {@link Tallier}, if available
    * @param nodeState the {@link NodeState}
@@ -872,8 +840,13 @@ public class NodeManagerImpl
       case NodeState.NEEDS_REPLAY_POLL:
         // call content poll
         if (!reportOnly) {
-          logger.debug2("calling content poll");
-          callContentPoll(new PollSpec(nodeState.getCachedUrlSet()));
+          if (nodeState.getCachedUrlSet().getSpec().isAu()) {
+            logger.debug2("calling top-level poll");
+            callTopLevelPoll();
+          } else {
+            logger.debug2("calling content poll");
+            callContentPoll(new PollSpec(nodeState.getCachedUrlSet()));
+          }
         }
         return true;
       case NodeState.CONTENT_LOST:
@@ -921,7 +894,7 @@ public class NodeManagerImpl
                 // only restart if it has expired, since other caches will still be
                 // running it otherwise
                 if (!reportOnly) {
-                  logger.debug("Re-calling last unfinished poll.");
+                  logger.debug("re-calling last unfinished poll.");
                   logger.debug2("lastHistory: " + lastHistory.getTypeString() +
                                 ", " +
                                 lastHistory.getStatusString() + ", " +
@@ -944,29 +917,28 @@ public class NodeManagerImpl
                 }
                 return true;
               } else {
-                logger.debug2("Unfinished poll's duration not elapsed, so not"+
+                logger.debug2("unfinished poll's duration not elapsed, so not"+
                               " recalling.");
               }
             } else {
-              logger.debug2("Unfinished poll already running, so not"+
+              logger.debug2("unfinished poll already running, so not"+
                             " recalling.");
             }
           } else {
             if (reportOnly) {
               // don't log twice if top-level poll is called next
-              logger.debug2("Unfinished poll not mine, so not recalling.");
+              logger.debug2("unfinished poll not mine, so not recalling.");
             }
 
             // check if au-node which needs top-level poll
             // query the AU if a top level poll should be started
             if ((nodeState.getCachedUrlSet().getSpec().isAu()) &&
                 (managedAu.shouldCallTopLevelPoll(auState))) {
-              // switch to NEEDS_POLL and call toplevel poll
-              if (!reportOnly) {
-                nodeState.setState(NodeState.NEEDS_POLL);
-                callTopLevelPoll();
-                logger.debug("Requested top level poll...");
-              }
+              // switch to NEEDS_POLL to call toplevel poll next time.
+              // this changes the state regardless of the 'reportOnly' setting
+              // so as to avoid having to call 'shouldCallTopLevelPoll()' twice
+              nodeState.setState(NodeState.NEEDS_POLL);
+              logger.debug("set state to call top level poll...");
               return true;
             } else {
               // reset and do nothing
@@ -1083,15 +1055,15 @@ public class NodeManagerImpl
         return false;
       case NodeState.INITIAL:
       case NodeState.OK:
-        // check time, switch to NEEDS_POLL if necessary and call toplevel poll
+        // check if toplevel poll needed when AU node
         if (nodeState.getCachedUrlSet().getSpec().isAu()) {
-          // query the AU if a top level poll should be started
+          // query the AU if a top level poll should be started.
+          // this changes the state regardless of the 'reportOnly' setting so
+          // as to avoid having to call 'shouldCallTopLevelPoll()' twice
           if (managedAu.shouldCallTopLevelPoll(auState)) {
-            if (!reportOnly) {
-              nodeState.setState(NodeState.NEEDS_POLL);
-              callTopLevelPoll();
-              logger.debug("Requested top level poll...");
-            }
+            // switch to NEEDS_POLL if necessary to call toplevel poll
+            nodeState.setState(NodeState.NEEDS_POLL);
+            logger.debug("set state to call top level poll...");
             return true;
           }
         }

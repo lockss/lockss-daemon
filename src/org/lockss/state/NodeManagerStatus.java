@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.15 2003-12-23 00:35:12 tlipkis Exp $
+ * $Id: NodeManagerStatus.java,v 1.16 2004-01-29 01:46:28 eaalto Exp $
  */
 
 /*
@@ -27,33 +27,60 @@
 package org.lockss.state;
 
 import java.util.*;
+import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
-import org.lockss.daemon.RangeCachedUrlSetSpec;
-import org.lockss.app.LockssDaemon;
+import org.lockss.app.*;
 
 /**
  * Collect and report the status of the NodeManager
  * @author Claire Griffin
  * @version 1.0
  */
-public class NodeManagerStatus {
+public class NodeManagerStatus extends BaseLockssManager {
   public static final String SERVICE_STATUS_TABLE_NAME =
       "NodeManagerServiceTable";
   public static final String MANAGER_STATUS_TABLE_NAME = "NodeManagerTable";
   public static final String POLLHISTORY_STATUS_TABLE_NAME = "PollHistoryTable";
 
-  private static LockssDaemon theDaemon;
   private static Logger logger = Logger.getLogger("NodeManagerStatus");
 
-  NodeManagerStatus(LockssDaemon theDaemon) {
-    this.theDaemon = theDaemon;
+  public void startService() {
+    super.startService();
+
+    StatusService statusServ = theDaemon.getStatusService();
+
+    statusServ.registerStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.ServiceStatus(theDaemon));
+    statusServ.registerStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.ManagerStatus(theDaemon));
+    statusServ.registerStatusAccessor(NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME,
+                                      new NodeManagerStatus.PollHistoryStatus(theDaemon));
+    logger.debug2("Status accessors registered.");
   }
 
-  private static NodeManagerImpl getNodeManager(String key) throws
-      StatusService.NoSuchTableException {
+  public void stopService() {
+    // unregister our status accessors
+    StatusService statusServ = theDaemon.getStatusService();
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.
+        SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.
+        MANAGER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(NodeManagerStatus.
+        POLLHISTORY_STATUS_TABLE_NAME);
+    logger.debug2("Status accessors unregistered.");
+
+    super.stopService();
+  }
+
+  protected void setConfig(Configuration config, Configuration oldConfig,
+                           Set changedKeys) {
+  }
+
+  private static NodeManagerImpl getNodeManager(String key,
+      LockssDaemon theDaemon) throws StatusService.NoSuchTableException {
 
     for (Iterator iter = theDaemon.getAllNodeManagers().iterator();
 	 iter.hasNext(); ) {
@@ -82,6 +109,12 @@ public class NodeManagerStatus {
 
     private static final List sortRules =
       ListUtil.list(new StatusTable.SortRule("AuName", true));
+
+    private static LockssDaemon theDaemon;
+
+    ServiceStatus(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
 
     public String getDisplayName() {
       return TABLE_TITLE;
@@ -135,8 +168,7 @@ public class NodeManagerStatus {
     }
   }
 
-  static class ManagerStatus
-      implements StatusAccessor {
+  static class ManagerStatus implements StatusAccessor {
 
     static final String TABLE_TITLE = "NodeManager Status Table";
 
@@ -163,10 +195,16 @@ public class NodeManagerStatus {
                              ColumnDescriptor.TYPE_STRING)
         );
 
-    private static final List sortRules = ListUtil.list
-        (new StatusTable.SortRule("PollTime", false),
-         new StatusTable.SortRule("URL", true)
-         );
+    private static final List sortRules = ListUtil.list(
+        new StatusTable.SortRule("PollTime", false),
+        new StatusTable.SortRule("URL", true)
+        );
+
+    private static LockssDaemon theDaemon;
+
+    ManagerStatus(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
 
     public String getDisplayName() {
       throw new
@@ -175,7 +213,7 @@ public class NodeManagerStatus {
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
-      NodeManagerImpl nodeManager = getNodeManager(table.getKey());
+      NodeManagerImpl nodeManager = getNodeManager(table.getKey(), theDaemon);
       String auname = nodeManager.getAuState().getArchivalUnit().getName();
 
       table.setTitle(getTitle(auname));
@@ -292,8 +330,7 @@ public class NodeManagerStatus {
     }
   }
 
-  static class PollHistoryStatus
-      implements StatusAccessor {
+  static class PollHistoryStatus implements StatusAccessor {
     static final String TABLE_TITLE = "Node Poll History Table";
 
     public static String ALL_POLLS_FILTER = "ALLPOLLS:";
@@ -316,9 +353,14 @@ public class NodeManagerStatus {
                              ColumnDescriptor.TYPE_INT)
         );
 
-    private static final List sortRules = ListUtil.list
-        (new StatusTable.SortRule("StartTime", false)
-         );
+    private static final List sortRules =
+        ListUtil.list(new StatusTable.SortRule("StartTime", false));
+
+    private static LockssDaemon theDaemon;
+
+    PollHistoryStatus(LockssDaemon theDaemon) {
+      this.theDaemon = theDaemon;
+    }
 
     public String getDisplayName() {
       throw new
@@ -438,7 +480,7 @@ public class NodeManagerStatus {
 
       String au_id = key.substring(pos, key.lastIndexOf("&"));
       logger.debug("getting node manager " + au_id + " from key:[" + key + "]");
-      return getNodeManager(au_id);
+      return getNodeManager(au_id, theDaemon);
     }
 
     private NodeState getNodeStateFromKey(NodeManager nodeManager, String key) throws
