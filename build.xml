@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.128 2005-01-12 02:21:43 dcfok Exp $
+ $Id: build.xml,v 1.129 2005-01-26 01:07:13 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1371,14 +1371,24 @@ Test results in ${test.results}
       </junit1>
      </then>
      <else>
+      <fileset id="test.one.filesetid" dir="${test.src}">
+	 <include name="**/${class}.java" />
+      </fileset>
+      <!-- test whether fileset is empty by converting it to a string -->
+      <pathconvert refid="test.one.filesetid" property="test.one.files"
+        targetos="${detected.os}" />
+      <if>
+       <equals arg1="${test.one.files}" arg2="" />
+       <then>
+	<fail message="Pattern '${class}' does not match any classes" />
+       </then>
+      </if>
       <junit1 fork="no" printsummary="yes"
 	   haltonfailure="yes"
 	   filtertrace="${filtertrace}" showoutput="${showoutput}">
        <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
        <batchtest fork="${fork}">
-	 <fileset dir="${test.src}">
-	   <include name="**/${class}.java" />
-	 </fileset>
+	 <fileset refid="test.one.filesetid"/>
        </batchtest>
        <formatter type="plain" usefile="false" />
        <classpath>
