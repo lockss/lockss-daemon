@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.2 2002-11-19 23:31:29 tal Exp $
+ * $Id: TestPriorityQueue.java,v 1.3 2002-11-20 19:43:12 tal Exp $
  */
 
 /*
@@ -133,6 +133,14 @@ public class TestPriorityQueue extends LockssTestCase {
 	fail("put() didn't cause get() to return");
       }
     }
+  }
+
+  public void testRemove() {
+    PriorityQueue q = new PriorityQueue();
+    q.put(O1);
+    assertTrue(!q.isEmpty());
+    q.remove(O1);
+    assertTrue(q.isEmpty());
   }
 
   public void testNoWaitEmpty() {

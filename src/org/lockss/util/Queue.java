@@ -1,5 +1,5 @@
 /*
- * $Id: Queue.java,v 1.3 2002-11-19 23:26:16 tal Exp $
+ * $Id: Queue.java,v 1.4 2002-11-20 19:42:42 tal Exp $
  */
 
 /*
@@ -55,6 +55,13 @@ public interface Queue {
    * @return The element at the head of the queue, or null if queue is empty
    */
   public Object peek();
+
+  /** 
+   * Remove the specified element from the queue.  If the element appears
+   * in the queue more than once, the behavior is undefined.
+   * @return true iff the element was present in the queue
+   */
+  public boolean remove(Object obj);
 
   /** 
    * Return true iff the queue is empty

@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.6 2002-11-20 00:02:05 tal Exp $
+ * $Id: PriorityQueue.java,v 1.7 2002-11-20 19:42:42 tal Exp $
  */
 
 /*
@@ -139,6 +139,15 @@ public class PriorityQueue implements Queue {
    */
   public synchronized Object peek() {
     return (queue.isEmpty() ? null : queue.firstElement());
+  }
+
+  /** 
+   * Remove the specified element from the queue.  If the element appears
+   * in the queue more than once, the behavior is undefined.
+   * @return true iff the element was present in the queue
+   */
+  public boolean remove(Object obj) {
+    return queue.remove(obj);
   }
 
   /** 

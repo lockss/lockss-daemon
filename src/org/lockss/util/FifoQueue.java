@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.4 2002-11-19 23:26:16 tal Exp $
+ * $Id: FifoQueue.java,v 1.5 2002-11-20 19:42:42 tal Exp $
  */
 
 /*
@@ -93,6 +93,15 @@ public class FifoQueue implements Queue {
    */
   public synchronized Object peek() {
     return (queue.isEmpty() ? null : queue.firstElement());
+  }
+
+  /** 
+   * Remove the specified element from the queue.  If the element appears
+   * in the queue more than once, the behavior is undefined.
+   * @return true iff the element was present in the queue
+   */
+  public boolean remove(Object obj) {
+    return queue.remove(obj);
   }
 
   /** 
