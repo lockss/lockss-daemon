@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.59 2004-08-21 06:49:04 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.60 2004-08-22 02:10:47 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,17 @@ public class LockssDaemon extends LockssApp {
  */
 private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
+  static final String PARAM_DAEMON_DEADLINE_REASONABLE =
+    Configuration.PREFIX + "daemon.deadline.reasonable.";
+  static final String PARAM_DAEMON_DEADLINE_REASONABLE_PAST =
+    PARAM_DAEMON_DEADLINE_REASONABLE + "past";
+  static final long DEFAULT_DAEMON_DEADLINE_REASONABLE_PAST = Constants.SECOND;
+
+  static final String PARAM_DAEMON_DEADLINE_REASONABLE_FUTURE =
+    PARAM_DAEMON_DEADLINE_REASONABLE + "future";
+  static final long DEFAULT_DAEMON_DEADLINE_REASONABLE_FUTURE =
+    20 * Constants.WEEK;
+
   // Parameter keys for daemon managers
   public static String ACTIVITY_REGULATOR = "ActivityRegulator";
   public static String ALERT_MANAGER = "AlertManager";
@@ -86,6 +97,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String CRAWL_MANAGER = "CrawlManager";
   public static String PLUGIN_MANAGER = "PluginManager";
   public static String POLL_MANAGER = "PollManager";
+  public static String REPOSITORY_MANAGER = "RepositoryManager";
   public static String LOCKSS_REPOSITORY = "LockssRepository";
   public static String HISTORY_REPOSITORY = "HistoryRepository";
   public static String NODE_MANAGER = "NodeManager";
@@ -95,7 +107,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String SYSTEM_METRICS = "SystemMetrics";
   public static String REMOTE_API = "RemoteApi";
   public static String URL_MANAGER = "UrlManager";
-  public static String NODE_MANAGER_STATUS = "NodeManagerStatus";
+  public static String NODE_MANAGER_MANAGER = "NodeManagerManager";
   public static String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
   public static String REPOSITORY_STATUS = "RepositoryStatus";
   public static String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
@@ -113,6 +125,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(IDENTITY_MANAGER, "org.lockss.protocol.IdentityManager"),
     new ManagerDesc(POLL_MANAGER, "org.lockss.poller.PollManager"),
     new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
+    new ManagerDesc(REPOSITORY_MANAGER,
+		    "org.lockss.repository.RepositoryManager"),
     new ManagerDesc(TREEWALK_MANAGER, "org.lockss.state.TreeWalkManager"),
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
@@ -125,7 +139,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(COMM_MANAGER, "org.lockss.protocol.LcapComm"),
     new ManagerDesc(ROUTER_MANAGER, "org.lockss.protocol.LcapRouter"),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
-    new ManagerDesc(NODE_MANAGER_STATUS, "org.lockss.state.NodeManagerStatus"),
+    new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS,
 		    "org.lockss.state.ArchivalUnitStatus"),
     new ManagerDesc(REPOSITORY_STATUS,
@@ -280,6 +294,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
+   * return the repository manager instance
+   * @return the RepositoryManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public RepositoryManager getRepositoryManager()  {
+    return (RepositoryManager)getManager(REPOSITORY_MANAGER);
+  }
+
+  /**
    * return the SystemMetrics instance.
    * @return SystemMetrics instance.
    * @throws IllegalArgumentException if the manager is not available.
@@ -317,12 +340,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * return the NodeManagerStatus instance.
-   * @return NodeManagerStatus instance.
+   * return the NodeManagerManager instance.
+   * @return NodeManagerManager instance.
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public NodeManagerStatus getNodeManagerStatus() {
-    return (NodeManagerStatus) getManager(NODE_MANAGER_STATUS);
+  public NodeManagerManager getNodeManagerManager() {
+    return (NodeManagerManager) getManager(NODE_MANAGER_MANAGER);
   }
 
   /**
@@ -638,6 +661,21 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     stopAllAuManagers();
 
     super.stop();
+  }
+
+  protected void setConfig(Configuration config, Configuration prevConfig,
+			   Configuration.Differences changedKeys) {
+
+    if (changedKeys.contains(PARAM_DAEMON_DEADLINE_REASONABLE)) {
+      long maxInPast =
+	config.getTimeInterval(PARAM_DAEMON_DEADLINE_REASONABLE_PAST,
+			       DEFAULT_DAEMON_DEADLINE_REASONABLE_PAST);
+      long maxInFuture =
+	config.getTimeInterval(PARAM_DAEMON_DEADLINE_REASONABLE_FUTURE,
+			       DEFAULT_DAEMON_DEADLINE_REASONABLE_FUTURE);
+      Deadline.setReasonableDeadlineRange(maxInPast, maxInFuture);
+    }
+    super.setConfig(config, prevConfig, changedKeys);
   }
 
   // Main entry to daemon

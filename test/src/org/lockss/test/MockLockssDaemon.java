@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.40 2004-08-21 06:49:03 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.41 2004-08-22 02:10:46 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,9 @@ public class MockLockssDaemon extends LockssDaemon {
   LcapRouter routerManager = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
+  RepositoryManager repositoryManager = null;
   TreeWalkManager treeWalkManager = null;
+  NodeManagerManager nodeManagerManager = null;
   PluginManager pluginManager = null;
   IdentityManager identityManager = null;
   StatusService statusService = null;
@@ -270,6 +272,19 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * return the node manager status instance
+   * @return the TreewalkManager
+   */
+  public NodeManagerManager getNodeManagerManager() {
+    if (nodeManagerManager == null) {
+      nodeManagerManager =
+	(NodeManagerManager)newManager(LockssDaemon.NODE_MANAGER_MANAGER);
+      managerMap.put(LockssDaemon.NODE_MANAGER_MANAGER, nodeManagerManager);
+    }
+    return nodeManagerManager;
+  }
+
+  /**
    * return the treewalk manager instance
    * @return the TreewalkManager
    */
@@ -280,6 +295,19 @@ public class MockLockssDaemon extends LockssDaemon {
       managerMap.put(LockssDaemon.TREEWALK_MANAGER, treeWalkManager);
     }
     return treeWalkManager;
+  }
+
+  /**
+   * return the repository manager instance
+   * @return the RepositoryManager
+   */
+  public RepositoryManager getRepositoryManager() {
+    if (repositoryManager == null) {
+      repositoryManager =
+	(RepositoryManager)newManager(LockssDaemon.REPOSITORY_MANAGER);
+      managerMap.put(LockssDaemon.REPOSITORY_MANAGER, repositoryManager);
+    }
+    return repositoryManager;
   }
 
   /**
@@ -362,6 +390,24 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setTreeWalkManager(TreeWalkManager treeWalkMan) {
     treeWalkManager = treeWalkMan;
     managerMap.put(LockssDaemon.TREEWALK_MANAGER, treeWalkManager);
+  }
+
+  /**
+   * Set the RepositoryManager
+   * @param treeWalkMan the new manager
+   */
+  public void setRepositoryManager(RepositoryManager repositoryMan) {
+    repositoryManager = repositoryMan;
+    managerMap.put(LockssDaemon.REPOSITORY_MANAGER, repositoryManager);
+  }
+
+  /**
+   * Set the NodeManagerManager
+   * @param nodeManMan the new manager
+   */
+  public void setNodeManagerManager(NodeManagerManager nodeManMan) {
+    nodeManagerManager = nodeManMan;
+    managerMap.put(LockssDaemon.NODE_MANAGER_MANAGER, nodeManMan);
   }
 
   /**
