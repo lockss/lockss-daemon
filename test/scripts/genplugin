@@ -83,7 +83,6 @@ def get_plugin_info(plugin):
     the plugin file, i.e. given '/path/to/src/foo/bar/BazPlugin.xml',
     return ('foo/bar', 'BazPlugin.xml') """
 
-    print os.sep
     pluginSrc = path.join(environ['PLUGIN_HOME'], 'src') + os.sep
     pluginPath = path.abspath(plugin)
     commonPath = common_path(pluginSrc, pluginPath)
