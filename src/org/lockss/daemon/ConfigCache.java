@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.3 2004-07-12 06:13:47 tlipkis Exp $
+ * $Id: ConfigCache.java,v 1.3.2.1 2004-07-21 02:49:48 smorabito Exp $
  */
 
 /*
@@ -86,6 +86,7 @@ public class ConfigCache {
       // If we catch any IO exception, remove the offending
       // file from the cache.  The daemon will try to reload it
       // at the next reload interval anyway.
+      log.debug2("Unable to load file, not caching.");
       remove(url);
       throw ex;
     }

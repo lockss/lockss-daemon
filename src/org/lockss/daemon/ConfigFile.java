@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.3.2.2 2004-07-19 08:26:14 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.3.2.3 2004-07-21 02:49:49 smorabito Exp $
  */
 
 /*
@@ -200,20 +200,19 @@ public class ConfigFile {
     m_IOException = null;
     // Open an output stream to write to our string
     try {
-      // KLUDGE: Part of the XML config file transition.  If the file
-      // is already an XML file, just try to open it.
-      //
-      // Otherwise, first XML-ize the URL and try to open it.  If that
-      // doesn't work, try opening the original URL.
+      // KLUDGE: Part of the XML config file transition.  If this is
+      // an HTTP URL and we have never loaded the file before, see if an
+      // XML version of the file is available first.  If none can be
+      // found, try the original URL.
       //
       // This logic can and should go away when we're no longer in a
       // transition period, and the platform knows about XML config
       // files.
-      if (m_fileType == XML_FILE) {
-	in = getUrlInputStream(url);
-      } else {
+      if (m_fileContents == null &&
+	  m_fileType == PROPERTIES_FILE && 
+	  UrlUtil.isHttpUrl(url)) {
 	String xmlUrl = makeXmlUrl(url);
-
+	
 	try {
 	  log.debug2("First pass: Trying to load XML-ized URL: " + xmlUrl);
 	  in = getUrlInputStream(xmlUrl);
@@ -229,8 +228,9 @@ public class ConfigFile {
 	  log.debug2("Second pass: That didn't work, trying to " +
 		     "load original URL: " + url);
 	  in = getUrlInputStream(url);
-	}
-
+	}	  
+      } else {
+	in = getUrlInputStream(url);	
       }
     } catch (MalformedURLException ex) {
       in = new InputStreamReader(new FileInputStream(url));

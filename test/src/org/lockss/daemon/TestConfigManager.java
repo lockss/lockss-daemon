@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.10.2.1 2004-07-16 22:32:58 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.10.2.2 2004-07-21 02:49:49 smorabito Exp $
  */
 
 /*
@@ -142,9 +142,6 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testCallbackDiffs() throws IOException {
-    // There is only one ConfigCache per manager, so we must
-    // reset the configuration.
-    mgr.resetConfigCache();
     setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
 					      FileTestUtil.urlOfString(c1a)));
     System.out.println(mgr.getCurrentConfig().toString());
@@ -156,19 +153,16 @@ public class TestConfigManager extends LockssTestCase {
 	  diffSet = changedKeys;
 	}
       });
-    mgr.resetConfigCache();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1a),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop2"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
-    mgr.resetConfigCache();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop4"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
-    mgr.resetConfigCache();
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
@@ -186,7 +180,7 @@ public class TestConfigManager extends LockssTestCase {
     Configuration config = mgr.getCurrentConfig();
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
     assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
-                 config.get(FileTarget.PARAM_FILE));
+		 config.get(FileTarget.PARAM_FILE));
   }
 
   public void testPlatformAccess1() throws Exception {
@@ -253,7 +247,7 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("/a/b", config.get("org.lockss.cache.location"));
     assertEquals("/a/b", config.get("org.lockss.history.location"));
     assertEquals(FileUtil.sysDepPath("/a/b/iddb"),
-                 config.get("org.lockss.id.database.dir"));
+		 config.get("org.lockss.id.database.dir"));
   }
 
   public void testPlatformSmtp() throws Exception {
