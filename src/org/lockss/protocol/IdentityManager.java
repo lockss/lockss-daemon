@@ -116,6 +116,7 @@ public class IdentityManager {
 
   /**
    * return true if this Identity is the same as the local host
+   * @param id the LcapIdentity
    * @return boolean true if is the local identity, false otherwise
    */
   public boolean isLocalIdentity(LcapIdentity id) {

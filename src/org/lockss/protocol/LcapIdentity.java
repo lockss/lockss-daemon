@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.8 2003-01-03 03:01:17 claire Exp $
+ * $Id: LcapIdentity.java,v 1.9 2003-01-04 00:59:19 aalto Exp $
  */
 
 /*
@@ -90,6 +90,7 @@ public class LcapIdentity implements Serializable {
   /**
    * return the address of the Identity
    * @return the <code>InetAddress<\code> for this Identity
+   * @throws UnknownHostException
    */
   public InetAddress getAddress() throws UnknownHostException {
     if(m_address == null) {
