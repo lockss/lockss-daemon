@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.52 2003-07-23 06:39:09 tlipkis Exp $
+ * $Id: Configuration.java,v 1.53 2003-07-27 01:41:25 tlipkis Exp $
  */
 
 /*
@@ -383,6 +383,20 @@ public abstract class Configuration {
     return val == null ? "(null)" : "\"" + val + "\"";
   }
 
+  /** Remove the subtree below the specified key.
+   * @param rootKey The key at the root of the subtree to be deleted.  This
+   * key and all below it are removed.
+   */
+  public void removeConfigTree(String rootKey) {
+    Configuration subtree = getConfigTree(rootKey);
+    for (Iterator iter = subtree.keyIterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      remove(rootKey + "." + key);
+    }
+    remove(rootKey);
+  }
+
+
   // must be implemented by implementation subclass
 
   abstract void reset();
@@ -417,6 +431,9 @@ public abstract class Configuration {
 
   /** Seal the configuration so that no changes can be made */
   public abstract void seal();
+
+  /** Return true iff the configuration is sealed */
+  public abstract boolean isSealed();
 
   /** Returns a Configuration instance containing all the keys at or
    * below <code>key</code>

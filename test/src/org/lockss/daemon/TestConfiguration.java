@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.23 2003-07-21 08:33:12 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.24 2003-07-27 01:41:24 tlipkis Exp $
  */
 
 /*
@@ -86,11 +86,28 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("2", config.get("b"));
   }    
 
-  public void testSeal() {
+  public void testRemoveTree() {
     Configuration config = newConfiguration();
     config.put("a", "1");
     config.put("b", "2");
-    config.seal();
+    config.put("b.a", "3");
+    config.put("b.a.1", "4");
+    config.put("b.a.1.1", "5");
+    config.put("b.a.2", "6");
+    config.put("b.b", "7");
+    assertEquals(7, config.keySet().size());
+    config.removeConfigTree("b.a");
+    assertEquals(3, config.keySet().size());
+    assertEquals("1", config.get("a"));
+    assertEquals("2", config.get("b"));
+    assertEquals(null, config.get("b.a"));
+    assertEquals(null, config.get("b.a.1"));
+    // removing a non-existent tree should do nothing
+    config.removeConfigTree("dkdkdk");
+    assertEquals(3, config.keySet().size());
+  }    
+
+  private void assertSealed(Configuration config) {
     try {
       config.put("b", "3");
       fail("put into sealed config should throw IllegalStateException");
@@ -101,9 +118,25 @@ public class TestConfiguration extends LockssTestCase {
       fail("remove from sealed config should throw IllegalStateException");
     } catch (IllegalStateException e) {
     }
-    assertEquals(2, config.keySet().size());
+    try {
+      config.removeConfigTree("a");
+      fail("remove from sealed config should throw IllegalStateException");
+    } catch (IllegalStateException e) {
+    }
+  }
+
+  public void testSeal() {
+    Configuration config = newConfiguration();
+    config.put("a", "1");
+    config.put("b", "2");
+    config.put("b.x", "3");
+    config.seal();
+    assertSealed(config);
+    assertEquals(3, config.keySet().size());
     assertEquals("1", config.get("a"));
     assertEquals("2", config.get("b"));
+    // check that subconfig of sealed config is sealed
+    assertSealed(config.getConfigTree("b"));
   }    
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
