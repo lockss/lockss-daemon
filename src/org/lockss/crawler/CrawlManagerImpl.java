@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.52 2004-01-13 01:02:35 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.53 2004-01-13 02:37:42 troberts Exp $
  */
 
 /*
@@ -85,6 +85,9 @@ public class CrawlManagerImpl extends BaseLockssManager
   //Tracking crawls for the status info
   private MultiMap crawlHistory = new MultiHashMap();
 
+  private MultiMap runningCrawls = new MultiHashMap();
+
+
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
   private int crawlPriority = DEFAULT_PRIORITY;
@@ -128,6 +131,17 @@ public class CrawlManagerImpl extends BaseLockssManager
     crawlPriority = newConfig.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
   }
 
+  public void cancelAuCrawls(ArchivalUnit au) {
+    synchronized(runningCrawls) {
+      Collection crawls = (Collection) runningCrawls.get(au);
+      Iterator it = crawls.iterator();
+      while (it.hasNext()) {
+	Crawler crawler = (Crawler)it.next();
+	crawler.abortCrawl();
+      }
+    }
+  }
+
   public void startRepair(ArchivalUnit au, Collection urls,
 			  CrawlManager.Callback cb, Object cookie,
                           ActivityRegulator.Lock lock) {
@@ -151,9 +165,16 @@ public class CrawlManagerImpl extends BaseLockssManager
 	new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
       crawlThread.start();
       crawlHistory.put(au.getAuId(), crawler.getStatus());
+      synchronized(runningCrawls) {
+	runningCrawls.put(au, crawler);
+      }
     } else {
       logger.debug3("Repair aborted due to activity lock.");
-      cb.signalCrawlAttemptCompleted(false, cookie);
+      try {
+	cb.signalCrawlAttemptCompleted(false, cookie);
+      } catch (Exception e) {
+	logger.error("Callback threw", e);
+      }
     }
   }
 
@@ -212,7 +233,11 @@ public class CrawlManagerImpl extends BaseLockssManager
       logger.debug2("Couldn't schedule new content crawl due "+
 		    "to activity lock.");
       if (cb != null) {
-	cb.signalCrawlAttemptCompleted(false, cookie);
+	try {
+	  cb.signalCrawlAttemptCompleted(false, cookie);
+	} catch (Exception e) {
+	  logger.error("Callback threw", e);
+	}
       }
     }
   }
@@ -238,21 +263,24 @@ public class CrawlManagerImpl extends BaseLockssManager
       new CrawlThread(crawler, Deadline.MAX, cb, cookie, SetUtil.set(lock));
     crawlThread.start();
     crawlHistory.put(au.getAuId(), crawler.getStatus());
+    synchronized(runningCrawls) {
+      runningCrawls.put(au, crawler);
+    }
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
     NodeManager nodeManager = theDaemon.getNodeManager(au);
     return
       CrawlerImpl.makeNewContentCrawler(au, spec,
-					       nodeManager.getAuState());
+					nodeManager.getAuState());
   }
 
   protected Crawler makeRepairCrawler(ArchivalUnit au, CrawlSpec spec,
 				      Collection  repairUrls) {
     NodeManager nodeManager = theDaemon.getNodeManager(au);
     return CrawlerImpl.makeRepairCrawler(au, spec,
-						nodeManager.getAuState(),
-						repairUrls);
+					 nodeManager.getAuState(),
+					 repairUrls);
   }
 
   public class CrawlThread extends Thread {
@@ -315,7 +343,11 @@ public class CrawlManagerImpl extends BaseLockssManager
       this.cb = cb;
     }
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
-      cb.signalCrawlAttemptCompleted(false, cookie);
+      try {
+	cb.signalCrawlAttemptCompleted(false, cookie);
+      } catch (Exception e) {
+	logger.error("Callback threw", e);
+      }
     }
   }
 

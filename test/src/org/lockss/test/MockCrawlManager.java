@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.15 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: MockCrawlManager.java,v 1.16 2004-01-13 02:37:42 troberts Exp $
  */
 
 /*
@@ -124,5 +124,9 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
 				       CrawlManager.Callback cb,
 				       Object cookie) {
     scheduledCrawls.put(au, SCHEDULED);
+  }
+
+  public void cancelAuCrawls(ArchivalUnit au) {
+    throw new UnsupportedOperationException("not implemented");
   }
 }
