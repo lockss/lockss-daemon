@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.63 2003-09-23 21:31:51 tlipkis Exp $
+ $Id: build.xml,v 1.64 2003-11-01 01:06:36 eaalto Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -117,7 +117,9 @@ Args:
   <property name="generated.test.src"  value="${generated.test}/src"/>
   <property name="generated.test.classes" value="${generated.test}/classes"/>
   <property name="generated.test.results" value="${generated.test}/results"/>
-  
+ 
+  <property name="instrumented" value="${basedir}/instrumented"/>
+ 
   <property name="wrapper.path"    value="org/lockss/plugin/wrapper"/>
   <property name="tobewrapped.src" value="${src}/org/lockss/plugin"/>
   <property name="plugin.wrapper.template" value="${tools.src}/pluginwrapper.xml" />
@@ -147,6 +149,11 @@ Args:
   <property name="htmlparser.jar"  value="${test.lib}/nekohtml.jar"/>
   <property name="js.jar"  value="${test.lib}/js.jar"/>
   <property name="jdk.tools.jar"      value="${java.lib}/tools.jar"/>
+  <property name="jcoverage.jar"  value="${test.lib}/jcoverage.jar"/>
+  <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
+  <property name="log4j.jar"  value="${test.lib}/log4j-1.2.8.jar"/>
+  <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.7.jar"/>
+  <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
 
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
@@ -251,6 +258,15 @@ Args:
   
   <path id="ant-contrib.classpath">
     <pathelement location="${ant-contrib.jar}"/>
+  </path>
+
+  <path id="jcover.run.classpath">
+    <path refid="test.run.classpath" />
+    <pathelement path="${jcoverage.jar}" />
+    <pathelement path="${log4j.jar}" />
+    <pathelement path="${bcel.jar}" />
+    <pathelement path="${oro.jar}" />
+    <pathelement path="${getopt.jar}" />
   </path>
 
   <!--  Need ant jar to compile ant extensions, so include ant's classpath -->
@@ -389,6 +405,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${tools.test.classes}" quiet="true"/>
     <delete dir="${generated.classes}" quiet="true"/>
     <delete dir="${generated.test.classes}" quiet="true"/>
+    <delete dir="${instrumented}" quiet="true"/>    
     <delete file="${lockss.tools.jar}" quiet="true"/>
     <delete file="${lockss.tools.test.jar}" quiet="true"/>
     <delete file="${lockss.generated.jar}" quiet="true"/>
@@ -1220,5 +1237,45 @@ Test results in ${tools.test.results}
     <fail message="You need to place a copy of ant-contrib-0.1.jar in ${lib}." />
   </target>
 -->
+
+  <!-- ==================================================================== -->
+  <target name="jcover"
+   depends="prepare.run.test,check.junit,jar-tests"
+   description="Run a set of test classes through jcoverage, named by the 'include' property." >
+    <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
+    <instrument todir="${instrumented}">
+      <classpath refid="jcover.run.classpath" />
+      <fileset dir="${classes}">
+         <include name="${include}"/>
+      </fileset>
+    </instrument>
+    <property name="jcoverage.ser" value="jcoverage.ser" />
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
+      <batchtest fork="${fork}" todir="${test.results}">
+        <fileset dir="${test.src}">
+          <include name="${include}Test*"/>
+        </fileset>
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
+        <path location="${instrumented}"/>
+        <path refid="jcover.run.classpath" />
+      </classpath>        
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
+
+    <report destdir="${test.results}" srcdir="${src}">
+       <classpath refid="jcover.run.classpath" />
+       <instrumentation file="${jcoverage.ser}"/>
+    </report>
+    <delete file="${jcoverage.ser}" quiet="true" />
+  </target>
 
 </project>
