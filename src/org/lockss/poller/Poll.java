@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.31 2002-12-21 01:15:45 aalto Exp $
+* $Id: Poll.java,v 1.32 2003-01-03 03:01:17 claire Exp $
  */
 
 /*
@@ -104,6 +104,7 @@ public abstract class Poll implements Serializable {
   int m_pendingVotes;      // the number of votes waiting to be tallied
   VoteTally m_tally;       // the vote tallier
   PollManager m_pollmanager; // the pollmanager which should be used by this poll.
+  IdentityManager idMgr = IdentityManager.getIdentityManager();
 
   /**
    * create a new poll from a message
@@ -214,7 +215,7 @@ public abstract class Poll implements Serializable {
    */
   void randomVerify(LcapMessage msg, boolean isAgreeVote) {
     LcapIdentity id = msg.getOriginID();
-    int max = id.getMaxReputaion();
+    int max = idMgr.getMaxReputaion();
     int weight = id.getReputation();
     double verify;
     if(isAgreeVote) {
@@ -245,7 +246,7 @@ public abstract class Poll implements Serializable {
    */
   void vote() {
     LcapMessage msg;
-    LcapIdentity local_id = LcapIdentity.getLocalIdentity();
+    LcapIdentity local_id = idMgr.getLocalIdentity();
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
@@ -545,7 +546,7 @@ public abstract class Poll implements Serializable {
         else {
           numNo++;
           wtNo += weight;
-          if (id.isLocalIdentity()) {
+          if (idMgr.isLocalIdentity(id)) {
             log.error("I disagree with myself about " + vote + " rep " + weight);
           }
           else {

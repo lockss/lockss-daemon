@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.7 2002-12-02 00:35:49 tal Exp $
+ * $Id: LcapIdentity.java,v 1.8 2003-01-03 03:01:17 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Random;
 import org.mortbay.util.B64Code;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
+import java.io.Serializable;
 
 /**
  * quick and dirty wrapper class for a network identity.
@@ -44,177 +45,56 @@ import org.lockss.daemon.*;
  * @author Claire Griffin
  * @version 1.0
  */
-public class LcapIdentity {
-  //TODO:
-  //1) have hash of identities, so we can ensure uniqueness
-  //2) hook up Configuration callback to change local identity
+public class LcapIdentity implements Serializable {
+  /*
+       PACKET HISTOGRAM SUPPORT - CURRENTLY NOT BEING USED
+  */
+  transient long m_lastActiveTime = 0;
+  transient long m_lastOpTime = 0;
+  transient long m_incrPackets = 0;   // Total packets arrived this interval
+  transient long m_origPackets = 0;   // Unique pkts from this indentity this interval
+  transient long m_forwPackets = 0;   // Unique pkts forwarded by this identity this interval
+  transient long m_duplPackets = 0;   // Duplicate packets originated by this identity
+  transient long m_totalPackets = 0;
+  transient long m_lastTimeZeroed = 0;
+  transient HashMap m_pktsThisInterval = new HashMap();
+  transient HashMap m_pktsLastInterval = new HashMap();
+  /*
+    END PACKET HISTOGRAM SUPPORT - CURRENTLY NOT BEING USED
+  */
 
-  static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
+  transient InetAddress m_address = null;
 
-  protected static final int INITIAL_REPUTATION = 500;
-  protected static final int REPUTATION_NUMERATOR = 1000;
-  protected static final int MAX_REPUTATION_DELTA = 100;
-  protected static final int AGREE_DELTA = 100;
-  protected static final int DISAGREE_DELTA = -150;
-  protected static final int CALL_INTERNAL_DELTA = -100;
-  protected static final int SPOOF_DETECTED = -30;
-  protected static final int REPLAY_DETECTED = -20;
-  protected static final int ATTACK_DETECTED = -500;
-  protected static final int VOTE_NOT_VERIFIED = -30;
-  protected static final int VOTE_VERIFIED = 40;
-  protected static final int VOTE_DISOWNED = -400;
-
-  long m_lastActiveTime;
-  long m_lastOpTime;
-  long m_incrPackets;   // Total packets arrived this interval
-  long m_origPackets;   // Unique pkts from this indentity this interval
-  long m_forwPackets;   // Unique pkts forwarded by this identity this interval
-  long m_duplPackets;   // Duplicate packets originated by this identity
-  long m_totalPackets;
-  long m_lastTimeZeroed;
-
-  HashMap m_pktsThisInterval = new HashMap();
-  HashMap m_pktsLastInterval = new HashMap();
-
-  InetAddress m_address;
   int m_reputation;
   String m_idKey;
-  static HashMap theIdentities = null; // all known identities
-  static LcapIdentity theLocalIdentity;
-  static Logger theLog=Logger.getLogger("Identity",Logger.LEVEL_DEBUG);
-  static Random theRandom = new Random();
+  static Logger theLog=Logger.getLogger("Identity");
 
-//   protected LcapIdentity(Object idKey)  {
-//     m_idKey = idKey;
-//     m_reputation = INITIAL_REPUTATION;
-//     m_lastActiveTime = 0;
-//     m_lastOpTime = 0;
-//     m_lastTimeZeroed = 0;
-//     m_incrPackets = 0;
-//     m_totalPackets = 0;
-//     m_origPackets = 0;
-//     m_forwPackets = 0;
-//     m_duplPackets = 0;
-//     if(theIdentities == null) {
-//       reloadIdentities();
-//     }
-//     theIdentities.put(m_idKey, this);
-//   }
+  LcapIdentity(String idKey, int reputation) throws UnknownHostException {
+    m_idKey = idKey;
+    m_reputation = reputation;
+    m_address = stringToAddr(idKey);
+  }
 
   /**
    * construct a new Identity from an address
    * @param addr the InetAddress
    */
   LcapIdentity(InetAddress addr) {
-    m_address = addr;
     m_idKey = makeIdKey(addr);
-    m_reputation = INITIAL_REPUTATION;
-    m_lastActiveTime = 0;
-    m_lastOpTime = 0;
-    m_lastTimeZeroed = 0;
-    m_incrPackets = 0;
-    m_totalPackets = 0;
-    m_origPackets = 0;
-    m_forwPackets = 0;
-    m_duplPackets = 0;
-    if(theIdentities == null) {
-      reloadIdentities();
-    }
-    theIdentities.put(m_idKey, this);
+    m_reputation = IdentityManager.INITIAL_REPUTATION;
+    m_address = addr;
   }
 
-  /**
-   * construct a new Identity from the information found in
-   * a datagram socket
-   * @param socket the DatagramSocket
-   * @return newly constructed <code>Identity<\code>
-   */
-  LcapIdentity(DatagramSocket socket) {
-    this(socket.getInetAddress());
-  }
-
-
-  /**
-   * public constructor for creation of an Identity object
-   * from a DatagramSocket
-   * @param socket the DatagramSocket
-   * @return newly constructed <code>Identity<\code>
-   */
-  public static LcapIdentity getIdentity(DatagramSocket socket) {
-    return getIdentity(socket.getInetAddress());
-  }
-
-  /**
-   * public constructor for the creation of an Identity object
-   * from an address.
-   * @param addr the InetAddress
-   * @return a newly constructed Identity
-   */
-  public static LcapIdentity getIdentity(InetAddress addr) {
-    LcapIdentity ret;
-
-    if(theIdentities == null)  {
-      reloadIdentities();
-    }
-
-    if(addr == null)  {
-      ret = getLocalIdentity();
-    }
-    else  {
-      ret = findIdentity(makeIdKey(addr));
-      if(ret == null)  {
-	ret = new LcapIdentity(addr);
-      }
-    }
-
-    return ret;
-  }
-
-
-  public static LcapIdentity findIdentity(Object idKey)  {
-    if(theIdentities == null)  {
-      reloadIdentities();
-    }
-
-    return (LcapIdentity) theIdentities.get(idKey);
-  }
-
-  /**
-   * public constructor for the creation of an Identity object that
-   * represents the local address
-   * @param socket the DatagramSocket used to extract the local info.
-   * @return a newly constructed Identity
-   */
-  public static LcapIdentity getLocalIdentity(DatagramSocket socket) {
-    if(theLocalIdentity == null) {
-      theLocalIdentity = new LcapIdentity(socket.getLocalAddress());
-    }
-    return theLocalIdentity;
-  }
-
-  /**
-   * get the Identity of the local host
-   * @return newly constructed <code>Identity<\code>
-   */
-  public static LcapIdentity getLocalIdentity() {
-    if(theLocalIdentity == null)  {
-      String identStr = Configuration.getParam(PARAM_LOCAL_IP);
-      try {
-	InetAddress addr = InetAddress.getByName(identStr);
-	theLocalIdentity = new LcapIdentity(addr);
-      } catch (UnknownHostException uhe) {
-	theLog.error("Could not resolve: "+identStr, uhe);
-      }
-    }
-    return theLocalIdentity;
-  }
 
   // accessor methods
   /**
    * return the address of the Identity
    * @return the <code>InetAddress<\code> for this Identity
    */
-  public InetAddress getAddress() {
+  public InetAddress getAddress() throws UnknownHostException {
+    if(m_address == null) {
+      m_address = stringToAddr(m_idKey);
+    }
     return m_address;
   }
 
@@ -226,25 +106,9 @@ public class LcapIdentity {
     return m_reputation;
   }
 
-  /**
-   * return the max value of an Identity's reputation
-   * @return the int value of max reputation
-   */
-  public int getMaxReputaion() {
-    return REPUTATION_NUMERATOR;
+  public String getIdKey() {
+    return m_idKey;
   }
-
-  /**
-   * return true if this Identity is the same as the local host
-   * @return boolean true if is the local identity, false otherwise
-   */
-  public boolean isLocalIdentity() {
-    if(theLocalIdentity == null)  {
-      getLocalIdentity();
-    }
-    return isEqual(theLocalIdentity);
-  }
-
 
 
   // methods which may need to be overridden
@@ -275,72 +139,6 @@ public class LcapIdentity {
     return m_idKey;
   }
 
-  //
-
-  /**
-   * change the reputation by the amount defined for a agree vote
-   */
-  public void agreeWithVote() {
-    changeReputation(AGREE_DELTA);
-  }
-
-  /**
-   * change the reputation by the amount defined for a disagree vote
-   */
-  public void disagreeWithVote() {
-    changeReputation(DISAGREE_DELTA);
-  }
-
-  /**
-   * change the reputation by the amount defined for a internal vote
-   */
-  public void callInternalPoll() {
-    changeReputation(CALL_INTERNAL_DELTA);
-  }
-
-  /**
-   * change the reputation by the amount defined for a spoofed vote
-   */
-  public void spoofDetected() {
-    changeReputation(SPOOF_DETECTED);
-  }
-
-  /**
-   * change the reputation by the amount defined for a replayed vote
-   */
-  public void replayDetected() {
-    if (false)	 {
-      changeReputation(REPLAY_DETECTED);
-    }
-  }
-
-  /**
-   * change the reputation by the amount defined for an attack attempt
-   */
-  public void attackDetected() {
-    changeReputation(ATTACK_DETECTED);
-  }
-
-  /**
-   * change the reputation by the amount defined for a unverified vote
-   */
-  public void voteNotVerify() {
-    changeReputation(VOTE_NOT_VERIFIED);
-  }
-
-  /**
-   * change the reputation by the amount defined for a verify vote
-   */
-  public void voteVerify() {
-    changeReputation(VOTE_VERIFIED);
-  }
-
-  /**
-   * change the reputation by the amount defined for a disowned vote
-   */
-  public void voteDisown() {
-    changeReputation(VOTE_DISOWNED);
-  }
 
   /**
    * update the active packet counter
@@ -394,50 +192,45 @@ public class LcapIdentity {
     m_duplPackets++;
   }
 
-  static void storeIdentities()  {
-    // XXX store our identities here
-  }
-  static void reloadIdentities()  {
-    // XXX load our saved Ids here
-    theIdentities = new HashMap();
-  }
 
   /**
    * update the reputation value for this Identity
    * @param delta the change in reputation
    */
   void changeReputation(int delta) {
-    if (this == theLocalIdentity) {
-      theLog.debug(m_idKey + " ignoring reputation delta " + delta);
-      return;
-    }
-
-    delta = (int) (((float) delta) * theRandom.nextFloat());
-    if (delta > 0) {
-      if (delta > MAX_REPUTATION_DELTA) {
-	delta = MAX_REPUTATION_DELTA;
-
-      }
-      if (delta > (REPUTATION_NUMERATOR - m_reputation)) {
-	delta = (REPUTATION_NUMERATOR - m_reputation);
-
-      }
-    }
-    else if (delta < 0) {
-      if (delta < (-MAX_REPUTATION_DELTA)) {
-	delta = -MAX_REPUTATION_DELTA;
-      }
-      if ((m_reputation + delta) < 0) {
-	delta = -m_reputation;
-      }
-    }
-    if (delta != 0)
-      theLog.debug(m_idKey +" change reputation from " + m_reputation +
-		   " to " + (m_reputation + delta));
     m_reputation += delta;
   }
 
-  static String makeIdKey(InetAddress addr)  {
-    return addr.getHostAddress();
+  static String makeIdKey(InetAddress addr) {
+    return addrToString(addr);
+  }
+
+  /**
+   * turn and InetAddress into a dotted quartet string since
+   * get host address doesn't necessarily return an address
+   * @param addr the address to turn into a string
+   * @return the address as dotted quartet sting
+   */
+  static String addrToString(InetAddress addr)  {
+    // inp is a 4-byte address - turn it into an InetAddress
+    byte[] inp = addr.getAddress();
+    Integer[] temp = new Integer[4];
+    for (int i = 0; i < 4; i++) {
+      temp[i] = new Integer(inp[i] < 0 ? 256 + inp[i] : inp[i]);
+    }
+    StringBuffer buf = new StringBuffer(temp[0].toString());
+    buf.append(".");
+    buf.append(temp[1]);
+    buf.append(".");
+    buf.append(temp[2]);
+    buf.append(".");
+    buf.append(temp[3]);
+    return buf.toString();
+  }
+
+  static InetAddress stringToAddr(String addr) throws UnknownHostException {
+    InetAddress ret = InetAddress.getByName(addr);
+    return ret;
+
   }
 }

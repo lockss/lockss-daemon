@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.1 2002-12-21 01:15:45 aalto Exp $
+* $Id: Vote.java,v 1.2 2003-01-03 03:01:17 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.mortbay.util.B64Code;
 import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.LcapMessage;
 import java.util.Arrays;
+import org.lockss.protocol.IdentityManager;
 
 /**
  * Vote stores the information need to replay a single vote. These are needed
@@ -54,7 +55,7 @@ public class Vote {
   protected Vote makeVote(String challengeStr, String verifierStr, String hashStr,
                  String idStr, boolean agree) {
     Vote vote = new Vote();
-    vote.id = LcapIdentity.findIdentity(idStr);
+    vote.id = IdentityManager.getIdentityManager().findIdentity(idStr);
     vote.agree = agree;
     vote.challenge = B64Code.decode(challengeStr.toCharArray());
     vote.verifier = B64Code.decode(verifierStr.toCharArray());

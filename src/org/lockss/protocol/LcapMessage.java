@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.13 2002-12-17 21:09:05 claire Exp $
+ * $Id: LcapMessage.java,v 1.14 2003-01-03 03:01:17 claire Exp $
  */
 
 /*
@@ -105,6 +105,9 @@ public class LcapMessage implements Serializable {
   private EncodedProperty m_props;
   private static byte[] signature = {'l','p','m','1'};
   private static Logger log = Logger.getLogger("Message");
+
+  private static IdentityManager theIdentityMgr
+      = IdentityManager.getIdentityManager();
 
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
@@ -333,16 +336,20 @@ public class LcapMessage implements Serializable {
 
     // the immutable stuff
     port = m_props.getInt("origPort", -1);
-    byte[] ip_bytes = m_props.getByteArray("origIP", new byte[0]);
-
-    m_originID = LcapIdentity.getIdentity(bytesToAddress(ip_bytes));
-
-    ip_bytes = m_props.getByteArray("group", new byte[0]);
+    String addr_str = m_props.getProperty("origIP");
     try {
-      m_group = bytesToAddress(ip_bytes);
+      m_originID = theIdentityMgr.getIdentity(LcapIdentity.stringToAddr(addr_str));
     }
-    catch (ProtocolException ex) {
-      log.error("invalid group address");
+    catch(UnknownHostException ex) {
+      log.warning("Unknown originating host:" + addr_str);
+    }
+
+    addr_str = m_props.getProperty("group");
+    try {
+      m_group = LcapIdentity.stringToAddr(addr_str);
+    }
+    catch(UnknownHostException ex) {
+      log.warning("invalid group address");
     }
 
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
@@ -371,7 +378,8 @@ public class LcapMessage implements Serializable {
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
     try {
-      m_props.putByteArray("origIP",m_originID.getAddress().getAddress());
+      m_props.setProperty("origIP",
+                          LcapIdentity.addrToString(m_originID.getAddress()));
     }
     catch(NullPointerException npe) {
       throw new ProtocolException("LcapMessage.encode - null origin host address.");
@@ -381,7 +389,7 @@ public class LcapMessage implements Serializable {
       m_props.setProperty("group", "");
     }
     else {
-      m_props.putByteArray("group", m_group.getAddress());
+      m_props.setProperty("group", LcapIdentity.addrToString(m_group));
     }
 
     m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
@@ -435,7 +443,7 @@ public class LcapMessage implements Serializable {
   }
 
   public boolean isLocal() {
-    return (LcapIdentity.getLocalIdentity().equals(m_originID));
+    return theIdentityMgr.isLocalIdentity(m_originID);
 
   }
 
@@ -526,22 +534,6 @@ public class LcapMessage implements Serializable {
     return buf.toString();
   }
 
-  private InetAddress bytesToAddress(byte[] inp) throws ProtocolException {
-    // inp is a 4-byte address - turn it into an InetAddress
-    Integer[] temp = new Integer[4];
-    for (int i = 0; i < 4; i++)
-      temp[i] = new Integer(inp[i] < 0 ? 256 + inp[i] : inp[i]);
-    String buf = temp[0].toString() + "." +
-      temp[1].toString() + "." +
-      temp[2].toString() + "." +
-      temp[3].toString();
-    try {
-      InetAddress ret = InetAddress.getByName(buf);
-      return ret;
-    } catch (UnknownHostException e) {
-      throw new ProtocolException("Bad Address:" + buf + ":" + e.toString());
-    }
-  }
 
   public String toString() {
     StringBuffer sb = new StringBuffer();

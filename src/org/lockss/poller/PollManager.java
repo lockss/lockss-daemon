@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.16 2002-12-19 01:14:30 claire Exp $
+* $Id: PollManager.java,v 1.17 2003-01-03 03:01:17 claire Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class PollManager {
   private static HashMap theVerifiers = new HashMap();
   private static Random theRandom = new Random();
   private static LcapComm theComm = null;
-
+  private static IdentityManager theIdMgr = IdentityManager.getIdentityManager();
   private PollManager() {
   }
 
@@ -181,7 +181,7 @@ public class PollManager {
     LcapMessage msg = LcapMessage.makeRequestMsg(url,regexp,null,grpAddr,
         (byte)timeToLive,
         challenge,verifier,opcode,timeUntilCount,
-        LcapIdentity.getLocalIdentity());
+        theIdMgr.getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
     sendMessage(msg, Plugin.findArchivalUnit(url));
@@ -416,7 +416,7 @@ public class PollManager {
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
         msg.getDuration(),
-        LcapIdentity.getLocalIdentity());
+        theIdMgr.getLocalIdentity());
 
     LcapIdentity originator = msg.getOriginID();
     theLog.debug("sending our verification request to " + originator.toString());

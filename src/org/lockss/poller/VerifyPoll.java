@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.22 2002-12-17 21:09:05 claire Exp $
+* $Id: VerifyPoll.java,v 1.23 2003-01-03 03:01:17 claire Exp $
  */
 
 /*
@@ -128,15 +128,16 @@ class VerifyPoll extends Poll {
     super.tally();
     log.info(m_msg.toString() + " tally " + toString());
     LcapIdentity id = m_caller;
+
     if ((m_tally.numYes + m_tally.numNo) < 1) {
       log.debug("vote failed to verify");
-      id.voteNotVerify();
+      idMgr.changeReputation(id, IdentityManager.VOTE_NOTVERIFIED);
     } else if (m_tally.numYes > 0 && m_tally.numNo == 0) {
       log.debug("vote sucessfully verified");
-      id.voteVerify();
+      idMgr.changeReputation(id, IdentityManager.VOTE_VERIFIED);
     } else {
       log.debug("vote disowned.");
-      id.voteDisown();
+      idMgr.changeReputation(id, IdentityManager.VOTE_DISOWNED);
     }
   }
 
@@ -171,7 +172,7 @@ class VerifyPoll extends Poll {
         verifier,
         LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
-        LcapIdentity.getLocalIdentity());
+        idMgr.getLocalIdentity());
 
     LcapIdentity originator = msg.getOriginID();
     log.debug("sending our verification reply to " + originator.toString());
