@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.11 2003-11-13 19:53:41 troberts Exp $
+ * $Id: TestAuState.java,v 1.1 2003-11-19 04:19:18 eaalto Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.TimeBase;
 
-public class TestAuStateImpl extends LockssTestCase {
+public class TestAuState extends LockssTestCase {
   MockHistoryRepository historyRepo;
   MockArchivalUnit mau;
 
@@ -139,7 +139,7 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = { TestAuStateImpl.class.getName()};
+    String[] testCaseList = { TestAuState.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
