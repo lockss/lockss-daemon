@@ -1,5 +1,5 @@
 /*
- * $Id: MockActivityRegulator.java,v 1.5 2003-06-26 00:18:24 troberts Exp $
+ * $Id: MockActivityRegulator.java,v 1.6 2003-07-31 00:47:33 eaalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class MockActivityRegulator extends ActivityRegulator {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void auActivityFinished(int activity) {
+  void auActivityFinished(int activity) {
     finishedAuActivity = activity;
   }
 
@@ -90,7 +90,7 @@ public class MockActivityRegulator extends ActivityRegulator {
 			activity, finishedAuActivity);
   }
 
-  public void cusActivityFinished(int activity, CachedUrlSet cus) {
+  void cusActivityFinished(int activity, CachedUrlSet cus) {
     finishedCusActivities.put(cus, new Integer(activity));
   }
 
@@ -98,8 +98,10 @@ public class MockActivityRegulator extends ActivityRegulator {
     this.shouldStartAuActivity = shouldStartAuActivity;
   }
 
-  public Lock startAuActivity(int newActivity, long expireIn) {
-    return shouldStartAuActivity ? new Lock(0, expireIn) : null;
+  public Lock getAuActivityLock(int newActivity, long expireIn) {
+    return shouldStartAuActivity ?
+        new MockLock(null, newActivity, expireIn) :
+        null;
   }
 
   public void setStartCusActivity(CachedUrlSet cus,
@@ -111,8 +113,24 @@ public class MockActivityRegulator extends ActivityRegulator {
     }
   }
 
-  public Lock startCusActivity(int newActivity, CachedUrlSet cus,
-			       long expireIn) {
-    return (lockedCuses.contains(cus) ? null : new Lock(0, expireIn));
+  public Lock getCusActivityLock(CachedUrlSet cus, int newActivity,
+                                 long expireIn) {
+    return (lockedCuses.contains(cus) ? null :
+            new MockLock(cus, newActivity, expireIn));
+  }
+
+  class MockLock extends CusLock {
+    public MockLock(CachedUrlSet cus, int activity, long expireIn) {
+      super(cus, activity, expireIn);
+    }
+
+    public void expire() {
+      super.expire();
+      if (cus!=null) {
+        cusActivityFinished(activity, cus);
+      } else {
+        auActivityFinished(activity);
+      }
+    }
   }
 }
