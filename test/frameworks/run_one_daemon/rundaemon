@@ -2,7 +2,11 @@
 
 PROP_URL_LIST="lockss.txt"
 
-CLASSPATH=`cat ${PROJECT_DIR}/test/test-classpath`
+# local copy of lockss jars allows recompile while we're running
+mkdir -p lib
+cp ${PROJECT_DIR}/lib/lockss.jar lib
+cp ${PROJECT_DIR}/lib/lockss-test.jar lib
+CLASSPATH=lib/lockss.jar:lib/lockss-test.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 
 echo running at `date`

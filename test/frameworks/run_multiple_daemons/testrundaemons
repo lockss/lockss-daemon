@@ -3,7 +3,10 @@
 # "." here is the test<n> dir
 PROP_URL_LIST="../lockss.txt local.txt"
 
-CLASSPATH=`cat ${PROJECT_DIR}/lockss-gamma/test/test-classpath`
+mkdir -p ../lib
+cp ${PROJECT_DIR}/lib/lockss.jar ../lib
+cp ${PROJECT_DIR}/lib/lockss-test.jar ../lib
+CLASSPATH=../lib/lockss.jar:../lib/lockss-test.jar:`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 
 echo running in `pwd` at `date`
