@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.4 2003-06-20 22:34:51 claire Exp $
+ * $Id: BaseUrlCacher.java,v 1.5 2003-07-11 22:14:18 troberts Exp $
  */
 
 /*
@@ -113,7 +113,9 @@ public abstract class BaseUrlCacher implements UrlCacher {
    * @throws IOException
    */
   public void cache() throws IOException {
+    logger.debug3("Pausing before fetching content");
     getArchivalUnit().pauseBeforeFetch();
+    logger.debug3("Done pausing");
     InputStream input = getUncachedInputStream();
     Properties headers = getUncachedProperties();
     if (input==null) {
