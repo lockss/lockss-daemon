@@ -173,10 +173,10 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void testgetName() throws Exception {
     HighWireArchivalUnit au =
       makeAU(new URL("http://shadow1.stanford.edu/"), 42);
-    assertEquals("shadow1.stanford, vol. 42", au.getName());
+    assertEquals("shadow1.stanford.edu, vol. 42", au.getName());
     HighWireArchivalUnit au1 =
       makeAU(new URL("http://www.bmj.com/"), 42);
-    assertEquals("bmj, vol. 42", au1.getName());
+    assertEquals("www.bmj.com, vol. 42", au1.getName());
   }
 
   public static void main(String[] argv) {

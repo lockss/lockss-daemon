@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.21 2003-04-18 20:28:04 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.22 2003-04-21 05:38:18 tal Exp $
  */
 
 /*
@@ -196,7 +196,8 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public String getName() {
-    String host = StringUtil.trimHostName(base.getHost());
+//     String host = StringUtil.trimHostName(base.getHost());
+    String host = base.getHost();
     return host + ", vol. " + volume;
   }
 
