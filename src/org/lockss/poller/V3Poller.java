@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.9 2004-10-11 21:53:48 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.10 2004-10-13 01:30:21 dshr Exp $
  */
 
 /*
@@ -190,6 +190,14 @@ public class V3Poller extends V3Poll {
   }
 
   // End abstract methods of V3Poll
+
+  public static String getPollStateName(int state) {
+    if (state < 0 || state >= stateName.length) {
+      return "bad state";
+    } else {
+      return stateName[state];
+    }
+  }
 
   protected void doPollAckMessage(V3LcapMessage msg) {
     Serializable cookie = msg.getKey();
