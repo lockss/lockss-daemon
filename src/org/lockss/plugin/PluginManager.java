@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.69 2004-01-14 22:51:09 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.70 2004-01-21 08:27:09 tlipkis Exp $
  */
 
 /*
@@ -120,17 +120,18 @@ public class PluginManager extends BaseLockssManager {
     // Don't load and start plugins until the daemon is running.
     if (isDaemonInited()) {
       Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
-      for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
-	String pluginKey = (String)iter.next();
-	log.debug("Configuring plugin key: " + pluginKey);
-	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
-	Configuration prevPluginConf =
-	  currentAllPlugs.getConfigTree(pluginKey);
+      if (!allPlugs.equals(currentAllPlugs)) {
+	for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+	  String pluginKey = (String)iter.next();
+	  log.debug("Configuring plugin key: " + pluginKey);
+	  Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+	  Configuration prevPluginConf =
+	    currentAllPlugs.getConfigTree(pluginKey);
 
-	configurePlugin(pluginKey, pluginConf, prevPluginConf);
+	  configurePlugin(pluginKey, pluginConf, prevPluginConf);
+	}
+	currentAllPlugs = allPlugs;
       }
-      currentAllPlugs = allPlugs;
-
       // process the plugin registry.
       // (do this after configuring AUs, so plugin regsitry will reflect
       // plugins loaded by AUs but not in registry param)
