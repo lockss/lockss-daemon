@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.38 2004-03-29 09:17:52 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.39 2004-05-04 22:20:12 tlipkis Exp $
  */
 
 /*
@@ -733,7 +733,8 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Store a footnote, assign it a number, return html for footnote
    * reference.  If footnote in null or empty, no footnote is added and am
-   * empty string is returned. */
+   * empty string is returned.  Footnote numbers get turned into links;
+   * <b>Do not put the result of addFootnote inside a link!</b>.  */
   protected String addFootnote(String s) {
     if (s == null || s.length() == 0) {
       return "";
@@ -750,7 +751,8 @@ public abstract class LockssServlet extends HttpServlet
       n = footNumber++;
       footnotes.addElement(s);
     }
-    return "<sup><font size=-1>" + (n+1) + "</font></sup>";
+    return "<sup><font size=-1><a href=#foottag" + (n+1) + ">" +
+      (n+1) + "</a></font></sup>";
   }
 
   /** Add accumulated footnotes to Composite. */
@@ -761,7 +763,8 @@ public abstract class LockssServlet extends HttpServlet
     elem.add("<p><b>Notes:</b>");
     elem.add("<ol><font size=-1>");
     for (int n = 0; n < footNumber; n++) {
-      elem.add("<li value=" + (n+1) + ">" + footnotes.elementAt(n));
+      elem.add("<li value=" + (n+1) + "><a name=foottag" + (n+1) + ">" + 
+	       footnotes.elementAt(n) + "</a>");
     }
     footnotes.removeAllElements();
     elem.add("</font></ol>");
