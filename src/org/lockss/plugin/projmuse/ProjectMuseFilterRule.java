@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseFilterRule.java,v 1.2 2004-01-20 22:58:54 eaalto Exp $
+ * $Id: ProjectMuseFilterRule.java,v 1.3 2004-08-19 00:02:20 clairegriffin Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class ProjectMuseFilterRule implements FilterRule {
   static final String MENU_END =
       "<!-- =================== END JUMP MENU =================== -->";
 
-  public InputStream createFilteredInputStream(Reader reader) {
+  public Reader createFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
         new HtmlTagFilter.TagPair(MENU_START, MENU_END, true),
         new HtmlTagFilter.TagPair("<!--", "-->", true),
@@ -55,6 +55,6 @@ public class ProjectMuseFilterRule implements FilterRule {
         new HtmlTagFilter.TagPair("<", ">")
         );
     Reader filteredReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+    return new WhiteSpaceFilter(filteredReader);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRunner.java,v 1.1 2004-05-25 00:17:45 clairegriffin Exp $
+ * $Id: TestFilterRunner.java,v 1.2 2004-08-19 00:02:24 clairegriffin Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  public void testDirThrowsOnNullSrc() 
+  public void testDirThrowsOnNullSrc()
       throws FileNotFoundException, IOException {
     try {
       FilterRunner.filterDirectory(new MockFilterRule(),
@@ -66,14 +66,14 @@ public class TestFilterRunner extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
-  
-  public void testDirThrowsOnExistingSrcOtherThanDir() 
+
+  public void testDirThrowsOnExistingSrcOtherThanDir()
       throws FileNotFoundException, IOException {
     try {
       MockFile src = new MockFile("blah");
       src.setExists(true);
       FilterRunner.filterDirectory(new MockFilterRule(),
-				   src, 
+				   src,
 				   new MockFile("blah2"));
       fail("Calling filterSingleFile with a src file that returns false "
 	   +"on isFile() should have thrown");
@@ -81,7 +81,7 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  public void testDirThrowsOnNullDest() 
+  public void testDirThrowsOnNullDest()
       throws FileNotFoundException, IOException {
     try {
       MockFile src = new MockFile("blah");
@@ -94,7 +94,7 @@ public class TestFilterRunner extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
- 
+
   public void testFilterDirectoryCreatesDirIfItDoesntExist()
       throws FileNotFoundException, IOException {
     MockFile src = new MockFile("blah");
@@ -107,7 +107,7 @@ public class TestFilterRunner extends LockssTestCase {
     dest.assertMkdirCalled();
   }
 
-  public void testDirThrowsOnDestOtherThanDir() 
+  public void testDirThrowsOnDestOtherThanDir()
       throws FileNotFoundException, IOException {
     try {
       MockFile src = new MockFile("blah");
@@ -152,7 +152,7 @@ public class TestFilterRunner extends LockssTestCase {
     MyMockFilterRule filter = new MyMockFilterRule();
     filter.setString("Test String");
     FilterRunner.filterDirectory(filter, src, dest);
-    
+
     for (int ix=0; ix<files.length; ix++) {
       String file = files[ix].getPath();
       file = file.substring(file.lastIndexOf(File.separator));
@@ -188,7 +188,7 @@ public class TestFilterRunner extends LockssTestCase {
     }
     return files;
   }
-  
+
   public static File mapFileToOtherRoot(File file,
 					File oldRoot,
 					File newRoot) {
@@ -206,7 +206,7 @@ public class TestFilterRunner extends LockssTestCase {
     MyMockFilterRule filter = new MyMockFilterRule();
     filter.setString("Test String");
     FilterRunner.filterDirectory(filter, src, dest);
-    
+
     for (int ix=0; ix<files.length; ix++) {
       File tmpFile = mapFileToOtherRoot(files[ix], src, dest);
       assertFileExists(tmpFile);
@@ -227,7 +227,7 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  public void testThrowsOnNullSrc() 
+  public void testThrowsOnNullSrc()
       throws FileNotFoundException, IOException {
     try {
       FilterRunner.filterSingleFile(new MockFilterRule(),
@@ -239,7 +239,7 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  public void testThrowsOnSrcOtherThanFile() 
+  public void testThrowsOnSrcOtherThanFile()
       throws FileNotFoundException, IOException {
     try {
       FilterRunner.filterSingleFile(new MockFilterRule(),
@@ -251,7 +251,7 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
 
-  public void testThrowsOnNullDest() 
+  public void testThrowsOnNullDest()
       throws FileNotFoundException, IOException {
     try {
       FilterRunner.filterSingleFile(new MockFilterRule(),
@@ -270,9 +270,8 @@ public class TestFilterRunner extends LockssTestCase {
     assertTrue("Couldn't create "+dummy, dummy.createNewFile());
     File destFile = new File(tmpDir, "testFile");
     MockFilterRule filter = new MockFilterRule();
-    InputStream filteredStream =
-      new ReaderInputStream(new StringReader("Test String"));
-    filter.setFilteredInputStream(filteredStream);
+    Reader reader = new StringReader("Test String");
+    filter.setFilteredReader(reader);
 
     FilterRunner.filterSingleFile(filter, dummy, destFile);
     assertFileExists(destFile);
@@ -285,9 +284,8 @@ public class TestFilterRunner extends LockssTestCase {
     File dummy = new File(getTempDir(), "dummy");
     assertTrue("Couldn't create "+dummy, dummy.createNewFile());
     MockFilterRule filter = new MockFilterRule();
-    InputStream filteredStream =
-      new ReaderInputStream(new StringReader("Test String"));
-    filter.setFilteredInputStream(filteredStream);
+    Reader reader = new StringReader("Test String");
+    filter.setFilteredReader(reader);
 
     FilterRunner.filterSingleFile(filter, dummy, tmpDir);
 
@@ -343,7 +341,7 @@ public class TestFilterRunner extends LockssTestCase {
 //     FilterRunner.filterSingleFile(filter,
 // 				  new FailingReader(),
 // 				  new WriterOutputStream(writer));
-			
+
 //     assertEquals("Test String", writer.toString());
 //   }
 
@@ -370,8 +368,8 @@ public class TestFilterRunner extends LockssTestCase {
     public void setString(String str) {
       this.str = str;
     }
-    public InputStream createFilteredInputStream(Reader reader) {
-      return new ReaderInputStream(new StringReader(str));
+    public Reader createFilteredReader(Reader reader) {
+      return new StringReader(str);
     }
   }
 

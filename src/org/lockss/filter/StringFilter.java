@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.3 2004-04-05 07:58:18 tlipkis Exp $
+ * $Id: StringFilter.java,v 1.4 2004-08-19 00:02:19 clairegriffin Exp $
  */
 
 /*
@@ -33,9 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.filter;
 import java.io.*;
 import java.util.*;
-import org.apache.commons.collections.*;
+
+import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.daemon.Configuration;
 
 public class StringFilter extends Reader {
 
@@ -92,7 +92,7 @@ public class StringFilter extends Reader {
     if (bufferCapacity < 0) {
       bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
 						 DEFAULT_BUFFER_CAPACITY);
-    }    
+    }
     this.bufferCapacity = bufferCapacity;
     this.replaceStr = replaceStr;
     if (replaceStr != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseFilterRule.java,v 1.2 2004-01-20 22:58:54 eaalto Exp $
+ * $Id: TestProjectMuseFilterRule.java,v 1.3 2004-08-19 00:02:22 clairegriffin Exp $
  */
 
 /*
@@ -48,19 +48,19 @@ public class TestProjectMuseFilterRule extends LockssTestCase {
     String content = "This <!-- remove -->content";
     String expectedContent = "This content";
 
-    InputStream is = rule.createFilteredInputStream(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+    Reader reader = rule.createFilteredReader(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromReader(reader));
 
     content = "This <script> remove </script>content";
-    is = rule.createFilteredInputStream(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+    reader = rule.createFilteredReader(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromReader(reader));
 
     content = "This <a href=remove>content";
-    is = rule.createFilteredInputStream(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+    reader = rule.createFilteredReader(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromReader(reader));
     content = "This " + rule.MENU_START + " remove all this " +
         rule.MENU_END + "content";
-    is = rule.createFilteredInputStream(new StringReader(content));
-    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+    reader = rule.createFilteredReader(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromReader(reader));
   }
 }

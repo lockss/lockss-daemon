@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.1 2004-05-25 00:17:43 clairegriffin Exp $
+ * $Id: FilterRunner.java,v 1.2 2004-08-19 00:02:23 clairegriffin Exp $
  */
 
 /*
@@ -93,8 +93,9 @@ public class FilterRunner {
 //     System.out.println("Filtering "+src+" to "+dest);
     Reader reader = new FileReader(src);
     dest.createNewFile();
-    OutputStream os = new FileOutputStream(dest);
-    StreamUtil.copy(filter.createFilteredInputStream(reader), os);
+    Writer writer = new FileWriter(dest);
+    StreamUtil.copy(filter.createFilteredReader(reader), writer);
+
   }
 
   public static FilterRule filterRuleFromString(String filterStr)

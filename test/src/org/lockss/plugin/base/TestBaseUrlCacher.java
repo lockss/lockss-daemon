@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.23 2004-07-28 18:20:03 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.24 2004-08-19 00:02:22 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
+import org.lockss.crawler.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -334,7 +335,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testRedirectInSpec() throws Exception {
     String redTo = "http://somewhere.else/foo";
     MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+        new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    PermissionMap map = new PermissionMap();
+    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo, PermissionMap.PERMISSION_OK);
+    muc.setPermissionMap(map);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -373,7 +378,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo2 = "http://2.2/b";
     String redTo = "http://somewhere.else/foo";
     MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+        new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    PermissionMap map = new PermissionMap();
+    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo, PermissionMap.PERMISSION_OK);
+    muc.setPermissionMap(map);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
@@ -489,7 +499,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     plugin.returnRealCachedUrl = true;
     String redTo = "http://somewhere.else/foo";
     MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+        new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    PermissionMap map = new PermissionMap();
+    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo, PermissionMap.PERMISSION_OK);
+    muc.setPermissionMap(map);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -518,7 +532,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo2 = "http://somewhere.else/bar/x.html";
     String redTo3 = "http://somewhere.else/bar/y.html";
     MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+        new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    PermissionMap map = new PermissionMap();
+    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    muc.setPermissionMap(map);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo3));
@@ -576,6 +594,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testDirRedirect() throws Exception {
+    PermissionMap map = new PermissionMap();
     String content = "oft redirected content";
     plugin.returnRealCachedUrl = true;
     String url = "http://a.b/bar";
@@ -583,6 +602,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo2 = "http://somewhere.else/foo/";
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mcus, url);
+    map.putStatus(url, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    muc.setPermissionMap(map);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(200, "Ok", null, content));

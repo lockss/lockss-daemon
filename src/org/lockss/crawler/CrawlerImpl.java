@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.26 2004-08-11 19:41:52 clairegriffin Exp $
+ * $Id: CrawlerImpl.java,v 1.27 2004-08-19 00:02:18 clairegriffin Exp $
  */
 
 /*
@@ -287,6 +287,7 @@ public abstract class CrawlerImpl implements Crawler {
     Plugin plugin = au.getPlugin();
     UrlCacher uc = plugin.makeUrlCacher(cus, url);
     uc.setConnectionPool(connectionPool);
+    //uc.setPermissionMap(permission
     return uc;
   }
 
@@ -323,10 +324,10 @@ public abstract class CrawlerImpl implements Crawler {
   }
 
   static public class CrawlerFilterRule implements FilterRule {
-    public InputStream createFilteredInputStream(Reader reader) {
+    public Reader createFilteredReader(Reader reader) {
       Reader filteredReader = StringFilter.makeNestedFilter(reader,
           new String[][] { {"<br>", " "} , {"&nbsp;", " "} } , true);
-      return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+      return new WhiteSpaceFilter(filteredReader);
     }
   }
 }

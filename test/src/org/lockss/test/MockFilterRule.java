@@ -1,5 +1,5 @@
 /*
- * $Id: MockFilterRule.java,v 1.1 2003-10-07 22:23:59 troberts Exp $
+ * $Id: MockFilterRule.java,v 1.2 2004-08-19 00:02:22 clairegriffin Exp $
  */
 
 /*
@@ -35,14 +35,14 @@ import java.io.*;
 import org.lockss.plugin.FilterRule;
 
 public class MockFilterRule implements FilterRule {
-  InputStream is = null;
-  
-  public InputStream createFilteredInputStream(Reader reader) {
-    return is;
+  Reader filteredReader = null;
+
+  public Reader createFilteredReader(Reader reader) {
+    return filteredReader;
   }
 
-  public void setFilteredInputStream(InputStream is) {
-    this.is = is;
+  public void setFilteredReader(Reader reader) {
+    filteredReader = reader;
   }
 
 }

@@ -101,23 +101,21 @@ public class DefinableFilterRule implements FilterRule {
   }
 
   /**
-   * createFilteredInputStream
+   * createFilteredReader
    *
    * @param reader Reader
    * @return InputStream
    */
-  public InputStream createFilteredInputStream(Reader reader) {
+  public Reader createFilteredReader(Reader reader) {
     Reader cur_reader = reader;
     // loop through our list of filters
     for(Iterator it = m_readers.iterator(); it.hasNext(); ) {
       cur_reader = ((FilterReader)it.next()).makeFilterReader(cur_reader);
     }
-    // convert to an input stream
-    InputStream stream = new ReaderInputStream(cur_reader);
     if (m_filterWhiteSpace) {
-      stream = new WhiteSpaceFilter(stream);
+      cur_reader = new WhiteSpaceFilter(cur_reader);
     }
-    return stream;
+    return cur_reader;
   }
 
   public interface FilterReader {

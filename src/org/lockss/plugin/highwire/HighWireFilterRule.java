@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.2 2003-10-28 23:46:26 eaalto Exp $
+ * $Id: HighWireFilterRule.java,v 1.3 2004-08-19 00:02:20 clairegriffin Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class HighWireFilterRule implements FilterRule {
       "This article has been cited by other articles:";
   public static final String MEDLINE_STRING = "[Medline]";
 
-  public InputStream createFilteredInputStream(Reader reader) {
+  public Reader createFilteredReader(Reader reader) {
     /*
      * Needs to be better (TSR 9-2-03):
      * 1)Filtering out everything in a table is pretty good, but over filters
@@ -60,6 +60,6 @@ public class HighWireFilterRule implements FilterRule {
     Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
     Reader medFilter = new StringFilter(tagFilter, MEDLINE_STRING);
     Reader citeFilter = new StringFilter(medFilter, CITATION_STRING);
-    return new WhiteSpaceFilter(new ReaderInputStream(citeFilter));
+    return new WhiteSpaceFilter(citeFilter);
   }
 }

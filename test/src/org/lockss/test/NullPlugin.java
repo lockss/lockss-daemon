@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.58 2004-08-12 23:15:19 clairegriffin Exp $
+ * $Id: NullPlugin.java,v 1.59 2004-08-19 00:02:23 clairegriffin Exp $
  */
 
 /*
@@ -233,6 +233,15 @@ public class NullPlugin {
     }
 
     public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
+      throw new UnsupportedOperationException();
+    }
+
+    /**
+     * setPermissionMap
+     *
+     * @param permissionMap PermissionMap
+     */
+    public void setPermissionMap(PermissionMap permissionMap) {
       throw new UnsupportedOperationException();
     }
 

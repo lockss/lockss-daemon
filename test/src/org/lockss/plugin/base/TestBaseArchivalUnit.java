@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.19 2004-08-11 19:41:36 clairegriffin Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.20 2004-08-19 00:02:22 clairegriffin Exp $
  */
 
 /*
@@ -168,9 +168,9 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
   public void testFilterRuleCaching() throws IOException {
     MockFilterRule rule1 = new MockFilterRule();
-    rule1.setFilteredInputStream(new StringInputStream("rule1"));
+    rule1.setFilteredReader(new StringReader("rule1"));
     MockFilterRule rule2 = new MockFilterRule();
-    rule2.setFilteredInputStream(new StringInputStream("rule2"));
+    rule2.setFilteredReader(new StringReader("rule2"));
 
     assertNull(mbau.rule);
     assertEquals(0, mbau.cacheMiss);
@@ -185,12 +185,12 @@ public class TestBaseArchivalUnit extends LockssTestCase {
 
     rule1 = (MockFilterRule)mbau.getFilterRule("test2");
     assertEquals(3, mbau.cacheMiss);
-    assertEquals("rule2", StringUtil.fromInputStream(
-        rule1.createFilteredInputStream(null)));
+    assertEquals("rule2", StringUtil.fromReader(
+        rule1.createFilteredReader(null)));
     rule2 = (MockFilterRule)mbau.getFilterRule("test1");
     assertEquals(3, mbau.cacheMiss);
-    assertEquals("rule1", StringUtil.fromInputStream(
-        rule2.createFilteredInputStream(null)));
+    assertEquals("rule1", StringUtil.fromReader(
+        rule2.createFilteredReader(null)));
   }
 
   TitleConfig makeTitleConfig() {

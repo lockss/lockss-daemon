@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.1 2004-08-11 19:41:44 clairegriffin Exp $
+ * $Id: StringPermissionChecker.java,v 1.2 2004-08-19 00:02:19 clairegriffin Exp $
  */
 
 /*
@@ -80,8 +80,7 @@ public class StringPermissionChecker implements PermissionChecker {
     }
     try {
       if (m_filter != null) {
-        reader = new InputStreamReader(m_filter.createFilteredInputStream(reader),
-                                       m_encoding);
+        reader = m_filter.createFilteredReader(reader);
       }
       do {
         ch = reader.read();

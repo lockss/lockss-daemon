@@ -1,5 +1,5 @@
 /*
- * $Id: TestWhiteSpaceFilter.java,v 1.2 2004-04-05 07:58:01 tlipkis Exp $
+ * $Id: TestWhiteSpaceFilter.java,v 1.3 2004-08-19 00:02:21 clairegriffin Exp $
  */
 
 /*
@@ -34,41 +34,34 @@ package org.lockss.filter;
 import java.util.*;
 import java.io.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 public class TestWhiteSpaceFilter extends LockssTestCase {
 
 
   public void testCollapseWhiteSpace() throws IOException {
-    InputStream is = new WhiteSpaceFilter(new StringInputStream("Test  test"));
-    assertEquals("Test test", inputStreamToString(is));
+    Reader reader = new WhiteSpaceFilter(new StringReader("Test  test"));
+    assertEquals("Test test", StringUtil.fromReader(reader));
   }
 
   public void testDoesntCollapseSingleSpace() throws IOException {
-    InputStream is = new WhiteSpaceFilter(new StringInputStream("Test test"));
-    assertEquals("Test test", inputStreamToString(is));
+    Reader reader = new WhiteSpaceFilter(new StringReader("Test test"));
+    assertEquals("Test test", StringUtil.fromReader(reader));
   }
 
   public void testHandlesMultipleChunks() throws IOException {
     String testString = "Test   test         test\n     test";
-    InputStream is = new WhiteSpaceFilter(new StringInputStream(testString));
-    assertEquals("Test test test test", inputStreamToString(is));
+    Reader reader = new WhiteSpaceFilter(new StringReader(testString));
+    assertEquals("Test test test test", StringUtil.fromReader(reader));
   }
 
   // Ensure test buffer refill
   public void testSmallBuffer() throws IOException {
     String testString = "Test   test         test\n     test";
-    InputStream is = new WhiteSpaceFilter(new StringInputStream(testString),
+    Reader reader = new WhiteSpaceFilter(new StringReader(testString),
 					  3);
-    assertEquals("Test test test test", inputStreamToString(is));
+    assertEquals("Test test test test", StringUtil.fromReader(reader));
   }
-  
-  private String inputStreamToString(InputStream is) throws IOException {
-    StringBuffer sb = new StringBuffer();
-    Reader reader = new InputStreamReader(is);
-    int kar;
-    while ((kar = reader.read()) != -1) {
-      sb.append((char)kar);
-    }
-    return sb.toString();
-  }
+
+
 }

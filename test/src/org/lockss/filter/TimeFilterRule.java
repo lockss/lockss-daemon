@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFilterRule.java,v 1.2 2004-04-06 07:32:58 tlipkis Exp $
+ * $Id: TimeFilterRule.java,v 1.3 2004-08-19 00:02:21 clairegriffin Exp $
  */
 
 /*
@@ -46,10 +46,10 @@ public class TimeFilterRule extends LockssTiming {
   static final String enc = "ISO8859_1";
   //  static final String enc = "UTF8";
 
-  String NOFILT =   "No filter  "; 
-  String NULLFILT = "Null filter"; 
-  String FILTTEXT = "Filter text"; 
-  String FILTHTML = "Filter html"; 
+  String NOFILT =   "No filter  ";
+  String NULLFILT = "Null filter";
+  String FILTTEXT = "Filter text";
+  String FILTHTML = "Filter html";
 
   static Class filterClass = null;
   static FilterRule rule = null;
@@ -73,7 +73,7 @@ public class TimeFilterRule extends LockssTiming {
     }
     ps.close();
   }
-    
+
   void writeHtmlFile(File file) throws Exception {
     OutputStream os = new BufferedOutputStream(new FileOutputStream(file));
     PrintStream ps = new PrintStream(os);
@@ -84,7 +84,7 @@ public class TimeFilterRule extends LockssTiming {
     }
     ps.close();
   }
-    
+
   public void testNoFilter() throws Exception {
     writeTextFile(file);
     time(file, NOFILT,
@@ -102,9 +102,9 @@ public class TimeFilterRule extends LockssTiming {
     time(file, NULLFILT,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     InputStream is = new ReaderInputStream(newInputStreamReader(new BufferedInputStream(new FileInputStream(file))));
-	     incrBytes(readAll(is, true));
-	     is.close();
+	     Reader reader = newInputStreamReader(new BufferedInputStream(
+                        new FileInputStream(file)));
+	     incrBytes(readAll(reader, true));
 	   }});
   }
 
@@ -113,9 +113,9 @@ public class TimeFilterRule extends LockssTiming {
     time(file, FILTTEXT,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     InputStream is = rule.createFilteredInputStream(newInputStreamReader(new FileInputStream(file)));
-	     incrBytes(readAll(is, true));
-	     is.close();
+             Reader reader = rule.createFilteredReader(newInputStreamReader(
+                 new FileInputStream(file)));
+	     incrBytes(readAll(reader, true));
 	   }});
   }
 
@@ -124,9 +124,9 @@ public class TimeFilterRule extends LockssTiming {
     time(file, FILTHTML,
 	 new Computation() {
 	   public void execute() throws Exception {
-	     InputStream is = rule.createFilteredInputStream(newInputStreamReader(new FileInputStream(file)));
-	     incrBytes(readAll(is, true));
-	     is.close();
+             Reader reader = rule.createFilteredReader(newInputStreamReader(
+                 new FileInputStream(file)));
+             incrBytes(readAll(reader, true));
 	   }});
   }
 

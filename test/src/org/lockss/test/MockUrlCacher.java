@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.16 2004-03-11 09:44:06 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.17 2004-08-19 00:02:23 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.crawler.PermissionMap;
 
 /**
  * This is a mock version of <code>UrlCacher</code> used for testing
@@ -58,7 +59,7 @@ public class MockUrlCacher implements UrlCacher {
   private int numTimesToThrow = 1;
   private int timesThrown = 0;
   private boolean forceRefetch = false;
-
+  private PermissionMap permissionMap;
 
   public MockUrlCacher(String url){
     this.url = url;
@@ -115,9 +116,9 @@ public class MockUrlCacher implements UrlCacher {
     }
     setCachedUrl(cu);
   }
-  
+
   // Read interface - used by the proxy.
-  
+
   public InputStream openForReading(){
     return cachedIS;
   }
@@ -145,11 +146,11 @@ public class MockUrlCacher implements UrlCacher {
     this.cachingException = e;
     this.numTimesToThrow = numTimesToThrow;
   }
-  
+
   public void setCachingException(RuntimeException e, int numTimesToThrow) {
     this.cachingRuntimException = e;
   }
-  
+
   public void cache() throws IOException {
     if (cus != null) {
       cus.signalCacheAttempt(url);
@@ -209,6 +210,19 @@ public class MockUrlCacher implements UrlCacher {
     sb.append(url);
     sb.append("]");
     return sb.toString();
+  }
+
+  /**
+   * setPermissionMap
+   *
+   * @param permissionMap PermissionMap
+   */
+  public void setPermissionMap(PermissionMap permissionMap) {
+    this.permissionMap = permissionMap;
+  }
+
+  public PermissionMap getPermissionMap() {
+    return permissionMap;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TimeWhiteSpaceFilter.java,v 1.1 2004-04-05 08:05:16 tlipkis Exp $
+ * $Id: TimeWhiteSpaceFilter.java,v 1.2 2004-08-19 00:02:21 clairegriffin Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TimeWhiteSpaceFilter extends LockssTiming {
     }
     ps.close();
   }
-    
+
   public void testNoFilter0() throws Exception {
     time("Unfiltered, one char read",
 	 new Computation() {
@@ -87,7 +87,7 @@ public class TimeWhiteSpaceFilter extends LockssTiming {
 	   public void execute() throws Exception {
 	     InputStream is =
 	       new BufferedInputStream(new FileInputStream(file));
-	     WhiteSpaceFilter wsf = new WhiteSpaceFilter(is);
+	     WhiteSpaceFilter wsf = new WhiteSpaceFilter(new InputStreamReader(is));
 	     incrBytes(readAll(wsf, false));
 	     wsf.close();
 	   }});
@@ -99,7 +99,7 @@ public class TimeWhiteSpaceFilter extends LockssTiming {
 	   public void execute() throws Exception {
 	     InputStream is =
 	       new BufferedInputStream(new FileInputStream(file));
-	     WhiteSpaceFilter wsf = new WhiteSpaceFilter(is);
+	     WhiteSpaceFilter wsf = new WhiteSpaceFilter(new InputStreamReader(is));
 	     incrBytes(readAll(wsf, true));
 	     wsf.close();
 	   }});

@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRule.java,v 1.1 2003-09-13 00:44:07 troberts Exp $
+ * $Id: FilterRule.java,v 1.2 2004-08-19 00:02:19 clairegriffin Exp $
  */
 
 /*
@@ -34,5 +34,5 @@ package org.lockss.plugin;
 import java.io.*;
 
 public interface FilterRule {
-  public InputStream createFilteredInputStream(Reader reader);
+  public Reader createFilteredReader(Reader reader);
 }

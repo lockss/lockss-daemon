@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.8 2004-03-09 23:37:52 tlipkis Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.9 2004-08-19 00:02:22 clairegriffin Exp $
  */
 
 /*
@@ -165,13 +165,13 @@ public class TestBaseCachedUrl extends LockssTestCase {
 
   public void testOpenForHashingDefaultsToNoFiltering() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
-    InputStream fakeStream = new MockInputStream();
-    mau.setFilterRule(new MyMockFilterRule(fakeStream));
+    String str = "This is a filtered stream";
+    mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
 
     CachedUrl url =
       plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.getUnfilteredInputStream();
-    assertNotSame(fakeStream, urlIs);
+    assertNotEquals(str, StringUtil.fromInputStream(urlIs));
   }
 
   public void testOpenForHashingWontFilterIfConfiguredNotTo()
@@ -179,27 +179,27 @@ public class TestBaseCachedUrl extends LockssTestCase {
     String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
     ConfigurationUtil.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
-    InputStream fakeStream = new MockInputStream();
-    mau.setFilterRule(new MyMockFilterRule(fakeStream));
-    
+    String str = "This is a filtered stream";
+    mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
+
     CachedUrl url =
       plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForHashing();
-    assertNotSame(fakeStream, urlIs);
+    assertNotEquals(str, StringUtil.fromInputStream(urlIs));
   }
 
    public void testOpenForHashingWillFilterIfConfiguredTo()
        throws Exception {
-     String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=true";
+     String config = PARAM_SHOULD_FILTER_HASH_STREAM + "=true";
      ConfigurationUtil.setCurrentConfigFromString(config);
      createLeaf("http://www.example.com/testDir/leaf1", "blah <test stream>", null);
-    InputStream fakeStream = new MockInputStream();
-    mau.setFilterRule(new MyMockFilterRule(fakeStream));
+     String str = "This is a filtered stream";
+     mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
 
      CachedUrl url =
-       plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+         plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
      InputStream urlIs = url.openForHashing();
-     assertSame(fakeStream, urlIs);
+     assertEquals(str, StringUtil.fromInputStream(urlIs));
    }
 
    public void testGetProperties() throws Exception {
@@ -246,30 +246,30 @@ public class TestBaseCachedUrl extends LockssTestCase {
      }
    }
 
-  private class MyMockFilterRule implements FilterRule {
-    InputStream stream;
-    public MyMockFilterRule(InputStream stream) {
-      this.stream = stream;
-    }
+   private class MyMockFilterRule
+       implements FilterRule {
+     Reader reader;
 
-    public InputStream createFilteredInputStream(Reader reader) {
-      return stream;
-    }
-  }
-    
-    private class MyAu
-       extends NullPlugin.ArchivalUnit {
-     public FilterRule getFilterRule(String mimeType) {
-       return new FilterRule() {
-         public InputStream createFilteredInputStream(Reader reader) {
-           return new ReaderInputStream(reader);
-         }
-       };
+     public MyMockFilterRule(Reader reader) {
+       this.reader = reader;
+     }
+
+     public Reader createFilteredReader(Reader reader) {
+       return this.reader;
      }
    }
 
-   private class MyCachedUrl
-       extends BaseCachedUrl {
+    private class MyAu extends NullPlugin.ArchivalUnit {
+     public FilterRule getFilterRule(String mimeType) {
+       return new FilterRule() {
+        public Reader createFilteredReader(Reader reader) {
+          return reader;
+        }
+      };
+     }
+   }
+
+   private class MyCachedUrl extends BaseCachedUrl {
      private boolean gotUnfilteredStream = false;
      private CIProperties props = new CIProperties();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.35 2004-08-11 19:41:28 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.36 2004-08-19 00:02:20 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
+import org.lockss.crawler.PermissionMap;
 
 /**
  * Basic, fully functional UrlCacher.  Utilizes the LockssRepository for
@@ -77,6 +78,7 @@ public class BaseUrlCacher implements UrlCacher {
   private LockssRepository repository;
   private CacheResultMap resultMap;
   private CIProperties uncachedProperties;
+  private PermissionMap permissionMap;
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
     this.cus = owner;
@@ -443,12 +445,18 @@ public class BaseUrlCacher implements UrlCacher {
       }
       // TODO: swap isSameHost with isRedirectOption and
       // add permission check on same level as redirectOption.
+      if(!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
       if (isRedirectOption(REDIRECT_OPTION_ON_HOST_ONLY)) {
-	if (!UrlUtil.isSameHost(fetchUrl, newUrlString)) {
 	  logger.warning("Redirect to different host: " + newUrlString +
 			 " from: " + origUrl);
 	  return false;
 	}
+        else if(permissionMap == null || permissionMap.getStatus(newUrlString)
+                != PermissionMap.PERMISSION_OK) {
+          logger.warning("No permission for redirect to different host: "
+                         + newUrlString + " from: " + origUrl);
+          return false;
+        }
       }
       conn.release();
       conn = null;
@@ -478,6 +486,15 @@ public class BaseUrlCacher implements UrlCacher {
    * redirectOptions */
   private boolean isRedirectOption(int option) {
     return (redirectOptions & option) != 0;
+  }
+
+  /**
+   * setPermissionMap
+   *
+   * @param permissionMap PermissionMap
+   */
+  public void setPermissionMap(PermissionMap permissionMap) {
+    this.permissionMap = permissionMap;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringPermissionChecker.java,v 1.1 2004-08-11 19:41:21 clairegriffin Exp $
+ * $Id: TestStringPermissionChecker.java,v 1.2 2004-08-19 00:02:21 clairegriffin Exp $
  */
 
 /*
@@ -144,8 +144,8 @@ public class TestStringPermissionChecker extends LockssTestCase {
 
 
   static private class WhiteSpaceFilterRule implements FilterRule {
-    public InputStream createFilteredInputStream(Reader reader) {
-      return new WhiteSpaceFilter(new ReaderInputStream(reader));
+    public Reader createFilteredReader(Reader reader) {
+      return new WhiteSpaceFilter(reader);
     }
   }
 
