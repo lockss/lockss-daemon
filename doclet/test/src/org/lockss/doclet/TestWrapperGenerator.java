@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.2 2003-07-18 00:37:14 tyronen Exp $
+ * $Id: TestWrapperGenerator.java,v 1.3 2003-07-25 00:29:04 tyronen Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ package org.lockss.doclet;
  */
 
 import java.io.*;
+import java.util.*;
 import com.sun.tools.javadoc.*;
 import junit.framework.*;
 import org.lockss.test.*;
@@ -54,10 +55,11 @@ public class TestWrapperGenerator extends LockssTestCase {
   private String templateName = "template.xml";
   private String sourceName = "TestClass.java";
   private String testName = "expected.java";
-  private String prefix = "Wrapper";
+  private String prefix = "Wrapped";
   private String expectedOutput;
 
-  private boolean debug = false;
+  private final boolean debug = true;
+  private final boolean INTERFACE_ONLY = false;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -83,16 +85,21 @@ public class TestWrapperGenerator extends LockssTestCase {
       makeTemplateFile(USE_PACKAGE_NONE,true);
       makeSourceFile();
       makeExpectedOutput();
+      String interfaceText = (INTERFACE_ONLY) ? "-interface" : "";
       String[] javadocargs = {
-         sourceName, "-private",
+         sourceName, "child" + sourceName,
+         "-private",
+       //  "-classpath",tempDirPath,
          "-doclet", "org.lockss.doclet.WrapperGenerator",
          "-template", templateName,
          "-prefix", prefix,
-         "-d", tempDirPath};
+         "-d", tempDirPath/*,
+         interfaceText*/
+         };
       Main.execute(javadocargs);
-      String output = tempDirPath + prefix + sourceName;
+      String output = tempDirPath + prefix + "child" + sourceName;
       areFilesIdentical(expectedOutput, output);
-    } catch (Exception e) {
+    } catch (Throwable e) {
       System.err.println(e.getMessage());
       fail(e.getMessage());
     }
@@ -125,50 +132,48 @@ public class TestWrapperGenerator extends LockssTestCase {
       pw.println("  <class_imports/>");
     }
     pw.println("  <import name=\"org.lockss.test.*\"/>");
-    pw.println("  <import name=\"org.lockss.util.VariableTimedMap\"/>");
+    pw.println("  <import name=\"java.io.*\"/>");
     pw.println("</imports>");
     pw.println("<constructor>");
-    pw.println("record_call(#METHODNAME, #LISTPARAMS);");
-    pw.println("modify_params(#MODIFYPARAMS);");
+    pw.println("WrapperLogger.record_call(\"#CLASSNAME\", \"#METHODNAME\", #LISTPARAMS);");
     pw.println("try {");
     pw.println("  #RUN;");
     pw.println("} catch (Throwable throwable) {");
-    pw.println("  record_throwable(#METHODNAME, throwable);");
+    pw.println("  WrapperLogger.record_throwable(\"#CLASSNAME\", \"#METHODNAME\", throwable);");
     pw.println("}");
     pw.println("</constructor>");
     pw.println("<nonvoid>");
-    pw.println("record_call(#METHODNAME, #LISTPARAMS);");
-    pw.println("modify_params(#MODIFYPARAMS);");
+    pw.println("WrapperLogger.record_call(\"#CLASSNAME\", \"#METHODNAME\", #LISTPARAMS);");
     pw.println("try {");
     pw.println("  #RUN;");
+    pw.println("  WrapperLogger.record_val(\"#CLASSNAME\", \"#METHODNAME\", #RETVAL);");
     pw.println("} catch (Throwable throwable) {");
-    pw.println("  record_throwable(#METHODNAME, throwable);");
+    pw.println("  WrapperLogger.record_throwable(\"#CLASSNAME\", \"#METHODNAME\", throwable);");
+    pw.println("  return #NULLVAL;");
     pw.println("}");
-    pw.println("record_val(#METHODNAME,#RETVAL);");
-    pw.println("return custom_#METHODNAME_val(xxvariablexx);");
+    pw.println("return custom_#METHODNAME_val(#RETVAL);");
     pw.println("</nonvoid>");
     pw.println("<void>");
-    pw.println("record_call(#METHODNAME, #LISTPARAMS);");
-    pw.println("modify_params(#MODIFYPARAMS);");
+    pw.println("WrapperLogger.record_call(\"#CLASSNAME\", \"#METHODNAME\", #LISTPARAMS);");
     pw.println("try {");
     pw.println("  #RUN;");
     pw.println("} catch (Throwable throwable) {");
-    pw.println("  record_throwable(#METHODNAME, throwable);");
+    pw.println("  WrapperLogger.record_throwable(\"#CLASSNAME\", \"#METHODNAME\", throwable);");
     pw.println("}");
     pw.println("custom_#METHODNAME_val();");
     pw.println("</void>");
-    pw.println("<special class=\"TestClass\" method=\"ret3\">");
-    pw.println("    return 32767;");
+    pw.println("<special class=\"childTestClass\" method=\"ret3\">");
+    pw.println("    return {32767};");
     pw.println("</special>");
-    pw.println("<extra class=\"TestClass\">");
+    pw.println("<extra class=\"childTestClass\">");
     pw.println("  Map wrappermap = new WeakHashMap();\n");
     pw.println("  private void makeMap() {");
     pw.println("  }");
     pw.println("</extra>");
- /*   pw.println("<tobewrapped>");
-    pw.println("<wrapPackage name=\"java.util\"/>");
-    pw.println("<wrapClass name=\"java.io.File\"/>");
-    pw.println("</tobewrapped>");*/
+    pw.println("<toBeWrapped>");
+    pw.println("  <wrapPackage name=\"java.util\"/>");
+    pw.println("  <wrapClass name=\"java.io.File\"/>");
+    pw.println("</toBeWrapped>");
     pw.println("</template>");
     pw.close();
     fw.close();
@@ -179,25 +184,50 @@ public class TestWrapperGenerator extends LockssTestCase {
     PrintWriter pw = new PrintWriter(fw);
     pw.println("import java.io.*;");
     pw.println("import java.util.*;");
-    pw.println("public class TestClass {");
-    pw.println("  public TestClass() {}");
-    pw.println("  TestClass(String joe) {}");
-    pw.println("  private TestClass(double hoe) {}");
-    pw.println("  public static int ret3() {");
-    pw.println("    return 3;");
-    pw.println("  }");
-    pw.println("  private static int ret4() {");
-    pw.println("    return 4;");
-    pw.println("  }");
-    pw.println("  public synchronized float testFloat(float x, int k) {");
-    pw.println("    return x;");
-    pw.println("  }");
-    pw.println("  public void exception() throws IOException {");
-    pw.println("    throw new IOException();");
-    pw.println("  }");
- /*   pw.println("  public File useFile(Map map) {");
-    pw.println("    return new File();");
-    pw.println("  }");*/
+    if (!INTERFACE_ONLY) {
+      pw.println("public class TestClass {");
+      pw.println("  public TestClass() {}");
+      pw.println("  TestClass(String joe) {}");
+      pw.println("  private TestClass(double hoe) {}");
+      pw.println("  public static int[] ret3() {");
+      pw.println("    int[] x = {3,3,3};");
+      pw.println("    return x;");
+      pw.println("  }");
+      pw.println("  private static int ret4() {");
+      pw.println("    return 4;");
+      pw.println("  }");
+      pw.println("  public synchronized float testFloat(float x, int k) {");
+      pw.println("    return x;");
+      pw.println("  }");
+      pw.println("  public void exception(List list) throws IOException {");
+      pw.println("    throw new IOException();");
+      pw.println("  }");
+      pw.println("  public File useFile(Map map, Set set) {");
+      pw.println("    return new File();");
+      pw.println("  }");
+    } else {
+      pw.println("public interface TestClass {");
+      pw.println("  public void exception(List list) throws IOException;");
+      pw.println("  public File useFile(Map map, Set set);");
+    }
+    pw.println("}");
+    pw.close();
+    fw.close();
+    fw = new FileWriter(tempDirPath + "child" + sourceName);
+    pw = new PrintWriter(fw);
+    pw.print("public ");
+    if (INTERFACE_ONLY) {
+      pw.print("interface");
+    } else {
+      pw.print("class");
+    }
+    pw.println(" childTestClass extends TestClass {");
+    pw.print("  public boolean returnTrue()");
+    if (!INTERFACE_ONLY) {
+      pw.println(" {\n    return true;\n}");
+    } else {
+      pw.println(";");
+    }
     pw.println("}");
     pw.close();
     fw.close();
@@ -207,88 +237,121 @@ public class TestWrapperGenerator extends LockssTestCase {
     expectedOutput = tempDirPath + testName;
     FileWriter fw = new FileWriter(expectedOutput);
     PrintWriter pw = new PrintWriter(fw);
-    pw.println("import java.io.*;");
-    pw.println("import java.util.*;");
     pw.println("import org.lockss.test.*;");
-    pw.println("import org.lockss.util.VariableTimedMap;");
+    pw.println("import java.io.*;");
     pw.println("import org.lockss.util.ListUtil;\n");
-    pw.println("class " + prefix + "TestClass {\n");
-    pw.println("  private TestClass xxinnerTestClassxx;\n");
+    pw.print  ("class " + prefix + "childTestClass ");
+    if (INTERFACE_ONLY) {
+      pw.print("implements");
+    } else {
+     pw.print("extends");
+    }
+    pw.println(" childTestClass {\n");
+    pw.println("  private childTestClass innerchildTestClass;\n");
     pw.println("  Map wrappermap = new WeakHashMap();\n");
     pw.println("  private void makeMap() {");
     pw.println("  }\n");
-    pw.println("  public " + prefix + "TestClass() {");
-    pw.println("    record_call(" + prefix + "TestClass, ListUtil.list());");
-    pw.println("    ");
+    if (!INTERFACE_ONLY) {
+      pw.println("  public " + prefix + "childTestClass() {");
+      pw.println("    WrapperLogger.record_call(\"childTestClass\", \"childTestClass\", ListUtil.list());");
+      pw.println("    try {");
+      pw.println("      innerchildTestClass = new childTestClass();");
+      pw.println("    } catch (Throwable throwable) {");
+      pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"childTestClass\", throwable);");
+      pw.println("    }");
+      pw.println("  }\n");
+      pw.println("  " + prefix + "childTestClass(String joe) {");
+      pw.println("    WrapperLogger.record_call(\"childTestClass\", \"childTestClass\", ListUtil.list(joe));");
+      pw.println("    try {");
+      pw.println("      innerchildTestClass = new childTestClass(joe);");
+      pw.println("    } catch (Throwable throwable) {");
+      pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"childTestClass\", throwable);");
+      pw.println("    }");
+      pw.println("  }\n");
+      pw.println("  private " + prefix + "childTestClass(double hoe) {");
+      pw.println("    WrapperLogger.record_call(\"childTestClass\", \"childTestClass\", ListUtil.list(new Double(hoe)));");
+      pw.println("    try {");
+      pw.println("      innerchildTestClass = new childTestClass(hoe);");
+      pw.println("    } catch (Throwable throwable) {");
+      pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"childTestClass\", throwable);");
+      pw.println("    }");
+      pw.println("  }\n");
+    }
+    pw.println("  public " + prefix + "childTestClass(childTestClass original) {");
+    pw.println("    innerchildTestClass = original;");
+    pw.println("  }\n");
+    pw.println("  public boolean returnTrue() {");
+    pw.println("    boolean returnValue;");
+    pw.println("    WrapperLogger.record_call(\"childTestClass\", \"returnTrue\", ListUtil.list());");
     pw.println("    try {");
-    pw.println("      xxinnerTestClassxx = new TestClass();");
+    pw.println("      returnValue = innerchildTestClass.returnTrue();");
+    pw.println("      WrapperLogger.record_val(\"childTestClass\", \"returnTrue\", returnValue);");
     pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(" + prefix + "TestClass, throwable);");
+    pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"returnTrue\", throwable);");
+    pw.println("      return false;");
     pw.println("    }");
+    pw.println("    return custom_returnTrue_val(returnValue);");
     pw.println("  }\n");
-    pw.println("  " + prefix + "TestClass(String joe) {");
-    pw.println("    record_call(" + prefix + "TestClass, ListUtil.list(joe));");
-    pw.println("    List xxlistxx = modify_params(ListUtil.list(joe));");
-    pw.println("    joe = (String)xxlistxx.item(0);");
+    if (!INTERFACE_ONLY) {
+      pw.println("  public static int[] ret3() {");
+      pw.println("    int[] returnValue;");
+      pw.println(
+          "    WrapperLogger.record_call(\"childTestClass\", \"ret3\", ListUtil.list());");
+      pw.println("    try {");
+      pw.println("      returnValue = " + prefix + "ret3();");
+      pw.println(
+          "      WrapperLogger.record_val(\"childTestClass\", \"ret3\", returnValue);");
+      pw.println("    } catch (Throwable throwable) {");
+      pw.println(
+          "      WrapperLogger.record_throwable(\"childTestClass\", \"ret3\", throwable);");
+      pw.println("      return null;");
+      pw.println("    }");
+      pw.println("    return custom_ret3_val(returnValue);");
+      pw.println("  }\n");
+      pw.println("  static int[] " + prefix + "ret3() {");
+      pw.println("    return {32767};");
+      pw.println("  }\n");
+      pw.println("  public synchronized float testFloat(float x, int k) {");
+      pw.println("    float returnValue;");
+      pw.println("    WrapperLogger.record_call(\"childTestClass\", \"testFloat\", ListUtil.list(new Float(x), new Integer(k)));");
+      pw.println("    try {");
+      pw.println(
+          "      returnValue = innerchildTestClass.testFloat(x, k);");
+      pw.println("      WrapperLogger.record_val(\"childTestClass\", \"testFloat\", returnValue);");
+      pw.println("    } catch (Throwable throwable) {");
+      pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"testFloat\", throwable);");
+      pw.println("      return 0.0;");
+      pw.println("    }");
+      pw.println("    return custom_testFloat_val(returnValue);");
+      pw.println("  }\n");
+    }
+    pw.println("  public void exception(List list) throws IOException {");
+    pw.println("    WrapperLogger.record_call(\"childTestClass\", \"exception\", ListUtil.list(list));");
     pw.println("    try {");
-    pw.println("      xxinnerTestClassxx = new TestClass(joe);");
+    pw.println("      "+prefix+"List wrappedlist = ("+prefix+"List)WrapperState.getWrapper(list);");
+    pw.println("      innerchildTestClass.exception(wrappedlist);");
     pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(" + prefix + "TestClass, throwable);");
-    pw.println("    }");
-    pw.println("  }\n");
-    pw.println("  private " + prefix + "TestClass(double hoe) {");
-    pw.println("    record_call(" + prefix + "TestClass, ListUtil.list(hoe));");
-    pw.println("    List xxlistxx = modify_params(ListUtil.list(hoe));");
-    pw.println("    hoe = ((Double)xxlistxx.item(0)).doubleValue();");
-    pw.println("    try {");
-    pw.println("      xxinnerTestClassxx = new TestClass(hoe);");
-    pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(" + prefix + "TestClass, throwable);");
-    pw.println("    }");
-    pw.println("  }\n");
-    pw.println("  public static int ret3() {");
-    pw.println("    return 32767;");
-    pw.println("  }\n");
-    pw.println("  public synchronized float testFloat(float x, int k) {");
-    pw.println("    float xxvariablexx;");
-    pw.println("    record_call(testFloat, ListUtil.list(x, k));");
-    pw.println("    List xxlistxx = modify_params(ListUtil.list(x, k));");
-    pw.println("    x = ((Float)xxlistxx.item(0)).floatValue();");
-    pw.println("    k = ((Integer)xxlistxx.item(1)).intValue();");
-    pw.println("    try {");
-    pw.println("      xxvariablexx = xxinnerTestClassxx.testFloat(x, k);");
-    pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(testFloat, throwable);");
-    pw.println("    }");
-    pw.println("    record_val(testFloat,xxvariablexx);");
-    pw.println("    return custom_testFloat_val(xxvariablexx);");
-    pw.println("  }\n");
-    pw.println("  public void exception() throws IOException {");
-    pw.println("    record_call(exception, ListUtil.list());");
-   // pw.println("    List xxlistxx = modify_params(ListUtil.list(list));");
-    pw.println("    ");/* + prefix + "List zzlistzz = (" + prefix);
-    pw.println("List)xxlistxx.item(0);");*/
-    pw.println("    try {");
-    pw.println("      xxinnerTestClassxx.exception();");
-    pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(exception, throwable);");
+    pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"exception\", throwable);");
     pw.println("    }");
     pw.println("    custom_exception_val();");
-    pw.println("  }");
- /*   pw.println("  public File useFile(Map map) {");
-    pw.println("    File xxvariablexx;");
-    pw.println("    " + prefix + "File zzvariablezz;");
-    pw.println("    record_call(useFile,ListUtil.list(map));");
-    pw.println("    " + prefix + "Map zzmapzz = (" + prefix);
-    pw.println("Map)xxlistxx.item(0);");
+    pw.println("  }\n");
+    pw.println("  public File useFile(Map map, Set set) {");
+    pw.println("    File returnValue;");
+    pw.println("    " + prefix + "File wrappedReturnValue;");
+    pw.println("    WrapperLogger.record_call(\"childTestClass\", \"useFile\", ListUtil.list(map, set));");
     pw.println("    try {");
-    pw.println("      xxvariablexx = xxinnerTestClassxx.useFile(zzmapzz);");
-    pw.println("      zzvariablezz = makeWrapper(xxvariablexx)");
+    pw.println("      "+prefix+"Map wrappedmap = ("+prefix+"Map)WrapperState.getWrapper(map);");
+    pw.println("      "+prefix+"Set wrappedset = ("+prefix+"Set)WrapperState.getWrapper(set);");
+    pw.println("      returnValue = innerchildTestClass.useFile(wrappedmap, wrappedset);");
+    pw.print  ("      wrappedReturnValue = (" + prefix + "File)");
+    pw.println("WrapperState.getWrapper(returnValue);");
+    pw.println("      WrapperLogger.record_val(\"childTestClass\", \"useFile\", wrappedReturnValue);");
     pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(exception, throwable);");
+    pw.println("      WrapperLogger.record_throwable(\"childTestClass\", \"useFile\", throwable);");
+    pw.println("      return null;");
     pw.println("    }");
-    pw.println("    return custom_useFile_val(zzvariablezz)");
-    pw.println("  }");*/
+    pw.println("    return custom_useFile_val(wrappedReturnValue);");
+    pw.println("  }");
     pw.println("}");
     pw.close();
     fw.close();

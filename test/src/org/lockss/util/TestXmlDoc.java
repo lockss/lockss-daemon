@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlDoc.java,v 1.1 2003-07-17 19:20:44 tyronen Exp $
+ * $Id: TestXmlDoc.java,v 1.2 2003-07-25 00:29:05 tyronen Exp $
  */
 
 /*
@@ -97,6 +97,14 @@ public class TestXmlDoc extends LockssTestCase {
   public void testHasTag() {
     assertTrue(doc.hasTag("tag1"));
     assertFalse(doc.hasTag("tag101"));
+  }
+
+  public void testPutAttrFromNodeListIntoSet() {
+    NodeList list = doc.getNodeList("tag1");
+    Set set = new HashSet();
+    XmlDoc.putAttrFromNodeListIntoSet(list,set,"name");
+    assertTrue(set.contains("name1"));
+    assertTrue(set.contains("name2"));
   }
 
   public static Test suite() {

@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDoc.java,v 1.1 2003-07-17 19:20:43 tyronen Exp $
+ * $Id: XmlDoc.java,v 1.2 2003-07-25 00:29:05 tyronen Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 import java.io.*;
+import java.util.*;
 
 public class XmlDoc {
 
@@ -122,5 +123,13 @@ public class XmlDoc {
   public boolean hasTag(String tag) {
     return (doc.getElementsByTagName(tag).getLength() > 0);
   }
+
+  public static void putAttrFromNodeListIntoSet(
+      NodeList list, Set set, String attr) {
+    for (int i = 0; i < list.getLength(); i++) {
+      set.add(getNodeAttrText(list.item(i), attr));
+    }
+  }
+
 
 }

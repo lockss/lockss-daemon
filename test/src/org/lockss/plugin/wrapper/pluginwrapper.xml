@@ -1,0 +1,101 @@
+<template>
+<package name="org.lockss.plugin.wrapper"/>
+<imports>
+  <class_imports/>
+  <import name="org.lockss.test.*"/>
+  <import name="org.lockss.util.*"/>
+  <import name="org.lockss.plugin.*"/>
+</imports>
+<constructor>
+WrapperLogger.record_call("#CLASSNAME", "#METHODNAME", #LISTPARAMS);
+try {
+  #RUN;
+} catch (Throwable throwable) {
+  WrapperLogger.record_throwable("#CLASSNAME", "#METHODNAME", throwable);
+}
+</constructor>
+<nonvoid>
+WrapperLogger.record_call("#CLASSNAME", "#METHODNAME", #LISTPARAMS);
+try {
+  #RUN;
+  WrapperLogger.record_val("#CLASSNAME", "#METHODNAME", #RETVAL);
+} catch (Throwable throwable) {
+  WrapperLogger.record_throwable("#CLASSNAME", "#METHODNAME", throwable);
+  return #NULLVAL;
+}
+return #RETVAL;
+</nonvoid>
+<void>
+WrapperLogger.record_call("#CLASSNAME", "#METHODNAME", #LISTPARAMS);
+try {
+  #RUN;
+} catch (Throwable throwable) {
+  WrapperLogger.record_throwable("#CLASSNAME", "#METHODNAME", throwable);
+}
+</void>
+<toBeWrapped>
+  <wrapClass name="org.lockss.plugin.ArchivalUnit"/>
+  <wrapClass name="org.lockss.plugin.CachedUrl"/>
+  <wrapClass name="org.lockss.plugin.CachedUrlSet"/>
+  <wrapClass name="org.lockss.plugin.Plugin"/>
+  <wrapClass name="org.lockss.plugin.UrlCacher"/>
+</toBeWrapped>
+<special class="org.lockss.plugin.Plugin" method="getPluginId">
+    return WrapperState.PREFIX + innerPlugin.getPluginId();
+</special>
+<special class="org.lockss.plugin.Plugin" method="equals">
+    if (obj instanceof WrappedPlugin) {
+      return innerPlugin.equals(WrapperState.getOriginal(obj));
+    } else {
+      return innerPlugin.equals(obj);
+    }
+</special>
+<special class="org.lockss.plugin.Plugin" method="getAllAUs">
+    Collection coll = innerPlugin.getAllAUs();
+    Collection wcoll = new ArrayList();
+    Iterator it = coll.iterator();
+    while (it.hasNext()) {
+       WrappedArchivalUnit wau = (WrappedArchivalUnit)WrapperState.getWrapper(it.next());
+       wcoll.add(wau);
+    }
+    return wcoll;
+</special>
+<extra class="org.lockss.plugin.CachedUrlSet">
+  private class WrappedIterator implements Iterator {
+    private Iterator iterator;
+    WrappedIterator(Iterator it) {
+      iterator = it;
+    }
+    public boolean hasNext() {
+      return iterator.hasNext();
+    }
+    public Object next() {
+      return WrapperState.getWrapper(iterator.next());
+    }
+    public void remove() {
+      iterator.remove();
+    }
+  }
+</extra>
+<special class="org.lockss.plugin.CachedUrlSet" method="contentHashIterator">
+    return new WrappedIterator(innerCachedUrlSet.contentHashIterator());
+</special>
+<special class="org.lockss.plugin.CachedUrlSet" method="flatSetIterator">
+    return new WrappedIterator(innerCachedUrlSet.flatSetIterator());
+</special><special class="org.lockss.plugin.CachedUrlSet" method="getSpec">
+    return innerCachedUrlSet.getSpec();
+</special>
+<special class="org.lockss.plugin.ArchivalUnit" method="equals">
+    if (obj instanceof WrappedArchivalUnit) {
+      return innerArchivalUnit.equals(WrapperState.getOriginal(obj));
+    } else {
+      return innerArchivalUnit.equals(obj);
+    }
+</special>
+<special class="org.lockss.plugin.ArchivalUnit" method="getName">
+     return WrapperState.PREFIX + innerArchivalUnit.getName();
+</special>
+<special class="org.lockss.plugin.ArchivalUnit" method="getPluginId">
+    return WrapperState.PREFIX + innerArchivalUnit.getPluginId();
+</special>
+</template>

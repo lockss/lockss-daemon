@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperGenerator.java,v 1.2 2003-07-18 00:37:13 tyronen Exp $
+ * $Id: WrapperGenerator.java,v 1.3 2003-07-25 00:29:04 tyronen Exp $
  */
 
 /*
@@ -136,20 +136,29 @@ public class WrapperGenerator extends Doclet {
   /** Command-line option to specify output directory */
   static final String directoryOption = "-d";
 
-  /** Prefix, defaults to "Wrapper" */
-  static String prefix = "Wrapper";
+  /** Command-line option; if specified, do interfaces only */
+  static final String interfaceOption = "-interface";
+
+  /** Prefix, defaults to "Wrapped" */
+  static String prefix = "Wrapped";
 
   /** Output directory, defaults to working directory */
   static String outputDir = "./";
 
+  /** Controls if only interfaces are wrapped, defaults to false */
+  static boolean interfacesOnly = false;
+
   /** Name of variable to be used in generated class to hold delegated
    * original class
    */
-  static final String delegateVariableName = "xxvariablexx";
+  static final String returnValue = "returnValue";
+
+  /** Name of variable to be used in generated class to hold wrapped class */
+  static final String wrappedVariableName = "wrappedReturnValue";
 
   /** Variables holding GNU regular expression objects */
   static RE classnameRE, methodnameRE, returnTypeRE, invokeMethodRE,
-  listparamsRE, beginLineRE, returnValueRE, modifyParamsRE;
+  listparamsRE, beginLineRE, returnValueRE, modifyParamsRE, publicRE, nullRE;
 
   /** Part of the doclet API; called by Javadoc for each command-line option
    * to verify the number of arguments
@@ -158,11 +167,14 @@ public class WrapperGenerator extends Doclet {
     if (option.equals(templateOption) || option.equals(prefixOption) ||
     option.equals(directoryOption)) {
       return 2;
+    } else if (option.equals(interfaceOption)) {
+      return 1;
     }
     return 0;
   }
 
-  /** Called by Javadoc to validate each command-line option */
+  /** Called by Javadoc to validate command-line option.  This one checks
+   * to make sure the -template option is in fact specified. */
   public static boolean validOptions(String[][] options,
     DocErrorReporter reporter) {
     for (int i = 0; i < options.length; i++) {
@@ -207,6 +219,8 @@ public class WrapperGenerator extends Doclet {
     modifyParamsRE = new RE("(\\w+)\\(#MODIFYPARAMS\\);");
     beginLineRE = new RE("^(.)",RE.REG_MULTILINE,RESyntax.RE_SYNTAX_PERL5_S);
     returnValueRE = new RE("#RETVAL");
+    publicRE = new RE("public ");
+    nullRE = new RE("#NULLVAL");
   }
 
   /** Record the values of the command line options */
@@ -220,6 +234,8 @@ public class WrapperGenerator extends Doclet {
             prefix = opt[1];
           } else if (opt[0].equals(directoryOption)) {
             outputDir = opt[1];
+          } else if (opt[0].equals(interfaceOption)) {
+            interfacesOnly = true;
           }
       }
       return template;
@@ -229,7 +245,7 @@ public class WrapperGenerator extends Doclet {
    * delegated inner class
    */
   static String makeInnerName(String name) {
-    return "xxinner" + name + "xx";
+    return "inner" + name;
   }
 
   /** Set of classes being parsed, provided by Javadoc */
@@ -267,6 +283,7 @@ public class WrapperGenerator extends Doclet {
     loadTemplates();
     loadSpecials();
     loadExtras();
+    loadWrappeds();
   }
 
   void loadPackageName() {
@@ -329,11 +346,37 @@ public class WrapperGenerator extends Doclet {
    extramap.put(classname,XmlDoc.getText(extra));
   }
 
+  Set wrappedPackages = new HashSet();
+  Set wrappedClasses = new HashSet();
+
+  void loadWrappeds() {
+    if (!template.hasTag("toBeWrapped")) {
+      return;
+    }
+    NodeList plist = template.getNodeList("wrapPackage");
+    NodeList clist = template.getNodeList("wrapClass");
+    XmlDoc.putAttrFromNodeListIntoSet(plist,wrappedPackages,"name");
+    XmlDoc.putAttrFromNodeListIntoSet(clist,wrappedClasses,"name");
+  }
+
+  boolean isWrapped(String qrettype) {
+    int pos = qrettype.lastIndexOf('.');
+    String pkg = (pos>=0) ? qrettype.substring(0,pos) : qrettype;
+    if (wrappedPackages.contains(pkg)) {
+      return true;
+    } else {
+      return (wrappedClasses.contains(qrettype));
+    }
+  }
+
   void writeFiles() {
     try {
       ClassDoc[] classes = root.classes();
       for (int i = 0; i < classes.length; i++) {
-        writeWrapperClass(classes[i]);
+        ClassDoc cl = classes[i];
+        if (cl.isPublic() && (!interfacesOnly || cl.isInterface())){
+          writeWrapperClass(classes[i]);
+        }
       }
     }
     catch (IOException e) {
@@ -341,19 +384,40 @@ public class WrapperGenerator extends Doclet {
     }
   }
 
+  String classname;
+  String fullclassname;
+
+
   void writeWrapperClass(ClassDoc cl) throws IOException {
+    classname = cl.name();
+    fullclassname = cl.qualifiedTypeName();
     BufferedWriter wr = new BufferedWriter(new FileWriter(new File(
     outputDir, prefix + cl.name() + ".java")));
     writePackageLine(cl, wr);
     writeImportDirectives(cl, wr);
-    String name = cl.name();
-    wr.write("class " + prefix + name + " {\n\n");
-    writeInnerObject(name, wr);
+    writeClassDecl(cl, wr);
+    writeInnerObject(cl.name(), wr);
     writeExtra(cl, wr);
-    writeConstructors(cl, wr);
-    writeMethods(cl, wr);
+    alreadyWrittenConstructors.clear();
+    alreadyWrittenMethods.clear();
+    writeAllConstructors(cl, wr);
+    writeAllMethods(cl, wr);
     wr.write("\n}\n");
     wr.close();
+  }
+
+  /** Write class declaration*/
+  void writeClassDecl(ClassDoc cl, Writer wr) throws IOException {
+    wr.write("class ");
+    wr.write(prefix);
+    wr.write(cl.name());
+    if (cl.isInterface()) {
+      wr.write(" implements ");
+    } else {
+      wr.write(" extends ");
+    }
+    wr.write(cl.name());
+    wr.write(" {\n\n");
   }
 
   /** Write the package declaration.  If #BLANK, omit.  If #CLASS_PACKAGE,
@@ -432,56 +496,86 @@ public class WrapperGenerator extends Doclet {
     }
   }
 
+  void writeAllConstructors(ClassDoc cl, Writer wr) throws IOException {
+    ClassDoc cptr = cl;
+    do {
+      writeConstructors(cptr, wr);
+      cptr = cptr.superclass();
+    }
+    while (cptr != null && !cptr.qualifiedTypeName().equals("java.lang.Object"));
+    // write constructor that takes original class as argument
+    writeWrapperConstructor(cl.name(), wr);
+  }
+
+  Set alreadyWrittenConstructors = new HashSet();
+
   void writeConstructors(ClassDoc cl, Writer wr) throws IOException {
     ConstructorDoc[] cons = cl.constructors();
     for (int i = 0; i < cons.length; i++) {
-      writeConstructor(cons[i], wr);
+      ConstructorDoc con = cons[i];
+      String signature = con.flatSignature();
+      if (!alreadyWrittenConstructors.contains(signature)) {
+        alreadyWrittenConstructors.add(signature);
+        SourceConstructor scon = new SourceConstructor(con);
+        writeConstructor(scon, wr);
+      }
     }
   }
 
-  void writeConstructor(ConstructorDoc con, Writer wr)
+  void writeConstructor(SourceConstructor scon, Writer wr)
   throws IOException {
-    SourceConstructor scon = new SourceConstructor(con);
     String output = substituteRE(constructorTemplate, scon);
     writeDecl(scon, wr);
     writeModifiedParms(output, scon, wr);
   }
 
-  void writeMethods(ClassDoc cl, Writer wr) throws IOException {
-    MethodDoc[] methods = cl.methods();
+  void writeWrapperConstructor(String classname, Writer wr) throws IOException {
+    wr.write("\n\n  public ");
+    wr.write(prefix);
+    wr.write(classname);
+    wr.write('(');
+    wr.write(classname);
+    wr.write(" original) {\n");
+    wr.write("    ");
+    wr.write(makeInnerName(classname));
+    wr.write(" = original;\n");
+    wr.write("  }");
+  }
+
+  Set alreadyWrittenMethods = new HashSet();
+
+  void writeAllMethods(ClassDoc cl, Writer wr) throws IOException {
+    ClassDoc cptr = cl;
+    do {
+      writeMethods(cptr.methods(), wr);
+      cptr = cptr.superclass();
+    } while (cptr!=null && !cptr.qualifiedTypeName().equals("java.lang.Object"));
+    ClassDoc[] interfaces = cl.interfaces();
+    for (int i=0; i<interfaces.length; i++) {
+      writeAllMethods(interfaces[i],wr);
+    }
+  }
+
+  void writeMethods(MethodDoc[] methods, Writer wr)
+      throws IOException {
     for (int i = 0; i < methods.length; i++) {
-      if (methods[i].isPublic()) {
-        SourceMethod srcMethod = new SourceMethod(methods[i]);
-        if (isSpecialMethod(srcMethod)) {
-          writeSpecialMethod(srcMethod, wr);
-        } else {
-          if (srcMethod.returnType.equals("void")) {
-            writeVoidBody(srcMethod, wr);
-          }
-          else {
-            writeNonvoidBody(srcMethod, wr);
-          }
+      MethodDoc method = methods[i];
+      if (!alreadyWrittenMethods.contains(method)) {
+        alreadyWrittenMethods.add(method);
+        if (method.isPublic() && method.isIncluded()) {
+          SourceMethod srcMethod = new SourceMethod(method);
+            if (srcMethod.returnType.equals("void")) {
+              writeVoidBody(srcMethod, wr);
+            }
+            else {
+              writeNonvoidBody(srcMethod, wr);
+            }
+            if (isSpecialMethod(srcMethod)) {
+              writeSpecialMethod(srcMethod, wr);
+            }
         }
       }
     }
-  }
-
-  boolean isSpecialMethod(SourceMethod method) {
-    if (!specialmap.containsKey(method.fullclassname)) {
-      return false;
-    } else {
-      Map classmap = (Map)specialmap.get(method.fullclassname);
-      return (classmap.containsKey(method.methodname));
-    }
-  }
-
-  void writeSpecialMethod(SourceMethod method,Writer wr) throws IOException {
-    writeDecl(method,wr);
-    Map classmap = (Map)specialmap.get(method.fullclassname);
-    String txt = StringUtil.trimBlankLines(
-        (String)classmap.get(method.methodname));
-    wr.write(txt);
-    wr.write("\n  }");
   }
 
   void writeVoidBody(SourceMethod method, Writer wr)
@@ -496,20 +590,31 @@ public class WrapperGenerator extends Doclet {
   throws IOException {
     String output = substituteRE(nonvoidTemplate,method);
     output = returnTypeRE.substituteAll(output, method.returnType);
-    output = returnValueRE.substituteAll(output, delegateVariableName);
+    String substName = (method.returnsWrapped) ? wrappedVariableName :
+        returnValue;
+    output = returnValueRE.substituteAll(output, substName);
+    output = nullRE.substituteAll(output, method.nullText());
     writeDecl(method, wr);
-    wr.write("    ");
-    wr.write(method.returnType);
-    wr.write(' ');
-    wr.write(delegateVariableName);
-    wr.write(";\n");
+    writeLocalDecl(method.returnType + method.returnDimension, returnValue, wr);
+    if (method.returnsWrapped) {
+      writeLocalDecl(prefix + method.returnType, wrappedVariableName, wr);
+    }
     writeModifiedParms(output, method, wr);
+  }
+
+  /** Writes a declaration of a local variable */
+  void writeLocalDecl(String type, String name, Writer wr) throws IOException {
+    wr.write("    ");
+    wr.write(type);
+    wr.write(' ');
+    wr.write(name);
+    wr.write(";\n");
   }
 
   /** Makes macro substitutions using the GNU RE objects */
   String substituteRE(String output, SourceExecMember method) {
     output = beginLineRE.substituteAll(output, "    $1");
-    output = classnameRE.substituteAll(output, method.classname);
+    output = classnameRE.substituteAll(output, classname);
     output = methodnameRE.substituteAll(output, method.methodname);
     output = invokeMethodRE.substituteAll(output, method.runText());
     output = listparamsRE.substituteAll(output, method.paramsAsString());
@@ -531,7 +636,7 @@ public class WrapperGenerator extends Doclet {
     if (method.params.length==0) {
       substr = "";
     } else {
-      StringBuffer buf = new StringBuffer("List xxlistxx = $1(");
+      StringBuffer buf = new StringBuffer("List paramsList = $1(");
       buf.append(method.paramsAsString());
       buf.append(");");
       for (int i=0; i<method.params.length; i++) {
@@ -540,7 +645,7 @@ public class WrapperGenerator extends Doclet {
         buf.append(param.name());
         buf.append(" = (");
         String typename = param.type().typeName();
-        if (LockssUtil.isPrimitive(typename)) {
+        if (ClassUtil.isPrimitive(typename)) {
           buf.append('(');
           if (typename.equals("int")) {
             buf.append("Integer");
@@ -550,10 +655,10 @@ public class WrapperGenerator extends Doclet {
         } else {
           buf.append(typename);
         }
-        buf.append(")xxlistxx.item(");
+        buf.append(")paramsList.item(");
         buf.append(i);
         buf.append(')');
-        if (LockssUtil.isPrimitive(typename)) {
+        if (ClassUtil.isPrimitive(typename)) {
           buf.append(").");
           buf.append(typename);
           buf.append("Value()");
@@ -566,20 +671,42 @@ public class WrapperGenerator extends Doclet {
     wr.write("\n  }");
   }
 
+  boolean isSpecialMethod(SourceMethod method) {
+    if (!specialmap.containsKey(fullclassname)) {
+      return false;
+    } else {
+      Map classmap = (Map)specialmap.get(fullclassname);
+      return (classmap.containsKey(method.methodname));
+    }
+  }
+
+
+  void writeSpecialMethod(SourceMethod method,Writer wr) throws IOException {
+    wr.write("\n\n  ");
+    String nopublic = publicRE.substituteAll(method.modifiers,"");
+    wr.write(nopublic);
+    String origname = method.methodname;
+    method.methodname = prefix + method.methodname;
+    wr.write(method.declText());
+    method.methodname = origname;
+    wr.write(" {\n");
+    Map classmap = (Map)specialmap.get(fullclassname);
+    String txt = StringUtil.trimBlankLines(
+        (String)classmap.get(method.methodname));
+    wr.write(txt);
+    wr.write("\n  }");
+  }
+
   /** This inner class represents a single method or constructor, each of
    * which has its own subclass.
    */
-  private static abstract class SourceExecMember {
-    String classname;
-    String fullclassname;
+  private abstract class SourceExecMember {
     String methodname;
     String modifiers;
     String throwlist;
     Parameter[] params;
 
     SourceExecMember(ExecutableMemberDoc method) {
-      classname = method.containingClass().typeName();
-      fullclassname = method.containingClass().qualifiedTypeName();
       params = method.parameters();
       checkParams();
       modifiers = method.modifiers();
@@ -631,11 +758,45 @@ public class WrapperGenerator extends Doclet {
     }
 
     /** Utility function to write a single parameter and its type */
-    static void writeParamDecl(StringBuffer buf, Parameter param) {
+    void writeParamDecl(StringBuffer buf, Parameter param) {
       buf.append(param.type().typeName());
       buf.append(param.type().dimension());
       buf.append(' ');
       buf.append(param.name());
+    }
+
+    String makeWrappedParamName(String name) {
+      return "wrapped" + name;
+    }
+
+    String wrapParams() {
+      StringBuffer buf = new StringBuffer();
+      for (int i = 0; i < params.length; i++) {
+        Parameter param = params[i];
+        String typename = param.type().typeName();
+        if (isWrapped(param.typeName())) {
+        //  buf.append("\n      ");
+          buf.append(prefix);
+          buf.append(typename);
+          buf.append(' ');
+          buf.append(makeWrappedParamName(param.name()));
+          buf.append(" = (");
+          buf.append(prefix);
+          buf.append(typename);
+          buf.append(")WrapperState.getWrapper(");
+          buf.append(param.name());
+          buf.append(");\n      ");
+        }
+      }
+      return buf.toString();
+    }
+
+    String wrapNameIfNecessary(Parameter param) {
+      if (isWrapped(param.typeName())) {
+       return makeWrappedParamName(param.name());
+     } else {
+       return param.name();
+     }
     }
 
     /** Actual invocation of the method */
@@ -643,14 +804,27 @@ public class WrapperGenerator extends Doclet {
       StringBuffer buf = new StringBuffer();
       buf.append('(');
       for (int i = 0; i < params.length - 1; i++) {
-        buf.append(params[i].name());
+        Parameter param = params[i];
+        buf.append(wrapNameIfNecessary(param));
         buf.append(", ");
       }
       if (params.length > 0) {
-        buf.append(params[params.length - 1].name());
+        buf.append(wrapNameIfNecessary(params[params.length - 1]));
       }
       buf.append(')');
       return buf.toString();
+    }
+
+    void writeParamAsObject(StringBuffer buf, Parameter param) {
+      if (ClassUtil.isPrimitive(param.typeName())) {
+       buf.append("new ");
+       buf.append(ClassUtil.objectTypeName(param.typeName()));
+       buf.append('(');
+     }
+     buf.append(param.name());
+     if (ClassUtil.isPrimitive(param.typeName())) {
+       buf.append(')');
+     }
     }
 
     /** Writes out the parameters as arguments to the ListUtil.list() method */
@@ -658,11 +832,11 @@ public class WrapperGenerator extends Doclet {
       StringBuffer buf = new StringBuffer();
       buf.append("ListUtil.list(");
       for (int i = 0; i < params.length - 1; i++) {
-        buf.append(params[i].name());
+        writeParamAsObject(buf,params[i]);
         buf.append(", ");
       }
       if (params.length > 0) {
-        buf.append(params[params.length - 1].name());
+        writeParamAsObject(buf, params[params.length-1]);
       }
       buf.append(')');
       return buf.toString();
@@ -671,57 +845,95 @@ public class WrapperGenerator extends Doclet {
   }
 
   /** Refinements needed for methods */
-  private static class SourceMethod extends SourceExecMember {
+  private class SourceMethod extends SourceExecMember {
     String returnType;
+    String qualifiedReturnType;
+    String returnDimension;
     boolean isStatic;
+    boolean returnsWrapped;
 
     SourceMethod(MethodDoc method) {
       super(method);
-      methodname = method.name();
       returnType = method.returnType().typeName();
+      returnDimension = method.returnType().dimension();
+      qualifiedReturnType = method.returnType().qualifiedTypeName();
+      returnsWrapped = isWrapped(qualifiedReturnType);
       isStatic = method.isStatic();
+      methodname = method.name();
     }
 
     String declText() {
       StringBuffer buf = new StringBuffer(returnType);
+      buf.append(returnDimension);
       buf.append(' ');
       buf.append(super.declText());
       return buf.toString();
     }
 
     String runText() {
-      StringBuffer buf = new StringBuffer();
+      StringBuffer buf = new StringBuffer(wrapParams());
       if (!returnType.equals("void")) {
-        buf.append(delegateVariableName);
+        buf.append(returnValue);
         buf.append(" = ");
       }
-      if (!isStatic) {
-        buf.append(makeInnerName(classname));
+      if (isSpecialMethod(this)) {
+        buf.append(prefix);
+      } else {
+        if (!isStatic) {
+          buf.append(makeInnerName(classname));
+        }
+        else {
+          buf.append(classname);
+        }
+        buf.append('.');
       }
-      else {
-        buf.append(classname);
-      }
-      buf.append('.');
       buf.append(methodname);
       buf.append(super.runText());
+      if (returnsWrapped) {
+        buf.append(";\n      ");
+        buf.append(wrappedVariableName);
+        buf.append(" = (");
+        buf.append(prefix);
+        buf.append(returnType);
+        buf.append(")WrapperState.getWrapper(");
+        buf.append(returnValue);
+        buf.append(')');
+      }
       return buf.toString();
     }
+
+    String nullText() {
+     if (!ClassUtil.isPrimitive(returnType) || !returnDimension.equals("")) {
+       return "null";
+     } else if (returnType.equals("float") || returnType.equals("double")) {
+       return "0.0";
+     } else if (returnType.equals("boolean")) {
+       return "false";
+     } else {
+       return "0";
+     }
+    }
+
   }
 
   /** Refinements for constructors */
-  private static class SourceConstructor extends SourceExecMember {
+  private class SourceConstructor extends SourceExecMember {
     SourceConstructor(ConstructorDoc method) {
       super(method);
-      methodname = prefix + method.name();
+      methodname = classname;
     }
 
     String runText() {
-      StringBuffer buf = new StringBuffer();
+      StringBuffer buf = new StringBuffer(wrapParams());
       buf.append(makeInnerName(classname));
       buf.append(" = new ");
       buf.append(classname);
       buf.append(super.runText());
       return buf.toString();
+    }
+
+    String declText() {
+      return prefix + super.declText();
     }
 
 

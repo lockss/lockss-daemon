@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.54 2003-07-24 04:22:53 tlipkis Exp $
+ $Id: build.xml,v 1.55 2003-07-25 00:29:04 tyronen Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -96,6 +96,13 @@ Args:
   <property name="doclet.test.src"  value="${doclet.test}/src"/>
   <property name="doclet.test.classes" value="${doclet.test}/classes"/>
 
+  <property name="plugin.src"     value="${src}/org/lockss/plugin" />
+  <property name="plugin.test"    value="${test.src}/org/lockss/plugin" />
+  <property name="plugin.test.wrapper" value="${plugin.test}/wrapper/" />
+  <property name="wrapper.doclet" value="org.lockss.doclet.WrapperGenerator" />
+  <property name="plugin.wrapper.template" 
+            value="${plugin.test.wrapper}/pluginwrapper.xml" />
+  
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
   <property name="depend.cache"   value="${basedir}/.depend"/>
@@ -552,6 +559,18 @@ Args:
        <fileset dir="${test.src}" includes="**/*.java" excludes="**/Test*.java"/>
        <classpath refid="test.compile.classpath" />
     </javadoc>
+  </target>
+  
+  <target name="generate-plugin-wrapper" depends="jar-doclet">
+    <javadoc sourcepath="${plugin.src}"
+	     Private="yes">
+      <doclet name="${wrapper.doclet}">
+        <param name="-template" value="${plugin.wrapper.template}" />
+	<param name="-d" value="${plugin.test.wrapper}" />
+	<param name="-interface" />
+      </doclet>
+      <fileset dir="${plugin.src}" includes="*.java" excludes="Generic*.java" />
+    </javadoc>     
   </target>
 
   <!-- ==================================================================== -->
