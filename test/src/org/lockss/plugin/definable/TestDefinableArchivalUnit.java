@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.9 2004-09-01 23:36:50 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.10 2004-09-02 01:22:50 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ package org.lockss.plugin.definable;
 
 import java.util.*;
 
+import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.blackbird.*;
 import org.lockss.test.*;
@@ -183,7 +184,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
   public void testGetCrawlRule() throws LockssRegexpException {
     map.putString(DefinableArchivalUnit.AU_RULES_KEY,
-		  "org.lockss.test.NegativeCrawlRule");
+ 		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$NegativeCrawlRuleFactory");
 
     CrawlRule rules = cau.makeRules();
     assertEquals(CrawlRule.EXCLUDE,
@@ -192,7 +193,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  rules.match("http://www.example.com/"));
 
     map.putString(DefinableArchivalUnit.AU_RULES_KEY,
-		  "org.lockss.test.PositiveCrawlRule");
+		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$PositiveCrawlRuleFactory");
 
     rules = cau.makeRules();
     assertEquals(CrawlRule.INCLUDE,
@@ -209,6 +210,41 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       CrawlRule rules = cau.makeRules();
       fail("Should have thrown on a non-existant class");
     } catch (DefinablePlugin.InvalidDefinitionException e){
+    }
+  }
+
+
+  public void testSiteNormalizeUrlNull() {
+    UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
+    assertNull(urlNormalizer);
+  }
+
+  public void testSiteNormalizeUrl() {
+    map.putString(DefinableArchivalUnit.AU_URL_NORMALIZER_KEY,
+		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyNormalizer");
+    UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
+    assertTrue(urlNormalizer instanceof org.lockss.plugin.definable.TestDefinableArchivalUnit$MyNormalizer);
+  }
+
+  public static class NegativeCrawlRuleFactory
+    implements CrawlRuleFromAuFactory {
+
+    public CrawlRule createCrawlRule(ArchivalUnit au) {
+      return new NegativeCrawlRule();
+    }
+  }
+
+  public static class PositiveCrawlRuleFactory
+    implements CrawlRuleFromAuFactory {
+
+    public CrawlRule createCrawlRule(ArchivalUnit au) {
+      return new PositiveCrawlRule();
+    }
+  }
+
+  public static class MyNormalizer implements UrlNormalizer {
+    public String normalizeUrl (String url) {
+      return "blah";
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.14 2004-09-01 23:36:49 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.15 2004-09-02 01:22:50 troberts Exp $
  */
 
 /*
@@ -61,6 +61,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
   static final public String AU_MANIFEST_KEY = "au_manifest";
 
+  static final public String AU_URL_NORMALIZER_KEY = "au_url_normalizer";
+
+
   protected ClassLoader classLoader;
   protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
@@ -113,6 +116,27 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return startUrlString;
   }
 
+  protected UrlNormalizer makeUrlNormalizer() {
+    UrlNormalizer urlNormalizer = null;
+
+    String normalizerClass =
+      (String)definitionMap.getMapElement(AU_URL_NORMALIZER_KEY);
+
+    if (normalizerClass != null) {
+    
+      try {
+	urlNormalizer =
+	  (UrlNormalizer) Class.forName(normalizerClass, true,
+					classLoader).newInstance();
+      } catch (Exception e) {
+	throw new DefinablePlugin.InvalidDefinitionException(auName +
+							     " unable to create url normalizer: " + normalizerClass, e);
+      }
+    }
+    return urlNormalizer;
+  }
+
+
   protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
     List descrList = plugin.getAuConfigDescrs();
@@ -164,35 +188,36 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
     if (rule instanceof String) {
       try {
-        return (CrawlRule) Class.forName( (String) rule,
-                                         true, classLoader).newInstance();
-      }
-      catch (Exception e) {
-        throw new DefinablePlugin.InvalidDefinitionException(auName +
-            " unable to create crawl rule: "
-            + rule, e);
+	CrawlRuleFromAuFactory fact =
+	  (CrawlRuleFromAuFactory) Class.forName((String)rule, true,
+						 classLoader).newInstance();
+	return fact.createCrawlRule(this);
+      } catch (Exception e) {
+	throw new DefinablePlugin.InvalidDefinitionException(auName +
+							     " unable to create crawl rule: "
+							     + rule, e);
       }
     }
-    else  {
-      List rules = new LinkedList();
-      if(rule instanceof List) {
-        List templates = (List) rule;
-        Iterator it = templates.iterator();
-
-        while (it.hasNext()) {
-          String rule_template = (String) it.next();
-
-          rules.add(convertRule(rule_template));
-        }
+    List rules = new LinkedList();
+    if(rule instanceof List) {
+      List templates = (List) rule;
+      Iterator it = templates.iterator();
+      
+      while (it.hasNext()) {
+	String rule_template = (String) it.next();
+	
+	rules.add(convertRule(rule_template));
       }
-      if (rules.size() > 0)
-        return new CrawlRules.FirstMatch(rules);
-      else {
-        log.error("No crawl rules found for plugin: " + makeName());
-        return null;
-      }
+    }
+
+    if (rules.size() > 0)
+      return new CrawlRules.FirstMatch(rules);
+    else {
+      log.error("No crawl rules found for plugin: " + makeName());
+      return null;
     }
   }
+
 
   protected CrawlSpec makeCrawlSpec()
       throws LockssRegexpException {
@@ -220,7 +245,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     }
     return window;
   }
-
 
   protected FilterRule constructFilterRule(String mimeType) {
     Object filter_el = definitionMap.getMapElement(mimeType
