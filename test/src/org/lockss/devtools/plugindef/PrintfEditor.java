@@ -7,7 +7,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import org.lockss.daemon.*;
-import com.borland.jbcl.layout.*;
 
 public class PrintfEditor extends JDialog implements EDPEditor {
   protected PrintfTemplate originalTemplate;
