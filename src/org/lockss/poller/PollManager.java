@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.141 2004-09-29 01:19:11 dshr Exp $
+ * $Id: PollManager.java,v 1.142 2004-09-29 06:35:06 tlipkis Exp $
  */
 
 /*
@@ -174,18 +174,18 @@ public class PollManager
    */
   public boolean callPoll(PollSpec pollspec) {
     boolean ret = false;
-    int version = pollspec.getPollVersion();
-    if (version <= 0 || version >= pf.length) {
-      theLog.debug("Bad poll version " + version + " for " + pollspec);
+    PollFactory pollFact = getPollFactory(pollspec);
+    if (pollFact == null) {
+      return false;
     } else {
-      long duration = pf[version].calcDuration(pollspec, this);
+      long duration = pollFact.calcDuration(pollspec, this);
       byte[] challenge = makeVerifier(duration);
       byte[] verifier = makeVerifier(duration);
       try {
 	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
-				    theIDManager.getLocalPeerIdentity(),
+				    theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
 				    LcapMessage.getDefaultHashAlgorithm());
-	ret = pf[version].callPoll(thePoll, this, theIDManager);
+	ret = pollFact.callPoll(thePoll, this, theIDManager);
       } catch (ProtocolException ex) {
 	theLog.debug("makePoll or callPoll threw " + ex.toString());
       }
@@ -265,9 +265,11 @@ public class PollManager
     nm.startPoll(tally.getCachedUrlSet(), tally, true);
     if (replayNeeded) {
       theLog.debug2("starting replay of poll " + key);
-      int version = pme.poll.getVersion();
-      if (version > 0 && version < pf.length) {
-	expiration = pf[version].getMaxPollDuration(Poll.CONTENT_POLL);
+      PollFactory pollFact = getPollFactory(pme.poll.getVersion());
+      // should be equivalent to this.  is it?
+//       PollFactory pollFact = getPollFactory(pme.spec);
+      if (pollFact != null) {
+	expiration = pollFact.getMaxPollDuration(Poll.CONTENT_POLL);
       } else {
 	expiration = 0; // XXX
       }
@@ -380,14 +382,13 @@ public class PollManager
     }
     theLog.debug("Making poll from: " + spec);
     ActivityRegulator.Lock lock = null;
-    int pollVersion = spec.getPollVersion();
-    if (pollVersion <= 0 || pollVersion >= pf.length) {
-      theLog.debug("Bad poll version " + pollVersion + " for poll on " + spec);
+    PollFactory pollFact = getPollFactory(spec);
+    if (pollFact == null) {
       return null;
     }
 
     // check for conflicts
-    if (!pf[pollVersion].shouldPollBeCreated(spec, this, theIDManager,
+    if (!pollFact.shouldPollBeCreated(spec, this, theIDManager,
 					     challenge, orig)) {
       theLog.debug("Poll request ignored");
       return null;
@@ -404,7 +405,7 @@ public class PollManager
           return null;
         }
       } else {
-        int activity = pf[pollVersion].getPollActivity(spec, this);
+        int activity = pollFact.getPollActivity(spec, this);
 	theLog.debug("About to get ActivityRegulator from " + theDaemon +
 		     " for " + au.toString());
 	ActivityRegulator ar = theDaemon.getActivityRegulator(au);
@@ -424,7 +425,7 @@ public class PollManager
 
     // create the appropriate poll for the message type
     try {
-      ret_poll = pf[pollVersion].createPoll(spec, this, theIDManager,
+      ret_poll = pollFact.createPoll(spec, this, theIDManager,
 					    orig, challenge, verifier,
 					    duration, hashAlg);
     }
@@ -690,12 +691,21 @@ public class PollManager
     }
   }
 
-  public PollFactory getPollFactory(int version) {
-    PollFactory ret = null;
+  public PollFactory getPollFactory(PollSpec spec) {
+    int version = spec.getPollVersion();
     if (version > 0 || version <= pf.length) {
-      ret = pf[version];
+      return pf[version];
     }
-    return ret;
+    theLog.error("Unknown poll version: " + spec);
+    return null;
+  }
+
+  public PollFactory getPollFactory(int version) {
+    if (version > 0 || version <= pf.length) {
+      return pf[version];
+    }
+    theLog.error("Unknown poll version: " + version, new Throwable());
+    return null;
   }
 
 
