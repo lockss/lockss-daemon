@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.17 2003-01-22 06:12:54 claire Exp $
+* $Id: LcapMessage.java,v 1.18 2003-01-28 02:22:38 claire Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class LcapMessage implements Serializable {
 
   public static final int MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
+  public static final int MAX_PACKET_SIZE = 1024; // Don't exceed 1450 - 28
 
   /*
     byte
@@ -358,9 +359,7 @@ public class LcapMessage implements Serializable {
     if (m_props.getProperty("entries") != null) {
       m_entries = stringToEntries(m_props.getProperty("entries"));
     }
-    if( m_props.getProperty("remaining") != null) {
-      m_RERemaining = m_props.getProperty("remaining");
-    }
+    m_RERemaining = m_props.getProperty("remaining");
     // calculate start and stop times
     long now = TimeBase.nowMs();
     m_startTime = now - elapsed;
@@ -379,7 +378,7 @@ public class LcapMessage implements Serializable {
                           LcapIdentity.addrToString(m_originID.getAddress()));
     }
     catch(NullPointerException npe) {
-      throw new ProtocolException("LcapMessage.encode - null origin host address.");
+      throw new ProtocolException("encode - null origin host address.");
     }
 
     m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
@@ -388,16 +387,28 @@ public class LcapMessage implements Serializable {
     m_props.putInt("elapsed",(int)(getElapsed()/1000));
     m_props.putInt("opcode",m_opcode);
     m_props.setProperty("url", m_targetUrl);
-    m_props.setProperty("regexp",m_regExp);
+    if(m_regExp != null) {
+      m_props.setProperty("regexp",m_regExp);
+    }
     m_props.putByteArray("challenge", m_challenge);
     m_props.putByteArray("verifier", m_verifier);
-    m_props.putByteArray("hashed", m_hashed);
-    if (m_entries != null) {
-      m_props.setProperty("entries",entriesToString());
+    if(m_hashed != null) {
+      m_props.putByteArray("hashed", m_hashed);
     }
+    else if(m_opcode % 2 == 1) { // if we're a reply we'd better have a hash
+      throw new ProtocolException("encode - missing hash in reply packet.");
+    }
+    byte[] cur_bytes = m_props.encode();
+    int remaining_bytes = MAX_PACKET_SIZE - cur_bytes.length - 28;
+
+    if (m_entries != null) {
+      m_props.setProperty("entries",entriesToString(remaining_bytes));
+    }
+
     if(m_RERemaining != null) {
       m_props.put("remaining", m_RERemaining);
     }
+
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
 
@@ -476,16 +487,8 @@ public class LcapMessage implements Serializable {
     return m_entries;
   }
 
-  public void setEntries(String[] entries) {
-    m_entries = entries;
-  }
-
   public String getRERemaining() {
     return m_RERemaining;
-  }
-
-  public void setRERemaining(String REString) {
-    m_RERemaining = REString;
   }
 
   public byte getHopCount() {
@@ -528,15 +531,48 @@ public class LcapMessage implements Serializable {
     return theSendHopcount;
   }
 
-  String entriesToString() {
-    StringBuffer buf = new StringBuffer(80);
+  String entriesToString(int maxBufSize) {
+    StringBuffer buf = new StringBuffer(maxBufSize);
+
     for(int i= 0; i< m_entries.length; i++) {
-      buf.append(m_entries[i]);
-      buf.append("\n");
+      // if the length of this entry < max buffer
+      byte[] cur_bytes = m_props.encodeString(buf.toString());
+      byte[] entry_bytes = m_props.encodeString(m_entries[i]);
+      if(cur_bytes.length + entry_bytes.length < maxBufSize) {
+        buf.append(m_entries[i]);
+        buf.append("\n");
+      }
+      else {
+        // we need to set RERemaining and break
+        setRERemaining(i);
+        break;
+      }
     }
     return buf.toString();
   }
 
+
+  String[] stringToEntries(String estr) {
+    StringTokenizer tokenizer = new StringTokenizer(estr,"\n");
+    String[] ret = new String[tokenizer.countTokens()];
+    int i = 0;
+
+    while(tokenizer.hasMoreTokens()) {
+      ret[i++] = tokenizer.nextToken();
+    }
+    return ret;
+  }
+
+  void setRERemaining(int firstIndex) {
+    String last_entry = m_entries[firstIndex -1];
+    String first_extra = m_entries[firstIndex];
+    String last_extra = m_entries[m_entries.length -1];
+    StringBuffer buf = new StringBuffer();
+    // find a reg expression to represent the remaining entries in the list
+    // our original match
+    // plus the re for what's not in the entries array
+    //m_RERemaining = buf.toString();
+  }
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
@@ -556,16 +592,6 @@ public class LcapMessage implements Serializable {
     }
     sb.append("]");
     return sb.toString();
-  }
-  String[] stringToEntries(String estr) {
-    StringTokenizer tokenizer = new StringTokenizer(estr,"\n");
-    String[] ret = new String[tokenizer.countTokens()];
-    int i = 0;
-
-    while(tokenizer.hasMoreTokens()) {
-      ret[i++] = tokenizer.nextToken();
-    }
-    return ret;
   }
 
   private boolean hopCountInRange(byte hopCount) {

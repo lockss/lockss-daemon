@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.5 2003-01-22 06:14:56 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.6 2003-01-28 02:22:38 claire Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class TestLcapMessage extends TestCase {
   }
 
   public void testEntriesTranslation() {
-    String encstr = testmsg.entriesToString();
+    String encstr = testmsg.entriesToString(500);
     String[] decoded = testmsg.stringToEntries(encstr);
     assertTrue(Arrays.equals(testmsg.m_entries,decoded));
   }
