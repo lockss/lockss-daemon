@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.5 2004-09-27 22:39:10 smorabito Exp $
+ * $Id: V1PollFactory.java,v 1.6 2004-09-28 08:49:44 tlipkis Exp $
  */
 
 /*
@@ -454,20 +454,24 @@ public class V1PollFactory implements PollFactory {
 			    DEFAULT_DURATION_MULTIPLIER_MAX);
   }
 
-  public long getMaxContentPollDuration() {
-    return m_maxContentPollDuration;
+  public long getMaxPollDuration(int pollType) {
+    switch (pollType) {
+    case Poll.CONTENT_POLL: return m_maxContentPollDuration;
+    case Poll.NAME_POLL: return m_maxNamePollDuration;
+    default:
+      theLog.warning("getMaxPollDuration(" + pollType + ")");
+      return 0;
+    }
   }
 
-  public long getMinContentPollDuration() {
-    return m_minContentPollDuration;
-  }
-
-  public long getMaxNamePollDuration() {
-    return m_maxNamePollDuration;
-  }
-
-  public long getMinNamePollDuration() {
-    return m_minNamePollDuration;
+  public long getMinPollDuration(int pollType) {
+    switch (pollType) {
+    case Poll.CONTENT_POLL: return m_minContentPollDuration;
+    case Poll.NAME_POLL: return m_minNamePollDuration;
+    default:
+      theLog.warning("getMinPollDuration(" + pollType + ")");
+      return 0;
+    }
   }
 
   protected static int getQuorum() {

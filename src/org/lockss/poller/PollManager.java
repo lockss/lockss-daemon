@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.139 2004-09-27 22:39:10 smorabito Exp $
+ * $Id: PollManager.java,v 1.140 2004-09-28 08:49:44 tlipkis Exp $
  */
 
 /*
@@ -257,7 +257,7 @@ public class PollManager
       theLog.debug2("starting replay of poll " + key);
       int version = pme.poll.getVersion();
       if (version > 0 && version < pf.length) {
-	expiration = pf[version].getMaxContentPollDuration();
+	expiration = pf[version].getMaxPollDuration(Poll.CONTENT_POLL);
       } else {
 	expiration = 0; // XXX
       }
