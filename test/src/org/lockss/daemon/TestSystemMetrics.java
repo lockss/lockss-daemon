@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.1 2002-12-19 01:28:40 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.2 2002-12-19 01:33:03 aalto Exp $
  */
 
 /*
@@ -54,10 +54,18 @@ public class TestSystemMetrics extends LockssTestCase {
   public void testHashEstimation() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
     long startTime = TimeBase.nowMs();
-    long estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
+    int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
     long endTime = TimeBase.nowMs();
     assertTrue(estimate > 0);
     assertTrue(endTime - startTime > SystemMetrics.HASH_TEST_DURATION);
+  }
+
+  public void testEstimationCaching() throws IOException {
+    MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
+    int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
+    hasher = new MockCachedUrlSetHasher(10);
+    int estimate2 = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
+    assertEquals(estimate, estimate2);
   }
 
 }
