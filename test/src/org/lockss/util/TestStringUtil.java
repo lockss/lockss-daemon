@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.32 2004-01-28 05:31:50 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.33 2004-03-29 09:19:43 tlipkis Exp $
  */
 
 /*
@@ -435,6 +435,22 @@ System.out.println("s: "+s);
       assertEquals(txt, readtxt);
       File fl = new File(path);
       fl.delete();
+    }
+    catch (IOException e) {
+      fail(e.getMessage());
+    }
+  }
+
+  public void testFromFileFile() {
+    try {
+      String txt = "Another string.";
+      File file = new File(getTempDir(), "test.txt");
+      FileWriter fw = new FileWriter(file);
+      fw.write(txt);
+      fw.close();
+      String readtxt = StringUtil.fromFile(file);
+      assertEquals(txt, readtxt);
+      file.delete();
     }
     catch (IOException e) {
       fail(e.getMessage());

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.34 2004-01-28 05:23:10 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.35 2004-03-29 09:19:43 tlipkis Exp $
  */
 
 /*
@@ -397,6 +397,11 @@ public class StringUtil {
   /** Reads in the entire contents of a file into a string */
   public static String fromFile(String path) throws IOException {
     return fromReader(new FileReader(path));
+  }
+
+  /** Reads in the entire contents of a file into a string */
+  public static String fromFile(File file) throws IOException {
+    return fromReader(new FileReader(file));
   }
 
   /**
