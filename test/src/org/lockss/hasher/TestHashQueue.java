@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.14 2003-04-30 04:56:14 tal Exp $
+ * $Id: TestHashQueue.java,v 1.15 2003-05-03 00:11:11 tal Exp $
  */
 
 /*
@@ -263,6 +263,22 @@ public class TestHashQueue extends LockssTestCase {
     q.runAndNotify(3, 75, Boolean.TRUE);
 //      assertEquals(n2, getBytesLeft(r2));
 //      assertEquals(n2, getBytesLeft(r1));
+  }
+
+  public void testGetAvailableHashTimeBefore() {
+    HashQueue q = new HashQueue();
+    HashQueue.Request r1, r2, r3, r4, r5, r6, r7;
+    r1 = simpleReq(200, 100);
+    r2 = simpleReq(2000, 1200);
+    r3 = simpleReq(3000, 500);
+    assertTrue(q.insert(r1));
+    assertTrue(q.insert(r2));
+    assertTrue(q.insert(r3));
+    assertEquals(400, q.getAvailableHashTimeBefore(Deadline.in(500)));
+    assertEquals(700, q.getAvailableHashTimeBefore(Deadline.in(1000)));
+    assertEquals(700, q.getAvailableHashTimeBefore(Deadline.in(2000)));
+    assertEquals(1200, q.getAvailableHashTimeBefore(Deadline.in(3000)));
+    assertEquals(2200, q.getAvailableHashTimeBefore(Deadline.in(4000)));
   }
 
   private long getBytesLeft(HashQueue.Request req) {
