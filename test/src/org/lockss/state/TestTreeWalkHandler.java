@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.11 2003-04-16 20:20:14 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.12 2003-04-16 23:50:25 aalto Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
   public void testTreeWalkStartNoCrawlNoPoll() throws Exception {
     //should allow walk to start if last crawl time >= 0
     //should not schedule a top level poll
-    crawlMan.setShouldCrawlNewContent(false);
+    mau.setShouldCrawlForNewContent(false);
     mau.setShouldCallTopLevelPoll(false);
 
     treeWalkHandler.doTreeWalk();
@@ -129,7 +129,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
   public void testTreeWalkStartNoCrawlYesPoll() {
     //should allow walk but schedule top level poll
     mau.setShouldCallTopLevelPoll(true);
-    crawlMan.setShouldCrawlNewContent(false);
+    mau.setShouldCrawlForNewContent(false);
 
     treeWalkHandler.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
@@ -139,64 +139,10 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
   public void testTreeWalkStartYesCrawl() {
     //should abort walk and schedule crawl
-    crawlMan.setShouldCrawlNewContent(true);
+    mau.setShouldCrawlForNewContent(true);
     treeWalkHandler.doTreeWalk();
     assertEquals(MockCrawlManager.SCHEDULED, crawlMan.getAuStatus(mau));
   }
-
-  /*XXX fix
-  public void testTreeWalkPollBlocking() throws Exception {
-    theDaemon.getHashService().startService();
-
-    // set up with proper Au level CUS
-    String auUrl = AuUrl.PROTOCOL_COLON;
-    MockCachedUrlSet mcus = (MockCachedUrlSet)TestNodeManagerImpl.getCUS(mau, auUrl);
-    mcus.setFlatIterator((new Vector()).iterator());
-    mau.setAUCachedUrlSet(mcus);
-    theDaemon.getLockssRepository(mau).createNewNode(mcus.getUrl());
-
-    // finish top-level poll
-    TimeBase.setSimulated(123);
-    contentPoll = createPoll(auUrl, true, 10, 5);
-    Poll.VoteTally results = contentPoll.getVoteTally();
-    PollSpec spec = results.getPollSpec();
-    NodeStateImpl nodeState = (NodeStateImpl)nodeManager.getNodeState(mcus);
-    PollState pollState = new PollState(results.getType(),
-                                        spec.getLwrBound(),
-                                        spec.getUprBound(),
-                                        PollState.RUNNING,
-                                        results.getStartTime(),
-                                        null);
-    nodeState.addPollState(pollState);
-    nodeManager.updateState(nodeState, results);
-    assertEquals(123, nodeManager.getAuState().getLastTopLevelPollTime());
-    //XXX not testing thread here
-
-    theDaemon.getHashService().stopService();
-  }
-
-
-  /*XXX fix
-  public void testTreeWalkThreadStarting() throws Exception {
-    crawlMan.setShouldCrawlNewContent(true);
-
-    AuState auState = nodeManager.getAuState();
-
-    // should start thread, but thread should sleep
-    auState.lastTreeWalk = TimeBase.nowMs();
-    treeWalkThread.run();
-    assertFalse(treeWalkThread.treeWalkRunning);
-    treeWalkThread.end();
-
-    crawlMan.setShouldCrawlNewContent(false);
-    // the thread should trigger a treewalk, and the treewalk should
-    // trigger a crawl scheduled
-    auState.lastTreeWalk = -123;
-
-    treeWalkThread.run();
-    assertTrue(crawlMan.getAuStatus(mau)==MockCrawlManager.SCHEDULED);
-  }
-*/
 
   /**
    * After initialized with no treewalk run, the thread should be ready to
@@ -280,12 +226,12 @@ public class TestTreeWalkHandler extends LockssTestCase {
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     TimeBase.setReal();
- }
+  }
 
- private void checkPollingTest(int pollState, long startTime,
-                              boolean shouldSchedule, NodeStateImpl node) {
-  checkPollingTest(Poll.NAME_POLL,pollState,startTime,shouldSchedule,node);
-}
+  private void checkPollingTest(int pollState, long startTime,
+                                boolean shouldSchedule, NodeStateImpl node) {
+    checkPollingTest(Poll.NAME_POLL, pollState, startTime, shouldSchedule,node);
+  }
 
   private void checkPollingTest(int pollType, int pollState, long startTime,
                                boolean shouldSchedule, NodeStateImpl node) {
@@ -303,19 +249,15 @@ public class TestTreeWalkHandler extends LockssTestCase {
     }
     assertNull(crawlMan.getUrlStatus(node.getCachedUrlSet().getUrl()));
   }
-/*
-  public void testEstimatedTreeWalk() {
-    //XXX fix using simulated time
-    TreeWalkHandler.EstimationThread estThread = treeWalkHandler.getTestThread();
-    estThread.run();
-    long estimate = treeWalkHandler.getEstimatedTreeWalkDuration();
-    assertTrue(estimate > 0);
-    long newEstimate = 100;
-    treeWalkHandler.updateEstimate(newEstimate);
-    long expectedEst = (estimate + newEstimate) / 2;
-    assertEquals(expectedEst, treeWalkHandler.getEstimatedTreeWalkDuration());
+
+  public void testAverageTreeWalkDuration() {
+    assertEquals(-1, treeWalkHandler.getAverageTreeWalkDuration());
+    treeWalkHandler.updateEstimate(100);
+    assertEquals(100, treeWalkHandler.getAverageTreeWalkDuration());
+    treeWalkHandler.updateEstimate(200);
+    assertEquals(150, treeWalkHandler.getAverageTreeWalkDuration());
   }
-*/
+
   private Poll createPoll(String url, boolean isContentPoll, int numAgree,
                           int numDisagree) throws Exception {
     LcapIdentity testID = null;

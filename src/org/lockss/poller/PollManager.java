@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.77 2003-04-16 20:20:15 aalto Exp $
+* $Id: PollManager.java,v 1.78 2003-04-16 23:50:25 aalto Exp $
  */
 
 /*
@@ -425,7 +425,6 @@ public class PollManager  extends BaseLockssManager {
         default:
           throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
       }
-      addPoll(ret_poll);
       return ret_poll;
     }
 
@@ -722,7 +721,7 @@ public class PollManager  extends BaseLockssManager {
   }
 
   void addPoll(Poll p) {
-      thePolls.put(p.m_key, new PollManagerEntry(p));
+    thePolls.put(p.m_key, new PollManagerEntry(p));
   }
 
   boolean isPollActive(String key) {

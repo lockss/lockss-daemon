@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.5 2003-04-16 20:20:15 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.6 2003-04-16 23:50:25 aalto Exp $
  */
 
 /*
@@ -137,15 +137,15 @@ public class ActivityRegulator extends BaseLockssManager {
     int auActivity = getAuActivity(au);
     if (!isAllowedOnAu(activity, auActivity)) {
       // au is being acted upon
-      logger.debug3("AU '" + au.getName() + "' busy with " +
+      logger.debug2("AU '" + au.getName() + "' busy with " +
                     activityCodeToString(auActivity) + ". Couldn't start " +
                     activityCodeToString(activity));
       return false;
     }
 
     setAuActivity(au, activity, expireIn);
-    logger.debug3("Started " + activityCodeToString(activity) + " on AU '" +
-                  au.getName() + "'");
+    logger.debug("Started " + activityCodeToString(activity) + " on AU '" +
+                 au.getName() + "'");
     return true;
   }
 
@@ -163,7 +163,7 @@ public class ActivityRegulator extends BaseLockssManager {
     int auActivity = getAuActivity(cus.getArchivalUnit());
     if (!isAllowedOnAu(activity, auActivity)) {
       // au is being acted upon at the AU level
-      logger.debug3("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
+      logger.debug2("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
                     activityCodeToString(auActivity) + ". Couldn't start " +
                     activityCodeToString(activity) + " on CUS '" +
                     cus.getUrl() + "'");
@@ -172,7 +172,7 @@ public class ActivityRegulator extends BaseLockssManager {
     // check if the cus is free for this activity
     int cusActivity = getCusActivity(cus);
     if (!isAllowedOnCus(activity, cusActivity, RELATION_SAME)) {
-      logger.debug3("CUS '" + cus.getUrl() + "' busy with " +
+      logger.debug2("CUS '" + cus.getUrl() + "' busy with " +
                     activityCodeToString(cusActivity) + ". Couldn't start " +
                     activityCodeToString(activity) + " on CUS '" +
                     cus.getUrl() + "'");
@@ -182,8 +182,8 @@ public class ActivityRegulator extends BaseLockssManager {
       return false;
     }
     setCusActivity(cus, activity, expireIn);
-    logger.debug3("Started " + activityCodeToString(activity) + " on CUS '" +
-                  cus.getUrl() + "'");
+    logger.debug("Started " + activityCodeToString(activity) + " on CUS '" +
+                 cus.getUrl() + "'");
     return true;
   }
 
@@ -196,7 +196,7 @@ public class ActivityRegulator extends BaseLockssManager {
   public synchronized void auActivityFinished(int activity, ArchivalUnit au) {
     // change state to reflect
     endAuActivity(activity, au);
-    logger.debug3("Finished " + activityCodeToString(activity) + " on AU '" +
+    logger.debug("Finished " + activityCodeToString(activity) + " on AU '" +
                   au.getName() + "'");
   }
 
@@ -208,7 +208,7 @@ public class ActivityRegulator extends BaseLockssManager {
    */
   public synchronized void cusActivityFinished(int activity, CachedUrlSet cus) {
     endCusActivity(activity, cus);
-    logger.debug3("Finished " + activityCodeToString(activity) + " on CUS '" +
+    logger.debug("Finished " + activityCodeToString(activity) + " on CUS '" +
                   cus.getUrl() + "'");
 
     boolean otherAuActivity = false;
@@ -235,7 +235,7 @@ public class ActivityRegulator extends BaseLockssManager {
     if (!otherAuActivity) {
       // no other CUS activity on this AU, so free it up
       endAuActivity(CUS_ACTIVITY, cus.getArchivalUnit());
-      logger.debug3("Finished " + activityCodeToString(CUS_ACTIVITY) +
+      logger.debug2("Finished " + activityCodeToString(CUS_ACTIVITY) +
                     " on AU '" + cus.getArchivalUnit().getName() + "'");
     }
   }
@@ -262,7 +262,7 @@ public class ActivityRegulator extends BaseLockssManager {
         }
         if (!isAllowedOnCus(activity, value.activity, relation)) {
           String relationStr = (relation==RELATION_CHILD ? "Child" : "Parent");
-          logger.debug3(relationStr + " CUS '" + cus.getUrl() + "' busy with " +
+          logger.debug2(relationStr + " CUS '" + cus.getUrl() + "' busy with " +
                         activityCodeToString(value.activity) +
                         ". Couldn't start " + activityCodeToString(activity) +
                         " on CUS '" + cus.getUrl() + "'");
@@ -366,7 +366,7 @@ public class ActivityRegulator extends BaseLockssManager {
     if (curActivity == activity) {
       auMap.remove(getAuKey(au));
     } else {
-      logger.debug3(activityCodeToString(curActivity) + " running on AU '"+
+      logger.debug2(activityCodeToString(curActivity) + " running on AU '"+
                     au.getName() + "', so couldn't end " +
                     activityCodeToString(activity));
     }
@@ -401,7 +401,7 @@ public class ActivityRegulator extends BaseLockssManager {
     if (curActivity == activity) {
       cusMap.remove(getCusKey(cus));
     } else {
-      logger.debug3(activityCodeToString(curActivity) + " running on CUS '" +
+      logger.debug2(activityCodeToString(curActivity) + " running on CUS '" +
                     cus.getUrl() + "', so couldn't end " +
                     activityCodeToString(activity));
     }

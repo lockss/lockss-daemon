@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.66 2003-04-16 19:20:42 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.67 2003-04-16 23:50:25 aalto Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class TestNodeManagerImpl
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
   private PollManager pollManager;
+  private HistoryRepository historyRepo;
   private List urlList = null;
   private Poll namePoll = null;
   private Poll contentPoll = null;
@@ -83,7 +84,7 @@ public class TestNodeManagerImpl
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    HistoryRepository historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    historyRepo = new HistoryRepositoryImpl(tempDirPath);
     historyRepo.startService();
     theDaemon.setHistoryRepository(historyRepo);
     nodeManager.historyRepo = historyRepo;
@@ -133,6 +134,63 @@ public class TestNodeManagerImpl
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
+  }
+
+  public void testLoadingFromHistoryRepository() throws Exception {
+    CachedUrlSet cus = getCUS(mau, TEST_URL + "/branch3");
+    // add to lockss repository
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
+    // store in history repository
+    NodeState node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
+                                       new ArrayList(), historyRepo);
+    historyRepo.storeNodeState(node);
+
+    // should load correctly
+    node = nodeManager.getNodeState(cus);
+    assertNotNull(node);
+    assertEquals(TEST_URL + "/branch3", node.getCachedUrlSet().getUrl());
+    assertEquals(123, node.getAverageHashDuration());
+  }
+
+  public void testDeadPollRemoval() throws Exception {
+    CachedUrlSet cus = getCUS(mau, TEST_URL + "/branch3");
+    // add to lockss repository
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch3");
+    // store in history repository
+    ArrayList polls = new ArrayList(1);
+    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
+
+    // start the poll
+    pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, new PollSpec(cus));
+
+    NodeStateImpl node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
+                                           polls, historyRepo);
+    historyRepo.storeNodeState(node);
+
+    // should keep poll active
+    node = (NodeStateImpl)nodeManager.getNodeState(cus);
+    assertEquals(1, node.polls.size());
+    assertFalse(node.getPollHistories().hasNext());
+
+    cus = getCUS(mau, TEST_URL + "/branch4");
+    // add to lockss repository
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL + "/branch4");
+    // store in history repository
+    polls = new ArrayList(1);
+    polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX, false));
+    // don't start the poll
+
+    node = new NodeStateImpl(cus, 123, new CrawlState(-1, -1, -1),
+                             polls, historyRepo);
+    historyRepo.storeNodeState(node);
+
+    // should transfer poll to history
+    node = (NodeStateImpl)nodeManager.getNodeState(cus);
+    assertNotNull(node);
+    assertEquals(TEST_URL + "/branch4", node.getCachedUrlSet().getUrl());
+    assertEquals(123, node.getAverageHashDuration());
+    assertEquals(0, node.polls.size());
+    assertEquals(1, node.pollHistories.size());
   }
 
   public void testGetAuState() {

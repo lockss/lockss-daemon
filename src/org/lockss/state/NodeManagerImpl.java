@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.101 2003-04-16 20:20:14 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.102 2003-04-16 23:50:25 aalto Exp $
  */
 
 /*
@@ -208,19 +208,46 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       try {
         if (lockssRepo.getNode(url) != null) {
           node = createNodeState(cus);
+        } else {
+          logger.debug("URL '"+cus.getUrl()+"' not found in cache.");
         }
       }
       catch (MalformedURLException mue) {
-        logger.error("Can't get NodeState due to bad CachedUrlSet: " + cus);
+        logger.error("Can't get NodeState due to bad CUS '" + cus.getUrl()+"'");
       }
     }
     return node;
   }
 
   NodeState createNodeState(CachedUrlSet cus) {
-    logger.debug2("Loading NodeState: " + cus.toString());
+    logger.debug2("Loading NodeState: " + cus.getUrl());
     // load from file cache, or get a new one
     NodeState state = historyRepo.loadNodeState(cus);
+
+    // check for dead polls
+    Iterator activePolls = state.getActivePolls();
+    if (activePolls.hasNext()) {
+      ArrayList pollsToRemove = new ArrayList();
+      while (activePolls.hasNext()) {
+        PollState poll = (PollState) activePolls.next();
+        PollSpec pollSpec = new PollSpec(state.getCachedUrlSet(),
+                                         poll.getLwrBound(),
+                                         poll.getUprBound());
+        if (!pollManager.isPollRunning(poll.getType(), pollSpec)) {
+          // transfer dead poll to history and let treewalk handle it
+          PollHistory history =
+              new PollHistory(poll, TimeBase.msSince(poll.getStartTime()),
+                              new ArrayList());
+          pollsToRemove.add(history);
+        }
+      }
+      for (int ii=0; ii<pollsToRemove.size(); ii++) {
+        logger.debug("Dead poll being removed for CUS '" + cus.getUrl() + "'");
+        PollHistory history = (PollHistory)pollsToRemove.get(ii);
+        ( (NodeStateImpl) state).closeActivePoll(history);
+      }
+    }
+
     nodeCache.putState(cus.getUrl(), state);
     return state;
   }
@@ -251,7 +278,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           break;
         case PollTally.STATE_NOQUORUM:
           pollState.status = PollState.INCONCLUSIVE;
-          logger.info("Poll finished without qurorm");
+          logger.info("Poll finished without quorum");
           break;
         case PollTally.STATE_RESULTS_TOO_CLOSE:
         case PollTally.STATE_RESULTS_UNTRUSTED:
@@ -440,8 +467,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                          lastHistory.lwrBound,
                                          lastHistory.uprBound);
     boolean shouldRecallLastPoll =
-        (lastHistory.getStartTime()  + lastHistory.getDuration() + recallDelay)
-    >= TimeBase.nowMs();
+        ((lastHistory.getStartTime()  + lastHistory.getDuration() + recallDelay)
+         >= TimeBase.nowMs());
     switch (lastHistory.status) {
       case PollState.REPAIRING:
       case PollState.SCHEDULED:
