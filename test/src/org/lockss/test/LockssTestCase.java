@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.17 2002-12-16 00:53:25 tal Exp $
+ * $Id: LockssTestCase.java,v 1.18 2002-12-30 20:37:01 tal Exp $
  */
 
 /*
@@ -49,13 +49,18 @@ public class LockssTestCase extends TestCase {
 
   /** Timeout duration for timeouts that are expected not to time out.
    * This should be set high to ensure catching failures. */
-  public static int TIMEOUT_SHOULDNT = 2000;
+  public static final int DEFAULT_TIMEOUT_SHOULDNT = 2000;
+  public static int TIMEOUT_SHOULDNT = DEFAULT_TIMEOUT_SHOULDNT;
 
   List tmpDirs;
   List doLaters;
 
   public LockssTestCase(String msg) {
     super(msg);
+    Integer timeout = Integer.getInteger("org.lockss.test.timeout.shouldnt");
+    if (timeout != null) {
+      TIMEOUT_SHOULDNT = timeout.intValue();
+    }
   }
 
   /** Create and return the name of a temp dir.  The dir is created within
@@ -474,6 +479,8 @@ public class LockssTestCase extends TestCase {
   /** Interrupter interrupts a thread in a while */
   public class Interrupter extends DoLater {
     private Thread thread;
+    private boolean threadDump = false;
+
     Interrupter(long waitMs, Thread thread) {
       super(waitMs);
       this.thread = thread;
@@ -481,13 +488,34 @@ public class LockssTestCase extends TestCase {
 
     /** Interrupt the thread */
     protected void doit() {
+      if (threadDump) {
+	try {
+	  DebugUtils.getInstance().threadDump();
+	} catch (Exception e) {
+	}
+      }
       thread.interrupt();
+    }
+
+    /** Interrupt the thread */
+    public void setThreadDump() {
+      threadDump = true;
     }
   }
 
   /** Interrupt current thread in a while */
   public Interrupter interruptMeIn(long ms) {
     Interrupter i = new Interrupter(ms, Thread.currentThread());
+    i.start();
+    return i;
+  }
+  
+  /** Interrupt current thread in a while, first printing a thread dump */
+  public Interrupter interruptMeIn(long ms, boolean threadDump) {
+    Interrupter i = new Interrupter(ms, Thread.currentThread());
+    if (threadDump) {
+      i.setThreadDump();
+    }
     i.start();
     return i;
   }
