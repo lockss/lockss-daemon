@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.41 2004-01-16 09:34:06 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.42 2004-01-31 02:54:26 eaalto Exp $
  */
 
 /*
@@ -58,8 +58,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
   static final int DELETED_VERSION = -98;
 
   private boolean newVersionOpen = false;
-  private boolean newOutputCalled = false;
   private boolean newPropsSet = false;
+  // used to cache outputstream for automatic closing
+  private OutputStream curOutputStream = null;
   private File curInputFile;
   protected Properties curProps;
   protected Properties nodeProps = new Properties();
@@ -168,15 +169,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
     //XXX store here?
     return subSize;
-  }
-
-  public Properties getState() {
-    //XXX implement
-    return null;
-  }
-
-  public void storeState(Properties newProps) {
-    //XXX implement
   }
 
   public boolean isLeaf() {
@@ -313,8 +305,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       if (!newVersionOpen) {
         throw new UnsupportedOperationException("New version not initialized.");
       }
-      if (!newOutputCalled) {
+      if (curOutputStream==null) {
          throw new UnsupportedOperationException("getNewOutputStream() not called.");
+      } else {
+        try {
+          // make sure outputstream was closed
+          curOutputStream.close();
+        } catch (IOException ignore) { }
+        curOutputStream = null;
       }
       if (!newPropsSet) {
         throw new UnsupportedOperationException("setNewProperties() not called.");
@@ -410,7 +408,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
       curProps = null;
     } finally {
-      newOutputCalled = false;
       newPropsSet = false;
       newVersionOpen = false;
       versionTimeout.expire();
@@ -427,7 +424,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
       tempCacheFile.delete();
       tempPropsFile.delete();
     } finally {
-      newOutputCalled = false;
+      if (curOutputStream!=null) {
+        try {
+          curOutputStream.close();
+        } catch (IOException ignore) { }
+        curOutputStream = null;
+      }
       newPropsSet = false;
       newVersionOpen = false;
       versionTimeout.expire();
@@ -569,12 +571,13 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (!newVersionOpen) {
       throw new UnsupportedOperationException("New version not initialized.");
     }
-    if (newOutputCalled) {
+    if (curOutputStream!=null) {
       throw new UnsupportedOperationException("getNewOutputStream() called twice.");
     }
-    newOutputCalled = true;
     try {
-      return new BufferedOutputStream(new FileOutputStream(tempCacheFile));
+      curOutputStream = new BufferedOutputStream(
+          new FileOutputStream(tempCacheFile));
+      return curOutputStream;
     } catch (FileNotFoundException fnfe) {
       try {
         logger.error("No new version file for "+tempCacheFile.getPath()+".");

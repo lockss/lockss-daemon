@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.31 2003-12-19 01:35:27 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.32 2004-01-31 02:54:25 eaalto Exp $
  */
 
 /*
@@ -34,13 +34,12 @@ package org.lockss.repository;
 
 import java.io.*;
 import java.util.*;
-import java.text.SimpleDateFormat;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
 
 /**
- * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
+ * This is the test class for org.lockss.repository.RepositoryNodeImpl
  */
 public class TestRepositoryNodeImpl extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -73,14 +72,6 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("testUrl", node.getNodeUrl());
     node = new RepositoryNodeImpl("testUrl/test.txt", "testUrl/test.txt", null);
     assertEquals("testUrl/test.txt", node.getNodeUrl());
-  }
-
-  public void testGetState() throws Exception {
-    //XXX implement
-  }
-
-  public void testStoreState() {
-    //XXX implement
   }
 
   public void testFileLocation() throws Exception {
@@ -443,13 +434,33 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
+  public void testMakeNewVersionWithoutClosingStream() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream 1", new Properties());
+
+    leaf.makeNewVersion();
+    leaf.setNewProperties(new Properties());
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("test stream 2");
+    StreamUtil.copy(is, os);
+    is.close();
+    // don't close outputstream
+    leaf.sealNewVersion();
+    assertEquals(2, leaf.getCurrentVersion());
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream 2", resultStr);
+  }
+
   public void testMakeNewIdenticalVersion() throws Exception {
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
-    RepositoryNode leaf =
-        createLeaf("http://www.example.com/testDir/test.cache",
-        "test stream", props);
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)createLeaf(
+        "http://www.example.com/testDir/test.cache", "test stream", props));
     assertEquals(1, leaf.getCurrentVersion());
+    // set the file extension
+    leaf.dateValue = 123321;
 
     props = new Properties();
     props.setProperty("test 1", "value 2");
@@ -470,20 +481,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/test.cache");
 
-    // it's difficult to get the name of the old prop file, but we
-    // can check that we have the right number and the third starts with
-    // '1.props-'
-    File testFile = new File(tempDirPath + "/#content");
-    File[] files = testFile.listFiles();
+    File testFileDir = new File(tempDirPath + "/#content");
+    File[] files = testFileDir.listFiles();
     assertEquals(3, files.length);
-    for (int ii=0; ii<3; ii++) {
-      String name = files[ii].getName();
-      if ((!name.equals("current")) &&
-          (!name.equals("current.props")) &&
-          (!name.startsWith("1.props-"))) {
-        fail("Bad file found: "+name);
-      }
-    }
+    File testFile = new File(testFileDir, "current");
+    assertTrue(testFile.exists());
+    testFile = new File(testFileDir, "current.props");
+    assertTrue(testFile.exists());
+    testFile = new File(testFileDir, "1.props-123321");
+    assertTrue(testFile.exists());
   }
 
   public void testGetInputStream() throws Exception {
@@ -812,5 +818,27 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public static void main(String[] argv) {
     String[] testCaseList = { TestRepositoryNodeImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
+  }
+
+  // this class only overrides 'getDatedVersionedPropsFile()' so I can
+  // manipulate the file names for testing
+  static class MyMockRepositoryNode extends RepositoryNodeImpl {
+    long dateValue;
+    MyMockRepositoryNode(RepositoryNodeImpl nodeImpl) {
+      super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
+    }
+
+    File getDatedVersionedPropsFile(int version, long date) {
+      StringBuffer buffer = getContentDirBuffer();
+      buffer.append(version);
+      buffer.append(".");
+      buffer.append(PROPS_FILENAME);
+      buffer.append("-");
+      // don't use the passed in date
+      // be careful not to use identical dates here, as it will loop while
+      // trying to increment the 'date' value
+      buffer.append(dateValue);
+      return new File(buffer.toString());
+    }
   }
 }

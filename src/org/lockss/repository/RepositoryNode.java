@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.12 2003-06-20 22:34:52 claire Exp $
+ * $Id: RepositoryNode.java,v 1.13 2004-01-31 02:54:26 eaalto Exp $
  */
 
 /*
@@ -82,18 +82,6 @@ public interface RepositoryNode {
    * @return size
    */
   public long getTreeContentSize(CachedUrlSetSpec filter);
-
-  /**
-   * Returns the state information for the node.
-   * @return state properties of the node
-   */
-  public Properties getState();
-
-  /**
-   * Writes new state information for the node.
-   * @param newProps the new state information
-   */
-  public void storeState(Properties newProps);
 
   /**
    * Returns true if node has no children.
