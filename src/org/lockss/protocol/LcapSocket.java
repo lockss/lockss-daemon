@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.6 2002-12-16 07:37:13 tal Exp $
+ * $Id: LcapSocket.java,v 1.7 2002-12-16 22:05:32 tal Exp $
  */
 
 /*
@@ -114,6 +114,7 @@ public class LcapSocket {
 	sock.receive(pkt);
 	LockssReceivedDatagram dg = new LockssReceivedDatagram(pkt);
 	dg.setReceiveSocket(this);
+	log.debug("Received " + dg);
 	processReceivedDatagram(dg);
       } catch (InterruptedIOException e) {
       }
