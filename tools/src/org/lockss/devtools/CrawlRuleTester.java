@@ -282,13 +282,18 @@ public class CrawlRuleTester extends Thread {
 
       if (!m_extracted.contains(url)) {
         m_extracted.add(url);
-        if (CrawlerImpl.isSupportedUrlProtocol(url) &&
-            m_crawlSpec.isIncluded(url)) {
-          m_incls.add(url);
-        }
-        else {
-          m_excls.add(url);
-        }
+	try {
+	  String normUrl = UrlUtil.normalizeUrl(url);
+	  if (CrawlerImpl.isSupportedUrlProtocol(normUrl) &&
+	      m_crawlSpec.isIncluded(normUrl)) {
+	    m_incls.add(normUrl);
+	  }
+	  else {
+	    m_excls.add(normUrl);
+	  }
+	} catch (MalformedURLException e) {
+	  m_excls.add(url);
+	}
       }
 
     }
