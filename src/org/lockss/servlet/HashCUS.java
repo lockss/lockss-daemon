@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.15 2005-01-04 03:03:05 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.16 2005-01-05 09:47:21 tlipkis Exp $
  */
 
 /*
@@ -387,14 +387,15 @@ public class HashCUS extends LockssServlet {
     addInputRow(tbl, "Verifier", KEY_VERIFIER, 50, getParameter(KEY_VERIFIER));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
-    tbl.add(rb(HASH_TYPE_CONTENT, KEY_HASH_TYPE, 
-	       hashType == null || HASH_TYPE_CONTENT.equals(hashType)));
+    tbl.add(radioButton(HASH_TYPE_CONTENT, KEY_HASH_TYPE, 
+			(hashType == null ||
+			 HASH_TYPE_CONTENT.equals(hashType))));
     tbl.add("&nbsp;&nbsp;");
-    tbl.add(rb(HASH_TYPE_NAME, KEY_HASH_TYPE,
-	       HASH_TYPE_NAME.equals(hashType)));
+    tbl.add(radioButton(HASH_TYPE_NAME, KEY_HASH_TYPE,
+			HASH_TYPE_NAME.equals(hashType)));
     tbl.add("&nbsp;&nbsp;");
-    tbl.add(rb(HASH_TYPE_SNCUSS, KEY_HASH_TYPE,
-	       HASH_TYPE_SNCUSS.equals(hashType)));
+    tbl.add(radioButton(HASH_TYPE_SNCUSS, KEY_HASH_TYPE,
+			HASH_TYPE_SNCUSS.equals(hashType)));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
     tbl.add(checkBox("Record filtered stream", "true", KEY_RECORD, isRecord));
@@ -418,23 +419,6 @@ public class HashCUS extends LockssServlet {
     in.setSize(size);
     setTabOrder(in);
     tbl.add(in);
-  }
-
-  Element rb(String label, String key, boolean checked) {
-    return rb(label, label, key, checked);
-  }
-
-  Element rb(String label, String value, String key, boolean checked) {
-    Composite c = new Composite();
-    Input in = new Input(Input.Radio, key, value);
-    if (checked) {
-      in.check();
-    }
-    setTabOrder(in);
-    c.add(in);
-    c.add(" ");
-    c.add(label);
-    return c;
   }
 
   private void doit() {

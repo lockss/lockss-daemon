@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.35 2005-01-04 03:01:59 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.36 2005-01-05 09:47:21 tlipkis Exp $
  */
 
 /*
@@ -912,24 +912,6 @@ public class AuConfig extends LockssServlet {
       comp.add("</font></center><br>");
     }
     return comp;
-  }
-
-  protected Element radioButton(String label, String key, boolean checked) {
-    return radioButton(label, label, key, checked);
-  }
-
-  protected Element radioButton(String label, String value,
-			       String key, boolean checked) {
-    Composite c = new Composite();
-    Input in = new Input(Input.Radio, key, value);
-    if (checked) {
-      in.check();
-    }
-    setTabOrder(in);
-    c.add(in);
-    c.add(" ");
-    c.add(label);
-    return c;
   }
 
   /** Add auid to form in a hidden field */

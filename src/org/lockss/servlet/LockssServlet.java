@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.51 2005-01-04 03:03:49 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.52 2005-01-05 09:47:21 tlipkis Exp $
  */
 
 /*
@@ -872,7 +872,13 @@ public abstract class LockssServlet extends HttpServlet
     return btn;
   }
 
-  /** Return a (possibly labelled) checkbox. */
+  /** Return a (possibly labelled) checkbox.
+   * @param label appears to right of checkbox if non null
+   * @param value value included in result set if box checked
+   * @param key form key to which result set is assigned
+   * @param checked if true, box is initially checked
+   * @return a checkbox Element
+   */
   Element checkBox(String label, String value, String key, boolean checked) {
     Input in = new Input(Input.Checkbox, key, value);
     if (checked) {
@@ -888,6 +894,37 @@ public abstract class LockssServlet extends HttpServlet
       c.add(label);
       return c;
     }
+  }
+
+  /** Return a labelled rasio button
+   * @param label label to right of circle, and form value if checked
+   * @param key form key to which value is assigned
+   * @param checked if true, is initially checked
+   * @return a readio button Element
+   */
+  protected Element radioButton(String label, String key, boolean checked) {
+    return radioButton(label, label, key, checked);
+  }
+
+  /** Return a labelled rasio button
+   * @param label appears to right of circle if non null
+   * @param value value assigned to key if box checked
+   * @param key form key to which value is assigned
+   * @param checked if true, is initially checked
+   * @return a readio button Element
+   */
+  protected Element radioButton(String label, String value,
+			       String key, boolean checked) {
+    Composite c = new Composite();
+    Input in = new Input(Input.Radio, key, value);
+    if (checked) {
+      in.check();
+    }
+    setTabOrder(in);
+    c.add(in);
+    c.add(" ");
+    c.add(label);
+    return c;
   }
 
   /** Add html tags to grey the text */
