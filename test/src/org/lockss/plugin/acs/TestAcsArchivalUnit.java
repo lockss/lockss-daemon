@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.2 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.3 2003-09-19 22:39:52 eaalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.state.AuState;
+import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 
 public class TestAcsArchivalUnit
@@ -136,7 +137,7 @@ public class TestAcsArchivalUnit
 
     theDaemon.getLockssRepository(acsAu);
     theDaemon.getNodeManager(acsAu);
-    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(acsAu,
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(acsAu,
         new RangeCachedUrlSetSpec(base_url.toString()));
 
     // start url - should be cached

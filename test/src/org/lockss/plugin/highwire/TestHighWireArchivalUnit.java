@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.29 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.30 2003-09-19 22:39:52 eaalto Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
@@ -106,7 +107,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
-    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
     UrlCacher uc =
         plugin.makeUrlCacher(cus, "http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
@@ -120,7 +121,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepository(hwAu);
     theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
-    GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
     UrlCacher uc =
       plugin.makeUrlCacher(cus, "http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertFalse(uc.shouldBeCached());
@@ -193,7 +194,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
       makeAU(new URL("http://www.bmj.com/"), 42);
     assertEquals("www.bmj.com, vol. 42", au1.getName());
   }
- 
+
  public void testGetFilterRuleNoContentType() throws Exception {
     HighWireArchivalUnit au =
       makeAU(new URL("http://shadow1.stanford.edu/"), 42);

@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.10 2003-09-17 06:09:59 troberts Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.11 2003-09-19 22:39:52 eaalto Exp $
  */
 
 /*
@@ -73,19 +73,6 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
 
   protected ProjectMuseArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
-  }
-
-  public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new GenericFileCachedUrl(owner, url);
-  }
-
-  public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-                                          CachedUrlSetSpec cuss) {
-    return new GenericFileCachedUrlSet(owner, cuss);
-  }
-
-  public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-    return new GenericFileUrlCacher(owner, url);
   }
 
   public Collection getUrlStems() {
@@ -234,7 +221,7 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     volBuff.append("journals/");
     volBuff.append(journal);
     volBuff.append("/v");
-    
+
     // pad out the 'vXXX' to 3 digits
     if (volume < 100) {
       if (volume < 10) {

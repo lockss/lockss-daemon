@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.11 2003-07-18 02:14:25 eaalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.12 2003-09-19 22:39:52 eaalto Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.test.StringInputStream;
  * @version 0.0
  */
 
-public class SimulatedUrlCacher extends GenericFileUrlCacher {
+public class SimulatedUrlCacher extends BaseUrlCacher {
   private String fileRoot;
   private String contentName = null;
   private File contentFile = null;

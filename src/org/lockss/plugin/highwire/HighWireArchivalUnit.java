@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.32 2003-09-17 06:09:59 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.33 2003-09-19 22:39:52 eaalto Exp $
  */
 
 /*
@@ -149,24 +149,9 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return null;
   }
 
-
-  public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-					  CachedUrlSetSpec cuss) {
-    return new GenericFileCachedUrlSet(owner, cuss);
-  }
-
-  public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new GenericFileCachedUrl(owner, url);
-  }
-
-  public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-    return new GenericFileUrlCacher(owner, url);
-  }
-
   public String getManifestPage() {
     return makeStartUrl(base, volume);
   }
-
 
   private CrawlSpec makeCrawlSpec(URL base, int volume)
       throws REException {

@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.1 2003-09-15 22:28:33 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.2 2003-09-19 22:39:52 eaalto Exp $
  */
 
 /*
@@ -81,19 +81,6 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
 
   protected AcsArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
-  }
-
-  public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new GenericFileCachedUrl(owner, url);
-  }
-
-  public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-                                          CachedUrlSetSpec cuss) {
-    return new GenericFileCachedUrlSet(owner, cuss);
-  }
-
-  public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-    return new GenericFileUrlCacher(owner, url);
   }
 
   public Collection getUrlStems() {
