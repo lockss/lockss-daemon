@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.4 2003-03-28 23:39:41 tal Exp $
+ * $Id: TestPartnerList.java,v 1.5 2003-04-02 02:43:43 tal Exp $
  */
 
 /*
@@ -103,92 +103,99 @@ public class TestPartnerList extends LockssTestCase {
 
   public void testInitialPartnerList() {
     // partners in newly configured PartnerList should be default partner list
-    assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
+  }
+
+  private Set setOf(Collection coll) {
+    if (coll == null || coll instanceof Set) {
+      return (Set)coll;
+    }
+    return new HashSet(coll);
   }
 
   public void testRemovePartner() {
-    assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
     pl.removePartner(inet1);
-    assertEquals(SetUtil.set(inet2), pl.getPartners());
+    assertEquals(SetUtil.set(inet2), setOf(pl.getPartners()));
   }
 
   public void testNoAddMulticastPartner() {
     removeAll();
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     pl.multicastPacketReceivedFrom(inet3);
     // inet3 shouldn't get added because recently seen a multicast from it
     pl.addPartner(inet3);
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
   }
 
   public void testRemoveMulticastPartner() {
     // this depends on not exceeding max partners (which is 3)
     removeAll();
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     pl.addPartner(inet3);
-    assertEquals(SetUtil.set(inet3), pl.getPartners());
+    assertEquals(SetUtil.set(inet3), setOf(pl.getPartners()));
     pl.multicastPacketReceivedFrom(inet3);
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
   }
 
   public void testAddPartner() {
     // this depends on not exceeding max partners (which is 3)
     removeAll();
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     pl.addPartner(inet3);
-    assertEquals(SetUtil.set(inet3), pl.getPartners());
+    assertEquals(SetUtil.set(inet3), setOf(pl.getPartners()));
     pl.addPartner(inet4, 0.0);
-    assertEquals(SetUtil.set(inet3), pl.getPartners());
+    assertEquals(SetUtil.set(inet3), setOf(pl.getPartners()));
     pl.addPartner(inet4, 1.0);
-    assertEquals(SetUtil.set(inet3, inet4), pl.getPartners());
+    assertEquals(SetUtil.set(inet3, inet4), setOf(pl.getPartners()));
   }
 
   public void testAddPartnerOverMax() {
     removeAll();
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     pl.addPartner(inet1);
-    assertEquals(SetUtil.set(inet1), pl.getPartners());
+    assertEquals(SetUtil.set(inet1), setOf(pl.getPartners()));
     // want them added at different times so can predict remove order
     TimeBase.step();
     pl.addPartner(inet2, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
     TimeBase.step();
     pl.addPartner(inet3, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2, inet3), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet2, inet3), setOf(pl.getPartners()));
     TimeBase.step();
     // adding this one should cause oldest (inet1) to be removed
     pl.addPartner(inet4, 1.0);
-    assertEquals(SetUtil.set(inet2, inet3, inet4), pl.getPartners());
+    assertEquals(SetUtil.set(inet2, inet3, inet4), setOf(pl.getPartners()));
     TimeBase.step();
     pl.addPartner(inet1, 1.0);
-    assertEquals(SetUtil.set(inet1, inet3, inet4), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet3, inet4), setOf(pl.getPartners()));
   }
 
   public void testAddPartnerTimeToRemove() {
     removeAll();
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     pl.addPartner(inet1);
-    assertEquals(SetUtil.set(inet1), pl.getPartners());
+    assertEquals(SetUtil.set(inet1), setOf(pl.getPartners()));
     // want them added at different times so can predict remove order
     TimeBase.step();
     pl.addPartner(inet2, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2), pl.getPartners());
+    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
     // step past minPartnerRemoveInterval
     TimeBase.step(1000);
     // adding this should remove oldest, inet1, because it's been more the
     // minPartnerRemoveInterval since last remove
     pl.addPartner(inet3, 1.0);
-    assertEquals(SetUtil.set(inet2, inet3), pl.getPartners());
+    assertEquals(SetUtil.set(inet2, inet3), setOf(pl.getPartners()));
   }
 
   public void testAddPartnerRestoresDefault() {
     removeAll();
-    assertEquals(EMPTY_SET, pl.getPartners());
+    assertEquals(EMPTY_SET, setOf(pl.getPartners()));
     // make sure past lastPartnerRemoveTime
     TimeBase.step(1000);
     // adding this should then remove it, then add one from the default list
     pl.addPartner(inet3);
-    Set p = pl.getPartners();
+    Set p = setOf(pl.getPartners());
     assertEquals(1, p.size());
     assertTrue(p.equals(SetUtil.set(inet1)) ||
 	       p.equals(SetUtil.set(inet2)));
