@@ -202,16 +202,19 @@ class RuleTester {
   private void buildUrlSets(URL srcUrl,
                             Set fetchSet,
                             Set ignoreSet,
+
                             Set crawledSet) {
     try {
       URLConnection conn = srcUrl.openConnection();
       fetchCount++;
       String type = conn.getContentType();
+      String encoding = conn.getContentEncoding();
 
       if (type == null || !type.toLowerCase().startsWith("text/html"))
         return;
 
       Reader reader = new InputStreamReader(conn.getInputStream());
+
       String nextUrl = null;
       while ( (nextUrl = extractNextLink(reader, srcUrl)) != null) {
         if (!crawledSet.contains(nextUrl)) {
@@ -226,7 +229,8 @@ class RuleTester {
         }
       }
     }
-    catch (IOException ex) {
+    catch (Exception ex) {
+      System.out.println("Error reading " + srcUrl + "Ex:" + ex.getMessage());
     }
   }
 
@@ -427,7 +431,7 @@ class RuleTester {
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
       if (!isSupportedUrlProtocol(srcUrl, returnStr)) {
-//        System.out.println("skipping unsupported url " + returnStr);
+        System.out.println("skipping unsupported url " + returnStr);
       }
       else {
         URL retUrl = new URL(srcUrl, returnStr);
