@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.12 2003-06-20 22:34:51 claire Exp $
+ * $Id: Plugin.java,v 1.13 2003-07-22 00:33:51 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,12 @@ public interface Plugin {
    * @return a String representing the current version
    */
   public String getVersion();
+
+  /**
+   * Return the humad-readable name of the plugin
+   * @return the name
+   */
+  public String getPluginName();
 
   /**
    * Return the list of names of the {@link ArchivalUnit}s and volranges

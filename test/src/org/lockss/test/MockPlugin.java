@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.7 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockPlugin.java,v 1.8 2003-07-22 00:33:51 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,10 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   public String getVersion() {
     return "MockVersion";
   }
+
+    public String getPluginName() {
+      return "Mock Plugin";
+    }
 
   /**
    * Return the list of names of the Archival Units and volranges supported by

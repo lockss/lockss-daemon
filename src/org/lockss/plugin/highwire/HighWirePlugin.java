@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.22 2003-07-21 08:35:09 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.23 2003-07-22 00:33:51 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,10 @@ public class HighWirePlugin extends BasePlugin {
 
   public String getVersion() {
     return "Pre-release";
+  }
+
+  public String getPluginName() {
+    return "HighWire Press";
   }
 
   public List getSupportedAUNames() {

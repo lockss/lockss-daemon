@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.10 2003-06-20 22:34:54 claire Exp $
+ * $Id: SimulatedPlugin.java,v 1.11 2003-07-22 00:33:51 tlipkis Exp $
  */
 
 /*
@@ -136,6 +136,10 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
 
   public String getVersion() {
     return "SimulatedVersion";
+  }
+
+  public String getPluginName() {
+    return "Simulated Content";
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.36 2003-07-21 08:34:28 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.37 2003-07-22 00:33:51 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,10 @@ public class NullPlugin {
 
     public String getVersion() {
       return "NullVersion";
+    }
+
+    public String getPluginName() {
+      return "Null Plugin";
     }
 
     public LockssDaemon getDaemon() {
