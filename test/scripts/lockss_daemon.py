@@ -34,15 +34,16 @@ class Framework:
     def __init__(self, frameworkDir, username, password,
                  projectDir=None, daemonCount=1,
                  hostname='localhost', startPort=8081,
-                 debuglevel='debug'):
+                 debugLevel='debug'):
 
         self.configCount = 0 # used when writing daemon properties
 
         self.frameworkDir = path.abspath(frameworkDir)
         self.projectDir = projectDir
-        self.daemonCount = daemonCount
+        self.daemonCount = int(daemonCount)
         self.clientList = [] # ordered list of clients.
         self.daemonList = [] # ordered list of daemons.
+        self.startPort = int(startPort)
 
         self.isRunning = False
         if self.projectDir == None:
@@ -54,15 +55,12 @@ class Framework:
         if not self.__isProjectDirReady():
             raise LockssError("Project dir %s is not ready." % self.projectDir)
 
-        # create the top level work dir
-        self.__initDir(self.frameworkDir)
-
         # write the framework global config file.
         globalConfig = path.join(self.frameworkDir, 'lockss.txt')
-        self.__writeLockssConfig(globalConfig, debuglevel)
+        self.__writeLockssConfig(globalConfig, debugLevel)
 
         # Set up a each daemon and create a work directory for it.
-        for port in range(startPort, int(startPort) + int(self.daemonCount)):
+        for port in range(self.startPort, self.startPort + self.daemonCount):
             url = 'http://' + hostname + ':' + str(port)
             daemonDir = path.abspath(path.join(self.frameworkDir,
                                                'daemon-' + str(port)))
@@ -71,11 +69,12 @@ class Framework:
             # local config
             localConfig = path.join(daemonDir, 'local.txt')
             # Init the directory
-            self.__initDir(daemonDir)
+            self.__mkDir(daemonDir)
             # write the daemon-specific config file
             self.__writeLocalConfig(localConfig, daemonDir, port)
             # Create daemon
-            daemon = LockssDaemon(daemonDir, self.__makeClasspath(), (globalConfig, localConfig))
+            daemon = LockssDaemon(daemonDir, self.__makeClasspath(),
+                                  (globalConfig, localConfig))
             # Add client and daemon to map
             self.clientList.append(client)
             self.daemonList.append(daemon)
@@ -100,8 +99,7 @@ class Framework:
         self.isRunning = False
 
     def clean(self):
-        for client in self.clientList:
-            shutil.rmtree(client.daemonDir)
+        shutil.rmtree(self.frameworkDir)
 
     def __makeClasspath(self):
         cp = []
@@ -142,13 +140,14 @@ class Framework:
 
         return True
 
-    def __initDir(self, dir):
+    def __mkDir(self, dir):
         if not path.isdir(dir):
             os.mkdir(dir)
 
-    def __writeLockssConfig(self, file, debuglevel):
+    def __writeLockssConfig(self, file, debugLevel):
         f = open(file, 'w')
-        f.write(globalConfigTemplate % (debuglevel)) # defined at the end of this file
+        # defined at the end of this file
+        f.write(globalConfigTemplate % (debugLevel))
         f.close()
 
     def __writeLocalConfig(self, file, dir, port):
@@ -200,6 +199,16 @@ class Client:
         if not self.waitForDeleteAu(au):
             raise LockssError("Timed out while waiting for "\
                               "AU %s to be deleted." % au)
+
+    def requestTreeWalk(self, au):
+        """ Possibly a poorly named method.  This will merely deactivate
+        and then reactivate the specified AU, which may or may not trigger
+        a tree walk.  Worst case, it actually pushes the schedule back and
+        the tree walk occurs later than it would have.  Best case, a tree walk
+        happens in about 10 seconds. """
+        self.deactivateAu(au, True)
+        self.reactivateAu(au, True)
+        
 
     def reactivateAu(self, au, doWait=True):
         """
@@ -315,11 +324,9 @@ class Client:
         """ Return true if the AU has been repaired by a SNCUSS poll """
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
-            # some rows do not have a range.
             if not row.has_key('Range'):
                 continue
-            if not (rowPollType == 'C' and row['Range'] == 'single node'):
+            if not (row['PollType'] == 'C' and row['Range'] == 'single node'):
                 continue
             rowUrl = row['URL']
             rowStatus = row['Status']
@@ -332,9 +339,7 @@ class Client:
         """ Return true if the AU has been repaired by non-ranged name poll """
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
-            # some rows do not have a range.
-            if row.has_key('Range') or not rowPollType == 'N':
+            if row.has_key('Range') or not row['PollType'] == 'N':
                 continue
             rowUrl = row['URL']
             rowStatus = row['Status']
@@ -415,7 +420,6 @@ class Client:
         """ Wait for a top level name poll to be called. """
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not row['PollType'] == 'N':
                 continue
             if row['URL'] == 'lockssau:':
@@ -461,7 +465,6 @@ class Client:
         """ Wait for a top level name poll to be lost. """
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not row['PollType'] == 'N':
                 continue
             if row['URL'] == 'lockssau:':
@@ -473,7 +476,6 @@ class Client:
         """ Wait for a top level name poll to be won. """
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not row['PollType'] == 'N':
                 continue
             if row['URL'] == 'lockssau:':
@@ -481,14 +483,29 @@ class Client:
         # Poll wasn't found
         return False
 
-    def hasLostNamePoll(self, au, node):
-        """ Wait for a name poll to be won on the given node """
+    def hasNamePoll(self, au, node):
+        """ Wait for a name poll to run on a given node (won or active) """
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not row['PollType'] == 'N':
                 continue
             if row['URL'] == node.url:
+                return (row['Status'] == 'Active' or row['Status'] == 'Won')
+        # Poll wasn't found
+        return False
+
+
+    def hasLostNamePoll(self, au, node):
+        """ Wait for a name poll to be won on the given node """
+        if not node:
+            url = au.baseUrl
+        else:
+            url = node.url
+        tab = self.getAuPolls(au)
+        for row in tab:
+            if row.has_key('Range') or not row['PollType'] == 'N':
+                continue
+            if row['URL'] == url:
                 return row['Status'] == 'Lost'
         # Poll wasn't found
         return False
@@ -501,11 +518,10 @@ class Client:
             url = node.url
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
-            if not row['PollType'] == 'N':
+            if row.has_key('Range') or not row['PollType'] == 'N':
                 continue
             if row['URL'] == url:
-                return row['Status'] == 'Lost'
+                return row['Status'] == 'Won'
         # Poll wasn't found
         return False
 
@@ -517,7 +533,6 @@ class Client:
             url = node.url
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not (row['PollType'] == 'N' and row.has_key('Range')):
                 continue
             if row['URL'] == url:
@@ -526,14 +541,13 @@ class Client:
         return False
 
     def hasLostRangedNamePoll(self, au, node):
-        """ Wait for a ranged name poll to be won on the given node """
+        """ Wait for a ranged name poll to be lost on the given node """
         if not node:
             url = au.baseUrl
         else:
             url = node.url
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not (row['PollType'] == 'N' and row.has_key('Range')):
                 continue
             if row['URL'] == url:
@@ -549,7 +563,6 @@ class Client:
             url = node.url
         tab = self.getAuPolls(au)
         for row in tab:
-            rowPollType = row['PollType']
             if not (row['PollType'] == 'N' and row.has_key('Range')):
                 continue
             if row['URL'] == url:
@@ -569,7 +582,7 @@ class Client:
         # Poll wasn't found
         return False
 
-    def hasWonSNCUSSPoll(self, au, node):
+    def hasWonSNCUSSContentPoll(self, au, node):
         """ Wait for a Single-Node CUSS poll for the given AU and node to be won """
         tab = self.getAuPolls(au)
         for row in tab:
@@ -675,34 +688,47 @@ class Client:
                                     sleep=DEF_SLEEP):
         """ Block until a top level name poll is won. """
         def waitFunc():
-            return self.hasWonTopLevelContentPoll(au)
+            return self.hasWonTopLevelNamePoll(au)
         return wait(waitFunc, timeout, sleep)
 
+    def waitForNamePoll(self, au, node, timeout=DEF_TIMEOUT,
+                        sleep=DEF_SLEEP):
+        """ Block until a node level name poll is run (active or won) """
+        def waitFunc():
+            return self.hasNamePoll(au, node)
+        return wait(waitFunc, timeout, sleep)
+    
     def waitForWonNamePoll(self, au, node, timeout=DEF_TIMEOUT,
-                                    sleep=DEF_SLEEP):
+                           sleep=DEF_SLEEP):
         """ Block until a node level name poll is won. """
         def waitFunc():
-            return self.hasWonTopLevelContentPoll(au)
+            return self.hasWonNamePoll(au, node)
         return wait(waitFunc, timeout, sleep)
         
     def waitForWonSNCUSSContentPoll(self, au, node, timeout=DEF_TIMEOUT,
                                      sleep=DEF_SLEEP):
         """ Block until a SNCUSS content poll is won. """
         def waitFunc():
-            return self.hasWonTopLevelContentPoll(au)
+            return self.hasWonSNCUSSContentPoll(au,  node)
         return wait(waitFunc, timeout, sleep)
 
-    def waitForRangedNamePoll(self, au, timeout=DEF_TIMEOUT,
+    def waitForRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                               sleep=DEF_SLEEP):
         """ Block until a ranged name poll has occured (active or won)"""
         def waitFunc():
-            return self.hasRangedNamePoll(au)
+            return self.hasRangedNamePoll(au, node)
         return wait(waitFunc, timeout, sleep)
 
-    def waitForWonRangedNamePoll(self, au, timeout=DEF_TIMEOUT,
+    def waitForWonRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                                  sleep=DEF_SLEEP):
         def waitFunc():
-            return self.hasWonRangedNamePoll(au)
+            return self.hasWonRangedNamePoll(au, node)
+        return wait(waitFunc, timeout, sleep)
+
+    def waitForLostRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
+                                  sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.hasLostRangedNamePoll(au, node)
         return wait(waitFunc, timeout, sleep)
     
     def waitForDamage(self, au, node=None, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
@@ -728,7 +754,8 @@ class Client:
             return self.isNameRepaired(au, node)
         return wait(waitFunc, timeout, sleep)
 
-    def waitForRangedNameRepair(self, au, node=None, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+    def waitForRangedNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,
+                                sleep=DEF_SLEEP):
         def waitFunc():
             return self.isRangedNameRepaired(au, node)
         return wait(waitFunc, timeout, sleep)
