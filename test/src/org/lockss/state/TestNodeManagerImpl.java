@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.29 2003-02-26 03:06:21 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.30 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -415,12 +415,13 @@ public class TestNodeManagerImpl
     theDaemon.getPollManager().startService();
     contentPoll = createPoll(TEST_URL, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
+    PollSpec spec = results.getPollSpec();
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
     // won content poll
     // - running
     PollState pollState = new PollState(results.getType(),
-                                        results.getLwrBound(),
-                                        results.getUprBound(),
+                                        spec.getLwrBound(),
+                                        spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
                                         null);
@@ -430,11 +431,12 @@ public class TestNodeManagerImpl
 
     // - repairing
     pollState = new PollState(results.getType(),
-                              results.getLwrBound(),
-                              results.getUprBound(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
                               PollState.REPAIRING,
                               results.getStartTime(),
                               null);
+    spec = results.getPollSpec();
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     testReputationChanges(results);
@@ -442,10 +444,11 @@ public class TestNodeManagerImpl
     // lost content poll
     contentPoll = createPoll(TEST_URL + "/branch1", true, 5, 10);
     results = contentPoll.getVoteTally();
+    spec = results.getPollSpec();
     // - repairing
     pollState = new PollState(results.getType(),
-                              results.getLwrBound(),
-                              results.getUprBound(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
 
                               PollState.REPAIRING,
                               results.getStartTime(),
@@ -457,8 +460,8 @@ public class TestNodeManagerImpl
     // - internal
     nodeState = nodeManager.getNodeState(getCUS(TEST_URL + "/branch1"));
     pollState = new PollState(results.getType(),
-                              results.getLwrBound(),
-                              results.getUprBound(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
                               null);
@@ -473,8 +476,8 @@ public class TestNodeManagerImpl
 
     // - leaf
     nodeState = nodeManager.getNodeState(getCUS(TEST_URL + "/branch1/file1.doc"));
-    pollState = new PollState(results.getType(), results.getLwrBound(),
-                              results.getUprBound(),
+    pollState = new PollState(results.getType(), spec.getLwrBound(),
+                              spec.getUprBound(),
                               PollState.RUNNING,
                               results.getStartTime(),
                               null);
@@ -510,14 +513,15 @@ public class TestNodeManagerImpl
 
     contentPoll = createPoll(auUrl, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
+    PollSpec spec = results.getPollSpec();
     AuState auState = nodeManager.getAuState();
     assertEquals(-1, auState.getLastTopLevelPollTime());
 
     TimeBase.setSimulated(TimeBase.nowMs());
     NodeState nodeState = nodeManager.getNodeState(getCUS(auUrl));
     PollState pollState = new PollState(results.getType(),
-                                        results.getLwrBound(),
-                                        results.getUprBound(),
+                                        spec.getLwrBound(),
+                                        spec.getUprBound(),
                                         PollState.RUNNING,
                                         results.getStartTime(),
                                         null);
@@ -534,11 +538,12 @@ public class TestNodeManagerImpl
     theDaemon.getPollManager().startService();
     contentPoll = createPoll(TEST_URL + "/branch2", false, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
+    PollSpec spec = results.getPollSpec();
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL + "/branch2"));
     // won name poll
     PollState pollState = new PollState(results.getType(),
-                                        results.getLwrBound(),
-                                        results.getUprBound(),
+                                        spec.getLwrBound(),
+                                        spec.getUprBound(),
 
                                         PollState.RUNNING,
                                         results.getStartTime(),
@@ -558,9 +563,10 @@ public class TestNodeManagerImpl
     // lost name poll
     contentPoll = createPoll(TEST_URL + "/branch2/file1.doc", false, 5, 10);
     results = contentPoll.getVoteTally();
+    spec = results.getPollSpec();
     pollState = new PollState(results.getType(),
-                              results.getLwrBound(),
-                              results.getUprBound(),
+                              spec.getLwrBound(),
+                              spec.getUprBound(),
 
                               PollState.RUNNING,
                               results.getStartTime(),
@@ -642,18 +648,16 @@ public class TestNodeManagerImpl
     byte[] bytes = new byte[20];
     random.nextBytes(bytes);
     try {
+
       testmsg = LcapMessage.makeRequestMsg(
-          url,
-          "lwr",
-          "upr",
+          new PollSpec("testau", "testplugin", url, "lwr", "upr", null),
           null,
           bytes,
           bytes,
           (isContentPoll ? LcapMessage.CONTENT_POLL_REQ :
            LcapMessage.NAME_POLL_REQ),
           123321,
-          testID,
-          "testplugin 1.0");
+          testID);
     }
     catch (IOException ex) {
       fail("can't create test name message" + ex.toString());

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.39 2003-02-26 03:06:21 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.40 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -142,8 +142,9 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
     NodeState nodeState = getNodeState(cus);
-    PollState pollState = new PollState(state.getType(), state.getLwrBound(),
-                                        state.getUprBound(),
+    PollSpec spec = state.getPollSpec();
+    PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
+                                        spec.getUprBound(),
                                         PollState.RUNNING, state.getStartTime(),
                                         null);
     ((NodeStateImpl)nodeState).addPollState(pollState);
@@ -541,8 +542,8 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   private void callNamePoll(CachedUrlSet cus) {
     try {
-      theDaemon.getPollManager().requestPoll(cus, null, null,
-                                             LcapMessage.NAME_POLL_REQ);
+      theDaemon.getPollManager().requestPoll(LcapMessage.NAME_POLL_REQ,
+                                             new PollSpec(cus));
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
       // the treewalk will fix this eventually
@@ -551,9 +552,9 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   private void callTopLevelPoll() {
     try {
-      theDaemon.getPollManager().requestPoll(managerAu.getAUCachedUrlSet(),
-                                             null, null,
-                                             LcapMessage.CONTENT_POLL_REQ);
+      theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+      new PollSpec(managerAu.getAUCachedUrlSet()));
+
     } catch (IOException ioe) {
       logger.error("Couldn't make top level poll request.", ioe);
       // the treewalk will fix this eventually
@@ -577,8 +578,9 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     Iterator polls = state.getActivePolls();
     while (polls.hasNext()) {
       PollState pollState = (PollState)polls.next();
-      if ((pollState.getLwrBound() == results.getLwrBound()) &&
-          (pollState.getUprBound() == results.getUprBound()) &&
+      PollSpec spec = results.getPollSpec();
+      if ((pollState.getLwrBound() == spec.getLwrBound()) &&
+          (pollState.getUprBound() == spec.getUprBound()) &&
           (pollState.getType() == results.getType())) {
         return pollState;
       }
@@ -630,8 +632,8 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
           cus = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(rSpec);
       }
-      theDaemon.getPollManager().requestPoll(cus, null, null,
-          LcapMessage.CONTENT_POLL_REQ);
+      theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+                                             new PollSpec(cus));
     }
   }
 

@@ -7,6 +7,7 @@ import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.poller.*;
 
 
 /** JUnitTest case for class: org.lockss.protocol.Identity */
@@ -22,6 +23,7 @@ public class TestLcapIdentity extends LockssTestCase {
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
   private static String pluginid = "testplugin 1.0";
+  private static String archivalid = "testarchive 1.0";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
@@ -44,16 +46,14 @@ public class TestLcapIdentity extends LockssTestCase {
     testReputation = IdentityManager.INITIAL_REPUTATION;
     testIdKey = LcapIdentity.makeIdKey(testAddress);
     try {
-      testMsg = LcapMessage.makeRequestMsg(urlstr,
-          lwrbnd,
-          uprbnd,
+      PollSpec spec = new PollSpec(archivalid, pluginid, urlstr, lwrbnd, uprbnd,null);
+      testMsg = LcapMessage.makeRequestMsg(spec,
           testentries,
           testbytes,
           testbytes,
           LcapMessage.CONTENT_POLL_REQ,
           100000,
-          fakeId,
-          pluginid);
+          fakeId);
     }
     catch (Exception ex) {
       fail("message request creation failed.");

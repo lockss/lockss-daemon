@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.33 2003-02-20 02:23:40 aalto Exp $
+* $Id: PollManager.java,v 1.34 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -132,30 +132,26 @@ public class PollManager  implements LockssManager {
   /**
    * make an election by sending a request packet.  This is only
    * called from the tree walk. The poll remains pending in the
-   * @param cus the CachedUrlSet on which to run poll
-   * @param regexp the String representing the regexp for this poll
    * @param opcode the poll message opcode
+   * @param pollspec the PollSpec used to define the range and location of poll
    * @throws IOException thrown if Message construction fails.
    */
-  public void requestPoll(CachedUrlSet cus, String lwrBound, String uprBound, int opcode)
+  public void requestPoll(int opcode, PollSpec pollspec)
       throws IOException {
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
     long duration = calcDuration(opcode, cus);
-    ArchivalUnit au = cus.getArchivalUnit();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
-    LcapMessage msg = LcapMessage.makeRequestMsg(cus.getUrl(),
-        lwrBound,
-        uprBound,
+    LcapMessage msg = LcapMessage.makeRequestMsg(pollspec,
         null,
         challenge,
         verifier,
         opcode,
         duration,
-        theDaemon.getIdentityManager().getLocalIdentity(),
-        au.getPluginId());
+        theDaemon.getIdentityManager().getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
-    sendMessage(msg, au);
+    sendMessage(msg,cus.getArchivalUnit());
   }
 
 
@@ -180,8 +176,8 @@ public class PollManager  implements LockssManager {
     Poll p = findPoll(msg);
     if (p != null) {
       p.receiveMessage(msg);
-      CachedUrlSet cus = p.getCachedUrlSet();
-      theDaemon.getNodeManager(p.getArchivalUnit()).startPoll(cus,
+      CachedUrlSet cus = p.getPollSpec().getCachedUrlSet();
+      theDaemon.getNodeManager(cus.getArchivalUnit()).startPoll(cus,
           p.getVoteTally());
     }
     else {
@@ -219,21 +215,17 @@ public class PollManager  implements LockssManager {
    * make a new poll of the type defined by the incoming message.
    * @param msg <code>Message</code> to use for
    * @return a new Poll object of the required type
-   * @throws ProtocolException if message opcode is unknown or if new poll would
-   * conflict with currently running poll.
+   * @throws ProtocolException if message opcode is unknown
    */
   Poll makePoll(LcapMessage msg) throws ProtocolException {
     Poll ret_poll;
-    ArchivalUnit au;
+    PollSpec spec = new PollSpec(msg);
     CachedUrlSet cus;
 
     // check for presence of item in the cache
-    try {
-      au = theDaemon.getPluginManager().findArchivalUnit(msg.getTargetUrl());
-      cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getLwrBound(),
-                                msg.getUprBound());
-    }
-    catch (Exception ex) {
+    cus = spec.getCachedUrlSet();
+
+    if(cus == null) {
       theLog.debug(msg.getTargetUrl() + " not in this cache.");
       return null;
     }
@@ -248,7 +240,7 @@ public class PollManager  implements LockssManager {
     }
 
     // create the appropriate poll for the message type
-    ret_poll = createPoll(msg, cus);
+    ret_poll = createPoll(msg, spec);
 
     if(ret_poll != null) {
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
@@ -314,11 +306,12 @@ public class PollManager  implements LockssManager {
       Poll p = ((PollManagerEntry)iter.next()).poll;
 
       if(!p.getMessage().isVerifyPoll()) { // eliminate running verify polls
+        CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
         int rel_pos = theDaemon.getLockssRepository(
-            cus.getArchivalUnit()).cusCompare(cus, p.getCachedUrlSet());
+            cus.getArchivalUnit()).cusCompare(cus, pcus);
         if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
            rel_pos != LockssRepository.NO_RELATION) {
-          return p.getCachedUrlSet();
+          return pcus;
         }
       }
     }
@@ -379,26 +372,23 @@ public class PollManager  implements LockssManager {
     }
   }
 
-  void requestVerifyPoll(String url, String lwrBound, String uprBound, long duration, Vote vote)
+  void requestVerifyPoll(PollSpec pollspec, long duration, Vote vote)
       throws IOException {
 
     theLog.debug("Calling a verify poll...");
     IdentityManager idmgr = theDaemon.getIdentityManager();
-    ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(url);
-    LcapMessage reqmsg = LcapMessage.makeRequestMsg(url,
-        lwrBound,
-        uprBound,
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
+    LcapMessage reqmsg = LcapMessage.makeRequestMsg(pollspec,
         null,
         vote.getVerifier(),
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
         duration,
-        idmgr.getLocalIdentity(),
-        au.getPluginId());
+        idmgr.getLocalIdentity());
 
     LcapIdentity originator =  idmgr.findIdentity(vote.getIDAddress());
     theLog.debug("sending our verification request to " + originator.toString());
-    sendMessageTo(reqmsg, au, originator);
+    sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
 
     theLog.debug("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);
@@ -493,24 +483,24 @@ public class PollManager  implements LockssManager {
     return verifier;
   }
 
-  Poll createPoll(LcapMessage msg, CachedUrlSet cus) throws ProtocolException {
+  Poll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
     Poll ret_poll = null;
 
     switch(msg.getOpcode()) {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
-        theLog.debug("Making a content poll on "+ cus);
-        ret_poll = new ContentPoll(msg, cus, this);
+        theLog.debug("Making a content poll on "+ pollspec);
+        ret_poll = new ContentPoll(msg, pollspec, this);
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
-        theLog.debug("Making a name poll on "+cus);
-        ret_poll = new NamePoll(msg, cus, this);
+        theLog.debug("Making a name poll on "+pollspec);
+        ret_poll = new NamePoll(msg, pollspec, this);
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug("Making a verify poll on "+cus);
-        ret_poll = new VerifyPoll(msg, cus, this);
+        theLog.debug("Making a verify poll on "+pollspec);
+        ret_poll = new VerifyPoll(msg, pollspec, this);
         break;
       default:
         throw new ProtocolException("Unknown opcode:" + msg.getOpcode());

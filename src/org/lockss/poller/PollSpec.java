@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.1 2003-02-25 21:52:54 tal Exp $
+ * $Id: PollSpec.java,v 1.2 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
+import org.lockss.app.*;
 
 public class PollSpec {
   private String auId;
@@ -46,11 +47,52 @@ public class PollSpec {
   private String url;
   private String uprBound = null;
   private String lwrBound = null;
-  private CachedUrlSet cus;
-  private int opcode;			// want this here?
+  private CachedUrlSet cus = null;
+  private static PluginManager pluginMgr = null;
 
-  /** Construct a PollSpec from a CachedUrlSet */
+  /**
+   * constructor for a "mock" poll spec
+   * @param auId the archival unit id
+   * @param pluginId the plugin id
+   * @param url the url
+   * @param lwrBound the lower bound of the url
+   * @param uprBound the upper bound of the url
+   * @param cus the cached url set
+   */
+  public PollSpec(String auId, String pluginId, String url,
+                  String lwrBound, String uprBound, CachedUrlSet cus) {
+    this.auId = auId;
+    this.pluginId = pluginId;
+    this.url = url;
+    this.uprBound = uprBound;
+    this.lwrBound = lwrBound;
+    this.cus = cus;
+  }
+
+  /**
+   * construct a pollspec from an existing pollspec but change the
+   * upper and lower boundary of the RangedCachedUrlSetSpec
+   * @param cus the existing cached url set
+   * @param lwrBound the new lower boundary
+   * @param uprBound the new upper boundary
+   */
+  public PollSpec(CachedUrlSet cus, String lwrBound, String uprBound) {
+    this.cus = cus;
+    ArchivalUnit au = cus.getArchivalUnit();
+    auId = au.getAUId();
+    pluginId = au.getPluginId();
+    CachedUrlSetSpec cuss = cus.getSpec();
+    url = cuss.getUrl();
+    this.lwrBound = lwrBound;
+    this.uprBound = uprBound;
+  }
+
+  /**
+   * Construct a PollSpec from a CachedUrlSet
+   * @param cus the CachedUrlSpec which defines the range of interest
+   */
   public PollSpec(CachedUrlSet cus) {
+    this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
     auId = au.getAUId();
     pluginId = au.getPluginId();
@@ -63,36 +105,49 @@ public class PollSpec {
     }
   }
 
-  /** Construct a PollSpec from a CachedUrlSet and poll opcode */
-  public PollSpec(CachedUrlSet cus, int pollOpcode) {
-    this(cus);
-    opcode = pollOpcode;
-  }
-
-  /** Construct a PollSpec from an incoming message */
+  /**
+   * Construct a PollSpec from a LcapMessage
+   * @param msg the LcapMessage which defines the range of interest
+   */
   public PollSpec(LcapMessage msg) {
+    auId = msg.getArchivalID();
+    pluginId = msg.getPluginID();
+    url = msg.getTargetUrl();
+    uprBound = msg.getUprBound();
+    lwrBound = msg.getLwrBound();
+    cus = getPluginManager().findCachedUrlSet(this);
   }
 
-  // logically this should be here, but it needs the PluginManager, which
-  // would make it harder to test.  So at least for now the logic is in
-  // PluginManager instead.
-//    public CachedUrlSet getCachedUrlSet() {
-//    }
+  public CachedUrlSet getCachedUrlSet() {
+    return cus;
+  }
 
   public String getPluginId() {
     return pluginId;
   }
+
   public String getAUId() {
     return auId;
   }
+
   public String getUrl() {
     return url;
   }
+
   public String getLwrBound() {
     return lwrBound;
   }
+
   public String getUprBound() {
     return uprBound;
+  }
+
+  private PluginManager getPluginManager() {
+    if(pluginMgr == null) {
+      pluginMgr = (PluginManager)LockssDaemon.getManager(
+          LockssDaemon.PLUGIN_MANAGER);
+    }
+    return pluginMgr;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.25 2003-02-24 22:13:42 claire Exp $
+* $Id: ContentPoll.java,v 1.26 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ import org.lockss.plugin.*;
  */
 public class ContentPoll extends Poll {
 
-  ContentPoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
-    super(msg, urlSet, pm);
+  ContentPoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
+    super(msg, pollspec, pm);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
     m_tally.type = CONTENT_POLL;
   }

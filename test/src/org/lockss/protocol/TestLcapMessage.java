@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.12 2003-02-26 20:38:54 aalto Exp $
+ * $Id: TestLcapMessage.java,v 1.13 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import java.util.*;
 import org.lockss.test.*;
 import gnu.regexp.*;
 import org.lockss.poller.TestPoll;
+import org.lockss.poller.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapMessage extends LockssTestCase {
@@ -57,6 +58,7 @@ public class TestLcapMessage extends LockssTestCase {
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
   protected static String pluginID = "TestPlugin_1.0";
+  protected static String archivalID = "TestAU_1.0";
 
   public TestLcapMessage(String _name) {
     super(_name);
@@ -97,6 +99,7 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
     testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
     testmsg.m_pluginID = pluginID;
+    testmsg.m_archivalID = archivalID;
 
   }
 
@@ -158,16 +161,14 @@ public class TestLcapMessage extends LockssTestCase {
   public void testRequestMessageCreation() {
     LcapMessage req_msg = null;
     try {
-      req_msg = LcapMessage.makeRequestMsg(urlstr,
-                                           lwrbnd,
-                                           uprbnd,
+      PollSpec spec = new PollSpec(archivalID, pluginID,urlstr, lwrbnd, uprbnd,null);
+      req_msg = LcapMessage.makeRequestMsg(spec,
                                            testentries,
                                            testbytes,
                                            testbytes,
                                            LcapMessage.CONTENT_POLL_REQ,
                                            100000,
-                                           testID,
-                                           pluginID);
+                                           testID);
     }
     catch (Exception ex) {
       fail("message request creation failed.");
@@ -176,6 +177,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
     assertEquals(req_msg.m_multicast ,false);
     assertEquals(req_msg.m_pluginID, pluginID);
+    assertEquals(req_msg.m_archivalID, archivalID);
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
     assertEquals(null,req_msg.m_hashed);

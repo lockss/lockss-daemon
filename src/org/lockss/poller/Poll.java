@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.49 2003-02-20 00:57:28 claire Exp $
+* $Id: Poll.java,v 1.50 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -87,9 +87,7 @@ public abstract class Poll implements Serializable {
 
   ArchivalUnit m_arcUnit; // the url as an archival unit
   CachedUrlSet m_urlSet;  // the cached url set retrieved from the archival unit
-  String m_url;           // the url for this poll
-  String m_uprBound;      // the upper boundary for the poll
-  String m_lwrBound;      // the lower boundary for the poll
+  PollSpec m_pollspec;
   byte[] m_challenge;     // The caller's challenge string
   byte[] m_verifier;      // Our verifier string - hash of secret
   byte[] m_hash;          // Our hash of challenge, verifier and content(S)
@@ -113,11 +111,11 @@ public abstract class Poll implements Serializable {
    * create a new poll from a message
    *
    * @param msg the <code>Message</code> which contains the information
-   * @param urlSet the CachedUrlSet on which this poll will operate
+   * @param pollspec the PollSpec on which this poll will operate
    * needed to create this poll.
    * @param pm the pollmanager
    */
-  Poll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
+  Poll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
     /* initialize with our parameters */
     m_agreeVer = ((double)Configuration.getIntParam(PARAM_AGREE_VERIFY,
         DEFAULT_AGREE_VERIFY)) / 100;
@@ -126,13 +124,10 @@ public abstract class Poll implements Serializable {
     m_pollmanager = pm;
     idMgr = pm.getDaemon().getIdentityManager();
     m_msg = msg;
-    m_urlSet = urlSet;
-
-    m_url = msg.getTargetUrl();
-    m_uprBound = msg.getUprBound();
-    m_lwrBound = msg.getLwrBound();
+    m_pollspec = pollspec;
+    m_urlSet = pm.getDaemon().getPluginManager().findCachedUrlSet(pollspec);
     m_createTime = TimeBase.nowMs();
-    m_tally = new VoteTally(-1, m_url, msg.getDuration());
+    m_tally = new VoteTally(-1, msg.getDuration());
 
     // now copy the msg elements we need
     m_arcUnit = m_urlSet.getArchivalUnit();
@@ -232,7 +227,7 @@ public abstract class Poll implements Serializable {
     }
     try {
       if(ProbabilisticChoice.choose(verify)) {
-        m_pollmanager.requestVerifyPoll(m_url, m_lwrBound, m_uprBound, m_tally.duration, vote);
+        m_pollmanager.requestVerifyPoll(m_pollspec, m_tally.duration, vote);
       }
     }
     catch (IOException ex) {
@@ -346,27 +341,19 @@ public abstract class Poll implements Serializable {
   }
 
   /**
+   * Return the poll spec used by this poll
+   * @return the PollSpec
+   */
+  public PollSpec getPollSpec() {
+    return m_pollspec;
+  }
+
+  /**
    * get the message used to define this Poll
    * @return <code>Message</code>
    */
   LcapMessage getMessage() {
     return m_msg;
-  }
-
-  /**
-   * get the Archival Unit used by this poll.
-   * @return the <code>ArchivalUnit</code>
-   */
-  ArchivalUnit getArchivalUnit() {
-    return m_arcUnit;
-  }
-
-  /**
-   * get the Cached Url Set on which this poll is running
-   * @return CachedUrlSet for this poll
-   */
-  CachedUrlSet getCachedUrlSet() {
-    return m_urlSet;
   }
 
   /**
@@ -545,7 +532,7 @@ public abstract class Poll implements Serializable {
       hashAlgorithm = m_msg.getHashAlgorithm();
     }
 
-    VoteTally(int type, String url, long duration) {
+    VoteTally(int type, long duration) {
       this(type, m_createTime, duration, 0, 0, 0, 0);
     }
 
@@ -580,19 +567,15 @@ public abstract class Poll implements Serializable {
     }
 
     /**
-     * Returns the url for this poll
-     * @return String the url
+     * Return the poll spec used by this poll
+     * @return the PollSpec
      */
-    public String getUrl() {
-      return m_url;
+    public PollSpec getPollSpec() {
+      return m_pollspec;
     }
 
-    public String getLwrBound() {
-      return m_lwrBound;
-    }
-
-    public String getUprBound() {
-      return m_uprBound;
+    public CachedUrlSet getCachedUrlSet() {
+      return m_urlSet;
     }
 
     /**

@@ -57,17 +57,19 @@ public class TestPollManager extends LockssTestCase {
       testmsg = new LcapMessage[3];
 
       for(int i= 0; i<3; i++) {
+        PollSpec spec = new PollSpec(testau.getAUId(),
+                             testau.getPluginId(),
+                             rooturls[i],lwrbnd, uprbnd,
+                             testau.makeCachedUrlSet(rooturls[i],
+    lwrbnd,uprbnd));
         testmsg[i] =  LcapMessage.makeRequestMsg(
-          rooturls[i],
-          lwrbnd,
-          uprbnd,
+          spec,
           testentries,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
           testduration,
-          testID,
-          testau.getPluginId());
+          testID);
       }
     }
     catch (IOException ex) {
@@ -124,7 +126,8 @@ public class TestPollManager extends LockssTestCase {
     try {
       CachedUrlSet cus = null;
       cus = testau.makeCachedUrlSet(rooturls[1], null, null);
-      pollmanager.requestPoll(cus, lwrbnd, uprbnd, LcapMessage.VERIFY_POLL_REQ);
+      PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd);
+      pollmanager.requestPoll(LcapMessage.VERIFY_POLL_REQ, spec);
     }
     catch (IllegalStateException e) {
       // ignore this for now
@@ -170,17 +173,18 @@ public class TestPollManager extends LockssTestCase {
 
     try {
       for(int i= 0; i<3; i++) {
+        PollSpec spec = new PollSpec(testau.getAUId(),
+                                     testau.getPluginId(),
+                                     urlstr,lwrbnd,uprbnd,
+                                     testau.makeCachedUrlSet(urlstr,lwrbnd,uprbnd));
         sameroot[i] =  LcapMessage.makeRequestMsg(
-          urlstr,
-          lwrbnd,
-          uprbnd,
+          spec,
           testentries,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
           testduration,
-          testID,
-          testau.getPluginId());
+          testID);
       }
     }
     catch (IOException ex) {

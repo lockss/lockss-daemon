@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.24 2003-02-20 00:57:28 claire Exp $
+* $Id: LcapMessage.java,v 1.25 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.mortbay.util.B64Code;
 import org.lockss.daemon.Configuration;
 import java.security.*;
 import org.lockss.app.LockssDaemon;
+import org.lockss.poller.*;
 
 
 /**
@@ -101,7 +102,8 @@ public class LcapMessage implements Serializable {
   long               m_startTime;   // the original start time
   long               m_stopTime;    // the original stop time
   int                m_opcode;      // the kind of packet
-  protected String   m_pluginID;    // the archival unit
+  protected String   m_archivalID;  // the archival unit
+  protected String   m_pluginID;    // the plugin
   protected String   m_targetUrl;   // the target URL
   protected String   m_lwrBound;    // the boundary for the url range (opt)
   protected String   m_uprBound;    // the boundary for the url range (opt)
@@ -135,10 +137,8 @@ public class LcapMessage implements Serializable {
     }
   }
 
-  protected LcapMessage(String targetUrl,
-                        String lwrBound,
-                        String uprBound,
-                        String[] entries,
+  protected LcapMessage( PollSpec ps,
+      String[] entries,
                         byte ttl,
                         byte[] challenge,
                         byte[] verifier,
@@ -146,9 +146,11 @@ public class LcapMessage implements Serializable {
                         int opcode) throws IOException {
     this();
     // assign the data
-    m_targetUrl = targetUrl;
-    m_uprBound = uprBound;
-    m_lwrBound = lwrBound;
+    m_targetUrl = ps.getUrl();
+    m_uprBound = ps.getUprBound();
+    m_lwrBound = ps.getLwrBound();
+    m_archivalID = ps.getAUId();
+    m_pluginID = ps.getPluginId();
     m_ttl = ttl;
     m_challenge = challenge;
     m_verifier = verifier;
@@ -180,6 +182,7 @@ public class LcapMessage implements Serializable {
     m_uprBound = trigger.getUprBound();
     m_lwrBound = trigger.getLwrBound();
     m_pluginID = trigger.getPluginID();
+    m_archivalID = trigger.getArchivalID();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
     m_originAddr = localID.getAddress();
@@ -229,32 +232,28 @@ public class LcapMessage implements Serializable {
   }
 
   /**
-   * make a message to request a poll
-   * @param targetUrl the url of the target poll
-   * @param lwrBound the lower boundary of the range
-   * @param uprBound the upper boundary of the range
+   * make a message to request a poll using a pollspec
+   * @param pollspec the pollspec specifying the url and bounds of interest
    * @param entries the array of entries found in the name poll
    * @param challenge the challange bytes
    * @param verifier the verifier bytes
    * @param opcode the kind of poll being requested
    * @param timeRemaining the time remaining for this poll
    * @param localID the identity of the requestor
-   * @param pluginID the plugin to be used for this au
    * @return message the new LcapMessage
-   * @throws IOException if unable to creae message
+   * @throws IOException if unable to create message
    */
-  static public LcapMessage makeRequestMsg(String targetUrl,
-                                           String lwrBound,
-                                           String uprBound,
+  static public LcapMessage makeRequestMsg(PollSpec pollspec,
                                            String[] entries,
                                            byte[] challenge,
                                            byte[] verifier,
                                            int opcode,
                                            long timeRemaining,
-                                           LcapIdentity localID,
-                                           String pluginID) throws IOException {
+                                           LcapIdentity localID
+                                           ) throws IOException {
 
-    LcapMessage msg = new LcapMessage(targetUrl, lwrBound, uprBound, entries,
+    LcapMessage msg = new LcapMessage(pollspec,
+                                      entries,
                                       (byte) 0,
                                       challenge, verifier, null, opcode);
     if (msg != null) {
@@ -262,7 +261,6 @@ public class LcapMessage implements Serializable {
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originAddr = localID.getAddress();
       msg.m_hopCount = sendHopCount();
-      msg.m_pluginID = pluginID;
     }
     return msg;
 
@@ -377,6 +375,7 @@ public class LcapMessage implements Serializable {
     elapsed = m_props.getInt("elapsed", 0)* 1000;
     m_opcode = m_props.getInt("opcode", -1);
     m_pluginID = m_props.getProperty("plugin", "UNKNOWN");
+    m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_lwrBound = m_props.getProperty("lwrBnd");
     m_uprBound = m_props.getProperty("uprBnd");
@@ -425,6 +424,11 @@ public class LcapMessage implements Serializable {
       m_pluginID = "UNKNOWN";
     }
     m_props.setProperty("plugin", m_pluginID);
+
+    if(m_archivalID == null) {
+      m_archivalID = "UNKNOWN";
+    }
+    m_props.setProperty("au", m_archivalID);
     m_props.putByteArray("challenge", m_challenge);
     m_props.putByteArray("verifier", m_verifier);
     if(m_hashed != null) {
@@ -523,6 +527,10 @@ public class LcapMessage implements Serializable {
 
   public String getPluginID() {
     return m_pluginID;
+  }
+
+  public String getArchivalID() {
+    return m_archivalID;
   }
 
   public boolean getMulticast() {

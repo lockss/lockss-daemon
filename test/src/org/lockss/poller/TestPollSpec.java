@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.2 2003-02-26 04:42:23 tal Exp $
+ * $Id: TestPollSpec.java,v 1.3 2003-02-27 01:50:48 claire Exp $
  */
 
 /*
@@ -38,14 +38,26 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.protocol.*;
+import java.net.*;
+import java.io.*;
 
 /**
  * This is the test class for org.lockss.poller.PollSpec
  */
 
 public class TestPollSpec extends LockssTestCase {
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+
   public TestPollSpec(String msg) {
     super(msg);
+  }
+
+  public void setUp() throws Exception {
+    super.setUp();
+    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
+    daemon.getIdentityManager();
+    daemon.getPluginManager();
   }
 
   public void testFromCus() {
@@ -68,5 +80,51 @@ public class TestPollSpec extends LockssTestCase {
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
+  }
+
+  public void testFromLcapMessage() {
+    byte[] testbytes = {0,1,2,3,4,5,6,8,10};
+    String auid = "aaai1";
+    String pluginid = "p|2";
+    String url = "http://foo.bar/";
+    String lower = "lll";
+    String upper = "hhh";
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId(auid);
+    au.setPluginId(pluginid);
+    CachedUrlSet cus = new MockCachedUrlSet(au,
+                                            new RangeCachedUrlSetSpec(url,
+                                                                      lower,
+                                                                      upper));
+    PollSpec ps = new PollSpec(cus);
+    LcapIdentity id = null;
+    try {
+      InetAddress addr = InetAddress.getByName("127.0.0.1");
+      id = daemon.getIdentityManager().findIdentity(addr);
+    }
+    catch (UnknownHostException ex) {
+      fail("can't open test host");
+    }
+    LcapMessage msg = null;
+    try {
+      msg = LcapMessage.makeRequestMsg(
+          ps,
+          null,
+          testbytes,
+          testbytes,
+          LcapMessage.NAME_POLL_REQ,
+          10000000,
+          id);
+    }
+    catch (IOException ex1) {
+      fail("can't make request message");
+    }
+    ps = new PollSpec(msg);
+    assertEquals(auid, ps.getAUId());
+    assertEquals(pluginid, ps.getPluginId());
+    assertEquals(url, ps.getUrl());
+    assertEquals(lower, ps.getLwrBound());
+    assertEquals(upper, ps.getUprBound());
+
   }
 }

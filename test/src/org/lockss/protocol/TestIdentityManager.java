@@ -16,7 +16,6 @@ public class TestIdentityManager extends LockssTestCase {
   InetAddress testAddress;
   int testReputation;
   Object testIdKey;
-  LcapMessage testMsg= null;
   private static String urlstr = "http://www.test.org";
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
@@ -47,21 +46,6 @@ public class TestIdentityManager extends LockssTestCase {
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
     testIdKey = LcapIdentity.makeIdKey(testAddress);
-    try {
-      testMsg = LcapMessage.makeRequestMsg(urlstr,
-                                           lwrbnd,
-                                           uprbnd,
-                                           testentries,
-                                           testbytes,
-                                           testbytes,
-                                           LcapMessage.CONTENT_POLL_REQ,
-                                           100000,
-                                           fakeId,
-                                           pluginid);
-    }
-    catch (Exception ex) {
-      fail("message request creation failed.");
-    }
   }
 
   /** test for method getIdentity(..) */
