@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.13 2002-12-04 20:09:46 tal Exp $
+ * $Id: Configuration.java,v 1.14 2002-12-06 19:43:37 tal Exp $
  */
 
 /*
@@ -308,7 +308,7 @@ public abstract class Configuration {
     if (bool != null) {
       return bool.booleanValue();
     }
-    throw new InvalidParam("Not a boolean value: " + val);
+    throw new InvalidParam("Not a boolean value: " + key + " = " + val);
   }
 
   /** Return the config value as a boolean.  If it's missing, return the
@@ -337,7 +337,7 @@ public abstract class Configuration {
     try {
       return Integer.parseInt(val);
     } catch (NumberFormatException e) {
-      throw new InvalidParam("Not an int value: " + val);
+      throw new InvalidParam("Not an int value: " + key + " = " + val);
     }
   }
 
@@ -367,7 +367,7 @@ public abstract class Configuration {
     try {
       return Long.parseLong(val);
     } catch (NumberFormatException e) {
-      throw new InvalidParam("Not a long value: " + val);
+      throw new InvalidParam("Not a long value: " + key + " = " + val);
     }
   }
 
