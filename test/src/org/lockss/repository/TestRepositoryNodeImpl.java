@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.24 2003-06-06 23:13:44 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.25 2003-06-13 23:05:26 aalto Exp $
  */
 
 /*
@@ -125,6 +125,120 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(testFile.exists());
     testFile = new File(tempDirPath + "/#content/1.props");
     assertTrue(testFile.exists());
+  }
+
+  public void testInactiveFileLocation() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/branch1/leaf1",
+                   "test stream", null);
+    tempDirPath += LockssRepositoryServiceImpl.CACHE_ROOT_NAME;
+    tempDirPath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = LockssRepositoryServiceImpl.mapUrlToFileLocation(tempDirPath,
+        "http://www.example.com/testDir/branch1/leaf1");
+    File curFile = new File(tempDirPath + "/#content/current");
+    File curPropsFile = new File(tempDirPath + "/#content/current.props");
+    File inactFile = new File(tempDirPath + "/#content/inactive");
+    File inactPropsFile = new File(tempDirPath + "/#content/inactive.props");
+    File nodePropsFile = new File(tempDirPath + "/#content/node_props");
+    assertTrue(curFile.exists());
+    assertTrue(curPropsFile.exists());
+    assertFalse(inactFile.exists());
+    assertFalse(inactPropsFile.exists());
+    assertFalse(nodePropsFile.exists());
+
+    leaf.deactivateContent();
+    assertFalse(curFile.exists());
+    assertFalse(curPropsFile.exists());
+    assertTrue(inactFile.exists());
+    assertTrue(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+
+    //reactivate
+    leaf.restoreLastVersion();
+    assertTrue(curFile.exists());
+    assertTrue(curPropsFile.exists());
+    assertFalse(inactFile.exists());
+    assertFalse(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+
+    leaf.deactivateContent();
+    assertFalse(curFile.exists());
+    assertFalse(curPropsFile.exists());
+    assertTrue(inactFile.exists());
+    assertTrue(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+
+    // make new version
+    leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("test stream");
+    StreamUtil.copy(is, os);
+    is.close();
+    os.close();
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    assertTrue(curFile.exists());
+    assertTrue(curPropsFile.exists());
+    assertFalse(inactFile.exists());
+    assertFalse(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+  }
+
+  public void testDeleteFileLocation() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/branch1/leaf1",
+                   "test stream", null);
+    tempDirPath += LockssRepositoryServiceImpl.CACHE_ROOT_NAME;
+    tempDirPath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = LockssRepositoryServiceImpl.mapUrlToFileLocation(tempDirPath,
+        "http://www.example.com/testDir/branch1/leaf1");
+    File curFile = new File(tempDirPath + "/#content/current");
+    File curPropsFile = new File(tempDirPath + "/#content/current.props");
+    File inactFile = new File(tempDirPath + "/#content/inactive");
+    File inactPropsFile = new File(tempDirPath + "/#content/inactive.props");
+    File nodePropsFile = new File(tempDirPath + "/#content/node_props");
+    assertTrue(curFile.exists());
+    assertTrue(curPropsFile.exists());
+    assertFalse(inactFile.exists());
+    assertFalse(inactPropsFile.exists());
+    assertFalse(nodePropsFile.exists());
+
+    leaf.markAsDeleted();
+    assertFalse(curFile.exists());
+    assertFalse(curPropsFile.exists());
+    assertTrue(inactFile.exists());
+    assertTrue(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+
+    //reactivate
+    leaf.restoreLastVersion();
+    assertTrue(curFile.exists());
+    assertTrue(curPropsFile.exists());
+    assertFalse(inactFile.exists());
+    assertFalse(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+
+    leaf.markAsDeleted();
+    assertFalse(curFile.exists());
+    assertFalse(curPropsFile.exists());
+    assertTrue(inactFile.exists());
+    assertTrue(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
+
+    // make new version
+    leaf.makeNewVersion();
+    OutputStream os = leaf.getNewOutputStream();
+    InputStream is = new StringInputStream("test stream");
+    StreamUtil.copy(is, os);
+    is.close();
+    os.close();
+    leaf.setNewProperties(new Properties());
+    leaf.sealNewVersion();
+    assertTrue(curFile.exists());
+    assertTrue(curPropsFile.exists());
+    assertFalse(inactFile.exists());
+    assertFalse(inactPropsFile.exists());
+    assertTrue(nodePropsFile.exists());
   }
 
   public void testListEntries() throws Exception {
