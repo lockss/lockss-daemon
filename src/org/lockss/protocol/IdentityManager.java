@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.9 2003-01-22 06:12:54 claire Exp $
+ * $Id: IdentityManager.java,v 1.10 2003-01-23 03:01:15 claire Exp $
  */
 
 /*
@@ -344,7 +344,7 @@ public class IdentityManager {
         mapping = map;
       }
       catch (Exception ex) {
-        theLog.error("Loading of mapfile failed:" + mappingFile, ex);
+        theLog.error("Loading of mapfile failed:" + mappingFile);
       }
     }
     return mapping;
