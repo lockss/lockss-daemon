@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.11 2003-02-26 04:34:36 tal Exp $
+ * $Id: StringUtil.java,v 1.12 2003-02-26 21:32:25 tal Exp $
  */
 
 /*
@@ -329,6 +329,18 @@ public class StringUtil {
     } else {
       return s1.equals(s2);
     }
+  }
+
+  private static long gensymCtr = 0;
+
+  /**
+   * Generate a unique string.
+   * @param base the initial substring
+   * @return a string consisting of the supplied initial substring and a
+   * unique counter value.
+   */
+  public static String gensym(String base) {
+    return base + (gensymCtr++);
   }
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.9 2003-02-26 04:34:36 tal Exp $
+ * $Id: TestStringUtil.java,v 1.10 2003-02-26 21:32:56 tal Exp $
  */
 
 /*
@@ -209,5 +209,13 @@ public class TestStringUtil extends LockssTestCase {
     assertTrue(!StringUtil.equalStrings(null, "1"));
     assertTrue(StringUtil.equalStrings("foo", "foo"));
     assertTrue(!StringUtil.equalStrings("foo", "bar"));
+  }
+
+  public void testGensym() {
+    String base = "foo";
+    String g1 = StringUtil.gensym(base);
+    String g2 = StringUtil.gensym(base);
+    assertTrue(g1.startsWith(base));
+    assertTrue(!g1.equals(g2));
   }
 }
