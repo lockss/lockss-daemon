@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.16 2003-03-28 00:20:50 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.17 2003-03-28 22:49:49 troberts Exp $
  */
 
 /*
@@ -240,6 +240,8 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
 
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       if (success) {
+	logger.debug3("Signaling nodeManager that the crawl sucessfully "
+		      +"completed");
 	nodeManager.newContentCrawlFinished();
       }
     }
