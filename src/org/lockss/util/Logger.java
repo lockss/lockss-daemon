@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.19 2003-04-04 08:41:33 tal Exp $
+ * $Id: Logger.java,v 1.20 2003-04-14 07:28:47 tal Exp $
  */
 
 /*
@@ -356,14 +356,14 @@ public class Logger {
     }
   }
 
-  /** Convert colon-separated string of log target class names to a list
-   * of log target instances
+  /** Convert semicolon-separated string of log target class names to a
+   * list of log target instances
    * @return List of instances, or null if any errors occurred
    */
   static List targetListFromString(String s) {
     boolean err = false;
     List tgts = new ArrayList();
-    Vector names = StringUtil.breakAt(s, ':');
+    Vector names = StringUtil.breakAt(s, ';');
     for (Iterator iter = names.iterator(); iter.hasNext(); ) {
       String targetName = (String)iter.next();
       try {

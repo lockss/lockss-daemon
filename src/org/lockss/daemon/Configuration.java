@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.34 2003-04-07 18:37:49 tal Exp $
+ * $Id: Configuration.java,v 1.35 2003-04-14 07:28:47 tal Exp $
  */
 
 /*
@@ -288,7 +288,7 @@ public abstract class Configuration {
 
   private void initCacheConfig() {
     String space = Configuration.getParam(PARAM_DISK_SPACE_LIST);
-    Vector v = StringUtil.breakAt(space, ':');
+    Vector v = StringUtil.breakAt(space, ';');
     if (v.size() == 0) {
       log.error(PARAM_DISK_SPACE_LIST + " not specified, not configuring");
       return;

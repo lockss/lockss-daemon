@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.12 2003-04-04 08:41:33 tal Exp $
+ * $Id: TestLogger.java,v 1.13 2003-04-14 07:28:47 tal Exp $
  */
 
 /*
@@ -110,9 +110,9 @@ public class TestLogger extends LockssTestCase {
     String t2 = "org.lockss.util.SyslogTarget";
     String t3 = "org.lockss.util.StringUtil"; // not a LogTarget
     String t4 = "org.lockss.util.noSuchClass";	// not a class
-    String s1 = StringUtil.separatedString(ListUtil.list(t1, t3), ":");
-    String s2 = StringUtil.separatedString(ListUtil.list(t1, t4), ":");
-    String s3 = StringUtil.separatedString(ListUtil.list(t1, t2), ":");
+    String s1 = StringUtil.separatedString(ListUtil.list(t1, t3), ";");
+    String s2 = StringUtil.separatedString(ListUtil.list(t1, t4), ";");
+    String s3 = StringUtil.separatedString(ListUtil.list(t1, t2), ";");
     assertEquals(null, Logger.targetListFromString(s1));
     assertEquals(null, Logger.targetListFromString(s2));
     List tgts = Logger.targetListFromString(s3);
@@ -126,7 +126,7 @@ public class TestLogger extends LockssTestCase {
     Logger l = Logger.getLogger("test-log");
     String s =
       "org.lockss.log.targets=" +
-      "org.lockss.test.MockLogTarget:" +
+      "org.lockss.test.MockLogTarget;" +
       "org.lockss.util.SyslogTarget\n";
     TestConfiguration.setCurrentConfigFromString(s);
     List tgts = Logger.getTargets();
