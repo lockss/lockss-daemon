@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawler.java,v 1.7 2002-11-26 17:59:57 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.1 2002-11-27 00:25:45 troberts Exp $
  */
 
 /*
@@ -41,26 +41,26 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 /**
- * This is the test class for org.lockss.crawler.Crawler
+ * This is the test class for org.lockss.crawler.GoslingCrawlerImpl
  *
  * @author  Thomas S. Robertson
  * @version 0.0
  */
 
 
-public class TestCrawler extends LockssTestCase {
+public class TestGoslingCrawlerImpl extends LockssTestCase {
   private MockArchivalUnit mau = null;
   private CrawlSpec spec = null;
 
   public static Class testedClasses[] = {
-    org.lockss.crawler.Crawler.class
+    org.lockss.crawler.GoslingCrawlerImpl.class
   };
 
   public static Class prerequisites[] = {
     TestCrawlRule.class
   };
 
-  public TestCrawler(String msg) {
+  public TestGoslingCrawlerImpl(String msg) {
     super(msg);
   }
 
@@ -73,7 +73,7 @@ public class TestCrawler extends LockssTestCase {
 
   public void testDoCrawlThrowsForNullAU() {
     try {
-      Crawler.doCrawl(null, new CrawlSpec("http://www.example.com", null));
+      GoslingCrawlerImpl.doCrawl(null, new CrawlSpec("http://www.example.com", null));
       fail("Calling doCrawl with a null ArchivalUnit should throw "+
 	   "an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -82,7 +82,7 @@ public class TestCrawler extends LockssTestCase {
   
   public void testDoCrawlThrowsForNullCrawlSpec() {
     try {
-      Crawler.doCrawl(new MockArchivalUnit(), null);
+      GoslingCrawlerImpl.doCrawl(new MockArchivalUnit(), null);
       fail("Calling doCrawl with a null ArchivalUnit should throw "+
 	   "an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -99,7 +99,7 @@ public class TestCrawler extends LockssTestCase {
   public void testDoCrawlOnePageNoLinks() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
-    Crawler.doCrawl(mau, spec);
+    GoslingCrawlerImpl.doCrawl(mau, spec);
     Set cachedUrls = cus.getCachedUrls();
     assertEquals(1, cachedUrls.size());
     assertTrue(cachedUrls.contains(startUrl));
@@ -107,37 +107,37 @@ public class TestCrawler extends LockssTestCase {
 
   public void testDoCrawlHref() {
     singleTagCrawl("http://www.example.com/web_link.html",
-		"<a href=", "</a>");
+		   "<a href=", "</a>");
   }
 
   public void testDoCrawlImage() {
     singleTagCrawl("http://www.example.com/web_link.jpg",
-		"<img src=", "</img>");
+		   "<img src=", "</img>");
   }
 
   public void testDoCrawlFrame() {
     singleTagCrawl("http://www.example.com/web_link.html",
-		"<frame src=", "</frame>");
+		   "<frame src=", "</frame>");
   }
 
   public void testDoCrawlLink() {
     singleTagCrawl("http://www.example.com/web_link.css",
-		"<link href=", "</link>");
+		   "<link href=", "</link>");
   }
 
   public void testDoCrawlBody() {
     singleTagCrawl("http://www.example.com/web_link.jpg",
-		"<body background=", "</body>");
+		   "<body background=", "</body>");
   }
 
   public void testDoCrawlTable() {
     singleTagCrawl("http://www.example.com/web_link.jpg",
-		"<table background=", "</table>");
+		   "<table background=", "</table>");
   }
 
   public void testDoCrawlTc() {
     singleTagCrawl("http://www.example.com/web_link.jpg",
-		"<tc background=", "</tc>");
+		   "<tc background=", "</tc>");
   }
 
   private void singleTagCrawl(String url, String openTag, String closeTag) {
@@ -145,7 +145,7 @@ public class TestCrawler extends LockssTestCase {
 
     cus.addUrl(makeContent(url, openTag, closeTag), startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
-    Crawler.doCrawl(mau, spec);
+    GoslingCrawlerImpl.doCrawl(mau, spec);
     Set cachedUrls = cus.getCachedUrls();
     Set expected = SetUtil.set(url, startUrl);
     assertEquals(expected, cachedUrls);
@@ -176,7 +176,7 @@ public class TestCrawler extends LockssTestCase {
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
     
-    Crawler.doCrawl(mau, spec);
+    GoslingCrawlerImpl.doCrawl(mau, spec);
     Set expected = SetUtil.set(startUrl, url);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -199,7 +199,7 @@ public class TestCrawler extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
     
-    Crawler.doCrawl(mau, spec);
+    GoslingCrawlerImpl.doCrawl(mau, spec);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -222,7 +222,7 @@ public class TestCrawler extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
     
-    Crawler.doCrawl(mau, spec);
+    GoslingCrawlerImpl.doCrawl(mau, spec);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -241,7 +241,7 @@ public class TestCrawler extends LockssTestCase {
       cus.addUrl(LINKLESS_PAGE, urls[ix]);
     }
 
-    Crawler.doCrawl(mau, spec);
+    GoslingCrawlerImpl.doCrawl(mau, spec);
     Set expected = SetUtil.fromArray(urls);
     assertEquals(expected, cus.getCachedUrls());
   }
