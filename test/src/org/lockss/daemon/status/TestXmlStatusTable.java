@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.2 2004-02-20 22:04:40 eaalto Exp $
+ * $Id: TestXmlStatusTable.java,v 1.3 2004-02-21 02:06:49 eaalto Exp $
  */
 
 /*
@@ -33,10 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
-import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.servlet.DaemonStatus;
 
 import org.w3c.dom.*;
 
@@ -167,48 +168,5 @@ public class TestXmlStatusTable extends LockssTestCase {
                  builder.getText(type));
     Element value = builder.getElement(sumElem, XmlStatusConstants.VALUE);
     assertEquals("sum value", builder.getText(value));
-  }
-
-  public void testFormatByType() throws Exception {
-    Object testObj = null;
-
-    assertEquals("", format(testObj, ColumnDescriptor.TYPE_STRING));
-    testObj = new Integer(123);
-    assertEquals("123", format(testObj, ColumnDescriptor.TYPE_INT));
-    testObj = new Float(123321);
-    assertEquals(testObj.toString(),
-                 format(testObj, ColumnDescriptor.TYPE_FLOAT));
-    testObj = "test string";
-    assertEquals("test string", format(testObj, ColumnDescriptor.TYPE_STRING));
-
-    testObj = new Double(.45);
-    assertEquals("45", format(testObj, ColumnDescriptor.TYPE_PERCENT));
-
-    Calendar cal = Calendar.getInstance();
-    cal.set(Calendar.YEAR, 2004);
-    cal.set(Calendar.MONTH, Calendar.JANUARY);
-    cal.set(Calendar.DATE, 1);
-    cal.set(Calendar.HOUR_OF_DAY, 15);
-    cal.set(Calendar.MINUTE, 15);
-    testObj = cal.getTime();
-    SimpleDateFormat sdf = new SimpleDateFormat(XmlStatusTable.DATE_FORMAT);
-    assertEquals(sdf.format(testObj),
-                 format(testObj, ColumnDescriptor.TYPE_DATE));
-
-    testObj = IPAddr.getLocalHost();
-    assertEquals(IPAddr.getLocalHost().getHostAddress(),
-                 format(testObj, ColumnDescriptor.TYPE_IP_ADDRESS));
-
-    long timeInt = Constants.HOUR + Constants.MINUTE;
-    testObj = new Long(timeInt);
-    assertEquals(StringUtil.timeIntervalToString(timeInt),
-                 format(testObj, ColumnDescriptor.TYPE_TIME_INTERVAL));
-
-    testObj = "unknown string";
-    assertEquals("unknown string", format(testObj, -1));
-  }
-
-  private String format(Object obj, int type) {
-    return XmlStatusTable.formatByType(obj, type);
   }
 }

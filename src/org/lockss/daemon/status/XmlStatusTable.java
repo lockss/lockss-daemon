@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.3 2004-02-20 22:04:40 eaalto Exp $
+ * $Id: XmlStatusTable.java,v 1.4 2004-02-21 02:06:48 eaalto Exp $
  */
 
 /*
@@ -33,28 +33,33 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
-import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 
 import org.lockss.util.*;
+import org.lockss.servlet.DaemonStatus;
 
 import org.w3c.dom.*;
 
 public class XmlStatusTable {
   private static Logger logger = Logger.getLogger("XmlStatusTable");
 
-  /**
-   * The SimpleDateFormat pattern for Date entries.
-   */
-  public static final String DATE_FORMAT = "MM/dd/yy HH:mm:ss";
-
-  XmlDomBuilder xmlBuilder = new XmlDomBuilder("st",
-      "http://lockss.org/statusui", "1.0");
+  XmlDomBuilder xmlBuilder = new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
+                                               XmlStatusConstants.NS_URI,
+                                               XmlDomBuilder.XML_VERSIONNAME);
 
   StatusTable statusTable = null;
   Document tableDocument = null;
 
   public XmlStatusTable(StatusTable statusTable) {
     this.statusTable = statusTable;
+  }
+
+  /**
+   * Returns the {@link XmlDomBuilder} being used.
+   * @return the XmlDomBuilder
+   */
+  public XmlDomBuilder getXmlDomBuilder() {
+    return xmlBuilder;
   }
 
   /**
@@ -277,13 +282,10 @@ public class XmlStatusTable {
     }
   }
 
-  /**
-   * Convert row value (based on object type)
-   * @param object the row value
-   * @param type the object type
-   * @return formatted String
-   */
   static String formatByType(Object object, int type) {
+    return DaemonStatus.convertDisplayString(object, type);
+  }
+    /*
     if (object == null) {
       return "";
     }
@@ -309,8 +311,7 @@ public class XmlStatusTable {
           } else {
             return object.toString();
           }
-          SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
-          return sdf.format(date);
+          return DaemonStatus.tableDf.format(date);
         case ColumnDescriptor.TYPE_IP_ADDRESS:
           return ((IPAddr)object).getHostAddress();
         case ColumnDescriptor.TYPE_TIME_INTERVAL:
@@ -327,4 +328,6 @@ public class XmlStatusTable {
       return(XmlStatusConstants.UNKNOWN + " " + object.toString());
     }
   }
+*/
+
 }
