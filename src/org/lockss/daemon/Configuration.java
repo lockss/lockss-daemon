@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.14 2002-12-06 19:43:37 tal Exp $
+ * $Id: Configuration.java,v 1.15 2002-12-11 01:15:26 tal Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public abstract class Configuration {
    * Return a new <code>Configuration</code> instance loaded from the
    * url list
    */
-  static Configuration readConfig(List urlList) {
+  public static Configuration readConfig(List urlList) {
     if (urlList == null) {
       return null;
     }
