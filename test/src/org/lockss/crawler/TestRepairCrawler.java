@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.14 2004-10-13 23:07:19 clairegriffin Exp $
+ * $Id: TestRepairCrawler.java,v 1.15 2004-10-15 23:50:01 clairegriffin Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.util.urlconn.CacheException;
+import org.lockss.protocol.IdentityManager.MalformedIdentityKeyException;
 
 /**
  *TODO
@@ -201,10 +202,11 @@ public class TestRepairCrawler extends LockssTestCase {
     assertFalse(crawler.doCrawl());
   }
 
-  public void testFetchFromACacheOnly() throws UnknownHostException {
+  public void testFetchFromACacheOnly() throws MalformedIdentityKeyException {
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
-    String id = "127.0.0.1";
+    PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
+
     Map map = new HashMap();
     map.put(id, new Long(10));
     idm.setAgeedForAu(mau, map);
@@ -226,12 +228,13 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fail! fetch from publisher occurs", crawler.getFetchPubCnt() == 0);
   }
 
-  public void testFetchFromOtherCachesOnlyWithoutRetryLimit() throws UnknownHostException {
+  public void testFetchFromOtherCachesOnlyWithoutRetryLimit()
+      throws MalformedIdentityKeyException {
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
+    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
+    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
     Map map = new HashMap();
     map.put(id1, new Long(10));
     map.put(id2, new Long(11));
@@ -255,12 +258,12 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 0);
   }
 
-  public void testFetchFromOtherCachesOnlyWithRetryLimit() throws UnknownHostException {
+  public void testFetchFromOtherCachesOnlyWithRetryLimit() throws MalformedIdentityKeyException {
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
+    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
+    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
     Map map = new HashMap();
     map.put(id1, new Long(10));
     map.put(id2, new Long(11));
@@ -284,7 +287,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fetch from publisher never occur", crawler.getFetchPubCnt() == 0);
   }
 
-  public void testFetchFromPublisherOnly() throws UnknownHostException {
+  public void testFetchFromPublisherOnly() throws MalformedIdentityKeyException {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
@@ -301,12 +304,12 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
   }
 
-  public void testFetchFromOtherCachesThenPublisher() throws UnknownHostException {
+  public void testFetchFromOtherCachesThenPublisher() throws MalformedIdentityKeyException {
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
+    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
+    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
     Map map = new HashMap();
     map.put(id1, new Long(10));
     map.put(id2, new Long(11));
@@ -332,12 +335,12 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() < crawler.getPubLastCall() );
   }
 
-  public void testFetchFromPublisherThenOtherCaches() throws UnknownHostException {
+  public void testFetchFromPublisherThenOtherCaches() throws MalformedIdentityKeyException {
     MockLockssDaemon theDaemon = getMockLockssDaemon();
     MockIdentityManager idm = new MockIdentityManager();
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    PeerIdentity id1 = idm.stringToPeerIdentity("127.0.0.1");
+    PeerIdentity id2 = idm.stringToPeerIdentity("127.0.0.2");
+    PeerIdentity id3 = idm.stringToPeerIdentity("127.0.0.3");
     Map map = new HashMap();
     map.put(id1, new Long(10));
     map.put(id2, new Long(11));
@@ -392,7 +395,7 @@ public class TestRepairCrawler extends LockssTestCase {
       return uc;
     }
 
-    protected void fetchFromCache(UrlCacher uc, String id) throws IOException {
+    protected void fetchFromCache(UrlCacher uc, PeerIdentity id) throws IOException {
       fetchCacheCnt++;
       cacheLastCall = ++fetchSequence;
       contentMap.put(uc.getUrl(),id);
@@ -431,8 +434,8 @@ public class TestRepairCrawler extends LockssTestCase {
       return 8080; //XXX for testing only
     }
 
-    public String getContentSource(String url) {
-      return (String)contentMap.get(url);
+    public PeerIdentity getContentSource(String url) {
+      return (PeerIdentity)contentMap.get(url);
     }
 
   }

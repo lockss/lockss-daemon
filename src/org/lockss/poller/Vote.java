@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.14 2004-09-29 06:38:13 tlipkis Exp $
+* $Id: Vote.java,v 1.15 2004-10-15 23:49:51 clairegriffin Exp $
  */
 
 /*
@@ -129,8 +129,10 @@ public class Vote {
       byte[] hash = ((V1ActiveVote) activeInfo).getHash();
       agree = Arrays.equals(hash, new_hash);
     }
-
-    return agree;
+    else {
+     theLog.debug("No active info returning value: " + agree);
+    }
+   return agree;
   }
 
   public String toString() {

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.30 2004-10-13 23:07:16 clairegriffin Exp $
+ * $Id: RepairCrawler.java,v 1.31 2004-10-15 23:49:50 clairegriffin Exp $
  */
 
 /*
@@ -50,13 +50,13 @@ import org.lockss.state.*;
  * <ul>
  * <li>1. repair from other caches only
  * <li>2. repair from publisher only
- * <li>3. repair from other caches first. If repair fails in trying 
+ * <li>3. repair from other caches first. If repair fails in trying
  *        a certain number of caches, it will try repair from the publisher
  * <li>4. repair from publisher first. If repair fails, it will try repair from other caches
  * </ul>
  * <p>
  * In mode 1,3,4, the number of other caches the repair crawler will try from can be change
- * by setting PARAM_NUM_RETRIES_FROM_CACHES in properties.    
+ * by setting PARAM_NUM_RETRIES_FROM_CACHES in properties.
  * <p>
  * e.g.
  * <br>
@@ -67,7 +67,7 @@ import org.lockss.state.*;
  * That will set the retry limit to 2.
  */
 public class RepairCrawler extends CrawlerImpl {
-  
+
   private static Logger logger = Logger.getLogger("RepairCrawler");
 
   private IdentityManager idMgr = null;
@@ -82,7 +82,7 @@ public class RepairCrawler extends CrawlerImpl {
   public static final boolean DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY = false;
 
   /**
-   * Sets this to true in properties and repair will be done from publisher only 
+   * Sets this to true in properties and repair will be done from publisher only
    */
   public static final String PARAM_FETCH_FROM_PUBLISHER_ONLY =
     Configuration.PREFIX + "crawler.fetch_from_publisher_only";
@@ -154,7 +154,7 @@ public class RepairCrawler extends CrawlerImpl {
     CachedUrlSet cus = au.getAuCachedUrlSet();
 
     Iterator it = getStartingUrls();
-    
+
     while (it.hasNext() && !crawlAborted) {
       String url = (String)it.next();
       //catch and warn if there's a url in the start urls
@@ -203,7 +203,7 @@ public class RepairCrawler extends CrawlerImpl {
     } else {
       logger.info("Finished crawl of "+au);
     }
-    
+
     if (au instanceof BaseArchivalUnit) {
       BaseArchivalUnit bau = (BaseArchivalUnit)au;
       long cacheHits = bau.getCrawlSpecCacheHits();
@@ -228,7 +228,7 @@ public class RepairCrawler extends CrawlerImpl {
 
       //4 cases to choose where to repair from
       if (fetchCache && fetchPublisher) {
-	logger.error("Contradicting parameters! both PARAM_FETCH_FROM_OTHER_CACHE_ONLY " + 
+	logger.error("Contradicting parameters! both PARAM_FETCH_FROM_OTHER_CACHE_ONLY " +
 		     "and PARAM_FETCH_FROM_PUBLISHER_ONLY flag is true.");
 	error = Crawler.STATUS_FETCH_ERROR;
       } else if (fetchCache) { //(1) other caches only
@@ -254,7 +254,7 @@ public class RepairCrawler extends CrawlerImpl {
       } else if (shouldFetchFromCache()) { //(3) caches then publisher
 	try {
 	  logger.debug3("Trying to fetch from caches");
-	  //it will try the publisher if it fails to cache 
+	  //it will try the publisher if it fails to cache
 	  //from other caches after the default # of retries
 	  fetchFromSomeCache(uc, numCacheRetries);
 	} catch (LockssUrlConnection.CantProxyException e) {
@@ -293,14 +293,14 @@ public class RepairCrawler extends CrawlerImpl {
   private boolean shouldFetchFromCache() {
     return ProbabilisticChoice.choose(percentFetchFromCache);
   }
-  
+
   protected void fetchFromSomeCache(UrlCacher uc, int numCacheRetries)
       throws IOException {
     IdentityManager idm = getIdentityManager();
     Map map = idm.getAgreed(au);
     if (map == null) {
       throw new LockssUrlConnection.CantProxyException("We don't have agree history with any caches");
-    } 
+    }
     Set keySet = map.keySet();
     if (keySet == null) {
       logger.warning("Got a null keyset, this probably shouldn't happen");
@@ -310,9 +310,9 @@ public class RepairCrawler extends CrawlerImpl {
     int iz = 0;
     boolean repaired = false;
     while ((it.hasNext()) && (iz < numCacheRetries) && !repaired ){
-      String cacheId = null;
+      PeerIdentity cacheId = null;
       try {
-	cacheId = (String) it.next();
+	cacheId = (PeerIdentity) it.next();
 	fetchFromCache(uc, cacheId);
 	repaired = true;
       } catch (IOException e) {
@@ -326,13 +326,13 @@ public class RepairCrawler extends CrawlerImpl {
     }
   }
 
-  protected void fetchFromCache(UrlCacher uc, String id)
+  protected void fetchFromCache(UrlCacher uc, PeerIdentity id)
       throws IOException {
     logger.debug2("Trying to fetch from "+id);
-    uc.setProxy(id, getProxyPort());
+    uc.setProxy(id.getIdString(), getProxyPort());
     uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
     try {
-      cache(uc, id);
+      cache(uc, id.getIdString());
     } catch (IOException e) {
       logger.warning("Repair from cache failed", e);
       throw new LockssUrlConnection.CantProxyException(e.toString());
@@ -358,7 +358,7 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   protected int getProxyPort(){
-    ProxyManager proxyMan = 
+    ProxyManager proxyMan =
       (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
     return proxyMan.getProxyPort();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.50 2004-09-29 06:39:14 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.51 2004-10-15 23:50:01 clairegriffin Exp $
  */
 
 /*
@@ -140,9 +140,9 @@ public class IdentityManager
   protected PeerIdentity localPeerIdentities[];
 
   // both maps keyed by identity key string
-  private Map theIdentities;		// all known identities (keys are
+  private Map theIdentities = new HashMap();		// all known identities (keys are
 					// PeerIdentitys)
-  private Map thePeerIdentities;	// all PeerIdentities (keys are strings)
+  private Map thePeerIdentities = new HashMap();// all PeerIdentities (keys are strings)
 
   int[] reputationDeltas = new int[10];
 
@@ -162,8 +162,8 @@ public class IdentityManager
 
     // initializing these here makes testing more predictable
     localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
-    theIdentities = new HashMap();
-    thePeerIdentities = new HashMap();
+    //theIdentities = new HashMap();
+    //thePeerIdentities = new HashMap();
 
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
@@ -214,14 +214,14 @@ public class IdentityManager
   public void startService() {
     super.startService();
     reloadIdentities();
-    
+
     log.info("Local V1 identity: " + getLocalPeerIdentity(Poll.V1_POLL));
     if (localPeerIdentities[Poll.V3_POLL] != null) {
       log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_POLL));
     }
     getDaemon().getStatusService().registerStatusAccessor("Identities",
 							  new Status());
-    Vote.setIdentityManager(this); 
+    Vote.setIdentityManager(this);
     LcapMessage.setIdentityManager(this);
     IdentityAgreement.setIdentityManager(this);
   }
@@ -373,7 +373,7 @@ public class IdentityManager
     }
     throw new IllegalArgumentException(pid.toString());
   }
- 
+
   /**
    * getLocalPeerIdentity returns the local peer identity
    * @param pollVersion the poll protocol version
@@ -472,7 +472,7 @@ public class IdentityManager
       ret = reputationDeltas[changeKind];
     return ret;
   }
-    
+
   /**
    * changeReputation makes the change to the reputation of the peer "id"
    * matching the event "changeKind"
@@ -488,7 +488,7 @@ public class IdentityManager
       return;
     }
     int reputation = lid.getReputation();
-    
+
     if (id.isLocalIdentity()) {
       log.debug(id.toString() + " ignoring reputation delta " + delta);
       return;
