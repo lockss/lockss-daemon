@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.32 2003-08-30 00:35:29 clairegriffin Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.33 2003-09-12 22:38:38 clairegriffin Exp $
  */
 
 /*
@@ -341,6 +341,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
 	//should check if this is something we should cache first
  	if (!set.contains(nextUrl)
+            && isSupportedUrlProtocol(srcUrl,nextUrl)
 	    && !urlsToIgnore.contains(nextUrl)
 	    && au.shouldBeCached(nextUrl)) {
 	  set.add(nextUrl);
@@ -374,6 +375,19 @@ public class GoslingCrawlerImpl implements Crawler {
     }
 
     return returnVal;
+  }
+
+  protected static boolean isSupportedUrlProtocol(URL srcUrl, String url) {
+    try {
+      URL ur = new URL(srcUrl, url);
+      // some 1.4 machines will allow this, so we explictly exclude it for now.
+      if (StringUtil.getIndexIgnoringCase(ur.toString(), "https") != 0) {
+        return true;
+      }
+    }
+    catch (Exception ex) {
+    }
+    return false;
   }
 
   /**
@@ -438,6 +452,15 @@ public class GoslingCrawlerImpl implements Crawler {
   }
 
 
+  private static boolean beginsWithTag(String s1, String tag) {
+    if (StringUtil.getIndexIgnoringCase(s1, tag) == 0) {
+      int len = tag.length();
+      if (s1.length() > len && Character.isWhitespace(s1.charAt(len))) {
+        return true;
+      }
+    }
+    return false;
+  }
 
 
   /**
@@ -457,75 +480,72 @@ public class GoslingCrawlerImpl implements Crawler {
     String returnStr = null;
 
     switch (link.charAt(0)) {
-    case 'a': //<a href=http://www.yahoo.com>
-    case 'A':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  ATAG+" ") == 0) {
-	returnStr = getAttributeValue(ASRC, link.toString());
-      }
-      break;
-    case 'f': //<frame src=frame1.html>
-    case 'F':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  FRAMETAG+" ") == 0) {
-	returnStr = getAttributeValue(SRC, link.toString());
-      }
-      break;
-    case 'i': //<img src=image.gif>
-    case 'I':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  IMGTAG+" ") == 0) {
-	returnStr = getAttributeValue(SRC, link.toString());
-      }
-      break;
-    case 'l': //<link href=blah.css>
-    case 'L':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  LINKTAG+" ") == 0) {
-	returnStr = getAttributeValue(ASRC, link.toString());
-      }
-      break;
-    case 'b': //<body backgroung=background.gif>
-    case 'B':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  BODYTAG+" ") == 0) {
-	returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
-      }
-      break;
-    case 's': //<script src=blah.js>
-    case 'S':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  SCRIPTTAG+" ") == 0) {
-	returnStr = getAttributeValue(SRC, link.toString());
-      }
-      break;
-    case 't': //<tc background=back.gif> or <table background=back.gif>
-    case 'T':
-      if (StringUtil.getIndexIgnoringCase(link.toString(),
-					  TABLETAG+" ") == 0 ||
-	  StringUtil.getIndexIgnoringCase(link.toString(),
-					  TDTAG+" ") == 0) {
-	  returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
-	}
-      break;
-    default:
-      return null;
+      case 'a': //<a href=http://www.yahoo.com>
+      case 'A':
+        if (beginsWithTag(link.toString(),ATAG)) {
+          returnStr = getAttributeValue(ASRC, link.toString());
+        }
+        break;
+      case 'f': //<frame src=frame1.html>
+      case 'F':
+        if (beginsWithTag(link.toString(),FRAMETAG)) {
+          returnStr = getAttributeValue(SRC, link.toString());
+        }
+        break;
+      case 'i': //<img src=image.gif>
+      case 'I':
+        if (beginsWithTag(link.toString(),IMGTAG)) {
+          returnStr = getAttributeValue(SRC, link.toString());
+        }
+        break;
+      case 'l': //<link href=blah.css>
+      case 'L':
+        if (beginsWithTag(link.toString(),LINKTAG)) {
+          returnStr = getAttributeValue(ASRC, link.toString());
+        }
+        break;
+      case 'b': //<body backgroung=background.gif>
+      case 'B':
+        if (beginsWithTag(link.toString(),BODYTAG)) {
+          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+        }
+        break;
+      case 's': //<script src=blah.js>
+      case 'S':
+        if (beginsWithTag(link.toString(),SCRIPTTAG)) {
+          returnStr = getAttributeValue(SRC, link.toString());
+        }
+        break;
+      case 't': //<tc background=back.gif> or <table background=back.gif>
+      case 'T':
+        if (beginsWithTag(link.toString(),TABLETAG) ||
+          beginsWithTag(link.toString(),TDTAG)) {
+          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+        }
+        break;
+      default:
+        return null;
     }
-
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug2("Generating url from: "+srcUrl+" and "+returnStr);
-      URL retUrl = new URL(srcUrl, returnStr);
-      returnStr = retUrl.toString();
-      logger.debug2("Parsed: "+returnStr);
-      return returnStr;
+      if (!isSupportedUrlProtocol(srcUrl, returnStr)) {
+        logger.debug("skipping unsupported url " + returnStr);
+      }
+      else {
+        logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
+        URL retUrl = new URL(srcUrl, returnStr);
+        returnStr = retUrl.toString();
+      }
+      logger.debug2("Parsed: " + returnStr);
+     return returnStr;
     }
     return null;
   }
 
   private static String getAttributeValue(String attribute, String src) {
     logger.debug2("looking for "+attribute+" in "+src);
-    StringTokenizer st = new StringTokenizer(src, " =\"", true);
+//  we need to allow for all whitespace in our tokenizer;
+    StringTokenizer st = new StringTokenizer(src, "\n\t\r =\"", true);
     String lastToken = null;
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
@@ -534,13 +554,28 @@ public class GoslingCrawlerImpl implements Crawler {
 	  lastToken = token;
 	}
       } else {
-	if (attribute.equalsIgnoreCase(lastToken))
-	  while (st.hasMoreTokens()) {
-	    token = st.nextToken();
-	    if (!token.equals(" ") && !token.equals("\"")) {
-	      return token;
-	    }
-	  }
+        if (attribute.equalsIgnoreCase(lastToken))
+          while (st.hasMoreTokens()) {
+            token = st.nextToken();
+            // we need to allow for arguments in the url which use '='
+            if (!token.equals(" ") && !token.equals("\"")) {
+              StringBuffer sb = new StringBuffer(token);
+              while (st.hasMoreTokens() &&
+                     !token.equals(" ") && !token.equals("\"")) {
+                token = st.nextToken();
+                sb.append(token);
+              }
+              return sb.toString();
+            }
+          }
+
+//	if (attribute.equalsIgnoreCase(lastToken))
+//	  while (st.hasMoreTokens()) {
+//	    token = st.nextToken();
+//	    if (!token.equals(" ") && !token.equals("\"")) {
+//	      return token;
+//	    }
+//	  }
       }
     }
     return null;
