@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.4 2002-12-06 01:51:02 claire Exp $
+ * $Id: PollHistory.java,v 1.5 2002-12-12 23:07:07 aalto Exp $
  */
 
 /*
@@ -41,19 +41,32 @@ import org.lockss.protocol.LcapIdentity;
  */
 public class PollHistory {
   int type;
-  String regexp;
+  String regExp;
   int status;
   long startTime;
   long duration;
-  Collection votes;
+  ArrayList votes;
 
-  PollHistory(PollState state, long duration, Collection votes) {
+  /**
+   * Empty constructor used for marshalling.  Needed to create the
+   * PollHistoryBean.
+   */
+  public PollHistory() {
+    type = -1;
+    regExp = null;
+    status = -1;
+    startTime = 0;
+    duration = 0;
+    votes = null;
+  }
+
+  PollHistory(PollState state, long duration, ArrayList votes) {
     this.type = state.type;
-    this.regexp = state.regexp;
+    this.regExp = state.regexp;
     this.status = state.status;
     this.startTime = state.startTime;
     this.duration = duration;
-    this.votes = Collections.unmodifiableCollection(votes);
+    this.votes = (ArrayList)Collections.unmodifiableList(votes);
   }
 
   /**
@@ -70,7 +83,7 @@ public class PollHistory {
    * @return the regexp or null
    */
   public String getRegExp() {
-    return regexp;
+    return regExp;
 
   }
   /**
@@ -98,11 +111,11 @@ public class PollHistory {
   }
 
   /**
-   * Returns an Iterator of Votes.
-   * @return an Iterator of Poll.Vote objects.
+   * Returns a list of Votes.
+   * @return an ArrayList of Poll.Vote objects.
    */
-  public Iterator getVotes() {
-    return votes.iterator();
+  public ArrayList getVotes() {
+    return votes;
   }
 
 
