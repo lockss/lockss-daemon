@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.21 2004-08-18 00:14:54 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.22 2004-08-22 02:11:57 tlipkis Exp $
  */
 
 /*
@@ -794,6 +794,10 @@ class TaskRunner implements Serializable {
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("load", "%CPU",
 				       ColumnDescriptor.TYPE_PERCENT),
+		  new ColumnDescriptor("in", "In",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("dur", "Dur",
+				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("start", "Start",
 				       ColumnDescriptor.TYPE_DATE),
 		  new ColumnDescriptor("stop", "Stop",
@@ -845,6 +849,7 @@ class TaskRunner implements Serializable {
     private Map makeRow(Schedule.Event event, int scheme, int ix,
 			Iterator iter, boolean isHist) {
       Map row = new HashMap();
+      long nowMs = TimeBase.nowMs();
       if (isSepr(scheme, ix, !iter.hasNext(), isHist)) {
 	row.put(StatusTable.ROW_SEPARATOR, "");
       }
@@ -858,10 +863,14 @@ class TaskRunner implements Serializable {
 	row.put("load", new Double(bt.getLoadFactor()));
 	if (be instanceof CombinedBackgroundEvent) {
 	  CombinedBackgroundEvent cbe = (CombinedBackgroundEvent)be;
+	  row.put("in", timeDelta(nowMs, cbe.getStart().getExpirationTime()));
+	  row.put("dur", timeDelta(cbe.getStart().getExpirationTime(),
+				   cbe.getFinish().getExpirationTime()));
 	  row.put("start", cbe.getStart());
 	  row.put("stop", cbe.getFinish());
 	} else if (Schedule.EventType.START == be.getType()) {
 	  row.put("start", be.getStart());
+	  row.put("in", timeDelta(nowMs, be.getStart().getExpirationTime()));
 	} else if (Schedule.EventType.FINISH == be.getType()) {
 	  row.put("stop", be.getStart());
 	}
@@ -872,10 +881,21 @@ class TaskRunner implements Serializable {
 // 	row.put("tasknum", new Integer(st.schedSeq));
 	row.put("task", st.schedSeq + ":" + st.getShortText());
 	row.put("load", new Double(chunk.getLoadFactor()));
+	row.put("in", timeDelta(nowMs, chunk.getStart().getExpirationTime()));
+	row.put("dur", timeDelta(chunk.getStart().getExpirationTime(),
+				 chunk.getFinish().getExpirationTime()));
 	row.put("start", chunk.getStart());
 	row.put("stop", chunk.getFinish());
       }
       return row;
+    }
+
+    private String timeDelta(long now, long then) {
+      long delta = then - now;
+      if (delta > 1000) {
+	delta = ((delta + 500) / 1000) * 1000; // round to nearest second
+      }
+      return StringUtil.timeIntervalToString(delta);
     }
 
     private class CombinedBackgroundEvent extends Schedule.BackgroundEvent {
