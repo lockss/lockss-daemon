@@ -1,8 +1,0 @@
-org.lockss.ui.port=8083
-org.lockss.localIPAddress=3.3.3.3
-org.lockss.comm.unicast.port=9003
-org.lockss.comm.unicast.sendToPort=9000
-org.lockss.comm.unicast.sendToAddr=127.0.0.1
-
-org.lockss.cache.location=.
-
