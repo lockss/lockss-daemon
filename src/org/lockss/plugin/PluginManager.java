@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.46 2003-08-28 00:11:53 eaalto Exp $
+ * $Id: PluginManager.java,v 1.46.2.1 2003-09-11 07:48:51 tlipkis Exp $
  */
 
 /*
@@ -157,6 +157,16 @@ public class PluginManager extends BaseLockssManager {
 			PropUtil.propsToCanonicalEncodedString(auDefProps));
   }
 
+  public static String generateAUId(Plugin plugin, Configuration auConf) {
+    Collection defKeys = plugin.getDefiningConfigKeys();
+    Properties props = new Properties();
+    for (Iterator it = defKeys.iterator(); it.hasNext();) {
+      String curKey = (String)it.next();
+      props.setProperty(curKey, auConf.get(curKey));
+    }
+    return generateAUId(plugin.getPluginId(), props);
+  }
+
   static String generateAuId(String pluginId, String auKey) {
     return pluginKeyFromId(pluginId)+"&"+auKey;
   }
@@ -234,6 +244,19 @@ public class PluginManager extends BaseLockssManager {
 
   ArchivalUnit createAu(Plugin plugin, Configuration auConf)
       throws ArchivalUnit.ConfigurationException {
+    String auid;
+    ArchivalUnit oldAu = null;
+    try {
+      auid = generateAUId(plugin, auConf);
+      oldAu = getAuFromId(auid);
+    } catch (Exception e) {
+      // no action.  Bad/missing config value might cause getAuFromId() to
+      // throw.  It will be caught soon when creating the AU; for now we
+      // can assume it means the AU doesn't already exist.
+    }
+    if (oldAu != null) {
+      throw new ArchivalUnit.ConfigurationException("Cannot create that AU because it already exists");
+    }
     try {
       ArchivalUnit au = plugin.createAU(auConf);
       log.debug("Created AU " + au);
