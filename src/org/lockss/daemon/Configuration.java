@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.45 2003-05-10 01:59:39 tal Exp $
+ * $Id: Configuration.java,v 1.46 2003-05-26 03:47:33 tal Exp $
  */
 
 /*
@@ -125,6 +125,21 @@ public abstract class Configuration {
   /** Return current configuration */
   public static Configuration getCurrentConfig() {
     return currentConfig;
+  }
+
+  /** Reset to unconfigured state.
+   * Configuration isn't a service: this isn't a LockssManager.stopService(),
+   * but should be made one when Configuration is made a service.  (And see
+   * LockssTestCase.tearDown(), where this is called.)
+   */
+  public static void stopService() {
+    currentConfig = newConfiguration();
+    // this currently runs afoul of Logger, which registers itself once
+    // only, on first use.
+    configChangedCallbacks = new ArrayList();
+    configUrlList = null;
+    stopHandler();
+    haveConfig = new OneShotSemaphore();
   }
 
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
@@ -327,7 +342,7 @@ public abstract class Configuration {
    * immediately.
    * @param c <code>Configuration.Callback</code> to add.  */
   public static void registerConfigurationCallback(Callback c) {
-    log.debug2("registering " + c);
+    log.debug3("registering " + c);
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
       if (haveConfig.isFull()) {
@@ -341,7 +356,7 @@ public abstract class Configuration {
    * @param c <code>Configuration.Callback</code> to remove.
    */
   public static void unregisterConfigurationCallback(Callback c) {
-    log.debug2("unregistering " + c);
+    log.debug3("unregistering " + c);
     configChangedCallbacks.remove(c);
   }
 
@@ -866,7 +881,7 @@ public abstract class Configuration {
       handlerThread.stopHandler();
       handlerThread = null;
     } else {
-      log.warning("Attempt to stop handler when it isn't running");
+//       log.warning("Attempt to stop handler when it isn't running");
     }
   }
 
