@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.44 2004-01-27 00:41:50 tyronen Exp $
+ * $Id: MockCachedUrlSet.java,v 1.45 2004-02-23 21:16:22 tlipkis Exp $
  */
 
 /*
@@ -281,7 +281,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   private void addUrl(String url,
 		      boolean exists, boolean shouldCache,
-		      Properties props, IOException cacheException,
+		      Properties props, Exception cacheException,
 		      int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url, this);
 //     cu.setContent(source);
@@ -295,9 +295,12 @@ public class MockCachedUrlSet implements CachedUrlSet {
     }
     uc.setCachedUrl(cu);
     if (cacheException != null) {
-      uc.setCachingException(cacheException, timesToThrow);
+      if (cacheException instanceof IOException) {
+	uc.setCachingException((IOException)cacheException, timesToThrow);
+      } else if (cacheException instanceof RuntimeException) {
+	uc.setCachingException((RuntimeException)cacheException, timesToThrow);
+      }
     }
-
     logger.debug("Adding "+url+" to cuHash and ucHash");
 
     cuHash.put(url, cu);
@@ -316,7 +319,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * @param timesToThrow number of times to throw the exception
    */
   public void addUrl(String url,
-		     IOException cacheException, int timesToThrow) {
+		     Exception cacheException, int timesToThrow) {
     addUrl(url, false, true, new Properties(),
 	   cacheException, timesToThrow);
   }

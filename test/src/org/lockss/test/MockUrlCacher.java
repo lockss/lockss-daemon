@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.12 2004-02-23 09:12:05 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.13 2004-02-23 21:16:22 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class MockUrlCacher implements UrlCacher {
 
   private boolean shouldBeCached = false;
   private IOException cachingException = null;
+  private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
   private int timesThrown = 0;
 
@@ -129,9 +130,21 @@ public class MockUrlCacher implements UrlCacher {
     this.numTimesToThrow = numTimesToThrow;
   }
   
+  public void setCachingException(RuntimeException e, int numTimesToThrow) {
+    this.cachingRuntimException = e;
+  }
+  
   public void forceCache() throws IOException {
     if (cachingException != null) {
+      timesThrown++;
       throw cachingException;
+    }
+    if (cachingRuntimException != null) {
+      // Get a stack trace from here, not from the test case where the
+      // exception was created
+      cachingRuntimException.fillInStackTrace();
+      timesThrown++;
+      throw cachingRuntimException;
     }
     if (cus != null) {
       cus.addForceCachedUrl(url);
@@ -148,6 +161,13 @@ public class MockUrlCacher implements UrlCacher {
     if (cachingException != null && timesThrown < numTimesToThrow) {
       timesThrown++;
       throw cachingException;
+    }
+    if (cachingRuntimException != null) {
+      // Get a stack trace from here, not from the test case where the
+      // exception was created
+      cachingRuntimException.fillInStackTrace();
+      timesThrown++;
+      throw cachingRuntimException;
     }
     if (cus != null) {
       cus.addCachedUrl(url);
