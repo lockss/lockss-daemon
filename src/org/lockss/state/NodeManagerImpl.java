@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.111 2003-04-24 01:23:18 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.112 2003-04-29 01:34:53 aalto Exp $
  */
 
 /*
@@ -117,16 +117,23 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       treeWalkHandler = null;
     }
     super.stopService();
-    logger.debug("NodeManager sucessfully stopped");
+    logger.debug("NodeManager successfully stopped");
   }
 
   public void forceTreeWalk() {
-    logger.info("Forcing treewalk...");
+    logger.debug2("Forcing treewalk...");
     if (treeWalkHandler == null) {
       treeWalkHandler = new TreeWalkHandler(this, theDaemon);
       treeWalkHandler.start();
     }
     treeWalkHandler.forceTreeWalk();
+  }
+
+  public void killTreeWalk() {
+    logger.debug2("Killing treewalk thread...");
+    if (treeWalkHandler != null) {
+      treeWalkHandler.end();
+    }
   }
 
   public void forceTopLevelPoll() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.72 2003-04-24 22:08:52 tal Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.73 2003-04-29 01:34:53 aalto Exp $
  */
 
 /*
@@ -65,9 +65,6 @@ public class TestNodeManagerImpl
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
-//     String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
-//         "=" + tempDirPath + "\n" + NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE +
-//         "=10";
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     mau = new MockArchivalUnit();
@@ -97,7 +94,7 @@ public class TestNodeManagerImpl
     nodeManager.historyRepo = historyRepo;
     nodeManager.startService();
     // don't need the thread
-    nodeManager.treeWalkHandler.end();
+    nodeManager.killTreeWalk();
 
     theDaemon.getHashService().startService();
 
