@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbabilisticTimer.java,v 1.2 2002-09-09 20:32:41 tal Exp $
+ * $Id: TestProbabilisticTimer.java,v 1.3 2002-09-19 21:03:31 tal Exp $
  */
 
 /*
@@ -84,8 +84,9 @@ public class TestProbabilisticTimer extends TestCase {
   public void testCompare() {
     ProbabilisticTimer p1 = new ProbabilisticTimer(100);
     ProbabilisticTimer p2 = new ProbabilisticTimer(200);
-    assertTrue(p1.shorterThan(p2));
-    assertTrue(!p2.shorterThan(p1));
+    assertTrue(!p1.isShorterThan(p1));
+    assertTrue(p1.isShorterThan(p2));
+    assertTrue(!p2.isShorterThan(p1));
   }    
 
   public void testSleepUntil() {
