@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.28 2003-05-02 18:12:42 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.29 2003-05-05 18:51:07 troberts Exp $
  */
 
 /*
@@ -79,8 +79,10 @@ public class CrawlManagerImpl extends BaseLockssManager
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
 
   private static final long DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION =
-      5 * Constants.DAY;
-  private static final long DEFAULT_REPAIR_CRAWL_EXPIRATION = 5 * Constants.DAY;
+    5 * Constants.DAY;
+  private static final long DEFAULT_REPAIR_CRAWL_EXPIRATION = 
+    5 * Constants.DAY;
+  private static final int DEFAULT_PRIORITY = Thread.NORM_PRIORITY-1;
 
   private Map newContentCrawls = new HashMap();
   private static ActivityRegulator regulator;
@@ -88,7 +90,7 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
-  private int crawlPriority = -1;
+  private int crawlPriority = DEFAULT_PRIORITY;
   private static Logger logger = Logger.getLogger("CrawlManagerImpl");
 
 
@@ -126,7 +128,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       newConfig.getTimeInterval(PARAM_REPAIR_CRAWL_EXPIRATION, 
 				DEFAULT_REPAIR_CRAWL_EXPIRATION);
 
-    crawlPriority = newConfig.getInt(PARAM_PRIORITY, Thread.NORM_PRIORITY-1);
+    crawlPriority = newConfig.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
   }
 
   /**
