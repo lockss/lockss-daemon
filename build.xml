@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.117 2004-10-18 03:33:01 tlipkis Exp $
+ $Id: build.xml,v 1.118 2004-10-20 18:51:10 dcfok Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -182,6 +182,11 @@ Args:
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
+  <!-- jars that need to run the Oai harvester -->
+  <property name="oai-harvester.jar" value="${lib}/harvester2.jar"/>
+  <property name="log4j.jar" value="${lib}/log4j-1.2.8.jar"/>
+  <property name="xalan.jar" value="${lib}/xalan.jar"/>
+
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
   <property name="production.classpath.file" value="${lib}/run-classpath"/>
@@ -215,6 +220,10 @@ Args:
     <pathelement path="${htmlparser.jar}" />
     <pathelement path="${jena.jar}" />
     <pathelement path="${icu4j.jar}" />
+    <!-- jars need to run the Oai harvester -->
+    <pathelement path="${oai-harvester.jar}" />
+    <pathelement path="${log4j.jar}" />
+    <pathelement path="${xalan.jar}" />
   </path>
 
   <path id="run.classpath">
