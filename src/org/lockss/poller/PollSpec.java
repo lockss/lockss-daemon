@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.3 2003-02-27 04:04:28 tal Exp $
+ * $Id: PollSpec.java,v 1.4 2003-03-15 03:24:05 claire Exp $
  */
 
 /*
@@ -140,6 +140,13 @@ public class PollSpec {
 
   public String getUprBound() {
     return uprBound;
+  }
+
+  public String getRangeString() {
+    if(lwrBound != null || uprBound != null) {
+      return lwrBound + " - " + uprBound;
+    }
+    return null;
   }
 
   private PluginManager getPluginManager() {

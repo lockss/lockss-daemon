@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.54 2003-03-11 02:47:08 claire Exp $
+* $Id: Poll.java,v 1.55 2003-03-15 03:24:05 claire Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.state.PollHistory;
 import org.lockss.state.NodeManager;
+import org.lockss.daemon.status.*;
 
 
 /**
@@ -58,6 +59,8 @@ public abstract class Poll implements Serializable {
   public static final int NAME_POLL = 0;
   public static final int CONTENT_POLL = 1;
   public static final int VERIFY_POLL = 2;
+
+  public static final String[] PollName = {"Name", "Content", "Verify"};
 
   static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
       "poll.agreeVerify";
@@ -371,6 +374,9 @@ public abstract class Poll implements Serializable {
     return m_tally;
   }
 
+  public String getKey() {
+    return m_key;
+  }
 
   /**
    * Return a hasher preinited with the challenge and verifier
@@ -749,6 +755,7 @@ public abstract class Poll implements Serializable {
       }
       pollVotes.add(vote);
     }
-
   }
+
+
 }

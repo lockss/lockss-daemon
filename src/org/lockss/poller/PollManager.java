@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.45 2003-03-13 03:27:08 claire Exp $
+* $Id: PollManager.java,v 1.46 2003-03-15 03:24:05 claire Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.mortbay.util.*;
 import gnu.regexp.*;
 import org.lockss.hasher.HashService;
 import org.lockss.repository.LockssRepository;
+import org.lockss.daemon.status.*;
 
 public class PollManager  implements LockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
@@ -112,6 +113,12 @@ public class PollManager  implements LockssManager {
     theComm = theDaemon.getCommManager();
     theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
                                    new CommMessageHandler());
+    // register our status
+    StatusService statusServ = theDaemon.getStatusService();
+    statusServ.registerStatusAccessor(ManagerStatus.TABLE_NAME,
+                                      new ManagerStatus());
+    statusServ.registerStatusAccessor(PollStatus.TABLE_NAME,
+                                      new PollStatus());
   }
 
   /**
@@ -120,7 +127,10 @@ public class PollManager  implements LockssManager {
    */
   public void stopService() {
     // TODO: checkpoint here.
-
+    // unregister our status
+    StatusService statusServ = theDaemon.getStatusService();
+    statusServ.unregisterStatusAccessor(ManagerStatus.TABLE_NAME);
+    statusServ.unregisterStatusAccessor(PollStatus.TABLE_NAME);
     theManager = null;
   }
 
@@ -135,7 +145,7 @@ public class PollManager  implements LockssManager {
    */
   public void requestPoll(int opcode, PollSpec pollspec)
       throws IOException {
-    theLog.debug("handling request for poll of type: " + opcode +
+    theLog.debug("sending a request for poll of type: " + opcode +
                  " for spec " + pollspec);
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     long duration = calcDuration(opcode, cus);
@@ -210,6 +220,7 @@ public class PollManager  implements LockssManager {
     return ret;
   }
 
+
   /**
    * make a new poll of the type defined by the incoming message.
    * @param msg <code>Message</code> to use for
@@ -263,9 +274,6 @@ public class PollManager  implements LockssManager {
     if(theComm != null) {
       theComm.send(ld, au);
     }
-    else {
-      theLog.warning("Uninitialized comm.");
-    }
   }
 
   /**
@@ -279,12 +287,7 @@ public class PollManager  implements LockssManager {
       throws IOException {
     LockssDatagram ld = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
         msg.encodeMsg());
-//    if(theComm != null) {
-      theComm.sendTo(ld, au, id);
-//    }
-//    else {
-//      theLog.warning("Uninitialized comm.");
-//    }
+    theComm.sendTo(ld, au, id);
   }
 
   /**
@@ -654,13 +657,21 @@ public class PollManager  implements LockssManager {
     static final int ACTIVE = 0;
     static final int COMPLETED = 1;
     static final int SUSPENDED = 2;
-
+    static final String[] StatusStrings = { "Active", "Complete", "Suspended"};
     Poll poll;
+    PollSpec spec;
+    int type;
+    Deadline pollDeadline;
     Deadline deadline;
     int status;
+    String key;
 
     PollManagerEntry(Poll p) {
       poll = p;
+      spec = p.getPollSpec();
+      type = p.getVoteTally().getType();
+      key = p.getKey();
+      pollDeadline = p.m_deadline;
       deadline = null;
       status = ACTIVE;
     }
@@ -678,7 +689,7 @@ public class PollManager  implements LockssManager {
     }
 
     synchronized void setPollCompleted(Deadline d) {
-      poll = null;
+//      poll = null;
       deadline = d;
       status = COMPLETED;
     }
@@ -691,6 +702,266 @@ public class PollManager  implements LockssManager {
       status = SUSPENDED;
     }
 
+    String getStatusString() {
+      return StatusStrings[status];
+    }
+
+    String getTypeString() {
+      return Poll.PollName[type];
+    }
+  }
+
+  static class ManagerStatus implements StatusAccessor {
+    static final String TABLE_NAME = "PollManagerTable";
+
+    static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
+    private static String[] allowedKeys = {
+        "Plugin:", "AU:", "URL:", "PollType:", "Status:"};
+    private static String[] columnDescriptors = {
+        "PluginID", "AuID", "URL", "Range", "PollType", "Status", "Deadline",
+        "PollID"};
+    private static int[] columnTypes =
+        { STRINGTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE,STRINGTYPE,
+    ColumnDescriptor.TYPE_DATE, STRINGTYPE};
+
+    private static String[] preferredOrder =  { "Plugin", "AU", "URL", "Deadline"};
+
+    public List getColumnDescriptors(String key) throws StatusService.NoSuchTableException {
+      checkKey(key);
+      ArrayList descrsL= new ArrayList(columnDescriptors.length);
+      for(int i=0; i< columnDescriptors.length; i++) {
+        descrsL.add(new ColumnDescriptor(columnDescriptors[i],
+            columnDescriptors[i],columnTypes[i]));
+      }
+      return descrsL;
+    }
+
+    public List getRows(String key) throws StatusService.NoSuchTableException {
+      checkKey(key);
+      ArrayList rowL = new ArrayList();
+      Iterator it = thePolls.values().iterator();
+      while(it.hasNext()) {
+        PollManagerEntry entry = (PollManagerEntry)it.next();
+
+        if(key == null || matchKey(entry, key)) {
+          rowL.add(makeRow(entry));
+        }
+      }
+      return rowL;
+    }
+
+    public List getDefaultSortRules(String key)
+        throws StatusService.NoSuchTableException {
+
+      checkKey(key);
+
+      ArrayList rulesL = new ArrayList(preferredOrder.length);
+      for(int i=0; i< preferredOrder.length; i++) {
+        rulesL.add(new StatusTable.SortRule(preferredOrder[i], true));
+      }
+
+      return rulesL;
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public String getTitle(String key) {
+      return "Poll Manager Table";
+    }
+
+    // utility methods for making a Reference
+
+    public StatusTable.Reference makePluginRef(Object value, String key) {
+      return new StatusTable.Reference(value, TABLE_NAME, "Plugin:" + key);
+    }
+
+    public StatusTable.Reference makeAURef(Object value, String key) {
+      return new StatusTable.Reference(value, TABLE_NAME, "AU:" + key);
+    }
+
+    public StatusTable.Reference makeURLRef(Object value, String key) {
+      return new StatusTable.Reference(value, TABLE_NAME, "URL:" + key);
+    }
+
+    public StatusTable.Reference makePollTypeRef(Object value, String key) {
+      return new StatusTable.Reference(value, TABLE_NAME, "PollType:" + key);
+    }
+
+    public StatusTable.Reference makeStatusRef(Object value, String key) {
+      return new StatusTable.Reference(value, TABLE_NAME, "Status:" + key);
+    }
+
+    // key support routines
+    private void checkKey(String key) throws StatusService.NoSuchTableException {
+      if(key != null && !allowableKey(allowedKeys, key)) {
+        throw new StatusService.NoSuchTableException("unknonwn key: " + key);
+      }
+    }
+
+    private boolean allowableKey(String []keyArray, String key) {
+      for(int i=0; i< keyArray.length; i++) {
+        if(keyArray[i].startsWith(key))
+          return true;
+      }
+      return false;
+    }
+
+    private boolean matchKey(PollManagerEntry entry, String key) {
+      boolean isMatch = false;
+      PollSpec spec = entry.spec;
+      String keyValue = key.substring(key.indexOf(':'));
+      if(key.startsWith("Plugin:")) {
+        if(spec.getPluginId().equals(keyValue)) {
+          isMatch = true;
+        }
+      }
+      else if(key.startsWith("AU:")) {
+        if(spec.getAUId().equals(keyValue)) {
+          isMatch = true;
+        }
+      }
+      else if(key.startsWith("URL:")) {
+        if(spec.getUrl().equals(keyValue)) {
+          isMatch = true;
+        }
+      }
+      else if(key.startsWith("PollType:")) {
+        if(entry.getTypeString().equals(keyValue)) {
+          isMatch = true;
+        }
+      }
+      else if(key.startsWith("Status:")) {
+        if(entry.getStatusString().equals(keyValue)) {
+          isMatch = true;
+        }
+      }
+
+      return isMatch;
+    }
+
+    private Map makeRow(PollManagerEntry entry) {
+      HashMap rowMap = new HashMap();
+      PollSpec spec = entry.spec;
+      //"PluginID"
+      String shortID = spec.getPluginId();
+      shortID = shortID.substring(shortID.lastIndexOf('|') + 1);
+      rowMap.put("PluginID", shortID);
+      //"AuID"
+      rowMap.put("AuID", spec.getAUId());
+      //"URL"
+      rowMap.put("URL", spec.getUrl());
+      //"Range"
+      rowMap.put("Range", spec.getRangeString());
+      //"PollType"
+      rowMap.put("PollType",entry.getTypeString());
+      //"Status"
+      rowMap.put("Status",entry.getStatusString());
+      //"Deadline"
+      if(entry.pollDeadline != null) {
+        rowMap.put("Deadline", new Long(entry.pollDeadline.getExpirationTime()));
+      }
+      //"PollID"
+      if(entry.isPollActive()) {
+        rowMap.put("PollID", PollStatus.makePollRef(entry.key,entry.key));
+      }
+      else {
+        rowMap.put("PollID", entry.key);
+      }
+      return rowMap;
+    }
+  }
+
+  static class PollStatus implements StatusAccessor {
+    static final String TABLE_NAME = "PollTable";
+
+    static final int IPTYPE = ColumnDescriptor.TYPE_IP_ADDRESS;
+    static final int INTTYPE = ColumnDescriptor.TYPE_INT;
+    static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
+
+    private static String[] columnDescriptors = {"Identity", "Reputation", "Agree",
+        "Challenge", "Verifier", "Hash" };
+    private static int[] columnTypes =
+        { IPTYPE, INTTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE, STRINGTYPE};
+
+    private static String[] preferredOrder =  { "Identity" };
+
+
+    public List getColumnDescriptors(String key) throws StatusService.NoSuchTableException {
+      ArrayList descrsL= new ArrayList(columnDescriptors.length);
+      for(int i=0; i< columnDescriptors.length; i++) {
+        descrsL.add(new ColumnDescriptor(columnDescriptors[i],
+            columnDescriptors[i],columnTypes[i]));
+      }
+      return descrsL;
+    }
+
+    public List getRows(String key) throws StatusService.NoSuchTableException {
+      Poll poll = getPoll(key);
+      Poll.VoteTally tally = poll.getVoteTally();
+
+      ArrayList l = new ArrayList();
+      Iterator it = tally.pollVotes.iterator();
+      while(it.hasNext()) {
+        Vote vote = (Vote)it.next();
+        l.add(makeRow(poll, vote));
+      }
+      return l;
+    }
+
+    public List getDefaultSortRules(String key)
+        throws StatusService.NoSuchTableException {
+
+      ArrayList rulesL = new ArrayList(preferredOrder.length);
+      for(int i=0; i< preferredOrder.length; i++) {
+        rulesL.add(new StatusTable.SortRule(preferredOrder[i], true));
+      }
+
+      return rulesL;
+    }
+
+    public boolean requiresKey() {
+      return true;
+    }
+
+    public String getTitle(String key) {
+      return "Table for running poll " + key;
+    }
+
+    // utility methods for making a Reference
+
+    public static StatusTable.Reference makePollRef(Object value, String key) {
+      return new StatusTable.Reference(value, TABLE_NAME, key);
+    }
+
+    // key support routines
+    private Poll getPoll(String key) throws StatusService.NoSuchTableException {
+      Poll poll = null;
+
+      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+      if(pme != null) {
+        poll =  pme.poll;
+      }
+      if(poll == null) {
+        throw new StatusService.NoSuchTableException("unknown poll key: " + key);
+      }
+      return poll;
+    }
+
+    private Map makeRow(Poll poll, Vote vote) {
+      HashMap rowMap = new HashMap();
+
+      rowMap.put("Identity", vote.getIDAddress());
+      LcapIdentity id = poll.idMgr.findIdentity(vote.getIDAddress());
+      rowMap.put("Reputation", String.valueOf(id.getReputation()));
+      rowMap.put("Agree", String.valueOf(vote.agree));
+      rowMap.put("Challenge", vote.getChallengeString());
+      rowMap.put("Verifier",vote.getVerifierString());
+      rowMap.put("Hash",vote.getHashString());
+
+      return rowMap;
+    }
   }
 
 }

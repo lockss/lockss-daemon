@@ -11,6 +11,7 @@ import org.lockss.proxy.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
+import org.lockss.daemon.status.*;
 
 public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
@@ -23,6 +24,7 @@ public class MockLockssDaemon extends LockssDaemon {
   PluginManager pluginManager = null;
   IdentityManager identityManager = null;
   NodeManagerService nodeManagerService = null;
+  StatusService statusService = null;
 
   boolean useMockNodeService = false;
   boolean useMockLockssService = false;
@@ -259,6 +261,22 @@ public class MockLockssDaemon extends LockssDaemon {
     theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     return identityManager;
   }
+
+  public StatusService getStatusService() {
+    if (statusService == null) {
+      StatusServiceImpl impl = new StatusServiceImpl();
+      try {
+        impl.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      statusService = impl;
+      theManagers.put(LockssDaemon.STATUS_SERVICE, statusService);
+    }
+
+    return statusService;
+  }
+
 
   /**
    * Set the CommManager
