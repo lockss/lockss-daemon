@@ -1,5 +1,5 @@
 /*
- * $Id: AuNodeImpl.java,v 1.3 2003-04-01 00:08:12 aalto Exp $
+ * $Id: AuNodeImpl.java,v 1.4 2003-04-22 21:31:51 aalto Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.plugin.AuUrl;
  */
 public class AuNodeImpl extends RepositoryNodeImpl {
   AuNodeImpl(String url, String nodeLocation,
-                     LockssRepositoryImpl repository) {
+             LockssRepositoryImpl repository) {
     super(url, nodeLocation, repository);
   }
 
@@ -56,6 +56,7 @@ public class AuNodeImpl extends RepositoryNodeImpl {
    * @return false
    */
   public boolean hasContent() {
+    if (nodeRootFile==null) loadNodeRoot();
     return false;
   }
 

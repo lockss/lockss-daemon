@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.83 2003-04-22 00:08:55 claire Exp $
+* $Id: PollManager.java,v 1.84 2003-04-22 21:31:51 aalto Exp $
  */
 
 /*
@@ -334,6 +334,31 @@ public class PollManager  extends BaseLockssManager {
       return null;
     }
 
+    // check with regulator if not verify poll
+    if (!msg.isVerifyPoll()) {
+      //XXX get expiration time for the lock
+//      long expiration = ret_poll.m_deadline.getRemainingTime() * 2;
+      long expiration = 5 * Constants.HOUR;
+      if (AuUrl.isAuUrl(cus.getUrl())) {
+        if (!theDaemon.getActivityRegulator().startAuActivity(
+            ActivityRegulator.TOP_LEVEL_POLL,
+            cus.getArchivalUnit(), expiration)) {
+          theLog.debug2("New top-level poll aborted due to activity lock.");
+          return null;
+        }
+      }
+      else {
+        int activity = (msg.isContentPoll() ?
+                        ActivityRegulator.STANDARD_CONTENT_POLL :
+                        ActivityRegulator.STANDARD_NAME_POLL);
+        if (!theDaemon.getActivityRegulator().startCusActivity(activity,
+            cus, expiration)) {
+          theLog.debug2("New poll aborted due to activity lock.");
+          return null;
+        }
+      }
+    }
+
     // create the appropriate poll for the message type
     ret_poll = createPoll(msg, spec);
 
@@ -342,31 +367,8 @@ public class PollManager  extends BaseLockssManager {
       if (!msg.isVerifyPoll()) {
         if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
 	  theLog.debug("NodeManager said not to start poll: "+ret_poll);
+          freePollLock(cus, msg.isContentPoll());
           return null;
-        }
-      }
-
-      // check with regulator if not verify poll
-      if (!msg.isVerifyPoll()) {
-        // get expiration time for the lock
-        long expiration = ret_poll.m_deadline.getRemainingTime() * 2;
-        if (AuUrl.isAuUrl(cus.getUrl())) {
-          if (!theDaemon.getActivityRegulator().startAuActivity(
-              ActivityRegulator.TOP_LEVEL_POLL,
-              cus.getArchivalUnit(), expiration)) {
-            theLog.debug2("New top-level poll aborted due to activity lock.");
-            return null;
-          }
-        }
-        else {
-          int activity = (msg.isContentPoll() ?
-                          ActivityRegulator.STANDARD_CONTENT_POLL :
-                          ActivityRegulator.STANDARD_NAME_POLL);
-          if (!theDaemon.getActivityRegulator().startCusActivity(activity,
-              cus, expiration)) {
-            theLog.debug2("New poll aborted due to activity lock.");
-            return null;
-          }
         }
       }
 
@@ -377,96 +379,117 @@ public class PollManager  extends BaseLockssManager {
       ret_poll.startPoll();
       theLog.debug2("Started new poll: " + ret_poll.m_key);
       return ret_poll;
-    }
-    theLog.error("Got a null ret_poll from createPoll");
-    return null;
-  }
-
-
-    /**
-     * close the poll from any further voting
-     * @param key the poll signature
-     */
-    void closeThePoll(String key)  {
-      PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-      // mark the poll completed because if we need to call a repair poll
-      // we don't want this one to be in conflict with it.
-      PollTally tally = pme.poll.getVoteTally();
-      pme.setPollCompleted();
-      if(tally.getType() != Poll.VERIFY_POLL) {
-        NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
-        theLog.debug("sending completed poll results " + tally);
-        nm.updatePollResults(tally.getCachedUrlSet(), tally);
-      }
-    }
-
-    /**
-     * create a poll of the type indicated by the LcapMessage opcode.
-     * @param msg the message which triggered this poll
-     * @param pollspec the PollSpec which describes the poll
-     * @return a newly created Poll object
-     * @throws ProtocolException if the opcode in the message is of an unknown
-     * type.
-     */
-    protected Poll createPoll(LcapMessage msg, PollSpec pollspec)
-        throws ProtocolException {
-      Poll ret_poll = null;
-
-      switch(msg.getOpcode()) {
-        case LcapMessage.CONTENT_POLL_REP:
-        case LcapMessage.CONTENT_POLL_REQ:
-          theLog.debug("Making a content poll on "+ pollspec);
-          ret_poll = new ContentPoll(msg, pollspec, this);
-          break;
-        case LcapMessage.NAME_POLL_REP:
-        case LcapMessage.NAME_POLL_REQ:
-          theLog.debug("Making a name poll on "+pollspec);
-          ret_poll = new NamePoll(msg, pollspec, this);
-          break;
-        case LcapMessage.VERIFY_POLL_REP:
-        case LcapMessage.VERIFY_POLL_REQ:
-          theLog.debug("Making a verify poll on "+pollspec);
-          ret_poll = new VerifyPoll(msg, pollspec, this);
-          break;
-        default:
-          throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
-      }
-      return ret_poll;
-    }
-
-    /**
-     * check for conflicts between the poll defined by the Message and any
-     * currently exsiting poll.
-     * @param msg the <code>Message</code> to check
-     * @param cus the <code>CachedUrlSet</code> from the url and reg expression
-     * @return the CachedUrlSet of the conflicting poll.
-     */
-    CachedUrlSet checkForConflicts(LcapMessage msg, CachedUrlSet cus) {
-
-      // eliminate incoming verify polls - never conflicts
-      if(msg.isVerifyPoll()) {
-        return null;
-      }
-
-      Iterator iter = thePolls.values().iterator();
-      while(iter.hasNext()) {
-        PollManagerEntry entry = (PollManagerEntry)iter.next();
-        Poll p = entry.poll;
-
-        // eliminate completed polls or verify polls
-        if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
-          CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
-          ArchivalUnit au = cus.getArchivalUnit();
-          LockssRepository repo = theDaemon.getLockssRepository(au);
-          int rel_pos = repo.cusCompare(cus, pcus);
-          if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
-             rel_pos != LockssRepository.NO_RELATION) {
-            return pcus;
-          }
-        }
-      }
+    } else {
+      theLog.error("Got a null ret_poll from createPoll");
+      freePollLock(cus, msg.isContentPoll());
       return null;
     }
+  }
+
+  /**
+   * Frees the {@link ActivityRegulator} lock from this poll.
+   * @param cus the CachedUrlSet being polled
+   * @param isContentPoll true iff a content poll
+   */
+  private void freePollLock(CachedUrlSet cus, boolean isContentPoll) {
+    if (AuUrl.isAuUrl(cus.getUrl())) {
+      theDaemon.getActivityRegulator().auActivityFinished(
+          ActivityRegulator.TOP_LEVEL_POLL, cus.getArchivalUnit());
+    } else {
+      int activity = (isContentPoll ?
+                      ActivityRegulator.STANDARD_CONTENT_POLL :
+                      ActivityRegulator.STANDARD_NAME_POLL);
+      theDaemon.getActivityRegulator().cusActivityFinished(activity, cus);
+    }
+  }
+
+  /**
+   * close the poll from any further voting
+   * @param key the poll signature
+   */
+  void closeThePoll(String key)  {
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    // mark the poll completed because if we need to call a repair poll
+    // we don't want this one to be in conflict with it.
+    PollTally tally = pme.poll.getVoteTally();
+    pme.setPollCompleted();
+    if(tally.getType() != Poll.VERIFY_POLL) {
+      NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
+      theLog.debug("sending completed poll results " + tally);
+      nm.updatePollResults(tally.getCachedUrlSet(), tally);
+      // free the activity regulator
+      freePollLock(tally.getCachedUrlSet(),
+                   tally.getType()==Poll.CONTENT_POLL);
+    }
+  }
+
+  /**
+   * create a poll of the type indicated by the LcapMessage opcode.
+   * @param msg the message which triggered this poll
+   * @param pollspec the PollSpec which describes the poll
+   * @return a newly created Poll object
+   * @throws ProtocolException if the opcode in the message is of an unknown
+   * type.
+   */
+  protected Poll createPoll(LcapMessage msg, PollSpec pollspec)
+      throws ProtocolException {
+    Poll ret_poll = null;
+
+    switch(msg.getOpcode()) {
+      case LcapMessage.CONTENT_POLL_REP:
+      case LcapMessage.CONTENT_POLL_REQ:
+        theLog.debug("Making a content poll on "+ pollspec);
+        ret_poll = new ContentPoll(msg, pollspec, this);
+        break;
+      case LcapMessage.NAME_POLL_REP:
+      case LcapMessage.NAME_POLL_REQ:
+        theLog.debug("Making a name poll on "+pollspec);
+        ret_poll = new NamePoll(msg, pollspec, this);
+        break;
+      case LcapMessage.VERIFY_POLL_REP:
+      case LcapMessage.VERIFY_POLL_REQ:
+        theLog.debug("Making a verify poll on "+pollspec);
+        ret_poll = new VerifyPoll(msg, pollspec, this);
+        break;
+      default:
+        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
+    }
+    return ret_poll;
+  }
+
+  /**
+   * check for conflicts between the poll defined by the Message and any
+   * currently exsiting poll.
+   * @param msg the <code>Message</code> to check
+   * @param cus the <code>CachedUrlSet</code> from the url and reg expression
+   * @return the CachedUrlSet of the conflicting poll.
+   */
+  CachedUrlSet checkForConflicts(LcapMessage msg, CachedUrlSet cus) {
+
+    // eliminate incoming verify polls - never conflicts
+    if(msg.isVerifyPoll()) {
+      return null;
+    }
+
+    Iterator iter = thePolls.values().iterator();
+    while(iter.hasNext()) {
+      PollManagerEntry entry = (PollManagerEntry)iter.next();
+      Poll p = entry.poll;
+
+      // eliminate completed polls or verify polls
+      if(!entry.isPollCompleted() && !p.getMessage().isVerifyPoll()) {
+        CachedUrlSet pcus = p.getPollSpec().getCachedUrlSet();
+        ArchivalUnit au = cus.getArchivalUnit();
+        LockssRepository repo = theDaemon.getLockssRepository(au);
+        int rel_pos = repo.cusCompare(cus, pcus);
+        if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
+           rel_pos != LockssRepository.NO_RELATION) {
+          return pcus;
+        }
+      }
+    }
+    return null;
+  }
 
   /**
    * send a message to the multicast address for this archival unit

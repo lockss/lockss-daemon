@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.108 2003-04-18 23:18:37 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.109 2003-04-22 21:31:51 aalto Exp $
  */
 
 /*
@@ -313,20 +313,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // close the poll and update the node state
       closePoll(pollState, results.getDuration(), results.getPollVotes(),
                 state);
-
-      // free the activity regulator
-      freePollLock(results.getCachedUrlSet(),
-                   results.getType()==Poll.CONTENT_POLL);
-    }
-  }
-
-  void freePollLock(CachedUrlSet cus, boolean isContent) {
-    if (AuUrl.isAuUrl(cus.getUrl())) {
-      regulator.auActivityFinished(ActivityRegulator.TOP_LEVEL_POLL, managedAu);
-    } else {
-      int activity = (isContent ? ActivityRegulator.STANDARD_CONTENT_POLL :
-                      ActivityRegulator.STANDARD_NAME_POLL);
-      regulator.cusActivityFinished(activity, cus);
     }
   }
 
