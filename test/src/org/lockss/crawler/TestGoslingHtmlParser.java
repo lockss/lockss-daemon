@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.5 2004-01-27 02:18:40 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.6 2004-02-05 02:55:42 clairegriffin Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       parser.parseForUrls(null, new MyFoundUrlCallback());
       fail("Calling parseForUrls with a null CachedUrl should have thrown");
     } catch (IllegalArgumentException iae) {
-    } 
+    }
   }
 
   public void testThrowsOnNullCallback() throws IOException {
@@ -72,7 +72,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       parser.parseForUrls(new MockCachedUrl("http://www.example.com/"), null);
       fail("Calling parseForUrls with a null FoundUrlCallback should have thrown");
     } catch (IllegalArgumentException iae) {
-    } 
+    }
   }
 
 //   public void testThrowsOnNullSet() throws IOException {
@@ -81,7 +81,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 // 			  null, null);
 //       fail("Calling parseForUrls with a null Set should have thrown");
 //     } catch (IllegalArgumentException iae) {
-//     } 
+//     }
 //   }
 
   public void testThrowsOnNullAu() {
@@ -96,7 +96,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     singleTagShouldParse("http://www.example.com/web_link.html",
   			 "<a href=", "</a>");
   }
-  
+
   public void testDoCrawlImage() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.jpg",
 			 "<img src=", "</img>");
@@ -167,6 +167,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
                          "<a href=", "</a");
   }
 
+
   private void singleTagShouldParse(String url,
  				    String startTag, String endTag)
       throws IOException {
@@ -185,7 +186,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     String content = makeContent(url, startTag, endTag);
     mcu.setContent(content);
-    
+
     MyFoundUrlCallback cb = new MyFoundUrlCallback();
     parser.parseForUrls(mcu, cb);
 
@@ -296,10 +297,10 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 //     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
 //     String url = "http://www.example.com/link1.html";
 //     mcu.setContent("<a href="+url+">Test</a>");
-    
+
 //     Collection parsedUrls = new HashSet();
 //     parser.parseForUrls(mcu, parsedUrls, null);
-    
+
 //     Set expected = SetUtil.set(url);
 //     assertEquals(expected, parsedUrls);
 
@@ -312,7 +313,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(source);
 
     parser.parseForUrls(mcu, cb);
-    
+
     Set expected = SetUtil.set();
     assertEquals(expected, cb.getFoundUrls());
   }
@@ -326,7 +327,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(source);
 
     parser.parseForUrls(mcu, cb);
-    
+
     Set expected = SetUtil.set();
     assertEquals(expected, cb.getFoundUrls());
   }
@@ -342,8 +343,27 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(source);
 
     parser.parseForUrls(mcu, cb);
-    
+
     Set expected = SetUtil.set(url);
+    assertEquals(expected, cb.getFoundUrls());
+  }
+  public void testDoHrefInAnchorJavascript() throws IOException {
+    String url= "http://www.example.com/link3.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link1.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href = javascript:newWindow('http://www.example.com/link3.html')</a>"
+    + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
+    + "<img src = javascript:popup('" + url3 + "') </img>";
+
+    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
+    mcu.setContent(source);
+
+    parser.parseForUrls(mcu, cb);
+
+    Set expected = SetUtil.set(url,url2);
     assertEquals(expected, cb.getFoundUrls());
   }
 
@@ -361,7 +381,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(source);
 
     parser.parseForUrls(mcu, cb);
-    
+
     Set expected = SetUtil.set(url);
     assertEquals(expected, cb.getFoundUrls());
   }
@@ -453,7 +473,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
     public void foundUrl(String url) {
       foundUrls.add(url);
-    }    
+    }
 
     public Set getFoundUrls() {
       return foundUrls;

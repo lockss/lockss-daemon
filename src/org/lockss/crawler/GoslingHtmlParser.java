@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.6 2004-01-27 02:18:39 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.7 2004-02-05 02:55:41 clairegriffin Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String BODYTAG = "body";
   private static final String TABLETAG = "table";
   private static final String TDTAG = "tc";
-
+  private static final String JSCRIPTTAG = "javascript";
   private static final String ASRC = "href";
   private static final String SRC = "src";
   private static final String BACKGROUNDSRC = "background";
@@ -113,7 +113,7 @@ public class GoslingHtmlParser implements ContentParser {
    * @param cb callback to call each time a url is found
    * @throws IOException
    */
-  public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb) 
+  public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb)
       throws IOException {
     if (cu == null) {
       throw new IllegalArgumentException("Called with null cu");
@@ -125,7 +125,7 @@ public class GoslingHtmlParser implements ContentParser {
       logger.error("CachedUrl has null getUrl() value: "+cu);
       return;
     }
-    
+
     InputStream is = cu.openForReading();
     // set the reader to our default encoding
     //XXX try to extract encoding from source
@@ -232,6 +232,9 @@ public class GoslingHtmlParser implements ContentParser {
       case 'A':
         if (beginsWithTag(link.toString(),ATAG)) {
           returnStr = getAttributeValue(ASRC, link.toString());
+          if (returnStr != null && returnStr.startsWith(JSCRIPTTAG)) {
+            returnStr = extractScriptUrl(returnStr);
+          }
         }
         break;
       case 'f': //<frame src=frame1.html>
@@ -280,7 +283,7 @@ public class GoslingHtmlParser implements ContentParser {
       if (StringUtil.getIndexIgnoringCase(returnStr, "https") == 0) {
 	logger.debug3("Ignoring https url: "+returnStr);
         return null;
-      } 
+      }
       try {
 	URL retUrl = new URL(srcUrl, returnStr);
 	returnStr = retUrl.toString();
@@ -333,6 +336,13 @@ public class GoslingHtmlParser implements ContentParser {
     return null;
   }
 
+  private static String extractScriptUrl(String src) {
+    int begin = src.indexOf("'");
+    int end = src.indexOf("'",begin+1);
+    if(end > begin)
+      return src.substring(begin+1,end);
+    return src;
+  }
 
 
 

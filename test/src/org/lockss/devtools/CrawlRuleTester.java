@@ -67,6 +67,7 @@ class RuleTester {
   private static final String TABLETAG = "table";
   private static final String TDTAG = "tc";
 
+  private static final String JSCRIPTTAG = "javascript";
   private static final String ASRC = "href";
   private static final String SRC = "src";
   private static final String BACKGROUNDSRC = "background";
@@ -86,7 +87,7 @@ class RuleTester {
 
   RuleTester(String propFile, String outFile, int crawlDepth) {
     m_propFile = propFile;
-    m_outputFile = outFile;
+    m_outputFile = outFile == null ? propFile +".out" : outFile;
     m_crawlDepth = crawlDepth;
   }
 
@@ -353,18 +354,22 @@ class RuleTester {
             pos = 0;
             int lc1 = 0;
             int lc2 = 0;
+            StringBuffer skipBuffer = new StringBuffer();
             while ( (c = reader.read()) >= 0
                    && (c != '>' || lc1 != '-' || lc2 != '-')) {
               lc1 = lc2;
               lc2 = c;
+              skipBuffer.append((char) c);
             }
+            String skipped = skipBuffer.toString();
             break;
           }
+
           lineBuf.append( (char) c);
           pos++;
           c = reader.read();
         }
-
+        String line = lineBuf.toString();
         if (inscript) {
           //FIXME when you deal with the script problems
           //	  if(lookingAt(lineBuf, 0, pos, scripttagend)) {
@@ -423,6 +428,9 @@ class RuleTester {
       case 'A':
         if (beginsWithTag(link.toString(),ATAG)) {
           returnStr = getAttributeValue(ASRC, link.toString());
+          if (returnStr.startsWith(JSCRIPTTAG)) {
+            returnStr = extractScriptUrl(returnStr);
+          }
         }
         break;
       case 'f': //<frame src=frame1.html>
@@ -483,6 +491,7 @@ class RuleTester {
   private static String getAttributeValue(String attribute, String src) {
     StringTokenizer st = new StringTokenizer(src, "\n\t\r =\"", true);
     String lastToken = null;
+
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
       if (!token.equals("=")) {
@@ -494,7 +503,7 @@ class RuleTester {
         if (attribute.equalsIgnoreCase(lastToken))
           while (st.hasMoreTokens()) {
             token = st.nextToken();
-            // we need to allow for arguments in the url which use '='
+             // we need to allow for arguments in the url which use '='
             if (!token.equals(" ") && !token.equals("\"")) {
               StringBuffer sb = new StringBuffer(token);
               while (st.hasMoreTokens() &&
@@ -509,5 +518,17 @@ class RuleTester {
     }
     return null;
   }
+
+  private static final String BEGIN_SCRIPT_VALUE = "(";
+  private static final String END_SCRIPT_VALUE = ")";
+
+  private static String extractScriptUrl(String src) {
+    int begin = src.indexOf("'");
+    int end = src.indexOf("'",begin+1);
+    if(end > begin)
+      return src.substring(begin+1,end);
+    return src;
+  }
+
 
 }
