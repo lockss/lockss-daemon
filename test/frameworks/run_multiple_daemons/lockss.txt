@@ -1,3 +1,9 @@
+# configure simulated AU
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=3
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.depth=2
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=4
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.root=localA
+
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=debug
 
@@ -36,7 +42,9 @@ org.lockss.poll.namepoll.deadline=5m
 org.lockss.poll.contentpoll.min=4m
 org.lockss.poll.contentpoll.max=12m
 
-org.lockss.treewalk.interval=5m
+org.lockss.treewalk.initial.estimate=5m
+org.lockss.treewalk.interval.min=5m
+org.lockss.treewalk.interval.max=7m
 org.lockss.treewalk.start.delay=10s
 org.lockss.comm.router.beacon.interval=1m
 org.lockss.baseau.toplevel.poll.interval.min=5m
