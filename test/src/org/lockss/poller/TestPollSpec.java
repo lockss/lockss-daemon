@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.3 2003-02-27 01:50:48 claire Exp $
+ * $Id: TestPollSpec.java,v 1.4 2003-03-25 01:26:24 aalto Exp $
  */
 
 /*
@@ -47,17 +47,22 @@ import java.io.*;
  */
 
 public class TestPollSpec extends LockssTestCase {
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
-
-  public TestPollSpec(String msg) {
-    super(msg);
-  }
+  private MockLockssDaemon theDaemon;
 
   public void setUp() throws Exception {
     super.setUp();
-    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
-    daemon.getIdentityManager();
-    daemon.getPluginManager();
+
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    TestIdentityManager.configParams(tempDirPath + "iddb",
+                                     "src/org/lockss/protocol");
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.getIdentityManager();
+    theDaemon.getPluginManager();
+  }
+
+  public void tearDown() throws Exception {
+    super.tearDown();
   }
 
   public void testFromCus() {
@@ -100,7 +105,7 @@ public class TestPollSpec extends LockssTestCase {
     LcapIdentity id = null;
     try {
       InetAddress addr = InetAddress.getByName("127.0.0.1");
-      id = daemon.getIdentityManager().findIdentity(addr);
+      id = theDaemon.getIdentityManager().findIdentity(addr);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

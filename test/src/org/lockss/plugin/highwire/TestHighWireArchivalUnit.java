@@ -52,6 +52,11 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     theDaemon.getLockssRepositoryService().startService();
   }
 
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    super.tearDown();
+  }
+
   public void testGetVolumeNum() {
 
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.12 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.13 2003-03-25 01:26:24 aalto Exp $
  */
 
 /*
@@ -60,6 +60,11 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
     theDaemon.getLockssRepositoryService().startService();
 
     theDaemon.getLockssRepository(mgfau);
+  }
+
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    super.tearDown();
   }
 
   public void testCache() throws IOException {

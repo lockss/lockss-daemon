@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.13 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.14 2003-03-25 01:26:24 aalto Exp $
  */
 
 /*
@@ -61,6 +61,11 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
 
     mau = new MockArchivalUnit();
     theDaemon.getLockssRepository(mau);
+  }
+
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    super.tearDown();
   }
 
   public void testHtmlProperties() throws Exception {

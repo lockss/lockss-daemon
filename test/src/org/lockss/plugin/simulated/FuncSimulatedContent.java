@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.27 2003-03-04 01:02:05 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.28 2003-03-25 01:26:24 aalto Exp $
  */
 
 /*
@@ -66,8 +66,14 @@ public class FuncSimulatedContent extends LockssTestCase {
         tempDirPath;
     String configStr = s + s2 + s3;
     TestConfiguration.setCurrentConfigFromString(configStr);
+    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getLockssRepository(sau);
     theDaemon.getPluginManager();
+  }
+
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    super.tearDown();
   }
 
   public void testSimulatedContent() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.6 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.7 2003-03-25 01:26:24 aalto Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
 
   public void tearDown() throws Exception {
     nms.stopService();
+    theDaemon.getLockssRepositoryService().stopService();
     theDaemon.stopDaemon();
     super.tearDown();
   }

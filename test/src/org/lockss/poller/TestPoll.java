@@ -24,8 +24,9 @@ public class TestPoll extends LockssTestCase {
   private static String uprbnd = "test3.doc";
   private static long testduration = Constants.HOUR;
 
-  protected static ArchivalUnit testau;
-  private static IdentityManager idmgr;
+  protected ArchivalUnit testau;
+  private IdentityManager idmgr;
+  //XXX fix to use non-statically
   private static MockLockssDaemon theDaemon = new MockLockssDaemon();
   private String[] agree_entries = makeEntries(10, 50);
   private String[] disagree_entries = makeEntries(15, 57);
@@ -39,25 +40,30 @@ public class TestPoll extends LockssTestCase {
   protected Poll[] testpolls;
   protected PollManager pollmanager = theDaemon.getPollManager();
 
-  /** setUp method for test case
-   * @throws Exception
-   */
   protected void setUp() throws Exception {
     super.setUp();
+
+//    theDaemon = new MockLockssDaemon();
+  //  pollmanager = theDaemon.getPollManager();
+  //  pollmanager.startService();
 
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     PluginUtil.registerArchivalUnit(testau);
-    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=/tmp";
-    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol",
-                                     cacheStr);
+
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
+        tempDirPath;
+    TestIdentityManager.configParams(tempDirPath + "iddb",
+                                     "src/org/lockss/protocol", cacheStr);
+
     idmgr = theDaemon.getIdentityManager();
     theDaemon.getHashService().startService();
     theDaemon.getLockssRepositoryService().startService();
 
     theDaemon.setNodeManagerService(new MockNodeManagerService());
     theDaemon.setNodeManager(new MockNodeManager(), testau);
-  //  pollmanager = theDaemon.getPollManager();
+
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = idmgr.findIdentity(testaddr);
@@ -107,9 +113,11 @@ public class TestPoll extends LockssTestCase {
    */
   public void tearDown() throws Exception {
     theDaemon.getHashService().stopService();
+    theDaemon.getLockssRepositoryService().stopService();
     for (int i = 0; i < 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
     }
+    pollmanager.stopService();
     super.tearDown();
   }
 

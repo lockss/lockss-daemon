@@ -27,6 +27,7 @@ public class TestPollManager extends LockssTestCase {
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;
+  //XXX fix to use non-statically
   private static MockLockssDaemon theDaemon = new MockLockssDaemon();
 
   protected InetAddress testaddr;
@@ -37,14 +38,22 @@ public class TestPollManager extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
 
+//    theDaemon = new MockLockssDaemon();
+  //  pollmanager = theDaemon.getPollManager();
+    //pollmanager.startService();
+
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     PluginUtil.registerArchivalUnit(testau);
-    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=/tmp";
-    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol",
-                                     cacheStr);
+
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
+        tempDirPath;
+    TestIdentityManager.configParams(tempDirPath + "iddb",
+                                     "src/org/lockss/protocol", cacheStr);
     theDaemon.getHashService().startService();
     theDaemon.getLockssRepositoryService().startService();
+ //   theDaemon.getRouterManager().startService();
 
     theDaemon.setNodeManagerService(new MockNodeManagerService());
     theDaemon.setNodeManager(new MockNodeManager(),testau);
@@ -81,9 +90,12 @@ public class TestPollManager extends LockssTestCase {
 
   public void tearDown() throws Exception {
     theDaemon.getHashService().stopService();
+    theDaemon.getLockssRepositoryService().stopService();
+//    theDaemon.getRouterManager().stopService();
     for(int i=0; i<3; i++) {
       pollmanager.removePoll(testmsg[i].getKey());
     }
+    pollmanager.stopService();
     super.tearDown();
   }
 

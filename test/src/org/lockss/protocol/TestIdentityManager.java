@@ -8,6 +8,7 @@ import org.lockss.daemon.Configuration;
 import org.lockss.daemon.TestConfiguration;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import java.io.File;
 
 /** JUnitTest case for class: org.lockss.protocol.IdentityManager */
 public class TestIdentityManager extends LockssTestCase {
@@ -24,19 +25,18 @@ public class TestIdentityManager extends LockssTestCase {
                                          "test2.doc", "test3.doc"};
   private static String pluginid = "testplugin 1.0";
 
-  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon;
+  private IdentityManager idmgr;
 
-  static {
-    configParams("/tmp/iddb", "src/org/lockss/protocol");
-  }
-  private static IdentityManager idmgr = daemon.getIdentityManager();
-
-  public TestIdentityManager(String _name) {
-    super(_name);
-  }
-
-  protected void setUp() throws Exception {
+  public void setUp() throws Exception {
     super.setUp();
+
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    configParams(tempDirPath + "iddb", "src/org/lockss/protocol");
+
+    theDaemon = new MockLockssDaemon();
+    idmgr = theDaemon.getIdentityManager();
+
     try {
       fakeId = idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");
@@ -48,6 +48,11 @@ public class TestIdentityManager extends LockssTestCase {
     testIdKey = LcapIdentity.makeIdKey(testAddress);
   }
 
+  public void tearDown() throws Exception {
+    idmgr.stopService();
+    super.tearDown();
+  }
+
   /** test for method getIdentity(..) */
   public void testFindIdentity() {
     try {
@@ -57,7 +62,6 @@ public class TestIdentityManager extends LockssTestCase {
     catch (UnknownHostException ex) {
       fail("Invalid host:" + fakeId);
     }
-
   }
 
   /** test for method findIdentity(..) */

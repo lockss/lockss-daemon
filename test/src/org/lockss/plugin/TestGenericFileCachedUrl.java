@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.4 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.5 2003-03-25 01:26:24 aalto Exp $
  */
 
 /*
@@ -66,6 +66,11 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     cus = mgfau.makeCachedUrlSet(rSpec);
+  }
+
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    super.tearDown();
   }
 
   public void testGetUrl() throws Exception {
