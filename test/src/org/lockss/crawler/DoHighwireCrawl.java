@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.29 2004-09-27 22:39:01 smorabito Exp $
+ * $Id: DoHighwireCrawl.java,v 1.30 2005-03-15 07:42:42 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.definable.*;
-import org.lockss.plugin.highwire.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.base.*;

@@ -89,9 +89,9 @@ Used in all cases:
  jar          The name of the JAR file to create.
  plugin       The full path of the plugin class or XML file,
               complete with extension, in the form
-	      "../classes/foo/FooPlugin.class" or
-	      "/path/to/classes/foo/FooPlugin.xml" (absolute or relative path).
-              This path must be under the 'classes' subdirectory
+	      "./plugins/classes/foo/FooPlugin.class"  (relative) or
+	      "/path/to/plugins/classes/foo/FooPlugin.xml"  (absolute).
+              This path must be under the 'plugins/classes' subdirectory
               of the project directory.
  titledb      (Optional) Full or relative path to the title
               DB XML file to bundle.
@@ -103,7 +103,7 @@ Only used if --nosign is not set:
 """
 
 def get_classes_dir():
-    return path.join(projectDir, 'classes') + sep
+    return path.join(projectDir, 'plugins/classes') + sep
 
 def common_path(a, b):
     # path.commonprefix is very broken in python.  It works on

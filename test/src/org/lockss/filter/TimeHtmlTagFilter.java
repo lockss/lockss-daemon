@@ -1,5 +1,5 @@
 /*
- * $Id: TimeHtmlTagFilter.java,v 1.2 2004-04-06 07:32:58 tlipkis Exp $
+ * $Id: TimeHtmlTagFilter.java,v 1.3 2005-03-15 07:42:41 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.io.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.*;
 
 public class TimeHtmlTagFilter extends LockssTiming {
   private static Logger log = Logger.getLogger("TimeHtmlTagFilter");

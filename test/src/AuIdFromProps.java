@@ -1,5 +1,5 @@
 /*
- * $Id: AuIdFromProps.java,v 1.3 2004-03-01 04:04:39 clairegriffin Exp $
+ * $Id: AuIdFromProps.java,v 1.4 2005-03-15 07:42:42 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.plugin.highwire.*;
 
 public class AuIdFromProps {//extends BaseArchivalUnit {
   private Class[] plugins = {
@@ -50,34 +49,6 @@ public class AuIdFromProps {//extends BaseArchivalUnit {
     AuIdFromProps it = new AuIdFromProps();
     it.doIt();
   }
-
-  //BaseArchivalUnit methods
-//   public AUIdFromProps() {
-//     super(new HighWirePlugin());
-//   }
-
-//   public String getName() {
-//     throw new UnsupportedOperationException("Not implmented");
-//   }
-
-//   public List getNewContentCrawlUrls() {
-//     throw new UnsupportedOperationException("Not implmented");
-//   }
-
-//   public UrlCacher urlCacherFactory(CachedUrlSet cus, String str) {
-//     throw new UnsupportedOperationException("Not implmented");
-//   }
-
-//   public CachedUrl cachedUrlFactory(CachedUrlSet cus, String str) {
-//     throw new UnsupportedOperationException("Not implmented");
-//   }
-
-//   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit au,
-// 					  CachedUrlSetSpec cuss) {
-//     throw new UnsupportedOperationException("Not implmented");
-//   }
-
-
 
   public void doIt() {
     BufferedReader in = new BufferedReader(new InputStreamReader(System.in));

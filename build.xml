@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.133 2005-03-11 19:04:57 tlipkis Exp $
+ $Id: build.xml,v 1.134 2005-03-15 07:43:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -108,6 +108,18 @@ Args:
   <property name="test.results"   value="${test}/results"/>
   <property name="test.native"    value="${test}/native"/>
 
+  <property name="plugins"           value="${basedir}/plugins"/>
+  <property name="plugins.src"       value="${plugins}/src"/>
+  <property name="plugins.classes"   value="${plugins}/classes" />
+
+  <property name="plugins.test"      value="${plugins}/test"/>
+  <property name="plugins.test.src"  value="${plugins.test}/src"/>
+  <property name="plugins.test.classes" value="${plugins.test}/classes"/>
+  <property name="plugins.test.results" value="${plugins.test}/results"/>
+
+  <!--  Loadable plugin jars created here -->
+  <property name="plugins.dir" value="${basedir}/plugins/jars" />
+
   <property name="ant"           value="${basedir}/ant"/>
   <property name="ant.src"       value="${ant}/src"/>
   <property name="ant.classes"   value="${ant}/classes" />
@@ -178,18 +190,18 @@ Args:
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
+  <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
+
+  <!-- Jars we create -->
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
+  <property name="lockss.plugins.jar" value="${lib}/lockss-plugins.jar"/>
+  <property name="lockss.plugins.test.jar" value="${lib}/lockss-plugins-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
   <property name="lockss.tools.jar" value="${lib}/lockss-tools.jar"/>
   <property name="lockss.tools.test.jar" value="${lib}/lockss-tools-test.jar"/>
   <property name="lockss.generated.jar" value="${lib}/lockss-generated.jar"/>
   <property name="lockss.generated.test.jar" value="${lib}/lockss-generated-test.jar"/>
-  <property name="plugins.dir" value="${basedir}/plugins" />
-  <property name="plugins.jar"
-	    value="${lib}/lockss-plugins.jar"/>
-
-  <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
@@ -247,7 +259,7 @@ Args:
     <pathelement path="${nekohtml.jar}" />
     <pathelement path="${js.jar}" />
     <!-- plugin jar -->
-    <pathelement path="${plugins.jar}" />
+    <pathelement path="${lockss.plugins.jar}" />
   </path>
 
   <path id="test.run.classpath">
@@ -268,6 +280,21 @@ Args:
     <pathelement path="${production.classpath.file}" />
     <pathelement path="${run.props}" />
   </path> 
+
+  <path id="plugins.compile.classpath">
+    <path refid="compile.classpath" />
+    <pathelement path="${lockss.jar}" />
+  </path>
+
+  <path id="plugins.test.compile.classpath">
+    <path refid="test.run.classpath" />
+    <pathelement path="${lockss.plugins.jar}" />
+  </path>
+
+  <path id="plugins.test.run.classpath">
+    <path refid="test.run.classpath" />
+    <pathelement path="${lockss.plugins.test.jar}" />
+  </path>
 
   <path id="tools.compile.classpath">
     <path refid="compile.classpath" />
@@ -309,6 +336,8 @@ Args:
 
   <path id="one.test.run.classpath" >
     <path refid="generated.test.run.classpath" />
+    <pathelement path="${lockss.plugins.jar}"/>
+    <pathelement path="${lockss.plugins.test.jar}"/>
     <pathelement path="${lockss.tools.jar}"/>
   </path>
 
@@ -433,6 +462,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
    description="Delete all generated files and dirs" >
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
+    <delete dir="${plugins.classes}" quiet="true"/>
     <delete dir="${ant.classes}" quiet="true"/>
     <delete dir="${depend.cache}" quiet="true"/>
     <delete dir="${test.results}" quiet="true"/>
@@ -441,7 +471,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${plugins.dir}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
-    <delete file="${plugins.jar}" quiet="true"/>
+    <delete file="${lockss.plugins.jar}" quiet="true"/>
+    <delete file="${lockss.plugins.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
@@ -533,7 +564,45 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
           <include name="**/*.keystore"/> <!-- test keystores -->
 	  <include name="**/*.jar"/> <!-- test jar files -->
        </fileset>
+     </copy>
+   </target>
+
+  <!-- ==================================================================== -->
+  <target name="compile-plugins" depends="jar-lockss"
+   description="Compile the plugins" >
+    <mkdir dir="${plugins.classes}" />
+    <javac srcdir="${plugins.src}"
+           destdir="${plugins.classes}"
+           debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           fork="${forkc}"
+           listfiles="${listfiles}"
+           >
+       <classpath refid="plugins.compile.classpath" />
+       <include name="**/*.java"/>
+    </javac>
+    <copy todir="${plugins.classes}" >
+       <fileset dir="${plugins.src}" >
+          <include name="**/*.xml"/>   <!-- Definable plugins -->
+       </fileset>
     </copy>
+  </target>
+
+  <target name="compile-plugins-tests" depends="jar-plugins,jar-tests"
+   description="Compile the LOCKSS test classes for plugins" >
+    <mkdir dir="${plugins.test.classes}" />
+    <javac srcdir="${plugins.test.src}"
+           destdir="${plugins.test.classes}"
+	   debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           fork="${forkc}"
+           listfiles="${listfiles}"
+           >
+       <classpath refid="plugins.test.compile.classpath" />
+       <include name="**/*.java"/>
+   </javac>
   </target>
 
   <!-- ==================================================================== -->
@@ -699,62 +768,27 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
    description="Jar the LOCKSS classes" >
     <jar jarfile="${lockss.jar}" basedir="${classes}" >
       <include name="**/" />
-      <!-- Kludge to exclude plugin directories.  Remove when plugins are moved
-	   to their own project. -->
-      <exclude name="edu/**" />
-      <exclude name="gov/**" />
-      <exclude name="**/nypl/**" />
-      <exclude name="**/plugin/absinthe/**" />
-      <exclude name="**/plugin/acs/**"  />
-      <exclude name="**/plugin/bepress/**" />
-      <exclude name="**/plugin/bioone/**" />
-      <exclude name="**/plugin/blackbird/**" />
-      <exclude name="**/plugin/clogic/**" />
-      <exclude name="**/plugin/disputatio/**" />
-      <exclude name="**/plugin/emls/**" />
-      <exclude name="**/plugin/highwire/**" />
-      <exclude name="**/plugin/histcoop/**" />
-      <exclude name="**/plugin/ieee/**" />
-      <exclude name="**/plugin/jcjpc/**" />
-      <exclude name="**/plugin/ojs/**" />
-      <exclude name="**/molvis/plugin/**" />
-      <exclude name="**/plugin/othervoices/**" />	
-      <exclude name="**/plugin/projmuse/**" />
-      <exclude name="**/plugin/GendersPlugin.xml" />
     </jar>
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jar-plugins" depends="jar-lockss,build-info,check.contrib"
-	  description="Jar the LOCKSS plugins" >
-    <!-- Temporary kludge to build a jar containing the plugin classes excluded
-         from lockss.jar. To be removed when plugins are moved to their own project. -->
-    <jar jarfile="${plugins.jar}" basedir="${classes}" >
-      <include name="edu/**" />
-      <include name="gov/**" />
-      <include name="**/nypl/**" />
-      <include name="**/plugin/absinthe/**" />
-      <include name="**/plugin/acs/**"  />
-      <include name="**/plugin/bepress/**" />
-      <include name="**/plugin/bioone/**" />
-      <include name="**/plugin/blackbird/**" />
-      <include name="**/plugin/clogic/**" />
-      <include name="**/plugin/disputatio/**" />
-      <include name="**/plugin/emls/**" />
-      <include name="**/plugin/highwire/**" />
-      <include name="**/plugin/histcoop/**" />
-      <include name="**/plugin/ieee/**" />
-      <include name="**/plugin/jcjpc/**" />
-      <include name="**/molvis/plugin/**" />
-      <include name="**/plugin/ojs/**" />
-      <include name="**/plugin/othervoices/**" />	
-      <include name="**/plugin/projmuse/**" />
-      <include name="**/plugin/GendersPlugin.xml" />
+  <target name="jar-plugins" depends="compile-plugins"
+	  description="Create the combined plugins jar for testing" >
+    <jar jarfile="${lockss.plugins.jar}" basedir="${plugins.classes}" >
+      <include name="**/" />
     </jar>
   </target>
 
   <!-- ==================================================================== -->
-  <target name="build-plugin" depends="compile-lockss,build-info,check.contrib"
+  <target name="jar-plugins-tests" depends="compile-plugins-tests"
+   description="Jar the plugins test classes" >
+    <jar jarfile="${lockss.plugins.test.jar}" basedir="${plugins.test.classes}" >
+       <include name="**/" />
+    </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="build-plugin" depends="compile-plugins,check.contrib"
 	  description="Generate and optionally sign a loadable plugin 
 	               JAR file for a single plugin">
     <!-- relies on the properties: plugin-jarfile, plugin-path,
@@ -772,15 +806,20 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
     <!-- copy the titledb file, if needed, so it can be included at the
          top level of the plugin JAR file. -->
+    <property name="tmp.titledb.file" value="${plugins.classes}/titledb.xml" />
     <if>
       <isset property="titledb" />
       <then>
-	<copy file="${titledb}" tofile="${classes}/titledb.xml" />
+	<copy file="${titledb}" tofile="${tmp.titledb.file}" />
       </then>
+      <else>
+        <!-- ensure no stale leftover titledb file. -->
+	<delete file="${tmp.titledb.file}" quiet="true" />
+      </else>
     </if>
 
     <jar destfile="${plugins.dir}/${plugin-jarfile}">
-      <fileset dir="${classes}">
+      <fileset dir="${plugins.classes}">
 	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
 	<include name="${plugin-path}/*.xml" />
@@ -796,7 +835,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <if>
       <isset property="titledb" />
       <then>
-	<delete file="${classes}/${titledb-file}" />
+	<delete file="${tmp.titledb.file}" quiet="true" />
       </then>      
     </if>
 
@@ -816,7 +855,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
   <!-- ==================================================================== -->
 
-  <target name="sign-plugin" depends="compile-lockss,build-info,check.contrib"
+  <target name="sign-plugin" depends="compile-lockss,check.contrib"
 	  description="Sign a loadable plugin JAR file">
     <!-- relies on the properties: plugin-jarfile -->
     <signjar keystore="${sign-keystore}"
@@ -1254,8 +1293,8 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 
   <!-- ==================================================================== -->
   <target name="test-all"
-   depends="package,test-unit,test-func"
-   description="Run all unit tests and functional tests" >
+   depends="package,test-unit,test-func,test-plugins"
+   description="Run all unit tests, functional tests and plugin unit tests" >
   </target>
 
   <!-- ==================================================================== -->
@@ -1310,6 +1349,38 @@ Test results in ${test.results}
       <formatter type="plain" usefile="true" />
       <classpath>
          <path refid="test.run.classpath" />
+      </classpath>
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
+    <fail if="failed" message="Test(s) failed" />
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="test-plugins"
+   depends="prepare.run.test,check.junit,jar-plugins-tests"
+   description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
+    <echo>
+Test results in ${test.results}
+    </echo>
+    <property name="include" value="**/Test*.java" />
+    <delete file="${test.results}/*" quiet="true" />
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
+      <batchtest fork="${fork}" todir="${test.results}">
+        <fileset dir="${plugins.test.src}">
+          <include name="${include}" />
+          <exclude name="${exclude}" />
+        </fileset>
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
+         <path refid="plugins.test.run.classpath" />
       </classpath>
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
@@ -1378,7 +1449,7 @@ Test results in ${test.results}
   </target>
   <!-- ==================================================================== -->
   <target name="test-one"
-   depends="prepare.run.test,check.class.arg,check.junit,jar-tests"
+   depends="prepare.run.test,check.class.arg,check.junit,jar-tests,jar-plugins-tests"
    description="Run a single test class, named by the 'class' property" >
     <if>
       <contains string="${class}" substring="." />
@@ -1586,6 +1657,8 @@ Test results in ${tools.test.results}
 	    <include name="lib/"/>
 	    <include name="src/"/>
 	    <include name="test/src/"/>
+	    <include name="plugins/src/"/>
+	    <include name="plugins/test/src/"/>
 	    <include name="ant/src/"/>
 	    <include name="doclet/"/>
 	    <include name="tools/"/>

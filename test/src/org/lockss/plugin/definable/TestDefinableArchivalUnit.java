@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.16 2005-01-29 20:00:15 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.17 2005-03-15 07:42:39 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.blackbird.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
@@ -254,21 +253,21 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 
     // test we find one we've added
     defMap.putString("text/ram_parser",
-		     "org.lockss.plugin.blackbird.BlackbirdRamParser");
+		     "org.lockss.test.MockContentParser");
     parser = cau.getContentParser("text/ram");
-    assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
+    assertTrue(parser instanceof org.lockss.test.MockContentParser);
   }
 
   public void testGetContentParserHandlesContentType() {
     defMap.putString("text/ram_parser",
-		     "org.lockss.plugin.blackbird.BlackbirdRamParser");
+		     "org.lockss.test.MockContentParser");
 
     ContentParser parser = null;
     parser = cau.getContentParser("text/ram ; random-content-type");
-    assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
+    assertTrue(parser instanceof org.lockss.test.MockContentParser);
  
     parser = cau.getContentParser(" text/ram ");
-    assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
+    assertTrue(parser instanceof org.lockss.test.MockContentParser);
   }
 
   public void testGetCrawlRule() throws LockssRegexpException {

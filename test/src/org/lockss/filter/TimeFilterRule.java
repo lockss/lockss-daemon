@@ -1,5 +1,5 @@
 /*
- * $Id: TimeFilterRule.java,v 1.3 2004-08-19 00:02:21 clairegriffin Exp $
+ * $Id: TimeFilterRule.java,v 1.4 2005-03-15 07:42:42 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.io.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.*;
+import org.lockss.filter.*;
 
 public class TimeFilterRule extends LockssTiming {
   private static Logger log = Logger.getLogger("TimeFilterRule");
@@ -61,7 +61,7 @@ public class TimeFilterRule extends LockssTiming {
     System.setProperty("file.encoding", "ISO8859_1");
     file = FileTestUtil.tempFile("foo");
     if (rule == null) {
-      rule = new HighWireFilterRule();
+      rule = new TimedFilterRule();
     }
   }
 
@@ -159,4 +159,25 @@ public class TimeFilterRule extends LockssTiming {
       junit.textui.TestRunner.main(testCaseList);
     }
   }
+
+  public class TimedFilterRule implements FilterRule {
+    public static final String CITATION_STRING =
+      "This article has been cited by other articles:";
+    public static final String MEDLINE_STRING = "[Medline]";
+
+    public Reader createFilteredReader(Reader reader) {
+
+      List tagList =
+	ListUtil.list(
+		      new HtmlTagFilter.TagPair("<script", "</script>", true),
+		      new HtmlTagFilter.TagPair("<table", "</table>", true),
+		      new HtmlTagFilter.TagPair("<", ">")
+		      );
+      Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
+      Reader medFilter = new StringFilter(tagFilter, MEDLINE_STRING);
+      Reader citeFilter = new StringFilter(medFilter, CITATION_STRING);
+      return new WhiteSpaceFilter(citeFilter);
+    }
+  }
+
 }
