@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.73 2004-01-27 00:41:48 tyronen Exp $
+ $Id: build.xml,v 1.74 2004-02-18 22:56:09 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -143,6 +143,8 @@ Args:
   <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections.jar"/>
+  <property name="commons.logging.jar"
+  				  value="${lib}/commons-logging.jar"/>
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
@@ -185,6 +187,7 @@ Args:
   <path id="compile.classpath">
     <pathelement path="${regexp.jar}" />
     <pathelement path="${commons.collections.jar}" />
+    <pathelement path="${commons.logging.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${jettytools.jar}" />
     <pathelement path="${servlet.jar}" />
@@ -441,6 +444,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <fileset dir="${src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
           <include name="**/*.props"/>
+          <include name="commons-logging.properties"/>
           <include name="org/lockss/htdocs/**/*"/>
        </fileset>
     </copy>
@@ -460,6 +464,11 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <classpath refid="test.compile.classpath" />
        <include name="**/*.java"/>
     </javac>
+    <copy todir="${test.classes}" >
+       <fileset dir="${test.src}" >
+          <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
+       </fileset>
+    </copy>
   </target>
 
   <!-- ==================================================================== -->
