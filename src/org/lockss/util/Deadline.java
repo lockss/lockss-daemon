@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.19 2003-03-27 03:05:28 tal Exp $
+ * $Id: Deadline.java,v 1.20 2003-04-02 23:29:08 tal Exp $
  */
 
 /*
@@ -37,9 +37,9 @@ import java.text.*;
 /** Deadline represents a time (at which some operation must complete).
  */
 public class Deadline implements Comparable {
-  /** A long time from now (but not really never). */
-  public static final Deadline NEVER =
-    new Deadline(new ConstantDate(TimeBase.NEVER));
+  /** A long time from now. */
+  public static final Deadline MAX =
+    new Deadline(new ConstantDate(TimeBase.MAX));
 
   protected static Logger log = Logger.getLogger("Deadline");
 
@@ -57,27 +57,55 @@ public class Deadline implements Comparable {
    * specified.
    * @param at the Date
    * @param duration the duration
+   * @param checkReasonable if true, log a warning if the Deadline is
+   * either in the past or unreasonably far in the future.
    */
-  private Deadline(Date at, long duration) {
+  private Deadline(Date at, long duration, boolean checkReasonable) {
     expiration = at;
     this.duration = duration;
-    checkReasonable();
+    if (checkReasonable) {
+      checkReasonable();
+    }
+  }
+
+  /** Create a Deadline that expires at the specified Date, with the
+   * specified duration.  Done this way so factory methods don't risk a
+   * timer tick between getting the current time, and the constructor
+   * computing the duration, which would then be different from what was
+   * specified.
+   * @param at the Date
+   * @param duration the duration
+   */
+  private Deadline(Date at, long duration) {
+    this(at, duration, true);
+  }
+
+  /** Create a Deadline that expires at the specified Date.
+   * @param at the Date
+   */
+  private Deadline(Date at, boolean checkReasonable) {
+    this(at, at.getTime() - nowMs(), checkReasonable);
   }
 
   /** Create a Deadline that expires at the specified Date.
    * @param at the Date
    */
   private Deadline(Date at) {
-    duration = at.getTime() - nowMs();
-    expiration = at;
-    checkReasonable();
+    this(at, false);
+  }
+
+  /** Create a Deadline that expires at the specified date.
+   * @param at the time in ms
+   */
+  private Deadline(long at, boolean checkReasonable) {
+    this(new Date(at), checkReasonable);
   }
 
   /** Create a Deadline that expires at the specified date.
    * @param at the time in ms
    */
   private Deadline(long at) {
-    this(new Date(at));
+    this(at, true);
   }
 
   /** Create a Deadline that expires in <code>duration</code> milliseconds.
@@ -102,6 +130,16 @@ public class Deadline implements Comparable {
    */
   public static Deadline at(long at) {
     return new Deadline(at);
+  }
+
+  /** Create a Deadline representing the specified date/time.  This is
+   * similar to {@link #at(long)} but suppresses the sanity check.  It is
+   * intended to be used when loading or restoring a saved deadline.
+   * @param at date/time in milliseconds from the epoch.
+   * @return the Deadline
+   */
+  public static Deadline restoreDeadlineAt(long at) {
+    return new Deadline(at, false);
   }
 
   /** Create a Deadline representing a random time between
@@ -193,7 +231,7 @@ public class Deadline implements Comparable {
     }
     if (duration < 0 ||
 	(duration > (4 * Constants.WEEK) &&
-	 getExpirationTime() != TimeBase.NEVER)) {
+	 getExpirationTime() != TimeBase.MAX)) {
       log.warning("Unreasonable deadline: " + expiration,
 		  new Throwable());
     }
