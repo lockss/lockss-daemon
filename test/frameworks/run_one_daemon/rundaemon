@@ -2,7 +2,7 @@
 
 PROP_URL_LIST="lockss.txt"
 
-CLASSPATH=`cat ${PROJECT_DIR}/lockss-gamma/test/test-classpath`
+CLASSPATH=`cat ${PROJECT_DIR}/test/test-classpath`
 export CLASSPATH
 
 echo running at `date`

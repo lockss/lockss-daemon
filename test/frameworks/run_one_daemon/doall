@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # PROJECT_DIR
-PROJECT_DIR=`( cd ../../../..; pwd )`
+PROJECT_DIR=`( cd ../../..; pwd )`
 export PROJECT_DIR
 
 if [ "$1" == "start" ] ; then
