@@ -1,5 +1,5 @@
 /*
- * $Id: Message.java,v 1.1 2002-10-02 15:41:43 claire Exp $
+* $Id: Message.java,v 1.2 2002-10-06 00:19:01 claire Exp $
  */
 
 /*
@@ -32,18 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 
-import java.net.DatagramPacket;
-import java.io.IOException;
-import java.io.DataInputStream;
+import java.io.*;
 import org.lockss.util.EncodedProperty;
 import org.lockss.util.Logger;
-import java.net.InetAddress;
-import org.lockss.daemon.PeerIdentity;
-import java.net.DatagramSocket;
-import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.daemon.CachedUrlSet;
 import java.net.*;
-import java.util.StringTokenizer;
+import java.security.*;
+import java.util.*;
 
 
 /**
@@ -61,45 +55,52 @@ public class Message {
   public static final int VERIFY_POLL_REQ = 4;
   public static final int VERIFY_POLL_REP = 5;
 
-  InetAddress m_group;    // The group address
-  InetAddress m_sender;   // The sender address
-  InetAddress m_originIP;
-  Identity m_originID;
-  Identity m_senderID;
-  DatagramSocket m_socket;
+  public static final int MAX_HOP_COUNT = 16;
+  public static final int SHA_LENGTH = 20;
 
-  byte m_ttl;             // The time to live it packet was sent
-  int m_quorum;           // The quorum factor
-  int m_opcode;          // the kind of packet
-  int m_port;
-  long m_startTime;
-  long m_stopTime;
-  boolean m_multicast;
-  int m_originPort;
-  byte m_hopCount;
+/*
+  byte
+  0-3       signature
+  4         multicast
+  5         hopcount
+  6-7       property length
+  8-27      SHA-1 hash of encoded properties
+  28-End    encoded properties
+*/
+  /* items which are not in the property list */
+  byte[]             m_signature;   // magic number + version (4 bytes)
+  boolean            m_multicast;   // multicast flag - modifiable
+  byte               m_hopCount;    // current hop count - modifiable
+  byte[]             m_pktHash;     // hash of remaining packet
+  int                m_length;      // length of remaining packet
 
-  protected byte[] m_challenge;
-  protected byte[] m_verifier;
-  protected byte[] m_hashed;
+  /* items which are in the property list */
+  Identity           m_originID;    // the address and port of the originator
+  InetAddress        m_group;       // The group address
+  byte               m_ttl;         // The original time-to-live
+  long               m_startTime;   // the original start time
+  long               m_stopTime;    // the original stop time
+  int                m_opcode;      // the kind of packet
+  protected String   m_targetUrl;   // the target URL
+  protected String   m_regExp;      // the target regexp
+  protected byte[]   m_challenge;   // the challenge bytes
+  protected byte[]   m_verifier;    // th verifier bytes
+  protected byte[]   m_hashed;      // the hash of content
+  protected String[] m_entries;     // the entry list (opt)
 
-  protected String[] m_entries;
-  protected CachedUrlSetSpec m_UrlSetSpec;
-
-  private static Logger log = Logger.getLogger("Packet");
-  private byte[] m_bytes;
   private EncodedProperty m_props;
+  private static byte[] signature = {'l','p','m','1'};
+  private static Logger log = Logger.getLogger("Message");
 
   protected Message() throws IOException {
     m_props = new EncodedProperty();
-    m_bytes = null;
   }
 
   protected Message(byte[] encodedBytes) throws IOException {
     m_props = new EncodedProperty();
-    m_bytes = encodedBytes;
 
     try {
-      m_props.decode(encodedBytes);
+      decodeMsg(encodedBytes);
     }
     catch (IOException ex) {
       log.error("Unreadable Packet",ex);
@@ -107,64 +108,58 @@ public class Message {
     }
   }
 
-  protected Message(CachedUrlSetSpec urlspec,
+  protected Message(String targetUrl,
+                    String regExp,
+                    String[] entries,
                     InetAddress group,
-                    int port,
                     byte ttl,
-                    int quorum,
-                       byte[] challenge,
-                       byte[] verifier,
-                       byte[] hashedData,
-                       int opcode) throws IOException {
+                    byte[] challenge,
+                    byte[] verifier,
+                    byte[] hashedData,
+                    int opcode) throws IOException {
     this();
-    // extract data from packet
+    // assign the data
+    m_targetUrl = targetUrl;
+    m_regExp = regExp;
     m_group = group;
-    m_port = port;
     m_ttl = ttl;
-    m_quorum = quorum;
-    m_sender = null;
-    m_senderID = null;
-    m_opcode = opcode;
     m_challenge = challenge;
     m_verifier = verifier;
     m_hashed = hashedData;
+    m_opcode = opcode;
+    m_entries = entries;
+    // null the remaining undefined data
     m_startTime = 0;
     m_stopTime = 0;
-    m_socket = null;
     m_multicast = false;
-    m_originPort = 0;
-    m_originIP = null;
     m_originID = null;
     m_hopCount = 0;
   }
 
   protected Message(Message trigger,
-                       byte[] verifier,
-                       byte[] hashedContent,
-                       int opcode) throws IOException {
+                    Identity localID,
+                    byte[] verifier,
+                    byte[] hashedContent,
+                    int opcode) throws IOException {
 
     // copy the essential information from the trigger packet
+    m_hopCount =trigger.getHopCount();
     m_group = trigger.getGroupAddress();
-    m_port = trigger.m_port;  // XXX should be originatorPort?
     m_ttl = trigger.getTimeToLive();
-    m_quorum = trigger.getQuorum();
-    m_sender = null;
-    m_senderID = null;
-    m_opcode = opcode;
     m_challenge = trigger.getChallenge();
+    m_targetUrl = trigger.getTargetUrl();
+    m_regExp = trigger.getRegExp();
+    m_entries = trigger.getEntries();
+
+    m_originID = localID;
     m_verifier = verifier;
     m_hashed = hashedContent;
+    m_opcode = opcode;
 
-    m_UrlSetSpec = trigger.getUrlSetSpec();
     m_startTime = 0;
     m_stopTime = 0;
-    m_socket = trigger.getSocket();
     m_multicast = false;
-    m_originPort = m_socket.getLocalPort();
-    m_originIP = m_socket.getLocalAddress();
-    m_originID = Identity.getLocalIdentity(m_socket);
-    m_hopCount =trigger.getHopCount();
-   }
+  }
 
   /**
    * get a property that was decoded and stored for this packet
@@ -185,37 +180,36 @@ public class Message {
   }
 
   /**
-   * static method to make a message request packet
-   * @param ps
-   * @param challenge a byte array containing the challange
-   * @param verifier a byte array containing the verifier
-   * @param opcode the opcode for this message
-   * @param timeRemaining the time remaining for the poll
-   * @param s the socket
-   * @return a new Message object
+   * make a message request
+   * @param targetUrl
+   * @param regExp
+   * @param group
+   * @param ttl
+   * @param challenge
+   * @param verifier
+   * @param opcode
+   * @param timeRemaining
+   * @param localID
+   * @return
    * @throws IOException
    */
-  static public Message makeRequestMsg(CachedUrlSetSpec urlspec,
+  static public Message makeRequestMsg(String targetUrl,
+                                       String regExp,
+                                       String[] entries,
                                        InetAddress group,
-                                       int port,
                                        byte ttl,
-                                       int quorum,
                                        byte[] challenge,
                                        byte[] verifier,
                                        int opcode,
                                        long timeRemaining,
-                                       DatagramSocket s) throws IOException {
+                                       Identity localID) throws IOException {
 
-    Message msg = new Message(urlspec,group,port,ttl,quorum,
+    Message msg = new Message(targetUrl,regExp,entries,group,ttl,
                               challenge,verifier,new byte[0],opcode);
     if (msg != null) {
       msg.m_startTime = System.currentTimeMillis();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_socket = s;
-      msg.m_originPort = s.getLocalPort();
-      msg.m_originIP = s.getLocalAddress();
-      msg.m_originID = Identity.getLocalIdentity(msg.m_socket);
-      // XXX - is this correct
+      msg.m_originID = localID;
       msg.m_hopCount = ttl;
     }
     return msg;
@@ -234,20 +228,18 @@ public class Message {
    * @throws IOException
    */
   static public Message makeReplyMsg(Message trigger,
-                                byte[] hashedContent,
-                                byte[] verifier,
-                                int opcode,
-                                long timeRemaining,
-				DatagramSocket s) throws IOException {
-    Message msg = new Message(trigger, verifier, hashedContent, opcode);
+                                     byte[] hashedContent,
+                                     byte[] verifier,
+                                     int opcode,
+                                     long timeRemaining,
+                                     Identity localID) throws IOException {
+    Message msg = new Message(trigger, localID, verifier, hashedContent, opcode);
     if (msg != null) {
-      msg.m_socket = s;
       msg.m_startTime = System.currentTimeMillis();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_UrlSetSpec = trigger.getUrlSetSpec();
-      msg.m_originPort = s.getLocalPort();
-      msg.m_originIP = s.getLocalAddress();
-      msg.m_originID = Identity.getLocalIdentity(s);
+      msg.m_targetUrl = trigger.getTargetUrl();
+      msg.m_regExp = trigger.getRegExp();
+      msg.m_originID = localID;
       msg.m_hopCount = trigger.getHopCount();
     }
     return msg;
@@ -255,59 +247,95 @@ public class Message {
 
   /**
    * a static method to create a new message from a Datagram Packet
-   * @param p the datagram packet
-   * @param s the datagram socket
+   * @param data the data from the message packet
    * @param mcast true if packet was from a multicast socket
    * @return a new Message object
    * @throws IOException
    */
-  static Message decodeToMsg(DatagramPacket p,
-                            DatagramSocket s,
-                            boolean mcast) throws IOException {
-    Message msg = new Message(p.getData());
+  static Message decodeToMsg(byte[] data,
+                             boolean mcast) throws IOException {
+    Message msg = new Message(data);
     if(msg != null) {
-      msg.decodeMsg();
-      msg.m_socket = s;
-      msg.m_multicast = mcast;
+       msg.m_multicast = mcast;
     }
     return msg;
   }
 
   /**
    * decode the raw packet data into a property table
+   * @param encodedBytes the array of encoded bytes
+   * @throws IOException
    * TODO: this needs to have the data broken into a variable portion
    * and a invariable portion and hashed
    */
-  public void decodeMsg() {
+  public void decodeMsg(byte[] encodedBytes) throws IOException {
     long duration;
     long elapsed;
+    String addr;
+    int    port;
 
-    m_multicast = m_props.getBoolean("mcast", false);
-    m_hopCount = (byte) m_props.getInt("hops", 0);
-    m_ttl = (byte) m_props.getInt("ttl", 0);
-    m_opcode = m_props.getInt("opcode", -1);
-    duration = m_props.getInt("duration", 0) * 1000;
-    elapsed = m_props.getInt("elapsed", 0)* 1000;
+    // the mutable stuff
+    DataInputStream dis = new DataInputStream(new ByteArrayInputStream(encodedBytes));
+
+    // read in the header
+    for(int i=0; i< signature.length; i++) {
+      if(signature[i] != dis.readByte()) {
+        throw new ProtocolException("Invalid Signature");
+      }
+    }
+
+    m_multicast = dis.readBoolean();
+    m_hopCount =  dis.readByte();
+
+    if(!hopCountInRange(m_hopCount)) {
+      throw new ProtocolException("Hop count out of range.");
+    }
+    m_hopCount--;
+
+    int prop_len = dis.readShort();
+    byte[] hash_bytes = new byte[SHA_LENGTH];
+    byte[] prop_bytes = new byte[prop_len];
+    dis.read(hash_bytes);
+    dis.read(prop_bytes);
+
+    if(!verifyHash(hash_bytes,prop_bytes)) {
+      throw new ProtocolException("Hash verification failed.");
+    }
+
+    // decode the properties
+    m_props.decode(prop_bytes);
+
+    // the immutable stuff
+    addr = m_props.getProperty("origIP");
+    port = m_props.getInt("origPort", -1);
+    try {
+      m_originID = Identity.getIdentity(InetAddress.getByName(addr),port);
+    }
+    catch(UnknownHostException ex) {
+      log.error("invalid origin address");
+    }
 
     try {
-      m_originIP = InetAddress.getByName(m_props.getProperty("orig"));
       m_group =InetAddress.getByName(m_props.getProperty("group"));
     }
     catch (UnknownHostException ex) {
-      log.error("invalid origin ip and/or group");
+      log.error("invalid group address");
     }
 
-    // XXX we need a real CachedUrlSetSpec to reconstitute these
-    String prefix = m_props.getProperty("prefix");
-    String regexp = m_props.getProperty("regexp");
-
+    m_ttl = (byte) m_props.getInt("ttl", 0);
+    duration = m_props.getInt("duration", 0) * 1000;
+    elapsed = m_props.getInt("elapsed", 0)* 1000;
+    m_opcode = m_props.getInt("opcode", -1);
+    m_targetUrl = m_props.getProperty("url");
+    m_regExp = m_props.getProperty("regexp");
     m_challenge = m_props.getByteArray("challenge", new byte[0]);
     m_verifier = m_props.getByteArray("verifier", new byte[0]);
     m_hashed = m_props.getByteArray("hashed", new byte[0]);
+    m_entries = stringToEntries(m_props.getProperty("entries"));
+    // calculate start and stop times
     long now = System.currentTimeMillis();
     m_startTime = now - elapsed;
     m_stopTime = now + duration;
-    m_originID = Identity.getIdentity(m_originIP, m_originPort);
   }
 
   /**
@@ -316,21 +344,36 @@ public class Message {
    */
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
-   m_props.putBoolean("mcast",m_multicast);
-   m_props.putInt("hops",m_hopCount);
-   m_props.putInt("ttl",m_ttl);
-   m_props.putInt("opcode",m_opcode);
-   m_props.putInt("duration",(int)(getDuration()/1000));
-   m_props.putInt("elapsed",(int)(getElapsed()/1000));
-   m_props.put("orig",m_originIP.getHostAddress());
-   m_props.put("group",m_group.getHostAddress());
-   m_props.setProperty("prefix", m_UrlSetSpec.urlPrefix());
-   m_props.setProperty("regexp",m_UrlSetSpec.regExp());
-   m_props.putByteArray("challenge", m_challenge);
-   m_props.putByteArray("verifier", m_verifier);
-   m_props.putByteArray("hashed", m_hashed);
+    m_props.setProperty("origIP",m_originID.getAddress().getHostAddress());
+    m_props.putInt("origPort",m_originID.getPort());
 
-    return m_props.encode();
+    m_props.setProperty("group",m_group.getHostAddress());
+
+    m_props.putInt("ttl",m_ttl);
+    m_props.putInt("duration",(int)(getDuration()/1000));
+    m_props.putInt("elapsed",(int)(getElapsed()/1000));
+    m_props.putInt("opcode",m_opcode);
+    m_props.setProperty("url", m_targetUrl);
+    m_props.setProperty("regexp",m_regExp);
+    m_props.putByteArray("challenge", m_challenge);
+    m_props.putByteArray("verifier", m_verifier);
+    m_props.putByteArray("hashed", m_hashed);
+    m_props.setProperty("entries",entriesToString());
+
+    byte[] prop_bytes = m_props.encode();
+    byte[] hash_bytes = computeHash(prop_bytes);
+
+    // build out the remaining packet
+    int enc_len = prop_bytes.length + hash_bytes.length + 8;
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(enc_len);
+    DataOutputStream dos = new DataOutputStream(baos);
+    dos.write(signature);
+    dos.writeBoolean(m_multicast);
+    dos.writeByte(m_hopCount);
+    dos.writeShort(prop_bytes.length);
+    dos.write(hash_bytes);
+    dos.write(prop_bytes);
+    return baos.toByteArray();
   }
 
   public long getDuration() {
@@ -352,6 +395,8 @@ public class Message {
   public boolean isReply() {
     return (m_opcode % 2 == 1) ? true : false;
   }
+
+
   /* methods to support data access */
   public long getStartTime() {
     return m_startTime;
@@ -369,52 +414,36 @@ public class Message {
     return m_group;    // The group address
   }
 
-  public InetAddress getSenderAddress() {
-    return m_sender;   // The sender address
-  }
-
-  public InetAddress getOriginIP() {
-    return m_originIP;
-  }
-
   public Identity getOriginID(){
     return m_originID;
-  }
-
-  public Identity getSenderID() {
-      return m_senderID;
-  }
-
-  public DatagramSocket getSocket() {
-    return m_socket;
-  }
-
-  public int getQuorum() {
-    return m_quorum;
   }
 
   public int getOpcode() {
     return m_opcode;
   }
 
-  public int getPort() {
-    return m_port;
-  }
-
-  public boolean isMulticast() {
+  public boolean getMulticast() {
     return m_multicast;
   }
 
-  public int getOriginPort() {
-    return m_originPort;
+  public void setMulticast(boolean multicast) {
+    m_multicast = multicast;
   }
 
   public String[] getEntries() {
     return m_entries;
   }
 
+  public void setEntries(String[] entries) {
+    m_entries = entries;
+  }
+
   public byte getHopCount() {
     return m_hopCount;
+  }
+
+  public void setHopCount(int hopCount) {
+    m_hopCount = (byte)hopCount;
   }
 
   public byte[] getChallenge() {
@@ -430,8 +459,12 @@ public class Message {
   }
 
 
-  public CachedUrlSetSpec getUrlSetSpec() {
-    return m_UrlSetSpec;
+  public String getTargetUrl() {
+    return m_targetUrl;
+  }
+
+  public String getRegExp() {
+    return m_regExp;
   }
 
   String entriesToString() {
@@ -454,11 +487,40 @@ public class Message {
     return ret;
   }
 
+  private boolean hopCountInRange(byte hopCount) {
+    if (hopCount < 0 || hopCount > MAX_HOP_COUNT)
+      return false;
+    return true;
+  }
+
+  private static boolean verifyHash(byte[] hashValue, byte[]data) {
+    try {
+      MessageDigest hasher = MessageDigest.getInstance("SHA");
+      hasher.update(data);
+      byte[] hashed = hasher.digest();
+      return Arrays.equals(hashValue,hashed);
+    } catch (java.security.NoSuchAlgorithmException e) {
+      return false;
+    }
+  }
+
+  private static byte[] computeHash(byte[] data) {
+    try {
+      MessageDigest hasher = MessageDigest.getInstance("SHA");
+      hasher.update(data);
+      byte[] hashed = hasher.digest();
+      return hashed;
+    } catch (java.security.NoSuchAlgorithmException e) {
+      return new byte[0];
+    }
+  }
+
+
   /** Exception thrown if packet is unparseable. */
   public static class ProtocolException extends IOException {
     public ProtocolException(String msg) {
       super(msg);
     }
   }
-}
 
+}

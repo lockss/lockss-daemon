@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.2 2002-08-02 19:33:56 tal Exp $
+ * $Id: ProxyHandler.java,v 1.3 2002-10-06 00:19:02 claire Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.plugin.*;
 
 /* ------------------------------------------------------------ */
 /** LOCKSS proxy handler.
- * 
+ *
  */
 public class ProxyHandler extends NullHandler {
 
@@ -53,18 +53,18 @@ public class ProxyHandler extends NullHandler {
     try {
       // Create the server
       HttpServer server = new HttpServer();
-                              
+
       // Create a port listener
       HttpListener listener = server.addListener(new InetAddrPort (9090));
-                              
-      // Create a context 
+
+      // Create a context
       HttpContext context = server.getContext(null, "/");
-                              
+
       // Create a servlet container
       HttpHandler handler = new ProxyHandler();
-                              
+
       context.addHandler(handler);
-                              
+
       // Start the http server
       server.start ();
     } catch (Exception e) {
@@ -87,10 +87,10 @@ public class ProxyHandler extends NullHandler {
     //  3) We have a ftp scheme and the FTP client classes are in
     //     our classpath (should delegate to another class to
     //     avoid linking hassles).
-    URI uri = request.getURI();
+    org.mortbay.util.URI uri = request.getURI();
     if (!"http".equals(uri.getScheme()))
       return;
-        
+
     System.err.println("\nPROXY:");
     System.err.println("pathInContext="+pathInContext);
     System.err.println("URI="+uri);
@@ -115,30 +115,30 @@ public class ProxyHandler extends NullHandler {
       String path=uri.getPath();
       if (path==null || path.length()==0)
 	path="/";
-            
+
       System.err.println("host="+host);
       System.err.println("port="+port);
       System.err.println("path="+path);
-            
+
       // XXX associate this socket with the connection so
       // that it may be persistent.
-            
+
       socket = new Socket(host,port);
       socket.setSoTimeout(5000); // XXX configure this
       System.err.println("socket="+socket);
-            
+
       OutputStream sout=socket.getOutputStream();
       System.err.println("sout="+sout);
-            
+
       request.setState(HttpMessage.__MSG_EDITABLE);
       HttpFields header=request.getHeader();
 
       // XXX Lets reject range requests at this point!!!!?
-            
+
       // XXX need to process connection header????
 
       // XXX Handle Max forwards - and maybe OPTIONS/TRACE???
-            
+
       // XXX need to encode the path
 
       header.put("Connection","close");
@@ -157,17 +157,17 @@ public class ProxyHandler extends NullHandler {
       writer.write('\015');
       writer.write('\012');
       header.write(writer);
-            
+
       // Send the request to the next hop.
       System.err.println("\nreq=\n"+new String(writer.getBuf(),0,writer.length()));
       writer.writeTo(sout);
       writer.reset();
-            
+
       // XXX If expect 100-continue flush or no body the header now!
       sout.flush();
-            
+
       // XXX cache http versions and do 417
-            
+
       // XXX To to copy content with content length or chunked.
 
 
@@ -179,24 +179,24 @@ public class ProxyHandler extends NullHandler {
       String resLine = lin.readLine();
       if (resLine==null)
 	return; // XXX what should we do?
-            
+
       // At this point we are committed to sending a response!!!!
 //        request.setHandled(true);
 //        response.setState(HttpMessage.__MSG_SENT);
       OutputStream out=response.getOutputStream();
-            
+
       // Forward 100 responses
       while (resLine.startsWith("100")) {
 	writer.write(resLine);
 	writer.writeTo(out);
 	out.flush();
 	writer.reset();
-                
+
 	resLine = lin.readLine();
 	if (resLine==null)
 	  return; // XXX what should we do?
       }
-            
+
       System.err.println("resLine="+resLine);
 
       // Receive the response headers
@@ -209,7 +209,7 @@ public class ProxyHandler extends NullHandler {
       // XXX do the connection based stuff here!
 
       // return the header
-      // XXX this should really be set in the 
+      // XXX this should really be set in the
       writer.write(resLine);
       writer.write('\015');
       writer.write('\012');
@@ -219,7 +219,7 @@ public class ProxyHandler extends NullHandler {
 
       // return the body
       // XXX need more content length options here
-      // XXX need to handle prechunked 
+      // XXX need to handle prechunked
       IO.copy(lin,out);
     }
     catch (Exception e) {
@@ -249,11 +249,11 @@ public class ProxyHandler extends NullHandler {
   private String _allowHeader = null;
   private boolean _handleGeneralOptionsQuery=true;
   private boolean _acceptRanges=true;
-    
+
   public boolean isAcceptRanges() {
     return _acceptRanges;
   }
-    
+
   /** Set if the handler accepts range requests.
    * Default is false;
    * @param ar True if the handler should accept ranges
@@ -261,7 +261,7 @@ public class ProxyHandler extends NullHandler {
   public void setAcceptRanges(boolean ar) {
     _acceptRanges=ar;
   }
-    
+
   public boolean getHandleGeneralOptionsQuery() {
     return _handleGeneralOptionsQuery;
   }
@@ -283,7 +283,7 @@ public class ProxyHandler extends NullHandler {
     if (false && pathInContext==null) {
       throw new HttpException(HttpResponse.__403_Forbidden);
     }
-        
+
     String method=request.getMethod();
     if (method.equals(HttpRequest.__GET) ||
 	method.equals(HttpRequest.__POST) ||
@@ -308,16 +308,16 @@ public class ProxyHandler extends NullHandler {
 			String pathParams,
 			CachedUrl cu)
       throws IOException {
-  
+
     // Check modified dates
     if (!passConditionalHeaders(request, response, cu)) {
       return;
     }
-     
+
     sendCachedUrl(request, response, cu, true);
   }
 
- 
+
   /* ------------------------------------------------------------ */
   /* Check modification date headers.
    */
@@ -331,7 +331,7 @@ public class ProxyHandler extends NullHandler {
       Properties props = cu.getProperties();
       long lastModified = getCuLastModified(cu);
       long date;
-      
+
       if (lastModified != -1) {
 	if ((date = msg.getDateField(HttpFields.__IfUnmodifiedSince)) > 0) {
 	  if (lastModified > date) {
@@ -339,7 +339,7 @@ public class ProxyHandler extends NullHandler {
 	    return false;
 	  }
 	}
-            
+
 	if ((date = msg.getDateField(HttpFields.__IfModifiedSince)) > 0) {
 	  if (lastModified <= date) {
 	    response.sendError(response.__304_Not_Modified);
@@ -350,7 +350,7 @@ public class ProxyHandler extends NullHandler {
     }
     return true;
   }
- 
+
   /* ------------------------------------------------------------ */
   void handleOptions(HttpResponse response, String pathInContext)
       throws IOException {
@@ -361,7 +361,7 @@ public class ProxyHandler extends NullHandler {
     setAllowHeader(response);
     response.commit();
   }
- 
+
   /* ------------------------------------------------------------ */
   void setAllowHeader(HttpResponse response) {
     if (_allowHeader == null) {
@@ -386,13 +386,13 @@ public class ProxyHandler extends NullHandler {
 
       SendableResource data = new CachedUrlFile(cu);
       long resLength = data.getLength();
-        
+
       //  see if there are any range headers
       Enumeration reqRanges =
 	(request.getDotVersion() > 0
 	 ? request.getHttpMessage().getFieldValues(HttpFields.__Range)
 	 : null);
-        
+
       if (!writeHeaders || reqRanges == null ||
 	  !reqRanges.hasMoreElements()) {
 	//  if there were no ranges, send entire entity
@@ -408,11 +408,11 @@ public class ProxyHandler extends NullHandler {
 	request.setState(HttpMessage.__MSG_RECEIVED);
 	return;
       }
-            
+
       // Parse the ranges
       List validRanges =InclusiveByteRange.parseRangeHeaders(reqRanges);
       Code.debug("requested ranges: " + reqRanges + "=" + validRanges);
-        
+
       //  run through the ranges and count satisfiable ranges;
       ListIterator rit = validRanges.listIterator();
       InclusiveByteRange singleSatisfiableRange = null;
@@ -424,12 +424,12 @@ public class ProxyHandler extends NullHandler {
 	  rit.remove();
 	  continue;
 	}
-            
+
 	if (singleSatisfiableRange == null) {
 	  singleSatisfiableRange = ibr;
 	}
       }
-        
+
       //  if there are no satisfiable ranges, send 416 response
       if (singleSatisfiableRange == null) {
 	Code.debug("no satisfiable ranges");
@@ -438,7 +438,7 @@ public class ProxyHandler extends NullHandler {
 	response.setReason((String)response.__statusMsg
 			   .get(new Integer(response.__416_Requested_Range_Not_Satisfiable)));
 	response.getHttpMessage().setField(
-					   HttpFields.__ContentRange, 
+					   HttpFields.__ContentRange,
 					   InclusiveByteRange.to416HeaderRangeString(resLength));
 	data.writeBytes(response.getOutputStream(),
 			0, resLength);
@@ -446,7 +446,7 @@ public class ProxyHandler extends NullHandler {
 	return;
       }
 
-      //  if there is only a single valid range (must be satisfiable 
+      //  if there is only a single valid range (must be satisfiable
       //  since were here now), send that range with a 216 response
       if ( validRanges.size()== 1) {
 	Code.debug("single satisfiable range: " + singleSatisfiableRange);
@@ -455,17 +455,17 @@ public class ProxyHandler extends NullHandler {
 	response.setStatus(response.__206_Partial_Content);
 	response.setReason((String)response.__statusMsg
 			   .get(new Integer(response.__206_Partial_Content)));
-	response.getHttpMessage().setField(HttpFields.__ContentRange, 
+	response.getHttpMessage().setField(HttpFields.__ContentRange,
 					   singleSatisfiableRange.toHeaderRangeString(resLength));
-	data.writeBytes(response.getOutputStream(), 
-			singleSatisfiableRange.getFirst(resLength), 
+	data.writeBytes(response.getOutputStream(),
+			singleSatisfiableRange.getFirst(resLength),
 			singleLength);
 	request.setHandled(true);
 	return;
       }
 
       //  multiple non-overlapping valid ranges cause a multipart
-      //  216 response which does not require an overall 
+      //  216 response which does not require an overall
       //  content-length header
       //
       String encoding = data.getEncoding();
@@ -508,9 +508,9 @@ public class ProxyHandler extends NullHandler {
     long getLength();
     String getEncoding();
     void writeHeaders(HttpRequest request,HttpResponse response, long count)
-	throws IOException; 
-    void writeBytes(OutputStream os, long startByte, long count) 
-	throws IOException; 
+	throws IOException;
+    void writeBytes(OutputStream os, long startByte, long count)
+	throws IOException;
     void requestDone();
   }
 
@@ -532,7 +532,7 @@ public class ProxyHandler extends NullHandler {
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
-  /** Holds a CachedUrl file.  
+  /** Holds a CachedUrl file.
    */
   private class CachedUrlFile implements SendableResource {
 
@@ -569,7 +569,7 @@ public class ProxyHandler extends NullHandler {
 	ris = cu.openForReading();
 	pos = 0;
       }
-            
+
       if (pos < start) {
 	ris.skip(start - pos);
 	pos = start;
@@ -602,5 +602,5 @@ public class ProxyHandler extends NullHandler {
 	Code.ignore(ioe);
       }
     }
-  }    
+  }
 }
