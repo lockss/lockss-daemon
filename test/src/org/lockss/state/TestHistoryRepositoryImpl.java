@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.39 2004-01-27 01:03:55 clairegriffin Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.40 2004-02-02 22:56:53 eaalto Exp $
  */
 
 /*
@@ -128,6 +128,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStorePollHistories() throws Exception {
+    TimeBase.setSimulated(123321);
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
@@ -167,6 +168,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(expectVote.challengeStr, elemVote.challengeStr);
     assertEquals(expectVote.verifierStr, elemVote.verifierStr);
     assertEquals(expectVote.hashStr, elemVote.hashStr);
+    TimeBase.setReal();
   }
 
   public void testHandleEmptyFile() throws Exception {

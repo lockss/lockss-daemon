@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.22 2003-08-02 00:17:09 eaalto Exp $
+ * $Id: NodeStateImpl.java,v 1.23 2004-02-02 22:56:54 eaalto Exp $
  */
 
 /*
@@ -34,9 +34,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
+import org.lockss.util.*;
 import org.lockss.plugin.CachedUrlSet;
-import org.apache.commons.collections.TreeBag;
-import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.daemon.Configuration;
 
 /**
  * NodeState contains the current state information for a node, as well as the
@@ -44,6 +44,22 @@ import org.lockss.daemon.CachedUrlSetSpec;
  * though this does not extend to changes in the classes it contains.
  */
 public class NodeStateImpl implements NodeState {
+  /**
+   * This parameter indicates the maximum number of poll histories to store.
+   */
+  public static final String PARAM_POLL_HISTORY_MAX_COUNT =
+      Configuration.PREFIX + "state.poll.history.max.count";
+
+  static final int DEFAULT_POLL_HISTORY_MAX_COUNT = 200;
+
+  /**
+   * This parameter indicates the maximum age of poll histories to store.
+   */
+  public static final String PARAM_POLL_HISTORY_MAX_AGE =
+      Configuration.PREFIX + "state.poll.history.max.age";
+
+  static final long DEFAULT_POLL_HISTORY_MAX_AGE = 52 * Constants.WEEK;
+
   protected CachedUrlSet cus;
   protected CrawlState crawlState;
   protected List polls;
@@ -157,7 +173,7 @@ public class NodeStateImpl implements NodeState {
   public Iterator getPollHistories() {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
-      Collections.sort(pollHistories, new HistoryComparator());
+      trimHistoriesIfNeeded(false);
     }
     return (new ArrayList(pollHistories)).iterator();
   }
@@ -165,7 +181,7 @@ public class NodeStateImpl implements NodeState {
   public PollHistory getLastPollHistory() {
     if (pollHistories==null) {
       repository.loadPollHistories(this);
-      Collections.sort(pollHistories, new HistoryComparator());
+      trimHistoriesIfNeeded(false);
     }
     // history list is sorted
     Iterator historyIt = pollHistories.iterator();
@@ -208,6 +224,10 @@ public class NodeStateImpl implements NodeState {
 //XXX concurrent
       polls.remove(finished_poll);
     }
+
+    // trim
+    trimHistoriesIfNeeded(true);
+
     // checkpoint state, store histories
     repository.storeNodeState(this);
     repository.storePollHistories(this);
@@ -221,7 +241,8 @@ public class NodeStateImpl implements NodeState {
       PollHistoryBean bean = (PollHistoryBean)beanIter.next();
       pollHistories.add(bean.getPollHistory());
     }
-    Collections.sort(pollHistories, new HistoryComparator());
+    // sort and trim
+    trimHistoriesIfNeeded(false);
   }
 
   protected List getPollHistoryBeanList() {
@@ -235,6 +256,45 @@ public class NodeStateImpl implements NodeState {
       histBeans.add(new PollHistoryBean(history));
     }
     return histBeans;
+  }
+
+  /**
+   * Trims histories which exceed maximum count or age.
+   * Sorts the list if not sorted.
+   */
+  void trimHistoriesIfNeeded(boolean isSorted) {
+    if (pollHistories.size() > 0) {
+      // sort if needed
+      if (!isSorted) {
+        Collections.sort(pollHistories, new HistoryComparator());
+      }
+      // trim oldest off if exceeds max size
+      int maxHistoryCount = Configuration.getIntParam(
+          PARAM_POLL_HISTORY_MAX_COUNT, DEFAULT_POLL_HISTORY_MAX_COUNT);
+      if (maxHistoryCount <= 0) {
+        maxHistoryCount = DEFAULT_POLL_HISTORY_MAX_COUNT;
+      }
+      while (pollHistories.size() > maxHistoryCount) {
+        pollHistories.remove(maxHistoryCount);
+      }
+      // trim any remaining which exceed max age
+      long maxHistoryAge = Configuration.getLongParam(
+          PARAM_POLL_HISTORY_MAX_AGE, DEFAULT_POLL_HISTORY_MAX_AGE);
+      while (true) {
+        int size = pollHistories.size();
+        PollHistory history = (PollHistory)pollHistories.get(size-1);
+        long pollEnd = history.getStartTime() + history.duration;
+        if (TimeBase.msSince(pollEnd) > maxHistoryAge) {
+          pollHistories.remove(size-1);
+          if (size==1) {
+            // no histories left
+            break;
+          }
+        } else {
+          break;
+        }
+      }
+    }
   }
 
   static class HistoryComparator implements Comparator {

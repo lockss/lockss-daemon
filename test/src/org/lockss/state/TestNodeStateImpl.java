@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.21 2003-06-20 22:34:55 claire Exp $
+ * $Id: TestNodeStateImpl.java,v 1.22 2004-02-02 22:56:54 eaalto Exp $
  */
 
 /*
@@ -29,21 +29,29 @@ package org.lockss.state;
 
 import java.io.*;
 import java.util.*;
-import org.lockss.plugin.CachedUrlSet;
 import org.lockss.test.*;
-import org.lockss.util.CollectionUtil;
-import org.apache.commons.collections.TreeBag;
-import org.lockss.util.Deadline;
+import org.lockss.util.*;
+import org.lockss.protocol.IdentityManager;
 
 public class TestNodeStateImpl extends LockssTestCase {
   private NodeStateImpl state;
   private HistoryRepository historyRepo;
   private List polls;
 
+  private static final int MAX_COUNT = 10;
+  private static final long MAX_AGE = 2000;
+
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+    Properties p = new Properties();
+    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(NodeStateImpl.PARAM_POLL_HISTORY_MAX_COUNT,
+        Integer.toString(MAX_COUNT));
+    p.setProperty(NodeStateImpl.PARAM_POLL_HISTORY_MAX_AGE,
+        Long.toString(MAX_AGE));
+    ConfigurationUtil.setCurrentConfigFromProps(p);
     MockArchivalUnit mau = new MockArchivalUnit();
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
@@ -102,6 +110,8 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testCloseActivePoll() {
+    // avoid poll trimming
+    TimeBase.setSimulated(1234);
     Iterator pollIt = state.getPollHistories();
     assertFalse(pollIt.hasNext());
 
@@ -145,6 +155,7 @@ public class TestNodeStateImpl extends LockssTestCase {
         "starttime=123",
     };
     assertIsomorphic(expectedA, histL);
+    TimeBase.setReal();
   }
 
   public void testCloseAdditionalStates() {
@@ -156,6 +167,8 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testGetLastPollHistory() {
+    // avoid poll trimming
+    TimeBase.setSimulated(1234);
     assertNull(state.getLastPollHistory());
 
     PollHistory history = new PollHistory(1, "test1lwr", "test1upr", 0, 123, 0, null, false);
@@ -187,6 +200,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     assertEquals("test2lwr", history.lwrBound);
     assertEquals("test2upr", history.uprBound);
     assertEquals(890, history.startTime);
+    TimeBase.setReal();
   }
 
   public void testGetActivePolls() {
@@ -227,6 +241,58 @@ public class TestNodeStateImpl extends LockssTestCase {
     state.setLastHashDuration(123);
     assertEquals(123, state.getAverageHashDuration());
   }
+
+  public void testPollTrimmingCount() throws Exception {
+    TimeBase.setSimulated(1234);
+    Iterator pollIt = state.getPollHistories();
+    assertFalse(pollIt.hasNext());
+    state.pollHistories = new ArrayList(MAX_COUNT);
+
+    for (int ii=0; ii<MAX_COUNT; ii++) {
+      // fill the list
+      state.pollHistories.add(new PollHistory(1, "test1", "test1", 0, 123 + ii,
+          0, null, false));
+    }
+    ((NodeStateImpl)state).trimHistoriesIfNeeded(false);
+    assertEquals(MAX_COUNT, state.pollHistories.size());
+    PollHistory history = (PollHistory)state.pollHistories.get(MAX_COUNT - 1);
+    assertEquals(123, history.getStartTime());
+
+    // exceed max
+    state.pollHistories.add(0, new PollHistory(1, "test1", "test1", 0, 200,
+        0, null, false));
+    ((NodeStateImpl)state).trimHistoriesIfNeeded(false);
+    // still max
+    assertEquals(MAX_COUNT, state.pollHistories.size());
+    history = (PollHistory)state.pollHistories.get(MAX_COUNT - 1);
+    // oldest was pushed out
+    assertEquals(124, history.getStartTime());
+
+    TimeBase.setReal();
+  }
+
+  public void testPollTrimmingAge() throws Exception {
+    TimeBase.setSimulated(3000);
+    Iterator pollIt = state.getPollHistories();
+    assertFalse(pollIt.hasNext());
+    state.pollHistories = new ArrayList(3);
+
+    long cutOff = 3000 - MAX_AGE;
+    // fill the list (in sorted order)
+    state.pollHistories.add(new PollHistory(1, "test1", "test1", 0, cutOff + 1,
+        0, null, false));
+    state.pollHistories.add(new PollHistory(1, "test1", "test1", 0, cutOff,
+        0, null, false));
+    state.pollHistories.add(new PollHistory(1, "test1", "test1", 0, cutOff - 1,
+        0, null, false));
+    ((NodeStateImpl)state).trimHistoriesIfNeeded(false);
+    assertEquals(2, state.pollHistories.size());
+    PollHistory history = (PollHistory)state.pollHistories.get(1);
+    assertEquals(cutOff, history.getStartTime());
+
+    TimeBase.setReal();
+  }
+
 
   public static void main(String[] argv) {
     String[] testCaseList = {TestNodeStateImpl.class.getName()};
