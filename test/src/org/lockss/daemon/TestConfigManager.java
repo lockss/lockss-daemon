@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.2 2003-07-16 00:03:59 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.3 2003-07-21 08:32:41 tlipkis Exp $
  */
 
 /*
@@ -301,8 +301,78 @@ public class TestConfigManager extends LockssTestCase {
 
     Configuration config = Configuration.getCurrentConfig();
     assertNull(config.get("foo.bar"));
-    ConfigurationUtil.setCurrentConfigFromString("a=1\n");
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
     Configuration config2 = Configuration.getCurrentConfig();
     assertEquals("12345", config2.get("foo.bar"));
+  }
+
+  public void testUpdateAuConfig() throws Exception {
+    String tmpdir = getTempDir().toString();
+    // establish cache config dir
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+
+    Properties p = new Properties();
+    p.put("org.lockss.au.fooauid.foo", "111");
+    p.put("org.lockss.au.fooauid.bar", "222");
+    p.put("org.lockss.au.fooauid.baz", "333");
+
+    Configuration config = Configuration.getCurrentConfig();
+    assertNull(config.get("org.lockss.au.auid.foo"));
+
+    // should create file first time
+    mgr.updateAuConfigFile(p, "org.lockss.au.fooauid");
+
+    // reinstall should load au config file
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+    config = Configuration.getCurrentConfig();
+    assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
+    assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
+    assertEquals("333", config.get("org.lockss.au.fooauid.baz"));
+    assertNull(config.get("org.lockss.au.auid.foo"));
+    assertNull(config.get("org.lockss.au.auid.bar"));
+
+    // add a different au, make sure they both get loaded
+    p = new Properties();
+    p.put("org.lockss.au.auid.foo", "11");
+    p.put("org.lockss.au.auid.bar", "22");
+    mgr.updateAuConfigFile(p, "org.lockss.au.auid");
+
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+    config = Configuration.getCurrentConfig();
+    assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
+    assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
+    assertEquals("333", config.get("org.lockss.au.fooauid.baz"));
+    assertEquals("11", config.get("org.lockss.au.auid.foo"));
+    assertEquals("22", config.get("org.lockss.au.auid.bar"));
+
+    // update first au, removing a property, make sure it really gets deleted
+    p = new Properties();
+    p.put("org.lockss.au.fooauid.foo", "111");
+    p.put("org.lockss.au.fooauid.bar", "222");
+
+    mgr.updateAuConfigFile(p, "org.lockss.au.fooauid");
+
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST,
+				  tmpdir);
+    config = Configuration.getCurrentConfig();
+    assertEquals("111", config.get("org.lockss.au.fooauid.foo"));
+    assertEquals("222", config.get("org.lockss.au.fooauid.bar"));
+    assertEquals(null, config.get("org.lockss.au.fooauid.baz"));
+    assertEquals("11", config.get("org.lockss.au.auid.foo"));
+    assertEquals("22", config.get("org.lockss.au.auid.bar"));
+  }
+
+  public void testFromProperties() throws Exception {
+    Properties props = new Properties();
+    props.put("foo", "23");
+    props.put("bar", "false");
+    Configuration config = mgr.fromProperties(props);
+    assertEquals(2, config.keySet().size());
+    assertEquals("23", config.get("foo"));
+    assertEquals("false", config.get("bar"));
   }
 }

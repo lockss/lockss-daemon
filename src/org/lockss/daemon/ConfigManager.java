@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.3 2003-07-17 23:38:31 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.4 2003-07-21 08:32:41 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,7 @@ public class ConfigManager implements LockssManager {
   static String cacheConfigFiles[] = {
     CONFIG_FILE_UI_IP_ACCESS,
     CONFIG_FILE_PROXY_IP_ACCESS,
+    CONFIG_FILE_AU_CONFIG,
   };
 			     
 
@@ -174,7 +175,7 @@ public class ConfigManager implements LockssManager {
     return theMgr;
   }
 
-  // Factory to create instance of appropriate class
+  /** Factory to create instance of appropriate class */
   static Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
   }
@@ -189,6 +190,17 @@ public class ConfigManager implements LockssManager {
       log.warning("attempt to install null Configuration");
     }
     currentConfig = newConfig;
+  }
+
+  /** Create a Configuration object from a Properties */
+  public static Configuration fromProperties(Properties props) {
+    Configuration config = new ConfigurationPropTreeImpl();
+    for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      config.put(key, props.getProperty(key));
+    }
+    config.seal();
+    return config;
   }
 
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
@@ -475,6 +487,13 @@ public class ConfigManager implements LockssManager {
 				   String cacheConfigFileName,
 				   String header)
       throws IOException {
+    writeCacheConfigFile(fromProperties(props), cacheConfigFileName, header);
+  }
+
+  public void writeCacheConfigFile(Configuration config,
+				   String cacheConfigFileName,
+				   String header)
+      throws IOException {
     if (cacheConfigDir == null) {
       log.warning("Attempting to write cache config file: " +
 		  cacheConfigFileName + ", but no cache config dir exists");
@@ -482,13 +501,42 @@ public class ConfigManager implements LockssManager {
     }
     File cfile = new File(cacheConfigDir, cacheConfigFileName);
     OutputStream os = new FileOutputStream(cfile);
-    props.store(os, header);
+    config.store(os, header);
     os.close();
     log.debug2("Wrote cache config file: " + cfile.toString());
     if (handlerThread != null) {
       handlerThread.forceReload();
     }
   }
+
+  public void updateAuConfigFile(Properties auProps, String auPropKey)
+      throws IOException {
+    updateAuConfigFile(fromProperties(auProps), auPropKey);
+  }
+
+  public void updateAuConfigFile(Configuration auConfig, String auPropKey)
+      throws IOException {
+    Configuration fileConfig;
+    try {
+      fileConfig = readCacheConfigFile(CONFIG_FILE_AU_CONFIG);
+    } catch (FileNotFoundException e) {
+      fileConfig = newConfiguration();
+    }
+    if (auPropKey != null) {
+      Configuration auSubtree = fileConfig.getConfigTree(auPropKey);
+      for (Iterator iter = auSubtree.nodeIterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	fileConfig.remove(auPropKey + "." + key);
+      }
+    }
+    for (Iterator iter = auConfig.keySet().iterator(); iter.hasNext();) {
+      String key = (String)iter.next();
+      fileConfig.put(key, auConfig.get(key));
+    }
+    writeCacheConfigFile(fileConfig, CONFIG_FILE_AU_CONFIG,
+			 "AU Configuration");
+  }
+
 
   // static convenience methods
 
