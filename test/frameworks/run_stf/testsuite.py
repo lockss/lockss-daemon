@@ -175,11 +175,17 @@ class SimpleDamageTestCase(LockssTestCase):
                "Never marked node %s 'damaged'" % node.url
         log("Marked node %s 'damaged'" % node.url)
 
-        # expect to see the AU successfully repaired.
+        # expect to see the node successfully repaired.
         log("Waiting for successful repair of node %s." % node.url)
         assert client.waitForContentRepair(simAu, node, timeout=self.timeout),\
                "Node %s not repaired." % node.url
         log("Node %s repaired." % node.url)
+
+        # expect to see the AU successfully repaired
+        log("Waiting for successful repair of AU.")
+        assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
+               "AU never repaired."
+        log("AU successfully repaired.")
 
 
 ##
@@ -677,7 +683,7 @@ class RandomizedDeleteTestCase(LockssTestCase):
         # not, too.
 
         # expect to see the AU successfully repaired.
-        log("Waiting for repair.")
+        log("Waiting for successful repair of AU.")
         assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
                "AU never repaired."
         log("AU repaired.")
