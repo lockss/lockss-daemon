@@ -13,7 +13,7 @@ org.lockss.cache.location=.
 #org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileNum=<n>
 
 #test settings
-org.lockss.test.treewalk=true
+org.lockss.test.treewalk=false
 org.lockss.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
 org.lockss.treewalk.auId=localA
 
