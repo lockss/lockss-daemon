@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.4 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: SchedService.java,v 1.5 2004-01-12 06:21:20 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,10 @@ public class SchedService extends BaseLockssManager {
 			   Set changedKeys) {
   }
 
+  /** Attempt to add a task to the schedule.
+   * @param task the new task
+   * @return true if the task was added to the schedule.
+   */
   public boolean scheduleTask(SchedulableTask task) {
     checkRunner();
     return runner.scheduleTask(task);
