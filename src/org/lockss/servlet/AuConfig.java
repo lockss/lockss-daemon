@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.4 2003-07-30 05:38:05 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.5 2003-08-01 15:57:59 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public class AuConfig extends LockssServlet {
     formConfig = null;
     defKeys = null;
     allKeys = null;
+    editKeys = null;
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -156,8 +157,7 @@ public class AuConfig extends LockssServlet {
       }
     }
     page.add(tbl);
-    page.add(getFooter());
-    page.write(resp.getWriter());
+    endPage(page);
   }
 
   private void addAddAuRow(Table tbl) {
@@ -209,7 +209,7 @@ public class AuConfig extends LockssServlet {
   }
 
   private void addPropRows(Table tbl, Collection keys, Configuration props,
-		      boolean editable) {
+		      Collection editableKeys) {
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       tbl.newRow();
@@ -217,7 +217,7 @@ public class AuConfig extends LockssServlet {
       tbl.add(key);
       tbl.newCell();
       String val = props != null ? props.get(key) : null;
-      if (editable) {
+      if (editableKeys != null && editableKeys.contains(key)) {
 	tbl.add(new Input(Input.Text, key, val));
       } else {
 	tbl.add(val);
@@ -231,6 +231,9 @@ public class AuConfig extends LockssServlet {
     boolean isNew = au == null;
 
     Configuration initVals = formConfig == null ? auConfig : formConfig;
+    if (initVals == null) {
+      initVals = ConfigManager.EMPTY_CONFIGURATION;
+    }
 
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
@@ -240,7 +243,12 @@ public class AuConfig extends LockssServlet {
     tbl.newCell("colspan=2 align=center");
     tbl.add("Volume Definition");
 //     tbl.add(isNew ? "Defining Properties" : "Fixed Properties");
-    addPropRows(tbl, defKeys, initVals, isNew);
+    addPropRows(tbl, defKeys, initVals,
+		(isNew
+		 ? (org.apache.commons.collections.CollectionUtils.
+		    subtract(defKeys, initVals.keySet()))
+		 : null));
+
     tbl.newRow();
     tbl.newRow();
     tbl.newCell("colspan=2 align=center");
@@ -250,7 +258,7 @@ public class AuConfig extends LockssServlet {
       }
     } else {
       tbl.add("Variable Parameters");
-      addPropRows(tbl, editKeys, initVals, editable);
+      addPropRows(tbl, editKeys, initVals, editKeys);
 
       tbl.newRow();
       tbl.newCell("colspan=2 align=center");
@@ -290,8 +298,7 @@ public class AuConfig extends LockssServlet {
 
     page.add(frm);
 
-    page.add(getFooter());
-    page.write(resp.getWriter());
+    endPage(page);
   }
 
 
@@ -309,8 +316,7 @@ public class AuConfig extends LockssServlet {
 
     page.add(frm);
 
-    page.add(getFooter());
-    page.write(resp.getWriter());
+    endPage(page);
   }
 
 
@@ -365,8 +371,7 @@ public class AuConfig extends LockssServlet {
     page.add(frm);
     page.add("</center><br>");
 
-    page.add(getFooter());
-    page.write(resp.getWriter());
+    endPage(page);
   }
 
   private void displayEditNew() throws IOException {
@@ -407,15 +412,17 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
 
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Creating new journal volume with plugin: " +
-				 plug.getPluginName()));
+    
+    page.add(getExplanationBlock((StringUtil.isNullString(title)
+				  ? "Creating new journal volume"
+				  : ("Creating new volume of " + title)) +
+				 " with plugin: " + plug.getPluginName()));
 
     Form frm = createAUEditForm(ListUtil.list("Create"), null, true);
 
     page.add(frm);
 
-    page.add(getFooter());
-    page.write(resp.getWriter());
+    endPage(page);
   }
 
   private void createAu() throws IOException {
@@ -490,8 +497,7 @@ public class AuConfig extends LockssServlet {
 
     page.add(frm);
 
-    page.add(getFooter());
-    page.write(resp.getWriter());
+    endPage(page);
   }
 
   private void doUnconfigureAu(ArchivalUnit au) throws IOException {
@@ -570,6 +576,16 @@ public class AuConfig extends LockssServlet {
       comp.add("</center><br>");
     }
     return comp;
+  }
+
+  protected void endPage(Page page) throws IOException {
+    if (action != null) {
+      page.add("<center>");
+      page.add(srvLink(myServletDescr(), "Back to Journal Configuration"));
+      page.add("</center>");
+    }      
+    page.add(getFooter());
+    page.write(resp.getWriter());
   }
 
   // make me a link in nav table if not on initial journal config page
