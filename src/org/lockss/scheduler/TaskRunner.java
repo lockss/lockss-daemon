@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.24 2004-09-02 07:47:53 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.25 2004-09-10 17:04:05 tlipkis Exp $
  */
 
 /*
@@ -303,7 +303,15 @@ class TaskRunner implements Serializable {
     for (Iterator iter = acceptedTasks.listIterator(); iter.hasNext(); ) {
       SchedulableTask task = (SchedulableTask)iter.next();
       if (task.isExpired()) {
-	addOverrunner(task, STAT_NONE);
+	if (task.isBackgroundTask()) {
+	  Schedule.BackgroundEvent event = 
+	    new Schedule.BackgroundEvent((BackgroundTask)task, Deadline.in(0),
+					 Schedule.EventType.FINISH);
+	  extraBackgroundEvents.add(event);
+	  pokeThread(false);
+	} else {
+	  addOverrunner(task, STAT_NONE);
+	}
 
 	// Also remove expired tasks from acceptedTasks here, so don't have
 	// to look at them again.
@@ -370,17 +378,18 @@ class TaskRunner implements Serializable {
     Schedule.BackgroundEvent event = 
       new Schedule.BackgroundEvent(task, Deadline.in(0),
 				   Schedule.EventType.FINISH);
+    if (task.isFinished()) {
+      // ignore if task already finished/finishing
+      log.debug3("Background task finished redundantly: " + task);
+      return;
+    }
     log.debug2("Background task finished early: " + task);
     if (true) {
       backgroundTaskEvent(event);
     } else {
       // put the event where the stepper thread will find it
       extraBackgroundEvents.add(event);
-      if (stepThread != null) {
-	// Avoid starting thread in unit tests.  In practice, the thread will
-	// have been created if any background tasks are running.
-	pokeThread();
-      }
+      pokeThread(false);
     }
   }
 
@@ -419,7 +428,6 @@ class TaskRunner implements Serializable {
     }
   }
 
-  // tk add watchdog
   synchronized void pokeThread() {
     if (stepThread == null) {
       log.info("Starting Q runner");
@@ -428,6 +436,14 @@ class TaskRunner implements Serializable {
       stepThread.waitRunning();
     } else {
       stepThread.pokeStepper();
+    }
+  }
+
+  void pokeThread(boolean startIfNotRunning) {
+    if (startIfNotRunning || stepThread != null) {
+      // Avoid starting thread in unit tests.  In practice, the thread will
+      // have been created once anything has been scheduled
+      pokeThread();
     }
   }
 
@@ -640,7 +656,11 @@ class TaskRunner implements Serializable {
       acceptedTasks.remove(task);	// do this before callback
       if (removeFromBackgroundTasks(task)) {
 	task.setFinished();
-	incrStats(task, STAT_COMPLETED);
+	if (task.isExpired()) {
+	  incrStats(task, STAT_EXPIRED);
+	} else {
+	  incrStats(task, STAT_COMPLETED);
+	}
 	addToHistory(event);
 	try {
 	  task.callback.taskEvent(task, event.getType());
@@ -664,7 +684,9 @@ class TaskRunner implements Serializable {
       }
       return true;
     } else {
-      log.error("Already active background task: " + task);
+      // This is expected if schedule is recomputed while background task is
+      // running
+      log.debug("Already active background task: " + task);
       return false;
     }
   }
