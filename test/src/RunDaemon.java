@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.24 2003-03-01 00:01:51 claire Exp $
+ * $Id: RunDaemon.java,v 1.25 2003-03-01 01:27:41 tal Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class RunDaemon
   static final String PARAM_CALL_POLL = Configuration.PREFIX + "test.poll";
   static final String PARAM_RUN_TREEWALK = Configuration.PREFIX + "test.treewalk";
   static final String PARAM_TREEWALK_AUID = Configuration.PREFIX + "treewalk.auId";
+  static final String PARAM_TREEWALK_PLUGINID = Configuration.PREFIX + "treewalk.pluginId";
   static final String PARAM_POLL_TYPE = Configuration.PREFIX + "poll.type";
   static final String PARAM_PS_PLUGINID = Configuration.PREFIX + "pollspec.pluginId";
   static final String PARAM_PS_AUID = Configuration.PREFIX + "pollspec.auId";
@@ -99,10 +100,22 @@ public class RunDaemon
 
   private void runTreeWalk() {
     ArchivalUnit au;
+    String pluginId = Configuration.getParam(PARAM_TREEWALK_PLUGINID);
     String auId = Configuration.getParam(PARAM_TREEWALK_AUID);
-    if(auId != null) {
-      au = getPluginManager().findArchivalUnit(auId);
-      startWalk(au);
+    if(auId != null && pluginId != null) {
+      Plugin plugin = getPluginManager().getPlugin(pluginId);
+      if (plugin != null) {
+	au = plugin.getAU(auId);
+	if (au != null) {
+	  log.info("starting tree walk for plugin " + pluginId +
+		   ", auId " + auId);
+	  startWalk(au);
+	} else {
+	  log.error("No AU with id " + auId + " in plugin " + pluginId);
+	}
+      } else {
+	log.error("Plugin " + pluginId + " not found");
+      }
     }
     else {
       Iterator iter = getPluginManager().getAllAUs().iterator();
