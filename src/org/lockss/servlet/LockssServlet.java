@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.29 2003-09-11 07:48:07 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.30 2003-11-13 01:05:57 tlipkis Exp $
  */
 
 /*
@@ -659,7 +659,7 @@ public abstract class LockssServlet extends HttpServlet
     String since =
       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
     table.add(getMachineName() + " at " +
-	      headerDf.format(new Date()) + ", up " + since + "</center>");
+	      headerDf.format(new Date()) + ", up " + since);
 
 //     table.newCell("valign=center align=right width=\"25%\"");
     table.newCell("valign=center align=center width=\"20%\"");
