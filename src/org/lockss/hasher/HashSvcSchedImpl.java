@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.3.2.3 2003-11-19 06:22:13 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.3.2.4 2003-11-20 00:05:41 tlipkis Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class HashSvcSchedImpl
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
   private int reqCtr = 0;
   private long totalTime = 0;
+  private long nameHashEstimate = DEFAULT_NAME_HASH_EXTIMATE;
 
   public HashSvcSchedImpl() {}
 
@@ -92,6 +93,8 @@ public class HashSvcSchedImpl
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
 				   DEFAULT_ESTIMATE_PAD_PERCENT);
     hashStepBytes = config.getInt(PARAM_STEP_BYTES, DEFAULT_STEP_BYTES);
+    nameHashEstimate = config.getTimeInterval(PARAM_NAME_HASH_EXTIMATE,
+					      DEFAULT_NAME_HASH_EXTIMATE);
     int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
     if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
       synchronized (completed) {
@@ -159,7 +162,7 @@ public class HashSvcSchedImpl
     HashTask task = 
       new HashTask(urlset, hasher, deadline, callback, cookie,
 			    // tk - get better duration estimate
-		   urlset.getNameHasher(hasher), 1000, NAME_HASH);
+		   urlset.getNameHasher(hasher), nameHashEstimate, NAME_HASH);
     return scheduleTask(task);
   }
 
