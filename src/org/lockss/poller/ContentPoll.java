@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.1 2002-10-18 18:05:24 claire Exp $
+* $Id: ContentPoll.java,v 1.2 2002-10-23 06:05:59 claire Exp $
  */
 
 /*
@@ -48,123 +48,102 @@ import java.util.Arrays;
 
 public class ContentPoll extends Poll implements Runnable {
 
-	private static int seq = 0;
-	RE m_RE = null;
+  private static int seq = 0;
 
-	ContentPoll(Message msg) throws IOException {
-		super(msg);
-		m_replyOpcode = Message.CONTENT_POLL_REP;
-		if(m_regExp != null)  {
-			try  {
-				m_RE = new RE(m_regExp);
-			}
-			catch(REException ex)  {
-				throw new Message.ProtocolException("invalid reg exp: " + m_regExp);
-			}
-		}
-		seq++;
+  ContentPoll(Message msg) throws IOException {
+    super(msg);
+    m_replyOpcode = Message.CONTENT_POLL_REP;
+    seq++;
 
-		m_thread =  new Thread(this, "Content Poll-" + seq);
-		m_thread.start();
-	}
+    m_thread =  new Thread(this, "Content Poll-" + seq);
+    m_thread.start();
+  }
 
-	public void run()  {
-		Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
+  public void run()  {
+    Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
 
-		if(m_msg.isLocal())	 {
-			if(m_voteChecked)  {
-				log.debug(m_key + " local replay ignored");
-				return;
-			}
-			m_voteChecked = true;
-		}
-		// make sure we have the right poll
-		byte[] C = m_msg.getChallenge();
+    if(m_msg.isLocal())	 {
+      if(m_voteChecked)  {
+        log.debug(m_key + " local replay ignored");
+        return;
+      }
+      m_voteChecked = true;
+    }
+    // make sure we have the right poll
+    byte[] C = m_msg.getChallenge();
 
-		if(C.length != m_challenge.length)  {
-			log.debug(m_key + " challenge length mismatch");
-			return;
-		}
+    if(C.length != m_challenge.length)  {
+      log.debug(m_key + " challenge length mismatch");
+      return;
+    }
 
-		if(!Arrays.equals(C, m_challenge))  {
-			log.debug(m_key + " challenge mismatch");
-			return;
-		}
+    if(!Arrays.equals(C, m_challenge))  {
+      log.debug(m_key + " challenge mismatch");
+      return;
+    }
 
-		// make sure our vote will actually matter
-		int vote_margin =  m_agree - m_disagree;
-		if(vote_margin > m_quorum)  {
-			log.info(m_key + " " +  vote_margin + " lead is enough");
-			return;
-		}
+    // make sure our vote will actually matter
+    int vote_margin =  m_agree - m_disagree;
+    if(vote_margin > m_quorum)  {
+      log.info(m_key + " " +  vote_margin + " lead is enough");
+      return;
+    }
 
-		// are we too busy
-		if((m_counting - 1)	> m_quorum)  {
-			log.info(m_key + " too busy to count " + m_counting + " votes");
-			return;
-		}
+    // are we too busy
+    if((m_counting - 1)	> m_quorum)  {
+      log.info(m_key + " too busy to count " + m_counting + " votes");
+      return;
+    }
 
-		// do we have time to complete the hash
-		int votes = m_agree + m_disagree + m_counting - 1;
-		long duration = m_msg.getDuration();
-		if (votes > 0 && duration < m_hashTime) {
-			log.info(m_key + " no time to hash vote " + duration + ":" + m_hashTime);
-			return;
-		}
-		scheduleHash();
-	}
+    // do we have time to complete the hash
+    int votes = m_agree + m_disagree + m_counting - 1;
+    long duration = m_msg.getDuration();
+    if (votes > 0 && duration < m_hashTime) {
+      log.info(m_key + " no time to hash vote " + duration + ":" + m_hashTime);
+      return;
+    }
+    scheduleHash();
 
-	protected void tally() {
-		int yes;
-		int no;
-		int yesWt;
-		int noWt;
-		synchronized (this) {
-			yes = m_agree;
-			no = m_disagree;
-			yesWt = m_agreeWt;
-			noWt = m_disagreeWt;
-		}
-		thePolls.remove(m_key);
-		//recordTally(m_urlset, this, yes, no, yesWt, noWt, m_replyOpcode);
-	}
+  }
 
-	void checkVote()  {
-		byte[] H = m_msg.getHashed();
-		if(Arrays.equals(H, m_hash)) {
-			handleDisagreeVote(m_msg);
+  protected void tally() {
+    int yes;
+    int no;
+    int yesWt;
+    int noWt;
+    synchronized (this) {
+      yes = m_agree;
+      no = m_disagree;
+      yesWt = m_agreeWt;
+      noWt = m_disagreeWt;
+    }
+    thePolls.remove(m_key);
+    //recordTally(m_urlset, this, yes, no, yesWt, noWt, m_replyOpcode);
+  }
 
-		}
-		else {
-			handleAgreeVote(m_msg);
-		}
-	}
+  void checkVote()  {
+    byte[] H = m_msg.getHashed();
+    if(Arrays.equals(H, m_hash)) {
+      handleDisagreeVote(m_msg);
+    }
+    else {
+      handleAgreeVote(m_msg);
+    }
+  }
 
-	boolean scheduleHash() {
-		MessageDigest hasher = null;
-		CachedUrlSet urlset = null;
-		try {
-			hasher = MessageDigest.getInstance(HASH_ALGORITHM);
-		} catch (NoSuchAlgorithmException ex) {
-			return false;
-		}
-		hasher.update(m_challenge, 0, m_challenge.length);
-		hasher.update(m_verifier, 0, m_verifier.length);
-		try {
-			urlset = m_arcUnit.makeCachedUrlSet(m_url,m_regExp);
-		}
-		catch (REException ex) {
-		}
-		return HashService.hashContent( urlset, hasher, m_deadline,
-																 new HashCallback(), m_verifier);
-	}
+  boolean scheduleHash() {
+    MessageDigest hasher = null;
+    CachedUrlSet urlset = null;
+    try {
+      hasher = MessageDigest.getInstance(HASH_ALGORITHM);
+    } catch (NoSuchAlgorithmException ex) {
+      return false;
+    }
+    hasher.update(m_challenge, 0, m_challenge.length);
+    hasher.update(m_verifier, 0, m_verifier.length);
+    return HashService.hashContent( m_urlSet, hasher, m_deadline,
+                                    new HashCallback(), m_verifier);
+  }
 
-	protected RE getRE()  {
-		return m_RE;
-	}
-
-	protected String getRegExp()  {
-		return m_regExp;
-	}
 
 }

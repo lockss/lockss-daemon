@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.1 2002-10-18 18:05:24 claire Exp $
+* $Id: VerifyPoll.java,v 1.2 2002-10-23 06:05:59 claire Exp $
  */
 
 /*
@@ -45,139 +45,139 @@ import java.security.NoSuchAlgorithmException;
  * @version 1.0
  */
 class VerifyPoll extends Poll implements Runnable {
-	private static int m_seq = 0;
+  private static int m_seq = 0;
 
-	public VerifyPoll(Message msg) {
-		super(msg);
-		m_replyOpcode = Message.VERIFY_POLL_REP;
-		m_quorum = 1;
-		m_seq++;
-		m_thread = new Thread(this,"Verify Poll - "	+ m_seq);
-		m_thread.start();
-	}
+  public VerifyPoll(Message msg) {
+    super(msg);
+    m_replyOpcode = Message.VERIFY_POLL_REP;
+    m_quorum = 1;
+    m_seq++;
+    m_thread = new Thread(this,"Verify Poll - "	+ m_seq);
+    m_thread.start();
+  }
 
-	protected static void randomRequestVerify(Message msg, int pct)
-			throws IOException {
-		double prob = ((double) pct) / 100.0;
-		if (ProbabilisticChoice.choose(prob))
-		requestVerify(msg);
+  protected static void randomRequestVerify(Message msg, int pct)
+      throws IOException {
+    double prob = ((double) pct) / 100.0;
+    if (ProbabilisticChoice.choose(prob))
+      requestVerify(msg);
 
-	}
+  }
 
-	private static void requestVerify(Message msg) throws IOException {
-		String url = new String(msg.getTargetUrl());
-		String regexp = new String(msg.getRegExp());
-		int opcode = Message.VERIFY_POLL_REQ;
-		Poll p = null;
-		byte[] verifier = makeVerifier(p);
-		Message reqmsg = Message.makeRequestMsg(url,
-				regexp,
-		new String[0],
-	msg.getGroupAddress(),
-	msg.getTimeToLive(),
-	msg.getVerifier(),
-	verifier,
- opcode,
- msg.getDuration(),
- Identity.getLocalIdentity());
-		Identity originator = msg.getOriginID();
-		sendTo(reqmsg,originator.getAddress(), originator.getPort());
-		Poll poll = findPoll(reqmsg);
-		poll.run();
-	}
+  private static void requestVerify(Message msg) throws IOException {
+    String url = new String(msg.getTargetUrl());
+    String regexp = new String(msg.getRegExp());
+    int opcode = Message.VERIFY_POLL_REQ;
+    Poll p = null;
+    byte[] verifier = makeVerifier(p);
+    Message reqmsg = Message.makeRequestMsg(url,
+        regexp,
+        new String[0],
+        msg.getGroupAddress(),
+        msg.getTimeToLive(),
+        msg.getVerifier(),
+        verifier,
+        opcode,
+        msg.getDuration(),
+        Identity.getLocalIdentity());
+    Identity originator = msg.getOriginID();
+    sendTo(reqmsg,originator.getAddress(), originator.getPort());
+    Poll poll = findPoll(reqmsg);
+    poll.run();
+  }
 
-	private void replyVerify(Message msg) throws IOException  {
-		Poll p = null;
-		byte[] secret = findSecret(msg);
-		byte[] verifier = makeVerifier(p);
-		Message repmsg = Message.makeReplyMsg(msg,
-				secret,
-		verifier,
-	Message.VERIFY_POLL_REP,
- msg.getDuration(),
- Identity.getLocalIdentity());
+  private void replyVerify(Message msg) throws IOException  {
+    Poll p = null;
+    byte[] secret = findSecret(msg);
+    byte[] verifier = makeVerifier(p);
+    Message repmsg = Message.makeReplyMsg(msg,
+        secret,
+        verifier,
+        Message.VERIFY_POLL_REP,
+        msg.getDuration(),
+        Identity.getLocalIdentity());
 
-		Identity originator = msg.getOriginID();
-		sendTo(repmsg, originator.getAddress(), originator.getPort());
-	}
+    Identity originator = msg.getOriginID();
+    sendTo(repmsg, originator.getAddress(), originator.getPort());
+  }
 
-	protected void tally()  {
-		int yes;
-		int no;
+  protected void tally()  {
+    int yes;
+    int no;
 
-		synchronized(this)  {
-			yes = m_agree;
-			no = m_disagree;
-		}
-		thePolls.remove(m_key);
-		log.info(m_msg.toString() + " tally " + toString());
-		Identity id = m_msg.getOriginID();
-		if ((m_agree + m_disagree) < 1) {
-			id.voteNotVerify();
-		} else if (m_agree > 0 && m_disagree == 0) {
-			id.voteVerify();
-		} else {
-			id.voteDisown();
-		}
-		//recordVote(m_urlset, Message.VERIFY_REQ, yes, no, agreeWt, disagreeWt);
-	}
+    synchronized(this)  {
+      yes = m_agree;
+      no = m_disagree;
+    }
+    thePolls.remove(m_key);
+    log.info(m_msg.toString() + " tally " + toString());
+    Identity id = m_msg.getOriginID();
+    if ((m_agree + m_disagree) < 1) {
+      id.voteNotVerify();
+    } else if (m_agree > 0 && m_disagree == 0) {
+      id.voteVerify();
+    } else {
+      id.voteDisown();
+    }
+    //recordVote(m_urlset, Message.VERIFY_REQ, yes, no, agreeWt, disagreeWt);
+  }
 
-	void checkVote()  {
-		if(m_msg.isLocal())  {
-			log.info("Ignoring our verify vote: " + m_key);
-			return;
-		}
-		byte[] C = m_msg.getChallenge();
-		if(C.length != m_challenge.length)  {
-			log.error(m_key + ":challenge length mismatch.");
-			return;
-		}
-		if(!Arrays.equals(C, m_msg.getChallenge()))  {
-			log.error(m_key + ":challenge mismatch");
-			return;
-		}
-		// check this vote verification H in the message should
-		// hash to the challenge, which is the verifier of the poll
-		// thats being verified
-		byte[] H = m_msg.getHashed();
-		MessageDigest hasher;
-		try {
-			hasher = MessageDigest.getInstance(HASH_ALGORITHM);
-		}
-		catch (NoSuchAlgorithmException ex) {
-			log.error(m_key + "failed to find hash algorithm");
-			return;
-		}
-		hasher.update(H,0,H.length);
-		byte[] HofH = hasher.digest();
-		if(!Arrays.equals(C, HofH))  {
-			handleDisagreeVote(m_msg);
-		}
-		else  {
-			handleAgreeVote(m_msg);
-		}
-	}
+  void checkVote()  {
+    if(m_msg.isLocal())  {
+      log.info("Ignoring our verify vote: " + m_key);
+      return;
+    }
+    byte[] C = m_msg.getChallenge();
+    if(C.length != m_challenge.length)  {
+      log.error(m_key + ":challenge length mismatch.");
+      return;
+    }
+    if(!Arrays.equals(C, m_msg.getChallenge()))  {
+      log.error(m_key + ":challenge mismatch");
+      return;
+    }
+    // check this vote verification H in the message should
+    // hash to the challenge, which is the verifier of the poll
+    // thats being verified
+    byte[] H = m_msg.getHashed();
+    MessageDigest hasher;
+    try {
+      hasher = MessageDigest.getInstance(HASH_ALGORITHM);
+    }
+    catch (NoSuchAlgorithmException ex) {
+      log.error(m_key + "failed to find hash algorithm");
+      return;
+    }
+    hasher.update(H,0,H.length);
+    byte[] HofH = hasher.digest();
+    if(!Arrays.equals(C, HofH))  {
+      handleDisagreeVote(m_msg);
+    }
+    else  {
+      handleAgreeVote(m_msg);
+    }
+  }
 
-	public void run() {
-		Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
+  public void run() {
+    Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
 
-		checkVote();
-		try {
-			if (m_caller == null) {          // we called this poll
-				m_deadline.sleepUntil();
-				closeThePoll(m_arcUnit, m_challenge);
-				tally();
-			}
-			else {						// someone else called this poll
-				replyVerify(m_msg);
-				thePolls.remove(m_key);
-			}
-		} catch (OutOfMemoryError e) {
-			System.exit(-11);
-		} catch (IOException e) {
-			log.error(m_key + " election failed " + e);
-			abort();
-		}
-	}
+    checkVote();
+    try {
+      if (m_caller == null) {          // we called this poll
+        m_deadline.sleepUntil();
+        closeThePoll(m_arcUnit, m_challenge);
+        tally();
+      }
+      else {						// someone else called this poll
+        replyVerify(m_msg);
+        thePolls.remove(m_key);
+      }
+    } catch (OutOfMemoryError e) {
+      System.exit(-11);
+    } catch (IOException e) {
+      log.error(m_key + " election failed " + e);
+      abort();
+    }
+  }
 
 }
