@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.10 2004-03-11 09:40:23 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.10.2.1 2004-03-23 08:28:43 tlipkis Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public interface UrlCacher {
 
   public static class RedirectScheme {
     private int options = 0;
-    public RedirectScheme(int options) {
+    private RedirectScheme(int options) {
       this.options = options;
     }
     public int getOptions() {
