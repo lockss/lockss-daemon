@@ -1,5 +1,5 @@
 /*
- * $Id: DoLater.java,v 1.1 2002-09-02 04:13:08 tal Exp $
+ * $Id: DoLater.java,v 1.2 2002-09-23 02:57:31 tal Exp $
  */
 
 /*
@@ -30,27 +30,30 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+
+
 package org.lockss.test;
 
-/** Abstraction to do something in a while, if not cancelled.
+/** Abstraction to do something in another thread, after a delay,
+ * unless cancelled.
  * <br>For one-off use:<pre>
- *  ...
  *  final Object obj = ...;
- *  doer = new DoLater(1000) {
- *    protected void doit() {
- *      obj.method(...);
- *    }
- *  };
+ *  DoLater doer = new DoLater(1000) {
+ *      protected void doit() {
+ *        obj.method(...);
+ *      }
+ *    };
  *  doer.start();</pre>
  *
-
  * Or, for convenient repeated use of a particular delayed operation,
- * define a class that extends this, with a constructor that calls
+ * define a class that extends <code>DoLater</code>,
+ * with a constructor that calls
  * <code>super(wait)</code> and stores any other necessary args into
  * instance vars, and a <code>doit()</code> method that does whatever needs
- * to be done.  And a convenience method to create and start it.<pre>
+ * to be done.  And a convenience method to create and start it.
+ * For example, <code>DoLater.Interrupter</code> is defined as:<pre>
  *  public static class Interrupter extends DoLater {
- *  Thread thread;
+ *    private Thread thread;
  *    Interrupter(long waitMs, Thread thread) {
  *      super(waitMs);
  *      this.thread = thread;
@@ -66,7 +69,20 @@ package org.lockss.test;
  *    i.start();
  *    return i;
  *  }</pre>
- * See TestBinarySemaphore for a usage example.
+ *
+ * Then, to protect a test with a timeout:<pre>
+ *  DoLater.Interrupter intr = null;
+ *  try {
+ *    intr = DoLater.interruptMeIn(1000);
+ *    // perform a test that should complete in less than one second
+ *    intr.cancel();
+ *  } finally {
+ *    if (intr.did()) {
+ *      fail("operation failed to complete in one second");
+ *    }
+ *  }</pre>
+ * The <code>cancel()</code> ensures that the interrupt will not
+ * happen after the try block completes.
 */
 public abstract class DoLater extends Thread {
   private long wait;
@@ -85,7 +101,10 @@ public abstract class DoLater extends Thread {
     return did;
   }
 
-  /** Cancel the action iff it hasn't already started */
+  /** Cancel the action iff it hasn't already started.  If it has started,
+   * wait until it completes.  (Thus when <code>cancel()</code> returns, it
+   * is safe to destroy any environment on which the action relies.)
+   */
   public synchronized void cancel() {
     if (want) {
       want = false;
