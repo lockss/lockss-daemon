@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.40 2003-11-01 01:03:19 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.41 2003-11-07 19:12:42 troberts Exp $
  */
 
 /*
@@ -254,7 +254,7 @@ public class HistoryRepositoryImpl
       File auFile = new File(getAuLocation(au) + File.separator + AU_FILE_NAME);
       if (!auFile.exists()) {
         logger.debug3("No au file found.");
-        return new AuState(au, -1, -1, -1, new ArrayList(), this);
+        return new AuState(au, -1, -1, -1, null, this);
       }
       logger.debug3("Loading state for AU '" + au.getName() + "'");
       FileReader reader = new FileReader(auFile);
@@ -271,7 +271,7 @@ public class HistoryRepositoryImpl
       logger.error("Marshalling exception for austate '"+au.getName()+"': " +
                    me.getMessage());
       // continue
-      return new AuState(au, -1, -1, -1, new ArrayList(), this);
+      return new AuState(au, -1, -1, -1, null, this);
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
       throw new LockssRepository.RepositoryStateException(

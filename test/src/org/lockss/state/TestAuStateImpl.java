@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.9 2003-11-07 00:52:48 troberts Exp $
+ * $Id: TestAuStateImpl.java,v 1.10 2003-11-07 19:12:42 troberts Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testGetUrls() {
-    List stringList = new ArrayList();
+    LinkedList stringList = new LinkedList();
     stringList.add("test");
 
     AuState auState = new AuState(mau, -1, -1, 123, stringList, historyRepo);
@@ -98,7 +98,8 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testUpdateUrls() {
-    AuState auState = new AuState(mau, -1, -1, 123, new ArrayList(), historyRepo);
+    AuState auState =
+      new AuState(mau, -1, -1, 123, new LinkedList(), historyRepo);
     assertTrue(historyRepo.storedAus.isEmpty());
 
     Collection col = auState.getCrawlUrls();
@@ -123,7 +124,8 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testForceUpdateUrls() {
-    AuState auState = new AuState(mau, -1, -1, 123, new ArrayList(), historyRepo);
+    AuState auState =
+      new AuState(mau, -1, -1, 123, new LinkedList(), historyRepo);
     assertTrue(historyRepo.storedAus.isEmpty());
 
     Collection col = auState.getCrawlUrls();

@@ -1,5 +1,5 @@
 /*
- * $Id: AuStateBean.java,v 1.12 2003-11-07 00:52:47 troberts Exp $
+ * $Id: AuStateBean.java,v 1.13 2003-11-07 19:12:42 troberts Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.util.List;
+import java.util.LinkedList;
 import org.lockss.plugin.ArchivalUnit;
 
 /**
@@ -55,7 +55,7 @@ public class AuStateBean extends AuState {
    * Sets the crawl urls
    * @param newCol a new collection of Strings
    */
-  public void setCrawlUrls(List newCol) {
+  public void setCrawlUrls(LinkedList newCol) {
     crawlUrls = newCol;
   }
 

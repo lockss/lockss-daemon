@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.10 2003-11-07 00:52:48 troberts Exp $
+ * $Id: MockAuState.java,v 1.11 2003-11-07 19:12:42 troberts Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class MockAuState extends AuState {
   }
 
   public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
-                     long lastTreeWalk, List crawlUrls,
+                     long lastTreeWalk, LinkedList crawlUrls,
                      HistoryRepository historyRepo) {
     super(au, lastCrawlTime, lastPollTime, lastTreeWalk,
 	  crawlUrls, historyRepo);
@@ -82,7 +82,7 @@ public class MockAuState extends AuState {
     super.newCrawlFinished();
   }
 
-  public List getCrawlUrls() {
+  public LinkedList getCrawlUrls() {
     return crawlUrls;
   }
 
