@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.1 2002-11-05 21:07:02 tal Exp $
+ * $Id: FifoQueue.java,v 1.2 2002-11-06 21:18:35 tal Exp $
  */
 
 /*
@@ -91,5 +91,12 @@ public class FifoQueue implements Queue {
    */
   public synchronized Object peek() {
     return (queue.isEmpty() ? null : queue.firstElement());
+  }
+
+  /** 
+   * Return true iff the queue is empty
+   */
+  public boolean isEmpty() {
+    return queue.isEmpty();
   }
 }

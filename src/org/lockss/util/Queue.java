@@ -1,5 +1,5 @@
 /*
- * $Id: Queue.java,v 1.1 2002-11-05 21:07:02 tal Exp $
+ * $Id: Queue.java,v 1.2 2002-11-06 21:18:35 tal Exp $
  */
 
 /*
@@ -55,4 +55,9 @@ public interface Queue {
    * @return The element at the head of the queue, or null if queue is empty
    */
   public Object peek();
+
+  /** 
+   * Return true iff the queue is empty
+   */
+  public boolean isEmpty();
 }
