@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: TimerUtil.java,v 1.1 2002-09-02 04:13:08 tal Exp $
+// $Id: TimerUtil.java,v 1.2 2002-09-19 21:01:03 tal Exp $
 // ========================================================================
 
 /*
@@ -59,7 +59,7 @@ public class TimerUtil {
 //    }
 
   /** Sleep for <code>ms</code> milliseconds, ignoring interrupts */
-  public void guaranteedSleep(long ms) {
+  public static void guaranteedSleep(long ms) {
     long expMS = new Date().getTime() + ms;
     Date expiration = new Date(expMS);
 
@@ -68,7 +68,7 @@ public class TimerUtil {
 	 now = new Date()) {
       long nowMS = now.getTime();
       try {
-	this.wait(expMS - nowMS);
+	sleep(expMS - nowMS);
       } catch (InterruptedException e) {
       }
     }
