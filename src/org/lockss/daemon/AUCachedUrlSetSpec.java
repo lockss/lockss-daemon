@@ -1,5 +1,5 @@
 /*
- * $Id: AUCachedUrlSetSpec.java,v 1.2 2003-06-03 01:52:50 tal Exp $
+ * $Id: AUCachedUrlSetSpec.java,v 1.3 2003-06-03 22:08:06 tal Exp $
  */
 
 /*
@@ -52,63 +52,71 @@ public class AUCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Returns "LOCKSSAU:"
-   * @return the url
+   * @return "LOCKSSAU:"
    */
   public String getUrl() {
     return URL;
   }
 
   /**
-   * Always returns true; all URLs fall within this spec
-   * @return true
+   * @param url The url.
+   * @return true - all URLs match this spec
    */
   public boolean matches(String url) {
     return true;
   }
 
+  /**
+   * @return true
+   */
   public boolean isAU() {
     return true;
   }
 
+  /**
+   * @return false
+   */
   public boolean isSingleNode() {
     return false;
   }
 
+  /**
+   * @return false
+   */
   public boolean isRangeRestricted() {
     return false;
   }
 
+  /**
+   * @arg spec the set to test disjointness with
+   * @return false - this overlaps any other CUSS in the same AU
+   */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
     return false;
   }
 
+  /**
+   * @arg spec the set to test subsumption of
+   * @return true - this subsumes any other CUSS in the same AU
+   */
   public boolean subsumes(CachedUrlSetSpec spec) {
     return true;
   }
 
-  /**
-   * overrides Object.toString()
-   * @return String representaion of this object
-   */
   public String toString() {
     return "[AUCUSS]";
   }
 
   /**
-   * Overrides Object.equals().
-   * Compares the lists and REs of the two specs.
-   * @param obj the other spec
-   * @return true if the lists and REs are equal
+   * @param obj the object to compare to
+   * @return true iff the argument is also an AUCachedUrlSetSpec
    */
   public boolean equals(Object obj) {
     return (obj instanceof AUCachedUrlSetSpec);
   }
 
   /**
-   * Overrides Object.hashCode().
-   * Returns the hash of the strings
-   * @return the hashcode
+   * @return the URL's hashcode
    */
   public int hashCode() {
     return URL.hashCode();

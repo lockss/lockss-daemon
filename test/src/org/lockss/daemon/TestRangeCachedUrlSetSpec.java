@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.6 2003-06-03 05:49:32 tal Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.7 2003-06-03 22:08:06 tal Exp $
  */
 
 /*
@@ -111,11 +111,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertEquals("bar/", cuss3.getUrl());
     assertEquals(null, cuss3.getLowerBound());
     assertEquals("123", cuss3.getUpperBound());
-    // Our statement of what a RangeCachedUrlSetSpec means when it has a range
-    // suggests that this should succeed.  It's not implemented that way
-    // though, and not clear whether it should be changed
-//     assertFalse(cuss3.matches("bar/"));  // ranged, shouldn't match prefix
-    assertTrue(cuss3.matches("bar/"));
+    assertFalse(cuss3.matches("bar/"));  // ranged, shouldn't match prefix
     assertTrue(cuss3.matches("bar/0"));
     assertTrue(cuss3.matches("bar/123"));
     assertFalse(cuss3.matches("bar/123/4"));
@@ -194,6 +190,17 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss2.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b")));
     assertTrue(cuss3.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b")));
     assertTrue(cuss4.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b")));
+
+    // disjoint with prefix sncuss only if range-restricted
+    assertFalse(cuss1.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/")));
+    assertTrue(cuss2.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/")));
+    assertTrue(cuss3.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/")));
+    assertTrue(cuss4.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/")));
+
+    assertTrue(cuss1.isDisjoint(new SingleNodeCachedUrlSetSpec("a/c")));
+    assertTrue(cuss2.isDisjoint(new SingleNodeCachedUrlSetSpec("a/c")));
+    assertTrue(cuss3.isDisjoint(new SingleNodeCachedUrlSetSpec("a/c")));
+    assertTrue(cuss4.isDisjoint(new SingleNodeCachedUrlSetSpec("a/c")));
 
     assertFalse(cuss1.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/c")));
     assertFalse(cuss2.isDisjoint(new SingleNodeCachedUrlSetSpec("a/b/c")));
@@ -278,7 +285,7 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
     assertTrue(cuss3.subsumes(new SingleNodeCachedUrlSetSpec("a/b/c")));
     assertTrue(cuss4.subsumes(new SingleNodeCachedUrlSetSpec("a/b/c")));
 
-    assertFalse(cuss1.subsumes(new SingleNodeCachedUrlSetSpec("a/b/")));
+    assertTrue(cuss1.subsumes(new SingleNodeCachedUrlSetSpec("a/b/")));
     assertFalse(cuss2.subsumes(new SingleNodeCachedUrlSetSpec("a/b/")));
     assertFalse(cuss3.subsumes(new SingleNodeCachedUrlSetSpec("a/b/")));
     assertFalse(cuss4.subsumes(new SingleNodeCachedUrlSetSpec("a/b/")));

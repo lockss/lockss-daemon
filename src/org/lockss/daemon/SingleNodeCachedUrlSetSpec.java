@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.3 2003-06-03 05:49:33 tal Exp $
+ * $Id: SingleNodeCachedUrlSetSpec.java,v 1.4 2003-06-03 22:08:06 tal Exp $
  */
 
 /*
@@ -78,6 +78,10 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
     return false;
   }
 
+  /**
+   * @arg spec the set to test disjointness with
+   * @return true if the two sets are disjoint
+   */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
     if (spec.isSingleNode()) {
       return !equals(spec);
@@ -88,6 +92,11 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
     return !spec.subsumes(this);
   }
 
+  /**
+   * @arg spec the set to test subsumption of
+   * @return true if spec is a SingleNodeCachedUrlSetSpec naming the same
+   * URL, false otherwise.
+   */
   public boolean subsumes(CachedUrlSetSpec spec) {
     if (spec.isSingleNode()) {
       return equals(spec);
@@ -95,19 +104,14 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
     return false;
   }
 
-  /**
-   * overrides Object.toString()
-   * @return String representaion of this object
-   */
   public String toString() {
     return "[SNCUSS: "+url+"]";
   }
 
   /**
-   * Overrides Object.equals().
-   * Compares the lists and REs of the two specs.
    * @param obj the other spec
-   * @return true if the lists and REs are equal
+   * @return true if the argument is a SingleNodeCachedUrlSetSpec naming the
+   * same node.
    */
   public boolean equals(Object obj) {
     if (obj instanceof SingleNodeCachedUrlSetSpec) {
@@ -118,9 +122,7 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Overrides Object.hashCode().
-   * Returns the hash of the strings
-   * @return the hashcode
+   * @return the URL's hashcode
    */
   public int hashCode() {
     return url.hashCode();

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.9 2003-06-03 05:49:33 tal Exp $
+ * $Id: CachedUrlSetSpec.java,v 1.10 2003-06-03 22:08:06 tal Exp $
  */
 
 /*
@@ -46,13 +46,15 @@ public interface CachedUrlSetSpec {
   public boolean matches(String url);
 
   /**
-   * This needs to be overridden to hash CachedUrlSets properly.
+   * Return the hashcode of the CachedUrlSetSpec.  Must be implemented by
+   * implementors of this interface.
    * @return the hashcode
    */
   public int hashCode();
 
   /**
-   * This needs to be overridden to hash CachedUrlSets properly.
+   * Compare the CachedUrlSetSpec with another object.  Must be implemented
+   * by implementors of this interface.
    * @param obj the object to compare to
    * @return true if the objects are equal
    */
@@ -67,6 +69,7 @@ public interface CachedUrlSetSpec {
   /**
    * Return true if this set is disjoint from the argument set.  It is not
    * meaningful to compare CUSSes belonging to different AUs.
+   * @arg spec the set to test disjointness with
    * @return true if the two sets are disjoint
    */
   public boolean isDisjoint(CachedUrlSetSpec spec);
@@ -74,6 +77,7 @@ public interface CachedUrlSetSpec {
   /**
    * Return true if this set completely contains the argument set.  It is
    * not meaningful to compare CUSSes belonging to different AUs.
+   * @arg spec the set to test subsumption of
    * @return true if the set specified by <code>spec</code> is subsumed by
    * this one.
    */
