@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.30 2003-10-13 22:15:16 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.31 2003-12-19 01:35:27 eaalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.repository;
 
 import java.io.*;
 import java.util.*;
+import java.text.SimpleDateFormat;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
@@ -117,7 +118,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     leaf.makeNewVersion();
     OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("test stream");
+    InputStream is = new StringInputStream("test stream 2");
     StreamUtil.copy(is, os);
     is.close();
     os.close();
@@ -173,7 +174,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // make new version
     leaf.makeNewVersion();
     OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("test stream");
+    InputStream is = new StringInputStream("test stream 2");
     StreamUtil.copy(is, os);
     is.close();
     os.close();
@@ -230,7 +231,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     // make new version
     leaf.makeNewVersion();
     OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("test stream");
+    InputStream is = new StringInputStream("test stream 2");
     StreamUtil.copy(is, os);
     is.close();
     os.close();
@@ -440,6 +441,49 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals("test stream 2", resultStr);
     props = leaf.getNodeContents().props;
     assertEquals("value 2", props.getProperty("test 1"));
+  }
+
+  public void testMakeNewIdenticalVersion() throws Exception {
+    Properties props = new Properties();
+    props.setProperty("test 1", "value 1");
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream", props);
+    assertEquals(1, leaf.getCurrentVersion());
+
+    props = new Properties();
+    props.setProperty("test 1", "value 2");
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream");
+    leaf.sealNewVersion();
+    assertEquals(1, leaf.getCurrentVersion());
+
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream", resultStr);
+    props = leaf.getNodeContents().props;
+    assertEquals("value 2", props.getProperty("test 1"));
+
+    // make sure proper files exist
+    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
+    tempDirPath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath, mau);
+    tempDirPath = LockssRepositoryImpl.mapUrlToFileLocation(tempDirPath,
+        "http://www.example.com/testDir/test.cache");
+
+    // it's difficult to get the name of the old prop file, but we
+    // can check that we have the right number and the third starts with
+    // '1.props-'
+    File testFile = new File(tempDirPath + "/#content");
+    File[] files = testFile.listFiles();
+    assertEquals(3, files.length);
+    for (int ii=0; ii<3; ii++) {
+      String name = files[ii].getName();
+      if ((!name.equals("current")) &&
+          (!name.equals("current.props")) &&
+          (!name.startsWith("1.props-"))) {
+        fail("Bad file found: "+name);
+      }
+    }
   }
 
   public void testGetInputStream() throws Exception {

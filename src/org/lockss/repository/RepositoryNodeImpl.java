@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.39 2003-12-06 00:54:36 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.40 2003-12-19 01:35:27 eaalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.repository;
 import java.io.*;
 import java.util.*;
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
 import org.lockss.util.*;
 import org.lockss.daemon.CachedUrlSetSpec;
 
@@ -319,30 +320,90 @@ public class RepositoryNodeImpl implements RepositoryNode {
         throw new UnsupportedOperationException("setNewProperties() not called.");
       }
 
-      // rename current files only if they exists
-      if (currentCacheFile.exists() &&
-          !currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) {
-        String err = "Couldn't rename current content file: " + url;
-        logger.error(err);
-        throw new LockssRepository.RepositoryStateException(err);
+      boolean identicalVersion = false;
+      // check temp vs. last version, so as not to duplicate identical versions
+      if (currentCacheFile.exists()) {
+        // if identical, don't rename
+        try {
+          if (FileUtil.isContentEqual(currentCacheFile, tempCacheFile)) {
+            // don't rename
+            logger.debug("New version identical to old.");
+            identicalVersion = true;
+          } else if (!currentCacheFile.renameTo(getVersionedCacheFile(
+              currentVersion))) {
+            String err = "Couldn't rename current content file: " + url;
+            logger.error(err);
+            throw new LockssRepository.RepositoryStateException(err);
+          }
+        } catch (IOException ioe) {
+          String err = "Error comparing files: "+ url;
+          logger.error(err);
+          throw new LockssRepository.RepositoryStateException(err);
+        }
       }
 
+      // get versioned props file
+      File verPropsFile;
+      if (identicalVersion) {
+        // rename to dated property version, using 'File.lastModified()'
+        long date = currentPropsFile.lastModified();
+        verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
+        while (verPropsFile.exists()) {
+          date++;
+          verPropsFile = getDatedVersionedPropsFile(currentVersion, date);
+        }
+      } else {
+        // rename to standard property version
+        verPropsFile = getVersionedPropsFile(currentVersion);
+      }
+
+      // rename current properties
       if (currentPropsFile.exists() &&
-          !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
+          !currentPropsFile.renameTo(verPropsFile)) {
         String err = "Couldn't rename current property file: " + url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
       }
 
-      // rename new
-      if (!tempCacheFile.renameTo(currentCacheFile) ||
-          !tempPropsFile.renameTo(currentPropsFile)) {
-        String err = "Couldn't rename temp versions: "+url;
+      if (!identicalVersion) {
+        // rename new content file (if non-identical)
+        if (!tempCacheFile.renameTo(currentCacheFile)) {
+          String err = "Couldn't rename temp content version: " + url;
+          logger.error(err);
+          throw new LockssRepository.RepositoryStateException(err);
+        }
+        // update version number
+        currentVersion++;
+      } else {
+        // remove temp content file
+        tempCacheFile.delete();
+
+        // reset version number in new props back to current version
+        // (done this way to make property writing more efficient for
+        // non-identical cases)
+        try {
+          Properties myProps = new SortedProperties();
+          myProps.load(new BufferedInputStream(new FileInputStream(
+              tempPropsFile)));
+          myProps.setProperty(LOCKSS_VERSION_NUMBER,
+                              Integer.toString(currentVersion));
+          OutputStream os = new BufferedOutputStream(new FileOutputStream(
+              tempPropsFile));
+          myProps.store(os, "HTTP headers for " + url);
+        } catch (IOException ioe) {
+          String err = "Couldn't reset property version number: " + url;
+          logger.error(err);
+          throw new LockssRepository.RepositoryStateException(err);
+        }
+      }
+
+      // rename new properties
+      if (!tempPropsFile.renameTo(currentPropsFile)) {
+        String err = "Couldn't rename temp property version: " + url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
       }
 
-      currentVersion++;
       curProps = null;
     } finally {
       newOutputCalled = false;
@@ -723,6 +784,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
     buffer.append(version);
     buffer.append(".");
     buffer.append(PROPS_FILENAME);
+    return new File(buffer.toString());
+  }
+
+  File getDatedVersionedPropsFile(int version, long date) {
+    StringBuffer buffer = getContentDirBuffer();
+    buffer.append(version);
+    buffer.append(".");
+    buffer.append(PROPS_FILENAME);
+    buffer.append("-");
+    buffer.append(date);
     return new File(buffer.toString());
   }
 
