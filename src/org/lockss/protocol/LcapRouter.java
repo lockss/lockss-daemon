@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.1 2003-03-21 20:47:41 tal Exp $
+ * $Id: LcapRouter.java,v 1.2 2003-03-22 03:05:21 tal Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.poller.PollManager;
 import org.apache.commons.collections.LRUMap;
 
 // tk - beacon thread
-// tk - decrement hop count
 // tk - send() call from poller (multicast, unicast to each)
 // tk - synchronization here and in PartnerList
 // tk - ratelimiter.event() where?
@@ -58,6 +57,8 @@ public class LcapRouter extends BaseLockssManager {
   static final String PARAM_PKTS_PER_INTERVAL = SENDRATE_PREFIX + "packets";
   static final String PARAM_PKT_INTERVAL = SENDRATE_PREFIX + "interval";
   static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
+  static final String PARAM_INITIAL_HOPCOUNT = PREFIX + ".maxHopCount";
+
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
   static final String PARAM_LOCAL_IPS = Configuration.PREFIX + "localIPs";
@@ -74,6 +75,7 @@ public class LcapRouter extends BaseLockssManager {
   private double probAddPartner;
   private List localInterfaces;
   private long beaconInterval = 0;
+  private int initialHopCount = LcapMessage.MAX_MAX_HOP_COUNT;
   private Deadline beaconDeadline = Deadline.at(TimeBase.NEVER);;
   private PartnerList partnerList = new PartnerList();
   private Configuration.Callback configCallback;
@@ -126,6 +128,9 @@ public class LcapRouter extends BaseLockssManager {
     }
     probAddPartner = (((double)config.getInt(PARAM_PROB_PARTNER_ADD, 0))
 		      / 100.0);
+    initialHopCount =
+      config.getInt(PARAM_INITIAL_HOPCOUNT, LcapMessage.MAX_MAX_HOP_COUNT);
+
     partnerList.setConfig(config);
 
     // make list of InetAddresses of local interfaces
@@ -181,10 +186,10 @@ public class LcapRouter extends BaseLockssManager {
    * @throws IOException
    */
   public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
+    msg.setHopCount(initialHopCount);
     log.debug("send(" + msg + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
-    // set hop count
     comm.send(dg, au);
   }
 
@@ -197,10 +202,10 @@ public class LcapRouter extends BaseLockssManager {
    */
   public void sendTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
       throws IOException {
+    msg.setHopCount(initialHopCount);
     log.debug("sendTo(" + msg + ", " + id + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
-    // set hop count
     comm.sendTo(dg, au, id);
   }
 
@@ -246,6 +251,7 @@ public class LcapRouter extends BaseLockssManager {
     InetAddress sender = dg.getSender();
     InetAddress originator = msg.getOriginAddr();
     if (isEligibleToForward(dg, msg)) {
+      msg.setHopCount(msg.getHopCount() - 1);
       if (dg.isMulticast()) {
 	partnerList.multicastPacketReceivedFrom(sender);
 	if (!sender.equals(originator)) {
