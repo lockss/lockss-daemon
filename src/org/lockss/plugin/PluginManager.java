@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.11 2003-02-28 00:23:49 troberts Exp $
+ * $Id: PluginManager.java,v 1.12 2003-03-01 01:10:02 tal Exp $
  */
 
 /*
@@ -57,8 +57,6 @@ public class PluginManager implements LockssManager {
   private String pluginDir = null;
 
   private Map plugins = new HashMap();
-  private static Vector archivalUnits = new Vector();
-
 
   public PluginManager() {
   }    
@@ -117,7 +115,6 @@ public class PluginManager implements LockssManager {
       Configuration pluginConf = allPlugs.getConfigTree(pluginId);
       Configuration oldPluginConf = oldAllPlugs.getConfigTree(pluginId);
 
-      // tk - only if in changedKeys.  (but, compare subkey with whole key?)
       configurePlugin(pluginId, pluginConf, oldPluginConf);
     }
   }
@@ -210,23 +207,6 @@ public class PluginManager implements LockssManager {
   }
 
   /**
-   * Find an ArchivalUnit that might contain the URL.
-   * @param url The URL to search for.
-   * @return The <code>ArchivalUnit</code> that contains the URL, or
-   * null if none found.  It is an error for more than one
-   * <code>ArchivalUnit</code> to contain the url.
-   */
-  public ArchivalUnit findArchivalUnit(String url) {
-    for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
-      if (au.shouldBeCached(url)) {
-	return au;
-      }
-    }
-    return null;
-  }
-
-  /**
    * Find all ArchivalUnits that contain (have content for) the URL.
    * @param url The URL to search for.
    * @return List of ArchivalUnits.
@@ -245,6 +225,7 @@ public class PluginManager implements LockssManager {
     return res;
   }
 
+  /** Return a list of all configured ArchivalUnits. */
   public List getAllAUs() {
     List res = new ArrayList();
     for (Iterator pi = plugins.values().iterator(); pi.hasNext(); ) {
@@ -281,23 +262,6 @@ public class PluginManager implements LockssManager {
     return cus;
   }
 
-
-//    /**
-//     * Find or create a <code>CachedUrlSet</code> representing the content
-//     * specified by the URL and pattern.
-//     * @param url
-//     * @param regex
-//     */
-//    public static CachedUrlSet findCachedUrlSet(String url, String regex) {
-//      ArchivalUnit au = findArchivalUnit(url);
-//      if (au == null) {
-//        return null;
-//      }
-//      return au.makeCachedUrlSet(url, regex);
-//    }
-//   /**
-//    * init the plugins in the plugins directory
-//    */
 
 //   protected void initPlugins() {
 //     /* grab our 3rd party plugins and load them using security manager */
