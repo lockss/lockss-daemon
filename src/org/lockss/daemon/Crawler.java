@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.12 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: Crawler.java,v 1.13 2003-11-04 19:00:19 troberts Exp $
  */
 
 /*
@@ -51,6 +51,10 @@ public interface Crawler {
   public static final int REPAIR = 1;
   public static final int BACKGROUND = 2;
 
+  public static final int STATUS_INCOMPLETE = 1;
+  public static final int STATUS_SUCCESSFUL = 2;
+  public static final int STATUS_ERROR = 3;
+
   /**
    * Initiate a crawl starting with all the urls in urls
    * @return true if the crawl was successful
@@ -99,5 +103,10 @@ public interface Crawler {
    * @return starting urls for this crawler
    */
   public Collection getStartUrls();
+
+  /**
+   * Returns an int representing the status of this crawler
+   */
+  public int getStatus();
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.5 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: MockCrawler.java,v 1.6 2003-11-04 19:00:22 troberts Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class MockCrawler extends NullCrawler {
   long endTime = -1;
   long numFetched = -1;
   long numParsed = -1;
+  int status = -1;
 
 
   public void setCrawlSuccessful(boolean crawlSuccessful) {
@@ -127,4 +128,13 @@ public class MockCrawler extends NullCrawler {
   public long getNumParsed() {
     return numParsed;
   }
+
+  public void setStatus(int status) {
+    this.status = status;
+  }
+
+  public int getStatus() {
+    return status;
+  }
+
 }
