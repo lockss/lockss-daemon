@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.4 2003-02-27 23:28:03 tal Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.5 2003-04-03 11:30:27 tal Exp $
  */
 
 /*
@@ -101,8 +101,12 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return (tree == null) ? null : new ConfigurationPropTreeImpl(tree);
   }
 
+  public Set keySet() {
+    return Collections.unmodifiableSet(props.keySet());
+  }
+
   public Iterator keyIterator() {
-    return props.keySet().iterator();
+    return keySet().iterator();
   }
 
   public Iterator nodeIterator() {

@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.31 2003-04-02 23:28:37 tal Exp $
+ * $Id: Configuration.java,v 1.32 2003-04-03 11:30:27 tal Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ import org.lockss.util.*;
 public abstract class Configuration {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
+  public static final Configuration EMPTY_CONFIGURATION = newConfiguration();
 
   static final String MYPREFIX = PREFIX + "config.";
 
@@ -546,6 +547,10 @@ public abstract class Configuration {
    * below <code>key</code>
    */
   public abstract Configuration getConfigTree(String key);
+
+  /** Returns the set of keys in the configuration.
+   */
+  public abstract Set keySet();
 
   /** Returns an <code>Iterator</code> over all the keys in the configuration.
    */
