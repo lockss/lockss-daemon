@@ -1,5 +1,5 @@
 /*
- * $Id: AntTaskTarget.java,v 1.1 2003-05-26 03:49:51 tal Exp $
+ * $Id: AntTaskTarget.java,v 1.2 2003-05-27 21:03:31 tal Exp $
  */
 
 /*
@@ -33,20 +33,39 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.text.*;
+import java.lang.reflect.*;
 import java.io.PrintStream;
-import java.util.Date;
+import java.util.*;
 
 /** A <code>LogTarget</code> implementation that outputs to an Ant task's
-    logger
+ * logger.
  */
+// It would be better if this class were in the ant hierarchy, as it needs
+// access to Ant objects, and it isn't referenced from the main hierarchy.
+// (It's invoked by putting its class name in org.lockss.defaultLogTarget.)
+// But it needs LogTarget and Logger, which aren't available to the ant
+// hierarchy because it's compiled first.
+
 public class AntTaskTarget implements LogTarget {
   static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
-  protected org.lockss.ant.AntHelper helper;
-
+  // The helper is in the ant hierarchy, but we don't want compile-time
+  // references into that hierarchy or the ant jars would be required to
+  // compile even when not using ant.  So invoke the helper using reflection.
+  //   protected AntHelper helper;
+  protected Object helper;
+  protected Method writeLogMethod;
+  
   /** Create a log target that outputs to an AntTargetHelper */
   AntTaskTarget() {
-    this.helper = new org.lockss.ant.AntHelper();
+    try {
+      Class helperClass = Class.forName("org.lockss.ant.AntHelper");
+      helper = helperClass.newInstance();
+      Class argTypes[] = {String.class};
+      writeLogMethod = helperClass.getMethod("writeLog", argTypes);
+    } catch (Exception e) {
+      throw new RuntimeException(e.toString());
+    }
   }
 
   public void init() {
@@ -66,6 +85,17 @@ public class AntTaskTarget implements LogTarget {
     sb.append(log.nameOf(msgLevel));
     sb.append(": ");
     sb.append(message);
-    helper.writeLog(sb.toString());
+    writeMsg(sb.toString());
   }
+
+  private void writeMsg(String msg) {
+    Object args[] = {msg};
+    try {
+      writeLogMethod.invoke(helper, args);
+    } catch (Exception e) {
+      System.err.println("Error invoking AntHelper: " + e.toString());
+      System.err.println(msg);
+    }
+  }
+    
 }
