@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.6 2004-09-01 18:01:50 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.6.2.1 2004-10-05 19:54:32 tlipkis Exp $
  */
 
 /*
@@ -45,13 +45,14 @@ public class SortScheduler implements Scheduler {
   static final String PARAM_MAX_BACKGROUND_LOAD = PREFIX + "maxBackgroundLoad";
   static final double DEFAULT_MAX_BACKGROUND_LOAD = 1.0;
 
+  final double maxBackgroundLoad;
+
   Collection rawTasks;
   List tasks;
   SchedInterval intervals[];
   int nIntervals;
   List ranges = new ArrayList();
   Set unscheduledTasks;
-  double maxBackgroundLoad;
   boolean scheduleCreated;
   Deadline scheduledAt;
 
@@ -61,7 +62,6 @@ public class SortScheduler implements Scheduler {
     nIntervals = 0;
     ranges = new ArrayList();
     unscheduledTasks = null;
-    maxBackgroundLoad = 0;
     scheduleCreated = false;
     scheduledAt = null;
   }

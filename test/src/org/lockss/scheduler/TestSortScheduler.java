@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.4 2004-09-01 18:01:49 tlipkis Exp $
+ * $Id: TestSortScheduler.java,v 1.4.2.1 2004-10-05 19:54:31 tlipkis Exp $
  */
 
 /*
@@ -468,10 +468,17 @@ public class TestSortScheduler extends LockssTestCase {
 				  "25");
     BackgroundTask b1 = bTask(100, 200, .5);
     BackgroundTask b2 = bTask(200, 300, .5);
-    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
-    assertTrue(sched.createSchedule());
+    List tasklist = ListUtil.list(b1, b2);
+    SortScheduler sched = new SortScheduler();
+    assertTrue(sched.createSchedule(tasklist));
 
     BackgroundTask b = bTask(100, 201, .7);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(400, 501, .7), sched.scheduleHint(b));
+
+    // do it again to ensure scheduler is reusable
+    assertTrue(sched.createSchedule(tasklist));
+    b = bTask(100, 201, .7);
     assertSame(b, sched.scheduleHint(b));
     assertEquals(bTask(400, 501, .7), sched.scheduleHint(b));
   }
