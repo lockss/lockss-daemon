@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.1 2002-10-08 00:55:25 tal Exp $
+ * $Id: ArchivalUnit.java,v 1.2 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -31,22 +31,41 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
+import gnu.regexp.*;
 
 /**
- * An <code>ArchivalUnit</code> represents a set of URLs that is:
- * <ul><li>Seperately configurable
- * <li>The starting place for top level polls
+ * An <code>ArchivalUnit</code> represents a publication unit
+ * (<i>eg</i>, a journal volume).  It:
+ * <ul>
+ * <li>Is the nexus of the plugin
+ * <li>Is separately configurable
+ * <li>Has a {@link CrawlSpec} that directs the crawler
  * </ul>
  * Plugins must provide a class that implements this (possibly by extending
  * <code>BaseArchivalUnit</code>).
  */
-public interface ArchivalUnit extends CachedUrlSet {
+public interface ArchivalUnit {
+  /** Determine whether the url falls within the CrawlSpec. */
+  public boolean shouldBeCached(String url);
+
   /**
    * Create a <code>CachedUrlSet</code> representing the content in this AU
    * that matches the url and regexp.
    * @param url
    * @param regexp
    */
-  public CachedUrlSet makeCachedUrlSet(String url, String regexp);
+  public CachedUrlSet makeCachedUrlSet(String url, String regexp)
+      throws REException;
+
+  /**
+   * Return the <code>CachedUrlSet</code> representing the entire contents
+   * of this AU
+   */
+  public CachedUrlSet getAUCachedUrlSet();
+
+  /**
+   * Return the {@link CrawlSpec}
+   */
+  public CrawlSpec getCrawlSpec();
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.2 2002-10-01 06:16:20 tal Exp $
+ * $Id: HashQueue.java,v 1.3 2002-10-16 04:53:32 tal Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ class HashQueue implements Serializable {
       log.debug(msg + ((req.e != null) ? (req.e + ": ") : "") + req);
     }
     iter.remove();
-    req.urlset.duration(req.timeUsed, req.e);
+    req.urlset.storeActualHashDuration(req.timeUsed, req.e);
     done.add(req);
   }
 

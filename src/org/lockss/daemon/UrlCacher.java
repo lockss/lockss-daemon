@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.1 2002-08-13 02:19:40 tal Exp $
+ * $Id: UrlCacher.java,v 1.2 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -31,33 +31,25 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 /**
- * <code>UrlCacher</code> is used to store the contents and
+ * UrlCacher is used to store the contents and
  * meta-information of a single url being cached.  It is implemented by the
  * plug-in, which provides a static method taking a String url and
- * returning an object implementing the <code>UrlCacher</code> interface.
- *
- * @author  David S. H. Rosenthal
- * @see UrlCacher
- * @version 0.0 */
+ * returning an object implementing the UrlCacher interface.
+ */
 public interface UrlCacher {
     /**
      * Return the url being represented
      * @return the <code>String</code> url being represented.
      */
-    public String toString();
+    public String getUrl();
     /**
-     * Return <code>true</code> if the object describes a url that
-     * exists in the cache.
-     * @return <code>true</code> if the object describes a url that
-     *         exists in the cache, <code>false</code> otherwise.
+     * Return the {@link CachedUrlSet} to which this UrlCacher belongs.
      */
-    public boolean exists();
+    public CachedUrlSet getCachedUrlSet();
     /**
      * Return <code>true</code> if the underlying url is one that
      * the plug-in believes should be preserved.
@@ -73,6 +65,17 @@ public interface UrlCacher {
     public CachedUrl getCachedUrl();
 
     // Write interface - used by the crawler to write into the cache.
+
+    /**
+     * Convenience method to
+     * copy the content and properties from the source into the cache,
+     * using {@link #getUncachedInputStream()},
+     * {@link #getUncachedProperties()} and storeContent()
+     * @throws java.io.IOException on many possible I/O problems.
+     */
+    public void cache() throws IOException;
+
+    // implementer interface - used by plugins to implement pieces of this
 
     /**
      * Store the content from an input stream with associated

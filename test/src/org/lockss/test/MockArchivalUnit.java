@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.3 2002-10-16 04:54:45 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.1 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -30,47 +30,60 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.crawler;
+package org.lockss.test;
 
-import java.io.*;
 import java.util.*;
-import java.net.*;
+import java.security.MessageDigest;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.plugin.highwire.*;
-import org.lockss.proxy.*;
+import org.lockss.util.*;
+import org.lockss.test.MockCachedUrlSetSpec;
 
-public class DoHighwireCrawl {
+/**
+ * This is a mock version of <code>ArchivalUnit</code> used for testing
+ */
 
-  public static void main(String args[])
-      throws Exception {
-    boolean proxyFlg = false;
-    boolean crawlFlg = false;
-    int i = 0;
-    while (i < args.length && args[i].startsWith("-")) {
-      if (args[i].equals("-p")) {
-	proxyFlg = true;
-      }
-      if (args[i].equals("-c")) {
-	crawlFlg = true;
-      }
-      i++;
-    }
-    if (i >= args.length) {
-      System.err.println("Base URL arg required");
-      System.exit(-1);
-    }
-    String start = args[i];
+public class MockArchivalUnit implements ArchivalUnit {
+  private CrawlSpec spec;
 
-    ArchivalUnit au = new HighWirePlugin(start);
-    if (proxyFlg) {
-      org.lockss.plugin.Plugin.registerArchivalUnit(au);
-      ProxyHandler.startProxy();
-      System.err.println("Proxy started");
-
-    }
-    if (crawlFlg) {
-      Crawler.doCrawl(au, au.getCrawlSpec());
-    }
+  public MockArchivalUnit(CrawlSpec spec) {
+    this.spec = spec;
   }
+
+  public CrawlSpec getCrawlSpec() {
+    return spec;
+  }
+
+  public CachedUrlSet getAUCachedUrlSet() {
+    return null;
+  }
+
+  /**
+   * Make a new MockArchivalUnit object with a list populated with
+   * the urls specified in rootUrls (and no reg expressions)
+   *
+   * @param rootUrls list of string representation of the urls to 
+   * add to the new MockArchivalUnit's list
+   * @return MockArchivalUnit with urls in rootUrls in its list
+   */
+  public static MockArchivalUnit createFromListOfRootUrls(String[] rootUrls){
+    CrawlSpec rootSpec = new CrawlSpec(ListUtil.fromArray(rootUrls), null);
+    return new MockArchivalUnit(rootSpec);
+  }
+
+  // Methods used by the crawler
+
+  public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+    return null;
+  }
+
+  public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
+    return null;
+  }
+
+  public boolean shouldBeCached(String url) {
+    return false;
+  }
+
+  //methods used to generate proper mock objects
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.3 2002-10-16 04:50:54 tal Exp $
+ * $Id: MockUrlCacher.java,v 1.1 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -39,39 +39,61 @@ import java.util.Properties;
 import org.lockss.daemon.*;
 
 /**
- * This is a mock version of <code>CachedUrl</code> used for testing
- *
- * @author  Thomas S. Robertson
- * @version 0.0
+ * This is a mock version of <code>UrlCacher</code> used for testing
  */
 
-public class MockCachedUrl implements CachedUrl {
+public class MockUrlCacher implements UrlCacher {
   private CachedUrlSet cus;
+  private CachedUrl cu;
   private String url;
   private InputStream cachedIS;
+  private InputStream uncachedIS;
   private Properties cachedProp;
+  private Properties uncachedProp;
 
-  private boolean doesExist = false;
+  private boolean shouldBeCached = false;
 
 
-  public MockCachedUrl(String url) {
+  public MockUrlCacher(String url){
     this.url = url;
   }
 
   public String getUrl() {
-    return url;
+    return null;
   }
 
   public CachedUrlSet getCachedUrlSet() {
     return cus;
   }
 
-  public boolean exists(){
-    return doesExist;
+  public void setCachedUrlSet(MockCachedUrlSet cus) {
+    this.cus = cus;
   }
 
-  public void setExists(boolean doesExist){
-    this.doesExist = doesExist;
+  public boolean shouldBeCached(){
+    return shouldBeCached;
+  }
+
+  public void setShouldBeCached(boolean shouldBeCached){
+    this.shouldBeCached = shouldBeCached;
+  }
+
+  public CachedUrl getCachedUrl() {
+    return cu;
+  }
+
+  public void setCachedUrl(CachedUrl cu) {
+    this.cu = cu;
+  }
+
+  public void setupCachedUrl(String contents) {
+    MockCachedUrl cu = new MockCachedUrl(url);
+    cu.setProperties(getUncachedProperties());
+//      cu.setExists(true);
+    if (contents != null) {
+      cu.setInputStream(new StringInputStream(contents));
+    }
+    setCachedUrl(cu);
   }
 
   // Read interface - used by the proxy.
@@ -92,14 +114,33 @@ public class MockCachedUrl implements CachedUrl {
     cachedProp = headers;
   }
 
+  public void cache() throws IOException {
+  }
+
+  public InputStream getUncachedInputStream(){
+    return uncachedIS;
+  }
+  
+  public Properties getUncachedProperties(){
+    return uncachedProp;
+  }
+
   //mock specific acessors
   
-  public void setInputStream(InputStream is){
+  public void setCachedInputStream(InputStream is){
     cachedIS = is;
   }
 
-  public void setProperties(Properties prop){
+  public void setUncachedInputStream(InputStream is){
+    uncachedIS = is;
+  }
+
+  public void setCachedProperties(Properties prop){
     cachedProp = prop;
+  }
+
+  public void setUncachedProperties(Properties prop){
+    uncachedProp = prop;
   }
 
 }

@@ -1,18 +1,6 @@
-package org.lockss.crawler;
-
-import java.io.ByteArrayInputStream;
-import java.io.StringReader;
-import java.io.IOException;
-import java.util.List;
-import java.util.Vector;
-import java.util.Properties;
-import java.net.URL;
-import java.net.MalformedURLException;
-import junit.framework.TestCase;
-import org.lockss.daemon.*;
-import org.lockss.test.MockCachedUrlSet;
-import org.lockss.test.MockCachedUrl;
-import org.lockss.test.StringInputStream;
+/*
+ * $Id: TestCrawler.java,v 1.4 2002-10-16 04:50:54 tal Exp $
+ */
 
 /*
 
@@ -42,6 +30,16 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+package org.lockss.crawler;
+
+import java.io.*;
+import java.util.*;
+import java.net.*;
+import junit.framework.TestCase;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
+
 /**
  * This is the test class for org.lockss.crawler.Crawler
  *
@@ -50,71 +48,66 @@ in this Software without prior written authorization from Stanford University.
  */
 
 
-public class TestCrawler extends TestCase{
+public class TestCrawler extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.crawler.Crawler.class
+  };
+
+  public static Class prerequisites[] = {
+    TestCrawlRule.class
   };
 
   public TestCrawler(String msg){
     super(msg);
   }
 
-  public void testCreateInitialListNullCachedUrlSet(){
+  public void testCreateInitialListNullCrawlSpec(){
     assertEquals(0, (Crawler.createInitialList(null)).size());
   }
 
-  public void testCreateInitialListEmptyCachedUrlSet(){
-    String[] urls = {};
-    CachedUrlSet cus = 
-      MockCachedUrlSet.createFromListOfRootUrls(urls);
-    assertEquals(0, (Crawler.createInitialList(cus)).size());
-  }
-
-  public void testCreateInitialListOneUrlInCachedUrlSet(){
-    String[] urls = {"http://test.org/"};
-    CachedUrlSet cus = 
-      MockCachedUrlSet.createFromListOfRootUrls(urls);
-    checkUrlsMatchCachedUrlSet(urls, cus);
-  }
-  
-  public void testCreateInitialListOneMultipleInCachedUrlSet(){
-    String[] urls = {"http://test.org/", 
-		     "http://test2.org/", "http://test3.org/"};
-    CachedUrlSet cus = 
-      MockCachedUrlSet.createFromListOfRootUrls(urls);
-    checkUrlsMatchCachedUrlSet(urls, cus);
-  }
-  
-  private void checkUrlsMatchCachedUrlSet(String[] urls, CachedUrlSet cus){
-    List initList = Crawler.createInitialList(cus);
-    assertEquals(urls.length, initList.size());
-    for (int ix=0; ix<urls.length; ix++){
-      assertTrue("initList didn't contain "+urls[ix],
-		 initList.contains(urls[ix]));
+  public void testCreateInitialListEmptyCrawlSpec(){
+    try {
+      CrawlSpec cs = new CrawlSpec(Collections.EMPTY_LIST, null);
+      fail("Shouldn't be able to create CrawlSpec with empty URL list");
+    } catch (IllegalArgumentException e) {
     }
   }
 
+  public void testCreateInitialListOneUrlInCrawlSpec(){
+    String[] urls = {"http://test.org/"};
+    CrawlSpec cs = new CrawlSpec(urls[0], null);
+    assertIsomorphic(urls, Crawler.createInitialList(cs));
+  }
+  
+  public void testCreateInitialListOneMultipleInCrawlSpec(){
+    String[] urls = {"http://test.org/", 
+		     "http://test2.org/", "http://test3.org/"};
+    CrawlSpec cs = new CrawlSpec(ListUtil.fromArray(urls), null);
+    assertIsomorphic(urls, Crawler.createInitialList(cs));
+  }
+  
   public void testAddUrlsToListNullInputStream()
-  throws IOException{
+      throws IOException {
     Vector list = new Vector();
-    UrlCacher uc = new MockCachedUrl(null);
-    Crawler.addUrlsToList(uc, list);
+    CachedUrl cu = new MockCachedUrl(null);
+    Crawler.addUrlsToList(cu, list);
     assertEquals(0, list.size());
   }
 
   public void testAddUrlsToListOneHrefInputStream()
-  throws IOException{
+      throws IOException{
+    String url = "http://www.test.org/index.html";
     Vector list = new Vector();
     String source = "<html><head>"+
       "<title>Test</title></head>"+
       "<body><a href=\"http://www.test.org/\"></body></html>";
     StringInputStream strStream = new StringInputStream(source);
-    MockCachedUrl cu = new MockCachedUrl("http://www.test.org/index.html");
-    cu.setCachedInputStream(strStream);
+    MockCachedUrl cu = new MockCachedUrl(url);
+    cu.setInputStream(strStream);
 
     Properties prop = new Properties();
     prop.setProperty("content-type", "text/html");
-    cu.setCachedProperties(prop);
+    cu.setProperties(prop);
 
     Crawler.addUrlsToList(cu, list);
     assertTrue("List didn't contain http://www.test.org/",
@@ -327,15 +320,15 @@ public class TestCrawler extends TestCase{
       "<body><a href=\"http://www.test.org/\"></body></html>";
     
     StringInputStream strStream = new StringInputStream(source);
-    MockCachedUrl cu = new MockCachedUrl("http://www.test.org/index.html");
-    cu.setUncachedInputStream(strStream);
-    cu.setShouldBeCached(true);
+    MockUrlCacher uc = new MockUrlCacher("http://www.test.org/index.html");
+    uc.setUncachedInputStream(strStream);
+    uc.setShouldBeCached(true);
     Properties prop = new Properties();
     prop.setProperty("content-type", "text/html");
-    cu.setUncachedProperties(prop);
-
-
-    Crawler.doOneCrawlCycle(cu, list);
+    uc.setUncachedProperties(prop);
+    uc.setupCachedUrl(source);
+    CachedUrl cu = uc.getCachedUrl();
+    Crawler.doOneCrawlCycle(uc, list);
     assertTrue("List didn't contain http://www.test.org/",
 	       list.contains("http://www.test.org/"));
     assertEquals(1, list.size());
@@ -350,13 +343,15 @@ public class TestCrawler extends TestCase{
     
     StringInputStream fileStream = new StringInputStream(source);
     StringInputStream httpStream = new StringInputStream(source);
+    MockUrlCacher uc = new MockUrlCacher("http://www.test.org/index.html");
     MockCachedUrl cu = new MockCachedUrl("http://www.test.org/index.html");
-    cu.setCachedInputStream(fileStream);
-    cu.setUncachedInputStream(httpStream);
-    cu.setShouldBeCached(true);
+    uc.setCachedInputStream(fileStream);
+    uc.setUncachedInputStream(httpStream);
+    uc.setShouldBeCached(true);
+    uc.setCachedUrl(cu);
     cu.setExists(true);
 
-    Crawler.doOneCrawlCycle(cu, list);
+    Crawler.doOneCrawlCycle(uc, list);
     assertEquals(0, list.size());
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireCachedUrl.java,v 1.2 2002-08-13 02:20:48 tal Exp $
+ * $Id: TestHighWireCachedUrl.java,v 1.3 2002-10-16 04:54:45 tal Exp $
  */
 
 /*
@@ -44,21 +44,26 @@ import org.lockss.daemon.*;
 
 
 public class TestHighWireCachedUrl extends TestCase{
+  private static final String cStart =
+    "http://shadow1.stanford.edu/lockss-volume322.shtml";
+  private static final String cRoot = "http://shadow1.stanford.edu/";
   public TestHighWireCachedUrl(String msg){
     super(msg);
   }
 
-  public void testShouldCacheRootPage(){
-    HighWirePlugin hwPlug = new HighWirePlugin("http://shadow1.stanford.edu", 322);
-    UrlCacher uc = hwPlug.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
+  public void testShouldCacheRootPage() throws Exception {
+    HighWirePlugin hwPlug = new HighWirePlugin(cStart);
+    HighWireCachedUrlSet cus = new HighWireCachedUrlSet(hwPlug, cRoot);
+    UrlCacher uc =
+      cus.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
     assertTrue(uc.shouldBeCached());
   }
   
-  public void testShouldNotCachePageFromOtherSite(){
-    HighWirePlugin hwPlug = new HighWirePlugin("http://shadow1.stanford.edu", 322);
-    UrlCacher uc = hwPlug.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
+  public void testShouldNotCachePageFromOtherSite() throws Exception {
+    HighWirePlugin hwPlug = new HighWirePlugin(cStart);
+    HighWireCachedUrlSet cus = new HighWireCachedUrlSet(hwPlug, cRoot);
+    UrlCacher uc =
+      cus.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
     assertTrue(!uc.shouldBeCached());
   }
-  
-
 }

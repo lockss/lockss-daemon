@@ -1,23 +1,6 @@
-package org.lockss.crawler;
-
-import java.io.Reader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.InputStream;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Vector;
-import java.util.Enumeration;
-import java.util.Properties;
-import java.net.URL;
-import java.net.MalformedURLException;
-import org.lockss.daemon.CachedUrl;
-import org.lockss.daemon.UrlCacher;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.util.StringUtil;
-import org.lockss.util.Logger;
-
+/*
+ * $Id: Crawler.java,v 1.7 2002-10-16 04:54:45 tal Exp $
+ */
 
 /*
 
@@ -46,6 +29,15 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.crawler;
+
+import java.io.*;
+import java.util.*;
+import java.net.URL;
+import java.net.MalformedURLException;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
 
 /**
  * The crawler.
@@ -89,11 +81,12 @@ public class Crawler{
    * crawl and the rules for which urls to cache
    * 
    */
-  public static void doCrawl(CachedUrlSet rootUrls){
-    List list = createInitialList(rootUrls);
+  public static void doCrawl(ArchivalUnit au, CrawlSpec spec){
+    List list = createInitialList(spec);
+    CachedUrlSet cus = au.getAUCachedUrlSet();
     while (!list.isEmpty()){
       String url = (String)list.get(0);
-      UrlCacher uc = rootUrls.makeUrlCacher(url);
+      UrlCacher uc = cus.makeUrlCacher(url);
       doOneCrawlCycle(uc, list);
     }
   }
@@ -117,13 +110,11 @@ public class Crawler{
   protected static void doOneCrawlCycle(UrlCacher uc, List list)
   {
     if (uc.shouldBeCached()){
-      if (!uc.exists()){
+    if (!uc.getCachedUrl().exists()) {
 	try{
 	  pause(); //XXX should get from plugin
-	  InputStream is = uc.getUncachedInputStream();
-	  Properties props = uc.getUncachedProperties();
 	  logger.info("caching "+uc);
-	  uc.storeContent(is, props);
+	  uc.cache();
 	}catch (Exception e){
 	  e.printStackTrace();
 	  //FIXME handle errors
@@ -132,7 +123,8 @@ public class Crawler{
 	  //  remove from list
 	}
 	try{
-	  addUrlsToList(uc, list);
+	  CachedUrl cu = uc.getCachedUrl();
+	  addUrlsToList(cu, list);
 	}catch (IOException ioe){
 	  ioe.printStackTrace();
 	  //XXX handle this (probably not too major)
@@ -143,30 +135,21 @@ public class Crawler{
 	logger.info(uc+" exists, not fetching");
       }
     }
-    list.remove(uc.toString());
+    list.remove(uc.getUrl());
   }
   /**
    * Method to generate a List of urls to start a crawl at from a 
    * CachedUrlSet.
    *
-   * @param rootUrls CachedUrlSet representing the urls to start
-   * a crawl at
-   * @returns List object of the urls (in string form)
+   * @param spec CrawlSpec from which the starting points with be fetched.
+   * @returns A modifiable list of the urls (in string form)
    */
-  protected static List createInitialList (CachedUrlSet rootUrls){
-    /* XXX
-     * for now we're generating this by simply plucking the url
-     * half out of CachedUrlSetSpec
-     */
-    Vector initList = new Vector();
-    if (rootUrls != null){
-      Enumeration enum = rootUrls.listEnumeration();
-      while (enum.hasMoreElements()){
-	CachedUrlSetSpec spec = (CachedUrlSetSpec)enum.nextElement();
-	initList.add(spec.urlPrefix());
-      }
+  protected static List createInitialList (CrawlSpec spec){
+    if (spec == null) {
+      return Collections.EMPTY_LIST;
+    } else {
+      return new LinkedList(spec.getStartingUrls());
     }
-    return initList;
   }
 
   /**
@@ -176,14 +159,13 @@ public class Crawler{
    *@param cu object representing a html file in the local file system
    *@param list list to which all the urs in cu should be added
    */
-  protected static void addUrlsToList(UrlCacher uc, List list)
+  protected static void addUrlsToList(CachedUrl cu, List list)
       throws IOException{
-    if (uc == null) {
+    if (cu == null) {
       return;
     }
-    CachedUrl cu = uc.getCachedUrl();
     if (cu != null && shouldExtractLinksFromCachedUrl(cu)){
-      String cuStr = cu.toString();
+      String cuStr = cu.getUrl();
       if (cuStr == null){
 	return;
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.3 2002-10-08 01:58:43 tal Exp $
+ * $Id: Plugin.java,v 1.4 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class Plugin {
   }
 
   /**
-   * Find the <code>ArchivalUnit</code> (thus the <code>CachedUrlSet</code>)
+   * Find the <code>ArchivalUnit</code>
    * that comtains a URL.
    * @param url The URL to search for.
    * @return The <code>ArchivalUnit</code> that contains the URL, or
@@ -79,12 +79,28 @@ public class Plugin {
       Object o = iter.next();
       if (o instanceof ArchivalUnit) {
 	ArchivalUnit au = (ArchivalUnit)o;
-	if (au.memberOfSet(url)) {
+	if (au.shouldBeCached(url)) {
 	  return au;
 	}
       }
     }
     return null;
+  }
+
+  /**
+   * Find the <code>CachedUrlSet</code>
+   * that comtains a URL.
+   * @param url The URL to search for.
+   * @return The <code>CachedUrlSet</code> that contains the URL, or
+   * null if none found.  It is an error for more than one
+   * <code>ArchivalUnit</code> to contain the url.
+   */
+  public static CachedUrlSet findAUCachedUrlSet(String url) {
+    ArchivalUnit au = findArchivalUnit(url);
+    if (au == null) {
+      return null;
+    }
+    return au.getAUCachedUrlSet();
   }
 
 //    /**

@@ -1,8 +1,6 @@
-package org.lockss.test;
-
-import org.lockss.daemon.CachedUrlSetSpec;
-
-
+/*
+ * $Id: MockCachedUrlSetSpec.java,v 1.2 2002-10-16 04:50:54 tal Exp $
+ */
 
 /*
 
@@ -32,6 +30,12 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+package org.lockss.test;
+
+import java.util.*;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
+
 /**
  * This is a mock version of <code>CachedUrlSetSpec</code> used for testing
  *
@@ -40,19 +44,19 @@ in this Software without prior written authorization from Stanford University.
  */
 
 public class MockCachedUrlSetSpec implements CachedUrlSetSpec{
-  private String url = null;
+  private String root = null;
   private String regExp = null;
 
-  public MockCachedUrlSetSpec(String url, String regExp){
-    this.url = url;
+  public MockCachedUrlSetSpec(String root, String regExp) {
+    this.root = root;
     this.regExp = regExp;
   }
   
-  public String urlPrefix(){
-    return url;
+  public List getPrefixList() {
+    return ListUtil.list(root);
   }
 
-  public String regExp(){
-    return regExp;
+  public boolean matches(String url) {
+    return url.startsWith(root);
   }
 }

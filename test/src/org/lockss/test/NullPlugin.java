@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.3 2002-10-08 01:08:31 tal Exp $
+ * $Id: NullPlugin.java,v 1.4 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -60,6 +60,10 @@ public class NullPlugin {
       return "[NullPlugin.CachedUrl]";
     }
 
+    public String getUrl() {
+      return null;
+    }
+
     public boolean exists() {
       return false;
     }
@@ -85,12 +89,16 @@ public class NullPlugin {
     protected UrlCacher() {
     }
 
-    public String toString() {
-      return "[NullPlugin.UrlCacher]";
+    public String getUrl() {
+      return null;
     }
 
-    public boolean exists() {
-      return false;
+    public org.lockss.daemon.CachedUrlSet getCachedUrlSet() {
+      return null;
+    }
+
+    public String toString() {
+      return "[NullPlugin.UrlCacher]";
     }
 
     public org.lockss.daemon.CachedUrl getCachedUrl() {
@@ -99,6 +107,9 @@ public class NullPlugin {
 
     public boolean shouldBeCached() {
       return false;;
+    }
+
+    public void cache() throws IOException {
     }
 
     public void storeContent(InputStream input,
@@ -124,17 +135,26 @@ public class NullPlugin {
       return "[NullPlugin.CachedUrlSet]";
     }
 
-    void storeCachedUrl(CachedUrl cu) {
+    public CachedUrlSetSpec getSpec() {
+      return null;
     }
 
-    public void addToList(CachedUrlSetSpec spec) {
+    public org.lockss.daemon.ArchivalUnit getArchivalUnit() {
+      return null;
     }
 
-    public long duration(long elapsed, Exception err) {
-      return 0;
+    public void storeActualHashDuration(long elapsed, Exception err) {
     }
 
-    public Enumeration flatEnumeration() {
+    public Iterator flatSetIterator() {
+      return null;
+    }
+
+    public Iterator treeSetIterator() {
+      return null;
+    }
+
+    public Iterator leafIterator() {
       return null;
     }
 
@@ -148,16 +168,13 @@ public class NullPlugin {
       return new CachedUrlSetHasher();
     }
 
-    public long hashDuration() {
+    public long estimatedHashDuration() {
       return 1000;
     }
 
-    public boolean removeFromList(CachedUrlSetSpec spec) {
-      return false;
-    }
-
-    public Enumeration listEnumeration() {
-      return new EmptyEnumeration();
+    public boolean isCached(String url) {
+      org.lockss.daemon.CachedUrl cu = makeCachedUrl(url);
+      return cu == null ? false : cu.exists();
     }
 
     public org.lockss.daemon.CachedUrl makeCachedUrl(String url) {
@@ -168,27 +185,30 @@ public class NullPlugin {
       return new UrlCacher();
     }
 
-    public boolean memberOfList(CachedUrlSetSpec spec) {
+    public boolean containsUrl(String url) {
       return false;
-    }
-
-    public boolean memberOfSet(String url) {
-      return false;
-    }
-
-    public Enumeration treeEnumeration() {
-      return new EmptyEnumeration();
     }
 
   }
 
   public static class ArchivalUnit
-    extends CachedUrlSet
     implements org.lockss.daemon.ArchivalUnit {
 
     public org.lockss.daemon.CachedUrlSet makeCachedUrlSet(String url,
 							   String regexp) {
       return null;
+    }
+
+    public org.lockss.daemon.CachedUrlSet getAUCachedUrlSet() {
+      return null;
+    }
+
+    public CrawlSpec getCrawlSpec() {
+      return null;
+    }
+
+    public boolean shouldBeCached(String url) {
+      return false;
     }
   }
 

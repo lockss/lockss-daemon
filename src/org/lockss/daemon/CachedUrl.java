@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.5 2002-08-13 02:20:48 tal Exp $
+ * $Id: CachedUrl.java,v 1.6 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -31,9 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -57,7 +55,7 @@ public interface CachedUrl {
      * Return the url being represented
      * @return the <code>String</code> url being represented.
      */
-    public String toString();
+    public String getUrl();
     /**
      * Return <code>true</code> if the object describes a url that
      * exists in the cache.

@@ -1,13 +1,6 @@
-package org.lockss.test;
-
-import java.util.Enumeration;
-import java.util.Vector;
-import java.util.List;
-import java.util.Iterator;
-import java.security.MessageDigest;
-import org.lockss.daemon.*;
-import org.lockss.test.MockCachedUrlSetSpec;
-
+/*
+ * $Id: MockCachedUrlSet.java,v 1.4 2002-10-16 04:50:54 tal Exp $
+ */
 
 /*
 
@@ -37,6 +30,13 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+package org.lockss.test;
+
+import java.util.*;
+import java.security.MessageDigest;
+import org.lockss.daemon.*;
+import org.lockss.test.*;
+
 /**
  * This is a mock version of <code>CachedUrlSet</code> used for testing
  *
@@ -44,61 +44,50 @@ in this Software without prior written authorization from Stanford University.
  * @version 0.0
  */
 
-public class MockCachedUrlSet implements CachedUrlSet{
+public class MockCachedUrlSet implements CachedUrlSet {
+  private ArchivalUnit au;
+  private CachedUrlSetSpec spec;
 
   private Vector urls = null;
 
-  private MockCachedUrlSet(){
-    urls = new Vector();
+  public MockCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
+    this.spec = spec;
+    this.au = owner;
   }
 
-  /**
-   * Make a new MockCachedUrlSet object with a list populated with
-   * the urls specified in rootUrls (and no reg expressions)
-   *
-   * @param rootUrls list of string representation of the urls to 
-   * add to the new MockCachedUrlSet's list
-   * @return MockCachedUrlSet with urls in rootUrls in its list
-   */
-  public static MockCachedUrlSet createFromListOfRootUrls(String[] rootUrls){
-    MockCachedUrlSet cus = new MockCachedUrlSet();
-    if (rootUrls != null){
-      for (int ix = 0; ix < rootUrls.length; ix++){
-	String curUrl = (String)rootUrls[ix];
-	CachedUrlSetSpec spec = new MockCachedUrlSetSpec(curUrl, null);
-	cus.addToList(spec);
-      }
-    }
-    return cus;
+  public CachedUrlSetSpec getSpec() {
+    return spec;
   }
 
-
-
-  public void addToList(CachedUrlSetSpec spec){
-    urls.add(spec);
+  public ArchivalUnit getArchivalUnit() {
+    return au;
   }
 
-  public boolean removeFromList(CachedUrlSetSpec spec){
-    return false;
+  public MockCachedUrlSet(CachedUrlSetSpec spec) {
+    this(null, spec);
   }
 
-  public boolean memberOfList(CachedUrlSetSpec spec){
-    return false;
+  public boolean containsUrl(String url) {
+    return urls.contains(url);
   }
 
-  public Enumeration listEnumeration(){
-    if (urls == null){
-      return null;
-    }
-    return urls.elements();
+  public boolean isCached(String url) {
+    return urls.contains(url);
   }
 
-  public boolean memberOfSet(String url){
-    return false;
+  public Iterator flatSetIterator() {
+    return null;
   }
 
+  public Iterator treeSetIterator() {
+    return null;
+  }
 
-    // Methods used by the poller
+  public Iterator leafIterator() {
+    return null;
+  }
+
+  // Methods used by the poller
 
   public CachedUrlSetHasher getContentHasher(MessageDigest hasher){
     return null;
@@ -116,12 +105,11 @@ public class MockCachedUrlSet implements CachedUrlSet{
     return null;
   }
 
-  public long hashDuration(){
+  public long estimatedHashDuration(){
     return 0;
   }
 
-  public long duration(long elapsed, Exception err) {
-    return 0;
+  public void storeActualHashDuration(long elapsed, Exception err) {
   }
 
   // Methods used by the crawler

@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.2 2002-10-01 06:16:20 tal Exp $
+ * $Id: HashService.java,v 1.3 2002-10-16 04:53:32 tal Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class HashService {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    urlset.getContentHasher(hasher),
-			    urlset.hashDuration()); 
+			    urlset.estimatedHashDuration()); 
     return scheduleReq(req);
   }
 

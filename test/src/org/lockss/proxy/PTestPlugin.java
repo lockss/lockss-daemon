@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.4 2002-10-08 01:08:31 tal Exp $
+ * $Id: PTestPlugin.java,v 1.5 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ class PTestPlugin {
       props.setProperty("Content-Length", ""+s.length());
     }
 
-    public String toString() {
+    public String getUrl() {
       return url;
     }
 
@@ -90,10 +90,10 @@ class PTestPlugin {
     }
 
     private void storeCachedUrl(CachedUrl cu) {
-      map.put(cu.toString(), cu);
+      map.put(cu.getUrl(), cu);
     }
 
-    public boolean memberOfSet(String url) {
+    public boolean containsUrl(String url) {
       return map.containsKey(url);
     }
 

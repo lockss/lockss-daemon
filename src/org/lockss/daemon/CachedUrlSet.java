@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.5 2002-10-08 01:01:31 tal Exp $
+ * $Id: CachedUrlSet.java,v 1.6 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
-import java.util.Enumeration;
+import java.util.Iterator;
 import java.security.MessageDigest;
 
 /**
@@ -45,33 +45,14 @@ import java.security.MessageDigest;
  * @author  David S. H. Rosenthal
  * @version 0.0 */
 public interface CachedUrlSet {
+  /** Return the {@link ArchivalUnit} to which this CachedUrlSet belongs */
+  public ArchivalUnit getArchivalUnit();
+
     /**
-     * Add the <code>CachedUrlSetSpec</code> to the
-     * <code>CachedUrlSet</code> object's list.
-     * @param spec specification of a set of urls.
-     */
-    public void addToList(CachedUrlSetSpec spec);
-    /**
-     * Remove the <code>CachedUrlSetSpec</code>
-     * from the <code>CachedUrlSet</code> object's list.
-     * @param spec specification of a set of urls.
-     * @return <code>true</code> if the removal was successful,
-     *         <code>false</code> otherwise
-     */
-    public boolean removeFromList(CachedUrlSetSpec spec);
-    /**
-     * Return true if the <code>CachedUrlSetSpec</code>
-     * is in the <code>CachedUrlSet</code> object's list.
-     * @param spec specification of a set of urls.
-     * @return <code>true</code> if the argument pair is in the list,
-     *         <code>false</code> otherwise
-     */
-    public boolean memberOfList(CachedUrlSetSpec spec);
-    /**
-     * Return an <code>Enumeration</code> of <code>CachedUrlSetSpec</code>
-     * objects describing the set of URLs that are members of this
+     * Return the <code>CachedUrlSetSpec</code>
+     * describing the set of URLs that are members of this
      * <code>CachedUrlSet</code>. */
-    public Enumeration listEnumeration();
+    public CachedUrlSetSpec getSpec();
     /**
      * Return true if the url matches an entry in the
      * <code>CachedUrlSet</code> object's list.
@@ -79,7 +60,7 @@ public interface CachedUrlSet {
      * @return <code>true</code> if the url matches an entry in the list,
      *         i.e. is in the file set, <code>false</code> otherwise
      */
-    public boolean memberOfSet(String url);
+    public boolean containsUrl(String url);
 
     // Methods used by the poller
 
@@ -96,28 +77,38 @@ public interface CachedUrlSet {
      */
     public CachedUrlSetHasher getNameHasher(MessageDigest hasher);
     /**
-     * Return an <code>Enumeration</code> of <code>CachedUrlSet</code>
+     * Return an <code>Iterator</code> of <code>CachedUrlSet</code>
      * objects representing the direct descendants of this
      * <code>CachedUrlSet</code> object.
-     * @return an <code>Enumeration</code> of the <code>CachedUrlSet</code>
+     * @return an <code>Iterator</code> of the <code>CachedUrlSet</code>
      *         matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */
-    public Enumeration flatEnumeration();
+    public Iterator flatSetIterator();
     /**
-     * Return an <code>Enumeration</code> of <code>CachedUrlSet</code>
+     * Return an <code>Iterator</code> of <code>CachedUrlSet</code>
      * objects representing the entire tree rooted at this
      * <code>CachedUrlSet</code> object.
-     * @return an <code>Enumeration</code> of the <code>CachedUrlSet</code>
+     * @return an <code>Iterator</code> of the <code>CachedUrlSet</code>
      *         matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */
-    public Enumeration treeEnumeration();
+    public Iterator treeSetIterator();
+    /**
+     * Return an <code>Iterator</code> of <code>CachedUrl/code>
+     * objects representing the leaves of the tree rooted at this
+     * <code>CachedUrlSet</code> object.
+     * @return an <code>Iterator</code> of <code>CachedUrl</code>s
+     *         for all the leaf (content) nodes
+     *         matching the members of the
+     *         <code>CachedUrlSetSpec</code> list.
+     */
+    public Iterator leafIterator();
     /**
      * Return an estimate of the time required to hash the content.
      * @return an estimate of the time required to hash the content.
      */
-    public long hashDuration();
+    public long estimatedHashDuration();
     /**
      * Provide the measured duration of a hash attempt and an
      * indication of success or failure.
@@ -125,10 +116,20 @@ public interface CachedUrlSet {
      * @param err the exception that terminated the hash, or null if it
      * succeeded
      */
-    public long duration(long elapsed, Exception err);
+    public void storeActualHashDuration(long elapsed, Exception err);
 
     // Methods used by readers
 
+    /**
+     * Return true if content for the url is currently a part of the
+     * <code>CachedUrlSet</code>.
+     * <i>Ie</i>, if <code>makeCachedUrl(</code><i>url</i><code>)</code>
+     * would return a <code>CachedUrl</code> for which <code>exists()</code>
+     * is true.
+     * @param url the url of interest
+     * @return true of the url is part of the cache
+     */
+    public boolean isCached(String url);
     /**
      * Create a <code>CachedUrl</code> object within the set.
      * @param url the url of interest

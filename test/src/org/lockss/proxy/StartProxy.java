@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.2 2002-10-08 01:08:31 tal Exp $
+ * $Id: StartProxy.java,v 1.3 2002-10-16 04:50:54 tal Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.plugin.*;
 
 public class StartProxy {
   public static void main(String args[]) {
-    CachedUrlSet cus = PTestPlugin.makeTest();
+    PTestPlugin.makeTest();
     System.out.println("Plugin.findArchivalUnit(http://foo.bar/one) = " +
 		       Plugin.findArchivalUnit("http://foo.bar/one"));
     ProxyHandler.startProxy();
