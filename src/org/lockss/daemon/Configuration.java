@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.16 2002-12-16 06:57:12 tal Exp $
+ * $Id: Configuration.java,v 1.17 2003-01-02 06:42:11 tal Exp $
  */
 
 /*
@@ -205,8 +205,7 @@ public abstract class Configuration {
    * present when a callback is registered, the callback will be called
    * immediately.
    * @param c <code>Configuration.Callback</code> to add.  */
-  public static void
-    registerConfigurationCallback(Callback c) {
+  public static void registerConfigurationCallback(Callback c) {
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
       if (haveConfig.isFull()) {
