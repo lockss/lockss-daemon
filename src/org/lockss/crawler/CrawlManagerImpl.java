@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.9 2003-03-20 00:41:58 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.10 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -345,7 +345,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       return false;
     }
 
-    public List getHeaders(String key) {
+    public List getSummaryInfo(String key) {
       return null;
     }
   }

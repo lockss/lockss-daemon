@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.10 2003-03-18 22:27:41 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.11 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -210,51 +210,51 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertEquals(tableTitle, table.getTitle());
   }
 
-  static final Object[][] headers = {
-    {"Header1", new Integer(ColumnDescriptor.TYPE_STRING), "Header value one"},
-    {"Header2", new Integer(ColumnDescriptor.TYPE_INT), new Integer(2)},
-    {"Header3", new Integer(ColumnDescriptor.TYPE_STRING), "Header value 3"}
+  static final Object[][] summaryInfo = {
+    {"SummaryInfo1", new Integer(ColumnDescriptor.TYPE_STRING), "SummaryInfo value one"},
+    {"SummaryInfo2", new Integer(ColumnDescriptor.TYPE_INT), new Integer(2)},
+    {"SummaryInfo3", new Integer(ColumnDescriptor.TYPE_STRING), "SummaryInfo value 3"}
   };
 
-  public void testGetTableHeaders() 
+  public void testGetTableSummaryInfo() 
       throws StatusService.NoSuchTableException {
     String key = "theKey";
     MockStatusAccessor statusAccessor = 
-      generateStatusAccessor(colArray1, rowArray1, key, headers);
+      generateStatusAccessor(colArray1, rowArray1, key, summaryInfo);
 
     statusAccessor.setDefaultSortRules(sortRules1, key);
     statusService.registerStatusAccessor("table1", statusAccessor); 
 
     StatusTable table = statusService.getTable("table1", key);
-    List expectedHeaders = makeHeadersFromArray(headers);
-    assertNotNull(table.getHeaders());
-    assertHeadersEqual(expectedHeaders, table.getHeaders());
+    List expectedSummaryInfo = makeSummaryInfoFromArray(summaryInfo);
+    assertNotNull(table.getSummaryInfo());
+    assertSummaryInfoEqual(expectedSummaryInfo, table.getSummaryInfo());
   }
 
-  private void assertHeadersEqual(List expected, List actual) {
+  private void assertSummaryInfoEqual(List expected, List actual) {
     assertEquals("Lists had different sizes", expected.size(), actual.size());
     Iterator expectedIt = expected.iterator();
     Iterator actualIt = actual.iterator();
     while(expectedIt.hasNext()) {
-      StatusTable.Header expectedHead = 
-	(StatusTable.Header)expectedIt.next();
-      StatusTable.Header actualHead = 
-	(StatusTable.Header)actualIt.next();
-      assertEquals(expectedHead.getTitle(), actualHead.getTitle());
-      assertEquals(expectedHead.getType(), actualHead.getType());
-      assertEquals(expectedHead.getValue(), actualHead.getValue());
+      StatusTable.SummaryInfo expectedSInfo = 
+	(StatusTable.SummaryInfo)expectedIt.next();
+      StatusTable.SummaryInfo actualSInfo = 
+	(StatusTable.SummaryInfo)actualIt.next();
+      assertEquals(expectedSInfo.getTitle(), actualSInfo.getTitle());
+      assertEquals(expectedSInfo.getType(), actualSInfo.getType());
+      assertEquals(expectedSInfo.getValue(), actualSInfo.getValue());
     }
     assertFalse(actualIt.hasNext());
   }
   
-  private List makeHeadersFromArray(Object[][] headerArray) {
-    List list = new ArrayList(headerArray.length);
-    for (int ix = 0; ix < headerArray.length; ix++) {
-      StatusTable.Header header = 
-	new StatusTable.Header((String)headerArray[ix][0], 
-			       ((Integer)headerArray[ix][1]).intValue(),
-			       headerArray[ix][2]);
-      list.add(header);
+  private List makeSummaryInfoFromArray(Object[][] summaryInfoArray) {
+    List list = new ArrayList(summaryInfoArray.length);
+    for (int ix = 0; ix < summaryInfoArray.length; ix++) {
+      StatusTable.SummaryInfo summaryInfo = 
+	new StatusTable.SummaryInfo((String)summaryInfoArray[ix][0], 
+			       ((Integer)summaryInfoArray[ix][1]).intValue(),
+			       summaryInfoArray[ix][2]);
+      list.add(summaryInfo);
     }
     return list;
   }
@@ -701,10 +701,10 @@ public class TestStatusServiceImpl extends LockssTestCase {
   private MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
 						    Object[][]rowArray,
 						    String key,
-						    Object[][]headers) {
+						    Object[][]summaryInfos) {
     MockStatusAccessor statusAccessor = 
       generateStatusAccessor(colArray, rowArray, key);
-    statusAccessor.setHeaders(key, makeHeadersFromArray(headers));
+    statusAccessor.setSummaryInfo(key, makeSummaryInfoFromArray(summaryInfos));
     return statusAccessor;
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.51 2003-03-20 02:13:11 claire Exp $
+* $Id: PollManager.java,v 1.52 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -790,7 +790,7 @@ public class PollManager  implements LockssManager {
     /**
      * Returns null
      */
-    public List getHeaders(String key) {
+    public List getSummaryInfo(String key) {
       return null;
     }
 
@@ -955,7 +955,7 @@ public class PollManager  implements LockssManager {
     /**
      * Returns null
      */
-    public List getHeaders(String key) {
+    public List getSummaryInfo(String key) {
       return null;
     }
 

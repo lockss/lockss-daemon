@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.7 2003-03-19 04:20:23 tal Exp $
+// $Id: DaemonStatus.java,v 1.8 2003-03-20 02:29:18 troberts Exp $
 // ========================================================================
 
 /*
@@ -154,16 +154,17 @@ public class DaemonStatus extends LockssServlet {
 	table.addHeading(title, "ALIGN=CENTER COLSPAN=" +
 			   (cols * 2 - 1));
 	table.newRow();
-	java.util.List summary = statTable.getHeaders();
+	java.util.List summary = statTable.getSummaryInfo();
 	if (summary != null && !summary.isEmpty()) {
 	  for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
-	    StatusTable.Header hdr = (StatusTable.Header)iter.next();
+	    StatusTable.SummaryInfo sInfo = 
+	      (StatusTable.SummaryInfo)iter.next();
 	    table.newRow();
 	    StringBuffer sb = new StringBuffer();
 	    sb.append("<b>");
-	    sb.append(hdr.getTitle());
+	    sb.append(sInfo.getTitle());
 	    sb.append("</b>: ");
-	    sb.append(dispString(hdr.getValue(), hdr.getType()));
+	    sb.append(dispString(sInfo.getValue(), sInfo.getType()));
 	    table.newCell("COLSPAN=" + (cols * 2 - 1));
 	    table.add(sb.toString());
 

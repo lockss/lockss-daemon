@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.7 2003-03-18 22:27:41 troberts Exp $
+ * $Id: MockStatusAccessor.java,v 1.8 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ public class MockStatusAccessor implements StatusAccessor {
   private Map rows = new HashMap();
   private Map defaultSortRules = new HashMap();
   private Map titles = new HashMap();
-  private Map headers = new HashMap();
+  private Map summaryInfo = new HashMap();
 
 
   public List getColumnDescriptors(String key) 
@@ -90,11 +90,11 @@ public class MockStatusAccessor implements StatusAccessor {
     return (String)titles.get(key);
   }
 
-  public List getHeaders(String key) {
-    return (List)headers.get(key);
+  public List getSummaryInfo(String key) {
+    return (List)summaryInfo.get(key);
   }
 
-  public void setHeaders(String key, List headers) {
-    this.headers.put(key, headers);
+  public void setSummaryInfo(String key, List summaryInfo) {
+    this.summaryInfo.put(key, summaryInfo);
   }
 }

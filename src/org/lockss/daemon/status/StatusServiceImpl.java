@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.12 2003-03-18 22:27:41 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.13 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class StatusServiceImpl
 		      statusAccessor.getColumnDescriptors(key),
 		      statusAccessor.getDefaultSortRules(key),
 		      statusAccessor.getRows(key));
-    table.setHeaders(statusAccessor.getHeaders(key));
+    table.setSummaryInfo(statusAccessor.getSummaryInfo(key));
     return table;
   }
 
@@ -246,7 +246,7 @@ public class StatusServiceImpl
     /**
      * Always returns null
      */
-    public List getHeaders(String key) {
+    public List getSummaryInfo(String key) {
       return null;
     }
 

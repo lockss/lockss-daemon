@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.14 2003-03-19 04:18:23 tal Exp $
+ * $Id: StatusTable.java,v 1.15 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class StatusTable {
   private List rows;
   private List defaultSortRules;
   private static Logger logger = Logger.getLogger("StatusTable");
-  private List headers;
+  private List summaryInfo;
 
 
   /**
@@ -103,18 +103,18 @@ public class StatusTable {
   }
 
   /**
-   * Returns a List of {@link Header}s for this table
-   * @return List of {@link Header}s for this table
+   * Returns a List of {@link SummaryInfo} objects for this table
+   * @return List of {@link SummaryInfo} objects for this table
    */
-  public List getHeaders() {
-    return headers;
+  public List getSummaryInfo() {
+    return summaryInfo;
   }
 
   /**
-   * Set the {@link Header}s for this table
+   * Set the {@link SummaryInfo}s for this table
    */
-  protected void setHeaders(List headers) {
-    this.headers = headers;
+  protected void setSummaryInfo(List summaryInfo) {
+    this.summaryInfo = summaryInfo;
   }
 
   /**
@@ -360,17 +360,17 @@ public class StatusTable {
   /**
    * Object representing scalar information in a table
    */
-  public static class Header {
+  public static class SummaryInfo {
     private String title;
     private int type;
     private Object value;
 
     /**
-     * @param title title for this header
+     * @param title title for this SummaryInfo
      * @param type int representing the type of value
-     * @param value value object associated with this header
+     * @param value value object associated with this SummaryInfo
      */    
-    public Header(String title, int type, Object value) {
+    public SummaryInfo(String title, int type, Object value) {
       this.title = title;
       this.type = type;
       this.value = value;

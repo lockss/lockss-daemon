@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.20 2003-03-18 22:28:53 troberts Exp $
+ * $Id: PluginManager.java,v 1.21 2003-03-20 02:29:18 troberts Exp $
  */
 
 /*
@@ -348,7 +348,7 @@ public class PluginManager implements LockssManager {
     /**
      * Returns null
      */
-    public List getHeaders(String key) {
+    public List getSummaryInfo(String key) {
       return null;
     }
   }
