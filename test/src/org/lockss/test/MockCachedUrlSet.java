@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.25 2003-02-25 22:07:33 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.26 2003-02-26 21:32:02 troberts Exp $
  */
 
 /*
@@ -49,6 +49,13 @@ import org.lockss.plugin.*;
 public class MockCachedUrlSet implements CachedUrlSet {
   private ArchivalUnit au;
   private CachedUrlSetSpec spec;
+  private String url;
+
+  private boolean isLeafIsSet = false;
+  private boolean isLeaf = false;
+
+  private boolean hasContentIsSet = false;
+  private boolean hasContent = false;
 
   private HashSet cachedUrls = new HashSet();
   private Vector urls = null;
@@ -63,12 +70,16 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private static final Logger logger = Logger.getLogger("MockCachedUrlSet");
 
   public MockCachedUrlSet() {
-    this(null, null);
+    this(new MockArchivalUnit(), null);
   }
 
   public MockCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
     this.au = owner;
+  }
+
+  public MockCachedUrlSet(String url) {
+    this.url = url;
   }
 
   public CachedUrlSetSpec getSpec() {
@@ -88,12 +99,28 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean hasContent() {
+    if (hasContentIsSet) {
+      return this.hasContent;
+    }
     CachedUrl cu = (CachedUrl)cuHash.get(getUrl());
     return cu.hasContent();
   }
 
+  public void setHasContent(boolean hasContent) {
+    this.hasContentIsSet = true;
+    this.hasContent = hasContent;
+  }
+
   public boolean isLeaf() {
+    if (isLeafIsSet) {
+      return isLeaf;
+    }
     return ((flatSetIterator()==null) && (treeIterator()==null));
+  }
+
+  public void setIsLeaf(boolean isLeaf) {
+    this.isLeafIsSet = true;
+    this.isLeaf = isLeaf;
   }
 
   public int getType() {
@@ -228,6 +255,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public String getUrl() {
+    if (url != null) {
+      return url;
+    }
     if (spec!=null) {
       return spec.getUrl();
     } else {
