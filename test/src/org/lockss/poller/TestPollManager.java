@@ -270,6 +270,16 @@ public class TestPollManager extends LockssTestCase {
                Arrays.equals(verifier, verifier_check));
 
   }
+
+  public void testCanSchedulePoll() {
+
+   long pollTime = Constants.DAY;
+   long neededTime = pollTime/4;
+
+   assertTrue(pollmanager.canSchedulePoll(pollTime,neededTime));
+
+  }
+
   private void initRequiredServices() {
     theDaemon = new MockLockssDaemon();
     pollmanager = theDaemon.getPollManager();

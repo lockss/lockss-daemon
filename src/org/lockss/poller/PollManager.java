@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.92 2003-05-03 00:10:37 claire Exp $
+* $Id: PollManager.java,v 1.93 2003-05-03 01:02:24 claire Exp $
  */
 
 /*
@@ -169,6 +169,12 @@ public class PollManager  extends BaseLockssManager {
                  " for spec " + pollspec);
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     long duration = calcDuration(opcode, cus);
+    if(duration <=0) {
+      theLog.debug("not sending request for polltype: "
+                   + LcapMessage.POLL_OPCODES[opcode] +
+                   " for spec " + pollspec + "not enough hash time.");
+      return;
+    }
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();
     LcapMessage msg =
@@ -728,26 +734,12 @@ public class PollManager  extends BaseLockssManager {
 
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
-        long slow_rate = theSystemMetrics.getSlowestHashSpeed();
-        long my_rate;
         long estTime = cus.estimatedHashDuration();
-        theLog.debug3("Estimated hash duration : " + estTime);
-        try {
-          my_rate = theSystemMetrics.getBytesPerMsHashEstimate();
-        }
-        catch (SystemMetrics.NoHashEstimateAvailableException e) {
-          // if can't get my rate, use slowest rate to prevent adjustment
-          theLog.warning("No hash estimate available, " +
-                         "not adjusting poll for slow machines");
-          my_rate = slow_rate;
-        }
-        theLog.debug3("My hash speed is " + my_rate + ". Slow speed is " +
-                      slow_rate);
+        theLog.debug3("CUS estimated hash duration = " + estTime);
 
-        if (my_rate > slow_rate) {
-          estTime = estTime * my_rate / slow_rate;
-          theLog.debug3("I've corrected the hash estimate to " + estTime);
-        }
+        estTime = getAdjustedEstimate(estTime);
+        theLog.debug3("My adjusted hash duration = " + estTime);
+
         ret = estTime * POLL_DURATION_MULTIPLIER * (quorum + 1);
         theLog.debug3("I think the poll should take: " + ret);
 
@@ -763,15 +755,50 @@ public class PollManager  extends BaseLockssManager {
                        + m_maxContentPollDuration);
           ret = m_maxContentPollDuration;
         }
-
-        theLog.debug2("Content Poll duration: " +
-                      StringUtil.timeIntervalToString(ret));
+        if(!canSchedulePoll(ret, estTime * (quorum+1))) {
+           ret = -1;
+           theLog.info("Can't schedule this poll returning -1");
+        }
+        else {
+          theLog.debug2("Content Poll duration: " +
+                        StringUtil.timeIntervalToString(ret));
+        }
         break;
 
       default:
     }
 
     return ret;
+  }
+
+  boolean canSchedulePoll(long pollTime, long neededTime) {
+    Deadline when = Deadline.in(pollTime);
+    long timeAvail = theHashService.getAvailableHashTimeBefore(when);
+    return timeAvail >= neededTime;
+  }
+
+  long getAdjustedEstimate(long estTime) {
+    long my_estimate = estTime;
+    long my_rate;
+    long slow_rate = theSystemMetrics.getSlowestHashSpeed();
+    try {
+      my_rate = theSystemMetrics.getBytesPerMsHashEstimate();
+    }
+    catch (SystemMetrics.NoHashEstimateAvailableException e) {
+      // if can't get my rate, use slowest rate to prevent adjustment
+      theLog.warning("No hash estimate available, " +
+                     "not adjusting poll for slow machines");
+      my_rate = slow_rate;
+    }
+    theLog.debug3("My hash speed is " + my_rate
+                  + ". Slow speed is " + slow_rate);
+
+
+    if (my_rate > slow_rate) {
+      my_estimate = estTime * my_rate / slow_rate;
+      theLog.debug3("I've corrected the hash estimate to " + my_estimate);
+    }
+    return my_estimate;
   }
 
 //--------------- PollerStatus Accessors -----------------------------
