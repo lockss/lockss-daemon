@@ -364,6 +364,9 @@ public class CrawlRuleTester extends Thread {
       return null;
     }
 
+    public void release() {
+    }
+
     public String toString() {
       StringBuffer sb = new StringBuffer(url.length() + 17);
       sb.append("[MyMockCachedUrl: ");
