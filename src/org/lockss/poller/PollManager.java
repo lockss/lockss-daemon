@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.67 2003-04-10 01:06:51 claire Exp $
+* $Id: PollManager.java,v 1.68 2003-04-10 04:29:45 claire Exp $
  */
 
 /*
@@ -354,8 +354,6 @@ public class PollManager  extends BaseLockssManager {
       long expiration = 0;
       Deadline d;
       if (replayNeeded) {
-        NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
-        nm.startPoll(tally.getCachedUrlSet(), tally);
         theLog.debug2("replaying poll " + (String) key);
         expiration = m_replayPollExpireTime;
         d = Deadline.in(expiration);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.8 2003-04-10 01:09:54 claire Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.9 2003-04-10 04:29:45 claire Exp $
  */
 
 /*
@@ -270,13 +270,20 @@ public class TestTreeWalkHandler extends LockssTestCase {
     // should schedule name poll if last history is LOST or ERR_IO
     checkPollingTest(PollState.ERR_IO, 789, true, node);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
-    checkPollingTest(PollState.LOST, 890, true, node);
+
+    // should schedule a name poll if we lost a content poll
+    checkPollingTest(Poll.CONTENT_POLL, PollState.LOST, 890, true, node);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
  }
 
-  private void checkPollingTest(int pollState, long startTime,
+ private void checkPollingTest(int pollState, long startTime,
+                              boolean shouldSchedule, NodeStateImpl node) {
+  checkPollingTest(Poll.NAME_POLL,pollState,startTime,shouldSchedule,node);
+}
+
+  private void checkPollingTest(int pollType, int pollState, long startTime,
                                boolean shouldSchedule, NodeStateImpl node) {
-    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+    PollHistory pollHist = new PollHistory(pollType, "", "",
                                            pollState, startTime, 1,
                                            null, true);
     // doesn't clear old histories, so startTime must be used appropriately

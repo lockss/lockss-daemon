@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.92 2003-04-10 03:30:49 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.93 2003-04-10 04:29:45 claire Exp $
  */
 
 /*
@@ -411,8 +411,12 @@ public class NodeManagerImpl
         // a lost poll lurking underneath this one.
         break;
       case PollState.LOST:
-        callNamePoll(lastPollSpec);
-        return true;
+        if (lastHistory.getType() == Poll.CONTENT_POLL) {
+          callNamePoll(lastPollSpec);
+          return true;
+        }
+        // for name polls the important poll is just below this so it's
+        // safe to skip over it.
       case PollState.UNREPAIRABLE:
         // we need to do something here
         break;
@@ -555,9 +559,10 @@ public class NodeManagerImpl
       for (int i = 0; i < childList.size(); i++) {
         callContentPoll((CachedUrlSet) childList.get(i), null, null);
       }
+      // and call a content poll for this node's content alone
+      logger.debug2("calling content poll on node contents");
+      callContentPoll(cus, RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null);
     }
-    // content poll for this node's content alone
-    callContentPoll(cus, RangeCachedUrlSetSpec.SINGLE_NODE_RANGE, null);
   }
 
   private void callContentPoll(CachedUrlSet cus, String lwr, String upr) throws
