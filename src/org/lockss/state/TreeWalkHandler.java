@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.10 2003-04-04 23:50:11 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.11 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -128,9 +128,8 @@ public class TreeWalkHandler {
     } else {
       logger.debug("Top level poll active.  Aborting...");
     }
-    //alert the AuState
+    //alert the AuState (it writes through)
     manager.getAuState().setLastTreeWalkTime();
-    manager.historyRepo.storeAuState(manager.getAuState());
     logger.debug("Tree walk finished.");
   }
 

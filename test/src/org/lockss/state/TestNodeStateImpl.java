@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.11 2003-04-04 23:50:11 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.12 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.util.Deadline;
 
 public class TestNodeStateImpl extends LockssTestCase {
   private NodeStateImpl state;
+  private HistoryRepository historyRepo;
   private List polls;
 
   public void setUp() throws Exception {
@@ -47,13 +48,20 @@ public class TestNodeStateImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
+    historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    historyRepo.startService();
 
     polls = new ArrayList(3);
     polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX));
     polls.add(new PollState(2, "lwr2", "upr3", 1, 0, Deadline.MAX));
     polls.add(new PollState(3, "lwr3", "upr3", 1, 0, Deadline.MAX));
     state = new NodeStateImpl(mcus, -1, new CrawlState(-1, -1, -1), polls,
-                              new HistoryRepositoryImpl(tempDirPath));
+                              historyRepo);
+  }
+
+  public void tearDown() throws Exception {
+    historyRepo.stopService();
+    super.tearDown();
   }
 
   public void testActivePollImmutability() {

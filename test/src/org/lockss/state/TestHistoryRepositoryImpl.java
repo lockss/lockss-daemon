@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.23 2003-04-04 23:50:11 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.24 2003-04-07 23:38:05 aalto Exp $
  */
 
 /*
@@ -62,7 +62,13 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     configHistoryParams(tempDirPath);
     repository = new HistoryRepositoryImpl(tempDirPath);
+    repository.startService();
     idKey = createIdentityKey();
+  }
+
+  public void tearDown() throws Exception {
+    repository.stopService();
+    super.tearDown();
   }
 
   public void testGetNodeLocation() throws Exception {
@@ -120,7 +126,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     } catch (MalformedURLException mue) {}
   }
 
-  public void testGetMapping() throws Exception {
+  public void testLoadMapping() throws Exception {
+    assertNotNull(repository.mapping);
     assertNotNull(repository.getMapping());
   }
 
@@ -227,6 +234,36 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(321, auState.getLastTopLevelPollTime());
     assertEquals(456, auState.getLastTreeWalkTime());
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
+  }
+
+  public void testStoreOverwrite() throws Exception {
+    AuState auState = new AuState(mau, 123, 321, 456, repository);
+    repository.storeAuState(auState);
+    String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath += HistoryRepositoryImpl.AU_FILE_NAME;
+    File xmlFile = new File(filePath);
+    FileInputStream fis = new FileInputStream(xmlFile);
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    StreamUtil.copy(fis, baos);
+    String expectedStr = baos.toString();
+
+    auState = new AuState(mau, 1234, 4321, 4567, repository);
+    repository.storeAuState(auState);
+
+    auState = null;
+    auState = repository.loadAuState(mau);
+    assertEquals(1234, auState.getLastCrawlTime());
+    assertEquals(4321, auState.getLastTopLevelPollTime());
+    assertEquals(4567, auState.getLastTreeWalkTime());
+    assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
+
+    auState = new AuState(mau, 123, 321, 456, repository);
+    repository.storeAuState(auState);
+    fis = new FileInputStream(xmlFile);
+    baos = new ByteArrayOutputStream(expectedStr.length());
+    StreamUtil.copy(fis, baos);
+    assertEquals(expectedStr, baos.toString());
   }
 
   public void testStoreNodeState() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.88 2003-04-04 23:50:11 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.89 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -160,9 +160,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   public void newContentCrawlFinished() {
-    // notify and checkpoint the austate
+    // notify and checkpoint the austate (it writes through)
     getAuState().newCrawlFinished();
-    historyRepo.storeAuState(getAuState());
 
     // checkpoint the top-level nodestate
     NodeState topState = getNodeState(managedAu.getAUCachedUrlSet());
@@ -420,7 +419,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
         (pollState.getType() == Poll.CONTENT_POLL)) {
       getAuState().newPollFinished();
-      historyRepo.storeAuState(getAuState());
       logger.info("Top level poll finished.");
     }
   }

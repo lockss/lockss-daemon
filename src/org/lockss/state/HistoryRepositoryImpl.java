@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.27 2003-04-04 23:50:11 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.28 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ import org.lockss.daemon.Configuration;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
 import java.net.URL;
+import org.xml.sax.InputSource;
 
 
 /**
@@ -76,7 +77,7 @@ public class HistoryRepositoryImpl
   private static final String TEST_PREFIX = "/#tmp";
 
   private static String rootDir;
-  private Mapping mapping = null;
+  Mapping mapping = null;
   private static Logger logger = Logger.getLogger("HistoryRepository");
 
   private static LockssDaemon theDaemon;
@@ -99,6 +100,7 @@ public class HistoryRepositoryImpl
       logger.error(msg);
       throw new LockssDaemonException(msg);
     }
+    loadMapping();
   }
 
   /**
@@ -107,7 +109,7 @@ public class HistoryRepositoryImpl
    */
   public void stopService() {
     // we want to checkpoint here
-
+    mapping = null;
     super.stopService();
   }
 
@@ -248,19 +250,6 @@ public class HistoryRepositoryImpl
     }
   }
 
-  public static HistoryRepository getHistoryRepository() {
-    if (rootDir==null) {
-      rootDir = Configuration.getParam(PARAM_HISTORY_LOCATION);
-      if (rootDir==null) {
-        logger.error("Couldn't get "+PARAM_HISTORY_LOCATION+
-                     " from Configuration");
-        throw new LockssRepository.RepositoryStateException(
-            "Couldn't load param.");
-      }
-    }
-    return new HistoryRepositoryImpl(rootDir);
-  }
-
   protected String getNodeLocation(CachedUrlSet cus)
       throws MalformedURLException {
     StringBuffer buffer = new StringBuffer(rootDir);
@@ -312,17 +301,33 @@ public class HistoryRepositoryImpl
         au);
   }
 
-  protected Mapping getMapping() throws Exception {
+  private void loadMapping() {
     if (mapping==null) {
       URL mappingLoc = getClass().getResource(MAPPING_FILE_NAME);
       if (mappingLoc==null) {
         logger.error("Couldn't find resource '"+MAPPING_FILE_NAME+"'");
-        throw new LockssRepository.RepositoryStateException(
-            "Couldn't find mapping file.");
+        throw new LockssDaemonException("Couldn't find mapping file.");
       }
+
       mapping = new Mapping();
-      mapping.loadMapping(mappingLoc);
+      try {
+        mapping.loadMapping(mappingLoc);
+      } catch (Exception e) {
+        logger.error("Couldn't load mapping file '"+MAPPING_FILE_NAME+"'");
+        throw new LockssDaemonException("Couldn't load mapping file.");
+      }
     }
-    return mapping;
+  }
+
+  Mapping getMapping() {
+    if (mapping==null) {
+      logger.error("Mapping file not loaded.");
+      throw new LockssDaemonException("Mapping file not loaded.");
+    } else if (mapping.getRoot().getClassMappingCount()==0) {
+      logger.error("Mapping file is empty.");
+      throw new LockssDaemonException("Mapping file is empty.");
+    } else {
+      return mapping;
+    }
   }
 }

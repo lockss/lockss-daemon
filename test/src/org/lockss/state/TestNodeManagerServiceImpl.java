@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.9 2003-04-02 19:25:26 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.10 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
     theDaemon = new MockLockssDaemon();
     theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     theDaemon.setHistoryRepository(new HistoryRepositoryImpl(tempDirPath));
+    theDaemon.getHistoryRepository().startService();
 
     // create au state so thread doesn't throw null pointers
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);

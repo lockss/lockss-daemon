@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.57 2003-04-02 23:50:55 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.58 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -82,7 +82,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    HistoryRepository historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    historyRepo.startService();
+    theDaemon.setHistoryRepository(historyRepo);
+    nodeManager.historyRepo = historyRepo;
     nodeManager.startService();
     // don't need the thread
     nodeManager.treeWalkHandler.end();
@@ -95,6 +98,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void tearDown() throws Exception {
     nodeManager.stopService();
     pollManager.stopService();
+    theDaemon.getHistoryRepository().stopService();
     theDaemon.getHashService().stopService();
     PluginUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.6 2003-04-02 23:50:55 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.7 2003-04-07 23:38:06 aalto Exp $
  */
 
 /*
@@ -87,6 +87,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
     HistoryRepository historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    historyRepo.startService();
     nodeManager.historyRepo = historyRepo;
     theDaemon.setHistoryRepository(historyRepo);
 
