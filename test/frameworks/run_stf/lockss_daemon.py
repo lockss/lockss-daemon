@@ -609,7 +609,8 @@ class Client:
         return False
 
     def hasLostSNCUSSPoll(self, au, node):
-        """ Wait for a Single-Node CUSS poll for the given AU and node to be lost """
+        """ Wait for a Single-Node CUSS poll for the given AU and node
+        to be lost """
         tab = self.getAuPolls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
@@ -621,7 +622,8 @@ class Client:
         return False
 
     def hasWonSNCUSSContentPoll(self, au, node):
-        """ Wait for a Single-Node CUSS poll for the given AU and node to be won """
+        """ Wait for a Single-Node CUSS poll for the given AU and node
+        to be won """
         tab = self.getAuPolls(au)
         for row in tab:
             if not (row['PollType'] == 'C' and row.has_key('Range')):
@@ -639,28 +641,28 @@ class Client:
         """ Wait for the au to appear, or for the timeout to expire."""
         def waitFunc():
             return self.hasAu(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForDeleteAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Wait for the au to be deleted, or for the timeout to
         expire. """
         def waitFunc():
             return not self.hasAu(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForReactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Wait for the au to be activated, or for the timeout to
         expire. """
         def waitFunc():
             return self.isActiveAu(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForDeactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Wait for the au to be deactivated, or for the timeout to
         expire."""
         def waitFunc():
            return not self.isActiveAu(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForSuccessfulCrawl(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Block until the specified au has had at least one
@@ -668,44 +670,44 @@ class Client:
         def waitFunc():
             tbl = self.getCrawlStatus(au)
             return tbl and tbl[0]['crawl_status'] == 'Successful'
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasTopLevelContentPoll(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForTopLevelNamePoll(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasTopLevelNamePoll(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForSNCUSSContentPoll(self, au, node, timeout=DEF_TIMEOUT,
                                  sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasSNCUSSPoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForLostTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT,
                                        sleep=DEF_SLEEP):
         """ Block until a top level content poll is lost. """
         def waitFunc():
             return self.hasLostTopLevelContentPoll(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForLostTopLevelNamePoll(self, au, timeout=DEF_TIMEOUT,
                                     sleep=DEF_SLEEP):
         """ Block until a top level name poll is lost. """
         def waitFunc():
             return self.hasLostTopLevelNamePoll(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForLostNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                                     sleep=DEF_SLEEP):
         """ Block until a node name poll is lost. """
         def waitFunc():
             return self.hasLostNamePoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
 
     def waitForLostSNCUSSContentPoll(self, au, node, timeout=DEF_TIMEOUT,
@@ -713,81 +715,82 @@ class Client:
         """ Block until a top level name poll is lost. """
         def waitFunc():
             return self.hasLostSNCUSSContentPoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonTopLevelContentPoll(self, au, timeout=DEF_TIMEOUT,
                                        sleep=DEF_SLEEP):
         """ Block until a top level content poll is won. """
         def waitFunc():
             return self.hasWonTopLevelContentPoll(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonTopLevelNamePoll(self, au, timeout=DEF_TIMEOUT,
                                     sleep=DEF_SLEEP):
         """ Block until a top level name poll is won. """
         def waitFunc():
             return self.hasWonTopLevelNamePoll(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                         sleep=DEF_SLEEP):
         """ Block until a node level name poll is run (active or won) """
         def waitFunc():
             return self.hasNamePoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                            sleep=DEF_SLEEP):
         """ Block until a node level name poll is won. """
         def waitFunc():
             return self.hasWonNamePoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonSNCUSSContentPoll(self, au, node, timeout=DEF_TIMEOUT,
                                      sleep=DEF_SLEEP):
         """ Block until a SNCUSS content poll is won. """
         def waitFunc():
             return self.hasWonSNCUSSContentPoll(au,  node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                               sleep=DEF_SLEEP):
         """ Block until a ranged name poll has occured (active or won)"""
         def waitFunc():
             return self.hasRangedNamePoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForWonRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                                  sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasWonRangedNamePoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForLostRangedNamePoll(self, au, node, timeout=DEF_TIMEOUT,
                                   sleep=DEF_SLEEP):
         def waitFunc():
             return self.hasLostRangedNamePoll(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForTopLevelDamage(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-        """ Block until an au is marked 'Damaged' at the top level (lockssau:). """
+        """ Block until an au is marked 'Damaged' at the top level
+        (lockssau:). """
         def waitFunc():
             return self.isAuDamaged(au, None)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForDamage(self, au, node, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Block until a node is marked 'repairing', or until the
         timeout expires. """
         def waitFunc():
             return self.isAuDamaged(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForTopLevelRepair(self, au, timeout=DEF_TIMEOUT,
                               sleep=DEF_SLEEP):
         """ Block until the top-level of the AU is marked repaired. """
         def waitFunc():
             return self.isAuOK(au)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForContentRepair(self, au, node, timeout=DEF_TIMEOUT,
                              sleep=DEF_SLEEP):
@@ -795,7 +798,7 @@ class Client:
         the timeout expires."""
         def waitFunc():
             return self.isContentRepaired(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,
                           sleep=DEF_SLEEP):
@@ -804,51 +807,68 @@ class Client:
         the base URL has been marked repaired."""
         def waitFunc():
             return self.isNameRepaired(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForRangedNameRepair(self, au, node=None, timeout=DEF_TIMEOUT,
                                 sleep=DEF_SLEEP):
         def waitFunc():
             return self.isRangedNameRepaired(au, node)
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
 
     def waitForDaemonReady(self, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Block until the framework is ready for client communication """
         def waitFunc():
             return self.isFrameworkReady()
-        return wait(waitFunc, timeout, sleep)
+        return self.wait(waitFunc, timeout, sleep)
+
+    def wait(self, condFunc, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        """ Given a function to evaluate, loop until the function evals to
+        true, or until the timeout has expired. """
+        start = time.time()
+        while(time.time() - start) < timeout:
+            if condFunc():
+                return True
+            else:
+                time.sleep(sleep)
+        # fall out, condition wasn't met.
+        return False
 
     ###
     ### Methods for causing damage
     ###
 
     def randomDamageSingleNode(self, au):
+        """ Randomly select a node with content, and cause damage in it. """
         node = self.__getRandomNode(au)
         self.damageNode(node)
         return node
 
-    def randomDamageRandomNodes(self, au, minCount=1, maxCount=10):
-        """ Damage a random selection of nodes with content for the given au.
-        Returns the list of damaged nodes as a tuple. """
+    def randomDamageRandomNodes(self, au, minCount=1, maxCount=3):
+        """ Damage a random selection of between minCount and maxCount
+        nodes with content for the given au.  Returns the list of
+        damaged nodes. """
         nodeList = self.__getRandomNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.damageNode(node)
         return nodeList
 
     def randomDelete(self, au):
+        """ Randomly select a node with content, and delete it. """
         node = self.__getRandomNode(au)
         self.deleteNode(node)
         return node
 
-    def randomDeleteRandomNodes(self, au, minCount=1, maxCount=10):
-        """ Delete a random selection of nodes with content for the given au.
-        Returns the list of damaged nodes as a tuple. """
+    def randomDeleteRandomNodes(self, au, minCount=1, maxCount=3):
+        """ Delete a random selection of between minCount and maxCount
+        nodes with content for the given au.  Returns the list of
+        damaged nodes as a tuple. """
         nodeList = self.__getRandomNodeList(au, minCount, maxCount)
         for node in nodeList:
             self.deleteNode(node)
         return nodeList
 
     def damageNode(self, node):
+        """ Damage a specific node. """
         # Only want to damage the file contents
         file = node.file
         fullPath = path.join(file, '#content', 'current')
@@ -860,6 +880,7 @@ class Client:
             raise LockssError("File does not exist: %s" % f)
 
     def deleteNode(self, node):
+        """ Delete a specific node. """
         f = node.file
         if path.isfile(f):
             os.unlink(f)
@@ -872,10 +893,10 @@ class Client:
         """ Create an extra file in the repository under the given AU and
         filespec.  The filespec should be relative to the AU's root, for example
         'foo/bar' would attempt to create the file
-        /path/to/au/repository/www.example.com/http/foo/bar """
+        /path/to/au/repository/www.example.com/http/foo/bar.  Returns
+        the new file. """
         root = self.getAuRoot(au)
         output = path.join(root, filespec)
-
         if path.isfile(output):
             raise LockssError("File already exists: %s" % filespec)
         f = open(output, 'w')
@@ -884,7 +905,8 @@ class Client:
         return output
 
     def createNode(self, au, filespec):
-        """ Create an extra node with no node properties. """
+        """ Create an extra node with no node properties under the
+        given AU. Returns the new node. """
         root = self.getAuRoot(au)
 
         nodeRoot = path.join(root, filespec)
@@ -936,10 +958,9 @@ class Client:
 
     def __getStatusTable(self, statusTable, key=None, numrows=None):
         """ Given an XML string, parse it as a status table and return
-        a list of dictionaries representing the status table.  Each
-        item in the list is a dictionary of column names to values,
-        stored as Unicode strings."""
-
+        a list of dictionaries representing the data.  Each item in
+        the list is a dictionary of column names to values, stored as
+        Unicode strings. """
         post = self.__makePost('DaemonStatus')
         post.add('table', statusTable)
         if not key == None:
@@ -1135,7 +1156,8 @@ class LockssDaemon:
         cmd = '%s -cp %s -Dorg.lockss.defaultLogLevel=debug '\
               'org.lockss.app.LockssDaemon %s > %s/test.out 2>&1 & '\
               'echo $! > %s/dpid'\
-              % (self.javaBin, self.cp, ' '.join(self.configList), self.dir, self.dir)
+              % (self.javaBin, self.cp, ' '.join(self.configList),
+                 self.dir, self.dir)
         os.system(cmd)
         self.pid = open(path.join(self.dir, 'dpid'), 'r').readline()
 
@@ -1264,19 +1286,6 @@ def loadConfig(f):
 
     fd.close()
     return config
-
-
-def wait(condFunc, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
-    """ Given a function to evaluate, loop until the function evals to
-    true, or until the timeout has expired. """
-    start = time.time()
-    while(time.time() - start) < timeout:
-        if condFunc():
-            return True
-        else:
-            time.sleep(sleep)
-    # fall out, condition wasn't met.
-    return False
 
 def log(msg):
     """ Write to stdout with a timestamp """

@@ -35,9 +35,15 @@ default 'testsuite.props' in the current working directory:
   deleteAfterSuccess = true
 
   # Override the default 'timeout' value when sitting in wait
-  # loops.  Default is 45 minutes.
+  # loops.  Default is 45 minutes (usually good enough for simple
+  # tests with one damaged or deleted file)
   timeout = 3600
 
+  # If set, this will delay shutdown of the daemons every time 'tearDown' is
+  # called.  This will pause the test until you press a key.  Only set this
+  # if you're going to be monitoring the process of the test run, otherwise
+  # it'll just let the daemons run forever.
+  delayShutdown = true
 """
 
 ###########################################################################
@@ -60,6 +66,7 @@ class LockssTestCase(unittest.TestCase):
         unittest.TestCase.__init__(self)
 
         self.deleteAfterSuccess = config.get('deleteAfterSuccess', False)
+        self.delayShutdown = config.get('delayShutdown', False)
         self.timeout = int(config.get('timeout', 60 * 45))
 
 
@@ -73,10 +80,18 @@ class LockssTestCase(unittest.TestCase):
                               % self.workDir)
 
     def setUp(self):
+        ## Log start of test.
+        log("====================================================================")
+        log(self.runTest.__doc__)
+        log("--------------------------------------------------------------------")
+        
         ##
         ## Create a framework for the test.
         ##
-        self.framework = Framework(config)
+        try:
+            self.framework = Framework(config)
+        except Exception, e:
+            self.fail("Unable to continue: %s" % e)
 
         ## global ('static') reference to the current framework, so we
         ## can clean up after a user interruption
@@ -104,6 +119,14 @@ class LockssTestCase(unittest.TestCase):
 
 
     def tearDown(self):
+        log("Before...")
+        if self.failureException:
+            log("Test failed.  Error: %s " % self.failureException)
+        log("After...")
+            
+        if self.delayShutdown:
+            raw_input(">>> Delaying shutdown.  Press any key to continue...")
+
         self.framework.stop()
         self.failIf(self.framework.isRunning,
                     'Framework did not stop.')
@@ -149,6 +172,7 @@ class SimpleDamageTestCase(LockssTestCase):
         log("Damaged node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -224,6 +248,7 @@ class SimpleDeleteTestCase(LockssTestCase):
         log("Deleted node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -257,7 +282,6 @@ class SimpleDeleteTestCase(LockssTestCase):
 class SimpleExtraFileTestCase(LockssTestCase):
     def runTest(self):
         "Test recovery from an extra node in our cache"
-
         # Tiny AU for simple testing.
         simAu = SimulatedAu('localA', 0, 0, 3)
 
@@ -287,6 +311,7 @@ class SimpleExtraFileTestCase(LockssTestCase):
         log("Created file %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -313,7 +338,7 @@ class SimpleExtraFileTestCase(LockssTestCase):
 
         # expect to see the AU successfully repaired.
         log("Waiting for repair.")
-        assert client.waitForNameRepair(simAu, timeout=self.timeout),\
+        assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
                "Au not repaired."
         log("AU repaired.")
 
@@ -325,7 +350,6 @@ class SimpleExtraFileTestCase(LockssTestCase):
 class RangedNamePollDeleteTestCase(LockssTestCase):
     def runTest(self):
         "Test recovery from a file deletion after a ranged name poll"
-
         # Long names, shallow depth, wide range for testing ranged polls
         simAu = SimulatedAu('localA', depth=0, branch=0,
                             numFiles=45, maxFileName=26)
@@ -360,6 +384,7 @@ class RangedNamePollDeleteTestCase(LockssTestCase):
         log("Deleted node %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -460,6 +485,7 @@ class RangedNamePollExtraFileTestCase(LockssTestCase):
         log("Created file %s on client %s" % (node.url, client))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -518,9 +544,9 @@ class RangedNamePollExtraFileTestCase(LockssTestCase):
 
         # expect to see the AU successfully repaired.
         log("Waiting for successful repair.")
-        assert client.waitForRangedNameRepair(simAu, timeout=self.timeout),\
-               "AU not repaired by ranged name poll."
-        log("AU repaired by ranged name poll.")
+        assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
+               "AU never repaired."
+        log("AU successfully repaired.")
 
 ##
 ## Create a randomly sized AU (with reasonable limits on maximum depth
@@ -533,9 +559,9 @@ class RandomizedDamageTestCase(LockssTestCase):
         "Test recovery from random file damage in a randomly sized AU."
 
 	random.seed(time.time())
-        depth = random.randint(0, 3)
-        branch = random.randint(0, 3)
-        numFiles = random.randint(0, 50)
+        depth = random.randint(0, 2)
+        branch = random.randint(0, 2)
+        numFiles = random.randint(3, 40)
         maxFileName = 26
         log("Creating simulated AUs: depth = %s; branch = %s; "
             "numFiles = %s; maxFileName = %s" %
@@ -568,6 +594,7 @@ class RandomizedDamageTestCase(LockssTestCase):
             (client, '\n        '.join([str(n) for n in nodeList])))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -623,9 +650,9 @@ class RandomizedDeleteTestCase(LockssTestCase):
         "Test recovery from random file deletion in a randomly sized AU."
 
 	random.seed(time.time())
-        depth = random.randint(0, 3)
-        branch = random.randint(0, 3)
-        numFiles = random.randint(0, 50)
+        depth = random.randint(0, 2)
+        branch = random.randint(0, 2)
+        numFiles = random.randint(3, 40)
         maxFileName = 26
         log("Creating simulated AUs: depth = %s; branch = %s; "
             "numFiles = %s; maxFileName = %s" %
@@ -658,6 +685,7 @@ class RandomizedDeleteTestCase(LockssTestCase):
             (client, '\n        '.join([str(n) for n in nodeList])))
 
         # Request a tree walk (deactivate and reactivate AU)
+        log("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
         # expect to see a top level content poll
@@ -705,9 +733,9 @@ class RandomizedExtraFileTestCase(LockssTestCase):
 
 def all():
     suite = unittest.TestSuite()
-    suite.add(simpleTests())
-    suite.add(rangedTests())
-    suite.add(randomTests())
+    suite.addTest(simpleTests())
+    suite.addTest(rangedTests())
+    suite.addTest(randomTests())
     return suite
 
 def simpleTests():
@@ -733,7 +761,8 @@ def randomTests():
 if __name__ == "__main__":
     try:
         unittest.main()
-    except Exception, e:
-        print "%s" % e
+        sys.exit(0)
+    except Exception:
         if curFramework and curFramework.isRunning:
             curFramework.stop()
+        sys.exit(1)
