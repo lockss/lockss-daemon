@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.10 2003-02-27 07:30:05 tal Exp $
+ * $Id: PluginManager.java,v 1.11 2003-02-28 00:23:49 troberts Exp $
  */
 
 /*
@@ -257,7 +257,7 @@ public class PluginManager implements LockssManager {
   /**
    * Find the CachedUrlSet from a PollSpec.
    * @param spec the PollSpec (from an incoming message)
-   * @returns a CachedUrlSet for the plugin, au and URL in the spec, or
+   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
    * null if au not present on this cache
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
