@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.7 2004-02-23 09:12:05 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.8 2004-03-07 08:36:58 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,8 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals(root, UrlUtil.getUrlPrefix(url));
   }
 
-  public void testGetUrlPrefixRootHighWireUrlWithOddPort() throws MalformedURLException{
+  public void testGetUrlPrefixRootHighWireUrlWithOddPort()
+      throws MalformedURLException{
     String root = "http://shadow8.stanford.edu:8080";
     String url = root + "/lockss-volume327.shtml";
     assertEquals(root, UrlUtil.getUrlPrefix(url));
@@ -126,6 +127,25 @@ public class TestUrlUtil extends LockssTestCase {
     }
     catch (MalformedURLException mue) {
     }
+  }
+
+  public void testResolveUrl() throws Exception {
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("ftp://gorp.org/xxx.jpg",
+				    "http://test.com/foo/bar/a.html"));
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/xxx.html",
+				    "a.html"));
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/baz/xxx.html",
+				    "../a.html"));
+    assertEquals("http://test.com/foo/bar/a.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "a.html"));
+    try {
+      UrlUtil.resolveUri("foo", "bar");
+      fail("Should throw MalformedURLException");
+    } catch (MalformedURLException e) {}
   }
 
   public void testGetHeadersNullConnection() {

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.11 2004-02-27 04:28:49 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.12 2004-03-07 08:36:58 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -70,6 +70,130 @@ public class UrlUtil {
       StringUtil.equalStrings(u1.getRef(), u2.getRef());
   }
 
+  /** Return true if an http: or https: url */
+  // XXX does this need to trim blanks?
+  public static boolean isHttpUrl(String url) {
+    return StringUtil.startsWithIgnoreCase(url, "http:") ||
+      StringUtil.startsWithIgnoreCase(url, "https:");
+  }
+
+  /**
+   * @param urlStr string representation of a url
+   * @return urlStr up to but not including the path
+   * @throws MalformedURLException if urlStr is not a well formed URL
+   */
+  public static String getUrlPrefix(String urlStr)
+      throws MalformedURLException{
+    URL url = new URL(urlStr);
+    URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "");
+    return url2.toString();
+  }
+
+  /**
+   * @param urlStr string representation of a url
+   * @return the host portion of the url
+   * @throws MalformedURLException if urlStr is not a well formed URL
+   */
+  public static String getHost(String urlStr) throws MalformedURLException {
+    URL url = new URL(urlStr);
+    return url.getHost();
+  }
+
+  /**
+   * @param urlStr string representation of a url
+   * @return the domain portion of the hostname
+   * @throws MalformedURLException if urlStr is not a well formed URL
+   */
+  public static String getDomain(String urlStr) throws MalformedURLException {
+    String host = getHost(urlStr);
+    int pos = host.indexOf('.');
+    if (pos == -1 || pos == (host.length() - 1)) {
+      return host;
+    } else {
+      return host.substring(pos + 1);
+    }
+  }
+
+  /** Reconstructs the URL the client used to make the request, using
+   * information in the HttpServletRequest object. The returned URL
+   * contains a protocol, server name, port number, and server path, but it
+   * does not include query string parameters.  This method duplicates the
+   * deprecated method from javax.servlet.http.HttpUtils
+   * @param req - a HttpServletRequest object containing the client's request
+   * @return string containing the reconstructed URL
+   */
+  // http://hostname.com:80/mywebapp/servlet/MyServlet/a/b;c=123?d=789
+  public static String getRequestURL(HttpServletRequest req) {
+    String scheme = req.getScheme();             // http
+    String serverName = req.getServerName();     // hostname.com
+    int serverPort = req.getServerPort();        // 80
+    String contextPath = req.getContextPath();   // /mywebapp
+    String servletPath = req.getServletPath();   // /servlet/MyServlet
+    String pathInfo = req.getPathInfo();         // /a/b;c=123
+//     String queryString = req.getQueryString();          // d=789
+
+    // Reconstruct original requesting URL
+    StringBuffer sb = new StringBuffer(40);
+    sb.append(scheme);
+    sb.append("://");
+    sb.append(serverName);
+    sb.append(":");
+    sb.append(serverPort);
+    sb.append(contextPath);
+    sb.append(servletPath);
+    if (pathInfo != null) {
+      sb.append(pathInfo);
+    }
+//     if (queryString != null) {
+//       sb.append("?");
+//       sb.append(queryString);
+//     }
+    return sb.toString();
+  }
+
+  /** Resolve possiblyRelativeUrl relative to baseUrl.
+   * @param baseUrl The base URL relative to which to resolve
+   * @param possiblyRelativeUrl resolved relative to baseUrl
+   * @return The URL formed by combining the two URLs
+   */
+  public static String resolveUri(String baseUrl, String possiblyRelativeUrl)
+      throws MalformedURLException {
+    try {
+      URI resultURI = new URI(possiblyRelativeUrl.toCharArray());
+      if (resultURI.isRelativeURI()) {
+	//location is incomplete, use base values for defaults
+	URI baseURI = new URI(baseUrl.toCharArray());
+	resultURI = new URI(baseURI, resultURI);
+      }
+      return resultURI.toString();
+    } catch (URIException e) {
+      throw new MalformedURLException(e.toString());
+    }
+  }
+
+  /**
+   * Return a list of header fields (in the format "key;fieldValue") for conn
+   * @param conn URLConnection to get headers from
+   * @return list of header fields (in the format "key;fieldValue") for conn
+   * @throws IllegalArgumentException if a null conn is supplied
+   */
+  public static List getHeaders(URLConnection conn) {
+    if (conn == null) {
+      throw new IllegalArgumentException("Called with null URLConnection");
+    }
+    List returnList = new ArrayList();
+    boolean done = false;
+    for(int ix=0; !done; ix++) {
+      String headerField = conn.getHeaderField(ix);
+      String headerFieldKey = conn.getHeaderFieldKey(ix);
+      done = (headerField == null && headerFieldKey == null);
+      if (!done) {
+	returnList.add(headerFieldKey+";"+headerField);
+      }
+    }
+    return returnList;
+  }
+
   /** Return input stream for url iff 200 response code, else throw.
    * @param urlString the url
    * @return an InputStream
@@ -110,13 +234,6 @@ public class UrlUtil {
 	throw e;
       }
     }
-  }
-
-  /** Return true if an http: or https: url */
-  // XXX does this need to trim blanks?
-  public static boolean isHttpUrl(String url) {
-    return StringUtil.startsWithIgnoreCase(url, "http:") ||
-      StringUtil.startsWithIgnoreCase(url, "https:");
   }
 
   /** Return input stream for url.  If url is http or https, uses Jakarta
@@ -225,100 +342,4 @@ public class UrlUtil {
 //     }
 //   }
 
-  /**
-   * @param urlStr string representation of a url
-   * @return urlStr up to but not including the path
-   * @throws MalformedURLException if urlStr is not a well formed URL
-   */
-  public static String getUrlPrefix(String urlStr)
-      throws MalformedURLException{
-    URL url = new URL(urlStr);
-    URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "");
-    return url2.toString();
-  }
-
-  /**
-   * @param urlStr string representation of a url
-   * @return the host portion of the url
-   * @throws MalformedURLException if urlStr is not a well formed URL
-   */
-  public static String getHost(String urlStr) throws MalformedURLException {
-    URL url = new URL(urlStr);
-    return url.getHost();
-  }
-
-  /**
-   * @param urlStr string representation of a url
-   * @return the domain portion of the hostname
-   * @throws MalformedURLException if urlStr is not a well formed URL
-   */
-  public static String getDomain(String urlStr) throws MalformedURLException {
-    String host = getHost(urlStr);
-    int pos = host.indexOf('.');
-    if (pos == -1 || pos == (host.length() - 1)) {
-      return host;
-    } else {
-      return host.substring(pos + 1);
-    }
-  }
-
-  /** Reconstructs the URL the client used to make the request, using
-   * information in the HttpServletRequest object. The returned URL
-   * contains a protocol, server name, port number, and server path, but it
-   * does not include query string parameters.  This method duplicates the
-   * deprecated method from javax.servlet.http.HttpUtils
-   * @param req - a HttpServletRequest object containing the client's request
-   * @return string containing the reconstructed URL
-   */
-  // http://hostname.com:80/mywebapp/servlet/MyServlet/a/b;c=123?d=789
-  public static String getRequestURL(HttpServletRequest req) {
-    String scheme = req.getScheme();             // http
-    String serverName = req.getServerName();     // hostname.com
-    int serverPort = req.getServerPort();        // 80
-    String contextPath = req.getContextPath();   // /mywebapp
-    String servletPath = req.getServletPath();   // /servlet/MyServlet
-    String pathInfo = req.getPathInfo();         // /a/b;c=123
-//     String queryString = req.getQueryString();          // d=789
-
-    // Reconstruct original requesting URL
-    StringBuffer sb = new StringBuffer(40);
-    sb.append(scheme);
-    sb.append("://");
-    sb.append(serverName);
-    sb.append(":");
-    sb.append(serverPort);
-    sb.append(contextPath);
-    sb.append(servletPath);
-    if (pathInfo != null) {
-      sb.append(pathInfo);
-    }
-//     if (queryString != null) {
-//       sb.append("?");
-//       sb.append(queryString);
-//     }
-    return sb.toString();
-  }
-
-  /**
-   * Return a list of header fields (in the format "key;fieldValue") for conn
-   * @param conn URLConnection to get headers from
-   * @return list of header fields (in the format "key;fieldValue") for conn
-   * @throws IllegalArgumentException if a null conn is supplied
-   */
-  public static List getHeaders(URLConnection conn) {
-    if (conn == null) {
-      throw new IllegalArgumentException("Called with null URLConnection");
-    }
-    List returnList = new ArrayList();
-    boolean done = false;
-    for(int ix=0; !done; ix++) {
-      String headerField = conn.getHeaderField(ix);
-      String headerFieldKey = conn.getHeaderFieldKey(ix);
-      done = (headerField == null && headerFieldKey == null);
-      if (!done) {
-	returnList.add(headerFieldKey+";"+headerField);
-      }
-    }
-    return returnList;
-  }
 }
