@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.7 2002-12-17 02:06:53 aalto Exp $
+ * $Id: NullPlugin.java,v 1.8 2002-12-19 01:28:40 aalto Exp $
  */
 
 /*
@@ -234,10 +234,6 @@ public class NullPlugin {
     }
     public int hashStep(int numBytes) {
       return 0;
-    }
-
-    public int getBytesPerMsEstimate() {
-      return 1;
     }
   }
 }

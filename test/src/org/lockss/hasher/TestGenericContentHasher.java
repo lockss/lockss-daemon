@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.2 2002-12-17 02:06:53 aalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.3 2002-12-19 01:28:40 aalto Exp $
  */
 
 /*
@@ -153,16 +153,6 @@ public class TestGenericContentHasher extends LockssTestCase {
     for (int ix=0; ix<bytes.length; ix++) {
       assertEquals(bytes[ix], dig.getUpdatedByte());
     }
-  }
-
-  public void testHashEstimation() throws IOException {
-    CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-    long startTime = TimeBase.nowMs();
-    long estimate = hasher.getBytesPerMsEstimate();
-    long endTime = TimeBase.nowMs();
-    assertTrue(estimate > 0);
-    assertTrue(endTime - startTime > GenericHasher.HASH_TEST_DURATION);
   }
 
   private Vector cachedUrlSetToBytes(CachedUrlSet cus) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetHasher.java,v 1.3 2002-12-19 01:28:40 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.1 2002-12-19 01:28:40 aalto Exp $
  */
 
 /*
@@ -30,54 +30,34 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
+package org.lockss.daemon;
 
-import java.util.*;
-import java.security.MessageDigest;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
+import java.io.IOException;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
 /**
- * Mock version of <code>CachedUrlSetHasher</code> used for testing
+ * Test class for SystemMetrics.
  */
-public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
-  long duration;
-  int bytes;
-  Error toThrow;
+public class TestSystemMetrics extends LockssTestCase {
+  private SystemMetrics metrics;
 
-  public MockCachedUrlSetHasher(int numbytes) {
-    this.bytes = numbytes;
+  public TestSystemMetrics(String msg) {
+    super(msg);
   }
 
-  public MockCachedUrlSetHasher() {
+  public void setUp() throws Exception {
+    super.setUp();
+    metrics = SystemMetrics.getSystemMetrics();
   }
 
-  public boolean finished() {
-    return bytes <= 0;
-  }
-
-  public int hashStep(int numBytes) {
-    if (toThrow != null) {
-      throw toThrow;
-    }
-    if (finished()) {
-      return 0;
-    }
-    numBytes = Math.max(1, Math.min(bytes, numBytes));
-    bytes -= numBytes;
-    return numBytes;
-  }
-
-  public void setNumBytes(int n) {
-    bytes = n;
-  }
-
-  public long getBytesLeft() {
-    return bytes;
-  }
-
-  public void throwThis(Error e) {
-    toThrow = e;
+  public void testHashEstimation() throws IOException {
+    MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
+    long startTime = TimeBase.nowMs();
+    long estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
+    long endTime = TimeBase.nowMs();
+    assertTrue(estimate > 0);
+    assertTrue(endTime - startTime > SystemMetrics.HASH_TEST_DURATION);
   }
 
 }

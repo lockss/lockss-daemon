@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.4 2002-12-17 20:20:26 aalto Exp $
+ * $Id: GenericHasher.java,v 1.5 2002-12-19 01:28:40 aalto Exp $
  */
 
 /*
@@ -41,10 +41,6 @@ import org.lockss.util.*;
  * General class to handle content hashing
  */
 public abstract class GenericHasher implements CachedUrlSetHasher {
-  static final int HASH_TEST_DURATION = 1000;
-  static final int HASH_TEST_BYTE_STEP = 1024;
-  static final int MIN_BYTES_TO_HASH = 100;
-
   private CachedUrlSet cus = null;
   protected MessageDigest digest = null;
   private Object curElement = null;
@@ -52,8 +48,6 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected boolean isFinished = false;
   protected boolean shouldGetNextElement = true;
   protected static Logger log = Logger.getLogger("GenericHasher");
-  private static int bytesPerMsEst = 0;
-
 
   protected GenericHasher(CachedUrlSet cus, MessageDigest digest) {
     this.cus = cus;
@@ -100,21 +94,6 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
       bytesLeftToHash -= numBytesHashed;
     }
     return numBytes;
-  }
-
-  public int getBytesPerMsEstimate() throws IOException {
-    if (bytesPerMsEst == 0) {
-      long timeTaken = 0;
-      long bytesHashed = 0;
-      long startTime = TimeBase.nowMs();
-      Deadline deadline = Deadline.in(HASH_TEST_DURATION);
-      while (!deadline.expired()) {
-        bytesHashed += hashStep(HASH_TEST_BYTE_STEP);
-      }
-      timeTaken = TimeBase.nowMs() - startTime;
-      bytesPerMsEst = (int)(bytesHashed / timeTaken);
-    }
-    return bytesPerMsEst;
   }
 
   /*

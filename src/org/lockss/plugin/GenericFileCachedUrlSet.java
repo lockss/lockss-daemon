@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.12 2002-12-17 23:29:53 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.13 2002-12-19 01:28:40 aalto Exp $
  */
 
 /*
@@ -174,8 +174,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       MessageDigest hasher = PollManager.getPollManager().getHasher();
       CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
       long bytesPerMs = 0;
+      SystemMetrics metrics = SystemMetrics.getSystemMetrics();
       try {
-        bytesPerMs = cush.getBytesPerMsEstimate();
+        bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       } catch (IOException ie) {
         logger.error("Couldn't finish estimating hash time: "+ie);
         return totalNodeSize * BYTES_PER_MS_DEFAULT;
