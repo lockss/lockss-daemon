@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.16 2003-04-18 20:24:28 tal Exp $
+ * $Id: ServletManager.java,v 1.17 2003-04-21 05:39:51 tal Exp $
  */
 
 /*
@@ -49,6 +49,9 @@ import org.mortbay.jetty.servlet.*;
  */
 public class ServletManager extends JettyManager {
 
+  public static final String UI_REALM = "LOCKSS Admin";
+  public static final String PASSWORD_PROPERTY_FILE = "admin.props";
+
   public static final String PREFIX = Configuration.PREFIX + "ui.";
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
@@ -58,6 +61,8 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
+
+  public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
 
   public static final String PARAM_LOGDIR =
     Configuration.PREFIX +  "platform.logdirectory";
@@ -78,6 +83,7 @@ public class ServletManager extends JettyManager {
   private String includeIps;
   private String excludeIps;
   private boolean logForbidden;
+  private boolean doAuth;
   private String logdir;
 
   List accessHandlers = new ArrayList();
@@ -113,6 +119,7 @@ public class ServletManager extends JettyManager {
     port = config.getInt(PARAM_PORT, DEFAULT_PORT);
     start = config.getBoolean(PARAM_START, DEFAULT_START);
     logdir = config.get(PARAM_LOGDIR);
+    doAuth = config.getBoolean(PARAM_USER_AUTH, true);
 
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
@@ -181,6 +188,7 @@ public class ServletManager extends JettyManager {
   }
 
   public void configureDebugServlets() {
+    ClassLoader loader = Thread.currentThread().getContextClassLoader();
     try {
       if (logdir != null) {
 	// Create a context
@@ -225,6 +233,22 @@ public class ServletManager extends JettyManager {
       // IpAccessHandler is first
       addAccessHandler(context);
 
+      // then user authentication
+      if (doAuth) {
+	URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
+	if (propsUrl != null) {
+	  log.debug("passwd props file: " + propsUrl);
+	  UserRealm realm = new HashUserRealm(UI_REALM, propsUrl.toString());
+	  context.setRealm(realm);
+	  context.setAuthenticator(new BasicAuthenticator());
+	  context.addHandler(new SecurityHandler());
+	  context.addSecurityConstraint("/",
+					new SecurityConstraint("Admin", "*"));
+	} else {
+	  log.warning("Passwd file not found, not authenticating users.");
+	}
+      }
+
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
 
@@ -239,7 +263,6 @@ public class ServletManager extends JettyManager {
 
       // ResourceHandler should come after servlets
       // find the htdocs directory, set as resource base
-      ClassLoader loader = Thread.currentThread().getContextClassLoader();
       URL resourceUrl=loader.getResource("org/lockss/htdocs/");
       log.debug("Resource URL: " + resourceUrl);
 
