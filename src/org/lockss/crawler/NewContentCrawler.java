@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.38 2004-09-27 23:36:58 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.39 2004-09-27 23:46:45 dcfok Exp $
  */
 
 /*
@@ -52,6 +52,12 @@ public class NewContentCrawler extends FollowLinkCrawler {
     return Crawler.NEW_CONTENT;
   }
 
+  /**
+   * Keeps crawling from the baseUrl til it hits the refetchDepth 
+   * to extract url for newly added pages since last crawl.
+   * 
+   * @return a set of urls that contains updated content.
+   */
   protected Set getLinks(){
     Set extractedUrls = new HashSet();
     int refetchDepth0 = spec.getRefetchDepth();
