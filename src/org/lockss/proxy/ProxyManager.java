@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.7 2003-04-14 07:30:35 tal Exp $
+ * $Id: ProxyManager.java,v 1.8 2003-04-14 23:14:52 tal Exp $
  */
 
 /*
@@ -51,14 +51,14 @@ public class ProxyManager extends JettyManager {
   public static final String PARAM_START = PREFIX + "start";
   public static final String PARAM_PORT = PREFIX + "port";
 
-  // tk - for now use same params as ui
-//   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
-  public static final String IP_ACCESS_PREFIX =
-    org.lockss.servlet.ServletManager.IP_ACCESS_PREFIX;
+  public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
+
+  public static final String PARAM_PLATFORM_ACCESS_SUBNET =
+    Configuration.PARAM_PLATFORM_ACCESS_SUBNET;
 
   private int port;
   private boolean start;
@@ -97,7 +97,8 @@ public class ProxyManager extends JettyManager {
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
-      includeIps = config.get(PARAM_IP_INCLUDE, "");
+      includeIps = config.get(PARAM_IP_INCLUDE,
+			      config.get(PARAM_PLATFORM_ACCESS_SUBNET, ""));
       excludeIps = config.get(PARAM_IP_EXCLUDE, "");
       logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
       log.debug("Installing new ip filter: incl: " + includeIps +
