@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.43 2004-12-08 00:42:09 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.44 2005-01-04 03:05:43 tlipkis Exp $
  */
 
 /*
@@ -96,25 +96,19 @@ public class TestStringUtil extends LockssTestCase {
 		 StringUtil.truncateAt("test|blah", '0'));
   }
 
-  public void testGetIndexIgnoringCaseNullString() {
-    assertEquals(-1, StringUtil.getIndexIgnoringCase(null, "blah"));
-  }
-
-  public void testGetIndexIgnoringCaseNullSubString() {
-    assertEquals(-1, StringUtil.getIndexIgnoringCase("blah", null));
-  }
-
-  public void testGetIndexIgnoringCaseCapedString() {
-    String testStr = "blahTeStblah";
-    assertEquals(4, StringUtil.getIndexIgnoringCase(testStr, "test"));
-  }
-
-  public void testGetIndexIgnoringCaseDoesntChangeStrs() {
-    String testStr = "blahTeStblah";
-    String testSubStr = "test";
-    StringUtil.getIndexIgnoringCase(testStr, testSubStr);
-    assertEquals("test", testSubStr);
-    assertEquals("blahTeStblah", testStr);
+  public void testIndexOfIgnoreCase() {
+    String testStr, testSubStr;
+    // both null cases
+    assertEquals(-1, StringUtil.indexOfIgnoreCase(null, "blah"));
+    assertEquals(-1, StringUtil.indexOfIgnoreCase("blah", null));
+    assertEquals(0, StringUtil.indexOfIgnoreCase("foo", "foo"));
+    assertEquals(0, StringUtil.indexOfIgnoreCase("foo1", "foo"));
+    // simple tests
+    testStr = "blahTeStblahtest";
+    assertEquals(4, StringUtil.indexOfIgnoreCase(testStr, "test"));
+    assertEquals(4, StringUtil.indexOfIgnoreCase(testStr, "test", 0));
+    assertEquals(4, StringUtil.indexOfIgnoreCase(testStr, "test", 4));
+    assertEquals(12, StringUtil.indexOfIgnoreCase(testStr, "test", 5));
   }
 
   public void testSeparatedString() {
@@ -431,6 +425,39 @@ System.out.println("s: "+s);
     assertEquals("-20d23h0m",
 		 StringUtil.timeIntervalToString(- (WEEK * 3 - (HOUR * 1))));
     assertEquals("3w0d0h", StringUtil.timeIntervalToString(WEEK * 3));
+  }
+
+  public void testParseSize() throws Exception {
+    long k = 1024;
+    long m = k*k;
+    assertEquals(0, StringUtil.parseSize("0"));
+    assertEquals(0, StringUtil.parseSize(" 0 "));
+    assertEquals(0, StringUtil.parseSize("0b"));
+    assertEquals(0, StringUtil.parseSize("0 B"));
+    assertEquals(0, StringUtil.parseSize("0GB"));
+    assertEquals(0, StringUtil.parseSize("0 gb"));
+    assertEquals(1000, StringUtil.parseSize("1000"));
+    assertEquals(1000, StringUtil.parseSize("1000b"));
+    assertEquals(123*k, StringUtil.parseSize("123KB"));
+    assertEquals((long)(4.2*m), StringUtil.parseSize("4.2mb"));
+    assertEquals(45*m*k, StringUtil.parseSize("45gb"));
+    assertEquals((long)(66.0*m*m), StringUtil.parseSize("66 tb"));
+    assertEquals(666*m*m*k, StringUtil.parseSize("666 pb"));
+    try {
+      StringUtil.parseSize("2x");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
+    try {
+      StringUtil.parseSize("");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
+    try {
+      StringUtil.parseSize("4.4.4");
+      fail("should have thrown NumberFormatException");
+    } catch (NumberFormatException e) {
+    }
   }
 
   public void testSizeKBToString() throws Exception {

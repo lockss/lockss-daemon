@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.49 2004-12-08 00:42:09 troberts Exp $
+ * $Id: StringUtil.java,v 1.50 2005-01-04 03:05:43 tlipkis Exp $
  */
 
 /*
@@ -327,9 +327,22 @@ public class StringUtil {
   }
 
   /** Like indexOf except is case-independent */
-  public static int getIndexIgnoringCase(String str, String subStr) {
-    if (str != null && subStr != null) {
-      return (str.toUpperCase()).indexOf(subStr.toUpperCase());
+  public static int indexOfIgnoreCase(String str, String substr) {
+    return indexOfIgnoreCase(str, substr, 0);
+  }
+
+  /** Like indexOf except is case-independent */
+  public static int indexOfIgnoreCase(String str, String substr,
+				      int fromIndex) {
+    if (str == null || substr == null) {
+      return -1;
+    }
+    int sublen = substr.length();
+    int last = str.length() - sublen;
+    for (int ix = fromIndex; ix <= last; ix++) {
+      if (str.regionMatches(true, ix, substr, 0, sublen)) {
+	return ix;
+      }
     }
     return -1;
   }
@@ -598,6 +611,45 @@ public class StringUtil {
     }
   }
 
+  private static Pattern sizePat =
+    RegexpUtil.uncheckedCompile("^([0-9.]+)\\s*([a-zA-Z]*)",
+				Perl5Compiler.READ_ONLY_MASK);
+
+  private static String suffixes[] = {"b", "KB", "MB", "GB", "TB", "PB"};
+
+  /** Parse a string as a size in bytes, with a optional suffix.  No suffix
+   * means bytes, kb, mb, gb, tb indicate kilo-, mega-, giga, tera-bytes
+   * respectively.
+   * @param str the size string
+   * @return size in bytes
+   */
+  public static long parseSize(String str) {
+    str = str.trim();
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    if (!matcher.contains(str, sizePat)) {
+      throw new NumberFormatException("Illegal size syntax: " + str);
+    }
+    MatchResult matchResult = matcher.getMatch();
+    String num = matchResult.group(1);
+    String suffix = matchResult.group(2);
+    try {
+      float f = Float.parseFloat(num);
+      long mult = 1;
+      if (StringUtil.isNullString(suffix)) {
+	return (long)f;
+      }
+      for (int ix = 0; ix < suffixes.length; ix++) {
+	if (suffix.equalsIgnoreCase(suffixes[ix])) {
+	  return (long)(f * mult);
+	}
+	mult *= 1024;
+      }
+      throw new NumberFormatException("Illegal size suffix: " + str);
+    } catch (NumberFormatException ex) {
+      throw new NumberFormatException("Illegal size syntax: " + str);
+    }
+  }
+
   /** Trim leading and trailing blank lines from a block of text */
   public static String trimBlankLines(String txt) {
     StringBuffer buf = new StringBuffer(txt);
@@ -689,7 +741,11 @@ public class StringUtil {
   private static final NumberFormat fmt_1dec = new DecimalFormat("0.0");
   private static final NumberFormat fmt_0dec = new DecimalFormat("0");
 
-  static final String[] byteSuffixes = {"KB", "MB", "GB", "TB"};
+  static final String[] byteSuffixes = {"KB", "MB", "GB", "TB", "PB"};
+
+  public static String sizeToString(long size) {
+    return sizeKBToString(size / 1024);
+  }
 
   public static String sizeKBToString(long size) {
     double base = 1024.0;
