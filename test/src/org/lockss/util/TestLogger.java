@@ -80,7 +80,7 @@ public class TestLogger extends TestCase{
 
  //  public void testOutputStringFormat()
 //   throws REException{
-//     Properties props = new Properties();
+//     Properties props = System.getProperties();
 //     props.setProperty("org.lockss.log.level.default", "debug");
 //     ByteArrayOutputStream baos = new ByteArrayOutputStream();
 //     PrintStream ps = new PrintStream(baos);
@@ -98,9 +98,8 @@ public class TestLogger extends TestCase{
 //   }
 
   public void testStaticLoggingAboveThreshold(){
-    Properties props = new Properties();
+    Properties props = System.getProperties();
     props.setProperty("org.lockss.log.level.default", "debug");
-    System.setProperties(props);
     Logger.loadProps();
     MockLogTarget target = new MockLogTarget();
     Logger.addTarget(target);
@@ -120,9 +119,8 @@ public class TestLogger extends TestCase{
   }
 
   public void testStaticLoggingBelowThreshold(){
-    Properties props = new Properties();
+    Properties props = System.getProperties();
     props.setProperty("org.lockss.log.level.default", "critical");
-    System.setProperties(props);
     Logger.loadProps();
     MockLogTarget target = new MockLogTarget();
     Logger.addTarget(target);
@@ -142,9 +140,8 @@ public class TestLogger extends TestCase{
   }
 
   public void testObjectLoggingBelowThreshold(){
-    Properties props = new Properties();
+    Properties props = System.getProperties();
     props.setProperty("org.lockss.log.level.test_id", "critical");
-    System.setProperties(props);
     MockLogTarget target = new MockLogTarget();
     Logger.addTarget(target);
     String callerId = "test_id";
@@ -159,9 +156,8 @@ public class TestLogger extends TestCase{
   }
 
   public void testObjectLoggingAboveThreshold(){
-    Properties props = new Properties();
+    Properties props = System.getProperties();
     props.setProperty("org.lockss.log.level.test_id", "warning");
-    System.setProperties(props);
     MockLogTarget target = new MockLogTarget();
     Logger.addTarget(target);
     String callerId = "test_id";
