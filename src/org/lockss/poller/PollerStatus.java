@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.2 2003-04-17 02:16:58 troberts Exp $
+* $Id: PollerStatus.java,v 1.3 2003-04-22 22:58:01 troberts Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class PollerStatus {
     private static final List sortRules = 
       ListUtil.list(
 		    new StatusTable.SortRule("AuID", true),
-		    new StatusTable.SortRule("URL", true),
+// 		    new StatusTable.SortRule("URL", true),
 		    new StatusTable.SortRule("Deadline", false)
 		    );
     private static final List columnDescriptors =
