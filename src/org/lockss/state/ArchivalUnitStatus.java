@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.2 2004-03-11 02:30:15 eaalto Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.3 2004-03-23 00:28:43 eaalto Exp $
  */
 
 /*
@@ -39,11 +39,19 @@ import org.lockss.repository.*;
  * Collect and report the status of the ArchivalUnits
  */
 public class ArchivalUnitStatus extends BaseLockssManager {
+  /**
+   * The maximum number of nodes to display in a single page of the ui.
+   */
+  public static final String PARAM_MAX_NODES_TO_DISPLAY =
+      "org.lockss.state.max.nodes.to.display";
+  static final int DEFAULT_MAX_NODES_TO_DISPLAY = 50;
+
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
   public static final String AU_STATUS_TABLE_NAME = "ArchivalUnitTable";
 
   private static Logger logger = Logger.getLogger("AuStatus");
+  private static int nodesToDisplay;
 
   public void startService() {
     super.startService();
@@ -71,6 +79,8 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 
   protected void setConfig(Configuration config, Configuration oldConfig,
                            Set changedKeys) {
+    nodesToDisplay = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
+                                   DEFAULT_MAX_NODES_TO_DISPLAY);
   }
 
   private static ArchivalUnit getArchivalUnit(String auId,
@@ -200,7 +210,11 @@ public class ArchivalUnitStatus extends BaseLockssManager {
                          NodeManager nodeMan) {
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
+      int dispCount = 0;
       while (cusIter.hasNext()) {
+        if (dispCount > nodesToDisplay) {
+          break;
+        }
         CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
         CachedUrlSet cus;
         if (cusn.getType() == cusn.TYPE_CACHED_URL_SET) {
@@ -213,6 +227,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
           rowL.add(makeRow(repo.getNode(cus.getUrl()),
                            nodeMan.getNodeState(cus)));
         } catch (MalformedURLException ignore) { }
+        dispCount++;
       }
       return rowL;
     }
