@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.41 2003-07-27 01:41:49 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.42 2003-07-30 05:37:14 tlipkis Exp $
  */
 
 /*
@@ -391,6 +391,7 @@ public class PluginManager extends BaseLockssManager {
   private void setPlugin(String pluginKey, Plugin plugin) {
     log.debug3(this +".setPlugin(" + pluginKey + ", " + plugin + ")");
     pluginMap.put(pluginKey, plugin);
+    titleMap = null;
   }
 
   /**
@@ -429,6 +430,37 @@ public class PluginManager extends BaseLockssManager {
    */
   public List getAllAUs() {
     return new ArrayList(auMap.values());
+  }
+
+  public Collection findAllTitles() {
+    return getTitleMap().keySet();
+  }
+
+  public Collection getTitlePlugins(String title) {
+    return (Collection)getTitleMap().get(title);
+  }
+
+  private Map titleMap = null;
+
+  public Map getTitleMap() {
+    if (titleMap == null) {
+      titleMap = buildTitleMap();
+    }
+    return titleMap;
+  }
+
+  Map buildTitleMap() {
+    Map map = new org.apache.commons.collections.MultiHashMap();
+    Collection plugs = getRegisteredPlugins();
+    for (Iterator iter = plugs.iterator(); iter.hasNext();) {
+      Plugin p = (Plugin)iter.next();
+      Collection titles = p.getSupportedTitles();
+      for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
+	String title = (String)iter2.next();
+	map.put(title, p);
+      }
+    }
+    return map;
   }
 
   /**
