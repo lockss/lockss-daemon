@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.3 2003-03-13 18:55:10 troberts Exp $
+ * $Id: StatusTable.java,v 1.4 2003-03-13 23:14:49 troberts Exp $
  */
 
 /*
@@ -228,7 +228,7 @@ public class StatusTable {
   /**
    * Object which refers to another table
    */
-  public static class Reference {
+  public static class Reference implements Comparable {
     private Object value;
     private String tableName;
     private Object key;
@@ -256,5 +256,41 @@ public class StatusTable {
     public Object getKey() {
       return key;
     }
+
+    public int compareTo(Object obj) {
+      Reference ref = (Reference)obj;
+      return ((Comparable)value).compareTo(ref.getValue());
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[StatusTable.Reference:");
+      sb.append(value);
+      sb.append(", ");
+      sb.append(tableName);
+      sb.append(", ");
+      sb.append(key);
+      sb.append("]");
+      return sb.toString();
+    }
+
+    public boolean equals(Object obj) {
+      if (! (obj instanceof StatusTable.Reference)) {
+  	return false;
+      }
+      StatusTable.Reference ref = (StatusTable.Reference)obj;
+      if (!value.equals(ref.getValue())) {
+	return false;
+      }
+      if (!tableName.equals(ref.getTableName())) {
+	return false;
+      }
+      if (key == null) {
+	return ref.getKey() == null;
+      }
+      return key.equals(ref.getKey());
+    }
+      
+
   }
 }
