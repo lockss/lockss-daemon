@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.26 2003-08-04 07:58:22 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.27 2003-08-06 06:27:10 tlipkis Exp $
  */
 
 /*
@@ -808,5 +808,18 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
+  /** Convenience method */
+  protected String encodeText(String s) {
+    return HtmlUtil.encode(s, HtmlUtil.ENCODE_TEXT);
+  }
 
+  /** Convenience method */
+  protected String encodeTextArea(String s) {
+    return HtmlUtil.encode(s, HtmlUtil.ENCODE_TEXTAREA);
+  }
+
+  /** Convenience method */
+  protected String encodeAttr(String s) {
+    return HtmlUtil.encode(s, HtmlUtil.ENCODE_ATTR);
+  }
 }
