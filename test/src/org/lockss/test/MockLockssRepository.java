@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.4 2003-06-25 21:19:54 eaalto Exp $
+ * $Id: MockLockssRepository.java,v 1.5 2003-07-31 00:48:37 eaalto Exp $
  */
 
 /*
@@ -95,30 +95,61 @@ public class MockLockssRepository implements LockssRepository {
   }
 
   public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2) {
+    // check that they're in the same AU
+    if (!cus1.getArchivalUnit().equals(cus2.getArchivalUnit())) {
+      return LockssRepository.NO_RELATION;
+    }
+    CachedUrlSetSpec spec1 = cus1.getSpec();
+    CachedUrlSetSpec spec2 = cus2.getSpec();
     String url1 = cus1.getUrl();
     String url2 = cus2.getUrl();
-    if (!url1.endsWith(File.separator)) {
-      url1 += File.separator;
+
+    // check for top-level urls
+    if (spec1.isAU() || spec2.isAU()) {
+      if (spec1.equals(spec2)) {
+        return LockssRepository.SAME_LEVEL_OVERLAP;
+      } else if (spec1.isAU()) {
+        return LockssRepository.ABOVE;
+      } else {
+        return LockssRepository.BELOW;
+      }
     }
-    if (!url2.endsWith(File.separator)) {
-      url2 += File.separator;
+
+    if (!url1.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url1 += UrlUtil.URL_PATH_SEPARATOR;
+    }
+    if (!url2.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url2 += UrlUtil.URL_PATH_SEPARATOR;
     }
     if (url1.equals(url2)) {
       //the urls are on the same level; check for overlap
-      Iterator firstIt = cus1.flatSetIterator();
-      Set secondSet = SetUtil.fromIterator(cus2.flatSetIterator());
-      while (firstIt.hasNext()) {
-        if (secondSet.contains(firstIt.next())) {
-          return LockssRepository.SAME_LEVEL_OVERLAP;
-        }
+      if (spec1.isDisjoint(spec2)) {
+        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
+      } else {
+        return LockssRepository.SAME_LEVEL_OVERLAP;
       }
-      return LockssRepository.SAME_LEVEL_NO_OVERLAP;
     } else if (url1.startsWith(url2)) {
       // url1 is a sub-directory of url2
-      return LockssRepository.BELOW;
+      if (spec2.isSingleNode()) {
+        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
+      } else if (cus2.containsUrl(url1)) {
+        // child
+        return LockssRepository.BELOW;
+      } else {
+        // cus2 probably has a range which excludes url1
+        return LockssRepository.NO_RELATION;
+      }
     } else if (url2.startsWith(url1)) {
       // url2 is a sub-directory of url1
-      return LockssRepository.ABOVE;
+      if (spec1.isSingleNode()) {
+        return LockssRepository.SAME_LEVEL_NO_OVERLAP;
+      } else if (cus1.containsUrl(url2)) {
+        // parent
+        return LockssRepository.ABOVE;
+      } else {
+        // cus1 probably has a range which excludes url2
+        return LockssRepository.NO_RELATION;
+      }
     } else {
       // no connection between the two urls
       return LockssRepository.NO_RELATION;
