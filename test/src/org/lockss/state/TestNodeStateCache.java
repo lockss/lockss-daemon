@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateCache.java,v 1.1 2003-04-01 00:05:11 aalto Exp $
+ * $Id: TestNodeStateCache.java,v 1.2 2003-04-01 00:57:17 aalto Exp $
  */
 
 /*
@@ -64,14 +64,14 @@ public class TestNodeStateCache extends LockssTestCase {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
     assertEquals(10, cache.getCacheSize());
 
-    NodeState node = (NodeState)cache.get("http://www.example.com");
+    NodeState node = cache.getState("http://www.example.com");
     assertEquals(0, cache.getCacheHits());
     assertEquals(1, cache.getCacheMisses());
     assertNull(node);
 
     node = new NodeStateImpl(mcus, null, new ArrayList(), repo);
-    cache.put("http://www.example.com", node);
-    NodeState node2 = (NodeState)cache.get("http://www.example.com");
+    cache.putState("http://www.example.com", node);
+    NodeState node2 = cache.getState("http://www.example.com");
     assertSame(node, node2);
     assertEquals(1, cache.getCacheHits());
     assertEquals(1, cache.getCacheMisses());
@@ -80,14 +80,14 @@ public class TestNodeStateCache extends LockssTestCase {
   public void testWeakReferenceCaching() throws Exception {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
 
-    NodeState node = (NodeState)cache.get("http://www.example.com");
+    NodeState node = cache.getState("http://www.example.com");
     assertEquals(1, cache.getCacheMisses());
     assertEquals(1, cache.getRefMisses());
     assertNull(node);
 
     node = new NodeStateImpl(mcus, null, null, repo);
-    cache.put("http://www.example.com", node);
-    node = (NodeState)cache.get("http://www.example.com");
+    cache.putState("http://www.example.com", node);
+    node = cache.getState("http://www.example.com");
     assertEquals(1, cache.getCacheHits());
 
     NodeState node2 = null;
@@ -97,12 +97,12 @@ public class TestNodeStateCache extends LockssTestCase {
     while (true) {
       loopSize *= 2;
       for (int ii=0; ii<loopSize; ii++) {
-        cache.put("http://www.example.com/test"+ii,
+        cache.putState("http://www.example.com/test"+ii,
                 new NodeStateImpl(mcus, null, null, repo));
       }
       int misses = cache.getCacheMisses();
       refHits = cache.getRefHits();
-      node2 = (NodeState)cache.get("http://www.example.com");
+      node2 = cache.getState("http://www.example.com");
       if (cache.getCacheMisses() == misses+1) {
         break;
       }
@@ -110,26 +110,22 @@ public class TestNodeStateCache extends LockssTestCase {
     assertSame(node, node2);
     assertEquals(refHits+1, cache.getRefHits());
   }
-/*
+
   public void testRemovingFromLRU() throws Exception {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
     NodeState node = new NodeStateImpl(mcus, null, null, repo);
-    cache.put("http://www.example.com", node);
-    node = (NodeState)cache.get("http://www.example.com");
-    assertEquals(0, repo.storedNodes.size());
+    cache.putState("http://www.example.com", node);
+    node = cache.getState("http://www.example.com");
 
     for (int ii=0; ii<cache.getCacheSize(); ii++) {
-      cache.put("http://www.example.com/test"+ii,
+      cache.putState("http://www.example.com/test"+ii,
               new NodeStateImpl(mcus, null, null, repo));
     }
-    assertEquals(1, repo.storedNodes.size());
-    NodeState node2 = (NodeState)repo.storedNodes.get(mcus);
-    assertSame(node, node2);
 
-    node2 = (NodeState)cache.get("http://www.example.com");
+    NodeState node2 = cache.getState("http://www.example.com");
     assertEquals(1, cache.getCacheMisses());
   }
-*/
+
   public static void main(String[] argv) {
     String[] testCaseList = { TestNodeStateCache.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);

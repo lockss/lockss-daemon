@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.77 2003-04-01 00:12:45 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.78 2003-04-01 00:57:17 aalto Exp $
  */
 
 /*
@@ -187,7 +187,7 @@ public class NodeManagerImpl implements NodeManager {
   public synchronized NodeState getNodeState(CachedUrlSet cus) {
     String url = cus.getUrl();
     logger.debug3("Getting " + url);
-    NodeState node = nodeCache.get(url);
+    NodeState node = nodeCache.getState(url);
     if (node==null) {
       // if in repository, add
       try {
@@ -205,7 +205,7 @@ public class NodeManagerImpl implements NodeManager {
     logger.debug2("Loading NodeState: " + cus.toString());
     // load from file cache, or get a new one
     NodeState state = historyRepo.loadNodeState(cus);
-    nodeCache.put(cus.getUrl(), state);
+    nodeCache.putState(cus.getUrl(), state);
     return state;
   }
 
