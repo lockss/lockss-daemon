@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.12 2003-03-08 02:47:16 tal Exp $
+ * $Id: TestStringUtil.java,v 1.13 2003-03-11 23:28:00 tal Exp $
  */
 
 /*
@@ -219,14 +219,20 @@ public class TestStringUtil extends LockssTestCase {
     assertNotEquals(g1, g2);
   }
 
-  public void testTrinHostName() {
+  public void testTrimHostName() {
     assertEquals("foo", StringUtil.trimHostName("www.foo.com"));
     assertEquals("foo", StringUtil.trimHostName("foo.com"));
     assertEquals("foo.bar", StringUtil.trimHostName("www.foo.bar.com"));
     assertEquals("foo.bar", StringUtil.trimHostName("foo.bar.com"));
-    assertEquals("www.com", StringUtil.trimHostName("www.com"));
+
+    // should leave all these alone
     assertEquals("foo", StringUtil.trimHostName("foo"));
     assertEquals("", StringUtil.trimHostName(""));
     assertNull(StringUtil.trimHostName(null));
+
+    // trimming both www. and .com would cause error
+    assertEquals("www.com", StringUtil.trimHostName("www.com"));
+    // would leave empty string
+    assertEquals("www..com", StringUtil.trimHostName("www..com"));
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.13 2003-03-08 02:47:16 tal Exp $
+ * $Id: StringUtil.java,v 1.14 2003-03-11 23:28:00 tal Exp $
  */
 
 /*
@@ -344,8 +344,9 @@ public class StringUtil {
   }
 
   /**
-   * Trim a hostname, removing "www" from the front, if present, and the
-   * TLD from the end.
+   * Trim a hostname, removing "www." from the front, if present, and the
+   * TLD from the end.  If this would result in an empty string, the entire
+   * name is returned.
    * @param a hostname
    * @return the trimmed hostname
    */
@@ -356,7 +357,7 @@ public class StringUtil {
       start = 4;
     }
     int end = hostname.lastIndexOf('.');
-    if (end < start) {
+    if (end <= start) {
       // if trimming www left nothing but TLD, return whole name
       return hostname;
     }
