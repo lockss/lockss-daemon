@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.1 2003-12-13 01:27:50 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.2 2003-12-23 00:40:27 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ public class MockCrawlStatus extends Crawler.Status {
   int crawlStatus = 0;
   
   public MockCrawlStatus(int type) {
-    super(null, type);
+    super(null, null, type);
   }
 
   public MockCrawlStatus() {
