@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.22 2004-04-19 19:02:23 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.23 2004-05-25 00:17:43 clairegriffin Exp $
  */
 
 /*
@@ -33,11 +33,10 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.io.*;
-import java.util.Properties;
-import org.lockss.util.*;
-import org.lockss.daemon.*;
+import java.math.*;
+
 import org.lockss.plugin.*;
-import java.math.BigInteger;
+import org.lockss.util.*;
 
 /**
  * This is a mock version of <code>CachedUrl</code> used for testing

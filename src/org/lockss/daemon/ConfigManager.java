@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.23 2004-05-18 17:11:30 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.24 2004-05-25 00:17:42 clairegriffin Exp $
  */
 
 /*
@@ -32,19 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-import java.util.*;
 import java.io.*;
-import java.net.*;
-import java.text.*;
-import org.mortbay.tools.*;
+import java.util.*;
+
 import org.lockss.app.*;
-import org.lockss.util.*;
-import org.lockss.servlet.*;
-import org.lockss.proxy.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
+import org.lockss.proxy.*;
 import org.lockss.repository.*;
+import org.lockss.servlet.*;
 import org.lockss.state.*;
+import org.lockss.util.*;
 
 /** ConfigManager loads and periodically reloads the LOCKSS configuration
  * parameters, and provides services for updating locally changeable
