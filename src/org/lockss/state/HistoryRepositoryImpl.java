@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.30 2003-04-10 01:06:51 claire Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.31 2003-04-23 00:55:52 aalto Exp $
  */
 
 /*
@@ -127,6 +127,8 @@ public class HistoryRepositoryImpl
       if (!nodeDir.exists()) {
         nodeDir.mkdirs();
       }
+      logger.debug3("Storing state for CUS '" +
+                    nodeState.getCachedUrlSet().getUrl() + "'");
       File nodeFile = new File(nodeDir, NODE_FILE_NAME);
       Marshaller marshaller = new Marshaller(new FileWriter(nodeFile));
       marshaller.setMapping(getMapping());
@@ -147,6 +149,7 @@ public class HistoryRepositoryImpl
                                  new CrawlState(-1, CrawlState.FINISHED, 0),
                                  new ArrayList(), this);
       }
+      logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
       Unmarshaller unmarshaller = new Unmarshaller(NodeStateBean.class);
       unmarshaller.setMapping(getMapping());
       NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(
@@ -174,6 +177,7 @@ public class HistoryRepositoryImpl
       if (!nodeDir.exists()) {
         nodeDir.mkdirs();
       }
+      logger.debug2("Storing histories for CUS '"+cus.getUrl()+"'");
       File nodeFile = new File(nodeDir, HISTORY_FILE_NAME);
       NodeHistoryBean nhb = new NodeHistoryBean();
       nhb.historyBeans = ((NodeStateImpl)nodeState).getPollHistoryBeanList();
@@ -198,6 +202,7 @@ public class HistoryRepositoryImpl
         logger.debug3("No history file found.");
         return;
       }
+      logger.debug3("Loading histories for CUS '"+cus.getUrl()+"'");
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
       unmarshaller.setMapping(getMapping());
       NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(
@@ -225,6 +230,8 @@ public class HistoryRepositoryImpl
       if (!nodeDir.exists()) {
         nodeDir.mkdirs();
       }
+      logger.debug2("Storing state for AU '" +
+                    auState.getArchivalUnit().getName() + "'");
       File auFile = new File(nodeDir, AU_FILE_NAME);
       Marshaller marshaller = new Marshaller(new FileWriter(auFile));
       marshaller.setMapping(getMapping());
@@ -243,6 +250,7 @@ public class HistoryRepositoryImpl
         logger.debug3("No au file found.");
         return new AuState(au, -1, -1, -1, this);
       }
+      logger.debug2("Loading state for AU '" + au.getName() + "'");
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
       AuStateBean asb = (AuStateBean) unmarshaller.unmarshal(

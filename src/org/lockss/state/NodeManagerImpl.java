@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.109 2003-04-22 21:31:51 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.110 2003-04-23 00:55:52 aalto Exp $
  */
 
 /*
@@ -201,6 +201,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           "Updating state on non-existant node.");
     }
     else {
+      logger.debug3("Hash finished for CUS '" + cus.getUrl() + "'");
       ( (NodeStateImpl) state).setLastHashDuration(hashDuration);
     }
   }

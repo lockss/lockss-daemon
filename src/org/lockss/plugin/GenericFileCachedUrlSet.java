@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.34 2003-04-22 22:59:28 troberts Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.35 2003-04-23 00:55:52 aalto Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
         if (child.isLeaf()) {
-          CachedUrl newUrl = 
+          CachedUrl newUrl =
 	    ((BaseArchivalUnit)au).cachedUrlFactory(this, child.getNodeUrl());
           flatSet.add(newUrl);
         } else {
@@ -116,8 +116,8 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   /**
-   * This returns an iterator over all nodes in the CachedUrlSet.  This 
-   * includes the node itself if either it's got a RangedCachedUrlSetSpec with 
+   * This returns an iterator over all nodes in the CachedUrlSet.  This
+   * includes the node itself if either it's got a RangedCachedUrlSetSpec with
    * no range or a SingleNodeCachedUrlSetSpec
    * @return an {@link Iterator}
    */
@@ -210,7 +210,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     public int compare(Object o1, Object o2) {
       String prefix = null;
       String prefix2 = null;
-      if ((o1 instanceof CachedUrlSetNode) 
+      if ((o1 instanceof CachedUrlSetNode)
 	  && (o2 instanceof CachedUrlSetNode)) {
         prefix = ((CachedUrlSetNode)o1).getUrl();
         prefix2 = ((CachedUrlSetNode)o2).getUrl();
@@ -254,15 +254,16 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     public Object next() {
       Object foo = findNextElement();
       nextElement = null;
-      
+
       if (foo != null) {
 	return foo;
       }
       throw new NoSuchElementException();
     }
-    
+
     /**
      * Does a pre-order traversal of the CachedUrlSet tree
+     * @return a {@link CachedUrlSetNode}
      */
     private CachedUrlSetNode findNextElement() {
       if (nextElement != null) {
@@ -278,7 +279,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 	  stack.removeFirst();
 	} else {
 	  CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
-	
+
 	  if (!curNode.isLeaf()) {
 	    CachedUrlSet cus = (CachedUrlSet)curNode;
 	    //push the iterator of this child node onto the stack
