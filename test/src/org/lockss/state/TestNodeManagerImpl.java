@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.111 2004-06-02 18:10:20 clairegriffin Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.112 2004-08-09 23:48:19 clairegriffin Exp $
  */
 
 /*
@@ -216,6 +216,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void testShouldStartPoll() throws Exception {
     TimeBase.setSimulated(10000);
     contentPoll = createPoll(TEST_URL, true, false, 15, 5);
+
     PollTally results = contentPoll.getVoteTally();
 
     // don't need crawl
@@ -238,10 +239,19 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertFalse(nodeManager.shouldStartPoll(getCus(mau, TEST_URL + "/bogus"),
                                             results));
 
-    // if we have a damaged node we return false
+    // if we have a damaged branch node we return true
     nodeManager.damagedNodes.addToDamage(cus.getUrl());
-    assertFalse(nodeManager.shouldStartPoll(cus, results));
+    assertTrue(nodeManager.shouldStartPoll(cus, results));
     nodeManager.damagedNodes.removeFromDamage(cus.getUrl());
+
+    // if we have a damaged leaf, we return false
+    String leaf = TEST_URL+ "file1.txt";
+    contentPoll = createPoll(leaf, true, false, 15, 5);
+    PollTally tally = contentPoll.getVoteTally();
+    CachedUrlSet r_cus = tally.getCachedUrlSet();
+    nodeManager.damagedNodes.addToDamage(r_cus.getUrl());
+    assertFalse(nodeManager.shouldStartPoll(r_cus, tally));
+    nodeManager.damagedNodes.removeFromDamage(r_cus.getUrl());
 
     // don't allow poll if a crawl is needed
     assertTrue(nodeManager.shouldStartPoll(cus, results));

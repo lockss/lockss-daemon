@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.180 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.181 2004-08-09 23:48:19 clairegriffin Exp $
  */
 
 /*
@@ -267,7 +267,7 @@ public class NodeManagerImpl
     }
 
     // make sure not damaged (if not my poll)
-    if (!state.isMyPoll() && damagedNodes.hasDamage(cus)) {
+    if (!state.isMyPoll() && damagedNodes.hasLocalizedDamage(cus)) {
       logger.info("CUS has damage, not starting poll: " + cus);
       return false;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.12 2004-06-03 02:47:23 clairegriffin Exp $
+ * $Id: DamagedNodeSet.java,v 1.13 2004-08-09 23:48:19 clairegriffin Exp $
  */
 
 /*
@@ -115,6 +115,19 @@ public class DamagedNodeSet {
       String url = (String) damagedIt.next();
       if (cus.containsUrl(url)) {
         return true;
+      }
+    }
+    return false;
+  }
+
+  synchronized public boolean hasLocalizedDamage(CachedUrlSet cus) {
+    if(cus.isLeaf()) {
+      Iterator damagedIt = nodesWithDamage.iterator();
+      while (damagedIt.hasNext()) {
+        String url = (String) damagedIt.next();
+        if(cus.containsUrl(url)) {
+          return true;
+        }
       }
     }
     return false;
