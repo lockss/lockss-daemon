@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.26 2003-12-23 00:37:32 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.27 2004-01-03 06:19:23 tlipkis Exp $
  */
 
 /*
@@ -172,14 +172,6 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.getPlugin(mgr.pluginKeyFromName(n2)));
     assertNotNull(mgr.getPlugin(mgr.pluginKeyFromName(n1)));
     assertTrue(mgr.getPlugin(mgr.pluginKeyFromName(n1)) instanceof MockPlugin);
-  }
-
-  public void testInitTitleDB() {
-    Properties p = new Properties();
-    p.put("org.lockss.title.1.foo", "foo1");
-    p.put("org.lockss.title.1.bar", "bar1");
-    p.put("org.lockss.title.2.bar", "bar2");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   public void testStop() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.59 2003-12-23 00:34:32 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.60 2004-01-03 06:19:23 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class PluginManager extends BaseLockssManager {
   static String PARAM_PLUGIN_REGISTRY =
     Configuration.PREFIX + "plugin.registry";
 
-  static String PARAM_TITLE_DB = Configuration.PREFIX + "title";
+  static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
 
   static final String AU_PARAM_WRAPPER = "reserved.wrapper";
   public static final String AU_PARAM_DISABLED = "reserved.disabled";
@@ -117,13 +117,12 @@ public class PluginManager extends BaseLockssManager {
       }
       currentAllPlugs = allPlugs;
 
-      // process the plugin registry and title db
+      // process the plugin registry.
       // (do this after configuring AUs, so plugin regsitry will reflect
       // plugins loaded by AUs but not in registry param)
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
 	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
       }
-      initTitleDB(config.getConfigTree(PARAM_TITLE_DB));
     }
   }
 
@@ -621,6 +620,10 @@ public class PluginManager extends BaseLockssManager {
 
   private Map titleMap = null;
 
+  public void resetTitles() {
+    titleMap = null;
+  }
+
   public Map getTitleMap() {
     if (titleMap == null) {
       titleMap = buildTitleMap();
@@ -672,7 +675,7 @@ public class PluginManager extends BaseLockssManager {
     for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
       String name = (String)iter.next();
       String key = pluginKeyFromName(name);
-      ensurePluginLoaded(pluginKeyFromName(name));
+      ensurePluginLoaded(key);
       newKeys.add(key);
     }
     // remove plugins that are no longer listed, unless they have one or
@@ -689,19 +692,6 @@ public class PluginManager extends BaseLockssManager {
 	}	
       }
     }
-  }
-
-  void initTitleDB(Configuration allTitles) {
-    for (Iterator iter = allTitles.nodeIterator(); iter.hasNext(); ) {
-      String titleKey = (String)iter.next();
-      Configuration titleConfig = allTitles.getConfigTree(titleKey);
-      log.info("titleKey: " + titleKey);
-      log.info("titleConfig: " + titleConfig);
-      initOneTitle(titleConfig);
-    }
-  }
-
-  void initOneTitle(Configuration titleConfig) {
   }
 
   private class Status implements StatusAccessor {
