@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.145 2003-07-17 04:39:11 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.146 2003-07-17 22:58:48 clairegriffin Exp $
  */
 
 /*
@@ -273,7 +273,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
   }
 
-  public boolean shouldStartPoll(CachedUrlSet cus, PollTally state) {
+  public boolean shouldStartPoll(CachedUrlSet cus, Tallier state) {
     NodeState nodeState = getNodeState(cus);
 
     if (nodeState == null) {
@@ -289,7 +289,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return true;
   }
 
-  public void startPoll(CachedUrlSet cus, PollTally tally,
+  public void startPoll(CachedUrlSet cus, Tallier tally,
                          boolean isReplayPoll) {
     NodeState nodeState = getNodeState(cus);
     PollSpec spec = tally.getPollSpec();
@@ -370,7 +370,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     logger.debug3("New node state: "+nodeState.getStateString());
   }
 
-  public void updatePollResults(CachedUrlSet cus, PollTally results) {
+  public void updatePollResults(CachedUrlSet cus, Tallier results) {
     NodeState nodeState = (NodeState)activeNodes.get(results.getPollKey());
     if (nodeState==null) {
       nodeState = getNodeState(cus);
@@ -411,7 +411,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
   }
 
-  void updateState(NodeState nodeState, PollTally results) {
+  void updateState(NodeState nodeState, Tallier results) {
     logger.debug3("Prior node state: "+nodeState.getStateString());
 
     PollState pollState = getPollState(nodeState, results);
@@ -539,7 +539,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * @return true iff a repair was scheduled
    */
   boolean handleWrongNames(Iterator masterIt, List localList, NodeState nodeState,
-                           PollTally results) {
+                           Tallier results) {
     // iterate through master list
     Collection repairCol = new ArrayList();
     while (masterIt.hasNext()) {
@@ -648,7 +648,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return au.makeCachedUrlSet(new RangeCachedUrlSetSpec(childUrl));
   }
 
-  void handleContentPoll(PollState pollState, PollTally results,
+  void handleContentPoll(PollState pollState, Tallier results,
                          NodeState nodeState) {
     logger.debug("handling content poll results: " + results);
 
@@ -747,7 +747,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
   }
 
-  void handleNamePoll(PollState pollState, PollTally results,
+  void handleNamePoll(PollState pollState, Tallier results,
                       NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
 
@@ -823,13 +823,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * Looks at the state of the node, and takes appropriate action (if
    * 'reportOnly' is false).
    * @param lastOrCurrentPoll the most recent poll (could be active)
-   * @param results the {@link PollTally}, if available
+   * @param results the {@link Tallier}, if available
    * @param nodeState the {@link NodeState}
    * @param reportOnly if true, nothing is actually scheduled
    * @return true if action taken
    * @throws IOException
    */
-  boolean checkCurrentState(PollState lastOrCurrentPoll, PollTally results,
+  boolean checkCurrentState(PollState lastOrCurrentPoll, Tallier results,
                             NodeState nodeState, boolean reportOnly)
       throws IOException {
     logger.debug2("Checking node: "+nodeState.getCachedUrlSet().getUrl());
@@ -1269,7 +1269,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                   pollState.getUprBound() + "'");
   }
 
-  private PollState getPollState(NodeState state, PollTally results) {
+  private PollState getPollState(NodeState state, Tallier results) {
     Iterator polls = state.getActivePolls();
     PollSpec spec = results.getPollSpec();
     logger.debug2("Getting poll state for spec: " + spec);
@@ -1455,7 +1455,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return hasDamage;
   }
 
-  private void updateReputations(PollTally results) {
+  private void updateReputations(Tallier results) {
     IdentityManager idManager = theDaemon.getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
     int agreeChange = 0;

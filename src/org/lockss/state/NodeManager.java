@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.23 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeManager.java,v 1.24 2003-07-17 22:58:48 clairegriffin Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public interface NodeManager extends LockssManager {
    * @param state the new PollState
    * @param boolean true if we are replaying the previous poll.
    */
-  public void startPoll(CachedUrlSet cus, PollTally state, boolean isReplayPoll);
+  public void startPoll(CachedUrlSet cus, Tallier state, boolean isReplayPoll);
 
   /**
    * Should we allow a poll on this cached url set
@@ -60,14 +60,14 @@ public interface NodeManager extends LockssManager {
    * @returns false if the poll has no matching node state or
    * the poll would include damaged content.
    */
-  public boolean shouldStartPoll(CachedUrlSet cus, PollTally state);
+  public boolean shouldStartPoll(CachedUrlSet cus, Tallier state);
 
   /**
    * Update a node state with current poll results
    * @param cus the cached url set used to identify the node
    * @param results the poll results
    */
-  public void updatePollResults(CachedUrlSet cus, PollTally results);
+  public void updatePollResults(CachedUrlSet cus, Tallier results);
 
   /**
    * Return the node represented by a given CachedUrlSet

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.4 2003-07-17 04:39:11 dshr Exp $
+ * $Id: V1PollTally.java,v 1.5 2003-07-17 22:58:48 clairegriffin Exp $
  */
 
 /*
@@ -180,6 +180,12 @@ public class V1PollTally extends PollTally {
     return poll;
   }
 
+  public boolean isTrustedResults() {
+
+    return (numDisagree == 0 ||
+            (wtDisagree/numDisagree >= trustedWeight));
+  }
+
   void tallyVotes() {
     log.debug3("checking for tally for verify poll results.");
     if(type == Poll.VERIFY_POLL) {
@@ -247,11 +253,6 @@ public class V1PollTally extends PollTally {
     return numAgree + numDisagree >= quorum;
   }
 
-  void setVoteMargin(double margin) {
-    voteMargin = margin;
-  }
-
-
   boolean isWithinMargin() {
     double num_votes = numAgree + numDisagree;
     double req_margin = voteMargin;
@@ -271,15 +272,7 @@ public class V1PollTally extends PollTally {
     return true;
   }
 
-  void setTrustedWeight(double weight) {
-    trustedWeight = weight;
-  }
 
-  public boolean isTrustedResults() {
-
-    return (numDisagree == 0 ||
-	    (wtDisagree/numDisagree >= trustedWeight));
-  }
 
 
   void adjustReputation(LcapIdentity voterID, int repDelta) {
