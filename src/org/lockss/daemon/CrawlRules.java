@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.4 2004-07-23 16:45:57 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.5 2004-08-02 03:50:15 tlipkis Exp $
  */
 
 /*
@@ -45,9 +45,9 @@ public class CrawlRules {
    * included or excluded.
    */
   public static class RE implements CrawlRule {
-    private Pattern regexp;
+    protected Pattern regexp;
     private int action;
-  
+
     /** Include if match, else ignore */
     public static final int MATCH_INCLUDE = 1;
     /** Exclude if match, else ignore */
@@ -74,12 +74,13 @@ public class CrawlRules {
       this.regexp = regexp;
       this.action = action;
     }
-  
+
     /**
      * Create a rule matching the given RE
      * @param reString regular expression string
      * @param action one of the constants above.
-     * @throws REException if an illegal regular expression is provided.
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
      */
     public RE(String reString, int action) throws LockssRegexpException {
       try {
@@ -91,7 +92,7 @@ public class CrawlRules {
 	throw new LockssRegexpException(e.getMessage());
       }
     }
-  
+
     /**
      * Determine whether the URL is included, excluded or ignored by this rule
      * @param url URL to check.
@@ -101,6 +102,12 @@ public class CrawlRules {
      */
     public int match(String url) {
       boolean match = RegexpUtil.getMatcher().contains(url, regexp);
+      return matchAction(match);
+    }
+
+    /** Map the match result and the specified action to one of
+     * MATCH_INCLUDE,MATCH_EXCLUDE or MATCH_IGNORE */
+    protected int matchAction(boolean match) {
       switch (action) {
       case MATCH_INCLUDE:
 	return (match ? INCLUDE : IGNORE);
@@ -117,9 +124,147 @@ public class CrawlRules {
       }
       return IGNORE;
     }
-  
+
     public String toString() {
       return "[CrawlRule.RE: '" + regexp + "', " + action + "]";
+    }
+  }
+
+  /**
+   * CrawlRule.REMatchCondition is a base class for rules that match
+   * against an RE then apply a condition to one or more subexpressions
+   * (parts of the match designated by grouping parentheses).  For purposes
+   * of the MATCH_ actions, it is a match if the pattern matches and the
+   * condition is true.
+   */
+  public abstract static class REMatchCondition extends RE {
+    public REMatchCondition(Pattern regexp, int action) {
+      super(regexp, action);
+    }
+
+    public REMatchCondition(String reString, int action)
+	throws LockssRegexpException {
+      super(reString, action);
+    }
+
+    /** Apply a condition to the result of a match */
+    protected abstract boolean isConditionMet(MatchResult matchResult);
+
+    /**
+     * Apply the matcher then check the condition if the match succeeds
+     */
+    public int match(String url) {
+      Perl5Matcher matcher = RegexpUtil.getMatcher();
+      boolean match = matcher.contains(url, regexp);
+      if (match) {
+	match &= isConditionMet(matcher.getMatch());
+      }
+      return matchAction(match);
+    }
+  }
+
+  /**
+   * CrawlRule.REMatchRange matches an RE then checks that the
+   * subexpression falls within the specified range (inclusive).
+   */
+  public static class REMatchRange extends REMatchCondition {
+    static final int MODE_LONG = 0;
+    static final int MODE_COMP = 1;
+
+    int mode;
+
+    long minLong;
+    long maxLong;
+
+    Comparable minComp;
+    Comparable maxComp;
+    
+    /** Create an integer range matcher.
+     * @param reString regular expression string
+     * @param action one of the constants above.
+     * @param min the minimum subexpression value
+     * @param max the maximum subexpression value
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public REMatchRange(String reString, int action, long min, long max)
+	throws LockssRegexpException {
+      super(reString, action);
+      this.minLong = min;
+      this.maxLong = max;
+      mode = MODE_LONG;
+    }
+
+    /** Create a String (alphabetical) range matcher.
+     * @param reString regular expression string
+     * @param action one of the constants above.
+     * @param min the minimum subexpression value
+     * @param max the maximum subexpression value
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public REMatchRange(String reString, int action, String min, String max)
+	throws LockssRegexpException {
+      super(reString, action);
+      if (min == null || max == null) {
+	throw new NullPointerException("REMatchRange has null min or max");
+      }
+      this.minComp = min;
+      this.maxComp = max;
+      mode = MODE_COMP;
+    }
+
+    /** Return true iff the subexpression falls within the range */
+    protected boolean isConditionMet(MatchResult matchResult) {
+      String sub = matchResult.group(1);
+      if (sub == null) {
+	return false;
+      }
+      switch (mode) {
+      case MODE_LONG:
+	try {
+	  long val = Long.parseLong(sub);
+	  return minLong <= val && val <= maxLong;
+	} catch (NumberFormatException e) {
+	  return false;
+	}
+      case MODE_COMP:
+	return minComp.compareTo(sub) <= 0 && maxComp.compareTo(sub) >= 0;
+      }
+      return false;
+    }
+  }
+
+  /**
+   * CrawlRule.REMatchSet matches an RE then checks that the
+   * subexpression is contained within the specified set.
+   */
+  public static class REMatchSet extends REMatchCondition {
+    Set set;
+
+    /** Create a set matcher.
+     * @param reString regular expression string
+     * @param action one of the constants above.
+     * @param set a Set of Strings
+     * @throws LockssRegexpException if an illegal regular expression is
+     * provided.
+     */
+    public REMatchSet(String reString, int action, Set set)
+	throws LockssRegexpException {
+      super(reString, action);
+      if (set == null) {
+	throw new NullPointerException("REMatchSet has null set");
+      }
+      this.set = set;
+    }
+
+    /** Return true iff the subexpression is a member of the set */
+    protected boolean isConditionMet(MatchResult matchResult) {
+      String sub = matchResult.group(1);
+      if (sub == null) {
+	return false;
+      }
+      return set.contains(sub);
     }
   }
 
@@ -130,7 +275,7 @@ public class CrawlRules {
    */
   public static class FirstMatch implements CrawlRule {
     private List rules;
-  
+
     /**
      * Create a rule that matches against the given list of rules
      * @param rules list of {@link CrawlRules}s
@@ -142,10 +287,10 @@ public class CrawlRules {
       }
       this.rules = ListUtil.immutableListOfType(rules, CrawlRule.class);
     }
-  
+
     /**
      * @param url URL string to check against this rule
-     * @return FETCH if the string matches and should be fetched, IGNORE 
+     * @return FETCH if the string matches and should be fetched, IGNORE
      * if str matches and should not be fetched, IGNORE if str doesn't
      * match.
      */
@@ -158,7 +303,7 @@ public class CrawlRules {
       }
       return IGNORE;
     }
-  
+
     public String toString() {
       return "[CrawlRule.FirstMatch: " + rules + "]";
     }
