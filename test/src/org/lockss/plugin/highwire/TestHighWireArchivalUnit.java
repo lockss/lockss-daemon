@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.37 2004-02-27 22:50:20 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.38 2004-02-28 21:06:53 clairegriffin Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     BaseCachedUrlSet cus = new BaseCachedUrlSet(hwAu, spec);
     UrlCacher uc =
-        plugin.makeUrlCacher(cus, "http://shadow1.stanford.edu/lockss-volume322.shtml");
+        plugin.makeUrlCacher(cus, "http://shadow1.stanford.edu/contents-by-date.2004.shtml");
     assertTrue(uc.shouldBeCached());
   }
 
