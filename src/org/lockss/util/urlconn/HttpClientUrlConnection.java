@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.6 2004-03-09 23:41:34 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.7 2004-03-10 08:51:25 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -281,7 +281,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   private boolean processRedirectResponse() {
     if (!method.getFollowRedirects()) {
-      log.debug("Redirect requested but followRedirects is disabled");
+      log.debug3("Redirect requested but followRedirects is disabled");
       return false;
     }
     //get the location header to find out where to redirect to
