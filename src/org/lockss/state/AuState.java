@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.7 2003-03-01 02:01:24 aalto Exp $
+ * $Id: AuState.java,v 1.8 2003-03-03 19:34:21 troberts Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class AuState {
   /**
    * Sets the last crawl time to the current time.
    */
-  void newCrawlFinished() {
+  protected void newCrawlFinished() {
     lastCrawlTime = TimeBase.nowMs();
   }
 
