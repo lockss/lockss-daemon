@@ -152,19 +152,14 @@ public class CrawlRuleTester {
 
         m_incls.clear();
         m_excls.clear();
-        try {
-          // crawl the page
-          buildUrlSets(urlstr);
-          fetched.add(urlstr);
-          // output incl/excl results
-          outputUrlResults(urlstr, m_incls, m_excls);
-          // add the m_incls to the crawlList for next crawl depth loop
-          crawlList.addAll(m_incls);
-        }
-        catch (MalformedURLException ex) {
-          ex.printStackTrace();
-          outputErrResults(urlstr, ex.getMessage());
-        }
+
+        // crawl the page
+        buildUrlSets(urlstr);
+        fetched.add(urlstr);
+        // output incl/excl results
+        outputUrlResults(urlstr, m_incls, m_excls);
+        // add the m_incls to the crawlList for next crawl depth loop
+        crawlList.addAll(m_incls);
       }
     }
     long elapsed_time = TimeBase.nowMs() - start_time;
@@ -172,9 +167,10 @@ public class CrawlRuleTester {
   }
 
 
-  private void buildUrlSets(String url) throws MalformedURLException {
-    URL srcUrl = new URL(url);
+  private void buildUrlSets(String url) {
+
     try {
+      URL srcUrl = new URL(url);
       URLConnection conn = srcUrl.openConnection();
       String type = conn.getContentType();
       type = conn.getHeaderField("content-type");
@@ -185,11 +181,15 @@ public class CrawlRuleTester {
       GoslingHtmlParser parser = new GoslingHtmlParser();
       parser.parseForUrls(mcu, new MyFoundUrlCallback());
     }
-    catch (Exception ex) {
-      ex.printStackTrace();
-      outputErrResults(url, ex.getMessage());
+    catch (MalformedURLException murle) {
+      murle.printStackTrace();
+      outputErrResults(url, "Malformed URL:" + murle.getMessage());
     }
-  }
+    catch (IOException ex) {
+      ex.printStackTrace();
+      outputErrResults(url, "IOException: " + ex.getMessage());
+    }
+ }
 
   private void pauseBeforeFetch() {
     if (!fetchDeadline.expired()) {
