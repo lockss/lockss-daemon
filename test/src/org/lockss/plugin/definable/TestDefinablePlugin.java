@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.1 2004-03-01 06:10:41 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.2 2004-03-01 06:31:29 clairegriffin Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     p.setProperty(ConfigParamDescr.BASE_URL.getKey(), "http://www.example.com/");
      p.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY,"10000");
     List rules = ListUtil.list("1\nhttp://www.example.com");
-    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
     map.putString(DefinablePlugin.CM_NAME_KEY, "testplugin");
     map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
                       Collections.EMPTY_LIST);
@@ -81,7 +81,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testGetAuConfigProperties() {
     Collection expectedReturn = ListUtil.list("Item1", "Item2");
-    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
     map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
                       expectedReturn);
 
@@ -91,7 +91,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   public void testGetConfigurationMap() {
     ExternalizableMap expectedReturn = definablePlugin.definitionMap;
-    ExternalizableMap actualReturn = definablePlugin.getConfigurationMap();
+    ExternalizableMap actualReturn = definablePlugin.getDefinitionMap();
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
@@ -103,7 +103,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 
     // set the name
     expectedReturn = "TestPlugin";
-    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
     map.putString(DefinablePlugin.CM_NAME_KEY, expectedReturn);
     actualReturn = definablePlugin.getPluginName();
     assertEquals("return value", expectedReturn, actualReturn);
@@ -118,7 +118,7 @@ public class TestDefinablePlugin extends LockssTestCase {
 
     // set the version
     expectedReturn = "Version 1.0";
-    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
     map.putString(DefinablePlugin.CM_VERSION_KEY, expectedReturn);
     actualReturn = definablePlugin.getVersion();
     assertEquals("return value", expectedReturn, actualReturn);
@@ -163,7 +163,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     sb.append(ConfigParamDescr.BASE_URL.getKey());
     sb.append("\n");
     sb.append(ConfigParamDescr.YEAR.getKey());
-    ExternalizableMap map = definablePlugin.getConfigurationMap();
+    ExternalizableMap map = definablePlugin.getDefinitionMap();
     assertEquals(sb.toString(),
                  map.getString(DefinableArchivalUnit.CM_AU_START_URL_KEY, null));
 
