@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.40 2003-08-26 01:08:21 dshr Exp $
+ * $Id: MockCachedUrlSet.java,v 1.41 2003-11-07 23:58:14 troberts Exp $
  */
 
 /*
@@ -260,12 +260,13 @@ public class MockCachedUrlSet implements CachedUrlSet {
   public void addUrl(String source, String url,
 		     boolean exists, boolean shouldCache,
 		     Properties props) {
-    addUrl(source, url, exists, shouldCache, props, null);
+    addUrl(source, url, exists, shouldCache, props, null, 0);
   }
 
   private void addUrl(String source, String url,
-		 boolean exists, boolean shouldCache,
-		 Properties props, IOException cacheException) {
+		      boolean exists, boolean shouldCache,
+		      Properties props, IOException cacheException,
+		      int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setContent(source);
     cu.setProperties(props);
@@ -278,7 +279,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     }
     uc.setCachedUrl(cu);
     if (cacheException != null) {
-      uc.setCachingException(cacheException);
+      uc.setCachingException(cacheException, timesToThrow);
     }
 
     logger.debug("Adding "+url+" to cuHash and ucHash");
@@ -296,9 +297,12 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * To be used when you want to set up a url that will throw an exception
    * @param url the url
    * @param cacheException the IOException to throw
+   * @param timesToThrow number of times to throw the exception
    */
-  public void addUrl(String url, IOException cacheException) {
-    addUrl("", url, false, true, new Properties(), cacheException);
+  public void addUrl(String url,
+		     IOException cacheException, int timesToThrow) {
+    addUrl("", url, false, true, new Properties(),
+	   cacheException, timesToThrow);
   }
 
   /**

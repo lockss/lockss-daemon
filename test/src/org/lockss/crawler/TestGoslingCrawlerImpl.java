@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.28 2003-11-07 00:52:47 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.29 2003-11-07 23:58:14 troberts Exp $
  */
 
 /*
@@ -59,6 +59,11 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   private MockCrawlRule crawlRule = new MockCrawlRule();
   private MockAuState aus = new MockAuState();
 
+  private static final String PARAM_RETRY_TIMES =
+    Configuration.PREFIX + "GoslingCrawlerImpl.numCacheRetries";
+  private static final int DEFAULT_RETRY_TIMES = 3;
+
+
   public static Class testedClasses[] = {
     org.lockss.crawler.GoslingCrawlerImpl.class
   };
@@ -81,6 +86,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     spec = new CrawlSpec(startUrls, crawlRule);
     crawler =
       GoslingCrawlerImpl.makeNewContentCrawler(mau, spec, aus);
+
+    Properties p = new Properties();
+    p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   //Tests for makeNewContentCrawler (mncc)
@@ -746,18 +755,52 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
-    cus.addUrl(url1, new IOException("Test exception"));
+    cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(startUrl);
     crawlRule.addUrlToCrawl(url1);
 
     assertFalse(crawler.doCrawl(Deadline.MAX));
   }
 
+  public void testReturnsRetriesWhenExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
+    cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES-1);
+    crawlRule.addUrlToCrawl(startUrl);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl(Deadline.MAX);
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testRetryNumSetByParam() {
+    int retryNum = DEFAULT_RETRY_TIMES + 3;
+    assertTrue("Test is worthless unless retryNum is greater than "
+	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
+    Properties p = new Properties();
+    p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
+    p.setProperty(GoslingCrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
+    cus.addUrl(url1, new IOException("Test exception"), retryNum-1);
+    crawlRule.addUrlToCrawl(startUrl);
+    crawlRule.addUrlToCrawl(url1);
+
+    crawler.doCrawl(Deadline.MAX);
+    Set expected = SetUtil.set(startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
   public void testReturnsTrueWhenFileNotFoundExceptionThrown() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
-    cus.addUrl(url1, new FileNotFoundException("Test exception"));
+    cus.addUrl(url1, new FileNotFoundException("Test exception"), 0);
     crawlRule.addUrlToCrawl(startUrl);
     crawlRule.addUrlToCrawl(url1);
 
@@ -816,7 +859,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
-    cus.addUrl(url1, new IOException("Test exception"));
+    cus.addUrl(url1, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(startUrl);
     crawlRule.addUrlToCrawl(url1);
 

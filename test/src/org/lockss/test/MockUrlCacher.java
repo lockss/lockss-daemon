@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.9 2003-08-06 00:36:28 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.10 2003-11-07 23:58:14 troberts Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ public class MockUrlCacher implements UrlCacher {
 
   private boolean shouldBeCached = false;
   private IOException cachingException = null;
+  private int numTimesToThrow = 1;
+  private int timesThrown = 0;
 
 
   public MockUrlCacher(String url){
@@ -118,8 +120,9 @@ public class MockUrlCacher implements UrlCacher {
     cachedProp = headers;
   }
 
-  public void setCachingException(IOException e) {
+  public void setCachingException(IOException e, int numTimesToThrow) {
     this.cachingException = e;
+    this.numTimesToThrow = numTimesToThrow;
   }
   
   public void forceCache() throws IOException {
@@ -135,7 +138,8 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public void cache() throws IOException {
-    if (cachingException != null) {
+    if (cachingException != null && timesThrown < numTimesToThrow) {
+      timesThrown++;
       throw cachingException;
     }
     if (cus != null) {

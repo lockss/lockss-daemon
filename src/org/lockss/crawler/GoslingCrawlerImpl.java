@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.42 2003-11-07 00:52:47 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.43 2003-11-07 23:58:14 troberts Exp $
  */
 
 /*
@@ -125,6 +125,14 @@ public class GoslingCrawlerImpl implements Crawler {
   
   private boolean wasError = false;
   private AuState aus = null;
+
+  private static final String PARAM_RETRY_TIMES =
+    Configuration.PREFIX + "GoslingCrawlerImpl.numCacheRetries";
+  private static final int DEFAULT_RETRY_TIMES = 3;
+
+  public static final String PARAM_RETRY_PAUSE =
+    Configuration.PREFIX + "GoslingCrawlerImpl.retryPause";
+  public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND; 
 
 
   /**
@@ -372,13 +380,9 @@ public class GoslingCrawlerImpl implements Crawler {
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
       try {
-	if (type == Crawler.NEW_CONTENT) {
-	  logger.debug("caching "+uc);
-	  uc.cache(); //IOException if there is a caching problem
-	} else {
-	  logger.debug("forced caching "+uc);
-	  uc.forceCache();
-	}
+	cacheWithRetries(uc, type,
+			 Configuration.getIntParam(PARAM_RETRY_TIMES,
+						   DEFAULT_RETRY_TIMES));
 	numUrlsFetched++;
       } catch (FileNotFoundException e) {
 	logger.warning(uc+" not found on publisher's site");
@@ -413,6 +417,42 @@ public class GoslingCrawlerImpl implements Crawler {
     }
     logger.debug2("Removing from list: "+uc.getUrl());
     return !wasError;
+  }
+
+  private void cacheWithRetries(UrlCacher uc, int type, int maxRetries)
+   throws IOException {
+    int numRetries = 0;
+    while (true) {
+      try {
+	if (type == Crawler.NEW_CONTENT) {
+	  logger.debug("caching "+uc);
+	  uc.cache(); //IOException if there is a caching problem
+	} else {
+	  logger.debug("forced caching "+uc);
+	  uc.forceCache();
+	}
+	return; //cache didn't throw
+      } catch (IOException e) {
+	logger.debug("Exception when trying to cache "+uc+", retrying", e);
+	Deadline pause =
+	  Deadline.in(Configuration.getTimeIntervalParam(PARAM_RETRY_PAUSE,
+							 DEFAULT_RETRY_PAUSE));
+	while (!pause.expired()) {
+	  logger.debug3("Sleeping for "+pause);
+	  try {
+	    pause.sleep();
+	  } catch (InterruptedException ie) {
+	    // no action
+	  }
+	}
+	numRetries++;
+	if (numRetries >= maxRetries) {
+	  logger.warning(uc+" threw "+numRetries
+			 +" when trying to cache.  Skipping");
+	  throw e;
+	}
+      }
+    }
   }
 
 
