@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.6 2003-06-20 22:34:52 claire Exp $
+ * $Id: LockssDatagram.java,v 1.7 2003-06-26 22:55:50 clairegriffin Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class LockssDatagram {
 
 
   /** Maximum data size */
-  public static final int MAX_SIZE = 2048;
+  public static final int MAX_SIZE = 1422; /* 1450 - 28 */
   public static final int PROTOCOL_TEST = 1;
   public static final int PROTOCOL_LCAP = 2;
   static final int HEADER_LENGTH = 4;
@@ -114,7 +114,7 @@ public class LockssDatagram {
     }
   }
 
-  /** 
+  /**
    * Encode the data for sending.
    */
   byte[] encodeUncompressedPacketData() {
@@ -124,7 +124,7 @@ public class LockssDatagram {
     return data;
   }
 
-  /** 
+  /**
    * Compress and encode the data for sending.
    */
   public byte[] encodeCompressedPacketData()

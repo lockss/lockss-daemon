@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.41 2003-06-26 01:50:25 clairegriffin Exp $
+ * $Id: LcapMessage.java,v 1.42 2003-06-26 22:55:49 clairegriffin Exp $
  */
 
 /*
@@ -59,8 +59,11 @@ public class LcapMessage
 
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
       "protocol.hashAlgorithm";
+  public static final String PARAM_MAX_PKT_SIZE = Configuration.PREFIX +
+      "protocol.maxPktSize";
 
   public static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
+  public static final int DEFAULT_MAX_PKT_SIZE = 1422;
 
   // XXX - stuff in the properties should go into a subclass for each version
 
@@ -76,7 +79,6 @@ public class LcapMessage
 
   public static final int MAX_HOP_COUNT_LIMIT = 16;
   public static final int SHA_LENGTH = 20;
-  public static final int MAX_PACKET_SIZE = 1024; // Don't exceed 1450 - 28
 
   /*
     byte
@@ -111,6 +113,7 @@ public class LcapMessage
   protected String m_lwrRem; // the remaining entries lwr bound (opt)
   protected String m_uprRem; // the remaining entries upr bound (opt)
   protected ArrayList m_entries; // the name poll entry list (opt)
+  protected int m_maxSize;
 
   private EncodedProperty m_props;
   private static byte[] signature = {
@@ -122,8 +125,11 @@ public class LcapMessage
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
     m_version =
-      Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
-				PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
+        Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
+                                  PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
+    m_maxSize = Configuration.getIntParam(PARAM_MAX_PKT_SIZE,
+                                          DEFAULT_MAX_PKT_SIZE);
+
   }
 
   protected LcapMessage(byte[] encodedBytes) throws IOException {
@@ -337,8 +343,6 @@ public class LcapMessage
    * decode the raw packet data into a property table
    * @param encodedBytes the array of encoded bytes
    * @throws IOException
-   * TODO: this needs to have the data broken into a variable portion
-   * and a invariable portion and hashed
    */
   public void decodeMsg(byte[] encodedBytes) throws IOException {
     long duration;
@@ -418,14 +422,18 @@ public class LcapMessage
     m_stopTime = now + duration;
   }
 
+  /**
+   * encode the message from a props table into a stream of bytes
+   * @return the encoded message as bytes
+   * @throws IOException if the packet can not be encoded
+   */
   public byte[] encodeMsg() throws IOException {
     return wrapPacket();
   }
 
   /**
-   * encode the message from a props table into a stream of bytes
-   * @return the encoded message as bytes
-   * @throws IOException if the packet can not be encoded
+   * store the local variables in the property table
+   * @throws IOException if the packet can not be stored
    */
   void storeProps() throws IOException {
     // make sure the props table is up to date
@@ -470,29 +478,28 @@ public class LcapMessage
       throw new ProtocolException("encode - missing hash in reply packet.");
     }
 
-    // blank these to avoid counting their length twice
-    m_props.remove("entries");
-    m_props.remove("lwrRem");
-    m_props.remove("uprRem");
-
     byte[] cur_bytes = m_props.encode();
-    int remaining_bytes = MAX_PACKET_SIZE - cur_bytes.length - 28;
-    if (remaining_bytes < 0) {
-      log.error("Packet exceeds maximum packet size: " + cur_bytes.length);
-      throw new ProtocolException("Packet exceeds maximum packet size.");
-    }
+    long diff_pktsize = 0;
+    do {
+      m_maxSize -= diff_pktsize;
+      int remaining_bytes = m_maxSize - cur_bytes.length - 28;
 
-    if (m_entries != null) {
-      m_props.setProperty("entries", entriesToString(remaining_bytes));
-    }
+      if (m_entries != null) {
+        m_props.setProperty("entries", entriesToString(remaining_bytes));
+      }
 
-    if (m_lwrRem != null) {
-      m_props.setProperty("lwrRem", m_lwrRem);
-    }
+      if (m_lwrRem != null) {
+        m_props.setProperty("lwrRem", m_lwrRem);
+      }
 
-    if (m_uprRem != null) {
-      m_props.setProperty("uprRem", m_uprRem);
-    }
+      if (m_uprRem != null) {
+        m_props.setProperty("uprRem", m_uprRem);
+      }
+      long pktsize = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+                                        encodeMsg()).getPacketSize();
+      diff_pktsize = pktsize - LockssDatagram.MAX_SIZE;
+    }while (diff_pktsize > 0);
+
   }
 
 

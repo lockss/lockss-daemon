@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.28 2003-06-26 01:50:27 clairegriffin Exp $
+ * $Id: TestLcapMessage.java,v 1.29 2003-06-26 22:55:50 clairegriffin Exp $
  */
 
 /*
@@ -133,6 +133,16 @@ public class TestLcapMessage extends LockssTestCase {
                  testmsg.m_lwrRem);
     assertEquals(testmsg.m_uprBound, testmsg.m_uprRem);
 
+  }
+
+  public void testStorePropsWithLargeNumberOfEntries() throws IOException {
+    int original_maxsize = testmsg.m_maxSize;
+    testmsg.m_entries = TestPoll.makeEntries(1,20000);
+    testmsg.storeProps();
+
+    assertNotNull(testmsg.m_lwrRem);
+    assertNotNull(testmsg.m_uprRem);
+    assertNotEquals(original_maxsize, testmsg.m_maxSize);
   }
 
   public void testNoOpMessageCreation() {
