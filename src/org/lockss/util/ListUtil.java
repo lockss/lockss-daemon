@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.7 2003-06-25 23:40:40 troberts Exp $
+ * $Id: ListUtil.java,v 1.8 2003-06-26 22:04:22 eaalto Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,7 +39,7 @@ public class ListUtil {
      * Don't construct. */
     private ListUtil() {
     }
-    
+
     /**
      * Create list from arg list. */
     public static List list() {
@@ -64,7 +64,7 @@ public class ListUtil {
 
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3) {
 	List l = list(object1, object2);
@@ -74,7 +74,7 @@ public class ListUtil {
 
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4) {
@@ -85,7 +85,7 @@ public class ListUtil {
 
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4,
@@ -97,7 +97,7 @@ public class ListUtil {
 
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4,
@@ -109,7 +109,7 @@ public class ListUtil {
     }
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4,
@@ -123,7 +123,7 @@ public class ListUtil {
     }
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4,
@@ -138,7 +138,7 @@ public class ListUtil {
     }
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4,
@@ -154,7 +154,7 @@ public class ListUtil {
     }
     /**
      * Create list from arg list. */
-    public static List list(Object object1, 
+    public static List list(Object object1,
 			    Object object2,
 			    Object object3,
 			    Object object4,
@@ -168,6 +168,25 @@ public class ListUtil {
 		      object6, object7, object8, object9);
 	l.add(object10);
 	return l;
+    }
+
+    /**
+     * Create list from arg list. */
+    public static List list(Object object1,
+                            Object object2,
+                            Object object3,
+                            Object object4,
+                            Object object5,
+                            Object object6,
+                            Object object7,
+                            Object object8,
+                            Object object9,
+                            Object object10,
+                            Object object11) {
+        List l = list(object1, object2, object3, object4, object5,
+                      object6, object7, object8, object9, object10);
+        l.add(object11);
+        return l;
     }
 
   /** Create a list containing the elements of an array */
