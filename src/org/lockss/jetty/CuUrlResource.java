@@ -1,5 +1,5 @@
 /*
- * $Id: CuUrlResource.java,v 1.3 2004-01-22 02:07:40 tlipkis Exp $
+ * $Id: CuUrlResource.java,v 1.4 2004-02-27 00:20:56 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.*;
 import java.security.Permission;
 import org.mortbay.util.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 /** URLResource tailored to LOCKSS CuUrls
  */
@@ -59,7 +60,7 @@ public class CuUrlResource extends URLResource {
   }
 
   /**
-   * Returns true if the respresenetd resource is a container/directory.
+   * Returns true if the represented resource is a container/directory.
    * LOCKSS CUs should never be treated as directories
    */
   public boolean isDirectory() {
@@ -83,7 +84,13 @@ public class CuUrlResource extends URLResource {
     if (path==null)
       return null;
 
-    Resource res = newResource(path);
+    Resource res;
+    if (org.lockss.util.StringUtil.
+	startsWithIgnoreCase(path, CuUrl.PROTOCOL_COLON)) {
+      res = new CuUrlResource(new URL(path), null);
+    } else {
+      res = newResource(path);
+    }
     return res;
   }
 
@@ -95,5 +102,12 @@ public class CuUrlResource extends URLResource {
   public boolean equals( Object o) {
     return (o instanceof CuUrlResource) &&
       UrlUtil.equalUrls(_url,((CuUrlResource)o)._url);
+  }
+
+  public String getProperty(String name) {
+    if (checkConnection()) {
+      return _connection.getHeaderField(name);
+    }
+    return null;
   }
 }
