@@ -4,6 +4,10 @@
 PROJECT_DIR=`( cd ../../..; pwd )`
 export PROJECT_DIR
 
+if [ "$1" == "clean" ] ; then
+  rm -rf lib
+fi
+
 for (( i=1 ; i<=4 ; i++ )) ; do
   (
     cd test$i
@@ -14,8 +18,9 @@ for (( i=1 ; i<=4 ; i++ )) ; do
        rm -rf cache
        rm -rf history
        rm -rf localA
+       rm -rf iddb
        rm -rf lib
-       rm test.out
+       rm -f test.out
     else
 	kill `cat dpid`
         echo stopped in `pwd`
