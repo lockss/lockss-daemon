@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.3 2004-09-29 18:57:56 tlipkis Exp $
+ * $Id: FuncSchedService.java,v 1.4 2004-10-01 09:27:19 tlipkis Exp $
  */
 
 /*
@@ -93,12 +93,11 @@ public class FuncSchedService extends LockssTestCase {
   public void testOneBack() throws Exception {
     final List rec = new ArrayList();
     TaskCallback cb = new TaskCallback() {
-	public void taskEvent(SchedulableTask task, Schedule.EventType event)
-	    throws TaskCallback.Abort {
+	public void taskEvent(SchedulableTask task, Schedule.EventType event) {
 	  rec.add(new BERec(Deadline.in(0), (BackgroundTask)task, event));
 	  if (event == Schedule.EventType.START) {
 	    if (task == taskToAbort) {
-	      throw new TaskCallback.Abort();
+	      task.cancel();
 	    }
 	  }
 	}};

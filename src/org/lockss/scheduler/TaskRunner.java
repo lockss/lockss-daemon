@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.27 2004-09-28 08:53:15 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.28 2004-10-01 09:27:19 tlipkis Exp $
  */
 
 /*
@@ -37,9 +37,9 @@ in this Software without prior written authorization from Stanford University.
 // don't let expired in acceptedTasks prevent new schedule
 
 package org.lockss.scheduler;
+
 import java.io.*;
 import java.util.*;
-
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -78,22 +78,34 @@ class TaskRunner {
   static final String PRIORITY_PARAM_STEPPER = "TaskRunner";
   static final int PRIORITY_DEFAULT_STEPPER = Thread.NORM_PRIORITY - 1;
 
+  static final String PRIORITY_PARAM_NOTIFIER = "Notifier";
+  static final int PRIORITY_DEFAULT_NOTIFIER = Thread.NORM_PRIORITY + 1;
+
+  static final String WDOG_PARAM_NOTIFIER = "Notifier";
+  static final long WDOG_DEFAULT_NOTIFIER = Constants.HOUR;
+
   protected static Logger log = Logger.getLogger("TaskRunner");
 
-  private SchedulerFactory schedulerFactory;
+  private final SchedulerFactory schedulerFactory;
+
+  // config params
+  private int maxDrop = DEFAULT_DROP_TASK_MAX;
+  private long minCleanupInterval = DEFAULT_MIN_CLEANUP_INTERVAL;
+  private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;;
+  private int sortScheme = DEFAULT_SORT_SCHEME;
+
+  private FifoQueue notifyQueue = new FifoQueue();
+
+  // all accesses synchronized
   private List acceptedTasks = new ArrayList();
   private Schedule currentSchedule;
   // overrun tasks, sorted by finish deadline
   private TreeSet overrunTasks =
     new TreeSet(SchedulableTask.latestFinishComparator());
-  private int maxDrop = DEFAULT_DROP_TASK_MAX;
-  private long minCleanupInterval = DEFAULT_MIN_CLEANUP_INTERVAL;
   // last n completed requests
   private HistoryList history = new HistoryList(DEFAULT_HISTORY_MAX);
   private StepThread stepThread;
-  private BinarySemaphore sem = new BinarySemaphore();
-  private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;;
-  private int sortScheme = DEFAULT_SORT_SCHEME;
+  private NotifyThread notifyThread;
 
   private int taskCtr = 0;
   private long totalTime = 0;
@@ -120,9 +132,13 @@ class TaskRunner {
     this.schedulerFactory = schedFactory;
   }
 
-  void init() {
+  void startService() {
     registerConfigCallback();
   }
+
+  void stopService() {
+    stopStepThread();
+  }    
 
   private void registerConfigCallback() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
@@ -160,7 +176,7 @@ class TaskRunner {
    */
   boolean scheduleTask(SchedulableTask task) {
     if (addToSchedule(task)) {
-      pokeThread();
+      pokeStepThread();
       log.debug("Scheduled task: " + task);
       return true;
     } else {
@@ -310,7 +326,7 @@ class TaskRunner {
 	    new Schedule.BackgroundEvent((BackgroundTask)task, Deadline.in(0),
 					 Schedule.EventType.FINISH);
 	  extraBackgroundEvents.add(event);
-	  pokeThread(false);
+	  pokeStepThread(false);
 	} else {
 	  addOverrunner(task, STAT_NONE);
 	}
@@ -377,21 +393,21 @@ class TaskRunner {
   /** Called by BackgroundTask.taskIsFinished() to inform task runner that
    * a background task has finished before its end time. */
   synchronized void backgroundTaskIsFinished(BackgroundTask task) {
-    Schedule.BackgroundEvent event = 
-      new Schedule.BackgroundEvent(task, Deadline.in(0),
-				   Schedule.EventType.FINISH);
     if (task.isFinished()) {
       // ignore if task already finished/finishing
       log.debug3("Background task finished redundantly: " + task);
       return;
     }
     log.debug2("Background task finished early: " + task);
+    Schedule.BackgroundEvent event = 
+      new Schedule.BackgroundEvent(task, Deadline.in(0),
+				   Schedule.EventType.FINISH);
     if (true) {
       backgroundTaskEvent(event);
     } else {
       // put the event where the stepper thread will find it
       extraBackgroundEvents.add(event);
-      pokeThread(false);
+      pokeStepThread(false);
     }
   }
 
@@ -414,7 +430,7 @@ class TaskRunner {
       removeFromBackgroundTasks((BackgroundTask)task);
     } else {
       // poke thread so it will recompute schedule
-      pokeThread();
+      pokeStepThread();
     }
     if (res) {
       incrStats(task, STAT_CANCELLED);
@@ -422,7 +438,7 @@ class TaskRunner {
     return res;
   }
 
-  synchronized void stopThread() {
+  synchronized void stopStepThread() {
     if (stepThread != null) {
       log.info("Stopping Q runner");
       stepThread.stopStepper();
@@ -430,7 +446,7 @@ class TaskRunner {
     }
   }
 
-  synchronized void pokeThread() {
+  synchronized void pokeStepThread() {
     if (stepThread == null) {
       log.info("Starting Q runner");
       stepThread = new StepThread("TaskRunner");
@@ -441,11 +457,27 @@ class TaskRunner {
     }
   }
 
-  void pokeThread(boolean startIfNotRunning) {
+  void pokeStepThread(boolean startIfNotRunning) {
     if (startIfNotRunning || stepThread != null) {
       // Avoid starting thread in unit tests.  In practice, the thread will
       // have been created once anything has been scheduled
-      pokeThread();
+      pokeStepThread();
+    }
+  }
+
+  synchronized void stopNotifyThread() {
+    if (notifyThread != null) {
+      log.info("Stopping notifier");
+      notifyThread.stopNotifier();
+      notifyThread = null;
+    }
+  }
+
+  synchronized void pokeNotifyThread() {
+    if (notifyThread == null) {
+      log.info("Starting notifier");
+      notifyThread = new NotifyThread("TaskNotifier");
+      notifyThread.start();
     }
   }
 
@@ -498,7 +530,7 @@ class TaskRunner {
   }
 
   synchronized boolean isIdle() {
-    return acceptedTasks.isEmpty();
+    return acceptedTasks.isEmpty() && notifyQueue.isEmpty();
   }
 
   // *******************************************************************
@@ -625,6 +657,13 @@ class TaskRunner {
     }
   }
 
+  // Cause a task event callback to be notified, by adding an element to
+  // the queue processed by the notify task.
+  void notify(SchedulableTask task, Schedule.EventType eventType) {
+    notifyQueue.put(new Notification(task, eventType));
+    pokeNotifyThread();
+  }
+
   /** Cause a background task to stert or finish, according to event. */
   void backgroundTaskEvent(Schedule.BackgroundEvent event) {
     BackgroundTask task = event.getTask();
@@ -640,14 +679,14 @@ class TaskRunner {
 	// remove itself from backgroundTasks, before we get to run again.
 	decrStats(task, STAT_WAITING);
 	try {
-	  task.callback.taskEvent(task, et);
-	} catch (TaskCallback.Abort e) {
-	  // task doesn't want to run, remove from backgroundTasks
-	  event.setError(e);
-	  removeFromBackgroundTasks(task);
-	  acceptedTasks.remove(task);
-	  addToHistory(event);
-	  return;
+	  notify(task, et);
+// 	} catch (TaskCallback.Abort e) {
+// 	  // task doesn't want to run, remove from backgroundTasks
+// 	  event.setError(e);
+// 	  removeFromBackgroundTasks(task);
+// 	  acceptedTasks.remove(task);
+// 	  addToHistory(event);
+// 	  return;
 	} catch (Exception e) {
 	  log.error("Background task start callback threw", e);
 	  event.setError(e);
@@ -665,7 +704,7 @@ class TaskRunner {
 	}
 	addToHistory(event);
 	try {
-	  task.callback.taskEvent(task, event.getType());
+	  notify(task, event.getType());
 	} catch (Exception e) {
 	  log.error("Background task finish callback threw", e);
 	  event.setError(e);
@@ -708,7 +747,7 @@ class TaskRunner {
 
   void notifyExpiredOverrunners() {
     while (!overrunTasks.isEmpty()) {
-      SchedulableTask task = (SchedulableTask)overrunTasks.first();
+      StepTask task = (StepTask)overrunTasks.first();
       if (task.isExpired()) {
 	removeTask(task);
       } else {
@@ -719,7 +758,7 @@ class TaskRunner {
 
   void removeChunk(Schedule.Chunk chunk) {
     if (log.isDebug3()) log.debug3("Removing " + chunk);
-    SchedulableTask task = chunk.getTask();
+    StepTask task = chunk.getTask();
     if (task.isFinished() || task.isExpired()) {
 	removeTask(task);
     } else if (chunk.isTaskEnd()) {
@@ -752,7 +791,7 @@ class TaskRunner {
     }
   }
 
-  void removeTask(SchedulableTask task) {
+  void removeTask(StepTask task) {
     if (task.hasBeenNotified()) {
       // this can happen for a variety of reasons: task finished early but
       // has more chunks in the schedule; a new schedule is created while a
@@ -775,7 +814,7 @@ class TaskRunner {
     task.setNotified();
   }
 
-  private void removeAndNotify(SchedulableTask task, String msg) {
+  private void removeAndNotify(StepTask task, String msg) {
     task.setFinished();
     if (task.e instanceof SchedService.Timeout) {
       incrStats(task, STAT_EXPIRED);
@@ -796,17 +835,14 @@ class TaskRunner {
     doCallback(task);
   }
 
-  void doCallback(SchedulableTask task) {
+  void doCallback(StepTask task) {
     if (task.callback != null) {
       try {
-	task.callback.taskEvent(task, Schedule.EventType.FINISH);
+	notify(task, Schedule.EventType.FINISH);
       } catch (Exception e) {
 	log.error("Task callback threw", e);
       }
     }
-    // history list for status only, don't hold on to caller's objects
-    task.callback = null;
-    task.cookie = null;
   }
 
   void runSteps(MutableBoolean continueStepping, LockssWatchdog wdog) {
@@ -880,6 +916,7 @@ class TaskRunner {
   // Step thread
   private class StepThread extends LockssThread {
     private MutableBoolean continueStepping = new MutableBoolean(false);
+    private BinarySemaphore sem = new BinarySemaphore();
     private boolean exit = false;
 
     private StepThread(String name) {
@@ -921,6 +958,74 @@ class TaskRunner {
       triggerWDogOnExit(false);
       exit = true;
       pokeStepper();
+    }
+  }
+
+  // Notify thread
+  private class NotifyThread extends LockssThread {
+    private boolean exit = false;
+
+    private NotifyThread(String name) {
+      super(name);
+    }
+
+    public void lockssRun() {
+      triggerWDogOnExit(true);
+      setPriority(PRIORITY_PARAM_NOTIFIER, PRIORITY_DEFAULT_NOTIFIER);
+      startWDog(WDOG_PARAM_NOTIFIER, WDOG_DEFAULT_NOTIFIER);
+      nowRunning();
+
+      Notification note;
+      try {
+	while (!exit) {
+	  Deadline timeout = Deadline.in(30 * Constants.MINUTE);
+	  if ((note = (Notification)notifyQueue.get(timeout)) != null) {
+	    try {
+	      note.doNotify();
+	    } catch (Exception e) {
+	      log.warning("Exception in task callback", e);
+	    }
+	  }
+	}
+	stopWDog();
+	triggerWDogOnExit(false);
+      } catch (InterruptedException e) {
+ 	// no action - expected when stopping
+      } finally {
+	notifyThread = null;
+      }
+    }
+
+    private void stopNotifier() {
+      triggerWDogOnExit(false);
+      exit = true;
+      interrupt();
+    }
+  }
+
+  /** Structure put on notification queue */
+  static class Notification {
+    private SchedulableTask task;
+    private Schedule.EventType eventType;
+
+    Notification(SchedulableTask task, Schedule.EventType eventType) {
+      this.task = task;
+      this.eventType = eventType;
+    }
+
+    void doNotify() {
+      if (task.callback != null) {
+	try {
+	  task.callback.taskEvent(task, eventType);
+	} finally {
+	  if (eventType == Schedule.EventType.FINISH) {
+	    // task will stay on history list for a while; don't hold on to
+	    // caller's objects
+	    task.callback = null;
+	    task.cookie = null;
+	  }
+	}
+      }
     }
   }
 
@@ -1147,13 +1252,13 @@ class TaskRunner {
       return ((x & y) != 0);
     }
 
-    private int sortOrder(int scheme, int ix, boolean history) {
+    private int sortOrder(int scheme, int ix, boolean isHistory) {
       int res = ix;
-      if ((history && bittest(scheme, HIST_REV)) ||
-	  (!history && bittest(scheme, PEND_REV))) {
+      if ((isHistory && bittest(scheme, HIST_REV)) ||
+	  (!isHistory && bittest(scheme, PEND_REV))) {
 	res = -res;
       }
-      if (bittest(scheme, HIST_FIRST) != history) {
+      if (bittest(scheme, HIST_FIRST) != isHistory) {
 	res += 99999;
       }
       return res;

@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.7 2004-07-21 07:05:36 tlipkis Exp $
+ * $Id: BackgroundTask.java,v 1.8 2004-10-01 09:27:19 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ public class BackgroundTask extends SchedulableTask {
 
   final double loadFactor;
 //   final int loadFactor0;
-  final TaskCallback callback;
   private Deadline latestStart;		// hack until schedulable range
 					// handled compatibly with
 					// superclass

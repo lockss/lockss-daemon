@@ -1,5 +1,5 @@
 /*
- * $Id: TaskCallback.java,v 1.3 2004-09-28 08:53:15 tlipkis Exp $
+ * $Id: TaskCallback.java,v 1.4 2004-10-01 09:27:19 tlipkis Exp $
  */
 
 /*
@@ -46,17 +46,6 @@ public interface TaskCallback {
    * @param type one of {@link Schedule.EventType#START}, {@link
    * Schedule.EventType#FINISH}
    */
-  public void taskEvent(SchedulableTask task, Schedule.EventType type)
-      throws Abort;
-
-  public class Abort extends Exception {
-    public Abort() {
-      super();
-    }
-
-    public Abort(String msg) {
-      super(msg);
-    }
-  }
+  public void taskEvent(SchedulableTask task, Schedule.EventType type);
 }
 

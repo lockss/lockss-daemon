@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.9 2004-09-21 21:25:01 dshr Exp $
+ * $Id: TestTaskRunner.java,v 1.10 2004-10-01 09:27:19 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TestTaskRunner extends LockssTestCase {
   };
 
   static Logger log = Logger.getLogger("TestTaskRunner");
-  private TaskRunner tr;
+  private MyMockTaskRunner tr;
   private SchedFact fact;
   private List removedChunks;
   private List removedTasks;
@@ -61,11 +61,12 @@ public class TestTaskRunner extends LockssTestCase {
     removedTasks = new ArrayList();
     fact = new SchedFact(null);
     tr = new MyMockTaskRunner(fact);
-    tr.init();
+    tr.startService();
   }
 
   public void tearDown() throws Exception {
     TimeBase.setReal();
+    tr.stopService();
     super.tearDown();
   }
 
@@ -493,6 +494,7 @@ public class TestTaskRunner extends LockssTestCase {
 				     bEvent(t3, Schedule.EventType.FINISH),
 				     bEvent(t2, Schedule.EventType.FINISH)));
     fact.setResults(ListUtil.list(s, s, s));
+
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     assertTrue(tr.addToSchedule(t3));
@@ -595,14 +597,22 @@ public class TestTaskRunner extends LockssTestCase {
     assertTrue(t1.e.toString(), t1.e instanceof SchedService.Overrun);
   }
 
+  private void newTr(MyMockTaskRunner newTr) {
+    if (tr != null) {
+      tr.stopService();
+    }
+    tr = newTr;
+    tr.startService();
+  }
+
   public void testRunStepsWithOverrunAllowed() {
     StepTask t1 = task(100, 500, 30, null, new MyMockStepper(15, -10));
     t1.setOverrunAllowed(true);
     StepTask t2 = task(150, 250, 100, null, new MyMockStepper(10, -10));
-    tr = new MyMockTaskRunner(new TaskRunner.SchedulerFactory () {
+    newTr(new MyMockTaskRunner(new TaskRunner.SchedulerFactory () {
 	public Scheduler createScheduler() {
 	  return new SortScheduler();
-	}});
+	}}));
     assertTrue(tr.addToSchedule(t1));
     assertTrue(tr.addToSchedule(t2));
     TimeBase.setSimulated(101);
@@ -631,10 +641,10 @@ public class TestTaskRunner extends LockssTestCase {
     StepTask t1 = task(100, 500, 30, null, new MyMockStepper(15, -10));
     t1.setOverrunAllowed(true);
     StepTask t2 = task(150, 250, 100, null, new MyMockStepper(10, -10));
-    tr = new MyMockTaskRunner(new TaskRunner.SchedulerFactory () {
+    newTr(new MyMockTaskRunner(new TaskRunner.SchedulerFactory () {
 	public Scheduler createScheduler() {
 	  return new SortScheduler();
-	}});
+	}}));
     assertTrue(tr.addToSchedule(t1));
     assertEmpty(tr.getOverrunTasks());
     TimeBase.setSimulated(101);
@@ -680,8 +690,47 @@ public class TestTaskRunner extends LockssTestCase {
     assertEquals(5, stepper.nSteps);
   }
 
+  public void testNotifyThread() {
+    final List rec = new ArrayList();
+    final SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    tr.setImmediateNotify(false);
+
+    TaskCallback cb = new TaskCallback() {
+	public void taskEvent(SchedulableTask task, Schedule.EventType event) {
+	  rec.add(new BERec(Deadline.in(0), (BackgroundTask)task, event));
+	  sem.give();
+	}};
+    BackgroundTask t1 = btask(100, 200, .1, cb);
+    BackgroundTask t2 = btask(100, 300, .2, cb);
+
+    tr.notify(t1, Schedule.EventType.START);
+    tr.notify(t1, Schedule.EventType.FINISH);
+    // 2nd finish event should not cause another callback
+    tr.notify(t1, Schedule.EventType.FINISH);
+    tr.notify(t2, Schedule.EventType.START);
+
+    Interrupter intr = null;
+    try {
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
+      while (rec.size() < 3) {
+	sem.take();
+      }
+      assertEquals(ListUtil.list(
+				 new BERec(0, t1, Schedule.EventType.START),
+				 new BERec(0, t1, Schedule.EventType.FINISH),
+				 new BERec(0, t2, Schedule.EventType.START)),
+		   rec);
+      intr.cancel();
+    } finally {
+      if (intr.did()) {
+	fail("Notifier didn't run callbacks");
+      }
+    }
+  }
 
   class MyMockTaskRunner extends TaskRunner {
+    private boolean doImmediateNotify = true;
+
     MyMockTaskRunner(TaskRunner.SchedulerFactory fact) {
       super(fact);
     }
@@ -691,9 +740,23 @@ public class TestTaskRunner extends LockssTestCase {
       super.removeChunk(chunk);
     }
 
-    void removeTask(SchedulableTask task) {
+    void removeTask(StepTask task) {
       removedTasks.add(task);
       super.removeTask(task);
+    }
+    // Most of the tests in this file were written when task event
+    // notification was done synchronously in TaskRunner.  Reproduce that
+    // behavior here for simplicity.
+    void notify(SchedulableTask task, Schedule.EventType eventType) {
+      if (doImmediateNotify) {
+	task.callback.taskEvent(task, eventType);
+      } else {
+	super.notify(task, eventType);
+      }
+    }
+
+    void setImmediateNotify(boolean immediate) {
+      doImmediateNotify = immediate;
     }
   }
 

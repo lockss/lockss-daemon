@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.8 2004-09-28 08:53:15 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.9 2004-10-01 09:27:19 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class SchedulableTask {
 
   // estimate, estRem
   long origEst;
-  TaskCallback callback;
+  protected TaskCallback callback;
   protected Object cookie;
 
   long timeUsed = 0;
@@ -219,7 +219,7 @@ public class SchedulableTask {
 	int res = t1.getLatestFinish().compareTo(t2.getLatestFinish());
 	if (res == 0) {
 	  // If the end times are equal, sort by schedule order.
-	  res = t2.schedSeq - t1.schedSeq;
+	  res = t1.schedSeq - t2.schedSeq;
 	  if (res == 0) {
 	    // Don't ever return 0, as these are used in TreeSets, which
 	    // consider sort order equality to mean object equality
