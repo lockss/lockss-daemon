@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.21 2003-11-07 00:52:48 troberts Exp $
+ * $Id: HashSpeedTest.java,v 1.22 2004-01-08 01:35:45 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,9 @@ public class HashSpeedTest extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
+    theDaemon.getPluginManager();
+    theDaemon.getSystemMetrics();
+    theDaemon.getHashService();
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
     theDaemon.getSystemMetrics().startService();
