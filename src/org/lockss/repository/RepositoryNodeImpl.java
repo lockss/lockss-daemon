@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.43 2004-01-31 02:57:47 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.44 2004-02-23 09:16:13 tlipkis Exp $
  */
 
 /*
@@ -325,7 +325,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
         try {
           if (FileUtil.isContentEqual(currentCacheFile, tempCacheFile)) {
             // don't rename
-            logger.debug("New version identical to old.");
+	    logger.debug("New version identical to old: " + currentCacheFile);
             identicalVersion = true;
           } else if (!currentCacheFile.renameTo(getVersionedCacheFile(
               currentVersion))) {
