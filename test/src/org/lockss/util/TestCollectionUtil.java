@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.1 2002-08-31 06:58:16 tal Exp $
+ * $Id: TestCollectionUtil.java,v 1.2 2002-09-19 21:02:13 tal Exp $
  */
 
 /*
@@ -50,22 +50,30 @@ public class TestCollectionUtil extends TestCase {
     super(msg);
   }
 
-  public void testEqualColls() {
+  public void testIsoIter() {
     Vector v = new Vector();
     List l = new ArrayList();
-    assertTrue(CollectionUtil.equalCollections(v.iterator(), l.iterator()));
+    assertTrue(CollectionUtil.isIsomorphic(v.iterator(), l.iterator()));
     v.add("one");
-    assertTrue( ! CollectionUtil.equalCollections(v.iterator(), l.iterator()));
+    assertTrue( ! CollectionUtil.isIsomorphic(v.iterator(), l.iterator()));
     l.add("one");
-    assertTrue(CollectionUtil.equalCollections(v.iterator(), l.iterator()));
+    assertTrue(CollectionUtil.isIsomorphic(v.iterator(), l.iterator()));
     l.add("two");
-    assertTrue( ! CollectionUtil.equalCollections(v.iterator(), l.iterator()));
+    assertTrue( ! CollectionUtil.isIsomorphic(v.iterator(), l.iterator()));
     v.add("two");
-    assertTrue(CollectionUtil.equalCollections(v.iterator(), l.iterator()));
+    assertTrue(CollectionUtil.isIsomorphic(v.iterator(), l.iterator()));
     l.add("three");
     v.add("fweet");
-    assertTrue( ! CollectionUtil.equalCollections(v.iterator(), l.iterator()));
+    assertTrue( ! CollectionUtil.isIsomorphic(v.iterator(), l.iterator()));
   }
+
+  public void testIsoColls() {
+    Vector v1 = new Vector();
+    Vector v2 = new Vector();
+    Object a0[] = {};
+    Object a1[] = {"12", "34"};
+  }
+
 
   static String empty[] = {};
   public void testEmptyIter() {
