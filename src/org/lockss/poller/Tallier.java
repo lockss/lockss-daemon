@@ -1,5 +1,5 @@
 /*
-* $Id: Tallier.java,v 1.5 2003-07-31 00:46:04 eaalto Exp $
+* $Id: Tallier.java,v 1.6 2004-09-22 23:50:20 clairegriffin Exp $
  */
 
 /*
@@ -137,11 +137,5 @@ public interface Tallier {
    * @return an integer representing the results of the poll
    */
   public int getTallyResult();
-
-  /**
-   * Returns the ActivityRegulator.Lock that this poll is using.
-   * @return the lock
-   */
-  public ActivityRegulator.Lock getActivityLock();
 
 }

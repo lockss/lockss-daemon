@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.135 2004-09-22 19:13:02 dshr Exp $
+ * $Id: PollManager.java,v 1.136 2004-09-22 23:50:20 clairegriffin Exp $
  */
 
 /*
@@ -64,13 +64,13 @@ public class PollManager
       "poll.expireVerifier";
 
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
-  static final long DEFAULT_VERIFY_EXPIRATION = Constants.DAY;
+  static final long DEFAULT_VERIFY_EXPIRATION = 6 * Constants.HOUR;
 
   private static PollManager theManager = null;
   protected static Logger theLog = Logger.getLogger("PollManager");
   private static LcapDatagramRouter.MessageHandler  m_msgHandler;
   private static Hashtable thePolls = new Hashtable();
-  private static HashMap theVerifiers = new HashMap();
+  private static VariableTimedMap theVerifiers = new VariableTimedMap();
   private static IdentityManager theIDManager;
   private static HashService theHashService;
   private static LockssRandom theRandom = new LockssRandom();
@@ -204,6 +204,19 @@ public class PollManager
     return (PollManagerEntry)thePolls.get(key);
   }
 
+  public ActivityRegulator.Lock acquirePollLock(Object key) {
+    ActivityRegulator.Lock lock = null;
+    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    if(pme != null) {
+      PollTally tally = pme.poll.getVoteTally();
+      if(tally != null) {
+        lock = tally.getActivityLock();
+        tally.setActivityLock(null);
+      }
+    }
+    return lock;
+  }
+
   /**
    * suspend a poll while we wait for a repair
    * @param key the identifier key of the poll to suspend
@@ -224,7 +237,9 @@ public class PollManager
    * @param replayNeeded true we now need to replay the poll results
    * @param key the key of the suspended poll
    */
-  public void resumePoll(boolean replayNeeded, Object key) {
+  public void resumePoll(boolean replayNeeded,
+                         Object key,
+                         ActivityRegulator.Lock lock) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme == null) {
       theLog.debug2("ignoring resume request for unknown key " + key);
@@ -232,6 +247,7 @@ public class PollManager
     }
     theLog.debug("resuming poll " + key);
     PollTally tally = pme.poll.getVoteTally();
+    tally.setActivityLock(lock);
     long expiration = 0;
     Deadline d;
     NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
@@ -443,7 +459,10 @@ public class PollManager
         theLog.error("Unable to write Identity DB file.");
       }
       // free the activity lock
-      tally.getActivityLock().expire();
+      ActivityRegulator.Lock lock = tally.getActivityLock();
+      if(lock != null) {
+        lock.expire();
+      }
     }
   }
 
@@ -683,9 +702,8 @@ public class PollManager
     String ver = String.valueOf(B64Code.encode(verifier));
     String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
     Deadline d = Deadline.in(m_verifierExpireTime + duration);
-    TimerQueue.schedule(d, new ExpireVerifierCallback(), ver);
     synchronized (theVerifiers) {
-      theVerifiers.put(ver, sec);
+      theVerifiers.put(ver, sec, d);
     }
   }
 
@@ -820,18 +838,6 @@ public class PollManager
           return;
         }
         thePolls.remove(cookie);
-      }
-    }
-  }
-
-  static class ExpireVerifierCallback implements TimerQueue.Callback {
-    /**
-     * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
-     */
-    public void timerExpired(Object cookie) {
-      synchronized(theVerifiers) {
-        theVerifiers.remove(cookie);
       }
     }
   }

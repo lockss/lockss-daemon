@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.65 2004-09-22 19:13:03 dshr Exp $
+ * $Id: TestPollManager.java,v 1.66 2004-09-22 23:50:21 clairegriffin Exp $
  */
 
 /*
@@ -395,9 +395,8 @@ public class TestPollManager extends LockssTestCase {
     p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2);
     pollmanager.addPoll(p1);
     // give it a pointless lock to avoid a null pointer
-    p1.getVoteTally().
-      setActivityLock(theDaemon.getActivityRegulator(testau).
-		      getAuActivityLock(-1, 123));
+    ActivityRegulator.Lock lock = theDaemon.getActivityRegulator(testau).
+		      getAuActivityLock(-1, 123);
 
     // check our suspend
     pollmanager.suspendPoll(p1.m_key);
@@ -405,7 +404,7 @@ public class TestPollManager extends LockssTestCase {
     assertFalse(pollmanager.isPollClosed(p1.m_key));
 
     // now we resume...
-    pollmanager.resumePoll(false, p1.m_key);
+    pollmanager.resumePoll(false, p1.m_key, lock);
     assertFalse(pollmanager.isPollSuspended(p1.m_key));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.27 2004-09-20 14:20:36 dshr Exp $
+ * $Id: PollTally.java,v 1.28 2004-09-22 23:50:20 clairegriffin Exp $
  */
 
 /*
@@ -143,7 +143,7 @@ public abstract class PollTally implements Tallier{
         localEntries.iterator();
   }
 
-  public ActivityRegulator.Lock getActivityLock() {
+  ActivityRegulator.Lock getActivityLock() {
     return activityLock;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.17 2004-09-21 00:03:32 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.18 2004-09-22 23:50:19 clairegriffin Exp $
  */
 
 /*
@@ -262,9 +262,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     try {
       return Class.forName(className, true, classLoader).newInstance();
     }
-    catch (Throwable t) {
+    catch (Exception ex) {
       throw new InvalidDefinitionException(
-          auName + " unable to create " + description + ": " + className, t);
+          auName + " unable to create " + description + ": " + className, ex);
+    }
+    catch (LinkageError le) {
+      throw new InvalidDefinitionException(
+          auName + " unable to create " + description + ": " + className, le);
+
     }
   }
 

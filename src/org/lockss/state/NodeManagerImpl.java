@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.188 2004-09-20 14:20:38 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.189 2004-09-22 23:50:20 clairegriffin Exp $
  */
 
 /*
@@ -558,9 +558,9 @@ public class NodeManagerImpl
     // schedule repair crawls if needed
     boolean repairsDone = false;
     if (repairCol.size() > 0) {
-      markNodesForRepair(repairCol, results.getPollKey(),
-                         results.getCachedUrlSet(), true,
-                         results.getActivityLock());
+      String key = results.getPollKey();
+      markNodesForRepair(repairCol, key, results.getCachedUrlSet(), true,
+                         pollManager.acquirePollLock(key));
       repairsDone = true;
     }
 
@@ -1059,12 +1059,13 @@ public class NodeManagerImpl
         if (!reportOnly) {
           logger.debug2("scheduling repair");
           List repairUrl = ListUtil.list(nodeState.getCachedUrlSet().getUrl());
-          if (results!=null) {
+          if (results != null) {
             // give poll info for replay
-            markNodesForRepair(repairUrl, results.getPollKey(),
-                               nodeState.getCachedUrlSet(), false,
-                               results.getActivityLock());
-          } else {
+            String key = results.getPollKey();
+            markNodesForRepair(repairUrl, key, nodeState.getCachedUrlSet(),
+                               false, pollManager.acquirePollLock(key));
+          }
+          else {
             // no poll info to replay
             markNodesForRepair(repairUrl, null, nodeState.getCachedUrlSet(),
                                false, null);
@@ -1486,7 +1487,7 @@ public class NodeManagerImpl
 
     damagedNodes.addToRepair(cus, urls);
 
-    PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls);
+    PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls, lock);
     theDaemon.getCrawlManager().startRepair(managedAu, urls,
         new ContentRepairCallback(), cookie, lock);
   }
@@ -1846,8 +1847,12 @@ public class NodeManagerImpl
         } else {
           state.setState(NodeState.SNCUSS_POLL_REPLAYING);
         }
-        pollManager.resumePoll(success, pollCookie.pollKey);
+        pollManager.resumePoll(success, pollCookie.pollKey, pollCookie.lock);
       } else {
+        // if we need to release our lock, make sure we do it.
+        if(pollCookie.lock != null) {
+          pollCookie.lock.expire();
+        }
         if (pollCookie.isNamePoll) {
           logger.debug("Calling new name poll...");
           state.setState(NodeState.WRONG_NAMES);
@@ -1870,13 +1875,15 @@ public class NodeManagerImpl
     String pollKey;
     boolean isNamePoll;
     Collection urlsToRepair;
+    ActivityRegulator.Lock lock;
 
     PollCookie(CachedUrlSet cus, String pollKey, boolean isNamePoll,
-        Collection urlsToRepair) {
+        Collection urlsToRepair, ActivityRegulator.Lock lock) {
       this.cus = cus;
       this.pollKey = pollKey;
       this.isNamePoll = isNamePoll;
       this.urlsToRepair = urlsToRepair;
+      this.lock = lock;
     }
   }
 
