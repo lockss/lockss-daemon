@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.17 2004-10-13 06:21:29 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.18 2004-10-21 00:34:29 dcfok Exp $
  */
 
 /*
@@ -88,6 +88,7 @@ public class CrawlManagerStatus implements StatusAccessor {
 
   private static final String NC_TYPE = "New Content";
   private static final String REPAIR_TYPE = "Repair";
+  private static final String OAI_TYPE = "Oai";
   private Map newContentCrawls = null;
   private Map repairCrawls = null;
   private CrawlManager.StatusSource statusSource;
@@ -146,6 +147,8 @@ public class CrawlManagerStatus implements StatusAccessor {
 	return NC_TYPE;
       case Crawler.REPAIR:
 	return REPAIR_TYPE;
+      case Crawler.OAI:
+	return OAI_TYPE;
     }
     return "Unknown";
   }
