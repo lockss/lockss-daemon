@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.16 2003-03-24 01:19:23 tal Exp $
+ * $Id: LockssDaemon.java,v 1.17 2003-04-03 02:28:31 tal Exp $
  */
 
 /*
@@ -135,12 +135,14 @@ public class LockssDaemon {
   private static Logger log = Logger.getLogger("LockssDaemon");
   protected List propUrls = null;
   private String configDir = null;
+  // set true after all managers have been inited
+  private boolean daemonInited = false;
+  private boolean daemonRunning = false;
 
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
   protected static Map theManagers = new SequencedHashMap();
 
-  boolean running = false;
 
   protected LockssDaemon(List propUrls){
     this.propUrls = propUrls;
@@ -354,7 +356,7 @@ public class LockssDaemon {
    * stop the daemon
    */
   protected void stop() {
-
+    daemonRunning = false;
     /* stop the managers */
     // tk - should this stop the managers in the reverse order?
     Iterator it = theManagers.values().iterator();
@@ -390,6 +392,7 @@ public class LockssDaemon {
       LockssManager mgr = loadManager(mgr_name);
       theManagers.put(desc.key, mgr);
     }
+    daemonInited = true;
     // now start the managers in the same order in which they were created
     // (theManagers is a SequencedHashMap)
     Iterator it = theManagers.values().iterator();
@@ -397,7 +400,7 @@ public class LockssDaemon {
       LockssManager lm = (LockssManager)it.next();
       lm.startService();
     }
-
+    daemonRunning = true;
   }
 
   /**
@@ -421,5 +424,13 @@ public class LockssDaemon {
     }
   }
 
+  /** Return true iff all managers have been inited */
+  public boolean isDaemonInited() {
+    return daemonInited;
+  }
 
+  /** Return true iff all managers have been started */
+  public boolean isDaemonRunning() {
+    return daemonRunning;
+  }
 }
