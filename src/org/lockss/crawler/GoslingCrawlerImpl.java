@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.6 2003-01-02 19:40:34 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.7 2003-01-06 22:54:07 troberts Exp $
  */
 
 /*
@@ -139,7 +139,6 @@ public class GoslingCrawlerImpl implements Crawler {
       String url = (String)list.remove(0);
       logger.debug("Dequeued url from list: "+url);
       UrlCacher uc = cus.makeUrlCacher(url);
-      logger.debug(url);
       if (uc.shouldBeCached()) {
  	if (overWrite || !cus.isCached(url)) {
 	  try {
@@ -157,8 +156,13 @@ public class GoslingCrawlerImpl implements Crawler {
 	try{
 	  if (followLinks && !parsedPages.contains(uc.getUrl())) {
 	    CachedUrl cu = uc.getCachedUrl();
-	    addUrlsToList(cu, list);//IOException if the CU can't be read
-	    parsedPages.add(uc.getUrl());
+
+	    //XXX quick fix; if statement should be removed when we rework 
+	    //handling of error condition
+	    if (cu.exists()) {
+	      addUrlsToList(cu, list);//IOException if the CU can't be read
+	      parsedPages.add(uc.getUrl());
+	    }
 	  }
 	} catch (IOException ioe) {
 	  //XXX handle this better.  Requeue?
