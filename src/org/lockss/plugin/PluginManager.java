@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.60 2004-01-03 06:19:23 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.61 2004-01-04 06:14:53 tlipkis Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class PluginManager extends BaseLockssManager {
     return pluginKeyFromId(pluginId)+"&"+auKey;
   }
 
-  static String configKeyFromAuId(String auid) {
+  public static String configKeyFromAuId(String auid) {
     return StringUtil.replaceFirst(auid, "&", ".");
   }
 
@@ -337,7 +337,7 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
-  private void putAuInMap(ArchivalUnit au) {
+  protected void putAuInMap(ArchivalUnit au) {
     auMap.put(au.getAuId(), au);
   }
 
@@ -458,16 +458,17 @@ public class PluginManager extends BaseLockssManager {
    * @return the AU's Configuration, with unprefixed keys.
    */
   public Configuration getStoredAuConfiguration(ArchivalUnit au) {
-    return getStoredAuConfiguration(configKeyFromAuId(au.getAuId()));
+    return getStoredAuConfiguration(au.getAuId());
   }
 
   /**
-   * Return the config tree for an AU key (from config file).
-   * @param aukey the AU's config key (<i>ie</i>,
-   * <code>configKeyFromAuId(auid)</code>)
+   * Return the config tree for an AU id (from the loaded config, not the
+   * au itself).
+   * @param auid the AU's id.
    * @return the AU's Configuration, with unprefixed keys.
    */
-  public Configuration getStoredAuConfiguration(String aukey) {
+  public Configuration getStoredAuConfiguration(String auid) {
+    String aukey = configKeyFromAuId(auid);
     Configuration config = configMgr.readAuConfigFile();
     String prefix = PARAM_AU_TREE + "." + aukey;
     return config.getConfigTree(prefix);
@@ -533,7 +534,7 @@ public class PluginManager extends BaseLockssManager {
   }
 
   // separate method so can be called by test code
-  private void setPlugin(String pluginKey, Plugin plugin) {
+  protected void setPlugin(String pluginKey, Plugin plugin) {
     if (log.isDebug3()) {
       log.debug3("PluginManager.setPlugin(" + pluginKey + ", " +
 		 plugin.getPluginName() + ")");
@@ -610,10 +611,12 @@ public class PluginManager extends BaseLockssManager {
     return new ArrayList(auMap.values());
   }
 
+  /** Return all the known titles from the title db */
   public Collection findAllTitles() {
     return getTitleMap().keySet();
   }
 
+  /** Find all the plugins that support the given title */
   public Collection getTitlePlugins(String title) {
     return (Collection)getTitleMap().get(title);
   }
