@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.6 2002-11-23 01:39:28 troberts Exp $
+ * $Id: LcapMessage.java,v 1.7 2002-11-23 05:46:26 claire Exp $
  */
 
 /*
@@ -360,10 +360,19 @@ public class LcapMessage {
    */
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
-    m_props.setProperty("origIP",m_originID.getAddress().getHostAddress());
+    try {
+      m_props.setProperty("origIP",m_originID.getAddress().getHostAddress());
+    }
+    catch(NullPointerException npe) {
+      throw new ProtocolException("LcapMessage.encode - null origin host address.");
+    }
 
-    m_props.setProperty("group",m_group.getHostAddress());
-
+    try {
+      m_props.setProperty("group",m_group.getHostAddress());
+    }
+    catch(NullPointerException npe) {
+      throw new ProtocolException("LcapMessage.encode - null group host address.");
+    }
     m_props.putInt("ttl",m_ttl);
     m_props.putInt("duration",(int)(getDuration()/1000));
     m_props.putInt("elapsed",(int)(getElapsed()/1000));
