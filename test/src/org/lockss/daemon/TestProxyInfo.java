@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.3 2003-09-23 07:49:58 eaalto Exp $
+ * $Id: TestProxyInfo.java,v 1.4 2004-03-15 22:20:31 tlipkis Exp $
  */
 
 /*
@@ -115,15 +115,51 @@ public class TestProxyInfo extends LockssTestCase {
 	       re.isMatch(pf));
   }
 
-  String frag = "Proxy host.org:9090\n" +
-    "Title foo\n" +
+  String entry = "Title foo\n" +
     "URL http://foo.bar\n" +
     "Domain foo.bar\n\n";
+
+  String frag =
+    "Proxy host.org:9090\n" +
+    "\n" +
+    "Title MockAU\n" +
+    "URL http://foo.bar\n" +
+    "Domain foo.bar\n" +
+    "\n" +
+    "Title MockAU\n" +
+    "URL http://x.com\n" +
+    "Domain x.com\n" +
+    "\n" +
+    "Proxy\n";
+
+
+  public void testRemoveCommentLines() {
+    assertEquals("", removeCommentLines(""));
+    assertEquals("foo", removeCommentLines("#bar\nfoo\n####"));
+    assertEquals("foo\n", removeCommentLines("#bar\nfoo\n####\n"));
+  }
+
 
   public void testGenerateEZProxyEntry() throws Exception {
     StringBuffer sb = new StringBuffer();
     pi.generateEZProxyEntry(sb, "http://foo.bar", "foo");
-    assertEquals(frag, sb.toString());
+    assertEquals(entry, sb.toString());
+  }
+
+  public void testGenerateEZProxyFragment() throws Exception {
+    String s = pi.generateEZProxyFragment(makeUrlStemMap());
+    assertTrue(s.startsWith("#"));
+    assertEquals(frag, removeCommentLines(s));
+  }
+
+  String removeCommentLines(String s) {
+    List lines = StringUtil.breakAt(s, '\n');
+    for (ListIterator iter = lines.listIterator(); iter.hasNext(); ) {
+      if (((String)iter.next()).startsWith("#")) {
+	iter.remove();
+      }
+    }
+    return StringUtil.separatedString(lines, "\n");
   }
 
   public static void main(String[] argv) {

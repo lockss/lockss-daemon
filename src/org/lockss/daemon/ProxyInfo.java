@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.3 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: ProxyInfo.java,v 1.4 2004-03-15 22:20:32 tlipkis Exp $
  */
 
 /*
@@ -166,21 +166,24 @@ public class ProxyInfo {
     sb.append(TimeBase.nowDate().toString());
     sb.append(" by LOCKSS cache ");
     sb.append(getProxyHost());
+    sb.append("\n");
+    sb.append("Proxy ");
+    sb.append(getProxyHost());
+    sb.append(":");
+    sb.append(getProxyPort());
     sb.append("\n\n");
     for (Iterator iter = urlStems.keySet().iterator(); iter.hasNext(); ) {
       String urlStem = (String)iter.next();
       ArchivalUnit au = (ArchivalUnit)urlStems.get(urlStem);
       generateEZProxyEntry(sb, urlStem, au.getName());
     }
+    sb.append("Proxy\n");
+    sb.append("# End of LOCKSS config\n");
     return sb.toString();
   }
 
   void generateEZProxyEntry(StringBuffer sb, String urlStem, String title) {
-    sb.append("Proxy ");
-    sb.append(getProxyHost());
-    sb.append(":");
-    sb.append(getProxyPort());
-    sb.append("\nTitle ");
+    sb.append("Title ");
     sb.append(title);
     sb.append("\nURL ");
     sb.append(urlStem);
