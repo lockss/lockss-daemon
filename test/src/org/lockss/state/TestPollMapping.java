@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollMapping.java,v 1.1 2004-12-17 01:29:56 troberts Exp $
+ * $Id: TestPollMapping.java,v 1.2 2004-12-18 00:36:07 troberts Exp $
  */
 
 /*
@@ -82,6 +82,22 @@ public class TestPollMapping extends TestCastor {
     return psb;
   }
 
+  private NodeStateBean makeNodeStateBean(int num) {
+    NodeStateBean nsb = new NodeStateBean();
+    nsb.setState(7+num);
+    nsb.setAverageHashDuration(890+num);
+    nsb.setCrawlStateBean(makeCrawlStateBean(num+5));
+
+    List pbColl = new ArrayList();
+    for (int ix=10; ix<(11+num); ix++) {
+      PollStateBean pb = makePollStateBean(ix);
+      pbColl.add(pb);
+    }
+    nsb.setPollBeans(pbColl);
+
+    return nsb;
+  }
+
   private PollHistoryBean makePollHistoryBean(int num) {
     PollHistoryBean phb = new PollHistoryBean();
     phb.setType(7+num);
@@ -132,6 +148,17 @@ public class TestPollMapping extends TestCastor {
 	(PollStateBean)marshalAndUnmarshal(psb1, mapFile);
       assertNotSame(psb1, psb2);
       assertEquals(psb1, psb2);
+    }
+  }
+
+  public void testNodeStateBean() throws Exception {
+    for (int ix=0; ix<5; ix++) {
+      NodeStateBean nsb1 = makeNodeStateBean(ix);
+      
+      NodeStateBean nsb2 =
+	(NodeStateBean)marshalAndUnmarshal(nsb1, mapFile);
+      assertNotSame(nsb1, nsb2);
+      assertEquals(nsb1, nsb2);
     }
   }
 
@@ -195,7 +222,12 @@ public class TestPollMapping extends TestCastor {
   } 
 
   private void assertEquals(CrawlStateBean bean1, CrawlStateBean bean2) {
-    String errStr = 
+    assertEquals(null, bean1, bean2);
+  }
+  private void assertEquals(String msg,
+			    CrawlStateBean bean1, CrawlStateBean bean2) {
+    String errStr =
+      (msg == null) ? msg :
       "CrawlStateBean not equal:\n" +
       "\tbean1: "+bean1+"\n"+
       "\tbean2: "+bean2+"\n";
@@ -252,6 +284,25 @@ public class TestPollMapping extends TestCastor {
     }
   }
 
+  private void assertEquals(NodeStateBean nsb1, NodeStateBean nsb2) {
+    String errStr =
+      "NodeStateBeans not equal:\n" +
+      "\tnsb1: "+nsb1+"\n"+
+      "\tnsb2: "+nsb2+"\n";
+
+    assertEquals(errStr, nsb1.getState(), nsb2.getState());
+    assertEquals(errStr,
+		 nsb1.getAverageHashDuration(), nsb2.getAverageHashDuration());
+    assertEquals(errStr, nsb1.getCrawlStateBean(), nsb2.getCrawlStateBean());
+    assertEquals(errStr, nsb1.getPollBeans(), nsb2.getPollBeans());
+    Object[] coll1 = nsb1.getPollBeans().toArray();
+    Object[] coll2 = nsb2.getPollBeans().toArray();
+    assertEquals(errStr, coll1.length, coll2.length);
+    for (int ix=0; ix<coll1.length; ix++) {
+      assertEquals((PollStateBean)coll1[ix], (PollStateBean)coll2[ix]);
+    }
+  }
+
 
   /*
 todo
@@ -264,25 +315,6 @@ todo
                 <field name="repairNodeBean"
                        type="org.lockss.util.ExtMapBean">
                         <bind-xml name="RepairMap" node="element"/>
-                </field>
-        </class>
-        <class name="org.lockss.state.NodeStateBean">
-                <map-to xml="NodeState"/>
-                <field name="state"
-                       type="integer">
-                        <bind-xml name="State" node="element"/>
-                </field>
-                <field name="averageHashDuration"
-                       type="long">
-                        <bind-xml name="AverageHashDuration" node="element"/>
-                </field>
-                <field name="crawlStateBean"
-                       type="org.lockss.state.CrawlStateBean">
-                        <bind-xml name="CrawlState" node="element"/>
-                </field>
-                <field name="pollBeans"
-                       type="java.util.Collection"
-                       collection="collection" lazy="true">
                 </field>
         </class>
   */
