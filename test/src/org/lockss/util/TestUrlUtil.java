@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.4 2003-07-13 20:57:03 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.5 2003-07-23 23:29:55 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 
 import java.net.*;
 import junit.framework.TestCase;
+import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestUrlUtil extends TestCase{
@@ -102,4 +103,39 @@ public class TestUrlUtil extends TestCase{
     }
   }
 
+  public void testGetHeadersNullConnection() {
+    try {
+      UrlUtil.getHeaders(null);
+      fail("Calling getHeaderFields with a null argument should have thrown");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testGetHeadersOneHeader() throws MalformedURLException {
+    URL url = new URL("http://www.example.com");
+    MockURLConnection conn = new MockURLConnection(url);
+    conn.setHeaderFieldKeys(ListUtil.list("key1"));
+    conn.setHeaderFields(ListUtil.list("field1"));
+    assertEquals(ListUtil.list("key1;field1"), UrlUtil.getHeaders(conn));
+  }
+
+  public void testGetHeadersMultiHeaders() throws MalformedURLException {
+    URL url = new URL("http://www.example.com");
+    MockURLConnection conn = new MockURLConnection(url);
+    conn.setHeaderFieldKeys(ListUtil.list("key1", "key2"));
+    conn.setHeaderFields(ListUtil.list("field1", "field2"));
+
+    assertEquals(ListUtil.list("key1;field1", "key2;field2"),
+		 UrlUtil.getHeaders(conn));
+  }
+
+  public void testGetHeadersNullHeaders() throws MalformedURLException {
+    URL url = new URL("http://www.example.com");
+    MockURLConnection conn = new MockURLConnection(url);
+    conn.setHeaderFieldKeys(ListUtil.list(null, "key2"));
+    conn.setHeaderFields(ListUtil.list("field1", null));
+
+    assertEquals(ListUtil.list("null;field1", "key2;null"),
+		 UrlUtil.getHeaders(conn));
+  }
 }

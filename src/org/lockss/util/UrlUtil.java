@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.7 2003-07-13 20:57:03 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.8 2003-07-23 23:29:55 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -146,6 +146,29 @@ public class UrlUtil {
 //       sb.append(queryString);
 //     }
     return sb.toString();
+  }
+
+  /**
+   * Return a list of header fields (in the format "key;fieldValue") for conn
+   * @param conn URLConnection to get headers from
+   * @return list of header fields (in the format "key;fieldValue") for conn
+   * @throws IllegalArgumentException if a null conn is supplied
+   */
+  public static List getHeaders(URLConnection conn) {
+    if (conn == null) {
+      throw new IllegalArgumentException("Called with null URLConnection");
+    }
+    List returnList = new ArrayList();
+    boolean done = false;
+    for(int ix=0; !done; ix++) {
+      String headerField = conn.getHeaderField(ix);
+      String headerFieldKey = conn.getHeaderFieldKey(ix);
+      done = (headerField == null && headerFieldKey == null);
+      if (!done) {
+	returnList.add(headerFieldKey+";"+headerField);
+      }
+    }
+    return returnList;
   }
 
 
