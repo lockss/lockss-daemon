@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.3 2004-03-23 00:28:43 eaalto Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.4 2004-03-24 02:31:39 eaalto Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
    */
   public static final String PARAM_MAX_NODES_TO_DISPLAY =
       "org.lockss.state.max.nodes.to.display";
-  static final int DEFAULT_MAX_NODES_TO_DISPLAY = 50;
+  static final int DEFAULT_MAX_NODES_TO_DISPLAY = 100;
 
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
@@ -156,6 +156,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 
   static class AuStatus implements StatusAccessor {
     static final String TABLE_TITLE = "AU Status Table";
+    static final String KEY_SUFFIX = "&&&";
 
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("NodeName", "Node Url",
@@ -191,15 +192,34 @@ public class ArchivalUnitStatus extends BaseLockssManager {
 
     public void populateTable(StatusTable table)
         throws StatusService.NoSuchTableException {
-      ArchivalUnit au = getArchivalUnit(table.getKey(), theDaemon);
+      String key = table.getKey();
+      int index = key.lastIndexOf(KEY_SUFFIX);
+      int startRow = 0;
+      if (index >= 0) {
+        try {
+          String rowStr = key.substring(index + KEY_SUFFIX.length());
+          startRow = Integer.parseInt(rowStr);
+        } catch (NumberFormatException ignore) { }
+
+        key = key.substring(0, index);
+      }
+
+      ArchivalUnit au = getArchivalUnit(key, theDaemon);
       LockssRepository repo = theDaemon.getLockssRepository(au);
       NodeManager nodeMan = theDaemon.getNodeManager(au);
 
       table.setTitle(getTitle(au.getName()));
-      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState()));
+      CachedUrlSet auCus = au.getAuCachedUrlSet();
+      NodeState topNode = nodeMan.getNodeState(auCus);
+      RepositoryNode repoNode = null;
+      try {
+        repoNode = repo.getNode(auCus.getUrl());
+      } catch (MalformedURLException ignore) { }
+      table.setSummaryInfo(getSummaryInfo(au, nodeMan.getAuState(), topNode,
+                                          repoNode));
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(au, repo, nodeMan));
+      table.setRows(getRows(au, repo, nodeMan, startRow));
     }
 
     public boolean requiresKey() {
@@ -207,12 +227,30 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     }
 
     private List getRows(ArchivalUnit au, LockssRepository repo,
-                         NodeManager nodeMan) {
+                         NodeManager nodeMan, int startRow) {
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
-      int dispCount = 0;
+      int rowCount = 0;
+      int endRow = startRow + nodesToDisplay;
+
+      if (startRow > 0) {
+        // add 'previous'
+        int start = startRow - nodesToDisplay;
+        if (start < 0) {
+          start = 0;
+        }
+        rowL.add(makeOtherRowsLink(false, start, au.getAuId()));
+      }
+
+      boolean hasMoreRows = false;
       while (cusIter.hasNext()) {
-        if (dispCount > nodesToDisplay) {
+        if (rowCount < startRow) {
+          cusIter.next();
+          rowCount++;
+          continue;
+        }
+        if (rowCount >= endRow) {
+          hasMoreRows = true;
           break;
         }
         CachedUrlSetNode cusn = (CachedUrlSetNode)cusIter.next();
@@ -227,7 +265,12 @@ public class ArchivalUnitStatus extends BaseLockssManager {
           rowL.add(makeRow(repo.getNode(cus.getUrl()),
                            nodeMan.getNodeState(cus)));
         } catch (MalformedURLException ignore) { }
-        dispCount++;
+        rowCount++;
+      }
+
+      if (hasMoreRows) {
+        // add 'next'
+        rowL.add(makeOtherRowsLink(true, endRow, au.getAuId()));
       }
       return rowL;
     }
@@ -236,14 +279,15 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       return "Status Table for AU: " + key;
     }
 
-    private List getSummaryInfo(ArchivalUnit au, AuState state) {
-        List summaryList =  ListUtil.list(
+    private List getSummaryInfo(ArchivalUnit au, AuState state,
+                                NodeState topNode, RepositoryNode repoNode) {
+      List summaryList =  ListUtil.list(
             new StatusTable.SummaryInfo("Volume" , ColumnDescriptor.TYPE_STRING,
                                         au.getName()),
             new StatusTable.SummaryInfo("Nodes", ColumnDescriptor.TYPE_INT,
                                         new Integer(-1)),
             new StatusTable.SummaryInfo("Size", ColumnDescriptor.TYPE_INT,
-                                        new Integer(-1)),
+                                        new Long(repoNode.getTreeContentSize(null))),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),
@@ -255,7 +299,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
                                         new Long(state.getLastTreeWalkTime())),
             new StatusTable.SummaryInfo("Has Damage",
                                         ColumnDescriptor.TYPE_STRING,
-                                        "-"),
+                                        (topNode.hasDamage() ? "yes" : "no")),
             new StatusTable.SummaryInfo("Current Activity",
                                         ColumnDescriptor.TYPE_STRING,
                                         "-")
@@ -298,10 +342,29 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       return rowMap;
     }
 
+    private Map makeOtherRowsLink(boolean isNext, int startRow, String auKey) {
+      HashMap rowMap = new HashMap();
+      String label = (isNext ? "Next" : "Previous");
+      StatusTable.Reference link =
+          new StatusTable.Reference(label, AU_STATUS_TABLE_NAME,
+                                    auKey + KEY_SUFFIX + startRow);
+      String rows = ""+(startRow+1)+"-"+(startRow + nodesToDisplay);
+      rowMap.put("NodeName", link);
+      rowMap.put("NodeStatus", rows);
+      rowMap.put("NodeHasContent", "");
+      rowMap.put("NodeVersion", "");
+      rowMap.put("NodeContentSize", "");
+      rowMap.put("NodeChildCount", "");
+      rowMap.put("NodeContentSize", "");
+
+      return rowMap;
+    }
+
     // utility method for making a Reference
     public static StatusTable.Reference makeAuRef(Object value,
                                                   String key) {
-      return new StatusTable.Reference(value, AU_STATUS_TABLE_NAME, key);
+      return new StatusTable.Reference(value, AU_STATUS_TABLE_NAME,
+                                       key + KEY_SUFFIX + "0");
     }
   }
 }
