@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.27 2003-09-08 19:25:42 tlipkis Exp $
+ * $Id: Deadline.java,v 1.28 2003-09-18 06:49:49 tlipkis Exp $
  */
 
 /*
@@ -437,6 +437,20 @@ public class Deadline implements Comparable {
       sb.append(df1.format(expiration));
     }
     sb.append("]");
+    return sb.toString();
+  }
+
+  public String shortString() {
+    if (expiration.getTime() == TimeBase.MAX) {
+      return "never";
+    }
+    boolean isSim = TimeBase.isSimulated();
+    StringBuffer sb = new StringBuffer();
+    if (isSim) {
+      sb.append(expiration.getTime());
+    } else {
+      sb.append(df1.format(expiration));
+    }
     return sb.toString();
   }
 
