@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.68 2004-08-18 22:37:30 smorabito Exp $
+ * $Id: Configuration.java,v 1.69 2004-08-21 06:49:36 tlipkis Exp $
  */
 
 /*
@@ -448,8 +448,9 @@ public abstract class Configuration {
     }
   }
 
-  /** Parse the config value (which must be an integer between 0 and 100)
-   * as a percentage, returning a float between 0.0 and 1.0.
+  /** Parse the config value (which should be a non-negative integer) as a
+   * percentage, returning a positive float or 0.0.  (<i>Ie</i>, "100"
+   * returns 1.0.)  Percentages greater then 100 are allowed.
    * @param key the configuration parameter name
    * @return a float between 0.0 and 1.0
    * @throws Configuration.InvalidParam if the value is missing or
@@ -457,18 +458,18 @@ public abstract class Configuration {
    */
   public float getPercentage(String key) throws InvalidParam {
     int val = getInt(key);
-    if (val < 0 || val > 100) {
-      throw newInvalid("Not an integer between 0 and 100: ", key,
-		       Integer.toString(val));
+    if (val < 0) {
+      throw newInvalid("Not an integer >= 0: ", key, Integer.toString(val));
     }
     return ((float)val) / (float)100.0;
   }
 
-  /** Parse the config value (which should be an integer between 0 and 100)
-   * as a percentage, returning a float between 0.0 and 1.0.  If the
+  /** Parse the config value (which should be a non-negative integer) as a
+   * percentage, returning a positive float or 0.0.  (<i>Ie</i>, "100"
+   * returns 1.0.)  Percentages greater then 100 are allowed.  If the
    * parameter is not present, return the default value.  If it's present
-   * but not parsable as an int between 0 and 100, log a warning and return
-   * the default value.
+   * but not parsable as an int, log a warning and return the default
+   * value.
    * @param key the configuration parameter name
    * @return a float between 0.0 and 1.0
    */
@@ -483,7 +484,7 @@ public abstract class Configuration {
       log.warning("getPercentage(\'" + key + "\") = \"" + get(key) + "\"");
       return (float)dfault;
     }
-    if (val < 0 || val > 100) {
+    if (val < 0) {
       log.warning("getPercentage(\'" + key + "\") = \"" + val + "\"");
       return (float)dfault;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.32 2004-07-12 06:15:53 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.33 2004-08-21 06:49:35 tlipkis Exp $
  */
 
 /*
@@ -337,6 +337,7 @@ public class TestConfiguration extends LockssTestCase {
     props.put("p4", "100");
     props.put("p5", "101");
     props.put("p6", "foo");
+    props.put("p7", "250");
     Configuration config = ConfigurationUtil.fromProps(props);
     assertEquals(0.0, config.getPercentage("p2"), 0.0);
     assertEquals(0.2, config.getPercentage("p3"), 0.0000001);
@@ -344,15 +345,12 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(0.1, config.getPercentage("p1", 0.1), 0.0000001);
     assertEquals(0.5, config.getPercentage("p6", 0.5), 0.0);
     assertEquals(0.1, config.getPercentage("p1", 0.1), 0.0000001);
+    assertEquals(2.5, config.getPercentage("p7", 0.1), 0.0000001);
+    assertEquals(2.5, config.getPercentage("p7"), 0.0000001);
 
     try {
       config.getPercentage("p1");
       fail("getPercentage(-1) should throw");
-    } catch (Configuration.InvalidParam e) {
-    }
-    try {
-      config.getPercentage("p5");
-      fail("getPercentage(101) should throw");
     } catch (Configuration.InvalidParam e) {
     }
     try {
