@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.15 2004-09-01 02:27:27 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.16 2004-10-12 23:44:47 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 import java.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.daemon.*;
+import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
@@ -90,9 +91,12 @@ public class CrawlManagerStatus implements StatusAccessor {
   private Map newContentCrawls = null;
   private Map repairCrawls = null;
   private CrawlManager.StatusSource statusSource;
+  private PluginManager pluginMgr;
 
   public CrawlManagerStatus(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
+    this.pluginMgr =
+      (PluginManager)LockssApp.getManager(LockssDaemon.PLUGIN_MANAGER);
   }
 
   public String getDisplayName() {
@@ -115,7 +119,7 @@ public class CrawlManagerStatus implements StatusAccessor {
       for (Iterator it = crawls.iterator(); it.hasNext();) {
 	Crawler.Status crawlStat = (Crawler.Status)it.next();
 	if (!includeInternalAus &&
-	    (crawlStat.getAu() instanceof RegistryArchivalUnit)) {
+	    pluginMgr.isInternalAu(crawlStat.getAu())) {
 	  continue;
 	}
 	rows.add(makeRow(crawlStat));
@@ -135,7 +139,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     return crawls;
   }
 
-  
+
 
   private String getTypeString(int type) {
     switch(type) {
@@ -174,7 +178,7 @@ public class CrawlManagerStatus implements StatusAccessor {
 //     row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
 //     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
 //     row.put(START_URLS,
-// 	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
+//	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
 //     row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
 //     return row;
 //   }
@@ -182,7 +186,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   public boolean requiresKey() {
     return false;
   }
-  
+
   /**
    * Fill in the crawl status table.
    * @param table StatusTable to populate
@@ -210,19 +214,19 @@ public class CrawlManagerStatus implements StatusAccessor {
 
 //   private String statusToString(int status) {
 //     switch (status) {
-//     case Crawler.STATUS_SUCCESSFUL : 
+//     case Crawler.STATUS_SUCCESSFUL :
 //       return SUCCESSFUL_STRING;
-//     case Crawler.STATUS_INCOMPLETE : 
+//     case Crawler.STATUS_INCOMPLETE :
 //       return INCOMPLETE_STRING;
-//     case Crawler.STATUS_ERROR : 
+//     case Crawler.STATUS_ERROR :
 //       return ERROR_STRING;
-//     case Crawler.STATUS_FETCH_ERROR : 
+//     case Crawler.STATUS_FETCH_ERROR :
 //       return FETCH_ERROR_STRING;
-//     case Crawler.STATUS_PUB_PERMISSION : 
+//     case Crawler.STATUS_PUB_PERMISSION :
 //       return PUB_PERMISSION_STRING;
-//     case Crawler.STATUS_WINDOW_CLOSED : 
+//     case Crawler.STATUS_WINDOW_CLOSED :
 //       return WINDOW_CLOSED_STRING;
-//     default : 
+//     default :
 //       return UNKNOWN_STRING;
 //     }
 //   }

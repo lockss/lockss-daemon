@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.11 2004-09-01 02:27:18 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.12 2004-10-12 23:44:46 smorabito Exp $
  */
 
 /*
@@ -32,11 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.lockss.plugin.*;
 
 public class TestCrawlManagerStatus extends LockssTestCase {
   private MockCrawlManagerStatusSource statusSource;
@@ -80,7 +82,15 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    // Must set up a plugin manager for these tests, otherwise
+    // nullpointerexception is thrown when the CrawlManagerStatus
+    // checks if AUs are internal or not (using
+    // PluginManager.isInternalAu(foo))
+    super.setUp();
+    MockLockssDaemon theDaemon = new MockLockssDaemon();
+    theDaemon.setPluginManager(new PluginManager());
+
     statusSource = new MockCrawlManagerStatusSource();
     cmStatus = new CrawlManagerStatus(statusSource);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.23 2004-10-08 06:57:39 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.24 2004-10-12 23:44:46 smorabito Exp $
  */
 
 /*
@@ -138,13 +138,15 @@ public class ArchivalUnitStatus
     }
 
     private List getRows(StatusTable table) {
+      PluginManager pluginMgr = theDaemon.getPluginManager();
+
       boolean includeInternalAus =
 	table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS);
       List rowL = new ArrayList();
-      for (Iterator iter = theDaemon.getPluginManager().getAllAus().iterator();
+      for (Iterator iter = pluginMgr.getAllAus().iterator();
 	   iter.hasNext(); ) {
         ArchivalUnit au = (ArchivalUnit)iter.next();
-	if (!includeInternalAus && (au instanceof RegistryArchivalUnit)) {
+	if (!includeInternalAus && pluginMgr.isInternalAu(au)) {
 	  continue;
 	}
 	try {

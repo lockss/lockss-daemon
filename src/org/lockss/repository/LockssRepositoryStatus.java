@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.13 2004-09-27 22:39:07 smorabito Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.14 2004-10-12 23:44:46 smorabito Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	      if (props != null) {
 		auid = props.getProperty(LockssRepositoryImpl.AU_ID_PROP);
 		if (!includeInternalAus &&
-		    (pluginMgr.getAuFromId(auid) instanceof RegistryArchivalUnit)) {
+		    pluginMgr.isInternalAu(pluginMgr.getAuFromId(auid))) {
 		  continue;
 		}
 	      }
