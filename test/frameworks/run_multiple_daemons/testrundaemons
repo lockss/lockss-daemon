@@ -12,16 +12,12 @@ if [ ${PROJECT_DIR}X = X ]
 then
     echo Called without \$PROJECT_DIR set.  Exiting
     exit
-else
-    echo project directory set to ${PROJECT_DIR}
 fi
 
 date >KeepGoing
 while [ -f KeepGoing ]
 do
 	echo started `date`
-	echo CLASSPATH is ${CLASSPATH}
-	echo PATH is ${PATH}
 	echo running in `pwd`
 	# for large caches, need to pass "-ms4m -mx64m" to java
         java RunDaemon ${PROP_URL_LIST} &
