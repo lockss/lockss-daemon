@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.3 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.3.2.1 2004-09-10 17:04:35 tlipkis Exp $
  */
 
 /*
@@ -371,10 +371,12 @@ public class AuTreeWalkManager
       // must stop background activity if it's still running
       if (runningRunner != null) {
 	log.debug2("Treewalk still running, aborting.");
-	runningRunner.abort();
-	runningRunner = null;
 	// couldn't finish in time; pad estimate
+	// update state *before* telling thread to abort
 	treeWalkEstimate *= twm.paramEstGrowth;
+	TreeWalkRunner runner = runningRunner;
+	runningRunner = null;
+	runner.abort();
       }
     }
   }
