@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.2 2004-03-09 04:15:33 clairegriffin Exp $
+ * $Id: TestHttpResultMap.java,v 1.2.2.1 2004-03-26 23:30:19 clairegriffin Exp $
  */
 
 /*
@@ -113,12 +113,12 @@ public class TestHttpResultMap extends LockssTestCase {
     }
 
     // test the UnexpectedNoRetryException
-    checkArray = resultMap.UnexpectedCodes;
+    checkArray = resultMap.UnexpectedFailCodes;
     for(ic =0; ic < checkArray.length; ic++) {
       result_code = checkArray[ic];
       exception = resultMap.mapException(null,result_code, "foo");
       assertTrue("code:" + result_code, exception instanceof
-                 CacheException.UnexpectedNoRetryException);
+                 CacheException.UnexpectedNoRetryFailException);
     }
 
 
@@ -155,9 +155,13 @@ public class TestHttpResultMap extends LockssTestCase {
 			CacheException.ExpectedNoRetryException.class);
 
    // test the UnexpectedNoRetryException
-    checkArray = resultMap.UnexpectedCodes;
+    checkArray = resultMap.UnexpectedFailCodes;
     checkExceptionClass(checkArray,
-			CacheException.UnexpectedNoRetryException.class);
+			CacheException.UnexpectedNoRetryFailException.class);
+
+    checkArray = resultMap.UnexpectedNoFailCodes;
+    checkExceptionClass(checkArray,
+                        CacheException.UnexpectedNoRetryNoFailException.class);
 
     checkArray = resultMap.RetryDeadLinkCodes;
     checkExceptionClass(checkArray,
@@ -235,11 +239,15 @@ public class TestHttpResultMap extends LockssTestCase {
                exception instanceof CacheException.ExpectedNoRetryException);
 
    // test the UnexpectedNoRetryException
-    checkClass = CacheException.UnexpectedNoRetryException.class;
+    checkClass = CacheException.UnexpectedNoRetryFailException.class;
     exception = makeException(checkClass);
     assertTrue(checkClass.getName(),
 	       exception instanceof CacheException.UnretryableException);
 
+    checkClass = CacheException.UnexpectedNoRetryNoFailException.class;
+    exception = makeException(checkClass);
+    assertTrue(checkClass.getName(),
+               exception instanceof CacheException.UnretryableException);
   }
 
   public void testHttpResultHandler() {
