@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.18 2004-05-26 07:03:10 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.19 2004-07-21 07:05:36 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ class TaskRunner implements Serializable {
   protected static Logger log = Logger.getLogger("TaskRunner");
 
   private SchedulerFactory schedulerFactory;
-  private Collection acceptedTasks;
+  private List acceptedTasks = new ArrayList();
   private Schedule currentSchedule;
   // overrun tasks, sorted by finish deadline
   private TreeSet overrunTasks =
@@ -159,7 +159,7 @@ class TaskRunner implements Serializable {
 
   /** Return true iff the task could be scheduled, but doesn't actually
    * schedule the task. */
-  public boolean isTaskSchedulable(SchedulableTask task) {
+  public synchronized boolean isTaskSchedulable(SchedulableTask task) {
     Collection tasks = getCombinedTasks(task);
     Scheduler scheduler = schedulerFactory.createScheduler(tasks);
     boolean res = scheduler.createSchedule();
@@ -168,9 +168,41 @@ class TaskRunner implements Serializable {
     return res;
   }
 
-  private Collection getCombinedTasks(SchedulableTask newTask) {
-    Collection tasks =
-      (acceptedTasks != null) ? new ArrayList(acceptedTasks) : new ArrayList();
+  /** Find the earliest possible time a background task could be scheduled.
+   * This is only a hint; it may not be possible to schedule the task then.
+   * @param task a Background task specifying the duration, load factor and
+   * earliest desired start time.
+   * @return The BackgroundTask (the same one) with possibly updated start
+   * and finish times when it might be schedulable. */
+  public synchronized BackgroundTask scheduleHint(BackgroundTask task) {
+    if (currentSchedule == null) {
+      return task;
+    }
+    return currentSchedule.scheduleHint(task);
+  }
+
+  private List getCombinedTasks(SchedulableTask newTask) {
+    List tasks = new ArrayList(acceptedTasks.size() + 1);
+    for (Iterator iter = acceptedTasks.listIterator(); iter.hasNext(); ) {
+      SchedulableTask task = (SchedulableTask)iter.next();
+      if (task.isExpired()) {
+	// Don't include expired tasks, because their presence precludes
+	// finding a schedule.  Adding them to overrunTasks is a convenient
+	// way to get them notified at the first opportunity.  They're not
+	// really overrunners, so add directly rather than calling
+	// addOverrunner() which would include them in overrun stats.
+
+	overrunTasks.add(task);
+
+	// Also remove expired tasks from acceptedTasks here, so don't have
+	// to look at them again.
+
+	iter.remove();
+
+      } else {
+	tasks.add(task);
+      }
+    }
     tasks.add(newTask);
     return tasks;
   }
@@ -179,7 +211,19 @@ class TaskRunner implements Serializable {
    * If successful, replace the currentSchedule and add the task to
    * acceptedTasks. */
   synchronized boolean addToSchedule(SchedulableTask task) {
-    Collection tasks = getCombinedTasks(task);
+    if (task.isBackgroundTask()) {
+      // If a deferrable background task, get hint about when it might be
+      // schedulable.   XXX Move into scheduler.
+      BackgroundTask btask = (BackgroundTask)task;
+      if (btask.getStart().before(btask.getLatestStart())) {
+	btask = scheduleHint(btask);
+	if (btask.getLatestStart().before(btask.getStart())) {
+	  // hint is after latest start, fail
+	  return false;
+	}
+      }
+    }
+    List tasks = getCombinedTasks(task);
     Scheduler scheduler = schedulerFactory.createScheduler(tasks);
     if (scheduler.createSchedule()) {
       currentSchedule = scheduler.getSchedule();
@@ -320,8 +364,8 @@ class TaskRunner implements Serializable {
     return res;
   }
 
-  boolean isIdle() {
-    return acceptedTasks == null || acceptedTasks.isEmpty();
+  synchronized boolean isIdle() {
+    return acceptedTasks.isEmpty();
   }
 
   // *******************************************************************

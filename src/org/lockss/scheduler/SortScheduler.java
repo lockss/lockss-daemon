@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.4 2004-03-23 20:55:42 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.5 2004-07-21 07:05:36 tlipkis Exp $
  */
 
 /*
@@ -34,11 +34,16 @@ package org.lockss.scheduler;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.daemon.*;
 
 /** This scheduler assigns tasks to intervals preferentially based on their
  * finish time */
 public class SortScheduler implements Scheduler {
   protected static Logger log = Logger.getLogger("Scheduler");
+
+  static final String PREFIX = Configuration.PREFIX + "scheduler.";
+  static final String PARAM_MAX_BACKGROUND_LOAD = PREFIX + "maxBackgroundLoad";
+  static final double DEFAULT_MAX_BACKGROUND_LOAD = 1.0;
 
   Collection rawTasks;
   List tasks;
@@ -46,11 +51,16 @@ public class SortScheduler implements Scheduler {
   int nIntervals;
   List ranges = new ArrayList();
   Set unscheduledTasks;
+  double maxBackgroundLoad;
   boolean scheduleCreated;
+  Deadline scheduledAt;
 
   /** Create a scheduler to schedule the collection of tasks */
   public SortScheduler(Collection tasks) {
     rawTasks = tasks;
+    Configuration config = Configuration.getCurrentConfig();
+    maxBackgroundLoad = config.getPercentage(PARAM_MAX_BACKGROUND_LOAD,
+					     DEFAULT_MAX_BACKGROUND_LOAD);
   }
 
   /** Store list of tasks to schedule, check validity, move times in the
@@ -58,7 +68,11 @@ public class SortScheduler implements Scheduler {
   private boolean initTasks() {
     unscheduledTasks = new HashSet(rawTasks);
     tasks = new ArrayList(rawTasks.size());
-    Deadline now = Deadline.in(0);
+    if (scheduledAt == null) {
+      // can happen during testing
+      scheduledAt = Deadline.in(0);
+    }
+    Deadline now = scheduledAt ;
     for (Iterator iter = rawTasks.iterator(); iter.hasNext(); ) {
       SchedulableTask rawTask = (SchedulableTask)iter.next();
       if (!rawTask.isProperWindow()) {
@@ -75,7 +89,7 @@ public class SortScheduler implements Scheduler {
       }
       // fail now if task can't finish
       if (td.getWSize() <= 0) {
-	if (log.isDebug2()) log.debug2("initTasks: task can't finish: " + td);
+	log.warning("initTasks: expired task: " + td);
 	return false;
       }
       tasks.add(td);
@@ -87,6 +101,7 @@ public class SortScheduler implements Scheduler {
   public boolean createSchedule() {
     if (log.isDebug2())
       log.debug2("createSchedule: " + rawTasks.size() + " tasks");
+    scheduledAt = Deadline.in(0);
     scheduleCreated = initIntervals() &&
       initIntervalTaskLists() &&
       scheduleAll();
@@ -108,7 +123,9 @@ public class SortScheduler implements Scheduler {
 	log.debug2("  " + event.toString());
       }
     }
-    return new Schedule(events, unscheduledTasks);
+    Schedule res = new Schedule(events, unscheduledTasks);
+    res.setScheduler(this);
+    return res;
   }
 
   // find all task boundaries and create intervals between them
@@ -137,14 +154,21 @@ public class SortScheduler implements Scheduler {
       intervals[ix++] = intrvl;
       lower = upper;
     }
-    log.debug2(nIntervals + " intervals: " + arrayString(intervals));
+    if (log.isDebug3()) {
+      log.debug3(nIntervals + " intervals: " + arrayString(intervals));
+    }
     return true;
   }
 
+  // Assign candidate step tasks to intervals
+  // Adjust interval loadFactor to account for background tasks
+  // Reject if sum of background loadFactor > 100% in any interval
+  // XXX doesn't yet - Reject if overall background loadFactor > param
   boolean initIntervalTaskLists() {
     if (intervals == null || intervals.length == 0) {
       return true;
     }
+    long cumBackTime = 0;		// cumulative background time
     for (int xintr = 0; xintr < nIntervals; xintr++) {
       SchedInterval intrvl = intervals[xintr];
       // tk - could make this more efficient by first sorting the tasks by
@@ -177,6 +201,8 @@ public class SortScheduler implements Scheduler {
 	  }
 	}
       }
+      intrvl.cumBackTime = cumBackTime;
+      cumBackTime += intrvl.backgroundTime();
     }
     return true;
   }
@@ -219,7 +245,55 @@ public class SortScheduler implements Scheduler {
     return rng.scheduleIntervalRange();
   }
 
-
+  /** Using the previously created intervals, find the earliest possible
+   * time a background task could be scheduled.  This is only a hint; it
+   * may not be possible to schedule the task then.
+   * @param task a Background task specifying the duration, load factor and
+   * earliest desired start time.
+   * @return The BackgroundTask (the same one) with possibly updated start
+   * and finish times when it might be schedulable. */
+  public BackgroundTask scheduleHint(BackgroundTask task) {
+    long start = task.getStart().getExpirationTime();
+    long finish = task.getFinish().getExpirationTime();
+    long duration = finish - start;
+    double loadFactor = task.getLoadFactor();
+    for (int xintr = 0; xintr < nIntervals; xintr++) {
+      SchedInterval intrvl = intervals[xintr];
+      if (intrvl.getEnd().getExpirationTime() <= start) {
+	continue;
+      }
+      if (intrvl.getBegin().getExpirationTime() >= finish) {
+	break;
+      }
+      if (intrvl.loadFactor < loadFactor) {
+	// can't run at all during this interval, next possible start is
+	// end of interval
+	start = intrvl.getEnd().getExpirationTime();
+	finish = start + duration;
+      }
+      double cumBackLoad = 0.0;
+      if (intrvl.cumBackTime != 0) {
+	cumBackLoad = ((double)intrvl.cumBackTime /
+		       ((double)intrvl.getBegin().minus(scheduledAt)));
+      }
+      if (cumBackLoad >= maxBackgroundLoad) {
+	// average background load too high, push start back until load
+	// would be low enough
+	start =
+	  Math.max(start, (scheduledAt.getExpirationTime() +
+			   (long)((intrvl.cumBackTime +
+				   intrvl.backgroundTime()) /
+				  maxBackgroundLoad)));
+	finish = start + duration;
+	if (log.isDebug2()) {
+	  log.debug2("Hint, delaying from " + intrvl.getEnd().shortString() +
+		     " to " + Deadline.at(start).shortString());
+	}
+      }
+    }
+    task.setInterval(Deadline.at(start), Deadline.at(finish));
+    return task;
+  }
 
   static protected String arrayString(Object[] a) {
     return StringUtil.separatedString(a, ", ");
@@ -341,6 +415,10 @@ public class SortScheduler implements Scheduler {
     long duration;			// length of interval
     long unscheduledTime;		// available cpu time (adjusted for
 					// load factor)
+    long cumBackTime;			// cumulative scheduled background
+					// time at the start of this
+					// interval, for calculating
+					// average background time
     List competingTaskList = new ArrayList();
     List backgroundTaskList = new ArrayList();
     List endingTaskList = new ArrayList();
@@ -364,6 +442,10 @@ public class SortScheduler implements Scheduler {
 
     Deadline getEnd() {
       return (Deadline)getUB();
+    }
+
+    long backgroundTime() {
+      return (long)(duration * (1.0 - loadFactor));
     }
 
     /** Return true if any tasks are available to run during this interval */

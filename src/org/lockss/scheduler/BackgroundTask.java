@@ -1,5 +1,5 @@
 /*
- * $Id: BackgroundTask.java,v 1.6 2004-01-12 06:20:59 tlipkis Exp $
+ * $Id: BackgroundTask.java,v 1.7 2004-07-21 07:05:36 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,9 @@ public class BackgroundTask extends SchedulableTask {
   final double loadFactor;
 //   final int loadFactor0;
   final TaskCallback callback;
+  private Deadline latestStart;		// hack until schedulable range
+					// handled compatibly with
+					// superclass
 
   public BackgroundTask(Deadline start,
 			Deadline stop,
@@ -52,6 +55,7 @@ public class BackgroundTask extends SchedulableTask {
     super(start, stop, stop.minus(start), null, null);
     this.loadFactor = loadFactor;
     this.callback = callback;
+    this.latestStart = start;
   }
 
   public boolean isBackgroundTask() {
@@ -68,6 +72,21 @@ public class BackgroundTask extends SchedulableTask {
 
   public double getLoadFactor() {
     return loadFactor;
+  }
+
+  public void setLatestStart(Deadline latestStart) {
+    this.latestStart = latestStart;
+  }
+
+  public Deadline getLatestStart() {
+    return latestStart;
+  }
+
+  public void setInterval(Deadline start, Deadline stop) {
+    earliestStart = start;
+    latestFinish = stop;
+    window = new Interval(start, stop);
+    origEst = stop.minus(start);
   }
 
   public void taskIsFinished() {
