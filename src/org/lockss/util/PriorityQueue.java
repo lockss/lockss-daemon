@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.3 2002-11-12 18:04:19 tal Exp $
+ * $Id: PriorityQueue.java,v 1.4 2002-11-15 01:25:40 tal Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class PriorityQueue implements Queue {
   }
 
   /**
-   * Add to the end of the queue. */
+   * Insert an object in the queue. */
   public synchronized Object put(Object obj) {
     if (obj == null) {
       throw new NullPointerException("Attempt to put null element on Queue");
