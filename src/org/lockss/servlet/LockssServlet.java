@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.12 2003-04-29 00:59:22 tal Exp $
+ * $Id: LockssServlet.java,v 1.13 2003-05-01 00:20:36 tal Exp $
  */
 
 /*
@@ -556,7 +556,7 @@ public abstract class LockssServlet extends HttpServlet
       sb.append(buildHost);
     }
     if (vPlatform != null) {
-      sb.append(", cd ");
+      sb.append(", CD ");
       sb.append(vPlatform);
     }
     String vDaemon = sb.toString();
