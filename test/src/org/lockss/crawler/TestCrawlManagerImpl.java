@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.36 2003-10-30 23:57:27 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.37 2003-11-10 22:29:21 troberts Exp $
  */
 
 /*
@@ -108,6 +108,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
+
+  public void testShouldRecrawlReturnsFalse() {
+    //for now shouldRecrawl() should always return false
+    assertFalse(crawlManager.shouldRecrawl(mau, null));
+  }
+
 
   private void waitForCrawlToFinish(SimpleBinarySemaphore sem) {
     if (!sem.take(TIMEOUT_SHOULDNT)) {
