@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.25 2003-03-11 18:56:14 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.26 2003-03-11 19:10:11 aalto Exp $
  */
 
 /*
@@ -58,7 +58,9 @@ public class LockssRepositoryImpl implements LockssRepository {
    */
   public static final int MAX_LRUMAP_SIZE = 12;
 
-  private static final String TEST_PREFIX = "/tmp";
+  // this contains a '#' so that it's not defeatable by strings which
+  // match the prefix in a url (like '../tmp/')
+  private static final String TEST_PREFIX = "/#tmp";
 
   private String rootLocation;
   private ArchivalUnit repoAu;

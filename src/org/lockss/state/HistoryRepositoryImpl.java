@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.18 2003-03-11 19:03:46 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.19 2003-03-11 19:10:11 aalto Exp $
  */
 
 /*
@@ -72,7 +72,9 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
 
   static final String HISTORY_FILE_NAME = "history.xml";
   static final String AU_FILE_NAME = "au_state.xml";
-  private static final String TEST_PREFIX = "/tmp";
+  // this contains a '#' so that it's not defeatable by strings which
+  // match the prefix in a url (like '../tmp/')
+  private static final String TEST_PREFIX = "/#tmp";
 
   private static String rootDir;
   private Mapping mapping = null;
