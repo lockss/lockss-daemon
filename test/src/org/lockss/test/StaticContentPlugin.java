@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.6 2003-05-10 00:41:12 troberts Exp $
+ * $Id: StaticContentPlugin.java,v 1.7 2003-05-30 00:32:32 troberts Exp $
  */
 
 /*
@@ -193,6 +193,10 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     public InputStream openForHashing() {
       return openForReading();
+    }
+
+    public Reader getReader() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public byte[] getContentSize() {

@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.13 2003-04-10 21:54:51 tal Exp $
+ * $Id: PTestPlugin.java,v 1.14 2003-05-30 00:32:32 troberts Exp $
  */
 
 /*
@@ -92,6 +92,10 @@ public class PTestPlugin {
 
     public InputStream openForHashing() {
       return openForReading();
+    }
+
+    public Reader getReader() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public byte[] getContentSize() {

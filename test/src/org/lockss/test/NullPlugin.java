@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.31 2003-05-07 20:35:14 tal Exp $
+ * $Id: NullPlugin.java,v 1.32 2003-05-30 00:32:32 troberts Exp $
  */
 
 /*
@@ -142,6 +142,10 @@ public class NullPlugin {
 
     public InputStream openForHashing() {
       return openForReading();
+    }
+
+    public Reader getReader() {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public byte[] getContentSize() {

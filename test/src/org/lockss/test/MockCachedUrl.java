@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.14 2003-04-10 21:47:35 tal Exp $
+ * $Id: MockCachedUrl.java,v 1.15 2003-05-30 00:32:32 troberts Exp $
  */
 
 /*
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -71,6 +69,10 @@ public class MockCachedUrl implements CachedUrl {
 
   public String getUrl() {
     return url;
+  }
+
+  public Reader getReader() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public CachedUrlSet getCachedUrlSet() {
