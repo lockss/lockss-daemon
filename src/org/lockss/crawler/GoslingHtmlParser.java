@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.1 2004-01-13 00:45:04 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.1.2.1 2004-01-26 23:18:14 troberts Exp $
  */
 
 /*
@@ -306,13 +306,32 @@ public class GoslingHtmlParser implements ContentParser {
     }
     if (returnStr != null) {
       returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
-      URL retUrl = new URL(srcUrl, returnStr);
-      returnStr = retUrl.toString();
+      if (!isSupportedUrlProtocol(srcUrl, returnStr)) {
+        logger.debug("skipping unsupported url " + returnStr);
+      }
+      else {
+	logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
+	URL retUrl = new URL(srcUrl, returnStr);
+	returnStr = retUrl.toString();
+      }
       logger.debug2("Parsed: " + returnStr);
      return returnStr;
     }
     return null;
+  }
+
+  protected static boolean isSupportedUrlProtocol(URL srcUrl, String url) {
+    try {
+      URL ur = new URL(srcUrl, url);
+//       URL ur = new URL(url);
+      // some 1.4 machines will allow this, so we explictly exclude it for now.
+      if (StringUtil.getIndexIgnoringCase(ur.toString(), "https") != 0) {
+        return true;
+      }
+    }
+    catch (Exception ex) {
+    }
+    return false;
   }
 
   private static String getAttributeValue(String attribute, String src) {
