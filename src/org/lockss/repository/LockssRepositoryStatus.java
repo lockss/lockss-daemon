@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.2 2004-03-18 20:13:13 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.3 2004-05-12 17:48:25 tlipkis Exp $
  */
 
 /*
@@ -111,10 +111,24 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 
     private List getRows() {
       List rows = new ArrayList();
-      String cacheRoot =
-	Configuration.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION);
-      addRows(rows, LockssRepositoryImpl.extendCacheLocation(cacheRoot));
+      TreeSet roots = new TreeSet();
+      List repos = daemon.getConfigManager().getRepositoryList();
+      for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+	String repoSpec = (String)iter.next();
+	if (repoSpec.startsWith("local:")) {
+	  roots.add(repoSpec.substring(6));
+	}
+      }
+      roots.add(getDefaultRepositoryLocation());
+      for (Iterator iter = roots.iterator(); iter.hasNext(); ) {
+	String root = (String)iter.next();
+	addRows(rows, LockssRepositoryImpl.extendCacheLocation(root));
+      }
       return rows;
+    }
+
+    String getDefaultRepositoryLocation() {
+      return Configuration.getParam(LockssRepositoryImpl.PARAM_CACHE_LOCATION);
     }
 
     private void addRows(Collection rows, String root) {
@@ -146,14 +160,33 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 	row.put("auid", auKey);
 	row.put("plugin", PluginManager.pluginNameFromAuId(auid));
 	ArchivalUnit au = pluginMgr.getAuFromId(auid);
+	String name = null;
+	if (au != null) {
+	  name = au.getName();
+	  Configuration auConfig = au.getConfiguration();
+	  String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
+	  if (repoSpec == null) {
+	    if (!dir.toString().startsWith(getDefaultRepositoryLocation())) {
+	      au = null;
+	    }
+	  } else if (repoSpec.startsWith("local:")) {
+	    String root = repoSpec.substring(6);
+	    if (!dir.toString().startsWith(root)) {
+	      au = null;
+	    }
+	  }
+	}
+
+
 	if (au != null) {
 	  row.put("status", "Active");
-	  row.put("au", new StatusTable.Reference(au.getName(),
+	  row.put("au", new StatusTable.Reference(name,
 						  AU_STATUS_TABLE_NAME,
 						  auid));
 	  Configuration config = au.getConfiguration();
 	  row.put("params", config);
 	} else {
+
 	  Configuration config = pluginMgr.getStoredAuConfiguration(auid);
 	  if (config == null | config.isEmpty()) {
 	    Properties auidProps = null;
@@ -173,6 +206,9 @@ public class LockssRepositoryStatus extends BaseLockssManager {
 		     ? "Inactive" : "Deleted"));
 	    row.put("au", config.get(PluginManager.AU_PARAM_DISPLAY_NAME));
 	    row.put("params", config);
+	  }
+	  if (name != null) {
+	    row.put("au", name);
 	  }
 	}
       }
