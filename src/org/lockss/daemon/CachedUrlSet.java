@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.4 2002-10-01 06:12:15 tal Exp $
+ * $Id: CachedUrlSet.java,v 1.5 2002-10-08 01:01:31 tal Exp $
  */
 
 /*
@@ -35,25 +35,24 @@ import java.util.Enumeration;
 import java.security.MessageDigest;
 
 /**
- * This interface is implemented by plug-ins for the LOCKSS daemons.
- * The generic daemon uses this interface to perform I/O on the files
+ * This interface is implemented by plug-ins for the LOCKSS daemons.  The
+ * generic daemon uses this interface to perform I/O on the files
  * representing the preserved content.  The generic daemon treats
- * <code>CachedUrlSet</code> objects as containing a set of files
- * whose URLs match a list of <code>[url-prefix, regular-expression]</code>
- * pairs.
+ * <code>CachedUrlSet</code> objects as containing a set of files whose
+ * URLs match a list of <code>CachedUrlSetSpec</code>s (<code>[url-prefix,
+ * regular-expression]</code> pairs).
  *
  * @author  David S. H. Rosenthal
- * @version 0.0
- */
+ * @version 0.0 */
 public interface CachedUrlSet {
     /**
-     * Add the <code>CachedUrlSetSpec</code> pair to the
+     * Add the <code>CachedUrlSetSpec</code> to the
      * <code>CachedUrlSet</code> object's list.
      * @param spec specification of a set of urls.
      */
     public void addToList(CachedUrlSetSpec spec);
     /**
-     * Remove the <code>[url-prefix, regular-expression]</code> pair
+     * Remove the <code>CachedUrlSetSpec</code>
      * from the <code>CachedUrlSet</code> object's list.
      * @param spec specification of a set of urls.
      * @return <code>true</code> if the removal was successful,
@@ -61,19 +60,17 @@ public interface CachedUrlSet {
      */
     public boolean removeFromList(CachedUrlSetSpec spec);
     /**
-     * Return true if the <code>[url-prefix, regular-expression]</code>
-     * pair is in the <code>CachedUrlSet</code> object's list.
+     * Return true if the <code>CachedUrlSetSpec</code>
+     * is in the <code>CachedUrlSet</code> object's list.
      * @param spec specification of a set of urls.
      * @return <code>true</code> if the argument pair is in the list,
      *         <code>false</code> otherwise
      */
     public boolean memberOfList(CachedUrlSetSpec spec);
     /**
-     * Return an <code>Enumeration</code> of the entries in the
-     * <code>[url-prefix, regular-expression]</code> list,
-     * which are returned as <code>CachedUrlSpec</code>
-     * objects.
-     */
+     * Return an <code>Enumeration</code> of <code>CachedUrlSetSpec</code>
+     * objects describing the set of URLs that are members of this
+     * <code>CachedUrlSet</code>. */
     public Enumeration listEnumeration();
     /**
      * Return true if the url matches an entry in the
@@ -89,7 +86,7 @@ public interface CachedUrlSet {
     public CachedUrlSetHasher getContentHasher(MessageDigest hasher);
     /**
      * Return an object that can be used to hash the names of cached urls
-     * that match the list of <code>[url-prefix, regular-expression]</code>
+     * that match the list of <code>CachedUrlSetSpec</code>
      * entries.
      * @param hasher a <code>MessageDigest</code> object to which the
      *               names will be supplied.
@@ -104,7 +101,7 @@ public interface CachedUrlSet {
      * <code>CachedUrlSet</code> object.
      * @return an <code>Enumeration</code> of the <code>CachedUrlSet</code>
      *         matching the members of the
-     *         <code>[url-prefix, regular-expression]</code> list.
+     *         <code>CachedUrlSetSpec</code> list.
      */
     public Enumeration flatEnumeration();
     /**
@@ -113,7 +110,7 @@ public interface CachedUrlSet {
      * <code>CachedUrlSet</code> object.
      * @return an <code>Enumeration</code> of the <code>CachedUrlSet</code>
      *         matching the members of the
-     *         <code>[url-prefix, regular-expression]</code> list.
+     *         <code>CachedUrlSetSpec</code> list.
      */
     public Enumeration treeEnumeration();
     /**
