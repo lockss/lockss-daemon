@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.16 2005-01-05 09:47:21 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.17 2005-01-27 23:04:44 troberts Exp $
  */
 
 /*
@@ -309,14 +309,14 @@ public class HashCUS extends LockssServlet {
     }
     addResultRow(tbl, "Size", Integer.toString(bytesHashed));
     addResultRow(tbl, "Hash", byteString(hashResult));
-    long bpms = bytesHashed / elapsedTime;
-    String s;
-    if (bpms >= 100) {
-      s = Long.toString(bpms);
-    } else {
+
+    String s = StringUtil.protectedDivide(bytesHashed, elapsedTime, "inf");
+    
+    if (!"inf".equalsIgnoreCase(s) && Long.parseLong(s) < 100) {
       double fbpms = ((double)bytesHashed) / ((double)elapsedTime);
       s = fmt_2dec.format(fbpms);
     }
+
     addResultRow(tbl, "Time", elapsedTime + " ms, " + s + " bytes/ms");
 
     if (recordFile != null && recordFile.exists()) {
