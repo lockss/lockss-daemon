@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.27 2004-02-07 06:44:05 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.28 2004-02-25 21:05:49 eaalto Exp $
  */
 
 /*
@@ -666,12 +666,17 @@ public class ActivityRegulator
       expiration.expire();
     }
 
+
     public void extend() {
-      expiration.later(LOCK_EXTENSION_LENGTH);
+      extend(LOCK_EXTENSION_LENGTH);
+    }
+
+    public void extend(long extension) {
+      expiration.later(extension);
       logger.debug2("Extending "+activityCodeToString(activity)+" on "+
                     (cus==null ? "AU '"+au.getName()+"'"
                      : "CUS '"+cus.getUrl()+"' by "+
-                     StringUtil.timeIntervalToString(LOCK_EXTENSION_LENGTH)));
+                     StringUtil.timeIntervalToString(extension)));
     }
 
     public int getActivity() {
@@ -688,7 +693,14 @@ public class ActivityRegulator
           StringUtil.timeIntervalToString(expireIn));
       activity = newActivity;
       expiration = Deadline.in(expireIn);
-      curAuActivityLock = new Lock(CUS_ACTIVITY, expireIn);
+      if (cus!=null) {
+        if ((curAuActivityLock!=null) &&
+            (curAuActivityLock.getActivity()==CUS_ACTIVITY)) {
+          curAuActivityLock.extend(expireIn);
+        } else {
+          logger.debug("CUS lock changing on during non-CUS activity.");
+        }
+      }
     }
 
     public ArchivalUnit getArchivalUnit() {
@@ -711,9 +723,9 @@ public class ActivityRegulator
       checkAuActivity();
     }
 
-    public void extend() {
-      super.extend();
-      curAuActivityLock.extend();
+    public void extend(long extension) {
+      super.extend(extension);
+      curAuActivityLock.extend(extension);
     }
   }
 
