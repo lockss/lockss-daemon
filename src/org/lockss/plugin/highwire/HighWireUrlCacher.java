@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireUrlCacher.java,v 1.1 2002-10-16 04:57:03 tal Exp $
+ * $Id: HighWireUrlCacher.java,v 1.2 2002-10-21 23:13:41 troberts Exp $
  */
 
 /*
@@ -55,18 +55,13 @@ public class HighWireUrlCacher extends BaseUrlCacher {
     super(owner, url);
   }
 
-  private String getUrlRoot() {
-    HighWirePlugin au = (HighWirePlugin)getArchivalUnit();
-    return au.getUrlRoot();
-  }
-
   public boolean shouldBeCached(){
     logger.info("checking: "+url);
     return super.shouldBeCached();
   }
-
+  
   // Write interface - used by the crawler.
-
+  
   public void storeContent(InputStream input,
 			   Properties headers) throws IOException{
     if (input != null){

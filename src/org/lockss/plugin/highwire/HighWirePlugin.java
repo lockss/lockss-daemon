@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.6 2002-10-16 04:57:03 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.7 2002-10-21 23:13:41 troberts Exp $
  */
 
 /*
@@ -62,8 +62,8 @@ public class HighWirePlugin extends BaseArchivalUnit {
    */
   public HighWirePlugin(String start) throws REException {
     super(makeCrawlSpec(start));
-    urlRoot = "http://shadow1.stanford.edu";
-    mySpec = new RECachedUrlSetSpec(urlRoot);
+    //urlRoot = "http://shadow1.stanford.edu";
+    //mySpec = new RECachedUrlSetSpec(urlRoot);
   }
 
   protected CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -81,12 +81,40 @@ public class HighWirePlugin extends BaseArchivalUnit {
 
   private static CrawlSpec makeCrawlSpec(String start)
       throws REException {
-    // tk - should compute both of these from starting url
-    String prefix = "http://shadow1.stanford.edu";
-    int volume = 322;
+    String prefix = getUrlPrefix(start);
+    int volume = getUrlVolumeNumber(start);
       
     CrawlRule rule = makeRules(prefix, volume);
     return new CrawlSpec(start, rule);
+  }
+
+  protected static String getUrlPrefix(String url){
+    if (url == null)
+      return null;
+    if (!url.startsWith("http://")){
+      return null;
+    }
+    for (int i=7; i < url.length(); i++){
+      if (url.charAt(i) == '/'){
+	return url.substring(0, i);
+      }
+    }
+    return url;
+  }
+
+  protected static int getUrlVolumeNumber(String url){
+    if (url == null){
+      return -1;
+    }
+    String volStr = "lockss-volume";
+    int volStrIdx = url.indexOf(volStr); 
+    int startIdx =  volStrIdx + volStr.length();
+    int endIdx = url.lastIndexOf(".");
+    if (volStrIdx < 0 || endIdx < 0 || endIdx <= startIdx){
+      return -1;
+    }
+    return Integer.parseInt(url.substring(startIdx, endIdx));
+    
   }
 
   private static CrawlRule makeRules(String urlRoot, int volume)
@@ -113,9 +141,4 @@ public class HighWirePlugin extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
     return new CrawlRules.FirstMatch(rules);
   }
-
-  public String getUrlRoot(){
-    return urlRoot;
-  }
-			    
 }
