@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuTreeWalkManager.java,v 1.2 2004-08-21 07:10:33 tlipkis Exp $
+ * $Id: TestAuTreeWalkManager.java,v 1.3 2004-08-22 02:13:17 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,9 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     assertTrue(autwm.deferredSem.take(TIMEOUT_SHOULDNT));
     // task should be marked finished by the time doDeferredAction() runs
     assertTrue(task.isFinished());
-    // and it should have scheduled a new task
+    // wait for lockkRun to finish
+    assertTrue(autwm.lockssRunDoneSem.take(TIMEOUT_SHOULDNT));
+    // now it should have scheduled a new task
     assertNotNull(autwm.curTask);
     assertNotEquals(task, autwm.curTask);
     // for at least interval.min from now
@@ -180,7 +182,9 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     assertTrue(autwm.deferredSem.take(TIMEOUT_SHOULDNT));
     // task should be marked finished by the time doDeferredAction() runs
     assertTrue(task.isFinished());
-    // and it should have scheduled a new task
+    // wait for lockkRun to finish
+    assertTrue(autwm.lockssRunDoneSem.take(TIMEOUT_SHOULDNT));
+    // now it should have scheduled a new task
     assertNotNull(autwm.curTask);
     assertNotEquals(task, autwm.curTask);
     // for at least interval.min from now
@@ -205,7 +209,9 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     assertTrue(autwm.deferredSem.take(TIMEOUT_SHOULDNT));
     // task should be marked finished by the time doDeferredAction() runs
     assertTrue(task.isFinished());
-    // and it should have scheduled a new task
+    // wait for lockkRun to finish
+    assertTrue(autwm.lockssRunDoneSem.take(TIMEOUT_SHOULDNT));
+    // now it should have scheduled a new task
     assertNotNull(autwm.curTask);
     assertNotEquals(task, autwm.curTask);
     // for exactly an hour from now
@@ -269,6 +275,9 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     SimpleBinarySemaphore walkDoneSem = new SimpleBinarySemaphore();
     SimpleBinarySemaphore walkWaitSem = new SimpleBinarySemaphore();
     SimpleBinarySemaphore deferredSem = new SimpleBinarySemaphore();
+
+    SimpleBinarySemaphore lockssRunDoneSem = new SimpleBinarySemaphore();
+
     MockTreeWalker walker;
     boolean didFullTreewalk = false;
     Deadline finishBy;
@@ -289,6 +298,10 @@ public class TestAuTreeWalkManager extends LockssTestCase {
       eventSem.give();
     }
 
+    protected TreeWalkRunner newRunner(ArchivalUnit au, BackgroundTask task) {
+      return new MockTreeWalkRunner(au, task);
+    }
+
     protected TreeWalker newWalker(LockssDaemon daemon, ArchivalUnit au) {
       walker = new MockTreeWalker(daemon, au);
       return walker;
@@ -298,6 +311,16 @@ public class TestAuTreeWalkManager extends LockssTestCase {
       return walker;
     }
 
+    class MockTreeWalkRunner extends TreeWalkRunner {
+      public MockTreeWalkRunner(ArchivalUnit au, BackgroundTask task) {
+	super(au, task);
+      }
+
+      public void lockssRun() {
+	super.lockssRun();
+	lockssRunDoneSem.give();
+      }
+    }
 
     class MockTreeWalker implements TreeWalker {
       LockssWatchdog wdog;
