@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.37 2003-11-10 22:29:21 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.38 2003-12-13 01:29:30 troberts Exp $
  */
 
 /*
@@ -458,7 +458,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   }
 
   public void testGetCrawlsNoCrawls() {
-    Collection coll = statusSource.getCrawls(mau.getAuId());
+    Collection coll = statusSource.getCrawlStatus(mau.getAuId());
     assertEquals(0, coll.size());
   }
 
@@ -466,8 +466,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			     new TestCrawlCB(sem), null, null);
-    Collection actual = statusSource.getCrawls(mau.getAuId());
-    Collection expected = ListUtil.list(crawler);
+    Collection actual = statusSource.getCrawlStatus(mau.getAuId());
+    Collection expected = ListUtil.list(crawler.getStatus());
 
     assertEquals(expected, actual);
     waitForCrawlToFinish(sem);
@@ -476,8 +476,8 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public void testGetCrawlsOneNCCrawl() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem), null, null);
-    Collection actual = statusSource.getCrawls(mau.getAuId());
-    Collection expected = ListUtil.list(crawler);
+    Collection actual = statusSource.getCrawlStatus(mau.getAuId());
+    Collection expected = ListUtil.list(crawler.getStatus());
     assertEquals(expected, actual);
     waitForCrawlToFinish(sem);
   }
@@ -492,8 +492,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.setTestCrawler(crawler2);
     crawlManager.startNewContentCrawl(mau, new TestCrawlCB(sem2), null, null);
 
-    Collection actual = statusSource.getCrawls(mau.getAuId());
-    Collection expected = ListUtil.list(crawler, crawler2);
+    Collection actual = statusSource.getCrawlStatus(mau.getAuId());
+    Collection expected = ListUtil.list(crawler.getStatus(),
+					crawler2.getStatus());
     assertEquals(expected, actual);
     waitForCrawlToFinish(sem1);
     waitForCrawlToFinish(sem2);

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.47 2003-12-08 06:52:34 tlipkis Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.48 2003-12-13 01:29:30 troberts Exp $
  */
 
 /*
@@ -114,6 +114,8 @@ public class GoslingCrawlerImpl implements Crawler {
 
   private ArchivalUnit au;
 
+  private Crawler.Status crawlStatus = null;
+
   private long startTime = -1;
   private long endTime = -1;
   private int numUrlsFetched = 0;
@@ -183,50 +185,59 @@ public class GoslingCrawlerImpl implements Crawler {
     this.spec = spec;
     this.type = type;
     this.aus = aus;
+    crawlStatus = new Crawler.Status(spec.getStartingUrls(), type);
   }
 
   private GoslingCrawlerImpl(ArchivalUnit au, CrawlSpec spec,
 			     AuState aus, int type, Collection repairUrls) {
     this(au, spec, aus, type);
     this.repairUrls = repairUrls;
+
+    //XXX hack, since crawlStatus will get set twice
+    crawlStatus = new Crawler.Status(repairUrls, type); 
   }
 
-  public long getNumFetched() {
-    return numUrlsFetched;
-  }
+//   public long getNumFetched() {
+//     return numUrlsFetched;
+//   }
 
-  public long getNumParsed() {
-    return numUrlsParsed;
-  }
+//   public long getNumParsed() {
+//     return numUrlsParsed;
+//   }
 
-  public long getStartTime() {
-    return startTime;
-  }
+//   public long getStartTime() {
+//     return startTime;
+//   }
 
-  public long getEndTime() {
-    return endTime;
-  }
+//   public long getEndTime() {
+//     return endTime;
+//   }
 
   public ArchivalUnit getAu() {
     return au;
   }
 
-  public Collection getStartUrls() {
-    return spec.getStartingUrls();
-  }
+//   public Collection getStartUrls() {
+//     return spec.getStartingUrls();
+//   }
 
   public int getType() {
     return type;
   }
 
-  public int getStatus() {
-    if (endTime == -1) {
-      return Crawler.STATUS_INCOMPLETE;
-    } else if (crawlError != 0) {
-      return crawlError;
-    }
-    return Crawler.STATUS_SUCCESSFUL;
+//   public int getStatus() {
+//     if (endTime == -1) {
+//       return Crawler.STATUS_INCOMPLETE;
+//     } else if (crawlError != 0) {
+//       return crawlError;
+//     }
+//     return Crawler.STATUS_SUCCESSFUL;
+//   }
+
+  public Crawler.Status getStatus() {
+    return crawlStatus;
   }
+
 
   /**
    * Main method of the crawler; it loops through crawling and caching
@@ -239,7 +250,7 @@ public class GoslingCrawlerImpl implements Crawler {
     try {
       return doCrawl0(deadline);
     } finally {
-      endTime = TimeBase.nowMs();
+      crawlStatus.signalCrawlEnded();
     }
   }
 
@@ -249,7 +260,8 @@ public class GoslingCrawlerImpl implements Crawler {
     }
     boolean windowClosed = false;
     logger.info("Beginning crawl of "+au);
-    startTime = TimeBase.nowMs();
+//     startTime = TimeBase.nowMs();
+    crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
     Set parsedPages = new HashSet();
 
@@ -284,8 +296,10 @@ public class GoslingCrawlerImpl implements Crawler {
         }
  	if (spec.isIncluded(url)) {
 	  if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, true)) {
-	    if (crawlError == 0) {
-	      crawlError = Crawler.STATUS_ERROR;
+//   	    if (crawlError == 0) {
+	    if (crawlStatus.getCrawlError() == 0) {
+	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+// 	      crawlError = Crawler.STATUS_ERROR;
 	    }
 	  }
 	} else {
@@ -320,22 +334,26 @@ public class GoslingCrawlerImpl implements Crawler {
         break;
       }
       if (!doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus, false)) {
-	if (crawlError == 0) {
-	  crawlError = Crawler.STATUS_ERROR;
+// 	if (crawlError == 0) {
+	if (crawlStatus.getCrawlError() == 0) {
+	  crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+// 	  crawlError = Crawler.STATUS_ERROR;
 	}
       }
       aus.updatedCrawlUrls(false);
     }
     // unsuccessful crawl if window closed
     if (windowClosed) {
-      crawlError = Crawler.STATUS_WINDOW_CLOSED;
+      crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+//       crawlError = Crawler.STATUS_WINDOW_CLOSED;
     }
-    if (crawlError != 0) {
+//     if (crawlError != 0) {
+    if (crawlStatus.getCrawlError() != 0) {
       logger.info("Finished crawl (errors) of "+au);
     } else {
       logger.info("Finished crawl of "+au);
     }      
-    return (crawlError == 0);
+    return (crawlStatus.getCrawlError() == 0);
   }
 
   boolean crawlPermission(CachedUrlSet ownerCus) {
@@ -370,10 +388,12 @@ public class GoslingCrawlerImpl implements Crawler {
       }
     } catch (IOException ex) {
       logger.warning("Exception reading manifest: "+ex);
-      crawlError = Crawler.STATUS_FETCH_ERROR;
+      crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
+//       crawlError = Crawler.STATUS_FETCH_ERROR;
     }
     if (!crawl_ok) {
-      crawlError = err;
+      crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
+//       crawlError = err;
     }
     return crawl_ok;
   }
@@ -427,8 +447,9 @@ public class GoslingCrawlerImpl implements Crawler {
 	//handling of error condition
 	if (cu.hasContent()) {
 	  addUrlsToSet(cu, extractedUrls, parsedPages);//IOException if the CU can't be read
+ 	  crawlStatus.signalUrlParsed();
 	  parsedPages.add(uc.getUrl());
-	  numUrlsParsed++;
+// 	  numUrlsParsed++;
 	}
       }
     } catch (IOException ioe) {
@@ -448,6 +469,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	if (type == Crawler.NEW_CONTENT) {
 	  logger.debug("caching "+uc);
 	  uc.cache(); //IOException if there is a caching problem
+	  crawlStatus.signalUrlFetched();
 	} else {
 	  logger.debug("forced caching "+uc);
 	  uc.forceCache();

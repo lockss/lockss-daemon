@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.15 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: Crawler.java,v 1.16 2003-12-13 01:29:30 troberts Exp $
  */
 
 /*
@@ -66,29 +66,6 @@ public interface Crawler {
    */
   public boolean doCrawl(Deadline deadline);
 
-  /**
-   * Return the number of urls that have been fetched by this crawler
-   * @return number of urls that have been fetched by this crawler
-   */
-  public long getNumFetched();
-
-  /**
-   * Return the number of urls that have been parsed by this crawler
-   * @return number of urls that have been parsed by this crawler
-   */
-  public long getNumParsed();
-
-  /**
-   * Return the time at which this crawl began
-   * @return time at which this crawl began or -1 if it hadn't yet
-   */
-  public long getStartTime();
-
-  /**
-   * Return the time at which this crawl ended
-   * @return time at which this crawl ended or -1 if it hadn't yet
-   */
-  public long getEndTime();
 
   /**
    * Return the AU that this crawler is crawling within
@@ -106,11 +83,105 @@ public interface Crawler {
    * Returns the starting urls for this crawler
    * @return starting urls for this crawler
    */
-  public Collection getStartUrls();
+//   public Collection getStartUrls();
 
   /**
    * Returns an int representing the status of this crawler
    */
-  public int getStatus();
+  public Crawler.Status getStatus();
 
+
+  public static class Status {
+    protected long startTime = -1;
+    protected long endTime = -1;
+    protected long numFetched = 0;
+    protected long numParsed = 0;
+    protected int crawlError = 0;
+    protected Collection startUrls = null;
+    protected ArchivalUnit au = null;
+    protected int type = -1;
+
+    public Status(Collection startUrls, int type) {
+      this.startUrls = startUrls;
+      this.type = type;
+    }
+
+    /**
+     * Return the time at which this crawl began
+     * @return time at which this crawl began or -1 if it hadn't yet
+     */
+    public long getStartTime() {
+      return startTime;
+    }
+
+    public void signalCrawlStarted() {
+      startTime = TimeBase.nowMs();
+    }
+
+    /**
+     * Return the time at which this crawl ended
+     * @return time at which this crawl ended or -1 if it hadn't yet
+     */
+    public long getEndTime() {
+      return endTime;
+    }
+
+    public void signalCrawlEnded() {
+      endTime = TimeBase.nowMs();
+    }
+
+    /**
+     * Return the number of urls that have been fetched by this crawler
+     * @return number of urls that have been fetched by this crawler
+     */
+    public long getNumFetched() {
+      return numFetched;
+    }
+
+    public void signalUrlFetched() {
+      numFetched++;
+    }
+
+    /**
+     * Return the number of urls that have been parsed by this crawler
+     * @return number of urls that have been parsed by this crawler
+     */
+    public long getNumParsed() {
+      return numParsed;
+    }
+
+    public void signalUrlParsed() {
+      numParsed++;
+    }
+    
+    public Collection getStartUrls() {
+      return startUrls;
+    }
+
+
+    public int getCrawlStatus() {
+      if (endTime == -1) {
+	return Crawler.STATUS_INCOMPLETE;
+      } else if (crawlError != 0) {
+	return crawlError;
+      }
+      return Crawler.STATUS_SUCCESSFUL;
+    }
+
+    public void setCrawlError(int crawlError) {
+      this.crawlError = crawlError;
+    }
+
+    public int getCrawlError() {
+      return crawlError;
+    }
+
+    public int getType() {
+      return type;
+    }
+
+    public ArchivalUnit getAu() {
+      return au;
+    }
+  }
 }

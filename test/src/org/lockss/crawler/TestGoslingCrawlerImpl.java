@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.30 2003-12-06 00:53:01 eaalto Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.31 2003-12-13 01:29:30 troberts Exp $
  */
 
 /*
@@ -808,10 +808,16 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testGetStatusCrawlNotStarted() {
-    assertEquals(-1, crawler.getStartTime());
-    assertEquals(-1, crawler.getEndTime());
-    assertEquals(0, crawler.getNumFetched());
-    assertEquals(0, crawler.getNumParsed());
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(-1, crawlStatus.getStartTime());
+    assertEquals(-1, crawlStatus.getEndTime());
+    assertEquals(0, crawlStatus.getNumFetched());
+    assertEquals(0, crawlStatus.getNumParsed());
+  }
+
+  public void testGetStatusStartUrls() {
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(startUrls, crawlStatus.getStartUrls());
   }
 
   public void testGetStatusCrawlDone() {
@@ -839,20 +845,23 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl(Deadline.MAX);
     long expectedEnd = TimeBase.nowMs();
-    assertEquals(expectedStart, crawler.getStartTime());
-    assertEquals(expectedEnd, crawler.getEndTime());
-    assertEquals(4, crawler.getNumFetched());
-    assertEquals(4, crawler.getNumParsed());
+    Crawler.Status crawlStatus = crawler.getStatus();
+    assertEquals(expectedStart, crawlStatus.getStartTime());
+    assertEquals(expectedEnd, crawlStatus.getEndTime());
+    assertEquals(4, crawlStatus.getNumFetched());
+    assertEquals(4, crawlStatus.getNumParsed());
   }
 
   public void testGetStatusIncomplete() {
-    assertEquals(Crawler.STATUS_INCOMPLETE, crawler.getStatus());
+    assertEquals(Crawler.STATUS_INCOMPLETE,
+		 crawler.getStatus().getCrawlStatus());
   }
 
   public void testGetStatusSuccessful() {
     singleTagShouldCrawl("http://www.example.com/web_link.html",
 			 "<a href=", "</a>");
-    assertEquals(Crawler.STATUS_SUCCESSFUL, crawler.getStatus());
+    assertEquals(Crawler.STATUS_SUCCESSFUL,
+		 crawler.getStatus().getCrawlStatus());
   }
 
   public void testGetStatusError() {
@@ -864,7 +873,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
 
     crawler.doCrawl(Deadline.MAX);
-    assertEquals(Crawler.STATUS_ERROR, crawler.getStatus());
+    assertEquals(Crawler.STATUS_ERROR,
+		 crawler.getStatus().getCrawlStatus());
   }
 
 

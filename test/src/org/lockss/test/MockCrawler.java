@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.6 2003-11-04 19:00:22 troberts Exp $
+ * $Id: MockCrawler.java,v 1.7 2003-12-13 01:29:30 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.Collection;
 import org.lockss.util.Deadline;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.daemon.Crawler;
 
 public class MockCrawler extends NullCrawler {
   ArchivalUnit au;
@@ -48,7 +49,7 @@ public class MockCrawler extends NullCrawler {
   long endTime = -1;
   long numFetched = -1;
   long numParsed = -1;
-  int status = -1;
+  Crawler.Status status = null;
 
 
   public void setCrawlSuccessful(boolean crawlSuccessful) {
@@ -97,43 +98,46 @@ public class MockCrawler extends NullCrawler {
     return urls;
   }
 
-  public void setStartTime(long time) {
-    startTime = time;
-  }
+//   public void setStartTime(long time) {
+//     startTime = time;
+//   }
 
-  public void setEndTime(long time) {
-    endTime = time;
-  }
+//   public void setEndTime(long time) {
+//     endTime = time;
+//   }
 
-  public void setNumFetched(long num) {
-    numFetched = num;
-  }
+//   public void setNumFetched(long num) {
+//     numFetched = num;
+//   }
 
-  public void setNumParsed(long num) {
-    numParsed = num;
-  }
+//   public void setNumParsed(long num) {
+//     numParsed = num;
+//   }
 
-  public long getStartTime() {
-    return startTime;
-  }
+//   public long getStartTime() {
+//     return startTime;
+//   }
 
-  public long getEndTime() {
-    return endTime;
-  }
+//   public long getEndTime() {
+//     return endTime;
+//   }
 
-  public long getNumFetched() {
-    return numFetched;
-  }
+//   public long getNumFetched() {
+//     return numFetched;
+//   }
 
-  public long getNumParsed() {
-    return numParsed;
-  }
+//   public long getNumParsed() {
+//     return numParsed;
+//   }
 
-  public void setStatus(int status) {
+  public void setStatus(Crawler.Status status) {
     this.status = status;
   }
 
-  public int getStatus() {
+  public Crawler.Status getStatus() {
+    if (status == null) {
+      status = new MockCrawlStatus();
+    }
     return status;
   }
 

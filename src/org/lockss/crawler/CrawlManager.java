@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.17 2003-09-26 23:52:18 eaalto Exp $
+ * $Id: CrawlManager.java,v 1.18 2003-12-13 01:29:30 troberts Exp $
  */
 
 /*
@@ -91,13 +91,14 @@ public interface CrawlManager {
     public Collection getActiveAus();
 
     /**
-     * return a <code>Collection</code> of {@link Crawler}s doing repair
-     * crawls for <code>au</code>
+     * return a <code>Collection</code> of {@link Crawler.Status} objects for
+     * any repair crawls for <code>au</code>
      *
-     * @param auid id of ArchivalUnit to get {@link Crawler}s doing repair
-     * crawls for
-     * @return <code>Collection</code> of {@link Crawler}s for <code>au</code>
+     * @param auid id of ArchivalUnit to get {@link Crawler.Status} objects
+     * for any repair crawls for
+     * @return <code>Collection</code> of {@link Crawler.Status} objects for
+     * <code>au</code>
      */
-    public Collection getCrawls(String auid);
+    public Collection getCrawlStatus(String auid);
   }
 }
