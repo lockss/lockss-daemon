@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.8 2004-02-03 02:48:39 eaalto Exp $
+ * $Id: HistoryRepository.java,v 1.9 2004-02-07 00:12:52 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.util.List;
 import org.lockss.plugin.*;
 import org.lockss.app.LockssAuManager;
 
@@ -66,6 +67,16 @@ public interface HistoryRepository extends LockssAuManager {
    * @param nodeState the NodeState
    */
   public void loadPollHistories(NodeState nodeState);
+
+  /**
+   * Stores IdentityAgreement list
+   */
+  public void storeIdentityAgreement(List list);
+
+  /**
+   * Loads and returns IdentityAgreement list
+   */
+  public List loadIdentityAgreement();
 
   /**
    * Stores the AuState for this ArchivalUnit
