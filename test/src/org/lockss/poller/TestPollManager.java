@@ -118,7 +118,7 @@ public class TestPollManager extends TestCase {
       PollManager.makePollRequest(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
                                   (byte)5,testaddr,testduration, 10000);
     }
-    catch (NullPointerException npe) {
+    catch (IllegalStateException e) {
       // ignore this for now
     }
     catch (IOException ex) {
