@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.48 2003-06-25 21:19:59 eaalto Exp $
+ * $Id: Configuration.java,v 1.49 2003-07-11 23:29:58 tlipkis Exp $
  */
 
 /*
@@ -269,13 +269,13 @@ public abstract class Configuration {
 		       new File(logdir, logfile).toString());
     }
 
-    conditionalPlatformOverride(PARAM_PLATFORM_IP_ADDRESS,
-				IdentityManager.PARAM_LOCAL_IP);
+    conditionalPlatformOverride(IdentityManager.PARAM_LOCAL_IP,
+				PARAM_PLATFORM_IP_ADDRESS);
 
-    conditionalPlatformOverride(PARAM_PLATFORM_SMTP_PORT,
-				MailTarget.PARAM_SMTPPORT);
-    conditionalPlatformOverride(PARAM_PLATFORM_SMTP_HOST,
-				MailTarget.PARAM_SMTPHOST);
+    conditionalPlatformOverride(MailTarget.PARAM_SMTPPORT,
+				PARAM_PLATFORM_SMTP_PORT);
+    conditionalPlatformOverride(MailTarget.PARAM_SMTPHOST,
+				PARAM_PLATFORM_SMTP_HOST);
 
     String platformSubnet = get(PARAM_PLATFORM_ACCESS_SUBNET);
     appendPlatformAccess(ServletManager.PARAM_IP_INCLUDE, platformSubnet);
@@ -302,8 +302,9 @@ public abstract class Configuration {
     put(key, val);
   }
 
-  private void conditionalPlatformOverride(String platformKey, String key) {
-    String value = get(platformKey);
+  private void conditionalPlatformOverride(String key,
+					   String withPlatformKey) {
+    String value = get(withPlatformKey);
     if (value != null) {
       platformOverride(key, value);
     }
