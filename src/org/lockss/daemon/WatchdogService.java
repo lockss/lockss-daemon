@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.5 2003-06-20 22:34:50 claire Exp $
+ * $Id: WatchdogService.java,v 1.6 2004-01-22 07:34:05 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -30,6 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 import java.io.*;
+import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -51,15 +52,34 @@ public class WatchdogService extends BaseLockssManager {
   static final String PARAM_PLATFORM_WDOG_INTERVAL = PREFIX + "interval";
   static final long DEFAULT_PLATFORM_WDOG_INTERVAL = Constants.HOUR;
 
+  static final String PARAM_PLATFORM_WDOG_DNS = PREFIX + "dns.enabled";
+  static final boolean DEFAULT_PLATFORM_WDOG_DNS = true;
+  static final String PARAM_PLATFORM_WDOG_DNS_DOMAIN = PREFIX + "dns.domain";
+  static final String DEFAULT_PLATFORM_WDOG_DNS_DOMAIN = "lockss.org";
+
   protected static Logger log = Logger.getLogger("PlatformWatchdog");
   private File watchedFile = null;
   private boolean enabled = false;
   private long interval;
   private TimerQueue.Request req;
 
+  private boolean doDns = DEFAULT_PLATFORM_WDOG_DNS;
+  private String dnsDomain = DEFAULT_PLATFORM_WDOG_DNS_DOMAIN;
+  private long dnsCtr = 0;
+  String dnsProbeHost = null;
+  boolean dnsProbeAttempted = false;
+
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
 					Set changedKeys) {
+    if (changedKeys.contains(PARAM_PLATFORM_WDOG_DNS)) {
+      doDns = config.getBoolean(PARAM_PLATFORM_WDOG_DNS,
+				DEFAULT_PLATFORM_WDOG_DNS);
+    }
+    if (changedKeys.contains(PARAM_PLATFORM_WDOG_DNS_DOMAIN)) {
+      dnsDomain = config.get(PARAM_PLATFORM_WDOG_DNS_DOMAIN,
+			     DEFAULT_PLATFORM_WDOG_DNS_DOMAIN);
+    }
     if (changedKeys.contains(PARAM_PLATFORM_WDOG_FILE) ||
 	changedKeys.contains(PARAM_PLATFORM_WDOG_INTERVAL)) {
       String name = config.get(PARAM_PLATFORM_WDOG_FILE);
@@ -134,6 +154,17 @@ public class WatchdogService extends BaseLockssManager {
   // we're not running.
   private synchronized void woof() {
     log.debug2("woof");
+    if (doDns) {
+      // try a DNS lookup to ensure that DNS lookups aren't hanging
+      dnsProbeHost = "" + (++dnsCtr) + "." + dnsDomain;
+      if (log.isDebug3()) log.debug3("dns: " + dnsProbeHost);
+      try {
+	InetAddress ina = InetAddress.getByName(dnsProbeHost);
+	dnsProbeAttempted = true;
+      } catch (UnknownHostException e) {
+	dnsProbeAttempted = true;
+      }
+    }
     req = null;
     if (watchedFile != null) {
       String verbing = "testing existence of"; // for error msg

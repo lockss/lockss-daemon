@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.6 2003-09-16 23:31:20 eaalto Exp $
+ * $Id: TestWatchdogService.java,v 1.7 2004-01-22 07:34:05 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,10 @@ public class TestWatchdogService extends LockssTestCase {
   }
 
   private void config(String file, String interval) {
-    Properties props = new Properties();
+    config(new Properties(), file, interval);
+  }
+
+  private void config(Properties props, String file, String interval) {
     props.put(WatchdogService.PARAM_PLATFORM_WDOG_FILE, file);
     props.put(WatchdogService.PARAM_PLATFORM_WDOG_INTERVAL, interval);
     ConfigurationUtil.setCurrentConfigFromProps(props);
@@ -114,6 +117,24 @@ public class TestWatchdogService extends LockssTestCase {
     // 1 more second later, it should be updated again
     TimeBase.step(1000);
     assertEquals(TimeBase.nowMs(), tmpfile.lastModified());
+  }
+
+  // test disabled to avoid DNS lookups in test
+  public void xxxtestDns() throws Exception {
+    File tmpfile = FileTestUtil.tempFile("wdog");
+
+    // configure a 10 second watchdog with dns probes
+    Properties p = new Properties();
+    p.put(WatchdogService.PARAM_PLATFORM_WDOG_DNS, "true");
+    p.put(WatchdogService.PARAM_PLATFORM_WDOG_DNS_DOMAIN, "example.com");
+    config(p, tmpfile.toString(), "10s");
+
+    TimeBase.setSimulated(9000);
+    wdog.startService();
+    // should happen immediately, when service is started
+    // ensure file mod time is correct
+    assertEquals("1.example.com", wdog.dnsProbeHost);
+    assertTrue("DNS lookup attempted", wdog.dnsProbeAttempted);
   }
 
   public void testDisable() throws Exception {
