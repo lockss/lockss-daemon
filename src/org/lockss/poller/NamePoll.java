@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.39 2003-03-05 23:47:07 claire Exp $
+ * $Id: NamePoll.java,v 1.40 2003-03-11 02:47:08 claire Exp $
  */
 
 /*
@@ -157,7 +157,7 @@ public class NamePoll
       while(it.hasNext()) {
         String name = ((CachedUrlSetNode)it.next()).getUrl();
         if(name.startsWith(baseUrl)) {
-          name = name.substring(name.length());
+          name = name.substring(baseUrl.length());
         }
         alist.add(name);
       }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.42 2003-03-08 02:18:57 tal Exp $
+* $Id: PollManager.java,v 1.43 2003-03-11 02:47:08 claire Exp $
  */
 
 /*
@@ -47,10 +47,7 @@ import org.mortbay.util.*;
 import gnu.regexp.*;
 import org.lockss.hasher.HashService;
 import org.lockss.repository.LockssRepository;
-/*
- TODO: move checkForConflict into the appropriate poll class
- TODO: replace checkForConflict url position with call to NodeManager
- */
+
 public class PollManager  implements LockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
       "poll.expireRecent";
@@ -171,7 +168,7 @@ public class PollManager  implements LockssManager {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme != null) {
       if(pme.isPollCompleted() || pme.isPollSuspended()) {
-        theLog.info("Message received after poll was closed." + msg.toString());
+        theLog.debug("Message received after poll was closed." + msg.toString());
         return;
       }
     }
@@ -200,11 +197,12 @@ public class PollManager  implements LockssManager {
 
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme == null) {
-      theLog.debug("Making new poll: "+ key);
+      theLog.debug3("Making new poll: " + key);
       ret = makePoll(msg);
-      theLog.debug("Done making new poll: "+ key);
+      theLog.debug3("Done making new poll: "+ key);
     }
     else {
+      theLog.debug3("Returning existing poll:" + key);
       ret = pme.poll;
     }
     return ret;
@@ -225,14 +223,14 @@ public class PollManager  implements LockssManager {
     cus = spec.getCachedUrlSet();
     theLog.debug("making poll from: " + spec);
     if(cus == null) {
-      theLog.debug(msg.getTargetUrl() + " not in this cache.");
+      theLog.debug(spec.getUrl()+ " not in this cache, ignoring poll request.");
       return null;
     }
 
     // check for conflicts
     CachedUrlSet conflict = checkForConflicts(msg, cus);
     if(conflict != null) {
-      String err = "New poll for " + cus + " conflicts with " + conflict +
+      String err = "New poll " + cus + " conflicts with " + conflict +
           ", ignoring poll request.";
       theLog.debug(err);
       return null;

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.54 2003-03-08 04:36:46 tal Exp $
+ * $Id: NodeManagerImpl.java,v 1.55 2003-03-11 02:47:08 claire Exp $
  */
 
 /*
@@ -683,7 +683,10 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void callContentPollOnSubNodes(NodeState state,
-      Poll.VoteTally results) throws IOException {
+                                         Poll.VoteTally results)
+      throws IOException {
+    ArrayList childList = new ArrayList();
+
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSetNode child = (CachedUrlSetNode)children.next();
@@ -696,10 +699,37 @@ public class NodeManagerImpl implements NodeManager {
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
           cus = ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
       }
+      childList.add(cus);
+    }
+    // Divide the list in two and call to new content polls
+    if(childList.size() > 4) {
+      String base = results.getCachedUrlSet().getSpec().getUrl();
+      int mid = childList.size() / 2;
+      String lwr = ( (CachedUrlSet) childList.get(0)).getSpec().getUrl();
+      lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
+      String upr = ( (CachedUrlSet) childList.get(mid)).getSpec().getUrl();
+      upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
+      PollSpec pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
-                                             new PollSpec(cus));
+                                             pspec);
+
+      lwr = ( (CachedUrlSet) childList.get(mid + 1)).getSpec().getUrl();
+      lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
+      upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).getSpec().
+          getUrl();
+      upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
+      pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
+      theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+                                             pspec);
+    }
+    else {
+      for(int i=0; i< childList.size(); i++) {
+        theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
+        new PollSpec((CachedUrlSet)childList.get(i)));
+      }
     }
   }
+
 
   private void updateReputations(Poll.VoteTally results) {
     IdentityManager idManager = theDaemon.getIdentityManager();
