@@ -48,6 +48,11 @@ public class StdErrTarget implements LogTarget {
   public void handleMessage(Logger log, int msgLevel, String message) {
     StringBuffer sb = new StringBuffer();
     sb.append(df.format(new Date()));
+    if (TimeBase.isSimulated()) {
+      sb.append("(sim ");
+      sb.append(TimeBase.nowMs());
+      sb.append(")");
+    }
     sb.append(": ");
     sb.append(log.nameOf(msgLevel));
     sb.append(": ");
