@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.33 2004-01-22 02:01:08 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.34 2004-01-28 05:23:10 tlipkis Exp $
  */
 
 /*
@@ -298,7 +298,7 @@ public class StringUtil {
     return str;
   }
 
-  /** Like indevOf except is case-independent */
+  /** Like indexOf except is case-independent */
   public static int getIndexIgnoringCase(String str, String subStr) {
     if (str != null && subStr != null) {
       return (str.toUpperCase()).indexOf(subStr.toUpperCase());
@@ -306,9 +306,15 @@ public class StringUtil {
     return -1;
   }
 
+  /** Like endsWith except is case-independent */
   public static boolean endsWithIgnoreCase(String str, String end) {
     int lend = end.length();
     return str.regionMatches(true, str.length() - lend, end, 0, lend);
+  }
+
+  /** Like startsWith except is case-independent */
+  public static boolean startsWithIgnoreCase(String str, String start) {
+    return str.regionMatches(true, 0, start, 0, start.length());
   }
 
   /** Remove the substring beginning with the final occurrence of the
