@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.15 2004-11-24 23:37:46 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.16 2004-11-29 23:58:08 dshr Exp $
  */
 
 /*
@@ -609,6 +609,8 @@ public class V3Voter extends V3Poll {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
+	log.debug("Poll timer expired");
+	changePollState(STATE_FINALIZING);
       if(m_pollstate != PS_COMPLETE) {
         stopPoll();
       }

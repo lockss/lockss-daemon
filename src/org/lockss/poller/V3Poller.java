@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.17 2004-11-29 20:51:11 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.18 2004-11-29 23:58:08 dshr Exp $
  */
 
 /*
@@ -190,7 +190,6 @@ public class V3Poller extends V3Poll {
       log.debug3("closed the poll:" + m_key);
     }
     else {
-      m_pollstate = BasePoll.PS_COMPLETE;
       if (m_state != STATE_CHOOSING_NEXT_VOTE) {
 	log.error("Should be in ChoosingNextVote state");
 	changePollState(STATE_CHOOSING_NEXT_VOTE);
@@ -279,6 +278,7 @@ public class V3Poller extends V3Poll {
     if (ballotBox.isEmpty()) {
       //  No more votes to verify - finish the poll
       changePollState(STATE_FINALIZING);
+      m_pollstate = BasePoll.PS_COMPLETE;
       m_pollmanager.closeThePoll(m_key);
       log.debug3("closed the poll:" + m_key);
       return;
@@ -319,7 +319,7 @@ public class V3Poller extends V3Poll {
     } else {
       V3LcapMessage msg = (V3LcapMessage)ballotBox.remove(0);
       ballotBox.add(msg);
-      Deadline pauseDeadline = Deadline.in(10000);
+      Deadline pauseDeadline = Deadline.in(1000);
       TimerQueue.schedule(pauseDeadline, new PauseTimerCallback(), cookie);
     }
   }

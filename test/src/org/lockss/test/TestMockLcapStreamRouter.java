@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLcapStreamRouter.java,v 1.1.2.6 2004-11-29 03:31:09 dshr Exp $
+ * $Id: TestMockLcapStreamRouter.java,v 1.1.2.7 2004-11-29 23:58:09 dshr Exp $
  */
 
 /*
@@ -65,25 +65,6 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    Configuration config = Configuration.getCurrentConfig();
-    // Make two FifoQueue objects
-    FifoQueue q1 = new FifoQueue();
-    FifoQueue q2 = new FifoQueue();
-    assertNotNull(q1);
-    assertNotNull(q2);
-    // Use the two to connect two MockLcapStreamRouter objects
-    // back-to-back.
-    loopbackRouter = new MockLcapStreamRouter(q1, null);
-    bitbucketRouter = new MockLcapStreamRouter(q1, q2);
-    loopbackRouter.setConfig(config, config, null);
-    bitbucketRouter.setConfig(config, config, null);
-    loopbackRouter.startService();
-    bitbucketRouter.startService();
-    // Register handlers
-    handler1 = new MyMessageHandler("handler1");
-    handler2 = new MyMessageHandler("handler2");
-    loopbackRouter.registerMessageHandler(handler1);
-    bitbucketRouter.registerMessageHandler(handler2);
   }
 
   /** tearDown method for test case
@@ -110,6 +91,17 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
   }
 
   public void testLoopbackRouter() {
+    Configuration config = Configuration.getCurrentConfig();
+    // Make two FifoQueue objects
+    FifoQueue q1 = new FifoQueue();
+    assertNotNull(q1);
+    // Use the two to connect two MockLcapStreamRouter objects
+    // back-to-back.
+    loopbackRouter = new MockLcapStreamRouter(q1, null);
+    loopbackRouter.setConfig(config, config, null);
+    loopbackRouter.startService();
+    handler1 = new MyMessageHandler("handler1");
+    loopbackRouter.registerMessageHandler(handler1);
     {
       MockLcapStreamRouter mloopbackRouter = (MockLcapStreamRouter) loopbackRouter;
       assertNotNull(mloopbackRouter.getReceiveQueue());
@@ -139,6 +131,18 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
   }
 
   public void testBitbucketRouter() {
+    Configuration config = Configuration.getCurrentConfig();
+    // Make two FifoQueue objects
+    FifoQueue q1 = new FifoQueue();
+    FifoQueue q2 = new FifoQueue();
+    assertNotNull(q1);
+    assertNotNull(q2);
+    bitbucketRouter = new MockLcapStreamRouter(q1, q2);
+    bitbucketRouter.setConfig(config, config, null);
+    bitbucketRouter.startService();
+    // Register handlers
+    handler2 = new MyMessageHandler("handler2");
+    bitbucketRouter.registerMessageHandler(handler2);
     assertTrue(bitbucketRouter.sendQueueEmpty());
     // Create a message
     MockV3LcapMessage sent = null;
@@ -164,6 +168,7 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     assertEquals(sent, received);
     assertTrue(bitbucketRouter.sendQueueEmpty());
   }
+
 
   public class MyMessageHandler implements LcapStreamRouter.MessageHandler {
     V3LcapMessage received = null;
