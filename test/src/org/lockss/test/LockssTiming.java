@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.2 2004-04-06 07:32:57 tlipkis Exp $
+ * $Id: LockssTiming.java,v 1.3 2004-04-19 02:44:55 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.test;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+import java.text.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import junit.framework.TestCase;
@@ -50,6 +51,7 @@ public class LockssTiming extends LockssTestCase {
   long bytes;
   byte[] buf;
   char[] cbuf;
+  String outLabel = "b";
 
   public void setUp() throws Exception {
     buf = new byte[bufsize];
@@ -72,6 +74,10 @@ public class LockssTiming extends LockssTestCase {
     time(null, msg, c);
   }
 
+  public void setOutLabel(String label) {
+    outLabel = label;
+  }
+
   public void time(File file, String msg, Computation c) throws Exception {
     long start = System.currentTimeMillis();
     int cnt = 0;
@@ -91,17 +97,29 @@ public class LockssTiming extends LockssTestCase {
     sb.append(" ms");
     if (file != null) {
       sb.append(",  ");
-      long b = (file.length() * cnt) / delta;
-      sb.append(Long.toString(b));
+      sb.append(rateString(file.length() * cnt, delta));
       sb.append(" b/ms(in)");
     }
     if (bytes > 0) {
       sb.append(",  ");
-      long b = bytes / delta;
-      sb.append(Long.toString(b));
-      sb.append(" b/ms(out)");
+      sb.append(rateString(bytes, delta));
+      sb.append(" ");
+      sb.append(outLabel);
+      sb.append("/ms(out)");
     }
     System.out.println(sb.toString());
+  }
+
+  static final NumberFormat rateFormat = new DecimalFormat("0.00");
+
+  public String rateString(long dividend, long divisor) {
+    long b = dividend / divisor;
+    if (b >= 100) {
+      return Long.toString(b);
+    } else {
+      double f = (double)dividend / (double)divisor;
+      return rateFormat.format(f);
+    }
   }
 
   public void incrBytes(long n) {
