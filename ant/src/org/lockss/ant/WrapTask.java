@@ -1,5 +1,5 @@
 /*
- * $Id: WrapTask.java,v 1.2 2004-06-10 22:03:53 tyronen Exp $
+ * $Id: WrapTask.java,v 1.3 2004-06-22 23:13:17 tlipkis Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public class WrapTask extends Task {
     javadoc.setFailonerror(true);
 
     // show [wrap] in logged messages
-    javadoc.setTaskName(this.taskName);
+    javadoc.setTaskName(this.getTaskName());
 
     // Specify the doclet and its path.  Javadoc will take care of it if null
     Javadoc.DocletInfo info = javadoc.createDoclet();
