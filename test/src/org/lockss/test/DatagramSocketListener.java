@@ -107,16 +107,13 @@ public class DatagramSocketListener implements Runnable{
    * packages have been received
    */
   public DatagramPacket getPacket() throws DatagramSocketListenerException {
-    if(numPacketsToGet > numPacketsGot) {
-      //we've been called before we've gotten the packets we expect.
-      //sleep for a bit and see if that helps
-      gotPacket.take(2000);
-      if (numPacketsToGet > numPacketsGot){
+    while(numPacketsToGet > numPacketsGot) {
+      if (!gotPacket.take(2000)){//wait 2 seconds for another packet
 	String msg = "getPacket called before all packets were sent";
 	throw new DatagramSocketListenerException(msg);
       }
     }
-    
+
     synchronized(packets){
       if (packets.size() <= 0)
 	return null;
