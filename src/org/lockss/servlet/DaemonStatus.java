@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.40 2004-07-12 23:01:50 smorabito Exp $
+ * $Id: DaemonStatus.java,v 1.41 2004-07-23 20:57:05 smorabito Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.mortbay.html.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.lockss.plugin.*;
 
 import org.w3c.dom.*;
 
@@ -67,10 +68,12 @@ public class DaemonStatus extends LockssServlet {
   private StatusService statSvc;
   private int outputFmt;
   private BitSet tableOptions;
+  private PluginManager pluginMgr;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     statSvc = getLockssDaemon().getStatusService();
+    pluginMgr = getLockssDaemon().getPluginManager();
   }
 
   /**
@@ -143,9 +146,24 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
+  /** Display a "The cache isn't ready yet, come back later" message if
+   *  not all of the AUs have started yet.
+   */
+  protected void displayNotStarted(Page page) throws IOException {
+    Composite warning = new Composite();
+    warning.add("<center><font color=red size=+1>");
+    warning.add("This LOCKSS Cache is still starting.  Table contents may be incomplete.");
+    warning.add("</font></center><br>");
+    page.add(warning);
+  }
+
   private void doHtmlStatusTable() throws IOException {
     Page page = newPage();
     resp.setContentType("text/html");
+
+    if (!pluginMgr.areAusStarted()) {
+      displayNotStarted(page);
+    }
 
     // After resp.getWriter() has been called, throwing an exception will
     // result in a blank page, so don't call it until the end.

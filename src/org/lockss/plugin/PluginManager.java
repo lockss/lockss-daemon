@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.90 2004-07-21 07:05:01 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.91 2004-07-23 20:57:04 smorabito Exp $
  */
 
 /*
@@ -178,7 +178,7 @@ public class PluginManager extends BaseLockssManager {
    * in the right order.
    */
   public void startLoadablePlugins() {
-    if (areLoadablePluginsReady()) {
+    if (loadablePluginsReady) {
       return;
     }
 
@@ -188,15 +188,15 @@ public class PluginManager extends BaseLockssManager {
     initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
     configureAllPlugins(config);
 
-    setLoadablePluginsReady(true);
-  }
-
-  private boolean areLoadablePluginsReady() {
-    return loadablePluginsReady;
+    loadablePluginsReady = true;
   }
 
   public void setLoadablePluginsReady(boolean val) {
     loadablePluginsReady = val;
+  }
+
+  public boolean areAusStarted() {
+    return loadablePluginsReady;
   }
 
   Configuration currentAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
@@ -216,7 +216,7 @@ public class PluginManager extends BaseLockssManager {
     }
 
     // Don't load or start other plugins until the daemon is running.
-    if (areLoadablePluginsReady()) {
+    if (loadablePluginsReady) {
       // Process the plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
 	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.5 2004-06-22 23:13:59 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.6 2004-07-23 20:57:05 smorabito Exp $
  */
 
 /*
@@ -140,6 +140,12 @@ public class ProxyConfig extends LockssServlet {
   void generateProxyFile(String format) throws IOException {
     pi = new ProxyInfo(getMachineName());
     urlStems = pi.getUrlStemMap();
+    
+    if (!pluginMgr.areAusStarted()) {
+      resp.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE);
+      return;
+    }
+
     if (format.equalsIgnoreCase("pac")) {
       if (urlStems.isEmpty()) {
 	wrtr = resp.getWriter();
