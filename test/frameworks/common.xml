@@ -93,6 +93,7 @@
 	<value>edu.jhu.library.plugin.MedievalForumPlugin</value>
 	<value>edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin</value>
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
+	<value>edu.cornell.library.jbe.JBEPlugin</value>
       </list>
     </property>
 
@@ -3994,6 +3995,36 @@
 	</property>
       </property>
 
+      <property name="nsr3">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 3" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+      </property>
+
+      <property name="nsr4">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 4" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+      </property>
+
       <property name="nsr4s1">
 	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 4 Supplement 1" />
 	<property name="estSize" value="" />
@@ -4009,6 +4040,96 @@
 	</property>
       </property>
       
+      <property name="nsr5">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 5" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+      </property>
+
+      <property name="nsr6">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 6" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+      </property>
+
+      <property name="nsr7">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 7" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+      </property>
+
+      <property name="nsr8">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 8" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+      </property>
+
+      <property name="nsr9">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 9" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+      </property>
+
+      <property name="nsr10">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 10" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+      </property>
+
     </property>
     <!-- End title database -->
     
