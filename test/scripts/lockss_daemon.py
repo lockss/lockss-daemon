@@ -6,8 +6,8 @@ from xml.dom import minidom
 
 # Constants
 
-DEF_TIMEOUT = 300    # 300 second timeout
-DEF_SLEEP = 5        # 5 second default sleep between loops
+DEF_TIMEOUT = 60 * 30  # 30 minute default timeout for waits.
+DEF_SLEEP = 10         # 10 second default sleep between loops.
 
 # Classes
 
@@ -760,7 +760,7 @@ class Client:
             return self.isRangedNameRepaired(au, node)
         return wait(waitFunc, timeout, sleep)
 
-    def waitForFrameworkReady(self, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+    def waitForDaemonReady(self, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Block until the framework is ready for client communication """
         def waitFunc():
             return self.isFrameworkReady()
@@ -1038,10 +1038,25 @@ class Post:
 ###
 ###########################################################################
 
+class Config:
+    """ A safe wrapper around a dictionary.  Handles KeyErrors by
+    returning None values. """
+    def __init__(self):
+        self.dict = {}
+
+    def put(self, prop, val):
+        self.dict[prop] = val
+
+    def get(self, prop, default=None):
+        try:
+            return self.dict[prop]
+        except KeyError:
+            return default
+
 def loadConfig(f):
     """ Return a dictionary representing a property file. """
     fd = open(f)
-    config = {}
+    config = Config()
     while True:
         line = fd.readline()
         if not line:
@@ -1057,7 +1072,7 @@ def loadConfig(f):
         val = val.strip()
         if not key or not val:
             continue
-        config[key] = val
+        config.put(key, val)
     fd.close()
     return config
 
@@ -1081,8 +1096,8 @@ def log(msg):
     msec = int((now%1.0) * 1000)
     mmm = "%03d" % msec
     timestamp = t + '.' + mmm
-
-    print "%s: %s" % (timestamp, msg)
+    sys.stdout.write("%s: %s\n" % (timestamp, msg))
+    sys.stdout.flush()
 
 
 ###########################################################################
