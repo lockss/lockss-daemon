@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.15 2004-06-29 18:58:22 smorabito Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.16 2004-07-12 06:15:54 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
 	if (o instanceof List) {
 	  propList = (List)o;
 	} else {
-	  propList = StringUtil.breakAt((String)o, ';');
+	  propList = StringUtil.breakAt((String)o, ';', 0, true);
 	}
       }
     } catch (ClassCastException ex) {

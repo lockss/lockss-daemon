@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.31 2004-06-17 22:47:21 smorabito Exp $
+ * $Id: TestConfiguration.java,v 1.32 2004-07-12 06:15:53 tlipkis Exp $
  */
 
 /*
@@ -247,6 +247,12 @@ public class TestConfiguration extends LockssTestCase {
     } catch (Exception ex) {
       fail("Should not have thrown: " + ex);
     }
+  }
+
+  public void testGetListEmptyStrings() throws IOException {
+    Configuration config = newConfiguration();
+    config.load(new ConfigFile(FileTestUtil.urlOfString("prop.p1=a;;b;")));
+    assertEquals(ListUtil.list("a", "b"), config.getList("prop.p1"));
   }
 
   private static final String c2 =
