@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.53 2004-03-11 02:29:31 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.54 2004-03-18 20:13:30 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String REMOTE_API = "RemoteApi";
   public static String URL_MANAGER = "UrlManager";
   public static String NODE_MANAGER_STATUS = "NodeManagerStatus";
+  public static String REPOSITORY_STATUS = "RepositoryStatus";
   public static String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
 
   /* the default classes that represent our managers */
@@ -152,6 +153,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     "org.lockss.remote.RemoteApi";
   private static String DEFAULT_NODE_MANAGER_STATUS =
     "org.lockss.state.NodeManagerStatus";
+  private static String DEFAULT_REPOSITORY_STATUS =
+    "org.lockss.repository.LockssRepositoryStatus";
   private static String DEFAULT_ARCHIVAL_UNIT_STATUS =
     "org.lockss.state.ArchivalUnitStatus";
 
@@ -206,6 +209,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
     new ManagerDesc(NODE_MANAGER_STATUS, DEFAULT_NODE_MANAGER_STATUS),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS, DEFAULT_ARCHIVAL_UNIT_STATUS),
+    new ManagerDesc(REPOSITORY_STATUS, DEFAULT_REPOSITORY_STATUS),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
