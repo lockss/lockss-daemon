@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.3.2.1 2003-11-17 22:48:27 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.3.2.2 2003-11-18 01:16:42 tlipkis Exp $
  */
 
 /*
@@ -345,14 +345,15 @@ public class HashSvcSchedImpl
 
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule("state", true),
-		  new StatusTable.SortRule("sort", true));
+		  new StatusTable.SortRule("sort", true),
+		  new StatusTable.SortRule("sort2", true));
 
   static final String FOOT_IN = "Order in which requests were made.";
 
   static final String FOOT_OVER = "Red indicates overrun.";
 
   static final String FOOT_TITLE =
-    "Pending requests are first in table, in the order they were requested."+
+    "Pending requests are first in table, in the order they will be executed."+
     "  Completed requests follow, in reverse completion order " +
     "(most recent first).";
 
@@ -419,7 +420,10 @@ public class HashSvcSchedImpl
 
     private Map makeRow(HashTask task, boolean done, int qpos) {
       Map row = new HashMap();
-      row.put("sort", new Long(done ? -task.getFinishDate().getTime() : qpos));
+      row.put("sort", 
+	      new Long((done ? -task.getFinishDate().getTime() :
+			task.getLatestFinish().getExpiration().getTime())));
+      row.put("sort2", new Long(task.hashReqSeq));
       row.put("sched", new Integer(task.hashReqSeq));
       row.put("state", getState(task, done));
       row.put("au", task.urlset.getArchivalUnit().getName());
@@ -448,7 +452,7 @@ public class HashSvcSchedImpl
 
     private Object getState(HashTask task, boolean done) {
       if (!done) {
-	return (task.hasStarted()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
+	return (task.isStepping()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
       }
       if (task.getExcption() == null) {
 	return TASK_STATE_DONE;
