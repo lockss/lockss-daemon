@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.1 2003-02-05 23:16:30 tal Exp $
+* $Id: AuUrl.java,v 1.2 2003-02-20 22:26:51 tal Exp $
  */
 
 /*
@@ -59,24 +59,23 @@ public class AuUrl {
     return PROTOCOL.equalsIgnoreCase(url.getProtocol());
   }
 
-  /** Create an AuUrl from the config info provided by an AU.  The config
-   * string may contain any characters: it is URL-encoded before being put
-   * in the URL.
-   * @param auConfig the plugin-specific AU config string.
-   * @return a URL with the LOCKSSAU protocol and the supplied AU config
+  /** Create an AuUrl from an AU Id.  The Id string may contain any
+   * characters: it is URL-encoded before being put in the URL.
+   * @param auId the plugin-specific AU Id string.
+   * @return a URL with the LOCKSSAU protocol and the supplied AU Id
    * string.
    */
-  public static URL fromAuConfig(String auConfig)
+  public static URL fromAuId(String auId)
       throws MalformedURLException {
-    return new URL(PROTOCOL, "", URLEncoder.encode(auConfig));
+    return new URL(PROTOCOL, "", URLEncoder.encode(auId));
   }
 
-  /** Extract the AU config info from an AuUrl.
-   * @param auUrl an AuUrl produced by {@link #fromAuConfig(String)}
-   * @return the AU config string that was supplied to {@link
-   * #fromAuConfig(String)}
+  /** Extract the AU Id from an AuUrl.
+   * @param auUrl an AuUrl produced by {@link #fromAuId(String)}
+   * @return the AU Id string that was supplied to {@link
+   * #fromAuId(String)}
    */
-  public static String getAuConfig(URL auUrl) {
+  public static String getAuId(URL auUrl) {
     return URLDecoder.decode(auUrl.getFile());
   }
 
