@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.23 2003-07-23 00:16:31 troberts Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.24 2003-07-23 00:22:44 troberts Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.MalformedURLException;
 import org.lockss.app.*;
 import org.lockss.crawler.*;
+import org.lockss.filter.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
