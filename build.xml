@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.7 2002-08-31 06:19:24 tal Exp $
+ $Id: build.xml,v 1.8 2002-09-02 00:23:49 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -132,6 +132,7 @@ in this Software without prior written authorization from Stanford University.
     <delete dir="${depend.cache}" quiet="true"/>
     <delete dir="${test.results}" quiet="true"/>
     <delete dir="${javadoc}" quiet="true"/>
+    <delete dir="${test.javadoc}" quiet="true"/>
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
@@ -241,8 +242,15 @@ in this Software without prior written authorization from Stanford University.
   <!-- ==================================================================== -->
   <target name="javadoc-test" depends="compile-tests"
    description="Build the javadoc for the test hierarchy">
+    <!-- Using 'packagenames="org.lockss.*"' as above results in the doc set
+	 including all the referenced classes in those packages, but with
+	 none of the javadoc comments, because the source isn't available.
+	 So the test classes are included individually instead, which
+	 results in no package index.
+	 An alternative would be to fully include the non-test classes,
+	 by putting them on the sourcepath.  -->
     <mkdir dir="${test.javadoc}"/>
-    <javadoc packagenames="org.lockss.*"
+    <javadoc 
              sourcepath="${test.src}"
              destdir="${test.javadoc}"
              author="true"
@@ -251,7 +259,8 @@ in this Software without prior written authorization from Stanford University.
              windowtitle="LOCKSS test classes API"
              doctitle="LOCKSS test"
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
-       <classpath refid="test.compile.classpath" />
+       <fileset dir="${test.src}" includes="**/*.java"/>
+<!--         <classpath refid="test.compile.classpath" /> -->
     </javadoc>
   </target>
 
