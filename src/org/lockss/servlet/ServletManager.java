@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.30 2004-06-15 21:44:19 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.31 2004-07-12 06:19:00 tlipkis Exp $
  */
 
 /*
@@ -207,11 +207,33 @@ public class ServletManager extends JettyManager {
       configureAdminContexts();
 
       // Start the http server
-      server.start ();
+      startServer();
       runningOnPort(port);
     } catch (Exception e) {
       log.warning("Couldn't start servlets", e);
     }
+  }
+
+  long[] delayTime = {10 * Constants.SECOND, 60 * Constants.SECOND, 0};
+
+  boolean startServer() {
+    try {
+      for (int ix = 0; ix < delayTime.length; ix++) {
+	try {
+	  server.start ();
+	  return true;
+	} catch (org.mortbay.util.MultiException e) {
+	  log.warning("multi", e);
+	  log.warning("first", e.getException(0));
+	  log.warning("Addr in use, sleeping " +
+		      StringUtil.timeIntervalToString(delayTime[ix]));
+	  Deadline.in(delayTime[ix]).sleep();
+	}
+      }
+    } catch (Exception e) {
+      log.warning("Couldn't start servlets", e);
+    }
+    return false;
   }
 
   private void setContextAuthHandler(HttpContext context, UserRealm realm) {
@@ -268,6 +290,8 @@ public class ServletManager extends JettyManager {
 		       "org.lockss.servlet.ProxyIpAccess");
     handler.addServlet("Hash CUS", "/HashCUS",
 		       "org.lockss.servlet.HashCUS");
+    handler.addServlet("Raise Alert", "/RaiseAlert",
+		       "org.lockss.servlet.RaiseAlert");
     addServletIfAvailable(handler, "ThreadDump", "/ThreadDump",
 			  "org.lockss.servlet.ThreadDump");
     addServletIfAvailable(handler, "Api", "/Api",
@@ -282,9 +306,7 @@ public class ServletManager extends JettyManager {
 
     context.setResourceBase(resourceUrl.toString());
     LockssResourceHandler rHandler = new LockssResourceHandler();
-    //       rHandler.setDirAllowed(false);
-    //       rHandler.setPutAllowed(false);
-    //       rHandler.setDelAllowed(false);
+    rHandler.setDirAllowed(false);
     //       rHandler.setAcceptRanges(true);
     context.addHandler(rHandler);
 
