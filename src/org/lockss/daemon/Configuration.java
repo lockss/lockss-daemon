@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.49 2003-07-11 23:29:58 tlipkis Exp $
+ * $Id: Configuration.java,v 1.50 2003-07-14 06:44:50 tlipkis Exp $
  */
 
 /*
@@ -54,286 +54,19 @@ import org.lockss.state.*;
  * from the current configuration, not that instance.  So don't do that.)
  */
 public abstract class Configuration {
-  /** A constant empty Configuration object */
-  public static final Configuration EMPTY_CONFIGURATION = newConfiguration();
-
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
-  static final String MYPREFIX = PREFIX + "config.";
-  static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
-  static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
-  static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
-  static final String DEFAULT_CONFIG_PATH = "config";
-
-  /** Common prefix of platform config params */
   static final String PLATFORM = PREFIX + "platform.";
-
-  /** Local (routable) IP address, for lcap identity */
-  public static final String PARAM_PLATFORM_IP_ADDRESS =
-    PLATFORM + "localIPAddress";
-
-  /** Local subnet set during config */
-  public static final String PARAM_PLATFORM_ACCESS_SUBNET =
-    PLATFORM + "accesssubnet";
-
-  static final String PARAM_PLATFORM_DISK_SPACE_LIST =
-    PLATFORM + "diskSpacePaths";
-
-  static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
-  static final String PARAM_PLATFORM_ADMIN_EMAIL = PLATFORM + "sysadminemail";
-  static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
-  static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
-
-  static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
-  static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
-  static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
-
-  public static String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
-
-  /** array of local cache config file names */
-  static String cacheConfigFiles[] = {
-    CONFIG_FILE_UI_IP_ACCESS,
-  };
-
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
   protected static Logger log =
     Logger.getLogger("Config", Logger.getInitialDefaultLevel());
 
-  private static List configChangedCallbacks = new ArrayList();
-
-  private static List configUrlList;	// list of urls
-
-  // Current configuration instance.
-  // Start with an empty one to avoid errors in the static accessors.
-  private static Configuration currentConfig = newConfiguration();
-  private static Configuration emptyConfig = newConfiguration();
-  private static OneShotSemaphore haveConfig = new OneShotSemaphore();
-
-  private static HandlerThread handlerThread; // reload handler thread
-
-  private static long reloadInterval = 10 * Constants.MINUTE;
-
-
-  // Factory to create instance of appropriate class
-  static Configuration newConfiguration() {
-    return new ConfigurationPropTreeImpl();
-  }
-
   /** Return current configuration */
   public static Configuration getCurrentConfig() {
-    return currentConfig;
-  }
-
-  /** Reset to unconfigured state.
-   * Configuration isn't a service: this isn't a LockssManager.stopService(),
-   * but should be made one when Configuration is made a service.  (And see
-   * LockssTestCase.tearDown(), where this is called.)
-   */
-  public static void stopService() {
-    currentConfig = newConfiguration();
-    // this currently runs afoul of Logger, which registers itself once
-    // only, on first use.
-    configChangedCallbacks = new ArrayList();
-    configUrlList = null;
-    stopHandler();
-    haveConfig = new OneShotSemaphore();
-  }
-
-  /** Wait until the system is configured.  (<i>Ie</i>, until the first
-   * time a configuration has been loaded.)
-   * @param timer limits the time to wait.  If null, returns immediately.
-   * @return true if configured, false if timer expired.
-   */
-  public static boolean waitConfig(Deadline timer) {
-    while (!haveConfig.isFull() && !timer.expired()) {
-      try {
-	haveConfig.waitFull(timer);
-      } catch (InterruptedException e) {
-	// no action - check timer
-      }
-    }
-    return haveConfig.isFull();
-  }
-
-  /** Wait until the system is configured.  (<i>Ie</i>, until the first
-   * time a configuration has been loaded.) */
-  public static boolean waitConfig() {
-    return waitConfig(Deadline.MAX);
-  }
-
-  static void setCurrentConfig(Configuration newConfig) {
-    if (newConfig == null) {
-      log.warning("attempt to install null Configuration");
-    }
-    currentConfig = newConfig;
-  }
-
-  static void runCallback(Callback cb,
-			  Configuration newConfig,
-			  Configuration oldConfig,
-			  Set diffs) {
-    try {
-      cb.configurationChanged(newConfig, oldConfig, diffs);
-    } catch (Exception e) {
-      log.error("callback threw", e);
-    }
-  }
-
-  static void runCallback(Callback cb,
-			  Configuration newConfig,
-			  Configuration oldConfig) {
-    runCallback(cb, newConfig, oldConfig, newConfig.differentKeys(oldConfig));
-  }
-
-  static void runCallbacks(Configuration newConfig,
-			   Configuration oldConfig) {
-    Set diffs = newConfig.differentKeys(oldConfig);
-    // copy the list of callbacks as it could change during the loop.
-    List cblist = new ArrayList(configChangedCallbacks);
-    for (Iterator iter = cblist.iterator(); iter.hasNext();) {
-      try {
-	Callback cb = (Callback)iter.next();
-	runCallback(cb, newConfig, oldConfig, diffs);
-      } catch (RuntimeException e) {
-	throw e;
-      }
-    }
-  }
-
-  static void setConfigUrls(List urls) {
-    configUrlList = new ArrayList(urls);
-  }
-
-  static void setConfigUrls(String urls) {
-    configUrlList = new ArrayList();
-    for (StringTokenizer st = new StringTokenizer(urls);
-	 st.hasMoreElements(); ) {
-      String url = st.nextToken();
-      configUrlList.add(url);
-    }
-  }
-
-  /**
-   * Return a new <code>Configuration</code> instance loaded from the
-   * url list
-   */
-  public static Configuration readConfig(List urlList) {
-    if (urlList == null) {
-      return null;
-    }
-    Configuration newConfig = newConfiguration();
-    newConfig.setConfigUrls(urlList);
-    boolean gotIt = newConfig.loadList(urlList);
-    return gotIt ? newConfig : null;
-  }
-
-  static boolean updateConfig() {
-    Configuration newConfig = readConfig(configUrlList);
-    return installConfig(newConfig);
-  }
-
-  static boolean installConfig(Configuration newConfig) {
-    if (newConfig == null) {
-      return false;
-    }
-    initCacheConfig(newConfig);
-    loadCacheConfigInto(newConfig);
-    newConfig.copyPlatformParams();
-    newConfig.seal();
-    Configuration oldConfig = currentConfig;
-    if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
-      if (reloadInterval >= 10 * Constants.MINUTE) {
-	log.info("Config unchanged, not updated");
-      }
-      return false;
-    }
-    setCurrentConfig(newConfig);
-    log.info("Config updated from " +
-	     StringUtil.separatedString(newConfig.configUrlList, ", "));
-    if (log.isDebug()) {
-      newConfig.logConfig();
-    }
-    runCallbacks(newConfig, oldConfig);
-    haveConfig.fill();
-    return true;
-  }
-
-  private void copyPlatformParams() {
-    String logdir = get(PARAM_PLATFORM_LOG_DIR);
-    String logfile = get(PARAM_PLATFORM_LOG_FILE);
-    if (logdir != null && logfile != null) {
-      platformOverride(FileTarget.PARAM_FILE,
-		       new File(logdir, logfile).toString());
-    }
-
-    conditionalPlatformOverride(IdentityManager.PARAM_LOCAL_IP,
-				PARAM_PLATFORM_IP_ADDRESS);
-
-    conditionalPlatformOverride(MailTarget.PARAM_SMTPPORT,
-				PARAM_PLATFORM_SMTP_PORT);
-    conditionalPlatformOverride(MailTarget.PARAM_SMTPHOST,
-				PARAM_PLATFORM_SMTP_HOST);
-
-    String platformSubnet = get(PARAM_PLATFORM_ACCESS_SUBNET);
-    appendPlatformAccess(ServletManager.PARAM_IP_INCLUDE, platformSubnet);
-    appendPlatformAccess(ProxyManager.PARAM_IP_INCLUDE, platformSubnet);
-
-    String space = get(PARAM_PLATFORM_DISK_SPACE_LIST);
-    if (!StringUtil.isNullString(space)) {
-      String firstSpace =
-	((String)StringUtil.breakAt(space, ';', 1).elementAt(0));
-      platformOverride(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
-		       firstSpace);
-      platformOverride(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-		       firstSpace);
-      platformOverride(IdentityManager.PARAM_IDDB_DIR,
-		       new File(firstSpace, "iddb").toString());
-    }
-  }
-
-  private void platformOverride(String key, String val) {
-    if (get(key) != null) {
-      log.warning("Overriding param: " + key + "= " + get(key));
-      log.warning("with platform-derived value: " + val);
-    }
-    put(key, val);
-  }
-
-  private void conditionalPlatformOverride(String key,
-					   String withPlatformKey) {
-    String value = get(withPlatformKey);
-    if (value != null) {
-      platformOverride(key, value);
-    }
-  }
-
-  private void appendPlatformAccess(String accessParam,
-				    String platformAccess) {
-    if (StringUtil.isNullString(platformAccess)) {
-      return;
-    }
-    String includeIps = get(accessParam);
-    if (StringUtil.isNullString(includeIps)) {
-      includeIps = platformAccess;
-    } else {
-      includeIps = platformAccess + ";" + includeIps;
-    }
-    put(accessParam, includeIps);
-  }
-
-
-  private void logConfig() {
-    SortedSet keys = new TreeSet();
-    for (Iterator iter = keyIterator(); iter.hasNext(); ) {
-      keys.add((String)iter.next());
-    }
-    for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      log.debug(key + " = " + (String)get(key));
-    }
+    return ConfigManager.getCurrentConfig();
   }
 
   /**
@@ -343,13 +76,7 @@ public abstract class Configuration {
    * immediately.
    * @param c <code>Configuration.Callback</code> to add.  */
   public static void registerConfigurationCallback(Callback c) {
-    log.debug3("registering " + c);
-    if (!configChangedCallbacks.contains(c)) {
-      configChangedCallbacks.add(c);
-      if (haveConfig.isFull()) {
-	runCallback(c, currentConfig, emptyConfig);
-      }
-    }
+    ConfigManager.getConfigManager().registerConfigurationCallback(c);
   }
 
   /**
@@ -357,8 +84,7 @@ public abstract class Configuration {
    * @param c <code>Configuration.Callback</code> to remove.
    */
   public static void unregisterConfigurationCallback(Callback c) {
-    log.debug3("unregistering " + c);
-    configChangedCallbacks.remove(c);
+    ConfigManager.getConfigManager().unregisterConfigurationCallback(c);
   }
 
   // instance methods
@@ -412,85 +138,6 @@ public abstract class Configuration {
 
   abstract boolean load(InputStream istr)
       throws IOException;
-
-  static void resetForTesting() {
-    cacheConfigInited = false;
-    cacheConfigDir = null;
-  }
-
-  static boolean cacheConfigInited = false;
-  static String cacheConfigDir = null;
-
-  static boolean isUnitTesting() {
-    return Boolean.getBoolean("org.lockss.unitTesting");
-  }
-
-  private static void initCacheConfig(Configuration newConfig) {
-    if (cacheConfigInited) return;
-    String dspace = newConfig.get(PARAM_PLATFORM_DISK_SPACE_LIST);
-    String relConfigPath = newConfig.get(PARAM_CONFIG_PATH,
-					 DEFAULT_CONFIG_PATH);
-    Vector v = StringUtil.breakAt(dspace, ';');
-    if (!isUnitTesting() && v.size() == 0) {
-      log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
-		" not specified, not configuring local cache config dir");
-      return;
-    }
-    for (Iterator iter = v.iterator(); iter.hasNext(); ) {
-      String path = (String)iter.next();
-      File configDir = new File(path, relConfigPath);
-      if (configDir.exists()) {
-	cacheConfigDir = configDir.toString();
-	break;
-      }
-    }
-    if (cacheConfigDir == null) {
-      if (v.size() >= 1) {
-	String path = (String)v.get(0);
-	File dir = new File(path, relConfigPath);
-	if (dir.mkdirs()) {
-	  cacheConfigDir = dir.toString();
-	}
-      }
-    }
-    cacheConfigInited = true;
-  }
-
-//   private void initConfigDir(String path) {
-//     String configPath = Configuration.getParam(PARAM_CONFIG_PATH, "config");
-//     File dir = new File(path, configPath);
-//     if (!dir.exists()) {
-//       dir.mkdirs();
-//     }
-//   }
-
-  static void loadCacheConfigInto(Configuration config) {
-    if (cacheConfigDir == null) {
-      return;
-    }
-    for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
-      File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
-      boolean gotIt = config.loadList(ListUtil.list(cfile.toString()), true);
-    }
-  }
-
-  public static void writeCacheConfigFile(Properties props,
-					  String cacheConfigFileName,
-					  String header)
-      throws IOException {
-    if (cacheConfigDir == null) {
-      log.warning("Attempting to write cache config file: " +
-		  cacheConfigFileName + ", but no cache config dir exists");
-      throw new RuntimeException("No cache config dir");
-    }
-    File cfile = new File(cacheConfigDir, cacheConfigFileName);
-    OutputStream os = new FileOutputStream(cfile);
-    props.store(os, header);
-    os.close();
-    if (handlerThread != null) {
-      handlerThread.forceReload();
-    }
-  }
 
   /** Return the set of keys whose values differ.
    * @param otherConfig the config to compare with.  May be null.
@@ -770,70 +417,70 @@ public abstract class Configuration {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static String getParam(String key) {
-    return currentConfig.get(key);
+    return getCurrentConfig().get(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static String getParam(String key, String dfault) {
-    return currentConfig.get(key, dfault);
+    return getCurrentConfig().get(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static boolean getBooleanParam(String key) throws InvalidParam {
-    return currentConfig.getBoolean(key);
+    return getCurrentConfig().getBoolean(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static boolean getBooleanParam(String key, boolean dfault) {
-    return currentConfig.getBoolean(key, dfault);
+    return getCurrentConfig().getBoolean(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static int getIntParam(String key) throws InvalidParam {
-    return currentConfig.getInt(key);
+    return getCurrentConfig().getInt(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static int getIntParam(String key, int dfault) {
-    return currentConfig.getInt(key, dfault);
+    return getCurrentConfig().getInt(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getLongParam(String key) throws InvalidParam {
-    return currentConfig.getLong(key);
+    return getCurrentConfig().getLong(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getLongParam(String key, long dfault) {
-    return currentConfig.getLong(key, dfault);
+    return getCurrentConfig().getLong(key, dfault);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getTimeIntervalParam(String key) throws InvalidParam {
-    return currentConfig.getTimeInterval(key);
+    return getCurrentConfig().getTimeInterval(key);
   }
 
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static long getTimeIntervalParam(String key, long dfault) {
-    return currentConfig.getTimeInterval(key, dfault);
+    return getCurrentConfig().getTimeInterval(key, dfault);
   }
 
   /** Static convenience method to get a <code>Configuration</code>
@@ -841,7 +488,7 @@ public abstract class Configuration {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Configuration paramConfigTree(String key) {
-    return currentConfig.getConfigTree(key);
+    return getCurrentConfig().getConfigTree(key);
   }
 
   /** Static convenience method to get key iterator from the
@@ -849,7 +496,7 @@ public abstract class Configuration {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Iterator paramKeyIterator() {
-    return currentConfig.keyIterator();
+    return getCurrentConfig().keyIterator();
   }
 
   /** Static convenience method to get a node iterator from the
@@ -857,88 +504,7 @@ public abstract class Configuration {
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
   public static Iterator paramNodeIterator(String key) {
-    return currentConfig.nodeIterator(key);
-  }
-
-  public static void startHandler(List urls) {
-    setConfigUrls(urls);
-    startHandler();
-  }
-
-  public static void startHandler() {
-    if (handlerThread != null) {
-      log.warning("Handler already running; stopping old one first");
-      stopHandler();
-    } else {
-      log.info("Starting handler");
-    }
-    handlerThread = new HandlerThread("ConfigHandler");
-    handlerThread.start();
-  }
-
-  public static void stopHandler() {
-    if (handlerThread != null) {
-      log.info("Stopping handler");
-      handlerThread.stopHandler();
-      handlerThread = null;
-    } else {
-//       log.warning("Attempt to stop handler when it isn't running");
-    }
-  }
-
-  // Handler thread, periodicially reloads config
-
-  private static class HandlerThread extends Thread {
-    private long lastReload = 0;
-    private boolean goOn = false;
-    private Deadline nextReload;
-
-    private HandlerThread(String name) {
-      super(name);
-    }
-
-    public void run() {
-      Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
-      goOn = true;
-
-      // repeat every 10ish minutes until first successful load, then
-      // according to org.lockss.parameterReloadInterval, or 30 minutes.
-      while (goOn) {
-	if (updateConfig()) {
-	  // true iff loaded config has changed
-	  if (!goOn) {
-	    break;
-	  }
-	  lastReload = TimeBase.nowMs();
-	  //  	stopAndOrStartThings(true);
-	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
-						DEFAULT_RELOAD_INTERVAL);
-
-	}
-	long reloadRange = reloadInterval/4;
-	nextReload = Deadline.inRandomRange(reloadInterval - reloadRange,
-					    reloadInterval + reloadRange);
-	log.debug2(nextReload.toString());
-	if (goOn) {
-	  try {
-	    nextReload.sleep();
-	  } catch (InterruptedException e) {
-	    // just wakeup and check for exit
-	  }
-	}
-      }
-    }
-
-    private void stopHandler() {
-      goOn = false;
-      this.interrupt();
-    }
-
-    void forceReload() {
-      if (nextReload != null) {
-	nextReload.expire();
-      }
-    }
+    return getCurrentConfig().nodeIterator(key);
   }
 
   /**

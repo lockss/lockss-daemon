@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.21 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestConfiguration.java,v 1.22 2003-07-14 06:44:50 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,6 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    Configuration.resetForTesting();
     super.tearDown();
   }
 
@@ -62,9 +61,13 @@ public class TestConfiguration extends LockssTestCase {
     "prop5=False\n";
   private static final String c1a = "prop2=xxx\nprop4=yyy\n";
 
+  private Configuration newConfiguration() {
+    return new ConfigurationPropTreeImpl();
+  }
+
   public void testLoad() throws IOException, Configuration.InvalidParam {
     String f = FileUtil.urlOfString(c1);
-    Configuration config = Configuration.newConfiguration();
+    Configuration config = newConfiguration();
     config.load(f);
     assertEquals("12", config.get("prop1"));
     assertEquals("12", config.get("prop1", "wrong"));
@@ -104,7 +107,7 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   public void testLoadList() throws IOException {
-    Configuration config = Configuration.newConfiguration();
+    Configuration config = newConfiguration();
     config.loadList(ListUtil.list(FileUtil.urlOfString(c1),
 				  FileUtil.urlOfString(c1a)));
     assertEquals("12", config.get("prop1"));
@@ -152,7 +155,7 @@ public class TestConfiguration extends LockssTestCase {
   }
 
   public void testStruct() throws IOException {
-    Configuration config = Configuration.newConfiguration();
+    Configuration config = newConfiguration();
     config.load(FileUtil.urlOfString(c2));
     Set set = new HashSet();
     for (Iterator iter = config.keyIterator(); iter.hasNext();) {
@@ -175,30 +178,6 @@ public class TestConfiguration extends LockssTestCase {
       assertEquals(4, map.size());
       assertEquals(m2a, map);
     }
-  }
-
-  public void testParam() throws IOException, Configuration.InvalidParam {
-    Configuration config = Configuration.newConfiguration();
-    config.load(FileUtil.urlOfString(c2));
-    Configuration.setCurrentConfig(config);
-    assertEquals("12", Configuration.getParam("prop.p1"));
-    assertEquals("foobar", Configuration.getParam("prop.p2"));
-    assertTrue(Configuration.getBooleanParam("prop.p3.a", false));
-    assertEquals(12, Configuration.getIntParam("prop.p1"));
-    assertEquals(554, Configuration.getIntParam("propnot.p1", 554));
-    assertEquals(2 * Constants.WEEK,
-		 Configuration.getTimeIntervalParam("timeint", 554));
-    assertEquals(554, Configuration.getTimeIntervalParam("noparam", 554));
-  }
-
-  public static boolean setCurrentConfigFromUrlList(List l) {
-    Configuration config = Configuration.readConfig(l);
-    return Configuration.installConfig(config);
-  }
-
-  public static boolean setCurrentConfigFromString(String s)
-      throws IOException {
-    return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
   }
 
   public void testPercentage() throws Exception {
@@ -234,183 +213,4 @@ public class TestConfiguration extends LockssTestCase {
     }
   }
 
-  public void testCurrentConfig() throws IOException {
-    assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1),
-						FileUtil.urlOfString(c1a))));
-    assertEquals("12", Configuration.getParam("prop1"));
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("12", config.get("prop1"));
-    assertEquals("12", config.get("prop1", "wrong"));
-    assertEquals("xxx", config.get("prop2"));
-    assertTrue(config.getBoolean("prop3", false));
-    assertEquals("yyy", config.get("prop4"));
-    assertEquals("def", config.get("noprop", "def"));
-    assertEquals("def", Configuration.getParam("noprop", "def"));
-  }
-
-  volatile Set diffSet = null;
-  List configs;
-
-  public void testCallback() throws IOException {
-    configs = new ArrayList();
-    setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
-					      FileUtil.urlOfString(c1a)));
-    assertEquals(0, configs.size());
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration newConfig,
-					 Configuration oldConfig,
-					 Set changedKeys) {
-	  assertNotNull(oldConfig);
-	  configs.add(newConfig);
-	}
-      });
-    assertEquals(1, configs.size());
-  }
-
-  public void testCallbackDiffs() throws IOException {
-    setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
-					      FileUtil.urlOfString(c1a)));
-    System.out.println(Configuration.getCurrentConfig().toString());
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-	public void configurationChanged(Configuration newConfig,
-					 Configuration oldConfig,
-					 Set changedKeys) {
-	  System.out.println("Notify: " + changedKeys);
-	  diffSet = changedKeys;
-	}
-      });
-    assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1a),
-						FileUtil.urlOfString(c1))));
-    assertEquals(SetUtil.set("prop2"), diffSet);
-    System.out.println(Configuration.getCurrentConfig().toString());
-    assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1),
-						FileUtil.urlOfString(c1))));
-    assertEquals(SetUtil.set("prop4"), diffSet);
-    System.out.println(Configuration.getCurrentConfig().toString());
-    assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1),
-						FileUtil.urlOfString(c1a))));
-    assertEquals(SetUtil.set("prop4", "prop2"), diffSet);
-    System.out.println(Configuration.getCurrentConfig().toString());
-
-  }
-
-  public void testPlatformProps() throws Exception {
-    Properties props = new Properties();
-    props.put("org.lockss.platform.localIPAddress", "1.2.3.4");
-    props.put("org.lockss.platform.logdirectory", "/var/log/foo");
-    props.put("org.lockss.platform.logfile", "bar");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
-    assertEquals("/var/log/foo/bar", config.get(FileTarget.PARAM_FILE));
-  }
- 
-  public void testPlatformAccess1() throws Exception {
-    // platform access set, ui and proxy access not set
-    Properties props = new Properties();
-    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("1.2.3.*", config.get("org.lockss.ui.access.ip.include"));
-    assertEquals("1.2.3.*", config.get("org.lockss.proxy.access.ip.include"));
-  }
-
-  public void testPlatformAccess2() throws Exception {
-    // platform access not set, ui and proxy access set
-    Properties props = new Properties();
-    props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
-    props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("1.2.3.0/22", config.get("org.lockss.ui.access.ip.include"));
-    assertEquals("1.2.3.0/21",
-		 config.get("org.lockss.proxy.access.ip.include"));
-  }
-
-  public void testPlatformAccess3() throws Exception {
-    // platform access set, ui and proxy access set
-    Properties props = new Properties();
-    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
-    props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
-    props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("1.2.3.*;1.2.3.0/22",
-		 config.get("org.lockss.ui.access.ip.include"));
-    assertEquals("1.2.3.*;1.2.3.0/21",
-		 config.get("org.lockss.proxy.access.ip.include"));
-  }
-
-  public void testPlatformSpace1() throws Exception {
-    Properties props = new Properties();
-    props.put("org.lockss.platform.diskSpacePaths", "/foo/bar");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("/foo/bar", config.get("org.lockss.cache.location"));
-    assertEquals("/foo/bar", config.get("org.lockss.history.location"));
-  }
-
-  public void testPlatformSpace2() throws Exception {
-    Properties props = new Properties();
-    props.put("org.lockss.platform.diskSpacePaths", "/a/b;/foo/bar");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("/a/b", config.get("org.lockss.cache.location"));
-    assertEquals("/a/b", config.get("org.lockss.history.location"));
-    assertEquals("/a/b/iddb", config.get("org.lockss.id.database.dir"));
-  }
-
-  public void testPlatformSmtp() throws Exception {
-    Properties props = new Properties();
-    props.put("org.lockss.platform.smtphost", "smtp.example.com");
-    props.put("org.lockss.platform.smtpport", "25");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = Configuration.getCurrentConfig();
-    assertEquals("smtp.example.com", 
-		 config.get("org.lockss.log.target.MailTarget.smtphost"));
-    assertEquals("25", 
-		 config.get("org.lockss.log.target.MailTarget.smtpport"));
-  }
-
-  public void testPlatformConfigDirSetup() throws Exception {
-    String tmpdir = getTempDir().toString();
-    Properties props = new Properties();
-    props.put(Configuration.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    String relConfigPath =
-      Configuration.getParam(Configuration.PARAM_CONFIG_PATH,
-			     Configuration.DEFAULT_CONFIG_PATH);
-    File cdir = new File(tmpdir, relConfigPath);
-    assertTrue(cdir.exists());
-    Configuration config = Configuration.getCurrentConfig();
-  }
-
-  public void testPlatformConfigIpAccess() throws Exception {
-    String tmpdir = getTempDir().toString();
-    Properties props = new Properties();
-    props.put(Configuration.PARAM_PLATFORM_DISK_SPACE_LIST, tmpdir);
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    String relConfigPath =
-      Configuration.getParam(Configuration.PARAM_CONFIG_PATH,
-			     Configuration.DEFAULT_CONFIG_PATH);
-    File cdir = new File(tmpdir, relConfigPath);
-    assertTrue(cdir.exists());
-    Properties acprops = new Properties();
-    acprops.put("foo.bar" , "12345");
-    Configuration.writeCacheConfigFile(acprops,
-				       Configuration.CONFIG_FILE_UI_IP_ACCESS,
-				       "this is a header");
-    File acfile = new File(cdir, Configuration.CONFIG_FILE_UI_IP_ACCESS);
-    log.info("wrote ac file");
-    assertTrue(acfile.exists());
-    Configuration config = Configuration.getCurrentConfig();
-    assertNull(config.get("foo.bar"));
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config2 = Configuration.getCurrentConfig();
-    assertEquals("12345", config2.get("foo.bar"));
-  }
 }
