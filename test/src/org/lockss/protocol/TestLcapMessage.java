@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.1 2002-11-20 00:31:55 troberts Exp $
+ * $Id: TestLcapMessage.java,v 1.2 2002-11-23 01:49:32 troberts Exp $
  */
 
 /*
@@ -193,6 +193,18 @@ public class TestLcapMessage extends TestCase {
       fail("message decode failed");
     }
   }
+
+  public void testMessageEncodingHandlesNullEntries() throws IOException {
+    testmsg.m_entries = null;
+    testmsg.encodeMsg();
+  }
+    
+  public void testMessageDecodingHandlesNullEntries() throws IOException {
+    testmsg.m_entries = null;
+    byte[] msgbytes = testmsg.encodeMsg();
+    new LcapMessage(msgbytes);
+  }
+    
 
 
 
