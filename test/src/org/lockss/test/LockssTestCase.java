@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.51 2004-02-23 09:19:32 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.52 2004-04-05 08:01:58 tlipkis Exp $
  */
 
 /*
@@ -892,6 +892,25 @@ public class LockssTestCase extends TestCase {
    * Asserts that a string matches the content of a reader
    */
   public static void assertReaderMatchesString(String expected, Reader reader)
+      throws IOException{
+    int len = expected.length() * 2;
+    char[] ca = new char[len];
+    StringBuffer actual = new StringBuffer(expected.length());
+
+    int n;
+    while ((n = reader.read(ca)) != -1) {
+      actual.append(ca, 0, n);
+    }
+    assertEquals(expected, actual.toString());
+  }
+
+  /**
+   * Asserts that a string matches the content of a reader.  Old, character
+   * at a time version.  Should be integrated into tests because it
+   * possibly causes different behavior in the stream under test.
+   */
+  public static void assertReaderMatchesStringSlow(String expected,
+						   Reader reader)
       throws IOException{
     StringBuffer actual = new StringBuffer(expected.length());
     int kar;
