@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.49 2003-06-25 22:03:04 troberts Exp $
+ $Id: build.xml,v 1.50 2003-07-17 05:20:05 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -40,7 +40,7 @@ Args:
   -Dexclude=path           Exclude matching tests.
   -Dfile=path/to/file      Specify file for print or index.
                               File is relative to project base dir
-  -Dfork=true              Run each test in a separate jvm.
+  -Dfork=true              Run each test in a separate jvm.  (Default is true)
   -Dforkc=true             Run compiler in a separate jvm.
   -Dinclude=path           Include matching tests.
   -Dkeeptempfiles=true     Don't delete temp files after tests run.
@@ -56,7 +56,8 @@ Args:
   <property name="showoutput" value="no" />
   <property name="timeout" value="" />
   <property name="keeptempfiles" value="" />
-  <property name="fork" value="no" />
+<!-- Some tests will not work right if fork=no  -->
+  <property name="fork" value="yes" />
   <property name="forkc" value="yes" />
   <property name="exclude" value="" />
 
