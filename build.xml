@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.40 2003-05-05 17:59:17 tal Exp $
+ $Id: build.xml,v 1.41 2003-05-10 01:58:58 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -579,6 +579,7 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
@@ -607,6 +608,7 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
@@ -687,6 +689,7 @@ Test results in ${test.results}
          <path refid="test.run.classpath" />
       </classpath>        
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
