@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.4 2002-11-05 21:05:41 tal Exp $
+ * $Id: HashQueue.java,v 1.5 2002-11-07 23:15:23 tal Exp $
  */
 
 /*
@@ -111,16 +111,16 @@ class HashQueue implements Serializable {
   // any that are already queued from finishing in time.
   synchronized boolean insert(Request req) {
     long totalDuration = 0;
-    long durationThroughNewReq = -1;
+    long durationUntilNewReq = -1;
     int pos = 0;
     long now = System.currentTimeMillis();
     if (log.isDebug()) log.debug("Insert: " + req);
     for (ListIterator iter = qlist.listIterator(); iter.hasNext();) {
       Request qreq = (Request)iter.next();
       if (req.runBefore(qreq)) {
-	// New req goes here.  Add its duration to the total.
+	// New req goes here.  Remember duration so far, then add new one
+	durationUntilNewReq = totalDuration;
 	totalDuration += req.curEst();
-	durationThroughNewReq = totalDuration;
 	// Now check that all that follow could still finish in time
 	// Requires backing up so will start with one we just looked at
 	iter.previous();
@@ -141,9 +141,11 @@ class HashQueue implements Serializable {
       }
     }
     // check that new req can finish in time
-    if (now + (durationThroughNewReq >= 0
-	       ? durationThroughNewReq
-	       : totalDuration + req.curEst())
+    if (durationUntilNewReq < 0) {
+      // new req will be at end
+      durationUntilNewReq = totalDuration;
+    }
+    if ((now + durationUntilNewReq + req.curEst())
 	> req.deadline.getExpirationTime()) {
       return false;
     }
@@ -372,7 +374,10 @@ class HashQueue implements Serializable {
 	    sem.take(timeout);
 	  }
 	}
-//        } catch (InterruptedException e) {
+//       } catch (InterruptedException e) {
+// 	// no action - expected when stopping
+      } catch (Exception e) {
+	log.error("Unexpected exception caught in hash thread", e);
       } finally {
 	hashThread = null;
       }
