@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.9 2002-11-26 18:00:32 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.10 2002-11-27 19:51:00 troberts Exp $
  */
 
 /*
@@ -81,7 +81,8 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean isCached(String url) {
-    return urls.contains(url);
+    CachedUrl cu = (CachedUrl) cuHash.get(url);
+    return cu.exists();
   }
 
   public Iterator flatSetIterator() {
@@ -169,21 +170,41 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * Sets up a cached url and url cacher for this url
    * @param source content to associate with this url
    * @param url url for which we should set up a CachedUrl and UrlCacher
+   * @param exists whether this url should act like it's already in the cache
+   * @param shouldCache whether this url should say to cache it or not
+   * @param props Properties to be associated with this url
    */
-  public void addUrl(String source, String url) {
-
-    MockUrlCacher uc = new MockUrlCacher(url, this);
+  public void addUrl(String source, String url, 
+		     boolean exists, boolean shouldCache,
+		     Properties props) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setInputStream(new StringInputStream(source));
-    Properties prop = new Properties();
-    prop.setProperty("content-type", "text/html");
-    cu.setProperties(prop);
-    uc.setShouldBeCached(true);
+    cu.setProperties(props);
+    cu.setExists(exists);
+
+    MockUrlCacher uc = new MockUrlCacher(url, this);
+    uc.setShouldBeCached(shouldCache);
     uc.setCachedUrl(cu);
-    cu.setExists(false);
+
     logger.debug("Adding "+url+" to cuHash and ucHash");
+
     cuHash.put(url, cu);
     ucHash.put(url, uc);
+  }
+
+  /**
+   * Same as above, but with exists defaulting to false, shouldCache to false
+   * and props to "content-type=text/html"
+   */
+  public void addUrl(String source, String url) {
+    addUrl(source, url, false, true);
+  }
+
+  public void addUrl(String source, String url, 
+		     boolean exists, boolean shouldCache) {
+    Properties props = new Properties();
+    props.setProperty("content-type", "text/html");
+    addUrl(source, url, exists, shouldCache, props);
   }
 
   public void addCachedUrl(String url) {
