@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.11 2004-08-22 02:05:51 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.12 2004-09-01 02:24:11 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	  if (isOrphaned(auid, auidProps)) {
 	    row.put("status", "Orphaned");
 	  } else {
-	    if (config == null | config.isEmpty()) {
+	    if (config == null || config.isEmpty()) {
 	      row.put("status", "Deleted");
 	    } else {
 	      row.put("params", config);
