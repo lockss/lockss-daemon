@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.23 2003-05-01 00:43:15 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.24 2003-05-06 02:25:24 aalto Exp $
  */
 
 /*
@@ -45,13 +45,17 @@ import org.apache.commons.collections.LRUMap;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
+  static final String TOPLEVEL_POLL_PREFIX = Configuration.PREFIX +
+      "baseau.toplevel.poll.";
+
   /**
    * Configuration parameter name for minimum interval, in ms, after which
    * a new top level poll should be called.  Actual interval is randomly
    * distributed between min and max.
    */
   public static final String PARAM_TOP_LEVEL_POLL_INTERVAL_MIN =
-      Configuration.PREFIX + "baseau.toplevel.poll.interval.min";
+      TOPLEVEL_POLL_PREFIX + "interval.min";
+  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN = 2 * Constants.WEEK;
 
   /**
    * Configuration parameter name for maximum interval, in ms, by which
@@ -59,10 +63,30 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * distributed between min and max.
    */
   public static final String PARAM_TOP_LEVEL_POLL_INTERVAL_MAX =
-      Configuration.PREFIX + "baseau.toplevel.poll.interval.max";
-
-  static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN = 2 * Constants.WEEK;
+      TOPLEVEL_POLL_PREFIX + "interval.max";
   static final long DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX = 3 * Constants.WEEK;
+
+  /**
+   * Configuration parameter name for top level poll initial probability.
+   */
+  public static final String PARAM_TOPLEVEL_POLL_PROB_INITIAL =
+      TOPLEVEL_POLL_PREFIX + "prob.initial";
+  static final double DEFAULT_TOPLEVEL_POLL_PROB_INITIAL = .5;
+
+  /**
+   * Configuration parameter name for top level poll increment
+   */
+  public static final String PARAM_TOPLEVEL_POLL_PROB_INCREMENT =
+      TOPLEVEL_POLL_PREFIX + "prob.increment";
+  static final double DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT = .05;
+
+  /**
+   * Configuration parameter name for top level poll max probability.
+   */
+  public static final String PARAM_TOPLEVEL_POLL_PROB_MAX =
+      TOPLEVEL_POLL_PREFIX + "prob.max";
+  static final double DEFAULT_TOPLEVEL_POLL_PROB_MAX = 1.0;
+
 
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
@@ -73,6 +97,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
 
   protected long nextPollInterval = -1;
+  protected double curTopLevelPollProb = -1;
+  Random random = new Random();
 
   protected Configuration auConfig;
 
@@ -266,13 +292,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff a top level poll should be called
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
+    Configuration config = Configuration.getCurrentConfig();
     if (nextPollInterval==-1) {
       long minPollInterval =
-          Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
-                                             DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN);
+          config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
+                                 DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN);
       long maxPollInterval =
-          Configuration.getTimeIntervalParam(PARAM_TOP_LEVEL_POLL_INTERVAL_MAX,
-                                             DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX);
+          config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MAX,
+                                 DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX);
       if (maxPollInterval <= minPollInterval) {
         maxPollInterval = 2 * minPollInterval;
       }
@@ -280,15 +307,41 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
           Deadline.inRandomRange(minPollInterval,
                                  maxPollInterval).getRemainingTime();
     }
+    if (curTopLevelPollProb==-1) {
+      // reset to initial prob
+      curTopLevelPollProb = config.getPercentage(
+          PARAM_TOPLEVEL_POLL_PROB_INITIAL, DEFAULT_TOPLEVEL_POLL_PROB_INITIAL);
+    }
+
     logger.debug("Deciding whether to call a top level poll");
-    logger.debug3("Last poll at "+StringUtil.timeIntervalToString(
-        aus.getLastTopLevelPollTime()));
+    logger.debug3("Last poll at "+ aus.getLastTopLevelPollTime());
     logger.debug3("Poll interval: "+StringUtil.timeIntervalToString(
         nextPollInterval));
+    logger.debug3("Poll likelihood: "+curTopLevelPollProb);
     if (TimeBase.msSince(aus.getLastTopLevelPollTime()) > nextPollInterval) {
-      // reset poll interval
+      // reset poll interval regardless
       nextPollInterval = -1;
-      return true;
+      // choose probabilistically whether to call
+      if (random.nextDouble() < curTopLevelPollProb) {
+        logger.debug("Allowing poll.");
+        curTopLevelPollProb = -1;
+        return true;
+      } else {
+        logger.debug("Skipping poll.");
+        // decided not to call the poll
+        double topLevelPollProbMax =
+            config.getPercentage(PARAM_TOPLEVEL_POLL_PROB_MAX,
+                                 DEFAULT_TOPLEVEL_POLL_PROB_MAX);
+        if (curTopLevelPollProb < topLevelPollProbMax) {
+          // if less than max prob, increment
+          curTopLevelPollProb += config.getPercentage(
+              PARAM_TOPLEVEL_POLL_PROB_INCREMENT,
+              DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT);
+          if (curTopLevelPollProb > topLevelPollProbMax) {
+            curTopLevelPollProb = topLevelPollProbMax;
+          }
+        }
+      }
     }
     return false;
   }
