@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.10 2003-07-22 00:33:51 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.11 2003-07-23 00:14:51 troberts Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public byte[] getContentSize() {
+    public byte[] getUnfilteredContentSize() {
       BigInteger bigInt = new BigInteger(Integer.toString(contents.length()));
       return bigInt.toByteArray();
     }

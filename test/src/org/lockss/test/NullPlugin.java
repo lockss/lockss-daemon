@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.37 2003-07-22 00:33:51 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.38 2003-07-23 00:14:51 troberts Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public byte[] getContentSize() {
+    public byte[] getUnfilteredContentSize() {
       return new byte[0];
     }
 

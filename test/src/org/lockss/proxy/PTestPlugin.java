@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.15 2003-06-20 22:34:54 claire Exp $
+ * $Id: PTestPlugin.java,v 1.16 2003-07-23 00:14:51 troberts Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public byte[] getContentSize() {
+    public byte[] getUnfilteredContentSize() {
       return (new BigInteger(
           Integer.toString(contents.length()))).toByteArray();
     }

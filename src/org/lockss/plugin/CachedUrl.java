@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.6 2003-06-20 22:34:51 claire Exp $
+ * $Id: CachedUrl.java,v 1.7 2003-07-23 00:14:51 troberts Exp $
  */
 
 /*
@@ -83,10 +83,10 @@ public interface CachedUrl extends CachedUrlSetNode {
     public Properties getProperties();
 
     /**
-     * Return the content size.
+     * Return the unfiltered content size.
      * @return a byte[]
      */
-    public byte[] getContentSize();
+    public byte[] getUnfilteredContentSize();
 
     /**
      * Return the ArchivalUnit to which this CachedUrl belongs.

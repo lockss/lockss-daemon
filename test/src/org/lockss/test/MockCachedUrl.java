@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.16 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockCachedUrl.java,v 1.17 2003-07-23 00:14:51 troberts Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class MockCachedUrl implements CachedUrl {
     return openForReading();
   }
 
-  public byte[] getContentSize() {
+  public byte[] getUnfilteredContentSize() {
     String content;
     if (this.content == null) {
       content = "";
