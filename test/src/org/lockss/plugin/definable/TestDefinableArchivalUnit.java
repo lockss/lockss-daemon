@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.3 2004-03-06 00:48:58 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.4 2004-03-11 01:20:45 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.definable;
 import java.util.*;
 
 import org.lockss.daemon.*;
+import org.lockss.plugin.blackbird.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import gnu.regexp.*;
@@ -175,8 +176,9 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertNull(parser);
 
     // test we find one we've added
-    map.putString("text/ram_parser", "org.lockss.crawler.RamParser");
+    map.putString("text/ram_parser",
+		  "org.lockss.plugin.blackbird.BlackbirdRamParser");
     parser = cau.getContentParser("text/ram");
-    assertTrue(parser instanceof org.lockss.crawler.RamParser);
+    assertTrue(parser instanceof org.lockss.plugin.blackbird.BlackbirdRamParser);
   }
 }
