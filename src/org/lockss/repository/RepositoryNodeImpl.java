@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.46 2004-03-11 02:31:23 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.47 2004-03-24 23:39:52 eaalto Exp $
  */
 
 /*
@@ -423,6 +423,12 @@ public class RepositoryNodeImpl implements RepositoryNode {
         // remove temp content file
         tempCacheFile.delete();
 
+        if (currentVersion<=0) {
+          // this shouldn't occur, but we'll bump it to fix the error state
+          logger.error("Content found with version '0'; changing to '1'");
+          currentVersion = 1;
+        }
+
         // reset version number in new props back to current version
         // (done this way to make property writing more efficient for
         // non-identical cases)
@@ -655,7 +661,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       Properties myProps = SortedProperties.fromProperties(newProps);
       try {
         OutputStream os = new BufferedOutputStream(new FileOutputStream(tempPropsFile));
-        myProps.setProperty(LOCKSS_VERSION_NUMBER, Integer.toString(currentVersion+1));
+        int versionToWrite = currentVersion + 1;
+        if (versionToWrite <= 0) {
+          // this is an error condition which shouldn't occur
+          logger.error("Content being written with version of '0'; adjusting to '1'");
+          currentVersion = 0;
+          versionToWrite = 1;
+        }
+        myProps.setProperty(LOCKSS_VERSION_NUMBER, Integer.toString(versionToWrite));
         myProps.store(os, "HTTP headers for " + url);
         os.close();
       } catch (IOException ioe) {

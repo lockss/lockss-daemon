@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.33 2004-03-11 02:31:23 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.34 2004-03-24 23:39:52 eaalto Exp $
  */
 
 /*
@@ -476,6 +476,43 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(testFile.exists());
     testFile = new File(testFileDir, "1.props-123321");
     assertTrue(testFile.exists());
+  }
+
+  public void testIdenticalVersionFixesVersionError() throws Exception {
+    Properties props = new Properties();
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)createLeaf(
+        "http://www.example.com/testDir/test.cache", "test stream", props));
+    assertEquals(1, leaf.getCurrentVersion());
+
+    props = new Properties();
+    leaf.makeNewVersion();
+    leaf.setNewProperties(props);
+    // set to error state
+    leaf.currentVersion = 0;
+    writeToLeaf(leaf, "test stream");
+    assertEquals(0, leaf.currentVersion);
+    leaf.sealNewVersion();
+    // fixes error state, even though identical
+    assertEquals(1, leaf.getCurrentVersion());
+  }
+
+  public void testMakeNewVersionFixesVersionError() throws Exception {
+    Properties props = new Properties();
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)createLeaf(
+        "http://www.example.com/testDir/test.cache", "test stream", props));
+    assertEquals(1, leaf.getCurrentVersion());
+
+    props = new Properties();
+    leaf.makeNewVersion();
+    // set to error state
+    leaf.currentVersion = -1;
+    leaf.setNewProperties(props);
+    writeToLeaf(leaf, "test stream2");
+    leaf.sealNewVersion();
+    // fixes error state
+    assertEquals(1, leaf.getCurrentVersion());
   }
 
   public void testGetInputStream() throws Exception {
