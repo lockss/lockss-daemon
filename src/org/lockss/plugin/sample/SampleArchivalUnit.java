@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.6 2004-03-01 06:10:40 clairegriffin Exp $
+ * $Id: SampleArchivalUnit.java,v 1.7 2004-07-23 16:45:55 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import gnu.regexp.REException;
 import org.lockss.plugin.definable.*;
 
 /**
@@ -114,9 +113,9 @@ public class SampleArchivalUnit extends DefinableArchivalUnit {
   /**
    * return the collection of crawl rules used to crawl and cache a journal
    * @return CrawlRule
-   * @throws REException
+   * @throws LockssRegexpException
    */
-  protected CrawlRule makeRules() throws REException {
+  protected CrawlRule makeRules() throws LockssRegexpException {
     List rules = new LinkedList();
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;

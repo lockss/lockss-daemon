@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRule.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestCrawlRule.java,v 1.3 2004-07-23 16:45:55 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.daemon
 ;
 import java.util.*;
 import junit.framework.TestCase;
-import gnu.regexp.*;
+import org.apache.oro.text.regex.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -53,7 +53,7 @@ public class TestCrawlRule extends LockssTestCase {
     super(msg);
   }
 
-  public void testNullRE() throws REException {
+  public void testNullRE() throws LockssRegexpException {
     try {
       CrawlRule cr = new CrawlRules.RE((String)null,
 				     CrawlRules.RE.MATCH_INCLUDE);
@@ -61,8 +61,8 @@ public class TestCrawlRule extends LockssTestCase {
     } catch (NullPointerException e) {
     }
     try {
-      CrawlRule cr = new CrawlRules.RE((RE)null,
-				     CrawlRules.RE.MATCH_INCLUDE);
+      CrawlRule cr = new CrawlRules.RE((Pattern)null,
+				       CrawlRules.RE.MATCH_INCLUDE);
       fail("CrawlRules.RE with null RE should throw");
     } catch (NullPointerException e) {
     }
@@ -72,11 +72,11 @@ public class TestCrawlRule extends LockssTestCase {
     try {
       CrawlRule cr = new CrawlRules.RE("[", CrawlRules.RE.MATCH_INCLUDE);
       fail("CrawlRules.RE with illegal RE should throw");
-    } catch (REException e) {
+    } catch (LockssRegexpException e) {
     }
   }
 
-  public void testMatchIncl() throws REException {
+  public void testMatchIncl() throws LockssRegexpException {
     CrawlRule cr = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.MATCH_INCLUDE);
     assertEquals(CrawlRule.INCLUDE, cr.match("blahblahblah"));
@@ -84,7 +84,7 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.IGNORE, cr.match("lkjlj"));
   }
 
-  public void testREAnchor() throws REException {
+  public void testREAnchor() throws LockssRegexpException {
     {
       CrawlRule cr = new CrawlRules.RE("^foo$", CrawlRules.RE.MATCH_INCLUDE);
       assertEquals(CrawlRule.INCLUDE, cr.match("foo"));
@@ -115,7 +115,7 @@ public class TestCrawlRule extends LockssTestCase {
     }
   }
 
-  public void testMatchExcl() throws REException {
+  public void testMatchExcl() throws LockssRegexpException {
     CrawlRule cr = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.MATCH_EXCLUDE);
     assertEquals(CrawlRule.EXCLUDE, cr.match("blahblahblah"));
@@ -123,7 +123,7 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.IGNORE, cr.match("lkjlj"));
   }
 
-  public void testNoMatchIncl() throws REException {
+  public void testNoMatchIncl() throws LockssRegexpException {
     CrawlRule cr = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.NO_MATCH_INCLUDE);
     assertEquals(CrawlRule.IGNORE, cr.match("blahblahblah"));
@@ -131,7 +131,7 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.INCLUDE, cr.match("lkjlj"));
   }
 
-  public void testNoMatchExcl() throws REException {
+  public void testNoMatchExcl() throws LockssRegexpException {
     CrawlRule cr = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.NO_MATCH_EXCLUDE);
     assertEquals(CrawlRule.IGNORE, cr.match("blahblahblah"));
@@ -139,7 +139,7 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.EXCLUDE, cr.match("lkjlj"));
   }
 
-  public void testMatchNull() throws REException {
+  public void testMatchNull() throws LockssRegexpException {
     CrawlRule cr1 = new CrawlRules.RE("blahblah.*",
 				     CrawlRules.RE.MATCH_INCLUDE);
     try {
@@ -149,7 +149,7 @@ public class TestCrawlRule extends LockssTestCase {
     }
   }
 
-  public void testFirstMatchNull() throws REException {
+  public void testFirstMatchNull() throws LockssRegexpException {
     try {
       CrawlRule cr = new CrawlRules.FirstMatch(null);
       fail("CrawlRules.FirstMatch with null list should throw");
@@ -159,7 +159,7 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.IGNORE, cr.match("foo"));
   }
 
-  public void testFirstMatchWrongClass() throws REException {
+  public void testFirstMatchWrongClass() throws LockssRegexpException {
     try {
       CrawlRule cr = new CrawlRules.FirstMatch(ListUtil.list("foo"));
       fail("CrawlRules.FirstMatch with list of non-CrawlRules should throw");
@@ -167,7 +167,7 @@ public class TestCrawlRule extends LockssTestCase {
     }
   }
 
-  public void testFirstMatch() throws REException {
+  public void testFirstMatch() throws LockssRegexpException {
     List l = ListUtil.list(new CrawlRules.RE("^foo.*",
 					     CrawlRules.RE.MATCH_INCLUDE),
 			   new CrawlRules.RE("^bar.*",

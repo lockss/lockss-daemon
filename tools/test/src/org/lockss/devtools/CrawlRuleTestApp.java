@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleTestApp.java,v 1.2 2004-07-09 16:43:24 clairegriffin Exp $
+ * $Id: CrawlRuleTestApp.java,v 1.3 2004-07-23 16:45:54 tlipkis Exp $
  */
 
 /*
@@ -148,7 +148,7 @@ public class CrawlRuleTestApp {
           rules.add(new CrawlRules.RE(regexp, CrawlRules.RE.NO_MATCH_EXCLUDE));
         }
       }
-      catch (REException ex) {
+      catch (LockssRegexpException ex) {
         System.err.println("Error creating crawl rule: " + ex);
       }
     }

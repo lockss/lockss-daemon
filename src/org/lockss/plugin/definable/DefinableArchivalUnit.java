@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.9 2004-07-12 23:01:52 smorabito Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.10 2004-07-23 16:45:56 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
-import gnu.regexp.*;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -158,7 +157,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return convstr;
   }
 
-  protected CrawlRule makeRules() throws gnu.regexp.REException {
+  protected CrawlRule makeRules() throws LockssRegexpException {
     List rules = new LinkedList();
     List templates = (List) definitionMap.getCollection(CM_AU_RULES_KEY,
         Collections.EMPTY_LIST);
@@ -176,7 +175,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected CrawlSpec makeCrawlSpec()
-      throws REException {
+      throws LockssRegexpException {
 
     CrawlRule rule = makeRules();
     int depth = definitionMap.getInt(CM_AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
@@ -279,7 +278,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return converted_string;
   }
 
-  CrawlRule convertRule(String printfString) throws REException {
+  CrawlRule convertRule(String printfString) throws LockssRegexpException {
     String rule = convertVariableString(printfString);
     String val_str = printfString.substring(0, printfString.indexOf(","));
     int value = Integer.valueOf(val_str).intValue();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleNodeCachedUrlSetSpec.java,v 1.6 2003-09-26 23:50:38 eaalto Exp $
+ * $Id: TestSingleNodeCachedUrlSetSpec.java,v 1.7 2004-07-23 16:45:55 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 import java.util.*;
 import junit.framework.TestCase;
-import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -66,7 +65,7 @@ public class TestSingleNodeCachedUrlSetSpec extends LockssTestCase {
     assertFalse(cuss1.matches(""));
   }
 
-  public void testEquals() throws REException {
+  public void testEquals() throws Exception {
     CachedUrlSetSpec cuss1 = new SingleNodeCachedUrlSetSpec("foo");
     CachedUrlSetSpec cuss2 = new SingleNodeCachedUrlSetSpec("foo");
     CachedUrlSetSpec cuss3 = new SingleNodeCachedUrlSetSpec("bar");

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlSpec.java,v 1.10 2003-12-06 00:53:00 eaalto Exp $
+ * $Id: TestCrawlSpec.java,v 1.11 2004-07-23 16:45:55 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-import gnu.regexp.REException;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -47,7 +46,7 @@ public class TestCrawlSpec extends LockssTestCase {
     super(msg);
   }
 
-  public void testEmptySpec() throws REException {
+  public void testEmptySpec() throws LockssRegexpException {
     try {
       CrawlSpec cs = new CrawlSpec((String)null, null);
       fail("CrawlSpec with null starting point should throw");
@@ -84,14 +83,14 @@ public class TestCrawlSpec extends LockssTestCase {
 		 l2, cs.getStartingUrls());
   }
 
-  public void testNullRule() throws REException {
+  public void testNullRule() throws LockssRegexpException {
     CrawlSpec cs1 = new CrawlSpec("foo", null);
     assertTrue(cs1.isIncluded(null));
     assertTrue(cs1.isIncluded("foo"));
     assertTrue(cs1.isIncluded("bar"));
   }
 
-  public void testIncluded() throws REException {
+  public void testIncluded() throws LockssRegexpException {
     CrawlSpec cs1 =
       new CrawlSpec("foo",
                     new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE));
@@ -104,7 +103,7 @@ public class TestCrawlSpec extends LockssTestCase {
     assertFalse(cs1.isIncluded("bar"));
   }
 
-  public void testCrawlWindow() throws REException {
+  public void testCrawlWindow() throws LockssRegexpException {
     MockCrawlWindow window = new MockCrawlWindow();
     CrawlSpec cs1 =
       new CrawlSpec("foo",

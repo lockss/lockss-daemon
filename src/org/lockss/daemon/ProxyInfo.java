@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.6 2004-06-07 19:19:17 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.7 2004-07-23 16:45:57 tlipkis Exp $
  */
 
 /*
@@ -230,34 +230,20 @@ public class ProxyInfo {
   String findUnusedName(String js, String base)
       throws MalformedPatternException {
     for (int suff = 0; true; suff++) {
-      Pattern pat = getCompiler().compile("\\b" + base + suff + "\\b");
-      if (!getMatcher().contains(js, pat)) {
+      Pattern pat =
+	RegexpUtil.getCompiler().compile("\\b" + base + suff + "\\b");
+      if (!RegexpUtil.getMatcher().contains(js, pat)) {
 	return base + suff;
       }
     }
   }
 
-  Perl5Compiler compiler = null;
-  Perl5Compiler getCompiler() {
-    if (compiler == null) {
-      compiler = new Perl5Compiler();
-    }
-    return compiler;
-  }
-
-  Perl5Matcher matcher = null;
-  Perl5Matcher getMatcher() {
-    if (matcher == null) {
-      matcher = new Perl5Matcher();
-    }
-    return matcher;
-  }
-
   String jsReplace(String js, String oldname, String newname)
       throws MalformedPatternException {
-    Pattern fromPat = getCompiler().compile("\\b" + oldname + "\\b");
+    Pattern fromPat =
+      RegexpUtil.getCompiler().compile("\\b" + oldname + "\\b");
     Substitution subst = new Perl5Substitution(newname);
-    return Util.substitute(getMatcher(), fromPat, subst, js,
+    return Util.substitute(RegexpUtil.getMatcher(), fromPat, subst, js,
 			   Util.SUBSTITUTE_ALL);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.66 2004-07-12 22:37:25 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.67 2004-07-23 16:45:56 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
-import gnu.regexp.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
@@ -214,7 +213,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
         CrawlWindow window = makeCrawlWindow();
         crawlSpec.setCrawlWindow(window);
       }
-    } catch (REException e) {
+    } catch (LockssRegexpException e) {
       throw new ConfigurationException("Illegal RE", e);
     }
 
@@ -372,9 +371,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * Use the starting url and the crawl rules to make the crawl spec needed
    * to crawl this au.
    * @return the CrawlSpec need by this au.
-   * @throws REException if the CrawlRules contain an invalid regular expression
+   * @throws LockssRegexpException if the CrawlRules contain an invalid
+   * regular expression
    */
-  protected CrawlSpec makeCrawlSpec() throws REException {
+  protected CrawlSpec makeCrawlSpec() throws LockssRegexpException {
     CrawlRule rule = makeRules();
     return new CrawlSpec(startUrlString, rule);
   }
@@ -391,10 +391,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * subclasses must implement this method to make and return the Crawl Rules
    * needed to crawl content.
    * @return CrawlRule object containing the necessary rules
-   * @throws REException thrown if the rules contain an unacceptable regular
-   * expression.
+   * @throws LockssRegexpException if the rules contain an unacceptable
+   * regular expression.
    */
-  abstract protected CrawlRule makeRules() throws REException;
+  abstract protected CrawlRule makeRules() throws LockssRegexpException;
 
   /**
    * subclasses must implement to make and return the url from which a crawl of

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.3 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.4 2004-07-23 16:45:57 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 import java.util.*;
-import gnu.regexp.*;
+import org.apache.oro.text.regex.*;
 import org.lockss.util.*;
 
 /**
@@ -45,7 +45,7 @@ public class CrawlRules {
    * included or excluded.
    */
   public static class RE implements CrawlRule {
-    private gnu.regexp.RE regexp;
+    private Pattern regexp;
     private int action;
   
     /** Include if match, else ignore */
@@ -67,7 +67,7 @@ public class CrawlRules {
      * @param action one of the constants above.
      * @throws NullPointerException if the regexp is null.
      */
-    public RE(gnu.regexp.RE regexp, int action) {
+    public RE(Pattern regexp, int action) {
       if (regexp == null) {
 	throw new NullPointerException("CrawlRules.RE with null RE");
       }
@@ -81,8 +81,15 @@ public class CrawlRules {
      * @param action one of the constants above.
      * @throws REException if an illegal regular expression is provided.
      */
-    public RE(String reString, int action) throws REException {
-      this(new gnu.regexp.RE(reString), action);
+    public RE(String reString, int action) throws LockssRegexpException {
+      try {
+	regexp =
+	  RegexpUtil.getCompiler().compile(reString,
+					   Perl5Compiler.READ_ONLY_MASK);
+	this.action = action;
+      } catch (MalformedPatternException e) {
+	throw new LockssRegexpException(e.getMessage());
+      }
     }
   
     /**
@@ -93,7 +100,7 @@ public class CrawlRules {
      * about the URL.
      */
     public int match(String url) {
-      boolean match = (null != regexp.getMatch(url));
+      boolean match = RegexpUtil.getMatcher().contains(url, regexp);
       switch (action) {
       case MATCH_INCLUDE:
 	return (match ? INCLUDE : IGNORE);

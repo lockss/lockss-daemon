@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.6 2004-07-07 22:06:00 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.7 2004-07-23 16:45:55 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.blackbird.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import gnu.regexp.*;
 import org.lockss.crawler.*;
 
 /**
@@ -107,7 +106,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 //    assertEquals("return value", expectedReturn, actualReturn);
   }
 
-  public void testConvertRule() throws REException {
+  public void testConvertRule() throws LockssRegexpException {
     map.putString("URL", "http://www.example.com/");
     String rule1 = "1,\".*\\.gif\"";
     String rule2 = "1,\"%s\",URL";
@@ -132,7 +131,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return value", expectedReturn, actualReturn);
   }
 
-  public void testMakeRules() throws REException {
+  public void testMakeRules() throws LockssRegexpException {
     map.putString("base_url", "http://www.example.com/");
     map.putCollection(DefinableArchivalUnit.CM_AU_RULES_KEY, crawlRules);
 
