@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.29 2003-11-12 01:05:23 eaalto Exp $
+ * $Id: TestStringUtil.java,v 1.30 2004-01-22 02:01:08 tlipkis Exp $
  */
 
 /*
@@ -253,7 +253,17 @@ public class TestStringUtil extends LockssTestCase {
     assertFalse(StringUtil.equalStrings("1", null));
     assertFalse(StringUtil.equalStrings(null, "1"));
     assertTrue(StringUtil.equalStrings("foo", "foo"));
+    assertFalse(StringUtil.equalStrings("foo", "Foo"));
     assertFalse(StringUtil.equalStrings("foo", "bar"));
+  }
+
+  public void testEqualStringsIgnoreCase() {
+    assertTrue(StringUtil.equalStringsIgnoreCase(null, null));
+    assertFalse(StringUtil.equalStringsIgnoreCase("1", null));
+    assertFalse(StringUtil.equalStringsIgnoreCase(null, "1"));
+    assertTrue(StringUtil.equalStringsIgnoreCase("foo", "foo"));
+    assertTrue(StringUtil.equalStringsIgnoreCase("foo", "Foo"));
+    assertFalse(StringUtil.equalStringsIgnoreCase("foo", "bar"));
   }
 
   public void testIsNullString() {

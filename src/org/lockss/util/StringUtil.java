@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.32 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.33 2004-01-22 02:01:08 tlipkis Exp $
  */
 
 /*
@@ -413,6 +413,20 @@ public class StringUtil {
       return s2 == null;
     } else {
       return s1.equals(s2);
+    }
+  }
+
+  /**
+   * Compare two strings for case-independent equality or both null.
+   * @param s1 string 1
+   * @param s2 string 2
+   * @return true if strings are equal or both null
+   */
+  public static boolean equalStringsIgnoreCase(String s1, String s2) {
+    if (s1 == null) {
+      return s2 == null;
+    } else {
+      return s1.equalsIgnoreCase(s2);
     }
   }
 
