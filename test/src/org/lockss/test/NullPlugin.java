@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.5 2002-11-05 01:46:50 aalto Exp $
+ * $Id: NullPlugin.java,v 1.6 2002-11-07 22:39:12 troberts Exp $
  */
 
 /*
@@ -216,6 +216,9 @@ public class NullPlugin {
 
     public String getAUId() {
       return "null";
+    }
+
+    public void pause() {
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.3 2002-11-07 22:39:12 troberts Exp $
  */
 
 /*
@@ -102,4 +102,8 @@ public class MockArchivalUnit implements ArchivalUnit {
     auId = newId;
   }
 
+  public void pause() {
+  }
+
 }
+

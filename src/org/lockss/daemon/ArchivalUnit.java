@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.3 2002-11-05 01:46:50 aalto Exp $
+ * $Id: ArchivalUnit.java,v 1.4 2002-11-07 22:39:12 troberts Exp $
  */
 
 /*
@@ -80,5 +80,10 @@ public interface ArchivalUnit {
    * @return a unique id
    */
   public String getAUId();
+
+  /**
+   * Sleeps for the interval needed between requests to the server
+   */
+  public void pause();
 
 }

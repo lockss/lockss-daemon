@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.3 2002-11-07 22:39:12 troberts Exp $
  */
 
 /*
@@ -37,6 +37,9 @@ import gnu.regexp.*;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
+  private static final int 
+    DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10000;
+
   private CrawlSpec crawlSpec;
 
   /** Must invoke this constructor in plugin subclass. */
@@ -101,4 +104,19 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     // tk this needs to compute the top-level CUSS
     return makeCachedUrlSet(null);
   }
+
+  public void pause(){
+    pause(DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
+  }
+
+  protected void pause(int milliseconds){
+    try{
+      Thread thread = Thread.currentThread();
+      thread.sleep(milliseconds);
+    }
+    catch (InterruptedException ie){
+    }
+  }
+
+
 }
