@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.33 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.34 2003-11-01 01:03:18 eaalto Exp $
  */
 
 /*
@@ -219,7 +219,9 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
 
   public void testStoreAuState() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, 456, repository);
+    Collection strCol = new ArrayList();
+    strCol.add("test");
+    AuState auState = new AuState(mau, 123, 321, 456, strCol, repository);
     repository.storeAuState(auState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -234,6 +236,13 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     // doesn't store last treewalk time, so should reset to -1
     assertEquals(-1, auState.getLastTreeWalkTime());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
+
+    // check crawl urls
+    Collection col = auState.getCrawlUrls();
+    Iterator colIter = col.iterator();
+    assertTrue(colIter.hasNext());
+    assertEquals("test", colIter.next());
+    assertFalse(colIter.hasNext());
   }
 
   public void testStoreDamagedNodeSet() throws Exception {
@@ -260,7 +269,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreOverwrite() throws Exception {
-    AuState auState = new AuState(mau, 123, 321, -1, repository);
+    AuState auState = new AuState(mau, 123, 321, -1, null, repository);
     repository.storeAuState(auState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -271,7 +280,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     StreamUtil.copy(fis, baos);
     String expectedStr = baos.toString();
 
-    auState = new AuState(mau, 1234, 4321, -1, repository);
+    auState = new AuState(mau, 1234, 4321, -1, null, repository);
     repository.storeAuState(auState);
 
     auState = null;
@@ -280,7 +289,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(4321, auState.getLastTopLevelPollTime());
     assertEquals(mau.getAuId(), auState.getArchivalUnit().getAuId());
 
-    auState = new AuState(mau, 123, 321, -1, repository);
+    auState = new AuState(mau, 123, 321, -1, null, repository);
     repository.storeAuState(auState);
     fis = new FileInputStream(xmlFile);
     baos = new ByteArrayOutputStream(expectedStr.length());

@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.8 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockAuState.java,v 1.9 2003-11-01 01:03:18 eaalto Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.util.Collection;
 import org.lockss.state.*;
 import org.lockss.plugin.ArchivalUnit;
 
@@ -51,7 +52,13 @@ public class MockAuState extends AuState {
 
   public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
                      long lastTreeWalk, HistoryRepository historyRepo) {
-    super(au, lastCrawlTime, lastPollTime, lastTreeWalk, historyRepo);
+    this(au, lastCrawlTime, lastPollTime, lastTreeWalk, null, historyRepo);
+  }
+
+  public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
+                     long lastTreeWalk, Collection crawlUrls,
+                     HistoryRepository historyRepo) {
+    super(au, lastCrawlTime, lastPollTime, lastTreeWalk, crawlUrls, historyRepo);
   }
 
   public void setLastCrawlTime(long newCrawlTime) {

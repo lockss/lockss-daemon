@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.7 2003-06-20 22:34:55 claire Exp $
+ * $Id: TestAuStateImpl.java,v 1.8 2003-11-01 01:03:18 eaalto Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.TimeBase;
 
@@ -54,7 +55,7 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testCrawlFinished() {
-    AuState auState = new AuState(mau, 123, -1, -1, historyRepo);
+    AuState auState = new AuState(mau, 123, -1, -1, null, historyRepo);
     assertEquals(123, auState.getLastCrawlTime());
     assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
 
@@ -65,7 +66,7 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testPollFinished() {
-    AuState auState = new AuState(mau, -1, 123, -1, historyRepo);
+    AuState auState = new AuState(mau, -1, 123, -1, null, historyRepo);
     assertEquals(123, auState.getLastTopLevelPollTime());
     assertNull(historyRepo.storedAus.get(auState.getArchivalUnit()));
 
@@ -76,12 +77,62 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testTreeWalkFinished() {
-    AuState auState = new AuState(mau, -1, -1, 123, historyRepo);
+    AuState auState = new AuState(mau, -1, -1, 123, null, historyRepo);
     assertEquals(123, auState.getLastTreeWalkTime());
 
     TimeBase.setSimulated(456);
     auState.setLastTreeWalkTime();
     assertEquals(456, auState.getLastTreeWalkTime());
+  }
+
+  public void testGetUrls() {
+    Collection stringList = new ArrayList();
+    stringList.add("test");
+
+    AuState auState = new AuState(mau, -1, -1, 123, stringList, historyRepo);
+    Collection col = auState.getCrawlUrls();
+    Iterator colIter = col.iterator();
+    assertTrue(colIter.hasNext());
+    assertEquals("test", colIter.next());
+    assertFalse(colIter.hasNext());
+  }
+
+  public void testUpdateUrls() {
+    AuState auState = new AuState(mau, -1, -1, 123, new ArrayList(), historyRepo);
+    assertTrue(historyRepo.storedAus.isEmpty());
+
+    Collection col = auState.getCrawlUrls();
+    for (int ii=1; ii<auState.URL_UPDATE_LIMIT; ii++) {
+      col.add("test" + ii);
+      auState.updatedCrawlUrls(false);
+      assertEquals(ii, auState.urlUpdateCntr);
+      assertTrue(historyRepo.storedAus.isEmpty());
+    }
+    col.add("test-limit");
+    auState.updatedCrawlUrls(false);
+    assertEquals(0, auState.urlUpdateCntr);
+    assertFalse(historyRepo.storedAus.isEmpty());
+
+    // clear, and check that counter is reset
+    historyRepo.storedAus.clear();
+    if (auState.URL_UPDATE_LIMIT > 1) {
+      col.add("test");
+      auState.updatedCrawlUrls(false);
+      assertTrue(historyRepo.storedAus.isEmpty());
+    }
+  }
+
+  public void testForceUpdateUrls() {
+    AuState auState = new AuState(mau, -1, -1, 123, new ArrayList(), historyRepo);
+    assertTrue(historyRepo.storedAus.isEmpty());
+
+    Collection col = auState.getCrawlUrls();
+    if (auState.URL_UPDATE_LIMIT > 1) {
+      col.add("test");
+      auState.updatedCrawlUrls(true);
+      assertEquals(0, auState.urlUpdateCntr);
+      assertFalse(historyRepo.storedAus.isEmpty());
+    }
   }
 
   public static void main(String[] argv) {

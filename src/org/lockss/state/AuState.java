@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.13 2003-06-20 22:34:52 claire Exp $
+ * $Id: AuState.java,v 1.14 2003-11-01 01:03:18 eaalto Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.util.Date;
+import java.util.*;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.TimeBase;
 
@@ -46,14 +46,21 @@ public class AuState {
   protected long lastTopLevelPoll;
   protected long lastTreeWalk;
   private HistoryRepository historyRepo;
+  protected Collection crawlUrls;
 
+  int urlUpdateCntr = 0;
+
+  /** The number of updates between writing to file */
+  static final int URL_UPDATE_LIMIT = 1;
 
   protected AuState(ArchivalUnit au, long lastCrawlTime, long lastTopLevelPoll,
-                    long lastTreeWalk, HistoryRepository historyRepo) {
+                    long lastTreeWalk, Collection crawlUrls,
+                    HistoryRepository historyRepo) {
     this.au = au;
     this.lastCrawlTime = lastCrawlTime;
     this.lastTopLevelPoll = lastTopLevelPoll;
     this.lastTreeWalk = lastTreeWalk;
+    this.crawlUrls = crawlUrls;
     this.historyRepo = historyRepo;
   }
 
@@ -114,6 +121,30 @@ public class AuState {
     lastTreeWalk = TimeBase.nowMs();
   }
 
+  /**
+   * Gets the collection of crawl urls.
+   * @return a {@link Collection}
+   */
+  public Collection getCrawlUrls() {
+    if (crawlUrls==null) {
+      crawlUrls = new ArrayList();
+    }
+    return crawlUrls;
+  }
+
+  /**
+   * Alert the AuState that the crawl url collection has been updated.  Waits
+   * until URL_UPDATE_LIMIT updates have been made, then writes the state to
+   * file.
+   * @param forceWrite forces state storage if true
+   */
+  public void updatedCrawlUrls(boolean forceWrite) {
+    urlUpdateCntr++;
+    if (forceWrite || (urlUpdateCntr >= URL_UPDATE_LIMIT)) {
+      historyRepo.storeAuState(this);
+      urlUpdateCntr = 0;
+    }
+  }
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
