@@ -8,16 +8,29 @@ for (( i=1 ; i<=4 ; i++ )) ; do
   (
     cd test$i
     if [ "$1" == "start" ] ; then
-	../testrundaemons &
-	echo started in `pwd`
+        if [ -f dpid ] ; then
+	    echo daemon already running in `pwd`
+	else
+	    ../testrundaemons &
+	    echo started in `pwd`
+	fi
     elif [ "$1" == "clean" ] ; then
-       rm -rf cache
-       rm -rf history
-       rm -rf localA
-       rm test.out
+        if [ -f dpid ] ; then
+            echo cannot clean while daemon is running in `pwd`
+        else
+            rm -rf cache
+            rm -rf plugins
+            rm -rf history
+            rm -rf localA
+            rm -f test.out
+        fi
     else
-	kill -9 `cat dpid`
-        echo stopped in `pwd`
+        if [ -f dpid ] ; then
+	    kill -9 `cat dpid` && rm -f dpid
+            echo stopped in `pwd`
+        else
+	    echo daemon not running in `pwd`
+	fi
     fi
   )
 done
