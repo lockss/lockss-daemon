@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.96 2004-07-23 16:48:00 tlipkis Exp $
+ $Id: build.xml,v 1.97 2004-08-02 07:15:38 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -949,6 +949,28 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
     <tar destfile="${doctar}" compression="gzip">
       <tarfileset dir="${javadoc}" prefix="daemon" />
       <tarfileset dir="${test.javadoc}" prefix="test" />
+    </tar>
+
+    <echo message="Invoking '${script} ${doctar}'"/>
+    <exec executable="${script}" dir="${basedir}"
+          failonerror="true" >
+      <arg line="${doctar}"/>
+    </exec>
+    <delete file="${doctar}" quiet="true"/>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="jcftp" depends="jcover,jcftp1"
+   description="Run JCoverage and invoke script to copy results somewhere.">
+  </target>
+
+  <target name="jcftp1" >
+
+    <property name="doctar" value="/tmp/lockss-jcoverage.tgz" />
+    <property name="script" value="lockss-jdftp" />
+
+    <tar destfile="${doctar}" compression="gzip">
+      <tarfileset dir="${test.results}" prefix="jcoverage" excludes="TEST-*" />
     </tar>
 
     <echo message="Invoking '${script} ${doctar}'"/>
