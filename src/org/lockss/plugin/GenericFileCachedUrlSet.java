@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.40 2003-05-01 16:47:04 tal Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.41 2003-05-03 00:45:51 aalto Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private Exception lastException = null;
   private LockssRepository repository;
   private NodeManager nodeManager;
+  private HashService hashService;
   protected static Logger logger = Logger.getLogger("CachedUrlSet");
 
  // int contentNodeCount = 0;
@@ -74,6 +75,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     NodeManagerService nodeService = (NodeManagerService)
         LockssDaemon.getManager(LockssDaemon.NODE_MANAGER_SERVICE);
     nodeManager = nodeService.getNodeManager(owner);
+    hashService = (HashService)LockssDaemon.getManager(LockssDaemon.HASH_SERVICE);
   }
 
   public boolean isLeaf() {
@@ -187,20 +189,21 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
           logger.warning("Couldn't estimate hash time: getting 0");
           return contentSize / BYTES_PER_MS_DEFAULT;
         }
-        return contentSize / bytesPerMs;
+        return hashService.padHashEstimate(contentSize / bytesPerMs);
       } catch (Exception e) {
         logger.error("Couldn't finish estimating hash time: " + e);
         return contentSize / BYTES_PER_MS_DEFAULT;
       }
     }
     long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
-    if (lastDuration>0) return lastDuration;
-    else {
+    if (lastDuration>0) {
+      return hashService.padHashEstimate(lastDuration);
+    } else {
       NodeState state = nodeManager.getNodeState(this);
       if (state!=null) {
         lastDuration = state.getAverageHashDuration();
         if (lastDuration>0) {
-          return lastDuration;
+          return hashService.padHashEstimate(lastDuration);
         }
       }
       // determine total size
@@ -222,7 +225,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       lastDuration = (long) (totalNodeSize / bytesPerMs);
       // store hash estimate
       nodeManager.hashFinished(this, lastDuration);
-      return lastDuration;
+      return hashService.padHashEstimate(lastDuration);
     }
   }
 
@@ -271,72 +274,6 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         throw new UnsupportedOperationException("Comparing equal prefixes: "+prefix);
       }
       return prefix.compareTo(prefix2);
-    }
-  }
-  /**
-   * Iterator over all the elements in a CachedUrlSet
-   */
-  private class CUSIterator implements Iterator {
-    //Stack of flatSetIterators at each tree level
-    LinkedList stack = new LinkedList();
-
-    //if null, we have to look for nextElement
-    private CachedUrlSetNode nextElement = null;
-
-    public CUSIterator() {
-      if (!((spec instanceof RangeCachedUrlSetSpec) &&
-	    (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null))) {
-	nextElement = GenericFileCachedUrlSet.this;
-      }
-      stack.addFirst(flatSetIterator());
-    }
-
-    public void remove() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public boolean hasNext() {
-      return findNextElement() != null;
-    }
-
-    public Object next() {
-      Object foo = findNextElement();
-      nextElement = null;
-
-      if (foo != null) {
-	return foo;
-      }
-      throw new NoSuchElementException();
-    }
-
-    /**
-     * Does a pre-order traversal of the CachedUrlSet tree
-     * @return a {@link CachedUrlSetNode}
-     */
-    private CachedUrlSetNode findNextElement() {
-      if (nextElement != null) {
-	return nextElement;
-      }
-      while (true) {
-	if (stack.isEmpty()) {
-	  return null;
-	}
-	Iterator it = (Iterator)stack.getFirst();
-	if (!it.hasNext()) {
-	  //this iterator is exhausted, pop from stack
-	  stack.removeFirst();
-	} else {
-	  CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
-
-	  if (!curNode.isLeaf()) {
-	    CachedUrlSet cus = (CachedUrlSet)curNode;
-	    //push the iterator of this child node onto the stack
-	    stack.addFirst(cus.flatSetIterator());
-	  }
-	  nextElement = curNode;
-	  return nextElement;
-	}
-      }
     }
   }
 }

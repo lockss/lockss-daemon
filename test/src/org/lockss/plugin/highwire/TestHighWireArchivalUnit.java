@@ -50,6 +50,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getLockssRepositoryService().startService();
+    theDaemon.getHashService();
     theDaemon.setNodeManagerService(new MockNodeManagerService());
   }
 

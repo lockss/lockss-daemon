@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.7 2003-04-17 00:55:50 troberts Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.8 2003-05-03 00:45:51 aalto Exp $
  */
 
 /*
@@ -59,6 +59,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
 
     theDaemon = new MockLockssDaemon();
+    theDaemon.getHashService();
     theDaemon.getLockssRepositoryService().startService();
     theDaemon.setNodeManagerService(new MockNodeManagerService());
 

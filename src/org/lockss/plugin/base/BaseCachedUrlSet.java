@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.1 2003-02-24 22:13:42 claire Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.2 2003-05-03 00:45:51 aalto Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
+import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 
@@ -123,4 +124,72 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
       return false;
     }
   }
+
+/**
+ * Iterator over all the elements in a CachedUrlSet
+ */
+protected class CUSIterator implements Iterator {
+  //Stack of flatSetIterators at each tree level
+  LinkedList stack = new LinkedList();
+
+  //if null, we have to look for nextElement
+  private CachedUrlSetNode nextElement = null;
+
+  public CUSIterator() {
+    if (!((spec instanceof RangeCachedUrlSetSpec) &&
+          (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null))) {
+      nextElement = BaseCachedUrlSet.this;
+    }
+    stack.addFirst(flatSetIterator());
+  }
+
+  public void remove() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public boolean hasNext() {
+    return findNextElement() != null;
+  }
+
+  public Object next() {
+    Object element = findNextElement();
+    nextElement = null;
+
+    if (element != null) {
+      return element;
+    }
+    throw new NoSuchElementException();
+  }
+
+  /**
+   * Does a pre-order traversal of the CachedUrlSet tree
+   * @return a {@link CachedUrlSetNode}
+   */
+  private CachedUrlSetNode findNextElement() {
+    if (nextElement != null) {
+      return nextElement;
+    }
+    while (true) {
+      if (stack.isEmpty()) {
+        return null;
+      }
+      Iterator it = (Iterator)stack.getFirst();
+      if (!it.hasNext()) {
+        //this iterator is exhausted, pop from stack
+        stack.removeFirst();
+      } else {
+        CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
+
+        if (!curNode.isLeaf()) {
+          CachedUrlSet cus = (CachedUrlSet)curNode;
+          //push the iterator of this child node onto the stack
+          stack.addFirst(cus.flatSetIterator());
+        }
+        nextElement = curNode;
+        return nextElement;
+      }
+    }
+  }
+}
+
 }
