@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.148.2.2 2004-11-05 23:43:30 smorabito Exp $
+ * $Id: PollManager.java,v 1.148.2.3 2004-11-16 01:53:13 tlipkis Exp $
  */
 
 /*
@@ -191,27 +191,31 @@ public class PollManager
    * Call a poll.  Only used by the tree walk.
    * @param pollspec the <code>PollSpec</code> that defines the subject of
    *                 the <code>Poll</code>.
-   * @return true if the poll was successfuly called.
+   * @return the poll, if it was successfuly called, else null.
    */
-  public boolean callPoll(PollSpec pollspec) {
-    boolean ret = false;
+  public Poll callPoll(PollSpec pollspec) {
+    BasePoll thePoll = null;
     PollFactory pollFact = getPollFactory(pollspec);
     if (pollFact == null) {
-      return false;
+      return null;
     } else {
       long duration = pollFact.calcDuration(pollspec, this);
       if (duration <= 0) {
 	theLog.debug("Duration for " + pollspec + " too short " + duration);
-	return false;
+	return null;
       }
       byte[] challenge = makeVerifier(duration);
       byte[] verifier = makeVerifier(duration);
       try {
-	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
-				    theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
-				    LcapMessage.getDefaultHashAlgorithm());
+	thePoll = makePoll(pollspec, duration, challenge, verifier,
+			   theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
+			   LcapMessage.getDefaultHashAlgorithm());
 	if (thePoll != null) {
-	  ret = pollFact.callPoll(thePoll, this, theIDManager);
+	  if (pollFact.callPoll(thePoll, this, theIDManager)) {
+	    return thePoll;
+	  } else {
+	    theLog.debug("pollFact.callPoll() returned false");
+	  }
 	} else {
 	  theLog.debug("makePoll(" + pollspec + ") returned null");
 	}
@@ -219,7 +223,7 @@ public class PollManager
 	theLog.debug("Error in makePoll or callPoll", ex);
       }
     }
-    return ret;
+    return null;
   }
 
    /**
@@ -512,7 +516,9 @@ public class PollManager
       }
 
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-      if (spec.getPollType() != Poll.VERIFY_POLL) {
+      if (spec.getPollType() != Poll.VERIFY_POLL &&
+	  !(spec.getPollType() == Poll.NAME_POLL &&
+	    spec.getLwrBound() != null)) {
         // set the activity lock in the tally
         ret_poll.getVoteTally().setActivityLock(lock);
         nm.startPoll(cus, ret_poll.getVoteTally(), false);
@@ -548,7 +554,11 @@ public class PollManager
     synchronized (pollMapLock) {
       theRecentPolls.put(key, pme);
     }
-    if (tally.getType() != Poll.VERIFY_POLL) {
+    if (tally.getType() != Poll.VERIFY_POLL && !pme.poll.isSubpollRunning()) {
+      if (tally.getType() != Poll.NAME_POLL && tally instanceof V1PollTally) {
+	V1PollTally lastTally = (V1PollTally)tally;
+	tally = lastTally.concatenateNameSubPollLists();
+      }
       NodeManager nm = theDaemon.getNodeManager(tally.getArchivalUnit());
       theLog.debug("sending completed poll results " + tally);
       nm.updatePollResults(tally.getCachedUrlSet(), tally);

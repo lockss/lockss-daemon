@@ -1,5 +1,5 @@
 /*
-* $Id: MockPoll.java,v 1.2 2003-07-09 20:06:46 clairegriffin Exp $
+* $Id: MockPoll.java,v 1.2.34.1 2004-11-16 01:53:16 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,10 @@ public class MockPoll implements Poll {
 
   public MockPoll() {
 
+  }
+
+  public boolean isSubpollRunning() {
+    return false;
   }
 
   /**

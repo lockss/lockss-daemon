@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.17 2004-10-23 01:38:22 clairegriffin Exp $
+ * $Id: V1PollTally.java,v 1.17.2.1 2004-11-16 01:53:13 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class V1PollTally extends PollTally {
   double voteMargin = 0;    // the margin by which we must win or lose
   double trustedWeight = 0;// the min ave. weight of the winners, when we lose.
   V1Poll poll;
+  private V1PollTally prevTally = null;	// tally of preceding name poll, if
+					// ranged name poll tally
 
   static Logger log=Logger.getLogger("V1PollTally");
 
@@ -77,6 +79,39 @@ public class V1PollTally extends PollTally {
         V1Poll.DEFAULT_TRUSTED_WEIGHT);
     voteMargin = ((double)Configuration.getIntParam(V1Poll.PARAM_VOTE_MARGIN,
         V1Poll.DEFAULT_VOTE_MARGIN)) / 100;
+  }
+
+  public void setPreviousNamePollTally(V1PollTally prevTally) {
+    this.prevTally = prevTally;
+  }
+
+  public V1PollTally getPreviousNamePollTally() {
+    return prevTally;
+  }
+
+  /** Store the concatenation of the name lists from all tallies in the
+   * chain into the first tally and return it */
+  public V1PollTally concatenateNameSubPollLists() {
+    LinkedList allLocalEntries = new LinkedList();
+    LinkedList allVotedEntries = new LinkedList();
+    if (localEntries != null) {
+      allLocalEntries.addAll(localEntries);
+    }
+    if (votedEntries != null) {
+      allVotedEntries.addAll(votedEntries);
+    }
+    V1PollTally curTally = this;
+    V1PollTally prevTally;
+    while ((prevTally = curTally.getPreviousNamePollTally()) != null) {
+      allLocalEntries =
+	ListUtil.prependAll(prevTally.localEntries, allLocalEntries);
+      allVotedEntries =
+	ListUtil.prependAll(prevTally.votedEntries, allVotedEntries);
+      curTally = prevTally;
+    }
+    curTally.localEntries = allLocalEntries;
+    curTally.votedEntries = allVotedEntries;
+    return curTally;
   }
 
   public String toString() {

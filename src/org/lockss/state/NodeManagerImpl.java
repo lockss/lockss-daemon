@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.196 2004-10-23 01:01:01 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.196.2.1 2004-11-16 01:53:14 tlipkis Exp $
  */
 
 /*
@@ -214,7 +214,7 @@ public class NodeManagerImpl
     }
   }
 
-  public boolean shouldStartPoll(CachedUrlSet cus, Tallier state) {
+  public boolean shouldStartPoll(CachedUrlSet cus, Tallier tally) {
     NodeState nodeState = getNodeState(cus);
 
     // check if node exists
@@ -224,7 +224,7 @@ public class NodeManagerImpl
     }
 
     // make sure not damaged (if not my poll)
-    if (!state.isMyPoll() && damagedNodes.hasLocalizedDamage(cus)) {
+    if (!tally.isMyPoll() && damagedNodes.hasLocalizedDamage(cus)) {
       logger.info("CUS has damage, not starting poll: " + cus);
       return false;
     }
@@ -711,7 +711,7 @@ public class NodeManagerImpl
         // otherwise, schedule repair (if SNCUS) or name poll
         if (results.getCachedUrlSet().getSpec().isSingleNode()) {
           logger.debug2("lost single node content poll, marking for repair.");
-          // if leaf node, we need to repair
+          // if SNCUSS, we need to repair
           pollState.status = PollState.REPAIRING;
         } else {
           logger.debug2("lost content poll, state = lost.");
@@ -1404,7 +1404,7 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a top level poll on " + spec);
     }
-    if (!pollManager.callPoll(spec)) {
+    if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a top level poll on " + spec);
       }
@@ -1615,7 +1615,7 @@ public class NodeManagerImpl
       logger.debug2("Re-calling a " + Poll.PollName[lastPoll.type] +
 		    " poll on " + spec);
     }
-    if (!pollManager.callPoll(spec)) {
+    if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to re-call a " + Poll.PollName[lastPoll.type] +
 		      " poll on " + spec);
@@ -1632,7 +1632,7 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a poll on " + spec);
     }
-    if (!pollManager.callPoll(spec)) {
+    if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a poll on " + spec);
       }

@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.20.2.1 2004-10-28 08:22:24 tlipkis Exp $
+* $Id: V1Poll.java,v 1.20.2.2 2004-11-16 01:53:13 tlipkis Exp $
  */
 
 /*
@@ -372,7 +372,7 @@ public abstract class V1Poll extends BasePoll {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
     }
     else {
-      m_pollstate = BasePoll.PS_COMPLETE;
+      m_pollstate = PS_COMPLETE;
     }
     m_pollmanager.closeThePoll(m_key);
     log.debug3("closed the poll:" + m_key);
