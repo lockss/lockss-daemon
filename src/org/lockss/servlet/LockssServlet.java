@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.20 2003-07-13 20:54:25 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.21 2003-07-17 23:40:11 tlipkis Exp $
  */
 
 /*
@@ -176,8 +176,10 @@ public abstract class LockssServlet extends HttpServlet
 		     ServletDescr.DEBUG_ONLY);
   protected static ServletDescr LINK_LOGS =
     new ServletDescr(null, "Logs", "log", ServletDescr.DEBUG_ONLY);
-   protected static ServletDescr SERVLET_IP_ACCESS_CONTROL =
-     new ServletDescr(IpAccessControl.class, "IP Access Control");
+   protected static ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
+     new ServletDescr(AdminIpAccess.class, "Admin Access Control");
+   protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
+     new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
 //    protected static ServletDescr SERVLET_ADMIN_HOME =
 //      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
 //    protected static ServletDescr SERVLET_JOURNAL_STATUS =
@@ -193,11 +195,12 @@ public abstract class LockssServlet extends HttpServlet
   // All servlets must be listed here (even if not in van table).
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
-     SERVLET_IP_ACCESS_CONTROL,
-     SERVLET_DAEMON_STATUS,
+     SERVLET_ADMIN_ACCESS_CONTROL,
+     SERVLET_PROXY_ACCESS_CONTROL,
      SERVLET_PROXY_INFO,
-     SERVLET_THREAD_DUMP,
+     SERVLET_DAEMON_STATUS,
      LINK_LOGS,
+     SERVLET_THREAD_DUMP,
 //      SERVLET_ADMIN_HOME,
 //      SERVLET_JOURNAL_STATUS,
 //      SERVLET_JOURNAL_SETUP,
@@ -438,6 +441,12 @@ public abstract class LockssServlet extends HttpServlet
   /** Return a link to a servlet with params */
   String srvLink(ServletDescr d, String text, String params) {
     return new Link(srvURL(d, params),
+		    (text != null ? text : d.heading)).toString();
+  }
+
+  /** Return an absolute link to a servlet with params */
+  String srvAbsLink(ServletDescr d, String text, String params) {
+    return new Link(srvAbsURL(d, params),
 		    (text != null ? text : d.heading)).toString();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.23 2003-07-13 20:56:30 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.24 2003-07-17 23:40:11 tlipkis Exp $
  */
 
 /*
@@ -198,10 +198,14 @@ public class ServletManager extends JettyManager {
 	// Create a context
 	setupLogContext();
       }
+      // info currently has same auth as /, but could be different
       setupInfoContext();
 
       setupAdminContext();
-      setupImageContext();
+
+      // no separate image context for now.  (Use if want different
+      // access control or auth from / context
+      // setupImageContext();
 
     } catch (Exception e) {
       log.warning("Couldn't start admin UI contexts", e);
@@ -224,8 +228,10 @@ public class ServletManager extends JettyManager {
     // Daemon status servlet
     handler.addServlet("DaemonStatus", "/DaemonStatus",
 		       "org.lockss.servlet.DaemonStatus");
-    handler.addServlet("IpAccessControl", "/IpAccessControl",
-		       "org.lockss.servlet.IpAccessControl");
+    handler.addServlet("AdminIpAccess", "/AdminIpAccess",
+		       "org.lockss.servlet.AdminIpAccess");
+    handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
+		       "org.lockss.servlet.ProxyIpAccess");
     handler.addServlet("ThreadDump", "/ThreadDump",
 		       "org.lockss.servlet.ThreadDump");
     context.addHandler(handler);
@@ -302,6 +308,9 @@ public class ServletManager extends JettyManager {
     HttpContext context = makeContext("/info");
 
     // add handlers in the order they should be tried.
+
+    // user authentication handler
+    setContextAuthHandler(context, realm);
 
     // Create a servlet container
     ServletHandler handler = new ServletHandler();
