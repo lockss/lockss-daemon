@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.5 2004-08-02 03:04:13 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.6 2004-08-09 02:54:33 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -51,7 +51,7 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   static final String DELAY_PREFIX = PREFIX + "notify.delay";
 
   static final String PARAM_DELAY_INITIAL = DELAY_PREFIX + "initial";
-  static final long DEFAULT_DELAY_INITIAL = 30 * Constants.MINUTE;
+  static final long DEFAULT_DELAY_INITIAL = 5 * Constants.MINUTE;
 
   static final String PARAM_DELAY_INCR = DELAY_PREFIX + "incr";
   static final long DEFAULT_DELAY_INCR = 30 * Constants.MINUTE;
@@ -267,8 +267,8 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
       if (alerts == null || isProcessed) {
 	if (log.isDebug3()) log.debug3("Recording first: " + alert);
 	// record this one, start list for successive, start timer
-	action.record(getDaemon(), alert);
 	alerts = new ArrayList();
+	alerts.add(alert);
 	isProcessed = false;
 	latestTrigger = now() + min(maxDelay, action.getMaxPendTime());
 	trigger = Deadline.at(min(now() + initialDelay, latestTrigger));
@@ -314,8 +314,8 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
 	  action.record(getDaemon(), alerts);
 	}
 	alerts = null;
-	isProcessed = true;
       }
+      isProcessed = true;
     }
   }
 }

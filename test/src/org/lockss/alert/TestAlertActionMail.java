@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.3 2004-07-21 07:06:45 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.4 2004-08-09 02:54:32 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,17 @@ public class TestAlertActionMail extends LockssTestCase {
   }
 
 
+  public void testSimple() {
+    AlertActionMail a1 = new AlertActionMail("to@here");
+    assertTrue(a1.isGroupable());
+    assertTrue(a1.getMaxPendTime() > Constants.MINUTE);
+  }
+
+  public void testToString() {
+    AlertActionMail a1 = new AlertActionMail("to@here");
+    a1.toString();
+  }
+
   public void testEquals() {
     AlertActionMail a1 = new AlertActionMail("to@here");
     AlertActionMail a2 = new AlertActionMail("to@here");
@@ -64,6 +75,8 @@ public class TestAlertActionMail extends LockssTestCase {
     assertEquals(a2, a1);
     assertNotEquals(a1, a3);
     assertNotEquals(a3, a1);
+    assertNotEquals("aa", a1);
+    assertNotEquals(a1, "aa");
   }
 
   public void testHash() {
@@ -71,6 +84,13 @@ public class TestAlertActionMail extends LockssTestCase {
     AlertActionMail a2 = new AlertActionMail("to@here");
     AlertActionMail a3 = new AlertActionMail("to@there");
     assertEquals(a1.hashCode(), a2.hashCode());
+  }
+
+  public void testRecips() {
+    AlertActionMail a = new AlertActionMail("to@here");
+    assertEquals("to@here", a.getRecipients());
+//     a = new AlertActionMail(ListUtil.list("to@here", "and@there"));
+//     assertEquals("to@here, and@there", a.getRecipients());
   }
 
   public void testRecordOne() {

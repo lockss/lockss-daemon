@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.2 2004-08-02 03:04:13 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.3 2004-08-09 02:54:32 tlipkis Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
   public void testRaiseDelayedAlerts1() throws Exception {
     TimeBase.setSimulated(1000);
     log.debug("testRaiseAlert()");
-    config(true, 100, 200, 500);
+    config(true, 20, 200, 500);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
     MockAlertAction action = new MockAlertAction();
@@ -146,6 +146,10 @@ public class TestAlertManagerImpl extends LockssTestCase {
     mgr.suppressStore(true);
     mgr.updateConfig(conf);
     mgr.raiseAlert(a1);
+    assertEmpty(action.getAlerts());
+    TimeBase.step(10);
+    assertEmpty(action.getAlerts());
+    TimeBase.step(15);
     assertEquals(ListUtil.list(a1), action.getAlerts());
 
     TimeBase.step(10);
@@ -160,7 +164,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
   public void testRaiseDelayedAlerts2() throws Exception {
     TimeBase.setSimulated(1000);
     log.debug("testRaiseAlert()");
-    config(true, 100, 200, 500);
+    config(true, 10, 200, 500);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
     MockAlertAction action = new MockAlertAction();
@@ -172,9 +176,10 @@ public class TestAlertManagerImpl extends LockssTestCase {
     mgr.suppressStore(true);
     mgr.updateConfig(conf);
     mgr.raiseAlert(a1);
+    TimeBase.step(10);
     assertEquals(ListUtil.list(a1), action.getAlerts());
 
-    TimeBase.step(10);
+    mgr.raiseAlert(a1);
     mgr.raiseAlert(a1);
     assertEquals(ListUtil.list(a1), action.getAlerts());
     int cnt = 0;
@@ -190,7 +195,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     assertTrue("Second set of recorded actions should be a list",
 	       o1 instanceof List);
     List l1 = (List)o1;
-    assertEquals(cnt+1, l1.size());
+    assertEquals(cnt+2, l1.size());
   }
 
   class MockAlertPattern implements AlertPattern {

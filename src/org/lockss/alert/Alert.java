@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.2 2004-07-19 08:23:33 tlipkis Exp $
+ * $Id: Alert.java,v 1.3 2004-08-09 02:54:33 tlipkis Exp $
  */
 
 /*
@@ -403,19 +403,6 @@ public class Alert {
     sb.append(heading);
     sb.append(val.toString());
     sb.append("\n");
-  }
-
-  private static Map argMap(String key, Object val) {
-    Map map = new HashMap();
-    map.put(key, val);
-    return map;
-  }
-
-  private static Map argMap(String key1, Object val1,
-			    String key2, Object val2) {
-    Map map = argMap(key1, val1);
-    map.put(key2, val2);
-    return map;
   }
 
   private static Alert cAlert(String name) {

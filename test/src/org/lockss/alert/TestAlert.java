@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlert.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: TestAlert.java,v 1.2 2004-08-09 02:54:32 tlipkis Exp $
  */
 
 /*
@@ -103,22 +103,61 @@ public class TestAlert extends LockssTestCase {
     a1.setAttribute(Alert.ATTR_SEVERITY, 7);
     assertEquals("contents", a1.getString(Alert.ATTR_TEXT));
     assertEquals(7, a1.getInt(Alert.ATTR_SEVERITY));
-    try {
-      a1.getInt(Alert.ATTR_TEXT);
-      fail("Should throw ClassCastException");
-    } catch (ClassCastException e) {
-    }
-
     a1.setAttribute("foo", true);
     assertTrue(a1.getBool("foo"));
-    assertFalse(a1.getBool("cvb"));
+    assertFalse(a1.getBool("missing"));
     a1.setAttribute("foo", false);
     assertFalse(a1.getBool("foo"));
   }
 
-  public void testArbitrary() {
-    assertFalse(Alert.cacheAlert(Alert.CACHE_DOWN)
-		.getBool(Alert.ATTR_IS_CONTENT));
+  public void testIllTypes() {
+    Alert a1 = new Alert("num");
+    a1.setAttribute("string", "contents");
+    a1.setAttribute("int", 7);
+    a1.setAttribute("bool", true);
+    try {
+      a1.getInt("string");
+      fail("Should throw ClassCastException");
+    } catch (ClassCastException e) {
+    }
+    try {
+      a1.getLong("string");
+      fail("Should throw ClassCastException");
+    } catch (ClassCastException e) {
+    }
+    try {
+      a1.getInt("missing");
+      fail("Should throw RuntimeException");
+    } catch (RuntimeException e) {
+    }
+    try {
+      a1.getLong("missing");
+      fail("Should throw RuntimeException");
+    } catch (RuntimeException e) {
+    }
+    assertFalse(a1.getBool("int"));
+  }
+
+  public void testGetSeverityString() {
+    Alert a1 = new Alert("num");
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_TRACE);
+    assertEquals("trace", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_TRACE - 1);
+    assertEquals("trace", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_INFO);
+    assertEquals("info", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_WARNING);
+    assertEquals("warning", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_ERROR);
+    assertEquals("error", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_CRITICAL);
+    assertEquals("critical", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_CRITICAL - 1);
+    assertEquals("critical", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_CRITICAL + 1);
+    assertEquals("unknown", a1.getSeverityString());
+    a1.setAttribute(Alert.ATTR_SEVERITY, "foo");
+    assertEquals("unknown", a1.getSeverityString());
   }
 
   public void testGroupHash() {
@@ -150,6 +189,22 @@ public class TestAlert extends LockssTestCase {
   }
     
 
+  public void testAuAlert() {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setAuId("au_foo");
+    Alert a = Alert.auAlert(Alert.REPAIR_COMPLETE, mau);
+
+    assertEquals("RepairComplete", a.getName());
+    assertEquals("au_foo", a.getString(Alert.ATTR_AUID));
+    assertEquals("MockAU", a.getString(Alert.ATTR_AU_NAME));
+    assertTrue(a.getBool(Alert.ATTR_IS_CONTENT));
+  }
+
+  public void testCacheAlert() {
+    assertFalse(Alert.cacheAlert(Alert.CACHE_DOWN)
+		.getBool(Alert.ATTR_IS_CONTENT));
+  }
+
   public void testToString() {
     Alert a1 = new Alert("TestAlert");
     a1.setAttribute(Alert.ATTR_TEXT, "Explanatory text");
@@ -162,6 +217,39 @@ public class TestAlert extends LockssTestCase {
     a1.setAttribute(Alert.ATTR_TEXT, "Explanatory text");
     a1.setAttribute(Alert.ATTR_SEVERITY, 7);
     log.debug(a1.getMailBody());
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setAuId("au_foo");
+    Alert a2 = Alert.auAlert(Alert.REPAIR_COMPLETE, mau);
+    a2.setAttribute(Alert.ATTR_TEXT, "Explanatory text");
+    a2.setAttribute(Alert.ATTR_SEVERITY, 7);
+    String body = a2.getMailBody();
+    log.debug(body);
+    String[] lbody =
+      (String[])StringUtil.breakAt(body, '\n').toArray(new String[0]);
+    int line = 0;
+    assertMatchesRE("^LOCKSS cache .* raised an alert at ", lbody[line++]);
+    assertMatchesRE("^$", lbody[line++]);
+    assertMatchesRE("^Name: RepairComplete$", lbody[line++]);
+    assertMatchesRE("^Severity: trace$", lbody[line++]);
+    assertMatchesRE("^AU: MockAU$", lbody[line++]);
+    assertMatchesRE("^Explanation: Explanatory text$", lbody[line++]);
+  }
+
+  public void testGetMailSubject() {
+    Alert a1 = new Alert("TestAlert");
+    a1.setAttribute(Alert.ATTR_TEXT, "Explanatory text");
+    a1.setAttribute(Alert.ATTR_SEVERITY, 7);
+    log.debug(a1.getMailSubject());
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    mau.setAuId("au_foo");
+    Alert a2 = Alert.auAlert(Alert.REPAIR_COMPLETE, mau);
+    a2.setAttribute(Alert.ATTR_TEXT, "Explanatory text");
+    a2.setAttribute(Alert.ATTR_SEVERITY, 7);
+    String subject = a2.getMailSubject();
+    log.debug(subject);
+    assertEquals("LOCKSS cache trace: RepairComplete", subject);
   }
 
   Map newMap(String prop, Object val) {
