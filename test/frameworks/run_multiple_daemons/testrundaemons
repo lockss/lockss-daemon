@@ -1,0 +1,35 @@
+#! /bin/bash
+LOCKSS_CONF=../lockss.conf
+if [ -e ${LOCKSS_CONF} ]
+then
+	. ${LOCKSS_CONF}
+else
+	echo ${LOCKSS_CONF}: not found
+	exit
+fi
+
+if [ ${PROJECT_DIR}X = X ]
+then
+    echo Called without \$PROJECT_DIR set.  Exiting
+    exit
+else
+    echo project directory set to ${PROJECT_DIR}
+fi
+
+date >KeepGoing
+while [ -f KeepGoing ]
+do
+	echo started `date`
+	echo CLASSPATH is ${CLASSPATH}
+	echo PATH is ${PATH}
+	echo running in `pwd`
+	# for large caches, need to pass "-ms4m -mx64m" to java
+        java RunDaemon ${PROP_URL_LIST} &
+	echo $! >dpid
+	wait
+        echo stopped `date` with status $?
+	if [ -f KeepGoing ]
+	then
+        	sleep 600
+	fi
+done >>test.out 2>&1

@@ -1,0 +1,15 @@
+#! /bin/bash
+
+ROOT=${PROJECT_DIR}/lockss-gamma/test/frameworks/run_multiple_daemons
+
+for (( i=1 ; i<=2 ; i++ )) ; do
+    cd ${ROOT}/test$i
+    if [ "$1" == "start" ] ; then
+	./testrundaemon$i&
+	echo started in `pwd`
+    else
+	rm KeepGoing
+	kill `cat dpid`
+        echo stopped in `pwd`
+    fi
+done
