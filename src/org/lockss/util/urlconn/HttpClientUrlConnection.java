@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.2 2004-02-24 07:16:00 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.3 2004-02-27 00:24:22 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -48,7 +48,8 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private static final int MAX_REDIRECTS = 10;
 
   private HttpClient client;
-  private LockssGetMethod method;
+  private HttpMethod method;
+//   private LockssGetMethod method;
   private int responseCode;
 
   public HttpClientUrlConnection(String urlString, HttpClient client)
@@ -126,11 +127,34 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     method.setRequestHeader(key, value);
   }
 
+  public void addRequestProperty(String key, String value) {
+    assertNotExecuted();
+    method.addRequestHeader(key, value);
+  }
+
   public void setFollowRedirects(boolean followRedirects) {
     assertNotExecuted();
     method.setFollowRedirects(followRedirects);
   }
 
+
+  public String getResponseHeaderFieldVal(int n) {
+    assertExecuted();
+    try {
+      return method.getResponseHeaders()[n].getValue();
+    } catch (ArrayIndexOutOfBoundsException e) {
+      return null;
+    }
+  }
+
+  public String getResponseHeaderFieldKey(int n) {
+    assertExecuted();
+    try {
+      return method.getResponseHeaders()[n].getName();
+    } catch (ArrayIndexOutOfBoundsException e) {
+      return null;
+    }
+  }
 
   public int getResponseCode() {
     assertExecuted();
@@ -158,7 +182,11 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   public int getResponseContentLength() {
     assertExecuted();
-    return method.getResponseContentLength();
+    if (method instanceof LockssGetMethod) {
+      LockssGetMethod getmeth = (LockssGetMethod)method;
+      return getmeth.getResponseContentLength();
+    }
+    throw new UnsupportedOperationException();
   }
 
   public String getResponseContentType() {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.1 2004-02-23 09:25:49 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.2 2004-02-27 00:24:22 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,14 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
   }
 
   public String getResponseMessage() {
+    throw new UnsupportedOperationException();
+  }
+
+  public String getResponseHeaderFieldVal(int n) {
+    throw new UnsupportedOperationException();
+  }
+
+  public String getResponseHeaderFieldKey(int n) {
     throw new UnsupportedOperationException();
   }
 

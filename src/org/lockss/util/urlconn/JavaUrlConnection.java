@@ -1,5 +1,5 @@
 /*
- * $Id: JavaUrlConnection.java,v 1.1 2004-02-23 09:25:49 tlipkis Exp $
+ * $Id: JavaUrlConnection.java,v 1.2 2004-02-27 00:24:22 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -95,6 +95,16 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
 
   public String getResponseMessage() {
     throw new UnsupportedOperationException();
+  }
+
+  public String getResponseHeaderFieldVal(int n) {
+    assertExecuted();
+    return urlConn.getHeaderField(n);
+  }
+
+  public String getResponseHeaderFieldKey(int n) {
+    assertExecuted();
+    return urlConn.getHeaderFieldKey(n);
   }
 
   public long getResponseDate() {
