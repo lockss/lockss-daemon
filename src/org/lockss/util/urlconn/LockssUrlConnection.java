@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.2 2004-02-27 00:24:22 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.3 2004-02-27 04:28:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -38,6 +38,11 @@ import java.io.*;
  * particular protocol hander throw UnsupportedOperationException
  */
 public interface LockssUrlConnection {
+  /** Send GET */
+  public static int METHOD_GET = 1;
+  /** Send GET but don't mess with request headers */
+  public static int METHOD_PROXY = 2;
+
   /** Return true if an http or https connection */
   public boolean isHttp();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.20 2004-02-27 00:21:44 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.21 2004-02-27 04:28:49 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.20 2004-02-27 00:21:44 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.21 2004-02-27 04:28:49 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -61,7 +61,7 @@ import org.lockss.plugin.*;
  * make proxy requests.
  * <P>The HttpTunnel mechanism is also used to implement the CONNECT method.
  * 
- * @version $Id: ProxyHandler.java,v 1.20 2004-02-27 00:21:44 tlipkis Exp $
+ * @version $Id: ProxyHandler.java,v 1.21 2004-02-27 04:28:49 tlipkis Exp $
  * @author Greg Wilkins (gregw)
  */
 public class ProxyHandler extends AbstractHttpHandler
@@ -422,7 +422,9 @@ public class ProxyHandler extends AbstractHttpHandler
 		String urlString) throws IOException {
 
     try {
-      LockssUrlConnection conn = UrlUtil.openConnection(urlString, connPool);
+      LockssUrlConnection conn =
+	UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
+			       urlString, connPool);
 
       // XXX
       conn.setFollowRedirects(false);

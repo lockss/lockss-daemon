@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.3 2004-02-27 00:24:22 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.4 2004-02-27 04:28:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -49,28 +49,33 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
   private HttpClient client;
   private HttpMethod method;
-//   private LockssGetMethod method;
+  private int methodCode;
   private int responseCode;
 
+  /** Create a connection object, defaulting to GET method */
   public HttpClientUrlConnection(String urlString, HttpClient client)
+      throws IOException {
+    this(LockssUrlConnection.METHOD_GET, urlString, client);
+  }
+
+  /** Create a connection object, with specified method */
+  public HttpClientUrlConnection(int methodCode, String urlString,
+				 HttpClient client)
       throws IOException {
     this.urlString = urlString;
     this.client = client != null ? client : new HttpClient();
-    method = createGetMethod(urlString);
+    method = createMethod(methodCode, urlString);
   }
 
-  /** for testing */
-  protected HttpClientUrlConnection(String urlString, HttpClient client,
-				    LockssGetMethod method) {
-    this.urlString = urlString;
-    this.client = client;
-    this.method = method;
-  }
-
-  protected LockssGetMethod createGetMethod(String urlString)
+  private HttpMethod createMethod(int methodCode, String Urlstring)
       throws IOException {
     try {
-      return newLockssGetMethodImpl(urlString);
+      switch (methodCode) {
+      case LockssUrlConnection.METHOD_GET:
+	return newLockssGetMethodImpl(urlString);
+      case LockssUrlConnection.METHOD_PROXY:
+	return new LockssProxyGetMethodImpl(urlString);
+      }      
     } catch (IllegalArgumentException e) {
       // HttpMethodBase throws IllegalArgumentException on illegal URLs
       // Canonicalize that to Java's MalformedURLException
@@ -80,6 +85,15 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // Canonicalize that to Java's MalformedURLException
       throw new java.net.MalformedURLException(urlString);
     }
+    throw new RuntimeException("Unknown url method: " + methodCode);
+  }  
+
+  /** for testing */
+  protected HttpClientUrlConnection(String urlString, HttpClient client,
+				    LockssGetMethod method) {
+    this.urlString = urlString;
+    this.client = client;
+    this.method = method;
   }
 
   protected LockssGetMethod newLockssGetMethodImpl(String urlString) {
@@ -318,9 +332,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     //update the current location with the redirect location.
 
     String newUrlString = redirectUri.getEscapedURI();
-    LockssGetMethod newMeth;
+    HttpMethod newMeth;
     try {
-      newMeth = createGetMethod(newUrlString);
+      newMeth = createMethod(methodCode, newUrlString);
     } catch (IOException e) {
       log.warning("Redirected location '" + location + "' is malformed", e);
       return false;
@@ -382,6 +396,21 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 
     public int getResponseContentLength() {
       return super.getResponseContentLength();
+    }
+  }
+
+  /** Subclass used to access useful protected members of GetMethod (which
+   * all seems like they should be public) */
+  static class LockssProxyGetMethodImpl extends LockssGetMethodImpl {
+
+    public LockssProxyGetMethodImpl(String url) {
+      super(url);
+    }
+
+    protected void addRequestHeaders(HttpState state, HttpConnection conn)
+	throws IOException, HttpException {
+      // Suppress this - don't want any automatic header processing when
+      // acting as a proxy.
     }
   }
 
