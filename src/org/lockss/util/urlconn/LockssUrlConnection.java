@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.5 2004-03-14 01:04:47 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.6 2004-09-22 02:42:30 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -67,7 +67,7 @@ public interface LockssUrlConnection {
   /** Set the proxy host and port.
    * @throws UnsupportedOperationException if canProxy() returns false
    */
-  public void setProxy(String host, int port);
+  public void setProxy(String host, int port) throws CantProxyException ;
 
   /** Set the user-agent request header */
   public void setUserAgent(String value);
@@ -151,6 +151,16 @@ public interface LockssUrlConnection {
    * obtained (<i>eg</i>, in case of error responses) */
   public void release();
 
+  /** Exception thrown by setProxy if the connection type doesn't support
+   * proxying */
+  static class CantProxyException extends IOException {
+    public CantProxyException(String msg) {
+      super(msg);
+    }
+    public CantProxyException() {
+      super();
+    }
+  }
 
   /** Exception thrown if a timeout occured while opening the socket. */
   public class ConnectionTimeoutException extends IOException {

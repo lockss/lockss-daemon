@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.4 2004-03-09 23:41:34 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.5 2004-09-22 02:42:30 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -72,9 +72,9 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     }
   }
 
-  public void setProxy(String host, int port) {
+  public void setProxy(String host, int port) throws CantProxyException {
     if (!canProxy()) {
-      throw new UnsupportedOperationException();
+      throw new CantProxyException();
     }
     assertNotExecuted();
     proxyHost = host;
