@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.10 2003-02-26 03:06:21 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.11 2003-02-26 20:56:27 aalto Exp $
  */
 
 /*
@@ -58,8 +58,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * This is the root of the url which the SimAU pretends to be.
    * It is replaced with the actual directory root.
    */
-  public static final String SIMULATED_URL_ROOT = AuUrl.PROTOCOL_COLON +
-      "//www.example.com";
+  public static final String SIMULATED_URL_ROOT = "http://www.example.com";
 
   private String fileRoot; //root directory for the generated content
   private SimulatedContentGenerator scgen;
@@ -91,7 +90,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public CachedUrlSet getAUCachedUrlSet() {
     return new GenericFileCachedUrlSet(this,
-               new RangeCachedUrlSetSpec(SIMULATED_URL_ROOT));
+               new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON +
+        "//www.example.com"));
   }
 
   public String getPluginId() {
