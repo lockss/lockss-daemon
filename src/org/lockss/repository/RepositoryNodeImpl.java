@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.34 2003-09-12 00:18:36 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.35 2003-09-12 01:19:02 eaalto Exp $
  */
 
 /*
@@ -320,25 +320,18 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
 
       // rename current
-      String err;
-      if (currentCacheFile.exists()) {
-        if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) {
-          err = "Couldn't rename current versions: "+url;
-          logger.error(err);
-          throw new LockssRepository.RepositoryStateException(err);
-        }
-        if (currentPropsFile.exists()) {
-          if(!currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
-            err = "Couldn't rename current version prop file: " + url;
-            logger.error(err);
-            throw new LockssRepository.RepositoryStateException(err);
-          }
-        }
+      if ((currentCacheFile.exists() &&
+           !currentCacheFile.renameTo(getVersionedCacheFile(currentVersion))) ||
+          (currentPropsFile.exists() &&
+           !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion)))) {
+        String err = "Couldn't rename current version files: " + url;
+        logger.error(err);
+        throw new LockssRepository.RepositoryStateException(err);
       }
       // rename new
       if (!tempCacheFile.renameTo(currentCacheFile) ||
           !tempPropsFile.renameTo(currentPropsFile)) {
-        err = "Couldn't rename temp versions: "+url;
+        String err = "Couldn't rename temp versions: "+url;
         logger.error(err);
         throw new LockssRepository.RepositoryStateException(err);
       }
@@ -568,9 +561,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
             new FileInputStream(nodePropsFile));
         nodeProps.load(is);
         is.close();
-        String isDeleted =  nodeProps.getProperty(DELETION_PROPERTY);
+        String isDeleted = nodeProps.getProperty(DELETION_PROPERTY);
         if ((isDeleted!=null) && (isDeleted.equals("true"))) {
           currentVersion = DELETED_VERSION;
+          curInputFile = null;
+          curProps = null;
+          return;
+        }
+        String isInactive = nodeProps.getProperty(INACTIVE_CONTENT_PROPERTY);
+        if ((isInactive!=null) && (isInactive.equals("true"))) {
+          currentVersion = INACTIVE_VERSION;
           curInputFile = null;
           curProps = null;
           return;
