@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.122 2004-01-14 23:48:56 clairegriffin Exp $
+ * $Id: PollManager.java,v 1.123 2004-01-31 22:55:28 tlipkis Exp $
  */
 
 /*
@@ -364,6 +364,14 @@ public class PollManager  extends BaseLockssManager {
       theLog.debug("Ignoring poll request, don't have AU: " + spec.getAuId());
       return null;
     }
+    ArchivalUnit au = cus.getArchivalUnit();
+    if (!spec.getPluginVersion().equals(au.getPlugin().getVersion())) {
+      theLog.debug("Ignoring poll request for " + au.getName() +
+		   ", plugin version mismatch; have: " +
+		   au.getPlugin().getVersion() +
+		   ", need: " + spec.getPluginVersion());
+      return null;
+    }
     theLog.debug("Making poll from: " + spec);
     ActivityRegulator.Lock lock = null;
 
@@ -390,9 +398,8 @@ public class PollManager  extends BaseLockssManager {
       // get expiration time for the lock
       long expiration = 2 * msg.getDuration();
       if (AuUrl.isAuUrl(cus.getUrl())) {
-        lock = theDaemon.getActivityRegulator(
-            cus.getArchivalUnit()).getAuActivityLock(
-            ActivityRegulator.TOP_LEVEL_POLL, expiration);
+        lock = theDaemon.getActivityRegulator(au).
+	  getAuActivityLock(ActivityRegulator.TOP_LEVEL_POLL, expiration);
         if (lock==null) {
           theLog.debug2("New top-level poll aborted due to activity lock.");
           return null;
@@ -409,8 +416,8 @@ public class PollManager  extends BaseLockssManager {
           activity = ActivityRegulator.STANDARD_NAME_POLL;
         }
 
-        lock = theDaemon.getActivityRegulator(
-            cus.getArchivalUnit()).getCusActivityLock(cus, activity, expiration);
+        lock = theDaemon.getActivityRegulator(au).
+	  getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
           theLog.debug2("New poll aborted due to activity lock.");
           return null;
@@ -500,7 +507,7 @@ public class PollManager  extends BaseLockssManager {
       case LcapMessage.CONTENT_POLL_REP:
       case LcapMessage.CONTENT_POLL_REQ:
         theLog.debug3("Making a content poll on "+ pollspec);
-	switch (pollspec.getVersion()) {
+	switch (pollspec.getPollVersion()) {
 	case 1:
 	  ret_poll = new V1ContentPoll(msg, pollspec, this);
 	  break;
@@ -509,13 +516,13 @@ public class PollManager  extends BaseLockssManager {
 	  break;
 	default:
 	  throw new ProtocolException("Unsupported content poll version: " +
-				      pollspec.getVersion());
+				      pollspec.getPollVersion());
 	}
         break;
       case LcapMessage.NAME_POLL_REP:
       case LcapMessage.NAME_POLL_REQ:
         theLog.debug3("Making a name poll on "+pollspec);
-	switch (pollspec.getVersion()) {
+	switch (pollspec.getPollVersion()) {
 	case 1:
 	  ret_poll = new V1NamePoll(msg, pollspec, this);
 	  break;
@@ -524,19 +531,19 @@ public class PollManager  extends BaseLockssManager {
 	  break;
 	default:
 	  throw new ProtocolException("Unsupported name poll version: " +
-				      pollspec.getVersion());
+				      pollspec.getPollVersion());
 	}
         break;
       case LcapMessage.VERIFY_POLL_REP:
       case LcapMessage.VERIFY_POLL_REQ:
         theLog.debug3("Making a verify poll on "+pollspec);
-	switch (pollspec.getVersion()) {
+	switch (pollspec.getPollVersion()) {
 	case 1:
 	  ret_poll = new V1VerifyPoll(msg, pollspec, this);
 	  break;
 	default:
 	  throw new ProtocolException("Unsupported verify poll version: " +
-				      pollspec.getVersion());
+				      pollspec.getPollVersion());
 	}
         break;
       default:
@@ -1051,7 +1058,6 @@ public class PollManager  extends BaseLockssManager {
       Deadline d = Deadline.in(m_recentPollExpireTime);
       TimerQueue.schedule(d, new ExpireRecentCallback(), (String) key);
       PollTally tally = poll.getVoteTally();
-      int version = tally.getPollSpec().getVersion();
       tally.tallyVotes();
     }
 
