@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.38 2003-07-14 06:43:47 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.39 2003-07-21 08:34:48 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
+import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -53,6 +54,7 @@ public class PluginManager extends BaseLockssManager {
 
   private static Logger log = Logger.getLogger("PluginMgr");
 
+  private ConfigManager configMgr;
   private StatusService statusSvc;
   private String pluginDir = null;
 
@@ -69,6 +71,7 @@ public class PluginManager extends BaseLockssManager {
    */
   public void startService() {
     super.startService();
+    configMgr = getDaemon().getConfigManager();
     statusSvc = getDaemon().getStatusService();
     statusSvc.registerStatusAccessor("AUS", new Status(this));
     resetConfig();
@@ -189,8 +192,8 @@ public class PluginManager extends BaseLockssManager {
     log.debug("putAuMap(" + au.getAUId() +", " + au);
     if (!auId.equals(au.getAUId())) {
       throw new ArchivalUnit.ConfigurationException("Configured AU has "
-						    +"unexpected key, "
-						    +"was: "+au.getAUId()
+						    +"unexpected AUId, "
+						    +"is: "+au.getAUId()
 						    +" expected: "+auId);
     }
     putAuInMap(au);
@@ -205,6 +208,38 @@ public class PluginManager extends BaseLockssManager {
     log.debug3("getAu(" + auId + ") = " + au);
     return au;
   }
+
+  // These don't belong here
+  /** Reconfigure an AU and save the new configuration in the local config
+   * file.  Need to find a better place for this.
+   * @param au the AU
+   * @param auProps the new AU configuration, using simple prop keys (not
+   * prefixed with org.lockss.au.<i>auid</i>)
+   */
+  public void setAndSaveAUConfiguration(ArchivalUnit au,
+					Properties auProps)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    setAndSaveAUConfiguration(au, ConfigManager.fromProperties(auProps));
+  }
+
+  /** Reconfigure an AU and save the new configuration in the local config
+   * file.  Need to find a better place for this.
+   * @param au the AU
+   * @param auConf the new AU configuration, using simple prop keys (not
+   * prefixed with org.lockss.au.<i>auid</i>)
+   */
+  public void setAndSaveAUConfiguration(ArchivalUnit au,
+					Configuration auConf)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    String auid = au.getAUId();
+    String prefix = PARAM_AU_TREE + "." + auid;
+    Configuration fqConfig = auConf.addPrefix(prefix);
+    au.setConfiguration(auConf);
+    configMgr.updateAuConfigFile(fqConfig, prefix);
+  }
+
+
+
   /**
    * load a plugin with the given class name from somewhere in our classpath
    * @param pluginKey the key for this plugin
