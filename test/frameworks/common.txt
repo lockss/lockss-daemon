@@ -29,6 +29,7 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.bioone.BioOnePlugin;\
     org.lockss.plugin.disputatio.DisputatioPlugin;\
     org.lockss.plugin.GendersPlugin;\
+    org.lockss.plugin.ShadowPlugin;\
     edu.harvard.plugin.jrs.JRSPlugin;\
     edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
@@ -503,5 +504,38 @@ org.lockss.title.teslej8.param.1.key=base_url
 org.lockss.title.teslej8.param.1.value=http\://writing.berkeley.edu/TESL-EJ/
 org.lockss.title.teslej8.param.2.key=volume
 org.lockss.title.teslej8.param.2.value=8
-org.lockss.title.teslej8.param.2.key=num_issue_range
-org.lockss.title.teslej8.param.2.value=29-32
+org.lockss.title.teslej8.param.3.key=num_issue_range
+org.lockss.title.teslej8.param.3.value=29-32
+
+org.lockss.title.shadowsmall.title=Shadow Small
+org.lockss.title.shadowsmall.journalTitle=Shadow
+org.lockss.title.shadowsmall.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowsmall.param.1.key=base_url
+org.lockss.title.shadowsmall.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowsmall.param.2.key=journal_id
+org.lockss.title.shadowsmall.param.2.value=small
+
+org.lockss.title.shadowbranched.title=Shadow Branched
+org.lockss.title.shadowbranched.journalTitle=Shadow
+org.lockss.title.shadowbranched.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowbranched.param.1.key=base_url
+org.lockss.title.shadowbranched.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowbranched.param.2.key=journal_id
+org.lockss.title.shadowbranched.param.2.value=branched
+
+org.lockss.title.shadowflat.title=Shadow Flat
+org.lockss.title.shadowflat.journalTitle=Shadow
+org.lockss.title.shadowflat.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowflat.param.1.key=base_url
+org.lockss.title.shadowflat.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowflat.param.2.key=journal_id
+org.lockss.title.shadowflat.param.2.value=flat
+
+org.lockss.title.shadowlong_names.title=Shadow Long Names
+org.lockss.title.shadowlong_names.journalTitle=Shadow
+org.lockss.title.shadowlong_names.plugin=org.lockss.plugin.ShadowPlugin
+org.lockss.title.shadowlong_names.param.1.key=base_url
+org.lockss.title.shadowlong_names.param.1.value=http\://shadow1.lockss.org/
+org.lockss.title.shadowlong_names.param.2.key=journal_id
+org.lockss.title.shadowlong_names.param.2.value=long_names
+
