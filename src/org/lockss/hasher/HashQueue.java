@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.18 2003-03-18 22:28:53 troberts Exp $
+ * $Id: HashQueue.java,v 1.19 2003-03-19 04:18:55 tal Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ package org.lockss.hasher;
 import java.io.*;
 import java.util.*;
 import java.text.*;
+import java.math.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -49,17 +50,23 @@ class HashQueue implements Serializable {
   static final String PARAM_PRIORITY = PREFIX + "priority";
   static final String PARAM_STEP_BYTES = PREFIX + "stepBytes";
   static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
+  static final String PARAM_COMPLETED_MAX = PREFIX + "numCompleted";
 
   protected static Logger log = Logger.getLogger("HashQueue");
 
-  private LinkedList qlist = new LinkedList();
+  private LinkedList qlist = new LinkedList(); // the queue
+  private LinkedList completed = new LinkedList(); // last n completed requests
+  private int completedMax = 50;
   private HashThread hashThread;
   private BinarySemaphore sem = new BinarySemaphore();
   private int hashPriority = -1;
   private int hashStepBytes = 10000;
   private int hashNumSteps = 10;
 
-  private long totalBytesHashed = 10;
+  private int schedCtr = 0;
+  private int finishCtr = 0;
+  private BigInteger totalBytesHashed = BigInteger.valueOf(0);
+  private long totalTime = 0;
 
   HashQueue() {
   }
@@ -94,12 +101,25 @@ class HashQueue implements Serializable {
 
   private void removeAndNotify(Request req, Iterator iter, List done,
 			       String msg) {
+    req.finish = ++finishCtr;
     if (log.isDebug()) {
       log.debug(msg + ((req.e != null) ? (req.e + ": ") : "") + req);
     }
     iter.remove();
     req.urlset.storeActualHashDuration(req.timeUsed, req.e);
     done.add(req);
+    addToCompleted(req);
+  }
+
+  private void addToCompleted(Request req) {
+    if (completed.size() > completedMax) {
+      completed.remove(0);
+    }
+    completed.add(req);
+  }
+
+  List getCompleted() {
+    return completed;
   }
 
   // separated out so callbacks are run outside of synchronized block,
@@ -113,6 +133,11 @@ class HashQueue implements Serializable {
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
       }
+      // completed list for status only, don't hold on to caller's objects
+      req.hasher = null;
+      req.callback = null;
+      req.cookie = null;
+      req.urlsetHasher = null;
     }
   }
 
@@ -161,6 +186,7 @@ class HashQueue implements Serializable {
 	> req.deadline.getExpirationTime()) {
       return false;
     }
+    req.sched = ++schedCtr;
     qlist.add(pos, req);
     return true;
   }
@@ -192,15 +218,16 @@ class HashQueue implements Serializable {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
-	  setConfig();
+	  setConfig(newConfig);
 	}
       });
   }
 
-  private void setConfig() {
-    hashPriority = Configuration.getIntParam(PARAM_PRIORITY, -1);
-    hashStepBytes = Configuration.getIntParam(PARAM_STEP_BYTES, 10000);
-    hashNumSteps = Configuration.getIntParam(PARAM_NUM_STEPS, 10);
+  private void setConfig(Configuration config) {
+    hashPriority = config.getInt(PARAM_PRIORITY, -1);
+    hashStepBytes = config.getInt(PARAM_STEP_BYTES, 10000);
+    hashNumSteps = config.getInt(PARAM_NUM_STEPS, 10);
+    completedMax = config.getInt(PARAM_COMPLETED_MAX, 50);
   }
 
   // Request - hash queue element.
@@ -211,8 +238,12 @@ class HashQueue implements Serializable {
     HashService.Callback callback;
     Object cookie;
     CachedUrlSetHasher urlsetHasher;
+    String type;
+    int sched;
+    int finish;
     long origEst;
     long timeUsed = 0;
+    long bytesHashed = 0;
     Exception e;
     boolean firstOverrun;
 
@@ -222,7 +253,8 @@ class HashQueue implements Serializable {
 	    HashService.Callback callback,
 	    Object cookie,
 	    CachedUrlSetHasher urlsetHasher,
-	    long estimatedDuration) {
+	    long estimatedDuration,
+	    String type) {
       this.urlset = urlset;
       this.hasher = hasher;
       this.deadline = deadline;
@@ -230,6 +262,7 @@ class HashQueue implements Serializable {
       this.cookie = cookie;
       this.urlsetHasher = urlsetHasher;
       this.origEst = estimatedDuration;
+      this.type = type;
     }
 
     long curEst() {
@@ -313,6 +346,7 @@ class HashQueue implements Serializable {
       overrunDeadline = Deadline.in(req.curEst());
     }
     long startTime = TimeBase.nowMs();
+    long bytesHashed = 0;
     try {
       // repeat up to nsteps steps, while goOn is true,
       // the request we're working on is still at the head of the queue,
@@ -323,7 +357,7 @@ class HashQueue implements Serializable {
 
 	if (log.isDebug()) log.debug("hashStep(" + nbytes + "): " + req);
 
-	totalBytesHashed += ush.hashStep(nbytes);
+	bytesHashed += ush.hashStep(nbytes);
 
 	// break if it's newly overrun
 	if (!ush.finished() &&
@@ -342,7 +376,11 @@ class HashQueue implements Serializable {
       // tk - should this catch all Throwable?
       req.e = e;
     }
-    req.timeUsed += TimeBase.nowMs() - startTime;
+    long timeDelta = TimeBase.nowMs() - startTime;
+    req.timeUsed += timeDelta;
+    req.bytesHashed += bytesHashed;
+    totalBytesHashed = totalBytesHashed.add(BigInteger.valueOf(bytesHashed));
+    totalTime += timeDelta;
   }
 
   // Run up to n steps of the request at the head of the queue, and call
@@ -406,20 +444,39 @@ class HashQueue implements Serializable {
   }
 
   private static final List statusSortRules =
-    ListUtil.list(new StatusTable.SortRule("deadline", true));
+    ListUtil.list(new StatusTable.SortRule("state", true),
+		  new StatusTable.SortRule("sort", true));
+
+  static final String FOOT_IN = "Order in which requests were made.  " +
+    "Pending requests are first in table, in the order they will be executed."+
+    "  Completed requests follow, in the order they were completed " +
+    "(most recent first).";
+
+  static final String FOOT_OVER = "Red indicates overrun.";
 
   private static final List statusColDescs =
     ListUtil.list(
+		  new ColumnDescriptor("sched", "In",
+				       ColumnDescriptor.TYPE_INT, FOOT_IN),
+// 		  new ColumnDescriptor("finish", "Out",
+// 				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor("state", "State",
+				       ColumnDescriptor.TYPE_STRING,
+				       FOOT_OVER),
 		  new ColumnDescriptor("au", "Volume",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("type", "Type",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("cus", "Cached Url Set",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("deadline", "Deadline",
 				       ColumnDescriptor.TYPE_DATE),
-		  new ColumnDescriptor("estimate", "Estimated Time",
+		  new ColumnDescriptor("estimate", "Estimated",
 				       ColumnDescriptor.TYPE_TIME_INTERVAL),
-		  new ColumnDescriptor("timeused", "Time Used",
-				       ColumnDescriptor.TYPE_TIME_INTERVAL)
+		  new ColumnDescriptor("timeused", "Used",
+				       ColumnDescriptor.TYPE_TIME_INTERVAL),
+		  new ColumnDescriptor("bytesHashed", "Bytes<br>Hashed",
+				       ColumnDescriptor.TYPE_INT)
 		  );
 		    
 
@@ -430,17 +487,42 @@ class HashQueue implements Serializable {
 
     public List getRows(String key) {
       List table = new ArrayList();
+      int ix = 0;
       for (ListIterator iter = qlist.listIterator(); iter.hasNext();) {
-	Request req = (Request)iter.next();
-	Map row = new HashMap();
-	row.put("au", req.urlset.getArchivalUnit().getName());
-	row.put("cus", req.urlset);
-	row.put("deadline", req.deadline.getExpiration());
-	row.put("estimate", new Long(req.origEst));
-	row.put("timeused", new Long(req.timeUsed));
-	table.add(row);
+	table.add(makeRow((Request)iter.next(), false, ix));
+      }
+      for (ListIterator iter = completed.listIterator(); iter.hasNext();) {
+	table.add(makeRow((Request)iter.next(), true, 0));
       }
       return table;
+    }
+
+    private Map makeRow(Request req, boolean done, int qpos) {
+      Map row = new HashMap();
+      ReqState state = (done ? REQ_STATE_DONE :
+		      (req == head()) ? REQ_STATE_DONE : REQ_STATE_WAIT);
+      row.put("sort", new Integer(done ? -req.finish : qpos));
+      row.put("sched", new Integer(req.sched));
+//       row.put("finish", new Integer(req.finish));
+      row.put("state", getState(req, done));
+      row.put("au", req.urlset.getArchivalUnit().getName());
+      row.put("cus", req.urlset.getSpec());
+      row.put("type", req.type);
+      row.put("deadline", req.deadline.getExpiration());
+      row.put("estimate", new Long(req.origEst));
+      row.put("timeused", new Long(req.timeUsed));
+      row.put("bytesHashed", new Long(req.bytesHashed));
+      return row;
+    }
+
+    private ReqState getState(Request req, boolean done) {
+      if (req.overrun()) {
+	return (done ? REQ_STATE_DONE_O :
+		(req == head()) ? REQ_STATE_DONE_O : REQ_STATE_WAIT_O);
+      } else {
+	return (done ? REQ_STATE_DONE :
+		(req == head()) ? REQ_STATE_DONE : REQ_STATE_WAIT);
+      }
     }
 
     public List getDefaultSortRules(String key) {
@@ -459,8 +541,58 @@ class HashQueue implements Serializable {
      * Returns null
      */
     public List getHeaders(String key) {
-      return null;
+      List res = new ArrayList();
+      res.add(new StatusTable.Header("Total bytes hashed",
+				     ColumnDescriptor.TYPE_INT,
+				     totalBytesHashed));
+      res.add(new StatusTable.Header("Total hash time",
+				     ColumnDescriptor.TYPE_TIME_INTERVAL,
+				     new Long(totalTime)));
+      if (totalTime != 0) {
+	long bpms =
+	  totalBytesHashed.divide(BigInteger.valueOf(totalTime)).intValue();
+	if (bpms < (100 * Constants.SECOND)) {
+	  res.add(new StatusTable.Header("Bytes/ms",
+					 ColumnDescriptor.TYPE_INT,
+					 new Long(bpms)));
+	} else {
+	  res.add(new StatusTable.Header("Bytes/sec",
+					 ColumnDescriptor.TYPE_INT,
+					 new Long(bpms / Constants.SECOND)));
+	}
+      }
+      return res;
     }
   }
 
+  static class ReqState implements Comparable {
+    String name;
+    int order;
+
+    ReqState(String name, int order) {
+      this.name = name;
+      this.order = order;
+    }
+
+    ReqState(String name, int order, boolean red) {
+      this(name, order);
+      if (red) {
+	this.name = "<font color=red>" + this.name + "</font>";
+      }
+    }
+
+    public int compareTo(Object o) {
+      return order - ((ReqState)o).order;
+    }
+    public String toString() {
+      return name;
+    }
+  }
+  static final ReqState REQ_STATE_RUN = new ReqState("Run", 1);
+  static final ReqState REQ_STATE_WAIT = new ReqState("Wait", 2);
+  static final ReqState REQ_STATE_DONE = new ReqState("Done", 3);
+  static final ReqState REQ_STATE_RUN_O = new ReqState("Run", 1, true);
+  static final ReqState REQ_STATE_WAIT_O = new ReqState("Wait", 2, true);
+  static final ReqState REQ_STATE_DONE_O = new ReqState("Done", 3, true);
+    
 }

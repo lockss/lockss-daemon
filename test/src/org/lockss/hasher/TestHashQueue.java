@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.10 2003-03-05 03:26:11 tal Exp $
+ * $Id: TestHashQueue.java,v 1.11 2003-03-19 04:18:55 tal Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class TestHashQueue extends LockssTestCase {
 
   HashQueue.Request simpleReq(long deadlineIn, int duration) {
     return new HashQueue.Request(cus, dig, Deadline.in(deadlineIn),
-				 null, null, null, duration);
+				 null, null, null, duration, null);
   }
 
   HashQueue.Request req(long deadlineIn,
@@ -111,7 +111,7 @@ public class TestHashQueue extends LockssTestCase {
       new HashQueue.Request(cus, dig, Deadline.in(deadlineIn),
 			    callback, cookie,
 			    cus.getContentHasher(dig),
-			    duration);
+			    duration, null);
     return req;
   }
 
@@ -207,8 +207,9 @@ public class TestHashQueue extends LockssTestCase {
     // make r1 timeout
     r1.deadline.expire();
     q.removeCompleted();
-    Object exp[] = {r1};
-    assertIsomorphic(exp, cookieList);
+    List exp = ListUtil.list(r1);
+    assertEquals(exp, cookieList);
+    assertEquals(exp, q.getCompleted());
     // make r2 timeout
     TimeBase.step(11000);
     // r3 is finished
@@ -220,6 +221,7 @@ public class TestHashQueue extends LockssTestCase {
     // check that they all finished, and in the right order
     Object exp2[] = {r1, r2, r3, r4};
     assertIsomorphic(exp2, cookieList);
+    assertIsomorphic(exp2, q.getCompleted());
     // check their exceptions
     assertTrue(eList.get(0) instanceof HashService.Timeout);
     assertTrue(eList.get(1) instanceof HashService.Timeout);

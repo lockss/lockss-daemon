@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.10 2003-03-17 08:27:12 tal Exp $
+ * $Id: HashService.java,v 1.11 2003-03-19 04:18:55 tal Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class HashService implements LockssManager {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    urlset.getContentHasher(hasher),
-			    urlset.estimatedHashDuration());
+			    urlset.estimatedHashDuration(), "C");
     return scheduleReq(req);
   }
 
@@ -161,7 +161,7 @@ public class HashService implements LockssManager {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    // tk - get better duration estimate
-			    urlset.getNameHasher(hasher), 1000);
+			    urlset.getNameHasher(hasher), 1000, "N");
     return scheduleReq(req);
   }
 
