@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.30 2003-05-06 03:08:46 claire Exp $
+* $Id: IdentityManager.java,v 1.31 2003-05-22 01:20:10 tal Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class IdentityManager extends BaseLockssManager {
   public void initService(LockssDaemon daemon) {
     super.initService(daemon);
     localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
-    theLog.error("localIdentityStr: " + localIdentityStr);
+    theLog.debug("localIdentityStr: " + localIdentityStr);
     if (localIdentityStr == null) {
       theLog.error(PARAM_LOCAL_IP +
 		   " is not set - IdentityManager cannot start.");
