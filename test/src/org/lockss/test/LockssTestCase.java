@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.14 2002-12-12 20:50:39 tal Exp $
+ * $Id: LockssTestCase.java,v 1.15 2002-12-13 02:23:56 tal Exp $
  */
 
 /*
@@ -290,7 +290,6 @@ public class LockssTestCase extends TestCase {
     fail(formatted+"expected:<"+expected+"> but was:<"+actual+">");
   }
 
-  // tk do a better job of printing collections
   static private void failNotEquals(String message,
 				    int[] expected, int[] actual) {
     String formatted= "";
@@ -317,8 +316,10 @@ public class LockssTestCase extends TestCase {
     String formatted= "";
     if (message != null)
       formatted= message+" ";
-    fail(formatted+"expected:<"+arrayString(expected)+
-	 "> but was:<"+arrayString(actual)+">");
+    fail(formatted+"expected:<"+ByteArray.toHexString(expected)+
+	 "> but was:<"+ByteArray.toHexString(actual)+">");
+//      fail(formatted+"expected:<"+arrayString(expected)+
+//  	 "> but was:<"+arrayString(actual)+">");
   }
 
   static protected Object[] objArray(byte[] a) {
