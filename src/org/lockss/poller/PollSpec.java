@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.17 2003-09-26 23:50:40 eaalto Exp $
+ * $Id: PollSpec.java,v 1.18 2003-10-31 18:34:30 dshr Exp $
  */
 
 /*
@@ -40,6 +40,12 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.app.*;
+
+/**
+ * <p>Class implementing the concept of the set of URLs covered by a poll.</p>
+ * @author Claire Griffin
+ * @version 1.0
+ */
 
 public class PollSpec {
   /**

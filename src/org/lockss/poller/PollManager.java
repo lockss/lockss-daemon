@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.114 2003-09-26 23:50:39 eaalto Exp $
+* $Id: PollManager.java,v 1.115 2003-10-31 18:34:30 dshr Exp $
  */
 
 /*
@@ -49,6 +49,12 @@ import org.lockss.hasher.HashService;
 import org.lockss.repository.LockssRepository;
 import org.lockss.daemon.status.*;
 import org.lockss.state.*;
+
+/**
+ * <p>Class that manages the polling process.</p>
+ * @author Claire Griffin
+ * @version 1.0
+ */
 
 public class PollManager  extends BaseLockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +

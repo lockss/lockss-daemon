@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.2 2003-06-30 23:09:09 clairegriffin Exp $
+ * $Id: V1NamePoll.java,v 1.3 2003-10-31 18:34:30 dshr Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 /**
+ * <p>Implements a version one name poll.</p>
  * @author Claire Griffin
  * @version 1.0
  */

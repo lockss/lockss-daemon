@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.6 2003-10-17 22:49:05 clairegriffin Exp $
+* $Id: V1Poll.java,v 1.7 2003-10-31 18:34:30 dshr Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.daemon.status.*;
 
 
 /**
- * <p>Abstract base class for all poll objects.</p>
+ * <p>Abstract base class for all version one poll objects.</p>
  * @author Claire Griffin
  * @version 1.0
  */
