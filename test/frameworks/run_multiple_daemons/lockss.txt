@@ -9,6 +9,17 @@ org.lockss.log.MSock_3456_Rcv.level=debug
 org.lockss.log.USock_9001_Rcv.level=debug
 org.lockss.log.USock_9000_Rcv.level=debug
 
+#au config settings
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin./tmp/localA.root=./
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.depth=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.branch=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.numFiles=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.binFileSize=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.maxFileName=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.fileTypes=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileLoc=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileNum=<n>
+
 #lockss repository settings
 org.lockss.cache.location=./
 
@@ -20,12 +31,12 @@ org.lockss.parameterReloadInterval = 600000
 #org.lockss.hasher.stepBytes
 
 #identity manager settings
-org.lockss.id.databaseDir=/tmp/iddb
-org.lockss.id.mappingFile=/tmp/iddb
+org.lockss.id.database.dir=/tmp/iddb
+org.lockss.id.mapping.file=../map
 
 #lockss state settings
-org.lockss.history.location=/tmp/rep
-org.lockss.history.mapping.file=/tmp/rep/pollmapping.xml
+org.lockss.history.location=./history
+org.lockss.history.mapping.file=../map/pollmapping.xml
 
 
 #comm settings
@@ -44,7 +55,6 @@ org.lockss.poll.maxpolls=12
 org.lockss.poll.quorum=3
 org.lockss.poll.agreeVerify=20
 org.lockss.poll.disagreeVerify=90
-org.lockss.poll.type=2
 org.lockss.votedelay=300000
 org.lockss.voterange=50000
 

@@ -4,5 +4,19 @@ org.lockss.comm.unicast.sendToPort=9000
 org.lockss.comm.unicast.sendToAddr=127.0.0.1
 
 org.lockss.cache.location=.
-org.lockss.shouldCallPoll=false
 
+#au config settings
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileLoc=<n>
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileNum=<n>
+
+#test settings
+org.lockss.test.treewalk=true
+org.lockss.treewalk.auId=/tmp/localA
+
+org.lockss.test.poll=false
+org.lockss.poll.type=2
+org.lockss.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
+org.lockss.pollspec.auId=/tmp/localA
+org.lockss.pollspec.url=LOCKSSAU:
+#org.lockss.pollspec.lwrBound=
+#org.lockss.pollspec.uprBound=
