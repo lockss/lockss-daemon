@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.20 2004-03-06 00:38:35 troberts Exp $
+ * $Id: MockCachedUrl.java,v 1.21 2004-03-09 23:37:52 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.Properties;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import java.math.BigInteger;
@@ -49,7 +50,7 @@ public class MockCachedUrl implements CachedUrl {
   private CachedUrlSet cus;
   private String url;
   private InputStream cachedIS;
-  private Properties cachedProp;
+  private CIProperties cachedProp;
 
   private boolean doesExist = false;
   private String content = null;
@@ -126,13 +127,13 @@ public class MockCachedUrl implements CachedUrl {
   }
 
 
-  public Properties getProperties(){
+  public CIProperties getProperties(){
     return cachedProp;
   }
 
     // Write interface - used by the crawler.
 
-  public void storeContent(InputStream input, Properties headers)
+  public void storeContent(InputStream input, CIProperties headers)
       throws IOException {
     cachedIS = input;
     cachedProp = headers;
@@ -148,7 +149,7 @@ public class MockCachedUrl implements CachedUrl {
     this.content = content;
   }
 
-  public void setProperties(Properties prop){
+  public void setProperties(CIProperties prop){
     cachedProp = prop;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.13 2004-03-09 23:24:52 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.14 2004-03-09 23:37:53 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class GoslingHtmlParser implements ContentParser {
   }
 
   private static String getRedirectedTo(CachedUrl cu) {
-    Properties props = cu.getProperties();
+    CIProperties props = cu.getProperties();
     if (props != null) {
       return (String)props.get(CachedUrl.PROPERTY_REDIRECTED_TO);
     }

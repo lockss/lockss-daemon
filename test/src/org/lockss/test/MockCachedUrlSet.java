@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.46 2004-03-08 19:32:35 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.47 2004-03-09 23:37:52 tlipkis Exp $
  */
 
 /*
@@ -271,17 +271,17 @@ public class MockCachedUrlSet implements CachedUrlSet {
    * @param url url for which we should set up a CachedUrl and UrlCacher
    * @param exists whether this url should act like it's already in the cache
    * @param shouldCache whether this url should say to cache it or not
-   * @param props Properties to be associated with this url
+   * @param props CIProperties to be associated with this url
    */
   public void addUrl(String url,
 		     boolean exists, boolean shouldCache,
-		     Properties props) {
+		     CIProperties props) {
     addUrl(url, exists, shouldCache, props, null, 0);
   }
 
   private void addUrl(String url,
 		      boolean exists, boolean shouldCache,
-		      Properties props, Exception cacheException,
+		      CIProperties props, Exception cacheException,
 		      int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url, this);
 //     cu.setContent(source);
@@ -320,7 +320,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
    */
   public void addUrl(String url,
 		     Exception cacheException, int timesToThrow) {
-    addUrl(url, false, true, new Properties(),
+    addUrl(url, false, true, new CIProperties(),
 	   cacheException, timesToThrow);
   }
 
@@ -336,7 +336,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   public void addUrl(String url,
 		     boolean exists, boolean shouldCache) {
-    Properties props = new Properties();
+    CIProperties props = new CIProperties();
     props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     addUrl(url, exists, shouldCache, props);
   }

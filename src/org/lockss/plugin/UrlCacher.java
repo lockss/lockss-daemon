@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.8 2004-03-07 08:35:38 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.9 2004-03-09 23:37:53 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.util.Properties;
 
 import org.lockss.daemon.*;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 /**
@@ -110,13 +111,13 @@ public interface UrlCacher {
 
   /**
    * Gets the Properties for this URL, if any.
-   * @return the {@link Properties}
+   * @return the {@link CIProperties}
    * @throws IOException
    */
-  public Properties getUncachedProperties() throws IOException;
+  public CIProperties getUncachedProperties() throws IOException;
 
 
-  public void storeContent(InputStream input, Properties headers)
+  public void storeContent(InputStream input, CIProperties headers)
       throws IOException;
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.8 2004-03-08 19:32:36 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.9 2004-03-09 23:37:53 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 import java.io.*;
-import java.util.Properties;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -124,10 +123,10 @@ public class BaseCachedUrl implements CachedUrl {
     ensureLeafLoaded();
     return leaf.getNodeContents().reader;
   }
-
-  public Properties getProperties() {
+ 
+ public CIProperties getProperties() {
     ensureLeafLoaded();
-    return leaf.getNodeContents().props;
+    return CIProperties.fromProperties(leaf.getNodeContents().props);
   }
 
   public byte[] getUnfilteredContentSize() {
@@ -152,7 +151,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   private InputStream getFilteredStream() {
     ArchivalUnit au = getArchivalUnit();
-    Properties props = getProperties();
+    CIProperties props = getProperties();
     String mimeType = props.getProperty(PROPERTY_CONTENT_TYPE);
     FilterRule fr = au.getFilterRule(mimeType);
     if (fr != null) {

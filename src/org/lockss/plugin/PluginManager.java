@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.73 2004-03-05 02:14:55 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.74 2004-03-09 23:37:53 tlipkis Exp $
  */
 
 /*
@@ -720,8 +720,8 @@ public class PluginManager extends BaseLockssManager {
   // tk - no date available for comparison yet, return arbitrary order
   private boolean cuNewerThan(CachedUrl cu1, CachedUrl cu2) {
     if (cu2 == null) return true;
-    Properties p1 = cu1.getProperties();
-    Properties p2 = cu2.getProperties();
+    CIProperties p1 = cu1.getProperties();
+    CIProperties p2 = cu2.getProperties();
     // tk - this should use the crawl-date prop taht the crawler will add
 //     Long.parseLong(p1.getProperty(HttpFields.__LastModified, "-1"));
     return true;

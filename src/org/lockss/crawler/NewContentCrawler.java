@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.9 2004-03-08 19:32:37 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.10 2004-03-09 23:37:53 tlipkis Exp $
  */
 
 /*
@@ -269,7 +269,7 @@ public class NewContentCrawler extends CrawlerImpl {
   }
 
   private ContentParser getContentParser(CachedUrl cu) {
-    Properties props = cu.getProperties();
+    CIProperties props = cu.getProperties();
     ArchivalUnit au = cu.getArchivalUnit();
     if (props != null) {
       String contentType = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);

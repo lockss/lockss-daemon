@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.14 2004-03-07 08:43:46 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.15 2004-03-09 23:37:52 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -48,8 +49,8 @@ public class MockUrlCacher implements UrlCacher {
   private String url;
   private InputStream cachedIS;
   private InputStream uncachedIS;
-  private Properties cachedProp;
-  private Properties uncachedProp;
+  private CIProperties cachedProp;
+  private CIProperties uncachedProp;
 
   private boolean shouldBeCached = false;
   private IOException cachingException = null;
@@ -121,14 +122,14 @@ public class MockUrlCacher implements UrlCacher {
     return cachedIS;
   }
 
-  public Properties getProperties(){
+  public CIProperties getProperties(){
     return cachedProp;
   }
 
     // Write interface - used by the crawler.
 
   public void storeContent(InputStream input,
-			   Properties headers) throws IOException{
+			   CIProperties headers) throws IOException{
     cachedIS = input;
     cachedProp = headers;
   }
@@ -173,7 +174,7 @@ public class MockUrlCacher implements UrlCacher {
     return uncachedIS;
   }
 
-  public Properties getUncachedProperties(){
+  public CIProperties getUncachedProperties(){
     return uncachedProp;
   }
 
@@ -187,11 +188,11 @@ public class MockUrlCacher implements UrlCacher {
     uncachedIS = is;
   }
 
-  public void setCachedProperties(Properties prop){
+  public void setCachedProperties(CIProperties prop){
     cachedProp = prop;
   }
 
-  public void setUncachedProperties(Properties prop){
+  public void setUncachedProperties(CIProperties prop){
     uncachedProp = prop;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.7 2004-03-06 00:38:35 troberts Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.8 2004-03-09 23:37:52 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties props = new Properties();
+    CIProperties props = new CIProperties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
@@ -203,14 +203,14 @@ public class TestBaseCachedUrl extends LockssTestCase {
    }
 
    public void testGetProperties() throws Exception {
-     Properties newProps = new Properties();
+     CIProperties newProps = new CIProperties();
      newProps.setProperty("test", "value");
      newProps.setProperty("test2", "value2");
      createLeaf("http://www.example.com/testDir/leaf1", null, newProps);
 
      CachedUrl url =
        plugin.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
-     Properties urlProps = url.getProperties();
+     CIProperties urlProps = url.getProperties();
      assertEquals("value", urlProps.getProperty("test"));
      assertEquals("value2", urlProps.getProperty("test2"));
    }
@@ -227,7 +227,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
    }
 
    private RepositoryNode createLeaf(String url, String content,
-                                     Properties props) throws Exception {
+                                     CIProperties props) throws Exception {
      return TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
    }
 
@@ -271,11 +271,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
    private class MyCachedUrl
        extends BaseCachedUrl {
      private boolean gotUnfilteredStream = false;
-     private Properties props = new Properties();
+     private CIProperties props = new CIProperties();
 
      public MyCachedUrl() {
        super(null, null);
-       props.setProperty("content-type", "text/html");
+       props.setProperty(PROPERTY_CONTENT_TYPE, "text/html");
      }
 
      public ArchivalUnit getArchivalUnit() {
@@ -299,11 +299,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
        return new StringReader("Test");
      }
 
-     public Properties getProperties() {
+     public CIProperties getProperties() {
        return props;
      }
 
-     public void setProperties(Properties props) {
+     public void setProperties(CIProperties props) {
        this.props = props;
      }
 
