@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.2 2002-10-08 01:08:31 tal Exp $
+ * $Id: Plugin.java,v 1.3 2002-10-08 01:58:43 tal Exp $
  */
 
 /*
@@ -87,17 +87,17 @@ public class Plugin {
     return null;
   }
 
-  /**
-   * Find or create a <code>CachedUrlSet</code> representing the content
-   * specified by the URL and pattern.
-   * @param url 
-   * @param regex
-   */
-  public static CachedUrlSet findCachedUrlSet(String url, String regex) {
-    ArchivalUnit au = findArchivalUnit(url);
-    if (au == null) {
-      return null;
-    }
-    return au.makeCachedUrlSet(url, regex);
-  }
+//    /**
+//     * Find or create a <code>CachedUrlSet</code> representing the content
+//     * specified by the URL and pattern.
+//     * @param url 
+//     * @param regex
+//     */
+//    public static CachedUrlSet findCachedUrlSet(String url, String regex) {
+//      ArchivalUnit au = findArchivalUnit(url);
+//      if (au == null) {
+//        return null;
+//      }
+//      return au.makeCachedUrlSet(url, regex);
+//    }
 }
