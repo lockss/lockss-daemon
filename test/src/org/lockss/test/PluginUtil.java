@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.2 2003-04-04 08:40:01 tal Exp $
+ * $Id: PluginUtil.java,v 1.3 2003-04-10 21:56:00 tal Exp $
  */
 
 /*
@@ -47,6 +47,48 @@ public class PluginUtil {
   static Logger log = Logger.getLogger("PluginUtil");
   static List aulist = new LinkedList();
 
+  public static void registerArchivalUnit(Plugin plug, ArchivalUnit au) {
+    PluginManager mgr = getPluginManager();
+    log.debug3(mgr.toString());
+    String plugid = au.getPluginId();
+    log.debug("registerArchivalUnit plugin = " + plug +
+	      "au = " + au);
+    if (plug != mgr.getPlugin(plugid)) {
+      try {
+	PrivilegedAccessor.invokeMethod(mgr, "setPlugin",
+					ListUtil.list(plugid, plug).toArray());
+      } catch (Exception e) {
+	log.error("Couldn't register AU", e);
+	throw new RuntimeException(e.toString());
+      }
+    }
+    PluginTestable tp = (PluginTestable)plug;
+    tp.registerArchivalUnit(au);
+    try {
+      PrivilegedAccessor.invokeMethod(mgr, "putAuMap",
+				      ListUtil.list(plug, au).toArray());
+    } catch (Exception e) {
+      log.error("Couldn't register AU", e);
+      throw new RuntimeException(e.toString());
+    }
+    aulist.add(au);
+  }
+
+  public static void registerArchivalUnit(ArchivalUnit au) {
+    PluginManager mgr = getPluginManager();
+    String plugid = au.getPluginId();
+    Plugin plug = mgr.getPlugin(plugid);
+    log.debug("registerArchivalUnit id = " + au.getAUId() +
+	      ", pluginid = " + plugid + ", plugin = " + plug);
+    if (plug == null) {
+      MockPlugin mp = new MockPlugin();
+      mp.setPluginId(plugid);
+      plug = mp;
+    }
+    registerArchivalUnit(plug, au);
+  }
+
+  /*
   public static void registerArchivalUnit(ArchivalUnit au) {
     PluginManager mgr = getPluginManager();
     log.debug(mgr.toString());
@@ -77,7 +119,7 @@ public class PluginUtil {
     }
     aulist.add(au);
   }
-
+  */
   public static void unregisterArchivalUnit(ArchivalUnit au) {
     PluginManager mgr = getPluginManager();
     String plugid = au.getPluginId();
