@@ -1,5 +1,5 @@
 /*
- * $Id: FuncClock.java,v 1.3 2005-01-26 01:11:07 tlipkis Exp $
+ * $Id: FuncClock.java,v 1.3.2.1 2005-01-26 01:14:44 tlipkis Exp $
  */
 
 /*
