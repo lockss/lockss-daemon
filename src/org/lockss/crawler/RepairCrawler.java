@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.15 2004-03-09 23:39:00 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.16 2004-03-10 22:20:13 troberts Exp $
  */
 
 /*
@@ -206,12 +206,12 @@ public class RepairCrawler extends CrawlerImpl {
 
     logger.debug("Trying to fetch from "+id);
     uc.storeContent(conn.getResponseInputStream(),
-		    getPropertiesFromConn(conn, uc.getUrl()));
+		    getPropertiesFromConn(conn, uc.getUrl(), id));
   }
 
   // XXX fix this to use BaseUrlCacher
   private CIProperties getPropertiesFromConn(LockssUrlConnection conn,
-					     String url)
+					     String url, String id)
       throws IOException {
     CIProperties props = new CIProperties();
     // set header properties in which we have interest
@@ -220,6 +220,7 @@ public class RepairCrawler extends CrawlerImpl {
     props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
 		      Long.toString(TimeBase.nowMs()));
     props.setProperty(CachedUrl.PROPERTY_ORIG_URL, url);
+    props.setProperty(CachedUrl.PROPERTY_REPAIR_FROM, id);
     conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
     String actualURL = conn.getActualUrl();
     if (!url.equals(actualURL)) {
