@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.159 2003-12-23 00:26:14 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.160 2004-01-08 20:06:56 tlipkis Exp $
  */
 
 /*
@@ -865,8 +865,8 @@ public class NodeManagerImpl
       throws IOException {
     // only log when in treewalk (once) or updating results
     if ((reportOnly) || (results!=null)) {
-      logger.debug2("Checking node: " + nodeState.getCachedUrlSet().getUrl());
-      logger.debug2("State: " + nodeState.getStateString());
+      logger.debug3("Checking node: " + nodeState.getCachedUrlSet().getUrl());
+      logger.debug3("State: " + nodeState.getStateString());
     }
     switch (nodeState.getState()) {
       case NodeState.NEEDS_POLL:
