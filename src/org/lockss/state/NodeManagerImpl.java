@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.135 2003-06-12 01:07:19 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.136 2003-06-18 01:26:21 aalto Exp $
  */
 
 /*
@@ -508,15 +508,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * Handles the lists of correct names and local entries.  Schedules repairs,
    * deletes extra entries, creates missing nodes.
    * @param masterIt the master iterator of entries
-   * @param localSet the Set of local entries
+   * @param localList the List of local entries
    * @param nodeState the NodeState
    * @param results the PollTally
    * @return true iff a repair was scheduled
    */
-  boolean handleWrongNames(Iterator masterIt, Set localSet, NodeState nodeState,
+  boolean handleWrongNames(Iterator masterIt, List localList, NodeState nodeState,
                            PollTally results) {
-    ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
-    String baseUrl = nodeState.getCachedUrlSet().getUrl();
     // iterate through master list
     boolean repairMarked = false;
     while (masterIt.hasNext()) {
@@ -526,24 +524,49 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       boolean hasContent = entry.hasContent;
       logger.debug3("checking " + url + ", hasContent=" + hasContent);
       // compare against my list
-      if (localSet.contains(entry)) {
+      int index = localList.indexOf(entry);
+      if (index != -1) {
+        logger.debug3("found entry, assessing content: " + url);
+        PollTally.NameListEntry myEntry =
+            (PollTally.NameListEntry)localList.get(index);
+        if (myEntry.hasContent != entry.hasContent) {
+          if (myEntry.hasContent) {
+            // has content and shouldn't, so deactivate
+            logger.debug("deactivating extra content at node: " + url);
+            try {
+              CachedUrlSet faultyCus = getChildCus(url, nodeState);
+              deactivateNode(faultyCus);
+            } catch (Exception e) {
+              logger.error("Couldn't deactivate node.", e);
+              // the treewalk will fix this eventually
+            }
+          } else {
+            // doesn't have content, and should, so repair
+            logger.debug("marking content-less node for repair: " + url);
+            CachedUrlSet faultyCus = getChildCus(url, nodeState);
+            if (!repairMarked) {
+              // run a repair crawl
+              markNodeForRepair(faultyCus, results.getPollKey());
+              // only try one repair per poll
+              //XXX instead, allow multi-URL repair crawls and schedule one
+              // from a list of repairs
+              repairMarked = true;
+            } else {
+              logger.debug("Skipping repair crawl on '" + faultyCus.getUrl() +
+                            "' due to limit of one repair per poll.");
+            }
+          }
+        } else {
+          logger.debug3("content matches");
+        }
         // removing from the set to leave only files for deletion
-        logger.debug3("removing entry: " + url);
-        localSet.remove(entry);
+        logger.debug3("removing entry...");
+        localList.remove(index);
       } else {
         // if not found locally, fetch
         logger.debug("marking missing node for repair: " + url);
-        String childUrl;
-        if (AuUrl.isAuUrl(baseUrl)) {
-          // don't append AU url
-          childUrl = url;
-        } else {
-          // append base url
-          childUrl = baseUrl + url;
-        }
+        CachedUrlSet newCus = getChildCus(url, nodeState);
 
-        CachedUrlSet newCus =
-            au.makeCachedUrlSet(new RangeCachedUrlSetSpec(childUrl));
         // check content status, and only mark for repair if
         // should have content.  Else just create in repository.
         if (hasContent) {
@@ -556,7 +579,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             // from a list of repairs
             repairMarked = true;
           } else {
-            logger.debug("Skipping repair crawl on '" + childUrl +
+            logger.debug("Skipping repair crawl on '" + newCus.getUrl() +
                           "' due to limit of one repair per poll.");
           }
         } else {
@@ -572,24 +595,17 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         }
       }
     }
-    Iterator localIt = localSet.iterator();
+
+    // check for deletion
+    Iterator localIt = localList.iterator();
     while (localIt.hasNext()) {
       // for extra items - deletion
       PollTally.NameListEntry entry =
           (PollTally.NameListEntry) localIt.next();
       String url = entry.name;
-      String childUrl;
-      if (AuUrl.isAuUrl(baseUrl)) {
-        // don't append AU url
-        childUrl = url;
-      } else {
-        // append base url
-        childUrl = baseUrl + url;
-      }
       try {
-        CachedUrlSet extraCus = au.makeCachedUrlSet(
-            new RangeCachedUrlSetSpec(childUrl));
-        logger.debug2("deleting node: " + url);
+        CachedUrlSet extraCus = getChildCus(url, nodeState);
+        logger.debug("deleting node: " + url);
         deleteNode(extraCus);
         //set crawl status to DELETED
         logger.debug3("marking node: " + url + " deleted.");
@@ -601,6 +617,20 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       }
     }
     return repairMarked;
+  }
+
+  private CachedUrlSet getChildCus(String url, NodeState nodeState) {
+    ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
+    String baseUrl = nodeState.getCachedUrlSet().getUrl();
+    String childUrl;
+    if (AuUrl.isAuUrl(baseUrl)) {
+      // don't append AU url
+      childUrl = url;
+    } else {
+      // append base url
+      childUrl = baseUrl + url;
+    }
+    return au.makeCachedUrlSet(new RangeCachedUrlSetSpec(childUrl));
   }
 
   void handleContentPoll(PollState pollState, PollTally results,
@@ -887,8 +917,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           if (results!=null) {
             logger.debug2("repairing name list");
             Iterator masterIt = results.getCorrectEntries();
-            Set localSet = createUrlSetFromCusIterator(results.getLocalEntries());
-            boolean repairMarked = handleWrongNames(masterIt, localSet, nodeState,
+            List localList = createUrlListFromCusIterator(results.getLocalEntries());
+            boolean repairMarked = handleWrongNames(masterIt, localList, nodeState,
                 results);
             if (!repairMarked) {
               lastOrCurrentPoll.status = PollState.REPAIRED;
@@ -1276,6 +1306,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     repository.deleteNode(cus.getUrl());
   }
 
+  private void deactivateNode(CachedUrlSet cus) throws IOException {
+    // deactivate the node from the LockssRepository
+    LockssRepository repository = theDaemon.getLockssRepository(managedAu);
+    repository.deactivateNode(cus.getUrl());
+  }
+
   private void callContentPollsOnSubNodes(NodeState state, CachedUrlSet cus)
       throws IOException {
     Iterator children = cus.flatSetIterator();
@@ -1428,12 +1464,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     }
   }
 
-  private Set createUrlSetFromCusIterator(Iterator cusIt) {
-    Set set = new HashSet();
+  private List createUrlListFromCusIterator(Iterator cusIt) {
+    List list = new ArrayList();
     while (cusIt.hasNext()) {
-      set.add(cusIt.next());
+      list.add(cusIt.next());
     }
-    return set;
+    return list;
   }
 
   boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type, int status) {

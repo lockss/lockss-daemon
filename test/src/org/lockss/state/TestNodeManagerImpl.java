@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.86 2003-06-12 01:07:19 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.87 2003-06-18 01:26:21 aalto Exp $
  */
 
 /*
@@ -615,7 +615,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
   public void testHandleWrongNames() throws Exception {
     Vector masterV = new Vector();
-    Set localS = new HashSet();
+    List localL = new ArrayList();
     String sharedUrl = "/test";
     String repairUrl = "/test2";
     String repairUrl2 = "/test3";
@@ -626,7 +626,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     PollTally.NameListEntry entry = new PollTally.NameListEntry(false,
         sharedUrl);
     masterV.addElement(entry);
-    localS.add(entry);
+    localL.add(entry);
     entry = new PollTally.NameListEntry(true, repairUrl);
     masterV.addElement(entry);
     entry = new PollTally.NameListEntry(true, repairUrl2);
@@ -635,9 +635,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     masterV.addElement(entry);
     entry = new PollTally.NameListEntry(true, sharedUrl2);
     masterV.addElement(entry);
-    localS.add(entry);
+    localL.add(entry);
     entry = new PollTally.NameListEntry(true, deleteUrl);
-    localS.add(entry);
+    localL.add(entry);
 
     NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
     namePoll = createPoll(TEST_URL, false, true, 15, 5);
@@ -650,7 +650,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertNull(theDaemon.getLockssRepository(mau).getNode(TEST_URL +
         createUrl));
 
-    assertTrue(nodeManager.handleWrongNames(masterV.iterator(), localS,
+    assertTrue(nodeManager.handleWrongNames(masterV.iterator(), localL,
                                             nodeState, results));
     // first repair scheduled
     assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(
