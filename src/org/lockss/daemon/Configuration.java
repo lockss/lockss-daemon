@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.54 2003-07-28 17:24:27 tlipkis Exp $
+ * $Id: Configuration.java,v 1.55 2003-09-03 18:00:37 tlipkis Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public abstract class Configuration {
    * @return a copy
    */
   public Configuration copy() {
-    Configuration copy = new ConfigurationPropTreeImpl();
+    Configuration copy = ConfigManager.newConfiguration();
     for (Iterator iter = keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       copy.put(key, get(key));
