@@ -52,6 +52,10 @@ in this Software without prior written authorization from Stanford University.
 
 
 public class TestCrawler extends TestCase{
+  public static Class testedClasses[] = {
+    org.lockss.crawler.Crawler.class
+  };
+
   public TestCrawler(String msg){
     super(msg);
   }
