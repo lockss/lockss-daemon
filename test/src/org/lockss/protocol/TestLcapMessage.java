@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.3 2002-12-17 21:09:05 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.4 2003-01-10 23:03:33 claire Exp $
  */
 
 /*
@@ -84,7 +84,6 @@ public class TestLcapMessage extends TestCase {
     testmsg.m_multicast = false;
     testmsg.m_hopCount = 2;
 
-    testmsg.m_group = testaddr;
     testmsg.m_ttl = 5;
     testmsg.m_challenge = testbytes;
     testmsg.m_verifier = testbytes;
@@ -117,7 +116,6 @@ public class TestLcapMessage extends TestCase {
     }
 
     // now test to see if we got back what we expected
-    assertTrue(rep_msg.m_group.getHostAddress().equals(testaddr.getHostAddress()));
     assertTrue(rep_msg.m_originID.isEqual(testID));
     assertEquals(rep_msg.m_ttl,5);
     assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
@@ -139,8 +137,6 @@ public class TestLcapMessage extends TestCase {
       req_msg = LcapMessage.makeRequestMsg(urlstr,
 					   regexp,
 					   testentries,
-					   testaddr,
-					   (byte)5,
 					   testbytes,
 					   testbytes,
 					   LcapMessage.CONTENT_POLL_REQ,
@@ -151,12 +147,8 @@ public class TestLcapMessage extends TestCase {
       fail("message request creation failed.");
     }
     assertTrue(req_msg.m_originID.isEqual(testID));
-    assertTrue(req_msg.m_group.getHostAddress().equals(testaddr.getHostAddress()));
-    assertEquals(req_msg.m_ttl,5);
     assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
     assertEquals(req_msg.m_multicast ,false);
-    assertEquals(req_msg.m_hopCount,5);
-
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));
     assertTrue(Arrays.equals(req_msg.m_hashed,new byte[0]));
@@ -177,7 +169,6 @@ public class TestLcapMessage extends TestCase {
     try {
       LcapMessage msg = new LcapMessage(msgbytes);
       // now test to see if we got back what we started with
-      assertTrue(msg.m_group.getHostAddress().equals(testaddr.getHostAddress()));
       assertTrue(msg.m_originID.isEqual(testmsg.m_originID));
       assertEquals(msg.m_ttl,5);
       assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
@@ -205,9 +196,6 @@ public class TestLcapMessage extends TestCase {
     byte[] msgbytes = testmsg.encodeMsg();
     new LcapMessage(msgbytes);
   }
-
-
-
 
   /** Executes the test case */
   public static void main(String[] argv) {

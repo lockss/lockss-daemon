@@ -57,8 +57,6 @@ public class TestPollManager extends TestCase {
           rooturls[i],
           regexp,
           testentries,
-          testaddr,
-          (byte)5,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),
@@ -118,7 +116,7 @@ public class TestPollManager extends TestCase {
   public void testMakePollRequest() {
     try {
       pollmanager.makePollRequest(urlstr,regexp,LcapMessage.VERIFY_POLL_REQ,
-                                  (byte)5,testaddr,testduration, 10000);
+                                  testduration);
     }
     catch (IllegalStateException e) {
       // ignore this for now
@@ -177,8 +175,6 @@ public class TestPollManager extends TestCase {
           urlstr,
           regexp,
           testentries,
-          testaddr,
-          (byte)5,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
           LcapMessage.NAME_POLL_REQ + (i * 2),

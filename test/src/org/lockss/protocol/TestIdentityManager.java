@@ -40,8 +40,6 @@ public class TestIdentityManager extends TestCase {
       testMsg = LcapMessage.makeRequestMsg(urlstr,
                                            regexp,
                                            testentries,
-                                           testAddress,
-                                           (byte)5,
                                            testbytes,
                                            testbytes,
                                            LcapMessage.CONTENT_POLL_REQ,

@@ -57,8 +57,6 @@ public class TestPoll extends TestCase {
         rooturls[i],
         regexp,
         testentries,
-        testaddr,
-        (byte)5,
         pollmanager.generateRandomBytes(),
         pollmanager.generateRandomBytes(),
         LcapMessage.NAME_POLL_REQ + (i * 2),
