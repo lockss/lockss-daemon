@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: ProbabilisticTimer.java,v 1.2 2002-09-02 04:14:16 tal Exp $
+// $Id: ProbabilisticTimer.java,v 1.3 2002-09-09 20:31:08 tal Exp $
 // ========================================================================
 
 /*
@@ -40,24 +40,24 @@ import java.text.DateFormat;
 public class ProbabilisticTimer {
   static Random random = null;
   Date expiration;
-  private long delay;			// only for testing
+  private long duration;			// only for testing
   Thread thread;
 
-  /** Return a timer whose duration is delay. */
-  public ProbabilisticTimer(long delay) {
-    this(delay, 0.0);
+  /** Return a timer with the specified duration. */
+  public ProbabilisticTimer(long duration) {
+    this(duration, 0.0);
   }
 
-  /** Return a timer whose duration is a
-   * random, normally distrubuted value whose mean is <code>delay</code>
-   * and standard deviation <code>stddev</code>.
+  /** Return a timer whose duration is a random, normally distrubuted value
+   * whose mean is <code>meanDuration</code> and standard deviation
+   * <code>stddev</code>.
    */
-  public ProbabilisticTimer(long delay, double stddev) {
+  public ProbabilisticTimer(long meanDuration, double stddev) {
     if (random == null) {
       initialize();
     }
-    this.delay = delay + (long)(stddev * random.nextGaussian());
-    expiration = new Date(now().getTime() + delay);
+    duration = meanDuration + (long)(stddev * random.nextGaussian());
+    expiration = new Date(now().getTime() + duration);
   }
 
   private static Date now() {
@@ -69,8 +69,8 @@ public class ProbabilisticTimer {
   }
 
   /** For testing only. */
-  long getDelay() {
-    return delay;
+  long getDuration() {
+    return duration;
   }
 
   /** Return the absolute expiration time, in milliseconds */
@@ -160,6 +160,6 @@ public class ProbabilisticTimer {
 
   public String toString() {
     DateFormat df = DateFormat.getTimeInstance();
-    return "[Timeout at " + df.format(expiration) + "]";
+    return "[Timeout " + duration + " at " + df.format(expiration) + "]";
   }
 }
