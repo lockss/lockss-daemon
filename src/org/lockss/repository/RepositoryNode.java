@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.17 2004-04-06 07:30:51 tlipkis Exp $
+ * $Id: RepositoryNode.java,v 1.18 2004-04-19 02:18:36 tlipkis Exp $
  */
 
 /*
@@ -204,8 +204,8 @@ public interface RepositoryNode {
    * RepositoryNodeContents is used to obtain Properties and InputStream.
    * This is intended to ensure props and stream reflect a consistent view
    * of a single version, but see the comments in
-   * RepositoryNodeImpl#RepositoryNodeContentsImpl.
-   * @see RepositoryNodeImpl#RepositoryNodeContentsImpl
+   * RepositoryNodeImpl.RepositoryNodeContentsImpl.
+   * @see RepositoryNodeImpl.RepositoryNodeContentsImpl
    */
   public interface RepositoryNodeContents {
     /** Return an InputStream */

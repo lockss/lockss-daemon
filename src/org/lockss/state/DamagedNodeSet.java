@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.6 2004-04-01 02:44:31 eaalto Exp $
+ * $Id: DamagedNodeSet.java,v 1.7 2004-04-19 02:18:36 tlipkis Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class DamagedNodeSet {
   }
 
   /**
-   * Accessor for marshalling the repair map.  Converts to {@link ExtMapbean}.
+   * Accessor for marshalling the repair map.  Converts to {@link ExtMapBean}.
    * @return ExtMapBean the map bean
    */
   public ExtMapBean getRepairNodeBean() {
