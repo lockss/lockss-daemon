@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.51 2005-01-27 23:02:48 troberts Exp $
+ * $Id: StringUtil.java,v 1.52 2005-02-18 23:23:06 tlipkis Exp $
  */
 
 /*
@@ -419,6 +419,9 @@ public class StringUtil {
 	break;
       case ',':
 	sb.append("\\,");
+	break;
+      case '=':
+	sb.append("\\=");
 	break;
       default:
 	sb.append(c);
