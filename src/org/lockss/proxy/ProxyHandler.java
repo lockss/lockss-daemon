@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.11 2003-03-01 01:26:18 tal Exp $
+ * $Id: ProxyHandler.java,v 1.12 2003-03-11 23:30:29 tal Exp $
  */
 
 /*
@@ -49,6 +49,10 @@ import org.lockss.app.*;
  *
  */
 public class ProxyHandler extends NullHandler implements LockssManager {
+  // this should be moved, as it applies to both proxy and servlet ports
+  public static final String PARAM_START_NET_SERVERS =
+    Configuration.PREFIX + "startNetServers";
+
   private static LockssDaemon theDaemon = null;
   private static ProxyHandler theManager = null;
   private static PluginManager pluginMgr = null;
@@ -75,8 +79,9 @@ public class ProxyHandler extends NullHandler implements LockssManager {
    */
   public void startService() {
     pluginMgr = theDaemon.getPluginManager();
-    startProxy();
-
+    if (Configuration.getBooleanParam(PARAM_START_NET_SERVERS, true)) {
+      startProxy();
+    }
   }
 
   /**
