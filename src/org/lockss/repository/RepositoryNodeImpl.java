@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.33 2003-09-09 20:35:16 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.34 2003-09-12 00:18:36 eaalto Exp $
  */
 
 /*
@@ -213,8 +213,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       int bufMaxLength = url.length() + child.getName().length() + 1;
       StringBuffer buffer = new StringBuffer(bufMaxLength);
       buffer.append(url);
-      if (!url.endsWith(File.separator)) {
-        buffer.append(File.separator);
+      if (!url.endsWith("/")) {
+        buffer.append('/');
       }
       buffer.append(child.getName());
 
