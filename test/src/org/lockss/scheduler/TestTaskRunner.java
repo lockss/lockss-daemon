@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.1.2.2 2003-11-18 03:39:20 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.1.2.3 2003-11-19 06:23:52 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,28 @@ public class TestTaskRunner extends LockssTestCase {
     assertEquals(t1, tr.runningTask);
     assertEquals(t1.getLatestFinish(), tr.runningDeadline);
     assertEquals(s.getEvents().get(0), tr.runningChunk);
+  }
+
+  public void testFindRunnableChunk() {
+    assertFalse(tr.findTaskToRun());
+    StepTask t1 = task(100, 200, 100);
+    StepTask t2 = task(10, 300, 50);
+    Schedule.Chunk c1 = new Schedule.Chunk(t1, Deadline.at(100),
+					   Deadline.at(200), 100);
+    Schedule.Chunk c2 = new Schedule.Chunk(t2, Deadline.at(200),
+					   Deadline.at(300), 100);
+    Schedule s = new Schedule(ListUtil.list(c1, c2));
+    fact.setResult(s);
+    assertTrue(tr.addToSchedule(t1));
+    assertTrue(tr.addToSchedule(t2));
+    assertFalse(tr.findTaskToRun());
+    assertEquals(Deadline.at(100), tr.runningDeadline);
+    TimeBase.setSimulated(11);
+    assertTrue(tr.findTaskToRun());
+    assertEquals(t2, tr.runningTask);
+    assertEquals(c2, tr.runningChunk);
+    assertEquals(Deadline.at(100), tr.runningDeadline);
+    assertEquals(s.getEvents().get(1), tr.runningChunk);
   }
 
   public void testFindOverrunTaskToRun() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.3.2.3 2003-11-18 03:39:21 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.3.2.4 2003-11-19 06:22:33 tlipkis Exp $
  */
 
 /*
@@ -171,9 +171,7 @@ class TaskRunner implements Serializable {
 	for (Iterator iter = schedOverron.iterator(); iter.hasNext(); ) {
 	  SchedulableTask otask = (SchedulableTask)iter.next();
 	  if (otask instanceof StepTask) {
-	    if (!overrunTasks.contains(otask)) {
-	      addOverrunner(otask);
-	    }
+	    addOverrunner(otask);
 	  } else {
 	    log.error("Non step task in Schedule.overrunTasks: " + otask);
 	  }
@@ -328,12 +326,41 @@ class TaskRunner implements Serializable {
     if (findTaskToRun0()) {
       return true;
     }
-    Deadline earliest = findEarlistStepTaskTime();
-    if (earliest == null || runningDeadline.minus(earliest) < 10) {
+    if (false) {
+      Deadline earliest = findEarlistStepTaskTime();
+      if (earliest == null || runningDeadline.minus(earliest) < 10) {
+	return false;
+      }
+      reschedule();
+      return findTaskToRun0();
+    } else {
+      Schedule.Chunk chunk = findRunnableChunk();
+      if (chunk != null) {
+	// runningDeadline should still be what findTaskToRun0 found - the
+	// next event in the schedule
+	runningChunk = chunk;
+	runningTask = chunk.getTask();
+	return true;
+      }
       return false;
     }
-    reschedule();
-    return findTaskToRun0();
+  }
+
+  /** Find a chunk with a runnable task (one whose earliest start has been
+   * reached). */
+  Schedule.Chunk findRunnableChunk() {
+    for (Iterator iter = currentSchedule.getEvents().iterator();
+	 iter.hasNext(); ) {
+      Schedule.Event event = (Schedule.Event)iter.next();
+      if (!event.isBackgroundEvent()) {
+	Schedule.Chunk chunk = (Schedule.Chunk)event;
+	StepTask task = chunk.getTask();
+	if (task.getEarlistStart().expired()) {
+	  return chunk;
+	}
+      }
+    }
+    return null;
   }
 
   /** Find the task that should be running and set up locals for that task
@@ -407,10 +434,9 @@ class TaskRunner implements Serializable {
       // Redundant start events will be generated whenever the schedule is
       // recalculated after the task has started.  (Which is necessary to
       // ensure no start events are missed.)
-      if (!backgroundTasks.contains(task) && !task.isFinished()) {
+      if (!task.isFinished() && addToBackgroundTasks(task)) {
 	// Must provisionally add to backgroundTasks, as it might run and
 	// finish before we get to run again after calling its taskEvent
-	addToBackgroundTasks(task);
 	try {
 	  task.callback.taskEvent(task, event.getType());
 	} catch (TaskCallback.Abort e) {
@@ -442,22 +468,22 @@ class TaskRunner implements Serializable {
     }
   }
       
-  void addToBackgroundTasks(BackgroundTask task) {
-    if (backgroundTasks.contains(task)) {
+  boolean addToBackgroundTasks(BackgroundTask task) {
+    if (backgroundTasks.add(task)) {
+      task.setTaskRunner(this);
+      backgroundLoadFactor += task.getLoadFactor();
+      if (backgroundLoadFactor > 1.0) {
+	log.error("background load factor > 1.0: " + backgroundLoadFactor);
+      }
+      return true;
+    } else {
       log.error("Already active background task: " + task);
-      return;
-    }
-    backgroundTasks.add(task);
-    task.setTaskRunner(this);
-    backgroundLoadFactor += task.getLoadFactor();
-    if (backgroundLoadFactor > 1.0) {
-      log.error("background load factor > 1.0: " + backgroundLoadFactor);
+      return false;
     }
   }
 
   boolean removeFromBackgroundTasks(BackgroundTask task) {
-    if (backgroundTasks.contains(task)) {
-      backgroundTasks.remove(task);
+    if (backgroundTasks.remove(task)) {
       task.setTaskRunner(null);
       backgroundLoadFactor -= task.getLoadFactor();
       if (backgroundLoadFactor < 0.0) {
@@ -492,7 +518,7 @@ class TaskRunner implements Serializable {
 	removeTask(task);
       }
     }
-    currentSchedule.removeFirstEvent(chunk);
+    currentSchedule.removeEvent(chunk);
     addToHistory(chunk);
     if (chunk == runningChunk) {
       runningChunk = null;
@@ -500,9 +526,10 @@ class TaskRunner implements Serializable {
   }
 
   void addOverrunner(SchedulableTask task) {
-    log.debug2("New overrun: " + task);
-    overrunTasks.add(task);
-    addStats(task, STAT_OVERRUN);
+    if (overrunTasks.add(task)) {
+      addStats(task, STAT_OVERRUN);
+      log.debug2("New overrun: " + task);
+    }
   }
 
   void removeTask(SchedulableTask task) {
@@ -805,7 +832,7 @@ class TaskRunner implements Serializable {
       } else {
 	Schedule.Chunk chunk = (Schedule.Chunk)event;
 	StepTask st = chunk.getTask();
-	row.put("type", "Fore");
+	row.put("type", (chunk == runningChunk) ? "*Fore" : "Fore");
 // 	row.put("tasknum", new Integer(st.schedSeq));
 	row.put("task", st.schedSeq + ":" + st.getShortText());
 	row.put("load", new Double(chunk.getLoadFactor()));

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSchedule.java,v 1.1.2.1 2003-11-17 22:49:51 tlipkis Exp $
+ * $Id: TestSchedule.java,v 1.1.2.2 2003-11-19 06:23:52 tlipkis Exp $
  */
 
 /*
@@ -76,6 +76,27 @@ public class TestSchedule extends LockssTestCase {
   }
 
   public void testRemoveEvent() {
+    Schedule.Event e1 =
+      new Schedule.BackgroundEvent(new MockBackgroundTask(), Deadline.at(3),
+				   Schedule.EventType.FINISH);
+
+    Schedule.Event e2 =
+      new Schedule.Chunk(new MockStepTask(), Deadline.at(5),
+			 Deadline.at(10), 8);
+
+    // test depends on this
+    assertNotEquals(e1, e2);
+    List events = ListUtil.list(e1, e2);
+    Schedule sched = new Schedule(events);
+    assertEquals(events, sched.getEvents());
+    assertTrue(sched.removeEvent(e2));
+    assertEquals(ListUtil.list(e1), sched.getEvents());
+    assertFalse(sched.removeEvent(e2));
+    assertTrue(sched.removeEvent(e1));
+    assertEmpty(sched.getEvents());
+  }
+
+  public void testRemoveFirstEvent() {
     Schedule.Event e1 =
       new Schedule.BackgroundEvent(new MockBackgroundTask(), Deadline.at(3),
 				   Schedule.EventType.FINISH);

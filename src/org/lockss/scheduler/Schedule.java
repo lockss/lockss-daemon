@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.2.2.1 2003-11-17 22:49:52 tlipkis Exp $
+ * $Id: Schedule.java,v 1.2.2.2 2003-11-19 06:22:33 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,14 @@ public class Schedule {
       return true;
     }
     return false;
+  }    
+
+  /** Remove an event from the schedule.
+   * @param event the event to remove.
+   * @return true if the event was removed.
+   */
+  public synchronized boolean removeEvent(Event event) {
+    return events.remove(event);
   }    
 
   /** Return the list of overrun tasks */
