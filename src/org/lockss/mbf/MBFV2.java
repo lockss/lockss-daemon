@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MBFV2.java,v 1.3 2003-08-25 17:46:37 dshr Exp $
  */
 
 /*
@@ -45,6 +45,30 @@ import org.lockss.daemon.*;
  */
 public class MBFV2 extends MemoryBoundFunctionVote {
   private static final String algHash = "SHA1";
+  private static final int Finished = 0;
+  private static final int StartingGeneration = 1;
+  private static final int StartingVerification = 2;
+  private static final int FirstBlockProofGeneration = 3;
+  private static final int BlockHashGeneration = 4;
+  private static final int BlockProofGeneration = 5;
+  private static final int FirstBlockProofVerification = 6;
+  private static final int BlockHashVerification = 7;
+  private static final int BlockProofVerification = 8;
+  private static final int Bad = 9;
+  private static final String[] stateName = {
+    "Finished",
+    "StartingGeneration",
+    "StartingVerification",
+    "FirstBlockProofGeneration",
+    "BlockHashGeneration",
+    "BlockProofGeneration",
+    "FirstBlockProofVerification",
+    "BlockHashVerification",
+    "BlockProofVerification",
+    "Bad",
+  };
+
+  private int currentState;
   private MessageDigest proofDigest;
   private MemoryBoundFunction mbf;
   private MessageDigest contentDigest;
@@ -55,6 +79,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
   private int bytesToGo;
   private int[][] ourProofs;
   private byte[][] ourHashes;
+  private int stepLimit;
   
   /**
    * No-argument constructor for use with Class.newInstance().
@@ -68,6 +93,8 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     thisHash = null;
     index = -1;
     bytesToGo = -1;
+    stepLimit = 4096;
+    currentState = Bad;
   }
 
   /**
@@ -92,6 +119,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     throws MemoryBoundFunctionException {
     super.setupGeneration(fact, nVal, eVal, cusVal);
     setup(nVal, eVal, cusVal);
+    setState(StartingGeneration);
   }
 
   /**
@@ -115,8 +143,12 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     throws MemoryBoundFunctionException {
     super.setupVerification(fact, nVal, eVal, cusVal, sVals, hashes);
     setup(nVal, eVal, cusVal);
+    setState(StartingVerification);
     ourProofs = getProofArray();
     ourHashes = getHashArray();
+    if (ourProofs.length != ourHashes.length)
+      throw new MemoryBoundFunctionException("proofs " + ourProofs.length +
+					     " != hashes " + ourHashes.length);
   }
 
   private void setup(byte[] nVal, int eVal, CachedUrlSet cusVal) throws
@@ -141,6 +173,12 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     index = -1;
   }
 
+  private void setState(int newState) {
+    logger.info("Change state from " + stateName[currentState] + " to " +
+		stateName[newState]);
+    currentState = newState;
+  }
+
   /**
    * Do "n" steps of the underlying hash or effort proof generation
    * @param n number of steps to move.
@@ -148,174 +186,270 @@ public class MBFV2 extends MemoryBoundFunctionVote {
    * 
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
-    boolean ret = false;
-    if (verify)
-      ret = verifySteps(n);
-    else
-      ret = generateSteps(n);
-    return (ret);
+    logger.info("computeSteps: block " + index + " steps " + n + " state " +
+		stateName[currentState]);
+    stepLimit -= n;
+    if (stepLimit <= 0)
+      throw new MemoryBoundFunctionException("no more steps");
+    switch (currentState) {
+    case Finished:
+      return false;
+    case StartingGeneration:
+      startingGeneration(n);
+      break;
+    case StartingVerification:
+      startingVerification(n);
+      break;
+    case FirstBlockProofGeneration:
+      firstBlockProofGeneration(n);
+      break;
+    case BlockHashGeneration:
+      blockHashGeneration(n);
+      break;
+    case BlockProofGeneration:
+      blockProofGeneration(n);
+      break;
+    case FirstBlockProofVerification:
+      firstBlockProofVerification(n);
+      break;
+    case BlockHashVerification:
+      blockHashVerification(n);
+      break;
+    case BlockProofVerification:
+      blockProofVerification(n);
+      break;
+    default:
+      throw new MemoryBoundFunctionException("bad state " + currentState);
+    }
+    if (currentState == Finished)
+      finished = true;
+    return (!finished);
   }
 
-  /**
-   * Do "n" steps of the underlying hash or effort proof generation
-   * @param n number of steps to move.
-   * @return true if there is more work to do
-   * 
-   */
-  private boolean generateSteps(int n) throws MemoryBoundFunctionException {
-    if (finished)
-      return (false);
-    logger.info("generateSteps: " + index + " n " + n);
-    if (mbf == null) {
-      // This is the beginning of a vote block.  Is it the first?
-      if (index < 0) {
-	// The first proof uses the nonce and the AU name [XXX and
-	// also the first bytes of the AU].
-	proofDigest.update(nonce);
-	if (cus != null) {
-	  ArchivalUnit au = cus.getArchivalUnit();
-	  String AUid = au.getAUId();
-	  proofDigest.update(AUid.getBytes());
-	} else {
-	  throw new MemoryBoundFunctionException("no CUS");
-	}
-	// XXX should also hash first bytes of AU
-	logger.info("generateSteps: index < 0");
-	index = 0;
-      } else {
-	if (thisHash == null)
-	  throw new MemoryBoundFunctionException("block " + index +
-						 " null thisHash");
-	// Second or subsequent block - nonce is previous hash and
-	// previous proof.
-	proofDigest.update(thisHash);
-	for (int i = 0; i < thisProof.length; i++)
-	  proofDigest.update(intToByteArray(thisProof[i]));
-	// NB - proof  and hash have been added to ArrayLists already
-	logger.info("generateSteps: index " + index);
-	index++;
-      }
-      thisHash = null;
-      thisProof = null;
-      try{
-	mbf = factory.make(proofDigest.digest(),
-			   e,
-			   (1 << index),
-			   null,
-			   0);
-      } catch (NoSuchAlgorithmException ex) {
-	throw new MemoryBoundFunctionException("factory throws " +
-					       ex.toString());
-      }
+  private void startingGeneration(int n) throws MemoryBoundFunctionException {
+    if (verify || currentState != StartingGeneration)
+      throw new MemoryBoundFunctionException("bad state");
+    if (index >= 0)
+      throw new MemoryBoundFunctionException("bad index " + index + " in " +
+					     stateName[currentState]);
+    // The first proof uses the nonce and the AU name [XXX and
+    // also the first bytes of the AU].
+    proofDigest.update(nonce);
+    if (cus != null) {
+      ArchivalUnit au = cus.getArchivalUnit();
+      String AUid = au.getAUId();
+      proofDigest.update(AUid.getBytes());
+    } else {
+      throw new MemoryBoundFunctionException("no CUS");
     }
-    logger.info("generateSteps: thisHash " + (thisHash == null ? "null" : "") +
-		" thisProof " + (thisProof == null ? "null" : ""));
-    // We have an MBF - has it generated a proof yet?
-    if (thisProof == null) {
-      // No proof yet - work on proof
-      mbf.computeSteps(n);
-      if (mbf.done()) {
-	logger.info("generateSteps: proof finished");
-	// Finished
-	thisProof = mbf.result();
-	saveProof(index, thisProof);
-	bytesToGo = (1 << index);
-      } else {
-	logger.info("generateSteps: " + n + " steps");
-      }
-    } else if (thisHash == null) try {
+    // XXX should also hash first bytes of AU
+    thisHash = null;
+    thisProof = null;
+    setState(FirstBlockProofGeneration);
+  }
+
+  private void startingVerification(int n) throws MemoryBoundFunctionException {
+    if (!verify || currentState != StartingVerification)
+      throw new MemoryBoundFunctionException("bad state");
+    if (index >= 0)
+      throw new MemoryBoundFunctionException("bad index " + index + " in " +
+					     stateName[currentState]);
+    logger.info("starting verification " + ourProofs.length + "/" +
+		ourHashes.length);
+    // The first proof uses the nonce and the AU name [XXX and
+    // also the first bytes of the AU].
+    proofDigest.update(nonce);
+    if (cus != null) {
+      ArchivalUnit au = cus.getArchivalUnit();
+      String AUid = au.getAUId();
+      proofDigest.update(AUid.getBytes());
+    } else {
+      throw new MemoryBoundFunctionException("no CUS");
+    }
+    // XXX should also hash first bytes of AU
+    logger.info("verifySteps: index < 0");
+    thisHash = null;
+    thisProof = null;
+    setState(FirstBlockProofVerification);
+  }
+
+  private void firstBlockProofGeneration(int n) throws MemoryBoundFunctionException {
+    if (verify || currentState != FirstBlockProofGeneration)
+      throw new MemoryBoundFunctionException("bad state");
+    if (thisHash != null)
+      throw new MemoryBoundFunctionException("thisHash should be null" + " in " +
+					     stateName[currentState]);
+    if (thisProof != null)
+      throw new MemoryBoundFunctionException("thisProof should be null" + " in " +
+					     stateName[currentState]);
+    if (index >= 0)
+      throw new MemoryBoundFunctionException("index should be -1" + " in " +
+					     stateName[currentState]);
+    if (mbf != null)
+      throw new MemoryBoundFunctionException("mbf should be null" + " in " +
+					     stateName[currentState]);
+    try{
+      mbf = factory.make(proofDigest.digest(),
+			 e,
+			 1,
+			 null,
+			 0);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new MemoryBoundFunctionException("factory throws " +
+					     ex.toString());
+    }
+    index = 0;
+    setState(BlockProofGeneration);
+  }
+
+  private void blockHashGeneration(int n) throws MemoryBoundFunctionException {
+    if (verify || currentState != BlockHashGeneration)
+      throw new MemoryBoundFunctionException("bad state");
+    if (thisHash != null)
+      throw new MemoryBoundFunctionException("thisHash should be null" + " in " +
+					     stateName[currentState]);
+    if (thisProof == null)
+      throw new MemoryBoundFunctionException("thisProof should not be null" + " in " +
+					     stateName[currentState]);
+    if (bytesToGo <= 0)
+      throw new MemoryBoundFunctionException("bytesToGo should be > 0" + " in " +
+					     stateName[currentState]);
+    if (index < 0)
+      throw new MemoryBoundFunctionException("index should be >= 0" + " in " +
+					     stateName[currentState]);
+    try {
       int bytesHashed = hasher.hashStep(bytesToGo > n ? n : bytesToGo);
       logger.info("generateSteps: hashed " + bytesHashed + "/" + bytesToGo
 		  + " bytes");
       if (bytesHashed <= 0)
 	throw new MemoryBoundFunctionException("too few bytes hashed " +
-					       bytesHashed);
+					       bytesHashed + " in " +
+					     stateName[currentState]);
       bytesToGo -= bytesHashed;
       boolean done = hasher.finished();
       if (bytesToGo <= 0 || done) {
 	// Extract the hash of this block and reset hasher for next
 	thisHash = contentDigest.digest();
 	if (thisHash == null)
-	  throw new MemoryBoundFunctionException("contentDigest return null");
+	  throw new MemoryBoundFunctionException("contentDigest return null" + " in " +
+					     stateName[currentState]);
   	saveHash(index, thisHash);
-	mbf = null;
 	logger.info("generateSteps: finished hashing block");
       }
       if (done) {
 	finished = true;
 	logger.info("generateSteps: finished hashing AU");
+	setState(Finished);
+      } else if (bytesToGo <= 0) {
+	index++;
+	setState(BlockProofGeneration);
       }
     } catch (IOException ex) {
       throw new MemoryBoundFunctionException("content hash threw " +
-					     ex.toString());
+					     ex.toString() + " in " +
+					     stateName[currentState]);
     }
-    return (!finished);
   }
 
-  /**
-   * Do "n" steps of the underlying hash or effort proof verification
-   * @param n number of steps to move.
-   * @return true if there is more work to do
-   * 
-   */
-  private boolean verifySteps(int n) throws MemoryBoundFunctionException {
-    if (finished)
-      return (false);
-    logger.info("verifySteps: " + index + " n " + n);
-    if (mbf == null) {
-      // This is the beginning of a vote block.  Is it the first?
-      if (index < 0) {
-	// The first proof uses the nonce and the AU name [XXX and
-	// also the first bytes of the AU].
-	proofDigest.update(nonce);
-	if (cus != null) {
-	  ArchivalUnit au = cus.getArchivalUnit();
-	  String AUid = au.getAUId();
-	  proofDigest.update(AUid.getBytes());
-	} else {
-	  throw new MemoryBoundFunctionException("no CUS");
-	}
-	logger.info("verifySteps: index < 0");
-	// XXX should also hash first bytes of AU
-	index = 0;
-      } else {
-	if (thisHash == null)
-	  throw new MemoryBoundFunctionException("block " + index +
-						 " null thisHash");
-	// Second or subsequent block - nonce is previous hash and
-	// previous proof.
-	proofDigest.update(thisHash);
-	for (int i = 0; i < ourProofs[index].length; i++)
-	  proofDigest.update(intToByteArray(ourProofs[index][i]));
-	index++;
-      }
+  private void blockProofGeneration(int n) throws MemoryBoundFunctionException {
+    if (verify || currentState != BlockProofGeneration)
+      throw new MemoryBoundFunctionException("bad state");
+    if (index < 0)
+      throw new MemoryBoundFunctionException("index should be >= 0" + " in " +
+					     stateName[currentState]);
+    if (mbf == null) try {
+      if (thisHash == null)
+	throw new MemoryBoundFunctionException("thisHash should not be null in " +
+					       stateName[currentState]);
+      if (thisProof == null)
+	throw new MemoryBoundFunctionException("thisProof should not be null in " +
+					     stateName[currentState]);
+      // Second or subsequent block - nonce is previous hash and
+      // previous proof.
+      proofDigest.update(thisHash);
+      for (int i = 0; i < thisProof.length; i++)
+	proofDigest.update(intToByteArray(thisProof[i]));
+      logger.info("generateSteps: index " + index);
       thisHash = null;
-      thisProof = ourProofs[index];
-      try{
-	mbf = factory.make(proofDigest.digest(),
-			   e,
-			   (1 << index),
-			   thisProof,
-			   (1 << (index + 1))); // XXX fix this
-      } catch (NoSuchAlgorithmException ex) {
-	throw new MemoryBoundFunctionException("factory throws " +
-					       ex.toString());
-      }
-    }
-    logger.info("verifySteps: thisHash " + (thisHash == null ? "null" : "") +
-		" thisProof " + (thisProof == null ? "null" : ""));
-    // We have an MBF - has it generated a proof yet?
-    if (thisProof != null) {
-      // No proof yet - work on proof
-      mbf.computeSteps(n);
-      if (mbf.done()) {
-	// Finished
-	if (mbf.result() == null)
-	  valid = false;
-      }
       thisProof = null;
+      mbf = factory.make(proofDigest.digest(),
+			 e,
+			 (1 << index),
+			 null,
+			 0);
+    } catch (NoSuchAlgorithmException ex) {
+      throw new MemoryBoundFunctionException("factory throws " +
+					     ex.toString() + " in " +
+					     stateName[currentState]);
+    } else {
+      if (thisProof != null)
+	throw new MemoryBoundFunctionException("thisProof should be null in " +
+					     stateName[currentState]);
+      if (thisHash != null)
+	throw new MemoryBoundFunctionException("thisHash should be null in " +
+					       stateName[currentState]);
+    }
+    // Work on generating the proof
+    mbf.computeSteps(n);
+    if (mbf.done()) {
+      logger.info("generateSteps: proof finished");
+      // Finished
+      thisProof = mbf.result();
+      saveProof(index, thisProof);
       bytesToGo = (1 << index);
-    } else if (thisHash == null && agreeing) try {
+      setState(BlockHashGeneration);
+      mbf = null;
+    }
+  }
+
+  private void firstBlockProofVerification(int n) throws MemoryBoundFunctionException {
+    if (!verify || currentState != FirstBlockProofVerification)
+      throw new MemoryBoundFunctionException("bad state");
+    if (thisHash != null)
+      throw new MemoryBoundFunctionException("thisHash should be null" + " in " +
+					     stateName[currentState]);
+    if (thisProof != null)
+      throw new MemoryBoundFunctionException("thisProof should be null" + " in " +
+					     stateName[currentState]);
+    if (index > 0)
+      throw new MemoryBoundFunctionException("index should be <= 0" + " in " +
+					     stateName[currentState]);
+    if (mbf != null)
+      throw new MemoryBoundFunctionException("mbf should be null" + " in " +
+					     stateName[currentState]);
+    index = 0;
+    thisProof = ourProofs[index];
+    thisHash = null;
+    try{
+      mbf = factory.make(proofDigest.digest(),
+			 e,
+			 (1 << index),
+			 thisProof,
+			 (1 << (index + 1))); // XXX fix this
+    } catch (NoSuchAlgorithmException ex) {
+      throw new MemoryBoundFunctionException("factory throws " +
+					     ex.toString() + " in " +
+					     stateName[currentState]);
+    }
+    setState(BlockProofVerification);
+  }
+
+  private void blockHashVerification(int n) throws MemoryBoundFunctionException {
+    if (!verify || currentState != BlockHashVerification)
+      throw new MemoryBoundFunctionException("bad state");
+    if (thisHash != null)
+      throw new MemoryBoundFunctionException("thisHash should be null in " +
+					     stateName[currentState]);
+    if (thisProof != null)
+      throw new MemoryBoundFunctionException("thisProof should be null" + " in " +
+					     stateName[currentState]);
+    if (bytesToGo <= 0)
+      throw new MemoryBoundFunctionException("bytesToGo should be > 0" + " in " +
+					     stateName[currentState]);
+    if (index < 0)
+      throw new MemoryBoundFunctionException("index should be >= 0" + " in " +
+					     stateName[currentState]);
+    /* if (agreeing) */ try {
       int bytesHashed = hasher.hashStep(bytesToGo > n ? n : bytesToGo);
       logger.info("verifySteps: hashed " + bytesHashed + "/" + bytesToGo
 		  + " bytes");
@@ -326,18 +460,70 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 	thisHash = ourHashes[index];
 	if (MessageDigest.isEqual(thisHash, contentDigest.digest())) {
 	  // Hashes don't match
+	  logger.info("verifySteps: hashes don't match");
 	  agreeing = false;
 	}
+	logger.info("verifySteps: finished hashing block");
 	mbf = null;
+	thisHash = null;
+	thisProof = null;
       }
       if (done) {
 	finished = true;
+	logger.info("verifySteps: finished hashing AU");
+	setState(Finished);
+      } else if (bytesToGo <= 0) {
+	index++;
+	setState(BlockProofVerification);
       }
     } catch (IOException ex) {
       throw new MemoryBoundFunctionException("content hash threw " +
-					     ex.toString());
+					     ex.toString() + " in " +
+					     stateName[currentState]);
     }
-    return (!finished);
+  }
+
+  private void blockProofVerification(int n) throws MemoryBoundFunctionException {
+    if (!verify || currentState != BlockProofVerification)
+      throw new MemoryBoundFunctionException("bad state");
+    if (index < 0)
+      throw new MemoryBoundFunctionException("index should be >= 0" + " in " +
+					     stateName[currentState]);
+    if (thisHash != null)
+      throw new MemoryBoundFunctionException("thisHash should be null" + " in " +
+					     stateName[currentState]);
+    if (mbf == null) try {
+      // Second or subsequent block - nonce is previous hash and
+      // previous proof.
+      proofDigest.update(ourHashes[index]);
+      for (int i = 0; i < ourProofs[index].length; i++)
+	proofDigest.update(intToByteArray(ourProofs[index][i]));
+      thisProof = ourProofs[index];
+      mbf = factory.make(proofDigest.digest(),
+			 e,
+			 (1 << index),
+			 thisProof,
+			 (1 << (index + 1))); // XXX fix this
+    } catch (NoSuchAlgorithmException ex) {
+      throw new MemoryBoundFunctionException("factory throws " +
+					     ex.toString() + " in " +
+					     stateName[currentState]);
+    }
+    if (thisProof == null)
+      throw new MemoryBoundFunctionException("thisProof should not be null in " +
+					     stateName[currentState]);
+    // No proof yet - work on proof
+    mbf.computeSteps(n);
+    if (mbf.done()) {
+      // Finished
+      if (mbf.result() == null) {
+	logger.info("verifySteps: proof invalid");
+	valid = false;
+      }
+      thisProof = null;
+      bytesToGo = (1 << index);
+      setState(BlockHashVerification);
+    }
   }
 
   private byte[] intToByteArray(int b) {
