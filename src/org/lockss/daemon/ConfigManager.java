@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.4 2003-07-21 08:32:41 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.5 2003-07-23 06:38:48 tlipkis Exp $
  */
 
 /*
@@ -467,6 +467,11 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
+  /** Read the named local cache config file from the previously determined
+   * cache config directory.
+   * @param cacheConfigFileName filename, no path
+   * @return Configuration with parameters from file
+   */
   public Configuration readCacheConfigFile(String cacheConfigFileName)
       throws IOException {
     if (cacheConfigDir == null) {
@@ -483,6 +488,12 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
+  /** Write the named local cache config file into the previously determined
+   * cache config directory.
+   * @param props properties to write
+   * @param cacheConfigFileName filename, no path
+   * @param header file header string
+   */
   public void writeCacheConfigFile(Properties props,
 				   String cacheConfigFileName,
 				   String header)
@@ -490,6 +501,12 @@ public class ConfigManager implements LockssManager {
     writeCacheConfigFile(fromProperties(props), cacheConfigFileName, header);
   }
 
+  /** Write the named local cache config file into the previously determined
+   * cache config directory.
+   * @param config Configuration with properties to write
+   * @param cacheConfigFileName filename, no path
+   * @param header file header string
+   */
   public void writeCacheConfigFile(Configuration config,
 				   String cacheConfigFileName,
 				   String header)
@@ -509,11 +526,19 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  /** Replace one AU's config keys in the local AU config file.
+   * @param auProps new properties for AU
+   * @param auPropKey the common initial part of all keys in the AU's config
+   */
   public void updateAuConfigFile(Properties auProps, String auPropKey)
       throws IOException {
     updateAuConfigFile(fromProperties(auProps), auPropKey);
   }
 
+  /** Replace one AU's config keys in the local AU config file.
+   * @param auConfig new config for AU
+   * @param auPropKey the common initial part of all keys in the AU's config
+   */
   public void updateAuConfigFile(Configuration auConfig, String auPropKey)
       throws IOException {
     Configuration fileConfig;
