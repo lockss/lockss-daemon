@@ -103,7 +103,8 @@ public class PollManager {
     if (voteRange > (duration/4)) {
       voteRange = duration/4;
     }
-    ProbabilisticTimer deadline = new ProbabilisticTimer(duration, voteRange);
+    Deadline deadline = Deadline.inRandomRange(duration - voteRange,
+					       duration + voteRange);
     long timeUntilCount = deadline.getRemainingTime();
     byte[] challenge = makeVerifier();
     byte[] verifier = makeVerifier();

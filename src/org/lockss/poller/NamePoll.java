@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.11 2002-11-16 02:31:28 claire Exp $
+* $Id: NamePoll.java,v 1.12 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class NamePoll extends Poll {
     long dur = msg.getDuration();
 
     if(prepareVoteCheck(msg)) {
-      if(!scheduleHash(new Deadline(dur), msg,
+      if(!scheduleHash(Deadline.in(dur), msg,
                        new VoteHashCallback())) {
         log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
         stopVote();

@@ -1,5 +1,5 @@
 /*
- * $Id: Queue.java,v 1.2 2002-11-06 21:18:35 tal Exp $
+ * $Id: Queue.java,v 1.3 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public interface Queue {
    * an object appears in the queue or the timer expires.
    * @return The element formerly at the head of the queue
    */
-  public Object get(ProbabilisticTimer timer) throws InterruptedException;
+  public Object get(Deadline timer) throws InterruptedException;
 
   /** 
    * Return first element on queue, without removing it.

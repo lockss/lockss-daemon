@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.5 2002-11-07 23:15:23 tal Exp $
+ * $Id: HashQueue.java,v 1.6 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -303,7 +303,7 @@ class HashQueue implements Serializable {
     Deadline overrunDeadline = null;
     if (! req.overrun()) {
       // watch for overrun only if it hasn't overrun yet
-      overrunDeadline = new Deadline(req.curEst());
+      overrunDeadline = Deadline.in(req.curEst());
     }
     long startTime = System.currentTimeMillis();
     try {
@@ -367,7 +367,7 @@ class HashQueue implements Serializable {
       }
       goOn = Boolean.TRUE;
 
-      ProbabilisticTimer timeout = new ProbabilisticTimer(60000, 10000);
+      Deadline timeout = Deadline.in(60000);
       try {
 	while (goOn.booleanValue()) {
 	  if (!runAndNotify(hashNumSteps, hashStepBytes, goOn)) {

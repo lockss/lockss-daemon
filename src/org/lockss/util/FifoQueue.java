@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.3 2002-11-12 18:04:19 tal Exp $
+ * $Id: FifoQueue.java,v 1.4 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -61,18 +61,20 @@ public class FifoQueue implements Queue {
   /** 
    * Remove from the beginning of the queue. Does not return until
    * an object appears in the queue and becomes available to this thread.
+   * @throws InterruptedException if interrupted while waiting
    */
-  public synchronized Object get(ProbabilisticTimer timer)
-      throws InterruptedException {
+  public synchronized Object get(Deadline timer) throws InterruptedException {
+    final Thread thread = Thread.currentThread();
+    Deadline.Callback cb = new Deadline.Callback() {
+	public void changed(Deadline deadline) {
+	  thread.interrupt();
+	}};
     while (queue.isEmpty() && !timer.expired()) {
       try {
-	timer.setThread();
+	timer.registerCallback(cb);
 	this.wait(timer.getRemainingTime());
-//        } catch (InterruptedException e) {
-//  	break;
-//  	  continue;
       } finally {
-	timer.clearThread();
+	timer.unregisterCallback(cb);
       }
     }
     if (!queue.isEmpty()) {

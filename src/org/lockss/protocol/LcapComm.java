@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.2 2002-11-12 23:41:30 claire Exp $
+ * $Id: LcapComm.java,v 1.3 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -162,6 +162,7 @@ public class LcapComm {
   // Receive thread
   private class ReceiveThread extends Thread {
     private boolean goOn = false;
+    private Deadline timeout;
 
     private ReceiveThread(String name) {
       super(name);
@@ -173,9 +174,9 @@ public class LcapComm {
 //        }
       goOn = true;
 
-      ProbabilisticTimer timeout = new ProbabilisticTimer(60000, 10000);
-      try {
-	while (goOn) {
+      while (goOn) {
+	try {
+	  timeout = Deadline.in(60000);
 	  Object qObj = socketInQ.get(timeout);
 	  if (qObj != null) {
 	    if (qObj instanceof LockssDatagram) {
@@ -184,17 +185,17 @@ public class LcapComm {
 	      log.warning("Non-LockssDatagram on rcv queue" + qObj);
 	    }
 	  }
+	} catch (InterruptedException e) {
+	  // just wake up and check for exit
+	} finally {
+	  rcvThread = null;
 	}
-      } catch (InterruptedException e) {
-	// tk ???
-      } finally {
-	rcvThread = null;
       }
     }
 
     private void stopRcvThread() {
       goOn = false;
-      this.interrupt();
+      timeout.expire();
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BinarySemaphore.java,v 1.2 2002-11-12 18:04:19 tal Exp $
+ * $Id: BinarySemaphore.java,v 1.3 2002-11-19 23:26:16 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -42,24 +42,27 @@ public class BinarySemaphore {
     
   /** Wait until the semaphore is full or the timer expires.
    * If the semaphore is already full, return immediately.
-   * Use {@link ProbabilisticTimer#expire()} to make this return early.
+   * Use {@link Deadline#expire()} to make this return early.
    * Always leaves the semaphore empty.
    * @param timer time to wait.  If null, returns immediately.
    * @return true if <code>take()</code> was successful (semaphore was or
    * became full), else false (timer expired).
+   * @throws InterruptedException if interrupted while waiting
    */
-  synchronized public boolean take(ProbabilisticTimer timer)
+  synchronized public boolean take(Deadline timer)
       throws InterruptedException {
     if (timer != null) {
+      final Thread thread = Thread.currentThread();
+      Deadline.Callback cb = new Deadline.Callback() {
+	  public void changed(Deadline deadline) {
+	    thread.interrupt();
+	  }};
       while (!state && !timer.expired()) {
 	try {
-	  timer.setThread();
+	  timer.registerCallback(cb);
 	  this.wait(timer.getRemainingTime());
-//  	} catch (InterruptedException e) {
-//  	  break;
-//  	  continue;
 	} finally {
-	  timer.clearThread();
+	  timer.unregisterCallback(cb);
 	}
       }
     }

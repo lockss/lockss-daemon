@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.5 2002-10-01 06:15:23 tal Exp $
+ * $Id: Configuration.java,v 1.6 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -452,11 +452,17 @@ public abstract class Configuration {
 					      "parameterReloadInterval",
 					      1800000).longValue();
 	}
-	ProbabilisticTimer nextReload =
-	  new ProbabilisticTimer(reloadInterval, reloadInterval/4);
+	long reloadRange = reloadInterval/4;
+	Deadline nextReload =
+	  Deadline.inRandomRange(reloadInterval - reloadRange,
+				 reloadInterval + reloadRange);
 	log.info(nextReload.toString());
 	if (goOn) {
-	  nextReload.sleepUntil();
+	  try {
+	    nextReload.sleep();
+	  } catch (InterruptedException e) {
+	    // just wakeup and check for exit
+	  }
 	}
       }
     }

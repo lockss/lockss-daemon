@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.11 2002-11-16 02:31:28 claire Exp $
+* $Id: Poll.java,v 1.12 2002-11-19 23:26:16 tal Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public abstract class Poll {
     m_regExp = msg.getRegExp();
     m_arcUnit = m_urlSet.getArchivalUnit();
     m_hashTime = m_urlSet.estimatedHashDuration();
-    m_deadline = new Deadline(msg.getDuration());
+    m_deadline = Deadline.in(msg.getDuration());
     m_challenge = msg.getChallenge();
     m_verifier = PollManager.makeVerifier();
     m_caller = msg.getOriginID();
@@ -150,7 +150,7 @@ public abstract class Poll {
     long vote_delay = time_remaining/2;
     long vote_dev = time_remaining/4;
 
-    m_voteTime = new ProbabilisticTimer(vote_delay, vote_dev);
+    m_voteTime = Deadline.atRandomBefore(m_deadline);
     TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
   }
 
@@ -292,7 +292,7 @@ public abstract class Poll {
    * start the poll.
    */
   void startPoll() {
-    ProbabilisticTimer pt = new ProbabilisticTimer(m_msg.getDuration());
+    Deadline pt = Deadline.in(m_msg.getDuration());
     if(!scheduleHash( pt, m_msg, new PollHashCallback())) {
       // TODO: terminate this poll
       return;
