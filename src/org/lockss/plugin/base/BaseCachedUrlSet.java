@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.3 2003-06-03 00:03:58 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.4 2003-06-04 22:00:48 tal Exp $
  */
 
 /*
@@ -136,8 +136,7 @@ protected class CUSIterator implements Iterator {
   private CachedUrlSetNode nextElement = null;
 
   public CUSIterator() {
-    if (!((spec instanceof RangeCachedUrlSetSpec) &&
-          (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null))) {
+    if (!spec.isRangeRestricted()) {
       nextElement = BaseCachedUrlSet.this;
     }
     stack.addFirst(flatSetIterator());

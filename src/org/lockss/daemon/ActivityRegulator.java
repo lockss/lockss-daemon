@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.15 2003-06-03 00:05:20 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.16 2003-06-04 22:00:48 tal Exp $
  */
 
 /*
@@ -437,16 +437,19 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   static String getCusKey(CachedUrlSet cus) {
-    String key = cus.getUrl() + "::";
-    if (cus.getSpec() instanceof RangeCachedUrlSetSpec) {
-      RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)cus.getSpec();
-      if ((rSpec.getLowerBound()!=null) || (rSpec.getUpperBound()!=null)) {
-        key += rSpec.getLowerBound() + "-" + rSpec.getUpperBound();
-      }
-    } else if (cus.getSpec() instanceof SingleNodeCachedUrlSetSpec) {
-      key += ".-.";
+    CachedUrlSetSpec spec = cus.getSpec();
+    StringBuffer sb = new StringBuffer(cus.getUrl().length() * 2);
+    sb.append(cus.getUrl());
+    sb.append("::");
+    if (spec.isRangeRestricted()) {
+      RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)spec;
+      sb.append(rSpec.getLowerBound());
+      sb.append("-");
+      sb.append(rSpec.getUpperBound());
+    } else if (spec.isSingleNode()) {
+      sb.append(".-.");
     }
-    return key;
+    return sb.toString();
   }
 
   public static String activityCodeToString(int activity) {

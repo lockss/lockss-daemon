@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.12 2003-05-30 01:46:55 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.13 2003-06-04 22:00:48 tal Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testGetCusActivity() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec("test url"));
     assertEquals(regulator.NO_ACTIVITY, regulator.getCusActivity(mcus));
 
     regulator.setCusActivity(mcus, regulator.REPAIR_CRAWL, 123);
@@ -71,6 +72,7 @@ public class TestActivityRegulator extends LockssTestCase {
 
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
     mcus2.setArchivalUnit(mau);
+    mcus2.setSpec(new RangeCachedUrlSetSpec("test url2"));
     assertEquals(regulator.NO_ACTIVITY, regulator.getCusActivity(mcus2));
 
     regulator.setCusActivity(mcus2, regulator.BACKGROUND_CRAWL, 123);
@@ -87,6 +89,7 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusActivityAllowed() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec("test url"));
     assertNotNull(regulator.startCusActivity(regulator.REPAIR_CRAWL, mcus, 123));
     assertEquals(regulator.REPAIR_CRAWL, regulator.getCusActivity(mcus));
     assertNull(regulator.startCusActivity(regulator.BACKGROUND_CRAWL, mcus, 123));
@@ -94,6 +97,7 @@ public class TestActivityRegulator extends LockssTestCase {
 
     mcus = new MockCachedUrlSet("test url2");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec("test url2"));
     regulator.startAuActivity(regulator.NEW_CONTENT_CRAWL, 123);
     assertNull(regulator.startCusActivity(regulator.REPAIR_CRAWL, mcus, 123));
 
@@ -117,6 +121,7 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusFinished() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec("test url"));
     assertNotNull(regulator.startCusActivity(regulator.REPAIR_CRAWL, mcus, 123));
     assertEquals(regulator.REPAIR_CRAWL, regulator.getCusActivity(mcus));
     regulator.cusActivityFinished(regulator.REPAIR_CRAWL, mcus);
@@ -132,6 +137,7 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusBlocking() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec("test url"));
     assertEquals(regulator.NO_ACTIVITY, regulator.getAuActivity());
     assertNotNull(regulator.startCusActivity(regulator.REPAIR_CRAWL, mcus, 123));
     assertEquals(regulator.CUS_ACTIVITY, regulator.getAuActivity());
@@ -139,6 +145,7 @@ public class TestActivityRegulator extends LockssTestCase {
 
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("test url2");
     mcus2.setArchivalUnit(mau);
+    mcus2.setSpec(new RangeCachedUrlSetSpec("test url2"));
     assertNotNull(regulator.startCusActivity(regulator.BACKGROUND_CRAWL, mcus2, 123));
 
     regulator.cusActivityFinished(regulator.REPAIR_CRAWL, mcus);
@@ -153,22 +160,26 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusRelationBlocking() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com/test");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
     assertNotNull(regulator.startCusActivity(regulator.STANDARD_CONTENT_POLL, mcus, 123));
 
     // child should be blocked
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("http://www.example.com/test/branch1");
     mcus2.setArchivalUnit(mau);
+    mcus2.setSpec(new RangeCachedUrlSetSpec(mcus2.getUrl()));
     assertNull(regulator.startCusActivity(regulator.BACKGROUND_CRAWL, mcus2, 123));
 
     // parent should be blocked on polls, but not crawls
     mcus2 = new MockCachedUrlSet("http://www.example.com");
     mcus2.setArchivalUnit(mau);
+    mcus2.setSpec(new RangeCachedUrlSetSpec(mcus2.getUrl()));
     assertNull(regulator.startCusActivity(regulator.STANDARD_CONTENT_POLL, mcus2, 123));
     assertNotNull(regulator.startCusActivity(regulator.REPAIR_CRAWL, mcus2, 123));
 
     // peer should be ok
     mcus2 = new MockCachedUrlSet("http://www.example.com/test2");
     mcus2.setArchivalUnit(mau);
+    mcus2.setSpec(new RangeCachedUrlSetSpec(mcus2.getUrl()));
     assertNotNull(regulator.startCusActivity(regulator.BACKGROUND_CRAWL, mcus2, 123));
   }
 
@@ -188,16 +199,19 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusSimultaneousPollAllowance() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com/test");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
     assertNotNull(regulator.startCusActivity(regulator.STANDARD_CONTENT_POLL, mcus, 123));
 
     // name poll should be allowed
     mcus = new MockCachedUrlSet("http://www.example.com/test");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
     assertNotNull(regulator.startCusActivity(regulator.STANDARD_NAME_POLL, mcus, 123));
 
     // content poll on child should be allowed
     mcus = new MockCachedUrlSet("http://www.example.com/test/branch");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
     assertNotNull(regulator.startCusActivity(regulator.STANDARD_CONTENT_POLL, mcus, 123));
 
   }
@@ -288,6 +302,7 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusExpiration() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
+    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
     assertNotNull(regulator.startCusActivity(regulator.REPAIR_CRAWL, mcus, 10));
     assertEquals(regulator.REPAIR_CRAWL, regulator.getCusActivity(mcus));
     assertEquals(regulator.CUS_ACTIVITY, regulator.getAuActivity());
@@ -301,6 +316,7 @@ public class TestActivityRegulator extends LockssTestCase {
 
   public void testGetCusKeys() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
+    mcus.setSpec(new RangeCachedUrlSetSpec(mcus.getUrl()));
 
     String expectedStr = "test url::";
     assertEquals(expectedStr, regulator.getCusKey(mcus));

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.10 2003-04-17 02:16:58 troberts Exp $
+ * $Id: PollSpec.java,v 1.11 2003-06-04 22:00:48 tal Exp $
  */
 
 /*
@@ -104,7 +104,7 @@ public class PollSpec {
       RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
       lwrBound = rcuss.getLowerBound();
       uprBound = rcuss.getUpperBound();
-    } else if (cuss instanceof SingleNodeCachedUrlSetSpec) {
+    } else if (cuss.isSingleNode()) {
       // not used, but needs to be set to allow this poll to overlap with
       // other ranged polls
       lwrBound = SINGLE_NODE_LWRBOUND;
