@@ -28,7 +28,7 @@ public class TestPoll extends TestCase {
   private static IdentityManager idmgr;
   static {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    org.lockss.plugin.Plugin.registerArchivalUnit(testau);
+    org.lockss.plugin.PluginManager.registerArchivalUnit(testau);
     TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
     idmgr = IdentityManager.getIdentityManager();
   }
@@ -281,7 +281,7 @@ public class TestPoll extends TestCase {
   public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
                                 int numDisagree) throws Exception {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    org.lockss.plugin.Plugin.registerArchivalUnit(testau);
+    org.lockss.plugin.PluginManager.registerArchivalUnit(testau);
     Poll p = PollManager.getPollManager().makePoll(testmsg);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;

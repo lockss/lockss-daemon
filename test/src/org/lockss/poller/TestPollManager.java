@@ -28,7 +28,7 @@ public class TestPollManager extends TestCase {
   protected static ArchivalUnit testau;
   static {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    org.lockss.plugin.Plugin.registerArchivalUnit(testau);
+    org.lockss.plugin.PluginManager.registerArchivalUnit(testau);
   }
 
   protected InetAddress testaddr;

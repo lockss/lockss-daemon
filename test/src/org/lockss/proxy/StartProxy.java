@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.3 2002-10-16 04:50:54 tal Exp $
+ * $Id: StartProxy.java,v 1.4 2003-01-31 09:48:16 claire Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ public class StartProxy {
   public static void main(String args[]) {
     PTestPlugin.makeTest();
     System.out.println("Plugin.findArchivalUnit(http://foo.bar/one) = " +
-		       Plugin.findArchivalUnit("http://foo.bar/one"));
+		       PluginManager.findArchivalUnit("http://foo.bar/one"));
     ProxyHandler.startProxy();
     System.err.println("Proxy started");
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.9 2003-01-30 03:19:05 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.10 2003-01-31 09:48:16 claire Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.Plugin;
+import org.lockss.plugin.PluginManager;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.HashService;
@@ -65,7 +65,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
-    Plugin.registerArchivalUnit(mau);
+    PluginManager.registerArchivalUnit(mau);
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
@@ -74,14 +74,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void tearDown() throws Exception {
     super.tearDown();
     HashService.stop();
-    Iterator auIt = Plugin.getArchivalUnits();
-    ArrayList auList = new ArrayList(Plugin.getNumArchivalUnits());
+    Iterator auIt = PluginManager.getArchivalUnits();
+    ArrayList auList = new ArrayList(PluginManager.getNumArchivalUnits());
     while (auIt.hasNext()) {
       auList.add(auIt.next());
     }
     auIt = auList.iterator();
     while (auIt.hasNext()) {
-      Plugin.unregisterArchivalUnit((ArchivalUnit)auIt.next());
+      PluginManager.unregisterArchivalUnit((ArchivalUnit)auIt.next());
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.5 2002-10-16 04:50:54 tal Exp $
+ * $Id: PTestPlugin.java,v 1.6 2003-01-31 09:48:16 claire Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ class PTestPlugin {
 				      "this is one text\n"));
     au.storeCachedUrl(new CU("http://foo.bar/two", "text/html",
 				      "<html><h3>this is two html</h3></html>"));
-    org.lockss.plugin.Plugin.registerArchivalUnit(au);
+    org.lockss.plugin.PluginManager.registerArchivalUnit(au);
     return au;
   }
 }

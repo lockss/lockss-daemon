@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.13 2003-01-30 03:19:05 claire Exp $
+ * $Id: RunDaemon.java,v 1.14 2003-01-31 09:48:16 claire Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class RunDaemon {
 				    false);
 
     sau = new SimulatedArchivalUnit(dirPath);
-    org.lockss.plugin.Plugin.registerArchivalUnit(sau);
+    org.lockss.plugin.PluginManager.registerArchivalUnit(sau);
 
     int poll_type = Configuration.getIntParam(PARAM_POLL_TYPE,
         LcapMessage.CONTENT_POLL_REQ);
