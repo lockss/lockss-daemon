@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleQueue.java,v 1.1 2002-11-05 21:11:21 tal Exp $
+ * $Id: SimpleQueue.java,v 1.2 2002-11-21 20:50:17 tal Exp $
  */
 
 /*
@@ -122,15 +122,13 @@ public abstract class SimpleQueue {
      * interrupted or timer expired
      */
     public synchronized Object get(long timeout) {
-      long expMS = new Date().getTime() + timeout;
-      Date expiration = new Date(expMS);
+      long expMS = System.currentTimeMillis() + timeout;
 
       while (queue.isEmpty()) {
-      Date now = new Date();
-      if (!now.before(expiration)) {
-	break;
-      }
-      long nowMS = now.getTime();
+	long nowMS = System.currentTimeMillis();
+	if (nowMS >= expMS) {
+	  break;
+	}
 	try {
 	  this.wait(expMS - nowMS);
 	} catch (InterruptedException e) {

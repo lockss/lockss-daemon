@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleBinarySemaphore.java,v 1.1 2002-09-02 04:13:08 tal Exp $
+ * $Id: SimpleBinarySemaphore.java,v 1.2 2002-11-21 20:50:17 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -71,15 +71,13 @@ public class SimpleBinarySemaphore {
    * became full), else false (timeout elapsed or call was interrupted).
    */
   synchronized public boolean take(long timeout) {
-    long expMS = new Date().getTime() + timeout;
-    Date expiration = new Date(expMS);
+    long expMS = System.currentTimeMillis() + timeout;
 
     while (!state) {
-      Date now = new Date();
-      if (!now.before(expiration)) {
+      long nowMS = System.currentTimeMillis();
+      if (nowMS >= expMS) {
 	break;
       }
-      long nowMS = now.getTime();
       try {
 	this.wait(expMS - nowMS);
       } catch (InterruptedException e) {
