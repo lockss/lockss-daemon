@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.12 2004-02-23 09:15:54 tlipkis Exp $
+ * $Id: ConfigurablePlugin.java,v 1.13 2004-02-27 02:05:52 clairegriffin Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class ConfigurablePlugin extends BasePlugin {
       "plugin_exception_handler";
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
-  String mapName = null;
+  protected String mapName = null;
 
   static Logger log = Logger.getLogger("ConfigurablePlugin");
 

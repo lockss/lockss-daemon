@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.8 2004-02-17 21:46:01 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.9 2004-02-27 02:05:52 clairegriffin Exp $
  */
 
 /*
@@ -47,8 +47,7 @@ import java.net.URL;
  * @author claire griffin
  * @version 1.0
  */
-public class ConfigurableArchivalUnit
-    extends BaseArchivalUnit {
+public class ConfigurableArchivalUnit extends BaseArchivalUnit {
   static final protected String CM_AU_START_URL_KEY = "au_start_url";
   static final protected String CM_AU_NAME_KEY = "au_name";
   static final protected String CM_AU_RULES_KEY = "au_crawlrules";
@@ -61,21 +60,34 @@ public class ConfigurableArchivalUnit
   static final protected String CM_AU_DEFAULT_NC_CRAWL_KEY =
       "au_def_new_content_crawl";
   static final protected String CM_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
+  static final protected String CM_AU_MANIFEST_KEY = "au_manifest";
 
   protected ExternalizableMap configurationMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
-/*
+
   protected ConfigurableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
     throw new UnsupportedOperationException(
         "ConfigurableArchvialUnit requires ConfigurablePlugin for construction");
   }
-*/
+
 
   protected ConfigurableArchivalUnit(ConfigurablePlugin myPlugin,
                                      ExternalizableMap definitionMap) {
     super(myPlugin);
     configurationMap = definitionMap;
+  }
+
+  public String getManifestPage() {
+    String manifestString =
+        configurationMap.getString(CM_AU_MANIFEST_KEY, null);
+    if(manifestString == null)  {
+     return super.getManifestPage();
+    }
+    manifestString = convertVariableString(manifestString);
+    log.debug2("overriding manifest page with " + manifestString);
+
+    return manifestString;
   }
 
   protected String makeStartUrl() {
