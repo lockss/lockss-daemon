@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.99 2003-05-30 01:46:55 aalto Exp $
+* $Id: PollManager.java,v 1.100 2003-06-03 00:03:17 aalto Exp $
  */
 
 /*
@@ -527,6 +527,8 @@ public class PollManager  extends BaseLockssManager {
         int rel_pos = repo.cusCompare(cus, pcus);
         if(rel_pos != LockssRepository.SAME_LEVEL_NO_OVERLAP &&
            rel_pos != LockssRepository.NO_RELATION) {
+          theLog.debug2("Conflict between new poll '"+cus+"' and running poll '"+
+                        pcus+"'");
           return pcus;
         }
       }
