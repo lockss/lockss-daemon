@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.21 2004-05-13 01:28:42 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.22 2004-05-14 08:41:35 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.net.*;
 import java.text.*;
 import org.mortbay.html.*;
 import org.mortbay.tools.*;
+import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.remote.*;
@@ -114,9 +115,25 @@ public class AuConfig extends LockssServlet {
     titleConfig = null;
     submitButtonNumber = 0;
 
+    if (req.getContentType() != null &&
+	req.getContentType().startsWith("multipart/form-data") &&
+	req.getContentLength() < 100000) {
+      MultiPartRequest multi = new MultiPartRequest(req);
+      String[] parts = multi.getPartNames();
+      log.info("Multipart request, " + parts.length + " parts");
+      for (int p=0;p<parts.length;p++) {
+	String name = parts[p];
+	String cont = multi.getString(parts[p]);
+	log.info(name + ": " + cont);
+      }
+
+    }
     String auid = req.getParameter("auid");
 
     if (StringUtil.isNullString(action)) displayAuSummary();
+    else if (action.equals("SaveAll")) doSaveAll();
+    else if (action.equals("RestoreAll")) displayRestoreAll();
+    else if (action.equals("DoRestoreAll")) doRestoreAll();
     else if (action.equals("Add")) displayAddAu();
     else if (action.equals("EditNew")) displayEditNew();
     else if (action.equals("Create")) createAu();
@@ -151,13 +168,59 @@ public class AuConfig extends LockssServlet {
     resetLocals();
   }
 
+  /** Serve the contents of the local AU config file, as
+   * application/binary */
+  private void doSaveAll() throws IOException {
+    PrintWriter wrtr = resp.getWriter();
+    resp.setContentType("application/binary");
+    wrtr.println("# AU Configuration saved " + new Date() +
+		 " from " + getMachineName());
+    InputStream is =
+      remoteApi.openCacheConfigFile(ConfigManager.CONFIG_FILE_AU_CONFIG);
+    Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+    StreamUtil.copy(rdr, wrtr);
+    rdr.close();
+  }
+
+  /** Display the RestoreAll page */
+  private void displayRestoreAll() throws IOException {
+    Page page = newPage();
+    addJavaScript(page);
+    Form frm = new Form(srvURL(myServletDescr(), null));
+    frm.method("POST");
+    frm.attribute("enctype", "multipart/form-data");
+    frm.add("<input type=hidden name=\"" + ACTION_TAG + "\">");
+    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add("Enter name of AU configuration backup file");
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add(new Input(Input.File, "AuConfigBackupContents"));
+    tbl.newRow();
+    tbl.newCell("align=center");
+    tbl.add(submitButton("Restore", "DoRestoreAll"));
+//     tbl.add(new Input(Input.Submit, "button", "DoRestoreAll"));
+    frm.add(tbl);
+    page.add(frm);
+    endPage(page);
+  }
+
+  /** Restore the AU config */
+  private void doRestoreAll() throws IOException {
+  }
+
   /** Display "Add Archival Unit" button and list of configured AUs with Edit
    * buttons */
   private void displayAuSummary() throws IOException {
     Page page = newPage();
+    Collection allAUs = remoteApi.getAllAus();
     addJavaScript(page);
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Add a new Archival Unit, or edit an existing one."));
+    page.add(getExplanationBlock("Add a new Archival Unit" +
+				 (allAUs.isEmpty()
+				  ? "."
+				  : ", or edit an existing one.")));
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
     // make form findable by unit tests
@@ -168,7 +231,6 @@ public class AuConfig extends LockssServlet {
     // make table findable by unit tests
     tbl.attribute("id", "AuSummaryTable");
     addAddAuRow(tbl);
-    Collection allAUs = remoteApi.getAllAus();
     if (!allAUs.isEmpty()) {
       for (Iterator iter = allAUs.iterator(); iter.hasNext(); ) {
 	addAuSummaryRow(tbl, (AuProxy)iter.next());
@@ -181,6 +243,16 @@ public class AuConfig extends LockssServlet {
       }
     }
     frm.add(tbl);
+    Table srTab =  new Table(0, "align=center cellspacing=4 cellpadding=0");
+    addOr(srTab);
+    srTab.newRow();
+    srTab.newCell("align=center");
+    srTab.add(submitButton("Backup", "SaveAll"));
+    srTab.add(" or ");
+    srTab.add(submitButton("Restore", "RestoreAll"));
+    srTab.add(" AU&nbsp;configuration");
+    srTab.add(addFootnote("Saves or restores to/from a file on your workstation.  You will be prompted for a file name."));
+    frm.add(srTab);
     page.add(frm);
     endPage(page);
   }
@@ -358,7 +430,7 @@ public class AuConfig extends LockssServlet {
 	configMgr.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
 				  DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT);
       tbl.newRow();
-      tbl.newCell("colspan=3 align=center");
+      tbl.newCell("align=center");
       tbl.add("Choose a title:<br>");
       Select sel = new Select("Title", false);
       sel.attribute("onchange",
@@ -387,7 +459,7 @@ public class AuConfig extends LockssServlet {
     Map pMap = getPluginNameMap();
     if (!pMap.isEmpty()) {
       tbl.newRow();
-      tbl.newCell("colspan=3 align=center");
+      tbl.newCell("align=center");
       tbl.add("Choose a publisher plugin:<br>");
       Select sel = new Select("PluginId", false);
       sel.attribute("id", "plugin_sel");
@@ -404,7 +476,7 @@ public class AuConfig extends LockssServlet {
       addOr(tbl);
     }
     tbl.newRow();
-    tbl.newCell("colspan=3 align=center");
+    tbl.newCell("align=center");
     tbl.add("Enter the class name of a plugin:<br>");
     Input in = new Input(Input.Text, "PluginClass");
     in.setSize(40);
@@ -412,7 +484,7 @@ public class AuConfig extends LockssServlet {
     setTabOrder(in);
     tbl.add(in);
     tbl.newRow();
-    tbl.newCell("colspan=3 align=center");
+    tbl.newCell("align=center");
     tbl.add("<br>");
     tbl.add("Then click to edit parameter values");
     tbl.add("<br>");
@@ -439,13 +511,28 @@ public class AuConfig extends LockssServlet {
   }
 
   void addOr(Table tbl) {
+    addOr(tbl, 1);
+  }
+
+
+  void addOr(Table tbl, int cols) {
+    Table orTbl =
+      new Table(0, "align=center cellspacing=0 cellpadding=0 width=\"100%\"");
+    orTbl.newRow();
+    orTbl.newCell("align=right");
+    orTbl.add("<hr align=right width=100>");
+    orTbl.newCell("align=center");
+    orTbl.add("&nbsp;or&nbsp;");
+    orTbl.newCell("align=left");
+    orTbl.add("<hr align=left width=100>");
+
     tbl.newRow();
-    tbl.newCell("align=right");
-    tbl.add("<hr align=right width=100>");
-    tbl.newCell("align=center");
-    tbl.add("or");
-    tbl.newCell("align=left");
-    tbl.add("<hr align=left width=100>");
+    if (cols != 1) {
+      tbl.newCell("colspan=" + cols);
+    } else {
+      tbl.newCell("width=\"100%\"");
+    }
+    tbl.add(orTbl);
   }
 
   /** Create a form to edit a (possibly not-yet-existing) AU.
