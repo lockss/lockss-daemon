@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.53 2004-01-13 02:37:42 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.54 2004-01-13 10:20:12 tlipkis Exp $
  */
 
 /*
@@ -134,10 +134,12 @@ public class CrawlManagerImpl extends BaseLockssManager
   public void cancelAuCrawls(ArchivalUnit au) {
     synchronized(runningCrawls) {
       Collection crawls = (Collection) runningCrawls.get(au);
-      Iterator it = crawls.iterator();
-      while (it.hasNext()) {
-	Crawler crawler = (Crawler)it.next();
-	crawler.abortCrawl();
+      if (crawls != null) {
+	Iterator it = crawls.iterator();
+	while (it.hasNext()) {
+	  Crawler crawler = (Crawler)it.next();
+	  crawler.abortCrawl();
+	}
       }
     }
   }
