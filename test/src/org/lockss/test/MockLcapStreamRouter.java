@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.11 2004-11-29 03:31:08 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.12 2004-11-29 20:51:15 dshr Exp $
  */
 
 /*
@@ -91,7 +91,6 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   }
 
   public void run() {
-    V3LcapMessage msg = null;
     log.debug("Q runner started");
     while (goOn) {
       Deadline dl = Deadline.in(10000);
@@ -99,7 +98,9 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 	Object obj = myReceiveQueue.get(dl);
 	if (obj != null) {
 	  if (obj instanceof V3LcapMessage) {
-	    msg = (V3LcapMessage) obj;
+	    V3LcapMessage msg = (V3LcapMessage) obj;
+	    log.debug("Pulled " + msg + " from receive Q");
+	    runHandlers(msg);
 	  } else {
 	    log.error("Pulled an instance of " + obj.getClass().toString());
 	  }
@@ -107,10 +108,6 @@ public class MockLcapStreamRouter extends LcapStreamRouter
       } catch (InterruptedException ex) {
 	log.debug("Q runner interrupted");
 	// No action intended
-      }
-      if (msg != null && !msg.isNoOp()) {
-	log.debug("Pulled " + msg + " from receive Q");
-	runHandlers(msg);
       }
     }
   }

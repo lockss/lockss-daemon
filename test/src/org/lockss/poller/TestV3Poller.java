@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.19 2004-11-27 22:18:46 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.20 2004-11-29 20:51:15 dshr Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.repository.LockssRepositoryImpl;
 
 /** JUnitTest case for class: org.lockss.poller.V3Poller */
 public class TestV3Poller extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestV3Poll");
+  private static Logger log = Logger.getLogger("TestV3Poller");
   private static String[] rootV3urls = {
     "http://www.test.net",
     "http://www.test1.net", "http://www.test2.net"};

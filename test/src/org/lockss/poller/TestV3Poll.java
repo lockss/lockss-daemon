@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.20 2004-11-29 03:31:07 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.21 2004-11-29 20:51:13 dshr Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class TestV3Poll extends LockssTestCase {
   protected PollManager pollmanager;
   protected MockLcapStreamRouter router;
   protected MyMessageHandler handler = null;
-  protected Hashtable pollHash = null;
+  protected Hashtable pollHash = new Hashtable();
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -99,12 +99,11 @@ public class TestV3Poll extends LockssTestCase {
     theDaemon.getHashService().stopService();
     theDaemon.getStreamRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
-    TimeBase.setReal();
     pollmanager.removePoll(voter.getKey());
     pollmanager.removePoll(poller.getKey());
     theDaemon.getPollManager().stopService();
     theDaemon.getPluginManager().stopService();
-    pollHash = null;
+    TimeBase.setReal();
     super.tearDown();
   }
 
@@ -126,11 +125,13 @@ public class TestV3Poll extends LockssTestCase {
     assertEquals("Poll " + poller + " should be in Initializing",
 		 V3Poller.STATE_INITIALIZING,
 		 poller.getPollState());
+    Thread.yield();
     long duration = poller.getDeadline().getRemainingTime();
     String key = poller.getKey();
     final int numSteps = 10;
     long step = (duration - 1) / numSteps;
     assertTrue("Duration " + duration + " means step " + step, step > 1);
+    log.debug("Duration " + duration + " means step " + step);
     //  XXX should test state of voter too
     assertEquals("Poll " + poller + " should be in Initializing",
 		 V3Poller.STATE_INITIALIZING,
@@ -138,7 +139,9 @@ public class TestV3Poll extends LockssTestCase {
     assertEquals("Poll " + voter + " should be in Initializing",
 		 V3Poller.STATE_INITIALIZING,
 		 poller.getPollState());
+    Thread.yield();
     for (int i = 0; i < numSteps; i++) {
+      Thread.yield();
       assertTrue("Poll " + poller + " should be active",
 		 pollmanager.isPollActive(key));
       assertFalse("Poll " + poller + " should not be closed",
@@ -151,8 +154,12 @@ public class TestV3Poll extends LockssTestCase {
 		  pollmanager.isPollClosed(key));
       assertFalse("Poll " + voter + " should not be suspended",
 		  pollmanager.isPollSuspended(key));
+      log.debug("Step " + i);
+      Thread.yield();
       TimeBase.step(step);
+      Thread.yield();
     }
+    Thread.yield();
     assertTrue("Poll " + poller + " should be active",
 	       pollmanager.isPollActive(key));
     assertFalse("Poll " + poller + " should not be closed",
@@ -165,7 +172,9 @@ public class TestV3Poll extends LockssTestCase {
 		pollmanager.isPollClosed(key));
     assertFalse("Poll " + voter + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    log.debug("Penultimate step ");
     TimeBase.step(step);
+    Thread.yield();
     assertFalse("Poll " + poller + " should not be active",
 		pollmanager.isPollActive(key));
     assertTrue("Poll " + poller + " should be closed",
@@ -178,6 +187,7 @@ public class TestV3Poll extends LockssTestCase {
 	       pollmanager.isPollClosed(key));
     assertFalse("Poll " + voter + " should not be suspended",
 		pollmanager.isPollSuspended(key));
+    log.debug("About to tally");
     PollTally tally = poller.getVoteTally();
     assertNotNull(tally);
     List votes = tally.getPollVotes();
@@ -191,6 +201,19 @@ public class TestV3Poll extends LockssTestCase {
     } catch (Exception ex) {
       fail("initTestPoll threw " + ex.toString());
     }
+    Thread.yield();
+    //  Set up effort service stuff
+    MockEffortService es = (MockEffortService)theDaemon.getEffortService();
+    es.setGenerateProofResult(true);
+    es.setVerifyProofResult(true);
+    es.setProofDuration(400);
+    es.setProofException(null);
+    es.setGenerateVoteResult(true);
+    es.setVerifyVoteResult(true);
+    es.setAgreeVoteResult(true);
+    es.setVoteDuration(400);
+    es.setVoteException(null);
+    Thread.yield();
     //  The two halves of the poll have been created but
     //  no time has elapsed
     assertTrue(voter instanceof V3Voter);
@@ -204,11 +227,22 @@ public class TestV3Poll extends LockssTestCase {
     String key = poller.getKey();
     List peers = new ArrayList();
     peers.add(testID1);
+    Thread.yield();
     poller.solicitVotesFrom(peers);
+    Thread.yield();
+    int steps = 100;
     while (pollmanager.isPollActive(key)) {
-      stepTimeUntilPollStateChanges(poller, "testing");
+      Thread.yield();
+      if (false) {
+	stepTimeUntilPollStateChanges(poller, "testing");
+      } else {
+	TimeBase.step(500);
+      }
       log.debug("poller state " + poller.getPollStateName(poller.getPollState()) +
 		" voter state " + voter.getPollStateName(voter.getPollState()));
+      steps--;
+      assertTrue("Too many steps", steps > 0);
+      Thread.yield();
     }
   }
 
@@ -556,15 +590,12 @@ public class TestV3Poll extends LockssTestCase {
     public void handleMessage(V3LcapMessage msg) {
       log.debug(handlerName + ": handleMessage(" + msg + ")");
       PeerIdentity sender = msg.getOriginatorID();
+      assertNotNull(sender);
+      assertNotNull(pollHash);
       V3Poll recipient = (V3Poll) pollHash.get(sender);
-      if (recipient == null) {
-	log.error("No recipient for " + msg);
-      } else {
-	log.debug("Handing " + msg + " to " + recipient);
-	if (false) {  // XXX disabled so I can check the initial changes in
-	  recipient.receiveMessage(msg);
-	}
-      }
+      assertNotNull(recipient);
+      log.debug("Handing " + msg + " to " + recipient);
+      recipient.receiveMessage(msg);
     }
   }
 

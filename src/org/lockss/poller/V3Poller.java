@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.16 2004-11-24 21:33:21 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.17 2004-11-29 20:51:11 dshr Exp $
  */
 
 /*
@@ -332,6 +332,7 @@ public class V3Poller extends V3Poll {
     if (peers.size() == 0) {
       log.debug("No voters to solicit from");
       changePollState(STATE_CHOOSING_NEXT_VOTE);
+      pauseBeforeVerifyNextVote(m_key);
       return;
     }
     m_voterRoll = peers;
