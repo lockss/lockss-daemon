@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.3 2002-11-23 01:22:28 troberts Exp $
  */
 
 /*
@@ -74,5 +74,9 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
    */
   public boolean containsUrl(String url) {
     return (null != makeCachedUrl(url));
+  }
+
+  public String toString() {
+    return "[BCUS: "+spec+"]";
   }
 }
