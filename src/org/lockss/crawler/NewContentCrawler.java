@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.16 2004-03-23 20:54:36 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.17 2004-03-26 00:47:37 troberts Exp $
  */
 
 /*
@@ -53,8 +53,20 @@ public class NewContentCrawler extends CrawlerImpl {
     Configuration.PREFIX + "CrawlerImpl.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
 
+  public static final String PARAM_REPARSE_ALL =
+    Configuration.PREFIX + "CrawlerImpl.reparse_all";
+  public static final boolean DEFAULT_REPARSE_ALL = true;
+
+  public static final String PARAM_PERSIST_CRAWL_LIST =
+    Configuration.PREFIX + "CrawlerImpl.persist_crawl_list";
+  public static final boolean DEFAULT_PERSIST_CRAWL_LIST = false;
+
   public static final String PARAM_REFETCH_DEPTH =
     Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
+
+
+  private boolean alwaysReparse;
+  private boolean usePersistantList;
 
   public NewContentCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     super(au, spec, aus);
@@ -67,6 +79,12 @@ public class NewContentCrawler extends CrawlerImpl {
 
 
   protected boolean doCrawl0() {
+    alwaysReparse =
+      Configuration.getBooleanParam(PARAM_REPARSE_ALL, DEFAULT_REPARSE_ALL);
+    usePersistantList =
+      Configuration.getBooleanParam(PARAM_PERSIST_CRAWL_LIST,
+				    DEFAULT_PERSIST_CRAWL_LIST);
+    
     logger.info("Beginning crawl of "+au);
     crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
@@ -125,10 +143,15 @@ public class NewContentCrawler extends CrawlerImpl {
 
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
-    Collection urlsToCrawl = aus.getCrawlUrls();
-    urlsToCrawl.addAll(extractedUrls);
-    extractedUrls.clear();
+    Collection urlsToCrawl;
 
+    if (usePersistantList) {
+      urlsToCrawl = aus.getCrawlUrls();
+      urlsToCrawl.addAll(extractedUrls);
+      extractedUrls.clear();
+    } else {
+      urlsToCrawl = extractedUrls;
+    }
 
     while (!urlsToCrawl.isEmpty() && !crawlAborted) {
       String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
@@ -140,7 +163,7 @@ public class NewContentCrawler extends CrawlerImpl {
       boolean crawlRes = false;
       try {
 	crawlRes = fetchAndParse(nextUrl, urlsToCrawl, parsedPages,
-				 cus, false, false);
+ 				 cus, false, alwaysReparse);
       } catch (RuntimeException e) {
 	logger.warning("Unexpected exception in crawl", e);
       }
@@ -149,7 +172,9 @@ public class NewContentCrawler extends CrawlerImpl {
 	  crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	}
       }
-      aus.updatedCrawlUrls(false);
+      if (usePersistantList) {
+	aus.updatedCrawlUrls(false);
+      }
     }
     if (crawlStatus.getCrawlError() != 0) {
       logger.info("Finished crawl (errors) of "+au);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.5 2004-03-09 23:25:23 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.6 2004-03-26 00:47:37 troberts Exp $
  */
 
 /*
@@ -196,7 +196,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testWillNotParseExistingPagesForUrls() {
+  public void testWillNotParseExistingPagesForUrlsIfParam() {
+    Properties p = new Properties();
+    p.setProperty(NewContentCrawler.PARAM_REPARSE_ALL, "false");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
     String url1 = "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link4.html";
     startUrls = ListUtil.list(startUrl);
@@ -212,6 +216,27 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     crawler.doCrawl();
     Set expected = SetUtil.set(startUrl);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testWillParseExistingPagesForUrlsIfParam() {
+    setProperty(NewContentCrawler.PARAM_REPARSE_ALL, "true");
+
+    String url1 = "http://www.example.com/link3.html";
+    String url2 = "http://www.example.com/link4.html";
+    startUrls = ListUtil.list(startUrl);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    parser.addUrlSetToReturn(url1, SetUtil.set(url2));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    cus.addUrl(startUrl, true, true);
+    cus.addUrl(url1, true, true);
+    cus.addUrl(url2);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+
+    crawler.doCrawl();
+    Set expected = SetUtil.set(startUrl, url2);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -278,6 +303,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testCrawlListEmptyOnExit() {
+    setProperty(NewContentCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
@@ -288,6 +314,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testCrawlListPreservesUncrawledUrls() {
+    setProperty(NewContentCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
@@ -298,7 +325,20 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(SetUtil.set(url2, url3), aus.getCrawlUrls());
   }
 
-  public void testUpdatedCrawlListCalledForEachFetch() {
+  public void testCrawlListDoesntPreserveUncrawledUrlsIfParam() {
+    setProperty(NewContentCrawler.PARAM_PERSIST_CRAWL_LIST, "false");
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    spec.setCrawlWindow(new MyMockCrawlWindow(1));
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    crawlUrls(SetUtil.set(url1, url2, url3));
+    assertEquals(SetUtil.set(), aus.getCrawlUrls());
+  }
+
+  public void testUpdatedCrawlListCalledForEachFetchIfParam() {
+    setProperty(NewContentCrawler.PARAM_PERSIST_CRAWL_LIST, "true");
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
@@ -308,6 +348,16 @@ public class TestNewContentCrawler extends LockssTestCase {
     aus.assertUpdatedCrawlListCalled(3); //not called for startUrl
   }
 
+  public void testUpdatedCrawlListCalledForEachFetch() {
+    setProperty(NewContentCrawler.PARAM_PERSIST_CRAWL_LIST, "false");
+    String url1= "http://www.example.com/link1.html";
+    String url2= "http://www.example.com/link2.html";
+    String url3= "http://www.example.com/link3.html";
+
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
+    crawlUrls(SetUtil.set(url1, url2, url3));
+    aus.assertUpdatedCrawlListCalled(0); //not called for startUrl
+  }
 
   public void testWatchdogPokedForEachFetch() {
     String url1= "http://www.example.com/link1.html";
@@ -329,6 +379,12 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     crawler.doCrawl();
     assertEquals(0, cus.getCachedUrls().size());
+  }
+
+  private static void setProperty(String prop, String value) {
+    Properties p = new Properties();
+    p.setProperty(prop, value);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
   private class MyMockCrawlWindow implements CrawlWindow {
