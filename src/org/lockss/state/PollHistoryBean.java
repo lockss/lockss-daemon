@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.2 2002-12-13 23:51:32 aalto Exp $
+ * $Id: PollHistoryBean.java,v 1.3 2002-12-18 00:11:59 aalto Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class PollHistoryBean extends PollHistory {
 
   /**
    * Sets the regular expression.
-   * @param regexp the new regexp
+   * @param regExp the new regexp
    */
   public void setRegExp(String regExp) {
     super.regExp = regExp;

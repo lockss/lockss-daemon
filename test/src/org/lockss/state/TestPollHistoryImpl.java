@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.8 2002-12-18 00:11:59 aalto Exp $
+ * $Id: TestPollHistoryImpl.java,v 1.1 2002-12-18 00:11:59 aalto Exp $
  */
 
 /*
@@ -34,45 +34,39 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.protocol.LcapIdentity;
+import org.lockss.daemon.CachedUrlSet;
+import org.lockss.test.LockssTestCase;
+import org.lockss.poller.Poll;
 
-/**
- * PollHistory contains the information for a completed poll.  It extends
- * PollState but ignores 'getDeadline()' (returns null).
- */
-public class PollHistory extends PollState {
-  long duration;
-  Collection votes;
+public class TestPollHistoryImpl extends LockssTestCase {
+  private PollHistory history;
 
-  /**
-   * Empty constructor used for marshalling.  Needed to create the
-   * PollHistoryBean.
-   */
-  public PollHistory() {
-    super(-1, null, -1, 0, null);
-    duration = 0;
-    votes = null;
+  public TestPollHistoryImpl(String msg) {
+    super(msg);
   }
 
-  PollHistory(PollState state, long duration, Collection votes) {
-    super(state.type, state.regExp, state.status, state.startTime, null);
-    this.duration = duration;
-    this.votes = votes;
+  public void setUp() throws Exception {
+    PollState state = new PollState(1, "none", 1, 0, null);
+    Collection votes = new ArrayList();
+    votes.add(new String("test"));
+    history = new PollHistory(state, 0, votes);
   }
 
-  /**
-   * Returns the duration the poll took.
-   * @return the duration in ms
-   */
-  public long getDuration() {
-    return duration;
+  public void testVotesImmutability() {
+    Iterator voteIter = history.getVotes();
+    try {
+      voteIter.remove();
+      fail("Iterator should be immutable.");
+    } catch (Exception e) { }
   }
 
-  /**
-   * Returns an immutable iterator of Votes.
-   * @return an Iterator of Poll.Vote objects.
-   */
-  public Iterator getVotes() {
-    return Collections.unmodifiableCollection(votes).iterator();
+  public void testCompareTo() {
+    PollState state = new PollState(1, "none", 1, 0, null);
+    PollState state2 = new PollState(2, "none2", 1, 0, null);
+    PollState state3 = new PollState(1, "non", 1, 0, null);
+    assertEquals(-1, state.compareTo(state2));
+    assertEquals(0, history.compareTo(state));
+    assertEquals(1, state.compareTo(state3));
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.8 2002-12-18 00:11:59 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.1 2002-12-18 00:11:59 aalto Exp $
  */
 
 /*
@@ -30,49 +30,20 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.state;
 
-import java.util.*;
-import org.lockss.protocol.LcapIdentity;
+import java.util.Iterator;
+import org.lockss.daemon.CachedUrlSet;
+import org.lockss.poller.Poll;
+import org.lockss.daemon.ArchivalUnit;
+import org.lockss.test.LockssTestCase;
 
-/**
- * PollHistory contains the information for a completed poll.  It extends
- * PollState but ignores 'getDeadline()' (returns null).
- */
-public class PollHistory extends PollState {
-  long duration;
-  Collection votes;
+public class TestNodeManagerImpl extends LockssTestCase {
 
-  /**
-   * Empty constructor used for marshalling.  Needed to create the
-   * PollHistoryBean.
-   */
-  public PollHistory() {
-    super(-1, null, -1, 0, null);
-    duration = 0;
-    votes = null;
+  public TestNodeManagerImpl(String msg) {
+    super(msg);
   }
 
-  PollHistory(PollState state, long duration, Collection votes) {
-    super(state.type, state.regExp, state.status, state.startTime, null);
-    this.duration = duration;
-    this.votes = votes;
-  }
+  public void testNothing() { }
 
-  /**
-   * Returns the duration the poll took.
-   * @return the duration in ms
-   */
-  public long getDuration() {
-    return duration;
-  }
-
-  /**
-   * Returns an immutable iterator of Votes.
-   * @return an Iterator of Poll.Vote objects.
-   */
-  public Iterator getVotes() {
-    return Collections.unmodifiableCollection(votes).iterator();
-  }
 }

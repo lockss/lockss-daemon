@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.1 2002-12-17 23:35:14 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.2 2002-12-18 00:11:59 aalto Exp $
  */
 
 /*
@@ -44,11 +44,11 @@ public class NodeStateImpl implements NodeState {
   CachedUrlSet cus;
   CrawlState crawlState;
   List polls;
-  List pollHistories;
+  List pollHistories = null;
   StateRepository repository;
 
   NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
-                StateRepository repostiory) {
+                StateRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
     this.polls = polls;
@@ -68,7 +68,9 @@ public class NodeStateImpl implements NodeState {
   }
 
   public Iterator getPollHistories() {
-    repository.loadPollHistories(this);
+    if (pollHistories==null) {
+      repository.loadPollHistories(this);
+    }
     return Collections.unmodifiableList(pollHistories).iterator();
   }
 
@@ -77,7 +79,9 @@ public class NodeStateImpl implements NodeState {
   }
 
   void closeActivePoll(PollHistory finished_poll) {
-    repository.loadPollHistories(this);
+    if (pollHistories==null) {
+      repository.loadPollHistories(this);
+    }
     pollHistories.add(finished_poll);
     polls.remove(finished_poll);
   }
