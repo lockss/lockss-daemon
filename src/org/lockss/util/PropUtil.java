@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.6 2004-03-18 20:14:11 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.7 2004-05-04 22:21:56 tlipkis Exp $
  */
 /*
 
@@ -42,6 +42,31 @@ import org.mortbay.tools.*;
 public class PropUtil {
 
   private static final String noProp = new String(); // guaranteed unique obj
+
+  /** Returns a copy of the Properties */
+  public static Properties copy(Properties props) {
+    Properties copy = new Properties();
+    for (Enumeration enum = props.propertyNames(); enum.hasMoreElements(); ) {
+      String key = (String)enum.nextElement();
+      copy.setProperty(key, props.getProperty(key));
+    }
+    return copy;
+  }
+
+
+  public static Properties fromArgs(String prop, String val) {
+    Properties props = new Properties();
+    props.put(prop, val);
+    return props;
+  }
+
+  public static Properties fromArgs(String prop1, String val1,
+				    String prop2, String val2) {
+    Properties props = new Properties();
+    props.put(prop1, val1);
+    props.put(prop2, val2);
+    return props;
+  }
 
   private static boolean isKeySame(String key, Properties p1, Properties p2) {
     Object o1 = p1.getProperty(key);
