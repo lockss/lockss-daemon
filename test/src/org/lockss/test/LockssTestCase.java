@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.22 2003-03-03 22:47:51 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.23 2003-03-04 00:47:09 troberts Exp $
  */
 
 /*
@@ -307,6 +307,14 @@ public class LockssTestCase extends TestCase {
 	(expected != null && expected.equals(actual))) {
       failEquals(message, expected, actual);
     }
+  }
+  
+  /**
+   * Asserts that two objects are not equal. If they are not
+   * an AssertionFailedError is thrown with the given message.
+   */
+  static public void assertNotEquals(Object expected, Object actual) {
+    assertNotEquals(null, expected, actual);
   }
   
   public static void assertNotEquals(long expected, long actual) {
