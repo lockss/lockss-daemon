@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.12 2003-03-18 02:27:53 troberts Exp $
+ * $Id: StatusTable.java,v 1.13 2003-03-18 22:27:57 troberts Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class StatusTable {
   private List rows;
   private List defaultSortRules;
   private static Logger logger = Logger.getLogger("StatusTable");
+  private List headers;
 
 
   /**
@@ -99,6 +100,21 @@ public class StatusTable {
    */
   public String getTitle() {
     return title;
+  }
+
+  /**
+   * Returns a List of {@link Header}s for this table
+   * @return List of {@link Header}s for this table
+   */
+  public List getHeaders() {
+    return headers;
+  }
+
+  /**
+   * Set the {@link Header}s for this table
+   */
+  protected void setHeaders(List headers) {
+    this.headers = headers;
   }
 
   /**
@@ -318,6 +334,36 @@ public class StatusTable {
     }
   }
 
+  /**
+   * Object representing scalar information in a table
+   */
+  public static class Header {
+    private String title;
+    private int type;
+    private Object value;
 
+    /**
+     * @param title title for this header
+     * @param type int representing the type of value
+     * @param value value object associated with this header
+     */    
+    public Header(String title, int type, Object value) {
+      this.title = title;
+      this.type = type;
+      this.value = value;
+    }
+
+    public String getTitle() {
+      return this.title;
+    }
+
+    public int getType() {
+      return this.type;
+    }
+
+    public Object getValue() {
+      return value;
+    }
+  }
 
 }
