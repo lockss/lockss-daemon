@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.1 2003-02-24 22:13:41 claire Exp $
+ * $Id: ArchivalUnit.java,v 1.2 2003-02-26 04:45:31 tal Exp $
  */
 
 /*
@@ -52,7 +52,8 @@ public interface ArchivalUnit {
   /**
    * Supply (possibly changed) configuration information to an existing AU.
    */
-  public void setConfiguration(Configuration config);
+  public void setConfiguration(Configuration config)
+      throws ConfigurationException;
 
   /**
    * Determine whether the url falls within the CrawlSpec.
