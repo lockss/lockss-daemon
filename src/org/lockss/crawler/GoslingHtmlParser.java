@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.16 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.17 2004-03-23 20:53:58 tlipkis Exp $
  */
 
 /*
@@ -315,7 +315,9 @@ public class GoslingHtmlParser implements ContentParser {
       try {
 	returnStr = UrlUtil.resolveUri(srcUrl, returnStr);
       } catch (MalformedURLException e) {
-	logger.debug("Got a bad URL", e);
+	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
+		     "\", link: \"" + returnStr + "\"",
+		     e);
 	return null;
       }
       if (logger.isDebug3()) {
