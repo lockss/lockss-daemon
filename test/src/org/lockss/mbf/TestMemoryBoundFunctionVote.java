@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.1 2003-08-11 18:44:53 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
  */
 
 /*
@@ -52,12 +52,18 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static File f = null;
   private static byte[] basis;
   private int pathsTried;
-  private static String[] names = {
+  private static String[] MBFnames = {
     "MOCK",
-    "MBF1",
-    "MBF2",
+    // "MBF1",
+    // "MBF2",
   };
-  private static MemoryBoundFunctionFactory[] factory = null;
+  private static MemoryBoundFunctionFactory[] MBFfactory = null;
+  private static String[] MBFVnames = {
+    "MOCK",
+    // "MBFV2",
+  };
+  private static MemoryBoundFunctionVoteFactory[] MBFVfactory = null;
+  private static final int numSteps = 16;
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -78,13 +84,23 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     if (!f.exists())
       fail(f.getPath() + " doesn't exist");
     MemoryBoundFunction.configure(f);
-    if (factory == null) {
-      factory = new MemoryBoundFunctionFactory[names.length];
-      for (int i = 0; i < factory.length; i++) {
+    if (MBFfactory == null) {
+      MBFfactory = new MemoryBoundFunctionFactory[MBFnames.length];
+      for (int i = 0; i < MBFfactory.length; i++) {
 	try {
-	  factory[i] = new MemoryBoundFunctionFactory(names[i]);
+	  MBFfactory[i] = new MemoryBoundFunctionFactory(MBFnames[i]);
 	} catch (NoSuchAlgorithmException ex) {
-	  fail(names[i] + " threw " + ex.toString());
+	  fail(MBFnames[i] + " threw " + ex.toString());
+	}
+      }
+    }
+    if (MBFVfactory == null) {
+      MBFVfactory = new MemoryBoundFunctionVoteFactory[MBFVnames.length];
+      for (int i = 0; i < MBFVfactory.length; i++) {
+	try {
+	  MBFVfactory[i] = new MemoryBoundFunctionVoteFactory(MBFVnames[i]);
+	} catch (NoSuchAlgorithmException ex) {
+	  fail(MBFVnames[i] + " threw " + ex.toString());
 	}
       }
     }
@@ -99,31 +115,237 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 
   /*
    * Test construct
-   * XXX - change to a Factory for MBFVs
    */
   public void testConstructors() {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
     CachedUrlSet cus = new MockCachedUrlSet();
-    for (int i = 0; i < factory.length; i++) {
-      try {
-	MemoryBoundFunctionVote mbfv =
-	  new MBFV2(factory[i], nonce, 3, cus);
-      } catch (MemoryBoundFunctionException ex) {
-	fail("factory for " + names[i] + " threw " + ex.toString());
+    for (int j = 0; j < MBFVfactory.length; j++) {
+      for (int i = 0; i < MBFfactory.length; i++) {
+	try {
+	  MemoryBoundFunctionVote mbfv =
+	    MBFVfactory[j].generator(MBFfactory[i], nonce, 3, cus);
+	} catch (MemoryBoundFunctionException ex) {
+	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	       " threw " + ex.toString());
+	} catch (NoSuchAlgorithmException ex) {
+	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	       " threw " + ex.toString());
+	}
       }
     }
     int[][] sVals = { { 1, 2 } };
     byte[][] hashVals = new byte[1][];
     hashVals[0] = nonce;
-    for (int i = 0; i < factory.length; i++) {
-      try {
-	MemoryBoundFunctionVote mbfv =
-	  new MBFV2(factory[i], nonce, 3, cus, sVals, hashVals);
-      } catch (MemoryBoundFunctionException ex) {
-	fail("factory for " + names[i] + " threw " + ex.toString());
+    for (int j = 0; j < MBFVfactory.length; j++) {
+      for (int i = 0; i < MBFfactory.length; i++) {
+	try {
+	  MemoryBoundFunctionVote mbfv =
+	    MBFVfactory[j].verifier(MBFfactory[i], nonce, 3,
+				    cus, sVals, hashVals);
+	} catch (MemoryBoundFunctionException ex) {
+	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	       " threw " + ex.toString());
+	} catch (NoSuchAlgorithmException ex) {
+	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	       " threw " + ex.toString());
+	}
       }
     }
   }
 
+  public void testOnePair() {
+    for (int j = 0; j < MBFVfactory.length; j++)
+      for (int i = 0; i < MBFfactory.length; i++)
+	onePair(i, j);
+  }
+    
+  public void onePair(int i, int j) {
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    CachedUrlSet cus = goodCUS(128);
+    if (cus == null)
+      fail("goodCUS() returned null");
+    // Make a generator
+    MemoryBoundFunctionVote gen = generator(i, j, nonce, cus);
+    assertFalse(gen==null);
+    // Generate the vote
+    try {
+      while (gen.computeSteps(numSteps)) {
+	assertFalse(gen.finished());
+      }
+    } catch (MemoryBoundFunctionException ex) {
+      fail("generator.computeSteps() threw " + ex.toString());
+    }
+    assertTrue(gen.finished());
+    // Recover the vote
+    int[][] proofArray = gen.getProofArray();
+    if (proofArray == null)
+      fail("generated a null proof array");
+    // Recover the hashes
+    byte[][] hashArray = gen.getHashArray();
+    if (hashArray == null)
+      fail("generated a null proof array");
+    if (proofArray.length != hashArray.length)
+      fail("proof " + proofArray.length + " hash " +
+	   hashArray.length + " not equal");
+    // Make a verifier
+    cus = goodCUS(128);
+    if (cus == null)
+      fail("goodCUS() returned null");
+    MemoryBoundFunctionVote ver = verifier(i, j, nonce, cus,
+					   proofArray, hashArray);
+    assertFalse(ver==null);
+    // Verify the vote
+    try {
+      while (ver.computeSteps(numSteps)) {
+	assertFalse(ver.finished());
+      }
+    } catch (MemoryBoundFunctionException ex) {
+      fail("verifier.computeSteps() threw " + ex.toString());
+    }
+    assertTrue(ver.finished());
+    // Get valid/invalid
+    try {
+      boolean valid = ver.valid();
+      if (!valid)
+	fail("verifier declared valid vote invalid");
+    } catch (MemoryBoundFunctionException ex) {
+      fail("verifier.valid() threw " + ex.toString());
+    }
+    // Get agreeing/disagreeing
+    try {
+      boolean agreeing = ver.agreeing();
+      if (!agreeing)
+	fail("verifier declared agreeing vote disgreeing");
+    } catch (MemoryBoundFunctionException ex) {
+      fail("verifier.agreeing() threw " + ex.toString());
+    }
+  }
+
+  MemoryBoundFunctionVote generator(int i, int j,
+				    byte[] nonce,
+				    CachedUrlSet cus) {
+    if (cus == null)
+      fail("generator() - no CUS");
+    MemoryBoundFunctionVote ret = null;
+    try {
+      ret = MBFVfactory[j].generator(MBFfactory[i], nonce, 3, cus);
+    } catch (MemoryBoundFunctionException ex) {
+      fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	   " threw " + ex.toString());
+    } catch (NoSuchAlgorithmException ex) {
+      fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	   " threw " + ex.toString());
+    }
+    {
+      ArchivalUnit au = cus.getArchivalUnit();
+      if (au == null)
+	fail("generator() - null AU");
+      String auid = au.getAUId();
+      if (auid == null)
+	fail("generator() - null auID");
+      log.info("generator() " + MBFVnames[j] + ":" + MBFnames[i] +
+	       " for " + auid);
+    }
+    if (ret instanceof MockMemoryBoundFunctionVote) {
+      int[][] prfs = {
+	{1},
+	{1,2},
+	{1,2,3},
+	{1,2,3,4},
+	{1,2,3,4,5},
+	{1,2,3,4,5,6},
+	{1,2,3,4,5,6,7},
+	{1,2,3,4,5,6,7,8},
+	{1,2,3,4,5,6,7,8,9},
+	{1,2,3,4,5,6,7,8,9,10}
+      };
+      ((MockMemoryBoundFunctionVote)ret).setProofs(prfs);
+      byte[][] hashes = {
+	{1},
+	{1,2},
+	{1,2,3},
+	{1,2,3,4},
+	{1,2,3,4,5},
+	{1,2,3,4,5,6},
+	{1,2,3,4,5,6,7},
+	{1,2,3,4,5,6,7,8},
+	{1,2,3,4,5,6,7,8,9},
+	{1,2,3,4,5,6,7,8,9,10}
+      };
+      ((MockMemoryBoundFunctionVote)ret).setHashes(hashes);
+      ((MockMemoryBoundFunctionVote)ret).setStepCount(256);
+    }
+    return ret;
+  }
+
+  MemoryBoundFunctionVote verifier(int i, int j,
+				   byte[] nonce,
+				   CachedUrlSet cus,
+				   int[][] proofArray,
+				   byte[][] hashArray) {
+    MemoryBoundFunctionVote ret = null;
+    try {
+      ret = MBFVfactory[j].verifier(MBFfactory[i], nonce, 3, cus,
+				    proofArray, hashArray);
+    } catch (MemoryBoundFunctionException ex) {
+      fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	   " threw " + ex.toString());
+    } catch (NoSuchAlgorithmException ex) {
+      fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
+	   " threw " + ex.toString());
+    }
+    if (ret instanceof MockMemoryBoundFunctionVote) {
+      int[][] prfs = {
+	{1},
+	{1,2},
+	{1,2,3},
+	{1,2,3,4},
+	{1,2,3,4,5},
+	{1,2,3,4,5,6},
+	{1,2,3,4,5,6,7},
+	{1,2,3,4,5,6,7,8},
+	{1,2,3,4,5,6,7,8,9},
+	{1,2,3,4,5,6,7,8,9,10}
+      };
+      ((MockMemoryBoundFunctionVote)ret).setProofs(prfs);
+      byte[][] hashes = {
+	{1},
+	{1,2},
+	{1,2,3},
+	{1,2,3,4},
+	{1,2,3,4,5},
+	{1,2,3,4,5,6},
+	{1,2,3,4,5,6,7},
+	{1,2,3,4,5,6,7,8},
+	{1,2,3,4,5,6,7,8,9},
+	{1,2,3,4,5,6,7,8,9,10}
+      };
+      ((MockMemoryBoundFunctionVote)ret).setHashes(hashes);
+      ((MockMemoryBoundFunctionVote)ret).setValid(true);
+      ((MockMemoryBoundFunctionVote)ret).setAgreeing(true);
+      ((MockMemoryBoundFunctionVote)ret).setStepCount(256);
+    }
+    return ret;
+  }
+
+  private CachedUrlSet goodCUS(int bytes) {
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId("TestMemoryBoundFunctionVote:goodAU");
+    MockCachedUrlSetHasher hash = new MockCachedUrlSetHasher(bytes);
+    MockCachedUrlSet ret = new MockCachedUrlSet();
+    ret.setArchivalUnit(au);
+    ret.setContentHasher(hash);
+    return (ret);
+  }
+
+  /** Executes the test case
+   * @param argv array of Strings containing command line arguments
+   * */
+  public static void main(String[] argv) {
+    String[] testCaseList = {
+        TestMemoryBoundFunctionVote.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
 }

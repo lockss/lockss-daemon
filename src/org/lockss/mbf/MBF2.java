@@ -1,10 +1,10 @@
 /*
- * $Id: MBF2.java,v 1.3 2003-08-09 16:40:12 dshr Exp $
+ * $Id: MBF2.java,v 1.4 2003-08-24 22:38:25 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

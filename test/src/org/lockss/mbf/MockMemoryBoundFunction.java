@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.1 2003-08-09 16:40:12 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
  */
 
 /*
@@ -77,6 +77,8 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
     }
     dummyProof = (int) mbf.basisSize() - 2;
     useDummy = true;
+    logger.info("e " + mbf.e + " pathLen " + mbf.pathLen + " verify " +
+		mbf.verify + " steps " + stepsToDo);
   }
 
   /**

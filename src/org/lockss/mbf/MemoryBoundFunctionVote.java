@@ -1,10 +1,10 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.1 2003-08-11 18:44:52 dshr Exp $
+ * $Id: MemoryBoundFunctionVote.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -47,12 +47,14 @@ public abstract class MemoryBoundFunctionVote {
 
   protected byte[] nonce;
   protected int e;
-  protected ArrayList proofs;  // for each block has array of proofs
-  protected ArrayList hashes;  // for each block has array of hashes
+  private ArrayList proofs;  // for each block has array of proofs
+  private ArrayList hashes;  // for each block has array of hashes
   protected CachedUrlSet cus;
   protected MemoryBoundFunction mbf;
   protected boolean verify;
   protected boolean finished;
+  protected boolean valid;
+  protected boolean agreeing;
   protected int numBlocks;
   protected MemoryBoundFunctionFactory factory;
 
@@ -72,10 +74,10 @@ public abstract class MemoryBoundFunctionVote {
    * @param cus the CachedUrlSet containing the content to be voted on
    *
    */
-  public MemoryBoundFunctionVote(MemoryBoundFunctionFactory fact,
-				 byte[] nVal,
-				 int eVal,
-				 CachedUrlSet cusVal)
+  protected void setupGeneration(MemoryBoundFunctionFactory fact,
+			      byte[] nVal,
+			      int eVal,
+			      CachedUrlSet cusVal)
     throws MemoryBoundFunctionException {
     if (fact == null)
       throw new MemoryBoundFunctionException("no factory");
@@ -98,12 +100,12 @@ public abstract class MemoryBoundFunctionVote {
    * @param hashes the hashes of each block
    * 
    */
-  public MemoryBoundFunctionVote(MemoryBoundFunctionFactory fact,
-				 byte[] nVal,
-				 int eVal,
-				 CachedUrlSet cusVal,
-				 int[][] sVals,
-				 byte[][] hashVals)
+  protected void setupVerification(MemoryBoundFunctionFactory fact,
+				byte[] nVal,
+				int eVal,
+				CachedUrlSet cusVal,
+				int[][] sVals,
+				byte[][] hashVals)
     throws MemoryBoundFunctionException {
     if (fact == null)
       throw new MemoryBoundFunctionException("no factory");
@@ -115,18 +117,21 @@ public abstract class MemoryBoundFunctionVote {
     proofs = new ArrayList(numBlocks);
     hashes = new ArrayList(numBlocks);
     for (int i = 0; i < numBlocks; i++) {
-      proofs.add(i, sVals[i]);
-      hashes.add(i, hashVals[i]);
+      proofs.add(i, new savedProof(sVals[i]));
+      hashes.add(i, new savedHash(hashVals[i]));
     }
   }
 
   private void setup(MemoryBoundFunctionFactory fact,
-		     byte[] nVal, int eVal, CachedUrlSet cus) {
+		     byte[] nVal, int eVal, CachedUrlSet cusVal) {
     factory = fact;
     nonce = nVal;
     e = eVal;
     finished = false;
     mbf = null;
+    valid = true;
+    agreeing = true;
+    cus = cusVal;
   }
 
   /**
@@ -139,13 +144,25 @@ public abstract class MemoryBoundFunctionVote {
     throws MemoryBoundFunctionException;
 
   /**
+   * Return true if the computation is finished.
+   * @return true if the computation is finished
+   */
+  public boolean finished() {
+    return finished;
+  }
+
+  /**
    * Obtain the array of proof values that form part of the vote.
    * @return null if vote generation hasn't finished, else the array of proofs
    */
   public int[][] getProofArray() {
     int[][] ret = null;
     if (verify || finished) {
-      ret = (int[][]) proofs.toArray();
+      Object[] spa = proofs.toArray();
+      ret = new int[spa.length][];
+      for (int i = 0; i < spa.length; i++) {
+	ret[i] = ((savedProof)spa[i]).getProof();
+      }
     }
     return (ret);
   }
@@ -157,8 +174,69 @@ public abstract class MemoryBoundFunctionVote {
   public byte[][] getHashArray() {
     byte[][] ret = null;
     if (verify || finished) {
-      ret = (byte[][]) hashes.toArray();
+      Object[] sha = hashes.toArray();
+      ret = new byte[sha.length][];
+      for (int i = 0; i < sha.length; i++) {
+	ret[i] = ((savedHash)sha[i]).getHash();
+      }
     }
     return (ret);
+  }
+
+  /**
+   * Return true if the vote has been verified valid, false if it has
+   * been verified invalid,  throw otherwise.
+   * @return true if valid, false if invalid
+   * @throws MemoryBoundFunctionException otherwise
+   */
+  public boolean valid() throws MemoryBoundFunctionException {
+    if (!verify)
+      throw new MemoryBoundFunctionException("Not verifying");
+    if (!finished)
+      throw new MemoryBoundFunctionException("Not yet verified");
+    return (valid);
+  }
+
+  /**
+   * Return true if the vote has been verified agreeing, false if it has
+   * been verified disagreeing,  throw otherwise.
+   * @return true if agreeing, false if disagreeing
+   * @throws MemoryBoundFunctionException otherwise
+   */
+  public boolean agreeing() throws MemoryBoundFunctionException {
+    if (!verify)
+      throw new MemoryBoundFunctionException("Not verifying");
+    if (!finished)
+      throw new MemoryBoundFunctionException("Not yet verified");
+    return (agreeing);
+  }
+
+  protected void saveProof(int index, int[] proof) {
+    savedProof sp = new savedProof(proof);
+    proofs.add(index, sp);
+  }
+  protected void saveHash(int index, byte[] hash) {
+    savedHash sh = new savedHash(hash);
+    hashes.add(index, sh);
+  }
+  class savedProof {
+    int[] proof;
+
+    protected savedProof(int[] p) {
+      proof = p;
+    }
+    protected int[] getProof() {
+      return proof;
+    }
+  }
+  class savedHash {
+    byte[] hash;
+
+    protected savedHash(byte[] h) {
+      hash = h;
+    }
+    protected byte[] getHash() {
+      return hash;
+    }
   }
 }
