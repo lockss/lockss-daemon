@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.4 2002-09-09 20:29:54 tal Exp $
+ * $Id: Configuration.java,v 1.5 2002-10-01 06:15:23 tal Exp $
  */
 
 /*
@@ -88,8 +88,12 @@ public abstract class Configuration {
     for (Iterator iter = configChangedCallbacks.iterator();
 	 iter.hasNext();) {
       Callback c = (Callback)iter.next();
-      c.configurationChanged(oldConfig, newConfig,
-			     newConfig.differentKeys(oldConfig));
+      try {
+	c.configurationChanged(oldConfig, newConfig,
+			       newConfig.differentKeys(oldConfig));
+      } catch (Exception e) {
+	log.error("callback threw", e);
+      }
     }
   }
 
