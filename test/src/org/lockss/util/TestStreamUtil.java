@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.1 2002-10-23 23:50:08 aalto Exp $
+ * $Id: TestStreamUtil.java,v 1.2 2002-10-28 23:55:09 aalto Exp $
  */
 
 /*
@@ -41,10 +41,6 @@ import org.lockss.test.*;
  * This is the test class for org.lockss.util.ListUtil
  */
 public class TestStreamUtil extends LockssTestCase {
-  public static Class testedClasses[] = {
-    org.lockss.util.ListUtil.class
-  };
-
   public TestStreamUtil(String msg) {
     super(msg);
   }
@@ -55,6 +51,7 @@ public class TestStreamUtil extends LockssTestCase {
     StreamUtil.copy(is, baos);
     is.close();
     String resultStr = baos.toString();
+    baos.close();
     assertTrue(resultStr.equals("test string"));
   }
 }
