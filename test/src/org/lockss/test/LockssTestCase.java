@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.19 2003-01-15 18:16:57 tal Exp $
+ * $Id: LockssTestCase.java,v 1.20 2003-02-05 01:22:46 tal Exp $
  */
 
 /*
@@ -487,6 +487,7 @@ public class LockssTestCase extends TestCase {
       if (threadDump) {
 	try {
 	  DebugUtils.getInstance().threadDump();
+	  TimerUtil.guaranteedSleep(1000);
 	} catch (Exception e) {
 	}
       }
