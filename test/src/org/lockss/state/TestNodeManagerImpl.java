@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.46 2003-03-20 02:13:12 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.47 2003-03-21 23:55:26 claire Exp $
  */
 
 /*
@@ -275,10 +275,44 @@ public class TestNodeManagerImpl extends LockssTestCase {
                  nodeManager.mapResultsErrorToPollError(1));
   }
 
+  public void testStartPoll() throws Exception {
+    theDaemon.getHashService().startService();
+    theDaemon.getPollManager().startService();
+
+    contentPoll = createPoll(TEST_URL, true, false, 10, 5);
+    Poll.VoteTally results = contentPoll.getVoteTally();
+    // let's generate some history
+    CachedUrlSet cus = results.getCachedUrlSet();
+    Vector subFiles = new Vector(2);
+    subFiles.add(getCUS(mau, TEST_URL));
+    ((MockCachedUrlSet)cus).setFlatItSource(subFiles);
+    NodeState node = nodeManager.getNodeState(cus);
+    for (int i=0; i < 3; i++) {
+      ( (NodeStateImpl) node).closeActivePoll(new PollHistory(Poll.CONTENT_POLL,
+          "", "", PollHistory.WON, 100, 123, null));
+    }
+
+    // if we got a valid node we should return true
+    assertTrue(nodeManager.startPoll(cus,results));
+
+    // if we haven't got one we should return false
+    assertFalse(nodeManager.startPoll(getCUS(mau, TEST_URL + "/bogus"),
+                                             results));
+
+    // if we have a damaged node we return false
+    ( (NodeStateImpl) node).closeActivePoll(new PollHistory(Poll.CONTENT_POLL,
+        "", "", PollHistory.UNREPAIRABLE, 200, 456, null));
+
+    assertFalse(nodeManager.startPoll(cus, results));
+
+    theDaemon.getHashService().stopService();
+    theDaemon.getPollManager().stopService();
+  }
+
   public void testHandleContentPoll() throws Exception {
     theDaemon.getHashService().startService();
     theDaemon.getPollManager().startService();
-    contentPoll = createPoll(TEST_URL, true, 10, 5);
+    contentPoll = createPoll(TEST_URL, true, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -308,7 +342,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     testReputationChanges(results);
 
     // lost content poll
-    contentPoll = createPoll(TEST_URL + "/branch1", true, 5, 10);
+    contentPoll = createPoll(TEST_URL + "/branch1", true, true, 5, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     // - repairing
@@ -365,7 +399,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void testHandleNamePoll() throws Exception {
     theDaemon.getHashService().startService();
     theDaemon.getPollManager().startService();
-    namePoll = createPoll(TEST_URL + "/branch2", false, 10, 5);
+    namePoll = createPoll(TEST_URL + "/branch2", false, true, 10, 5);
     Poll.VoteTally results = namePoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
     NodeState nodeState =
@@ -398,7 +432,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     String repairUrl = TEST_URL + "/branch2/testentry4.html";
     String repairUrl2 = TEST_URL + "/branch2/testentry5.html";
 
-    contentPoll = createPoll(TEST_URL + "/branch2", false, 5, 10);
+    contentPoll = createPoll(TEST_URL + "/branch2", false, true, 5, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     pollState = new PollState(results.getType(),
@@ -445,7 +479,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.addNodeState(mcus);
 
     // test that a finished top-level poll sets the time right
-    contentPoll = createPoll(auUrl, true, 10, 5);
+    contentPoll = createPoll(auUrl, true, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
 
@@ -473,7 +507,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mcus.setFlatItSource(auChildren);
 
     // test that won name poll calls content polls on Au children
-    contentPoll = createPoll(auUrl, false, 10, 5);
+    contentPoll = createPoll(auUrl, false, true, 10, 5);
     results = contentPoll.getVoteTally();
     MockCachedUrlSet mcus2 = (MockCachedUrlSet)results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
@@ -584,25 +618,32 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
   }
 
-  private Poll createPoll(String url, boolean isContentPoll, int numAgree,
-                          int numDisagree) throws Exception {
+  private Poll createPoll(String url, boolean isContentPoll, boolean isLocal,
+                          int numAgree, int numDisagree) throws Exception {
     LcapIdentity testID = null;
     LcapMessage testmsg = null;
-    try {
-      InetAddress testAddr = InetAddress.getByName("127.0.0.1");
-      testID = theDaemon.getIdentityManager().findIdentity(testAddr);
+    if (isLocal) {
+      testID = theDaemon.getIdentityManager().getLocalIdentity();
     }
-    catch (UnknownHostException ex) {
-      fail("can't open test host");
+    else {
+      try {
+        InetAddress testAddr = InetAddress.getByName("123.3.4.5");
+        testID = theDaemon.getIdentityManager().findIdentity(testAddr);
+      }
+      catch (UnknownHostException ex) {
+        fail("can't open test host");
+      }
     }
+
     byte[] bytes = new byte[20];
     random.nextBytes(bytes);
+
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
           new PollSpec(mau.getPluginId(),
-		       mau.getAUId(),
-		       url, null, null, null),
+                       mau.getAUId(),
+                       url, null, null, null),
           null,
           bytes,
           bytes,
@@ -615,9 +656,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
       fail("can't create test name message" + ex.toString());
     }
     log.debug("daemon = " + theDaemon);
+
     Poll p = TestPoll.createCompletedPoll(theDaemon, mau,
-					  testmsg, numAgree, numDisagree);
+                                          testmsg, numAgree, numDisagree);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+
     return p;
   }
 

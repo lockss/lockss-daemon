@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.65 2003-03-20 02:13:11 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.66 2003-03-21 23:55:26 claire Exp $
  */
 
 /*
@@ -145,18 +145,24 @@ public class NodeManagerImpl implements NodeManager {
                                                   true);
   }
 
-  public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
+  public boolean startPoll(CachedUrlSet cus, Poll.VoteTally state) {
     NodeState nodeState = getNodeState(cus);
     if (nodeState == null) {
       logger.error("Failed to find a valid node state for: " + cus);
-      return;
+      return false;
     }
+    if(!state.isMyPoll() && hasDamage(cus, state.getType()))  {
+      logger.info("Ignoring poll request on damaged node: " + cus);
+      return false;
+    }
+
     PollSpec spec = state.getPollSpec();
     PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
                                         PollState.RUNNING, state.getStartTime(),
                                         null);
     ((NodeStateImpl)nodeState).addPollState(pollState);
+    return true;
   }
 
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
@@ -467,8 +473,6 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   void callTopLevelPoll() {
-    // make sure the treewalk has been estimated
-    getEstimatedTreeWalkDuration();
     try {
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
       new PollSpec(managedAu.getAUCachedUrlSet()));
@@ -542,23 +546,9 @@ public class NodeManagerImpl implements NodeManager {
   private void callContentPollOnSubNodes(NodeState state,
                                          Poll.VoteTally results)
       throws IOException {
-    ArrayList childList = new ArrayList();
 
     Iterator children = results.getCachedUrlSet().flatSetIterator();
-
-    while (children.hasNext()) {
-      CachedUrlSetNode child = (CachedUrlSetNode)children.next();
-      CachedUrlSet cus = null;
-      switch (child.getType()) {
-        case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-          cus = (CachedUrlSet)child;
-          break;
-        case CachedUrlSetNode.TYPE_CACHED_URL:
-          CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-          cus = ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
-      }
-      childList.add(cus);
-    }
+    List childList = convertChildrenToCUSList(children);
     // Divide the list in two and call two new content polls
     if (childList.size() > 4) {
       String base = results.getCachedUrlSet().getSpec().getUrl();
@@ -593,6 +583,51 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
+  private List convertChildrenToCUSList(Iterator children) {
+    ArrayList childList = new ArrayList();
+    if (children != null) {
+      while (children.hasNext()) {
+        CachedUrlSetNode child = (CachedUrlSetNode) children.next();
+        CachedUrlSet cus = null;
+        switch (child.getType()) {
+          case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+            cus = (CachedUrlSet) child;
+            break;
+          case CachedUrlSetNode.TYPE_CACHED_URL:
+            CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
+            cus = ( (BaseArchivalUnit) managedAu).makeCachedUrlSet(rSpec);
+        }
+        childList.add(cus);
+      }
+    }
+    return childList;
+  }
+
+  private boolean hasDamage(CachedUrlSet cus, int pollType) {
+    boolean hasDamage = false;
+    Iterator it = null;
+    switch (pollType) {
+      case Poll.CONTENT_POLL:
+        it = cus.flatSetIterator();
+        break;
+      case Poll.NAME_POLL:
+        it = cus.treeIterator();
+        break;
+    }
+    List childList = convertChildrenToCUSList(it);
+    Iterator childIt = childList.iterator();
+    while (childIt.hasNext()) {
+      CachedUrlSet child_cus = (CachedUrlSet) childIt.next();
+      NodeState nodeState = getNodeState(child_cus);
+      PollHistory pollHistory = nodeState.getLastPollHistory();
+      if (pollHistory != null &&
+        ((pollHistory.status == pollHistory.UNREPAIRABLE) ||
+         (pollHistory.status == pollHistory.REPAIRING))) {
+          return true;
+      }
+    }
+    return hasDamage;
+  }
 
   private void updateReputations(Poll.VoteTally results) {
     IdentityManager idManager = theDaemon.getIdentityManager();

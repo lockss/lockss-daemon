@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.4 2003-03-15 02:53:28 aalto Exp $
+ * $Id: MockNodeManager.java,v 1.5 2003-03-21 23:55:26 claire Exp $
  */
 
 /*
@@ -64,8 +64,9 @@ public class MockNodeManager implements NodeManager {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
+  public boolean startPoll(CachedUrlSet cus, Poll.VoteTally state) {
     logger.debug3("starting poll for cus: " + cus);
+    return true;
   }
 
   public void updatePollResults(CachedUrlSet cus, Poll.VoteTally results) {
