@@ -155,6 +155,7 @@
 	  or pluginName='gov.loc.plugin.TESLEJPlugin'
 	  or pluginName='org.nypl.plugin.WordsWithoutBordersPlugin'
 	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
+	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
 	  ]"
 	  />
       </property>
@@ -3881,6 +3882,67 @@
 	  <property name="value" value="2005" />
 	</property>
       </property>
+
+      <property name="MedievalForum4">
+	<property name="title" value="Medieval Forum Volume 4" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+      </property>
+
+      <property name="MedievalForum3">
+	<property name="title" value="Medieval Forum Volume 3" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+      </property>
+
+      <property name="MedievalForum2">
+	<property name="title" value="Medieval Forum Volume 2" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+      </property>
+
+      <property name="MedievalForum1">
+	<property name="title" value="Medieval Forum Volume 1" />
+	<property name="estSize" value="0.7MB" />
+	<property name="journalTitle" value="Medieval Forum" />
+	<property name="plugin" value="edu.jhu.library.plugin.MedievalForumPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.sfsu.edu/~medieval/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+      
 
     </property>
 
