@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDatagram.java,v 1.4 2003-05-29 01:49:07 tal Exp $
+ * $Id: TestLockssDatagram.java,v 1.5 2003-05-30 17:12:40 tal Exp $
  */
 
 /*
@@ -94,26 +94,37 @@ public class TestLockssDatagram extends LockssTestCase {
   public void testEncodeDecode() throws Exception {
     LockssDatagram dg = new LockssDatagram(27, testData);
     InetAddress testAddr = InetAddress.getByName("10.4.111.27");
-    DatagramPacket pkt = dg.makeUncmpressedSendPacket(testAddr, testPort);
+    DatagramPacket pkt = dg.makeSendPacket(dg.encodeUncompressedPacketData(),
+					   testAddr, testPort);
     LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
     assertFalse(rdg.isCompressed());
     assertEquals(pkt, rdg.getPacket());
     assertEquals(testData, rdg.getData());
     assertEquals(27, rdg.getProtocol());
+    assertEquals(testData.length + LockssDatagram.HEADER_LENGTH,
+		 rdg.getPacketSize());
+    assertEquals(testData.length + LockssDatagram.HEADER_LENGTH,
+		 rdg.getDataSize());
     LockssReceivedDatagram rdg2 = new LockssReceivedDatagram(pkt);
     assertEquals(27, rdg.getProtocol());
     assertEquals(testData, rdg.getData());
   }
 
   public void testCompressedEncodeDecode() throws Exception {
+    Properties props = new Properties();
+    props.put(LcapComm.PARAM_COMPRESS_PACKETS, "true");
+    props.put(LcapComm.PARAM_COMPRESS_MIN, "10");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
     LockssDatagram dg = new LockssDatagram(27, testData);
     InetAddress testAddr = InetAddress.getByName("10.4.111.27");
-    DatagramPacket pkt = dg.makeCompressedSendPacket(testAddr, testPort);
+    DatagramPacket pkt = dg.makeSendPacket(testAddr, testPort);
     LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
     assertTrue(rdg.isCompressed());
     assertEquals(pkt, rdg.getPacket());
     assertEquals(testData, rdg.getData());
     assertEquals(27, rdg.getProtocol());
+    assertEquals(testData.length + LockssDatagram.HEADER_LENGTH,
+		 rdg.getDataSize());
     LockssReceivedDatagram rdg2 = new LockssReceivedDatagram(pkt);
     assertEquals(27, rdg.getProtocol());
     assertEquals(testData, rdg.getData());

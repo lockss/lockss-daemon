@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.35 2003-05-29 01:49:07 tal Exp $
+ * $Id: LcapComm.java,v 1.36 2003-05-30 17:12:40 tal Exp $
  */
 
 /*
@@ -498,8 +498,10 @@ public class LcapComm extends BaseLockssManager {
     boolean compressed;
     int inPkts;
     long inBytes;
+    long inUncBytes;
     int outPkts;
     long outBytes;
+    long outUncBytes;
 
     // multicast sockets see the packets they send, so discount those
     // XXX this assumes we are guaranteed to receive our multicast packets,
@@ -520,6 +522,14 @@ public class LcapComm extends BaseLockssManager {
       }
       return inBytes - outBytes;
     }
+
+    // multicast sockets see the packets they send, so discount those
+    long getInUncBytes() {
+      if (!multicast) {
+	return inUncBytes;
+      }
+      return inUncBytes - outUncBytes;
+    }
   }
 
   private void updateInStats(LockssReceivedDatagram ld) {
@@ -538,12 +548,22 @@ public class LcapComm extends BaseLockssManager {
     Stats stats = getStatsObj(port, proto, multicast, false);
     if (in) {
       stats.inPkts++;
-      stats.inBytes += ld.getData().length;
+      stats.inBytes += ld.getPacketSize();
+      stats.inUncBytes += ld.getDataSize();
+      if (ld.isCompressed()) {
+	inCompressed += ld.getPacketSize();
+	inUncompressed += ld.getDataSize();
+      }
     } else {
       stats.outPkts++;
-      stats.outBytes += ld.getData().length;
-
-}}
+      stats.outBytes += ld.getPacketSize();
+      stats.outUncBytes += ld.getDataSize();
+      if (ld.isCompressed()) {
+	outCompressed += ld.getPacketSize();
+	outUncompressed += ld.getDataSize();
+      }
+    }
+  }
 
   Stats getStatsObj(int port, int proto, boolean multicast,
 		    boolean compressed) {
@@ -567,6 +587,10 @@ public class LcapComm extends BaseLockssManager {
   }
 
   private Map statsMap = new HashMap();
+  private long inCompressed = 0;
+  private long inUncompressed = 0;
+  private long outCompressed = 0;
+  private long outUncompressed = 0;
 
 
   private static final List statusSortRules =
@@ -598,10 +622,15 @@ public class LcapComm extends BaseLockssManager {
 		  new ColumnDescriptor("inBytes", "Bytes in",
 				       ColumnDescriptor.TYPE_INT,
 				       multiExcludeNote),
+// 		  new ColumnDescriptor("inUncBytes", "(uncompressed)",
+// 				       ColumnDescriptor.TYPE_INT,
+// 				       multiExcludeNote),
 		  new ColumnDescriptor("outPkts", "Pkts out",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor("outBytes", "Bytes out",
 				       ColumnDescriptor.TYPE_INT)
+// 		  new ColumnDescriptor("outUncBytes", "(uncompressed)",
+// 				       ColumnDescriptor.TYPE_INT)
 		  );
 
   private class Status implements StatusAccessor {
@@ -617,10 +646,28 @@ public class LcapComm extends BaseLockssManager {
       table.setColumnDescriptors(statusColDescs);
       table.setDefaultSortRules(statusSortRules);
       table.setRows(getRows(key));
+      table.setSummaryInfo(getSummaryInfo(key));
     }
 
     public boolean requiresKey() {
       return false;
+    }
+
+    private List getSummaryInfo(String key) {
+      List res = new ArrayList();
+      if (inCompressed != 0) {
+	double cmp = 1.0 - ((double)inCompressed / (double)inUncompressed);
+	res.add(new StatusTable.SummaryInfo("Input compression",
+					    ColumnDescriptor.TYPE_PERCENT,
+					    new Double(cmp)));
+      }
+      if (outCompressed != 0) {
+	double cmp = 1.0 - ((double)outCompressed / (double)outUncompressed);
+	res.add(new StatusTable.SummaryInfo("Output compression",
+					    ColumnDescriptor.TYPE_PERCENT,
+					    new Double(cmp)));
+      }
+      return res;
     }
 
     private List getRows(String key) {
@@ -635,8 +682,10 @@ public class LcapComm extends BaseLockssManager {
 	table.add(makeRow(st, 0));
 	tot.inPkts += st.getInPkts();
 	tot.inBytes += st.getInBytes();
+	tot.inUncBytes += st.getInUncBytes();
 	tot.outPkts += st.outPkts;
 	tot.outBytes += st.outBytes;
+	tot.outUncBytes += st.outUncBytes;
       }
       table.add(makeRow(tot, 1));
       start = getDaemon().getStartDate().getTime();
@@ -678,14 +727,18 @@ public class LcapComm extends BaseLockssManager {
       case 1:
 	row.put("inPkts", new Integer(stats.getInPkts()));
 	row.put("inBytes", new Long(stats.getInBytes()));
+// 	row.put("inUncBytes", new Long(stats.getInUncBytes()));
 	row.put("outPkts", new Integer(stats.outPkts));
 	row.put("outBytes", new Long(stats.outBytes));
+// 	row.put("outUncBytes", new Long(stats.outUncBytes));
 	break;
       case 2:
 	row.put("inPkts", rate(stats.getInPkts()));
 	row.put("inBytes", rate(stats.getInBytes()));
+// 	row.put("inUncBytes", rate(stats.getInUncBytes()));
 	row.put("outPkts", rate(stats.outPkts));
 	row.put("outBytes", rate(stats.outBytes));
+// 	row.put("outUncBytes", rate(stats.outUncBytes));
 	break;
       }
       return row;

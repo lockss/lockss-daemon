@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.6 2003-05-29 01:49:07 tal Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.7 2003-05-30 17:12:40 tal Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.util.*;
  * incoming packets.
  */
 public class LockssReceivedDatagram extends LockssDatagram {
+
   private DatagramPacket packet;	// received packet
 
   // Filled in for received packets.

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.4 2003-05-29 01:49:07 tal Exp $
+ * $Id: LockssDatagram.java,v 1.5 2003-05-30 17:12:40 tal Exp $
  */
 
 /*
@@ -53,7 +53,8 @@ public class LockssDatagram {
   public static final int PROTOCOL_LCAP = 2;
   static final int HEADER_LENGTH = 4;
 
-  byte[] payload;			// Client data
+  byte[] pktData;			// packet data (poss. compressed)
+  byte[] payload;			// Client data (uncompressed)
   int protocol;				// Client protocol
 
   /** Only for subclass. */
@@ -69,6 +70,18 @@ public class LockssDatagram {
     this.payload = data;
   }
 
+  /** Return the data to be sent in a DatagramPacket */
+  public byte[] getPacketData() {
+    if (pktData == null) {
+      try {
+	pktData = encodePacketData();
+      } catch (IOException e) {
+	throw new RuntimeException("Can't encode packet: " + e.toString());
+      }
+    }
+    return pktData;
+  }
+
   /** Return a DatagramPacket suitable for sending to a specific address.
    * The packet will be compressed if compression is configured
    * (org.lockss.comm.compress) and the payload is long enough (greater
@@ -79,36 +92,42 @@ public class LockssDatagram {
    */
   public DatagramPacket makeSendPacket(InetAddress addr, int port)
       throws IOException {
-    Configuration config = Configuration.getCurrentConfig();
-    if (config.getBoolean(LcapComm.PARAM_COMPRESS_PACKETS,
-				 LcapComm.DEFAULT_COMPRESS_PACKETS) &&
-	payload.length >= config.getInt(LcapComm.PARAM_COMPRESS_MIN,
-					LcapComm.DEFAULT_COMPRESS_MIN)) {
-      return makeCompressedSendPacket(addr, port);
+    return makeSendPacket(getPacketData(), addr, port);
+  }
+
+  DatagramPacket makeSendPacket(byte[] data, InetAddress addr, int port)
+      throws IOException {
+    return new DatagramPacket(data, data.length, addr, port);
+  }
+
+  /** Encode the data for sending in a packet.  The packet itself contains
+   * destination info, so this is the only part that can be cached.
+   * The data will be compressed if compression is configured
+   * (org.lockss.comm.compress) and the payload is long enough (greater
+   * than org.lockss.comm.compress.min).
+   */
+  byte[] encodePacketData() throws IOException {
+    if (isCompressed()) {
+      return encodeCompressedPacketData();
     } else {
-      return makeUncmpressedSendPacket(addr, port);
+      return encodeUncompressedPacketData();
     }
   }
 
-  /** Return a DatagramPacket suitable for sending to a specific address.
-   * @param addr the destination address (or multicast group)
-   * @param port the destination port
-   * @return the packet
+  /** 
+   * Encode the data for sending.
    */
-  public DatagramPacket makeUncmpressedSendPacket(InetAddress addr, int port) {
-    byte[] pktData = new byte[payload.length + HEADER_LENGTH];
-    ByteArray.encodeInt(protocol, pktData, 0);
-    System.arraycopy(payload, 0, pktData, HEADER_LENGTH, payload.length);
-    return new DatagramPacket(pktData, pktData.length, addr, port);
+  byte[] encodeUncompressedPacketData() {
+    byte[] data = new byte[payload.length + HEADER_LENGTH];
+    ByteArray.encodeInt(protocol, data, 0);
+    System.arraycopy(payload, 0, data, HEADER_LENGTH, payload.length);
+    return data;
   }
 
-  /** Return a DatagramPacket suitable for sending to a specific address.
-   * The header and payload are compressed before being added to the packet.
-   * @param addr the destination address (or multicast group)
-   * @param port the destination port
-   * @return the packet
+  /** 
+   * Compress and encode the data for sending.
    */
-  public DatagramPacket makeCompressedSendPacket(InetAddress addr, int port)
+  public byte[] encodeCompressedPacketData()
       throws IOException {
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     OutputStream gzout = new GZIPOutputStream(baos);
@@ -117,9 +136,18 @@ public class LockssDatagram {
     gzout.write(hdrData, 0, HEADER_LENGTH);
     gzout.write(payload, 0, payload.length);
     gzout.close();
-    byte[] pktData = baos.toByteArray();
-    return new DatagramPacket(pktData, pktData.length, addr, port);
+    baos.close();
+    return baos.toByteArray();
   }
+
+  boolean isCompressed() {
+    Configuration config = Configuration.getCurrentConfig();
+    return (config.getBoolean(LcapComm.PARAM_COMPRESS_PACKETS,
+			      LcapComm.DEFAULT_COMPRESS_PACKETS) &&
+	    payload.length >= config.getInt(LcapComm.PARAM_COMPRESS_MIN,
+					    LcapComm.DEFAULT_COMPRESS_MIN));
+  }
+
 
   /** Return the data portion of the packet */
   public byte[] getData() {
@@ -129,6 +157,16 @@ public class LockssDatagram {
   /** Return the protocol under which to send the packet */
   public int getProtocol() {
     return protocol;
+  }
+
+  /** Return the size of the (possibly compressed) packet */
+  public int getPacketSize() {
+    return getPacketData().length;
+  }
+
+  /** Return the size of the (uncompressed) data */
+  public int getDataSize() {
+    return getData().length + HEADER_LENGTH;
   }
 
   public String toString() {
