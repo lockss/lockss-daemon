@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.2 2002-11-15 02:48:20 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.3 2002-11-15 02:50:38 aalto Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public interface RepositoryNode {
    * in the cache.  <code>makeNewVersion()</code> must be called first.
    * @return an <code>OutputStream</code> object to which the new contents can be
    * written.
-   * @see LeafNode#makeNewVersion()
+   * @see RepositoryNode#makeNewVersion()
    */
   public OutputStream getNewOutputStream();
 
@@ -127,6 +127,6 @@ public interface RepositoryNode {
    * must be called first.
    * @param newProps a <code>Properties</code> object containing the headers of
    *         the new version being cached.
-   * @see LeafNode#makeNewVersion()
+   * @see RepositoryNode#makeNewVersion()
    */
   public void setNewProperties(Properties newProps);}
