@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.2 2002-12-30 20:35:12 tal Exp $
+ * $Id: DebugUtils.java,v 1.3 2002-12-31 00:07:28 tal Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class DebugUtils {
     throw new UnsupportedException("No OS-independent way to find main PID");
   }
 
-  /** Request a thread dump of this JVM.  Sump is output to JVM's stderr,
+  /** Request a thread dump of this JVM.  Dump is output to JVM's stderr,
    * which may not be the same as System.err.  If unsupported on this
    * platform, logs an info message. */
   public void threadDump() {
@@ -106,7 +106,7 @@ public class DebugUtils {
     return Runtime.getRuntime();
   }
 
-  /* Linux implementation of platform-specific code */
+  /** Linux implementation of platform-specific code */
   public static class Linux extends DebugUtils {
     // offsets into /proc/<n>/stat
     static final int STAT_OFFSET_PID = 0;
