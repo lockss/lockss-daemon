@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.16 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: IpAccessControl.java,v 1.17 2005-01-19 23:31:43 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.lockss.jetty.*;
 
 /** Display and update IP access control lists.
  */
@@ -204,11 +205,11 @@ public abstract class IpAccessControl extends LockssServlet {
     incString = getIPString(incl);
     excString = getIPString(excl);
 
-    TextArea incArea = new TextArea("inc_ips");
+    TextArea incArea = new MyTextArea("inc_ips");
     incArea.setSize(30, 15);
     incArea.add(incString);
 
-    TextArea excArea = new TextArea("exc_ips");
+    TextArea excArea = new MyTextArea("exc_ips");
     excArea.setSize(30, 15);
     excArea.add(excString);
 
