@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.16 2004-03-23 08:24:39 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.17 2004-04-19 02:15:22 tlipkis Exp $
  */
 
 /*
@@ -58,9 +58,10 @@ public abstract class CrawlerImpl implements Crawler {
 
   private static Logger logger = Logger.getLogger("CrawlerImpl");
 
+  // See comments regarding connect timeouts in HttpClientUrlConnection
   public static final String PARAM_CONNECT_TIMEOUT =
     Configuration.PREFIX + "crawler.timeout.connect";
-  public static long DEFAULT_CONNECT_TIMEOUT = 120 * Constants.SECOND;
+  public static long DEFAULT_CONNECT_TIMEOUT = 60 * Constants.SECOND;
 
   public static final String PARAM_DATA_TIMEOUT =
     Configuration.PREFIX + "crawler.timeout.data";
@@ -223,18 +224,25 @@ public abstract class CrawlerImpl implements Crawler {
     return uc;
   }
 
-  protected static boolean isSupportedUrlProtocol(String url) {
-    try {
-      URL ur = new URL(url);
-      // some 1.4 machines will allow this, so we explictly exclude it for now.
-      if (StringUtil.startsWithIgnoreCase(ur.toString(), "http://")) {
-        return true;
-      }
-    }
-    catch (Exception ex) {
-    }
-    return false;
+  // For now only follow http: links
+  public static boolean isSupportedUrlProtocol(String url) {
+    return StringUtil.startsWithIgnoreCase(url, "http://");
   }
+
+  // Was this.  If it's going to explicitly check for http://, there's
+  // no point in creating the URL.
+//   protected static boolean isSupportedUrlProtocol(String url) {
+//     try {
+//       URL ur = new URL(url);
+//       // some 1.4 machines will allow this, so we explictly exclude it for now.
+//       if (StringUtil.startsWithIgnoreCase(ur.toString(), "http://")) {
+//         return true;
+//       }
+//     }
+//     catch (Exception ex) {
+//     }
+//     return false;
+//   }
 
   public void setWatchdog(LockssWatchdog wdog) {
     this.wdog = wdog;
