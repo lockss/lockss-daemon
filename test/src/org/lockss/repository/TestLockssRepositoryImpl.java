@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.49 2004-05-12 17:47:51 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.50 2004-05-16 08:44:00 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
  */
 
 public class TestLockssRepositoryImpl extends LockssTestCase {
+  private static Logger logger = Logger.getLogger("LockssRepository");
   private MockLockssDaemon daemon;
   private LockssRepositoryImpl repo;
   private MockArchivalUnit mau;
@@ -73,6 +74,47 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   String getCacheLocation() {
     return repo.getCacheLocation();
+  }
+
+  public void testGetLocalRepository() throws Exception {
+    LockssRepositoryImpl.LocalRepository localRepo =
+      LockssRepositoryImpl.getLocalRepository(mau);
+    assertNotNull("Failed to create LocalRepository for: " + mau, localRepo);
+    assertEquals(tempDirPath, localRepo.getRepositoryPath());
+
+    String tempDir2 = getTempDir().getAbsolutePath() + File.separator;
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    mau2.setConfiguration(ConfigurationUtil.fromArgs
+			  (PluginManager.AU_PARAM_REPOSITORY,
+			   repoSpec(tempDir2)));
+    LockssRepositoryImpl.LocalRepository localRepo2 =
+      LockssRepositoryImpl.getLocalRepository(mau2);
+    assertNotNull("Failed to create LocalRepository for: " + mau2, localRepo2);
+    assertNotSame(localRepo2, localRepo);
+    assertEquals(tempDir2, localRepo2.getRepositoryPath());
+
+  }
+
+  String repoSpec(String path) {
+    return "local:" + path;
+  }
+
+  public void testLocalRepository_GetAuMap() {
+    Properties newProps = new Properties();
+    mau.setAuId("barfoo");
+    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
+    String location = getCacheLocation() + "ab";
+    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+
+    LockssRepositoryImpl.LocalRepository localRepo =
+      LockssRepositoryImpl.getLocalRepository(mau);
+    localRepo.auMap = null;
+    Map aumap = localRepo.getAuMap();
+    assertEquals(addSlash(location), aumap.get(mau.getAuId()));
+  }
+
+  String addSlash(String s) {
+    return (s.endsWith(File.separator)) ? s : s + File.separator;
   }
 
   public void testGetRepositoryRoot() throws Exception {
@@ -276,39 +318,22 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   // test static naming calls
 
-  public void testGetNewPluginDir() {
-    // call this to 'reblank' after the effects of setUp()
-    repo.stopService();
-
-    // should start with the char before 'a'
-    assertEquals(""+(char)('a'-1), LockssRepositoryImpl.lastPluginDir);
-    LockssRepositoryImpl.getNewPluginDir();
-    assertEquals("a", LockssRepositoryImpl.lastPluginDir);
-    LockssRepositoryImpl.getNewPluginDir();
-    assertEquals("b", LockssRepositoryImpl.lastPluginDir);
-
-    LockssRepositoryImpl.lastPluginDir = "z";
-    LockssRepositoryImpl.getNewPluginDir();
-    assertEquals("aa", LockssRepositoryImpl.lastPluginDir);
-    LockssRepositoryImpl.getNewPluginDir();
-    assertEquals("ab", LockssRepositoryImpl.lastPluginDir);
-    LockssRepositoryImpl.lastPluginDir = "az";
-    LockssRepositoryImpl.getNewPluginDir();
-    assertEquals("ba", LockssRepositoryImpl.lastPluginDir);
-    LockssRepositoryImpl.lastPluginDir = "czz";
-    LockssRepositoryImpl.getNewPluginDir();
-    assertEquals("daa", LockssRepositoryImpl.lastPluginDir);
-
-    LockssRepositoryImpl.lastPluginDir = ""+ (char)('a'-1);
+  public void testGetNextDirName() {
+    assertEquals("a", LockssRepositoryImpl.getNextDirName(""));
+    assertEquals("b", LockssRepositoryImpl.getNextDirName("a"));
+    assertEquals("c", LockssRepositoryImpl.getNextDirName("b"));
+    assertEquals("z", LockssRepositoryImpl.getNextDirName("y"));
+    assertEquals("aa", LockssRepositoryImpl.getNextDirName("z"));
+    assertEquals("ab", LockssRepositoryImpl.getNextDirName("aa"));
+    assertEquals("ba", LockssRepositoryImpl.getNextDirName("az"));
+    assertEquals("aaa", LockssRepositoryImpl.getNextDirName("zz"));
   }
 
   public void testGetAuDirFromMap() {
     HashMap newNameMap = new HashMap();
-    newNameMap.put(mau.getAuId(), "testDir");
+    newNameMap.put(mau.getAuId(), "/foo/bar/testDir");
     LockssRepositoryImpl.nameMap = newNameMap;
-    StringBuffer buffer = new StringBuffer();
-    LockssRepositoryImpl.getAuDir(mau, buffer);
-    assertEquals("testDir", buffer.toString());
+    assertEquals("/foo/bar/testDir", LockssRepositoryImpl.getAuDir(mau, ""));
   }
 
   public void testSaveAndLoadNames() {
@@ -316,7 +341,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
 
     HashMap newNameMap = new HashMap();
-    newNameMap.put(mau.getAuId(), "testDir");
+    newNameMap.put(mau.getAuId(), tempDirPath);
     LockssRepositoryImpl.nameMap = newNameMap;
     String location = LockssRepositoryImpl.mapAuToFileLocation(
         getCacheLocation(), mau);
@@ -329,27 +354,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertNotNull(newProps);
     assertEquals(mau.getAuId(),
                  newProps.getProperty(LockssRepositoryImpl.AU_ID_PROP));
-  }
-
-  public void testLoadNameMap() {
-    Properties newProps = new Properties();
-    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAuId());
-    String location = getCacheLocation() + "ab";
-    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
-
-    LockssRepositoryImpl.loadNameMap(getCacheLocation());
-    assertEquals("ab", repo.nameMap.get(mau.getAuId()));
-  }
-
-  public void testLoadNameMapSkipping() {
-    // clear the prop file from setUp()
-    String propsLoc = getCacheLocation() + "a" + File.separator +
-        LockssRepositoryImpl.AU_ID_FILE;
-    File propsFile = new File(propsLoc);
-    propsFile.delete();
-
-    LockssRepositoryImpl.loadNameMap(getCacheLocation());
-    assertNull(LockssRepositoryImpl.nameMap.get(mau.getAuId()));
   }
 
   public void testMapAuToFileLocation() {

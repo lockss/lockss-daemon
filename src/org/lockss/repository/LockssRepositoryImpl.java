@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.54 2004-05-12 17:47:51 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.55 2004-05-16 08:44:00 tlipkis Exp $
  */
 
 /*
@@ -64,10 +64,15 @@ public class LockssRepositoryImpl
    */
   public static final String CACHE_ROOT_NAME = "cache";
 
-  // needed only for unit tests
-  static String cacheLocation = null;
+  // XXX This is a remnant from the single-disk days, and should go away.
+  // It is used only by unit tests, which want it set to the (last)
+  // individual repository dir created.
+  private static String staticCacheLocation = null;
 
-  // used for name mapping
+  // Maps local repository name (disk path) to LocalRepository instance
+  static Map localRepositories = new HashMap();
+
+  // maps auid to complete path to active repository
   static HashMap nameMap = null;
 
   // starts with a '#' so no possibility of clashing with a URL
@@ -117,6 +122,7 @@ public class LockssRepositoryImpl
     // mainly important in testing to blank this
     lastPluginDir = INITIAL_PLUGIN_DIR;
     nameMap = null;
+    localRepositories = new HashMap();
     super.stopService();
   }
 
@@ -318,16 +324,17 @@ public class LockssRepositoryImpl
    * @return the new LockssRepository instance
    */
   public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
-    cacheLocation = getRepositoryRoot(au);
-    if (cacheLocation == null) {
+    String root = getRepositoryRoot(au);
+    if (root == null) {
       logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
 		   " from Configuration");
       throw new LockssRepository.RepositoryStateException(
           "Couldn't load param.");
     }
-    cacheLocation = extendCacheLocation(cacheLocation);
-    String auDir = LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au);
+    String repoDir = extendCacheLocation(root);
+    String auDir = LockssRepositoryImpl.mapAuToFileLocation(repoDir, au);
     logger.debug("repo: " + auDir + ", au: " + au.getName());
+    staticCacheLocation = repoDir;
     return new LockssRepositoryImpl(auDir);
   }
 
@@ -349,7 +356,7 @@ public class LockssRepositoryImpl
   }
 
   static String getCacheLocation() {
-    return cacheLocation;
+    return staticCacheLocation;
   }
 
   /**
@@ -377,13 +384,7 @@ public class LockssRepositoryImpl
    * @return the directory location
    */
   public static String mapAuToFileLocation(String rootLocation, ArchivalUnit au) {
-    StringBuffer buffer = new StringBuffer(rootLocation);
-    if (!rootLocation.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    getAuDir(au, buffer);
-    buffer.append(File.separator);
-    return buffer.toString();
+    return getAuDir(au, rootLocation);
   }
 
   /**
@@ -427,99 +428,78 @@ public class LockssRepositoryImpl
    * @param au the AU
    * @param buffer a StringBuffer to add the dir name to.
    */
-  static void getAuDir(ArchivalUnit au, StringBuffer buffer) {
+  static String getAuDir(ArchivalUnit au, String repoCachePath) {
     if (nameMap == null) {
-      loadNameMap(buffer.toString());
+      nameMap = new HashMap();
     }
     String auKey = au.getAuId();
-    String auDir = (String)nameMap.get(auKey);
-    if (auDir == null) {
-      logger.debug3("Creating new au directory for '" + auKey + "'.");
-      while (true) {
-        // loop through looking for an available dir
-        auDir = getNewPluginDir();
-        File testDir = new File(buffer.toString() + auDir);
-        if (!testDir.exists()) {
-          break;
-        } else {
-          logger.debug3("Existing directory found at '"+auDir+
-                        "'.  Creating another...");
-        }
-      }
-      logger.debug3("New au directory: "+auDir);
-      nameMap.put(auKey, auDir);
-      String auLocation = buffer.toString() + auDir;
-      // write the new au property file to the new dir
-      // XXX this data should be backed up elsewhere to avoid single-point
-      // corruption
-      Properties idProps = new Properties();
-      idProps.setProperty(AU_ID_PROP, au.getAuId());
-      saveAuIdProperties(auLocation, idProps);
+    String auPathSlash = (String)nameMap.get(auKey);
+    if (auPathSlash != null) {
+      return auPathSlash;
     }
-    buffer.append(auDir);
+    LocalRepository localRepo = getLocalRepository(au);
+    Map aumap = localRepo.getAuMap();
+    auPathSlash = (String)aumap.get(auKey);
+    if (auPathSlash != null) {
+      nameMap.put(auKey, auPathSlash);
+      return auPathSlash;
+    }
+    logger.debug3("Creating new au directory for '" + auKey + "'.");
+    String auDir = lastPluginDir;
+    for (int cnt = 10000; cnt > 0; cnt--) {
+      // loop through looking for an available dir
+      auDir = getNextDirName(auDir);
+      File testDir = new File(repoCachePath, auDir);
+      if (!testDir.exists()) {
+	String auPath = testDir.toString();
+	logger.debug3("New au directory: "+auPath);
+	auPathSlash = auPath + File.separator;
+	nameMap.put(auKey, auPathSlash);
+	// write the new au property file to the new dir
+	// XXX this data should be backed up elsewhere to avoid single-point
+	// corruption
+	Properties idProps = new Properties();
+	idProps.setProperty(AU_ID_PROP, au.getAuId());
+	saveAuIdProperties(auPath, idProps);
+	return auPathSlash;
+      } else {
+	logger.debug3("Existing directory found at '"+auDir+
+		      "'.  Checking next...");
+      }
+    }
+    throw new RuntimeException("Can't find unused repository dir after " +
+			       "10000 tries in " + repoCachePath);
   }
 
-  /**
-   * Loads the name map by recursing through the current dirs and reading
-   * the AU prop file at each location.
-   * @param rootLocation the repository HD root location
-   */
-  static void loadNameMap(String rootLocation) {
-    logger.debug3("Loading name map for '" + rootLocation + "'.");
-    nameMap = new HashMap();
-    File rootFile = new File(rootLocation);
-    if (!rootFile.exists()) {
-      rootFile.mkdirs();
-      logger.debug3("Creating root directory at '" + rootLocation + "'.");
-      return;
+  static LocalRepository getLocalRepository(ArchivalUnit au) {
+    String repoRoot = getRepositoryRoot(au);
+    LocalRepository localRepo =
+      (LocalRepository)localRepositories.get(repoRoot);
+    if (localRepo == null) {
+      logger.debug2("Creating LocalRepository(" + repoRoot + ")");
+      localRepo = new LocalRepository(repoRoot);
+      localRepositories.put(repoRoot, localRepo);
     }
-    File[] pluginAus = rootFile.listFiles();
-    for (int ii = 0; ii < pluginAus.length; ii++) {
-      // loop through reading each property and storing the id with that dir
-      String dirName = pluginAus[ii].getName();
-      if (dirName.compareTo(lastPluginDir) == 1) {
-        // adjust the 'lastPluginDir' upwards if necessary
-        lastPluginDir = dirName;
-      }
-
-      Properties idProps = getAuIdProperties(pluginAus[ii].getAbsolutePath());
-      if (idProps==null) {
-        // if no properties were found, just continue
-        continue;
-      }
-      // store the id, dirName pair in our map
-      nameMap.put(idProps.getProperty(AU_ID_PROP), dirName);
-    }
+    return localRepo;
   }
 
-  /**
-   * Returns the next dir name, from 'a'->'z', then 'aa'->'az', then 'ba'->etc.
-   * @return String the next dir
-   */
-  static String getNewPluginDir() {
-    String newPluginDir = "";
+
+  /** Return next string in the sequence "a", "b", ... "z", "aa", "ab", ... */
+  static String getNextDirName(String old) {
+    StringBuffer sb = new StringBuffer(old);
     boolean charChanged = false;
     // go through and increment the first non-'z' char
     // counts back from the last char, so 'aa'->'ab', not 'ba'
-    for (int ii=lastPluginDir.length()-1; ii>=0; ii--) {
-      char curChar = lastPluginDir.charAt(ii);
-      if (!charChanged) {
-        if (curChar < 'z') {
-          curChar++;
-          charChanged = true;
-          newPluginDir = curChar + newPluginDir;
-        } else {
-          newPluginDir += 'a';
-        }
-      } else {
-        newPluginDir = curChar + newPluginDir;
+    for (int ii=sb.length()-1; ii>=0; ii--) {
+      char curChar = sb.charAt(ii);
+      if (curChar < 'z') {
+	sb.setCharAt(ii, (char)(curChar+1));
+	return sb.toString();
       }
-    }
-    if (!charChanged) {
-      newPluginDir += 'a';
-    }
-    lastPluginDir = newPluginDir;
-    return newPluginDir;
+      sb.setCharAt(ii, 'a');
+    }      
+    sb.insert(0, 'a');
+    return sb.toString();
   }
 
   static Properties getAuIdProperties(String location) {
@@ -635,6 +615,60 @@ public class LockssRepositoryImpl
   public static class Factory implements LockssAuManager.Factory {
     public LockssAuManager createAuManager(ArchivalUnit au) {
       return createNewLockssRepository(au);
+    }
+  }
+
+  /** Maintains state for a local repository root dir (<i>eg</i>, auid of
+   * each au subdir).  */
+  static class LocalRepository {
+    String repoPath;
+    String xrepoCachePath;
+    File repoCacheFile;
+    Map auMap;
+
+    LocalRepository(String repoPath) {
+      this.repoPath = repoPath;
+      repoCacheFile = new File(repoPath, CACHE_ROOT_NAME);
+    }
+
+    public String getRepositoryPath() {
+      return repoPath;
+    }
+
+    /** Return the auid -> au-subdir-path mapping.  Enumerating the
+     * directories if necessary to initialize the map */
+    Map getAuMap() {
+      if (auMap == null) {
+	logger.debug3("Loading name map for '" + repoCacheFile + "'.");
+	auMap = new HashMap();
+	if (!repoCacheFile.exists()) {
+	  repoCacheFile.mkdirs();
+	  logger.debug3("Creating cache dir:" + repoCacheFile + "'.");
+	} else {
+	  // read each dir's property file and store mapping auid -> dir
+	  File[] auDirs = repoCacheFile.listFiles();
+	  for (int ii = 0; ii < auDirs.length; ii++) {
+	    String dirName = auDirs[ii].getName();
+	    //       if (dirName.compareTo(lastPluginDir) == 1) {
+	    //         // adjust the 'lastPluginDir' upwards if necessary
+	    //         lastPluginDir = dirName;
+	    //       }
+
+	    String path = auDirs[ii].getAbsolutePath();
+	    Properties idProps = getAuIdProperties(path);
+	    if (idProps != null) {
+	      String auid = idProps.getProperty(AU_ID_PROP);
+	      logger.debug3("Mapping to: " + path + "/: " + auid);
+	      auMap.put(auid,
+			  (path + File.separator));
+	    } else {
+	      logger.debug3("Not mapping " + path + ", no auid file.");
+	    }
+	  }
+
+	}
+      }
+      return auMap;
     }
   }
 
