@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.4 2003-04-23 22:49:00 claire Exp $
+* $Id: PollerStatus.java,v 1.5 2003-05-08 23:17:19 claire Exp $
  */
 
 /*
@@ -72,11 +72,10 @@ public class PollerStatus {
 		    );
     private static final List columnDescriptors =
         ListUtil.list(
-		      new ColumnDescriptor("AuName", "Archive", STRINGTYPE),
+		      new ColumnDescriptor("AuName", "Volume", STRINGTYPE),
 		      new ColumnDescriptor("URL", "URL", STRINGTYPE),
 		      new ColumnDescriptor("Range", "Range", STRINGTYPE),
-		      new ColumnDescriptor("PollType", "Poll Type",
-					   STRINGTYPE),
+		      new ColumnDescriptor("PollType", "Type", STRINGTYPE),
 		      new ColumnDescriptor("Status", "Status", STRINGTYPE),
 		      new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
 		      new ColumnDescriptor("PollID", "Poll ID", STRINGTYPE)
@@ -129,6 +128,19 @@ public class PollerStatus {
       return rowL;
     }
 
+    private String getTypeCharString(int pollType) {
+      switch(pollType) {
+        case 0:
+          return "N";
+        case 1:
+          return "C";
+        case 2:
+          return "V";
+        default:
+          return "Unknown";
+      }
+    }
+
     private Map makeRow(PollManager.PollManagerEntry entry) {
       HashMap rowMap = new HashMap();
       PollSpec spec = entry.spec;
@@ -139,7 +151,7 @@ public class PollerStatus {
       //"Range"
       rowMap.put("Range", spec.getRangeString());
       //"PollType"
-      rowMap.put("PollType", entry.getTypeString());
+      rowMap.put("PollType", getTypeCharString(entry.type));
       //"Status"
       rowMap.put("Status", entry.getStatusString());
       //"Deadline"
@@ -207,6 +219,7 @@ public class PollerStatus {
     private static final List columnDescriptors =
         ListUtil.list(new ColumnDescriptor("Identity", "Identity", IPTYPE),
         new ColumnDescriptor("Reputation", "Reputation", INTTYPE),
+        new ColumnDescriptor("Agree", "Agree", STRINGTYPE),
         new ColumnDescriptor("Challenge", "Challenge", STRINGTYPE),
         new ColumnDescriptor("Verifier", "Verifier", STRINGTYPE),
         new ColumnDescriptor("Hash", "Hash", STRINGTYPE)
