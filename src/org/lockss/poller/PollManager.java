@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.117 2003-12-12 00:56:29 tlipkis Exp $
+* $Id: PollManager.java,v 1.118 2004-01-13 01:34:04 tlipkis Exp $
  */
 
 /*
@@ -170,6 +170,12 @@ public class PollManager  extends BaseLockssManager {
     super.stopService();
   }
 
+
+  /** Cancel all polls on the specified AU.
+   * @param au the AU
+   */
+  public void cancelAuPolls(ArchivalUnit au) {
+  }
 
   /**
    * make an election by sending a request packet.  This is only
