@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.2 2003-07-30 05:37:47 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.3 2004-06-15 21:46:49 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.io.*;
+import java.util.*;
+import org.mortbay.html.*;
+import org.lockss.app.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.proxy.*;
 
@@ -42,11 +47,20 @@ public class ProxyIpAccess extends IpAccessControl {
   public static final String PARAM_IP_INCLUDE = AC_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = AC_PREFIX + "exclude";
 
+  public static final String PARAM_AUDIT_ENABLE =
+    AuditProxyManager.PARAM_START;
+  static final boolean DEFAULT_AUDIT_ENABLE = AuditProxyManager.DEFAULT_START;
+  public static final String PARAM_AUDIT_PORT = AuditProxyManager.PARAM_PORT;
+
   private static final String exp =
     "Enter the list of IP addresses that should be allowed to use this " +
     "cache as a proxy server, and access the content stored on it.  " +
     commonExp;
 
+  private boolean formAuditEnable;
+  private String formAuditPort;
+  private int auditPort;
+  
   protected String getExplanation() {
     return exp;
   }
@@ -67,4 +81,99 @@ public class ProxyIpAccess extends IpAccessControl {
     return "Proxy IP Access Control";
   }
 
+  protected void readForm() {
+    formAuditEnable = !StringUtil.isNullString(req.getParameter("audit_ena"));
+    formAuditPort = req.getParameter("audit_port");
+    super.readForm();
+  }
+
+  protected void doUpdate() throws IOException {
+    auditPort = 0;
+    try {
+      auditPort = Integer.parseInt(formAuditPort);
+    } catch (NumberFormatException e) {
+      if (formAuditEnable) {
+	// bad number is an error only if enabling.  (so field can be blank
+	// if checkbox is unchecked)
+	errMsg = "Audit proxy port must be a number: " + formAuditPort;
+	displayPage();
+	return;
+      }
+    }
+    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
+      errMsg = "Illegal audit proxy port number: " + formAuditPort +
+	", must be >=1024 and not in use";
+      displayPage();
+      return;
+    }
+    super.doUpdate();
+  }
+
+
+  boolean isLegalAuditPort(int port) {
+    return (port >= 1024 &&
+	    (port == Configuration.getIntParam(PARAM_AUDIT_PORT, 0)
+	     || !org.lockss.jetty.JettyManager.isPortInUse(port)));
+  }
+
+  boolean getDefaultAuditEnable() {
+    if (isForm) {
+      return formAuditEnable;
+    }
+    return Configuration.getBooleanParam(PARAM_AUDIT_ENABLE,
+					 DEFAULT_AUDIT_ENABLE);
+  }
+
+  String getDefaultAuditPort() {
+    String port = formAuditPort;
+    if (StringUtil.isNullString(port)) {
+      port = Configuration.getParam(PARAM_AUDIT_PORT);
+    }
+    if (StringUtil.isNullString(port)) {
+      port = Integer.toString(getProxyPort() + 1);
+    }
+    return port;
+  }
+
+  private int proxyPort = -1;
+
+  int getProxyPort() {
+    if (proxyPort == -1) {
+      try {
+	ProxyManager mgr =
+	  (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
+	proxyPort = mgr.getProxyPort();
+      } catch (IllegalArgumentException e) {
+	proxyPort = Configuration.getIntParam(ProxyManager.PARAM_PORT,
+					      ProxyManager.DEFAULT_PORT);
+      }
+    }
+    return proxyPort;
+  }
+
+  protected Composite getAdditionalFormElement() {
+    Table tbl = new Table(0, "align=center cellpadding=10");
+    tbl.newRow();
+    tbl.newCell("align=center");
+    Input enaElem = new Input(Input.Checkbox, "audit_ena", "1");
+    if (getDefaultAuditEnable()) {
+      enaElem.check();
+    }
+    setTabOrder(enaElem);
+    tbl.add(enaElem);
+    tbl.add("Enable audit proxy on port&nbsp;");
+    
+    Input portElem = new Input(Input.Text, "audit_port",
+			       getDefaultAuditPort());
+    portElem.setSize(6);
+    setTabOrder(portElem);
+    tbl.add(portElem);
+    return tbl;
+  }
+
+  protected void addConfigProps(Properties props) {
+    super.addConfigProps(props);
+    props.setProperty(PARAM_AUDIT_ENABLE,  formAuditEnable ? "true" : "false");
+    props.put(PARAM_AUDIT_PORT, Integer.toString(auditPort));
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.12 2004-06-07 19:31:13 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.13 2004-06-15 21:46:49 tlipkis Exp $
  */
 
 /*
@@ -63,10 +63,15 @@ public abstract class IpAccessControl extends LockssServlet {
 
   private ConfigManager configMgr;
 
+  // Values read from form
+  private Vector formIncl;
+  private Vector formExcl;
+
   // Used to insert error messages into the page
   private Vector inclErrs;
   private Vector exclErrs;
-  private String errMsg;
+  protected String errMsg;
+  protected boolean isForm;
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -75,29 +80,39 @@ public abstract class IpAccessControl extends LockssServlet {
 
   public void lockssHandleRequest() throws IOException {
     String action = req.getParameter("action");
+    isForm = !StringUtil.isNullString(action);
 
     inclErrs = null;
     exclErrs = null;
+    formIncl = null;
+    formExcl = null;
     errMsg = null;
 
     if ("Update".equals(action)){
-      Vector incl = ipStrToVector(req.getParameter("inc_ips"));
-      Vector excl = ipStrToVector(req.getParameter("exc_ips"));
-      inclErrs = findInvalidIps(incl);
-      exclErrs = findInvalidIps(excl);
-
-      if (inclErrs.size() > 0 || exclErrs.size() > 0) {
-        displayPage(incl, excl);
-      } else {
-	try {
-	  saveIPChanges(incl, excl);
-	} catch (Exception e) {
-	  log.error("Error saving changes", e);
-	  errMsg = "Error: Couldn't save changes:<br>" + e.toString();
-	}
-	displayPage(incl, excl);
-      }
+      readForm();
+      doUpdate();
     } else {
+      displayPage();
+    }
+  }
+
+  protected void readForm() {
+    formIncl = ipStrToVector(req.getParameter("inc_ips"));
+    formExcl = ipStrToVector(req.getParameter("exc_ips"));
+    inclErrs = findInvalidIps(formIncl);
+    exclErrs = findInvalidIps(formExcl);
+  }
+
+  protected void doUpdate() throws IOException {
+    if (inclErrs.size() > 0 || exclErrs.size() > 0) {
+      displayPage();
+    } else {
+      try {
+	saveChanges();
+      } catch (Exception e) {
+	log.error("Error saving changes", e);
+	errMsg = "Error: Couldn't save changes:<br>" + e.toString();
+      }
       displayPage();
     }
   }
@@ -105,15 +120,19 @@ public abstract class IpAccessControl extends LockssServlet {
   /**
    * Display the page, given no new ip addresses and no errors
    */
-  private void displayPage()
+  protected void displayPage()
       throws IOException {
-    Vector incl = getListFromParam(getIncludeParam());
-    Vector excl = getListFromParam(getExcludeParam());
-    // hack to remove possibly duplicated first element from platform subnet
-    if (incl.size() >= 2 && incl.get(0).equals(incl.get(1))) {
-      incl.remove(0);
+    if (formIncl != null || formExcl != null) {
+      displayPage(formIncl, formExcl);
+    } else {
+      Vector incl = getListFromParam(getIncludeParam());
+      Vector excl = getListFromParam(getExcludeParam());
+      // hack to remove possibly duplicated first element from platform subnet
+      if (incl.size() >= 2 && incl.get(0).equals(incl.get(1))) {
+	incl.remove(0);
+      }
+      displayPage(incl, excl);
     }
-    displayPage(incl, excl);
   }
 
   private Vector getListFromParam(String param) {
@@ -149,18 +168,19 @@ public abstract class IpAccessControl extends LockssServlet {
     String excString = null;
 
     Composite comp = new Composite();
-    Block centeredBlock = new Block(Block.Center);
-
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
 
-    Table table = new Table(1, "BORDER=1 CELLPADDING=0");
-    //table.center();
     if (errMsg != null) {
-      table.newRow();
-      table.newCell("colspan=2");
-      table.add("<font color=red>" + errMsg + "</font>");
+      Composite errcmp = new Composite();
+      errcmp.add("<center><font color=red size=+1>");
+      errcmp.add(errMsg);
+      errcmp.add("</font></center><br>");
+      frm.add(errcmp);
     }
+    
+    Table table = new Table(1, "align=center cellpadding=0");
+    //table.center();
     table.newRow("bgcolor=\"#CCCCCC\"");
     table.newCell("align=center");
     table.add("<font size=+1>Allow Access" + addFootnote(footIP) +
@@ -172,7 +192,6 @@ public abstract class IpAccessControl extends LockssServlet {
 
     if ((inclErrs != null && inclErrs.size() > 0) ||
 	(exclErrs != null && exclErrs.size() > 0)) {
-      String errorStr = null;
       table.newRow();
       table.newCell();
       addIPErrors(table, inclErrs);
@@ -184,11 +203,11 @@ public abstract class IpAccessControl extends LockssServlet {
     excString = getIPString(excl);
 
     TextArea incArea = new TextArea("inc_ips");
-    incArea.setSize(30, 20);
+    incArea.setSize(30, 15);
     incArea.add(incString);
 
     TextArea excArea = new TextArea("exc_ips");
-    excArea.setSize(30, 20);
+    excArea.setSize(30, 15);
     excArea.add(excString);
 
     table.newRow();
@@ -198,9 +217,12 @@ public abstract class IpAccessControl extends LockssServlet {
     table.newCell("align=center");
     setTabOrder(excArea);
     table.add(excArea);
+    frm.add(table);
 
-    centeredBlock.add(table);
-    frm.add(centeredBlock);
+    Composite addtl = getAdditionalFormElement();
+    if (addtl != null) {
+      frm.add(addtl);
+    }
     Input submit = new Input(Input.Submit, "action", "Update");
     setTabOrder(submit);
     frm.add("<br><center>"+submit+"</center>");
@@ -208,9 +230,17 @@ public abstract class IpAccessControl extends LockssServlet {
     return comp;
   }
 
+  protected Composite getAdditionalFormElement() {
+    return null;
+  }
+
   private void addIPErrors(Composite comp, Vector errs) {
-    if (errs != null && errs.size() > 0) {
-      comp.add("<font color=red>The following entries have errors:</font><br>");
+    int size;
+    if (errs != null && (size = errs.size()) > 0) {
+      comp.add("<font color=red>");
+      comp.add(Integer.toString(size));
+      comp.add(size == 1 ? " entry has" : " entries have");
+      comp.add(" errors:</font><br>");
       for (Iterator iter = errs.iterator(); iter.hasNext(); ) {
 	comp.add((String)iter.next());
 	comp.add("<br>");
@@ -267,17 +297,20 @@ public abstract class IpAccessControl extends LockssServlet {
    * @param excIPsList vector of ip addresses to exclude
    * @return whether the save was successful
    */
-  public void saveIPChanges(Vector incIPsList, Vector excIPsList)
-      throws IOException {
-    String incStr = StringUtil.separatedString(incIPsList, ";");
-    String excStr = StringUtil.separatedString(excIPsList, ";");
-
-    Properties acProps = new Properties();
-    acProps.put(getIncludeParam(), incStr);
-    acProps.put(getExcludeParam(), excStr);
-    configMgr.writeCacheConfigFile(acProps,
+  protected void saveChanges() throws IOException {
+    Properties props = new Properties();
+    addConfigProps(props);
+    configMgr.writeCacheConfigFile(props,
 				   getConfigFileName(),
 				   getConfigFileComment());
+  }
+
+  protected void addConfigProps(Properties props) {
+    String incStr = StringUtil.separatedString(formIncl, ";");
+    String excStr = StringUtil.separatedString(formExcl, ";");
+
+    props.put(getIncludeParam(), incStr);
+    props.put(getExcludeParam(), excStr);
   }
 
   protected abstract String getExplanation();
