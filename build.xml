@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.74 2004-02-18 22:56:09 tlipkis Exp $
+ $Id: build.xml,v 1.75 2004-02-23 09:08:43 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -145,6 +145,8 @@ Args:
   				  value="${lib}/commons-collections.jar"/>
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging.jar"/>
+  <property name="commons.httpclient.jar"
+  				value="${lib}/commons-httpclient-2.0.jar"/>
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
@@ -188,6 +190,7 @@ Args:
     <pathelement path="${regexp.jar}" />
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
+    <pathelement path="${commons.httpclient.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${jettytools.jar}" />
     <pathelement path="${servlet.jar}" />
