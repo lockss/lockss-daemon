@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.6 2003-03-17 08:31:37 tal Exp $
+// $Id: DaemonStatus.java,v 1.7 2003-03-19 04:20:23 tal Exp $
 // ========================================================================
 
 /*
@@ -53,8 +53,10 @@ public class DaemonStatus extends LockssServlet {
   private static final String bAddRem = "Add/Remove Cluster Clients";
   private static final String bDelete = "Delete";
   private static final String bAdd = "Add";
+//   public static final DateFormat df =
+//     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
   public static final DateFormat df =
-    DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+    new SimpleDateFormat("MM/dd/yy HH:mm:ss");
 
   private String tableName;
   private String key;
@@ -152,6 +154,22 @@ public class DaemonStatus extends LockssServlet {
 	table.addHeading(title, "ALIGN=CENTER COLSPAN=" +
 			   (cols * 2 - 1));
 	table.newRow();
+	java.util.List summary = statTable.getHeaders();
+	if (summary != null && !summary.isEmpty()) {
+	  for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
+	    StatusTable.Header hdr = (StatusTable.Header)iter.next();
+	    table.newRow();
+	    StringBuffer sb = new StringBuffer();
+	    sb.append("<b>");
+	    sb.append(hdr.getTitle());
+	    sb.append("</b>: ");
+	    sb.append(dispString(hdr.getValue(), hdr.getType()));
+	    table.newCell("COLSPAN=" + (cols * 2 - 1));
+	    table.add(sb.toString());
+
+	  }
+	  table.newRow();
+	}
 
 	for (int ix = 0; ix < cols; ix++) {
 	  ColumnDescriptor cd = cds[ix];
@@ -182,7 +200,7 @@ public class DaemonStatus extends LockssServlet {
 	  String disp;
 
 	  table.newCell("align=" + getColAlignment(cd));
-	  table.add(dispString(rowMap.get(cd.getColumnName()), cd));
+	  table.add(dispString(rowMap.get(cd.getColumnName()), cd.getType()));
 	  if (ix < (cols - 1)) {
 	    table.newCell();	// empty column for spacing
 	  }
@@ -222,7 +240,7 @@ public class DaemonStatus extends LockssServlet {
   }
 
 
-  private String dispString(Object val, ColumnDescriptor cd) {
+  private String dispString(Object val, int type) {
     if (val instanceof StatusTable.Reference) {
       StatusTable.Reference ref = (StatusTable.Reference)val;
       StringBuffer sb = new StringBuffer();
@@ -231,21 +249,21 @@ public class DaemonStatus extends LockssServlet {
       String key = ref.getKey();
       if (!StringUtil.isNullString(key)) {
 	sb.append("&key=");
-	sb.append(key);
+	sb.append(urlEncode(key));
       }
-      return srvLink(myServletDescr(), dispString1(ref.getValue(), cd),
+      return srvLink(myServletDescr(), dispString1(ref.getValue(), type),
 		     sb.toString());
     } else {
-      return dispString1(val, cd);
+      return dispString1(val, type);
     }
   }
 
-  private String dispString1(Object val, ColumnDescriptor cd) {
+  private String dispString1(Object val, int type) {
     if (val == null) {
       return "";
     }
     try {
-      switch (cd.getType()) {
+      switch (type) {
       case ColumnDescriptor.TYPE_STRING:
       case ColumnDescriptor.TYPE_FLOAT:
       case ColumnDescriptor.TYPE_INT:
@@ -255,8 +273,15 @@ public class DaemonStatus extends LockssServlet {
 	float fv = ((Number)val).floatValue();
 	return Integer.toString(Math.round(fv * 100)) + "%";
       case ColumnDescriptor.TYPE_DATE:
-	long lv = ((Number)val).longValue();
-	return df.format(new Date(lv));
+	Date d;
+	if (val instanceof Number) {
+	  d = new Date(((Number)val).longValue());
+	} else if (val instanceof Date) {
+	  d = (Date)val;
+	} else {
+	  return val.toString();
+	}
+	return df.format(d);
       case ColumnDescriptor.TYPE_IP_ADDRESS:
 	return ((InetAddress)val).getHostAddress();
       case ColumnDescriptor.TYPE_TIME_INTERVAL:
