@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.5 2004-04-29 10:15:30 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.6 2004-05-12 17:47:18 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class RemoteApi extends BaseLockssManager {
   private Comparator auProxyComparator = new AuProxyOrderComparator();
 
   private PluginManager pluginMgr;
+  private ConfigManager configMgr;
 
   // cache for proxy objects
   private ReferenceMap auProxies = new ReferenceMap(ReferenceMap.WEAK,
@@ -63,6 +64,7 @@ public class RemoteApi extends BaseLockssManager {
   public void startService() {
     super.startService();
     pluginMgr = getDaemon().getPluginManager();
+    configMgr = getDaemon().getConfigManager();
   }
 
   /** No config */
@@ -280,6 +282,11 @@ public class RemoteApi extends BaseLockssManager {
    * org.lockss.plugin.registry, or were loaded by a configured AU */
   public Collection getRegisteredPlugins() {
     return mapPluginsToProxies(pluginMgr.getRegisteredPlugins());
+  }
+
+  /** Return list of repository specs for all available repositories */
+  public List getRepositoryList() {
+    return configMgr.getRepositoryList();
   }
 
   ArchivalUnit getAuFromId(String auid) {
