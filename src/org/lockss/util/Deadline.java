@@ -1,6 +1,6 @@
-// ========================================================================
-// $Id: Deadline.java,v 1.7 2002-11-20 02:02:51 tal Exp $
-// ========================================================================
+/*
+ * $Id: Deadline.java,v 1.8 2002-11-20 23:33:33 tal Exp $
+ */
 
 /*
 
@@ -166,9 +166,28 @@ public class Deadline implements Comparable {
     return expiration;
   }
 
-  /** Return the time remaining until expiration, in milliseconds */
+  /** Return the time remaining until expiration, in milliseconds.
+   * This method should not be used to obtain a duration to sleep; use
+   * {@link getSleepTime()} for that.
+   */
   public synchronized long getRemainingTime() {
     return (expired() ? 0 : expiration.getTime() - nowMs());
+  }
+
+  /** Return the time to sleep, in milliseconds.
+   * This method should be used instead of {@link #getRemainingTime()} to
+   * determine how long to sleep.  When operating with the real time base
+   * it returns the same value as getRemainingTime().  When using a fake
+   * time base for debugging, it returns a small number so that any sleeps
+   * will complete quickly, as it is impossible to predict when the fake
+   * time base will be advanced to the deadline.
+  */
+  public synchronized long getSleepTime() {
+    if (TimeBase.isSimulated()) {
+      return 5;
+    } else {
+      return (expired() ? 0 : expiration.getTime() - nowMs());
+    }
   }
 
   /** Return true iff the timer has expired */
@@ -232,11 +251,13 @@ public class Deadline implements Comparable {
   // tk - change these two to implement fake time base for testing
 
   protected static Date now() {
-    return new Date();
+    return TimeBase.nowDate();
+//     return new Date();
   }
 
   protected static long nowMs() {
-    return System.currentTimeMillis();
+    return TimeBase.nowMs();
+//     return System.currentTimeMillis();
   }
 
   private static LockssRandom getRandom() {
@@ -289,7 +310,7 @@ public class Deadline implements Comparable {
 	  thread.interrupt();
 	}};
     long nap;
-    while ((nap = getRemainingTime()) > 0) {
+    while ((nap = getSleepTime()) > 0) {
       try {
 	registerCallback(cb);
 	thread.sleep(nap);
