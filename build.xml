@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.4 2002-08-02 19:23:38 tal Exp $
+ $Id: build.xml,v 1.5 2002-08-03 06:35:57 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -253,7 +253,7 @@ in this Software without prior written authorization from Stanford University.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="tests"
+  <target name="test-all"
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class" >
     <echo>
