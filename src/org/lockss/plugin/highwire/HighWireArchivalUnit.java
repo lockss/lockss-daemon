@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.15 2003-03-12 02:43:30 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.16 2003-03-12 21:14:47 aalto Exp $
  */
 
 /*
@@ -213,7 +213,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public List getNewContentCrawlUrls() {
-    return ListUtil.list(getBaseUrl().toString());
+    return ListUtil.list(makeStartUrl(base, volume));
   }
 
 

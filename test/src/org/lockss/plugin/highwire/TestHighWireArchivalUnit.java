@@ -127,7 +127,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
   public void testGetNewContentCrawlUrls() throws Exception {
     URL url = new URL("http://www.example.com/");
-    String expectedStr = "http://www.example.com/";
+    String expectedStr = "http://www.example.com/lockss-volume10.shtml";
     HighWireArchivalUnit hwau = makeAU(url, 10);
     assertEquals(expectedStr, hwau.getNewContentCrawlUrls().get(0));
 
