@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.28 2002-12-17 21:09:05 claire Exp $
+* $Id: Poll.java,v 1.29 2002-12-19 01:14:30 claire Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.state.PollHistory;
+import org.lockss.state.NodeManager;
 
 
 /**
@@ -236,7 +237,7 @@ public abstract class Poll implements Serializable {
    * tally the poll results
    */
   protected void tally() {
-    //NodeManager.recordTally(m_tally);
+    //NodeManager.updatePollResults(m_urlSet, m_tally);
   }
 
   /**
@@ -495,6 +496,31 @@ public abstract class Poll implements Serializable {
       this(type, m_createTime, duration, 0, 0, 0, 0);
     }
 
+    /**
+     * did we win or lose the last poll.
+     * @return true iff only if number of agree votes exceeds the number of
+     * disagree votes and the reputation of the ids we agreed with >= with those
+     * we disagreed with. false if we had and error or disagree votes exceed
+     * agree votes.
+     */
+    public boolean didWinPoll() {
+      if(!isErrorState()) {
+        return (numYes > numNo) && (wtYes >= wtNo);
+      }
+      return false;
+    }
+
+    /**
+     * get the error state for this poll
+     * @return 0 == NOERR or one of the poll err conditions
+     */
+    public int getErr() {
+      if(isErrorState()) {
+        return m_pollstate;
+      }
+      return 0;
+    }
+
     boolean isLeadEnough() {
       return (numYes - numNo) > quorum;
     }
@@ -502,6 +528,7 @@ public abstract class Poll implements Serializable {
     boolean haveQuorum() {
       return numYes + numNo >= quorum;
     }
+
 
     void addVote(Vote vote) {
       LcapIdentity id = vote.getIdentity();

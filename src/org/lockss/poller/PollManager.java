@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.15 2002-12-17 21:09:05 claire Exp $
+* $Id: PollManager.java,v 1.16 2002-12-19 01:14:30 claire Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class PollManager {
                                        new CommMessageHandler());
       }
       catch(Exception ex) {
-        theLog.warning("Unitialized Comm!", ex);
+        theLog.warning("Unitialized Comm!");
       }
     }
     return theManager;
