@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.13 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.14 2003-03-26 21:30:26 troberts Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     mau.setPauseCallback(pauseCB);
 
     assertTrue(crawlManager.isCrawlingAU(mau, null, null));
-    assertFalse(crawlManager.isCrawlingAU(mau, cb, null));
+    assertTrue(crawlManager.isCrawlingAU(mau, cb, null));
 
     //if the callback was triggered, the second crawl completed
     assertFalse("Callback was triggered", cb.wasTriggered());
