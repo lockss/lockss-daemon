@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.6 2002-12-17 23:35:14 aalto Exp $
+ * $Id: PollState.java,v 1.7 2003-01-09 01:56:26 aalto Exp $
  */
 
 /*
@@ -46,12 +46,14 @@ public class PollState implements Comparable {
   public static final int RUNNING = 2;
   public static final int REPAIRING = 4;
   public static final int WON = 8;
-  public static final int REPAIRED = 16;
-  public static final int UNREPAIRABLE = 32;
+  public static final int LOST = 16;
+  public static final int REPAIRED = 32;
+  public static final int UNREPAIRABLE = 64;
   public static final int ERR_SCHEDULE_HASH = 128;
   public static final int ERR_HASHING = 256;
   public static final int ERR_NO_QUORUM = 512;
   public static final int ERR_IO = 1024;
+  public static final int ERR_UNDEFINED = 2048;
 
 
   int type;

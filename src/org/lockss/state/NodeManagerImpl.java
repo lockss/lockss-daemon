@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.2 2002-12-21 01:15:45 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.3 2003-01-09 01:56:26 aalto Exp $
  */
 
 /*
@@ -38,6 +38,11 @@ import org.lockss.poller.Poll;
 import org.lockss.daemon.ArchivalUnit;
 import org.lockss.util.Deadline;
 import org.lockss.plugin.Plugin;
+import org.lockss.util.Logger;
+import org.lockss.poller.PollManager;
+import org.lockss.protocol.LcapMessage;
+import java.net.InetAddress;
+import java.io.IOException;
 
 /**
  */
@@ -45,6 +50,7 @@ public class NodeManagerImpl implements NodeManager {
   private static NodeManager nodeManager = null;
   private HistoryRepository repository;
   private HashMap auMaps;
+  private static Logger logger = Logger.getLogger("NodeManager");
 
   /**
    * Factory method to retrieve NodeManager.
@@ -206,7 +212,143 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void updateState(NodeState state, Poll.VoteTally results) {
-    //XXX whee!!
+    PollState pollState = getPollState(state, results);
+    if (pollState == null) {
+      logger.error("Results updated for a non-existent poll.");
+      throw new UnsupportedOperationException("Results updated for a non-existent poll.");
+    }
+    if (results.getErr() < 0) {
+      pollState.status = mapResultsErrorToPollError(results.getErr());
+      logger.info("Poll didn't finish fully.  Error code: " + pollState.status);
+      return;
+    }
+
+    if (results.type == Poll.CONTENT_POLL) {
+      handleContentPoll(pollState, results, state);
+    } else if (results.type == Poll.NAME_POLL) {
+      handleNamePoll(pollState, results, state);
+    } else {
+      logger.error("Updating state for invalid results type: "+results.type);
+      throw new UnsupportedOperationException("Updating state for invalid results type.");
+    }
   }
 
+  private void handleContentPoll(PollState pollState, Poll.VoteTally results, NodeState nodeState) {
+    if (results.didWinPoll()) {
+      // if agree
+      if (pollState.getStatus() == PollState.RUNNING) {
+        // if normal poll, we won!
+        pollState.status = PollState.WON;
+      } else if (pollState.getStatus() == PollState.REPAIRING) {
+        // if repair poll, we're repaired
+        pollState.status = PollState.REPAIRED;
+      }
+      //XXX update reputation
+    } else {
+      // if disagree
+      if (pollState.getStatus() == PollState.REPAIRING) {
+        // if repair poll, can't be repaired
+        pollState.status = PollState.UNREPAIRABLE;
+        //XXX update reputation
+      } else if (isInternalNode(nodeState)) {
+        // if internal node, we need to call a name poll
+        pollState.status = PollState.LOST;
+        //XXX call name poll
+        long duration = 0; //XXX calculate
+//        PollManager.getPollManager().makePollRequest(results, duration, LcapMessage.NAME_POLL_REQ);
+      } else {
+        // if leaf node, we need to repair
+        pollState.status = PollState.REPAIRING;
+        repairNode(nodeState);
+        Deadline deadline = null; //XXX determine
+        results.replayAllVotes(deadline);
+      }
+    }
+  }
+
+  private void handleNamePoll(PollState pollState, Poll.VoteTally results, NodeState nodeState) {
+    if (results.didWinPoll()) {
+      // if agree
+      if (results.isMyPoll()) {
+        // if poll is mine
+        try {
+          callContentPollOnSubNodes(nodeState, results);
+          pollState.status = PollState.WON;
+        } catch (IOException ioe) {
+          logger.error("Error scheduling content polls.", ioe);
+          pollState.status = PollState.ERR_IO;
+        }
+      } else {
+        // if poll is not mine stop - set to WON
+        pollState.status = PollState.WON;
+      }
+    } else {
+      // if disagree
+      if (results.isMyPoll()) {
+        // if poll is mine
+        pollState.status = PollState.REPAIRING;
+        //XXX iterate through master list
+        // compare against my list
+        // if you're missing item - create and repair
+        // if extra item - deletion
+        pollState.status = PollState.REPAIRED;
+      } else {
+        // poll is not mine ????
+        //XXX do something?
+        pollState.status = PollState.LOST;
+      }
+    }
+  }
+
+  private PollState getPollState(NodeState state, Poll.VoteTally results) {
+    Iterator polls = state.getActivePolls();
+    while (polls.hasNext()) {
+      PollState pollState = (PollState)polls.next();
+      if ((pollState.getRegExp() == results.regExp) &&
+          (pollState.getType() == results.type)) {
+        return pollState;
+      }
+    }
+    return null;
+  }
+
+  private boolean isInternalNode(NodeState state) {
+    Iterator children = state.getCachedUrlSet().flatSetIterator();
+    return children.hasNext();
+  }
+
+  private int mapResultsErrorToPollError(int resultsErr) {
+    switch (resultsErr) {
+      case Poll.ERR_HASHING:
+        return PollState.ERR_HASHING;
+      case Poll.ERR_IO:
+        return PollState.ERR_IO;
+      case Poll.ERR_NO_QUORUM:
+        return PollState.ERR_NO_QUORUM;
+      case Poll.ERR_SCHEDULE_HASH:
+        return PollState.ERR_SCHEDULE_HASH;
+    }
+    return PollState.ERR_UNDEFINED;
+  }
+
+  private void repairNode(NodeState state) {
+    //XXX move old version
+    // fetch new version
+  }
+
+  private void callContentPollOnSubNodes(NodeState state,
+      Poll.VoteTally results) throws IOException {
+    Iterator children = state.getCachedUrlSet().flatSetIterator();
+    while (children.hasNext()) {
+      CachedUrlSet child = (CachedUrlSet)children.next();
+      String url = (String)child.getSpec().getPrefixList().get(0);
+      int timeToLive = 0; //XXX calculate
+      long duration = 0; //XXX calculate
+      InetAddress grpAddr = null; //XXX determine
+      int voteRange = 0; //XXX calculate
+      PollManager.getPollManager().makePollRequest(url, null,
+          LcapMessage.CONTENT_POLL_REQ, timeToLive, grpAddr, duration,
+          voteRange);
+    }
+  }
 }
