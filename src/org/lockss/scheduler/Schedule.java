@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.4 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: Schedule.java,v 1.4.14.1 2004-07-21 07:00:43 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ public class Schedule {
 
   private List events;
   private Collection overrunTasks;
+  private SortScheduler scheduler;
 
   public Schedule(List events) {
     this.events = events;
@@ -50,6 +51,26 @@ public class Schedule {
   public Schedule(List events, Collection overrunTasks) {
     this.events = events;
     this.overrunTasks = overrunTasks;
+  }
+
+  /** Record the scheduler that created this schedule.  Hack that should
+   * either be incorporated in Scheduler interface or removed */
+  public void setScheduler(SortScheduler scheduler) {
+    this.scheduler = scheduler;
+  }
+
+  /** Find the earliest possible time a background task could be
+   * scheduled.  This is only a hint; it may not be possible to schedule
+   * the task then.
+   * @param task a Background task specifying the duration, load factor and
+   * earliest desired start time.
+   * @return The BackgroundTask with possibly updated start and finish
+   * times when it might be schedulable. */
+  public BackgroundTask scheduleHint(BackgroundTask task) {
+    if (scheduler != null) {
+      return scheduler.scheduleHint(task);
+    }
+    return task;
   }
 
   /** Return the list of {@link org.lockss.scheduler.Schedule.Event}s */

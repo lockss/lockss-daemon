@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.5 2004-02-09 22:10:58 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.5.12.1 2004-07-21 07:00:42 tlipkis Exp $
  */
 
 /*
@@ -131,7 +131,7 @@ public class TestTaskRunner extends LockssTestCase {
     fact.setResult(null);
     StepTask t1 = task(100, 200, 50);
     assertFalse(tr.addToSchedule(t1));
-    assertNull(tr.getAcceptedTasks());
+    assertEmpty(tr.getAcceptedTasks());
   }
 
   // ensure addToSchedule updates structures if (Mock)Scheduler returns true

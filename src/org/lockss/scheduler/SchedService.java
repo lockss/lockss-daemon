@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.5 2004-01-12 06:21:20 tlipkis Exp $
+ * $Id: SchedService.java,v 1.5.14.1 2004-07-21 07:00:43 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,17 @@ public class SchedService extends BaseLockssManager {
   public boolean isTaskSchedulable(SchedulableTask task) {
     checkRunner();
     return runner.isTaskSchedulable(task);
+  }
+
+  /** Find the earliest possible time a background task could be scheduled.
+   * This is only a hint; it may not be possible to schedule the task then.
+   * @param task a Background task specifying the duration, load factor and
+   * earliest desired start time.
+   * @return A BackgroundTask (possibly the same one) with possibly updated
+   * start and finish times when it might be schedulable. */
+  public BackgroundTask scheduleHint(BackgroundTask task) {
+    checkRunner();
+    return runner.scheduleHint(task);
   }
 
   /** Return true if the SchedService has nothing to do.  Useful in unit

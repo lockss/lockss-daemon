@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.2 2003-11-19 08:46:45 tlipkis Exp $
+ * $Id: TestSortScheduler.java,v 1.2.14.1 2004-07-21 07:00:42 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,23 @@ public class TestSortScheduler extends LockssTestCase {
     TimeBase.setReal();
     super.tearDown();
   }
+
+  public static void assertEquals(BackgroundTask expected,
+				  BackgroundTask actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  public static void assertEquals(String message,
+				  BackgroundTask expected,
+				  BackgroundTask actual) {
+    if (expected.getStart().equals(actual.getStart()) &&
+	expected.getFinish().equals(actual.getFinish()) &&
+	expected.getLoadFactor() == actual.getLoadFactor()) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
 
   static StepTask taskBefore(long deadline, int duration) {
     return new MockStepTask(Deadline.at(0), Deadline.at(deadline),
@@ -369,6 +386,105 @@ public class TestSortScheduler extends LockssTestCase {
     assertFalse(sched.createSchedule());
   }
 
+  public void testBackHintEmptySchedule() {
+    BackgroundTask b1 = bTask(100, 300, .9);
+    SortScheduler sched = new SortScheduler(Collections.EMPTY_LIST);
+    assertSame(b1, sched.scheduleHint(b1));
+  }
+
+  public void testBackHintBefore() {
+    BackgroundTask b1 = bTask(200, 300, .9);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(100, 200, .9);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(100, 200, .9), sched.scheduleHint(b));
+  }
+
+  public void testBackHintAfter() {
+    BackgroundTask b1 = bTask(200, 300, .9);
+    BackgroundTask b2 = bTask(400, 600, .9);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(600, 900, .9);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(600, 900, .9), sched.scheduleHint(b));
+  }
+
+  public void testBackHintDuring() {
+    BackgroundTask b1 = bTask(200, 300, .4);
+    BackgroundTask b2 = bTask(400, 600, .5);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(250, 900, .5);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(250, 900, .5), sched.scheduleHint(b));
+  }
+
+  public void testBackHintBetween() {
+    BackgroundTask b1 = bTask(200, 300, .4);
+    BackgroundTask b2 = bTask(400, 600, .5);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(250, 350, .5);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(250, 350, .5), sched.scheduleHint(b));
+  }
+
+  public void testBackHintDelayed() {
+    BackgroundTask b1 = bTask(200, 300, .4);
+    BackgroundTask b2 = bTask(400, 600, .5);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(100, 201, .7);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(600, 701, .7), sched.scheduleHint(b));
+  }
+
+  public void testBackHintDelayDueToMaxLoad() {
+    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
+				  "25");
+    BackgroundTask b1 = bTask(100, 200, .5);
+    BackgroundTask b2 = bTask(200, 300, .5);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(100, 201, .7);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(400, 501, .7), sched.scheduleHint(b));
+  }
+
+  public void testBackHintDelayDueToMaxLoadBetween() {
+    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
+				  "25");
+    BackgroundTask b1 = bTask(100, 200, .5);
+    BackgroundTask b2 = bTask(200, 300, .5);
+    BackgroundTask b3 = bTask(5000, 5100, .5);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2, b3));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(100, 201, .7);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(400, 501, .7), sched.scheduleHint(b));
+  }
+
+  public void testBackHintUnaffectedByMaxLoad() {
+    ConfigurationUtil.setFromArgs(SortScheduler.PARAM_MAX_BACKGROUND_LOAD,
+				  "50");
+    BackgroundTask b1 = bTask(100, 200, .5);
+    BackgroundTask b2 = bTask(200, 300, .5);
+    SortScheduler sched = new SortScheduler(ListUtil.list(b1, b2));
+    assertTrue(sched.createSchedule());
+
+    BackgroundTask b = bTask(100, 201, .7);
+    assertSame(b, sched.scheduleHint(b));
+    assertEquals(bTask(300, 401, .7), sched.scheduleHint(b));
+  }
 
   public void testHard1() {
     SortScheduler sched =
