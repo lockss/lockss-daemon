@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.117 2004-10-18 06:14:09 smorabito Exp $
+ * $Id: PluginManager.java,v 1.118 2004-10-20 18:32:09 tlipkis Exp $
  */
 
 /*
@@ -81,18 +81,19 @@ public class PluginManager
   static final String PARAM_PLUGIN_REGISTRIES =
     Configuration.PREFIX + "plugin.registries";
 
+  /** Common prefix of plugin keystore params */
+  static final String KEYSTORE_PREFIX =
+    Configuration.PREFIX + "plugin.keystore.";
+
   /** The location of a Java JKS keystore to use for verifying
       loadable plugins (optional). */
-  static final String PARAM_KEYSTORE_LOCATION =
-    Configuration.PREFIX + "plugin.keystore.location";
+  static final String PARAM_KEYSTORE_LOCATION = KEYSTORE_PREFIX + "location";
   static final String DEFAULT_KEYSTORE_LOCATION =
     "org/lockss/plugin/lockss.keystore";
   /** The password to use when opening the loadable plugin
       verification keystore (optional). */
-  static final String PARAM_KEYSTORE_PASSWORD =
-    Configuration.PREFIX + "plugin.keystore.password";
-  static final String DEFAULT_KEYSTORE_PASSWORD =
-    "password";
+  static final String PARAM_KEYSTORE_PASSWORD = KEYSTORE_PREFIX + "password";
+  static final String DEFAULT_KEYSTORE_PASSWORD = "password";
 
   /** The interval between recrawls of the loadable plugin
       registry AUs.  (Specified as a string, not a long).  */
@@ -240,8 +241,7 @@ public class PluginManager
     }
 
     // If the keystore or password has changed, update.
-    if (changedKeys.contains(PARAM_KEYSTORE_LOCATION) ||
-	changedKeys.contains(PARAM_KEYSTORE_PASSWORD)) {
+    if (changedKeys.contains(KEYSTORE_PREFIX)) {
       initKeystore();
     }
 
@@ -564,7 +564,7 @@ public class PluginManager
   }
 
   protected void putAuInMap(ArchivalUnit au) {
-    log.debug("putAuMap(" + au.getAuId() +", " + au);
+    log.debug2("putAuMap(" + au.getAuId() +", " + au);
     auMap.put(au.getAuId(), au);
     auSet.add(au);
   }
