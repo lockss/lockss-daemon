@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.35 2003-04-14 07:28:47 tal Exp $
+ * $Id: Configuration.java,v 1.36 2003-04-14 23:08:34 tal Exp $
  */
 
 /*
@@ -49,16 +49,30 @@ import org.lockss.util.*;
  * from the current configuration, not that instance.  So don't do that.)
  */
 public abstract class Configuration {
-  /** The common prefix string of all LOCKSS configuration parameters. */
-  public static final String PREFIX = "org.lockss.";
+  /** A constant empty Configuration object */
   public static final Configuration EMPTY_CONFIGURATION = newConfiguration();
 
-  static final String MYPREFIX = PREFIX + "config.";
+  /** The common prefix string of all LOCKSS configuration parameters. */
+  public static final String PREFIX = "org.lockss.";
 
-  static final String PARAM_RELOAD_INTERVAL = PREFIX + "config.reloadInterval";
-  static final String PARAM_DISK_SPACE_LIST =
-    PREFIX + "platform.diskSpacePaths";
+  static final String MYPREFIX = PREFIX + "config.";
+  static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
   static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
+
+  /** Common prefix of platform config params */
+  static final String PLATFORM = PREFIX + "platform.";
+
+  /** Local subnet set during config */
+  public static final String PARAM_PLATFORM_ACCESS_SUBNET =
+    PLATFORM + "accesssubnet";
+
+  static final String PARAM_PLATFORM_DISK_SPACE_LIST =
+    PLATFORM + "diskSpacePaths";
+
+  static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
+
+  static final String PARAM_PLATFORM_ADMIN_EMAIL =
+    PLATFORM + "sysadminemail";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -287,10 +301,11 @@ public abstract class Configuration {
       throws IOException;
 
   private void initCacheConfig() {
-    String space = Configuration.getParam(PARAM_DISK_SPACE_LIST);
+    String space = Configuration.getParam(PARAM_PLATFORM_DISK_SPACE_LIST);
     Vector v = StringUtil.breakAt(space, ';');
     if (v.size() == 0) {
-      log.error(PARAM_DISK_SPACE_LIST + " not specified, not configuring");
+      log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
+		" not specified, not configuring");
       return;
     }
     for (Iterator iter = v.iterator(); iter.hasNext(); ) {
