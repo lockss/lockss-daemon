@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.16 2003-03-04 01:47:04 aalto Exp $
+ * $Id: PluginManager.java,v 1.17 2003-03-04 21:47:08 tal Exp $
  */
 
 /*
@@ -215,22 +215,33 @@ public class PluginManager implements LockssManager {
   }
 
   /**
-   * Find all ArchivalUnits that contain (have content for) the URL.
+   * Searches all ArchivalUnits to find the most recent CachedUrl for the URL.
    * @param url The URL to search for.
-   * @return List of ArchivalUnits.
+   * @return a CachedUrl, or null if URL not present in any AU
    */
-  public List findArchivalUnitsContaining(String url) {
-    List res = new ArrayList();
+  public CachedUrl findMostRecentCachedUrl(String url) {
+    CachedUrl best = null;
     for (Iterator iter = getAllAUs().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       if (au.shouldBeCached(url)) {
 	CachedUrl cu = au.getAUCachedUrlSet().makeCachedUrl(url);
-	if (cu.hasContent()) {
-	  res.add(au);
+	if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
+	  best = cu;
 	}
       }
     }
-    return res;
+    return best;
+  }
+
+  // return true if cu1 is newer than cu2, or cu2 is null
+  // tk - no date available for comparison yet, return arbitrary order
+  private boolean cuNewerThan(CachedUrl cu1, CachedUrl cu2) {
+    if (cu2 == null) return true;
+    Properties p1 = cu1.getProperties();
+    Properties p2 = cu2.getProperties();
+    // tk - this should use the crawl-date prop taht the crawler will add
+//     Long.parseLong(p1.getProperty(HttpFields.__LastModified, "-1"));
+    return true;
   }
 
   /**
