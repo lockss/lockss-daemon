@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.34 2003-07-14 06:44:18 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.35 2003-08-06 06:25:25 tlipkis Exp $
  */
 
 /*
@@ -62,6 +62,8 @@ public class LockssDaemon {
 
   private static String PARAM_DAEMON_EXIT_ONCE = PREFIX + "exitOnce";
   private static boolean DEFAULT_DAEMON_EXIT_ONCE = false;
+
+  private static String PARAM_DEBUG = PREFIX + "debug";
 
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
@@ -225,6 +227,10 @@ public class LockssDaemon {
    * @return the time the daemon started running, as a Date
    */
   public Date getStartDate() {
+    if (startDate == null) {
+      // this happens during testing
+      startDate = TimeBase.nowDate();
+    }
     return startDate;
   }
 
@@ -643,4 +649,12 @@ public class LockssDaemon {
   public boolean isDaemonRunning() {
     return daemonRunning;
   }
+
+  /**
+   * True if running in debug mode (org.lockss.daemon.debug=true).
+   * @return true iff in debug mode */
+  public static boolean isDebug() {
+    return ConfigManager.getBooleanParam(PARAM_DEBUG, false);
+  }
+
 }
