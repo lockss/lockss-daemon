@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.1 2003-05-30 23:27:53 aalto Exp $
+ * $Id: DamagedNodeSet.java,v 1.1.2.1 2003-06-05 20:59:24 aalto Exp $
  */
 
 /*
@@ -44,7 +44,10 @@ public class DamagedNodeSet {
   HistoryRepository repository;
   ArchivalUnit theAu;
 
-  public DamagedNodeSet() { }
+  public DamagedNodeSet() {
+    // initialize here so that if there's no set to load, it's not null
+    nodes = new HashSet();
+  }
 
   public DamagedNodeSet(ArchivalUnit au, HistoryRepository repository) {
     this.theAu = au;
