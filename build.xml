@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.30 2003-02-27 23:30:48 tal Exp $
+ $Id: build.xml,v 1.31 2003-03-12 01:59:10 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -244,6 +244,11 @@ Args:
        <classpath refid="compile.classpath" />
        <include name="**/*.java"/>
     </javac>
+    <copy todir="${classes}" >
+       <fileset dir="${src}" >
+          <include name="**/*.xml"/>
+       </fileset>
+    </copy>
   </target>
 
   <!-- ==================================================================== -->
@@ -355,6 +360,8 @@ Args:
 	     access="protected"
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
+             verbose="false"
+             overview="${src}/overview.html"
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
     </javadoc>
@@ -618,6 +625,7 @@ Test results in ${test.results}
     <property name="timeout" value="" />
     <property name="keeptempfiles" value="" />
     <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+         filtertrace="yes"
          showoutput="${showoutput}">
       <test fork="no" name="${class}" />
       <formatter type="plain" usefile="false" />                  
