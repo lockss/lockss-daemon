@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.10 2004-01-03 06:20:58 tlipkis Exp $
+ * $Id: ProjectMusePlugin.java,v 1.11 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.configurable.*;
 
 /**
  * This is a first cut at making a Project Muse plugin
@@ -41,7 +42,7 @@ import org.lockss.app.LockssDaemon;
  */
 
 public class ProjectMusePlugin
-    extends BasePlugin {
+    extends ConfigurablePlugin {
   private static String PLUGIN_NAME = "Project Muse";
   private static String CURRENT_VERSION = "Pre-release";
 

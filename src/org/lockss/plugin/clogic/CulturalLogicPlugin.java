@@ -1,5 +1,5 @@
 /*
- * $Id: CulturalLogicPlugin.java,v 1.3 2004-01-03 06:20:59 tlipkis Exp $
+ * $Id: CulturalLogicPlugin.java,v 1.4 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -26,12 +26,11 @@
 
 package org.lockss.plugin.clogic;
 
-import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.util.ListUtil;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.plugin.base.BasePlugin;
-import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.*;
+import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
 
 /**
  * This is a first cut at making a Cultural Logic plugin
@@ -40,7 +39,7 @@ import org.lockss.app.LockssDaemon;
  * @version 0.0
  */
 
-public class CulturalLogicPlugin extends BasePlugin {
+public class CulturalLogicPlugin extends ConfigurablePlugin {
   private static String PLUGIN_NAME = "Cultural Logic";
   private static String CURRENT_VERSION = "Pre-release";
 

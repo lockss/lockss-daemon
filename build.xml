@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.69 2004-01-10 04:32:03 clairegriffin Exp $
+ $Id: build.xml,v 1.70 2004-01-13 04:46:24 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -154,7 +154,6 @@ Args:
   <property name="log4j.jar"  value="${test.lib}/log4j-1.2.8.jar"/>
   <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.7.jar"/>
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
-  <property name="hb16.jar"      value="${lib}/hb16.jar"/>
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
@@ -192,7 +191,6 @@ Args:
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xmlparser.jar}" />
-    <pathelement path="${hb16.jar}"/>
   </path>
 
   <path id="run.classpath">

@@ -10,6 +10,7 @@ import java.net.*;
 
 import gnu.regexp.*;
 import org.lockss.state.*;
+import org.lockss.plugin.configurable.*;
 
 /**
  * IeeeArchivalUnit: The Archival Unit Class for IEEE Plugin
@@ -17,7 +18,7 @@ import org.lockss.state.*;
  * @version 1.0
  */
 
-public class IeeeArchivalUnit extends BaseArchivalUnit {
+public class IeeeArchivalUnit extends ConfigurableArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
@@ -42,12 +43,12 @@ public class IeeeArchivalUnit extends BaseArchivalUnit {
  protected void setAuParams(Configuration config)
       throws ArchivalUnit.ConfigurationException {
 
-    puNumber = configMap.getInt(IeeePlugin.AUPARAM_PUNUM, -1);
+    puNumber = configurationMap.getInt(IeeePlugin.AUPARAM_PUNUM, -1);
     if (puNumber < 0) {
       throw new ConfigurationException("Publication Number - Out of Range.");
     }
 
-    puYear = configMap.getInt(IeeePlugin.AUPARAM_YEAR, -1);
+    puYear = configurationMap.getInt(IeeePlugin.AUPARAM_YEAR, -1);
     if (puYear < 2003) {
       throw new ConfigurationException("Volume Year - Out of Range.");
     }

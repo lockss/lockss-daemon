@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.16 2004-01-04 06:13:23 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.17 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -51,21 +51,10 @@ public abstract class BasePlugin
   static final String TITLE_PARAM_PARAM_VALUE = "value";
   static final String TITLE_PARAM_PARAM_EDITABLE = "editable";
 
-  static final protected String CM_NAME_KEY = "plugin_name";
-  static final protected String CM_VERSION_KEY = "plugin_version";
-
-  static final protected String CM_TITLE_MAP_KEY = "title_map";
-  static final protected String CM_CONFIG_PROPS_KEY = "au_config_props";
-  static final protected String CM_DEFINING_CONFIG_PROPS_KEY =
-      "au_defining_props";
-
   protected LockssDaemon theDaemon;
   protected PluginManager pluginMgr;
   protected Collection aus = new ArrayList();
-  protected Map titleConfigMap;
-  protected ExternalizableMap configurationMap = new ExternalizableMap();
-
-  /**
+  protected Map titleConfigMap;/**
    * Must invoke this constructor in plugin subclass.
    */
   protected BasePlugin() {
@@ -85,22 +74,6 @@ public abstract class BasePlugin
   }
 
   public void stopPlugin() {
-  }
-
-  public String getPluginName() {
-    return configurationMap.getString(CM_NAME_KEY, "NO_NAME");
-  }
-
-  public String getVersion() {
-    return configurationMap.getString(CM_VERSION_KEY, "UNKNOWN VERSION");
-  }
-
-  public List getAuConfigProperties() {
-    return (List) configurationMap.getCollection(CM_CONFIG_PROPS_KEY, null);
-  }
-
-  public Collection getDefiningConfigKeys() {
-    return configurationMap.getCollection(CM_DEFINING_CONFIG_PROPS_KEY, null);
   }
 
   /**
@@ -160,11 +133,8 @@ public abstract class BasePlugin
 	titleMap.put(title, tc);
       }
     }
-    if (titleMap.isEmpty()) {
-      // XXX find better way
-      // allow plugin to specify its own titles if none in config
-      setTitleConfigFromPluginConfigMap();
-    } else {
+    //TODO: decide on how to support plug-ins which do not use the title registry
+    if (!titleMap.isEmpty()) {
       setTitleConfigMap(titleMap);
     }
   }
@@ -197,12 +167,6 @@ public abstract class BasePlugin
 
   }
 
-  private void setTitleConfigFromPluginConfigMap() {
-    Map map = (Map)configurationMap.getMapElement(CM_TITLE_MAP_KEY);
-    if (map != null) {
-      setTitleConfigMap(map);
-    }
-  }
 
   protected void setTitleConfigMap(Map titleConfigMap) {
     this.titleConfigMap = titleConfigMap;
@@ -225,9 +189,6 @@ public abstract class BasePlugin
     return null;
   }
 
-  protected ExternalizableMap getConfigurationMap() {
-    return configurationMap;
-  }
 
   // for now use the plugin's class name
   // tk - this will have to change to account for versioning
@@ -242,6 +203,9 @@ public abstract class BasePlugin
 
   public ArchivalUnit configureAu(Configuration config, ArchivalUnit au) throws
       ArchivalUnit.ConfigurationException {
+    if(config == null) {
+      throw new  ArchivalUnit.ConfigurationException("Null Configuration");
+    }
     if (au != null) {
       au.setConfiguration(config);
     }

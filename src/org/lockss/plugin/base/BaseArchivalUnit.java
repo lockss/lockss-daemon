@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.49 2004-01-13 02:20:02 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.50 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -116,22 +116,22 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   protected String startUrlString;
   protected long newContentCrawlIntv;
   protected long defaultContentCrawlIntv = DEFAULT_NEW_CONTENT_CRAWL_INTERVAL;
-  protected URL baseUrl; // the base Url for the volume
-  protected String auName;
-
+  protected URL baseUrl;     // the base Url for the volume
+  protected String auName;   // the name of the AU
   protected long nextPollInterval = -1;
   protected double curTopLevelPollProb = -1;
-
   protected Configuration auConfig;
-  protected ExternalizableMap configMap;
-
   private String auId = null;
+
+  // crawl spec support
+  protected LRUMap crawlSpecCache = new LRUMap(1000);
+  protected int hits = 0;
+  protected int misses = 0;
+
+
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
-    if (myPlugin != null) {
-      configMap = ((BasePlugin)myPlugin).getConfigurationMap();
-    }
   }
 
   /**
@@ -174,39 +174,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
   }
 
-  void loadDefiningConfig(Configuration config) throws ConfigurationException {
-    List descrList = plugin.getAuConfigProperties();
-    for (Iterator it = descrList.iterator(); it.hasNext();) {
-      Object next = it.next();
-      // check for simulated plugin configuration
-      if (!(next instanceof ConfigParamDescr)) {
-        logger.debug("AU config properties are not of type ConfigParamDescr" +
-                     "- skipping configuration map storage.");
-        return;
-      }
-      ConfigParamDescr descr = (ConfigParamDescr)next;
-      String key = descr.getKey();
-      switch (descr.getType()) {
-        case ConfigParamDescr.TYPE_INT:
-          int i_val = loadConfigInt(descr, config);
-          configMap.putInt(key, i_val);
-          break;
-        case ConfigParamDescr.TYPE_STRING:
-          String s_val = loadConfigString(descr, config);
-          configMap.putString(key, s_val);
-          break;
-        case ConfigParamDescr.TYPE_URL:
-          URL u_val = loadConfigUrl(descr, config);
-          configMap.putUrl(key, u_val);
-          break;
-      }
-    }
-  }
 
   protected void setBaseAuParams(Configuration config)
       throws ConfigurationException {
-    // get the base url string
-    baseUrl = configMap.getUrl(ConfigParamDescr.BASE_URL.getKey(), null);
+
+    // get the base url
+    baseUrl = loadConfigUrl(ConfigParamDescr.BASE_URL, config);
 
     // get the fetch delay
     fetchDelay = config.getTimeInterval(PAUSE_TIME_KEY, defaultFetchDelay);
@@ -276,6 +249,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return crawlSpec;
   }
 
+  /**
+   * Return the Url stems from which to begin our crawl.
+   * @return a List of Urls
+   */
   public Collection getUrlStems() {
     try {
       URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
@@ -285,10 +262,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       return Collections.EMPTY_LIST;
     }
   }
-
-  LRUMap crawlSpecCache = new LRUMap(1000);
-  int hits = 0;
-  int misses = 0;
 
   /**
    * Determine whether the url falls within the CrawlSpec.
@@ -384,6 +357,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   abstract protected void setAuParams(Configuration config)
       throws ConfigurationException;
+
+  abstract protected void loadDefiningConfig(Configuration config) throws
+      ConfigurationException;
+
 
   /**
    * subclasses must implement this method to make and return the Crawl Rules
@@ -601,6 +578,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   String paramString(ConfigParamDescr descr) {
     return "\"" + descr.getDisplayName() + "\"";
   }
+
 
   void checkNextPollInterval() {
     Configuration config = Configuration.getCurrentConfig();

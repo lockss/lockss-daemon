@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.118 2004-01-13 01:34:04 tlipkis Exp $
+* $Id: PollManager.java,v 1.119 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -175,6 +175,15 @@ public class PollManager  extends BaseLockssManager {
    * @param au the AU
    */
   public void cancelAuPolls(ArchivalUnit au) {
+    Iterator it = thePolls.values().iterator();
+    while (it.hasNext()) {
+      PollManagerEntry pme = (PollManagerEntry) it.next();
+      if (pme.spec.getAuId().equals(au.getAuId())) {
+        if (!pme.isPollCompleted()) {
+          pme.poll.stopPoll();
+        }
+      }
+    }
   }
 
   /**
@@ -860,7 +869,7 @@ public class PollManager  extends BaseLockssManager {
 		     " greater than max poll time " +
 		     StringUtil.timeIntervalToString(pollTime));
       return false;
-    }		     
+    }
     Deadline when = Deadline.in(pollTime);
     return canHashBeScheduledBefore(hashTime, when);
   }

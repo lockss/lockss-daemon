@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.2 2004-01-04 06:13:22 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.3 2004-01-13 04:46:27 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit.ConfigurationException;
 
 /**
  * This is the test class for org.lockss.plugin.base.BasePlugin
@@ -64,7 +65,17 @@ public class TestBasePlugin extends LockssTestCase {
     super.tearDown();
   }
 
+  /** test for method configureAu(..) */
+  public void testConfigureAu() {
+    // check for null config throws exception
+    try {
+      mbp.configureAu(null, null);
+      fail("Didn't throw ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) { }
+  }
+
   public void testInitTitleDB() {
+    mbp.setConfigurationProps(ListUtil.list(PD_VOL, PD_YEAR));
     Properties p = new Properties();
     p.put("org.lockss.title.0.title", "Not me");
     p.put("org.lockss.title.0.plugin", "org.lockss.NotThisClass");
@@ -87,18 +98,54 @@ public class TestBasePlugin extends LockssTestCase {
   }
 
   private static class MockBasePlugin extends BasePlugin {
+    String name;
+    String version;
+    List definingConfigProps;
+    List configProps;
+
     public MockBasePlugin() {
       super();
     }
 
-    public void initPlugin(LockssDaemon daemon){
-      configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
-				     ListUtil.list(PD_VOL, PD_YEAR));
-      super.initPlugin(daemon);
+    public void setPluginName(String name) {
+      this.name = name;
     }
 
-    public ArchivalUnit createAu(Configuration auConfig) {
-      return null;
-   }
+    public void setVersion(String version) {
+      this.version = version;
+    }
+
+    public void setConfigurationProps(List configProps) {
+      this.configProps = configProps;
+    }
+
+    public void setDefiningConfigProps(List definingConfigProps) {
+      this.definingConfigProps = definingConfigProps;
+    }
+
+
+    public ArchivalUnit createAu(Configuration auConfig) throws
+        ConfigurationException {
+      TestBaseArchivalUnit.MockBaseArchivalUnit mau =
+          new TestBaseArchivalUnit.MockBaseArchivalUnit(this);
+      mau.setConfiguration(auConfig);
+      return mau;
+    }
+
+    public String getVersion() {
+      return version;
+    }
+
+    public String getPluginName() {
+      return name;
+    }
+
+    public List getAuConfigProperties() {
+      return configProps;
+    }
+
+    public Collection getDefiningConfigKeys() {
+      return definingConfigProps;
+    }
   }
 }

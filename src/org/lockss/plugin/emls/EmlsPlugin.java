@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsPlugin.java,v 1.5 2004-01-03 06:20:58 tlipkis Exp $
+ * $Id: EmlsPlugin.java,v 1.6 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.ListUtil;
 import org.lockss.app.LockssDaemon;
 import java.util.List;
+import org.lockss.plugin.configurable.*;
 
 /**
  * EmlsPlugin: Plugin class for the Early Modern Literary Studies Plugin
@@ -45,7 +46,7 @@ import java.util.List;
  * @version 1.0
  */
 
-public class EmlsPlugin extends BasePlugin {
+public class EmlsPlugin extends ConfigurablePlugin {
   private static String PLUGIN_NAME = "Early Modern Literary Studies";
   private static String CURRENT_VERSION = "Pre-release";
 

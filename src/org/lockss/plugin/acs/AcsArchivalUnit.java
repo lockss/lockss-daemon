@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.10 2004-01-04 06:15:37 tlipkis Exp $
+ * $Id: AcsArchivalUnit.java,v 1.11 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.state.*;
 import org.lockss.daemon.Configuration.*;
+import org.lockss.plugin.configurable.*;
 
 /**
  * AcsArchivalUnit: The Archival Unit Class for American Chemical Society
@@ -50,7 +51,7 @@ import org.lockss.daemon.Configuration.*;
  * @version 1.0
  */
 
-public class AcsArchivalUnit extends BaseArchivalUnit {
+public class AcsArchivalUnit extends ConfigurableArchivalUnit {
 
 
   /**
@@ -80,10 +81,10 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
   protected void setAuParams(Configuration config)
       throws ConfigurationException {
     // get the article root url
-    articleUrl = configMap.getUrl(AcsPlugin.AUPARAM_ARTICLE_URL, null);
+    articleUrl = configurationMap.getUrl(AcsPlugin.AUPARAM_ARTICLE_URL, null);
 
     // get the journal key
-    journalKey = configMap.getString(AcsPlugin.AUPARAM_JOURNAL_KEY, null);
+    journalKey = configurationMap.getString(AcsPlugin.AUPARAM_JOURNAL_KEY, null);
 
     // get the volume string
     volume = loadConfigInt(AcsPlugin.PD_VOL, config);

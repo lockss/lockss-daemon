@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.5 2004-01-03 06:29:34 tlipkis Exp $
+ * $Id: TestAcsPlugin.java,v 1.6 2004-01-13 04:46:27 clairegriffin Exp $
  */
 
 /*
@@ -48,12 +48,6 @@ public class TestAcsPlugin extends LockssTestCase {
     plugin.initPlugin(getMockLockssDaemon());
   }
 
-  public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {
-    try {
-      plugin.configureAu(null, null);
-      fail("Didn't throw ArchivalUnit.ConfigurationException");
-    } catch (ArchivalUnit.ConfigurationException e) { }
-  }
 
   private AcsArchivalUnit makeAuFromProps(Properties props)
       throws ArchivalUnit.ConfigurationException {

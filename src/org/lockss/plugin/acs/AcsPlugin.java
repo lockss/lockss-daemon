@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.8 2004-01-03 06:20:59 tlipkis Exp $
+ * $Id: AcsPlugin.java,v 1.9 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import java.util.List;
 import java.util.Collection;
 import org.lockss.app.*;
+import org.lockss.plugin.configurable.*;
 
 /**
  * AcsPlugin: Plugin class for the American Chemical Society Plugin
@@ -46,7 +47,7 @@ import org.lockss.app.*;
  * @version 1.0
  */
 
-public class AcsPlugin extends BasePlugin {
+public class AcsPlugin extends ConfigurablePlugin {
   static final ConfigParamDescr JOURNAL_KEY = new ConfigParamDescr();
   static {
     JOURNAL_KEY.setKey("journal_key");

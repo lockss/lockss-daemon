@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.17 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.18 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseArchivalUnit;
 import gnu.regexp.REException;
+import org.lockss.plugin.configurable.*;
 
 /**
  * This is a first cut at making a Project Muse plugin
@@ -48,7 +49,7 @@ import gnu.regexp.REException;
  * @version 0.0
  */
 
-public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
+public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
@@ -86,13 +87,13 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
   protected void setAuParams(Configuration config)
       throws ConfigurationException {
     // get the base url string
-    volume = configMap.getInt(ProjectMusePlugin.AUPARAM_VOL, -1);
+    volume = configurationMap.getInt(ProjectMusePlugin.AUPARAM_VOL, -1);
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
 
     // get the journal directory
-    journalDir = configMap.getString(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, null);
+    journalDir = configurationMap.getString(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, null);
 
   }
 
@@ -146,4 +147,54 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
+  protected void initAuKeys() {
+    StringBuffer sb = new StringBuffer("%sjournals%s/v%03d/\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.JOURNAL_DIR.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    String starturl = sb.toString();
+    configurationMap.putString(CM_AU_START_URL_KEY,starturl);
+
+    sb = new StringBuffer("%s, %s, vol. %d\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.JOURNAL_DIR.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    configurationMap.putString(CM_AU_NAME_KEY, sb.toString());
+
+    List rules = new ArrayList();
+    //rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
+    sb = new StringBuffer(CrawlRules.RE.NO_MATCH_EXCLUDE);
+    sb.append("\n^%s\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(startUrlString, incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n");
+    sb.append(starturl);
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(urlRoot +
+    //                            "journals/"+journalDir+"/toc/[a-zA-Z]*" + volume +
+    //                            "\\..*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%sjournals/%s/toc/[a-zA-Z]*%d\\..*\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.JOURNAL_DIR.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(urlRoot + "images/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%simages/.*");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    configurationMap.putCollection(CM_AU_RULES_KEY, rules);
+
+    configurationMap.putString("text/html",
+                               "org.lockss.plugin.projmuse.ProjectMuseFilterRule");
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdPlugin.java,v 1.3 2004-01-03 06:20:59 tlipkis Exp $
+ * $Id: BlackbirdPlugin.java,v 1.4 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ import org.lockss.util.ListUtil;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.configurable.*;
 
 /**
  * This is a first cut at making a Blackbird plugin
@@ -41,7 +42,7 @@ import org.lockss.app.LockssDaemon;
  */
 
 public class BlackbirdPlugin
-    extends BasePlugin {
+    extends ConfigurablePlugin {
   private static String PLUGIN_NAME = "Blackbird";
   private static String CURRENT_VERSION = "Pre-release";
 

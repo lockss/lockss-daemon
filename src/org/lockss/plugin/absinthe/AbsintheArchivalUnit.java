@@ -1,5 +1,5 @@
 /*
- * $Id: AbsintheArchivalUnit.java,v 1.6 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id: AbsintheArchivalUnit.java,v 1.7 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import gnu.regexp.REException;
+import org.lockss.plugin.configurable.*;
 
 /**
  * AbsintheArchivalUnit: The Archival Unit Class for Absinthe Literary
@@ -47,7 +48,7 @@ import gnu.regexp.REException;
  * @version 1.0
  */
 
-public class AbsintheArchivalUnit extends BaseArchivalUnit {
+public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
@@ -126,6 +127,69 @@ public class AbsintheArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE(rootUrl + "book_reviews/.*", incl));
     rules.add(new CrawlRules.RE(rootUrl + "images/.*", incl));
     return new CrawlRules.FirstMatch(rules);
+  }
+
+  protected void initAuKeys() {
+    StringBuffer sb = new StringBuffer("%sarchives%02d.htm\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.YEAR.getKey());
+    configurationMap.putString(CM_AU_START_URL_KEY,sb.toString());
+
+    sb = new StringBuffer("%s, %02d\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.YEAR.getKey());
+    configurationMap.putString(CM_AU_NAME_KEY, sb.toString());
+
+    List rules = new ArrayList();
+    //rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
+    sb = new StringBuffer(CrawlRules.RE.NO_MATCH_EXCLUDE);
+    sb.append("\n^%s\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(startUrlString, incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%sarchives%02d.htm\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.YEAR.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(rootUrl + "stories/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%sstories/.*\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(rootUrl + "poetics/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%spoetics/.*\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(rootUrl + "archives/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%sarchives/.*\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(rootUrl + "book_reviews/book_reviews.htm", excl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_EXCLUDE);
+    sb.append("\n%sbook_reviews/book_reviews.htm\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(rootUrl + "book_reviews/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%sbook_reviews/.*\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(rootUrl + "images/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n%simages/.*\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+
+    configurationMap.putCollection(CM_AU_RULES_KEY, rules);
+
+//    configurationMap.putString(CM_AU_PARAMS_KEY,);
+
   }
 
 }

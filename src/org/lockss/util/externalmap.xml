@@ -14,4 +14,29 @@
                         <bind-xml name="MapValues" node="element"/>
                 </field>
         </class>
+
+        <class name="org.lockss.daemon.ConfigParamDescr">
+          <map-to xml="ConfigParamDescr"/>
+                <field name="key"
+                       type="java.lang.String">
+                        <bind-xml name="Key" node="element"/>
+                </field>
+                <field name="displayName"
+                       type="java.lang.String">
+                        <bind-xml name="DisplayName" node="element"/>
+                </field>
+                <field name="description"
+                       type="java.lang.String">
+                        <bind-xml name="Description" node="element"/>
+                </field>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+                <field name="size"
+                       type="integer">
+                        <bind-xml name="Size" node="element"/>
+                </field>
+
+        </class>
 </mapping>

@@ -1,5 +1,5 @@
 /*
- * $Id: AbsinthePlugin.java,v 1.5 2004-01-03 06:20:59 tlipkis Exp $
+ * $Id: AbsinthePlugin.java,v 1.6 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.ListUtil;
 import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.configurable.*;
 
 /**
  * AbsinthePlugin: Plugin class for the Absinthe Literary Review Plugin
@@ -39,7 +40,7 @@ import org.lockss.app.LockssDaemon;
  */
 
 public class AbsinthePlugin
-    extends BasePlugin {
+    extends ConfigurablePlugin {
   private static String PLUGIN_NAME = "Absinthe Literary Review";
   private static String CURRENT_VERSION = "Pre-release";
 

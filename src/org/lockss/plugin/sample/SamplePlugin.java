@@ -1,5 +1,5 @@
 /*
- * $Id: SamplePlugin.java,v 1.2 2004-01-03 06:20:58 tlipkis Exp $
+ * $Id: SamplePlugin.java,v 1.3 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.ListUtil;
 import org.lockss.app.LockssDaemon;
+import org.lockss.plugin.configurable.*;
 
 /**
  * <p>SamplePlugin: A template for a plugin that requires a base url and the volume
@@ -45,7 +46,7 @@ import org.lockss.app.LockssDaemon;
  * @version 1.0
  */
 
-public class SamplePlugin extends BasePlugin {
+public class SamplePlugin extends ConfigurablePlugin {
   private static String PLUGIN_NAME = "Sample";
   private static String CURRENT_VERSION = "Pre-release";
 

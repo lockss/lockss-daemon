@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.64 2004-01-13 02:39:28 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.65 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.app.BaseLockssManager;
+import org.lockss.plugin.configurable.ConfigurablePlugin;
 
 /**
  * Plugin global functionality
@@ -569,12 +570,19 @@ public class PluginManager extends BaseLockssManager {
     String prefix = PARAM_AU_TREE + "." + aukey;
     return config.getConfigTree(prefix);
   }
+  static final String CONFIGURABLE_PLUGIN_KEY = "conf:";
 
   Plugin retrievePlugin(String pluginKey) throws Exception {
     if (pluginMap.containsKey(pluginKey)) {
       return (Plugin)pluginMap.get(pluginKey);
     }
     String pluginName = pluginNameFromKey(pluginKey);
+    String confFile = null;
+    if(pluginName.startsWith(CONFIGURABLE_PLUGIN_KEY)) {
+      confFile = pluginName.substring(CONFIGURABLE_PLUGIN_KEY.length(),
+                                      pluginName.length());
+      pluginName = "org.lockss.plugin.configurable.ConfigurablePlugin";
+    }
     Class pluginClass;
     try {
       pluginClass = Class.forName(pluginName);
@@ -598,7 +606,12 @@ public class PluginManager extends BaseLockssManager {
     }
     log.debug("Instantiating " + pluginClass);
     Plugin plugin = (Plugin) pluginClass.newInstance();
-    plugin.initPlugin(theDaemon);
+    if(plugin instanceof ConfigurablePlugin) {
+      ((ConfigurablePlugin)plugin).initPlugin(theDaemon, confFile);
+    }
+    else {
+      plugin.initPlugin(theDaemon);
+    }
     return plugin;
   }
 
@@ -792,7 +805,7 @@ public class PluginManager extends BaseLockssManager {
 	  if (tree == null || tree.isEmpty()) {
 	    iter.remove();
 	  }
-	}	
+	}
       }
     }
   }

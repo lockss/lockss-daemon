@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.12 2003-12-11 23:11:11 eaalto Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.13 2004-01-13 04:46:27 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
 import org.lockss.util.TimeBase;
+import org.lockss.daemon.Configuration;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -245,37 +246,34 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  private static class MockBaseArchivalUnit extends BaseArchivalUnit {
+  static class MockBaseArchivalUnit extends BaseArchivalUnit {
+
+    private String auId = null;
+    private String m_startUrl = "www.example.com/index.html";
+    private String m_name = "MockBaseArchivalUnit";
+
     public MockBaseArchivalUnit(Plugin myPlugin) {
       super(myPlugin);
     }
 
+    public void setStartUrl(String url) {
+      m_startUrl = url;
+    }
+
+    public void setName(String name) {
+      m_name = name;
+    }
+
     protected String makeName() {
-      return "MockBaseArchivalUnit";
-    }
-
-    public List getNewContentCrawlUrls() {
-      throw new UnsupportedOperationException("Not supported.");
-    }
-
-    public Collection getUrlStems() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public String getManifestPage() {
-      throw new UnsupportedOperationException("Not implemented");
-    }
-
-    public FilterRule getFilterRule(String mimeType) {
-      throw new UnsupportedOperationException("Not implemented");
+      return m_name;
     }
 
     protected CrawlRule makeRules() {
-      throw new UnsupportedOperationException("Not implemented");
+      return new MockCrawlRule();
     }
 
     protected String makeStartUrl() {
-      throw new UnsupportedOperationException("Not implemented");
+      return m_startUrl;
     }
 
     protected void setAuParams(Configuration config) throws
@@ -283,5 +281,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       // ok to do nothing - so do nothing.
     }
 
+    protected void loadDefiningConfig(Configuration config) {
+    }
   }
 }

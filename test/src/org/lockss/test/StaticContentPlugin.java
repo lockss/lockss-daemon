@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.18 2003-11-07 04:12:01 clairegriffin Exp $
+ * $Id: StaticContentPlugin.java,v 1.19 2004-01-13 04:46:27 clairegriffin Exp $
  */
 
 /*
@@ -185,6 +185,13 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * loadDefiningConfig
+     *
+     * @param config Configuration
+     */
+    protected void loadDefiningConfig(Configuration config) {
+    }
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.6 2004-01-03 06:20:58 tlipkis Exp $
+ * $Id: IeeePlugin.java,v 1.7 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.util.*;
 import java.util.List;
 import java.util.Collection;
 import org.lockss.app.*;
+import org.lockss.plugin.configurable.*;
 
 /**
  * IeeePlugin: Plugin class for the Ieee Explore Plugin
@@ -46,7 +47,7 @@ import org.lockss.app.*;
  * @version 1.0
  */
 
-public class IeeePlugin extends BasePlugin {
+public class IeeePlugin extends ConfigurablePlugin {
   static final ConfigParamDescr PU_NUMBER = new ConfigParamDescr();
   static {
     PU_NUMBER.setKey("Pu_Number");

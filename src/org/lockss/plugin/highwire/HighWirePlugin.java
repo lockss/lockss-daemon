@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.30 2004-01-03 06:20:58 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.31 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.configurable.*;
 
 /**
  * This is a first cut at making a HighWire plugin
@@ -43,7 +44,7 @@ import org.lockss.plugin.base.*;
  */
 
 public class HighWirePlugin
-    extends BasePlugin {
+    extends ConfigurablePlugin {
   public static final String LOG_NAME = "HighWirePlugin";
   public static final String PLUGIN_NAME = "HighWire Press";
   public static final String CURRENT_VERSION = "Pre-release";

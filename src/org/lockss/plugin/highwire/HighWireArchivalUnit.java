@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.40 2003-12-11 21:22:22 eaalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.41 2004-01-13 04:46:26 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
 import org.lockss.plugin.base.*;
+import org.lockss.plugin.configurable.*;
 
 /**
  * This is a first cut at making a HighWire plugin
@@ -48,7 +49,7 @@ import org.lockss.plugin.base.*;
  * @version 0.0
  */
 
-public class HighWireArchivalUnit extends BaseArchivalUnit {
+public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
   public static final String LOG_NAME = "HighWireArchivalUnit";
   /**
    * Configuration parameter for pause time in Highwire crawling.
@@ -91,7 +92,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   protected void setAuParams(Configuration config)
       throws ConfigurationException {
 
-    volume = configMap.getInt(HighWirePlugin.AUPARAM_VOL, -1);
+    volume = configurationMap.getInt(HighWirePlugin.AUPARAM_VOL, -1);
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
@@ -170,5 +171,82 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 
   public URL getBaseUrl() {
     return baseUrl;
+  }
+
+  protected void initAuKeys() {
+    StringBuffer sb = new StringBuffer("%slockss-volume%d.shtml\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    String starturl = sb.toString();
+    configurationMap.putString(CM_AU_START_URL_KEY,starturl);
+
+    sb = new StringBuffer("%s, vol. %d\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    sb.append("\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    configurationMap.putString(CM_AU_NAME_KEY, sb.toString());
+
+    configurationMap.putString("text/html",
+                               "org.lockss.plugin.highwire.HighWireFilterRule");
+
+    List rules = new ArrayList();
+    //rules.add(new CrawlRules.RE("^" + baseUrl.toString(),
+    //                            CrawlRules.RE.NO_MATCH_EXCLUDE));
+    sb = new StringBuffer(CrawlRules.RE.NO_MATCH_EXCLUDE);
+    sb.append("\n^%s\n");
+    sb.append(ConfigParamDescr.BASE_URL.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(startUrlString, incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n");
+    sb.append(starturl);
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*ck=nck.*", excl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_EXCLUDE);
+    sb.append("\n.*ck=nck.*");
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*adclick.*", excl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_EXCLUDE);
+    sb.append("\n.*adclick.*");
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/cgi/mailafriend.*", excl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_EXCLUDE);
+    sb.append("\n.*/cgi/mailafriend.*");
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/content/current/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n.*/content/current/.*");
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/content/vol" + volume + "/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n.*/content/vol%d/.*\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/cgi/content/.*/" + volume + "/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n.*/cgi/content/.*/%d/.*\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/cgi/reprint/" + volume + "/.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n.*/cgi/reprint/%d/.*\n");
+    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/icons.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n.*/icons.*");
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE(".*/math.*", incl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_INCLUDE);
+    sb.append("\n.*/math.*");
+    rules.add(sb.toString());
+    //rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
+    sb = new StringBuffer(CrawlRules.RE.MATCH_EXCLUDE);
+    sb.append("\nhttp://.*/.*/.*");
+    rules.add(sb.toString());
+    configurationMap.putCollection(CM_AU_RULES_KEY, rules);
+
+
   }
 }

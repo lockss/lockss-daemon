@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdArchivalUnit.java,v 1.1 2003-12-06 00:57:25 eaalto Exp $
+ * $Id: BlackbirdArchivalUnit.java,v 1.2 2004-01-13 04:46:25 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
 import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseArchivalUnit;
 import gnu.regexp.REException;
+import org.lockss.plugin.configurable.*;
 
 /**
  * This is a first cut at making a Blackbird plugin
@@ -48,7 +49,7 @@ import gnu.regexp.REException;
  * @version 0.0
  */
 
-public class BlackbirdArchivalUnit extends BaseArchivalUnit {
+public class BlackbirdArchivalUnit extends ConfigurableArchivalUnit {
   /**
    * Configuration parameter for new content crawl interval
    */
@@ -73,7 +74,7 @@ public class BlackbirdArchivalUnit extends BaseArchivalUnit {
   protected void setAuParams(Configuration config)
       throws ConfigurationException {
     // get the base url string
-    volume = configMap.getInt(BlackbirdPlugin.AUPARAM_VOL, -1);
+    volume = configurationMap.getInt(BlackbirdPlugin.AUPARAM_VOL, -1);
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
