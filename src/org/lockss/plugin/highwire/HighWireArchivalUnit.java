@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.23 2003-04-28 21:06:33 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.24 2003-05-07 20:35:14 tal Exp $
  */
 
 /*
@@ -196,8 +196,8 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  public void pause() {
-    pause(pauseMS);
+  public long getFetchDelay() {
+    return pauseMS;
   }
 
   public String getName() {

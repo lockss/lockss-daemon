@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.25 2003-05-03 01:23:33 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.26 2003-05-07 20:35:14 tal Exp $
  */
 
 /*
@@ -201,7 +201,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     getContentGenerator().deleteContentTree();
   }
 
-  public void pause() {
+  public void pauseBeforeFetch() {
     // no pauses since this is a test unit
   }
 

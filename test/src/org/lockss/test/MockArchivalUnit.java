@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.25 2003-04-23 23:24:52 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.26 2003-05-07 20:35:14 tal Exp $
  */
 
 /*
@@ -175,10 +175,14 @@ public class MockArchivalUnit implements ArchivalUnit {
     auId = newId;
   }
 
-  public void pause() {
+  public void pauseBeforeFetch() {
     if (pauseCallback != null) {
       pauseCallback.callback();
     }
+  }
+
+  public long getFetchDelay() {
+    return 0;
   }
 
   public void setPauseCallback(MockObjectCallback callback) {

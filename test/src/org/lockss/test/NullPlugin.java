@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.30 2003-04-17 00:55:50 troberts Exp $
+ * $Id: NullPlugin.java,v 1.31 2003-05-07 20:35:14 tal Exp $
  */
 
 /*
@@ -315,7 +315,11 @@ public class NullPlugin {
       return "null_name";
     }
 
-    public void pause() {
+    public void pauseBeforeFetch() {
+    }
+
+    public long getFetchDelay() {
+      return 0;
     }
 
     public int hashCode() {
