@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.24 2004-12-08 00:51:53 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.25 2005-01-04 03:01:24 tlipkis Exp $
  */
 
 /*
@@ -50,11 +50,13 @@ import org.apache.commons.collections.map.ReferenceMap;
  */
 public class RemoteApi extends BaseLockssDaemonManager {
   private static Logger log = Logger.getLogger("RemoteApi");
+
+  static CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
+  static Comparator auProxyComparator = new AuProxyOrderComparator();
+
   static final String PARAM_AU_TREE = PluginManager.PARAM_AU_TREE;
   static final String AU_PARAM_DISPLAY_NAME =
     PluginManager.AU_PARAM_DISPLAY_NAME;
-
-  private Comparator auProxyComparator = new AuProxyOrderComparator();
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -101,7 +103,12 @@ public class RemoteApi extends BaseLockssDaemonManager {
   }
 
   public synchronized InactiveAuProxy findInactiveAuProxy(String auid) {
-    return new InactiveAuProxy(auid, this);
+    InactiveAuProxy aup = (InactiveAuProxy)auProxies.get(auid);
+    if (aup == null) {
+      aup = new InactiveAuProxy(auid, this);
+      auProxies.put(auid, aup);
+    }
+    return aup;
   }
 
   /** Create or return a PluginProxy for the Plugin corresponding to the id.
@@ -109,9 +116,10 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * @return a PluginProxy for the Plugin, or null if no Plugin exists with
    * the given id.
    */
-  public PluginProxy findPluginProxy(String pluginid) {
+  public synchronized PluginProxy findPluginProxy(String pluginid) {
     PluginProxy pluginp = (PluginProxy)pluginProxies.get(pluginid);
-    if (pluginp == null || pluginp.getPlugin() != getPluginFromId(pluginid)) {
+    if (pluginp == null ||
+	pluginp.getPlugin() != getPluginFromId(pluginid)) {
       String key = pluginMgr.pluginKeyFromId(pluginid);
       pluginMgr.ensurePluginLoaded(key);
       try {
@@ -284,7 +292,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     for (Iterator iter = inactiveAuIds.iterator(); iter.hasNext(); ) {
       String auid = (String)iter.next();
       if (!pluginMgr.isInternalAu(pluginMgr.getAuFromId(auid))) {
-	res.add(new InactiveAuProxy(auid, this));
+	res.add(findInactiveAuProxy(auid));
       }
     }
     Collections.sort(res, auProxyComparator);
@@ -343,6 +351,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   static final String AU_BACKUP_FILE_COMMENT = "# AU Configuration saved ";
 
+  /** Open an InputStream on the local AU config file, for backup purposes */
   public InputStream getAuConfigBackupStream(String machineName)
       throws FileNotFoundException {
     InputStream fileStream =
@@ -353,14 +362,19 @@ public class RemoteApi extends BaseLockssDaemonManager {
 				   fileStream);
   }
 
-  /** Restore AU config from an AU config backup file.
-   * @param configBackupStream InputStream open on backup fir to be restored
-   * @return RestoreAllStatus object describing the results.
+  /** Batch create AUs from AU config backup file.
+   * @param doCreate if false, AUs aren't actually configured, just checked
+   * for compatibility, etc.
+   * @param configBackupStream InputStream open on backup file to be restored
+   * @return BatchAuStatus object describing the results.  If doCreate was
+   * false, the status reflects the possibility that the AUs could be
+   * created.
    * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
    * an unknown format, unsupported version, or contains keys this
    * operation isn't allowed to modify.
    */
-  public RestoreAllStatus restoreAllAus(InputStream configBackupStream)
+  public BatchAuStatus batchAddAus(boolean doCreate,
+				   InputStream configBackupStream)
       throws IOException, InvalidAuConfigBackupFile {
     BufferedInputStream bis = new BufferedInputStream(configBackupStream);
     bis.mark(10000);
@@ -384,34 +398,102 @@ public class RemoteApi extends BaseLockssDaemonManager {
       throw new InvalidAuConfigBackupFile("Uploaded file has illegal format: "
 					  + e.getMessage());
     }
-    return restoreAllAus(ConfigManager.fromPropertiesUnsealed(allAuProps));
+    Configuration allAuConfig =
+      ConfigManager.fromPropertiesUnsealed(allAuProps);
+    int ver = checkLegalBackupFile(allAuConfig);
+    return batchAddAus(doCreate, allAuConfig);
+  }
+
+  /** Throw InvalidAuConfigBackupFile if the config is of an unknown
+   * version or contains any keys that shouldn't be part of an AU config
+   * backup, such as any keys outside the AU config subtree.
+   * @return the file version number
+   */
+  int checkLegalBackupFile(Configuration config)
+      throws InvalidAuConfigBackupFile {
+    String verProp =
+      ConfigManager.configVersionProp(ConfigManager.CONFIG_FILE_AU_CONFIG);
+    if (!config.containsKey(verProp)) {
+      throw new
+	InvalidAuConfigBackupFile("Uploaded file has no version number");
+    }
+    int ver = config.getInt(verProp, 0);
+    if (ver != 1) {
+      throw new
+	InvalidAuConfigBackupFile("Uploaded file has incompatible version " +
+				  "number: " + config.get(verProp));
+    }
+    Configuration auConfig = config.getConfigTree(PluginManager.PARAM_AU_TREE);
+    if ((config.keySet().size() - 1) != auConfig.keySet().size()) {
+      String msg = "Uploaded file contains illegal keys; does not appear to be a saved AU configuration";
+      log.warning(msg + ": " + config);
+      throw new InvalidAuConfigBackupFile(msg);
+    }
+    for (Iterator iter = auConfig.keyIterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      if (PluginManager.NON_USER_SETTABLE_AU_PARAMS.contains(key)) {
+	throw new InvalidAuConfigBackupFile("Uploaded file contains illegal key (" + key + "); does not appear to be a saved AU configuration");
+      }
+    }
+    return ver;
   }
 
   /** Restore AU config from an AU config backup file.
    * @param allAuConfig the Configuration to be restored
-   * @return RestoreAllStatus object describing the results.
+   * @return BatchAuStatus object describing the results.
    * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
    * an unknown format, unsupported version, or contains keys this
    * operation isn't allowed to modify.
    */
-  RestoreAllStatus restoreAllAus(Configuration allAuConfig)
+  public BatchAuStatus batchAddAus(boolean doCreate, Configuration allAuConfig)
       throws InvalidAuConfigBackupFile {
-    checkLegalProps(allAuConfig);
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
-    RestoreAllStatus status = new RestoreAllStatus();
+    BatchAuStatus bas = new BatchAuStatus();
     for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
       String pluginKey = (String)iter.next();
       PluginProxy pluginp = findPluginProxy(pluginKey);
+      // Do not dereference pluginp before null check in batchProcessOneAu()
       Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
       for (Iterator auIter = pluginConf.nodeIterator(); auIter.hasNext(); ) {
 	String auKey = (String)auIter.next();
 	Configuration auConf = pluginConf.getConfigTree(auKey);
 	String auid = PluginManager.generateAuId(pluginKey, auKey);
-	restoreOneAu(pluginp, auid, auConf, status);
+	bas.add(batchProcessOneAu(doCreate, pluginp, auid, auConf));
       }
-
     }
-    return status;
+    return bas;
+  }
+
+  /** Delete a batch of AUs
+   * @param auids
+   * @return BatchAuStatus object describing the results.
+   * @throws RemoteApi.InvalidAuConfigBackupFile if the backup file is of
+   * an unknown format, unsupported version, or contains keys this
+   * operation isn't allowed to modify.
+   */
+  public BatchAuStatus deleteAus(List auids) {
+    BatchAuStatus bas = new BatchAuStatus();
+    for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
+      String auid = (String)iter.next();
+      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
+      stat.setAuid(auid);
+      ArchivalUnit au = pluginMgr.getAuFromId(auid);
+      if (au != null) {
+	stat.setName(au.getName());
+	try {
+	  pluginMgr.deleteAu(au);
+	  stat.setStatus("Deleted", STATUS_ORDER_NORM);
+	} catch (IOException e) {
+	  stat.setStatus("Not Deleted", STATUS_ORDER_WARN);
+	  stat.setExplanation("Error deleting: " + e.getMessage());
+	}
+      } else {
+	stat.setStatus("Not Found", STATUS_ORDER_WARN);
+	stat.setName(auid);
+      }
+      bas.add(stat);
+    }
+    return bas;
   }
 
   /** Canonicalize a configuration so we can check it for equality with
@@ -423,13 +505,14 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * out-of-place, if configuration parameters had an associated type and
    * default.  They do have type in the context of AU config params
    * (ConfigParamDescr), but we don't have that information here. */
-  Configuration canonicalizeAuConfig(Configuration auConfig) {
-    canonicalizeBoolean(auConfig, PluginManager.AU_PARAM_DISABLED, false);
-    return auConfig;
+  Configuration normalizedAuConfig(Configuration auConfig) {
+    Configuration res = auConfig.copy();
+    normalizeBoolean(res, PluginManager.AU_PARAM_DISABLED, false);
+    res.removeConfigTree(PluginManager.AU_PARAM_RESERVED);
+    return res;
   }
 
-  void canonicalizeBoolean(Configuration auConfig, String param,
-			   boolean dfault) {
+  void normalizeBoolean(Configuration auConfig, String param, boolean dfault) {
     auConfig.put(param, boolString(auConfig.getBoolean(param, dfault)));
   }
 
@@ -437,146 +520,224 @@ public class RemoteApi extends BaseLockssDaemonManager {
     return b ? "true" : "false";
   }
 
-  void restoreOneAu(PluginProxy pluginp, String auid,
-		    Configuration auConfig, RestoreAllStatus status) {
-    RestoreStatus stat = new RestoreStatus(auid);
-    status.add(stat);
-    Configuration currentConfig = pluginMgr.getStoredAuConfiguration(auid);
+  BatchAuStatus.Entry batchProcessOneAu(boolean doCreate,
+					PluginProxy pluginp,
+					String auid,
+					Configuration auConfig) {
+    BatchAuStatus.Entry stat = new BatchAuStatus.Entry(auid);
+    stat.setAuid(auid);
+    Configuration oldConfig = pluginMgr.getStoredAuConfiguration(auid);
     String name = null;
-    if (currentConfig != null) {
-      name = currentConfig.get(AU_PARAM_DISPLAY_NAME);
+    if (oldConfig != null) {
+      name = oldConfig.get(AU_PARAM_DISPLAY_NAME);
     }
     if (name == null) {
       name = auConfig.get(AU_PARAM_DISPLAY_NAME);
     }
     stat.setName(name);
 
-    if (currentConfig != null && !currentConfig.isEmpty()) {
-      currentConfig = canonicalizeAuConfig(currentConfig);
-      auConfig = canonicalizeAuConfig(auConfig);
+    if (pluginp == null) {
+      stat.setStatus("Error", STATUS_ORDER_ERROR);
+      stat.setExplanation("Plugin " + PluginManager.pluginNameFromAuId(auid) +
+			  " not found, cannot create AU");
+      return stat;
+    }
+
+    if (oldConfig != null && !oldConfig.isEmpty()) {
+      // have current config, check for disagreement, never create
+      stat.setConfig(oldConfig);
+      Configuration normOld = normalizedAuConfig(oldConfig);
+      Configuration normNew = normalizedAuConfig(auConfig);
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au != null) {
 	stat.setName(au.getName());
       }
-      if (currentConfig.equals(auConfig)) {
+      if (normOld.equals(normNew)) {
 	log.debug("Restore: same config: " + auid);
-	stat.setStatus("Unchanged");
+	stat.setStatus("Already Exists", STATUS_ORDER_LOW);
       } else {
 	log.debug("Restore: conflicting config: " + auid +
-		  ", current: " + currentConfig + ", new: " + auConfig);
-	stat.setStatus("Conflict");
-	Set diffKeys = auConfig.differentKeys(currentConfig);
+		  ", current: " + normOld + ", new: " + normNew);
+	stat.setStatus("Conflict", STATUS_ORDER_ERROR);
+	Set diffKeys = normNew.differentKeys(normOld);
 	StringBuffer sb = new StringBuffer();
 	for (Iterator iter = diffKeys.iterator(); iter.hasNext(); ) {
 	  String key = (String)iter.next();
-	  String foo = "Key: " + key + ", current=" + currentConfig.get(key) +
-	    ", file=" + auConfig.get(key) + "<br>";
+	  String foo = "Key: " + key + ", current=" + normOld.get(key) +
+	    ", file=" + normNew.get(key) + "<br>";
 	  sb.append(foo);
 	}
 	stat.setExplanation(sb.toString());
       }
+    } else if (getAuFromId(auid) != null) {
+      // no current config, but AU exists
+      stat.setConfig(getAuFromId(auid).getConfiguration());
+      stat.setStatus("Error", STATUS_ORDER_ERROR);
+      stat.setExplanation("Internal inconsistency: " +
+			  "AU exists but is not in config file");
+    } else if (!AuUtil.isConfigCompatibleWithPlugin(auConfig,
+						    pluginp.getPlugin())) {
+      // no current config, new config not compatible with plugin
+      stat.setStatus("Error", STATUS_ORDER_ERROR);
+      stat.setExplanation("Incompatible with plugin");
+      stat.setConfig(auConfig);
     } else {
+      // no current config, try to create (maybe)
       try {
+	stat.setConfig(auConfig);
 	if (auConfig.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
-	  log.debug("Restore: inactive: " + auid);
-	  pluginMgr.updateAuConfigFile(auid, auConfig);
-	  stat.setStatus("Restored (inactive)");
-	  status.incrOk();
+	  if (doCreate) {
+	    log.debug("Restore: inactive: " + auid);
+	    pluginMgr.updateAuConfigFile(auid, auConfig);
+	    stat.setStatus("Added (inactive)", STATUS_ORDER_NORM);
+	  } else {
+	    stat.setStatus(null, STATUS_ORDER_NORM);
+	  }
 	} else {
-	  log.debug("Restore: active: " + auid);
-	  AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
-	  stat.setStatus("Restored");
-	  stat.setName(aup.getName());
-	  status.incrOk();
+	  if (doCreate) {
+	    log.debug("Restore: active: " + auid);
+	    AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
+	    stat.setStatus("Added", STATUS_ORDER_NORM);
+	    stat.setName(aup.getName());
+	  } else {
+	    stat.setStatus(null, STATUS_ORDER_NORM);
+	  }
 	}
       } catch (ArchivalUnit.ConfigurationException e) {
-	log.warning("restoreOneAu", e);
-	log.warning("restoreOneAu: " + auid + ", " + auConfig);
-	stat.setStatus("Configuration Error");
+	log.warning("batchProcessOneAu", e);
+	log.warning("batchProcessOneAu: " + auid + ", " + auConfig);
+	stat.setStatus("Configuration Error", STATUS_ORDER_ERROR);
 	stat.setExplanation(e.getMessage());
       } catch (IOException e) {
-	stat.setStatus("I/O Error");
+	stat.setStatus("I/O Error", STATUS_ORDER_ERROR);
 	stat.setExplanation(e.getMessage());
       }
     }
     if (stat.getName() == null) {
       stat.setName("Unknown");
     }
+    return stat;
   }
 
-  /** Throw InvalidAuConfigBackupFile if the config is of an unknown
-   * version or contains any keys that shouldn't be part of an AU config
-   * backup, such as any keys outside the AU config subtree. */
-  void checkLegalProps(Configuration config)
-      throws InvalidAuConfigBackupFile {
-    String verProp =
-      ConfigManager.configVersionProp(ConfigManager.CONFIG_FILE_AU_CONFIG);
-    int ver = config.getInt(verProp, 0);
-    if (ver != 1) {
-      throw new InvalidAuConfigBackupFile("Uploaded file has incompatbile version number");
-    }
-    Configuration auConfig = config.getConfigTree(PluginManager.PARAM_AU_TREE);
-    if (auConfig.keySet().size() != (config.keySet().size() - 1)) {
-      throw new InvalidAuConfigBackupFile("Uploaded file contains illegal keys; does not appear to be a saved AU configuration");
-    }
-    for (Iterator iter = auConfig.keyIterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      if (PluginManager.NON_USER_SETTABLE_AU_PARAMS.contains(key)) {
-	throw new InvalidAuConfigBackupFile("Uploaded file contains illegal key (" + key + "); does not appear to be a saved AU configuration");
+  /** Find all AUs in the union of the sets and return a BatchAuStatus with
+   * a BatchAuStatus.Entry for each AU indicating whether it could be created,
+   * already exists, conflicts, etc.
+   */
+  public BatchAuStatus findAusInSetsToAdd(Collection sets) {
+    BatchAuStatus ras = new BatchAuStatus();
+    Set tcs = findAusInSets(sets);
+    for (Iterator iter = tcs.iterator(); iter.hasNext(); ) {
+      TitleConfig tc = (TitleConfig)iter.next();
+      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
+      String plugName = tc.getPluginName();
+      PluginProxy pluginp = findPluginProxy(plugName);
+      if (pluginp == null) {
+	stat.setStatus("Error", STATUS_ORDER_ERROR);
+	stat.setExplanation("Plugin " + plugName +
+			    " not found, cannot create AU");
+      } else {
+	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
+					     tc.getConfig());
+	stat = batchProcessOneAu(false, pluginp, auid, tc.getConfig());
       }
+      stat.setTitleConfig(tc);
+      if ("Unknown".equalsIgnoreCase(stat.getName())) {
+	stat.setName(tc.getDisplayName());
+      }
+      ras.add(stat);
     }
+    return ras;
   }
 
-  /** Object describing results of AU config restore operation.  Basically
-   * a list of {@link RemoteApi.RestoreStatus}, one for each AU restore
-   * attempted */
-  public static class RestoreAllStatus {
-    static Comparator statusComparator = new RestoreStatusOrderComparator();
+  /** Find all AUs in the union of the sets and return a BatchAuStatus with
+   * a BatchAuStatus.Entry for each AU indicating whether it could be deleted,
+   * does not exist, etc.
+   */
+  public BatchAuStatus findAusInSetsToDelete(Collection sets) {
+    BatchAuStatus ras = new BatchAuStatus();
+    Set tcs = findAusInSets(sets);
+    for (Iterator iter = tcs.iterator(); iter.hasNext(); ) {
+      TitleConfig tc = (TitleConfig)iter.next();
+      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
+      String plugName = tc.getPluginName();
+      stat.setTitleConfig(tc);
+      stat.setName(tc.getDisplayName());
+      PluginProxy pluginp = findPluginProxy(plugName);
+      if (pluginp == null) {
+	stat.setStatus("DNE", STATUS_ORDER_LOW);
+      } else {
+	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
+					     tc.getConfig());
+	stat.setAuid(auid);
+	if (pluginMgr.getAuFromId(auid) == null) {
+	  stat.setStatus("DNE", STATUS_ORDER_LOW);
+	}
+      }
+      ras.add(stat);
+    }
+    return ras;
+  }
+
+  Set findAusInSets(Collection sets) {
+    Set res = new HashSet();
+    for (Iterator iter = sets.iterator(); iter.hasNext(); ) {
+      TitleSet ts = (TitleSet)iter.next();
+      res.addAll(ts.getTitles());
+      Collection l = ts.getTitles();
+    }
+    return res;
+  }
+
+  /** Object describing the status of a batch AU config operation
+   * (completed or potential).  Basically a list of {@link
+   * RemoteApi.BatchAuStatus.Entry}, one for each AU */
+  public static class BatchAuStatus {
     private List statusList = new ArrayList();
+    private List sortedList;
     private int ok = 0;
+
     public List getStatusList() {
-      Collections.sort(statusList, statusComparator);
-      return statusList;
+      if (sortedList == null) {
+	Collections.sort(statusList);
+	sortedList = statusList;
+      }
+      return sortedList;
     }
     public int getOkCnt() {
       return ok;
     }
-    void add(RestoreStatus status) {
+    void add(BatchAuStatus.Entry status) {
+      sortedList = null;
       statusList.add(status);
-    }
-    void incrOk() {
-      ok++;
-    }
-  }
-  static class RestoreStatusOrderComparator implements Comparator {
-    CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
-    public int compare(Object o1, Object o2) {
-      if (!((o1 instanceof RestoreStatus)
-	   && (o2 instanceof RestoreStatus))) {
-	throw new IllegalArgumentException("RestoreStatusOrderComparator(" +
-					   o1.getClass().getName() + "," +
-					   o2.getClass().getName() + ")");
+      if (status.order == STATUS_ORDER_NORM) {
+	ok++;
       }
-      RestoreStatus rs1 = (RestoreStatus)o1;
-      RestoreStatus rs2 = (RestoreStatus)o2;
-      int res = rs1.order - rs2.order;
-      if (res == 0) {
-	res = coc.compare(rs1.getName(), rs2.getName());
+    }
+    public boolean isActionable() {
+      List lst = getStatusList();
+      for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	BatchAuStatus.Entry status = (BatchAuStatus.Entry)iter.next();
+	if (status.getStatus() == null) {
+	  return true;
+	}
       }
-      return res;
+      return false;
     }
 
-  }
-  /** Object describing result of attempting to restore a single saved AU
-   * configuration. */
-  public static class RestoreStatus {
+  /** Object describing result or possibility of restor(e/ing) a single
+   * AU from a saved or title configuration. */
+  public static class Entry implements Comparable {
     private String auid;
     private String name;
     private String status;
     private String explanation;
+    private TitleConfig tc;
+    private Configuration config;
     private int order = 0;
 
-    RestoreStatus(String auid) {
+    Entry() {
+    }
+    Entry(String auid) {
       this.auid = auid;
     }
     public String getAuId() {
@@ -591,23 +752,51 @@ public class RemoteApi extends BaseLockssDaemonManager {
     public String getExplanation() {
       return explanation;
     }
-    void setStatus(String s) {
-      this.status = s;
-      if (StringUtil.startsWithIgnoreCase(s, "Conflict")) {
-	order = 1;
-      } else if (StringUtil.startsWithIgnoreCase(s, "Restored")) {
-	order = 2;
-      } else {
-	order = 3;
+    public TitleConfig getTitleConfig() {
+      return tc;
+    }
+    public Configuration getConfig() {
+      if (config != null) {
+	return config;
       }
+      if (tc != null) {
+	return tc.getConfig();
+      }
+      return null;
+    }
+    void setStatus(String s, int order) {
+      this.status = s;
+      this.order = order;
     }
     void setName(String s) {
       this.name = s;
     }
+    void setAuid(String auid) {
+      this.auid = auid;
+    }
     void setExplanation(String s) {
       this.explanation = s;
     }
+    void setTitleConfig(TitleConfig tc) {
+      this.tc = tc;
+    }
+    void setConfig(Configuration config) {
+      this.config = config;
+    }
+    public int compareTo(Object o) {
+      Entry ostat = (Entry)o;
+      int res = order - ostat.order;
+      if (res == 0) {
+	res = coc.compare(getName(), ostat.getName());
+      }
+      return res;
+    }
   }
+  }
+  static int STATUS_ORDER_ERROR = 1;
+  static int STATUS_ORDER_WARN = 2;
+  static int STATUS_ORDER_NORM = 3;
+  static int STATUS_ORDER_LOW = 4;
 
   /** Exception thrown if the uploaded AU config backup file isn't valid */
   public static class InvalidAuConfigBackupFile extends Exception {
@@ -616,23 +805,15 @@ public class RemoteApi extends BaseLockssDaemonManager {
     }
   }
 
-
   /** Comparator for sorting AuProxy lists.  Not suitable for use in a
    * TreeSet unless changed to never return 0. */
   static class AuProxyOrderComparator implements Comparator {
-    CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
     public int compare(Object o1, Object o2) {
-      if (!((o1 instanceof AuProxy)
-	   && (o2 instanceof AuProxy))) {
-	throw new IllegalArgumentException("AuProxyOrderComparator(" +
-					   o1.getClass().getName() + "," +
-					   o2.getClass().getName() + ")");
-      }
       AuProxy a1 = (AuProxy)o1;
       AuProxy a2 = (AuProxy)o2;
       int res = coc.compare(a1.getName(), a2.getName());
       if (res == 0) {
-	res = coc.compare(a1.getAuId(), a2.getAuId());
+	res = a1.getAuId().compareTo(a2.getAuId());
       }
       return res;
     }
