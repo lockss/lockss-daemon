@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.15 2004-03-07 08:42:17 tlipkis Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.16 2004-03-08 19:32:36 tlipkis Exp $
  */
 
 /*
@@ -108,19 +108,20 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
     props = new Properties();
     String fileName = mapUrlToContentFileName().toLowerCase();
     if (fileName.endsWith(".txt")) {
-      props.setProperty("content-type", "text/plain");
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
     } else if (fileName.endsWith(".html")) {
-      props.setProperty("content-type", "text/html");
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     } else if (fileName.endsWith(".pdf")) {
-      props.setProperty("content-type", "application/pdf");
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "application/pdf");
     } else if (fileName.endsWith(".jpg")) {
-      props.setProperty("content-type", "image/jpeg");
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "image/jpeg");
     } else {
-      props.setProperty("content-type", "text/plain");
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/plain");
     }
-    props.setProperty("content-url", origUrl);
+    props.setProperty(CachedUrl.PROPERTY_URL, origUrl);
     // set fetch time as now, since it should be the same system
-    props.setProperty("date", ""+TimeBase.nowMs());
+    // XXX this should be the file's write date, not the current time
+    props.setProperty(CachedUrl.PROPERTY_FETCH_DATE, ""+TimeBase.nowMs());
     return props;
   }
 

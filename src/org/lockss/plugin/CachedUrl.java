@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.8 2004-03-06 00:38:34 troberts Exp $
+ * $Id: CachedUrl.java,v 1.9 2004-03-08 19:32:36 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.Properties;
-//import org.lockss.daemon.CachedUrlSetNode;
 
 /**
  * <code>CachedUrl</code> is used to access the contents and
@@ -53,20 +52,34 @@ import java.util.Properties;
  * @see UrlCacher
  * @version 0.0 */
 public interface CachedUrl extends CachedUrlSetNode {
-    /**
-     * Get an object from which the content of the url can be read
-     * from the cache.
-     * @return a {@link InputStream} object from which the
-     *         unfiltered content of the cached url can be read.
-     */
-    public InputStream getUnfilteredInputStream();
 
-    /**
-     * Get an inputstream of the content suitable for hashing.
-     * Probably filtered.
-     * @return an {@link InputStream}
-     */
-    public InputStream openForHashing();
+  /** If content was found by following a redirect from here, the URL at
+   * which the content was found (possibly the last in a chain of
+   * redirects).
+  */
+  public static final String PROPERTY_REDIRECTED_TO = "redirected-to";
+  public static final String PROPERTY_CONTENT_TYPE = "content-type";
+  public static final String PROPERTY_FETCH_DATE = "date";
+  public static final String PROPERTY_URL = "content-url";
+
+  /** Prefix applied to header fields in the http response, to turn them
+   * into CachedUrl properties. */
+  public static final String HEADER_PREFIX = "_header_";
+
+  /**
+  * Get an object from which the content of the url can be read
+  * from the cache.
+  * @return a {@link InputStream} object from which the
+  *         unfiltered content of the cached url can be read.
+  */
+  public InputStream getUnfilteredInputStream();
+
+  /**
+   * Get an inputstream of the content suitable for hashing.
+   * Probably filtered.
+   * @return an {@link InputStream}
+   */
+  public InputStream openForHashing();
 
   /**
    * Return a reader on this CachedUrl
@@ -74,23 +87,23 @@ public interface CachedUrl extends CachedUrlSetNode {
    */
   public Reader openForReading();
 
-    /**
-     * Get the properties attached to the url in the cache, if any.
-     * @return the {@link Properties} object attached to the
-     *         url.  If no properties have been attached, an
-     *         empty {@link Properties} object is returned.
-     */
-    public Properties getProperties();
+  /**
+   * Get the properties attached to the url in the cache, if any.
+   * @return the {@link Properties} object attached to the
+   *         url.  If no properties have been attached, an
+   *         empty {@link Properties} object is returned.
+   */
+  public Properties getProperties();
 
-    /**
-     * Return the unfiltered content size.
-     * @return a byte[]
-     */
-    public byte[] getUnfilteredContentSize();
+  /**
+   * Return the unfiltered content size.
+   * @return a byte[]
+   */
+  public byte[] getUnfilteredContentSize();
 
-    /**
-     * Return the ArchivalUnit to which this CachedUrl belongs.
-     * @return the ArchivalUnit
-     */
-    public ArchivalUnit getArchivalUnit();
+  /**
+   * Return the ArchivalUnit to which this CachedUrl belongs.
+   * @return the ArchivalUnit
+   */
+  public ArchivalUnit getArchivalUnit();
 }

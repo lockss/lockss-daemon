@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.13 2004-03-07 08:34:36 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.14 2004-03-08 19:32:37 tlipkis Exp $
  */
 
 /*
@@ -215,14 +215,16 @@ public class RepairCrawler extends CrawlerImpl {
       throws IOException {
     Properties props = new Properties();
     // set header properties in which we have interest
-    props.setProperty("content-type", conn.getResponseContentType());
-    props.setProperty("date", Long.toString(conn.getResponseDate()));
-    props.setProperty("content-url", url);
-    conn.storeResponseHeaderInto(props, BaseUrlCacher.HEADER_PREFIX);
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
+		      conn.getResponseContentType());
+    props.setProperty(CachedUrl.PROPERTY_FETCH_DATE,
+		      Long.toString(conn.getResponseDate()));
+    props.setProperty(CachedUrl.PROPERTY_URL, url);
+    conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
     String actualURL = conn.getActualUrl();
     if (!url.equals(actualURL)) {
       logger.info("setProperty(\"redirected-to\", " + actualURL + ")");
-      props.setProperty("redirected-to", actualURL);
+      props.setProperty(CachedUrl.PROPERTY_REDIRECTED_TO, actualURL);
     }
     return props;
   }

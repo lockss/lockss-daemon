@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.10 2004-03-06 00:38:34 troberts Exp $
+* $Id: CuUrl.java,v 1.11 2004-03-08 19:32:37 tlipkis Exp $
  */
 
 /*
@@ -172,7 +172,7 @@ public class CuUrl {
       Properties props = cu.getProperties();
       String val = searchProps(props, name);
       if (val != null) return val;
-      val = searchProps(props, BaseUrlCacher.HEADER_PREFIX + name);
+      val = searchProps(props, CachedUrl.HEADER_PREFIX + name);
       if (val != null) return val;
       // old header prefix
       val = searchProps(props, "_header" + name);

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.3 2004-02-27 00:21:18 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.4 2004-03-08 19:32:37 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.3 2004-02-27 00:21:18 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.4 2004-03-08 19:32:37 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -44,6 +44,7 @@ import java.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
+import org.lockss.plugin.*;
 
 
 /** Extension of ResourceHandler that allows flexibility in finding the
@@ -582,7 +583,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	// XXX should we copy more of the properties here?
 	if (resource instanceof CuUrlResource) {
 	  CuUrlResource cur = (CuUrlResource)resource;
-	  ctype = cur.getProperty("content-type");
+	  ctype = cur.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
 	}
 	if (ctype == null) {
 	  ctype = metaData.getEncoding();

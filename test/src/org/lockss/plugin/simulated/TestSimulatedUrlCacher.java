@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.20 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.21 2004-03-08 19:32:36 tlipkis Exp $
  */
 
 /*
@@ -75,8 +75,9 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertEquals("text/html", prop.getProperty("content-type"));
-    assertEquals(testStr, prop.getProperty("content-url"));
+    assertEquals("text/html",
+		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
   }
 
   public void testTextProperties() throws Exception {
@@ -84,8 +85,9 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertEquals("text/plain", prop.getProperty("content-type"));
-    assertEquals(testStr, prop.getProperty("content-url"));
+    assertEquals("text/plain",
+		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
   }
 
   public void testPdfProperties() throws Exception {
@@ -93,8 +95,9 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertEquals("application/pdf", prop.getProperty("content-type"));
-    assertEquals(testStr, prop.getProperty("content-url"));
+    assertEquals("application/pdf",
+		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
   }
 
   public void testJpegProperties() throws Exception {
@@ -102,8 +105,9 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertEquals("image/jpeg", prop.getProperty("content-type"));
-    assertEquals(testStr, prop.getProperty("content-url"));
+    assertEquals("image/jpeg",
+		 prop.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE));
+    assertEquals(testStr, prop.getProperty(CachedUrl.PROPERTY_URL));
   }
 
   public void testNoBranchContent() throws Exception {
