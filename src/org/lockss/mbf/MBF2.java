@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.6 2003-08-05 00:55:30 dshr Exp $
+ * $Id: MBF2.java,v 1.1 2003-08-05 00:55:30 dshr Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 
 /**
  */
-public class MBF1 extends MemoryBoundFunction {
+public class MBF2 extends MemoryBoundFunction {
   private static final String algRand = "SHA1PRNG";
   private static final String algHash = "SHA1";
   private static Random rand = null;
@@ -66,32 +66,37 @@ public class MBF1 extends MemoryBoundFunction {
   private int k;
   // Internal version of e
   private int ourE;
-  // Limit on number of trials (2**2e)
-  private int tooManyTries;
   // Index in current path
   private int pathIndex;
   // Lowest bit set in hash of A after path finishes
   private int lowBit;
   // Hasher
-  MessageDigest hasher;
+  private MessageDigest hasher;
+  // ArrayList holding the indices to be returned if generating
+  private ArrayList ret;
+  // Count of paths checked
+  private int numPath;
+  // log2(number of entries expected in result) - should be param
+  private int n;
 
 
   /**
    * Public constructor for an object that will compute a proof
-   * of effort using a memory-bound function technique due to
-   * Cynthia Dwork, Andrew Goldberg and Moni Naor, "On Memory-
-   * Bound Functions for Fighting Spam", in "Advances in Cryptology
-   * (CRYPTO 2003)".
+   * of effort using a memory-bound function technique as
+   * dscribed in "On The Cost Distribution Of A Memory Bound Function"
+   * David S. H. Rosenthal
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (roundup(log2(e), where e is the
    *     number of low-order zeros in a successful path)
    *
    */
-  public MBF1(byte[] nVal, int eVal, int lVal)
+  public MBF2(byte[] nVal, int eVal, int lVal)
     throws MemoryBoundFunctionException {
     super(nVal, eVal, lVal);
     ensureConfigured();
     setup();
+    ret = new ArrayList();
+    n = 3; // XXX
   }
 
   /**
@@ -102,17 +107,18 @@ public class MBF1 extends MemoryBoundFunction {
    * @param sVal a one-entry array with the starting point chosen by the prover
    * 
    */
-  public MBF1(byte[] nVal, int eVal, int lVal, int[] sVal, long maxPathVal)
+  public MBF2(byte[] nVal, int eVal, int lVal, int[] sVal, long maxPathVal)
     throws MemoryBoundFunctionException {
     super(nVal, eVal, lVal, sVal, maxPathVal);
-    if (sVal.length != 1)
+    if (sVal.length == 0 || sVal.length > eVal)
       throw new MemoryBoundFunctionException("bad proof length " + sVal.length);
     ensureConfigured();
     setup();
+    n = 4; // XXX
   }
 
   private boolean match() {
-    return (lowBit >= ourE);
+    return (lowBit >= (ourE - n));
   }
 
   /**
@@ -127,11 +133,9 @@ public class MBF1 extends MemoryBoundFunction {
    * 
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
-    // If no match has been found in 2**2e tries,  give up
-    if (k >= tooManyTries)
-      throw new MemoryBoundFunctionException("give up after " + k + " tries");
     // If there is no current try,  create one
     if (pathIndex < 0) {
+      choosePath();
       createPath();
     }
     // Move up to "n" steps along the path
@@ -162,12 +166,20 @@ public class MBF1 extends MemoryBoundFunction {
     arr[i+3] = (byte)((b >> 24) & 0xff);
   }
 
+  // Choose the next path to try
+  private void choosePath() throws MemoryBoundFunctionException {
+    // Set k to the index of the next path to try
+    if (verify) {
+      // XXX - should choose paths in random order
+      k = proof[numPath];
+    } else {
+      k++;
+    }
+  }
+
   // Path initialization
   private void createPath() throws MemoryBoundFunctionException {
-    if (verify)
-      k = proof[0];
-    else
-      k++;
+    // Set up path index k
     i = 0;
     j = 0;
     lowBit = -1;
@@ -183,7 +195,6 @@ public class MBF1 extends MemoryBoundFunction {
     for (int p = 0; p < sizeA; )
       for (int q = 0; q < 16; ) // NB length of SHA1 = 160 bits not 128
 	B[p++] = hashOfNonceAndIndex[q++];
-    // XXX
     BigInteger b1 = new BigInteger(B);
     BigInteger b2 = b1.xor(a0);
     A = new byte[1024];
@@ -227,24 +238,39 @@ public class MBF1 extends MemoryBoundFunction {
 
   // Path termination
   private void finishPath() {
+    numPath++;
     // XXX actually only need to look at bottom 32 bits of A
     BigInteger hashOfA = new BigInteger(hasher.digest(A));
     lowBit = hashOfA.getLowestSetBit();
     logger.debug("Finish " + k + " at " + c + " lowBit " + lowBit +
 		" >= " + ourE);
-    if (lowBit >= ourE) {
-      // We got a match, set finished
-      proof = new int[1];
-      proof[0] = 1;
-      finished = true;
-    } else if (verify) {
-      finished = true;
+    if (verify) {
+      // We are verifying - any mis-match means invalid.
+      if (!match()) {
+	// This is supposed to be a match but isn't,
+	// verification failed.
+	finished = true;
+	proof = null;
+      } else if (numPath >= maxPath || numPath >= proof.length) {
+	// XXX should check inter-proof spaces too
+	finished = true;
+      } else
+	pathIndex = -1;
     } else {
-      i = -1;
-      j = -1;
-      c = -1;
-      lowBit = -1;
-      pathIndex = -1;
+      // We are generating - accumulate matches
+      if (match()) {
+	// Its a match.
+	ret.add(new Integer(k));
+      }
+      if (k >= e) {
+	finished = true;
+	Object[] tmp = ret.toArray();
+	proof = new int[tmp.length];
+	for (int i = 0; i < tmp.length; i++) {
+	  proof[i] = ((Integer)tmp[i]).intValue();
+	}
+      } else
+	pathIndex = -1;
     }
   }
 
@@ -261,8 +287,8 @@ public class MBF1 extends MemoryBoundFunction {
       ourE++;
       tmp >>>= 1;
     }
-    tooManyTries = (1 << (2*ourE));
     pathIndex = -1;
+    numPath = 0;
     try {
       hasher = MessageDigest.getInstance(algHash);
     } catch (NoSuchAlgorithmException ex) {
