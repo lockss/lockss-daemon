@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.7 2003-04-02 23:28:37 tal Exp $
+ * $Id: TimeBase.java,v 1.8 2003-05-24 01:15:13 tal Exp $
  */
 
 /*
@@ -85,6 +85,9 @@ public class TimeBase {
       throw new IllegalStateException("Can't step TimeBase when in real mode");
     }
     simulatedTime += n;
+    // ensure that all timer queue events whose time has come get executed
+    // before this returns
+    TimerQueue.runAllExpired();
   }
 
   /** Step simulated time base by 1 tick */
