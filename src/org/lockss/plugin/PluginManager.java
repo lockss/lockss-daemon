@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.88.2.5 2004-08-02 20:35:39 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.88.2.6 2004-08-02 21:31:17 smorabito Exp $
  */
 
 /*
@@ -130,8 +130,12 @@ public class PluginManager extends BaseLockssManager {
   // List of loadable XML plugins.
   private List loadableXmlPlugins = Collections.synchronizedList(new ArrayList());
 
-  // List of loadable plugin JAR CachedUrls.
-  private List pluginCus = Collections.synchronizedList(new ArrayList());
+  // Map of plugin keys to loadable plugin JAR CachedUrls, used by
+  // the loadable plugin status accessor.
+  private Map pluginCus = Collections.synchronizedMap(new HashMap());
+
+  // List of CachedURLs that have been loaded
+  private List loadedCus = Collections.synchronizedList(new ArrayList());
 
   private KeyStore keystore;
   private JarValidator jarValidator;
@@ -156,6 +160,8 @@ public class PluginManager extends BaseLockssManager {
     // Initialize the plugin directory.
     initPluginDir();
     //     statusSvc.registerStatusAccessor("AUS", new Status());
+    statusSvc.registerStatusAccessor("LoadablePluginTable",
+                                     new LoadablePluginStatus());
   }
 
   /**
@@ -1302,7 +1308,7 @@ public class PluginManager extends BaseLockssManager {
   /**
    * Load the plugin classes from the given blessed jar file.
    */
-  private void loadLoadablePluginClasses(File blessedJar, List loadPlugins)
+  private void loadLoadablePluginClasses(File blessedJar, List loadPlugins, String cuUrl)
       throws IOException {
     LoadablePluginClassLoader pluginLoader =
       new LoadablePluginClassLoader(new URL[] { blessedJar.toURL() });
@@ -1314,6 +1320,8 @@ public class PluginManager extends BaseLockssManager {
 	String key = pluginKeyFromName(pluginName);
 	classloaderMap.put(key, pluginLoader);
 	ensurePluginLoaded(key);
+	// For the loadable plugin status accessor
+	pluginCus.put(key, cuUrl);
       }
 
     } catch (Exception ex) {
@@ -1343,7 +1351,7 @@ public class PluginManager extends BaseLockssManager {
 	  CachedUrl cu = (CachedUrl)cusn;
 	  String url = cu.getUrl();
 	  if (StringUtil.endsWithIgnoreCase(url, ".jar") &&
-	      !pluginCus.contains(url)) {
+	      !loadedCus.contains(url)) {
 
 	    try {
 	      // Validate and bless the JAR file from the CU.
@@ -1361,7 +1369,7 @@ public class PluginManager extends BaseLockssManager {
 		}
 
 		// Load the plugin classes
-		loadLoadablePluginClasses(blessedJar, loadPlugins);
+		loadLoadablePluginClasses(blessedJar, loadPlugins, url);
 	      }
 	    } catch (IOException ex) {
 	      log.error("Error processing jar file: " + url, ex);
@@ -1375,7 +1383,7 @@ public class PluginManager extends BaseLockssManager {
 	    // TODO: At a later point, we'll need to check versions on
 	    // these CUs as well, and if the version has changed,
 	    // load.
-	    pluginCus.add(url);
+	    loadedCus.add(url);
 	  }
 	}
       }
@@ -1428,5 +1436,62 @@ public class PluginManager extends BaseLockssManager {
     public List getRegistryUrls() {
       return registryUrls;
     }
+  }
+
+  /**
+   * Status Accessor for Loadable Plugins.  Gives name, version, classname, and
+   * registry JAR information for each loadable plugin the cache has installed.
+   */
+  private class LoadablePluginStatus implements StatusAccessor {
+    private final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("plugin", CatalogueOrderComparator.SINGLETON));
+
+    private final List colDescs =
+      ListUtil.list(
+                    new ColumnDescriptor("plugin", "Name",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("version", "Version",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("id", "Plugin ID",
+                                         ColumnDescriptor.TYPE_STRING),
+                    new ColumnDescriptor("cu", "Loaded From",
+                                         ColumnDescriptor.TYPE_STRING)
+                    );
+
+    public String getDisplayName() {
+      return "Loadable Plugins";
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public List getRows() {
+      List table = new ArrayList();
+
+      // All loadable plugins are in the classloader map.
+      for (Iterator keysIter = classloaderMap.keySet().iterator(); keysIter.hasNext(); ) {
+        Map row = new HashMap();
+
+        String pluginKey = (String)keysIter.next();
+        Plugin plugin = getPlugin(pluginKey);
+
+        row.put("plugin", plugin.getPluginName());
+        row.put("version", plugin.getVersion());
+        row.put("id", plugin.getPluginId());
+        row.put("cu", (String)pluginCus.get(pluginKey));
+
+        table.add(row);
+      }
+
+      return table;
+    }
+
+    public void populateTable(StatusTable table) {
+      table.setColumnDescriptors(colDescs);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows());
+    }
+
   }
 }
