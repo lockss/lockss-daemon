@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.27 2003-03-27 03:04:33 tal Exp $
+ * $Id: HashQueue.java,v 1.28 2003-03-27 17:49:13 tal Exp $
  */
 
 /*
@@ -459,11 +459,10 @@ class HashQueue implements Serializable {
 
   static final String FOOT_TITLE =
     "Pending requests are first in table, in the order they will be executed."+
-    "  Completed requests follow, in the order they were completed " +
+    "  Completed requests follow, in reverse completion order " +
     "(most recent first).";
 
   private static final List statusColDescs =
-
     ListUtil.list(
 		  new ColumnDescriptor("sched", "Req",
 				       ColumnDescriptor.TYPE_INT, FOOT_IN),
