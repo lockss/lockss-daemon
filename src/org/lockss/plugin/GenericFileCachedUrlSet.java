@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.33 2003-04-22 01:02:02 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.34 2003-04-22 22:59:28 troberts Exp $
  */
 
 /*
@@ -81,11 +81,15 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       return repository.getNode(getUrl()).isLeaf();
     } catch (MalformedURLException mue) {
       logger.error("Bad url in spec: " + getUrl());
-      throw new LockssRepository.RepositoryStateException("Bad url in spec: "+getUrl());
+      throw new LockssRepository.RepositoryStateException("Bad url in spec: "
+							  +getUrl());
     }
   }
 
   public Iterator flatSetIterator() {
+    if (spec instanceof SingleNodeCachedUrlSetSpec) {
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
     TreeSet flatSet = new TreeSet(new UrlComparator());
     String prefix = spec.getUrl();
     try {
@@ -93,120 +97,32 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       Iterator children = intNode.listNodes(spec, false);
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
-        CachedUrlSetSpec rSpec =
-            new RangeCachedUrlSetSpec(child.getNodeUrl());
         if (child.isLeaf()) {
-          CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-              child.getNodeUrl());
+          CachedUrl newUrl = 
+	    ((BaseArchivalUnit)au).cachedUrlFactory(this, child.getNodeUrl());
           flatSet.add(newUrl);
         } else {
-          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
-              rSpec);
+	  CachedUrlSetSpec rSpec =
+	    new RangeCachedUrlSetSpec(child.getNodeUrl());
+          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
           flatSet.add(newSet);
         }
       }
     } catch (MalformedURLException mue) {
       logger.error("Bad url in spec: "+prefix);
-    } catch (Exception e) {
-      // this shouldn't occur
-      logger.error(e.getMessage());
+      throw new RuntimeException("Bad url in spec: "+prefix);
     }
     return flatSet.iterator();
   }
 
   /**
-   * This returns an iterator for hashing.  For a plain {@link CachedUrlSet},
-   * this is the set itself as a {@link CachedUrl} (regardless of whether or not
-   * it has content), followed by all the nodes below it.  If the spec is a
-   * {@link RangeCachedUrlSetSpec} and the range is non-null (i.e. a poll is
-   * dividing it up to assess damage), the set itself is excluded to avoid
-   * repetition.  If the spec is a {@link SingleNodeCachedUrlSetSpec}, then a
-   * singleton {@link Iterator} with only the set itself is returned.
+   * This returns an iterator over all nodes in the CachedUrlSet.  This 
+   * includes the node itself if either it's got a RangedCachedUrlSetSpec with 
+   * no range or a SingleNodeCachedUrlSetSpec
    * @return an {@link Iterator}
    */
   public Iterator contentHashIterator() {
- //   contentNodeCount = 0;
- //   totalNodeSize = 0;
-
-    if (spec instanceof SingleNodeCachedUrlSetSpec) {
-      // return only this node
-      logger.debug3("Returning singleton iterator...");
-      ArrayList list = new ArrayList(1);
-      list.add(makeCachedUrl(getUrl()));
-      return list.iterator();
-    }
-
-    TreeSet treeSet = new TreeSet(new UrlComparator());
-    boolean insertRootCus = true;
-    if ((spec instanceof RangeCachedUrlSetSpec) &&
-        (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null)) {
-      // don't insert the set itself if we've already subdivided
-      insertRootCus = false;
-    }
-
-    if (insertRootCus) {
-      logger.debug3("Added root cus to contentHashIterator.");
-      treeSet.add(makeCachedUrl(getUrl()));
-    }
-
-    String prefix = spec.getUrl();
-    logger.debug3("Adding children to contentHashIterator...");
-    try {
-      RepositoryNode intNode = repository.getNode(prefix);
-      Iterator children = intNode.listNodes(spec, false);
-      while (children.hasNext()) {
-        // add all nodes to hash iterator, regardless of content
-        RepositoryNode child = (RepositoryNode)children.next();
-        CachedUrlSetSpec rSpec =
-            new RangeCachedUrlSetSpec(child.getNodeUrl());
-        if (child.isLeaf()) {
-          CachedUrl newUrl = ( (BaseArchivalUnit) au).cachedUrlFactory(this,
-              child.getNodeUrl());
-          treeSet.add(newUrl);
-        } else {
-          CachedUrlSet newSet = ( (BaseArchivalUnit) au).makeCachedUrlSet(
-              rSpec);
-          treeSet.add(newSet);
-        }
-       /* if (child.hasContent()) {
-          contentNodeCount++;
-          totalNodeSize += child.getContentSize();
-        }
-        */
-        recurseLeafFetch(child, treeSet);
-      }
-    } catch (MalformedURLException mue) {
-      logger.error("Bad url in spec: " + prefix);
-    } catch (Exception e) {
-      // this shouldn't occur
-      logger.error(e.getMessage());
-    }
-    return treeSet.iterator();
-  }
-
-  private void recurseLeafFetch(RepositoryNode node, TreeSet set) {
-    Iterator children = node.listNodes(null, false);
-    while (children.hasNext()) {
-      // add all nodes to tree iterator, regardless of content
-      RepositoryNode child = (RepositoryNode)children.next();
-      CachedUrlSetSpec rSpec =
-          new RangeCachedUrlSetSpec(child.getNodeUrl());
-      if (child.isLeaf()) {
-        CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-            child.getNodeUrl());
-        set.add(newUrl);
-      } else {
-        CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
-            rSpec);
-        set.add(newSet);
-      }
-     /* if (child.hasContent()) {
-        contentNodeCount++;
-        totalNodeSize += child.getContentSize();
-      }
-      */
-      recurseLeafFetch(child, set);
-    }
+    return new CUSIterator();
   }
 
   public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
@@ -290,27 +206,12 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     }
   }
 
-  private File createTempFile(String location, int size) {
-    File tempFile = new File(location);
-    return null;
-  }
-
-  private String getTempFileLocation(String file_name) {
-    StringBuffer buffer = new StringBuffer();
-    String location = "";
-    buffer.append(location);
-    if (!location.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(file_name);
-    return buffer.toString();
-  }
-
   private static class UrlComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       String prefix = null;
       String prefix2 = null;
-      if ((o1 instanceof CachedUrlSetNode) && (o2 instanceof CachedUrlSetNode)) {
+      if ((o1 instanceof CachedUrlSetNode) 
+	  && (o2 instanceof CachedUrlSetNode)) {
         prefix = ((CachedUrlSetNode)o1).getUrl();
         prefix2 = ((CachedUrlSetNode)o2).getUrl();
       } else {
@@ -322,6 +223,71 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         throw new UnsupportedOperationException("Comparing equal prefixes: "+prefix);
       }
       return prefix.compareTo(prefix2);
+    }
+  }
+  /**
+   * Iterator over all the elements in a CachedUrlSet
+   */
+  private class CUSIterator implements Iterator {
+    //Stack of flatSetIterators at each tree level
+    LinkedList stack = new LinkedList();
+
+    //if null, we have to look for nextElement
+    private CachedUrlSetNode nextElement = null;
+
+    public CUSIterator() {
+      if (!((spec instanceof RangeCachedUrlSetSpec) &&
+	    (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null))) {
+	nextElement = GenericFileCachedUrlSet.this;
+      }
+      stack.addFirst(flatSetIterator());
+    }
+
+    public void remove() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public boolean hasNext() {
+      return findNextElement() != null;
+    }
+
+    public Object next() {
+      Object foo = findNextElement();
+      nextElement = null;
+      
+      if (foo != null) {
+	return foo;
+      }
+      throw new NoSuchElementException();
+    }
+    
+    /**
+     * Does a pre-order traversal of the CachedUrlSet tree
+     */
+    private CachedUrlSetNode findNextElement() {
+      if (nextElement != null) {
+	return nextElement;
+      }
+      while (true) {
+	if (stack.isEmpty()) {
+	  return null;
+	}
+	Iterator it = (Iterator)stack.getFirst();
+	if (!it.hasNext()) {
+	  //this iterator is exhausted, pop from stack
+	  stack.removeFirst();
+	} else {
+	  CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
+	
+	  if (!curNode.isLeaf()) {
+	    CachedUrlSet cus = (CachedUrlSet)curNode;
+	    //push the iterator of this child node onto the stack
+	    stack.addFirst(cus.flatSetIterator());
+	  }
+	  nextElement = curNode;
+	  return nextElement;
+	}
+      }
     }
   }
 }

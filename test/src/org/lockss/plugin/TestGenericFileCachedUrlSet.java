@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.29 2003-04-22 01:02:02 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.30 2003-04-22 22:59:28 troberts Exp $
  */
 
 /*
@@ -101,6 +101,33 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
+  public void testFlatSetIteratorSingleNodeSpec() throws Exception {
+    createLeaf("http://www.example.com/testDir/leaf4", null, null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1", null, null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3", null, null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2", null, null);
+
+    CachedUrlSetSpec spec =
+        new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(spec);
+    Iterator setIt = fileSet.flatSetIterator();
+    assertFalse(setIt.hasNext());
+  }
+
+  public void testFlatSetIteratorThrowsOnBogusURL() throws Exception {
+    createLeaf("http://www.example.com/testDir/leaf4", null, null);
+    
+    CachedUrlSetSpec rSpec =
+        new RangeCachedUrlSetSpec("no_such_protoco://www.example.com/testDir");
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
+    try {
+      fileSet.flatSetIterator();
+      fail("Call to flatSetIterator() should have thrown when given "
+	   +"malformed url");
+    } catch(RuntimeException e){
+    }
+  }
+
   public void testFlatSetIteratorClassCreation() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1/leaf2", null, null);
@@ -111,11 +138,11 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.flatSetIterator();
-    testRightClass((CachedUrlSetNode)setIt.next(),
+    assertRightClass((CachedUrlSetNode)setIt.next(),
                    "http://www.example.com/testDir/branch1", true);
-    testRightClass((CachedUrlSetNode)setIt.next(),
+    assertRightClass((CachedUrlSetNode)setIt.next(),
                    "http://www.example.com/testDir/branch2", true);
-    testRightClass((CachedUrlSetNode)setIt.next(),
+    assertRightClass((CachedUrlSetNode)setIt.next(),
                    "http://www.example.com/testDir/leaf1", false);
   }
 
@@ -158,6 +185,13 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     while (setIt.hasNext()) {
       childL.add(((CachedUrlSetNode)setIt.next()).getUrl());
     }
+    assertFalse(setIt.hasNext());
+    try {
+      setIt.next();
+      fail("setIt.next() should have thrown when it has no elements");
+    } catch (NoSuchElementException e) {
+    }
+
     // should be sorted
     expectedA = new String[] {
       "http://www.example.com/testDir/branch1",
@@ -165,6 +199,44 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       "http://www.example.com/testDir/branch1/leaf2"
       };
     assertIsomorphic(expectedA, childL);
+  }
+
+  public void testHashIteratorSingleNode() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test stream", null);
+
+    CachedUrlSetSpec spec =
+      new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(spec);
+    Iterator setIt = fileSet.contentHashIterator();
+    ArrayList childL = new ArrayList(1);
+    while (setIt.hasNext()) {
+      childL.add(((CachedUrlSetNode)setIt.next()).getUrl());
+    }
+    // should be sorted
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir",
+    };
+    assertIsomorphic(expectedA, childL);
+  }
+
+  public void testHashIteratorThrowsOnBogusUrl() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               "test stream", null);
+
+    CachedUrlSetSpec spec =
+      new RangeCachedUrlSetSpec("bad_protocol://www.example.com/testDir");
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(spec);
+    try {
+      Iterator setIt = fileSet.contentHashIterator();
+      fail("Bogus url should have caused a RuntimeException");
+    } catch (RuntimeException e){
+    }
   }
 
   public void testHashIteratorVariations() throws Exception {
@@ -186,7 +258,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     String[] expectedA = new String[] {
       "http://www.example.com/testDir/branch1/leaf1",
       "http://www.example.com/testDir/branch1/leaf2"
-      };
+    };
     assertIsomorphic(expectedA, childL);
 
     CachedUrlSetSpec snSpec =
@@ -217,26 +289,28 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
                "test stream", null);
 
     CachedUrlSetSpec rSpec =
-        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
+      new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.contentHashIterator();
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir", false);
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir/branch1", true);
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir/branch1/leaf1", false);
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir/branch2", true);
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir/branch2/branch3", true);
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir/branch2/branch3/leaf2", false);
-    testRightClass((CachedUrlSetNode)setIt.next(),
-                   "http://www.example.com/testDir/leaf3", false);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir", true);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir/branch1", true);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir/branch1/leaf1", false);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir/branch2", true);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir/branch2/branch3", true);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir/branch2/branch3/leaf2", 
+		     false);
+    assertRightClass((CachedUrlSetNode)setIt.next(),
+		     "http://www.example.com/testDir/leaf3", false);
   }
 
-  private void testRightClass(CachedUrlSetNode element, String url, boolean isCus) {
+  private void assertRightClass(CachedUrlSetNode element, 
+				String url, boolean isCus) {
     assertEquals(url, element.getUrl());
     if (isCus) {
       assertEquals(CachedUrlSetNode.TYPE_CACHED_URL_SET, element.getType());
