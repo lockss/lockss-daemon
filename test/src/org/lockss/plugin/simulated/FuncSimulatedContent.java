@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.2 2002-11-14 03:13:53 aalto Exp $
+ * $Id: FuncSimulatedContent.java,v 1.3 2002-11-23 02:15:32 aalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.simulated;
 
 import java.util.*;
 import java.io.*;
+import java.security.MessageDigest;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.crawler.Crawler;
@@ -72,7 +73,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     assertTrue(au==sau);
   }
 
-  public void testSimulatedContent() {
+  public void testSimulatedContent() throws IOException {
     createContent();
     crawlContent();
     checkContent();
@@ -96,13 +97,13 @@ public class FuncSimulatedContent extends LockssTestCase {
     Crawler.doCrawl(sau, spec);
   }
 
-  private void checkContent() {
+  private void checkContent() throws IOException {
     checkRoot();
     checkLeaf();
     checkStoredContent();
   }
 
-  private void hashContent() {
+  private void hashContent() throws IOException {
     hashSet(true);
     hashSet(false);
   }
@@ -110,29 +111,21 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void checkRoot() {
     CachedUrlSet set = sau.getAUCachedUrlSet();
     Iterator setIt = set.flatSetIterator();
-    assertTrue(setIt.hasNext());
-    CachedUrlSet childSet = (CachedUrlSet)setIt.next();
-    String url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/branch1"));
-    childSet = (CachedUrlSet)setIt.next();
-    url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/branch2"));
-    childSet = (CachedUrlSet)setIt.next();
-    url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/file1.html"));
-    childSet = (CachedUrlSet)setIt.next();
-    url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/file1.txt"));
-    childSet = (CachedUrlSet)setIt.next();
-    url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/file2.html"));
-    childSet = (CachedUrlSet)setIt.next();
-    url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/file2.txt"));
-    childSet = (CachedUrlSet)setIt.next();
-    url = (String)childSet.getSpec().getPrefixList().get(0);
-    assertTrue(url.equals(sau.SIMULATED_URL_ROOT+"/index.html"));
-    assertTrue(!setIt.hasNext());
+    ArrayList childL = new ArrayList(7);
+    while (setIt.hasNext()) {
+      CachedUrlSet childSet = (CachedUrlSet)setIt.next();
+      childL.add(childSet.getSpec().getPrefixList().get(0));
+    }
+    String[] expectedA = new String[] {
+      sau.SIMULATED_URL_ROOT+"/branch1",
+      sau.SIMULATED_URL_ROOT+"/branch2",
+      sau.SIMULATED_URL_ROOT+"/file1.html",
+      sau.SIMULATED_URL_ROOT+"/file1.txt",
+      sau.SIMULATED_URL_ROOT+"/file2.html",
+      sau.SIMULATED_URL_ROOT+"/file2.txt",
+      sau.SIMULATED_URL_ROOT+"/index.html"
+      };
+    assertIsomorphic(expectedA, childL);
   }
 
   private void checkLeaf() {
@@ -140,75 +133,66 @@ public class FuncSimulatedContent extends LockssTestCase {
     CachedUrlSetSpec spec = new RECachedUrlSetSpec(parent);
     CachedUrlSet set = sau.cachedUrlSetFactory(sau, spec);
     Iterator setIt = set.leafIterator();
-    assertTrue(setIt.hasNext());
-    CachedUrl child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch1/file1.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch1/file1.txt"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch1/file2.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch1/file2.txt"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch1/index.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch2/file1.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch2/file1.txt"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch2/file2.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch2/file2.txt"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/branch2/index.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/file1.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/file1.txt"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/file2.html"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/file2.txt"));
-    child = (CachedUrl)setIt.next();
-    assertTrue(child.getUrl().equals(parent + "/index.html"));
-    assertTrue(!setIt.hasNext());
+    ArrayList childL = new ArrayList(15);
+    while (setIt.hasNext()) {
+      CachedUrl childUrl = (CachedUrl)setIt.next();
+      childL.add(childUrl.getUrl());
+    }
+    String[] expectedA = new String[] {
+      parent+"/branch1/file1.html",
+      parent+"/branch1/file1.txt",
+      parent+"/branch1/file2.html",
+      parent+"/branch1/file2.txt",
+      parent+"/branch1/index.html",
+      parent+"/branch2/file1.html",
+      parent+"/branch2/file1.txt",
+      parent+"/branch2/file2.html",
+      parent+"/branch2/file2.txt",
+      parent+"/branch2/index.html",
+      parent+"/file1.html",
+      parent+"/file1.txt",
+      parent+"/file2.html",
+      parent+"/file2.txt",
+      parent+"/index.html",
+      };
+    assertIsomorphic(expectedA, childL);
   }
 
-  private void checkStoredContent() {
+  private void checkStoredContent() throws IOException {
     String file = sau.SIMULATED_URL_ROOT + "/file1.txt";
     CachedUrl url = sau.cachedUrlFactory(sau.getAUCachedUrlSet(), file);
-    InputStream content = url.openForReading();
+    String content = getUrlContent(url);
     String expectedContent = sau.getContentGenerator().getFileContent(1, 0, 0, false);
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(expectedContent.length());
-    try {
-      StreamUtil.copy(content, baos);
-      content.close();
-      String contentStr = new String(baos.toByteArray());
-      baos.close();
-      assertTrue(contentStr.equals(expectedContent));
-    } catch (IOException ie) {
-      fail(ie.getMessage());
-    }
+    assertEquals(expectedContent, content);
 
     file = sau.SIMULATED_URL_ROOT + "/branch1/branch1/file1.txt";
     url = sau.cachedUrlFactory(sau.getAUCachedUrlSet(), file);
-    content = url.openForReading();
+    content = getUrlContent(url);
     expectedContent = sau.getContentGenerator().getFileContent(1, 2, 1, true);
-    baos = new ByteArrayOutputStream(expectedContent.length());
-    try {
-      StreamUtil.copy(content, baos);
-      content.close();
-      String contentStr = new String(baos.toByteArray());
-      baos.close();
-      assertTrue(contentStr.equals(expectedContent));
-    } catch (IOException ie) {
-      fail(ie.getMessage());
-    }
+    assertEquals(expectedContent, content);
   }
 
-  private void hashSet(boolean namesOnly) {
+  private void hashSet(boolean namesOnly) throws IOException {
     CachedUrlSet set = sau.getAUCachedUrlSet();
     MockMessageDigest dig = new MockMessageDigest();
+    hash(set, dig, namesOnly);
+    byte[] hash = dig.digest();
+
+    dig = new MockMessageDigest();
+    hash(set, dig, namesOnly);
+    byte[] hash2 = dig.digest();
+    assertTrue(Arrays.equals(hash, hash2));
+
+    String parent = sau.SIMULATED_URL_ROOT + "/branch1";
+    CachedUrlSetSpec spec = new RECachedUrlSetSpec(parent);
+    set = sau.cachedUrlSetFactory(sau, spec);
+    dig = new MockMessageDigest();
+    hash(set, dig, namesOnly);
+    hash2 = dig.digest();
+    assertTrue(!Arrays.equals(hash, hash2));
+  }
+
+  private void hash(CachedUrlSet set, MessageDigest dig, boolean namesOnly) throws IOException {
     CachedUrlSetHasher hasher = null;
     if (namesOnly) {
       hasher = set.getNameHasher(dig);
@@ -218,11 +202,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     int bytesHashed = 0;
     long timeTaken = System.currentTimeMillis();
     while (!hasher.finished()) {
-      try {
-        bytesHashed += hasher.hashStep(256);
-      } catch (IOException ie) {
-        fail(ie.toString());
-      }
+      bytesHashed += hasher.hashStep(256);
     }
     timeTaken = System.currentTimeMillis() - timeTaken;
     if ((timeTaken>0)&&(bytesHashed>500)) {
@@ -230,42 +210,15 @@ public class FuncSimulatedContent extends LockssTestCase {
       System.out.println("Time taken: "+timeTaken+"ms");
       System.out.println("Bytes/sec: "+(bytesHashed*1000/timeTaken));
     }
-
-    byte[] hash = dig.digest();
-    dig = new MockMessageDigest();
-    if (namesOnly) {
-      hasher = set.getNameHasher(dig);
-    } else {
-      hasher = set.getContentHasher(dig);
-    }
-    while (!hasher.finished()) {
-      try {
-        hasher.hashStep(256);
-      } catch (IOException ie) {
-        fail(ie.toString());
-      }
-    }
-    byte[] hash2 = dig.digest();
-    assertTrue(Arrays.equals(hash, hash2));
-
-    String parent = sau.SIMULATED_URL_ROOT + "/branch1";
-    CachedUrlSetSpec spec = new RECachedUrlSetSpec(parent);
-    set = sau.cachedUrlSetFactory(sau, spec);
-    dig = new MockMessageDigest();
-    if (namesOnly) {
-      hasher = set.getNameHasher(dig);
-    } else {
-      hasher = set.getContentHasher(dig);
-    }
-    while (!hasher.finished()) {
-      try {
-        hasher.hashStep(256);
-      } catch (IOException ie) {
-        fail(ie.toString());
-      }
-    }
-    hash2 = dig.digest();
-    assertTrue(!Arrays.equals(hash, hash2));
   }
 
+  private String getUrlContent(CachedUrl url) throws IOException {
+    InputStream content = url.openForReading();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    StreamUtil.copy(content, baos);
+    content.close();
+    String contentStr = new String(baos.toByteArray());
+    baos.close();
+    return contentStr;
+  }
 }

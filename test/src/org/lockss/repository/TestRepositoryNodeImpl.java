@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.2 2002-11-21 21:07:56 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.3 2002-11-23 02:15:33 aalto Exp $
  */
 
 /*
@@ -38,9 +38,8 @@ import org.lockss.test.*;
 import org.lockss.util.StreamUtil;
 
 /**
- * This is the test class for org.lockss.daemon.LeafEntryImpl
+ * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
  */
-
 public class TestRepositoryNodeImpl extends LockssTestCase {
   private LockssRepository repo;
 
@@ -61,9 +60,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
   public void testGetNodeUrl() {
     RepositoryNode node = new RepositoryNodeImpl("testUrl", "testDir", null);
-    assertTrue(node.getNodeUrl().equals("testUrl"));
+    assertEquals("testUrl", node.getNodeUrl());
     node = new RepositoryNodeImpl("testUrl/test.txt", "testUrl/test.txt", null);
-    assertTrue(node.getNodeUrl().equals("testUrl/test.txt"));
+    assertEquals("testUrl/test.txt", node.getNodeUrl());
   }
 
   public void testGetState() {
@@ -75,241 +74,183 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testListEntries() throws Exception {
-    RepositoryNode leaf =
-        repo.createNewNode("http://www.example.com/testDir/branch1/leaf1");
-    leaf.makeNewVersion();
-    OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
-    leaf = repo.createNewNode("http://www.example.com/testDir/branch1/leaf2");
-    leaf.makeNewVersion();
-    os = leaf.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
-    leaf = repo.createNewNode("http://www.example.com/testDir/branch2/leaf3");
-    leaf.makeNewVersion();
-    os = leaf.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
-    leaf = repo.createNewNode("http://www.example.com/testDir/leaf4");
-    leaf.makeNewVersion();
-    os = leaf.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
 
     RepositoryNode dirEntry =
         repo.getRepositoryNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null);
-    int count = 0;
+    ArrayList childL = new ArrayList(3);
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
-      if (node.getNodeUrl().equals("http://www.example.com/testDir/branch1")) {
-        count += 1;
-        assertTrue(!node.hasContent());
-      } else if (node.getNodeUrl().equals("http://www.example.com/testDir/branch2")) {
-        count += 2;
-        assertTrue(!node.hasContent());
-      } else if (node.getNodeUrl().equals("http://www.example.com/testDir/leaf4")) {
-        count += 4;
-        assertTrue(node.hasContent());
-      }
+      childL.add(node.getNodeUrl());
     }
-    assertTrue(count==7);
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
+      "http://www.example.com/testDir/branch2",
+      "http://www.example.com/testDir/leaf4"
+      };
+    assertIsomorphic(expectedA, childL);
 
     dirEntry = repo.getRepositoryNode("http://www.example.com/testDir/branch1");
+    childL.clear();
     childIt = dirEntry.listNodes(null);
-    count = 0;
     while (childIt.hasNext()) {
       RepositoryNode node = (RepositoryNode)childIt.next();
-      if (node.getNodeUrl().equals("http://www.example.com/testDir/branch1/leaf1")) {
-        count += 1;
-        assertTrue(node.hasContent());
-      } else if (node.getNodeUrl().equals("http://www.example.com/testDir/branch1/leaf2")) {
-        count += 2;
-        assertTrue(node.hasContent());
-      }
+      childL.add(node.getNodeUrl());
     }
-    assertTrue(count==3);
+    expectedA = new String[] {
+      "http://www.example.com/testDir/branch1/leaf1",
+      "http://www.example.com/testDir/branch1/leaf2",
+      };
+    assertIsomorphic(expectedA, childL);
   }
 
   public void testEntrySort() throws Exception {
-    RepositoryNode leaf =
-        repo.createNewNode("http://www.example.com/testDir/branch1/leaf1");
-    leaf.makeNewVersion();
-    leaf.sealNewVersion();
-    leaf = repo.createNewNode("http://www.example.com/testDir/branch2/leaf2");
-    leaf.makeNewVersion();
-    leaf.sealNewVersion();
-    leaf = repo.createNewNode("http://www.example.com/testDir/leaf4");
-    leaf.makeNewVersion();
-    leaf.sealNewVersion();
-    leaf = repo.createNewNode("http://www.example.com/testDir/leaf3");
-    leaf.makeNewVersion();
-    leaf.sealNewVersion();
+    createLeaf("http://www.example.com/testDir/branch2/leaf1", null, null);
+    createLeaf("http://www.example.com/testDir/leaf4", null, null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1", null, null);
+    createLeaf("http://www.example.com/testDir/leaf3", null, null);
 
     RepositoryNode dirEntry =
         repo.getRepositoryNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null);
-    assertTrue(childIt.hasNext());
-    RepositoryNode entry = (RepositoryNode)childIt.next();
-    assertTrue(entry.getNodeUrl().equals("http://www.example.com/testDir/branch1"));
-    assertTrue(childIt.hasNext());
-    entry = (RepositoryNode)childIt.next();
-    assertTrue(entry.getNodeUrl().equals("http://www.example.com/testDir/branch2"));
-    assertTrue(childIt.hasNext());
-    entry = (RepositoryNode)childIt.next();
-    assertTrue(entry.getNodeUrl().equals("http://www.example.com/testDir/leaf3"));
-    assertTrue(childIt.hasNext());
-    entry = (RepositoryNode)childIt.next();
-    assertTrue(entry.getNodeUrl().equals("http://www.example.com/testDir/leaf4"));
-    assertTrue(!childIt.hasNext());
+    ArrayList childL = new ArrayList(4);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
+      "http://www.example.com/testDir/branch2",
+      "http://www.example.com/testDir/leaf3",
+      "http://www.example.com/testDir/leaf4"
+      };
+    assertIsomorphic(expectedA, childL);
   }
 
-  public void testMakeNewCache() throws IOException {
-    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/test.cache");
+  public void testMakeNewCache() throws Exception {
+    RepositoryNode leaf =
+      repo.createNewNode("http://www.example.com/testDir/test.cache");
     assertTrue(!leaf.hasContent());
-    assertTrue(leaf.getCurrentVersion()==0);
+    assertEquals(0, leaf.getCurrentVersion());
     leaf.makeNewVersion();
-
-    OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
+    writeToLeaf(leaf, "test stream");
     leaf.sealNewVersion();
-    assertTrue(leaf.getCurrentVersion()==1);
+    assertEquals(1, leaf.getCurrentVersion());
     assertTrue(leaf.hasContent());
   }
 
-  public void testMakeNewVersion() throws IOException {
-    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/test.cache");
-    leaf.makeNewVersion();
-    OutputStream os = leaf.getNewOutputStream();
+  public void testMakeNewVersion() throws Exception {
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
-    leaf.setNewProperties(props);
-    InputStream is = new StringInputStream("testing stream 1");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream 1", props);
 
-    leaf.sealNewVersion();
-    assertTrue(leaf.getCurrentVersion()==1);
+    assertEquals(1, leaf.getCurrentVersion());
     leaf.makeNewVersion();
     props = new Properties();
     props.setProperty("test 1", "value 2");
     leaf.setNewProperties(props);
-    os = leaf.getNewOutputStream();
-    is = new StringInputStream("testing stream 2");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
+    writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
-    assertTrue(leaf.getCurrentVersion()==2);
+    assertEquals(2, leaf.getCurrentVersion());
 
-    is = leaf.getInputStream();
-    OutputStream baos = new ByteArrayOutputStream(16);
-    StreamUtil.copy(is, baos);
-    is.close();
-    String resultStr = baos.toString();
-    baos.close();
-    assertTrue(resultStr.equals("testing stream 2"));
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream 2", resultStr);
     props = leaf.getProperties();
-    assertTrue(props.getProperty("test 1").equals("value 2"));
+    assertEquals("value 2", props.getProperty("test 1"));
   }
 
-  public void testGetInputStream() throws IOException {
-    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/test.cache");
-    leaf.makeNewVersion();
-    OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
-
-    is = leaf.getInputStream();
-    OutputStream baos = new ByteArrayOutputStream(14);
-    StreamUtil.copy(is, baos);
-    is.close();
-    String resultStr = baos.toString();
-    baos.close();
-    assertTrue(resultStr.equals("testing stream"));
+  public void testGetInputStream() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream", null);
+    String resultStr = getLeafContent(leaf);
+    assertEquals("test stream", resultStr);
   }
 
-  public void testGetProperties() throws IOException {
-    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/test.cache");
-    leaf.makeNewVersion();
+  public void testGetProperties() throws Exception {
     Properties props = new Properties();
     props.setProperty("test 1", "value 1");
-    leaf.setNewProperties(props);
-    OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream", props);
 
     props = leaf.getProperties();
-    assertTrue(props.getProperty("test 1").equals("value 1"));
+    assertEquals("value 1", props.getProperty("test 1"));
 
     leaf.makeNewVersion();
     props = new Properties();
     props.setProperty("test 1", "value 2");
     leaf.setNewProperties(props);
-    os = leaf.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
+    writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
 
     props = leaf.getProperties();
-    assertTrue(props.getProperty("test 1").equals("value 2"));
+    assertEquals("value 2", props.getProperty("test 1"));
   }
 
-  public void testDirContent() throws IOException {
-    RepositoryNode leaf = repo.createNewNode("http://www.example.com/testDir/test.cache");
-    leaf.makeNewVersion();
-    OutputStream os = leaf.getNewOutputStream();
-    InputStream is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    leaf.sealNewVersion();
+  public void testDirContent() throws Exception {
+    RepositoryNode leaf =
+        createLeaf("http://www.example.com/testDir/test.cache",
+        "test stream", null);
     assertTrue(leaf.hasContent());
 
-    RepositoryNode dir = repo.getRepositoryNode("http://www.example.com/testDir");
+    RepositoryNode dir =
+        repo.getRepositoryNode("http://www.example.com/testDir");
     dir.makeNewVersion();
-    os = dir.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
+    writeToLeaf(dir, "test stream");
     dir.sealNewVersion();
     assertTrue(dir.hasContent());
 
-    dir = repo.createNewNode("http://www.example.com/testDir/test.cache/new.test");
-    dir.makeNewVersion();
-    os = dir.getNewOutputStream();
-    is = new StringInputStream("testing stream");
-    StreamUtil.copy(is, os);
-    os.close();
-    is.close();
-    dir.sealNewVersion();
+    dir = createLeaf("http://www.example.com/testDir/test.cache/new.test",
+                     "test stream", null);
     assertTrue(dir.hasContent());
   }
 
+  private RepositoryNode createLeaf(String url, String content,
+                                    Properties props) throws Exception {
+    return createLeaf(repo, url, content, props);
+  }
+
+  public static RepositoryNode createLeaf(LockssRepository repo, String url,
+                                   String content, Properties props)
+      throws Exception {
+    RepositoryNode leaf = repo.createNewNode(url);
+    leaf.makeNewVersion();
+    writeToLeaf(leaf, content);
+    if (props!=null) {
+      leaf.setNewProperties(props);
+    }
+    leaf.sealNewVersion();
+    return leaf;
+  }
+
+  public static void writeToLeaf(RepositoryNode leaf, String content)
+      throws Exception {
+    if (content!=null) {
+      OutputStream os = leaf.getNewOutputStream();
+      InputStream is = new StringInputStream(content);
+      StreamUtil.copy(is, os);
+      os.close();
+      is.close();
+    }
+  }
+
+  public static String getLeafContent(RepositoryNode leaf) throws IOException {
+    InputStream is = leaf.getInputStream();
+    OutputStream baos = new ByteArrayOutputStream(20);
+    StreamUtil.copy(is, baos);
+    is.close();
+    String resultStr = baos.toString();
+    baos.close();
+    return resultStr;
+  }
 }

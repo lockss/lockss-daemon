@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.3 2002-11-07 02:15:30 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.4 2002-11-23 02:15:32 aalto Exp $
  */
 
 /*
@@ -55,32 +55,32 @@ public class TestSimulatedUrlCacher extends TestCase {
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertTrue(prop.getProperty("content-type").equals("text/html"));
-    assertTrue(prop.getProperty("content-url").equals(testStr));
+    assertEquals("text/html", prop.getProperty("content-type"));
+    assertEquals(testStr, prop.getProperty("content-url"));
   }
   public void testTextProperties() {
     String testStr = "http://www.example.com/file.txt";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertTrue(prop.getProperty("content-type").equals("text/plain"));
-    assertTrue(prop.getProperty("content-url").equals(testStr));
+    assertEquals("text/plain", prop.getProperty("content-type"));
+    assertEquals(testStr, prop.getProperty("content-url"));
   }
   public void testPdfProperties() {
     String testStr = "http://www.example.com/file.pdf";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertTrue(prop.getProperty("content-type").equals("application/pdf"));
-    assertTrue(prop.getProperty("content-url").equals(testStr));
+    assertEquals("application/pdf", prop.getProperty("content-type"));
+    assertEquals(testStr, prop.getProperty("content-url"));
   }
   public void testJpegProperties() {
     String testStr = "http://www.example.com/image.jpg";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
-    assertTrue(prop.getProperty("content-type").equals("image/jpeg"));
-    assertTrue(prop.getProperty("content-url").equals(testStr));
+    assertEquals("image/jpeg", prop.getProperty("content-type"));
+    assertEquals(testStr, prop.getProperty("content-url"));
   }
 
 }
