@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.25 2004-09-29 18:58:18 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.26 2004-09-29 19:20:45 troberts Exp $
  */
 
 /*
@@ -91,19 +91,16 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     getMockLockssDaemon().getAlertManager();
-// <<<<<<< TestCrawlerImpl.java
     crawler = new TestableCrawlerImpl(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers =
       ListUtil.list(new MyMockPermissionChecker(true));
     
-// =======
 //     crawler = new NewContentCrawler(mau, spec, aus);
 //     // store the orignal checker and replace with a mock checker
 //     checker = (PermissionChecker)((CrawlerImpl)crawler).lockssCheckers.get(0);
 //     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(true));
 // //     crawler = new MyCrawler(mau, spec, aus);
 
-// >>>>>>> 1.22
     mau.setParser(parser);
     Properties p = new Properties();
     p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
@@ -199,8 +196,6 @@ public class TestCrawlerImpl extends LockssTestCase {
 //     assertFalse(crawler.doCrawl0Called());
   }
 
-// <<<<<<< TestCrawlerImpl.java
-// =======
 //   public void testReturnsTrueWhenCrawlSuccessful() {
 //     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 //     String url1="http://www.example.com/blah.html";
@@ -358,7 +353,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 //     assertFalse(crawler.doCrawl());
 //   }
-// >>>>>>> 1.22
+
 
   public void testGetStatusCrawlNotStarted() {
     Crawler.Status crawlStatus = crawler.getStatus();
