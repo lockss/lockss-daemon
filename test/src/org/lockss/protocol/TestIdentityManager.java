@@ -203,14 +203,12 @@ public class TestIdentityManager extends LockssTestCase {
   }
   public static void configParams(String dbDir, String mapDir, String addParams) {
     String s = IdentityManager.PARAM_IDDB_DIR + "=" + dbDir;
-    String s2 = IdentityManager.PARAM_IDDB_MAP_DIR + "=" + mapDir;
-    String configStr = s + "\n" + s2;
     if (addParams!=null) {
-      configStr += "\n" + addParams;
+      s += "\n" + addParams;
     }
 
     try {
-      TestConfiguration.setCurrentConfigFromString(configStr);
+      TestConfiguration.setCurrentConfigFromString(s);
     } catch (IOException ex) {
       fail("Unable to initialize configuration parameters.");
     }

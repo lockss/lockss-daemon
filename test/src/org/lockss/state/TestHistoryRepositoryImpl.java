@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.17 2003-03-11 19:53:06 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.18 2003-03-12 02:43:29 aalto Exp $
  */
 
 /*
@@ -221,7 +221,6 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
     filePath += HistoryRepositoryImpl.AU_FILE_NAME;
-    System.out.println("path: "+filePath);
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
 
@@ -256,10 +255,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   public static void configHistoryParams(String rootLocation)
     throws IOException {
     String s = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" + rootLocation;
-    String s2 = HistoryRepositoryImpl.PARAM_MAPPING_FILE_LOCATION +
-               "=src/org/lockss/state/pollmapping.xml";
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
-        FileUtil.urlOfString(s2)));
+    TestConfiguration.setCurrentConfigFromString(s);
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.20 2003-03-11 19:53:06 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.21 2003-03-12 02:43:29 aalto Exp $
  */
 
 /*
@@ -61,15 +61,11 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     Configuration.PREFIX + "history.location";
 
   /**
-   * Configuration parameter name for Lockss history mapping file location.
-   */
-  public static final String PARAM_MAPPING_FILE_LOCATION =
-    Configuration.PREFIX + "history.mapping.file";
-  /**
    * Name of top directory in which the histories are stored.
    */
   public static final String HISTORY_ROOT_NAME = "cache";
 
+  static final String MAPPING_FILE_NAME = "pollmapping.xml";
   static final String HISTORY_FILE_NAME = "history.xml";
   static final String AU_FILE_NAME = "au_state.xml";
   // this contains a '#' so that it's not defeatable by strings which
@@ -277,13 +273,14 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
 
   protected Mapping getMapping() throws Exception {
     if (mapping==null) {
-      String mappingFile = Configuration.getParam(PARAM_MAPPING_FILE_LOCATION);
-      if (mappingFile==null) {
-        logger.error("Couldn't get "+PARAM_MAPPING_FILE_LOCATION+" from Configuration");
-        throw new LockssRepository.RepositoryStateException("Couldn't load param.");
+      URL mappingLoc = getClass().getResource(MAPPING_FILE_NAME);
+      if (mappingLoc==null) {
+        logger.error("Couldn't find resource '"+MAPPING_FILE_NAME+"'");
+        throw new LockssRepository.RepositoryStateException(
+            "Couldn't find mapping file.");
       }
       mapping = new Mapping();
-      mapping.loadMapping(mappingFile);
+      mapping.loadMapping(mappingLoc);
     }
     return mapping;
   }

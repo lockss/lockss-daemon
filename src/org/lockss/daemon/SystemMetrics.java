@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.5 2003-01-03 00:12:04 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.6 2003-03-12 02:43:30 aalto Exp $
  */
 
 /*
@@ -107,7 +107,7 @@ public class SystemMetrics {
       }
       timeTaken = TimeBase.nowMs() - startTime;
       if (timeTaken==0) {
-        logger.error("Test finished in zero time: using bytesHashed estimate.");
+        logger.warning("Test finished in zero time: using bytesHashed estimate.");
         return (int)bytesHashed;
       }
       estimate = new Integer((int)(bytesHashed / timeTaken));

@@ -109,6 +109,13 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     assertFalse(uc.shouldBeCached());
   }
 
+  public void testStartURLConstruction() throws Exception {
+    URL url = new URL("http://www.example.com/");
+    String expectedStr = "http://www.example.com/lockss-volume123.shtml";
+    HighWireArchivalUnit hwau = makeAU(url, 10);
+    assertEquals(expectedStr, hwau.makeStartUrl(url, 123));
+  }
+
   public void testPathInUrlThrowsException() throws Exception {
     URL url = new URL("http://www.example.com/path");
     try {
@@ -116,6 +123,14 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch(ArchivalUnit.ConfigurationException e) {
     }
+  }
+
+  public void testGetNewContentCrawlUrls() throws Exception {
+    URL url = new URL("http://www.example.com/");
+    String expectedStr = "http://www.example.com/";
+    HighWireArchivalUnit hwau = makeAU(url, 10);
+    assertEquals(expectedStr, hwau.getNewContentCrawlUrls().get(0));
+
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

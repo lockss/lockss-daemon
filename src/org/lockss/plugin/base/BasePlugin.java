@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.3 2003-03-01 01:18:29 tal Exp $
+ * $Id: BasePlugin.java,v 1.4 2003-03-12 02:43:30 aalto Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public abstract class BasePlugin implements Plugin {
   }
 
   public ArchivalUnit getAU(String auId) {
-    return (ArchivalUnit)auMap.get(auId);
+    return (ArchivalUnit)auMap.get(encodeAUId(auId));
   }
 
   public Collection getAllAUs() {
@@ -92,7 +92,8 @@ public abstract class BasePlugin implements Plugin {
   }
 
   String encodeAUId(String id) {
-    return StringUtil.replaceString(id, ".", "|");
+    return StringUtil.replaceString(StringUtil.replaceString(id, ".", "|"),
+                                    ":", "|");
   }
 
 }

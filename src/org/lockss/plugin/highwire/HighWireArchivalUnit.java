@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.14 2003-03-08 04:35:53 tal Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.15 2003-03-12 02:43:30 aalto Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
    *
    * @param myPlugin owner plugin
    * @param config configuration info for AU
+   * @throws ArchivalUnit.ConfigurationException
    */
   public HighWireArchivalUnit(Plugin myPlugin, Configuration config)
       throws ArchivalUnit.ConfigurationException {
@@ -136,10 +137,10 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return new CrawlSpec(makeStartUrl(base, volume), rule);
   }
 
-  private String makeStartUrl(URL base, int volume) {
+  String makeStartUrl(URL base, int volume) {
     StringBuffer sb = new StringBuffer();
     sb.append(base.toString());
-    sb.append("lockss-volumme");
+    sb.append("lockss-volume");
     sb.append(volume);
     sb.append(".shtml");
     logger.debug("makeStartUrl returning: "+sb.toString());
@@ -175,7 +176,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   private void loadProps() {
     pauseMS = Configuration.getTimeIntervalParam(PARAM_HIGHWIRE_PAUSE_TIME,
 						 DEFAULT_PAUSE_TIME);
-    ncCrawlInterval = 
+    ncCrawlInterval =
       Configuration.getTimeIntervalParam(PARAM_HIGHWIRE_NC_INTERVAL,
 					 DEFAULT_NC_INTERVAL);
   }
@@ -204,7 +205,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public boolean shouldCrawlForNewContent(AuState aus) {
     long timeDiff = TimeBase.nowMs() - aus.getLastCrawlTime();
     logger.debug("Deciding whether to do new content crawl for "+aus);
-    if (aus.getLastCrawlTime() == 0 || 
+    if (aus.getLastCrawlTime() == 0 ||
 	timeDiff > (ncCrawlInterval * Constants.DAY)) {
       return true;
     }
@@ -212,7 +213,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public List getNewContentCrawlUrls() {
-    return ListUtil.list(getBaseUrl());
+    return ListUtil.list(getBaseUrl().toString());
   }
 
 

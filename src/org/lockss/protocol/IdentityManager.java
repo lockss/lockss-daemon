@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.18 2003-02-28 02:55:57 claire Exp $
+* $Id: IdentityManager.java,v 1.19 2003-03-12 02:43:29 aalto Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ import org.exolab.castor.mapping.*;
 import java.io.*;
 import org.lockss.app.*;
 import org.lockss.poller.Vote;
+import java.net.URL;
 
 /**
  * <p>Title: </p>
@@ -76,7 +77,6 @@ public class IdentityManager implements LockssManager {
   static final String PARAM_VOTE_DISOWNED = Configuration.PREFIX + "id.voteDisowned";
 
   static final String PARAM_IDDB_DIR = Configuration.PREFIX + "id.database.dir";
-  static final String PARAM_IDDB_MAP_DIR = Configuration.PREFIX + "id.mapping.file";
 
   static final String IDDB_FILENAME = "iddb.xml";
   static final String IDDB_MAP_FILENAME = "idmapping.xml";
@@ -369,21 +369,18 @@ public class IdentityManager implements LockssManager {
   Mapping getMapping() {
 
     if (mapping==null) {
-      String mappingFile = Configuration.getParam(PARAM_IDDB_MAP_DIR)
-                         + File.separator + IDDB_MAP_FILENAME;
-      File mpFile =  mpFile = new File(mappingFile);
-      if(mpFile == null || !mpFile.exists()) {
-        theLog.error("Unable to find mapping file: " + mpFile.getAbsolutePath());
+      URL mappingLoc = this.getClass().getResource(IDDB_MAP_FILENAME);
+      if (mappingLoc == null) {
+        theLog.error("Unable to find resource '"+IDDB_MAP_FILENAME+"'");
         return null;
       }
 
       Mapping map = new Mapping();
       try {
-        map.loadMapping(mappingFile);
+        map.loadMapping(mappingLoc);
         mapping = map;
-      }
-      catch (Exception ex) {
-        theLog.error("Loading of mapfile failed:" + mappingFile);
+      } catch (Exception ex) {
+        theLog.error("Loading of mapfile failed:" + mappingLoc);
       }
     }
     return mapping;

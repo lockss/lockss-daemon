@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.4 2003-03-08 03:37:26 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.5 2003-03-12 02:43:29 aalto Exp $
  */
 
 /*
@@ -158,6 +158,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
             LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, au),
             au);
       auMap.put(au, lockssRepo);
+      logger.debug("Adding LockssRepository for au: "+au);
       lockssRepo.initService(theDaemon);
       lockssRepo.startService();
     }
