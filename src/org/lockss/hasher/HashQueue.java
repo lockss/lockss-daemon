@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.9 2002-11-23 01:51:47 tal Exp $
+ * $Id: HashQueue.java,v 1.10 2002-11-25 21:29:37 tal Exp $
  */
 
 /*
@@ -273,7 +273,8 @@ class HashQueue implements Serializable {
       sb.append(" ");
       sb.append(origEst);
       sb.append("ms by ");
-      sb.append(dfDeadline.format(deadline.getExpiration()));
+      sb.append(deadline);
+//        sb.append(dfDeadline.format(deadline.getExpiration()));
       sb.append("]");
       return sb.toString();
     }
@@ -311,7 +312,7 @@ class HashQueue implements Serializable {
       // and it isn't finished
       for (int cnt = nsteps;
 	   cnt > 0 && goOn.booleanValue() && req == head() && !req.finished();
-	   cnt++) {
+	   cnt--) {
 
 	if (log.isDebug()) log.debug("hashStep(" + nbytes + "): " + req);
 
