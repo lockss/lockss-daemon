@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.2 2002-12-13 02:26:08 tal Exp $
+ * $Id: LockssDatagram.java,v 1.3 2002-12-16 21:55:33 tal Exp $
  */
 
 /*
@@ -84,5 +84,9 @@ public class LockssDatagram {
   /** Return the protocol under which to send the packet */
   public int getProtocol() {
     return protocol;
+  }
+
+  public String toString() {
+    return "[LDG: proto=" + protocol + ", size=" + payload.length + "]";
   }
 }
