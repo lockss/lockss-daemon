@@ -1,0 +1,6 @@
+#! /bin/sh
+
+export CLASSPATH=`cat test-classpath`
+
+java AUIdFromProps
+
