@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.11 2004-02-17 21:46:01 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.12 2004-02-23 09:15:54 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import java.util.*;
 import java.io.FileNotFoundException;
 
@@ -105,16 +106,16 @@ public class ConfigurablePlugin extends BasePlugin {
     return definitionMap;
   }
 
-  protected void installCacheExceptionHandler()
+  protected void installCacheResultHandler()
       throws InvalidDefinitionException {
-    CacheExceptionHandler handler = null;
+    CacheResultHandler handler = null;
     String handler_class = null;
     handler_class = definitionMap.getString(CM_EXCEPTION_HANDLER_KEY, null);
     if (handler_class != null) {
       try {
         handler =
-            (CacheExceptionHandler) Class.forName(handler_class).newInstance();
-        handler.init(exceptionMap);
+            (CacheResultHandler) Class.forName(handler_class).newInstance();
+        handler.init(resultMap);
       }
       catch (Exception ex) {
         throw new InvalidDefinitionException(mapName
