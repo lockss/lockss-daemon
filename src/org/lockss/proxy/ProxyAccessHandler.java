@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.3 2004-10-01 09:26:21 tlipkis Exp $
+ * $Id: ProxyAccessHandler.java,v 1.4 2004-10-18 03:36:31 tlipkis Exp $
  */
 
 /*
@@ -45,11 +45,14 @@ import org.lockss.protocol.*;
 /** Extension of IpAccessHandler that also allows fetches from any cache
  * that has proved it previous had the content it is trying to fetch. */
 public class ProxyAccessHandler extends IpAccessHandler {
+// A single handler instance may run concurrently in multiple threads, so
+// there must not be any per-request local state.
+
   private static Logger log = Logger.getLogger("ProxyAccess");
-  private LockssDaemon daemon;
-  private PluginManager pluginMgr;
-  private IdentityManager idMgr;
-  private ProxyManager proxyMgr;
+  private final LockssDaemon daemon;
+  private final PluginManager pluginMgr;
+  private final IdentityManager idMgr;
+  private final ProxyManager proxyMgr;
 
   public ProxyAccessHandler(LockssDaemon daemon, String serverName) {
     super(serverName);

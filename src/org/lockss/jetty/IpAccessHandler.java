@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.3 2004-02-10 07:51:44 tlipkis Exp $
+ * $Id: IpAccessHandler.java,v 1.4 2004-10-18 03:36:32 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.3 2004-02-10 07:51:44 tlipkis Exp $
+// $Id: IpAccessHandler.java,v 1.4 2004-10-18 03:36:32 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -45,6 +45,9 @@ import org.lockss.util.*;
 /** Handler that disallows access from IP addresses not allowed by an
  * IpFilter */
 public class IpAccessHandler extends AbstractHttpHandler {
+// A single handler instance may run concurrently in multiple threads, so
+// there must not be any per-request local state.
+
   private static Logger log = Logger.getLogger("IpAccess");
 
   private IpFilter filter = new IpFilter();
@@ -71,8 +74,9 @@ public class IpAccessHandler extends AbstractHttpHandler {
 
   public void setAllowLocal(boolean allowLocal) {
     if (localIps == null) {
-      localIps = new HashSet();
-      localIps.add("127.0.0.1");
+      HashSet set = new HashSet();
+      set.add("127.0.0.1");
+      localIps = set;			// set atomically
       // tk - add local interfaces
     }
     this.allowLocal = allowLocal;
