@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.19 2003-04-23 23:24:53 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.20 2003-04-23 23:37:48 troberts Exp $
  */
 
 /*
@@ -228,7 +228,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	uc.cache(); //IOException if there is a caching problem
 	numUrlsFetched++;
       } catch (FileNotFoundException e) {
-	logger.error(uc+" not found on publisher's site");
+	logger.warning(uc+" not found on publisher's site");
       } catch (IOException ioe) {
 	//XXX handle this better.  Requeue?
 	logger.error("Problem caching "+uc+". Ignoring", ioe);
