@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.1 2002-12-04 23:59:25 aalto Exp $
+ * $Id: PollHistory.java,v 1.2 2002-12-05 00:06:36 aalto Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class PollHistory {
   /**
    * Returns the type of the poll.
    * @return an int representing the type
-   * @see LcapMessage
+   * @see org.lockss.protocol.LcapMessage
    */
   public int getType() {
     return type;
