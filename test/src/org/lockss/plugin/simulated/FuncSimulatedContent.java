@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.22 2003-02-27 04:04:28 tal Exp $
+ * $Id: FuncSimulatedContent.java,v 1.23 2003-02-27 18:54:49 tal Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     theDaemon = new MockLockssDaemon(ListUtil.list(FileUtil.urlOfString(s),
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
     theDaemon.getLockssRepository(new MockArchivalUnit());
+    theDaemon.getPluginManager();
   }
 
   public void testPluginRegistration() {
