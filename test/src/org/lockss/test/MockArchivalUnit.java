@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.47 2004-01-29 23:05:43 eaalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.48 2004-03-07 08:42:47 tlipkis Exp $
  */
 
 /*
@@ -144,7 +144,7 @@ public class MockArchivalUnit implements ArchivalUnit {
 //     return ((MockCachedUrlSet)owner).makeUrlCacher(url);
 //   }
 
-  protected void addUrlToBeCached(String url) {
+  public void addUrlToBeCached(String url) {
     urlsToCache.add(url);
   }
 
