@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.3 2002-10-16 04:53:32 tal Exp $
+ * $Id: HashQueue.java,v 1.4 2002-11-05 21:05:41 tal Exp $
  */
 
 /*
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 
 // todo
-// disregard overrunners in insert()?  curEst() = 0 isn't enough
 // locking needed on currently running req?  what if dequeued by remove()
 //  while it's running.  Can't happen?
 
