@@ -27,3 +27,13 @@ function cascadeSelectEnable(elem, nextId) {
   }
  }
 }
+function selectAll(form, invert) {
+ for (var i=0;i < form.length;i++) {
+  elem = form.elements[i];
+  if (elem.type == 'checkbox') { 
+   if (invert)
+    elem.checked = !elem.checked;
+   else elem.checked = true; 
+  }
+ }
+}
