@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlSpec.java,v 1.8 2003-10-24 07:37:02 eaalto Exp $
+ * $Id: TestCrawlSpec.java,v 1.9 2003-10-30 23:56:50 troberts Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class TestCrawlSpec extends LockssTestCase {
 
   public void testRecrawlDepthDefaultsTo1() {
     CrawlSpec cs = new CrawlSpec("blah", null);
-    assertEquals(1, cs.getRecrawlDepth());
+    assertEquals(1, cs.getRefetchDepth());
   }
 
   public static class MyMockCrawlWindow implements CrawlWindow {

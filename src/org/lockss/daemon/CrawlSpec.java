@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.7 2003-10-24 07:37:02 eaalto Exp $
+ * $Id: CrawlSpec.java,v 1.8 2003-10-30 23:56:49 troberts Exp $
  */
 
 /*
@@ -42,11 +42,11 @@ public final class CrawlSpec {
   private List startList;
   private CrawlRule rule;
   private CrawlWindow window;
-  private int recrawlDepth = -1;
+  private int refetchDepth = -1;
 
   /**
    * Create a CrawlSpec with the specified start list and rule.  Defaults to
-   * recrawlDepth of 1.
+   * refetchDepth of 1.
    * @param startUrls a list of Strings specifying starting points
    * for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
@@ -62,7 +62,7 @@ public final class CrawlSpec {
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
-    this.recrawlDepth = 1;
+    this.refetchDepth = 1;
   }
 
   /**
@@ -71,23 +71,23 @@ public final class CrawlSpec {
    * for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
-   * @param recrawlDepth depth to always refetch
+   * @param refetchDepth depth to always refetch
    * @throws IllegalArgumentException if the url list is empty.
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public CrawlSpec(List startUrls, CrawlRule rule, int recrawlDepth)
+  public CrawlSpec(List startUrls, CrawlRule rule, int refetchDepth)
       throws ClassCastException {
     int len = startUrls.size();
     if (len == 0) {
       throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
     }
-    if (recrawlDepth < 1) {
-      throw new IllegalArgumentException("recrawlDepth must be at least 1");
+    if (refetchDepth < 1) {
+      throw new IllegalArgumentException("refetchDepth must be at least 1");
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
-    this.recrawlDepth = recrawlDepth;
+    this.refetchDepth = refetchDepth;
   }
 
   /**
@@ -107,11 +107,11 @@ public final class CrawlSpec {
    * @param url specifies the starting point for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
-   * @param recrawlDepth depth to always refetch
+   * @param refetchDepth depth to always refetch
    * @throws NullPointerException if the url is null.
    */
-  public CrawlSpec(String url, CrawlRule rule, int recrawlDepth) {
-    this(ListUtil.list(url), rule, recrawlDepth);
+  public CrawlSpec(String url, CrawlRule rule, int refetchDepth) {
+    this(ListUtil.list(url), rule, refetchDepth);
   }
 
 
@@ -159,8 +159,8 @@ public final class CrawlSpec {
    * 1 means just the starting urls, 2 is all of them and everything
    * they link directly to, etc.
    */
-  public int getRecrawlDepth() {
-    return recrawlDepth;
+  public int getRefetchDepth() {
+    return refetchDepth;
   }
 
 
