@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.17 2003-11-12 23:50:40 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.18 2003-12-06 00:54:36 eaalto Exp $
  */
 
 /*
@@ -51,6 +51,8 @@ public class BaseUrlCacher implements UrlCacher {
   private URLConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
   private LockssRepository repository;
+
+  private static final String HEADER_PREFIX = "_header";
 
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
@@ -192,7 +194,7 @@ public class BaseUrlCacher implements UrlCacher {
     Properties props = new Properties();
     // set header properties in which we have interest
     props.setProperty("content-type", conn.getContentType());
-    props.setProperty("date", ""+conn.getDate());
+    props.setProperty("date", Long.toString(conn.getDate()));
     props.setProperty("content-url", url);
 
     // store all header properties (this is the only way to iterate)
@@ -208,10 +210,10 @@ public class BaseUrlCacher implements UrlCacher {
         // only store headers with values
         // qualify header names to avoid conflict with our properties
         if (key!=null) {
-          props.setProperty("header-"+key, value);
+          props.setProperty(HEADER_PREFIX + key, value);
         } else {
           // the first header field has a null key
-          props.setProperty("header-"+index, value);
+          props.setProperty(HEADER_PREFIX + index, value);
         }
       }
       index++;
