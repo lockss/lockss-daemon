@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimerQueue.java,v 1.2 2002-12-06 19:29:32 tal Exp $
+ * $Id: TestTimerQueue.java,v 1.3 2002-12-15 00:13:16 tal Exp $
  */
 
 /*
@@ -65,38 +65,36 @@ public class TestTimerQueue extends LockssTestCase {
     TimeBase.setReal();
   }
 
-
   public void testQueue() {
-    final List l = new ArrayList();
+    final SimpleQueue.Fifo q = new SimpleQueue.Fifo();
     TimerQueue.Callback cb = new TimerQueue.Callback() {
 	public void timerExpired(Object cookie) {
-	  l.add(cookie);
+	  q.put(cookie);
 	}};
     TimerQueue.schedule(Deadline.in(500), cb, "foo");
-    assertEquals(0, l.size());
+    assertTrue(q.isEmpty());
     TimerQueue.schedule(Deadline.in(300), cb, "bar");
-    assertEquals(0, l.size());
+    assertTrue(q.isEmpty());
     TimeBase.step(501);
-    TimerUtil.guaranteedSleep(10);
-    assertEquals(ListUtil.list("bar", "foo"), l);
+    assertEquals("bar", q.get(500));
+    assertEquals("foo", q.get(500));
   }
 
   public void testExpire() {
-    final List l = new ArrayList();
+    final SimpleQueue.Fifo q = new SimpleQueue.Fifo();
     Deadline d1 = Deadline.in(500);
     TimerQueue.Callback cb = new TimerQueue.Callback() {
 	public void timerExpired(Object cookie) {
-	  l.add(cookie);
+	  q.put(cookie);
 	}};
     TimerQueue.schedule(d1, cb, "foo");
-    assertEquals(0, l.size());
+    TimeBase.step(100);
+    assertEquals(null, q.get(20));
     TimerQueue.schedule(Deadline.in(300), cb, "bar");
-    assertEquals(0, l.size());
+    assertEquals(null, q.get(20));
     d1.expire();
-    TimerUtil.guaranteedSleep(10);
-    assertEquals(ListUtil.list("foo"), l);
+    assertEquals("foo", q.get(500));
     TimeBase.step(501);
-    TimerUtil.guaranteedSleep(10);
-    assertEquals(ListUtil.list("foo", "bar"), l);
+    assertEquals("bar", q.get(500));
   }
 }
