@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.2 2004-02-27 00:24:22 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.3 2004-03-07 08:38:12 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -96,6 +96,10 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
     new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
   static {
     gmtDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+  }
+
+  public void setUserAgent(String value) {
+    setRequestProperty("user-agent", value);
   }
 
   public void setRequestPropertyDate(String key, long time) {
