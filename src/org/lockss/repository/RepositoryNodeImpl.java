@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.50 2004-04-02 23:24:38 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.51 2004-04-06 07:30:51 tlipkis Exp $
  */
 
 /*
@@ -728,23 +728,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
-    try {
-      InputStream is =
-          new BufferedInputStream(new FileInputStream(curInputFile));
-      Properties props = (Properties)curProps.clone();
-      // the second stream is only used by the reader
-      // this allows us to set the encoding, rather than using the system default
-      InputStream is2 =
-          new BufferedInputStream(new FileInputStream(curInputFile));
-      Reader reader = new BufferedReader(new InputStreamReader(is2,
-          Constants.DEFAULT_ENCODING));
-      return new RepositoryNode.RepositoryNodeContents(is, props, reader);
-    } catch (IOException ioe) {
-      logger.error("Couldn't get inputstream for '"+curInputFile.getPath()+"'");
-      logger.debug3("Running consistency check on node '"+url+"'");
-      repository.deactivateInconsistentNode(this);
-      throw new LockssRepository.RepositoryStateException("Couldn't get info for node.");
-    }
+    return new RepositoryNodeContentsImpl();
   }
 
   public OutputStream getNewOutputStream() {
@@ -1083,6 +1067,62 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   /**
+   * Intended to ensure props and stream reflect a consistent view of a
+   * single version.  This version gurantees that only if the stream is
+   * fetched only once.
+   */
+  public class RepositoryNodeContentsImpl implements RepositoryNodeContents {
+    private Properties props;
+    private InputStream is;
+
+    private RepositoryNodeContentsImpl() {
+    }
+
+    public InputStream getInputStream() {
+      ensureInputStream();
+      InputStream res = is;
+      // stream can only be used once.
+      is = null;
+      return res;
+    }
+
+    public Properties getProperties() {
+      if (props == null) {
+	ensureInputStream();
+      }
+      return props;
+    }
+
+    public void release() {
+      is = null;
+    }
+
+    private void assertContent() {
+      if (!hasContent()) {
+	throw new UnsupportedOperationException("No content for url '" +
+						url + "'");
+      }
+    }
+
+    private synchronized void ensureInputStream() {
+      if (is == null) {
+	assertContent();
+	try {
+	  is = new BufferedInputStream(new FileInputStream(curInputFile));
+	  props = (Properties)curProps.clone();
+	} catch (IOException e) {
+	  logger.error("Couldn't get inputstream for '" +
+		       curInputFile.getPath() + "'");
+	  logger.debug3("Running consistency check on node '"+url+"'");
+	  repository.deactivateInconsistentNode(RepositoryNodeImpl.this);
+	  throw new LockssRepository.RepositoryStateException ("Couldn't open InputStream: " + e.toString());
+	}
+      }
+    }
+  }
+
+
+  /**
    * Simple comparator which uses File.compareTo() for sorting.
    */
   private class FileComparator implements Comparator {
@@ -1090,5 +1130,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // compares file pathnames
       return ((File)o1).getName().compareToIgnoreCase(((File)o2).getName());
     }
+
   }
 }

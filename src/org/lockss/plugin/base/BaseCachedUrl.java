@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.10 2004-04-05 08:00:59 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.11 2004-04-06 07:30:52 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class BaseCachedUrl implements CachedUrl {
 
   private LockssRepository repository;
   private RepositoryNode leaf = null;
+  protected RepositoryNode.RepositoryNodeContents rnc = null;
 
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+"baseCachedUrl.filterHashStream";
@@ -115,23 +116,40 @@ public class BaseCachedUrl implements CachedUrl {
   }
 
   public InputStream getUnfilteredInputStream() {
-    ensureLeafLoaded();
-    return leaf.getNodeContents().input;
+    ensureRnc();
+    return rnc.getInputStream();
   }
 
   public Reader openForReading() {
-    ensureLeafLoaded();
-    return leaf.getNodeContents().reader;
+    ensureRnc();
+    try {
+      return
+	new BufferedReader(new InputStreamReader(rnc.getInputStream(),
+						 Constants.DEFAULT_ENCODING));
+    } catch (IOException e) {
+      // XXX Wrong Exception.  Should this method be declared to throw
+      // UnsupportedEncodingException?
+      logger.error("Creating InputStreamReader for '" + url + "'", e);
+      throw new LockssRepository.RepositoryStateException
+	("Couldn't create InputStreamReader:" + e.toString());
+    }
   }
  
  public CIProperties getProperties() {
-    ensureLeafLoaded();
-    return CIProperties.fromProperties(leaf.getNodeContents().props);
+    ensureRnc();
+    return CIProperties.fromProperties(rnc.getProperties());
   }
 
   public byte[] getUnfilteredContentSize() {
     ensureLeafLoaded();
     return ByteArray.encodeLong(leaf.getContentSize());
+  }
+
+  private void ensureRnc() {
+    ensureLeafLoaded();
+    if (rnc == null) {
+      rnc = leaf.getNodeContents();
+    }
   }
 
   private void ensureLeafLoaded() {

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.16 2004-03-27 02:37:24 eaalto Exp $
+ * $Id: RepositoryNode.java,v 1.17 2004-04-06 07:30:51 tlipkis Exp $
  */
 
 /*
@@ -201,19 +201,20 @@ public interface RepositoryNode {
   public void setNewProperties(Properties newProps);
 
   /**
-   * RepositoryNodeContents is a struct containing a matched inputstream
-   * and properties.
+   * RepositoryNodeContents is used to obtain Properties and InputStream.
+   * This is intended to ensure props and stream reflect a consistent view
+   * of a single version, but see the comments in
+   * RepositoryNodeImpl#RepositoryNodeContentsImpl.
+   * @see RepositoryNodeImpl#RepositoryNodeContentsImpl
    */
-  public class RepositoryNodeContents {
-    public InputStream input;
-    public Properties props;
-    public Reader reader;
+  public interface RepositoryNodeContents {
+    /** Return an InputStream */
+    public InputStream getInputStream();
 
-    public RepositoryNodeContents(InputStream input, Properties props,
-				  Reader reader) {
-      this.input = input;
-      this.props = props;
-      this.reader = reader;
-    }
+    /** Return the properties */
+    public Properties getProperties();
+
+    /** Release resources, close any cached open stream. */
+    public void release();
   }
 }

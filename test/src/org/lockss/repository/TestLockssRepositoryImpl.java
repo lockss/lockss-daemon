@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.43 2004-03-30 02:09:50 eaalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.44 2004-04-06 07:30:51 tlipkis Exp $
  */
 
 /*
@@ -240,7 +240,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(1, leaf.getCurrentVersion());
 
     try {
-      leaf.getNodeContents();
+      leaf.getNodeContents().getInputStream();
       fail("Should have thrown state exception.");
     } catch (LockssRepository.RepositoryStateException rse) { }
 

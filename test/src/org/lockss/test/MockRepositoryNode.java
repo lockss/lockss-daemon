@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.9 2004-03-27 02:37:24 eaalto Exp $
+ * $Id: MockRepositoryNode.java,v 1.10 2004-04-06 07:30:51 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ public class MockRepositoryNode implements RepositoryNode {
   public long contentSize = 0;
   public InputStream curInput;
   public Properties curProps;
-  public Reader curReader;
   public int currentVersion = -1;
 
   public String url;
@@ -159,7 +158,7 @@ public class MockRepositoryNode implements RepositoryNode {
     if (!hasContent()) {
       throw new UnsupportedOperationException("No content for url '"+url+"'");
     }
-    return new RepositoryNodeContents(curInput, curProps, curReader);
+    return new MockRepositoryNodeContents(curInput, curProps);
   }
 
   public OutputStream getNewOutputStream() {
@@ -170,4 +169,24 @@ public class MockRepositoryNode implements RepositoryNode {
     throw new UnsupportedOperationException("Not supported.");
   }
 
+  class MockRepositoryNodeContents implements RepositoryNodeContents {
+    private InputStream is;
+    private Properties props;
+
+    private MockRepositoryNodeContents(InputStream is, Properties props) {
+      this.is = is;
+      this.props = props;
+    }
+
+    public InputStream getInputStream() {
+      return is;
+    }
+
+    public Properties getProperties() {
+      return props;
+    }
+
+    public void release() {
+    }
+  }
 }

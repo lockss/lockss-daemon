@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.37 2004-04-02 23:24:38 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.38 2004-04-06 07:30:51 tlipkis Exp $
  */
 
 /*
@@ -417,7 +417,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 2", resultStr);
-    props = leaf.getNodeContents().props;
+    props = leaf.getNodeContents().getProperties();
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
@@ -459,7 +459,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
-    props = leaf.getNodeContents().props;
+    props = leaf.getNodeContents().getProperties();
     assertEquals("value 2", props.getProperty("test 1"));
 
     // make sure proper files exist
@@ -532,10 +532,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "test stream", props);
 
     RepositoryNode.RepositoryNodeContents contents = leaf.getNodeContents();
-    props = contents.props;
-    // close these to allow the file to be renamed later
-    contents.input.close();
-    contents.reader.close();
+    props = contents.getProperties();
+    // close stream to allow the file to be renamed later
+    contents.release();
 
     assertEquals("value 1", props.getProperty("test 1"));
 
@@ -546,7 +545,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     writeToLeaf(leaf, "test stream 2");
     leaf.sealNewVersion();
 
-    props = leaf.getNodeContents().props;
+    props = leaf.getNodeContents().getProperties();
     assertEquals("value 2", props.getProperty("test 1"));
   }
 
@@ -750,7 +749,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
 
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream 1", resultStr);
-    props = leaf.getNodeContents().props;
+    props = leaf.getNodeContents().getProperties();
     assertEquals("value 1", props.getProperty("test 1"));
   }
 
@@ -953,7 +952,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public static String getLeafContent(RepositoryNode leaf) throws IOException {
-    InputStream is = leaf.getNodeContents().input;
+    InputStream is = leaf.getNodeContents().getInputStream();
     OutputStream baos = new ByteArrayOutputStream(20);
     StreamUtil.copy(is, baos);
     is.close();
