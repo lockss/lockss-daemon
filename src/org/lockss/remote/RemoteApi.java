@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.6 2004-05-12 17:47:18 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.7 2004-05-14 08:40:56 tlipkis Exp $
  */
 
 /*
@@ -299,6 +299,12 @@ public class RemoteApi extends BaseLockssManager {
 
   String pluginIdFromAuId(String auid) {
     return pluginMgr.pluginNameFromAuId(auid);
+  }
+
+  public InputStream openCacheConfigFile(String cacheConfigFileName)
+      throws FileNotFoundException {
+    File cfile = configMgr.getCacheConfigFile(cacheConfigFileName);
+    return new FileInputStream(cfile);
   }
 
   /** Comparator for sorting AuProxy lists.  Not suitable for use in a
