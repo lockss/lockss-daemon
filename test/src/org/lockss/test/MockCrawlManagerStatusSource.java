@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.2 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.3 2003-12-13 01:28:27 troberts Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public class MockCrawlManagerStatusSource
     this.activeAus = activeAus;
   }
 
-  public Collection getCrawls(String auid) {
+  public Collection getCrawlStatus(String auid) {
     return (Collection) map.get(auid);
   }
 
-  public void setCrawls(Collection crawls, String auid) {
-    map.put(auid, crawls);
+  public void setCrawlStatus(Collection crawlStatus, String auid) {
+    map.put(auid, crawlStatus);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.7 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.8 2003-12-13 01:28:27 troberts Exp $
  */
 
 /*
@@ -100,10 +100,10 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   public void addCrawls(String key, List rows) {
-    Collection crawls = statusSource.getCrawls(key);
+    Collection crawls = statusSource.getCrawlStatus(key);
     if (crawls != null) {
       for (Iterator it = crawls.iterator(); it.hasNext();) {
-	rows.add(makeRow((Crawler) it.next()));
+	rows.add(makeRow((Crawler.Status) it.next()));
       }
     }
   }
@@ -132,19 +132,19 @@ public class CrawlManagerStatus implements StatusAccessor {
     return "Unknown";
   }
 
-  private Map makeRow(Crawler crawler) {
-    String type = getTypeString(crawler.getType());
+  private Map makeRow(Crawler.Status status) {
+    String type = getTypeString(status.getType());
     Map row = new HashMap();
-    ArchivalUnit au = crawler.getAu();
+    ArchivalUnit au = status.getAu();
     row.put(AU_COL_NAME, au.getName());
     row.put(CRAWL_TYPE, type);
-    row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
-    row.put(END_TIME_COL_NAME, new Long(crawler.getEndTime()));
-    row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
-    row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
+    row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
+    row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
+    row.put(NUM_URLS_FETCHED, new Long(status.getNumFetched()));
+    row.put(NUM_URLS_PARSED, new Long(status.getNumParsed()));
     row.put(START_URLS,
-	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
-    row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
+	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
+    row.put(CRAWL_STATUS, statusToString(status.getCrawlStatus()));
     return row;
   }
 
