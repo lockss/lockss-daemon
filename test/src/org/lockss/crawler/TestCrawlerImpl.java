@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.5 2004-01-29 23:05:44 eaalto Exp $
+ * $Id: TestCrawlerImpl.java,v 1.6 2004-02-03 03:12:32 troberts Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.crawler;
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.state.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 
@@ -48,7 +50,7 @@ public class TestCrawlerImpl extends LockssTestCase {
   private MockArchivalUnit mau = null;
   private List startUrls = null;
 
-  private CrawlerImpl crawler = null;
+  private Crawler crawler = null;
   private CrawlSpec spec = null;
 
   public static final String EMPTY_PAGE = "";
@@ -86,45 +88,13 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, crawlRule);
-    crawler =
-      CrawlerImpl.makeNewContentCrawler(mau, spec, aus);
+    crawler = new NewContentCrawler(mau, spec, aus);
+//     crawler = new MyCrawler(mau, spec, aus);
 
     mau.setParser(parser);
     Properties p = new Properties();
-    p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-  }
-
-  //Tests for makeNewContentCrawler (mncc)
-  public void testMnccThrowsForNullAu() {
-    try {
-      crawler =
-	CrawlerImpl.makeNewContentCrawler(null, spec,
-						 new MockAuState());
-      fail("Calling makeNewContentCrawler with a null ArchivalUnit"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testMnccThrowsForNullCrawlSpec() {
-    try {
-      crawler =
-	CrawlerImpl.makeNewContentCrawler(mau, null, new MockAuState());
-      fail("Calling makeNewContentCrawler with a null CrawlSpec"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testMnccThrowsForNullAuState() {
-    try {
-      crawler =
-	CrawlerImpl.makeNewContentCrawler(mau, spec, null);
-      fail("Calling makeNewContentCrawler with a null CrawlSpec"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
   }
 
   public void testDoCrawlThrowsForNullDeadline() {
@@ -134,239 +104,6 @@ public class TestCrawlerImpl extends LockssTestCase {
 	   "an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
-  }
-
-
-  //Will try to fetch startUrl, content parser will return no urls,
-  //so we should only cache the start url
-  public void testDoCrawlOnePageNoLinks() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl);
-    crawler.doCrawl(Deadline.MAX);
-    Set cachedUrls = cus.getCachedUrls();
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cachedUrls);
-  }
-
-//   //make work
-//   public void testDoNotCrawlWithHttpsLink() {
-//     String url = "https://www.example.com/web_link.html";
-
-//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-//     cus.addUrl(startUrl);
-//     parser.addUrlSetToReturn(startUrl, SetUtil.set(url));
-//     cus.addUrl(url);
-//     crawler.doCrawl(Deadline.MAX);
-//     Set cachedUrls = cus.getCachedUrls();
-//     Set expected = SetUtil.set(startUrl);
-//     assertEquals(expected, cachedUrls);
-//   }
-
-  //Fetch startUrl, parser will return a single url that already exists
-  //we should only cache startUrl
-  public void testDoesNotCacheExistingFile() {
-    String url1="http://www.example.com/blah.html";
-
-    parser.setUrlToReturn(url1);
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, true, true);
-    cus.addUrl(url1, true, true);
-
-    crawler.doCrawl(Deadline.MAX);
-
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  //test that we don't cache a file that our crawl rules reject
-  public void testDoesNotCacheFileWhichShouldNotBeCached() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, false, false);
-
-    crawler.doCrawl(Deadline.MAX);
-    assertEquals(0, cus.getCachedUrls().size());
-  }
-
-  //XXX move to TestBaseArchivalUnit
-
-  //test that we correctly parse content that has mime type
-  //text/html; charset=US-ASCII
-//   public void testParsesFileWithCharsetAfterContentType() {
-//     String url = "http://www.example.com/link1.html";
-//     Properties props = new Properties();
-//     props.setProperty("content-type", "text/html; charset=US-ASCII");
-
-//     parser.setUrlToReturn(url);
-
-//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-//     cus.addUrl(startUrl, false, true, props);
-//     cus.addUrl(url);
-//     crawlRule.addUrlToCrawl(url);
-
-//     crawler.doCrawl(Deadline.MAX);
-
-//     Set expected = SetUtil.set(startUrl, url);
-//     assertEquals(expected, cus.getCachedUrls());
-//   }
-
-//   //test that we're not case sensitive when checking content-type
-//   public void testParsesFileWithCapitilizedContentType() {
-//     String url = "http://www.example.com/link1.html";
-//     Properties props = new Properties();
-//     props.setProperty("content-type", "TEXT/HTML");
-
-
-//     parser.setUrlToReturn(url);
-
-//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-//     cus.addUrl(startUrl, false, true, props);
-//     cus.addUrl(url);
-//     crawlRule.addUrlToCrawl(url);
-
-//     crawler.doCrawl(Deadline.MAX);
-
-//     Set expected = SetUtil.set(startUrl, url);
-//     assertEquals(expected, cus.getCachedUrls());
-//   }
-
-//   public void testDoesNotParseBadContentType() {
-//     String url = "http://www.example.com/link1.html";
-
-//     Properties props = new Properties();
-//     props.setProperty("content-type", "text/xml");
-
-
-//     parser.setUrlToReturn(url);
-
-//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-//     cus.addUrl(startUrl, false, true, props);
-//     cus.addUrl(url);
-
-//     crawler.doCrawl(Deadline.MAX);
-
-//     Set expected = SetUtil.set(startUrl);
-//     assertEquals(expected, cus.getCachedUrls());
-//   }
-
-
-
-
-  public void testMultipleStartingUrls() {
-    List urls = ListUtil.list("http://www.example.com/link1.html",
-			      "http://www.example.com/link2.html",
-			      "http://www.example.com/link3.html",
-			      startUrl);
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    for (int ix=0; ix<urls.size(); ix++) {
-      String curUrl = (String)urls.get(ix);
-      cus.addUrl(curUrl);
-      crawlRule.addUrlToCrawl(curUrl);
-    }
-
-
-    spec = new CrawlSpec(urls, crawlRule);
-    crawler =
-      CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
-
-    mau.setParser(parser);
-
-    crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.fromList(urls);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testOverwritesStartingUrlsOneLevel() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, true, true);
-
-    crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testOverwritesStartingUrlsMultipleLevels() {
-    spec = new CrawlSpec(startUrls, crawlRule, 2);
-    crawler =
-      CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/dir/link3.html";
-    String url4= "http://www.example.com/dir/link9.html";
-
-    mau.setParser(parser);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    parser.addUrlSetToReturn(url1, SetUtil.set(url4));
-
-    cus.addUrl(startUrl, true, true);
-    cus.addUrl(url1, true, true);
-    cus.addUrl(url2, true, true);
-    cus.addUrl(url3, true, true);
-    cus.addUrl(url4, true, true);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
-    crawlRule.addUrlToCrawl(url4);
-
-    crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.set(startUrl, url1, url2, url3);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testWillNotParseExistingPagesForUrls() {
-    String url1 = "http://www.example.com/link3.html";
-    String url2 = "http://www.example.com/link4.html";
-    startUrls = ListUtil.list(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    parser.addUrlSetToReturn(url1, SetUtil.set(url2));
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, true, true);
-    cus.addUrl(url1, true, true);
-    cus.addUrl(url2);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-
-    crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testWillNotCrawlExpiredDeadline() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl, false, true);
-
-    Deadline deadline = Deadline.in(0);
-    crawler.doCrawl(deadline);
-    assertEquals(0, cus.getCachedUrls().size());
-  }
-
-  public void testCrawlingWithDeadlineThatExpires() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    String source =
-      "<html><head><title>Test</title></head><body>"+
-      "<a href=http://www.example.com/link1.html>link1</a>"+
-      "Filler, with <b>bold</b> tags and<i>others</i>"+
-      "<a href=http://www.example.com/link2.html>link2</a>"+
-      "<a href=http://www.example.com/link3.html>link3</a>";
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    parser.addUrlSetToReturn(url1, SetUtil.set(url1, url2, url3));
-    cus.addUrl(startUrl);
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    cus.addUrl(url3);
-
-    crawler.doCrawl(Deadline.in(2));
-//     Set expected = SetUtil.set(startUrl, url1);
-    Set expected = SetUtil.set(startUrl);
-    assertEquals(expected, cus.getCachedUrls());
   }
 
   public void testDoesntCacheFailedPermission() {
@@ -395,62 +132,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testDoesNotLoopOnSelfReferentialPage() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    parser.addUrlSetToReturn(url1, SetUtil.set(url1, url2, url3));
-    cus.addUrl(startUrl);
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    cus.addUrl(url3);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
-
-    crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.set(startUrl, url1, url2, url3);
-    assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testDoesNotLoopOnSelfReferentialLoop() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    String source1 =
-      "<html><head><title>Test</title></head><body>"+
-      "<a href="+url1+">link1</a>"+
-      "Filler, with <b>bold</b> tags and<i>others</i>"+
-      "<a href="+url2+">link2</a>"+
-      "<a href="+startUrl+">start page</a>"+
-      "<a href="+url3+">link3</a>";
-
-    String source2 =
-      "<html><head><title>Test</title></head><body>"+
-      "<a href="+startUrl+">link1</a>";
-
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    parser.addUrlSetToReturn(startUrl,
-			     SetUtil.set(url1, url2, url3, startUrl));
-    parser.addUrlSetToReturn(url1, SetUtil.set(startUrl));
-    cus.addUrl(startUrl);
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    cus.addUrl(url3);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
-
-    crawler.doCrawl(Deadline.MAX);
-    Set expected = SetUtil.set(startUrl, url1, url2, url3);
-    assertEquals(expected, cus.getCachedUrls());
+//     assertFalse(crawler.doCrawl0Called());
   }
 
   public void testReturnsTrueWhenCrawlSuccessful() {
@@ -493,7 +175,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 	       +"DEFAULT_RETRY_TIMES", retryNum > DEFAULT_RETRY_TIMES);
     Properties p = new Properties();
     p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -512,7 +194,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     int retryNum = 3;
     Properties p = new Properties();
     p.setProperty(PARAM_RETRY_TIMES, String.valueOf(retryNum));
-    p.setProperty(CrawlerImpl.PARAM_RETRY_PAUSE, "0");
+    p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     MyMockCachedUrlSet cus = (MyMockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -611,94 +293,6 @@ public class TestCrawlerImpl extends LockssTestCase {
 		 crawler.getStatus().getCrawlStatus());
   }
 
-
-  private static List testUrlList = ListUtil.list("http://example.com");
-
-  //Tests for makeRepairCrawler (mrc)
-  public void testMrcThrowsForNullAu() {
-    try {
-      crawler =
-	CrawlerImpl.makeRepairCrawler(null, spec, aus, testUrlList);
-      fail("Calling makeRepairCrawler with a null ArchivalUnit"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testMrcThrowsForNullSpec() {
-    try {
-      crawler =
-	CrawlerImpl.makeRepairCrawler(mau, null, aus, testUrlList);
-      fail("Calling makeRepairCrawler with a null CrawlSpec"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testMrcThrowsForNullList() {
-    try {
-      crawler =
-	CrawlerImpl.makeRepairCrawler(mau, spec, aus, null);
-      fail("Calling makeRepairCrawler with a null repair list"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testMrcThrowsForEmptyList() {
-    try {
-      crawler =
-	CrawlerImpl.makeRepairCrawler(mau, spec, aus, ListUtil.list());
-      fail("Calling makeRepairCrawler with a empty repair list"
-	   +" should throw an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
-    }
-  }
-
-  public void testRepairCrawlCallsForceCache() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String repairUrl = "http://example.com/forcecache.html";
-    cus.addUrl(repairUrl);
-    crawlRule.addUrlToCrawl(repairUrl);
-
-    List repairUrls = ListUtil.list(repairUrl);
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = CrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
-
-    crawler.doCrawl(Deadline.MAX);
-
-    Set cachedUrls = cus.getForceCachedUrls();
-    assertEquals(1, cachedUrls.size());
-    assertTrue("cachedUrls: "+cachedUrls, cachedUrls.contains(repairUrl));
-  }
-
-  public void testRepairCrawlDoesntFollowLinks() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String repairUrl1 = "http://www.example.com/forcecache.html";
-    String repairUrl2 = "http://www.example.com/link3.html";
-    String url1 = "http://www.example.com/link1.html";
-    String url2 = "http://www.example.com/link2.html";
-
-    cus.addUrl(repairUrl1);
-    parser.addUrlSetToReturn(repairUrl1, SetUtil.set(url1, url2, repairUrl2));
-    cus.addUrl(repairUrl2);
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    crawlRule.addUrlToCrawl(repairUrl1);
-    crawlRule.addUrlToCrawl(repairUrl2);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-
-    List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = CrawlerImpl.makeRepairCrawler(mau, spec, aus, repairUrls);
-
-    crawler.doCrawl(Deadline.MAX);
-
-    Set cachedUrls = cus.getForceCachedUrls();
-    assertSameElements(repairUrls, cachedUrls);
-  }
-
   public void testCrawlWindow() {
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";
@@ -719,73 +313,12 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url3);
 
 
-    crawler =
-      CrawlerImpl.makeNewContentCrawler(mau, spec, new MockAuState());
+    crawler = new NewContentCrawler(mau, spec, new MockAuState());
     mau.setParser(parser);
     crawler.doCrawl(Deadline.MAX);
     // only gets 2 urls because start url is fetched twice (manifest & parse)
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
-  }
-
-  public void testCrawlListEmptyOnExit() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    cus.addUrl(url3);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
-
-    crawler.doCrawl(Deadline.MAX);
-    assertEmpty(aus.getCrawlUrls());
-  }
-
-  public void testCrawlListPreservesUncrawledUrls() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    cus.addUrl(url3);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
-
-    crawler.doCrawl(Deadline.in(2));
-    //Set expected = SetUtil.set(startUrl, url1);
-    Set expected = SetUtil.set(url1, url2, url3);
-    assertSameElements(expected, aus.getCrawlUrls());
-  }
-
-  public void testUpdatedCrawlListCalledForEachFetch() {
-    String url1= "http://www.example.com/link1.html";
-    String url2= "http://www.example.com/link2.html";
-    String url3= "http://www.example.com/link3.html";
-
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    cus.addUrl(startUrl);
-    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
-    cus.addUrl(url1);
-    cus.addUrl(url2);
-    cus.addUrl(url3);
-    crawlRule.addUrlToCrawl(url1);
-    crawlRule.addUrlToCrawl(url2);
-    crawlRule.addUrlToCrawl(url3);
-
-    crawler.doCrawl(Deadline.MAX);
-    //Set expected = SetUtil.set(startUrl, url1);
-    aus.assertUpdatedCrawlListCalled(3); //not called for startUrl
   }
 
   private class MockCrawlWindowThatCountsDown implements CrawlWindow {
@@ -815,6 +348,27 @@ public class TestCrawlerImpl extends LockssTestCase {
       return true;
     }
   }
+
+//   private class MyCrawler extends CrawlerImpl {
+//     private boolean doCrawl0Called = false;
+
+//     public MyCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
+//       super(au, spec, aus);
+//     }
+
+//     public int getType() {
+//       return -1;
+//     }
+
+//     protected boolean doCrawl0(Deadline deadline) {
+//       doCrawl0Called = true;
+//       return true;
+//     }
+
+//     public boolean doCrawl0Called() {
+//       return doCrawl0Called;
+//     }
+//   }
 
   private class MyMockCachedUrlSet extends MockCachedUrlSet {
     public MyMockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {
