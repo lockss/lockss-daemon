@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.5 2002-11-27 19:50:48 troberts Exp $
+ * $Id: MockCachedUrl.java,v 1.6 2003-01-02 19:38:24 troberts Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class MockCachedUrl implements CachedUrl {
 
   private boolean doesExist = false;
 
+  private String content = null;
+
 
   public MockCachedUrl(String url) {
     this.url = url;
@@ -82,6 +84,9 @@ public class MockCachedUrl implements CachedUrl {
   // Read interface - used by the proxy.
 
   public InputStream openForReading(){
+    if (content != null) {
+      return new StringInputStream(content);
+    }
     return cachedIS;
   }
 
@@ -99,8 +104,12 @@ public class MockCachedUrl implements CachedUrl {
 
   //mock specific acessors
   
-  public void setInputStream(InputStream is){
-    cachedIS = is;
+//   public void setInputStream(InputStream is){
+//     cachedIS = is;
+//   }
+  
+  public void setContent(String content) {
+    this.content = content;
   }
 
   public void setProperties(Properties prop){
