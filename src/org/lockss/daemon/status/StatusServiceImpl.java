@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.15 2003-03-25 01:04:05 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.16 2003-03-29 02:15:03 troberts Exp $
  */
 
 /*
@@ -201,7 +201,7 @@ public class StatusServiceImpl
 	      StatusTable table = new StatusTable(tableName);
 	      statusAccessor.populateTable(table);
 	      title = table.getTitle();
- 	    } catch (NoSuchTableException e) {
+ 	    } catch (Exception e) {
  	      // no action, title is null here
  	    }
  	    // getTitle might return null or throw

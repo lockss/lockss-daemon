@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.11 2003-03-20 02:29:18 troberts Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.12 2003-03-29 02:15:03 troberts Exp $
  */
 
 /*
@@ -754,7 +754,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
 						  refAcc);
   }
 
-  public void testgetReference() {
+  public void testGetReference() {
     MockObjectReferenceAccessor refAcc = new MockObjectReferenceAccessor();
     refAcc.setRef(new StatusTable.Reference("value", "table1", "key"));
     statusService.registerObjectReferenceAccessor("table1", C2.class,
@@ -766,6 +766,21 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertNotNull(ref);
     assertEquals("value", ref.getValue());
     assertEquals("table1", ref.getTableName());
+  }
+
+  public void testSAThrowsAreTrapped() throws 
+    StatusService.NoSuchTableException {
+    StatusAccessor statusAccessor = new StatusAccessor() {
+	public void populateTable(StatusTable table) {
+	  throw new NullPointerException();
+	}
+	public boolean requiresKey() {
+	  return false;
+	}
+      };
+    statusService.startService(); //registers table of all keyless tables
+    statusService.registerStatusAccessor("table1", statusAccessor);
+    statusService.getTable("table_of_all_tables", null);
   }
 
   private class C1 {}
