@@ -83,6 +83,13 @@
                         <bind-xml name="LastPollTime" node="element"/>
                 </field>
         </class>
+        <class name="org.lockss.state.DamagedNodeSet">
+                <map-to xml="DamagedNodeSet"/>
+                <field name="damagedNodes"
+                       type="java.util.Set"
+                       collection="set" lazy="true">
+                </field>
+        </class>
         <class name="org.lockss.state.NodeStateBean">
                 <map-to xml="NodeState"/>
                 <field name="state"

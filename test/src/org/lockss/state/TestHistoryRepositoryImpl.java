@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.28 2003-05-30 01:45:21 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.29 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -234,6 +234,29 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     // doesn't store last treewalk time, so should reset to -1
     assertEquals(-1, auState.getLastTreeWalkTime());
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
+  }
+
+  public void testStoreDamagedNodeSet() throws Exception {
+    DamagedNodeSet damNodes = new DamagedNodeSet(mau, repository);
+    damNodes.add("test1");
+    damNodes.add("test2");
+    assertTrue(damNodes.contains("test1"));
+    assertTrue(damNodes.contains("test2"));
+    assertFalse(damNodes.contains("test3"));
+
+    repository.storeDamagedNodeSet(damNodes);
+    String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath += HistoryRepositoryImpl.DAMAGED_NODES_FILE_NAME;
+    File xmlFile = new File(filePath);
+    assertTrue(xmlFile.exists());
+
+    damNodes = null;
+    damNodes = repository.loadDamagedNodeSet(mau);
+    assertTrue(damNodes.contains("test1"));
+    assertTrue(damNodes.contains("test2"));
+    assertFalse(damNodes.contains("test3"));
+    assertEquals(mau.getAUId(), damNodes.theAu.getAUId());
   }
 
   public void testStoreOverwrite() throws Exception {

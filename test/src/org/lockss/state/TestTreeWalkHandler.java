@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.21 2003-05-30 01:58:32 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.22 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     // can't call 'startService()' since thread can't start
     nodeManager.nodeCache = new NodeStateCache(10);
     nodeManager.activeNodes = new HashMap();
-    nodeManager.damagedNodes = new TreeSet();
+    nodeManager.damagedNodes = new DamagedNodeSet(mau, historyRepo);
     nodeManager.auState = historyRepo.loadAuState(mau);
     nodeManager.pollManager = pollMan;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.127 2003-05-30 01:58:32 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.128 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * the set of nodes marked damaged (these are nodes which have lost content
    * poll).
    */
-  TreeSet damagedNodes;
+  DamagedNodeSet damagedNodes;
 
   private static Logger logger = Logger.getLogger("NodeManager");
   TreeWalkHandler treeWalkHandler;
@@ -110,9 +110,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
     nodeCache = new NodeStateCache(maxCacheSize);
     activeNodes = new HashMap();
-    damagedNodes = new TreeSet();
 
     auState = historyRepo.loadAuState(managedAu);
+    damagedNodes = historyRepo.loadDamagedNodeSet(managedAu);
 
     treeWalkHandler = new TreeWalkHandler(this, theDaemon);
     treeWalkHandler.start();
@@ -258,15 +258,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return true;
   }
 
-  public void startPoll(CachedUrlSet cus, PollTally results,
+  public void startPoll(CachedUrlSet cus, PollTally tally,
                          boolean isReplayPoll) {
-    NodeStateImpl nodeState = (NodeStateImpl)getNodeState(cus);
-    PollSpec spec = results.getPollSpec();
+    NodeState nodeState = getNodeState(cus);
+    PollSpec spec = tally.getPollSpec();
     int status;
 
     // if this is a ranged poll (and not an SNCUSS), don't change NodeState
-    if ((cus.getSpec() instanceof RangeCachedUrlSetSpec) &&
-        (spec.getLwrBound() != null)) {
+    if (isRangedSpec(cus.getSpec())) {
       if (isReplayPoll) {
         status = PollState.REPAIRING;
       } else {
@@ -278,17 +277,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // set states correctly
       logger.debug3("Prev node state: "+nodeState.getStateString());
       switch (nodeState.getState()) {
-        case NodeState.UNKNOWN:
+        case NodeState.INITIAL:
         case NodeState.OK:
 
           // these are polls started by another cache
           status = PollState.RUNNING;
-          if (results.getType() == Poll.CONTENT_POLL) {
-            nodeState.setState(NodeState.CONTENT_RUNNING);
-          }
-          else {
-            nodeState.setState(NodeState.NAME_RUNNING);
-          }
+          nodeState.setState((tally.getType() == Poll.CONTENT_POLL) ?
+                             NodeState.CONTENT_RUNNING :
+                             NodeState.NAME_RUNNING);
           break;
         case NodeState.NEEDS_POLL:
         case NodeState.POSSIBLE_DAMAGE_BELOW:
@@ -316,9 +312,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           status = PollState.REPAIRING;
           break;
         default:
-          logger.debug2("Invalid nodestate: " + nodeState.getStateString());
+          logger.error("Invalid nodestate: " + nodeState.getStateString());
           status = PollState.RUNNING;
-          if (results.getType() == Poll.CONTENT_POLL) {
+          if (tally.getType() == Poll.CONTENT_POLL) {
             nodeState.setState(NodeState.CONTENT_RUNNING);
           }
           else {
@@ -326,14 +322,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           }
       }
     }
-    PollState pollState = new PollState(results.getType(), spec.getLwrBound(),
+    PollState pollState = new PollState(tally.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
-                                        status, results.getStartTime(),
-                                        Deadline.in(results.getDuration()),
-                                        results.isMyPoll());
-    nodeState.addPollState(pollState);
+                                        status, tally.getStartTime(),
+                                        Deadline.in(tally.getDuration()),
+                                        tally.isMyPoll());
+    ((NodeStateImpl)nodeState).addPollState(pollState);
     // store nodestate for active poll
-    activeNodes.put(results.getPollKey(), nodeState);
+    activeNodes.put(tally.getPollKey(), nodeState);
     logger.debug2("Starting poll for url '" +
                   nodeState.getCachedUrlSet().getUrl() + " " +
                   pollState.getLwrBound() + "-" +
@@ -392,9 +388,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                               + "non-existent poll.");
     }
 
-    boolean isRangedPoll =  ((results.getCachedUrlSet().getSpec()
-                              instanceof RangeCachedUrlSetSpec) &&
-                             (pollState.getLwrBound() != null));
+    boolean isRangedPoll = isRangedSpec(results.getCachedUrlSet().getSpec());
     int lastState = -1;
 
     if (!isRangedPoll) {
@@ -429,9 +423,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           break;
         case PollTally.STATE_LOST:
         case PollTally.STATE_WON:
+          // set last state in case it changes
+          lastState = nodeState.getState();
           if (results.getType() == Poll.CONTENT_POLL) {
-            // set last state in case it changes
-            lastState = nodeState.getState();
             handleContentPoll(pollState, results, nodeState);
           } else if (results.getType() == Poll.NAME_POLL) {
             handleNamePoll(pollState, results, nodeState);
@@ -450,22 +444,21 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         if (!isRangedPoll) {
           if (!results.isMyPoll()) {
             // if not mine, ignore and go back to ok
-            ( (NodeStateImpl) nodeState).setState(NodeState.OK);
+            nodeState.setState(NodeState.OK);
           } else {
             // if mine, reset to proper state
             switch (nodeState.getState()) {
               case NodeState.CONTENT_RUNNING:
               case NodeState.CONTENT_REPLAYING:
-                ( (NodeStateImpl) nodeState).setState(NodeState.NEEDS_POLL);
+                nodeState.setState(NodeState.NEEDS_POLL);
                 break;
               case NodeState.NAME_RUNNING:
               case NodeState.NAME_REPLAYING:
-                ( (NodeStateImpl) nodeState).setState(NodeState.CONTENT_LOST);
+                nodeState.setState(NodeState.CONTENT_LOST);
                 break;
               case NodeState.SNCUSS_POLL_RUNNING:
               case NodeState.SNCUSS_POLL_REPLAYING:
-                ( (NodeStateImpl) nodeState).setState(
-                    NodeState.POSSIBLE_DAMAGE_HERE);
+                nodeState.setState(NodeState.POSSIBLE_DAMAGE_HERE);
                 break;
             }
           }
@@ -476,10 +469,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // if this is an AU top-level content poll
       // update the AuState to indicate the poll is finished if it has
       // the proper status
-      if ( (AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
-           (pollState.getType() == Poll.CONTENT_POLL) &&
-           ((pollState.getStatus()==PollState.WON) ||
-            (pollState.getStatus()==PollState.LOST))) {
+      if (isTopLevelPollFinished(nodeState.getCachedUrlSet().getUrl(),
+                               pollState.getType(), pollState.getStatus())) {
         getAuState().newPollFinished();
         logger.info("Top level poll finished.");
       }
@@ -493,13 +484,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         pollState.status = PollState.ERR_IO;
       }
 
+    }
+    finally {
       if ((isRangedPoll) && (lastState != -1)) {
         // if it was a ranged poll, may have temporarily set state to
         // CONTENT_LOST, so restore last state
-        ( (NodeStateImpl) nodeState).setState(lastState);
+        nodeState.setState(lastState);
       }
-    }
-    finally {
       // close the poll and update the node state
       closePoll(pollState, results.getDuration(), results.getPollVotes(),
                 nodeState);
@@ -612,9 +603,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     logger.debug("handling content poll results: " + results);
 
     // only update NodeState if not ranged poll
-    boolean isRangedPoll =  ((results.getCachedUrlSet().getSpec()
-                              instanceof RangeCachedUrlSetSpec) &&
-                             (pollState.getLwrBound() != null));
+    boolean isRangedPoll = isRangedSpec(results.getCachedUrlSet().getSpec());
 
     if (results.getStatus() == PollTally.STATE_WON) {
       // if agree
@@ -638,7 +627,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         switch (nodeState.getState()) {
           case NodeState.CONTENT_RUNNING:
           case NodeState.CONTENT_REPLAYING:
-            ( (NodeStateImpl) nodeState).setState(NodeState.OK);
+            nodeState.setState(NodeState.OK);
             if (damagedNodes.contains(nodeState.getCachedUrlSet().getUrl())) {
               // nodes are no longer damaged when a normal content poll succeeds
               logger.debug2("removing from damaged node list");
@@ -648,12 +637,12 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           case NodeState.SNCUSS_POLL_RUNNING:
           case NodeState.SNCUSS_POLL_REPLAYING:
             if (results.isMyPoll()) {
-              ( (NodeStateImpl) nodeState).setState(
+              nodeState.setState(
                   NodeState.POSSIBLE_DAMAGE_BELOW);
             }
             else {
               // not mine, so done
-              ( (NodeStateImpl) nodeState).setState(NodeState.OK);
+              nodeState.setState(NodeState.OK);
             }
         }
       }
@@ -671,8 +660,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         updateReputations(results);
       } else {
         // otherwise, schedule repair (if SNCUS) or name poll
-        CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
-        if (spec instanceof SingleNodeCachedUrlSetSpec) {
+        if (isSingleNodeSpec(results.getCachedUrlSet().getSpec())) {
           logger.debug2("lost single node content poll, marking for repair.");
           // if leaf node, we need to repair
           pollState.status = PollState.REPAIRING;
@@ -686,24 +674,24 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // change node state accordingly
         switch (nodeState.getState()) {
           case NodeState.CONTENT_RUNNING:
-            ( (NodeStateImpl) nodeState).setState(NodeState.CONTENT_LOST);
+            nodeState.setState(NodeState.CONTENT_LOST);
             // nodes are damaged when a normal content poll fails
             logger.debug2("adding to damaged node list");
             damagedNodes.add(nodeState.getCachedUrlSet().getUrl());
             break;
           case NodeState.CONTENT_REPLAYING:
-            ( (NodeStateImpl) nodeState).setState(NodeState.DAMAGE_AT_OR_BELOW);
+            nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
             break;
           case NodeState.SNCUSS_POLL_RUNNING:
-            ( (NodeStateImpl) nodeState).setState(NodeState.NEEDS_REPAIR);
+            nodeState.setState(NodeState.NEEDS_REPAIR);
             break;
           case NodeState.SNCUSS_POLL_REPLAYING:
-            ( (NodeStateImpl) nodeState).setState(NodeState.UNREPAIRABLE_SNCUSS);
+            nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS);
             break;
         }
       } else {
         // if ranged, set temporary state
-        ( (NodeStateImpl) nodeState).setState(NodeState.CONTENT_LOST);
+        nodeState.setState(NodeState.CONTENT_LOST);
       }
     }
   }
@@ -712,7 +700,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                       NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
 
-    // no ranged name polls
+    // only update NodeState if not ranged poll
+    boolean isRangedPoll = isRangedSpec(results.getCachedUrlSet().getSpec());
 
     if (results.getStatus() == PollTally.STATE_WON) {
       // if agree
@@ -731,19 +720,23 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // not my poll, so done
       }
 
-      // change node state accordingly
-      switch (nodeState.getState()) {
-        case NodeState.NAME_RUNNING:
-          if (results.isMyPoll()) {
-            ( (NodeStateImpl) nodeState).setState(
-                NodeState.DAMAGE_AT_OR_BELOW);
-          } else {
-            ( (NodeStateImpl) nodeState).setState(NodeState.OK);
-          }
-          break;
-        case NodeState.NAME_REPLAYING:
-          //XXX should replay content poll, but set to NEEDS_POLL for now
-          ( (NodeStateImpl) nodeState).setState(NodeState.NEEDS_REPLAY_POLL);
+      if (!isRangedPoll) {
+        // change node state accordingly
+        switch (nodeState.getState()) {
+          case NodeState.NAME_RUNNING:
+            if (results.isMyPoll()) {
+              nodeState.setState(
+                  NodeState.DAMAGE_AT_OR_BELOW);
+            }
+            else {
+              nodeState.setState(NodeState.OK);
+            }
+            break;
+          case NodeState.NAME_REPLAYING:
+
+            //XXX should replay content poll, but set to NEEDS_POLL for now
+            nodeState.setState(NodeState.NEEDS_REPLAY_POLL);
+        }
       }
     } else {
       // if disagree
@@ -762,13 +755,18 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         logger.debug2("lost name poll, state = repairing");
       }
 
-      // change node state accordingly
-      switch (nodeState.getState()) {
-        case NodeState.NAME_RUNNING:
-          ( (NodeStateImpl) nodeState).setState(NodeState.WRONG_NAMES);
-          break;
-        case NodeState.NAME_REPLAYING:
-          ( (NodeStateImpl) nodeState).setState(NodeState.UNREPAIRABLE_NAMES);
+      if (!isRangedPoll) {
+        // change node state accordingly
+        switch (nodeState.getState()) {
+          case NodeState.NAME_RUNNING:
+            nodeState.setState(NodeState.WRONG_NAMES);
+            break;
+          case NodeState.NAME_REPLAYING:
+            nodeState.setState(NodeState.UNREPAIRABLE_NAMES);
+        }
+      } else {
+        // if ranged, set temporary state
+        nodeState.setState(NodeState.WRONG_NAMES);
       }
     }
   }
@@ -778,23 +776,23 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * 'reportOnly' is false).
    * @param lastOrCurrentPoll the most recent poll (could be active)
    * @param results the {@link PollTally}, if available
-   * @param node the {@link NodeState}
+   * @param nodeState the {@link NodeState}
    * @param reportOnly if true, nothing is actually scheduled
    * @return true if action taken
    * @throws IOException
    */
   boolean checkCurrentState(PollState lastOrCurrentPoll, PollTally results,
-                            NodeState node, boolean reportOnly)
+                            NodeState nodeState, boolean reportOnly)
       throws IOException {
-    logger.debug2("Checking node: "+node.getCachedUrlSet().getUrl());
-    logger.debug2("State: "+node.getStateString());
-    switch (node.getState()) {
+    logger.debug2("Checking node: "+nodeState.getCachedUrlSet().getUrl());
+    logger.debug2("State: "+nodeState.getStateString());
+    switch (nodeState.getState()) {
       case NodeState.NEEDS_POLL:
       case NodeState.NEEDS_REPLAY_POLL:
         // call content poll
         if (!reportOnly) {
           logger.debug2("calling content poll");
-          callContentPoll(new PollSpec(node.getCachedUrlSet()));
+          callContentPoll(new PollSpec(nodeState.getCachedUrlSet()));
         }
         return true;
       case NodeState.CONTENT_LOST:
@@ -803,11 +801,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             // if ranged, we know the names are accurate from the previous name
             // poll, so continue as if it had won
             logger.debug2("sub-dividing under lost ranged content poll");
-            callContentPollsOnSubNodes(node, results.getCachedUrlSet());
+            callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
           } else {
             // call name poll if not ranged
             logger.debug2("lost content poll, state = lost, calling name poll.");
-            callNamePoll(new PollSpec(node.getCachedUrlSet()));
+            callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
           }
         }
         return true;
@@ -815,7 +813,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // call name poll
         if (!reportOnly) {
           logger.debug2("calling name poll");
-          callNamePoll(new PollSpec(node.getCachedUrlSet()));
+          callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
         }
         return true;
       case NodeState.CONTENT_RUNNING:
@@ -827,7 +825,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // replay poll if mine and not active
         if (lastOrCurrentPoll instanceof PollHistory) {
           PollHistory lastHistory = (PollHistory)lastOrCurrentPoll;
-          PollSpec lastPollSpec = new PollSpec(node.getCachedUrlSet(),
+          PollSpec lastPollSpec = new PollSpec(nodeState.getCachedUrlSet(),
                                                lastHistory.lwrBound,
                                                lastHistory.uprBound);
           if ((lastHistory.isOurPoll())) {
@@ -862,14 +860,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             logger.debug2("repairing name list");
             Iterator masterIt = results.getCorrectEntries();
             Set localSet = createUrlSetFromCusIterator(results.getLocalEntries());
-            boolean repairMarked = handleWrongNames(masterIt, localSet, node,
+            boolean repairMarked = handleWrongNames(masterIt, localSet, nodeState,
                 results);
             if (!repairMarked) {
               lastOrCurrentPoll.status = PollState.REPAIRED;
             }
           } else {
             logger.debug2("no results found, so recalling name poll");
-            callNamePoll(new PollSpec(node.getCachedUrlSet()));
+            callNamePoll(new PollSpec(nodeState.getCachedUrlSet()));
           }
         }
         return true;
@@ -881,19 +879,19 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           // call a content poll for this node's content if we haven't started
           // sub-dividing yet (and not an AU url, since they never have content)
           if ((lastOrCurrentPoll.getLwrBound() == null) &&
-              (!AuUrl.isAuUrl(node.getCachedUrlSet().getUrl()))) {
+              (!AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl()))) {
             logger.debug2("calling single node content poll on node's contents");
             //XXX once we're checking the content bit in the name poll,
             // only call SNCP if has content
-            ( (NodeStateImpl) node).setState(NodeState.POSSIBLE_DAMAGE_HERE);
-            callSingleNodeContentPoll(node.getCachedUrlSet());
+            nodeState.setState(NodeState.POSSIBLE_DAMAGE_HERE);
+            callSingleNodeContentPoll(nodeState.getCachedUrlSet());
           } else {
             // no damage here since ranged or top-level
             logger.debug2("setting to 'possible damage below'");
-            ( (NodeStateImpl) node).setState(NodeState.POSSIBLE_DAMAGE_BELOW);
+            nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
           }
           // call a content poll on this node's subnodes
-          callContentPollsOnSubNodes(node, results.getCachedUrlSet());
+          callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
         }
         return true;
       case NodeState.POSSIBLE_DAMAGE_HERE:
@@ -901,7 +899,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // call SNCUSS poll
         if (!reportOnly) {
           logger.debug2("calling sncuss content poll");
-          callSingleNodeContentPoll(node.getCachedUrlSet());
+          callSingleNodeContentPoll(nodeState.getCachedUrlSet());
         }
         return true;
       case NodeState.NEEDS_REPAIR:
@@ -910,7 +908,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           logger.debug2("scheduling repair");
           //XXX make new poll ahead of time?
           String pollKey = (results==null ? null : results.getPollKey());
-          markNodeForRepair(node.getCachedUrlSet(), pollKey);
+          markNodeForRepair(nodeState.getCachedUrlSet(), pollKey);
         }
         return true;
       case NodeState.UNREPAIRABLE_SNCUSS:
@@ -921,7 +919,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         return false;
       case NodeState.POSSIBLE_DAMAGE_BELOW:
         // waiting state
-        // if no results, than in treewalk and recall
+        // if no results, then in treewalk and should recall any necessary
+        // ranged histories, or clear damage
         if (results == null) {
           if (lastOrCurrentPoll instanceof PollHistory) {
             // check through history to see if action needed on ranged polls
@@ -929,7 +928,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             if (lastHistory.getLwrBound() != null) {
               // if ranged, check to see if anything needed
               logger.debug2("ranged history found.  Checking previous histories");
-              if (checkLastHistory(lastHistory, node, reportOnly)) {
+              if (checkLastHistory(lastHistory, nodeState, reportOnly)) {
                 // if action needed, stop here
                 logger.debug2("action taken on histories");
                 return true;
@@ -940,19 +939,19 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           // otherwise, recall poll to clear damage
           if (!reportOnly) {
             logger.debug2("re-calling content poll");
-            callContentPoll(node.getCachedUrlSet(), null, null);
+            callContentPoll(nodeState.getCachedUrlSet(), null, null);
           }
           return true;
         }
         return false;
-      case NodeState.UNKNOWN:
+      case NodeState.INITIAL:
       case NodeState.OK:
         // check time, switch to NEEDS_POLL if necessary and call toplevel poll
-        if (AuUrl.isAuUrl(node.getCachedUrlSet().getUrl())) {
+        if (AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) {
           // query the AU if a top level poll should be started
           if (managedAu.shouldCallTopLevelPoll(auState)) {
             if (!reportOnly) {
-              ( (NodeStateImpl) node).setState(NodeState.NEEDS_POLL);
+              nodeState.setState(NodeState.NEEDS_POLL);
               callTopLevelPoll();
               logger.debug("Requested top level poll...");
             }
@@ -968,7 +967,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                            CachedUrlSetSpec spec) {
     boolean isContent = poll.getType()==Poll.CONTENT_POLL;
     boolean isName = poll.getType()==Poll.NAME_POLL;
-    boolean isSNCUSS = (spec instanceof SingleNodeCachedUrlSetSpec);
+    boolean isSNCUSS = isSingleNodeSpec(spec);
     // these have to be fairly open-ended to permit error states
     boolean notRunning = poll.getStatus() != PollState.RUNNING;
     boolean notRepairing = poll.getStatus() != PollState.REPAIRING;
@@ -992,7 +991,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case NodeState.NAME_REPLAYING:
         // repairing name poll ok
         return (isName && notRunning && !isSNCUSS);
-      case NodeState.UNKNOWN:
+      case NodeState.INITIAL:
       case NodeState.OK:
       case NodeState.NEEDS_POLL:
       case NodeState.NEEDS_REPLAY_POLL:
@@ -1356,47 +1355,18 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   private boolean hasDamage(CachedUrlSet cus, int pollType) {
     boolean hasDamage = false;
-    synchronized(damagedNodes) {
-      if(damagedNodes.contains(cus.getUrl())) {
+    synchronized (damagedNodes) {
+      if (damagedNodes.contains(cus.getUrl())) {
         return true;
       }
       Iterator damagedIt = damagedNodes.iterator();
-      while(damagedIt.hasNext()) {
+      while (damagedIt.hasNext()) {
         String url = (String) damagedIt.next();
-        if(cus.containsUrl(url)) {
+        if (cus.containsUrl(url)) {
           return true;
         }
       }
     }
-    /*
-    Iterator childIt = null;
-    switch (pollType) {
-      case Poll.CONTENT_POLL:
-        childIt = cus.contentHashIterator();
-        break;
-      case Poll.NAME_POLL:
-        childIt = cus.flatSetIterator();
-        break;
-    }
-    while (childIt.hasNext()) {
-      CachedUrlSetNode child = (CachedUrlSetNode) childIt.next();
-      CachedUrlSet child_cus;
-      if(child instanceof CachedUrlSet) {
-        child_cus = (CachedUrlSet) child;
-      }
-      else{
-        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-        child_cus = ( (BaseArchivalUnit) managedAu).makeCachedUrlSet(rSpec);
-      }
-      NodeState nodeState = getNodeState(child_cus);
-      PollHistory pollHistory = nodeState.getLastPollHistory();
-      if (pollHistory != null &&
-          ( (pollHistory.status == pollHistory.UNREPAIRABLE) ||
-           (pollHistory.status == pollHistory.REPAIRING))) {
-        return true;
-      }
-    }
-*/
     return hasDamage;
   }
 
@@ -1431,6 +1401,26 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return set;
   }
 
+  /**
+   * Returns true if the spec is ranged (and not a SNCUSS).
+   * @param spec the spec
+   * @return true iff ranged
+   */
+  public static boolean isRangedSpec(CachedUrlSetSpec spec) {
+    return ((spec instanceof RangeCachedUrlSetSpec) &&
+        (((RangeCachedUrlSetSpec)spec).getLowerBound() != null));
+  }
+
+  public static boolean isSingleNodeSpec(CachedUrlSetSpec spec) {
+    return (spec instanceof SingleNodeCachedUrlSetSpec);
+  }
+
+  boolean isTopLevelPollFinished(String url, int type, int status) {
+    return (AuUrl.isAuUrl(url) && (type == Poll.CONTENT_POLL) &&
+            ((status==PollState.WON) || (status==PollState.LOST)));
+  }
+
+
   static class ContentRepairCallback
       implements CrawlManager.Callback {
     /**
@@ -1447,199 +1437,4 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       }
     }
   }
-
-/* obsolete versions
-
-    public void startPoll1(CachedUrlSet cus, PollTally state,
-                          boolean isReplayPoll) {
-      NodeState nodeState = getNodeState(cus);
-      PollSpec spec = state.getPollSpec();
-      int status = isReplayPoll ? PollState.REPAIRING : PollState.RUNNING;
-      PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
-                                          spec.getUprBound(),
-                                          status, state.getStartTime(),
-                                          Deadline.in(state.getDuration()),
-                                          state.isMyPoll());
-      ( (NodeStateImpl) nodeState).addPollState(pollState);
-      // store nodestate for active poll
-      activeNodes.put(state.getPollKey(), nodeState);
-      logger.debug2("Starting poll for url '" +
-                    nodeState.getCachedUrlSet().getUrl() + " " +
-                    pollState.getLwrBound() + "-" +
-                    pollState.getUprBound() + "'");
-    }
-
-
-  void updateState1(NodeState state, PollTally results) {
-    PollState pollState = getPollState(state, results);
-    if (pollState == null) {
-      logger.error("Results updated for a non-existent poll.");
-      throw new UnsupportedOperationException("Results updated for a "
-                                              + "non-existent poll.");
-    }
-    try {
-      switch (results.getStatus()) {
-        case PollTally.STATE_ERROR:
-          pollState.status = mapResultsErrorToPollError(results.getErr());
-          logger.info("Poll didn't finish fully.  Error: "
-                      + results.getErrString());
-          break;
-        case PollTally.STATE_NOQUORUM:
-          pollState.status = PollState.INCONCLUSIVE;
-          logger.info("Poll finished without quorum");
-          break;
-        case PollTally.STATE_RESULTS_TOO_CLOSE:
-        case PollTally.STATE_RESULTS_UNTRUSTED:
-          pollState.status = PollState.INCONCLUSIVE;
-          logger.warning("Poll concluded with suspect result - "
-                         + pollState.getStatusString());
-          break;
-        case PollTally.STATE_LOST:
-        case PollTally.STATE_WON:
-          if (results.getType() == Poll.CONTENT_POLL) {
-            handleContentPoll(pollState, results, state);
-          }
-          else if (results.getType() == Poll.NAME_POLL) {
-            handleNamePoll(pollState, results, state);
-          }
-          else {
-            String err = "Request to update state for unknown type: " +
-                         results.getType();
-            logger.error(err);
-            throw new UnsupportedOperationException(err);
-          }
-          break;
-      }
-    }
-    finally {
-      // close the poll and update the node state
-      closePoll(pollState, results.getDuration(), results.getPollVotes(),
-                state);
-    }
-  }
-
-
-  void handleContentPoll1(PollState pollState, PollTally results,
-                         NodeState nodeState) {
-    logger.debug("handling content poll results: " + results);
-
-    if (results.getStatus() == PollTally.STATE_WON) {
-      // if agree
-      switch (pollState.getStatus()) {
-        case PollState.RUNNING:
-
-          // if normal poll, we won!
-          logger.debug2("won content poll, state = won.");
-          pollState.status = PollState.WON;
-          // remove if in damaged nodes from previous poll
-          damagedNodes.remove(results.getCachedUrlSet().getUrl());
-          break;
-        case PollState.REPAIRING:
-
-          // if repair poll, we're repaired
-          logger.debug2("won repair poll, state = repaired.");
-          pollState.status = PollState.REPAIRED;
-          damagedNodes.remove(results.getCachedUrlSet().getUrl());
-      }
-      updateReputations(results);
-    } else {
-      // if disagree
-      if (pollState.getStatus() == PollState.REPAIRING) {
-        logger.debug2("lost repair content poll, state = unrepairable");
-        // if repair poll, can't be repaired and we leave it our damaged table
-        pollState.status = PollState.UNREPAIRABLE;
-        updateReputations(results);
-      } else {
-        // otherwise, schedule repair (if SNCUS) or name poll
-        CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
-        if (spec instanceof SingleNodeCachedUrlSetSpec) {
-          logger.debug2("lost content poll, state = repairing, marking for repair.");
-          // if leaf node, we need to repair
-          pollState.status = PollState.REPAIRING;
-          markNodeForRepair(nodeState.getCachedUrlSet(), results.getPollKey());
-        } else {
-          pollState.status = PollState.LOST;
-          if ((spec instanceof RangeCachedUrlSetSpec) &&
-              (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null)) {
-            // if ranged, we know the names are accurate from the previous name
-            // poll, so continue as if it had won
-            logger.debug2("lost ranged content poll, sub-dividing.");
-            try {
-              callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
-            } catch (IOException ex) {
-              logger.debug2("unable to start content polls, setting status to ERR_IO");
-              pollState.status = PollState.ERR_IO;
-            }
-          } else {
-            // call name poll if not ranged
-            logger.debug2("lost content poll, state = lost, calling name poll.");
-            callNamePoll(new PollSpec(results.getCachedUrlSet()));
-          }
-        }
-      }
-    }
-  }
-
-  void handleNamePoll1(PollState pollState, PollTally results,
-                      NodeState nodeState) {
-    logger.debug2("handling name poll results " + results);
-    if (results.getStatus() == PollTally.STATE_WON) {
-      // if agree
-      if (results.isMyPoll()) {
-        // if poll is mine
-        logger.debug2("won name poll, calling content poll on subnodes.");
-        try {
-          // call a content poll for this node's content if we haven't started
-          // sub-dividing yet
-          CachedUrlSetSpec spec = results.getCachedUrlSet().getSpec();
-          if ((spec instanceof RangeCachedUrlSetSpec) &&
-              (((RangeCachedUrlSetSpec)spec).getLowerBound()==null)) {
-            logger.debug2("calling content poll on node's contents");
-            //XXX once we're checking the content bit in the name poll,
-            // only call SNCP if has content
-            callSingleNodeContentPoll(results.getCachedUrlSet());
-          }
-          // call a content poll on this node's subnodes
-          callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
-          if (pollState.status == PollState.REPAIRING) {
-            pollState.status = PollState.REPAIRED;
-          } else {
-            pollState.status = PollState.WON;
-          }
-        } catch (IOException ex) {
-          logger.debug2("unable to start content poll, setting status to ERR_IO");
-          pollState.status = PollState.ERR_IO;
-        }
-      }
-      else {
-        logger.debug2("won name poll, setting state to WON");
-        pollState.status = PollState.WON;
-      }
-    }
-    else {
-      if (pollState.getStatus() == PollState.REPAIRING) {
-        logger.debug2("lost repair name poll, state = unrepairable");
-        // if repair poll, can't be repaired and we leave it in our damage table
-        //XXX currently, this makes it difficult to do multiple repairs, since
-        // the poll calls only one repair, and repeats only once.
-        // the treewalk will have to handle the rest
-        pollState.status = PollState.UNREPAIRABLE;
-        return;
-      }
-      // if disagree
-      logger.debug2("lost name poll, collecting repair info.");
-      String baseUrl = nodeState.getCachedUrlSet().getUrl();
-      pollState.status = PollState.REPAIRING;
-      Iterator masterIt = results.getCorrectEntries();
-      Iterator localIt = results.getLocalEntries();
-      Set localSet = createUrlSetFromCusIterator(localIt);
-      boolean repairMarked = handleWrongNames(masterIt, localSet, nodeState,
-                                              results);
-      if (!repairMarked) {
-        pollState.status = PollState.REPAIRED;
-      }
-    }
-  }
-*/
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.5 2003-04-07 23:38:06 aalto Exp $
+ * $Id: HistoryRepository.java,v 1.6 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -82,4 +82,18 @@ public interface HistoryRepository extends LockssManager {
    * @return the {@link AuState}
    */
   public AuState loadAuState(ArchivalUnit au);
+
+  /**
+   * Stores the DamagedNodeSet for a particular ArchivalUnit
+   * @param nodeSet the set to store
+   */
+  public void storeDamagedNodeSet(DamagedNodeSet nodeSet);
+
+  /**
+   * Loads the DamagedNodeSet for a particular ArchivalUnit
+   * @param au the ArchivalUnit state to load
+   * @return the {@link DamagedNodeSet}
+   */
+  public DamagedNodeSet loadDamagedNodeSet(ArchivalUnit au);
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.3 2003-03-15 02:53:29 aalto Exp $
+ * $Id: MockHistoryRepository.java,v 1.4 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class MockHistoryRepository implements HistoryRepository, LockssManager {
   public HashMap storedHistories = new HashMap();
   public HashMap storedAus = new HashMap();
   public HashMap storedNodes = new HashMap();
+  public HashMap storedDamage = new HashMap();
 
   public MockHistoryRepository() { }
 
@@ -54,6 +55,7 @@ public class MockHistoryRepository implements HistoryRepository, LockssManager {
     storedHistories = new HashMap();
     storedAus = new HashMap();
     storedNodes = new HashMap();
+    storedDamage = new HashMap();
   }
 
   public void storePollHistories(NodeState nodeState) {
@@ -75,6 +77,15 @@ public class MockHistoryRepository implements HistoryRepository, LockssManager {
   public AuState loadAuState(ArchivalUnit au) {
     return (AuState)storedAus.get(au);
   }
+
+  public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
+    storedDamage.put(nodeSet.getArchivalUnit(), nodeSet);
+  }
+
+  public DamagedNodeSet loadDamagedNodeSet(ArchivalUnit au) {
+    return (DamagedNodeSet)storedDamage.get(au);
+  }
+
 
   public void storeNodeState(NodeState nodeState) {
     storedNodes.put(nodeState.getCachedUrlSet(), nodeState);

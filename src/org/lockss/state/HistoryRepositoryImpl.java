@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.33 2003-04-29 01:35:36 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.34 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class HistoryRepositoryImpl
   static final String HISTORY_FILE_NAME = "history.xml";
   static final String NODE_FILE_NAME = "nodestate.xml";
   static final String AU_FILE_NAME = "au_state.xml";
+  static final String DAMAGED_NODES_FILE_NAME = "damaged_nodes.xml";
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
   private static final String TEST_PREFIX = "/#tmp";
@@ -276,6 +277,57 @@ public class HistoryRepositoryImpl
           "Couldn't load au state.");
     }
   }
+
+  public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
+    try {
+      File nodeDir = new File(getAuLocation(nodeSet.theAu));
+      if (!nodeDir.exists()) {
+        nodeDir.mkdirs();
+      }
+      logger.debug3("Storing damaged nodes for AU '" +
+                    nodeSet.theAu.getName() + "'");
+      File damFile = new File(nodeDir, DAMAGED_NODES_FILE_NAME);
+      FileWriter writer = new FileWriter(damFile);
+      Marshaller marshaller = new Marshaller(writer);
+      marshaller.setMapping(getMapping());
+      marshaller.marshal(nodeSet);
+      writer.close();
+    } catch (Exception e) {
+      logger.error("Couldn't store damaged nodes: ", e);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't store damaged nodes.");
+    }
+  }
+
+  public DamagedNodeSet loadDamagedNodeSet(ArchivalUnit au) {
+    try {
+      File damFile = new File(getAuLocation(au) + File.separator +
+                             DAMAGED_NODES_FILE_NAME);
+      if (!damFile.exists()) {
+        logger.debug3("No au file found.");
+        return new DamagedNodeSet(au, this);
+      }
+      logger.debug3("Loading state for AU '" + au.getName() + "'");
+      FileReader reader = new FileReader(damFile);
+      Unmarshaller unmarshaller = new Unmarshaller(DamagedNodeSet.class);
+      unmarshaller.setMapping(getMapping());
+      DamagedNodeSet damNodes = (DamagedNodeSet) unmarshaller.unmarshal(reader);
+      reader.close();
+      damNodes.theAu = au;
+      damNodes.repository = this;
+      return damNodes;
+    } catch (org.exolab.castor.xml.MarshalException me) {
+      logger.error("Marshalling exception for damaged nodes for '"+
+                   au.getName()+"': "+me);
+      // continue
+      return new DamagedNodeSet(au, this);
+    } catch (Exception e) {
+      logger.error("Couldn't load damaged nodes: ", e);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load damaged nodes.");
+    }
+  }
+
 
   protected String getNodeLocation(CachedUrlSet cus)
       throws MalformedURLException {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.19 2003-05-30 01:41:06 aalto Exp $
+ * $Id: TestNodeStateImpl.java,v 1.20 2003-05-30 23:27:53 aalto Exp $
  */
 
 /*
@@ -217,7 +217,7 @@ public class TestNodeStateImpl extends LockssTestCase {
   }
 
   public void testState() throws Exception {
-    assertEquals(NodeState.UNKNOWN, state.getState());
+    assertEquals(NodeState.INITIAL, state.getState());
     state.setState(NodeState.OK);
     assertEquals(NodeState.OK, state.getState());
   }
