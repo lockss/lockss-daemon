@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.68 2004-10-06 04:45:02 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.69 2004-10-11 00:56:59 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.servlet.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
-import org.apache.commons.collections.SequencedHashMap;
+import org.apache.commons.collections.map.LinkedMap;
 
 /**
  * The LOCKSS daemon application
@@ -382,8 +382,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public static LockssAuManager getAuManager(String key, ArchivalUnit au) {
     LockssAuManager mgr = null;
-    SequencedHashMap auMgrMap =
-      (SequencedHashMap)auManagerMaps.get(au);
+    LinkedMap auMgrMap =
+      (LinkedMap)auManagerMaps.get(au);
     if (auMgrMap != null) {
       mgr = (LockssAuManager)auMgrMap.get(key);
     }
@@ -478,13 +478,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
       throws Exception {
-    SequencedHashMap auMgrMap = (SequencedHashMap)auManagerMaps.get(au);
+    LinkedMap auMgrMap = (LinkedMap)auManagerMaps.get(au);
     if (auMgrMap != null) {
       // If au has a map it's been created, just set new config
       configAuManagers(au, auConfig, auMgrMap);
     } else {
       // create a new map, init, configure and start managers
-      auMgrMap = new SequencedHashMap();
+      auMgrMap = new LinkedMap();
       initAuManagers(au, auMgrMap);
       // Store map once all managers inited
       auManagerMaps.put(au, auMgrMap);
@@ -502,9 +502,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** Stop the managers for the AU in the reverse order in which they
    * appear in the map */
   public void stopAuManagers(ArchivalUnit au) {
-    SequencedHashMap auMgrMap =
-      (SequencedHashMap)auManagerMaps.get(au);
-    List rkeys = ListUtil.reverseCopy(auMgrMap.sequence());
+    LinkedMap auMgrMap =
+      (LinkedMap)auManagerMaps.get(au);
+    List rkeys = ListUtil.reverseCopy(auMgrMap.asList());
     for (Iterator iter = rkeys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
@@ -520,7 +520,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /** Create and init all AU managers for the AU, and associate them with
    * their keys in auMgrMap. */
-  private void initAuManagers(ArchivalUnit au, SequencedHashMap auMgrMap)
+  private void initAuManagers(ArchivalUnit au, LinkedMap auMgrMap)
       throws Exception {
     ManagerDesc descs[] = getAuManagerDescs();
     for (int ix = 0; ix < descs.length; ix++) {
@@ -552,9 +552,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** Start the managers for the AU in the order in which they appear in
    * the map.  protected so MockLockssDaemon can override to suppress
    * startService() */
-  protected void startAuManagers(ArchivalUnit au, SequencedHashMap auMgrMap)
+  protected void startAuManagers(ArchivalUnit au, LinkedMap auMgrMap)
       throws Exception {
-    for (Iterator iter = auMgrMap.iterator(); iter.hasNext(); ) {
+    for (Iterator iter = auMgrMap.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
       try {
@@ -570,8 +570,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /** (re)configure the au managers */
   private void configAuManagers(ArchivalUnit au, Configuration auConfig,
-				SequencedHashMap auMgrMap) {
-    for (Iterator iter = auMgrMap.iterator(); iter.hasNext(); ) {
+				LinkedMap auMgrMap) {
+    for (Iterator iter = auMgrMap.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
       try {
@@ -642,7 +642,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     List res = new ArrayList(auManagerMaps.size());
     for (Iterator iter = auManagerMaps.values().iterator();
 	 iter.hasNext(); ) {
-      SequencedHashMap auMgrMap = (SequencedHashMap)iter.next();
+      LinkedMap auMgrMap = (LinkedMap)iter.next();
       Object auMgr = auMgrMap.get(managerKey);
       if (auMgr != null) {
 	res.add(auMgr);

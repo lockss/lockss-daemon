@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.3 2003-06-20 22:34:55 claire Exp $
+ * $Id: FuncCommons.java,v 1.4 2004-10-11 00:56:40 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.test;
 import java.io.*;
 import java.util.*;
 import junit.framework.TestCase;
-import org.apache.commons.collections.*;
+import org.apache.commons.collections.map.ReferenceMap;
 
 
 /**

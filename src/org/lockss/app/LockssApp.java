@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.6 2004-09-27 22:39:15 smorabito Exp $
+ * $Id: LockssApp.java,v 1.7 2004-10-11 00:57:00 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.scheduler.*;
 import org.lockss.servlet.*;
-import org.apache.commons.collections.SequencedHashMap;
+import org.apache.commons.collections.map.LinkedMap;
 
 /**
  * Abstract base class for LOCKSS applications.  Derived from original
@@ -121,7 +121,7 @@ public abstract class LockssApp {
   // Map of managerKey -> manager instance. Need to preserve order so
   // managers are started and stopped in the right order.  This does not
   // need to be synchronized.
-  protected SequencedHashMap managerMap = new SequencedHashMap();
+  protected LinkedMap managerMap = new LinkedMap();
 
   private static LockssApp theApp;
 
@@ -343,7 +343,7 @@ public abstract class LockssApp {
     }
     appInited = true;
     // now start the managers in the same order in which they were created
-    // (managerMap is a SequencedHashMap)
+    // (managerMap is a LinkedMap)
     Iterator it = managerMap.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
@@ -372,7 +372,7 @@ public abstract class LockssApp {
     appRunning = false;
 
     // stop all single managers
-    List rkeys = ListUtil.reverseCopy(managerMap.sequence());
+    List rkeys = ListUtil.reverseCopy(managerMap.asList());
     for (Iterator it = rkeys.iterator(); it.hasNext(); ) {
       String key = (String)it.next();
       LockssManager lm = (LockssManager)managerMap.get(key);

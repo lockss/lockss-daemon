@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.62 2004-09-27 22:39:07 smorabito Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.63 2004-10-11 00:56:57 tlipkis Exp $
  */
 
 /*
@@ -40,8 +40,8 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
-import org.apache.commons.collections.LRUMap;
-import org.apache.commons.collections.ReferenceMap;
+import org.apache.commons.collections.map.LRUMap;
+import org.apache.commons.collections.map.ReferenceMap;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -125,8 +125,10 @@ public class LockssRepositoryImpl
   }
 
   public void setNodeCacheSize(int size) {
-    if (nodeCache != null && nodeCache.getMaximumSize() != size) {
-      nodeCache.setMaximumSize(size);
+    if (nodeCache != null && nodeCache.maxSize() != size) {
+      LRUMap newNodeCache = new LRUMap(size);
+      newNodeCache.putAll(nodeCache);
+      nodeCache = newNodeCache;
     }
   }
 

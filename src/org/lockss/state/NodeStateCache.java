@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateCache.java,v 1.9 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: NodeStateCache.java,v 1.10 2004-10-11 00:56:41 tlipkis Exp $
  */
 
 /*
@@ -33,8 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.apache.commons.collections.LRUMap;
-import org.apache.commons.collections.ReferenceMap;
+import org.apache.commons.collections.map.LRUMap;
+import org.apache.commons.collections.map.ReferenceMap;
 
 /**
  * Wrapper for an LRUMap, which holds {@link NodeState} objects and saves them
@@ -68,7 +68,7 @@ public class NodeStateCache {
    * @return the size
    */
   public int getCacheSize() {
-    return lruMap.getMaximumSize();
+    return lruMap.maxSize();
   }
 
   /**
@@ -79,7 +79,11 @@ public class NodeStateCache {
     if (newSize<=0) {
       throw new IllegalArgumentException("Cache size must be greater than zero");
     }
-    lruMap.setMaximumSize(newSize);
+    if (lruMap.maxSize() != newSize) {
+      LRUMap newMap = new LRUMap(newSize);
+      newMap.putAll(lruMap);
+      lruMap = newMap;
+    }
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: FixedTimedMap.java,v 1.4 2004-04-29 10:16:48 tlipkis Exp $
+ * $Id: FixedTimedMap.java,v 1.5 2004-10-11 00:56:40 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
-import org.apache.commons.collections.*;
+import org.apache.commons.collections.map.LinkedMap;
 
 /**
  * FixedTimedMap implements the Map interface.  It has the
@@ -59,12 +59,12 @@ public class FixedTimedMap extends TimedMap implements Map
   public FixedTimedMap(int interval) {
     this.interval = interval;
     this.keytimes = new HashMap();
-    this.entries = new SequencedHashMap();
+    this.entries = new LinkedMap();
   }
 
   void updateEntries() {
     while (!entries.isEmpty()) {
-      Object key = ((SequencedHashMap)entries).getFirstKey();
+      Object key = ((LinkedMap)entries).firstKey();
       Deadline entry = (Deadline)keytimes.get(key);
       if (entry.expired()) {
         keytimes.remove(key);
@@ -80,7 +80,7 @@ public class FixedTimedMap extends TimedMap implements Map
     if (entries.isEmpty()) {
       return false;
     }
-    Object key = ((SequencedHashMap)entries).getFirstKey();
+    Object key = ((LinkedMap)entries).firstKey();
     Deadline first = (Deadline)keytimes.get(key);
     return first.expired();
   }

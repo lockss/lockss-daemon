@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.18 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.19 2004-10-11 00:56:58 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
-import org.apache.commons.collections.ReferenceMap;
+import org.apache.commons.collections.map.ReferenceMap;
 
 /**
  * API for use by UIs and other remote agents.  Provides access to a

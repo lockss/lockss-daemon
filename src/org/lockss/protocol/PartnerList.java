@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.25 2004-09-29 06:38:13 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.26 2004-10-11 00:56:58 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.apache.commons.collections.LRUMap;
+import org.apache.commons.collections.map.LRUMap;
 
 /**
  * PartnerList implements the LCAP V1 unicast partner list.
@@ -63,11 +63,7 @@ class PartnerList {
 
   // partners is an LRUMap that records the most recent time an entry was
   // automatically removed
-  LRUMap partners = new LRUMap(DEFAULT_MAX_PARTNERS) {
-      protected void processRemovedLRU(Object key, Object value) {
-	lastPartnerRemoveTime = TimeBase.nowMs();
-      }
-    };
+  LRUMap partners = new PartnersLRUMap(DEFAULT_MAX_PARTNERS);
   long lastPartnerRemoveTime = 0;
 
   Map lastMulticastReceived = new LRUMap(100);
@@ -86,8 +82,10 @@ class PartnerList {
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
-    if (maxPartners != partners.getMaximumSize()) {
-      partners.setMaximumSize(maxPartners);
+    if (maxPartners != partners.maxSize()) {
+      LRUMap newPartners = new PartnersLRUMap(maxPartners);
+      newPartners.putAll(partners);
+      partners = newPartners;
     }
     minPartnerRemoveInterval =
       config.getTimeInterval(PARAM_MIN_PARTNER_REMOVE_INTERVAL,
@@ -173,7 +171,7 @@ class PartnerList {
   }
 
   void removeLeastRecent() {
-    PeerIdentity oldest = (PeerIdentity)partners.getFirstKey();
+    PeerIdentity oldest = (PeerIdentity)partners.firstKey();
     if (oldest != null) {
       removePartner(oldest);
     }
@@ -199,6 +197,17 @@ class PartnerList {
 
   Long nowLong() {
     return new Long(TimeBase.nowMs());
+  }
+
+  // LRUMap that records last removal time
+  class PartnersLRUMap extends LRUMap {
+    PartnersLRUMap(int size) {
+      super(size);
+    }
+    protected boolean removeLRU(LinkEntry entry) {
+      lastPartnerRemoveTime = TimeBase.nowMs();
+      return true;
+    }
   }
 
 }

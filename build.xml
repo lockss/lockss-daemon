@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.113 2004-10-04 20:55:15 troberts Exp $
+ $Id: build.xml,v 1.114 2004-10-11 00:57:00 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -149,7 +149,7 @@ Args:
 <!--    <property name="regexp.jar"     value="${lib}/gnu-regexp.jar"/> -->
   <property name="regexp.jar"     value="${lib}/gnu-regexp-1.1.4.jar"/>
   <property name="commons.collections.jar"
-  				  value="${lib}/commons-collections.jar"/>
+  				  value="${lib}/commons-collections-3.1.jar"/>
   <property name="commons.logging.jar"
   				  value="${lib}/commons-logging.jar"/>
   <property name="commons.httpclient.jar"
