@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.34 2003-08-02 00:16:03 eaalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.35 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
+import java.io.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
@@ -55,6 +56,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private boolean shouldCrawlForNewContent = true;
   private boolean shouldCallTopLevelPoll = true;
   private static Logger log = Logger.getLogger("MockArchivalUnit");
+  private String manifestPage;
 
   private HashSet urlsToCache = new HashSet();
 
@@ -158,6 +160,17 @@ public class MockArchivalUnit implements ArchivalUnit {
     return pluginId;
   }
 
+  public String getManifestPage() {
+    return manifestPage;
+  }
+
+  public void setManifestPage(String url) {
+    manifestPage = url;
+  }
+
+  public boolean checkCrawlPermission(Reader reader) {
+    return true;
+  }
 
   public void setPlugin(Plugin plugin) {
     this.plugin = plugin;

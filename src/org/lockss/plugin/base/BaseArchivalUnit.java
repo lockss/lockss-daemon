@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.33 2003-08-04 21:10:50 eaalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.34 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.state.*;
 import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
 import java.text.SimpleDateFormat;
+import java.io.*;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -91,6 +92,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
+
+  public static final String PERMISSION_STRING =
+  "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
   protected Plugin plugin;
   protected CrawlSpec crawlSpec;
@@ -302,6 +306,35 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       return true;
     }
     return false;
+  }
+
+  public boolean checkCrawlPermission(Reader reader) {
+    boolean crawl_ok = false;
+    int ch;
+    int p_index = 0;
+    String matchstr = PERMISSION_STRING.toLowerCase();
+
+    try {
+      do {
+        ch = reader.read();
+        if(matchstr.charAt(p_index) == Character.toLowerCase((char)ch)) {
+          if(++p_index == PERMISSION_STRING.length()) {
+            return true;
+          }
+        }
+        else {
+          p_index = 0;
+        }
+
+      } while (ch != -1); // while not eof
+    }
+    catch (IOException ex) {
+      logger.warning("Exception occured while checking for permission: "
+                     + ex.toString());
+    }
+
+
+    return crawl_ok;
   }
 
   /**

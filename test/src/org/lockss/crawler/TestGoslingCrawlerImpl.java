@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.17 2003-08-06 00:32:00 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.18 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -79,6 +79,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     urlSet = SetUtil.set(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAUCachedUrlSet(cus);
+    mau.setManifestPage(startUrl);
     crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.NEW_CONTENT, true);
   }
 
@@ -605,7 +606,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url3);
 
     crawler.doCrawl(Deadline.in(2));
-    Set expected = SetUtil.set(startUrl, url1);
+    //Set expected = SetUtil.set(startUrl, url1);
+    Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -751,8 +753,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       super.cache();
     }
   }
-//   public static void main(String[] argv) {
-//     String[] testCaseList = {TestGoslingCrawlerImpl.class.getName()};
-//     junit.swingui.TestRunner.main(testCaseList);
-//   }
+   public static void main(String[] argv) {
+     String[] testCaseList = {TestGoslingCrawlerImpl.class.getName()};
+     junit.swingui.TestRunner.main(testCaseList);
+   }
 }

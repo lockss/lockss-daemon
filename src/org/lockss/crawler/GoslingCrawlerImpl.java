@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.31 2003-08-25 23:15:04 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.32 2003-08-30 00:35:29 clairegriffin Exp $
  */
 
 /*
@@ -193,6 +193,12 @@ public class GoslingCrawlerImpl implements Crawler {
 
     Set extractedUrls = new HashSet();
 
+
+    if (!deadline.expired() &&
+        (type == Crawler.NEW_CONTENT)  && !crawlPermission(cus)) {
+      logger.error("Attempt to crawl AU without permission - aborting crawl!");
+      return false;
+    }
     Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
       String url = (String)it.next();
@@ -218,6 +224,29 @@ public class GoslingCrawlerImpl implements Crawler {
     logger.info("Finished crawl of "+au);
     endTime = TimeBase.nowMs();
     return !wasError;
+  }
+
+  boolean crawlPermission(CachedUrlSet ownerCus) {
+    boolean crawl_ok = false;
+
+    // fetch and cache the manifest page
+    String manifest = au.getManifestPage();
+    UrlCacher uc = au.makeUrlCacher(ownerCus, manifest);
+    try {
+      if(au.shouldBeCached(manifest)) {
+        uc.cache();
+        // check for the permission on the page
+        CachedUrl cu = au.makeCachedUrl(ownerCus, manifest);
+        InputStream is = cu.openForReading();
+        Reader reader = new InputStreamReader(is);
+        crawl_ok = au.checkCrawlPermission(reader);
+      }
+    }
+    catch (IOException ex) {
+    }
+
+
+    return crawl_ok;
   }
 
 

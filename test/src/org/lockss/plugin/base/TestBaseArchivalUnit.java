@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.5 2003-08-04 21:10:49 eaalto Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.6 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -136,6 +136,25 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     TimeBase.setReal();
   }
 
+  public void testCheckCrawlPermission() {
+    StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
+    sb.append(BaseArchivalUnit.PERMISSION_STRING);
+    sb.append("\n\nTheEnd!");
+    String s_ok = sb.toString();
+    String s_rev = sb.reverse().toString();
+    String s_case = s_ok.toUpperCase();
+
+    Reader reader = new StringReader(s_ok);
+    assertTrue(mbau.checkCrawlPermission(reader));
+
+    reader = new StringReader(s_case);
+    assertTrue(mbau.checkCrawlPermission(reader));
+
+    reader = new StringReader(s_rev);
+    assertFalse(mbau.checkCrawlPermission(reader));
+
+  }
+
   public static void main(String[] argv) {
     String[] testCaseList = { TestBaseArchivalUnit.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
@@ -168,6 +187,10 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
     public Collection getUrlStems() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public String getManifestPage() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

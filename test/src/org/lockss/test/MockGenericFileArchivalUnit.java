@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.13 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.14 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
       return null;
     }
   }
+
   public String getPluginId() {
     return pluginId;
   }
@@ -111,6 +112,10 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
 
   public Collection getUrlStems() {
     throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public String getManifestPage() {
+    throw new UnsupportedOperationException("Not implemented.");
   }
 
 }

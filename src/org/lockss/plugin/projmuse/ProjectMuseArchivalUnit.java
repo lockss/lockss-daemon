@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.4 2003-08-27 19:27:32 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.5 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -195,6 +195,11 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules(base, journalDir, volume);
     return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule);
   }
+
+  public String getManifestPage() {
+    return makeStartUrl(baseUrl, journalDir, volume);
+  }
+
 
   //Todo: return the correct starting url here
   String makeStartUrl(URL base, String journal, int volume) {

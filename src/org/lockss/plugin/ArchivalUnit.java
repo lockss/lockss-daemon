@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.15 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: ArchivalUnit.java,v 1.16 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import gnu.regexp.*;
 import java.util.*;
 import org.lockss.state.*;
 import org.lockss.daemon.*;
+import java.io.*;
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -143,6 +144,21 @@ public interface ArchivalUnit {
    * @return the AU name
    */
   public String getName();
+
+  /**
+   * Returns the url for the publisher's manifest which can be used for checking
+   * crawl permissions for this AU.
+   * @return the URL as a String;
+   */
+  public String getManifestPage();
+
+  /**
+   * Returns true if this AU has permission to crawl based on the manifest page
+   * @param reader the Reader for the manifest page which should contain the
+   * permission statement.
+   * @return true iff the PERMISSION_STRING is found.
+   */
+  public boolean checkCrawlPermission(Reader reader);
 
   /**
    * Sleeps for the interval needed between requests to the server

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.10 2003-06-20 22:34:54 claire Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.11 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.util.StringUtil;
 import org.lockss.test.*;
+import org.lockss.plugin.base.*;
 
 /**
  * This is a convenience class which takes care of handling the content
@@ -327,7 +328,7 @@ public class SimulatedContentGenerator {
       generateFile(treeRoot, jj, 0, 0,
 		   (alterFile && (jj==getAbnormalFileNumber())));
     }
-    generateIndexFile(treeRoot);
+    generateIndexFile(treeRoot, BaseArchivalUnit.PERMISSION_STRING);
   }
   private void recurseGenerateBranch(File parentDir, int branchNum,
 				     int depth, boolean onAbnormalPath) {
@@ -362,7 +363,7 @@ public class SimulatedContentGenerator {
     if ((oddBranchesHaveContent() && (branchNum%2 == 1)) || alterDir) {
       generateDirContentFile(branchFile, depth, alterDir);
     }
-    generateIndexFile(branchFile);
+    generateIndexFile(branchFile, null);
   }
 
   private void generateDirContentFile(File parentDir, int depth,
@@ -382,19 +383,20 @@ public class SimulatedContentGenerator {
   }
 
 
-  private void generateIndexFile(File parentDir) {
+  private void generateIndexFile(File parentDir, String permission) {
     try {
       String filename = INDEX_NAME;
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
-      String file_content = getIndexContent(parentDir, filename);
+      String file_content = getIndexContent(parentDir, filename, permission);
       pw.print(file_content);
       pw.flush();
       pw.close();
       fos.close();
     } catch (Exception e) { System.err.println(e); }
   }
+
 
   private void generateFile(File parentDir, int fileNum, int depth,
 			    int branchNum, boolean isAbnormal) {
@@ -555,7 +557,9 @@ public class SimulatedContentGenerator {
    * @return index file content
    */
 
-  public static String getIndexContent(File directory, String filename) {
+  public static String getIndexContent(File directory,
+                                       String filename,
+                                       String permission) {
     if ((directory==null) || (!directory.exists()) ||
 	(!directory.isDirectory())) {
       return "";
@@ -565,6 +569,9 @@ public class SimulatedContentGenerator {
       "<HTML><HEAD><TITLE>" + fullName + "</TITLE></HEAD><BODY>";
     file_content += "<B>"+fullName+"</B>";
 
+    if(permission != null) {
+      file_content += "<BR>" + permission;
+    }
     File[] children = directory.listFiles();
 
     for (int ii=0; ii<children.length; ii++) {

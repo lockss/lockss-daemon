@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.13 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: StaticContentPlugin.java,v 1.14 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -143,6 +143,10 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
       throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public String getManifestPage() {
+      throw new UnsupportedOperationException("Not Implemented");
     }
 
     /**

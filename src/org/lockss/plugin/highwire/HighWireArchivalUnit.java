@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.26 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.27 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
       // error
       throw new ArchivalUnit.ConfigurationException("Illegal RE", e);
     }
-   
+
     pauseMS = config.getTimeInterval(AUPARAM_PAUSE_TIME, DEFAULT_PAUSE_TIME);
     logger.debug3("Set pause value to "+pauseMS);
 
@@ -152,6 +152,11 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
     return new HighWireUrlCacher(owner, url);
   }
+
+  public String getManifestPage() {
+    return makeStartUrl(base, volume);
+  }
+
 
   private CrawlSpec makeCrawlSpec(URL base, int volume)
       throws REException {

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.40 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: NullPlugin.java,v 1.41 2003-08-30 00:35:30 clairegriffin Exp $
  */
 
 /*
@@ -362,6 +362,13 @@ public class NullPlugin {
     }
 
     public boolean shouldCallTopLevelPoll(AuState aus) {
+      return false;
+    }
+    public String getManifestPage() {
+      return null;
+    }
+
+    public boolean checkCrawlPermission(Reader reader) {
       return false;
     }
 
