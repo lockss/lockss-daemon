@@ -1,5 +1,5 @@
 /*
- * $Id: FixedTimedMap.java,v 1.5 2004-10-11 00:56:40 tlipkis Exp $
+ * $Id: FixedTimedMap.java,v 1.6 2004-10-11 05:42:27 tlipkis Exp $
  */
 
 /*
@@ -39,9 +39,7 @@ import org.apache.commons.collections.map.LinkedMap;
  * FixedTimedMap implements the Map interface.  It has the
  * additional property that entries expire on an interval specified
  * by a parameter to the constructor.  The interval is calculated from the
- * time at which the entry was added to the map.  This map is a hash map; as
- * such, classes used as keys should have a defined <code>hashCode</code>
- * method that obeys the contract for hash codes.
+ * time at which the entry was added to the map.
  * @author Tyrone Nicholas
  * @version 1.0
  */
@@ -50,49 +48,45 @@ public class FixedTimedMap extends TimedMap implements Map
 {
 
   /** Amount of time each entry has before it will be deleted */
-  int interval;
+  long interval;
 
   /** Constructor.
    * @param interval Interval after which entries expire, in milliseconds.
    */
 
-  public FixedTimedMap(int interval) {
+  public FixedTimedMap(long interval) {
     this.interval = interval;
     this.keytimes = new HashMap();
     this.entries = new LinkedMap();
   }
 
-  void updateEntries() {
+  /** Change the expiration interval for newly added elements.  Does not
+   * affect elements already in the map. */
+  public void setInterval(long interval) {
+    this.interval = interval;
+  }
+
+  void removeExpiredEntries() {
     while (!entries.isEmpty()) {
       Object key = ((LinkedMap)entries).firstKey();
       Deadline entry = (Deadline)keytimes.get(key);
       if (entry.expired()) {
         keytimes.remove(key);
         entries.remove(key);
-      }
-      else {
+      } else {
         return;
       }
     }
   }
 
-  boolean areThereExpiredEntries() {
-    if (entries.isEmpty()) {
-      return false;
-    }
-    Object key = ((LinkedMap)entries).firstKey();
-    Deadline first = (Deadline)keytimes.get(key);
-    return first.expired();
-  }
-
   public Object remove(Object key) {
-    updateEntries();
+    removeExpiredEntries();
     keytimes.remove(key);
     return entries.remove(key);
   }
 
   public Object put(Object key, Object value) {
-    updateEntries();
+    removeExpiredEntries();
     Deadline deadline = Deadline.in(interval);
     keytimes.put(key,deadline);
     return entries.put(key, value);
@@ -103,7 +97,7 @@ public class FixedTimedMap extends TimedMap implements Map
    * @param t Map whose entries are being added to this map.
    */
   public void putAll(Map t) {
-    updateEntries();
+    removeExpiredEntries();
     Iterator it = t.entrySet().iterator();
     while (it.hasNext()) {
       Map.Entry entry = (Map.Entry) it.next();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFixedTimedMap.java,v 1.3 2004-04-29 10:16:48 tlipkis Exp $
+ * $Id: TestFixedTimedMap.java,v 1.4 2004-10-11 05:42:27 tlipkis Exp $
  */
 
 /*
@@ -64,8 +64,7 @@ public class TestFixedTimedMap extends LockssTestCase {
   Object keys[] = { new Integer(3),"foo",new Double(4.0) };
   Object values[] = { "three","bar",new Integer(4) };
 
-  FixedTimedMap makeGeneric()
-  {
+  FixedTimedMap makeGeneric() {
     FixedTimedMap map = new FixedTimedMap(timeout);
     map.put(keys[0],values[0]);
     assertTrue(timeout>10);
@@ -75,19 +74,22 @@ public class TestFixedTimedMap extends LockssTestCase {
     return map;
   }
 
-  public void testTimeout()
-  {
-    FixedTimedMap map = makeGeneric();
-    TimeBase.step(timeout*9/10-1);
-    Object value = map.get(keys[0]);
-    assertSame(value,values[0]);
-    TimeBase.step(1);
-    value = map.get(keys[0]);
-    assertNull(value);
+  public void testTimeoutValue() {
+    assertEquals("timeout value must be evenly divisable by 10",
+		 timeout, (timeout / 10) * 10);
   }
 
-  public void testClear()
-  {
+  public void testTimeout() {
+    FixedTimedMap map = makeGeneric();
+    TimeBase.step(timeout*9/10-1);
+    assertSame(values[0], map.get(keys[0]));
+    TimeBase.step(1);
+    assertNull(map.get(keys[0]));
+    assertSame(values[1], map.get(keys[1]));
+    assertSame(values[2], map.get(keys[2]));
+  }
+
+  public void testClear() {
     FixedTimedMap map = makeGeneric();
     assertFalse(map.isEmpty());
     map.clear();
@@ -98,14 +100,15 @@ public class TestFixedTimedMap extends LockssTestCase {
     FixedTimedMap map = makeGeneric();
     assertEquals(keys.length,values.length);
     for (int i=0; i<keys.length; i++)
-      assertSame(map.get(keys[i]),values[i]);
+      assertSame(values[i], map.get(keys[i]));
   }
 
   public void testOverwrite() {
     FixedTimedMap map = makeGeneric();
+    assertNotEquals("joe", (String)map.get(keys[1]));
     map.put(keys[1],"joe");
     String joe = (String)map.get(keys[1]);
-    assertSame(joe,"joe");
+    assertEquals("joe", (String)map.get(keys[1]));
   }
 
   public void testSameDeadline() {
@@ -127,23 +130,20 @@ public class TestFixedTimedMap extends LockssTestCase {
     assertTrue(map.containsKey(keys[1]));
   }
 
-  public void testEqualityHash() {
-    TimeBase.setSimulated();
+  public void testEqauls() {
     FixedTimedMap map = makeGeneric();
-    TimeBase.setSimulated();
-    FixedTimedMap map3 = makeGeneric();
     FixedTimedMap map2 = new FixedTimedMap(timeout);
     map2.putAll(map);
-    assertEquals(map.hashCode(),map3.hashCode());
+    assertEquals(map, map2);
   }
 
   public void testSizeRemove() {
     FixedTimedMap map = makeGeneric();
-    assertEquals(map.size(),keys.length);
+    assertEquals(keys.length, map.size());
     map.put("joe","sue");
-    assertEquals(map.size(),keys.length+1);
+    assertEquals(keys.length+1, map.size());
     map.remove("joe");
-    assertEquals(map.size(),keys.length);
+    assertEquals(keys.length, map.size());
   }
 
   public void testPutAll() {
@@ -155,18 +155,17 @@ public class TestFixedTimedMap extends LockssTestCase {
     t.put(new Float(8.8),eight);
     map.putAll(t);
     t = null;
-    assertSame(map.get("hack"),"burn");
-    assertEquals(map.size(),keys.length+3);
-    assertSame(map.get(new Float(8.8)),eight);
+    assertEquals("burn", map.get("hack"));
+    assertEquals(keys.length+3, map.size());
+    assertSame(eight, map.get(new Float(8.8)));
   }
-
 
   void checkCollection(Collection coll,Object[] objs) {
     int loc = 0;
     Iterator it = coll.iterator();
     assertEquals(coll.size(), objs.length);
     while (it.hasNext()) {
-      assertSame(it.next(), objs[loc++]);
+      assertSame(objs[loc++], it.next());
     }
   }
   public void testSets() {
@@ -184,42 +183,73 @@ public class TestFixedTimedMap extends LockssTestCase {
     int loc = 0;
     Set entryset = map.entrySet();
     Iterator it = entryset.iterator();
-    assertEquals(entryset.size(), keys.length);
-    assertEquals(entryset.size(), values.length);
+    assertEquals(keys.length, entryset.size());
+    assertEquals(values.length, entryset.size());
     while (it.hasNext()) {
       Map.Entry entry = (Map.Entry) it.next();
-      assertSame(entry.getKey(), keys[loc]);
-      assertSame(entry.getValue(), values[loc++]);
+      assertSame(keys[loc], entry.getKey());
+      assertSame(values[loc++], entry.getValue());
     }
   }
 
-  public void testIteratorExpiry() {
+  // force the map to update
+  private void updateMap(Map map) {
+    map.get("");
+  }
+
+  public void testSetsUnmodifiable() {
     FixedTimedMap map = makeGeneric();
-    Set entryset = map.entrySet();
-    Iterator entryit = entryset.iterator();
-    TimeBase.step(timeout + 1);
-    Object obj;
+    assertUnmodifiable(map.keySet());
+    assertUnmodifiable(map.entrySet());
+    assertUnmodifiable(map.values());
+  }
+
+  public void testEntryIteratorExpiry() {
+    FixedTimedMap map = makeGeneric();
+
+    // timeout before getting set should not cause exception
+    TimeBase.step(timeout*9/10);
+    updateMap(map);
+    Iterator entryit = map.entrySet().iterator();
+    Object obj = entryit.next();
+    TimeBase.step(timeout);
+    updateMap(map);
     try {
       obj = entryit.next();
-      fail("Should have thrown TimedIteratorExpiredException");
+      fail("Should have thrown ConcurrentModificationException");
+    } catch (ConcurrentModificationException e) {
     }
-    catch (TimedIteratorExpiredException e) {
-      Iterator keyit = map.keySet().iterator();
-      TimeBase.step(timeout);
-      try {
-        obj = keyit.next();
-        fail("Should have thrown TimedIteratorExpiredException");
-      }
-      catch (TimedIteratorExpiredException f) {
-        Iterator valueit = map.values().iterator();
-        TimeBase.step(timeout);
-        try {
-          obj = valueit.next();
-          fail("Should have thrown TimedIteratorExpiredException");
-        }
-        catch (TimedIteratorExpiredException g) {
-        }
-      }
+  }
+
+  public void testKeyIteratorExpiry() {
+    FixedTimedMap map = makeGeneric();
+
+    TimeBase.step(timeout*9/10);
+    updateMap(map);
+    Iterator keyit = map.keySet().iterator();
+    Object obj = keyit.next();
+    TimeBase.step(timeout);
+    updateMap(map);
+    try {
+      obj = keyit.next();
+      fail("Should have thrown ConcurrentModificationException");
+    } catch (ConcurrentModificationException e) {
+    }
+  }
+
+  public void testValueIteratorExpiry() {
+    FixedTimedMap map = makeGeneric();
+
+    TimeBase.step(timeout*9/10);
+    updateMap(map);
+    Iterator valueit = map.values().iterator();
+    Object obj = valueit.next();
+    TimeBase.step(timeout);
+    updateMap(map);
+    try {
+      obj = valueit.next();
+      fail("Should have thrown ConcurrentModificationException");
+    } catch (ConcurrentModificationException e) {
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TimedMap.java,v 1.4 2003-12-17 02:49:59 tlipkis Exp $
+ * $Id: TimedMap.java,v 1.5 2004-10-11 05:42:27 tlipkis Exp $
  */
 
 /*
@@ -33,23 +33,28 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
+import org.apache.commons.collections.iterators.UnmodifiableIterator;
 
 /**
- * Map in which entries live for some interval, after which they are
- * automatically removed.
+ * Map in which entries are automatically removed after some interval.
+ * Expired entries live until the map is next accessed.  The set views
+ * (keySet(), entrySet(), values()) re unmodifiable.  Fetching any set view
+ * updates the map, as does obtainsing an iterator over these sets.
+ * Because get() can cause this map to be altered, set iterators may throw
+ * throw ConcurrentModificationException even if the only operation
+ * performed is get().  The map is not synchronised.  equals() and
+ * hashCode() ignore the expiration times, considering only the map keys
+ * and values.
  * @author Tyrone Nicholas
  * @version 1.0
  */
-
 public abstract class TimedMap implements Map {
 
   Map entries;
   Map keytimes;
-  Date lastRemoved;
 
-  abstract void updateEntries();
-
-  abstract boolean areThereExpiredEntries();
+  /** Remove expired entries */
+  abstract void removeExpiredEntries();
 
   public void clear() {
     entries.clear();
@@ -57,141 +62,147 @@ public abstract class TimedMap implements Map {
   }
 
   public boolean containsKey(Object key) {
-    updateEntries();
+    removeExpiredEntries();
     return entries.containsKey(key);
   }
 
   public boolean containsValue(Object value) {
-    updateEntries();
+    removeExpiredEntries();
     return entries.containsValue(value);
   }
 
   public Object get(Object key) {
-    updateEntries();
+    removeExpiredEntries();
     return entries.get(key);
   }
 
-  public int hashCode() {
-    return 2 * entries.hashCode() + 3 * keytimes.hashCode();
-  }
-
   public boolean isEmpty() {
-    updateEntries();
+    removeExpiredEntries();
     return entries.isEmpty();
   }
 
   public int size() {
-    updateEntries();
+    removeExpiredEntries();
     return entries.size();
   }
 
-  private class ExpiringIterator implements Iterator {
-    private Iterator inner_iterator;
-    ExpiringIterator(Iterator inner) {
-      this.inner_iterator = inner;
-    }
-    void checkExpired() {
-      if (TimedMap.this.areThereExpiredEntries()) {
-       throw new TimedIteratorExpiredException();
-     }
-    }
-    public boolean hasNext() {
-      checkExpired();
-      return inner_iterator.hasNext();
-    }
-    public Object next() {
-      checkExpired();
-      return inner_iterator.next();
-   }
-    public void remove() {
-      throw new UnsupportedOperationException("Remove not supported");
-    }
+  /** Return true if the argument if a TimeMap of the same type with the
+   * same contents, ignoring expiration times */
+  public boolean equals(Object o) {
+    return (getClass() == o.getClass()) &&
+      entries.equals(((TimedMap)o).getEntries());
   }
 
-  private abstract class ExpiringSet extends AbstractSet {
-    public int size() {
-      return TimedMap.this.size();
-    }
-    public void clear() {
-      TimedMap.this.clear();
-    }
-    public boolean isEmpty() {
-      return TimedMap.this.isEmpty();
-    }
-    public boolean remove(Object obj) {
-      boolean retval = contains(obj);
-      TimedMap.this.remove(obj);
-      return retval;
-    }
-    public boolean add(Object o) {
-      throw new java.lang.UnsupportedOperationException(
-      "Method add() not implemented.");
-    }
-    public boolean addAll(Collection c) {
-      throw new java.lang.UnsupportedOperationException(
-      "Method addAll() not implemented.");
-    }
-    public boolean equals(Object o) {
-      throw new java.lang.UnsupportedOperationException(
-      "Method equals() not implemented.");
-    }
+  public int hashCode() {
+    return entries.hashCode();
   }
 
-  private transient Collection values = null;
-  private transient ExpiringSet keySet = null;
-  private transient ExpiringSet entrySet = null;
+  /** allow other instances to get underlying entries for equals() */
+  Map getEntries() {
+    return entries;
+  }
+
+  private transient NestedSet keySet = null;
+  private transient NestedSet entrySet = null;
+  private transient NestedCollection values = null;
 
   public Set keySet() {
+    removeExpiredEntries();
     if (keySet == null) {
-      keySet = new ExpiringSet() {
-        public boolean contains(Object obj) {
-          return TimedMap.this.containsKey(obj);
-        }
-        public Iterator iterator() {
-          return new ExpiringIterator(TimedMap.
-          this.entries.keySet().iterator());
-        }
-      };
+      keySet = new NestedSet(this.entries.keySet());
     }
     return keySet;
   }
 
   public Set entrySet()  {
+    removeExpiredEntries();
     if (entrySet==null) {
-      entrySet = new ExpiringSet() {
-        public boolean contains(Object obj) {
-          return TimedMap.this.entries.entrySet().contains(obj);
-        }
-
-        public Iterator iterator() {
-          return new ExpiringIterator(TimedMap.
-          this.entries.entrySet().iterator());
-        }
-      };
+      entrySet = new NestedSet(this.entries.entrySet());
     }
     return entrySet;
   }
 
   public Collection values() {
+    removeExpiredEntries();
     if (values == null) {
-      values = new AbstractCollection() {
-        public Iterator iterator() {
-          return new ExpiringIterator(TimedMap.
-          this.entries.values().iterator());
-        }
-
-        public int size() {
-          return TimedMap.this.size();
-        }
-      };
+      values = new NestedCollection(this.entries.values());
     }
     return values;
   }
 
-  public boolean equals(Object obj)
-  {
-    throw new UnsupportedOperationException("Equals operation not yet " +
-                                            "implemented for this class.");
+  // Set and collection views delegate to the underlying Set or Collection,
+  // and are unmodifiable.  Obtaining a view or an iterator on a vire
+  // triggers expired entry removal.
+
+  static final String MSG_UNMOD = "Set views of TimedMaps are unmodifiable";
+
+  private class NestedSet extends AbstractSet {
+    private Set set;
+
+    NestedSet(Set set) {
+      this.set = set;
+    }
+    public int size() {
+      removeExpiredEntries();
+      return set.size();
+    }
+    public Iterator iterator() {
+      removeExpiredEntries();
+      return UnmodifiableIterator.decorate(set.iterator());
+    }
+    public boolean isEmpty() {
+      removeExpiredEntries();
+      return set.isEmpty();
+    }
+    public boolean equals(Object o) {
+      return set.equals(o);
+    }
+    public int hashCode() {
+      return set.hashCode();
+    }
+    public boolean remove(Object obj) {
+      throw new UnsupportedOperationException(MSG_UNMOD);
+    }
+    public void clear() {
+      throw new UnsupportedOperationException(MSG_UNMOD);
+    }
+    public boolean add(Object o) {
+      throw new UnsupportedOperationException(MSG_UNMOD);
+    }
   }
 
+  private class NestedCollection extends AbstractCollection {
+    private Collection coll;
+
+    NestedCollection(Collection coll) {
+      this.coll = coll;
+    }
+    public int size() {
+      removeExpiredEntries();
+      return coll.size();
+    }
+    public Iterator iterator() {
+      removeExpiredEntries();
+      return UnmodifiableIterator.decorate(coll.iterator());
+    }
+    public boolean isEmpty() {
+      removeExpiredEntries();
+      return coll.isEmpty();
+    }
+    public boolean equals(Object o) {
+      return coll.equals(o);
+    }
+    public int hashCode() {
+      return coll.hashCode();
+    }
+    public boolean remove(Object obj) {
+      throw new UnsupportedOperationException(MSG_UNMOD);
+    }
+    public void clear() {
+      throw new UnsupportedOperationException(MSG_UNMOD);
+    }
+    public boolean add(Object o) {
+      throw new UnsupportedOperationException(MSG_UNMOD);
+    }
+  }
 }

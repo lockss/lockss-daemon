@@ -46,7 +46,7 @@ public class VariableTimedMap extends TimedMap implements Map {
     deadlineKeys = new TreeMap();
   }
 
-  void updateEntries() {
+  void removeExpiredEntries() {
     while (!keytimes.isEmpty()) {
       Deadline dead = (Deadline)deadlineKeys.firstKey();
       if (dead.expired()) {
@@ -68,14 +68,6 @@ public class VariableTimedMap extends TimedMap implements Map {
     deadlineKeys.clear();
   }
 
-  boolean areThereExpiredEntries() {
-    if (keytimes.isEmpty()) {
-      return false;
-    }
-    Deadline first = (Deadline)deadlineKeys.firstKey();
-    return first.expired();
-  }
-
   public Object remove(Object key) {
     if (containsKey(key)) {
       removeKeyFromDeadlineKeys(key);
@@ -91,7 +83,7 @@ public class VariableTimedMap extends TimedMap implements Map {
 
   /** Add an antry that will expire at the deadline. */
   public Object put(Object key, Object value, Deadline deadline) {
-    updateEntries();
+    removeExpiredEntries();
     if (containsKey(key)) {
       removeKeyFromDeadlineKeys(key);
     }
@@ -113,6 +105,11 @@ public class VariableTimedMap extends TimedMap implements Map {
 	keys.remove(key);
       }
     }
+  }
+
+  public boolean equals(Object o) {
+    return (o instanceof VariableTimedMap) &&
+      entries.equals(((VariableTimedMap)o).getEntries());
   }
 
   public Object put(Object key, Object value) {
