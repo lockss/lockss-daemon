@@ -8,10 +8,8 @@ import javax.swing.*;
 import javax.swing.border.*;
 
 import org.lockss.daemon.*;
-import org.lockss.devtools.*;
 import org.lockss.plugin.*;
-
-import org.lockss.util.*;
+import org.lockss.plugin.ArchivalUnit.*;
 
 /**
  * <p>Title: </p>
@@ -29,17 +27,9 @@ public class CrawlRuleTestDialog extends JDialog {
   JPanel panel1 = new JPanel();
   BorderLayout borderLayout1 = new BorderLayout();
   JPanel buttonPanel = new JPanel();
-  JPanel infoPanel = new JPanel();
   JButton okButton = new JButton();
   JButton cancelButton = new JButton();
-  JLabel startUrlLabel = new JLabel();
-  JTextField startUrlTextField = new JTextField();
-  JLabel depthLabel = new JLabel();
-  JTextField depthTextField = new JTextField();
-  JLabel delayLabel = new JLabel();
-  JTextField delayTextField = new JTextField();
   JFileChooser fileChooser = new JFileChooser();
-  GridBagLayout gridBagLayout1 = new GridBagLayout();
   JPanel parameterPanel = new JPanel();
   TitledBorder parameterBorder;
   TitledBorder infoBorder;
@@ -70,8 +60,7 @@ public class CrawlRuleTestDialog extends JDialog {
     m_plugin = plugin;
     addConfigParamFields();
     Dimension dim = new Dimension();
-    int height = infoPanel.getPreferredSize().height +
-        parameterPanel.getPreferredSize().height +
+    int height = parameterPanel.getPreferredSize().height +
         buttonPanel.getPreferredSize().height;
 
     panel1.setPreferredSize(new Dimension(400, height));
@@ -82,37 +71,14 @@ public class CrawlRuleTestDialog extends JDialog {
     parameterBorder = new TitledBorder("");
     infoBorder = new TitledBorder("");
     panel1.setLayout(borderLayout1);
-    okButton.setText("Run Test");
+    okButton.setText("Check AU");
     okButton.addActionListener(new CrawlRuleTestDialog_okButton_actionAdapter(this));
     cancelButton.setText("Cancel");
     cancelButton.addActionListener(new
         CrawlRuleTestDialog_cancelButton_actionAdapter(this));
-    infoPanel.setBorder(infoBorder);
-    infoPanel.setMinimumSize(new Dimension(300, 80));
-    infoPanel.setPreferredSize(new Dimension(400, 90));
-    infoPanel.setLayout(gridBagLayout1);
     buttonPanel.setBorder(null);
     buttonPanel.setMinimumSize(new Dimension(300, 35));
     buttonPanel.setPreferredSize(new Dimension(400, 35));
-    startUrlLabel.setRequestFocusEnabled(false);
-    startUrlLabel.setToolTipText("");
-    startUrlLabel.setText("Starting URL:");
-    startUrlTextField.setMinimumSize(new Dimension(200, 19));
-    startUrlTextField.setPreferredSize(new Dimension(290, 19));
-    startUrlTextField.setToolTipText("Enter URL from which to start check.");
-    startUrlTextField.setText("http://");
-    depthLabel.setText("Test Depth:");
-    depthTextField.setMinimumSize(new Dimension(200, 19));
-    depthTextField.setPreferredSize(new Dimension(100, 19));
-    depthTextField.setToolTipText("Enter crawl depth.");
-    depthTextField.setText("1");
-    depthTextField.setHorizontalAlignment(SwingConstants.RIGHT);
-    delayLabel.setText("Fetch Delay:");
-    delayTextField.setText("6");
-    delayTextField.setHorizontalAlignment(SwingConstants.RIGHT);
-    delayTextField.setPreferredSize(new Dimension(100, 19));
-    delayTextField.setToolTipText("Enter delay in milliseconds.");
-    delayTextField.setMinimumSize(new Dimension(200, 19));
     parameterPanel.setBorder(parameterBorder);
     parameterPanel.setLayout(gridBagLayout2);
     parameterBorder.setTitleFont(new java.awt.Font("DialogInput", 0, 12));
@@ -123,27 +89,6 @@ public class CrawlRuleTestDialog extends JDialog {
     panel1.add(buttonPanel, BorderLayout.SOUTH);
     buttonPanel.add(okButton, null);
     buttonPanel.add(cancelButton, null);
-    panel1.add(infoPanel, BorderLayout.NORTH);
-    infoPanel.add(startUrlLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.NONE,
-        new Insets(10, 10, 0, 0), 0, 0));
-    infoPanel.add(startUrlTextField,
-                  new GridBagConstraints(1, 0, 3, 1, 1.0, 0.0
-                                         , GridBagConstraints.WEST,
-                                         GridBagConstraints.HORIZONTAL,
-                                         new Insets(10, 7, 0, 13), 0, 0));
-    infoPanel.add(depthLabel, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.NONE,
-        new Insets(10, 10, 5, 0), 0, 0));
-    infoPanel.add(delayLabel, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.NONE,
-        new Insets(10, 24, 5, 0), 0, 0));
-    infoPanel.add(delayTextField, new GridBagConstraints(3, 1, 1, 1, 1.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
-        new Insets(10, 13, 5, 13), -11, 0));
-    infoPanel.add(depthTextField, new GridBagConstraints(1, 1, 1, 1, 1.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL,
-        new Insets(10, 7, 5, 0), -11, 0));
     panel1.add(parameterPanel, BorderLayout.CENTER);
   }
 
@@ -185,42 +130,46 @@ public class CrawlRuleTestDialog extends JDialog {
 
   void okButton_actionPerformed(ActionEvent e) {
     try {
-      Properties props = new Properties();
-      String startUrl = startUrlTextField.getText();
-      int depth = Integer.parseInt(depthTextField.getText());
-      long delay = Integer.parseInt(delayTextField.getText()) *
-          Constants.SECOND;
-      for (Iterator it = m_descrMap.keySet().iterator(); it.hasNext();) {
-        String key = (String) it.next();
-        String value = ((JTextField)m_descrMap.get(key)).getText();
-        props.put(key, value);
-      }
-      Configuration config = ConfigManager.fromProperties(props);
-      ArchivalUnit au = m_plugin.createAu(config);
-      fileChooser.setDialogTitle("Save Test Results to...");
-      int option = fileChooser.showSaveDialog(this);
-      if(option == fileChooser.APPROVE_OPTION ||
-         fileChooser.getSelectedFile() != null) {
-        String fileName = fileChooser.getSelectedFile().getAbsolutePath();
 
-        CrawlRuleTester tester = new CrawlRuleTester(fileName, depth, delay,
-            startUrl, au.getCrawlSpec());
-
-        setVisible(false);
-        tester.runTest();
-      }
+      ArchivalUnit au = makeAu();
+      testAu(au);
     }
-
     catch(Exception ex) {
+      JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit:\n"
+                                    + ex.getMessage(),
+                                    "CrawlRule Test Error",
+                                    JOptionPane.ERROR_MESSAGE);
       ex.printStackTrace();
-      // Alert here.
     }
+  }
+
+  private ArchivalUnit makeAu() throws ConfigurationException {
+    Properties props = new Properties();
+    for (Iterator it = m_descrMap.keySet().iterator(); it.hasNext(); ) {
+      String key = (String) it.next();
+      String value = ( (JTextField) m_descrMap.get(key)).getText();
+      props.put(key, value);
+    }
+    Configuration config = ConfigManager.fromProperties(props);
+    ArchivalUnit au = m_plugin.createAu(config);
+    return au;
+  }
+
+  private void testAu(ArchivalUnit au) {
+    CrawlRuleTestResultsDialog test_dlg =
+        new CrawlRuleTestResultsDialog(au);
+    //Dimension dlgSize = test_dlg.getPreferredSize();
+    Point pos = this.getLocationOnScreen();
+    test_dlg.setLocation(pos.x, pos.y);
+    //test_dlg.setLocation(r.x  + dlgSize.width, r.y  + dlgSize.height);
+    test_dlg.pack();
+    setVisible(false);
+    test_dlg.show();
   }
 
   void cancelButton_actionPerformed(ActionEvent e) {
     setVisible(false);
   }
-
 }
 
 class CrawlRuleTestDialog_okButton_actionAdapter implements java.awt.event.ActionListener {

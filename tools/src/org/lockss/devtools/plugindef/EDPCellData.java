@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.1 2004-05-25 00:17:45 clairegriffin Exp $
+ * $Id: EDPCellData.java,v 1.2 2004-06-05 02:30:12 clairegriffin Exp $
  */
 
 /*
@@ -56,6 +56,9 @@ public class EDPCellData {
 
     if(key.equals(edp.PLUGIN_NAME)) {
       m_data = edp.getPluginName();
+    }
+    else if(key.equals(edp.PLUGIN_IDENTIFIER)) {
+      m_data = edp.getPluginIdentifier();
     }
     else if(key.equals(edp.PLUGIN_VERSION)) {
       m_data = edp.getPluginVersion();
@@ -172,6 +175,10 @@ public class EDPCellData {
     if(m_key.equals(m_plugin.PLUGIN_NAME)) {
       m_data = data;
       m_plugin.setPluginName((String)m_data);
+    }
+    else if(m_key.equals(m_plugin.PLUGIN_IDENTIFIER)) {
+      m_data = data;
+      m_plugin.setPluginIdentifier((String)m_data);
     }
     else if(m_key.equals(m_plugin.PLUGIN_VERSION)) {
       m_data = data;

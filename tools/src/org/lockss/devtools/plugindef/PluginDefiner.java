@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.1 2004-05-25 00:17:45 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.2 2004-06-05 02:30:12 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
+import org.lockss.util.*;
 
 public class PluginDefiner extends JFrame {
   JPanel contentPane;
@@ -209,6 +210,9 @@ public class PluginDefiner extends JFrame {
         return;
       name = jFileChooser1.getSelectedFile().getName();
       location = jFileChooser1.getSelectedFile().getParent();
+      if(!StringUtil.endsWithIgnoreCase(name,".xml")) {
+        name = name + ".xml";
+      }
     }
 
     // write the file
@@ -230,11 +234,21 @@ public class PluginDefiner extends JFrame {
 
   void rulesTestMenuItem_actionPerformed(ActionEvent e) {
     JDialog dialog = new CrawlRuleTestDialog(this, edp);
+    Dimension dlgSize = dialog.getPreferredSize();
+    Dimension frmSize = getSize();
+    Point loc = getLocation();
+    dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
+                       (frmSize.height - dlgSize.height) / 2 + loc.y);
     dialog.show();
   }
 
   void filtersTestMenuItem_actionPerformed(ActionEvent e) {
     JDialog dialog = new FilterTestDialog(this, edp);
+    Dimension dlgSize = dialog.getPreferredSize();
+    Dimension frmSize = getSize();
+    Point loc = getLocation();
+    dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
+                       (frmSize.height - dlgSize.height) / 2 + loc.y);
     dialog.show();
   }
 

@@ -235,13 +235,15 @@ public class PrintfEditor extends JDialog
   }
 
 
-  /** Return a copy of the string with all non-alphanumeric chars
-   * escaped by backslash.  Useful when embedding an unknown string in
-   * a regexp
+  /**
+   * Return a copy of the string with all reserved regexp chars
+   * escaped by backslash.
+   * @param str the string to add escapes to
+   * @return String return a string with escapes or "" if str is null
    */
   public static String escapeReservedChars(String str) {
+  if(str == null) return "";
     StringBuffer sb = new StringBuffer();
-
     for(int ci = 0; ci < str.length(); ci++) {
       char ch = str.charAt(ci);
       if(RESERVED_STRING.indexOf(ch) >=0) {

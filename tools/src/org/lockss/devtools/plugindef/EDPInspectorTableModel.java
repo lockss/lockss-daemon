@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.2 2004-06-03 02:44:33 clairegriffin Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.3 2004-06-05 02:30:12 clairegriffin Exp $
  */
 
 /*
@@ -54,14 +54,15 @@ public class EDPInspectorTableModel extends AbstractTableModel
 
   static final InspectorEntry[] inspectorEntries = {
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
+      new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
                          "Plugin Version", null),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
                          "Configuration Parameters", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
-                         inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
                          "Start URL Template", inspectorCellEditor),
+      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+                         inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
                          inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
@@ -82,14 +83,15 @@ public class EDPInspectorTableModel extends AbstractTableModel
 
   static final InspectorEntry[] requiredEntries = {
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
+      new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
                          "Plugin Version", null),
       new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
                          "Configuration Parameters", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
-                        inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
                          "Start URL Template", inspectorCellEditor),
+      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+                        inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
                          inspectorCellEditor),
       new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,

@@ -5,13 +5,18 @@ import java.util.*;
 
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
-
-import org.lockss.util.*;
-import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
-import java.math.*;
+import org.lockss.plugin.base.*;
+import org.lockss.util.*;
 
 public class CrawlRuleTester {
+  /* Message Types */
+  public static final int ERROR_MESSAGE = 0;
+  public static final int WARNING_MESSAGE = 1;
+  public static final int PLAIN_MESSAGE = 2;
+  public static final int URL_SUMMARY_MESSAGE = 3;
+  public static final int TEST_SUMMARY_MESSAGE = 4;
+
   public static long DEFAULT_DELAY =
       BaseArchivalUnit.DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
 
@@ -23,6 +28,7 @@ public class CrawlRuleTester {
   private  BufferedWriter m_outWriter = null;
   private Deadline fetchDeadline = Deadline.in(0);
   private boolean useLocalWriter = true;
+  private MessageHandler m_msgHandler;
 
   // our storage for extracted urls
   private TreeSet m_extracted = new TreeSet();
@@ -69,8 +75,29 @@ public class CrawlRuleTester {
     m_outWriter = outWriter;
   }
 
+  /**
+   * RuleTest
+   *
+   * @param msgHandler MessageHandler to take all output
+   * @param crawlDepth the crawl depth to use
+   * @param crawlDelay the type to wait between fetches
+   * @param baseUrl the url to start from
+   * @param crawlSpec a CrawlSpec to use for url checking.
+   */
+  public CrawlRuleTester(MessageHandler msgHandler, int crawlDepth,
+                         long crawlDelay,
+                         String baseUrl, CrawlSpec crawlSpec) {
+    this(crawlDepth, crawlDelay, baseUrl, crawlSpec);
+    m_msgHandler = msgHandler;
+  }
+
   public void runTest() {
-    useLocalWriter = m_outWriter == null ? true : false;
+    if(m_outWriter == null && m_msgHandler == null) {
+      useLocalWriter = true;
+    }
+    else {
+      useLocalWriter = false;
+    }
     if(useLocalWriter) {
       openOutputFile();
     }
@@ -106,10 +133,10 @@ public class CrawlRuleTester {
   }
 
   private void checkRules() {
-    outputMessage("\nChecking " + m_baseUrl +
-                  " at crawl depth " + m_crawlDepth +
-                  " and crawl delay of " + m_crawlDelay + " millisecs" +
-                  " using crawlspec:\n" + m_crawlSpec + "\n");
+    outputMessage("\nChecking " + m_baseUrl, TEST_SUMMARY_MESSAGE);
+    outputMessage("crawl depth: " + m_crawlDepth +
+                  "     crawl delay: " + m_crawlDelay + " millisecs.\n",
+                  PLAIN_MESSAGE);
 
     TreeSet crawlList = new TreeSet();
     TreeSet fetched = new TreeSet();
@@ -135,6 +162,7 @@ public class CrawlRuleTester {
           crawlList.addAll(m_incls);
         }
         catch (MalformedURLException ex) {
+          ex.printStackTrace();
           outputErrResults(urlstr, ex.getMessage());
         }
       }
@@ -158,6 +186,7 @@ public class CrawlRuleTester {
       parser.parseForUrls(mcu, new MyFoundUrlCallback());
     }
     catch (Exception ex) {
+      ex.printStackTrace();
       outputErrResults(url, ex.getMessage());
     }
   }
@@ -174,54 +203,70 @@ public class CrawlRuleTester {
     fetchDeadline.expireIn(m_crawlDelay);
   }
 
-  private void outputMessage(String msg) {
-    try {
-      m_outWriter.write(msg);
-      m_outWriter.newLine();
+  private void outputMessage(String msg, int msgType) {
+    if(m_msgHandler != null) {
+      m_msgHandler.outputMessage(msg + "\n", msgType);
     }
-    catch (Exception ex) {
-      System.err.println(msg);
+    else {
+      try {
+        m_outWriter.write(msg);
+        m_outWriter.newLine();
+      }
+      catch (Exception ex) {
+        System.err.println(msg);
+      }
     }
   }
 
   private void outputErrResults(String url, String errMsg) {
-    outputMessage("Error: " + errMsg + " occured while processing " + url);
+    outputMessage("Error: " + errMsg + " occured while processing " + url,
+                  ERROR_MESSAGE);
   }
 
   private void outputUrlResults(String url, Set m_inclset, Set m_exclset) {
-    outputMessage("\nProcessed: " + url);
+    outputMessage("\nExtracted Urls from: " + url,URL_SUMMARY_MESSAGE);
 
     Iterator it = m_inclset.iterator();
     if (it.hasNext()) {
-      outputMessage("\nUrl's included:");
+      outputMessage("\nIncluded Urls:", URL_SUMMARY_MESSAGE);
     }
     while (it.hasNext()) {
-      outputMessage(it.next().toString());
+      outputMessage(it.next().toString(), PLAIN_MESSAGE);
     }
 
     it = m_exclset.iterator();
     if (it.hasNext())
-      outputMessage("\nUrl's excluded:");
+      outputMessage("\nExcluded Urls:", URL_SUMMARY_MESSAGE);
     while (it.hasNext()) {
-      outputMessage(it.next().toString());
+      outputMessage(it.next().toString(), PLAIN_MESSAGE);
     }
-    try {
-      m_outWriter.flush();
-    }
-    catch (IOException ex) {
+    if(m_outWriter != null) {
+      try {
+        m_outWriter.flush();
+      }
+      catch (IOException ex) {
+      }
     }
   }
 
   private void outputSummary(String baseUrl, Set fetched, long elapsedTime) {
     int fetchCount = fetched.size();
-    outputMessage("\n\nSummary for base Url:" + baseUrl +
-                  " at depth " + m_crawlDepth);
-    outputMessage("\nUrls checked: " + m_extracted.size() +
-                  "    Urls fetched: " + fetchCount);
+    outputMessage("\n\nSummary for starting Url: " + baseUrl +
+                  " and depth: " + m_crawlDepth, TEST_SUMMARY_MESSAGE);
+    outputMessage("\nUrls fetched: " + fetchCount +
+                  "    Urls extracted: " + m_extracted.size(), PLAIN_MESSAGE);
     long secs = elapsedTime / Constants.SECOND;
-    long fetchRate = fetchCount * 60 * Constants.SECOND / elapsedTime;
-    outputMessage("Elapsed Time: " + secs + " secs." +
-                  "    Fetch Rate: " + fetchRate + " p/m");
+    long fetchRate = 0;
+    if(secs > 0) {
+      fetchRate = fetchCount * 60 * Constants.SECOND / elapsedTime;
+    }
+    outputMessage("\nElapsed Time: " + secs + " secs." +
+                  "    Fetch Rate: " + fetchRate + " p/m", PLAIN_MESSAGE);
+  }
+
+  public interface MessageHandler {
+
+    void outputMessage(String message, int messageType);
   }
 
   private class MyFoundUrlCallback
@@ -306,7 +351,7 @@ public class CrawlRuleTester {
     }
 
     public CIProperties getProperties() {
-      throw new UnsupportedOperationException("Not implemented");
+      return null;
     }
 
     public String toString() {
