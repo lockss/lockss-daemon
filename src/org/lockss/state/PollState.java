@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.20 2003-04-29 21:52:08 aalto Exp $
+ * $Id: PollState.java,v 1.21 2003-05-03 01:38:03 aalto Exp $
  */
 
 /*
@@ -178,6 +178,8 @@ public class PollState implements Comparable {
         return "Undefined error";
       case UNFINISHED:
         return "Unfinished";
+      case INCONCLUSIVE:
+        return "Inconclusive";
       default:
         return "Undefined";
     }

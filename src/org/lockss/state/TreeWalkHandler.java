@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.25 2003-05-02 23:06:15 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.26 2003-05-03 01:38:03 aalto Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ public class TreeWalkHandler {
     boolean pContinue = true;
     // get the node state for the cus
     logger.debug3("Recursing treewalk on cus: "+cus.getUrl());
-    NodeState state = manager.getNodeState(cus);
+    NodeState parent = manager.getNodeState(cus);
     // walk the node's children first to process deepest damage first
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
@@ -196,7 +196,7 @@ public class TreeWalkHandler {
         pContinue = recurseTreeWalk((CachedUrlSet)node);
       } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
         // open a new state for the leaf and walk
-        state = manager.getNodeState(
+        NodeState state = manager.getNodeState(
             theAu.makeCachedUrlSet(new RangeCachedUrlSetSpec(node.getUrl())));
         pContinue = checkNodeState(state);
       }
@@ -207,7 +207,7 @@ public class TreeWalkHandler {
 
     // if we took no action below here, check this node
     if (pContinue) {
-      return checkNodeState(state);
+      return checkNodeState(parent);
     }
     return false;
   }
