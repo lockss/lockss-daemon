@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.20 2003-04-17 02:36:39 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.21 2003-04-18 20:28:04 troberts Exp $
  */
 
 /*
@@ -53,8 +53,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for pause time in Highwire crawling.
    */
-  public static final String AUPARAM_PAUSE_TIME =
-      Configuration.PREFIX + "highwire.pause.time";
+  public static final String AUPARAM_PAUSE_TIME = "pause.time";
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   private static final String EXPECTED_URL_PATH = "/";
@@ -65,8 +64,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   private int volume;
   private URL base;
 
-  public static final String AUPARAM_NC_INTERVAL =
-      Configuration.PREFIX + "highwire.nc_interval";
+  public static final String AUPARAM_NC_INTERVAL = "nc_interval";
   private static final long DEFAULT_NC_INTERVAL = 14 * Constants.DAY;;
 
   private long ncCrawlInterval;
