@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseFilterRule.java,v 1.2 2004-01-20 22:58:54 eaalto Exp $
+ * $Id: TestProjectMuseFilterRule.java,v 1.2 2004-01-20 22:58:54 eaalto Exp $
  */
 
 /*
@@ -33,28 +33,34 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.projmuse;
 
 import java.io.*;
-import java.util.*;
 import org.lockss.util.*;
-import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.test.LockssTestCase;
 
-/**
- * Filters out menu, comments, javascript, html tags, and whitespace.
- */
-public class ProjectMuseFilterRule implements FilterRule {
-  static final String MENU_START =
-      "<!-- ================== BEGIN JUMP MENU ================== -->";
-  static final String MENU_END =
-      "<!-- =================== END JUMP MENU =================== -->";
+public class TestProjectMuseFilterRule extends LockssTestCase {
+  private ProjectMuseFilterRule rule;
 
-  public InputStream createFilteredInputStream(Reader reader) {
-    List tagList = ListUtil.list(
-        new HtmlTagFilter.TagPair(MENU_START, MENU_END, true),
-        new HtmlTagFilter.TagPair("<!--", "-->", true),
-        new HtmlTagFilter.TagPair("<script", "</script>", true),
-        new HtmlTagFilter.TagPair("<", ">")
-        );
-    Reader filteredReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+  public void setUp() throws Exception {
+    super.setUp();
+    rule = new ProjectMuseFilterRule();
+  }
+
+  public void testFiltering() throws IOException {
+    String content = "This <!-- remove -->content";
+    String expectedContent = "This content";
+
+    InputStream is = rule.createFilteredInputStream(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+
+    content = "This <script> remove </script>content";
+    is = rule.createFilteredInputStream(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+
+    content = "This <a href=remove>content";
+    is = rule.createFilteredInputStream(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromInputStream(is));
+    content = "This " + rule.MENU_START + " remove all this " +
+        rule.MENU_END + "content";
+    is = rule.createFilteredInputStream(new StringReader(content));
+    assertEquals(expectedContent, StringUtil.fromInputStream(is));
   }
 }
