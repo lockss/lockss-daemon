@@ -55,8 +55,8 @@ public class TestPoll extends TestCase {
                                        testentries,
                                        testaddr,
                                        (byte)5,
-                                       PollManager.generateSecret(),
-                                       PollManager.generateSecret(),
+                                       PollManager.generateRandomBytes(),
+                                       PollManager.generateRandomBytes(),
                                        LcapMessage.CONTENT_POLL_REQ,
                                        5 * 60 *60 *1000,
                                        testID);
@@ -77,8 +77,8 @@ public class TestPoll extends TestCase {
                                  testentries,
                                  testaddr,
                                  (byte)5,
-                                 PollManager.generateSecret(),
-                                 PollManager.generateSecret(),
+                                 PollManager.generateRandomBytes(),
+                                 PollManager.generateRandomBytes(),
                                  LcapMessage.CONTENT_POLL_REQ,
                                  5 * 60 *60 *1000,
                                  testID);
@@ -120,8 +120,8 @@ public class TestPoll extends TestCase {
                                  testentries,
                                  testaddr,
                                  (byte)5,
-                                 PollManager.generateSecret(),
-                                 PollManager.generateSecret(),
+                                 PollManager.generateRandomBytes(),
+                                 PollManager.generateRandomBytes(),
                                  LcapMessage.NAME_POLL_REQ,
                                  5 * 60 *60 *1000,
                                  testID);
