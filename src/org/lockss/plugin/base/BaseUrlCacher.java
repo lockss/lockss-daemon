@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.45 2005-02-02 09:42:28 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.46 2005-02-21 03:05:43 tlipkis Exp $
  */
 
 /*
@@ -327,8 +327,10 @@ public class BaseUrlCacher implements UrlCacher {
       CIProperties props = new CIProperties();
       // set header properties in which we have interest
 
-      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE,
-			conn.getResponseContentType());
+      String ctype = conn.getResponseContentType();
+      if (ctype != null) {
+	props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, ctype);
+      }
       props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
 			Long.toString(TimeBase.nowMs()));
       if (origUrl != fetchUrl &&
