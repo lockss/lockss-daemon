@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.23 2004-03-10 08:51:09 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.24 2004-03-11 09:42:45 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.23 2004-03-10 08:51:09 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.24 2004-03-11 09:42:45 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -71,18 +71,33 @@ public class ProxyHandler extends AbstractHttpHandler {
 
   static final String LOCKSS_PROXY_ID = "1.1 (LOCKSS/jetty)";
 
+  static final String PARAM_NEVER_PROXY =
+    Configuration.PREFIX + "proxy.neverProxy";
+  static final boolean DEFAULT_NEVER_PROXY = false;
+
   private LockssDaemon theDaemon = null;
   private PluginManager pluginMgr = null;
   private LockssUrlConnectionPool connPool = null;
+  private LockssUrlConnectionPool quickFailConnPool = null;
+  private boolean neverProxy = DEFAULT_NEVER_PROXY;
 
   ProxyHandler(LockssDaemon daemon) {
     theDaemon = daemon;
     pluginMgr = theDaemon.getPluginManager();
+    neverProxy = Configuration.getBooleanParam(PARAM_NEVER_PROXY,
+					       DEFAULT_NEVER_PROXY);
   }
 
   ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool) {
     this(daemon);
     this.connPool = pool;
+    this.quickFailConnPool = pool;
+  }
+
+  ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool,
+	       LockssUrlConnectionPool quickFailConnPool) {
+    this(daemon, pool);
+    this.quickFailConnPool = quickFailConnPool;
   }
 
   protected int _tunnelTimeoutMs=250;
@@ -162,7 +177,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (log.isDebug2()) {
       log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
     }
-    if (isRepairRequest) {
+    if (isRepairRequest || neverProxy) {
       if (cu != null && cu.hasContent()) {
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
@@ -348,12 +363,13 @@ public class ProxyHandler extends AbstractHttpHandler {
     boolean isInCache = cu != null && cu.hasContent();
     log.debug3("isInCache: " + isInCache);
 
+    LockssUrlConnection conn = null;
     try {
-      LockssUrlConnection conn =
+      conn =
 	UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
-			       urlString, connPool);
+			       urlString,
+			       (isInCache ? quickFailConnPool : connPool));
 
-      // XXX
       conn.setFollowRedirects(false);
 
       // check connection header
@@ -396,23 +412,25 @@ public class ProxyHandler extends AbstractHttpHandler {
 	}
       }
 
-      // Use the cu's last-modified date, if any, unless the user's
-      // if-modified-since is later.
+      // If the user sent an if-modified-since header, use it unless the
+      // cache file has a later last-modified
       if (isInCache) {
 	CIProperties cuprops = cu.getProperties();
 	String cuLast = cuprops.getProperty(CachedUrl.PROPERTY_LAST_MODIFIED);
+	log.debug3("ifModified: " + ifModified);
 	log.debug3("cuLast: " + cuLast);
-	if (ifModified != null) {
-	  log.debug3("ifModified: " + ifModified);
-	  try {
-	    if (isEarlier(ifModified, cuLast)) {
-	      ifModified = cuLast;
+	if (cuLast != null) {
+	  if (ifModified == null) {
+	    ifModified = cuLast;
+	  } else {
+	    try {
+	      if (isEarlier(ifModified, cuLast)) {
+		ifModified = cuLast;
+	      }
+	    } catch (DateParseException e) {
+	      // preserve user's header if parse failure
 	    }
-	  } catch (DateParseException e) {
-	    // preserve user's header if parse failure
 	  }
-	} else {
-	  ifModified = cuLast;
 	}
       }
 
@@ -456,7 +474,6 @@ public class ProxyHandler extends AbstractHttpHandler {
       try {
 	conn.execute();
       } catch (IOException e) {
-	safeReleaseConn(conn);
 	if (isInCache) {
 	  serveFromCache(pathInContext, pathParams, request,
 			 response, cu);
@@ -470,7 +487,6 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       int code=conn.getResponseCode();
       if (isInCache && preferCacheOverPubResponse(cu, conn)) {
-	safeReleaseConn(conn);
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	return;
@@ -509,13 +525,17 @@ public class ProxyHandler extends AbstractHttpHandler {
       log.error("doLockss error:", e);
       if (!response.isCommitted())
 	response.sendError(HttpResponse.__500_Internal_Server_Error);
+    } finally {
+      safeReleaseConn(conn);
     }
   }
 
   void safeReleaseConn(LockssUrlConnection conn) {
-    try {
-      conn.release();
-    } catch (Exception e) {}
+    if (conn != null) {
+      try {
+	conn.release();
+      } catch (Exception e) {}
+    }
   }
     
   boolean isEarlier(String datestr1, String datestr2)
@@ -535,20 +555,14 @@ public class ProxyHandler extends AbstractHttpHandler {
       return false;
     }
     int code=conn.getResponseCode();
+
+    // Current policy is to serve from cache unless server supplied content.
     switch (code) {
-    case HttpResponse.__304_Not_Modified:
-      // server doesn't have newer content, see if cache does
-      return true;
-    case HttpResponse.__404_Not_Found:
-      // content not available from publisher
-      return true;
     case HttpResponse.__200_OK:
-      // if server returned content, always serve it
       return false;
     }
-    return false;
+    return true;
   }
-
     
   /* ------------------------------------------------------------ */
   public void handleConnect(String pathInContext,
@@ -711,7 +725,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     // Add a header to the response to identify content from LOCKSS cache
     response.setField("X-LOCKSS", "from-cache");
     if (log.isDebug2()) {
-      log.debug2("serveFromCache(" + request + ")");
+      log.debug2("serveFromCache(" + cu + ")");
     }
     // Return without handling the request, next in chain is
     // LockssResourceHandler.  (There must be a better way to do this.)

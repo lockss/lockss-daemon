@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.17 2004-02-27 00:21:57 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.18 2004-03-11 09:42:45 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,24 @@ public class ProxyManager extends JettyManager {
   public static final String PARAM_PROXY_MAX_CONN_PER_HOST =
     PREFIX + "connectionPool.maxPerHost";
   public static final int DEFAULT_PROXY_MAX_CONN_PER_HOST = 2;
+
+  public static final String PARAM_PROXY_CONNECT_TIMEOUT =
+    PREFIX + "timeout.connect";
+  public static final long DEFAULT_PROXY_CONNECT_TIMEOUT =
+    2 * Constants.MINUTE;
+  public static final String PARAM_PROXY_DATA_TIMEOUT =
+    PREFIX + "timeout.data";
+  public static final long DEFAULT_PROXY_DATA_TIMEOUT =
+    30 * Constants.MINUTE;
+
+  public static final String PARAM_PROXY_QUICK_CONNECT_TIMEOUT =
+    PREFIX + "quickTimeout.connect";
+  public static final long DEFAULT_PROXY_QUICK_CONNECT_TIMEOUT =
+    15 * Constants.SECOND;
+  public static final String PARAM_PROXY_QUICK_DATA_TIMEOUT =
+    PREFIX + "quickTimeout.data";
+  public static final long DEFAULT_PROXY_QUICK_DATA_TIMEOUT =
+    5  * Constants.MINUTE;
 
   private int port;
   private boolean start;
@@ -158,16 +176,7 @@ public class ProxyManager extends JettyManager {
       context.addHandler(accessHandler);
 
       // Add a proxy handler to the context
-      LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
-      int tot = Configuration.getIntParam(PARAM_PROXY_MAX_TOTAL_CONN,
-					  DEFAULT_PROXY_MAX_TOTAL_CONN);
-      int perHost = Configuration.getIntParam(PARAM_PROXY_MAX_CONN_PER_HOST,
-					      DEFAULT_PROXY_MAX_CONN_PER_HOST);
-      connPool.setMultiThreaded(tot, perHost);
-
-      HttpHandler handler = new org.lockss.proxy.ProxyHandler(getDaemon(),
-							      connPool);
-      context.addHandler(handler);
+      context.addHandler(makeProxyHandler());
 
       // Add a CuResourceHandler to handle requests for locally cached
       // content that the proxy handler modified and passed on.
@@ -186,5 +195,36 @@ public class ProxyManager extends JettyManager {
     } catch (Exception e) {
       log.error("Couldn't start proxy", e);
     }
+  }
+
+  // Proxy handler gets two connection pools, one to proxy normal request,
+  // and one with short timeouts for checking with publisher before serving
+  // content from cache.
+  org.lockss.proxy.ProxyHandler makeProxyHandler() {
+    LockssUrlConnectionPool connPool = new LockssUrlConnectionPool();
+    LockssUrlConnectionPool quickConnPool = new LockssUrlConnectionPool();
+    Configuration conf = ConfigManager.getCurrentConfig();
+
+    int tot = conf.getInt(PARAM_PROXY_MAX_TOTAL_CONN,
+			  DEFAULT_PROXY_MAX_TOTAL_CONN);
+    int perHost = conf.getInt(PARAM_PROXY_MAX_CONN_PER_HOST,
+			      DEFAULT_PROXY_MAX_CONN_PER_HOST);
+
+    connPool.setMultiThreaded(tot, perHost);
+    quickConnPool.setMultiThreaded(tot, perHost);
+    connPool.setConnectTimeout
+      (conf.getTimeInterval(PARAM_PROXY_CONNECT_TIMEOUT,
+			    DEFAULT_PROXY_CONNECT_TIMEOUT));
+    connPool.setDataTimeout
+      (conf.getTimeInterval(PARAM_PROXY_DATA_TIMEOUT,
+			    DEFAULT_PROXY_DATA_TIMEOUT));
+    quickConnPool.setConnectTimeout
+      (conf.getTimeInterval(PARAM_PROXY_QUICK_CONNECT_TIMEOUT,
+			    DEFAULT_PROXY_QUICK_CONNECT_TIMEOUT));
+    quickConnPool.setDataTimeout
+      (conf.getTimeInterval(PARAM_PROXY_QUICK_DATA_TIMEOUT,
+			    DEFAULT_PROXY_QUICK_DATA_TIMEOUT));
+    return new org.lockss.proxy.ProxyHandler(getDaemon(),
+					     connPool, quickConnPool);
   }
 }
