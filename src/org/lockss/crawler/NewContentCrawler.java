@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.23.2.3 2004-07-21 06:59:08 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.23.2.4 2004-08-04 21:47:23 dcfok Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class NewContentCrawler extends CrawlerImpl {
     Configuration.PREFIX + "CrawlerImpl.abortWhilePermissionOtherThanOk";
   public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = false;
 
-  protected static HashMap permissionMap = new HashMap();
+  protected HashMap permissionMap = new HashMap();
   
   private boolean alwaysReparse;
   private boolean usePersistantList;
