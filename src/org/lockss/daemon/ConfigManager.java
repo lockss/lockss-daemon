@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.16 2004-01-14 05:24:30 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.17 2004-01-21 08:26:31 tlipkis Exp $
  */
 
 /*
@@ -334,6 +334,7 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_HASH_SVC = "org.lockss.manager.HashService";
 
   private void copyPlatformParams(Configuration config) {
+    copyPlatformVersionParams(config);
     // hack to make hash use new scheduler without directly setting
     // org.lockss.manager.HashService, which would break old daemons.
     // don't set if already has a value
@@ -377,6 +378,20 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  private void copyPlatformVersionParams(Configuration config) {
+    String platformVer = config.get(PARAM_PLATFORM_VERSION);
+    if (platformVer == null) {
+      return;
+    }
+    Configuration versionConfig = config.getConfigTree(platformVer);
+    if (!versionConfig.isEmpty()) {
+     for (Iterator iter = versionConfig.keyIterator(); iter.hasNext(); ) {
+       String key = (String)iter.next();
+       platformOverride(config, key, versionConfig.get(key));
+     }
+    }
+  }
+
   private void platformOverride(Configuration config, String key, String val) {
     if (config.get(key) != null) {
       log.warning("Overriding param: " + key + "= " + config.get(key));
@@ -407,16 +422,16 @@ public class ConfigManager implements LockssManager {
     config.put(accessParam, includeIps);
   }
 
-
   private void logConfig(Configuration config, Set diffs) {
     SortedSet keys = new TreeSet(diffs);
-//     for (Iterator iter = config.keyIterator(); iter.hasNext(); ) {
-//       keys.add((String)iter.next());
-//     }
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (log.isDebug2() || !key.startsWith(PARAM_TITLE_DB)) {
-	log.debug(key + " = " + (String)config.get(key));
+	if (config.containsKey(key)) {
+	  log.debug(key + " = " + (String)config.get(key));
+	} else {
+	  log.debug(key + " (removed)");
+	}
       }
     }
   }
