@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.7 2002-11-20 19:42:42 tal Exp $
+ * $Id: PriorityQueue.java,v 1.8 2002-11-21 20:25:05 tal Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class PriorityQueue implements Queue {
     while (queue.isEmpty() && !timer.expired()) {
       try {
 	timer.registerCallback(cb);
-	this.wait(timer.getRemainingTime());
+	this.wait(timer.getSleepTime());
       } finally {
 	timer.unregisterCallback(cb);
       }
