@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.1 2002-08-31 06:54:34 tal Exp $
+ * $Id: StringUtil.java,v 1.2 2002-09-11 00:52:25 tal Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import java.lang.reflect.*;
 
 /**
  * This is a class to contain generic string utilities
@@ -60,82 +61,94 @@ public class StringUtil {
   }
 
   /**
-   * Concatenate elements of vector into string, with separators
-   * @param v - Vector of object (on which toString() will be called)
+   * Concatenate elements of collection into string, with separators
+   * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
    * @return Concatenated string
    */
   public static String
-    separatedString(Vector v, String separator) {
-    return separatedString(v, "", separator, "",
+    separatedString(Collection c, String separator) {
+    return separatedString(c, "", separator, "",
 			   new StringBuffer()).toString();
   }
 
   /**
-   * Concatenate elements of vector into string, with separators
-   * @param v - Vector of object (on which toString() will be called)
+   * Concatenate elements of object array into string, with separators
+   * @param arr - Array of object (on which toString() will be called)
+   * @param separator - String to put between elements
+   * @return Concatenated string
+   */
+  public static String
+    separatedString(Object arr[], String separator) {
+    return separatedString(ListUtil.fromArray(arr), "", separator, "",
+			   new StringBuffer()).toString();
+  }
+
+  /**
+   * Concatenate elements of collection into string, with separators
+   * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
    * @ sb - StringBuffer to write result into
    * @return sb
    */
   public static StringBuffer
-    separatedString(Vector v, String separator,
+    separatedString(Collection c, String separator,
 		    StringBuffer sb) {
-    return separatedString(v, "", separator, "", sb);
+    return separatedString(c, "", separator, "", sb);
   }
 
   /**
-   * Concatenate elements of vector into string, delimiting each element,
+   * Concatenate elements of collection into string, delimiting each element,
    * adding separators
-   * @param v - Vector of object (on which toString() will be called)
+   * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
    * @param delimiter - String with which to surround each element
    * @return Concatenated string
    */
   public static String
-    separatedDelimitedString(Vector v, String separator,
+    separatedDelimitedString(Collection c, String separator,
 			     String delimiter) {
-    return separatedString(v, delimiter,
+    return separatedString(c, delimiter,
 			   delimiter + separator + delimiter, delimiter,
 			   new StringBuffer()).toString();
   }
 
   /**
-   * Concatenate elements of vector into string, delimiting each element,
+   * Concatenate elements of collection into string, delimiting each element,
    * adding separators
-   * @param v - Vector of object (on which toString() will be called)
+   * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
    * @param delimiter1 - String with which to prefix each element
    * @param delimiter2 - String with which to suffix each element
    * @return Concatenated string
    */
   public static String
-    separatedDelimitedString(Vector v, String separator,
+    separatedDelimitedString(Collection c, String separator,
 			     String delimiter1, String delimiter2) {
-    return separatedString(v, delimiter1,
+    return separatedString(c, delimiter1,
 			   delimiter2 + separator + delimiter1, delimiter2,
 			   new StringBuffer()).toString();
   }
 
   /**
-   * Concatenate elements of vector into string, adding separators,
+   * Concatenate elements of collection into string, adding separators,
    * terminating with terminator
-   * @param v - Vector of object (on which toString() will be called)
+   * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
    * @param terminator - String with which to terminate result
    * @return Concatenated string
    */
   public static String
-    terminatedSeparatedString(Vector v, String separator,
+    terminatedSeparatedString(Collection c, String separator,
 			      String terminator) {
-    return separatedString(v, "", separator, terminator,
+    return separatedString(c, "", separator, terminator,
 			   new StringBuffer()).toString();
   }
 
   /**
-   * Concatenate elements of vector into string, adding separators,
+   * Concatenate elements of collection into string, adding separators,
    * delimitig each element
-   * @param v - Vector of object (on which toString() will be called)
+   * @param c - Collection of object (on which toString() will be called)
    * @param separator - String to put between elements
    * @param separatorFirst - String to place before first element
    * @param separatorInner - String with which to separate elements
@@ -143,22 +156,22 @@ public class StringUtil {
    * @return Concatenated string
    */
   public static StringBuffer
-    separatedString(Vector v, String separatorFirst,
+    separatedString(Collection c, String separatorFirst,
 		    String separatorInner, String separatorLast,
 		    StringBuffer sb) {
-    if (v == null) {
+    if (c == null) {
       return sb;
     }
-    Enumeration en = v.elements();
+    Iterator iter = c.iterator();
     boolean first = true;
-    while (en.hasMoreElements()) {
+    while (iter.hasNext()) {
       if (first) {
 	first = false;
 	sb.append(separatorFirst);
       } else {
 	sb.append(separatorInner);
       }
-      Object obj = en.nextElement();
+      Object obj = iter.next();
       sb.append(obj == null ? "(null)" : obj.toString());
     }
     if (!first) {
@@ -191,11 +204,34 @@ public class StringUtil {
     return str;
   }
 
+  /** Like indevOf except is case-independent */
   public static int getIndexIgnoringCase(String str, String subStr) {
     if (str != null && subStr != null) {
       return (str.toUpperCase()).indexOf(subStr.toUpperCase());
     }
     return -1;
   }
+
+  /* Return the substring following the final dot */
+  public static String shortName(Object object) {
+    if (object == null) {
+      return null;
+    }
+    String name = object.toString();
+    return name.substring(name.lastIndexOf('.')+1);
+  }
+
+  /* Return the non-qualified name of the class */
+  public static String shortName(Class clazz) {
+    String className = clazz.getName();
+    return className.substring(className.lastIndexOf('.')+1);
+  }
+
+  /* Return the non-qualified name of the method (Class.method) */
+  public static String shortName(Method method) {
+    return shortName(method.getDeclaringClass()) +
+      "." + method.getName();
+  }
+
 }
 
