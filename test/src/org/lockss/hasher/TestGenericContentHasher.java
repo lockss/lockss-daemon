@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.16 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestGenericContentHasher.java,v 1.17 2003-07-23 00:16:06 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.hasher;
 
 import java.util.*;
 import java.io.*;
+import java.math.*;
 import java.security.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
@@ -94,6 +95,57 @@ public class TestGenericContentHasher extends LockssTestCase {
 
   public void testHashNoChildren() throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(0);
+    byte[] bytes = getExpectedCUSBytes(cus);
+
+    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
+
+    hashAndCompare(bytes, hasher, bytes.length);
+  }
+
+//   public void testHashFilesOfDiffSize() throws IOException {
+//     String url = TEST_URL;
+//     String content = TEST_FILE_CONTENT;
+
+//     MockMessageDigest dig1 = new MockMessageDigest();
+//     MockCachedUrlSet cus1 = new MockCachedUrlSet(TEST_URL_BASE);
+//     BadSizeMockCachedUrl cu1 = new BadSizeMockCachedUrl(url, 1000);
+//     cu1.setContent(content);
+//     cu1.setExists(true);
+//     Vector files = new Vector();
+//     files.add(cu1);
+//     cus1.setHashItSource(files);
+
+//     GenericContentHasher hasher1 = new GenericContentHasher(cus1, dig1);
+//     hashToLength(hasher1, 54, 54);
+    
+//     MockMessageDigest dig2 = new MockMessageDigest();
+//     MockCachedUrlSet cus2 = new MockCachedUrlSet(TEST_URL_BASE);
+//     BadSizeMockCachedUrl cu2 = new BadSizeMockCachedUrl(url, 1005);
+//     cu2.setContent(content);
+//     cu2.setExists(true);
+//     files = new Vector();
+//     files.add(cu2);
+//     cus2.setHashItSource(files);
+
+//     GenericContentHasher hasher2 = new GenericContentHasher(cus2, dig2);
+//     hashToLength(hasher2, 54, 54);
+
+//     assertEquals(dig1, dig2);
+//   }
+
+  public void testHashFilesOfDiffSize() throws IOException {
+    String url = TEST_URL;
+    String content = TEST_FILE_CONTENT;
+
+//     MockMessageDigest dig = new MockMessageDigest();
+    MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
+    BadSizeMockCachedUrl cu = new BadSizeMockCachedUrl(url, 1000);
+    cu.setContent(content);
+    cu.setExists(true);
+    Vector files = new Vector();
+    files.add(cu);
+    cus.setHashItSource(files);
+
     byte[] bytes = getExpectedCUSBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -336,19 +388,23 @@ public class TestGenericContentHasher extends LockssTestCase {
     StringBuffer sb = new StringBuffer();
     sb.append(name);
     int curKar;
+    int contentSize = 0;
     while ((curKar = contentStream.read()) != -1) {
       sb.append((char)curKar);
+      contentSize++;
     }
-    byte[] size = cu.getContentSize();
-    byte[] returnArr = new byte[size.length+sb.length()+1];
-    returnArr[0] = (byte)size.length;
-    int curPos = 1;
-    for (int ix=0; ix<size.length; ix++) {
-      returnArr[curPos++] = size[ix];
-    }
+    byte[] sizeArray =
+      (new BigInteger(Integer.toString(contentSize)).toByteArray());
+
+    byte[] returnArr = new byte[sizeArray.length+sb.length()+1];
+    int curPos = 0;
     byte[] nameBytes = sb.toString().getBytes();
     for (int ix=0; ix<nameBytes.length; ix++) {
       returnArr[curPos++] = nameBytes[ix];
+    }
+    returnArr[curPos++] = (byte)sizeArray.length;
+    for (int ix=0; ix<sizeArray.length; ix++) {
+      returnArr[curPos++] = sizeArray[ix];
     }
     return returnArr;
   }
@@ -415,5 +471,23 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
 
     fail("MockMessageDigests were equal");
+  }
+
+
+  public class BadSizeMockCachedUrl extends MockCachedUrl {
+    private int size;
+
+    public BadSizeMockCachedUrl(String url, int size) {
+      super(url);
+      this.size = size;
+    }
+
+    public byte[] getUnfilteredContentSize() {
+      return (new BigInteger(Integer.toString(size)).toByteArray());
+    }
+  }
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestGenericContentHasher.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 }

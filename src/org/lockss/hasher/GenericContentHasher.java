@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.16 2003-06-20 22:34:50 claire Exp $
+ * $Id: GenericContentHasher.java,v 1.17 2003-07-23 00:16:05 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.hasher;
 import java.io.*;
 import java.util.*;
+import java.math.*;
 import java.security.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -55,6 +56,8 @@ public class GenericContentHasher extends GenericHasher {
   private InputStream is = null;
   private boolean hashedRootCus = false;
 
+  private long hashedContentSize = 0;
+  
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
@@ -105,18 +108,18 @@ public class GenericContentHasher extends GenericHasher {
 	log.debug3("got new name to hash: "+nameStr);
       }
 
-      if (cu.hasContent()) {
-	byte[] sizeBytes = cu.getContentSize();
-	if (log.isDebug3()) {
-	  log.debug3("sizeBytes has length of "+sizeBytes.length);
-	}
-	digest.update((byte)sizeBytes.length);
-	digest.update(sizeBytes);
-	totalHashed += (sizeBytes.length+1);
-      } else {
-	digest.update(NO_CONTENT);
-	totalHashed++;
-      }
+//       if (cu.hasContent()) {
+// 	byte[] sizeBytes = cu.getUnfilteredContentSize();
+// 	if (log.isDebug3()) {
+// 	  log.debug3("sizeBytes has length of "+sizeBytes.length);
+// 	}
+// //  	digest.update((byte)sizeBytes.length);
+// //  	digest.update(sizeBytes);
+// //  	totalHashed += (sizeBytes.length+1);
+//       } else {
+// 	digest.update(NO_CONTENT);
+// 	totalHashed++;
+//       }
     }
 
     int bytesRemaining = nameBytes.length - nameIdx;
@@ -154,6 +157,9 @@ public class GenericContentHasher extends GenericHasher {
 	if (log.isDebug3()) {
 	  log.debug3(cu+" has no content, not hashing");
 	}
+	digest.update(NO_CONTENT);
+	totalHashed++;
+
 	hashState = HASHING_NAME;
 	shouldGetNextElement = true;
 	return totalHashed;
@@ -169,18 +175,24 @@ public class GenericContentHasher extends GenericHasher {
     }
     if (bytesHashed >= 0) {
       digest.update(contentBytes, 0, bytesHashed);
+      totalHashed += bytesHashed;
+      hashedContentSize += bytesHashed;
     }
     if (bytesHashed != 0 && bytesHashed < bytesLeftToHash) {
       if (log.isDebug3()) {
 	log.debug3("done hashing content: "+cu);
       }
+      byte[] sizeBytes =
+	(new BigInteger(Long.toString(hashedContentSize)).toByteArray());
+      digest.update((byte)sizeBytes.length);
+      digest.update(sizeBytes);
+      totalHashed += sizeBytes.length+1;
+      
+      hashedContentSize = 0;
       hashState = HASHING_NAME;
       shouldGetNextElement = true;
       is.close();
       is = null;
-    }
-    if (bytesHashed > 0) {
-      totalHashed += bytesHashed;
     }
     if (log.isDebug3()) {
       log.debug3(totalHashed+" bytes hashed in this step");
