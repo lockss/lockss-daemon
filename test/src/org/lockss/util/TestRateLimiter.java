@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestRateLimiter.java,v 1.4 2004-07-12 06:25:59 tlipkis Exp $
  */
 
 /*
@@ -81,18 +81,22 @@ public class TestRateLimiter extends LockssTestCase {
     TimeBase.setSimulated(1000);
     RateLimiter lim = new RateLimiter(2, 10);
     assertTrue(lim.isEventOk());
+    assertEquals(0, lim.timeUntilEventOk());
     lim.event();
     assertTrue(lim.isEventOk());
     TimeBase.step(5);
     assertTrue(lim.isEventOk());
     lim.event();
     assertFalse(lim.isEventOk());
+    assertEquals(5, lim.timeUntilEventOk());
     TimeBase.step(4);
     assertFalse(lim.isEventOk());
+    assertEquals(1, lim.timeUntilEventOk());
     TimeBase.step(1);
     assertTrue(lim.isEventOk());
     lim.event();
     assertFalse(lim.isEventOk());
+    assertEquals(5, lim.timeUntilEventOk());
   }
 
 }

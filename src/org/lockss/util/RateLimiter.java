@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.4 2003-06-20 22:34:53 claire Exp $
+ * $Id: RateLimiter.java,v 1.5 2004-07-12 06:25:59 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
+import org.lockss.daemon.Configuration;
 
 /**
  * RateLimiter is used to limit the rate at which some class of events occur.
@@ -41,6 +42,33 @@ public class RateLimiter {
   private long interval;
   private long time[];			// history of (limit) event times
   private int count = 0;
+
+  /** Create a RateLimiter according to the specified configuration parameters.
+   * @param config the Configuration object
+   * @param currentLimiter optional existing RateLimiter, return if it
+   * matches the current config balues
+   * @param maxEventsParam name of the parameter specifying the maximum
+   * number of events per interval
+   * @param intervalParam name of the parameter specifying the length of
+   * the interval
+   * @param maxEvantDefault default maximum number of events per interval,
+   * if config param has no value
+   * @param intervalDefault default interval, if config param has no value
+   * @return a new RateLimiter, or the exiting one if it's the same
+   */
+  public static RateLimiter
+    getConfiguredRateLimiter(Configuration config, RateLimiter currentLimiter,
+			     String maxEventsParam, int maxEvantDefault,
+			     String intervalParam, long intervalDefault) {
+    int pkts = config.getInt(maxEventsParam, maxEvantDefault);
+    long interval = config.getTimeInterval(intervalParam, intervalDefault);
+    if (currentLimiter == null || currentLimiter.getInterval() != interval ||
+	currentLimiter.getLimit() != pkts) {
+      return new RateLimiter(pkts, interval);
+    } else {
+      return currentLimiter;
+    }
+  }
 
   /** Create a RateLimiter that limits events to <code>limit</code> per
    * <code>interval</code> milliseconds.
@@ -78,6 +106,12 @@ public class RateLimiter {
 
   /** Return true if an event could occur now without exceeding the limit */
   public boolean isEventOk() {
-    return TimeBase.msSince(time[count]) >= interval;
+    return time[count] == 0 || TimeBase.msSince(time[count]) >= interval;
+  }
+
+  /** Return the amount of time until the next event is allowed */
+  public long timeUntilEventOk() {
+    long res = TimeBase.msUntil(time[count] + interval);
+    return (res > 0) ? res : 0;
   }
 }
