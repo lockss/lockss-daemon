@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.107.4.1 2004-03-19 06:09:29 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.107.4.2 2004-03-24 23:55:10 eaalto Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import org.lockss.util.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
-  private static Logger log = Logger.getLogger("TestNMI");
   private String tempDirPath;
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
@@ -258,7 +257,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     CachedUrlSet cus = results.getCachedUrlSet();
     Vector subFiles = new Vector(2);
     subFiles.add(getCus(mau, TEST_URL));
-    ( (MockCachedUrlSet) cus).setHashItSource(subFiles);
+    ((MockCachedUrlSet)cus).setHashItSource(subFiles);
 
     assertNull(nodeManager.activeNodes.get(results.getPollKey()));
     nodeManager.startPoll(cus, results, false);
@@ -714,6 +713,25 @@ public class TestNodeManagerImpl extends LockssTestCase {
         createUrl));
     // node deleted
     assertTrue(delNode.isDeleted());
+  }
+
+  public void testHandleSNNamePollError() throws Exception {
+    CachedUrlSet cus = getCus(mau, TEST_URL);
+    NodeState nodeState = nodeManager.getNodeState(cus);
+    // create erroneous SN name poll
+    namePoll = createPoll(TEST_URL, ".", null, false, true, 15, 5);
+    PollTally results = namePoll.getVoteTally();
+
+    // clear polls
+    pollManager.thePolls.remove(TEST_URL);
+
+    // run poll
+    nodeManager.startPoll(cus, results, false);
+    nodeManager.updatePollResults(cus, results);
+    // should call SNCUSS
+    assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 pollManager.getPollStatus(TEST_URL));
   }
 
   public void testRepairOnStart() throws Exception {
@@ -1203,6 +1221,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     return createPoll(url, null, null, isContentPoll, isLocal, numAgree,
                       numDisagree);
   }
+
   private Poll createPoll(String url, String lwrBound, String uprBound,
                           boolean isContentPoll, boolean isLocal,
                           int numAgree, int numDisagree) throws Exception {
@@ -1210,13 +1229,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     LcapMessage testmsg = null;
     if (isLocal) {
       testID = idManager.getLocalIdentity();
-    }
-    else {
+    } else {
       try {
         IPAddr testAddr = IPAddr.getByName("123.3.4.5");
         testID = idManager.findIdentity(testAddr);
-      }
-      catch (UnknownHostException ex) {
+      } catch (UnknownHostException ex) {
         fail("can't open test host");
       }
     }
@@ -1225,7 +1242,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     random.nextBytes(bytes);
 
     try {
-
       testmsg = LcapMessage.makeRequestMsg(
           new MockPollSpec(mau, url, lwrBound, uprBound),
           null,
@@ -1235,8 +1251,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
            LcapMessage.NAME_POLL_REQ),
           123321,
           testID);
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
       fail("can't create test name message" + ex.toString());
     }
     log.debug("daemon = " + theDaemon);
