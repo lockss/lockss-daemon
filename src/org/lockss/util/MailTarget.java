@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.3 2003-01-07 20:23:24 aalto Exp $
+ * $Id: MailTarget.java,v 1.4 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class MailTarget {
                                          Set changedKeys) {
           loadConfiguration();
         }});
-    localHostName = IdentityManager.getIdentityManager().getLocalHostName();
+    localHostName = IdentityManager.getLocalHostName();
 
     if (localHostName == null) {
       logger.error("Couldn't find localhost from IdentityManager; "+

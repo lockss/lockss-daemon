@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.4 2003-02-06 00:51:45 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.5 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
   private String idKey;
   private HistoryRepositoryImpl repository;
+  private MockLockssDaemon theDaemon;
 
   public TestHistoryRepositoryImpl(String msg) {
     super(msg);
@@ -58,6 +59,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = new MockLockssDaemon(null);
+    theDaemon.startDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     configHistoryParams(tempDirPath);
     repository = new HistoryRepositoryImpl(tempDirPath);
@@ -155,7 +158,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   private String createIdentityKey() throws Exception {
-    IdentityManager.getIdentityManager().getIdentity(InetAddress.getByName("127.0.0.1"));
+    theDaemon.getIdentityManager().getIdentity(InetAddress.getByName("127.0.0.1"));
     return "127.0.0.1";
   }
 

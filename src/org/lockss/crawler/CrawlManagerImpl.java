@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.2 2003-02-06 01:00:42 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.3 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -36,13 +36,14 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.state.NodeState;
 import org.lockss.util.*;
+import org.lockss.app.*;
 
 
 /**
  * This is the interface for the object which will sit between the crawler
  * and the rest of the world.  It mediates the different crawl types.
  */
-public class CrawlManagerImpl implements CrawlManager {
+public class CrawlManagerImpl implements CrawlManager, LockssManager {
   /**
    * ToDo:
    * 1)make a crawl to the AU to decide if I should do a new content crawl
@@ -51,6 +52,39 @@ public class CrawlManagerImpl implements CrawlManager {
    * 4)check for conflicting crawl types
    * 5)check crawl schedule rules
    */
+  static private CrawlManagerImpl theManager = null;
+  static private LockssDaemon theDaemon = null;
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theManager == null) {
+      theDaemon = daemon;
+      theManager = this;
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // checkpoint here
+    theManager = null;
+  }
 
   /**
    * Schedules a repair crawl and calls cb.signalRepairAttemptCompleted
@@ -60,22 +94,22 @@ public class CrawlManagerImpl implements CrawlManager {
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
    */
-  public void scheduleRepair(ArchivalUnit au, URL url, 
+  public void scheduleRepair(ArchivalUnit au, URL url,
 			     CrawlManager.Callback cb, Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     } if (url == null) {
       throw new IllegalArgumentException("Called with null URL");
     }
-      
 
-    CrawlThread crawlThread = 
-      new CrawlThread(au, ListUtil.list(url.toString()), 
+
+    CrawlThread crawlThread =
+      new CrawlThread(au, ListUtil.list(url.toString()),
 		      false, Deadline.NEVER, cb, cookie);
     crawlThread.start();
   }
 
-  public boolean canTreeWalkStart(ArchivalUnit au, 
+  public boolean canTreeWalkStart(ArchivalUnit au,
 				  CrawlManager.Callback cb, Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
@@ -97,11 +131,11 @@ public class CrawlManagerImpl implements CrawlManager {
     return true;
   }
 
-  private void scheduleNewContentCrawl(ArchivalUnit au, 
-				       CrawlManager.Callback cb, 
+  private void scheduleNewContentCrawl(ArchivalUnit au,
+				       CrawlManager.Callback cb,
 				       Object cookie) {
-    CrawlThread crawlThread = 
-      new CrawlThread(au, au.getNewContentCrawlUrls(), 
+    CrawlThread crawlThread =
+      new CrawlThread(au, au.getNewContentCrawlUrls(),
 		      true, Deadline.NEVER, cb, cookie);
     crawlThread.start();
   }
@@ -134,7 +168,7 @@ public class CrawlManagerImpl implements CrawlManager {
     private CrawlManager.Callback cb;
     private Object cookie;
 
-    private CrawlThread(ArchivalUnit au, List urls, 
+    private CrawlThread(ArchivalUnit au, List urls,
 			boolean followLinks, Deadline deadline,
 			CrawlManager.Callback cb, Object cookie) {
       super(au.toString());

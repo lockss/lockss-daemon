@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.5 2003-02-06 00:51:45 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.6 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.exolab.castor.xml.Marshaller;
 import org.exolab.castor.xml.Unmarshaller;
 import org.exolab.castor.mapping.Mapping;
 import org.lockss.util.FileLocationUtil;
+import org.lockss.app.*;
 import org.lockss.daemon.ArchivalUnit;
 
 
@@ -52,7 +53,7 @@ import org.lockss.daemon.ArchivalUnit;
  * HistoryRepository is an inner layer of the NodeManager which handles the actual
  * storage of NodeStates.
  */
-public class HistoryRepositoryImpl implements HistoryRepository {
+public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
   /**
    * Configuration parameter name for Lockss history location.
    */
@@ -76,9 +77,56 @@ public class HistoryRepositoryImpl implements HistoryRepository {
   private Mapping mapping = null;
   private static Logger logger = Logger.getLogger("HistoryRepository");
 
+  private static LockssDaemon theDaemon;
+  private static HistoryRepositoryImpl theRepository;
+
   HistoryRepositoryImpl(String repository_location) {
     rootDir = repository_location;
   }
+
+  public HistoryRepositoryImpl() {}
+
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theRepository == null) {
+      theDaemon = daemon;
+      theRepository = this;
+      if (rootDir==null) {
+        rootDir = Configuration.getParam(PARAM_HISTORY_LOCATION);
+        if (rootDir==null) {
+          logger.error("Couldn't get "+PARAM_HISTORY_LOCATION+" from Configuration");
+          throw new LockssRepository.RepositoryStateException("Couldn't load param.");
+        }
+      }
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // we want to checkpoint here
+
+    theRepository = null;
+  }
+
+
 
   public void storePollHistories(NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();

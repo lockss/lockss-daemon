@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.1 2003-01-16 22:11:12 aalto Exp $
+ * $Id: HashSpeedTest.java,v 1.2 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.ListUtil;
 import org.lockss.poller.PollManager;
 import org.lockss.crawler.GoslingCrawlerImpl;
 import org.lockss.util.Deadline;
+import org.lockss.protocol.*;
 
 public class HashSpeedTest extends LockssTestCase {
   private SimulatedArchivalUnit sau;
@@ -110,7 +111,7 @@ public class HashSpeedTest extends LockssTestCase {
   }
 
   private void hashContent() throws Exception {
-    MessageDigest digest = PollManager.getPollManager().getHasher();
+    MessageDigest digest = LcapMessage.getDefaultHasher();
     System.out.println("Hashing-");
     System.out.println("  Algorithm: "+digest.getAlgorithm());
     System.out.println("  Duration: "+duration+"ms");

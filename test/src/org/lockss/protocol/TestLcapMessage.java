@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.7 2003-01-30 03:19:05 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.8 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 import junit.framework.TestCase;
+import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapMessage extends TestCase {
@@ -49,6 +50,8 @@ public class TestLcapMessage extends TestCase {
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
 
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private IdentityManager idmgr = daemon.getIdentityManager();
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.21 2003-02-06 01:00:42 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.22 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -46,14 +46,16 @@ import org.lockss.protocol.LcapMessage;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepository;
 import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.app.*;
 
 /**
  * Implementation of the NodeManager.
  */
-public class NodeManagerImpl implements NodeManager {
+public class NodeManagerImpl implements NodeManager, LockssManager {
+  private static LockssDaemon theDaemon;
+  private static NodeManager theManager = null;
   private static NodeManager nodeManager = null;
-  static HistoryRepository repository =
-      HistoryRepositoryImpl.getHistoryRepository();
+  static HistoryRepository repository;
   private static HashMap auMaps = new HashMap();
   private static HashMap auEstimateMap = new HashMap();
 
@@ -61,6 +63,42 @@ public class NodeManagerImpl implements NodeManager {
   private AuState auState;
   private TreeMap nodeMap = new TreeMap();
   private static Logger logger = Logger.getLogger("NodeManager");
+
+  public NodeManagerImpl() {}
+
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theManager == null) {
+      theDaemon = daemon;
+      theManager = this;
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+    repository = theDaemon.getHistoryRepository();
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // checkpoint here
+
+    theManager = null;
+  }
 
   /**
    * Factory method to retrieve NodeManager.
@@ -429,7 +467,7 @@ public class NodeManagerImpl implements NodeManager {
 
   private void callNamePoll(CachedUrlSet cus) {
     try {
-      PollManager.getPollManager().requestPoll(cus, null,
+      theDaemon.getPollManager().requestPoll(cus, null,
           LcapMessage.NAME_POLL_REQ);
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
@@ -472,10 +510,11 @@ public class NodeManagerImpl implements NodeManager {
 
   private void markNodeForRepair(CachedUrlSet cus, Poll.VoteTally tally)
       throws IOException {
-    //PollManager.getPollManager().suspendPoll(tally.getPollKey());
-    //CrawlManager.scheduleRepair(managerAu, new URL(cus.getPrimaryUrl()),
-    //                            new ContentRepairCallback(),
-    //                            tally.getPollKey());
+    //theDaemon.getPollManager().suspendPoll(tally.getPollKey());
+    //CrawlManger.scheduleRepair(new URL(cus.getPrimaryUrl()),
+    //                           new ContentRepairCallback(),
+    //                             tally.getPollKey());
+    //cus.makeUrlCacher(cus.getPrimaryUrl()).cache();
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -491,13 +530,13 @@ public class NodeManagerImpl implements NodeManager {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
       CachedUrlSet child = (CachedUrlSet)children.next();
-      PollManager.getPollManager().requestPoll(child, null,
+      theDaemon.getPollManager().requestPoll(child, null,
           LcapMessage.CONTENT_POLL_REQ);
     }
   }
 
   private void updateReputations(Poll.VoteTally results) {
-    IdentityManager idManager = IdentityManager.getIdentityManager();
+    IdentityManager idManager = theDaemon.getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
     while (voteIt.hasNext()) {
       Vote vote = (Vote)voteIt.next();
@@ -525,11 +564,9 @@ public class NodeManagerImpl implements NodeManager {
      * attempt this is
      */
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
-      PollManager.getPollManager().resumePoll(success, cookie);
+      theDaemon.getPollManager().resumePoll(success, cookie);
     }
 
-    public void signalCrawlSuspended(Object cookie) {
-    }
   }
 
 }

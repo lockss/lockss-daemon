@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.19 2003-01-30 03:19:05 claire Exp $
+* $Id: LcapMessage.java,v 1.20 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
 import java.io.*;
 import org.mortbay.util.B64Code;
 import org.lockss.daemon.Configuration;
+import java.security.*;
 
 
 /**
@@ -112,9 +113,6 @@ public class LcapMessage implements Serializable {
   private static Logger log = Logger.getLogger("Message");
   private static byte theSendHopcount = -1;
   private String m_key = null;
-
-  private static IdentityManager theIdentityMgr
-      = IdentityManager.getIdentityManager();
 
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
@@ -191,6 +189,18 @@ public class LcapMessage implements Serializable {
         DEFAULT_HASH_ALGORITM);
     return algorithm;
   }
+
+  public static MessageDigest getDefaultHasher() {
+    MessageDigest hasher = null;
+    try {
+      hasher = MessageDigest.getInstance(getDefaultHashAlgorithm());
+    } catch (NoSuchAlgorithmException ex) {
+      log.error("Unable to run - no hasher");
+    }
+
+    return hasher;
+  }
+
 
   /**
    * get a property that was decoded and stored for this packet
@@ -342,7 +352,11 @@ public class LcapMessage implements Serializable {
     port = m_props.getInt("origPort", -1);
     String addr_str = m_props.getProperty("origIP");
     try {
-      m_originID = theIdentityMgr.getIdentity(LcapIdentity.stringToAddr(addr_str));
+      m_originID = IdentityManager.getIdentityManager().getIdentity(
+          LcapIdentity.stringToAddr(addr_str));
+    }
+    catch(IllegalAccessException ex) {
+      log.error("Attempt to use unitialized IdentityManager");
     }
     catch(UnknownHostException ex) {
       log.warning("Unknown originating host:" + addr_str);
@@ -449,7 +463,12 @@ public class LcapMessage implements Serializable {
   }
 
   public boolean isLocal() {
-    return theIdentityMgr.isLocalIdentity(m_originID);
+    try {
+      return IdentityManager.getIdentityManager().isLocalIdentity(m_originID);
+    }
+    catch (IllegalAccessException ex) {
+      return false;
+    }
 
   }
 

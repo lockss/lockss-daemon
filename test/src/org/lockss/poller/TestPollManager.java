@@ -12,6 +12,7 @@ import org.mortbay.util.*;
 import gnu.regexp.*;
 import junit.framework.TestCase;
 import org.lockss.hasher.HashService;
+import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.poller.PollManager */
 public class TestPollManager extends TestCase {
@@ -22,19 +23,20 @@ public class TestPollManager extends TestCase {
 
   private static String urlstr = "http://www.test3.org";
   private static String regexp = "^.*\\.doc";
-  private static long testduration = 5 * 60 *60 *1000; /* 5 min */
+  private static long testduration = 60 * 60 *60 *1000; /* 60 min */
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   protected static ArchivalUnit testau;
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   static {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    org.lockss.plugin.PluginManager.registerArchivalUnit(testau);
+    daemon.getPluginManager().registerArchivalUnit(testau);
   }
 
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage[] testmsg;
-  protected PollManager pollmanager;
+  protected PollManager pollmanager = daemon.getPollManager();
 
   public TestPollManager(String _name) {
     super(_name);
@@ -43,11 +45,10 @@ public class TestPollManager extends TestCase {
   /** setUp method for test case */
   protected void setUp() throws Exception {
     super.setUp();
-    HashService.start();
-    pollmanager = PollManager.getPollManager();
+    daemon.getHashService().startService();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
-      testID = IdentityManager.getIdentityManager().getIdentity(testaddr);
+      testID = daemon.getIdentityManager().getIdentity(testaddr);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -74,7 +75,7 @@ public class TestPollManager extends TestCase {
 
   /** tearDown method for test case */
   protected void tearDown() throws Exception {
-    HashService.stop();
+    daemon.getHashService().stopService();
     for(int i=0; i<3; i++) {
       pollmanager.removePoll(testmsg[i].getKey());
     }

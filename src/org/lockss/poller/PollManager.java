@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.23 2003-02-04 02:55:03 claire Exp $
+* $Id: PollManager.java,v 1.24 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -45,11 +45,12 @@ import org.lockss.protocol.ProtocolException;
 import org.lockss.util.*;
 import org.mortbay.util.*;
 import gnu.regexp.*;
+import org.lockss.hasher.HashService;
 /*
  TODO: move checkForConflict into the appropriate poll class
  TODO: replace checkForConflict url position with call to NodeManager
  */
-public class PollManager {
+public class PollManager  implements LockssManager {
   static final String PARAM_RECENT_EXPIRATION = Configuration.PREFIX +
       "poll.expireRecent";
   static final String PARAM_REPLAY_EXPIRATION = Configuration.PREFIX +
@@ -83,26 +84,48 @@ public class PollManager {
 
   private static Random theRandom = new Random();
   private static LcapComm theComm = null;
-  private static IdentityManager theIdMgr = IdentityManager.getIdentityManager();
+  private static LockssDaemon theDaemon;
 
-  private PollManager() {
+  public PollManager() {
   }
 
-  public static PollManager getPollManager() {
+
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
-      theManager = new PollManager();
-
-      try {
-        theComm = LcapComm.getComm();
-        theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
-                                       new CommMessageHandler());
-      }
-      catch(Exception ex) {
-        theLog.warning("Unitialized Comm!");
-      }
+      theDaemon = daemon;
+      theManager = this;
     }
-    return theManager;
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
   }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+    theComm = theDaemon.getCommManager();
+    theComm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
+                                   new CommMessageHandler());
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // TODO: checkpoint here.
+
+    theManager = null;
+  }
+
 
 
   /**
@@ -126,20 +149,12 @@ public class PollManager {
         verifier,
         opcode,
         duration,
-        theIdMgr.getLocalIdentity());
+        theDaemon.getIdentityManager().getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
     sendMessage(msg, cus.getArchivalUnit());
   }
 
-
-  /**
-   * return the default MessageDigest hasher
-   * @return MessageDigest the hasher
-   */
-  public MessageDigest getHasher() {
-    return getHasher(null);
-  }
 
   /**
    * handle an incoming message packet.  This will create a poll if
@@ -209,7 +224,7 @@ public class PollManager {
 
     // check for presence of item in the cache
     try {
-      au = PluginManager.findArchivalUnit(msg.getTargetUrl());
+      au = theDaemon.getPluginManager().findArchivalUnit(msg.getTargetUrl());
       cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
     }
     catch (Exception ex) {
@@ -442,15 +457,27 @@ public class PollManager {
         makeVerifier(),
         LcapMessage.VERIFY_POLL_REQ,
         duration,
-        theIdMgr.getLocalIdentity());
+        theDaemon.getIdentityManager().getLocalIdentity());
 
     LcapIdentity originator = vote.getIdentity();
     theLog.debug("sending our verification request to " + originator.toString());
-    sendMessageTo(reqmsg, PluginManager.findArchivalUnit(url), originator);
+    sendMessageTo(reqmsg, theDaemon.getPluginManager().findArchivalUnit(url), originator);
 
     theLog.debug("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
+  }
+
+  PluginManager getPluginManager() {
+    return theDaemon.getPluginManager();
+  }
+
+  HashService getHashService() {
+    return theDaemon.getHashService();
+  }
+
+  IdentityManager getIdentityManager() {
+    return theDaemon.getIdentityManager();
   }
 
   /**
@@ -610,6 +637,13 @@ public class PollManager {
   boolean isPollSuspended(String key) {
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     return (pme != null) ? pme.isPollSuspended() : false;
+  }
+
+  static Poll makeTestPoll(LcapMessage msg) throws ProtocolException {
+    if(theManager == null) {
+      theManager = new PollManager();
+    }
+    return theManager.makePoll(msg);
   }
 
 

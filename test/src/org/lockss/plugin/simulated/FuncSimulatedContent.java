@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.12 2003-01-31 09:48:16 claire Exp $
+ * $Id: FuncSimulatedContent.java,v 1.13 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import java.security.*;
  */
 public class FuncSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
+  private MockLockssDaemon theDaemon;
 
   public FuncSimulatedContent(String msg) {
     super(msg);
@@ -62,16 +63,18 @@ public class FuncSimulatedContent extends LockssTestCase {
     String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
+    theDaemon = new MockLockssDaemon(ListUtil.list(FileUtil.urlOfString(s),
+      FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
   }
 
   public void testPluginRegistration() {
     MockArchivalUnit mau = new MockArchivalUnit(new CrawlSpec("http://www.mock.com", null));
-    PluginManager.registerArchivalUnit(mau);
-    PluginManager.registerArchivalUnit(sau);
+    theDaemon.getPluginManager().registerArchivalUnit(mau);
+    theDaemon.getPluginManager().registerArchivalUnit(sau);
     mau = new MockArchivalUnit(new CrawlSpec("http://www.mock2.com", null));
-    PluginManager.registerArchivalUnit(mau);
+    theDaemon.getPluginManager().registerArchivalUnit(mau);
 
-    ArchivalUnit au = PluginManager.findArchivalUnit(SimulatedArchivalUnit.SIMULATED_URL_START);
+    ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(SimulatedArchivalUnit.SIMULATED_URL_START);
     assertTrue(au==sau);
   }
 

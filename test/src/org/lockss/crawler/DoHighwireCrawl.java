@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.8 2003-01-31 09:48:16 claire Exp $
+ * $Id: DoHighwireCrawl.java,v 1.9 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -37,8 +37,10 @@ import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.highwire.HighWireArchivalUnit;
 import org.lockss.proxy.ProxyHandler;
 import org.lockss.util.Deadline;
+import org.lockss.test.*;
 
 public class DoHighwireCrawl {
+
   public static void main(String args[]) throws Exception {
     boolean proxyFlg = false;
     boolean crawlFlg = false;
@@ -59,9 +61,13 @@ public class DoHighwireCrawl {
     String start = args[i];
 
     ArchivalUnit au = new HighWireArchivalUnit(start);
+    MockLockssDaemon daemon = new MockLockssDaemon(null);
+    daemon.startDaemon();
+    daemon.getPluginManager().registerArchivalUnit(au);
     if (proxyFlg) {
-      org.lockss.plugin.PluginManager.registerArchivalUnit(au);
-      ProxyHandler.startProxy();
+      daemon.getPluginManager().registerArchivalUnit(au);
+//  This should already be started now.
+//      daemon.getProxyHandler().startProxy();
       System.err.println("Proxy started");
 
     }

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.28 2003-02-04 02:55:03 claire Exp $
+* $Id: NamePoll.java,v 1.29 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -128,7 +128,8 @@ public class NamePoll extends Poll {
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer, Serializable key,
                                 HashService.Callback callback) {
-    return HashService.hashNames(m_urlSet, hasher, timer, callback, key);
+    return m_pollmanager.getHashService().hashNames(m_urlSet,
+        hasher, timer, callback, key);
   }
 
 

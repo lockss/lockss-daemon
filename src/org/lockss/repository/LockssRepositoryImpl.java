@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.13 2003-02-05 23:33:29 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.14 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.lang.ref.WeakReference;
+import org.lockss.app.*;
 import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.daemon.ArchivalUnit;
@@ -55,7 +56,7 @@ import org.lockss.util.*;
  * finalized (they go to null when the last hard reference is gone, then are
  * removed from the cache on finalize()).
  */
-public class LockssRepositoryImpl implements LockssRepository {
+public class LockssRepositoryImpl implements LockssRepository, LockssManager {
   /**
    * Configuration parameter name for Lockss cache location.
    */
@@ -79,6 +80,10 @@ public class LockssRepositoryImpl implements LockssRepository {
   private int refHits = 0;
   private int refMisses = 0;
   private static Logger logger = Logger.getLogger("LockssRepository");
+  private static LockssDaemon theDaemon = null;
+  private static LockssRepository theRepository = null;
+
+  public LockssRepositoryImpl() { }
 
   private LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
@@ -88,6 +93,39 @@ public class LockssRepositoryImpl implements LockssRepository {
     }
     nodeCache = new LRUMap(MAX_LRUMAP_SIZE);
     refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
+  }
+
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theRepository == null) {
+      theDaemon = daemon;
+      theRepository = this;
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // TODO: checkpoint here.
+
+    theRepository = null;
   }
 
   public RepositoryNode getNode(String url)

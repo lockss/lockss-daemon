@@ -13,24 +13,26 @@ import junit.framework.TestCase;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import org.lockss.test.FileUtil;
+import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends TestCase {
   private static String[] rooturls = {"http://www.test.org",
     "http://www.test1.org", "http://www.test2.org"};
   private static String regexp = "^.*\\.doc";
-  private static long testduration = 5 * 60 *60 *1000; /* 5 min */
+  private static long testduration = 60 * 60 *60 *1000; /* 60 min */
 
   private static String[] testentries = {"test1.doc", "test2.doc", "test3.doc"};
   private static String[] testentries1 = {"test1.doc", "test3.doc", "test4.doc"};
 
   protected static ArchivalUnit testau;
   private static IdentityManager idmgr;
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   static {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    org.lockss.plugin.PluginManager.registerArchivalUnit(testau);
+    daemon.getPluginManager().registerArchivalUnit(testau);
     TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
-    idmgr = IdentityManager.getIdentityManager();
+    idmgr = daemon.getIdentityManager();
   }
 
   protected InetAddress testaddr;
@@ -39,7 +41,8 @@ public class TestPoll extends TestCase {
   protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
-  protected PollManager pollmanager;
+  static protected PollManager pollmanager = daemon.getPollManager();
+
 
   public TestPoll(String _name) {
     super(_name);
@@ -48,8 +51,7 @@ public class TestPoll extends TestCase {
   /** setUp method for test case */
   protected void setUp() throws Exception {
     super.setUp();
-    HashService.start();
-    pollmanager = PollManager.getPollManager();
+    daemon.getHashService().startService();
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = idmgr.getIdentity(testaddr);
@@ -93,7 +95,7 @@ public class TestPoll extends TestCase {
    * @throws Exception if removePoll failed
    */
   protected void tearDown() throws Exception {
-    HashService.stop();
+    daemon.getHashService().stopService();
     for(int i= 0; i< 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
     }
@@ -281,8 +283,8 @@ public class TestPoll extends TestCase {
   public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
                                 int numDisagree) throws Exception {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    org.lockss.plugin.PluginManager.registerArchivalUnit(testau);
-    Poll p = PollManager.getPollManager().makePoll(testmsg);
+    daemon.getPluginManager().registerArchivalUnit(testau);
+    Poll p = daemon.getPollManager().makePoll(testmsg);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;

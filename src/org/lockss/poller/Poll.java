@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.45 2003-02-04 02:55:03 claire Exp $
+* $Id: Poll.java,v 1.46 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -107,7 +107,7 @@ public abstract class Poll implements Serializable {
 
   VoteTally m_tally;       // the vote tallier
   PollManager m_pollmanager; // the pollmanager which should be used by this poll.
-  IdentityManager idMgr = IdentityManager.getIdentityManager();
+  IdentityManager idMgr;
 
   /**
    * create a new poll from a message
@@ -124,6 +124,7 @@ public abstract class Poll implements Serializable {
     m_disagreeVer = ((double)Configuration.getIntParam(PARAM_DISAGREE_VERIFY,
         DEFAULT_DISAGREE_VERIFY)) / 100;
     m_pollmanager = pm;
+    idMgr = pm.getIdentityManager();
     m_msg = msg;
     m_urlSet = urlSet;
 

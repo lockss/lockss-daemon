@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.15 2003-02-04 02:55:03 claire Exp $
+ * $Id: RunDaemon.java,v 1.16 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -84,14 +84,15 @@ public class RunDaemon {
   }
 
   public void runDaemon() {
+    MockLockssDaemon daemon = new MockLockssDaemon(propUrls);
     Configuration.startHandler(propUrls);
     System.err.println("Sleeping so config can get set");
     Configuration.waitConfig();
     System.err.println("Awake");
 
-    HashService.start();
-    LcapComm.startComm();
-    pollManager = PollManager.getPollManager();
+    daemon.getHashService().startService();
+    daemon.getCommManager();
+    pollManager = daemon.getPollManager();
     dirPath =
       Configuration.getParam(PARAM_CACHE_LOCATION, DEFAULT_DIR_PATH);
     boolean shouldCallPoll =
@@ -99,7 +100,7 @@ public class RunDaemon {
 				    false);
 
     sau = new SimulatedArchivalUnit(dirPath);
-    org.lockss.plugin.PluginManager.registerArchivalUnit(sau);
+    daemon.getPluginManager().registerArchivalUnit(sau);
 
     int poll_type = Configuration.getIntParam(PARAM_POLL_TYPE,
         LcapMessage.CONTENT_POLL_REQ);
@@ -110,7 +111,7 @@ public class RunDaemon {
       try {
 	Thread.currentThread().sleep(1000);
         String url = "http://www.example.com/";
-        ArchivalUnit au = PluginManager.findArchivalUnit(url);
+        ArchivalUnit au = daemon.getPluginManager().findArchivalUnit(url);
         CachedUrlSet cus = au.makeCachedUrlSet(url, null);
 	pollManager.requestPoll(cus, null, poll_type);
       } catch (Exception e) {

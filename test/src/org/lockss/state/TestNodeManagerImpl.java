@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.14 2003-02-06 00:51:45 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.15 2003-02-06 05:16:07 claire Exp $
  */
 
 /*
@@ -53,35 +53,37 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Poll contentPoll = null;
   private Random random = new Random();
 
+  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  NodeManager mgr = theDaemon.getNodeManager();
+
   public TestNodeManagerImpl(String msg) {
     super(msg);
   }
 
   public void setUp() throws Exception {
     super.setUp();
-    HashService.start();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
 
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
-    PluginManager.registerArchivalUnit(mau);
+    theDaemon.getPluginManager().registerArchivalUnit(mau);
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
   }
 
   public void tearDown() throws Exception {
-    HashService.stop();
-    Iterator auIt = PluginManager.getArchivalUnits();
-    ArrayList auList = new ArrayList(PluginManager.getNumArchivalUnits());
+    Iterator auIt = theDaemon.getPluginManager().getArchivalUnits();
+    ArrayList auList = new ArrayList(theDaemon.getPluginManager().getNumArchivalUnits());
     while (auIt.hasNext()) {
       auList.add(auIt.next());
     }
     auIt = auList.iterator();
     while (auIt.hasNext()) {
-      PluginManager.unregisterArchivalUnit((ArchivalUnit)auIt.next());
+      theDaemon.getPluginManager().unregisterArchivalUnit((ArchivalUnit)auIt.next());
     }
+    theDaemon.stopDaemon();
     super.tearDown();
   }
 
@@ -256,6 +258,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testHandleContentPoll() throws Exception {
+    theDaemon.getHashService().startService();
     contentPoll = createPoll(TEST_URL, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
@@ -300,9 +303,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               null);
     nodeManager.handleContentPoll(pollState, results, nodeState);
     assertEquals(PollState.REPAIRING, pollState.getStatus());
+    theDaemon.getHashService().stopService();
   }
 
   public void testHandleNamePoll() throws Exception {
+    theDaemon.getHashService().startService();
     contentPoll = createPoll(TEST_URL+"/branch2", false, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
@@ -327,6 +332,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // since there are no entries in the results object, nothing much will
     // happen and it should be marked 'REPAIRED'
     assertEquals(PollState.REPAIRED, pollState.getStatus());
+    theDaemon.getHashService().stopService();
   }
 
   private CachedUrlSet getCUS(String url) throws Exception {
@@ -376,7 +382,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     LcapMessage testmsg = null;
     try {
       InetAddress testAddr = InetAddress.getByName("127.0.0.1");
-      testID = IdentityManager.getIdentityManager().getIdentity(testAddr);
+      testID = theDaemon.getIdentityManager().getIdentity(testAddr);
     } catch (UnknownHostException ex) {
       fail("can't open test host");
     }

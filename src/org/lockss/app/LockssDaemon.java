@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.1 2003-02-01 00:26:50 claire Exp $
+ * $Id: LockssDaemon.java,v 1.2 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.state.*;
 import org.lockss.proxy.*;
 import org.lockss.crawler.CrawlManager;
 import java.util.Iterator;
+import org.lockss.protocol.IdentityManager;
 
 /**
  * @author Claire Griffin
@@ -75,7 +76,7 @@ public class LockssDaemon {
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_IDENTITY_MANAGER
       = "org.lockss.protocol.IdentityManager";
-  private static String DEFAULT_CRAWL_MANAGER = "org.lockss.crawler.CrawlManager";
+  private static String DEFAULT_CRAWL_MANAGER = "org.lockss.crawler.CrawlManagerImpl";
   private static String DEFAULT_PLUGIN_MANAGER = "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
   private static String DEFAULT_LOCKSS_REPOSITORY
@@ -100,7 +101,7 @@ public class LockssDaemon {
     DEFAULT_CRAWL_MANAGER, DEFAULT_PROXY_HANDLER};
 
   private static Logger log = Logger.getLogger("RunDaemon");
-  private List propUrls = null;
+  protected List propUrls = null;
   private String pluginDir = null;
   private String cacheDir = null;
   private String configDir = null;
@@ -110,7 +111,7 @@ public class LockssDaemon {
 
   boolean running = false;
 
-  LockssDaemon(List propUrls){
+  protected LockssDaemon(List propUrls){
     this.propUrls = propUrls;
   }
 
@@ -214,6 +215,15 @@ public class LockssDaemon {
   }
 
   /**
+   * return the Identity Manager
+   * @return IdentityManager
+   */
+
+  public IdentityManager getIdentityManager() {
+    return (IdentityManager) getManager(IDENTITY_MANAGER);
+  }
+
+  /**
    * get cache directory
    * @return get the location of the cache directory
    */
@@ -222,7 +232,7 @@ public class LockssDaemon {
   }
 
   public void stopDaemon() {
-    running = false;
+    stop();
   }
 
   /**
@@ -230,7 +240,7 @@ public class LockssDaemon {
    * the plugins.
    * @throws Exception if the initialization fails
    */
-  void runDaemon() throws Exception {
+  protected void runDaemon() throws Exception {
 
     // initialize our properties from the urls given
     initProperties();
@@ -240,19 +250,19 @@ public class LockssDaemon {
 
     // load in our "plugins"
     initPlugins();
-
+/*
     running = true;
 
     while(running)
     ;
-
+*/
   }
 
 
   /**
    * stop the daemon
    */
-  void stop() {
+  protected void stop() {
 
     /* stop the plugins */
     Iterator it = thePlugins.values().iterator();
@@ -272,7 +282,7 @@ public class LockssDaemon {
   /**
    * init our configuration and extract any parameters we will use locally
    */
-  void initProperties() {
+  protected void initProperties() {
     Configuration.startHandler(propUrls);
     System.err.println("Sleeping so config can get set");
     Configuration.waitConfig();
@@ -291,7 +301,7 @@ public class LockssDaemon {
    * init all of the managers that support the daemon.
    * @throws Exception if initilization fails
    */
-  void initManagers() throws Exception {
+  protected void initManagers() throws Exception {
     String mgr_name;
     LockssManager mgr;
 
@@ -336,7 +346,7 @@ public class LockssDaemon {
   /**
    * init the plugins in the plugins directory
    */
-  void initPlugins() {
+  protected void initPlugins() {
     /* grab our 3rd party plugins and load them using security manager */
     String[] files = new java.io.File(pluginDir).list();
     for(int i= 0; i < files.length; i++) {
@@ -364,7 +374,7 @@ public class LockssDaemon {
         return;
       }
       thePlugins.put(id,plugin);
-      PluginManager.registerArchivalUnit(plugin.getArchivalUnit());
+      getPluginManager().registerArchivalUnit(plugin.getArchivalUnit());
     }
     catch (ClassNotFoundException cnfe) {
       System.err.println("Unable to load Lockss plugin " + pluginName);

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.10 2003-01-04 03:31:42 claire Exp $
+ * $Id: LcapIdentity.java,v 1.11 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -88,6 +88,7 @@ public class LcapIdentity implements Serializable {
 
 
   // accessor methods
+
   /**
    * return the address of the Identity
    * @return the <code>InetAddress<\code> for this Identity

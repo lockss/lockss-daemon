@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.15 2003-01-25 02:21:11 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.16 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ import org.lockss.repository.*;
 import org.lockss.util.Logger;
 import org.lockss.poller.PollManager;
 import org.lockss.util.TimeBase;
+import java.security.*;
+import org.lockss.protocol.*;
 
 /**
  * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.
@@ -171,7 +173,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     else {
       // determine number of content nodes and total size
       calculateNodeCountAndSize();
-      MessageDigest hasher = PollManager.getPollManager().getHasher();
+      MessageDigest hasher = LcapMessage.getDefaultHasher();
       CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
       long bytesPerMs = 0;
       SystemMetrics metrics = SystemMetrics.getSystemMetrics();

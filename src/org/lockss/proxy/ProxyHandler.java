@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.6 2003-01-31 09:47:19 claire Exp $
+ * $Id: ProxyHandler.java,v 1.7 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -42,14 +42,52 @@ import org.mortbay.http.handler.*;
 //import org.mortbay.servlet.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.app.*;
 
 /* ------------------------------------------------------------ */
 /** LOCKSS proxy handler.
  *
  */
-public class ProxyHandler extends NullHandler {
+public class ProxyHandler extends NullHandler implements LockssManager {
+  private static LockssDaemon theDaemon = null;
+  private static ProxyHandler theManager = null;
 
-  public static void startProxy() {
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theManager == null) {
+      theDaemon = daemon;
+      theManager = this;
+      startProxy();
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // XXX undo whatever we did in start proxy.
+
+    theManager = null;
+  }
+
+
+  public void startProxy() {
     try {
       // Create the server
       HttpServer server = new HttpServer();
@@ -61,8 +99,7 @@ public class ProxyHandler extends NullHandler {
       HttpContext context = server.getContext(null, "/");
 
       // Create a servlet container
-      HttpHandler handler = new ProxyHandler();
-
+      HttpHandler handler = theManager;
       context.addHandler(handler);
 
       // Start the http server
@@ -96,7 +133,7 @@ public class ProxyHandler extends NullHandler {
     System.err.println("URI="+uri);
 
     String urlString = uri.toString();
-    ArchivalUnit au = PluginManager.findArchivalUnit(urlString);
+    ArchivalUnit au = theDaemon.getPluginManager().findArchivalUnit(urlString);
     if (au != null) {
       CachedUrlSet cus = au.getAUCachedUrlSet();
       if (cus != null) {

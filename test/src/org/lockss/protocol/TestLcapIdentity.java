@@ -24,7 +24,8 @@ public class TestLcapIdentity extends TestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
 					 "test2.doc", "test3.doc"};
-  private static IdentityManager idmgr = IdentityManager.getIdentityManager();
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private static IdentityManager idmgr = daemon.getIdentityManager();
 
   public TestLcapIdentity(String _name) {
     super(_name);

@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.6 2002-12-16 19:44:18 tal Exp $
+ * $Id: HashService.java,v 1.7 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.app.*;
 
 /**
  * API for content and name hashing services.
@@ -45,15 +46,54 @@ import org.lockss.util.*;
  * time-slice scheduling so that large requests, which can take hours, do
  * not lock out smaller requests.
  */
-public class HashService {
+public class HashService implements LockssManager {
   // Queue of outstanding hash requests.  The currently executing request,
   // if any, is on the queue, but not necessarily still at the head.
   // Currently there is a single hash queue.  (Might make sense to have
   // more if there are multiple disks.)
-  private static HashQueue theQueue;
+  private static HashQueue theQueue = null;
+  private static HashService theService = null;
+  private LockssDaemon theDaemon = null;
 
-  // no instances
-  private HashService() {
+  public HashService() {}
+
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theService == null) {
+      theDaemon = daemon;
+      theService = this;
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+    theQueue = new HashQueue();
+    theQueue.init();
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // TODO: checkpoint here.
+    if (theQueue != null) {
+      theQueue.stop();
+    }
+    theQueue = null;
+
+    theService = null;
   }
 
   /**
@@ -75,7 +115,7 @@ public class HashService {
    *         <code>false</code> if the resources to do it are not
    *         available.
    */
-  public static boolean hashContent(CachedUrlSet urlset,
+  public boolean hashContent(CachedUrlSet urlset,
 				    MessageDigest hasher,
 				    Deadline deadline,
 				    Callback callback,
@@ -84,7 +124,7 @@ public class HashService {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    urlset.getContentHasher(hasher),
-			    urlset.estimatedHashDuration()); 
+			    urlset.estimatedHashDuration());
     return scheduleReq(req);
   }
 
@@ -107,7 +147,7 @@ public class HashService {
    *         <code>false</code> if the resources to do it are not
    *         available.
    */
-  public static boolean hashNames(CachedUrlSet urlset,
+  public boolean hashNames(CachedUrlSet urlset,
 				  MessageDigest hasher,
 				  Deadline deadline,
 				  Callback callback,
@@ -116,11 +156,11 @@ public class HashService {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    // tk - get better duration estimate
-			    urlset.getNameHasher(hasher), 1000); 
+			    urlset.getNameHasher(hasher), 1000);
     return scheduleReq(req);
   }
 
-  private static boolean scheduleReq(HashQueue.Request req) {
+  private boolean scheduleReq(HashQueue.Request req) {
     if (theQueue == null) {
       throw new IllegalStateException("HashService has not been initialized");
     }
@@ -128,13 +168,13 @@ public class HashService {
   }
 
   /** Create a queue ready to receive and execute requests */
-  public static void start() {
+  protected void start() {
     theQueue = new HashQueue();
     theQueue.init();
   }
 
   /** Stop any queue runner(s) and destroy the queue */
-  public static void stop() {
+  protected void stop() {
     if (theQueue != null) {
       theQueue.stop();
     }
@@ -152,7 +192,6 @@ public class HashService {
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
      * @param cookie  used to disambiguate callbacks.
-     * @param success true iff the hash completed successfully.
      * @param hasher  the <code>MessageDigest</code> object that
      *                contains the hash.
      * @param e       the exception that caused the hash to fail.

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.12 2003-01-29 21:05:13 claire Exp $
+* $Id: IdentityManager.java,v 1.13 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ import java.util.ArrayList;
 import org.exolab.castor.mapping.Mapping;
 import org.exolab.castor.mapping.*;
 import java.io.*;
+import org.lockss.app.*;
 
 /**
  * <p>Title: </p>
@@ -100,26 +101,63 @@ public class IdentityManager {
   static Logger theLog=Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
   LcapIdentity theLocalIdentity = null;
-  String localIdentityStr = null;
+  static String localIdentityStr = null;
   Mapping mapping = null;
 
-  HashMap theIdentities = null; // all known identities
+  HashMap theIdentities = new HashMap(); // all known identities
 
-  private static IdentityManager theIdentityManager = null;
+  private static IdentityManager theManager = null;
+  private static LockssDaemon theDaemon = null;
 
-  private IdentityManager() {
-    configure();
-    reloadIdentities();
+  public IdentityManager() { }
+
+  /**
+   * init the plugin manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theManager == null) {
+      theDaemon = daemon;
+      theManager = this;
+      configure();
+      reloadIdentities();
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
   }
 
-  public static IdentityManager getIdentityManager() {
-    if(theIdentityManager == null) {
-      theIdentityManager = new IdentityManager();
+  /**
+   * start the plugin manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+  }
+
+  /**
+   * stop the plugin manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    try {
+      storeIdentities();
+    }
+    catch (ProtocolException ex) {
     }
 
-    return theIdentityManager;
+    theManager = null;
   }
 
+
+  public static IdentityManager getIdentityManager()
+  throws IllegalAccessException {
+    if(theManager != null) {
+      return theManager;
+    }
+    throw new IllegalAccessException("Unitialized IdentityManager");
+  }
 
   /**
    * public constructor for the creation of an Identity object
@@ -169,7 +207,7 @@ public class IdentityManager {
    * Get the local host name
    * @return hostname as a String
    */
-  public String getLocalHostName() {
+  public static String getLocalHostName() {
     if (localIdentityStr == null)  {
       localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
     }
@@ -197,107 +235,6 @@ public class IdentityManager {
   public int getMaxReputaion() {
     return REPUTATION_NUMERATOR;
   }
-
-  private void configure() {
-    reputationDeltas = new int[10];
-
-    reputationDeltas[MAX_DELTA] = Configuration.getIntParam(PARAM_MAX_DELTA, 100);
-    reputationDeltas[AGREE_VOTE] = Configuration.getIntParam(PARAM_AGREE_DELTA, 100);
-    reputationDeltas[DISAGREE_VOTE] = Configuration.getIntParam(PARAM_DISAGREE_DELTA, -150);
-    reputationDeltas[CALL_INTERNAL] = Configuration.getIntParam(PARAM_CALL_INTERNAL, 100);
-    reputationDeltas[SPOOF_DETECTED] = Configuration.getIntParam(PARAM_SPOOF_DETECTED, -30);
-    reputationDeltas[REPLAY_DETECTED] = Configuration.getIntParam(PARAM_REPLAY_DETECTED, -20);
-    reputationDeltas[ATTACK_DETECTED] = Configuration.getIntParam(PARAM_ATTACK_DETECTED, -500);
-    reputationDeltas[VOTE_NOTVERIFIED] = Configuration.getIntParam(PARAM_VOTE_NOTVERIFIED, -30);
-    reputationDeltas[VOTE_VERIFIED] = Configuration.getIntParam(PARAM_VOTE_VERIFIED, 40);
-    reputationDeltas[VOTE_DISOWNED] = Configuration.getIntParam(PARAM_VOTE_DISOWNED, -400);
-  }
-
-  void reloadIdentities() {
-    try {
-      String fn = Configuration.getParam(PARAM_IDDB_DIR, "/tmp/iddb")
-                + File.separator + IDDB_FILENAME;
-      File iddbFile = new File(fn);
-      if((iddbFile != null) && iddbFile.canRead()) {
-        Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
-        unmarshaller.setMapping(getMapping());
-        IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
-            new FileReader(iddbFile));
-        setIdentities(idlb.getIdBeans());
-      }
-      else {
-        theLog.warning("Unable to read Identity file:" + fn);
-
-      }
-    } catch (Exception e) {
-      theLog.warning("Couldn't load identity database: " + e.getMessage());
-    }
-    if(theIdentities == null) {
-      theIdentities =  new HashMap();
-    }
-  }
-
-  void storeIdentities() throws ProtocolException {
-    try {
-      String fn = Configuration.getParam(PARAM_IDDB_DIR);
-
-      File iddbDir = new File(fn);
-      if (!iddbDir.exists()) {
-        iddbDir.mkdirs();
-      }
-      File iddbFile = new File(iddbDir, IDDB_FILENAME);
-      if(!iddbFile.exists()) {
-        iddbFile.createNewFile();
-      }
-      if((iddbFile != null) && iddbFile.canWrite()) {
-        IdentityListBean idlb = getIdentityListBean();
-        Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
-        marshaller.setMapping(getMapping());
-        marshaller.marshal(idlb);
-      }
-      else {
-        throw new ProtocolException("Unable to store identity database.");
-      }
-
-    } catch (Exception e) {
-      theLog.error("Couldn't store identity database: ", e);
-      throw new ProtocolException("Unable to store identity database.");
-    }
-  }
-
-  IdentityListBean getIdentityListBean() {
-
-    synchronized(theIdentities) {
-      List beanList = new ArrayList(theIdentities.size());
-      Iterator mapIter = theIdentities.values().iterator();
-      while(mapIter.hasNext()) {
-        LcapIdentity id = (LcapIdentity) mapIter.next();
-        IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
-        beanList.add(bean);
-      }
-      IdentityListBean listBean = new IdentityListBean(beanList);
-      return listBean;
-    }
-  }
-
-  void setIdentities(Collection idList) {
-    theIdentities = new HashMap();
-    Iterator beanIter = idList.iterator();
-    synchronized(theIdentities) {
-      while (beanIter.hasNext()) {
-        IdentityBean bean = (IdentityBean)beanIter.next();
-        try {
-          LcapIdentity id = new LcapIdentity(bean.getKey(), bean.getReputation());
-          theIdentities.put(id.getIdKey(), id);
-        }
-        catch (UnknownHostException ex) {
-          theLog.warning("Error reloading identity-Unknown Host: " +
-                         bean.getKey());
-        }
-      }
-    }
-  }
-
 
   public void changeReputation(LcapIdentity id, int changeKind) {
     int delta = reputationDeltas[changeKind];
@@ -335,6 +272,90 @@ public class IdentityManager {
     id.changeReputation(delta);
   }
 
+
+  void reloadIdentities() {
+    try {
+      String fn = Configuration.getParam(PARAM_IDDB_DIR, "/tmp/iddb")
+                + File.separator + IDDB_FILENAME;
+      File iddbFile = new File(fn);
+      if((iddbFile != null) && iddbFile.canRead()) {
+        Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
+        unmarshaller.setMapping(getMapping());
+        IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
+            new FileReader(iddbFile));
+        setIdentities(idlb.getIdBeans());
+      }
+      else {
+        theLog.warning("Unable to read Identity file:" + fn);
+
+      }
+    } catch (Exception e) {
+      theLog.warning("Couldn't load identity database: " + e.getMessage());
+    }
+  }
+
+  void storeIdentities() throws ProtocolException {
+    try {
+      String fn = Configuration.getParam(PARAM_IDDB_DIR);
+
+      File iddbDir = new File(fn);
+      if (!iddbDir.exists()) {
+        iddbDir.mkdirs();
+      }
+      File iddbFile = new File(iddbDir, IDDB_FILENAME);
+      if(!iddbFile.exists()) {
+        iddbFile.createNewFile();
+      }
+      if((iddbFile != null) && iddbFile.canWrite()) {
+        IdentityListBean idlb = getIdentityListBean();
+        Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
+        marshaller.setMapping(getMapping());
+        marshaller.marshal(idlb);
+      }
+      else {
+        throw new ProtocolException("Unable to store identity database.");
+      }
+
+    } catch (Exception e) {
+      theLog.error("Couldn't store identity database: ", e);
+      throw new ProtocolException("Unable to store identity database.");
+    }
+  }
+
+
+  IdentityListBean getIdentityListBean() {
+    synchronized(theIdentities) {
+      List beanList = new ArrayList(theIdentities.size());
+      Iterator mapIter = theIdentities.values().iterator();
+      while(mapIter.hasNext()) {
+        LcapIdentity id = (LcapIdentity) mapIter.next();
+        IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
+        beanList.add(bean);
+      }
+      IdentityListBean listBean = new IdentityListBean(beanList);
+      return listBean;
+    }
+  }
+
+  void setIdentities(Collection idList) {
+    Iterator beanIter = idList.iterator();
+    synchronized(theIdentities) {
+      while (beanIter.hasNext()) {
+        IdentityBean bean = (IdentityBean)beanIter.next();
+        try {
+          LcapIdentity id = new LcapIdentity(bean.getKey(), bean.getReputation());
+          theIdentities.put(id.getIdKey(), id);
+        }
+        catch (UnknownHostException ex) {
+          theLog.warning("Error reloading identity-Unknown Host: " +
+                         bean.getKey());
+        }
+      }
+    }
+  }
+
+
+
   Mapping getMapping() {
 
     if (mapping==null) {
@@ -357,4 +378,30 @@ public class IdentityManager {
     }
     return mapping;
   }
+
+  void configure() {
+    reputationDeltas = new int[10];
+
+    reputationDeltas[MAX_DELTA] =
+        Configuration.getIntParam(PARAM_MAX_DELTA, 100);
+    reputationDeltas[AGREE_VOTE] =
+        Configuration.getIntParam(PARAM_AGREE_DELTA, 100);
+    reputationDeltas[DISAGREE_VOTE] =
+        Configuration.getIntParam(PARAM_DISAGREE_DELTA, -150);
+    reputationDeltas[CALL_INTERNAL] =
+        Configuration.getIntParam(PARAM_CALL_INTERNAL, 100);
+    reputationDeltas[SPOOF_DETECTED] =
+        Configuration.getIntParam(PARAM_SPOOF_DETECTED, -30);
+    reputationDeltas[REPLAY_DETECTED] =
+        Configuration.getIntParam(PARAM_REPLAY_DETECTED, -20);
+    reputationDeltas[ATTACK_DETECTED] =
+        Configuration.getIntParam(PARAM_ATTACK_DETECTED, -500);
+    reputationDeltas[VOTE_NOTVERIFIED] =
+        Configuration.getIntParam(PARAM_VOTE_NOTVERIFIED, -30);
+    reputationDeltas[VOTE_VERIFIED] =
+        Configuration.getIntParam(PARAM_VOTE_VERIFIED, 40);
+    reputationDeltas[VOTE_DISOWNED] =
+        Configuration.getIntParam(PARAM_VOTE_DISOWNED, -400);
+  }
+
 }

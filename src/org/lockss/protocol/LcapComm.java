@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.14 2002-12-19 00:05:46 tal Exp $
+ * $Id: LcapComm.java,v 1.15 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.apache.commons.collections.LRUMap;
+import org.lockss.app.*;
 
 /**
  * LcapComm implements the routing parts of the LCAP protocol, using
@@ -44,7 +45,7 @@ import org.apache.commons.collections.LRUMap;
  * Routing involves decisions about using unicast to supplement multicast,
  * including forwarding received unicast packets.
  */
-public class LcapComm {
+public class LcapComm implements LockssManager {
 
   static final String PREFIX = Configuration.PREFIX + "comm.";
   static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
@@ -54,8 +55,10 @@ public class LcapComm {
   static final String PARAM_UNI_ADDR_SEND = PREFIX + "unicast.sendToAddr";
   static final String PARAM_VERIFY_MULTICAST = PREFIX + "verifyMulticast";
 
+  private static LockssDaemon theDaemon = null;
+  private static LcapComm theManager = null;
+
   static Logger log = Logger.getLogger("Comm");
-  private static LcapComm singleton;
 
   private LRUMap multicastVerifyMap = new LRUMap(100);
   private boolean verifyMulticast = false;
@@ -82,21 +85,60 @@ public class LcapComm {
 
   private Vector messageHandlers = new Vector();
 
+  public LcapComm() {}
+
+  /**
+   * init the comm manager.
+   * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
+   * @see org.lockss.app.LockssManager.initService()
+   */
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theManager == null) {
+      theDaemon = daemon;
+      theManager = this;
+      theManager.sockFact = new NormalSocketFactory();
+      theManager.configure(Configuration.getCurrentConfig());
+      theManager.start();
+    }
+    else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
+  }
+
+  /**
+   * start the comm manager.
+   * @see org.lockss.app.LockssManager.startService()
+   */
+  public void startService() {
+  }
+
+  /**
+   * stop the comm manager
+   * @see org.lockss.app.LockssManager.stopService()
+   */
+  public void stopService() {
+    // TODO: checkpoint here.
+    theManager.stop();
+    theManager = null;
+  }
+
+
   LcapComm(SocketFactory factory) {
     sockFact = factory;
   }
 
   /** Create a singleton, configure it from the Configuration singleton,
    * and start its thread(s) */
-  public static void startComm() {
-    singleton = new LcapComm(new NormalSocketFactory());
-    singleton.configure(Configuration.getCurrentConfig());
-    singleton.start();
+  public void startComm() {
+    theManager = new LcapComm(new NormalSocketFactory());
+    theManager.configure(Configuration.getCurrentConfig());
+    theManager.start();
   }
 
   /** Return the singleton LcapComm instance */
-  public static LcapComm getComm() {
-    return singleton;
+  public LcapComm getComm() {
+    return theManager;
   }
 
   /** Set communication parameters from configuration */
@@ -111,7 +153,7 @@ public class LcapComm {
       } else {
 	multiPort = config.getInt(PARAM_MULTI_PORT);
       }
-      uniPort = config.getInt(PARAM_UNI_PORT); // 
+      uniPort = config.getInt(PARAM_UNI_PORT); //
       uniSendToPort = config.getInt(PARAM_UNI_PORT_SEND, uniPort);
       uniSendToName = config.get(PARAM_UNI_ADDR_SEND);
       verifyMulticast = config.getBoolean(PARAM_VERIFY_MULTICAST, false);
@@ -136,7 +178,7 @@ public class LcapComm {
     } catch (UnknownHostException e) {
       log.critical("Can't get unicast send-to addr, not started", e);
     }
-	
+
     if (log.isDebug()) {
       log.debug("groupName = " + groupName);
       log.debug("multiPort = " + multiPort);
@@ -333,7 +375,7 @@ public class LcapComm {
 //        messageHandlers.add(handler);
 //      }
   }
-      
+
   /**
    * Unregister a {@link LcapComm.MessageHandler}.
    * @param handler MessageHandler to remove.
@@ -371,7 +413,7 @@ public class LcapComm {
 	  if (qObj != null) {
 	    if (qObj instanceof LockssReceivedDatagram) {
 	      processReceivedPacket((LockssReceivedDatagram)qObj);
-	    } else {	      
+	    } else {
 	      log.warning("Non-LockssReceivedDatagram on rcv queue" + qObj);
 	    }
 	  }
@@ -447,9 +489,9 @@ public class LcapComm {
    * determine which multicast socket/port to send to.
    * @deprecated Use {@link #send(LockssDatagram, ArchivalUnit)}
    */
-  public static void sendMessage(LcapMessage msg, ArchivalUnit au)
+  public void sendMessage(LcapMessage msg, ArchivalUnit au)
       throws IOException {
-    if (singleton == null) {
+    if (theManager == null) {
       throw new IllegalStateException("LcapComm singleton not created");
     }
     getComm().send(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
@@ -465,10 +507,10 @@ public class LcapComm {
    * @deprecated Use {@link #sendTo(LockssDatagram, ArchivalUnit,
    * LcapIdentity)}
    */
-  public static void sendMessageTo(LcapMessage msg, ArchivalUnit au,
+  public void sendMessageTo(LcapMessage msg, ArchivalUnit au,
 				   LcapIdentity id)
       throws IOException {
-    if (singleton == null) {
+    if (theManager == null) {
       throw new IllegalStateException("LcapComm singleton not created");
     }
     getComm().sendTo(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,

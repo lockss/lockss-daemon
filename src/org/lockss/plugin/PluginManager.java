@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.3 2003-02-05 23:32:10 aalto Exp $
+ * $Id: PluginManager.java,v 1.4 2003-02-06 05:16:06 claire Exp $
  */
 
 /*
@@ -43,6 +43,8 @@ import org.lockss.app.*;
  * @version 0.0
  */
 public class PluginManager implements LockssManager {
+  private static PluginManager theManager = null;
+  private static LockssDaemon theDaemon = null;
 
   private static Vector archivalUnits = new Vector();
 
@@ -51,9 +53,17 @@ public class PluginManager implements LockssManager {
   /**
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
+   * @throws LockssDaemonException if we already instantiated this manager
    * @see org.lockss.app.LockssManager.initService()
    */
-  public void initService(LockssDaemon daemon) {
+  public void initService(LockssDaemon daemon) throws LockssDaemonException {
+    if(theManager == null) {
+       theDaemon = daemon;
+       theManager = new PluginManager();
+     }
+     else {
+       throw new LockssDaemonException("Multiple Instantiation.");
+     }
 
   }
 
@@ -70,7 +80,8 @@ public class PluginManager implements LockssManager {
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-
+    // TODO: checkpoint here
+    theManager = null;
   }
 
   /**
@@ -78,7 +89,7 @@ public class PluginManager implements LockssManager {
    * it can be found by <code>Plugin.findArchivalUnit()</code>.
    * @param au <code>ArchivalUnit</code> to add.
    */
-  public static void registerArchivalUnit(ArchivalUnit au) {
+  public void registerArchivalUnit(ArchivalUnit au) {
     if (!archivalUnits.contains(au)) {
       archivalUnits.addElement(au);
     }
@@ -89,7 +100,7 @@ public class PluginManager implements LockssManager {
    * it will not be found by <code>Plugin.findArchivalUnit()</code>.
    * @param au <code>ArchivalUnit</code> to remove.
    */
-  public static void unregisterArchivalUnit(ArchivalUnit au) {
+  public void unregisterArchivalUnit(ArchivalUnit au) {
     archivalUnits.remove(au);
   }
 
@@ -101,7 +112,7 @@ public class PluginManager implements LockssManager {
    * null if none found.  It is an error for more than one
    * <code>ArchivalUnit</code> to contain the url.
    */
-  public static ArchivalUnit findArchivalUnit(String url) {
+  public ArchivalUnit findArchivalUnit(String url) {
     for (Iterator iter = archivalUnits.iterator();
 	 iter.hasNext();) {
       Object o = iter.next();
@@ -123,7 +134,7 @@ public class PluginManager implements LockssManager {
    * null if none found.  It is an error for more than one
    * <code>ArchivalUnit</code> to contain the url.
    */
-  public static CachedUrlSet findAUCachedUrlSet(String url) {
+  public CachedUrlSet findAUCachedUrlSet(String url) {
     ArchivalUnit au = findArchivalUnit(url);
     if (au == null) {
       return null;

@@ -26,9 +26,11 @@ public class TestIdentityManager extends TestCase {
                                          "test2.doc", "test3.doc"};
 
   private static IdentityManager idmgr;
+
   static {
     configParams("/tmp/iddb", "src/org/lockss/protocol");
-    idmgr = IdentityManager.getIdentityManager();
+    idmgr = new IdentityManager();
+    idmgr.configure();
 
   }
 
@@ -37,6 +39,7 @@ public class TestIdentityManager extends TestCase {
   }
 
   protected void setUp() {
+
     try {
       fakeId = idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString));
       testAddress = InetAddress.getByName("127.0.0.1");
@@ -59,11 +62,6 @@ public class TestIdentityManager extends TestCase {
     catch (Exception ex) {
       fail("message request creation failed.");
     }
-  }
-
-  /** test for method getIdentityManager(..) */
-  public void testGetIdentityManager() {
-    assertEquals(idmgr,IdentityManager.getIdentityManager());
   }
 
   /** test for method getIdentity(..) */
