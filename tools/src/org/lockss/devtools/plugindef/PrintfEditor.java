@@ -321,22 +321,55 @@ public class PrintfEditor extends JDialog
       formatTextArea.insert(format, pos);
     }
   }
-
-  void editorPane_keyTyped(KeyEvent e) {
-    int pos = editorPane.getCaretPosition()-1;
+  void editorPane_keyPressed(KeyEvent e) {
     StyledDocument doc = editorPane.getStyledDocument();
-    Element el = doc.getCharacterElement(pos);
+    int pos = editorPane.getCaretPosition();
+    int code = e.getKeyCode();
+    Element el;
+    switch(code) {
+      case KeyEvent.VK_BACK_SPACE:
+      case KeyEvent.VK_DELETE:
+      case KeyEvent.VK_LEFT:
+      case KeyEvent.VK_KP_LEFT:
+        if(pos == 0) return;
+        // we want to get the element to the left of position.
+        el = doc.getCharacterElement(pos-1);
+        break;
+      case KeyEvent.VK_RIGHT:
+      case KeyEvent.VK_KP_RIGHT:
+        // we want to get the element to the right of position.
+        el = doc.getCharacterElement(pos + 1);
+        break;
+      default:
+        return; // bail we don't handle it.
+    }
     AttributeSet attr = el.getAttributes();
     String el_name = (String) attr.getAttribute(StyleConstants.NameAttribute);
-    if(e.getKeyChar() == '\b' && el_name.startsWith("Parameter")
-    && StyleConstants.getComponent(attr) != null){
+    int el_range = el.getEndOffset() - el.getStartOffset()-1;
+    if (el_name.startsWith("Parameter") &&
+        StyleConstants.getComponent(attr) != null) {
       try {
-        doc.remove(el.getStartOffset(), el.getEndOffset() -  el.getStartOffset()-1);
+        switch (code) {
+          case KeyEvent.VK_BACK_SPACE:
+          case KeyEvent.VK_DELETE:
+            doc.remove(el.getStartOffset(), el_range);
+            break;
+          case KeyEvent.VK_LEFT:
+          case KeyEvent.VK_KP_LEFT:
+            editorPane.setCaretPosition(pos - el_range);
+            break;
+          case KeyEvent.VK_RIGHT:
+          case KeyEvent.VK_KP_RIGHT:
+            editorPane.setCaretPosition(pos + (el_range));
+            break;
+        }
       }
       catch (BadLocationException ex) {
       }
+
     }
   }
+
 
   private void insertParameter(String param, String format, int pos) {
     try {
@@ -351,6 +384,7 @@ public class PrintfEditor extends JDialog
       label.setToolTipText(format);
       StyleConstants.setComponent(style, label);
       doc.insertString(pos, format, style);
+      System.out.println("inserting " + format + " style " + style);
       numParameters++;
     }
     catch (BadLocationException e) {
@@ -517,7 +551,7 @@ public class PrintfEditor extends JDialog
     return sb.toString();
   }
 
-}
+    }
 
 class PrintfTemplateEditor_saveButton_actionAdapter
     implements java.awt.event.ActionListener {
@@ -588,7 +622,7 @@ class PrintfEditor_editorPane_keyAdapter extends java.awt.event.KeyAdapter {
   PrintfEditor_editorPane_keyAdapter(PrintfEditor adaptee) {
     this.adaptee = adaptee;
   }
-  public void keyTyped(KeyEvent e) {
-    adaptee.editorPane_keyTyped(e);
+  public void keyPressed(KeyEvent e) {
+    adaptee.editorPane_keyPressed(e);
   }
 }
