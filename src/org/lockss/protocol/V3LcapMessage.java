@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.1.2.7 2004-11-25 00:34:56 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.1.2.8 2004-11-28 23:08:30 dshr Exp $
  */
 
 /*
@@ -535,8 +535,8 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     return sb.toString();
   }
 
-  //  XXX for testing only
-  public void setKey(byte[] newKey) {
-    m_challenge = newKey;
+  public void setChallenge(byte[] c) {
+    m_challenge = c;
   }
+
 }

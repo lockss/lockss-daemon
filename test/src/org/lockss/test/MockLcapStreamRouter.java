@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.9 2004-11-27 22:18:47 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.10 2004-11-28 23:08:32 dshr Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 import org.lockss.protocol.*;
+import org.lockss.poller.*;
 import java.util.*;
 import java.io.IOException;
 import org.lockss.app.*;
@@ -97,7 +98,14 @@ public class MockLcapStreamRouter extends LcapStreamRouter
     while (goOn) {
       Deadline dl = Deadline.in(10000);
       try {
-	msg = (V3LcapMessage) myReceiveQueue.get(dl);
+	Object obj = myReceiveQueue.get(dl);
+	if (obj != null) {
+	  if (obj instanceof V3LcapMessage) {
+	    msg = (V3LcapMessage) obj;
+	  } else {
+	    log.error("Pulled an instance of " + obj.getClass().toString());
+	  }
+	}
       } catch (InterruptedException ex) {
 	log.debug("Q runner interrupted");
 	// No action intended
@@ -128,11 +136,10 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    */
   public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
     throws IOException {
-    mapKey(msg);
     if (loopBackMode) {
       log.debug("mock sendTo(" + msg + ") queued");
       myReceiveQueue.put(msg);
-      myThread.interrupt();
+      // myThread.interrupt();
     } else {
       log.debug("mock sendTo(" + msg + ") dropped");
       mySendQueue.put(msg);
@@ -185,11 +192,13 @@ public class MockLcapStreamRouter extends LcapStreamRouter
       return;
     }
     if (key.equals(key1)) {
-      log.debug("Overriding " + key1 + " with " + key2);
-      msg.setKey(key2);
+      log.debug("Overriding " + V3Poll.challengeToKey(key1) + " with " +
+		V3Poll.challengeToKey(key2));
+      msg.setChallenge(key2);
     } else if (key.equals(key2)) {
-      log.debug("Overriding " + key2 + " with " + key1);
-      msg.setKey(key1);
+      log.debug("Overriding " + V3Poll.challengeToKey(key2) + " with " +
+		V3Poll.challengeToKey(key1));
+      msg.setChallenge(key1);
     }
   }
 

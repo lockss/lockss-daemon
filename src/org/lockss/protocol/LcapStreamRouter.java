@@ -1,5 +1,5 @@
 /*
- * $Id: LcapStreamRouter.java,v 1.1.2.2 2004-11-18 15:45:07 dshr Exp $
+ * $Id: LcapStreamRouter.java,v 1.1.2.3 2004-11-28 23:08:29 dshr Exp $
  */
 
 /*
@@ -155,7 +155,9 @@ public class LcapStreamRouter
   }
 
   protected void runHandlers(V3LcapMessage msg) {
+    log.debug3("runHandlers(" + msg + ")");
     for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
+      log.debug3(msg.toString() + " given to handler");
       runHandler((MessageHandler)iter.next(), msg);
     }
   }

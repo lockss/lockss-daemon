@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLcapStreamRouter.java,v 1.1.2.4 2004-11-27 22:18:47 dshr Exp $
+ * $Id: TestMockLcapStreamRouter.java,v 1.1.2.5 2004-11-28 23:08:32 dshr Exp $
  */
 
 /*
@@ -80,8 +80,8 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     loopbackRouter.startService();
     bitbucketRouter.startService();
     // Register handlers
-    handler1 = new MyMessageHandler();
-    handler2 = new MyMessageHandler();
+    handler1 = new MyMessageHandler("handler1");
+    handler2 = new MyMessageHandler("handler2");
     loopbackRouter.registerMessageHandler(handler1);
     bitbucketRouter.registerMessageHandler(handler2);
   }
@@ -116,7 +116,7 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
       assertNull(mloopbackRouter.getSendQueue());
     }
     // Create a message
-    V3LcapMessage sent = null;
+    MockV3LcapMessage sent = null;
     try {
       sent = new MockV3LcapMessage();
     } catch (IOException ex) {
@@ -141,7 +141,7 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
   public void testBitbucketRouter() {
     assertTrue(bitbucketRouter.sendQueueEmpty());
     // Create a message
-    V3LcapMessage sent = null;
+    MockV3LcapMessage sent = null;
     try {
       sent = new MockV3LcapMessage();
     } catch (IOException ex) {
@@ -165,16 +165,48 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     assertTrue(bitbucketRouter.sendQueueEmpty());
   }
 
+  public void testKeyMapping() {
+    // Create a message
+    MockV3LcapMessage sent = null;
+    byte[] key1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    byte[] key2 = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+    try {
+      sent = new MockV3LcapMessage();
+      sent.setChallenge(key1);
+    } catch (IOException ex) {
+      fail("new MockV3LcapMessage() threw " + ex);
+    }
+    loopbackRouter.setKeyMap(key1, key2);
+    // Tell loopbackRouter to send it to p2
+    try {
+      loopbackRouter.sendTo(sent, null, null);
+    } catch (IOException ex) {
+      fail("loopbackRouter.sendTo() threw " + ex);
+    }
+    // Step time
+    // Thread.yield();
+    TimeBase.step(500);
+    // Get message from handler
+    LcapMessage received = handler1.getMessage();
+    assertNotNull(received);
+    assertTrue(received instanceof V3LcapMessage);
+    assertEquals(sent, received);
+    assertEquals(key2, received.getChallenge());
+  }
+
   public class MyMessageHandler implements LcapStreamRouter.MessageHandler {
     V3LcapMessage received = null;
-    public MyMessageHandler() {
+    String handlerName = null;
+    public MyMessageHandler(String n) {
       received = null;
+      handlerName = n;
     }
     public void handleMessage(V3LcapMessage msg) {
-      log.debug("handleMessage(" + msg);
+      log.debug(handlerName + ": handleMessage(" + msg + ")");
       received = msg;
     }
     public LcapMessage getMessage() {
+      log.debug(handlerName + ": getMessage() -> " + received);
       return received;
     }
   }

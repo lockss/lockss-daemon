@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.18 2004-11-27 22:18:46 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.19 2004-11-28 23:08:30 dshr Exp $
  */
 
 /*
@@ -212,6 +212,14 @@ public class TestV3Poll extends LockssTestCase {
 
   private void initRequiredServices() {
     theDaemon = new MockLockssDaemon();
+    // Make a FifoQueue object
+    FifoQueue q1 = new FifoQueue();
+    assertNotNull(q1);
+    // Use it to create a MockLcapStreamRouter object
+    // in loop-back mode
+    router = new MockLcapStreamRouter(q1, null);
+    router.startService();
+    theDaemon.setStreamRouterManager(router);
     pollmanager = theDaemon.getPollManager();
     theDaemon.setEffortService((EffortService) new MockEffortService());
 
@@ -243,14 +251,6 @@ public class TestV3Poll extends LockssTestCase {
     theDaemon.getActivityRegulator(testau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
-    // Make a FifoQueue object
-    FifoQueue q1 = new FifoQueue();
-    assertNotNull(q1);
-    // Use it to create a MockLcapStreamRouter object
-    // in loop-back mode
-    router = new MockLcapStreamRouter(q1, null);
-    router.startService();
-    theDaemon.setStreamRouterManager(router);
   }
 
   private void initTestPeerIDs() {
