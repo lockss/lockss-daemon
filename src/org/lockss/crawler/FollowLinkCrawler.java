@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.13 2004-12-02 00:14:04 dcfok Exp $
+ * $Id: FollowLinkCrawler.java,v 1.14 2004-12-07 17:56:09 troberts Exp $
  */
 
 /*
@@ -292,7 +292,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   }
 
   protected boolean withinCrawlWindow() {
-    if ((spec!=null) && (!spec.canCrawl())) {
+    if ((spec!=null) && (!spec.inCrawlWindow())) {
       logger.info("Crawl canceled: outside of crawl window");
       return false;
     }

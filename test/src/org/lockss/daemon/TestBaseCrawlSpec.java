@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawlSpec.java,v 1.1 2004-10-20 18:41:16 dcfok Exp $
+ * $Id: TestBaseCrawlSpec.java,v 1.2 2004-12-07 17:56:10 troberts Exp $
  */
 
 /*
@@ -129,9 +129,9 @@ public class TestBaseCrawlSpec extends LockssTestCase {
       new TestableBaseCrawlSpec(ListUtil.list("foo"),
                     new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE), null);
     cs1.setCrawlWindow(window);
-    assertTrue(cs1.canCrawl());
+    assertTrue(cs1.inCrawlWindow());
     window.setAllowCrawl(false);
-    assertFalse(cs1.canCrawl());
+    assertFalse(cs1.inCrawlWindow());
   }
 
   private static class TestableBaseCrawlSpec extends BaseCrawlSpec {

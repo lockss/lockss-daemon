@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.1 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: BaseCrawlSpec.java,v 1.2 2004-12-07 17:56:10 troberts Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
     return (rule == null) ? true : (rule.match(url) == CrawlRule.INCLUDE);
   }
 
-  public boolean canCrawl() {
+  public boolean inCrawlWindow() {
     return (window==null) ? true : window.canCrawl();
   }
 

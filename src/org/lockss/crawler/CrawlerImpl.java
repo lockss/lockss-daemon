@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.36 2004-10-18 03:34:17 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.37 2004-12-07 17:56:02 troberts Exp $
  */
 
 /*
@@ -206,7 +206,8 @@ public abstract class CrawlerImpl implements Crawler {
 // 					 " is not within the crawl spec"));
         logger.warning("Permission page not within CrawlSpec");
       }
-      else if ( (au.getCrawlSpec() != null) && !au.getCrawlSpec().canCrawl()) {
+      else if ( (au.getCrawlSpec() != null)
+		&& !au.getCrawlSpec().inCrawlWindow()) {
         logger.debug("Couldn't start crawl due to crawl window.");
         err = Crawler.STATUS_WINDOW_CLOSED;
       }

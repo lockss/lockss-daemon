@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.12 2004-10-20 18:41:21 dcfok Exp $
+ * $Id: CrawlSpec.java,v 1.13 2004-12-07 17:56:10 troberts Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public interface CrawlSpec {
    * Checks the crawlWindow to see if it is a good time to crawl
    * @return true iff the crawl time falls into the crawl window
    */
-  public boolean canCrawl();
+  public boolean inCrawlWindow();
 
   /**
    * Gets the list of permission checkers
