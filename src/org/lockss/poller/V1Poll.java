@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.18 2004-09-29 06:36:20 tlipkis Exp $
+* $Id: V1Poll.java,v 1.18.2.1 2004-10-05 22:52:45 dshr Exp $
  */
 
 /*
@@ -560,7 +560,6 @@ public abstract class V1Poll extends BasePoll {
         stopPoll();
       }
     }
-  }
-
+  } 
 
 }

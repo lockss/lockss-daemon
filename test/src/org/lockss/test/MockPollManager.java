@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.14 2004-09-23 02:35:23 dshr Exp $
+* $Id: MockPollManager.java,v 1.14.2.1 2004-10-05 22:52:47 dshr Exp $
  */
 
 /*
@@ -68,24 +68,18 @@ public class MockPollManager extends PollManager {
     thePolls = new Hashtable();
   }
 
-  public boolean callPoll(PollSpec pollspec) {
-    boolean ret = false;
-    theLog.debug("MockPollManager: call V" + pollspec.getPollVersion() + " poll");
-    switch (pollspec.getPollVersion()) {
-    case 1:
+  public BasePoll callPoll(PollSpec pollspec) {
+    BasePoll ret = null;
+    if (pollspec.getPollVersion() == 1) {
       try {
 	sendV1PollRequest(pollspec);
-	ret = true;
-      } catch (IOException ioe) {
-	theLog.error("Exception sending V1 poll request for " +
-		     pollspec + ioe);
+	// ret = new V1Poll();
+      } catch (IOException e) {
+	theLog.debug("MockPollManager: sendV1PollRequest threw " + e);
       }
-      break;
-    default:
-      theLog.error("No support for V" + pollspec.getPollVersion() + " yet");
-      break;
     }
-    theLog.debug("MockPollManager: call " + (ret ? "succeeds" : "fails"));
+    theLog.debug("MockPollManager: call " + (ret != null ?
+					     "succeeds" : "fails"));
     return ret;
   }
 

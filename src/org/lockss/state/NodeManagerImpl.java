@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.191 2004-09-28 08:47:26 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.191.2.1 2004-10-05 22:52:45 dshr Exp $
  */
 
 /*
@@ -1384,7 +1384,7 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a top level poll on " + spec);
     }
-    if (!pollManager.callPoll(spec)) {
+    if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a top level poll on " + spec);
       }
@@ -1597,7 +1597,7 @@ public class NodeManagerImpl
       logger.debug2("Re-calling a " + Poll.PollName[lastPoll.type] +
 		    " poll on " + spec);
     }
-    if (!pollManager.callPoll(spec)) {
+    if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to re-call a " + Poll.PollName[lastPoll.type] +
 		      " poll on " + spec);
@@ -1614,7 +1614,7 @@ public class NodeManagerImpl
     if (logger.isDebug2()) {
       logger.debug2("Calling a poll on " + spec);
     }
-    if (!pollManager.callPoll(spec)) {
+    if (pollManager.callPoll(spec) == null) {
       if (logger.isDebug2()) {
 	logger.debug2("Failed to call a poll on " + spec);
       }

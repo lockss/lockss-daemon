@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.72.2.1 2004-10-01 01:13:49 dshr Exp $
+ * $Id: TestPollManager.java,v 1.72.2.2 2004-10-05 22:52:46 dshr Exp $
  */
 
 /*
@@ -128,7 +128,7 @@ public class TestPollManager extends LockssTestCase {
     for (int i = 0; i < testmsg.length - 1; i++) {
       pm.msgSent = null;
 
-      assertTrue("Calling this poll should succeed",
+      assertNotNull("Calling this poll should succeed",
 		 pm.callPoll(new PollSpec(testmsg[i])));
       assertNotNull(pm.msgSent);
       assertTrue(pm.msgSent instanceof LcapMessage);
@@ -362,7 +362,7 @@ public class TestPollManager extends LockssTestCase {
       cus = plugin.makeCachedUrlSet(testau,
 				    new RangeCachedUrlSetSpec(rooturls[1]));
       PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd, Poll.CONTENT_POLL);
-      assertTrue(pollmanager.callPoll(spec));
+      assertNotNull(pollmanager.callPoll(spec));
     }
     catch (IllegalStateException e) {
       // ignore this for now

@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.8 2004-09-29 01:19:11 dshr Exp $
+* $Id: BasePoll.java,v 1.8.2.1 2004-10-05 22:52:44 dshr Exp $
  */
 
 /*
@@ -103,6 +103,9 @@ public abstract class BasePoll implements Poll {
     m_pollstate = PS_INITING;
     
   }
+
+  // Just for testing
+  protected BasePoll() { }
 
   public void setMessage(LcapMessage msg) {
     m_msg = msg;

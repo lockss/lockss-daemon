@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.2 2004-10-01 18:46:58 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.3 2004-10-05 22:52:44 dshr Exp $
  */
 
 /*
@@ -174,11 +174,12 @@ public class PollManager
    *                 the <code>Poll</code>.
    * @return true if the poll was successfuly called.
    */
-  public boolean callPoll(PollSpec pollspec) {
-    boolean ret = false;
+  public BasePoll callPoll(PollSpec pollspec) {
+    BasePoll ret = null;
     PollFactory pollFact = getPollFactory(pollspec);
     if (pollFact == null) {
-      return false;
+      theLog.debug("No poll factory for " + pollspec);
+      return null;
     } else {
       long duration = pollFact.calcDuration(pollspec, this);
       byte[] challenge = makeVerifier(duration);
@@ -187,7 +188,9 @@ public class PollManager
 	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
 				    theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
 				    LcapMessage.getDefaultHashAlgorithm());
-	ret = pollFact.callPoll(thePoll, this, theIDManager);
+	if (pollFact.callPoll(thePoll, this, theIDManager)) {
+	  ret = thePoll;
+	}
       } catch (ProtocolException ex) {
 	theLog.debug("makePoll or callPoll threw " + ex.toString());
       }

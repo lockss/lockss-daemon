@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.9.2.1 2004-10-01 01:13:49 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.9.2.2 2004-10-05 22:52:45 dshr Exp $
  */
 
 /*
@@ -215,7 +215,7 @@ public class V1NamePoll extends V1Poll {
 				     lwrRem, uprRem,
 				     Poll.NAME_POLL,
 				     Poll.V1_POLL);
-	if (m_pollmanager.callPoll(spec)) {
+	if (m_pollmanager.callPoll(spec) == null) {
           log.error("unable to call name poll for " + spec);
         }
 	log.debug3("buildPollLists 3");
