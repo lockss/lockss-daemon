@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.6 2004-10-08 00:09:27 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.7 2004-10-08 17:38:35 dshr Exp $
  */
 
 /*
@@ -604,18 +604,22 @@ public class V3Poller extends V3Poll {
 	if(m_pollstate != PS_COMPLETE) {
 	  stopPoll();
 	}
-      } else if ((PeerIdentity)m_voterRoll.remove(0) == null) {
-	log.error("Voter roll doesn't deliver peer id after receipt");
-	m_state = STATE_FINALIZING;
-	if(m_pollstate != PS_COMPLETE) {
-	  stopPoll();
-	}
-      } else if (!m_voterRoll.isEmpty()) {
-	solicitVotesFrom(m_voterRoll);
       } else {
-	m_state = STATE_FINALIZING;
-	if(m_pollstate != PS_COMPLETE) {
-	  stopPoll();
+	Object obj = m_voterRoll.remove(0);
+	log.debug("voter roll returns a " + obj.getClass().getName());
+	if ((PeerIdentity)obj == null) {
+	  log.error("Voter roll doesn't deliver peer id after receipt");
+	  m_state = STATE_FINALIZING;
+	  if(m_pollstate != PS_COMPLETE) {
+	    stopPoll();
+	  }
+	} else if (!m_voterRoll.isEmpty()) {
+	  solicitVotesFrom(m_voterRoll);
+	} else {
+	  m_state = STATE_FINALIZING;
+	  if(m_pollstate != PS_COMPLETE) {
+	    stopPoll();
+	  }
 	}
       }
     }
