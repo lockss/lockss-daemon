@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.11 2004-03-22 22:06:06 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.12 2004-06-01 08:30:24 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,8 @@ public class CrawlManagerStatus implements StatusAccessor {
   private List colDescs =
     ListUtil.list(
 		  new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
-				       ColumnDescriptor.TYPE_STRING),
+				       ColumnDescriptor.TYPE_STRING)
+		  .setComparator(CatalogueOrderComparator.SINGLETON),
 		  new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
