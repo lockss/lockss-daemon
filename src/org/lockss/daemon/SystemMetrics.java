@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.18 2003-12-08 06:52:33 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.19 2004-01-09 09:15:57 eaalto Exp $
  */
 
 /*
@@ -46,51 +46,53 @@ import org.lockss.protocol.LcapMessage;
  */
 public class SystemMetrics extends BaseLockssManager {
   static final String PREFIX = Configuration.PREFIX + "metrics.";
+
   /**
    * Configuration parameter name for duration, in ms, for which the hash test
    * should run.
    */
   public static final String PARAM_HASH_TEST_DURATION =
-    PREFIX + "hash.duration";
+      PREFIX + "hash.duration";
+  static final long DEFAULT_HASH_TEST_DURATION = 100 * Constants.SECOND;
+
   /**
    * Configuration parameter name for the number of bytes per step in the hash
    * test.
    */
   public static final String PARAM_HASH_TEST_BYTE_STEP =
-    PREFIX + "hash.stepsize";
-
-  public static final String PARAM_SLOWEST_RATE = PREFIX + "slowest.hashrate";
-
-  static final long DEFAULT_HASH_TEST_DURATION = 100 * Constants.SECOND;
+      PREFIX + "hash.stepsize";
   static final int DEFAULT_HASH_TEST_BYTE_STEP = 10 * 1024;
 
+  /**
+   * Configuration parameter name for the default hash speed for new AUs.
+   */
+  public static final String PARAM_DEFAULT_HASH_SPEED =
+      PREFIX + "default.hash.speed";
+  static final int DEFAULT_HASH_SPEED = 250;
+
+  /**
+   * Configuration parameter name for the slowest hash rate in the cache group.
+   */
+  public static final String PARAM_SLOWEST_RATE = PREFIX + "slowest.hashrate";
   static final int DEFAULT_SLOWEST_RATE = 250;
 
   private static Logger logger = Logger.getLogger("SystemMetrics");
-  private static SystemMetrics theMetrics = null;
 
   Hashtable estimateTable = new Hashtable();
   MessageDigest defaultDigest = LcapMessage.getDefaultHasher();
   HashService hashService;
+  int defaultSpeed;
 
   public void startService() {
     super.startService();
-    theMetrics = this;
     hashService = theDaemon.getHashService();
   }
 
   public void setConfig(Configuration newConfig,
 			Configuration prevConfig,
 			Set changedKeys) {
-  }
-
-  /**
-   * Static method to get the singleton
-   * @return a SystemMetrics object
-   */
-  // tk - should go away
-  public static SystemMetrics getSystemMetrics() {
-    return theMetrics;
+    defaultSpeed = newConfig.getInt(PARAM_DEFAULT_HASH_SPEED,
+                                    DEFAULT_HASH_SPEED);
   }
 
   /**
@@ -127,10 +129,11 @@ public class SystemMetrics extends BaseLockssManager {
   public int getHashSpeedEstimate(CachedUrlSetHasher hasher,
 				  MessageDigest digest)
       throws IOException {
-
     Integer estimate = (Integer)estimateTable.get(digest.getAlgorithm());
     if (estimate==null) {
-      estimate = new Integer(measureHashSpeed(hasher, digest));
+      // don't calculate; use default instead
+      estimate = new Integer(defaultSpeed);
+//      estimate = new Integer(measureHashSpeed(hasher, digest));
       estimateTable.put(digest.getAlgorithm(), estimate);
     }
     return estimate.intValue();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.3 2003-12-23 00:37:04 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.4 2004-01-09 09:15:58 eaalto Exp $
  */
 
 /*
@@ -59,7 +59,9 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
   private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private MockPlugin plugin;
-  private MockSystemMetrics metrics;
+  private SystemMetrics metrics;
+
+  static final int HASH_SPEED = 100;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -67,17 +69,16 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED, 
+		      Integer.toString(HASH_SPEED));
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHistoryRepository().startService();
     hashService = theDaemon.getHashService();
     hashService.startService();
-    metrics = new MockSystemMetrics();
-    metrics.initService(theDaemon);
+    metrics = theDaemon.getSystemMetrics();
     metrics.startService();
-    metrics.setHashSpeed(100);
-    theDaemon.setSystemMetrics(metrics);
 
     mau = new MyMockArchivalUnit();
     plugin = new MyMockPlugin();
@@ -401,9 +402,9 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
         new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = plugin.makeCachedUrlSet(mau, sSpec);
     long estimate = fileSet.estimatedHashDuration();
-    // MockSystemMetrics set speed to avoid slow machine problems
+    // SystemMetrics set speed to avoid slow machine problems
     assertTrue(estimate > 0);
-    long expectedEstimate = 1000 / metrics.getHashSpeed();
+    long expectedEstimate = 1000 / HASH_SPEED;
     assertEquals(estimate, hashService.padHashEstimate(expectedEstimate));
     // check that estimation isn't stored for single node sets
     assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());

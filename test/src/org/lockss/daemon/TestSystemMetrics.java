@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.14 2003-09-12 00:17:33 eaalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.15 2004-01-09 09:15:57 eaalto Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import java.util.Properties;
 import java.io.IOException;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -41,16 +42,22 @@ import org.lockss.test.*;
  */
 public class TestSystemMetrics extends LockssTestCase {
   private SystemMetrics metrics;
-
-  public TestSystemMetrics(String msg) {
-    super(msg);
-  }
+  private MockLockssDaemon theDaemon;
 
   public void setUp() throws Exception {
     super.setUp();
-    metrics = new SystemMetrics();
-    configHashParams(SystemMetrics.DEFAULT_HASH_TEST_DURATION,
-                     SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP);
+    theDaemon = new MockLockssDaemon();
+    Properties props = new Properties();
+    props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION,
+                      Long.toString(SystemMetrics.DEFAULT_HASH_TEST_DURATION));
+    props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP,
+                      Integer.toString(SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP));
+    props.setProperty(SystemMetrics.PARAM_DEFAULT_HASH_SPEED,
+                      Integer.toString(SystemMetrics.DEFAULT_HASH_SPEED));
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    theDaemon.getHashService().startService();
+    metrics = theDaemon.getSystemMetrics();
+    metrics.startService();
   }
 
   public void testHashEstimation() throws IOException {
@@ -66,8 +73,7 @@ public class TestSystemMetrics extends LockssTestCase {
       // wipe out cached estimate
       metrics.estimateTable.clear();
       long startTime = TimeBase.nowMs();
-      estimate = metrics.getBytesPerMsHashEstimate(hasher,
-         new MockMessageDigest());
+      estimate = metrics.measureHashSpeed(hasher, new MockMessageDigest());
       duration = TimeBase.msSince(startTime);
       expectedMin =
           (byteCount * 10) / SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP;
@@ -90,18 +96,11 @@ public class TestSystemMetrics extends LockssTestCase {
 
   public void testEstimationCaching() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
-    hasher.setHashStepDelay(10);
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
+    assertEquals(SystemMetrics.DEFAULT_HASH_SPEED, estimate);
     hasher = new MockCachedUrlSetHasher(10);
     int estimate2 = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
     assertEquals(estimate, estimate2);
-  }
-
-  public static void configHashParams(long duration, int step)
-      throws IOException {
-    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration + "\n";
-    String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + step;
-    ConfigurationUtil.setCurrentConfigFromString(s + s2);
   }
 
   public static void main(String[] argv) {
