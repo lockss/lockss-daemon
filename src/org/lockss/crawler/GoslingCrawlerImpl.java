@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.25 2003-06-13 21:15:19 tyronen Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.26 2003-06-17 21:21:52 troberts Exp $
  */
 
 /*
@@ -119,6 +119,7 @@ public class GoslingCrawlerImpl implements Crawler {
   private long endTime = -1;
   private int numUrlsFetched = 0;
   private int numUrlsParsed = 0;
+  private int type;
 
 
   /**
@@ -128,7 +129,7 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param followLinks whether or not to extract and follow links
    */
   public GoslingCrawlerImpl(ArchivalUnit au, List startUrls,
-			    boolean followLinks) {
+			    int type, boolean followLinks) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
     } else if (startUrls == null) {
@@ -137,8 +138,13 @@ public class GoslingCrawlerImpl implements Crawler {
     this.au = au;
     this.startUrls = startUrls;
     this.followLinks = followLinks;
+    this.type = type;
   }
 
+  public GoslingCrawlerImpl(ArchivalUnit au, List startUrls,
+			    boolean followLinks) {
+    this(au, startUrls, Crawler.NEW_CONTENT, followLinks);
+  }
   public long getNumFetched() {
     return numUrlsFetched;
   }
@@ -157,6 +163,14 @@ public class GoslingCrawlerImpl implements Crawler {
 
   public ArchivalUnit getAU() {
     return au;
+  }
+
+  public List getStartUrls() {
+    return startUrls;
+  }
+
+  public int getType() {
+    return type;
   }
 
   /**
@@ -495,5 +509,13 @@ public class GoslingCrawlerImpl implements Crawler {
       }
     }
     return null;
+  }
+
+  public String toString() {
+    StringBuffer sb = new StringBuffer();
+    sb.append("[GoslingCrawlerImpl: ");
+    sb.append(au.toString());
+    sb.append("]");
+    return sb.toString();
   }
 }

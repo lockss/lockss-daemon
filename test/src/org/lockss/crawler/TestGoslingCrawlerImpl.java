@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.13 2003-05-07 20:36:46 tal Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.14 2003-06-17 21:21:52 troberts Exp $
  */
 
 /*
@@ -82,14 +82,14 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     urlList = ListUtil.list(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAUCachedUrlSet(cus);
-    crawler = new GoslingCrawlerImpl(mau, urlList, true);
+    crawler = new GoslingCrawlerImpl(mau, urlList, Crawler.NEW_CONTENT, true);
   }
 
   public void testThrowsForNullAU() {
     try {
       crawler = 
 	new GoslingCrawlerImpl(null, ListUtil.list("http://www.example.com"),
-			       false);
+			       Crawler.NEW_CONTENT, false);
       fail("Trying to construct a GoslingCrawlerImpl with a null ArchivalUnit"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
