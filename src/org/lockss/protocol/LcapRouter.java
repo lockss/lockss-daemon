@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.6 2003-03-27 03:05:14 tal Exp $
+ * $Id: LcapRouter.java,v 1.7 2003-03-28 08:13:20 tal Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.poller.PollManager;
 import org.apache.commons.collections.LRUMap;
 
 // tk - synchronization here and in PartnerList
-// tk - ratelimiter.event() where?
 
 /**
  * LcapRouter implements unicast routing parts of the LCAP V1 protocol.
@@ -98,7 +97,6 @@ public class LcapRouter extends BaseLockssManager {
 				      processIncomingMessage(rd);
 				    }
 				  });
-//      singleton.start();
   }
 
   public void stopService() {
@@ -162,7 +160,9 @@ public class LcapRouter extends BaseLockssManager {
     log.debug("send(" + msg + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
+    updateBeacon();
     comm.send(dg, au);
+    doUnicast(dg, null, null);
     rateLimiter.event();
   }
 
@@ -179,7 +179,9 @@ public class LcapRouter extends BaseLockssManager {
     log.debug("sendTo(" + msg + ", " + id + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
+    updateBeacon();
     comm.sendTo(dg, au, id);
+    rateLimiter.event();
   }
 
   private void updateBeacon() {
@@ -188,8 +190,8 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
-  // handle received message.  do unicast/multicast routing, then send to
-  // poll manager
+  // handle received message.  do unicast/multicast routing, then pass msg
+  // to handlers
   void processIncomingMessage(LockssReceivedDatagram dg) {
     LcapMessage msg;
     log.debug("rcvd message: " + dg);
@@ -245,7 +247,6 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
-
   boolean isEligibleToForward(LockssReceivedDatagram dg, LcapMessage msg) {
     // Don't forward if ...
     if (msg.getHopCount() == 0) {	// forwarded enough times already
@@ -295,8 +296,8 @@ public class LcapRouter extends BaseLockssManager {
     return false;
   }
 
-  /** Unicast to each of our partners.  Don't send the message if either
-   * the seonder or the originator is us.  Either or both of sender and
+  /** Unicast to each of our partners.  Don't send the message to either
+   * the sender or the originator of the message.  Either or both of sender and
    * originator may be null to disable this test.
    */
   void doUnicast(LockssDatagram dg,
@@ -378,7 +379,7 @@ public class LcapRouter extends BaseLockssManager {
       while (goOn) {
 	try {
 	  beaconDeadline.sleep();
-	  if (beaconDeadline.expired()) {
+	  if (goOn && beaconDeadline.expired()) {
 	    log.debug3("Beacon send");
 	    sendNoop();
 	    beaconDeadline.expireIn(beaconInterval);
@@ -394,7 +395,7 @@ public class LcapRouter extends BaseLockssManager {
 
     private void stopBeacon() {
       goOn = false;
-      this.interrupt();
+      beaconDeadline.expire();
     }
   }
 
