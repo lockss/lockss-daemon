@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.5 2004-07-07 19:23:31 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.6 2004-07-14 20:46:03 clairegriffin Exp $
  */
 
 /*
@@ -367,17 +367,43 @@ public class EditableDefinablePlugin
     for(Iterator it = pcd_set.iterator(); it.hasNext();) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       String key = cpd.getKey();
-      Integer type = new Integer(cpd.getType());
-      pd_map.put(key, type);
-      if (type.intValue() == ConfigParamDescr.TYPE_YEAR) {
-        pd_map.put(DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX + key, type);
+      int type = cpd.getType();
+      pd_map.put(key, cpd);
+      if (type == ConfigParamDescr.TYPE_YEAR) {
+        key = DefinableArchivalUnit.CM_AU_SHORT_YEAR_PREFIX + key;
+        ConfigParamDescr descr = copyDescr(cpd);
+        descr.setDescription(cpd.getDescription() + " (Abbrev.)");
+        descr.setDisplayName(cpd.getDisplayName() + " (Abbrev.)");
+        descr.setKey(key);
+        pd_map.put(key, descr);
       }
-      else if (type.intValue() == ConfigParamDescr.TYPE_URL) {
-        pd_map.put(key + DefinableArchivalUnit.CM_AU_HOST_SUFFIX, type);
-        pd_map.put(key + DefinableArchivalUnit.CM_AU_PATH_SUFFIX, type);
+      else if (type == ConfigParamDescr.TYPE_URL) {
+        String mod_key = key + DefinableArchivalUnit.CM_AU_HOST_SUFFIX;
+        ConfigParamDescr descr = copyDescr(cpd);
+        descr.setDescription(cpd.getDescription() + " (Host)");
+        descr.setDisplayName(cpd.getDisplayName() + " (Host)");
+        descr.setKey(key);
+        pd_map.put(mod_key, descr);
+        mod_key = key + DefinableArchivalUnit.CM_AU_PATH_SUFFIX;
+        descr = copyDescr(cpd);
+        descr.setDescription(cpd.getDescription() + " (Path)");
+        descr.setDisplayName(cpd.getDisplayName() + " (Path)");
+        descr.setKey(key);
+        pd_map.put(mod_key, descr);
       }
     }
     return pd_map;
+  }
+
+  private ConfigParamDescr copyDescr(ConfigParamDescr cpd) {
+    ConfigParamDescr descr = new ConfigParamDescr();
+    descr.setDefinitional(cpd.isDefinitional());
+    descr.setDescription(cpd.getDescription());
+    descr.setDisplayName(cpd.getDisplayName());
+    descr.setKey(cpd.getKey());
+    descr.setSize(cpd.getSize());
+    descr.setType(cpd.getType());
+    return descr;
   }
 
   public void removePluginConfigDescrs() {
@@ -576,20 +602,10 @@ public class EditableDefinablePlugin
 
   static Map getDefaultConfigParamDescrs() {
     HashMap descrs = new HashMap();
-    Class cpd = ConfigParamDescr.class;
-    ConfigParamDescr descrObj = new ConfigParamDescr();
-    Field[] cpd_fields = cpd.getDeclaredFields();
-    for (int ic = 0; ic < cpd_fields.length; ic++) {
-      if (cpd_fields[ic].getType() == cpd) {
-        try {
-          ConfigParamDescr descr = (ConfigParamDescr) cpd_fields[ic].get(descrObj);
-          descrs.put(descr.getKey(), descr);
-        }
-        catch (IllegalAccessException ex) {
-        }
-        catch (IllegalArgumentException ex) {
-        }
-      }
+    ConfigParamDescr[] defaults = ConfigParamDescr.DEFAULT_DESCR_ARRAY;
+    for (int ic = 0; ic < defaults.length; ic++) {
+      ConfigParamDescr descr = defaults[ic];
+      descrs.put(descr.getKey(), descr);
     }
     return Collections.unmodifiableMap(descrs);
   }

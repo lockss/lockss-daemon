@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.12 2004-07-08 22:51:35 clairegriffin Exp $
+ * $Id: PrintfEditor.java,v 1.13 2004-07-14 20:46:03 clairegriffin Exp $
  */
 
 /*
@@ -91,6 +91,8 @@ public class PrintfEditor extends JDialog
   JTextPane editorPane = new JTextPane();
   JScrollPane editorPanel = new JScrollPane();
   int selectedPane = 0;
+  private boolean m_needsMatchPanel = false;
+  private static final String STRING_LITERAL = "String Literal";
 
   public PrintfEditor(Frame frame, String title) {
     super(frame, title, false);
@@ -108,7 +110,7 @@ public class PrintfEditor extends JDialog
   }
 
   private void initMatches() {
-    matchesKeys.put("String Literal", "");
+    matchesKeys.put(STRING_LITERAL, "");
     matchesKeys.put("Any Number", "[0-9]+");
     matchesKeys.put("Anything", ".*");
     matchesKeys.put("Start", "^");
@@ -180,6 +182,7 @@ public class PrintfEditor extends JDialog
             ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(8, 6, 13, 8), 0, 10));
     parameterPanel.add(paramComboBox, new GridBagConstraints(0, 0, 1, 1, 1.0, 0.0
             ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(8, 8, 13, 0), 258, 11));
+    paramComboBox.setRenderer(new MyCellRenderer());
     InsertPanel.add(matchPanel, null);
     InsertPanel.add(parameterPanel, null);
     buttonPanel.add(cancelButton, null);
@@ -222,9 +225,10 @@ public class PrintfEditor extends JDialog
     m_data = data;
     data.getPlugin().addParamListener(this);
     setTemplate( (PrintfTemplate) data.getData());
+    m_needsMatchPanel = data.getKey().equals(EditableDefinablePlugin.AU_RULES);
     // initialize the combobox
     updateParams(data);
-    if(data.getKey().equals(EditableDefinablePlugin.AU_RULES)) {
+    if(m_needsMatchPanel) {
       matchPanel.setVisible(true);
     }
     else {
@@ -262,19 +266,15 @@ public class PrintfEditor extends JDialog
   }
 
   void insertButton_actionPerformed(ActionEvent e) {
-    String key = (String) paramComboBox.getSelectedItem();
+    Object selected = paramComboBox.getSelectedItem();
+    ConfigParamDescr descr;
+    String key;
+    int type = 0;
     String format = "";
-    if (key.equals("String Literal")) {
-      format = escapePrintfChars( (String) JOptionPane.showInputDialog(this,
-          "Enter the string you wish to input",
-          "String Literal Input",
-          JOptionPane.OK_CANCEL_OPTION));
-      if (StringUtil.isNullString(format)) {
-        return;
-      }
-    }
-    else {
-      int type = ( (Integer) paramKeys.get(key)).intValue();
+    if(selected instanceof ConfigParamDescr) {
+      descr = (ConfigParamDescr) selected;
+      key = descr.getKey();
+      type = descr.getType();
       switch (type) {
         case ConfigParamDescr.TYPE_STRING:
         case ConfigParamDescr.TYPE_URL:
@@ -309,23 +309,33 @@ public class PrintfEditor extends JDialog
             format = "%d";
           }
       }
-    }
+      if (selectedPane == 0) {
+        insertParameter(descr, format, editorPane.getSelectionStart());
+      }
+      else if (selectedPane == 1) {
+        // add the combobox data value to the edit box
+        int pos = formatTextArea.getCaretPosition();
+        formatTextArea.insert(format, pos);
 
-    if(selectedPane == 0) {
-      if(key.equals("String Literal")) {
-        insertText(format, PLAIN_ATTR, editorPane.getSelectionStart());
-      }
-      else {
-        insertParameter(key, format, editorPane.getSelectionStart());
-      }
-    }
-    else if (selectedPane == 1) {
-      // add the combobox data value to the edit box
-      int pos = formatTextArea.getCaretPosition();
-      formatTextArea.insert(format, pos);
-      if (!key.equals("String Literal")) {
         pos = parameterTextArea.getCaretPosition();
         parameterTextArea.insert(", " + key, pos);
+      }
+    }
+    else {
+      key = selected.toString();
+      format = escapePrintfChars( (String) JOptionPane.showInputDialog(this,
+          "Enter the string you wish to input",
+          "String Literal Input",
+          JOptionPane.OK_CANCEL_OPTION));
+      if (StringUtil.isNullString(format)) {
+        return;
+      }
+      if(selectedPane == 0) {
+        insertText(format, PLAIN_ATTR, editorPane.getSelectionStart());;
+      }
+      else if (selectedPane == 1) {
+        // add the combobox data value to the edit box
+        formatTextArea.insert(format, formatTextArea.getCaretPosition());
       }
     }
   }
@@ -334,7 +344,7 @@ public class PrintfEditor extends JDialog
   void insertMatchButton_actionPerformed(ActionEvent e) {
     String key = (String) matchComboBox.getSelectedItem();
     String format = (String)matchesKeys.get(key);
-    if(key.equals("String Literal")) {
+    if(key.equals(STRING_LITERAL)) {
      format = escapeReservedChars((String) JOptionPane.showInputDialog(this,
          "Enter the string you wish to match",
          "String Literal Input",
@@ -402,17 +412,18 @@ public class PrintfEditor extends JDialog
   }
 
 
-  private void insertParameter(String param, String format, int pos) {
+  private void insertParameter(ConfigParamDescr descr, String format, int pos) {
     try {
       StyledDocument doc = (StyledDocument) editorPane.getDocument();
 
       // The component must first be wrapped in a style
       Style style = doc.addStyle("Parameter-" + numParameters, null);
-      JLabel label = new JLabel(param);
+      JLabel label = new JLabel(descr.getDisplayName());
       label.setAlignmentY(0.8f); // make sure we line up
       label.setFont(new Font("Helvetica", Font.PLAIN, 14));
       label.setForeground(Color.BLUE);
-      label.setToolTipText(format);
+      label.setName(descr.getKey());
+      label.setToolTipText("key: " + descr.getKey() + "    format: " + format);
       StyleConstants.setComponent(style, label);
       doc.insertString(pos, format, style);
       numParameters++;
@@ -466,7 +477,7 @@ public class PrintfEditor extends JDialog
           // we extract the label.
           JLabel l = (JLabel) StyleConstants.getComponent(attr);
           if (l != null) {
-            params.add(l.getText());
+            params.add(l.getName());
           }
         }
       }
@@ -487,10 +498,13 @@ public class PrintfEditor extends JDialog
   private void updateParams(EDPCellData data) {
     paramComboBox.removeAllItems();
     paramKeys = data.getPlugin().getPrintfDescrs();
-    paramComboBox.addItem("String Literal");
+    if(!m_needsMatchPanel) {
+      paramComboBox.addItem(STRING_LITERAL);
+    }
 
-    for (Iterator it = paramKeys.keySet().iterator(); it.hasNext(); ) {
-      paramComboBox.addItem(it.next());
+    for (Iterator it = paramKeys.values().iterator(); it.hasNext(); ) {
+      ConfigParamDescr descr = (ConfigParamDescr)it.next();
+      paramComboBox.addItem(descr);
     }
     paramComboBox.setEnabled(true);
     paramComboBox.setSelectedIndex(0);
@@ -532,7 +546,7 @@ public class PrintfEditor extends JDialog
           appendText(el.getElement(), PLAIN_ATTR);
         }
         else {
-         insertParameter(el.getElement(),
+         insertParameter((ConfigParamDescr)paramKeys.get(el.getElement()),
                          el.getFormat(),
                          editorPane.getDocument().getLength());
         }
@@ -565,7 +579,7 @@ public class PrintfEditor extends JDialog
       }
       sb.append(ch);
     }
-    return sb.toString();
+    return escapePrintfChars(sb.toString());
   }
 
   private String escapePrintfChars(String str) {
@@ -656,3 +670,34 @@ class PrintfEditor_editorPane_keyAdapter extends java.awt.event.KeyAdapter {
     adaptee.editorPane_keyPressed(e);
   }
 }
+
+class MyCellRenderer extends JLabel implements ListCellRenderer {
+    public MyCellRenderer() {
+        setOpaque(true);
+    }
+
+    public Component getListCellRendererComponent(JList list, Object value,
+                                                  int index, boolean isSelected,
+                                                  boolean cellHasFocus) {
+
+      if (isSelected) {
+        setBackground(list.getSelectionBackground());
+        setForeground(list.getSelectionForeground());
+      }
+      else {
+        setBackground(list.getBackground());
+        setForeground(list.getForeground());
+      }
+
+      if(value instanceof ConfigParamDescr) {
+        ConfigParamDescr descr = (ConfigParamDescr) value;
+        setText(descr.getDisplayName());
+      }
+      else {
+        setText(value.toString());
+      }
+      return this;
+    }
+}
+
+

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.5 2004-07-10 00:42:01 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.6 2004-07-14 20:46:03 clairegriffin Exp $
  */
 
 /*
@@ -168,15 +168,17 @@ public class ConfigParamDescrPicker
     Collection knownList = plugin.getKnownConfigParamDescrs();
     Collection pluginList = plugin.getConfigParamDescrs();
     defaultDescrs = plugin.getDefaultConfigParamDescrs();
+    PickerCellRenderer renderer = new PickerCellRenderer();
     Iterator it;
     // add current plugin parameters
     DefaultListModel dlm = new DefaultListModel();
     dlm.removeAllElements();
     for (it = pluginList.iterator(); it.hasNext(); ) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
-      dlm.addElement(cpd.getKey());
+      dlm.addElement(cpd);
     }
     PluginParamList.setModel(dlm);
+    PluginParamList.setCellRenderer(renderer);
 
     // add the available parameters
     dlm = new DefaultListModel();
@@ -184,10 +186,11 @@ public class ConfigParamDescrPicker
     for (it = knownList.iterator(); it.hasNext(); ) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       if (!pluginList.contains(cpd)) {
-        dlm.addElement(cpd.getKey());
+        dlm.addElement(cpd);
       }
     }
     AvailableParamList.setModel(dlm);
+    AvailableParamList.setCellRenderer(renderer);
   }
 
   void addConfigParamDescr(ConfigParamDescr cpd) {
@@ -391,3 +394,30 @@ class ConfigParamDescrPicker_editButton_actionAdapter
     adaptee.editButton_actionPerformed(e);
   }
 }
+
+class PickerCellRenderer extends JLabel implements ListCellRenderer {
+    public PickerCellRenderer() {
+        setOpaque(true);
+    }
+
+    public Component getListCellRendererComponent(JList list, Object value,
+                                                  int index, boolean isSelected,
+                                                  boolean cellHasFocus) {
+
+      if (isSelected) {
+        setBackground(list.getSelectionBackground());
+        setForeground(list.getSelectionForeground());
+      }
+      else {
+        setBackground(list.getBackground());
+        setForeground(list.getForeground());
+      }
+
+      if(value instanceof ConfigParamDescr) {
+        ConfigParamDescr descr = (ConfigParamDescr) value;
+        setText(descr.getKey() + " ( " + descr.getDisplayName() + " )");
+      }
+      return this;
+    }
+}
+
