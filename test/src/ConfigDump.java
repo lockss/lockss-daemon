@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.5 2005-01-21 17:48:50 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.6 2005-01-21 23:08:22 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import org.lockss.test.*;
  * diffing.
  */
 public class ConfigDump {
+  static String PREFIX_TITLE_DB = ConfigManager.PARAM_TITLE_DB + ".";
+  static List excludeBelow = ListUtil.list(PREFIX_TITLE_DB);
 
   public static void main(String argv[]) throws Exception {
     List configUrls = new ArrayList();
@@ -51,7 +53,6 @@ public class ConfigDump {
     String outputFile = null;
     boolean includeTitles = false;
     boolean xmlHack = false;
-    List excludeBelow = new ArrayList();
 
     if (argv.length == 0) {
       usage();
@@ -60,7 +61,7 @@ public class ConfigDump {
       for (int ix = 0; ix < argv.length; ix++) {
 	String arg = argv[ix];
 	if        (arg.startsWith("-t")) {
-	  includeTitles = true;
+	  excludeBelow.remove(PREFIX_TITLE_DB);
 	} else if (arg.startsWith("-g")) {
 	  groupName = argv[++ix];
 	} else if (arg.startsWith("-k")) {
@@ -98,21 +99,29 @@ public class ConfigDump {
     MockLockssDaemon daemon = new MockLockssDaemon();
 
     ConfigManager mgr = ConfigManager.makeConfigManager();
-//     ConfigManager mgr = daemon.getConfigManager();
     Configuration config = mgr.readConfig(configUrls, groupName);
     SortedSet keys = new TreeSet(config.keySet());
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
-//       if (isExcluded(key)
-      if (includeTitles || !key.startsWith(ConfigManager.PARAM_TITLE_DB)) {
+      if (!isExcluded(key)) {
 	pout.println(key + " = " + (String)config.get(key));
       }
     }
   }
 
+  static boolean isExcluded(String key) {
+    for (Iterator iter = excludeBelow.iterator(); iter.hasNext(); ) {
+      if (key.startsWith((String)iter.next())) {
+	return true;
+      }
+    }
+    return false;
+  }
+
   static void usage() {
     System.err.println("Usage: ConfigDump [-t] [-k] [-x excludebelow ] [-o outfile] <urls-or-files ...>");
     System.err.println("         -g <group>   set daemon group name");
+    System.err.println("         -x prefix    exclude subtree below prefix");
     System.err.println("         -t           include title db entries");
     System.err.println("         -k           enable .txt -> .xml kludge");
     System.err.println("         -o outfile   write to outfile, else stdout");
