@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.12 2002-12-13 02:21:29 tal Exp $
+ * $Id: Deadline.java,v 1.13 2002-12-13 23:07:29 tal Exp $
  */
 
 /*
@@ -206,20 +206,26 @@ public class Deadline implements Comparable {
     changed();
   }
 
+  /** Change expiration time to time n. */
+  public synchronized void expireAt(long millis) {
+    expiration.setTime(millis);
+    changed();
+  }
+
   /** Change expiration time to n milliseconds from now. */
   public synchronized void expireIn(long millis) {
-    expiration.setTime(millis);
+    expiration.setTime(nowMs() + millis);
     changed();
   }
 
   /** Add <code>delta</code> milliseconds to the deadline. */
   public synchronized void later(long delta) {
-    expireIn(expiration.getTime() + delta);
+    expireAt(expiration.getTime() + delta);
   }
 
   /** Subtract <code>delta</code> from the deadline. */
   public synchronized void sooner(long delta) {
-    expireIn(expiration.getTime() - delta);
+    expireAt(expiration.getTime() - delta);
   }
 
   /** Register a callback that will be called if/when the Deadline's
