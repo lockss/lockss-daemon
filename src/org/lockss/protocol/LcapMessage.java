@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.40 2003-06-20 22:34:52 claire Exp $
+ * $Id: LcapMessage.java,v 1.41 2003-06-26 01:50:25 clairegriffin Exp $
  */
 
 /*
@@ -245,6 +245,7 @@ public class LcapMessage
 	Configuration.getIntParam(PollSpec.PARAM_USE_PROTOCOL_VERSION,
 				  PollSpec.DEFAULT_USE_PROTOCOL_VERSION);
     }
+    msg.storeProps();
     return msg;
   }
 
@@ -278,6 +279,7 @@ public class LcapMessage
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originAddr = localID.getAddress();
     }
+    msg.storeProps();
     return msg;
 
   }
@@ -311,6 +313,7 @@ public class LcapMessage
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
     }
+    msg.storeProps();
     return msg;
   }
 
@@ -363,7 +366,7 @@ public class LcapMessage
     if (m_version <= 0) {
         throw new ProtocolException("Unsupported inbound protocol version: " + ver);
     }
-    
+
     m_multicast = dis.readBoolean();
     m_hopCount = dis.readByte();
 
@@ -415,12 +418,16 @@ public class LcapMessage
     m_stopTime = now + duration;
   }
 
+  public byte[] encodeMsg() throws IOException {
+    return wrapPacket();
+  }
+
   /**
    * encode the message from a props table into a stream of bytes
    * @return the encoded message as bytes
    * @throws IOException if the packet can not be encoded
    */
-  public byte[] encodeMsg() throws IOException {
+  void storeProps() throws IOException {
     // make sure the props table is up to date
     try {
       m_props.setProperty("origIP", LcapIdentity.addrToString(m_originAddr));
@@ -432,7 +439,7 @@ public class LcapMessage
     if(m_opcode == NO_OP) {
       m_props.putInt("opcode", m_opcode);
       m_props.putByteArray("verifier", m_verifier);
-      return wrapPacket();
+      return;
     }
 
     m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
@@ -486,7 +493,6 @@ public class LcapMessage
     if (m_uprRem != null) {
       m_props.setProperty("uprRem", m_uprRem);
     }
-    return wrapPacket();
   }
 
 
@@ -574,7 +580,7 @@ public class LcapMessage
   public boolean supportedVersion(int vers) {
     return (vers > 0 && vers <= versionByte.length);
   }
-    
+
 
   public ArrayList getEntries() {
     return m_entries;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.27 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLcapMessage.java,v 1.28 2003-06-26 01:50:27 clairegriffin Exp $
  */
 
 /*
@@ -255,6 +255,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     byte[] msgbytes = new byte[0];
     try {
+      testmsg.storeProps();
       msgbytes = testmsg.encodeMsg();
     }
     catch (IOException ex) {
@@ -267,7 +268,6 @@ public class TestLcapMessage extends LockssTestCase {
       assertEquals(msg.m_originAddr, testaddr);
       assertEquals(msg.m_ttl,5);
       assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
-      // TODO: figure out how to test time
       assertEquals(msg.m_multicast ,false);
       assertEquals(2, msg.m_hopCount);
 
@@ -283,6 +283,40 @@ public class TestLcapMessage extends LockssTestCase {
     }
   }
 
+  public void testMessageForwarding() {
+    byte[] msgbytes = new byte[0];
+    try {
+      testmsg.storeProps();
+      msgbytes = testmsg.encodeMsg();
+    }
+    catch (IOException ex) {
+      fail("encode failed! " + ex.toString());
+    }
+    try {
+      LcapMessage msg = new LcapMessage(msgbytes);
+      assertEquals(2, msg.m_hopCount);
+      msg.setHopCount(3);
+      msg = new LcapMessage(msg.encodeMsg());
+      // now test to see if we got back what we started with
+      assertEquals(3,msg.m_hopCount);
+      assertEquals(msg.m_originAddr, testaddr);
+      assertEquals(msg.m_ttl,5);
+      assertEquals(msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
+      assertEquals(msg.m_multicast ,false);
+
+      assertTrue(Arrays.equals(msg.m_challenge,testbytes));
+      assertTrue(Arrays.equals(msg.m_verifier,testbytes));
+      assertTrue(Arrays.equals(msg.m_hashed,testbytes));
+      assertTrue(hasSameEntries(msg.m_entries,testentries));
+      assertEquals(msg.m_lwrBound, lwrbnd);
+      assertEquals(msg.m_uprBound, uprbnd);
+    }
+    catch (IOException ex) {
+      fail("message decode failed");
+    }
+
+  }
+
   public void testMessageEncodingHandlesAllowableNulls(){
     testmsg.m_entries = null;
     testmsg.m_lwrBound = null;
@@ -290,7 +324,7 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_lwrRem = null;
     testmsg.m_uprRem = null;
     try {
-      testmsg.encodeMsg();
+      testmsg.storeProps();
     }
     catch (IOException ex) {
       assertTrue("message encode with nulls failed!", true);
@@ -304,6 +338,7 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_uprBound = null;
     testmsg.m_lwrRem = null;
     testmsg.m_uprRem = null;
+    testmsg.storeProps();
     byte[] msgbytes = testmsg.encodeMsg();
 
     LcapMessage msg = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.18 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLcapIdentity.java,v 1.19 2003-06-26 01:50:27 clairegriffin Exp $
  */
 
 /*
@@ -57,8 +57,10 @@ public class TestLcapIdentity extends LockssTestCase {
   private static String uprbnd = "test3.doc";
   private static String archivalid = "testarchive 1.0";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  private static ArrayList testentries = (ArrayList)ListUtil.list("test1.doc",
-      "test2.doc", "test3.doc");
+  private static ArrayList testentries = (ArrayList)ListUtil.list(
+      new PollTally.NameListEntry(true,"test1.doc"),
+      new PollTally.NameListEntry(true,"test2.doc"),
+      new PollTally.NameListEntry(true,"test3.doc"));
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   private static IdentityManager idmgr;
 
