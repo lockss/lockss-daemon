@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.62 2005-01-04 03:07:14 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.63 2005-02-21 03:12:34 tlipkis Exp $
  */
 
 /*
@@ -1052,19 +1052,58 @@ public class LockssTestCase extends TestCase {
   }
 
   /**
-   * Asserts that a string matches the content of a reader.  Old, character
-   * at a time version.  Should be integrated into tests because it
-   * possibly causes different behavior in the stream under test.
+   * Asserts that a string matches the content of a reader read using the
+   * specified buffer size.
+   */
+  public static void assertReaderMatchesString(String expected, Reader reader,
+					       int bufsize)
+      throws IOException {
+    char[] ca = new char[bufsize];
+    StringBuffer actual = new StringBuffer(expected.length());
+
+    int n;
+    while ((n = reader.read(ca)) != -1) {
+      actual.append(ca, 0, n);
+    }
+    assertEquals("With buffer size " + bufsize + ",",
+		 expected, actual.toString());
+  }
+
+  /**
+   * Asserts that a string matches the content of a reader read using
+   * successive offsets of length chunkLen into a larger buffer,
+   */
+  public static void assertOffsetReaderMatchesString(String expected,
+						     Reader reader,
+						     int chunkLen)
+      throws IOException {
+    char[] ca = new char[expected.length() * 4];
+    int off = 0;
+    int n;
+    while ((n = reader.read(ca, off, Math.min(chunkLen, ca.length - off)))
+	   != -1) {
+      off += n;
+    }
+    StringBuffer actual = new StringBuffer(off);
+    actual.append(ca, 0, off);
+    assertEquals("With chunk size " + chunkLen + ",",
+		 expected, actual.toString());
+  }
+
+  /**
+   * Asserts that a string matches the content of a reader read with character
+   * at a time read().  Should be integrated into tests because it
+   * possibly causes different behavior in the reader under test.
    */
   public static void assertReaderMatchesStringSlow(String expected,
 						   Reader reader)
-      throws IOException{
+      throws IOException {
     StringBuffer actual = new StringBuffer(expected.length());
     int kar;
     while ((kar = reader.read()) != -1) {
       actual.append((char)kar);
     }
-    assertEquals(expected, actual.toString());
+    assertEquals("With single char read(),", expected, actual.toString());
   }
 
   /** Convenience method to compile an RE */
