@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.63 2005-02-21 03:12:34 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.64 2005-02-23 02:23:33 tlipkis Exp $
  */
 
 /*
@@ -434,6 +434,31 @@ public class LockssTestCase extends TestCase {
    * @param actual the actual value
    */
   static public void assertIsomorphic(Object expected[], Collection actual) {
+    assertIsomorphic(null, expected, actual);
+  }
+
+  /**
+   * Asserts that the collection is isomorphic with the. array If not
+   * an AssertionFailedError is thrown.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertIsomorphic(String message,
+				       Collection expected, Object actual[]) {
+    if (CollectionUtil.isIsomorphic(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /**
+   * Asserts that the collection is isomorphic with the array. If not
+   * an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertIsomorphic(Collection expected, Object actual[]) {
     assertIsomorphic(null, expected, actual);
   }
 
