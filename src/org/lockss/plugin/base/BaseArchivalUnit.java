@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.17 2003-04-17 02:36:39 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.18 2003-04-17 02:41:11 aalto Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   private void checkLegalConfigChange(Configuration newConfig)
-      throws ConfigurationException {
+      throws ArchivalUnit.ConfigurationException {
     Collection defKeys = plugin.getDefiningConfigKeys();
     for (Iterator it = defKeys.iterator(); it.hasNext();) {
       String curKey = (String)it.next();

@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.10 2003-04-17 01:03:59 aalto Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.11 2003-04-17 02:41:11 aalto Exp $
  */
 
 /*
@@ -56,9 +56,9 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
   public void setCrawlSpec(CrawlSpec spec) {
     this.crawlSpec = spec;
   }
-  
-  public void setConfiguration(Configuration config) 
-      throws ConfigurationException {
+
+  public void setConfiguration(Configuration config)
+      throws ArchivalUnit.ConfigurationException {
     super.setConfiguration(config);
     this.config = config;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.8 2003-04-17 00:55:51 troberts Exp $
+ * $Id: ArchivalUnit.java,v 1.9 2003-04-17 02:41:11 aalto Exp $
  */
 
 /*
@@ -52,10 +52,10 @@ public interface ArchivalUnit {
   /**
    * Supply (possibly changed) configuration information to an existing AU.
    * @param config the {@link Configuration}
-   * @throws ConfigurationException
+   * @throws ArchivalUnit.ConfigurationException
    */
   public void setConfiguration(Configuration config)
-      throws ConfigurationException;
+      throws ArchivalUnit.ConfigurationException;
 
   /**
    * Determine whether the url falls within the CrawlSpec.
@@ -92,7 +92,7 @@ public interface ArchivalUnit {
   public String getPluginId();
 
   /**
-   * Returns a globally unique string identifier for the 
+   * Returns a globally unique string identifier for the
    * <code>ArchivalUnit</code>.  This must be completely determined by
    * the subset of the AU's configuration info that's necessary to identify the
    * AU.
