@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.31 2004-06-28 22:24:30 tlipkis Exp $
+ * $Id: Deadline.java,v 1.32 2004-08-22 02:12:18 tlipkis Exp $
  */
 
 /*
@@ -232,12 +232,26 @@ public class Deadline implements Comparable {
       // don't complain during testing
       return;
     }
-    if (duration < 0 ||
-	(duration > (4 * Constants.WEEK) &&
+    if (duration < minDelta ||
+	(duration > maxDelta &&
 	 getExpirationTime() != TimeBase.MAX)) {
       log.warning("Unreasonable deadline: " + expiration,
 		  new Throwable());
     }
+  }
+
+  private static long minDelta = 0;
+  private static long maxDelta = (4 * Constants.WEEK);
+
+  /** Set the "reasonable" Deadline range.
+   * @param maxInPast longest reasonable time in past (as a positive number
+   * of milliseconds)
+   * @param maxInFuture longest reasonable time in future
+   */
+  public static void setReasonableDeadlineRange(long maxInPast,
+						long maxInFuture) {
+    minDelta = -maxInPast;
+    maxDelta = maxInFuture;
   }
 
   /**
