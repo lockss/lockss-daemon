@@ -4,9 +4,10 @@ stdout="test_out"
 stderr="test_err"
 
 if [ "$#" == "0" ]; then
- echo "Usage: $0 <rpt-count> <class-name>"
+ echo "Usage: $0 [-d] <rpt-count> <class-name>"
  echo "Runs <class-name> in junit <rpt-count> times,"
  echo " sending stdout and stderr to $stdout and $stderr."
+ echo "With -d, prints a dot for each iteration."
  echo "Must be run from project base dir."
  exit 1
 fi
@@ -15,6 +16,12 @@ PROJECT_DIR=.
 
 stdout="test_out"
 stderr="test_err"
+
+showdots=0
+if [ $1 = "-d" ]; then
+  showdots=1
+  shift
+fi
 
 rpt=$1
 class=$2
@@ -29,9 +36,17 @@ cp ${PROJECT_DIR}/lib/lockss-test.jar $tmplib
 CLASSPATH=$tmplib/lockss.jar:$tmplib/lockss-test.jar:`cat test/test-classpath`
 export CLASSPATH
 
+failcnt=0
+
 for (( ix = 1; ix <= $rpt ; ix++)) ; do
   echo "** iter $ix" >> $stderr
   echo "** iter $ix" >> $stdout
 
-  java junit.textui.TestRunner -Dxorg.lockss.defaultLogLevel=warning $class >>$stdout 2>>$stderr
+  if ! java junit.textui.TestRunner -Dxorg.lockss.defaultLogLevel=warning $class >>$stdout 2>>$stderr; then
+    let failcnt++
+    [ $showdots = 1 ] && echo -n F
+  else
+    [ $showdots = 1 ] && echo -n .
+  fi
 done
+echo $failcnt failures
