@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.20 2003-04-24 17:25:42 tal Exp $
+ * $Id: LcapRouter.java,v 1.21 2003-04-24 22:07:42 tal Exp $
  */
 
 /*
@@ -61,6 +61,7 @@ public class LcapRouter extends BaseLockssManager {
   static final String PARAM_INITIAL_HOPCOUNT = PREFIX + "maxHopCount";
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";
+  static final String PARAM_DUP_MSG_HASH_SIZE = PREFIX + "dupMsgHashSize";
 
   static final String PARAM_LOCAL_IPS =
     Configuration.PREFIX + "platform.localIPs";
@@ -70,6 +71,7 @@ public class LcapRouter extends BaseLockssManager {
   static final int DEFAULT_FWD_PKTS_PER_INTERVAL = 40;
   static final long DEFAULT_FWD_PKT_INTERVAL = 10 * Constants.SECOND;
   static final double DEFAULT_PROB_PARTNER_ADD = 0.5;
+  static final int DEFAULT_DUP_MSG_HASH_SIZE = 100;
 
   static Logger log = Logger.getLogger("Router");
 
@@ -86,7 +88,7 @@ public class LcapRouter extends BaseLockssManager {
   private Deadline beaconDeadline = Deadline.at(TimeBase.MAX);;
   private PartnerList partnerList = new PartnerList();
   private List messageHandlers = new ArrayList();
-  private LRUMap recentVerifiers = new LRUMap(100);
+  private LRUMap recentVerifiers = new LRUMap(DEFAULT_DUP_MSG_HASH_SIZE);
   private Object verObj = new Object();
 
   public void startService() {
@@ -142,6 +144,12 @@ public class LcapRouter extends BaseLockssManager {
 					  DEFAULT_PROB_PARTNER_ADD);
     initialHopCount =
       config.getInt(PARAM_INITIAL_HOPCOUNT, LcapMessage.MAX_HOP_COUNT_LIMIT);
+
+    int dupSize =
+      config.getInt(PARAM_DUP_MSG_HASH_SIZE, DEFAULT_DUP_MSG_HASH_SIZE);
+    if (dupSize != recentVerifiers.getMaximumSize()) {
+      recentVerifiers.setMaximumSize(dupSize);
+    }
 
     partnerList.setConfig(config);
 
@@ -257,7 +265,7 @@ public class LcapRouter extends BaseLockssManager {
     if (!msg.isNoOp()) {
       idEvent(originator, LcapIdentity.EVENT_ORIG_OP, msg);
     }
-    if (!sender.equals(originator)) {
+    if (sender.equals(originator)) {
       idEvent(sender, LcapIdentity.EVENT_SEND_ORIG, msg);
     } else {
       idEvent(sender, LcapIdentity.EVENT_SEND_FWD, msg);
