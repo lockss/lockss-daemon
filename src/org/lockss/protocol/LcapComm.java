@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.5 2002-12-02 00:38:54 tal Exp $
+ * $Id: LcapComm.java,v 1.6 2002-12-02 22:11:25 tal Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class LcapComm {
       singleton.start();
     } catch (UnknownHostException e) {
       log.critical("Can't get group addr", e);
-    } catch (Configuration.Error e) {
+    } catch (Configuration.InvalidParam e) {
       log.critical("Multicast port not configured", e);
     }
   }

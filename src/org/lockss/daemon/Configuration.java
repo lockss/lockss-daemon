@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.11 2002-12-02 20:53:45 tal Exp $
+ * $Id: Configuration.java,v 1.12 2002-12-02 22:11:25 tal Exp $
  */
 
 /*
@@ -284,16 +284,16 @@ public abstract class Configuration {
   }
 
   /** Return the config value as a boolean.
-   * @throws Configuration.Error if the value is missing or
+   * @throws Configuration.InvalidParam if the value is missing or
    * not parsable as a boolean.
    */
-  public boolean getBoolean(String key) throws Error {
+  public boolean getBoolean(String key) throws InvalidParam {
     String val = get(key);
     Boolean bool = stringToBool(val);
     if (bool != null) {
       return bool.booleanValue();
     }
-    throw new Error("Not a boolean value: " + val);
+    throw new InvalidParam("Not a boolean value: " + val);
   }
 
   /** Return the config value as a boolean.  If it's missing, return the
@@ -314,15 +314,15 @@ public abstract class Configuration {
   }
 
   /** Return the config value as an int.
-   * @throws Configuration.Error if the value is missing or
+   * @throws Configuration.InvalidParam if the value is missing or
    * not parsable as an int.
    */
-  public int getInt(String key) throws Error {
+  public int getInt(String key) throws InvalidParam {
     String val = get(key);
     try {
       return Integer.parseInt(val);
     } catch (NumberFormatException e) {
-      throw new Error("Not an int value: " + val);
+      throw new InvalidParam("Not an int value: " + val);
     }
   }
 
@@ -344,15 +344,15 @@ public abstract class Configuration {
   }
 
   /** Return the config value as a long.
-   * @throws Configuration.Error if the value is missing or
+   * @throws Configuration.InvalidParam if the value is missing or
    * not parsable as a long.
    */
-  public long getLong(String key) throws Error {
+  public long getLong(String key) throws InvalidParam {
     String val = get(key);
     try {
       return Long.parseLong(val);
     } catch (NumberFormatException e) {
-      throw new Error("Not a long value: " + val);
+      throw new InvalidParam("Not a long value: " + val);
     }
   }
 
@@ -426,7 +426,7 @@ public abstract class Configuration {
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
-  public static boolean getBooleanParam(String key) throws Error {
+  public static boolean getBooleanParam(String key) throws InvalidParam {
     return currentConfig.getBoolean(key);
   }
 
@@ -440,7 +440,7 @@ public abstract class Configuration {
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
-  public static int getIntParam(String key) throws Error {
+  public static int getIntParam(String key) throws InvalidParam {
     return currentConfig.getInt(key);
   }
 
@@ -454,7 +454,7 @@ public abstract class Configuration {
   /** Static convenience method to get param from current configuration.
    * Don't accidentally use this on a <code>Configuration</code> instance.
    */
-  public static long getLongParam(String key) throws Error {
+  public static long getLongParam(String key) throws InvalidParam {
     return currentConfig.getLong(key);
   }
 
@@ -586,8 +586,8 @@ public abstract class Configuration {
   }
 
   /** Exception thrown for errors in accessors. */
-  public class Error extends Exception {
-    public Error(String message) {
+  public class InvalidParam extends Exception {
+    public InvalidParam(String message) {
       super(message);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.4 2002-11-22 17:45:14 tal Exp $
+ * $Id: TestConfiguration.java,v 1.5 2002-12-02 22:11:25 tal Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class TestConfiguration extends TestCase {
     "prop5=False\n"; 
   private static final String c1a = "prop2=xxx\nprop4=yyy\n"; 
 
-  public void testLoad() throws IOException, Configuration.Error {
+  public void testLoad() throws IOException, Configuration.InvalidParam {
     String f = FileUtil.urlOfString(c1);
     Configuration config = Configuration.newConfiguration();
     config.load(f);
@@ -81,22 +81,22 @@ public class TestConfiguration extends TestCase {
     try {
       config.getBoolean("prop1");
       fail("getBoolean(non-boolean) didn't throw");
-    } catch (Configuration.Error e) {
+    } catch (Configuration.InvalidParam e) {
     }
     try {
       config.getBoolean("propnot");
       fail("getBoolean(missing) didn't throw");
-    } catch (Configuration.Error e) {
+    } catch (Configuration.InvalidParam e) {
     }
     try {
       config.getInt("prop2");
       fail("getInt(non-int) didn't throw");
-    } catch (Configuration.Error e) {
+    } catch (Configuration.InvalidParam e) {
     }
     try {
       config.getInt("propnot");
       fail("getInt(missing) didn't throw");
-    } catch (Configuration.Error e) {
+    } catch (Configuration.InvalidParam e) {
     }
   }
 
@@ -172,7 +172,7 @@ public class TestConfiguration extends TestCase {
     }
   }
 
-  public void testParam() throws IOException, Configuration.Error {
+  public void testParam() throws IOException, Configuration.InvalidParam {
     Configuration config = Configuration.newConfiguration();
     config.load(FileUtil.urlOfString(c2));
     Configuration.setCurrentConfig(config);
