@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.2 2004-06-29 18:58:22 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.3 2004-07-12 06:14:12 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.net.*;
+import java.util.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
@@ -52,6 +53,9 @@ public class ConfigFile {
   private String m_lastModified;
   private String m_fileUrl;
   private String m_fileContents;
+  private String m_loadError = "Not loaded yet";
+  private IOException m_IOException;
+  private long m_lastAttempt;
 
   private static Logger log = Logger.getLogger("ConfigFile");
 
@@ -80,15 +84,33 @@ public class ConfigFile {
     return m_lastModified;
   }
 
+  public long getLastAttemptTime() {
+    return m_lastAttempt;
+  }
+
+  public String getLoadErrorMessage() {
+    log.info("getLoadErrorMessage(): " + m_loadError);
+    return m_loadError;
+  }
+
+  public boolean isLoaded() {
+    return m_loadError == null;
+  }
+
   /**
    * Return an inputstream of the file contents.
    */
-  public InputStream getInputStream() {
+  public InputStream getInputStream() throws IOException {
     if (m_fileContents == null) {
-      throw new IllegalStateException("Config file not loaded: " +
-				      this.toString());
+      if (m_IOException != null) {
+	throw m_IOException;
+      } else if (m_loadError != null) {
+	throw new IOException("Error reading file: " + m_loadError);
+      } else {
+	throw new IllegalStateException("Config file not loaded: " +
+					this.toString());
+      }
     }
-    
     return new ReaderInputStream(new StringReader(m_fileContents));
   }
 
@@ -107,6 +129,7 @@ public class ConfigFile {
    * conditional GET with an "if-modified-since" header.
    */
   private synchronized boolean load(String url) throws IOException {
+    m_lastAttempt = TimeBase.nowMs();
     Reader in = null;
     Writer out = new StringWriter();
     LockssUrlConnection conn = null;
@@ -121,6 +144,7 @@ public class ConfigFile {
       m_fileType = ConfigFile.PROPERTIES_FILE;
     }
 
+    m_IOException = null;
     // Open an output stream to write to our string
     try {
       URL u = new URL(url);
@@ -132,13 +156,21 @@ public class ConfigFile {
 
       conn.execute();
 
-      if (conn.isHttp() && conn.getResponseCode() == HTTP_OK) {
-	m_lastModified = conn.getResponseHeaderValue("last-modified");
+      if (conn.isHttp()) {
+	if (conn.getResponseCode() == HTTP_OK) {
+	  m_loadError = null;
+	  m_lastModified = conn.getResponseHeaderValue("last-modified");
+	  in = new InputStreamReader(conn.getResponseInputStream());
+	  log.debug2("New file, or file changed.  Loading file from " +
+		     "remote connection:" + url);
+	} else {
+	  m_loadError = conn.getResponseCode() + ": " +
+	    conn.getResponseMessage();
+	  log.info("m_loadError: " + m_loadError);
+	}
+      } else {
 	in = new InputStreamReader(conn.getResponseInputStream());
-	log.debug2("New file, or file changed.  Loading file from " +
-		   "remote connection:" + url);
-      } else if (!conn.isHttp()) {
-	in = new InputStreamReader(conn.getResponseInputStream());
+	m_loadError = null;
       }
       log.debug2("File not changed, not reloading: " + url);
     } catch (MalformedURLException ex) {
@@ -147,6 +179,7 @@ public class ConfigFile {
     } catch (IOException ex) {
       log.warning("Unexpected exception trying to load " +
 		  "config file (" + url + "): " + ex);
+      m_IOException = ex;
       throw ex;
     }
 
