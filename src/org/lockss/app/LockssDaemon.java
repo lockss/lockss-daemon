@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.43 2003-12-23 00:22:27 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.44 2004-01-04 06:12:29 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.state.*;
 import org.lockss.proxy.*;
 import org.lockss.servlet.*;
 import org.lockss.crawler.*;
+import org.lockss.remote.*;
 import org.apache.commons.collections.SequencedHashMap;
 
 /**
@@ -110,6 +111,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String SERVLET_MANAGER = "ServletManager";
   public static String STATUS_SERVICE = "StatusService";
   public static String SYSTEM_METRICS = "SystemMetrics";
+  public static String REMOTE_API = "RemoteApi";
   public static String URL_MANAGER = "UrlManager";
 
   /* the default classes that represent our managers */
@@ -143,6 +145,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     "org.lockss.daemon.SystemMetrics";
   private static String DEFAULT_URL_MANAGER =
     "org.lockss.daemon.UrlManager";
+  private static String DEFAULT_REMOTE_API =
+    "org.lockss.remote.RemoteApi";
 
   // default AU specific manager factories
   private static String DEFAULT_ACTIVITY_REGULATOR =
@@ -191,6 +195,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
     new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
+    new ManagerDesc(REMOTE_API, DEFAULT_REMOTE_API),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
@@ -423,6 +428,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   public IdentityManager getIdentityManager() {
     return (IdentityManager) getManager(IDENTITY_MANAGER);
+  }
+
+  /**
+   * return the RemoteApi instance.
+   * @return RemoteApi instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public RemoteApi getRemoteApi() {
+    return (RemoteApi) getManager(REMOTE_API);
   }
 
   // LockssAuManager accessors
