@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.11 2004-01-12 06:21:37 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.12 2004-01-13 10:21:02 tlipkis Exp $
  */
 
 /*
@@ -565,8 +565,8 @@ class TaskRunner implements Serializable {
       task.e = new SchedService.Timeout("task not finished before deadline");
       removeAndNotify(task, "Expired: ");
     } else {
-      log.error("Impossible task state: " + task);
       task.e = new RuntimeException("Impossible task state");
+      log.error("Impossible task state: " + task, task.e);
       removeAndNotify(task, "Shouldn't: ");
     }
     task.setNotified();
@@ -655,6 +655,7 @@ class TaskRunner implements Serializable {
     } catch (Exception e) {
       // tk - should this catch all Throwable?
       task.e = e;
+      task.setFinished();
     }
     totalTime += timeDelta;
     task.updateStats();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.3 2003-12-09 02:33:23 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.4 2004-01-13 10:21:01 tlipkis Exp $
  */
 
 /*
@@ -290,6 +290,7 @@ public class TestTaskRunner extends LockssTestCase {
     Schedule.Chunk chunk = (Schedule.Chunk)s.getEvents().get(0);
     assertTrue(tr.getCurrentSchedule().getEvents().contains(chunk));
     chunk.setTaskEnd();
+    t1.setFinished(); // avoids impossible task state warning in removeTask()
     tr.removeChunk(chunk);
     assertFalse(tr.getCurrentSchedule().getEvents().contains(chunk));
     assertEmpty(tr.getAcceptedTasks());
@@ -553,6 +554,41 @@ public class TestTaskRunner extends LockssTestCase {
     assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getOverrunTasks()));
   }
 
+  public void testStepperThrows() {
+    final List finished = new ArrayList();
+    TaskCallback cb = new TaskCallback() {
+	public void taskEvent(SchedulableTask task, Schedule.EventType event) {
+	  if (event == Schedule.EventType.FINISH) {
+	    finished.add(task);
+	  }
+	}};
+
+    MockStepper stepper = new MockStepper(10, -10);
+    stepper.setWhenToThrow(5);
+    StepTask t1 = task(100, 200, 100, cb, stepper);
+    Schedule s = sched(ListUtil.list(t1));
+    fact.setResult(s);
+    assertTrue(tr.addToSchedule(t1));
+    TimeBase.setSimulated(101);
+    assertTrue(tr.findTaskToRun());
+    Interrupter intr = null;
+    try {
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
+      tr.runSteps(new MutableBoolean(true));
+      intr.cancel();
+    } catch (Exception e) {
+      log.error("runSteps threw:", e);
+    } finally {
+      if (intr.did()) {
+	fail("runSteps looped");
+      }
+    }
+    assertSame(t1, finished.get(0));
+    assertTrue(t1.e instanceof ExpectedRuntimeException);
+    assertEquals(5, stepper.nSteps);
+  }
+
+
   class MockTaskRunner extends TaskRunner {
     MockTaskRunner(TaskRunner.SchedulerFactory fact) {
       super(fact);
@@ -610,6 +646,7 @@ public class TestTaskRunner extends LockssTestCase {
   class MockStepper implements Stepper {
     int nSteps = 1;			// not finished by default
     int eachStepTime = 0;
+    int whenToThrow = -1;
 
     MockStepper() {
     }
@@ -629,6 +666,9 @@ public class TestTaskRunner extends LockssTestCase {
 
     public int computeStep(int metric) {
       int work = 0;
+      if (nSteps == whenToThrow) {
+	throw new ExpectedRuntimeException("Hash step throw test");
+      }
       if (nSteps-- > 0) {
 	if (eachStepTime > 0) {
 	  Deadline time = Deadline.in(eachStepTime);
@@ -659,6 +699,10 @@ public class TestTaskRunner extends LockssTestCase {
 
     void setFinished() {
       nSteps = 0;
+    }
+
+    void setWhenToThrow(int step) {
+      whenToThrow = step;
     }
   }
 }
