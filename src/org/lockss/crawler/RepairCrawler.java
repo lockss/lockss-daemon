@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.3 2004-02-10 00:22:02 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.4 2004-02-10 03:31:46 troberts Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.protocol.*;
+import org.lockss.proxy.ProxyManager;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 import org.lockss.state.*;
@@ -55,8 +56,11 @@ public class RepairCrawler extends CrawlerImpl {
 
   private static final String HEADER_PREFIX = "_header";
 
+  private float percentFetchFromCache = 0;
+
   public RepairCrawler(ArchivalUnit au, CrawlSpec spec,
-		       AuState aus, Collection repairUrls) {
+		       AuState aus, Collection repairUrls,
+		       float percentFetchFromCache) {
     super(au, spec, aus);
     if (repairUrls == null) {
       throw new IllegalArgumentException("Called with null repairUrls");
@@ -64,7 +68,7 @@ public class RepairCrawler extends CrawlerImpl {
       throw new IllegalArgumentException("Called with empty repairUrls list");
     }
     this.repairUrls = repairUrls;
-
+    this.percentFetchFromCache = percentFetchFromCache;
     //XXX hack, since crawlStatus will get set twice
     crawlStatus = new Crawler.Status(au, repairUrls, getType());
   }
@@ -161,8 +165,7 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   private boolean shouldFetchFromCache() {
-    return Configuration.getBooleanParam(PARAM_FETCH_FROM_OTHER_CACHE,
-					 false);
+    return ProbabilisticChoice.choose(percentFetchFromCache);
   }
   
   protected void fetchFromCache(UrlCacher uc) throws IOException {
@@ -176,9 +179,14 @@ public class RepairCrawler extends CrawlerImpl {
 
   protected void fetchFromCache(UrlCacher uc, LcapIdentity id)
       throws IOException {
+    ProxyManager proxyMan = 
+      (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
+    int proxyPort = proxyMan.getProxyPort();
     URL url =
-      new URL(null, uc.getUrl(),
-	      new sun.net.www.protocol.http.Handler(id.toString(), 9090));
+      new URL(null,
+	      uc.getUrl(),
+	      new sun.net.www.protocol.http.Handler(id.toString(), proxyPort));
+
     
     HttpURLConnection conn = (HttpURLConnection)url.openConnection();
     uc.storeContent(conn.getInputStream(),

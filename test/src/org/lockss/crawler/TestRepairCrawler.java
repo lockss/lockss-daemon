@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.3 2004-02-10 00:22:02 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.4 2004-02-10 03:31:46 troberts Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testMrcThrowsForNullAu() {
     try {
-      new RepairCrawler(null, spec, aus, testUrlList);
+      new RepairCrawler(null, spec, aus, testUrlList, 0);
       fail("Contstructing a RepairCrawler with a null ArchivalUnit"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -74,7 +74,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testMrcThrowsForNullSpec() {
     try {
-      new RepairCrawler(mau, null, aus, testUrlList);
+      new RepairCrawler(mau, null, aus, testUrlList, 0);
       fail("Contstructing a RepairCrawler with a null CrawlSpec"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -83,7 +83,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testMrcThrowsForNullList() {
     try {
-      new RepairCrawler(mau, spec, aus, null);
+      new RepairCrawler(mau, spec, aus, null, 0);
       fail("Contstructing a RepairCrawler with a null repair list"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -92,7 +92,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testMrcThrowsForEmptyList() {
     try {
-      new RepairCrawler(mau, spec, aus, ListUtil.list());
+      new RepairCrawler(mau, spec, aus, ListUtil.list(), 0);
       fail("Contstructing a RepairCrawler with a empty repair list"
 	   +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
@@ -102,7 +102,7 @@ public class TestRepairCrawler extends LockssTestCase {
   public void testGetType() {
     String repairUrl = "http://example.com/blah.html";
     Crawler crawler =
-      new RepairCrawler(mau, spec, aus, ListUtil.list(repairUrl));
+      new RepairCrawler(mau, spec, aus, ListUtil.list(repairUrl), 0);
     assertEquals(Crawler.REPAIR, crawler.getType());
   }
 
@@ -114,7 +114,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(repairUrl);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     crawler.doCrawl(Deadline.MAX);
 
@@ -139,7 +139,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2, repairUrl3);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
     crawler.setWatchdog(wdog);
     crawler.doCrawl(Deadline.MAX);
 
@@ -165,7 +165,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     crawler.doCrawl(Deadline.MAX);
 
@@ -201,8 +201,9 @@ public class TestRepairCrawler extends LockssTestCase {
     private Map contentMap = new HashMap();
 
     public MyRepairCrawler(ArchivalUnit au, CrawlSpec spec,
-			   AuState aus, Collection repairUrls) {
-      super(au, spec, aus, repairUrls);
+			   AuState aus, Collection repairUrls,
+			   float percentFetchFromCache) {
+      super(au, spec, aus, repairUrls, percentFetchFromCache);
     }
 
     protected void fetchFromCache(LcapIdentity id, String url) {

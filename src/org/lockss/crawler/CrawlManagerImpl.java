@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.61 2004-02-10 02:27:13 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.62 2004-02-10 03:31:45 troberts Exp $
  */
 
 /*
@@ -61,6 +61,10 @@ public class CrawlManagerImpl extends BaseLockssManager
   public static final String PARAM_REPAIR_CRAWL_EXPIRATION =
       Configuration.PREFIX + "crawler.repair.expiration";
 
+  public static final String PARAM_REPAIR_FROM_CACHE_PERCENT =
+      Configuration.PREFIX + "crawler.repair.repair_from_cache_percent";
+
+
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
 
@@ -80,6 +84,9 @@ public class CrawlManagerImpl extends BaseLockssManager
   private static final long DEFAULT_REPAIR_CRAWL_EXPIRATION =
     5 * Constants.DAY;
 
+  public static final float DEFAULT_REPAIR_FROM_CACHE_PERCENT = 0;
+
+
   //Tracking crawls for the status info
   private MultiMap crawlHistory = new MultiHashMap();
 
@@ -88,6 +95,7 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
+  private float percentRepairFromCache;
   private static Logger logger = Logger.getLogger("CrawlManager");
 
 
@@ -124,6 +132,10 @@ public class CrawlManagerImpl extends BaseLockssManager
     repairCrawlExpiration =
       newConfig.getTimeInterval(PARAM_REPAIR_CRAWL_EXPIRATION,
 				DEFAULT_REPAIR_CRAWL_EXPIRATION);
+
+    percentRepairFromCache =
+      newConfig.getPercentage(PARAM_REPAIR_FROM_CACHE_PERCENT,
+			      DEFAULT_REPAIR_FROM_CACHE_PERCENT);
   }
 
   public void cancelAuCrawls(ArchivalUnit au) {
@@ -157,13 +169,14 @@ public class CrawlManagerImpl extends BaseLockssManager
 	cb = new FailingCallbackWrapper(cb);
       }
       Crawler crawler =
-	makeRepairCrawler(au, au.getCrawlSpec(), locks.keySet());
+	makeRepairCrawler(au, au.getCrawlSpec(),
+			  locks.keySet(), percentRepairFromCache);
       CrawlThread crawlThread =
 	new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
       crawlHistory.put(au.getAuId(), crawler.getStatus());
       synchronized(runningCrawls) {
 	runningCrawls.put(au, crawler);
-      crawlThread.start();
+	crawlThread.start();
       }
     } else {
       logger.debug("Repair aborted due to activity lock.");
@@ -270,10 +283,13 @@ public class CrawlManagerImpl extends BaseLockssManager
     return new NewContentCrawler(au, spec, nodeManager.getAuState());
   }
 
-  protected Crawler makeRepairCrawler(ArchivalUnit au, CrawlSpec spec,
-				      Collection  repairUrls) {
+  protected Crawler makeRepairCrawler(ArchivalUnit au,
+				      CrawlSpec spec,
+				      Collection  repairUrls,
+				      float percentRepairFromCache) {
     NodeManager nodeManager = theDaemon.getNodeManager(au);
-    return new RepairCrawler(au, spec, nodeManager.getAuState(), repairUrls);
+    return new RepairCrawler(au, spec, nodeManager.getAuState(),
+			     repairUrls, percentRepairFromCache);
   }
 
   public class CrawlThread extends LockssThread {
