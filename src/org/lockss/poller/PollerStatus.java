@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.12 2004-04-29 10:13:02 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.13 2004-05-04 22:19:05 tlipkis Exp $
  */
 
 /*
@@ -57,10 +57,9 @@ public class PollerStatus {
     this.pollManager = pollManager;
   }
 
-  static class ManagerStatus
-      implements StatusAccessor {
+  static class ManagerStatus implements StatusAccessor {
     static final String TABLE_NAME = MANAGER_STATUS_TABLE_NAME;
-    private static String POLLMANAGER_TABLE_TITLE = "Poll Manager Table";
+    private static String POLLMANAGER_TABLE_TITLE = "Polls";
 
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
     static final int DATETYPE = ColumnDescriptor.TYPE_DATE;
@@ -81,8 +80,10 @@ public class PollerStatus {
 		      new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
 		      new ColumnDescriptor("PollID", "Poll ID", STRINGTYPE)
 		      );
-    private static String[] allowedKeys = {
-      "AU:", "URL:", "PollType:", "Status:"};
+
+    static final String TITLE_FOOT =
+      "To see the polls for a single AU, go to the Archival Units table and " +
+      "follow the Polls link from the desired AU.";
 
     public String getDisplayName() {
       return POLLMANAGER_TABLE_TITLE;
@@ -91,56 +92,54 @@ public class PollerStatus {
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
       String key = table.getKey();
-      checkKey(key);
-      table.setColumnDescriptors(columnDescriptors);
-      table.setDefaultSortRules(sortRules);
-      table.setTitle(getTitle(key));
-      table.setRows(getRows(key));
+      Properties props = PropUtil.canonicalEncodedStringToProps(key);
+      PollCounts cnts = new PollCounts();
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(columnDescriptors);
+	table.setDefaultSortRules(sortRules);
+	table.setRows(getRows(props, cnts));
+      }
+      table.setTitle(getTitle(props));
+      // add how-to-filter-by-AU footnote iff not already filtering by AU,
+      // and more than one AU is in table
+      if (!props.containsKey("AU") && cnts.getAuIds().size() > 1) {
+	table.setTitleFootnote(TITLE_FOOT);
+      }
+      table.setSummaryInfo(getSummary(props, cnts));
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    // utility methods for making a Reference
-
-    public StatusTable.Reference makeAURef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "AU:" + key);
-    }
-
-    public StatusTable.Reference makeURLRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "URL:" + key);
-    }
-
-    public StatusTable.Reference makePollTypeRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "PollType:" + key);
-    }
-
-    public StatusTable.Reference makeStatusRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "Status:" + key);
-    }
-
     // routines to make a row
-    private List getRows(String key) throws StatusService.NoSuchTableException {
+    private List getRows(Properties props, PollCounts cnts)
+	throws StatusService.NoSuchTableException {
       ArrayList rowL = new ArrayList();
       Iterator it = pollManager.getPolls();
       while (it.hasNext()) {
-        PollManager.PollManagerEntry entry = (PollManager.PollManagerEntry) it.next();
-
-        if (key == null || matchKey(entry, key)) {
-          rowL.add(makeRow(entry));
-        }
+        PollManager.PollManagerEntry entry =
+	  (PollManager.PollManagerEntry)it.next();
+	cnts.incrAuIdCnt(entry.spec.getAuId());
+        if (matchAu(entry, props)) {
+	  // include in counts if poll's AU matches filter
+	  cnts.incrStatusCnt(entry.getStatusString());
+	  if (matchKey(entry, props)) {
+	    // include row only if all filters match
+	    rowL.add(makeRow(entry));
+	  }
+	}
       }
       return rowL;
     }
 
     private String getTypeCharString(int pollType) {
       switch(pollType) {
-        case 0:
+        case Poll.NAME_POLL:
           return "N";
-        case 1:
+        case Poll.CONTENT_POLL:
           return "C";
-        case 2:
+        case Poll.VERIFY_POLL:
           return "V";
         default:
           return "Unknown";
@@ -162,85 +161,190 @@ public class PollerStatus {
       rowMap.put("Status", entry.getStatusString());
       //"Deadline"
       if (entry.pollDeadline != null) {
-        rowMap.put("Deadline", new Long(entry.pollDeadline.getExpirationTime()));
+        rowMap.put("Deadline", entry.pollDeadline);
       }
       //"PollID"
       rowMap.put("PollID", PollStatus.makePollRef(entry.getShortKey(),
-          entry.key));
+						  entry.key));
       return rowMap;
     }
 
-    // key support routines
-    private void checkKey(String key) throws StatusService.NoSuchTableException {
-      if (key != null && !allowableKey(allowedKeys, key)) {
-        throw new StatusService.NoSuchTableException("unknonwn key: " + key);
-      }
-    }
-
-    private boolean allowableKey(String[] keyArray, String key) {
-      for (int i = 0; i < keyArray.length; i++) {
-        if (key.startsWith(keyArray[i]))
-          return true;
-      }
-      return false;
-    }
-
-    private boolean matchKey(PollManager.PollManagerEntry entry, String key) {
-      boolean isMatch = false;
+    private boolean matchAu(PollManager.PollManagerEntry entry,
+			    Properties props) {
       PollSpec spec = entry.spec;
-      String keyValue = key.substring(key.indexOf(':') + 1);
-      if (key.startsWith("AU:")) {
-        if (spec.getAuId().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("URL:")) {
-        if (spec.getUrl().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("PollType:")) {
-        if (entry.getTypeString().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("Status:")) {
-        if (entry.getStatusString().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-
-      return isMatch;
+      String val = props.getProperty("AU");
+      return (val == null || spec.getAuId().equals(val));
     }
 
-    public String getTitle(String key) {
-      if (key == null) {
+    private boolean matchKey(PollManager.PollManagerEntry entry,
+			     Properties props) {
+      PollSpec spec = entry.spec;
+      for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
+	String key = (String)iter.next();
+	String val = props.getProperty(key);
+	if (key.equals("AU")) {
+	  if (!spec.getAuId().equals(val)) {
+	    return false;
+	  }
+	}
+	else if (key.equals("URL")) {
+	  if (!spec.getUrl().equals(val)) {
+	    return false;
+	  }
+	}
+	else if (key.equals("PollType")) {
+	  if (!entry.getTypeString().equals(val)) {
+	    return false;
+	  }
+	}
+	else if (key.equals("Status")) {
+	  if (!entry.getStatusString().equals(val)) {
+	    return false;
+	  }
+	}
+      }
+      return true;
+    }
+
+    private List getSummary(Properties props, PollCounts cnts) {
+      List res = new ArrayList();
+      List statusTypes = new ArrayList(cnts.getStatusTypes());
+      if (statusTypes.isEmpty()) {
+	return null;
+      }
+      Collections.sort(statusTypes);
+      LinkedList list = new LinkedList();
+      int total = 0;
+      for (Iterator iter = statusTypes.iterator(); iter.hasNext(); ) {
+	String type = (String)iter.next();
+	int cnt = cnts.getStatusCnt(type);
+	if (cnt > 0) {
+	  total += cnt;
+	  Properties combinedProps = PropUtil.copy(props);
+	  combinedProps.setProperty("Status", type);
+	  list.add(makeRef((cnt + " " + type), combinedProps));
+	  if (iter.hasNext()) {
+	    list.add(", ");
+	  }
+	}
+      }
+      Properties combinedProps = PropUtil.copy(props);
+      combinedProps.remove("Status");
+      list.addFirst(": ");
+      list.addFirst(makeRef((total + " Total"), combinedProps));
+      res.add(new StatusTable.SummaryInfo("Poll Summary",
+					  ColumnDescriptor.TYPE_STRING,
+					  list));
+      return res;
+    }
+
+    public String getTitle(Properties props) {
+      if (props.isEmpty()) {
 	return "All Recent Polls";
       } 
-      String keyValue = key.substring(key.indexOf(':') + 1);
-      if (key.startsWith("AU:")) {
-	String name = keyValue;
+      // generate string: {type}, {status} Polls {for AU}, {on URL}
+      List prefix = new ArrayList();
+      List suffix = new ArrayList();
+      String type = props.getProperty("PollType");
+      if (type != null) {
+	prefix.add(type);
+      }
+      String status = props.getProperty("Status");
+      if (status != null) {
+	prefix.add(status);
+      }
+      String auid = props.getProperty("AU");
+      if (auid != null) {
+	String name = auid;
 	LockssDaemon daemon = pollManager.getDaemon();
 	if (daemon != null) {
-	  ArchivalUnit au = daemon.getPluginManager().getAuFromId(keyValue);
+	  ArchivalUnit au = daemon.getPluginManager().getAuFromId(auid);
 	  if (au != null) {
 	    name = au.getName();
 	  }
 	}
-	return "Polls for " + name;
+	suffix.add("for " + name);
       }
-      else if (key.startsWith("URL:")) {
-	return "Polls for " + keyValue;
+      String url = props.getProperty("URL");
+      if (url != null) {
+	suffix.add("on " + url);
       }
-      else if (key.startsWith("PollType:")) {
-	return keyValue + " polls";
-      }
-      else if (key.startsWith("Status:")) {
-	return keyValue + " polls";
-      }
-      return "Poll Table";
+      StringBuffer sb = new StringBuffer();
+      StringUtil.separatedString(prefix, "", ", ", " ", sb);
+      sb.append("Polls");
+      StringUtil.separatedString(suffix, " ", ", ", "", sb);
+      return sb.toString();
     }
 
+    // utility methods for making a Reference
+
+    public StatusTable.Reference makeRef(Object value,
+					 String keyName, String key) {
+      Properties props = PropUtil.fromArgs(keyName, key);
+      return makeRef(value, props);
+    }
+
+    public StatusTable.Reference makeRef(Object value, Properties props) {
+      String propstr = PropUtil.propsToCanonicalEncodedString(props);
+      return new StatusTable.Reference(value, TABLE_NAME, propstr);
+    }
+
+    public StatusTable.Reference makeAURef(Object value, String key) {
+      return makeRef(value, "AU", key);
+    }
+
+    public StatusTable.Reference makeURLRef(Object value, String key) {
+      return makeRef(value, "URL", key);
+    }
+
+    public StatusTable.Reference makePollTypeRef(Object value, String key) {
+      return makeRef(value, "PollType", key);
+    }
+
+    public StatusTable.Reference makeStatusRef(Object value, String key) {
+      return makeRef(value, "Status", key);
+    }
+  }
+
+  static class PollCounts {
+    private Map statusCnts = new HashMap();
+    private Map auCnts = new HashMap();
+
+    void incrStatusCnt(String status) {
+      MutableInteger n = (MutableInteger)statusCnts.get(status);
+      if (n == null) {
+	n = new MutableInteger();
+	statusCnts.put(status, n);
+      }
+      n.add(1);
+    }
+
+    void incrAuIdCnt(String auid) {
+      MutableInteger n = (MutableInteger)auCnts.get(auid);
+      if (n == null) {
+	n = new MutableInteger();
+	auCnts.put(auid, n);
+      }
+      n.add(1);
+    }
+
+    int getStatusCnt(String status) {
+      MutableInteger n = (MutableInteger)statusCnts.get(status);
+	return n == null ? 0 : n.intValue();
+    }
+
+    int getAuCnt(String auid) {
+      MutableInteger n = (MutableInteger)auCnts.get(auid);
+	return n == null ? 0 : n.intValue();
+    }
+
+    Set getStatusTypes() {
+      return statusCnts.keySet();
+    }
+
+    Set getAuIds() {
+      return auCnts.keySet();
+    }
   }
 
   static class PollStatus implements StatusAccessor {
@@ -294,24 +398,28 @@ public class PollerStatus {
 
     private List getSummary(BasePoll poll){
       PollTally tally = poll.getVoteTally();
-      List summaryList =  ListUtil.list(
-          new StatusTable.SummaryInfo("Target" , STRINGTYPE,
-          getPollDescription(poll)),
-          new StatusTable.SummaryInfo("Caller", IPTYPE,
-          poll.m_caller.getAddress()),
-          new StatusTable.SummaryInfo("Start Time", ColumnDescriptor.TYPE_DATE,
-          new Long(poll.m_createTime)),
-          new StatusTable.SummaryInfo("Duration",
-          ColumnDescriptor.TYPE_TIME_INTERVAL,
-          new Long(tally.duration)),
-          new StatusTable.SummaryInfo("Quorum", INTTYPE,
-          new Integer(tally.quorum)),
-          new StatusTable.SummaryInfo("Agree Votes", INTTYPE,
-          new Integer(tally.numAgree)),
-          new StatusTable.SummaryInfo("Disagree Votes", INTTYPE,
-          new Integer(tally.numDisagree))
-          );
-      return summaryList;
+      List list = new ArrayList();
+      list.add(new StatusTable.SummaryInfo("Target" , STRINGTYPE,
+					   getPollDescription(poll)));
+      StatusTable.SummaryInfo s1 =
+	new StatusTable.SummaryInfo("Caller", IPTYPE,
+				    poll.m_caller.getAddress());
+      s1.setFootnote("Actually, the identity of the first poll packet we saw." +
+		     "  This is not necessarily the original poll caller.");
+      list.add(s1);
+      list.add(new StatusTable.SummaryInfo("Start Time",
+					   ColumnDescriptor.TYPE_DATE,
+					   new Long(poll.m_createTime)));
+      list.add(new StatusTable.SummaryInfo("Duration",
+					   ColumnDescriptor.TYPE_TIME_INTERVAL,
+					   new Long(tally.duration)));
+      list.add(new StatusTable.SummaryInfo("Quorum", INTTYPE,
+					   new Integer(tally.quorum)));
+      list.add(new StatusTable.SummaryInfo("Agree Votes", INTTYPE,
+					   new Integer(tally.numAgree)));
+      list.add(new StatusTable.SummaryInfo("Disagree Votes", INTTYPE,
+					   new Integer(tally.numDisagree)));
+      return list;
     }
 
     private String getPollDescription(BasePoll poll) {
@@ -374,19 +482,26 @@ public class PollerStatus {
   static class ManagerStatusAuRef implements ObjectReferenceAccessor {
 
     int howManyPollsRunning(ArchivalUnit au) {
-      ManagerStatus ms = new ManagerStatus();
-      try {
-        return ms.getRows("AU:" + au.getAuId()).size();
-      } catch (StatusService.NoSuchTableException e) {
-        theLog.debug("no table", e);
-        return 0;
+      String auid = au.getAuId();
+      int cnt = 0;
+      for (Iterator iter = pollManager.getPolls(); iter.hasNext(); ) {
+        PollManager.PollManagerEntry entry =
+	  (PollManager.PollManagerEntry)iter.next();
+	PollSpec spec = entry.spec;
+	if (auid.equals(spec.getAuId())) {
+	  cnt++;
+	}
       }
+      return cnt;
     }
 
     public StatusTable.Reference getReference(Object obj, String tableName) {
       ArchivalUnit au = (ArchivalUnit)obj;
+      String auid = au.getAuId();
+      String keys =
+	PropUtil.propsToCanonicalEncodedString(PropUtil.fromArgs("AU", auid));
       return new StatusTable.Reference(howManyPollsRunning(au) + " polls",
-                                       tableName, "AU:" + au.getAuId());
+                                       tableName, keys);
     }
   }
 }
