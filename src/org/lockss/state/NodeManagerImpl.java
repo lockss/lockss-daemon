@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.160 2004-01-08 20:06:56 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.161 2004-01-10 01:06:41 eaalto Exp $
  */
 
 /*
@@ -36,11 +36,9 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.crawler.CrawlManager;
-import org.apache.commons.collections.LRUMap;
 
 /**
  * Implementation of the NodeManager.
@@ -185,6 +183,7 @@ public class NodeManagerImpl
 
   /** Called between initService() and startService(), then whenever the
    * AU's config changes.
+   * @param auConfig the new configuration
    */
   public void setAuConfig(Configuration auConfig) {
   }
