@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.34 2004-08-22 02:11:40 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.35 2004-09-14 23:37:20 smorabito Exp $
  */
 
 /*
@@ -119,6 +119,7 @@ public class ConfigManager implements LockssManager {
   private List configChangedCallbacks = new ArrayList();
 
   private List configUrlList;	// list of urls
+  private String groupName;     // daemon group name
 
   private String recentLoadError;
 
@@ -141,13 +142,18 @@ public class ConfigManager implements LockssManager {
   private ConfigCache configCache = new ConfigCache();
 
   public ConfigManager() {
-    this(null);
+    this(null, null);
   }
 
   public ConfigManager(List urls) {
+    this(null, null);
+  }
+
+  public ConfigManager(List urls, String groupName) {
     if (urls != null) {
       configUrlList = new ArrayList(urls);
     }
+    this.groupName = groupName;
     registerConfigurationCallback(Logger.getConfigCallback());
   }
 
@@ -196,6 +202,11 @@ public class ConfigManager implements LockssManager {
 
   public static ConfigManager makeConfigManager(List urls) {
     theMgr = new ConfigManager(urls);
+    return theMgr;
+  }
+
+  public static ConfigManager makeConfigManager(List urls, String groupName) {
+    theMgr = new ConfigManager(urls, groupName);
     return theMgr;
   }
 
@@ -288,11 +299,15 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  public Configuration readConfig(List urlList) {
+    return readConfig(urlList, null);
+  }
+
   /**
    * Return a new <code>Configuration</code> instance loaded from the
    * url list
    */
-  public Configuration readConfig(List urlList) {
+  public Configuration readConfig(List urlList, String groupName) {
     if (urlList == null) {
       return null;
     }
@@ -301,6 +316,10 @@ public class ConfigManager implements LockssManager {
       boolean gotIt = newConfig.loadList(urlList);
       if (gotIt) {
 	recentLoadError = null;
+	if (groupName != null) {
+	  newConfig.put(Configuration.PARAM_DAEMON_GROUP,
+			groupName);
+	}
 	return newConfig;
       } else {
 	recentLoadError =
@@ -330,7 +349,7 @@ public class ConfigManager implements LockssManager {
   }
 
   boolean updateConfig() {
-    Configuration newConfig = readConfig(configUrlList);
+    Configuration newConfig = readConfig(configUrlList, groupName);
     return installConfig(newConfig);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.6 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.7 2004-09-14 23:37:19 smorabito Exp $
  */
 
 /*
@@ -42,6 +42,126 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.util.LockssDaemon
  */
 public class TestLockssDaemon extends LockssTestCase {
+
+  public void testGetStartupOptions() throws Exception {
+    // good options.
+    String[] test1 = {"-p", "foo;bar;baz",
+		      "-g", "test1-group"};
+    String[] test2 = {"-p", "foo",
+		      "-p", "bar",
+		      "-p", "baz"};
+    String[] test3 = {"-p", "foo;bar;baz",
+		      "-p", "quux",
+		      "-g", "test3-group"};
+    String[] test4 = {"-p", "foo1;bar1;baz1",
+		      "-p", "foo2;bar2;baz2"};
+		      
+
+    // bad options (-p without argument, should be ignored)
+    String[] test5 = {"-p", "foo",
+		      "-p"};
+    // bad options (-p without argument, should be ignored)
+    String[] test6 = {"-g", "test6-group",
+		      "-p"};
+    // bad options (-g without argument, should be ignored)
+    String[] test7 = {"-p", "foo",
+		      "-g"};
+
+    // good options using the old method (no -p or -g)
+    String[] test8 = {"foo", "bar", "baz"};
+
+    // Ensure that only one URL is chosen from a semicolon-separated
+    // list of URLs
+    LockssDaemon.StartupOptions opt1 =
+      LockssDaemon.getStartupOptions(test1);
+    assertNotNull(opt1.getGroupName());
+    assertEquals("test1-group", opt1.getGroupName());
+    List list1 = opt1.getPropUrls();
+    assertNotNull(list1);
+    assertEquals(1, list1.size());
+    assertTrue("foo".equals(list1.get(0)) ||
+	       "bar".equals(list1.get(0)) ||
+	       "baz".equals(list1.get(0)));
+
+    // Ensure that multiple prop URLs can be set with multiple "-p"
+    // options.
+    LockssDaemon.StartupOptions opt2 =
+      LockssDaemon.getStartupOptions(test2);
+    // Must be null!  No group specified.
+    assertNull(opt2.getGroupName());
+    List list2 = opt2.getPropUrls();
+    assertNotNull(list2);
+    assertEquals(3, list2.size());
+    assertEquals("foo", list2.get(0));
+    assertEquals("bar", list2.get(1));
+    assertEquals("baz", list2.get(2));
+
+    // Ensure that only one URL is chosen from a semicolon-separated
+    // list of URLs, and that additional -p parameters can be provided.
+    LockssDaemon.StartupOptions opt3 =
+      LockssDaemon.getStartupOptions(test3);
+    assertNotNull(opt3.getGroupName());
+    assertEquals("test3-group", opt3.getGroupName());
+    List list3 = opt3.getPropUrls();
+    assertNotNull(list3);
+    assertEquals(2, list3.size());
+    assertTrue("foo".equals(list3.get(0)) ||
+	       "bar".equals(list3.get(0)) ||
+	       "baz".equals(list3.get(0)));
+    assertEquals("quux", list3.get(1));
+
+    // Ensure that only one URL is chosen from each semicolon-separated
+    // list of URLs
+    LockssDaemon.StartupOptions opt4 =
+      LockssDaemon.getStartupOptions(test4);
+    assertNull(opt4.getGroupName());
+    List list4 = opt4.getPropUrls();
+    assertNotNull(list4);
+    assertEquals(2, list4.size());
+    assertTrue("foo1".equals(list4.get(0)) ||
+	       "bar1".equals(list4.get(0)) ||
+	       "baz1".equals(list4.get(0)));
+    assertTrue("foo2".equals(list4.get(1)) ||
+	       "bar2".equals(list4.get(1)) ||
+	       "baz2".equals(list4.get(1)));
+
+    // Test some bad options.  Second -p should be ignored.
+    LockssDaemon.StartupOptions opt5 =
+      LockssDaemon.getStartupOptions(test5);
+    assertNull(opt5.getGroupName());
+    List list5 = opt5.getPropUrls();
+    assertEquals(1, list5.size());
+    assertEquals("foo", list5.get(0));
+
+    // -p should be ignored, no prop URLS.
+    LockssDaemon.StartupOptions opt6 =
+      LockssDaemon.getStartupOptions(test6);
+    assertNotNull(opt6.getGroupName());
+    assertEquals("test6-group", opt6.getGroupName());
+    List list6 = opt6.getPropUrls();
+    assertNotNull(list6);
+    assertEquals(0, list6.size());
+
+    // -g should be ignored, no group name.
+    LockssDaemon.StartupOptions opt7 =
+      LockssDaemon.getStartupOptions(test7);
+    assertNull(opt7.getGroupName());
+    List list7 = opt7.getPropUrls();
+    assertNotNull(list7);
+    assertEquals(1, list7.size());
+    assertEquals("foo", list7.get(0));
+
+    // Compatibility with old startup options, no flags.
+    LockssDaemon.StartupOptions opt8 =
+      LockssDaemon.getStartupOptions(test8);
+    assertNull(opt8.getGroupName());
+    List list8 = opt8.getPropUrls();
+    assertNotNull(list8);
+    assertEquals(3, list8.size());
+    assertEquals("foo", list8.get(0));
+    assertEquals("bar", list8.get(1));
+    assertEquals("baz", list8.get(2));
+  }
 
   // AU specific manager tests
 
