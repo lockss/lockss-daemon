@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.6 2003-01-07 01:55:32 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.7 2003-02-05 22:38:32 troberts Exp $
  */
 
 /*
@@ -52,6 +52,13 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   private MockArchivalUnit mau = null;
   private List urlList = null;
   private GoslingCrawlerImpl crawler = null;
+
+  public static final String EMPTY_PAGE = "";
+  public static final String LINKLESS_PAGE = "Nothing here";
+
+  public static final String startUrl = 
+    "http://www.example.com/index.html";
+
 
   public static Class testedClasses[] = {
     org.lockss.crawler.GoslingCrawlerImpl.class
@@ -108,13 +115,6 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     }
   }
   
-  public static final String EMPTY_PAGE = "";
-  public static final String LINKLESS_PAGE = "Nothing here";
-
-  public static final String startUrl = 
-    "http://www.example.com/index.html";
-
-
   public void testDoCrawlOnePageNoLinks() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
