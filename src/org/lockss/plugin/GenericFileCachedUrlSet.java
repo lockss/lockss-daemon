@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.9 2002-11-27 20:29:12 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.10 2002-12-12 23:09:01 aalto Exp $
  */
 
 /*
@@ -106,9 +106,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
             CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
                 child.getNodeUrl());
             leafSet.add(newUrl);
-          } else {
-            recurseLeafFetch(child, leafSet);
           }
+          // internal nodes could have content, so always recurse
+          recurseLeafFetch(child, leafSet);
         }
       } catch (MalformedURLException mue) {
         logger.error("Bad url in spec: "+prefix);
@@ -149,7 +149,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   public long estimatedHashDuration() {
     if (lastDuration>0) return lastDuration;
-    //XXX else estimate in some way
+    else {
+      // determine number of internal nodes
+      // determine number of content nodes
+      // determine average content node size
+      // create a temp node of average size
+      // open, hash
+      // multiply result
+    }
     return 1000;
   }
 
