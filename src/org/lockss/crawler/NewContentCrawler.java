@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.33 2004-09-07 07:27:26 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.34 2004-09-19 01:29:14 tlipkis Exp $
  */
 
 /*
@@ -335,7 +335,9 @@ public class NewContentCrawler extends CrawlerImpl {
 
 	  // checking the crawl permission of the url's host
 	  if (!checkHostPermission(url,true)){
-	    crawlStatus.setCrawlError("Crawl permission not found at "+url );
+	    if (crawlStatus.getCrawlError() == null) {
+	      crawlStatus.setCrawlError("No permission to collect " + url);
+	    }
 	    return false;
 	  }
 
@@ -466,26 +468,29 @@ public class NewContentCrawler extends CrawlerImpl {
 
   //check if the url's host granted a permission
   private boolean checkHostPermission(String url ,boolean permissionFailedRetry) {
+    PermissionRecord perm = null;
     int urlPermissionStatus = -1;
     String urlPermissionUrl = "";
     try {
-      urlPermissionStatus = permissionMap.getStatus(url);
-      urlPermissionUrl = permissionMap.getPermissionUrl(url);
+      perm = permissionMap.get(url);
+      urlPermissionStatus = perm.getPermissionStatus();
+      urlPermissionUrl = perm.getPermissionUrl();
     } catch (MalformedURLException e) {
       logger.error("The url is malformed :" + url);
     }
+
     boolean printFailedWarning = true;
     switch (urlPermissionStatus) {
         case PermissionMap.PERMISSION_MISSING:
-	  logger.warning("No permission page record on host of "+ url);
-	  crawlStatus.setCrawlError("No crawl permission page for host of " +
+	  logger.warning("No permission page record for host: " + url);
+	  crawlStatus.setCrawlError("No crawl permission page for host: " +
 				    url );
 	  // abort crawl here
 	  return false;
         case PermissionMap.PERMISSION_OK:
 	  return true;
 	case PermissionMap.PERMISSION_NOT_OK:
-	  logger.error("Abort crawl. No permission statement is found on host : " +
+	  logger.error("Abort crawl. No permission statement found at: " +
 		       urlPermissionUrl);
 	  //abort crawl or skip all the page with this host ?
 	  return false;
@@ -496,15 +501,18 @@ public class NewContentCrawler extends CrawlerImpl {
 	  printFailedWarning = false;
 	case PermissionMap.FETCH_PERMISSION_FAILED:
 	  if (printFailedWarning) {
-	    logger.warning("Fail to fetch permission page on host :" + urlPermissionUrl);
+	    logger.warning("Failed to fetch permission page: " +
+			   urlPermissionUrl);
 	  }
 	  if (permissionFailedRetry) {
 	    //refetch permission page
-	    logger.info("refetching permission page on host:" + urlPermissionUrl);
+	    logger.info("refetching permission page: " + urlPermissionUrl);
 	    try {
-	      permissionMap.putStatus(urlPermissionUrl,crawlPermission(urlPermissionUrl));
-	    } catch (MalformedURLException e){
-	      logger.error("The urlPermissionUrl is malformed :" + urlPermissionUrl);
+	      permissionMap.putStatus(urlPermissionUrl,
+				      crawlPermission(urlPermissionUrl));
+	    } catch (MalformedURLException e) {
+	      logger.error("Malformed urlPermissionUrl", e);
+	      return false;
 	    }
 	    return checkHostPermission(url,false);
 	  } else {
