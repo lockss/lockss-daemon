@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.15 2004-02-10 04:55:58 tlipkis Exp $
+ * $Id: LcapSocket.java,v 1.16 2005-03-22 06:53:46 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.daemon.*;
 
 /** Send and receive unicast and multicast datagrams.

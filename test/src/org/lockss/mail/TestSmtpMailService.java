@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpMailService.java,v 1.4 2004-09-21 21:24:58 dshr Exp $
+ * $Id: TestSmtpMailService.java,v 1.5 2005-03-22 06:53:45 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.12 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestLcapSocket.java,v 1.13 2005-03-22 06:53:44 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.test.*;
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.8 2005-03-10 19:58:28 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.9 2005-03-22 06:53:47 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 import java.text.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;

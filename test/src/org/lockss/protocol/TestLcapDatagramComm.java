@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.5 2005-02-16 00:41:19 tlipkis Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.6 2005-03-22 06:53:44 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.test.*;
 import org.lockss.repository.LockssRepositoryImpl;
 

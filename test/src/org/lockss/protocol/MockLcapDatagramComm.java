@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapDatagramComm.java,v 1.4 2005-01-26 18:21:40 tlipkis Exp $
+ * $Id: MockLcapDatagramComm.java,v 1.5 2005-03-22 06:53:44 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.apache.commons.collections.map.LRUMap;
