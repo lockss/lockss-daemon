@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.4 2004-10-01 09:27:19 tlipkis Exp $
+ * $Id: FuncSchedService.java,v 1.5 2004-10-25 22:47:06 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,8 @@ public class FuncSchedService extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT);
       while (!svc.isIdle()) {
-	TimerUtil.guaranteedSleep(100);
+	TimeBase.step(10);
+ 	TimerUtil.guaranteedSleep(10);
       }
       intr.cancel();
     } finally {
@@ -91,6 +92,7 @@ public class FuncSchedService extends LockssTestCase {
   SchedulableTask taskToAbort = null;
 
   public void testOneBack() throws Exception {
+    TimeBase.setSimulated(100);
     final List rec = new ArrayList();
     TaskCallback cb = new TaskCallback() {
 	public void taskEvent(SchedulableTask task, Schedule.EventType event) {
@@ -105,8 +107,8 @@ public class FuncSchedService extends LockssTestCase {
     BackgroundTask task = btask(100, 200, .1, cb);
     assertTrue(svc.scheduleTask(task));
     waitUntilDone();
-    List exp = ListUtil.list(new BERec(task, Schedule.EventType.START),
-			     new BERec(task, Schedule.EventType.FINISH));
+    List exp = ListUtil.list(new BERec(200, task, Schedule.EventType.START),
+			     new BERec(300, task, Schedule.EventType.FINISH));
     assertEquals(exp, rec);
     //    t1.taskIsFinished();
   }
