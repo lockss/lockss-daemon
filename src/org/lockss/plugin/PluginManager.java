@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.74 2004-03-09 23:37:53 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.75 2004-03-11 09:41:39 tlipkis Exp $
  */
 
 /*
@@ -123,12 +123,12 @@ public class PluginManager extends BaseLockssManager {
       xmlPlugins = StringUtil.breakAt(config.get(PARAM_PLUGIN_XML_PLUGINS),
 				      ';', 0, true);
     }
-    // Process the plugin registry.
-    if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
-      initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
-    }
-    // Don't load and start plugins until the daemon is running.
+    // Don't load or start plugins until the daemon is running.
     if (isDaemonInited()) {
+      // Process the plugin registry.
+      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
+	initPluginRegistry(config.get(PARAM_PLUGIN_REGISTRY));
+      }
       Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
       if (!allPlugs.equals(currentAllPlugs)) {
 	for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
