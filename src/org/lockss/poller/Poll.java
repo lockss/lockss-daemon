@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.36 2003-01-18 01:01:26 claire Exp $
+* $Id: Poll.java,v 1.37 2003-01-21 22:56:22 claire Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.state.PollHistory;
 import org.lockss.state.NodeManager;
+import java.util.HashMap;
 
 
 /**
@@ -243,7 +244,7 @@ public abstract class Poll implements Serializable {
   /**
    * tally the poll results
    */
-  protected void tally() {
+  void tally() {
     //NodeManager.updatePollResults(m_urlSet, m_tally);
   }
 
@@ -517,8 +518,8 @@ public abstract class Poll implements Serializable {
     public ArrayList pollVotes;
     public String hashAlgorithm; // the algorithm used to hash this poll
 
-    Set   entries = null;  // the final tally set of entries in a name poll
-
+    String[] localEntries = null;  // the local entries less the remaining RegExp
+    String[] votedEntries = null;  // entries which match the won votes in a poll
     private Deadline replayDeadline = null;
     private Iterator replayIter = null;
     private ArrayList originalVotes = null;
@@ -583,8 +584,12 @@ public abstract class Poll implements Serializable {
      * return an interator for the set of entries tallied during the vote
      * @return the completed list of entries
      */
-    public Iterator getEntries() {
-      return entries == null ? null : entries.iterator();
+    public Iterator getCorrectEntries() {
+      return votedEntries == null ? null : new ArrayIterator(votedEntries);
+    }
+
+    public Iterator getLocalEntries() {
+      return localEntries == null ? null : new ArrayIterator(localEntries);
     }
 
     /**
@@ -670,5 +675,6 @@ public abstract class Poll implements Serializable {
       }
       pollVotes.add(vote);
     }
+
   }
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.21 2003-01-18 01:01:26 claire Exp $
+* $Id: NamePoll.java,v 1.22 2003-01-21 22:56:22 claire Exp $
  */
 
 /*
@@ -30,15 +30,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
+import java.io.*;
 import java.security.*;
-import java.util.*;
-import java.io.Serializable;
-
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import gnu.regexp.RE;
+import gnu.regexp.*;
+import java.util.HashSet;
 
 /**
  * @author Claire Griffin
@@ -126,6 +129,86 @@ public class NamePoll extends Poll {
     }
   }
 
+  void tally() {
+    if(!m_tally.didWinPoll()) {
+      buildPollLists(m_tally.pollVotes.iterator());
+    }
+    super.tally();
+  }
+
+  void buildPollLists(Iterator voteIter) {
+    HashMap winners = new HashMap();
+
+    // build a list of winners
+    while(voteIter.hasNext()) {
+      NamePoll.NameVote vote = (NamePoll.NameVote) voteIter.next();
+      if(!vote.agree) {
+        NameVoteCounter counter =
+            (NameVoteCounter)winners.get(vote.getHashString());
+        if(counter == null) {
+          counter = new NameVoteCounter(vote);
+          winners.put(vote.getHashString(),counter);
+        }
+        else {
+          counter.addVote();
+        }
+      }
+    }
+
+    // find the "difinitive" list
+    Iterator it = winners.values().iterator();
+    NameVoteCounter winningCounter = null;
+    while(it.hasNext()) {
+      NameVoteCounter counter = (NameVoteCounter)it.next();
+      if(winningCounter != null) {
+        if(winningCounter.getNumVotes() < counter.getNumVotes()) {
+          winningCounter = counter;
+        }
+      }
+      else {
+        winningCounter = counter;
+      }
+    }
+
+    // the "difinitive list is in winningCounter
+
+    if(winningCounter != null) {
+      m_tally.votedEntries = winningCounter.getKnownEntries();
+      String remainingRE = winningCounter.getRERemainingEntries();
+      if(remainingRE != null) {
+        // we call a new poll on the remaining entries and set the regexp
+        try {
+          m_pollmanager.makePollRequest(m_url,
+                                        remainingRE,
+                                        LcapMessage.NAME_POLL_REQ,
+                                        m_msg.getDuration());
+        }
+        catch (IOException ex) {
+          log.error("Unable to create new poll request", ex);
+        }
+        // we make our list from whatever is in our
+        // master list that doesn't match the re remaining;
+        HashSet localSet = new HashSet();
+        Iterator localIt = m_urlSet.flatSetIterator();
+        try {
+          RE re = new RE(remainingRE);
+          while(localIt.hasNext()) {
+            CachedUrlSet cus = (CachedUrlSet)localIt.next();
+            String url = (String)cus.getSpec().getPrefixList().get(0);
+            // if doesn't match our regexp add it to the list
+            if(null == re.getMatch(url)) {
+              localSet.add(url);
+            }
+          }
+          m_tally.localEntries = (String[])localSet.toArray();
+        }
+        catch (REException ex) {
+          log.error("invalid reg expression: " + remainingRE);
+        }
+      }
+    }
+  }
+
   class NameVote extends Vote {
     private String[] knownEntries;
     private String   RERemainingEntries;
@@ -135,6 +218,43 @@ public class NamePoll extends Poll {
       knownEntries = msg.getEntries();
       RERemainingEntries = msg.getRERemaining();
     }
+
+    String[] getKnownEntries() {
+      return knownEntries;
+    }
+
+    String getRERemainingEntries() {
+      return RERemainingEntries;
+    }
+  }
+
+  static class NameVoteCounter {
+    private String[] knownEntries;
+    private String   RERemainingEntries;
+    private int voteCount;
+
+    NameVoteCounter(NameVote vote) {
+      knownEntries = vote.getKnownEntries();
+      RERemainingEntries = vote.getRERemainingEntries();
+      voteCount = 1;
+    }
+
+    void addVote() {
+      voteCount++;
+    }
+
+    int getNumVotes() {
+      return voteCount++;
+    }
+
+    public String[] getKnownEntries() {
+      return knownEntries;
+    }
+
+    public String getRERemainingEntries() {
+      return RERemainingEntries;
+    }
+
   }
 
 }

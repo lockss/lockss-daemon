@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.7 2003-01-16 01:44:45 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.8 2003-01-21 22:56:22 claire Exp $
  */
 
 /*
@@ -356,8 +356,8 @@ public class NodeManagerImpl implements NodeManager {
     } else {
       // if disagree
       pollState.status = PollState.REPAIRING;
-      Iterator masterIt = results.getEntries();
-      Iterator localIt = nodeState.getCachedUrlSet().flatSetIterator();
+      Iterator masterIt = results.getCorrectEntries();
+      Iterator localIt = results.getLocalEntries();
       Set localSet = createUrlSetFromCusIterator(localIt);
       ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
       // iterate through master list
@@ -483,8 +483,8 @@ public class NodeManagerImpl implements NodeManager {
   private Set createUrlSetFromCusIterator(Iterator cusIt) {
     Set set = new HashSet();
     while (cusIt.hasNext()) {
-      CachedUrlSet cus = (CachedUrlSet)cusIt.next();
-      set.add(getCusKey(cus));
+      String key = (String) cusIt.next();
+      set.add(key);
     }
     return set;
   }
