@@ -1,16 +1,12 @@
 #!/usr/bin/python
-import sys, time, unittest, os
-from os import path
-from lockss_util import *
-
-##########################################################################
-# Module documentation
-##########################################################################
 """
 This test suite requires at minimum a top-level work directory to
 build frameworks in.  Optional parameters may also be set, if desired,
 to change the default behavior.  See the file for details.
 """
+import sys, time, unittest, os
+from lockss_util import *
+
 ##
 ## Load configuration.
 ##
@@ -29,6 +25,7 @@ deleteAfterSuccess = config.getBoolean('deleteAfterSuccess', True)
 ## Super class for all LOCKSS daemon test cases.
 ##
 class LockssTestCase(unittest.TestCase):
+    """ Superclass for all STF test cases. """
     def __init__(self):
         unittest.TestCase.__init__(self)
 
@@ -39,7 +36,7 @@ class LockssTestCase(unittest.TestCase):
         ## assert that the workDir exists and is writable.
         ##
         self.workDir = config.get('workDir', './')
-        if not (path.isdir(self.workDir) and \
+        if not (os.path.isdir(self.workDir) and \
                 os.access(self.workDir, os.W_OK)):
             raise LockssError("Work dir %s does not exist or is not writable." \
                               % self.workDir)
@@ -47,7 +44,7 @@ class LockssTestCase(unittest.TestCase):
     def setUp(self):
         ## Log start of test.
         log.info("====================================================================")
-        log.info(self.runTest.__doc__)
+        log.info(self.__doc__)
         log.info("--------------------------------------------------------------------")
         
         ##
@@ -108,25 +105,25 @@ class LockssTestCase(unittest.TestCase):
 ##
 
 class SucceedingTestTestCase(LockssTestCase):
+    " Test case that succeeds immediately after daemons start. "
     def runTest(self):
-        " Test case that succeeds immediately after daemons start. "
         log.info("Succeeding immediately.")
         return
 
 class FailingTestTestCase(LockssTestCase):
+    " Test case that fails immediately after daemons start. "    
     def runTest(self):
-        " Test case that fails immediately after daemons start. "
         log.info("Failing immediately.")
         self.fail("Failed on purpose.")
 
 class ImmediateSucceedingTestTestCase(unittest.TestCase):
+    " Test case that succeeds immediately, without starting the daemons. "
     def runTest(self):
-        " Test case that succeeds immediately, without starting the daemons. "
 	return
 
 class ImmediateFailingTestTestCase(unittest.TestCase):
+    " Test case that fails immediately, without starting the daemons. "
     def runTest(self):
-        " Test case that fails immediately, without starting the daemons. "
         log.info("Failing immediately.")
         self.fail("Failed on purpose.")
 
@@ -139,9 +136,9 @@ class ImmediateFailingTestTestCase(unittest.TestCase):
 ## Ensure caches can recover from simple file damage.
 ##
 class SimpleDamageTestCase(LockssTestCase):
+    "Test recovery from random file damage."
+    
     def runTest(self):
-        "Test recovery from random file damage."
-
         # Tiny AU for simple testing.
         simAu = SimulatedAu('localA', 0, 0, 3)
 
@@ -216,8 +213,9 @@ class SimpleDamageTestCase(LockssTestCase):
 ## (not resulting in a ranged name poll)
 ##
 class SimpleDeleteTestCase(LockssTestCase):
+    "Test recovery from a random file deletion."
+    
     def runTest(self):
-        "Test recovery from a random file deletion."
         # Tiny AU for simple testing.
         simAu = SimulatedAu('localA', 0, 0, 3)
 
@@ -279,8 +277,9 @@ class SimpleDeleteTestCase(LockssTestCase):
 ## (not resulting in a ranged name poll)
 ##
 class SimpleExtraFileTestCase(LockssTestCase):
+    "Test recovery from an extra node in our cache"
+
     def runTest(self):
-        "Test recovery from an extra node in our cache"
         # Tiny AU for simple testing.
         simAu = SimulatedAu('localA', 0, 0, 3)
 
@@ -347,8 +346,9 @@ class SimpleExtraFileTestCase(LockssTestCase):
 ## in a ranged name poll being called.
 ##
 class RangedNamePollDeleteTestCase(LockssTestCase):
+    "Test recovery from a file deletion after a ranged name poll"
+
     def runTest(self):
-        "Test recovery from a file deletion after a ranged name poll"
         # Long names, shallow depth, wide range for testing ranged polls
         simAu = SimulatedAu('localA', depth=0, branch=0,
                             numFiles=45, maxFileName=26)
@@ -449,9 +449,9 @@ class RangedNamePollDeleteTestCase(LockssTestCase):
 ## added to an AU large enough to trigger a ranged name poll.
 ##
 class RangedNamePollExtraFileTestCase(LockssTestCase):
-    def runTest(self):
-        "Test recovery from an extra file that triggers a ranged name poll"
+    "Test recovery from an extra file that triggers a ranged name poll"
 
+    def runTest(self):
         # Long names, shallow depth, wide range for testing ranged polls
         simAu = SimulatedAu('localA', depth=0, branch=0,
                             numFiles=45, maxFileName=26)
@@ -554,9 +554,9 @@ class RangedNamePollExtraFileTestCase(LockssTestCase):
 ##
 
 class RandomizedDamageTestCase(LockssTestCase):
-    def runTest(self):
-        "Test recovery from random file damage in a randomly sized AU."
+    "Test recovery from random file damage in a randomly sized AU."
 
+    def runTest(self):
 	random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
@@ -645,9 +645,9 @@ class RandomizedDamageTestCase(LockssTestCase):
 ##
 
 class RandomizedDeleteTestCase(LockssTestCase):
-    def runTest(self):
-        "Test recovery from random file deletion in a randomly sized AU."
+    "Test recovery from random file deletion in a randomly sized AU."
 
+    def runTest(self):
 	random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
@@ -721,13 +721,13 @@ class RandomizedDeleteTestCase(LockssTestCase):
 ## all damaged nodes to be repaired.
 ##
 class RandomizedExtraFileTestCase(LockssTestCase):
-    def runTest(self):
-        """ Test recovery from random node creation in a randomly sized AU. """
-        
+    """ Test recovery from random node creation in a randomly sized AU. """
+
+    def runTest(self):    
 	random.seed(time.time())
         depth = random.randint(0, 2)
         branch = random.randint(0, 2)
-        numFiles = random.randint(1, 2)
+        numFiles = random.randint(3, 20)
         maxFileName = 26
         log.info("Creating simulated AUs: depth = %s; branch = %s; "
             "numFiles = %s; maxFileName = %s" %

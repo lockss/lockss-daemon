@@ -94,7 +94,6 @@ class Framework:
         if self.isRunning:
             raise LockssError("Test framework is already started.")
 
-        cp = self.__makeClasspath()
         for daemon in self.daemonList:
             daemon.start()
 
@@ -129,7 +128,7 @@ class Framework:
     def __grepDeadlock(self, f):
         """ Very naive implementation. """
         return (open(f, 'r').read()).find('FOUND A JAVA LEVEL DEADLOCK') > -1
-    
+
     def __makeClasspath(self):
         cp = []
         testCpFile = path.join(self.projectDir, 'test', 'test-classpath')
@@ -211,10 +210,10 @@ class Framework:
         f.close()
         self.configCount += 1 # no ++ in python, oops.
 
-    def __writeExtraConfig(self, file, config):
+    def __writeExtraConfig(self, file, conf):
         """ Write out any LOCKSS daemon properties. """
         f = open(file, 'w')
-        for (key, val) in config.daemonItems():
+        for (key, val) in conf.daemonItems():
             f.write('%s=%s\n' % (key, val))
         f.close()
 
@@ -332,7 +331,6 @@ class Client:
 
     def isActiveAu(self, au):
         """ Return true iff the au is activated."""
-        auid = au.auId
         tab = self.__getStatusTable('RepositoryTable')
         for row in tab:
             status = row["status"]
@@ -902,8 +900,7 @@ class Client:
     def damageNode(self, node):
         """ Damage a specific node. """
         # Only want to damage the file contents
-        file = node.file
-        fullPath = path.join(file, '#content', 'current')
+        fullPath = path.join(node.file, '#content', 'current')
         if path.isfile(fullPath):
             f = open(fullPath, 'a')
             f.write('*** DAMAGE ***')
@@ -980,15 +977,6 @@ class Client:
             returnList.append(newNode)
             ix += 1
         return returnList
-            
-
-    def getAuFile(self, au, filespec):
-        """ Construct a node from an au and a relative file spec.
-        This method will not check to see if the file exists, it will
-        simply construct a Node object and return it. """
-        root = self.getAuRoot(au)
-
-        f = path.join(root, filespec)
 
 
     def getAuNode(self, au, url, checkForContent=False):
@@ -996,19 +984,19 @@ class Client:
         root = self.getAuRoot(au)
         ### Kludge for getting "lockssau" node.
         if url == 'lockssau':
-            file = root
+            f = root
         else:
-            file = path.join(root, url[(len(au.baseUrl) + 1):])
+            f = path.join(root, url[(len(au.baseUrl) + 1):])
 
-        node = Node(url, file)
+        node = Node(url, f)
 
         if checkForContent:
-            if path.isfile(path.join(file, '#content', 'current')):
+            if path.isfile(path.join(f, '#content', 'current')):
                 return node
             else:
                 raise LockssError("Node has no content: %s" % node.url)
         else:
-            if path.isdir(file) or path.isfile(file):
+            if path.isdir(f) or path.isfile(f):
                 return node
             else:
                 raise LockssError("Node does not exist: %s" % node.url)
@@ -1038,7 +1026,7 @@ class Client:
 
         data = []
         for row in rowList:
-            dict = {}
+            rowDict = {}
             for cell in row.getElementsByTagName('st:cell'):
                 try:
                     colName = cell.getElementsByTagName('st:columnname')[0].firstChild.data
@@ -1051,15 +1039,15 @@ class Client:
                         name = ref.getElementsByTagName('st:name')[0].firstChild.data
                         key = ref.getElementsByTagName('st:key')[0].firstChild.data
                         value = ref.getElementsByTagName('st:value')[0].firstChild.data
-                        dict[colName] = {'name': name,
+                        rowDict[colName] = {'name': name,
                                          'key': key,
                                          'value': value}
                     else:
-                        dict[colName] = colVal.firstChild.data
+                        rowDict[colName] = colVal.firstChild.data
                 except IndexError:
                     # Unlikely to happen, but just in case...
                     continue
-            data.append(dict)
+            data.append(rowDict)
         return data
 
     def __makePost(self, page, lockssAction=None):
@@ -1205,6 +1193,8 @@ class Node:
         return "%s" % self.url
 
 class LockssDaemon:
+    """ Wrapper around a daemon instance.  Controls starting and stopping
+    a LOCKSS Java daemon. """
     def __init__(self, dir, cp, configList):
         self.dir = dir
         self.cp = cp

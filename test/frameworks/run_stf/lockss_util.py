@@ -5,8 +5,7 @@ Utility functions and classes used by testsuite and
 lockss_daemon.
 """
 
-## Log level enum
-LOG_ERROR, LOG_WARN, LOG_INFO, LOG_DEBUG, LOG_DEBUG2 = range(5)  # Logger flags
+loglevel = {"error": 0, "warn": 1, "info": 2, "debug": 3, "debug2": 4}
 
 def loadConfig(f):
     """ Load a Config object from a file. """
@@ -122,47 +121,42 @@ class LockssError(Exception):
 
 class Logger:
     " Simple stdout logger. "
-    levelMap = {"error": LOG_ERROR,
-                "warn": LOG_WARN,
-                "info": LOG_INFO,
-                "debug": LOG_DEBUG,
-                "debug2": LOG_DEBUG2}
     
     def __init__(self):
         self.logLevel = self.__getLogLevel(config)
 
-    def __getLogLevel(self, config):
-        level = config.get("scriptLogLevel", "info")
+    def __getLogLevel(self, conf):
+        level = conf.get("scriptLogLevel", "info")
 
         try:
-            return self.levelMap[level.lower()]
+            return loglevel[level.lower()]
         except:
-            return LOG_INFO
+            return loglevel["info"]
 
     def error(self, msg):
-        if (self.logLevel >= LOG_ERROR):
+        if (self.logLevel >= loglevel["error"]):
             self.__writeLog("ERROR: %s" % msg)
 
     def warn(self, msg):
-        if (self.logLevel >= LOG_WARN):
+        if (self.logLevel >= loglevel["warn"]):
             self.__writeLog("WARNING: %s" % msg)
 
     def info(self, msg):
-        if (self.logLevel >= LOG_INFO):
+        if (self.logLevel >= loglevel["info"]):
             self.__writeLog("INFO: %s" % msg)
 
     def debug(self, msg):
-        if (self.logLevel >= LOG_DEBUG):
+        if (self.logLevel >= loglevel["debug"]):
             self.__writeLog("DEBUG: %s" % msg)
 
     def debug2(self, msg):
-        if (self.logLevel >= LOG_DEBUG2):
+        if (self.logLevel >= loglevel["debug2"]):
             self.__writeLog("DEBUG2: %s" % msg)
 
     def __writeLog(self, msg):
         now = time.time()
         t = time.strftime("%H:%M:%S", time.localtime(time.time()))
-        msec = int((now%1.0) * 1000)
+        msec = int((now % 1.0) * 1000)
         mmm = "%03d" % msec
         timestamp = t + '.' + mmm
 
