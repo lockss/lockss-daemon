@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.11 2004-03-03 00:38:43 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.12 2004-03-04 23:25:32 troberts Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class RepairCrawler extends CrawlerImpl {
     }
     this.repairUrls = repairUrls;
     this.percentFetchFromCache = percentFetchFromCache;
-    //XXX hack, since crawlStatus will get set twice
+
     crawlStatus = new Crawler.Status(au, repairUrls, getType());
   }
 
