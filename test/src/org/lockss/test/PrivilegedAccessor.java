@@ -1,5 +1,5 @@
 /*
- * $Id: PrivilegedAccessor.java,v 1.10 2004-09-01 02:25:19 tlipkis Exp $
+ * $Id: PrivilegedAccessor.java,v 1.11 2004-09-01 17:55:59 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,8 @@ import org.lockss.util.*;
  * <code>PrivilegedAccessor.Instance</code> that contains both the
  * expression type and value.  */
 public class PrivilegedAccessor {
-//    static Logger log = Logger.getLogger("PrivAcc", Logger.LEVEL_DEBUG);
+//   static Logger log =
+//     Logger.getLoggerWithInitialLevel("PrivAcc", Logger.LEVEL_DEBUG);
   
   // no instances
   private PrivilegedAccessor() {
