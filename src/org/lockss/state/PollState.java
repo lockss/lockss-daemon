@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.19 2003-04-16 03:39:23 claire Exp $
+ * $Id: PollState.java,v 1.20 2003-04-29 21:52:08 aalto Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class PollState implements Comparable {
   public static final int ERR_HASHING = 512;
   public static final int ERR_IO = 1024;
   public static final int ERR_UNDEFINED = 2048;
+  public static final int UNFINISHED = 4096;
 
   int type;
   String lwrBound;
@@ -175,6 +176,8 @@ public class PollState implements Comparable {
         return "Error I/0";
       case ERR_UNDEFINED:
         return "Undefined error";
+      case UNFINISHED:
+        return "Unfinished";
       default:
         return "Undefined";
     }

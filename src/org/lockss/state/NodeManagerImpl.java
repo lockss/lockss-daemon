@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.112 2003-04-29 01:34:53 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.113 2003-04-29 21:52:08 aalto Exp $
  */
 
 /*
@@ -249,8 +249,10 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         if (!pollManager.isPollRunning(poll.getType(), pollSpec)) {
           // transfer dead poll to history and let treewalk handle it
           PollHistory history =
-              new PollHistory(poll, TimeBase.msSince(poll.getStartTime()),
-                              new ArrayList());
+              new PollHistory(poll.type, poll.lwrBound, poll.uprBound,
+                              PollState.UNFINISHED, poll.startTime,
+                              TimeBase.msSince(poll.getStartTime()),
+                              new ArrayList(), poll.ourPoll);
           pollsToRemove.add(history);
         }
       }
@@ -478,6 +480,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       case PollState.REPAIRING:
       case PollState.SCHEDULED:
       case PollState.RUNNING:
+      case PollState.UNFINISHED:
         // if this poll should be running make sure it is running.
         if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
           if(shouldRecallLastPoll) {
