@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.2 2004-09-27 22:39:01 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.3 2004-10-12 22:02:18 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,6 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    ConfigManager.resetForTesting();
     super.tearDown();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.2 2004-10-01 17:50:08 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.3 2004-10-12 22:02:19 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.hasher.*;
 import org.lockss.mail.*;
+import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.*;
 import org.lockss.repository.*;
@@ -496,10 +497,13 @@ public class ConfigManager implements LockssManager {
 			 Configuration oldConfig,
 			 Configuration.Differences diffs) {
     Set diffSet = diffs.getDifferenceSet();
+    int numDiffs = diffSet.size();
     SortedSet keys = new TreeSet(diffSet != null ? diffSet : config.keySet());
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
-      if (log.isDebug2() || !key.startsWith(PARAM_TITLE_DB)) {
+      if (numDiffs <= 40 || log.isDebug2() ||
+	  (!key.startsWith(PARAM_TITLE_DB) &&
+	   !key.startsWith(PluginManager.PARAM_AU_TREE))) {
 	if (config.containsKey(key)) {
 	  log.debug(key + " = " + (String)config.get(key));
 	} else if (oldConfig.containsKey(key)) {
@@ -535,13 +539,8 @@ public class ConfigManager implements LockssManager {
     configChangedCallbacks.remove(c);
   }
 
-  static void resetForTesting() {
-    cacheConfigInited = false;
-    cacheConfigDir = null;
-  }
-
-  static boolean cacheConfigInited = false;
-  static String cacheConfigDir = null;
+  boolean cacheConfigInited = false;
+  File cacheConfigDir = null;
 
   boolean isUnitTesting() {
     return Boolean.getBoolean("org.lockss.unitTesting");
@@ -578,7 +577,7 @@ public class ConfigManager implements LockssManager {
       String path = (String)iter.next();
       File configDir = new File(path, relConfigPath);
       if (configDir.exists()) {
-	cacheConfigDir = configDir.toString();
+	cacheConfigDir = configDir;
 	break;
       }
     }
@@ -587,7 +586,7 @@ public class ConfigManager implements LockssManager {
 	String path = (String)v.get(0);
 	File dir = new File(path, relConfigPath);
 	if (dir.mkdirs()) {
-	  cacheConfigDir = dir.toString();
+	  cacheConfigDir = dir;
 	}
       }
     }
@@ -596,7 +595,7 @@ public class ConfigManager implements LockssManager {
 
   /** Return a File for the named cache config file */
   public File getCacheConfigFile(String cacheConfigFileName) {
-    return new File(ConfigManager.cacheConfigDir, cacheConfigFileName);
+    return new File(cacheConfigDir, cacheConfigFileName);
   }
 
   List loadCacheConfigInto(Configuration config) {
@@ -686,14 +685,20 @@ public class ConfigManager implements LockssManager {
       throw new RuntimeException("No cache config dir");
     }
     File cfile = new File(cacheConfigDir, cacheConfigFileName);
-    OutputStream os = new FileOutputStream(cfile);
+    // Write to a temp file and rename
+    File tempfile = File.createTempFile("tmp_config", ".tmp", cacheConfigDir);
+    OutputStream os = new FileOutputStream(tempfile);
 
     // make a copy and add the config file version number, write the copy
     Configuration tmpConfig = config.copy();
     tmpConfig.put(configVersionProp(cacheConfigFileName), "1");
     tmpConfig.store(os, header);
     os.close();
-    log.debug2("Wrote cache config file: " + cfile.toString());
+    if (!tempfile.renameTo(cfile)) {
+      throw new RuntimeException("Couldn't rename temp file: " +
+				 tempfile + " to: " + cfile);
+    }
+    log.debug2("Wrote cache config file: " + cfile);
     if (handlerThread != null) {
       handlerThread.forceReload();
     }
