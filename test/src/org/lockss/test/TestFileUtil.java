@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.5 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestFileUtil.java,v 1.6 2003-07-19 00:05:28 troberts Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import java.io.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
+import org.lockss.util.*;
 
 
 /**
@@ -114,5 +115,85 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(FileUtil.delTree(dir));
     assertFalse(dir.exists());
   }
+
+  public void testEnumerateFilesNullFile() {
+    try {
+      FileUtil.enumerateFiles(null);
+      fail("FileUtil.enumerateFiles() should have thrown when a null file "
+	   +"was specified");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testEnumerateFilesOneFile() {
+    File file = new MockFile("blah");
+    assertEquals(ListUtil.list(file), FileUtil.enumerateFiles(file));
+  }
+
+  public void testEnumerateFilesDirectory() {
+    MockFile file = new MockFile("Path_to_directory");
+    MockFile child1 = new MockFile("child1");
+    MockFile child2 = new MockFile("child2");
+
+    file.setIsDirectory(true);
+    file.setChild(child1);
+    file.setChild(child2);
+
+    assertEquals(ListUtil.list(child1, child2), FileUtil.enumerateFiles(file));
+  }
+
+  public void testEnumerateFilesMultiLevelDirectory() {
+    MockFile file = new MockFile("Path_to_directory");
+    MockFile child1 = new MockFile("child1");
+    MockFile child2 = new MockFile("child2");
+    MockFile childDir1 = new MockFile("childDir1");
+    MockFile child11 = new MockFile("child11");
+    
+
+    file.setIsDirectory(true);
+    file.setChild(child1);
+    file.setChild(child2);
+    file.setChild(childDir1);
+
+    childDir1.setIsDirectory(true);
+    childDir1.setChild(child11);
+
+    assertEquals(ListUtil.list(child1, child2, child11),
+		 FileUtil.enumerateFiles(file));
+  }
+
+  public void testGetPathUnderRootNullParams() {
+    try {
+      FileUtil.getPathUnderRoot(null, null);
+      fail("FileUtil.getPathUnderRoot() should have thrown when a null file "
+	   +"was specified");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      FileUtil.getPathUnderRoot(new File("blah"), null);
+      fail("FileUtil.getPathUnderRoot() should have thrown when a null file "
+	   +"was specified");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      FileUtil.getPathUnderRoot(null, new File("blah"));
+      fail("FileUtil.getPathUnderRoot() should have thrown when a null file "
+	   +"was specified");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testGetPathUnderRootTrailingSlash() {
+    File src = new MockFile("/tmp/dir/test/file/path");
+    File root = new MockFile("/tmp/dir/");
+    assertEquals("test/file/path", FileUtil.getPathUnderRoot(src, root));
+  }
+  
+  public void testGetPathUnderRootNoCommonPath() {
+    File src = new File("/tmp/dir/test/file/path");
+    File root = new File("/other/directory");
+    assertNull(FileUtil.getPathUnderRoot(src, root));
+  }
 }
+
 
