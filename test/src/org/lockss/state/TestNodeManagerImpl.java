@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.85 2003-06-11 00:01:31 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.86 2003-06-12 01:07:19 aalto Exp $
  */
 
 /*
@@ -790,61 +790,86 @@ public class TestNodeManagerImpl extends LockssTestCase {
         getCUS(mau, TEST_URL));
 
     // no action for following:
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false, false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false, false, true);
     nodeState.setState(NodeState.OK);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
     nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
+
+    // change to 'needs poll' version
     nodeState.setState(NodeState.UNREPAIRABLE_NAMES);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
+    assertEquals(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL, nodeState.getState());
     nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  false, true);
+    assertEquals(NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL, nodeState.getState());
 
-    // content polls
+    // schedule content polls
     nodeState.setState(NodeState.NEEDS_POLL);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  false, true);
+    //- change to 'NEEDS_POLL'
     nodeState.setState(NodeState.CONTENT_RUNNING);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true, true);
+    assertEquals(NodeState.NEEDS_POLL, nodeState.getState());
     nodeState.setState(NodeState.CONTENT_REPLAYING);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true);
-    nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true);
-    nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true);
-    nodeState.setState(NodeState.POSSIBLE_DAMAGE_HERE);
-    stateCheckTest(nodeState, Poll.NAME_POLL, false, true, false,  false);
-    nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true, true);
+    assertEquals(NodeState.NEEDS_POLL, nodeState.getState());
 
-    // name polls
+    //- change to 'POSSIBLE_DAMAGE_HERE'
+    nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true, true);
+    assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
+    nodeState.setState(NodeState.SNCUSS_POLL_REPLAYING);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true, true);
+    assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
+
+    nodeState.setState(NodeState.POSSIBLE_DAMAGE_HERE);
+    stateCheckTest(nodeState, Poll.NAME_POLL, false, true, false,  false, true);
+    nodeState.setState(NodeState.UNREPAIRABLE_SNCUSS_NEEDS_POLL);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, true, false,  true, true);
+
+
+    // schedule name polls
     nodeState.setState(NodeState.CONTENT_LOST);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, true, false, false,  false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, true, false, false,  false, true);
     nodeState.setState(NodeState.UNREPAIRABLE_NAMES_NEEDS_POLL);
-    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true);
+    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true, true);
+
+    //- change to 'CONTENT_LOST'
     nodeState.setState(NodeState.NAME_RUNNING);
-    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true);
+    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true, true);
+    assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
     nodeState.setState(NodeState.NAME_REPLAYING);
-    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true);
+    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true, true);
+    assertEquals(NodeState.CONTENT_LOST, nodeState.getState());
+
+    // running poll (not mine)
+    // should do nothing and change to 'INITIAL'
+    nodeState.setState(NodeState.CONTENT_RUNNING);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, false,  true, false);
+    assertEquals(NodeState.INITIAL, nodeState.getState());
 
     // mark for repair
     nodeState.setState(NodeState.NEEDS_REPAIR);
-    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, true, false);
+    stateCheckTest(nodeState, Poll.CONTENT_POLL, false, false, true, false, true);
 
     // act on list of names
     String deleteUrl = TEST_URL + "/testentry2.html";
     RepositoryNode delNode = TestRepositoryNodeImpl.createLeaf(
         theDaemon.getLockssRepository(mau), deleteUrl, "test stream", null);
     nodeState.setState(NodeState.WRONG_NAMES);
-    stateCheckTest(nodeState, Poll.NAME_POLL, false, false, true,  false);
+    stateCheckTest(nodeState, Poll.NAME_POLL, false, false, true,  false, true);
     assertTrue(delNode.isDeleted());
 
     // history only, so recall name poll
     nodeState.setState(NodeState.WRONG_NAMES);
-    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true);
+    stateCheckTest(nodeState, Poll.NAME_POLL, true, false, false,  true, true);
 
     // subdivide and recurse, plus SNCUSS
+    // change to 'POSSIBLE_DAMAGE_HERE'
     nodeState.setState(NodeState.DAMAGE_AT_OR_BELOW);
-    stateCheckTest(nodeState, Poll.NAME_POLL, false, true, false,  false);
+    stateCheckTest(nodeState, Poll.NAME_POLL, false, true, false,  false, true);
+    assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
 
     TimeBase.setReal();
   }
@@ -852,17 +877,18 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private void stateCheckTest(NodeState node, int pollType,
                               boolean shouldScheduleName,
                               boolean shouldScheduleContent,
-                              boolean shouldRepair, boolean isHistory)
+                              boolean shouldRepair, boolean isHistory,
+                              boolean isOurPoll)
       throws Exception {
     PollState pollState = null;
     PollTally results = null;
     if (isHistory) {
       pollState = new PollHistory(pollType, null, null,
                              PollState.RUNNING, 123,
-                             123, null, true);
+                             123, null, isOurPoll);
     } else {
       Poll poll = createPoll(TEST_URL, (pollType==Poll.CONTENT_POLL),
-                             true, 15, 5);
+                             isOurPoll, 15, 5);
       results = poll.getVoteTally();
       pollManager.thePolls.remove(TEST_URL);
 
@@ -872,7 +898,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                 PollState.RUNNING,
                                 results.getStartTime(),
                                 Deadline.MAX,
-                                true);
+                                isOurPoll);
     }
 
     if (shouldScheduleName || shouldScheduleContent || shouldRepair) {

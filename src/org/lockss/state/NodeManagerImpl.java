@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.134 2003-06-11 00:01:31 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.135 2003-06-12 01:07:19 aalto Exp $
  */
 
 /*
@@ -875,6 +875,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             }
           } else {
             logger.debug2("Unfinished poll not mine, so not recalling.");
+            nodeState.setState(NodeState.INITIAL);
           }
         }
         return false;
