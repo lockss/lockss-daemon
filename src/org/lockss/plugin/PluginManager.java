@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.27 2003-04-04 08:40:01 tal Exp $
+ * $Id: PluginManager.java,v 1.28 2003-04-05 00:56:55 tal Exp $
  */
 
 /*
@@ -202,7 +202,7 @@ public class PluginManager extends BaseLockssManager {
     try {
       log.debug("Instantiating " + pluginClass);
       Plugin plugin = (Plugin)pluginClass.newInstance();
-      plugin.initPlugin();
+      plugin.initPlugin(theDaemon);
       setPlugin(pluginId, plugin);
       return true;
     } catch (Exception e) {

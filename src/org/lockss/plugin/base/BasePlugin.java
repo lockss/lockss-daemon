@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.4 2003-03-12 02:43:30 aalto Exp $
+ * $Id: BasePlugin.java,v 1.5 2003-04-05 00:56:54 tal Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.base;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -44,6 +45,7 @@ import org.lockss.plugin.*;
 public abstract class BasePlugin implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
   protected Map auMap = new HashMap();
+  protected LockssDaemon theDaemon;
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -51,10 +53,8 @@ public abstract class BasePlugin implements Plugin {
   protected BasePlugin() {
   }
 
-  // These are here so overriding methods in subclasses can call super(),
-  // in case some common functionality is needed in the future.
-
-  public void initPlugin() {
+  public void initPlugin(LockssDaemon daemon) {
+    theDaemon = daemon;
   }
 
   public void stopPlugin() {
@@ -94,6 +94,14 @@ public abstract class BasePlugin implements Plugin {
   String encodeAUId(String id) {
     return StringUtil.replaceString(StringUtil.replaceString(id, ".", "|"),
                                     ":", "|");
+  }
+
+  /**
+   * Return the LockssDaemon instance
+   * @return the LockssDaemon instance
+   */
+  public LockssDaemon getDaemon() {
+    return theDaemon;
   }
 
 }

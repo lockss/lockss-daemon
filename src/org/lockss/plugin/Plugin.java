@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.8 2003-03-18 02:27:41 aalto Exp $
+ * $Id: Plugin.java,v 1.9 2003-04-05 00:56:55 tal Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.app.*;
 
 /**
  * Interface required by a plugin to be used by the lockss daemon.  All
@@ -46,8 +47,9 @@ public interface Plugin {
   /**
    * Called after plugin is loaded to give the plugin time to perform any
    * needed initializations
+   * @param daemon the LockssDaemon instance
    */
-  public void initPlugin();
+  public void initPlugin(LockssDaemon daemon);
 
   /**
    * Called when the application is stopping to allow the plugin to perform
@@ -130,4 +132,10 @@ public interface Plugin {
    * @return a {@link Collection} of AUs
    */
   public Collection getAllAUs() ;
+
+  /**
+   * Return the LockssDaemon instance
+   * @return the LockssDaemon instance
+   */
+  public LockssDaemon getDaemon() ;
 }

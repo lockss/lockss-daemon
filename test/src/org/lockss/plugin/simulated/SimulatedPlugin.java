@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.6 2003-04-02 23:49:14 aalto Exp $
+ * $Id: SimulatedPlugin.java,v 1.7 2003-04-05 00:56:54 tal Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.simulated;
 
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -110,7 +111,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * Called after plugin is loaded to give the plugin time to perform any
    * needed initializations
    */
-  public void initPlugin() {
+  public void initPlugin(LockssDaemon daemon) {
     initCtr++;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.3 2003-04-04 08:40:01 tal Exp $
+ * $Id: MockPlugin.java,v 1.4 2003-04-05 00:56:54 tal Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -61,7 +62,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
    * Called after plugin is loaded to give the plugin time to perform any
    * needed initializations
    */
-  public void initPlugin() {
+  public void initPlugin(LockssDaemon daemon) {
     initCtr++;
   }
 

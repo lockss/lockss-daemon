@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.18 2003-03-01 01:19:16 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.19 2003-04-05 00:56:54 tal Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.util.*;
 import gnu.regexp.*;
 import org.lockss.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -55,8 +56,8 @@ public class HighWirePlugin extends BasePlugin {
   public static final String BASE_URL_PROP = "base_url";
   public static final String VOL_PROP = "volume";
 
-  public void initPlugin() {
-    super.initPlugin();
+  public void initPlugin(LockssDaemon daemon) {
+    super.initPlugin(daemon);
     archivalUnits = new HashMap();
   }
 
