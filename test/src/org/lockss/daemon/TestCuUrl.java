@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.4 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestCuUrl.java,v 1.5 2003-09-19 22:41:18 eaalto Exp $
  */
 
 /*
@@ -34,12 +34,11 @@ package org.lockss.daemon;
 
 import java.io.*;
 import java.net.*;
-import junit.framework.TestCase;
+import java.util.Properties;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.proxy.*;
-
+import org.lockss.repository.LockssRepositoryImpl;
 
 /**
  * Test class for org.lockss.daemon.CuUrl
@@ -54,6 +53,11 @@ public class TestCuUrl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
     theDaemon = new MockLockssDaemon();
 
     // make and init a real Pluginmgr
@@ -67,9 +71,12 @@ public class TestCuUrl extends LockssTestCase {
 
     // create an AU with some static content
     StaticContentPlugin spl = new StaticContentPlugin();
+    spl.initPlugin(theDaemon);
     au = (StaticContentPlugin.SAU)spl.createAU(null);
     PluginUtil.registerArchivalUnit(spl, au);
     fillAU(au);
+
+    theDaemon.getLockssRepository(au);
   }
 
   public void tearDown() throws Exception {
@@ -94,7 +101,11 @@ public class TestCuUrl extends LockssTestCase {
     "<html><h3>this is two html</h3></html>",
   };
 
-  /** Create and store some content in the au */
+  /**
+   * Create and store some content in the au
+   * @param au the static AU
+   * @return an ArchivalUnit
+   */
   public static ArchivalUnit fillAU(StaticContentPlugin.SAU au) {
     for (int i = 0; i < testUrls.length; i++) {
       au.storeCachedUrl(testUrls[i], testTypes[i], testContents[i]);
