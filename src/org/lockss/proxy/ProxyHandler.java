@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.5 2002-10-16 04:50:54 tal Exp $
+ * $Id: ProxyHandler.java,v 1.6 2003-01-31 09:47:19 claire Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class ProxyHandler extends NullHandler {
     System.err.println("URI="+uri);
 
     String urlString = uri.toString();
-    ArchivalUnit au = Plugin.findArchivalUnit(urlString);
+    ArchivalUnit au = PluginManager.findArchivalUnit(urlString);
     if (au != null) {
       CachedUrlSet cus = au.getAUCachedUrlSet();
       if (cus != null) {

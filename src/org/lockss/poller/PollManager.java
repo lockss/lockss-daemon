@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.21 2003-01-30 03:19:05 claire Exp $
+* $Id: PollManager.java,v 1.22 2003-01-31 09:47:19 claire Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class PollManager {
         theIdMgr.getLocalIdentity());
 
     theLog.debug("send: " +  msg.toString());
-    sendMessage(msg, Plugin.findArchivalUnit(url));
+    sendMessage(msg, PluginManager.findArchivalUnit(url));
   }
 
 
@@ -198,7 +198,7 @@ public class PollManager {
 
     // check for presence of item in the cache
     try {
-      au = Plugin.findArchivalUnit(msg.getTargetUrl());
+      au = PluginManager.findArchivalUnit(msg.getTargetUrl());
       cus = au.makeCachedUrlSet(msg.getTargetUrl(), msg.getRegExp());
     }
     catch (Exception ex) {
@@ -448,7 +448,7 @@ public class PollManager {
 
     LcapIdentity originator = vote.getIdentity();
     theLog.debug("sending our verification request to " + originator.toString());
-    sendMessageTo(reqmsg, Plugin.findArchivalUnit(url), originator);
+    sendMessageTo(reqmsg, PluginManager.findArchivalUnit(url), originator);
 
     theLog.debug("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);

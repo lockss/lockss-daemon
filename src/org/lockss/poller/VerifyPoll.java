@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.27 2003-01-22 06:11:41 claire Exp $
+* $Id: VerifyPoll.java,v 1.28 2003-01-31 09:47:19 claire Exp $
  */
 
 /*
@@ -178,7 +178,7 @@ class VerifyPoll extends Poll {
 
     LcapIdentity originator = msg.getOriginID();
     log.debug("sending our verification reply to " + originator.toString());
-    m_pollmanager.sendMessageTo(repmsg, Plugin.findArchivalUnit(url), originator);
+    m_pollmanager.sendMessageTo(repmsg, PluginManager.findArchivalUnit(url), originator);
   }
 
   private void startVoteCheck(LcapMessage msg) {

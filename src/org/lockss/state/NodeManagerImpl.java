@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.15 2003-01-30 03:19:05 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.16 2003-01-31 09:47:19 claire Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import java.net.InetAddress;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.poller.*;
-import org.lockss.plugin.Plugin;
+import org.lockss.plugin.PluginManager;
 import org.lockss.protocol.LcapMessage;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepository;
