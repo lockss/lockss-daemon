@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.15 2004-03-11 10:34:49 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.16 2004-03-23 08:24:39 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,10 @@ public abstract class CrawlerImpl implements Crawler {
   public static final String PARAM_DATA_TIMEOUT =
     Configuration.PREFIX + "crawler.timeout.data";
   public static long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
+
+  public static final String PARAM_REFETCH_PERMISSIONS_PAGE =
+    Configuration.PREFIX + "crawler.storePermissionsRefetch";
+  public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
 
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
@@ -148,51 +152,65 @@ public abstract class CrawlerImpl implements Crawler {
     // fetch and cache the manifest page
     String manifest = au.getManifestPage();
     UrlCacher uc = makeUrlCacher(ownerCus, manifest);
+    logger.debug("Checking for permissions on " + manifest);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
     try {
-      if (au.shouldBeCached(manifest)) {
-        // check for proper crawl window
-        if ((au.getCrawlSpec()==null) || (au.getCrawlSpec().canCrawl())) {
-          // check for the permission on the page without storing
-          InputStream is =
-	    new BufferedInputStream(uc.getUncachedInputStream());
-	  try {
-	    // allow us to reread contents if reasonable size
-	    is.mark(PERM_BUFFER_MAX);
-	    // set the reader to our default encoding
-	    //XXX try to extract encoding from source
-	    Reader reader =
-	      new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-	    crawl_ok = au.checkCrawlPermission(reader);
-	    if (!crawl_ok) {
-	      logger.error("Couldn't start crawl due to missing permission.");
-	    } else {
+      if (!au.shouldBeCached(manifest)) {
+	logger.warning("Manifest not within CrawlSpec");
+      } else if ((au.getCrawlSpec()!=null) && !au.getCrawlSpec().canCrawl()) {
+	logger.debug("Couldn't start crawl due to crawl window.");
+	err = Crawler.STATUS_WINDOW_CLOSED;
+      } else {
+	// check for the permission on the page without storing
+	InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
+	try {
+	  // allow us to reread contents if reasonable size
+	  is.mark(PERM_BUFFER_MAX);
+	  // set the reader to our default encoding
+	  //XXX try to extract encoding from source
+	  Reader reader =
+	    new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+	  crawl_ok = au.checkCrawlPermission(reader);
+	  if (!crawl_ok) {
+	    logger.error("Couldn't start crawl due to missing permission.");
+	  } else {
+	    if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
+					      DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
 	      logger.debug2("Permission granted. Caching permission page.");
+	      storeManifest(ownerCus, manifest);
+	    } else {
 	      try {
+		logger.debug2("Permission granted. Storing permission page.");
 		is.reset();
 		uc.storeContent(is, uc.getUncachedProperties());
 	      } catch (IOException e) {
-		uc.cache();
+		logger.debug("Couldn't store from existing stream, refetching",
+			     e);
+		storeManifest(ownerCus, manifest);
 	      }
 	    }
-	  } finally {
-	    is.close();
 	  }
-        } else {
-          logger.debug("Couldn't start crawl due to crawl window restrictions.");
-          err = Crawler.STATUS_WINDOW_CLOSED;
-        }
-      } else {
-	logger.debug("Manifest not within CrawlSpec");
+	} finally {
+	  is.close();
+	}
       }
-    } catch (IOException ex) {
-      logger.warning("Exception reading manifest: "+ex);
-      err = Crawler.STATUS_FETCH_ERROR;
+    } catch (Exception ex) {
+      logger.error("Exception reading manifest", ex);
+      crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
+      return false;
     }
     if (!crawl_ok) {
       crawlStatus.setCrawlError(err);
     }
     return crawl_ok;
+  }
+
+  void storeManifest(CachedUrlSet ownerCus, String manifest)
+      throws IOException {
+    // XXX can't reuse UrlCacher
+    UrlCacher uc = makeUrlCacher(ownerCus, manifest);
+    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
+    uc.cache();
   }
 
   /** All UrlCachers should be made via this method, so they get their
