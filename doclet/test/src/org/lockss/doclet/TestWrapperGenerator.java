@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.1 2003-07-17 19:20:43 tyronen Exp $
+ * $Id: TestWrapperGenerator.java,v 1.2 2003-07-18 00:37:14 tyronen Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TestWrapperGenerator extends LockssTestCase {
   private String prefix = "Wrapper";
   private String expectedOutput;
 
-  private boolean debug = true;
+  private boolean debug = false;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -145,7 +145,7 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("  record_throwable(#METHODNAME, throwable);");
     pw.println("}");
     pw.println("record_val(#METHODNAME,#RETVAL);");
-    pw.println("return custom_#METHODNAME_val(#RETVAL);");
+    pw.println("return custom_#METHODNAME_val(xxvariablexx);");
     pw.println("</nonvoid>");
     pw.println("<void>");
     pw.println("record_call(#METHODNAME, #LISTPARAMS);");
@@ -157,6 +157,18 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("}");
     pw.println("custom_#METHODNAME_val();");
     pw.println("</void>");
+    pw.println("<special class=\"TestClass\" method=\"ret3\">");
+    pw.println("    return 32767;");
+    pw.println("</special>");
+    pw.println("<extra class=\"TestClass\">");
+    pw.println("  Map wrappermap = new WeakHashMap();\n");
+    pw.println("  private void makeMap() {");
+    pw.println("  }");
+    pw.println("</extra>");
+ /*   pw.println("<tobewrapped>");
+    pw.println("<wrapPackage name=\"java.util\"/>");
+    pw.println("<wrapClass name=\"java.io.File\"/>");
+    pw.println("</tobewrapped>");*/
     pw.println("</template>");
     pw.close();
     fw.close();
@@ -165,7 +177,8 @@ public class TestWrapperGenerator extends LockssTestCase {
   void makeSourceFile() throws IOException {
     FileWriter fw = new FileWriter(tempDirPath + sourceName);
     PrintWriter pw = new PrintWriter(fw);
-    pw.println("import java.io.IOException;");
+    pw.println("import java.io.*;");
+    pw.println("import java.util.*;");
     pw.println("public class TestClass {");
     pw.println("  public TestClass() {}");
     pw.println("  TestClass(String joe) {}");
@@ -182,6 +195,9 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("  public void exception() throws IOException {");
     pw.println("    throw new IOException();");
     pw.println("  }");
+ /*   pw.println("  public File useFile(Map map) {");
+    pw.println("    return new File();");
+    pw.println("  }");*/
     pw.println("}");
     pw.close();
     fw.close();
@@ -191,12 +207,16 @@ public class TestWrapperGenerator extends LockssTestCase {
     expectedOutput = tempDirPath + testName;
     FileWriter fw = new FileWriter(expectedOutput);
     PrintWriter pw = new PrintWriter(fw);
-    pw.println("import java.io.IOException;");
+    pw.println("import java.io.*;");
+    pw.println("import java.util.*;");
     pw.println("import org.lockss.test.*;");
     pw.println("import org.lockss.util.VariableTimedMap;");
     pw.println("import org.lockss.util.ListUtil;\n");
     pw.println("class " + prefix + "TestClass {\n");
     pw.println("  private TestClass xxinnerTestClassxx;\n");
+    pw.println("  Map wrappermap = new WeakHashMap();\n");
+    pw.println("  private void makeMap() {");
+    pw.println("  }\n");
     pw.println("  public " + prefix + "TestClass() {");
     pw.println("    record_call(" + prefix + "TestClass, ListUtil.list());");
     pw.println("    ");
@@ -227,16 +247,7 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("    }");
     pw.println("  }\n");
     pw.println("  public static int ret3() {");
-    pw.println("    int xxvariablexx;");
-    pw.println("    record_call(ret3, ListUtil.list());");
-    pw.println("    ");
-    pw.println("    try {");
-    pw.println("      xxvariablexx = TestClass.ret3();");
-    pw.println("    } catch (Throwable throwable) {");
-    pw.println("      record_throwable(ret3, throwable);");
-    pw.println("    }");
-    pw.println("    record_val(ret3,xxvariablexx);");
-    pw.println("    return custom_ret3_val(xxvariablexx);");
+    pw.println("    return 32767;");
     pw.println("  }\n");
     pw.println("  public synchronized float testFloat(float x, int k) {");
     pw.println("    float xxvariablexx;");
@@ -254,7 +265,9 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("  }\n");
     pw.println("  public void exception() throws IOException {");
     pw.println("    record_call(exception, ListUtil.list());");
-    pw.println("    ");
+   // pw.println("    List xxlistxx = modify_params(ListUtil.list(list));");
+    pw.println("    ");/* + prefix + "List zzlistzz = (" + prefix);
+    pw.println("List)xxlistxx.item(0);");*/
     pw.println("    try {");
     pw.println("      xxinnerTestClassxx.exception();");
     pw.println("    } catch (Throwable throwable) {");
@@ -262,14 +275,28 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("    }");
     pw.println("    custom_exception_val();");
     pw.println("  }");
+ /*   pw.println("  public File useFile(Map map) {");
+    pw.println("    File xxvariablexx;");
+    pw.println("    " + prefix + "File zzvariablezz;");
+    pw.println("    record_call(useFile,ListUtil.list(map));");
+    pw.println("    " + prefix + "Map zzmapzz = (" + prefix);
+    pw.println("Map)xxlistxx.item(0);");
+    pw.println("    try {");
+    pw.println("      xxvariablexx = xxinnerTestClassxx.useFile(zzmapzz);");
+    pw.println("      zzvariablezz = makeWrapper(xxvariablexx)");
+    pw.println("    } catch (Throwable throwable) {");
+    pw.println("      record_throwable(exception, throwable);");
+    pw.println("    }");
+    pw.println("    return custom_useFile_val(zzvariablezz)");
+    pw.println("  }");*/
     pw.println("}");
     pw.close();
     fw.close();
   }
 
   void areFilesIdentical(String path1, String path2) throws IOException {
-    String str1 = StreamUtil.readFile(path1);
-    String str2 = StreamUtil.readFile(path2);
+    String str1 = StringUtil.fromFile(path1);
+    String str2 = StringUtil.fromFile(path2);
     assertEquals(str1,str2);
   }
 

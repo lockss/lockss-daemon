@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.6 2003-07-17 19:20:43 tyronen Exp $
+ * $Id: StreamUtil.java,v 1.7 2003-07-18 00:37:14 tyronen Exp $
  */
 
 /*
@@ -82,19 +82,5 @@ public class StreamUtil {
     }
     writer.flush();
   }
-
-  /** Reads in the entire contents of a file into a string */
-  public static String readFile(String path) throws IOException {
-    BufferedReader rd = new BufferedReader(new FileReader(path));
-    StringBuffer buf = new StringBuffer();
-    int chr;
-    while ( (chr = rd.read()) != -1) {
-      buf.append( (char) chr);
-    }
-    rd.close();
-    return buf.toString();
-  }
-
-
 }
 

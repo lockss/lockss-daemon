@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.24 2003-07-17 19:20:43 tyronen Exp $
+ * $Id: StringUtil.java,v 1.25 2003-07-18 00:37:14 tyronen Exp $
  */
 
 /*
@@ -356,6 +356,12 @@ public class StringUtil {
     }
     return sb.toString();
   }
+
+  /** Reads in the entire contents of a file into a string */
+  public static String fromFile(String path) throws IOException {
+    return fromReader(new FileReader(path));
+  }
+
 
   /**
    * Test whether a string is null or the empty string

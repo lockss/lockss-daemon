@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperGenerator.java,v 1.1 2003-07-17 19:20:43 tyronen Exp $
+ * $Id: WrapperGenerator.java,v 1.2 2003-07-18 00:37:13 tyronen Exp $
  */
 
 /*
@@ -40,7 +40,8 @@ package org.lockss.doclet;
  * template.  The DTD of the template is as follows:
  *
  * <!DOCTYPE template>
- * <!ELEMENT template (package?, imports?, constructor?, nonvoid?, void?)>
+ * <!ELEMENT template (package?, imports?, constructor?, nonvoid?, void?
+ *                     extra? special*)>
  * <!ELEMENT package (#BLANK)>
  * <!ATTLIST package
  *   name CDATA #REQUIRED>
@@ -52,6 +53,13 @@ package org.lockss.doclet;
  * <!ELEMENT constructor (#PCDATA)>
  * <!ELEMENT nonvoid (#PCDATA)>
  * <!ELEMENT void (#PCDATA)>
+ * <!ELEMENT extra (#PCDATA)>
+ * <!ATTLIST extra
+ *   class CDATA #REQUIRED>
+ * <!ELEMENT special (#PCDATA)>
+ * <!ATTLIST special
+ *   class CDATA #REQUIRED
+ *   method CDATA #REQUIRED>
  *
  * The name parameter in the package tag indicates the package the generated
  * class is to belong to.  The name #BLANK indicates the anonymous package.
@@ -81,14 +89,23 @@ package org.lockss.doclet;
  * Sample template:
  *
  * try {
- *   logger.log("Method #NAME called with parameters #PARAMSTRING");
+ *   logger.log("Method #METHODNAME called",#LISTPARAMS);
  *    #RUN;
+ *    return #RETVAL;
  * } catch (Throwable e) {
- *    logger.log("Method $NAME threw " + e.getMessage());
+ *    logger.log("Method #METHODNAME threw " + e.getMessage());
  * }
  *
  * Non-static methods will have a local variable called xxinnerxx<classname>
  * representing the original class.
+ *
+ * The <extra> tag contains extra code to be placed at the beginning of the
+ * class specified by the <code>class</code> attribute.
+ *
+ * The <special> tag is a substitute template for a particular method
+ * (specified in the "class" and "method" attributes).
+ *
+ * Macro substitution is not available in the extra and special sections.
  *
  * To invoke, use:
  * <code>javadoc [sourcefile] -private -doclet org.lockss.doclet.WrapperGenerator
@@ -231,12 +248,25 @@ public class WrapperGenerator extends Doclet {
   String nonvoidTemplate;
   String voidTemplate;
 
+  /** Contains code for all "special-case" methods, that have their own
+   * template.  Key = fully qualified classname, value = another hash map
+   * where key=method name, value=code for this method
+   */
+  Map specialmap = new HashMap();
+
+  /** Contains extra code to be appended to the beginning of various classes.
+   * Key=fully qualified classname, value=code
+   */
+  Map extramap = new HashMap();
+
   WrapperGenerator(RootDoc root, XmlDoc template) {
     this.root = root;
     this.template = template;
     loadPackageName();
     loadImportNames();
     loadTemplates();
+    loadSpecials();
+    loadExtras();
   }
 
   void loadPackageName() {
@@ -264,6 +294,41 @@ public class WrapperGenerator extends Doclet {
     return (temp.equals("")) ? "  #RUN;" : temp;
   }
 
+  void loadSpecials() {
+    NodeList specials = template.getNodeList("special");
+    for (int i=0; i<specials.getLength(); i++) {
+      loadSpecial(specials.item(i));
+    }
+  }
+
+  void loadSpecial(Node special) {
+    String classname = XmlDoc.getNodeAttrText(special, "class");
+    String methodname = XmlDoc.getNodeAttrText(special, "method");
+    String methodcode = XmlDoc.getText(special);
+    Map classmap;
+    if (specialmap.containsKey(classname)) {
+      classmap = (Map)specialmap.get(classname);
+    } else {
+      classmap = new HashMap();
+      specialmap.put(classname,classmap);
+    }
+    classmap.put(methodname,methodcode);
+  }
+
+  void loadExtras() {
+    // Snide remark: this code is nearly identical to loadSpecials.
+    // If this were C++, I'd only have to write the code once!
+    NodeList extras = template.getNodeList("extra");
+    for (int i = 0; i < extras.getLength(); i++) {
+      loadExtra(extras.item(i));
+    }
+  }
+
+  void loadExtra(Node extra) {
+   String classname = XmlDoc.getNodeAttrText(extra,"class");
+   extramap.put(classname,XmlDoc.getText(extra));
+  }
+
   void writeFiles() {
     try {
       ClassDoc[] classes = root.classes();
@@ -284,6 +349,7 @@ public class WrapperGenerator extends Doclet {
     String name = cl.name();
     wr.write("class " + prefix + name + " {\n\n");
     writeInnerObject(name, wr);
+    writeExtra(cl, wr);
     writeConstructors(cl, wr);
     writeMethods(cl, wr);
     wr.write("\n}\n");
@@ -358,6 +424,14 @@ public class WrapperGenerator extends Doclet {
     wr.write(";");
   }
 
+  void writeExtra(ClassDoc cl, Writer wr) throws IOException {
+    String fullname = cl.qualifiedTypeName();
+    if (extramap.containsKey(fullname)) {
+        wr.write("\n\n");
+        wr.write(StringUtil.trimBlankLines((String) extramap.get(fullname)));
+    }
+  }
+
   void writeConstructors(ClassDoc cl, Writer wr) throws IOException {
     ConstructorDoc[] cons = cl.constructors();
     for (int i = 0; i < cons.length; i++) {
@@ -378,13 +452,36 @@ public class WrapperGenerator extends Doclet {
     for (int i = 0; i < methods.length; i++) {
       if (methods[i].isPublic()) {
         SourceMethod srcMethod = new SourceMethod(methods[i]);
-        if (srcMethod.returnType.equals("void")) {
-          writeVoidBody(srcMethod, wr);
+        if (isSpecialMethod(srcMethod)) {
+          writeSpecialMethod(srcMethod, wr);
         } else {
-          writeNonvoidBody(srcMethod, wr);
+          if (srcMethod.returnType.equals("void")) {
+            writeVoidBody(srcMethod, wr);
+          }
+          else {
+            writeNonvoidBody(srcMethod, wr);
+          }
         }
       }
     }
+  }
+
+  boolean isSpecialMethod(SourceMethod method) {
+    if (!specialmap.containsKey(method.fullclassname)) {
+      return false;
+    } else {
+      Map classmap = (Map)specialmap.get(method.fullclassname);
+      return (classmap.containsKey(method.methodname));
+    }
+  }
+
+  void writeSpecialMethod(SourceMethod method,Writer wr) throws IOException {
+    writeDecl(method,wr);
+    Map classmap = (Map)specialmap.get(method.fullclassname);
+    String txt = StringUtil.trimBlankLines(
+        (String)classmap.get(method.methodname));
+    wr.write(txt);
+    wr.write("\n  }");
   }
 
   void writeVoidBody(SourceMethod method, Writer wr)
@@ -474,6 +571,7 @@ public class WrapperGenerator extends Doclet {
    */
   private static abstract class SourceExecMember {
     String classname;
+    String fullclassname;
     String methodname;
     String modifiers;
     String throwlist;
@@ -481,6 +579,7 @@ public class WrapperGenerator extends Doclet {
 
     SourceExecMember(ExecutableMemberDoc method) {
       classname = method.containingClass().typeName();
+      fullclassname = method.containingClass().qualifiedTypeName();
       params = method.parameters();
       checkParams();
       modifiers = method.modifiers();

@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.51 2003-07-17 19:20:42 tyronen Exp $
+ $Id: build.xml,v 1.52 2003-07-18 00:37:13 tyronen Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -137,10 +137,6 @@ Args:
 
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
-
-  <!-- Unit tests of files using the XML interfaces must be handled differently -->
-  <property name="class.using.xml" value="org.lockss.util.TestXmlDoc" />
-  <property name="file.using.xml" value="org/lockss/util/TestXmlDoc.java" />
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -669,28 +665,11 @@ Test results in ${test.results}
     </echo>
     <property name="include" value="**/Test*.java" />
     <delete file="${test.results}/*" quiet="true" />
-    <!-- JUnit test classes using XML must be forked, 
-         else will fail due to a JUnit bug. --> 
-    <junit1 fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
-      <test todir="${test.results}" name="${class.using.xml}" />
-      <formatter type="plain" usefile="true" />
-      <classpath>
-         <path refid="test.run.classpath" />
-      </classpath>        
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <!-- AntTaskTarget doesn't support running junit1 in a separate VM -->
-      <sysproperty key="org.lockss.defaultLogTarget" value=""/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
     <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${include}" />
           <exclude name="${exclude}" />
-          <exclude name="${file.using.xml}" />
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
