@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.7 2004-03-10 21:34:45 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.8 2004-03-24 19:03:22 troberts Exp $
  */
 
 /*
@@ -40,8 +40,15 @@ import org.lockss.protocol.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 
+/**
+ *TODO
+ *1)add tests for fetching from other caches
+ */
+
 public class TestRepairCrawler extends LockssTestCase {
   private MockArchivalUnit mau = null;
+  private MockCachedUrlSet cus = null;
+
   private CrawlSpec spec = null;
   private MockAuState aus = new MockAuState();
   private static List testUrlList = ListUtil.list("http://example.com");
@@ -51,16 +58,26 @@ public class TestRepairCrawler extends LockssTestCase {
   private CrawlerImpl crawler = null;
   private MockContentParser parser = new MockContentParser();
 
+
+  private String url1 = "http://example.com/blah.html";
   
 
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
     crawlRule = new MockCrawlRule();
+
+    crawlRule.addUrlToCrawl(url1);
+
     spec = new CrawlSpec(startUrls, crawlRule);
-    MockCachedUrlSet cus = new MockCachedUrlSet(mau, null);
+    cus = new MockCachedUrlSet(mau, null);
+    cus.addUrl(url1);
+
     mau.setAuCachedUrlSet(cus);
     mau.setPlugin(new MockPlugin());
+
+    List repairUrls = ListUtil.list(url1);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
   }
 
   public void testMrcThrowsForNullAu() {
@@ -100,40 +117,22 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testGetType() {
-    String repairUrl = "http://example.com/blah.html";
-    Crawler crawler =
-      new RepairCrawler(mau, spec, aus, ListUtil.list(repairUrl), 0);
     assertEquals(Crawler.REPAIR, crawler.getType());
   }
 
   public void testRepairCrawlCallsForceCache() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String repairUrl = "http://example.com/forcecache.html";
-    cus.addUrl(repairUrl);
-    crawlRule.addUrlToCrawl(repairUrl);
-
-    List repairUrls = ListUtil.list(repairUrl);
     spec = new CrawlSpec(startUrls, crawlRule, 1);
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
 
     crawler.doCrawl();
 
     Set cachedUrls = cus.getForceCachedUrls();
     assertEquals(1, cachedUrls.size());
-    assertTrue("cachedUrls: "+cachedUrls, cachedUrls.contains(repairUrl));
+    assertTrue("cachedUrls: "+cachedUrls, cachedUrls.contains(url1));
   }
 
   public void testRepairCrawlObeysCrawlWindow() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-    String repairUrl = "http://example.com/forcecache.html";
-    cus.addUrl(repairUrl);
-    crawlRule.addUrlToCrawl(repairUrl);
-
-    List repairUrls = ListUtil.list(repairUrl);
-    spec = new CrawlSpec(startUrls, crawlRule, 1);
     spec.setCrawlWindow(new MyMockCrawlWindow());
-    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-
+    
     crawler.doCrawl();
 
     Set cachedUrls = cus.getForceCachedUrls();
@@ -141,7 +140,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testRepairCrawlPokesWatchdog() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String repairUrl1 = "http://example.com/forcecache1.html";
     String repairUrl2 = "http://example.com/forcecache2.html";
     String repairUrl3 = "http://example.com/forcecache3.html";
@@ -164,7 +162,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testRepairCrawlDoesntFollowLinks() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String repairUrl1 = "http://www.example.com/forcecache.html";
     String repairUrl2 = "http://www.example.com/link3.html";
     String url1 = "http://www.example.com/link1.html";
@@ -191,7 +188,6 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testPluginThrowsRuntimeException() {
-    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String repairUrl = "http://example.com/forcecache.html";
     cus.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
     List repairUrls = ListUtil.list(repairUrl);
