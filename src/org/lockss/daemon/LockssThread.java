@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.5 2004-02-23 21:26:27 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.6 2004-02-27 00:20:14 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -230,6 +230,9 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
       log.error(msg + ": " + getName());
       exitImm = Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
 					      DEFAULT_THREAD_WDOG_EXIT_IMM);
+      if (exitImm) {
+	log.error("Daemon exiting.");
+      }
     } finally {
       if (exitImm) {
 	System.exit(1);
