@@ -1,5 +1,5 @@
 /*
- * $Id: MockActivityRegulator.java,v 1.6 2003-07-31 00:47:33 eaalto Exp $
+ * $Id: MockActivityRegulator.java,v 1.7 2004-10-19 19:18:00 tlipkis Exp $
  */
 
 /*
@@ -98,10 +98,22 @@ public class MockActivityRegulator extends ActivityRegulator {
     this.shouldStartAuActivity = shouldStartAuActivity;
   }
 
+  CusLock lastActivityLock = null;
+
+  public void resetLastActivityLock() {
+    lastActivityLock = null;
+  }
+
+  public CusLock getLastActivityLock() {
+    return lastActivityLock;
+  }
+
   public Lock getAuActivityLock(int newActivity, long expireIn) {
-    return shouldStartAuActivity ?
-        new MockLock(null, newActivity, expireIn) :
-        null;
+    if (shouldStartAuActivity) {
+      lastActivityLock = new MockLock(null, newActivity, expireIn);
+      return lastActivityLock;
+    }
+    return null;
   }
 
   public void setStartCusActivity(CachedUrlSet cus,
@@ -115,8 +127,11 @@ public class MockActivityRegulator extends ActivityRegulator {
 
   public Lock getCusActivityLock(CachedUrlSet cus, int newActivity,
                                  long expireIn) {
-    return (lockedCuses.contains(cus) ? null :
-            new MockLock(cus, newActivity, expireIn));
+    if (!lockedCuses.contains(cus)) {
+      lastActivityLock = new MockLock(cus, newActivity, expireIn);
+      return lastActivityLock;
+    }
+    return null;
   }
 
   class MockLock extends CusLock {
