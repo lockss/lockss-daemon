@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.20 2003-05-06 01:45:45 troberts Exp $
+ * $Id: ServletManager.java,v 1.21 2003-05-10 02:00:29 tal Exp $
  */
 
 /*
@@ -284,6 +284,8 @@ public class ServletManager extends JettyManager {
       // Daemon status servlet
       handler.addServlet("DaemonStatus", "/DaemonStatus",
 			 "org.lockss.servlet.DaemonStatus");
+      handler.addServlet("IpAccessControl", "/IpAccessControl",
+			 "org.lockss.servlet.IpAccessControl");
       handler.addServlet("ThreadDump", "/ThreadDump",
 			 "org.lockss.servlet.ThreadDump");
       context.addHandler(handler);
