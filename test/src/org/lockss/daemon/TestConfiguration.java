@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.1 2002-08-31 06:58:16 tal Exp $
+ * $Id: TestConfiguration.java,v 1.2 2002-09-05 22:15:00 tal Exp $
  */
 
 /*
@@ -57,10 +57,11 @@ public class TestConfiguration extends TestCase {
 //    public void setUp() {
 //    }
 
-  private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n"; 
+  private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n" +
+    "prop5=False\n"; 
   private static final String c1a = "prop2=xxx\nprop4=yyy\n"; 
 
-  public void testLoad() throws IOException {
+  public void testLoad() throws IOException, Configuration.Error {
     String f = FileUtil.urlOfString(c1);
     Configuration config = Configuration.newConfiguration();
     config.load(f);
@@ -68,7 +69,35 @@ public class TestConfiguration extends TestCase {
     assertEquals("12", config.get("prop1", "wrong"));
     assertEquals("foobar", config.get("prop2"));
     assertEquals("not", config.get("propnot", "not"));
+
+    assertTrue(config.getBoolean("prop3"));
     assertTrue(config.getBoolean("prop3", false));
+    assertTrue(!config.getBoolean("prop1", false));
+    assertTrue(!config.getBoolean("prop5"));
+    assertTrue(!config.getBoolean("prop5", true));
+    assertEquals(12, config.getInt("prop1"));
+    assertEquals(42, config.getInt("propnot", 42));
+    assertEquals(123, config.getInt("prop2", 123));
+    try {
+      config.getBoolean("prop1");
+      fail("getBoolean(non-boolean) didn't throw");
+    } catch (Configuration.Error e) {
+    }
+    try {
+      config.getBoolean("propnot");
+      fail("getBoolean(missing) didn't throw");
+    } catch (Configuration.Error e) {
+    }
+    try {
+      config.getInt("prop2");
+      fail("getInt(non-int) didn't throw");
+    } catch (Configuration.Error e) {
+    }
+    try {
+      config.getInt("propnot");
+      fail("getInt(missing) didn't throw");
+    } catch (Configuration.Error e) {
+    }
   }
 
   public void testLoadList() throws IOException {
@@ -143,13 +172,15 @@ public class TestConfiguration extends TestCase {
     }
   }
 
-  public void testParam() throws IOException {
+  public void testParam() throws IOException, Configuration.Error {
     Configuration config = Configuration.newConfiguration();
     config.load(FileUtil.urlOfString(c2));
     Configuration.setCurrentConfig(config);
     assertEquals("12", Configuration.getParam("prop.p1"));
     assertEquals("foobar", Configuration.getParam("prop.p2"));
     assertTrue(Configuration.getBooleanParam("prop.p3.a", false));
+    assertEquals(12, Configuration.getIntParam("prop.p1"));
+    assertEquals(554, Configuration.getIntParam("propnot.p1", 554));
   }
 
   public static boolean setCurrentConfigFromUrlList(List l) {
