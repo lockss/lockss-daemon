@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.23 2003-03-04 00:47:09 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.24 2003-03-13 00:11:29 troberts Exp $
  */
 
 /*
@@ -57,6 +57,14 @@ public class LockssTestCase extends TestCase {
 
   public LockssTestCase(String msg) {
     super(msg);
+    Integer timeout = Integer.getInteger("org.lockss.test.timeout.shouldnt");
+    if (timeout != null) {
+      TIMEOUT_SHOULDNT = timeout.intValue();
+    }
+  }
+
+  public LockssTestCase() {
+    super();
     Integer timeout = Integer.getInteger("org.lockss.test.timeout.shouldnt");
     if (timeout != null) {
       TIMEOUT_SHOULDNT = timeout.intValue();
