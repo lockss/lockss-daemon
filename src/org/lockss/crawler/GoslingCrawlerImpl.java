@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.1 2002-11-27 00:25:45 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.2 2002-11-27 19:50:06 troberts Exp $
  */
 
 /*
@@ -30,6 +30,44 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+/*
+ * Some portions of this code are:
+ * Copyright (c) 2002 Sun Microsystems. All Rights Reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *
+ * - Redistributions of source code must retain the above copyright
+ *   notice, this list of conditions and the following disclaimer.
+ *
+ * - Redistribution in binary form must reproduct the above copyright
+ *   notice, this list of conditions and the following disclaimer in the
+ *   documentation and/or other materials provided with the distribution.
+ *
+ * Neither the name of Sun Microsystems or the names of contributors may
+ * be used to endorse or promote products derived from this software
+ * without specific prior written permission.
+ *
+ *   This software is provided "AS IS," without a warranty of any
+ *   kind. ALL EXPRESS OR IMPLIED CONDITIONS, REPRESENTATIONS AND
+ *   WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY,
+ *   FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT, ARE HEREBY
+ *   EXCLUDED. SUN MICROSYSTEMS AND ITS LICENSORS SHALL NOT BE LIABLE
+ *   FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING,
+ *   MODIFYING OR DISTRIBUTING THE SOFTWARE OR ITS DERIVATIVES. IN NO
+ *   EVENT WILL SUN MICROSYSTEMS OR ITS LICENSORS BE LIABLE FOR ANY
+ *   LOST REVENUE, PROFIT OR DATA, OR FOR DIRECT, INDIRECT, SPECIAL,
+ *   CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES, HOWEVER CAUSED AND
+ *   REGARDLESS OF THE THEORY OF LIABILITY, ARISING OUT OF THE USE OF
+ *   OR INABILITY TO USE SOFTWARE, EVEN IF SUN MICROSYSTEMS
+ *   HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ *
+ * You acknowledge that Software is not designed, licensed or intended for
+ * use in the design, construction, operation or maintenance of any
+ * nuclear facility.
+ */
+
 package org.lockss.crawler;
 
 import java.io.*;
@@ -56,20 +94,19 @@ public class GoslingCrawlerImpl {
    */
 
 
-  private static final String imgtag = "img";
-  private static final String imgsrc = "src";
+  private static final String IMGTAG = "img";
+  private static final String ATAG = "a";
+  private static final String FRAMETAG = "frame";
+  private static final String LINKTAG = "link";
+  private static final String SCRIPTTAG = "script";
+  private static final String SCRIPTTAGEND = "/script";
+  private static final String BODYTAG = "body";
+  private static final String TABLETAG = "table";
+  private static final String TDTAG = "tc";
 
-  private static final String atag = "a";
-  private static final String asrc = "href";
-
-  private static final String frametag = "frame";
-  private static final String linktag = "link";
-  private static final String scripttag = "script";
-  private static final String scripttagend = "/script";
-  private static final String bodytag = "body";
-  private static final String tabletag = "table";
-  private static final String tdtag = "tc";
-  private static final String backgroundsrc = "background";
+  private static final String ASRC = "href";
+  private static final String SRC = "src";
+  private static final String BACKGROUNDSRC = "background";
 
   private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
 
@@ -77,7 +114,8 @@ public class GoslingCrawlerImpl {
    * Main method of the crawler; it loops through crawling and caching
    * urls.
    *
-   * @param rootUrls CachedUrlSet encapsulating the starting point of the
+   * @param au ArchivalUnit which this crawl is within 
+   * @param spec CachedUrlSet encapsulating the starting point of the
    * crawl and the rules for which urls to cache
    *
    */
@@ -96,38 +134,29 @@ public class GoslingCrawlerImpl {
       logger.debug("Dequeued url from list: "+url);
       UrlCacher uc = cus.makeUrlCacher(url);
       if (uc.shouldBeCached()) {
-	if (!uc.getCachedUrl().exists()) {
+ 	if (!cus.isCached(url)) {
 	  try {
-	    cacheAndHarvestLinks(uc, list);
+	    logger.info("caching "+uc);
+	    uc.cache(); //IOException if there is a caching problem
 	  } catch (IOException ioe) {
 	    //XXX handle this better.  Requeue?
-	    logger.error("Problem caching or parsing "+uc+". Ignoring", ioe);
+	    logger.error("Problem caching "+uc+". Ignoring", ioe);
+	  }
+	  try{
+	    CachedUrl cu = uc.getCachedUrl();
+	    addUrlsToList(cu, list);//IOException if the CU can't be read
+	  } catch (IOException ioe) {
+	    //XXX handle this better.  Requeue?
+	    logger.error("Problem parsing "+uc+". Ignoring", ioe);
 	  }
 	  au.pause();
 	}
-	else {
-	  logger.info(uc+" exists, not caching");
-	}
+ 	else {
+ 	  logger.info(uc+" exists, not caching");
+ 	}
       }
       logger.debug("Removing from list: "+uc.getUrl());
     }
-  }
-
-  /**
-   * Cache the provided uc and harvest the links from it
-   *
-   * @param uc UrlCacher representing the url to be crawled
-   * @param list List object to add new urls to
-   * @throws IOException if there is a problem caching the url or reading
-   * the local copy
-   */
-  protected static void cacheAndHarvestLinks(UrlCacher uc, List list) 
-  throws IOException {
-    logger.info("caching "+uc);
-    uc.cache(); //IOException if there is a caching problem
-
-    CachedUrl cu = uc.getCachedUrl();
-    addUrlsToList(cu, list);//IOException if the CU can't be read
   }
 
   /**
@@ -138,11 +167,7 @@ public class GoslingCrawlerImpl {
    * @returns A modifiable list of the urls (in string form)
    */
   protected static List createInitialList (CrawlSpec spec) {
-    if (spec == null) {
-      return Collections.EMPTY_LIST;
-    } else {
-      return new LinkedList(spec.getStartingUrls());
-    }
+    return new LinkedList(spec.getStartingUrls());
   }
 
   /**
@@ -157,6 +182,7 @@ public class GoslingCrawlerImpl {
     if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
       if (cuStr == null) {
+	logger.error("CachedUrl has null getUrl() value: "+cu);
 	return;
       }
 
@@ -164,15 +190,14 @@ public class GoslingCrawlerImpl {
       Reader reader = new InputStreamReader(is); //should do this elsewhere
       URL srcUrl = new URL(cuStr);
       logger.debug("Extracting urls from srcUrl");
-      String nextUrl = ExtractNextLink(reader, srcUrl);
-      while (nextUrl != null) {
+      String nextUrl = null;
+      while ((nextUrl = ExtractNextLink(reader, srcUrl)) != null) {
 	logger.debug("Extracted "+nextUrl);
 
 	//should check if this is something we should cache first
 	if (!list.contains(nextUrl)) { 
 	  list.add(nextUrl);
 	}
-	nextUrl = ExtractNextLink(reader, srcUrl);
       }
     }
   }
@@ -191,7 +216,8 @@ public class GoslingCrawlerImpl {
     if (props != null) {
       String contentType = props.getProperty("content-type");
       if (contentType != null) {
-	returnVal = contentType.equalsIgnoreCase("text/html");
+	//XXX check if the string starts with this
+	returnVal = contentType.toLowerCase().startsWith("text/html");
       }
     }
     if (returnVal) {
@@ -233,7 +259,7 @@ public class GoslingCrawlerImpl {
 	while (c >= 0 && c != '>') {
 	  if(pos==2 && c=='-' && lineBuf.charAt(0)=='!'
 	     && lineBuf.charAt(1)=='-') {
-	    // comment
+	    // we're in a HTML comment
 	    pos = 0;
 	    int lc1 = 0;
 	    int lc2 = 0;
@@ -284,31 +310,62 @@ public class GoslingCrawlerImpl {
     switch (link.charAt(0)) {
     case 'a': //<a href=http://www.yahoo.com>
     case 'A':
-      key = asrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  ATAG+" ") != 0) {
+	return null;
+      }
+      key = ASRC;
       break;
     case 'f': //<frame src=frame1.html>
     case 'F':
-      key = imgsrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  FRAMETAG+" ") != 0) {
+	return null;
+      }
+      key = SRC;
       break;
     case 'i': //<img src=image.gif>
     case 'I':
-      key = imgsrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  IMGTAG+" ") != 0) {
+	return null;
+      }
+      key = SRC;
       break;
     case 'l': //<link href=blah.css>
     case 'L':
-      key = asrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  LINKTAG+" ") != 0) {
+	return null;
+      }
+      key = ASRC;
       break;
     case 'b': //<body backgroung=background.gif>
     case 'B':
-      key = backgroundsrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  BODYTAG+" ") != 0) {
+	return null;
+      }
+      key = BACKGROUNDSRC;
       break;
     case 's': //<script src=blah.js>
     case 'S':
-      key = imgsrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  SCRIPTTAG+" ") != 0) {
+	return null;
+      }
+      key = SRC;
       break;
     case 't': //<tc background=back.gif> or <table background=back.gif>
     case 'T':
-      key = backgroundsrc;
+      if (StringUtil.getIndexIgnoringCase(link.toString(), 
+					  TABLETAG+" ") != 0 &&
+	  StringUtil.getIndexIgnoringCase(link.toString(), 
+					  TDTAG+" ") != 0)
+	{
+	return null;
+      }
+      key = BACKGROUNDSRC;
       break;
     default:
       return null;
@@ -318,6 +375,10 @@ public class GoslingCrawlerImpl {
       return null;
     }
     int idx = linkIdx + key.length();
+    if (link.charAt(idx) != ' ' && link.charAt(idx) != '=') {
+      //to catch things like <a hrefe=http://www.example.com>blah</a>
+      return null;
+    }
     while (idx < link.length() &&
 	   (link.charAt(idx) == '"' ||
 	    link.charAt(idx) == ' ' ||
