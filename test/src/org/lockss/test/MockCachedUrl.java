@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.12 2003-02-25 22:56:16 aalto Exp $
+ * $Id: MockCachedUrl.java,v 1.13 2003-02-26 02:40:31 troberts Exp $
  */
 
 /*
@@ -103,8 +103,13 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public byte[] getContentSize() {
-    return (new BigInteger(
-        Integer.toString(content.length()))).toByteArray();
+    String content;
+    if (this.content == null) {
+      content = "";
+    } else {
+      content = this.content;
+    }
+    return (new BigInteger(Integer.toString(content.length()))).toByteArray();
   }
 
 
@@ -141,5 +146,4 @@ public class MockCachedUrl implements CachedUrl {
     sb.append("]");
     return sb.toString();
   }
-
 }
