@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.4 2003-02-07 19:15:48 aalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.5 2003-02-10 23:46:51 troberts Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
+import org.lockss.state.*;
 
 /**
  * This is a first cut at making a HighWire plugin
@@ -63,6 +64,16 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   private int volume;
   private URL base;
 
+  public static final String PARAM_HIGHWIRE_NC_INTERVAL =
+      Configuration.PREFIX + "highwire.nc_interval";
+  private static final int DEFAULT_NC_INTERVAL = 14;
+
+  private static final long DAY_MS = 1000 * 60 * 60 * 24;
+
+  private int ncCrawlInterval;
+
+
+
   /**
    * Standard constructor for HighWirePlugin.
    *
@@ -85,7 +96,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     this.volume = volume;
     this.base = base;
     this.crawlSpec = makeCrawlSpec(base, volume);
-    loadPauseTime();
+    loadProps();
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -144,9 +155,12 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  private void loadPauseTime() {
+  private void loadProps() {
     pauseMS = Configuration.getIntParam(PARAM_HIGHWIRE_PAUSE_TIME,
                                         DEFAULT_PAUSE_TIME);
+    ncCrawlInterval = 
+      Configuration.getIntParam(PARAM_HIGHWIRE_NC_INTERVAL,
+				DEFAULT_NC_INTERVAL);
   }
 
   public void pause() {
@@ -158,7 +172,15 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public String getAUId() {
-    return String.valueOf(getVolumeNumber());
+    return getAUId(base, volume);
+  }
+
+  public static String getAUId(URL url, int vol) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(url.toString());
+    sb.append("||");
+    sb.append(vol);
+    return sb.toString();
   }
 
   public int getVolumeNumber() {
@@ -168,5 +190,16 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public URL getBaseUrl() {
     return base;
   }
+
+  public boolean shouldCrawlForNewContent(AuState aus) {
+    long timeDiff = TimeBase.nowMs() - aus.getLastCrawlTime();
+    logger.debug("Deciding whether to do new content crawl for "+aus);
+    if (aus.getLastCrawlTime() == 0 || 
+	timeDiff > (ncCrawlInterval * DAY_MS)) {
+      return true;
+    }
+    return false;
+  }
+
 
 }

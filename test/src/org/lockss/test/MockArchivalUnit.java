@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.10 2003-02-05 22:40:15 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.11 2003-02-10 23:46:51 troberts Exp $
  */
 
 /*
@@ -34,9 +34,10 @@ package org.lockss.test;
 
 import java.util.*;
 import java.security.MessageDigest;
+import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
-import gnu.regexp.*;
+import org.lockss.state.*;
 
 /**
  * This is a mock version of <code>ArchivalUnit</code> used for testing
@@ -49,6 +50,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private CachedUrlSet cus = null;
   private MockObjectCallback pauseCallback = null;
   private List newContentUrls = null;
+  private boolean shouldCrawlForNewContent = true;
 
   public MockArchivalUnit(){
   }
@@ -157,5 +159,15 @@ public class MockArchivalUnit implements ArchivalUnit {
   public void setPauseCallback(MockObjectCallback callback) {
     this.pauseCallback = callback;
   }
+
+  public boolean shouldCrawlForNewContent(AuState aus) {
+    return shouldCrawlForNewContent;
+  }
+
+  public void setShouldCrawlForNewContent(boolean val) {
+    shouldCrawlForNewContent = val;
+  }
+
+
 }
 

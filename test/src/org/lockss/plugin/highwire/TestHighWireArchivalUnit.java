@@ -32,11 +32,16 @@ import java.io.File;
 import java.net.*;
 import gnu.regexp.*;
 import org.lockss.daemon.*;
-import org.lockss.test.LockssTestCase;
+import org.lockss.util.*;
+import org.lockss.state.*;
+import org.lockss.test.*;
 import org.lockss.plugin.GenericFileCachedUrlSet;
 import org.lockss.repository.TestLockssRepositoryImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
+  public static final long WEEK_MS = 1000 * 60 * 60 * 24 * 7;
+
+
   public TestHighWireArchivalUnit(String msg) {
     super(msg);
   }
@@ -103,5 +108,34 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     } catch(IllegalArgumentException iae) { 
     }
   }
+  
+  public void testShouldDoNewContentCrawlTooEarly() 
+      throws REException, MalformedURLException {
+    ArchivalUnit hwAu = 
+      new HighWireArchivalUnit(new URL("http://shadow1.stanford.edu/"), 322);
+    
+    AuState aus = new MockAuState(null, TimeBase.nowMs());
 
+    assertTrue(!hwAu.shouldCrawlForNewContent(aus));
+  }
+
+  public void testShouldDoNewContentCrawlFor0() 
+      throws REException, MalformedURLException {
+    ArchivalUnit hwAu = 
+      new HighWireArchivalUnit(new URL("http://shadow1.stanford.edu/"), 322);
+    
+    AuState aus = new MockAuState(null, 0);
+
+    assertTrue(hwAu.shouldCrawlForNewContent(aus));
+  }
+
+  public void testShouldDoNewContentCrawlEachMonth() 
+      throws REException, MalformedURLException {
+    ArchivalUnit hwAu = 
+      new HighWireArchivalUnit(new URL("http://shadow1.stanford.edu/"), 322);
+    
+    AuState aus = new MockAuState(null, 4 * WEEK_MS);
+
+    assertTrue(hwAu.shouldCrawlForNewContent(aus));
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.10 2003-02-07 01:07:07 troberts Exp $
+ * $Id: ArchivalUnit.java,v 1.11 2003-02-10 23:46:51 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 import gnu.regexp.*;
 import java.util.*;
+import org.lockss.state.*;
 
 /**
  * An <code>ArchivalUnit</code> represents a publication unit
@@ -114,6 +115,15 @@ public interface ArchivalUnit {
    */
   public List getNewContentCrawlUrls();
 
+
+  /**
+   * Query the AUState object to determine if this is the proper time to
+   * do a new content crawl.
+   *
+   * @param aus state object for this archival unit
+   * @return true if we should do a new content crawl
+   */
+  public boolean shouldCrawlForNewContent(AuState aus);
 
   public class InstantiationException extends Exception {
     private String msg;

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.8 2003-02-06 23:32:26 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.9 2003-02-10 23:46:51 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 import gnu.regexp.*;
 import org.lockss.util.*;
+import org.lockss.state.*;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -177,6 +178,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     } else {
       return false;
     }
+  }
+
+  public boolean shouldCrawlForNewContent(AuState aus) {
+    return false;
   }
 
   protected void pause(int milliseconds) {
