@@ -71,13 +71,36 @@ public class PrivilegedAccessor {
     if( args != null) {
       classTypes = new Class[args.length];
       for( int i = 0; i < args.length; i++ ) {
-	if( args[i] != null )
-	  classTypes[i] = args[i].getClass();
+	if( args[i] != null ){
+	  Class curClass = args[i].getClass();
+	  if(NullClass.isNullClass(curClass)){
+	    classTypes[i] = ((NullClass)args[i]).getFakeClass();
+	  }
+	  else{
+	    classTypes[i] = curClass;
+	  }
+	}
+	else{
+ 	  throw new NoSuchMethodException("Can't match null parameters "+
+ 					  "to a method.");
+	}
       }
     }
-    return getMethod(instance,methodName,classTypes).invoke(instance,args);
+    Method method = getMethod(instance,methodName,classTypes);
+    //    return method.invoke(instance,args);
+    return method.invoke(instance,resolveNulls(args));
   }
   
+  private static Object[] resolveNulls(Object[] objs){
+    for (int ix=0; ix<objs.length; ix++){
+      if (NullClass.isNullClass(objs[ix].getClass())){
+	objs[ix] = null;
+      }
+    }
+    return objs;
+  }
+
+
   /**
    *
    * @param instance the object instance
@@ -110,13 +133,37 @@ public class PrivilegedAccessor {
    * from the given class.
    */
   private static Method getMethod(Class thisClass, String methodName, Class[] classTypes) throws NoSuchMethodException {
-    if (thisClass == null)
+    if (thisClass == null){
       throw new NoSuchMethodException("Invalid method : " + methodName);
+    }
     try {
       return thisClass.getDeclaredMethod( methodName, classTypes );
     }
     catch(NoSuchMethodException e) {
       return getMethod(thisClass.getSuperclass(), methodName, classTypes);
+    }
+  }
+
+  public static class NullClass{
+    private Class myClass = null;
+
+    protected NullClass(){
+    }
+    
+    public static boolean isNullClass(Class curClass){
+      if (curClass.isInstance(new NullClass())){
+	return true;
+      }
+      return false;
+    }
+  
+
+    public NullClass(String className) throws ClassNotFoundException{
+      myClass = Class.forName(className);
+    }
+    
+    public Class getFakeClass(){
+      return myClass;
     }
   }
 }
