@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.21 2003-04-02 02:04:39 tal Exp $
+* $Id: IdentityManager.java,v 1.22 2003-04-02 10:50:55 tal Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.poller.Vote;
@@ -112,6 +113,8 @@ public class IdentityManager extends BaseLockssManager {
     registerDefaultConfigCallback();
     reloadIdentities();
     log.info("Local identity: " + getLocalIdentity());
+    getDaemon().getStatusService().registerStatusAccessor("Identities",
+							  new Status());
   }
 
   /**
@@ -383,4 +386,96 @@ public class IdentityManager extends BaseLockssManager {
         config.getInt(PARAM_VOTE_DISOWNED, -400);
   }
 
+  private static final List statusSortRules =
+    ListUtil.list(new StatusTable.SortRule("id", true));
+
+  private static final List statusColDescs =
+    ListUtil.list(
+		  new ColumnDescriptor("ip", "IP",
+				       ColumnDescriptor.TYPE_IP_ADDRESS),
+		  new ColumnDescriptor("lastPkt", "Last Pkt",
+				       ColumnDescriptor.TYPE_DATE,
+				       "Last time a packet that originated " +
+				       "at IP was received"),
+		  new ColumnDescriptor("lastOp", "Last Op",
+				       ColumnDescriptor.TYPE_DATE,
+				       "Last time a non-NoOp packet that " +
+				       "originated at IP was received"),
+		  new ColumnDescriptor("origTot", "Orig Tot",
+				       ColumnDescriptor.TYPE_INT,
+				       "Total packets received that " +
+				       "originated at IP."),
+		  new ColumnDescriptor("origOp", "Orig Op",
+				       ColumnDescriptor.TYPE_INT,
+				       "Total non-noop packets received that "+
+				       "originated at IP."),
+		  new ColumnDescriptor("sendOrig", "1 Hop",
+				       ColumnDescriptor.TYPE_INT,
+				       "Packets arriving from originator " +
+				       "in one hop."),
+		  new ColumnDescriptor("sendFwd", "Fwd",
+				       ColumnDescriptor.TYPE_INT,
+				       "Packets forwarded by IP to us."),
+		  new ColumnDescriptor("reputation", "Reputation",
+				       ColumnDescriptor.TYPE_INT)
+		  );
+
+
+  private class Status implements StatusAccessor {
+    public void populateTable(StatusTable table) {
+      String key = table.getKey();
+      table.setTitle("Cache Identities");
+      table.setColumnDescriptors(statusColDescs);
+      table.setDefaultSortRules(statusSortRules);
+      table.setRows(getRows(key));
+//       table.setSummaryInfo(getSummaryInfo(key));
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows(String key) {
+      List table = new ArrayList();
+      for (Iterator iter = theIdentities.values().iterator();
+	   iter.hasNext();) {
+	table.add(makeRow((LcapIdentity)iter.next()));
+      }
+      return table;
+    }
+
+    private Map makeRow(LcapIdentity id) {
+      Map row = new HashMap();
+      InetAddress ip = id.getAddress();
+      Object obj = ip;
+      if (isLocalIdentity(ip)) {
+	StatusTable.DisplayedValue val =
+	  new StatusTable.DisplayedValue(ip);
+	val.setColor("green");
+	obj = val;
+      }
+      row.put("ip", obj);
+      row.put("lastPkt", new Long(id.getLastActiveTime()));
+      row.put("lastOp", new Long(id.getLastOpTime()));
+      row.put("origTot", new Long(id.getEventCount(LcapIdentity.EVENT_ORIG)));
+      row.put("origOp",
+	      new Long(id.getEventCount(LcapIdentity.EVENT_ORIG_OP)));
+      row.put("sendOrig",
+	      new Long(id.getEventCount(LcapIdentity.EVENT_SEND_ORIG)));
+      row.put("sendFwd",
+	      new Long(id.getEventCount(LcapIdentity.EVENT_SEND_FWD)));
+//       row.put("dupl", new Long(id.getEventCount(LcapIdentity.EVENT_DUPL)));
+      row.put("reputation", new Long(id.getReputation()));
+      return row;
+    }
+
+    private List getSummaryInfo(String key) {
+      List res = new ArrayList();
+//       res.add(new StatusTable.SummaryInfo("Total bytes hashed",
+// 					  ColumnDescriptor.TYPE_INT,
+// 					  new Integer(0)));
+      return res;
+    }
+
+  }
 }
