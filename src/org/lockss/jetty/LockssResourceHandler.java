@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.4 2004-03-08 19:32:37 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.5 2004-03-11 09:41:04 tlipkis Exp $
  */
 
 /*
@@ -29,10 +29,10 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-// Portions are:
+// Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.4 2004-03-08 19:32:37 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.5 2004-03-11 09:41:04 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -338,6 +338,11 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                 // If we got here, no forward to index took place
                 sendDirectory(request,response,resource,pathInContext.length()>1);
             }
+            else if (handleLockssRedirect(request, response, pathInContext,
+					  pathParams, resource))
+            {
+	      return;
+	    }
             // check if it is a file
             else if (resource.exists())
             {
@@ -352,7 +357,60 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         }
     }
 
+  // CachedUrls may have content, yet specify a redirect elsewhere.  The
+  // redirect must be returned to the requestor.
+  boolean handleLockssRedirect(HttpRequest request,
+			       HttpResponse response,
+			       String pathInContext,
+			       String pathParams,
+			       Resource resource) {
+    if (!(resource instanceof CuUrlResource)) {
+      return false;
+    }
+    CuUrlResource cur = (CuUrlResource)resource;
+    String nodeUrl = cur.getProperty(CachedUrl.PROPERTY_NODE_URL);
+    String rTo = cur.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO);
+    String reqUrl = request.getRequestURL().toString();
+    // follow any redirect property, unless it points at current URL.  (Can
+    // happen on "directory" nodes, which have two names, with and without
+    // slash.)
+    if (rTo != null) {
+      if (rTo.equals(reqUrl)) {
+	return false;
+      } else {
+	sendLockssRedirect(request, response, pathInContext,
+			   pathParams, resource, rTo);
+	return true;
+      }
+    } else
+      // Can't count on directory node having a redirected-to property,
+      // bacause it might have been with a final slash, hence no redirect.
+      // If request path doesn't end with slash but node's path does,
+      // then this is a request for a node that's actually a "directory",
+      // so issue the redirect.
+      if (!pathInContext.endsWith("/")) {
+	URI nodeUri = new URI(nodeUrl);
+	Code.warning("nodeUri: " + nodeUri);
+	if (nodeUri.getPath().endsWith("/")) {
+	  sendLockssRedirect(request, response, pathInContext,
+			     pathParams, resource, nodeUrl);
+	  return true;
+	}	
+      }
+    return false;
+  }
  
+  void sendLockssRedirect(HttpRequest request,
+			  HttpResponse response,
+                          String pathInContext,
+                          String pathParams,
+			  Resource resource,
+			  String to) {
+    response.setField(HttpFields.__Location, to);
+    response.setStatus(HttpResponse.__301_Moved_Permanently);
+    request.setHandled(true);
+  }
+
     /* ------------------------------------------------------------ */
     /* Check modification date headers.
      */
