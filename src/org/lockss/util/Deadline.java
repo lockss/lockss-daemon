@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.10 2002-11-21 20:26:01 tal Exp $
+ * $Id: Deadline.java,v 1.11 2002-11-25 21:31:52 tal Exp $
  */
 
 /*
@@ -32,11 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 import java.util.*;
-import java.text.DateFormat;
+import java.text.*;
 
-/** Daedline represents a time (at which some operation must complete).
+/** Deadline represents a time (at which some operation must complete).
  */
 public class Deadline implements Comparable {
+  /** A long time from now (but not really never). */
+  public static final Deadline NEVER = new Deadline(Long.MAX_VALUE);
+
   protected static Logger log = Logger.getLogger("Deadline");
 
   private static LockssRandom random = null;
@@ -68,9 +71,6 @@ public class Deadline implements Comparable {
     this(new Date(at));
   }
   
-//   public static void useFakeTimeBase(boolean useFake) {
-//   }
-
   /** Create a Deadline that expires in <code>duration</code> milliseconds. */
   public static Deadline in(long duration) {
     return new Deadline(new Date(nowMs() + duration), duration);
@@ -248,8 +248,6 @@ public class Deadline implements Comparable {
     }
   }
 
-  // tk - change these two to implement fake time base for testing
-
   protected static Date now() {
     return TimeBase.nowDate();
 //     return new Date();
@@ -278,9 +276,15 @@ public class Deadline implements Comparable {
   }
 
   // tk - should include "+n days" or some such
-  private static DateFormat df = DateFormat.getTimeInstance();
+  private static final DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+  private static final DateFormat df = DateFormat.getTimeInstance();
+
   public String toString() {
-    return "[deadline: in " + duration + ", at " + df.format(expiration) + "]";
+    return "[deadline: in " + duration + ", at " +
+      (TimeBase.isSimulated()
+       ? ("sim " + expiration.getTime())
+       : df1.format(expiration))
+      + "]";
   }
 
   /**
@@ -310,13 +314,13 @@ public class Deadline implements Comparable {
 	  thread.interrupt();
 	}};
     long nap;
-    while ((nap = getSleepTime()) > 0) {
-      try {
-	registerCallback(cb);
+    try {
+      registerCallback(cb);
+      while ((nap = getSleepTime()) > 0) {
 	thread.sleep(nap);
-      } finally {
-	unregisterCallback(cb);
       }
+    } finally {
+      unregisterCallback(cb);
     }
   }
 
