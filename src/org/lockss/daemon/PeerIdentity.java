@@ -1,5 +1,6 @@
-package org.lockss.daemon;
-import java.io.IOException;
+/*
+ * $Id: PeerIdentity.java,v 1.2 2002-07-09 13:40:13 dshr Exp $
+ */
 
 /*
 
@@ -28,6 +29,9 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.daemon;
+import java.io.IOException;
 
 /**
  * This interface is implemented by the generic LOCKSS daemon code.

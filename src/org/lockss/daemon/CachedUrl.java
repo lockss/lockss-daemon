@@ -1,8 +1,6 @@
-package org.lockss.daemon;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
-import java.util.Properties;
+/*
+ * $Id: CachedUrl.java,v 1.4 2002-07-09 13:40:13 dshr Exp $
+ */
 
 /*
 
@@ -31,6 +29,12 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.daemon;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 /**
  * This interface is used by the crawler and by the proxy.  It
@@ -100,8 +104,7 @@ public interface CachedUrl {
 
     /**
      * Return an <code>InputStream</code> object which accesses the
-     * object being cached rather than the object in the cache (i.e.
-     * force a cache miss).
+     * object being cached rather than the object in the cache.
      * @return an <code>InputStream</code> object from which the contents of
      *         the original object being cached can be read.
      */

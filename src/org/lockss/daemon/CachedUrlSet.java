@@ -1,6 +1,6 @@
-package org.lockss.daemon;
-import java.util.Enumeration;
-import java.security.MessageDigest;
+/*
+ * $Id: CachedUrlSet.java,v 1.2 2002-07-09 13:40:13 dshr Exp $
+ */
 
 /*
 
@@ -29,6 +29,10 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.daemon;
+import java.util.Enumeration;
+import java.security.MessageDigest;
 
 /**
  * This interface is implemented by plug-ins for the LOCKSS daemons.
