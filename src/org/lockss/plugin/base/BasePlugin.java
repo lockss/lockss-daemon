@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.9 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: BasePlugin.java,v 1.10 2003-08-27 23:19:16 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public abstract class BasePlugin implements Plugin {
       String titleSpec[] = titleSpecs[tix];
       String title = titleSpec[0];
       Configuration config = ConfigManager.newConfiguration();
-      for (int pix = 1; pix < titleSpecs.length; pix += 2) {
+      for (int pix = 1; pix < titleSpec.length; pix += 2) {
 	String key = titleSpec[pix];
 	String val = titleSpec[pix + 1];
 	config.put(key, val);
