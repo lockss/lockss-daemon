@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.2 2002-12-19 01:33:03 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.3 2002-12-31 00:15:07 aalto Exp $
  */
 
 /*
@@ -48,24 +48,36 @@ public class TestSystemMetrics extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    metrics = SystemMetrics.getSystemMetrics();
+    metrics = new SystemMetrics();
+    configHashParams(SystemMetrics.DEFAULT_HASH_DURATION,
+                     SystemMetrics.DEFAULT_HASH_STEP);
   }
 
   public void testHashEstimation() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
+    hasher.setHashStepDelay(10);
     long startTime = TimeBase.nowMs();
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
     long endTime = TimeBase.nowMs();
     assertTrue(estimate > 0);
-    assertTrue(endTime - startTime > SystemMetrics.HASH_TEST_DURATION);
+    //XXX fix using simulated time
+    assertTrue(endTime - startTime > (100000/SystemMetrics.DEFAULT_HASH_STEP));
   }
 
   public void testEstimationCaching() throws IOException {
     MockCachedUrlSetHasher hasher = new MockCachedUrlSetHasher(10000);
+    hasher.setHashStepDelay(10);
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
     hasher = new MockCachedUrlSetHasher(10);
     int estimate2 = metrics.getBytesPerMsHashEstimate(hasher, new MockMessageDigest());
     assertEquals(estimate, estimate2);
   }
 
+  public static void configHashParams(int duration, int step)
+      throws IOException {
+    String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration;
+    String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + step;
+    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
+      FileUtil.urlOfString(s2)));
+  }
 }

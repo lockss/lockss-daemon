@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetHasher.java,v 1.3 2002-12-19 01:28:40 aalto Exp $
+ * $Id: MockCachedUrlSetHasher.java,v 1.4 2002-12-31 00:15:07 aalto Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
   long duration;
   int bytes;
   Error toThrow;
+  int hashDelay = 0;
 
   public MockCachedUrlSetHasher(int numbytes) {
     this.bytes = numbytes;
@@ -63,6 +64,11 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
     if (finished()) {
       return 0;
     }
+    if (hashDelay>0) {
+      try {
+        Thread.sleep(hashDelay);
+      } catch (InterruptedException ex) { }
+    }
     numBytes = Math.max(1, Math.min(bytes, numBytes));
     bytes -= numBytes;
     return numBytes;
@@ -74,6 +80,10 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
 
   public long getBytesLeft() {
     return bytes;
+  }
+
+  public void setHashStepDelay(int ms) {
+    hashDelay = ms;
   }
 
   public void throwThis(Error e) {

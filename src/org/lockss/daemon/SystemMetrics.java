@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.2 2002-12-30 23:04:29 tal Exp $
+ * $Id: SystemMetrics.java,v 1.3 2002-12-31 00:15:07 aalto Exp $
  */
 
 /*
@@ -42,12 +42,25 @@ import java.security.MessageDigest;
  * as hash speed estimates.
  */
 public class SystemMetrics {
-  static final int HASH_TEST_DURATION = 1000;
-  static final int HASH_TEST_BYTE_STEP = 1024;
-  static final int MIN_BYTES_TO_HASH = 100;
+  /**
+   * Configuration parameter name for duration, in ms, for which the hash test
+   * should run.
+   */
+  public static final String PARAM_HASH_TEST_DURATION =
+      Configuration.PREFIX + "hashtest.duration";
+  /**
+   * Configuration parameter name for the number of bytes per step in the hash
+   * test.
+   */
+  public static final String PARAM_HASH_TEST_BYTE_STEP =
+      Configuration.PREFIX + "hashtest.bytestep";
+  static final int DEFAULT_HASH_DURATION = 1000;
+  static final int DEFAULT_HASH_STEP = 1024;
+
 
   private static SystemMetrics metrics = null;
   private static Hashtable estimateTable;
+  private static Logger logger = Logger.getLogger("SystemMetrics");
 
   /**
    * Static factory method for the singleton.
@@ -60,7 +73,7 @@ public class SystemMetrics {
     return metrics;
   }
 
-  private SystemMetrics() {
+  SystemMetrics() {
     estimateTable = new Hashtable();
   }
 
@@ -80,18 +93,33 @@ public class SystemMetrics {
       long timeTaken = 0;
       long bytesHashed = 0;
       boolean earlyFinish = false;
-      long startTime = TimeBase.nowMs();
-      Deadline deadline = Deadline.in(HASH_TEST_DURATION);
-      while (!deadline.expired()) {
-        if (!hasher.finished()) {
-          bytesHashed += hasher.hashStep(HASH_TEST_BYTE_STEP);
-        } else {
-          timeTaken = TimeBase.nowMs() - startTime;
-          earlyFinish = true;
+      int hashDuration = -1;
+      int hashStep = -1;
+      try {
+        hashDuration =
+            Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_DURATION));
+        hashStep =
+            Integer.parseInt(Configuration.getParam(PARAM_HASH_TEST_BYTE_STEP));
+      } catch (NumberFormatException nfe) {
+        if (hashDuration==-1) {
+          logger.error("Couldn't get "+PARAM_HASH_TEST_DURATION+" from Configuration");
+          hashDuration = DEFAULT_HASH_DURATION;
+        }
+        if (hashStep==-1) {
+          logger.error("Couldn't get "+PARAM_HASH_TEST_BYTE_STEP+" from Configuration");
+          hashStep = DEFAULT_HASH_STEP;
         }
       }
-      if (!earlyFinish) {
-        timeTaken = TimeBase.nowMs() - startTime;
+
+      long startTime = TimeBase.nowMs();
+      Deadline deadline = Deadline.in(hashDuration);
+      while (!deadline.expired() && !hasher.finished()) {
+        bytesHashed += hasher.hashStep(hashStep);
+      }
+      timeTaken = TimeBase.nowMs() - startTime;
+      if (timeTaken==0) {
+        logger.error("Test finished in zero time: using bytesHashed estimate.");
+        return (int)bytesHashed;
       }
       estimate = new Integer((int)(bytesHashed / timeTaken));
       estimateTable.put(digest.getAlgorithm(), estimate);
