@@ -4,7 +4,7 @@
 PROP_URL_LIST="../lockss.txt local.txt"
 
 JAVA_LIB=${PROJECT_DIR}/lockss-gamma/lib
-JAVA_LIB_LIST="org.mortbay.jetty.jar org.mortbay.tools.jar lockss.jar lockss-test.jar commons-collections.jar gnu-regexp-1.1.4.jar"
+JAVA_LIB_LIST="castor-0.9.4.1-xml.jar xercesImpl.jar xmlParserAPIs.jar org.mortbay.jetty.jar org.mortbay.tools.jar lockss.jar lockss-test.jar commons-collections.jar gnu-regexp-1.1.4.jar"
 for A in ${JAVA_LIB_LIST}
 do
 	CLASSPATH=${CLASSPATH}:${JAVA_LIB}/${A}
