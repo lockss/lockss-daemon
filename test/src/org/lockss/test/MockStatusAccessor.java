@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.2 2003-03-13 03:08:01 troberts Exp $
+ * $Id: MockStatusAccessor.java,v 1.3 2003-03-13 03:17:01 aalto Exp $
  */
 
 /*
@@ -31,7 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.test;
+
 import java.util.*;
+import org.lockss.daemon.status.*;
 
 public class MockStatusAccessor implements StatusAccessor {
   private boolean requiresKey = false;
