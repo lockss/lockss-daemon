@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlRule.java,v 1.4 2004-08-02 03:50:15 tlipkis Exp $
+ * $Id: TestCrawlRules.java,v 1.1 2004-08-09 02:57:01 tlipkis Exp $
  */
 
 /*
@@ -43,13 +43,13 @@ import org.lockss.test.*;
  * This is the test class for org.lockss.daemon.CrawlRule
  */
 
-public class TestCrawlRule extends LockssTestCase {
+public class TestCrawlRules extends LockssTestCase {
   static final int incl = CrawlRules.RE.MATCH_INCLUDE;
   static final int excl = CrawlRules.RE.MATCH_EXCLUDE;
   static final int notincl = CrawlRules.RE.NO_MATCH_INCLUDE;
   static final int notexcl = CrawlRules.RE.NO_MATCH_EXCLUDE;
 
-  public TestCrawlRule(String msg){
+  public TestCrawlRules(String msg){
     super(msg);
   }
 
@@ -194,7 +194,7 @@ public class TestCrawlRule extends LockssTestCase {
     try {
       CrawlRule cr = new CrawlRules.REMatchRange("(.*)",
 						 CrawlRules.RE.MATCH_INCLUDE,
-						 "aaa", null);
+						  null, "aaa");
       fail("CrawlRules.RE with null RE should throw");
     } catch (NullPointerException e) {
     }
@@ -237,7 +237,18 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issue27/bar"));
   }
 
-  public void testNullMatchSet() throws LockssRegexpException {
+  public void testMatchIntRangeIllegal() throws Exception {
+    CrawlRule cr =
+      new CrawlRules.REMatchRange("/issue(.*)",
+				  CrawlRules.RE.MATCH_INCLUDE_ELSE_EXCLUDE,
+				  17, 26);
+    assertEquals(CrawlRule.EXCLUDE, cr.match("no/match"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("empty/issue/bar"));
+    assertEquals(CrawlRule.INCLUDE, cr.match("foo/issue18"));
+    assertEquals(CrawlRule.EXCLUDE, cr.match("foo/issueNaN"));
+  }
+
+  public void testMatchNullSet() throws LockssRegexpException {
     try {
       CrawlRule cr = new CrawlRules.REMatchSet("(.*)",
 					       CrawlRules.RE.MATCH_INCLUDE,
@@ -259,6 +270,4 @@ public class TestCrawlRule extends LockssTestCase {
     assertEquals(CrawlRule.INCLUDE, cr.match("/issue/two/bar"));
     assertEquals(CrawlRule.EXCLUDE, cr.match("/issue/frog/bar"));
   }
-
 }
-

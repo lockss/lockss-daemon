@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.15 2004-07-13 00:34:42 dcfok Exp $
+ * $Id: TestCrawlerImpl.java,v 1.16 2004-08-09 02:57:02 tlipkis Exp $
  */
 
 /*
@@ -69,10 +69,6 @@ public class TestCrawlerImpl extends LockssTestCase {
 
   public static Class testedClasses[] = {
     org.lockss.crawler.CrawlerImpl.class
-  };
-
-  public static Class prerequisites[] = {
-    TestCrawlRule.class
   };
 
   public void setUp() throws Exception {
