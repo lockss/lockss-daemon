@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.126 2005-01-04 02:47:34 tlipkis Exp $
+ $Id: build.xml,v 1.127 2005-01-10 06:23:34 smorabito Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -60,6 +61,7 @@ Args:
   -Dversion=true           Include version info in javadoc.
   -Dmock=pack/age          Specify package for generate-null-mock, 
                               generate-unsupported-mock
+  -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
   -Dsign-keystore=path     Path to keystore to use when signing plugin JARs.
   -Dsign-alias=alias       Alias to use when signing loadable plugin JARs.
   -Dsign-keypass=pass      Keystore password to use when signing plugin JARs.
@@ -745,7 +747,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 	  description="Generate and optionally sign a loadable plugin 
 	               JAR file for a single plugin">
     <!-- relies on the properties: plugin-jarfile, plugin-path,
-	 and plugin-file -->
+	 and plugin-file.  The property titledb is optional. -->
 
     <mkdir dir="${plugins.dir}" />
     <condition property="sign.jar.file" value="true" >
@@ -757,8 +759,18 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
       </and>
     </condition>
 
+    <!-- copy the titledb file, if needed, so it can be included at the
+         top level of the plugin JAR file. -->
+    <if>
+      <isset property="titledb" />
+      <then>
+	<copy file="${titledb}" tofile="${classes}/titledb.xml" />
+      </then>
+    </if>
+
     <jar destfile="${plugins.dir}/${plugin-jarfile}">
       <fileset dir="${classes}">
+	<include name="titledb.xml" if="titledb"/>
 	<include name="${plugin-path}/*.class" />
 	<include name="${plugin-path}/*.xml" />
       </fileset>
@@ -768,6 +780,14 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 	</section>
       </manifest>
     </jar>
+
+    <!-- clean up from titledb copy -->
+    <if>
+      <isset property="titledb" />
+      <then>
+	<delete file="${classes}/${titledb-file}" />
+      </then>      
+    </if>
 
     <if>
       <isset property="sign.jar.file" />

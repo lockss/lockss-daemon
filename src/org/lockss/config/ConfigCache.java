@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.5 2004-10-22 07:01:59 tlipkis Exp $
+ * $Id: ConfigCache.java,v 1.6 2005-01-10 06:23:34 smorabito Exp $
  */
 
 /*
@@ -88,9 +88,11 @@ public class ConfigCache {
       try {
 	if (UrlUtil.isHttpUrl(url)) {
 	  cf = new HTTPConfigFile(url);
+	} else if (UrlUtil.isJarUrl(url)) {
+	  cf = new JarConfigFile(url);
 	} else {
 	  cf = new FileConfigFile(url);
-	}	
+	} 
 	// ensure the file is loaded
 	if (!cf.reload()) {
 	  log.warning("Configuration file not loaded: " + url);

@@ -7,14 +7,13 @@
 from sys import argv, exit
 from getpass import getpass
 from getopt import getopt, GetoptError
-from os import path, environ, popen, getcwd
-import os
+from os import path, environ, popen, getcwd, sep
 
 # Constants
 BUILD_ONLY = 0
 BUILD_AND_SIGN = 1
 
-validArgs = ["help", "nosign", "jar=", "plugin=",
+validArgs = ["help", "nosign", "titledb=", "jar=", "plugin=",
              "alias=", "keystore=", "password="]
 args = {}
 
@@ -40,12 +39,15 @@ if not path.isdir(pluginSrc):
 # By default, the mode is to build and sign plugins.
 mode = BUILD_AND_SIGN
 
+# Default: no build.xml
+buildXml = None
+
 ################################################################################
 # Function definitions
 #
 def usage(help):
     """ Print usage information """
-    print "Usage: genplugin [--help] [--nosign] [--jar <jarname>] \\\n \
+    print "Usage: genplugin [--help] [--nosign] [--jar <jarname>] [--titledb <file>]\\\n \
 		 [--plugin <plugin>] [--alias <alias>] [--keystore <keystore>] \\\n \
 		 [--password <password>]"
     if (help):
@@ -54,10 +56,12 @@ def usage(help):
 
 Used in all cases:
  jar          The name of the JAR file to create.
- plugin       The full path of the plugin class or XML file from the
-	      source directory, complete with extension, in the form
-	      "path/to/plugin/foo/FooPlugin.class" or
-	      "path/to/plugin/foo/FooPlugin.xml" (absolute or relative path).
+ plugin       The full path of the plugin class or XML file,
+              complete with extension, in the form
+	      "../path/to/FooPlugin.class" or
+	      "/path/to/FooPlugin.xml" (absolute or relative path).
+ titledb      (Optional) Full or relative path to the title
+              DB XML file to bundle.
 
 Only used if --nosign is not set:
  alias        The alias to use when signing the jar.
@@ -74,7 +78,7 @@ def common_path(a, b):
     if  len(prefix) == len(a):
         return prefix
     else:
-        lastsep = (prefix.rfind(os.sep)) + 1
+        lastsep = (prefix.rfind(sep)) + 1
         return prefix[0:lastsep]    
     
 def get_plugin_info(plugin):
@@ -83,11 +87,11 @@ def get_plugin_info(plugin):
     the plugin file, i.e. given '/path/to/src/foo/bar/BazPlugin.xml',
     return ('foo/bar', 'BazPlugin.xml') """
 
-    pluginSrc = path.join(environ['PLUGIN_HOME'], 'src') + os.sep
-    pluginPath = path.abspath(plugin)
-    commonPath = common_path(pluginSrc, pluginPath)
+    pSrc = path.join(environ['PLUGIN_HOME'], 'src') + sep
+    pPath = path.abspath(plugin)
+    commonPath = common_path(pSrc, pPath)
 
-    pluginFile = pluginPath[len(commonPath):]
+    pluginFile = pPath[len(commonPath):]
 
     return path.split(pluginFile)
 
@@ -108,6 +112,15 @@ def prompt_for_missing_args():
     if not path.isfile(args["plugin"]):
         print("Plugin file '%s' does not exist, can't continue" % args["plugin"])
         exit(1)
+        
+    while not args.has_key("titledb"):
+        args["titledb"] = raw_input("Title database file to bundle (if any): ")
+        if not args.has_key("titledb") or len(args["titledb"] == 0):
+            break
+        if not path.isfile(args["titledb"]):
+            print("Warning: %s is not a file!" % args["titledb"])
+            args.pop("titledb")
+            continue
 
     if mode == BUILD_AND_SIGN:
         while not args.has_key("alias") or len(args["alias"]) == 0:
@@ -126,35 +139,37 @@ def prompt_for_missing_args():
 #
 # Parse passed-in command-line arguments.
 #
-def parse_options(argv):
+def parse_options(options):
     """ Parse command-line options """
     global mode
     
-    if len(argv) == 0:
+    if len(options) == 0:
         print "For help, use the --help option."
 
-    (opts, vals) = getopt(argv, None, validArgs)
+    (opts, vals) = getopt(options, None, validArgs)
 
     if len(vals) > 0:
         usage(0)
         exit(1)
 
-    for (opt, arg) in opts:
+    for (opt, val) in opts:
         if opt == "--help":
             usage(1)
             exit()
         elif opt == "--nosign":
             mode = BUILD_ONLY
         elif opt == "--jar":
-            args["jar"] = arg
+            args["jar"] = val
         elif opt == "--plugin":
-            args["plugin"] = arg
+            args["plugin"] = val
+        elif opt == "--titledb":
+            args["titledb"] = val
         elif opt == "--alias":
-            args["alias"] = arg
+            args["alias"] = val
         elif opt == "--password":
-            args["password"] = arg
+            args["password"] = val
         elif opt == "--keystore":
-            args["keystore"] = arg
+            args["keystore"] = val
 
 #
 # Search up the tree until the 'build.xml' file is found, and call
@@ -162,7 +177,6 @@ def parse_options(argv):
 #
 def run_ant(command):
     """ Run ANT, print the output if there is error. """
-
     child = popen(antBin + " -f " + buildXml + " " + command)
     output = child.read()
     err = child.close()
@@ -179,10 +193,10 @@ def find_build_xml():
     path_elements =  getcwd().split("/")
 
     while len(path_elements) > 1:
-        file = "/".join(path_elements) + "/" + "build.xml";
-        if path.exists(file) and path.isfile(file):
-            print "Using build xml file " + file
-            return file
+        f = "/".join(path_elements) + "/" + "build.xml";
+        if path.exists(f) and path.isfile(f):
+            print "Using build xml file " + f
+            return f
         else:
             path_elements = path_elements[:len(path_elements) - 1]
 
@@ -193,7 +207,7 @@ def find_build_xml():
 # Build jar and optionally sign
 #
 def gen_plugin():
-    """ Generate and sign an plugin JAR"""
+    """ Generate and sign an plugin JAR """
     global mode
     
     try:
@@ -201,7 +215,7 @@ def gen_plugin():
     except AttributeError:
         print "Error while trying to parse input."
         exit(1)
-
+        
     print ("Building plugin %s..." % args["jar"])
 
     command = "build-plugin" + \
@@ -209,13 +223,15 @@ def gen_plugin():
               " -Dplugin-path=" + plugin_path + \
               " -Dplugin-file=" + plugin
 
+    if args.has_key("titledb"):
+        command = command + " -Dtitledb=" + args["titledb"]
+        
     if mode == BUILD_AND_SIGN:
         command = command + \
-              " -Dsign-alias=" + args["alias"] + \
-              " -Dsign-keystore=" + args["keystore"] + \
-              " -Dsign-keypass=\'" + args["password"] + "\'" \
-              " -Dsign-storepass=\'" + args["password"] + "\'"
-
+                  " -Dsign-alias=" + args["alias"] + \
+                  " -Dsign-keystore=" + args["keystore"] + \
+                  " -Dsign-keypass=\'" + args["password"] + "\'" \
+                  " -Dsign-storepass=\'" + args["password"] + "\'"
     err = run_ant(command)
     if not err:
         if mode == BUILD_ONLY:
@@ -225,9 +241,8 @@ def gen_plugin():
 
 def main():
     """ Main entry point """
-    global mode
+    # Find the build.xml file
     global buildXml
-
     buildXml = find_build_xml()
 
     if not buildXml:

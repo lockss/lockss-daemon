@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.124 2005-01-07 22:05:36 smorabito Exp $
+ * $Id: PluginManager.java,v 1.125 2005-01-10 06:23:22 smorabito Exp $
  */
 
 /*
@@ -908,7 +908,7 @@ public class PluginManager
       ((DefinablePlugin)xmlPlugin).initPlugin(theDaemon, pluginName, loader);
       foundXmlPlugin = true;
     } catch (Exception ex) {
-      log.debug3(pluginName + ": XML definition not found on classpath.");
+      log.debug3(pluginName + ": XML definition not found on classpath: " + ex);
     }
 
     // If both are found, decide which one to favor.
@@ -1569,9 +1569,10 @@ public class PluginManager
 	      }
 
 	      // Load the plugin classes
-	      LoadablePluginClassLoader pluginLoader = null;
+	      ClassLoader pluginLoader = null;
 	      try {
-		pluginLoader = new LoadablePluginClassLoader(new URL[] { blessedJar.toURL() });
+		pluginLoader =
+		  new URLClassLoader(new URL[] { blessedJar.toURL() });
 	      } catch (MalformedURLException ex) {
 		log.error("Malformed URL exception attempting to create " +
 			  "classloader for plugin JAR " + blessedJar);
@@ -1666,6 +1667,10 @@ public class PluginManager
       pluginCus.put(key, info.getCuUrl());
       setPlugin(key, info.getPlugin());
     }
+
+    // Add the JAR's bundled titledb config (if any)
+    // to the ConfigManager.
+    configMgr.addTitleDbConfigFrom(classloaderMap.values());
 
     // Cleanup as a hint to GC.
     tmpMap.clear();

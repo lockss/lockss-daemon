@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.9 2005-01-06 02:38:50 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.10 2005-01-10 06:23:34 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.util.*;
+import java.net.URL;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -105,6 +106,7 @@ public class ConfigManager implements LockssManager {
   public static String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
   public static String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
   public static String CONFIG_FILE_AU_CONFIG = "au.txt";
+  public static String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
@@ -129,7 +131,8 @@ public class ConfigManager implements LockssManager {
 
   private List configChangedCallbacks = new ArrayList();
 
-  private List configUrlList;	// list of urls
+  private List configUrlList;	// list of config file urls
+  private List titledbUrlList;  // list of titledb JAR urls
   private String groupName;     // daemon group name
 
   private String recentLoadError;
@@ -162,6 +165,7 @@ public class ConfigManager implements LockssManager {
     if (urls != null) {
       configUrlList = new ArrayList(urls);
     }
+    this.titledbUrlList = new ArrayList();
     this.groupName = groupName;
     registerConfigurationCallback(Logger.getConfigCallback());
   }
@@ -432,6 +436,7 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     initCacheConfig(newConfig);
+    List loadedTitleDbFiles = loadTitleDbConfigInto(newConfig);
     List loadedCacheFiles = loadCacheConfigInto(newConfig);
     copyPlatformParams(newConfig);
     newConfig.seal();
@@ -444,7 +449,8 @@ public class ConfigManager implements LockssManager {
     }
     setCurrentConfig(newConfig);
     Configuration.Differences diffs = newConfig.differences(oldConfig);
-    logConfigLoaded(newConfig, oldConfig, diffs, loadedCacheFiles);
+    logConfigLoaded(newConfig, oldConfig, diffs,
+		    loadedCacheFiles, loadedTitleDbFiles);
     runCallbacks(newConfig, oldConfig, diffs);
     haveConfig.fill();
     return true;
@@ -461,7 +467,8 @@ public class ConfigManager implements LockssManager {
   private void logConfigLoaded(Configuration newConfig,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs,
-			       List loadedCacheFiles) {
+			       List loadedCacheFiles,
+			       List loadedTitleDbFiles) {
     StringBuffer sb = new StringBuffer("Config updated");
     if (configUrlList != null || loadedCacheFiles != null) {
       sb.append(" from ");
@@ -471,6 +478,10 @@ public class ConfigManager implements LockssManager {
       if (loadedCacheFiles != null) {
 	sb.append("; ");
 	sb.append(StringUtil.separatedString(loadedCacheFiles, ", "));
+      }
+      if (loadedTitleDbFiles != null) {
+	sb.append("; ");
+	sb.append(StringUtil.separatedString(loadedTitleDbFiles, ", "));
       }
     }
     log.info(sb.toString());
@@ -592,6 +603,28 @@ public class ConfigManager implements LockssManager {
   }
 
   /**
+   * Add a collection of bundled titledb config jar URLs to
+   * the titledbUrlList.
+   */
+  public void addTitleDbConfigFrom(Collection classloaders) {
+    if (classloaders.isEmpty()) return;
+
+    for (Iterator it = classloaders.iterator(); it.hasNext(); ) {
+      ClassLoader cl = (ClassLoader)it.next();
+      URL titleDbUrl = cl.getResource(CONFIG_FILE_BUNDLED_TITLE_DB);
+      if (titleDbUrl != null) {
+	titledbUrlList.add(titleDbUrl);
+      }
+    }
+    // Force a config reload -- this is required to make the bundled
+    // title configs immediately available, otherwise they will not be
+    // available until the next config reload.
+    if (handlerThread != null) {
+      handlerThread.forceReload();
+    }
+  }
+
+  /**
    * Register a {@link Configuration.Callback}, which will be called
    * whenever the current configuration has changed.  If a configuration is
    * present when a callback is registered, the callback will be called
@@ -674,6 +707,38 @@ public class ConfigManager implements LockssManager {
       }
     }
     return res;
+  }
+
+  /** Load the current list of bundled TitleDB config files into the
+      given config object.  This will <em>not</em> overwrite any keys
+      in the config object.  */
+  List loadTitleDbConfigInto(Configuration config) {
+    List res = new ArrayList();
+    for (Iterator iter = titledbUrlList.iterator(); iter.hasNext(); ) {
+      URL url = (URL)iter.next();
+      Configuration titledb = readTitledbConfigFile(url);
+      config.copyFromNonDestructively(titledb);
+      res.add(url.toString());
+    }
+    return res;
+  }
+
+  /**
+   * @param url The Jar URL of a bundled title db file.
+   * @return Configuration with parameters from the bundled file,
+   *         or an empty configuration if it could not be loaded.
+   */
+  public Configuration readTitledbConfigFile(URL url) {
+    log.debug2("Loading bundled titledb from URL: " + url);
+    try {
+      ConfigFile cf = configCache.get(url.toString());
+      if (cf != null) {
+	return cf.getConfiguration();
+      }
+    } catch (IOException ex) {
+      log.warning("Unable to load bundled titledb: " + ex);
+    }
+    return EMPTY_CONFIGURATION;
   }
 
   /** Read the named local cache config file from the previously determined

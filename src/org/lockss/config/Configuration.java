@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.6 2005-01-04 02:49:45 tlipkis Exp $
+ * $Id: Configuration.java,v 1.7 2005-01-10 06:23:33 smorabito Exp $
  */
 
 /*
@@ -161,12 +161,25 @@ public abstract class Configuration {
     return copy;
   }
 
-  /** Copy contents of the argument into this.
+  /** Copy contents of the argument into this config.  Duplicate
+   *  keys will be overwritten.
    */
   public void copyFrom(Configuration other) {
     for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       put(key, other.get(key));
+    }
+  }
+
+  /** Copy contents of the argument into this config.  Duplicate keys
+   *  will <em>not</em> be overwritten.
+   */
+  public void copyFromNonDestructively(Configuration other) {
+    for (Iterator iter = other.keyIterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      if (!containsKey(key)) {
+	put(key, other.get(key));
+      }
     }
   }
 
