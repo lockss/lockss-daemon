@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.4 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.5 2004-10-06 04:45:58 tlipkis Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class LcapDatagramRouter
 
   static Logger log = Logger.getLogger("Router");
 
+  private boolean enabled = LcapDatagramComm.DEFAULT_ENABLED;
   private LcapDatagramComm comm;
   private PollManager pollMgr;
   private IdentityManager idMgr;
@@ -110,7 +111,9 @@ public class LcapDatagramRouter
 				      processIncomingMessage(rd);
 				    }
 				  });
-    startBeacon();
+    if (enabled) {
+      startBeacon();
+    }
   }
 
   public void stopService() {
@@ -121,6 +124,8 @@ public class LcapDatagramRouter
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
+    enabled = config.getBoolean(LcapDatagramComm.PARAM_ENABLED,
+				LcapDatagramComm.DEFAULT_ENABLED);
     fwdRateLimiter =
       RateLimiter.getConfiguredRateLimiter(config, fwdRateLimiter,
 					   PARAM_FWD_PKTS_PER_INTERVAL,
@@ -136,7 +141,9 @@ public class LcapDatagramRouter
     if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
       beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL,
 					      DEFAULT_BEACON_INTERVAL);
-      startBeacon();
+      if (enabled) {
+	startBeacon();
+      }
     }
     probAddPartner = config.getPercentage(PARAM_PROB_PARTNER_ADD,
 					  DEFAULT_PROB_PARTNER_ADD);
@@ -437,6 +444,7 @@ public class LcapDatagramRouter
 	  // no action - expected when stopping
 	} catch (Exception e) {
 	  log.error("Unexpected exception caught in Beacon thread", e);
+	  goOn = false;
 	}
       }
       beaconThread = null;

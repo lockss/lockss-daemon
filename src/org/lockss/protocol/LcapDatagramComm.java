@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.3 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.4 2004-10-06 04:45:58 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,9 @@ public class LcapDatagramComm
     Configuration.PREFIX + "platform.localIPs";
 
   static final String PREFIX = Configuration.PREFIX + "comm.";
+  static final String PARAM_ENABLED = PREFIX + "enabled";
+  static final boolean DEFAULT_ENABLED = true;
+
   static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
   static final String PARAM_MULTI_PORT = PREFIX + "multicast.port";
   static final String PARAM_MULTI_VERIFY = PREFIX + "multicast.verify";
@@ -78,6 +81,7 @@ public class LcapDatagramComm
 
   static Logger log = Logger.getLogger("Comm");
 
+  private boolean enabled = DEFAULT_ENABLED;
   private IdentityManager idMgr;
   private OneShot configShot = new OneShot();
   private LRUMap multicastVerifyMap = new LRUMap(100);
@@ -125,9 +129,11 @@ public class LcapDatagramComm
   public void startService() {
     super.startService();
     idMgr = getDaemon().getIdentityManager();
-    start();
-    getDaemon().getStatusService().registerStatusAccessor("CommStats",
-							  new Status());
+    if (enabled) {
+      start();
+      getDaemon().getStatusService().registerStatusAccessor("CommStats",
+							    new Status());
+    }
   }
 
   /**
@@ -159,6 +165,10 @@ public class LcapDatagramComm
   void configure(Configuration config,
 		 Configuration prevConfig,
 		 Configuration.Differences changedKeys) {
+    enabled = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
+    if (!enabled) {
+      return;
+    }
     String groupName = null;
     String uniSendToName = null;
     try {
