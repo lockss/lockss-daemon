@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.7 2004-01-13 01:33:35 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.8 2004-01-13 10:20:25 tlipkis Exp $
  */
 
 /*
@@ -405,6 +405,9 @@ public class HashSvcSchedImpl
 		  );
 
 
+  private static final NumberFormat fmt_2dec = new DecimalFormat("0.00");
+  private static final BigInteger big1000 = BigInteger.valueOf(1000);
+
   private class Status implements StatusAccessor {
 
     public String getDisplayName() {
@@ -499,18 +502,19 @@ public class HashSvcSchedImpl
 					  ColumnDescriptor.TYPE_TIME_INTERVAL,
 					  new Long(totalTime)));
       if (totalTime != 0) {
-	long bpms =
-	  totalBytesHashed.divide(BigInteger.valueOf(totalTime)).intValue();
-	if (bpms < (100 * Constants.SECOND)) {
-	  res.add(new StatusTable.SummaryInfo("Bytes/ms",
-					      ColumnDescriptor.TYPE_INT,
-					      new Long(bpms)));
+	BigInteger bigTotal = BigInteger.valueOf(totalTime);
+	long bpms = totalBytesHashed.divide(bigTotal).intValue();
+	String s;
+	if (bpms >= 100) {
+	  s = Long.toString(bpms);
 	} else {
-	  res.add(new
-		  StatusTable.SummaryInfo("Bytes/sec",
-					  ColumnDescriptor.TYPE_INT,
-					  new Long(bpms / Constants.SECOND)));
+	long bpsec =
+	  totalBytesHashed.multiply(big1000).divide(bigTotal).intValue();
+	  s = fmt_2dec.format((double)bpsec / (double)1000);
 	}
+	res.add(new StatusTable.SummaryInfo("Bytes/ms",
+					    ColumnDescriptor.TYPE_STRING,
+					    s));
       }
       return res;
     }
