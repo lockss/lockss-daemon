@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.7 2002-11-21 21:07:56 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.8 2002-11-27 20:34:18 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.lang.ref.WeakReference;
+import org.lockss.util.Logger;
 import org.lockss.util.StringUtil;
 import org.lockss.daemon.ArchivalUnit;
 import org.lockss.daemon.Configuration;
@@ -44,9 +45,18 @@ import org.apache.commons.collections.ReferenceMap;
 
 /**
  * LockssRepository is used to organize the urls being cached.
- * It keeps a memory cache of the most recently used nodes.
+ * It keeps a memory cache of the most recently used nodes as a
+ * least-recently-used map, and also caches weak references to the instances
+ * as they're doled out.  This ensures that two instances of the same node are
+ * never created, as the weak references only disappear when the object is
+ * finalized (they go to null when the last hard reference is gone, then are
+ * removed from the cache on finalize()).
  */
 public class LockssRepositoryImpl implements LockssRepository {
+  /**
+   * Configuration parameter name for Lockss cache location.
+   */
+  public static final String LOCKSS_CACHE_LOCATION_PARAM = "lockss.cache.location";
   /**
    * Name of top directory in which the urls are cached.
    */
@@ -58,83 +68,109 @@ public class LockssRepositoryImpl implements LockssRepository {
   public static final int MAX_LRUMAP_SIZE = 12;
 
   private String rootLocation;
-  private LRUMap lruMap;
+  private LRUMap nodeCache;
   private ReferenceMap refMap;
-
+  private int cacheHits = 0;
+  private int cacheMisses = 0;
+  private int refHits = 0;
+  private int refMisses = 0;
+  private static Logger logger = Logger.getLogger("LockssRepository");
 
   private LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
     if (!rootLocation.endsWith(File.separator)) {
+      // this shouldn't happen
       rootLocation += File.separator;
     }
-    lruMap = new LRUMap(MAX_LRUMAP_SIZE);
+    nodeCache = new LRUMap(MAX_LRUMAP_SIZE);
     refMap = new ReferenceMap(ReferenceMap.HARD, ReferenceMap.WEAK);
   }
 
-  public synchronized RepositoryNode getRepositoryNode(String url)
+  public RepositoryNode getNode(String url)
       throws MalformedURLException {
-    RepositoryNode node = (RepositoryNode)lruMap.get(url);
-    if (node!=null) return node;
-
-    node = (RepositoryNode)refMap.get(url);
-    if (node!=null) {
-      lruMap.put(url, node);
-      return node;
-    }
-
-    String nodeLocation = rootLocation + mapUrlToCacheLocation(url);
-    File nodeDir = new File(nodeLocation);
-    if (!nodeDir.exists() || !nodeDir.isDirectory()) {
-      return null;
-    }
-    node = new RepositoryNodeImpl(url, nodeLocation, this);
-
-    lruMap.put(url, node);
-    refMap.put(url, node);
-    return node;
+    return getNode(url, false);
   }
 
   public RepositoryNode createNewNode(String url)
       throws MalformedURLException {
-    RepositoryNode node = null;
-    node = (RepositoryNode)lruMap.get(url);
+    return getNode(url, true);
+  }
+  private synchronized RepositoryNode getNode(String url, boolean create)
+      throws MalformedURLException {
+    // check LRUMap cache for node
+    RepositoryNode node = (RepositoryNode)nodeCache.get(url);
     if (node!=null) {
+      cacheHits++;
       return node;
+    } else {
+      cacheMisses++;
     }
 
+    // check weak reference map for node
     node = (RepositoryNode)refMap.get(url);
     if (node!=null) {
-      lruMap.put(url, node);
+      refHits++;
+      nodeCache.put(url, node);
       return node;
+    } else {
+      refMisses++;
     }
 
-    String nodeLocation = rootLocation + mapUrlToCacheLocation(url);
+    String nodeLocation = mapUrlToCacheLocation(rootLocation, url);
+    if (!create) {
+      // if not creating, check for existence
+      File nodeDir = new File(nodeLocation);
+      if (!nodeDir.exists()) {
+        return null;
+      }
+      if (!nodeDir.isDirectory()) {
+        logger.error("Cache file not a directory: "+nodeLocation);
+        throw new LockssRepository.RepositoryStateException("Invalid cache file.");
+      }
+    }
     node = new RepositoryNodeImpl(url, nodeLocation, this);
-    lruMap.put(url, node);
+
+    // add to node cache and weak reference cache
+    nodeCache.put(url, node);
     refMap.put(url, node);
     return node;
   }
 
+  /**
+   * Removes a weak reference from the reference map.  Called by finalize()
+   * of {@link RepositoryNodeImpl}.
+   * @param url the reference key url
+   */
   synchronized void removeReference(String url) {
     refMap.remove(url);
   }
 
+  int getCacheHits() { return cacheHits; }
+  int getCacheMisses() { return cacheMisses; }
+  int getRefHits() { return refHits; }
+  int getRefMisses() { return refMisses; }
+
   /**
    * mapUrlToCacheFileName() is the name mapping method used by the
-   * LockssRepository. This maps a given url to a cache file location.
-   * It creates directories under a CACHE_ROOT location which mirror the
-   * html string. So 'http://www.journal.org/issue1/index.html' would be
-   * cached in the file:
-   * CACHE_ROOT/www.journal.org/http/issue1/index.html
+   * LockssRepository. This maps a given url to a cache file location, using
+   * the cache root as the base.  It creates directories under a CACHE_ROOT_NAME
+   * directory which mirror the html string. So
+   * 'http://www.journal.org/issue1/index.html' would be cached in the file:
+   * cacheRoot/CACHE_ROOT_NAME/www.journal.org/http/issue1/index.html
+   * @param cacheRoot the file root of the cache
    * @param urlStr the url to translate
    * @return the file cache location
    * @throws java.net.MalformedURLException
    */
-  public static String mapUrlToCacheLocation(String urlStr)
+  public static String mapUrlToCacheLocation(String cacheRoot, String urlStr)
       throws MalformedURLException {
+    int totalLength = cacheRoot.length() + urlStr.length();
     URL url = new URL(urlStr);
-    StringBuffer buffer = new StringBuffer(CACHE_ROOT_NAME);
-    buffer.append(File.separator);
+    StringBuffer buffer = new StringBuffer(totalLength);
+    buffer.append(cacheRoot);
+    if (!cacheRoot.endsWith(File.separator)) {
+      buffer.append(File.separator);
+    }
     buffer.append(url.getHost());
     buffer.append(File.separator);
     buffer.append(url.getProtocol());
@@ -149,18 +185,24 @@ public class LockssRepositoryImpl implements LockssRepository {
    * @return a repository for the archive
    */
   public static LockssRepository repositoryFactory(ArchivalUnit au) {
-    StringBuffer buffer = new StringBuffer(Configuration.PREFIX);
-    buffer.append("cache.location");
-    String rootLocation = Configuration.getParam(buffer.toString(), "/tmp");
-    buffer = new StringBuffer(rootLocation);
+    String rootLocation = Configuration.getParam(Configuration.PREFIX +
+        LOCKSS_CACHE_LOCATION_PARAM);
+    if (rootLocation==null) {
+      logger.error("Couldn't get "+LOCKSS_CACHE_LOCATION_PARAM+" from Configuration");
+      throw new LockssRepository.RepositoryStateException("Couldn't load param.");
+    }
+    StringBuffer buffer = new StringBuffer(rootLocation);
     if (!rootLocation.endsWith(File.separator)) {
       buffer.append(File.separator);
     }
+    buffer.append(CACHE_ROOT_NAME);
+    buffer.append(File.separator);
     buffer.append(au.getPluginId());
     if (!au.getAUId().equals("")) {
       buffer.append(File.separator);
       buffer.append(au.getAUId());
     }
+    buffer.append(File.separator);
     return new LockssRepositoryImpl(buffer.toString());
   }
 }

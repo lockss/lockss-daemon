@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.9 2002-11-23 03:40:49 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.10 2002-11-27 20:34:18 aalto Exp $
  */
 
 /*
@@ -53,16 +53,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception e) { fail("Couldn't get tempDir."); }
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     configCacheLocation(tempDirPath);
-    MockArchivalUnit mau = new MockArchivalUnit(null);
+    MockArchivalUnit mau = new MockArchivalUnit();
     repo = LockssRepositoryImpl.repositoryFactory(mau);
   }
 
-  public void testGetRepositoryEntry() throws Exception {
+  public void testGetRepositoryNode() throws Exception {
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/branch1/leaf2",
@@ -72,71 +69,83 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
 
     RepositoryNode node =
-        repo.getRepositoryNode("http://www.example.com/testDir");
+        repo.getNode("http://www.example.com/testDir");
     assertTrue(!node.hasContent());
-    node = repo.getRepositoryNode("http://www.example.com/testDir/branch1");
+    assertEquals("http://www.example.com/testDir", node.getNodeUrl());
+    node = repo.getNode("http://www.example.com/testDir/branch1");
     assertTrue(!node.hasContent());
+    assertEquals("http://www.example.com/testDir/branch1", node.getNodeUrl());
     node =
-        repo.getRepositoryNode("http://www.example.com/testDir/branch2/leaf3");
+        repo.getNode("http://www.example.com/testDir/branch2/leaf3");
     assertTrue(node.hasContent());
-    node = repo.getRepositoryNode("http://www.example.com/testDir/leaf4");
+    assertEquals("http://www.example.com/testDir/branch2/leaf3",
+                 node.getNodeUrl());
+    node = repo.getNode("http://www.example.com/testDir/leaf4");
     assertTrue(node.hasContent());
+    assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
   }
 
   public void testCaching() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
     createLeaf("http://www.example.com/testDir/leaf2", null, null);
 
+    LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
+    assertEquals(0, repoImpl.getCacheHits());
+    assertEquals(2, repoImpl.getCacheMisses());
     RepositoryNode leaf =
-        repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
-    try {
-      leaf.sealNewVersion();
-      fail("Should have thrown UnsupportedOperationException");
-    } catch (UnsupportedOperationException uoe) { }
-    leaf = repo.getRepositoryNode("http://www.example.com/testDir/leaf2");
+        repo.getNode("http://www.example.com/testDir/leaf1");
+    assertEquals(1, repoImpl.getCacheHits());
     RepositoryNode leaf2 =
-        repo.getRepositoryNode("http://www.example.com/testDir/leaf2");
-    assertEquals(leaf, leaf2);
-    try {
-      leaf.makeNewVersion();
-      TestRepositoryNodeImpl.writeToLeaf(leaf, "test stream");
-      leaf.setNewProperties(new Properties());
-      leaf2.sealNewVersion();
-    } catch (UnsupportedOperationException uoe) {
-      fail("Leaf2 couldn't finish leaf's version.");
-    }
+        repo.getNode("http://www.example.com/testDir/leaf1");
+    assertSame(leaf, leaf2);
+    assertEquals(2, repoImpl.getCacheHits());
+    assertEquals(2, repoImpl.getCacheMisses());
   }
 
   public void testWeakReferenceCaching() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
 
+    LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
     RepositoryNode leaf =
-        repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
+        repo.getNode("http://www.example.com/testDir/leaf1");
     RepositoryNode leaf2 = null;
-    for (int ii=0; ii<LockssRepositoryImpl.MAX_LRUMAP_SIZE; ii++) {
-      createLeaf("http://www.example.com/testDir/testleaf"+ii, null, null);
+    int loopSize = 1;
+    int refHits = 0;
+    // create leafs in a loop until fetching an leaf1 creates a cache miss
+    while (true) {
+      loopSize *= 2;
+      for (int ii=0; ii<loopSize; ii++) {
+        createLeaf("http://www.example.com/testDir/testleaf"+ii, null, null);
+      }
+      int misses = repoImpl.getCacheMisses();
+      refHits = repoImpl.getRefHits();
+      leaf2 = repo.getNode("http://www.example.com/testDir/leaf1");
+      if (repoImpl.getCacheMisses() == misses+1) {
+        break;
+      }
     }
-    leaf2 = repo.getRepositoryNode("http://www.example.com/testDir/leaf1");
-    assertEquals(leaf, leaf2);
+    assertSame(leaf, leaf2);
+    assertEquals(refHits+1, repoImpl.getRefHits());
   }
 
   public void testMapUrlToCacheLocation() throws MalformedURLException {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
-    String expectedStr = LockssRepositoryImpl.CACHE_ROOT_NAME +
-                         "/www.example.com/http/branch1/branch2/index.html";
+    String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
     assertEquals(expectedStr,
-                 LockssRepositoryImpl.mapUrlToCacheLocation(testStr));
+                 LockssRepositoryImpl.mapUrlToCacheLocation("root", testStr));
 
     try {
       testStr = ":/brokenurl.com/branch1/index/";
-      LockssRepositoryImpl.mapUrlToCacheLocation(testStr);
+      LockssRepositoryImpl.mapUrlToCacheLocation("root", testStr);
       fail("Should have thrown MalformedURLException");
     } catch (MalformedURLException mue) { }
   }
 
   public static void configCacheLocation(String location)
     throws IOException {
-    String s = Configuration.PREFIX + "cache.location=" + location;
+    String s = Configuration.PREFIX +
+               LockssRepositoryImpl.LOCKSS_CACHE_LOCATION_PARAM +
+               "=" + location;
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.5 2002-11-23 03:40:49 aalto Exp $
+ * $Id: LockssRepository.java,v 1.6 2002-11-27 20:34:18 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public interface LockssRepository {
    * @return an entry for the url
    * @throws java.net.MalformedURLException
    */
-  public RepositoryNode getRepositoryNode(String url) throws MalformedURLException;
+  public RepositoryNode getNode(String url) throws MalformedURLException;
 
   /**
    * Creates a new {@link RepositoryNode} for the purposes of writing a new leaf
@@ -56,5 +56,15 @@ public interface LockssRepository {
    * @throws java.net.MalformedURLException
    */
   public RepositoryNode createNewNode(String url) throws MalformedURLException;
+
+  /**
+   * Thrown when an unexpected error is encountered while caching.
+   * Typically this is a file system error.
+   */
+  public class RepositoryStateException extends RuntimeException {
+    public RepositoryStateException(String msg) {
+      super(msg);
+    }
+  }
 
 }
