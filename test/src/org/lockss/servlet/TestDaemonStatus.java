@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatus.java,v 1.4 2003-08-21 00:38:04 tlipkis Exp $
+ * $Id: TestDaemonStatus.java,v 1.5 2004-02-21 02:10:04 eaalto Exp $
  */
 
 /*
@@ -32,48 +32,87 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.io.*;
 import java.util.*;
-import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.state.*;
 import org.lockss.daemon.status.*;
-import com.meterware.servletunit.*;
+//import com.meterware.servletunit.*;
 import com.meterware.httpunit.*;
 
 /**
  * Test class for <code>org.lockss.servlet.DaemonStatus</code>
  */
-
 public class TestDaemonStatus extends LockssServletTestCase {
 
   static Logger log = Logger.getLogger("TestDaemonStatus");
 
-  private DaemonStatus ds;
+//  private DaemonStatus ds;
 
   private StatusService statSvc;
   private StatusServiceImpl ssi;
 
   protected void setUp() throws Exception {
     super.setUp();
-    ds = new DaemonStatus();
+//    ds = new DaemonStatus();
     statSvc = theDaemon.getStatusService();
     ssi = (StatusServiceImpl)statSvc;
     ssi.startService();
   }
 
   // Tests that don't need a servlet environment
+  public void testConvertDisplayString() throws Exception {
+    // test null
+    Object testObj = null;
+    assertEquals("", format(testObj, ColumnDescriptor.TYPE_STRING));
 
-  public void testConvertDisplayString() {
-    assertEquals("12", ds.convertDisplayString(new Long(12),
-					       ColumnDescriptor.TYPE_INT));
-    assertEquals("12,345,678",
-		 ds.convertDisplayString(new Long(12345678),
-					 ColumnDescriptor.TYPE_INT));
-    assertEquals("123456",
-		 ds.convertDisplayString(new Long(123456),
-					 ColumnDescriptor.TYPE_INT));
+    // test standard numbers
+    testObj = new Integer(123);
+    assertEquals("123", format(testObj, ColumnDescriptor.TYPE_INT));
+    testObj = new Float(123321);
+    assertEquals(testObj.toString(),
+                 format(testObj, ColumnDescriptor.TYPE_FLOAT));
+
+    // check proper 'big int' formatting
+    testObj = new Long(12345678);
+    assertEquals("12,345,678", format(testObj, ColumnDescriptor.TYPE_INT));
+
+    // test string
+    testObj = "test string";
+    assertEquals("test string", format(testObj, ColumnDescriptor.TYPE_STRING));
+
+    // test percentage
+    testObj = new Double(.453);
+    assertEquals("45%", format(testObj, ColumnDescriptor.TYPE_PERCENT));
+
+    // test date
+    Calendar cal = Calendar.getInstance();
+    cal.set(Calendar.YEAR, 2004);
+    cal.set(Calendar.MONTH, Calendar.JANUARY);
+    cal.set(Calendar.DATE, 1);
+    cal.set(Calendar.HOUR_OF_DAY, 15);
+    cal.set(Calendar.MINUTE, 15);
+    testObj = cal.getTime();
+    assertEquals(DaemonStatus.tableDf.format(testObj),
+                 format(testObj, ColumnDescriptor.TYPE_DATE));
+
+    // test IPAddr
+    testObj = IPAddr.getLocalHost();
+    assertEquals(IPAddr.getLocalHost().getHostAddress(),
+                 format(testObj, ColumnDescriptor.TYPE_IP_ADDRESS));
+
+    // test time interval
+    long timeInt = Constants.HOUR + Constants.MINUTE;
+    testObj = new Long(timeInt);
+    assertEquals(StringUtil.timeIntervalToString(timeInt),
+                 format(testObj, ColumnDescriptor.TYPE_TIME_INTERVAL));
+
+    // test unknown
+    testObj = "unknown string";
+    assertEquals("unknown string", format(testObj, -1));
+  }
+
+  private String format(Object obj, int type) {
+    return DaemonStatus.convertDisplayString(obj, type);
   }
 
   // Utilities for running the servlet
@@ -97,8 +136,8 @@ public class TestDaemonStatus extends LockssServletTestCase {
     return sClient.getResponse(request);
   }
 
-  /** Break the line at commas, return a map of the resulting strings
-   * broken at equals sign.  (<i>Ie</i>, name value pairs.) */
+  // Break the line at commas, return a map of the resulting strings
+  // broken at equals sign.  (<i>Ie</i>, name value pairs.)
   Map getRow(String line) {
     Map map = new HashMap();
     for (Iterator iter = StringUtil.breakAt(line, ',').iterator();
@@ -169,7 +208,7 @@ public class TestDaemonStatus extends LockssServletTestCase {
 
   public void testText() throws Exception {
     MockStatusAccessor statusAccessor =
-      MockStatusAccessor.generateStatusAccessor(colArray1, 
+      MockStatusAccessor.generateStatusAccessor(colArray1,
 						rowArray1);
     statusAccessor.setTitle("testtbl", null);
     statSvc.registerStatusAccessor("testtbl", statusAccessor);
@@ -193,7 +232,7 @@ public class TestDaemonStatus extends LockssServletTestCase {
   // test null value in rows doesn't throw
   public void testTextNull() throws Exception {
     MockStatusAccessor statusAccessor =
-      MockStatusAccessor.generateStatusAccessor(colArray1, 
+      MockStatusAccessor.generateStatusAccessor(colArray1,
 						rowArrayWithNulls);
     statSvc.registerStatusAccessor("testtbl", statusAccessor);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.30 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.31 2004-02-21 02:10:04 eaalto Exp $
  */
 
 /*
@@ -32,21 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-import java.net.*;
 import java.text.*;
 //  import com.mortbay.servlet.*;
 //  import org.mortbay.util.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 
-/** DaemonStatus servlet
+import org.w3c.dom.*;
+
+/**
+ * DaemonStatus servlet
  */
 public class DaemonStatus extends LockssServlet {
 
@@ -60,7 +60,9 @@ public class DaemonStatus extends LockssServlet {
   private String tableName;
   private String key;
 
-  private boolean html = false;
+  private boolean isText;
+  private boolean isHtml;
+  private boolean isXml;
   private StatusService statSvc;
 
   public void init(ServletConfig config) throws ServletException {
@@ -76,8 +78,22 @@ public class DaemonStatus extends LockssServlet {
     Page page = null;
     Date now = new Date();
 
+    // reset values
     PrintWriter wrtr = null;
-    html = req.getParameter("text") == null;
+    isText = false;
+    isHtml = false;
+    isXml = false;
+
+    if (req.getParameter("text") != null) {
+      // choose 'text', if present
+      isText = true;
+    } else if (req.getParameter("xml") != null) {
+      // second option is 'xml'
+      isXml = true;
+    } else {
+      // default to html
+      isHtml = true;
+    }
 
     // After resp.getWriter() has been called, throwing an exception will
     // result in a blank page, so don't call it until the end
@@ -85,11 +101,12 @@ public class DaemonStatus extends LockssServlet {
     //  (HttpResponse.sendError() calls getOutputStream(), and only one of
     //  getWriter() or getOutputStream() may be called.)
 
-    if (!html) {
+    if (!isHtml) {
       wrtr = resp.getWriter();
+      resp.setContentType(isText ? "text/html" : "text/xml");
+    } else {
+      resp.setContentType("text/html");
     }
-
-    resp.setContentType(html ? "text/html" : "text/plain");
 
     tableName = req.getParameter("table");
     key = req.getParameter("key");
@@ -100,81 +117,82 @@ public class DaemonStatus extends LockssServlet {
       key = null;
     }
 
-    if (html) {
-      page = newPage();
-
-      // all pages but index get a select box to choose a different table
-      if (!isAllTablesTable()) {
-	Block centeredBlock = new Block(Block.Center);
-	centeredBlock.add(getSelectTableForm());
-	page.add(centeredBlock);
+    if (isXml) {
+      try {
+        doXmlStatusTable(wrtr, tableName, key);
+      } catch (XmlDomBuilder.XmlDomException xde) {
+        throw new IOException("Error with XML: "+xde.toString());
       }
-
-//       page.add("<center>");
-//       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
-// 		       concatParams("text=1", req.getQueryString())));
-//       page.add("</center><br><br>");
     } else {
-      String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
-      if (vPlatform != null) {
-	vPlatform = ", cd=" + vPlatform;
-      } else {
-	vPlatform = "";
-      }
-      Date startDate = getLockssDaemon().getStartDate();
-      wrtr.println("host=" + getLcapIPAddr() +
-		   ",time=" + now.getTime() +
-		   ",up=" + TimeBase.msSince(startDate.getTime()) +
-		   ",version=" + BuildInfo.getBuildInfoString() +
-		   vPlatform);
-    }
+      // handle html or text requests
+      if (isHtml) {
+        page = newPage();
 
-    doStatusTable(page, wrtr, tableName, key);
-    if (html) {
-      page.add(getFooter());
-      page.write(resp.getWriter());
+        // all pages but index get a select box to choose a different table
+        if (!isAllTablesTable()) {
+          Block centeredBlock = new Block(Block.Center);
+          centeredBlock.add(getSelectTableForm());
+          page.add(centeredBlock);
+        }
+
+        //       page.add("<center>");
+        //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
+        // 		       concatParams("text=1", req.getQueryString())));
+        //       page.add("</center><br><br>");
+      } else {
+        String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
+        if (vPlatform != null) {
+          vPlatform = ", cd=" + vPlatform;
+        } else {
+          vPlatform = "";
+        }
+        Date startDate = getLockssDaemon().getStartDate();
+        wrtr.println("host=" + getLcapIPAddr() +
+                     ",time=" + now.getTime() +
+                     ",up=" + TimeBase.msSince(startDate.getTime()) +
+                     ",version=" + BuildInfo.getBuildInfoString() +
+                     vPlatform);
+      }
+
+      doStatusTable(page, wrtr, tableName, key);
+      if (isHtml) {
+        page.add(getFooter());
+        page.write(resp.getWriter());
+      }
     }
   }
 
-  /** Build a form with a select box that fetches a named table */
-  private Composite getSelectTableForm() {
+  // build and send an XML DOM Document of the StatusTable
+  private void doXmlStatusTable(PrintWriter wrtr, String tableName,
+                                String tableKey)
+      throws IOException, XmlDomBuilder.XmlDomException {
+    StatusTable statTable;
     try {
-      StatusTable statTable =
-	statSvc.getTable(StatusService.ALL_TABLES_TABLE, null);
-      java.util.List colList = statTable.getColumnDescriptors();
-      java.util.List rowList = statTable.getSortedRows();
-      ColumnDescriptor cd = (ColumnDescriptor)colList.get(0);
-      Select sel = new Select("table", false);
-      sel.attribute("onchange", "this.form.submit()");
-      boolean foundIt = false;
-      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
-	Map rowMap = (Map)rowIter.next();
-	Object val = rowMap.get(cd.getColumnName());
-	String display = StatusTable.getActualValue(val).toString();
-	if (val instanceof StatusTable.Reference) {
-	  StatusTable.Reference ref = (StatusTable.Reference)val;
-	  String key = ref.getTableName();
-	  // select the current table
-	  boolean isThis = tableName.equals(key);
-	  foundIt = foundIt || isThis;
-	  sel.add(display, isThis, key);
-	} else {
-	  sel.add(display, false);
-	}
-      }
-      // if not currently displaying a table in the list, select a blank entry
-      if (!foundIt) {
-	sel.add(" ", true, "");
-      }
-      Form frm = new Form(srvURL(myServletDescr(), null));
-      // use GET so user can refresh in browser
-      frm.method("GET");
-      frm.add(sel);
-      return frm;
+      statTable = statSvc.getTable(tableName, tableKey);
+      XmlStatusTable xmlTable = new XmlStatusTable(statTable);
+      Document xmlTableDoc = xmlTable.getTableDocument();
+      xmlTable.getXmlDomBuilder().serialize(xmlTableDoc, wrtr);
     } catch (Exception e) {
-      // if this fails for any reason, just don't include this form
-      log.warning("Failed to build status table selector", e);
-      return new Composite();
+      XmlDomBuilder xmlBuilder =
+          new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
+                            XmlStatusConstants.NS_URI,
+                            XmlDomBuilder.XML_VERSIONNAME);
+      Document errorDoc = xmlBuilder.createDocument();
+      org.w3c.dom.Element rootElem = xmlBuilder.createRoot(errorDoc,
+          XmlStatusConstants.ERROR);
+      if (e instanceof StatusService.NoSuchTableException) {
+        xmlBuilder.addText(rootElem, "No such table: " + e.toString());
+      } else {
+        String emsg = e.toString();
+        StringBuffer buffer = new StringBuffer("Error getting table: ");
+        buffer.append(emsg);
+        buffer.append("\n");
+        buffer.append(StringUtil.trimStackTrace(emsg,
+                                                StringUtil.stackTraceString(e)));
+        xmlBuilder.addText(rootElem, buffer.toString());
+      }
+      xmlBuilder.serialize(errorDoc, wrtr);
+      return;
     }
   }
 
@@ -186,7 +204,7 @@ public class DaemonStatus extends LockssServlet {
     try {
       statTable = statSvc.getTable(tableName, tableKey);
     } catch (StatusService.NoSuchTableException e) {
-      if (html) {
+      if (isHtml) {
 	page.add("No such table: ");
 	page.add(e.toString());
       } else {
@@ -194,7 +212,7 @@ public class DaemonStatus extends LockssServlet {
       }
       return;
     } catch (Exception e) {
-      if (html) {
+      if (isHtml) {
 	page.add("Error getting table: ");
 	String emsg = e.toString();
 	page.add(emsg);
@@ -224,7 +242,7 @@ public class DaemonStatus extends LockssServlet {
       // Make the table.  Make a narrow empty column between real columns,
       // for spacing.  Resulting table will have 2*cols-1 columns
       table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-      if (html) {
+      if (isHtml) {
 	String title = title0 + addFootnote(titleFoot);
 
 	table.newRow();
@@ -255,7 +273,7 @@ public class DaemonStatus extends LockssServlet {
     // output rows
     for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
       Map rowMap = (Map)rowIter.next();
-      if (html) {
+      if (isHtml) {
 	if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
 	  table.newRow();
 	  table.newCell("align=center colspan=" + (cols * 2 - 1));
@@ -292,7 +310,7 @@ public class DaemonStatus extends LockssServlet {
 	}
       }
     }
-    if (html && table != null) {
+    if (isHtml && table != null) {
       page.add(table);
       page.add("<br>");
       String heading = getHeading();
@@ -381,7 +399,7 @@ public class DaemonStatus extends LockssServlet {
   };
 
   // turn a value into a display string
-  String convertDisplayString(Object val, int type) {
+  public static String convertDisplayString(Object val, int type) {
     if (val == null) {
       return "";
     }
@@ -432,12 +450,57 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  String dateString(Date d) {
+  static String dateString(Date d) {
     long val = d.getTime();
     if (val == 0 || val == -1) {
       return "never";
     } else {
       return tableDf.format(d);
+    }
+  }
+
+  /**
+   * Build a form with a select box that fetches a named table
+   * @return the Composite object
+   */
+  private Composite getSelectTableForm() {
+    try {
+      StatusTable statTable =
+        statSvc.getTable(StatusService.ALL_TABLES_TABLE, null);
+      java.util.List colList = statTable.getColumnDescriptors();
+      java.util.List rowList = statTable.getSortedRows();
+      ColumnDescriptor cd = (ColumnDescriptor)colList.get(0);
+      Select sel = new Select("table", false);
+      sel.attribute("onchange", "this.form.submit()");
+      boolean foundIt = false;
+      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
+        Map rowMap = (Map)rowIter.next();
+        Object val = rowMap.get(cd.getColumnName());
+        String display = StatusTable.getActualValue(val).toString();
+        if (val instanceof StatusTable.Reference) {
+          StatusTable.Reference ref = (StatusTable.Reference)val;
+          String key = ref.getTableName();
+          // select the current table
+          boolean isThis = tableName.equals(key);
+          foundIt = foundIt || isThis;
+          sel.add(display, isThis, key);
+        } else {
+          sel.add(display, false);
+        }
+      }
+      // if not currently displaying a table in the list, select a blank entry
+      if (!foundIt) {
+        sel.add(" ", true, "");
+      }
+      Form frm = new Form(srvURL(myServletDescr(), null));
+      // use GET so user can refresh in browser
+      frm.method("GET");
+      frm.add(sel);
+      return frm;
+    } catch (Exception e) {
+      // if this fails for any reason, just don't include this form
+      log.warning("Failed to build status table selector", e);
+      return new Composite();
     }
   }
 
