@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.15 2002-11-21 20:23:45 tal Exp $
+ * $Id: Poll.java,v 1.16 2002-11-22 03:00:39 claire Exp $
  */
 
 /*
@@ -55,6 +55,11 @@ public abstract class Poll {
   static final int DEFAULT_DURATION = 6*3600*1000;
   static final int DEFAULT_VOTEDELAY = DEFAULT_DURATION/2;
   static final int DEFAULT_VOTERANGE = DEFAULT_DURATION/4;
+  static final int PS_INITING = 0;
+  static final int PS_WAIT_HASH = 1;
+  static final int PS_WAIT_VOTE = 2;
+  static final int PS_WAIT_TALLY = 3;
+  static final int PS_COMPLETE = 4;
 
   static Logger log=Logger.getLogger("Poll",Logger.LEVEL_DEBUG);
 
@@ -84,6 +89,7 @@ public abstract class Poll {
   int m_counting;          // the number of polls currently active
   long m_createTime;       // poll creation time
   String m_key;            // the string we use to store this poll
+  int m_pollstate;         // one of state constants above
 
   /**
    * create a new poll from a message
@@ -108,7 +114,7 @@ public abstract class Poll {
     m_verifier = PollManager.makeVerifier();
     m_caller = msg.getOriginID();
     m_key = PollManager.makeKey(m_challenge);
-
+    m_pollstate = PS_INITING;
   }
 
 
@@ -117,12 +123,15 @@ public abstract class Poll {
    * @return a String
    */
   public String toString() {
-    StringBuffer sb = new StringBuffer(m_url);
+    StringBuffer sb = new StringBuffer("[Poll: ");
+    sb.append("m_url");
     sb.append(" ");
     sb.append(m_regExp);
     sb.append(" ");
     sb.append(m_msg.getOpcode());
-
+    sb.append(" key:");
+    sb.append(m_key);
+    sb.append("]");
     return sb.toString();
   }
 
@@ -150,6 +159,7 @@ public abstract class Poll {
 
     m_voteTime = Deadline.atRandomBefore(m_deadline);
     TimerQueue.schedule(m_voteTime, new VoteTimerCallback(), this);
+    m_pollstate = PS_WAIT_VOTE;
   }
 
   /**
@@ -181,11 +191,12 @@ public abstract class Poll {
     }
 
     log.info("I agree with " + msg.toString() + " rep " + weight);
-    PollManager.rememberVote(msg, true);
+    // NodeManager.rememberVote(msg, true);
     if (!msg.isLocal()) {
       try {
-        // TODO: calculate the actual percentage
-        VerifyPoll.randomRequestVerify(msg,50);
+        int max = msg.getOriginID().getMaxReputaion();
+        double verify = (max - weight)* 20 / max;
+        VerifyPoll.randomRequestVerify(msg,(int)verify);
       }
       catch (IOException ex) {
         log.debug("attempt to verify random failed.");
@@ -206,17 +217,18 @@ public abstract class Poll {
       m_disagreeWt += weight;
     }
     if (local) {
-      log.error("I disagree with myself about" + msg.toString()
+      log.error("I disagree with myself about " + msg.toString()
                 + " rep " + weight);
     }
     else {
-      log.info("I disagree with" + msg.toString() + " rep " + weight);
+      log.info("I disagree with " + msg.toString() + " rep " + weight);
     }
-    PollManager.rememberVote(msg, false);
+    //NodeManager.rememberVote(msg, false);
     if (!local) {
       try {
-        // TODO: calculate the actual percentage
-        VerifyPoll.randomRequestVerify(msg, 50);
+        int max = msg.getOriginID().getMaxReputaion();
+        double verify = (double)weight * 100 / max;
+        VerifyPoll.randomRequestVerify(msg, (int)verify);
       }
       catch (IOException ex) {
         log.debug("attempt to verify random failed.");
@@ -239,7 +251,7 @@ public abstract class Poll {
       noWt = m_disagreeWt;
     }
     PollManager.removePoll(m_key);
-    PollManager.rememberTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
+    //NodeManager.rememberTally(m_arcUnit, this, yes, no, yesWt, noWt, m_replyOpcode);
   }
 
   /**
@@ -265,11 +277,14 @@ public abstract class Poll {
    * start the poll.
    */
   void startPoll() {
+    if(m_pollstate != PS_INITING)
+      return;
     Deadline pt = Deadline.in(m_msg.getDuration());
     if(!scheduleHash( pt, m_msg, new PollHashCallback())) {
-      // TODO: terminate this poll
+      stopPoll();
       return;
     }
+    m_pollstate = PS_WAIT_HASH;
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
   }
 
@@ -281,6 +296,7 @@ public abstract class Poll {
     if((m_agree - m_disagree) <= m_quorum) {
       vote();
     }
+    m_pollstate = PS_WAIT_TALLY;
   }
 
   /**
@@ -289,6 +305,7 @@ public abstract class Poll {
   void stopPoll() {
     // prevent any further activity on this poll by recording the challenge
     // and dropping any further packets that match it.
+    m_pollstate = PS_COMPLETE;
     PollManager.closeThePoll(m_urlSet, m_challenge);
 
     // if we have a quorum, record the results
@@ -304,6 +321,7 @@ public abstract class Poll {
    * start the hash required for a vote cast in this poll
    */
   void startVote() {
+    m_counting++;
   }
 
   /**
@@ -356,6 +374,8 @@ public abstract class Poll {
                                 Object cookie,
                                 MessageDigest hasher,
                                 Exception e) {
+      if(m_pollstate != PS_WAIT_HASH)
+        return;
       boolean hash_completed = e == null ? true : false;
 
       if(hash_completed)  {
@@ -399,7 +419,9 @@ public abstract class Poll {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
-      voteInPoll();
+      if(m_pollstate == PS_WAIT_VOTE) {
+        voteInPoll();
+      }
     }
   }
 
@@ -409,7 +431,9 @@ public abstract class Poll {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
-      stopPoll();
+      if(m_pollstate != PS_COMPLETE) {
+        stopPoll();
+      }
     }
   }
 

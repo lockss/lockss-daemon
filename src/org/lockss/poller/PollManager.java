@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.6 2002-11-21 04:53:53 claire Exp $
+* $Id: PollManager.java,v 1.7 2002-11-22 03:00:39 claire Exp $
  */
 
 /*
@@ -295,49 +295,6 @@ public class PollManager {
     return url_set;
   }
 
-  /**
-   * record the poll results
-   * @param arcUnit the archival unit in which this poll took place
-   * @param poll the Poll which we just completed
-   * @param yes the number of yes votes
-   * @param no the number of no votes
-   * @param yesWt the weight or strength of the yes votes
-   * @param noWt the weight or strength of the no votes
-   * @param replyOpcode the LcapMessage opcode to reply with
-   */
-  static void rememberTally(ArchivalUnit arcUnit,
-                            Poll poll,
-                            int yes, int no,
-                            int yesWt, int noWt,
-                            int replyOpcode) {
-    String result;
-    int averageVoteQuality;
-
-    if (no > yes) {
-      result = "lost";
-      averageVoteQuality = noWt/no;
-
-    } else if (yes > no) {
-      result = "won";
-      averageVoteQuality = yesWt/yes;
-    }
-    else {
-      result = "tied";
-      averageVoteQuality = (yesWt + noWt)/(yes + no);
-    }
-
-    theLog.info(poll.toString() + " " + result + " avq " + averageVoteQuality);
-    // XXX now pass on the result and call any needed polls
-  }
-
-  /**
-   * record whether we agree or disagree with a single vote in a poll.
-   * @param msg - the LcapMessage containing the vote
-   * @param vote true if we agree with the vote, false otherwise.
-   */
-  static void rememberVote(LcapMessage msg, boolean vote) {
-    // XXX implement this
-  }
 
   /**
    * close the poll from any further voting

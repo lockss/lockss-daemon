@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.13 2002-11-20 21:26:58 claire Exp $
+* $Id: ContentPoll.java,v 1.14 2002-11-22 03:00:39 claire Exp $
  */
 
 /*
@@ -88,7 +88,6 @@ public class ContentPoll extends Poll {
     int opcode = msg.getOpcode();
 
     if(opcode == LcapMessage.CONTENT_POLL_REP) {
-      m_counting++;
       startVote(msg);
     }
   }
@@ -111,6 +110,7 @@ public class ContentPoll extends Poll {
   }
 
   void startVote(LcapMessage msg) {
+    super.startVote();
     long dur = msg.getDuration();
 
     if(prepareVoteCheck(msg)) {

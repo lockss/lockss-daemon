@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.12 2002-11-19 23:26:16 tal Exp $
+* $Id: VerifyPoll.java,v 1.13 2002-11-22 03:00:39 claire Exp $
  */
 
 /*
@@ -78,7 +78,6 @@ class VerifyPoll extends Poll {
     int opcode = msg.getOpcode();
 
     if(opcode == LcapMessage.NAME_POLL_REP) {
-      m_counting++;
       startVote(msg);
     }
   }
@@ -208,6 +207,7 @@ class VerifyPoll extends Poll {
   }
 
   private void startVote(LcapMessage msg) {
+    super.startVote();
     performHash(msg);
     stopVote();
   }
