@@ -1,5 +1,33 @@
 #! /bin/bash
 
+while true ; do
+  case "$1" in
+    "-classpath" )
+      if [ -z "$CLASSPATH" ] ; then
+	CLASSPATH="$2"
+      else
+	CLASSPATH="$CLASSPATH":"$2"
+      fi
+      echo "CLASSPATH=$CLASSPATH"
+      shift; shift; continue;;
+    "-1.4" )
+      if [ -z "$JAVA_14_HOME" ] ; then
+	echo "-1.4 option requires JAVA_14_HOME to point to 1.4 install dir"
+	exit 1;
+      fi
+      JAVA_HOME="${JAVA_14_HOME}"
+      export JAVA_HOME
+      PATH="$JAVA_HOME/bin:$PATH"
+      export PATH
+      echo JAVA_HOME="$JAVA_HOME"
+      shift; continue;;
+    "-*" )
+      args="$args $1"
+      shift; continue;;
+  esac
+  break;
+done
+
 PROP_URL_LIST="http://props.lockss.org:8001/03042003_dev/lockss.txt local.txt"
 
 # local copy of lockss jars allows recompile while we're running
@@ -13,7 +41,7 @@ JVM_ARGS="-Xmx70m -Dsun.net.inetaddr.ttl=3600"
 
 echo running at `date`
 # for large caches, need to pass "-ms4m -mx64m" to java
-java -Dorg.lockss.defaultLogLevel=DEBUG "$@" org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+java -Dorg.lockss.defaultLogLevel=DEBUG "$args" org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
 wait
 echo stopped with status $? at `date`
