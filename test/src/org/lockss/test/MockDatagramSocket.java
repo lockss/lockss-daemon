@@ -196,7 +196,7 @@ public class MockDatagramSocket extends DatagramSocket{
   /**
    * @param packet DatagramPacket to add to the queue of packets to feed back when 
    * receive(p) is called
-   * @see #packet
+   * @see #receive
    */
   public void addToReceiveQueue(DatagramPacket packet){
     receiveQueue.add(packet);
