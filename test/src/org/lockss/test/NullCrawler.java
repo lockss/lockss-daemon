@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.3 2003-06-26 23:54:40 eaalto Exp $
+ * $Id: NullCrawler.java,v 1.1 2003-06-26 23:54:40 eaalto Exp $
  */
 
 /*
@@ -33,61 +33,39 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.Collection;
-import org.lockss.util.Deadline;
+import org.lockss.daemon.Crawler;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.Deadline;
 
-public class MockCrawler extends NullCrawler {
-  ArchivalUnit au;
-  Collection urls;
-  boolean followLinks;
-  boolean doCrawlCalled = false;
-  Deadline deadline = null;
-  boolean crawlSuccessful = true;
-  int type = -1;
-
-  public void setCrawlSuccessful(boolean crawlSuccessful) {
-    this.crawlSuccessful = crawlSuccessful;
-  }
-
+public class NullCrawler implements Crawler {
   public boolean doCrawl(Deadline deadline) {
-    doCrawlCalled = true;
-    this.deadline = deadline;
-    return crawlSuccessful;
-  }
-
-  public Deadline getDeadline() {
-    return deadline;
-  }
-
-  public boolean doCrawlCalled() {
-    return doCrawlCalled;
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public ArchivalUnit getAU() {
-    return au;
+    throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void setAU(ArchivalUnit au) {
-    this.au = au;
+  public long getEndTime() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void setURLs(Collection urls) {
-    this.urls = urls;
+  public long getNumFetched() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+  public long getNumParsed() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void setFollowLinks(boolean followLinks) {
-    this.followLinks = followLinks;
-  }
-
-  public void setType(int type) {
-    this.type = type;
-  }
-
-  public int getType() {
-    return type;
+  public long getStartTime() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public Collection getStartUrls() {
-    return urls;
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public int getType() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 }
