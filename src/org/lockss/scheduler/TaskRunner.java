@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.10 2003-12-23 00:34:06 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.11 2004-01-12 06:21:37 tlipkis Exp $
  */
 
 /*
@@ -180,6 +180,7 @@ class TaskRunner implements Serializable {
     if (scheduler.createSchedule()) {
       currentSchedule = scheduler.getSchedule();
       acceptedTasks = tasks;
+      task.setTaskRunner(this);
       Collection schedOverron = currentSchedule.getOverrunTasks();
       if (schedOverron != null && !schedOverron.isEmpty()) {
 	for (Iterator iter = schedOverron.iterator(); iter.hasNext(); ) {
@@ -220,20 +221,31 @@ class TaskRunner implements Serializable {
     }
   }
 
-  /** Called by BackgroundTask.cancel() */
-  synchronized void cancelTask(SchedulableTask task) {
+  /** Remove a previously scheduled task from the schedule.
+   * @param task the previously schedule task
+   * @return true if the task was remove from the schedule, false if it
+   * wasn't already in the schedule..
+   */
+  // Called by SchedulableTask.cancel()
+  synchronized boolean cancelTask(SchedulableTask task) {
+    if (log.isDebug2()) {
+      log.debug2("Cancel task: " + task);
+    }
     // prevent any pending events from taking action
     task.setFinished();
     task.setNotified();
     // remove all traces of task    
-    acceptedTasks.remove(task);
+    boolean res = acceptedTasks.remove(task);
     if (task.isBackgroundTask()) {
       removeFromBackgroundTasks((BackgroundTask)task);
     } else {
-      // don't bother poking stepper - it will notice the task is finished
-      // just as soon on its own
+      // poke thread so it will recompute schedule
+      pokeThread();
     }
-    addStats(task, STAT_CANCELLED);
+    if (res) {
+      addStats(task, STAT_CANCELLED);
+    }
+    return res;
   }
 
   synchronized void stopThread() {
@@ -476,7 +488,6 @@ class TaskRunner implements Serializable {
       
   boolean addToBackgroundTasks(BackgroundTask task) {
     if (backgroundTasks.add(task)) {
-      task.setTaskRunner(this);
       backgroundLoadFactor += task.getLoadFactor();
       if (backgroundLoadFactor > 1.0) {
 	log.error("background load factor > 1.0: " + backgroundLoadFactor);
