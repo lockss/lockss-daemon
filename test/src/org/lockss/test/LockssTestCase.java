@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.7 2002-11-19 23:30:21 tal Exp $
+ * $Id: LockssTestCase.java,v 1.8 2002-11-19 23:49:14 tal Exp $
  */
 
 /*
@@ -76,11 +76,12 @@ public class LockssTestCase extends TestCase {
       }
     }
     if (doLaters != null) {
-      for (ListIterator iter = doLaters.listIterator(); iter.hasNext(); ) {
+      List copy = new ArrayList(doLaters);
+      for (Iterator iter = copy.iterator(); iter.hasNext(); ) {
 	DoLater doer = (DoLater)iter.next();
 	doer.cancel();
-	iter.remove();
       }
+      doLaters = null;
     }
     super.tearDown();
   }
