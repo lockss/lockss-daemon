@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.3 2003-04-16 02:23:48 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.4 2003-04-16 05:52:39 aalto Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class TestActivityRegulator extends LockssTestCase {
   public void testCusRelationBlocking() {
     MockCachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com/test");
     mcus.setArchivalUnit(mau);
-    assertTrue(allower.startCusActivity(allower.STANDARD_POLL, mcus, 123));
+    assertTrue(allower.startCusActivity(allower.STANDARD_CONTENT_POLL, mcus, 123));
 
     // child should be blocked
     MockCachedUrlSet mcus2 = new MockCachedUrlSet("http://www.example.com/test/branch1");
@@ -171,13 +171,43 @@ public class TestActivityRegulator extends LockssTestCase {
     // parent should be blocked on polls, but not crawls
     mcus2 = new MockCachedUrlSet("http://www.example.com");
     mcus2.setArchivalUnit(mau);
-    assertFalse(allower.startCusActivity(allower.STANDARD_POLL, mcus2, 123));
+    assertFalse(allower.startCusActivity(allower.STANDARD_CONTENT_POLL, mcus2, 123));
     assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus2, 123));
 
     // peer should be ok
     mcus2 = new MockCachedUrlSet("http://www.example.com/test2");
     mcus2.setArchivalUnit(mau);
     assertTrue(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus2, 123));
+  }
+
+  public void testCusRangeAllowance() {
+    MockCachedUrlSet mcus = new MockCachedUrlSet(
+        new RangeCachedUrlSetSpec("http://www.example.com/test", "file1", "file3"));
+    mcus.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.STANDARD_CONTENT_POLL, mcus, 123));
+
+    // different range should be allowed
+    MockCachedUrlSet mcus2 = new MockCachedUrlSet(
+        new RangeCachedUrlSetSpec("http://www.example.com/test", "file4", "file6"));
+    mcus2.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.STANDARD_CONTENT_POLL, mcus2, 123));
+  }
+
+  public void testCusSimultaneousPollAllowance() {
+    MockCachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com/test");
+    mcus.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.STANDARD_CONTENT_POLL, mcus, 123));
+
+    // name poll should be allowed
+    mcus = new MockCachedUrlSet("http://www.example.com/test");
+    mcus.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.STANDARD_NAME_POLL, mcus, 123));
+
+    // content poll on child should be allowed
+    mcus = new MockCachedUrlSet("http://www.example.com/test/branch");
+    mcus.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.STANDARD_CONTENT_POLL, mcus, 123));
+
   }
 
   public void testGetRelation() {
@@ -204,7 +234,7 @@ public class TestActivityRegulator extends LockssTestCase {
     // only CUS activity allowed on CUS_ACTIVITY
     assertTrue(allower.isAllowedOnAu(allower.BACKGROUND_CRAWL, allower.CUS_ACTIVITY));
     assertTrue(allower.isAllowedOnAu(allower.REPAIR_CRAWL, allower.CUS_ACTIVITY));
-    assertTrue(allower.isAllowedOnAu(allower.STANDARD_POLL, allower.CUS_ACTIVITY));
+    assertTrue(allower.isAllowedOnAu(allower.STANDARD_CONTENT_POLL, allower.CUS_ACTIVITY));
     assertFalse(allower.isAllowedOnAu(allower.NEW_CONTENT_CRAWL, allower.CUS_ACTIVITY));
   }
 
@@ -219,13 +249,16 @@ public class TestActivityRegulator extends LockssTestCase {
     assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.BACKGROUND_CRAWL, allower.RELATION_CHILD));
 
     // if a poll-
-    //   allow nothing if same
-    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_POLL, allower.RELATION_SAME));
-    //   allow nothing if parent
-    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_POLL, allower.RELATION_PARENT));
+    //   allow only name poll if same and content poll
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_CONTENT_POLL, allower.RELATION_SAME));
+    assertTrue(allower.isAllowedOnCus(allower.STANDARD_NAME_POLL, allower.STANDARD_CONTENT_POLL, allower.RELATION_SAME));
+    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.STANDARD_CONTENT_POLL, allower.RELATION_SAME));
+    //   allow only content polls on sub-nodes if parent with name poll
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_CONTENT_POLL, allower.RELATION_PARENT));
+    assertTrue(allower.isAllowedOnCus(allower.STANDARD_CONTENT_POLL, allower.STANDARD_NAME_POLL, allower.RELATION_PARENT));
     //   allow only crawls if child
-    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_POLL, allower.RELATION_CHILD));
-    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.STANDARD_POLL, allower.RELATION_CHILD));
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_CONTENT_POLL, allower.RELATION_CHILD));
+    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.STANDARD_CONTENT_POLL, allower.RELATION_CHILD));
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.3 2003-04-16 02:23:48 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.4 2003-04-16 05:52:39 aalto Exp $
  */
 
 /*
@@ -83,9 +83,14 @@ public class ActivityRegulator {
   public static final int BACKGROUND_CRAWL = 12;
 
   /**
-   * Integer representing the standard poll activity.  CUS level.
+   * Integer representing the content poll activity.  CUS level.
    */
-  public static final int STANDARD_POLL = 13;
+  public static final int STANDARD_CONTENT_POLL = 13;
+
+  /**
+   * Integer representing the name poll activity.  CUS level.
+   */
+  public static final int STANDARD_NAME_POLL = 14;
 
   /**
    * Integer representing no activity. AU or CUS level.
@@ -238,7 +243,8 @@ public class ActivityRegulator {
       // need to append '/' to protect against substring matches
       // i.e. /test vs. /test2
       int relation = getRelation(entryKey, cusKey);
-      if (relation!=RELATION_NONE) {
+      if ((relation!=RELATION_NONE) &&
+          (relation!=RELATION_SAME)) {
         ActivityEntry value = (ActivityEntry)entry.getValue();
         if (value.isExpired()) {
           logger.debug3("Removing expired " +
@@ -290,6 +296,7 @@ public class ActivityRegulator {
     }
   }
 
+//XXX fix multiple-scheduling error.
   static boolean isAllowedOnCus(int newActivity, int cusActivity, int relation) {
     switch (cusActivity) {
       case BACKGROUND_CRAWL:
@@ -305,17 +312,17 @@ public class ActivityRegulator {
           return ((newActivity==BACKGROUND_CRAWL) ||
                   (newActivity==REPAIR_CRAWL));
         }
-      case STANDARD_POLL:
+      case STANDARD_CONTENT_POLL:
+      case STANDARD_NAME_POLL:
         if (relation==RELATION_SAME) {
-          // only one action on a CUS at a time unless it's another poll and
-          // the ranges are different
-          if (newActivity==STANDARD_POLL) {
-
-          }
-          return false;
+          // only one action on a CUS at a time unless it's a name poll
+          return ((cusActivity==STANDARD_CONTENT_POLL) &&
+                  ((newActivity==STANDARD_NAME_POLL) ||
+                   (newActivity==REPAIR_CRAWL)));
         } else if (relation==RELATION_PARENT) {
-          // if this CUS is a parent, no action allowed
-          return false;
+          // if this CUS is a parent, allow content polls on sub-nodes
+          return ((cusActivity==STANDARD_NAME_POLL) &&
+                  (newActivity==STANDARD_CONTENT_POLL));
         } else {
           // if this CUS is a child, only crawls allowed
           return ((newActivity==BACKGROUND_CRAWL) ||
@@ -408,6 +415,8 @@ public class ActivityRegulator {
       if ((rSpec.getLowerBound()!=null) || (rSpec.getUpperBound()!=null)) {
         key += rSpec.getLowerBound() + "-" + rSpec.getUpperBound();
       }
+    } else if (cus.getSpec() instanceof SingleNodeCachedUrlSetSpec) {
+      key += ".-.";
     }
     return key;
   }
@@ -422,8 +431,10 @@ public class ActivityRegulator {
         return "Repair Crawl";
       case TOP_LEVEL_POLL:
         return "Top Level Poll";
-      case STANDARD_POLL:
-        return "Standard Poll";
+      case STANDARD_CONTENT_POLL:
+        return "Content Poll";
+      case STANDARD_NAME_POLL:
+        return "Name Poll";
       case TREEWALK:
         return "Treewalk";
       case CUS_ACTIVITY:
@@ -451,7 +462,8 @@ public class ActivityRegulator {
     switch (activity) {
       case BACKGROUND_CRAWL:
       case REPAIR_CRAWL:
-      case STANDARD_POLL:
+      case STANDARD_CONTENT_POLL:
+      case STANDARD_NAME_POLL:
       case NO_ACTIVITY:
         return true;
       default:
