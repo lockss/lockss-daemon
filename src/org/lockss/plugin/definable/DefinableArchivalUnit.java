@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.3 2004-04-28 22:52:05 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.4 2004-05-11 04:35:40 clairegriffin Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
-  private String[] getStringTokens(String tokenString) {
+  public String[] getStringTokens(String tokenString) {
     StringTokenizer st = new StringTokenizer(tokenString, "\n");
     int num_tokens = st.countTokens();
     String[] strs = new String[num_tokens];
