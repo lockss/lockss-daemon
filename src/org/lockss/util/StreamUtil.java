@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.1 2002-10-23 23:50:08 aalto Exp $
+ * $Id: StreamUtil.java,v 1.2 2002-10-24 02:18:59 aalto Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class StreamUtil {
    * It closes neither.
    */
    public static void copy(InputStream is, OutputStream os) throws IOException {
+     if ((is==null) || (os==null)) return;
      byte[] bytes = new byte[256];
      int byteCount;
      while ((byteCount = is.read(bytes))>0) os.write(bytes, 0, byteCount);
