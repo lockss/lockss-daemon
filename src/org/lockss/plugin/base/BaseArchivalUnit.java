@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.20 2003-04-27 08:52:19 tal Exp $
+ * $Id: BaseArchivalUnit.java,v 1.21 2003-04-28 21:03:42 troberts Exp $
  */
 
 /*
@@ -266,10 +266,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   protected void pause(long milliseconds) {
+    logger.debug3("Pausing for "+milliseconds+" milliseconds");
     try {
       Thread thread = Thread.currentThread();
       thread.sleep(milliseconds);
-    } catch (InterruptedException ie) { }
+    } catch (InterruptedException ie) { 
+    }
   }
-
 }
