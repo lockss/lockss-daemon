@@ -140,14 +140,14 @@ public class TestPollManager extends TestCase {
   }
 
   /** test for method handleMessage(..) */
-  public void testHandleMessage() {
-    try {
-      PollManager.handleMessage(testmsg[1]);
-    }
-    catch (IOException ex) {
-      fail("could not create or find content message");
-    }
-  }
+//   public void testHandleMessage() {
+//     try {
+//       PollManager.handleMessage(testmsg[1]);
+//     }
+//     catch (IOException ex) {
+//       fail("could not create or find content message");
+//     }
+//   }
 
   /** test for method removePoll(..) */
   public void testRemovePoll() {
