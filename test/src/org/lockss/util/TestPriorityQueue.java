@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.8 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestPriorityQueue.java,v 1.9 2004-09-19 01:28:37 tlipkis Exp $
  */
 
 /*
@@ -132,6 +132,13 @@ public class TestPriorityQueue extends LockssTestCase {
 	fail("put() didn't cause get() to return");
       }
     }
+  }
+
+  public void testAsList() {
+    PriorityQueue q = new PriorityQueue();
+    q.put("foo");
+    q.put("bar");
+    assertEquals(ListUtil.list("bar", "foo"), q.asList());
   }
 
   public void testRemove() {

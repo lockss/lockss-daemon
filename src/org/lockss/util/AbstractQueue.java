@@ -1,5 +1,5 @@
 /*
- * $Id: AbstractQueue.java,v 1.1 2004-07-12 06:22:29 tlipkis Exp $
+ * $Id: AbstractQueue.java,v 1.2 2004-09-19 01:28:37 tlipkis Exp $
  */
 
 /*
@@ -127,4 +127,12 @@ public abstract class AbstractQueue implements Queue {
   public boolean isEmpty() {
     return queue.isEmpty();
   }
+
+  /**
+   * Return a snapshot of the queue contents
+   */
+  public synchronized List copyAsList() {
+    return new ArrayList(queue);
+  }
+
 }

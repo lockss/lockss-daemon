@@ -1,5 +1,5 @@
 /*
- * $Id: Queue.java,v 1.6 2004-07-12 06:22:29 tlipkis Exp $
+ * $Id: Queue.java,v 1.7 2004-09-19 01:28:37 tlipkis Exp $
  */
 
 /*
@@ -81,4 +81,10 @@ public interface Queue {
    * Return true iff the queue is empty
    */
   public boolean isEmpty();
+
+  /**
+   * Return a snapshot of the queue contents
+   */
+  public List copyAsList();
+
 }
