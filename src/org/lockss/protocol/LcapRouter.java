@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.25 2003-05-26 03:48:39 tal Exp $
+ * $Id: LcapRouter.java,v 1.26 2003-06-01 21:00:13 tal Exp $
  */
 
 /*
@@ -63,9 +63,6 @@ public class LcapRouter extends BaseLockssManager {
     PREFIX + "partnerAddProbability";
   static final String PARAM_DUP_MSG_HASH_SIZE = PREFIX + "dupMsgHashSize";
 
-  static final String PARAM_LOCAL_IPS =
-    Configuration.PREFIX + "platform.localIPs";
-
   static final int DEFAULT_ORIG_PKTS_PER_INTERVAL = 40;
   static final long DEFAULT_ORIG_PKT_INTERVAL = 8 * Constants.MINUTE;
   static final int DEFAULT_FWD_PKTS_PER_INTERVAL = 40;
@@ -83,7 +80,6 @@ public class LcapRouter extends BaseLockssManager {
   private RateLimiter fwdRateLimiter;
   private RateLimiter origRateLimiter;
   private float probAddPartner;
-  private List localInterfaces;
   private long beaconInterval = 0;
   private int initialHopCount = LcapMessage.MAX_HOP_COUNT_LIMIT;
 
@@ -158,25 +154,6 @@ public class LcapRouter extends BaseLockssManager {
 
     partnerList.setConfig(config, oldConfig, changedKeys);
 
-    // make list of InetAddresses of local interfaces
-    if (localInterfaces == null || changedKeys.contains(PARAM_LOCAL_IPS)) {
-      String s = config.get(PARAM_LOCAL_IPS, "");
-      List ipStrings = StringUtil.breakAt(s, ';');
-      List newList = new ArrayList();
-      for (Iterator iter = ipStrings.iterator(); iter.hasNext(); ) {
-	String ip = (String)iter.next();
-	try {
-	  InetAddress inet = InetAddress.getByName(ip);
-	  newList.add(inet);
-	} catch (UnknownHostException e) {
-	  log.warning("Couldn't parse local interface IP address: " + ip);
-	}
-      }
-      // set localInterfaces only if new list non empty
-      if (!newList.isEmpty()) {
-	localInterfaces = newList;
-      }
-    }
   }
 
   /** Multicast a message to all caches holding the ArchivalUnit.  All
@@ -318,7 +295,7 @@ public class LcapRouter extends BaseLockssManager {
       log.debug3("Not forwarding, is unicast opcode");
       return false;
     }
-    if (didISend(dg, msg)) {
+    if (didIOriginateOrSend(dg, msg)) {
       log.debug3("Not forwarding, I sent it");
       return false;
     }
@@ -344,21 +321,11 @@ public class LcapRouter extends BaseLockssManager {
 
   // true if either the packet's source address is one of my interfaces,
   // or if I am (my identity is) the originator
-  boolean didISend(LockssReceivedDatagram dg, LcapMessage msg) {
+  boolean didIOriginateOrSend(LockssReceivedDatagram dg, LcapMessage msg) {
     if (msg.getOriginAddr().equals(getLocalIdentityAddr())) {
       return true;
     }
-    InetAddress sender = dg.getSender();
-    if (localInterfaces == null) {
-      return sender.equals(getLocalIdentityAddr());
-    } else {
-      for (Iterator iter = localInterfaces.iterator(); iter.hasNext(); ) {
-	if (sender.equals((InetAddress)iter.next())) {
-	  return true;
-	}
-      }
-      return false;
-    }
+    return comm.didISend(dg);
   }
 
   /** Unicast to each of our partners.  Don't send the message to either

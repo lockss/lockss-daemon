@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.7 2003-05-08 01:19:41 claire Exp $
+ * $Id: TestLcapRouter.java,v 1.8 2003-06-01 21:00:13 tal Exp $
  */
 
 /*
@@ -65,8 +65,10 @@ public class TestLcapRouter extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     setConfig();
-    rtr = daemon.getRouterManager();
     idmgr = daemon.getIdentityManager();
+    // this causes error messages, but need to start comm so it gets idmgr.
+    daemon.getCommManager().startService();
+    rtr = daemon.getRouterManager();
     rtr.startService();
     TimeBase.setSimulated(20000);
   }

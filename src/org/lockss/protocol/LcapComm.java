@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.36 2003-05-30 17:12:40 tal Exp $
+ * $Id: LcapComm.java,v 1.37 2003-06-01 21:00:13 tal Exp $
  */
 
 /*
@@ -49,6 +49,9 @@ import org.lockss.plugin.*;
  */
 public class LcapComm extends BaseLockssManager {
 
+  static final String PARAM_LOCAL_IPS =
+    Configuration.PREFIX + "platform.localIPs";
+
   static final String PREFIX = Configuration.PREFIX + "comm.";
   static final String PARAM_MULTI_GROUP = PREFIX + "multicast.group";
   static final String PARAM_MULTI_PORT = PREFIX + "multicast.port";
@@ -66,7 +69,7 @@ public class LcapComm extends BaseLockssManager {
 
   static Logger log = Logger.getLogger("Comm");
 
-
+  private IdentityManager idMgr;
   private OneShot configShot = new OneShot();
   private LRUMap multicastVerifyMap = new LRUMap(100);
   private boolean verifyMulticast = false;
@@ -81,6 +84,7 @@ public class LcapComm extends BaseLockssManager {
 					    // testing multiple instances on
 					    // one machine
 
+  private List localInterfaces;
   private SocketFactory sockFact;
 
   private LcapSocket sendSock;	// socket used for sending only
@@ -100,7 +104,8 @@ public class LcapComm extends BaseLockssManager {
   /** For testing */
   LcapComm(SocketFactory factory, Configuration config) {
     sockFact = factory;
-    configure(config);
+    configure(config,
+	      Configuration.EMPTY_CONFIGURATION, Collections.EMPTY_SET);
   }
 
   /**
@@ -109,6 +114,7 @@ public class LcapComm extends BaseLockssManager {
    */
   public void startService() {
     super.startService();
+    idMgr = getDaemon().getIdentityManager();
     start();
     getDaemon().getStatusService().registerStatusAccessor("CommStats",
 							  new Status());
@@ -134,12 +140,14 @@ public class LcapComm extends BaseLockssManager {
 			   Configuration prevConfig,
 			   Set changedKeys) {
     if (configShot.once()) {
-      configure(config);
+      configure(config, prevConfig, changedKeys);
     }
   }
 
   /** Internal config, so can invoke from test constructor  */
-  void configure(Configuration config) {
+  void configure(Configuration config,
+		 Configuration prevConfig,
+		 Set changedKeys) {
     String groupName = null;
     String uniSendToName = null;
     try {
@@ -176,7 +184,25 @@ public class LcapComm extends BaseLockssManager {
     } catch (UnknownHostException e) {
       log.critical("Can't get unicast send-to addr, not started: " + e);
     }
-
+    // make list of InetAddresses of local interfaces
+    if (localInterfaces == null || changedKeys.contains(PARAM_LOCAL_IPS)) {
+      String s = config.get(PARAM_LOCAL_IPS, "");
+      List ipStrings = StringUtil.breakAt(s, ';');
+      List newList = new ArrayList();
+      for (Iterator iter = ipStrings.iterator(); iter.hasNext(); ) {
+	String ip = (String)iter.next();
+	try {
+	  InetAddress inet = InetAddress.getByName(ip);
+	  newList.add(inet);
+	} catch (UnknownHostException e) {
+	  log.warning("Couldn't parse local interface IP address: " + ip);
+	}
+      }
+      // set localInterfaces only if new list non empty
+      if (!newList.isEmpty()) {
+	localInterfaces = newList;
+      }
+    }
     if (log.isDebug()) {
       log.debug("groupName = " + groupName);
       log.debug("multiPort = " + multiPort);
@@ -184,6 +210,30 @@ public class LcapComm extends BaseLockssManager {
       log.debug("uniSendToPort = " + uniSendToPort);
       log.debug("verifyMulticast = " + verifyMulticast);
     }
+  }
+
+  /** Return true if the packet's source address is one of my interfaces. */
+  boolean didISend(LockssReceivedDatagram dg) {
+    InetAddress sender = dg.getSender();
+    if (localInterfaces == null) {
+      return sender.equals(getLocalIdentityAddr());
+    } else {
+      for (Iterator iter = localInterfaces.iterator(); iter.hasNext(); ) {
+	if (sender.equals((InetAddress)iter.next())) {
+	  return true;
+	}
+      }
+      return false;
+    }
+  }
+
+  private InetAddress localIp;
+
+  InetAddress getLocalIdentityAddr() {
+    if (localIp == null) {
+      localIp = idMgr.getLocalIdentity().getAddress();
+    }
+    return localIp;
   }
 
   private int derivedMultiPort() {
@@ -503,39 +553,21 @@ public class LcapComm extends BaseLockssManager {
     long outBytes;
     long outUncBytes;
 
-    // multicast sockets see the packets they send, so discount those
-    // XXX this assumes we are guaranteed to receive our multicast packets,
-    // which probably isn't true.  The other way to discount them would be
-    // to not count incoming multicast packets that have us as the sender,
-    // but that could be spoofed.
-    int getInPkts() {
-      if (!multicast) {
-	return inPkts;
-      }
-      return inPkts - outPkts;
-    }
-
-    // multicast sockets see the packets they send, so discount those
-    long getInBytes() {
-      if (!multicast) {
-	return inBytes;
-      }
-      return inBytes - outBytes;
-    }
-
-    // multicast sockets see the packets they send, so discount those
-    long getInUncBytes() {
-      if (!multicast) {
-	return inUncBytes;
-      }
-      return inUncBytes - outUncBytes;
-    }
   }
 
   private void updateInStats(LockssReceivedDatagram ld) {
     LcapSocket lsock = ld.getReceiveSocket();
     DatagramSocket sock = lsock.getSocket();
-    updateStats(ld, sock.getLocalPort(), true, ld.isMulticast());
+    boolean mcast = ld.isMulticast();
+    if (mcast && didISend(ld)) {
+      // We receive all the multicast packets we send; don't count them in
+      // receive statistics.
+      // This does not work when running multiple daemons on one machine,
+      // as the packets from all the instances have the same source addr
+      // (which is probably not the local identity addr).
+      return;
+    }
+    updateStats(ld, sock.getLocalPort(), true, mcast);
   }
 
   private void updateOutStats(LockssDatagram ld, int port, boolean multicast) {
@@ -680,9 +712,9 @@ public class LcapComm extends BaseLockssManager {
       while (iter.hasNext()) {
 	Stats st = (Stats)iter.next();
 	table.add(makeRow(st, 0));
-	tot.inPkts += st.getInPkts();
-	tot.inBytes += st.getInBytes();
-	tot.inUncBytes += st.getInUncBytes();
+	tot.inPkts += st.inPkts;
+	tot.inBytes += st.inBytes;
+	tot.inUncBytes += st.inUncBytes;
 	tot.outPkts += st.outPkts;
 	tot.outBytes += st.outBytes;
 	tot.outUncBytes += st.outUncBytes;
@@ -725,17 +757,17 @@ public class LcapComm extends BaseLockssManager {
       switch (special) {
       case 0:
       case 1:
-	row.put("inPkts", new Integer(stats.getInPkts()));
-	row.put("inBytes", new Long(stats.getInBytes()));
-// 	row.put("inUncBytes", new Long(stats.getInUncBytes()));
+	row.put("inPkts", new Integer(stats.inPkts));
+	row.put("inBytes", new Long(stats.inBytes));
+// 	row.put("inUncBytes", new Long(stats.inUncBytes));
 	row.put("outPkts", new Integer(stats.outPkts));
 	row.put("outBytes", new Long(stats.outBytes));
 // 	row.put("outUncBytes", new Long(stats.outUncBytes));
 	break;
       case 2:
-	row.put("inPkts", rate(stats.getInPkts()));
-	row.put("inBytes", rate(stats.getInBytes()));
-// 	row.put("inUncBytes", rate(stats.getInUncBytes()));
+	row.put("inPkts", rate(stats.inPkts));
+	row.put("inBytes", rate(stats.inBytes));
+// 	row.put("inUncBytes", rate(stats.inUncBytes));
 	row.put("outPkts", rate(stats.outPkts));
 	row.put("outBytes", rate(stats.outBytes));
 // 	row.put("outUncBytes", rate(stats.outUncBytes));
