@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.7 2003-04-04 23:50:11 aalto Exp $
+ * $Id: NodeState.java,v 1.8 2003-04-10 01:06:51 claire Exp $
  */
 
 /*
@@ -84,4 +84,9 @@ public interface NodeState {
    */
   public boolean isInternalNode();
 
+  /**
+   * Returns the current poll status for this node
+   * @return one of the PollState status values.
+   */
+  // public int getPollStatus();
 }

@@ -90,7 +90,7 @@ public class PollTally {
    * agree votes.
    */
   public boolean didWinPoll() {
-    if(!poll.isErrorState()) {
+    if(!isErrorState()) {
       if(isWithinMargin()) {
         return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
       }
@@ -201,15 +201,35 @@ public class PollTally {
         new ArrayIterator(localEntries);
   }
 
+
+  public boolean isErrorState() {
+    return poll.m_pollstate < 0;
+  }
+
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
    */
   public int getErr() {
-    if(poll.isErrorState()) {
+    if(isErrorState()) {
       return poll.m_pollstate;
     }
     return 0;
+  }
+
+  public String getErrString() {
+    switch(poll.m_pollstate) {
+      case Poll.ERR_SCHEDULE_HASH:
+        return "Error scheduling hash";
+      case Poll.ERR_HASHING:
+        return "Error hashing";
+      case Poll.ERR_NO_QUORUM:
+        return "Error no quorum";
+      case Poll.ERR_IO:
+        return "Error I/0";
+      default:
+        return "Undefined";
+    }
   }
 
   /**

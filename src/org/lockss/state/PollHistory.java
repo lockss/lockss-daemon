@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.10 2003-02-13 06:28:52 claire Exp $
+ * $Id: PollHistory.java,v 1.11 2003-04-10 01:06:51 claire Exp $
  */
 
 /*
@@ -44,23 +44,22 @@ public class PollHistory
    * PollHistoryBean.
    */
   public PollHistory() {
-    super( -1, null, null, -1, 0, null);
+    super( -1, null, null, -1, 0, null, false);
     duration = 0;
     votes = new ArrayList();
   }
 
   PollHistory(int type, String lwrBound, String uprBound, int status,
               long startTime,
-              long duration, Collection votes) {
-    super(type, lwrBound, uprBound, status, startTime, null);
+              long duration, Collection votes, boolean ourPoll) {
+    super(type, lwrBound, uprBound, status, startTime, null, ourPoll);
     this.duration = duration;
     this.votes = votes;
   }
 
   PollHistory(PollState state, long duration, Collection votes) {
     this(state.type, state.lwrBound, state.uprBound, state.status,
-         state.startTime, duration,
-         votes);
+         state.startTime, duration, votes, state.ourPoll);
   }
 
   /**

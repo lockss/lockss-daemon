@@ -1,34 +1,28 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.89 2003-04-07 23:38:06 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.90 2003-04-10 01:06:51 claire Exp $
  */
 
 /*
-
-Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
-
-*/
+ Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
+ */
 
 package org.lockss.state;
 
@@ -53,9 +47,11 @@ import org.lockss.daemon.status.*;
 /**
  * Implementation of the NodeManager.
  */
-public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
+public class NodeManagerImpl
+    extends BaseLockssManager
+    implements NodeManager {
   /**
-   * This parameter indicates the size of the {@link NodeStateCache} used by the
+       * This parameter indicates the size of the {@link NodeStateCache} used by the
    * node manager.
    */
   public static final String PARAM_NODESTATE_CACHE_SIZE =
@@ -102,7 +98,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    */
   public void stopService() {
     logger.debug("NodeManager being stopped");
-    if (treeWalkHandler!=null) {
+    if (treeWalkHandler != null) {
       treeWalkHandler.end();
       treeWalkHandler = null;
     }
@@ -112,7 +108,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   public void forceTreeWalk() {
     logger.info("Forcing treewalk...");
-    if (treeWalkHandler==null) {
+    if (treeWalkHandler == null) {
       treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
       treeWalkHandler.start();
     }
@@ -134,8 +130,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     PollState pollState = new PollState(state.getType(), spec.getLwrBound(),
                                         spec.getUprBound(),
                                         PollState.RUNNING, state.getStartTime(),
-                                        Deadline.in(state.getDuration()));
-    ((NodeStateImpl)nodeState).addPollState(pollState);
+                                        Deadline.in(state.getDuration()),
+                                        state.isMyPoll());
+    ( (NodeStateImpl) nodeState).addPollState(pollState);
   }
 
   public boolean shouldStartPoll(CachedUrlSet cus, PollTally state) {
@@ -146,7 +143,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       return false;
     }
 
-    if(!state.isMyPoll() && hasDamage(cus, state.getType()))  {
+    if (!state.isMyPoll() && hasDamage(cus, state.getType())) {
       logger.info("Poll has damaged node: " + cus);
       return false;
     }
@@ -173,17 +170,18 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   public void hashFinished(CachedUrlSet cus, long hashDuration) {
-    if (hashDuration<0) {
+    if (hashDuration < 0) {
       logger.warning("Tried to update hash with negative duration.");
       return;
     }
     NodeState state = getNodeState(cus);
-    if (state==null) {
-      logger.error("Updating state on non-existant node: "+cus.getUrl());
+    if (state == null) {
+      logger.error("Updating state on non-existant node: " + cus.getUrl());
       throw new IllegalArgumentException(
           "Updating state on non-existant node.");
-    } else {
-      ((NodeStateImpl)state).setLastHashDuration(hashDuration);
+    }
+    else {
+      ( (NodeStateImpl) state).setLastHashDuration(hashDuration);
     }
   }
 
@@ -191,14 +189,15 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     String url = cus.getUrl();
     logger.debug3("Getting " + url);
     NodeState node = nodeCache.getState(url);
-    if (node==null) {
+    if (node == null) {
       // if in repository, add
       try {
         if (lockssRepo.getNode(url) != null) {
           node = createNodeState(cus);
         }
-      } catch (MalformedURLException mue) {
-        logger.error("Can't get NodeState due to bad CachedUrlSet: "+cus);
+      }
+      catch (MalformedURLException mue) {
+        logger.error("Can't get NodeState due to bad CachedUrlSet: " + cus);
       }
     }
     return node;
@@ -227,13 +226,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     if (pollState == null) {
       logger.error("Results updated for a non-existent poll.");
       throw new UnsupportedOperationException("Results updated for a "
-                                              +"non-existent poll.");
+                                              + "non-existent poll.");
     }
     try {
-      if (results.getErr() < 0) {
+      if (results.isErrorState()) {
         pollState.status = mapResultsErrorToPollError(results.getErr());
-        logger.info("Poll didn't finish fully.  Error code: "
-                    + mapPollErrorToString(pollState.status));
+        logger.info("Poll didn't finish fully.  Error: "
+                    + results.getErrString());
         return;
       }
 
@@ -244,12 +243,13 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         handleNamePoll(pollState, results, state);
       }
       else {
-        logger.error("Updating state for invalid results type: " +
-                     results.getType());
-        throw new UnsupportedOperationException("Updating state for invalid "
-                                                + "results type.");
+        String err = "Request to update state for unknown type: " +
+            results.getType();
+        logger.error(err);
+        throw new UnsupportedOperationException(err);
       }
-    } finally {
+    }
+    finally {
       // close the poll and update the node state
       closePoll(pollState, results.getDuration(), results.getPollVotes(),
                 state);
@@ -257,36 +257,43 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   void handleContentPoll(PollState pollState, PollTally results,
-                                 NodeState nodeState) {
+                         NodeState nodeState) {
     logger.debug("handling content poll results: " + results);
+
     if (results.didWinPoll()) {
       // if agree
       switch (pollState.getStatus()) {
         case PollState.RUNNING:
+
           // if normal poll, we won!
           logger.debug2("won content poll, state = won.");
           pollState.status = PollState.WON;
           break;
         case PollState.REPAIRING:
+
           // if repair poll, we're repaired
           logger.debug2("won repair poll, state = repaired.");
           pollState.status = PollState.REPAIRED;
       }
       updateReputations(results);
-    } else {
+    }
+    else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
         logger.debug2("lost repair content poll, state = unrepairable");
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
         updateReputations(results);
-      } else if (nodeState.isInternalNode()) {
+      }
+      else if (nodeState.isInternalNode()) {
         logger.debug2("lost content poll, state = lost, calling name poll.");
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
-        callNamePoll(results.getCachedUrlSet());
-      } else {
-        logger.debug2("lost content poll, state = repairing, marking for repair.");
+        callNamePoll(new PollSpec(results.getCachedUrlSet()));
+      }
+      else {
+        logger.debug2(
+            "lost content poll, state = repairing, marking for repair.");
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         markNodeForRepair(nodeState.getCachedUrlSet(), results);
@@ -295,7 +302,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   void handleNamePoll(PollState pollState, PollTally results,
-                              NodeState nodeState) {
+                      NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
     if (results.didWinPoll()) {
       // if agree
@@ -303,17 +310,20 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         // if poll is mine
         try {
           logger.debug2("won name poll, calling content poll on subnodes.");
-          callContentPollsOnSubNodes(nodeState, results);
+          callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
           pollState.status = PollState.WON;
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
           logger.error("IO error scheduling content polls.", e);
           pollState.status = PollState.ERR_IO;
         }
-      } else {
+      }
+      else {
         logger.debug2("won name poll, setting state to WON");
         pollState.status = PollState.WON;
       }
-    } else {
+    }
+    else {
       // if disagree
       logger.debug2("lost name poll, collecting repair info.");
       String baseUrl = nodeState.getCachedUrlSet().getUrl();
@@ -324,7 +334,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
       // iterate through master list
       while (masterIt.hasNext()) {
-        String url = (String)masterIt.next();
+        String url = (String) masterIt.next();
         // compare against my list
         if (localSet.contains(url)) {
           // removing from the set to leave only files for deletion
@@ -340,7 +350,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       localIt = localSet.iterator();
       while (localIt.hasNext()) {
         // for extra items - deletion
-        String url = (String)localIt.next();
+        String url = (String) localIt.next();
         logger.debug2("deleting node: " + url);
         try {
           CachedUrlSet oldCus = au.makeCachedUrlSet(baseUrl + url, null, null);
@@ -348,7 +358,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           //set crawl status to DELETED
           NodeState oldState = getNodeState(oldCus);
           oldState.getCrawlState().type = CrawlState.NODE_DELETED;
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
           logger.error("Couldn't delete node.", e);
           // the treewalk will fix this eventually
         }
@@ -365,58 +376,99 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * @return true if poll scheduled
    */
   boolean checkLastHistory(PollHistory lastHistory, NodeState node) {
+    PollSpec lastPollSpec = new PollSpec(node.getCachedUrlSet(),
+                                         lastHistory.lwrBound,
+                                         lastHistory.uprBound);
     switch (lastHistory.status) {
-      // if latest is PollState.LOST or PollState.REPAIRING
-      // call a name poll to finish the repair which ended early (or had
-      // an IO error)
-      case PollState.LOST:
       case PollState.REPAIRING:
-      case PollState.ERR_IO:
-        PollSpec spec = new PollSpec(node.getCachedUrlSet(),
-                                     lastHistory.lwrBound,
-                                     lastHistory.uprBound);
-        callNamePoll(spec.getCachedUrlSet());
+      case PollState.SCHEDULED:
+      case PollState.RUNNING:
+        // if this poll should be running make sure it is running.
+        if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
+          recallLastPoll(lastPollSpec, lastHistory);
+          return true;
+        }
+        break;
+      case PollState.WON:
+      case PollState.REPAIRED:
+        // if this is a poll with a range make sure we don't have
+        // a lost poll lurking underneath this one.
+        break;
+      case PollState.LOST:
+        callNamePoll(lastPollSpec);
         return true;
       case PollState.UNREPAIRABLE:
-        //XXX determine what to do
-        return false;
-      default:
-        return false;
+        // we need to do something here
+        break;
+      case PollState.ERR_SCHEDULE_HASH:
+      case PollState.ERR_HASHING:
+      case PollState.ERR_NO_QUORUM:
+      case PollState.ERR_IO:
+      case PollState.ERR_UNDEFINED:
+        // if we ended with an error and it was our poll,
+        // we need to recall this poll.
+        if (lastHistory.getOurPoll()) {
+          recallLastPoll(lastPollSpec, lastHistory);
+          return true;
+        }
+    }
+    ;
+    return false;
+  }
+
+  String findKey(PollHistory history) {
+    Iterator votes = history.getVotes();
+    if (votes.hasNext()) {
+      Vote a_vote = (Vote) votes.next();
+      return a_vote.getPollKey();
+    }
+    return "";
+  }
+
+  void recallLastPoll(PollSpec spec, PollState lastPoll) {
+    if (lastPoll.type == Poll.CONTENT_POLL) {
+      callContentPoll(spec);
+    }
+    else if (lastPoll.type == Poll.NAME_POLL) {
+      callNamePoll(spec);
     }
   }
 
-  void callNamePoll(CachedUrlSet cus) {
+  void callContentPoll(PollSpec spec) {
     try {
-      pollManager.requestPoll(LcapMessage.NAME_POLL_REQ,
-                              new PollSpec(cus));
-    } catch (IOException ioe) {
-      logger.error("Couldn't make name poll request.", ioe);
-      // the treewalk will fix this eventually
+      logger.debug2("Calling a content poll on " + spec);
+      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ, spec);
+    }
+    catch (IOException ioe) {
+      logger.error("Excption calling content poll on " + spec, ioe);
+    }
+  }
+
+  void callNamePoll(PollSpec spec) {
+    try {
+      logger.debug2("Calling a name poll on " + spec);
+      pollManager.requestPoll(LcapMessage.NAME_POLL_REQ, spec);
+    }
+    catch (IOException ioe) {
+      logger.error("Excption calling name poll on " + spec, ioe);
     }
   }
 
   void callTopLevelPoll() {
-    try {
-      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
-                              new PollSpec(managedAu.getAUCachedUrlSet()));
-      logger.info("Top level poll started.");
-    } catch (IOException ioe) {
-      logger.error("Couldn't make top level poll request.", ioe);
-      // the treewalk will fix this eventually
-    }
+    callContentPoll(new PollSpec(managedAu.getAUCachedUrlSet()));
   }
 
   private void closePoll(PollState pollState, long duration, Collection votes,
                          NodeState nodeState) {
     PollHistory history = new PollHistory(pollState, duration, votes);
-    ((NodeStateImpl)nodeState).closeActivePoll(history);
+    ( (NodeStateImpl) nodeState).closeActivePoll(history);
     logger.debug2("Closing poll for url '" +
                   nodeState.getCachedUrlSet().getUrl() + " " +
                   pollState.getLwrBound() + "-" +
                   pollState.getUprBound() + "'");
     // if this is an AU top-level content poll
     // update the AuState to indicate the poll is finished
-    if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
+    if ( (AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
         (pollState.getType() == Poll.CONTENT_POLL)) {
       getAuState().newPollFinished();
       logger.info("Top level poll finished.");
@@ -426,11 +478,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   private PollState getPollState(NodeState state, PollTally results) {
     Iterator polls = state.getActivePolls();
     while (polls.hasNext()) {
-      PollState pollState = (PollState)polls.next();
+      PollState pollState = (PollState) polls.next();
       PollSpec spec = results.getPollSpec();
       logger.debug2("Getting poll state for spec: " + spec);
-      if (StringUtil.equalStrings(pollState.getLwrBound(),spec.getLwrBound()) &&
-          StringUtil.equalStrings(pollState.getUprBound(),spec.getUprBound()) &&
+      if (StringUtil.equalStrings(pollState.getLwrBound(), spec.getLwrBound()) &&
+          StringUtil.equalStrings(pollState.getUprBound(), spec.getUprBound()) &&
           (pollState.getType() == results.getType())) {
         return pollState;
       }
@@ -443,8 +495,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                            Set changedKeys) {
     if (changedKeys.contains(PARAM_NODESTATE_CACHE_SIZE)) {
       maxCacheSize = newConfig.getInt(PARAM_NODESTATE_CACHE_SIZE,
-                                    DEFAULT_CACHE_SIZE);
-      if (nodeCache!=null) {
+                                      DEFAULT_CACHE_SIZE);
+      if (nodeCache != null) {
         nodeCache.setCacheSize(maxCacheSize);
       }
     }
@@ -464,20 +516,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  static String mapPollErrorToString(int pollErr) {
-    switch (pollErr) {
-      case PollState.ERR_HASHING:
-        return "Hashing Error";
-      case PollState.ERR_IO:
-        return "IO Error";
-      case PollState.ERR_NO_QUORUM:
-        return "No Quorum";
-      case PollState.ERR_SCHEDULE_HASH:
-        return "Hash Schedule Error";
-    }
-    return "Undefined Error";
-  }
-
   private void markNodeForRepair(CachedUrlSet cus, PollTally tally) {
     logger.debug2("suspending poll " + tally.getPollKey());
     pollManager.suspendPoll(tally.getPollKey());
@@ -487,7 +525,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                                  new URL(cus.getUrl()),
                                                  new ContentRepairCallback(),
                                                  tally.getPollKey());
-    } catch (MalformedURLException mue) {
+    }
+    catch (MalformedURLException mue) {
       // this shouldn't happen
       // if it does, let the tree walk catch the repair
     }
@@ -499,40 +538,34 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     repository.deleteNode(cus.getUrl());
   }
 
-  private void callContentPollsOnSubNodes(NodeState state, PollTally results)
-      throws IOException {
-    Iterator children = results.getCachedUrlSet().flatSetIterator();
+  private void callContentPollsOnSubNodes(NodeState state, CachedUrlSet cus) throws
+      IOException {
+    Iterator children = cus.flatSetIterator();
     List childList = convertChildrenToCUSList(children);
     // Divide the list in two and call two new content polls
     if (childList.size() > 4) {
-      String base = results.getCachedUrlSet().getUrl();
+      String base = cus.getUrl();
       int mid = childList.size() / 2;
+
+      // the first half of the list
       String lwr = ( (CachedUrlSet) childList.get(0)).getUrl();
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
       String upr = ( (CachedUrlSet) childList.get(mid)).getUrl();
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
-      PollSpec pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
-      logger.debug2("calling first content poll on " + pspec);
-      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
-                                             pspec);
+      callContentPoll(new PollSpec(cus, lwr, upr));
 
+      // the second half of the list
       lwr = ( (CachedUrlSet) childList.get(mid + 1)).getUrl();
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
       upr = ( (CachedUrlSet) childList.get(childList.size() - 1)).
           getUrl();
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
-      pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
-      logger.debug2("calling second content poll on " + pspec);
-      pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
-                                             pspec);
+      callContentPoll(new PollSpec(cus, lwr, upr));
     }
     else if (childList.size() > 0) {
       logger.debug2("less than 4 items, calling content poll on all items.");
       for (int i = 0; i < childList.size(); i++) {
-        PollSpec pspec = new PollSpec( (CachedUrlSet) childList.get(i));
-        logger.debug2("calling content poll on " + pspec);
-        pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
-                                               pspec);
+        callContentPoll(new PollSpec( (CachedUrlSet) childList.get(i)));
       }
     }
   }
@@ -575,9 +608,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       NodeState nodeState = getNodeState(child_cus);
       PollHistory pollHistory = nodeState.getLastPollHistory();
       if (pollHistory != null &&
-        ((pollHistory.status == pollHistory.UNREPAIRABLE) ||
-         (pollHistory.status == pollHistory.REPAIRING))) {
-          return true;
+          ( (pollHistory.status == pollHistory.UNREPAIRABLE) ||
+           (pollHistory.status == pollHistory.REPAIRING))) {
+        return true;
       }
     }
     return hasDamage;
@@ -589,7 +622,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     int agreeChange;
     int disagreeChange;
 
-    if(results.didWinPoll()) {
+    if (results.didWinPoll()) {
       agreeChange = IdentityManager.AGREE_VOTE;
       disagreeChange = IdentityManager.DISAGREE_VOTE;
     }
@@ -598,7 +631,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       disagreeChange = IdentityManager.AGREE_VOTE;
     }
     while (voteIt.hasNext()) {
-      Vote vote = (Vote)voteIt.next();
+      Vote vote = (Vote) voteIt.next();
       int repChange = vote.isAgreeVote() ? agreeChange : disagreeChange;
 
       idManager.changeReputation(idManager.findIdentity(vote.getIDAddress()),
@@ -615,7 +648,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return set;
   }
 
-  static class ContentRepairCallback implements CrawlManager.Callback {
+  static class ContentRepairCallback
+      implements CrawlManager.Callback {
     /**
      * @param success whether the repair was successful or not
      * @param cookie object used by callback to designate which repair

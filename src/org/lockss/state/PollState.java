@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.15 2003-04-03 05:22:02 claire Exp $
+ * $Id: PollState.java,v 1.16 2003-04-10 01:06:51 claire Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class PollState implements Comparable {
   int status;
   long startTime;
   Deadline deadline;
+  boolean ourPoll;
 
   // for marshalling only
   PollState() { }
@@ -65,28 +66,33 @@ public class PollState implements Comparable {
     this.status = bean.getStatus();
     this.startTime = bean.getStartTime();
     this.deadline = Deadline.restoreDeadlineAt(bean.getDeadlineTime());
+    this.ourPoll = bean.getOurPoll();
   }
 
   PollState(int type, String lwrBound, String uprBound, int status,
-            long startTime,
-            Deadline deadline) {
+            long startTime, Deadline deadline, boolean ourPoll) {
     this.type = type;
     this.lwrBound = lwrBound;
     this.uprBound = uprBound;
     this.status = status;
     this.startTime = startTime;
     this.deadline = deadline;
+    this.ourPoll = ourPoll;
   }
 
   /**
    * Returns the poll type.
    * @return an int representing the type
-   * @see org.lockss.protocol.LcapMessage
+   * @see org.lockss.poller.Poll
    */
   public int getType() {
     return type;
   }
 
+  /**
+   * Returns the poll type as a string
+   * @return the String representing the current poll type.
+   */
   public String getTypeString() {
     switch (type) {
       case 0:
@@ -129,6 +135,18 @@ public class PollState implements Comparable {
     return status;
   }
 
+  /**
+   * Returns true if this poll was started by us
+   * @return true if this is our poll
+   */
+  public boolean getOurPoll() {
+    return ourPoll;
+  }
+
+  /**
+   * return the status of the poll as a string.
+   * @return the string representing the current status
+   */
   public String getStatusString() {
     switch(status) {
       case SCHEDULED:
@@ -184,6 +202,18 @@ public class PollState implements Comparable {
     return ((status==RUNNING) ||
             (status==REPAIRING) ||
             (status==SCHEDULED));
+  }
+
+  /**
+   * returns true if the poll ended with an error state
+   * @return true if error
+   */
+  public boolean isErrorState() {
+    return ((status==ERR_SCHEDULE_HASH) ||
+            (status==ERR_HASHING) ||
+            (status==ERR_NO_QUORUM) ||
+            (status==ERR_IO) ||
+            (status==ERR_UNDEFINED));
   }
 
   public int compareTo(Object obj) {

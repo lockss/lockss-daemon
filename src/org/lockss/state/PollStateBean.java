@@ -1,5 +1,5 @@
 /*
- * $Id: PollStateBean.java,v 1.1 2003-03-15 02:45:28 aalto Exp $
+ * $Id: PollStateBean.java,v 1.2 2003-04-10 01:06:51 claire Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class PollStateBean extends PollState {
     this.status = poll.getStatus();
     this.startTime = poll.getStartTime();
     this.deadlineTime = poll.getDeadline().getExpirationTime();
+    this.ourPoll = poll.getOurPoll();
   }
 
   /**
@@ -108,4 +109,11 @@ public class PollStateBean extends PollState {
     deadlineTime = theDeadline;
   }
 
+  /**
+   * Sets the poll owner boolean
+   * @param ourPollFlag
+   */
+  public void setOurPoll(boolean ourPollFlag) {
+    ourPoll = ourPollFlag;
+  }
 }

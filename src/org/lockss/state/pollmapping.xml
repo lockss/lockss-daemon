@@ -42,6 +42,10 @@
                        collection="collection" lazy="true">
                         <bind-xml name="Votes" node="element"/>
                 </field>
+                 <field name="ourPoll"
+                       type="boolean">
+                        <bind-xml name="OurPoll" node="element"/>
+                </field>
         </class>
 
         <class name="org.lockss.state.VoteBean">
@@ -135,5 +139,9 @@
                        type="long">
                         <bind-xml name="DeadlineTime" node="element"/>
                 </field>
-        </class>
+                 <field name="ourPoll"
+                       type="boolean">
+                        <bind-xml name="OurPoll" node="element"/>
+                </field>
+       </class>
 </mapping>

@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.7 2003-03-05 01:59:56 claire Exp $
+* $Id: Vote.java,v 1.8 2003-04-10 01:06:51 claire Exp $
  */
 
 /*
@@ -170,6 +170,10 @@ public class Vote implements Serializable {
    */
   public String getVerifierString() {
     return String.valueOf(B64Code.encode(verifier));
+  }
+
+  public String getPollKey() {
+    return getChallengeString();
   }
 
 }
