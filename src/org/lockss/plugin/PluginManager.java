@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.112 2004-10-12 22:03:07 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.113 2004-10-12 22:56:56 tlipkis Exp $
  */
 
 /*
@@ -764,7 +764,6 @@ public class PluginManager
    */
   public Configuration getCurrentAuConfiguration(String auid) {
     String aukey = configKeyFromAuId(auid);
-    Configuration config = configMgr.readAuConfigFile();
     String prefix = PARAM_AU_TREE + "." + aukey;
     return ConfigManager.getCurrentConfig().getConfigTree(prefix);
   }

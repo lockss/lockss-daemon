@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.3 2004-10-12 22:02:19 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.4 2004-10-12 22:56:57 tlipkis Exp $
  */
 
 /*
@@ -497,8 +497,8 @@ public class ConfigManager implements LockssManager {
 			 Configuration oldConfig,
 			 Configuration.Differences diffs) {
     Set diffSet = diffs.getDifferenceSet();
-    int numDiffs = diffSet.size();
     SortedSet keys = new TreeSet(diffSet != null ? diffSet : config.keySet());
+    int numDiffs = keys.size();
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (numDiffs <= 40 || log.isDebug2() ||
