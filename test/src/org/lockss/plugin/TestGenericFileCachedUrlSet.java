@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.8 2002-12-03 23:07:47 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.9 2002-12-12 23:17:38 aalto Exp $
  */
 
 /*
@@ -118,6 +118,38 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       };
     assertIsomorphic(expectedA, childL);
   }
+
+  public void testLeafIteratorWithInternalContent() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch1",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf3", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/branch3",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2/branch3/leaf2",
+               "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf1",
+               "test stream", null);
+
+    CachedUrlSetSpec rSpec =
+        new RECachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    Iterator setIt = fileSet.leafIterator();
+    ArrayList childL = new ArrayList(4);
+    while (setIt.hasNext()) {
+      CachedUrl childUrl = (CachedUrl)setIt.next();
+      childL.add(childUrl.getUrl());
+    }
+    // should be sorted
+    String[] expectedA = new String[] {
+      "http://www.example.com/testDir/branch1",
+      "http://www.example.com/testDir/branch1/leaf1",
+      "http://www.example.com/testDir/branch2/branch3",
+      "http://www.example.com/testDir/branch2/branch3/leaf2",
+      "http://www.example.com/testDir/leaf3"
+      };
+    assertIsomorphic(expectedA, childL);
+  }
+
 
   private RepositoryNode createLeaf(String url, String content,
                                     Properties props) throws Exception {

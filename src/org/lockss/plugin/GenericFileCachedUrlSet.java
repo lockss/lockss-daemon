@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.10 2002-12-12 23:09:01 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.11 2002-12-12 23:17:38 aalto Exp $
  */
 
 /*
@@ -128,9 +128,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
             child.getNodeUrl());
         set.add(newUrl);
-      } else {
-        recurseLeafFetch(child, set);
       }
+      // internal nodes could have content, so always recurse
+      recurseLeafFetch(child, set);
     }
   }
 
