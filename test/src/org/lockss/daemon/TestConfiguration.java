@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.3 2002-09-09 20:31:32 tal Exp $
+ * $Id: TestConfiguration.java,v 1.4 2002-11-22 17:45:14 tal Exp $
  */
 
 /*
@@ -203,9 +203,25 @@ public class TestConfiguration extends TestCase {
     assertEquals("def", Configuration.getParam("noprop", "def"));
   }
 
-  Set diffSet = null;
+  volatile Set diffSet = null;
+  List configs;
 
-  public void testNotify() throws IOException {
+  public void testCallback() throws IOException {
+    configs = new ArrayList();
+    setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
+					      FileUtil.urlOfString(c1a)));
+    assertEquals(0, configs.size());
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration oldConfig,
+					 Configuration newConfig,
+					 Set changedKeys) {
+	  configs.add(newConfig);
+	}
+      });
+    assertEquals(1, configs.size());
+  }
+
+  public void testCallbackDiffs() throws IOException {
     setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
 					      FileUtil.urlOfString(c1a)));
     System.out.println(Configuration.getCurrentConfig().toString());
