@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.15 2003-07-24 20:41:18 clairegriffin Exp $
+ * $Id: PollSpec.java,v 1.16 2003-08-21 19:29:18 eaalto Exp $
  */
 
 /*
@@ -294,7 +294,7 @@ public class PollSpec {
 
   public String toString() {
     return "[PS: pid=" + "auid=" + auId + ", url=" + url
-      + ", l=" + lwrBound + ", u=" + uprBound + "version=" + version + "]";
+      + ", l=" + lwrBound + ", u=" + uprBound + ", version=" + version + "]";
   }
 }
 
