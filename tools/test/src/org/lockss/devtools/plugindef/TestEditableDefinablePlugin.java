@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.7 2004-10-23 01:38:22 clairegriffin Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.8 2004-12-07 05:43:21 tlipkis Exp $
  */
 
 /*
@@ -181,6 +181,7 @@ public class TestEditableDefinablePlugin
     set.add("org.lockss.util.urlconn.CacheException$NoRetryHostException");
     set.add("org.lockss.util.urlconn.CacheException$NoRetryRepositoryException");
     set.add("org.lockss.util.urlconn.CacheException$UnimplementedCodeException");
+    set.add("org.lockss.util.urlconn.CacheException$MalformedURLException");
 
     Collection actual = edPlugin.getKnownCacheExceptions();
     assertEquals("return value", set, actual);
