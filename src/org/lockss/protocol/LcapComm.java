@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.27 2003-04-08 19:44:25 tal Exp $
+ * $Id: LcapComm.java,v 1.28 2003-04-21 05:38:49 tal Exp $
  */
 
 /*
@@ -257,6 +257,7 @@ public class LcapComm extends BaseLockssManager {
 	  log.info("2nd multicast socket started: " + mSock2);
 	} catch (IOException e) {
 	  log.warning("Can't create 2nd multicast socket, not detecting multicast spoofing", e);
+	  verifyMulticast = false;
 	}
       }
     } else {
