@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.9 2004-01-22 02:01:34 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.10 2004-02-23 09:12:06 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -34,10 +34,15 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import javax.servlet.http.HttpServletRequest;
+import org.lockss.util.urlconn.*;
+import org.lockss.daemon.Configuration;
+import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.methods.*;
 
-/** Utilities for URLs
+/** Utilities for URLs and URLConnections
  */
 public class UrlUtil {
+  private static Logger log = Logger.getLogger("UrlUtil");
   /**
    * The separator string for URLs.
    */
@@ -66,39 +71,151 @@ public class UrlUtil {
   }
 
   /** Return input stream for url iff 200 response code, else throw.
-   * In Java 1.1.7, URL.openStream() returns an InputStream in some cases
-   * where it should throw, e.g., a 403 response on a filename that
-   * ends in ".txt".
-   * <br>In Java 1.3 and later this should not be necessary, as an
-   * IOException is thrown in all the right cases.  But there's no harm
-   * in continuing to use it, and it may be handy in the future.
+   * @param urlString the url
+   * @return an InputStream
+   * @throws IOException
+   */
+  public static InputStream openHttpClientInputStream(String urlString)
+      throws IOException {
+    log.debug2("openInputStream(\"" + urlString + "\")");
+    HttpClient client = new HttpClient();
+    HttpMethod method = new GetMethod(urlString);
+
+    // Execute the method.
+    int statusCode = -1;
+    // retry up to 2 times.
+    int attempt = 1;
+    while (true) {
+      log.debug3("try " + attempt);
+      try {
+	// execute the method.
+	method.addRequestHeader(new Header("user-agent", "lockss"));
+	statusCode = client.executeMethod(method);
+	if (statusCode == 200) {
+	  InputStream ins = method.getResponseBodyAsStream();
+	  return ins;
+	} else {
+	  throw new IOException("Server returned HTTP response code: " +
+				statusCode + " for URL: " + urlString);
+	}
+      } catch (HttpRecoverableException e) {
+	if (attempt++ < 2) {
+	  log.warning("Recoverable error: " + e.getMessage());
+	} else {
+	  log.warning("Too many recoverable errors, giving up: " +
+		      e.getMessage());
+	  throw e;
+	}
+      } catch (IOException e) {
+	throw e;
+      }
+    }
+  }
+
+  /** Return true if an http: or https: url */
+  // XXX does this need to trim blanks?
+  public static boolean isHttpUrl(String url) {
+    return StringUtil.startsWithIgnoreCase(url, "http:") ||
+      StringUtil.startsWithIgnoreCase(url, "https:");
+  }
+
+  /** Return input stream for url.  If url is http or https, uses Jakarta
+   * HttpClient, else Java URLConnection.
    * @param urlString the url
    * @return an InputStream
    * @throws IOException
    */
   public static InputStream openInputStream(String urlString)
       throws IOException {
-    URL url = new URL(urlString);
-    URLConnection uc = url.openConnection();
-    if (!(uc instanceof HttpURLConnection)) {
+    if (isHttpUrl(urlString)) {
+      return openHttpClientInputStream(urlString);
+    } else {
+      URL url = new URL(urlString);
+      URLConnection uc = url.openConnection();
       return uc.getInputStream();
     }
-    HttpURLConnection huc = (HttpURLConnection)uc;
-    int rc = huc.getResponseCode();
-    if (rc == HttpURLConnection.HTTP_OK) {
-      return huc.getInputStream();
-    } else {
-      throw new IOException("Server returned HTTP response code: " + rc +
-			    " for URL: " + urlString);
-    }
   }
+
+  /** Create and Return a LockssUrlConnection appropriate for the url
+   * protocol.  If url is http or https, uses Jakarta HttpClient, else Java
+   * URLConnection.
+   * @param urlString the url
+   * @return a LockssUrlConnection wrapper for the actual url connection
+   * @throws IOException
+   */
+  public static LockssUrlConnection openConnection(String urlString)
+      throws IOException {
+    return openConnection(urlString, null);
+  }
+
+  /** Create and Return a LockssUrlConnection appropriate for the url
+   * protocol.  If url is http or https, uses Jakarta HttpClient, else Java
+   * URLConnection.
+   * @param urlString the url
+   * @param connectionPool optional connection pool
+   * @return a LockssUrlConnection wrapper for the actual url connection
+   * @throws IOException
+   */
+  public static LockssUrlConnection
+    openConnection(String urlString, LockssUrlConnectionPool connectionPool)
+      throws IOException {
+    LockssUrlConnection luc;
+    if (isHttpUrl(urlString)) {
+      boolean useHttpClient =
+	Configuration.getBooleanParam("org.lockss.UrlUtil.useHttpClient",
+				      true);
+      if (useHttpClient) {
+	HttpClient client = null;
+	if (connectionPool != null) {
+	  client = connectionPool.getHttpClient();
+	} else {
+	  client = new HttpClient();
+	}
+	luc = new HttpClientUrlConnection(urlString, client);
+      } else {
+	luc = new JavaHttpUrlConnection(urlString);
+      }
+    } else {
+      luc = new JavaUrlConnection(urlString);
+    }
+    return luc;
+  }
+
+//   /** Return input stream for url iff 200 response code, else throw.
+//    * In Java 1.1.7, URL.openStream() returns an InputStream in some cases
+//    * where it should throw, e.g., a 403 response on a filename that
+//    * ends in ".txt".
+//    * <br>In Java 1.3 and later this should not be necessary, as an
+//    * IOException is thrown in all the right cases.  But there's no harm
+//    * in continuing to use it, and it may be handy in the future.
+//    * @param urlString the url
+//    * @return an InputStream
+//    * @throws IOException
+//    */
+//   public static InputStream openInputStream(String urlString)
+//       throws IOException {
+//     URL url = new URL(urlString);
+//     URLConnection uc = url.openConnection();
+//     if (!(uc instanceof HttpURLConnection)) {
+//       return uc.getInputStream();
+//     }
+//     HttpURLConnection huc = (HttpURLConnection)uc;
+//     int rc = huc.getResponseCode();
+//     if (rc == HttpURLConnection.HTTP_OK) {
+//       return huc.getInputStream();
+//     } else {
+//       throw new IOException("Server returned HTTP response code: " + rc +
+// 			    " for URL: " + urlString);
+//     }
+//   }
 
   /**
    * @param urlStr string representation of a url
    * @return urlStr up to but not including the path
    * @throws MalformedURLException if urlStr is not a well formed URL
    */
-  public static String getUrlPrefix(String urlStr) throws MalformedURLException{
+  public static String getUrlPrefix(String urlStr)
+      throws MalformedURLException{
     URL url = new URL(urlStr);
     URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "");
     return url2.toString();
@@ -188,6 +305,4 @@ public class UrlUtil {
     }
     return returnList;
   }
-
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.11 2004-01-09 01:15:53 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.12 2004-02-23 09:12:05 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.test;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -91,6 +92,9 @@ public class MockUrlCacher implements UrlCacher {
 
   public void setCachedUrl(MockCachedUrl cu) {
     this.cu = cu;
+  }
+
+  public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
   }
 
   public void setupCachedUrl(String contents) {

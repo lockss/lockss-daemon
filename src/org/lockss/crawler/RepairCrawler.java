@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.6 2004-02-13 02:34:20 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.7 2004-02-23 09:12:07 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.net.*;
 import java.io.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.ProxyManager;
@@ -54,7 +55,7 @@ public class RepairCrawler extends CrawlerImpl {
   public static final String PARAM_FETCH_FROM_OTHER_CACHE =
       Configuration.PREFIX + "crawler.fetch_from_other_caches";
 
-  private static final String HEADER_PREFIX = "_header";
+  private static final String HEADER_PREFIX = "_header_";
 
   private float percentFetchFromCache = 0;
 
@@ -140,8 +141,7 @@ public class RepairCrawler extends CrawlerImpl {
   protected boolean doCrawlLoop(String url, CachedUrlSet cus) {
     int error = 0;
     logger.debug2("Dequeued url from list: "+url);
-    Plugin plugin = au.getPlugin();
-    UrlCacher uc = plugin.makeUrlCacher(cus, url);
+    UrlCacher uc = makeUrlCacher(cus, url);
 
     // don't cache if already cached, unless overwriting
     try {
@@ -149,7 +149,11 @@ public class RepairCrawler extends CrawlerImpl {
 	wdog.pokeWDog();
       }
       if (shouldFetchFromCache()) {
-	fetchFromCache(uc);
+	try {
+	  fetchFromCache(uc);
+	} catch (CantProxyException e) {
+	  cache(uc);
+	}
       } else {
 	cache(uc);
       }
@@ -183,45 +187,33 @@ public class RepairCrawler extends CrawlerImpl {
       (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
     int proxyPort = proxyMan.getProxyPort();
 
-    URL url = new URL(null, uc.getUrl(), new MyHandler(id, proxyPort));
-
-    
-    HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+    LockssUrlConnection conn = UrlUtil.openConnection(uc.getUrl(),
+						      connectionPool);
+    if (!conn.canProxy()) {
+      throw new CantProxyException();
+    }
+    conn.setProxy(id, proxyPort);
     conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
-    conn.connect();
+    conn.execute();
+
     logger.debug("Trying to fetch from "+id);
-    uc.storeContent(conn.getInputStream(),
+    uc.storeContent(conn.getResponseInputStream(),
 		    getPropertiesFromConn(conn, uc.getUrl()));
   }
 
-  private Properties getPropertiesFromConn(HttpURLConnection conn, String url)
+  private Properties getPropertiesFromConn(LockssUrlConnection conn,
+					   String url)
       throws IOException {
     Properties props = new Properties();
     // set header properties in which we have interest
-    props.setProperty("content-type", conn.getContentType());
-    props.setProperty("date", Long.toString(conn.getDate()));
+    props.setProperty("content-type", conn.getResponseContentType());
+    props.setProperty("date", Long.toString(conn.getResponseDate()));
     props.setProperty("content-url", url);
-
-    // store all header properties (this is the only way to iterate)
-    int index = 0;
-    while (true) {
-      String key = conn.getHeaderFieldKey(index);
-      String value = conn.getHeaderField(index);
-      if ((key==null) && (value==null)) {
-        // the first header field has a null key, so we can't break just on key
-        break;
-      }
-      if (value!=null) {
-        // only store headers with values
-        // qualify header names to avoid conflict with our properties
-        if (key!=null) {
-          props.setProperty(HEADER_PREFIX + key, value);
-        } else {
-          // the first header field has a null key
-          props.setProperty(HEADER_PREFIX + index, value);
-        }
-      }
-      index++;
+    conn.storeResponseHeaderInto(props, HEADER_PREFIX);
+    String actualURL = conn.getActualUrl();
+    if (!url.equals(actualURL)) {
+      logger.info("setProperty(\"redirected-to\", " + actualURL + ")");
+      props.setProperty("redirected-to", actualURL);
     }
     return props;
   }
@@ -243,45 +235,6 @@ public class RepairCrawler extends CrawlerImpl {
     return idMgr;
   }
 
-}
-
-//XXX mighty hack.  FIXME.
-class MyHandler extends sun.net.www.protocol.http.Handler {
-  public MyHandler (String proxy, int port) {
-    super(proxy, port);
-  }
-
-  protected java.net.URLConnection openConnection(URL u) throws IOException {
-    return new MyHttpURLConnection(u, this);
-  }
-
-  public String getProxyHost() {
-    return proxy;
-  }
-
-  public int getProxyPort() {
-    return proxyPort;
-  }
-}
-
-class MyHttpURLConnection extends sun.net.www.protocol.http.HttpURLConnection {
-  protected MyHttpURLConnection(URL u, MyHandler handler) throws IOException {
-    super(u, handler);
-  }
-
-  public void connect() throws IOException {
-    if (connected) {
-      return;
-    }
-    try {
-      // Always create new connection when proxying
-      MyHandler h = (MyHandler)handler;
-      http = getProxiedClient(url, h.getProxyHost(), h.getProxyPort());
-      ps = (PrintStream)http.getOutputStream();
-    } catch (IOException e) {
-      throw e;
-    }
-    // constructor to HTTP client calls openserver
-    connected = true;
+  static class CantProxyException extends IOException {
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.6 2004-01-22 02:01:34 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.7 2004-02-23 09:12:05 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,15 @@ public class TestUrlUtil extends LockssTestCase {
 				  new URL("http://foo.bar/xyz#Tag")));
     assertFalse(UrlUtil.equalUrls(new URL("http:80//foo.bar/xyz#tag"),
 				  new URL("http:81//foo.bar/xyz#tag")));
+  }
+
+  public void testIsHttpUrl() {
+    assertTrue(UrlUtil.isHttpUrl("http://foo"));
+    assertTrue(UrlUtil.isHttpUrl("https://foo"));
+    assertTrue(UrlUtil.isHttpUrl("HTTP://foo"));
+    assertTrue(UrlUtil.isHttpUrl("HTTPS://foo"));
+    assertFalse(UrlUtil.isHttpUrl("ftp://foo"));
+    assertFalse(UrlUtil.isHttpUrl("file://foo"));
   }
 
   public void testGetUrlPrefixNullUrl(){

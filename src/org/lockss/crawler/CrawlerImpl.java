@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.10 2004-02-10 00:22:31 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.11 2004-02-23 09:12:07 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.URL;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
 
@@ -57,7 +58,19 @@ public abstract class CrawlerImpl implements Crawler {
 
   private static Logger logger = Logger.getLogger("CrawlerImpl");
 
+  public static final String PARAM_CONNECT_TIMEOUT =
+    Configuration.PREFIX + "crawler.timeout.connect";
+  public static long DEFAULT_CONNECT_TIMEOUT = 120 * Constants.SECOND;
+
+  public static final String PARAM_DATA_TIMEOUT =
+    Configuration.PREFIX + "crawler.timeout.data";
+  public static long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
+
+
   protected ArchivalUnit au;
+
+  protected LockssUrlConnectionPool connectionPool =
+    new LockssUrlConnectionPool();
 
   protected Crawler.Status crawlStatus = null;
 
@@ -85,6 +98,16 @@ public abstract class CrawlerImpl implements Crawler {
     this.au = au;
     this.spec = spec;
     this.aus = aus;
+    connectionPool = new LockssUrlConnectionPool();
+    
+    long connectTimeout =
+      Configuration.getTimeIntervalParam(PARAM_CONNECT_TIMEOUT,
+					 DEFAULT_CONNECT_TIMEOUT);
+    long dataTimeout =
+      Configuration.getTimeIntervalParam(PARAM_DATA_TIMEOUT,
+					 DEFAULT_DATA_TIMEOUT);
+    connectionPool.setConnectTimeout(connectTimeout);
+    connectionPool.setDataTimeout(dataTimeout);
   }
 
   public ArchivalUnit getAu() {
@@ -119,16 +142,13 @@ public abstract class CrawlerImpl implements Crawler {
     }
   }
 
-
-
   boolean crawlPermission(CachedUrlSet ownerCus) {
     boolean crawl_ok = false;
     int err = Crawler.STATUS_PUB_PERMISSION;
 
     // fetch and cache the manifest page
     String manifest = au.getManifestPage();
-    Plugin plugin = au.getPlugin();
-    UrlCacher uc = plugin.makeUrlCacher(ownerCus, manifest);
+    UrlCacher uc = makeUrlCacher(ownerCus, manifest);
     try {
       if (au.shouldBeCached(manifest)) {
         // check for proper crawl window
@@ -160,6 +180,16 @@ public abstract class CrawlerImpl implements Crawler {
       crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
     }
     return crawl_ok;
+  }
+
+  /** All UrlCachers should be made via this method, so they get their
+   * connection pool set. */
+  protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
+    ArchivalUnit au = cus.getArchivalUnit();
+    Plugin plugin = au.getPlugin();
+    UrlCacher uc = plugin.makeUrlCacher(cus, url);
+    uc.setConnectionPool(connectionPool);
+    return uc;
   }
 
   protected static boolean isSupportedUrlProtocol(String url) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.22 2004-02-09 22:54:13 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.23 2004-02-23 09:12:06 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * Base class for UrlCachers.  Utilizes the LockssRepository for caching, and
@@ -49,11 +50,12 @@ import org.lockss.util.*;
 public class BaseUrlCacher implements UrlCacher {
   protected CachedUrlSet cus;
   protected String url;
-  private URLConnection conn;
+  private LockssUrlConnectionPool connectionPool;
+  private LockssUrlConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
   private LockssRepository repository;
-  private CacheExceptionMap exceptionMap;
-  private static final String HEADER_PREFIX = "_header";
+  private CacheResultMap resultMap;
+  private static final String HEADER_PREFIX = "_header_";
 
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
@@ -61,7 +63,7 @@ public class BaseUrlCacher implements UrlCacher {
     this.url = url;
     ArchivalUnit au = owner.getArchivalUnit();
     repository = au.getPlugin().getDaemon().getLockssRepository(au);
-    exceptionMap = ((BasePlugin)au.getPlugin()).getExceptionMap();
+    resultMap = ((BasePlugin)au.getPlugin()).getCacheResultMap();
   }
 
   /**
@@ -115,6 +117,10 @@ public class BaseUrlCacher implements UrlCacher {
     return getArchivalUnit().getPlugin().makeCachedUrl(cus, url);
   }
 
+  public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
+    this.connectionPool = connectionPool;
+  }
+
   public void cache() throws IOException {
     long lastCached = 0;
     Plugin plugin = getArchivalUnit().getPlugin();
@@ -139,21 +145,25 @@ public class BaseUrlCacher implements UrlCacher {
     getArchivalUnit().pauseBeforeFetch();
     logger.debug3("Done pausing");
     InputStream input = getUncachedInputStream(lastCached);
+    // null input indicates unmodified content, so skip caching
     if (input!=null) {
-      // null input indicates unmodified content, so skip caching
-      Properties headers = getUncachedProperties();
-      if (headers == null) {
-        String err = "Received null headers for url '" + url + "'.";
-        logger.error(err);
-        throw new NullPointerException(err);
+      try {
+	Properties headers = getUncachedProperties();
+	if (headers == null) {
+	  String err = "Received null headers for url '" + url + "'.";
+	  logger.error(err);
+	  throw new NullPointerException(err);
+	}
+	storeContent(input, headers);
+      } finally {
+	input.close();
       }
-      storeContent(input, headers);
     }
   }
 
   public void storeContent(InputStream input, Properties headers)
       throws IOException {
-    logger.debug3("Caching url '"+url+"'");
+    logger.debug3("Storing url '"+url+"'");
     RepositoryNode leaf = null;
     try {
       leaf = repository.createNewNode(url);
@@ -165,7 +175,7 @@ public class BaseUrlCacher implements UrlCacher {
       input.close();
     }
     catch (IOException ex) {
-      throw exceptionMap.getRepositoryException(ex.getMessage());
+      throw resultMap.getRepositoryException(ex);
     }
 
     leaf.setNewProperties(headers);
@@ -187,14 +197,21 @@ public class BaseUrlCacher implements UrlCacher {
    */
   protected InputStream getUncachedInputStream(long lastCached)
       throws IOException {
-    openConnection(lastCached);
-    InputStream input = conn.getInputStream();
-    if (conn instanceof HttpURLConnection) {
-      // http connection; check response code
-      int code = ((HttpURLConnection)conn).getResponseCode();
-      if (code == HttpURLConnection.HTTP_NOT_MODIFIED) {
-        logger.debug2("Unmodified content not cached for url '"+url+"'");
-        return null;
+    InputStream input = null;
+    try {
+      openConnection(lastCached);
+      if (conn.isHttp()) {
+	// http connection; check response code
+	int code = conn.getResponseCode();
+	if (code == HttpURLConnection.HTTP_NOT_MODIFIED) {
+	  logger.debug2("Unmodified content not cached for url '"+url+"'");
+	  return null;
+	}
+      }
+      input = conn.getResponseInputStream();
+    } finally {
+      if (input == null) {
+	conn.release();
       }
     }
     return input;
@@ -207,37 +224,25 @@ public class BaseUrlCacher implements UrlCacher {
 //     openConnection();
     Properties props = new Properties();
     // set header properties in which we have interest
-    props.setProperty("content-type", conn.getContentType());
-    props.setProperty("date", Long.toString(conn.getDate()));
+    props.setProperty("content-type", conn.getResponseContentType());
+    props.setProperty("date", Long.toString(conn.getResponseDate()));
     props.setProperty("content-url", url);
-
-    // store all header properties (this is the only way to iterate)
-    int index = 0;
-    while (true) {
-      String key = conn.getHeaderFieldKey(index);
-      String value = conn.getHeaderField(index);
-      if ((key==null) && (value==null)) {
-        // the first header field has a null key, so we can't break just on key
-        break;
-      }
-      if (value!=null) {
-        // only store headers with values
-        // qualify header names to avoid conflict with our properties
-        if (key!=null) {
-          props.setProperty(HEADER_PREFIX + key, value);
-        } else {
-          // the first header field has a null key
-          props.setProperty(HEADER_PREFIX + index, value);
-        }
-      }
-      index++;
+    conn.storeResponseHeaderInto(props, HEADER_PREFIX);
+    String actualURL = conn.getActualUrl();
+    if (!url.equals(actualURL)) {
+      logger.info("setProperty(\"redirected-to\", " + actualURL + ")");
+      props.setProperty("redirected-to", actualURL);
     }
     return props;
   }
 
-  void checkConnectException(URLConnection conn) throws IOException {
-    if(conn instanceof HttpURLConnection) {
-      CacheException c_ex = exceptionMap.checkException((HttpURLConnection)conn);
+  void checkConnectException(LockssUrlConnection conn) throws IOException {
+    if(conn.isHttp()) {
+      if (logger.isDebug3()) {
+	logger.debug3("Response: " + conn.getResponseCode() + ": " +
+		      conn.getResponseMessage());
+      }
+      CacheException c_ex = resultMap.checkResult(conn);
       if(c_ex != null) {
         throw c_ex;
       }
@@ -252,14 +257,17 @@ public class BaseUrlCacher implements UrlCacher {
   private void openConnection(long lastCached) throws IOException {
     if (conn==null) {
       try {
-        URL urlO = new URL(url);
-        conn = urlO.openConnection();
+        conn = UrlUtil.openConnection(url, connectionPool);
+	conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+	if (lastCached > 0) {
+	  conn.setIfModifiedSince(lastCached);
+	}
+	conn.execute();
       }
       catch (IOException ex) {
-        throw exceptionMap.getHostException(ex.getMessage());
+	logger.warning("openConnection", ex);
+        throw resultMap.getHostException(ex);
       }
-      conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
-      conn.setIfModifiedSince(lastCached);
       checkConnectException(conn);
     }
   }

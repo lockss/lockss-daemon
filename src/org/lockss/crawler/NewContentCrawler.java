@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.3 2004-02-10 00:22:02 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.4 2004-02-23 09:12:07 tlipkis Exp $
  */
 
 /*
@@ -172,8 +172,7 @@ public class NewContentCrawler extends CrawlerImpl {
 
     int error = 0;
     logger.debug2("Dequeued url from list: "+url);
-    Plugin plugin = au.getPlugin();
-    UrlCacher uc = plugin.makeUrlCacher(cus, url);
+    UrlCacher uc = makeUrlCacher(cus, url);
 
     // don't cache if already cached, unless overwriting
     if (overWrite || !uc.getCachedUrl().hasContent()) {
@@ -238,7 +237,7 @@ public class NewContentCrawler extends CrawlerImpl {
     int numRetries = 0;
     while (true) {
       try {
-	logger.debug("caching "+uc);
+	logger.debug((shouldForceCache ? "force " : "" ) + "caching "+uc);
 	if (wdog != null) {
 	  wdog.pokeWDog();
 	}
@@ -269,8 +268,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	  failedUrls.add(uc.getUrl());
 	  throw e;
 	}
-	Plugin plugin = uc.getCachedUrlSet().getArchivalUnit().getPlugin();
-	uc = plugin.makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
+	uc = makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
       }
     }
   }
