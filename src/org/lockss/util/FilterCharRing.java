@@ -1,5 +1,5 @@
 /*
- * $Id: FilterCharRing.java,v 1.2 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: FilterCharRing.java,v 1.3 2004-10-08 06:58:40 tlipkis Exp $
  */
 
 /*
@@ -72,10 +72,12 @@ public class FilterCharRing extends CharRing {
    */
   public boolean startsWith(int idx, String tag, boolean ignoreCase) {
     //XXX reimplement with DNA searching algorithm
-    if ((idx + tag.length()) > size()) {
+    int taglen = tag.length();
+    int ringsize = size();
+    if ((idx + taglen) > ringsize) {
       throw new RuntimeException("idx("+idx+") plus the length of the tag("
 				 +tag+") is greater than the remaining size "
-				 +"of the charBuffer("+size()+")");
+				 +"of the charBuffer("+ringsize+")");
     }
 
     if (logger.isDebug3()) {
@@ -83,11 +85,11 @@ public class FilterCharRing extends CharRing {
     }
     //less common case than first char not match, but we have to check for 
     //size before that anyway
-    if (size() < tag.length() + idx) {
+    if (ringsize < taglen + idx) {
       return false;
     }
 
-    for (int ix=0; ix < tag.length() && ix + idx < size(); ix ++) {
+    for (int ix=0; ix < taglen && ix + idx < ringsize; ix ++) {
       char curChar = get(ix + idx);
       if (ignoreCase) {
 	if (!charEqualsIgnoreCase(curChar, tag.charAt(ix))) {

@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.33 2004-09-10 17:05:07 tlipkis Exp $
+ * $Id: Deadline.java,v 1.34 2004-10-08 06:58:40 tlipkis Exp $
  */
 
 /*
@@ -442,16 +442,21 @@ public class Deadline implements Comparable {
   // Comparable interface
 
   public int compareTo(Object o) {
-    return expiration.compareTo(((Deadline)o).expiration);
+    Deadline other = (Deadline)o;
+    long thisTime = expiration.getTime();
+    long otherTime = other.getExpirationTime();
+    return (thisTime < otherTime ? -1 : (thisTime == otherTime ? 0 : 1));
   }
 
   public boolean equals(Object o) {
-    return expiration.equals(((Deadline)o).expiration);
+    return (o instanceof Deadline) &&
+      expiration.getTime() == ((Deadline)o).getExpirationTime();
   }
 
-  /** Returns the hashCode of the underlying Date object */
+  /** Return a suitable hashCode  */
   public int hashCode() {
-    return expiration.hashCode();
+    long t = expiration.getTime();
+    return (int)t ^ (int)(t >> 32);
   }
 
   private static final DateFormat dfsec = new SimpleDateFormat("HH:mm:ss");

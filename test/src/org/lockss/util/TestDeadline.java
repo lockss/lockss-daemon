@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.15 2004-06-28 22:24:29 tlipkis Exp $
+ * $Id: TestDeadline.java,v 1.16 2004-10-08 06:58:38 tlipkis Exp $
  */
 
 /*
@@ -94,13 +94,44 @@ public class TestDeadline extends LockssTestCase {
     }
   }
 
-  public void testCompare() {
+  public void testBefore() {
     TimeBase.setSimulated();
     Deadline p1 = Deadline.in(100);
     Deadline p2 = Deadline.in(200);
     assertFalse(p1.before(p1));
     assertTrue(p1.before(p2));
     assertFalse(p2.before(p1));
+  }
+
+  public void testCompareTo() {
+    TimeBase.setSimulated();
+    Deadline p1 = Deadline.in(100);
+    Deadline p2 = Deadline.in(200);
+    Deadline p3 = Deadline.in(200);
+    assertTrue(p1.compareTo(p1) == 0);
+    assertTrue(p2.compareTo(p3) == 0);
+    assertTrue(p1.compareTo(p2) < 0);
+    assertTrue(p2.compareTo(p1) > 0);
+  }
+
+  public void testEquals() {
+    TimeBase.setSimulated();
+    Deadline p1 = Deadline.in(100);
+    Deadline p2 = Deadline.in(200);
+    Deadline p3 = Deadline.in(200);
+    assertTrue(p1.equals(p1));
+    assertTrue(p2.equals(p3));
+    assertTrue(p3.equals(p2));
+    assertFalse(p1.equals(p2));
+    assertFalse(p2.equals(p1));
+    assertFalse(p1.equals("foo"));
+  }
+
+  public void testHashCode() {
+    TimeBase.setSimulated();
+    Deadline p1 = Deadline.in(200);
+    Deadline p2 = Deadline.in(200);
+    assertTrue(p1.hashCode() == p2.hashCode());
   }
 
   public void testMinus() {

@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.3 2004-09-27 22:39:13 smorabito Exp $
+ * $Id: SmtpClient.java,v 1.4 2004-10-08 06:58:41 tlipkis Exp $
  */
 
 /*
@@ -230,7 +230,7 @@ public class SmtpClient extends TransferProtocolClient  {
   void sendBody(PrintStream ostrm, String body)
       throws IOException {
     char prev = 0;
-    for (int ix = 0; ix < body.length(); ix++) {
+    for (int ix = 0, len = body.length(); ix < len; ix++) {
       char c = (char)body.charAt(ix);
       // double leading dots
       if (prev == '\n' && c == '.') {

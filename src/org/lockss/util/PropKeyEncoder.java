@@ -1,5 +1,5 @@
 /*
- * $Id: PropKeyEncoder.java,v 1.3 2004-03-18 20:14:11 tlipkis Exp $
+ * $Id: PropKeyEncoder.java,v 1.4 2004-10-08 06:58:40 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class PropKeyEncoder {
     ByteArrayOutputStream buf = new ByteArrayOutputStream(maxBytesPerChar);
     OutputStreamWriter writer = new OutputStreamWriter(buf);
 
-    for (int i = 0; i < s.length(); i++) {
+    for (int i = 0, len = s.length(); i < len; i++) {
       int c = (int)s.charAt(i);
       if (dontNeedEncoding.get(c)) {
 	if (c == ' ') {
