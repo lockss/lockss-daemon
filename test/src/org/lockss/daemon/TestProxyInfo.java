@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.4 2004-03-15 22:20:31 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.5 2004-06-01 08:30:51 tlipkis Exp $
  */
 
 /*
@@ -115,6 +115,26 @@ public class TestProxyInfo extends LockssTestCase {
 	       re.isMatch(pf));
   }
 
+  public void testGenerateEncapsulatedPacFile() throws Exception {
+    String oldfile = "# foo\n" +
+      "function FindProxyForURL(url, host) {\n" +
+      "return some_logic(url, host);\n}\n";
+    String encapsulated = "# foo\n" +
+      "function FindProxyForURL0(url, host) {\n" +
+      "return some_logic(url, host);\n}\n";
+
+    String headRE =
+      "// PAC file generated .* by LOCKSS cache .*\\n\\n" +
+      "function FindProxyForURL\\(url, host\\) {\\n";
+    String tailRE = " return FindProxyForURL0\\(url, host\\);\\n}\\n" +
+      "\\n// Encapsulated PAC file\\n";
+    RE re = new RE(headRE + ifsRE + tailRE +
+		   StringUtil.escapeNonAlphaNum(encapsulated));
+    String pf = pi.encapsulatePacFile(makeUrlStemMap(), oldfile);
+    assertTrue("PAC file didn't match RE.  File contents:\n" + pf,
+	       re.isMatch(pf));
+  }
+
   String entry = "Title foo\n" +
     "URL http://foo.bar\n" +
     "Domain foo.bar\n\n";
@@ -132,6 +152,23 @@ public class TestProxyInfo extends LockssTestCase {
     "\n" +
     "Proxy\n";
 
+
+  public void testFindUnusedName() throws Exception {
+    String js1 = "function func0(foo, bar) { stmt; }\n";
+    String js2 = "function func1(foo, bar) { stmt; }\n";
+    String js3 = "function func00(foo, bar) { stmt; }\n";
+    assertEquals("newname0", pi.findUnusedName(js1, "newname"));
+    assertEquals("func1", pi.findUnusedName(js1, "func"));
+    assertEquals("func2", pi.findUnusedName(js1 + js2, "func"));
+    assertEquals("func0", pi.findUnusedName(js3, "func"));
+    assertEquals("func01", pi.findUnusedName(js3, "func0"));
+  }
+
+  public void testJSReplace() throws Exception {
+    String js1 = "function func(foo, bar) { func(bar, foo); func0(1,2) }\n";
+    String exp = "function func1(foo, bar) { func1(bar, foo); func0(1,2) }\n";
+    assertEquals(exp, pi.jsReplace(js1, "func", "func1"));
+  }
 
   public void testRemoveCommentLines() {
     assertEquals("", removeCommentLines(""));

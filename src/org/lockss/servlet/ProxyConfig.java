@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.2 2003-07-17 23:40:27 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.3 2004-06-01 08:30:51 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,10 @@ public class ProxyConfig extends LockssServlet {
       }
       return;
     }
+    if (format.equalsIgnoreCase("pac_encap")) {
+      generateEncapsulatedPacFile();
+      return;
+    }
     if (format.equalsIgnoreCase("ezproxy")) {
       if (urlStems.isEmpty()) {
 	wrtr = resp.getWriter();
@@ -131,6 +135,33 @@ public class ProxyConfig extends LockssServlet {
     wrtr.print(pac);
   }
 
+  void generateEncapsulatedPacFile() throws IOException {
+    String url = req.getParameter("encapsulated_url");
+    if (StringUtil.isNullString(url)) {
+      generateHelpPage("Combined PAC file requires URL");
+      return;
+    }
+    try {
+      String pac = pi.encapsulatePacFileFromURL(urlStems, url);
+      wrtr = resp.getWriter();
+
+      // Serve as PAC mime type if requested
+      String mime = req.getParameter("mime");
+      if ("pac".equalsIgnoreCase(mime)) {
+	resp.setContentType("application/x-ns-proxy-autoconfig");
+      }
+      wrtr.print(pac);
+    } catch (IOException e) {
+      generateHelpPage("Error reading PAC file from URL: " + url +
+		       ": " + e.toString());
+      return;
+    } catch (Exception e) {
+      generateHelpPage("Error generating combined PAC file from URL: " + url +
+		       ": " + e.toString());
+      return;
+    }
+  }
+
   void generateEZProxyFile() throws IOException {
     String ez = pi.generateEZProxyFragment(urlStems);
     wrtr = resp.getWriter();
@@ -146,38 +177,55 @@ public class ProxyConfig extends LockssServlet {
     Page page = newPage();;
     resp.setContentType("text/html");
     //    table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-    page.add("<p>This page is used to obtain proxy configuration " +
+    Form frm = new Form(srvURL(myServletDescr(), null));
+    // use GET so user can refresh in browser
+    frm.method("GET");
+    frm.add("<p>This page is used to obtain proxy configuration " +
 	     "information for browsers and other proxies, " +
 	     "to inform them which URLs " +
 	     "should be proxied through this cache.");
     if (error != null) {
-      page.add("<p><font color=red>");
-      page.add(error);
-      page.add("</font>");
+      frm.add("<p><font color=red>");
+      frm.add(error);
+      frm.add("</font>");
     }
-    page.add("<p>Choose a supported format: ");
-    page.add("<ul>");
-    addFmtLink(page, "PAC file", "pac",
+    frm.add("<p>Choose a supported format: ");
+    frm.add("<ul>");
+    addFmtElement(frm, "EZproxy config fragment", "ezproxy",
+	       "Text to insert into EZproxy config file (#)");
+    addFmtElement(frm, "PAC file", "pac",
 	       "Automatic proxy configuration for browsers. " +
 	       "Place the contents of this file on a server for your users " +
 	       "to configure their browsers (#)" +
 	       srvAbsLink(myServletDescr(), ".", "format=pac&mime=pac"));
-//     addFmtLink(page, "PAC file encapsulating ", "pac",
-// 	       "Automatic proxy configuration for browsers");
-    addFmtLink(page, "EZproxy config fragment", "ezproxy",
-	       "Text to insert into EZproxy config file (#)");
+    Composite urlform = new Composite();
+    urlform.add("PAC file that combines rules in an existing PAC file with the rules for this cache.<br>PAC file URL: ");
+    urlform.add(new Input(Input.Text, "encapsulated_url"));
+    urlform.add(new Input(Input.Submit, "format", "pac_encap"));
+    addFmtElement(frm, "Combined PAC file", "pac_encap", urlform);
+    page.add(frm);
     page.add(getFooter());
     page.write(resp.getWriter());
   }
 
-  void addFmtLink(Composite comp, String title, String format, String text) {
+  void addFmtElement(Composite comp, String title, String format,
+		     String text) {
     ServletDescr desc = myServletDescr();
     String fmt = "format=" + format;
     String absUrl = "<code>" + srvAbsURL(desc, fmt) + "</code>";
+    Composite elem = new Composite();
+    elem.add(StringUtil.replaceString(text, "#", absUrl.toString()));
+    addFmtElement(comp, title, format, elem);
+  }
+
+  void addFmtElement(Composite comp, String title, String format,
+		     Element elem) {
+    ServletDescr desc = myServletDescr();
+    String fmt = "format=" + format;
     comp.add("<li>");
     comp.add(srvLink(desc, title, fmt));
     comp.add(". ");
-    comp.add(StringUtil.replaceString(text, "#", absUrl.toString()));
+    comp.add(elem);
     comp.add("</li>");
   }
 

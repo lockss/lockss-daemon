@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.4 2004-03-15 22:20:32 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.5 2004-06-01 08:30:53 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 import java.util.*;
 import java.net.*;
+import java.io.*;
+import org.apache.oro.text.regex.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -44,6 +46,9 @@ import org.lockss.protocol.*;
  * that should be directed to this cache.
  */
 public class ProxyInfo {
+  public static final int MAX_ENCAPSULATED_PAC_SIZE = 100 * 1024;
+  protected static Logger log = Logger.getLogger("ProxyInfo");
+
   private String proxyHost;
   private int proxyPort = -1;
 
@@ -103,7 +108,7 @@ public class ProxyInfo {
     return getUrlStemMap(getAus());
   }
 
-  /** 
+  /**
    * @return Map of all URL stems to their AU
    */
   public Map getUrlStemMap(Collection aus) {
@@ -133,13 +138,63 @@ public class ProxyInfo {
     return sb.toString();
   }
 
+  /** Generate a PAC file string from the URL stem map, delegating to the
+   * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
+   * found. */
+  public String encapsulatePacFileFromURL(Map urlStems, String url)
+      throws IOException {
+    InputStream bis = null;
+    try {
+      InputStream istr = UrlUtil.openInputStream(url);
+      bis = new BufferedInputStream(istr);
+      String old = StringUtil.fromInputStream(bis, MAX_ENCAPSULATED_PAC_SIZE);
+      return encapsulatePacFile(urlStems, old);
+    } finally {
+      if (bis != null) {
+	bis.close();
+      }
+    }
+  }
+
+  /** Generate a PAC file string from the URL stem map, delegating to the
+   * FindProxyForURL function in the pacFileToBeEncapsulated if no match is
+   * found. */
+  public String encapsulatePacFile(Map urlStems,
+				   String pacFileToBeEncapsulated) {
+    try {
+      String encapsulatedName = findUnusedName(pacFileToBeEncapsulated);
+      String encapsulaed = 
+	jsReplace(pacFileToBeEncapsulated, "FindProxyForURL",
+		  encapsulatedName);
+      StringBuffer sb = new StringBuffer();
+      sb.append("// PAC file generated ");
+      sb.append(TimeBase.nowDate().toString());
+      sb.append(" by LOCKSS cache ");
+      sb.append(getProxyHost());
+      sb.append("\n\n");
+      generatePacFunction(sb, urlStems,
+			  " return " + encapsulatedName + "(url, host);\n");
+      sb.append("\n// Encapsulated PAC file\n");
+      sb.append(encapsulaed);
+      return sb.toString();
+    } catch (MalformedPatternException e) {
+      log.error("PAC file patterns", e);
+      throw new RuntimeException("Unexpected malformed pattern: " +
+				 e.toString());
+    }
+  }
+
   void generatePacFunction(StringBuffer sb, Map urlStems) {
+    generatePacFunction(sb, urlStems, " return \"DIRECT\";\n");
+  }
+
+  void generatePacFunction(StringBuffer sb, Map urlStems, String elseStmt) {
     sb.append("function FindProxyForURL(url, host) {\n");
     for (Iterator iter = urlStems.keySet().iterator(); iter.hasNext(); ) {
       String urlStem = (String)iter.next();
       generatePacEntry(sb, urlStem);
     }
-    sb.append(" return \"DIRECT\";\n");
+    sb.append(elseStmt);
     sb.append("}\n");
   }
 
@@ -157,6 +212,44 @@ public class ProxyInfo {
   /** Turn a stem into a shell pattern */
   private String shPattern(String urlStem) {
     return urlStem + "/*";
+  }
+
+  String findUnusedName(String js) throws MalformedPatternException {
+    return findUnusedName(js, "FindProxyForURL");
+  }
+
+  String findUnusedName(String js, String base)
+      throws MalformedPatternException {
+    for (int suff = 0; true; suff++) {
+      Pattern pat = getCompiler().compile("\\b" + base + suff + "\\b");
+      if (!getMatcher().contains(js, pat)) {
+	return base + suff;
+      }
+    }
+  }
+
+  Perl5Compiler compiler = null;
+  Perl5Compiler getCompiler() {
+    if (compiler == null) {
+      compiler = new Perl5Compiler();
+    }
+    return compiler;
+  }
+
+  Perl5Matcher matcher = null;
+  Perl5Matcher getMatcher() {
+    if (matcher == null) {
+      matcher = new Perl5Matcher();
+    }
+    return matcher;
+  }
+
+  String jsReplace(String js, String oldname, String newname)
+      throws MalformedPatternException {
+    Pattern fromPat = getCompiler().compile("\\b" + oldname + "\\b");
+    Substitution subst = new Perl5Substitution(newname);
+    return Util.substitute(getMatcher(), fromPat, subst, js,
+			   Util.SUBSTITUTE_ALL);
   }
 
   /** Generate an EZproxy config fragment from the URL stem map */
