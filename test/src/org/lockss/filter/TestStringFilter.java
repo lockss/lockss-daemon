@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilter.java,v 1.2 2003-10-07 22:22:42 troberts Exp $
+ * $Id: TestStringFilter.java,v 1.3 2003-11-01 01:07:07 eaalto Exp $
  */
 
 /*
@@ -95,7 +95,6 @@ public class TestStringFilter extends LockssTestCase {
     StringFilter sf = new StringFilter(new StringReader(str), "REMOVE");
     char buf[] = new char[21];
     sf.read(buf);
-    System.err.println("|"+new String(buf)+"|");
     assertEquals("This is a test string", new String(buf));
   }
 
@@ -153,7 +152,7 @@ public class TestStringFilter extends LockssTestCase {
     }
   }
 
-  
+
 
   //Series of tests with multiple strings
   public void testFiltersMultipleString() throws IOException {
