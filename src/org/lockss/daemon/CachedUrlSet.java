@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.8 2002-12-17 01:56:49 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.9 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -43,7 +43,8 @@ import java.security.MessageDigest;
  * regular-expression]</code> pairs).
  *
  * @author  David S. H. Rosenthal
- * @version 0.0 */
+ * @version 0.0
+ */
 public interface CachedUrlSet {
   /**
    * @return the {@link ArchivalUnit} to which this CachedUrlSet belongs
@@ -57,6 +58,7 @@ public interface CachedUrlSet {
      * @return the CachedUrlSet
      */
     public CachedUrlSetSpec getSpec();
+
     /**
      * Return true if the url matches an entry in the
      * <code>CachedUrlSet</code> object's list.
@@ -69,6 +71,7 @@ public interface CachedUrlSet {
     // Methods used by the poller
 
     public CachedUrlSetHasher getContentHasher(MessageDigest hasher);
+
     /**
      * Return an object that can be used to hash the names of cached urls
      * that match the list of <code>CachedUrlSetSpec</code>
@@ -80,6 +83,7 @@ public interface CachedUrlSet {
      *         <code>CachedUrlSet</code>.
      */
     public CachedUrlSetHasher getNameHasher(MessageDigest hasher);
+
     /**
      * Return an <code>Iterator</code> of <code>CachedUrlSet</code>
      * objects representing the direct descendants of this
@@ -89,6 +93,7 @@ public interface CachedUrlSet {
      *         <code>CachedUrlSetSpec</code> list.
      */
     public Iterator flatSetIterator();
+
     /**
      * Return an <code>Iterator</code> of <code>CachedUrl/code>
      * objects representing the leaves of the tree rooted at this
@@ -99,11 +104,13 @@ public interface CachedUrlSet {
      *         <code>CachedUrlSetSpec</code> list.
      */
     public Iterator leafIterator();
+
     /**
      * Return an estimate of the time required to hash the content.
      * @return an estimate of the time required to hash the content.
      */
     public long estimatedHashDuration();
+
     /**
      * Provide the measured duration of a hash attempt and an
      * indication of success or failure.
@@ -125,6 +132,7 @@ public interface CachedUrlSet {
      * @return true of the url is part of the cache
      */
     public boolean isCached(String url);
+
     /**
      * Create a <code>CachedUrl</code> object within the set.
      * @param url the url of interest
@@ -140,4 +148,22 @@ public interface CachedUrlSet {
      * @return a <code>UrlCacher</code> object representing the url.
      */
     public UrlCacher makeUrlCacher(String url);
+
+    /**
+     * Returns a unique identifier within the ArchivalUnit
+     * @return the unique id
+     */
+    public String getIdString();
+
+    /**
+     * Returns the primary url referenced by the CachedUrlSet.
+     * @return the url
+     */
+    public String getPrimaryUrl();
+
+    /**
+     * Needs to be overwritten to hash CachedUrlSets properly.
+     * @return the hashcode
+     */
+    public int hashCode();
 }

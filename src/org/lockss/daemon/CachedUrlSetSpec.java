@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.3 2002-10-16 04:50:54 tal Exp $
+ * $Id: CachedUrlSetSpec.java,v 1.4 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -50,4 +50,22 @@ public interface CachedUrlSetSpec {
    * @return the list of URL prefixes, as Strings
    */
   public List getPrefixList();
+
+  /**
+   * This needs to be overwritten to hash CachedUrlSets properly.
+   * @return the hashcode
+   */
+  public int hashCode();
+
+  /**
+   * Returns a unique id string.
+   * @return the unique id
+   */
+  public String getIdString();
+
+  /**
+   * Returns the primary url referenced by the spec.
+   * @return the url
+   */
+  public String getPrimaryUrl();
 }

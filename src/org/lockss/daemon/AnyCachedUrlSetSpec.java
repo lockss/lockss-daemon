@@ -1,5 +1,5 @@
 /*
- * $Id: AnyCachedUrlSetSpec.java,v 1.1 2002-10-16 04:52:55 tal Exp $
+ * $Id: AnyCachedUrlSetSpec.java,v 1.2 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
  */
 public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
   private List list;
-  
+
   /**
    * Create a CachedUrlSetSpec that matches if any of the CachedUrlSetSpecs
    * in the list match.
@@ -47,13 +47,14 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
    * @throws NullPointerException if the list or any element is null.
    * @throws ClassCastException if any element isn't a CachedUrlSetSpec
    */
-  public AnyCachedUrlSetSpec(List specList)
-      throws ClassCastException {
+  public AnyCachedUrlSetSpec(List specList) throws ClassCastException {
     this.list = ListUtil.immutableListOfType(specList, CachedUrlSetSpec.class);
   }
-  
+
   /**
-   * Return true if any of the contained CachedUrlSetSpecs matches the URL
+   * Return true if any of the contained CachedUrlSetSpecs matches the URL.
+   * @param url the url to test
+   * @return true if it matches any of the sub-specs
    */
   public boolean matches(String url) {
     for (Iterator iter = list.iterator(); iter.hasNext(); ) {
@@ -68,6 +69,7 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
   /**
    * Return a list of all URL prefixes in the contained CachedUrlSetSpecs.
    * Duplicates are not removed.
+   * @return the prefix list
    */
   public List getPrefixList() {
     List res = new LinkedList();
@@ -76,5 +78,47 @@ public class AnyCachedUrlSetSpec implements CachedUrlSetSpec {
       res.addAll(cuss.getPrefixList());
     }
     return res;
+  }
+
+  /**
+   * Overrides Object.hashCode();
+   * Returns the sum of the sub-spec hashcodes.
+   * @return the hashcode
+   */
+  public int hashCode() {
+    int hashSum = 0;
+    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+      CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
+      hashSum += cuss.hashCode();
+    }
+    return hashSum;
+  }
+
+  /**
+   * Returns a CSV list of the sub-spec id strings.
+   * @return the id
+   */
+  public String getIdString() {
+    StringBuffer buffer = new StringBuffer();
+    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+      CachedUrlSetSpec cuss = (CachedUrlSetSpec)iter.next();
+      if (buffer.length()>0) {
+        buffer.append(",");
+      }
+      buffer.append(cuss.getIdString());
+    }
+    return buffer.toString();
+  }
+
+  /**
+   * Returns the primary url of the first sub-spec, or null if none.
+   * @return the url
+   */
+  public String getPrimaryUrl() {
+    if (list.size()>0) {
+      return ((CachedUrlSetSpec)list.get(0)).getPrimaryUrl();
+    } else {
+      return null;
+    }
   }
 }

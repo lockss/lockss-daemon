@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.8 2002-12-19 01:28:40 aalto Exp $
+ * $Id: NullPlugin.java,v 1.9 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -189,6 +189,18 @@ public class NullPlugin {
       return false;
     }
 
+    public String getIdString() {
+      return "null";
+    }
+
+    public int hashCode() {
+      return 0;
+    }
+
+    public String getPrimaryUrl() {
+      return "null";
+    }
+
   }
 
   public static class ArchivalUnit
@@ -220,6 +232,16 @@ public class NullPlugin {
 
     public void pause() {
     }
+
+    public String getIdString() {
+      return "null";
+    }
+
+    public int hashCode() {
+      return 0;
+    }
+
+
   }
 
 /**

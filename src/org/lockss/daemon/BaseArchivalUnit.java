@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.3 2002-11-07 22:39:12 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.4 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -31,54 +31,81 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
+
 import gnu.regexp.*;
 
-/** Abstract base class for ArchivalUnits.
+/**
+ * Abstract base class for ArchivalUnits.
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
-  private static final int 
+  private static final int
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10000;
 
   private CrawlSpec crawlSpec;
 
-  /** Must invoke this constructor in plugin subclass. */
+  /**
+   * Must invoke this constructor in plugin subclass.
+   * @param spec the CrawlSpec
+   */
   protected BaseArchivalUnit(CrawlSpec spec) {
     crawlSpec = spec;
   }
 
   // Factories that must be implemented by plugin subclass
 
-  /** Create an instance of the plugin-specific implementation of
+  /**
+   * Create an instance of the plugin-specific implementation of
    * CachedUrlSet, with the specified owner and CachedUrlSetSpec
+   * @param owner the ArchivalUnit owner
+   * @param cuss the spec
+   * @return the cus
    */
   public abstract CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
 						      CachedUrlSetSpec cuss);
 
-  /** Create an instance of the plugin-specific implementation of
+  /**
+   * Create an instance of the plugin-specific implementation of
    * CachedUrl, with the specified owner and url
+   * @param owner the CachedUrlSet owner
+   * @param url the url
+   * @return the CachedUrl
    */
   public abstract CachedUrl cachedUrlFactory(CachedUrlSet owner,
 						String url);
 
-  /** Create an instance of the plugin-specific implementation of
+  /**
+   * Create an instance of the plugin-specific implementation of
    * UrlCacher, with the specified owner and url
+   * @param owner the CachedUrlSet owner
+   * @param url the url
+   * @return the UrlCacher
    */
   public abstract UrlCacher urlCacherFactory(CachedUrlSet  owner,
 						String url);
 
-  /** Return the CrawlSpec */
+  /**
+   * Return the CrawlSpec.
+   * @return the spec
+   */
   public CrawlSpec getCrawlSpec() {
     return crawlSpec;
   }
 
-  /** Determine whether the url falls within the CrawlSpec. */
+  /**
+   * Determine whether the url falls within the CrawlSpec.
+   * @param url the url
+   * @return true if it is included
+   */
   public boolean shouldBeCached(String url) {
     return getCrawlSpec().isIncluded(url);
   }
 
-  /** Create a CachedUrlSet representing the content in this AU
+  /**
+   * Create a CachedUrlSet representing the content in this AU
    * that matches the CachedUrlSetSpec
+   * @param cuss the spec
+   * @return the CachedUrlSet
    */
   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
     CachedUrlSet cus = cachedUrlSetFactory(this, cuss);
@@ -88,8 +115,10 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Create a CachedUrlSet representing the content in this AU
    * that matches the url and regexp.
-   * @param url
-   * @param regexp
+   * @param url the string
+   * @param regexp the regexp
+   * @return the CachedUrlSet
+   * @throws REException
    */
   public CachedUrlSet makeCachedUrlSet(String url, String regexp)
       throws REException {
@@ -99,24 +128,39 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Return the CachedUrlSet representing the entire contents
    * of this AU
+   * @return the CachedUrlSet
    */
   public CachedUrlSet getAUCachedUrlSet() {
     // tk this needs to compute the top-level CUSS
     return makeCachedUrlSet(null);
   }
 
-  public void pause(){
+  public void pause() {
     pause(DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
   }
 
-  protected void pause(int milliseconds){
-    try{
-      Thread thread = Thread.currentThread();
-      thread.sleep(milliseconds);
-    }
-    catch (InterruptedException ie){
-    }
+  /**
+   * Concats the plugin id and au id to generate a unique id.
+   * @return the unique id
+   */
+  public String getIdString() {
+    return getPluginId() + ":" + getAUId();
   }
 
+  /**
+   * Overrides Object.hashCode();
+   * Returns the hashcode of the id string.
+   * @return the hashcode
+   */
+  public int hashCode() {
+    return getIdString().hashCode();
+  }
+
+  protected void pause(int milliseconds) {
+    try {
+      Thread thread = Thread.currentThread();
+      thread.sleep(milliseconds);
+    } catch (InterruptedException ie) { }
+  }
 
 }

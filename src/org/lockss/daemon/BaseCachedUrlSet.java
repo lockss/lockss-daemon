@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.4 2003-01-14 00:48:40 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.5 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -32,15 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
-//  import java.io.*;
 import java.util.*;
-//  import java.net.*;
-//  import java.security.MessageDigest;
-//  import org.lockss.daemon.*;
-//  import org.lockss.plugin.*;
-//  import org.lockss.test.*;
+import java.io.File;
 
-/** Abstract base class for CachedUrlSets.
+/**
+ * Abstract base class for CachedUrlSets.
  * Plugins may extend this to get some common CachedUrlSet functionality.
  */
 public abstract class BaseCachedUrlSet implements CachedUrlSet {
@@ -100,4 +96,31 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
   public String toString() {
     return "[BCUS: "+spec+"]";
   }
+
+  /**
+   * Returns the first url in the prefix list.  Strips the trailing seperator
+   * character ('/'), if any.
+   * @return the unique id
+   */
+  public String getIdString() {
+    return spec.getIdString();
+  }
+
+  /**
+   * Returns the main url of the spec.
+   * @return the url
+   */
+  public String getPrimaryUrl() {
+    return spec.getPrimaryUrl();
+  }
+
+  /**
+   * Overrides Object.hashCode();
+   * Returns the hashcode of the spec.
+   * @return the hashcode
+   */
+  public int hashCode() {
+    return spec.hashCode();
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: RECachedUrlSetSpec.java,v 1.2 2002-11-14 22:00:24 tal Exp $
+ * $Id: RECachedUrlSetSpec.java,v 1.3 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -31,6 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
+
 import java.util.*;
 import gnu.regexp.*;
 import org.lockss.util.*;
@@ -59,7 +60,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
     this.prefixList = Collections.unmodifiableList(ListUtil.list(urlPrefix));
     this.re = regexp;
   }
-  
+
   /**
    * Create a CachedUrlSetSpec that matches URLs that start with the prefix
    * and match the regexp.
@@ -72,7 +73,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
       throws REException {
     this(urlPrefix, regexp != null ? new RE(regexp) : null);
   }
-  
+
   /**
    * Create a CachedUrlSetSpec that matches URLs that start with the prefix
    * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
@@ -81,10 +82,12 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
   public RECachedUrlSetSpec(String urlPrefix) {
     this(urlPrefix, (RE)null);
   }
-  
+
   /**
    * Return true if the URL begins with the prefix and matches the regexp,
    * if any.
+   * @param url to match
+   * @return true if it matches
    */
   public boolean matches(String url) {
     // tk - should be case-independent, at least for protocol & host part.
@@ -96,6 +99,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
 
   /**
    * Return a list containing the URL prefix
+   * @return the prefix list
    */
   public List getPrefixList() {
     return prefixList;
@@ -103,6 +107,7 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
 
   /**
    * Return the RE, or null if none
+   * @return the re
    */
   public RE getRE() {
     return re;
@@ -119,7 +124,36 @@ public class RECachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   public String toString() {
-    return "[CUSS: " + prefixList.get(0) +
+    return "[CUSS: " + getPrimaryUrl() +
       ((re == null) ? "]" : (", " + re + "]"));
+  }
+
+  /**
+   * Overrides Object.hashCode();
+   * Returns the sum of the regexp hashcode and first url hashcode.
+   * @return the hashcode
+   */
+  public int hashCode() {
+    if (re!=null) {
+      return re.hashCode() + getPrimaryUrl().hashCode();
+    } else {
+      return getPrimaryUrl().hashCode();
+    }
+  }
+
+  /**
+   * Returns the primary url plus the re ("null" if none).
+   * @return the id string
+   */
+  public String getIdString() {
+    return getPrimaryUrl() + ":" + re;
+  }
+
+  /**
+   * Returns the first url in the prefix list, or null if none.
+   * @return the url
+   */
+  public String getPrimaryUrl() {
+    return (prefixList.size()>0 ? (String)prefixList.get(0) : null);
   }
 }

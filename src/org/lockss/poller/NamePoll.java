@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.24 2003-01-23 03:01:15 claire Exp $
+* $Id: NamePoll.java,v 1.25 2003-01-25 02:21:11 aalto Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class NamePoll extends Poll {
       ArrayList alist = new ArrayList();
       while(it.hasNext()) {
         CachedUrlSet cus = (CachedUrlSet) it.next();
-        String name = (String)cus.getSpec().getPrefixList().get(0);
+        String name = (String)cus.getPrimaryUrl();
         alist.add(name);
       }
        m_entries = (String[])alist.toArray(new String[alist.size()]);
