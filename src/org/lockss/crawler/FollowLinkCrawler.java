@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.20 2005-01-19 04:14:14 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.21 2005-01-19 18:07:07 tlipkis Exp $
  */
 
 /*
@@ -354,6 +354,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       } catch (CacheException e) {
 	// Failed.  Don't try this one again during this crawl.
 	failedUrls.add(uc.getUrl());
+	crawlStatus.signalErrorForUrl(uc.getUrl(), e.getMessage());
 	if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
 	  logger.error("Problem caching "+uc+". Continuing", e);
 	  error = Crawler.STATUS_FETCH_ERROR;
@@ -362,6 +363,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	}
       } catch (Exception e) {
 	failedUrls.add(uc.getUrl());
+	crawlStatus.signalErrorForUrl(uc.getUrl(), e.toString());
 	//XXX not expected
 	logger.error("Unexpected Exception during crawl, continuing", e);
 	error = Crawler.STATUS_FETCH_ERROR;
