@@ -269,7 +269,8 @@ public class TestPoll extends LockssTestCase {
       np = (NamePoll) pollmanager.createPoll(poll_msg, spec);
 
       // generate agree vote msg
-      agree_msg = LcapMessage.makeReplyMsg(poll_msg, poll_msg.getHashed(),
+      agree_msg = LcapMessage.makeReplyMsg(poll_msg,
+                                           pollmanager.generateRandomBytes(),
                                            poll_msg.getVerifier(),
                                            agree_entries,
                                            LcapMessage.NAME_POLL_REP,
