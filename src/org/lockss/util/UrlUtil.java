@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.19 2004-04-19 02:43:25 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.20 2004-07-28 18:19:32 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -211,6 +211,16 @@ public class UrlUtil {
       }
     }
     return false;
+  }
+
+  /** Return true if both URLs have the same host part */
+  public static boolean isSameHost(String url1, String url2) {
+    try {
+      return getHost(url1).equalsIgnoreCase(getHost(url2));
+    } catch (MalformedURLException e) {
+      log.warning("isSameHost", e);
+      return false;
+    }
   }
 
   /** Return true if <code>to</code> looks like a directory redirection

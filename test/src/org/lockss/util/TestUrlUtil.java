@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.13 2004-04-19 02:43:24 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.14 2004-07-28 18:19:32 tlipkis Exp $
  */
 
 /*
@@ -261,6 +261,14 @@ public class TestUrlUtil extends LockssTestCase {
     assertTrue(UrlUtil.isAbsoluteUrl("http://www.example.com/blah/"));
     assertFalse(UrlUtil.isAbsoluteUrl("www.example.com/"));
     assertFalse(UrlUtil.isAbsoluteUrl("blah/blah"));
+  }
+
+  public void testIsSameHost() {
+    assertFalse(UrlUtil.isSameHost(null, null));
+    assertTrue(UrlUtil.isSameHost("http://www.example.com/foo/bar",
+				  "http://www.example.com/bar/bar/bar"));
+    assertFalse(UrlUtil.isSameHost("http://www.example.com/foo/bar",
+				   "http://www2.example.com/foo/bar"));
   }
 
   public void testStripsParams() throws MalformedURLException {
