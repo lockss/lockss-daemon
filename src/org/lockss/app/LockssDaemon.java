@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.27 2003-05-08 02:40:23 tal Exp $
+ * $Id: LockssDaemon.java,v 1.28 2003-05-10 02:44:07 tal Exp $
  */
 
 /*
@@ -59,6 +59,9 @@ public class LockssDaemon {
 
   private static String PARAM_DAEMON_EXIT_AFTER = PREFIX + "exitAfter";
   private static long DEFAULT_DAEMON_EXIT_AFTER = 0;
+
+  private static String PARAM_DAEMON_EXIT_ONCE = PREFIX + "exitOnce";
+  private static boolean DEFAULT_DAEMON_EXIT_ONCE = false;
 
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
@@ -424,6 +427,9 @@ public class LockssDaemon {
     Configuration.waitConfig();
     log.info("Config loaded");
 
+    prevExitOnce = Configuration.getBooleanParam(PARAM_DAEMON_EXIT_ONCE,
+						 DEFAULT_DAEMON_EXIT_ONCE);
+
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration prevConfig,
@@ -432,6 +438,8 @@ public class LockssDaemon {
 	}
       });
   }
+
+  boolean prevExitOnce = false;
 
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
@@ -463,6 +471,15 @@ public class LockssDaemon {
 	}
       }
     }    
+
+    // THIS MUST BE LAST IN THIS ROUTINE
+    boolean exitOnce = config.getBoolean(PARAM_DAEMON_EXIT_ONCE,
+					 DEFAULT_DAEMON_EXIT_ONCE);
+    if (!prevExitOnce && exitOnce) {
+      timeToExit.expire();
+    } else {
+      prevExitOnce = exitOnce;
+    }
   }
 
   /**
