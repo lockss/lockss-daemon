@@ -38,23 +38,29 @@ public class TestPoll extends TestCase {
 
   /** setUp method for test case */
   protected void setUp() {
-    testID = LcapIdentity.getLocalIdentity();
+    try {
+      testaddr = InetAddress.getByName("127.0.0.1");
+      testID = LcapIdentity.getIdentity(testaddr);
+    }
+    catch (UnknownHostException ex) {
+      fail("can't open test host");
+    }
     try {
       testmsg = new LcapMessage[3];
 
       for(int i= 0; i<3; i++) {
         testmsg[i] =  LcapMessage.makeRequestMsg(
-          rooturls[i],
-          regexp,
-          testentries,
-          testaddr,
-          (byte)5,
-          PollManager.generateRandomBytes(),
-          PollManager.generateRandomBytes(),
-          LcapMessage.NAME_POLL_REQ + (i * 2),
-          testduration,
-          testID);
-     }
+        rooturls[i],
+        regexp,
+        testentries,
+        testaddr,
+        (byte)5,
+        PollManager.generateRandomBytes(),
+        PollManager.generateRandomBytes(),
+        LcapMessage.NAME_POLL_REQ + (i * 2),
+        testduration,
+        testID);
+      }
     }
     catch (IOException ex) {
       fail("can't create test message" + ex.toString());
@@ -92,15 +98,32 @@ public class TestPoll extends TestCase {
   public void testCheckVote() {
     Poll p = testpolls[0];
     LcapMessage msg = p.getMessage();
-    // good vote check
-    p.checkVote(msg.getHashed(), msg);
-    assertEquals(1, p.m_agree);
-    assertEquals(500, p.m_agreeWt);
+    LcapIdentity id = msg.getOriginID();
+    int rep = id.getReputation();
 
+    // good vote check
+    try {
+      p.checkVote(msg.getHashed(), msg);
+    }
+    catch(IllegalStateException ex) {
+      // unitialized comm
+    }
+
+    assertEquals(1, p.m_agree);
+    assertEquals(rep, p.m_agreeWt);
+    assertTrue(rep <= id.getReputation());
+
+    rep = id.getReputation();
     // bad vote check
-    p.checkVote(PollManager.generateRandomBytes(), msg);
+    try {
+      p.checkVote(PollManager.generateRandomBytes(), msg);
+    }
+    catch(IllegalStateException ex) {
+      // unitialized comm
+    }
     assertEquals(1, p.m_disagree);
-    assertEquals(500, p.m_disagreeWt);
+    assertEquals(rep, p.m_disagreeWt);
+    assertTrue(rep >= id.getReputation());
   }
 
   /** test for method handleAgreeVote(..) */
@@ -126,7 +149,12 @@ public class TestPoll extends TestCase {
     p.handleDisagreeVote(msg);
     p.handleDisagreeVote(msg);
     p.handleDisagreeVote(msg);
-    p.tally();
+    try {
+      p.tally();
+    }
+    catch(IllegalStateException ex) {
+      // unitialized comm
+    }
     assertEquals(0, p.m_agree);
     assertEquals(0, p.m_agreeWt);
     assertEquals(3, p.m_disagree);
@@ -137,12 +165,17 @@ public class TestPoll extends TestCase {
     p.handleAgreeVote(msg);
     p.handleAgreeVote(msg);
     p.handleAgreeVote(msg);
-    p.tally();
+    try {
+      p.tally();
+    }
+    catch(IllegalStateException ex) {
+      // unitialized comm
+    }
     assertEquals(3, p.m_agree);
     assertEquals(1500, p.m_agreeWt);
     assertEquals(0, p.m_disagree);
     assertEquals(0, p.m_disagreeWt);
-   }
+  }
 
   /** test for method vote(..) */
   public void testVote() {
@@ -210,6 +243,10 @@ public class TestPoll extends TestCase {
     p.m_counting = 3;
     p.stopVote();
     assertEquals(2,p.m_counting);
+  }
+
+  public void testVerifyPoll() {
+
   }
 
 

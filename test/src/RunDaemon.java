@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.6 2002-12-02 00:35:50 tal Exp $
+ * $Id: RunDaemon.java,v 1.7 2002-12-03 03:36:48 claire Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class RunDaemon {
 	PollManager.makePollRequest("http://www.example.com/", ".*",
 				    poll_type,
 				    5, InetAddress.getByName("239.4.5.6"),
-				    1 * 60 * 1000, 60 * 1000);
+				    4 * 60 * 1000, 60 * 1000);
       } catch (Exception e) {
 	e.printStackTrace();
       }
