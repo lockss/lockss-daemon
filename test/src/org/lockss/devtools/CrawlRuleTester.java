@@ -208,14 +208,19 @@ class RuleTester {
       URLConnection conn = srcUrl.openConnection();
       fetchCount++;
       String type = conn.getContentType();
+      type = conn.getHeaderField("content-type");
       String encoding = conn.getContentEncoding();
-
       if (type == null || !type.toLowerCase().startsWith("text/html"))
         return;
-
-      Reader reader = new InputStreamReader(conn.getInputStream());
-
+      int i = type.indexOf("charset=");
+      if(i > 0) {
+        encoding = type.substring(i + "charset=".length());
+        System.out.println("Encoding:" + encoding);
+      }
+      InputStreamReader reader = new InputStreamReader(conn.getInputStream());
       String nextUrl = null;
+      System.out.println("System encoding " + System.getProperty("file.encoding")
+      + " reader encoding: " + reader.getEncoding() +"\n\n");
       while ( (nextUrl = extractNextLink(reader, srcUrl)) != null) {
         if (!crawledSet.contains(nextUrl)) {
           crawledSet.add(nextUrl);

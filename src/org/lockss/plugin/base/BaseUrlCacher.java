@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.11 2003-10-06 22:50:43 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.12 2003-10-08 21:48:20 clairegriffin Exp $
  */
 
 /*
@@ -50,6 +50,21 @@ public class BaseUrlCacher implements UrlCacher {
   private URLConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
   private LockssRepository repository;
+  /**
+   * LOCKSS is a trademark of Stanford.  Stanford grants you permission to
+   * use its trademark only in interactions with web servers, only by this
+   * code, and only for the purpose of populating a LOCKSS cache in
+   * accordance with the required publisher manifest wording.  If you adapt
+   * this code for some other purpose you may not use the LOCKSS trademark in
+   * the agent ID or elsewhere.
+   */
+  private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
+  /**
+   * override userAgentString in subclasses to change from the LOCKSS
+   * trademarked user agent.
+   */
+  protected String userAgentString = LOCKSS_USER_AGENT;
+
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
     this.cus = owner;
@@ -199,7 +214,7 @@ public class BaseUrlCacher implements UrlCacher {
     if (conn==null) {
       URL urlO = new URL(url);
       conn = urlO.openConnection();
-      conn.setRequestProperty("user-agent", "LOCKSS cache");
+      conn.setRequestProperty("user-agent", userAgentString);
     }
   }
 
