@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiHandler.java,v 1.1 2005-01-12 02:21:40 dcfok Exp $
+ * $Id: TestOaiHandler.java,v 1.2 2005-02-15 02:08:39 dcfok Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.oai;
 
+import java.util.List;
 import org.lockss.test.*;
 import ORG.oclc.oai.harvester2.verb.ListRecords;
 import org.lockss.util.Logger;
@@ -46,6 +47,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.lang.NoSuchFieldException;
 import java.io.IOException;
 import org.xml.sax.SAXException;
+
+import org.lockss.oai.OaiHandler.OaiResponseErrorException;
 
 /**
  * Test cases for OaiHandler.java
@@ -88,10 +91,20 @@ public class TestOaiHandler extends LockssTestCase {
   
   }
 
+  /** XXX 2 things particular need to test in OaiHandler 
+   * getErrors()
+   * getUpdatedUrls()
+   *
+   */
+
+
   public void testGetErrorMockListRecords(){
     oaiHandler =  new MyMockOaiHandler( oaiData, fromDate, untilDate, retries);
-    
-    
+    List errList = oaiHandler.getErrors();
+    String errMsg = ((OaiResponseErrorException) errList.get(0)).getMessage();
+    String expectedErrMsg = "badArgument : This is an error statement";
+    assertEquals(expectedErrMsg, errMsg);
+    //    System.out.println(errMsg);
   }
 
   /**
