@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.10 2004-10-02 13:33:43 dshr Exp $
+ * $Id: V1PollFactory.java,v 1.11 2004-10-11 05:43:49 tlipkis Exp $
  */
 
 /*
@@ -113,8 +113,7 @@ public class V1PollFactory implements PollFactory {
       sendV1PollRequest(poll, pm, im);
       ret = true;
     } catch (IOException ioe) {
-      theLog.debug("Exception sending V1 poll request for " +
-		   poll + ioe);
+      theLog.warning("Exception sending V1 poll request for " + poll, ioe);
     }
     return ret;
   }
@@ -259,7 +258,7 @@ public class V1PollFactory implements PollFactory {
 		      + " on unknown verifier " + ver);
 	 return false;
        }
-       theLog.debug("OK to call verify poll");
+       theLog.debug2("OK to call verify poll");
        return true;
      }
      CachedUrlSet cus = checkForConflicts(pollspec.getCachedUrlSet(), pm);
@@ -308,12 +307,14 @@ public class V1PollFactory implements PollFactory {
   private CachedUrlSet checkForConflicts(CachedUrlSet cus,
 					 PollManager pm,
 					 BasePoll poll) {
-    Iterator iter = pm.getActivePollSpecIterator(poll);
-    if (poll == null) {
-      theLog.debug("checkForConflicts on " + cus);
-    } else {
-      theLog.debug("checkForConflicts on " + cus + " excluding " + poll);
+    if (theLog.isDebug2()) {
+      if (poll == null) {
+	theLog.debug2("checkForConflicts on " + cus);
+      } else {
+	theLog.debug2("checkForConflicts on " + cus + " excluding " + poll);
+      }
     }
+    Iterator iter = pm.getActivePollSpecIterator(cus.getArchivalUnit(), poll);
     while(iter.hasNext()) {
       PollSpec ps = (PollSpec)iter.next();
       if (theLog.isDebug2()) {
@@ -329,7 +330,7 @@ public class V1PollFactory implements PollFactory {
         }
       }
     }
-    theLog.debug("New poll on " + cus + " no conflicts");
+    theLog.debug2("New poll on " + cus + " no conflicts");
     return null;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.83 2004-10-11 00:56:58 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.84 2004-10-11 05:43:52 tlipkis Exp $
  */
 
 /*
@@ -482,7 +482,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public boolean shouldCrawlForNewContent(AuState aus) {
     long timeDiff = TimeBase.msSince(aus.getLastCrawlTime());
-    logger.debug("Deciding whether to do new content crawl for "+aus);
+    if (logger.isDebug2()) {
+      logger.debug2("Deciding whether to do new content crawl for "+aus);
+    }
     if (aus.getLastCrawlTime() == 0 || timeDiff > (newContentCrawlIntv)) {
       return true;
     }
@@ -500,31 +502,35 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     checkNextPollInterval();
     checkPollProb();
 
-    logger.debug("Deciding whether to call a top level poll");
+    logger.debug3("Deciding whether to call a top level poll");
     long lastPoll = aus.getLastTopLevelPollTime();
-    if (lastPoll==-1) {
-      logger.debug3("No previous top level poll.");
-    } else {
-      logger.debug3("Last poll at " + sdf.format(new Date(lastPoll)));
-    }
-    logger.debug3("Poll interval: "+StringUtil.timeIntervalToString(
-        nextPollInterval));
-    logger.debug3("Poll likelihood: "+curTopLevelPollProb);
-    if (TimeBase.msSince(lastPoll) >= nextPollInterval) {
-      // reset poll interval regardless
-      nextPollInterval = -1;
-      // choose probabilistically whether to call
-      if (ProbabilisticChoice.choose(curTopLevelPollProb)) {
-        logger.debug("Allowing poll.");
-        curTopLevelPollProb = -1;
-        return true;
+    if (logger.isDebug3()) {
+      if (lastPoll==-1) {
+	logger.debug3("No previous top level poll.");
       } else {
-        logger.debug("Skipping poll.");
-        // decided not to call the poll
-        curTopLevelPollProb = incrementPollProb(curTopLevelPollProb);
+	logger.debug3("Last poll at " + sdf.format(new Date(lastPoll)));
       }
+      logger.debug3("Poll interval: " +
+		    StringUtil.timeIntervalToString(nextPollInterval));
+      logger.debug3("Poll likelihood: "+curTopLevelPollProb);
     }
-    return false;
+    if (TimeBase.msSince(lastPoll) < nextPollInterval) {
+      logger.debug("Not time for poll.");
+      return false;
+    }
+    // Choose probabilistically whether to call poll, but always reset poll
+    // interval next time checkNextPollInterval() runs.
+    nextPollInterval = -1;
+    if (ProbabilisticChoice.choose(curTopLevelPollProb)) {
+      logger.debug("Allowing poll.");
+      curTopLevelPollProb = -1;
+      return true;
+    } else {
+      logger.debug("Skipping poll.");
+      // decided not to call the poll
+      curTopLevelPollProb = incrementPollProb(curTopLevelPollProb);
+      return false;
+    }
   }
 
   /**

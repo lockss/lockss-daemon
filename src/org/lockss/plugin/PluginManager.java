@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.110 2004-10-06 23:52:55 clairegriffin Exp $
+ * $Id: PluginManager.java,v 1.111 2004-10-11 05:43:56 tlipkis Exp $
  */
 
 /*
@@ -399,12 +399,16 @@ public class PluginManager
 	Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	if (auConf.getBoolean(AU_PARAM_DISABLED, false)) {
 	  // tk should actually remove AU?
-	  log.debug("Not configuring disabled AU id: " + auKey);
+	  if (log.isDebug2())
+	    log.debug("Not configuring disabled AU id: " + auKey);
 	  if (auMap.get(auId) == null) {
 	    // don't add to inactive if it's still running
 	    inactiveAuIds.add(auId);
 	  }
-	} else if (!auConf.equals(oldAuConf)) {
+	} else if (auConf.equals(oldAuConf)) {
+	  if (log.isDebug2())
+	    log.debug2("AU already configured, not reconfiguring: " + auKey);
+	} else {
 	  log.debug("Configuring AU id: " + auKey);
 	  if (!isAuWrapped(auConf)) {
 	    boolean pluginOk = ensurePluginLoaded(pluginKey);
@@ -436,8 +440,6 @@ public class PluginManager
 	    }
 	  }
 	  inactiveAuIds.remove(generateAuId(pluginKey, auKey));
-	} else {
-	  log.debug("AU already configured, not reconfiguring: " + auKey);
 	}
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Failed to configure AU " + auKey, e);
