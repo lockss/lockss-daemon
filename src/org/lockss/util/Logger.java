@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.18 2003-04-03 02:29:01 tal Exp $
+ * $Id: Logger.java,v 1.19 2003-04-04 08:41:33 tal Exp $
  */
 
 /*
@@ -319,28 +319,6 @@ public class Logger {
     defaultLevel = getInitialDefaultLevel();
   }
 
-  /** Remove the first line of the stack trace, iff it duplicates the end
-   * of the exception message */
-  static String trimStackTrace(String msg, String trace) {
-    int pos = trace.indexOf("\n");
-    if (pos > 0) {
-      String l1 = trace.substring(0, pos);
-      if (msg.endsWith(l1)) {
-	return trace.substring(pos + 1);
-      }
-    }
-    return trace;
-  }
-
-  /** Translate an exception's stack trace to a string.
-   */
-  private static String stackTraceString(Throwable exp) {
-    StringWriter sw = new StringWriter();
-    PrintWriter pw = new PrintWriter(sw);
-    exp.printStackTrace(pw);
-    return sw.toString();
-  }
-
   /** Register callback to reset log levels when config changes
    */
   private static void registerConfigCallback() {
@@ -472,8 +450,8 @@ public class Logger {
 	sb.append(": ");
 	sb.append(emsg);
 	sb.append("\n    ");
-//  	sb.append(stackTraceString(e));
-	sb.append(trimStackTrace(emsg, stackTraceString(e)));
+	sb.append(StringUtil.trimStackTrace(emsg,
+					    StringUtil.stackTraceString(e)));
       }
       writeMsg(level, sb.toString());
     }

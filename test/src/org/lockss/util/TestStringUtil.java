@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.16 2003-03-19 04:20:56 tal Exp $
+ * $Id: TestStringUtil.java,v 1.17 2003-04-04 08:41:32 tal Exp $
  */
 
 /*
@@ -293,5 +293,16 @@ public class TestStringUtil extends LockssTestCase {
     assertEquals("20d23h0m",
 		 StringUtil.timeIntervalToString(WEEK * 3 - (HOUR * 1)));
     assertEquals("3w0d0h", StringUtil.timeIntervalToString(WEEK * 3));
+  }
+
+  public void testTrimStackTrace() {
+    String s1 = "Exception string: Nested error: java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
+    String s2 = "java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
+    String s2a = s2 + "junk";
+    String s3 = "	at java.io.FileInputStream.open(Native Method)";
+    String st1 = s2 + "\n" + s3;
+    assertEquals(s3, StringUtil.trimStackTrace(s1, st1));
+    String st2 = s2a + "\n" + s3;
+    assertEquals(st2, StringUtil.trimStackTrace(s1, st2));
   }
 }
