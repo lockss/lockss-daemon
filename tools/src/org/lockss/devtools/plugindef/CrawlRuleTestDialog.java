@@ -149,7 +149,7 @@ public class CrawlRuleTestDialog extends JDialog {
     }
     catch (Exception ex) {
       JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit:\n"
-                                    + ex.getMessage(),
+                                    + ex.getCause().getMessage(),
                                     "CrawlRule Test Error",
                                     JOptionPane.ERROR_MESSAGE);
     }

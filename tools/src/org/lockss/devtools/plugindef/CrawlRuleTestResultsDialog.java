@@ -164,7 +164,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     catch (Exception ex) {
       JOptionPane.showMessageDialog(this,
                                     "Error occured while checking crawl rules:\n"
-                                    + ex.getMessage(),
+                                    + ex.getCause().getMessage(),
                                     "CrawlRule Test Error",
                                     JOptionPane.ERROR_MESSAGE);
       ex.printStackTrace();
