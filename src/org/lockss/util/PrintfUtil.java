@@ -53,13 +53,14 @@ public class PrintfUtil {
       cs = (PrintfFormat.ConversionSpecification) it_frm.next();
       c = cs.getConversionCharacter();
       if (c == '\0') {
-        printf_elements.add(new PrintfElement(true, cs.getLiteral()));
+        printf_elements.add(new PrintfElement("\0", cs.getLiteral()));
       }
       else if (c == '%') {
-        printf_elements.add(new PrintfElement(true, "%"));
+        printf_elements.add(new PrintfElement("\0", "%"));
       }
       else {
-        printf_elements.add(new PrintfElement(false, (String) it_args.next()));
+        printf_elements.add(new PrintfElement(cs.getFormat(),
+                                              (String) it_args.next()));
       }
     }
     return printf_elements.toArray();
@@ -104,16 +105,16 @@ public class PrintfUtil {
   }
 
   public static class PrintfElement {
-    boolean m_isLiteral = true;
+    String m_format = "\0";
     String m_element = "";
 
-    public PrintfElement(boolean isLiteral, String element) {
-      m_isLiteral = isLiteral;
+    public PrintfElement(String format, String element) {
+      m_format = format;
       m_element = element;
     }
 
-    public boolean isLiteral() {
-      return m_isLiteral;
+    public String getFormat() {
+      return m_format;
     }
 
     public String getElement() {

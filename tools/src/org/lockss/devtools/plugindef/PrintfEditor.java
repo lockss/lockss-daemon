@@ -6,20 +6,32 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
+import javax.swing.event.*;
 
 import org.lockss.daemon.*;
+import javax.swing.text.*;
+import org.lockss.util.*;
 
 
 public class PrintfEditor extends JDialog
     implements EDPEditor, ConfigParamListener {
   protected PrintfTemplate originalTemplate;
+  protected PrintfTemplate editableTemplate;
   private EDPCellData m_data;
   private HashMap paramKeys;
   private HashMap matchesKeys = new HashMap();
   static char[] RESERVED_CHARS = {'[','\\','^','$','.','|','?','*','+','(',')'};
   static String RESERVED_STRING = new String(RESERVED_CHARS);
+  static SimpleAttributeSet PLAIN_ATTR = new SimpleAttributeSet();
+  static {
+    StyleConstants.setForeground(PLAIN_ATTR, Color.black);
+    StyleConstants.setBold(PLAIN_ATTR, false);
+    StyleConstants.setFontFamily(PLAIN_ATTR, "Helvetica");
+    StyleConstants.setFontSize(PLAIN_ATTR, 14);
+  }
+  int numParameters = 0;
 
-  JPanel formatPanel = new JPanel();
+  JPanel printfPanel = new JPanel();
   ButtonGroup buttonGroup = new ButtonGroup();
   JPanel buttonPanel = new JPanel();
   JButton cancelButton = new JButton();
@@ -36,18 +48,23 @@ public class PrintfEditor extends JDialog
   ButtonGroup buttonGroup1 = new ButtonGroup();
 
   TitledBorder titledBorder2;
-  GridBagLayout gridBagLayout3 = new GridBagLayout();
   JComboBox matchComboBox = new JComboBox();
-  GridBagLayout gridBagLayout4 = new GridBagLayout();
   JButton insertMatchButton = new JButton();
   JPanel matchPanel = new JPanel();
   JPanel InsertPanel = new JPanel();
   GridLayout gridLayout1 = new GridLayout();
+  GridBagLayout gridBagLayout2 = new GridBagLayout();
+  GridBagLayout gridBagLayout3 = new GridBagLayout();
+  JTabbedPane printfTabPane = new JTabbedPane();
+  JTextPane editorPane = new JTextPane();
+  JScrollPane editorPanel = new JScrollPane();
+  int selectedPane = 0;
 
   public PrintfEditor(Frame frame, String title) {
     super(frame, title, false);
 
     originalTemplate = new PrintfTemplate();
+    editableTemplate = new PrintfTemplate();
     try {
       jbInit();
       pack();
@@ -78,14 +95,14 @@ public class PrintfEditor extends JDialog
     cancelButton.addActionListener(new
                                    PrintfTemplateEditor_cancelButton_actionAdapter(this));
     this.setTitle(this.getTitle() + " Template Editor");
-    formatPanel.setLayout(gridBagLayout1);
+    printfPanel.setLayout(gridBagLayout1);
     formatLabel.setFont(new java.awt.Font("DialogInput", 0, 12));
     formatLabel.setText("Format String:");
     buttonPanel.setLayout(flowLayout1);
-    formatPanel.setBorder(BorderFactory.createEtchedBorder());
-    formatPanel.setMinimumSize(new Dimension(100, 160));
-    formatPanel.setPreferredSize(new Dimension(380, 160));
-    parameterPanel.setLayout(gridBagLayout3);
+    printfPanel.setBorder(BorderFactory.createEtchedBorder());
+    printfPanel.setMinimumSize(new Dimension(100, 160));
+    printfPanel.setPreferredSize(new Dimension(380, 160));
+    parameterPanel.setLayout(gridBagLayout2);
     parameterLabel.setText("Parameters:");
     parameterLabel.setFont(new java.awt.Font("DialogInput", 0, 12));
     parameterTextArea.setMinimumSize(new Dimension(100, 25));
@@ -104,8 +121,8 @@ public class PrintfEditor extends JDialog
     formatTextArea.setPreferredSize(new Dimension(200, 15));
     formatTextArea.setText("");
     parameterPanel.setBorder(null);
-    parameterPanel.setMinimumSize(new Dimension(60, 60));
-    parameterPanel.setPreferredSize(new Dimension(300, 60));
+    parameterPanel.setMinimumSize(new Dimension(60, 40));
+    parameterPanel.setPreferredSize(new Dimension(300, 40));
     insertMatchButton.addActionListener(new
        PrintfTemplateEditor_insertMatchButton_actionAdapter(this));
     insertMatchButton.setText("Insert Match");
@@ -113,10 +130,10 @@ public class PrintfEditor extends JDialog
     insertMatchButton.setPreferredSize(new Dimension(136, 20));
     insertMatchButton.setMinimumSize(new Dimension(136, 20));
     insertMatchButton.setMaximumSize(new Dimension(136, 20));
-    matchPanel.setPreferredSize(new Dimension(300, 100));
+    matchPanel.setPreferredSize(new Dimension(300, 40));
     matchPanel.setBorder(null);
     matchPanel.setMinimumSize(new Dimension(60, 60));
-    matchPanel.setLayout(gridBagLayout4);
+    matchPanel.setLayout(gridBagLayout3);
     InsertPanel.setLayout(gridLayout1);
     gridLayout1.setColumns(1);
     gridLayout1.setRows(2);
@@ -124,140 +141,50 @@ public class PrintfEditor extends JDialog
     InsertPanel.setBorder(BorderFactory.createEtchedBorder());
     InsertPanel.setMinimumSize(new Dimension(100, 100));
     InsertPanel.setPreferredSize(new Dimension(380, 120));
-    parameterPanel.add(paramComboBox, new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.HORIZONTAL,
-                                              new Insets(4, 8, 0, 5), 190, 11));
-    parameterPanel.add(insertButton, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.NONE,
-                                              new Insets(4, 6, 0, 0), 0, 10));
+    editorPane.setText("");
+    editorPane.addKeyListener(new PrintfEditor_editorPane_keyAdapter(this));
+    printfTabPane.addChangeListener(new PrintfEditor_printfTabPane_changeAdapter(this));
+    parameterPanel.add(insertButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(8, 6, 13, 8), 0, 10));
+    parameterPanel.add(paramComboBox, new GridBagConstraints(0, 0, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(8, 8, 13, 0), 258, 11));
+    InsertPanel.add(matchPanel, null);
+    InsertPanel.add(parameterPanel, null);
     buttonPanel.add(cancelButton, null);
     buttonPanel.add(saveButton, null);
-    matchPanel.add(matchComboBox, new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.HORIZONTAL,
-                                              new Insets(4, 8, 0, 5), 190, 11));
-    matchPanel.add(insertMatchButton, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-                                              , GridBagConstraints.CENTER,
-                                              GridBagConstraints.NONE,
-                                              new Insets(4, 6, 0, 0), 0, 10));
+    this.getContentPane().add(printfTabPane, BorderLayout.NORTH);
     this.getContentPane().add(InsertPanel,  BorderLayout.CENTER);
-    InsertPanel.add(parameterPanel, null);
-    InsertPanel.add(matchPanel, null);
-    this.getContentPane().add(formatPanel,  BorderLayout.NORTH);
-    formatPanel.add(parameterLabel, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.NONE,
-        new Insets(7, 5, 0, 5), 309, 0));
-    formatPanel.add(formatLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-        , GridBagConstraints.WEST, GridBagConstraints.NONE,
-        new Insets(4, 5, 0, 5), 288, 0));
-    formatPanel.add(formatTextArea, new GridBagConstraints(0, 1, 1, 1, 1.0, 1.0
-        , GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-        new Insets(6, 5, 0, 5), 300, 34));
-    formatPanel.add(parameterTextArea,
-                    new GridBagConstraints(0, 3, 1, 1, 1.0, 1.0
-                                           , GridBagConstraints.CENTER,
-                                           GridBagConstraints.BOTH,
-                                           new Insets(6, 5, 6, 5), 300, 34));
+    matchPanel.add(insertMatchButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(8, 6, 13, 8), 0, 10));
+    matchPanel.add(matchComboBox, new GridBagConstraints(0, 0, 1, 1, 1.0, 0.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(8, 8, 13, 0), 258, 11));
+    printfPanel.add(parameterLabel, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(7, 5, 0, 5), 309, 0));
+    printfPanel.add(formatLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(4, 5, 0, 5), 288, 0));
+    printfPanel.add(formatTextArea, new GridBagConstraints(0, 1, 1, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(6, 5, 0, 5), 300, 34));
+    printfPanel.add(parameterTextArea, new GridBagConstraints(0, 3, 1, 1, 1.0, 1.0
+            ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(6, 5, 6, 5), 300, 34));
+    printfTabPane.addTab("Editor View", null, editorPanel,"View in Editor");
+    printfTabPane.addTab("Printf View", null, printfPanel,"Vies as Printf");
+    editorPane.setCharacterAttributes(PLAIN_ATTR, true);
+    editorPane.addStyle("PLAIN",editorPane.getLogicalStyle());
+    editorPanel.getViewport().add(editorPane, null);
     this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     buttonGroup.add(cancelButton);
   }
-
-  void saveButton_actionPerformed(ActionEvent e) {
-    String format = formatTextArea.getText();
-    String parameters = parameterTextArea.getText();
-    originalTemplate.setFormat(format);
-    originalTemplate.setParameters(parameters);
-    m_data.updateTemplateData(originalTemplate);
-    setVisible(false);
-  }
-
-  void cancelButton_actionPerformed(ActionEvent e) {
-    setVisible(false);
-  }
-
-  void insertButton_actionPerformed(ActionEvent e) {
-    String key = (String) paramComboBox.getSelectedItem();
-    int type = ( (Integer) paramKeys.get(key)).intValue();
-    String format = "";
-
-    switch (type) {
-      case ConfigParamDescr.TYPE_STRING:
-      case ConfigParamDescr.TYPE_URL:
-      case ConfigParamDescr.TYPE_BOOLEAN:
-        format = "%s";
-        break;
-      case ConfigParamDescr.TYPE_INT:
-      case ConfigParamDescr.TYPE_POS_INT:
-        NumericPaddingDialog dialog = new NumericPaddingDialog();
-        Point pos = this.getLocationOnScreen();
-        dialog.setLocation(pos.x, pos.y);
-        dialog.pack();
-        dialog.show();
-        StringBuffer fbuf = new StringBuffer("%");
-        int width = dialog.getPaddingSize();
-        boolean is_zero = dialog.useZero();
-        if (width > 0) {
-          fbuf.append(".");
-          if (is_zero) {
-            fbuf.append(0);
-          }
-          fbuf.append(width);
-        }
-        fbuf.append("d");
-        format = fbuf.toString();
-        break;
-      case ConfigParamDescr.TYPE_YEAR:
-        format = "%d";
-    }
-    // add the combobox data value to the edit box
-    int pos = formatTextArea.getCaretPosition();
-    formatTextArea.insert(format, pos);
-    pos = parameterTextArea.getCaretPosition();
-    parameterTextArea.insert(", " + key, pos);
-  }
-
-
-  void insertMatchButton_actionPerformed(ActionEvent e) {
-    String key = (String) matchComboBox.getSelectedItem();
-    String format = (String)matchesKeys.get(key);
-    if(key.equals("String Literal")) {
-     format = escapeReservedChars((String) JOptionPane.showInputDialog(this,
-         "Enter the string you wish to match",
-         "String Literal Input",
-         JOptionPane.OK_CANCEL_OPTION));
-    }
-
-    // add the combobox data value to the edit box
-    int pos = formatTextArea.getCaretPosition();
-    formatTextArea.insert(format, pos);
-  }
-
-
   /**
-   * Return a copy of the string with all reserved regexp chars
-   * escaped by backslash.
-   * @param str the string to add escapes to
-   * @return String return a string with escapes or "" if str is null
+   * notifiyParamsChanged
    */
-  public static String escapeReservedChars(String str) {
-  if(str == null) return "";
-    StringBuffer sb = new StringBuffer();
-    for(int ci = 0; ci < str.length(); ci++) {
-      char ch = str.charAt(ci);
-      if(RESERVED_STRING.indexOf(ch) >=0) {
-        sb.append('\\');
-      }
-      sb.append(ch);
-    }
-    return sb.toString();
+  public void notifiyParamsChanged() {
+    updateParams(m_data);
   }
 
   /**
    * setEDPData
    *
-   * @param edp EditableDefinablePlugin
+   * @param data EDPCellData
    */
   public void setCellData(EDPCellData data) {
     m_data = data;
@@ -273,37 +200,306 @@ public class PrintfEditor extends JDialog
     }
   }
 
+  void saveButton_actionPerformed(ActionEvent e) {
+    updateEditableTemplate(selectedPane);
+    originalTemplate.setFormat(editableTemplate.m_format);
+    originalTemplate.setTokens(editableTemplate.m_tokens);
+    m_data.updateTemplateData(originalTemplate);
+    setVisible(false);
+  }
+
+  void cancelButton_actionPerformed(ActionEvent e) {
+    setVisible(false);
+  }
+
+  void printfTabPane_stateChanged(ChangeEvent e) {
+    updateEditableTemplate(selectedPane);
+    selectedPane = printfTabPane.getSelectedIndex();
+    updatePane(selectedPane);
+  }
+
+  void updateEditableTemplate(int pane) {
+    switch (pane) {
+      case 0: // use the editor to update the template
+        updateTemplateFromEditor(editableTemplate);
+       break;
+      case 1: // use the printf text areas to update the template.
+        updateTemplateFromPrintf();
+        break;
+    }
+  }
+
+  void insertButton_actionPerformed(ActionEvent e) {
+    String key = (String) paramComboBox.getSelectedItem();
+    String format = "";
+    if (key.equals("String Literal")) {
+      format = escapePrintfChars( (String) JOptionPane.showInputDialog(this,
+          "Enter the string you wish to input",
+          "String Literal Input",
+          JOptionPane.OK_CANCEL_OPTION));
+      if (StringUtil.isNullString(format)) {
+        return;
+      }
+    }
+    else {
+      int type = ( (Integer) paramKeys.get(key)).intValue();
+      switch (type) {
+        case ConfigParamDescr.TYPE_STRING:
+        case ConfigParamDescr.TYPE_URL:
+        case ConfigParamDescr.TYPE_BOOLEAN:
+          format = "%s";
+          break;
+        case ConfigParamDescr.TYPE_INT:
+        case ConfigParamDescr.TYPE_POS_INT:
+          NumericPaddingDialog dialog = new NumericPaddingDialog();
+          Point pos = this.getLocationOnScreen();
+          dialog.setLocation(pos.x, pos.y);
+          dialog.pack();
+          dialog.show();
+          StringBuffer fbuf = new StringBuffer("%");
+          int width = dialog.getPaddingSize();
+          boolean is_zero = dialog.useZero();
+          if (width > 0) {
+            fbuf.append(".");
+            if (is_zero) {
+              fbuf.append(0);
+            }
+            fbuf.append(width);
+          }
+          fbuf.append("d");
+          format = fbuf.toString();
+          break;
+        case ConfigParamDescr.TYPE_YEAR:
+          format = "%d";
+      }
+    }
+
+    if(selectedPane == 0) {
+      if(key.equals("String Literal")) {
+        insertText(format, PLAIN_ATTR, editorPane.getSelectionStart());
+      }
+      else {
+        insertParameter(key, format, editorPane.getSelectionStart());
+      }
+    }
+    else if (selectedPane == 1) {
+      // add the combobox data value to the edit box
+      int pos = formatTextArea.getCaretPosition();
+      formatTextArea.insert(format, pos);
+      if (!key.equals("String Literal")) {
+        pos = parameterTextArea.getCaretPosition();
+        parameterTextArea.insert(", " + key, pos);
+      }
+    }
+  }
+
+
+  void insertMatchButton_actionPerformed(ActionEvent e) {
+    String key = (String) matchComboBox.getSelectedItem();
+    String format = (String)matchesKeys.get(key);
+    if(key.equals("String Literal")) {
+     format = escapeReservedChars((String) JOptionPane.showInputDialog(this,
+         "Enter the string you wish to match",
+         "String Literal Input",
+         JOptionPane.OK_CANCEL_OPTION));
+     if(StringUtil.isNullString(format)) {
+       return;
+     }
+    }
+    if(selectedPane == 0) {
+      insertText(format, PLAIN_ATTR, editorPane.getSelectionStart());
+    }
+    else {
+      // add the combobox data value to the edit box
+      int pos = formatTextArea.getCaretPosition();
+      formatTextArea.insert(format, pos);
+    }
+  }
+
+  void editorPane_keyTyped(KeyEvent e) {
+    int pos = editorPane.getCaretPosition()-1;
+    StyledDocument doc = editorPane.getStyledDocument();
+    Element el = doc.getCharacterElement(pos);
+    AttributeSet attr = el.getAttributes();
+    String el_name = (String) attr.getAttribute(StyleConstants.NameAttribute);
+    System.out.println("Element at " + pos +": " + el + " name: " + el_name);
+    if(e.getKeyChar() == '\b' && el_name.startsWith("Parameter")) {
+      try {
+        doc.remove(el.getStartOffset(), el.getEndOffset() -  el.getStartOffset());
+      }
+      catch (BadLocationException ex) {
+      }
+    }
+    else {
+    }
+  }
+
+  private void insertParameter(String param, String format, int pos) {
+    try {
+      StyledDocument doc = (StyledDocument) editorPane.getDocument();
+
+      // The component must first be wrapped in a style
+      Style style = doc.addStyle("Parameter-" + numParameters, null);
+      JLabel label = new JLabel(param);
+      label.setAlignmentY(0.8f); // make sure we line up
+      label.setFont(new Font("Helvetica", Font.PLAIN, 14));
+      label.setForeground(Color.BLUE);
+      label.setToolTipText(format);
+      StyleConstants.setComponent(style, label);
+      doc.insertString(pos, format, style);
+      numParameters++;
+    }
+    catch (BadLocationException e) {
+    }
+  }
+
+  private void insertText(String text, AttributeSet set, int pos) {
+    try {
+      editorPane.getDocument().insertString(pos, text, set);
+    }
+    catch (BadLocationException ex) {
+    }
+  }
+
+  private void appendText(String text, AttributeSet set) {
+    insertText(text, set, editorPane.getDocument().getLength());
+  }
+
+  private void updateTemplateFromPrintf() {
+    String format = formatTextArea.getText();
+    String parameters = parameterTextArea.getText();
+    editableTemplate.setFormat(format);
+    editableTemplate.setParameters(parameters);
+  }
+
+  private void updateTemplateFromEditor(PrintfTemplate template) {
+    ArrayList params = new ArrayList();
+    String format = null;
+    int text_length = editorPane.getDocument().getLength();
+    try {
+      format = editorPane.getDocument().getText(0,text_length);
+    }
+    catch (BadLocationException ex1) {
+    }
+    Element section_el = editorPane.getDocument().getDefaultRootElement();
+    // Get number of paragraphs.
+    int num_para = section_el.getElementCount();
+    for (int p_count = 0; p_count < num_para; p_count++) {
+      Element para_el = section_el.getElement(p_count);
+      // Enumerate the content elements
+      int num_cont = para_el.getElementCount();
+      for (int c_count = 0; c_count < num_cont; c_count++) {
+        Element content_el = para_el.getElement(c_count);
+        AttributeSet attr = content_el.getAttributes();
+        // Get the name of the style applied to this content element; may be null
+        String sn = (String) attr.getAttribute(StyleConstants.NameAttribute);
+        // Check if style name match
+        if (sn.startsWith("Parameter")) {
+          // we extract the label.
+          JLabel l = (JLabel) StyleConstants.getComponent(attr);
+          if (l != null) {
+            params.add(l.getText());
+          }
+        }
+      }
+    }
+
+    template.setFormat(format);
+    template.setTokens(params);
+  }
+
   protected void setTemplate(PrintfTemplate template) {
     originalTemplate = template;
-    formatTextArea.setText(template.m_format);
-    parameterTextArea.setText(template.getTokenString());
+    editableTemplate.setFormat(template.m_format);
+    editableTemplate.setTokens(template.m_tokens);
+    updatePane(selectedPane);
   }
+
 
   private void updateParams(EDPCellData data) {
     paramComboBox.removeAllItems();
     paramKeys = data.getPlugin().getPrintfDescrs();
-    if (paramKeys.size() > 0) {
-      for (Iterator it = paramKeys.keySet().iterator(); it.hasNext(); ) {
-        paramComboBox.addItem(it.next());
-      }
-      paramComboBox.setEnabled(true);
-      paramComboBox.setSelectedIndex(0);
-      paramComboBox.setToolTipText(
-          "Select a parameter to insert into the format string");
-      insertButton.setEnabled(true);
+    paramComboBox.addItem("String Literal");
+
+    for (Iterator it = paramKeys.keySet().iterator(); it.hasNext(); ) {
+      paramComboBox.addItem(it.next());
     }
-    else { // deactivate the box and set a
-      insertButton.setEnabled(false);
-      paramComboBox.setEnabled(false);
-      paramComboBox.setToolTipText("No configuration parameters available.");
+    paramComboBox.setEnabled(true);
+    paramComboBox.setSelectedIndex(0);
+    paramComboBox.setToolTipText(
+        "Select a parameter to insert into the format string");
+    insertButton.setEnabled(true);
+  }
+
+
+  /**
+   * updatePane
+   *
+   * @param sel int
+   */
+  private void updatePane(int sel) {
+    switch(sel) {
+      case 0:   // editor view
+        updateEditorView();
+        break;
+      case 1:   // printf view
+        updatePrintfView();
+       break;
+    }
+  }
+
+  private void updatePrintfView() {
+    formatTextArea.setText(editableTemplate.m_format);
+    parameterTextArea.setText(editableTemplate.getTokenString());
+  }
+
+  private void updateEditorView() {
+    editorPane.setText("");
+    numParameters = 0;
+    java.util.List elements = editableTemplate.getPrintfElements();
+    for(Iterator it = elements.iterator(); it.hasNext(); ) {
+      PrintfUtil.PrintfElement el = (PrintfUtil.PrintfElement) it.next();
+      if(el.getFormat().equals("\0")) {
+        appendText(el.getElement(), PLAIN_ATTR);
+      }
+      else {
+       insertParameter(el.getElement(),
+                       el.getFormat(),
+                       editorPane.getDocument().getLength());
+      }
     }
   }
 
   /**
-   * notifiyParamsChanged
+   * Return a copy of the string with all reserved regexp chars
+   * escaped by backslash.
+   * @param str the string to add escapes to
+   * @return String return a string with escapes or "" if str is null
    */
-  public void notifiyParamsChanged() {
-    updateParams(m_data);
+  private String escapeReservedChars(String str) {
+  if(str == null) return "";
+    StringBuffer sb = new StringBuffer();
+    for(int ci = 0; ci < str.length(); ci++) {
+      char ch = str.charAt(ci);
+      if(RESERVED_STRING.indexOf(ch) >=0) {
+        sb.append('\\');
+      }
+      sb.append(ch);
+    }
+    return sb.toString();
+  }
+
+  private String escapePrintfChars(String str) {
+    if(str == null) return "";
+    StringBuffer sb = new StringBuffer();
+    for(int ci = 0; ci < str.length(); ci++) {
+      char ch = str.charAt(ci);
+      if(ch == '%') {
+        sb.append('%');
+      }
+      sb.append(ch);
+    }
+    return sb.toString();
   }
 
 }
@@ -357,5 +553,27 @@ class PrintfTemplateEditor_insertMatchButton_actionAdapter
 
   public void actionPerformed(ActionEvent e) {
     adaptee.insertMatchButton_actionPerformed(e);
+  }
+}
+
+class PrintfEditor_printfTabPane_changeAdapter implements javax.swing.event.ChangeListener {
+  PrintfEditor adaptee;
+
+  PrintfEditor_printfTabPane_changeAdapter(PrintfEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void stateChanged(ChangeEvent e) {
+    adaptee.printfTabPane_stateChanged(e);
+  }
+}
+
+class PrintfEditor_editorPane_keyAdapter extends java.awt.event.KeyAdapter {
+  PrintfEditor adaptee;
+
+  PrintfEditor_editorPane_keyAdapter(PrintfEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void keyTyped(KeyEvent e) {
+    adaptee.editorPane_keyTyped(e);
   }
 }

@@ -155,6 +155,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     int depth = Integer.parseInt(depthTextField.getText());
     long delay = Integer.parseInt(delayTextField.getText()) * Constants.SECOND;
     outputTextPane.setText("");
+    outputTextPane.update(outputTextPane.getGraphics());
     try {
       CrawlRuleTester tester = new CrawlRuleTester(m_msgHandler, depth, delay,
           startUrl, m_au.getCrawlSpec());
@@ -186,7 +187,8 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         outputTextPane.getDocument().insertString(
             outputTextPane.getDocument().getLength(), message,
             m_attributes[messageType]);
-
+        outputTextPane.update(outputTextPane.getGraphics());
+        outputTextPane.scrollToReference(message);
       }
       catch (BadLocationException ex) {
         ex.printStackTrace();

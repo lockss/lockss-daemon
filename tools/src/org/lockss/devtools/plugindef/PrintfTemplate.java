@@ -2,6 +2,8 @@ package org.lockss.devtools.plugindef;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.util.PrintfUtil.*;
+import org.lockss.util.PrintfFormat.*;
 
 public class PrintfTemplate {
   String m_format = null;
@@ -14,11 +16,10 @@ public class PrintfTemplate {
     if (templateString == null) {
       return;
     }
-    PrintfUtil.PrintfData data = PrintfUtil.stringToPrintf(templateString);
+    PrintfData data = PrintfUtil.stringToPrintf(templateString);
     m_format = data.getFormat();
     m_tokens = new ArrayList(data.getArguments());
   }
-
 
   public String getFormat() {
     return m_format;
@@ -79,6 +80,11 @@ public class PrintfTemplate {
       sb.append((String)it.next());
     }
     return sb.toString();
+  }
+
+  public List getPrintfElements() {
+    PrintfData data = PrintfUtil.stringToPrintf(getTemplateString());
+    return ListUtil.fromArray(PrintfUtil.printfToElements(data));
   }
 
   public String toString() {

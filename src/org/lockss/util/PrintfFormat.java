@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfFormat.java,v 1.2 2004-06-18 00:25:22 clairegriffin Exp $
+ * $Id: PrintfFormat.java,v 1.3 2004-06-22 01:29:11 clairegriffin Exp $
  */
 
 //
@@ -937,6 +937,10 @@ public class PrintfFormat {
         else
           i++;
       }
+      return fmt;
+    }
+
+    String getFormat() {
       return fmt;
     }
     /**
