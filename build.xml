@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.52 2003-07-18 00:37:13 tyronen Exp $
+ $Id: build.xml,v 1.53 2003-07-23 06:09:05 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -687,7 +687,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="func-all"
-   depends="prepare.test,check.junit,jar-tests"
+   depends="prepare.run.test,check.junit,jar-tests"
    description="Run all the functional tests (test/src/**/Func*.class" >
     <echo>
 Test results in ${test.results}
