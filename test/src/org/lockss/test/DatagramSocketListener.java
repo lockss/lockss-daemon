@@ -46,8 +46,8 @@ public class DatagramSocketListener implements Runnable{
   private int numPacketsToGet = 0;
   private int numPacketsGot = 0;
   private int nextPacket=0;
-  private boolean readyToReceive = false;
-
+  private SimpleBinarySemaphore readyToReceive = new SimpleBinarySemaphore();
+  private SimpleBinarySemaphore gotPacket = new SimpleBinarySemaphore();
 
   /**
    * Creates a DatagramSocketListener object.  beginListening() needs to be
@@ -72,8 +72,7 @@ public class DatagramSocketListener implements Runnable{
   public void beginListening()
     throws DatagramSocketListenerException {
     new Thread(this).start();
-    pause(500);
-    if (numPacketsToGet > 0 && !readyToReceive) {
+    if (numPacketsToGet > 0 && !readyToReceive.take(2000)) {
       throw new DatagramSocketListenerException("Listener thread not ready");
     }
   }
@@ -87,11 +86,12 @@ public class DatagramSocketListener implements Runnable{
       int length = socket.getReceiveBufferSize();
       while(numPacketsGot < numPacketsToGet){
 	packet = new DatagramPacket(new byte[length], length);
-	readyToReceive = true;
+	readyToReceive.give();
 	socket.receive(packet);
 	numPacketsGot++;
 	synchronized(packets){
 	  packets.add(packet);
+	  gotPacket.give();
 	}
       }
       socket.close();
@@ -110,7 +110,7 @@ public class DatagramSocketListener implements Runnable{
     if(numPacketsToGet > numPacketsGot) {
       //we've been called before we've gotten the packets we expect.
       //sleep for a bit and see if that helps
-      pause(500); 
+      gotPacket.take(2000);
       if (numPacketsToGet > numPacketsGot){
 	String msg = "getPacket called before all packets were sent";
 	throw new DatagramSocketListenerException(msg);
@@ -121,16 +121,6 @@ public class DatagramSocketListener implements Runnable{
       if (packets.size() <= 0)
 	return null;
       return (DatagramPacket)packets.elementAt(nextPacket++);
-    }
-  }
-
-
-  private static void pause(int milliSeconds){
-    try{
-      Thread thread = Thread.currentThread();
-      thread.sleep(milliSeconds);
-    }
-    catch (InterruptedException ie){
     }
   }
 }
