@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.3 2004-08-22 02:05:50 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.4 2004-09-10 05:42:04 tlipkis Exp $
  */
 
 /*
@@ -290,10 +290,16 @@ public class AuTreeWalkManager
     if ((now - lastTreeWalkTime) > twm.paramTreeWalkIntervalMax) {
       return now + Constants.HOUR;
     }
-    Deadline target =
-      Deadline.atRandomRange(lastTreeWalkTime + twm.paramTreeWalkIntervalMin,
-			     lastTreeWalkTime + twm.paramTreeWalkIntervalMax);
-    return target.getExpirationTime();
+    try {
+      Deadline target =
+	Deadline.atRandomRange(lastTreeWalkTime + twm.paramTreeWalkIntervalMin,
+			       lastTreeWalkTime + twm.paramTreeWalkIntervalMax);
+      return target.getExpirationTime();
+    } catch (Exception e) {
+      log.warning("Computing deadline, min: " + twm.paramTreeWalkIntervalMin +
+		  ", max: " + twm.paramTreeWalkIntervalMax, e);
+      return now + twm.paramTreeWalkIntervalMin;
+    }
   }
 
   /*
