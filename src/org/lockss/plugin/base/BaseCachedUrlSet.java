@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.13 2004-09-13 04:02:21 dshr Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.14 2004-10-02 01:15:55 tlipkis Exp $
  */
 
 /*
@@ -281,14 +281,13 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     try {
       bytesPerMs = metrics.getBytesPerMsHashEstimate();
       if (bytesPerMs > 0) {
-	return /*(long)*/(size / bytesPerMs);
+	return (size / bytesPerMs);
       } else {
-	logger.warning("Hash speed estimate was 0, using size / " +
-		       BYTES_PER_MS_DEFAULT);
+	logger.warning("Hash speed estimate was 0, using default");
 	return size / BYTES_PER_MS_DEFAULT;
       }
     } catch (SystemMetrics.NoHashEstimateAvailableException ie) {
-      logger.error("Couldn't finish estimating hash time: " + ie);
+      logger.warning("No hash estimate available, using default");
       return size / BYTES_PER_MS_DEFAULT;
     }
   }
