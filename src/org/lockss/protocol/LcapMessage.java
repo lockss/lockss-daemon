@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.33 2003-04-24 02:15:14 claire Exp $
+ * $Id: LcapMessage.java,v 1.34 2003-04-28 23:48:55 aalto Exp $
  */
 
 /*
@@ -443,6 +443,10 @@ public class LcapMessage
     }
     byte[] cur_bytes = m_props.encode();
     int remaining_bytes = MAX_PACKET_SIZE - cur_bytes.length - 28;
+    if (remaining_bytes < 0) {
+      log.error("Packet exceeds maximum packet size: " + cur_bytes.length);
+      throw new ProtocolException("Packet exceeds maximum packet size.");
+    }
 
     if (m_entries != null) {
       m_props.setProperty("entries", entriesToString(remaining_bytes));
