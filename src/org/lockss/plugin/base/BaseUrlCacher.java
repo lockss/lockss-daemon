@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.30 2004-03-10 08:49:55 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.31 2004-03-11 09:42:16 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class BaseUrlCacher implements UrlCacher {
   protected String fetchUrl;		// possibly affected by redirects
   private List otherNames;
   protected boolean forceRefetch = false;
-  protected int redirectScheme = REDIRECT_SCHEME_FOLLOW;
+  protected int redirectOptions = REDIRECT_OPTION_FOLLOW_AUTO;
   private LockssUrlConnectionPool connectionPool;
   private LockssUrlConnection conn;
   private LockssRepository repository;
@@ -148,8 +148,8 @@ public class BaseUrlCacher implements UrlCacher {
     this.forceRefetch = force;
   }
 
-  public void setRedirectScheme(int scheme) {
-    this.redirectScheme = scheme;
+  public void setRedirectScheme(RedirectScheme scheme) {
+    this.redirectOptions = scheme.getOptions();
   }
 
   public void cache() throws IOException {
@@ -189,15 +189,16 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   /** Store into the repository the content and headers from a successful
-   * fetch.  If redirects were followed and the redirect scheme is
-   * REDIRECT_SCHEME_STORE_ALL, store the content and headers under each
-   * name in the chain of redirections.
+   * fetch.  If redirects were followed and
+   * REDIRECT_OPTION_STORE_ALL was specified, store the content and
+   * headers under each name in the chain of redirections.
    */
   public void storeContent(InputStream input, CIProperties headers)
       throws IOException {
     if (logger.isDebug2()) logger.debug2("Storing url '"+ origUrl +"'");
     storeContentIn(origUrl, input, headers);
-    if (otherNames != null) {
+    if (otherNames != null &&
+	isRedirectOption(REDIRECT_OPTION_STORE_ALL)) {
       CachedUrl cu = getCachedUrl();
       for (Iterator iter = otherNames.iterator(); iter.hasNext(); ) {
 	String name = (String)iter.next();
@@ -205,7 +206,14 @@ public class BaseUrlCacher implements UrlCacher {
 	  logger.debug2("Storing in redirected-to url '"+ name +"'");
 	InputStream is = cu.getUnfilteredInputStream();
 	if (name.equals(fetchUrl)) {
-	  // this one was not redirected, don't store a redirected-to property
+	  // This one was not redirected, don't store a redirected-to
+	  // property.  (This is "last in list", except if a directory
+	  // (slash) redirection was last, in which case name is the
+	  // unslashed name, and a redirected to will be written
+	  // effectively pointing to (the slashed version of) itself.  The
+	  // proxy must be aware of this.  (It can't rely on this property
+	  // being present, becuase foo/ might later be fetched, not due to
+	  // a redirect from foo.)
 	  CIProperties newHeaders  = new CIProperties();
 	  for (Iterator pi = headers.keySet().iterator(); pi.hasNext(); ) {
 	    String key = (String)pi.next();
@@ -221,7 +229,8 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  public void storeContentIn(String url, InputStream input, CIProperties headers)
+  public void storeContentIn(String url, InputStream input,
+			     CIProperties headers)
       throws IOException {
     RepositoryNode leaf = null;
     try {
@@ -236,7 +245,7 @@ public class BaseUrlCacher implements UrlCacher {
     catch (IOException ex) {
       throw resultMap.getRepositoryException(ex);
     }
-
+    headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
     leaf.setNewProperties(headers);
     leaf.sealNewVersion();
   }
@@ -289,10 +298,13 @@ public class BaseUrlCacher implements UrlCacher {
 			conn.getResponseContentType());
       props.setProperty(CachedUrl.PROPERTY_FETCH_TIME,
 			Long.toString(TimeBase.nowMs()));
-      // XXX this property does not have consistent semantics.  It will be
-      // set to the first url in a chain of redirects that led to content,
-      // which could be different depending on fetch order.
-      props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
+      if (origUrl != fetchUrl &&
+	  !UrlUtil.isDirectoryRedirection(origUrl, fetchUrl)) {
+	// XXX this property does not have consistent semantics.  It will be
+	// set to the first url in a chain of redirects that led to content,
+	// which could be different depending on fetch order.
+	props.setProperty(CachedUrl.PROPERTY_ORIG_URL, origUrl);
+      }
       conn.storeResponseHeaderInto(props, CachedUrl.HEADER_PREFIX);
       String actualURL = conn.getActualUrl();
       if (!origUrl.equals(actualURL)) {
@@ -326,14 +338,10 @@ public class BaseUrlCacher implements UrlCacher {
    */
   private void openConnection(String lastModified) throws IOException {
     if (conn==null) {
-      switch (redirectScheme) {
-      case REDIRECT_SCHEME_FOLLOW:
-      case REDIRECT_SCHEME_DONT_FOLLOW:
-	openOneConnection(lastModified);
-	break;
-      case REDIRECT_SCHEME_STORE_ALL:
+      if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC)) {
 	openWithRedirects(lastModified);
-	break;
+      } else {
+	openOneConnection(lastModified);
       }
     }
   }
@@ -370,15 +378,7 @@ public class BaseUrlCacher implements UrlCacher {
   private void openOneConnection(String lastModified) throws IOException {
     try {
       conn = makeConnection(fetchUrl, connectionPool);
-      switch (redirectScheme) {
-      case REDIRECT_SCHEME_FOLLOW:
-	conn.setFollowRedirects(true);
-	break;
-      case REDIRECT_SCHEME_STORE_ALL:
-      case REDIRECT_SCHEME_DONT_FOLLOW:
-	conn.setFollowRedirects(false);
-	break;
-      }
+      conn.setFollowRedirects(isRedirectOption(REDIRECT_OPTION_FOLLOW_AUTO));
       conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
       if (lastModified != null) {
 	conn.setIfModifiedSince(lastModified);
@@ -411,7 +411,7 @@ public class BaseUrlCacher implements UrlCacher {
     // update the current location with the redirect location.
     try {
       String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
-      if (redirectScheme == REDIRECT_SCHEME_STORE_ALL) {
+      if (isRedirectOption(REDIRECT_OPTION_STORE_ALL)) {
 	if (!getArchivalUnit().shouldBeCached(newUrlString)) {
 	  logger.warning("Redirect not in crawl spec: " + newUrlString +
 			 " from: " + origUrl);
@@ -421,17 +421,17 @@ public class BaseUrlCacher implements UrlCacher {
       conn.release();
       conn = null;
 
+      if (otherNames == null) {
+	otherNames = new ArrayList();
+      }
+
       // XXX
       // The names .../foo and .../foo/ map to the same repository node, so
       // the case of a slash-appending redirect requires special handling.
-      // (Still. sigh.)  We want to record the fact of the redirection, but
-      // only end up with one name in the list, so don't add the new one if
-      // it's just a slash addition
+      // (Still. sigh.)  The node should be written only once, so don't add
+      // another entry for the slash redirection.
 
-      if (!isSlashAppended(fetchUrl, newUrlString)) {
-	if (otherNames == null) {
-	  otherNames = new ArrayList();
-	}
+      if (!UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
 	otherNames.add(newUrlString);
       }
       fetchUrl = newUrlString;
@@ -442,21 +442,8 @@ public class BaseUrlCacher implements UrlCacher {
       return false;
     }
   }
-
-  boolean isSlashAppended(String name, String redir) {
-    int len = name.length();
-    if (redir.length() != (len + 1)) return false;
-    if (redir.charAt(len) != '/') return false;
-    if (redir.startsWith(name)) return true;
-    try {
-      URL uname = new URL(name);
-      URL uredir = new URL(redir);
-      return (uname.getHost().equalsIgnoreCase(uredir.getHost()) &&
-	      uname.getProtocol().equalsIgnoreCase(uredir.getProtocol()) &&
-	      uname.getPort() == uredir.getPort() &&
-	      uredir.getPath().startsWith(uname.getPath()));
-    } catch (MalformedURLException e) {
-      return false;
-    }
+  private boolean isRedirectOption(int option) {
+    return (redirectOptions & option) != 0;
   }
+
 }

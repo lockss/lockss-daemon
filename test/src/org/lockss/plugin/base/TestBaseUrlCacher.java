@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.20 2004-03-10 08:49:53 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.21 2004-03-11 09:42:16 tlipkis Exp $
  */
 
 /*
@@ -336,7 +336,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo);
     InputStream is = muc.getUncachedInputStream();
     CIProperties p = muc.getUncachedProperties();
@@ -354,7 +354,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Fresno", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     try {
       InputStream is = muc.getUncachedInputStream();
       fail("Should have thrown RetryNewUrlException");
@@ -374,7 +374,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.addConnection(makeConn(301, "Moved to Spain", "http://2.2/b"));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached("http://2.2/a");
     mau.addUrlToBeCached("http://2.2/b");
     mau.addUrlToBeCached(redTo);
@@ -394,7 +394,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     }
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo);
     try {
       InputStream is = muc.getUncachedInputStream();
@@ -413,7 +413,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo);
     muc.cache();
     CIProperties p = muc.getUncachedProperties();
@@ -440,7 +440,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo3));
     muc.addConnection(makeConn(200, "Ok", null, content));
-    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     mau.addUrlToBeCached(redTo1);
     mau.addUrlToBeCached(redTo2);
     mau.addUrlToBeCached(redTo3);
@@ -461,15 +461,33 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo3, null, CachedUrl.PROPERTY_REDIRECTED_TO);
   }
 
-  public void testIsSlashAppended() {
-    BaseUrlCacher b = new BaseUrlCacher(mcus, "foo");
-    assertTrue(b.isSlashAppended("foo", "foo/"));
-    assertTrue(b.isSlashAppended("http://xx.com/foo", "http://xx.com/foo/"));
-    assertTrue(b.isSlashAppended("http://xx.com/foo", "Http://xx.com/foo/"));
-    assertTrue(b.isSlashAppended("http://xx.com/foo", "Http://Xx.COM/foo/"));
-    assertFalse(b.isSlashAppended("http://xx.com/foo", "http://xx.com/FOO/"));
-    assertFalse(b.isSlashAppended("http://xx.com/foo", "http://xx.com/foo"));
-    assertFalse(b.isSlashAppended("http://xx.com/foo", "http://zz.com/foo/"));
+  public void testDirRedirect() throws Exception {
+    String content = "oft redirected content";
+    plugin.returnRealCachedUrl = true;
+    String url = "http://a.b/bar";
+    String redTo1 = "http://somewhere.else/foo";
+    String redTo2 = "http://somewhere.else/foo/";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, url);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
+    muc.addConnection(makeConn(200, "Ok", null, content));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo1);
+    mau.addUrlToBeCached(redTo2);
+    muc.cache();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    assertEquals(redTo2, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+
+    // verify all have the correct contents, and all but the last have a
+    // redirected-to header
+    assertCuContents(url, content);
+    assertCuContents(redTo1, content);
+    assertCuContents(redTo2, content);
+    assertCuProperty(url, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo1, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
+    assertCuProperty(redTo2, redTo2, CachedUrl.PROPERTY_REDIRECTED_TO);
   }
 
   void assertCuContents(String url, String contents) throws IOException {
@@ -482,6 +500,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     CachedUrl cu = new BaseCachedUrl(mcus, url);
     CIProperties props = cu.getProperties();
     assertEquals(expected, props.getProperty(key));
+  }
+
+  void assertCuUrl(String url, String expected) {
+    CachedUrl cu = new BaseCachedUrl(mcus, url);
+    assertEquals(expected, cu.getUrl());
   }
 
   private class MyMockPlugin extends MockPlugin {
