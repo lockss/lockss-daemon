@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.10 2004-03-06 00:48:58 clairegriffin Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.11 2004-03-18 00:47:36 troberts Exp $
  */
 
 /*
@@ -92,6 +92,7 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) { }
   }
 */
+
   public void testShouldCacheProperPages() throws Exception {
     URL base = new URL(ROOT_URL);
     int volume = 2;
@@ -134,16 +135,19 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     shouldCacheTest(baseUrl+"poetry/blkbird.css", true, bbAu, cus);
 
 
-    // should not cache these
-
-    //XXX temporary!
     // ram files
-    shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.ram", false,
+    shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.ram", true,
                     bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.rm", false,
+    shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.rm", true,
                     bbAu, cus);
-    shouldCacheTest(baseUrl+"gallery/burnside_c_091603/lucy1.ram", false,
+    shouldCacheTest(baseUrl+"gallery/burnside_c_091603/lucy1.ram", true,
                     bbAu, cus);
+
+    shouldCacheTest(ROOT_URL+"lockss_media/v2n2/gallery/burnside_c/interview_part1.rm",
+		    true, bbAu, cus);
+
+    shouldCacheTest(ROOT_URL+"v1n2/gallery/burnside_c/interview_part1.ram",
+		    false, bbAu, cus);
 
     // current issue
     shouldCacheTest(ROOT_URL, false, bbAu, cus);
@@ -167,7 +171,14 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
     UrlCacher uc = au.getPlugin().makeUrlCacher(cus, url);
-    assertTrue(uc.shouldBeCached()==shouldCache);
+    if (shouldCache) {
+      assertTrue(url+" incorrectly marked as shouldn't cache",
+		 uc.shouldBeCached());
+    } else {
+      assertFalse(url+" incorrectly marked as should cache",
+		  uc.shouldBeCached());
+    }
+//     assertTrue(uc.shouldBeCached()==shouldCache);
   }
 
   public void testStartUrlConstruction() throws Exception {

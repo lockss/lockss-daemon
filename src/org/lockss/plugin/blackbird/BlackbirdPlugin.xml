@@ -21,9 +21,10 @@ base_url</string>
 base_url
 volume
 </string>
-      <string xsi:type="java:java.lang.String">2
-%s.*\.ra?m
-base_url</string>
+      <string xsi:type="java:java.lang.String">1
+%slockss_media/v%dn[0-9]*/.*\.rm
+base_url
+volume</string>
       <string xsi:type="java:java.lang.String">1
 %sv%dn[0-9]*/.*
 base_url
