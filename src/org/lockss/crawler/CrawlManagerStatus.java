@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.6 2003-11-10 22:28:20 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.7 2003-11-19 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -49,9 +49,13 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
 
-  public static final String INCOMPLETE_STRING = "Incomplete";
-  public static final String ERROR_STRING = "Error";
+  public static final String INCOMPLETE_STRING = "Active";
   public static final String SUCCESSFUL_STRING = "Successful";
+  public static final String ERROR_STRING = "Error";
+  public static final String FETCH_ERROR_STRING = "Fetch error";
+  public static final String PUB_PERMISSION_STRING =
+    "No permission from publisher";
+  public static final String WINDOW_CLOSED_STRING = "Crawl window closed";
   public static final String UNKNOWN_STRING = "Unknown";
 
   private List colDescs =
@@ -185,6 +189,12 @@ public class CrawlManagerStatus implements StatusAccessor {
       return INCOMPLETE_STRING;
     case Crawler.STATUS_ERROR : 
       return ERROR_STRING;
+    case Crawler.STATUS_FETCH_ERROR : 
+      return FETCH_ERROR_STRING;
+    case Crawler.STATUS_PUB_PERMISSION : 
+      return PUB_PERMISSION_STRING;
+    case Crawler.STATUS_WINDOW_CLOSED : 
+      return WINDOW_CLOSED_STRING;
     default : 
       return UNKNOWN_STRING;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.27 2003-08-26 18:52:07 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.28 2003-11-19 08:46:46 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class DaemonStatus extends LockssServlet {
 
   /** Format to display date/time in tables */
   public static final DateFormat tableDf =
-    new SimpleDateFormat("MM/dd/yy HH:mm:ss");
+    new SimpleDateFormat("HH:mm:ss MM/dd/yy");
 
 //   public static final DateFormat tableDf =
 //     DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);

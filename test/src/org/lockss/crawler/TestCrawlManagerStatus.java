@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.5 2003-11-04 18:59:36 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.6 2003-11-19 08:46:45 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String NC_TYPE = "New Content";
   private static final String REPAIR_TYPE = "Repair";
 
-  private static final String STATUS_INCOMPLETE = "Incomplete";
+  private static final String STATUS_INCOMPLETE = "Active";
   private static final String STATUS_ERROR = "Error";
   private static final String STATUS_SUCCESSFUL = "Successful";
 

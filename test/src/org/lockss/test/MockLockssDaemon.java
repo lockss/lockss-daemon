@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.31 2003-11-11 20:36:12 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.32 2003-11-19 08:46:45 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class MockLockssDaemon extends LockssDaemon {
 					     desc.getDefaultClass());
     log.debug2("Manager class: " + mgr_name); 
     try {
-      return loadManager(mgr_name);
+      return initManager(desc);
     } catch (Exception e) {
       throw new LockssDaemonException("Can't load manager: " + e.toString());
     }

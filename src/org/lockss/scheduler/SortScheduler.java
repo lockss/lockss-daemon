@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.1 2003-11-11 20:29:45 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.2 2003-11-19 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class SortScheduler implements Scheduler {
   SchedInterval intervals[];
   int nIntervals;
   List ranges = new ArrayList();
+  Set unscheduledTasks;
   boolean scheduleCreated;
 
   /** Create a scheduler to schedule the collection of tasks */
@@ -55,6 +56,7 @@ public class SortScheduler implements Scheduler {
   /** Store list of tasks to schedule, check validity, move times in the
    * past up to now. */
   private boolean initTasks() {
+    unscheduledTasks = new HashSet(rawTasks);
     tasks = new ArrayList(rawTasks.size());
     Deadline now = Deadline.in(0);
     for (Iterator iter = rawTasks.iterator(); iter.hasNext(); ) {
@@ -105,7 +107,7 @@ public class SortScheduler implements Scheduler {
 	log.debug2("  " + event.toString());
       }
     }
-    return new Schedule(events);
+    return new Schedule(events, unscheduledTasks);
   }
 
   // find all task boundaries and create intervals between them
@@ -320,7 +322,7 @@ public class SortScheduler implements Scheduler {
 	    // consistent (repeatable) sort order is useful so unit tests
 	    // can predict which of several possible schedules will be
 	    // created.
-	    res = t2.seq - t1.seq;
+	    res = t1.seq - t2.seq;
 	  }
 	  return res;
 	}};
@@ -334,7 +336,7 @@ public class SortScheduler implements Scheduler {
   /** Struct representing an interval in which tasks can be placed, and
    * during which task order is immaterial, because no task window
    * boundaries occur during the interval. */
-  static class SchedInterval extends Interval {
+   class SchedInterval extends Interval {
     long duration;			// length of interval
     long unscheduledTime;		// available cpu time (adjusted for
 					// load factor)
@@ -387,11 +389,14 @@ public class SortScheduler implements Scheduler {
       for (Iterator iter = backgroundTaskList.iterator(); iter.hasNext(); ) {
 	TaskData td = (TaskData)iter.next();
 	BackgroundTask task = (BackgroundTask)td.task;
-	if (task.getStart().equals(getBegin())) {
+	// important to use td start, not task start, to ensure produce
+	// start event for task whose start is in the past.
+	if (td.getWStart().equals(getBegin())) {
 	  Schedule.BackgroundEvent event =
 	    new Schedule.BackgroundEvent(task, getBegin(),
 					 Schedule.EventType.START);
 	  events.add(event);
+	  unscheduledTasks.remove(task);
 	}
       }
     }
@@ -451,6 +456,7 @@ public class SortScheduler implements Scheduler {
 	  }
 	  chunks.add(chunk);
 	  chunkOffset += duration;
+	  unscheduledTasks.remove(stask);
 	}
       }
       // if any tasks ending at this interval have unscheduledTime, fail

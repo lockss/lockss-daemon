@@ -1,5 +1,5 @@
 /*
- * $Id: StepTask.java,v 1.2 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: MutableBoolean.java,v 1.2 2003-11-19 08:46:46 tlipkis Exp $
  */
 
 /*
@@ -30,52 +30,33 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.scheduler;
+
+package org.lockss.util;
 
 import java.io.*;
-import java.util.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.util.*;
 
-/** Description of a computation to be scheduled and executed.  Abstract -
- * the methods {@link #step(int)} and {@link #step(int)} must be defined by
- * a subcless.
- * @see StepperTask
- */
-public abstract class StepTask extends SchedulableTask {
-  private boolean isStepping = false;
 
-  public StepTask(Deadline earliestStart,
-		  Deadline latestFinish,
-		  long estimatedDuration,
-		  TaskCallback callback,
-		  Object cookie) {
+/** A MutableBoolean wraps a boolean, allowing it to be modified by
+ * reference. */
+public class MutableBoolean implements Serializable {
+  private boolean value;
 
-    super(earliestStart, latestFinish, estimatedDuration, callback, cookie);
+  /** Create a MutableBoolean with the value */
+  public MutableBoolean(boolean value) {
+    this.value = value;
   }
 
-  /** Perform a step of the task.
-   * @param n a metric for the size of the step to be performed.
-   * @return a metric proportional to the amount of work performed.
-   */
-  abstract public int step(int n);
-
-  //  abstract public boolean isFinished();
-
-  void setStepping(boolean val) {
-    isStepping = val;
+  /** Return the value as a boolean */
+  public boolean booleanValue() {
+    return value;
   }
 
-  public boolean isStepping() {
-    return isStepping;
+  /** Set the value */
+  public void setValue(boolean value) {
+    this.value = value;
   }
 
   public String toString() {
-    StringBuffer sb = new StringBuffer();
-    sb.append("[STask:");
-    toStringCommon(sb);
-    sb.append("]");
-    return sb.toString();
+    return value ? "true" : "false";
   }
 }

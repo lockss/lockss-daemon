@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.3 2003-11-13 11:16:16 tlipkis Exp $
+ * $Id: SchedService.java,v 1.4 2003-11-19 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class SchedService extends BaseLockssManager {
 	}});
     runner.init();
     getDaemon().getStatusService().
-      registerStatusAccessor("TaskQ", runner.getStatusAccessor());
+      registerStatusAccessor("SchedQ", runner.getStatusAccessor());
   }
 
   /**

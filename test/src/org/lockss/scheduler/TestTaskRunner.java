@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.2 2003-11-19 08:46:45 tlipkis Exp $
  */
 
 /*
@@ -173,6 +173,28 @@ public class TestTaskRunner extends LockssTestCase {
     assertEquals(t1, tr.runningTask);
     assertEquals(t1.getLatestFinish(), tr.runningDeadline);
     assertEquals(s.getEvents().get(0), tr.runningChunk);
+  }
+
+  public void testFindRunnableChunk() {
+    assertFalse(tr.findTaskToRun());
+    StepTask t1 = task(100, 200, 100);
+    StepTask t2 = task(10, 300, 50);
+    Schedule.Chunk c1 = new Schedule.Chunk(t1, Deadline.at(100),
+					   Deadline.at(200), 100);
+    Schedule.Chunk c2 = new Schedule.Chunk(t2, Deadline.at(200),
+					   Deadline.at(300), 100);
+    Schedule s = new Schedule(ListUtil.list(c1, c2));
+    fact.setResult(s);
+    assertTrue(tr.addToSchedule(t1));
+    assertTrue(tr.addToSchedule(t2));
+    assertFalse(tr.findTaskToRun());
+    assertEquals(Deadline.at(100), tr.runningDeadline);
+    TimeBase.setSimulated(11);
+    assertTrue(tr.findTaskToRun());
+    assertEquals(t2, tr.runningTask);
+    assertEquals(c2, tr.runningChunk);
+    assertEquals(Deadline.at(100), tr.runningDeadline);
+    assertEquals(s.getEvents().get(1), tr.runningChunk);
   }
 
   public void testFindOverrunTaskToRun() {
@@ -440,7 +462,7 @@ public class TestTaskRunner extends LockssTestCase {
     Interrupter intr = null;
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
-      tr.runSteps(Boolean.TRUE);
+      tr.runSteps(new MutableBoolean(true));
       intr.cancel();
     } catch (Exception e) {
       log.error("runSteps threw:", e);
@@ -466,7 +488,7 @@ public class TestTaskRunner extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       while(tr.findTaskToRun()) {
-	tr.runSteps(Boolean.TRUE);
+	tr.runSteps(new MutableBoolean(true));
       }
       intr.cancel();
     } catch (Exception e) {
@@ -496,7 +518,7 @@ public class TestTaskRunner extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       while(tr.findTaskToRun()) {
-	tr.runSteps(Boolean.TRUE);
+	tr.runSteps(new MutableBoolean(true));
       }
       intr.cancel();
     } catch (Exception e) {
@@ -508,6 +530,27 @@ public class TestTaskRunner extends LockssTestCase {
     }
     assertNull(t1.e);
     assertTrue(t1.hasOverrun());
+  }
+
+
+  // test resched with overrun task doesn't lose task.
+  public void testRunStepsWithOverrunAllowedPlusResched() {
+    StepTask t1 = task(100, 500, 30, null, new MockStepper(15, -10));
+    t1.setOverrunAllowed(true);
+    StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
+    tr = new MockTaskRunner(new TaskRunner.SchedulerFactory () {
+	public Scheduler createScheduler(Collection tasks) {
+	  return new SortScheduler(tasks);
+	}});
+    assertTrue(tr.addToSchedule(t1));
+    assertEmpty(tr.getOverrunTasks());
+    TimeBase.setSimulated(101);
+    assertTrue(tr.findTaskToRun());
+    t1.timeUsed = 1000;
+    assertTrue(t1.hasOverrun());
+    assertEmpty(tr.getOverrunTasks());
+    assertTrue(tr.addToSchedule(t2));
+    assertEquals(SetUtil.set(t1), SetUtil.theSet(tr.getOverrunTasks()));
   }
 
   class MockTaskRunner extends TaskRunner {

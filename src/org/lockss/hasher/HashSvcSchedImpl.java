@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.3 2003-11-13 11:16:16 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.4 2003-11-19 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -56,8 +56,8 @@ public class HashSvcSchedImpl
   private long estPadConstant = 0;
   private long estPadPercent = 0;
   private List queue = new LinkedList();
-  private HistoryList completed = new HistoryList(50);
-  private int hashStepBytes = 10000;
+  private HistoryList completed = new HistoryList(DEFAULT_COMPLETED_MAX);
+  private int hashStepBytes = DEFAULT_STEP_BYTES;
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
   private int reqCtr = 0;
   private long totalTime = 0;
@@ -95,7 +95,7 @@ public class HashSvcSchedImpl
     int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
     if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
       synchronized (completed) {
-	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, 50));
+	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, cMax));
       }
     }
   }
@@ -238,6 +238,7 @@ public class HashSvcSchedImpl
     int sched;
     int finish;
     long bytesHashed = 0;
+    long unaccountedBytesHashed = 0;
 
     HashTask(CachedUrlSet urlset,
 	     MessageDigest hasher,
@@ -270,6 +271,7 @@ public class HashSvcSchedImpl
       try {
 	int res = urlsetHasher.hashStep(hashStepBytes);
 	bytesHashed += res;
+	unaccountedBytesHashed += res;
 	return res;
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
@@ -277,15 +279,19 @@ public class HashSvcSchedImpl
       }
     }
 
+    protected void updateStats() {
+      totalTime += unaccountedTime;
+      totalBytesHashed =
+	totalBytesHashed.add(BigInteger.valueOf(unaccountedBytesHashed));
+      unaccountedBytesHashed = 0;
+      super.updateStats();
+     }
+
     public boolean isFinished() {
       return super.isFinished() || urlsetHasher.finished();
     }
 
     private void doFinished() {
-      // tk - find a way to update these after each (set of) step(s)
-      totalBytesHashed =
-	totalBytesHashed.add(BigInteger.valueOf(bytesHashed));
-      totalTime += getTimeUsed();
       try {
 	if (type == HashService.CONTENT_HASH) {
 	  // tk - change interface to tell CUS what type of hash finished
@@ -339,14 +345,15 @@ public class HashSvcSchedImpl
 
   private static final List statusSortRules =
     ListUtil.list(new StatusTable.SortRule("state", true),
-		  new StatusTable.SortRule("sort", true));
+		  new StatusTable.SortRule("sort", true),
+		  new StatusTable.SortRule("sort2", true));
 
   static final String FOOT_IN = "Order in which requests were made.";
 
   static final String FOOT_OVER = "Red indicates overrun.";
 
   static final String FOOT_TITLE =
-    "Pending requests are first in table, in the order they were requested."+
+    "Pending requests are first in table, in the order they will be executed."+
     "  Completed requests follow, in reverse completion order " +
     "(most recent first).";
 
@@ -413,7 +420,10 @@ public class HashSvcSchedImpl
 
     private Map makeRow(HashTask task, boolean done, int qpos) {
       Map row = new HashMap();
-      row.put("sort", new Long(done ? -task.getFinishDate().getTime() : qpos));
+      row.put("sort", 
+	      new Long((done ? -task.getFinishDate().getTime() :
+			task.getLatestFinish().getExpiration().getTime())));
+      row.put("sort2", new Long(task.hashReqSeq));
       row.put("sched", new Integer(task.hashReqSeq));
       row.put("state", getState(task, done));
       row.put("au", task.urlset.getArchivalUnit().getName());
@@ -442,7 +452,7 @@ public class HashSvcSchedImpl
 
     private Object getState(HashTask task, boolean done) {
       if (!done) {
-	return (task.hasStarted()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
+	return (task.isStepping()) ? TASK_STATE_RUN : TASK_STATE_WAIT;
       }
       if (task.getExcption() == null) {
 	return TASK_STATE_DONE;

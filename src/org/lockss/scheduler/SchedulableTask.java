@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.2 2003-11-12 21:09:19 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.3 2003-11-19 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class SchedulableTask implements Serializable, Cloneable {
   protected Object cookie;
 
   long timeUsed = 0;
+  protected long unaccountedTime = 0;
   protected Exception e;
   boolean overrunAllowed = false;
   boolean hasBeenNotified = false;
@@ -107,8 +108,19 @@ public class SchedulableTask implements Serializable, Cloneable {
     return origEst;
   }
 
-  public long getTimeUsed() {
-    return timeUsed;
+  public synchronized long getTimeUsed() {
+    return timeUsed + unaccountedTime;
+  }
+
+  /** Gets called periodically while running task.  Used to update global
+   * statistics */
+  protected synchronized void updateStats() {
+    timeUsed += unaccountedTime;
+    unaccountedTime = 0;
+  }
+
+  public synchronized void setUnaccountedTime(long time) {
+    unaccountedTime = time;
   }
 
   public Exception getExcption() {

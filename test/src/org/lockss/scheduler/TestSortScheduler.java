@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id: TestSortScheduler.java,v 1.2 2003-11-19 08:46:45 tlipkis Exp $
  */
 
 /*
@@ -348,6 +348,28 @@ public class TestSortScheduler extends LockssTestCase {
     return new Schedule.BackgroundEvent(task, Deadline.at(start), event);
   }
 
+  // ensure background event whose start time has passed gets events generated
+  public void testPastBackStart() {
+    BackgroundTask b1 = bTask(100, 300, .1);
+    TimeBase.setSimulated(103);
+    SortScheduler sched =
+      new SortScheduler(ListUtil.list(b1));
+    assertTrue(sched.createSchedule());
+    Schedule s = sched.getSchedule();
+    List sh1 = ListUtil.list(bevent(b1, 103, Schedule.EventType.START),
+			     bevent(b1, 300, Schedule.EventType.FINISH));
+    assertEquals(sh1, s.getEvents());
+  }
+
+  public void testPastBackEnd() {
+    BackgroundTask b1 = bTask(100, 300, .1);
+    TimeBase.setSimulated(500);
+    SortScheduler sched =
+      new SortScheduler(ListUtil.list(b1));
+    assertFalse(sched.createSchedule());
+  }
+
+
   public void testHard1() {
     SortScheduler sched =
       new SortScheduler(ListUtil.list(h6, h7));
@@ -357,8 +379,25 @@ public class TestSortScheduler extends LockssTestCase {
 			     chunk(h7, 133, 166, 33),
 			     chunk(h6, 166, 200, 34));
 			   
-    assertEquals(sh1, sched.getSchedule().getEvents());
+    Schedule s = sched.getSchedule();
+    assertEquals(sh1, s.getEvents());
+    assertEmpty(s.getOverrunTasks());
   }
+
+  public void testUnschedTasks() {
+    BackgroundTask b1 = bTask(100, 300, .1);
+    StepTask ov = taskBetween("ov", 100, 300, 20);
+    ov.timeUsed = 40;
+    assertTrue(ov.hasOverrun());
+    TimeBase.setSimulated(103);
+    SortScheduler sched =
+      new SortScheduler(ListUtil.list(h1, b1, ov));
+    assertTrue(sched.createSchedule());
+    Schedule s = sched.getSchedule();
+    assertEquals(SetUtil.set(ov), s.getOverrunTasks());
+
+  }
+
 
   public void testTooLate() {
     TimeBase.setSimulated(200);
@@ -376,8 +415,8 @@ public class TestSortScheduler extends LockssTestCase {
 			     chunk(h3, 200, 235, 35),
 			     chunk(h2, 235, 270, 35),
 			     chunk(h1, 270, 300, 30, false),
-			     chunk(h5, 300, 350, 50),
-			     chunk(h4, 350, 400, 50),
+			     chunk(h4, 300, 350, 50),
+			     chunk(h5, 350, 400, 50),
 			     chunk(h1, 400, 450, 50)
 			     );
     SortScheduler sched =
@@ -404,8 +443,8 @@ public class TestSortScheduler extends LockssTestCase {
 			     chunk(h3, 200, 235, 35),
 			     chunk(h2, 235, 270, 35),
 			     chunk(h1, 270, 300, 30, false),
-			     chunk(h5, 300, 350, 50),
-			     chunk(h4, 350, 400, 50),
+			     chunk(h4, 300, 350, 50),
+			     chunk(h5, 350, 400, 50),
 			     chunk(h1, 400, 450, 50)
 			     );
     assertEquals(sh1, sched.getSchedule().getEvents());
@@ -444,9 +483,9 @@ public class TestSortScheduler extends LockssTestCase {
       chunk(h2, 235, 270, 35),
       chunk(h1, 270, 300, 30, false),
       bevent(b1, 300, Schedule.EventType.START),
-      chunk(h5, 300, 350, 45, false),
-      chunk(h5, 350, 355, 5),
-      chunk(h4b, 355, 399, 40),
+      chunk(h4b, 300, 344, 40),
+      chunk(h5, 344, 349, 5, false),
+      chunk(h5, 350, 400, 45),
       bevent(b1, 400, Schedule.EventType.FINISH),
       chunk(h1, 400, 450, 50)
     };

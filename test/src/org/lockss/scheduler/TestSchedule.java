@@ -1,5 +1,5 @@
 /*
- * $Id: TestSchedule.java,v 1.1 2003-11-11 20:30:59 tlipkis Exp $
+ * $Id: TestSchedule.java,v 1.2 2003-11-19 08:46:45 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,16 @@ public class TestSchedule extends LockssTestCase {
     super.tearDown();
   }
 
+  public void testGetOverrunTasks() {
+    List tasks = ListUtil.list(null, null);
+    Schedule sched = new Schedule(null);
+    assertNull(sched.getOverrunTasks());
+    sched = new Schedule(null, null);
+    assertNull(sched.getOverrunTasks());
+    sched = new Schedule(null, tasks);
+    assertEquals(tasks, sched.getOverrunTasks());
+  }
+
   public void testGetEvents() {
     List events = ListUtil.list(null, null);
     Schedule sched = new Schedule(events);
@@ -66,6 +76,27 @@ public class TestSchedule extends LockssTestCase {
   }
 
   public void testRemoveEvent() {
+    Schedule.Event e1 =
+      new Schedule.BackgroundEvent(new MockBackgroundTask(), Deadline.at(3),
+				   Schedule.EventType.FINISH);
+
+    Schedule.Event e2 =
+      new Schedule.Chunk(new MockStepTask(), Deadline.at(5),
+			 Deadline.at(10), 8);
+
+    // test depends on this
+    assertNotEquals(e1, e2);
+    List events = ListUtil.list(e1, e2);
+    Schedule sched = new Schedule(events);
+    assertEquals(events, sched.getEvents());
+    assertTrue(sched.removeEvent(e2));
+    assertEquals(ListUtil.list(e1), sched.getEvents());
+    assertFalse(sched.removeEvent(e2));
+    assertTrue(sched.removeEvent(e1));
+    assertEmpty(sched.getEvents());
+  }
+
+  public void testRemoveFirstEvent() {
     Schedule.Event e1 =
       new Schedule.BackgroundEvent(new MockBackgroundTask(), Deadline.at(3),
 				   Schedule.EventType.FINISH);

@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.2 2003-11-13 11:16:16 tlipkis Exp $
+ * $Id: Schedule.java,v 1.3 2003-11-19 08:46:47 tlipkis Exp $
  */
 
 /*
@@ -40,32 +40,17 @@ import org.lockss.util.*;
 public class Schedule {
   protected static Logger log = Logger.getLogger("Schedule");
 
-//   private Interval interval = null;
-//   private Deadline start;
-//   private Deadline finish;
   private List events;
+  private Collection overrunTasks;
 
   public Schedule(List events) {
     this.events = events;
   }
 
-  /** Return the earliest time covered by the schedule */
-//   public Deadline getStart() {
-//     return start;
-//   }
-
-//   /** Return the latest time covered by the schedule */
-//   public Deadline getFinish() {
-//     return finish;
-//   }
-
-//   /** Return the Interval the schedule covers */
-//   public Interval getInterval() {
-//     if (interval == null) {
-//       interval = new Interval(start, finish);
-//     }
-//     return interval;
-//   }
+  public Schedule(List events, Collection overrunTasks) {
+    this.events = events;
+    this.overrunTasks = overrunTasks;
+  }
 
   /** Return the list of {@link Schedule.Event}s */
   public List getEvents() {
@@ -88,6 +73,19 @@ public class Schedule {
     }
     return false;
   }    
+
+  /** Remove an event from the schedule.
+   * @param event the event to remove.
+   * @return true if the event was removed.
+   */
+  public synchronized boolean removeEvent(Event event) {
+    return events.remove(event);
+  }    
+
+  /** Return the list of overrun tasks */
+  public Collection getOverrunTasks() {
+    return overrunTasks;
+  }
 
   public static class EventType {
     /** A StepTask is starting, or a BackgroundTask should start. */
@@ -114,6 +112,8 @@ public class Schedule {
     private Exception error;
 
     abstract public boolean isBackgroundEvent();
+
+    abstract public boolean isTaskFinished();
 
     public Deadline getStart() {
       return start;
@@ -150,6 +150,10 @@ public class Schedule {
 
     public EventType getType() {
       return type;
+    }
+
+    public boolean isTaskFinished() {
+      return getTask().isFinished();
     }
 
     public boolean equals(Object o) {
@@ -211,6 +215,10 @@ public class Schedule {
 
     public Deadline getFinish() {
       return finish;
+    }
+
+    public boolean isTaskFinished() {
+      return getTask().isFinished();
     }
 
     public Interval getInterval() {

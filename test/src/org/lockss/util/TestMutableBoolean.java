@@ -1,5 +1,5 @@
 /*
- * $Id: StepTask.java,v 1.2 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: TestMutableBoolean.java,v 1.2 2003-11-19 08:46:44 tlipkis Exp $
  */
 
 /*
@@ -30,52 +30,33 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.scheduler;
+package org.lockss.util;
 
-import java.io.*;
 import java.util.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.util.*;
+import org.lockss.test.*;
 
-/** Description of a computation to be scheduled and executed.  Abstract -
- * the methods {@link #step(int)} and {@link #step(int)} must be defined by
- * a subcless.
- * @see StepperTask
+/**
+ * This is the test class for org.lockss.util.MutableBoolean
  */
-public abstract class StepTask extends SchedulableTask {
-  private boolean isStepping = false;
+public class TestMutableBoolean extends LockssTestCase {
+  public void testMutable() {
+    MutableBoolean t = new MutableBoolean(true);
+    assertTrue(t.booleanValue());
+    t.setValue(false);
+    assertFalse(t.booleanValue());
+    t.setValue(true);
+    assertTrue(t.booleanValue());
 
-  public StepTask(Deadline earliestStart,
-		  Deadline latestFinish,
-		  long estimatedDuration,
-		  TaskCallback callback,
-		  Object cookie) {
-
-    super(earliestStart, latestFinish, estimatedDuration, callback, cookie);
+    MutableBoolean f = new MutableBoolean(false);
+    assertFalse(f.booleanValue());
+    f.setValue(true);
+    assertTrue(f.booleanValue());
+    f.setValue(false);
+    assertFalse(f.booleanValue());
   }
 
-  /** Perform a step of the task.
-   * @param n a metric for the size of the step to be performed.
-   * @return a metric proportional to the amount of work performed.
-   */
-  abstract public int step(int n);
-
-  //  abstract public boolean isFinished();
-
-  void setStepping(boolean val) {
-    isStepping = val;
-  }
-
-  public boolean isStepping() {
-    return isStepping;
-  }
-
-  public String toString() {
-    StringBuffer sb = new StringBuffer();
-    sb.append("[STask:");
-    toStringCommon(sb);
-    sb.append("]");
-    return sb.toString();
+  public void testToString() {
+    assertEquals("true", new MutableBoolean(true).toString());
+    assertEquals("false", new MutableBoolean(false).toString());
   }
 }
