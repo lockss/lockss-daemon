@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.6 2004-01-22 07:34:05 tlipkis Exp $
+ * $Id: WatchdogService.java,v 1.7 2004-01-22 07:39:02 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -53,7 +53,7 @@ public class WatchdogService extends BaseLockssManager {
   static final long DEFAULT_PLATFORM_WDOG_INTERVAL = Constants.HOUR;
 
   static final String PARAM_PLATFORM_WDOG_DNS = PREFIX + "dns.enabled";
-  static final boolean DEFAULT_PLATFORM_WDOG_DNS = true;
+  static final boolean DEFAULT_PLATFORM_WDOG_DNS = false;
   static final String PARAM_PLATFORM_WDOG_DNS_DOMAIN = PREFIX + "dns.domain";
   static final String DEFAULT_PLATFORM_WDOG_DNS_DOMAIN = "lockss.org";
 

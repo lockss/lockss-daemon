@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.7 2004-01-22 07:34:05 tlipkis Exp $
+ * $Id: TestWatchdogService.java,v 1.8 2004-01-22 07:39:02 tlipkis Exp $
  */
 
 /*
@@ -117,6 +117,7 @@ public class TestWatchdogService extends LockssTestCase {
     // 1 more second later, it should be updated again
     TimeBase.step(1000);
     assertEquals(TimeBase.nowMs(), tmpfile.lastModified());
+    assertFalse("DNS lookup shouldn't have happened", wdog.dnsProbeAttempted);
   }
 
   // test disabled to avoid DNS lookups in test
@@ -134,7 +135,7 @@ public class TestWatchdogService extends LockssTestCase {
     // should happen immediately, when service is started
     // ensure file mod time is correct
     assertEquals("1.example.com", wdog.dnsProbeHost);
-    assertTrue("DNS lookup attempted", wdog.dnsProbeAttempted);
+    assertTrue("DNS lookup should have happened", wdog.dnsProbeAttempted);
   }
 
   public void testDisable() throws Exception {
