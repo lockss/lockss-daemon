@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.8 2002-12-16 22:13:30 tal Exp $
+ * $Id: LcapSocket.java,v 1.9 2002-12-16 22:51:13 tal Exp $
  */
 
 /*
@@ -114,7 +114,6 @@ public class LcapSocket {
 	sock.receive(pkt);
 	LockssReceivedDatagram dg = new LockssReceivedDatagram(pkt);
 	dg.setReceiveSocket(this);
-	log.debug("Received " + dg);
 	processReceivedDatagram(dg);
       } catch (InterruptedIOException e) {
       }
@@ -175,6 +174,7 @@ public class LcapSocket {
     /* Mark the packet as unicast, add to the queue */
     void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(false);
+      log.debug("Received " + dg);
       rcvQ.put(dg);
     }
 
@@ -212,6 +212,7 @@ public class LcapSocket {
     /** Mark the packet as multicast, add to the queue */
     void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(true);
+      log.debug("Received " + dg);
       rcvQ.put(dg);
     }
 
