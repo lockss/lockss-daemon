@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.19 2003-02-21 22:51:02 aalto Exp $
+ * $Id: NullPlugin.java,v 1.20 2003-02-22 03:01:57 tal Exp $
  */
 
 /*
@@ -45,13 +45,67 @@ import org.lockss.test.*;
  * Base class for test plugins that don't want to implement all the
  * required methods.
  * Extend only the nested classes to which you need to add bahavior.
-*/
+ */
 public class NullPlugin {
 
-/**
- * Base class for test <code>CachedUrl</code>s.  Default methods do nothing
- * or return constants.
- */
+  /**
+   * Base class for test <code>Plugin</code>s.  Default methods do nothing
+   * or return constants.
+   */
+  public static class Plugin implements org.lockss.plugin.Plugin {
+    protected Plugin() {
+    }
+
+    public void initPlugin() {
+    }
+
+    public void stopPlugin() {
+    }
+
+    public String getPluginId() {
+      return "NullPlugin";
+    }
+
+    public String getVersion() {
+      return "NullVersion";
+    }
+
+    public List getSupportedAUNames() {
+      return null;
+    }
+
+    public List getAUConfigProperties() {
+      return null;
+    }
+
+    public String getAUIdFromConfig(Configuration config) 
+	throws ArchivalUnit.ConfigurationException {
+      return null;
+    }
+
+    public org.lockss.daemon.ArchivalUnit configureAU(Configuration config)
+	throws ArchivalUnit.ConfigurationException {
+      return null;
+    }
+
+    public org.lockss.daemon.ArchivalUnit createAU(Configuration auConfig)
+	throws ArchivalUnit.ConfigurationException {
+      return null;
+    }
+
+    public org.lockss.daemon.ArchivalUnit getAU(String auId) {
+      return null;
+    }
+
+    public Collection getAllAUs() {
+      return null;
+    };
+  }
+
+  /**
+   * Base class for test <code>CachedUrl</code>s.  Default methods do nothing
+   * or return constants.
+   */
   public static class CachedUrl implements org.lockss.daemon.CachedUrl {
 
     protected CachedUrl() {
@@ -86,10 +140,10 @@ public class NullPlugin {
     }
   }
 
-/**
- * Base class for test <code>UrlCacher</code>s.  Default methods do nothing
- * or return constants.
- */
+  /**
+   * Base class for test <code>UrlCacher</code>s.  Default methods do nothing
+   * or return constants.
+   */
   public static class UrlCacher implements org.lockss.daemon.UrlCacher {
     private String url;
     private String contents = null;
@@ -134,10 +188,10 @@ public class NullPlugin {
     }
   }
 
-/**
- * Base class for test <code>CachedUrlSet</code>s.  Default methods do nothing
- * or return constants or empty enumerations.
- */
+  /**
+   * Base class for test <code>CachedUrlSet</code>s.  Default methods do
+   * nothing or return constants or empty enumerations.
+   */
   public static class CachedUrlSet implements org.lockss.daemon.CachedUrlSet {
 
     public String toString() {
@@ -262,10 +316,10 @@ public class NullPlugin {
 
   }
 
-/**
- * Base class for test <code>CachedUrlSetHasher</code>s.  Default methods
- * do nothing or return constants.
- */
+  /**
+   * Base class for test <code>CachedUrlSetHasher</code>s.  Default methods
+   * do nothing or return constants.
+   */
   public static class CachedUrlSetHasher
     implements org.lockss.daemon.CachedUrlSetHasher {
 
