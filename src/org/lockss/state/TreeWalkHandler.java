@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.63 2004-07-12 23:01:49 smorabito Exp $
+ * $Id: TreeWalkHandler.java,v 1.63.2.1 2004-07-21 07:01:55 tlipkis Exp $
  */
 
 /*
@@ -110,6 +110,10 @@ public class TreeWalkHandler {
   static final double MAX_DEVIATION = 0.4;
   static final long MIN_SCHEDULE_ADJUSTMENT = 10 * Constants.MINUTE;
 
+  public static final String PARAM_TREEWALK_MAX_FUTURE_SCHED =
+    TREEWALK_PREFIX + "maxFutureSched";
+  static final long DEFAULT_TREEWALK_MAX_FUTURE_SCHED = 3 * Constants.WEEK;
+
   static final String WDOG_PARAM_TREEWALK = "TreeWalk";
   static final long WDOG_DEFAULT_TREEWALK = 30 * Constants.MINUTE;
 
@@ -134,6 +138,7 @@ public class TreeWalkHandler {
   long initialEstimate;
   float estGrowth;
   float estPadding;
+  long maxFutureSched = DEFAULT_TREEWALK_MAX_FUTURE_SCHED;
   boolean useScheduler;  // true if the scheduler should be used
 
   long sleepInterval;
@@ -190,6 +195,9 @@ public class TreeWalkHandler {
     if (sleepInterval < MIN_TREEWALK_SLEEP_INTERVAL) {
       sleepInterval = DEFAULT_TREEWALK_SLEEP_INTERVAL;
     }
+    maxFutureSched =
+      config.getTimeInterval(PARAM_TREEWALK_MAX_FUTURE_SCHED,
+			     DEFAULT_TREEWALK_MAX_FUTURE_SCHED);
     loadFactor = config.getPercentage(
         PARAM_TREEWALK_LOAD_FACTOR, DEFAULT_TREEWALK_LOAD_FACTOR);
     sleepDuration = calculateSleepDuration(sleepInterval, loadFactor);
@@ -604,35 +612,34 @@ public class TreeWalkHandler {
 	throws InterruptedException {
       if (useScheduler) {
         BackgroundTask task = null;
-        // using SchedService
-        logger.debug2("Scheduling of treewalk...");
         SchedService schedSvc = theDaemon.getSchedService();
         TaskCallback cb = new TreeWalkTaskCallback();
 
         // loop trying to find a time
         while (true) {
           Deadline startDeadline = Deadline.at(start);
-          if (logger.isDebug3()) {
-            logger.debug3("Trying to schedule for " +
-                          startDeadline.toString());
-            logger.debug3("Using estimate of " + est + "ms.");
-          }
           task = new BackgroundTask(startDeadline, Deadline.at(start + est),
                                     loadFactor, cb) {
             public String getShortText() {
               return "TreeWalk: " + theAu.getName();
             }
           };
+	  task.setLatestStart(Deadline.in(maxFutureSched));
+          if (logger.isDebug2()) {
+            logger.debug2("Scheduling " + task);
+          }
           if (schedSvc.scheduleTask(task)) {
-            // task is scheduled, your taskEvent callback will be called at the
+            // task is scheduled. taskEvent callback will be called at the
             // start and end times
             logger.debug2("Scheduled successfully for " +
-                          startDeadline.shortString());
+                          task.getStart().shortString());
             break;
           } else {
 	    // Can't fit into existing schedule.  Try for a later time.
+	    startDeadline = task.getStart();
+	    start = startDeadline.getExpirationTime();
             if (TimeBase.msUntil(startDeadline.getExpirationTime()) <
-                (3 * Constants.WEEK)) {
+                maxFutureSched) {
               logger.debug3("Couldn't schedule.  Trying new time.");
               start += Math.max(est, MIN_SCHEDULE_ADJUSTMENT);
             } else {
