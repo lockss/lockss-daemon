@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: ListUtil.java,v 1.6 2003-06-25 21:07:31 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -243,5 +243,16 @@ public class ListUtil {
     List res = new ArrayList(list);
     Collections.reverse(res);
     return res;
+  }
+
+  public static String listToString(List list, String separator) {
+    StringBuffer sb = new StringBuffer();
+    for (Iterator it = list.iterator(); it.hasNext();) {
+      sb.append(it.next().toString());
+      if (it.hasNext()) {
+	sb.append(separator);
+      }
+    }
+    return sb.toString();
   }
 }
