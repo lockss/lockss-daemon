@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.5 2003-11-04 18:59:35 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.6 2003-11-10 22:28:20 troberts Exp $
  */
 
 /*
@@ -90,8 +90,6 @@ public class CrawlManagerStatus implements StatusAccessor {
       return getAllCrawls();
     }
 
-//     addCrawlsFromMap(key, newContentCrawls, NC_TYPE, rows);
-//     addCrawlsFromMap(key, repairCrawls, REPAIR_TYPE, rows);
     List rows = new ArrayList();
     addCrawls(key, rows);
     return rows;
@@ -102,19 +100,6 @@ public class CrawlManagerStatus implements StatusAccessor {
     if (crawls != null) {
       for (Iterator it = crawls.iterator(); it.hasNext();) {
 	rows.add(makeRow((Crawler) it.next()));
-      }
-    }
-  }
-
-  private void addCrawlsFromMap(String key, Map crawlMap,
-				String type, List rows) {
-    synchronized(crawlMap) {
-      List crawlsForAu = (List) crawlMap.get(key);
-      if (crawlsForAu != null) {
-	Iterator it = crawlsForAu.iterator();
-	while (it.hasNext()) {
-	  rows.add(makeRow(type, (Crawler) it.next()));
-	}
       }
     }
   }
@@ -132,19 +117,6 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   
-
-  private void getAllCrawlsFromMap(List rows, String type, Map crawlMap) {
-    synchronized(crawlMap) {
-      Iterator keys = crawlMap.keySet().iterator();
-      while (keys.hasNext()) {
-	List crawls = (List)crawlMap.get((String)keys.next());
-	Iterator it = crawls.iterator();
-	while (it.hasNext()) {
-	  rows.add(makeRow(type, (Crawler)it.next()));
-	}
-      }
-    }
-  }
 
   private String getTypeString(int type) {
     switch(type) {
@@ -172,25 +144,25 @@ public class CrawlManagerStatus implements StatusAccessor {
     return row;
   }
 
-  private Map makeRow(String type, Crawler crawler) {
-    Map row = new HashMap();
-    ArchivalUnit au = crawler.getAu();
-    row.put(AU_COL_NAME, au.getName());
-    row.put(CRAWL_TYPE, type);
-    row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
-    row.put(END_TIME_COL_NAME, new Long(crawler.getEndTime()));
-    row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
-    row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
-    row.put(START_URLS,
-	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
-    row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
-    return row;
-  }
+//   private Map makeRow(String type, Crawler crawler) {
+//     Map row = new HashMap();
+//     ArchivalUnit au = crawler.getAu();
+//     row.put(AU_COL_NAME, au.getName());
+//     row.put(CRAWL_TYPE, type);
+//     row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
+//     row.put(END_TIME_COL_NAME, new Long(crawler.getEndTime()));
+//     row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
+//     row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
+//     row.put(START_URLS,
+// 	    (StringUtil.separatedString(crawler.getStartUrls(), "\n")));
+//     row.put(CRAWL_STATUS, statusToString(crawler.getStatus()));
+//     return row;
+//   }
 
   public boolean requiresKey() {
     return false;
   }
-
+  
   /**
    * @param table StatusTable to populate
    * @throws IllegalArgumentException if called with a null StatusTable

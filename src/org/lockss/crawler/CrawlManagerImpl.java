@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.49 2003-11-07 00:52:47 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.50 2003-11-10 22:28:20 troberts Exp $
  */
 
 /*
@@ -238,17 +238,6 @@ public class CrawlManagerImpl extends BaseLockssManager
       new CrawlThread(crawler, Deadline.MAX, cb, cookie, SetUtil.set(lock));
     crawlThread.start();
     crawlHistory.put(au.getAuId(), crawler);
-  }
-
-  private void addCrawl(Map crawlMap, ArchivalUnit au, Crawler crawler) {
-    synchronized (crawlMap) {
-      Collection crawlsForAu = (Collection)crawlMap.get(au);
-      if (crawlsForAu == null) {
-	crawlsForAu = new HashSet();
-	crawlMap.put(au, crawlsForAu);
-      }
-      crawlsForAu.add(crawler);
-    }
   }
 
   protected Crawler makeNewContentCrawler(ArchivalUnit au, CrawlSpec spec) {
