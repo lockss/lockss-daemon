@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.30 2004-10-06 04:46:48 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.31 2005-01-19 18:12:01 tlipkis Exp $
  */
 
 /*
@@ -162,8 +162,8 @@ class TaskRunner {
 			     DEFAULT_STATS_UPDATE_INTERVAL);
     sortScheme = config.getInt(PARAM_SORT_SCHEME, DEFAULT_SORT_SCHEME);
 
-    int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
     if (changedKeys.contains(PARAM_HISTORY_MAX) ) {
+      int cMax = config.getInt(PARAM_HISTORY_MAX, DEFAULT_HISTORY_MAX);
       synchronized (history) {
 	history.setMax(cMax);
       }
