@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleBinarySemaphore.java,v 1.2 2002-09-23 02:58:14 tal Exp $
+ * $Id: TestSimpleBinarySemaphore.java,v 1.3 2002-11-19 23:31:29 tal Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.test.*;
  * Test class for org.lockss.test.TestSimpleBinarySemaphore
  */
 
-public class TestSimpleBinarySemaphore extends TestCase {
+public class TestSimpleBinarySemaphore extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.test.SimpleBinarySemaphore.class
   };
@@ -75,9 +75,9 @@ public class TestSimpleBinarySemaphore extends TestCase {
 
   public void testEmpty() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       if (sem.take()) {
 	fail("take() of empty semaphore returned true");
       }
@@ -92,9 +92,9 @@ public class TestSimpleBinarySemaphore extends TestCase {
   public void testFull() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     sem.give();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       if (!sem.take()) {
 	fail("take() of already full semaphore returned false");
       }
@@ -108,10 +108,10 @@ public class TestSimpleBinarySemaphore extends TestCase {
 
   public void testGive() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       giveIn(500, sem);
       if (!sem.take()) {
 	fail("take() of given() semaphore returned false");
@@ -129,9 +129,9 @@ public class TestSimpleBinarySemaphore extends TestCase {
 
   public void testNoWaitEmpty() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       if (sem.take(0)) {
 	fail("take(0) of empty semaphore returned true");
       }
@@ -146,9 +146,9 @@ public class TestSimpleBinarySemaphore extends TestCase {
   public void testNoWaitFull() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     sem.give();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       if (!sem.take(0)) {
 	fail("take(0) of full semaphore returned false");
       }
@@ -162,10 +162,10 @@ public class TestSimpleBinarySemaphore extends TestCase {
 
   public void testTimedEmpty() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       if (sem.take(500)) {
 	fail("take() of empty semaphore returned true");
       }
@@ -187,10 +187,10 @@ public class TestSimpleBinarySemaphore extends TestCase {
   public void testTimedFull() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     sem.give();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       if (!sem.take(1000)) {
 	fail("take(1000) of full returned false");
       }
@@ -208,10 +208,10 @@ public class TestSimpleBinarySemaphore extends TestCase {
 
   public void testTimedGive() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       giveIn(500, sem);
       if (!sem.take(1000)) {
 	fail("take(1000) of semaphore given() after 500 returned false");

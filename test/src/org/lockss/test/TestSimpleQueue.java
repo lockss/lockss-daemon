@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimpleQueue.java,v 1.2 2002-11-07 23:14:42 tal Exp $
+ * $Id: TestSimpleQueue.java,v 1.3 2002-11-19 23:31:29 tal Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.test.*;
  * Test class for org.lockss.test.TestSimpleQueue
  */
 
-public class TestSimpleQueue extends TestCase {
+public class TestSimpleQueue extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.test.SimpleQueue.class
   };
@@ -80,9 +80,9 @@ public class TestSimpleQueue extends TestCase {
 
   public void testEmpty() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(500);
+      intr = interruptMeIn(500);
       if (fifo.get() != null) {
 	fail("get() of empty fifo returned true");
       }
@@ -97,9 +97,9 @@ public class TestSimpleQueue extends TestCase {
   public void testNotEmpty() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
     fifo.put(O1);
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       assertSame(O1, fifo.get());
       intr.cancel();
     } finally {
@@ -111,10 +111,10 @@ public class TestSimpleQueue extends TestCase {
 
   public void testPut() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       putIn(200, fifo, O1);
       assertSame(O1, fifo.get());
       if (TimerUtil.timeSince(start) < 200) {
@@ -130,9 +130,9 @@ public class TestSimpleQueue extends TestCase {
 
   public void testNoWaitEmpty() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       assertEquals(null, fifo.get(0));
       intr.cancel();
     } finally {
@@ -144,10 +144,10 @@ public class TestSimpleQueue extends TestCase {
 
   public void testTimedEmpty() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       assertEquals(null, fifo.get(300));
       long delay = TimerUtil.timeSince(start);
       if (delay < 300) {
@@ -166,12 +166,12 @@ public class TestSimpleQueue extends TestCase {
 
   public void testQueue() {
     SimpleQueue.Fifo fifo = new SimpleQueue.Fifo();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       putIn(200, fifo, O1);
       putIn(400, fifo, O2);
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       assertSame(O1, fifo.get());
       assertSame(O2, fifo.get());
       long delay = TimerUtil.timeSince(start);

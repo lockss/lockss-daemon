@@ -34,7 +34,7 @@ import java.util.*;
 import junit.framework.TestCase;
 
 
-public class TestMockDatagramSocket extends TestCase{
+public class TestMockDatagramSocket extends LockssTestCase{
   private MockDatagramSocket ds = null;
 
   public TestMockDatagramSocket(String msg){
@@ -100,9 +100,9 @@ public class TestMockDatagramSocket extends TestCase{
   
   public void testReceiveWithOutSetPacketsWaits() {
     DatagramPacket packet = createEmptyPacket(10);
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       ds.receive(packet);
       fail("receive() returned when no packets");
     } catch (IOException e) {

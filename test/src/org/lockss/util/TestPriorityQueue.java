@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.1 2002-11-15 01:27:47 tal Exp $
+ * $Id: TestPriorityQueue.java,v 1.2 2002-11-19 23:31:29 tal Exp $
  */
 
 /*
@@ -85,9 +85,9 @@ public class TestPriorityQueue extends LockssTestCase {
 
   public void testEmptyGet() {
     PriorityQueue q = new PriorityQueue();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(500);
+      intr = interruptMeIn(500);
       q.get(timer(10000));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -101,9 +101,9 @@ public class TestPriorityQueue extends LockssTestCase {
   public void testNotEmpty() {
     PriorityQueue q = new PriorityQueue();
     q.put(O1);
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       assertSame(O1, q.get(timer(10000)));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -116,10 +116,10 @@ public class TestPriorityQueue extends LockssTestCase {
 
   public void testPut() {
     PriorityQueue q = new PriorityQueue();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       putIn(200, q, O1);
       assertSame(O1, q.get(timer(10000)));
       intr.cancel();
@@ -137,9 +137,9 @@ public class TestPriorityQueue extends LockssTestCase {
 
   public void testNoWaitEmpty() {
     PriorityQueue q = new PriorityQueue();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = interruptMeIn(1000);
       assertEquals(null, q.get(timer(0)));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -152,10 +152,10 @@ public class TestPriorityQueue extends LockssTestCase {
 
   public void testTimedEmpty() {
     PriorityQueue q = new PriorityQueue();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       assertEquals(null, q.get(timer(300)));
       long delay = TimerUtil.timeSince(start);
       if (delay < 300) {
@@ -186,9 +186,9 @@ public class TestPriorityQueue extends LockssTestCase {
 
   public void testOrder1() {
     PriorityQueue q = new PriorityQueue();
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       List l = new LinkedList();
       String ord[] = {"a", "b", "c", "d"};
       q.put("b");
@@ -217,9 +217,9 @@ public class TestPriorityQueue extends LockssTestCase {
 	  return s2.compareTo(s1);
 	}
       });
-    DoLater.Interrupter intr = null;
+    Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(2000);
+      intr = interruptMeIn(2000);
       List l = new LinkedList();
       String ord[] = {"d", "c", "b", "a"};
       q.put("b");
@@ -240,7 +240,7 @@ public class TestPriorityQueue extends LockssTestCase {
     }
   }
 
-  private ProbabilisticTimer timer(int msec) {
-    return new ProbabilisticTimer(msec);
+  private Deadline timer(int msec) {
+    return Deadline.in(msec);
   }
 }
