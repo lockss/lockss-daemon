@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.47 2004-03-09 23:37:52 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.48 2004-03-27 02:34:51 eaalto Exp $
  */
 
 /*
@@ -61,7 +61,6 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private Set cachedUrls = new HashSet();
   private Set forceCachedUrls = new HashSet();
 
-  private Vector urls = null;
   private Iterator flatIterator = null;
   private Iterator hashIterator = null;
   private Collection flatSource = null;
@@ -118,10 +117,11 @@ public class MockCachedUrlSet implements CachedUrlSet {
       return this.hasContent;
     }
     CachedUrl cu = (CachedUrl)cuHash.get(getUrl());
-    if (cu != null)
+    if (cu != null) {
       return cu.hasContent();
-    else
+    } else {
       return false;
+    }
   }
 
   public void setHasContent(boolean hasContent) {
@@ -178,7 +178,6 @@ public class MockCachedUrlSet implements CachedUrlSet {
     hashSource = col;
   }
 
-
   // Methods used by the poller
 
   CachedUrlSetHasher contentHasher = null;
@@ -203,14 +202,16 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
-    if (contentToBeHashed != null)
+    if (contentToBeHashed != null) {
       hasher.update(contentToBeHashed);
+    }
     return contentHasher;
   }
 
   public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
-    if (namesToBeHashed != null)
+    if (namesToBeHashed != null) {
       hasher.update(namesToBeHashed);
+    }
     return nameHasher;
   }
 
@@ -267,20 +268,17 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   /**
    * Sets up a cached url and url cacher for this url
-   * @param source content to associate with this url
    * @param url url for which we should set up a CachedUrl and UrlCacher
    * @param exists whether this url should act like it's already in the cache
    * @param shouldCache whether this url should say to cache it or not
    * @param props CIProperties to be associated with this url
    */
-  public void addUrl(String url,
-		     boolean exists, boolean shouldCache,
+  public void addUrl(String url, boolean exists, boolean shouldCache,
 		     CIProperties props) {
     addUrl(url, exists, shouldCache, props, null, 0);
   }
 
-  private void addUrl(String url,
-		      boolean exists, boolean shouldCache,
+  private void addUrl(String url, boolean exists, boolean shouldCache,
 		      CIProperties props, Exception cacheException,
 		      int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url, this);
@@ -327,15 +325,13 @@ public class MockCachedUrlSet implements CachedUrlSet {
   /**
    * Same as above, but with exists defaulting to false, shouldCache to false
    * and props to "content-type=text/html"
-   * @param source the content
    * @param url the url
    */
   public void addUrl(String url) {
     addUrl(url, false, true);
   }
 
-  public void addUrl(String url,
-		     boolean exists, boolean shouldCache) {
+  public void addUrl(String url, boolean exists, boolean shouldCache) {
     CIProperties props = new CIProperties();
     props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
     addUrl(url, exists, shouldCache, props);
@@ -401,4 +397,60 @@ public class MockCachedUrlSet implements CachedUrlSet {
       return false;
     }
   }
+
+  public int cusCompare(CachedUrlSet cus2) {
+    // check that they're in the same AU
+    if (!this.getArchivalUnit().equals(cus2.getArchivalUnit())) {
+      return NO_RELATION;
+    }
+    CachedUrlSetSpec spec1 = this.getSpec();
+    CachedUrlSetSpec spec2 = cus2.getSpec();
+    String url1 = this.getUrl();
+    String url2 = cus2.getUrl();
+
+    // check for top-level urls
+    if (spec1.isAu() || spec2.isAu()) {
+      if (spec1.equals(spec2)) {
+        return SAME_LEVEL_OVERLAP;
+      } else if (spec1.isAu()) {
+        return ABOVE;
+      } else {
+        return BELOW;
+      }
+    }
+
+    if (!url1.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url1 += UrlUtil.URL_PATH_SEPARATOR;
+    }
+    if (!url2.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url2 += UrlUtil.URL_PATH_SEPARATOR;
+    }
+    if (url1.equals(url2)) {
+      //the urls are on the same level; check for overlap
+      if (spec1.isDisjoint(spec2)) {
+        return SAME_LEVEL_NO_OVERLAP;
+      } else {
+        return SAME_LEVEL_OVERLAP;
+      }
+    } else if (spec1.subsumes(spec2)) {
+      // parent
+      return ABOVE;
+    } else if (spec2.subsumes(spec1)) {
+      // child
+      return BELOW;
+    } else if (spec2.isSingleNode()) {
+      if (url1.startsWith(url2)) {
+        return SAME_LEVEL_NO_OVERLAP;
+      }
+      // else, cus2 probably has a range which excludes url1
+    } else if (spec1.isSingleNode()) {
+      if (url2.startsWith(url1)) {
+        return SAME_LEVEL_NO_OVERLAP;
+      }
+      // else, cus1 probably has a range which excludes url2
+    }
+    // no connection between the two urls
+    return NO_RELATION;
+  }
+
 }

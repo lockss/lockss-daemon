@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.7 2003-08-02 00:16:05 eaalto Exp $
+ * $Id: CachedUrlSet.java,v 1.8 2004-03-27 02:34:51 eaalto Exp $
  */
 
 /*
@@ -31,9 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin;
+
 import java.util.Iterator;
 import java.security.MessageDigest;
-
 import org.lockss.daemon.*;
 
 /**
@@ -138,4 +138,38 @@ public interface CachedUrlSet extends CachedUrlSetNode {
    * @return true if equal
    */
   public boolean equals(Object obj);
+
+  /**
+   * Compares this CUS to another CUS and returns an int representing the
+   * relationship between the two.  For example, if the first was above the
+   * second in the hierarchy, it would return <code>CachedUrlSet.ABOVE</code>.
+   * @param cus2 the second cus
+   * @return an int representing the relationship
+   */
+  public int cusCompare(CachedUrlSet cus2);
+
+  /**
+   * The cus is above the second cus in the hierarchy.
+   */
+  public static final int ABOVE = 0;
+  /**
+   * The cus is below the second cus in the hierarchy.
+   */
+  public static final int BELOW = 1;
+  /**
+   * The cus is at the same level as the second cus in the hierarchy, with
+   * no overlap.
+   */
+  public static final int SAME_LEVEL_NO_OVERLAP = 2;
+  /**
+   * The cus is at the same level as the second cus in the hierarchy, with
+   * overlap.
+   */
+  public static final int SAME_LEVEL_OVERLAP = 3;
+
+  /**
+   * There is no relation between the two sets in the hierarchy.
+   */
+  public static final int NO_RELATION = 4;
+
 }

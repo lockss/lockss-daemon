@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.9 2003-09-26 23:52:16 eaalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.10 2004-03-27 02:34:51 eaalto Exp $
  */
 
 /*
@@ -45,7 +45,6 @@ import org.lockss.util.*;
 import org.lockss.protocol.*;
 import org.lockss.plugin.base.*;
 import org.lockss.state.*;
-import org.lockss.poller.PollManager;
 
 /**
  * Base class for CachedUrlSets.  Utilizes the LockssRepository.
@@ -146,7 +145,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     String prefix = spec.getUrl();
     try {
       RepositoryNode intNode = repository.getNode(prefix);
-      Iterator children = intNode.listNodes(spec, false);
+      Iterator children = intNode.listChildren(spec, false);
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
         if (child.isLeaf()) {
@@ -330,6 +329,61 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     }
   }
 
+  public int cusCompare(CachedUrlSet cus2) {
+    // check that they're in the same AU
+    if (!this.getArchivalUnit().equals(cus2.getArchivalUnit())) {
+      return NO_RELATION;
+    }
+    CachedUrlSetSpec spec1 = this.getSpec();
+    CachedUrlSetSpec spec2 = cus2.getSpec();
+    String url1 = this.getUrl();
+    String url2 = cus2.getUrl();
+
+    // check for top-level urls
+    if (spec1.isAu() || spec2.isAu()) {
+      if (spec1.equals(spec2)) {
+        return SAME_LEVEL_OVERLAP;
+      } else if (spec1.isAu()) {
+        return ABOVE;
+      } else {
+        return BELOW;
+      }
+    }
+
+    if (!url1.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url1 += UrlUtil.URL_PATH_SEPARATOR;
+    }
+    if (!url2.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
+      url2 += UrlUtil.URL_PATH_SEPARATOR;
+    }
+    if (url1.equals(url2)) {
+      //the urls are on the same level; check for overlap
+      if (spec1.isDisjoint(spec2)) {
+        return SAME_LEVEL_NO_OVERLAP;
+      } else {
+        return SAME_LEVEL_OVERLAP;
+      }
+    } else if (spec1.subsumes(spec2)) {
+      // parent
+      return ABOVE;
+    } else if (spec2.subsumes(spec1)) {
+      // child
+      return BELOW;
+    } else if (spec2.isSingleNode()) {
+      if (url1.startsWith(url2)) {
+        return SAME_LEVEL_NO_OVERLAP;
+      }
+      // else, cus2 probably has a range which excludes url1
+    } else if (spec1.isSingleNode()) {
+      if (url2.startsWith(url1)) {
+        return SAME_LEVEL_NO_OVERLAP;
+      }
+      // else, cus1 probably has a range which excludes url2
+    }
+    // no connection between the two urls
+    return NO_RELATION;
+  }
+
   private static class UrlComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       String prefix = null;
@@ -350,71 +404,70 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     }
   }
 
-
-/**
- * Iterator over all the elements in a CachedUrlSet
- */
-protected class CusIterator implements Iterator {
-  //Stack of flatSetIterators at each tree level
-  LinkedList stack = new LinkedList();
-
-  //if null, we have to look for nextElement
-  private CachedUrlSetNode nextElement = null;
-
-  public CusIterator() {
-    if (!spec.isRangeRestricted()) {
-      nextElement = BaseCachedUrlSet.this;
-    }
-    stack.addFirst(flatSetIterator());
-  }
-
-  public void remove() {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
-  public boolean hasNext() {
-    return findNextElement() != null;
-  }
-
-  public Object next() {
-    Object element = findNextElement();
-    nextElement = null;
-
-    if (element != null) {
-      return element;
-    }
-    throw new NoSuchElementException();
-  }
-
   /**
-   * Does a pre-order traversal of the CachedUrlSet tree
-   * @return a {@link CachedUrlSetNode}
+   * Iterator over all the elements in a CachedUrlSet
    */
-  private CachedUrlSetNode findNextElement() {
-    if (nextElement != null) {
-      return nextElement;
-    }
-    while (true) {
-      if (stack.isEmpty()) {
-        return null;
-      }
-      Iterator it = (Iterator)stack.getFirst();
-      if (!it.hasNext()) {
-        //this iterator is exhausted, pop from stack
-        stack.removeFirst();
-      } else {
-        CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
+  protected class CusIterator implements Iterator {
+    //Stack of flatSetIterators at each tree level
+    LinkedList stack = new LinkedList();
 
-        if (!curNode.isLeaf()) {
-          CachedUrlSet cus = (CachedUrlSet)curNode;
-          //push the iterator of this child node onto the stack
-          stack.addFirst(cus.flatSetIterator());
-        }
-        nextElement = curNode;
+    //if null, we have to look for nextElement
+    private CachedUrlSetNode nextElement = null;
+
+    public CusIterator() {
+      if (!spec.isRangeRestricted()) {
+        nextElement = BaseCachedUrlSet.this;
+      }
+      stack.addFirst(flatSetIterator());
+    }
+
+    public void remove() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public boolean hasNext() {
+      return findNextElement() != null;
+    }
+
+    public Object next() {
+      Object element = findNextElement();
+      nextElement = null;
+
+      if (element != null) {
+        return element;
+      }
+      throw new NoSuchElementException();
+    }
+
+    /**
+     * Does a pre-order traversal of the CachedUrlSet tree
+     * @return a {@link CachedUrlSetNode}
+     */
+    private CachedUrlSetNode findNextElement() {
+      if (nextElement != null) {
         return nextElement;
       }
+      while (true) {
+        if (stack.isEmpty()) {
+          return null;
+        }
+        Iterator it = (Iterator)stack.getFirst();
+        if (!it.hasNext()) {
+          //this iterator is exhausted, pop from stack
+          stack.removeFirst();
+        } else {
+          CachedUrlSetNode curNode = (CachedUrlSetNode)it.next();
+
+          if (!curNode.isLeaf()) {
+            CachedUrlSet cus = (CachedUrlSet)curNode;
+            //push the iterator of this child node onto the stack
+            stack.addFirst(cus.flatSetIterator());
+          }
+          nextElement = curNode;
+          return nextElement;
+        }
+      }
     }
   }
-}
 
 }

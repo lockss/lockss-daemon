@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.53 2004-03-11 09:40:23 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.54 2004-03-27 02:34:51 eaalto Exp $
  */
 
 /*
@@ -307,6 +307,10 @@ public class NullPlugin {
 
     public String getUrl() {
       return "null";
+    }
+
+    public int cusCompare(org.lockss.plugin.CachedUrlSet cus2) {
+      return -1;
     }
   }
 
