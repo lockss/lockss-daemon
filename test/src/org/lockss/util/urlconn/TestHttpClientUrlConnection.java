@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.5 2004-03-14 01:04:47 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.6 2004-03-16 23:01:39 tlipkis Exp $
  */
 
 /*
@@ -364,7 +364,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
     public String getPath() {
       try {
-	URI uri = new URI(url);
+	org.apache.commons.httpclient.URI uri =
+	  new org.apache.commons.httpclient.URI(url);
 	return uri.getPath();
       } catch(URIException e) {
 	throw new RuntimeException("getPath couldn't create URI: " + e);
@@ -373,7 +374,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
     public String getQueryString() {
       try {
-	URI uri = new URI(url);
+	org.apache.commons.httpclient.URI uri =
+	  new org.apache.commons.httpclient.URI(url);
 	return uri.getQuery();
       } catch(URIException e) {
 	throw new RuntimeException("getQueryString couldn't create URI: " + e);

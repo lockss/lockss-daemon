@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.17 2004-03-11 09:43:13 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.18 2004-03-16 23:01:40 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -226,7 +226,8 @@ public class UrlUtil {
   public static String stripQuery(String url) throws MalformedURLException {
     if (url != null) {
       try {
-	URI uri = new URI(url.toCharArray());
+	org.apache.commons.httpclient.URI uri =
+	  new org.apache.commons.httpclient.URI(url.toCharArray());
 	if (uri.isAbsoluteURI()) {
 	  StringBuffer sb = new StringBuffer();
 	  sb.append(uri.getScheme());
