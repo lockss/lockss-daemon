@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.6 2004-05-18 23:11:16 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.7 2004-07-03 01:06:59 clairegriffin Exp $
  */
 
 /*
@@ -30,16 +30,16 @@
  */
 package org.lockss.plugin.definable;
 
+import java.net.*;
 import java.util.*;
 
+import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import gnu.regexp.*;
-import java.net.URL;
-import org.lockss.crawler.*;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -68,6 +68,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 
   protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
+
 
   protected DefinableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
@@ -127,7 +128,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             definitionMap.putString(key+CM_AU_PATH_SUFFIX, url.getPath());
           }
         }
-
       }
       catch (Exception ex) {
         throw new ConfigurationException("Error configuring: " + key, ex);
@@ -193,22 +193,27 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return window;
   }
 
-  protected FilterRule constructFilterRule(String mimeType) {
-    String filter = definitionMap.getString(mimeType + CM_AU_FILTER_SUFFIX,
-                                            null);
-    if (filter != null) {
-      try {
-        return (FilterRule) Class.forName(filter).newInstance();
-      }
-      catch (Exception ex) {
-        throw new DefinablePlugin.InvalidDefinitionException(
-       auName + " unable to create FilterRule: " + filter, ex);
 
+  protected FilterRule constructFilterRule(String mimeType) {
+    Object filter_el = definitionMap.getMapElement(mimeType
+        + CM_AU_FILTER_SUFFIX);
+    try {
+      if (filter_el instanceof String) {
+        return (FilterRule) Class.forName( (String) filter_el).newInstance();
+      }
+      else if (filter_el instanceof List) {
+        if ( ( (List) filter_el).size() > 0) {
+          return new DefinableFilterRule((List) filter_el);
+        }
       }
     }
-
+    catch (Exception ex) {
+      throw new DefinablePlugin.InvalidDefinitionException(
+          auName + " unable to create FilterRule: " + filter_el, ex);
+    }
     return super.constructFilterRule(mimeType);
   }
+
 
   /**
    * Currently the only ContentParser we have is GoslingHtmlParser, so this
@@ -236,16 +241,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
-  public String[] getStringTokens(String tokenString) {
-    StringTokenizer st = new StringTokenizer(tokenString, "\n");
-    int num_tokens = st.countTokens();
-    String[] strs = new String[num_tokens];
-    for (int i = 0; i < num_tokens; i++) {
-      strs[i] = st.nextToken();
-    }
-    return strs;
-  }
-
   String convertVariableString(String printfString) {
     String converted_string = printfString;
     PrintfUtil.PrintfData p_data = PrintfUtil.stringToPrintf(printfString);
@@ -282,64 +277,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.RE(rule, value);
   }
 
-/*
-  String convertVariableString(String variableString) {
-    if (StringUtil.isNullString(variableString)) {
-      return variableString;
-    }
 
-    String[] strs = getStringTokens(variableString);
-    String cur_str = strs[0];
-    ArrayList args = new ArrayList();
-    boolean has_all_args = true;
-    for (int i = 1; i < strs.length && has_all_args; i++) {
-      String key = strs[i];
-      Object val = definitionMap.getMapElement(key);
-      if (val != null) {
-        args.add(val);
-      }
-      else {
-        log.warning("misssing argument for : " + key);
-        has_all_args = false;
-      }
-    }
-    if (has_all_args) {
-      PrintfFormat pf = new PrintfFormat(cur_str);
-      cur_str = pf.sprintf(args.toArray());
-    }
-    else {
-      log.warning("missing variable arguments");
-    }
-    return cur_str;
-  }
-*/
-/*
-  CrawlRule convertRule(String variableString) throws REException {
-    String[] strs = getStringTokens(variableString);
-    int value = Integer.valueOf(strs[0]).intValue();
-    String rule = strs[1];
-    ArrayList args = new ArrayList();
-    boolean has_all_args = true;
-    for (int i = 2; i < strs.length && has_all_args; i++) {
-      String key = strs[i];
-      Object val = definitionMap.getMapElement(key);
-      if (val != null) {
-        args.add(val);
-      }
-      else {
-        log.warning("misssing argument for : " + key);
-        has_all_args = false;
-      }
-    }
-    if (has_all_args) {
-      PrintfFormat pf = new PrintfFormat(rule);
-      rule = pf.sprintf(args.toArray());
-      log.debug2("Adding crawl rule: " + rule);
-      return new CrawlRules.RE(rule, value);
-    }
-    return null;
-  }
-*/
   public interface ConfigurableCrawlWindow {
     public CrawlWindow makeCrawlWindow();
   }
