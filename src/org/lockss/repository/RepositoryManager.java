@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.4 2005-01-05 09:46:13 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.5 2005-01-07 09:22:31 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.repository;
 
+import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -71,6 +72,12 @@ public class RepositoryManager
   int paramGlobalNodeCacheSize = DEFAULT_MAX_GLOBAL_CACHE_SIZE;
   UniqueRefLruCache globalNodeCache =
       new UniqueRefLruCache(DEFAULT_MAX_GLOBAL_CACHE_SIZE);
+  Map localRepos = new HashMap();
+
+  public void startService() {
+    super.startService();
+    localRepos = new HashMap();
+  }
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
@@ -141,6 +148,41 @@ public class RepositoryManager
       }
     }
     return res == null ? Collections.EMPTY_LIST : res;
+  }
+
+  // hack only local
+  public synchronized LockssRepositoryImpl getRepositoryFromPath(String path) {
+    LockssRepositoryImpl repo = (LockssRepositoryImpl)localRepos.get(path);
+    if (repo == null) {
+      repo =  new LockssRepositoryImpl(path);
+      localRepos.put(path, repo);
+    }
+    return repo;
+  }
+
+  /**
+   * Return the disk space used by the AU, including all overhead,
+   * calculating it if necessary.
+   * @param au the AU
+   * @return the AU's disk usage in bytes.
+   */
+  public long getRepoDiskUsage(String repoAuPath) {
+    LockssRepository repo = getRepositoryFromPath(repoAuPath);
+    if (repo != null) {
+      try {
+	RepositoryNode repoNode = repo.getNode(AuCachedUrlSetSpec.URL);
+	if (repoNode instanceof AuNodeImpl) {
+	  return ((AuNodeImpl)repoNode).getDiskUsage();
+	}
+      } catch (MalformedURLException ignore) {
+      }
+    }
+    return -1;
+  }
+
+  public synchronized void setRepositoryForPath(String path,
+						LockssRepositoryImpl repo) {
+    localRepos.put(path, repo);
   }
 
   public boolean isGlobalNodeCache() {
