@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
  */
 
 /*
@@ -45,27 +45,29 @@ public abstract class BaseTitleSet implements TitleSet {
   protected LockssDaemon daemon;
   protected String name;
 
-  public String getName() {
-    return name;
-  }
-  
   public BaseTitleSet(LockssDaemon daemon, String name) {
     this.daemon = daemon;
     this.name = name;
   }
 
+  /** Return the human-readable name of the title set.
+   * @return the name */
+  public String getName() {
+    return name;
+  }
+  
   /** Filter the collection of all known titles by the implementation's
-   * getTitles(Collection) method.
+   * filterTitles(Collection) method.
    * @return a collection of {@link TitleConfig} */
   public Collection getTitles() {
-    return getTitles(daemon.getPluginManager().findAllTitleConfigs());
+    return filterTitles(daemon.getPluginManager().findAllTitleConfigs());
   }
 
   /** Filter a collection of titles by the xpath predicate
    * @param allTitles collection of {@link TitleConfig}s to be filtered
    * @return a collection of {@link TitleConfig}s
    */
-  abstract Collection getTitles(Collection allTitles);
+  abstract Collection filterTitles(Collection allTitles);
 
   /** Override as appropriate.
    * @return false */

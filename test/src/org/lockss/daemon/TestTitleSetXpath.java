@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.1 2005-01-04 02:58:12 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.2 2005-01-13 08:10:13 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-
+import org.apache.commons.jxpath.*;
 import org.lockss.config.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
@@ -68,7 +68,7 @@ public class TestTitleSetXpath extends LockssTestCase {
     tc4.setJournalTitle("Journal of Title");
     tc5 = new TitleConfig("LOCKSS Journal of Dogs", pid2);
     tc5.setJournalTitle("Dog Journal");
-    tc6 = new TitleConfig("LOCKSS Journal of Dog Toys", pid2);
+    tc6 = new TitleConfig("LOCKSS Journal of Dog Toys 2002", pid2);
     tc6.setJournalTitle("Dog Journal");
     titles = ListUtil.list(tc1, tc2, tc3, tc4, tc5, tc6);
   }
@@ -79,7 +79,14 @@ public class TestTitleSetXpath extends LockssTestCase {
 
   public void testConstructor() {
     MockLockssDaemon daemon = getMockLockssDaemon();
-    new TitleSetXpath(daemon, "Name1", "[path1]");
+    TitleSetXpath ts = new TitleSetXpath(daemon, "Name1", "[path1]");
+    assertEquals(".[path1]", ts.getPath());
+    // Checked in TitleSetXpath constructor
+    try {
+      new TitleSetXpath(daemon, "Name1", null);
+      fail("Null path should be illegal");
+    } catch (NullPointerException e) {
+    }
     try {
       new TitleSetXpath(daemon, "Name1", "path1]");
       fail("Pattern should be illegal");
@@ -90,10 +97,11 @@ public class TestTitleSetXpath extends LockssTestCase {
       fail("Pattern should be illegal");
     } catch (IllegalArgumentException e) {
     }
+    // Illegal predicate syntax, checked in JXPath code
     try {
-      new TitleSetXpath(daemon, "Name1", null);
-      fail("Pattern should be illegal");
-    } catch (NullPointerException e) {
+      new TitleSetXpath(daemon, "Name1", "[journalTitle='Dog Journal']]");
+      fail("Illegal xpath, should have thrown");
+    } catch (JXPathException e) {
     }
   }
 
@@ -105,46 +113,73 @@ public class TestTitleSetXpath extends LockssTestCase {
 		    new TitleSetXpath(daemon, "Name2", "[path1]"));
     assertNotEquals(new TitleSetXpath(daemon, "Name1", "[path1]"),
 		    new TitleSetXpath(daemon, "Name1", "[path2]"));
+    assertNotEquals(new TitleSetXpath(daemon, "Name1", "[path1]"),
+		    new TitleSetActiveAus(daemon));
+    assertNotEquals(new TitleSetXpath(daemon, "Name1", "[path1]"),
+		    "foo");
   }
 
   public void testSimplePat() {
     TitleSetXpath ts = newSet("[journalTitle='Dog Journal']");
     assertEquals(SetUtil.set(tc5, tc6),
-		 SetUtil.theSet(ts.getTitles(titles)));
+		 SetUtil.theSet(ts.filterTitles(titles)));
     assertEquals("Name1", ts.getName());
   }
 
+  // Ensure that TitleConfig bean accessor names are as we expect.  Because
+  // JXPath accesses them at runtime using reflection, renaming an accessor
+  // wouldn't otherwise break the build.
+
   public void testAllFields() {
     assertEquals(SetUtil.set(tc5, tc6),
-		 SetUtil.theSet(newSet("[journalTitle='Dog Journal']").getTitles(titles)));
+		 SetUtil.theSet(newSet("[journalTitle='Dog Journal']").filterTitles(titles)));
     assertEquals(SetUtil.set(tc1),
-		 SetUtil.theSet(newSet("[displayName='Journal of Title, 2001']").getTitles(titles)));
+		 SetUtil.theSet(newSet("[displayName='Journal of Title, 2001']").filterTitles(titles)));
     assertEquals(SetUtil.set(tc1, tc2, tc3),
-		 SetUtil.theSet(newSet("[pluginName='o.l.plug1']").getTitles(titles)));
+		 SetUtil.theSet(newSet("[pluginName='o.l.plug1']").filterTitles(titles)));
   }
 
   public void testFunc() {
     TitleSetXpath ts = newSet("[starts-with(journalTitle, \"Dog\")]");
     assertEquals(SetUtil.set(tc5, tc6),
-		 SetUtil.theSet(ts.getTitles(titles)));
+		 SetUtil.theSet(ts.filterTitles(titles)));
   }
 
-  public void testOr() {
-    TitleSetXpath ts =
-      newSet("[journalTitle=\"Dog Journal\" or pluginName=\"o.l.plug2\"]");
+  public void testBool() {
+    TitleSetXpath ts;
+    ts = newSet("[journalTitle=\"Dog Journal\" or pluginName=\"o.l.plug2\"]");
     assertEquals(SetUtil.set(tc4, tc5, tc6),
-		 SetUtil.theSet(ts.getTitles(titles)));
+		 SetUtil.theSet(ts.filterTitles(titles)));
+    ts = newSet("[journalTitle='Journal of Title' and pluginName='o.l.plug2']");
+    assertEquals(SetUtil.set(tc4),
+		 SetUtil.theSet(ts.filterTitles(titles)));
+    ts = newSet("[journalTitle='Journal of Title' and (pluginName='o.l.plug2' or RE:isMatchRe(displayName, '2002'))]");
+    assertEquals(SetUtil.set(tc2, tc4),
+		 SetUtil.theSet(ts.filterTitles(titles)));
   }
 
   public void testRe() {
     TitleSetXpath ts = newSet("[RE:isMatchRe(displayName, \"D.g[^s]\")]");
     assertEquals(SetUtil.set(tc6),
-		 SetUtil.theSet(ts.getTitles(titles)));
+		 SetUtil.theSet(ts.filterTitles(titles)));
   }
 
-  public void testIllRe() {
+  // forgetting to quote regexp shouldn't cause accidental matches
+  public void testNullRe() {
     TitleSetXpath ts = newSet("[RE:isMatchRe(displayName, Dog)]");
-    assertEmpty(SetUtil.theSet(ts.getTitles(titles)));
+    assertEmpty(SetUtil.theSet(ts.filterTitles(titles)));
+    ts = newSet("[RE:isMatchRe(displayName, '')]");
+    assertEmpty(SetUtil.theSet(ts.filterTitles(titles)));
+  }
+
+  // Illegal RE causes failure when TitleSet is used, not when created
+  public void testIllRe() {
+    TitleSetXpath ts = newSet("[RE:isMatchRe(displayName, 'a[ab')]");
+    try {
+      assertEmpty(SetUtil.theSet(ts.filterTitles(titles)));
+      fail("Illegal regexp, should have thrown");
+    } catch (JXPathException e) {
+    }
   }
 
 }

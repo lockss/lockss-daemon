@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSet.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
+ * $Id: TitleSet.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.*;
 public interface TitleSet extends Comparable {
   /** Return the human-readable name of the set of titles.
    * @return the name */
-   String getName();
+  String getName();
 
   /** Return the titles in the set.
    * @return a collection of {@link TitleConfig} */

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetAllTitles.java,v 1.2 2005-01-11 19:36:51 tlipkis Exp $
+ * $Id: TitleSetAllTitles.java,v 1.3 2005-01-13 08:10:15 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TitleSetAllTitles extends BaseTitleSet {
    * @param allTitles collection of {@link TitleConfig}s to be filtered
    * @return collection of {@link TitleConfig}s that match the predicate
    */
-  Collection getTitles(Collection allTitles) {
+  Collection filterTitles(Collection allTitles) {
     return allTitles;
   }
 
@@ -75,6 +75,6 @@ public class TitleSetAllTitles extends BaseTitleSet {
   }
 
   public String toString() {
-    return "[AllTitles]";
+    return "[TS.AllTitles]";
   }
 }
