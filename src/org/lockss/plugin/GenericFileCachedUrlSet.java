@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.30 2003-04-10 01:24:35 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.31 2003-04-15 01:24:51 aalto Exp $
  */
 
 /*
@@ -114,17 +114,50 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     return flatSet.iterator();
   }
 
-  public Iterator treeIterator() {
+  /**
+   * This returns an iterator for hashing.  For a plain {@link CachedUrlSet},
+   * this is the set itself as a {@link CachedUrl} (regardless of whether or not
+   * it has content), followed by all the nodes below it.  If the spec is a
+   * {@link RangeCachedUrlSetSpec} and the range is non-null (i.e. a poll is
+   * dividing it up to assess damage), the set itself is excluded to avoid
+   * repetition.  If the spec is a {@link SingleNodeCachedUrlSetSpec}, then a
+   * singleton {@link Iterator} with only the set itself is returned.
+   * @return an {@link Iterator}
+   */
+  public Iterator contentHashIterator() {
     contentNodeCount = 0;
     totalNodeSize = 0;
+
+    if (spec instanceof SingleNodeCachedUrlSetSpec) {
+      // return only this node
+      logger.debug3("Returning singleton iterator...");
+      //XXX deprecated
+      //  return new SingletonIterator(makeCachedUrl(getUrl()));
+      ArrayList list = new ArrayList(1);
+      list.add(makeCachedUrl(getUrl()));
+      return list.iterator();
+    }
+
     TreeSet treeSet = new TreeSet(new UrlComparator());
+    boolean insertRootCus = true;
+    if ((spec instanceof RangeCachedUrlSetSpec) &&
+        (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null)) {
+      // don't insert the set itself if we've already subdivided
+      insertRootCus = false;
+    }
+
+    if (insertRootCus) {
+      logger.debug3("Added root cus to contentHashIterator.");
+      treeSet.add(makeCachedUrl(getUrl()));
+    }
 
     String prefix = spec.getUrl();
+    logger.debug3("Adding children to contentHashIterator...");
     try {
       RepositoryNode intNode = repository.getNode(prefix);
       Iterator children = intNode.listNodes(spec, false);
       while (children.hasNext()) {
-        // add all nodes to tree iterator, regardless of content
+        // add all nodes to hash iterator, regardless of content
         RepositoryNode child = (RepositoryNode)children.next();
         CachedUrlSetSpec rSpec =
             new RangeCachedUrlSetSpec(child.getNodeUrl());
@@ -143,11 +176,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         }
         recurseLeafFetch(child, treeSet);
       }
-    }
-    catch (MalformedURLException mue) {
+    } catch (MalformedURLException mue) {
       logger.error("Bad url in spec: " + prefix);
-    }
-    catch (Exception e) {
+    } catch (Exception e) {
       // this shouldn't occur
       logger.error(e.getMessage());
     }
@@ -248,7 +279,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private void calculateNodeCountAndSize() {
     if ((contentNodeCount==0)||(totalNodeSize==0)) {
       // leafIterator calculates these when running
-      treeIterator();
+      contentHashIterator();
     }
   }
 

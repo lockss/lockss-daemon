@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.6 2003-03-27 00:50:23 aalto Exp $
+ * $Id: ArchivalUnit.java,v 1.7 2003-04-15 01:24:51 aalto Exp $
  */
 
 /*
@@ -66,14 +66,11 @@ public interface ArchivalUnit {
 
   /**
    * Create a {@link CachedUrlSet}representing the content in this AU
-   * that matches the url and regexp.
-   * @param url the {@link CachedUrlSet} url
-   * @param lwrBound the lower bound of the match range
-   * @param uprBound the upper bound of the match range
+   * with a specific {@link CachedUrlSetSpec}.
+   * @param spec the {@link CachedUrlSetSpec}
    * @return the created {@link CachedUrlSet}
    */
-  public CachedUrlSet makeCachedUrlSet(String url, String lwrBound,
-                                       String uprBound);
+  public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec);
 
   /**
    * Return the {@link CachedUrlSet} representing the entire contents

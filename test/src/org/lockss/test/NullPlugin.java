@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.28 2003-04-10 21:47:35 tal Exp $
+ * $Id: NullPlugin.java,v 1.29 2003-04-15 01:24:51 aalto Exp $
  */
 
 /*
@@ -234,7 +234,7 @@ public class NullPlugin {
       return null;
     }
 
-    public Iterator treeIterator() {
+    public Iterator contentHashIterator() {
       return null;
     }
 
@@ -291,9 +291,7 @@ public class NullPlugin {
     public void setConfiguration(Configuration config) {
     }
 
-    public org.lockss.plugin.CachedUrlSet makeCachedUrlSet(String url,
-							   String lwrBound,
-                                                           String uprBound) {
+    public org.lockss.plugin.CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec spec) {
       return null;
     }
 
@@ -308,6 +306,7 @@ public class NullPlugin {
     public boolean shouldBeCached(String url) {
       return false;
     }
+
     public String getPluginId() {
       return "null_plugin_id";
     }

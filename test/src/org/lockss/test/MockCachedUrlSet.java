@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.30 2003-04-10 01:24:34 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.31 2003-04-15 01:24:51 aalto Exp $
  */
 
 /*
@@ -60,9 +60,9 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private HashSet cachedUrls = new HashSet();
   private Vector urls = null;
   private Iterator flatIterator = null;
-  private Iterator treeIterator = null;
+  private Iterator hashIterator = null;
   private Collection flatSource = null;
-  private Collection treeSource = null;
+  private Collection hashSource = null;
 
   private Hashtable ucHash = new Hashtable();
   private Hashtable cuHash = new Hashtable();
@@ -123,7 +123,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     if (isLeafIsSet) {
       return isLeaf;
     }
-    return ((flatSetIterator()==null) && (treeIterator()==null));
+    return ((flatSetIterator()==null) && (contentHashIterator()==null));
   }
 
   public void setIsLeaf(boolean isLeaf) {
@@ -150,19 +150,19 @@ public class MockCachedUrlSet implements CachedUrlSet {
     flatSource = col;
   }
 
-  public Iterator treeIterator() {
-    if (treeSource!=null) {
-      return treeSource.iterator();
+  public Iterator contentHashIterator() {
+    if (hashSource!=null) {
+      return hashSource.iterator();
     }
-    return treeIterator;
+    return hashIterator;
   }
 
-  public void setTreeIterator(Iterator it) {
-    treeIterator = it;
+  public void setHashIterator(Iterator it) {
+    hashIterator = it;
   }
 
-  public void setTreeItSource(Collection col) {
-    treeSource = col;
+  public void setHashItSource(Collection col) {
+    hashSource = col;
   }
 
 
