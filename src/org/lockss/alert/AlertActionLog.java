@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionLog.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AlertActionLog.java,v 1.2 2004-07-12 21:09:44 clairegriffin Exp $
  */
 
 /*
@@ -32,14 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.alert;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.plugin.*;
 
 /** An AlertAction that records the Alert by adding it to an AlertLog */
 public class AlertActionLog extends AbstractAlertAction {

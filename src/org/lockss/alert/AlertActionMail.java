@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AlertActionMail.java,v 1.2 2004-07-12 21:09:44 clairegriffin Exp $
  */
 
 /*
@@ -32,20 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.alert;
 
-import java.io.*;
-import java.net.*;
 import java.util.*;
+
 import org.lockss.app.*;
-import org.lockss.util.*;
-import org.lockss.mail.*;
 import org.lockss.daemon.*;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.plugin.*;
+import org.lockss.mail.*;
+import org.lockss.util.*;
 
 /** An AlertAction that records the Alert by emailing it */
 public class AlertActionMail extends AbstractAlertAction {
   private static Logger log = Logger.getLogger("AlertActionMail");
-    
+
   static final String PARAM_EMAIL_FROM = PREFIX + "mail.from";
   static final String PARAM_ENABLED = PREFIX + "mail.enabled";
   static final boolean DEFAULT_ENABLED = false;

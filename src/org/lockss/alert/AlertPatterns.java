@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AlertPatterns.java,v 1.2 2004-07-12 21:09:44 clairegriffin Exp $
  */
 
 /*
@@ -32,11 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.alert;
 
-import java.io.*;
 import java.util.*;
+
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 
 /** AlertPatterns is a collection of useful {@link AlertPattern}
  * implementations, and factories for creating them */
@@ -136,6 +134,14 @@ public class AlertPatterns {
       this.patterns = ListUtil.immutableListOfType(patterns, AlertPattern.class);
     }
 
+    public List getPatterns() {
+      return patterns;
+    }
+
+    public void setPatterns(List patterns) {
+      this.patterns = patterns;
+    }
+
     public boolean isMatch(Alert alert) {
       for (Iterator iter = patterns.iterator(); iter.hasNext(); ) {
         AlertPattern pat = (AlertPattern)iter.next();
@@ -157,6 +163,14 @@ public class AlertPatterns {
       this.patterns = ListUtil.immutableListOfType(patterns, AlertPattern.class);
     }
 
+    public List getPatterns() {
+      return patterns;
+    }
+
+    public void setPatterns(List patterns) {
+      this.patterns = patterns;
+    }
+
     public boolean isMatch(Alert alert) {
       for (Iterator iter = patterns.iterator(); iter.hasNext(); ) {
         AlertPattern pat = (AlertPattern)iter.next();
@@ -176,6 +190,14 @@ public class AlertPatterns {
     AlertPattern pattern;
 
     public Not(AlertPattern pattern) {
+      this.pattern = pattern;
+    }
+
+    public AlertPattern getPattern() {
+      return pattern;
+    }
+
+    public void setPattern(AlertPattern pattern) {
       this.pattern = pattern;
     }
 
@@ -206,6 +228,31 @@ public class AlertPatterns {
       this.relation = relation;
       this.value = value;
     }
+
+    public String getAttribute() {
+      return attribute;
+    }
+
+    public void setAttribute(String attribute) {
+      this.attribute = attribute;
+    }
+
+    public int getRelation() {
+      return relation;
+    }
+
+    public void setRelation(int relation) {
+      this.relation = relation;
+    }
+
+    public Object getValue() {
+      return value;
+    }
+
+    public void setValue(Object value) {
+      this.value = value;
+    }
+
 
     public boolean isMatch(Alert alert) {
       try {

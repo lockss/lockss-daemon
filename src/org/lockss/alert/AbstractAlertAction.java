@@ -1,5 +1,5 @@
 /*
- * $Id: AbstractAlertAction.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AbstractAlertAction.java,v 1.2 2004-07-12 21:09:44 clairegriffin Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.alert;
 
 import java.util.*;
-import org.lockss.daemon.*;
+
 import org.lockss.app.*;
 
 /** AbstractAlertAction has common code for AlertActions */

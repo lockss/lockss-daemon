@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/">
+    <description>Castor generated mapping file</description>
+    <class name="org.lockss.alert.AlertActionMail">
+        <description>Default mapping for class org.lockss.alert.AlertActionMail</description>
+        <map-to xml="alertActionMail"/>
+        <field name="addresses" type="java.lang.String">
+            <bind-xml name="addresses" node="element"/>
+        </field>
+    </class>
+     <class name="org.lockss.alert.AlertFilter">
+        <description>Default mapping for class org.lockss.alert.AlertFilter</description>
+        <map-to xml="alertFilter"/>
+        <field name="action" type="org.lockss.alert.AlertAction">
+            <bind-xml name="action" node="element"/>
+        </field>
+        <field name="pattern" type="org.lockss.alert.AlertPattern">
+            <bind-xml name="pattern" node="element"/>
+        </field>
+    </class>
+    <class name="org.lockss.alert.AlertConfig">
+        <description>Default mapping for class org.lockss.alert.AlertConfig</description>
+        <map-to xml="alertConfig"/>
+        <field name="filters" type="org.lockss.alert.AlertFilter" collection="collection">
+            <bind-xml name="filters" node="element"/>
+        </field>
+    </class>
+</mapping>
