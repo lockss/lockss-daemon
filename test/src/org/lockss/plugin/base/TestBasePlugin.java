@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.1 2004-01-03 06:22:26 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.2 2004-01-04 06:13:22 tlipkis Exp $
  */
 
 /*
@@ -75,13 +75,13 @@ public class TestBasePlugin extends LockssTestCase {
     p.put("org.lockss.title.1.param.1.value", "vol_1");
     p.put("org.lockss.title.1.param.2.key", AUPARAM_YEAR);
     p.put("org.lockss.title.1.param.2.value", "year_1");
-    p.put("org.lockss.title.1.param.2.default", "true");
+    p.put("org.lockss.title.1.param.2.editable", "true");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     assertEquals(ListUtil.list("It's"), mbp.getSupportedTitles());
     TitleConfig tc = mbp.getTitleConfig(new String("It's"));
     assertEquals("It's", tc.getDisplayName());
     ConfigParamAssignment epa1 = new ConfigParamAssignment(PD_YEAR, "year_1");
-    epa1.setDefault(true);
+    epa1.setEditable(true);
     assertEquals(SetUtil.set(epa1, new ConfigParamAssignment(PD_VOL, "vol_1")),
 		 SetUtil.theSet(tc.getParams()));
   }

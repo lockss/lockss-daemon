@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamAssignment.java,v 1.1 2004-01-03 06:14:58 tlipkis Exp $
+ * $Id: ConfigParamAssignment.java,v 1.2 2004-01-04 06:13:23 tlipkis Exp $
  */
 
 /*
@@ -38,12 +38,14 @@ import org.lockss.util.*;
 
 /**
  * A parameter assignment entry from the title database, containing a
- * ConfigParamDescr, a (possibly default) value and some flags.
+ * ConfigParamDescr, a value and an {@link #isEditable()} boolean which
+ * defaults to true if the value is empty, else false.  It can be
+ * explicitly set with {@link #setEditable(boolean)}.
  */
 public class ConfigParamAssignment {
   private ConfigParamDescr paramDescr;
   private String value = null;
-  private boolean isDefault = false;
+  private boolean isEditable = true;
 
   /**
    * Create a ConfigParamAssignment for the supplied param descriptor.
@@ -63,7 +65,7 @@ public class ConfigParamAssignment {
    */
   public ConfigParamAssignment(ConfigParamDescr paramDescr, String value) {
     this(paramDescr);
-    this.value = value;
+    this.setValue(value);
   }
 
   /**
@@ -74,18 +76,18 @@ public class ConfigParamAssignment {
   }
 
   /**
-   * Return true if the value is intended as a default only.
+   * Return true if the value is editable.
    */
-  public boolean isDefault() {
-    return isDefault;
+  public boolean isEditable() {
+    return isEditable;
   }
 
   /**
-   * Set the default flag
-   * @param isDefault the new value for the default flag
+   * Set the editable flag
+   * @param isEditable the new value for the editable flag
    */
-  public void setDefault(boolean isDefault) {
-    this.isDefault = isDefault;
+  public void setEditable(boolean isEditable) {
+    this.isEditable = isEditable;
   }
 
   /**
@@ -97,16 +99,22 @@ public class ConfigParamAssignment {
   }
 
   /**
-   * Set the suggested input field value
+   * Set the input field value, reset the default editability (true iff
+   * value is empty)
    * @param value the new value
    */
   public void setValue(String value) {
     this.value = value;
+    isEditable = StringUtil.isNullString(value);
   }
 
   public String toString() {
     StringBuffer sb = new StringBuffer(40);
-    sb.append("[CPA: ");
+    if (isEditable()) {
+      sb.append("[CPA:E: ");
+    } else {
+      sb.append("[CPA: ");
+    }
     sb.append(paramDescr);
     sb.append(", val:");
     sb.append(value);
@@ -120,7 +128,7 @@ public class ConfigParamAssignment {
     }
     ConfigParamAssignment opa = (ConfigParamAssignment)o;
     return StringUtil.equalStrings(value, opa.getValue()) &&
-      isDefault() == opa.isDefault() &&
+      isEditable() == opa.isEditable() &&
       paramDescr.equals(getParamDescr());
   }
 
@@ -128,7 +136,7 @@ public class ConfigParamAssignment {
     int hash = 0x46600704;
     hash += paramDescr.hashCode();
     hash += value.hashCode();
-    if (isDefault()) {
+    if (isEditable()) {
       hash += 637;
     }
     return hash;

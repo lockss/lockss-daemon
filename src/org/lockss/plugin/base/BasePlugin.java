@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.15 2004-01-03 06:22:26 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.16 2004-01-04 06:13:23 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public abstract class BasePlugin
   // Below org.lockss.title.xxx.param.n.
   static final String TITLE_PARAM_PARAM_KEY = "key";
   static final String TITLE_PARAM_PARAM_VALUE = "value";
-  static final String TITLE_PARAM_PARAM_DEFAULT = "default";
+  static final String TITLE_PARAM_PARAM_EDITABLE = "editable";
 
   static final protected String CM_NAME_KEY = "plugin_name";
   static final protected String CM_VERSION_KEY = "plugin_version";
@@ -132,12 +132,12 @@ public abstract class BasePlugin
    * org.lockss.title.uid.param.1.value=http\://sample.org/
    * org.lockss.title.uid.param.2.key=year
    * org.lockss.title.uid.param.2.value=2003
-   * org.lockss.title.uid.param.2.default=true</pre> where <code>uid</code>
-   * is an identifier that is unique for each title.  Parameters for which
-   * <code>default</code> is true (<i>eg</i>, <code>year</code>) are
-   * expected to be edited by the user to select a related AU.  <br>See
-   * TitleParams (and test/scripts/title-params) for an easy way to create
-   * these property files.
+   * org.lockss.title.uid.param.2.editable=true</pre> where
+   * <code>uid</code> is an identifier that is unique for each title.
+   * Parameters for which <code>editable</code> is true (<i>eg</i>,
+   * <code>year</code>) may be edited by the user to select a related AU.
+   * <br>See TitleParams (and test/scripts/title-params) for an easy way to
+   * create these property files.
    */
   protected void setConfig(Configuration newConfig,
 			   Configuration prevConfig,
@@ -182,8 +182,9 @@ public abstract class BasePlugin
       ConfigParamDescr descr = findParamDescr(key);
       if (descr != null) {
 	ConfigParamAssignment cpa = new ConfigParamAssignment(descr, val);
-	if (oneParam.getBoolean(TITLE_PARAM_PARAM_DEFAULT, false)) {
-	  cpa.setDefault(true);
+	if (oneParam.containsKey(TITLE_PARAM_PARAM_EDITABLE)) {
+	  cpa.setEditable(oneParam.getBoolean(TITLE_PARAM_PARAM_EDITABLE,
+					      cpa.isEditable()));
 	}
 	params.add(cpa);
       } else {

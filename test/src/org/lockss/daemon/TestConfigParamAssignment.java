@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamAssignment.java,v 1.1 2004-01-03 06:14:58 tlipkis Exp $
+ * $Id: TestConfigParamAssignment.java,v 1.2 2004-01-04 06:13:23 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
  */
 
 public class TestConfigParamAssignment extends LockssTestCase {
+  protected static Logger log = Logger.getLogger("TestCPA");
   ConfigParamDescr d1;
   ConfigParamDescr d2;
 
@@ -54,25 +55,44 @@ public class TestConfigParamAssignment extends LockssTestCase {
     ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
     assertEquals(d2, a2.getParamDescr());
     assertEquals("foo", a2.getValue());
-    assertFalse(a2.isDefault());
-    a2.setDefault(true);
-    assertTrue(a2.isDefault());
-    a2.setDefault(false);
-    assertFalse(a2.isDefault());
+    assertFalse(a2.isEditable());
+    a2.setEditable(true);
+    assertTrue(a2.isEditable());
+    a2.setEditable(false);
+    assertFalse(a2.isEditable());
     assertEquals(d1, a1.getParamDescr());
     assertNull(a1.getValue());
     a1.setValue("bar");
     assertEquals("bar", a1.getValue());
-    assertFalse(a1.isDefault());
+    assertFalse(a1.isEditable());
+  }
+
+  public void testIsEditable() {
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, null);
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    ConfigParamAssignment a3 = new ConfigParamAssignment(d1);
+    assertTrue(a1.isEditable());
+    assertTrue(a3.isEditable());
+    assertFalse(a2.isEditable());
+    log.debug("Editable: " + a1);
+    log.debug("Not editable: " + a2);
+    a1.setEditable(false);
+    a2.setEditable(false);
+    assertFalse(a1.isEditable());
+    assertFalse(a2.isEditable());
+    a1.setEditable(true);
+    a2.setEditable(true);
+    assertTrue(a1.isEditable());
+    assertTrue(a2.isEditable());
   }
 
   public void testEquals() {
     ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "foo");
     ConfigParamAssignment a2 = new ConfigParamAssignment(d1, "foo");
     assertEquals(a1, a2);
-    a1.setDefault(true);
+    a1.setEditable(true);
     assertNotEquals(a1, a2);
-    a2.setDefault(true);
+    a2.setEditable(true);
     assertEquals(a1, a2);
 
     assertNotEquals(a1, new ConfigParamAssignment(d1, "bar"));
@@ -85,8 +105,8 @@ public class TestConfigParamAssignment extends LockssTestCase {
     ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "foo");
     ConfigParamAssignment a2 = new ConfigParamAssignment(d1, "foo");
     assertEquals(a1.hashCode(), a2.hashCode());
-    a1.setDefault(true);
-    a2.setDefault(true);
+    a1.setEditable(true);
+    a2.setEditable(true);
     assertEquals(a1.hashCode(), a2.hashCode());
   }
 
