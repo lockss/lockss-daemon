@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.62 2004-01-08 22:42:58 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.63 2004-01-12 06:19:05 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,10 @@ public class PluginManager extends BaseLockssManager {
   static String PARAM_PLUGIN_REGISTRY =
     Configuration.PREFIX + "plugin.registry";
 
+  static String PARAM_REMOVE_STOPPED_AUS =
+    Configuration.PREFIX + "plugin.removeStoppedAus";
+  static boolean DEFAULT_REMOVE_STOPPED_AUS = true;
+
   static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
 
   static final String AU_PARAM_WRAPPER = "reserved.wrapper";
@@ -68,8 +72,8 @@ public class PluginManager extends BaseLockssManager {
 
   // maps plugin key(not id) to plugin
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
-  private Map auMap = new HashMap();
-  private Set inactiveAuIds = new HashSet();
+  private Map auMap = Collections.synchronizedMap(new HashMap());
+  private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
   public PluginManager() {
   }
@@ -193,6 +197,10 @@ public class PluginManager extends BaseLockssManager {
       throw new IllegalArgumentException("Illegal AuId: " + auid);
     }
     return auid.substring(0, pos);
+  }
+
+  public static String pluginNameFromAuId(String auid) {
+    return pluginNameFromKey(pluginIdFromAuId(auid));
   }
 
   public static String configKeyFromAuId(String auid) {
@@ -354,6 +362,38 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
+  /** Stop the AU's activity and remove it, as though it had never been
+   * configured.  Does not affect the AU's current repository contents.
+   * @return true if the AU was removed, false if it didn't exist or is
+   * stale. */
+  public boolean stopAu(ArchivalUnit au) {
+    String auid = au.getAuId();
+    ArchivalUnit mapAu = (ArchivalUnit)auMap.get(auid);
+    if (mapAu == null) {
+      log.warning("stopAu(" + au.getName() + "), wasn't in map");
+      return false;
+    }
+    if (mapAu != au) {
+      log.warning("stopAu(" + au.getName() + "), but map contains " + mapAu);
+      return false;
+    }
+    log.debug("Deactivating AU: " + au.getName());
+    // remove from map first, so no new activity can start (poll messages,
+    // RemoteAPI, etc.)
+    auMap.remove(auid);
+
+    try {
+//     Plugin plugin = au.getPlugin();
+//     plugin.removeAu(au);
+      theDaemon.stopAuManagers(au);
+    } catch (Exception e) {
+      // Shouldn't happen, as stopAuManagers() catches errors in
+      // stopService().  Not clear what to do anyway, if some of the
+      // managers don't stop cleanly.
+    }
+    return true;
+  }
+
   protected void putAuInMap(ArchivalUnit au) {
     auMap.put(au.getAuId(), au);
   }
@@ -455,7 +495,7 @@ public class PluginManager extends BaseLockssManager {
   }
 
   /**
-   * Deactivate an AU
+   * Deactivate an AU in the config file.  Does not actually stop the AU.
    * @param au the ArchivalUnit to be deactivated
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
@@ -467,6 +507,41 @@ public class PluginManager extends BaseLockssManager {
     config.put(AU_PARAM_DISABLED, "true");
     config.put(AU_PARAM_DISPLAY_NAME, au.getName());
     updateAuConfigFile(au, config);
+  }
+
+  /**
+   * Delete an AU
+   * @param au the ArchivalUnit to be deleted
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
+   */
+  public void deleteAu(ArchivalUnit au)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    deleteAuConfiguration(au);
+    if (isRemoveStoppedAus()) {
+      stopAu(au);
+    }
+  }
+
+  /**
+   * Deactivate an AU
+   * @param au the ArchivalUnit to be deactivated
+   * @throws ArchivalUnit.ConfigurationException
+   * @throws IOException
+   */
+  public void deactivateAu(ArchivalUnit au)
+      throws ArchivalUnit.ConfigurationException, IOException {
+    deactivateAuConfiguration(au);
+    if (isRemoveStoppedAus()) {
+      String auid = au.getAuId();
+      stopAu(au);
+      inactiveAuIds.add(auid);
+    }
+  }
+
+  public boolean isRemoveStoppedAus() {
+    return configMgr.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
+				     DEFAULT_REMOVE_STOPPED_AUS);
   }
 
   /**
