@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.7 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockMessageDigest.java,v 1.8 2003-07-23 00:17:19 troberts Exp $
  */
 
 /*
@@ -120,6 +120,10 @@ public class MockMessageDigest extends MessageDigest {
       output[i] = getUpdatedByte();
     }
     return length;
+  }
+
+  public String toString() {
+    return "[MockMessageDigest: "+inputList+"]";
   }
 
   /**
