@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: LockssServlet.java,v 1.2 2003-03-14 01:39:38 tal Exp $
+// $Id: LockssServlet.java,v 1.3 2003-03-15 00:55:33 tal Exp $
 // ========================================================================
 
 /*
@@ -137,8 +137,7 @@ public abstract class LockssServlet extends HttpServlet
 
   // Descriptors for all servlets.
   protected static ServletDescr SERVLET_DAEMON_STATUS =
-    new ServletDescr(DaemonStatus.class, "Daemon Status",
-		     ServletDescr.LARGE_LOGO);
+    new ServletDescr(DaemonStatus.class, "Daemon Status");
 //    protected static ServletDescr SERVLET_ADMIN_HOME =
 //      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
 //    protected static ServletDescr SERVLET_JOURNAL_STATUS =
@@ -294,8 +293,19 @@ public abstract class LockssServlet extends HttpServlet
     return myServletDescr().runsOnClient();
   }
 
+
+  boolean includeServletInNav(ServletDescr d) {
+    return !isThisServlet(d) || includeMeInNav();
+  }
+
   boolean isThisServlet(ServletDescr d) {
     return d == myServletDescr();
+  }
+
+  /** servlets may override this to determine whether they should be
+   * included in nav table */
+  protected boolean includeMeInNav() {
+    return false;
   }
 
   boolean isLargeLogo() {
@@ -429,7 +439,7 @@ public abstract class LockssServlet extends HttpServlet
 	} else {
 	  navTable.cell().attribute("COLSPAN=\"3\"");
 	}
-	navTable.add(conditionalSrvLink(d, d.heading, !isThisServlet(d)));
+	navTable.add(conditionalSrvLink(d, d.heading, includeServletInNav(d)));
       }
     }
     navTable.newRow();
