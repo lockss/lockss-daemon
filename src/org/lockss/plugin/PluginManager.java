@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.103 2004-09-02 23:23:12 smorabito Exp $
+ * $Id: PluginManager.java,v 1.104 2004-09-07 07:27:24 tlipkis Exp $
  */
 
 /*
@@ -952,6 +952,8 @@ public class PluginManager
 	    best = cu;
 	  }
 	} catch (MalformedURLException ignore) {
+	  // ignored
+	} catch (PluginBehaviorException ignore) {
 	  // ignored
 	}
       }

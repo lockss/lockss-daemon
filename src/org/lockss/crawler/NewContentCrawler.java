@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.32 2004-09-01 02:20:25 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.33 2004-09-07 07:27:26 tlipkis Exp $
  */
 
 /*
@@ -557,6 +557,8 @@ public class NewContentCrawler extends CrawlerImpl {
 	  extractedUrls.add(url);
 	}
       } catch (MalformedURLException e) {
+	logger.warning("Normalizing", e);
+      } catch (PluginBehaviorException e) {
 	logger.warning("Normalizing", e);
       }
     }
