@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.31 2004-04-14 00:39:39 eaalto Exp $
+ * $Id: ActivityRegulator.java,v 1.32 2004-04-14 23:46:44 eaalto Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.util.*;
 import org.lockss.app.*;
 
 /**
- * The ActivityAllower is queried by the various managers when they wish to
+ * The ActivityRegulator is queried by the various managers when they wish to
  * start some activity on an {@link ArchivalUnit} or {@link CachedUrlSet}.
  * It keeps track of which activities are currently running, and decides
  * whether or not new activities can be permitted to start.  If so, it adjusts
@@ -102,10 +102,11 @@ public class ActivityRegulator
 
   private static Logger logger = Logger.getLogger("ActivityRegulator");
 
-//XXX set properly
+//XXX are these still needed?
   static final long STANDARD_LOCK_LENGTH = Constants.HOUR;
   static final long LOCK_EXTENSION_LENGTH = Constants.HOUR;
 
+//XXX should probably change this to a List, and eliminate the 'get()' calls
   HashMap cusMap = new HashMap();
   ArchivalUnit au;
   Lock curAuActivityLock = null;
@@ -270,27 +271,13 @@ public class ActivityRegulator
           expiredKeys.add(entryCus);
           continue;
         }
-        // determine the relationship
-        String relationStr = "";
-        switch (relation) {
-          case CachedUrlSet.ABOVE:
-            relationStr = "Parent";
-            break;
-          case CachedUrlSet.BELOW:
-            relationStr = "Child";
-            break;
-          case CachedUrlSet.SAME_LEVEL_OVERLAP:
-            relationStr = "Overlapping";
-            break;
-          case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
-            relationStr = "Non-overlapping";
-        }
         // see if it conflicts
         if (!isAllowedOnCus(newActivity, value.activity, relation)) {
           if (logger.isDebug()) {
-            logger.debug(relationStr + " CUS busy with " +
+            logger.debug(relationToString(relation) + " CUS busy with " +
                          activityCodeToString(value.activity) +
-                         ". Couldn't start " + activityCodeToString(newActivity) +
+                         ". Couldn't start " +
+                         activityCodeToString(newActivity) +
                          " on CUS '" + cus + "'");
           }
           // found conflicting activity
@@ -298,7 +285,7 @@ public class ActivityRegulator
           break;
         } else {
           if (logger.isDebug2()) {
-            logger.debug2(relationStr + " CUS activity " +
+            logger.debug2(relationToString(relation) + " CUS activity " +
                           activityCodeToString(value.activity) +
                           " doesn't interfere with " +
                           activityCodeToString(newActivity));
@@ -338,7 +325,10 @@ public class ActivityRegulator
         // only other CUS activity is allowed while CUS activity is going on
         return (isCusActivity(newActivity));
       case NO_ACTIVITY:
+        return true;
       default:
+        logger.debug("Unexpected AU activity: "+curActivity+", "+
+                     activityCodeToString(curActivity));
         return true;
     }
   }
@@ -365,7 +355,10 @@ public class ActivityRegulator
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL));
           case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
+            return true;
           default:
+            logger.debug("Unexpected relation: "+relation+", "+
+                         relationToString(relation));
             return true;
         }
       case STANDARD_CONTENT_POLL:
@@ -387,7 +380,10 @@ public class ActivityRegulator
                     (newActivity==REPAIR_CRAWL) ||
                     (newActivity==SINGLE_NODE_CONTENT_POLL));
           case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
+            return true;
           default:
+            logger.debug("Unexpected relation: "+relation+", "+
+                         relationToString(relation));
             return true;
         }
       case SINGLE_NODE_CONTENT_POLL:
@@ -403,12 +399,18 @@ public class ActivityRegulator
             return ((newActivity==BACKGROUND_CRAWL) ||
                     (newActivity==REPAIR_CRAWL));
           case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
+            return true;
           default:
+            logger.debug("Unexpected relation: "+relation+", "+
+                         relationToString(relation));
             return true;
 
         }
       case NO_ACTIVITY:
+        return true;
       default:
+        logger.debug("Unexpected CUS activity: "+curActivity+", "+
+                     activityCodeToString(curActivity));
         return true;
     }
   }
@@ -476,6 +478,8 @@ public class ActivityRegulator
     int oldAuActivity = auLock.activity;
 
     setAuActivity(CUS_ACTIVITY, expireIn);
+    //XXX this check probably isn't needed, and is accomplished in
+    //'getCusActivityLock()'
     Lock cusLock = (Lock)cusMap.get(cus);
     if (cusLock!=null) {
       if (logger.isDebug()) {
@@ -487,14 +491,17 @@ public class ActivityRegulator
       return null;
     }
 
-    if (logger.isDebug()) {
-      logger.debug("Changing lock on AU '" + au.getName() + "'from " +
-                   activityCodeToString(oldAuActivity) + " to CUS activity " +
-                   activityCodeToString(newActivity) +
-                   " on CUS '" + cus.getUrl() + "' with expiration in " +
-                   StringUtil.timeIntervalToString(expireIn));
+    cusLock = getCusActivityLock(cus, newActivity, expireIn);
+    if (cusLock!=null) {
+      if (logger.isDebug()) {
+        logger.debug("Changing lock on AU '" + au.getName() + "'from " +
+                     activityCodeToString(oldAuActivity) + " to CUS activity " +
+                     activityCodeToString(newActivity) +
+                     " on CUS '" + cus.getUrl() + "' with expiration in " +
+                     StringUtil.timeIntervalToString(expireIn));
+      }
     }
-    return getCusActivityLock(cus, newActivity, expireIn);
+    return cusLock;
   }
 
   /**
@@ -534,9 +541,9 @@ public class ActivityRegulator
       CachedUrlSet cus = request.cus;
       int newActivity = request.activity;
       long expireIn = request.expireIn;
-      maxExpire = Math.max(maxExpire, expireIn);
       Lock lock = getCusActivityLock(cus, newActivity, expireIn);
       if (lock!=null) {
+        maxExpire = Math.max(maxExpire, expireIn);
         lockList.add(lock);
       }
     }
@@ -550,6 +557,7 @@ public class ActivityRegulator
    * @param cus CachedUrlSet
    * @return int the activity
    */
+  //XXX this is currently only used in tests
   int getCusActivity(CachedUrlSet cus) {
     Lock entry = (Lock)cusMap.get(cus);
     if (entry==null)  {
@@ -575,6 +583,8 @@ public class ActivityRegulator
    * @return Lock the newly created lock
    */
   Lock setCusActivity(CachedUrlSet cus, int activity, long expireIn) {
+    //XXX this can probably be removed, since any locks will already have
+    // been expired
     Lock cusLock = (CusLock)cusMap.get(cus);
     if (cusLock!=null) {
       // expire old lock
@@ -584,8 +594,11 @@ public class ActivityRegulator
     // set CUS state
     cusLock = new CusLock(cus, activity, expireIn);
     cusMap.put(cus, cusLock);
-    // set AU state to indicate CUS activity (resets expiration time)
-    setAuActivity(CUS_ACTIVITY, expireIn);
+    if ((curAuActivityLock==null) ||
+        (curAuActivityLock.expiration.before(Deadline.in(expireIn)))) {
+      // set AU state to indicate CUS activity (sets expiration time to latest)
+      setAuActivity(CUS_ACTIVITY, expireIn);
+    }
     if (logger.isDebug()) {
       logger.debug("Started " + activityCodeToString(activity) + " on CUS '" +
                    cus.getUrl() + "'");
@@ -616,6 +629,23 @@ public class ActivityRegulator
       case NO_ACTIVITY:
       default:
         return "No Activity";
+    }
+  }
+
+  static String relationToString(int relation) {
+    switch (relation) {
+      case CachedUrlSet.ABOVE:
+        return "Parent";
+      case CachedUrlSet.BELOW:
+        return "Child";
+      case CachedUrlSet.SAME_LEVEL_OVERLAP:
+        return "Overlapping";
+      case CachedUrlSet.SAME_LEVEL_NO_OVERLAP:
+        return "Non-overlapping";
+      case CachedUrlSet.NO_RELATION:
+        return "No relation";
+      default:
+        return "Unknown";
     }
   }
 
