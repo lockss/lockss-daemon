@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.25 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: SystemMetrics.java,v 1.26 2004-10-08 06:56:51 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.util.*;
 import org.lockss.hasher.*;
+import org.lockss.plugin.*;
 import org.lockss.protocol.LcapMessage;
 
 /**
@@ -48,6 +49,13 @@ import org.lockss.protocol.LcapMessage;
 public class SystemMetrics
   extends BaseLockssDaemonManager implements ConfigurableManager {
   static final String PREFIX = Configuration.PREFIX + "metrics.";
+
+  /**
+   * The interval at which memory usage should be logged, or 0 to disable
+   */
+  public static final String PARAM_MEM_LOG_INTERVAL =
+      PREFIX + "logMem.interval";
+  static final long DEFAULT_MEM_LOG_INTERVAL = 0;
 
   /**
    * Configuration parameter name for duration, in ms, for which the hash test
@@ -83,11 +91,16 @@ public class SystemMetrics
   Hashtable estimateTable = new Hashtable();
   MessageDigest defaultDigest = LcapMessage.getDefaultHasher();
   HashService hashService;
+  private PluginManager pluginMgr;
   int defaultSpeed;
+  private TimerQueue.Request req;
+  private long memLogInterval = DEFAULT_MEM_LOG_INTERVAL;
 
   public void startService() {
     super.startService();
     hashService = theDaemon.getHashService();
+    pluginMgr = theDaemon.getPluginManager();
+    resetConfig();
   }
 
   public void setConfig(Configuration newConfig,
@@ -95,6 +108,18 @@ public class SystemMetrics
 			Configuration.Differences changedKeys) {
     defaultSpeed = newConfig.getInt(PARAM_DEFAULT_HASH_SPEED,
                                     DEFAULT_DEFAULT_HASH_SPEED);
+    if (changedKeys.contains(PARAM_MEM_LOG_INTERVAL)) {
+      memLogInterval = newConfig.getTimeInterval(PARAM_MEM_LOG_INTERVAL,
+						 DEFAULT_MEM_LOG_INTERVAL);
+      schedMemLog();
+    }
+  }
+
+  public synchronized void stopService() {
+    if (req != null) {
+      TimerQueue.cancel(req);
+    }
+    super.stopService();
   }
 
   /**
@@ -214,5 +239,31 @@ public class SystemMetrics
     public NoHashEstimateAvailableException() {
       super();
     }
+  }
+
+  void schedMemLog() {
+    if (req != null) {
+      TimerQueue.cancel(req);
+    }
+    if (memLogInterval > 0) {
+      req = TimerQueue.schedule(Deadline.in(memLogInterval),
+				memLogCallback, null);
+    }
+  }
+
+  // Memory logger TimerQueue callback.
+  private TimerQueue.Callback memLogCallback =
+    new TimerQueue.Callback() {
+      public void timerExpired(Object cookie) {
+	doMemLog();
+      }};
+
+  // Log the current memory usage
+  private void doMemLog() {
+    Runtime rt = Runtime.getRuntime();
+    logger.info("Memory Total: " + rt.totalMemory() +
+		", Free: " + rt.freeMemory() + ", " +
+		pluginMgr.getAllAus().size() + " AUs");
+    schedMemLog();
   }
 }
