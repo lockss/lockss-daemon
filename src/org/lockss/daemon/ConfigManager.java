@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.5 2003-07-23 06:38:48 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.6 2003-07-27 01:40:57 tlipkis Exp $
  */
 
 /*
@@ -488,6 +488,21 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
+  /** Return the contents of the local AU config file.
+   * @return the Configuration from the AU config file, or an empty config
+   * if no config file found
+   */
+  public Configuration readAuConfigFile() {
+    Configuration auConfig;
+    try {
+      auConfig = readCacheConfigFile(CONFIG_FILE_AU_CONFIG);
+    } catch (IOException e) {
+      log.warning("Couldn't read AU config file", e);
+      auConfig = newConfiguration();
+    }
+    return auConfig;
+  }
+
   /** Write the named local cache config file into the previously determined
    * cache config directory.
    * @param props properties to write
@@ -547,12 +562,9 @@ public class ConfigManager implements LockssManager {
     } catch (FileNotFoundException e) {
       fileConfig = newConfiguration();
     }
+    // first remove all existing values for the AU
     if (auPropKey != null) {
-      Configuration auSubtree = fileConfig.getConfigTree(auPropKey);
-      for (Iterator iter = auSubtree.nodeIterator(); iter.hasNext(); ) {
-	String key = (String)iter.next();
-	fileConfig.remove(auPropKey + "." + key);
-      }
+      fileConfig.removeConfigTree(auPropKey);
     }
     for (Iterator iter = auConfig.keySet().iterator(); iter.hasNext();) {
       String key = (String)iter.next();
