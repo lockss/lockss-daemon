@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.26 2003-03-11 18:56:14 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.27 2003-03-11 19:53:06 aalto Exp $
  */
 
 /*
@@ -104,12 +104,17 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
   }
 
-  public void testDoubleDotUrlHandling() throws Exception {
+  public void testDotUrlHandling() throws Exception {
     //testing correction of nodes with bad '..'-including urls,
     //filtering the first '..' but resolving the second
     RepositoryNode node = repo.createNewNode(
         "http://www.example.com/branch/test/../test2");
     assertEquals("http://www.example.com/branch/test2", node.getNodeUrl());
+
+    //remove single '.' references
+    node = repo.createNewNode(
+        "http://www.example.com/branch/./test/");
+    assertEquals("http://www.example.com/branch/test", node.getNodeUrl());
 
     try {
       node = repo.createNewNode("http://www.example.com/..");
