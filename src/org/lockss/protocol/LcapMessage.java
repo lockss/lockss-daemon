@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.52.2.2 2004-10-29 03:38:19 dshr Exp $
+ * $Id: LcapMessage.java,v 1.52.2.3 2004-10-29 19:43:06 dshr Exp $
  */
 
 /*
@@ -666,7 +666,14 @@ public class LcapMessage {
 
   public String getKey() {
     if (m_key == null) {
-      m_key = V1Poll.challengeToKey(m_challenge);
+      switch (m_pollVersion) {
+      case 1:
+	m_key = V1Poll.challengeToKey(m_challenge);
+	break;
+      case 3:
+	m_key = V3Poll.challengeToKey(m_challenge);
+	break;
+      }
     }
     return m_key;
   }

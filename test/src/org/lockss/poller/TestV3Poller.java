@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.13 2004-10-29 03:38:20 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.14 2004-10-29 19:43:07 dshr Exp $
  */
 
 /*
@@ -466,8 +466,8 @@ public class TestV3Poller extends LockssTestCase {
     do {
       TimeBase.step(100);
     } while ((newState = poll.getPollState()) == oldState);
-    log.debug("Change from " + V3Poller.getPollStateName(oldState) +
-	      " to " + V3Poller.getPollStateName(newState) +
+    log.debug("Change from " + poll.getPollStateName(oldState) +
+	      " to " + poll.getPollStateName(newState) +
 	      " after " + (TimeBase.nowMs() - startTime) + "ms");
   }
 

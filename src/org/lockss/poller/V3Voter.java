@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.13 2004-10-19 23:00:50 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.14 2004-10-29 19:43:06 dshr Exp $
  */
 
 /*
@@ -312,7 +312,7 @@ public class V3Voter extends V3Poll {
     return m_state;
   }
 
-  public static String getPollStateName(int s) {
+  public String getPollStateName(int s) {
     return stateName[s];
   }
 

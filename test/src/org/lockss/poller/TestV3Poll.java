@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.13 2004-10-29 03:38:20 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.14 2004-10-29 19:43:06 dshr Exp $
  */
 
 /*
@@ -86,8 +86,6 @@ public class TestV3Poll extends LockssTestCase {
     testau.setPlugin(new MyMockPlugin());
 
     initTestPeerIDs();
-    initTestMsg();
-    initTestPolls();
   }
 
   /** tearDown method for test case
@@ -109,11 +107,62 @@ public class TestV3Poll extends LockssTestCase {
 
   // Tests
 
-  public void testNormalPollWithOneVote() {
+  public void testPollDuration() {
+    try {
+      initTestPoll();
+    } catch (Exception ex) {
+      fail("initTestPoll threw " + ex.toString());
+    }
+    //  The two halves of the poll have been created but
+    //  no time has elapsed
     assertTrue(voter instanceof V3Voter);
+    assertEquals("Poll " + voter + " should be in Initializing",
+		 V3Voter.STATE_INITIALIZING,
+		 voter.getPollState());
     assertTrue(poller instanceof V3Poller);
+    assertEquals("Poll " + poller + " should be in Initializing",
+		 V3Poller.STATE_INITIALIZING,
+		 poller.getPollState());
+    long duration = poller.getDeadline().getRemainingTime();
+    // XXX there's a problem becasue both poller and voter have the same key
+    String key = poller.getKey();
+    final int numSteps = 10;
+    long step = (duration - 1) / numSteps;
+    assertTrue("Duration " + duration + " means step " + step, step > 1);
+    //  XXX should test state of voter too
+    assertEquals("Poll " + poller + " should be in Initializing",
+		 V3Poller.STATE_INITIALIZING,
+		 poller.getPollState());
+    for (int i = 0; i < numSteps; i++) {
+      assertTrue("Poll " + poller + " should be active",
+		 pollmanager.isPollActive(key));
+      assertFalse("Poll " + poller + " should not be closed",
+		  pollmanager.isPollClosed(key));
+      assertFalse("Poll " + poller + " should not be suspended",
+		  pollmanager.isPollSuspended(key));
+      TimeBase.step(step);
+    }
+    assertTrue("Poll " + poller + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poller + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poller + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(step);
+    assertFalse("Poll " + poller + " should not be active",
+		pollmanager.isPollActive(key));
+    assertTrue("Poll " + poller + " should be closed",
+	       pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poller + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    PollTally tally = poller.getVoteTally();
+    assertNotNull(tally);
+    List votes = tally.getPollVotes();
+    assertTrue(votes.isEmpty());
   }
 
+  public void dontTestNormalPollWithOneVote() {
+  }
   //  Support methods
 
   private void initRequiredServices() {
@@ -181,13 +230,7 @@ public class TestV3Poll extends LockssTestCase {
 
   }
 
-  private void initTestMsg() throws Exception {
-
-    //  XXX not clear we need this
-
-  }
-
-  private void initTestPolls() throws Exception {
+  private void initTestPoll() throws Exception {
     BasePoll p;
     PollFactory ppf = pollmanager.getPollFactory(3);
     assertNotNull("PollFactory should not be null", ppf);
@@ -213,10 +256,10 @@ public class TestV3Poll extends LockssTestCase {
 			     null,
 			     testID1,
 			     LcapMessage.getDefaultHashAlgorithm());
-    log.debug("initTestPolls: V3 voter returns " + p);
+    log.debug("initTestPoll: V3 voter returns " + p);
     assertTrue(p instanceof V3Voter);
     voter = (V3Voter) p;
-    log.debug3("initTestPolls: voter " + p.toString());
+    log.debug3("initTestPoll: voter " + p.toString());
     // Make the poller
     theDaemon.setStreamRouterManager(pollerRouter);
     p = pollmanager.makePoll(pollSpec,
@@ -225,10 +268,22 @@ public class TestV3Poll extends LockssTestCase {
 			     null,
 			     testID,
 			     LcapMessage.getDefaultHashAlgorithm());
-    log.debug("initTestPolls: V3 poller returns " + p);
+    log.debug("initTestPoll: V3 poller returns " + p);
     assertTrue(p instanceof V3Poller);
     poller = (V3Poller) p;
-    log.debug3("initTestPolls: poller " + p.toString());
+    log.debug3("initTestPoll: poller " + p.toString());
+  }
+
+  private void stepTimeUntilPollStateChanges(V3Poll poll) {
+    int oldState = poll.getPollState();
+    int newState = -1;
+    long startTime = TimeBase.nowMs();
+    do {
+      TimeBase.step(100);
+    } while ((newState = poll.getPollState()) == oldState);
+    log.debug("Change from " + poll.getPollStateName(oldState) +
+	      " to " + poll.getPollStateName(newState) +
+	      " after " + (TimeBase.nowMs() - startTime) + "ms");
   }
 
   public class MyMockPlugin extends MockPlugin {

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1.2.12 2004-10-29 03:38:19 dshr Exp $
+ * $Id: V3Poller.java,v 1.1.2.13 2004-10-29 19:43:06 dshr Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class V3Poller extends V3Poll {
     m_state = state;
   }
 
-  public static String getPollStateName(int state) {
+  public String getPollStateName(int state) {
     if (state < 0 || state >= stateName.length) {
       return "bad state";
     } else {

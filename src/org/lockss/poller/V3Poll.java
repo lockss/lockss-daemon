@@ -1,5 +1,5 @@
 /*
-* $Id: V3Poll.java,v 1.1.2.3 2004-10-07 18:22:30 dshr Exp $
+* $Id: V3Poll.java,v 1.1.2.4 2004-10-29 19:43:06 dshr Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.mortbay.util.*;  // For B64 encoding stuff?
 
 /**
  * <p>V3 poll - there is only one type of poll in V3; we call it a content
- * poll but it serves the purpose of bothcontent and name polls in V1.
+ * poll but it serves the purpose of both content and name polls in V1.
  * However,  in V3 the behavior and results of the peer that called
  * the poll (poller) and the the peers that vote in it are very different.
  * So this generic V3Poll class has two subclasses: V3Poller and V3Voter.</p>
@@ -132,7 +132,8 @@ public abstract class V3Poll extends BasePoll {
     return String.valueOf(B64Code.encode(challenge));
   }
 
-    public abstract int getPollState();
+  public abstract int getPollState();
+  public abstract String getPollStateName(int state);
 
   /**
    * Return a hasher preinited with the challenge and verifier
