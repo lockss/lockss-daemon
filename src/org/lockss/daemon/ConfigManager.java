@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.21 2004-05-12 17:45:43 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.22 2004-05-14 08:40:44 tlipkis Exp $
  */
 
 /*
@@ -532,6 +532,11 @@ public class ConfigManager implements LockssManager {
       }
     }
     cacheConfigInited = true;
+  }
+
+  /** Return a File for the named cache config file */
+  public File getCacheConfigFile(String cacheConfigFileName) {
+    return new File(ConfigManager.cacheConfigDir, cacheConfigFileName);
   }
 
   List loadCacheConfigInto(Configuration config) {
