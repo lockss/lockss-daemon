@@ -1,8 +1,6 @@
-package org.lockss.plugin.highwire;
-
-
-import junit.framework.TestCase;
-import org.lockss.daemon.CachedUrl;
+/*
+ * $Id: TestHighWireCachedUrl.java,v 1.2 2002-08-13 02:20:48 tal Exp $
+ */
 
 /*
 
@@ -32,6 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+package org.lockss.plugin.highwire;
+
+import junit.framework.TestCase;
+import org.lockss.daemon.*;
+
 /**
  * This is the test class for org.lockss.crawler.Crawler
  *
@@ -47,14 +50,14 @@ public class TestHighWireCachedUrl extends TestCase{
 
   public void testShouldCacheRootPage(){
     HighWirePlugin hwPlug = new HighWirePlugin("http://shadow1.stanford.edu", 322);
-    CachedUrl cu = hwPlug.makeCachedUrl("http://shadow1.stanford.edu/lockss-volume322.shtml");
-    assertTrue(cu.shouldBeCached());
+    UrlCacher uc = hwPlug.makeUrlCacher("http://shadow1.stanford.edu/lockss-volume322.shtml");
+    assertTrue(uc.shouldBeCached());
   }
   
   public void testShouldNotCachePageFromOtherSite(){
     HighWirePlugin hwPlug = new HighWirePlugin("http://shadow1.stanford.edu", 322);
-    CachedUrl cu = hwPlug.makeCachedUrl("http://shadow2.stanford.edu/lockss-volume322.shtml");
-    assertTrue(!cu.shouldBeCached());
+    UrlCacher uc = hwPlug.makeUrlCacher("http://shadow2.stanford.edu/lockss-volume322.shtml");
+    assertTrue(!uc.shouldBeCached());
   }
   
 

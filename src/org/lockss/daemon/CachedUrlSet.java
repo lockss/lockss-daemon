@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.2 2002-07-09 13:40:13 dshr Exp $
+ * $Id: CachedUrlSet.java,v 1.3 2002-08-13 02:20:48 tal Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public interface CachedUrlSet {
      */
     public long duration(long elapsed, boolean success);
 
-    // Methods used by the crawler
+    // Methods used by readers
 
     /**
      * Create a <code>CachedUrl</code> object within the set.
@@ -137,4 +137,13 @@ public interface CachedUrlSet {
      * @return a <code>CachedUrl</code> object representing the url.
      */
     public CachedUrl makeCachedUrl(String url);
+
+    // Methods used by writers
+
+    /**
+     * Create a <code>UrlCacher</code> object within the set.
+     * @param url the url of interest
+     * @return a <code>UrlCacher</code> object representing the url.
+     */
+    public UrlCacher makeUrlCacher(String url);
 }

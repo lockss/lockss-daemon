@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.4 2002-07-09 13:40:13 dshr Exp $
+ * $Id: CachedUrl.java,v 1.5 2002-08-13 02:20:48 tal Exp $
  */
 
 /*
@@ -37,15 +37,21 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * This interface is used by the crawler and by the proxy.  It
- * represents the contents and meta-information of a single cached
- * url.  It is implemented by the plug-in,  which provides a static
- * method taking a String url and returning an object implementing
- * the CachedUrl interface.
+ * <code>CachedUrl</code> is used to access the contents and
+ * meta-information of a single cached url.  The contents and
+ * meta-information represented by any particular <code>CachedUrl</code>
+ * instance are immutable, thus no locking or synchronization is required
+ * by readers.  Any new content obtained for the url (<i>eg</i>, by a new
+ * crawl or a repair) will be visible only via a newly obtained
+ * <code>CachedUrl</code>.
+ *
+ * <code>CachedUrl</code> is implemented by the plug-in, which provides a
+ * static method taking a String url and returning an object implementing
+ * the <code>CachedUrl</code> interface.
  *
  * @author  David S. H. Rosenthal
- * @version 0.0
- */
+ * @see UrlCacher
+ * @version 0.0 */
 public interface CachedUrl {
     /**
      * Return the url being represented
@@ -59,15 +65,8 @@ public interface CachedUrl {
      *         exists in the cache, <code>false</code> otherwise.
      */
     public boolean exists();
-    /**
-     * Return <code>true</code> if the underlying url is one that
-     * the plug-in believes should be preserved.
-     * @return <code>true</code> if the underlying url is one that
-     *         the plug-in believes should be preserved.
-     */
-    public boolean shouldBeCached();
 
-    // Read interface - used by the proxy to access the cache.
+    // Read interface - used by the proxy and hasher.
 
     /**
      * Get an object from which the content of the url can be read
@@ -83,37 +82,4 @@ public interface CachedUrl {
      *         empty <code>Properties</code> object is returned.
      */
     public Properties getProperties();
-
-    // Write interface - used by the crawler to write into the cache.
-
-    /**
-     * Store the content from an input stream with associated
-     * properties in the <code>CachedUrl</code> object.
-     * @param input   an <code>InputStream</code> object from which the
-     *                content can be read.
-     * @param headers a <code>Properties</code> object containing the
-     *                relevant HTTP headers.
-     * @exception java.io.IOException on many possible I/O problems.
-     */
-    public void storeContent(InputStream input,
-			     Properties headers) throws IOException;
-
-    // Un-cached read interface, accessing the underlying object,  used
-    // by the crawler to fetch content.  It is implemented by the plug-in
-    // to allow it to provide appropriate credentials.
-
-    /**
-     * Return an <code>InputStream</code> object which accesses the
-     * object being cached rather than the object in the cache.
-     * @return an <code>InputStream</code> object from which the contents of
-     *         the original object being cached can be read.
-     */
-    public InputStream getUncachedInputStream();
-    /**
-     * Return a <code>Properties</code> object containing the headers of
-     * the object being cached rather than the object in the cache.
-     * @return a <code>Properties</code> object containing the headers of
-     *         the original object being cached.
-     */
-    public Properties getUncachedProperties();
 }

@@ -12,6 +12,7 @@ import java.util.Properties;
 import java.net.URL;
 import java.net.MalformedURLException;
 import org.lockss.daemon.CachedUrl;
+import org.lockss.daemon.UrlCacher;
 import org.lockss.daemon.CachedUrlSet;
 import org.lockss.daemon.CachedUrlSetSpec;
 import org.lockss.util.StringUtils;
@@ -47,7 +48,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 /**
- * This is a mock version of <code>CachedUrl</code> used for testing
+ * The crawler.
  *
  * @author  Thomas S. Robertson
  * @version 0.0
@@ -92,8 +93,8 @@ public class Crawler{
     List list = createInitialList(rootUrls);
     while (!list.isEmpty()){
       String url = (String)list.get(0);
-      CachedUrl cu = rootUrls.makeCachedUrl(url);
-      doOneCrawlCycle(cu, list);
+      UrlCacher uc = rootUrls.makeUrlCacher(url);
+      doOneCrawlCycle(uc, list);
     }
   }
 
@@ -110,28 +111,28 @@ public class Crawler{
    * Do one cycle of the crawl: check if cu should be downloaded, download it,
    * add the urls in it to the list
    *
-   * @param cu CachedUrl representing the url to be crawled
+   * @param uc UrlCacher representing the url to be crawled
    * @param list List object to add new urls to
    */
-  protected static void doOneCrawlCycle(CachedUrl cu, List list)
+  protected static void doOneCrawlCycle(UrlCacher uc, List list)
   {
-    if (cu.shouldBeCached()){
-      if (!cu.exists()){
+    if (uc.shouldBeCached()){
+      if (!uc.exists()){
 	try{
 	  pause(); //XXX should get from plugin
-	  InputStream is = cu.getUncachedInputStream();
-	  Properties props = cu.getUncachedProperties();
-	  logger.info("caching "+cu);
-	  cu.storeContent(is, props);
+	  InputStream is = uc.getUncachedInputStream();
+	  Properties props = uc.getUncachedProperties();
+	  logger.info("caching "+uc);
+	  uc.storeContent(is, props);
 	}catch (Exception e){
 	  e.printStackTrace();
 	  //FIXME handle errors
-	  //make sure cu doesn't exist
+	  //make sure uc doesn't exist
 	  //if (premanent error)
 	  //  remove from list
 	}
 	try{
-	  addUrlsToList(cu, list);
+	  addUrlsToList(uc, list);
 	}catch (IOException ioe){
 	  ioe.printStackTrace();
 	  //XXX handle this (probably not too major)
@@ -139,10 +140,10 @@ public class Crawler{
 	}
       }
       else{
-	logger.info(cu+" exists, not fetching");
+	logger.info(uc+" exists, not fetching");
       }
     }
-    list.remove(cu.toString());
+    list.remove(uc.toString());
   }
   /**
    * Method to generate a List of urls to start a crawl at from a 
@@ -175,9 +176,13 @@ public class Crawler{
    *@param cu object representing a html file in the local file system
    *@param list list to which all the urs in cu should be added
    */
-  protected static void addUrlsToList(CachedUrl cu, List list)
-  throws IOException{
-    if (cu != null  && shouldExtractLinksFromCachedUrl(cu)){
+  protected static void addUrlsToList(UrlCacher uc, List list)
+      throws IOException{
+    if (uc == null) {
+      return;
+    }
+    CachedUrl cu = uc.getCachedUrl();
+    if (cu != null && shouldExtractLinksFromCachedUrl(cu)){
       String cuStr = cu.toString();
       if (cuStr == null){
 	return;

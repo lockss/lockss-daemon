@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.2 2002-08-08 23:42:41 troberts Exp $
+ * $Id: HighWirePlugin.java,v 1.3 2002-08-13 02:20:48 tal Exp $
  */
 
 /*
@@ -49,10 +49,7 @@ import java.util.Enumeration;
 import java.security.MessageDigest;
 import gnu.regexp.RE;
 import gnu.regexp.REException;
-import org.lockss.daemon.CachedUrl;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.daemon.CachedUrlSetHasher;
-import org.lockss.daemon.CachedUrlSetSpec;
+import org.lockss.daemon.*;
 import org.lockss.crawler.Crawler;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -152,8 +149,8 @@ public class HighWirePlugin implements CachedUrlSet{
   }
 
   public boolean memberOfSet(String url){
-    CachedUrl cu = new HighWireCachedUrl(url, this);
-    return cu.shouldBeCached();
+    UrlCacher uc = new HighWireCachedUrl(url, this);
+    return uc.shouldBeCached();
   }
 
 
@@ -186,6 +183,10 @@ public class HighWirePlugin implements CachedUrlSet{
   // Methods used by the crawler
 
   public CachedUrl makeCachedUrl(String url){
+    return new HighWireCachedUrl(url, this);
+  }
+
+  public UrlCacher makeUrlCacher(String url){
     return new HighWireCachedUrl(url, this);
   }
 

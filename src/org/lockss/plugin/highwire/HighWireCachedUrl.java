@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCachedUrl.java,v 1.2 2002-08-08 23:42:41 troberts Exp $
+ * $Id: HighWireCachedUrl.java,v 1.3 2002-08-13 02:20:48 tal Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import java.net.URLConnection;
 import java.util.Enumeration;
 import java.util.Properties;
 import org.lockss.daemon.CachedUrl;
+import org.lockss.daemon.UrlCacher;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 
@@ -54,7 +55,7 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
 
-public class HighWireCachedUrl implements CachedUrl{
+public class HighWireCachedUrl implements CachedUrl, UrlCacher {
   private URLConnection conn;
   private HighWirePlugin plugin;
   private String url;
@@ -97,6 +98,10 @@ public class HighWireCachedUrl implements CachedUrl{
       }
     }
     return false;
+  }
+
+  public CachedUrl getCachedUrl() {
+    return this;
   }
 
   // Read interface - used by the proxy.

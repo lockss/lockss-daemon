@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.1 2002-07-17 09:04:07 tal Exp $
+ * $Id: PTestPlugin.java,v 1.2 2002-08-13 02:20:48 tal Exp $
  */
 
 /*
@@ -154,6 +154,10 @@ class PTestPlugin {
 
     public CachedUrl makeCachedUrl(String url) {
       return (CachedUrl)map.get(url);
+    }
+
+    public UrlCacher makeUrlCacher(String url) {
+      return (UrlCacher)map.get(url);
     }
   }
 

@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 import java.util.Properties;
-import org.lockss.daemon.CachedUrl;
+import org.lockss.daemon.*;
 
 /*
 
@@ -41,7 +41,7 @@ in this Software without prior written authorization from Stanford University.
  * @version 0.0
  */
 
-public class MockCachedUrl implements CachedUrl{
+public class MockCachedUrl implements CachedUrl, UrlCacher {
   private String url;
   private InputStream cachedIS;
   private InputStream uncachedIS;
@@ -74,6 +74,10 @@ public class MockCachedUrl implements CachedUrl{
 
   public void setShouldBeCached(boolean shouldBeCached){
     this.shouldBeCached = shouldBeCached;
+  }
+
+  public CachedUrl getCachedUrl() {
+    return this;
   }
 
   // Read interface - used by the proxy.

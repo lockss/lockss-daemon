@@ -9,8 +9,7 @@ import java.util.Properties;
 import java.net.URL;
 import java.net.MalformedURLException;
 import junit.framework.TestCase;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.daemon.CachedUrl;
+import org.lockss.daemon.*;
 import org.lockss.test.MockCachedUrlSet;
 import org.lockss.test.MockCachedUrl;
 import org.lockss.test.StringInputStream;
@@ -98,8 +97,8 @@ public class TestCrawler extends TestCase{
   public void testAddUrlsToListNullInputStream()
   throws IOException{
     Vector list = new Vector();
-    CachedUrl cu = new MockCachedUrl(null);
-    Crawler.addUrlsToList(cu, list);
+    UrlCacher uc = new MockCachedUrl(null);
+    Crawler.addUrlsToList(uc, list);
     assertEquals(0, list.size());
   }
 

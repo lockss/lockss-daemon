@@ -5,10 +5,7 @@ import java.util.Vector;
 import java.util.List;
 import java.util.Iterator;
 import java.security.MessageDigest;
-import org.lockss.daemon.CachedUrlSet;
-import org.lockss.daemon.CachedUrlSetSpec;
-import org.lockss.daemon.CachedUrl;
-import org.lockss.daemon.CachedUrlSetHasher;
+import org.lockss.daemon.*;
 import org.lockss.test.MockCachedUrlSetSpec;
 
 
@@ -130,6 +127,10 @@ public class MockCachedUrlSet implements CachedUrlSet{
   // Methods used by the crawler
 
   public CachedUrl makeCachedUrl(String url){
+    return null;
+  }
+
+  public UrlCacher makeUrlCacher(String url){
     return null;
   }
 
