@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.3 2003-03-21 07:28:56 tal Exp $
+ * $Id: PartnerList.java,v 1.4 2003-03-21 20:49:27 tal Exp $
  */
 
 /*
@@ -44,12 +44,12 @@ import org.apache.commons.collections.LRUMap;
  * and record the last time a message was received.
  */
 class PartnerList {
-  static final String PREFIX = Configuration.PREFIX + "comm.v1";
+  static final String PREFIX = LcapRouter.PREFIX;
   static final String PARAM_MAX_PARTNER_LIFE = PREFIX + "maxPartnerLife";
   static final String PARAM_MAX_PARTNERS = PREFIX + "maxPartners";
   static final String PARAM_DEFAULT_LIST = PREFIX + "defaultPartnerList";
   static final String PARAM_RECENT_MULTICAST_INTERVAL =
-    LcapV1Comm.PARAM_RECENT_MULTICAST_INTERVAL;
+    PREFIX + "recentMulticastInterval";
 
   static Logger log = Logger.getLogger("PartnerList");
 
