@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.71 2004-01-15 03:29:56 troberts Exp $
+ $Id: build.xml,v 1.72 2004-01-26 23:27:19 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -144,7 +144,7 @@ Args:
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections.jar"/>
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
-  <property name="junit.addons.jar" value="${test.lib}/junit-addons.jar"/>
+  <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
   <property name="htmlparser.jar"  value="${test.lib}/nekohtml.jar"/>
   <property name="js.jar"  value="${test.lib}/js.jar"/>
@@ -152,7 +152,7 @@ Args:
   <property name="jcoverage.jar"  value="${test.lib}/jcoverage.jar"/>
   <property name="bcel.jar"  value="${test.lib}/bcel.jar"/>
   <property name="log4j.jar"  value="${test.lib}/log4j-1.2.8.jar"/>
-  <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.7.jar"/>
+  <property name="oro.jar"  value="${test.lib}/jakarta-oro-2.0.8.jar"/>
   <property name="getopt.jar"  value="${test.lib}/java-getopt-1.0.9.jar"/>
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
@@ -162,7 +162,7 @@ Args:
   <property name="lockss.generated.jar" value="${lib}/lockss-generated.jar"/>
   <property name="lockss.generated.test.jar" value="${lib}/lockss-generated-test.jar"/>
 
-  <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.1.jar"/>
+  <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.6.jar"/>
 
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
