@@ -35,7 +35,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>text/html_filter</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.LockssCardFilterRule</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.locksscard.LockssCardFilterRule</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_name</ElementKey>
@@ -48,5 +48,9 @@
 <MapElement>
 <ElementKey>plugin_identifier</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.LockssCardPlugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_version</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
 </MapElement>
 </Elements>
