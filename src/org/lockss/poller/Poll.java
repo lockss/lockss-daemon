@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.32 2003-01-03 03:01:17 claire Exp $
+* $Id: Poll.java,v 1.33 2003-01-06 23:18:34 claire Exp $
  */
 
 /*
@@ -436,6 +436,32 @@ public abstract class Poll implements Serializable {
     }
   }
 
+  class ReplayVoteCallback implements HashService.Callback {
+    /**
+     * Called to indicate that hashing the content or names of a
+     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
+     * is null,  or has failed otherwise.
+     * @param urlset  the <code>CachedUrlSet</code> being hashed.
+     * @param cookie  used to disambiguate callbacks.
+     * @param hasher  the <code>MessageDigest</code> object that
+     *                contains the hash.
+     * @param e       the exception that caused the hash to fail.
+     */
+    public void hashingFinished(CachedUrlSet urlset,
+                                Object cookie,
+                                MessageDigest hasher,
+                                Exception e) {
+      boolean hash_completed = e == null ? true : false;
+
+      if(hash_completed)  {
+        Vote v = (Vote)cookie;
+        v.setAgreeWithHash(hasher.digest());
+        m_tally.addVote(v);
+        m_tally.replayNextVote();
+      }
+    }
+  }
+
   class VoteTimerCallback implements TimerQueue.Callback {
     /**
      * Called when the timer expires.
@@ -473,23 +499,26 @@ public abstract class Poll implements Serializable {
     public int type;
     public long startTime;
     public long duration;
-    public int numYes;       // The # of votes that agree with us
-    public int numNo;        // The # of votes that disagree with us
-    public int wtYes;        // The weight of the votes that agree with us
-    public int wtNo;         // The weight of the votes that disagree with us
+    public int numAgree;     // The # of votes that agree with us
+    public int numDisagree;  // The # of votes that disagree with us
+    public int wtAgree;      // The weight of the votes that agree with us
+    public int wtDisagree;   // The weight of the votes that disagree with us
     public int quorum;       // The # of votes needed to have a quorum
     public ArrayList pollVotes;
     public String hashAlgorithm; // the algorithm used to hash this poll
+    private Deadline replayDeadline = null;
+    private Iterator replayIter = null;
+    private ArrayList originalVotes = null;
 
-    VoteTally(int type, long startTime, long duration, int numYes,
-              int numNo, int wtYes, int wtNo) {
+    VoteTally(int type, long startTime, long duration, int numAgree,
+              int numDisagree, int wtAgree, int wtDisagree) {
       this.type = type;
       this.startTime = startTime;
       this.duration = duration;
-      this.numYes = numYes;
-      this.numNo = numNo;
-      this.wtYes = wtYes;
-      this.wtNo = wtNo;
+      this.numAgree = numAgree;
+      this.numDisagree = numDisagree;
+      this.wtAgree = wtAgree;
+      this.wtDisagree = wtDisagree;
       quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
       pollVotes = new ArrayList(quorum * 2);
       hashAlgorithm = m_msg.getHashAlgorithm();
@@ -508,7 +537,7 @@ public abstract class Poll implements Serializable {
      */
     public boolean didWinPoll() {
       if(!isErrorState()) {
-        return (numYes > numNo) && (wtYes >= wtNo);
+        return (numAgree > numDisagree) && (wtAgree >= wtDisagree);
       }
       return false;
     }
@@ -524,14 +553,52 @@ public abstract class Poll implements Serializable {
       return 0;
     }
 
+    /**
+     * replay all of the votes in a previously held poll.
+     * @param deadline the deadline by which the replay must be complete
+     */
+    public void replayAllVotes(Deadline deadline) {
+      originalVotes = pollVotes;
+      pollVotes = new ArrayList(originalVotes.size());
+      replayIter =  originalVotes.iterator();
+      replayDeadline = deadline;
+      replayNextVote();
+   }
+
+   void replayNextVote() {
+     if(replayIter == null) {
+       log.warning("Call to replay a poll vote without call to replay all");
+     }
+     if(isErrorState() || !replayIter.hasNext()) {
+       replayDeadline = null;
+       replayIter = null;
+       if(isErrorState()) {
+         // restore the original votes
+         pollVotes = originalVotes;
+       }
+       originalVotes = null;
+       //NodeManager.updatePollResults(m_urlSet, this);
+     }
+     else {
+       Vote vote = (Vote)replayIter.next();
+       MessageDigest hasher = getInitedHasher(vote.getChallenge(),
+           vote.getVerifier());
+
+       if(!scheduleHash(hasher, replayDeadline,new Vote(vote),
+                        new ReplayVoteCallback())) {
+         m_pollstate = ERR_SCHEDULE_HASH;
+         log.debug("couldn't schedule hash - stopping replay poll");
+       }
+     }
+   }
+
     boolean isLeadEnough() {
-      return (numYes - numNo) > quorum;
+      return (numAgree - numDisagree) > quorum;
     }
 
     boolean haveQuorum() {
-      return numYes + numNo >= quorum;
+      return numAgree + numDisagree >= quorum;
     }
-
 
     void addVote(Vote vote) {
       LcapIdentity id = vote.getIdentity();
@@ -539,13 +606,13 @@ public abstract class Poll implements Serializable {
 
       synchronized (this) {
         if(vote.isAgreeVote()) {
-          numYes++;
-          wtYes += weight;
+          numAgree++;
+          wtAgree += weight;
           log.info("I agree with " + vote + " rep " + weight);
         }
         else {
-          numNo++;
-          wtNo += weight;
+          numDisagree++;
+          wtDisagree += weight;
           if (idMgr.isLocalIdentity(id)) {
             log.error("I disagree with myself about " + vote + " rep " + weight);
           }
