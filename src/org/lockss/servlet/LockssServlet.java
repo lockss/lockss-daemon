@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: LockssServlet.java,v 1.4 2003-03-17 08:31:53 tal Exp $
+// $Id: LockssServlet.java,v 1.5 2003-03-19 04:19:50 tal Exp $
 // ========================================================================
 
 /*
@@ -416,6 +416,11 @@ public abstract class LockssServlet extends HttpServlet
     }
     return p1 + "&" + p2;
   }
+
+  protected String urlEncode(String param) {
+    return URLEncoder.encode(param);
+  }
+
 
   // Build servlet navigation table
   private Table getNavTable() {
