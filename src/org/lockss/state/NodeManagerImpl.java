@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.166 2004-02-05 02:23:41 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.167 2004-02-06 03:11:31 troberts Exp $
  */
 
 /*
@@ -1520,8 +1520,17 @@ public class NodeManagerImpl
       Vote vote = (Vote) voteIt.next();
       int repChange = vote.isAgreeVote() ? agreeChange : disagreeChange;
 
-      idManager.changeReputation(idManager.findIdentity(vote.getIDAddress()),
-                                 repChange);
+      LcapIdentity id = idManager.findIdentity(vote.getIDAddress());
+	idManager.changeReputation(id, repChange);
+      if (results.getTallyResult() == Tallier.RESULT_WON) {
+	if (vote.isAgreeVote()) {
+// 	  if (top level poll) { //XXX add this check
+	  idManager.signalAgreed(id, managedAu);
+// 	  }
+	} else {
+	  idManager.signalDisagreed(id, managedAu);
+	}
+      }
     }
   }
 
