@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.14 2003-04-17 02:16:57 troberts Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.15 2003-04-18 21:49:51 aalto Exp $
  */
 
 /*
@@ -151,7 +151,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
   }
 
   public void testTreeWalkShouldntStartIfOneJustRan() throws IOException {
-    String configString = "org.lockss.treewalk.interval=12w";
+    String configString = "org.lockss.treewalk.interval=10d";
     TestConfiguration.setCurrentConfigFromString(configString);
     treeWalkHandler.doTreeWalk();
     assertFalse(treeWalkHandler.timeUntilTreeWalkStart() <= 0);
