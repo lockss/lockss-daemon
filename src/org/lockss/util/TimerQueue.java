@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.19 2004-07-27 19:25:04 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.20 2004-07-27 23:26:41 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -228,12 +228,11 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
 	      threadWaitingUntil = 0;
 	    }
 	    threadWaitingForDeadline = null;
-	    // This used to check that about-to-be-executed request is still
-	    // at the head of the queue, but I can't think of a compelling
-	    // reason that that matters, as long as it's expired.
-// 	    Request newHead = (Request)queue.peek();
-// 	    if (req == newHead && req.deadline.expired()) {
- 	    if (req.deadline.expired()) {
+	    // Check that this request is still at the head of the queue.
+	    // Not strictly necessary, but makes behavior more predictable
+	    // for testing.
+	    Request newHead = (Request)queue.peek();
+ 	    if (req == newHead && req.deadline.expired()) {
 	      doNotify(req);
 	    }
 	  }
