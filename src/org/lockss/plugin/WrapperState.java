@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperState.java,v 1.2 2003-12-08 06:52:33 tlipkis Exp $
+ * $Id: WrapperState.java,v 1.3 2005-01-04 03:00:46 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class WrapperState {
       register("org.lockss.plugin.Plugin");
     } catch (ClassNotFoundException e) {
       usingWrapping = false;
-      log.info("The wrapper layer is INACTIVE.");
+      log.debug("The wrapper layer is INACTIVE.");
     }
   }
 
