@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.1 2002-11-05 21:10:02 tal Exp $
+ * $Id: TestLcapSocket.java,v 1.2 2002-11-06 21:18:13 tal Exp $
  */
 
 /*
@@ -61,11 +61,34 @@ public class TestLcapSocket extends LockssTestCase{
   InetAddress testAddr;
   DatagramPacket testPacket;
 
-
   public void setUp() throws Exception {
     testAddr = InetAddress.getByName("127.0.0.1");
     testPacket =
       new DatagramPacket(testData, testData.length, testAddr, testPort);
+  }
+
+  /** Sender sends a packet to a mock datagram socket in a while */
+  class Sender extends DoLater {
+    MockDatagramSocketExtras sock;
+    DatagramPacket pkt;
+
+    Sender(long waitMs, MockDatagramSocketExtras sock, DatagramPacket pkt) {
+      super(waitMs);
+      this.sock = sock;
+      this.pkt = pkt;
+    }
+
+    protected void doit() {
+      sock.addToReceiveQueue(pkt);
+    }
+  }
+
+  /** Put something onto a queue in a while */
+  private Sender sendIn(long ms, MockDatagramSocketExtras sock,
+			DatagramPacket pkt) {
+    Sender p = new Sender(ms, sock, pkt);
+    p.start();
+    return p;
   }
 
   public void testSend() throws Exception {
@@ -74,39 +97,20 @@ public class TestLcapSocket extends LockssTestCase{
     assertTrue(dskt.getSentPackets().isEmpty());
     skt.send(testPacket);
     DatagramPacket sent = (DatagramPacket)dskt.getSentPackets().elementAt(0);
-    assertEqualPkts(testPacket, sent);
+    assertEquals(testPacket, sent);
   }
   
-  /*
   public void testMulticastReceive() throws Exception {
-    MockDatagramSocket dskt = new MockDatagramSocket();
-    LcapSocket skt = new LcapSocket(dskt);
-    LcapSocket.Multicast mSock =
-      new LcapSocket.Multicast(socketInQ, group, multiPort);
-    skt.send(testPacket);
-    DatagramPacket sent = (DatagramPacket)dskt.getSentPackets().elementAt(0);
-    assertEqualPkts(testPacket, sent);
+    Queue rcvQ = new FifoQueue();
+    MockMulticastSocket mskt = new MockMulticastSocket();
+    LcapSocket.Multicast lskt = new LcapSocket.Multicast(rcvQ, mskt,
+							 (InetAddress)null);
+    mskt.addToReceiveQueue(testPacket);
+    DoLater.interruptMeIn(500);
+    PrivilegedAccessor.invokeMethod(lskt, "receivePacket");
+    assertTrue(!rcvQ.isEmpty());
+    LockssDatagram rcvd = (LockssDatagram)rcvQ.get(new ProbabilisticTimer(0));
+    assertEquals(testPacket, rcvd.getPacket());
   }
-  */  
-    /*
-    try {
-      sendSock = new LcapSocket();
-    } catch (SocketException e) {
-      log.critical("Can't create send socket", e);
-    }
-    try {
-      socketInQ = new FifoQueue();
-      log.debug("new LcapSocket.Multicast("+socketInQ+", "+group+", "+multiPort);
-    
-      mSock.start();
-      this.mSock = mSock;
-    } catch (UnknownHostException e) {
-      log.error("Can't create socket", e);
-    } catch (IOException e) {
-      log.error("Can't create socket", e);
-    }
-    assertEquals("Critical", Logger.nameOf(Logger.LEVEL_CRITICAL));
-  }
-    */
 }
 
