@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbstractAlertAction.java,v 1.1 2004-08-09 02:54:32 tlipkis Exp $
+ * $Id: TestAbstractAlertAction.java,v 1.2 2004-09-21 21:24:55 dshr Exp $
  */
 
 /*
@@ -48,11 +48,11 @@ import org.lockss.plugin.*;
 public class TestAbstractAlertAction extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestAbstractAlertAction");
 
-  MockAlertAction action;
+  MyMockAlertAction action;
 
   public void setUp() throws Exception {
     super.setUp();
-    action = new MockAlertAction();
+    action = new MyMockAlertAction();
   }
 
   public void testSimple() {
@@ -66,7 +66,7 @@ public class TestAbstractAlertAction extends LockssTestCase {
     assertEquals(exp, action.getAlerts());
   }
 
-  static class MockAlertAction extends AbstractAlertAction {
+  static class MyMockAlertAction extends AbstractAlertAction {
     List list = new ArrayList();
 
     public void record(LockssDaemon daemon, Alert alert) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.14 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestLcapComm.java,v 1.15 2004-09-21 21:25:00 dshr Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class TestLcapComm extends LockssTestCase {
   DatagramPacket testPacket;
   DatagramPacket testPacket2;
 
-  MockSocketFactory fact;
+  MyMockSocketFactory fact;
   LcapComm comm;
   Configuration config;
 
@@ -120,7 +120,7 @@ public class TestLcapComm extends LockssTestCase {
     testPacket2 = new DatagramPacket(testPktData, testPktData.length,
 				     testAddr.getInetAddr(), testPort - 1);
 
-    fact = new MockSocketFactory();
+    fact = new MyMockSocketFactory();
     Properties props = new Properties();
     props.put(PARAM_MULTI_GROUP, "239.3.4.5");
     props.put(PARAM_MULTI_PORT, "5432");
@@ -238,7 +238,7 @@ public class TestLcapComm extends LockssTestCase {
 
   /** Mock socket factory creates LcapSockets with mock datagram/multicast
    * sockets. */
-  static class MockSocketFactory implements LcapComm.SocketFactory {
+  static class MyMockSocketFactory implements LcapComm.SocketFactory {
     List msocks = new ArrayList();
     List usocks = new ArrayList();
     List ssocks = new ArrayList();

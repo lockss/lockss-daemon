@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssUrlConnectionPool.java,v 1.2 2004-02-27 00:24:47 tlipkis Exp $
+ * $Id: TestLockssUrlConnectionPool.java,v 1.3 2004-09-21 21:25:03 dshr Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    pool = new MockLockssUrlConnectionPool();
+    pool = new MyMockLockssUrlConnectionPool();
     newClientCtr = 0;
 
   }  
@@ -65,11 +65,11 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
   }
 
   private int getConnectionTimeout(HttpClient client) {
-    return ((MockHttpClient)client).getConnectionTimeout();
+    return ((MyMockHttpClient)client).getConnectionTimeout();
   }
 
   private int getTimeout(HttpClient client) {
-    return ((MockHttpClient)client).getTimeout();
+    return ((MyMockHttpClient)client).getTimeout();
   }
 
   public void testTimeoutsAfter() {
@@ -113,7 +113,7 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     assertEquals(3, mtm.getMaxConnectionsPerHost());
   }
 
-  class MockHttpClient extends HttpClient {
+  class MyMockHttpClient extends HttpClient {
     int cto = -1;
     int dto = -1;
 
@@ -132,11 +132,11 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
   }
 
 
-  class MockLockssUrlConnectionPool extends LockssUrlConnectionPool {
+  class MyMockLockssUrlConnectionPool extends LockssUrlConnectionPool {
     protected HttpClient newHttpClient() {
       newClientCtr++;
 //       return super.newHttpClient();
-      return new MockHttpClient();
+      return new MyMockHttpClient();
     }
   }
 }

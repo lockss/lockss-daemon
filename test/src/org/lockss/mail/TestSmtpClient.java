@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpClient.java,v 1.2 2004-08-09 02:55:34 tlipkis Exp $
+ * $Id: TestSmtpClient.java,v 1.3 2004-09-21 21:24:58 dshr Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.plugin.*;
  * This is the test class for org.lockss.mail.SmtpClient
  */
 public class TestSmtpClient extends LockssTestCase {
-  MockSmtpClient client;
+  MyMockSmtpClient client;
   ByteArrayOutputStream baos = new ByteArrayOutputStream(128);
   PrintStream pstrm;
 
@@ -52,18 +52,18 @@ public class TestSmtpClient extends LockssTestCase {
     super.setUp();
     ConfigurationUtil.setFromArgs(Configuration.PARAM_PLATFORM_HOSTNAME,
 				  "foohost");
-    client = new MockSmtpClient("hostx");
+    client = new MyMockSmtpClient("hostx");
     baos = new ByteArrayOutputStream(128);
     pstrm = new PrintStream(baos);
   }
 
 
   public void testConstruct() throws IOException {
-    MockSmtpClient client = new MockSmtpClient("hostx");
+    MyMockSmtpClient client = new MyMockSmtpClient("hostx");
     assertEquals("hostx", client.host);
     assertEquals(25, client.port);
 
-    client = new MockSmtpClient("hostx", 22);
+    client = new MyMockSmtpClient("hostx", 22);
     assertEquals(22, client.port);
   }
 
@@ -79,7 +79,7 @@ public class TestSmtpClient extends LockssTestCase {
   public void testSoTimeout() throws IOException {
     ConfigurationUtil.setFromArgs(SmtpClient.PARAM_SMTP_DATA_TIMEOUT,
 				  "12m");
-    client = new MockSmtpClient("hostx");
+    client = new MyMockSmtpClient("hostx");
     MyMockSocket sock = (MyMockSocket)client.getServerSocket();
     assertEquals(12 * Constants.MINUTE, sock.soTimeout);
   }
@@ -142,7 +142,7 @@ public class TestSmtpClient extends LockssTestCase {
     assertEquals(expectedMessage, client.getServerInput());
   }
 
-  class MockSmtpClient extends SmtpClient {
+  class MyMockSmtpClient extends SmtpClient {
     String host;
     int port;
     String responses;
@@ -150,12 +150,12 @@ public class TestSmtpClient extends LockssTestCase {
     boolean isOpen;
     int nThrow = -1;
 
-    MockSmtpClient(String smtpHost)
+    MyMockSmtpClient(String smtpHost)
 	throws IOException {
       super(smtpHost);
     }
 
-    MockSmtpClient(String smtpHost, int smtpPort) throws IOException {
+    MyMockSmtpClient(String smtpHost, int smtpPort) throws IOException {
       super(smtpHost, smtpPort);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.8 2004-09-02 07:47:53 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.9 2004-09-21 21:25:01 dshr Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestTaskRunner extends LockssTestCase {
     removedChunks = new ArrayList();
     removedTasks = new ArrayList();
     fact = new SchedFact(null);
-    tr = new MockTaskRunner(fact);
+    tr = new MyMockTaskRunner(fact);
     tr.init();
   }
 
@@ -71,12 +71,12 @@ public class TestTaskRunner extends LockssTestCase {
 
   StepTask task(long start, long end, long duration) {
     return new StepperTask(Deadline.at(start), Deadline.at(end),
-			   duration, null, null, new MockStepper());
+			   duration, null, null, new MyMockStepper());
   }
 
   StepTask task(long start, long end, long duration, TaskCallback cb) {
     return new StepperTask(Deadline.at(start), Deadline.at(end),
-			   duration, cb, null, new MockStepper());
+			   duration, cb, null, new MyMockStepper());
   }
 
   StepTask task(long start, long end, long duration,
@@ -546,7 +546,7 @@ public class TestTaskRunner extends LockssTestCase {
 	  }
 	}};
 
-    StepTask t1 = task(100, 200, 100, cb, new MockStepper(10, -10));
+    StepTask t1 = task(100, 200, 100, cb, new MyMockStepper(10, -10));
     Schedule s = sched(ListUtil.list(t1));
     fact.setResult(s);
     assertTrue(tr.addToSchedule(t1));
@@ -569,9 +569,9 @@ public class TestTaskRunner extends LockssTestCase {
   }
 
   public void testRunStepsWithOverrunDisallowed() {
-    StepTask t1 = task(100, 300, 100, null, new MockStepper(15, -10));
+    StepTask t1 = task(100, 300, 100, null, new MyMockStepper(15, -10));
     //    t1.setOverrunAllowed(true);
-    StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
+    StepTask t2 = task(150, 250, 100, null, new MyMockStepper(10, -10));
     Schedule s = sched(ListUtil.list(t1, t2));
     fact.setResults(s, s);
     assertTrue(tr.addToSchedule(t1));
@@ -596,10 +596,10 @@ public class TestTaskRunner extends LockssTestCase {
   }
 
   public void testRunStepsWithOverrunAllowed() {
-    StepTask t1 = task(100, 500, 30, null, new MockStepper(15, -10));
+    StepTask t1 = task(100, 500, 30, null, new MyMockStepper(15, -10));
     t1.setOverrunAllowed(true);
-    StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
-    tr = new MockTaskRunner(new TaskRunner.SchedulerFactory () {
+    StepTask t2 = task(150, 250, 100, null, new MyMockStepper(10, -10));
+    tr = new MyMockTaskRunner(new TaskRunner.SchedulerFactory () {
 	public Scheduler createScheduler() {
 	  return new SortScheduler();
 	}});
@@ -628,10 +628,10 @@ public class TestTaskRunner extends LockssTestCase {
 
   // test resched with overrun task doesn't lose task.
   public void testRunStepsWithOverrunAllowedPlusResched() {
-    StepTask t1 = task(100, 500, 30, null, new MockStepper(15, -10));
+    StepTask t1 = task(100, 500, 30, null, new MyMockStepper(15, -10));
     t1.setOverrunAllowed(true);
-    StepTask t2 = task(150, 250, 100, null, new MockStepper(10, -10));
-    tr = new MockTaskRunner(new TaskRunner.SchedulerFactory () {
+    StepTask t2 = task(150, 250, 100, null, new MyMockStepper(10, -10));
+    tr = new MyMockTaskRunner(new TaskRunner.SchedulerFactory () {
 	public Scheduler createScheduler() {
 	  return new SortScheduler();
 	}});
@@ -655,7 +655,7 @@ public class TestTaskRunner extends LockssTestCase {
 	  }
 	}};
 
-    MockStepper stepper = new MockStepper(10, -10);
+    MyMockStepper stepper = new MyMockStepper(10, -10);
     stepper.setWhenToThrow(5);
     StepTask t1 = task(100, 200, 100, cb, stepper);
     Schedule s = sched(ListUtil.list(t1));
@@ -681,8 +681,8 @@ public class TestTaskRunner extends LockssTestCase {
   }
 
 
-  class MockTaskRunner extends TaskRunner {
-    MockTaskRunner(TaskRunner.SchedulerFactory fact) {
+  class MyMockTaskRunner extends TaskRunner {
+    MyMockTaskRunner(TaskRunner.SchedulerFactory fact) {
       super(fact);
     }
 
@@ -699,7 +699,7 @@ public class TestTaskRunner extends LockssTestCase {
 
   class SchedFact implements TaskRunner.SchedulerFactory {
     List results;
-    MockScheduler scheduler;
+    MyMockScheduler scheduler;
     List createArgs = new ArrayList();
 
     public SchedFact(Schedule resultSchedule) {
@@ -723,16 +723,16 @@ public class TestTaskRunner extends LockssTestCase {
     }
 
     public Scheduler createScheduler() {
-      scheduler = new MockScheduler(results);;
+      scheduler = new MyMockScheduler(results);;
       return scheduler;
     }
 
-    class MockScheduler implements Scheduler {
+    class MyMockScheduler implements Scheduler {
       List results;
       Collection tasks;
       Schedule lastSched = null;
 
-      MockScheduler(List results) {
+      MyMockScheduler(List results) {
 	this.results = results;
       }
 
@@ -759,12 +759,12 @@ public class TestTaskRunner extends LockssTestCase {
     }
   }
 
-  class MockStepper implements Stepper {
+  class MyMockStepper implements Stepper {
     int nSteps = 1;			// not finished by default
     int eachStepTime = 0;
     int whenToThrow = -1;
 
-    MockStepper() {
+    MyMockStepper() {
     }
 
     /** Make a stepper that repeats n times: wait until time elapsed, or
@@ -775,7 +775,7 @@ public class TestTaskRunner extends LockssTestCase {
      * @return some measure of amount of work done.
      * simulated time by abs(eachStepTime) on each step.
      */
-    MockStepper(int nSteps, int eachStepTime) {
+    MyMockStepper(int nSteps, int eachStepTime) {
       this.nSteps = nSteps;
       this.eachStepTime = eachStepTime;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.10 2004-06-01 08:36:35 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.11 2004-09-21 21:25:03 dshr Exp $
  */
 
 /*
@@ -47,15 +47,15 @@ import org.apache.commons.httpclient.*;
 public class TestHttpClientUrlConnection extends LockssTestCase {
   static Logger log = Logger.getLogger("TestHttpClientUrlConnection");
 
-  MockHttpClient client;
+  MyMockHttpClient client;
   MyMockGetMethod method;
-  MockHttpClientUrlConnection conn;
+  MyMockHttpClientUrlConnection conn;
   int newClientCtr;
   String urlString = "http://Test.Url/";
 
   public void setUp() throws Exception {
     super.setUp();
-    client = new MockHttpClient();
+    client = new MyMockHttpClient();
     conn = newConn(urlString);
     method = conn.getMockMethod();
   }
@@ -63,8 +63,8 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   public void tearDown() throws Exception {
   }
 
-  MockHttpClientUrlConnection newConn(String url) throws IOException {
-    return new MockHttpClientUrlConnection(url, client);
+  MyMockHttpClientUrlConnection newConn(String url) throws IOException {
+    return new MyMockHttpClientUrlConnection(url, client);
   }
 
   public void testPred() {
@@ -362,7 +362,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 				       url, client);
   }
 
-  class MockHttpClient extends HttpClient {
+  class MyMockHttpClient extends HttpClient {
     int res1 = -1;
     int res2 = -2;
     HostConfiguration hc = null;
@@ -535,11 +535,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   }
 
-  class MockHttpClientUrlConnection extends HttpClientUrlConnection {
+  class MyMockHttpClientUrlConnection extends HttpClientUrlConnection {
     MyMockGetMethod mockMeth;
     List methods = new ArrayList();
 
-    MockHttpClientUrlConnection(String urlString, MockHttpClient client)
+    MyMockHttpClientUrlConnection(String urlString, MyMockHttpClient client)
 	throws IOException {
       super(urlString, client);
     }

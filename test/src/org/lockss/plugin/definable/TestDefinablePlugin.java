@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.5 2004-09-01 23:36:50 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.6 2004-09-21 21:24:59 dshr Exp $
  */
 
 /*
@@ -173,11 +173,11 @@ public class TestDefinablePlugin extends LockssTestCase {
   public void testInstallCacheExceptionHandler() {
     DefinablePlugin plugin = new DefinablePlugin();
     ExternalizableMap map = plugin.getDefinitionMap();
-    String name = new MockHttpResultHandler().getClass().getName();
+    String name = new MyMockHttpResultHandler().getClass().getName();
     // test using a special class
     map.putString(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY,name);
     plugin.installCacheExceptionHandler();
-    assertTrue(plugin.getCacheResultHandler() instanceof MockHttpResultHandler);
+    assertTrue(plugin.getCacheResultHandler() instanceof MyMockHttpResultHandler);
 
   }
 
@@ -200,8 +200,8 @@ public class TestDefinablePlugin extends LockssTestCase {
     assertEquals(expected, found);
   }
 
-  static public class MockHttpResultHandler implements CacheResultHandler {
-   public MockHttpResultHandler() {
+  static public class MyMockHttpResultHandler implements CacheResultHandler {
+   public MyMockHttpResultHandler() {
    }
 
    public void init(CacheResultMap crmap) {

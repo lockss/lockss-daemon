@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryManager.java,v 1.1 2004-08-22 02:05:49 tlipkis Exp $
+ * $Id: TestRepositoryManager.java,v 1.2 2004-09-21 21:25:01 dshr Exp $
  */
 
 /*
@@ -51,9 +51,9 @@ public class TestRepositoryManager extends LockssTestCase {
     super.tearDown();
   }
 
-  MockLockssRepositoryImpl makeRepo(String root) {
+  MyMockLockssRepositoryImpl makeRepo(String root) {
     MockArchivalUnit mau = new MockArchivalUnit();
-    MockLockssRepositoryImpl repo = new MockLockssRepositoryImpl(root);
+    MyMockLockssRepositoryImpl repo = new MyMockLockssRepositoryImpl(root);
     theDaemon.setLockssRepository(repo, mau);
     repo.initService(theDaemon);
     repo.startService();
@@ -61,13 +61,13 @@ public class TestRepositoryManager extends LockssTestCase {
   }
 
   public void testConfig() throws Exception {
-    MockLockssRepositoryImpl repo1 = makeRepo("foo");
+    MyMockLockssRepositoryImpl repo1 = makeRepo("foo");
     assertEquals(RepositoryManager.DEFAULT_MAX_LRUMAP_SIZE,
 		 repo1.nodeCacheSize);
 
     ConfigurationUtil.setFromArgs(RepositoryManager.PARAM_MAX_LRUMAP_SIZE,
 				  "4");
-    MockLockssRepositoryImpl repo2 = makeRepo("bar");
+    MyMockLockssRepositoryImpl repo2 = makeRepo("bar");
     assertEquals(4, repo1.nodeCacheSize);
     assertEquals(4, repo2.nodeCacheSize);
 
@@ -84,11 +84,11 @@ public class TestRepositoryManager extends LockssTestCase {
     assertEquals(1, repo1.cnt);
   }
 
-  class MockLockssRepositoryImpl extends LockssRepositoryImpl {
+  class MyMockLockssRepositoryImpl extends LockssRepositoryImpl {
     int nodeCacheSize = 0;
     int cnt = 0;
 
-    public MockLockssRepositoryImpl(String root) {
+    public MyMockLockssRepositoryImpl(String root) {
       super(root);
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginProxy.java,v 1.1 2004-01-04 06:17:41 tlipkis Exp $
+ * $Id: TestPluginProxy.java,v 1.2 2004-09-21 21:25:01 dshr Exp $
  */
 
 /*
@@ -44,14 +44,14 @@ import org.lockss.test.*;
 public class TestPluginProxy extends LockssTestCase {
 
   MockLockssDaemon daemon;
-  MockRemoteApi mrapi;
+  MyMockRemoteApi mrapi;
   PluginProxy proxy;
 
   public void setUp() throws Exception {
     super.setUp();
 
     daemon = getMockLockssDaemon();
-    mrapi = new MockRemoteApi();
+    mrapi = new MyMockRemoteApi();
     daemon.setRemoteApi(mrapi);
     daemon.setDaemonInited(true);
   }
@@ -77,7 +77,7 @@ public class TestPluginProxy extends LockssTestCase {
     }
   }
 
-  class MockRemoteApi extends RemoteApi {
+  class MyMockRemoteApi extends RemoteApi {
     Map pluginmap = new HashMap();
 
     Plugin getPluginFromId(String pluginid) {

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.4 2004-01-12 06:24:27 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.5 2004-09-21 21:24:58 dshr Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class FuncHashService extends LockssTestCase {
   protected MockLockssDaemon theDaemon;
 
   private HashService svc;
-  MockCUS cus;
+  MyMockCUS cus;
   static final String hashAlgorithm = "SHA-1";
   static MessageDigest dig;
   List work;
@@ -76,7 +76,7 @@ public class FuncHashService extends LockssTestCase {
     if (dig == null) {
       dig = MessageDigest.getInstance(hashAlgorithm);
     }
-    cus = new MockCUS();
+    cus = new MyMockCUS();
     work = new ArrayList();
 //     TimeBase.setSimulated();
   }
@@ -88,7 +88,7 @@ public class FuncHashService extends LockssTestCase {
 
   boolean hashContent(String cookie, int duration, int eachStepTime,
 		      long deadInOrAt, HashService.Callback cb) {
-    MockCUSH hasher = new MockCUSH(duration, eachStepTime, cookie);
+    MyMockCUSH hasher = new MyMockCUSH(duration, eachStepTime, cookie);
     //    hasher.setNumBytes(bytes);
     cus.setContentHasher(hasher);
     cus.setEstimatedHashDuration(duration);
@@ -206,11 +206,11 @@ public class FuncHashService extends LockssTestCase {
   }
 
 
-  public class MockCUS extends MockCachedUrlSet {
+  public class MyMockCUS extends MockCachedUrlSet {
     long actualHashDuration;
     Exception actualHashException;
 
-    public MockCUS() {
+    public MyMockCUS() {
       super(null, null);
     }
 
@@ -220,7 +220,7 @@ public class FuncHashService extends LockssTestCase {
     }
   }
 
-  public class MockCUSH implements CachedUrlSetHasher {
+  public class MyMockCUSH implements CachedUrlSetHasher {
     int eachStepTime;
     int eachStepBytes = 1000;
     String cookie;
@@ -232,7 +232,7 @@ public class FuncHashService extends LockssTestCase {
      * each step taking eachStepTime ms.  If eachStepTime is positive, it
      * waits that long; if negative, it advances simulated time by that
      * amount. */
-    public MockCUSH(int duration, int eachStepTime, String cookie) {
+    public MyMockCUSH(int duration, int eachStepTime, String cookie) {
       this.finishedAt = Deadline.in(duration);
       this.eachStepTime = eachStepTime;
       this.cookie = cookie;

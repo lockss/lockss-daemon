@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssApp.java,v 1.1 2004-08-02 02:59:35 tlipkis Exp $
+ * $Id: TestLockssApp.java,v 1.2 2004-09-21 21:24:56 dshr Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestLockssApp extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    app = new MockLockssApp(null);
+    app = new MyMockLockssApp(null);
   }
 
   // load & init default manager
@@ -54,7 +54,7 @@ public class TestLockssApp extends LockssTestCase {
     LockssApp.ManagerDesc d1 =
       new LockssApp.ManagerDesc("param", mockMgrName);
     LockssManager m1 = app.initManager(d1);
-    assertTrue(((MockMgr)m1).isInited());
+    assertTrue(((MyMockMgr)m1).isInited());
   }
 
   // configure alternate manager class
@@ -64,7 +64,7 @@ public class TestLockssApp extends LockssTestCase {
     LockssApp.ManagerDesc d1 =
       new LockssApp.ManagerDesc("param", "not.found");
     LockssManager m1 = app.initManager(d1);
-    assertTrue(((MockMgr)m1).isInited());
+    assertTrue(((MyMockMgr)m1).isInited());
   }
 
   // if configured class not found, fall back to default class
@@ -74,7 +74,7 @@ public class TestLockssApp extends LockssTestCase {
     LockssApp.ManagerDesc d1 =
       new LockssApp.ManagerDesc("param", mockMgrName);
     LockssManager m1 = app.initManager(d1);
-    assertTrue(((MockMgr)m1).isInited());
+    assertTrue(((MyMockMgr)m1).isInited());
   }
 
   // fail if class not LockssManager
@@ -101,8 +101,8 @@ public class TestLockssApp extends LockssTestCase {
     }
   }
 
-  static final String mockMgrName = "org.lockss.app.TestLockssApp$MockMgr";
-  static class MockMgr implements LockssManager {
+  static final String mockMgrName = "org.lockss.app.TestLockssApp$MyMockMgr";
+  static class MyMockMgr implements LockssManager {
     boolean isInited = false;
 
     public void initService(LockssApp app)
@@ -150,8 +150,8 @@ public class TestLockssApp extends LockssTestCase {
   }
   List events;
 
-  static class MockLockssApp extends LockssApp {
-    MockLockssApp(List propUrls) {
+  static class MyMockLockssApp extends LockssApp {
+    MyMockLockssApp(List propUrls) {
       super(propUrls);
     }
 

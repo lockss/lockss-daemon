@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.6 2004-02-18 17:02:08 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.7 2004-09-21 21:24:59 dshr Exp $
  */
 
 /*
@@ -53,11 +53,11 @@ public class TestBasePlugin extends LockssTestCase {
   static final String AUPARAM_VOL = PD_VOL.getKey();
   static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
-  MockBasePlugin mbp;
+  MyMockBasePlugin mbp;
 
   public void setUp() throws Exception {
     super.setUp();
-    mbp = new MockBasePlugin();
+    mbp = new MyMockBasePlugin();
     mbp.initPlugin(getMockLockssDaemon());
   }
 
@@ -75,7 +75,7 @@ public class TestBasePlugin extends LockssTestCase {
   }
 
   public void testInitTitleDB() {
-    String plugName = "org.lockss.plugin.base.TestBasePlugin$MockBasePlugin";
+    String plugName = "org.lockss.plugin.base.TestBasePlugin$MyMockBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR));
     Properties p = new Properties();
     p.put("org.lockss.title.0.title", "Not me");
@@ -102,12 +102,12 @@ public class TestBasePlugin extends LockssTestCase {
 		 SetUtil.theSet(tc.getParams()));
   }
 
-  private static class MockBasePlugin extends BasePlugin {
+  private static class MyMockBasePlugin extends BasePlugin {
     String name;
     String version;
     List configDescrs;
 
-    public MockBasePlugin() {
+    public MyMockBasePlugin() {
       super();
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.3 2004-05-18 17:11:12 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.4 2004-09-21 21:25:01 dshr Exp $
  */
 
 /*
@@ -51,14 +51,14 @@ public class TestRemoteApi extends LockssTestCase {
   static final String PID1 = "PID_1";
 
   MockLockssDaemon daemon;
-  MockPluginManager mpm;
+  MyMockPluginManager mpm;
   RemoteApi rapi;
 
   public void setUp() throws Exception {
     super.setUp();
 
     daemon = getMockLockssDaemon();
-    mpm = new MockPluginManager();
+    mpm = new MyMockPluginManager();
     mpm.mockInit();
     daemon.setPluginManager(mpm);
     rapi = new RemoteApi();
@@ -153,7 +153,7 @@ public class TestRemoteApi extends LockssTestCase {
     }
   }
 
-  class MockPluginManager extends PluginManager {
+  class MyMockPluginManager extends PluginManager {
     void mockInit() {
       MockArchivalUnit mau1 = new MockArchivalUnit();
       mau1.setAuId(AUID1);

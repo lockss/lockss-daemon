@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.3 2004-08-09 02:54:32 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.4 2004-09-21 21:24:56 dshr Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public class TestAlertManagerImpl extends LockssTestCase {
   static Logger log = Logger.getLogger("TestAlertManager");
 
   MockLockssDaemon daemon;
-  MockAlertManagerImpl mgr;
+  MyMockAlertManagerImpl mgr;
 
   public void setUp() throws Exception {
     super.setUp();
     daemon = new MockLockssDaemon();
-    mgr = new MockAlertManagerImpl();
+    mgr = new MyMockAlertManagerImpl();
     daemon.setAlertManager(mgr);
     mgr.initService(daemon);
     daemon.setDaemonInited(true);
@@ -69,10 +69,10 @@ public class TestAlertManagerImpl extends LockssTestCase {
 
   public void testFindMatchingActions() {
     Alert alert = new Alert("foo");
-    MockAlertAction action1 = new MockAlertAction();
-    MockAlertAction action2 = new MockAlertAction();
-    MockAlertPattern patT = new MockAlertPattern(true);
-    MockAlertPattern patF = new MockAlertPattern(false);
+    MyMockAlertAction action1 = new MyMockAlertAction();
+    MyMockAlertAction action2 = new MyMockAlertAction();
+    MyMockAlertPattern patT = new MyMockAlertPattern(true);
+    MyMockAlertPattern patF = new MyMockAlertPattern(false);
     AlertConfig conf =
       new AlertConfig(ListUtil.list(new AlertFilter(patT, action1),
 				    new AlertFilter(patT, action1),
@@ -115,7 +115,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     config(true);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
-    MockAlertAction action = new MockAlertAction();
+    MyMockAlertAction action = new MyMockAlertAction();
     action.setGroupable(true);
     AlertConfig conf =
       new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
@@ -137,7 +137,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     config(true, 20, 200, 500);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
-    MockAlertAction action = new MockAlertAction();
+    MyMockAlertAction action = new MyMockAlertAction();
     action.setGroupable(true);
     action.setMaxPend(10000);
     AlertConfig conf =
@@ -167,7 +167,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     config(true, 10, 200, 500);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
-    MockAlertAction action = new MockAlertAction();
+    MyMockAlertAction action = new MyMockAlertAction();
     action.setGroupable(true);
     action.setMaxPend(10000);
     AlertConfig conf =
@@ -198,10 +198,10 @@ public class TestAlertManagerImpl extends LockssTestCase {
     assertEquals(cnt+2, l1.size());
   }
 
-  class MockAlertPattern implements AlertPattern {
+  class MyMockAlertPattern implements AlertPattern {
     boolean match;			// determines result
     Alert alert;		   // records the alert we were called with
-    MockAlertPattern(boolean match) {
+    MyMockAlertPattern(boolean match) {
       this.match = match;
     }
     public boolean isMatch(Alert alert) {
@@ -212,7 +212,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
       return alert;
     }
   }
-  class MockAlertAction implements AlertAction {
+  class MyMockAlertAction implements AlertAction {
     boolean isGroupable;
     List list = new ArrayList();
     long maxPend = Constants.WEEK;
@@ -249,7 +249,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     }
   }
 
-  class MockAlertManagerImpl extends AlertManagerImpl {
+  class MyMockAlertManagerImpl extends AlertManagerImpl {
     boolean suppressStore = false;
     void storeAlertConfig(File file, AlertConfig alertConfig)
 	throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrivilegedAccessor.java,v 1.6 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestPrivilegedAccessor.java,v 1.7 2004-09-21 21:25:02 dshr Exp $
  */
 
 /*
@@ -39,14 +39,14 @@ public class TestPrivilegedAccessor extends TestCase {
   }
   
   public void testParent() throws Exception {
-    MockParent parent = new MockParent("Charlie");
+    MyMockParent parent = new MyMockParent("Charlie");
     assertEquals("Charlie", PrivilegedAccessor.getValue(parent, "m_name"));
     PrivilegedAccessor.invokeMethod(parent, "setName", "Timmah!");
     assertEquals("Timmah!", PrivilegedAccessor.getValue(parent,"m_name"));
   }
 
   public void testChild() throws Exception {
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockChild child = new MyMockChild("Charlie", 8);
     assertEquals("Charlie", PrivilegedAccessor.getValue(child, "m_name"));
     assertEquals(new Integer(8),
 		 PrivilegedAccessor.getValue(child, "m_number"));
@@ -60,7 +60,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testChildWithParentReference() throws Exception {
-    MockParent parent = new MockChild("Charlie", 8);
+    MyMockParent parent = new MyMockChild("Charlie", 8);
     assertEquals("Charlie", PrivilegedAccessor.getValue(parent, "m_name"));
     assertEquals(new Integer(8),
 		 PrivilegedAccessor.getValue(parent, "m_number"));
@@ -77,7 +77,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testInvalidField() throws Exception {
-    MockParent parent = new MockParent("Charlie");
+    MyMockParent parent = new MyMockParent("Charlie");
     try {
       Object value = PrivilegedAccessor.getValue(parent, "zzz");
       fail("Should throw NoSuchFieldException");
@@ -86,7 +86,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testInvalidMethodName() throws Exception {
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockChild child = new MyMockChild("Charlie", 8);
     try {
       PrivilegedAccessor.invokeMethod(child, "zzz", "Timmah!");
       fail("Should throw NoSuchMethodException");
@@ -95,7 +95,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testInvalidArguments() throws Exception {
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockChild child = new MyMockChild("Charlie", 8);
     try {
       PrivilegedAccessor.invokeMethod(child, "setData", "Timmah!");
       fail("Should throw NoSuchMethodException");
@@ -109,7 +109,7 @@ public class TestPrivilegedAccessor extends TestCase {
       fail("PrivilegedAccessor.Instance should have thrown ClassCastException");
     } catch (ClassCastException e) {
     }
-    MockParent parent = new MockParent();
+    MyMockParent parent = new MyMockParent();
     Object nullString = new PrivilegedAccessor.Instance(String.class, null);
     Boolean bool = 
       (Boolean)PrivilegedAccessor.invokeMethod(parent, "isNullString", 
@@ -118,7 +118,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testUnambiguousNullArg() throws Exception {
-    MockParent parent = new MockParent();
+    MyMockParent parent = new MyMockParent();
     Object[] args = {null};
     Boolean bool =
       (Boolean)PrivilegedAccessor.invokeMethod(parent, "isNullString", args);
@@ -126,7 +126,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testAmbiguousNullArg() throws Exception {
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockChild child = new MyMockChild("Charlie", 8);
     Object[] args1 = {"foo"};
     Object[] args2 = {null};
     assertEquals("child.string",
@@ -138,8 +138,8 @@ public class TestPrivilegedAccessor extends TestCase {
     }
   }
   public void testUnambiguousArg() throws Exception {
-    MockParent parent = new MockParent();
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockParent parent = new MyMockParent();
+    MyMockChild child = new MyMockChild("Charlie", 8);
     Object[] args1 = {new Integer(1), new Float(2)};
     Object[] args2 = {new Float(1), new Integer(2)};
     Object[] args3 = {new Float(1), new PrivilegedAccessor.Instance(Number.class, new Float(2.0))};
@@ -168,7 +168,7 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testAambiguousArg() throws Exception {
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockChild child = new MyMockChild("Charlie", 8);
     Object[] args1 = {new Float(1), new Float(2)};
     try {
       PrivilegedAccessor.invokeMethod(child, "over", args1);
@@ -178,15 +178,15 @@ public class TestPrivilegedAccessor extends TestCase {
   }
 
   public void testStatic() throws Exception {
-    MockParent parent = new MockParent();
-    MockChild child = new MockChild("Charlie", 8);
+    MyMockParent parent = new MyMockParent();
+    MyMockChild child = new MyMockChild("Charlie", 8);
     assertEquals("parent.static",
 		 PrivilegedAccessor.invokeMethod(parent, "stat", null));
     assertEquals("child.static",
 		 PrivilegedAccessor.invokeMethod(child, "stat", null));
     assertEquals("parent.static",
 		 PrivilegedAccessor.invokeMethod(new PrivilegedAccessor.
-		   Instance(MockParent.class, child),
+		   Instance(MyMockParent.class, child),
 						 "stat", null));
   }
 
@@ -258,12 +258,12 @@ public class TestPrivilegedAccessor extends TestCase {
 
   // Test utility classes
 
-  public static class MockParent {
+  public static class MyMockParent {
     private String m_name;
 
-    public MockParent() {
+    public MyMockParent() {
     }
-    public MockParent(String name) {
+    public MyMockParent(String name) {
       m_name = name;
     }
 
@@ -286,10 +286,10 @@ public class TestPrivilegedAccessor extends TestCase {
     }
   }
 
-  public static class MockChild extends MockParent {
+  public static class MyMockChild extends MyMockParent {
     private int m_number;
 
-    public MockChild(String name, int number) {
+    public MyMockChild(String name, int number) {
       super(name);
       m_number = number;
     }

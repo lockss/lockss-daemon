@@ -1,5 +1,5 @@
 /*
- * $Id: TestSchedule.java,v 1.2 2003-11-19 08:46:45 tlipkis Exp $
+ * $Id: TestSchedule.java,v 1.3 2004-09-21 21:25:01 dshr Exp $
  */
 
 /*
@@ -77,11 +77,11 @@ public class TestSchedule extends LockssTestCase {
 
   public void testRemoveEvent() {
     Schedule.Event e1 =
-      new Schedule.BackgroundEvent(new MockBackgroundTask(), Deadline.at(3),
+      new Schedule.BackgroundEvent(new MyMockBackgroundTask(), Deadline.at(3),
 				   Schedule.EventType.FINISH);
 
     Schedule.Event e2 =
-      new Schedule.Chunk(new MockStepTask(), Deadline.at(5),
+      new Schedule.Chunk(new MyMockStepTask(), Deadline.at(5),
 			 Deadline.at(10), 8);
 
     // test depends on this
@@ -98,11 +98,11 @@ public class TestSchedule extends LockssTestCase {
 
   public void testRemoveFirstEvent() {
     Schedule.Event e1 =
-      new Schedule.BackgroundEvent(new MockBackgroundTask(), Deadline.at(3),
+      new Schedule.BackgroundEvent(new MyMockBackgroundTask(), Deadline.at(3),
 				   Schedule.EventType.FINISH);
 
     Schedule.Event e2 =
-      new Schedule.Chunk(new MockStepTask(), Deadline.at(5),
+      new Schedule.Chunk(new MyMockStepTask(), Deadline.at(5),
 			 Deadline.at(10), 8);
 
     // test depends on this
@@ -120,7 +120,7 @@ public class TestSchedule extends LockssTestCase {
 
   public void testBackgroundEvent() {
     Deadline d1 = Deadline.at(5);
-    BackgroundTask task = new MockBackgroundTask();
+    BackgroundTask task = new MyMockBackgroundTask();
     Schedule.BackgroundEvent event =
       new Schedule.BackgroundEvent(task, d1, Schedule.EventType.FINISH);
     assertTrue(event.isBackgroundEvent());
@@ -133,7 +133,7 @@ public class TestSchedule extends LockssTestCase {
   public void testChunk() {
     Deadline d1 = Deadline.at(5);
     Deadline d2 = Deadline.at(10);
-    StepTask task = new MockStepTask();
+    StepTask task = new MyMockStepTask();
     Schedule.Chunk chunk = new Schedule.Chunk(task, d1, d2, 8);
     assertEquals(d1, chunk.getStart());
     assertEquals(d2, chunk.getFinish());
@@ -144,14 +144,14 @@ public class TestSchedule extends LockssTestCase {
   }
 
   public void testChunkEquals() {
-    StepTask task = new MockStepTask();
+    StepTask task = new MyMockStepTask();
     Schedule.Chunk chunk1 =
       new Schedule.Chunk(task, Deadline.at(5), Deadline.at(10), 8);
     Schedule.Chunk chunk2 =
       new Schedule.Chunk(task, Deadline.at(5), Deadline.at(10), 8);
     assertEquals(chunk1, chunk2);
     assertNotEquals(chunk1,
-		    new Schedule.Chunk(new MockStepTask(),
+		    new Schedule.Chunk(new MyMockStepTask(),
 				       Deadline.at(5), Deadline.at(10), 8));
     assertNotEquals(chunk1,
 		    new Schedule.Chunk(task,
@@ -165,14 +165,14 @@ public class TestSchedule extends LockssTestCase {
   }
 
   public void testBackgroundEventEquals() {
-    BackgroundTask task = new MockBackgroundTask();
+    BackgroundTask task = new MyMockBackgroundTask();
     Schedule.BackgroundEvent event1 =
       new Schedule.BackgroundEvent(task, Deadline.at(5), Schedule.EventType.FINISH);
     Schedule.BackgroundEvent event2 =
       new Schedule.BackgroundEvent(task, Deadline.at(5), Schedule.EventType.FINISH);
     assertEquals(event1, event2);
     assertNotEquals(event1,
-		    new Schedule.BackgroundEvent(new MockBackgroundTask(),
+		    new Schedule.BackgroundEvent(new MyMockBackgroundTask(),
 						 Deadline.at(5),
 						 Schedule.EventType.FINISH));
     assertNotEquals(event1,
@@ -181,8 +181,8 @@ public class TestSchedule extends LockssTestCase {
 						 Schedule.EventType.FINISH));
   }
 
-  private static class MockStepTask extends StepTask {
-    MockStepTask() {
+  private static class MyMockStepTask extends StepTask {
+    MyMockStepTask() {
       super(Deadline.EXPIRED, Deadline.MAX, 0, null, null);
     }
     public int step(int n) {
@@ -190,8 +190,8 @@ public class TestSchedule extends LockssTestCase {
     }
   }
 
-  private static class MockBackgroundTask extends BackgroundTask {
-    MockBackgroundTask() {
+  private static class MyMockBackgroundTask extends BackgroundTask {
+    MyMockBackgroundTask() {
       super(Deadline.EXPIRED, Deadline.MAX, .5, null);
     }
   }

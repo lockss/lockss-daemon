@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpMailService.java,v 1.3 2004-08-09 02:55:34 tlipkis Exp $
+ * $Id: TestSmtpMailService.java,v 1.4 2004-09-21 21:24:58 dshr Exp $
  */
 
 /*
@@ -47,15 +47,15 @@ public class TestSmtpMailService extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestSMS");
 
   private MockLockssDaemon daemon;
-  MockSmtpMailService svc;
-  MockSmtpClient client;
+  MyMockSmtpMailService svc;
+  MyMockSmtpClient client;
 
   public void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon();
 
-    client = new MockSmtpClient();
-    svc = new MockSmtpMailService(client);
+    client = new MyMockSmtpClient();
+    svc = new MyMockSmtpMailService(client);
     daemon.setMailService(svc);
     daemon.setDaemonInited(true);
     svc.initService(daemon);
@@ -173,13 +173,13 @@ public class TestSmtpMailService extends LockssTestCase {
     }
   }
 
-  static class MockSmtpMailService extends SmtpMailService {
-    MockSmtpClient client;
+  static class MyMockSmtpMailService extends SmtpMailService {
+    MyMockSmtpClient client;
     IOException e;
     boolean threadKicked = false;
     boolean runThread = false;
 
-    MockSmtpMailService(MockSmtpClient client) {
+    MyMockSmtpMailService(MyMockSmtpClient client) {
       this.client = client;
     }
 
@@ -209,7 +209,7 @@ public class TestSmtpMailService extends LockssTestCase {
     }
   }
 
-  static class MockSmtpClient extends SmtpClient {
+  static class MyMockSmtpClient extends SmtpClient {
     volatile String sender;
     volatile String recipient;
     volatile String body;
@@ -220,7 +220,7 @@ public class TestSmtpMailService extends LockssTestCase {
     List senders = new ArrayList();
     RuntimeException e;
 
-    MockSmtpClient() throws IOException {
+    MyMockSmtpClient() throws IOException {
       super();
     }
 

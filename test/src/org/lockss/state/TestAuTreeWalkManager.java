@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuTreeWalkManager.java,v 1.4 2004-08-30 21:53:58 tlipkis Exp $
+ * $Id: TestAuTreeWalkManager.java,v 1.5 2004-09-21 21:25:02 dshr Exp $
  */
 
 /*
@@ -43,9 +43,9 @@ public class TestAuTreeWalkManager extends LockssTestCase {
 
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau = null;
-  private MockAuTreeWalkManager autwm;
-  private MockAuTreeWalkManager.MockTreeWalker walker;
-  private MockSchedService sched;
+  private MyMockAuTreeWalkManager autwm;
+  private MyMockAuTreeWalkManager.MyMockTreeWalker walker;
+  private MyMockSchedService sched;
   private MockNodeManager nodeMgr;
 
   public void setUp() throws Exception {
@@ -63,7 +63,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     nodeMgr = new MockNodeManager();
     theDaemon.setNodeManager(nodeMgr, mau);
 
-    autwm = new MockAuTreeWalkManager(mau);
+    autwm = new MyMockAuTreeWalkManager(mau);
   }
 
   public void tearDown() throws Exception {
@@ -93,7 +93,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
   }
 
   void startMockSched() {
-    sched = new MockSchedService();
+    sched = new MyMockSchedService();
     theDaemon.setSchedService(sched);
   }
 
@@ -105,7 +105,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
   public void testCantSchedule() {
     TimeBase.setSimulated(1000);
     autwm.initService(theDaemon);
-    // MockSchedService.scheduleTask() fails by default
+    // MyMockSchedService.scheduleTask() fails by default
     startMockSched();
     autwm.startService();		// should schedule task
     BackgroundTask task = autwm.curTask;
@@ -224,7 +224,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
   public void testStartPoolThreadThrowsRuntimeException() {
     TimeBase.setSimulated(1000);
     // cause startThread to get a RuntimeException
-    autwm = new MockAuTreeWalkManager(mau) {
+    autwm = new MyMockAuTreeWalkManager(mau) {
 	protected void executeRunner(TreeWalkRunner runner) {
 	  throw new ExpectedRuntimeException();
 	}};
@@ -267,7 +267,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     assertTrue(autwm.aborted);
   }
 
-  class MockAuTreeWalkManager extends AuTreeWalkManager {
+  class MyMockAuTreeWalkManager extends AuTreeWalkManager {
     SimpleBinarySemaphore eventStartSem = new SimpleBinarySemaphore();
     SimpleBinarySemaphore eventFinishSem = new SimpleBinarySemaphore();
 
@@ -281,7 +281,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
 
     SimpleBinarySemaphore lockssRunDoneSem = new SimpleBinarySemaphore();
 
-    MockTreeWalker walker;
+    MyMockTreeWalker walker;
     boolean didFullTreewalk = false;
     Deadline finishBy;
     boolean aborted;
@@ -289,7 +289,7 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     boolean result;
     int numWalks = 0;
 
-    MockAuTreeWalkManager(ArchivalUnit au) {
+    MyMockAuTreeWalkManager(ArchivalUnit au) {
       super(au);
       walkWaitSem.give();
     }
@@ -306,20 +306,20 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     }
 
     protected TreeWalkRunner newRunner(ArchivalUnit au, BackgroundTask task) {
-      return new MockTreeWalkRunner(au, task);
+      return new MyMockTreeWalkRunner(au, task);
     }
 
     protected TreeWalker newWalker(LockssDaemon daemon, ArchivalUnit au) {
-      walker = new MockTreeWalker(daemon, au);
+      walker = new MyMockTreeWalker(daemon, au);
       return walker;
     }
 
-    MockTreeWalker getWalker() {
+    MyMockTreeWalker getWalker() {
       return walker;
     }
 
-    class MockTreeWalkRunner extends TreeWalkRunner {
-      public MockTreeWalkRunner(ArchivalUnit au, BackgroundTask task) {
+    class MyMockTreeWalkRunner extends TreeWalkRunner {
+      public MyMockTreeWalkRunner(ArchivalUnit au, BackgroundTask task) {
 	super(au, task);
       }
 
@@ -329,11 +329,11 @@ public class TestAuTreeWalkManager extends LockssTestCase {
       }
     }
 
-    class MockTreeWalker implements TreeWalker {
+    class MyMockTreeWalker implements TreeWalker {
       LockssWatchdog wdog;
       ArchivalUnit au;
 
-      MockTreeWalker(LockssDaemon daemon, ArchivalUnit au) {
+      MyMockTreeWalker(LockssDaemon daemon, ArchivalUnit au) {
 	this.au = au;
       }
 
@@ -365,10 +365,10 @@ public class TestAuTreeWalkManager extends LockssTestCase {
     }
   }
 
-  class MockSchedService extends SchedService {
+  class MyMockSchedService extends SchedService {
     List schedResults;
 
-    MockSchedService() {
+    MyMockSchedService() {
     }
 
     public void startService() {

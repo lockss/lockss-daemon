@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.4 2004-09-01 18:01:49 tlipkis Exp $
+ * $Id: TestSortScheduler.java,v 1.5 2004-09-21 21:25:01 dshr Exp $
  */
 
 /*
@@ -74,14 +74,14 @@ public class TestSortScheduler extends LockssTestCase {
 
 
   static StepTask taskBefore(long deadline, int duration) {
-    return new MockStepTask(Deadline.at(0), Deadline.at(deadline),
+    return new MyMockStepTask(Deadline.at(0), Deadline.at(deadline),
 			   duration, null, null);
   }
 
   static StepTask taskBetween(long minStart,
 				 long deadlineAt,
 				 int duration) {
-    return new MockStepTask(Deadline.at(minStart),
+    return new MyMockStepTask(Deadline.at(minStart),
 			   Deadline.at(deadlineAt),
 			   duration, null, null);
   }
@@ -90,7 +90,7 @@ public class TestSortScheduler extends LockssTestCase {
 				 long minStart,
 				 long deadlineAt,
 				 int duration) {
-    return new MockStepTask(Deadline.at(minStart), Deadline.at(deadlineAt),
+    return new MyMockStepTask(Deadline.at(minStart), Deadline.at(deadlineAt),
 			   duration, null, cookie);
   }
 
@@ -220,11 +220,11 @@ public class TestSortScheduler extends LockssTestCase {
     assertEmpty(sched.getEvents());
   }
 
-  class MockBTS1 extends SortScheduler {
+  class MyMockBTS1 extends SortScheduler {
     int both[];
     int ix;
 
-    MockBTS1(Collection tasks) {
+    MyMockBTS1(Collection tasks) {
       super(tasks);
       both = new int[tasks.size() * 2];
       ix = 0;
@@ -242,7 +242,7 @@ public class TestSortScheduler extends LockssTestCase {
   }
 
   public void testScheduleAll() {
-    MockBTS1 sched = new MockBTS1(ListUtil.list(t1, t2, t6, t7));
+    MyMockBTS1 sched = new MyMockBTS1(ListUtil.list(t1, t2, t6, t7));
     sched.initIntervals();
     assertTrue(sched.initIntervalTaskLists());
     SortScheduler.SchedInterval intervals[] = sched.intervals;
@@ -688,8 +688,8 @@ public class TestSortScheduler extends LockssTestCase {
     return res;
   }
 
-  static class MockStepTask extends StepTask {
-    public MockStepTask(Deadline earliestStart,
+  static class MyMockStepTask extends StepTask {
+    public MyMockStepTask(Deadline earliestStart,
 			Deadline latestFinish,
 			long estimatedDuration,
 			TaskCallback callback,

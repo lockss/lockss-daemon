@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.18 2004-09-01 02:22:26 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.19 2004-09-21 21:24:57 dshr Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setParser(parser);
     Properties p = new Properties();
@@ -150,7 +150,7 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     spec = new CrawlSpec(urls, ListUtil.list(startUrl), crawlRule, 1);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setParser(parser);
 
@@ -172,7 +172,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void testOverwritesStartingUrlsMultipleLevels() {
     spec = new CrawlSpec(startUrls, startUrls, crawlRule, 2);
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(1));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -600,7 +600,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     //set Crawler
     crawler = new NewContentCrawler(mmau, spec, new MockAuState());
     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(
-        new MockPermissionChecker(passPermissionCheck));
+        new MyMockPermissionChecker(passPermissionCheck));
 
     //set parser
     mmau.setParser(parser);
@@ -705,10 +705,10 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
   }
 
-  private class MockPermissionChecker implements PermissionChecker{
+  private class MyMockPermissionChecker implements PermissionChecker{
     int numPermissionGranted=0;
 
-    MockPermissionChecker(int numPermissionGranted) {
+    MyMockPermissionChecker(int numPermissionGranted) {
       this.numPermissionGranted = numPermissionGranted;
     }
 

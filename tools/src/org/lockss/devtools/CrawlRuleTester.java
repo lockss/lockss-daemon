@@ -179,7 +179,7 @@ public class CrawlRuleTester extends Thread {
       if (type == null || !type.toLowerCase().startsWith("text/html"))
         return;
       InputStreamReader reader = new InputStreamReader(conn.getInputStream());
-      MockCachedUrl mcu = new MockCachedUrl(srcUrl.toString(), reader);
+      MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
       GoslingHtmlParser parser = new GoslingHtmlParser();
       parser.parseForUrls(mcu, new MyFoundUrlCallback());
     }
@@ -299,12 +299,12 @@ public class CrawlRuleTester extends Thread {
     }
   }
 
-  class MockCachedUrl implements CachedUrl {
+  class MyMockCachedUrl implements CachedUrl {
     private String url;
     private boolean doesExist = false;
     private Reader reader = null;
 
-    public MockCachedUrl(String url, Reader reader) {
+    public MyMockCachedUrl(String url, Reader reader) {
       this.url = url;
       this.reader = reader;
     }
@@ -366,7 +366,7 @@ public class CrawlRuleTester extends Thread {
 
     public String toString() {
       StringBuffer sb = new StringBuffer(url.length() + 17);
-      sb.append("[MockCachedUrl: ");
+      sb.append("[MyMockCachedUrl: ");
       sb.append(url);
       sb.append("]");
       return sb.toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.21 2004-09-15 00:32:48 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.22 2004-09-21 21:24:57 dshr Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawler = new NewContentCrawler(mau, spec, aus);
     // store the orignal checker and replace with a mock checker
     checker = (PermissionChecker)((CrawlerImpl)crawler).lockssCheckers.get(0);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(true));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(true));
 //     crawler = new MyCrawler(mau, spec, aus);
 
     mau.setParser(parser);
@@ -316,8 +316,8 @@ public class TestCrawlerImpl extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     cus.addUrl(startUrl, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    MockUnretryableCacheException exception =
-      new MockUnretryableCacheException("Test exception");
+    MyMockUnretryableCacheException exception =
+      new MyMockUnretryableCacheException("Test exception");
     cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
@@ -340,7 +340,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     cus.addUrl(startUrl, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    MockCacheException exception = new MockCacheException("Test exception");
+    MyMockCacheException exception = new MyMockCacheException("Test exception");
     cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
 
@@ -352,8 +352,8 @@ public class TestCrawlerImpl extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     cus.addUrl(startUrl, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    MockRetryableCacheException exception =
-      new MockRetryableCacheException("Test exception");
+    MyMockRetryableCacheException exception =
+      new MyMockRetryableCacheException("Test exception");
     cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
     crawlRule.addUrlToCrawl(url1);
 
@@ -367,8 +367,8 @@ public class TestCrawlerImpl extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     cus.addUrl(startUrl, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    MockUnretryableCacheException exception =
-      new MockUnretryableCacheException("Test exception");
+    MyMockUnretryableCacheException exception =
+      new MyMockUnretryableCacheException("Test exception");
     cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES-1);
     crawlRule.addUrlToCrawl(url1);
 
@@ -391,7 +391,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     cus.addUrl(startUrl, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
     cus.addUrl(url1,
-	       new MockRetryableCacheException("Test exception"),
+	       new MyMockRetryableCacheException("Test exception"),
 	       retryNum-1);
     crawlRule.addUrlToCrawl(url1);
 
@@ -545,7 +545,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 
     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(true));
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(true));
 
     mau.setParser(parser);
     crawler.doCrawl();
@@ -582,10 +582,10 @@ public class TestCrawlerImpl extends LockssTestCase {
     }
   }
 
-  private class MockPermissionChecker implements PermissionChecker{
+  private class MyMockPermissionChecker implements PermissionChecker{
     boolean permission = false;
 
-    MockPermissionChecker(boolean permission) {
+    MyMockPermissionChecker(boolean permission) {
       this.permission = permission;
     }
 
@@ -603,9 +603,9 @@ public class TestCrawlerImpl extends LockssTestCase {
       this.permission = permission;
     }
   }
-  private class MockCacheException
+  private class MyMockCacheException
     extends CacheException {
-    public MockCacheException(String msg) {
+    public MyMockCacheException(String msg) {
       super(msg);
     }
     public void setFailing() {
@@ -613,9 +613,9 @@ public class TestCrawlerImpl extends LockssTestCase {
     }
   }
 
-  private class MockRetryableCacheException
+  private class MyMockRetryableCacheException
     extends CacheException.RetryableException {
-    public MockRetryableCacheException(String msg) {
+    public MyMockRetryableCacheException(String msg) {
       super(msg);
     }
 //     public void setFailing() {
@@ -623,9 +623,9 @@ public class TestCrawlerImpl extends LockssTestCase {
 //     }
   }
 
-  private class MockUnretryableCacheException
+  private class MyMockUnretryableCacheException
     extends CacheException.UnretryableException {
-    public MockUnretryableCacheException(String msg) {
+    public MyMockUnretryableCacheException(String msg) {
       super(msg);
     }
 //     public void setFailing() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.49 2004-09-21 02:04:40 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.50 2004-09-21 21:24:59 dshr Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class TestPluginManager extends LockssTestCase {
 
     theDaemon = new MyMockLockssDaemon();
 
-    mgr = new MockPluginManager();
+    mgr = new MyMockPluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
 
@@ -218,7 +218,7 @@ public class TestPluginManager extends LockssTestCase {
     assertTrue(mgr.ensurePluginLoaded(key));
     Plugin p = mgr.getPlugin(key);
     assertTrue(p.toString(), p instanceof DefinablePlugin);
-    MockConfigurablePlugin mcpi = (MockConfigurablePlugin)mgr.getPlugin(key);
+    MyMockConfigurablePlugin mcpi = (MyMockConfigurablePlugin)mgr.getPlugin(key);
     assertNotNull(mcpi);
     List initArgs = mcpi.getInitArgs();
     assertEquals(1, initArgs.size());
@@ -395,13 +395,13 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
-  static class MockPluginManager extends PluginManager {
+  static class MyMockPluginManager extends PluginManager {
     protected String getConfigurablePluginName() {
-      return MockConfigurablePlugin.class.getName();
+      return MyMockConfigurablePlugin.class.getName();
     }
   }
 
-  static class MockConfigurablePlugin extends DefinablePlugin {
+  static class MyMockConfigurablePlugin extends DefinablePlugin {
     private List initArgs = new ArrayList();
 
     public void initPlugin(LockssDaemon daemon, String extMapName, ClassLoader loader)
@@ -667,11 +667,11 @@ public class TestPluginManager extends LockssTestCase {
   public void testLoadLoadablePlugin() throws Exception {
     prepareLoadablePluginTests();
     String pluginKey = "org|lockss|test|MockConfigurablePlugin";
-    // Set up a MockRegistryArchivalUnit with the right data.
+    // Set up a MyMockRegistryArchivalUnit with the right data.
     List plugins =
       ListUtil.list(pluginJar);
     List registryAus =
-      ListUtil.list(new MockRegistryArchivalUnit(plugins));
+      ListUtil.list(new MyMockRegistryArchivalUnit(plugins));
     assertNull(mgr.getPlugin(pluginKey));
     mgr.processRegistryAus(registryAus);
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
@@ -688,12 +688,12 @@ public class TestPluginManager extends LockssTestCase {
   /**
    * a mock Archival Unit used for testing loadable plugin loading.
    */
-  private static class MockRegistryArchivalUnit extends MockArchivalUnit {
-    private MockRegistryCachedUrlSet cus;
+  private static class MyMockRegistryArchivalUnit extends MockArchivalUnit {
+    private MyMockRegistryCachedUrlSet cus;
 
-    public MockRegistryArchivalUnit(List jarFiles) {
+    public MyMockRegistryArchivalUnit(List jarFiles) {
       super(null);
-      cus = new MockRegistryCachedUrlSet();
+      cus = new MyMockRegistryCachedUrlSet();
       int n = 0;
       for (Iterator iter = jarFiles.iterator(); iter.hasNext(); ) {
 	n++;
@@ -710,10 +710,10 @@ public class TestPluginManager extends LockssTestCase {
   /**
    * a mock CachedUrlSet used for testing loadable plugin loading.
    */
-  private static class MockRegistryCachedUrlSet extends MockCachedUrlSet {
+  private static class MyMockRegistryCachedUrlSet extends MockCachedUrlSet {
     List cuList;
 
-    public MockRegistryCachedUrlSet() {
+    public MyMockRegistryCachedUrlSet() {
       cuList = new ArrayList();
     }
 
