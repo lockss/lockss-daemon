@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.33 2003-06-26 01:05:24 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.34 2003-07-14 06:44:18 tlipkis Exp $
  */
 
 /*
@@ -85,6 +85,8 @@ public class LockssDaemon {
   public static String URL_MANAGER = "UrlManager";
 
   /* the default classes that represent our managers */
+  private static String DEFAULT_CONFIG_MANAGER =
+      "org.lockss.daemon.ConfigManager";
   private static String DEFAULT_ACTIVITY_REGULATOR =
       "org.lockss.daemon.ActivityRegulatorImpl";
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
@@ -265,6 +267,15 @@ public class LockssDaemon {
   public void startAUManagers(ArchivalUnit au) {
     log.debug2("Adding au-specific managers for au '"+au+"'");
     auSpecificManagers.startAUManagers(au);
+  }
+
+  /**
+   * Return the config manager instance.  Special case.
+   * @return the ConfigManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public ConfigManager getConfigManager() {
+    return ConfigManager.getConfigManager();
   }
 
   /**
@@ -483,9 +494,11 @@ public class LockssDaemon {
    * init our configuration and extract any parameters we will use locally
    */
   protected void initProperties() {
-    Configuration.startHandler(propUrls);
+    ConfigManager configMgr = ConfigManager.makeConfigManager(propUrls);
+    configMgr.initService(this);
+    configMgr.startService();
     log.info("Waiting for config");
-    Configuration.waitConfig();
+    configMgr.waitConfig();
     log.info("Config loaded");
 
     prevExitOnce = Configuration.getBooleanParam(PARAM_DAEMON_EXIT_ONCE,
