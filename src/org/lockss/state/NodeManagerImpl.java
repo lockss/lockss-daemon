@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.146 2003-07-17 22:58:48 clairegriffin Exp $
+ * $Id: NodeManagerImpl.java,v 1.147 2003-07-22 01:19:12 eaalto Exp $
  */
 
 /*
@@ -538,8 +538,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    * @param results the PollTally
    * @return true iff a repair was scheduled
    */
-  boolean handleWrongNames(Iterator masterIt, List localList, NodeState nodeState,
-                           Tallier results) {
+  boolean handleWrongNames(Iterator masterIt, List localList,
+                           NodeState nodeState, Tallier results) {
     // iterate through master list
     Collection repairCol = new ArrayList();
     while (masterIt.hasNext()) {
@@ -605,7 +605,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     // schedule repair crawls if needed
     boolean repairsDone = false;
     if (repairCol.size() > 0) {
-      markNodesForRepair(repairCol, results.getPollKey());
+      markNodesForRepair(repairCol, results.getPollKey(),
+                         results.getCachedUrlSet(), true);
       repairsDone = true;
     }
 
@@ -794,9 +795,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       if (pollState.getStatus() == PollState.REPAIRING) {
         logger.debug2("lost repair name poll, state = unrepairable");
         // if repair poll, can't be repaired and we leave it in our damage table
-        //XXX currently, this makes it difficult to do multiple repairs, since
-        // the poll calls only one repair, and repeats only once.
-        // the treewalk will have to handle the rest
         pollState.status = PollState.UNREPAIRABLE;
       } else {
         pollState.status = PollState.REPAIRING;
@@ -980,10 +978,9 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
         //schedule repair, replay poll (if exists)
         if (!reportOnly) {
           logger.debug2("scheduling repair");
-          //XXX make new poll ahead of time?
           String pollKey = (results==null ? null : results.getPollKey());
           markNodesForRepair(ListUtil.list(nodeState.getCachedUrlSet().getUrl()),
-                             pollKey);
+                             pollKey, nodeState.getCachedUrlSet(), false);
         }
         return true;
       case NodeState.UNREPAIRABLE_SNCUSS:
@@ -1296,7 +1293,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return PollState.ERR_UNDEFINED;
   }
 
-  private void markNodesForRepair(Collection urls, String pollKey) {
+  private void markNodesForRepair(Collection urls, String pollKey,
+                                  CachedUrlSet cus, boolean isNamePoll) {
     if (pollKey!=null) {
       logger.debug2("suspending poll " + pollKey);
       pollManager.suspendPoll(pollKey);
@@ -1309,9 +1307,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     } else {
       logger.debug2("scheduling "+urls.size()+" repairs");
     }
+
+    PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll);
     theDaemon.getCrawlManager().startRepair(managedAu, urls,
 					    new ContentRepairCallback(),
-					    pollKey);
+					    cookie);
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
@@ -1491,21 +1491,54 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
             ((status==PollState.WON) || (status==PollState.LOST)));
   }
 
-
-  static class ContentRepairCallback
-      implements CrawlManager.Callback {
+  class ContentRepairCallback implements CrawlManager.Callback {
     /**
      * @param success whether the repair was successful or not
      * @param cookie object used by callback to designate which repair
      * attempt this is
      */
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
-      logger.debug("Content crawl completed repair on " + cookie);
-      if (cookie!=null) {
-        pollManager.resumePoll(success, cookie);
+      PollCookie pollCookie = (PollCookie)cookie;
+      logger.debug("Content crawl completed repair on " +
+                   pollCookie.cus.getUrl());
+      // set state properly
+      NodeState state = getNodeState(pollCookie.cus);
+      if (pollCookie.isNamePoll) {
+        state.setState(NodeState.WRONG_NAMES);
       } else {
-        //XXX recall SNCUSS poll
+        state.setState(NodeState.POSSIBLE_DAMAGE_HERE);
       }
+
+      // resume poll (or call new one)
+      if (pollCookie.pollKey!=null) {
+        logger.debug("Resuming poll...");
+        pollManager.resumePoll(success, pollCookie.pollKey);
+      } else {
+        if (pollCookie.isNamePoll) {
+          logger.debug("Calling new name poll...");
+          callNamePoll(new PollSpec(pollCookie.cus));
+        } else {
+          logger.debug("Calling new SNCUSS poll...");
+          try {
+            callSingleNodeContentPoll(pollCookie.cus);
+          } catch (IOException ie) {
+            logger.warning("Couldn't recall poll: "+ie);
+            // the treewalk will recall this if it happens
+          }
+        }
+      }
+    }
+  }
+
+  static class PollCookie {
+    CachedUrlSet cus;
+    String pollKey;
+    boolean isNamePoll;
+
+    PollCookie(CachedUrlSet cus, String pollKey, boolean isNamePoll) {
+      this.cus = cus;
+      this.pollKey = pollKey;
+      this.isNamePoll = isNamePoll;
     }
   }
 
