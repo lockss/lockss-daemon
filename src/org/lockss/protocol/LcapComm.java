@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.13 2002-12-18 23:25:03 tal Exp $
+ * $Id: LcapComm.java,v 1.14 2002-12-19 00:05:46 tal Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class LcapComm {
     try {
       InetAddress local = InetAddress.getLocalHost();
       byte[] addr = local.getAddress();
-      return addr[3] + 1234;
+      return ((int)addr[3]) + 1234;
     } catch (UnknownHostException e) {
       log.error("Can't find local IP address, so can't use ip-addr-derived multicast port", e);
       return -1;
