@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUrl.java,v 1.2 2003-02-20 22:26:51 tal Exp $
+ * $Id: TestAuUrl.java,v 1.3 2003-02-25 23:22:02 tal Exp $
  */
 
 /*
@@ -67,5 +67,14 @@ public class TestAuUrl extends LockssTestCase {
 
     URL au = AuUrl.fromAuId(testConfigString);
     assertEquals(testConfigString, AuUrl.getAuId(au));
+  }
+
+  public void testIsAuUrl() {
+    assertTrue(AuUrl.isAuUrl("lockssau://foo"));
+    assertTrue(AuUrl.isAuUrl("LOCKSSAU://foo"));
+    assertTrue(AuUrl.isAuUrl("lockssau:"));
+    assertTrue(AuUrl.isAuUrl("LOCKSSAU:"));
+    assertTrue(! AuUrl.isAuUrl("lockssau"));
+    assertTrue(! AuUrl.isAuUrl("http://foo"));
   }
 }

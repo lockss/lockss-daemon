@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.2 2003-02-20 22:26:51 tal Exp $
+* $Id: AuUrl.java,v 1.3 2003-02-25 23:22:02 tal Exp $
  */
 
 /*
@@ -44,6 +44,8 @@ import java.net.*;
 public class AuUrl {
 
   public static final String PROTOCOL = "lockssau";
+  public static final String PROTOCOL_COLON = PROTOCOL + ":";
+  static final int cmp_len = PROTOCOL_COLON.length();
 
   /** Set up the URLStreamHandlerFactory that understands the LOCKSSAU:
    * protocol */
@@ -57,6 +59,14 @@ public class AuUrl {
    */
   public static boolean isAuUrl(URL url) {
     return PROTOCOL.equalsIgnoreCase(url.getProtocol());
+  }
+
+  /** Return true if the supplied URL string is an AuUrl.
+   * @param url the string to test.
+   * @return true if the protocol in the url is LOCKSS:
+   */
+  public static boolean isAuUrl(String url) {
+    return PROTOCOL_COLON.regionMatches(true, 0, url, 0, cmp_len);
   }
 
   /** Create an AuUrl from an AU Id.  The Id string may contain any
