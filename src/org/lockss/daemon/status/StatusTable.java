@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.21 2003-04-05 00:55:55 tal Exp $
+ * $Id: StatusTable.java,v 1.22 2003-05-28 16:12:58 tal Exp $
  */
 
 /*
@@ -40,6 +40,10 @@ import org.lockss.util.*;
  * Returned by {@link StatusService#getTable(String, String)} 
  */
 public class StatusTable {
+  /** Adding this key to a row, with a non-null value, requests a separator
+   * before the row. */
+  public static Object ROW_SEPARATOR = new Object();
+
   private String name;
   private String key;
   private String title;
