@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.38 2003-04-30 04:55:39 tal Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.39 2003-04-30 22:36:42 aalto Exp $
  */
 
 /*
@@ -167,6 +167,25 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public long estimatedHashDuration() {
+    // if this is a single node spec, don't use standard estimation
+    if (spec instanceof SingleNodeCachedUrlSetSpec) {
+      long contentSize = 0;
+      try {
+        contentSize = repository.getNode(spec.getUrl()).getContentSize();
+        MessageDigest hasher = LcapMessage.getDefaultHasher();
+        CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
+        SystemMetrics metrics = SystemMetrics.getSystemMetrics();
+        long bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
+        if (bytesPerMs == 0) {
+          logger.warning("Couldn't estimate hash time: getting 0");
+          return contentSize / BYTES_PER_MS_DEFAULT;
+        }
+        return contentSize / bytesPerMs;
+      } catch (Exception e) {
+        logger.error("Couldn't finish estimating hash time: " + e);
+        return contentSize / BYTES_PER_MS_DEFAULT;
+      }
+    }
     long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
     if (lastDuration>0) return lastDuration;
     else {
@@ -187,11 +206,11 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       } catch (IOException ie) {
         logger.error("Couldn't finish estimating hash time: " + ie);
-        return totalNodeSize * BYTES_PER_MS_DEFAULT;
+        return totalNodeSize / BYTES_PER_MS_DEFAULT;
       }
       if (bytesPerMs == 0) {
         logger.warning("Couldn't estimate hash time: getting 0");
-        return totalNodeSize * BYTES_PER_MS_DEFAULT;
+        return totalNodeSize / BYTES_PER_MS_DEFAULT;
       }
       lastDuration = (long) (totalNodeSize / bytesPerMs);
       // store hash estimate

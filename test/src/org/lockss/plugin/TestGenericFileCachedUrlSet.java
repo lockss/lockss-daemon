@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.32 2003-04-29 01:36:47 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.33 2003-04-30 22:36:42 aalto Exp $
  */
 
 /*
@@ -378,7 +378,25 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
                  nodeMan.getNodeState(fileSet).getAverageHashDuration());
   }
 
-  public void testIrregularHashEstimation() throws Exception {
+  public void testSingleNodeHashEstimation() throws Exception {
+    byte[] bytes = new byte[1000];
+    Arrays.fill(bytes, (byte)1);
+    String testString = new String(bytes);
+    // check that estimation is special for single nodes, and isn't stored
+    createLeaf("http://www.example.com/testDir", testString, null);
+    CachedUrlSetSpec sSpec =
+        new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(sSpec);
+    long estimate = fileSet.estimatedHashDuration();
+    assertTrue(estimate > 0);
+    long expectedEstimate = 1000 /
+        SystemMetrics.getSystemMetrics().getBytesPerMsHashEstimate();
+    assertEquals(expectedEstimate, estimate);
+    // check that estimation isn't stored for single node sets
+    assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
+  }
+
+  public void testIrregularHashStorage() throws Exception {
     // check that estimation isn't changed for single node sets
     createLeaf("http://www.example.com/testDir", null, null);
     CachedUrlSetSpec sSpec =
