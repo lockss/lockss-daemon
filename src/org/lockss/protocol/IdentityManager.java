@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.11 2003-01-29 20:19:51 claire Exp $
+ * $Id: IdentityManager.java,v 1.12 2003-01-29 21:05:13 claire Exp $
  */
 
 /*
@@ -246,8 +246,10 @@ public class IdentityManager {
         iddbDir.mkdirs();
       }
       File iddbFile = new File(iddbDir, IDDB_FILENAME);
-
-      if((iddbFile != null) && iddbFile.createNewFile() && iddbFile.canWrite()) {
+      if(!iddbFile.exists()) {
+        iddbFile.createNewFile();
+      }
+      if((iddbFile != null) && iddbFile.canWrite()) {
         IdentityListBean idlb = getIdentityListBean();
         Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
         marshaller.setMapping(getMapping());
