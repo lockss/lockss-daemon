@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.7 2004-03-27 02:33:46 eaalto Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.8 2004-04-27 19:39:23 tlipkis Exp $
  */
 
 /*
@@ -132,19 +132,17 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     assertFalse(setIt.hasNext());
   }
 
-  public void testFlatSetIteratorThrowsOnBogusURL() throws Exception {
-    createLeaf("http://www.example.com/testDir/leaf4", null, null);
-
-    CachedUrlSetSpec rSpec =
-        new RangeCachedUrlSetSpec("no_such_protoco://www.example.com/testDir");
-    CachedUrlSet fileSet = plugin.makeCachedUrlSet(mau, rSpec);
-    try {
-      fileSet.flatSetIterator();
-      fail("Call to flatSetIterator() should have thrown when given "
-	   +"malformed url");
-    } catch(RuntimeException e){
-    }
-  }
+//   public void testFlatSetIteratorThrowsOnBogusURL() throws Exception {
+//     CachedUrlSetSpec rSpec =
+//         new RangeCachedUrlSetSpec("no_such_protoco://www.example.com/testDir");
+//     CachedUrlSet fileSet = plugin.makeCachedUrlSet(mau, rSpec);
+//     try {
+//       fileSet.flatSetIterator();
+//       fail("Call to flatSetIterator() should have thrown when given "
+// 	   +"malformed url");
+//     } catch(RuntimeException e){
+//     }
+//   }
 
   public void testFlatSetIteratorClassCreation() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
@@ -255,6 +253,38 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
       fail("Bogus url should have caused a RuntimeException");
     } catch (RuntimeException e){
     }
+  }
+
+  // ensure accesses have proper null (empty) bahavior on non-existent nodes
+  public void testNonExistentNode() throws Exception {
+    String url = "http://no.such.host/foopath";
+    assertNull(repo.getNode(url));
+    doNonExistentNode(new RangeCachedUrlSetSpec(url), false);
+    doNonExistentNode(new RangeCachedUrlSetSpec(url, "a", "z"), true);
+    doNonExistentNode(new SingleNodeCachedUrlSetSpec(url), false);
+    // make sure it didn't get created by one of the tests
+    assertNull(repo.getNode(url));
+  }
+
+  void doNonExistentNode(CachedUrlSetSpec spec, boolean isRanged)
+      throws Exception {
+    CachedUrlSet cus = plugin.makeCachedUrlSet(mau, spec);
+
+    Iterator flatIter = cus.flatSetIterator();
+    assertFalse(flatIter.hasNext());
+
+    Iterator hashIter = cus.contentHashIterator();
+    if (!isRanged) {
+      assertTrue(hashIter.hasNext());
+      CachedUrlSet first = (CachedUrlSet)hashIter.next();
+      assertEquals(cus, first);
+    }
+    assertFalse(hashIter.hasNext());
+
+    assertFalse(cus.isLeaf());
+    assertFalse(cus.hasContent());
+    // Estimate won't be 0 because of padding.  Just ensure it doesn't throw
+    cus.estimatedHashDuration();
   }
 
   public void testHashIteratorVariations() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.10 2004-03-27 02:34:51 eaalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.11 2004-04-27 19:39:23 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
  // int contentNodeCount = 0;
   long totalNodeSize = 0;
   protected ArchivalUnit au;
+  protected Plugin plugin;
   protected CachedUrlSetSpec spec;
 
   /**
@@ -74,7 +75,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   public BaseCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
     this.au = owner;
-    theDaemon = owner.getPlugin().getDaemon();
+    plugin = owner.getPlugin();
+    theDaemon = plugin.getDaemon();
     repository = theDaemon.getLockssRepository(owner);
     nodeManager = theDaemon.getNodeManager(owner);
     hashService = theDaemon.getHashService();
@@ -97,7 +99,16 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean hasContent() {
-    CachedUrl cu = au.getPlugin().makeCachedUrl(this, getUrl());
+    try {
+      RepositoryNode node = repository.getNode(getUrl());
+      if (node == null) {
+	// avoid creating node just to answer no.
+	return false;
+      }
+    } catch (MalformedURLException e) {
+      return false;
+    }
+    CachedUrl cu = plugin.makeCachedUrl(this, getUrl());
     return (cu == null ? false : cu.hasContent());
   }
 
@@ -129,7 +140,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
 
   public boolean isLeaf() {
     try {
-      return repository.getNode(getUrl()).isLeaf();
+      RepositoryNode node = repository.getNode(getUrl());
+      return (node == null) ? false : node.isLeaf();
     } catch (MalformedURLException mue) {
       logger.error("Bad url in spec: " + getUrl());
       throw new LockssRepository.RepositoryStateException("Bad url in spec: "
@@ -145,17 +157,18 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     String prefix = spec.getUrl();
     try {
       RepositoryNode intNode = repository.getNode(prefix);
+      if (intNode == null) {
+	return CollectionUtil.EMPTY_ITERATOR;
+      }
       Iterator children = intNode.listChildren(spec, false);
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
         if (child.isLeaf()) {
-          Plugin plugin = au.getPlugin();
           CachedUrl newUrl = plugin.makeCachedUrl(this, child.getNodeUrl());
           flatSet.add(newUrl);
         } else {
           CachedUrlSetSpec rSpec =
             new RangeCachedUrlSetSpec(child.getNodeUrl());
-          Plugin plugin = au.getPlugin();
           CachedUrlSet newSet = plugin.makeCachedUrlSet(au, rSpec);
           flatSet.add(newSet);
         }
@@ -228,14 +241,22 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   }
 
   private long makeHashEstimate() {
+    RepositoryNode node;
+    try {
+      node = repository.getNode(spec.getUrl());
+      if (node == null) {
+	return 0;
+      }
+    } catch (MalformedURLException e) {
+      return 0;
+    }
     // if this is a single node spec, don't use standard estimation
     if (spec.isSingleNode()) {
       long contentSize = 0;
+      if (!node.hasContent()) {
+	return 0;
+      }
       try {
-        RepositoryNode node = repository.getNode(spec.getUrl());
-        if (!node.hasContent()) {
-          return 0;
-        }
         contentSize = node.getContentSize();
         MessageDigest hasher = LcapMessage.getDefaultHasher();
         CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
@@ -251,38 +272,34 @@ public class BaseCachedUrlSet implements CachedUrlSet {
         return contentSize / BYTES_PER_MS_DEFAULT;
       }
     }
-    long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
-    if (lastDuration>0) {
-      return lastDuration;
-    } else {
-      NodeState state = nodeManager.getNodeState(this);
-      if (state!=null) {
-        lastDuration = state.getAverageHashDuration();
-        if (lastDuration>0) {
-          return lastDuration;
-        }
+    NodeState state = nodeManager.getNodeState(this);
+    long lastDuration;
+    if (state!=null) {
+      lastDuration = state.getAverageHashDuration();
+      if (lastDuration>0) {
+	return lastDuration;
       }
-      // determine total size
-      calculateNodeSize();
-      MessageDigest hasher = LcapMessage.getDefaultHasher();
-      CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
-      long bytesPerMs = 0;
-      SystemMetrics metrics = theDaemon.getSystemMetrics();
-      try {
-        bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
-      } catch (IOException ie) {
-        logger.error("Couldn't finish estimating hash time: " + ie);
-        return totalNodeSize / BYTES_PER_MS_DEFAULT;
-      }
-      if (bytesPerMs == 0) {
-        logger.warning("Couldn't estimate hash time: getting 0");
-        return totalNodeSize / BYTES_PER_MS_DEFAULT;
-      }
-      lastDuration = (long) (totalNodeSize / bytesPerMs);
-      // store hash estimate
-      nodeManager.hashFinished(this, lastDuration);
-      return lastDuration;
     }
+    // determine total size
+    calculateNodeSize();
+    MessageDigest hasher = LcapMessage.getDefaultHasher();
+    CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
+    long bytesPerMs = 0;
+    SystemMetrics metrics = theDaemon.getSystemMetrics();
+    try {
+      bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
+    } catch (IOException ie) {
+      logger.error("Couldn't finish estimating hash time: " + ie);
+      return totalNodeSize / BYTES_PER_MS_DEFAULT;
+    }
+    if (bytesPerMs == 0) {
+      logger.warning("Couldn't estimate hash time: getting 0");
+      return totalNodeSize / BYTES_PER_MS_DEFAULT;
+    }
+    lastDuration = (long) (totalNodeSize / bytesPerMs);
+    // store hash estimate
+    nodeManager.hashFinished(this, lastDuration);
+    return lastDuration;
   }
 
   protected CachedUrlSetHasher contentHasherFactory(CachedUrlSet owner,
@@ -297,7 +314,8 @@ public class BaseCachedUrlSet implements CachedUrlSet {
   void calculateNodeSize() {
     if (totalNodeSize==0) {
       try {
-        totalNodeSize = repository.getNode(spec.getUrl()).getTreeContentSize(spec);
+	RepositoryNode node = repository.getNode(getUrl());
+        totalNodeSize = node.getTreeContentSize(spec);
       } catch (MalformedURLException mue) {
         // this shouldn't happen
         logger.error("Malformed URL exception on "+spec.getUrl());
