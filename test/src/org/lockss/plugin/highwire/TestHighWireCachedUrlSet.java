@@ -41,17 +41,18 @@ import org.lockss.test.*;
 
 
 public class TestHighWireCachedUrlSet extends TestCase{
-  public TestHighWireCachedUrlSet(String msg){
+  public TestHighWireCachedUrlSet(String msg) {
     super(msg);
   }
-
-  public void testNullCUSSInConstructor(){
+  
+  public void testNullCUSSInConstructor() {
     CachedUrlSetSpec cuss = null;
-    try{
-      CachedUrlSet cus = new HighWireCachedUrlSet(new MockArchivalUnit(null), cuss);
-    }
-    catch (NullPointerException npe){
-      fail("Calling new HighWireCachedUrlSet with a null CachedUrlSetSpec caused a null pointer exception");
+    try {
+      CachedUrlSet cus = 
+	new HighWireCachedUrlSet(new MockArchivalUnit(), cuss);
+    } catch (NullPointerException npe) {
+      fail("Calling new HighWireCachedUrlSet with a null "+
+	   "CachedUrlSetSpec caused a null pointer exception");
     }
   }
 }
