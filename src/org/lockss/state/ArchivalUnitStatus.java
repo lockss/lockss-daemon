@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.9 2004-04-29 10:13:49 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.10 2004-05-04 22:20:33 tlipkis Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
     new StatusTable.DisplayedValue("Damaged");
 
   static {
-    DAMAGE_STATE_OK.setColor("green");
+//     DAMAGE_STATE_OK.setColor("green");
     DAMAGE_STATE_DAMAGED.setColor("red");
   }
 
