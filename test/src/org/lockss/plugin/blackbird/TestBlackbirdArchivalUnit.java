@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.1 2003-12-06 00:57:25 eaalto Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.2 2003-12-09 02:21:20 eaalto Exp $
  */
 
 /*
@@ -60,10 +60,6 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     theDaemon.getHashService();
   }
 
-  public void tearDown() throws Exception {
-    super.tearDown();
-  }
-
   private BlackbirdArchivalUnit makeAu(URL url, int volume)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
@@ -97,43 +93,43 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
   public void testShouldCacheProperPages() throws Exception {
     URL base = new URL(ROOT_URL);
     int volume = 2;
-    ArchivalUnit pmAu = makeAu(base, volume);
-    theDaemon.getLockssRepository(pmAu);
-    theDaemon.getNodeManager(pmAu);
-    BaseCachedUrlSet cus = new BaseCachedUrlSet(pmAu,
+    ArchivalUnit bbAu = makeAu(base, volume);
+    theDaemon.getLockssRepository(bbAu);
+    theDaemon.getNodeManager(bbAu);
+    BaseCachedUrlSet cus = new BaseCachedUrlSet(bbAu,
         new RangeCachedUrlSetSpec(base.toString()));
 
     String baseUrl = ROOT_URL + "v2n1/";
 
     // root pages
-    shouldCacheTest(baseUrl+"index.htm", true, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"v2n2/index.htm", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"index.htm", true, bbAu, cus);
+    shouldCacheTest(ROOT_URL+"v2n2/index.htm", true, bbAu, cus);
 
     // volume pages
-    shouldCacheTest(baseUrl+"poetry.htm", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"gallery.htm", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"poetry.htm", true, bbAu, cus);
+    shouldCacheTest(baseUrl+"gallery.htm", true, bbAu, cus);
 
     // info pages
-    shouldCacheTest(baseUrl+"new.htm", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"editorial_policy.htm", true, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"v2n2/acknowledgements.htm", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"new.htm", true, bbAu, cus);
+    shouldCacheTest(baseUrl+"editorial_policy.htm", true, bbAu, cus);
+    shouldCacheTest(ROOT_URL+"v2n2/acknowledgements.htm", true, bbAu, cus);
 
     // article html
-    shouldCacheTest(baseUrl+"gallery/burnside_c/index.htm", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"gallery/burnside_c/index.htm", true, bbAu, cus);
     shouldCacheTest(baseUrl+"gallery/burnside_c/retrospective.htm", true,
-                    pmAu, cus);
-    shouldCacheTest(baseUrl+"nonfiction/dillard_r/going.htm", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"poetry/black_s/index.htm", true, pmAu, cus);
+                    bbAu, cus);
+    shouldCacheTest(baseUrl+"nonfiction/dillard_r/going.htm", true, bbAu, cus);
+    shouldCacheTest(baseUrl+"poetry/black_s/index.htm", true, bbAu, cus);
 
     // images
-    shouldCacheTest(baseUrl+"images/spacer.gif", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"images/audio.gif", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"images/spacer.gif", true, bbAu, cus);
+    shouldCacheTest(baseUrl+"images/audio.gif", true, bbAu, cus);
     shouldCacheTest(baseUrl+"gallery/burnside_c/burnside6_125.jpg", true,
-                    pmAu, cus);
+                    bbAu, cus);
 
     // stylesheet
-    shouldCacheTest(baseUrl+"blkbird.css", true, pmAu, cus);
-    shouldCacheTest(baseUrl+"poetry/blkbird.css", true, pmAu, cus);
+    shouldCacheTest(baseUrl+"blkbird.css", true, bbAu, cus);
+    shouldCacheTest(baseUrl+"poetry/blkbird.css", true, bbAu, cus);
 
 
     // should not cache these
@@ -141,29 +137,29 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     //XXX temporary!
     // ram files
     shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.ram", false,
-                    pmAu, cus);
+                    bbAu, cus);
     shouldCacheTest(baseUrl+"gallery/burnside_c/interview_part1.rm", false,
-                    pmAu, cus);
+                    bbAu, cus);
     shouldCacheTest(baseUrl+"gallery/burnside_c_091603/lucy1.ram", false,
-                    pmAu, cus);
+                    bbAu, cus);
 
     // current issue
-    shouldCacheTest(ROOT_URL, false, pmAu, cus);
-    shouldCacheTest(ROOT_URL+"index.htm", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL, false, bbAu, cus);
+    shouldCacheTest(ROOT_URL+"index.htm", false, bbAu, cus);
 
     // index links
 
     // archived root page
-    shouldCacheTest(ROOT_URL+"v1n1/index.htm", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL+"v1n1/index.htm", false, bbAu, cus);
 
     // archived volume page
-    shouldCacheTest(ROOT_URL+"v1n2/gallery/example.htm", false, pmAu, cus);
+    shouldCacheTest(ROOT_URL+"v1n2/gallery/example.htm", false, bbAu, cus);
 
     // LOCKSS
-    shouldCacheTest("http://lockss.stanford.edu", false, pmAu, cus);
+    shouldCacheTest("http://lockss.stanford.edu", false, bbAu, cus);
 
     // other site
-    shouldCacheTest("http://www.real.com/", false, pmAu, cus);
+    shouldCacheTest("http://www.real.com/", false, bbAu, cus);
   }
 
   private void shouldCacheTest(String url, boolean shouldCache,
@@ -176,8 +172,8 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     URL url = new URL(ROOT_URL);
 
     String expectedStr = ROOT_URL+"lockss.htm";
-    BlackbirdArchivalUnit pmAu = makeAu(url, 2);
-    assertEquals(expectedStr, pmAu.makeStartUrl());
+    BlackbirdArchivalUnit bbAu = makeAu(url, 2);
+    assertEquals(expectedStr, bbAu.makeStartUrl());
   }
 
   public void testPathInUrlThrowsException() throws Exception {
@@ -190,41 +186,40 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
 
   public void testGetUrlStems() throws Exception {
     String stem1 = "http://www.blackbird.vcu.edu";
-    BlackbirdArchivalUnit pmAu1 = makeAu(new URL(stem1 + "/"), 2);
-    assertEquals(ListUtil.list(stem1), pmAu1.getUrlStems());
+    BlackbirdArchivalUnit bbAu1 = makeAu(new URL(stem1 + "/"), 2);
+    assertEquals(ListUtil.list(stem1), bbAu1.getUrlStems());
     String stem2 = "http://www.blackbird.vcu.edu:8080";
-    BlackbirdArchivalUnit pmAu2 = makeAu(new URL(stem2 + "/"), 2);
-    assertEquals(ListUtil.list(stem2), pmAu2.getUrlStems());
+    BlackbirdArchivalUnit bbAu2 = makeAu(new URL(stem2 + "/"), 2);
+    assertEquals(ListUtil.list(stem2), bbAu2.getUrlStems());
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {
-    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 2);
+    ArchivalUnit bbAu = makeAu(new URL(ROOT_URL), 2);
     AuState aus = new MockAuState(null, TimeBase.nowMs(), -1, -1, null);
-    assertFalse(pmAu.shouldCrawlForNewContent(aus));
+    assertFalse(bbAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlForZero() throws Exception {
-    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 2);
+    ArchivalUnit bbAu = makeAu(new URL(ROOT_URL), 2);
     AuState aus = new MockAuState(null, 0, -1, -1, null);
-    assertTrue(pmAu.shouldCrawlForNewContent(aus));
+    assertTrue(bbAu.shouldCrawlForNewContent(aus));
   }
 
   public void testShouldDoNewContentCrawlEachMonth() throws Exception {
-    ArchivalUnit pmAu = makeAu(new URL(ROOT_URL), 2);
+    ArchivalUnit bbAu = makeAu(new URL(ROOT_URL), 2);
     AuState aus = new MockAuState(null, 4 * Constants.WEEK, -1, -1, null);
-    assertTrue(pmAu.shouldCrawlForNewContent(aus));
+    assertTrue(bbAu.shouldCrawlForNewContent(aus));
   }
 
   public void testGetName() throws Exception {
     BlackbirdArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertEquals("www.blackbird.vcu.edu, vol. 2", au.getName());
-    BlackbirdArchivalUnit au1 =
-        makeAu(new URL("http://www.bmj.com/"), 3);
+    BlackbirdArchivalUnit au1 = makeAu(new URL("http://www.bmj.com/"), 3);
     assertEquals("www.bmj.com, vol. 3", au1.getName());
   }
 
   public void testGetFilterRules() throws Exception {
-    BlackbirdArchivalUnit au = makeAu(new URL(ROOT_URL), 60);
+    BlackbirdArchivalUnit au = makeAu(new URL(ROOT_URL), 2);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
     assertNull(au.getFilterRule("text/html"));
