@@ -1,0 +1,105 @@
+/*
+ * $Id: BasicHashSpeedTest.java,v 1.1 2003-04-07 21:35:11 troberts Exp $
+ */
+
+/*
+
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.test;
+
+import java.io.*;
+import java.util.*;
+import java.security.*;
+import org.lockss.util.*;
+
+public class BasicHashSpeedTest {
+
+  private static final int FILE_STEP_SIZE = 1024;
+  private static final int HASH_STEP_SIZE = 1024;
+
+  public static void main(String[] args) throws Exception {
+    long fileSize = Long.parseLong(args[0]);
+    int numFiles = args.length > 1 ? Integer.parseInt(args[1]) : 1;
+    File files[] = new File[numFiles];
+
+    System.out.println("Generating "+numFiles+" files of size "+fileSize);
+    for (int ix=0; ix<numFiles; ix++) {
+      files[ix] = generateFile(fileSize);
+    }
+    System.out.println("Done generating files");
+    
+    long hashTime = 0;
+
+    for (int ix=0; ix<numFiles; ix++) {
+      hashTime += hash(files[ix]);
+    }
+    System.out.println("Hashed "+fileSize*numFiles+" bytes in "
+		       +(hashTime/1000)+" seconds");
+    System.out.println("Rate: "+
+		       computeSecPerGB(hashTime,fileSize*numFiles)+"sec/GB");
+  }
+  
+  private static double computeSecPerGB(double ms, double numBytes) {
+    return (ms/1000) / (numBytes / 1000000000);
+  }
+
+  private static File generateFile(long fileSize) throws IOException {
+    File file = FileUtil.tempFile("BasicHashSpeedTest", new File("./"));
+    FileOutputStream fos = new FileOutputStream(file);
+    Random random = new Random();
+    long bytesLeft = fileSize;
+    
+    byte[] bytes = new byte[FILE_STEP_SIZE];
+    while (bytesLeft > 0) {
+      random.nextBytes(bytes);
+      fos.write(bytes, 0, (int)Math.min(bytesLeft, FILE_STEP_SIZE));
+      bytesLeft -= FILE_STEP_SIZE;
+    }
+    fos.close();
+    return file;
+  }
+
+  private static long hash(File file) 
+      throws IOException, NoSuchAlgorithmException {
+    System.out.println("Hashing");
+    MessageDigest dig = MessageDigest.getInstance("SHA");
+
+    long startTime = System.currentTimeMillis();
+
+    FileInputStream fis = new FileInputStream(file);
+    byte[] bytes = new byte[HASH_STEP_SIZE];
+    int bytesRead;
+    while ((bytesRead = fis.read(bytes)) != -1) {
+      dig.update(bytes, 0, bytesRead);
+    }
+    long endTime = System.currentTimeMillis();
+    System.out.println("hash was "+dig.digest());
+    return endTime - startTime;
+  }
+}
+
