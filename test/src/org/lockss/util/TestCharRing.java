@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.6 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestCharRing.java,v 1.7 2003-07-18 00:39:13 troberts Exp $
  */
 
 /*
@@ -248,6 +248,11 @@ public class TestCharRing extends LockssTestCase {
     CharRing cr2 = new CharRing(3);
     cr2.add('b');
     cr2.remove();
+    cr2.add(chars, 1, 2);
+    assertEquals('x', cr2.remove());
+    assertEquals('y', cr2.remove());
+    assertEquals(0, cr2.size());
+
     cr2.add(chars, 1, 2);
     assertEquals('x', cr2.remove());
     assertEquals('y', cr2.remove());

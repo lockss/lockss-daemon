@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: CharRing.java,v 1.6 2003-07-18 00:39:13 troberts Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class CharRing {
     System.arraycopy(newChars, pos, chars, tail, addToEnd);
     System.arraycopy(newChars, pos+addToEnd, chars, 0, addToStart);
 
-    incrementTail(newChars.length);
+    incrementTail(length);
     size += length;
   }
 
