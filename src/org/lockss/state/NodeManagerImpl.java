@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.128 2003-05-30 23:27:53 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.129 2003-06-03 00:06:03 aalto Exp $
  */
 
 /*
@@ -151,7 +151,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   public synchronized NodeState getNodeState(CachedUrlSet cus) {
     String url = cus.getUrl();
-    logger.debug3("Getting " + url);
     NodeState node = nodeCache.getState(url);
     if (node == null) {
       // if in repository, add
@@ -843,9 +842,26 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                 ", " +
                                 lastHistory.getStatusString() + ", " +
                                 sdf.format(new Date(lastHistory.startTime)));
+                  // set state appropriately for restart
+                  switch (nodeState.getState()) {
+                    case NodeState.CONTENT_RUNNING:
+                    case NodeState.CONTENT_REPLAYING:
+                      nodeState.setState(NodeState.NEEDS_POLL);
+                      break;
+                    case NodeState.NAME_RUNNING:
+                    case NodeState.NAME_REPLAYING:
+                      nodeState.setState(NodeState.CONTENT_LOST);
+                      break;
+                    case NodeState.SNCUSS_POLL_RUNNING:
+                    case NodeState.SNCUSS_POLL_REPLAYING:
+                      nodeState.setState(NodeState.POSSIBLE_DAMAGE_HERE);
+                  }
                   callLastPoll(lastPollSpec, lastHistory);
                 }
                 return true;
+              } else {
+                logger.debug2("Unfinished poll's duration not elapsed, so not"+
+                              "recalling.");
               }
             }
           }
