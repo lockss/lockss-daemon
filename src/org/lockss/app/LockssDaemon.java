@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.42 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.43 2003-12-23 00:22:27 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ import org.apache.commons.collections.SequencedHashMap;
  */
 
 public class LockssDaemon {
+  private static Logger log = Logger.getLogger("LockssDaemon");
+
   private static String PREFIX = Configuration.PREFIX + "daemon.";
 
   private static String PARAM_DAEMON_EXIT_IMM = PREFIX + "exitImmediately";
@@ -112,9 +114,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /* the default classes that represent our managers */
   private static String DEFAULT_CONFIG_MANAGER =
-      "org.lockss.daemon.ConfigManager";
-  private static String DEFAULT_ACTIVITY_REGULATOR =
-      "org.lockss.daemon.ActivityRegulatorImpl";
+    "org.lockss.daemon.ConfigManager";
   private static String DEFAULT_HASH_SERVICE =
     "org.lockss.hasher.HashSvcQueueImpl";
   private static String DEFAULT_SCHED_SERVICE =
@@ -124,19 +124,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_ROUTER_MANAGER =
     "org.lockss.protocol.LcapRouter";
-  private static String DEFAULT_IDENTITY_MANAGER
-      = "org.lockss.protocol.IdentityManager";
+  private static String DEFAULT_IDENTITY_MANAGER =
+    "org.lockss.protocol.IdentityManager";
   private static String DEFAULT_CRAWL_MANAGER =
-      "org.lockss.crawler.CrawlManagerImpl";
+    "org.lockss.crawler.CrawlManagerImpl";
   private static String DEFAULT_PLUGIN_MANAGER =
-      "org.lockss.plugin.PluginManager";
+    "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
-  private static String DEFAULT_LOCKSS_REPOSITORY
-      = "org.lockss.repository.LockssRepositoryImpl";
-  private static String DEFAULT_HISTORY_REPOSITORY
-      = "org.lockss.state.HistoryRepositoryImpl";
-  private static String DEFAULT_NODE_MANAGER =
-      "org.lockss.state.NodeManagerImpl";
+  private static String DEFAULT_HISTORY_REPOSITORY =
+    "org.lockss.state.HistoryRepositoryImpl";
   private static String DEFAULT_PROXY_MANAGER =
     "org.lockss.proxy.ProxyManager";
   private static String DEFAULT_SERVLET_MANAGER =
@@ -148,13 +144,18 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   private static String DEFAULT_URL_MANAGER =
     "org.lockss.daemon.UrlManager";
 
+  // default AU specific manager factories
+  private static String DEFAULT_ACTIVITY_REGULATOR =
+    "org.lockss.daemon.ActivityRegulator$Factory";
+  private static String DEFAULT_LOCKSS_REPOSITORY =
+    "org.lockss.repository.LockssRepositoryImpl$Factory";
+  private static String DEFAULT_NODE_MANAGER =
+    "org.lockss.state.NodeManagerImpl$Factory";
 
-  private static String DEFAULT_CACHE_LOCATION = "./cache";
-  private static String DEFAULT_CONFIG_LOCATION = "./config";
 
   protected static class ManagerDesc {
     String key;		// hash key and config param name
-    String defaultClass;	// default class name
+    String defaultClass;      // default class name (or factory class name)
 
     ManagerDesc(String key, String defaultClass) {
       this.key = key;
@@ -167,12 +168,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     public String getDefaultClass() {
       return defaultClass;
     }
-
   }
 
   // Manager descriptors.  The order of this table determines the order in
-  // which managers are initialized and started.  AU specific managers are
-  // started as needed.
+  // which managers are initialized and started.
   protected static final ManagerDesc[] managerDescs = {
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
@@ -194,74 +193,68 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
   };
 
-  static String[] auSpecificManagerKeys = {
-      ACTIVITY_REGULATOR,
-      LOCKSS_REPOSITORY,
-      NODE_MANAGER
+  // AU-specific manager descriptors.  As each AU is created its managers
+  // are started in this order.
+  protected static final ManagerDesc[] auManagerDescs = {
+    new ManagerDesc(ACTIVITY_REGULATOR, DEFAULT_ACTIVITY_REGULATOR),
+    // Repository uses ActivityRegulator
+    new ManagerDesc(LOCKSS_REPOSITORY, DEFAULT_LOCKSS_REPOSITORY),
+    // NodeManager uses Repository and ActivityRegulator
+    new ManagerDesc(NODE_MANAGER, DEFAULT_NODE_MANAGER),
   };
 
-  private static Logger log = Logger.getLogger("LockssDaemon");
   protected List propUrls = null;
-  private String configDir = null;
-  // set true after all managers have been inited
-  private boolean daemonInited = false;
-  private boolean daemonRunning = false;
+
+  private boolean daemonInited = false;	// true after all managers inited
+  private boolean daemonRunning = false; // true after all managers dtarted
   private Date startDate;
   private long daemonLifetime = DEFAULT_DAEMON_EXIT_AFTER;
   private Deadline timeToExit = Deadline.at(TimeBase.MAX);
 
-  // Need to preserve order so managers are started and stopped in the
-  // right order.  This does not need to be synchronized.
+  // Map of managerKey -> manager instance. Need to preserve order so
+  // managers are started and stopped in the right order.  This does not
+  // need to be synchronized.
   protected static SequencedHashMap theManagers = new SequencedHashMap();
-  protected static AuSpecificManagerHandler auSpecificManagers;
+
+  // Maps au to sequenced map of managerKey -> manager instance
+  protected static HashMap auManagerMaps = new HashMap();
+
+  // Maps managerKey -> LockssAuManager.Factory instance
+  protected static HashMap auManagerFactoryMap = new HashMap();
 
   protected LockssDaemon(List propUrls) {
     this.propUrls = propUrls;
-    auSpecificManagers = new AuSpecificManagerHandler(this,
-        auSpecificManagerKeys.length);
   }
 
-  public static void main(String[] args) {
-    Vector urls = new Vector();
-    LockssDaemon daemon;
+  // General information accessors
 
-    for (int i=0; i<args.length; i++) {
-      urls.add(args[i]);
-    }
-
-    try {
-      daemon = new LockssDaemon(urls);
-      daemon.runDaemon();
-      // raise priority after starting other threads, so we won't get
-      // locked out and fail to exit when told.
-      Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 2);
-
-    } catch (Throwable e) {
-      log.error("Exception thrown in main loop", e);
-      System.exit(1);
-      return;				// compiler doesn't know that
-					// System.exit() doesn't return
-    }
-    if (Configuration.getBooleanParam(PARAM_DAEMON_EXIT_IMM,
-				      DEFAULT_DAEMON_EXIT_IMM)) {
-      daemon.stop();
-      System.exit(0);
-    }
-    daemon.keepRunning();
-    log.info("Exiting because time to die");
-    System.exit(0);
+  /**
+   * True iff all managers have been inited.
+   * @return true iff all managers have been inited */
+  public boolean isDaemonInited() {
+    return daemonInited;
   }
 
-  private void keepRunning() {
-    while (!timeToExit.expired()) {
-      try {
-	log.debug("Will exit at " + timeToExit);
-	timeToExit.sleep();
-      } catch (InterruptedException e) {
-	// no action
-      }
-    }
+  /**
+   * True if all managers have bee started.
+   * @return true iff all managers have been started */
+  public boolean isDaemonRunning() {
+    return daemonRunning;
   }
+
+  /**
+   * True if running in debug mode (org.lockss.daemon.debug=true).
+   * @return true iff in debug mode */
+  public static boolean isDebug() {
+    return ConfigManager.getBooleanParam(PARAM_DEBUG, false);
+  }
+
+  /** Return the LOCKSS user-agent string.
+   * @return the LOCKSS user-agent string. */
+  public static String getUserAgent() {
+    return LOCKSS_USER_AGENT;
+  }
+
 
   /** Return the time the daemon started running.
    * @return the time the daemon started running, as a Date
@@ -273,6 +266,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     }
     return startDate;
   }
+
+  /** Stop the daemon.  Currently only used in testing. */
+  public void stopDaemon() {
+    stop();
+  }
+
+  // LockssManager accessors
 
   /**
    * Return a lockss manager. This will need to be cast to the appropriate
@@ -287,32 +287,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
       throw new IllegalArgumentException("Unavailable manager:" + managerKey);
     }
     return mgr;
-  }
-
-  /**
-   * Return an au-specific lockss manager. This will need to be cast to the
-   * appropriate class.
-   * @param au the ArchivalUnit
-   * @param managerKey the name of the manager
-   * @return an au-specific lockss manager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public static LockssManager getAuSpecificManager(String managerKey,
-      ArchivalUnit au) {
-    LockssManager mgr = auSpecificManagers.getAuSpecificManager(managerKey, au);
-    if (mgr == null) {
-      throw new IllegalArgumentException("Unavailable manager:" + managerKey);
-    }
-    return mgr;
-  }
-
-  /**
-   * Starts any managers necessary to handle the ArchivalUnit.
-   * @param au the ArchivalUnit
-   */
-  public void startAuManagers(ArchivalUnit au) {
-    log.debug2("Adding au-specific managers for au '"+au+"'");
-    auSpecificManagers.startAuManagers(au);
   }
 
   /**
@@ -379,45 +353,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * get Lockss Repository instance
-   * @param au the ArchivalUnit
-   * @return the LockssRepository
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public LockssRepository getLockssRepository(ArchivalUnit au) {
-    LockssRepository repository =
-        (LockssRepository)auSpecificManagers.getAuSpecificManager(
-        LOCKSS_REPOSITORY, au);
-    if (repository==null) {
-      log.error("LockssRepository not found for au: " + au);
-      throw new IllegalArgumentException("LockssRepository not found for au.");
-    }
-    return repository;
-  }
-
-  /**
    * return the history repository instance
    * @return the HistoryRepository
    * @throws IllegalArgumentException if the manager is not available.
    */
   public HistoryRepository getHistoryRepository() {
     return (HistoryRepository) getManager(HISTORY_REPOSITORY);
-  }
-
-  /**
-   * return the node manager instance
-   * @param au the ArchivalUnit
-   * @return the NodeManager
-   * @throws IllegalArgumentException if the manager is not available.
-   */
-  public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager manager = (NodeManager)auSpecificManagers.getAuSpecificManager(
-        NODE_MANAGER, au);
-    if (manager==null) {
-      log.error("NodeManager not found for au: " + au);
-      throw new IllegalArgumentException("NodeManager not found for au.");
-    }
-    return manager;
   }
 
   /**
@@ -484,59 +425,85 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return (IdentityManager) getManager(IDENTITY_MANAGER);
   }
 
+  // LockssAuManager accessors
+
   /**
-   * get ActivityRegulator instance
+   * Return an AU-specific lockss manager. This will need to be cast to the
+   * appropriate class.
+   * @param key the name of the manager
+   * @param au the AU
+   * @return a LockssAuManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LockssAuManager getAuManager(String key, ArchivalUnit au) {
+    LockssAuManager mgr = null;
+    SequencedHashMap auMgrMap =
+      (SequencedHashMap)auManagerMaps.get(au);
+    if (auMgrMap != null) {
+      mgr = (LockssAuManager)auMgrMap.get(key);
+    }
+    if (mgr == null) {
+      log.error(key + " not found for au: " + au);
+      throw new IllegalArgumentException("Unavailable au manager:" + key);
+    }
+    return mgr;
+  }
+
+  /**
+   * Get Lockss Repository instance
+   * @param au the ArchivalUnit
+   * @return the LockssRepository
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LockssRepository getLockssRepository(ArchivalUnit au) {
+    return (LockssRepository)getAuManager(LOCKSS_REPOSITORY, au);
+  }
+
+  /**
+   * Return the NodeManager instance
+   * @param au the ArchivalUnit
+   * @return the NodeManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public NodeManager getNodeManager(ArchivalUnit au) {
+    return (NodeManager)getAuManager(NODE_MANAGER, au);
+  }
+
+  /**
+   * Return ActivityRegulator instance
    * @param au the ArchivalUnit
    * @return the ActivityRegulator
    * @throws IllegalArgumentException if the manager is not available.
    */
   public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
-    ActivityRegulator regulator =
-        (ActivityRegulator)auSpecificManagers.getAuSpecificManager(
-        ACTIVITY_REGULATOR, au);
-    if (regulator==null) {
-      log.error("ActivityRegulator not found for au: " + au);
-      throw new IllegalArgumentException("ActivityRegulator not found for au.");
-    }
-    return regulator;
+    return (ActivityRegulator)getAuManager(ACTIVITY_REGULATOR, au);
   }
 
   /**
-   * The ActivityRegulator entries.
-   * @return an Iterator of Map.Entry objects
+   * Return all ActivityRegulators.
+   * @return a list of all ActivityRegulators for all AUs
    */
-  public Iterator getActivityRegulatorEntries() {
-    return auSpecificManagers.getEntries(ACTIVITY_REGULATOR);
+  public List getAllActivityRegulators() {
+    return getAuManagersOfType(ACTIVITY_REGULATOR);
   }
 
   /**
-   * The LockssRepository entries.
-   * @return an Iterator of Map.Entry objects
+   * Return all LockssRepositories.
+   * @return a list of all LockssRepositories for all AUs
    */
-  public Iterator getLockssRepositoryEntries() {
-    return auSpecificManagers.getEntries(LOCKSS_REPOSITORY);
+  public List getAllLockssRepositories() {
+    return getAuManagersOfType(LOCKSS_REPOSITORY);
   }
 
   /**
-   * The NodeManager entries.
-   * @return an Iterator of Map.Entry objects
+   * Return all NodeManagers.
+   * @return a list of all NodeManagers for all AUs
    */
-  public Iterator getNodeManagerEntries() {
-    return auSpecificManagers.getEntries(NODE_MANAGER);
+  public List getAllNodeManagers() {
+    return getAuManagersOfType(NODE_MANAGER);
   }
 
-  public void stopDaemon() {
-    stop();
-  }
-
-  private String getVersionInfo() {
-    String vDaemon = BuildInfo.getBuildInfoString();
-    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
-    if (vPlatform != null) {
-      vDaemon = vDaemon + ", CD " + vPlatform;
-    }
-    return vDaemon;
-  }
+  // Daemon start, stop
 
   /**
    * run the daemon.  Load our properties, initialize our managers, initialize
@@ -561,6 +528,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     initManagers();
 
     log.info("Started");
+  }
+
+  private String getVersionInfo() {
+    String vDaemon = BuildInfo.getBuildInfoString();
+    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
+    if (vPlatform != null) {
+      vDaemon = vDaemon + ", CD " + vPlatform;
+    }
+    return vDaemon;
   }
 
   /**
@@ -665,7 +641,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     daemonRunning = false;
 
     // stop all au-specific managers
-    auSpecificManagers.stopAllManagers();
+    stopAllAuManagers();
 
     // stop all single managers
     List rkeys = ListUtil.reverseCopy(theManagers.sequence());
@@ -680,6 +656,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     }
   }
 
+  // Manager loading, starting, stopping
+
   /**
    * Load and init the specified manager.  If the manager class is
    * specified by a config parameter and cannot be loaded, fall back to the
@@ -691,18 +669,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected LockssManager initManager(ManagerDesc desc) throws Exception {
     String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
 						desc.defaultClass);
-    LockssManager mgr;
-    try {
-      mgr = loadManager(managerName);
-    } catch (ClassNotFoundException e) {
-      log.warning("Couldn't load manager class " + managerName);
-      if (!managerName.equals(desc.defaultClass)) {
-	log.warning("Trying default manager class " + desc.defaultClass);
-	mgr = loadManager(desc.defaultClass);
-      } else {
-	throw e;
-      }
-    }
+    LockssManager mgr = instantiateManager(desc);
     try {
       // call init on the service
       mgr.initService(this);
@@ -713,36 +680,259 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     }
   }
 
-  protected LockssManager loadManager(String managerClassName)
+  /** Create an instance of a LockssManager, from the configured or default
+   * manager class name */
+  protected LockssManager instantiateManager(ManagerDesc desc)
+      throws Exception {
+    String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
+						desc.defaultClass);
+    LockssManager mgr;
+    try {
+      mgr = (LockssManager)makeInstance(managerName);
+    } catch (ClassNotFoundException e) {
+      log.warning("Couldn't load manager class " + managerName);
+      if (!managerName.equals(desc.defaultClass)) {
+	log.warning("Trying default manager class " + desc.defaultClass);
+	mgr = (LockssManager)makeInstance(desc.defaultClass);
+      } else {
+	throw e;
+      }
+    }
+    return mgr;
+  }
+
+  protected Object makeInstance(String managerClassName)
       throws ClassNotFoundException, InstantiationException,
 	     IllegalAccessException {
-    log.debug("Loading manager " + managerClassName);
+    log.debug("Instantiating manager class " + managerClassName);
     Class mgrClass = Class.forName(managerClassName);
-    return (LockssManager)mgrClass.newInstance();
+    return mgrClass.newInstance();
+  }
+
+  // AU specific manager loading, starting, stopping
+
+  /**
+   * Start or reconfigure all managers necessary to handle the ArchivalUnit.
+   * @param au the ArchivalUnit
+   * @param auConfig the AU's confignuration
+   */
+  public void startOrReconfigureAuManagers(ArchivalUnit au,
+					   Configuration auConfig)
+      throws Exception {
+    SequencedHashMap auMgrMap =
+      (SequencedHashMap)auManagerMaps.get(au);
+    if (auMgrMap != null) {
+      // If au has a map it's been created, just set new config
+      configAuManagers(au, auConfig, auMgrMap);
+    } else {
+      // create a new map, init, configure and start managers
+      auMgrMap = new SequencedHashMap();
+      initAuManagers(au, auMgrMap);
+      // Store map once all managers inited
+      auManagerMaps.put(au, auMgrMap);
+      configAuManagers(au, auConfig, auMgrMap);
+      try {
+	startAuManagers(au, auMgrMap);
+      } catch (Exception e) {
+	log.warning("Stopping managers for " + au);
+	stopAuManagers(au);
+	throw e;
+      }
+    }
+  }
+
+  /** Stop the managers for the AU in the reverse order in which they
+   * appear in the map */
+  public void stopAuManagers(ArchivalUnit au) {
+    SequencedHashMap auMgrMap =
+      (SequencedHashMap)auManagerMaps.get(au);
+    List rkeys = ListUtil.reverseCopy(auMgrMap.sequence());
+    for (Iterator iter = rkeys.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
+      try {
+	mgr.stopService();
+      } catch (Exception e) {
+	log.warning("Couldn't stop au manager " + mgr, e);
+	// continue to try to stop other managers
+      }
+    }
+    auManagerMaps.remove(au);
+  }
+
+  /** Create and init all AU managers for the AU, and associate them with
+   * their keys in auMgrMap. */
+  private void initAuManagers(ArchivalUnit au, SequencedHashMap auMgrMap)
+      throws Exception {
+    ManagerDesc descs[] = getAuManagerDescs();
+    for (int ix = 0; ix < descs.length; ix++) {
+      ManagerDesc desc = descs[ix];
+      try {
+	LockssAuManager mgr = initAuManager(desc, au);
+	auMgrMap.put(desc.key, mgr);
+      } catch (Exception e) {
+	log.error("Couldn't init AU manager " + desc.key + " for " + au,
+		  e);
+	// don't try to init remaining managers
+	throw e;
+      }
+    }
+  }
+
+  // can be overridden for tests
+  protected ManagerDesc[] getAuManagerDescs() {
+    return auManagerDescs;
+  }
+
+  /** Create and init an AU manager. */
+  protected LockssAuManager initAuManager(ManagerDesc desc, ArchivalUnit au)
+      throws Exception {
+    LockssAuManager mgr = instantiateAuManager(desc, au);
+    mgr.initService(this);
+    return mgr;
+  }
+
+  /** Start the managers for the AU in the order in which they appear in
+   * the map.  protected so MockLockssDaemon can override to suppress
+   * startService() */
+  protected void startAuManagers(ArchivalUnit au, SequencedHashMap auMgrMap)
+      throws Exception {
+    for (Iterator iter = auMgrMap.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
+      try {
+	mgr.startService();
+      } catch (Exception e) {
+	log.error("Couldn't start AU manager " + mgr + " for " + au,
+		  e);
+	// don't try to start remaining managers
+	throw e;
+      }
+    }
+  }
+
+  /** (re)configure the au managers */
+  private void configAuManagers(ArchivalUnit au, Configuration auConfig,
+				SequencedHashMap auMgrMap) {
+    for (Iterator iter = auMgrMap.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
+      try {
+	mgr.setAuConfig(auConfig);
+      } catch (Exception e) {
+	log.error("Error configuring AU manager " + mgr + " for " + au, e);
+	// continue after config errors
+      }
+    }
+  }
+
+  /** Instantiate a LockssAuManager, using a LockssAuManager.Factory, which
+   * is created is necessary */
+  private LockssAuManager instantiateAuManager(ManagerDesc desc,
+					       ArchivalUnit au)
+      throws Exception {
+    String key = desc.key;
+    LockssAuManager.Factory factory =
+      (LockssAuManager.Factory)auManagerFactoryMap.get(key);
+    if (factory == null) {
+      factory = instantiateAuFactory(desc);
+      auManagerFactoryMap.put(key, factory);
+    }
+    LockssAuManager mgr = factory.createAuManager(au);
+    return mgr;
+  }
+
+  /** Instantiate a LockssAuManager.Factory, which is used to create
+   * instances of a LockssAuManager */
+  private LockssAuManager.Factory instantiateAuFactory(ManagerDesc desc)
+      throws Exception {
+    String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
+						desc.defaultClass);
+    LockssAuManager.Factory factory;
+    try {
+      factory = (LockssAuManager.Factory)makeInstance(managerName);
+    } catch (ClassNotFoundException e) {
+      log.warning("Couldn't load au manager factory class " + managerName);
+      if (!managerName.equals(desc.defaultClass)) {
+	log.warning("Trying default factory class " + desc.defaultClass);
+	factory = (LockssAuManager.Factory)makeInstance(desc.defaultClass);
+      } else {
+	throw e;
+      }
+    }
+    return factory;
   }
 
   /**
-   * True iff all managers were inited.
-   * @return true iff all managers have been inited */
-  public boolean isDaemonInited() {
-    return daemonInited;
+   * Calls 'stopService()' on all AU managers for all AUs,
+   */
+  public void stopAllAuManagers() {
+    for (Iterator iter = auManagerMaps.keySet().iterator();
+	 iter.hasNext(); ) {
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      log.debug2("Stopping all managers for " + au);
+      stopAuManagers(au);
+    }
+    auManagerMaps.clear();
   }
 
   /**
-   * True if all managers were started.
-   * @return true iff all managers have been started */
-  public boolean isDaemonRunning() {
-    return daemonRunning;
+   * Return the LockssAuManagers of a particular type.
+   * @param managerKey the manager type
+   * @return a list of LockssAuManagers
+   */
+  List getAuManagersOfType(String managerKey) {
+    List res = new ArrayList(auManagerMaps.size());
+    for (Iterator iter = auManagerMaps.values().iterator();
+	 iter.hasNext(); ) {
+      SequencedHashMap auMgrMap = (SequencedHashMap)iter.next();
+      res.add(auMgrMap.get(managerKey));
+    }
+    return res;
   }
 
-  /**
-   * True if running in debug mode (org.lockss.daemon.debug=true).
-   * @return true iff in debug mode */
-  public static boolean isDebug() {
-    return ConfigManager.getBooleanParam(PARAM_DEBUG, false);
+  // Main entry to daemon
+
+  public static void main(String[] args) {
+    Vector urls = new Vector();
+    LockssDaemon daemon;
+
+    for (int i=0; i<args.length; i++) {
+      urls.add(args[i]);
+    }
+
+    try {
+      daemon = new LockssDaemon(urls);
+      daemon.runDaemon();
+      // raise priority after starting other threads, so we won't get
+      // locked out and fail to exit when told.
+      Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 2);
+
+    } catch (Throwable e) {
+      log.error("Exception thrown in main loop", e);
+      System.exit(1);
+      return;				// compiler doesn't know that
+					// System.exit() doesn't return
+    }
+    if (Configuration.getBooleanParam(PARAM_DAEMON_EXIT_IMM,
+				      DEFAULT_DAEMON_EXIT_IMM)) {
+      daemon.stop();
+      System.exit(0);
+    }
+    daemon.keepRunning();
+    log.info("Exiting because time to die");
+    System.exit(0);
   }
 
-  public static String getUserAgent() {
-    return LOCKSS_USER_AGENT;
+  private void keepRunning() {
+    while (!timeToExit.expired()) {
+      try {
+	log.debug("Will exit at " + timeToExit);
+	timeToExit.sleep();
+      } catch (InterruptedException e) {
+	// no action
+      }
+    }
   }
+
 }

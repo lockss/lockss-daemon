@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.2 2003-11-19 08:46:46 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.3 2003-12-23 00:22:27 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,9 @@ package org.lockss.app;
 
 import java.util.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.util.LockssDaemon
@@ -113,6 +116,155 @@ public class TestLockssDaemon extends LockssTestCase {
     }
     boolean isInited() {
       return isInited;
+    }
+  }
+
+  // AU specific manager tests
+
+  public void testStartAuManager() throws Exception {
+    LockssDaemon daemon = new TestAuLockssDaemon();
+    Configuration config = ConfigManager.newConfiguration();
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    mau1.setAuId("mau1");
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    mau2.setAuId("mau2");
+
+    TestAuMgr.clearEvents();
+    daemon.startOrReconfigureAuManagers(mau1, config);
+
+    TestAuMgr1 mgr11 = (TestAuMgr1)daemon.getAuManager("MgrKey1", mau1);
+    TestAuMgr2 mgr21 = (TestAuMgr2)daemon.getAuManager("MgrKey2", mau1);
+    assertSame(mau1, mgr11.getAu());
+    assertSame(mau1, mgr21.getAu());
+    assertEquals(ListUtil.list(mgr11), daemon.getAuManagersOfType("MgrKey1"));
+    assertEquals(ListUtil.list(mgr21), daemon.getAuManagersOfType("MgrKey2"));
+    Event[] exp1 = {
+      new Event(mgr11, "initService", daemon),
+      new Event(mgr21, "initService", daemon),
+      new Event(mgr11, "setAuConfig", config),
+      new Event(mgr21, "setAuConfig", config),
+      new Event(mgr11, "startService", null),
+      new Event(mgr21, "startService", null),
+    };
+    assertIsomorphic(exp1, TestAuMgr.getEvents());
+    Configuration config2 = ConfigManager.newConfiguration();
+    config2.put("1", "2");
+    TestAuMgr.clearEvents();
+    daemon.startOrReconfigureAuManagers(mau1, config2);
+    Event[] exp2 = {
+      new Event(mgr11, "setAuConfig", config2),
+      new Event(mgr21, "setAuConfig", config2),
+    };
+    assertIsomorphic(exp2, TestAuMgr.getEvents());
+
+    try {
+      daemon.getAuManager("MgrKey1", mau2);
+    } catch (IllegalArgumentException e) {
+    }
+
+    daemon.startOrReconfigureAuManagers(mau2, config2);
+    TestAuMgr1 mgr12 = (TestAuMgr1)daemon.getAuManager("MgrKey1", mau2);
+    TestAuMgr2 mgr22 = (TestAuMgr2)daemon.getAuManager("MgrKey2", mau2);
+    assertSame(mau2, mgr12.getAu());
+    assertSame(mau2, mgr22.getAu());
+    assertEquals(SetUtil.set(mgr11, mgr12),
+		 SetUtil.theSet(daemon.getAuManagersOfType("MgrKey1")));
+    assertEquals(SetUtil.set(mgr21, mgr22),
+		 SetUtil.theSet(daemon.getAuManagersOfType("MgrKey2")));
+  }
+
+  static class Event {
+    Object caller;
+    String event;
+    Object arg;
+    Event(Object caller, String event, Object arg) {
+      this.caller = caller;
+      this.event = event;
+      this.arg = arg;
+    };
+    Event(Object caller, String event) {
+      this(caller, event, null);
+    }
+    public String toString() {
+      return "[Ev: " + caller + "." + event + "(" + arg + ")";
+    }
+    public boolean equals(Object o) {
+      if (o instanceof Event) {
+	Event oe = (Event)o;
+	return caller == oe.caller && arg == oe.arg &&
+	  StringUtil.equalStrings(event, oe.event);
+      }
+      return false;
+    }
+  }
+  List events;
+
+  class TestAuLockssDaemon extends LockssDaemon {
+    ManagerDesc[] testAuManagerDescs = {
+      new ManagerDesc("MgrKey1", TestAuMgr1Factory.class.getName()),
+      new ManagerDesc("MgrKey2", TestAuMgr2Factory.class.getName()),
+    };
+
+    TestAuLockssDaemon() {
+      super(null);
+    }
+
+    protected ManagerDesc[] getAuManagerDescs() {
+      return testAuManagerDescs;
+    }
+  }
+
+  static class TestAuMgr implements LockssAuManager {
+    static List events;
+    static void clearEvents() {
+      events = new ArrayList();
+    }
+    static List getEvents() {
+      return events;
+    }
+    private ArchivalUnit au;
+    TestAuMgr(ArchivalUnit au) {
+      this.au = au;
+    }
+    ArchivalUnit getAu() {
+      return au;
+    }
+    protected void setConfig(Configuration newConfig,
+			     Configuration prevConfig,
+			     Set changedKeys) {
+    }
+    public void initService(LockssDaemon daemon) {
+      events.add(new Event(this, "initService", daemon));
+    }
+    public void startService() {
+      events.add(new Event(this, "startService"));
+    }
+  
+  public void stopService() {
+      events.add(new Event(this, "stopService"));
+    }
+    public void setAuConfig(Configuration auConfig) {
+      events.add(new Event(this, "setAuConfig", auConfig));
+    }
+  }
+  static class TestAuMgr1 extends TestAuMgr {
+    TestAuMgr1(ArchivalUnit au) {
+      super(au);
+    }
+  }
+  static class TestAuMgr1Factory implements LockssAuManager.Factory {
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      return new TestAuMgr1(au);
+    }
+  }
+  static class TestAuMgr2 extends TestAuMgr {
+    TestAuMgr2(ArchivalUnit au) {
+      super(au);
+    }
+  }
+  static class TestAuMgr2Factory implements LockssAuManager.Factory {
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      return new TestAuMgr2(au);
     }
   }
 
