@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.85 2004-06-05 18:50:12 tlipkis Exp $
+ $Id: build.xml,v 1.86 2004-06-06 01:30:21 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -171,7 +171,6 @@ Args:
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
   <property name="production.classpath.file" value="${lib}/run-classpath"/>
-  <property name="tools.classpath.file" value="${lib}/tools-classpath"/>
   <!--  This path is also known to org.lockss.util.BuildInfo class -->
   <property name="build.info.file"
                      value="${classes}/org/lockss/htdocs/build.properties"/>
@@ -394,7 +393,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete file="${lockss.ant.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
-    <delete file="${tools.classpath.file}" quiet="true"/>
     <delete quiet="true" verbose="true">
       <!-- ant-generated files that can get left around if build is aborted -->
       <fileset dir="${basedir}" includes="files?* junit?*.properties"/>
@@ -420,6 +418,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete file="${lockss.tools.test.jar}" quiet="true"/>
     <delete file="${lockss.generated.jar}" quiet="true"/>
     <delete file="${lockss.generated.test.jar}" quiet="true"/>
+    <delete file="plugintool.zip" quiet="true"/>
+    <delete file="plugintool.tgz" quiet="true"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -670,13 +670,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <jar jarfile="${lockss.tools.jar}" basedir="${tools.classes}" >
        <include name="**/" />
     </jar>
-    <!-- Write tools classpath to a file, so scripts can get it -->
-    <pathconvert refid="tools.run.classpath" property="tmp.tools.clspth"
-      targetos="${detected.os}">
-      <!-- entity codes below are open and close curly brace -->
-      <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
-    </pathconvert>
-    <echo message="${tmp.tools.clspth}" file="${tools.classpath.file}"/>
   </target>
 
   <!-- ==================================================================== -->
@@ -709,6 +702,40 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <jar jarfile="${lockss.ant.jar}" basedir="${ant.classes}" >
        <include name="**/" />
     </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="package-plugintool" depends="jar-tools,check.contrib"
+   description="Package up all files needed to run the plugin tool" >
+    <mkdir dir="${temp.build}" />
+    <tempfile property="temp.pkg.dir" destdir="${temp.build}" prefix="tool"/>
+    <mkdir dir="${temp.pkg.dir}" />
+    <pathtofileset dir="" pathrefid="tools.run.classpath"
+      name="tmp.tools.class.set" ignorenonrelative="true" />
+    <copy todir="${temp.pkg.dir}" flatten="true" >
+     <fileset refid="tmp.tools.class.set" />
+    </copy>
+    <pathconvert refid="tools.run.classpath" property="tmp.ptool.clspth.unix"
+      targetos="unix" >
+     <map from="${java.lib}" to="$${JAVA_HOME}/lib" />
+     <map from="${lib}" to="." />
+    </pathconvert>
+    <pathconvert refid="tools.run.classpath" property="tmp.ptool.clspth.dos"
+      targetos="windows" >
+     <map from="${java.lib}" to="%JAVA_HOME%\lib" />
+     <map from="${lib}" to="." />
+    </pathconvert>
+    <echo file="${temp.pkg.dir}/runtool">#!/bin/sh
+java -classpath ${tmp.ptool.clspth.unix} org.lockss.devtools.plugindef.PluginDefinerApp
+</echo>
+    <echo file="${temp.pkg.dir}/runtool.bat">java -classpath ${tmp.ptool.clspth.dos} org.lockss.devtools.plugindef.PluginDefinerApp
+</echo>
+    <tar destfile="plugintool.tgz" compression="gzip">
+     <tarfileset dir="${temp.pkg.dir}" mode="755" includes="runtool" />
+     <tarfileset dir="${temp.pkg.dir}" excludes="runtool" />
+    </tar>
+    <zip destfile="plugintool.zip" basedir="${temp.pkg.dir}" />
+    <delete dir="${temp.pkg.dir}" quiet="true"/>
   </target>
 
   <!-- ==================================================================== -->
