@@ -410,4 +410,26 @@ public class MockLockssDaemon extends LockssDaemon {
     theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
   }
 
+  private boolean daemonInited = false;
+  private boolean daemonRunning = false;
+
+  /** Return true iff all managers have been inited */
+  public boolean isDaemonInited() {
+    return daemonInited;
+  }
+
+  /** Return true iff all managers have been started */
+  public boolean isDaemonRunning() {
+    return daemonRunning;
+  }
+
+  /** set daemonInited */
+  public void setDaemonInited(boolean val) {
+    daemonInited = val;
+  }
+
+  /** set daemonRunning */
+  public void setDaemonRunning(boolean val) {
+    daemonRunning = val;
+  }
 }
