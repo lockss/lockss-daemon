@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.4 2002-11-07 22:39:12 troberts Exp $
+ * $Id: ArchivalUnit.java,v 1.5 2003-01-14 00:48:10 aalto Exp $
  */
 
 /*
@@ -45,14 +45,20 @@ import gnu.regexp.*;
  * <code>BaseArchivalUnit</code>).
  */
 public interface ArchivalUnit {
-  /** Determine whether the url falls within the CrawlSpec. */
+  /**
+   * Determine whether the url falls within the CrawlSpec.
+   * @param url the url to test
+   * @return true if it should be cached
+   */
   public boolean shouldBeCached(String url);
 
   /**
    * Create a <code>CachedUrlSet</code> representing the content in this AU
    * that matches the url and regexp.
-   * @param url
-   * @param regexp
+   * @param url the CachedUrlSet url
+   * @param regexp the CachedUrlSet regexp
+   * @return the created CachedUrlSet
+   * @throws REException
    */
   public CachedUrlSet makeCachedUrlSet(String url, String regexp)
       throws REException;
@@ -60,11 +66,13 @@ public interface ArchivalUnit {
   /**
    * Return the <code>CachedUrlSet</code> representing the entire contents
    * of this AU
+   * @return the top-level CachedUrlSet
    */
   public CachedUrlSet getAUCachedUrlSet();
 
   /**
    * Return the {@link CrawlSpec}
+   * @return the CrawlSpec for the AU
    */
   public CrawlSpec getCrawlSpec();
 

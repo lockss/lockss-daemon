@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.3 2002-11-23 01:22:28 troberts Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.4 2003-01-14 00:48:40 aalto Exp $
  */
 
 /*
@@ -47,35 +47,56 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
   protected ArchivalUnit au;
   protected CachedUrlSetSpec spec;
 
-  /** Must invoke this constructor in plugin subclass. */
+  /**
+   * Must invoke this constructor in plugin subclass.
+   * @param owner the AU to which it belongs
+   * @param spec the CachedUrlSet's spec
+   */
   public BaseCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
     this.au = owner;
   }
 
-  /** Return the CachedUrlSetSpec */
+  /**
+   * Return the CachedUrlSetSpec
+   * @return the spec
+   */
   public CachedUrlSetSpec getSpec() {
     return spec;
   }
 
-  /** Return the enclosing ArchivalUnit */
+  /**
+   * Return the enclosing ArchivalUnit
+   * @return the AU
+   */
   public ArchivalUnit getArchivalUnit() {
     return au;
   }
 
-  /** Return true if content for the url is present in the CachedUrlSet */
+  /**
+   * Return true if content for the url is present in the CachedUrlSet
+   * @param url the url to test
+   * @return true if it is already cached
+   */
   public boolean isCached(String url) {
     CachedUrl cu = makeCachedUrl(url);
     return cu == null ? false : cu.exists();
   }
 
-  /** Return true if the url falls within the scope of this CachedUrlSet,
+  /**
+   * Return true if the url falls within the scope of this CachedUrlSet,
    * whether it is present in the cache or not
+   * @param url the url to test
+   * @return true if is within the scope
    */
   public boolean containsUrl(String url) {
     return (null != makeCachedUrl(url));
   }
 
+  /**
+   * Overridden to return the toString() method of the CachedUrlSetSpec.
+   * @return the spec string
+   */
   public String toString() {
     return "[BCUS: "+spec+"]";
   }
