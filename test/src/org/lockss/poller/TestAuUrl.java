@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUrl.java,v 1.1 2003-02-04 23:50:21 tal Exp $
+ * $Id: TestAuUrl.java,v 1.2 2003-02-05 20:54:50 tal Exp $
  */
 
 /*
@@ -48,13 +48,24 @@ public class TestAuUrl extends LockssTestCase {
     super(msg);
   }
 
+  // In order to split this into multiple test methods, it would be
+  // necessary to devise a mechanism to ensure that AuUrl.init() is called
+  // exactly once, before any tests.  (Easy, but unnecessary.)
+
+  static final String testConfigString = "a/string with?special&chars";
+
   public void testAuUrl() throws Exception {
     AuUrl.init();
     URL auurl = new URL("lockssau://foo.bar/123/journal-config");
+    assertTrue(AuUrl.isAuUrl(auurl));
     assertEquals("lockssau", auurl.getProtocol());
     assertEquals("foo.bar", auurl.getHost());
     assertEquals("/123/journal-config", auurl.getPath());
     // make sure we can still create "normal" URLs
     URL url = new URL("http://example.com/path");
+    assertTrue(!AuUrl.isAuUrl(url));
+
+    URL au = AuUrl.fromAuConfig(testConfigString);
+    assertEquals(testConfigString, AuUrl.getAuConfig(au));
   }
 }

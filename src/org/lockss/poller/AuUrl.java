@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.1 2003-02-04 23:50:21 tal Exp $
+* $Id: AuUrl.java,v 1.2 2003-02-05 20:54:50 tal Exp $
  */
 
 /*
@@ -34,11 +34,16 @@ package org.lockss.poller;
 import java.io.*;
 import java.net.*;
 
-/** This class just contains the one-time initialization necessary so that
- * LOCKSSAU: URLs can be created.  It can only be done once per JVM, so is
- * in a separate class to avoid problems that occur when running multiple
- * junit tests in the same JVM. */
+/** An AU URL is a URL with a special protocol (LOCKSSAU:), used in
+ * top-level poll messages to dentify the entire contents of an AU.  This
+ * class contains static utility methods to build and dissect them, and
+ * one-time initialization necessary so that LOCKSSAU: URLs can be created.
+ * This initialization can be done only once per JVM, so is in a separate
+ * class to avoid problems that occur when running multiple junit tests in
+ * the same JVM. */
 public class AuUrl {
+
+  public static final String PROTOCOL = "lockssau";
 
   /** Set up the URLStreamHandlerFactory that understands the LOCKSSAU:
    * protocol */
@@ -46,11 +51,40 @@ public class AuUrl {
     URL.setURLStreamHandlerFactory(new AuUrlFactory());
   }
 
+  /** Return true if the supplied URL is an AuUrl.
+   * @param url the URL to test.
+   * @return true if the protocol in the url is LOCKSS:
+   */
+  public static boolean isAuUrl(URL url) {
+    return PROTOCOL.equalsIgnoreCase(url.getProtocol());
+  }
+
+  /** Create an AuUrl from the config info provided by an AU.  The config
+   * string may contain any characters: it is URL-encoded before being put
+   * in the URL.
+   * @param auConfig the plugin-specific AU config string.
+   * @return a URL with the LOCKSSAU protocol and the supplied AU config
+   * string.
+   */
+  public static URL fromAuConfig(String auConfig)
+      throws MalformedURLException {
+    return new URL(PROTOCOL, "", URLEncoder.encode(auConfig));
+  }
+
+  /** Extract the AU config info from an AuUrl.
+   * @param auUrl an AuUrl produced by {@link #fromAuConfig(String)}
+   * @return the AU config string that was supplied to {@link
+   * #fromAuConfig(String)}
+   */
+  public static String getAuConfig(URL auUrl) {
+    return URLDecoder.decode(auUrl.getFile());
+  }
+
   // This allows creation of URLs with the LOCKSSAU: protocol.  They are
   // never opened, so the stream factory doesn't need to do anything.
   private static class AuUrlFactory implements URLStreamHandlerFactory {
     public URLStreamHandler createURLStreamHandler(String protocol) {
-      if ("lockssau".equalsIgnoreCase(protocol)) {
+      if (PROTOCOL.equalsIgnoreCase(protocol)) {
 	return new URLStreamHandler() {
 	    protected URLConnection openConnection(URL u) throws IOException {
 	      return null;
