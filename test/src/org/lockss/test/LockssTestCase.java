@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.35 2003-09-08 22:57:52 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.36 2003-09-08 23:12:45 tlipkis Exp $
  */
 
 /*
@@ -157,7 +157,7 @@ public class LockssTestCase extends TestCase {
    * @see #successRateTearDown()
    */
   protected void assertSuccessRate(double rate, int maxRepetitions) {
-    if (successMaxRepetitions == 0) {
+    if (successMaxFailures == 0) {
       successRate = rate;
       successMaxRepetitions = maxRepetitions;
       successMaxFailures = maxRepetitions - ((int)(rate * maxRepetitions));
@@ -206,6 +206,7 @@ public class LockssTestCase extends TestCase {
    * case that uses assertSuccessRate().  (setUp() is called before each
    * repetition.) */
   protected void successRateSetUp() {
+    successMaxFailures = 0;
   }
 
   /** Called once (after tearDown()) after a set of repetitions of a test
