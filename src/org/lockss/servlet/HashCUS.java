@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.5 2004-05-04 22:20:12 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.6 2004-05-12 19:54:36 tlipkis Exp $
  */
 
 /*
@@ -353,6 +353,7 @@ public class HashCUS extends LockssServlet {
       sel.add(au.getName(), id.equals(auid), id);
     }
     autbl.newRow(); autbl.newCell();
+    setTabOrder(sel);
     autbl.add(sel);
 
     Table tbl = new Table(0, "cellpadding=0");
@@ -386,6 +387,7 @@ public class HashCUS extends LockssServlet {
     centeredBlock.add(tbl);
     frm.add(centeredBlock);
     Input submit = new Input(Input.Submit, KEY_ACTION, ACTION_HASH);
+    setTabOrder(submit);
     frm.add("<br><center>"+submit+"</center>");
     comp.add(frm);
     return comp;
@@ -399,6 +401,7 @@ public class HashCUS extends LockssServlet {
     tbl.newCell();
     Input in = new Input(Input.Text, key, initVal);
     in.setSize(size);
+    setTabOrder(in);
     tbl.add(in);
   }
 
@@ -412,6 +415,7 @@ public class HashCUS extends LockssServlet {
     if (checked) {
       in.check();
     }
+    setTabOrder(in);
     c.add(in);
     c.add(" ");
     c.add(label);
@@ -424,6 +428,7 @@ public class HashCUS extends LockssServlet {
     if (checked) {
       in.check();
     }
+    setTabOrder(in);
     c.add(in);
     c.add(" ");
     c.add(label);

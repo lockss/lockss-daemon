@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.10 2004-02-23 09:10:01 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.11 2004-05-12 19:54:36 tlipkis Exp $
  */
 
 /*
@@ -193,13 +193,16 @@ public abstract class IpAccessControl extends LockssServlet {
 
     table.newRow();
     table.newCell("align=center");
+    setTabOrder(incArea);
     table.add(incArea);
     table.newCell("align=center");
+    setTabOrder(excArea);
     table.add(excArea);
 
     centeredBlock.add(table);
     frm.add(centeredBlock);
     Input submit = new Input(Input.Submit, "action", "Update");
+    setTabOrder(submit);
     frm.add("<br><center>"+submit+"</center>");
     comp.add(frm);
     return comp;

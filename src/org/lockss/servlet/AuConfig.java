@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.19 2004-05-12 17:49:36 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.20 2004-05-12 19:54:36 tlipkis Exp $
  */
 
 /*
@@ -379,6 +379,7 @@ public class AuConfig extends LockssServlet {
 	// javascript can find it.  (IE doesn't copy .text to .value)
 	sel.add(dispText, false, selText);
       }
+      setTabOrder(sel);
       tbl.add(sel);
       addOr(tbl);
     }
@@ -398,6 +399,7 @@ public class AuConfig extends LockssServlet {
 	PluginProxy p = (PluginProxy)pMap.get(pName);
 	sel.add(encodeText(pName), false, p.getPluginId());
       }
+      setTabOrder(sel);
       tbl.add(sel);
       addOr(tbl);
     }
@@ -407,6 +409,7 @@ public class AuConfig extends LockssServlet {
     Input in = new Input(Input.Text, "PluginClass");
     in.setSize(40);
     in.attribute("id", "plugin_input");
+    setTabOrder(in);
     tbl.add(in);
     tbl.newRow();
     tbl.newCell("colspan=3 align=center");
@@ -414,7 +417,7 @@ public class AuConfig extends LockssServlet {
     tbl.add("Then click to edit parameter values");
     tbl.add("<br>");
     tbl.add(new Input(Input.Hidden, ACTION_TAG, "EditNew"));
-    tbl.add(new Input(Input.Submit, "button", "Continue"));
+    tbl.add(setTabOrder(new Input(Input.Submit, "button", "Continue")));
     frm.add(tbl);
     page.add(frm);
     page.add("</center><br>");
@@ -527,11 +530,17 @@ public class AuConfig extends LockssServlet {
     for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
       Object act = iter.next();
       if (act instanceof String) {
-	tbl.add(new Input(Input.Submit, ACTION_TAG, (String)act));
+	tbl.add(setTabOrder(new Input(Input.Submit, ACTION_TAG, (String)act)));
 	if (iter.hasNext()) {
 	  tbl.add("&nbsp;");
 	}
       } else {
+	if (act instanceof Element) {
+	  // this will include hidden inputs in tab order, but that seems
+	  // to be harmless.
+	  Element ele = (Element)act;
+	  setTabOrder(ele);
+	}
 	tbl.add(act);
       }
     }
@@ -566,6 +575,7 @@ public class AuConfig extends LockssServlet {
 	if (descr.getSize() != 0) {
 	  in.setSize(descr.getSize());
 	}
+	setTabOrder(in);
 	tbl.add(in);
       } else {
 	tbl.add(encodeText(val));
@@ -845,6 +855,7 @@ public class AuConfig extends LockssServlet {
     btn.attribute("type", "button");
     btn.attribute("value", label);
     btn.attribute("id", "lsb." + (++submitButtonNumber));
+    setTabOrder(btn);
     StringBuffer sb = new StringBuffer(40);
     sb.append("lockssButton(this, '");
     sb.append(action);
@@ -872,6 +883,7 @@ public class AuConfig extends LockssServlet {
     if (checked) {
       in.check();
     }
+    setTabOrder(in);
     c.add(in);
     c.add(" ");
     c.add(label);
