@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.18 2003-05-01 23:30:07 tal Exp $
+ * $Id: DaemonStatus.java,v 1.19 2003-05-02 17:10:58 tal Exp $
  */
 
 /*
@@ -103,8 +103,10 @@ public class DaemonStatus extends LockssServlet {
     if (html) {
       page = newPage();
 
+      Date startDate = getLockssDaemon().getStartDate();
       page.add("<center>" + getMachineName() + " at " +
 	       df.format(now) + "</center>");
+      page.add("<center>Running since " + df.format(startDate) + "</center>");
       page.add("<br>");
 
 //       page.add("<center>");
