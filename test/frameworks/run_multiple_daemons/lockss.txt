@@ -37,11 +37,12 @@ org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=2
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=4
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.oddBranchContent=true
 
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.root=localB
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.depth=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.branch=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.numFiles=4
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.oddBranchContent=true
+#uncomment to run against a second AU
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.root=localB
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.depth=2
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.branch=2
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.numFiles=4
+#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localB.oddBranchContent=true
 
 # poll settings
 org.lockss.poll.maxpolls=20
