@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.27 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.28 2003-09-02 20:35:17 troberts Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new GenericFileCachedUrl(owner, url);
+    return new HighWireCachedUrl(owner, url);
   }
 
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
