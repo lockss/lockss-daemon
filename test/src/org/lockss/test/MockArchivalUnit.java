@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.20 2003-03-08 04:35:53 tal Exp $
+ * $Id: MockArchivalUnit.java,v 1.21 2003-03-20 00:38:04 troberts Exp $
  */
 
 /*
@@ -139,6 +139,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public String getAUId() {
     return auId;
+  }
+
+  public String getGloballyUniqueId() {
+    return getPluginId()+"&"+getAUId();
   }
 
   public String getName() {

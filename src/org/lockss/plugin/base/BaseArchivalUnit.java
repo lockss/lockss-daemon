@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.7 2003-03-08 02:18:57 tal Exp $
+ * $Id: BaseArchivalUnit.java,v 1.8 2003-03-20 00:38:04 troberts Exp $
  */
 
 /*
@@ -96,6 +96,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public abstract UrlCacher urlCacherFactory(CachedUrlSet owner,
 					     String url);
+
+  /**
+   * Returns a globally unique id for this AU.  This is different from
+   * get AUId, which is only unique within a plugin
+   * @return globally unique id for this AU
+   */
+  public String getGloballyUniqueId() {
+    return getPluginId()+"&"+getAUId();
+  }
 
   /**
    * Return the Plugin's ID.
