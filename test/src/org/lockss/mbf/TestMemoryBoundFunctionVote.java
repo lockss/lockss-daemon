@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.3 2003-08-25 23:58:49 dshr Exp $
  */
 
 /*
@@ -53,17 +53,23 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static byte[] basis;
   private int pathsTried;
   private static String[] MBFnames = {
-    "MOCK",
+    "MOCK",  // NB - must be first
     // "MBF1",
     // "MBF2",
   };
   private static MemoryBoundFunctionFactory[] MBFfactory = null;
   private static String[] MBFVnames = {
-    "MOCK",
-    // "MBFV2",
+    "MOCK",  // NB - must be first
+    "MBFV2",
   };
   private static MemoryBoundFunctionVoteFactory[] MBFVfactory = null;
   private static final int numSteps = 16;
+  private static int[] goodProof = {
+    1, 2,
+  };
+  private static int[] badProof = {
+    0,
+  };
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -169,6 +175,11 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     // Make a generator
     MemoryBoundFunctionVote gen = generator(i, j, nonce, cus);
     assertFalse(gen==null);
+    if (i == 0) {
+      // Set the proof array that the MockMemoryBoundFunction will return
+      // for generation and use for verification
+      MockMemoryBoundFunction.setProof(goodProof);
+    }
     // Generate the vote
     try {
       while (gen.computeSteps(numSteps)) {
@@ -196,6 +207,11 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     MemoryBoundFunctionVote ver = verifier(i, j, nonce, cus,
 					   proofArray, hashArray);
     assertFalse(ver==null);
+    if (i == 0) {
+      // Set the proof array that the MockMemoryBoundFunction will return
+      // for generation and use for verification
+      MockMemoryBoundFunction.setProof(goodProof);
+    }
     // Verify the vote
     try {
       while (ver.computeSteps(numSteps)) {
@@ -330,11 +346,28 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     return ret;
   }
 
+  static String goodContent =
+      "This is some content that will be the same for all goodCUS";
+
   private CachedUrlSet goodCUS(int bytes) {
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId("TestMemoryBoundFunctionVote:goodAU");
     MockCachedUrlSetHasher hash = new MockCachedUrlSetHasher(bytes);
     MockCachedUrlSet ret = new MockCachedUrlSet();
+    ret.setContentToBeHashed(goodContent.getBytes());
+    ret.setArchivalUnit(au);
+    ret.setContentHasher(hash);
+    return (ret);
+  }
+
+  private CachedUrlSet badCUS(int bytes) {
+    MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId("TestMemoryBoundFunctionVote:goodAU");
+    MockCachedUrlSetHasher hash = new MockCachedUrlSetHasher(bytes);
+    MockCachedUrlSet ret = new MockCachedUrlSet();
+    byte[] nonce = new byte[32];
+    rand.nextBytes(nonce);
+    ret.setContentToBeHashed(nonce); 
     ret.setArchivalUnit(au);
     ret.setContentHasher(hash);
     return (ret);

@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.3 2003-08-25 17:46:37 dshr Exp $
+ * $Id: MBFV2.java,v 1.4 2003-08-25 23:58:49 dshr Exp $
  */
 
 /*
@@ -186,8 +186,8 @@ public class MBFV2 extends MemoryBoundFunctionVote {
    * 
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
-    logger.info("computeSteps: block " + index + " steps " + n + " state " +
-		stateName[currentState]);
+    logger.debug("computeSteps: block " + index + " steps " + n + " state " +
+		 stateName[currentState]);
     stepLimit -= n;
     if (stepLimit <= 0)
       throw new MemoryBoundFunctionException("no more steps");
@@ -254,7 +254,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     if (index >= 0)
       throw new MemoryBoundFunctionException("bad index " + index + " in " +
 					     stateName[currentState]);
-    logger.info("starting verification " + ourProofs.length + "/" +
+    logger.debug("starting verification " + ourProofs.length + "/" +
 		ourHashes.length);
     // The first proof uses the nonce and the AU name [XXX and
     // also the first bytes of the AU].
@@ -267,7 +267,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       throw new MemoryBoundFunctionException("no CUS");
     }
     // XXX should also hash first bytes of AU
-    logger.info("verifySteps: index < 0");
+    logger.debug("verifySteps: index < 0");
     thisHash = null;
     thisProof = null;
     setState(FirstBlockProofVerification);
@@ -319,7 +319,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 					     stateName[currentState]);
     try {
       int bytesHashed = hasher.hashStep(bytesToGo > n ? n : bytesToGo);
-      logger.info("generateSteps: hashed " + bytesHashed + "/" + bytesToGo
+      logger.debug("generateSteps: hashed " + bytesHashed + "/" + bytesToGo
 		  + " bytes");
       if (bytesHashed <= 0)
 	throw new MemoryBoundFunctionException("too few bytes hashed " +
@@ -334,11 +334,11 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 	  throw new MemoryBoundFunctionException("contentDigest return null" + " in " +
 					     stateName[currentState]);
   	saveHash(index, thisHash);
-	logger.info("generateSteps: finished hashing block");
+	logger.debug("generateSteps: finished hashing block");
       }
       if (done) {
 	finished = true;
-	logger.info("generateSteps: finished hashing AU");
+	logger.debug("generateSteps: finished hashing AU");
 	setState(Finished);
       } else if (bytesToGo <= 0) {
 	index++;
@@ -369,7 +369,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
       proofDigest.update(thisHash);
       for (int i = 0; i < thisProof.length; i++)
 	proofDigest.update(intToByteArray(thisProof[i]));
-      logger.info("generateSteps: index " + index);
+      logger.debug("generateSteps: index " + index);
       thisHash = null;
       thisProof = null;
       mbf = factory.make(proofDigest.digest(),
@@ -392,7 +392,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     // Work on generating the proof
     mbf.computeSteps(n);
     if (mbf.done()) {
-      logger.info("generateSteps: proof finished");
+      logger.debug("generateSteps: proof finished");
       // Finished
       thisProof = mbf.result();
       saveProof(index, thisProof);
@@ -451,26 +451,40 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 					     stateName[currentState]);
     /* if (agreeing) */ try {
       int bytesHashed = hasher.hashStep(bytesToGo > n ? n : bytesToGo);
-      logger.info("verifySteps: hashed " + bytesHashed + "/" + bytesToGo
+      logger.debug("verifySteps: hashed " + bytesHashed + "/" + bytesToGo
 		  + " bytes");
       bytesToGo -= bytesHashed;
       boolean done = hasher.finished();
       if (bytesToGo <= 0 || done) {
 	// Extract the hash of this block and reset hasher for next
 	thisHash = ourHashes[index];
-	if (MessageDigest.isEqual(thisHash, contentDigest.digest())) {
+	byte[] newHash = contentDigest.digest();
+	if (!MessageDigest.isEqual(thisHash, newHash)) {
 	  // Hashes don't match
-	  logger.info("verifySteps: hashes don't match");
+	  StringBuffer gen = new StringBuffer();
+	  for (int i = 0; i < thisHash.length; i++) {
+	    gen.append(thisHash[i]);
+	    if (i < (thisHash.length - 1))
+	      gen.append(",");
+	  }
+	  StringBuffer ver = new StringBuffer();
+	  for (int i = 0; i < newHash.length; i++) {
+	    ver.append(newHash[i]);
+	    if (i < (newHash.length - 1))
+	      ver.append(",");
+	  }
+	  logger.info("verifySteps: [" + gen.toString() + "] != [" +
+		      ver.toString() + "]");
 	  agreeing = false;
 	}
-	logger.info("verifySteps: finished hashing block");
+	logger.debug("verifySteps: finished hashing block");
 	mbf = null;
 	thisHash = null;
 	thisProof = null;
       }
       if (done) {
 	finished = true;
-	logger.info("verifySteps: finished hashing AU");
+	logger.debug("verifySteps: finished hashing AU");
 	setState(Finished);
       } else if (bytesToGo <= 0) {
 	index++;

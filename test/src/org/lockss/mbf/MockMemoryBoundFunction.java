@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.2 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.3 2003-08-25 23:58:49 dshr Exp $
  */
 
 /*
@@ -43,8 +43,7 @@ import org.lockss.test.*;
 public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
   private long stepsDone;
   private long stepsToDo;
-  private int dummyProof;
-  private boolean useDummy;
+  private static int[] mockProof = null;
 
   /**
    * No-argument constructor for use with Class.newInstance()
@@ -53,8 +52,6 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
     mbf = null;
     stepsToDo = 0;
     stepsDone = 0;
-    dummyProof = -1;
-    useDummy = false;
   }
 
   /**
@@ -75,8 +72,6 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
       if (mbf.maxPath < 1)
 	throw new MemoryBoundFunctionException("too few paths");
     }
-    dummyProof = (int) mbf.basisSize() - 2;
-    useDummy = true;
     logger.info("e " + mbf.e + " pathLen " + mbf.pathLen + " verify " +
 		mbf.verify + " steps " + stepsToDo);
   }
@@ -92,16 +87,20 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
     stepsDone += n;
     if (stepsDone >= stepsToDo) {
       mbf.finished = true;
-      if (useDummy) {
-	if (mbf.verify) {
-	  if (mbf.proof != null) {
-	    if (mbf.proof[0] != dummyProof)
-	      mbf.proof = null;
-	  }
-	} else {
-	  mbf.proof = new int[1];
-	  mbf.proof[0] = dummyProof;
-	}
+      if (mbf.verify) {
+	// We're verifying
+	boolean match = (mockProof != null &&
+			 mockProof.length == mbf.proof.length);
+	for (int i = 0; i < mockProof.length; i++)
+	  if (match && mockProof[i] != mbf.proof[i])
+	    match = false;
+	if (!match)
+	  mbf.proof = null;  // Proof invalid
+      } else {
+	// We're generating
+	mbf.proof = new int[mockProof.length];
+	for (int i = 0; i < mbf.proof.length; i++)
+	  mbf.proof[i] = mockProof[i];
       }
     }
     return (!mbf.finished);
@@ -111,18 +110,8 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
    * Set the proof to be returned
    * @param p an array of int containing the proof to be returned
    */
-  public void setProof(int[] p) {
-    if (!mbf.verify)
-      mbf.proof = p;
+  public static void setProof(int[] p) {
+    mockProof = p;
   }
   
-  /**
-   * Set the success of verification
-   * @param v a boolean setting whether the verification is to succeed
-   */
-  public void setVerify(boolean v) {
-    if (mbf.verify && !v)
-      mbf.proof = null;
-  }
-
 }
