@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.20 2003-04-02 23:29:08 tal Exp $
+ * $Id: Deadline.java,v 1.21 2003-04-21 05:40:58 tal Exp $
  */
 
 /*
@@ -402,11 +402,27 @@ public class Deadline implements Comparable {
   private static final DateFormat df = DateFormat.getTimeInstance();
 
   public String toString() {
-    return "[deadline: in " + duration + ", at " +
-      (TimeBase.isSimulated()
-       ? ("sim " + expiration.getTime())
-       : df1.format(expiration))
-      + "]";
+    boolean isSim = TimeBase.isSimulated();
+    StringBuffer sb = new StringBuffer();
+    sb.append("[deadline: in ");
+    sb.append(isSim ? Long.toString(duration)
+	      : StringUtil.timeIntervalToString(duration));
+    sb.append(", at ");
+    if (isSim) {
+      sb.append("sim ");
+      sb.append(expiration.getTime());
+    } else {
+      sb.append(df1.format(expiration));
+    }
+    sb.append("]");
+    return sb.toString();
+//     String in = (isSim ? Long.toString(duration)
+// 		 : StringUtil.timeIntervalToString(duration));
+//     return "[deadline: in " + in +
+//     ", at " + (isSim
+// 	       ? ("sim " + expiration.getTime())
+// 	       : df1.format(expiration))
+// 	       + "]";
   }
 
   /**
