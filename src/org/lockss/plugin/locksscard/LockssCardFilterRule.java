@@ -1,5 +1,5 @@
 /*
- * $Id: LockssCardFilterRule.java,v 1.1 2005-02-04 00:50:22 troberts Exp $
+ * $Id: LockssCardFilterRule.java,v 1.2 2005-02-04 20:21:13 troberts Exp $
  */
 
 /*
@@ -30,7 +30,7 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
+package org.lockss.plugin.locksscard;
 
 import java.io.*;
 import java.util.List;
