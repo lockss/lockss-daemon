@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.110 2004-09-09 00:49:00 tlipkis Exp $
+ $Id: build.xml,v 1.111 2004-09-11 01:19:38 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1595,7 +1595,7 @@ Test results in ${tools.test.results}
    depends="prepare.run.test,check.junit,jar-tests"
    description="Run a set of test classes through jcoverage, named by the 'include' property." >
     <property name="jcoverage.ser" value="jcoverage.ser" />
-    <property name="tests" value="${include}Test*" />
+    <property name="tests" value="${include}/Test*" />
     <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
     <delete file="${jcoverage.ser}" quiet="true" />
     <delete dir="${instrumented}" quiet="true" />
