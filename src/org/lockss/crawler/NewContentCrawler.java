@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.14 2004-03-11 09:40:23 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.15 2004-03-23 08:25:01 tlipkis Exp $
  */
 
 /*
@@ -53,6 +53,8 @@ public class NewContentCrawler extends CrawlerImpl {
     Configuration.PREFIX + "CrawlerImpl.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
 
+  public static final String PARAM_REFETCH_DEPTH =
+    Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
 
   public NewContentCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     super(au, spec, aus);
@@ -77,7 +79,14 @@ public class NewContentCrawler extends CrawlerImpl {
       return false;
     }
 
-    int refetchDepth = spec.getRefetchDepth();
+    int refetchDepth0 = spec.getRefetchDepth();
+    String key = StringUtil.replaceString(PARAM_REFETCH_DEPTH,
+					  "<auid>", au.getAuId());
+    int refetchDepth = Configuration.getIntParam(key, refetchDepth0);
+    if (refetchDepth != refetchDepth0) {
+      logger.info("Crawl spec refetch depth (" + refetchDepth0 +
+		  ") overridden by parameter (" + refetchDepth + ")");
+    }
     Iterator it = spec.getStartingUrls().iterator(); //getStartingUrls();
     for (int ix=0; ix<refetchDepth; ix++) {
 
@@ -95,6 +104,10 @@ public class NewContentCrawler extends CrawlerImpl {
 	  return false;
 	}
 
+	if (parsedPages.contains(url)) {
+	  continue;
+	}
+
  	if (spec.isIncluded(url)) {
 	  if (!fetchAndParse(url, extractedUrls, parsedPages,
 			     cus, true, true)) {
@@ -102,7 +115,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	    }
 	  }
-	} else {
+	} else if (ix == 0) {
 	  logger.warning("Called with a starting url we aren't suppose to "+
 			 "cache: "+url);
 	}
@@ -194,14 +207,14 @@ public class NewContentCrawler extends CrawlerImpl {
 	}
       } catch (CacheException e) {
 	if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
-	  logger.error("Problem caching "+uc+". Ignoring", e);
+	  logger.error("Problem caching "+uc+". Continuing", e);
 	  error = Crawler.STATUS_FETCH_ERROR;
 	} else {
 	  logger.warning(uc+" not found on publisher's site", e);
 	}
-      } catch (IOException e) {
+      } catch (Exception e) {
 	//XXX not expected
-	logger.critical("Unexpected IOException during crawl", e);
+	logger.error("Unexpected Exception during crawl, continuing", e);
 	error = Crawler.STATUS_FETCH_ERROR;
       }
     } else {
