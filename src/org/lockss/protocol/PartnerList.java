@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.7 2003-03-28 23:39:41 tal Exp $
+ * $Id: PartnerList.java,v 1.8 2003-04-02 02:04:55 tal Exp $
  */
 
 /*
@@ -127,6 +127,7 @@ class PartnerList {
    * @probability the probability of adding the partner
    */
   public void addPartner(InetAddress partnerIP, double probability) {
+    log.debug2("addPartner(" + partnerIP + ", " + probability + ")");
     if (ProbabilisticChoice.choose(probability)) {
       addPartner(partnerIP);
     }

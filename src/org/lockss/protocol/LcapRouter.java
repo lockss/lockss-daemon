@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.10 2003-03-29 20:22:57 tal Exp $
+ * $Id: LcapRouter.java,v 1.11 2003-04-02 02:04:55 tal Exp $
  */
 
 /*
@@ -245,6 +245,7 @@ public class LcapRouter extends BaseLockssManager {
   void routeIncomingMessage(LockssReceivedDatagram dg, LcapMessage msg) {
     InetAddress sender = dg.getSender();
     InetAddress originator = msg.getOriginAddr();
+    log.debug2("incoming orig: " + originator + " , sender: " + sender);
     if (isEligibleToForward(dg, msg)) {
       msg.setHopCount(msg.getHopCount() - 1);
       if (dg.isMulticast()) {
