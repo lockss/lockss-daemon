@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.72 2004-08-22 02:05:57 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.72.2.1 2004-10-14 07:53:08 tlipkis Exp $
  */
 
 /*
@@ -65,6 +65,11 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       Configuration.PREFIX + "crawler.repair.repair_from_cache_percent";
 
 
+  /** Set false to prevent all crawl activity */ 
+  public static final String PARAM_ALLOW_CRAWLS =
+    Configuration.PREFIX + "crawler.allowCrawls";
+  static final boolean DEFAULT_ALLOW_CRAWLS = true;
+
   static final String WDOG_PARAM_CRAWLER = "Crawler";
   static final long WDOG_DEFAULT_CRAWLER = 2 * Constants.HOUR;
 
@@ -96,6 +101,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   private long contentCrawlExpiration;
   private long repairCrawlExpiration;
   private float percentRepairFromCache;
+  private boolean allowCrawls = DEFAULT_ALLOW_CRAWLS;
   private static Logger logger = Logger.getLogger("CrawlManager");
 
 
@@ -136,6 +142,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     percentRepairFromCache =
       newConfig.getPercentage(PARAM_REPAIR_FROM_CACHE_PERCENT,
 			      DEFAULT_REPAIR_FROM_CACHE_PERCENT);
+    allowCrawls =
+      newConfig.getBooleanParam(PARAM_ALLOW_CRAWLS, DEFAULT_ALLOW_CRAWLS);
   }
 
   public void cancelAuCrawls(ArchivalUnit au) {
@@ -340,20 +348,28 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       //pull out of thread
       boolean crawlSuccessful = false;
       try {
-        setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
-        crawler.setWatchdog(this);
-        startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
-        nowRunning();
+	if (!allowCrawls) {
+	  nowRunning();
+	  try {
+	    Deadline.in(Constants.HOUR).sleep();
+	  } catch (InterruptedException e) {
+	  }
+	} else {
+	  setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
+	  crawler.setWatchdog(this);
+	  startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
+	  nowRunning();
 
-	crawlSuccessful = crawler.doCrawl();
+	  crawlSuccessful = crawler.doCrawl();
 
-        if (crawler.getType() == Crawler.NEW_CONTENT) {
-          if (crawlSuccessful) {
-            NodeManager nodeManager =
-	      theDaemon.getNodeManager(crawler.getAu());
-            nodeManager.newContentCrawlFinished();
-          }
-        }
+	  if (crawler.getType() == Crawler.NEW_CONTENT) {
+	    if (crawlSuccessful) {
+	      NodeManager nodeManager =
+		theDaemon.getNodeManager(crawler.getAu());
+	      nodeManager.newContentCrawlFinished();
+	    }
+	  }
+	}
       } finally {
         // free all locks, regardless of exceptions
         if (locks != null) {
