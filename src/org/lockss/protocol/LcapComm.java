@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.39 2003-06-20 22:34:51 claire Exp $
+ * $Id: LcapComm.java,v 1.40 2003-07-14 06:43:47 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class LcapComm extends BaseLockssManager {
   LcapComm(SocketFactory factory, Configuration config) {
     sockFact = factory;
     configure(config,
-	      Configuration.EMPTY_CONFIGURATION, Collections.EMPTY_SET);
+	      ConfigManager.EMPTY_CONFIGURATION, Collections.EMPTY_SET);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.8 2003-06-20 22:34:50 claire Exp $
+ * $Id: BaseLockssManager.java,v 1.9 2003-07-14 06:43:48 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public abstract class BaseLockssManager implements LockssManager {
    * ...) method with the current config and empty previous config. */
   protected void resetConfig() {
     Configuration cur = Configuration.getCurrentConfig();
-    setConfig(cur, Configuration.EMPTY_CONFIGURATION, cur.keySet());
+    setConfig(cur, ConfigManager.EMPTY_CONFIGURATION, cur.keySet());
   }
 
   /** Managers must implement this method.  It is called once at daemon

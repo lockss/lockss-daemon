@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.37 2003-06-20 22:34:51 claire Exp $
+ * $Id: PluginManager.java,v 1.38 2003-07-14 06:43:47 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class PluginManager extends BaseLockssManager {
     super.stopService();
   }
 
-  Configuration prevAllPlugs = Configuration.EMPTY_CONFIGURATION;
+  Configuration prevAllPlugs = ConfigManager.EMPTY_CONFIGURATION;
 
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
