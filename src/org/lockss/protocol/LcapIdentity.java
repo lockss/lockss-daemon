@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.18 2003-09-05 02:45:20 dshr Exp $
+ * $Id: LcapIdentity.java,v 1.19 2003-09-05 03:23:18 dshr Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class LcapIdentity implements Serializable {
    * construct a new Identity from an address
    * @param addr the InetAddress
    */
-  LcapIdentity(InetAddress addr) {
+  public LcapIdentity(InetAddress addr) {
     m_idKey = makeIdKey(addr);
     m_reputation = IdentityManager.INITIAL_REPUTATION;
     m_address = addr;
