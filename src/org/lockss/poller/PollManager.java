@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.40 2003-03-05 02:02:14 claire Exp $
+* $Id: PollManager.java,v 1.41 2003-03-05 23:47:07 claire Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class PollManager  implements LockssManager {
 				 duration,
 				 idmgr.getLocalIdentity());
 
-    theLog.debug("send: " +  msg.toString());
+    theLog.debug2("send poll request: " +  msg.toString());
     sendMessage(msg,cus.getArchivalUnit());
   }
 
@@ -200,9 +200,9 @@ public class PollManager  implements LockssManager {
 
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
     if(pme == null) {
-      theLog.info("Making new poll: "+ key);
+      theLog.debug("Making new poll: "+ key);
       ret = makePoll(msg);
-      theLog.info("Done making new poll: "+ key);
+      theLog.debug("Done making new poll: "+ key);
     }
     else {
       ret = pme.poll;
@@ -232,8 +232,8 @@ public class PollManager  implements LockssManager {
     // check for conflicts
     CachedUrlSet conflict = checkForConflicts(msg, cus);
     if(conflict != null) {
-      String err = msg.toString() + " conflicts with " + conflict.toString() +
-                   " in makeElection()";
+      String err = "New poll for " + cus + " conflicts with " + conflict +
+          ", ignoring poll request.";
       theLog.debug(err);
       return null;
     }
@@ -387,10 +387,10 @@ public class PollManager  implements LockssManager {
         idmgr.getLocalIdentity());
 
     LcapIdentity originator =  idmgr.findIdentity(vote.getIDAddress());
-    theLog.debug("sending our verification request to " + originator.toString());
+    theLog.debug2("sending our verification request to " + originator.toString());
     sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
 
-    theLog.debug("Creating a local poll instance...");
+    theLog.debug2("Creating a local poll instance...");
     Poll poll = findPoll(reqmsg);
     poll.m_pollstate = Poll.PS_WAIT_TALLY;
   }
@@ -539,8 +539,7 @@ public class PollManager  implements LockssManager {
          long earliest = ret - ret/4;
          long latest = ret + ret/4;
          ret = earliest + theRandom.nextLong(latest - earliest);
-         //ret = ret * 2 * (quorum +1);
-        theLog.debug("Name Poll duration: " + ret);
+        theLog.debug3("Name Poll duration: " + ret/1000 + " seconds.");
         break;
 
       case LcapMessage.CONTENT_POLL_REQ:
@@ -551,6 +550,7 @@ public class PollManager  implements LockssManager {
             DEFAULT_CONTENTPOLL_MAX);
         ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
         ret = ret < minContent ? minContent : (ret > maxContent ? maxContent : ret);
+        theLog.debug3("Content Poll duration: " + ret/1000 + " seconds.");
         break;
 
       default:

@@ -2,9 +2,9 @@
 org.lockss.log.default.level=info
 org.lockss.log.PollManager.level=debug
 org.lockss.log.Poll.level=debug
-org.lockss.log.Comm.level=debug
+org.lockss.log.Comm.level=info
 org.lockss.log.NodeManager.level=debug
-org.lockss.log.Message.level=debug
+org.lockss.log.Message.level=info
 org.lockss.log.GenericHasher.level=info
 org.lockss.log.MSock_3456_Rcv.level=debug
 org.lockss.log.USock_9001_Rcv.level=debug
@@ -54,8 +54,8 @@ org.lockss.protocol.hashAlgorithm=SHA-1
 # poll settings
 org.lockss.poll.maxpolls=12
 org.lockss.poll.quorum=3
-org.lockss.poll.agreeVerify=20
-org.lockss.poll.disagreeVerify=50
+org.lockss.poll.agreeVerify=0
+org.lockss.poll.disagreeVerify=0
 org.lockss.poll.namepoll.deadline=300000
 org.lockss.poll.contentpoll.min=180000
 org.lockss.poll.contentpoll.max=300000

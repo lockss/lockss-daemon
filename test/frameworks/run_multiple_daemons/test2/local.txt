@@ -1,5 +1,4 @@
 org.lockss.localIPAddress=2.2.2.2
-#org.lockss.poll.agreeVerify=100
 org.lockss.comm.unicast.port=9001
 org.lockss.comm.unicast.sendToPort=9000
 org.lockss.comm.unicast.sendToAddr=127.0.0.1

@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.52 2003-03-05 01:59:56 claire Exp $
+* $Id: Poll.java,v 1.53 2003-03-05 23:47:07 claire Exp $
  */
 
 /*
@@ -66,7 +66,9 @@ public abstract class Poll implements Serializable {
 
   static final int DEFAULT_AGREE_VERIFY = 20;
   static final int DEFAULT_DISAGREE_VERIFY = 90;
-
+  static final String[] ERROR_STRINGS = {"Poll Complete","Hash Schedule Error",
+      "Hashing Error", "No Quroum", "IO Error"
+  };
   public static final int ERR_SCHEDULE_HASH = -1;
   public static final int ERR_HASHING = -2;
   public static final int ERR_NO_QUORUM = -3;
@@ -196,7 +198,7 @@ public abstract class Poll implements Serializable {
    */
   void checkVote(byte[] hashResult, Vote vote)  {
     byte[] hashed = vote.getHash();
-    log.debug("Checking "+
+    log.debug3("Checking "+
               String.valueOf(B64Code.encode(hashResult))+
               " against "+
               vote.getHashString());
@@ -273,14 +275,16 @@ public abstract class Poll implements Serializable {
     nm.startPoll(m_urlSet, m_tally);
     Deadline pt = Deadline.in(m_msg.getDuration());
     MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
+    m_pollstate = PS_WAIT_HASH;
     if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
       m_pollstate = ERR_SCHEDULE_HASH;
-      log.debug("couldn't schedule hash - stopping poll");
+      log.debug("couldn't schedule our hash:" + m_msg.getDuration()
+                + " stopping poll");
       stopPoll();
       return;
     }
+    log.debug3("scheduling poll to complete by " + m_deadline);
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
-    m_pollstate = PS_WAIT_HASH;
   }
 
   /**
@@ -311,10 +315,12 @@ public abstract class Poll implements Serializable {
     if(!isErrorState()) {
       m_pollstate = m_tally.haveQuorum() ? PS_COMPLETE : ERR_NO_QUORUM;
     }
-    log.debug("stopping poll with state = " + m_pollstate);
-    tally();
+    if(isErrorState()) {
+      log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
+    }
     m_pollmanager.closeThePoll(m_key);
-    log.debug("closed the poll:" + m_key);
+    log.debug2("closed the poll:" + m_key);
+    tally();
   }
 
   /**
@@ -377,7 +383,7 @@ public abstract class Poll implements Serializable {
     MessageDigest hasher = m_pollmanager.getHasher(m_msg);
     hasher.update(challenge, 0, challenge.length);
     hasher.update(verifier, 0, verifier.length);
-    log.debug("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
+    log.debug3("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
               +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
     return hasher;
   }
@@ -399,8 +405,10 @@ public abstract class Poll implements Serializable {
                                 Object cookie,
                                 MessageDigest hasher,
                                 Exception e) {
-      if(m_pollstate != PS_WAIT_HASH)
+      if(m_pollstate != PS_WAIT_HASH) {
+        log.debug("hasher returned with pollstate: " + m_pollstate);
         return;
+      }
       boolean hash_completed = e == null ? true : false;
 
       if(hash_completed)  {
@@ -441,6 +449,9 @@ public abstract class Poll implements Serializable {
         checkVote(out_hash, vote);
         stopVoteCheck();
       }
+      else {
+        log.info("vote hash failed with exception:" + e.getMessage());
+      }
     }
   }
 
@@ -467,6 +478,9 @@ public abstract class Poll implements Serializable {
         m_tally.addVote(v);
         m_tally.replayNextVote();
       }
+      else {
+        log.info("replay vote hash failed with exception:" + e.getMessage());
+      }
     }
   }
 
@@ -476,11 +490,11 @@ public abstract class Poll implements Serializable {
      * @param cookie  data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
-      log.debug("VoteTimerCallback called, checking if I should vote");
+      log.debug3("VoteTimerCallback called, checking if I should vote");
       if(m_pollstate == PS_WAIT_VOTE) {
-        log.debug("I should vote");
+        log.debug3("I should vote");
         voteInPoll();
-        log.debug("Just voted");
+        log.debug("I just voted");
       }
     }
   }
@@ -676,7 +690,9 @@ public abstract class Poll implements Serializable {
           pollVotes = originalVotes;
         }
         originalVotes = null;
-        //NodeManager.updatePollResults(m_urlSet, this);
+        NodeManager nm = m_pollmanager.getDaemon().getNodeManager(m_arcUnit);
+        log.debug("sending NodeManager replay results " + m_tally);
+        nm.updatePollResults(m_urlSet, m_tally);
       }
       else {
         Vote vote = (Vote)replayIter.next();
@@ -718,7 +734,7 @@ public abstract class Poll implements Serializable {
         if(vote.isAgreeVote()) {
           numAgree++;
           wtAgree += weight;
-          log.info("I agree with " + vote + " rep " + weight);
+          log.debug("I agree with " + vote + " rep " + weight);
         }
         else {
           numDisagree++;
@@ -727,7 +743,7 @@ public abstract class Poll implements Serializable {
             log.error("I disagree with myself about " + vote + " rep " + weight);
           }
           else {
-            log.info("I disagree with " + vote + " rep " + weight);
+            log.debug("I disagree with " + vote + " rep " + weight);
           }
 
         }
