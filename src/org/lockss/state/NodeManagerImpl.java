@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.10 2003-01-23 02:00:50 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.11 2003-01-24 02:43:09 aalto Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.state;
 
 import java.util.*;
 import gnu.regexp.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
 import org.lockss.util.*;
@@ -44,7 +45,6 @@ import org.lockss.protocol.LcapMessage;
 import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepository;
 import org.lockss.repository.LockssRepositoryImpl;
-import java.io.File;
 
 /**
  * Implementation of the NodeManager.
@@ -53,6 +53,7 @@ public class NodeManagerImpl implements NodeManager {
   private static NodeManager nodeManager = null;
   private HistoryRepository repository;
   private HashMap auMaps;
+  private HashMap auEstimateMap;
   private static Logger logger = Logger.getLogger("NodeManager");
 
   /**
@@ -163,63 +164,110 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public long getEstimatedTreeWalkDuration(ArchivalUnit au) {
-    // check size (node count) of tree
-    // estimate via short walk
-    // multiply
-    return 1000;
+    if (auEstimateMap==null) {
+      auEstimateMap = new HashMap();
+    }
+    String auKey = getAuKey(au);
+    Long estimateL = (Long)auEstimateMap.get(auKey);
+    if (estimateL==null) {
+      // check size (node count) of tree
+      TreeMap auMap = (TreeMap)auMaps.get(auKey);
+      if (auMap==null) {
+        logger.error("Estimate called on non-existent au '"+getAuKey(au)+"'.");
+        throw new IllegalArgumentException("Estimate called on non-existent au.");
+      }
+      int nodeCount = auMap.size();
+      // estimate via short walk
+      // this is not a fake walk; it functionally walks part of the tree
+      long startTime = TimeBase.nowMs();
+      TreeMap nodeMap = (TreeMap)auMaps.get(auKey);
+      Iterator nodesIt = nodeMap.entrySet().iterator();
+      String deleteSub = null;
+      int NUMBER_OF_NODES_TO_TEST = 200; //XXX fix
+      //XXX do for set time?
+      for (int ii=0; ii<NUMBER_OF_NODES_TO_TEST; ii++) {
+        Map.Entry entry = (Map.Entry)nodesIt.next();
+        deleteSub = walkEntry(entry, deleteSub);
+      }
+      long elapsedTime = TimeBase.nowMs() - startTime;
+
+      // calculate
+      double nodesPerMs = ((double)elapsedTime / NUMBER_OF_NODES_TO_TEST);
+      estimateL = new Long((long)(nodeCount * nodesPerMs));
+
+      auEstimateMap.put(getAuKey(au), estimateL);
+    }
+    return estimateL.longValue();
   }
 
   private void doTreeWalk() {
-    Iterator nodeMapIt = auMaps.entrySet().iterator();
-    while (nodeMapIt.hasNext()) {
-      TreeMap nodeMap = (TreeMap)nodeMapIt.next();
+    Iterator keyIt = auMaps.keySet().iterator();
+    while (keyIt.hasNext()) {
+      String auKey = (String)keyIt.next();
+      long startTime = TimeBase.nowMs();
+      TreeMap nodeMap = (TreeMap)auMaps.get(auKey);
       nodeTreeWalk(nodeMap);
+      long elapsedTime = TimeBase.nowMs() - startTime;
+      updateEstimate(auKey, elapsedTime);
+    }
+  }
+
+  private void updateEstimate(String auKey, long elapsedTime) {
+    if (auEstimateMap==null) {
+      auEstimateMap = new HashMap();
+    }
+    Long estimateL = (Long)auEstimateMap.get(auKey);
+    if (estimateL==null) {
+      auEstimateMap.put(auKey, new Long(elapsedTime));
+    } else {
+      long newEstimate = (estimateL.longValue() + elapsedTime)/2;
+      auEstimateMap.put(auKey, new Long(newEstimate));
     }
   }
 
   private void nodeTreeWalk(TreeMap nodeMap) {
     Iterator nodesIt = nodeMap.entrySet().iterator();
-    String deleteSub = null;
+    String deleteStr = null;
     while (nodesIt.hasNext()) {
       Map.Entry entry = (Map.Entry)nodesIt.next();
-      String key = (String)entry.getKey();
-      NodeState node = (NodeState)entry.getValue();
-
-      // if it is in a directory under a deleted directory, skip it
-      if ((deleteSub!=null) && (key.startsWith(deleteSub))) {
-        //XXX mark deleted?
-        continue;
-      } else {
-        deleteSub = null;
-      }
-      // at each node, check for crawl state
-      switch (node.getCrawlState().getType()) {
-        case CrawlState.NODE_DELETED:
-          deleteSub = key;
-          if (!deleteSub.endsWith(File.separator)) {
-            deleteSub += File.separator;
-          }
-          continue;
-        case CrawlState.BACKGROUND_CRAWL:
-        case CrawlState.NEW_CONTENT_CRAWL:
-        case CrawlState.REPAIR_CRAWL:
-
-          //XXX schedule crawls if it's been too long
-          // check with plugin for scheduling
-      }
-      repository.storePollHistories(node);
-      Iterator pollsIt = node.getActivePolls();
-      while (pollsIt.hasNext()) {
-        PollState poll = (PollState)pollsIt.next();
-        if ((poll.getStatus()==PollState.LOST) ||
-            (poll.getStatus()==PollState.REPAIRED) ||
-            (poll.getStatus()==PollState.UNREPAIRABLE) ||
-            (poll.getStatus()==PollState.WON)) {
-
-          //XXX update poll states?
-        }
-      }
+      // the deleteStr string is used to keep track of when the next
+      // entry is a sub-node of a deleted one
+      // -if it is, deleteStr stays the same and the entry is skipped
+      // -if it isn't, but the entry itself is deleted, deleteStr = entry key
+      // -otherwise, deleteStr is null
+      deleteStr = walkEntry(entry, deleteStr);
     }
+  }
+
+  private String walkEntry(Map.Entry entry, String deleteStr) {
+    String key = (String)entry.getKey();
+    NodeState node = (NodeState)entry.getValue();
+
+    // if it is in a directory under a deleted directory, skip it
+    if ((deleteStr!=null) && (key.startsWith(deleteStr))) {
+      //XXX mark deleted?
+      // still under same 'deleteStr'
+      return deleteStr;
+    }
+    // at each node, check for crawl state
+    switch (node.getCrawlState().getType()) {
+      case CrawlState.NODE_DELETED:
+        if (!key.endsWith(File.separator)) {
+          key += File.separator;
+        }
+        // the new 'deleteStr'
+        return key;
+      case CrawlState.BACKGROUND_CRAWL:
+      case CrawlState.NEW_CONTENT_CRAWL:
+      case CrawlState.REPAIR_CRAWL:
+
+        //XXX schedule crawls if it's been too long
+        // check with plugin for scheduling
+    }
+    // permanently store poll histories
+    repository.storePollHistories(node);
+    // null 'deleteStr'
+    return null;
   }
 
   private void loadStateTree() {
