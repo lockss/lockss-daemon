@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.23 2005-01-19 04:18:58 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.24 2005-02-21 03:07:31 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -311,7 +311,7 @@ public class TimerQueue {
       List rows = new ArrayList(q.size());
       int ix = 0;
       for (Iterator iter = q.iterator(); iter.hasNext();) {
-	Request req = (Request)iter.next();
+	TimerQueue.Request req = (TimerQueue.Request)iter.next();
 	if (!req.cancelled ||
 	    table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)) {
 	  rows.add(makeRow(req));
@@ -320,7 +320,7 @@ public class TimerQueue {
       return rows;
     }
 
-    private Map makeRow(Request req) {
+    private Map makeRow(TimerQueue.Request req) {
       Map row = new HashMap();
       row.put("Time", req.deadline);
       if (!req.deadline.equals(Deadline.MAX)) {

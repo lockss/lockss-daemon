@@ -1,5 +1,5 @@
 /*
- * $Id: MockMulticastSocket.java,v 1.3 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockMulticastSocket.java,v 1.4 2005-02-21 03:07:31 tlipkis Exp $
  */
 
 /*
@@ -172,8 +172,9 @@ public class MockMulticastSocket
   public void leaveGroup(InetAddress mcastaddr) {
   }
 
-  public void send(DatagramPacket p, byte ttl) {
-    this.send(p);
-  }
+  // Overridden method is deprecated in 1.4, jikes considers this illegal
+//   public void send(DatagramPacket p, byte ttl) {
+//     this.send(p);
+//   }
 
 }

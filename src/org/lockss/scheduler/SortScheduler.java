@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.8 2004-10-06 04:46:48 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.9 2005-02-21 03:07:32 tlipkis Exp $
  */
 
 /*
@@ -661,13 +661,14 @@ public class SortScheduler implements Scheduler {
    * version of the scheduler, which sorts but does no other combinatorics,
    * it helps only a little.) */
   static class IntervalRange {
-    SchedInterval intervals[];		// the entire set of intervals
+    SortScheduler.SchedInterval intervals[]; // the entire set of intervals
     int first;				// index of first interval in the range
     int last;				// index of last interval in the range
     TaskData tasks[];			// tasks to schedule during this range
     int ntasks;				// number of tasks
 
-    IntervalRange(SchedInterval intervals[], int first, int last) {
+    IntervalRange(SortScheduler.SchedInterval intervals[],
+		  int first, int last) {
       this.intervals = intervals;
       this.first = first;
       this.last = last;
@@ -676,7 +677,7 @@ public class SortScheduler implements Scheduler {
     void initIntervalTasks() {
       Set taskset = new HashSet();
       for (int ix = first; ix <= last; ix++) {
-	SchedInterval intrvl = intervals[ix];
+	SortScheduler.SchedInterval intrvl = intervals[ix];
 	taskset.addAll(intrvl.competingTaskList);
 	if (intrvl.endingTaskList != null) {
 	  intrvl.endingTasks =
@@ -696,7 +697,7 @@ public class SortScheduler implements Scheduler {
       initIntervalTasks();
 
       for (int iix = first; iix <= last; iix++) {
-	SchedInterval intrvl = intervals[iix];
+	SortScheduler.SchedInterval intrvl = intervals[iix];
 	if (!intrvl.scheduleInterval(tasks)) {
 	  if (log.isDebug2()) {
 	    log.debug2("schedIntrvlRng: can't schedule interval: " +
