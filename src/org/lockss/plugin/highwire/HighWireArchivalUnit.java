@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.18 2003-04-03 20:57:15 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.19 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for pause time in Highwire crawling.
    */
-  public static final String PARAM_HIGHWIRE_PAUSE_TIME =
+  public static final String AUPARAM_PAUSE_TIME =
       Configuration.PREFIX + "highwire.pause.time";
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
@@ -65,7 +65,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   private int volume;
   private URL base;
 
-  public static final String PARAM_HIGHWIRE_NC_INTERVAL =
+  public static final String AUPARAM_NC_INTERVAL =
       Configuration.PREFIX + "highwire.nc_interval";
   private static final long DEFAULT_NC_INTERVAL = 14 * Constants.DAY;;
 
@@ -80,17 +80,40 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
    * @param config configuration info for AU
    * @throws ArchivalUnit.ConfigurationException
    */
-  public HighWireArchivalUnit(Plugin myPlugin, Configuration config)
-      throws ArchivalUnit.ConfigurationException {
+  public HighWireArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
-    // tk - this is awful
-    String auId = myPlugin.getAUIdFromConfig(config);
-    int volume = HighWirePlugin.volumeFromAUId(auId);
-    URL base;
+  }
+
+
+  public void setConfiguration(Configuration config) 
+      throws ConfigurationException {
+    super.setConfiguration(config);
+
+    if (config == null) {
+      throw new ArchivalUnit.ConfigurationException("Null configInfo");
+    }
+    String urlStr = config.get(HighWirePlugin.AUPARAM_BASE_URL);
+    if (urlStr == null) {
+      throw new
+	ArchivalUnit.ConfigurationException("No configuration value for "+
+					    HighWirePlugin.AUPARAM_BASE_URL);
+    }
+    String volStr = config.get(HighWirePlugin.AUPARAM_VOL);
+    if (volStr == null) {
+      throw new
+	ArchivalUnit.ConfigurationException("No Configuration value for "+
+					    HighWirePlugin.AUPARAM_VOL);
+    }
+
     try {
-      base = HighWirePlugin.UrlFromAUId(auId);
-    } catch (MalformedURLException e) {
-      throw new ArchivalUnit.ConfigurationException("Illegal base url", e);
+      this.base = new URL(urlStr);
+      this.volume = Integer.parseInt(volStr);
+      
+    } catch (MalformedURLException murle) {
+      throw new 
+	ArchivalUnit.ConfigurationException(HighWirePlugin.AUPARAM_BASE_URL+
+					    " set to a bad url "+
+					    urlStr, murle);
     }
     if (base == null) {
       throw new ArchivalUnit.ConfigurationException("Null base url");
@@ -100,22 +123,21 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
       throw new ArchivalUnit.ConfigurationException("Url has illegal path: "+
 						    base.getPath());
     }
-
-    this.volume = volume;
-    this.base = base;
-    try {
+ 
+   try {
       this.crawlSpec = makeCrawlSpec(base, volume);
     } catch (REException e) {
       // tk - not right.  Illegal RE is caused by internal error, not config
       // error
       throw new ArchivalUnit.ConfigurationException("Illegal RE", e);
     }
-    loadProps();
+    pauseMS = Configuration.getTimeIntervalParam(AUPARAM_PAUSE_TIME,
+						 DEFAULT_PAUSE_TIME);
+    ncCrawlInterval =
+      Configuration.getTimeIntervalParam(AUPARAM_NC_INTERVAL,
+ 					 DEFAULT_NC_INTERVAL);
   }
 
-  public void setConfiguration(Configuration config) {
-    // tk - move configuration here from constructor, call from constructor
-  }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
       CachedUrlSetSpec cuss) {
@@ -173,20 +195,8 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  private void loadProps() {
-    pauseMS = Configuration.getTimeIntervalParam(PARAM_HIGHWIRE_PAUSE_TIME,
-						 DEFAULT_PAUSE_TIME);
-    ncCrawlInterval =
-      Configuration.getTimeIntervalParam(PARAM_HIGHWIRE_NC_INTERVAL,
-					 DEFAULT_NC_INTERVAL);
-  }
-
   public void pause() {
     pause(pauseMS);
-  }
-
-  public String getAUId() {
-    return HighWirePlugin.constructAUId(base, volume);
   }
 
   public String getName() {

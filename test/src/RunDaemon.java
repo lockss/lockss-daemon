@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.34 2003-04-15 02:21:22 claire Exp $
+ * $Id: RunDaemon.java,v 1.35 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -122,25 +122,19 @@ public class RunDaemon
 
   private void runTreeWalk() {
     ArchivalUnit au;
-    String pluginId = Configuration.getParam(PARAM_TREEWALK_PLUGINID);
     String auId = Configuration.getParam(PARAM_TREEWALK_AUID);
-    if(auId != null && pluginId != null) {
-      Plugin plugin = getPluginManager().getPlugin(pluginId);
-      if (plugin != null) {
-	au = plugin.getAU(auId);
-	if (au != null) {
-	  log.info("starting tree walk for plugin " + pluginId +
-		   ", auId " + auId);
-	  startWalk(au);
-	} else {
-	  log.error("No AU with id " + auId + " in plugin " + pluginId);
-	}
+    PluginManager pluginMgr = getPluginManager();
+    if(auId != null) {
+      au = pluginMgr.getAuFromId(auId);
+      if (au != null) {
+	log.info("starting tree walk for auId " + auId);
+	startWalk(au);
       } else {
-	log.error("Plugin " + pluginId + " not found");
+	log.error("No AU with id " + auId);
       }
     }
     else {
-      Iterator iter = getPluginManager().getAllAUs().iterator();
+      Iterator iter = pluginMgr.getAllAUs().iterator();
       while(iter.hasNext()) {
         au = (ArchivalUnit) iter.next();
         startWalk(au);

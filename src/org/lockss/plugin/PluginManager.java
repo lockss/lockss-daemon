@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.32 2003-04-15 01:27:01 aalto Exp $
+ * $Id: PluginManager.java,v 1.33 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.poller.PollSpec;
  * @version 0.0
  */
 public class PluginManager extends BaseLockssManager {
-  static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
+  public static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
   private static String PARAM_PLUGIN_LOCATION =
     Configuration.PREFIX + "platform.pluginDir";
   private static String DEFAULT_PLUGIN_LOCATION = "./plugins";
@@ -57,7 +57,8 @@ public class PluginManager extends BaseLockssManager {
   private StatusService statusSvc;
   private String pluginDir = null;
 
-  private Map plugins = new HashMap();
+  private Map pluginMap = new HashMap(); //maps plugin keys(not ids) to plugins
+  private Map auMap = new HashMap();
 
   public PluginManager() {
   }
@@ -80,7 +81,7 @@ public class PluginManager extends BaseLockssManager {
    */
   public void stopService() {
     // tk - checkpoint if nec.
-    for (Iterator iter = plugins.values().iterator(); iter.hasNext(); ) {
+    for (Iterator iter = pluginMap.values().iterator(); iter.hasNext(); ) {
       Plugin plugin = (Plugin)iter.next();
       plugin.stopPlugin();
     }
@@ -98,22 +99,50 @@ public class PluginManager extends BaseLockssManager {
     if (isDaemonInited()) {
       Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
       for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
-	String pluginId = (String)iter.next();
-	log.debug("Configuring plugin id: " + pluginId);
-	Configuration pluginConf = allPlugs.getConfigTree(pluginId);
-	Configuration prevPluginConf = prevAllPlugs.getConfigTree(pluginId);
+	String pluginKey = (String)iter.next();
+	log.debug("Configuring plugin key: " + pluginKey);
+	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
+	Configuration prevPluginConf = prevAllPlugs.getConfigTree(pluginKey);
 
-	configurePlugin(pluginId, pluginConf, prevPluginConf);
+	configurePlugin(pluginKey, pluginConf, prevPluginConf);
       }
       prevAllPlugs = allPlugs;
-    }
+    } 
   }
 
-  String pluginNameFromId(String key) {
+  static String pluginNameFromKey(String key) {
     // tk - needs to do real mapping from IDs obtained from all available
     // plugins.
     // for now, treat as class name with |'s instead of .'s
     return StringUtil.replaceString(key, "|", ".");
+  }
+
+  static String pluginNameFromId(String id) {
+    //For now, plugin ids are the class name
+    return id;
+  }
+
+  static String pluginKeyFromId(String id) {
+    return StringUtil.replaceString(id, ".", "|");    
+  }
+
+  /**
+   * Return a unique identifier for an au based on its plugin id and defining
+   * properties.
+   *
+   * @return a unique identifier for an au based on its plugin id and defining
+   * properties.
+   * @param pluginId plugin id (with . not escaped)
+   * @param auDefiningProps defining properties for the au 
+   * {@see Plugin.getDefiningConfigKeys}
+   */
+  public static String generateAUId(String pluginId, Properties auDefProps) {
+    return generateAUId(pluginId, 
+			PropUtil.propsToCanonicalEncodedString(auDefProps));
+  }
+
+  static String generateAUId(String pluginId, String auKey) {
+    return pluginKeyFromId(pluginId)+"&"+auKey;
   }
 
   /**
@@ -121,14 +150,14 @@ public class PluginManager extends BaseLockssManager {
    * @param pluginId the plugin id
    * @return the plugin or null
    */
-  public Plugin getPlugin(String pluginId) {
-    return (Plugin)plugins.get(pluginId);
+  public Plugin getPlugin(String pluginKey) {
+    return (Plugin)pluginMap.get(pluginKey);
   }
 
-  private void configurePlugin(String pluginId, Configuration pluginConf,
+  private void configurePlugin(String pluginKey, Configuration pluginConf,
 			       Configuration oldPluginConf) {
-    boolean pluginOk = ensurePluginLoaded(pluginId);
-    Plugin plugin = getPlugin(pluginId);
+    boolean pluginOk = ensurePluginLoaded(pluginKey);
+    Plugin plugin = getPlugin(pluginKey);
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
       if (pluginOk) {
@@ -137,7 +166,7 @@ public class PluginManager extends BaseLockssManager {
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
 	    log.debug("Configuring AU id: " + auKey);
-	    configureAU(plugin, auConf);
+	    configureAU(plugin, auConf, generateAUId(pluginKey, auKey));
 	  } else {
 	    log.debug("Not configuring AU id: " + auKey +
 		      ", already configured");
@@ -153,35 +182,40 @@ public class PluginManager extends BaseLockssManager {
     }
   }
 
-  private void configureAU(Plugin plugin, Configuration auConf)
+  private void configureAU(Plugin plugin, Configuration auConf, String auId)
       throws ArchivalUnit.ConfigurationException {
-    ArchivalUnit au = plugin.configureAU(auConf);
+    ArchivalUnit au = plugin.configureAU(auConf, 
+					 (ArchivalUnit)auMap.get(auId));
     getDaemon().startAUManagers(au);
-    putAuMap(plugin, au);
-
+    log.debug("putAuMap(" + au.getAUId() +", " + au);
+    if (!auId.equals(au.getAUId())) {
+      throw new ArchivalUnit.ConfigurationException("Configured AU has "
+						    +"unexpected key, "
+						    +"was: "+au.getAUId()
+						    +" expected: "+auId);
+    }
+    putAuInMap(au);
   }
-  private HashMap auMap = new HashMap();
 
-  private void putAuMap(Plugin plugin, ArchivalUnit au) {
-    log.debug("putAuMap(" + plugin.getPluginId() + "|" + au.getAUId() +
-	      ", " + au);
-    auMap.put(plugin.getPluginId() + "|" + au.getAUId(), au);
+  private void putAuInMap(ArchivalUnit au) {
+    auMap.put(au.getAUId(), au);
   }
-  public ArchivalUnit getAu(String pluginId, String auId) {
-    ArchivalUnit au = (ArchivalUnit)auMap.get(pluginId + "|" + auId);
-    log.debug3("getAu(" + pluginId + "|" + auId + ") = " + au);
+
+  public ArchivalUnit getAuFromId(String auId) {
+    ArchivalUnit au = (ArchivalUnit)auMap.get(auId);
+    log.debug3("getAu(" + auId + ") = " + au);
     return au;
   }
   /**
    * load a plugin with the given class name from somewhere in our classpath
-   * @param pluginId the unique name for this plugin
+   * @param pluginKey the key for this plugin
    * @return true if loaded
    */
-  boolean ensurePluginLoaded(String pluginId) {
-    if (plugins.containsKey(pluginId)) {
+  boolean ensurePluginLoaded(String pluginKey) {
+    if (pluginMap.containsKey(pluginKey)) {
       return true;
     }
-    String pluginName = pluginNameFromId(pluginId);
+    String pluginName = pluginNameFromKey(pluginKey);
     Class pluginClass;
     try {
       pluginClass = Class.forName(pluginName);
@@ -205,7 +239,7 @@ public class PluginManager extends BaseLockssManager {
       log.debug("Instantiating " + pluginClass);
       Plugin plugin = (Plugin)pluginClass.newInstance();
       plugin.initPlugin(theDaemon);
-      setPlugin(pluginId, plugin);
+      setPlugin(pluginKey, plugin);
       return true;
     } catch (Exception e) {
       log.error("Error instantiating " + pluginName, e);
@@ -214,9 +248,9 @@ public class PluginManager extends BaseLockssManager {
   }
 
   // separate method so can be called by test code
-  private void setPlugin(String pluginId, Plugin plugin) {
-    log.debug3(this +".setPlugin(" + pluginId + ", " + plugin + ")");
-    plugins.put(pluginId, plugin);
+  private void setPlugin(String pluginKey, Plugin plugin) {
+    log.debug3(this +".setPlugin(" + pluginKey + ", " + plugin + ")");
+    pluginMap.put(pluginKey, plugin);
   }
 
   /**
@@ -254,27 +288,6 @@ public class PluginManager extends BaseLockssManager {
    * @return the List of aus
    */
   public List getAllAUs() {
-    return getAllAUs2();
-  }
-
-  /**
-   * Return a list of all configured ArchivalUnits.
-   * @return the List of aus
-   */
-  public List getAllAUs1() {
-    List res = new ArrayList();
-    for (Iterator pi = plugins.values().iterator(); pi.hasNext(); ) {
-      Plugin plug = (Plugin)pi.next();
-      res.addAll(plug.getAllAUs());
-    }
-    return res;
-  }
-
-  /**
-   * Return a list of all configured ArchivalUnits.
-   * @return the List of aus
-   */
-  public List getAllAUs2() {
     return new ArrayList(auMap.values());
   }
 
@@ -285,51 +298,9 @@ public class PluginManager extends BaseLockssManager {
    * null if au not present on this cache
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
-    return findCachedUrlSet2(spec);
-  }
-
-  /**
-   * Find the CachedUrlSet from a PollSpec.
-   * @param spec the PollSpec (from an incoming message)
-   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
-   * null if au not present on this cache
-   */
-  public CachedUrlSet findCachedUrlSet1(PollSpec spec) {
-    log.debug3(this +".findCachedUrlSet("+spec+")");
-    String pluginId = spec.getPluginId();
-    Plugin plugin = getPlugin(pluginId);
-    log.debug3("plugin: " + plugin);
-    if (plugin == null) return null;
-    String auId = spec.getAUId();
-    ArchivalUnit au = plugin.getAU(auId);
-    log.debug3("au: " + au);
-    if (au == null) return null;
-    String url = spec.getUrl();
-    CachedUrlSet cus;
-    if (AuUrl.isAuUrl(url)) {
-      cus = au.getAUCachedUrlSet();
-    } else if ((spec.getLwrBound()!=null) &&
-               (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
-    } else {
-      cus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url,
-          spec.getLwrBound(), spec.getUprBound()));
-    }
-    log.debug3("ret cus: " + cus);
-    return cus;
-  }
-
-  /**
-   * Find the CachedUrlSet from a PollSpec.
-   * @param spec the PollSpec (from an incoming message)
-   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
-   * null if au not present on this cache
-   */
-  public CachedUrlSet findCachedUrlSet2(PollSpec spec) {
     log.debug3(this +".findCachedUrlSet2("+spec+")");
-    String pluginId = spec.getPluginId();
     String auId = spec.getAUId();
-    ArchivalUnit au = getAu(pluginId, auId);
+    ArchivalUnit au = getAuFromId(auId);
     log.debug3("au: " + au);
     if (au == null) return null;
     String url = spec.getUrl();

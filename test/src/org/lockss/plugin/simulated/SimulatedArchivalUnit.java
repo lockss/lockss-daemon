@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.22 2003-04-02 23:49:14 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.23 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private String auId = StringUtil.gensym("SimAU_");
 
   public SimulatedArchivalUnit(Plugin owner) {
-    super(owner, new CrawlSpec(SIMULATED_URL_START, null));
+    super(owner);
   }
 
   /** Convenience methods, as most creators don't care about the plugin */
@@ -78,6 +78,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public void setConfiguration(Configuration config)
       throws ArchivalUnit.ConfigurationException {
+    super.setConfiguration(config);
     // tk - not right, generator might have been created already with
     // different root?
     try {
@@ -118,6 +119,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     } catch (Configuration.InvalidParam e) {
       throw new ArchivalUnit.ConfigurationException("Bad config value", e);
     }
+    this.crawlSpec = new CrawlSpec(SIMULATED_URL_START, null);
   }
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
@@ -131,11 +133,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
 
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
     return new SimulatedUrlCacher(owner, checkUrlFormat(url), fileRoot);
-  }
-
-  public String getAUId() {
-    // must agree with what SimulatedPlugin.getAUIdFromConfig() returns
-    return fileRoot;
   }
 
   public String getName() {

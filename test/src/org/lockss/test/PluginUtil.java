@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.3 2003-04-10 21:56:00 tal Exp $
+ * $Id: PluginUtil.java,v 1.4 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -65,8 +65,8 @@ public class PluginUtil {
     PluginTestable tp = (PluginTestable)plug;
     tp.registerArchivalUnit(au);
     try {
-      PrivilegedAccessor.invokeMethod(mgr, "putAuMap",
-				      ListUtil.list(plug, au).toArray());
+      PrivilegedAccessor.invokeMethod(mgr, "putAuInMap",
+				      ListUtil.list(au).toArray());
     } catch (Exception e) {
       log.error("Couldn't register AU", e);
       throw new RuntimeException(e.toString());

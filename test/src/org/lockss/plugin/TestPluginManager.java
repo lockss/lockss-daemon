@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.14 2003-04-15 01:27:00 aalto Exp $
+ * $Id: TestPluginManager.java,v 1.15 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -53,17 +53,29 @@ import org.lockss.poller.PollSpec;
 public class TestPluginManager extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
-  static String mockPlugId = "org|lockss|test|MockPlugin";
-  static String mauauid1 = "val1|val2";
-  static String mauauidkey1 = "val1|val2";
-  static String mauauid2 = "val1|va.l3"; // auid contains a dot
-  static String mauauidkey2 = "val1|va|l3"; // so its key is escaped
+  static String mockPlugKey = "org|lockss|test|MockPlugin";
+  static Properties props1 = new Properties();
+  static Properties props2 = new Properties();
+  static {
+    props1.setProperty(MockPlugin.CONFIG_PROP_1, "val1");
+    props1.setProperty(MockPlugin.CONFIG_PROP_2, "val2");
+    props2.setProperty(MockPlugin.CONFIG_PROP_1, "val1");
+    props2.setProperty(MockPlugin.CONFIG_PROP_2, "va.l3");//auid contains a dot
+  }
 
-  static String p1param = PluginManager.PARAM_AU_TREE +
-    ".org|lockss|test|MockPlugin.";
+  static String mauauidKey1 = PropUtil.propsToCanonicalEncodedString(props1);
+  static String mauauid1 = mockPlugKey+"&"+ mauauidKey1;
+  //  static String m
 
-  static String p1a1param = p1param + mauauidkey1 + ".";
-  static String p1a2param = p1param + mauauidkey2 + ".";
+
+  static String mauauidKey2 = PropUtil.propsToCanonicalEncodedString(props2);
+  static String mauauid2 = mockPlugKey+"&"+mauauidKey2;
+
+  static String p1param = 
+    PluginManager.PARAM_AU_TREE + "." + mockPlugKey + ".";
+
+  static String p1a1param = p1param + mauauidKey1 + ".";
+  static String p1a2param = p1param + mauauidKey2 + ".";
 
   static String configStr =
     p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
@@ -107,29 +119,29 @@ public class TestPluginManager extends LockssTestCase {
     TestConfiguration.setCurrentConfigFromString(configStr);
   }
 
-  public void testNameFromId() {
-    assertEquals("org.lockss.Foo", mgr.pluginNameFromId("org|lockss|Foo"));
+  public void testNameFromKey() {
+    assertEquals("org.lockss.Foo", mgr.pluginNameFromKey("org|lockss|Foo"));
   }
 
   public void testEnsurePluginLoaded() throws Exception {
     // non-existent class shouldn't load
     assertFalse(mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
     // MockPlugin should load
-    assertTrue(mgr.ensurePluginLoaded(mockPlugId));
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    assertTrue(mgr.ensurePluginLoaded(mockPlugKey));
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
     assertNotNull(mpi);
     assertEquals(1, mpi.getInitCtr());	// should have been inited once
 
     // second time shouldn't reload, reinstantiate, or reinitialize plugin
-    assertTrue(mgr.ensurePluginLoaded(mockPlugId));
-    MockPlugin mpi2 = (MockPlugin)mgr.getPlugin(mockPlugId);
+    assertTrue(mgr.ensurePluginLoaded(mockPlugKey));
+    MockPlugin mpi2 = (MockPlugin)mgr.getPlugin(mockPlugKey);
     assertSame(mpi, mpi2);
     assertEquals(1, mpi.getInitCtr());
   }
 
   public void testStop() throws Exception {
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
     assertEquals(0, mpi.getStopCtr());
     mgr.stopService();
     assertEquals(1, mpi.getStopCtr());
@@ -137,15 +149,15 @@ public class TestPluginManager extends LockssTestCase {
 
   public void testAUConfig() throws Exception {
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
     // plugin should be registered
     assertNotNull(mpi);
     // should have been inited once
     assertEquals(1, mpi.getInitCtr());
 
     // get the two archival units
-    ArchivalUnit au1 = mpi.getAU(mauauidkey1);
-    ArchivalUnit au2 = mpi.getAU(mauauidkey2);
+    ArchivalUnit au1 = mgr.getAuFromId(mauauid1);
+    ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
 
     // verify the plugin's set of all AUs is {au1, au2}
     Collection aus = mpi.getAllAUs();
@@ -165,7 +177,7 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
 
-    assertEquals(au1, mgr.getAu(mockPlugId, mauauid1));
+    assertEquals(au1, mgr.getAuFromId(mauauid1));
   }
 
   public void testFindCUS() throws Exception {
@@ -174,11 +186,11 @@ public class TestPluginManager extends LockssTestCase {
     String upper = "hhh";
 
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
 
     // make a PollSpec with info from a manually created CUS, which should
     // match one of the registered AUs
-    CachedUrlSet protoCus = makeCUS(mockPlugId, mauauid1, url, lower, upper);
+    CachedUrlSet protoCus = makeCUS(mpi, mauauid1, url, lower, upper);
     PollSpec ps1 = new PollSpec(protoCus);
 
     // verify PluginManager can make a CUS for the PollSpec
@@ -196,7 +208,7 @@ public class TestPluginManager extends LockssTestCase {
     // as we made a fake mock one to build PollSpec, and PluginManager will
     // have created & configured a real mock one.
 
-    CachedUrlSet protoAuCus = makeAUCUS(mockPlugId, mauauid1);
+    CachedUrlSet protoAuCus = makeAUCUS(mpi, mauauid1);
     PollSpec ps2 = new PollSpec(protoAuCus);
 
     CachedUrlSet aucus = mgr.findCachedUrlSet(ps2);
@@ -210,11 +222,11 @@ public class TestPluginManager extends LockssTestCase {
     String lower = PollSpec.SINGLE_NODE_LWRBOUND;
 
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
 
     // make a PollSpec with info from a manually created CUS, which should
     // match one of the registered AUs
-    CachedUrlSet protoCus = makeCUS(mockPlugId, mauauid1, url, lower, null);
+    CachedUrlSet protoCus = makeCUS(mpi, mauauid1, url, lower, null);
     PollSpec ps1 = new PollSpec(protoCus);
 
     // verify PluginManager can make a CUS for the PollSpec
@@ -231,11 +243,11 @@ public class TestPluginManager extends LockssTestCase {
     String url1 = "http://foo.bar/baz";
     String url2 = "http://foo.bar/not";
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugId);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
 
     // get the two archival units
-    MockArchivalUnit au1 = (MockArchivalUnit)mpi.getAU(mauauidkey1);
-    ArchivalUnit au2 = mpi.getAU(mauauidkey2);
+    MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
+    ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
     assertNull(mgr.findMostRecentCachedUrl(url1));
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
     MockCachedUrlSet mcuss = new MockCachedUrlSet(au1, cuss);
@@ -247,11 +259,30 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findMostRecentCachedUrl(url2));
   }
 
-  public CachedUrlSet makeCUS(String pluginid, String auid, String url,
+  public void testGenerateAUId() {
+    Properties props = new Properties();
+    props.setProperty("key&1", "val=1");
+    props.setProperty("key2", "val 2");
+    props.setProperty("key.3", "val:3");
+    props.setProperty("key4", "val.4");
+    String pluginId = "org|lockss|plugin|Blah";
+
+    String actual = PluginManager.generateAUId(pluginId, props);
+    String expected = 
+      pluginId+"&"+
+      "key%261~val%3D1&"+
+      "key%2E3~val%3A3&"+
+      "key2~val+2&"+
+      "key4~val%2E4";
+    assertEquals(expected, actual);
+  }
+
+  public CachedUrlSet makeCUS(Plugin plugin, String auid, String url,
 			       String lower, String upper) {
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
-    au.setPluginId(pluginid);
+    au.setPlugin(plugin);
+    au.setPluginId(plugin.getPluginId());
 
     CachedUrlSet cus = new MockCachedUrlSet(au,
 					    new RangeCachedUrlSetSpec(url,
@@ -260,10 +291,11 @@ public class TestPluginManager extends LockssTestCase {
     return cus;
   }
 
-  public CachedUrlSet makeAUCUS(String pluginid, String auid) {
+  public CachedUrlSet makeAUCUS(Plugin plugin, String auid) {
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
-    au.setPluginId(pluginid);
+    au.setPlugin(plugin);
+    au.setPluginId(plugin.getPluginId());
 
     CachedUrlSet cus = new MockCachedUrlSet(au, new AUCachedUrlSetSpec());
     return cus;

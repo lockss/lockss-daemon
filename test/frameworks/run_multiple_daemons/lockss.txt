@@ -1,20 +1,10 @@
 # LOCKSS & LCAP tuning parameters
-org.lockss.log.default.level=info
-org.lockss.log.LockssRepository=info
-org.lockss.log.PollManager.level=debug2
-org.lockss.log.Poll.level=info
-org.lockss.log.Comm.level=info
-org.lockss.log.NodeManager.level=debug2
-org.lockss.log.Message.level=info
-org.lockss.log.GenericHasher.level=info
-org.lockss.log.MSock_3456_Rcv.level=info
-org.lockss.log.USock_9001_Rcv.level=info
-org.lockss.log.USock_9000_Rcv.level=info
+org.lockss.log.default.level=debug
 
 #lockss repository settings
 org.lockss.cache.location=./
 
-org.lockss.parameterReloadInterval = 600000
+org.lockss.parameterReloadInterval = 1m
 
 #hasher settings
 #org.lockss.hasher.numSteps
@@ -41,16 +31,11 @@ org.lockss.protocol.ttl=2
 org.lockss.protocol.hashAlgorithm=SHA-1
 
 #au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.root=localA
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.depth=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.branch=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.numFiles=4
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.oddBranchContent=true
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.binFileSize=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.maxFileName=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.fileTypes=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileLoc=<n>
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.<dir>.badFileNum=<n>
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.root=localA
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.depth=2
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=2
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=4
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.oddBranchContent=true
 
 # poll settings
 org.lockss.poll.maxpolls=20
@@ -58,10 +43,11 @@ org.lockss.poll.quorum=3
 org.lockss.poll.agreeVerify=0
 org.lockss.poll.disagreeVerify=0
 org.lockss.poll.margin=51
-org.lockss.poll.namepoll.deadline=300000
-org.lockss.poll.contentpoll.min=180000
-org.lockss.poll.contentpoll.max=300000
+org.lockss.poll.namepoll.deadline=5m
+org.lockss.poll.contentpoll.min=3m
+org.lockss.poll.contentpoll.max=5m
 
-#test only settings
+org.lockss.treewalk.interval=5m
+org.lockss.comm.router.beacon.interval=1m
 
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.19 2003-04-05 00:56:54 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.20 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -53,8 +53,8 @@ public class HighWirePlugin extends BasePlugin {
   public Map archivalUnits = null;
 
   // public only so test methods can use them
-  public static final String BASE_URL_PROP = "base_url";
-  public static final String VOL_PROP = "volume";
+  public static final String AUPARAM_BASE_URL = "base_url";
+  public static final String AUPARAM_VOL = "volume";
 
   public void initPlugin(LockssDaemon daemon) {
     super.initPlugin(daemon);
@@ -74,60 +74,17 @@ public class HighWirePlugin extends BasePlugin {
   }
 
   public List getAUConfigProperties() {
-    return ListUtil.list(BASE_URL_PROP, VOL_PROP);
+    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
   }
-
-  public String getAUIdFromConfig(Configuration configInfo) 
-      throws ArchivalUnit.ConfigurationException {
-    if (configInfo == null) {
-      throw new ArchivalUnit.ConfigurationException("Null configInfo");
-    }
-    String urlStr = configInfo.get(BASE_URL_PROP);
-    if (urlStr == null) {
-      throw new
-	ArchivalUnit.ConfigurationException("No configuration value for "+
-					    BASE_URL_PROP);
-    }
-    String volStr = configInfo.get(VOL_PROP);
-    if (volStr == null) {
-      throw new
-	ArchivalUnit.ConfigurationException("No Configuration value for "+
-					    VOL_PROP);
-    }
-
-    try {
-      URL url = new URL(urlStr);
-      int vol = Integer.parseInt(volStr);
-      return constructAUId(url, vol);
-    } catch (MalformedURLException murle) {
-      throw new ArchivalUnit.ConfigurationException(BASE_URL_PROP+
-						    " set to a bad url "+
-						    urlStr, murle);
-    }
-  }
-
-  // tk - MUST canonicalize URL
-  public static String constructAUId(URL url, int vol) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(vol);
-    sb.append("|");
-    sb.append(url.toString());
-    return sb.toString();
-  }
-
-  public static URL UrlFromAUId(String auId)
-      throws MalformedURLException{
-    int pos = auId.indexOf("|");
-    return new URL(auId.substring(pos + 1));
-  }
-
-  public static int volumeFromAUId(String auId) {
-    int pos = auId.indexOf("|");
-    return Integer.parseInt(auId.substring(0, pos));
+  
+  public Collection getDefiningConfigKeys() {
+    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
   }
 
   public ArchivalUnit createAU(Configuration configInfo) 
       throws ArchivalUnit.ConfigurationException {
-    return new HighWireArchivalUnit(this, configInfo);
+    ArchivalUnit au = new HighWireArchivalUnit(this);
+    au.setConfiguration(configInfo);
+    return au;
   }
 }

@@ -65,12 +65,14 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   private HighWireArchivalUnit makeAU(URL url, int volume)
       throws ArchivalUnit.ConfigurationException {
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.VOL_PROP, Integer.toString(volume));
+    props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
     if (url != null) {
-      props.setProperty(HighWirePlugin.BASE_URL_PROP, url.toString());
+      props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    return new HighWireArchivalUnit(new HighWirePlugin(), config);
+    HighWireArchivalUnit au = new HighWireArchivalUnit(new HighWirePlugin());
+    au.setConfiguration(config);
+    return au;
   }
 
   public void testConstructNullUrl() throws Exception {

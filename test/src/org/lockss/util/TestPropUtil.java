@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.3 2003-04-15 01:20:27 troberts Exp $
+ * $Id: TestPropUtil.java,v 1.4 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -122,26 +122,26 @@ public class TestPropUtil extends TestCase {
   }
 
   public void testPropsToEncodedStringNullProps() {
-    assertEquals("", PropUtil.propsToEncodedString(null));
+    assertEquals("", PropUtil.propsToCanonicalEncodedString(null));
   }
 
   public void testPropsToEncodedStringEmptyProps() {
-    assertEquals("", PropUtil.propsToEncodedString(new Properties()));
+    assertEquals("", PropUtil.propsToCanonicalEncodedString(new Properties()));
   }
 
   public void testPropsToEncodedStringOneElement() {
     Properties props = new Properties();
     props.setProperty("key1", "val1");
-    assertEquals("key1~val1", PropUtil.propsToEncodedString(props));
+    assertEquals("key1~val1", PropUtil.propsToCanonicalEncodedString(props));
   }
 
   public void testPropsToEncodedStringMultipleElements() {
     Properties props = new Properties();
     props.setProperty("key1", "val1");
     props.setProperty("key2", "val2");
-    String encStr = PropUtil.propsToEncodedString(props);
-    Set actual = new HashSet(StringUtil.breakAt(encStr, '&'));
-    assertEquals(SetUtil.set("key1~val1", "key2~val2"), actual);
+    String expected = "key1~val1&key2~val2";
+    String actual = PropUtil.propsToCanonicalEncodedString(props);
+    assertEquals(expected, actual);
   }
 
   public void testPropsToEncodedStringEncodePropStrings() {
@@ -149,11 +149,13 @@ public class TestPropUtil extends TestCase {
     props.setProperty("key&1", "val=1");
     props.setProperty("key2", "val 2");
     props.setProperty("key.3", "val:3");
-    String encStr = PropUtil.propsToEncodedString(props);
-    Set actual = new HashSet(StringUtil.breakAt(encStr, '&'));
-    Set expected = SetUtil.set("key%261~val%3D1", 
-			       "key2~val+2",
-			       "key%2E3~val%3A3");
+    props.setProperty("key4", "val.4");
+    String actual = PropUtil.propsToCanonicalEncodedString(props);
+    String expected = 
+      "key%261~val%3D1&"+
+      "key%2E3~val%3A3&"+
+      "key2~val+2&"+
+      "key4~val%2E4";
     assertEquals(expected, actual);
   }
 

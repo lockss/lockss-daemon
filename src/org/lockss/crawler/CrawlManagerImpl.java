@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.22 2003-04-16 20:20:15 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.23 2003-04-17 00:55:51 troberts Exp $
  */
 
 /*
@@ -193,10 +193,10 @@ public class CrawlManagerImpl
 
   private void addNewContentCrawl(ArchivalUnit au, Crawler crawler) {
     synchronized (newContentCrawls) {
-      List crawlsForAu = (List)newContentCrawls.get(au.getGloballyUniqueId());
+      List crawlsForAu = (List)newContentCrawls.get(au.getAUId());
       if (crawlsForAu == null) {
 	crawlsForAu = new ArrayList();
-	newContentCrawls.put(au.getGloballyUniqueId(), crawlsForAu);
+	newContentCrawls.put(au.getAUId(), crawlsForAu);
       }
       crawlsForAu.add(crawler);
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.5 2003-04-05 00:56:54 tal Exp $
+ * $Id: BasePlugin.java,v 1.6 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.plugin.*;
  */
 public abstract class BasePlugin implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
-  protected Map auMap = new HashMap();
+  protected Collection aus = new ArrayList();
   protected LockssDaemon theDaemon;
 
   /**
@@ -60,40 +60,26 @@ public abstract class BasePlugin implements Plugin {
   public void stopPlugin() {
   }
 
-  // for now use the plugin's class name with "|"s instead of "."s
+  // for now use the plugin's class name 
   // tk - this will have to change to account for versioning
   public String getPluginId() {
-    String name = this.getClass().getName();
-    return StringUtil.replaceString(name, ".", "|");
-  }
-
-  public ArchivalUnit getAU(String auId) {
-    return (ArchivalUnit)auMap.get(encodeAUId(auId));
+    return this.getClass().getName();
   }
 
   public Collection getAllAUs() {
-    log.debug("getAllAus: auMap: " + auMap);
-    return auMap.values();
+    log.debug2("getAllAus: aus: " + aus);
+    return aus;
   }
 
-  public ArchivalUnit configureAU(Configuration config)
+  public ArchivalUnit configureAU(Configuration config, ArchivalUnit au)
       throws ArchivalUnit.ConfigurationException {
-    String auId = encodeAUId(getAUIdFromConfig(config));
-    ArchivalUnit au = getAU(auId);
     if (au != null) {
       au.setConfiguration(config);
     } else {
       au = createAU(config);
-      auMap.put(auId, au);
-      log.debug("auMap.put(" + auId + ", " + au + ")");
-      log.debug("auMap: " + auMap);
+      aus.add(au);
     }
     return au;
-  }
-
-  String encodeAUId(String id) {
-    return StringUtil.replaceString(StringUtil.replaceString(id, ".", "|"),
-                                    ":", "|");
   }
 
   /**

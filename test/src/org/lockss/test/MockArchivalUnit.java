@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.23 2003-04-15 01:24:51 aalto Exp $
+ * $Id: MockArchivalUnit.java,v 1.24 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -47,12 +47,16 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Configuration config;
   private CrawlSpec spec;
   private String pluginId = "mock";
-  private String auId = StringUtil.gensym("MockAU_");
+  private String auId = null;
+  private String defaultAUId = StringUtil.gensym("MockAU_");
   private CachedUrlSet cus = null;
   private MockObjectCallback pauseCallback = null;
   private List newContentUrls = null;
   private boolean shouldCrawlForNewContent = true;
   private boolean shouldCallTopLevelPoll = true;
+  private static Logger log = Logger.getLogger("MockArchivalUnit");
+
+  private Plugin plugin;
 
   public MockArchivalUnit(){
   }
@@ -94,7 +98,6 @@ public class MockArchivalUnit implements ArchivalUnit {
   public void setConfiguration(Configuration config)
       throws ArchivalUnit.ConfigurationException {
     this.config = config;
-    auId = new MockPlugin().getAUIdFromConfig(config);
   }
 
   public Configuration getConfiguration() {
@@ -129,15 +132,32 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public String getPluginId() {
+    if (plugin != null) {
+      return plugin.getPluginId();
+    }
     return pluginId;
   }
 
-  public String getAUId() {
-    return auId;
+
+  public void setPlugin(Plugin plugin) {
+    this.plugin = plugin;
   }
 
-  public String getGloballyUniqueId() {
-    return getPluginId()+"&"+getAUId();
+  //XXX remove me
+  public final String getAUId() {
+    if (auId != null) {
+      return auId;
+    } 
+    if (plugin == null) {
+      return defaultAUId;
+    }
+    Collection defKeys = plugin.getDefiningConfigKeys();
+    Properties props = new Properties();
+    for (Iterator it = defKeys.iterator(); it.hasNext();) {
+      String curKey = (String)it.next();
+      props.setProperty(curKey, config.get(curKey));
+    }
+    return PluginManager.generateAUId(getPluginId(), props);
   }
 
   public String getName() {
@@ -149,21 +169,8 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public void setAuId(String newId) {
+    //    log.warning("*********************************"+newId, new RuntimeException("blah"));
     auId = newId;
-  }
-
-  public int hashCode() {
-    return getPluginId().hashCode() + getAUId().hashCode();
-  }
-
-  public boolean equals(Object obj) {
-    if (obj instanceof ArchivalUnit) {
-      ArchivalUnit au = (ArchivalUnit)obj;
-      return ((auId.equals(au.getAUId())) &&
-              (pluginId.equals(au.getPluginId())));
-    } else {
-      return false;
-    }
   }
 
   public void pause() {

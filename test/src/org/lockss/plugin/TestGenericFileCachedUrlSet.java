@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.27 2003-04-15 01:27:00 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.28 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -65,6 +65,9 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgfau = new MockGenericFileArchivalUnit();
+    MockPlugin plugin = new MockPlugin();
+    plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
+    mgfau.setPlugin(plugin);
     repo = theDaemon.getLockssRepository(mgfau);
     theDaemon.getNodeManager(mgfau);
   }

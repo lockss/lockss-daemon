@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.5 2003-04-16 23:59:44 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.6 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -295,7 +295,7 @@ public class TestActivityRegulator extends LockssTestCase {
     MockCachedUrlSet mcus = new MockCachedUrlSet("test url");
     mcus.setArchivalUnit(mau);
 
-    String expectedStr = mau.getGloballyUniqueId();
+    String expectedStr = mau.getAUId();
     assertEquals(expectedStr, allower.getAuKey(mau));
 
     expectedStr += "::";
@@ -308,7 +308,7 @@ public class TestActivityRegulator extends LockssTestCase {
         new RangeCachedUrlSetSpec("test", "lwr", "upr"));
     mcus.setArchivalUnit(mau);
 
-    expectedStr = mau.getGloballyUniqueId() + "::test::lwr-upr";
+    expectedStr = mau.getAUId() + "::test::lwr-upr";
     assertEquals(expectedStr, allower.getCusKey(mcus));
   }
 

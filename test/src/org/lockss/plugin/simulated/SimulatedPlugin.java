@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.7 2003-04-05 00:56:54 tal Exp $
+ * $Id: SimulatedPlugin.java,v 1.8 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -151,21 +151,6 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   }
 
   /**
-   * Return the AU Id string for the ArchivalUnit handling the AU specified
-   * by the given configuration. This must be completely determined by the
-   * subset of the configuration info that's necessary to identify the AU.
-   * @param config the {@link Configuration}
-   * @return the AUId string
-   * @throws ArchivalUnit.ConfigurationException if the configuration is
-   * illegal in any way.
-   */
-  public String getAUIdFromConfig(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    // tk - this should include at least the root, possibly more
-    return config.get(AU_PARAM_ROOT);
-  }
-
-  /**
    * Create an ArchivalUnit for the AU specified by the configuration.
    * @param auConfig Configuration object with values for all properties
    * returned by {@link #getAUConfigProperties()}
@@ -181,6 +166,10 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     return au;
   }
 
+  public Collection getDefiningConfigKeys() {
+    return ListUtil.list(AU_PARAM_ROOT);
+  }
+
   // SimulatedPlugin methods, not part of Plugin interface
 
   public int getInitCtr() {
@@ -192,10 +181,11 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
   }
 
   public void registerArchivalUnit(ArchivalUnit au) {
-    auMap.put(au.getAUId(), au);
+    aus.add(au);
   }
 
   public void unregisterArchivalUnit(ArchivalUnit au) {
-    auMap.remove(au.getAUId());
+    aus.remove(au);
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.15 2003-04-02 23:28:37 tal Exp $
+ * $Id: DoHighwireCrawl.java,v 1.16 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -45,10 +45,12 @@ public class DoHighwireCrawl {
   private static HighWireArchivalUnit makeAU(URL url, int volume)
       throws ArchivalUnit.ConfigurationException, ClassNotFoundException {
     Properties props = new Properties();
-    props.setProperty(HighWirePlugin.VOL_PROP, Integer.toString(volume));
-    props.setProperty(HighWirePlugin.BASE_URL_PROP, url.toString());
+    props.setProperty(HighWirePlugin.AUPARAM_VOL, Integer.toString(volume));
+    props.setProperty(HighWirePlugin.AUPARAM_BASE_URL, url.toString());
     Configuration config = ConfigurationUtil.fromProps(props);
-    return new HighWireArchivalUnit(null, config);
+    HighWireArchivalUnit au = new HighWireArchivalUnit(null);
+    au.setConfiguration(config);
+    return au;
   }
 
   public static void main(String args[]) throws Exception {

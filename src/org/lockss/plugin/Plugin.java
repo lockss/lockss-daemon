@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.9 2003-04-05 00:56:55 tal Exp $
+ * $Id: Plugin.java,v 1.10 2003-04-17 00:55:51 troberts Exp $
  */
 
 /*
@@ -85,32 +85,27 @@ public interface Plugin {
   public List getAUConfigProperties();
 
   /**
-   * Return the AU Id string for the {@link ArchivalUnit} handling the AU
-   * specified by the given configuration. This must be completely determined
-   * by the subset of the configuration info that's necessary to identify the
-   * AU.
-   * @param configInfo the {@link Configuration}
-   * @return the AUId string
-   * @throws ArchivalUnit.ConfigurationException if the configuration is
-   * illegal in any way.
+   * Return the keys for the config values that define the AU
+   * @return the keys for the config values that define the AU
    */
-  public String getAUIdFromConfig(Configuration configInfo)
-      throws ArchivalUnit.ConfigurationException;
+  public Collection getDefiningConfigKeys();
 
   /**
    * Create or (re)configure an {@link ArchivalUnit} from the specified
    * configuration.
    * @param config {@link Configuration} object with values for all properties
    * returned by {@link #getAUConfigProperties()}
-   * @return an {@link ArchivalUnit}
-   * @throws ArchivalUnit.ConfigurationException
+   * @param au {@link ArchvialUnit} if one already exists
+   * @return a configured {@link ArchivalUnit}
+   * @throws ArchivalUnit.ConfigurationException if unable to configure au
    */
-  public ArchivalUnit configureAU(Configuration config)
+  public ArchivalUnit configureAU(Configuration config, ArchivalUnit au)
       throws ArchivalUnit.ConfigurationException;
 
   /**
    * Create an ArchivalUnit for the AU specified by the configuration.
-   * @param auConfig {@link Configuration} object with values for all properties
+   * @param auConfig {@link Configuration} object with values for all 
+   * properties
    * returned by {@link #getAUConfigProperties()}
    * @return an {@link ArchivalUnit}
    * @throws ArchivalUnit.ConfigurationException
@@ -119,23 +114,15 @@ public interface Plugin {
       throws ArchivalUnit.ConfigurationException;
 
   /**
-   * Lookup the {@link ArchivalUnit} corresponding to the AUId.
-   * @param auId The AUId for an AU within this plugin.  (Often obtained from
-   * {@link AuUrl#getAuId(URL)}.)
-   * @return the {@link ArchivalUnit}, or null if not found
-   */
-  public ArchivalUnit getAU(String auId);
-
-  /**
    * Return a collection of all {@link ArchivalUnit}s that exist within this
    * plugin.
    * @return a {@link Collection} of AUs
    */
-  public Collection getAllAUs() ;
+  public Collection getAllAUs();
 
   /**
    * Return the LockssDaemon instance
    * @return the LockssDaemon instance
    */
-  public LockssDaemon getDaemon() ;
+  public LockssDaemon getDaemon();
 }

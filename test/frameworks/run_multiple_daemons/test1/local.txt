@@ -11,12 +11,12 @@ org.lockss.cache.location=.
 #test settings
 org.lockss.test.doTreewalk=false
 org.lockss.test.treewalk.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
-org.lockss.test.treewalk.auId=localA
+org.lockss.test.treewalk.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~localA
 
 org.lockss.test.doPoll=false
 org.lockss.test.polltype=2
 org.lockss.test.pollspec.pluginId=org|lockss|plugin|simulated|SimulatedPlugin
-org.lockss.test.pollspec.auId=localA
+org.lockss.test.pollspec.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~localA
 org.lockss.test.pollspec.url=lockssau:
 #org.lockss.test.pollspec.lwrBound=
 #org.lockss.test.pollspec.uprBound=

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.14 2003-04-15 01:24:51 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.15 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -55,24 +55,56 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
 
-  private Plugin plugin;
+  protected Plugin plugin;
   protected CrawlSpec crawlSpec;
   private String idStr = null;
   private static long pollInterval = -1;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
 
-  /**
-   * Must invoke this constructor in plugin subclass.
-   * @param myPlugin the plugin
-   * @param spec the CrawlSpec
-   */
-  protected BaseArchivalUnit(Plugin myPlugin, CrawlSpec spec) {
-    this(myPlugin);
-    crawlSpec = spec;
-  }
+  protected Configuration auConfig;
+
+  private String auId = null;
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
+  }
+
+  /**
+   * Checks that the configuration is legal (doesn't change any of the defining
+   * properties), and stores the configuration
+   * @param config new Configuration
+   * @throws ConfigurationException if the configuration change is illegal or
+   * for other configuration errors
+   */
+  public void setConfiguration(Configuration config) 
+      throws ConfigurationException{
+    if (auConfig != null) { 
+      checkLegalConfigChange(config);
+    }
+    auConfig = config;
+  }
+
+  private void checkLegalConfigChange(Configuration newConfig) 
+      throws ConfigurationException {
+    Collection defKeys = plugin.getDefiningConfigKeys();
+    for (Iterator it = defKeys.iterator(); it.hasNext();) {
+      String curKey = (String)it.next();
+      String oldVal = auConfig.get(curKey);
+      String newVal = newConfig.get(curKey);
+      if (!StringUtil.equalStrings(oldVal, newVal)) {
+	throw new ConfigurationException("Attempt to modify defining property "
+					 +"of existing ArchivalUnit: "+curKey
+					 +". old: "+oldVal+" new: "+newVal);
+      }
+    }
+  }
+
+  /**
+   * Returns the plugin for this AU
+   * @return the plugin for this AU
+   */
+  protected Plugin getPlugin() {
+    return plugin;
   }
 
   // Factories that must be implemented by plugin subclass
@@ -108,12 +140,23 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 					     String url);
 
   /**
-   * Returns a globally unique id for this AU.  This is different from
-   * get AUId, which is only unique within a plugin
-   * @return globally unique id for this AU
+   * Creates id by joining the plugin id to the canonical representation of
+   * the defining properties as an encoded string
+   * 
+   * @return id by joining the plugin id to the canonical representation of
+   * the defining properties as an encoded string
    */
-  public String getGloballyUniqueId() {
-    return getPluginId()+"&"+getAUId();
+  public final String getAUId() {
+    if (auId == null) {
+      Collection defKeys = getPlugin().getDefiningConfigKeys();
+      Properties props = new Properties();
+      for (Iterator it = defKeys.iterator(); it.hasNext();) {
+	String curKey = (String)it.next();
+	props.setProperty(curKey, auConfig.get(curKey));
+      }
+      auId = PluginManager.generateAUId(getPluginId(), props);
+    }
+    return auId;
   }
 
   /**
@@ -168,31 +211,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public String toString() {
     return "[BAU: "+getPluginId()+":"+getAUId()+"]";
-  }
-
-  /**
-   * Overrides Object.hashCode();
-   * Returns the sum of the hashcodes of the two ids.
-   * @return the hashcode
-   */
-  public int hashCode() {
-    return getPluginId().hashCode() + getAUId().hashCode();
-  }
-
-  /**
-   * Overrides Object.equals().
-   * Returns true if the ids are equal
-   * @param obj the object to compare to
-   * @return true if the ids are equal
-   */
-  public boolean equals(Object obj) {
-    if (obj instanceof ArchivalUnit) {
-      ArchivalUnit au = (ArchivalUnit)obj;
-      return ((getPluginId().equals(au.getPluginId())) &&
-              (getAUId().equals(au.getAUId())));
-    } else {
-      return false;
-    }
   }
 
   /**

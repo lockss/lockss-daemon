@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.4 2003-04-05 00:56:54 tal Exp $
+ * $Id: MockPlugin.java,v 1.5 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   private int initCtr = 0;
   private int stopCtr = 0;
   private Configuration auConfig;
+  private Collection defKeys = null;
 
   public MockPlugin(){
   }
@@ -109,17 +110,15 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     return ListUtil.list(CONFIG_PROP_1, CONFIG_PROP_2);
   }
 
-  /**
-   * Return the AU Id string for the ArchivalUnit handling the AU specified
-   * by the given configuration. This must be completely determined by the
-   * subset of the configuration info that's necessary to identify the AU.
-   * @return the AUId string
-   * @throws ArchivalUnit.ConfigurationException if the configuration is
-   * illegal in any way.
-   */
-  public String getAUIdFromConfig(Configuration config) 
-      throws ArchivalUnit.ConfigurationException {
-    return config.get(CONFIG_PROP_1) + "|" + config.get(CONFIG_PROP_2);
+  public Collection getDefiningConfigKeys() {
+    if (defKeys != null) {
+      return defKeys;
+    }
+    return ListUtil.list(CONFIG_PROP_1, CONFIG_PROP_2);
+  }
+
+  public void setDefiningConfigKeys(Collection keys) {
+    defKeys = keys;
   }
 
   /**
@@ -130,8 +129,9 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   public ArchivalUnit createAU(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     log.debug("createAU(" + auConfig + ")");
-    ArchivalUnit au = new MockArchivalUnit();
+    MockArchivalUnit au = new MockArchivalUnit();
     au.setConfiguration(auConfig);
+    au.setPlugin(this);
     return au;
   }
 
@@ -146,10 +146,10 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   }
 
   public void registerArchivalUnit(ArchivalUnit au) {
-    auMap.put(au.getAUId(), au);
+    aus.add(au);
   }
 
   public void unregisterArchivalUnit(ArchivalUnit au) {
-    auMap.remove(au.getAUId());
+    aus.remove(au);
   }
 }

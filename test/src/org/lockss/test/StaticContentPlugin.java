@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.3 2003-04-16 03:39:23 claire Exp $
+ * $Id: StaticContentPlugin.java,v 1.4 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -69,35 +69,32 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     return null;
   }
 
-  public String getAUIdFromConfig(Configuration config)
-      throws ArchivalUnit.ConfigurationException {
-    return "foo";
-  }
-
   public ArchivalUnit createAU(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
-    return new SAU(this, null);
+    return new SAU(this);
   }
 
   public void registerArchivalUnit(ArchivalUnit au) {
-    auMap.put(au.getAUId(), au);
+    aus.add(au);
   }
 
   public void unregisterArchivalUnit(ArchivalUnit au) {
-    auMap.remove(au.getAUId());
+    aus.remove(au);
+  }
+  
+  public Collection getDefiningConfigKeys() {
+    return Collections.EMPTY_LIST;
   }
 
   public class SAU extends BaseArchivalUnit {
 
-    protected SAU(Plugin myPlugin, CrawlSpec spec) {
-      super(myPlugin, spec);
+    protected SAU(Plugin myPlugin) {
+      super(myPlugin);
     }
 
-    public void setConfiguration(Configuration config) {
-    }
-
-    public String getAUId() {
-      return "foo";
+    public void setConfiguration(Configuration config) 
+	throws ConfigurationException {
+      super.setConfiguration(config);
     }
 
     public String getName() {

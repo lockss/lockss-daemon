@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.7 2003-04-16 23:59:44 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.8 2003-04-17 00:55:51 troberts Exp $
  */
 
 /*
@@ -416,7 +416,7 @@ public class ActivityRegulator extends BaseLockssManager {
   }
 
   static String getAuKey(ArchivalUnit au) {
-    return au.getGloballyUniqueId();
+    return au.getAUId();
   }
 
   static String getCusKey(CachedUrlSet cus) {

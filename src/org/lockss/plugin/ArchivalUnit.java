@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.7 2003-04-15 01:24:51 aalto Exp $
+ * $Id: ArchivalUnit.java,v 1.8 2003-04-17 00:55:51 troberts Exp $
  */
 
 /*
@@ -92,20 +92,13 @@ public interface ArchivalUnit {
   public String getPluginId();
 
   /**
-   * Returns a unique string identifier for the <code>ArchivalUnit</code>
-   * instance within the {@link Plugin}.  This must be completely determined by
+   * Returns a globally unique string identifier for the 
+   * <code>ArchivalUnit</code>.  This must be completely determined by
    * the subset of the AU's configuration info that's necessary to identify the
    * AU.
    * @return a unique id
    */
   public String getAUId();
-
-  /**
-   * Returns a globally unique id for this AU.  This is different from
-   * {@link #getAUId}, which is only unique within the {@link Plugin}
-   * @return globally unique id for this AU
-   */
-  public String getGloballyUniqueId();
 
   /**
    * Returns a human-readable name for the <code>ArchivalUnit</code>.  This is

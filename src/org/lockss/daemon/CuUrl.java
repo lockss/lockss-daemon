@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.1 2003-04-10 21:36:44 tal Exp $
+* $Id: CuUrl.java,v 1.2 2003-04-17 00:55:51 troberts Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class CuUrl {
 	  log.warning("connect: no PluginManager");
 	  throw new FileNotFoundException(urlString);
 	}
-	ArchivalUnit au = pluginManager.getAu(pluginId, auId);
+	ArchivalUnit au = pluginManager.getAuFromId(auId);
 	if (au == null) {
 	  throw new FileNotFoundException(urlString);
 	}

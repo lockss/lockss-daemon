@@ -1,13 +1,6 @@
 /*
- * $Id: PropUtil.java,v 1.3 2003-04-15 01:20:27 troberts Exp $
+ * $Id: PropUtil.java,v 1.4 2003-04-17 00:55:50 troberts Exp $
  */
-
-package org.lockss.util;
-
-import java.util.*;
-import java.net.URLEncoder;
-import org.mortbay.tools.*;
-
 /*
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -35,6 +28,14 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
+package org.lockss.util;
+
+import java.util.*;
+import java.io.*;
+import java.net.URLEncoder;
+import org.mortbay.tools.*;
+
 
 /** Utilities for Properties
  */
@@ -106,20 +107,45 @@ public class PropUtil {
     return res;
   }
 
-  public static String propsToEncodedString(Properties props) {
+  /**
+   * Turns the properties into a canonical string
+   * @return a canonical string generated from the props
+   * @param props properties
+   */ 
+  public static String propsToCanonicalEncodedString(Properties props) {
     if (props == null || props.isEmpty()) {
       return "";
     }
     StringBuffer sb = new StringBuffer();
-    for (Iterator it=props.keySet().iterator(); it.hasNext();) {
+    SortedSet sortedKeys = new TreeSet(props.keySet());
+
+    for (Iterator it=sortedKeys.iterator(); it.hasNext();) {
       String key = (String)it.next();
       sb.append(PropKeyEncoder.encode(key));
       sb.append("~");
-      sb.append(URLEncoder.encode(props.getProperty(key)));
+      sb.append(PropKeyEncoder.encode(props.getProperty(key)));
       if (it.hasNext()) {
 	sb.append("&");
       }
     }
     return sb.toString();
   }
+
+  /**
+   * Prints the Properties to the PrintStream
+   * @param props properties to print
+   * @param out stream to print to
+   */
+  public static void printPropsTo(Properties props, PrintStream out) {
+    SortedSet keys = new TreeSet();
+    for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
+      keys.add((String)iter.next());
+    }
+    for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      out.println(key + " = " + (String)props.getProperty(key));
+    }
+  }
+
+
 }

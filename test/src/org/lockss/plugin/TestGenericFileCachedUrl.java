@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.6 2003-04-04 23:50:11 aalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.7 2003-04-17 00:55:50 troberts Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
-import java.util.Properties;
+import java.util.*;
 import java.math.BigInteger;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
@@ -63,6 +63,9 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgfau = new MockGenericFileArchivalUnit();
+    MockPlugin plugin = new MockPlugin();
+    plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
+    mgfau.setPlugin(plugin);
     repo = theDaemon.getLockssRepository(mgfau);
     theDaemon.getNodeManager(mgfau);
     CachedUrlSetSpec rSpec =
