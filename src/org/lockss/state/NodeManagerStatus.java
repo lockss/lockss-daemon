@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.17 2004-02-25 21:08:28 eaalto Exp $
+ * $Id: NodeManagerStatus.java,v 1.18 2004-04-29 10:14:05 tlipkis Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class NodeManagerStatus extends BaseLockssManager {
          );
 
     private static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("AuName", true));
+      ListUtil.list(new StatusTable.SortRule("AuName", CatalogueOrderComparator.SINGLETON));
 
     private static LockssDaemon theDaemon;
 
