@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.22 2003-06-20 22:34:52 claire Exp $
+ * $Id: ServletManager.java,v 1.23 2003-07-13 20:56:30 tlipkis Exp $
  */
 
 /*
@@ -173,8 +173,7 @@ public class ServletManager extends JettyManager {
 	}
       }
 
-      configureDebugServlets();
-//       configureAdminServlets();
+      configureAdminContexts();
 
       // Start the http server
       server.start ();
@@ -193,125 +192,140 @@ public class ServletManager extends JettyManager {
     }
   }
 
-  public void configureAdminServlets() {
-    try {
-      // Create a context
-      HttpContext context = server.getContext(null, "/admin/*");
-
-      // In this environment there is no point in consuming memory with
-      // cached resources
-      context.setMaxCachedFileSize(0);
-
-      // Create a servlet container
-      ServletHandler handler = new ServletHandler();
-
-      // Admin servlet
-      handler.addServlet("Admin", "/Admin", "org.lockss.servlet.Admin");
-
-      context.addHandler(handler);
-
-    } catch (Exception e) {
-      log.error("Couldn't start debug servlets", e);
-    }
-  }
-
-  public void configureDebugServlets() {
-    ClassLoader loader = Thread.currentThread().getContextClassLoader();
+  public void configureAdminContexts() {
     try {
       if (true || logdir != null) {
 	// Create a context
-	HttpContext logContext = server.getContext("/log/");
-	logContext.setAttribute("LockssDaemon", theDaemon);
-	// In this environment there is no point in consuming memory with
-	// cached resources
-	logContext.setMaxCachedFileSize(0);
-
-	// Now add handlers in the order they should be tried.
-
-	// IpAccessHandler is first
-	addAccessHandler(logContext);
-
-	// then user authentication handler
-	setContextAuthHandler(logContext, realm);
-
-	// log dir resource
-	String logdirname = (logdir != null) ? logdir : ".";
-	URL logResourceUrl=new URL("file", null,
-				   new File(logdirname).getAbsolutePath());
-	log.debug("Log Resource URL: " + logResourceUrl);
-	logContext.setResourceBase(logResourceUrl.toString());
-	ResourceHandler logRHandler = new LockssResourceHandler();
-	//       rHandler.setDirAllowed(false);
-	//       rHandler.setPutAllowed(false);
-	//       rHandler.setDelAllowed(false);
-	//       rHandler.setAcceptRanges(true);
-	logContext.addHandler(logRHandler);
-	for (int ix = 0; ix < textMimes.length; ix++) {
-	  logContext.setMimeMapping(textMimes[ix], "text/plain");
-	}
-// 	logContext.setMimeMapping("gz", "text/gzip");
-// 	logContext.setTypeEncoding("text/gzip", "x-gzip");
-
-	// NotFoundHandler
-	logContext.addHandler(new NotFoundHandler());
+	setupLogContext();
       }
+      setupInfoContext();
 
-      HttpContext context = server.getContext("/");
-
-      // Give servlets a way to find the daemon instance
-      context.setAttribute("LockssDaemon", theDaemon);
-
-      // In this environment there is no point in consuming memory with
-      // cached resources
-      context.setMaxCachedFileSize(0);
-//       context.setErrorPage("500", "images/");
-//       log.debug("Error page URL: " + context.getErrorPage("500"));
-//       log.debug("Error page URL: " + context.getErrorPage());
-
-      // Now add handlers in the order they should be tried.
-
-      // IpAccessHandler is first
-      addAccessHandler(context);
-
-      // then user authentication handler
-      setContextAuthHandler(context, realm);
-
-      // Create a servlet container
-      ServletHandler handler = new ServletHandler();
-
-      // Request dump servlet
-      handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
-      // Daemon status servlet
-      handler.addServlet("DaemonStatus", "/DaemonStatus",
-			 "org.lockss.servlet.DaemonStatus");
-      handler.addServlet("IpAccessControl", "/IpAccessControl",
-			 "org.lockss.servlet.IpAccessControl");
-      handler.addServlet("ThreadDump", "/ThreadDump",
-			 "org.lockss.servlet.ThreadDump");
-      context.addHandler(handler);
-
-      // ResourceHandler should come after servlets
-      // find the htdocs directory, set as resource base
-      URL resourceUrl=loader.getResource("org/lockss/htdocs/");
-      log.debug("Resource URL: " + resourceUrl);
-
-      context.setResourceBase(resourceUrl.toString());
-      ResourceHandler rHandler = new LockssResourceHandler();
-//       rHandler.setDirAllowed(false);
-//       rHandler.setPutAllowed(false);
-//       rHandler.setDelAllowed(false);
-//       rHandler.setAcceptRanges(true);
-      context.addHandler(rHandler);
-
-      // NotFoundHandler
-      context.addHandler(new NotFoundHandler());
-
-//       context.addHandler(new DumpHandler());
-
+      setupAdminContext();
+      setupImageContext();
 
     } catch (Exception e) {
-      log.warning("Couldn't start debug servlets", e);
+      log.warning("Couldn't start admin UI contexts", e);
     }
+  }
+
+  void setupAdminContext() throws MalformedURLException {
+    HttpContext context = makeContext("/");
+
+    // add handlers in the order they should be tried.
+
+    // user authentication handler
+    setContextAuthHandler(context, realm);
+
+    // Create a servlet container
+    ServletHandler handler = new ServletHandler();
+
+    // Request dump servlet
+    handler.addServlet("Dump", "/Dump", "org.mortbay.servlet.Dump");
+    // Daemon status servlet
+    handler.addServlet("DaemonStatus", "/DaemonStatus",
+		       "org.lockss.servlet.DaemonStatus");
+    handler.addServlet("IpAccessControl", "/IpAccessControl",
+		       "org.lockss.servlet.IpAccessControl");
+    handler.addServlet("ThreadDump", "/ThreadDump",
+		       "org.lockss.servlet.ThreadDump");
+    context.addHandler(handler);
+
+    // ResourceHandler should come after servlets
+    // find the htdocs directory, set as resource base
+    ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    URL resourceUrl=loader.getResource("org/lockss/htdocs/");
+    log.debug("Resource URL: " + resourceUrl);
+
+    context.setResourceBase(resourceUrl.toString());
+    ResourceHandler rHandler = new LockssResourceHandler();
+    //       rHandler.setDirAllowed(false);
+    //       rHandler.setPutAllowed(false);
+    //       rHandler.setDelAllowed(false);
+    //       rHandler.setAcceptRanges(true);
+    context.addHandler(rHandler);
+
+    // NotFoundHandler
+    context.addHandler(new NotFoundHandler());
+
+    //       context.addHandler(new DumpHandler());
+  }
+
+  void setupImageContext() throws MalformedURLException {
+    HttpContext context = makeContext("/images");
+
+    // add handlers in the order they should be tried.
+
+    // ResourceHandler for /images dir
+    // find the htdocs directory, set as resource base
+    ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    URL resourceUrl=loader.getResource("org/lockss/htdocs/images/");
+    log.debug("Images resource URL: " + resourceUrl);
+
+    context.setResourceBase(resourceUrl.toString());
+    ResourceHandler rHandler = new LockssResourceHandler();
+    context.addHandler(rHandler);
+
+    // NotFoundHandler
+    context.addHandler(new NotFoundHandler());
+  }
+
+  void setupLogContext() throws MalformedURLException {
+    HttpContext logContext = makeContext("/log/");
+    // add handlers in the order they should be tried.
+
+    // user authentication handler
+    setContextAuthHandler(logContext, realm);
+
+    // log dir resource
+    String logdirname = (logdir != null) ? logdir : ".";
+    URL logResourceUrl=new URL("file", null,
+			       new File(logdirname).getAbsolutePath());
+    log.debug("Log Resource URL: " + logResourceUrl);
+    logContext.setResourceBase(logResourceUrl.toString());
+    ResourceHandler logRHandler = new LockssResourceHandler();
+    //       rHandler.setDirAllowed(false);
+    //       rHandler.setPutAllowed(false);
+    //       rHandler.setDelAllowed(false);
+    //       rHandler.setAcceptRanges(true);
+    logContext.addHandler(logRHandler);
+    for (int ix = 0; ix < textMimes.length; ix++) {
+      logContext.setMimeMapping(textMimes[ix], "text/plain");
+    }
+    // 	logContext.setMimeMapping("gz", "text/gzip");
+    // 	logContext.setTypeEncoding("text/gzip", "x-gzip");
+
+    // NotFoundHandler
+    logContext.addHandler(new NotFoundHandler());
+  }
+
+  void setupInfoContext() {
+    HttpContext context = makeContext("/info");
+
+    // add handlers in the order they should be tried.
+
+    // Create a servlet container
+    ServletHandler handler = new ServletHandler();
+    handler.addServlet("ProxyInfo", "/ProxyInfo",
+		       "org.lockss.servlet.ProxyConfig");
+    context.addHandler(handler);
+
+    // NotFoundHandler
+    context.addHandler(new NotFoundHandler());
+  }
+
+  // common context setup
+  // adds IpAccessHandler as all contexts want it
+  // doesn't add AuthHandler as not all contexts want it
+  HttpContext makeContext(String path) {
+    HttpContext context = server.getContext(path);
+    context.setAttribute("LockssDaemon", theDaemon);
+    // In this environment there is no point in consuming memory with
+    // cached resources
+    context.setMaxCachedFileSize(0);
+
+    // IpAccessHandler is always first handler
+    addAccessHandler(context);
+    return context;
   }
 
   void addAccessHandler(HttpContext context) {
