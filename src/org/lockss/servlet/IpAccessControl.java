@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.9 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.10 2004-02-23 09:10:01 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public abstract class IpAccessControl extends LockssServlet {
     "To be allowed access, an IP address must match some entry on the " +
     "allow list, and not match any entry on the deny list.";
 
-  static Logger log = Logger.getLogger("IpAcc");
+  static Logger log = Logger.getLogger("IpAccessServlet");
 
   private ConfigManager configMgr;
 

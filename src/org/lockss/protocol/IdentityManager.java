@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.38 2004-02-07 06:51:18 eaalto Exp $
+* $Id: IdentityManager.java,v 1.39 2004-02-23 09:10:01 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.app.*;
  * @version 1.0
  */
 public class IdentityManager extends BaseLockssManager {
-  protected static Logger log = Logger.getLogger("IDMgr");
+  static Logger log = Logger.getLogger("IdentityManager");
 
   public static final String PARAM_LOCAL_IP =
     Configuration.PREFIX + "localIPAddress";
@@ -105,7 +105,6 @@ public class IdentityManager extends BaseLockssManager {
   static final int INITIAL_REPUTATION = 500;
   static final int REPUTATION_NUMERATOR = 1000;
 
-  static Logger theLog = Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
 
   protected static String localIdentityStr;
@@ -128,10 +127,10 @@ public class IdentityManager extends BaseLockssManager {
   public void initService(LockssDaemon daemon) {
     super.initService(daemon);
     localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
-    theLog.debug("localIdentityStr: " + localIdentityStr);
+    log.debug("localIdentityStr: " + localIdentityStr);
     if (localIdentityStr == null) {
-      theLog.error(PARAM_LOCAL_IP +
-		   " is not set - IdentityManager cannot start.");
+      log.error(PARAM_LOCAL_IP +
+		" is not set - IdentityManager cannot start.");
       throw new
 	LockssDaemonException(PARAM_LOCAL_IP +
 			      " is not set - IdentityManager cannot start.");
@@ -144,7 +143,7 @@ public class IdentityManager extends BaseLockssManager {
       IPAddr addr = IPAddr.getByName(localIdentityStr);
       theLocalIdentity = new LcapIdentity(addr);
     } catch (UnknownHostException uhe) {
-      theLog.error("Could not resolve: " + localIdentityStr, uhe);
+      log.error("Could not resolve: " + localIdentityStr, uhe);
       throw new
 	LockssDaemonException("Could not resolve: " + localIdentityStr);
     }
@@ -257,7 +256,7 @@ public class IdentityManager extends BaseLockssManager {
     int reputation = id.getReputation();
 
     if (id == theLocalIdentity) {
-      theLog.debug(id.getIdKey() + " ignoring reputation delta " + delta);
+      log.debug(id.getIdKey() + " ignoring reputation delta " + delta);
       return;
     }
 
@@ -282,8 +281,8 @@ public class IdentityManager extends BaseLockssManager {
       }
     }
     if (delta != 0)
-      theLog.debug(id.getIdKey() +" change reputation from " + reputation +
-                   " to " + (reputation + delta));
+      log.debug(id.getIdKey() +" change reputation from " + reputation +
+		" to " + (reputation + delta));
     id.changeReputation(delta);
   }
 
@@ -292,8 +291,8 @@ public class IdentityManager extends BaseLockssManager {
     try {
       String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
       if (iddbDir==null) {
-        theLog.warning("No value found for config parameter '" +
-                       PARAM_IDDB_DIR+"'");
+        log.warning("No value found for config parameter '" +
+		    PARAM_IDDB_DIR+"'");
         return;
       }
       String fn = iddbDir + File.separator + IDDB_FILENAME;
@@ -303,12 +302,12 @@ public class IdentityManager extends BaseLockssManager {
       IdentityListBean idlb = (IdentityListBean)marshaller.load(fn,
           IdentityListBean.class, MAPPING_FILE_NAME);
       if (idlb==null) {
-        theLog.warning("Unable to read Identity file:" + fn);
+        log.warning("Unable to read Identity file:" + fn);
       } else {
         setIdentities(idlb.getIdBeans());
       }
     } catch (Exception e) {
-      theLog.warning("Couldn't load identity database: " + e.getMessage());
+      log.warning("Couldn't load identity database: " + e.getMessage());
     }
   }
 
@@ -316,17 +315,18 @@ public class IdentityManager extends BaseLockssManager {
     try {
       String fn = Configuration.getParam(PARAM_IDDB_DIR);
       if (fn==null) {
-        theLog.warning("No value found for config parameter '" +
-                       PARAM_IDDB_DIR+"'");
+        log.warning("No value found for config parameter '" +
+		    PARAM_IDDB_DIR+"'");
         return;
       }
 
       // store the identity list via the marshaller
       XmlMarshaller marshaller = new XmlMarshaller();
-      marshaller.store(fn, IDDB_FILENAME, getIdentityListBean(), MAPPING_FILE_NAME);
+      marshaller.store(fn, IDDB_FILENAME, getIdentityListBean(),
+		       MAPPING_FILE_NAME);
 
     } catch (Exception e) {
-      theLog.error("Couldn't store identity database: ", e);
+      log.error("Couldn't store identity database: ", e);
       throw new ProtocolException("Unable to store identity database.");
     }
   }
@@ -356,8 +356,8 @@ public class IdentityManager extends BaseLockssManager {
           theIdentities.put(id.getIdKey(), id);
         }
         catch (UnknownHostException ex) {
-          theLog.warning("Error reloading identity-Unknown Host: " +
-                         bean.getKey());
+          log.warning("Error reloading identity-Unknown Host: " +
+		      bean.getKey());
         }
       }
     }
