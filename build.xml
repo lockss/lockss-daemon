@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.83 2004-06-03 23:05:15 clairegriffin Exp $
+ $Id: build.xml,v 1.84 2004-06-05 00:16:33 clairegriffin Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -510,6 +510,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
        <classpath refid="tools.compile.classpath" />
        <include name="**/*.java"/>
     </javac>
+    <copy todir="${tools.classes}" >
+       <fileset dir="${tools.src}" >
+          <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
+          <include name="**/images/*"/>
+       </fileset>
+    </copy>
   </target>
   <target name="compile-generated"
           depends="prepare,generate-plugin-wrapper,jar-lockss"
