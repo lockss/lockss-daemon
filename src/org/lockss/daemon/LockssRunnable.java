@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.3 2004-10-06 04:45:27 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.4 2005-01-04 02:51:47 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -75,7 +75,11 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	if (interval != 0) {
 	  threadHung();
 	}
-      }};
+      }
+      public String toString() {
+	return "Thread Watchdog: " + getName();
+      }
+    };
 
   private static boolean watchdogDisabled = false;
 

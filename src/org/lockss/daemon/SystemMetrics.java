@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.26 2004-10-08 06:56:51 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.27 2005-01-04 02:51:47 tlipkis Exp $
  */
 
 /*
@@ -256,7 +256,11 @@ public class SystemMetrics
     new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
 	doMemLog();
-      }};
+      }
+      public String toString() {
+	return "Memory logger";
+      }
+    };
 
   // Log the current memory usage
   private void doMemLog() {
