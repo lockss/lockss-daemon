@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.60 2003-03-29 04:02:15 claire Exp $
+* $Id: Poll.java,v 1.61 2003-04-02 06:44:12 claire Exp $
  */
 
 /*
@@ -380,23 +380,6 @@ public abstract class Poll implements Serializable {
   }
 
   /**
-   * replay a previously checked vote
-   * @param vote the vote to recheck
-   * @param deadline the deadline by which the check must complete
-   */
-
-  void replayVoteCheck(Vote vote, Deadline deadline) {
-    MessageDigest hasher = getInitedHasher(vote.getChallenge(),
-        vote.getVerifier());
-
-    if(!scheduleHash(hasher, deadline, new Vote(vote),
-                     new ReplayVoteCallback())) {
-      m_pollstate = ERR_SCHEDULE_HASH;
-      log.debug("couldn't schedule hash - stopping replay poll");
-    }
-  }
-
-  /**
    * are there too many votes waiting to be tallied
    * @return true if we have a quorum worth of votes already pending
    */
@@ -548,34 +531,5 @@ public abstract class Poll implements Serializable {
     }
   }
 
-  class ReplayVoteCallback implements HashService.Callback {
-    /**
-     * Called to indicate that hashing the content or names of a
-     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
-     * is null,  or has failed otherwise.
-     * @param urlset  the <code>CachedUrlSet</code> being hashed.
-     * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
-     * @param e       the exception that caused the hash to fail.
-     */
-    public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
-      boolean hash_completed = e == null ? true : false;
-
-      if(hash_completed)  {
-        Vote v = (Vote)cookie;
-        v.setAgreeWithHash(hasher.digest());
-        LcapIdentity id = idMgr.findIdentity(v.getIDAddress());
-        m_tally.addVote(v, id, idMgr.isLocalIdentity(id));
-        m_tally.replayNextVote();
-      }
-      else {
-        log.info("replay vote hash failed with exception:" + e.getMessage());
-      }
-    }
-  }
 
 }

@@ -40,6 +40,7 @@ public class PollTally {
   private Deadline replayDeadline = null;
   private Iterator replayIter = null;
   private ArrayList originalVotes = null;
+  private static IdentityManager idManager = null;
 
   static Logger log=Logger.getLogger("VoteTally");
 
@@ -63,6 +64,7 @@ public class PollTally {
     this(type, startTime, duration, 0, 0, 0, 0, quorum, hashAlgorithm);
     poll = owner;
     pollSpec = poll.getPollSpec();
+    idManager = poll.idMgr;
     key = poll.getKey();
   }
 
@@ -237,7 +239,7 @@ public class PollTally {
     }
     else {
       Vote vote = (Vote)replayIter.next();
-      poll.replayVoteCheck(vote, replayDeadline);
+      replayVoteCheck(vote, replayDeadline);
     }
   }
 
@@ -283,6 +285,58 @@ public class PollTally {
     pollVotes.add(vote);
   }
 
+  /**
+ * replay a previously checked vote
+ * @param vote the vote to recheck
+ * @param deadline the deadline by which the check must complete
+ */
+
+void replayVoteCheck(Vote vote, Deadline deadline) {
+  MessageDigest hasher = poll.getInitedHasher(vote.getChallenge(),
+      vote.getVerifier());
+
+  if(!poll.scheduleHash(hasher, deadline, new Vote(vote),
+                   new ReplayVoteCallback())) {
+    poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
+    log.debug("couldn't schedule hash - stopping replay poll");
+  }
+}
+
+class ReplayVoteCallback implements HashService.Callback {
+    /**
+     * Called to indicate that hashing the content or names of a
+     * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>
+     * is null,  or has failed otherwise.
+     * @param urlset  the <code>CachedUrlSet</code> being hashed.
+     * @param cookie  used to disambiguate callbacks.
+     * @param hasher  the <code>MessageDigest</code> object that
+     *                contains the hash.
+     * @param e       the exception that caused the hash to fail.
+     */
+    public void hashingFinished(CachedUrlSet urlset,
+                                Object cookie,
+                                MessageDigest hasher,
+                                Exception e) {
+      boolean hash_completed = e == null ? true : false;
+
+      if(hash_completed)  {
+        Vote v = (Vote)cookie;
+        LcapIdentity id = idManager.findIdentity(v.getIDAddress());
+        if(idManager.isLocalIdentity(id)) {
+          v = new Vote(v.getChallenge(),v.getVerifier(),hasher.digest(),
+                       v.getIDAddress(),true);
+        }
+        else {
+          v.setAgreeWithHash(hasher.digest());
+        }
+        addVote(v, id, idManager.isLocalIdentity(id));
+        replayNextVote();
+      }
+      else {
+        log.info("replay vote hash failed with exception:" + e.getMessage());
+      }
+    }
+  }
 }
 
 
