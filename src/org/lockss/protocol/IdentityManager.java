@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.13 2003-02-06 05:16:06 claire Exp $
+* $Id: IdentityManager.java,v 1.14 2003-02-07 19:15:48 aalto Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class IdentityManager {
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
    * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager.initService()
+   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
@@ -131,14 +131,14 @@ public class IdentityManager {
 
   /**
    * start the plugin manager.
-   * @see org.lockss.app.LockssManager.startService()
+   * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
   }
 
   /**
    * stop the plugin manager
-   * @see org.lockss.app.LockssManager.stopService()
+   * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
     try {

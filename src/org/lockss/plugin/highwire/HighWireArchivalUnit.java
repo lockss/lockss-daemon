@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.3 2003-02-06 23:33:16 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.4 2003-02-07 19:15:48 aalto Exp $
  */
 
 /*
@@ -66,11 +66,11 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   /**
    * Standard constructor for HighWirePlugin.
    *
-   * @param start URL to start crawl
+   * @param base URL to start crawl
+   * @param volume volume number
    * @throws REException
-   * @throws MalformedURLException
    */
-  public HighWireArchivalUnit(URL base, int volume) 
+  public HighWireArchivalUnit(URL base, int volume)
       throws REException {
     super();
     if (base == null) {
@@ -103,7 +103,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 
   private CrawlSpec makeCrawlSpec(URL base, int volume)
       throws REException {
-    
+
     CrawlRule rule = makeRules(base, volume);
     return new CrawlSpec(makeStartUrl(base, volume), rule);
   }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.26 2003-02-07 08:35:26 claire Exp $
+* $Id: PollManager.java,v 1.27 2003-02-07 19:15:48 aalto Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class PollManager  implements LockssManager {
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
    * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager.initService()
+   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
@@ -109,7 +109,7 @@ public class PollManager  implements LockssManager {
 
   /**
    * start the plugin manager.
-   * @see org.lockss.app.LockssManager.startService()
+   * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
     theComm = theDaemon.getCommManager();
@@ -119,7 +119,7 @@ public class PollManager  implements LockssManager {
 
   /**
    * stop the plugin manager
-   * @see org.lockss.app.LockssManager.stopService()
+   * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
     // TODO: checkpoint here.

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.15 2003-02-06 05:16:06 claire Exp $
+ * $Id: LcapComm.java,v 1.16 2003-02-07 19:15:48 aalto Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class LcapComm implements LockssManager {
    * init the comm manager.
    * @param daemon the LockssDaemon instance
    * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager.initService()
+   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
@@ -108,14 +108,14 @@ public class LcapComm implements LockssManager {
 
   /**
    * start the comm manager.
-   * @see org.lockss.app.LockssManager.startService()
+   * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
   }
 
   /**
    * stop the comm manager
-   * @see org.lockss.app.LockssManager.stopService()
+   * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
     // TODO: checkpoint here.
@@ -136,12 +136,18 @@ public class LcapComm implements LockssManager {
     theManager.start();
   }
 
-  /** Return the singleton LcapComm instance */
+  /**
+   * Return the singleton LcapComm instance.
+   * @return the LcapComm
+   */
   public LcapComm getComm() {
     return theManager;
   }
 
-  /** Set communication parameters from configuration */
+  /**
+   * Set communication parameters from configuration.
+   * @param config the Configuration
+   */
   public void configure(Configuration config) {
     String groupName = null;
     String uniSendToName = null;
@@ -203,6 +209,7 @@ public class LcapComm implements LockssManager {
    * @param ld the datagram to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
+   * @throws IOException
    */
   public void send(LockssDatagram ld, ArchivalUnit au) throws IOException {
     if (multiPort < 0) {
@@ -219,6 +226,7 @@ public class LcapComm implements LockssManager {
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
+   * @throws IOException
    */
   public void sendTo(LockssDatagram ld, ArchivalUnit au, LcapIdentity id)
       throws IOException {
@@ -303,8 +311,12 @@ public class LcapComm implements LockssManager {
     }
   }
 
-  /** Verify that the packet is one we should process, <i>ie</i>, it is
-   * not a spoofed multicast packet */
+  /**
+   * Verify that the packet is one we should process, <i>ie</i>, it is
+   * not a spoofed multicast packet
+   * @param dg the LockssReceivedDatagram
+   * @return true if the packet should be processed
+   */
   private boolean verifyPacket(LockssReceivedDatagram dg) {
     if (!verifyMulticast || !dg.isMulticast()) {
       // Process all packets received on unicast socket.
@@ -360,7 +372,8 @@ public class LcapComm implements LockssManager {
   /**
    * Register a {@link LcapComm.MessageHandler}, which will be called
    * whenever a message is received.
-   * @param handler MessageHandler to add.
+   * @param protocol an int representing the protocol
+   * @param handler MessageHandler to add
    */
   public void registerMessageHandler(int protocol, MessageHandler handler) {
     if (protocol >= messageHandlers.size()) {
@@ -378,7 +391,8 @@ public class LcapComm implements LockssManager {
 
   /**
    * Unregister a {@link LcapComm.MessageHandler}.
-   * @param handler MessageHandler to remove.
+   * @param protocol an int representing the protocol
+   * @param handler MessageHandler to remove
    */
   public void unregisterMessageHandler(int protocol, MessageHandler handler) {
     if (protocol < messageHandlers.size());
@@ -488,6 +502,7 @@ public class LcapComm implements LockssManager {
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    * @deprecated Use {@link #send(LockssDatagram, ArchivalUnit)}
+   * @throws IOException
    */
   public void sendMessage(LcapMessage msg, ArchivalUnit au)
       throws IOException {
@@ -506,6 +521,7 @@ public class LcapComm implements LockssManager {
    * @param id the identity of the cache to which to send the message
    * @deprecated Use {@link #sendTo(LockssDatagram, ArchivalUnit,
    * LcapIdentity)}
+   * @throws IOException
    */
   public void sendMessageTo(LcapMessage msg, ArchivalUnit au,
 				   LcapIdentity id)

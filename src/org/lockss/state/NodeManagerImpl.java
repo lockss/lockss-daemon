@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.22 2003-02-06 05:16:06 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.23 2003-02-07 19:15:47 aalto Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
    * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager.initService()
+   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
@@ -84,7 +84,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   /**
    * start the plugin manager.
-   * @see org.lockss.app.LockssManager.startService()
+   * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
     repository = theDaemon.getHistoryRepository();
@@ -92,7 +92,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
 
   /**
    * stop the plugin manager
-   * @see org.lockss.app.LockssManager.stopService()
+   * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
     // checkpoint here
