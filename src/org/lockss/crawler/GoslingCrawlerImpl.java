@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.35 2003-09-26 23:52:18 eaalto Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.36 2003-09-27 00:13:17 eaalto Exp $
  */
 
 /*
@@ -242,8 +242,8 @@ public class GoslingCrawlerImpl implements Crawler {
         Reader reader = new InputStreamReader(is);
         crawl_ok = au.checkCrawlPermission(reader);
       }
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
+      logger.warning("Exception reading manifest: "+ex);
     }
 
 
