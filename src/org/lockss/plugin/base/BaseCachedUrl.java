@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.4 2003-09-19 22:34:02 eaalto Exp $
+ * $Id: BaseCachedUrl.java,v 1.5 2003-10-01 23:06:42 eaalto Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class BaseCachedUrl implements CachedUrl {
     if (fr != null) {
       return fr.createFilteredInputStream(getReader());
     } else {
-      logger.debug("No FilterRule, not filtering");
+      logger.debug2("No FilterRule, not filtering");
     }
     return openForReading();
   }
