@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.6 2002-11-23 02:15:33 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.7 2002-11-27 20:30:09 aalto Exp $
  */
 
 /*
@@ -58,10 +58,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception e) { fail("Couldn't get tempDir."); }
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
     mau = new MockGenericFileArchivalUnit(null);
     repo = LockssRepositoryImpl.repositoryFactory(mau);
