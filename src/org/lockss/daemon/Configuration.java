@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.37 2003-04-17 04:03:01 tal Exp $
+ * $Id: Configuration.java,v 1.38 2003-04-18 20:23:55 tal Exp $
  */
 
 /*
@@ -38,6 +38,11 @@ import java.net.*;
 import java.text.*;
 import org.mortbay.tools.*;
 import org.lockss.util.*;
+import org.lockss.servlet.*;
+import org.lockss.proxy.*;
+import org.lockss.protocol.*;
+import org.lockss.repository.*;
+import org.lockss.state.*;
 
 /** <code>Configuration</code> provides access to the LOCKSS configuration
  * parameters.  Instances of (concrete subclasses of)
@@ -70,9 +75,10 @@ public abstract class Configuration {
     PLATFORM + "diskSpacePaths";
 
   static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
+  static final String PARAM_PLATFORM_ADMIN_EMAIL = PLATFORM + "sysadminemail";
+  static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
+  static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
 
-  static final String PARAM_PLATFORM_ADMIN_EMAIL =
-    PLATFORM + "sysadminemail";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -201,7 +207,7 @@ public abstract class Configuration {
     if (newConfig == null) {
       return false;
     }
-    copyPlatformParams(newConfig);
+    newConfig.copyPlatformParams();
     newConfig.seal();
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
@@ -221,26 +227,53 @@ public abstract class Configuration {
     return true;
   }
 
-  private static void copyPlatformParams(Configuration config) {
-    String logdir = config.get("org.lockss.platform.logdirectory");
-    String logfile = config.get("org.lockss.platform.logfile");
+  private void copyPlatformParams() {
+    String logdir = get(PARAM_PLATFORM_LOG_DIR);
+    String logfile = get(PARAM_PLATFORM_LOG_FILE);
     if (logdir != null && logfile != null) {
-      setIfNotSet(config, FileTarget.PARAM_FILE,
-		  new File(logdir, logfile).toString());
+      setIfNotSet(FileTarget.PARAM_FILE, new File(logdir, logfile).toString());
     }
-    String ip = config.get("org.lockss.platform.localIPAddress");
+
+    String ip = get("org.lockss.platform.localIPAddress");
     if (ip != null) {
-      setIfNotSet(config,
-		  org.lockss.protocol.IdentityManager.PARAM_LOCAL_IP, ip);
+      setIfNotSet(IdentityManager.PARAM_LOCAL_IP, ip);
+    }
+
+    String platformSubnet = get(PARAM_PLATFORM_ACCESS_SUBNET);
+    appendPlatformAccess(ServletManager.PARAM_IP_INCLUDE, platformSubnet);
+    appendPlatformAccess(ProxyManager.PARAM_IP_INCLUDE, platformSubnet);
+
+    String space = get(PARAM_PLATFORM_DISK_SPACE_LIST);
+    if (!StringUtil.isNullString(space)) {
+      String firstSpace =
+	((String)StringUtil.breakAt(space, ';', 1).elementAt(0));
+      setIfNotSet(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
+		  firstSpace);
+      setIfNotSet(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+		  firstSpace);
     }
   }
 
-  private static void setIfNotSet(Configuration config,
-				  String key, String val) {
-    if (config.get(key) == null) {
-      config.put(key, val);
+  private void setIfNotSet(String key, String val) {
+    if (get(key) == null) {
+      put(key, val);
     }
   }
+
+  private void appendPlatformAccess(String accessParam,
+				    String platformAccess) {
+    if (StringUtil.isNullString(platformAccess)) {
+      return;
+    }
+    String includeIps = get(accessParam);
+    if (StringUtil.isNullString(includeIps)) {
+      includeIps = platformAccess;
+    } else {
+      includeIps = platformAccess + ";" + includeIps;
+    }
+    put(accessParam, includeIps);
+  }
+
 
   private void logConfig() {
     SortedSet keys = new TreeSet();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.16 2003-04-17 04:03:00 tal Exp $
+ * $Id: TestConfiguration.java,v 1.17 2003-04-18 20:23:55 tal Exp $
  */
 
 /*
@@ -301,5 +301,59 @@ public class TestConfiguration extends LockssTestCase {
     Configuration config = Configuration.getCurrentConfig();
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
     assertEquals("/var/log/foo/bar", config.get(FileTarget.PARAM_FILE));
+  }
+ 
+  public void testPlatformAccess1() throws Exception {
+    // platform access set, ui and proxy access not set
+    Properties props = new Properties();
+    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals("1.2.3.*", config.get("org.lockss.ui.access.ip.include"));
+    assertEquals("1.2.3.*", config.get("org.lockss.proxy.access.ip.include"));
+  }
+
+  public void testPlatformAccess2() throws Exception {
+    // platform access not set, ui and proxy access set
+    Properties props = new Properties();
+    props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
+    props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals("1.2.3.0/22", config.get("org.lockss.ui.access.ip.include"));
+    assertEquals("1.2.3.0/21",
+		 config.get("org.lockss.proxy.access.ip.include"));
+  }
+
+  public void testPlatformAccess3() throws Exception {
+    // platform access set, ui and proxy access set
+    Properties props = new Properties();
+    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
+    props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
+    props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals("1.2.3.*;1.2.3.0/22",
+		 config.get("org.lockss.ui.access.ip.include"));
+    assertEquals("1.2.3.*;1.2.3.0/21",
+		 config.get("org.lockss.proxy.access.ip.include"));
+  }
+
+  public void testPlatformSpace1() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.platform.diskSpacePaths", "/foo/bar");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals("/foo/bar", config.get("org.lockss.cache.location"));
+    assertEquals("/foo/bar", config.get("org.lockss.history.location"));
+  }
+
+  public void testPlatformSpace2() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.platform.diskSpacePaths", "/a/b;/foo/bar");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = Configuration.getCurrentConfig();
+    assertEquals("/a/b", config.get("org.lockss.cache.location"));
+    assertEquals("/a/b", config.get("org.lockss.history.location"));
   }
 }
