@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.11 2003-12-23 00:34:06 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.12 2004-04-29 10:13:02 tlipkis Exp $
  */
 
 /*
@@ -32,9 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
+import java.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
-import java.util.*;
+import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 
@@ -66,7 +67,7 @@ public class PollerStatus {
 
     private static final List sortRules =
       ListUtil.list(
-		    new StatusTable.SortRule("AuName", true),
+		    new StatusTable.SortRule("AuName", CatalogueOrderComparator.SINGLETON),
 //		    new StatusTable.SortRule("URL", true),
 		    new StatusTable.SortRule("Deadline", false)
 		    );
@@ -89,10 +90,12 @@ public class PollerStatus {
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
-      checkKey(table.getKey());
+      String key = table.getKey();
+      checkKey(key);
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(table.getKey()));
+      table.setTitle(getTitle(key));
+      table.setRows(getRows(key));
     }
 
     public boolean requiresKey() {
@@ -210,6 +213,34 @@ public class PollerStatus {
       return isMatch;
     }
 
+    public String getTitle(String key) {
+      if (key == null) {
+	return "All Recent Polls";
+      } 
+      String keyValue = key.substring(key.indexOf(':') + 1);
+      if (key.startsWith("AU:")) {
+	String name = keyValue;
+	LockssDaemon daemon = pollManager.getDaemon();
+	if (daemon != null) {
+	  ArchivalUnit au = daemon.getPluginManager().getAuFromId(keyValue);
+	  if (au != null) {
+	    name = au.getName();
+	  }
+	}
+	return "Polls for " + name;
+      }
+      else if (key.startsWith("URL:")) {
+	return "Polls for " + keyValue;
+      }
+      else if (key.startsWith("PollType:")) {
+	return keyValue + " polls";
+      }
+      else if (key.startsWith("Status:")) {
+	return keyValue + " polls";
+      }
+      return "Poll Table";
+    }
+
   }
 
   static class PollStatus implements StatusAccessor {
@@ -243,9 +274,11 @@ public class PollerStatus {
       String key = table.getKey();
       BasePoll poll = getPoll(key);
       table.setTitle(getTitle(key));
-      table.setColumnDescriptors(columnDescriptors);
-      table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(poll));
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(columnDescriptors);
+	table.setDefaultSortRules(sortRules);
+	table.setRows(getRows(poll));
+      }
       table.setSummaryInfo(getSummary(poll));
     }
 
