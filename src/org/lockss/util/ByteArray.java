@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.3 2003-06-20 22:34:53 claire Exp $
+ * $Id: ByteArray.java,v 1.4 2005-02-21 03:09:23 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,17 @@ public class ByteArray {
       buf[bufx++] = HEX_CHARS[tmp & 0x0F];
     }
     return new String(buf);
+  }
+
+  /** Return hex representation of bytes in array */
+  public static byte[] fromHexString(String hex) {
+    byte[] a = new BigInteger(hex, 16).toByteArray();
+    if (a.length == ((hex.length() + 1) / 2)) {
+      return a;
+    }
+    byte[] res = new byte[a.length - 1];
+    System.arraycopy(a, 1, res, 0, res.length);
+    return res;
   }
 
   public static byte[] encodeLong(long n) {
