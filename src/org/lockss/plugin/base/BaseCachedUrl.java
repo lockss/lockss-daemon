@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.17 2005-01-27 23:01:32 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.18 2005-01-29 20:01:05 troberts Exp $
  */
 
 /*
@@ -174,21 +174,12 @@ public class BaseCachedUrl implements CachedUrl {
     }
   }
 
-  private String trimMime(String mimeType) {
-    if (mimeType == null) {
-      return null;
-    }
-    int idx = mimeType.indexOf(";");
-    if (idx < 0) {
-      return mimeType;
-    }
-    return mimeType.substring(0, idx);
-  }
-
-
   private InputStream getFilteredStream() {
     CIProperties props = getProperties();
-    String mimeType = trimMime(props.getProperty(PROPERTY_CONTENT_TYPE));
+    String contentType = props.getProperty(PROPERTY_CONTENT_TYPE);
+    logger.debug3("Getting filtered stream for "+contentType);
+    String mimeType = HeaderUtil.getMimeTypeFromContentType(contentType);
+    logger.debug3("Mime type is "+mimeType);
     FilterRule fr = au.getFilterRule(mimeType);
     if (fr != null) {
       Reader rd = fr.createFilteredReader(openForReading());
