@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.19 2003-06-20 22:34:52 claire Exp $
+ * $Id: LockssServlet.java,v 1.20 2003-07-13 20:54:25 tlipkis Exp $
  */
 
 /*
@@ -169,6 +169,8 @@ public abstract class LockssServlet extends HttpServlet
   // Descriptors for all servlets.
   protected static ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
+  protected static ServletDescr SERVLET_PROXY_INFO =
+    new ServletDescr(ProxyConfig.class, "Proxy Info", "info/ProxyInfo", 0);
   protected static ServletDescr SERVLET_THREAD_DUMP =
     new ServletDescr("org.lockss.servlet.ThreadDump", "Thread Dump",
 		     ServletDescr.DEBUG_ONLY);
@@ -193,6 +195,7 @@ public abstract class LockssServlet extends HttpServlet
   static ServletDescr servletDescrs[] = {
      SERVLET_IP_ACCESS_CONTROL,
      SERVLET_DAEMON_STATUS,
+     SERVLET_PROXY_INFO,
      SERVLET_THREAD_DUMP,
      LINK_LOGS,
 //      SERVLET_ADMIN_HOME,
@@ -375,9 +378,22 @@ public abstract class LockssServlet extends HttpServlet
    *  browsers will prompt again for login
    */
   String srvURL(ServletDescr d, String params) {
+    return srvURL(null, d, params);
+  }
+
+  /** Construct servlet absolute URL, with params as necessary.
+   */
+  String srvAbsURL(ServletDescr d, String params) {
+    return srvURL(getMachineName(), d, params);
+  }
+
+  /** Construct servlet URL, with params as necessary.  Avoid generating a
+   *  hostname different from that used in the original request, or
+   *  browsers will prompt again for login
+   */
+  String srvURL(String host, ServletDescr d, String params) {
     StringBuffer sb = new StringBuffer();
     StringBuffer paramsb = new StringBuffer();
-    String host = null;
 
     if (!clientAddr.equals(adminAddr)) {
       if (!d.runsOnClient()) {
