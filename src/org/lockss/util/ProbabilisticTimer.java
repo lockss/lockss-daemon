@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: ProbabilisticTimer.java,v 1.1 2002-08-31 06:39:29 tal Exp $
+// $Id: ProbabilisticTimer.java,v 1.2 2002-09-02 04:14:16 tal Exp $
 // ========================================================================
 
 /*
@@ -35,63 +35,99 @@ import java.util.*;
 import java.text.DateFormat;
 
 
-/** Probabilistic timers
+/** Probabilistic timers measure a duration with randomized jitter.
  */
 public class ProbabilisticTimer {
   static Random random = null;
   Date expiration;
+  private long delay;			// only for testing
   Thread thread;
 
+  /** Return a timer whose duration is delay. */
   public ProbabilisticTimer(long delay) {
     this(delay, 0.0);
   }
 
-  public ProbabilisticTimer(long delay, double range) {
+  /** Return a timer whose duration is a
+   * random, normally distrubuted value whose mean is <code>delay</code>
+   * and standard deviation <code>stddev</code>.
+   */
+  public ProbabilisticTimer(long delay, double stddev) {
     if (random == null) {
       initialize();
     }
-    Date now = new Date();
-    expiration = new Date(now.getTime() +
-			  delay +
-			  (long) (range * random.nextGaussian()));
+    this.delay = delay + (long)(stddev * random.nextGaussian());
+    expiration = new Date(now().getTime() + delay);
+  }
+
+  private static Date now() {
+    return new Date();
   }
 
   private static void initialize() {
     random = new Random();
   }
 
+  /** For testing only. */
+  long getDelay() {
+    return delay;
+  }
+
+  /** Return the absolute expiration time, in milliseconds */
+  long getExpirationTime() {
+    return expiration.getTime();
+  }
+
+  /** Return the time remaining until expiration, in milliseconds */
+  public synchronized long getRemainingTime() {
+    return (expired() ? 0 : expiration.getTime() - now().getTime());
+  }
+
+  /** Cause the timer to expire immediately, and wake up the thread waiting
+      on it, if any. */
   public synchronized void expire() {
     expiration.setTime(0);
     if (thread != null)
       thread.interrupt();
   }
 
+  /** Return true iff the timer has expired */
   public synchronized boolean expired() {
-    Date now = new Date();
-    return (now.after(expiration));
+    return (!now().before(expiration));
   }
 
+  /** Add <code>delta</code> to the timer's expiration time. */
   public synchronized void slower(long delta) {
     expiration.setTime(expiration.getTime() + delta);
   }
 
+  /** Subtract <code>delta</code> from the timer's expiration time, and
+      wake up the waiting thread, if any, so it can recalculate the time
+      to wait. */
   public synchronized void faster(long delta) {
     expiration.setTime(expiration.getTime() - delta);
     if (thread != null)
       thread.interrupt();
   }
 
-  public synchronized long duration() {
-    Date now = new Date();
-    return (expired() ? 0 : expiration.getTime() - now.getTime());
+  /** Set the thread to be interrupted to the current thread. */
+  void setThread() {
+    thread = Thread.currentThread();
   }
 
+  /** Set the thread to be interrupted to null. */
+  void clearThread() {
+    thread = null;
+  }
+
+  /** Return true iff this is shorter in duration than <code>other</code>. */
   public boolean shorterThan(ProbabilisticTimer other) {
-    return (this.duration() < other.duration());
+    return (this.getRemainingTime() < other.getRemainingTime());
   }
 
-  private void snooze() {
-    long nap = duration();
+  // This needs fixing.
+  private void sleep() {
+    long nap = getRemainingTime();
     // XXX make these parameters
     long minimumSleep = 1000;
     long maximumSleep = 60000;
@@ -100,22 +136,25 @@ public class ProbabilisticTimer {
       if (nap < minimumSleep)
 	nap = minimumSleep;
       try {
-	Thread.sleep(nap > maximumSleep ? maximumSleep : nap);
+	thread = Thread.currentThread();
+	thread.sleep(nap > maximumSleep ? maximumSleep : nap);
       } catch (InterruptedException e) {
 	// XXX check that it's harmless
       }
     }
   }
 
-  public void snoozeUntil() {
-    long nap = duration();
+  /** Sleep until the timer expires. */
+  public void sleepUntil() {
+    long nap = getRemainingTime();
     while (nap > 0) {
       try {
-	Thread.sleep(nap);
+	thread = Thread.currentThread();
+	thread.sleep(nap);
       } catch (InterruptedException e) {
 	// Just wake up and see if it's time to expire
       }
-      nap = duration();
+      nap = getRemainingTime();
     }
   }
 
