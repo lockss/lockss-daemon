@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.32 2003-11-19 08:46:45 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.33 2003-12-23 00:38:45 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.plugin.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
+import org.apache.commons.collections.SequencedHashMap;
 
 public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
@@ -64,22 +65,20 @@ public class MockLockssDaemon extends LockssDaemon {
   IdentityManager identityManager = null;
   StatusService statusService = null;
 
-  MockAuSpecificManagerHandler mockHandler = null;
-
   public MockLockssDaemon() {
     this(null);
   }
 
   public MockLockssDaemon(List urls) {
     super(urls);
-    auSpecificManagers = new MockAuSpecificManagerHandler(this, 3);
-    mockHandler = (MockAuSpecificManagerHandler)auSpecificManagers;
   }
 
   public void startDaemon() throws Exception {
   }
 
   public void stopDaemon() {
+    auManagerMaps.clear();
+
     wdogService = null;
     hashService = null;
     schedService = null;
@@ -92,32 +91,39 @@ public class MockLockssDaemon extends LockssDaemon {
     identityManager = null;
     statusService = null;
 
-    mockHandler.clear();
-
     //super.stopDaemon();
   }
 
   ManagerDesc findManagerDesc(String key) {
-    for(int i=0; i< managerDescs.length; i++) {
-      ManagerDesc desc = managerDescs[i];
-      if (key == desc.getKey()) {
+    return findDesc(managerDescs, key);
+  }
+
+  ManagerDesc findAuManagerDesc(String key) {
+    return findDesc(getAuManagerDescs(), key);
+  }
+
+  ManagerDesc findDesc(ManagerDesc[] descs, String key) {
+    for(int i=0; i< descs.length; i++) {
+      ManagerDesc desc = descs[i];
+      if (key.equals(desc.getKey())) {
 	return desc;
       }
     }
     return null;
   }
 
-  /** The rest of the manager get routines should be converted to use this
-   * so they will be responsive to manager class config */
+  /** Create a manager instance, mimicking what LockssDaemon does */
   LockssManager newManager(String key) {
     log.debug2("Loading manager: " + key);
     ManagerDesc desc = findManagerDesc(key);
     if (desc == null) {
       throw new LockssDaemonException("No ManagerDesc for: " + key);
     }
-    String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.getKey(),
-					     desc.getDefaultClass());
-    log.debug2("Manager class: " + mgr_name); 
+    if (log.isDebug2()) {
+      String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.getKey(),
+					       desc.getDefaultClass());
+      log.debug2("Manager class: " + mgr_name);
+    }
     try {
       return initManager(desc);
     } catch (Exception e) {
@@ -131,12 +137,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public WatchdogService getWatchdogService() {
     if (wdogService == null) {
-      wdogService = new WatchdogService();
-      try {
-        wdogService.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      wdogService = (WatchdogService)newManager(LockssDaemon.WATCHDOG_SERVICE);
       theManagers.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
     }
     return wdogService;
@@ -160,12 +161,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public SchedService getSchedService() {
     if (schedService == null) {
-      schedService = new SchedService();
-      try {
-        schedService.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      schedService = (SchedService)newManager(LockssDaemon.SCHED_SERVICE);
       theManagers.put(LockssDaemon.SCHED_SERVICE, schedService);
     }
     return schedService;
@@ -177,12 +173,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public SystemMetrics getSystemMetrics() {
     if (systemMetrics == null) {
-      systemMetrics = new SystemMetrics();
-      try {
-        systemMetrics.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      systemMetrics = (SystemMetrics)newManager(LockssDaemon.SYSTEM_METRICS);
       theManagers.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
     }
     return systemMetrics;
@@ -194,12 +185,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public PollManager getPollManager() {
     if (pollManager == null) {
-      pollManager = new PollManager();
-      try {
-        pollManager.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      pollManager = (PollManager)newManager(LockssDaemon.POLL_MANAGER);
       theManagers.put(LockssDaemon.POLL_MANAGER, pollManager);
     }
     return pollManager;
@@ -211,12 +197,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public LcapComm getCommManager() {
     if (commManager == null) {
-      commManager = new LcapComm();
-      try {
-        commManager.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      commManager = (LcapComm)newManager(LockssDaemon.COMM_MANAGER);
       theManagers.put(LockssDaemon.COMM_MANAGER, commManager);
     }
     return commManager;
@@ -228,12 +209,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public LcapRouter getRouterManager() {
     if (routerManager == null) {
-      routerManager = new LcapRouter();
-      try {
-        routerManager.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      routerManager = (LcapRouter)newManager(LockssDaemon.ROUTER_MANAGER);
       theManagers.put(LockssDaemon.ROUTER_MANAGER, routerManager);
     }
     return routerManager;
@@ -245,13 +221,8 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public HistoryRepository getHistoryRepository() {
     if (historyRepository == null) {
-      HistoryRepositoryImpl impl = new HistoryRepositoryImpl();
-      try {
-        impl.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
-      historyRepository = impl;
+      historyRepository =
+	(HistoryRepository)newManager(LockssDaemon.HISTORY_REPOSITORY);
       theManagers.put(LockssDaemon.HISTORY_REPOSITORY, historyRepository);
     }
     return historyRepository;
@@ -263,12 +234,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public ProxyManager getProxyManager() {
     if (proxyManager == null) {
-      proxyManager = new ProxyManager();
-      try {
-        proxyManager.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      proxyManager = (ProxyManager)newManager(LockssDaemon.PROXY_MANAGER);
       theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
     }
     return proxyManager;
@@ -280,13 +246,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public CrawlManager getCrawlManager() {
     if (crawlManager == null) {
-      CrawlManagerImpl impl = new CrawlManagerImpl();
-      try {
-        impl.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
-      crawlManager = impl;
+      crawlManager = (CrawlManager)newManager(LockssDaemon.CRAWL_MANAGER);
       theManagers.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
     }
     return crawlManager;
@@ -298,12 +258,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public PluginManager getPluginManager() {
     if (pluginManager == null) {
-      pluginManager = new PluginManager();
-      try {
-        pluginManager.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
+      pluginManager = (PluginManager)newManager(LockssDaemon.PLUGIN_MANAGER);
       theManagers.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
     }
     return pluginManager;
@@ -316,59 +271,21 @@ public class MockLockssDaemon extends LockssDaemon {
 
   public IdentityManager getIdentityManager() {
     if (identityManager == null) {
-      identityManager = new IdentityManager();
-      identityManager.initService(this);
+      identityManager =
+	(IdentityManager)newManager(LockssDaemon.IDENTITY_MANAGER);
+      theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     }
-    theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     return identityManager;
   }
 
   public StatusService getStatusService() {
     if (statusService == null) {
-      StatusServiceImpl impl = new StatusServiceImpl();
-      try {
-        impl.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
-      statusService = impl;
+      statusService = (StatusService)newManager(LockssDaemon.STATUS_SERVICE);
       theManagers.put(LockssDaemon.STATUS_SERVICE, statusService);
     }
-
     return statusService;
   }
 
-  public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
-    ActivityRegulator regulator =
-        (ActivityRegulator)mockHandler.getAuSpecificManager(
-        ACTIVITY_REGULATOR, au);
-    if (regulator==null) {
-      regulator = (ActivityRegulator)mockHandler.addAuSpecificManager(
-          LockssDaemon.ACTIVITY_REGULATOR, au);
-    }
-    return regulator;
-  }
-
-  public LockssRepository getLockssRepository(ArchivalUnit au) {
-    LockssRepository repository =
-        (LockssRepository)mockHandler.getAuSpecificManager(
-        LOCKSS_REPOSITORY, au);
-    if (repository==null) {
-      repository = (LockssRepository)mockHandler.addAuSpecificManager(
-          LockssDaemon.LOCKSS_REPOSITORY, au);
-    }
-    return repository;
-  }
-
-  public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager manager =
-        (NodeManager)mockHandler.getAuSpecificManager(NODE_MANAGER, au);
-    if (manager==null) {
-      manager = (NodeManager)mockHandler.addAuSpecificManager(
-          LockssDaemon.NODE_MANAGER, au);
-    }
-    return manager;
-  }
 
   /**
    * Set the CommManager
@@ -395,15 +312,6 @@ public class MockLockssDaemon extends LockssDaemon {
   public void setCrawlManager(CrawlManager crawlMan) {
     crawlManager = crawlMan;
     theManagers.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
-  }
-
-  /**
-   * Set the ActivityRegulator for a given AU.
-   * @param actReg the new regulator
-   * @param au the ArchivalUnit
-   */
-  public void setActivityRegulator(ActivityRegulator actReg, ArchivalUnit au) {
-    mockHandler.setActivityRegulator(actReg, au);
   }
 
   /**
@@ -452,24 +360,6 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the LockssRepository for a given AU.
-   * @param repo the new repository
-   * @param au the ArchivalUnit
-   */
-  public void setLockssRepository(LockssRepository repo, ArchivalUnit au) {
-    mockHandler.setLockssRepository(repo, au);
-  }
-
-  /**
-   * Set the NodeManager for a given AU.
-   * @param nodeMan the new manager
-   * @param au the ArchivalUnit
-   */
-  public void setNodeManager(NodeManager nodeMan, ArchivalUnit au) {
-    mockHandler.setNodeManager(nodeMan, au);
-  }
-
-  /**
    * Set the PluginManager
    * @param pluginMan the new manager
    */
@@ -505,6 +395,101 @@ public class MockLockssDaemon extends LockssDaemon {
     theManagers.put(LockssDaemon.SYSTEM_METRICS, sysMetrics);
   }
 
+  // AU managers
+
+  /** Create an AU manager instance, mimicking what LockssDaemon does */
+  LockssAuManager newAuManager(String key, ArchivalUnit au) {
+    ManagerDesc desc = findAuManagerDesc(key);
+    if (desc == null) {
+      throw new LockssDaemonException("No AU ManagerDesc for: " + key);
+    }
+    log.debug2("Loading manager: " + desc.getKey() + " for " + au);
+    try {
+      LockssAuManager mgr = initAuManager(desc, au);
+      setAuManager(desc, au, mgr);
+      return mgr;
+    } catch (Exception e) {
+      throw new LockssDaemonException("Can't load au manager: " +
+				      e.toString());
+    }
+  }
+
+  void setAuManager(String key, ArchivalUnit au, LockssAuManager mgr) {
+    setAuManager(findAuManagerDesc(key), au, mgr);
+  }
+
+  void setAuManager(ManagerDesc desc, ArchivalUnit au, LockssAuManager mgr) {
+    SequencedHashMap auMgrMap = (SequencedHashMap)auManagerMaps.get(au);
+    if (auMgrMap == null) {
+      auMgrMap = new SequencedHashMap();
+      auManagerMaps.put(au, auMgrMap);
+    }
+    auMgrMap.put(desc.getKey(), mgr);
+  }
+
+  /** Overridden to prevent manager from being started */
+  protected void startAuManagers(ArchivalUnit au, SequencedHashMap auMgrMap)
+      throws Exception {
+  }
+
+
+  /** Return ActivityRegulator for AU */
+  public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
+    try {
+      return super.getActivityRegulator(au);
+    } catch (IllegalArgumentException e) {
+      return (ActivityRegulator)newAuManager(LockssDaemon.ACTIVITY_REGULATOR,
+					     au);
+    }      
+  }
+
+  /** Return LockssRepository for AU */
+  public LockssRepository getLockssRepository(ArchivalUnit au) {
+    try {
+      return super.getLockssRepository(au);
+    } catch (IllegalArgumentException e) {
+      return (LockssRepository)newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
+					    au);
+    }      
+  }
+
+  /** Return NodeManager for AU */
+  public NodeManager getNodeManager(ArchivalUnit au) {
+    try {
+      return super.getNodeManager(au);
+    } catch (IllegalArgumentException e) {
+      return (NodeManager)newAuManager(LockssDaemon.NODE_MANAGER, au);
+    }      
+  }
+
+  /**
+   * Set the ActivityRegulator for a given AU.
+   * @param actReg the new regulator
+   * @param au the ArchivalUnit
+   */
+  public void setActivityRegulator(ActivityRegulator actReg, ArchivalUnit au) {
+    setAuManager(ACTIVITY_REGULATOR, au, actReg);
+  }
+
+  /**
+   * Set the LockssRepository for a given AU.
+   * @param repo the new repository
+   * @param au the ArchivalUnit
+   */
+  public void setLockssRepository(LockssRepository repo, ArchivalUnit au) {
+    setAuManager(LOCKSS_REPOSITORY, au, repo);
+  }
+
+  /**
+   * Set the NodeManager for a given AU.
+   * @param nodeMan the new manager
+   * @param au the ArchivalUnit
+   */
+  public void setNodeManager(NodeManager nodeMan, ArchivalUnit au) {
+    setAuManager(NODE_MANAGER, au, nodeMan);
+  }
+
+
   private boolean daemonInited = false;
   private boolean daemonRunning = false;
 
@@ -536,47 +521,4 @@ public class MockLockssDaemon extends LockssDaemon {
     daemonRunning = val;
   }
 
-  /**
-   * Overridden version of AuSpecificManagerHandler which does not call
-   * 'initService()' or 'startService()' on the managers it adds, and has
-   * set functions.
-   */
-  static class MockAuSpecificManagerHandler extends AuSpecificManagerHandler {
-
-    MockAuSpecificManagerHandler(LockssDaemon theDaemon, int managerNum) {
-      super(theDaemon, managerNum);
-    }
-
-    public LockssManager addAuSpecificManager(String managerKey,
-                                                 ArchivalUnit au) {
-      HashMap managerMap = getAuSpecificManagerMap(managerKey);
-      LockssManager manager = (LockssManager)managerMap.get(au);
-      if (manager == null) {
-        manager = getNewManager(managerKey, au);
-        managerMap.put(au, manager);
-        // doesn't init or start service
-      }
-      return manager;
-    }
-
-    void setActivityRegulator(ActivityRegulator regulator,
-                                           ArchivalUnit au) {
-      getAuSpecificManagerMap(LockssDaemon.ACTIVITY_REGULATOR).put(au,
-          regulator);
-    }
-
-    void setLockssRepository(LockssRepository repository,
-                                           ArchivalUnit au) {
-      getAuSpecificManagerMap(LockssDaemon.LOCKSS_REPOSITORY).put(au,
-          repository);
-    }
-
-    void setNodeManager(NodeManager manager, ArchivalUnit au) {
-      getAuSpecificManagerMap(LockssDaemon.NODE_MANAGER).put(au, manager);
-    }
-
-    public void clear() {
-      auSpecificManagers.clear();
-    }
-  }
 }
