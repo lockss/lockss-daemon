@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.2 2002-11-19 23:29:12 tal Exp $
+ * $Id: TimerQueue.java,v 1.3 2002-11-20 02:06:02 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -61,6 +61,7 @@ public class TimerQueue implements Serializable {
     Request req = new Request(deadline, callback, cookie);
     req.deadline.registerCallback(req.deadlineCb);
     queue.put(req);
+    ensureQRunner();
     if (timerThread != null) {
       timerThread.interrupt();
     }
