@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.14 2003-05-22 03:42:26 tal Exp $
+ * $Id: TestLogger.java,v 1.15 2003-05-26 04:08:45 tal Exp $
  */
 
 /*
@@ -58,13 +58,32 @@ public class TestLogger extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    Logger.defaultTarget();
+    Logger.setDefaultTarget();
   }
 
   public void tearDown() throws Exception {
-    Logger.defaultTarget();
+    Logger.setDefaultTarget();
     super.tearDown();
   }
+
+  public void testGetDefaultTarget() {
+    String deftgtprop = System.getProperty(Logger.SYSPROP_DEFAULT_LOG_TARGET);
+    try {
+      System.setProperty(Logger.SYSPROP_DEFAULT_LOG_TARGET, "");
+      assertTrue(Logger.getDefaultTarget() instanceof StdErrTarget);
+      System.setProperty(Logger.SYSPROP_DEFAULT_LOG_TARGET, "noSuchClass");
+      assertTrue(Logger.getDefaultTarget() instanceof StdErrTarget);
+      System.setProperty(Logger.SYSPROP_DEFAULT_LOG_TARGET,
+			 "org.lockss.util.StdErrTarget");
+      assertTrue(Logger.getDefaultTarget() instanceof StdErrTarget);
+      System.setProperty(Logger.SYSPROP_DEFAULT_LOG_TARGET,
+			 "org.lockss.util.AntTaskTarget");
+      assertTrue(Logger.getDefaultTarget() instanceof AntTaskTarget);
+    } finally {
+      System.setProperty(Logger.SYSPROP_DEFAULT_LOG_TARGET, deftgtprop);
+    }
+  }
+
 
   public void testNames() {
     assertEquals("Critical", Logger.nameOf(Logger.LEVEL_CRITICAL));

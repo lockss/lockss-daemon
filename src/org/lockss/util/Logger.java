@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.24 2003-05-22 03:42:26 tal Exp $
+ * $Id: Logger.java,v 1.25 2003-05-26 04:08:45 tal Exp $
  */
 
 /*
@@ -57,6 +57,13 @@ public class Logger {
 
   /** prefix for target-specific params */
   public static final String TARGET_PREFIX = PREFIX + "target.";
+
+  /** System property for name of default LogTarget */
+  public static String SYSPROP_DEFAULT_LOG_TARGET =
+    "org.lockss.defaultLogTarget";
+  /** System property for name of default log level */
+  public static String SYSPROP_DEFAULT_LOG_LEVEL =
+    "org.lockss.defaultLogLevel";
 
   /** Critical errors require immediate attention from a human. */
   public static final int LEVEL_CRITICAL = 1;
@@ -119,7 +126,7 @@ public class Logger {
   
   static {
     // until we get configured, output to default target
-    defaultTarget();
+    setDefaultTarget();
     setInitialDefaultLevel();
   }
 
@@ -220,7 +227,7 @@ public class Logger {
    * org.lockss.defaultLogLevel system property if present, or DEFAULT_LEVEL
    */
   public static int getInitialDefaultLevel() {
-    String s = System.getProperty("org.lockss.defaultLogLevel");
+    String s = System.getProperty(SYSPROP_DEFAULT_LOG_LEVEL);
     int l = DEFAULT_LEVEL;
     if (s != null && !"".equals(s)) {
       try {
@@ -270,11 +277,35 @@ public class Logger {
   }
 
   /**
-   * Set the default output target for all loggers.  Used by unit tests
-   * to reset after tests.
+   * Set the default output target for all loggers.
    */
-  static void defaultTarget() {
-    setTarget(new StdErrTarget());
+  static void setDefaultTarget() {
+    setTarget(getDefaultTarget());
+  }
+
+  /**
+   * Get the default output target for all loggers.
+   */
+  static LogTarget getDefaultTarget() {
+    Class tgtClass = StdErrTarget.class;
+    String tgtName = System.getProperty(SYSPROP_DEFAULT_LOG_TARGET);
+    if (!StringUtil.isNullString(tgtName)) {
+      try {
+	tgtClass = Class.forName(tgtName);
+      } catch (ClassNotFoundException e) {
+	System.err.println("Couldn't load log target " + tgtName +
+			   ": " + e.toString());
+      }
+    }
+    LogTarget tgt;
+    try {
+      tgt = (LogTarget)tgtClass.newInstance();
+      } catch (Exception e) {
+	System.err.println("Couldn't instantiate log target " + tgtName +
+			   ": " + e.toString());
+	tgt = new StdErrTarget();
+      }
+    return tgt;
   }
 
   /**
@@ -328,9 +359,11 @@ public class Logger {
     defaultLevelName = nameOf(defaultLevel);
   }
 
-  /** Register callback to reset log levels when config changes
+  /** Register callback to reset log levels when config changes.  XXX This
+   * shouldn't be public.  Fix when there's a proper way to stop and
+   * restart Logger
    */
-  private static void registerConfigCallback() {
+  public static void registerConfigCallback() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
