@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.7 2003-11-03 18:14:08 tlipkis Exp $
+ * $Id: TestCollectionUtil.java,v 1.8 2003-11-13 19:52:43 troberts Exp $
  */
 
 /*
@@ -34,14 +34,14 @@ package org.lockss.util;
 
 import java.util.*;
 import junit.framework.TestCase;
-import org.lockss.test.MockLogTarget;
+import org.lockss.test.*;
 
 
 /**
  * Test class for org.lockss.util.ArrayIterator
  */
 
-public class TestCollectionUtil extends TestCase {
+public class TestCollectionUtil extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.util.CollectionUtil.class
   };
@@ -129,4 +129,25 @@ public class TestCollectionUtil extends TestCase {
     s2.add("1");
     assertTrue(CollectionUtil.isIsomorphic(s1, s2));
   }
+
+  public void testRemoveElementThrowsIfNullCollection() {
+    try {
+      CollectionUtil.removeElement(null);
+      fail("removeElement should have thrown for a null collection");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testRemoveElementThrowsIfEmptyCollection() {
+    assertNull(CollectionUtil.removeElement(SetUtil.set()));
+  }
+
+  public void testRemoveElement() {
+    Set set = SetUtil.set("str1", "str2", "str3");
+    Set expectedElements = SetUtil.set("str1", "str2", "str3");
+    String element = (String) CollectionUtil.removeElement(set);
+    assertContains(expectedElements, element);
+    assertDoesNotContain(set, element);
+  }
+
 }
