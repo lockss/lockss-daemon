@@ -272,6 +272,10 @@ public class TestPoll extends TestCase {
     assertEquals(2, p.m_pendingVotes);
   }
 
+  public void testHasVoted() {
+
+  }
+
   public static Poll createCompletedPoll(LcapMessage testmsg, int numAgree,
                                 int numDisagree) throws Exception {
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
