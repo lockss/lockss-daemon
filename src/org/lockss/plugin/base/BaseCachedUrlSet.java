@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.2 2003-05-03 00:45:51 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.3 2003-06-03 00:03:58 aalto Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
    * @return true if is within the scope
    */
   public boolean containsUrl(String url) {
-    return (makeCachedUrl(url) != null);
+    return spec.matches(url);
   }
 
   /**
