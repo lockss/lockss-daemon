@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.7 2004-07-14 22:31:57 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.7.2.1 2004-07-16 19:33:37 clairegriffin Exp $
  */
 
 /*
@@ -195,23 +195,46 @@ public class ConfigParamDescrPicker
     AvailableParamList.setCellRenderer(renderer);
   }
 
-  void addConfigParamDescr(ConfigParamDescr cpd) {
-    plugin.addConfigParamDescr(cpd);
-    DefaultListModel dlm = (DefaultListModel)PluginParamList.getModel();
-    if(dlm.contains(cpd.getKey()))
-      dlm.removeElement(cpd.getKey());
-    dlm.addElement(cpd.getKey());
+  boolean addConfigParamDescr(ConfigParamDescr cpd) {
+    if(addPluginParam(cpd)) {
+      plugin.addConfigParamDescr(cpd);
+      return true;
+    }
+    return false;
+  }
+
+  boolean addPluginParam(ConfigParamDescr cpd) {
+    DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
+    String key = cpd.getKey();
+    for (int index = 0; index < dlm.size(); index++) {
+      ConfigParamDescr descr = (ConfigParamDescr) dlm.getElementAt(index);
+      if (descr.getKey().equals(key)) {
+        int ret = JOptionPane.showConfirmDialog(
+            this, "Replace existing entry for " + key +
+            " and display name " + descr.getDisplayName() + " with new entry?",
+            "Replace Existing Configuration Param", JOptionPane.YES_NO_OPTION);
+        if (ret == JOptionPane.NO_OPTION) {
+          return false;
+        }
+        else {
+          dlm.removeElementAt(index);
+          break;
+        }
+      }
+    }
+    dlm.addElement(cpd);
+    return true;
   }
 
   void removeButton_actionPerformed(ActionEvent e) {
     int index = PluginParamList.getSelectedIndex();
     if (index >= 0) {
       DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
-      String key = (String) dlm.getElementAt(index);
-      if(plugin.canRemoveParam(plugin.getConfigParamDescr(key))) {
+      ConfigParamDescr cpd  = (ConfigParamDescr) dlm.getElementAt(index);
+      if(plugin.canRemoveParam(cpd)) {
         dlm.removeElementAt(index);
         dlm = (DefaultListModel) AvailableParamList.getModel();
-        dlm.addElement(key);
+        dlm.addElement(cpd);
       }
       else {
         JOptionPane.showMessageDialog(this,
@@ -226,10 +249,10 @@ public class ConfigParamDescrPicker
     int index = AvailableParamList.getSelectedIndex();
     if (index >= 0) {
       DefaultListModel dlm = (DefaultListModel) AvailableParamList.getModel();
-      String key = (String) dlm.getElementAt(index);
-      dlm.removeElementAt(index);
-      dlm = (DefaultListModel) PluginParamList.getModel();
-      dlm.addElement(key);
+      ConfigParamDescr cpd  = (ConfigParamDescr) dlm.getElementAt(index);
+      if(addPluginParam(cpd)) {
+        dlm.removeElementAt(index);
+      }
     }
   }
 
@@ -237,9 +260,8 @@ public class ConfigParamDescrPicker
     int index = PluginParamList.getSelectedIndex();
     if (index >= 0) {
       DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
-      String key = (String) dlm.getElementAt(index);
-      ConfigParamDescr cpd = plugin.getConfigParamDescr(key);
-      showConfigParamEditor(cpd, !defaultDescrs.containsKey(key));
+      ConfigParamDescr cpd  = (ConfigParamDescr) dlm.getElementAt(index);
+      showConfigParamEditor(cpd, !defaultDescrs.containsKey(cpd.getKey()));
     }
   }
 
@@ -247,8 +269,7 @@ public class ConfigParamDescrPicker
     int index = AvailableParamList.getSelectedIndex();
     if (index >= 0) {
       DefaultListModel dlm = (DefaultListModel) AvailableParamList.getModel();
-      String key = (String) dlm.getElementAt(index);
-      ConfigParamDescr cpd = plugin.getConfigParamDescr(key);
+      ConfigParamDescr cpd  = (ConfigParamDescr) dlm.getElementAt(index);
       showConfigParamEditor(cpd, false);
     }
   }
@@ -259,8 +280,8 @@ public class ConfigParamDescrPicker
     DefaultListModel dlm = (DefaultListModel) PluginParamList.getModel();
     plugin.removePluginConfigDescrs();
     for(int index = 0; index < dlm.size(); index++) {
-      String key = (String) dlm.getElementAt(index);
-      plugin.addConfigParamDescr(key);
+      ConfigParamDescr descr = (ConfigParamDescr) dlm.getElementAt(index);
+      plugin.addConfigParamDescr(descr);
     }
     plugin.notifyParamsChanged();
     hide();
