@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.36 2003-10-10 19:21:45 eaalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.37 2003-10-24 07:39:01 eaalto Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules(base, volume);
     CrawlSpec spec = new CrawlSpec(makeStartUrl(base, volume), rule);
     if (useCrawlWindow) {
-      spec.setCrawlWindowRule(makeCrawlWindow());
+      spec.setCrawlWindow(makeCrawlWindow());
     }
     return spec;
   }
@@ -210,7 +210,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  private CrawlWindowRule makeCrawlWindow() {
+  private CrawlWindow makeCrawlWindow() {
     logger.debug("Creating crawl window...");
     // allow crawls from 12pm->3pm only
     Calendar start = Calendar.getInstance();
@@ -220,10 +220,8 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     end.set(Calendar.HOUR_OF_DAY, 15);
     end.set(Calendar.MINUTE, 0);
 
-    CrawlWindowRule.Window window = new CrawlWindows.Interval(start, end,
-        CrawlWindows.Interval.TIME);
-    int inclexl = CrawlWindowRules.BaseCrawlWindow.MATCH_INCLUDE_ELSE_EXCLUDE;
-    return new CrawlWindowRules.BaseCrawlWindow(window, inclexl, null);
+    return new CrawlWindows.Interval(start, end, CrawlWindows.Interval.TIME,
+                                     null);
   }
 
   public Collection getUrlStems() {

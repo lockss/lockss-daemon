@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlSpec.java,v 1.7 2003-10-10 21:18:12 troberts Exp $
+ * $Id: TestCrawlSpec.java,v 1.8 2003-10-24 07:37:02 eaalto Exp $
  */
 
 /*
@@ -105,11 +105,11 @@ public class TestCrawlSpec extends LockssTestCase {
   }
 
   public void testCrawlWindow() throws REException {
-    MyMockCrawlWindowRule window = new MyMockCrawlWindowRule();
+    MyMockCrawlWindow window = new MyMockCrawlWindow();
     CrawlSpec cs1 =
       new CrawlSpec("foo",
                     new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE));
-    cs1.setCrawlWindowRule(window);
+    cs1.setCrawlWindow(window);
     assertTrue(cs1.canCrawl());
     window.setAllowCrawl(false);
     assertFalse(cs1.canCrawl());
@@ -129,20 +129,16 @@ public class TestCrawlSpec extends LockssTestCase {
     assertEquals(1, cs.getRecrawlDepth());
   }
 
-  public static class MyMockCrawlWindowRule implements CrawlWindowRule {
+  public static class MyMockCrawlWindow implements CrawlWindow {
     boolean allowCrawl = true;
 
-    public MyMockCrawlWindowRule() { }
+    public MyMockCrawlWindow() { }
 
-    public int canCrawl() {
-      if (allowCrawl) {
-        return INCLUDE;
-      } else {
-        return EXCLUDE;
-      }
+    public boolean canCrawl() {
+      return allowCrawl;
     }
 
-    public int canCrawl(Date serverDate) {
+    public boolean canCrawl(Date serverDate) {
       return canCrawl();
     }
 

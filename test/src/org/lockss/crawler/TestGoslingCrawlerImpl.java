@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.24 2003-10-10 19:21:44 eaalto Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.25 2003-10-24 07:39:01 eaalto Exp $
  */
 
 /*
@@ -795,7 +795,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+url3+">link3</a>";
 
     CrawlSpec spec = new CrawlSpec(startUrl, null);
-    spec.setCrawlWindowRule(new MockCrawlWindowRuleThatCountsDown(3));
+    spec.setCrawlWindow(new MockCrawlWindowThatCountsDown(3));
     mau.setCrawlSpec(spec);
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -810,10 +810,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  private class MockCrawlWindowRuleThatCountsDown implements CrawlWindowRule {
+  private class MockCrawlWindowThatCountsDown implements CrawlWindow {
     int counter;
 
-    public MockCrawlWindowRuleThatCountsDown(int counter) {
+    public MockCrawlWindowThatCountsDown(int counter) {
       this.counter = counter;
     }
 
@@ -821,15 +821,15 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       return counter;
     }
 
-    public int canCrawl() {
+    public boolean canCrawl() {
       if (counter > 0) {
         counter--;
-        return INCLUDE;
+        return true;
       }
-      return EXCLUDE;
+      return false;
     }
 
-    public int canCrawl(Date serverDate) {
+    public boolean canCrawl(Date serverDate) {
       return canCrawl();
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.6 2003-10-10 19:21:45 eaalto Exp $
+ * $Id: CrawlSpec.java,v 1.7 2003-10-24 07:37:02 eaalto Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
 public final class CrawlSpec {
   private List startList;
   private CrawlRule rule;
-  private CrawlWindowRule window;
+  private CrawlWindow window;
   private int recrawlDepth = -1;
 
   /**
@@ -116,19 +116,19 @@ public final class CrawlSpec {
 
 
   /**
-   * Returns the CrawlWindowRule, or null.
-   * @return the {@link CrawlWindowRule}
+   * Returns the CrawlWindow, or null.
+   * @return the {@link CrawlWindow}
    */
-  public CrawlWindowRule getCrawlWindowRule() {
+  public CrawlWindow getCrawlWindow() {
     return window;
   }
 
   /**
-   * Sets the CrawlWindowRule (null for none) to determine when crawling is
+   * Sets the CrawlWindow (null for none) to determine when crawling is
    * permitted.  A null window always allows.
-   * @param window the {@link CrawlWindowRule}
+   * @param window the {@link CrawlWindow}
    */
-  public void setCrawlWindowRule(CrawlWindowRule window) {
+  public void setCrawlWindow(CrawlWindow window) {
     this.window = window;
   }
 
@@ -151,8 +151,7 @@ public final class CrawlSpec {
   }
 
   public boolean canCrawl() {
-    return (window==null) ? true :
-        (window.canCrawl() == CrawlWindowRule.INCLUDE);
+    return (window==null) ? true : window.canCrawl();
   }
 
   /**
