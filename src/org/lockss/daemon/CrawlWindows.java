@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.3 2003-10-28 23:59:25 eaalto Exp $
+ * $Id: CrawlWindows.java,v 1.4 2003-11-03 20:54:10 eaalto Exp $
  */
 
 /*
@@ -190,6 +190,8 @@ public class CrawlWindows {
 
       if (startIsLowest) {
         return ((serverVal >= startVal) && (serverVal <= endVal));
+      } else if (startVal==endVal) {
+        return (serverVal == startVal);
       } else {
         return ((serverVal >= startVal) || (serverVal <= endVal));
       }
