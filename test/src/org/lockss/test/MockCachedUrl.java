@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.13 2003-02-26 02:40:31 troberts Exp $
+ * $Id: MockCachedUrl.java,v 1.14 2003-04-10 21:47:35 tal Exp $
  */
 
 /*
@@ -63,6 +63,10 @@ public class MockCachedUrl implements CachedUrl {
   public MockCachedUrl(String url, CachedUrlSet cus) {
     this(url);
     this.cus = cus;
+  }
+
+  public ArchivalUnit getArchivalUnit() {
+    return null;
   }
 
   public String getUrl() {

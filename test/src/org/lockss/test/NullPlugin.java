@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.27 2003-04-05 00:56:54 tal Exp $
+ * $Id: NullPlugin.java,v 1.28 2003-04-10 21:47:35 tal Exp $
  */
 
 /*
@@ -118,6 +118,10 @@ public class NullPlugin {
 
     public String toString() {
       return "[NullPlugin.CachedUrl]";
+    }
+
+    public org.lockss.plugin.ArchivalUnit getArchivalUnit() {
+      return null;
     }
 
     public String getUrl() {
