@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.28 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestLcapIdentity.java,v 1.29 2004-09-29 23:31:37 tlipkis Exp $
  */
 
 /*
@@ -46,23 +46,24 @@ import java.util.*;
 /** JUnitTest case for class: org.lockss.protocol.Identity */
 public class TestLcapIdentity extends LockssTestCase {
 
-  static String fakeIdString = "127.0.0.1";
-  static LcapIdentity fakeId = null;
+  static final String fakeIdString = "127.0.0.1";
+  static final String urlstr = "http://www.test.org";
+  static final String lwrbnd = "test1.doc";
+  static final String uprbnd = "test3.doc";
+  static final String archivalid = "testarchive 1.0";
+  static final byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
+  static final ArrayList testentries = (ArrayList)ListUtil.list(
+      new PollTally.NameListEntry(true,"test1.doc"),
+      new PollTally.NameListEntry(true,"test2.doc"),
+      new PollTally.NameListEntry(true,"test3.doc"));
+
+  LcapIdentity fakeId = null;
   IPAddr testAddress;
   int testReputation;
   PeerIdentity testID;
   LcapMessage testMsg= null;
-  private static String urlstr = "http://www.test.org";
-  private static String lwrbnd = "test1.doc";
-  private static String uprbnd = "test3.doc";
-  private static String archivalid = "testarchive 1.0";
-  private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
-  private static ArrayList testentries = (ArrayList)ListUtil.list(
-      new PollTally.NameListEntry(true,"test1.doc"),
-      new PollTally.NameListEntry(true,"test2.doc"),
-      new PollTally.NameListEntry(true,"test3.doc"));
-  private static MockLockssDaemon daemon;
-  private static IdentityManager idmgr;
+  private MockLockssDaemon daemon;
+  private IdentityManager idmgr;
 
   public TestLcapIdentity(String _name) {
     super(_name);

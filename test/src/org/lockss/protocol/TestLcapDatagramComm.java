@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramComm.java,v 1.3 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.4 2004-09-29 23:31:37 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
   }
 
   static Logger log = Logger.getLogger("SockTest");
-  static int TIMEOUT = 1000;
+  static final int TIMEOUT = 1000;
 
   static final String PARAM_MULTI_GROUP = LcapDatagramComm.PARAM_MULTI_GROUP;
   static final String PARAM_MULTI_PORT = LcapDatagramComm.PARAM_MULTI_PORT;
@@ -67,7 +67,7 @@ public class TestLcapDatagramComm extends LockssTestCase {
   static final String PARAM_UNI_PORT_SEND = LcapDatagramComm.PARAM_UNI_PORT_SEND;
   static final String PARAM_MULTI_VERIFY = LcapDatagramComm.PARAM_MULTI_VERIFY;
 
-  private static MockLockssDaemon daemon;
+  private MockLockssDaemon daemon;
 
   String testStr = "This is test data";
   byte[] testData;
