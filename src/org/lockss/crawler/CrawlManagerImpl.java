@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.58 2004-02-03 03:13:29 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.59 2004-02-07 06:48:32 eaalto Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 
 /**
  * This is the interface for the object that will sit between the crawler
@@ -171,7 +170,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       crawlThread.start();
       }
     } else {
-      logger.debug3("Repair aborted due to activity lock.");
+      logger.debug("Repair aborted due to activity lock.");
       try {
 	cb.signalCrawlAttemptCompleted(false, cookie);
       } catch (Exception e) {
@@ -232,7 +231,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     if (lock != null) {
       scheduleNewContentCrawl(au, cb, cookie, lock);
     } else {
-      logger.debug2("Couldn't schedule new content crawl due "+
+      logger.debug("Couldn't schedule new content crawl due "+
 		    "to activity lock.");
       if (cb != null) {
 	try {
@@ -283,7 +282,6 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   public class CrawlThread extends Thread {
     private Deadline deadline;
-    private List callbacks;
     private Object cookie;
     private Crawler crawler;
     private CrawlManager.Callback cb;
