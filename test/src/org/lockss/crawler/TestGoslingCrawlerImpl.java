@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.1 2002-11-27 00:25:45 troberts Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.2 2002-11-27 19:50:20 troberts Exp $
  */
 
 /*
@@ -106,49 +106,171 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   }
 
   public void testDoCrawlHref() {
-    singleTagCrawl("http://www.example.com/web_link.html",
+    singleTagShouldCrawl("http://www.example.com/web_link.html",
 		   "<a href=", "</a>");
   }
 
   public void testDoCrawlImage() {
-    singleTagCrawl("http://www.example.com/web_link.jpg",
+    singleTagShouldCrawl("http://www.example.com/web_link.jpg",
 		   "<img src=", "</img>");
   }
 
   public void testDoCrawlFrame() {
-    singleTagCrawl("http://www.example.com/web_link.html",
+    singleTagShouldCrawl("http://www.example.com/web_link.html",
 		   "<frame src=", "</frame>");
   }
 
   public void testDoCrawlLink() {
-    singleTagCrawl("http://www.example.com/web_link.css",
+    singleTagShouldCrawl("http://www.example.com/web_link.css",
 		   "<link href=", "</link>");
   }
 
   public void testDoCrawlBody() {
-    singleTagCrawl("http://www.example.com/web_link.jpg",
+    singleTagShouldCrawl("http://www.example.com/web_link.jpg",
 		   "<body background=", "</body>");
   }
 
   public void testDoCrawlTable() {
-    singleTagCrawl("http://www.example.com/web_link.jpg",
+    singleTagShouldCrawl("http://www.example.com/web_link.jpg",
 		   "<table background=", "</table>");
   }
 
   public void testDoCrawlTc() {
-    singleTagCrawl("http://www.example.com/web_link.jpg",
+    singleTagShouldCrawl("http://www.example.com/web_link.jpg",
 		   "<tc background=", "</tc>");
   }
 
-  private void singleTagCrawl(String url, String openTag, String closeTag) {
+  public void testDoNotCrawlBadA() {
+    String[] badTags = {
+      "<a harf=",
+      "<a hre=",
+      "<a hrefe=",
+      "<al href="
+    };
+    checkBadTags(badTags, "</a>");
+  }
+
+  private void checkBadTags(String[] badTags, String closeTag) {
+    String url = "http://www.example.com/web_link.html";
+    for (int ix=0; ix<badTags.length; ix++) {
+      singleTagShouldNotCrawl(url, badTags[ix], closeTag);
+    }
+  }
+
+  public void testDoNotCrawlBadFrameTag() {
+    String[] badTags = {
+      "<fram src=",
+      "<framea src=",
+      "<framr src=",
+      "<frame sr=",
+      "<frame srcr=",
+      "<frame sra="
+    };
+    checkBadTags(badTags, "</frame>");
+  }
+
+  public void testDoNotCrawlBadImgTag() {
+    String[] badTags = {
+      "<im src=",
+      "<imga src=",
+      "<ime src=",
+      "<img sr=",
+      "<img srcr=",
+      "<img sra="
+    };
+    checkBadTags(badTags, "</frame>");
+  }
+
+  public void testDoNotCrawlBadLinkTag() {
+    String[] badTags = {
+      "<lin href=",
+      "<linkf href=",
+      "<lino href=",
+      "<link hre=",
+      "<link hrefr=",
+      "<link hrep="
+    };
+    checkBadTags(badTags, "</link>");
+  }
+
+  public void testDoNotCrawlBadBodyTag() {
+    String[] badTags = {
+      "<bod background=",
+      "<bodyk background=",
+      "<bodp background=",
+      "<body backgroun=",
+      "<body backgrounyl=",
+      "<body backgrounj="
+    };
+    checkBadTags(badTags, "</body>");
+  }
+
+  public void testDoNotCrawlBadScriptTag() {
+    String[] badTags = {
+      "<scrip src=",
+      "<scriptl src=",
+      "<scripo src=",
+      "<script sr=",
+      "<script srcu=",
+      "<script srp="
+    };
+    checkBadTags(badTags, "</script>");
+  }
+
+  public void testDoNotCrawlBadTableTag() {
+    String[] badTags = {
+      "<tabl background=",
+      "<tablea background=",
+      "<tablu background=",
+      "<table backgroun=",
+      "<table backgroundl=",
+      "<table backgrouno="
+    };
+    checkBadTags(badTags, "</table>");
+  }
+
+  public void testDoNotCrawlBadTcTag() {
+    String[] badTags = {
+      "<t background=",
+      "<tcl background=",
+      "<ta background=",
+      "<tc backgroun=",
+      "<tc backgroundl=",
+      "<tc backgrouno="
+    };
+    checkBadTags(badTags, "</table>");
+  }
+
+  private void singleTagShouldCrawl(String url, 
+				    String openTag, 
+				    String closeTag) {
+    singleTagCrawl(url, openTag, closeTag, true);
+  }
+
+  private void singleTagShouldNotCrawl(String url, 
+				       String openTag, 
+				       String closeTag) {
+    singleTagCrawl(url, openTag, closeTag, false);
+  }
+
+  private void singleTagCrawl(String url, 
+			      String openTag, 
+			      String closeTag,
+			      boolean shouldCache) {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
 
-    cus.addUrl(makeContent(url, openTag, closeTag), startUrl);
+    String content = makeContent(url, openTag, closeTag);
+    cus.addUrl(content, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
     GoslingCrawlerImpl.doCrawl(mau, spec);
     Set cachedUrls = cus.getCachedUrls();
-    Set expected = SetUtil.set(url, startUrl);
-    assertEquals(expected, cachedUrls);
+    if (shouldCache) {
+      Set expected = SetUtil.set(url, startUrl);
+      assertEquals("Miscrawled: "+content, expected, cachedUrls);
+    } else {
+      Set expected = SetUtil.set(startUrl);
+      assertEquals("Miscrawled: "+content, expected, cachedUrls);
+    }
   }
 
   private String makeContent(String url, String openTag, String closeTag) {
@@ -161,6 +283,76 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     sb.append("</body></html>");
     return sb.toString();
   }
+
+  public void testDoesNotCacheExistingFile() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(LINKLESS_PAGE, startUrl, true, true);
+
+    GoslingCrawlerImpl.doCrawl(mau, spec);
+    assertEquals(0, cus.getCachedUrls().size());
+  }
+
+  public void testDoesNotCacheFileWhichShouldNotBeCached() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(LINKLESS_PAGE, startUrl, false, false);
+
+    GoslingCrawlerImpl.doCrawl(mau, spec);
+    assertEquals(0, cus.getCachedUrls().size());
+  }
+
+
+  public void testParsesFileWithCharsetAfterContentType() {
+    String url = "http://www.example.com/link1.html";
+    String content = makeContent(url, "<a href=", "</a>");
+    Properties props = new Properties();
+    props.setProperty("content-type", "text/html; charset=US-ASCII");
+
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(content, startUrl, false, true, props);
+    cus.addUrl(LINKLESS_PAGE, url);
+
+    GoslingCrawlerImpl.doCrawl(mau, spec);
+
+    Set expected = SetUtil.set(startUrl, url);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testParsesFileWithCapitilizedContentType() {
+    String url = "http://www.example.com/link1.html";
+    String content = makeContent(url, "<a href=", "</a>");
+    Properties props = new Properties();
+    props.setProperty("content-type", "TEXT/HTML");
+
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(content, startUrl, false, true, props);
+    cus.addUrl(LINKLESS_PAGE, url);
+
+    GoslingCrawlerImpl.doCrawl(mau, spec);
+
+    Set expected = SetUtil.set(startUrl, url);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testDoesNotParseBadContentType() {
+    String url = "http://www.example.com/link1.html";
+    String content = makeContent(url, "<a href=", "</a>");
+
+    Properties props = new Properties();
+    props.setProperty("content-type", "text/xml");
+
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    cus.addUrl(content, startUrl, false, true, props);
+    cus.addUrl(LINKLESS_PAGE, url);
+
+    GoslingCrawlerImpl.doCrawl(mau, spec);
+
+    Set expected = SetUtil.set(startUrl);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
 
   public void testSkipsComments() {
     String url= "http://www.example.com/link3.html";
