@@ -1,5 +1,5 @@
 /*
- * $Id: TestBinarySemaphore.java,v 1.2 2002-09-23 02:58:36 tal Exp $
+ * $Id: TestBinarySemaphore.java,v 1.3 2002-11-12 18:06:02 tal Exp $
  */
 
 /*
@@ -43,14 +43,14 @@ import org.lockss.test.*;
 /**
  * This is the test class for org.lockss.util.TestBinarySemaphore
  *
- * @author  Thomas S. Robertson
- * @version 0.0
  */
 
 public class TestBinarySemaphore extends TestCase{
   public static Class testedClasses[] = {
     org.lockss.util.BinarySemaphore.class
   };
+
+  private static final int FAIL_TIMEOUT = 2000;
 
   public TestBinarySemaphore(String msg) {
     super(msg);
@@ -101,11 +101,13 @@ public class TestBinarySemaphore extends TestCase{
     BinarySemaphore sem = new BinarySemaphore();
     DoLater.Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       if (sem.take(new ProbabilisticTimer(0))) {
 	fail("take(0) of empty semaphore returned true");
       }
       intr.cancel();
+    } catch (InterruptedException e) {
+      // expected
     } finally {
       if (intr.did()) {
 	fail("take(0) of empty didn't return");
@@ -118,11 +120,12 @@ public class TestBinarySemaphore extends TestCase{
     sem.give();
     DoLater.Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       if (!sem.take(new ProbabilisticTimer(0))) {
 	fail("take(0) of full semaphore returned false");
       }
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("take(0) of full didn't return");
@@ -134,11 +137,12 @@ public class TestBinarySemaphore extends TestCase{
     BinarySemaphore sem = new BinarySemaphore();
     DoLater.Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       if (sem.take(null)) {
 	fail("take(0) of empty semaphore returned true");
       }
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("take(0) of empty didn't return");
@@ -151,11 +155,12 @@ public class TestBinarySemaphore extends TestCase{
     sem.give();
     DoLater.Interrupter intr = null;
     try {
-      intr = DoLater.interruptMeIn(1000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       if (!sem.take(null)) {
 	fail("take(0) of full semaphore returned false");
       }
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("take(0) of full didn't return");
@@ -166,24 +171,64 @@ public class TestBinarySemaphore extends TestCase{
   public void testTimedEmpty() {
     BinarySemaphore sem = new BinarySemaphore();
     DoLater.Interrupter intr = null;
+    ProbabilisticTimer t = new ProbabilisticTimer(500, 50);
+    Date start = new Date();
     try {
-      Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
-      if (sem.take(new ProbabilisticTimer(500, 50))) {
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
+      if (sem.take(t)) {
 	fail("take(500, 50) of empty semaphore returned true");
       }
       long delay = TimerUtil.timeSince(start);
+      System.out.println("take returned in " + delay);
       if (delay < 200) {
 	fail("take(500, 50) of empty returned early in " + delay);
       }
       if (delay > 900) {
+	System.out.println("pre fail 1");
 	fail("take(500, 50) of empty returned late in " + delay);
+	System.out.println("post fail 1");
       }
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
-	fail("take(500, 50) of empty failed to timeout");
+	System.out.println("pre fail 2");
+	fail("take(" + t + ") of empty failed to timeout in " +
+	     TimerUtil.timeSince(start));
+	System.out.println("post fail 2");
       }
+    }
+  }
+
+  public void testTimedEmpty2() {
+    BinarySemaphore sem = new BinarySemaphore();
+    DoLater.Interrupter intr = null;
+    ProbabilisticTimer t = new ProbabilisticTimer(500, 50);
+    intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
+    Date start = new Date();
+    try {
+    if (sem.take(t)) {
+      fail("take(500, 50) of empty semaphore returned true");
+    }
+    long delay = TimerUtil.timeSince(start);
+    System.out.println("take returned in " + delay);
+    if (intr.did()) {
+      System.out.println("pre fail intr");
+      fail("take(" + t + ") of empty failed to timeout in " +
+	   TimerUtil.timeSince(start));
+      System.out.println("post fail intr");
+    }
+    if (delay < 200) {
+      fail("take(500, 50) of empty returned early in " + delay);
+    }
+    if (delay > 900) {
+      System.out.println("pre fail 1");
+      fail("take(500, 50) of empty returned late in " + delay);
+      System.out.println("post fail 1");
+    }
+    } catch (InterruptedException e) {
+    } finally {
+      intr.cancel();
     }
   }
 
@@ -193,7 +238,7 @@ public class TestBinarySemaphore extends TestCase{
     Expirer expr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(4000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       ProbabilisticTimer t = new ProbabilisticTimer(2000, 50);
       expr = expireIn(500, t);
       if (sem.take(t)) {
@@ -208,6 +253,7 @@ public class TestBinarySemaphore extends TestCase{
       }
       expr.cancel();
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("take(2000, 50) of empty failed to timeout");
@@ -221,7 +267,7 @@ public class TestBinarySemaphore extends TestCase{
     DoLater.Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       if (!sem.take(new ProbabilisticTimer(1000, 50))) {
 	fail("take(1000, 50) of full returned false");
       }
@@ -230,6 +276,7 @@ public class TestBinarySemaphore extends TestCase{
 	fail("take(1000, 50) of full timed out in " + delay);
       }
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("take(1000, 50) of full failed to return");
@@ -242,7 +289,7 @@ public class TestBinarySemaphore extends TestCase{
     DoLater.Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = DoLater.interruptMeIn(2000);
+      intr = DoLater.interruptMeIn(FAIL_TIMEOUT);
       giveIn(500, sem);
       if (!sem.take(new ProbabilisticTimer(1000, 50))) {
 	fail("take(1000, 50) of semaphore given() after 500 returned false");
@@ -255,6 +302,7 @@ public class TestBinarySemaphore extends TestCase{
 	fail("take(1000, 50), given in 500, timed out in " + delay );
       }
       intr.cancel();
+    } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
 	fail("take(1000, 50), given in 500, neither returned nor timed out");
