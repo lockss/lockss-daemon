@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.51 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: PluginManager.java,v 1.52 2003-10-07 22:07:39 eaalto Exp $
  */
 
 /*
@@ -186,8 +186,8 @@ public class PluginManager extends BaseLockssManager {
 
   static final String PARAM_WRAPPER = "reserved.wrapper";
 
-  /** 
-   * Returns true if the reserved.wrapper key is true 
+  /**
+   * Returns true if the reserved.wrapper key is true
    * @param auConf the Configuration
    * @return true if wrapped
    */
@@ -617,7 +617,8 @@ public class PluginManager extends BaseLockssManager {
   private String builtinPluginNames[] = {
     "org.lockss.plugin.highwire.HighWirePlugin",
     "org.lockss.plugin.projmuse.ProjectMusePlugin",
-    "org.lockss.plugin.acs.AcsPlugin"
+    "org.lockss.plugin.acs.AcsPlugin",
+    "org.lockss.plugin.absinthe.AbsinthePlugin"
 //     "org.lockss.plugin.simulated.SimulatedPlugin",
   };
 
