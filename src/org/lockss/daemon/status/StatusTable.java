@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.15 2003-03-20 02:29:18 troberts Exp $
+ * $Id: StatusTable.java,v 1.16 2003-03-21 01:11:24 troberts Exp $
  */
 
 /*
@@ -60,16 +60,15 @@ public class StatusTable {
    * @param rows List of {@link java.util.Map} objects, representing rows in 
    * this table.  Not assumed to be in any specific order
    */
-  protected StatusTable(String name, String key, String title,
-			List columnDescriptors, 
-			List defaultSortRules, List rows) {
-    this.name = name;
+  public StatusTable(String key, String title,
+		     List columnDescriptors, 
+		     List defaultSortRules, List rows, List summaryInfo) {
     this.columnDescriptors = columnDescriptors;
     this.rows = rows;
-    this.defaultSortRules = 
-      defaultSortRules == null ? makeDefaultSortRules() : defaultSortRules;
+    this.defaultSortRules = defaultSortRules; 
     this.key = key;
     this.title = title;
+    this.summaryInfo = summaryInfo;
   }
 
   private List makeDefaultSortRules() {
@@ -84,6 +83,10 @@ public class StatusTable {
    */
   public String getName() {
     return name;
+  }
+
+  protected void setName(String name) {
+    this.name = name;
   }
 
   /**
@@ -111,13 +114,6 @@ public class StatusTable {
   }
 
   /**
-   * Set the {@link SummaryInfo}s for this table
-   */
-  protected void setSummaryInfo(List summaryInfo) {
-    this.summaryInfo = summaryInfo;
-  }
-
-  /**
    * Gets a list of {@link ColumnDescriptor}s representing the 
    * columns in this table in their preferred display order.
    * @returns list of {@link ColumnDescriptor}s the columns in 
@@ -134,6 +130,9 @@ public class StatusTable {
    * in their default sort order 
    */
   public List getSortedRows() {
+    if (defaultSortRules == null) {
+      defaultSortRules = makeDefaultSortRules();
+    }      
     return getSortedRows(defaultSortRules);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.13 2003-03-20 02:29:18 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.14 2003-03-21 01:11:24 troberts Exp $
  */
 
 /*
@@ -67,12 +67,14 @@ public class StatusServiceImpl
       throw new StatusService.NoSuchTableException("Table not found: "
 						   +tableName+" "+key);
     } 
-    StatusTable table = 
-      new StatusTable(tableName, key, statusAccessor.getTitle(key),
-		      statusAccessor.getColumnDescriptors(key),
-		      statusAccessor.getDefaultSortRules(key),
-		      statusAccessor.getRows(key));
-    table.setSummaryInfo(statusAccessor.getSummaryInfo(key));
+//     StatusTable table = 
+//       new StatusTable(tableName, key, statusAccessor.getTitle(key),
+// 		      statusAccessor.getColumnDescriptors(key),
+// 		      statusAccessor.getDefaultSortRules(key),
+// 		      statusAccessor.getRows(key));
+//     table.setSummaryInfo(statusAccessor.getSummaryInfo(key));
+    StatusTable table = statusAccessor.getStatusTable(key);
+    table.setName(tableName);
     return table;
   }
 
@@ -188,17 +190,7 @@ public class StatusServiceImpl
       sortRules = ListUtil.list(sortRule);
     }
 
-    /**
-     * Ignores key
-     */
-    public List getColumnDescriptors(String key) {
-      return columns;
-    }
-
-    /**
-     * Ignores key
-     */
-    public List getRows(String key) {
+    private List getRows(String key) {
       synchronized(statusAccessors) {
 	Set tables = statusAccessors.keySet();
 	Iterator it = tables.iterator();
@@ -212,7 +204,7 @@ public class StatusServiceImpl
 	    Map row = new HashMap(1); //will only have the one key-value pair
 	    String title = null;
 	    try {
-	      title = statusAccessor.getTitle(null);
+	      title = statusAccessor.getStatusTable(null).getTitle();
 	    } catch (NoSuchTableException e) {
 	      // no action, title is null here
 	    }
@@ -230,28 +222,22 @@ public class StatusServiceImpl
     }
 
     /**
-     * Ignores key
+     * Returns false
+     * @return false
      */
-    public List getDefaultSortRules(String key) {
-      return sortRules;
-    }
-
-    /**
-     * Ignores key
-     */
-    public String getTitle(String key) {
-      return ALL_TABLE_TITLE;
-    }
-
-    /**
-     * Always returns null
-     */
-    public List getSummaryInfo(String key) {
-      return null;
-    }
-
     public boolean requiresKey() {
       return false;
+    }
+
+    /**
+     * Gets a {@link StatusTable} of all the tables that don't require a key
+     *
+     * @param key ignored
+     */
+    public StatusTable getStatusTable(String key) {
+      StatusTable table = new StatusTable(key, ALL_TABLE_TITLE, columns,
+					  sortRules, getRows(key), null);
+      return table;
     }
   }
 }

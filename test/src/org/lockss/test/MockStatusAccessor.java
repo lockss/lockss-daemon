@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.8 2003-03-20 02:29:18 troberts Exp $
+ * $Id: MockStatusAccessor.java,v 1.9 2003-03-21 01:11:25 troberts Exp $
  */
 
 /*
@@ -53,19 +53,15 @@ public class MockStatusAccessor implements StatusAccessor {
     this.columnDescriptors.put(key, columnDescriptors);
   }
 
-  public List getRows(String key) throws StatusService.NoSuchTableException {
-    List list = (List)rows.get(key);
-    if (list == null) {
-      throw new StatusService.NoSuchTableException("Bad key: "+key);
-    }
-    return list;
+  private List getRows(String key) throws StatusService.NoSuchTableException {
+    return (List)rows.get(key);
   }
 
   public void setRows(List rows, String key) {
     this.rows.put(key, rows);
   }
 
-  public List getDefaultSortRules(String key) {
+  private List getDefaultSortRules(String key) {
     List list = (List)defaultSortRules.get(key);
     return list;
   }
@@ -86,15 +82,24 @@ public class MockStatusAccessor implements StatusAccessor {
     titles.put(key, tableTitle);
   }
 
-  public String getTitle(String key) {
+  private String getTitle(String key) {
     return (String)titles.get(key);
   }
 
-  public List getSummaryInfo(String key) {
+  private List getSummaryInfo(String key) {
     return (List)summaryInfo.get(key);
   }
 
   public void setSummaryInfo(String key, List summaryInfo) {
     this.summaryInfo.put(key, summaryInfo);
+  }
+
+  public StatusTable getStatusTable(String key) 
+  throws StatusService.NoSuchTableException {
+    StatusTable table = new StatusTable(key, getTitle(key),
+					getColumnDescriptors(key),
+					getDefaultSortRules(key),
+					getRows(key), getSummaryInfo(key));
+    return table;
   }
 }

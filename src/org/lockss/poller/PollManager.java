@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.52 2003-03-20 02:29:18 troberts Exp $
+* $Id: PollManager.java,v 1.53 2003-03-21 01:11:24 troberts Exp $
  */
 
 /*
@@ -779,19 +779,22 @@ public class PollManager  implements LockssManager {
       return rulesL;
     }
 
+    public StatusTable getStatusTable(String key) 
+	throws StatusService.NoSuchTableException {
+      checkKey(key);
+      StatusTable table = new StatusTable(key, getTitle(key),
+					  getColumnDescriptors(key),
+					  getDefaultSortRules(key),
+					  getRows(key), null);
+      return table;
+    }
+
     public boolean requiresKey() {
       return false;
     }
 
     public String getTitle(String key) {
       return "Poll Manager Table";
-    }
-
-    /**
-     * Returns null
-     */
-    public List getSummaryInfo(String key) {
-      return null;
     }
 
     // utility methods for making a Reference
@@ -911,7 +914,8 @@ public class PollManager  implements LockssManager {
     private static String[] preferredOrder =  { "Agree" };
 
 
-    public List getColumnDescriptors(String key) throws StatusService.NoSuchTableException {
+    public List getColumnDescriptors(String key) 
+	throws StatusService.NoSuchTableException {
       ArrayList descrsL= new ArrayList(columnDescriptors.length);
       for(int i=0; i< columnDescriptors.length; i++) {
         descrsL.add(new ColumnDescriptor(columnDescriptors[i],
@@ -952,13 +956,6 @@ public class PollManager  implements LockssManager {
       return "Table for running poll " + key;
     }
 
-    /**
-     * Returns null
-     */
-    public List getSummaryInfo(String key) {
-      return null;
-    }
-
     // utility methods for making a Reference
 
     public static StatusTable.Reference makePollRef(Object value, String key) {
@@ -992,6 +989,15 @@ public class PollManager  implements LockssManager {
 
       return rowMap;
     }
+    public StatusTable getStatusTable(String key) 
+	throws StatusService.NoSuchTableException {
+      StatusTable table = new StatusTable(key, getTitle(key),
+					  getColumnDescriptors(key),
+					  getDefaultSortRules(key),
+					  getRows(key), null);
+      return table;
+    }
+
   }
 
   private static class ManagerStatusAURef implements ObjectReferenceAccessor {

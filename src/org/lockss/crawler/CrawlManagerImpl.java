@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.11 2003-03-20 21:48:29 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.12 2003-03-21 01:11:24 troberts Exp $
  */
 
 /*
@@ -297,11 +297,7 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     
     
     
-    public List getColumnDescriptors(String key) {
-      return colDescs;
-    }
-    
-    public List getRows(String key) {
+    private List getRows(String key) {
       List rows = new ArrayList();
       if (key == null) {
 	return getAllNewContentCrawls();
@@ -342,21 +338,16 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       return row;
     }
 
-    public List getDefaultSortRules(String key) {
-      return new ArrayList();
-    }
-
-    public String getTitle(String key) {
-      return "Crawl Status";
-    }
-
     public boolean requiresKey() {
       return false;
     }
 
-    public List getSummaryInfo(String key) {
-      return null;
+    public StatusTable getStatusTable(String key) 
+	throws StatusService.NoSuchTableException {
+      StatusTable table = new StatusTable(key, "Crawl Status",
+					  colDescs, null,
+					  getRows(key), null);
+      return table;
     }
   }
-
 }

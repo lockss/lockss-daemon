@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.9 2003-03-20 02:29:18 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.10 2003-03-21 01:11:24 troberts Exp $
  */
 
 /*
@@ -36,69 +36,21 @@ import java.util.*;
 /**
  * Objects wishing to provide status information to {@link StatusService} must
  * create an object which implements this.
- *
- * Used by {@link StatusService} to generate {@link StatusTable}s.  
- * All of the lists returned may be modified by {@link StatusService}, so 
- * they should not mirror any internal data structures.
  */
 
 public interface StatusAccessor {
   /**
-   * Get the list of {@link ColumnDescriptor}s for this key
-   * @param key object (such as AUID) designating which table to return 
-   * @return List of {@link ColumnDescriptor}s for the columns 
-   * this StatusAccessor supplies.
-   * @throws StatusService.NoSuchTableException if we get a key that we don't 
-   * recognize or have a table for
+   * Returns a {@link StatusTable} for the given key
+   * @param key String which further identifies the table
+   * @return {@link StatusTable} for the key
+   * @throws StatusService.NoSuchTableException if we don't have a table for 
+   * the key
    */
-  public List getColumnDescriptors(String key) 
+  public StatusTable getStatusTable(String key) 
       throws StatusService.NoSuchTableException;
-
-  /**
-   * Gets the status rows for a specified key
-   * @param key string which designates a set of status rows to return
-   * @return List of rows (which are represented by Maps) for the specified key
-   * @throws StatusService.NoSuchTableException if we get a key that we don't 
-   * recognize or have a table for
-   */
-  public List getRows(String key) throws StatusService.NoSuchTableException;
-
-  /**
-   * Gives list of the default {@link StatusTable.SortRule}s for this status 
-   * info for a given key
-   * @param key key identifying the table for which to get the sort rules
-   * @return list of {@link StatusTable.SortRule}s representing the default
-   * sort rules
-   * @throws StatusService.NoSuchTableException if we get a key that we don't 
-   * recognize or have a table for
-   */
-  public List getDefaultSortRules(String key) 
-      throws StatusService.NoSuchTableException;
-
-
-  /**
-   * Returns the title for the table specified by the key
-   * @param key optional key to identify the desired table
-   * @return String representation of the table title
-   * @throws StatusService.NoSuchTableException if we get a key that we don't 
-   * recognize or have a table for
-   */
-  public String getTitle(String key) throws StatusService.NoSuchTableException;
 
   /**
    * @returns true if a key is required
    */
   public boolean requiresKey();
-
-  /**
-   * Returns a list of {@link StatusTable.SummaryInfo} objects for the given 
-   * key
-   * @param key optional key to identify the desired table
-   * @return list of {@link StatusTable.SummaryInfo} objects
-   * @throws StatusService.NoSuchTableException if we get a key that we don't 
-   * recognize or have a table for
-   */
-  public List getSummaryInfo(String key) 
-      throws StatusService.NoSuchTableException;
-
 }

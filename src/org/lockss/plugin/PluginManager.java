@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.21 2003-03-20 02:29:18 troberts Exp $
+ * $Id: PluginManager.java,v 1.22 2003-03-21 01:11:24 troberts Exp $
  */
 
 /*
@@ -345,12 +345,16 @@ public class PluginManager implements LockssManager {
     public String getTitle(String key) {
       return "Archival Units";
     }
-    /**
-     * Returns null
-     */
-    public List getSummaryInfo(String key) {
-      return null;
+
+    public StatusTable getStatusTable(String key) {
+      StatusTable table = new StatusTable(key, getTitle(key),
+					  getColumnDescriptors(key),
+					  getDefaultSortRules(key),
+					  getRows(key), null);
+      return table;
     }
+
+
   }
 //   protected void initPlugins() {
 //     /* grab our 3rd party plugins and load them using security manager */
