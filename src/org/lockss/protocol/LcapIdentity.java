@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.5 2002-11-21 23:52:16 troberts Exp $
+ * $Id: LcapIdentity.java,v 1.6 2002-11-22 02:58:17 claire Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class LcapIdentity {
   protected static final int VOTE_NOT_VERIFIED = -30;
   protected static final int VOTE_VERIFIED = 40;
   protected static final int VOTE_DISOWNED = -400;
-  
+
   long m_lastActiveTime;
   long m_lastOpTime;
   long m_incrPackets;   // Total packets arrived this interval
@@ -196,7 +196,7 @@ public class LcapIdentity {
    */
   public static LcapIdentity getLocalIdentity() {
     if(theLocalIdentity == null)  {
-      String identStr = 
+      String identStr =
 	Configuration.getParam(Configuration.PREFIX+"localIPAddress");
       try {
 	InetAddress addr = InetAddress.getByName(identStr);
@@ -223,6 +223,14 @@ public class LcapIdentity {
    */
   public int getReputation() {
     return m_reputation;
+  }
+
+  /**
+   * return the max value of an Identity's reputation
+   * @return the int value of max reputation
+   */
+  public int getMaxReputaion() {
+    return REPUTATION_NUMERATOR;
   }
 
   /**

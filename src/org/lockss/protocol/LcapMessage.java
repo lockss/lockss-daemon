@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.4 2002-11-22 02:13:32 troberts Exp $
+ * $Id: LcapMessage.java,v 1.5 2002-11-22 02:58:17 claire Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import java.io.DataInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.DataOutputStream;
 import java.io.ByteArrayOutputStream;
+import org.mortbay.util.B64Code;
 
 
 /**
@@ -207,7 +208,7 @@ public class LcapMessage {
 					   byte[] verifier,
 					   int opcode,
 					   long timeRemaining,
-					   LcapIdentity localID) 
+					   LcapIdentity localID)
       throws IOException {
 
     LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,group,ttl,
@@ -238,9 +239,9 @@ public class LcapMessage {
 					 byte[] verifier,
 					 int opcode,
 					 long timeRemaining,
-					 LcapIdentity localID) 
+					 LcapIdentity localID)
       throws IOException {
-    LcapMessage msg = new LcapMessage(trigger, localID, verifier, 
+    LcapMessage msg = new LcapMessage(trigger, localID, verifier,
 				      hashedContent, opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
@@ -283,7 +284,7 @@ public class LcapMessage {
     int    port;
 
     // the mutable stuff
-    DataInputStream dis = 
+    DataInputStream dis =
       new DataInputStream(new ByteArrayInputStream(encodedBytes));
 
     // read in the header
@@ -501,11 +502,11 @@ public class LcapMessage {
     sb.append(" ");
     sb.append(m_opcode);
     sb.append(" ");
-    sb.append(m_challenge);
+    sb.append(String.valueOf(B64Code.encode(m_challenge)));
     sb.append(" ");
-    sb.append(m_verifier);
+    sb.append(String.valueOf(B64Code.encode(m_verifier)));
     sb.append(" ");
-    sb.append(m_hashed);
+    sb.append(String.valueOf(B64Code.encode(m_hashed)));
     sb.append("]");
     return sb.toString();
   }
