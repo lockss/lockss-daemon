@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.46.2.1 2004-03-24 23:55:53 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.46.2.2 2004-04-02 23:25:00 eaalto Exp $
  */
 
 /*
@@ -124,7 +124,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       String treeSize = nodeProps.getProperty(TREE_SIZE_PROPERTY);
       if (treeSize != null) {
         // return if found
-        return Long.parseLong(treeSize);
+	  //XXX temporarily removed since it's not fully functional
+	  //        return Long.parseLong(treeSize);
       }
     }
 
@@ -248,7 +249,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
     String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
     if (childCount!=null) {
       // return if found
-      return Integer.parseInt(childCount);
+	//XXX temporarily removed since it's not fully functional
+	//return Integer.parseInt(childCount);
     }
 
     int count = getNodeList(null, false).size();
