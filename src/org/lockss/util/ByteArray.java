@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.1 2002-12-13 02:18:14 tal Exp $
+ * $Id: ByteArray.java,v 1.2 2003-02-26 18:50:43 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.math.BigInteger;
 
 /**
  * Byte array utilities
@@ -90,5 +91,17 @@ public class ByteArray {
       buf[bufx++] = HEX_CHARS[tmp & 0x0F];
     }
     return new String(buf);
+  }
+
+  public static byte[] encodeLong(long n) {
+    BigInteger bigI = new BigInteger(Long.toString(n));
+    // note that this byte array has a sign bit, which should be removed
+    // for optimization
+    return bigI.toByteArray();
+  }
+
+  public static long decodeLong(byte[] b) {
+    BigInteger bigI = new BigInteger(b);
+    return bigI.longValue();
   }
 }
