@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.2 2002-11-20 23:37:03 tal Exp $
+ * $Id: TimeBase.java,v 1.3 2002-12-30 20:42:25 tal Exp $
  */
 
 /*
@@ -45,8 +45,8 @@ import java.util.*;
  * quickly and predictably.
  */
 public class TimeBase {
-  private static boolean isSimulated = false;
-  private static long simulatedTime;
+  private static volatile boolean isSimulated = false;
+  private static volatile long simulatedTime;
 
   /** No instances */
   private TimeBase() {
