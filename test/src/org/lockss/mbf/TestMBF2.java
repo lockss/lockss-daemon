@@ -1,5 +1,5 @@
 /*
- * $Id: TestMBF2.java,v 1.3 2003-08-07 21:14:27 dshr Exp $
+ * $Id: TestMBF2.java,v 1.4 2003-08-08 19:26:09 dshr Exp $
  */
 
 /*
@@ -74,8 +74,8 @@ public class TestMBF2 extends LockssTestCase {
     super.tearDown();
   }
 
+  // XXX test that calling computeSteps() when finished does nothing.
   // XXX test behavior of empty proof
-  // XXX test each exception
   // XXX separate timing tests etc into Func
 
   /**
@@ -316,14 +316,23 @@ public class TestMBF2 extends LockssTestCase {
     byte[] nonce = new byte[64];
     rand.nextBytes(nonce);
     int[] proof = null;
-    for (int i = 0; i < 10 && proof == null; i++)
+    int numNulls = 0;
+    for (int i = 0; i < 100 && proof == null; i++) {
       proof = generate(nonce, e, l, 8);
+      numNulls++;
+    }
     assertTrue(proof != null);
     assertTrue(proof.length > 0);
     boolean ret = verify(nonce, e, l, proof, 8);
     assertTrue(ret);
-    log.debug("onePair(" + e + "," + l + ") took " +
-	     (System.currentTimeMillis() - startTime) + " msec");
+    if (numNulls > 2) {
+      log.info("onePair(" + e + "," + l + ") took " +
+	     (System.currentTimeMillis() - startTime) + " msec " +
+	       numNulls + " retries");
+    } else {
+      log.debug("onePair(" + e + "," + l + ") took " +
+		(System.currentTimeMillis() - startTime) + " msec");
+    }
   }
 
 
