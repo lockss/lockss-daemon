@@ -33,6 +33,8 @@ org.lockss.plugin.registry=\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
     edu.princeton.plugin.bmcr.BMCRPlugin;\
     edu.fcla.plugin.arkivoc.ArkivocPlugin;\
+    edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin;\
+    edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
 # List of plugins that should be loaded as ConfigurablePlugins with an xml
