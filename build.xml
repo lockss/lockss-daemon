@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.65 2003-11-04 22:21:54 tlipkis Exp $
+ $Id: build.xml,v 1.66 2003-11-11 20:23:40 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -982,37 +982,36 @@ Test results in ${test.results}
   </target>
 -->
   <!-- ==================================================================== -->
-<!--
   <target name="test-class"
-   depends="prepare.test,check.class.arg,check.junit,jar-ant,jar-tests"
+   depends="prepare.run.test,check.class.arg,check.junit,jar-tests,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
-    <echo>
-Running tests for class ${class}
-Test results in ${test.results}
-    </echo>
-    <delete file="${test.results}/*" quiet="true" />
-    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+    <echo>Running tests for class ${class}</echo>
+    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
         showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
-          <include name="**/Test*.java" />
+          <include name="**/*.java" />
+          <exclude name="${exclude}" />
 	  <custom classname="org.lockss.ant.ClassTestSelector">
 	    <classpath> 
-	      <pathelement path="${lockss.ant.jar}" />
 	      <path refid="test.run.classpath" />
 	    </classpath>        
 	    <param name="class" value="${class}" />
 	  </custom>
         </fileset>
       </batchtest>
-      <formatter type="plain" usefile="true" />
+      <formatter type="plain" usefile="false" />
       <classpath> 
          <path refid="test.run.classpath" />
       </classpath>        
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-    </junit>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
   </target>
--->
   <!-- ==================================================================== -->
   <target name="test-one"
    depends="prepare.run.test,check.class.arg,check.junit,jar-tests"
@@ -1242,21 +1241,25 @@ Test results in ${tools.test.results}
   <target name="jcover"
    depends="prepare.run.test,check.junit,jar-tests"
    description="Run a set of test classes through jcoverage, named by the 'include' property." >
+    <property name="jcoverage.ser" value="jcoverage.ser" />
+    <property name="tests" value="${include}Test*" />
     <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
+    <delete file="${jcoverage.ser}" quiet="true" />
+    <delete dir="${instrumented}" quiet="true" />
     <instrument todir="${instrumented}">
       <classpath refid="jcover.run.classpath" />
       <fileset dir="${classes}">
          <include name="${include}"/>
+         <exclude name="${exclude}"/>
       </fileset>
     </instrument>
-    <property name="jcoverage.ser" value="jcoverage.ser" />
-    <property name="tests" value="${include}Test*" />
     <junit1 fork="no" printsummary="yes"
          haltonfailure="${halt}" failureproperty="failed"
          filtertrace="${filtertrace}" showoutput="${showoutput}">
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${tests}"/>
+          <exclude name="${exclude}"/>
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
@@ -1272,11 +1275,11 @@ Test results in ${tools.test.results}
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
 
-    <report destdir="${test.results}" srcdir="${src}">
+    <report format="html" destdir="${test.results}" srcdir="${src}">
        <classpath refid="jcover.run.classpath" />
        <instrumentation file="${jcoverage.ser}"/>
     </report>
-    <delete file="${jcoverage.ser}" quiet="true" />
+<!--     <delete file="${jcoverage.ser}" quiet="true" /> -->
   </target>
 
 </project>
