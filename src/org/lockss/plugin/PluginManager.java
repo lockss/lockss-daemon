@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.125 2005-01-10 06:23:22 smorabito Exp $
+ * $Id: PluginManager.java,v 1.125.2.1 2005-01-19 01:37:01 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,7 @@ public class PluginManager
 
   static final String TITLE_SET_CLASS_ALL_TITLES = "AllTitles";
   static final String TITLE_SET_CLASS_ACTIVE_AUS = "ActiveAus";
+  static final String TITLE_SET_CLASS_INACTIVE_AUS = "InactiveAus";
 
 
   // prefix for non-plugin AU params
@@ -327,15 +328,22 @@ public class PluginManager
   private TitleSet createTitleSet(Configuration config) {
     String cls = config.get(TITLE_SET_PARAM_CLASS);
     String name = config.get(TITLE_SET_PARAM_NAME);
-    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_XPATH)) {
-      return new TitleSetXpath(getDaemon(), name,
-			       config.get(TITLE_SET_XPATH_XPATH));
-    }
-    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_TITLES)) {
-      return new TitleSetAllTitles(getDaemon());
-    }
-    if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ACTIVE_AUS)) {
-      return new TitleSetActiveAus(getDaemon());
+    try {
+      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_XPATH)) {
+	return new TitleSetXpath(getDaemon(), name,
+				 config.get(TITLE_SET_XPATH_XPATH));
+      }
+      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ALL_TITLES)) {
+	return new TitleSetAllTitles(getDaemon());
+      }
+      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_ACTIVE_AUS)) {
+	return new TitleSetActiveAus(getDaemon());
+      }
+      if (cls.equalsIgnoreCase(TITLE_SET_CLASS_INACTIVE_AUS)) {
+	return new TitleSetInactiveAus(getDaemon());
+      }
+    } catch (Exception e) {
+      log.error("Error creating TitleSet", e);
     }
     return null;
   }

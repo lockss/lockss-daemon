@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetAllTitles.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSetAllTitles.java,v 1.1.2.1 2005-01-19 01:37:02 tlipkis Exp $
  */
 
 /*
@@ -51,12 +51,12 @@ public class TitleSetAllTitles extends BaseTitleSet {
    * @param allTitles collection of titles to be filtered
    * @return a collection of TitleConfig
    */
-  Collection getTitles(Collection allTitles) {
+  Collection filterTitles(Collection allTitles) {
     return allTitles;
   }
 
-  public boolean isAddOnly() {
-    return true;
+  protected int getActionables() {
+    return SET_ADDABLE;
   }
 
   protected int getMajorOrder() {
@@ -72,6 +72,6 @@ public class TitleSetAllTitles extends BaseTitleSet {
   }
 
   public String toString() {
-    return "[AllTitles]";
+    return "[TS.AllTitles]";
   }
 }

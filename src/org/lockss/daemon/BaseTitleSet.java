@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.1.2.1 2005-01-19 01:37:03 tlipkis Exp $
  */
 
 /*
@@ -45,34 +45,35 @@ public abstract class BaseTitleSet implements TitleSet {
   protected LockssDaemon daemon;
   protected String name;
 
-  public String getName() {
-    return name;
-  }
-  
   public BaseTitleSet(LockssDaemon daemon, String name) {
     this.daemon = daemon;
     this.name = name;
   }
 
+  /** Return the human-readable name of the title set.
+   * @return the name */
+  public String getName() {
+    return name;
+  }
+  
   /** Return the titles in the set.
    * @return a collection of TitleConfig */
   public Collection getTitles() {
-    return getTitles(daemon.getPluginManager().findAllTitleConfigs());
+    return filterTitles(daemon.getPluginManager().findAllTitleConfigs());
   }
 
   /** Filter a collection of titles by the xpath predicate
    * @param allTitles collection of titles to be filtered
    * @return a collection of TitleConfig
    */
-  abstract Collection getTitles(Collection allTitles);
+  abstract Collection filterTitles(Collection allTitles);
 
-  public boolean isDelOnly() {
-    return false;
+  /** Match action with actionable set from implementation */
+  public final boolean isSetActionable(int action) {
+    return (action & getActionables()) != 0;
   }
 
-  public boolean isAddOnly() {
-    return false;
-  }
+  abstract protected int getActionables();
 
   /** Allow different implementations to specify their major sort order
    * relative to other implementations. */

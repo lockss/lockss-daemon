@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSet.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSet.java,v 1.1.2.1 2005-01-19 01:37:03 tlipkis Exp $
  */
 
 /*
@@ -35,17 +35,18 @@ import java.util.*;
 
 /** A set of titles */
 public interface TitleSet extends Comparable {
+  public static final int SET_ADDABLE = 1;
+  public static final int SET_DELABLE = 2;
+  public static final int SET_REACTABLE = 4;
+
   /** Return the name of the set.
    * @return the set's name */
-   String getName();
+  String getName();
 
   /** Return the titles in the set.
    * @return a collection of TitleConfig */
   Collection getTitles();
 
-  /** return true iff set appropriate for delete operations only */
-  boolean isDelOnly();
-
-  /** return true iff set appropriate for add operations only */
-  boolean isAddOnly();
+  /** return true iff set appropriate for specified action */
+  boolean isSetActionable(int action);
 }

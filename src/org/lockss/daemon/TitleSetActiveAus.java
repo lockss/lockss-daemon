@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.1 2005-01-04 02:58:13 tlipkis Exp $
+ * $Id: TitleSetActiveAus.java,v 1.1.2.1 2005-01-19 01:37:03 tlipkis Exp $
  */
 
 /*
@@ -98,12 +98,12 @@ public class TitleSetActiveAus extends BaseTitleSet {
     return null;
   }
 
-  Collection getTitles(Collection allTitles) {
+  Collection filterTitles(Collection allTitles) {
     return allTitles;
   }
 
-  public boolean isDelOnly() {
-    return true;
+  protected int getActionables() {
+    return SET_DELABLE;
   }
 
   protected int getMajorOrder() {
@@ -119,6 +119,6 @@ public class TitleSetActiveAus extends BaseTitleSet {
   }
 
   public String toString() {
-    return "[AllTitles]";
+    return "[TS.ActiveAus]";
   }
 }
