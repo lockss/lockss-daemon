@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.4 2003-07-18 02:14:25 eaalto Exp $
+ * $Id: UrlCacher.java,v 1.5 2003-12-19 01:33:25 eaalto Exp $
  */
 
 /*
@@ -43,41 +43,58 @@ import org.lockss.daemon.*;
  * returning an object implementing the UrlCacher interface.
  */
 public interface UrlCacher {
-    /**
-     * Return the url being represented
-     * @return the {@link String} url being represented.
-     */
-    public String getUrl();
-    /**
-     * Return the {@link CachedUrlSet} to which this UrlCacher belongs.
-     * @return the parent set
-     */
-    public CachedUrlSet getCachedUrlSet();
-    /**
-     * Return <code>true</code> if the underlying url is one that
-     * the plug-in believes should be preserved.
-     * @return <code>true</code> if the underlying url is one that
-     *         the plug-in believes should be preserved.
-     */
-    public boolean shouldBeCached();
-    /**
-     * Return a {@link CachedUrl} for the content stored.  May be
-     * called only after the content is completely written.
-     * @return {@link CachedUrl} for the content stored.
-     */
-    public CachedUrl getCachedUrl();
+  /**
+   * Return the url being represented
+   * @return the {@link String} url being represented.
+   */
+  public String getUrl();
 
-    /**
-     * Copies the content and properties from the source into the cache.
-     * Only caches if the content has been modified.
-     * @throws java.io.IOException on many possible I/O problems.
-     */
-    public void cache() throws IOException;
+  /**
+   * Return the {@link CachedUrlSet} to which this UrlCacher belongs.
+   * @return the parent set
+   */
+  public CachedUrlSet getCachedUrlSet();
 
-    /**
-     * Copies the content and properties from the source into the cache.
-     * Always caches even if the content hasn't been modified.
-     * @throws java.io.IOException on many possible I/O problems.
-     */
-    public void forceCache() throws IOException;
+  /**
+   * Return <code>true</code> if the underlying url is one that
+   * the plug-in believes should be preserved.
+   * @return <code>true</code> if the underlying url is one that
+   *         the plug-in believes should be preserved.
+   */
+  public boolean shouldBeCached();
+
+  /**
+   * Return a {@link CachedUrl} for the content stored.  May be
+   * called only after the content is completely written.
+   * @return {@link CachedUrl} for the content stored.
+   */
+  public CachedUrl getCachedUrl();
+
+  /**
+   * Copies the content and properties from the source into the cache.
+   * Only caches if the content has been modified.
+   * @throws java.io.IOException on many possible I/O problems.
+   */
+  public void cache() throws IOException;
+
+  /**
+   * Copies the content and properties from the source into the cache.
+   * Always caches even if the content hasn't been modified.
+   * @throws java.io.IOException on many possible I/O problems.
+   */
+  public void forceCache() throws IOException;
+
+  /**
+   * Gets an InputStream for this URL.
+   * @return the InputStream
+   * @throws IOException
+   */
+  public InputStream getUncachedInputStream() throws IOException;
+
+  /**
+   * Gets the Properties for this URL, if any.
+   * @return the {@link Properties}
+   * @throws IOException
+   */
+  public Properties getUncachedProperties() throws IOException;
 }
