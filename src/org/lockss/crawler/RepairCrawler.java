@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.7 2004-02-23 09:12:07 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.8 2004-02-23 21:15:52 tlipkis Exp $
  */
 
 /*
@@ -103,7 +103,13 @@ public class RepairCrawler extends CrawlerImpl {
 	break;
       }
       if (spec.isIncluded(url)) {
-	if (!doCrawlLoop(url, cus)) {
+	boolean crawlRes = false;
+	try {
+	  crawlRes = doCrawlLoop(url, cus);
+	} catch (RuntimeException e) {
+	  logger.warning("Unexpected exception in crawl", e);
+	}
+	if (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == 0) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	  }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.4 2004-02-10 03:31:46 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.5 2004-02-23 21:15:51 tlipkis Exp $
  */
 
 /*
@@ -171,6 +171,18 @@ public class TestRepairCrawler extends LockssTestCase {
 
     Set cachedUrls = cus.getForceCachedUrls();
     assertSameElements(repairUrls, cachedUrls);
+  }
+
+  public void testPluginThrowsRuntimeException() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String repairUrl = "http://example.com/forcecache.html";
+    cus.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
+    List repairUrls = ListUtil.list(repairUrl);
+     crawlRule.addUrlToCrawl(repairUrl);
+    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+
+    assertFalse(crawler.doCrawl(Deadline.MAX));
   }
 
 //   public void testFetchFromOtherCache() throws UnknownHostException {

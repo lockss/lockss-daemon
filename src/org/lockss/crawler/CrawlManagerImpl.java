@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.64 2004-02-19 23:24:32 eaalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.65 2004-02-23 21:15:52 tlipkis Exp $
  */
 
 /*
@@ -290,7 +290,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       }
       crawlThread.start();
     } catch (RuntimeException re) {
-      logger.debug("Freeing crawl lock...");
+      logger.warning("Error starting crawl, freeing crawl lock", re);
       lock.expire();
       throw re;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.4 2004-02-23 09:12:07 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.5 2004-02-23 21:15:52 tlipkis Exp $
  */
 
 /*
@@ -130,7 +130,14 @@ public class NewContentCrawler extends CrawlerImpl {
         windowClosed = true;
         break;
       }
-      if (!doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus, false, false)) {
+      boolean crawlRes = false;
+      try {
+	crawlRes = doCrawlLoop(nextUrl, urlsToCrawl, parsedPages, cus,
+			       false, false);
+      } catch (RuntimeException e) {
+	logger.warning("Unexpected exception in crawl", e);
+      }
+      if (!crawlRes) {
 	if (crawlStatus.getCrawlError() == 0) {
 	  crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	}

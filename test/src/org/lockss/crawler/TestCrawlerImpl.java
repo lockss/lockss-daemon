@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.6 2004-02-03 03:12:32 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.7 2004-02-23 21:15:52 tlipkis Exp $
  */
 
 /*
@@ -227,6 +227,17 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
 
     assertTrue(crawler.doCrawl(Deadline.MAX));
+  }
+
+  public void testPluginThrowsRuntimeException() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    cus.addUrl(url1, new ExpectedRuntimeException("Test exception"), 0);
+    crawlRule.addUrlToCrawl(url1);
+
+    assertFalse(crawler.doCrawl(Deadline.MAX));
   }
 
   public void testGetStatusCrawlNotStarted() {
