@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.11 2003-12-23 00:30:18 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.12 2004-05-28 04:57:30 smorabito Exp $
  */
 
 /*
@@ -61,9 +61,19 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return props;
   }
 
-  boolean load(InputStream istr) throws IOException {
+  /**
+   * Load plain text Java properties.
+   */
+  boolean loadTextProperties(InputStream istr) throws IOException {
     props.load(istr);
     return true;
+  }
+
+  /**
+   * Load LOCKSS XML properties
+   */
+  boolean loadXmlProperties(InputStream istr) throws IOException {
+    return XmlPropertyLoader.load(props, istr);
   }
 
   boolean store(OutputStream ostr, String header) throws IOException {
@@ -101,6 +111,26 @@ public class ConfigurationPropTreeImpl extends Configuration {
 
   public String get(String key) {
     return (String)props.get(key);
+  }
+
+  public List getList(String key) {
+    if (!key.endsWith(".")) {
+      key = key + ".";
+    }
+    
+    Enumeration e = props.getNodes(key);
+    
+    List propList = null;
+    
+    if (e != null) {
+      propList = new LinkedList();
+      while (e.hasMoreElements()) {
+	String node = (String)e.nextElement();
+	propList.add(props.get(key + node));
+      }
+    }
+    
+    return propList;
   }
 
   public void put(String key, String val) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.28 2004-05-12 17:46:46 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.29 2004-05-28 04:57:31 smorabito Exp $
  */
 
 /*
@@ -43,12 +43,16 @@ import org.lockss.test.*;
  */
 
 public class TestConfiguration extends LockssTestCase {
+
+  private String m_testXml = null;
+
   public static Class testedClasses[] = {
     org.lockss.daemon.Configuration.class
   };
 
   public void setUp() throws Exception {
     super.setUp();
+    m_testXml = setUpXml();
   }
 
   public void tearDown() throws Exception {
@@ -60,6 +64,166 @@ public class TestConfiguration extends LockssTestCase {
   private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n" +
     "prop5=False\n";
   private static final String c1a = "prop2=xxx\nprop4=yyy\n";
+
+  /**
+   * Set up a test XML configuration.
+   * Expect:
+   * Basic functionality...
+   *   org.lockss.a=true
+   *   org.lockss.b.c=true
+   *   org.lockss.d={1,2,3,4,5}
+   * Set-up for testing conditionals...
+   *   org.lockss.daemon.version=1.2.8
+   *   org.lockss.platform.version=135
+   *   org.lockss.group=beta
+   * As a result of these conditionals...
+   *   org.lockss.test.a=null
+   *   org.lockss.test.b=foo
+   *   org.lockss.test.c=null
+   *   org.lockss.test.d=foo
+   *   org.lockss.test.e=foo
+   *   org.lockss.test.f=null
+   *   org.lockss.test.g=foo
+   *   org.lockss.test.h=null
+   *   org.lockss.test.i=foo
+   *   org.lockss.test.j=null
+   *   org.lockss.test.k=null
+   *   org.lockss.test.l=foo
+   *   org.lockss.test.m=foo
+   *   org.lockss.test.n=null
+   *   org.lockss.test.o=foo
+   *   org.lockss.test.p=null
+   *   org.lockss.test.q=foo
+   *   org.lockss.test.r=null
+   *   org.lockss.test.s=foo
+   *   org.lockss.test.t=bar
+   *   org.lockss.test.u=bar
+   *   org.lockss.test.v=foo
+   */
+  private String setUpXml() {
+    StringBuffer sb = new StringBuffer();
+    sb.append("<lockss-config>\n");
+    sb.append("  <property name=\"org.lockss\">\n");
+
+    sb.append("    <property name=\"a\" value=\"true\"/>\n");
+    sb.append("    <property name=\"b\">\n");
+    sb.append("      <property name=\"c\" value=\"true\"/>\n");
+    sb.append("    </property>\n");
+    sb.append("    <property name=\"d\">\n");
+    sb.append("      <list>\n");
+    sb.append("        <value>1</value>\n");
+    sb.append("        <value>2</value>\n");
+    sb.append("        <value>3</value>\n");
+    sb.append("        <value>4</value>\n");
+    sb.append("        <value>5</value>\n");
+    sb.append("      </list>\n");
+    sb.append("    </property>\n");
+
+    sb.append("    <property name=\"daemon.version\" value=\"1.2.8\"/>\n");
+    sb.append("    <property name=\"platform.version\" value=\"135\"/>\n");
+    sb.append("    <property name=\"platform.group\" value=\"beta\"/>\n");
+    // Test equivalence of Daemon Version...
+    sb.append("    <propgroup daemonVersion=\"1.2.7\">\n");
+    sb.append("      <property name=\"test.a\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup daemonVersion=\"1.2.8\">\n");
+    sb.append("      <property name=\"test.b\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test max Daemon Version
+    sb.append("    <propgroup daemonVersionMax=\"1.2.7\">\n");
+    sb.append("      <property name=\"test.c\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup daemonVersionMax=\"1.2.9\">\n");
+    sb.append("      <property name=\"test.d\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test min Daemon Version
+    sb.append("    <propgroup daemonVersionMin=\"1.2.7\">\n");
+    sb.append("      <property name=\"test.e\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup daemonVersionMin=\"1.2.9\">\n");
+    sb.append("      <property name=\"test.f\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test max and min daemon Version
+    sb.append("    <propgroup daemonVersionMin=\"1.2.7\" daemonVersionMax=\"1.2.9\">\n");
+    sb.append("      <property name=\"test.g\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup daemonVersionMin=\"1.2.0\" daemonVersionMax=\"1.2.7\">\n");
+    sb.append("      <property name=\"test.h\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test equivalence of Platform Version...
+    sb.append("    <propgroup platformVersion=\"135\">\n");
+    sb.append("      <property name=\"test.i\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup platformVersion=\"136\">\n");
+    sb.append("      <property name=\"test.j\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test max Platform Version
+    sb.append("    <propgroup platformVersionMax=\"134\">\n");
+    sb.append("      <property name=\"test.k\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup platformVersionMax=\"136\">\n");
+    sb.append("      <property name=\"test.l\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test min Platform Version
+    sb.append("    <propgroup platformVersionMin=\"134\">\n");
+    sb.append("      <property name=\"test.m\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup platformVersionMin=\"136\">\n");
+    sb.append("      <property name=\"test.n\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test max and min Platform Version
+    sb.append("    <propgroup platformVersionMin=\"134\" platformVersionMax=\"136\">\n");
+    sb.append("      <property name=\"test.o\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup platformVersionMin=\"130\" platformVersionMax=\"134\">\n");
+    sb.append("      <property name=\"test.p\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test group
+    sb.append("    <propgroup group=\"beta\">\n");
+    sb.append("      <property name=\"test.q\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup group=\"dev\">\n");
+    sb.append("      <property name=\"test.r\" value=\"foo\"/>\n");
+    sb.append("    </propgroup>\n");
+    // Test then/else
+    sb.append("    <propgroup group=\"beta\">\n");
+    sb.append("      <then>\n");
+    sb.append("        <property name=\"test.s\" value=\"foo\"/>\n");
+    sb.append("      </then>\n");
+    sb.append("      <else>\n");
+    sb.append("        <property name=\"test.s\" value=\"bar\"/>\n");
+    sb.append("      </else>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup group=\"dev\">\n");
+    sb.append("      <then>\n");
+    sb.append("        <property name=\"test.t\" value=\"foo\"/>\n");
+    sb.append("      </then>\n");
+    sb.append("      <else>\n");
+    sb.append("        <property name=\"test.t\" value=\"bar\"/>\n");
+    sb.append("      </else>\n");
+    sb.append("    </propgroup>\n");
+    // Test a combination of conditionals
+    sb.append("    <propgroup platformVersion=\"134\" group=\"beta\">\n");
+    sb.append("      <then>\n");
+    sb.append("        <property name=\"test.u\" value=\"foo\"/>\n");
+    sb.append("      </then>\n");
+    sb.append("      <else>\n");
+    sb.append("        <property name=\"test.u\" value=\"bar\"/>\n");
+    sb.append("      </else>\n");
+    sb.append("    </propgroup>\n");
+    sb.append("    <propgroup platformVersion=\"135\" group=\"beta\">\n");
+    sb.append("      <then>\n");
+    sb.append("        <property name=\"test.v\" value=\"foo\"/>\n");
+    sb.append("      </then>\n");
+    sb.append("      <else>\n");
+    sb.append("        <property name=\"test.v\" value=\"bar\"/>\n");
+    sb.append("      </else>\n");
+    sb.append("    </propgroup>\n");
+
+    sb.append("  </property>\n");
+    sb.append("</lockss-config>\n");
+    return sb.toString();
+  }
 
   private Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
@@ -223,6 +387,64 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));
     assertEquals("yyy", config.get("prop4"));
+  }
+
+  public void testLoadXml() throws IOException {
+    Configuration config = newConfiguration();
+    InputStream istr = new ReaderInputStream(new StringReader(m_testXml));
+    config.loadXmlProperties(istr);
+
+    try {
+      assertTrue(config.getBoolean("org.lockss.a"));
+      assertTrue(config.getBoolean("org.lockss.b.c"));
+    } catch (Configuration.InvalidParam e) {
+    }
+
+    List l = config.getList("org.lockss.d");
+    assertEquals(5, l.size());
+    assertNotNull(l);
+
+    Collections.sort(l);
+
+    assertEquals("1", (String)l.get(0));
+    assertEquals("2", (String)l.get(1));
+    assertEquals("3", (String)l.get(2));
+    assertEquals("4", (String)l.get(3));
+    assertEquals("5", (String)l.get(4));
+    
+    assertNull(config.get("org.lockss.test.a"));
+    assertEquals("foo", config.get("org.lockss.test.b"));
+
+    assertNull(config.get("org.lockss.test.c"));
+    assertEquals("foo", config.get("org.lockss.test.d"));
+
+    assertEquals("foo", config.get("org.lockss.test.e"));
+    assertNull(config.get("org.lockss.test.f"));
+
+    assertEquals("foo", config.get("org.lockss.test.g"));
+    assertNull(config.get("org.lockss.test.h"));
+
+    assertEquals("foo", config.get("org.lockss.test.i"));
+    assertNull(config.get("org.lockss.test.j"));
+
+    assertNull(config.get("org.lockss.test.k"));
+    assertEquals("foo", config.get("org.lockss.test.l"));
+
+    assertEquals("foo", config.get("org.lockss.test.m"));
+    assertNull(config.get("org.lockss.test.n"));
+
+    assertEquals("foo", config.get("org.lockss.test.o"));
+    assertNull(config.get("org.lockss.test.p"));
+
+    assertEquals("foo", config.get("org.lockss.test.q"));
+    assertNull(config.get("org.lockss.test.r"));
+
+    assertEquals("foo", config.get("org.lockss.test.s"));
+    assertEquals("bar", config.get("org.lockss.test.t"));
+
+    assertEquals("bar", config.get("org.lockss.test.u"));
+    assertEquals("foo", config.get("org.lockss.test.v"));
+
   }
 
   private static final String c2 =

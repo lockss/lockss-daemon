@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.24 2004-05-25 00:17:42 clairegriffin Exp $
+ * $Id: ConfigManager.java,v 1.25 2004-05-28 04:57:30 smorabito Exp $
  */
 
 /*
@@ -569,7 +569,13 @@ public class ConfigManager implements LockssManager {
     log.debug2("Reading cache config file: " + cfile.toString());
     InputStream is = new FileInputStream(cfile);
     Configuration res = newConfiguration();
-    res.load(is);
+
+    if (cacheConfigFileName.toLowerCase().endsWith(".xml")) {
+      res.loadXmlProperties(is);
+    } else {
+      res.loadTextProperties(is);
+    }
+
     is.close();
     return res;
   }
