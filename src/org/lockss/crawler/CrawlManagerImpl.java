@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.24 2003-04-17 05:29:20 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.25 2003-04-18 20:56:48 aalto Exp $
  */
 
 /*
@@ -46,8 +46,20 @@ import org.lockss.plugin.*;
  * This is the interface for the object which will sit between the crawler
  * and the rest of the world.  It mediates the different crawl types.
  */
-public class CrawlManagerImpl
-   extends BaseLockssManager implements CrawlManager {
+public class CrawlManagerImpl extends BaseLockssManager
+    implements CrawlManager {
+
+  /**
+   * The expiration deadline for a new content crawl, in ms.
+   */
+  public static final String PARAM_NEW_CONTENT_CRAWL_EXPIRATION =
+      Configuration.PREFIX + "crawler.new_content.expiration";
+
+  /**
+   * The expiration deadline for a repair crawl, in ms.
+   */
+  public static final String PARAM_REPAIR_CRAWL_EXPIRATION =
+      Configuration.PREFIX + "crawler.repair.expiration";
 
   /**
    * ToDo:
@@ -59,13 +71,16 @@ public class CrawlManagerImpl
    */
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
 
-  //XXX fix
-  private static final long DEFAULT_CRAWL_EXPIRATION_TIME = 5 * Constants.HOUR;
-  private static final long DEFAULT_REPAIR_EXPIRATION_TIME = 5 * Constants.MINUTE;
+  private static final long DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION =
+      5 * Constants.DAY;
+  private static final long DEFAULT_REPAIR_CRAWL_EXPIRATION = 5 * Constants.DAY;
 
   private Map newContentCrawls = new HashMap();
   private static ActivityRegulator regulator;
   private Set activeCrawls = new HashSet();
+
+  private long contentCrawlExpiration;
+  private long repairCrawlExpiration;
   private static Logger logger = Logger.getLogger("CrawlManagerImpl");
 
 
@@ -94,8 +109,13 @@ public class CrawlManagerImpl
     super.stopService();
   }
 
-  protected void setConfig(Configuration config, Configuration oldConfig,
+  protected void setConfig(Configuration newConfig, Configuration prevConfig,
 			   Set changedKeys) {
+    contentCrawlExpiration = newConfig.getTimeInterval(
+        PARAM_NEW_CONTENT_CRAWL_EXPIRATION,
+        DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION);
+    repairCrawlExpiration = newConfig.getTimeInterval(
+        PARAM_REPAIR_CRAWL_EXPIRATION, DEFAULT_REPAIR_CRAWL_EXPIRATION);
   }
 
   /**
@@ -117,12 +137,10 @@ public class CrawlManagerImpl
     }
 
     // check with regulator and start repair
-    //XXX get real expiration time
-    long expiration = DEFAULT_REPAIR_EXPIRATION_TIME;
     if (regulator.startCusActivity(ActivityRegulator.REPAIR_CRAWL,
                                    au.makeCachedUrlSet(
         new SingleNodeCachedUrlSetSpec(url.toString())),
-                                   expiration)) {
+                                   repairCrawlExpiration)) {
       CrawlThread crawlThread =
           new CrawlThread(au, ListUtil.list(url.toString()),
                           false, Deadline.MAX, ListUtil.list(cb), cookie);
@@ -159,10 +177,8 @@ public class CrawlManagerImpl
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
                                    Object cookie) {
     logger.debug3("Scheduling new content crawl for AU '" + au.getName() + "'");
-    //XXX get real expiration time
-    long expiration = DEFAULT_CRAWL_EXPIRATION_TIME;
     if (regulator.startAuActivity(ActivityRegulator.NEW_CONTENT_CRAWL,
-                                  au, expiration)) {
+                                  au, contentCrawlExpiration)) {
       activeCrawls.add(au);
       scheduleNewContentCrawl(au, cb, cookie);
     } else {
