@@ -1,0 +1,111 @@
+/*
+ * $Id: BaseLockssUrlConnection.java,v 1.1 2004-02-23 09:25:49 tlipkis Exp $
+ *
+
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.util.urlconn;
+
+import java.util.*;
+import java.io.*;
+import java.net.*;
+import java.text.*;
+import org.lockss.util.*;
+import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.methods.*;
+
+/** Common functionality for implementations of LockssUrlConnection */
+public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
+  private static Logger log = Logger.getLogger("BaseLockssUrlConnection");
+
+  protected String urlString;
+  protected boolean isExecuted = false;
+  protected String proxyHost = null;
+  protected int proxyPort;
+
+  /** Return the URL
+   * @return the URL
+   */
+  public String getURL() {
+    return urlString;
+  }
+
+  public boolean isExecuted() {
+    return isExecuted;
+  }
+
+  protected void assertExecuted() {
+    if (!isExecuted) {
+      throw
+	new IllegalStateException("LockssUrlConnection not yet executed");
+    }
+  }
+
+  protected void assertNotExecuted() {
+    if (isExecuted) {
+      throw
+	new IllegalStateException("LockssUrlConnection has been executed");
+    }
+  }
+
+  public void setProxy(String host, int port) {
+    if (!canProxy()) {
+      throw new UnsupportedOperationException();
+    }
+    assertNotExecuted();
+    proxyHost = host;
+    proxyPort = port;
+  }
+
+  public void setFollowRedirects(boolean followRedirects) {
+    throw new UnsupportedOperationException();
+  }
+
+  public void setIfModifiedSince(long time) {
+    log.debug3("setIfModifiedSince(" + time + ")");
+    setRequestPropertyDate("If-Modified-Since", time);
+  }
+
+  // Preferred date format according to RFC 2068(HTTP1.1),
+  // RFC 822 and RFC 1123
+  private static SimpleDateFormat gmtDateFormat =
+    new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
+  static {
+    gmtDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+  }
+
+  public void setRequestPropertyDate(String key, long time) {
+    assertNotExecuted();
+    Date date = new Date(time);
+    setRequestProperty(key, gmtDateFormat.format(date));
+  }
+
+  public String getActualUrl() {
+    assertExecuted();
+    return urlString;
+  }
+}
