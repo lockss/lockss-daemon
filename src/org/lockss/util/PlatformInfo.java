@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.2 2004-05-24 22:18:21 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.3 2004-05-26 07:00:28 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.util.*;
+import java.text.*;
 import java.io.*;
 import java.net.*;
 
@@ -40,6 +41,7 @@ import java.net.*;
  * possible from Java */
 public class PlatformInfo {
   protected static Logger log = Logger.getLogger("PlatformInfo");
+  private static final DecimalFormat percentFmt = new DecimalFormat("0%");
 
   static PlatformInfo instance;
 
@@ -90,31 +92,39 @@ public class PlatformInfo {
       if (lines == null || lines.size() < 2) {
 	return null;
       }
-      String[] tokens = new String[6];
-      StringTokenizer st = new StringTokenizer((String)lines.get(1), " \t");
-      int ntok = 0;
-      while (st.hasMoreTokens()) {
-	if (ntok > 5) {
-	  return null;
-	}
-	tokens[ntok++] = st.nextToken();
-      }
-      if (ntok != 6) {
-	return null;
-      }
-      DF df = new DF();
-      df.fs = tokens[0];
-      df.size = getInt(tokens[1]);
-      df.used = getInt(tokens[2]);
-      df.avail = getInt(tokens[3]);
-      df.percent = tokens[4];
-      df.mnt = tokens[5];
-      return df;
+      return makeDFFromLine((String)lines.get(1));
     } catch (Exception e) {
       log.warning("DF(" + path + ")", e);
       return null;
     }
 
+  }
+
+  DF makeDFFromLine(String line) {
+    String[] tokens = new String[6];
+    StringTokenizer st = new StringTokenizer(line, " \t");
+    int ntok = 0;
+    while (st.hasMoreTokens()) {
+      if (ntok > 5) {
+	return null;
+      }
+      tokens[ntok++] = st.nextToken();
+    }
+    if (ntok != 6) {
+      return null;
+    }
+    DF df = new DF();
+    df.fs = tokens[0];
+    df.size = getInt(tokens[1]);
+    df.used = getInt(tokens[2]);
+    df.avail = getInt(tokens[3]);
+    df.percentString = tokens[4];
+    df.mnt = tokens[5];
+    try {
+      df.percent = percentFmt.parse(df.percentString).doubleValue();
+    } catch (ParseException e) {
+    }
+    return df;
   }
 
   int getInt(String s) throws NumberFormatException{
@@ -139,7 +149,8 @@ public class PlatformInfo {
     int size;
     int used;
     int avail;
-    String percent;
+    String percentString;
+    double percent = -1.0;
     String mnt;
 
     public String getFs() {
@@ -154,7 +165,10 @@ public class PlatformInfo {
     public int getAvail() {
       return avail;
     }
-    public String getPercent() {
+    public String getPercentString() {
+      return percentString;
+    }
+    public double getPercent() {
       return percent;
     }
     public String getMnt() {
