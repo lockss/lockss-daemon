@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssUrlConnection.java,v 1.5 2004-09-22 02:42:30 tlipkis Exp $
+ * $Id: BaseLockssUrlConnection.java,v 1.6 2005-02-02 09:42:21 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -97,7 +97,7 @@ public abstract class BaseLockssUrlConnection implements LockssUrlConnection {
 
   // Preferred date format according to RFC 2068(HTTP1.1),
   // RFC 822 and RFC 1123
-  public static SimpleDateFormat GMT_DATE_FORMAT =
+  public static final SimpleDateFormat GMT_DATE_FORMAT =
     new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
   static {
     GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));

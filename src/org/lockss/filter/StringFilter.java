@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: StringFilter.java,v 1.6 2005-02-02 09:42:46 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,6 @@ public class StringFilter extends Reader {
   private static Logger logger = Logger.getLogger("StringFilter");
   private boolean streamDone = false;
 
-  private int bufferCapacity;
-
   private CharRing charBuffer = null;
   private int ringSize;
   private Reader reader;
@@ -94,7 +92,6 @@ public class StringFilter extends Reader {
       bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
 						 DEFAULT_BUFFER_CAPACITY);
     }
-    this.bufferCapacity = bufferCapacity;
     this.replaceStr = replaceStr;
     if (replaceStr != null) {
       replaceLen = replaceStr.length();

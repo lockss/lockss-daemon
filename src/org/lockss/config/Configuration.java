@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.8 2005-01-20 04:27:29 tlipkis Exp $
+ * $Id: Configuration.java,v 1.9 2005-02-02 09:42:48 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public abstract class Configuration {
 
   /** A Configuration.Differences object representing a totally different
    * Configuration */
-  public static Differences DIFFERENCES_ALL = new DifferencesAll();
+  public static final Differences DIFFERENCES_ALL = new DifferencesAll();
 
   public static Configuration getPlatformConfig() {
     return ConfigManager.getPlatformConfig();

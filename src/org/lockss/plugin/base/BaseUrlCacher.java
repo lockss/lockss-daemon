@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.44 2005-01-31 23:14:45 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.45 2005-02-02 09:42:28 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class BaseUrlCacher implements UrlCacher {
 
   // Preferred date format according to RFC 2068(HTTP1.1),
   // RFC 822 and RFC 1123
-  public static SimpleDateFormat GMT_DATE_FORMAT =
+  public static final SimpleDateFormat GMT_DATE_FORMAT =
     new SimpleDateFormat ("EEE, dd MMM yyyy HH:mm:ss 'GMT'");
   static {
     GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));

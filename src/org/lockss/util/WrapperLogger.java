@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperLogger.java,v 1.4 2004-01-27 00:41:49 tyronen Exp $
+ * $Id: WrapperLogger.java,v 1.5 2005-02-02 09:42:22 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class WrapperLogger {
 
   public static void record_val(String classname, String methodname,
                                 boolean retval) {
-    record_val(classname, methodname, new Boolean(retval));
+    record_val(classname, methodname, Boolean.valueOf(retval));
 
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.25 2005-01-29 20:00:14 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.26 2005-02-02 09:42:28 tlipkis Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   /**
    * Currently the only ContentParser we have is GoslingHtmlParser, so this
    * gets returned for any string that starts with "test/html".  Null otherwise
-   * @param mimeType mime type to get a content parser for
+   * @param contentType content-type string; first (or only) part is mime-type
    * @return GoslingHtmlParser if mimeType starts with "test/html",
    * null otherwise
    */

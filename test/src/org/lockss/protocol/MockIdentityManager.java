@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.1 2004-12-07 08:46:05 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.2 2005-02-02 09:42:20 tlipkis Exp $
  */
 
 /*
@@ -98,9 +98,9 @@ public class MockIdentityManager extends IdentityManager {
   }
   
   /**
-   * getReputation returns the reputation of the peer
-   * @param id the PeerIdentity
-   * @return the reputation
+   * Change the the reputation of the peer
+   * @param peer the PeerIdentity
+   * @param reputation the new reputation
    */
   public void setReputation(PeerIdentity peer, int reputation) {
     try {

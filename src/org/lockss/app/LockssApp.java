@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.8 2004-10-18 03:33:29 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.9 2005-02-02 09:42:48 tlipkis Exp $
  */
 
 /*
@@ -54,45 +54,45 @@ public abstract class LockssApp {
 
   private static String PREFIX = Configuration.PREFIX + "app.";
 
-  public static String PARAM_APP_EXIT_IMM = PREFIX + "exitImmediately";
-  public static boolean DEFAULT_APP_EXIT_IMM = false;
+  public static final String PARAM_APP_EXIT_IMM = PREFIX + "exitImmediately";
+  public static final boolean DEFAULT_APP_EXIT_IMM = false;
 
-  public static String PARAM_APP_EXIT_AFTER = PREFIX + "exitAfter";
-  public static long DEFAULT_APP_EXIT_AFTER = 0;
+  public static final String PARAM_APP_EXIT_AFTER = PREFIX + "exitAfter";
+  public static final long DEFAULT_APP_EXIT_AFTER = 0;
 
-  public static String PARAM_APP_EXIT_ONCE = PREFIX + "exitOnce";
-  public static boolean DEFAULT_APP_EXIT_ONCE = false;
+  public static final String PARAM_APP_EXIT_ONCE = PREFIX + "exitOnce";
+  public static final boolean DEFAULT_APP_EXIT_ONCE = false;
 
-  public static String PARAM_DEBUG = PREFIX + "debug";
-  public static boolean DEFAULT_DEBUG = false;
+  public static final String PARAM_DEBUG = PREFIX + "debug";
+  public static final boolean DEFAULT_DEBUG = false;
 
   static final String PARAM_PLATFORM_VERSION =
     Configuration.PREFIX + "platform.version";
 
   private static final String PARAM_EXERCISE_DNS = PREFIX + "poundDns";
-  private static boolean DEFAULT_EXERCISE_DNS = false;
+  private static final boolean DEFAULT_EXERCISE_DNS = false;
 
   public static final String MANAGER_PREFIX =
     Configuration.PREFIX + "manager.";
 
   // Parameter keys for common managers
-  public static String WATCHDOG_SERVICE = "WatchdogService";
-  public static String MAIL_SERVICE = "MailService";
-  public static String STATUS_SERVICE = "StatusService";
-  public static String SCHED_SERVICE = "SchedService";
-  public static String RESOURCE_MANAGER = "ResourceManager";
-  public static String SERVLET_MANAGER = "ServletManager";
+  public static final String WATCHDOG_SERVICE = "WatchdogService";
+  public static final String MAIL_SERVICE = "MailService";
+  public static final String STATUS_SERVICE = "StatusService";
+  public static final String SCHED_SERVICE = "SchedService";
+  public static final String RESOURCE_MANAGER = "ResourceManager";
+  public static final String SERVLET_MANAGER = "ServletManager";
 
   // default classes for common managers
-  protected static String DEFAULT_WATCHDOG_SERVICE =
+  protected static final String DEFAULT_WATCHDOG_SERVICE =
     "org.lockss.daemon.WatchdogService";
-  protected static String DEFAULT_MAIL_SERVICE =
+  protected static final String DEFAULT_MAIL_SERVICE =
     "org.lockss.mail.SmtpMailService";
-  protected static String DEFAULT_STATUS_SERVICE =
+  protected static final String DEFAULT_STATUS_SERVICE =
     "org.lockss.daemon.status.StatusServiceImpl";
-  protected static String DEFAULT_SCHED_SERVICE =
+  protected static final String DEFAULT_SCHED_SERVICE =
     "org.lockss.scheduler.SchedService";
-  protected static String DEFAULT_RESOURCE_MANAGER =
+  protected static final String DEFAULT_RESOURCE_MANAGER =
     "org.lockss.daemon.ResourceManager";
 
   public static class ManagerDesc {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.53 2005-01-19 04:18:40 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.54 2005-02-02 09:42:23 tlipkis Exp $
  */
 
 /*
@@ -205,35 +205,35 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // Descriptors for all servlets.
-  protected static ServletDescr SERVLET_HOME =
+  protected static final ServletDescr SERVLET_HOME =
     new ServletDescr(UiHome.class, "Cache Administration",
 		     ServletDescr.NOT_IN_NAV + ServletDescr.LARGE_LOGO);
-  protected static ServletDescr SERVLET_AU_CONFIG =
+  protected static final ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr(AuConfig.class, "Manual Journal Configuration");
-  protected static ServletDescr SERVLET_BATCH_AU_CONFIG =
+  protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr(BatchAuConfig.class, "Journal Configuration");
-  protected static ServletDescr SERVLET_DAEMON_STATUS =
+  protected static final ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
-  protected static ServletDescr SERVLET_PROXY_INFO =
+  protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr(ProxyConfig.class, "Proxy Info", "info/ProxyInfo", 0);
-  protected static ServletDescr SERVLET_THREAD_DUMP =
+  protected static final ServletDescr SERVLET_THREAD_DUMP =
     new ServletDescr("org.lockss.servlet.ThreadDump", "Thread Dump",
 		     ServletDescr.DEBUG_ONLY);
-  protected static ServletDescr LINK_LOGS =
+  protected static final ServletDescr LINK_LOGS =
     new ServletDescr(null, "Logs", "log", ServletDescr.DEBUG_ONLY);
-  protected static ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
+  protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr(AdminIpAccess.class, "Admin Access Control");
-  protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
+  protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
-  protected static ServletDescr SERVLET_HASH_CUS =
+  protected static final ServletDescr SERVLET_HASH_CUS =
     new ServletDescr(HashCUS.class, "Hash CUS", ServletDescr.DEBUG_ONLY);
-  protected static ServletDescr SERVLET_RAISE_ALERT =
+  protected static final ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr(RaiseAlert.class, "Raise Alert",
 		     ServletDescr.NOT_IN_NAV);
-  protected static ServletDescr LINK_HELP =
+  protected static final ServletDescr LINK_HELP =
     new ServletDescr(null, "Help", LocalServletManager.DEFAULT_HELP_URL,
 		     ServletDescr.NAME_IS_URL);
-  protected static ServletDescr LINK_CONTACT =
+  protected static final ServletDescr LINK_CONTACT =
     new ServletDescr(null, "Contact Us",
 		     mailtoUrl(LocalServletManager.DEFAULT_CONTACT_ADDR),
 		     ServletDescr.NAME_IS_URL);
@@ -617,7 +617,6 @@ public abstract class LockssServlet extends HttpServlet
   /** Concatenate params for URL string */
   String concatParams(Properties props) {
     java.util.List list = new ArrayList();
-    StringBuffer sb = new StringBuffer();
     for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       String val = props.getProperty(key);

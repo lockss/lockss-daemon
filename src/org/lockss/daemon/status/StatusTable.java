@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.38 2005-01-19 18:10:38 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.39 2005-02-02 09:42:46 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
 public class StatusTable {
   /** Adding this key to a row, with a non-null value, requests a separator
    * before the row. */
-  public static Object ROW_SEPARATOR = new Object();
+  public static final Object ROW_SEPARATOR = new Object();
 
   public static final int OPTION_NO_ROWS = 1;
   public static final int OPTION_INCLUDE_INTERNAL_AUS = 2;

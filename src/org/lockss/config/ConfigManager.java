@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.12 2005-01-20 04:25:43 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.13 2005-02-02 09:42:48 tlipkis Exp $
  */
 
 /*
@@ -103,10 +103,10 @@ public class ConfigManager implements LockssManager {
   static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
   static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
-  public static String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
-  public static String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
-  public static String CONFIG_FILE_AU_CONFIG = "au.txt";
-  public static String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
+  public static final String CONFIG_FILE_UI_IP_ACCESS = "ui_ip_access.txt";
+  public static final String CONFIG_FILE_PROXY_IP_ACCESS = "proxy_ip_access.txt";
+  public static final String CONFIG_FILE_AU_CONFIG = "au.txt";
+  public static final String CONFIG_FILE_BUNDLED_TITLE_DB = "titledb.xml";
 
   /** array of local cache config file names */
   static String cacheConfigFiles[] = {
@@ -122,7 +122,7 @@ public class ConfigManager implements LockssManager {
 				     Logger.getInitialDefaultLevel());
 
   /** A constant empty Configuration object */
-  public static Configuration EMPTY_CONFIGURATION = newConfiguration();
+  public static final Configuration EMPTY_CONFIGURATION = newConfiguration();
   static {
     EMPTY_CONFIGURATION.seal();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRequestData.java,v 1.4 2005-01-13 00:51:15 dcfok Exp $
+ * $Id: OaiRequestData.java,v 1.5 2005-02-02 09:42:30 tlipkis Exp $
  */
 
 /*
@@ -83,10 +83,8 @@ public class OaiRequestData {
    * Constructor with the knowledge of metadata handler
    *
    * @param oaiRequestHandlerUrl Oai request handler URL of an Oai repository
-   * @param namespaceUrl metadata name space that the Oai reponse record using
-   * @param tagName XML tag name that contain an articules' URL
    * @param setSpec Set name an articles belongs to
-   * @param prefix metadata prefix of Oai reponse record (e.g. oai_dc)
+   * @param metadataHandler
    */
   public OaiRequestData(String oaiRequestHandlerUrl,
 			String setSpec,

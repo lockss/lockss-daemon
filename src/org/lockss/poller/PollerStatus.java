@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.17 2004-10-11 05:43:22 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.18 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -50,14 +50,15 @@ public class PollerStatus {
   public static final String MANAGER_STATUS_TABLE_NAME = "PollManagerTable";
   public static final String POLL_STATUS_TABLE_NAME = "PollTable";
 
-  static PollManager pollManager;
+  protected PollManager pollManager;
   private static Logger theLog=Logger.getLogger("PollerStatus");
 
   PollerStatus(PollManager pollManager) {
     this.pollManager = pollManager;
   }
 
-  static class ManagerStatus implements StatusAccessor {
+  static class ManagerStatus
+    extends PollerStatus implements StatusAccessor {
     static final String TABLE_NAME = MANAGER_STATUS_TABLE_NAME;
     private static String POLLMANAGER_TABLE_TITLE = "Polls";
 
@@ -84,6 +85,10 @@ public class PollerStatus {
     static final String TITLE_FOOT =
       "To see the polls for a single AU, go to the Archival Units table and " +
       "follow the Polls link from the desired AU.";
+
+    public ManagerStatus(PollManager pollManager) {
+      super(pollManager);
+    }
 
     public String getDisplayName() {
       return POLLMANAGER_TABLE_TITLE;
@@ -347,7 +352,7 @@ public class PollerStatus {
     }
   }
 
-  static class PollStatus implements StatusAccessor {
+  static class PollStatus extends PollerStatus implements StatusAccessor {
     static final String TABLE_NAME = POLL_STATUS_TABLE_NAME;
 
     static final int INTTYPE = ColumnDescriptor.TYPE_INT;
@@ -365,7 +370,9 @@ public class PollerStatus {
     private static final List sortRules =
         ListUtil.list(new StatusTable.SortRule("Identity", true));
 
-
+    public PollStatus(PollManager pollManager) {
+      super(pollManager);
+    }
 
     public String getDisplayName() {
       throw new
@@ -502,7 +509,12 @@ public class PollerStatus {
 
   }
 
-  static class ManagerStatusAuRef implements ObjectReferenceAccessor {
+  static class ManagerStatusAuRef
+    extends PollerStatus implements ObjectReferenceAccessor {
+
+    public ManagerStatusAuRef(PollManager pollManager) {
+      super(pollManager);
+    }
 
     int howManyPollsRunning(ArchivalUnit au) {
       String auid = au.getAuId();

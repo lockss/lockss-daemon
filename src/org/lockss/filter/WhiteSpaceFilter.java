@@ -1,5 +1,5 @@
 /*
- * $Id: WhiteSpaceFilter.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: WhiteSpaceFilter.java,v 1.6 2005-02-02 09:42:45 tlipkis Exp $
  */
 
 /*
@@ -50,8 +50,6 @@ public class WhiteSpaceFilter extends Reader {
   boolean inWhiteSpace;
   boolean hitEOF;
   Reader reader;
-  int bufsize;
-  byte[] buf;
   int bufrem = 0;
   int bufptr = 0;
 
@@ -66,16 +64,8 @@ public class WhiteSpaceFilter extends Reader {
       throw new IllegalArgumentException("Called with a null reader");
     }
     this.reader = reader;
-    if (bufsize < 0) {
-      bufsize = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
-                                          DEFAULT_BUFFER_CAPACITY);
-    }
-    this.bufsize = bufsize;
-
     inWhiteSpace = false;
     hitEOF = false;
-    this.bufsize = bufsize;
-    buf = new byte[bufsize];
   }
 
   // Read one byte

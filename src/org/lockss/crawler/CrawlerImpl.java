@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.39 2005-01-07 01:22:34 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.40 2005-02-02 09:42:48 tlipkis Exp $
  */
 
 /*
@@ -64,11 +64,11 @@ public abstract class CrawlerImpl implements Crawler {
   // See comments regarding connect timeouts in HttpClientUrlConnection
   public static final String PARAM_CONNECT_TIMEOUT =
     Configuration.PREFIX + "crawler.timeout.connect";
-  public static long DEFAULT_CONNECT_TIMEOUT = 60 * Constants.SECOND;
+  public static final long DEFAULT_CONNECT_TIMEOUT = 60 * Constants.SECOND;
 
   public static final String PARAM_DATA_TIMEOUT =
     Configuration.PREFIX + "crawler.timeout.data";
-  public static long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
+  public static final long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
 
   /** Proxy host for crawls (except repair-from-cache) */
   public static final String PARAM_PROXY_HOST =
@@ -165,7 +165,6 @@ public abstract class CrawlerImpl implements Crawler {
    * Main method of the crawler; it loops through crawling and caching
    * urls.
    *
-   * @param deadline when to terminate by
    * @return true if no errors
    */
   public boolean doCrawl() {

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.53 2004-12-07 05:15:29 tlipkis Exp $
+ * $Id: LcapMessage.java,v 1.54 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -743,9 +743,8 @@ public class LcapMessage {
 	sb.append(" H:");
 	sb.append(String.valueOf(B64Code.encode(m_hashed)));
       }
-      if(m_entries != null) {
-
-      }
+//       if(m_entries != null) {
+//       }
       if (m_pollVersion > 1)
 	sb.append(" ver " + m_pollVersion);
     }

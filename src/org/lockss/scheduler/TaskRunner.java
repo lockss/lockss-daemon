@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.31 2005-01-19 18:12:01 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.32 2005-02-02 09:42:23 tlipkis Exp $
  */
 
 /*
@@ -1212,7 +1212,6 @@ class TaskRunner {
 
     String taskStatsString(int stats[]) {
       List lst = new ArrayList();
-      StringBuffer sb = new StringBuffer();
       stxt(lst, stats[STAT_ACCEPTED], " scheduled", true);
       stxt(lst, stats[STAT_REFUSED], " refused");
       if (stats == backgroundStats) {

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.127 2005-01-19 04:15:34 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.128 2005-02-02 09:42:29 tlipkis Exp $
  */
 
 /*
@@ -749,7 +749,6 @@ public class PluginManager
    * Delete AU configuration from the local config file.  Need to find a
    * better place for this.
    * @param au the ArchivalUnit to be unconfigured
-   * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
   public void deleteAuConfiguration(ArchivalUnit au) throws IOException {
@@ -761,7 +760,6 @@ public class PluginManager
    * Delete AU configuration from the local config file.  Need to find a
    * better place for this.
    * @param auid the AuId
-   * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
   public void deleteAuConfiguration(String auid) throws IOException {
@@ -774,7 +772,6 @@ public class PluginManager
   /**
    * Deactivate an AU in the config file.  Does not actually stop the AU.
    * @param au the ArchivalUnit to be deactivated
-   * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
   public void deactivateAuConfiguration(ArchivalUnit au) throws IOException {
@@ -790,7 +787,6 @@ public class PluginManager
   /**
    * Delete an AU
    * @param au the ArchivalUnit to be deleted
-   * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
   public void deleteAu(ArchivalUnit au) throws IOException {
@@ -803,7 +799,6 @@ public class PluginManager
   /**
    * Deactivate an AU
    * @param au the ArchivalUnit to be deactivated
-   * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
   public void deactivateAu(ArchivalUnit au) throws IOException {
@@ -862,7 +857,6 @@ public class PluginManager
   /**
    * Return the current config info for an AU (from current configuration)
    * @param auid the AU's id.
-   * @param aup the AuProxy
    * @return the AU's Configuration, with unprefixed keys.
    */
   public Configuration getCurrentAuConfiguration(String auid) {
@@ -1667,10 +1661,12 @@ public class PluginManager
 
     // After the temporary plugin map has been built, install it into
     // the global maps.
-    for (Iterator pluginIter = tmpMap.keySet().iterator(); pluginIter.hasNext(); ) {
-      String key = (String)pluginIter.next();
+    for (Iterator pluginIter = tmpMap.entrySet().iterator();
+	 pluginIter.hasNext(); ) {
+      Map.Entry entry = (Map.Entry)pluginIter.next();
+      String key = (String)entry.getKey();
       log.debug2("Adding to plugin map: " + key);
-      PluginInfo info = (PluginInfo)tmpMap.get(key);
+      PluginInfo info = (PluginInfo)entry.getValue();
       classloaderMap.put(key, info.getClassLoader());
       pluginCus.put(key, info.getCuUrl());
       setPlugin(key, info.getPlugin());

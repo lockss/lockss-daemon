@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.74 2004-12-07 05:17:51 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.75 2005-02-02 09:42:21 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestPollManager extends LockssTestCase {
 
   protected PeerIdentity testID;
   protected LcapMessage[] testmsg;
-  protected PollManager pollmanager;
+  protected LocalMockPollManager pollmanager;
   protected IdentityManager idmanager;
 
   protected void setUp() throws Exception {
@@ -101,13 +101,15 @@ public class TestPollManager extends LockssTestCase {
   public void testLocalMockV1PollFactory() {
     // This ensures that LocalMockV1PollFactory.canHashBeScheduledBefore() does
     // what I intended
-    LocalMockPollManager mpm = new LocalMockPollManager();
     LocalMockV1PollFactory mpf = new LocalMockV1PollFactory();
 
     mpf.setMinPollDeadline(Deadline.in(1000));
-    assertFalse(mpf.canHashBeScheduledBefore(100, Deadline.in(0), mpm));
-    assertTrue(mpf.canHashBeScheduledBefore(100, Deadline.in(1000), mpm));
-    assertTrue(mpf.canHashBeScheduledBefore(100, Deadline.in(1001), mpm));
+    assertFalse(mpf.canHashBeScheduledBefore(100, Deadline.in(0),
+					     pollmanager));
+    assertTrue(mpf.canHashBeScheduledBefore(100, Deadline.in(1000),
+					    pollmanager));
+    assertTrue(mpf.canHashBeScheduledBefore(100, Deadline.in(1001),
+					    pollmanager));
 
   }
 
@@ -254,9 +256,8 @@ public class TestPollManager extends LockssTestCase {
       new MockCachedUrlSet((MockArchivalUnit)testau,
 			   new RangeCachedUrlSetSpec("", "", ""));
     PollSpec ps = new PollSpec(mcus, Poll.CONTENT_POLL);
-    LocalMockPollManager mpm = new LocalMockPollManager();
     LocalMockV1PollFactory pf = new LocalMockV1PollFactory();
-    mpm.setPollFactory(1, pf);
+    pollmanager.setPollFactory(1, pf);
 
     configPollTimes();
     pf.setBytesPerMsHashEstimate(100);
@@ -264,40 +265,40 @@ public class TestPollManager extends LockssTestCase {
 
     mcus.setEstimatedHashDuration(100);
     pf.setMinPollDeadline(Deadline.in(1000));
-    assertEquals(1800, pf.calcDuration(ps, mpm));
+    assertEquals(1800, pf.calcDuration(ps, pollmanager));
     pf.setMinPollDeadline(Deadline.in(2000));
-    assertEquals(2400, pf.calcDuration(ps, mpm));
+    assertEquals(2400, pf.calcDuration(ps, pollmanager));
     // this one should be limited by max content poll
     pf.setMinPollDeadline(Deadline.in(4000));
-    assertEquals(4100, pf.calcDuration(ps, mpm));
+    assertEquals(4100, pf.calcDuration(ps, pollmanager));
     pf.setMinPollDeadline(Deadline.in(5000));
-    assertEquals(-1, pf.calcDuration(ps, mpm));
+    assertEquals(-1, pf.calcDuration(ps, pollmanager));
 
     // calulated poll time will be less than min, should be adjusted up to min
     mcus.setEstimatedHashDuration(10);
     pf.setMinPollDeadline(Deadline.in(100));
-    assertEquals(1000, pf.calcDuration(ps, mpm));
+    assertEquals(1000, pf.calcDuration(ps, pollmanager));
 
     // name poll duration is randomized so less predictable, but should
     // always be between min and max.
-    long ndur = pf.calcDuration(new PollSpec(mcus, Poll.NAME_POLL), mpm);
+    long ndur = pf.calcDuration(new PollSpec(mcus, Poll.NAME_POLL),
+				pollmanager);
     assertTrue(ndur >= pf.getMinPollDuration(Poll.NAME_POLL));
     assertTrue(ndur <= pf.getMaxPollDuration(Poll.NAME_POLL));
   }
 
   public void testV1CanSchedulePoll() {
-    LocalMockPollManager mpm = new LocalMockPollManager();
     LocalMockV1PollFactory pf = new LocalMockV1PollFactory();
 
-    mpm.setPollFactory(1, pf);
+    pollmanager.setPollFactory(1, pf);
     // Accept polls that finish no earlier than this
     pf.setMinPollDeadline(Deadline.in(1000));
     // this one can't
-    assertFalse(pf.canPollBeScheduled(500, 100, mpm));
+    assertFalse(pf.canPollBeScheduled(500, 100, pollmanager));
     // can
-    assertTrue(pf.canPollBeScheduled(2000, 100, mpm));
+    assertTrue(pf.canPollBeScheduled(2000, 100, pollmanager));
     // neededTime > duration
-    assertFalse(pf.canPollBeScheduled(500, 600, mpm));
+    assertFalse(pf.canPollBeScheduled(500, 600, pollmanager));
   }
 
   //  Now test the PollManager itself
@@ -420,7 +421,8 @@ public class TestPollManager extends LockssTestCase {
   /** test for method suspendPoll(...) */
   public void testSuspendPoll() throws Exception {
     BasePoll p1 = null;
-    p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2, pollmanager);
+    p1 = TestPoll.createCompletedPoll(theDaemon, testau, testmsg[0], 7, 2,
+				      pollmanager);
     pollmanager.addPoll(p1);
     // give it a pointless lock to avoid a null pointer
     ActivityRegulator.Lock lock = theDaemon.getActivityRegulator(testau).
@@ -523,7 +525,9 @@ public class TestPollManager extends LockssTestCase {
 
   private void initRequiredServices() {
     theDaemon = getMockLockssDaemon();
-    pollmanager = theDaemon.getPollManager();
+    pollmanager = new LocalMockPollManager();
+    pollmanager.initService(theDaemon);
+    theDaemon.setPollManager(pollmanager);
     idmanager = theDaemon.getIdentityManager();
 
     theDaemon.getPluginManager();

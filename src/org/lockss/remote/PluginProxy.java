@@ -1,5 +1,5 @@
 /*
- * $Id: PluginProxy.java,v 1.3 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id: PluginProxy.java,v 1.4 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class PluginProxy {
   }
 
   /** Create a PluginProxy for the plugin with the given ID.
-   * @param pluginid the plugin ID string.
+   * @param pluginId the plugin ID string.
    * @param remoteApi the RemoteApi service
    * @throws NoSuchPlugin if no Plugin with the given ID exists
    */

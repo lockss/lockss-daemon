@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryManager.java,v 1.5 2005-01-07 09:22:31 tlipkis Exp $
+ * $Id: RepositoryManager.java,v 1.6 2005-02-02 09:42:25 tlipkis Exp $
  */
 
 /*
@@ -163,7 +163,7 @@ public class RepositoryManager
   /**
    * Return the disk space used by the AU, including all overhead,
    * calculating it if necessary.
-   * @param au the AU
+   * @param repoAuPath the full patch to a an AU dir in a LockssRepositoryImpl
    * @return the AU's disk usage in bytes.
    */
   public long getRepoDiskUsage(String repoAuPath) {

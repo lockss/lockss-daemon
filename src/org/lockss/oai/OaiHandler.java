@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.3 2005-01-20 01:35:16 dcfok Exp $
+ * $Id: OaiHandler.java,v 1.4 2005-02-02 09:42:44 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class OaiHandler {
    * @param oaiData OaiRequestData which is constructed by OaiCrawlSpec
    * @param fromDate create date of records the Oai request want from
    * @param untilDate create date of records the Oai request want until
-   * @param maxRetrues retry limit of oai request when retriable error is encountered
+   * @param maxRetries retry limit of oai request when retriable error is encountered
    */
   public OaiHandler(OaiRequestData oaiData, 
 		    String fromDate, 

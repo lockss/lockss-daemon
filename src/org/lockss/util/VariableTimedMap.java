@@ -112,6 +112,10 @@ public class VariableTimedMap extends TimedMap implements Map {
       entries.equals(((VariableTimedMap)o).getEntries());
   }
 
+  public int hashCode() {
+    return entries.hashCode();
+  }
+
   public Object put(Object key, Object value) {
     throw new UnsupportedOperationException("Interval required.");
   }

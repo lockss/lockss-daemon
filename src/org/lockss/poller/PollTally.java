@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.30 2004-10-23 01:38:22 clairegriffin Exp $
+ * $Id: PollTally.java,v 1.31 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public abstract class PollTally implements Tallier{
   protected Deadline replayDeadline = null;
   protected Iterator replayIter = null;
   protected ArrayList originalVotes = null;
-  protected static IdentityManager idManager = null;
+  protected IdentityManager idManager = null;
   protected ActivityRegulator.Lock activityLock;
 
   static Logger log=Logger.getLogger("PollTally");

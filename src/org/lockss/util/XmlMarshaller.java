@@ -1,5 +1,5 @@
 /*
- * $Id: XmlMarshaller.java,v 1.5 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: XmlMarshaller.java,v 1.6 2005-02-02 09:42:22 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,6 @@ public class XmlMarshaller {
     if (!rootDir.exists()) {
       rootDir.mkdirs();
     }
-    File storeFile = new File(rootDir, fileName);
     store(new File(rootDir, fileName), storeObj, mapping);
   }
 

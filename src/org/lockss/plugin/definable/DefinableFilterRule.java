@@ -28,7 +28,7 @@ public class DefinableFilterRule implements FilterRule {
 
   /**
    *
-   * @param readers List of filterRuleData
+   * @param ruleList list of 2 element string arrays
    */
   public DefinableFilterRule(List ruleList) {
     m_readers = makeReaders(ruleList);

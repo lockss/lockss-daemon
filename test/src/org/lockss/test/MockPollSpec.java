@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.4 2004-10-06 23:53:06 clairegriffin Exp $
+ * $Id: MockPollSpec.java,v 1.5 2005-02-02 09:42:20 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class MockPollSpec extends PollSpec {
    * @param url the url
    * @param lwrBound the lower bound of the url
    * @param uprBound the upper bound of the url
-   * @param cus the cached url set
+   * @param pollType one of the types defined by Poll
    */
   public MockPollSpec(String auId, String url,
 		      String lwrBound, String uprBound,

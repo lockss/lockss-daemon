@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.38 2004-12-09 08:23:21 tlipkis Exp $
+ * $Id: Logger.java,v 1.39 2005-02-02 09:42:22 tlipkis Exp $
  */
 
 /*
@@ -62,10 +62,10 @@ public class Logger {
   public static final String TARGET_PREFIX = PREFIX + "target.";
 
   /** System property for name of default LogTarget */
-  public static String SYSPROP_DEFAULT_LOG_TARGET =
+  public static final String SYSPROP_DEFAULT_LOG_TARGET =
     "org.lockss.defaultLogTarget";
   /** System property for name of default log level */
-  public static String SYSPROP_DEFAULT_LOG_LEVEL =
+  public static final String SYSPROP_DEFAULT_LOG_LEVEL =
     "org.lockss.defaultLogLevel";
 
   /** Critical errors require immediate attention from a human. */
@@ -219,7 +219,7 @@ public class Logger {
    * directly related to LOCKSS, it is useful to be able to establish
    * defaults that are distinct from the normal system-wide defaults.
    * @param name identifies the log instance, appears in output
-   * @param defaultLevel the default log level if no config param is
+   * @param defaultLevelName the default log level if no config param is
    * present specifying the level or the default level
    * @param defaultLevelParam the name of the config param specifying the
    * default level.

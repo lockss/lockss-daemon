@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.14 2004-12-07 05:17:52 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.15 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -83,14 +83,14 @@ public class V1PollFactory implements PollFactory {
   static final int DEFAULT_DURATION_MULTIPLIER_MIN = 3;
   static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
 
-  protected static long m_minContentPollDuration;
-  protected static long m_maxContentPollDuration;
-  protected static long m_minNamePollDuration;
-  protected static long m_maxNamePollDuration;
-  protected static long m_nameHashEstimate;
+  protected long m_minContentPollDuration;
+  protected long m_maxContentPollDuration;
+  protected long m_minNamePollDuration;
+  protected long m_maxNamePollDuration;
+  protected long m_nameHashEstimate;
   protected static int m_quorum;
-  protected static int m_minDurationMultiplier;
-  protected static int m_maxDurationMultiplier;
+  protected int m_minDurationMultiplier;
+  protected int m_maxDurationMultiplier;
 
   protected static Logger theLog = Logger.getLogger("V1PollFactory");
   private static LockssRandom theRandom = new LockssRandom();
@@ -234,9 +234,9 @@ public class V1PollFactory implements PollFactory {
    * shouldPollBeCreated is invoked to check for conflicts or other
    * version-specific reasons why the poll should not be created at
    * this time.
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
+   * @param im the IdentityManager
    * @param challenge the poll challenge
    * @param orig the PeerIdentity that called the poll
    * @return true if it is OK to call the poll

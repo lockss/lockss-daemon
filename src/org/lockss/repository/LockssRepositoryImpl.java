@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.66 2005-01-07 09:22:31 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.67 2005-02-02 09:42:25 tlipkis Exp $
  */
 
 /*
@@ -418,7 +418,7 @@ public class LockssRepositoryImpl
    * into directory names. This maps a given au to directories, using the
    * cache root as the base.  Given an au with PluginId of 'plugin' and AuId
    * of 'au', it would return the string '<rootLocation>/plugin/au/'.
-   * @param cachePath the root for all ArchivalUnits
+   * @param repoRoot the root of a LOCKSS repository
    * @param au the ArchivalUnit to resolve
    * @return the directory location
    */

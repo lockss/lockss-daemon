@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.23 2004-10-22 00:43:48 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.24 2005-02-02 09:42:47 tlipkis Exp $
  */
 
 /*
@@ -127,7 +127,6 @@ public class GoslingHtmlParser implements ContentParser {
 
   private CharRing ring;
   private int ringCapacity;
-  private int ringSize;			// current ring size
   private boolean isTrace = logger.isDebug2();
 
   public GoslingHtmlParser() {
@@ -319,8 +318,6 @@ public class GoslingHtmlParser implements ContentParser {
    *
    * @param link StringBuffer containing the text of a link tag (everything
    * between < and > (ie, "a href=http://www.test.org")
-   * @param srcUrl URL object representing the page on which this
-   * url was taken from (for resolving relative tags)
    * @return string representation of the url from the link tag
    * @throws MalformedURLException
    */

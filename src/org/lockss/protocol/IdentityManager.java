@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.56 2004-12-07 08:46:06 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.57 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -423,7 +423,7 @@ public class IdentityManager
 
   /**
    * return true if this PeerIdentity is the same as the local host
-   * @param id a String representing the PeerIdentity
+   * @param idStr the string representation of the voter's PeerIdentity
    * @return boolean true if is the local identity, false otherwise
    */
   public boolean isLocalIdentity(String idStr) {
@@ -753,10 +753,10 @@ public class IdentityManager
 
     Map agreeMapForAu = (Map)agreeMap.get(au);
     if (agreeMapForAu != null && agreeMapForAu.size() > 0) {
-      Iterator it = agreeMapForAu.keySet().iterator();
-      while (it.hasNext()) {
-	PeerIdentity pid = (PeerIdentity)it.next();
-	Long time = (Long)agreeMapForAu.get(pid);
+      for (Iterator it = agreeMapForAu.entrySet().iterator(); it.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)it.next();
+	PeerIdentity pid = (PeerIdentity)entry.getKey();
+	Long time = (Long)entry.getValue();
 	IdentityAgreement ida = new IdentityAgreement(pid);
 	ida.setLastAgree(time.longValue());
 
@@ -767,10 +767,11 @@ public class IdentityManager
 
     Map disagreeMapForAu = (Map)disagreeMap.get(au);
     if (disagreeMapForAu != null && disagreeMapForAu.size() > 0) {
-      Iterator it = disagreeMapForAu.keySet().iterator();
-      while (it.hasNext()) {
-	PeerIdentity pid = (PeerIdentity)it.next();
-	Long time = (Long)disagreeMapForAu.get(pid);
+      for (Iterator it = disagreeMapForAu.entrySet().iterator();
+	   it.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)it.next();
+	PeerIdentity pid = (PeerIdentity)entry.getKey();
+	Long time = (Long)entry.getValue();
 	IdentityAgreement ida = (IdentityAgreement)map.get(pid);
 	if (ida == null) { //wasn't set in the previous loop
 	  ida = new IdentityAgreement(pid);

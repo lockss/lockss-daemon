@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.150 2004-12-07 05:17:52 tlipkis Exp $
+ * $Id: PollManager.java,v 1.151 2005-02-02 09:42:26 tlipkis Exp $
  */
 
 /*
@@ -94,8 +94,8 @@ public class PollManager
   private static SystemMetrics theSystemMetrics = null;
 
   // our configuration variables
-  protected static long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
-  protected static long m_verifierExpireTime = DEFAULT_VERIFY_EXPIRATION;
+  protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
+  protected long m_verifierExpireTime = DEFAULT_VERIFY_EXPIRATION;
 
   // The PollFactory instances
   PollFactory [] pf = {
@@ -128,14 +128,13 @@ public class PollManager
     theSystemMetrics = theDaemon.getSystemMetrics();
     // register our status
     StatusService statusServ = theDaemon.getStatusService();
-    PollerStatus pStatus = new PollerStatus(this);
     statusServ.registerStatusAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
-                                      new PollerStatus.ManagerStatus());
+                                      new PollerStatus.ManagerStatus(this));
     statusServ.registerStatusAccessor(PollerStatus.POLL_STATUS_TABLE_NAME,
-                                      new PollerStatus.PollStatus());
+                                      new PollerStatus.PollStatus(this));
     statusServ.registerObjectReferenceAccessor(PollerStatus.MANAGER_STATUS_TABLE_NAME,
 					       ArchivalUnit.class,
-					       new PollerStatus.ManagerStatusAuRef());
+					       new PollerStatus.ManagerStatusAuRef(this));
   }
 
   /**

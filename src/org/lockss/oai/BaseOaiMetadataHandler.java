@@ -1,5 +1,5 @@
 /*
- * $Id: BaseOaiMetadataHandler.java,v 1.4 2005-01-20 01:35:16 dcfok Exp $
+ * $Id: BaseOaiMetadataHandler.java,v 1.5 2005-02-02 09:42:44 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
    * to support plugin definable OaiMetadataHandler. 
    *
    * @param metadataPrefix the metadata prefix string
-   * @param metadataNamspaceUrl the url that describe the metadata namespace
+   * @param metadataNamespaceUrl the url that describe the metadata namespace
    * @param urlContainerTagName the tag name where a url can be found
    */
   public BaseOaiMetadataHandler(String metadataPrefix, 

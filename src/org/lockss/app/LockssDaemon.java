@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.70 2004-10-18 03:33:29 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.71 2005-02-02 09:42:48 tlipkis Exp $
  */
 
 /*
@@ -89,31 +89,31 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     20 * Constants.WEEK;
 
   // Parameter keys for daemon managers
-  public static String ACTIVITY_REGULATOR = "ActivityRegulator";
-  public static String ALERT_MANAGER = "AlertManager";
-  public static String HASH_SERVICE = "HashService";
-  public static String TIMER_SERVICE = "TimerService";
-  public static String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
-  public static String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
-  public static String IDENTITY_MANAGER = "IdentityManager";
-  public static String CRAWL_MANAGER = "CrawlManager";
-  public static String PLUGIN_MANAGER = "PluginManager";
-  public static String POLL_MANAGER = "PollManager";
-  public static String REPOSITORY_MANAGER = "RepositoryManager";
-  public static String LOCKSS_REPOSITORY = "LockssRepository";
-  public static String HISTORY_REPOSITORY = "HistoryRepository";
-  public static String NODE_MANAGER = "NodeManager";
-  public static String TREEWALK_MANAGER = "TreeWalkManager";
-  public static String PROXY_MANAGER = "ProxyManager";
-  public static String AUDIT_PROXY_MANAGER = "AuditProxyManager";
-  public static String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
-  public static String SYSTEM_METRICS = "SystemMetrics";
-  public static String REMOTE_API = "RemoteApi";
-  public static String URL_MANAGER = "UrlManager";
-  public static String NODE_MANAGER_MANAGER = "NodeManagerManager";
-  public static String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
-  public static String REPOSITORY_STATUS = "RepositoryStatus";
-  public static String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
+  public static final String ACTIVITY_REGULATOR = "ActivityRegulator";
+  public static final String ALERT_MANAGER = "AlertManager";
+  public static final String HASH_SERVICE = "HashService";
+  public static final String TIMER_SERVICE = "TimerService";
+  public static final String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
+  public static final String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
+  public static final String IDENTITY_MANAGER = "IdentityManager";
+  public static final String CRAWL_MANAGER = "CrawlManager";
+  public static final String PLUGIN_MANAGER = "PluginManager";
+  public static final String POLL_MANAGER = "PollManager";
+  public static final String REPOSITORY_MANAGER = "RepositoryManager";
+  public static final String LOCKSS_REPOSITORY = "LockssRepository";
+  public static final String HISTORY_REPOSITORY = "HistoryRepository";
+  public static final String NODE_MANAGER = "NodeManager";
+  public static final String TREEWALK_MANAGER = "TreeWalkManager";
+  public static final String PROXY_MANAGER = "ProxyManager";
+  public static final String AUDIT_PROXY_MANAGER = "AuditProxyManager";
+  public static final String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
+  public static final String SYSTEM_METRICS = "SystemMetrics";
+  public static final String REMOTE_API = "RemoteApi";
+  public static final String URL_MANAGER = "UrlManager";
+  public static final String NODE_MANAGER_MANAGER = "NodeManagerManager";
+  public static final String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
+  public static final String REPOSITORY_STATUS = "RepositoryStatus";
+  public static final String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -555,9 +555,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * startService() */
   protected void startAuManagers(ArchivalUnit au, LinkedMap auMgrMap)
       throws Exception {
-    for (Iterator iter = auMgrMap.keySet().iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
+    for (Iterator iter = auMgrMap.entrySet().iterator(); iter.hasNext(); ) {
+      Map.Entry entry = (Map.Entry)iter.next();
+      LockssAuManager mgr = (LockssAuManager)entry.getValue();
       try {
 	mgr.startService();
       } catch (Exception e) {
@@ -572,9 +572,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** (re)configure the au managers */
   private void configAuManagers(ArchivalUnit au, Configuration auConfig,
 				LinkedMap auMgrMap) {
-    for (Iterator iter = auMgrMap.keySet().iterator(); iter.hasNext(); ) {
-      String key = (String)iter.next();
-      LockssAuManager mgr = (LockssAuManager)auMgrMap.get(key);
+    for (Iterator iter = auMgrMap.entrySet().iterator(); iter.hasNext(); ) {
+      Map.Entry entry = (Map.Entry)iter.next();
+      LockssAuManager mgr = (LockssAuManager)entry.getValue();
       try {
 	mgr.setAuConfig(auConfig);
       } catch (Exception e) {
@@ -705,7 +705,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // compatibility and testing.
     boolean useNewSyntax = false;
 
-    List tmpList = new ArrayList();
     for (int i = 0; i < args.length - 1; i++) {
       if (args[i].equals(StartupOptions.OPTION_GROUP)) {
 	groupName = args[++i];

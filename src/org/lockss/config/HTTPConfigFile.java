@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.1 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: HTTPConfigFile.java,v 1.2 2005-02-02 09:42:48 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,6 @@ public class HTTPConfigFile extends ConfigFile {
       throws IOException, MalformedURLException {
     InputStream in = null;
     
-    URL u = new URL(url);
     LockssUrlConnection conn = UrlUtil.openConnection(url);
 
     if (m_config != null && m_lastModified != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.4 2005-01-12 02:21:41 dcfok Exp $
+ * $Id: OaiCrawlSpec.java,v 1.5 2005-02-02 09:42:47 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
    * Construct an OaiCrawlSpec with an OaiRequestData object, permission urls,
    * permission checkers, crawl rule and a follow link flag
    * 
-   * @param OaiRequestData the object contain all the information for issuing
+   * @param oaiRequestData the object contain all the information for issuing
    * and Oai request and do the proper parsing in the response.
    * @param permissionUrls a list of urls from which permission can be obtained.
    * @param permissionCheckers a list of permissionCheckers specify by the plugin

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlManager.java,v 1.6 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: UrlManager.java,v 1.7 2005-02-02 09:42:47 tlipkis Exp $
  */
 
 /*
@@ -51,13 +51,10 @@ public class UrlManager extends BaseLockssDaemonManager {
 
   private static Logger log = Logger.getLogger("UrlManager");
 
-  private PluginManager pluginManager;
   private int startCnt = 0;
 
   /** Install the URLStreamHandlerFactory */
   public void startService() {
-    pluginManager = theDaemon.getPluginManager();
-
     try {
       URL.setURLStreamHandlerFactory(new LockssUrlFactory());
     } catch (Error e) {

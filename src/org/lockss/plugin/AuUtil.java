@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.2 2005-01-07 09:20:53 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.3 2005-02-02 09:42:30 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,6 @@ public class AuUtil {
   public static boolean isConfigCompatibleWithPlugin(Configuration config,
 						     Plugin plugin) {
     Set have = config.keySet();
-    Set need = new HashSet();
     for (Iterator iter = plugin.getAuConfigDescrs().iterator();
 	 iter.hasNext();) {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();

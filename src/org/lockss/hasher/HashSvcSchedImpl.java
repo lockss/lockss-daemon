@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.16 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.17 2005-02-02 09:42:45 tlipkis Exp $
  */
 
 /*
@@ -262,7 +262,6 @@ public class HashSvcSchedImpl
     CachedUrlSetHasher urlsetHasher;
     int hashReqSeq = -1;
     int type;
-    int sched;
     boolean finished = false;
     long bytesHashed = 0;
     long unaccountedBytesHashed = 0;

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.46 2004-10-18 03:33:28 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.47 2005-02-02 09:42:20 tlipkis Exp $
  */
 
 /*
@@ -410,7 +410,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   /**
    * Set the RepositoryManager
-   * @param treeWalkMan the new manager
+   * @param repositoryMan the new manager
    */
   public void setRepositoryManager(RepositoryManager repositoryMan) {
     repositoryManager = repositoryMan;

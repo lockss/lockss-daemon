@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.28 2005-01-07 09:22:57 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.29 2005-02-02 09:42:22 tlipkis Exp $
  */
 
 /*
@@ -538,9 +538,10 @@ public class ArchivalUnitStatus
 	table.setDefaultSortRules(sortRules);
 	Map statsMap = buildCacheStats(au, nodeMan);
 	List rowL = new ArrayList();
-	for (Iterator iter = statsMap.keySet().iterator(); iter.hasNext(); ) {
-	  PeerIdentity peer = (PeerIdentity)iter.next();
-	  CacheStats stats = (CacheStats)statsMap.get(peer);
+	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
+	  Map.Entry entry = (Map.Entry)iter.next();
+	  PeerIdentity peer = (PeerIdentity)entry.getKey();
+	  CacheStats stats = (CacheStats)entry.getValue();
 	  if (! peer.isLocalIdentity()) {
 	    totalPeers++;
 	    if (stats.mostRecentVote.isAgreeVote()) {

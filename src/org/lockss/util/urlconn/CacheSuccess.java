@@ -1,5 +1,5 @@
 /*
- * $Id: CacheSuccess.java,v 1.1 2004-02-23 09:21:22 tlipkis Exp $
+ * $Id: CacheSuccess.java,v 1.2 2005-02-02 09:42:21 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -35,5 +35,5 @@ package org.lockss.util.urlconn;
  * LockssUrlConnection)}.  */
 public class CacheSuccess {
   /** Static var whose value is the class. */
-  public static Class MARKER = CacheSuccess.class;
+  public static final Class MARKER = CacheSuccess.class;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.5 2005-01-20 01:35:16 dcfok Exp $
+ * $Id: OaiCrawler.java,v 1.6 2005-02-02 09:42:47 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,6 @@ public class OaiCrawler extends FollowLinkCrawler {
    * follow the link from the content of the URLs.
    */
   protected boolean doCrawl0(){
-    Set extractedUrls = new HashSet();
     if (shouldFollowLink() ) {
       logger.info("crawling in follow link mode");
     } else {

@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.36 2005-01-05 09:47:21 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.37 2005-02-02 09:42:23 tlipkis Exp $
  */
 
 /*
@@ -425,9 +425,10 @@ public class AuConfig extends LockssServlet {
       sel.attribute("onchange",
 		    "cascadeSelectEnable(this,'plugin_input')");
       sel.add("-no selection-", true, "");
-      for (Iterator iter = pMap.keySet().iterator(); iter.hasNext(); ) {
-	String pName = (String)iter.next();
-	PluginProxy p = (PluginProxy)pMap.get(pName);
+      for (Iterator iter = pMap.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)iter.next();
+	String pName = (String)entry.getKey();
+	PluginProxy p = (PluginProxy)entry.getValue();
 	sel.add(encodeText(pName), false, p.getPluginId());
       }
       setTabOrder(sel);
