@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.16 2003-05-07 08:45:09 tal Exp $
+ * $Id: LockssServlet.java,v 1.17 2003-05-10 02:00:19 tal Exp $
  */
 
 /*
@@ -170,6 +170,8 @@ public abstract class LockssServlet extends HttpServlet
 		     ServletDescr.DEBUG_ONLY);
   protected static ServletDescr LINK_LOGS =
     new ServletDescr(null, "Logs", "log", ServletDescr.DEBUG_ONLY);
+   protected static ServletDescr SERVLET_IP_ACCESS_CONTROL =
+     new ServletDescr(IpAccessControl.class, "IP Access Control");
 //    protected static ServletDescr SERVLET_ADMIN_HOME =
 //      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
 //    protected static ServletDescr SERVLET_JOURNAL_STATUS =
@@ -178,8 +180,6 @@ public abstract class LockssServlet extends HttpServlet
 //    protected static ServletDescr SERVLET_JOURNAL_SETUP =
 //      new ServletDescr(JournalSettings.class, "Journal Setup",
 //  		     ServletDescr.PER_CLIENT);
-//    protected static ServletDescr SERVLET_ACCESS_CONTROL =
-//      new ServletDescr(UpdateIps.class, "Access Control");
 //    protected static ServletDescr SERVLET_DAEMON_STATUS =
 //      new ServletDescr(DaemonStatus.class, "Daemon Status",
 //  		     ServletDescr.STATUS + ServletDescr.NOT_IN_NAV);
@@ -187,9 +187,10 @@ public abstract class LockssServlet extends HttpServlet
   // All servlets must be listed here (even if not in van table).
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
+     SERVLET_IP_ACCESS_CONTROL,
      SERVLET_DAEMON_STATUS,
-     LINK_LOGS,
      SERVLET_THREAD_DUMP,
+     LINK_LOGS,
 //      SERVLET_ADMIN_HOME,
 //      SERVLET_JOURNAL_STATUS,
 //      SERVLET_JOURNAL_SETUP,
