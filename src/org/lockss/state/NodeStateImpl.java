@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.26 2004-09-27 22:39:05 smorabito Exp $
+ * $Id: NodeStateImpl.java,v 1.26.4.1 2004-12-02 20:38:11 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ public class NodeStateImpl implements NodeState {
       case NodeState.OK:
         return "Ok";
       default:
-        return "Undefined";
+        return Integer.toString(curState);
     }
   }
 
