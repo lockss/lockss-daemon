@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.31 2004-10-06 04:45:02 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.32 2004-10-08 06:57:20 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.31 2004-10-06 04:45:02 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.32 2004-10-08 06:57:20 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -209,7 +209,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
     if (isRepairRequest || neverProxy) {
       if (cu != null && cu.hasContent()) {
-	if (log.isDebug()) {
+	if (isRepairRequest && log.isDebug()) {
 	  log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
 	}
 	serveFromCache(pathInContext, pathParams, request,
