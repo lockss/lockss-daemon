@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.18 2004-04-27 19:39:59 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.19 2004-05-12 17:49:36 tlipkis Exp $
  */
 
 /*
@@ -54,11 +54,17 @@ public class AuConfig extends LockssServlet {
     Configuration.PREFIX + "auconfig.includePluginInTitleSelect";
   static final boolean DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT = false;
 
+  static final String FOOT_REPOSITORY =
+    "Local disk on which AU will be stored";
+
   static Logger log = Logger.getLogger("AuConfig");
 
   // Name given to form element whose value is the action that should be
   // performed when the form is submitted.  (Not always the submit button.)
   static final String ACTION_TAG = "lockssAction";
+
+  static final String REPO_TAG = "lockssRepository";
+
   // prefix added to config prop keys when used in form, to avoid
   // accidental collisions
   static final String FORM_PREFIX = "lfp.";
@@ -482,25 +488,42 @@ public class AuConfig extends LockssServlet {
  		 : null));
 
     tbl.newRow();
-    tbl.newRow();
-    tbl.newCell("colspan=2 align=center");
     Collection eKeys = getEditKeys();
     if (eKeys.isEmpty()) {
       if (!isNew && editable) {
+// 	tbl.newRow();
+// 	tbl.newCell("colspan=2 align=center");
 // 	tbl.add("No Editable Properties");
       }
     } else {
-      tbl.add("Other Parameters");
-      addPropRows(tbl, eKeys, initVals, editable ? eKeys : null);
-
       tbl.newRow();
       tbl.newCell("colspan=2 align=center");
+      tbl.add("Other Parameters");
+      addPropRows(tbl, eKeys, initVals, editable ? eKeys : null);
     }
+    if (isNew) {
+      java.util.List repos = remoteApi.getRepositoryList();
+      if (repos.size() > 1) {
+	tbl.newRow();
+	tbl.newCell("colspan=2 align=center");
+	tbl.add("Select Repository");
+	tbl.add(addFootnote(FOOT_REPOSITORY));
+	for (Iterator iter = repos.iterator(); iter.hasNext(); ) {
+	  String repo = (String)iter.next();
+	  tbl.newRow();
+	  tbl.newCell("colspan=2 align=left");
+	  tbl.add(radioButton(repo, REPO_TAG, false));
+	}
+      }
+    }
+
     if (isNew) {
       addPlugId(tbl, plugin);
     } else {
       addAuId(tbl, au);
     }
+    tbl.newRow();
+    tbl.newCell("colspan=2 align=center");
     for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
       Object act = iter.next();
       if (act instanceof String) {
@@ -561,7 +584,16 @@ public class AuConfig extends LockssServlet {
       displayAddAu();
       return;
     }
-    createAuFromPlugin("Created");
+    String repo = req.getParameter(REPO_TAG);
+    if (!StringUtil.isNullString(repo)) {
+      java.util.List repos = remoteApi.getRepositoryList();
+      if (!repos.contains(repo)) {
+	errMsg = "Nonexistent repository: " + repo;
+	displayAddAu();
+	return;
+      }
+    }
+    createAuFromPlugin("Created", true);
   }
 
   /** Process the DoReactivate button */
@@ -572,15 +604,28 @@ public class AuConfig extends LockssServlet {
       displayAddAu();
       return;
     }
+    fetchAuConfig(aup);
     if (aup.isActiveAu()) {
       updateAu(aup, "Reactivated");
     } else {
-      createAuFromPlugin("Reactivated");
+      createAuFromPlugin("Reactivated", false);
     }
   }
 
-  private void createAuFromPlugin(String msg) throws IOException {
-    formConfig = getAuConfigFromForm(true);
+  private void createAuFromPlugin(String msg, boolean isNew)
+      throws IOException {
+    formConfig = getAuConfigFromForm(isNew);
+    if (isNew) {
+      String repo = req.getParameter(REPO_TAG);
+      if (!StringUtil.isNullString(repo)) {
+	if (!remoteApi.getRepositoryList().contains(repo)) {
+	  errMsg = "Nonexistent repository: " + repo;
+	  displayEditNew();
+	  return;
+	}
+	formConfig.put(PluginManager.AU_PARAM_REPOSITORY, repo);
+      }
+    }
     try {
       AuProxy au =
 	remoteApi.createAndSaveAuConfiguration(plugin, formConfig);
@@ -602,8 +647,13 @@ public class AuConfig extends LockssServlet {
   private void updateAu(AuProxy au, String msg) throws IOException {
     fetchAuConfig(au);
     Configuration formConfig = getAuConfigFromForm(false);
+    // compare new config against current only, not stored config.  AU
+    // config params set in global props file (for forcing crawl, etc.)
+    // cause latter to see changes even when we don't need to update.
+    boolean checkStored = false;
     if (isChanged(auConfig, formConfig) ||
-	isChanged(remoteApi.getStoredAuConfiguration(au), formConfig)) {
+	(checkStored && 
+	 isChanged(remoteApi.getStoredAuConfiguration(au), formConfig))) {
       try {
 	remoteApi.setAndSaveAuConfiguration(au, formConfig);
 	statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
@@ -749,7 +799,11 @@ public class AuConfig extends LockssServlet {
       String key = (String)iter.next();
       putFormVal(p, key);
     }
-    return ConfigManager.fromProperties(p);
+    Configuration res = ConfigManager.fromPropertiesUnsealed(p);
+    if (!isNew) {
+      res.copyConfigTreeFrom(auConfig, PluginManager.AU_PARAM_RESERVED);
+    }
+    return res;
   }
 
   /** True iff both values are null (or null strings) or equal strings */
@@ -805,6 +859,23 @@ public class AuConfig extends LockssServlet {
     sb.append(")");
     btn.attribute("onClick", sb.toString());
     return btn;
+  }
+
+  protected Element radioButton(String label, String key, boolean checked) {
+    return radioButton(label, label, key, checked);
+  }
+
+  protected Element radioButton(String label, String value,
+			       String key, boolean checked) {
+    Composite c = new Composite();
+    Input in = new Input(Input.Radio, key, value);
+    if (checked) {
+      in.check();
+    }
+    c.add(in);
+    c.add(" ");
+    c.add(label);
+    return c;
   }
 
   /** Add auid to form in a hidden field */
