@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.2 2002-11-02 01:51:27 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.3 2002-11-02 02:34:51 troberts Exp $
  */
 
 /*
@@ -55,10 +55,10 @@ public abstract class BaseCachedUrl implements CachedUrl {
   }
 
   /**
-   * Overrides normal <code>toString()</code> to return the url for this cacher
+   * Overrides normal <code>toString()</code> to return a string like "BCU: <url>"
    */
   public String toString(){
-    return url;
+    return "BCU: "+url;
   }
 
   /**
