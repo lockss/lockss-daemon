@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.54 2004-10-18 06:14:08 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.55 2005-01-04 03:00:30 tlipkis Exp $
  */
 
 /*
@@ -305,7 +305,7 @@ public class TestPluginManager extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
     } catch (RuntimeException e) {
-      fail("createAU threw RuntimeException");
+      fail("createAU threw RuntimeException", e);
     }
 
   }
@@ -345,7 +345,7 @@ public class TestPluginManager extends LockssTestCase {
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
     } catch (RuntimeException e) {
-      fail("createAU threw RuntimeException");
+      fail("createAU threw RuntimeException", e);
     }
 
   }
@@ -387,7 +387,7 @@ public class TestPluginManager extends LockssTestCase {
       mgr.deactivateAu(au);
       assertTrue(mgr.getInactiveAuIds().contains(auId));
     } catch (Exception ex) {
-      fail("Deactivating au should not have thrown: " + ex);
+      fail("Deactivating au should not have thrown", ex);
     }
 
   }
@@ -410,7 +410,7 @@ public class TestPluginManager extends LockssTestCase {
     try {
       mgr.deleteAuConfiguration(au1);
     } catch (Exception e) {
-      fail("Deleting au config by AU reference should not have thrown: " + e);
+      fail("Deleting au config by AU reference should not have thrown", e);
     }
 
     // Test creating and deleting by au ID.
@@ -419,7 +419,7 @@ public class TestPluginManager extends LockssTestCase {
     try {
       mgr.deleteAuConfiguration(au2.getAuId());
     } catch (Exception e) {
-      fail("Deleting au config by AU ID should not have thrown: " + e);
+      fail("Deleting au config by AU ID should not have thrown", e);
     }
 
     // Test setAndSaveAuConfiguration
@@ -430,7 +430,7 @@ public class TestPluginManager extends LockssTestCase {
 
       mgr.deleteAu(au3);
     } catch (Exception e) {
-      fail("Deleting AU should not have thrown: " + e);
+      fail("Deleting AU should not have thrown", e);
     }
   }
 
@@ -453,6 +453,26 @@ public class TestPluginManager extends LockssTestCase {
     mgr.putAuInMap(mau3);
     mgr.putAuInMap(mau1);
     assertEquals(ListUtil.list(mau1, mau2, mau3, mau4, mau5), mgr.getAllAus());
+  }
+
+  public void testTitleSets() throws Exception {
+    String ts1p = PluginManager.PARAM_TITLE_SETS + ".s1.";
+    String ts2p = PluginManager.PARAM_TITLE_SETS + ".s2.";
+    String title1 = "Title Set 1";
+    String title2 = "Set of Titles";
+    String path1 = "[journalTitle='Dog Journal']";
+    String path2 = "[journalTitle=\"Dog Journal\" or pluginName=\"plug2\"]";
+    Properties p = new Properties();
+    p.setProperty(ts1p+"class", "xpath");
+    p.setProperty(ts1p+"name", title1);
+    p.setProperty(ts1p+"xpath", path1);
+    p.setProperty(ts2p+"class", "xpath");
+    p.setProperty(ts2p+"name", title2);
+    p.setProperty(ts2p+"xpath", path2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    Map map = mgr.getTitleSetMap();
+    assertEquals(new TitleSetXpath(theDaemon, title1, path1), map.get(title1));
+    assertEquals(new TitleSetXpath(theDaemon, title2, path2), map.get(title2));
   }
 
   static class MyMockLockssDaemon extends MockLockssDaemon {

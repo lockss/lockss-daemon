@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.119 2004-12-12 23:01:01 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.120 2005-01-04 03:00:30 tlipkis Exp $
  */
 
 /*
@@ -110,7 +110,15 @@ public class PluginManager
   public static final String DEFAULT_PREFERRED_PLUGIN_TYPE =
     "xml";
 
-  static final String PARAM_TITLE_DB = ConfigManager.PARAM_TITLE_DB;
+  /** Root of TitleSet definitions.  */
+  static final String PARAM_TITLE_SETS = Configuration.PREFIX + "titleSet";
+
+  static final String TITLE_SET_PARAM_CLASS = "class";
+  static final String TITLE_SET_PARAM_NAME = "name";
+
+  static final String TITLE_SET_CLASS_XPATH = "xpath";
+  static final String TITLE_SET_XPATH_XPATH = "xpath";
+
 
   // prefix for non-plugin AU params
   public static final String AU_PARAM_RESERVED = "reserved";
@@ -158,6 +166,12 @@ public class PluginManager
   private long registryTimeout = Configuration.
     getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
 					    DEFAULT_PLUGIN_LOAD_TIMEOUT);
+
+  private Map titleMap = null;
+  private List allTitles = null;
+  private List allTitleConfigs = null;
+  private Map titleSetMap;
+  private TreeSet titleSets;
 
   public static final int PREFER_XML_PLUGIN = 0;
   public static final int PREFER_CLASS_PLUGIN = 1;
@@ -237,6 +251,11 @@ public class PluginManager
       initKeystore();
     }
 
+    // Process any changed TitleSets
+    if (changedKeys.contains(PARAM_TITLE_SETS)) {
+      configureTitleSets(config);
+    }
+
     // Don't load or start other plugins until the daemon is running.
     if (loadablePluginsReady) {
       // Process loadable plugin registries.
@@ -270,6 +289,59 @@ public class PluginManager
       }
       currentAllPlugs = allPlugs;
     }
+  }
+
+  private void configureTitleSets(Configuration config) {
+    Map map = new HashMap();
+    TreeSet list = new TreeSet();
+    Configuration allSets = config.getConfigTree(PARAM_TITLE_SETS);
+    log.debug("configureTitleSets() " + allSets);
+    for (Iterator iter = allSets.nodeIterator(); iter.hasNext(); ) {
+      String id = (String)iter.next();
+      Configuration setDef = allSets.getConfigTree(id);
+      try {
+	TitleSet ts = createTitleSet(setDef);
+	if (ts != null) {
+	  if (log.isDebug2()) {
+	    log.debug2("Adding TitleSet: " + ts);
+	  }
+	  list.add(ts);
+	} else {
+	  log.warning("Null TitleSet created from: " + setDef);
+	}
+      } catch (RuntimeException e) {
+	log.warning("Error creating TitleSet from: " + setDef, e);
+      }
+    }
+    list.add(new TitleSetActiveAus(theDaemon));
+    list.add(new TitleSetAllTitles(theDaemon));
+    for (Iterator iter = list.iterator(); iter.hasNext(); ) {
+      TitleSet ts = (TitleSet)iter.next();
+      map.put(ts.getName(), ts);
+    }    
+    titleSets = list;
+    titleSetMap = map;
+  }
+
+  private TitleSet createTitleSet(Configuration config) {
+    String cls = config.get(TITLE_SET_PARAM_CLASS);
+    String name = config.get(TITLE_SET_PARAM_NAME);
+    if (cls.equals(TITLE_SET_CLASS_XPATH)) {
+      return new TitleSetXpath(getDaemon(), name,
+			       config.get(TITLE_SET_XPATH_XPATH));
+    }
+    return null;
+  }
+
+  /** Return the TitleSet name to {@link org.lockss.daemon.TitleSet}
+   * mapping */
+  public Map getTitleSetMap() {
+    return titleSetMap;
+  }
+
+  /** Return the TitleSets, in display order */
+  public Collection getTitleSets() {
+    return titleSets;
   }
 
   /**
@@ -580,7 +652,8 @@ public class PluginManager
   public void setAndSaveAuConfiguration(ArchivalUnit au,
 					Properties auProps)
       throws ArchivalUnit.ConfigurationException, IOException {
-    setAndSaveAuConfiguration(au, ConfigManager.fromProperties(auProps));
+    setAndSaveAuConfiguration(au,
+			      ConfigManager.fromPropertiesUnsealed(auProps));
   }
 
   /**
@@ -601,12 +674,19 @@ public class PluginManager
   }
 
   private void updateAuConfigFile(ArchivalUnit au, Configuration auConf)
-      throws ArchivalUnit.ConfigurationException, IOException {
+      throws IOException {
+    if (!auConf.isEmpty()) {
+      if (!auConf.isSealed()) {
+	auConf.put(AU_PARAM_DISPLAY_NAME, au.getName());
+      } else if (StringUtil.isNullString(auConf.get(AU_PARAM_DISPLAY_NAME))) {
+	log.debug("Can't add name to sealed AU config", new Throwable());
+      }
+    }
     updateAuConfigFile(au.getAuId(), auConf);
   }
 
   public void updateAuConfigFile(String auid, Configuration auConf)
-      throws ArchivalUnit.ConfigurationException, IOException {
+      throws IOException {
     String prefix = PARAM_AU_TREE + "." + configKeyFromAuId(auid);
     Configuration fqConfig = auConf.addPrefix(prefix);
     configMgr.updateAuConfigFile(fqConfig, prefix);
@@ -656,8 +736,7 @@ public class PluginManager
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deleteAuConfiguration(ArchivalUnit au)
-      throws ArchivalUnit.ConfigurationException, IOException {
+  public void deleteAuConfiguration(ArchivalUnit au) throws IOException {
     log.debug("Deleting AU config: " + au);
     updateAuConfigFile(au, ConfigManager.EMPTY_CONFIGURATION);
   }
@@ -669,8 +748,7 @@ public class PluginManager
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deleteAuConfiguration(String auid)
-      throws ArchivalUnit.ConfigurationException, IOException {
+  public void deleteAuConfiguration(String auid) throws IOException {
     log.debug("Deleting AU config: " + auid);
     updateAuConfigFile(auid, ConfigManager.EMPTY_CONFIGURATION);
     // might be deleting an inactive au
@@ -683,12 +761,10 @@ public class PluginManager
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deactivateAuConfiguration(ArchivalUnit au)
-      throws ArchivalUnit.ConfigurationException, IOException {
+  public void deactivateAuConfiguration(ArchivalUnit au) throws IOException {
     log.debug("Deactivating AU: " + au);
     Configuration config = getStoredAuConfiguration(au);
     config.put(AU_PARAM_DISABLED, "true");
-    config.put(AU_PARAM_DISPLAY_NAME, au.getName());
     updateAuConfigFile(au, config);
   }
 
@@ -698,8 +774,7 @@ public class PluginManager
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deleteAu(ArchivalUnit au)
-      throws ArchivalUnit.ConfigurationException, IOException {
+  public void deleteAu(ArchivalUnit au) throws IOException {
     deleteAuConfiguration(au);
     if (isRemoveStoppedAus()) {
       stopAu(au);
@@ -712,8 +787,7 @@ public class PluginManager
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deactivateAu(ArchivalUnit au)
-      throws ArchivalUnit.ConfigurationException, IOException {
+  public void deactivateAu(ArchivalUnit au) throws IOException {
     deactivateAuConfiguration(au);
     if (isRemoveStoppedAus()) {
       String auid = au.getAuId();
@@ -776,23 +850,6 @@ public class PluginManager
     String aukey = configKeyFromAuId(auid);
     String prefix = PARAM_AU_TREE + "." + aukey;
     return ConfigManager.getCurrentConfig().getConfigTree(prefix);
-  }
-
-  // This *really* doesn't belong here.  Should there be an AuUtils?
-  /**
-   * Return the size of the AU, calculating it if necessary.
-   * @param au the AU
-   * @return the AU's total content size.
-   */
-  public static long getAuContentSize(ArchivalUnit au) {
-    LockssDaemon daemon = au.getPlugin().getDaemon();
-    LockssRepository repo = daemon.getLockssRepository(au);
-    try {
-      RepositoryNode repoNode = repo.getNode(au.getAuCachedUrlSet().getUrl());
-      return repoNode.getTreeContentSize(null);
-    } catch (MalformedURLException ignore) {
-      return -1;
-    }
   }
 
   // Loadable Plugin Support
@@ -870,7 +927,7 @@ public class PluginManager
 	return xmlPlugin;
       } else {
 	// Error -- this plugin was not found.
-	log.error(pluginName + " could not be loaded.");
+	log.error(pluginName + " could not be loaded.", new Throwable());
 	return null;
       }
     }
@@ -1046,12 +1103,33 @@ public class PluginManager
     return (Collection)getTitleMap().get(title);
   }
 
-  private Map titleMap = null;
-  private List allTitles = null;
+  /** Return all known TitleConfigs */
+  public List findAllTitleConfigs() {
+    if (allTitleConfigs == null) {
+      List titles = findAllTitles();
+      List res = new ArrayList(titles.size());
+      for (Iterator titer = titles.iterator(); titer.hasNext();) {
+	String title = (String)titer.next();
+	for (Iterator piter = getTitlePlugins(title).iterator();
+	     piter.hasNext();) {
+	  Plugin plugin = (Plugin)piter.next();
+	  TitleConfig tc = plugin.getTitleConfig(title);
+	  if (tc != null) {
+	    res.add(tc);
+	  } else {
+	    log.warning("getTitleConfig(" + plugin + ", " + title + ") = null");
+	  }
+	}
+      }
+      allTitleConfigs = res;
+    }
+    return allTitleConfigs;
+  }
 
   public void resetTitles() {
     titleMap = null;
     allTitles = null;
+    allTitleConfigs = null;
   }
 
   public Map getTitleMap() {
