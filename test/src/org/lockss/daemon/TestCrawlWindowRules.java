@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlWindowRules.java,v 1.1 2003-10-09 22:55:11 eaalto Exp $
+ * $Id: TestCrawlWindowRules.java,v 1.1.2.1 2003-10-09 23:20:05 eaalto Exp $
  */
 
 /*
