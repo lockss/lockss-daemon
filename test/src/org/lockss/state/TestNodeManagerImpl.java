@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.110 2004-04-08 01:11:57 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.110.4.1 2004-06-02 19:26:28 clairegriffin Exp $
  */
 
 /*
@@ -793,13 +793,32 @@ public class TestNodeManagerImpl extends LockssTestCase {
     repairNodes.put(TEST_URL, ListUtil.list(url1, url2));
 
     nodeManager.markNodesForRepair(ListUtil.list(url1, url2), null,
-        new MockCachedUrlSet(TEST_URL), true, null);
+                                   new MockCachedUrlSet(TEST_URL), true, null);
 
     // first repair scheduled
     assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(url1));
     // second repair scheduled
     assertEquals(MockCrawlManager.SCHEDULED, crawlManager.getUrlStatus(url2));
 
+  }
+
+  public void testRepairAtParentClearsChildren() throws Exception {
+    String url1 = TEST_URL + "/branch1/file1.doc";
+    String url2 = TEST_URL + "/branch2/file1.doc";
+    CachedUrlSet cus = getCus(mau, TEST_URL);
+    DamagedNodeSet damagedNodes = nodeManager.damagedNodes;
+    // populate the damagedNodes
+    damagedNodes.addToDamage(url1);
+    damagedNodes.addToDamage(url2);
+    damagedNodes.addToDamage(TEST_URL);
+    assertTrue(damagedNodes.containsWithDamage(url1));
+    assertTrue(damagedNodes.containsWithDamage(url2));
+    assertTrue(damagedNodes.containsWithDamage(cus.getUrl()));
+    // clear our parent
+    damagedNodes.clearDamage(cus);
+    assertFalse(damagedNodes.containsWithDamage(url1));
+    assertFalse(damagedNodes.containsWithDamage(url2));
+    assertFalse(damagedNodes.containsWithDamage(cus.getUrl()));
   }
 
   public void testHandleAuPolls() throws Exception {

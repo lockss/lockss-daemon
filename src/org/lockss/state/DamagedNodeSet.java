@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.8.2.1 2004-05-19 21:57:58 clairegriffin Exp $
+ * $Id: DamagedNodeSet.java,v 1.8.2.2 2004-06-02 19:26:27 clairegriffin Exp $
  */
 
 /*
@@ -104,10 +104,50 @@ public class DamagedNodeSet {
   }
 
   /**
+   * Returns true if the CUS has damage.
+   * @param cus CachedUrlSet
+   * @return boolean true iff has damage.
+   */
+  synchronized public boolean hasDamage(CachedUrlSet cus) {
+    boolean hasDamage = false;
+    // check if this url is damaged
+    if (nodesWithDamage.contains(cus.getUrl())) {
+      return true;
+    }
+    // check if the CUS contains any of the other damaged nodes
+    Iterator damagedIt = nodesWithDamage.iterator();
+    while (damagedIt.hasNext()) {
+      String url = (String) damagedIt.next();
+      if (cus.containsUrl(url)) {
+        return true;
+      }
+    }
+    return hasDamage;
+  }
+
+  synchronized public void clearDamage(CachedUrlSet cus) {
+    if(nodesWithDamage.contains(cus.getUrl())) {
+      Iterator damagedIt = nodesWithDamage.iterator();
+      ArrayList clearList = new ArrayList();
+      clearList.add(cus.getUrl());
+      while (damagedIt.hasNext()) {
+        String url = (String) damagedIt.next();
+        if (cus.containsUrl(url)) {
+          clearList.add(url);
+        }
+      }
+      for (int idx = 0; idx < clearList.size(); idx++) {
+        nodesWithDamage.remove(clearList.get(idx));
+      }
+      repository.storeDamagedNodeSet(this);
+    }
+  }
+
+  /**
    * Add this url to the list of nodes with damage, and write-through.
    * @param nodeUrl the damaged url
    */
-  public void addToDamage(String nodeUrl) {
+  synchronized public void addToDamage(String nodeUrl) {
     nodesWithDamage.add(nodeUrl);
     repository.storeDamagedNodeSet(this);
   }
@@ -118,7 +158,7 @@ public class DamagedNodeSet {
    * @param cus the repairing CUS
    * @param nodeUrls the urls to repair
    */
-  public void addToRepair(CachedUrlSet cus, Collection nodeUrls) {
+  synchronized public void addToRepair(CachedUrlSet cus, Collection nodeUrls) {
     // all repairs are associated with a specific CUS
     ArrayList urlArray = (ArrayList)cusToRepair.get(cus.getUrl());
     // merge the urls with any already stored
