@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.14 2003-04-02 23:28:37 tal Exp $
+ * $Id: LcapRouter.java,v 1.15 2003-04-03 02:28:48 tal Exp $
  */
 
 /*
@@ -132,6 +132,7 @@ public class LcapRouter extends BaseLockssManager {
       beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL, 0);
       if (beaconInterval != 0) {
 	ensureBeaconRunning();
+	updateBeacon();
       } else {
 	stopBeacon();
       }
