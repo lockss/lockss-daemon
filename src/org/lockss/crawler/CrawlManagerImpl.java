@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.30 2003-05-06 01:01:09 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.31 2003-05-07 00:29:18 troberts Exp $
  */
 
 /*
@@ -85,6 +85,7 @@ public class CrawlManagerImpl extends BaseLockssManager
   private static final int DEFAULT_PRIORITY = Thread.NORM_PRIORITY-1;
 
   private Map newContentCrawls = new HashMap();
+  private Map repairCrawls = new HashMap();
   private static ActivityRegulator regulator;
   private Set activeCrawls = new HashSet();
 
@@ -158,6 +159,7 @@ public class CrawlManagerImpl extends BaseLockssManager
           new CrawlThread(au, ListUtil.list(url.toString()),
                           false, Deadline.MAX, ListUtil.list(cb), cookie);
       crawlThread.start();
+      addCrawl(repairCrawls, au, crawlThread.getCrawler());
     } else {
       logger.debug3("Repair aborted due to activity lock.");
     }
@@ -217,20 +219,20 @@ public class CrawlManagerImpl extends BaseLockssManager
       new CrawlThread(au, au.getNewContentCrawlUrls(),
 		      true, Deadline.MAX, callBackList, cookie);
     crawlThread.start();
-    addNewContentCrawl(au, crawlThread.getCrawler());
+    addCrawl(newContentCrawls, au, crawlThread.getCrawler());
   }
 
-  private void addNewContentCrawl(ArchivalUnit au, Crawler crawler) {
-    synchronized (newContentCrawls) {
-      List crawlsForAu = (List)newContentCrawls.get(au.getAUId());
+  private void addCrawl(Map crawlMap, ArchivalUnit au, Crawler crawler) {
+    synchronized (crawlMap) {
+      List crawlsForAu = (List)crawlMap.get(au.getAUId());
       if (crawlsForAu == null) {
 	crawlsForAu = new ArrayList();
-	newContentCrawls.put(au.getAUId(), crawlsForAu);
+	crawlMap.put(au.getAUId(), crawlsForAu);
       }
       crawlsForAu.add(crawler);
     }
   }
-
+  
   private void triggerCrawlCallbacks(Vector callbacks) {
     if (callbacks != null) {
       Iterator it = callbacks.iterator();
@@ -319,6 +321,7 @@ public class CrawlManagerImpl extends BaseLockssManager
   private class Status implements StatusAccessor {
 
     private static final String AU_COL_NAME = "au";
+    private static final String CRAWL_TYPE = "crawl_type";
     private static final String START_TIME_COL_NAME = "start";
     private static final String END_TIME_COL_NAME = "end";
     private static final String NUM_URLS_PARSED = "num_urls_parsed";
@@ -329,6 +332,8 @@ public class CrawlManagerImpl extends BaseLockssManager
     private List colDescs =
       ListUtil.list(
 		    new ColumnDescriptor(AU_COL_NAME, "Journal Volume",
+					 ColumnDescriptor.TYPE_STRING),
+		    new ColumnDescriptor(CRAWL_TYPE, "Crawl Type",
 					 ColumnDescriptor.TYPE_STRING),
 		    new ColumnDescriptor(START_TIME_COL_NAME, "Start Time",
 					 ColumnDescriptor.TYPE_DATE),
@@ -345,44 +350,58 @@ public class CrawlManagerImpl extends BaseLockssManager
 		    );
 
 
+    private static final String NC_TYPE = "New Content";
+    private static final String REPAIR_TYPE = "Repair";
 
     private List getRows(String key) {
       List rows = new ArrayList();
       if (key == null) {
-	return getAllNewContentCrawls();
+	return getAllCrawls();
       }
 
-      synchronized(newContentCrawls) {
-	List crawlsForAu = (List) newContentCrawls.get(key);
+      addCrawlsFromMap(key, newContentCrawls, NC_TYPE, rows);
+      addCrawlsFromMap(key, repairCrawls, REPAIR_TYPE, rows);
+      return rows;
+    }
+
+    private void addCrawlsFromMap(String key, Map crawlMap, 
+				  String type, List rows) {
+      synchronized(crawlMap) {
+	List crawlsForAu = (List) crawlMap.get(key);
 	if (crawlsForAu != null) {
 	  Iterator it = crawlsForAu.iterator();
 	  while (it.hasNext()) {
-	    rows.add(makeRow((Crawler) it.next()));
+	    rows.add(makeRow(type, (Crawler) it.next()));
 	  }
 	}
-      }
-      return rows;
+      } 
     }
 
-    private List getAllNewContentCrawls() {
-      List rows = new ArrayList();
-      synchronized(newContentCrawls) {
-	Iterator keys = newContentCrawls.keySet().iterator();
+    private List getAllCrawls() {
+      List list = new ArrayList();
+      getAllCrawlsFromMap(list, NC_TYPE, newContentCrawls);
+      getAllCrawlsFromMap(list, REPAIR_TYPE, repairCrawls);
+      return list;
+    }
+
+    private void getAllCrawlsFromMap(List rows, String type, Map crawlMap) {
+      synchronized(crawlMap) {
+	Iterator keys = crawlMap.keySet().iterator();
 	while (keys.hasNext()) {
-	  List crawls = (List)newContentCrawls.get((String)keys.next());
+	  List crawls = (List)crawlMap.get((String)keys.next());
 	  Iterator it = crawls.iterator();
 	  while (it.hasNext()) {
-	    rows.add(makeRow((Crawler)it.next()));
+	    rows.add(makeRow(type, (Crawler)it.next()));
 	  }
 	}
       }
-      return rows;
     }
 
-    private Map makeRow(Crawler crawler) {
+    private Map makeRow(String type, Crawler crawler) {
       Map row = new HashMap();
       ArchivalUnit au = crawler.getAU();
       row.put(AU_COL_NAME, au.getName());
+      row.put(CRAWL_TYPE, type);
       row.put(START_TIME_COL_NAME, makeNullOrLong(crawler.getStartTime()));
       row.put(END_TIME_COL_NAME, makeNullOrLong(crawler.getEndTime()));
       row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
