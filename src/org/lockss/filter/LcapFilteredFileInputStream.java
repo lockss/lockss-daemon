@@ -1,6 +1,6 @@
-// ========================================================================
-// $Id: LcapFilteredFileInputStream.java,v 1.1 2003-07-23 00:19:14 troberts Exp $
-// ========================================================================
+/*
+ * $Id: LcapFilteredFileInputStream.java,v 1.2 2003-07-25 23:12:49 troberts Exp $
+ */
 
 package org.lockss.filter;
 import java.util.*;
