@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.21 2003-03-12 02:43:29 aalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.22 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
 
   static final String MAPPING_FILE_NAME = "pollmapping.xml";
   static final String HISTORY_FILE_NAME = "history.xml";
+  static final String NODE_FILE_NAME = "nodestate.xml";
   static final String AU_FILE_NAME = "au_state.xml";
   // this contains a '#' so that it's not defeatable by strings which
   // match the prefix in a url (like '../tmp/')
@@ -83,7 +84,7 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     rootDir = repository_location;
   }
 
-  public HistoryRepositoryImpl() {}
+  public HistoryRepositoryImpl() { }
 
   /**
    * init the plugin manager.
@@ -125,6 +126,43 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     theRepository = null;
   }
 
+  public void storeNodeState(NodeState nodeState) {
+    try {
+      File nodeDir = new File(getNodeLocation(nodeState.getCachedUrlSet()));
+      if (!nodeDir.exists()) {
+        nodeDir.mkdirs();
+      }
+      File nodeFile = new File(nodeDir, NODE_FILE_NAME);
+      Marshaller marshaller = new Marshaller(new FileWriter(nodeFile));
+      marshaller.setMapping(getMapping());
+      marshaller.marshal(new NodeStateBean(nodeState));
+    } catch (Exception e) {
+      logger.error("Couldn't store node state: ", e);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't store node state.");
+    }
+  }
+
+  public NodeState loadNodeState(CachedUrlSet cus) {
+    try {
+      File nodeFile = new File(getNodeLocation(cus) + File.separator +
+                               NODE_FILE_NAME);
+      if (!nodeFile.exists()) {
+        return new NodeStateImpl(cus,
+                                 new CrawlState(-1, CrawlState.FINISHED, 0),
+                                 new ArrayList(), this);
+      }
+      Unmarshaller unmarshaller = new Unmarshaller(NodeStateBean.class);
+      unmarshaller.setMapping(getMapping());
+      NodeStateBean nsb = (NodeStateBean)unmarshaller.unmarshal(
+          new FileReader(nodeFile));
+      return new NodeStateImpl(cus, nsb, this);
+    } catch (Exception e) {
+      logger.error("Couldn't load node state: ", e);
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load node state.");
+    }
+  }
 
 
   public void storePollHistories(NodeState nodeState) {
@@ -142,7 +180,8 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       marshaller.marshal(nhb);
     } catch (Exception e) {
       logger.error("Couldn't store poll history: ", e);
-      throw new LockssRepository.RepositoryStateException("Couldn't store history.");
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't store history.");
     }
   }
 
@@ -159,19 +198,22 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       }
       Unmarshaller unmarshaller = new Unmarshaller(NodeHistoryBean.class);
       unmarshaller.setMapping(getMapping());
-      NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(new FileReader(nodeFile));
+      NodeHistoryBean nhb = (NodeHistoryBean)unmarshaller.unmarshal(
+          new FileReader(nodeFile));
       if (nhb.historyBeans==null) {
         logger.warning("Empty history list loaded.");
         nhb.historyBeans = new ArrayList();
       }
-      ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList(nhb.historyBeans));
+      ((NodeStateImpl)nodeState).setPollHistoryBeanList(
+          new ArrayList(nhb.historyBeans));
     } catch (org.exolab.castor.xml.MarshalException me) {
       logger.error("Parsing exception.  Moving file to '.old'");
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
     } catch (Exception e) {
       logger.error("Couldn't load poll history: ", e);
-      throw new LockssRepository.RepositoryStateException("Couldn't load history.");
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load history.");
     }
   }
 
@@ -187,7 +229,8 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       marshaller.marshal(new AuStateBean(auState));
     } catch (Exception e) {
       logger.error("Couldn't store au state: ", e);
-      throw new LockssRepository.RepositoryStateException("Couldn't store history.");
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't store au state.");
     }
   }
 
@@ -200,13 +243,15 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
       }
       Unmarshaller unmarshaller = new Unmarshaller(AuStateBean.class);
       unmarshaller.setMapping(getMapping());
-      AuStateBean asb = (AuStateBean)unmarshaller.unmarshal(new FileReader(auFile));
+      AuStateBean asb = (AuStateBean)unmarshaller.unmarshal(
+          new FileReader(auFile));
       return new AuState(au, asb.getLastCrawlTime(),
                          asb.getLastTopLevelPollTime(),
                          asb.getLastTreeWalkTime());
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
-      throw new LockssRepository.RepositoryStateException("Couldn't load au state.");
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load au state.");
     }
   }
 
@@ -214,8 +259,10 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     if (rootDir==null) {
       rootDir = Configuration.getParam(PARAM_HISTORY_LOCATION);
       if (rootDir==null) {
-        logger.error("Couldn't get "+PARAM_HISTORY_LOCATION+" from Configuration");
-        throw new LockssRepository.RepositoryStateException("Couldn't load param.");
+        logger.error("Couldn't get "+PARAM_HISTORY_LOCATION+
+                     " from Configuration");
+        throw new LockssRepository.RepositoryStateException(
+            "Couldn't load param.");
       }
     }
     return new HistoryRepositoryImpl(rootDir);
@@ -229,8 +276,8 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    String auLoc = LockssRepositoryServiceImpl.mapAuToFileLocation(buffer.toString(),
-        cus.getArchivalUnit());
+    String auLoc = LockssRepositoryServiceImpl.mapAuToFileLocation(
+        buffer.toString(), cus.getArchivalUnit());
     String urlStr = (String)cus.getUrl();
     if (AuUrl.isAuUrl(urlStr)) {
       return auLoc;
@@ -268,7 +315,8 @@ public class HistoryRepositoryImpl implements HistoryRepository, LockssManager {
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    return LockssRepositoryServiceImpl.mapAuToFileLocation(buffer.toString(), au);
+    return LockssRepositoryServiceImpl.mapAuToFileLocation(buffer.toString(),
+        au);
   }
 
   protected Mapping getMapping() throws Exception {

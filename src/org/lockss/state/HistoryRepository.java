@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepository.java,v 1.3 2003-02-24 22:13:42 claire Exp $
+ * $Id: HistoryRepository.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -42,6 +42,21 @@ import org.lockss.plugin.*;
  * storage of NodeStates.
  */
 public interface HistoryRepository {
+
+  /**
+   * Stores the current node state info, except the histories.
+   * @param nodeState the NodeState
+   */
+  public void storeNodeState(NodeState nodeState);
+
+  /**
+   * Loads the current node state info, except the histories.  Returns a new
+   * NodeState if none found.
+   * @param cus the CachedUrlSet
+   * @return a {@link NodeState}
+   */
+  public NodeState loadNodeState(CachedUrlSet cus);
+
   /**
    * Stores PollHistories for a given NodeState.
    * @param nodeState to store
@@ -63,7 +78,7 @@ public interface HistoryRepository {
   /**
    * Loads the AuState for a particular ArchivalUnit
    * @param au the ArchivalUnit state to load
-   * @return the AuState
+   * @return the {@link AuState}
    */
   public AuState loadAuState(ArchivalUnit au);
 }

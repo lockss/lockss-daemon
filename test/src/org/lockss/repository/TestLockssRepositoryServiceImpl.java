@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryServiceImpl.java,v 1.4 2003-03-08 03:37:26 aalto Exp $
+ * $Id: TestLockssRepositoryServiceImpl.java,v 1.5 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -190,7 +190,8 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
     LockssRepository repo1 = lrsi.getLockssRepository(mau);
     assertNotNull(repo1);
     mau.setAuId(auId + "test");
-    LockssRepository repo2 = lrsi.addLockssRepository(mau);
+    lrsi.addLockssRepository(mau);
+    LockssRepository repo2 = lrsi.getLockssRepository(mau);
     assertTrue(repo1 != repo2);
     mau.setAuId(auId);
     repo2 = lrsi.getLockssRepository(mau);

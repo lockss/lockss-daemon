@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -31,6 +31,8 @@ import java.util.Vector;
 import org.lockss.test.*;
 import org.lockss.util.Logger;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.repository.LockssRepositoryServiceImpl;
+import org.lockss.daemon.TestConfiguration;
 
 public class TestNodeManagerServiceImpl extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -44,7 +46,10 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+    String s = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
+        tempDirPath + "\n" + HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
+        "=" + tempDirPath;
+    TestConfiguration.setCurrentConfigFromString(s);
 
     mau = new MockArchivalUnit();
     MockCachedUrlSet mcus =

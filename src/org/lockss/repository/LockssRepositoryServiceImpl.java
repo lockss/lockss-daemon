@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.6 2003-03-13 03:27:08 claire Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.7 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -145,7 +145,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
     return lockssRepo;
   }
 
-  public synchronized LockssRepository addLockssRepository(ArchivalUnit au) {
+  public synchronized void addLockssRepository(ArchivalUnit au) {
     LockssRepository lockssRepo = (LockssRepository)auMap.get(au);
     if (lockssRepo==null) {
       if (cacheLocation==null) {
@@ -165,7 +165,6 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
       lockssRepo.initService(theDaemon);
       lockssRepo.startService();
     }
-    return lockssRepo;
   }
 
   /**

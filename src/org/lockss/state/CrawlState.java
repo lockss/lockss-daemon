@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.3 2003-02-24 22:13:42 claire Exp $
+ * $Id: CrawlState.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -53,6 +53,15 @@ public class CrawlState {
   int type;
   int status;
   long startTime;
+
+  // only for marshalling
+  CrawlState() { }
+
+  CrawlState(CrawlStateBean bean) {
+    this.type = bean.getType();
+    this.status = bean.getStatus();
+    this.startTime = bean.getStartTime();
+  }
 
   CrawlState(int type, int status, long startTime) {
     this.type = type;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.18 2003-03-12 02:43:29 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.19 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -47,6 +47,8 @@ import org.lockss.protocol.IdentityManager;
 import org.lockss.repository.LockssRepositoryServiceImpl;
 import java.io.*;
 import java.net.MalformedURLException;
+import org.lockss.util.Deadline;
+import org.lockss.daemon.RangeCachedUrlSetSpec;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
@@ -231,6 +233,55 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(456, auState.getLastTreeWalkTime());
     assertEquals(mau.getAUId(), auState.getArchivalUnit().getAUId());
   }
+
+  public void testStoreNodeState() throws Exception {
+    CachedUrlSet mcus = new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(
+        "http://www.example.com"));
+    CrawlState crawl = new CrawlState(1, 2, 123);
+    List polls = new ArrayList(2);
+    PollState poll1 = new PollState(1, "sdf", "jkl", 2, 123, Deadline.at(456));
+    PollState poll2 = new PollState(2, "abc", "def", 3, 321, Deadline.at(654));
+    polls.add(poll1);
+    polls.add(poll2);
+    NodeState nodeState = new NodeStateImpl(mcus, crawl, polls, repository);
+    repository.storeNodeState(nodeState);
+    String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
+    filePath = LockssRepositoryServiceImpl.mapUrlToFileLocation(filePath,
+        "http://www.example.com/"+HistoryRepositoryImpl.NODE_FILE_NAME);
+    File xmlFile = new File(filePath);
+    assertTrue(xmlFile.exists());
+
+    nodeState = null;
+    nodeState = repository.loadNodeState(mcus);
+    assertSame(mcus, nodeState.getCachedUrlSet());
+
+    assertEquals(1, nodeState.getCrawlState().getType());
+    assertEquals(2, nodeState.getCrawlState().getStatus());
+    assertEquals(123, nodeState.getCrawlState().getStartTime());
+
+    Iterator pollIt = nodeState.getActivePolls();
+    assertTrue(pollIt.hasNext());
+    PollState loadedPoll = (PollState)pollIt.next();
+    assertEquals(1, loadedPoll.getType());
+    assertEquals("sdf", loadedPoll.getLwrBound());
+    assertEquals("jkl", loadedPoll.getUprBound());
+    assertEquals(2, loadedPoll.getStatus());
+    assertEquals(123, loadedPoll.getStartTime());
+    assertEquals(456, loadedPoll.getDeadline().getExpirationTime());
+
+    assertTrue(pollIt.hasNext());
+    loadedPoll = (PollState)pollIt.next();
+    assertEquals(2, loadedPoll.getType());
+    assertEquals("abc", loadedPoll.getLwrBound());
+    assertEquals("def", loadedPoll.getUprBound());
+    assertEquals(3, loadedPoll.getStatus());
+    assertEquals(321, loadedPoll.getStartTime());
+    assertEquals(654, loadedPoll.getDeadline().getExpirationTime());
+    assertFalse(pollIt.hasNext());
+
+  }
+
 
   private PollHistoryBean createPollHistoryBean(int voteCount) throws Exception {
     PollState state = new PollState(1, "lwr", "upr", 2, 5, null);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.7 2003-03-03 22:48:08 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.8 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public static final String EMPTY_PAGE = "";
   public static final String LINKLESS_PAGE = "Nothing here";
 
-  private MockLockssDaemon daemon;
+  private MockLockssDaemon theDaemon;
   private MockNodeManager nodeManager;
 
   public TestCrawlManagerImpl(String msg) {
@@ -59,7 +59,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     mau = new MockArchivalUnit();
-    
+
     urlList = ListUtil.list(startUrl);
     MockCachedUrlSet cus = new MockCachedUrlSet(mau, null);
     mau.setAUCachedUrlSet(cus);
@@ -67,23 +67,24 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager = new CrawlManagerImpl();
     mau.setNewContentCrawlUrls(ListUtil.list(startUrl));
 
-    daemon = new MockLockssDaemon();
+    theDaemon = new MockLockssDaemon();
+    theDaemon.setUseMockNodeService(true);
     nodeManager = new MockNodeManager();
-    daemon.setNodeManager(nodeManager, mau);
+    theDaemon.setNodeManager(nodeManager, mau);
 
-    crawlManager.initService(daemon);
+    crawlManager.initService(theDaemon);
   }
 
   public void tearDown() throws Exception {
     nodeManager.stopService();
     crawlManager.stopService();
-    daemon.stopDaemon();
+    theDaemon.stopDaemon();
     super.tearDown();
   }
 
   public void testNullAUForCanTreeWalkStart() {
     try {
-      crawlManager.canTreeWalkStart(null, new TestCrawlCB(Deadline.NEVER), 
+      crawlManager.canTreeWalkStart(null, new TestCrawlCB(Deadline.NEVER),
 				    "blah");
       fail("Didn't throw an IllegalArgumentException on a null AU");
     } catch (IllegalArgumentException iae) {
@@ -106,7 +107,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -118,11 +119,11 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     Deadline deadline = Deadline.in(1000 * 10);
 
 
-    assertFalse(crawlManager.canTreeWalkStart(mau, new TestCrawlCB(deadline), 
+    assertFalse(crawlManager.canTreeWalkStart(mau, new TestCrawlCB(deadline),
 					      null));
 
     while (!deadline.expired()) {
@@ -131,7 +132,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       } catch (InterruptedException ie) {
       }
     }
-    
+
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -139,7 +140,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testTriggersNewContentCallback() {
     Deadline deadline = Deadline.in(1000 * 10);
-    
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
@@ -195,7 +196,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testKicksOffNewThread() {
     BinarySemaphore sem = new BinarySemaphore();
-    
+
     TestCrawlCB cb = new TestCrawlCB(Deadline.NEVER);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
 
@@ -228,13 +229,13 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
-  
+
   public void testBasicRepairCrawl() throws MalformedURLException {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -246,10 +247,10 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     Deadline deadline = Deadline.in(1000 * 10);
 
-    crawlManager.scheduleRepair(mau, new URL(startUrl), 
+    crawlManager.scheduleRepair(mau, new URL(startUrl),
 				new TestCrawlCB(deadline), null);
 
     while (!deadline.expired()) {
@@ -264,7 +265,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
   public void testTriggersRepairCallback() throws MalformedURLException {
     Deadline deadline = Deadline.in(1000 * 10);
-    
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
 
@@ -297,7 +298,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       } catch (InterruptedException ie) {
       }
     }
-    
+
     assertEquals(cookie, cb.getCookie());
 
   }
@@ -322,7 +323,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
     assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
   }
-  
+
 
   private class TestCrawlCB implements CrawlManager.Callback {
     Deadline timer;
@@ -333,7 +334,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       this.timer = timer;
     }
 
-    public void signalCrawlAttemptCompleted(boolean success, 
+    public void signalCrawlAttemptCompleted(boolean success,
 					    Object cookie) {
       called = true;
       this.cookie = cookie;
@@ -364,7 +365,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       this.sem = sem;
       this.maxWaitTime = maxWaitTime;
     }
-   
+
     public void callback() {
       try {
 	sem.take(Deadline.in(maxWaitTime));

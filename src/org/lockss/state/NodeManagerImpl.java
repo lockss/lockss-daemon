@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.58 2003-03-13 03:27:08 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.59 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -49,6 +49,9 @@ import org.lockss.app.*;
 import java.net.URL;
 import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
+import org.apache.commons.collections.LRUMap;
+import org.lockss.repository.RepositoryNode;
+import java.net.MalformedURLException;
 
 /**
  * Implementation of the NodeManager.
@@ -90,13 +93,14 @@ public class NodeManagerImpl implements NodeManager {
 
   private static LockssDaemon theDaemon;
   private NodeManager theManager = null;
-  static HistoryRepository repository;
+  static HistoryRepository historyRepo;
+  private LockssRepository lockssRepo;
   private static CrawlManager theCrawlManager = null;
   long treeWalkEstimate = -1;
 
   private ArchivalUnit managedAu;
   private AuState auState;
-  private TreeMap nodeMap = new TreeMap();
+  private Map nodeMap;
   private Logger logger = Logger.getLogger("NodeManager");
   TreeWalkThread treeWalkThread;
   private boolean treeWalkRunning = false;
@@ -112,15 +116,6 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   /**
-   * For testing only!  Returns a NodeManager.
-   * @param au the ArchivalUnit
-   * @return the NodeManager
-   */
-  public static NodeManager getTestNodeManager(ArchivalUnit au) {
-    return new NodeManagerImpl(au);
-  }
-
-  /**
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
    * @throws LockssDaemonException if we already instantiated this manager
@@ -131,9 +126,9 @@ public class NodeManagerImpl implements NodeManager {
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
-      repository = theDaemon.getHistoryRepository();
-      loadStateTree();
-
+      historyRepo = theDaemon.getHistoryRepository();
+      lockssRepo = theDaemon.getLockssRepository(managedAu);
+      nodeMap = new NodeStateMap(historyRepo);
     } else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
@@ -156,7 +151,7 @@ public class NodeManagerImpl implements NodeManager {
       };
     Configuration.registerConfigurationCallback(configCallback);
 
-    repository = theDaemon.getHistoryRepository();
+    historyRepo = theDaemon.getHistoryRepository();
     theCrawlManager = theDaemon.getCrawlManager();
 
     if (shouldStartTreeWalkThread) {
@@ -197,7 +192,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
     NodeState nodeState = getNodeState(cus);
-    if(nodeState == null) {
+    if (nodeState == null) {
       logger.error("Failed to find a valid node state for: " + cus);
       return;
     }
@@ -219,24 +214,39 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
-    logger.debug3("Getting " + cus.getUrl());
-    return (NodeState)nodeMap.get(cus.getUrl());
+    String url = cus.getUrl();
+    logger.debug3("Getting " + url);
+    NodeState node = (NodeState)nodeMap.get(url);
+    if (node==null) {
+      // if in repository, add
+      try {
+        if (lockssRepo.getNode(url) != null) {
+          node = addNodeState(cus);
+        }
+      } catch (MalformedURLException mue) {
+        logger.error("Can't get NodeState due to bad CachedUrlSet: "+cus);
+      }
+    }
+    return node;
   }
 
   public AuState getAuState() {
     if (auState==null) {
-      auState = repository.loadAuState(managedAu);
+      auState = historyRepo.loadAuState(managedAu);
     }
     return auState;
   }
 
+
+
   public Iterator getActiveCrawledNodes(CachedUrlSet cus) {
-    Iterator keys = nodeMap.keySet().iterator();
+    Iterator entries = nodeMap.entrySet().iterator();
     Vector stateV = new Vector();
-    while (keys.hasNext()) {
-      String key = (String)keys.next();
+    while (entries.hasNext()) {
+      Map.Entry entry = (Map.Entry)entries.next();
+      String key = (String)entry.getKey();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)nodeMap.get(key);
+        NodeState state = (NodeState)entry.getValue();
         int status = state.getCrawlState().getStatus();
         if ((status != CrawlState.FINISHED) &&
             (status != CrawlState.NODE_DELETED)) {
@@ -248,12 +258,13 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter) {
-    Iterator keys = nodeMap.keySet().iterator();
+    Iterator entries = nodeMap.entrySet().iterator();
     Vector stateV = new Vector();
-    while (keys.hasNext()) {
-      String key = (String)keys.next();
+    while (entries.hasNext()) {
+      Map.Entry entry = (Map.Entry)entries.next();
+      String key = (String)entry.getKey();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)nodeMap.get(key);
+        NodeState state = (NodeState)entry.getValue();
         Iterator polls = state.getActivePolls();
         while (polls.hasNext()) {
           PollState pollState = (PollState)polls.next();
@@ -268,12 +279,13 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber) {
-    Iterator keys = nodeMap.keySet().iterator();
+    Iterator entries = nodeMap.entrySet().iterator();
     Vector historyV = new Vector();
-    while (keys.hasNext()) {
-      String key = (String)keys.next();
+    while (entries.hasNext()) {
+      Map.Entry entry = (Map.Entry)entries.next();
+      String key = (String)entry.getKey();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)nodeMap.get(key);
+        NodeState state = (NodeState)entry.getValue();
         Iterator pollHistories = state.getPollHistories();
         while (pollHistories.hasNext()) {
           PollHistory history = (PollHistory)pollHistories.next();
@@ -288,12 +300,13 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since) {
-    Iterator keys = nodeMap.keySet().iterator();
+    Iterator entries = nodeMap.entrySet().iterator();
     Vector historyV = new Vector();
-    while (keys.hasNext()) {
-      String key = (String)keys.next();
+    while (entries.hasNext()) {
+      Map.Entry entry = (Map.Entry)entries.next();
+      String key = (String)entry.getKey();
       if (cus.containsUrl(key)) {
-        NodeState state = (NodeState)nodeMap.get(key);
+        NodeState state = (NodeState)entry.getValue();
         Iterator pollHistories = state.getPollHistories();
         while (pollHistories.hasNext()) {
           PollHistory history = (PollHistory)pollHistories.next();
@@ -379,7 +392,7 @@ public class NodeManagerImpl implements NodeManager {
     }
   }
 
-  private void nodeTreeWalk(TreeMap nodeMap) {
+  private void nodeTreeWalk(Map nodeMap) {
     //XXX use true tree walk
     Iterator nodesIt = nodeMap.values().iterator();
     while (nodesIt.hasNext()) {
@@ -444,44 +457,17 @@ public class NodeManagerImpl implements NodeManager {
         default:
           break;
       }
-      repository.storePollHistories(node);
+      historyRepo.storePollHistories(node);
     }
   }
 
-  private void loadStateTree() {
-    // recurse through au cachedurlsets
-    logger.debug("loading state tree");
-    CachedUrlSet cus = managedAu.getAUCachedUrlSet();
-    recurseLoadCachedUrlSets(cus);
-  }
-
-  private void recurseLoadCachedUrlSets(CachedUrlSet cus) {
-    // add the nodeState for this cus
-    addNewNodeState(cus);
-    // recurse the set's children
-    Iterator children = cus.flatSetIterator();
-    while (children.hasNext()) {
-      CachedUrlSetNode child = (CachedUrlSetNode)children.next();
-      switch (child.getType()) {
-        case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-          recurseLoadCachedUrlSets((CachedUrlSet)child);
-          break;
-        case CachedUrlSetNode.TYPE_CACHED_URL:
-          CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-          CachedUrlSet newSet =
-            ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
-          addNewNodeState(newSet);
-      }
-    }
-  }
-
-  private void addNewNodeState(CachedUrlSet cus) {
-    logger.debug3("Adding NewNodeState: " + cus.toString());
-    NodeState state =
-      new NodeStateImpl(cus,
-                        new CrawlState(-1, CrawlState.FINISHED, 0),
-                        new ArrayList(), repository);
+  NodeState addNodeState(CachedUrlSet cus) {
+    logger.debug3("Loading NodeState: " + cus.toString());
+    // load from file cache, or get a new one
+    NodeStateImpl state = (NodeStateImpl)historyRepo.loadNodeState(cus);
+    state.setNodeManagerImpl(this);
     nodeMap.put(cus.getUrl(), state);
+    return state;
   }
 
   void updateState(NodeState state, Poll.VoteTally results) {
@@ -578,6 +564,7 @@ public class NodeManagerImpl implements NodeManager {
     } else {
       // if disagree
       logger.debug2("lost name poll, collecting repair info.");
+      String baseUrl = nodeState.getCachedUrlSet().getUrl() + "/";
       pollState.status = PollState.REPAIRING;
       Iterator masterIt = results.getCorrectEntries();
       Iterator localIt = results.getLocalEntries();
@@ -593,11 +580,9 @@ public class NodeManagerImpl implements NodeManager {
         } else {
           // if not found locally, fetch
           try {
-            logger.debug3("marking missing node for repair " + url);
-            CachedUrlSet newCus = au.makeCachedUrlSet(url, null, null);
+            logger.debug3("marking missing node for repair: " + url);
+            CachedUrlSet newCus = au.makeCachedUrlSet(baseUrl+url, null, null);
             markNodeForRepair(newCus, results);
-            //add to NodeState list
-            addNewNodeState(newCus);
           } catch (Exception e) {
             logger.error("Couldn't fetch new node.", e);
             // the treewalk will fix this eventually
@@ -610,7 +595,7 @@ public class NodeManagerImpl implements NodeManager {
         String url = (String)localIt.next();
         logger.debug3("deleting node: " + url);
         try {
-          CachedUrlSet oldCus = au.makeCachedUrlSet(url, null, null);
+          CachedUrlSet oldCus = au.makeCachedUrlSet(baseUrl + url, null, null);
           deleteNode(oldCus);
           //set crawl status to DELETED
           NodeState oldState = getNodeState(oldCus);
@@ -649,7 +634,7 @@ public class NodeManagerImpl implements NodeManager {
                          NodeState nodeState) {
     PollHistory history = new PollHistory(pollState, duration, votes);
     ((NodeStateImpl)nodeState).closeActivePoll(history);
-    repository.storePollHistories(nodeState);
+    historyRepo.storePollHistories(nodeState);
     logger.debug3("Closing poll for url '" +
                   nodeState.getCachedUrlSet().getUrl() + "'");
     // if this is an AU top-level content poll
@@ -786,6 +771,11 @@ public class NodeManagerImpl implements NodeManager {
     }
     return set;
   }
+
+  void removeReference(String urlKey) {
+//XXX    nodeMap.remove(urlKey);
+  }
+
 
   boolean shouldTreeWalkStart() {
     if (treeWalkRunning) {

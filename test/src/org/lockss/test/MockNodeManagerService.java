@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManagerService.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
+ * $Id: MockNodeManagerService.java,v 1.4 2003-03-15 02:53:28 aalto Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class MockNodeManagerService implements NodeManagerService {
   public synchronized void addNodeManager(ArchivalUnit au) {
     NodeManager nodeManager = (NodeManager)auMaps.get(au);
     if (nodeManager==null) {
-      nodeManager = NodeManagerImpl.getTestNodeManager(au);
+      nodeManager = new MockNodeManager();
       auMaps.put(au, nodeManager);
     }
   }

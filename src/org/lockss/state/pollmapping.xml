@@ -46,7 +46,6 @@
 
         <class name="org.lockss.state.VoteBean">
                 <map-to xml="Vote"/>
-
                 <field name="id"
                        type="java.lang.String">
                         <bind-xml name="Id" node="attribute"/>
@@ -82,6 +81,59 @@
                 <field name="lastTreeWalkTime"
                        type="long">
                         <bind-xml name="LastTreeWalkTime" node="element"/>
+                </field>
+        </class>
+        <class name="org.lockss.state.NodeStateBean">
+                <map-to xml="NodeState"/>
+                <field name="crawlStateBean"
+                       type="org.lockss.state.CrawlStateBean">
+                        <bind-xml name="CrawlState" node="element"/>
+                </field>
+                <field name="pollBeans"
+                       type="java.util.Collection"
+                       collection="collection" lazy="true">
+                </field>
+        </class>
+        <class name="org.lockss.state.CrawlStateBean">
+                <map-to xml="CrawlState"/>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+                <field name="status"
+                       type="integer">
+                        <bind-xml name="Status" node="element"/>
+                </field>
+                <field name="startTime"
+                       type="long">
+                        <bind-xml name="StartTime" node="element"/>
+                </field>
+        </class>
+        <class name="org.lockss.state.PollStateBean">
+                <map-to xml="CrawlState"/>
+                <field name="type"
+                       type="integer">
+                        <bind-xml name="Type" node="element"/>
+                </field>
+                <field name="lwrBound"
+                       type="java.lang.String">
+                        <bind-xml name="LowerBound" node="element"/>
+                </field>
+                <field name="uprBound"
+                       type="java.lang.String">
+                        <bind-xml name="UpperBound" node="element"/>
+                </field>
+                <field name="status"
+                       type="integer">
+                        <bind-xml name="Status" node="element"/>
+                </field>
+                <field name="startTime"
+                       type="long">
+                        <bind-xml name="StartTime" node="element"/>
+                </field>
+                <field name="deadlineTime"
+                       type="long">
+                        <bind-xml name="DeadlineTime" node="element"/>
                 </field>
         </class>
 </mapping>

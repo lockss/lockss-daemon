@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.11 2003-02-24 22:13:42 claire Exp $
+ * $Id: PollState.java,v 1.12 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -56,6 +56,17 @@ public class PollState
   int status;
   long startTime;
   Deadline deadline;
+
+  // for marshalling only
+  PollState() { }
+  PollState(PollStateBean bean) {
+    this.type = bean.getType();
+    this.lwrBound = bean.getLwrBound();
+    this.uprBound = bean.getUprBound();
+    this.status = bean.getStatus();
+    this.startTime = bean.getStartTime();
+    this.deadline = Deadline.at(bean.getDeadlineTime());
+  }
 
   PollState(int type, String lwrBound, String uprBound, int status,
             long startTime,

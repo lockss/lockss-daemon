@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.40 2003-03-08 02:45:02 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.41 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -32,11 +32,13 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.PluginManager;
+import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.HashService;
-import org.lockss.plugin.*;
+import org.lockss.repository.LockssRepositoryServiceImpl;
+import org.lockss.repository.*;
+import org.lockss.plugin.base.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
@@ -50,9 +52,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Poll contentPoll = null;
   private Random random = new Random();
 
-//  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
   private MockLockssDaemon theDaemon;
-  //  private MockCrawlManager crawlManager;
 
   public TestNodeManagerImpl(String msg) {
     super(msg);
@@ -62,7 +62,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
     super.setUp();
     theDaemon = new MockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+    String s = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
+        tempDirPath + "\n" + HistoryRepositoryImpl.PARAM_HISTORY_LOCATION +
+        "=" + tempDirPath;
+    TestConfiguration.setCurrentConfigFromString(s);
 
     mau = new MockArchivalUnit();
     mau.setAUCachedUrlSet(makeFakeCachedUrlSet(TEST_URL, 2, 2));
@@ -74,12 +77,15 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollManager = new MockPollManager();
     theDaemon.setPollManager(pollManager);
     theDaemon.setIdentityManager(new MockIdentityManager());
+    theDaemon.useMockLockssService(true);
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
+    nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
     // don't start nodemanager service because of treewalk thread
     pollManager.initService(theDaemon);
+
+    loadNodeStates(mau);
   }
 
   public void tearDown() throws Exception {
@@ -100,19 +106,24 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals( -1, node.getCrawlState().getType());
     assertEquals(CrawlState.FINISHED, node.getCrawlState().getStatus());
 
+    NodeState node2 = nodeManager.getNodeState(cus);
+    assertSame(node, node2);
+
     cus = getCUS("http://www.example.com/branch1");
     node = nodeManager.getNodeState(cus);
     assertNotNull(node);
     assertEquals(cus, node.getCachedUrlSet());
 
-    cus = getCUS("http://www.example.com/branch2/file2.doc");
-    node = nodeManager.getNodeState(cus);
-    assertNotNull(node);
-    assertEquals(cus, node.getCachedUrlSet());
-
+    // null, since not in repository
     cus = getCUS("http://www.example.com/branch3");
     node = nodeManager.getNodeState(cus);
     assertNull(node);
+
+    // should find it now that it's added
+    theDaemon.getLockssRepository(mau).createNewNode(
+        "http://www.example.com/branch3");
+    node = nodeManager.getNodeState(cus);
+    assertNotNull(node);
   }
 
   public void testGetAuState() {
@@ -125,11 +136,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
       nodeManager.getActiveCrawledNodes(mau.getAUCachedUrlSet());
     assertFalse(nodeIt.hasNext());
 
-    CachedUrlSet cus = getCUS("http://www.example.com/branch1");
+    CachedUrlSet cus = getCUS("http://www.example.com");
     NodeState node = nodeManager.getNodeState(cus);
     node.getCrawlState().type = CrawlState.NEW_CONTENT_CRAWL;
     node.getCrawlState().status = CrawlState.SCHEDULED;
-    cus = getCUS("http://www.example.com/branch2/file1.doc");
+    cus = getCUS("http://www.example.com/branch2");
     node = nodeManager.getNodeState(cus);
     node.getCrawlState().type = CrawlState.BACKGROUND_CRAWL;
     node.getCrawlState().status = CrawlState.RUNNING;
@@ -140,8 +151,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
       nodeL.add(node.getCachedUrlSet().getUrl());
     }
     String[] expectedA = new String[] {
-        "http://www.example.com/branch1",
-        "http://www.example.com/branch2/file1.doc"
+        "http://www.example.com",
+        "http://www.example.com/branch2"
     };
     assertIsomorphic(expectedA, nodeL);
   }
@@ -152,12 +163,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
 					 PollState.RUNNING + PollState.WON);
     assertFalse(nodeIt.hasNext());
 
-    CachedUrlSet cus = getCUS("http://www.example.com/branch1");
+    CachedUrlSet cus = getCUS("http://www.example.com");
     NodeState node = nodeManager.getNodeState(cus);
     ((NodeStateImpl)node).addPollState(new PollState(Poll.CONTENT_POLL, "",
         "",
         PollState.RUNNING, 123, null));
-    cus = getCUS("http://www.example.com/branch2/file1.doc");
+    cus = getCUS("http://www.example.com/branch1");
     node = nodeManager.getNodeState(cus);
     ((NodeStateImpl)node).addPollState(new PollState(Poll.NAME_POLL, "", "",
         PollState.WON, 123, null));
@@ -170,8 +181,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
       nodeL.add(node.getCachedUrlSet().getUrl());
     }
     String[] expectedA = new String[] {
-        "http://www.example.com/branch1",
-        "http://www.example.com/branch2/file1.doc"
+        "http://www.example.com",
+        "http://www.example.com/branch1"
     };
     assertIsomorphic(expectedA, nodeL);
 
@@ -183,7 +194,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
       nodeL.add(node.getCachedUrlSet().getUrl());
     }
     expectedA = new String[] {
-        "http://www.example.com/branch1"
+        "http://www.example.com"
     };
     assertIsomorphic(expectedA, nodeL);
   }
@@ -303,10 +314,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
     MockCachedUrlSet mcus = (MockCachedUrlSet)getCUS(auUrl);
     mcus.setFlatIterator((new Vector()).iterator());
     mau.setAUCachedUrlSet(mcus);
+    theDaemon.getLockssRepository(mau).createNewNode(mcus.getUrl());
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
+    nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
     // set to avoid thread calling a treewalk
     nodeManager.getAuState().lastTreeWalk = TimeBase.nowMs();
     nodeManager.startService();
@@ -333,6 +345,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     pollMan.stopService();
     crawlMan.stopService();
   }
+
   public void testTreeWalkStartYesCrawl() {
     MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
     MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
@@ -413,8 +426,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.getPollManager().startService();
     ((MockCrawlManager)theDaemon.getCrawlManager()).startService();
 
-    NodeStateImpl node =
-        (NodeStateImpl)nodeManager.getNodeState(getCUS(TEST_URL));
+    NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
+        getCUS(TEST_URL));
 
     // with a normal scheduled state, nothing should happen
     testWalkCrawling(CrawlState.NEW_CONTENT_CRAWL, CrawlState.SCHEDULED, 123,
@@ -461,8 +474,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     MockPollManager pollMan = (MockPollManager)theDaemon.getPollManager();
     MockCrawlManager crawlMan = (MockCrawlManager)theDaemon.getCrawlManager();
 
-    NodeStateImpl node =
-        (NodeStateImpl)nodeManager.getNodeState(getCUS(TEST_URL));
+    NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
+        getCUS(TEST_URL));
+
     // should ignore if active poll
     PollState pollState = new PollState(1, "", "", PollState.RUNNING, 1, null);
     node.addPollState(pollState);
@@ -536,6 +550,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     contentPoll = createPoll(TEST_URL, true, 10, 5);
     Poll.VoteTally results = contentPoll.getVoteTally();
     PollSpec spec = results.getPollSpec();
+
     NodeState nodeState = nodeManager.getNodeState(getCUS(TEST_URL));
     // won content poll
     // - running
@@ -595,8 +610,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
         url));
 
     // - leaf
-    nodeState = nodeManager.getNodeState(getCUS(TEST_URL
-						+ "/branch1/file1.doc"));
+    nodeState = nodeManager.getNodeState(getCUS(TEST_URL+"/branch1/file1.doc"));
     pollState = new PollState(results.getType(), spec.getLwrBound(),
                               spec.getUprBound(),
                               PollState.RUNNING,
@@ -632,7 +646,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    nodeManager.repository = new HistoryRepositoryImpl(tempDirPath);
+    nodeManager.historyRepo = new HistoryRepositoryImpl(tempDirPath);
+    nodeManager.addNodeState(mcus);
 
     // test that a finished top-level poll sets the time right
     contentPoll = createPoll(auUrl, true, 10, 5);
@@ -714,8 +729,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // was used (should have created an IO error, but didn't)
     assertEquals(PollState.WON, pollState.getStatus());
 
-    // lost name poll
-    contentPoll = createPoll(TEST_URL + "/branch2/file1.doc", false, 5, 10);
+    // lost name poll (these are the artificial results)
+    String deleteUrl = TEST_URL + "/branch2/entry 2";
+    String repairUrl = TEST_URL + "/branch2/entry 3";
+    String repairUrl2 = TEST_URL + "/branch2/entry 4";
+
+    contentPoll = createPoll(TEST_URL + "/branch2", false, 5, 10);
     results = contentPoll.getVoteTally();
     spec = results.getPollSpec();
     pollState = new PollState(results.getType(),
@@ -725,10 +744,21 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               PollState.RUNNING,
                               results.getStartTime(),
                               null);
+    RepositoryNode repoNode = theDaemon.getLockssRepository(mau).createNewNode(
+        deleteUrl);
+    assertFalse(repoNode.isInactive());
+
     nodeManager.handleNamePoll(pollState, results, nodeState);
-    // since there are no entries in the results object, nothing much will
-    // happen and it should be marked 'REPAIRED'
     assertEquals(PollState.REPAIRED, pollState.getStatus());
+
+    assertEquals(MockCrawlManager.SCHEDULED,
+                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
+        repairUrl));
+    assertEquals(MockCrawlManager.SCHEDULED,
+                 ((MockCrawlManager)theDaemon.getCrawlManager()).getUrlStatus(
+        repairUrl2));
+    assertTrue(repoNode.isInactive());
+
     theDaemon.getHashService().stopService();
     theDaemon.getPollManager().stopService();
   }
@@ -786,6 +816,31 @@ public class TestNodeManagerImpl extends LockssTestCase {
     cus.setTreeItSource(files);
     cus.setFlatItSource(branches);
     return cus;
+  }
+
+  private void loadNodeStates(ArchivalUnit au) {
+    // recurse through au cachedurlsets
+    CachedUrlSet cus = au.getAUCachedUrlSet();
+    recurseLoadCachedUrlSets(cus, au);
+  }
+
+  private void recurseLoadCachedUrlSets(CachedUrlSet cus, ArchivalUnit au) {
+    // add the nodeState for this cus
+    nodeManager.addNodeState(cus);
+    // recurse the set's children
+    Iterator children = cus.flatSetIterator();
+    while (children.hasNext()) {
+      CachedUrlSetNode child = (CachedUrlSetNode)children.next();
+      switch (child.getType()) {
+        case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+          recurseLoadCachedUrlSets((CachedUrlSet)child, au);
+          break;
+        case CachedUrlSetNode.TYPE_CACHED_URL:
+          CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
+          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
+          nodeManager.addNodeState(newSet);
+      }
+    }
   }
 
   private Poll createPoll(String url, boolean isContentPoll, int numAgree,

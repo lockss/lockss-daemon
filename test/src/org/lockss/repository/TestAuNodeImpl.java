@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuNodeImpl.java,v 1.3 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestAuNodeImpl.java,v 1.4 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -55,7 +55,8 @@ public class TestAuNodeImpl extends LockssTestCase {
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
     MockArchivalUnit mau = new MockArchivalUnit(null);
     LockssRepositoryServiceImpl lrsi = new LockssRepositoryServiceImpl();
-    repo = lrsi.addLockssRepository(mau);
+    lrsi.addLockssRepository(mau);
+    repo = lrsi.getLockssRepository(mau);
   }
 
   public void testListEntries() throws Exception {

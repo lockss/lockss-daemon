@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryService.java,v 1.1 2003-03-04 00:16:12 aalto Exp $
+ * $Id: LockssRepositoryService.java,v 1.2 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -54,7 +54,6 @@ public interface LockssRepositoryService extends LockssManager {
    * Factory method to add LockssRepository.  Calls 'startService()' on the
    * ArchivalUnit-specific LockssRepository.
    * @param au the ArchivalUnit being managed
-   * @return the new repository
    */
-  public LockssRepository addLockssRepository(ArchivalUnit au);
+  public void addLockssRepository(ArchivalUnit au);
 }

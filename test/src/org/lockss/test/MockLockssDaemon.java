@@ -24,6 +24,9 @@ public class MockLockssDaemon extends LockssDaemon {
   IdentityManager identityManager = null;
   NodeManagerService nodeManagerService = null;
 
+  boolean useMockNodeService = false;
+  boolean useMockLockssService = false;
+
   public MockLockssDaemon() {
     this(null);
   }
@@ -47,6 +50,15 @@ public class MockLockssDaemon extends LockssDaemon {
     identityManager = null;
     nodeManagerService = null;
   }
+
+  public void useMockLockssService(boolean useMockLockssService) {
+    this.useMockLockssService = useMockLockssService;
+  }
+
+  public void useMockNodeService(boolean useMockNodeService) {
+    this.useMockNodeService = useMockNodeService;
+  }
+
 
   /**
    * return the hash service instance
@@ -105,7 +117,11 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public LockssRepositoryService getLockssRepositoryService() {
     if (lockssRepositoryService == null) {
-      lockssRepositoryService = new LockssRepositoryServiceImpl();
+      if (useMockLockssService) {
+        lockssRepositoryService = new MockLockssRepositoryService();
+      } else {
+        lockssRepositoryService = new LockssRepositoryServiceImpl();
+      }
       try {
         lockssRepositoryService.initService(this);
       } catch (LockssDaemonException ex) { }
@@ -120,7 +136,8 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the LockssRepository
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
-    return getLockssRepositoryService().addLockssRepository(au);
+    getLockssRepositoryService().addLockssRepository(au);
+    return getLockssRepositoryService().getLockssRepository(au);
   }
 
   /**
@@ -147,7 +164,11 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public NodeManagerService getNodeManagerService() {
     if (nodeManagerService == null) {
-      nodeManagerService = new MockNodeManagerService();
+      if (useMockNodeService) {
+        nodeManagerService = new MockNodeManagerService();
+      } else {
+        nodeManagerService = new NodeManagerServiceImpl();
+      }
       try {
         nodeManagerService.initService(this);
       }
@@ -296,6 +317,22 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the LockssRepository for a given AU.  Requires a
+   * MocKLockssRepositoryService.
+   * @param repo the new repository
+   * @param au the ArchivalUnit
+   */
+  public void setLockssRepository(LockssRepository repo, ArchivalUnit au) {
+    getLockssRepositoryService();
+    if (lockssRepositoryService instanceof MockLockssRepositoryService) {
+      ((MockLockssRepositoryService)lockssRepositoryService).auMaps.put(au, repo);
+    } else {
+      throw new UnsupportedOperationException("Couldn't setLockssRepository" +
+                                              "with a non-Mock service.");
+    }
+  }
+
+  /**
    * Set a new NodeManagerService.
    * @param nms the new service
    */
@@ -305,8 +342,7 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the NodeManager for a given AU.  Requires a MocKNodeManagerService
-   * (the default).
+   * Set the NodeManager for a given AU.  Requires a MocKNodeManagerService.
    * @param nodeMan the new manager
    * @param au the ArchivalUnit
    */
@@ -315,7 +351,7 @@ public class MockLockssDaemon extends LockssDaemon {
     if (nodeManagerService instanceof MockNodeManagerService) {
       ((MockNodeManagerService)nodeManagerService).auMaps.put(au, nodeMan);
     } else {
-      throw new UnsupportedOperationException("Couldn't setNodeManager with"+
+      throw new UnsupportedOperationException("Couldn't setNodeManager with "+
                                               "a non-Mock service.");
     }
   }

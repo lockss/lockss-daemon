@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
+ * $Id: MockNodeManager.java,v 1.4 2003-03-15 02:53:28 aalto Exp $
  */
 
 /*
@@ -39,7 +39,10 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.app.*;
 
-public class MockNodeManager implements NodeManager, LockssManager {
+/**
+ * Mock version of the NodeManager.
+ */
+public class MockNodeManager implements NodeManager {
   private static Logger logger = Logger.getLogger("MockNodeManager");
 
   private MockAuState aus;

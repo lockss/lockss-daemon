@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.6 2003-02-24 22:13:42 claire Exp $
+ * $Id: NodeStateImpl.java,v 1.7 2003-03-15 02:53:29 aalto Exp $
  */
 
 /*
@@ -46,13 +46,34 @@ public class NodeStateImpl implements NodeState {
   protected List polls;
   protected List pollHistories = null;
   protected HistoryRepository repository;
+  protected NodeManagerImpl nodeMan;
 
-  protected NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
+  // for marshalling only
+  NodeStateImpl() { }
+
+  NodeStateImpl(CachedUrlSet cus, NodeStateBean bean,
+                HistoryRepository repository) {
+    this.cus = cus;
+    this.crawlState = new CrawlState(bean.getCrawlStateBean());
+    this.polls = new ArrayList(bean.pollBeans.size());
+    for (int ii=0; ii<bean.pollBeans.size(); ii++) {
+      polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
+    }
+    this.repository = repository;
+  }
+
+  NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
                 HistoryRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
     this.polls = polls;
     this.repository = repository;
+  }
+
+  public void finalize() {
+    if (nodeMan!=null) {
+      nodeMan.removeReference(cus.getUrl());
+    }
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -76,6 +97,10 @@ public class NodeStateImpl implements NodeState {
 
   public boolean isInternalNode() {
     return cus.flatSetIterator().hasNext();
+  }
+
+  void setNodeManagerImpl(NodeManagerImpl nodeMan) {
+    this.nodeMan = nodeMan;
   }
 
   protected void addPollState(PollState new_poll) {
