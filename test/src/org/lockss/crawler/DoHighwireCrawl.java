@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.9 2003-02-06 05:16:07 claire Exp $
+ * $Id: DoHighwireCrawl.java,v 1.10 2003-02-06 23:33:38 troberts Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
-
+import java.net.URL;
 import org.lockss.daemon.*;
 import org.lockss.plugin.PluginManager;
 import org.lockss.plugin.highwire.HighWireArchivalUnit;
@@ -58,9 +58,10 @@ public class DoHighwireCrawl {
       System.err.println("Base URL arg required");
       System.exit(-1);
     }
-    String start = args[i];
+    URL base = new URL(args[i]);
+    int volume = Integer.parseInt(args[i+1]);
 
-    ArchivalUnit au = new HighWireArchivalUnit(start);
+    ArchivalUnit au = new HighWireArchivalUnit(base, volume);
     MockLockssDaemon daemon = new MockLockssDaemon(null);
     daemon.startDaemon();
     daemon.getPluginManager().registerArchivalUnit(au);
