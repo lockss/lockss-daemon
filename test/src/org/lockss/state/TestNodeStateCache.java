@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateMap.java,v 1.3 2003-03-27 00:50:23 aalto Exp $
+ * $Id: TestNodeStateCache.java,v 1.1 2003-04-01 00:05:11 aalto Exp $
  */
 
 /*
@@ -44,10 +44,10 @@ import org.lockss.daemon.*;
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
  */
 
-public class TestNodeStateMap extends LockssTestCase {
+public class TestNodeStateCache extends LockssTestCase {
   private MockHistoryRepository repo;
   private String tempDirPath;
-  private NodeStateMap map;
+  private NodeStateCache cache;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -57,38 +57,38 @@ public class TestNodeStateMap extends LockssTestCase {
     TestConfiguration.setCurrentConfigFromString(s);
 
     repo = new MockHistoryRepository();
-    map = new NodeStateMap(repo, 10);
+    cache = new NodeStateCache(repo, 10);
   }
 
   public void testCaching() throws Exception {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
-    assertEquals(10, map.getMaximumSize());
+    assertEquals(10, cache.getCacheSize());
 
-    NodeState node = (NodeState)map.get("http://www.example.com");
-    assertEquals(0, map.getCacheHits());
-    assertEquals(1, map.getCacheMisses());
+    NodeState node = (NodeState)cache.get("http://www.example.com");
+    assertEquals(0, cache.getCacheHits());
+    assertEquals(1, cache.getCacheMisses());
     assertNull(node);
 
     node = new NodeStateImpl(mcus, null, new ArrayList(), repo);
-    map.put("http://www.example.com", node);
-    NodeState node2 = (NodeState)map.get("http://www.example.com");
+    cache.put("http://www.example.com", node);
+    NodeState node2 = (NodeState)cache.get("http://www.example.com");
     assertSame(node, node2);
-    assertEquals(1, map.getCacheHits());
-    assertEquals(1, map.getCacheMisses());
+    assertEquals(1, cache.getCacheHits());
+    assertEquals(1, cache.getCacheMisses());
   }
 
   public void testWeakReferenceCaching() throws Exception {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
 
-    NodeState node = (NodeState)map.get("http://www.example.com");
-    assertEquals(1, map.getCacheMisses());
-    assertEquals(1, map.getRefMisses());
+    NodeState node = (NodeState)cache.get("http://www.example.com");
+    assertEquals(1, cache.getCacheMisses());
+    assertEquals(1, cache.getRefMisses());
     assertNull(node);
 
     node = new NodeStateImpl(mcus, null, null, repo);
-    map.put("http://www.example.com", node);
-    node = (NodeState)map.get("http://www.example.com");
-    assertEquals(1, map.getCacheHits());
+    cache.put("http://www.example.com", node);
+    node = (NodeState)cache.get("http://www.example.com");
+    assertEquals(1, cache.getCacheHits());
 
     NodeState node2 = null;
     int loopSize = 1;
@@ -97,80 +97,41 @@ public class TestNodeStateMap extends LockssTestCase {
     while (true) {
       loopSize *= 2;
       for (int ii=0; ii<loopSize; ii++) {
-        map.put("http://www.example.com/test"+ii,
+        cache.put("http://www.example.com/test"+ii,
                 new NodeStateImpl(mcus, null, null, repo));
       }
-      int misses = map.getCacheMisses();
-      refHits = map.getRefHits();
-      node2 = (NodeState)map.get("http://www.example.com");
-      if (map.getCacheMisses() == misses+1) {
+      int misses = cache.getCacheMisses();
+      refHits = cache.getRefHits();
+      node2 = (NodeState)cache.get("http://www.example.com");
+      if (cache.getCacheMisses() == misses+1) {
         break;
       }
     }
     assertSame(node, node2);
-    assertEquals(refHits+1, map.getRefHits());
+    assertEquals(refHits+1, cache.getRefHits());
   }
-
+/*
   public void testRemovingFromLRU() throws Exception {
     CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
     NodeState node = new NodeStateImpl(mcus, null, null, repo);
-    map.put("http://www.example.com", node);
-    node = (NodeState)map.get("http://www.example.com");
+    cache.put("http://www.example.com", node);
+    node = (NodeState)cache.get("http://www.example.com");
     assertEquals(0, repo.storedNodes.size());
 
-    for (int ii=0; ii<map.getMaximumSize(); ii++) {
-      map.put("http://www.example.com/test"+ii,
+    for (int ii=0; ii<cache.getCacheSize(); ii++) {
+      cache.put("http://www.example.com/test"+ii,
               new NodeStateImpl(mcus, null, null, repo));
     }
     assertEquals(1, repo.storedNodes.size());
     NodeState node2 = (NodeState)repo.storedNodes.get(mcus);
     assertSame(node, node2);
 
-    node2 = (NodeState)map.get("http://www.example.com");
-    assertEquals(1, map.getCacheMisses());
+    node2 = (NodeState)cache.get("http://www.example.com");
+    assertEquals(1, cache.getCacheMisses());
   }
-
-  public void testCallbackRefresh() throws Exception {
-    NodeStateMap.Callback callback = map.theCallback;
-
-    CachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com");
-    NodeState node = new NodeStateImpl(mcus, null, null, repo);
-    map.put("http://www.example.com", node);
-
-    mcus = new MockCachedUrlSet("http://www.example.com/test");
-    NodeState node2 = new NodeStateImpl(mcus, null, null, repo);
-    map.put("http://www.example.com/test", node2);
-
-    callback.refreshInLRUMap("http://www.example.com", (NodeStateImpl)node);
-
-    // put in n-1 new items
-    for (int ii=0; ii<map.getMaximumSize()-1; ii++) {
-      map.put("http://www.example.com/test"+ii,
-              new NodeStateImpl(mcus, null, null, repo));
-    }
-    map.refMap.clear();
-    // this should be knocked out
-    assertNull(map.get("http://www.example.com/test"));
-    // this should not be, since it was refreshed
-    assertNotNull(map.get("http://www.example.com"));
-
-  }
-
-  public void testCallbackRemoval() throws Exception {
-    NodeStateMap.Callback callback = map.theCallback;
-    assertEquals(0, map.refMap.size());
-
-    map.refMap.put("test", "nothing");
-    assertEquals(1, map.refMap.size());
-    assertEquals("nothing", map.refMap.get("test"));
-
-    callback.removeReference("test");
-    assertEquals(0, map.refMap.size());
-    assertNull(map.refMap.get("test"));
-  }
-
+*/
   public static void main(String[] argv) {
-    String[] testCaseList = { TestNodeStateMap.class.getName()};
+    String[] testCaseList = { TestNodeStateCache.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 

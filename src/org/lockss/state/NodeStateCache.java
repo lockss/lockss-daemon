@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateMap.java,v 1.4 2003-03-27 00:50:23 aalto Exp $
+ * $Id: NodeStateCache.java,v 1.1 2003-04-01 00:05:11 aalto Exp $
  */
 
 /*
@@ -41,40 +41,55 @@ import org.apache.commons.collections.ReferenceMap;
  * via the {@link HistoryRepository} upon removal.  Also contains a weak
  * reference map to protect against multiple instances of the same NodeState.
  */
-public class NodeStateMap extends LRUMap {
+public class NodeStateCache {
   private HistoryRepository repository;
+  LRUMap lruMap;
   ReferenceMap refMap = new ReferenceMap(ReferenceMap.HARD,
                                          ReferenceMap.WEAK);
-  Callback theCallback = new Callback();
 
   private int cacheHits = 0;
   private int cacheMisses = 0;
   private int refHits = 0;
   private int refMisses = 0;
 
-  public NodeStateMap(HistoryRepository repo, int maxSize) {
-    super(maxSize);
+  public NodeStateCache(HistoryRepository repo, int maxSize) {
+    lruMap = new LRUMap(maxSize);
     repository = repo;
   }
 
-  public void processRemovedLRU(Object key, Object value) {
-    super.processRemovedLRU(key, value);
-    NodeState node = (NodeState)value;
-    repository.storeNodeState(node);
+  /**
+   * Returns the NodeState cache size.
+   * @return the size
+   */
+  public int getCacheSize() {
+    return lruMap.getMaximumSize();
   }
 
-  public Object get(Object key) {
-    Object obj = super.get(key);
-    if (obj!=null) {
+  /**
+   * Sets the NodeState cache size.
+   * @param newSize the new size
+   */
+  public void setCacheSize(int newSize) {
+    lruMap.setMaximumSize(newSize);
+  }
+
+  /**
+   * Gets a {@link NodeState} from the cache.
+   * @param urlKey the url key
+   * @return the {@link NodeState}
+   */
+  public NodeState get(String urlKey) {
+    NodeState node = (NodeState)lruMap.get(urlKey);
+    if (node!=null) {
       cacheHits++;
-      return obj;
+      return node;
     } else {
       cacheMisses++;
-      obj = refMap.get(key);
-      if (obj!=null) {
+      node = (NodeState)refMap.get(urlKey);
+      if (node!=null) {
         refHits++;
-        super.put(key, obj);
-        return obj;
+        lruMap.put(urlKey, node);
+        return node;
       } else {
         refMisses++;
         return null;
@@ -82,47 +97,20 @@ public class NodeStateMap extends LRUMap {
     }
   }
 
-  public Object put(Object key, Object value) {
-    if (value instanceof NodeStateImpl) {
-      ((NodeStateImpl)value).setMapCallback(theCallback);
-      refMap.put(key, value);
-      return super.put(key, value);
-    } else {
-      throw new IllegalArgumentException(
-          "Putting a non-NodeStateImpl into NodeStateMap.");
-    }
+  /**
+   * Puts a NodeState in the cache.
+   * @param urlKey the url
+   * @param node the {@link NodeState}
+   * @return the previous value, if any
+   */
+  public NodeState put(String urlKey, NodeState node) {
+    refMap.put(urlKey, node);
+    return (NodeState)lruMap.put(urlKey, node);
   }
 
   int getCacheHits() { return cacheHits; }
   int getCacheMisses() { return cacheMisses; }
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
-
-  /**
-   * An inner class which the NodeStateMap hands out to {@link NodeStateImpl}s
-   * stored in it.  This allows them to make calls to the NodeStateMap.
-   */
-  class Callback {
-    /**
-     * Removes a weak reference from the reference map.  Called by finalize()
-     * of {@link NodeStateImpl}.
-     * @param urlKey the reference key url
-     */
-    synchronized void removeReference(String urlKey) {
-      if (refMap!=null) {
-        refMap.remove(urlKey);
-      }
-    }
-
-    /**
-     * This simply re-'puts' the object into the LRUMap, refreshing its
-     * 'last-used' ranking.
-     * @param urlKey the reference key url
-     * @param node the {@link NodeStateImpl}
-     */
-    void refreshInLRUMap(String urlKey, NodeStateImpl node) {
-      put(urlKey, node);
-    }
-  }
 
 }
