@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.8 2004-10-18 03:38:28 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.8.4.1 2005-01-20 18:42:06 tlipkis Exp $
  */
 
 /*
@@ -45,10 +45,6 @@ import org.lockss.proxy.*;
 /** Display and update proxy IP access control lists.
  */
 public class ProxyIpAccess extends IpAccessControl {
-  static final String AC_PREFIX = ProxyManager.IP_ACCESS_PREFIX;
-  public static final String PARAM_IP_INCLUDE = AC_PREFIX + "include";
-  public static final String PARAM_IP_EXCLUDE = AC_PREFIX + "exclude";
-
   public static final String PARAM_AUDIT_ENABLE =
     AuditProxyManager.PARAM_START;
   static final boolean DEFAULT_AUDIT_ENABLE = AuditProxyManager.DEFAULT_START;
@@ -73,12 +69,8 @@ public class ProxyIpAccess extends IpAccessControl {
     return exp;
   }
 
-  protected String getIncludeParam() {
-    return PARAM_IP_INCLUDE;
-  }
-
-  protected String getExcludeParam() {
-    return PARAM_IP_EXCLUDE;
+  protected String getParamPrefix() {
+    return ProxyManager.IP_ACCESS_PREFIX;
   }
 
   protected String getConfigFileName() {

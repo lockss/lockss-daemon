@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.16.6.1 2005-01-19 23:31:58 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.16.6.2 2005-01-20 18:42:06 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,10 @@ import org.lockss.jetty.*;
 /** Display and update IP access control lists.
  */
 public abstract class IpAccessControl extends LockssServlet {
+
+  public static final String SUFFIX_IP_INCLUDE = "include";
+  public static final String SUFFIX_IP_EXCLUDE = "exclude";
+  public static final String SUFFIX_ISSET = "isSet";
 
   private static final String footIP =
     "List individual IP addresses (<code>172.16.31.14</code>), " +
@@ -311,16 +315,26 @@ public abstract class IpAccessControl extends LockssServlet {
   protected void addConfigProps(Properties props) {
     String incStr = StringUtil.separatedString(formIncl, ";");
     String excStr = StringUtil.separatedString(formExcl, ";");
+    String prefix = getParamPrefix();
 
     props.put(getIncludeParam(), incStr);
     props.put(getExcludeParam(), excStr);
+    props.put(prefix + SUFFIX_ISSET, "true");
   }
 
   protected abstract String getExplanation();
 
-  protected abstract String getIncludeParam();
+  protected String getIncludeParam() {
+    return getParamPrefix() + SUFFIX_IP_INCLUDE;
+  }
 
-  protected abstract String getExcludeParam();
+  protected String getExcludeParam() {
+    return getParamPrefix() + SUFFIX_IP_EXCLUDE;
+  }
+
+
+
+  protected abstract String getParamPrefix();
 
   protected abstract String getConfigFileName();
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.6 2005-01-05 09:46:13 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.6.2.1 2005-01-20 18:42:01 tlipkis Exp $
  */
 
 /*
@@ -197,18 +197,17 @@ public class TestConfigManager extends LockssTestCase {
 		 config.get(FileTarget.PARAM_FILE));
   }
 
-  public void testPlatformAccess1() throws Exception {
-    // platform access set, ui and proxy access not set
+  // platform access not set, ui and proxy access not set
+  public void testPlatformAccess0() throws Exception {
     Properties props = new Properties();
-    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = mgr.getCurrentConfig();
-    assertEquals("1.2.3.*", config.get("org.lockss.ui.access.ip.include"));
-    assertEquals("1.2.3.*", config.get("org.lockss.proxy.access.ip.include"));
+    assertFalse(config.containsKey("org.lockss.ui.access.ip.include"));
+    assertFalse(config.containsKey("org.lockss.proxy.access.ip.include"));
   }
 
-  public void testPlatformAccess2() throws Exception {
-    // platform access not set, ui and proxy access set
+  // platform access not set, ui and proxy access set
+  public void testPlatformAccess1() throws Exception {
     Properties props = new Properties();
     props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
     props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
@@ -219,8 +218,18 @@ public class TestConfigManager extends LockssTestCase {
 		 config.get("org.lockss.proxy.access.ip.include"));
   }
 
+  // platform access set, ui and proxy access not set
+  public void testPlatformAccess2() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("1.2.3.*", config.get("org.lockss.ui.access.ip.include"));
+    assertEquals("1.2.3.*", config.get("org.lockss.proxy.access.ip.include"));
+  }
+
+  // platform access set, ui and proxy access set globally, not locally
   public void testPlatformAccess3() throws Exception {
-    // platform access set, ui and proxy access set
     Properties props = new Properties();
     props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
     props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
@@ -230,6 +239,22 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("1.2.3.*;1.2.3.0/22",
 		 config.get("org.lockss.ui.access.ip.include"));
     assertEquals("1.2.3.*;1.2.3.0/21",
+		 config.get("org.lockss.proxy.access.ip.include"));
+  }
+
+  // platform access set, ui and proxy access set locally
+  public void testPlatformAccess4() throws Exception {
+    Properties props = new Properties();
+    props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
+    props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
+    props.put("org.lockss.ui.access.ip.isSet", "true");
+    props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
+    props.put("org.lockss.proxy.access.ip.isSet", "true");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    Configuration config = mgr.getCurrentConfig();
+    assertEquals("1.2.3.0/22",
+		 config.get("org.lockss.ui.access.ip.include"));
+    assertEquals("1.2.3.0/21",
 		 config.get("org.lockss.proxy.access.ip.include"));
   }
 
