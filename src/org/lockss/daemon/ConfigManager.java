@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.12 2003-11-14 02:08:36 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.13 2003-12-23 00:26:58 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class ConfigManager implements LockssManager {
   /** Temporary param to enable new scheduler */
   static final String PARAM_NEW_SCHEDULER =
     HashService.PREFIX + "use.scheduler";
-  static final boolean DEFAULT_NEW_SCHEDULER = false;
+  static final boolean DEFAULT_NEW_SCHEDULER = true;
 
   /** Common prefix of platform config params */
   static final String PLATFORM = Configuration.PLATFORM;
@@ -302,17 +302,29 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     setCurrentConfig(newConfig);
-    String cmsg = ((loadedCacheFiles != null)
-		   ? "; " + StringUtil.separatedString(loadedCacheFiles, ", ")
-		   : "");
-    log.info("Config updated from " +
-	     StringUtil.separatedString(configUrlList, ", ") + cmsg);
-    if (log.isDebug()) {
-      logConfig(newConfig);
-    }
+    logConfigLoaded(newConfig, loadedCacheFiles);
     runCallbacks(newConfig, oldConfig);
     haveConfig.fill();
     return true;
+  }
+
+  private void logConfigLoaded(Configuration newConfig,
+			       List loadedCacheFiles) {
+    StringBuffer sb = new StringBuffer("Config updated");
+    if (configUrlList != null || loadedCacheFiles != null) {
+      sb.append(" from ");
+      if (configUrlList != null) {
+	sb.append(StringUtil.separatedString(configUrlList, ", "));
+      }
+      if (loadedCacheFiles != null) {
+	sb.append("; ");
+	sb.append(StringUtil.separatedString(loadedCacheFiles, ", "));
+      }
+    }
+    log.info(sb.toString());
+    if (log.isDebug()) {
+      logConfig(newConfig);
+    }
   }
 
   private void copyPlatformParams(Configuration config) {
