@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.7 2003-06-20 22:34:51 claire Exp $
+ * $Id: BasePlugin.java,v 1.8 2003-07-30 05:36:52 tlipkis Exp $
  */
 
 /*
@@ -44,8 +44,9 @@ import org.lockss.plugin.*;
  */
 public abstract class BasePlugin implements Plugin {
   static Logger log = Logger.getLogger("BasePlugin");
-  protected Collection aus = new ArrayList();
   protected LockssDaemon theDaemon;
+  protected Collection aus = new ArrayList();
+  protected Map titleConfig;
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -58,6 +59,53 @@ public abstract class BasePlugin implements Plugin {
   }
 
   public void stopPlugin() {
+  }
+
+  /**
+   * Default implementation collects keys from titleConfig map.
+   */
+  public List getSupportedTitles() {
+    if (titleConfig == null) {
+      return Collections.EMPTY_LIST;
+    }
+    List res = new ArrayList(20);
+    for (Iterator iter = titleConfig.keySet().iterator(); iter.hasNext(); ) {
+      res.add((String)iter.next());
+    }
+    return res;
+  }
+
+  /**
+   * Default implementation looks in titleConfig map.
+   */
+  public Configuration getConfigForTitle(String title) {
+    if (titleConfig == null) {
+      return null;
+    }
+    return (Configuration)titleConfig.get(title);
+  }
+
+  protected void setTitleConfig(Map titleConfig) {
+    this.titleConfig = titleConfig;
+  }
+
+  /** Set title config map from array of arrays of
+   * [title, key1, val1, keyn, valn]
+  */
+  protected void setTitleConfig(String titleSpecs[][]) {
+    Map map = new HashMap();
+    for (int tix = 0; tix < titleSpecs.length; tix++) {
+      String titleSpec[] = titleSpecs[tix];
+      String title = titleSpec[0];
+      Configuration config = ConfigManager.newConfiguration();
+      for (int pix = 1; pix < titleSpecs.length; pix += 2) {
+	String key = titleSpec[pix];
+	String val = titleSpec[pix + 1];
+	config.put(key, val);
+      }
+      map.put(title, config);
+    }
+    setTitleConfig(map);
   }
 
   // for now use the plugin's class name 

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.11 2003-07-22 00:33:51 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.12 2003-07-30 05:36:52 tlipkis Exp $
  */
 
 /*
@@ -147,7 +147,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * this plugin
    * @return a List of Strings
    */
-  public List getSupportedAUNames() {
+  public List getSupportedTitles() {
     return ListUtil.list("SimulatedSupportedTitle");
   }
 

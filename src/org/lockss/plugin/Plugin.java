@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.13 2003-07-22 00:33:51 tlipkis Exp $
+ * $Id: Plugin.java,v 1.14 2003-07-30 05:36:53 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,16 @@ public interface Plugin {
    * supported by this plugin.
    * @return a List of Strings
    */
-  public List getSupportedAUNames();
+  public List getSupportedTitles();
+
+  /**
+   * Return a (partial) configuration that will configure this plugin for
+   * the specified title.
+   * @param title journal title, as returned by getSupportedTitles().
+   * @return Configuration including all parameters whose values are
+   * implied by the title.
+   */
+  public Configuration getConfigForTitle(String title);
 
   /**
    * Return the set of configuration properties required to configure

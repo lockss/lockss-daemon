@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.23 2003-07-22 00:33:51 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.24 2003-07-30 05:36:52 tlipkis Exp $
  */
 
 /*
@@ -55,8 +55,14 @@ public class HighWirePlugin extends BasePlugin {
   public static final String AUPARAM_BASE_URL = "base_url";
   public static final String AUPARAM_VOL = "volume";
 
+  private static String titleSpec[][] = {
+    {"BMJ", AUPARAM_BASE_URL, "http://shadow1.lockss.org/"},
+    {"JHC", AUPARAM_BASE_URL, "http://www.jhc.org/"},
+  };
+
   public void initPlugin(LockssDaemon daemon) {
     super.initPlugin(daemon);
+    setTitleConfig(titleSpec);
   }
 
   public void stopPlugin() {
@@ -69,10 +75,6 @@ public class HighWirePlugin extends BasePlugin {
 
   public String getPluginName() {
     return "HighWire Press";
-  }
-
-  public List getSupportedAUNames() {
-    throw new UnsupportedOperationException("Not implemented");
   }
 
   public List getAUConfigProperties() {

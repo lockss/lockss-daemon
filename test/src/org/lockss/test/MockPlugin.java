@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.9 2003-07-23 06:42:31 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.10 2003-07-30 05:36:52 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
    * this plugin
    * @return a List of Strings
    */
-  public List getSupportedAUNames() {
+  public List getSupportedTitles() {
     return ListUtil.list("MockSupportedTitle");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.11 2003-07-23 00:14:51 troberts Exp $
+ * $Id: StaticContentPlugin.java,v 1.12 2003-07-30 05:36:52 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     return "Static Content";
   }
 
-  public List getSupportedAUNames() {
+  public List getSupportedTitles() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.38 2003-07-23 00:14:51 troberts Exp $
+ * $Id: NullPlugin.java,v 1.39 2003-07-30 05:36:52 tlipkis Exp $
  */
 
 /*
@@ -79,7 +79,11 @@ public class NullPlugin {
       return null;
     }
 
-    public List getSupportedAUNames() {
+    public List getSupportedTitles() {
+      return null;
+    }
+
+    public Configuration getConfigForTitle(String title) {
       return null;
     }
 
