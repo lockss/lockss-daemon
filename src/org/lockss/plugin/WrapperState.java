@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperState.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: WrapperState.java,v 1.2 2003-12-08 06:52:33 tlipkis Exp $
  */
 
 /*
@@ -297,11 +297,13 @@ public class WrapperState {
     try {
       String pname = PluginManager.pluginNameFromKey(pluginKey);
       if (pluginMap.containsKey(pname)) {
+	log.debug("Already wrapped: " + pluginKey);
         return (Plugin) pluginMap.get(pname);
       }
       else {
         Plugin plugin = (Plugin) Class.forName(pname).newInstance();
         Plugin wrappedPlugin = (Plugin) getWrapper(plugin);
+	log.debug("Wrapping: " + plugin + " in " + wrappedPlugin);
         pluginMap.put(pname, wrappedPlugin);
         wrappedPlugin.initPlugin(theDaemon);
         return wrappedPlugin;

@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.5 2003-11-20 01:08:33 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.6 2003-12-08 06:52:32 tlipkis Exp $
  */
 
 /*
@@ -157,6 +157,9 @@ class TaskRunner implements Serializable {
   public boolean isTaskSchedulable(SchedulableTask task) {
     Collection tasks = getCombinedTasks(task);
     Scheduler scheduler = schedulerFactory.createScheduler(tasks);
+    boolean res = scheduler.createSchedule();
+    log.debug2((res ? "Task is schedulable: " : "Task is not schedulable: ")
+	       + task);
     return scheduler.createSchedule();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.46 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.47 2003-12-08 06:52:34 tlipkis Exp $
  */
 
 /*
@@ -468,8 +468,8 @@ public class GoslingCrawlerImpl implements Crawler {
 	}
 	numRetries++;
 	if (numRetries >= maxRetries) {
-	  logger.warning(uc+" threw "+numRetries
-			 +" when trying to cache.  Skipping");
+	  logger.warning("Failed to cache "+numRetries +" times.  Skipping "
+			 + uc);
 	  throw e;
 	}
 	Plugin plugin = uc.getCachedUrlSet().getArchivalUnit().getPlugin();
