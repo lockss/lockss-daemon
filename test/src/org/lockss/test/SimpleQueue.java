@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleQueue.java,v 1.2 2002-11-21 20:50:17 tal Exp $
+ * $Id: SimpleQueue.java,v 1.3 2002-12-13 02:24:21 tal Exp $
  */
 
 /*
@@ -64,6 +64,12 @@ public abstract class SimpleQueue {
    * @return The element at the head of the queue, or null if queue is empty
    */
   public abstract Object peek();
+
+  /** 
+   * Test if the queue is empty
+   * @return true if the queue is empty
+   */
+  public abstract boolean isEmpty();
 
   /**
    * Simple FIFO queue
@@ -143,6 +149,14 @@ public abstract class SimpleQueue {
       } else {
 	return null;
       }
+    }
+
+    /** 
+     * Test if the queue is empty
+     * @return true if the queue is empty
+     */
+    public boolean isEmpty() {
+      return queue.isEmpty();
     }
 
     /** 
