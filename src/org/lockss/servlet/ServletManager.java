@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.11 2003-04-14 23:15:00 tal Exp $
+ * $Id: ServletManager.java,v 1.12 2003-04-16 17:00:42 tal Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.io.*;
 import java.net.*;
 import java.util.*;
 import org.lockss.app.*;
@@ -73,7 +74,7 @@ public class ServletManager extends JettyManager {
   private String includeIps;
   private String excludeIps;
   private boolean logForbidden;
-  private IpAccessHandler accessHandler;
+  List accessHandlers = new ArrayList();
 
   public ServletManager() {
   }
@@ -114,22 +115,26 @@ public class ServletManager extends JettyManager {
       logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
-      setIpFilter();
+      setIpFilters();
     }
   }
 
-  void setIpFilter() {
-    if (accessHandler != null) {
-      try {
-	IpFilter filter = new IpFilter();
-	filter.setFilters(includeIps, excludeIps, ';');
-	accessHandler.setFilter(filter);
-      } catch (IpFilter.MalformedException e) {
-	log.warning("Malformed IP filter, filters not changed", e);
-      }
-      accessHandler.setLogForbidden(logForbidden);
-      accessHandler.setAllowLocal(true);
+  void setIpFilters() {
+    for (Iterator iter = accessHandlers.iterator(); iter.hasNext(); ) {
+      setIpFilter((IpAccessHandler)iter.next());
     }
+  }
+
+  void setIpFilter(IpAccessHandler ah) {
+    try {
+      IpFilter filter = new IpFilter();
+      filter.setFilters(includeIps, excludeIps, ';');
+      ah.setFilter(filter);
+    } catch (IpFilter.MalformedException e) {
+      log.warning("Malformed IP filter, filters not changed", e);
+    }
+    ah.setLogForbidden(logForbidden);
+    ah.setAllowLocal(true);
   }
 
   public void startServlets() {
@@ -171,6 +176,35 @@ public class ServletManager extends JettyManager {
   public void configureDebugServlets() {
     try {
       // Create a context
+      HttpContext logContext = server.getContext("/log/");
+      logContext.setAttribute("LockssDaemon", theDaemon);
+
+      log.debug("logmime map: " + logContext.getMimeMap());
+
+      // Now add handlers in the order they should be tried.
+
+      // IpAccessHandler is first
+      addAccessHandler(logContext);
+
+      // log dir resource
+      URL logResourceUrl=new URL("file", null,
+				 new File(".").getAbsolutePath());
+      log.debug("Log Resource URL: " + logResourceUrl);
+      logContext.setResourceBase(logResourceUrl.toString());
+      ResourceHandler logRHandler = new LockssResourceHandler();
+//       rHandler.setDirAllowed(false);
+//       rHandler.setPutAllowed(false);
+//       rHandler.setDelAllowed(false);
+//       rHandler.setAcceptRanges(true);
+      logContext.addHandler(logRHandler);
+      logContext.setMimeMapping("out", "text/plain");
+      logContext.setMimeMapping("gz", "text/gzip");
+      logContext.setTypeEncoding("text/gzip", "x-gzip");
+
+      // NotFoundHandler
+      logContext.addHandler(new NotFoundHandler());
+
+
       HttpContext context = server.getContext("/");
 //       context.setErrorPage("500", "images/");
 //       log.debug("Error page URL: " + context.getErrorPage("500"));
@@ -181,9 +215,7 @@ public class ServletManager extends JettyManager {
       // Now add handlers in the order they should be tried.
 
       // IpAccessHandler is first
-      accessHandler = new IpAccessHandler("UI");
-      setIpFilter();
-      context.addHandler(accessHandler);
+      addAccessHandler(context);
 
       // Create a servlet container
       ServletHandler handler = new ServletHandler();
@@ -221,4 +253,12 @@ public class ServletManager extends JettyManager {
       log.warning("Couldn't start debug servlets", e);
     }
   }
+
+  void addAccessHandler(HttpContext context) {
+    IpAccessHandler ah = new IpAccessHandler("UI");
+    setIpFilter(ah);
+    context.addHandler(ah);
+    accessHandlers.add(ah);
+  }
+
 }
