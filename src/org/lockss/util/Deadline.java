@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.9 2002-11-20 23:37:03 tal Exp $
+ * $Id: Deadline.java,v 1.10 2002-11-21 20:26:01 tal Exp $
  */
 
 /*
@@ -184,9 +184,9 @@ public class Deadline implements Comparable {
   */
   public synchronized long getSleepTime() {
     if (TimeBase.isSimulated()) {
-      return 5;
+      return expired() ? 0 : 5;
     } else {
-      return (expired() ? 0 : expiration.getTime() - nowMs());
+      return getRemainingTime();
     }
   }
 
