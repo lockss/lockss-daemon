@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.11 2004-03-11 01:19:53 troberts Exp $
+ * $Id: TestUrlUtil.java,v 1.12 2004-03-11 09:43:13 tlipkis Exp $
  */
 
 /*
@@ -142,6 +142,10 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("http://test.com/foo/bar/a.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
 				    "a.html"));
+    // ensure query string preserved
+    assertEquals("http://test.com/foo/bar/a.html?foo=bar",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "a.html?foo=bar"));
     try {
       UrlUtil.resolveUri("foo", "bar");
       fail("Should throw MalformedURLException");
@@ -165,11 +169,41 @@ public class TestUrlUtil extends LockssTestCase {
  		 UrlUtil.resolveUri("http://test.com/foo/bar/", "a.html\r "));
   }
 
-  public void testResolveUrlEncodesNonTrailingSpaces()
-      throws MalformedURLException {
+  public void testResolveUrlEncoding() throws MalformedURLException {
+    // Embedded space should be escaped
     assertEquals("http://test.com/foo/bar/a%20test.html",
 		 UrlUtil.resolveUri("http://test.com/foo/bar/",
 				    "a test.html"));
+    // Percents should not be escaped, or risk double escapement
+    assertEquals("http://test.com/foo/bar/a%20.html",
+		 UrlUtil.resolveUri("http://test.com/foo/bar/",
+				    "a%20.html"));
+  }
+
+  public void testIsDirectoryRedirection() {
+    assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
+					      "http://xx.com/foo/"));
+    assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
+					      "Http://xx.com/foo/"));
+    assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
+					      "Http://Xx.COM/foo/"));
+    assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
+					       "http://xx.com/FOO/"));
+    assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
+					       "http://xx.com/foo"));
+    assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo",
+					       "http://zz.com/foo/"));
+
+    assertTrue(UrlUtil.isDirectoryRedirection("http://xx.com/foo?a=b",
+					      "http://xx.com/foo/?a=b"));
+    // slash appended to query string isn't
+    assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo?a=b",
+					      "http://xx.com/foo?a=b/"));
+    // ensure doesn't totally ignore query
+    assertFalse(UrlUtil.isDirectoryRedirection("http://xx.com/foo?a=b",
+					      "http://xx.com/foo/"));
+    // not legal URLs, so returns false
+    assertFalse(UrlUtil.isDirectoryRedirection("foo", "foo/"));
   }
 
   public void testGetHeadersNullConnection() {

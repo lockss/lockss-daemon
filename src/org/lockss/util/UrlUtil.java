@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.16 2004-03-11 01:19:52 troberts Exp $
+ * $Id: UrlUtil.java,v 1.17 2004-03-11 09:43:13 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -187,6 +187,34 @@ public class UrlUtil {
       }
     }
     return false;
+  }
+
+  /** Return true if <code>to</code> looks like a directory redirection
+   * from <code>from</code>; <i>ie</i>, that path has had a slash appended
+   * to it. */
+  // XXX does this need to be insensitive to differently encoded URLs?
+  public static boolean isDirectoryRedirection(String from, String to) {
+    if (to.length() != (from.length() + 1)) return false;
+    try {
+      URL ufrom = new URL(from);
+      URL uto = new URL(to);
+      String toPath = uto.getPath();
+      String fromPath = ufrom.getPath();
+      int len = fromPath.length();
+      return (
+	      toPath.length() == (len + 1) &&
+	      toPath.charAt(len) == '/' &&
+	      toPath.startsWith(fromPath) &&
+	      ufrom.getHost().equalsIgnoreCase(uto.getHost()) &&
+	      ufrom.getProtocol().equalsIgnoreCase(uto.getProtocol()) &&
+	      ufrom.getPort() == uto.getPort() &&
+	      StringUtil.equalStringsIgnoreCase(ufrom.getQuery(),
+						uto.getQuery())
+
+	      );
+    } catch (MalformedURLException e) {
+      return false;
+    }
   }
 
   /**
