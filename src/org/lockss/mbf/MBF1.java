@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.14 2003-09-10 04:09:42 dshr Exp $
+ * $Id: MBF1.java,v 1.15 2004-04-28 02:09:19 dshr Exp $
  */
 
 /*
@@ -241,33 +241,33 @@ public class MBF1 extends MemoryBoundFunction {
     // update indices into A and wrap them
     i += 4; // i is a word index into a byte array
     i &= 0x3fc;
-    j += wordAt(A, i);
+    j = ((j >> 2) + wordAt(A, i)) << 2;
     j &= 0x3fc;
     // logger.info("Step at " + c + " indices [" + i + "," + j + "]");
     // feed bits from T into A[i] and rotate them
-    int tmp1 = wordAt(T, c);
-    int tmp2 = 0;
+    int tC = wordAt(T, c);
+    int aI = 0;
     switch (T.length) {
     case 16*1024*1024:
-      tmp2 = cyclicRightShift11(wordAt(A, i) + tmp1);
+      aI = cyclicRightShift11(wordAt(A, i) + tC);
       break;
     case 1024*1024:
-      tmp2 = cyclicRightShift15(wordAt(A, i) + tmp1);
+      aI = cyclicRightShift15(wordAt(A, i) + tC);
       break;
     }      
-    setWordAt(A, i, tmp2);
+    setWordAt(A, i, aI);
     // swap A[i] and A[j]
-    tmp2 = wordAt(A, i);
-    int tmp3 = wordAt(A, j);
-    setWordAt(A, i, tmp3);
-    setWordAt(A, j, tmp2);
+    int aJ = wordAt(A, j);
+    setWordAt(A, i, aJ);
+    setWordAt(A, j, aI);
+    int aJPlusaIByteIndex = ((aI + aJ) << 2) & 0x3fc;
     // update c
     switch (T.length) {
     case 16*1024*1024:
-      c = (tmp1 ^ wordAt(A, (tmp2 + tmp3) & 0x3fc)) & 0x00fffffc;
+      c = ((tC ^ wordAt(A, aJPlusaIByteIndex)) << 2) & 0x00fffffc;
       break;
     case 1024*1024:
-      c = (tmp1 ^ wordAt(A, (tmp2 + tmp3) & 0x3fc)) & 0x000ffffc;
+      c = ((tC ^ wordAt(A, aJPlusaIByteIndex)) << 2) & 0x000ffffc;
       break;
     }
     if (c < 0 || c > (T.length-4) || ( c & 0x3 ) != 0)
