@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.3 2002-10-16 04:53:32 tal Exp $
+ * $Id: HashService.java,v 1.4 2002-11-07 23:15:45 tal Exp $
  */
 
 /*
@@ -120,6 +120,9 @@ public class HashService {
   }
 
   private static boolean scheduleReq(HashQueue.Request req) {
+    if (theQueue == null) {
+      throw new IllegalStateException("HashService has not been initialized");
+    }
     return theQueue.scheduleReq(req);
   }
 
