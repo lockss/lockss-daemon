@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.10 2002-12-02 00:31:52 tal Exp $
+ * $Id: Configuration.java,v 1.11 2002-12-02 20:53:45 tal Exp $
  */
 
 /*
@@ -158,6 +158,7 @@ public abstract class Configuration {
       return null;
     }
     Configuration newConfig = newConfiguration();
+    newConfig.setConfigUrls(urlList);
     boolean gotIt = newConfig.loadList(urlList);
     return gotIt ? newConfig : null;
   }
@@ -177,7 +178,8 @@ public abstract class Configuration {
       return false;
     }
     setCurrentConfig(newConfig);
-    log.info("Config updated");
+    log.info("Config updated from " +
+	     StringUtil.separatedString(newConfig.configUrlList, ", "));
     runCallbacks(oldConfig, newConfig);
     return true;
   }
