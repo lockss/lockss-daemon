@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.38 2003-06-25 21:16:34 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.39 2003-08-05 20:21:31 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class LockssRepositoryImpl extends BaseLockssManager implements LockssRep
    */
   public static final String CACHE_ROOT_NAME = "cache";
 
-  // root location of all caches
+  // needed only for unit tests
   static String cacheLocation = null;
 
   // used for name mapping
@@ -110,14 +110,13 @@ public class LockssRepositoryImpl extends BaseLockssManager implements LockssRep
   public void stopService() {
     // mainly important in testing to blank this
     lastPluginDir = ""+(char)('a'-1);
-    cacheLocation = null;
     nameMap = null;
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
                            Set changedKeys) {
-    // the cacheLocation shouldn't change, so it doesn't update when the
-    // Configuration changes
+    // at some point we'll have to respond to changes in the available disk
+    // space list
   }
 
   public RepositoryNode getNode(String url) throws MalformedURLException {
@@ -307,17 +306,16 @@ public class LockssRepositoryImpl extends BaseLockssManager implements LockssRep
    * @return the new LockssRepository instance
    */
   public static LockssRepository createNewLockssRepository(ArchivalUnit au) {
-    // load cacheLocation if not yet loaded
+    // XXX needs to handle multiple disks/repository locations
+
+    cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
     if (cacheLocation == null) {
-      cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
-      if (cacheLocation == null) {
-        logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
-                     " from Configuration");
-        throw new LockssRepository.RepositoryStateException(
-            "Couldn't load param.");
-      }
-      cacheLocation = extendCacheLocation(cacheLocation);
+      logger.error("Couldn't get " + PARAM_CACHE_LOCATION +
+		   " from Configuration");
+      throw new LockssRepository.RepositoryStateException(
+          "Couldn't load param.");
     }
+    cacheLocation = extendCacheLocation(cacheLocation);
 
     return new LockssRepositoryImpl(
         LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au),
