@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.17 2004-09-07 07:28:01 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.18 2004-11-12 20:08:13 troberts Exp $
  */
 
 /*
@@ -172,6 +172,19 @@ public class TestUrlUtil extends LockssTestCase {
       fail(s);
     } catch (MalformedURLException e) {
     }
+  }
+
+  public void testNormalizeUrlQueryString() throws MalformedURLException {
+    assertEquals("http://a.com/dd?foo=bar",
+		 UrlUtil.normalizeUrl("http://A.com/dd?foo=bar"));
+  }
+
+  public void testNormalizeUrlRemovesHash() throws MalformedURLException {
+    assertEquals("http://a.com/xy",
+		 UrlUtil.normalizeUrl("http://a.com/xy#blah"));
+
+    assertEquals("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033",
+		 UrlUtil.normalizeUrl("http://www.bioone.org/perlserv/?request=archive-lockss&issn=0044-7447&volume=033#content"));
   }
 
   public void testEqualUrls() throws MalformedURLException {
