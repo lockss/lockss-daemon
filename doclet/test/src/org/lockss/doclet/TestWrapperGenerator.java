@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperGenerator.java,v 1.3 2003-07-25 00:29:04 tyronen Exp $
+ * $Id: TestWrapperGenerator.java,v 1.4 2003-07-28 23:00:25 tyronen Exp $
  */
 
 /*
@@ -240,7 +240,7 @@ public class TestWrapperGenerator extends LockssTestCase {
     pw.println("import org.lockss.test.*;");
     pw.println("import java.io.*;");
     pw.println("import org.lockss.util.ListUtil;\n");
-    pw.print  ("class " + prefix + "childTestClass ");
+    pw.print  ("public class " + prefix + "childTestClass ");
     if (INTERFACE_ONLY) {
       pw.print("implements");
     } else {

@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperGenerator.java,v 1.3 2003-07-25 00:29:04 tyronen Exp $
+ * $Id: WrapperGenerator.java,v 1.4 2003-07-28 23:00:24 tyronen Exp $
  */
 
 /*
@@ -408,7 +408,7 @@ public class WrapperGenerator extends Doclet {
 
   /** Write class declaration*/
   void writeClassDecl(ClassDoc cl, Writer wr) throws IOException {
-    wr.write("class ");
+    wr.write("public class ");
     wr.write(prefix);
     wr.write(cl.name());
     if (cl.isInterface()) {
