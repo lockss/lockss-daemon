@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.30 2004-01-14 21:39:51 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.31 2004-01-14 22:24:01 tlipkis Exp $
  */
 
 /*
@@ -35,8 +35,10 @@ package org.lockss.plugin;
 import java.io.*;
 import java.util.*;
 import junit.framework.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.plugin.configurable.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -94,7 +96,7 @@ public class TestPluginManager extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
 
-    mgr = new PluginManager();
+    mgr = new MockPluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
     mgr.initService(theDaemon);
@@ -179,6 +181,24 @@ public class TestPluginManager extends LockssTestCase {
     ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_XML_PLUGINS,
 				  n1 + ";" + n2);
     assertEquals(ListUtil.list(n1, n2), mgr.getXmlPlugins());
+  }
+
+  public void testEnsurePluginLoadedXml() throws Exception {
+    String pname = "org.lockss.foo.FooPlugin";
+    String xmlname = "/org/lockss/foo/FooPlugin.xml";
+    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_XML_PLUGINS,
+				  pname);
+    String key = PluginManager.pluginKeyFromId(pname);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    Plugin p = mgr.getPlugin(key);
+    assertTrue(p.toString(), p instanceof ConfigurablePlugin);
+    MockConfigurablePlugin mcpi = (MockConfigurablePlugin)mgr.getPlugin(key);
+    assertNotNull(mcpi);
+    List initArgs = mcpi.getInitArgs();
+    assertEquals(1, initArgs.size());
+    List args = (List)initArgs.get(0);
+    assertEquals(2, args.size());
+    assertEquals(xmlname, args.get(1));
   }
 
   public void testStop() throws Exception {
@@ -301,6 +321,28 @@ public class TestPluginManager extends LockssTestCase {
       fail("createAU threw RuntimeException");
     }
 
+  }
+
+  static class MockPluginManager extends PluginManager {
+    protected String getConfigurablePluginName() {
+      return MockConfigurablePlugin.class.getName();
+    }
+  }
+
+  static class MockConfigurablePlugin extends ConfigurablePlugin {
+    private List initArgs = new ArrayList();
+
+    public void initPlugin(LockssDaemon daemon, String extMapName) {
+      initArgs.add(ListUtil.list(daemon, extMapName));
+      super.initPlugin(daemon, extMapName);
+    }
+    public void initPlugin(LockssDaemon daemon) {
+      initArgs.add(ListUtil.list(daemon));
+      super.initPlugin(daemon);
+    }
+    List getInitArgs() {
+      return initArgs;
+    }
   }
 
   static class ThrowingMockPlugin extends MockPlugin {
