@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.4 2002-12-17 20:52:31 troberts Exp $
+ * $Id: Crawler.java,v 1.5 2003-01-07 01:55:52 troberts Exp $
  */
 
 /*
@@ -47,13 +47,12 @@ public interface Crawler {
   /**
    * Initiate a crawl starting with all the urls in urls
    * @param au ArchivalUnit that we are doing this crawl for
-   * @param urls urls to start the crawl at
+   * @param urls urls to start the crawl at; these will be refetched even
+   * if they already exist
    * @param followLinks if true, we'll parse fetched urls to harvest more
-   * @param overWrite true if we should overwrite existing content
    * @param deadline maximum time to spend on this crawl
    */
 
   public void doCrawl(ArchivalUnit au, List urls,
-		      boolean followLinks, boolean overWrite,
-		      Deadline deadline);
+		      boolean followLinks, Deadline deadline);
 }
