@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.55 2004-06-15 21:43:42 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.56 2004-07-12 06:12:10 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,8 @@ package org.lockss.app;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.mail.*;
+import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
@@ -99,6 +101,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /* the parameter strings that represent our managers */
   public static String ACTIVITY_REGULATOR = "ActivityRegulator";
   public static String WATCHDOG_SERVICE = "WatchdogService";
+  public static String MAIL_SERVICE = "MailService";
+  public static String ALERT_MANAGER = "AlertManager";
   public static String HASH_SERVICE = "HashService";
   public static String SCHED_SERVICE = "SchedService";
   public static String COMM_MANAGER = "CommManager";
@@ -130,6 +134,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     "org.lockss.scheduler.SchedService";
   private static String DEFAULT_WATCHDOG_SERVICE =
     "org.lockss.daemon.WatchdogService";
+  private static String DEFAULT_MAIL_SERVICE =
+    "org.lockss.mail.SmtpMailService";
+  private static String DEFAULT_ALERT_MANAGER =
+    "org.lockss.alert.AlertManagerImpl";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_ROUTER_MANAGER =
     "org.lockss.protocol.LcapRouter";
@@ -192,6 +200,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   protected static final ManagerDesc[] managerDescs = {
+    new ManagerDesc(MAIL_SERVICE, DEFAULT_MAIL_SERVICE),
+    new ManagerDesc(ALERT_MANAGER, DEFAULT_ALERT_MANAGER),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
     new ManagerDesc(SCHED_SERVICE, DEFAULT_SCHED_SERVICE),
@@ -239,7 +249,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Map of managerKey -> manager instance. Need to preserve order so
   // managers are started and stopped in the right order.  This does not
   // need to be synchronized.
-  protected static SequencedHashMap theManagers = new SequencedHashMap();
+  protected SequencedHashMap managerMap = new SequencedHashMap();
 
   // Maps au to sequenced map of managerKey -> manager instance
   protected static HashMap auManagerMaps = new HashMap();
@@ -247,8 +257,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   // Maps managerKey -> LockssAuManager.Factory instance
   protected static HashMap auManagerFactoryMap = new HashMap();
 
+  private static LockssDaemon theDaemon;
+
   protected LockssDaemon(List propUrls) {
     this.propUrls = propUrls;
+    theDaemon = this;
   }
 
   // General information accessors
@@ -307,7 +320,21 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @throws IllegalArgumentException if the manager is not available.
    */
   public static LockssManager getManager(String managerKey) {
-    LockssManager mgr = (LockssManager) theManagers.get(managerKey);
+    if (theDaemon == null) {
+      throw new NullPointerException("Daemon has not been created");
+    }
+    return theDaemon.getManagerByKey(managerKey);
+  }
+
+  /**
+   * Return a lockss manager. This will need to be cast to the appropriate
+   * class.
+   * @param managerKey the name of the manager
+   * @return a lockss manager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LockssManager getManagerByKey(String managerKey) {
+    LockssManager mgr = (LockssManager) managerMap.get(managerKey);
     if(mgr == null) {
       throw new IllegalArgumentException("Unavailable manager:" + managerKey);
     }
@@ -330,6 +357,24 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public WatchdogService getWatchdogService() {
     return (WatchdogService)getManager(WATCHDOG_SERVICE);
+  }
+
+  /**
+   * return the mail manager instance
+   * @return the MailService
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public MailService getMailService() {
+    return (MailService)getManager(MAIL_SERVICE);
+  }
+
+  /**
+   * return the alert manager instance
+   * @return the AlertManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public AlertManager getAlertManager() {
+    return (AlertManager)getManager(ALERT_MANAGER);
   }
 
   /**
@@ -674,12 +719,12 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     for(int i=0; i< managerDescs.length; i++) {
       ManagerDesc desc = managerDescs[i];
       LockssManager mgr = initManager(desc);
-      theManagers.put(desc.key, mgr);
+      managerMap.put(desc.key, mgr);
     }
     daemonInited = true;
     // now start the managers in the same order in which they were created
-    // (theManagers is a SequencedHashMap)
-    Iterator it = theManagers.values().iterator();
+    // (managerMap is a SequencedHashMap)
+    Iterator it = managerMap.values().iterator();
     while(it.hasNext()) {
       LockssManager lm = (LockssManager)it.next();
       try {
@@ -705,10 +750,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     stopAllAuManagers();
 
     // stop all single managers
-    List rkeys = ListUtil.reverseCopy(theManagers.sequence());
+    List rkeys = ListUtil.reverseCopy(managerMap.sequence());
     for (Iterator it = rkeys.iterator(); it.hasNext(); ) {
       String key = (String)it.next();
-      LockssManager lm = (LockssManager)theManagers.get(key);
+      LockssManager lm = (LockssManager)managerMap.get(key);
       try {
 	lm.stopService();
       } catch (Exception e) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.37 2004-05-12 17:50:00 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.38 2004-07-12 06:12:10 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.test;
 
 import java.util.*;
 import org.lockss.util.*;
+import org.lockss.mail.*;
+import org.lockss.alert.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
 import org.lockss.protocol.*;
@@ -53,6 +55,8 @@ public class MockLockssDaemon extends LockssDaemon {
   private static Logger log = Logger.getLogger("MockLockssDaemon");
 
   WatchdogService wdogService = null;
+  MailService mailService = null;
+  AlertManager alertManager = null;
   HashService hashService = null;
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
@@ -138,9 +142,33 @@ public class MockLockssDaemon extends LockssDaemon {
   public WatchdogService getWatchdogService() {
     if (wdogService == null) {
       wdogService = (WatchdogService)newManager(LockssDaemon.WATCHDOG_SERVICE);
-      theManagers.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
+      managerMap.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
     }
     return wdogService;
+  }
+
+  /**
+   * return the mail manager instance
+   * @return the MailService
+   */
+  public MailService getMailService() {
+    if (mailService == null) {
+      mailService = new NullMailService();
+      managerMap.put(LockssDaemon.MAIL_SERVICE, mailService);
+    }
+    return mailService;
+  }
+
+  /**
+   * return the alert manager instance
+   * @return the AlertManager
+   */
+  public AlertManager getAlertManager() {
+    if (alertManager == null) {
+      alertManager = new NullAlertManager();
+      managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
+    }
+    return alertManager;
   }
 
   /**
@@ -150,7 +178,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public HashService getHashService() {
     if (hashService == null) {
       hashService = (HashService)newManager(LockssDaemon.HASH_SERVICE);
-      theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
+      managerMap.put(LockssDaemon.HASH_SERVICE, hashService);
     }
     return hashService;
   }
@@ -162,7 +190,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public SchedService getSchedService() {
     if (schedService == null) {
       schedService = (SchedService)newManager(LockssDaemon.SCHED_SERVICE);
-      theManagers.put(LockssDaemon.SCHED_SERVICE, schedService);
+      managerMap.put(LockssDaemon.SCHED_SERVICE, schedService);
     }
     return schedService;
   }
@@ -174,7 +202,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public SystemMetrics getSystemMetrics() {
     if (systemMetrics == null) {
       systemMetrics = (SystemMetrics)newManager(LockssDaemon.SYSTEM_METRICS);
-      theManagers.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
+      managerMap.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
     }
     return systemMetrics;
   }
@@ -186,7 +214,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public PollManager getPollManager() {
     if (pollManager == null) {
       pollManager = (PollManager)newManager(LockssDaemon.POLL_MANAGER);
-      theManagers.put(LockssDaemon.POLL_MANAGER, pollManager);
+      managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
     }
     return pollManager;
   }
@@ -198,7 +226,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public LcapComm getCommManager() {
     if (commManager == null) {
       commManager = (LcapComm)newManager(LockssDaemon.COMM_MANAGER);
-      theManagers.put(LockssDaemon.COMM_MANAGER, commManager);
+      managerMap.put(LockssDaemon.COMM_MANAGER, commManager);
     }
     return commManager;
   }
@@ -210,7 +238,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public LcapRouter getRouterManager() {
     if (routerManager == null) {
       routerManager = (LcapRouter)newManager(LockssDaemon.ROUTER_MANAGER);
-      theManagers.put(LockssDaemon.ROUTER_MANAGER, routerManager);
+      managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
     }
     return routerManager;
   }
@@ -222,7 +250,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public ProxyManager getProxyManager() {
     if (proxyManager == null) {
       proxyManager = (ProxyManager)newManager(LockssDaemon.PROXY_MANAGER);
-      theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
+      managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
     }
     return proxyManager;
   }
@@ -234,7 +262,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public CrawlManager getCrawlManager() {
     if (crawlManager == null) {
       crawlManager = (CrawlManager)newManager(LockssDaemon.CRAWL_MANAGER);
-      theManagers.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
+      managerMap.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
     }
     return crawlManager;
   }
@@ -246,7 +274,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public PluginManager getPluginManager() {
     if (pluginManager == null) {
       pluginManager = (PluginManager)newManager(LockssDaemon.PLUGIN_MANAGER);
-      theManagers.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
+      managerMap.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
     }
     return pluginManager;
   }
@@ -260,7 +288,7 @@ public class MockLockssDaemon extends LockssDaemon {
     if (identityManager == null) {
       identityManager =
 	(IdentityManager)newManager(LockssDaemon.IDENTITY_MANAGER);
-      theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
+      managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     }
     return identityManager;
   }
@@ -268,7 +296,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public StatusService getStatusService() {
     if (statusService == null) {
       statusService = (StatusService)newManager(LockssDaemon.STATUS_SERVICE);
-      theManagers.put(LockssDaemon.STATUS_SERVICE, statusService);
+      managerMap.put(LockssDaemon.STATUS_SERVICE, statusService);
     }
     return statusService;
   }
@@ -280,7 +308,7 @@ public class MockLockssDaemon extends LockssDaemon {
   public RemoteApi getRemoteApi() {
     if (remoteApi == null) {
       remoteApi = (RemoteApi)newManager(LockssDaemon.REMOTE_API);
-      theManagers.put(LockssDaemon.REMOTE_API, remoteApi);
+      managerMap.put(LockssDaemon.REMOTE_API, remoteApi);
     }
     return remoteApi;
   }
@@ -291,7 +319,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setCommManager(LcapComm commMan) {
     commManager = commMan;
-    theManagers.put(LockssDaemon.COMM_MANAGER, commManager);
+    managerMap.put(LockssDaemon.COMM_MANAGER, commManager);
   }
 
   /**
@@ -300,7 +328,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setRouterManager(LcapRouter routerMan) {
     routerManager = routerMan;
-    theManagers.put(LockssDaemon.ROUTER_MANAGER, routerManager);
+    managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
   }
 
   /**
@@ -309,7 +337,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setCrawlManager(CrawlManager crawlMan) {
     crawlManager = crawlMan;
-    theManagers.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
+    managerMap.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
   }
 
   /**
@@ -318,7 +346,25 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setWatchdogService(WatchdogService wdogService) {
     this.wdogService = wdogService;
-    theManagers.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
+    managerMap.put(LockssDaemon.WATCHDOG_SERVICE, wdogService);
+  }
+
+  /**
+   * Set the MailService
+   * @param mailMan the new manager
+   */
+  public void setMailService(MailService mailMan) {
+    mailService = mailMan;
+    managerMap.put(LockssDaemon.MAIL_SERVICE, mailService);
+  }
+
+  /**
+   * Set the AlertManager
+   * @param alertMan the new manager
+   */
+  public void setAlertManager(AlertManager alertMan) {
+    alertManager = alertMan;
+    managerMap.put(LockssDaemon.ALERT_MANAGER, alertManager);
   }
 
   /**
@@ -327,7 +373,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setHashService(HashService hashServ) {
     hashService = hashServ;
-    theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
+    managerMap.put(LockssDaemon.HASH_SERVICE, hashService);
   }
 
   /**
@@ -336,7 +382,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setSchedService(SchedService schedServ) {
     schedService = schedServ;
-    theManagers.put(LockssDaemon.SCHED_SERVICE, schedService);
+    managerMap.put(LockssDaemon.SCHED_SERVICE, schedService);
   }
 
   /**
@@ -345,7 +391,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setIdentityManager(IdentityManager idMan) {
     identityManager = idMan;
-    theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
+    managerMap.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
   }
 
   /**
@@ -354,7 +400,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setPluginManager(PluginManager pluginMan) {
     pluginManager = pluginMan;
-    theManagers.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
+    managerMap.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
   }
 
   /**
@@ -363,7 +409,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setPollManager(PollManager pollMan) {
     pollManager = pollMan;
-    theManagers.put(LockssDaemon.POLL_MANAGER, pollManager);
+    managerMap.put(LockssDaemon.POLL_MANAGER, pollManager);
   }
 
   /**
@@ -372,7 +418,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setProxyManager(ProxyManager proxyMgr) {
     proxyManager = proxyMgr;
-    theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
+    managerMap.put(LockssDaemon.PROXY_MANAGER, proxyManager);
   }
 
   /**
@@ -381,7 +427,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setSystemMetrics(SystemMetrics sysMetrics) {
     systemMetrics = sysMetrics;
-    theManagers.put(LockssDaemon.SYSTEM_METRICS, sysMetrics);
+    managerMap.put(LockssDaemon.SYSTEM_METRICS, sysMetrics);
   }
 
   /**
@@ -390,7 +436,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setRemoteApi(RemoteApi sysMetrics) {
     remoteApi = sysMetrics;
-    theManagers.put(LockssDaemon.REMOTE_API, sysMetrics);
+    managerMap.put(LockssDaemon.REMOTE_API, sysMetrics);
   }
 
   // AU managers
