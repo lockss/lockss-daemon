@@ -151,7 +151,7 @@ public class TestPoll extends TestCase {
     try {
       p.vote();
     }
-    catch(NullPointerException npe) {
+    catch(IllegalStateException e) {
       // the socket isn't inited and should squack
     }
   }
@@ -172,7 +172,7 @@ public class TestPoll extends TestCase {
     try {
       p.voteInPoll();
     }
-    catch(NullPointerException npe) {
+    catch(IllegalStateException e) {
       // the socket isn't inited and should squack
     }
 
