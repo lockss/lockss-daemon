@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.17 2004-02-10 04:55:57 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.18 2004-06-17 00:03:43 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -97,27 +97,27 @@ public class TimerQueue /*extends BaseLockssManager*/ implements Serializable {
   }
 
   private void runAllExpired0() {
-    while (true) {
-      Request req = (Request)queue.peek();
-      if (req == null || !req.deadline.expired()) {
-	return;
-      }
-      // Need to wait until expired requests run.  Easiest way is to put
-      // our own request on the queue (which will come after any with earlier
-      // or equal deadlines) and wait for it to happen.
-      final BinarySemaphore sem = new BinarySemaphore();
-      add(Deadline.in(0),
-	  new Callback() {
-	    public void timerExpired(Object cookie) {
-	      sem.give();
-	    }},
-	  null);
-      try {
-	sem.take(Deadline.in(Constants.SECOND));
-      } catch (InterruptedException e) {
-      }
+    Request req = (Request)queue.peek();
+    if (req == null || !req.deadline.expired()) {
+      // queue is empty, or there are no unexpired requests
+      return;
+    }
+    // Need to wait until expired requests run.  Easiest way is to put
+    // our own request on the queue (which will come after any with earlier
+    // or equal deadlines) and wait for it to happen.
+    final BinarySemaphore sem = new BinarySemaphore();
+    add(Deadline.in(0),
+	new Callback() {
+	  public void timerExpired(Object cookie) {
+	    sem.give();
+	  }},
+	null);
+    try {
+      sem.take(Deadline.MAX);
+    } catch (InterruptedException e) {
     }
   }
+
 
   /** Timer Request element; only used to cancel a request. */
   public class Request implements Serializable, Comparable {
