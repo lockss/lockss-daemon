@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.9 2004-03-08 19:32:36 tlipkis Exp $
+ * $Id: CachedUrl.java,v 1.10 2004-03-09 23:39:00 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.Properties;
+import org.lockss.util.*;
 
 /**
  * <code>CachedUrl</code> is used to access the contents and
@@ -57,15 +58,13 @@ public interface CachedUrl extends CachedUrlSetNode {
    * which the content was found (possibly the last in a chain of
    * redirects).
   */
-  public static final String PROPERTY_REDIRECTED_TO = "redirected-to";
-  public static final String PROPERTY_CONTENT_TYPE = "content-type";
-  public static final String PROPERTY_FETCH_DATE = "date";
-  public static final String PROPERTY_URL = "content-url";
+  public static final String HEADER_PREFIX = null;
+  public static final String PROPERTY_REDIRECTED_TO = "X-Lockss-redirected-to";
+  public static final String PROPERTY_CONTENT_TYPE = "X-Lockss-content-type";
+  public static final String PROPERTY_ORIG_URL = "X-Lockss-orig-url";
+  public static final String PROPERTY_FETCH_TIME = "X_Lockss-server-date";
 
-  /** Prefix applied to header fields in the http response, to turn them
-   * into CachedUrl properties. */
-  public static final String HEADER_PREFIX = "_header_";
-
+  public static final String PROPERTY_LAST_MODIFIED = "last-modified";
   /**
   * Get an object from which the content of the url can be read
   * from the cache.
@@ -89,11 +88,11 @@ public interface CachedUrl extends CachedUrlSetNode {
 
   /**
    * Get the properties attached to the url in the cache, if any.
-   * @return the {@link Properties} object attached to the
+   * @return the {@link CIProperties} object attached to the
    *         url.  If no properties have been attached, an
-   *         empty {@link Properties} object is returned.
+   *         empty {@link CIProperties} object is returned.
    */
-  public Properties getProperties();
+  public CIProperties getProperties();
 
   /**
    * Return the unfiltered content size.

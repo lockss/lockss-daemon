@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.18 2004-03-06 00:38:35 troberts Exp $
+ * $Id: PTestPlugin.java,v 1.19 2004-03-09 23:39:00 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.test.*;
+import org.lockss.util.*;
 import java.math.BigInteger;
 
 /**
@@ -50,7 +51,7 @@ public class PTestPlugin {
   static class CU implements CachedUrl {
     private String url;
     private String contents = null;
-    private Properties props = new Properties();
+    private CIProperties props = new CIProperties();
 
     public CU(String url) {
       this.url = url;
@@ -58,7 +59,7 @@ public class PTestPlugin {
     public CU(String url, String type, String contents) {
       this.url = url;
       setContents(contents);
-      props.setProperty("Content-Type", type);
+      props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, type);
     }
 
     public ArchivalUnit getArchivalUnit() {
@@ -103,7 +104,7 @@ public class PTestPlugin {
           Integer.toString(contents.length()))).toByteArray();
     }
 
-    public Properties getProperties() {
+    public CIProperties getProperties() {
       return props;
     }
   }
