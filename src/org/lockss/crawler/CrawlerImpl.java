@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.29 2004-09-01 02:27:26 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.30 2004-09-21 23:10:16 troberts Exp $
  */
 
 /*
@@ -147,12 +147,27 @@ public abstract class CrawlerImpl implements Crawler {
    * @return true if no errors
    */
   public boolean doCrawl() {
-    try {
+    if (crawlAborted) {
+      //don't start an aborted crawl
+      return false;
+    } else try {
+      logger.info("Beginning crawl of "+au);
+      crawlStatus.signalCrawlStarted();
       return doCrawl0();
     } finally {
       crawlStatus.signalCrawlEnded();
     }
   }
+
+  /**
+   * Method used by subclasses to check crawl permission
+   *
+   * @return PERMISSION_UNCHECKED if we can't get the permission page,
+   * otherwise PERMISSION_OK if there is an appropriate permission
+   * statement on the specified page, PERMISSION_NOT_OK otherwise
+   * @param permissionPage string representation of the URL of the permission
+   * page
+   */
 
   int crawlPermission(String permissionPage) {
 
@@ -219,7 +234,7 @@ public abstract class CrawlerImpl implements Crawler {
    * @param checker PermissionChecker
    * @return boolean iff permission was found for each object on the page.
    */
-  protected boolean checkPermission(String permissionPage) throws
+  private boolean checkPermission(String permissionPage) throws
       IOException {
 
     PermissionChecker checker;
