@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.5 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: TitleConfig.java,v 1.6 2005-01-04 02:52:24 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class TitleConfig {
   private String journalTitle;
   private String pluginName;
   private String pluginVersion = null;
+  private long estSize = 0;
   private List params = null;
 
   /**
@@ -128,6 +129,21 @@ public class TitleConfig {
    */
   public String getPluginVersion() {
     return pluginVersion;
+  }
+
+  /**
+   * Set the estimated size
+   * @param size estimated size in bytes
+   */
+  public void setEstimatedSize(long size) {
+    this.estSize = size;
+  }
+
+  /**
+   * @return the estimated size
+   */
+  public long getEstimatedSize() {
+    return estSize;
   }
 
   /** Temporary until clients fixed */
