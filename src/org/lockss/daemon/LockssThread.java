@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.13 2005-01-04 02:51:47 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.14 2005-03-11 02:12:22 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -221,11 +221,11 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   protected void threadHung() {
     if (Configuration.getBooleanParam(PARAM_THREAD_WDOG_HUNG_DUMP,
 				      DEFAULT_THREAD_WDOG_HUNG_DUMP)) {
-      PlatformInfo.threadDump();
+      PlatformInfo.getInstance().threadDump();
       try {
 	Thread.sleep(30 * Constants.SECOND);
       } catch (InterruptedException ignore) {}
-      PlatformInfo.threadDump();
+      PlatformInfo.getInstance().threadDump();
     }
     exitDaemon(EXIT_CODE_THREAD_HUNG,
 	       "Thread hung for " + StringUtil.timeIntervalToString(interval));
