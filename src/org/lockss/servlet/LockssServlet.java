@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.31 2003-11-19 08:46:46 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.32 2003-12-17 02:06:01 tlipkis Exp $
  */
 
 /*
@@ -648,8 +648,9 @@ public abstract class LockssServlet extends HttpServlet
 
     table.add(new Link("/index.html", logo));
     table.add(IMAGE_TM);
-    table.newCell("valign=center align=center width=\"60%\"");
-    table.add("<h3>Permanent Publishing On The Web</h3><br>");
+//     table.newCell("valign=center align=center width=\"60%\"");
+    table.newCell("valign=top align=center width=\"60%\"");
+    table.add("<br>");
     table.add("<font size=+2><b>");
     table.add(heading);
     table.add("</b></font>");
