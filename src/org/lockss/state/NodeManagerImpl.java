@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.76 2003-04-01 00:12:13 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.77 2003-04-01 00:12:45 aalto Exp $
  */
 
 /*
@@ -144,7 +144,8 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   private void setConfig(Configuration config, Configuration oldConfig) {
-    maxMapSize = config.getInt(PARAM_NODESTATE_MAP_SIZE, DEFAULT_MAP_SIZE);
+    maxMapSize = config.getInt(this.PARAM_NODESTATE_CACHE_SIZE,
+                               DEFAULT_MAP_SIZE);
   }
 
   public void startPoll(CachedUrlSet cus, PollTally state) {
