@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.1 2002-09-19 20:54:12 tal Exp $
+ * $Id: TestHashQueue.java,v 1.2 2002-09-19 22:18:56 tal Exp $
  */
 
 /*
@@ -96,8 +96,7 @@ public class TestHashQueue extends LockssTestCase {
   }
 
   // test insert order
-  public void testOrder()
-      throws IllegalAccessException, NoSuchFieldException {
+  public void testOrder() throws Exception {
     HashQueue q = new HashQueue();
     HashQueue.Request r1, r2, r3 ,r4, r5;
     r1 = simpleReq(2000, 0);
@@ -111,7 +110,25 @@ public class TestHashQueue extends LockssTestCase {
     assertTrue(q.insert(r3));
     assertTrue(q.insert(r4));
     assertTrue(q.insert(r5));
-    assertIso(ord, (Collection)PrivilegedAccessor.getValue(q, "qlist"));
+    assertIsomorphic(ord, (Collection)PrivilegedAccessor.getValue(q, "qlist"));
+  }
+
+  // test completion & callback
+  public void testDone() throws Exception {
+    HashQueue q = new HashQueue();
+    HashQueue.Request r1, r2, r3 ,r4, r5;
+    r1 = simpleReq(2000, 0);
+    r2 = simpleReq(3000, 0);
+    r3 = simpleReq(5000, 0);
+    r4 = simpleReq(2500, 0);
+    r5 = simpleReq(200, 0);
+    Object ord[] = {r5, r1, r4, r2, r3};
+    assertTrue(q.insert(r1));
+    assertTrue(q.insert(r2));
+    assertTrue(q.insert(r3));
+    assertTrue(q.insert(r4));
+    assertTrue(q.insert(r5));
+    assertIsomorphic(ord, (Collection)PrivilegedAccessor.getValue(q, "qlist"));
   }
 //  	HashQueue.Request(CachedUrlSet urlset,
 //  			  MessageDigest hasher,

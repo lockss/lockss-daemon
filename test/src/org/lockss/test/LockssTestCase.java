@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.1 2002-09-19 20:54:12 tal Exp $
+ * $Id: LockssTestCase.java,v 1.2 2002-09-19 22:18:34 tal Exp $
  */
 
 /*
@@ -44,66 +44,59 @@ public class LockssTestCase extends TestCase {
 
   /** Asserts that two collections are isomorphic. If they are not
    * an AssertionFailedError is thrown. */
-  static public void assertIso(String message,
-			       Collection expected, Collection actual) {
+  static public void assertIsomorphic(String message,
+				      Collection expected, Collection actual) {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
       return;
     }
-	failNotIso(message, expected, actual);
+	failNotIsomorphic(message, expected, actual);
   }
   
   /** Asserts that two collections are isomorphic. If they are not
    * an AssertionFailedError is thrown. */
-  static public void assertIso(Collection expected, Collection actual) {
-    assertIso(null, expected, actual);
+  static public void assertIsomorphic(Collection expected, Collection actual) {
+    assertIsomorphic(null, expected, actual);
   }
 
   /** Asserts that the array is isomorphic with the collection. If not
    * an AssertionFailedError is thrown. */
-  static public void assertIso(String message,
-			       Object expected[], Collection actual) {
+  static public void assertIsomorphic(String message,
+				      Object expected[], Collection actual) {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
       return;
     }
-	failNotIso(message, expected, actual);
+	failNotIsomorphic(message, expected, actual);
   }
   
   /** Asserts that the array is isomorphic with the collection. If not
    * an AssertionFailedError is thrown. */
-  static public void assertIso(Object expected[], Collection actual) {
-    assertIso(null, expected, actual);
+  static public void assertIsomorphic(Object expected[], Collection actual) {
+    assertIsomorphic(null, expected, actual);
   }
 
   /** Asserts that the array is isomorphic with the collection behind the
    * iterator. If not an AssertionFailedError is thrown. */
-  static public void assertIso(String message,
-			       Object expected[], Iterator actual) {
+  static public void assertIsomorphic(String message,
+				      Object expected[], Iterator actual) {
     if (CollectionUtil.isIsomorphic(new ArrayIterator(expected), actual)) {
       return;
     }
-	failNotIso(message, expected, actual);
+	failNotIsomorphic(message, expected, actual);
   }
   
   /** Asserts that the array is isomorphic with the collection behind the
    * iterator. If not an AssertionFailedError is thrown. */
-  static public void assertIso(Object expected[], Iterator actual) {
-    assertIso(null, expected, actual);
+  static public void assertIsomorphic(Object expected[], Iterator actual) {
+    assertIsomorphic(null, expected, actual);
   }
 
   // tk do a better job of printing collections
-  static private void failNotIso(String message,
-				 Object expected, Object actual) {
+  static private void failNotIsomorphic(String message,
+					Object expected, Object actual) {
     String formatted= "";
     if (message != null)
       formatted= message+" ";
     fail(formatted+"expected:<"+expected+"> but was:<"+actual+">");
   }
 
-//    static private void failNotIso(String message,
-//  				 Object expected[], Object actual) {
-//      String formatted= "";
-//      if (message != null)
-//        formatted= message+" ";
-//      fail(formatted+"expected:<"+expected+"> but was:<"+actual+">");
-//    }
 }

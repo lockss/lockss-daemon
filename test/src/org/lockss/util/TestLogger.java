@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.5 2002-09-19 21:02:50 tal Exp $
+ * $Id: TestLogger.java,v 1.6 2002-09-19 22:18:34 tal Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class TestLogger extends LockssTestCase{
     while (iter.hasNext()) {
       System.err.println((String)iter.next());
     }
-    assertIso(testOutputOutput, target.messageIterator());
+    assertIsomorphic(testOutputOutput, target.messageIterator());
     l.defaultTarget();
   }
 
@@ -161,7 +161,7 @@ public class TestLogger extends LockssTestCase{
     while (iter.hasNext()) {
       System.err.println((String)iter.next());
     }
-    assertIso(testOutputOutput, target.messageIterator());
+    assertIsomorphic(testOutputOutput, target.messageIterator());
     l.defaultTarget();
   }
 

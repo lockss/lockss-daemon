@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssTestCase.java,v 1.1 2002-09-19 20:54:12 tal Exp $
+ * $Id: TestLockssTestCase.java,v 1.2 2002-09-19 22:18:34 tal Exp $
  */
 
 /*
@@ -56,21 +56,21 @@ public class TestLockssTestCase extends LockssTestCase {
     Vector v1 = new Vector();
     String a0[] = {};
     Object a1[] = {"12", new Integer(42)};
-    assertIso(a0, v1);
+    assertIsomorphic(a0, v1);
     try {
-      assertIso(a1, v1);
-      fail("assertIso should have thrown AssertionFailedError");
+      assertIsomorphic(a1, v1);
+      fail("assertIsomorphic should have thrown AssertionFailedError");
     } catch (junit.framework.AssertionFailedError e) {
     }
     v1.add(a1[0]);
     try {
-      assertIso(a1, v1);
-      fail("assertIso should have thrown AssertionFailedError");
+      assertIsomorphic(a1, v1);
+      fail("assertIsomorphic should have thrown AssertionFailedError");
     } catch (junit.framework.AssertionFailedError e) {
     }
     v1.add(a1[1]);
-    assertIso(a1, v1);
-    assertIso(a1, v1.iterator());
-    assertIso(v1, v1);
+    assertIsomorphic(a1, v1);
+    assertIsomorphic(a1, v1.iterator());
+    assertIsomorphic(v1, v1);
   }
 }
