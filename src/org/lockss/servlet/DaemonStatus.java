@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.36 2004-05-14 16:10:38 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.37 2004-05-16 08:45:32 tlipkis Exp $
  */
 
 /*
@@ -312,7 +312,7 @@ public class DaemonStatus extends LockssServlet {
 	    ColumnDescriptor cd = cds[ix];
 	    Object val = rowMap.get(cd.getColumnName());
 
-	    table.newCell("align=" + getColAlignment(cd));
+	    table.newCell("valign=top align=" + getColAlignment(cd));
 	    table.add(getDisplayString(val, cd.getType()));
 	    if (ix < (cols - 1)) {
 	      table.newCell();	// empty column for spacing
