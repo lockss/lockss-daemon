@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.5 2003-12-12 00:56:59 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.6 2004-01-12 06:20:59 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class SchedulableTask implements Serializable, Cloneable {
   boolean overrunAllowed = false;
   boolean hasBeenNotified = false;
   boolean hasStarted = false;
+  TaskRunner runner = null;
 
   int schedSeq = -1;
   Date schedDate;
@@ -170,6 +171,20 @@ public class SchedulableTask implements Serializable, Cloneable {
 
   void setStarted() {
     hasStarted = true;;
+  }
+
+  void setTaskRunner(TaskRunner runner) {
+    this.runner = runner;
+  }
+
+  TaskRunner getTaskRunner() {
+    return runner;
+  }
+
+  public void cancel() {
+    if (runner != null) {
+      runner.cancelTask(this);
+    }
   }
 
   public String getShortText() {
