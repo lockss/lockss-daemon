@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.5 2003-03-26 23:14:35 tal Exp $
+ * $Id: TimeBase.java,v 1.6 2003-03-28 23:40:03 tal Exp $
  */
 
 /*
@@ -113,5 +113,12 @@ public class TimeBase {
     } else {
       return new Date();
     }
+  }
+
+  /** Return the number of milliseconds since the argument
+   * @param when the start of a time interval
+   */
+  public static long msSince(long when) {
+    return nowMs() - when;
   }
 }
