@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.3 2003-11-13 00:25:43 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.4 2004-06-24 20:24:47 tlipkis Exp $
  */
 
 /*
@@ -106,17 +106,29 @@ public class TestIpFilter extends LockssTestCase {
 
   public void testConstructor() throws Exception {
     assertOk("127.0.0.1", false);
-    assertMalformed("127.0.1.0/24", false);
-    assertOk("127.0.1.0/24", true);
+    assertOk("0.0.0.0", false);
+    assertOk("255.255.255.255", false);
+    assertMalformed("", true);
+    assertMalformed("...", true);
+    assertMalformed("36.48.0", true);
+    assertMalformed("36.48.0.", true);
+    assertMalformed("36.48.0.2.3", false);
+    assertMalformed("36.48.0.a", true);
+
+    // mask not allowed
     assertMalformed("123.45.12.*", false);
+    assertMalformed("127.0.1.0/24", false);
+    // legal mask
+    assertOk("127.0.1.0/24", true);
+    assertOk("127.0.1/24", true);
+    assertOk("127.0/16", true);
+    assertOk("127/16", true);
     assertOk("123.45.12.*", true);
     assertOk("123.45.*.*", true);
-
+    // illegal mask
     assertMalformed("36.48.*.0", true);
     assertMalformed("36.48.0.23/33", true);
     assertMalformed("36.48.0.4/29", true);
-    assertMalformed("36.48.0.a", false);
-    assertMalformed("36.48.0.2.3", false);
     assertMalformed("36.48.0.2/", true);
   }
 
@@ -124,8 +136,11 @@ public class TestIpFilter extends LockssTestCase {
     assertMatch("127.0.1.0/24", "127.0.1.0/24");
     assertMatch("127.0.1.0/24", "127.0.1.0");
     assertMatch("127.0.1.0/24", "127.0.1.255");
+    assertMatch("127.0.1/24", "127.0.1.255");
     assertMatch("127.0.1.255", "127.0.1.0/24");
     assertNoMatch("127.0.1.0/24", "127.2.1.0");
+    assertNoMatch("127.0.1/24", "127.0.2.0");
+    assertNoMatch("127.0.1/25", "127.0.1.255");
   }
 
   public void testFilter() throws Exception {
