@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.6 2004-01-03 06:16:01 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.7 2004-01-04 06:13:45 tlipkis Exp $
  */
 
 /*
@@ -188,6 +188,19 @@ public class ConfigParamDescr implements Comparable {
   public int compareTo(Object o) {
     ConfigParamDescr od = (ConfigParamDescr)o;
     return getDisplayName().compareTo(od.getDisplayName());
+  }
+
+  /** Returns a short string suitable for error messages.  Includes the key
+   * and the display name if present */
+  public String shortString() {
+    StringBuffer sb = new StringBuffer(40);
+    sb.append(getDisplayName());
+    if (!key.equals(displayName)) {
+      sb.append("(");
+      sb.append(key);
+      sb.append(")");
+    }
+    return sb.toString();
   }
 
   public String toString() {
