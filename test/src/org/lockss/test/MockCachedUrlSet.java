@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.7 2002-11-06 18:31:26 troberts Exp $
+ * $Id: MockCachedUrlSet.java,v 1.8 2002-11-25 21:33:45 tal Exp $
  */
 
 /*
@@ -99,12 +99,23 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   // Methods used by the poller
 
+  CachedUrlSetHasher contentHasher = null;
+  CachedUrlSetHasher nameHasher = null;
+
+  public void setContentHasher(CachedUrlSetHasher hasher) {
+    contentHasher = hasher;
+  }
+
+  public void setNameHasher(CachedUrlSetHasher hasher) {
+    nameHasher = hasher;
+  }
+
   public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
-    return null;
+    return contentHasher;
   }
 
   public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
-    return null;
+    return nameHasher;
   }
 
   public Enumeration flatEnumeration() {
@@ -115,8 +126,14 @@ public class MockCachedUrlSet implements CachedUrlSet {
     return null;
   }
 
+  long hashEstimate = 0;
+
   public long estimatedHashDuration() {
-    return 0;
+    return hashEstimate;
+  }
+
+  public void setEstimatedHashDuration(long n) {
+    hashEstimate = n;
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
