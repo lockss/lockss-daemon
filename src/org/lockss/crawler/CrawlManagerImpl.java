@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.63 2004-02-10 04:55:58 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.64 2004-02-19 23:24:32 eaalto Exp $
  */
 
 /*
@@ -165,18 +165,30 @@ public class CrawlManagerImpl extends BaseLockssManager
     // check with regulator and start repair
     Map locks = getRepairLocks(au, urls, lock);
     if (locks.size() > 0) {
-      if (locks.size() < urls.size()) {
-	cb = new FailingCallbackWrapper(cb);
-      }
-      Crawler crawler =
-	makeRepairCrawler(au, au.getCrawlSpec(),
-			  locks.keySet(), percentRepairFromCache);
-      CrawlThread crawlThread =
-	new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
-      crawlHistory.put(au.getAuId(), crawler.getStatus());
-      synchronized(runningCrawls) {
-	runningCrawls.put(au, crawler);
-	crawlThread.start();
+      try {
+        if (locks.size() < urls.size()) {
+          cb = new FailingCallbackWrapper(cb);
+        }
+        Crawler crawler =
+            makeRepairCrawler(au, au.getCrawlSpec(),
+                              locks.keySet(), percentRepairFromCache);
+        CrawlThread crawlThread =
+            new CrawlThread(crawler, Deadline.MAX, cb, cookie, locks.values());
+        crawlHistory.put(au.getAuId(), crawler.getStatus());
+        synchronized (runningCrawls) {
+          runningCrawls.put(au, crawler);
+          crawlThread.start();
+        }
+      } catch (RuntimeException re) {
+        logger.debug("Freeing repair locks...");
+        Iterator lockIt = locks.values().iterator();
+        while (lockIt.hasNext()) {
+          ActivityRegulator.Lock deadLock =
+              (ActivityRegulator.Lock)lockIt.next();
+          deadLock.expire();
+        }
+        lock.expire();
+        throw re;
       }
     } else {
       logger.debug("Repair aborted due to activity lock.");
@@ -266,16 +278,22 @@ public class CrawlManagerImpl extends BaseLockssManager
   private void scheduleNewContentCrawl(ArchivalUnit au,
                                        CrawlManager.Callback cb, Object cookie,
                                        ActivityRegulator.Lock lock) {
-    List callBackList = new ArrayList();
-    CrawlSpec spec = au.getCrawlSpec();
-    Crawler crawler = makeNewContentCrawler(au, spec);
-    CrawlThread crawlThread =
-      new CrawlThread(crawler, Deadline.MAX, cb, cookie, SetUtil.set(lock));
-    crawlHistory.put(au.getAuId(), crawler.getStatus());
-    synchronized(runningCrawls) {
-      runningCrawls.put(au, crawler);
+    CrawlThread crawlThread;
+    try {
+      CrawlSpec spec = au.getCrawlSpec();
+      Crawler crawler = makeNewContentCrawler(au, spec);
+      crawlThread = new CrawlThread(crawler, Deadline.MAX, cb, cookie,
+                                    SetUtil.set(lock));
+      crawlHistory.put(au.getAuId(), crawler.getStatus());
+      synchronized (runningCrawls) {
+        runningCrawls.put(au, crawler);
+      }
+      crawlThread.start();
+    } catch (RuntimeException re) {
+      logger.debug("Freeing crawl lock...");
+      lock.expire();
+      throw re;
     }
-    crawlThread.start();
     crawlThread.waitRunning();
   }
 
@@ -312,25 +330,30 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     public void lockssRun() {
-      setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
-      crawler.setWatchdog(this);
-      startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
-      nowRunning();
+      boolean crawlSuccessful = false;
+      try {
+        setPriority(PRIORITY_PARAM_CRAWLER, PRIORITY_DEFAULT_CRAWLER);
+        crawler.setWatchdog(this);
+        startWDog(WDOG_PARAM_CRAWLER, WDOG_DEFAULT_CRAWLER);
+        nowRunning();
 
-      boolean crawlSuccessful = crawler.doCrawl(deadline);
+        crawlSuccessful = crawler.doCrawl(deadline);
 
-      if (crawler.getType() == Crawler.NEW_CONTENT) {
-	if (crawlSuccessful) {
-	  NodeManager nodeManager = theDaemon.getNodeManager(crawler.getAu());
-	  nodeManager.newContentCrawlFinished();
-	}
-      }
-      if (locks!=null) {
-        Iterator lockIt = locks.iterator();
-        while (lockIt.hasNext()) {
-          // loop through expiring all locks
-          ActivityRegulator.Lock lock = (ActivityRegulator.Lock)lockIt.next();
-          lock.expire();
+        if (crawler.getType() == Crawler.NEW_CONTENT) {
+          if (crawlSuccessful) {
+            NodeManager nodeManager = theDaemon.getNodeManager(crawler.getAu());
+            nodeManager.newContentCrawlFinished();
+          }
+        }
+      } finally {
+        // free all locks, regardless of exceptions
+        if (locks != null) {
+          Iterator lockIt = locks.iterator();
+          while (lockIt.hasNext()) {
+            // loop through expiring all locks
+            ActivityRegulator.Lock lock = (ActivityRegulator.Lock)lockIt.next();
+            lock.expire();
+          }
         }
       }
       synchronized(runningCrawls) {
