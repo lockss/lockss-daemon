@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.2 2004-01-13 23:15:10 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.3 2004-01-14 06:57:48 clairegriffin Exp $
  */
 
 /*
@@ -61,6 +61,8 @@ public class ConfigurablePlugin extends BasePlugin {
     // load the configuration map from disk
     if(extMapName != null) {
       configurationMap.loadMap(null, extMapName);
+    }
+    else {
       log.warning("Attempt to create configurable plugin without map.");
     }
     // then call the overridden initializaton.
@@ -68,7 +70,7 @@ public class ConfigurablePlugin extends BasePlugin {
   }
 
   public String getPluginName() {
-    return configurationMap.getString(CM_NAME_KEY, "NO_NAME");
+    return configurationMap.getString(CM_NAME_KEY, "UNCONFIGURED");
   }
 
   public String getVersion() {

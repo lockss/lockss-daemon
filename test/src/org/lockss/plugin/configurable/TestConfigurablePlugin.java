@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigurablePlugin.java,v 1.1 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: TestConfigurablePlugin.java,v 1.2 2004-01-14 06:57:48 clairegriffin Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestConfigurablePlugin extends LockssTestCase {
 
   public void testGetPluginName() {
     // no name set
-    String expectedReturn = "NO_NAME";
+    String expectedReturn = "UNCONFIGURED";
     String actualReturn = configurablePlugin.getPluginName();
     assertEquals("return value", expectedReturn, actualReturn);
 
@@ -133,6 +133,14 @@ public class TestConfigurablePlugin extends LockssTestCase {
     LockssDaemon daemon = getMockLockssDaemon();
     String extMapName = "";
     configurablePlugin.initPlugin(daemon, extMapName);
-   }
+    assertEquals("UNCONFIGURED", configurablePlugin.getPluginName());
+
+    extMapName = "src/org/lockss/plugin/configurable/AbsinthePlugin.xml";
+    configurablePlugin.initPlugin(daemon, extMapName);
+    assertEquals("Absinthe Literary Review",
+                 configurablePlugin.getPluginName());
+    assertEquals("Pre-release", configurablePlugin.getVersion());
+
+  }
 
 }
