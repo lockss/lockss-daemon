@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.16 2003-03-21 01:11:24 troberts Exp $
+ * $Id: StatusTable.java,v 1.17 2003-03-21 07:27:30 tal Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class StatusTable {
   private String name;
   private String key;
   private String title;
+  private String titleFootnote;
   private List columnDescriptors;
   private List rows;
   private List defaultSortRules;
@@ -103,6 +104,22 @@ public class StatusTable {
    */
   public String getTitle() {
     return title;
+  }
+
+  /**
+   * Get the title footnote for this table
+   * @returns title footnote for this table
+   */
+  public String getTitleFootnote() {
+    return titleFootnote;
+  }
+
+  /**
+   * Set the title footnote for this table
+   * @paramfootnote the title footnote for this table
+   */
+  public void setTitleFootnote(String footnote) {
+    this.titleFootnote = footnote;
   }
 
   /**

@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: DaemonStatus.java,v 1.8 2003-03-20 02:29:18 troberts Exp $
+// $Id: DaemonStatus.java,v 1.9 2003-03-21 07:27:30 tal Exp $
 // ========================================================================
 
 /*
@@ -133,8 +133,7 @@ public class DaemonStatus extends LockssServlet {
     java.util.List colList = statTable.getColumnDescriptors();
     java.util.List rowList = statTable.getSortedRows();
     String title = statTable.getTitle();
-//     String titleFoot = statTable.getTitleFootnote();
-    String titleFoot = null;
+    String titleFoot = statTable.getTitleFootnote();
 
     Table table = null;
 
