@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.7 2004-09-27 22:38:45 smorabito Exp $
+ * $Id: TestProxyInfo.java,v 1.8 2004-11-16 22:08:48 tlipkis Exp $
  */
 
 /*
@@ -85,7 +85,7 @@ public class TestProxyInfo extends LockssTestCase {
   List urlStems = ListUtil.list("http://foo.bar", "http://x.com");
 
   Map makeUrlStemMap() {
-    Map map = new HashMap();
+    Map map = new TreeMap();
     for (Iterator iter = urlStems.iterator(); iter.hasNext(); ) {
       String urlStem = (String)iter.next();
       ArchivalUnit au = new MockArchivalUnit();
