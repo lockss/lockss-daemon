@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.37 2003-01-21 22:56:22 claire Exp $
+* $Id: Poll.java,v 1.38 2003-01-22 06:11:41 claire Exp $
  */
 
 /*
@@ -256,7 +256,7 @@ public abstract class Poll implements Serializable {
     LcapIdentity local_id = idMgr.getLocalIdentity();
     long remainingTime = m_deadline.getRemainingTime();
     try {
-      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, m_replyOpcode,
+      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,m_replyOpcode,
                                      remainingTime, local_id);
       log.debug("vote:" + msg.toString());
       m_pollmanager.sendMessage(msg,m_arcUnit);

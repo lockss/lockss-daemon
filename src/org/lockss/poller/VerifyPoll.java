@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.26 2003-01-18 01:01:26 claire Exp $
+* $Id: VerifyPoll.java,v 1.27 2003-01-22 06:11:41 claire Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ class VerifyPoll extends Poll {
    * @return true we never do anything here
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer,
-		       Serializable key, HashService.Callback callback) {
+                       Serializable key, HashService.Callback callback) {
     return true;
   }
 
@@ -171,6 +171,7 @@ class VerifyPoll extends Poll {
     LcapMessage repmsg = LcapMessage.makeReplyMsg(msg,
         secret,
         verifier,
+        null,
         LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
         idMgr.getLocalIdentity());

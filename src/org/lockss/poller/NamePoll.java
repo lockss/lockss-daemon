@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.22 2003-01-21 22:56:22 claire Exp $
+* $Id: NamePoll.java,v 1.23 2003-01-22 06:11:41 claire Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.util.Iterator;
 import gnu.regexp.RE;
 import gnu.regexp.*;
 import java.util.HashSet;
+import java.util.ArrayList;
 
 /**
  * @author Claire Griffin
@@ -50,11 +51,32 @@ import java.util.HashSet;
 
 public class NamePoll extends Poll {
 
+  String [] m_entries;
 
   public NamePoll(LcapMessage msg, CachedUrlSet urlSet, PollManager pm) {
     super(msg, urlSet, pm);
     m_replyOpcode = LcapMessage.NAME_POLL_REP;
     m_tally.type = NAME_POLL;
+  }
+
+  /**
+   * cast our vote for this poll
+   */
+  void vote() {
+    LcapMessage msg;
+    LcapIdentity local_id = idMgr.getLocalIdentity();
+    long remainingTime = m_deadline.getRemainingTime();
+    try {
+      msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
+                                     getEntries(),m_replyOpcode,
+                                     remainingTime, local_id);
+      log.debug("vote:" + msg.toString());
+      m_pollmanager.sendMessage(msg,m_arcUnit);
+    }
+    catch(IOException ex) {
+      //XXX how serious is this
+      log.info("unable to cast our vote.", ex);
+    }
   }
 
 
@@ -122,7 +144,8 @@ public class NamePoll extends Poll {
       MessageDigest hasher = getInitedHasher(msg.getChallenge(),
           msg.getVerifier());
 
-     if(!scheduleHash(hasher, Deadline.in(dur), new NameVote(msg,false), new VoteHashCallback())) {
+     if(!scheduleHash(hasher, Deadline.in(dur), new NameVote(msg,false),
+                      new VoteHashCallback())) {
         log.info(m_key + " no time to hash vote " + dur + ":" + m_hashTime);
         stopVoteCheck();
       }
@@ -134,6 +157,21 @@ public class NamePoll extends Poll {
       buildPollLists(m_tally.pollVotes.iterator());
     }
     super.tally();
+  }
+
+  String[] getEntries() {
+    if(m_entries == null) {
+      Iterator it = m_urlSet.flatSetIterator();
+      ArrayList alist = new ArrayList();
+      while(it.hasNext()) {
+        CachedUrlSet cus = (CachedUrlSet) it.next();
+        String name = (String)cus.getSpec().getPrefixList().get(0);
+        alist.add(name);
+      }
+       m_entries = (String[])alist.toArray(new String[alist.size()]);
+    }
+    return m_entries;
+
   }
 
   void buildPollLists(Iterator voteIter) {
@@ -189,12 +227,11 @@ public class NamePoll extends Poll {
         // we make our list from whatever is in our
         // master list that doesn't match the re remaining;
         HashSet localSet = new HashSet();
-        Iterator localIt = m_urlSet.flatSetIterator();
+        Iterator localIt = new ArrayIterator(getEntries());
         try {
           RE re = new RE(remainingRE);
           while(localIt.hasNext()) {
-            CachedUrlSet cus = (CachedUrlSet)localIt.next();
-            String url = (String)cus.getSpec().getPrefixList().get(0);
+            String url = (String) localIt.next();
             // if doesn't match our regexp add it to the list
             if(null == re.getMatch(url)) {
               localSet.add(url);
