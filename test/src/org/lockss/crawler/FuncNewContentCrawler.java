@@ -42,7 +42,7 @@ import org.lockss.test.*;
 import java.util.Properties;
 import java.util.Iterator;
 
-public class FuncNewContentCrawlerTest extends LockssTestCase {
+public class FuncNewContentCrawler extends LockssTestCase {
   private SimulatedArchivalUnit sau;
   private MockLockssDaemon theDaemon;
   private static final int DEFAULT_MAX_DEPTH = 1000;
