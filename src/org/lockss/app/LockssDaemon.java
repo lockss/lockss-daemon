@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.60 2004-08-22 02:10:47 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.61 2004-09-02 01:53:55 smorabito Exp $
  */
 
 /*
@@ -172,6 +172,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected static HashMap auManagerFactoryMap = new HashMap();
 
   private static LockssDaemon theDaemon;
+  private static String testGroup;
 
   protected LockssDaemon(List propUrls) {
     super(propUrls);
@@ -208,6 +209,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** Stop the daemon.  Currently only used in testing. */
   public void stopDaemon() {
     stopApp();
+  }
+
+  // Test Group accessor
+  public static String getTestGroup() {
+    return testGroup;
   }
 
   // LockssManager accessors
@@ -678,15 +684,56 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     super.setConfig(config, prevConfig, changedKeys);
   }
 
+  /**
+   * Parse and handle command line arguments.
+   */
+  private static Vector handleArgs(String[] args) {
+    Vector urls = new Vector();
+
+    boolean hasGroup = false;
+    boolean hasPropList = false;
+    
+    String group = null;
+    List propList = new ArrayList();
+    
+    for (int i = 0; i < args.length; i++) {
+      if ("-g".equals(args[i]) && i < (args.length - 1)) {
+        group = args[++i];
+        hasGroup = true;
+      }
+      else if ("-p".equals(args[i]) && i < (args.length - 1)) {
+        propList.add(args[++i]);
+        hasPropList = true;
+      }
+    }
+    
+    if (hasGroup && hasPropList) {
+      testGroup = group;
+      // For now, select just one of the prop files to load at random.
+      //
+      // TODO: If not available, keep selecting prop files to load
+      // until one is loaded, or the list is exhausted.
+      int arg = (int)(Math.random() * propList.size());
+      urls.add(propList.get(arg));
+      urls.add("local.txt");
+    } else {
+      // Otherwise, behave as if we had been called with the old
+      // platform's startup URL list.
+      for (int i = 0; i < args.length; i++) {
+        urls.add(args[i]);
+      }
+    }
+
+    return urls;
+  }
+
   // Main entry to daemon
 
   public static void main(String[] args) {
-    Vector urls = new Vector();
+    Vector urls;
     LockssDaemon daemon;
 
-    for (int i=0; i<args.length; i++) {
-      urls.add(args[i]);
-    }
+    urls = handleArgs(args);
 
     try {
       daemon = new LockssDaemon(urls);
