@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.13 2004-01-04 06:19:12 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.14 2004-01-08 22:44:09 tlipkis Exp $
  */
 
 /*
@@ -108,21 +108,31 @@ public class AuConfig extends LockssServlet {
     titleConfig = null;
     submitButtonNumber = 0;
 
+    String auid = req.getParameter("auid");
+
     if (StringUtil.isNullString(action)) displayAuSummary();
     else if (action.equals("Add")) displayAddAu();
     else if (action.equals("EditNew")) displayEditNew();
     else if (action.equals("Create")) createAu();
-    else {
-      // all other actions require AU.  If missing, display summary page
-      String auid = req.getParameter("auid");
+    else if (action.equals("Reactivate") || action.equals("DoReactivate")) {
       AuProxy au = getAuProxy(auid);
-      if (au != null) {
+      if (au == null) {
+	au = getInactiveAuProxy(auid);
+      }
+      if (au == null) {
+	displayAuSummary();
+      } else if (action.equals("Reactivate")) displayReactivateAu(au);
+      else if (action.equals("DoReactivate")) doReactivateAu(au);
+    } else {
+      // all other actions require AU.  If missing, display summary page
+      AuProxy au = getAuProxy(auid);
+      if (au == null) {
 	errMsg = "Invalid AuId: " + auid;
 	displayAuSummary();
       } else if (action.equals("Edit")) displayEditAu(au);
       else if (action.equals("Restore")) displayRestoreAu(au);
-      else if (action.equals("DoRestore")) updateAu(au);
-      else if (action.equals("Update")) updateAu(au);
+      else if (action.equals("DoRestore")) updateAu(au, "restored");
+      else if (action.equals("Update")) updateAu(au, "updated");
       else if (action.equals("Deactivate")) confirmDeactivateAu(au);
       else if (action.equals("Confirm Deactivate")) doDeactivateAu(au);
       else if (action.equals("Unconfigure")) confirmUnconfigureAu(au);
@@ -158,6 +168,12 @@ public class AuConfig extends LockssServlet {
 	addAuSummaryRow(tbl, (AuProxy)iter.next());
       }
     }
+    Collection inactiveAUs = remoteApi.getInactiveAus();
+    if (!inactiveAUs.isEmpty()) {
+      for (Iterator iter = inactiveAUs.iterator(); iter.hasNext(); ) {
+	addAuSummaryRow(tbl, (AuProxy)iter.next());
+      }
+    }
     frm.add(tbl);
     page.add(frm);
     endPage(page);
@@ -175,14 +191,21 @@ public class AuConfig extends LockssServlet {
   /** Add an Edit row to the table */
   private void addAuSummaryRow(Table tbl, AuProxy au) {
     Configuration cfg = remoteApi.getStoredAuConfiguration(au);
-    boolean deleted = (cfg.isEmpty() ||
-		       cfg.getBoolean(PluginManager.AU_PARAM_DISABLED, false));
+    boolean isGrey = true;
+    String act;
+    if (cfg.isEmpty()) {
+      act = "Restore";
+    } else if (cfg.getBoolean(PluginManager.AU_PARAM_DISABLED, false)) {
+      act = "Reactivate";
+    } else {
+      act = "Edit";
+      isGrey = false;
+    }
     tbl.newRow();
     tbl.newCell("align=right valign=center");
-    String act = deleted ? "Restore": "Edit";
     tbl.add(submitButton(act, act, "auid", au.getAuId()));
     tbl.newCell("valign=center");
-    tbl.add(greyText(encodedAuName(au), deleted));
+    tbl.add(greyText(encodedAuName(au), isGrey));
   }
 
   /** Display form to edit existing AU */
@@ -215,6 +238,22 @@ public class AuConfig extends LockssServlet {
     java.util.List actions =
       ListUtil.list(new Input(Input.Hidden, ACTION_TAG, "DoRestore"),
 		    new Input(Input.Submit, "button", "Restore"));
+    Form frm = createAuEditForm(actions, au, true);
+    page.add(frm);
+    endPage(page);
+  }
+
+  /** Display form to reactivate deactivated AU */
+  private void displayReactivateAu(AuProxy au) throws IOException {
+    Page page = newPage();
+    fetchAuConfig(au);
+
+    page.add(getErrBlock());
+    page.add(getExplanationBlock("Reactivating: " + encodedAuName(au)));
+
+    java.util.List actions =
+      ListUtil.list(new Input(Input.Hidden, ACTION_TAG, "DoReactivate"),
+		    new Input(Input.Submit, "button", "Reactivate"));
     Form frm = createAuEditForm(actions, au, true);
     page.add(frm);
     endPage(page);
@@ -518,11 +557,30 @@ public class AuConfig extends LockssServlet {
       displayAddAu();
       return;
     }
+    createAuFromPlugin("Archival Unit created.");
+  }
+
+  /** Process the DoReactivate button */
+  private void doReactivateAu(AuProxy aup) throws IOException {
+    plugin = aup.getPlugin();
+    if (plugin == null) {
+      errMsg = "Can't find plugin: " + aup.getPluginId();
+      displayAddAu();
+      return;
+    }
+    if (aup.isActiveAu()) {
+      updateAu(aup, "reactivated");
+    } else {
+      createAuFromPlugin("Archival Unit reactivated.");
+    }
+  }
+
+  private void createAuFromPlugin(String msg) throws IOException {
     formConfig = getAuConfigFromForm(true);
     try {
       AuProxy au =
 	remoteApi.createAndSaveAuConfiguration(plugin, formConfig);
-      statusMsg = "Archival Unit created.";
+      statusMsg = msg;
       displayEditAu(au);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Error configuring AU", e);
@@ -537,14 +595,14 @@ public class AuConfig extends LockssServlet {
   }
 
   /** Process the Update button */
-  private void updateAu(AuProxy au) throws IOException {
+  private void updateAu(AuProxy au, String msg) throws IOException {
     fetchAuConfig(au);
     Configuration formConfig = getAuConfigFromForm(false);
     if (isChanged(auConfig, formConfig) ||
 	isChanged(remoteApi.getStoredAuConfiguration(au), formConfig)) {
       try {
 	remoteApi.setAndSaveAuConfiguration(au, formConfig);
-	statusMsg = "Archival Unit configuration saved.";
+	statusMsg = "Archival Unit " + msg + ".";
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
 	errMsg = encodeText(e.getMessage());
@@ -829,6 +887,14 @@ public class AuConfig extends LockssServlet {
   private AuProxy getAuProxy(String auid) {
     try {
       return remoteApi.findAuProxy(auid);
+    } catch (Exception e) {
+      return null;
+    }
+  }
+
+  private InactiveAuProxy getInactiveAuProxy(String auid) {
+    try {
+      return remoteApi.findInactiveAuProxy(auid);
     } catch (Exception e) {
       return null;
     }
