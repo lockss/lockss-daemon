@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.5 2003-07-14 06:47:02 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.6 2003-07-16 00:05:06 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,42 +44,6 @@ public class ConfigurationUtil {
     return ConfigManager.getConfigManager();
   }
 
-  /** Create a Configuration from the supplied property list and install
-   * it as the current configuration.
-   */
-  public static boolean setCurrentConfigFromProps(Properties props) {
-    Configuration config = fromProps(props);
-    return installConfig(config);
-  }
-
-  /** Create a Configuration from the contents of the URLs in the list and
-   * install it as the current configuration.
-   */
-  public static boolean setCurrentConfigFromUrlList(List l) {
-    Configuration config = mgr().readConfig(l);
-    return installConfig(config);
-  }
-
-  /** Create a Configuration from the supplied string and install it as the
-   * current configuration.
-   */
-  public static boolean setCurrentConfigFromString(String s)
-      throws IOException {
-    return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
-  }
-
-  /** Install the supplied Configuration as the current configuration.
-   */
-  public static boolean installConfig(Configuration config) {
-    try {
-      PrivilegedAccessor.invokeMethod(mgr(), "installConfig", config);
-    } catch (Exception e) {
-      //      throw new RuntimeException(e.toString());
-      throw new RuntimeException(StringUtil.stackTraceString(e));
-    }
-    return true;
-  }
-
   /** Create a Configuration from the supplied string.
    */
   public static Configuration fromString(String s)
@@ -112,4 +76,81 @@ public class ConfigurationUtil {
       throw new RuntimeException(e.toString());
     }      
   }
+
+  /** Create a Configuration from the contents of the URLs in the list
+   */
+  public static Configuration fromUrlList(List l) {
+    return mgr().readConfig(l);
+  }
+
+  /** Create a Configuration with a single param set to the specified
+   * value.
+   */
+  public static Configuration fromArgs(String prop, String val) {
+    Properties props = new Properties();
+    props.put(prop, val);
+    return fromProps(props);
+  }
+
+  /** Create a Configuration with two params set to the specified
+   * values.
+   */
+  public static Configuration fromArgs(String prop1, String val1,
+				       String prop2, String val2) {
+    Properties props = new Properties();
+    props.put(prop1, val1);
+    props.put(prop2, val2);
+    return fromProps(props);
+  }
+
+
+  /** Create a Configuration from the supplied property list and install
+   * it as the current configuration.
+   */
+  public static boolean setCurrentConfigFromProps(Properties props) {
+    return installConfig(fromProps(props));
+  }
+
+  /** Create a Configuration from the contents of the URLs in the list and
+   * install it as the current configuration.
+   */
+  public static boolean setCurrentConfigFromUrlList(List l) {
+    return installConfig(fromUrlList(l));
+  }
+
+  /** Create a Configuration from the supplied string and install it as the
+   * current configuration.
+   */
+  public static boolean setCurrentConfigFromString(String s)
+      throws IOException {
+    return installConfig(fromString(s));
+  }
+
+  /** Create a Configuration with a single param set to the specified
+   * value, and install it as the current configuration.
+   */
+  public static boolean setFromArgs(String prop, String val) {
+    return installConfig(fromArgs(prop, val));
+  }
+
+  /** Create a Configuration with two params set to the specified
+   * values, and install it as the current configuration.
+   */
+  public static boolean setFromArgs(String prop1, String val1,
+				    String prop2, String val2) {
+    return installConfig(fromArgs(prop1, val1, prop2, val2));
+  }
+
+  /** Install the supplied Configuration as the current configuration.
+   */
+  public static boolean installConfig(Configuration config) {
+    try {
+      PrivilegedAccessor.invokeMethod(mgr(), "installConfig", config);
+    } catch (Exception e) {
+      //      throw new RuntimeException(e.toString());
+      throw new RuntimeException(StringUtil.stackTraceString(e));
+    }
+    return true;
+  }
+
 }
