@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.96 2003-08-02 00:16:04 eaalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.97 2003-09-16 00:53:52 eaalto Exp $
  */
 
 /*
@@ -1048,13 +1048,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
     Vector branches = new Vector(numBranches);
 
     for (int ib = 1; ib <= numBranches; ib++) {
-      String b_url = TEST_URL + File.separator + "branch" + ib;
+      String b_url = TEST_URL + "/branch" + ib;
       MockCachedUrlSet mcus = new MockCachedUrlSet(mau,
           new RangeCachedUrlSetSpec(b_url));
       Vector subFiles = new Vector(numFiles);
       Vector subBranches = new Vector(numFiles);
       for (int ix = 1; ix <= numFiles; ix++) {
-        String f_url = b_url + File.separator + "file" + ix + ".doc";
+        String f_url = b_url + "/file" + ix + ".doc";
         MockCachedUrl cu = new MockCachedUrl(f_url);
         files.add(cu);
         subFiles.add(cu);
