@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.2 2003-07-23 02:58:20 dshr Exp $
+ * $Id: MBF1.java,v 1.3 2003-07-23 03:42:51 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class MBF1 extends MemoryBoundFunction {
       BigInteger b = new BigInteger(h.digest());
       // Find the lowest set bit.
       int lowBit = b.getLowestSetBit();
-      logger.info("match " + b.toString(16) + " lowBit " + lowBit + " e " + e);
+      logger.debug2("match " + b.toString(16) + " lowBit " + lowBit + " e " + e);
       return ((1 << lowBit) > e);
     } catch(CloneNotSupportedException e) {
       throw new MemoryBoundFunctionException(algHash + " threw " +
@@ -122,7 +122,7 @@ public class MBF1 extends MemoryBoundFunction {
       }
       pathIndex = 0;
       arrayIndex = arrayIndexStart;
-      logger.info("starting at index " + arrayIndex);
+      logger.debug2("starting at index " + arrayIndex);
     }
     if (hasher == null) try {
       hasher = MessageDigest.getInstance(algHash);
@@ -143,7 +143,7 @@ public class MBF1 extends MemoryBoundFunction {
 	BigInteger b = (new BigInteger(h.digest())).mod(bigArraySize);
 	arrayIndex = b.longValue();
 	pathIndex++;
-	logger.info("step " + pathIndex + " at " + arrayIndex);
+	logger.debug3("step " + pathIndex + " at " + arrayIndex);
       } catch(CloneNotSupportedException e) {
 	throw new MemoryBoundFunctionException(algHash + " threw " +
 					       e.toString());
@@ -156,10 +156,10 @@ public class MBF1 extends MemoryBoundFunction {
       matchHere = match();
       if (matchHere || verify) {
 	finished = true;
-	logger.info("path ended at index " + pathIndex + " at " +
+	logger.debug2("path ended at index " + pathIndex + " at " +
 		       arrayIndex + (matchHere ? " match" : ""));
       } else {
-	logger.info("path ended at index " + pathIndex + " at " + arrayIndex);
+	logger.debug2("path ended at index " + pathIndex + " at " + arrayIndex);
 	arrayIndex = arrayIndexStart = -1;
 	hasher = null;
 	pathIndex = 0;
