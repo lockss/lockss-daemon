@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.2 2002-11-22 17:46:04 tal Exp $
+ * $Id: TestDeadline.java,v 1.3 2002-12-13 23:08:02 tal Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ public class TestDeadline extends LockssTestCase {
 	assertTrue(pd > (r - 10000) && pd < (r + 10000));
 	if (getDuration(p0) != pd) {
 	  differs = true;
+	  break;
 	}
       }
       if (!differs) {
