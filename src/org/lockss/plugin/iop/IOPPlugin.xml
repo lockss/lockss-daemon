@@ -1,54 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Elements>
 <MapElement>
-<ElementKey>plugin_identifier</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPPlugin</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_def_pause_time</ElementKey>
-<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">12000</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>text/html_filter</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPFilterRule</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"IOP %s %d", journal_id, volume</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>plugin_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">IOP</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_crawlrules</ElementKey>
-<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</string>
-<string xsi:type="java:java.lang.String">2,".*/(help|login)/.*"</string>
-<string xsi:type="java:java.lang.String">1,"%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string>
-<string xsi:type="java:java.lang.String">1,"%slinks/.*\.pdf", base_url</string>
-</ElementValue>
-</MapElement>
-<MapElement>
-<ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</ElementValue>
-</MapElement>
-<MapElement>
 <ElementKey>plugin_config_props</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<ConfigParamDescr>
-<Key>base_url</Key>
-<DisplayName>Base URL</DisplayName>
-<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-<Type>3</Type>
-<Size>40</Size>
-<Definitional>true</Definitional>
-</ConfigParamDescr>
 <ConfigParamDescr>
 <Key>volume</Key>
 <DisplayName>Volume No.</DisplayName>
@@ -64,6 +18,68 @@
 <Size>40</Size>
 <Definitional>true</Definitional>
 </ConfigParamDescr>
+<ConfigParamDescr>
+<Key>base_url</Key>
+<DisplayName>Base URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>base_url2</Key>
+<DisplayName>Base URL 2</DisplayName>
+<Description>Secondary Base URL</Description>
+<Type>3</Type>
+<Size>100</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
 </ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_version</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">4,"^(%s|%s)", base_url, base_url2</string>
+<string xsi:type="java:java.lang.String">1,"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">1,"%sEJ/volume/-lockss=1/%s/%d", base_url2, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">2,".*/(help|login)/.*"</string>
+<string xsi:type="java:java.lang.String">1,"%sEJ/(abstract|refs|article|mmedia|toc)/%s/%d/.*", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">1,"%slinks/.*\.pdf", base_url2</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_manifest</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</string>
+<string xsi:type="java:java.lang.String">"%sEJ/volume/-lockss=1/%s/%d", base_url2, journal_id, volume</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_pause_time</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">12000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>text/html_filter</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPFilterRule</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%sEJ/volume/-lockss=1/%s/%d", base_url, journal_id, volume</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">IOP</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"IOP %s %d", journal_id, volume</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_identifier</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.iop.IOPPlugin</ElementValue>
 </MapElement>
 </Elements>
