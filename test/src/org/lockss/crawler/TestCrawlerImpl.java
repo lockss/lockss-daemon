@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.20 2004-09-01 02:27:18 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.21 2004-09-15 00:32:48 troberts Exp $
  */
 
 /*
@@ -99,14 +99,68 @@ public class TestCrawlerImpl extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
-//   public void testDoCrawlThrowsForNullDeadline() {
-//     try {
-//       crawler.doCrawl(null);
-//       fail("Calling doCrawl with a null Deadline should throw "+
-// 	   "an IllegalArgumentException");
-//     } catch (IllegalArgumentException iae) {
-//     }
-//   }
+  public void testConstructorNullAu() {
+    try {
+      new TestableCrawlerImpl(null, spec, aus);
+      fail("Trying to create a CrawlerImpl with a null au should throw");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testConstructorNullSpec() {
+    try {
+      new TestableCrawlerImpl(mau, null, aus);
+      fail("Trying to create a CrawlerImpl with a null spec should throw");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testConstructorNullAuState() {
+    try {
+      new TestableCrawlerImpl(mau, spec, null);
+      fail("Trying to create a CrawlerImpl with a null aus should throw");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testGetAu() {
+    assertSame(mau, crawler.getAu());
+  }
+
+  public void testDoCrawlSignalsEndOfCrawl() {
+    TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
+    crawler.doCrawl();
+    MockCrawlStatus status = (MockCrawlStatus)crawler.getStatus();
+    assertTrue(status.crawlEndSignaled());
+  }
+
+  public void testDoCrawlSignalsEndOfCrawlExceptionThrown() {
+    TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
+    crawler.setDoCrawlThrowException(new RuntimeException("Blah"));
+    try {
+      crawler.doCrawl();
+    } catch (RuntimeException e) {
+      //don't do anything with it, since we're causing it to be thrown
+    }
+    MockCrawlStatus status = (MockCrawlStatus)crawler.getStatus();
+    assertTrue(status.crawlEndSignaled());
+  }
+
+  /**
+   * Subclasses rely on setWatchdog(wdog) assigning this value to the instance
+   * varable wdog, so we're testing it
+   */
+  public void testSetWatchDog() {
+    LockssWatchdog wdog = new MockLockssWatchdog();
+    TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
+    crawler.setWatchdog(wdog);
+    assertSame(wdog, crawler.wdog);
+  }
+  
+
+  public void testToString() {
+    assertTrue(crawler.toString().startsWith("[CrawlerImpl:"));
+  }
 
   public void testCheckCrawlPermission() {
     StringBuffer sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
@@ -603,6 +657,31 @@ public class TestCrawlerImpl extends LockssTestCase {
       return new StringInputStream("");
     }
   }
+
+  private static class TestableCrawlerImpl extends CrawlerImpl {
+    RuntimeException crawlExceptionToThrow = null;
+    protected TestableCrawlerImpl(ArchivalUnit au,
+				  CrawlSpec spec, AuState aus) {
+      super(au, spec, aus);
+      crawlStatus = new MockCrawlStatus();
+    }
+
+    public int getType() {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    protected boolean doCrawl0() {
+      if (crawlExceptionToThrow != null) {
+	throw crawlExceptionToThrow;
+      }
+      return true;
+    }
+    
+    public void setDoCrawlThrowException(RuntimeException e) {
+      crawlExceptionToThrow = e;
+    }
+  }
+    
 
   public static void main(String[] argv) {
    String[] testCaseList = {TestCrawlerImpl.class.getName()};
