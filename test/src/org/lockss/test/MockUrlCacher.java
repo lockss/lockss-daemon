@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.8 2003-07-18 02:14:25 eaalto Exp $
+ * $Id: MockUrlCacher.java,v 1.9 2003-08-06 00:36:28 troberts Exp $
  */
 
 /*
@@ -32,10 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
-import java.util.Properties;
+import java.io.*;
+import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -101,9 +99,9 @@ public class MockUrlCacher implements UrlCacher {
     }
     setCachedUrl(cu);
   }
-
+  
   // Read interface - used by the proxy.
-
+  
   public InputStream openForReading(){
     return cachedIS;
   }
@@ -123,9 +121,17 @@ public class MockUrlCacher implements UrlCacher {
   public void setCachingException(IOException e) {
     this.cachingException = e;
   }
-
+  
   public void forceCache() throws IOException {
-    cache();
+    if (cachingException != null) {
+      throw cachingException;
+    }
+    if (cus != null) {
+      cus.addForceCachedUrl(url);
+    }
+    if (cu != null) {
+      cu.setExists(true);
+    }
   }
 
   public void cache() throws IOException {
