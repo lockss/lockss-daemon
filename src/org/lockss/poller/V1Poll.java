@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.16 2004-09-28 08:53:16 tlipkis Exp $
+* $Id: V1Poll.java,v 1.17 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -80,31 +80,41 @@ public abstract class V1Poll extends BasePoll {
   V1PollTally m_tally;
 
   /**
-   * create a new poll from a message
+   * create a new poll
    *
-   * @param msg the <code>Message</code> which contains the information
    * @param pollspec the PollSpec on which this poll will operate
    * needed to create this poll.
    * @param pm the pollmanager
+   * @param orig the identity of the originator of poll
+   * @param challenge the poll challenge
+   * @param duration the poll duration
    */
-  V1Poll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
-    super(msg, pollspec, pm);
+  V1Poll(PollSpec pollspec,
+	 PollManager pm,
+	 PeerIdentity orig,
+	 byte[] challenge,
+	 long duration) {
+    super(pollspec, pm, orig, challengeToKey(challenge), duration);
 
     // now copy the msg elements we need
     m_hashTime = m_cus.estimatedHashDuration();
-    if(!msg.isVerifyPoll()) {
+    if(pollspec.getPollType() != Poll.VERIFY_POLL) {
       m_hashDeadline =
           Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
     }
 
-    m_challenge = msg.getChallenge();
-    m_verifier = pm.makeVerifier(msg.getDuration());
+    m_challenge = challenge;
+    m_verifier = pm.makeVerifier(duration);
 
     log.debug("I think poll "+m_challenge
 	      +" will take me this long to hash "+m_hashTime);
 
     m_createTime = TimeBase.nowMs();
     getConfigValues();
+  }
+
+  public static String challengeToKey(byte[] challenge) {
+    return String.valueOf(B64Code.encode(challenge));
   }
 
   /**
@@ -133,7 +143,9 @@ public abstract class V1Poll extends BasePoll {
     sb.append(" ");
     sb.append(m_cus.toString());
     sb.append(" ");
-    sb.append(m_msg.getOpcodeString());
+    if (m_msg != null) {
+      sb.append(m_msg.getOpcodeString());
+    }
     sb.append(" key:");
     sb.append(m_key);
     sb.append("]");
@@ -446,6 +458,13 @@ public abstract class V1Poll extends BasePoll {
     return hasher;
   }
 
+  public byte[] getChallenge() {
+    return m_challenge;
+  }
+
+  public byte[] getVerifier() {
+    return m_verifier;
+  }
 
   class PollHashCallback implements HashService.Callback {
 

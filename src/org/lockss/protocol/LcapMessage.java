@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.51 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id: LcapMessage.java,v 1.52 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -660,7 +660,7 @@ public class LcapMessage {
 
   public String getKey() {
     if (m_key == null) {
-      m_key = String.valueOf(B64Code.encode(m_challenge));
+      m_key = V1Poll.challengeToKey(m_challenge);
     }
     return m_key;
   }

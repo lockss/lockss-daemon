@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.140 2004-09-28 08:49:44 tlipkis Exp $
+ * $Id: PollManager.java,v 1.141 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class PollManager
   PollFactory [] pf = {
     null,
     new V1PollFactory(),
-    new V2PollFactory(),
+    null, // new V2PollFactory(),
     null, // new V3PollFactory(),
   };
 
@@ -178,7 +178,17 @@ public class PollManager
     if (version <= 0 || version >= pf.length) {
       theLog.debug("Bad poll version " + version + " for " + pollspec);
     } else {
-      ret = pf[version].callPoll(pollspec, this, theIDManager);
+      long duration = pf[version].calcDuration(pollspec, this);
+      byte[] challenge = makeVerifier(duration);
+      byte[] verifier = makeVerifier(duration);
+      try {
+	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
+				    theIDManager.getLocalPeerIdentity(),
+				    LcapMessage.getDefaultHashAlgorithm());
+	ret = pf[version].callPoll(thePoll, this, theIDManager);
+      } catch (ProtocolException ex) {
+	theLog.debug("makePoll or callPoll threw " + ex.toString());
+      }
     }
     return ret;
   }
@@ -332,8 +342,28 @@ public class PollManager
    * @throws ProtocolException if message opcode is unknown
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
-    BasePoll ret_poll;
+    BasePoll ret_poll = null;
     PollSpec spec = new PollSpec(msg);
+    long duration = msg.getDuration();
+    byte[] challenge = msg.getChallenge();
+    byte[] verifier = msg.getVerifier();
+    PeerIdentity orig = msg.getOriginatorID();
+    String hashAlg = msg.getHashAlgorithm();
+
+    ret_poll = makePoll(spec, duration, challenge, verifier, orig, hashAlg);
+    if (ret_poll != null) {
+      ret_poll.setMessage(msg);
+    }
+    return ret_poll;
+  }
+
+  BasePoll makePoll(PollSpec spec,
+		    long duration,
+		    byte[] challenge,
+		    byte[] verifier,
+		    PeerIdentity orig,
+		    String hashAlg) throws ProtocolException {
+    BasePoll ret_poll = null;
     CachedUrlSet cus = spec.getCachedUrlSet();
     // check for presence of item in the cache
     if (cus == null) {
@@ -357,14 +387,15 @@ public class PollManager
     }
 
     // check for conflicts
-    if (!pf[pollVersion].shouldPollBeCreated(msg, spec, this, theIDManager)) {
+    if (!pf[pollVersion].shouldPollBeCreated(spec, this, theIDManager,
+					     challenge, orig)) {
       theLog.debug("Poll request ignored");
       return null;
     }
     // check with regulator if not verify poll
     else if (spec.getPollType() != Poll.VERIFY_POLL) {
       // get expiration time for the lock
-      long expiration = 2 * msg.getDuration();
+      long expiration = 2 * duration;
       if (AuUrl.isAuUrl(cus.getUrl())) {
         lock = theDaemon.getActivityRegulator(au).
 	  getAuActivityLock(ActivityRegulator.TOP_LEVEL_POLL, expiration);
@@ -373,11 +404,19 @@ public class PollManager
           return null;
         }
       } else {
-        int activity = pf[pollVersion].getPollActivity(msg, spec, this);
-        lock = theDaemon.getActivityRegulator(au).
-	  getCusActivityLock(cus, activity, expiration);
+        int activity = pf[pollVersion].getPollActivity(spec, this);
+	theLog.debug("About to get ActivityRegulator from " + theDaemon +
+		     " for " + au.toString());
+	ActivityRegulator ar = theDaemon.getActivityRegulator(au);
+	if (ar == null) {
+	  theLog.debug("Activity regulator null for au: " + au.toString());
+	  return null;
+	}
+	theLog.debug("about to get lock for " + cus.toString() + " act " +
+		  activity + " expire " + expiration);
+        lock = ar.getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
-          theLog.debug2("New poll aborted due to activity lock.");
+          theLog.debug("New poll aborted due to activity lock.");
           return null;
         }
       }
@@ -385,7 +424,9 @@ public class PollManager
 
     // create the appropriate poll for the message type
     try {
-      ret_poll = pf[pollVersion].createPoll(msg, spec, this, theIDManager);
+      ret_poll = pf[pollVersion].createPoll(spec, this, theIDManager,
+					    orig, challenge, verifier,
+					    duration, hashAlg);
     }
     catch (Exception ex) {
       if(ex instanceof ProtocolException) {
@@ -403,7 +444,7 @@ public class PollManager
 
     if (ret_poll != null) {
       NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
-      if (!msg.isVerifyPoll()) {
+      if (spec.getPollType() != Poll.VERIFY_POLL) {
         if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
 	  theLog.debug("NodeManager said not to start poll: "+ret_poll);
           // clear the lock
@@ -413,7 +454,7 @@ public class PollManager
       }
 
       thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-      if (!msg.isVerifyPoll()) {
+      if (spec.getPollType() != Poll.VERIFY_POLL) {
         nm.startPoll(cus, ret_poll.getVoteTally(), false);
         // set the activity lock in the tally
         ret_poll.getVoteTally().setActivityLock(lock);
@@ -472,12 +513,12 @@ public class PollManager
    * PollSpec instances which currently have active polls.
    * @return Iterator over set of PollSpec
    */
-  protected Iterator getActivePollSpecIterator() {
+  protected Iterator getActivePollSpecIterator(BasePoll poll) {
     Set pollspecs = new HashSet();
     Iterator iter = thePolls.values().iterator();
     while (iter.hasNext()) {
       PollManagerEntry pme = (PollManagerEntry)iter.next();
-      if (!pme.isPollCompleted()) {
+      if (pme.poll != poll && !pme.isPollCompleted()) {
 	pollspecs.add(pme.poll.getPollSpec());
       }
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.6 2004-09-28 08:49:44 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.7 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -101,21 +101,20 @@ public class V1PollFactory implements PollFactory {
   /**
    * Call a poll.  Only used by the tree walk via the poll manager.
    * For V1 sends the poll request.
-   * @param pollspec the <code>PollSpec</code> that defines the subject of
-   *                 the <code>Poll</code>.
+   * @param poll     the <code>Poll</code> to be called
    * @param pm       the PollManager that called this method
    * @return true if the poll was successfuly called.
    */
-  public boolean callPoll(PollSpec pollspec,
+  public boolean callPoll(Poll poll,
 			  PollManager pm,
 			  IdentityManager im) {
     boolean ret = false;
     try {
-      sendV1PollRequest(pollspec, pm, im);
+      sendV1PollRequest(poll, pm, im);
       ret = true;
     } catch (IOException ioe) {
       theLog.debug("Exception sending V1 poll request for " +
-		   pollspec + ioe);
+		   poll + ioe);
     }
     return ret;
   }
@@ -127,10 +126,12 @@ public class V1PollFactory implements PollFactory {
    * @param pm       the PollManager that called this method
    * @throws IOException thrown if <code>LcapMessage</code> construction fails.
    */
-  private void sendV1PollRequest(PollSpec pollspec,
+  private void sendV1PollRequest(Poll poll,
 				 PollManager pm,
 				 IdentityManager im)
     throws IOException {
+    PollSpec pollspec = poll.getPollSpec();
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
     int opcode = -1;
     switch (pollspec.getPollType()) {
     case Poll.NAME_POLL:
@@ -146,16 +147,15 @@ public class V1PollFactory implements PollFactory {
     theLog.debug("sending a request for polltype: "
                  + LcapMessage.POLL_OPCODES[opcode] +
                  " for spec " + pollspec);
-    CachedUrlSet cus = pollspec.getCachedUrlSet();
-    long duration = calcDuration(opcode, cus, pm);
+    long duration = poll.getDeadline().getRemainingTime();
     if(duration <=0) {
       theLog.debug("not sending request for polltype: "
                    + LcapMessage.POLL_OPCODES[opcode] +
                    " for spec " + pollspec + "not enough hash time.");
       return;
     }
-    byte[] challenge = pm.makeVerifier(duration);
-    byte[] verifier = pm.makeVerifier(duration);
+    byte[] challenge = ((V1Poll)poll).getChallenge();
+    byte[] verifier = ((V1Poll)poll).getVerifier();
     LcapMessage msg =
       LcapMessage.makeRequestMsg(pollspec,
                                  null,
@@ -166,7 +166,7 @@ public class V1PollFactory implements PollFactory {
                                  im.getLocalPeerIdentity());
     // before we actually send the message make sure that another poll
     // isn't going to conflict with this and create a split poll
-    if(checkForConflicts(cus,pm) == null) {
+    if(checkForConflicts(cus, pm, ((BasePoll)poll)) == null) {
       theLog.debug2("sending poll request message: " +  msg.toString());
       pm.sendMessage(msg, cus.getArchivalUnit());
     }
@@ -180,39 +180,51 @@ public class V1PollFactory implements PollFactory {
   /**
    * createPoll is invoked when an incoming message requires a new
    * Poll to be created.
-   * @param msg the LcapMessage that caused the new poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method
+   * @param orig the PeerIdentity that called the poll
+   * @param challenge the poll challenge
+   * @param verifier the poll verifier
+   * @param duration the duration of the poll
+   * @param hashAlg the hash algorithm in use
    * @return a Poll object describing the new poll.
    */
-  public BasePoll createPoll(LcapMessage msg,
-			     PollSpec pollspec,
+  public BasePoll createPoll(PollSpec pollspec,
 			     PollManager pm,
-			     IdentityManager im) throws ProtocolException {
+			     IdentityManager im,
+			     PeerIdentity orig,
+			     byte[] challenge,
+			     byte[] verifier,
+			     long duration,
+			     String hashAlg) throws ProtocolException {
     BasePoll ret_poll = null;
 
     if (pollspec.getPollVersion() != 1) {
       throw new ProtocolException("V1PollFactory: bad version " +
 				  pollspec.getPollVersion());
     }
-    switch (msg.getOpcode()) {
-      case LcapMessage.CONTENT_POLL_REP:
-      case LcapMessage.CONTENT_POLL_REQ:
+    switch (pollspec.getPollType()) {
+      case Poll.CONTENT_POLL:
 	theLog.debug2("Creating content poll for " + pollspec);
-	ret_poll = new V1ContentPoll(msg, pollspec, pm);
+	ret_poll = new V1ContentPoll(pollspec, pm, orig,
+				     challenge, duration,
+				     hashAlg);
 	break;
-      case LcapMessage.NAME_POLL_REP:
-      case LcapMessage.NAME_POLL_REQ:
+      case Poll.NAME_POLL:
 	theLog.debug2("Creating name poll for " + pollspec);
-	ret_poll = new V1NamePoll(msg, pollspec, pm);
+	ret_poll = new V1NamePoll(pollspec, pm, orig,
+				     challenge, duration,
+				     hashAlg);
 	break;
-      case LcapMessage.VERIFY_POLL_REP:
-      case LcapMessage.VERIFY_POLL_REQ:
+      case Poll.VERIFY_POLL:
 	theLog.debug2("Creating verify poll for " + pollspec);
-	ret_poll = new V1VerifyPoll(msg, pollspec, pm);
+	ret_poll = new V1VerifyPoll(pollspec, pm, orig,
+				     challenge, duration,
+				     hashAlg, verifier);
 	break;
       default:
-        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
+        throw new ProtocolException("Unknown poll type:" +
+				    pollspec.getPollType());
     }
     return ret_poll;
   }
@@ -226,18 +238,21 @@ public class V1PollFactory implements PollFactory {
    * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
+   * @param challenge the poll challenge
+   * @param orig the PeerIdentity that called the poll
    * @return true if it is OK to call the poll
    */
-   public boolean shouldPollBeCreated(LcapMessage msg,
-					 PollSpec pollspec,
-					 PollManager pm,
-					 IdentityManager im) {
-     if (msg.isVerifyPoll()) {
+   public boolean shouldPollBeCreated(PollSpec pollspec,
+				      PollManager pm,
+				      IdentityManager im,
+				      byte[] challenge,
+				      PeerIdentity orig) {
+     if (pollspec.getPollType() == Poll.VERIFY_POLL) {
        // if we didn't call the poll and we don't have the verifier ignore this
-       if ((pm.getSecret(msg.getChallenge())== null) &&
-	   !im.isLocalIdentity(msg.getOriginatorID())) {
-	 String ver = String.valueOf(B64Code.encode(msg.getChallenge()));
-	 theLog.debug("ignoring verify request from " + msg.getOriginatorID()
+       if ((pm.getSecret(challenge)== null) &&
+	   !im.isLocalIdentity(orig)) {
+	 String ver = String.valueOf(B64Code.encode(challenge));
+	 theLog.debug("ignoring verify request from " + orig
 		      + " on unknown verifier " + ver);
 	 return false;
        }
@@ -256,22 +271,21 @@ public class V1PollFactory implements PollFactory {
   /**
    * getPollActivity returns the type of activity defined by ActivityRegulator
    * that describes this poll.
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
    * @return one of the activity codes defined by ActivityRegulator
    */
-   public int getPollActivity(LcapMessage msg,
-				 PollSpec pollspec,
-				 PollManager pm) {
+   public int getPollActivity(PollSpec pollspec,
+			      PollManager pm) {
      int activity = ActivityRegulator.NO_ACTIVITY;
-     if (msg.isContentPoll()) {
+     int pollType = pollspec.getPollType();
+     if (pollType == Poll.CONTENT_POLL) {
        if (pollspec.getCachedUrlSet().getSpec().isSingleNode()) {
 	 activity = ActivityRegulator.SINGLE_NODE_CONTENT_POLL;
        } else {
 	 activity = ActivityRegulator.STANDARD_CONTENT_POLL;
        }
-     } else if (msg.isNamePoll()) {
+     } else if (pollType == Poll.NAME_POLL) {
        activity = ActivityRegulator.STANDARD_NAME_POLL;
      }
      return activity;
@@ -285,8 +299,18 @@ public class V1PollFactory implements PollFactory {
    */
   private CachedUrlSet checkForConflicts(CachedUrlSet cus, PollManager pm) {
 
-    Iterator iter = pm.getActivePollSpecIterator();
-    theLog.debug("checkForConflicts on " + cus);
+    return checkForConflicts(cus, pm, null);
+  }
+
+  private CachedUrlSet checkForConflicts(CachedUrlSet cus,
+					 PollManager pm,
+					 BasePoll poll) {
+    Iterator iter = pm.getActivePollSpecIterator(poll);
+    if (poll == null) {
+      theLog.debug("checkForConflicts on " + cus);
+    } else {
+      theLog.debug("checkForConflicts on " + cus + " excluding " + poll);
+    }
     while(iter.hasNext()) {
       PollSpec ps = (PollSpec)iter.next();
       theLog.debug("compare " + cus + " with " + ps.getCachedUrlSet());
@@ -305,11 +329,11 @@ public class V1PollFactory implements PollFactory {
   }
 
   // Poll time calculation
-  public long calcDuration(int opcode, CachedUrlSet cus, PollManager pm) {
+  public long calcDuration(PollSpec pollspec, PollManager pm) {
+    CachedUrlSet cus = pollspec.getCachedUrlSet();
     int quorum = m_quorum;
-    switch (opcode) {
-    case LcapMessage.NAME_POLL_REQ:
-    case LcapMessage.NAME_POLL_REP: {
+    switch (pollspec.getPollType()) {
+    case Poll.NAME_POLL: {
       long minPoll = (m_minNamePollDuration +
 		      theRandom.nextLong(m_maxNamePollDuration -
 					 m_minNamePollDuration));
@@ -318,8 +342,7 @@ public class V1PollFactory implements PollFactory {
 				     minPoll, m_maxNamePollDuration,
 				     m_nameHashEstimate, pm);
     }
-    case LcapMessage.CONTENT_POLL_REQ:
-    case LcapMessage.CONTENT_POLL_REP: {
+    case Poll.CONTENT_POLL: {
       long hashEst = cus.estimatedHashDuration();
       theLog.debug3("CUS estimated hash duration: " + hashEst);
 

@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.4 2004-09-28 08:49:45 tlipkis Exp $
+* $Id: PollFactory.java,v 1.5 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -51,13 +51,12 @@ public interface PollFactory {
   /**
    * Call a poll.  Only used by the tree walk via the poll manager.
    * For V1 sends the poll request.
-   * @param pollspec the <code>PollSpec</code> that defines the subject of
-   *                 the <code>Poll</code>.
+   * @param poll the <code>Poll</code> to be called
    * @param pm the PollManager that called this method
    * @param im the IdentityManager
    * @return true if the poll was successfuly called.
    */
-  boolean callPoll(PollSpec pollspec,
+  boolean callPoll(Poll poll,
 		   PollManager pm,
 		   IdentityManager im);
 
@@ -66,42 +65,50 @@ public interface PollFactory {
    * createPoll is invoked when (a) an incoming message requires a new
    * Poll to be created (msg != null) and (b) when a new Poll is required
    * with no incoming message (msg == null).  V1 uses only case (a).
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method
    * @param im the IdentityManager
+   * @param orig the PeerIdentity that called the poll
+   * @param challenge the poll challenge
+   * @param verifier the poll verifier
+   * @param duration the duration of the poll
+   * @param hashAlg the hash algorithm in use
    * @return a Poll object describing the new poll.
    */
-  BasePoll createPoll(LcapMessage msg,
-		      PollSpec pollspec,
+  BasePoll createPoll(PollSpec pollspec,
 		      PollManager pm,
-		      IdentityManager im) throws ProtocolException;
+		      IdentityManager im,
+		      PeerIdentity orig,
+		      byte[] challenge,
+		      byte[] verifier,
+		      long duration,
+		      String hashAlg) throws ProtocolException;
 
   /**
    * shouldPollBeCreated is invoked to check for conflicts or other
    * version-specific reasons why the poll should not be created at
    * this time.
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
    * @param im the IdentityManager
+   * @param challenge the poll challenge
+   * @param orig the PeerIdentity that called the poll
    * @return true if it is OK to call the poll
    */
-   boolean shouldPollBeCreated(LcapMessage msg,
-			       PollSpec pollspec,
+   boolean shouldPollBeCreated(PollSpec pollspec,
 			       PollManager pm,
-			       IdentityManager im);
+			       IdentityManager im,
+			       byte[] challenge,
+			       PeerIdentity orig);
 
   /**
    * getPollActivity returns the type of activity defined by ActivityRegulator
    * that describes this poll.
-   * @param msg the LcapMessage that triggered the new Poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method.
    * @return one of the activity codes defined by ActivityRegulator
    */
-   int getPollActivity(LcapMessage msg,
-		       PollSpec pollspec,
+   int getPollActivity(PollSpec pollspec,
 		       PollManager pm);
 
   /**
@@ -118,4 +125,5 @@ public interface PollFactory {
 
   public long getMinPollDuration(int pollType);
 
+  public long calcDuration(PollSpec ps, PollManager pm);
 }

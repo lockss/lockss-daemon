@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.69 2004-09-28 08:47:25 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.70 2004-09-29 01:19:12 dshr Exp $
  */
 
 /*
@@ -112,19 +112,25 @@ public class TestPollManager extends LockssTestCase {
   }
 
   public void testV1CallPoll() {
+    pollmanager.stopService();
     LocalMockPollManager pm = new LocalMockPollManager();
+    pm.initService(theDaemon);
+    pm.startService();
     PollFactory pf = pm.getPollFactory(1);
     int[] opcode = {
       LcapMessage.NAME_POLL_REQ,
       LcapMessage.CONTENT_POLL_REQ,
       LcapMessage.VERIFY_POLL_REQ,
     };
+    // pre-checks
+    assertNotNull(theDaemon.getActivityRegulator(testau));
     // NB - Verify polls are never called via callPoll()
     for (int i = 0; i < testmsg.length - 1; i++) {
       pm.msgSent = null;
+
       assertTrue("Calling this poll should succeed",
-		 pf.callPoll(new PollSpec(testmsg[i]), pm,
-			     idmanager));
+		 pm.callPoll(new PollSpec(testmsg[i])));
+      assertNotNull(pm.msgSent);
       assertTrue(pm.msgSent instanceof LcapMessage);
       assertEquals(pm.msgSent.getOpcode(), opcode[i]);
     }
@@ -136,13 +142,19 @@ public class TestPollManager extends LockssTestCase {
     for (int i = 0; i < testmsg.length; i++) {
       ps[i] = new PollSpec(testmsg[i]);
       try {
-	BasePoll p = pf.createPoll(testmsg[i], ps[i], pollmanager,
-				   idmanager);
+	BasePoll p = pf.createPoll(ps[i], pollmanager,
+				   idmanager,
+				   testmsg[i].getOriginatorID(),
+				   testmsg[i].getChallenge(),
+				   testmsg[i].getVerifier(),
+				   testmsg[i].getDuration(),
+				   testmsg[i].getHashAlgorithm());
 	assertTrue(p instanceof V1Poll);
 	// assertTrue(p.isMyPoll());
-	assertTrue(p.getMessage() == testmsg[i]);
 	assertTrue(p.getPollSpec().equals(ps[i]));
 	assertTrue(p.getCallerID() == testmsg[i].getOriginatorID());
+	p.setMessage(testmsg[i]);
+	assertTrue(p.getMessage() == testmsg[i]);
       } catch (ProtocolException pe) {
 	fail("createPoll " + testmsg[i] + " threw " + pe);
       }
@@ -181,29 +193,45 @@ public class TestPollManager extends LockssTestCase {
    BasePoll c1 = pollmanager.makePoll(sameroot[1]);
    // differnt content poll should be ok
 
+   LcapMessage msg;
+   msg = testmsg[1];
    assertTrue("different content poll s/b ok",
-	      pf.shouldPollBeCreated(testmsg[1], new PollSpec(testmsg[1]),
-				     pollmanager, idmanager));
+	      pf.shouldPollBeCreated(new PollSpec(msg),
+				     pollmanager, idmanager,
+				     msg.getChallenge(),
+				     msg.getOriginatorID()));
 
    // same content poll same range s/b a conflict
+   msg = sameroot[1];
    assertFalse("same content poll root s/b conflict",
-	       pf.shouldPollBeCreated(sameroot[1], new PollSpec(sameroot[1]),
-				     pollmanager, idmanager));
+	       pf.shouldPollBeCreated(new PollSpec(msg),
+				     pollmanager, idmanager,
+				     msg.getChallenge(),
+				     msg.getOriginatorID()));
 
    // different name poll should be ok
+   msg = testmsg[0];
    assertTrue("different name poll s/b ok",
-	      pf.shouldPollBeCreated(testmsg[0], new PollSpec(testmsg[0]),
-				     pollmanager, idmanager));
+	      pf.shouldPollBeCreated(new PollSpec(msg),
+				     pollmanager, idmanager,
+				     msg.getChallenge(),
+				     msg.getOriginatorID()));
 
    // same name poll s/b conflict
+   msg = sameroot[0];
    assertFalse("same name poll root s/b conflict",
-	       pf.shouldPollBeCreated(sameroot[0], new PollSpec(sameroot[0]),
-				     pollmanager, idmanager));
+	       pf.shouldPollBeCreated(new PollSpec(msg),
+				     pollmanager, idmanager,
+				     msg.getChallenge(),
+				     msg.getOriginatorID()));
 
    // verify poll should be ok
+   msg = testmsg[2];
    assertTrue("verify poll s/b ok",
-	      pf.shouldPollBeCreated(testmsg[2], new PollSpec(testmsg[2]),
-				     pollmanager, idmanager));
+	      pf.shouldPollBeCreated(new PollSpec(msg),
+				     pollmanager, idmanager,
+				     msg.getChallenge(),
+				     msg.getOriginatorID()));
 
    // remove the poll
    pollmanager.removePoll(c1.m_key);
@@ -211,17 +239,16 @@ public class TestPollManager extends LockssTestCase {
 
   public void testGetPollActivity() {
     PollFactory pf = pollmanager.getPollFactory(1);
-    assertEquals(pf.getPollActivity(testmsg[0],
-				    new PollSpec(testmsg[0]),
+    assertEquals(pf.getPollActivity(new PollSpec(testmsg[0]),
 				    pollmanager),
 		 ActivityRegulator.STANDARD_NAME_POLL);
-    int pa = pf.getPollActivity(testmsg[1],new PollSpec(testmsg[1]),
+    int pa = pf.getPollActivity(new PollSpec(testmsg[1]),
 				pollmanager);
     assertTrue(pa == ActivityRegulator.STANDARD_CONTENT_POLL ||
 	       pa == ActivityRegulator.SINGLE_NODE_CONTENT_POLL);
   }
 
-  // Test for the V1 method PollFactory.calcDuration(...)
+  // Test for the method PollFactory.calcDuration(...)
   public void testV1CalcDuration() {
     MockCachedUrlSet mcus =
       new MockCachedUrlSet((MockArchivalUnit)testau,
@@ -237,23 +264,23 @@ public class TestPollManager extends LockssTestCase {
 
     mcus.setEstimatedHashDuration(100);
     pf.setMinPollDeadline(Deadline.in(1000));
-    assertEquals(1800, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    assertEquals(1800, pf.calcDuration(ps, mpm));
     pf.setMinPollDeadline(Deadline.in(2000));
-    assertEquals(2400, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    assertEquals(2400, pf.calcDuration(ps, mpm));
     // this one should be limited by max content poll
     pf.setMinPollDeadline(Deadline.in(4000));
-    assertEquals(4100, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    assertEquals(4100, pf.calcDuration(ps, mpm));
     pf.setMinPollDeadline(Deadline.in(5000));
-    assertEquals(-1, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    assertEquals(-1, pf.calcDuration(ps, mpm));
 
     // calulated poll time will be less than min, should be adjusted up to min
     mcus.setEstimatedHashDuration(10);
     pf.setMinPollDeadline(Deadline.in(100));
-    assertEquals(1000, pf.calcDuration(LcapMessage.CONTENT_POLL_REQ, mcus, mpm));
+    assertEquals(1000, pf.calcDuration(ps, mpm));
 
     // name poll duration is randomized so less predictable, but should
     // always be between min and max.
-    long ndur = pf.calcDuration(LcapMessage.NAME_POLL_REQ, mcus, mpm);
+    long ndur = pf.calcDuration(new PollSpec(mcus, Poll.NAME_POLL), mpm);
     assertTrue(ndur >= pf.getMinPollDuration(Poll.NAME_POLL));
     assertTrue(ndur <= pf.getMaxPollDuration(Poll.NAME_POLL));
   }

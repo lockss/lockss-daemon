@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.7 2004-09-28 08:53:17 tlipkis Exp $
+* $Id: BasePoll.java,v 1.8 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -83,25 +83,30 @@ public abstract class BasePoll implements Poll {
   /**
    * create a new poll from a message
    *
-   * @param msg the <code>Message</code> which contains the information
    * @param pollspec the PollSpec on which this poll will operate
-   * needed to create this poll.
    * @param pm the pollmanager
+   * @param orig the identity of the caller
+   * @param key the string key used to locate the poll
+   * @param duration the duration of the poll
    */
-  BasePoll(LcapMessage msg, PollSpec pollspec, PollManager pm) {
+  BasePoll(PollSpec pollspec, PollManager pm, PeerIdentity orig, String key,
+	   long duration) {
     m_pollmanager = pm;
     idMgr = pm.getIdentityManager();
-    // Use port 0 here to indicate V1 identity
-    m_callerID = msg.getOriginatorID();
-    m_msg = msg;
+    m_callerID = orig;
+    m_msg = null;
     m_pollspec = pollspec;
     m_cus = pollspec.getCachedUrlSet();
     m_createTime = TimeBase.nowMs();
-    m_key = msg.getKey();
-    m_deadline = Deadline.in(msg.getDuration());
+    m_key = key;
+    m_deadline = Deadline.in(duration);
     m_pollstate = PS_INITING;
+    
   }
 
+  public void setMessage(LcapMessage msg) {
+    m_msg = msg;
+  }
 
   /**
    * Returns true if the poll belongs to this Identity

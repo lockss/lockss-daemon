@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.7 2004-09-28 08:53:16 tlipkis Exp $
+ * $Id: V1NamePoll.java,v 1.8 2004-09-29 01:19:11 dshr Exp $
  */
 
 /*
@@ -46,16 +46,20 @@ public class V1NamePoll extends V1Poll {
 
   ArrayList m_entries;
 
-  public V1NamePoll(LcapMessage msg,
-			    PollSpec pollspec, PollManager pm) {
-    super(msg, pollspec, pm);
+  public V1NamePoll(PollSpec pollspec,
+		    PollManager pm,
+		    PeerIdentity orig,
+		    byte[] challenge,
+		    long duration,
+		    String hashAlg) {
+    super(pollspec, pm, orig, challenge, duration);
     m_replyOpcode = LcapMessage.NAME_POLL_REP;
     m_tally = new V1PollTally(this,
                               NAME_POLL,
                               m_createTime,
-                              msg.getDuration(),
+                              duration,
                               V1PollFactory.getQuorum(),  // XXX AU-specific
-                              msg.getHashAlgorithm());
+                              hashAlg);
   }
 
   /**
