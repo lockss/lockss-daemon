@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.5 2002-12-02 00:43:08 tal Exp $
+ * $Id: TestLcapSocket.java,v 1.6 2002-12-13 02:26:08 tal Exp $
  */
 
 /*
@@ -42,16 +42,16 @@ import org.lockss.test.*;
 
 
 /**
- * This is the test class for org.lockss.protocol.TestLcapSocket
+ * This is the test class for org.lockss.protocol.LcapSocket
  */
 
-public class TestLcapSocket extends LockssTestCase{
+public class TestLcapSocket extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.protocol.LcapSocket.class
   };
 
 
-  public TestLcapSocket(String msg){
+  public TestLcapSocket(String msg) {
     super(msg);
   }
 
@@ -111,7 +111,8 @@ public class TestLcapSocket extends LockssTestCase{
     intr = interruptMeIn(500);
     PrivilegedAccessor.invokeMethod(lskt, "receivePacket");
     assertTrue(!rcvQ.isEmpty());
-    LockssDatagram rcvd = (LockssDatagram)rcvQ.get(Deadline.in(0));
+    LockssReceivedDatagram rcvd =
+      (LockssReceivedDatagram)rcvQ.get(Deadline.in(0));
     assertEquals(testPacket, rcvd.getPacket());
     intr.cancel();
   }
@@ -125,9 +126,9 @@ public class TestLcapSocket extends LockssTestCase{
     Interrupter intr = interruptMeIn(500);
     PrivilegedAccessor.invokeMethod(lskt, "receivePacket");
     assertTrue(!rcvQ.isEmpty());
-    LockssDatagram rcvd = (LockssDatagram)rcvQ.get(Deadline.in(0));
+    LockssReceivedDatagram rcvd =
+      (LockssReceivedDatagram)rcvQ.get(Deadline.in(0));
     assertEquals(testPacket, rcvd.getPacket());
     intr.cancel();
   }
 }
-

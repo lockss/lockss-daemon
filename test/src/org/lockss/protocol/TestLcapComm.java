@@ -1,0 +1,216 @@
+/*
+ * $Id: TestLcapComm.java,v 1.1 2002-12-13 02:26:08 tal Exp $
+ */
+
+/*
+
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
+package org.lockss.protocol;
+
+import java.util.*;
+import java.io.*;
+import java.net.*;
+import junit.framework.TestCase;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
+
+
+/**
+ * This is the test class for org.lockss.protocol.LcapComm
+ */
+
+public class TestLcapComm extends LockssTestCase {
+  public static Class testedClasses[] = {
+    org.lockss.protocol.LcapComm.class
+  };
+
+  public TestLcapComm(String msg) {
+    super(msg);
+  }
+
+  static Logger log = Logger.getLogger("SockTest");
+  static int TIMEOUT = 1000;
+
+  static final String PARAM_MULTIGROUP = LcapComm.PARAM_MULTIGROUP;
+  static final String PARAM_MULTIPORT = LcapComm.PARAM_MULTIPORT;
+  static final String PARAM_UNIPORT = LcapComm.PARAM_UNIPORT;
+  static final String PARAM_UNIPORT_SEND = LcapComm.PARAM_UNIPORT_SEND;
+  static final String PARAM_VERIFY_MULTICAST = LcapComm.PARAM_VERIFY_MULTICAST;
+
+  private static final String c1 =
+    PARAM_MULTIGROUP + "=239.3.4.5" + "\n" +
+    PARAM_MULTIPORT + "=5432" + "\n" +
+    PARAM_UNIPORT + "=2345" + "\n" +
+//     PARAM_UNIPORT_SEND + "=" + "\n" +
+    PARAM_VERIFY_MULTICAST + "=yes";
+
+  String testStr = "This is test data";
+  byte[] testData;
+  byte[] testPktData;
+  int testPort = 1234;
+  InetAddress testAddr;
+  String[] ar1 = {"foo"};
+  byte[] chal = {1,2,3,4,5,6,7,8,9,10};
+  LockssDatagram testSend;
+  DatagramPacket testPacket;
+  DatagramPacket testPacket2;
+
+  MockSocketFactory fact;
+  LcapComm comm;
+  Configuration config;
+
+  MockDatagramSocket ssock;
+  MockDatagramSocket usock;
+  MockMulticastSocket msock1;
+  MockMulticastSocket msock2;
+
+  SimpleQueue rcvdMsgs;
+
+
+  public void setUp() throws Exception {
+    testData = testStr.getBytes();
+    testAddr = InetAddress.getByName("127.0.0.1");
+    testSend = new LockssDatagram(LockssDatagram.PROTOCOL_TEST, testData);
+    byte[] testHeader = {0, 0, 0, LockssDatagram.PROTOCOL_TEST};
+    testPktData = ByteArray.concat(testHeader, testData);
+    testPacket = new DatagramPacket(testPktData, testPktData.length,
+				    testAddr, testPort);
+    testPacket2 = new DatagramPacket(testPktData, testPktData.length,
+				     testAddr, testPort - 1);
+
+    fact = new MockSocketFactory();
+    config = Configuration.readConfig(ListUtil.list(FileUtil.urlOfString(c1)));
+    comm = new LcapComm(fact);
+    comm.configure(config);
+    comm.start();
+    ssock = ((MockDatagramSocket)fact.ssocks.get(0));
+    usock = ((MockDatagramSocket)fact.usocks.get(0));
+    msock1 = ((MockMulticastSocket)fact.msocks.get(0));
+    msock2 = ((MockMulticastSocket)fact.msocks.get(1));
+    rcvdMsgs = new SimpleQueue.Fifo();
+    comm.registerMessageHandler(LockssDatagram.PROTOCOL_TEST,
+				new MessageHandler());
+  }
+
+  public void tearDown() throws Exception {
+    if (comm != null) {
+      comm.stop();
+      comm = null;
+      fact = null;
+    }
+  }
+
+  public void testUnicastSend() throws Exception {
+    assertTrue(ssock.getSentPackets().isEmpty());
+    comm.sendTo(testSend, testAddr, testPort);
+    DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
+    assertEquals(testAddr, sent.getAddress());
+    assertEquals(testPort, sent.getPort());
+    assertEquals(testPktData, sent.getData());
+  }
+  
+  public void testMulticastSend() throws Exception {
+    assertTrue(ssock.getSentPackets().isEmpty());
+    comm.send(testSend, (ArchivalUnit)null);
+    DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
+    assertEquals(InetAddress.getByName(config.get(PARAM_MULTIGROUP)),
+		 sent.getAddress());
+    assertEquals(config.getInt(PARAM_MULTIPORT), sent.getPort());
+    assertEquals(testPktData, sent.getData());
+  }
+  
+  public void testUnicastReceive() throws Exception {
+    assertTrue(rcvdMsgs.isEmpty());
+    System.err.println(ByteArray.toHexString(testPacket.getData()));
+    usock.addToReceiveQueue(testPacket);
+    LockssReceivedDatagram rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
+    assertTrue(!rd.isMulticast());
+    assertTrue(rcvdMsgs.isEmpty());
+  }
+
+  public void testMulticastReceive() throws Exception {
+    LockssReceivedDatagram rd;
+    assertTrue(rcvdMsgs.isEmpty());
+    msock1.addToReceiveQueue(testPacket);
+    // it should not show up until packet is received on other socket
+    msock1.addToReceiveQueue(testPacket);
+    TimerUtil.guaranteedSleep(10);
+    assertTrue(rcvdMsgs.isEmpty());
+    msock2.addToReceiveQueue(testPacket);
+    rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
+    assertTrue(rd.isMulticast());
+    // this one should not show up
+    msock2.addToReceiveQueue(testPacket);
+    TimerUtil.guaranteedSleep(10);
+    // unicast a different packet
+    usock.addToReceiveQueue(testPacket2);
+    // and make sure we get that one.  ensures multi isn't just slow to
+    // arrive
+    rd = (LockssReceivedDatagram)rcvdMsgs.get(TIMEOUT);
+    assertTrue(!rd.isMulticast());
+    assertEquals(testPort - 1, rd.getPacket().getPort());
+    assertTrue(rcvdMsgs.isEmpty());
+  }
+
+  class MessageHandler implements LcapComm.MessageHandler {
+    public void handleMessage(LockssReceivedDatagram rd) {
+      rcvdMsgs.put(rd);
+    }
+  }
+
+  /** Mock socket factory creates LcapSockets with mock datagram/multicast
+   * sockets. */
+  static class MockSocketFactory implements LcapComm.SocketFactory {
+    List msocks = new ArrayList();
+    List usocks = new ArrayList();
+    List ssocks = new ArrayList();
+    
+    public LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
+					    InetAddress group,
+					    int port)
+	throws IOException {
+      MockMulticastSocket mskt = new MockMulticastSocket();
+      msocks.add(mskt);
+      return new LcapSocket.Multicast(rcvQ, mskt, (InetAddress)null);
+    }
+
+    public LcapSocket.Unicast newUnicastSocket(Queue rcvQ, int port)
+	throws IOException {
+      MockDatagramSocket dskt = new MockDatagramSocket();
+      usocks.add(dskt);
+      return new LcapSocket.Unicast(rcvQ, dskt);
+    }
+
+    public LcapSocket newSendSocket() throws SocketException {
+      MockDatagramSocket dskt = new MockDatagramSocket();
+      ssocks.add(dskt);
+      return new LcapSocket(dskt);
+    }
+  }
+}

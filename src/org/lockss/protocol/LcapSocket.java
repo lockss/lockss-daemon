@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.4 2002-12-02 00:39:27 tal Exp $
+ * $Id: LcapSocket.java,v 1.5 2002-12-13 02:26:08 tal Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class LcapSocket {
     }
 
     /** Subclasses must implement this to handle received packets */
-    abstract void processReceivedDatagram(LockssDatagram dg);
+    abstract void processReceivedDatagram(LockssReceivedDatagram dg);
 
     /** Convenience method to make names for loggers and threads */
     String getThreadName() {
@@ -107,11 +107,13 @@ public class LcapSocket {
     /** Receive one packet, build a DatagramPacket, call the LcapSocket's
 	processReceivedDatagram() */
     private void receivePacket() throws IOException {
-      byte buf[] = new byte[LockssDatagram.MAX_SIZE];
-      DatagramPacket pkt = new DatagramPacket(buf, LockssDatagram.MAX_SIZE);
+      byte buf[] = new byte[LockssReceivedDatagram.MAX_SIZE];
+      DatagramPacket pkt =
+	new DatagramPacket(buf, LockssReceivedDatagram.MAX_SIZE);
       try {
 	sock.receive(pkt);
-	LockssDatagram dg = new LockssDatagram(pkt);
+	LockssReceivedDatagram dg = new LockssReceivedDatagram(pkt);
+	dg.setReceiveSocket(this);
 	processReceivedDatagram(dg);
       } catch (InterruptedIOException e) {
       }
@@ -170,7 +172,7 @@ public class LcapSocket {
     }
 
     /* Mark the packet as unicast, add to the queue */
-    void processReceivedDatagram(LockssDatagram dg) {
+    void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(false);
       rcvQ.put(dg);
     }
@@ -206,9 +208,8 @@ public class LcapSocket {
       sock.joinGroup(grp);
     }
 
-    /* Mark the packet as multicast iff it really is, add to the queue */
-    // tk - check really multicast iff received on 2nd multicast socket
-    void processReceivedDatagram(LockssDatagram dg) {
+    /** Mark the packet as multicast, add to the queue */
+    void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(true);
       rcvQ.put(dg);
     }

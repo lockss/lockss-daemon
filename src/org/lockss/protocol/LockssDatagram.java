@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.1 2002-11-05 21:16:05 tal Exp $
+ * $Id: LockssDatagram.java,v 1.2 2002-12-13 02:26:08 tal Exp $
  */
 
 /*
@@ -32,30 +32,57 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol;
 import java.net.*;
-//import java.util.*;
-//import java.io.*;
-//import org.lockss.;
+import java.util.*;
+import org.lockss.util.*;
 
-/**
+
+/** LockssDatagram describes the datagram packets exchanged between LOCKSS
+ * caches, and is the object passed from clients to the communications
+ * layer.  Received packets are represented by the subclass, {@link
+ * LockssReceivedDatagram}.
  */
 public class LockssDatagram {
+  /** Maximum data size */
   public static final int MAX_SIZE = 2048;
-  private DatagramPacket packet;
-  private boolean multicast;
+  public static final int PROTOCOL_TEST = 1;
+  public static final int PROTOCOL_LCAP = 2;
+  static final int HEADER_LENGTH = 4;
 
-  public LockssDatagram(DatagramPacket packet) {
-    this.packet = packet;
+  byte[] payload;			// Client data
+  int protocol;				// Client protocol
+
+  /** Only for subclass. */
+  LockssDatagram() {
   }
 
-  public DatagramPacket getPacket() {
-    return packet;
+  /** Build a LockssDatagram to send a protocol message containing data.
+   * @param protocol protocol number, one of PROTOCOL_xxx constants.
+   * @param data byte array containing message data.
+   */
+  public LockssDatagram(int protocol, byte[] data) {
+    this.protocol = protocol;
+    this.payload = data;
   }
 
-  public boolean isMulticast() {
-    return multicast;
+  /** Return a DatagramPacket suitable for sending to a specific address.
+   * @param addr the destination address (or multicast group)
+   * @param port the destination port
+   * @return the packet
+   */
+  public DatagramPacket makeSendPacket(InetAddress addr, int port) {
+    byte[] pktData = new byte[payload.length + HEADER_LENGTH];
+    ByteArray.encodeInt(protocol, pktData, 0);
+    System.arraycopy(payload, 0, pktData, HEADER_LENGTH, payload.length);
+    return new DatagramPacket(pktData, pktData.length, addr, port);
   }
 
-  void setMulticast(boolean multicast) {
-    this.multicast = multicast;
+  /** Return the data portion of the packet */
+  public byte[] getData() {
+    return payload;
+  }
+
+  /** Return the protocol under which to send the packet */
+  public int getProtocol() {
+    return protocol;
   }
 }

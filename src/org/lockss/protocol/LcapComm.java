@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.6 2002-12-02 22:11:25 tal Exp $
+ * $Id: LcapComm.java,v 1.7 2002-12-13 02:26:08 tal Exp $
  */
 
 /*
@@ -31,12 +31,13 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.protocol;
-//import java.util.*;
 import java.io.*;
 import java.net.*;
+import java.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
-import org.lockss.poller.*;
+import org.apache.commons.collections.LRUMap;
+
 /**
  * LcapComm implements the routing parts of the LCAP protocol, using
  * {@link LcapSocket} to send and receive packets.
@@ -45,51 +46,49 @@ import org.lockss.poller.*;
  */
 public class LcapComm {
 
-  static final String PARAM_GROUPNAME = Configuration.PREFIX + "group";
-  static final String PARAM_MULTIPORT = Configuration.PREFIX + "port";
-  static final String PARAM_UNIPORT = Configuration.PREFIX + "unicastport";
+  static final String PREFIX = Configuration.PREFIX + "comm.";
+  static final String PARAM_MULTIGROUP = PREFIX + "multicast.group";
+  static final String PARAM_MULTIPORT = PREFIX + "multicast.port";
+  static final String PARAM_UNIPORT = PREFIX + "unicast.port";
+  static final String PARAM_UNIPORT_SEND = PREFIX + "unicast.sendToPort";
+  static final String PARAM_VERIFY_MULTICAST = PREFIX + "verifyMulticast";
 
-  protected static Logger log = Logger.getLogger("Comm");
-
+  static Logger log = Logger.getLogger("Comm");
   private static LcapComm singleton;
-  private static LcapSocket sendSock;	// socket used for sending only
+
+  private LRUMap multicastVerifyMap = new LRUMap(100);
+  private boolean verifyMulticast = false;
 
   // These may change if/when we use multiple groups/ports
-  private static String groupName;	// multicast group
-  private static InetAddress group;
-  private static int multiPort = -1;	// multicast port
-  private static int uniPort = -1;	// uncast port
-  private LcapSocket.Multicast mSock;
+  private String groupName;		// multicast group
+  private InetAddress group;
+  private int multiPort = -1;		// multicast port
+  private int uniPort = -1;		// unicast port
+  private int uniSendToPort = -1;       // unicast send-to port, for testing
+					// multiple instances on one machine
+
+  private SocketFactory sockFact;
+
+  private LcapSocket sendSock;	// socket used for sending only
+  private LcapSocket.Multicast mSock1;
+  private LcapSocket.Multicast mSock2;
   private LcapSocket.Unicast uSock;
 
   private FifoQueue socketInQ;		// received packets from LcapSocket
   private ReceiveThread rcvThread;
 
-  /** Initialize and start the communications thread(s) */
+  private Vector messageHandlers = new Vector();
+
+  LcapComm(SocketFactory factory) {
+    sockFact = factory;
+  }
+
+  /** Create a singleton, configure it from the Configuration singleton,
+   * and start its thread(s) */
   public static void startComm() {
-    try {
-      sendSock = new LcapSocket();
-    } catch (SocketException e) {
-      log.critical("Can't create send socket", e);
-    }
-    try {
-      groupName = Configuration.getParam(PARAM_GROUPNAME);
-      multiPort = Configuration.getIntParam(PARAM_MULTIPORT);
-      uniPort = Configuration.getIntParam(PARAM_UNIPORT);
-      if (groupName != null) {
-	group = InetAddress.getByName(groupName);
-      }
-      if (group == null) {
-	log.critical("null group addr");
-	return;
-      }
-      singleton = new LcapComm();
-      singleton.start();
-    } catch (UnknownHostException e) {
-      log.critical("Can't get group addr", e);
-    } catch (Configuration.InvalidParam e) {
-      log.critical("Multicast port not configured", e);
-    }
+    singleton = new LcapComm(new NormalSocketFactory());
+    singleton.configure(Configuration.getCurrentConfig());
+    singleton.start();
   }
 
   /** Multicast a message to all caches holding the ArchivalUnit.
@@ -97,15 +96,12 @@ public class LcapComm {
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    */
-  public static void sendMessage(LcapMessage msg, ArchivalUnit au)
+  public static void sendMessage(LockssDatagram msg, ArchivalUnit au)
       throws IOException {
-    if (multiPort < 0) {
-      throw new IllegalStateException("Multicast port not configured");
+    if (singleton == null) {
+      throw new IllegalStateException("LcapComm singleton not created");
     }
-    if (group == null) {
-      throw new IllegalStateException("Multicast group not configured");
-    }
-    sendMessageTo(msg, group, multiPort);
+    singleton.send(msg, au);
   }
 
   /** Unicast a message to a single cache.
@@ -114,39 +110,110 @@ public class LcapComm {
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
    */
-  public static void sendMessageTo(LcapMessage msg, ArchivalUnit au,
+  public static void sendMessageTo(LockssDatagram msg, ArchivalUnit au,
 				   LcapIdentity id)
       throws IOException {
-    if (uniPort < 0) {
-      throw new IllegalStateException("Unicast port not configured");
+    if (singleton == null) {
+      throw new IllegalStateException("LcapComm singleton not created");
     }
-    sendMessageTo(msg, id.getAddress(), uniPort);
+    singleton.sendTo(msg, au, id);
   }
 
-  private static void sendMessageTo(LcapMessage msg, InetAddress addr,
-				    int port)
+  /** Set communication parameters from configuration */
+  public void configure(Configuration config) {
+    try {
+      groupName = config.get(PARAM_MULTIGROUP);
+      multiPort = config.getInt(PARAM_MULTIPORT);
+      uniPort = config.getInt(PARAM_UNIPORT); // 
+      uniSendToPort = config.getInt(PARAM_UNIPORT_SEND, uniPort);
+      verifyMulticast =
+	config.getBoolean(PARAM_VERIFY_MULTICAST, false);
+    } catch (Configuration.InvalidParam e) {
+      log.critical("Config error, not started", e);
+    }
+    try {
+      if (groupName != null) {
+	group = InetAddress.getByName(groupName);
+      }
+      if (group == null) {
+	log.critical("null group addr");
+	return;
+      }
+    } catch (UnknownHostException e) {
+      log.critical("Can't get group addr, not started", e);
+    }
+    if (log.isDebug()) {
+      log.debug("groupName = " + groupName);
+      log.debug("multiPort = " + multiPort);
+      log.debug("uniPort = " + uniPort);
+      log.debug("uniSendToPort = " + uniSendToPort);
+      log.debug("verifyMulticast = " + verifyMulticast);
+    }
+  }
+
+  /** Multicast a message to all caches holding the ArchivalUnit.
+   * @param ld the datagram to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   */
+  public void send(LockssDatagram ld, ArchivalUnit au) throws IOException {
+    if (multiPort < 0) {
+      throw new IllegalStateException("Multicast port not configured");
+    }
+    if (group == null) {
+      throw new IllegalStateException("Multicast group not configured");
+    }
+    sendTo(ld, group, multiPort);
+  }
+
+  /** Unicast a message to a single cache.
+   * @param msg the message to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @param id the identity of the cache to which to send the message
+   */
+  public void sendTo(LockssDatagram ld, ArchivalUnit au, LcapIdentity id)
       throws IOException {
-    log.debug("sending "+msg+" to "+addr+":"+port);
-    byte data[] = msg.encodeMsg();
-    DatagramPacket pkt = new DatagramPacket(data, data.length, addr, port);
+    if (uniSendToPort < 0) {
+      throw new IllegalStateException("Unicast port not configured");
+    }
+    sendTo(ld, id.getAddress(), uniSendToPort);
+  }
+
+  void sendTo(LockssDatagram ld, InetAddress addr, int port)
+      throws IOException {
+    log.debug("sending "+ ld +" to "+ addr +":"+ port);
+    DatagramPacket pkt = ld.makeSendPacket(addr, port);
     sendSock.send(pkt);
   }
 
-  private void start() {
+  void start() {
     socketInQ = new FifoQueue();
+    try {
+      sendSock = sockFact.newSendSocket();
+    } catch (SocketException e) {
+      log.critical("Can't create send socket", e);
+    }
     if (multiPort >= 0 && group != null) {
       try {
 	log.debug("new LcapSocket.Multicast("+socketInQ+", "+group+", "+
 		  multiPort);
-	LcapSocket.Multicast mSock =
-	  new LcapSocket.Multicast(socketInQ, group, multiPort);
-	mSock.start();
-	this.mSock = mSock;
-	log.info("Multicast socket started: " + mSock);
-      } catch (UnknownHostException e) {
-	log.error("Can't create multicast socket", e);
+	mSock1 = sockFact.newMulticastSocket(socketInQ, group, multiPort);
+	mSock1.start();
+	log.info("Multicast socket started: " + mSock1);
       } catch (IOException e) {
 	log.error("Can't create multicast socket", e);
+      }
+      if (verifyMulticast) {
+	try {
+	  log.debug("new LcapSocket.Multicast("+socketInQ+", "+group+", "+
+		    multiPort);
+	  mSock2 = sockFact.newMulticastSocket(socketInQ, group, multiPort);
+	  mSock2.start();
+	  log.info("2nd multicast socket started: " + mSock2);
+	} catch (IOException e) {
+	  log.warning("Can't create 2nd multicast socket, not detecting multicast spoofing", e);
+	}
       }
     } else {
       log.error("Multicast group or port not configured, not starting multicast receive");
@@ -156,7 +223,7 @@ public class LcapComm {
       try {
 	log.debug("new LcapSocket.Unicast("+socketInQ+", "+uniPort);
 	LcapSocket.Unicast uSock =
-	  new LcapSocket.Unicast(socketInQ, uniPort);
+	  sockFact.newUnicastSocket(socketInQ, uniPort);
 	uSock.start();
 	this.uSock = uSock;
 	log.info("Unicast socket started: " + uSock);
@@ -170,7 +237,7 @@ public class LcapComm {
   }
 
   // tk add watchdog
-  private void ensureQRunner() {
+  synchronized void ensureQRunner() {
     if (rcvThread == null) {
       log.info("Starting receive thread");
       rcvThread = new ReceiveThread("CommRcv");
@@ -178,7 +245,7 @@ public class LcapComm {
     }
   }
 
-  private void stop() {
+  synchronized void stop() {
     if (rcvThread != null) {
       log.info("Stopping Q runner");
       rcvThread.stopRcvThread();
@@ -186,22 +253,95 @@ public class LcapComm {
     }
   }
 
-  private void processReceivedPacket(LockssDatagram dgram) {
-    LcapMessage msg;
-    try {
-      msg = LcapMessage.decodeToMsg(dgram.getPacket().getData(), 
-				    dgram.isMulticast());
-      log.debug("Received " + msg);
-      PollManager.handleMessage(msg); //XXX should modify node state instead
-    } catch (IOException e) {
-      log.warning("Error decoding packet", e);
+  /** Verify that the packet is one we should process, <i>ie</i>, it is
+   * not a spoofed multicast packet */
+  private boolean verifyPacket(LockssReceivedDatagram dg) {
+    if (!dg.isMulticast()) {
+      // Process all packets received on unicast socket.
+      return true;
+    }
+    LcapSocket rcvSock = (LcapSocket)multicastVerifyMap.get(dg);
+    if (rcvSock == null) {
+      // This is the first time we've recieved this packet.
+      // Remember the socket we received it on, but don't process it
+      multicastVerifyMap.put(dg, dg.getReceiveSocket());
+      return false;
+    }
+    if (rcvSock != dg.getReceiveSocket()) {
+      // We've now received the same packet on both multicast sockets, so
+      // it really was multicast.
+      multicastVerifyMap.remove(dg);
+      return true;
+    }
+    // Here if saw the same packet twice on the same multicast socket.
+    // Ignore this one, keep waiting to see if we see it on other socket.
+    return false;
+  }
+
+  private void processReceivedPacket(LockssReceivedDatagram ld) {
+    if (verifyPacket(ld)) {
+      log.debug("Received " + ld);
+      runHandlers(ld);
     }
   }
 
+  private void runHandler(MessageHandler handler, LockssReceivedDatagram ld) {
+    try {
+      handler.handleMessage(ld);
+    } catch (Exception e) {
+      log.error("callback threw", e);
+    }
+  }
+
+  private void runHandlers(LockssReceivedDatagram ld) {
+    int proto = ld.getProtocol();
+    MessageHandler handler;
+    if (proto < messageHandlers.size() &&
+	(handler = (MessageHandler)messageHandlers.get(proto))  != null) {
+      runHandler(handler, ld);
+    } else {
+      log.warning("Message receved for unregistered protocol: " + proto);
+    }
+//      for (Iterator iter = messageHandlers.iterator(); iter.hasNext();) {
+//        runHandler((MessageHandler)iter.next(), ld);
+//      }
+  }
+
+  /**
+   * Register a {@link LcapComm.MessageHandler}, which will be called
+   * whenever a message is received.
+   * @param handler MessageHandler to add.
+   */
+  public void registerMessageHandler(int protocol, MessageHandler handler) {
+    if (protocol >= messageHandlers.size()) {
+      messageHandlers.setSize(protocol + 1);
+    }
+    if (messageHandlers.get(protocol) != null) {
+      throw
+	new RuntimeException("Protocol " + protocol + " already registered");
+    }
+    messageHandlers.set(protocol, handler);
+//      if (!messageHandlers.contains(handler)) {
+//        messageHandlers.add(handler);
+//      }
+  }
+      
+  /**
+   * Unregister a {@link LcapComm.MessageHandler}.
+   * @param handler MessageHandler to remove.
+   */
+  public void unregisterMessageHandler(int protocol, MessageHandler handler) {
+    if (protocol < messageHandlers.size());
+    messageHandlers.set(protocol, null);
+//      messageHandlers.remove(handler);
+  }
+
+
   // Receive thread
   private class ReceiveThread extends Thread {
-    private boolean goOn = false;
-    private Deadline timeout;
+    private boolean goOn = true;
+    private int sleep = 60000;
+    private Deadline timeout = Deadline.in(sleep);
 
     private ReceiveThread(String name) {
       super(name);
@@ -211,30 +351,121 @@ public class LcapComm {
       //        if (rcvPriority > 0) {
       //  	Thread.currentThread().setPriority(rcvPriority);
       //        }
-      goOn = true;
 
       while (goOn) {
 	try {
-	  timeout = Deadline.in(60000);
-	  Object qObj = socketInQ.get(timeout);
+	  synchronized (timeout) {
+	    if (goOn) {
+	      timeout.expireIn(sleep);
+	    }
+	  }
+	    Object qObj = socketInQ.get(timeout);
 	  if (qObj != null) {
-	    if (qObj instanceof LockssDatagram) {
-	      processReceivedPacket((LockssDatagram)qObj);
+	    if (qObj instanceof LockssReceivedDatagram) {
+	      processReceivedPacket((LockssReceivedDatagram)qObj);
 	    } else {	      
-	      log.warning("Non-LockssDatagram on rcv queue" + qObj);
+	      log.warning("Non-LockssReceivedDatagram on rcv queue" + qObj);
 	    }
 	  }
 	} catch (InterruptedException e) {
 	  // just wake up and check for exit
 	} finally {
-	  rcvThread = null;
 	}
+      }
+      // prevent rcvThread changing during ensureQRunner() or stop()
+      synchronized (LcapComm.this) {
+	rcvThread = null;
       }
     }
 
     private void stopRcvThread() {
-      goOn = false;
-      timeout.expire();
+      synchronized (timeout) {
+	goOn = false;
+	timeout.expire();
+      }
     }
+  }
+
+  /**
+   * The <code>LcapComm.MessageHandler</code> interface defines the
+   * callback registered by clients of {@link LcapComm} who want to process
+   * incoming messages
+   */
+  public interface MessageHandler {
+    /**
+     * Callback used to inform clients that a message has been received.
+     * @param ld  the received LockssReceivedDatagram
+     * @see LcapComm#registerMessageHandler */
+    public void handleMessage(LockssReceivedDatagram ld);
+  }
+
+  /** SocketFactory interface is so test case can use mock sockets */
+  interface SocketFactory {
+    LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
+					    InetAddress group,
+					    int port)
+	throws IOException;
+
+    LcapSocket.Unicast newUnicastSocket(Queue rcvQ, int port)
+	throws IOException;
+
+    LcapSocket newSendSocket() throws SocketException;
+  }
+
+  /** Normal socket factory creates real LcapSockets */
+  static class NormalSocketFactory implements SocketFactory {
+    public LcapSocket.Multicast newMulticastSocket(Queue rcvQ,
+						   InetAddress group,
+						   int port)
+	throws IOException {
+      return new LcapSocket.Multicast(rcvQ, group, port);
+    }
+
+    public LcapSocket.Unicast newUnicastSocket(Queue rcvQ, int port)
+	throws IOException {
+      return new LcapSocket.Unicast(rcvQ, port);
+    }
+
+    public LcapSocket newSendSocket() throws SocketException {
+      return new LcapSocket();
+    }
+  }
+
+  // remove these
+
+  /** Multicast a message to all caches holding the ArchivalUnit.
+   * @param msg the message to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @deprecated Use {@link #sendMessageTo(LockssDatagram, ArchivalUnit,
+   * LcapIdentity)}
+   */
+  public static void sendMessage(LcapMessage msg, ArchivalUnit au)
+      throws IOException {
+    if (singleton == null) {
+      throw new IllegalStateException("LcapComm singleton not created");
+    }
+    singleton.send(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+				      msg.encodeMsg()),
+		   au);
+  }
+
+  /** Unicast a message to a single cache.
+   * @param msg the message to send
+   * @param au archival unit for which this message is relevant.  Used to
+   * determine which multicast socket/port to send to.
+   * @param id the identity of the cache to which to send the message
+   * @deprecated Use {@link #sendMessageTo(LockssDatagram, ArchivalUnit,
+   * LcapIdentity)}
+   */
+  public static void sendMessageTo(LcapMessage msg, ArchivalUnit au,
+				   LcapIdentity id)
+      throws IOException {
+    if (singleton == null) {
+      throw new IllegalStateException("LcapComm singleton not created");
+    }
+    singleton.sendTo(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+				      msg.encodeMsg()),
+		   au, id);
   }
 }
