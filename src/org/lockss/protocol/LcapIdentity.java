@@ -1,5 +1,5 @@
 /*
-* $Id: LcapIdentity.java,v 1.1 2002-11-12 23:41:30 claire Exp $
+ * $Id: LcapIdentity.java,v 1.2 2002-11-20 00:31:05 troberts Exp $
  */
 
 /*
@@ -33,9 +33,10 @@ package org.lockss.protocol;
 
 import java.net.*;
 import java.util.HashMap;
-import org.lockss.util.Logger;
 import java.util.Random;
 import org.mortbay.util.B64Code;
+import org.lockss.util.Logger;
+import org.lockss.daemon.*;
 
 /**
  * quick and dirty wrapper class for a network identity.
@@ -44,6 +45,9 @@ import org.mortbay.util.B64Code;
  * @version 1.0
  */
 public class LcapIdentity {
+  //TODO:
+  //1) have hash of identities, so we can ensure uniqueness
+  //2) hook up Configuration callback to change local identity
 
   protected static final int INITIAL_REPUTATION = 500;
   protected static final int REPUTATION_NUMERATOR = 1000;
@@ -57,13 +61,15 @@ public class LcapIdentity {
   protected static final int VOTE_NOT_VERIFIED = -30;
   protected static final int VOTE_VERIFIED = 40;
   protected static final int VOTE_DISOWNED = -400;
-
+  protected static final String LOCAL_IDENT_PARAM = 
+    "org.lockss.localIPAddress";
+  
   long m_lastActiveTime;
   long m_lastOpTime;
-  long m_incrPackets;    // Total packets arrived this interval
-  long m_origPackets;    // Unique pkts from this indentity this interval
-  long m_forwPackets;    // Unique pkts forwarded by this identity this interval
-  long m_duplPackets;    // Duplicate packets originated by this identity
+  long m_incrPackets;   // Total packets arrived this interval
+  long m_origPackets;   // Unique pkts from this indentity this interval
+  long m_forwPackets;   // Unique pkts forwarded by this identity this interval
+  long m_duplPackets;   // Duplicate packets originated by this identity
   long m_totalPackets;
   long m_lastTimeZeroed;
 
@@ -71,7 +77,6 @@ public class LcapIdentity {
   HashMap m_pktsLastInterval = new HashMap();
 
   InetAddress m_address;
-  int m_port;
   int m_reputation;
   Object m_idKey;
   static HashMap theIdentities = null; // all known identities
@@ -98,14 +103,12 @@ public class LcapIdentity {
   }
 
   /**
-   * construct a new Identity from an address and port
+   * construct a new Identity from an address
    * @param addr the InetAddress
-   * @param port the port
    */
-  LcapIdentity(InetAddress addr, int port) {
+  LcapIdentity(InetAddress addr) {
     m_address = addr;
-    m_port = port;
-    m_idKey = makeIdKey(addr,port);
+    m_idKey = makeIdKey(addr);
     m_reputation = INITIAL_REPUTATION;
     m_lastActiveTime = 0;
     m_lastOpTime = 0;
@@ -128,7 +131,7 @@ public class LcapIdentity {
    * @return newly constructed <code>Identity<\code>
    */
   LcapIdentity(DatagramSocket socket) {
-    this(socket.getInetAddress(),socket.getPort());
+    this(socket.getInetAddress());
   }
 
 
@@ -139,17 +142,16 @@ public class LcapIdentity {
    * @return newly constructed <code>Identity<\code>
    */
   public static LcapIdentity getIdentity(DatagramSocket socket) {
-    return getIdentity(socket.getInetAddress(), socket.getPort());
+    return getIdentity(socket.getInetAddress());
   }
 
   /**
    * public constructor for the creation of an Identity object
-   * from an address and port.
+   * from an address.
    * @param addr the InetAddress
-   * @param port the port id
    * @return a newly constructed Identity
    */
-  public static LcapIdentity getIdentity(InetAddress addr, int port) {
+  public static LcapIdentity getIdentity(InetAddress addr) {
     LcapIdentity ret;
 
     if(theIdentities == null)  {
@@ -160,9 +162,9 @@ public class LcapIdentity {
       ret = getLocalIdentity();
     }
     else  {
-      ret = findIdentity(makeIdKey(addr,port));
+      ret = findIdentity(makeIdKey(addr));
       if(ret == null)  {
-        ret = new LcapIdentity(addr, port);
+	ret = new LcapIdentity(addr);
       }
     }
 
@@ -180,14 +182,13 @@ public class LcapIdentity {
 
   /**
    * public constructor for the creation of an Identity object that
-   * represents the local address and port
+   * represents the local address
    * @param socket the DatagramSocket used to extract the local info.
    * @return a newly constructed Identity
    */
   public static LcapIdentity getLocalIdentity(DatagramSocket socket) {
     if(theLocalIdentity == null) {
-      theLocalIdentity = new LcapIdentity(socket.getLocalAddress(),
-                                      socket.getLocalPort());
+      theLocalIdentity = new LcapIdentity(socket.getLocalAddress());
     }
     return theLocalIdentity;
   }
@@ -198,11 +199,9 @@ public class LcapIdentity {
    */
   public static LcapIdentity getLocalIdentity() {
     if(theLocalIdentity == null)  {
-      try {
-        theLocalIdentity = new LcapIdentity(InetAddress.getLocalHost(), 0);
-      }
-      catch (UnknownHostException ex) {
-      }
+      String identStr = Configuration.getParam(LOCAL_IDENT_PARAM);
+      theLocalIdentity = 
+      	new LcapIdentity(identStr);
     }
     return theLocalIdentity;
   }
@@ -214,14 +213,6 @@ public class LcapIdentity {
    */
   public InetAddress getAddress() {
     return m_address;
-  }
-
-  /**
-   * return the port used by this Identity
-   * @return the <code>int<\code> port value for this Identity
-   */
-  public int getPort() {
-    return m_port;
   }
 
   /**
@@ -358,11 +349,11 @@ public class LcapIdentity {
       String verifier = String.valueOf(encoded);
       Integer count = (Integer) m_pktsThisInterval.get(verifier);
       if (count != null) {
-        // We've seen this packet before
-        count = new Integer(count.intValue() + 1);
+	// We've seen this packet before
+	count = new Integer(count.intValue() + 1);
       }
       else {
-        count = new Integer(1);
+	count = new Integer(1);
       }
       m_pktsThisInterval.put(verifier, count);
     }
@@ -413,30 +404,29 @@ public class LcapIdentity {
     delta = (int) (((float) delta) * theRandom.nextFloat());
     if (delta > 0) {
       if (delta > MAX_REPUTATION_DELTA) {
-        delta = MAX_REPUTATION_DELTA;
+	delta = MAX_REPUTATION_DELTA;
 
       }
       if (delta > (REPUTATION_NUMERATOR - m_reputation)) {
-        delta = (REPUTATION_NUMERATOR - m_reputation);
+	delta = (REPUTATION_NUMERATOR - m_reputation);
 
       }
     }
     else if (delta < 0) {
       if (delta < (-MAX_REPUTATION_DELTA)) {
-        delta = -MAX_REPUTATION_DELTA;
+	delta = -MAX_REPUTATION_DELTA;
       }
       if ((m_reputation + delta) < 0) {
-        delta = -m_reputation;
+	delta = -m_reputation;
       }
     }
     if (delta != 0)
       theLog.debug(m_idKey +" change reputation from " + m_reputation +
-                   " to " + (m_reputation + delta));
+		   " to " + (m_reputation + delta));
     m_reputation += delta;
   }
 
-  static Object makeIdKey(InetAddress addr, int port)  {
-    // we ignore port for now and just use addr
+  static Object makeIdKey(InetAddress addr)  {
     return addr.getHostAddress();
   }
 }

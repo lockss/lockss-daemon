@@ -1,5 +1,5 @@
 /*
-* $Id: LcapMessage.java,v 1.1 2002-11-12 23:41:30 claire Exp $
+ * $Id: LcapMessage.java,v 1.2 2002-11-20 00:31:05 troberts Exp $
  */
 
 /*
@@ -64,15 +64,15 @@ public class LcapMessage {
   public static final int MAX_HOP_COUNT = 16;
   public static final int SHA_LENGTH = 20;
 
-/*
-  byte
-  0-3       signature
-  4         multicast
-  5         hopcount
-  6-7       property length
-  8-27      SHA-1 hash of encoded properties
-  28-End    encoded properties
-*/
+  /*
+    byte
+    0-3       signature
+    4         multicast
+    5         hopcount
+    6-7       property length
+    8-27      SHA-1 hash of encoded properties
+    28-End    encoded properties
+  */
   /* items which are not in the property list */
   byte[]             m_signature;   // magic number + version (4 bytes)
   boolean            m_multicast;   // multicast flag - modifiable
@@ -81,7 +81,7 @@ public class LcapMessage {
   int                m_length;      // length of remaining packet
 
   /* items which are in the property list */
-  LcapIdentity           m_originID;    // the address and port of the originator
+  LcapIdentity           m_originID;    // the address of the originator
   InetAddress        m_group;       // The group address
   byte               m_ttl;         // The original time-to-live
   long               m_startTime;   // the original start time
@@ -115,14 +115,14 @@ public class LcapMessage {
   }
 
   protected LcapMessage(String targetUrl,
-                    String regExp,
-                    String[] entries,
-                    InetAddress group,
-                    byte ttl,
-                    byte[] challenge,
-                    byte[] verifier,
-                    byte[] hashedData,
-                    int opcode) throws IOException {
+			String regExp,
+			String[] entries,
+			InetAddress group,
+			byte ttl,
+			byte[] challenge,
+			byte[] verifier,
+			byte[] hashedData,
+			int opcode) throws IOException {
     this();
     // assign the data
     m_targetUrl = targetUrl;
@@ -143,10 +143,10 @@ public class LcapMessage {
   }
 
   protected LcapMessage(LcapMessage trigger,
-                    LcapIdentity localID,
-                    byte[] verifier,
-                    byte[] hashedContent,
-                    int opcode) throws IOException {
+			LcapIdentity localID,
+			byte[] verifier,
+			byte[] hashedContent,
+			int opcode) throws IOException {
 
     // copy the essential information from the trigger packet
     m_hopCount =trigger.getHopCount();
@@ -200,18 +200,19 @@ public class LcapMessage {
    * @throws IOException
    */
   static public LcapMessage makeRequestMsg(String targetUrl,
-                                       String regExp,
-                                       String[] entries,
-                                       InetAddress group,
-                                       byte ttl,
-                                       byte[] challenge,
-                                       byte[] verifier,
-                                       int opcode,
-                                       long timeRemaining,
-                                       LcapIdentity localID) throws IOException {
+					   String regExp,
+					   String[] entries,
+					   InetAddress group,
+					   byte ttl,
+					   byte[] challenge,
+					   byte[] verifier,
+					   int opcode,
+					   long timeRemaining,
+					   LcapIdentity localID) 
+      throws IOException {
 
     LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,group,ttl,
-                              challenge,verifier,new byte[0],opcode);
+				      challenge,verifier,new byte[0],opcode);
     if (msg != null) {
       msg.m_startTime = System.currentTimeMillis();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -234,12 +235,14 @@ public class LcapMessage {
    * @throws IOException
    */
   static public LcapMessage makeReplyMsg(LcapMessage trigger,
-                                     byte[] hashedContent,
-                                     byte[] verifier,
-                                     int opcode,
-                                     long timeRemaining,
-                                     LcapIdentity localID) throws IOException {
-    LcapMessage msg = new LcapMessage(trigger, localID, verifier, hashedContent, opcode);
+					 byte[] hashedContent,
+					 byte[] verifier,
+					 int opcode,
+					 long timeRemaining,
+					 LcapIdentity localID) 
+      throws IOException {
+    LcapMessage msg = new LcapMessage(trigger, localID, verifier, 
+				      hashedContent, opcode);
     if (msg != null) {
       msg.m_startTime = System.currentTimeMillis();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -259,10 +262,10 @@ public class LcapMessage {
    * @throws IOException
    */
   static LcapMessage decodeToMsg(byte[] data,
-                             boolean mcast) throws IOException {
+				 boolean mcast) throws IOException {
     LcapMessage msg = new LcapMessage(data);
     if(msg != null) {
-       msg.m_multicast = mcast;
+      msg.m_multicast = mcast;
     }
     return msg;
   }
@@ -281,7 +284,8 @@ public class LcapMessage {
     int    port;
 
     // the mutable stuff
-    DataInputStream dis = new DataInputStream(new ByteArrayInputStream(encodedBytes));
+    DataInputStream dis = 
+      new DataInputStream(new ByteArrayInputStream(encodedBytes));
 
     // read in the header
     for(int i=0; i< signature.length; i++) {
@@ -315,7 +319,7 @@ public class LcapMessage {
     addr = m_props.getProperty("origIP");
     port = m_props.getInt("origPort", -1);
     try {
-      m_originID = LcapIdentity.getIdentity(InetAddress.getByName(addr),port);
+      m_originID = LcapIdentity.getIdentity(InetAddress.getByName(addr));
     }
     catch(UnknownHostException ex) {
       log.error("invalid origin address");
@@ -351,7 +355,6 @@ public class LcapMessage {
   public byte[] encodeMsg() throws IOException {
     // make sure the props table is up to date
     m_props.setProperty("origIP",m_originID.getAddress().getHostAddress());
-    m_props.putInt("origPort",m_originID.getPort());
 
     m_props.setProperty("group",m_group.getHostAddress());
 
@@ -403,7 +406,7 @@ public class LcapMessage {
   }
 
   public boolean isLocal() {
-        return (LcapIdentity.getLocalIdentity().equals(m_originID));
+    return (LcapIdentity.getLocalIdentity().equals(m_originID));
 
   }
 
