@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.4 2004-09-15 00:31:33 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.5 2005-01-07 01:24:00 troberts Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ public class MockCrawlStatus extends Crawler.Status {
 
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
+  long numFetched = 0;
 
 
   public MockCrawlStatus(int type) {
@@ -67,6 +68,10 @@ public class MockCrawlStatus extends Crawler.Status {
 
   public void setNumFetched(int numFetched) {
     this.numFetched = numFetched;
+  }
+
+  public long getNumFetched() {
+    return numFetched;
   }
 
   public void setNumParsed(int numParsed) {
