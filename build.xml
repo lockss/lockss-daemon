@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.6 2002-08-13 02:09:03 tal Exp $
+ $Id: build.xml,v 1.7 2002-08-31 06:19:24 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -52,10 +52,12 @@ in this Software without prior written authorization from Stanford University.
   <property name="ant.classes"   value="${ant}/classes" />
 
   <property name="javadoc"        value="${basedir}/javadoc"/>
+  <property name="test.javadoc"   value="${test}/javadoc"/>
   <property name="depend.cache"   value="${basedir}/.depend"/>
 
   <!--  Jars -->
   <property name="jetty.jar"      value="${lib}/org.mortbay.jetty.jar"/>
+  <property name="jettytools.jar" value="${lib}/org.mortbay.tools.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
   <property name="xml.jar"        value="${lib}/org.apache.crimson.jar"/>
@@ -70,11 +72,12 @@ in this Software without prior written authorization from Stanford University.
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
-  <property name="javac.deprecation"       value="off" />
+  <property name="javac.deprecation"       value="true" />
 
   <!--  Classpaths -->
   <path id="compile.classpath">
     <pathelement path="${jetty.jar}" />
+    <pathelement path="${jettytools.jar}" />
     <pathelement path="${servlet.jar}" />
     <pathelement path="${regexp.jar}" />
   </path>
@@ -219,7 +222,7 @@ in this Software without prior written authorization from Stanford University.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="javadoc" depends="jar-lockss"
+  <target name="javadoc" depends="compile-lockss"
    description="Build the LOCKSS javadoc">
     <mkdir dir="${javadoc}"/>
     <javadoc packagenames="org.lockss.*"
@@ -236,16 +239,35 @@ in this Software without prior written authorization from Stanford University.
   </target>
 
   <!-- ==================================================================== -->
-<!--  find . -name \*.java -print | etags -t -S - -->
+  <target name="javadoc-test" depends="compile-tests"
+   description="Build the javadoc for the test hierarchy">
+    <mkdir dir="${test.javadoc}"/>
+    <javadoc packagenames="org.lockss.*"
+             sourcepath="${test.src}"
+             destdir="${test.javadoc}"
+             author="true"
+             version="true"
+             protected="true"
+             windowtitle="LOCKSS test classes API"
+             doctitle="LOCKSS test"
+             bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
+       <classpath refid="test.compile.classpath" />
+    </javadoc>
+  </target>
+
+  <!-- ==================================================================== -->
+<!--  Once we have more files this will fail due to command line length.
+      It should pipe the names to etags as in:
+      find . -name \*.java -print | etags -t -S - -->
   <target name="tags" depends="prepare"
-   description="Build a TAGS file in src/" >
-    <apply executable="etags" dir="${src}"
+   description="Build an emacs TAGS file in src/" >
+    <apply executable="etags" dir="${basedir}"
            relative="true"
            parallel="true">
       <arg value="-S"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg file="${etags.filename}"/> -->
-      <fileset dir="${src}" includes="**/*.java"/>
+      <fileset dir="${basedir}" includes="**/*.java"/>
     </apply>
   </target>
 
@@ -288,6 +310,29 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
+<!-- doesn't work
+  <target name="test-all-debug"
+   depends="prepare.test,check.junit,jar-tests"
+   description="Run all the junit tests (test/src/**/Test*.class, under the debugger" >
+    <echo>
+Test results in ${test.results}
+    </echo>
+    <delete file="${test.results}/*" quiet="true" />
+    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+      jvm="jdb" >
+      <batchtest fork="yes" todir="${test.results}">
+        <fileset dir="${test.src}">
+          <include name="**/Test*.java" />
+        </fileset>
+      </batchtest>   
+      <formatter type="plain" usefile="true" />                  
+      <classpath> 
+         <path refid="test.run.classpath" />
+      </classpath>        
+    </junit>
+  </target>
+-->
+  <!-- ==================================================================== -->
   <target name="test-class"
    depends="prepare.test,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
@@ -320,7 +365,7 @@ Test results in ${test.results}
   <target name="test-one"
    depends="prepare.test,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
-    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes" >
+    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
       <test fork="no" name="${class}" />
       <formatter type="plain" usefile="false" />                  
       <classpath> 
