@@ -988,12 +988,16 @@ class LockssDaemon:
         self.dir = dir
         self.cp = cp
         self.configList = configList
+        if not os.environ.has_key('JAVA_HOME'):
+            raise LockssError("JAVA_HOME must be set.")
+        javaHome = os.environ['JAVA_HOME']
+        self.javaBin = path.join(javaHome, 'bin', 'java')
 
     def start(self):
-        cmd = 'java -cp %s -Dorg.lockss.defaultLogLevel=debug '\
+        cmd = '%s -cp %s -Dorg.lockss.defaultLogLevel=debug '\
               'org.lockss.app.LockssDaemon %s > %s/test.out 2>&1 & '\
               'echo $! > %s/dpid'\
-              % (self.cp, ' '.join(self.configList), self.dir, self.dir)
+              % (self.javaBin, self.cp, ' '.join(self.configList), self.dir, self.dir)
         os.system(cmd)
         self.pid = open(path.join(self.dir, 'dpid'), 'r').readline()
 
