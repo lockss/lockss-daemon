@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.39 2003-03-08 00:44:34 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.40 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -285,12 +285,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
     auState.lastTopLevelPoll = -123;
     crawlMan.setShouldCrawlNewContent(false);
 
-    assertFalse(nodeManager.topLevelPollActive);
     nodeManager.doTreeWalk();
     assertNull(crawlMan.getAuStatus(mau));
     assertEquals(MockPollManager.CONTENT_REQUESTED,
 		 pollMan.getPollStatus(mau.getAUCachedUrlSet().getUrl()));
-    assertTrue(nodeManager.topLevelPollActive);
   }
 
   public void testTreeWalkPollBlocking() throws Exception {
@@ -314,11 +312,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.startService();
 
 
-    //should allow walk but exit without scheduling poll, since waiting on one
-    nodeManager.topLevelPollActive = true;
-    nodeManager.doTreeWalk();
-    assertNull(pollMan.getPollStatus(auUrl));
-
     // finish top-level poll
     TimeBase.setSimulated(TimeBase.nowMs());
     contentPoll = createPoll(auUrl, true, 10, 5);
@@ -333,7 +326,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
                                         null);
     nodeState.addPollState(pollState);
     nodeManager.updateState(nodeState, results);
-    assertFalse(nodeManager.topLevelPollActive);
     assertEquals(TimeBase.nowMs(),
                  nodeManager.getAuState().getLastTopLevelPollTime());
 
@@ -438,7 +430,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // should schedule background crawl if no recent crawl (time < 0)
     testWalkCrawling(CrawlState.NEW_CONTENT_CRAWL, CrawlState.FINISHED, -123,
                      true, node);
-    
+
     theDaemon.getPollManager().stopService();
     ((MockCrawlManager)theDaemon.getCrawlManager()).stopService();
   }
@@ -832,7 +824,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
     return p;
   }
-  
+
   /**
    * Used to kick off a doTreeWalk in another thread, for testing behavior when
    * a treewalk is running
@@ -842,7 +834,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     SimpleDoTreeWalkThread(NodeManagerImpl nodeManager) {
       this.nodeManager = nodeManager;
     }
-    
+
     public void run() {
       nodeManager.doTreeWalk();
     }

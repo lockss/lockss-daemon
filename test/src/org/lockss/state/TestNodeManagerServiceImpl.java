@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerServiceImpl.java,v 1.2 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestNodeManagerServiceImpl.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -33,8 +33,7 @@ import org.lockss.util.Logger;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
 
 public class TestNodeManagerServiceImpl extends LockssTestCase {
-  private static Logger log = Logger.getLogger("TestNMSI");
-  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon;
   private NodeManagerService nms;
   private MockArchivalUnit mau;
 
@@ -53,6 +52,7 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
     mcus.setFlatItSource(new Vector());
     mau.setAUCachedUrlSet(mcus);
 
+    theDaemon = new MockLockssDaemon();
     theDaemon.setHistoryRepository(new HistoryRepositoryImpl(tempDirPath));
 
     nms = new NodeManagerServiceImpl();
@@ -67,16 +67,24 @@ public class TestNodeManagerServiceImpl extends LockssTestCase {
 
   public void testGetNodeManager() {
     String auId = mau.getAUId();
+
+    try {
+      nms.getNodeManager(mau);
+      fail("Should throw IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+
     nms.addNodeManager(mau);
     NodeManager node1 = nms.getNodeManager(mau);
     assertNotNull(node1);
+
     mau.setAuId(auId + "test");
     nms.addNodeManager(mau);
     NodeManager node2 = nms.getNodeManager(mau);
-    assertTrue(node1 != node2);
+    assertNotSame(node1, node2);
+
     mau.setAuId(auId);
     node2 = nms.getNodeManager(mau);
-    assertEquals(node1, node2);
+    assertSame(node1, node2);
 
     mau.setAuId(auId + "test2");
     try {

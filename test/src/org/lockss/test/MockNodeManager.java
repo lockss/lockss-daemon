@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.2 2003-03-05 01:59:56 claire Exp $
+ * $Id: MockNodeManager.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class MockNodeManager implements NodeManager, LockssManager {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public void newTopLevelCrawlFinished() {
+  public void newContentCrawlFinished() {
     aus.newCrawlFinished();
   }
 }

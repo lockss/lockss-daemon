@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.12 2003-03-01 02:01:24 aalto Exp $
+ * $Id: NodeManager.java,v 1.13 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -124,5 +124,5 @@ public interface NodeManager extends LockssManager {
   /**
    * Alerts the NodeManager that a new top-level content crawl has finished.
    */
-  public void newTopLevelCrawlFinished();
+  public void newContentCrawlFinished();
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.2 2003-03-05 22:55:29 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   static HashMap nameMap = null;
 
   // starts with a '-' so no possibility of clashing with a URL
-  static final String AU_ID_FILE = "~au_id_file";
+  static final String AU_ID_FILE = "#au_id_file";
   static final String AU_ID_PROP = "au.id";
   static final String PLUGIN_ID_PROP = "plugin.id";
   static String lastPluginDir = ""+(char)('a'-1);
@@ -268,21 +268,23 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   static String getNewPluginDir() {
     String newPluginDir = "";
     boolean charChanged = false;
-    if (lastPluginDir.charAt(lastPluginDir.length()-1) == 'z') {
-      // if ends in 'z', start over with n+1 'a' chars
-      for (int ii=0; ii<=lastPluginDir.length(); ii++) {
-        newPluginDir += 'a';
-      }
-    } else {
-      // go through and increment the first non-'z' char
-      for (int ii=0; ii<lastPluginDir.length(); ii++) {
-        char curChar = lastPluginDir.charAt(ii);
-        if ((!charChanged) && (curChar < 'z')) {
+    // go through and increment the first non-'z' char
+    for (int ii=lastPluginDir.length()-1; ii>=0; ii--) {
+      char curChar = lastPluginDir.charAt(ii);
+      if (!charChanged) {
+        if (curChar < 'z') {
           curChar++;
           charChanged = true;
+          newPluginDir = curChar + newPluginDir;
+        } else {
+          newPluginDir += 'a';
         }
-        newPluginDir += curChar;
+      } else {
+        newPluginDir = curChar + newPluginDir;
       }
+    }
+    if (!charChanged) {
+      newPluginDir += 'a';
     }
     lastPluginDir = newPluginDir;
     return newPluginDir;

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerServiceImpl.java,v 1.3 2003-03-04 00:16:12 aalto Exp $
+ * $Id: NodeManagerServiceImpl.java,v 1.4 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -59,13 +59,6 @@ public class NodeManagerServiceImpl implements NodeManagerService {
   }
 
   public void startService() {
-    Configuration.registerConfigurationCallback(new Configuration.Callback() {
-      public void configurationChanged(Configuration oldConfig,
-                                       Configuration newConfig,
-                                       Set changedKeys) {
-        setConfig(newConfig, oldConfig);
-      }
-    });
   }
 
   public void stopService() {
@@ -73,10 +66,6 @@ public class NodeManagerServiceImpl implements NodeManagerService {
     stopAllManagers();
     theManager = null;
   }
-
-  private void setConfig(Configuration config, Configuration oldConfig) {
-  }
-
 
   private void stopAllManagers() {
     Iterator entries = auMap.entrySet().iterator();
@@ -90,13 +79,13 @@ public class NodeManagerServiceImpl implements NodeManagerService {
   public NodeManager getNodeManager(ArchivalUnit au) {
     NodeManager nodeMan = (NodeManager)auMap.get(au);
     if (nodeMan==null) {
-      logger.error("NodeManager not created for au: "+au);
-      throw new IllegalArgumentException("NodeManager not created for au.");
+      logger.error("NodeManager not found for au: "+au);
+      throw new IllegalArgumentException("NodeManager not found for au.");
     }
     return nodeMan;
   }
 
-  public synchronized NodeManager addNodeManager(ArchivalUnit au) {
+  public synchronized void addNodeManager(ArchivalUnit au) {
     NodeManager nodeManager = (NodeManager)auMap.get(au);
     if (nodeManager==null) {
       nodeManager = new NodeManagerImpl(au);
@@ -104,6 +93,5 @@ public class NodeManagerServiceImpl implements NodeManagerService {
       nodeManager.initService(theDaemon);
       nodeManager.startService();
     }
-    return nodeManager;
   }
 }

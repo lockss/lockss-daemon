@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerService.java,v 1.3 2003-03-04 00:16:12 aalto Exp $
+ * $Id: NodeManagerService.java,v 1.4 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -54,7 +54,6 @@ public interface NodeManagerService extends LockssManager {
    * Factory method to add NodeManager.  Calls 'startService()' on the
    * ArchivalUnit-specific NodeManager.
    * @param au the ArchivalUnit being managed
-   * @return the NodeManager created
    */
-  public NodeManager addNodeManager(ArchivalUnit au);
+  public void addNodeManager(ArchivalUnit au);
 }

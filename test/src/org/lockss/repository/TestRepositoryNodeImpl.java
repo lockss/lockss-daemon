@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.18 2003-03-05 22:55:28 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.19 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -89,9 +89,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         "http://www.example.com/testDir/branch1/leaf1");
     File testFile = new File(tempDirPath);
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/leaf1.content/leaf1.current");
+    testFile = new File(tempDirPath + "/#content/leaf1.current");
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/leaf1.content/leaf1.props.current");
+    testFile = new File(tempDirPath + "/#content/leaf1.props.current");
     assertTrue(testFile.exists());
   }
 
@@ -103,9 +103,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     tempDirPath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = LockssRepositoryServiceImpl.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
-    File testFile = new File(tempDirPath + "/leaf1.content/leaf1.1");
+    File testFile = new File(tempDirPath + "/#content/leaf1.1");
     assertFalse(testFile.exists());
-    testFile = new File(tempDirPath + "/leaf1.content/leaf1.props.1");
+    testFile = new File(tempDirPath + "/#content/leaf1.props.1");
     assertFalse(testFile.exists());
 
     leaf.makeNewVersion();
@@ -116,9 +116,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     os.close();
     leaf.setNewProperties(new Properties());
     leaf.sealNewVersion();
-    testFile = new File(tempDirPath + "/leaf1.content/leaf1.1");
+    testFile = new File(tempDirPath + "/#content/leaf1.1");
     assertTrue(testFile.exists());
-    testFile = new File(tempDirPath + "/leaf1.content/leaf1.props.1");
+    testFile = new File(tempDirPath + "/#content/leaf1.props.1");
     assertTrue(testFile.exists());
   }
 
@@ -129,8 +129,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
                "test stream", null);
     createLeaf("http://www.example.com/testDir/branch2/leaf3",
                "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch2", "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
 
+    // root branch
     RepositoryNode dirEntry =
         repo.getNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null, false);
@@ -146,6 +148,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       };
     assertIsomorphic(expectedA, childL);
 
+    // sub-branch
     dirEntry = repo.getNode("http://www.example.com/testDir/branch1");
     childL.clear();
     childIt = dirEntry.listNodes(null, false);
@@ -157,6 +160,30 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       "http://www.example.com/testDir/branch1/leaf1",
       "http://www.example.com/testDir/branch1/leaf2",
       };
+    assertIsomorphic(expectedA, childL);
+
+    // sub-branch with content
+    dirEntry = repo.getNode("http://www.example.com/testDir/branch2");
+    childL.clear();
+    childIt = dirEntry.listNodes(null, false);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    expectedA = new String[] {
+      "http://www.example.com/testDir/branch2/leaf3",
+      };
+    assertIsomorphic(expectedA, childL);
+
+    // leaf node
+    dirEntry = repo.getNode("http://www.example.com/testDir/branch1/leaf1");
+    childL.clear();
+    childIt = dirEntry.listNodes(null, false);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    expectedA = new String[] { };
     assertIsomorphic(expectedA, childL);
   }
 
@@ -458,6 +485,24 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       "http://www.example.com/testDir/test3"
       };
     assertIsomorphic("Including inactive nodes failed.", expectedA, childL);
+  }
+
+  public void testGetFileStrings() throws Exception {
+    RepositoryNodeImpl node = (RepositoryNodeImpl) repo.createNewNode(
+        "http://www.example.com/test.url");
+    node.loadNodeRoot();
+    String contentStr = node.nodeLocation + "/#content/";
+    assertEquals(contentStr, node.getContentDirBuffer().toString());
+    String expectedStr = contentStr + "test.url.123";
+    assertEquals(expectedStr,
+                 node.getVersionedCacheFile(123).getAbsolutePath());
+    expectedStr = contentStr + "test.url.props.123";
+    assertEquals(expectedStr,
+                 node.getVersionedPropsFile(123).getAbsolutePath());
+    expectedStr = contentStr + "test.url.inactive";
+    assertEquals(expectedStr, node.getInactiveCacheFile().getAbsolutePath());
+    expectedStr = contentStr + "test.url.props.inactive";
+    assertEquals(expectedStr, node.getInactivePropsFile().getAbsolutePath());
   }
 
   private RepositoryNode createLeaf(String url, String content,

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.16 2003-03-08 02:18:57 tal Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.17 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.daemon.CachedUrlSetSpec;
 public class RepositoryNodeImpl implements RepositoryNode {
   static final int VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
-  static final String CONTENT_DIR_SUFFIX = ".content";
+  static final String CONTENT_DIR = "#content";
   static final String CURRENT_SUFFIX = ".current";
   static final String PROPS_SUFFIX = ".props";
   static final String TEMP_SUFFIX = ".temp";
@@ -239,7 +239,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // rename current
       if (currentCacheFile.exists()) {
         if (!currentCacheFile.renameTo(getVersionedCacheFile(currentVersion)) ||
-            !currentPropsFile.renameTo(getVersionedPropertiesFile(currentVersion))) {
+            !currentPropsFile.renameTo(getVersionedPropsFile(currentVersion))) {
           logger.error("Couldn't rename current versions: "+url);
           throw new LockssRepository.RepositoryStateException("Couldn't rename current versions.");
         }
@@ -312,7 +312,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
     int lastVersion = getCurrentVersion() - 1;
     File lastContentFile = getVersionedCacheFile(lastVersion);
-    File lastPropsFile = getVersionedPropertiesFile(lastVersion);
+    File lastPropsFile = getVersionedPropsFile(lastVersion);
 
     // delete current version
     currentCacheFile.delete();
@@ -392,7 +392,6 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private void ensureCurrentInfoLoaded() {
     if (currentVersion==-1) {
       loadNodeRoot();
-      versionName = nodeRootFile.getName();
       loadCacheLocation();
       loadCurrentCacheFile();
       loadCurrentPropsFile();
@@ -497,9 +496,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 
   protected void loadNodeRoot() {
     nodeRootFile = new File(nodeLocation);
+    versionName = nodeRootFile.getName();
   }
 
-  private File getVersionedCacheFile(int version) {
+  File getVersionedCacheFile(int version) {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(versionName);
     buffer.append(".");
@@ -507,7 +507,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return new File(buffer.toString());
   }
 
-  private File getVersionedPropertiesFile(int version) {
+  File getVersionedPropsFile(int version) {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(versionName);
     buffer.append(PROPS_SUFFIX);
@@ -516,14 +516,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return new File(buffer.toString());
   }
 
-  private File getInactiveCacheFile() {
+  File getInactiveCacheFile() {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(versionName);
     buffer.append(INACTIVE_SUFFIX);
     return new File(buffer.toString());
   }
 
-  private File getInactivePropsFile() {
+  File getInactivePropsFile() {
     StringBuffer buffer = getContentDirBuffer();
     buffer.append(versionName);
     buffer.append(PROPS_SUFFIX);
@@ -531,12 +531,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
     return new File(buffer.toString());
   }
 
-  private StringBuffer getContentDirBuffer() {
+  StringBuffer getContentDirBuffer() {
     if (contentBufferStr==null) {
       StringBuffer buffer = new StringBuffer(nodeLocation);
       buffer.append(File.separator);
-      buffer.append(versionName);
-      buffer.append(CONTENT_DIR_SUFFIX);
+      buffer.append(CONTENT_DIR);
       buffer.append(File.separator);
       contentBufferStr = buffer.toString();
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.7 2003-03-03 19:35:08 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.8 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -113,13 +113,13 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     crawlThread.start();
   }
 
-  public boolean canTreeWalkStart(ArchivalUnit au, CrawlManager.Callback cb, 
+  public boolean canTreeWalkStart(ArchivalUnit au, CrawlManager.Callback cb,
 				  Object cookie){
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
     NodeManager nodeManager = theDaemon.getNodeManager(au);
-    if (au.shouldCrawlForNewContent(nodeManager.getAuState())) { 
+    if (au.shouldCrawlForNewContent(nodeManager.getAuState())) {
       scheduleNewContentCrawl(au, cb, cookie);
       return false;
     }
@@ -131,10 +131,10 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     return false;
   }
 
-  private void scheduleNewContentCrawl(ArchivalUnit au, 
+  private void scheduleNewContentCrawl(ArchivalUnit au,
 				       CrawlManager.Callback cb,
 				       Object cookie) {
-    List callBackList = 
+    List callBackList =
       ListUtil.list(new UpdateNewCrawlTimeCB(theDaemon.getNodeManager(au)));
     if (cb != null) {
       callBackList.add(cb);
@@ -188,17 +188,17 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       }
     }
   }
-  
+
   private class UpdateNewCrawlTimeCB implements CrawlManager.Callback {
     NodeManager nodeManager;
 
     public UpdateNewCrawlTimeCB(NodeManager nodeManager) {
       this.nodeManager = nodeManager;
     }
-    
+
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
       if (success) {
-	nodeManager.newTopLevelCrawlFinished();
+	nodeManager.newContentCrawlFinished();
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryServiceImpl.java,v 1.2 2003-03-05 22:55:28 aalto Exp $
+ * $Id: TestLockssRepositoryServiceImpl.java,v 1.3 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -82,10 +82,14 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
     lrsi.getNewPluginDir();
     assertEquals("aa", lrsi.lastPluginDir);
     lrsi.getNewPluginDir();
-    assertEquals("ba", lrsi.lastPluginDir);
-    lrsi.lastPluginDir = "za";
+    assertEquals("ab", lrsi.lastPluginDir);
+    lrsi.lastPluginDir = "az";
     lrsi.getNewPluginDir();
-    assertEquals("zb", lrsi.lastPluginDir);
+    assertEquals("ba", lrsi.lastPluginDir);
+    lrsi.lastPluginDir = "czz";
+    lrsi.getNewPluginDir();
+    assertEquals("daa", lrsi.lastPluginDir);
+
     lrsi.lastPluginDir = ""+ (char)('a'-1);
   }
 
@@ -122,15 +126,15 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
     Properties newProps = new Properties();
     newProps.setProperty(lrsi.PLUGIN_ID_PROP, mau.getPluginId());
     newProps.setProperty(lrsi.AU_ID_PROP, mau.getAUId());
-    String location = lrsi.cacheLocation + File.separator + "ba";
+    String location = lrsi.cacheLocation + File.separator + "ab";
     lrsi.saveAuIdProperties(location, newProps);
 
     lrsi.loadNameMap(lrsi.cacheLocation);
-    assertEquals("ba", lrsi.nameMap.get(lrsi.getAuKey(mau)));
+    assertEquals("ab", lrsi.nameMap.get(lrsi.getAuKey(mau)));
   }
 
   public void testLoadNameMapSkipping() {
-    String location = lrsi.cacheLocation + File.separator + "ba";
+    String location = lrsi.cacheLocation + File.separator + "ab";
     File dirFile = new File(location);
     dirFile.mkdirs();
 
@@ -141,19 +145,19 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
 
   public void testMapAuToFileLocation() {
     lrsi.lastPluginDir = "ca";
-    String expectedStr = lrsi.cacheLocation+"/root/da/";
+    String expectedStr = lrsi.cacheLocation+"/root/cb/";
     assertEquals(expectedStr,
                  LockssRepositoryServiceImpl.mapAuToFileLocation(
         lrsi.cacheLocation+"/root", mau));
   }
 
   public void testGetAuDirSkipping() {
-    String location = lrsi.cacheLocation + "root/ea";
+    String location = lrsi.cacheLocation + "root/ab";
     File dirFile = new File(location);
     dirFile.mkdirs();
 
-    lrsi.lastPluginDir = "da";
-    String expectedStr = lrsi.cacheLocation+"/root/fa/";
+    lrsi.lastPluginDir = "aa";
+    String expectedStr = lrsi.cacheLocation+"/root/ac/";
     assertEquals(expectedStr,
                  LockssRepositoryServiceImpl.mapAuToFileLocation(
         lrsi.cacheLocation+"/root", mau));

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.52 2003-03-08 00:44:34 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.53 2003-03-08 02:45:02 aalto Exp $
  */
 
 /*
@@ -54,62 +54,61 @@ import org.lockss.plugin.*;
  * Implementation of the NodeManager.
  */
 public class NodeManagerImpl implements NodeManager {
+    public static final String PREFIX = Configuration.PREFIX + "treewalk.";
 
-  public static final String PREFIX = Configuration.PREFIX+"treewalk.";
+    /**
+     * Configuration parameter name for duration, in ms, for which the treewalk
+     * estimation should run.
+     */
+    public static final String PARAM_TREEWALK_ESTIMATE_DURATION =
+        PREFIX + "estimate.duration";
+    static final int DEFAULT_TREEWALK_ESTIMATE_DURATION = 1000;
 
-  /**
-   * Configuration parameter name for duration, in ms, for which the treewalk
-   * test should run.
-   */
-  public static final String PARAM_TREEWALK_TEST_DURATION = 
-    PREFIX + "test.duration";
-  static final int DEFAULT_TREEWALK_TEST_DURATION = 1000;
+    /**
+     * Configuration parameter name for interval, in ms, between treewalks.
+     */
+    public static final String PARAM_TREEWALK_INTERVAL = PREFIX + "interval";
+    static final int DEFAULT_TREEWALK_INTERVAL = 60 * 60 * 1000; //1 hour
 
-  /**
-   * Configuration parameter name for interval, in ms, between treewalks.
-   */
-  public static final String PARAM_TREEWALK_INTERVAL = PREFIX + "interval";
-  static final int DEFAULT_TREEWALK_INTERVAL = 60*60*1000; //1 hour
+    /**
+     * Configuration parameter name for default interval, in ms, after which
+     * a new top level poll should be called.
+     */
+    public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
+        Configuration.PREFIX + "top.level.poll.interval";
+    static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL =
+        14 * 24 * 60 * 60 * 1000; //2 weeks
 
-  /**
-   * Configuration parameter name for default interval, in ms, after which
-   * a new top level poll should be called.
-   */
-  public static final String PARAM_TOP_LEVEL_POLL_INTERVAL =
-      Configuration.PREFIX + "top.level.poll.duration";
-  static final int DEFAULT_TOP_LEVEL_POLL_INTERVAL = 
-    14*24*60*60*1000; //2 weeks
+    /**
+     * Configuration parameter name for whether the treewalk thread should
+     * be started right away
+     */
+    public static final String PARAM_START_TREEWALK_THREAD =
+      PREFIX + "start_treewalk_thread";
 
-  static final double MAX_DEVIATION_PERCENT = 0.1;
-
-  /**
-   * Configuration parameter name for whether the treewalk thread should
-   * be started right away
-   */
-  public static final String PARAM_START_TREEWALK_THREAD = 
-    PREFIX+"start_treewalk_thread";
+  static final double MAX_DEVIATION = 0.1;
 
   private static LockssDaemon theDaemon;
   private NodeManager theManager = null;
   static HistoryRepository repository;
   private static CrawlManager theCrawlManager = null;
-  private static HashMap auEstimateMap = new HashMap();
-  boolean topLevelPollActive;
-  long treeWalkInterval;
-  long topPollInterval;
-  long treeWalkTestDuration;
+  long treeWalkEstimate = -1;
 
-  private ArchivalUnit managerAu;
+  private ArchivalUnit managedAu;
   private AuState auState;
   private TreeMap nodeMap = new TreeMap();
   private Logger logger = Logger.getLogger("NodeManager");
   TreeWalkThread treeWalkThread;
   private boolean treeWalkRunning = false;
+  long treeWalkInterval;
+  long topPollInterval;
+  long treeWalkTestDuration;
+  boolean shouldStartTreeWalkThread;
 
   Configuration.Callback configCallback;
 
   NodeManagerImpl(ArchivalUnit au) {
-    managerAu = au;
+    managedAu = au;
   }
 
   /**
@@ -132,7 +131,6 @@ public class NodeManagerImpl implements NodeManager {
     if (theManager == null) {
       theDaemon = daemon;
       theManager = this;
-      repository = theDaemon.getHistoryRepository();
       loadStateTree();
 
     } else {
@@ -147,22 +145,22 @@ public class NodeManagerImpl implements NodeManager {
    */
   public void startService() {
     logger.debug("NodeManager being started");
+
     configCallback = new Configuration.Callback() {
-	public void configurationChanged(Configuration oldConfig,
-					 Configuration newConfig,
-					 Set changedKeys) {
-	  setConfig(newConfig, oldConfig);
-	}
+        public void configurationChanged(Configuration oldConfig,
+                                         Configuration newConfig,
+                                         Set changedKeys) {
+          setConfig(newConfig, oldConfig);
+        }
       };
     Configuration.registerConfigurationCallback(configCallback);
-    
+
+    repository = theDaemon.getHistoryRepository();
     theCrawlManager = theDaemon.getCrawlManager();
-    
-    boolean shouldStartTreeWalkThread = 
-      Configuration.getBooleanParam(PARAM_START_TREEWALK_THREAD, true);
+
     if (shouldStartTreeWalkThread) {
-      treeWalkThread = new TreeWalkThread(managerAu.getPluginId() + ":" +
-					  managerAu.getAUId() + ":TreeWalkThread",
+      treeWalkThread = new TreeWalkThread(managedAu.getPluginId() + ":" +
+					  managedAu.getAUId() + ":TreeWalkThread",
 					  getAuState().getLastTreeWalkTime());
       treeWalkThread.start();
     }
@@ -180,8 +178,8 @@ public class NodeManagerImpl implements NodeManager {
       treeWalkThread.interrupt();
       treeWalkThread = null;
     }
-    theManager = null;
     Configuration.unregisterConfigurationCallback(configCallback);
+    theManager = null;
     logger.debug("NodeManager sucessfully stopped");
   }
 
@@ -192,7 +190,9 @@ public class NodeManagerImpl implements NodeManager {
     topPollInterval = config.getTimeInterval(
         PARAM_TOP_LEVEL_POLL_INTERVAL, DEFAULT_TOP_LEVEL_POLL_INTERVAL);
     treeWalkTestDuration = config.getTimeInterval(
-        PARAM_TREEWALK_TEST_DURATION, DEFAULT_TREEWALK_TEST_DURATION);
+        PARAM_TREEWALK_ESTIMATE_DURATION, DEFAULT_TREEWALK_ESTIMATE_DURATION);
+    shouldStartTreeWalkThread = config.getBoolean(PARAM_START_TREEWALK_THREAD,
+                                                  true);
   }
 
   public void startPoll(CachedUrlSet cus, Poll.VoteTally state) {
@@ -210,7 +210,7 @@ public class NodeManagerImpl implements NodeManager {
     updateState(state, results);
   }
 
-  public void newTopLevelCrawlFinished() {
+  public void newContentCrawlFinished() {
     getAuState().newCrawlFinished();
   }
 
@@ -221,7 +221,7 @@ public class NodeManagerImpl implements NodeManager {
 
   public AuState getAuState() {
     if (auState==null) {
-      auState = repository.loadAuState(managerAu);
+      auState = repository.loadAuState(managedAu);
     }
     return auState;
   }
@@ -304,8 +304,7 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public long getEstimatedTreeWalkDuration() {
-    Long estimateL = (Long)auEstimateMap.get(managerAu);
-    if (estimateL==null) {
+    if (treeWalkEstimate==-1) {
       // estimate via short walk
       // this is not a fake walk; it functionally walks part of the tree
       long timeTaken = 0;
@@ -314,23 +313,24 @@ public class NodeManagerImpl implements NodeManager {
       Iterator nodesIt = nodeMap.values().iterator();
       Deadline deadline = Deadline.in(treeWalkTestDuration);
       while (!deadline.expired() && nodesIt.hasNext()) {
+        //XXX fix to be non-functional
         walkNodeState((NodeState)nodesIt.next());
         nodesWalked++;
       }
       timeTaken = TimeBase.nowMs() - startTime;
       if (timeTaken == 0) {
-        logger.error("Test finished in zero time: using nodesWalked estimate.");
-        return nodesWalked;
+        logger.warning("Test finished in zero time after walking " +
+                       nodesWalked + " nodes.");
+        // returning a harmless constant
+        return 1;
       }
       // calculate
       double nodesPerMs = ((double)timeTaken / nodesWalked);
       // check size (node count) of tree
       int nodeCount = nodeMap.size();
-      estimateL = new Long((long)(nodeCount * nodesPerMs));
-
-      auEstimateMap.put(managerAu, estimateL);
+      treeWalkEstimate = (long)(nodeCount * nodesPerMs);
     }
-    return estimateL.longValue();
+    return treeWalkEstimate;
   }
 
   public void startTreeWalk() {
@@ -340,16 +340,13 @@ public class NodeManagerImpl implements NodeManager {
   void doTreeWalk() {
     treeWalkRunning = true;
     logger.debug("Attempting tree walk.");
-    if (theCrawlManager.canTreeWalkStart(managerAu, null, null)) {
+    if (theCrawlManager.canTreeWalkStart(managedAu, null, null)) {
       long startTime = TimeBase.nowMs();
 
-      NodeState topNode = getNodeState(managerAu.getAUCachedUrlSet());
+      NodeState topNode = getNodeState(managedAu.getAUCachedUrlSet());
       Iterator activePolls = topNode.getActivePolls();
-      if (activePolls.hasNext()) {
-        topLevelPollActive = true;
-      }
       // only continue if no top level poll being considered
-      if (!topLevelPollActive) {
+      if (!activePolls.hasNext()) {
         // if it's been too long, start a top level poll
         if ((startTime - getAuState().getLastTopLevelPollTime())
             > topPollInterval) { //XXX get from plugin
@@ -370,19 +367,16 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   void updateEstimate(long elapsedTime) {
-    if (auEstimateMap==null) {
-      auEstimateMap = new HashMap();
-    }
-    Long estimateL = (Long)auEstimateMap.get(managerAu);
-    if (estimateL==null) {
-      auEstimateMap.put(managerAu, new Long(elapsedTime));
+    if (treeWalkEstimate==-1) {
+      treeWalkEstimate = elapsedTime;
     } else {
-      long newEstimate = (estimateL.longValue() + elapsedTime)/2;
-      auEstimateMap.put(managerAu, new Long(newEstimate));
+      // average with current estimate
+      treeWalkEstimate = (treeWalkEstimate + elapsedTime) / 2;
     }
   }
 
   private void nodeTreeWalk(TreeMap nodeMap) {
+    //XXX use true tree walk
     Iterator nodesIt = nodeMap.values().iterator();
     while (nodesIt.hasNext()) {
       walkNodeState((NodeState)nodesIt.next());
@@ -449,7 +443,7 @@ public class NodeManagerImpl implements NodeManager {
 
   private void loadStateTree() {
     // recurse through au cachedurlsets
-    CachedUrlSet cus = managerAu.getAUCachedUrlSet();
+    CachedUrlSet cus = managedAu.getAUCachedUrlSet();
     recurseLoadCachedUrlSets(cus);
   }
 
@@ -466,8 +460,8 @@ public class NodeManagerImpl implements NodeManager {
           break;
         case CachedUrlSetNode.TYPE_CACHED_URL:
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-          CachedUrlSet newSet = 
-	    ((BaseArchivalUnit)managerAu).makeCachedUrlSet(rSpec);
+          CachedUrlSet newSet =
+	    ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
           addNewNodeState(newSet);
       }
     }
@@ -475,9 +469,9 @@ public class NodeManagerImpl implements NodeManager {
 
   private void addNewNodeState(CachedUrlSet cus) {
     logger.debug("Adding NewNodeState: " + cus.toString());
-    NodeState state = 
-      new NodeStateImpl(cus, 
-			new CrawlState(-1, CrawlState.FINISHED, 0), 
+    NodeState state =
+      new NodeStateImpl(cus,
+			new CrawlState(-1, CrawlState.FINISHED, 0),
 			new ArrayList(), repository);
     nodeMap.put(cus.getUrl(), state);
   }
@@ -491,7 +485,7 @@ public class NodeManagerImpl implements NodeManager {
     }
     if (results.getErr() < 0) {
       pollState.status = mapResultsErrorToPollError(results.getErr());
-      logger.info("Poll didn't finish fully.  Error code: " 
+      logger.info("Poll didn't finish fully.  Error code: "
 		  + pollState.status);
       return;
     }
@@ -623,8 +617,7 @@ public class NodeManagerImpl implements NodeManager {
   private void callTopLevelPoll() {
     try {
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
-      new PollSpec(managerAu.getAUCachedUrlSet()));
-      topLevelPollActive = true;
+      new PollSpec(managedAu.getAUCachedUrlSet()));
       logger.info("Top level poll started.");
     } catch (IOException ioe) {
       logger.error("Couldn't make top level poll request.", ioe);
@@ -644,7 +637,6 @@ public class NodeManagerImpl implements NodeManager {
     if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
         (pollState.getType() == Poll.CONTENT_POLL)) {
       getAuState().newPollFinished();
-      topLevelPollActive = false;
       logger.info("Top level poll finished.");
     }
   }
@@ -680,14 +672,14 @@ public class NodeManagerImpl implements NodeManager {
   private void markNodeForRepair(CachedUrlSet cus, Poll.VoteTally tally)
       throws IOException {
     theDaemon.getPollManager().suspendPoll(tally.getPollKey());
-    theDaemon.getCrawlManager().scheduleRepair(managerAu,
+    theDaemon.getCrawlManager().scheduleRepair(managedAu,
         new URL(cus.getUrl()), new ContentRepairCallback(),
                                  tally.getPollKey());
   }
 
   private void deleteNode(CachedUrlSet cus) throws IOException {
     // delete the node from the LockssRepository
-    LockssRepository repository = theDaemon.getLockssRepository(managerAu);
+    LockssRepository repository = theDaemon.getLockssRepository(managedAu);
     repository.deleteNode(cus.getUrl());
   }
 
@@ -703,7 +695,7 @@ public class NodeManagerImpl implements NodeManager {
           break;
         case CachedUrlSetNode.TYPE_CACHED_URL:
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
-          cus = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(rSpec);
+          cus = ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
       }
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                              new PollSpec(cus));
@@ -788,16 +780,16 @@ public class NodeManagerImpl implements NodeManager {
 	deadline.expire();
       }
     }
-    
+
     public void run() {
       while (goOn) {
-	if (shouldTreeWalkStart()) { 
+	if (shouldTreeWalkStart()) {
 	  doTreeWalk();
 	} else {
-	  long delta = (long)((double)MAX_DEVIATION_PERCENT*treeWalkInterval);
+	  long delta = (long)((double)MAX_DEVIATION*treeWalkInterval);
 	  logger.debug3("Creating a deadline for "+treeWalkInterval
 			+" with delta of "+delta);
-	  deadline = 
+	  deadline =
 	    Deadline.inRandomDeviation(treeWalkInterval, delta);
 	  try {
 	    deadline.sleep();
