@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.48 2005-02-02 09:42:23 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.49 2005-02-18 23:22:45 tlipkis Exp $
  */
 
 /*
@@ -412,31 +412,27 @@ public class DaemonStatus extends LockssServlet {
       wrtr.println("Error getting table: " + e.toString());
       return;
     }
-//     java.util.List colList = statTable.getColumnDescriptors();
-    java.util.List rowList = getRowList(statTable);
-    String title0 = statTable.getTitle();
-    String titleFoot = statTable.getTitleFootnote();
-
-    Table table = null;
-
-    // convert list of ColumnDescriptors to array of ColumnDescriptors
-//     ColumnDescriptor cds[];
-//     if (colList != null) {
-//       cds = (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
-//     }
-    if (true || !rowList.isEmpty()) {
-      // if table not empty, output column headings
-
-      // Make the table.  Make a narrow empty column between real columns,
-      // for spacing.  Resulting table will have 2*cols-1 columns
-      wrtr.println();
-      wrtr.println("table=" + title0);
-      if (tableKey != null) {
-	wrtr.println("key=" + tableKey);
-      }
-      // tk write summary info
-
+    wrtr.println();
+    wrtr.print("table=" + StringUtil.csvEncode(statTable.getTitle()));
+    if (tableKey != null) {
+      wrtr.print(",key=" + StringUtil.csvEncode(tableKey));
     }
+
+    java.util.List summary = statTable.getSummaryInfo();
+    if (summary != null && !summary.isEmpty()) {
+      for (Iterator iter = summary.iterator(); iter.hasNext(); ) {
+	StatusTable.SummaryInfo sInfo = (StatusTable.SummaryInfo)iter.next();
+	wrtr.print(",");
+	wrtr.print(sInfo.getTitle());
+	wrtr.print("=");
+	Object dispVal = getTextDisplayString(sInfo.getValue());
+	String valStr = dispVal != null ? dispVal.toString() : "(null)";
+	wrtr.print(StringUtil.csvEncode(valStr));
+      }
+    }
+    wrtr.println();
+
+    java.util.List rowList = getRowList(statTable);
     if (rowList != null) {
       // output rows
       for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
@@ -449,7 +445,7 @@ public class DaemonStatus extends LockssServlet {
 	  }
 	  String key = (String)o;
 	  Object val = rowMap.get(key);
-	  Object dispVal = StatusTable.getActualValue(val);
+	  Object dispVal = getTextDisplayString(val);
 	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
 	  wrtr.print(key + "=" + StringUtil.csvEncode(valStr));
 	  if (iter.hasNext()) {
@@ -623,6 +619,21 @@ public class DaemonStatus extends LockssServlet {
     case ColumnDescriptor.TYPE_PERCENT:
     case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
       return "RIGHT";
+    }
+  }
+
+
+  // Handle lists
+  private String getTextDisplayString(Object val) {
+    if (val instanceof java.util.List) {
+      StringBuffer sb = new StringBuffer();
+      for (Iterator iter = ((java.util.List)val).iterator(); iter.hasNext(); ) {
+	sb.append(StatusTable.getActualValue(iter.next()));
+      }
+      return sb.toString();
+    } else {
+      Object dispVal = StatusTable.getActualValue(val);
+      return dispVal != null ? dispVal.toString() : "(null)";
     }
   }
 
