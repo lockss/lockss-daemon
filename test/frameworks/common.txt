@@ -2,6 +2,9 @@
 # This is included in the list of prop files by all the run_xxx_daemon
 # scripts
 
+# Try to get a thread dump if a thread hangs
+org.lockss.thread.hungThreadDump=true
+
 # List of plugins whose names and titles should be included in UI menus.
 # (Don't comment out lines in the middle of the list; it will cause all
 # following lines to be ignored.)
