@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.3 2003-01-28 02:22:38 claire Exp $
+ * $Id: EncodedProperty.java,v 1.4 2003-03-01 01:04:49 troberts Exp $
  */
 
 /*
@@ -142,7 +142,7 @@ public class EncodedProperty extends Properties {
 
   public byte[] encodeString(String str) {
     try {
-      return str.getBytes(DEFAULT_ENCODING);;
+      return str.getBytes(DEFAULT_ENCODING);
     }
     catch (UnsupportedEncodingException ex) {
       return null;
