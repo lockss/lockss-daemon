@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.14 2003-03-25 01:26:24 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.15 2003-04-02 00:19:40 aalto Exp $
  */
 
 /*
@@ -32,12 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
+import java.io.*;
 import java.util.Properties;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
 import org.lockss.repository.TestLockssRepositoryServiceImpl;
 import org.lockss.plugin.*;
-import java.io.File;
+import org.lockss.util.StreamUtil;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedUrlCacher
@@ -50,10 +51,11 @@ import java.io.File;
 public class TestSimulatedUrlCacher extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
+  private String tempDirPath;
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
 
     theDaemon = new MockLockssDaemon();
@@ -99,6 +101,37 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     Properties prop = suc.getUncachedProperties();
     assertEquals("image/jpeg", prop.getProperty("content-type"));
     assertEquals(testStr, prop.getProperty("content-url"));
+  }
+
+  public void testNoBranchContent() throws Exception {
+    File branchFile = new File(tempDirPath, "simcontent/branch1");
+    branchFile.mkdirs();
+
+    String testStr = "http://www.example.com/branch1";
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(
+        new MockCachedUrlSet(mau, null), testStr, tempDirPath);
+    assertNull(suc.getUncachedInputStream());
+  }
+
+  public void testBranchContent() throws Exception {
+    File branchFile = new File(tempDirPath,
+                               "simcontent/branch1");
+    branchFile.mkdirs();
+    File contentFile = new File(branchFile, "branch_content");
+    FileOutputStream fos = new FileOutputStream(contentFile);
+    StringInputStream sis = new StringInputStream("test stream");
+    StreamUtil.copy(sis, fos);
+    fos.close();
+    sis.close();
+
+    String testStr = "http://www.example.com/branch1";
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(
+        new MockCachedUrlSet(mau, null), testStr, tempDirPath);
+    InputStream is = suc.getUncachedInputStream();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    StreamUtil.copy(is, baos);
+    is.close();
+    assertEquals("test stream", baos.toString());
   }
 
   public static void main(String[] argv) {

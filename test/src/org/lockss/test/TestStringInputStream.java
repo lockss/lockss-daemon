@@ -37,18 +37,23 @@ in this Software without prior written authorization from Stanford University.
  * @version 0.0
  */
 
-public class TestStringInputStream extends TestCase{
+public class TestStringInputStream extends TestCase {
 
-  public TestStringInputStream(String msg){
+  public TestStringInputStream(String msg) {
     super(msg);
   }
 
-  public void testRead(){
+  public void testRead() {
     StringInputStream sis = new StringInputStream("test");
     byte bytes[] = "test".getBytes();
     for (int ix=0; ix<bytes.length; ix++){
       assertEquals(bytes[ix], sis.read());
     }
     assertEquals(-1, sis.read());
+  }
+
+  public void testToString() {
+    StringInputStream sis = new StringInputStream("test");
+    assertEquals("test", sis.toString());
   }
 }

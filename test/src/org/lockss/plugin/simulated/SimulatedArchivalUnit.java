@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.20 2003-03-27 01:31:55 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.21 2003-04-02 00:19:40 aalto Exp $
  */
 
 /*
@@ -223,7 +223,6 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
       if (!url.endsWith(File.separator)) {
         buffer.append(File.separator);
       }
-      buffer.append("index.html");
       return buffer.toString();
     } else {
       return url;

@@ -39,15 +39,25 @@ in this Software without prior written authorization from Stanford University.
  * @version 0.0
  */
 
-public class StringInputStream extends InputStream{
+public class StringInputStream extends InputStream {
   private ByteArrayInputStream bais;
+  private String theString;
 
-  public StringInputStream(String srcStr){
+  public StringInputStream(String srcStr) {
     bais = new ByteArrayInputStream(srcStr.getBytes());
+    theString = srcStr;
   }
-  
-  public int read(){
+
+  public int read() {
     return bais.read();
+  }
+
+  /**
+   * Returns the string the stream represents.
+   * @return the source String
+   */
+  public String toString() {
+    return theString;
   }
 
 }

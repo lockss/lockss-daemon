@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.6 2003-02-27 21:53:17 tal Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.7 2003-04-02 00:19:40 aalto Exp $
  */
 
 /*
@@ -46,10 +46,10 @@ import org.lockss.test.*;
  */
 
 public class SimulatedContentGenerator {
-/**
- * Content of a generated text or html file.  Values are substituted for
- * the %Xs.
- */
+  /**
+   * Content of a generated text or html file.  Values are substituted for
+   * the %Xs.
+   */
   public static final String NORMAL_FILE_CONTENT =
     "This is file %1, depth %2, branch %3.";
   /**
@@ -58,9 +58,23 @@ public class SimulatedContentGenerator {
    */
   public static final String ABNORMAL_FILE_CONTENT =
     "This is abnormal file %1, depth %2, branch %3.";
-/**
- * Name of top directory in which the content is generated.
- */
+
+  /**
+   * Artificial content of a directory, if required.
+   * Path is substituted for the %1.
+   */
+  public static final String NORMAL_DIR_CONTENT =
+      "This is directory %1, depth %2.";
+  /**
+   * Artificial content of a directory 'abnormal' status.
+   * Path is substituted for the %1.
+   */
+  public static final String ABNORMAL_DIR_CONTENT =
+      "This is abnormal directory %1, depth %2.";
+
+  /**
+   * Name of top directory in which the content is generated.
+   */
   public static final String ROOT_NAME = "simcontent";
   /**
    * The name prefix for generated files.  The local file number is appended.
@@ -71,11 +85,19 @@ public class SimulatedContentGenerator {
    * number is appended.
    */
   public static final String BRANCH_PREFIX = "branch";
+
   /**
    * The name of the 'index' file in each directory which lists the
    * children as html links for crawling.
    */
   public static final String INDEX_NAME = "index.html";
+
+  /**
+   * The name of the file in each directory which contains the 'content' for
+   * that directory, if any.
+   */
+  public static final String DIR_CONTENT_NAME = "branch_content";
+
 
  /**
   * File-type value for text files.  Independent bitwise from the other
@@ -112,19 +134,20 @@ public class SimulatedContentGenerator {
   private int maxFilenameLength = 20;
   private int binaryFileSize = 256;
   private boolean fillOutFilenames = false;
+  private boolean oddBranchesHaveContent = false;
   private int fileTypes = FILE_TYPE_TXT;
 
   private boolean isAbnormalFile = false;
   private String abnormalBranchStr = "";
   private int abnormalFileNum = 0;
 
-  private String contentRootParent = "";
   private String contentRoot;
+
 /**
  * @param rootPath path where the content directory will be generated
  */
   public SimulatedContentGenerator(String rootPath) {
-    contentRootParent = rootPath;
+    String contentRootParent = rootPath;
     if (contentRootParent.length()>0 &&
         !contentRootParent.endsWith(File.separator)) {
       contentRootParent += File.separator;
@@ -189,29 +212,51 @@ public class SimulatedContentGenerator {
   public void setFillOutFilenamesFully(boolean fillOut) {
     fillOutFilenames = fillOut;
   }
+
   /**
    * Returns whether or not set to expand all file names to maximum length.
    * @return is expanding to max length
    */
   public boolean isFillingOutFilenamesFully() { return fillOutFilenames; }
+
+  /**
+   * Sets whether or not all the odd branches should have content.
+   * @param haveContent whether or not to make content in odd branches
+   */
+  public void setOddBranchesHaveContent(boolean haveContent) {
+    oddBranchesHaveContent = haveContent;
+  }
+
+  /**
+   * Whether or not all the odd branches have content.
+   * @return true if odd branches have content
+   */
+  public boolean oddBranchesHaveContent() {
+    return oddBranchesHaveContent;
+  }
+
   /**
    * @return is set to create abnormal file
    */
   public boolean isAbnormalFile() { return isAbnormalFile; }
   /**
-   * Returns 'branch path' leading to abnormal file.  Format is "1,2,3..."
+   * Returns 'branch path' leading to abnormal content.  Format is "1,2,3..."
    * for ROOT/branch1/branch2/branch3/...  Empty string refers to root.
    * @return branch path
    */
   public String getAbnormalBranchString() { return abnormalBranchStr; }
   /**
+   * Returns the local file number for abnormal file.  For the branch itself
+   * to have abnormal content, use '-1'.
    * @return local file number for abnormal file.
    */
   public int getAbnormalFileNumber() { return abnormalFileNum; }
   /**
    * Sets the parameters to create an abnormal file.
    * Format for branch path is "1,2,3..." for ROOT/branch1/branch2/branch3/...
-   * Empty string refers to root.
+   * Empty string refers to root.  For the directory itself to have abnormal
+   * content, use '-1' as the file number.  The root directory cannot have
+   * content.
    *
    * @param branchStr branch path to file location
    * @param fileNum local file number
@@ -287,17 +332,23 @@ public class SimulatedContentGenerator {
   private void recurseGenerateBranch(File parentDir, int branchNum,
 				     int depth, boolean onAbnormalPath) {
     // generates this branch, its files, and its subbranches (if any)
+    boolean alterFile = false;
+    boolean alterDir = false;
+    int branchPath = 0;
+    if (onAbnormalPath) {
+      if (isAlteredLevel(depth)) {
+        alterFile = (getAbnormalFileNumber() > 0);
+        alterDir = (getAbnormalFileNumber() == -1);
+      }
+      branchPath = getNextAbnormalBranch(depth);
+    }
+
     String branchName = getDirectoryName(branchNum);
     File branchFile = new File(parentDir, branchName);
     if (!branchFile.exists()) {
       branchFile.mkdirs();
     }
-    boolean alterFile = false;
-    int branchPath = 0;
-    if (onAbnormalPath) {
-      alterFile = isAlteredLevel(depth);
-      branchPath = getNextAbnormalBranch(depth);
-    }
+
     if (depth<getTreeDepth()) {
       for (int ii=1; ii<=getNumBranches(); ii++) {
         recurseGenerateBranch(branchFile, ii, depth+1, (ii==branchPath));
@@ -307,8 +358,29 @@ public class SimulatedContentGenerator {
       generateFile(branchFile, jj, depth, branchNum,
 		   (alterFile && (jj==getAbnormalFileNumber())));
     }
+
+    if ((oddBranchesHaveContent() && (branchNum%2 == 1)) || alterDir) {
+      generateDirContentFile(branchFile, depth, alterDir);
+    }
     generateIndexFile(branchFile);
   }
+
+  private void generateDirContentFile(File parentDir, int depth,
+                                      boolean abnormal) {
+    try {
+      String filename = DIR_CONTENT_NAME;
+      File file = new File(parentDir, filename);
+      FileOutputStream fos = new FileOutputStream(file);
+      PrintWriter pw = new PrintWriter(fos);
+      String file_content = getBranchContent(parentDir.getName(), depth,
+                                             abnormal);
+      pw.print(file_content);
+      pw.flush();
+      pw.close();
+      fos.close();
+    } catch (Exception e) { System.err.println(e); }
+  }
+
 
   private void generateIndexFile(File parentDir) {
     try {
@@ -421,6 +493,22 @@ public class SimulatedContentGenerator {
   }
 
   /**
+   * Generates standard artifical content for a branch.
+   * @param name branch name
+   * @param depth the depth
+   * @param isAbnormal whether or not to generate abnormal content
+   * @return branch content
+   */
+  public static String getBranchContent(String name, int depth,
+                                        boolean isAbnormal) {
+    String branch_content = NORMAL_DIR_CONTENT;
+    if (isAbnormal) branch_content = ABNORMAL_DIR_CONTENT;
+    branch_content = StringUtil.replaceString(branch_content, "%1", name);
+    branch_content = StringUtil.replaceString(branch_content, "%2", ""+depth);
+    return branch_content;
+  }
+
+  /**
    * Generates standard text content for a file (text or html types only).
    * @param fileNum local file number
    * @param depth file depth (0 for root)
@@ -485,6 +573,9 @@ public class SimulatedContentGenerator {
       if (child.isDirectory()) {
         subLink += File.separator + SimulatedContentGenerator.INDEX_NAME;
       }
+      if (subLink.equals(DIR_CONTENT_NAME)) {
+        subLink = directory.getName();
+      }
       file_content += "<BR><A HREF=\"" + subLink + "\">" + subLink + "</A>";
     }
     file_content += "</BODY></HTML>";
@@ -518,14 +609,15 @@ public class SimulatedContentGenerator {
     }
     return fileName;
   }
-  /**
-   * Generates a standard directory name.
-   * @param branchNum local branch number
-   * @return standard file name
-   */
+
   public static String getDirectoryName(int branchNum) {
     return BRANCH_PREFIX + branchNum;
   }
+
+  public static String getDirectoryContentFile(String dirPath) {
+    return dirPath + File.separator + DIR_CONTENT_NAME;
+  }
+
 
   private boolean isAlteredLevel(int depth) {
     if (!isAbnormalFile()) return false;
