@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.12 2002-11-26 18:00:12 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.13 2002-12-11 01:22:01 tal Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class LockssTestCase extends TestCase {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
       return;
     }
-	failNotEquals(message, expected, actual);
+    failNotEquals(message, expected, actual);
   }
   
   /** Asserts that two collections are isomorphic. If they are not
@@ -130,7 +130,7 @@ public class LockssTestCase extends TestCase {
     if (CollectionUtil.isIsomorphic(expected, actual)) {
       return;
     }
-	failNotEquals(message, expected, actual);
+    failNotEquals(message, expected, actual);
   }
   
   /** Asserts that the array is isomorphic with the collection. If not
@@ -146,13 +146,139 @@ public class LockssTestCase extends TestCase {
     if (CollectionUtil.isIsomorphic(new ArrayIterator(expected), actual)) {
       return;
     }
-	failNotEquals(message, expected, actual);
+    failNotEquals(message, expected, actual);
   }
   
   /** Asserts that the array is isomorphic with the collection behind the
    * iterator. If not an AssertionFailedError is thrown. */
   static public void assertIsomorphic(Object expected[], Iterator actual) {
     assertIsomorphic(null, expected, actual);
+  }
+
+  /** Asserts that the two boolean arrays have equal contents */
+  public static void assertEquals(boolean[] expected, boolean[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two boolean arrays have equal contents */
+  public static void assertEquals(String message,
+				  boolean[] expected, boolean[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two byte arrays have equal contents */
+  public static void assertEquals(byte[] expected, byte[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two byte arrays have equal contents */
+  public static void assertEquals(String message,
+				  byte[] expected, byte[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two char arrays have equal contents */
+  public static void assertEquals(char[] expected, char[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two char arrays have equal contents */
+  public static void assertEquals(String message,
+				  char[] expected, char[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two double arrays have equal contents */
+  public static void assertEquals(double[] expected, double[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two double arrays have equal contents */
+  public static void assertEquals(String message,
+				  double[] expected, double[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two float arrays have equal contents */
+  public static void assertEquals(float[] expected, float[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two float arrays have equal contents */
+  public static void assertEquals(String message,
+				  float[] expected, float[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two int arrays have equal contents */
+  public static void assertEquals(int[] expected, int[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two int arrays have equal contents */
+  public static void assertEquals(String message,
+				  int[] expected, int[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two short arrays have equal contents */
+  public static void assertEquals(short[] expected, short[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two short arrays have equal contents */
+  public static void assertEquals(String message,
+				  short[] expected, short[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two long arrays have equal contents */
+  public static void assertEquals(long[] expected, long[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two long arrays have equal contents */
+  public static void assertEquals(String message,
+				  long[] expected, long[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /** Asserts that the two Object arrays have equal contents */
+  public static void assertEquals(Object[] expected, Object[] actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /** Asserts that the two Object arrays have equal contents */
+  public static void assertEquals(String message,
+				  Object[] expected, Object[] actual) {
+    if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
   }
 
   // tk do a better job of printing collections
@@ -183,7 +309,7 @@ public class LockssTestCase extends TestCase {
     assertEquals(expected.getPort(), actual.getPort());
     assertEquals(expected.getLength(), actual.getLength());
     assertEquals(expected.getOffset(), actual.getOffset());
-    assertEquals(expected.getData(), actual.getData());
+    assertTrue(Arrays.equals(expected.getData(), actual.getData()));
   }
   /** Abstraction to do something in another thread, after a delay,
    * unless cancelled.  If the sceduled activity is still pending when the
