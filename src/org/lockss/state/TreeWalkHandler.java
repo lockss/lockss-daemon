@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.44.2.1 2003-11-15 00:59:17 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.44.2.2 2003-11-17 22:51:24 tlipkis Exp $
  */
 
 /*
@@ -362,13 +362,15 @@ public class TreeWalkHandler {
     if (forceTreeWalk) {
       logger.debug("Forcing treewalk start-in time of -1.");
       forceTreeWalk = false;
-      return -1;
+      return 0;
     }
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
     long timeSinceLastTW = TimeBase.msSince(lastTreeWalkTime);
     logger.debug3(StringUtil.timeIntervalToString(timeSinceLastTW) +
                   " since last treewalk");
-    return treeWalkInterval - timeSinceLastTW;
+    return (treeWalkInterval > timeSinceLastTW
+	    ? treeWalkInterval - timeSinceLastTW
+	    : 0);
   }
 
   /*
@@ -499,7 +501,8 @@ public class TreeWalkHandler {
                             startDeadline.toString());
               break;
             } else {
-	      if (startDeadline.getExpirationTime() > (3 * Constants.WEEK)) {
+	      if (TimeBase.msSince(startDeadline.getExpirationTime()) >
+		  (3 * Constants.WEEK)) {
 		// If can't fit it into schedule in next 3 weeks, give up
 		// and try again in an hour.  Prevents infinite looping
 		// trying to create a schedule.
