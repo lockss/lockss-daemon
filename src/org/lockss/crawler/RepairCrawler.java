@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.27 2004-09-22 02:45:13 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.28 2004-09-23 03:38:33 tlipkis Exp $
  */
 
 /*
@@ -329,9 +329,7 @@ public class RepairCrawler extends CrawlerImpl {
       throws IOException {
     logger.debug2("Trying to fetch from "+id);
     uc.setProxy(id, getProxyPort());
-    // XXX need to send unambiguous repair marker, but no current way to
-    // set request properties
-//     uc.setRequestProperty("X-LOCKSS", "repair");
+    uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
     try {
       cache(uc, id);
     } catch (IOException e) {
