@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.1 2003-11-18 00:07:16 eaalto Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.2 2003-12-11 21:23:40 eaalto Exp $
  */
 
 /*
@@ -212,10 +212,10 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
   }
 
   public void testGetFilterRules() throws Exception {
-    HistoryCooperativeArchivalUnit au = makeAu(new URL(ROOT_URL), 60, DIR);
+    HistoryCooperativeArchivalUnit au = makeAu(new URL(ROOT_URL), 108, DIR);
     assertNull(au.getFilterRule(null));
     assertNull(au.getFilterRule("jpg"));
-    assertTrue(au.getFilterRule("text/html") instanceof HistoryCooperativeFilterRule);
+    assertNull(au.getFilterRule("text/html"));
   }
 
   public static void main(String[] argv) {
