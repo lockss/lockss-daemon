@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.34 2003-10-08 21:20:52 troberts Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.35 2003-10-09 23:01:33 eaalto Exp $
  */
 
 /*
@@ -56,6 +56,12 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public static final String AUPARAM_PAUSE_TIME = "pause_time";
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
+  /**
+   * Test parameter to activate use of crawl window in highwire.
+   */
+  public static final String AUPARAM_USE_CRAWL_WINDOW = "use_crawl_window";
+  private static final boolean DEFAULT_USE_CRAWL_WINDOW = false;
+
   private static final String EXPECTED_URL_PATH = "/";
 
   protected Logger logger = Logger.getLogger(LOG_NAME);
@@ -68,6 +74,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   private static final long DEFAULT_NC_INTERVAL = 14 * Constants.DAY;;
 
   private long ncCrawlInterval;
+  private boolean useCrawlWindow;
 
 
 
@@ -123,6 +130,10 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 						    base.getPath());
     }
 
+    useCrawlWindow = config.getBoolean(AUPARAM_USE_CRAWL_WINDOW,
+                                       DEFAULT_USE_CRAWL_WINDOW);
+    logger.debug3("Setting 'use crawl window' to "+useCrawlWindow);
+
     try {
       this.crawlSpec = makeCrawlSpec(base, volume);
     } catch (REException e) {
@@ -140,6 +151,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     ncCrawlInterval = config.getTimeInterval(AUPARAM_NC_INTERVAL,
 					     DEFAULT_NC_INTERVAL);
     logger.debug3("Set new content crawl interval to "+ncCrawlInterval);
+
   }
 
   public FilterRule getFilterRule(String mimeType) {
@@ -153,11 +165,13 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     return makeStartUrl(base, volume);
   }
 
-  private CrawlSpec makeCrawlSpec(URL base, int volume)
-      throws REException {
-
+  private CrawlSpec makeCrawlSpec(URL base, int volume) throws REException {
     CrawlRule rule = makeRules(base, volume);
-    return new CrawlSpec(makeStartUrl(base, volume), rule, 1);
+    CrawlWindowRule window = null;
+    if (useCrawlWindow) {
+      window = makeCrawlWindow();
+    }
+    return new CrawlSpec(makeStartUrl(base, volume), rule, window, 1);
   }
 
   String makeStartUrl(URL base, int volume) {
@@ -194,6 +208,22 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
     logger.debug("Rules: "+rules);
     return new CrawlRules.FirstMatch(rules);
+  }
+
+  private CrawlWindowRule makeCrawlWindow() {
+    logger.debug("Creating crawl window...");
+    // allow crawls from 12pm->3pm only
+    Calendar start = Calendar.getInstance();
+    start.set(Calendar.HOUR_OF_DAY, 12);
+    start.set(Calendar.MINUTE, 0);
+    Calendar end = Calendar.getInstance();
+    end.set(Calendar.HOUR_OF_DAY, 15);
+    end.set(Calendar.MINUTE, 0);
+
+    CrawlWindowRule.Window window = new CrawlWindows.Interval(start, end,
+        CrawlWindows.Interval.TIME);
+    int inclexl = CrawlWindowRules.BaseCrawlWindow.MATCH_INCLUDE_ELSE_EXCLUDE;
+    return new CrawlWindowRules.BaseCrawlWindow(window, inclexl, null);
   }
 
   public Collection getUrlStems() {
