@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.40 2005-02-02 09:42:48 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.41 2005-03-18 18:09:03 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
+import java.net.*;
 
 import org.lockss.alert.*;
 import org.lockss.config.ConfigManager;
@@ -51,7 +52,7 @@ import org.lockss.util.urlconn.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-public abstract class CrawlerImpl implements Crawler {
+public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
   /**
    * TODO
    * 1) write state to harddrive using whatever system we come up for for the
@@ -86,6 +87,10 @@ public abstract class CrawlerImpl implements Crawler {
   public static final String LOCKSS_PERMISSION_STRING =
   "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
+  public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
+    Configuration.PREFIX + "CrawlerImpl.abortWhilePermissionOtherThanOk";
+  public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = false;
+
   // Max amount we'll buffer up to avoid refetching the permissions page
   static final int PERM_BUFFER_MAX = 16 * 1024;
 
@@ -113,6 +118,8 @@ public abstract class CrawlerImpl implements Crawler {
 
   protected String proxyHost = null;
   protected int proxyPort;
+
+  protected PermissionMap permissionMap = null;
 
   protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
@@ -179,6 +186,23 @@ public abstract class CrawlerImpl implements Crawler {
     } finally {
       crawlStatus.signalCrawlEnded();
     }
+  }
+
+  protected boolean populatePermissionMap() {
+      // get the permission list from crawl spec
+    permissionMap = new PermissionMap();
+    List permissionList = spec.getPermissionPages();
+    if (permissionList == null || permissionList.size() == 0){
+      logger.error("spec.getPermissionPages() return null list or nothing in the list!");
+      crawlStatus.setCrawlError("Nothing in permission list");
+      return false;
+    }
+
+    if (!checkPermissionList(permissionList)){
+      return false;
+    }
+
+    return true;
   }
 
   /**
@@ -340,6 +364,45 @@ public abstract class CrawlerImpl implements Crawler {
     return true;
   }
 
+  /**
+   * Check the permission of each url in the permission list, then save the result
+   * in the permission map.
+   *
+   * @param permissionList permission pages url list of an AU
+   * @return if all permission pages grant permission to crawl
+   */
+  protected boolean checkPermissionList(List permissionList) {
+    boolean abortWhilePermissionOtherThanOk =
+      Configuration.getBooleanParam(PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,
+				    DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK);
+
+    logger.info("Checking permission on host(s) of " + au);
+    Iterator permissionUrls = permissionList.iterator();
+    while (permissionUrls.hasNext()) {
+      String permissionPage = (String)permissionUrls.next();
+      // it is the real thing that do the checking of permission, crawlPermission dwell in CrawlerImpl.java
+      int permissionStatus = crawlPermission(permissionPage);
+      // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
+       if (permissionStatus != PermissionMap.PERMISSION_OK &&
+	  abortWhilePermissionOtherThanOk) {
+	logger.info("One or more host(s) of AU do not grant crawling permission - aborting crawl!");
+	return false;
+      }
+      try {
+	if (permissionStatus == PermissionMap.PERMISSION_OK) {
+	  logger.debug3("Permission granted on host: " + UrlUtil.getHost(permissionPage));
+	}
+	// set permissionMap
+	permissionMap.putStatus(permissionPage,permissionStatus);
+      } catch (MalformedURLException e){
+	//XXX should catch this inside the permissionMap ?
+	logger.error("The permissionPage's URL is Malformed : "+ permissionPage);
+	crawlStatus.setCrawlError("Malformed permission page url");
+      }
+    }
+    return true;
+  }
+
   void storePermissionPage(CachedUrlSet ownerCus, String permissionPage)
       throws IOException {
     // XXX can't reuse UrlCacher
@@ -414,4 +477,10 @@ public abstract class CrawlerImpl implements Crawler {
     sb.append("]");
     return sb.toString();
   }
+
+  //PermissionMapSource method
+  public PermissionMap getPermissionMap() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
 }
