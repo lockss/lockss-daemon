@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.1 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.2 2004-01-17 00:55:27 clairegriffin Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class ConfigurableArchivalUnit
   static final protected String CM_AU_PARAMS_KEY = "au_params";
 
   protected ExternalizableMap configurationMap;
+  static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
 
   protected ConfigurableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
@@ -174,13 +175,24 @@ public class ConfigurableArchivalUnit
     String[] strs = getStringTokens(variableString);
     String cur_str = strs[0];
     ArrayList args = new ArrayList();
-    for (int i = 1; i < strs.length; i++) {
+    boolean has_all_args = true;
+    for (int i = 1; i < strs.length && has_all_args; i++) {
       String key = strs[i];
       Object val = configurationMap.getMapElement(key);
-      args.add(val);
+      if(val != null) {
+        args.add(val);
+      }
+      else {
+        has_all_args = false;
+      }
     }
-    PrintfFormat pf = new PrintfFormat(cur_str);
-    cur_str = pf.sprintf(args.toArray());
+    if(has_all_args) {
+      PrintfFormat pf = new PrintfFormat(cur_str);
+      cur_str = pf.sprintf(args.toArray());
+    }
+    else {
+      log.warning("missing variable arguments");
+    }
     return cur_str;
   }
 
@@ -190,14 +202,22 @@ public class ConfigurableArchivalUnit
     int value = Integer.valueOf(strs[0]).intValue();
     String rule = strs[1];
     ArrayList args = new ArrayList();
-
-    for (int i = 2; i < strs.length; i++) {
+    boolean has_all_args = true;
+    for (int i = 2; i < strs.length && has_all_args; i++) {
       String key = strs[i];
       Object val = configurationMap.getMapElement(key);
-      args.add(val);
+      if(val != null) {
+       args.add(val);
+     }
+     else {
+       has_all_args = false;
+     }
     }
-    PrintfFormat pf = new PrintfFormat(rule);
-    rule = pf.sprintf(args.toArray());
-    return new CrawlRules.RE(rule, value);
+    if(has_all_args) {
+      PrintfFormat pf = new PrintfFormat(rule);
+      rule = pf.sprintf(args.toArray());
+      return new CrawlRules.RE(rule, value);
+    }
+    return null;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.3 2004-01-14 23:48:56 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.4 2004-01-17 00:55:27 clairegriffin Exp $
  */
 
 /*
@@ -34,11 +34,10 @@ package org.lockss.util;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import org.lockss.app.LockssDaemonException;
 
-import org.exolab.castor.xml.Marshaller;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.mapping.Mapping;
+import org.exolab.castor.mapping.*;
+import org.exolab.castor.xml.*;
+import org.lockss.app.*;
 
 /**
  * ExternalizableMap: A class which allows a map to be loaded in or written as
@@ -67,14 +66,16 @@ public class ExternalizableMap {
     }
   }
 
-  public void loadMapFromResource(String mapLocation) {
+  public void loadMapFromResource(String mapLocation)
+  throws FileNotFoundException {
+    InputStream mapStream = getClass().getResourceAsStream(mapLocation);
+    if (mapStream == null) {
+      descrMap = new HashMap();
+      String err = "Unable to load:" + mapLocation;
+      throw new FileNotFoundException(err);
+    }
 
     try {
-      InputStream mapStream = getClass().getResourceAsStream(mapLocation);
-      if (mapStream == null) {
-        descrMap = new HashMap();
-        return;
-      }
       Reader reader = new BufferedReader(new InputStreamReader(mapStream));
       Unmarshaller unmarshaller = new Unmarshaller(ExtMapBean.class);
       unmarshaller.setMapping(getMapping());

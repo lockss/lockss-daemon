@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.4 2004-01-14 23:48:55 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.5 2004-01-17 00:55:27 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.daemon.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import java.util.*;
+import java.io.FileNotFoundException;
 
 /**
  * <p>ConfigurablePlugin: a plugin which uses the data stored in an
@@ -63,7 +64,12 @@ public class ConfigurablePlugin extends BasePlugin {
     mapName = extMapName;
     // load the configuration map from jar file
     String mapFile = "/" + mapName.replace('.','/') + ".xml";
-    configurationMap.loadMapFromResource(mapFile);
+    try {
+      configurationMap.loadMapFromResource(mapFile);
+    }
+    catch(FileNotFoundException fnfe) {
+      log.warning(fnfe.toString());
+    }
 
    // then call the overridden initializaton.
     super.initPlugin(daemon);
