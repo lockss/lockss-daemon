@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.1 2002-08-31 06:26:35 tal Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.2 2002-09-05 22:14:25 tal Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return true;
   }
 
-  public void reset() {
+  void reset() {
     props.clear();
   }
 
@@ -82,45 +82,23 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return PropUtil. differentKeys(getPropertyTree(), oc.getPropertyTree());
   }
 
-  /** Get config param as string */
   public String get(String key) {
     return (String)props.get(key);
   }
 
-  /** Get config param as boolean */
-  public boolean getBoolean(String key) {
-    return props.getBoolean(key);
-  }
-
-  /** Get config param as boolean with default */
-  public boolean getBoolean(String key, boolean dfault) {
-    return props.getBoolean(key, dfault);
-  }
-
-  /** Returns a Configuration instance containing all the keys at or
-   * below <code>key</code>
-   */
   public Configuration getConfigTree(String key) {
     PropertyTree tree = props.getTree(key);
     return (tree == null) ? null : new ConfigurationPropTreeImpl(tree);
   }
 
-  /* Returns an <code>Iterator</code> over all the keys in the configuration.
-   */
   public Iterator keyIterator() {
     return props.keySet().iterator();
   }
 
-  /* Returns an <code>Iterator</code> over all the top level
-     keys in the configuration.
-   */
   public Iterator nodeIterator() {
     return new EnumerationIterator(props.getNodes());
   }
 
-  /* Returns an <code>Iterator</code> over the keys in the configuration
-   * below <code>key</code>
-   */
   public Iterator nodeIterator(String key) {
     return new EnumerationIterator(props.getNodes(key));
   }
