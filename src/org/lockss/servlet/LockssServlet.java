@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: LockssServlet.java,v 1.3 2003-03-15 00:55:33 tal Exp $
+// $Id: LockssServlet.java,v 1.4 2003-03-17 08:31:53 tal Exp $
 // ========================================================================
 
 /*
@@ -62,6 +62,13 @@ public abstract class LockssServlet extends HttpServlet
   static final String PARAM_ADMIN_ADDRESS =
     Configuration.PREFIX + "adminAddress";
 
+  static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
+					      160, 160, 0);
+  static final Image IMAGE_LOGO_SMALL = image("lockss-logo-small.gif",
+					      80, 81, 0);
+  static final Image IMAGE_TM = image("tm.gif", 16, 16, 0);
+  static final Image IMAGE_LOCKSS_RED = image("lockss-type-red.gif",
+					      595, 31, 0);
   private static final String fPageColor = "#FFFFFF";
   private static final int servletPort = 8081;
   protected static final String journalPropKey = "org.lockss.journal";
@@ -86,7 +93,6 @@ public abstract class LockssServlet extends HttpServlet
   protected String adminAddr;
   protected String adminHost;
   protected String localAddr;
-  private boolean tmFlg = false;
 
   private Vector footnotes;
   private int footNumber;
@@ -481,6 +487,11 @@ public abstract class LockssServlet extends HttpServlet
     return page;
   }
 
+  // eventually this should calculate w & h
+  static Image image(String file, int w, int h, int border) {
+    return new Image("/images/" + file, w, h, border);
+  }
+
   // Common page header
   private Composite getHeader() {
     Composite comp = new Composite();
@@ -489,27 +500,27 @@ public abstract class LockssServlet extends HttpServlet
     String machineName = getMachineName();
 
     table.newRow();
-    table.newCell("valign=top width=\"30%\"");
+    Image logo = isLargeLogo() ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
+    table.newCell("valign=top align=center width=\"20%\"");
+//     table.newCell("valign=top width=\"25%\"");
+//     table.newCell("valign=top align=center width=" +
+// 		  (logo.width() + IMAGE_TM.width() + 20));
 
-    Image logo = (isLargeLogo()
-		  ? (new Image("/LOCKSS.logo.2.gif", 216, 216, 0))
-		  : (new Image("/LOCKSS.logo.1.gif", 108, 108, 0)));
 
     table.add(new Link("/index.html", logo));
-    if (tmFlg) {
-      table.add(new Image("/tm.gif", 16, 16, 0));
-    }
-    table.newCell("valign=center align=center width=\"40%\"");
+    table.add(IMAGE_TM);
+    table.newCell("valign=center align=center width=\"60%\"");
     table.add("<h3>Permanent Publishing On The Web</h3>");
 
-    table.newCell("valign=center align=right width=\"30%\"");
+//     table.newCell("valign=center align=right width=\"25%\"");
+    table.newCell("valign=center align=center width=\"20%\"");
     table.add(getNavTable());
 
-    comp.add("<center><h3>ADMINISTRATION SYSTEM</h3></center>");
-    comp.add("<center><b>" + machineName + "</b></center>");
+    comp.add("<br><center><font size=+2><b>Cache Administration</b></font></center>");
+//     comp.add("<center><b>" + machineName + "</b></center>");
     String heading = getHeading();
     if (heading != null)
-      comp.add("<center><h3>"+heading+"</h3></center>");
+      comp.add("<br><center><font size=+1><b>"+heading+"</b></font></center>");
 
     return comp;
   }
@@ -517,18 +528,23 @@ public abstract class LockssServlet extends HttpServlet
   // Common page footer
   public Element getFooter() {
     Composite comp = new Composite();
-    String ver = "nover"; 		// tk
     String floppyVer = Configuration.getParam(PARAM_PLATFORM_VERSION);
+    String buildTimeStamp =
+      BuildInfo.getBuildProperty(BuildInfo.BUILD_TIMESTAMP);
+    String buildHost =
+      BuildInfo.getBuildProperty(BuildInfo.BUILD_HOST);
+    String ver = "Daemon built " + buildTimeStamp + " on " + buildHost;
 
     addNotes(comp);
     comp.add("<p>");
 
-    comp.add("<center>");
-    comp.add(new Image("/LOCKSS.type.red.gif", 595, 31, 0));
-    if (tmFlg) {
-      comp.add(new Image("/tm.gif", 16, 16, 0));
-    }
-    comp.add("</center>");
+    Table table = new Table(0, " CELLSPACING=0 CELLPADDING=0 ALIGN=CENTER");
+    table.newRow("VALIGN=TOP");
+    table.newCell();
+    table.add(IMAGE_LOCKSS_RED);
+    table.newCell();
+    table.add(IMAGE_TM);
+    comp.add(table);
 
     comp.add("<center><font size=-1>" +
 	     (floppyVer == null || floppyVer.equals("")
@@ -614,7 +630,6 @@ public abstract class LockssServlet extends HttpServlet
       if (clientAddr == null) {
 	clientAddr = getLocalIPAddr();
       }
-      tmFlg = new File(getAdminDir(), "tm.gif").exists();
       lockssHandle();
     }
     finally {
