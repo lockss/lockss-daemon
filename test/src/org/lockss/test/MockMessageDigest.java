@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.4 2002-11-07 02:30:23 aalto Exp $
+ * $Id: MockMessageDigest.java,v 1.5 2002-11-13 05:09:49 aalto Exp $
  */
 
 /*
@@ -122,17 +122,28 @@ public class MockMessageDigest extends MessageDigest {
     return length;
   }
 
-  protected void engineUpdate(byte input){
+  protected void engineUpdate(byte input) {
+    update(input);
   }
 
-  protected void engineReset(){
+  protected void engineReset() {
+    inputList = new Vector();
   }
 
-  protected void engineUpdate(byte[] input, int offset, int len){
+  protected void engineUpdate(byte[] input, int offset, int len) {
+    if ((len>0) && (input.length>=offset+len)) {
+      for (int ii=0; ii<len; ii++) {
+        engineUpdate(input[offset+ii]);
+      }
+    }
   }
 
-  protected byte[] engineDigest(){
-    return null;
+  protected byte[] engineDigest() {
+    byte[] bytes = new byte[inputList.size()];
+    for (int ii=0; ii<inputList.size(); ii++ ) {
+      bytes[ii] = ((Byte)inputList.elementAt(ii)).byteValue();
+    }
+    return bytes;
   }
 
 
