@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.29 2003-06-20 22:34:55 claire Exp $
+ * $Id: LockssTestCase.java,v 1.30 2003-07-11 23:40:47 troberts Exp $
  */
 
 /*
@@ -635,6 +635,18 @@ public class LockssTestCase extends TestCase {
     assertEquals(expected.getLength(), actual.getLength());
     assertEquals(expected.getOffset(), actual.getOffset());
     assertTrue(Arrays.equals(expected.getData(), actual.getData()));
+  }
+
+
+  /**
+   * Asserts that two collections have all the same elements of the same
+   * cardinality; tries to give useful output if it fails
+   */
+  public static void assertSameElements(Collection expected,
+					Collection actual) {
+    assertTrue("Expected "+expected+" but was "+actual,
+	       org.apache.commons.collections.
+	       CollectionUtils.isEqualCollection(expected, actual));
   }
 
   /** Abstraction to do something in another thread, after a delay,
