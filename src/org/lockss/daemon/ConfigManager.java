@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.10 2003-09-08 23:17:08 eaalto Exp $
+ * $Id: ConfigManager.java,v 1.11 2003-11-13 11:15:48 tlipkis Exp $
  */
 
 /*
@@ -725,7 +725,7 @@ public class ConfigManager implements LockssManager {
     }
 
     public void run() {
-      Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
+      Thread.currentThread().setPriority(Thread.NORM_PRIORITY + 1);
       goOn = true;
 
       // repeat every 10ish minutes until first successful load, then
