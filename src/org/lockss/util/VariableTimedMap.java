@@ -38,53 +38,81 @@ import java.util.*;
  */
 
 public class VariableTimedMap extends TimedMap implements Map {
+  SortedMap deadlineKeys;
 
   public VariableTimedMap() {
     entries = new HashMap();
-    keytimes = new TreeMap();
+    keytimes = new HashMap();
+    deadlineKeys = new TreeMap();
   }
 
- void updateEntries()
-  {
-    while (!entries.isEmpty())
-    {
-      Deadline entry = (Deadline)((SortedMap)keytimes).firstKey();
-      if (entry.expired())
-      {
-        Object obj = keytimes.get(entry);
-        keytimes.remove(entry);
-        entries.remove(obj);
-      }
-      else
+  void updateEntries() {
+    while (!keytimes.isEmpty()) {
+      Deadline dead = (Deadline)deadlineKeys.firstKey();
+      if (dead.expired()) {
+	List keys = (List)deadlineKeys.get(dead);
+	for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
+	  Object key = iter.next();
+	  entries.remove(key);
+	  keytimes.remove(key);
+	}
+        deadlineKeys.remove(dead);
+      } else {
         return;
+      }
     }
+  }
+
+  public void clear() {
+    super.clear();
+    deadlineKeys.clear();
   }
 
   boolean areThereExpiredEntries() {
     if (keytimes.isEmpty()) {
       return false;
     }
-    Deadline first = (Deadline)((SortedMap)keytimes).firstKey();
+    Deadline first = (Deadline)deadlineKeys.firstKey();
     return first.expired();
   }
 
   public Object remove(Object key) {
     if (containsKey(key)) {
-      keytimes.values().remove(key);
+      removeKeyFromDeadlineKeys(key);
+      keytimes.remove(key);
     }
     return entries.remove(key);
   }
 
-  public Object put(Object key, Object value, int interval)
-  {
+  /** Add an antry that will expire in interval milliseconds. */
+  public Object put(Object key, Object value, long interval) {
+    return put(key, value, Deadline.in(interval));
+  }
+
+  /** Add an antry that will expire at the deadline. */
+  public Object put(Object key, Object value, Deadline deadline) {
     updateEntries();
-    Object oldkey = null;
     if (containsKey(key)) {
-      keytimes.values().remove(key);
+      removeKeyFromDeadlineKeys(key);
     }
-    Deadline deadline = Deadline.in(interval);
-    keytimes.put(deadline,key);
+    keytimes.put(key, deadline);
+    List keys = (List)deadlineKeys.get(deadline);
+    if (keys == null) {
+      keys = new ArrayList(4);
+      deadlineKeys.put(deadline, keys);
+    }
+    keys.add(key);
     return entries.put(key, value);
+  }
+
+  private void removeKeyFromDeadlineKeys(Object key) {
+    Deadline oldDead = (Deadline)keytimes.get(key);
+    if (oldDead != null) {
+      List keys = (List)deadlineKeys.get(oldDead);
+      if (keys != null) {
+	keys.remove(key);
+      }
+    }
   }
 
   public Object put(Object key, Object value) {

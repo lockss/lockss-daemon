@@ -1,5 +1,5 @@
 /*
- * $Id: TestVariableTimedMap.java,v 1.2 2003-06-20 22:34:57 claire Exp $
+ * $Id: TestVariableTimedMap.java,v 1.3 2004-04-29 10:16:48 tlipkis Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ public class TestVariableTimedMap extends LockssTestCase {
   };
 
   protected void setUp() throws Exception {
-    TimeBase.setSimulated();
     super.setUp();
+    TimeBase.setSimulated();
   }
 
   public void tearDown() throws Exception {
@@ -107,6 +107,17 @@ public class TestVariableTimedMap extends LockssTestCase {
     map.put(keys[1],"joe",timeouts[1]);
     String joe = (String)map.get(keys[1]);
     assertSame(joe,"joe");
+  }
+
+  public void testSameDeadline() {
+    VariableTimedMap map = new VariableTimedMap();
+    map.put("1", "A", 1000);
+    map.put("2", "B", 1000);
+    assertEquals("A", map.get("1"));
+    assertEquals("B", map.get("2"));
+    TimeBase.step(2000);
+    assertEquals(null, map.get("1"));
+    assertEquals(null, map.get("2"));
   }
 
   public void testUpdate() {

@@ -1,5 +1,5 @@
 /*
- * $Id: FixedTimedMap.java,v 1.3 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: FixedTimedMap.java,v 1.4 2004-04-29 10:16:48 tlipkis Exp $
  */
 
 /*
@@ -56,26 +56,23 @@ public class FixedTimedMap extends TimedMap implements Map
    * @param interval Interval after which entries expire, in milliseconds.
    */
 
-  public FixedTimedMap(int interval)
-  {
+  public FixedTimedMap(int interval) {
     this.interval = interval;
     this.keytimes = new HashMap();
     this.entries = new SequencedHashMap();
   }
 
-  void updateEntries()
-  {
-    while (!entries.isEmpty())
-    {
-      Object obj = ((SequencedHashMap)entries).getFirstKey();
-      Deadline entry = (Deadline)keytimes.get(obj);
-      if (entry.expired())
-      {
-        keytimes.remove(obj);
-        entries.remove(obj);
+  void updateEntries() {
+    while (!entries.isEmpty()) {
+      Object key = ((SequencedHashMap)entries).getFirstKey();
+      Deadline entry = (Deadline)keytimes.get(key);
+      if (entry.expired()) {
+        keytimes.remove(key);
+        entries.remove(key);
       }
-      else
+      else {
         return;
+      }
     }
   }
 
@@ -83,12 +80,10 @@ public class FixedTimedMap extends TimedMap implements Map
     if (entries.isEmpty()) {
       return false;
     }
-    Object obj = ((SequencedHashMap)entries).getFirstKey();
-    Deadline first = (Deadline)keytimes.get(obj);
+    Object key = ((SequencedHashMap)entries).getFirstKey();
+    Deadline first = (Deadline)keytimes.get(key);
     return first.expired();
   }
-
-
 
   public Object remove(Object key) {
     updateEntries();
@@ -96,8 +91,7 @@ public class FixedTimedMap extends TimedMap implements Map
     return entries.remove(key);
   }
 
-  public Object put(Object key, Object value)
-  {
+  public Object put(Object key, Object value) {
     updateEntries();
     Deadline deadline = Deadline.in(interval);
     keytimes.put(key,deadline);
@@ -108,13 +102,10 @@ public class FixedTimedMap extends TimedMap implements Map
    * own expiry time based on when it was added in real time.
    * @param t Map whose entries are being added to this map.
    */
-
-  public void putAll(Map t)
-  {
+  public void putAll(Map t) {
     updateEntries();
     Iterator it = t.entrySet().iterator();
-    while (it.hasNext())
-    {
+    while (it.hasNext()) {
       Map.Entry entry = (Map.Entry) it.next();
       put(entry.getKey(), entry.getValue());
     }

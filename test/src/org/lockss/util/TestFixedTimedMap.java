@@ -1,5 +1,5 @@
 /*
- * $Id: TestFixedTimedMap.java,v 1.2 2003-06-20 22:34:56 claire Exp $
+ * $Id: TestFixedTimedMap.java,v 1.3 2004-04-29 10:16:48 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,17 @@ public class TestFixedTimedMap extends LockssTestCase {
     map.put(keys[1],"joe");
     String joe = (String)map.get(keys[1]);
     assertSame(joe,"joe");
+  }
+
+  public void testSameDeadline() {
+    FixedTimedMap map = new FixedTimedMap(1000);
+    map.put("1", "A");
+    map.put("2", "B");
+    assertEquals("A", map.get("1"));
+    assertEquals("B", map.get("2"));
+    TimeBase.step(2000);
+    assertEquals(null, map.get("1"));
+    assertEquals(null, map.get("2"));
   }
 
   public void testUpdate() {
