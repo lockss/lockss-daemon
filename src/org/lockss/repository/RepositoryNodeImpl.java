@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.9 2002-11-27 20:33:32 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.10 2002-12-17 01:57:50 aalto Exp $
  */
 
 /*
@@ -94,6 +94,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public boolean hasContent() {
     ensureCurrentInfoLoaded();
     return currentVersion>0;
+  }
+
+  public long getContentSize() {
+    if (!hasContent()) {
+      logger.error("Cannot get size if no content: "+url);
+      throw new UnsupportedOperationException("No content to get size from.");
+    }
+    return currentCacheFile.length();
   }
 
   public Properties getState() {

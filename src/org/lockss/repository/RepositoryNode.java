@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNode.java,v 1.5 2002-11-23 03:40:49 aalto Exp $
+ * $Id: RepositoryNode.java,v 1.6 2002-12-17 01:57:50 aalto Exp $
  */
 
 /*
@@ -52,6 +52,14 @@ public interface RepositoryNode {
    * @return true if the node has content
    */
   public boolean hasContent();
+
+  /**
+   * Returns the size of the current version of stored cache.  Throws an
+   * exception if called on a content-less node.
+   * @return size
+   * @throws UnsupportedOperationException
+   */
+  public long getContentSize();
 
   /**
    * Returns the state information for the node.
