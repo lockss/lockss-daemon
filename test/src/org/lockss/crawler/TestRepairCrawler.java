@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.6 2004-03-03 00:38:44 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.7 2004-03-10 21:34:45 troberts Exp $
  */
 
 /*
@@ -123,6 +123,23 @@ public class TestRepairCrawler extends LockssTestCase {
     assertTrue("cachedUrls: "+cachedUrls, cachedUrls.contains(repairUrl));
   }
 
+  public void testRepairCrawlObeysCrawlWindow() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String repairUrl = "http://example.com/forcecache.html";
+    cus.addUrl(repairUrl);
+    crawlRule.addUrlToCrawl(repairUrl);
+
+    List repairUrls = ListUtil.list(repairUrl);
+    spec = new CrawlSpec(startUrls, crawlRule, 1);
+    spec.setCrawlWindow(new MyMockCrawlWindow());
+    crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
+
+    crawler.doCrawl();
+
+    Set cachedUrls = cus.getForceCachedUrls();
+    assertEquals(0, cachedUrls.size());
+  }
+
   public void testRepairCrawlPokesWatchdog() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String repairUrl1 = "http://example.com/forcecache1.html";
@@ -208,6 +225,15 @@ public class TestRepairCrawler extends LockssTestCase {
 //     assertEquals(id, crawler.getContentSource(repairUrl));
 //   }
 
+
+  private class MyMockCrawlWindow implements CrawlWindow {
+    public boolean canCrawl() {
+      return false;
+    }
+    public boolean canCrawl(Date date) {
+      return canCrawl();
+    }
+  }
 
   private class MyRepairCrawler extends RepairCrawler {
     private Map contentMap = new HashMap();
