@@ -1,5 +1,5 @@
 /*
- * $Id: MockEffortService.java,v 1.1.2.2 2004-10-03 20:40:52 dshr Exp $
+ * $Id: MockEffortService.java,v 1.1.2.3 2004-10-04 17:56:35 dshr Exp $
  */
 
 /*
@@ -45,44 +45,75 @@ import org.lockss.config.*;
  * Mock effort proof service.
  */
 public class MockEffortService extends BaseLockssDaemonManager
-    implements EffortService {
+  implements EffortService {
   static final String PREFIX = Configuration.PREFIX + "effort.";
 
-    static Logger log = Logger.getLogger("MockEffortService");
+  static Logger log = Logger.getLogger("MockEffortService");
 
-    private EffortService theEffortService;
-    private boolean myGenerateResult;
-    private boolean myVerifyResult;
-    private List myProof;
-    private long duration;
+  private EffortService theEffortService;
+  private boolean myGenerateProofResult;
+  private boolean myVerifyProofResult;
+  private List myProof;
+  private Exception myProofException;
+  private boolean myGenerateVoteResult;
+  private boolean myVerifyVoteResult;
+  private boolean myAgreeVoteResult;
+  private List myVote;
+  private Exception myVoteException;
+  private long proofDuration;
+  private long voteDuration;
 
-    public MockEffortService() {
-	super();
-	theEffortService = this;
-	myGenerateResult = false;
-	myVerifyResult = false;
-	myProof = ListUtil.list();
-	duration = 500;
-    }
+  public MockEffortService() {
+    super();
+    theEffortService = this;
+    myGenerateProofResult = false;
+    myVerifyProofResult = false;
+    myProof = ListUtil.list();
+    myProofException = null;
+    proofDuration = 500;
+    myGenerateVoteResult = false;
+    myVerifyVoteResult = false;
+    myAgreeVoteResult = false;
+    myVote = ListUtil.list();
+    myVoteException = null;
+    voteDuration = 500;
+  }
 
-    public MockEffortService(boolean res, boolean ver, List l, long dur) {
-	super();
-	theEffortService = this;
-	myGenerateResult = res;
-	myVerifyResult = ver;
-	myProof = l;
-	duration = dur;
-    }
+  public void setGenerateProofResult(boolean res) {
+    myGenerateProofResult = res;
+  }
+  public void setVerifyProofResult(boolean res) {
+    myVerifyProofResult = res;
+  }
+  public void setProof(List l) {
+    myProof = l;
+  }
+  public void setProofDuration(long dur) {
+    proofDuration = dur;
+  }
+  public void setProofException(Exception e) {
+    myProofException = e;
+  }
 
-    public void setGenerateResult(boolean res) {
-	myGenerateResult = res;
-    }
-    public void setVerifyResult(boolean res) {
-	myVerifyResult = res;
-    }
-    public void setProof(List l) {
-	myProof = l;
-    }
+  public void setGenerateVoteResult(boolean res) {
+    myGenerateVoteResult = res;
+  }
+  public void setVerifyVoteResult(boolean res) {
+    myVerifyVoteResult = res;
+  }
+  public void setAgreeVoteResult(boolean res) {
+    myAgreeVoteResult = res;
+  }
+  public void setVote(List l) {
+    myVote = l;
+  }
+  public void setVoteDuration(long dur) {
+    voteDuration = dur;
+  }
+  public void setVoteException(Exception e) {
+    myVoteException = e;
+  }
+
   /**
    * Ask for the effort proof specified by the <code>EffortService.Proof</code>
    * object to be generated so that it can later be retrieved from the
@@ -100,18 +131,18 @@ public class MockEffortService extends BaseLockssDaemonManager
 			     Deadline timer,
 			     ProofCallback callback,
 			     Serializable cookie) {
-      final Proof ep = effortProof;
-      final ProofCallback cb = callback;
-      // XXX
-      TimerQueue.Callback tqcb = new TimerQueue.Callback() {
-	      public void timerExpired(Object tqCookie) {
-		  log.debug("Effort callback for " + ((String) tqCookie));
-		  cb.generationFinished(ep, (Serializable)tqCookie, null);
-	      }
-	  };
-	  TimerQueue.schedule(Deadline.in(duration), tqcb, cookie);
-	  log.debug("Callback in 500 scheduled for " + ((String) cookie));
-      return true;
+    final Proof ep = effortProof;
+    final ProofCallback cb = callback;
+    // XXX
+    TimerQueue.Callback tqcb = new TimerQueue.Callback() {
+	public void timerExpired(Object tqCookie) {
+	  log.debug("Effort callback for " + ((String) tqCookie));
+	  cb.generationFinished(ep, (Serializable)tqCookie, myProofException);
+	}
+      };
+    TimerQueue.schedule(Deadline.in(proofDuration), tqcb, cookie);
+    log.debug("Callback in 500 scheduled for " + ((String) cookie));
+    return true;
   }
 
   /** Test whether an effort proof could be successfully sceduled before a
@@ -120,10 +151,10 @@ public class MockEffortService extends BaseLockssDaemonManager
    * @param when the deadline
    * @return true if such a request could be accepted into the scedule.
    */
-    public boolean canProofBeScheduledBefore(Proof ep, Deadline when) {
-	// XXX
-	return true;
-    }
+  public boolean canProofBeScheduledBefore(Proof ep, Deadline when) {
+    // XXX
+    return true;
+  }
 
   /**
    * Ask for the vote specified by the <code>EffortService.Vote</code>
@@ -139,21 +170,21 @@ public class MockEffortService extends BaseLockssDaemonManager
    *               <code>false</code> otherwise.
    */
   public boolean generateVote(Vote voteSpec,
-			     Deadline timer,
-			     VoteCallback callback,
-			     Serializable cookie) {
-      final Vote vote = voteSpec;
-      final VoteCallback cb = callback;
-      // XXX
-      TimerQueue.Callback tqcb = new TimerQueue.Callback() {
-	      public void timerExpired(Object tqCookie) {
-		  log.debug("Vote callback for " + ((String) tqCookie));
-		  cb.generationFinished(vote, (Serializable)tqCookie, null);
-	      }
-	  };
-	  TimerQueue.schedule(Deadline.in(duration), tqcb, cookie);
-	  log.debug("Callback in 500 scheduled for " + ((String) cookie));
-      return true;
+			      Deadline timer,
+			      VoteCallback callback,
+			      Serializable cookie) {
+    final Vote vote = voteSpec;
+    final VoteCallback cb = callback;
+    // XXX
+    TimerQueue.Callback tqcb = new TimerQueue.Callback() {
+	public void timerExpired(Object tqCookie) {
+	  log.debug("Vote callback for " + ((String) tqCookie));
+	  cb.generationFinished(vote, (Serializable)tqCookie, myVoteException);
+	}
+      };
+    TimerQueue.schedule(Deadline.in(voteDuration), tqcb, cookie);
+    log.debug("Callback in 500 scheduled for " + ((String) cookie));
+    return true;
   }
 
   /** Test whether a vote could be successfully scheduled before a
@@ -162,56 +193,75 @@ public class MockEffortService extends BaseLockssDaemonManager
    * @param when the deadline
    * @return true if such a request could be accepted into the scedule.
    */
-    public boolean canVoteBeScheduledBefore(Vote vote, Deadline when) {
-	// XXX
-	return true;
-    }
+  public boolean canVoteBeScheduledBefore(Vote vote, Deadline when) {
+    // XXX - need control over this
+    return true;
+  }
 
   /** Return true if the EffortService has nothing to do.  Useful in unit
    * tests. */
-    public boolean isIdle() {
-	//  XXX
-	return true;
-    }
+  public boolean isIdle() {
+    //  XXX - this needs to go false while processing
+    return true;
+  }
 
   /** Cancel generation of the specified proof.
    * @param ep the <code>EffortService.Proof</code> to be cancelled.
    */
-    public void cancelProofs(Proof ep) {
-    }
+  public void cancelProofs(Proof ep) {
+    // XXX need an implementation
+  }
 
-    public Proof makeProof() {
-	return new ProofImpl();
-    }
+  public Proof makeProof() {
+    return new ProofImpl();
+  }
 
-    public Vote makeVote() {
-	return new VoteImpl();
-    }
+  public Vote makeVote() {
+    return new VoteImpl();
+  }
 
   /**
    * <code>EffortService.Proof</code> is used to describe effort proofs
    * to be generated by the effort service.
    */
   public class ProofImpl implements Proof {
-    // XXX
+    private boolean generateResult;
+    private boolean verifyResult;
+    private List proof;
+    private Exception ex;
+
+    ProofImpl() {
+      generateResult = myGenerateProofResult;
+      verifyResult = myVerifyProofResult;
+      proof = myProof;
+      ex = myProofException;
+    }
     /**
      * Return the <code>EffortService</code> instance in use
      */
-      public EffortService getEffortService() {
-	  return theEffortService;
-      }
+    public EffortService getEffortService() {
+      return theEffortService;
+    }
 
-      protected boolean generate() {
-	  return myGenerateResult;
-      }
+    public List getProof() {
+      return proof;
+    }
 
-      protected boolean verify() {
-	  return myVerifyResult;
-      }
+    public boolean isVerified() {
+      return (ex == null && verifyResult);
+    }
 
-      public List getProof() {
-	  return myProof;
-      }
+    protected boolean generate() {
+      return generateResult;
+    }
+
+    protected boolean verify() {
+      return verifyResult;
+    }
+
+    protected Exception getException() {
+      return ex;
+    }
   }
 
   /**
@@ -219,14 +269,50 @@ public class MockEffortService extends BaseLockssDaemonManager
    * to be generated by the effort service.
    */
   public class VoteImpl implements Vote {
+    private boolean generateResult;
+    private boolean verifyResult;
+    private boolean agreeResult;
+    private List vote;
+    private Exception ex;
+
+    VoteImpl() {
+      generateResult = myGenerateVoteResult;
+      verifyResult = myVerifyVoteResult;
+      agreeResult = myAgreeVoteResult;
+      vote = myVote;
+      ex = myVoteException;
+    }
     // XXX
     /**
      * Return the <code>EffortService</code> instance in use
      */
-      public EffortService getEffortService() {
-	  return theEffortService;
-      }
+    public EffortService getEffortService() {
+      return theEffortService;
+    }
 
+    public List getVote() {
+      return vote;
+    }
+
+    public boolean isValid() {
+      return (ex == null && verifyResult);
+    }
+
+    public boolean isAgreement() {
+      return (ex == null && agreeResult);
+    }
+
+    protected boolean generate() {
+      return generateResult;
+    }
+
+    protected boolean verify() {
+      return verifyResult;
+    }
+
+    protected Exception getException() {
+      return ex;
+    }
   }
 
 

@@ -1,5 +1,5 @@
 /*
-* $Id: V3Voter.java,v 1.1.2.6 2004-10-03 20:40:51 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.7 2004-10-04 17:56:34 dshr Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class V3Voter extends V3Poll {
   static Logger log=Logger.getLogger("V3Voter");
 
   private int m_state = STATE_INITIALIZING;
-    private EffortService theEffortService = null;
+  private EffortService theEffortService = null;
   /**
    * create a new poll called by some other peer
    *
@@ -101,10 +101,10 @@ public class V3Voter extends V3Poll {
 	  byte[] challenge,
 	  long duration,
 	  String hashAlg) {
-      super(pollspec, pm, orig, challenge, duration, hashAlg);
+    super(pollspec, pm, orig, challenge, duration, hashAlg);
 
     // XXX
-      theEffortService = pm.getEffortService(pollspec);
+    theEffortService = pm.getEffortService(pollspec);
   }
 
   // Implementations of abstract methods from V3Poll
@@ -153,11 +153,11 @@ public class V3Voter extends V3Poll {
    * start the poll.
    */
   void startPoll() {
-      if (m_pollstate != PS_INITING) {
+    if (m_pollstate != PS_INITING) {
       m_pollstate = ERR_IO; // XXX choose better
       stopPoll();
       return;
-      }
+    }
     // XXX
     log.debug3("scheduling poll to complete by " + m_deadline);
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
@@ -192,23 +192,27 @@ public class V3Voter extends V3Poll {
       stopPoll();
       return;
     }
+    //  XXX decide whether to even bother verifying the effort
+    //  XXX two effort service activities
+    //  XXX - verify effort from message
+    //  XXX - generate effort in reply
     EffortService.ProofCallback cb = new PollAckEffortCallback(m_pollmanager);
     EffortService.Proof ep = null;
     EffortService es = null;
     if (false) {
-	// XXX
-	ep = msg.getEffortProof();
-	es = ep.getEffortService();
+      // XXX
+      ep = msg.getEffortProof();
+      es = ep.getEffortService();
     } else {
-	// XXX
-	es = theEffortService;
-	ep = es.makeProof();
+      // XXX
+      es = theEffortService;
+      ep = es.makeProof();
     }
     Deadline timer = msg.getDeadline();
     Serializable cookie = msg.getKey();
     if (es.proveEffort(ep, timer, cb, cookie)) {
       // effort proof for Poll Ack successfuly scheduled
-	log.debug("Scheduled callback for " + ((String)cookie));
+      log.debug("Scheduled callback for " + ((String)cookie));
       m_state = STATE_SENDING_POLL_ACK;
     } else {
       log.warning("could not schedule effort proof " + ep.toString() +
@@ -229,19 +233,19 @@ public class V3Voter extends V3Poll {
     EffortService.Vote vote = null;
     EffortService es = null;
     if (false) {
-	// XXX
-	// vote = msg.getVoteSpec();
-	es = vote.getEffortService();
+      // XXX
+      // vote = msg.getVoteSpec();
+      es = vote.getEffortService();
     } else {
-	// XXX
-	es = theEffortService;
-	vote = es.makeVote();
+      // XXX
+      es = theEffortService;
+      vote = es.makeVote();
     }
     Deadline timer = msg.getDeadline();
     Serializable cookie = msg.getKey();
     if (es.generateVote(vote, timer, cb, cookie)) {
       // vote generation successfuly scheduled
-	log.debug("Scheduled vote callback for " + ((String)cookie));
+      log.debug("Scheduled vote callback for " + ((String)cookie));
       m_state = STATE_SENDING_VOTE;
     } else {
       log.warning("could not schedule effort proof " + vote.toString() +
@@ -284,9 +288,9 @@ public class V3Voter extends V3Poll {
     m_state = STATE_PROCESS_RECEIPT;
   }
 
-    public int getPollState() {
-	return m_state;
-    }
+  public int getPollState() {
+    return m_state;
+  }
 
   /**
    * create a human readable string representation of this poll
@@ -300,8 +304,8 @@ public class V3Voter extends V3Poll {
     sb.append(" ");
     sb.append(m_cus.toString());
     if (m_msg != null) {
-	sb.append(" ");
-	sb.append(m_msg.getOpcodeString());
+      sb.append(" ");
+      sb.append(m_msg.getOpcodeString());
     }
     sb.append(" key: ");
     sb.append(m_key);
@@ -312,10 +316,10 @@ public class V3Voter extends V3Poll {
   }
 
   class PollAckEffortCallback implements EffortService.ProofCallback {
-      private PollManager pollMgr = null;
-      PollAckEffortCallback(PollManager pm) {
-	  pollMgr = pm;
-      }
+    private PollManager pollMgr = null;
+    PollAckEffortCallback(PollManager pm) {
+      pollMgr = pm;
+    }
     /**
      * Called to indicate generation of a proof of effort for
      * the PollAck message is complete.
@@ -326,19 +330,27 @@ public class V3Voter extends V3Poll {
     public void generationFinished(EffortService.Proof ep,
 				   Serializable cookie,
 				   Exception e) {
-      // XXX
+      if (e != null) {
+	log.debug("PollAckEffortProofCallback: " + ((String) cookie) +
+		  " threw " + e);
+	m_state = STATE_FINALIZING;
+	if (m_pollstate != PS_COMPLETE) {
+	  stopPoll();
+	}
+      } else {
 	log.debug("PollAckEffortProofCallback: " + ((String) cookie));
-	V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
-	p.m_state = STATE_WAITING_POLL_PROOF;
+	m_state = STATE_WAITING_POLL_PROOF;
+	// XXX send the proof
+      }
     }
 
   }
 
   class VoteGenerationCallback implements EffortService.VoteCallback {
-      private PollManager pollMgr = null;
-      VoteGenerationCallback(PollManager pm) {
-	  pollMgr = pm;
-      }
+    private PollManager pollMgr = null;
+    VoteGenerationCallback(PollManager pm) {
+      pollMgr = pm;
+    }
     /**
      * Called to indicate generation of a vote is complete.
      * @param vote the Vote in question
@@ -349,40 +361,44 @@ public class V3Voter extends V3Poll {
 				   Serializable cookie,
 				   Exception e) {
       // XXX
-	log.debug("VoteGenerationCallback: " + ((String) cookie));
-	if (true) {
-	    m_state = STATE_WAITING_REPAIR_REQ;
-	} else {
-	    V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
-	    p.m_state = STATE_WAITING_REPAIR_REQ;
+      if (e != null) {
+	log.debug("VoteGenerationCallback: " + ((String) cookie) +
+		  " threw " + e);
+	m_state = STATE_FINALIZING;
+	if (m_pollstate != PS_COMPLETE) {
+	  stopPoll();
 	}
+      } else {
+	log.debug("VoteGenerationCallback: " + ((String) cookie));
+	m_state = STATE_WAITING_REPAIR_REQ;
+      }
     }
 
   }
 
-    class RepairTimerCallback implements TimerQueue.Callback {
-	public void timerExpired(Object cookie) {
-	    if (m_state == STATE_SENDING_REPAIR) {
-		m_state = STATE_WAITING_REPAIR_REQ;
-	    } else {
-		log.error("Bad state in callback " + m_state);
-	    }
-	}
+  class RepairTimerCallback implements TimerQueue.Callback {
+    public void timerExpired(Object cookie) {
+      if (m_state == STATE_SENDING_REPAIR) {
+	m_state = STATE_WAITING_REPAIR_REQ;
+      } else {
+	log.error("Bad state in callback " + m_state);
+      }
     }
+  }
 
-    class ReceiptTimerCallback implements TimerQueue.Callback {
-	public void timerExpired(Object cookie) {
-	    if (m_state == STATE_PROCESS_RECEIPT) {
-		m_state = STATE_FINALIZING;
-		if(m_pollstate != PS_COMPLETE) {
-		   stopPoll();
-		}
-		
-	    } else {
-		log.error("Bad state in callback " + m_state);
-	    }
+  class ReceiptTimerCallback implements TimerQueue.Callback {
+    public void timerExpired(Object cookie) {
+      if (m_state == STATE_PROCESS_RECEIPT) {
+	m_state = STATE_FINALIZING;
+	if(m_pollstate != PS_COMPLETE) {
+	  stopPoll();
 	}
+		
+      } else {
+	log.error("Bad state in callback " + m_state);
+      }
     }
+  }
 
   class PollTimerCallback implements TimerQueue.Callback {
     /**

@@ -1,5 +1,5 @@
 /*
- * $Id: EffortServiceImpl.java,v 1.1.2.2 2004-10-03 20:40:51 dshr Exp $
+ * $Id: EffortServiceImpl.java,v 1.1.2.3 2004-10-04 17:56:34 dshr Exp $
  */
 
 /*
@@ -45,17 +45,17 @@ import org.lockss.config.*;
  * Mock effort proof service.
  */
 public class EffortServiceImpl extends BaseLockssDaemonManager
-    implements EffortService {
+  implements EffortService {
   static final String PREFIX = Configuration.PREFIX + "effort.";
 
-    static Logger log = Logger.getLogger("MockEffortService");
+  static Logger log = Logger.getLogger("MockEffortService");
 
-    private EffortService theEffortService = null;
+  private EffortService theEffortService = null;
 
-    public EffortServiceImpl() {
-	super();
-	theEffortService = this;
-    }
+  public EffortServiceImpl() {
+    super();
+    theEffortService = this;
+  }
 
   /**
    * Ask for the effort proof specified by the <code>EffortService.Proof</code>
@@ -74,8 +74,8 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
 			     Deadline timer,
 			     ProofCallback callback,
 			     Serializable cookie) {
-      // XXX
-      return false;
+    // XXX
+    return false;
   }
 
   /** Test whether an effort proof could be successfully sceduled before a
@@ -84,10 +84,10 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
    * @param when the deadline
    * @return true if such a request could be accepted into the scedule.
    */
-    public boolean canProofBeScheduledBefore(Proof ep, Deadline when) {
-	// XXX
-	return false;
-    }
+  public boolean canProofBeScheduledBefore(Proof ep, Deadline when) {
+    // XXX
+    return false;
+  }
 
   /**
    * Ask for the vote specified by the <code>EffortService.Vote</code>
@@ -103,10 +103,10 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
    *               <code>false</code> otherwise.
    */
   public boolean generateVote(Vote voteSpec,
-			     Deadline timer,
-			     VoteCallback callback,
-			     Serializable cookie) {
-      return false;
+			      Deadline timer,
+			      VoteCallback callback,
+			      Serializable cookie) {
+    return false;
   }
 
   /** Test whether a vote could be successfully scheduled before a
@@ -115,31 +115,31 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
    * @param when the deadline
    * @return true if such a request could be accepted into the scedule.
    */
-    public boolean canVoteBeScheduledBefore(Vote vote, Deadline when) {
-	// XXX
-	return false;
-    }
+  public boolean canVoteBeScheduledBefore(Vote vote, Deadline when) {
+    // XXX
+    return false;
+  }
 
   /** Return true if the EffortService has nothing to do.  Useful in unit
    * tests. */
-    public boolean isIdle() {
-	//  XXX
-	return true;
-    }
+  public boolean isIdle() {
+    //  XXX
+    return true;
+  }
 
   /** Cancel generation of the specified proof.
    * @param ep the <code>EffortService.Proof</code> to be cancelled.
    */
-    public void cancelProofs(Proof ep) {
-    }
+  public void cancelProofs(Proof ep) {
+  }
 
-    public Proof makeProof() {
-	return new ProofImpl();
-    }
+  public Proof makeProof() {
+    return new ProofImpl();
+  }
 
-    public Vote makeVote() {
-	return new VoteImpl();
-    }
+  public Vote makeVote() {
+    return new VoteImpl();
+  }
 
   /**
    * <code>EffortService.Proof</code> is used to describe effort proofs
@@ -150,21 +150,26 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
     /**
      * Return the <code>EffortService</code> instance in use
      */
-      public EffortService getEffortService() {
-	  return theEffortService;
-      }
+    public EffortService getEffortService() {
+      return theEffortService;
+    }
 
-      protected boolean generate() {
-	  return false;
-      }
+    public List getProof() {
+      return ListUtil.list();
+    }
 
-      protected boolean verify() {
-	  return false;
-      }
+    public boolean isVerified() {
+      return false;
+    }
 
-      public List getProof() {
-	  return ListUtil.list();
-      }
+    protected boolean generate() {
+      return false;
+    }
+
+    protected boolean verify() {
+      return false;
+    }
+
   }
 
   /**
@@ -176,9 +181,33 @@ public class EffortServiceImpl extends BaseLockssDaemonManager
     /**
      * Return the <code>EffortService</code> instance in use
      */
-      public EffortService getEffortService() {
-	  return theEffortService;
-      }
+    public EffortService getEffortService() {
+      return theEffortService;
+    }
+
+    public List getVote() {
+      return ListUtil.list();
+    }
+
+    public boolean isValid() {
+      return false;
+    }
+
+    public boolean isAgreement() {
+      return false;
+    }
+
+    protected boolean generate() {
+      return false;
+    }
+
+    protected boolean verify() {
+      return false;
+    }
+
+    protected Exception getException() {
+      return null;
+    }
 
   }
 

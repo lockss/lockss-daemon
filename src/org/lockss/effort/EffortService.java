@@ -1,5 +1,5 @@
 /*
- * $Id: EffortService.java,v 1.1.2.4 2004-10-03 20:40:51 dshr Exp $
+ * $Id: EffortService.java,v 1.1.2.5 2004-10-04 17:56:34 dshr Exp $
  */
 
 /*
@@ -152,6 +152,7 @@ public interface EffortService extends LockssManager {
     public EffortService getEffortService();
 
       public List getProof();
+    public boolean isVerified();
   }
 
   /**
@@ -165,6 +166,9 @@ public interface EffortService extends LockssManager {
      */
     public EffortService getEffortService();
 
+    public List getVote();
+    public boolean isValid();
+    public boolean isAgreement();
   }
 
   /** Exception thrown if a hash could not be completed by the deadline. */
