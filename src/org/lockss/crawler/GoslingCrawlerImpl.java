@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.17 2003-04-18 22:31:02 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.18 2003-04-23 17:25:44 troberts Exp $
  */
 
 /*
@@ -175,7 +175,7 @@ public class GoslingCrawlerImpl implements Crawler {
     CachedUrlSet cus = au.getAUCachedUrlSet();
     Set parsedPages = new HashSet();
 
-    List extractedUrls = new LinkedList();
+    Set extractedUrls = new HashSet();
 
     Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
@@ -186,7 +186,8 @@ public class GoslingCrawlerImpl implements Crawler {
     }
 
     while (!extractedUrls.isEmpty() && !deadline.expired()) {
-      String url = (String)extractedUrls.remove(0);
+      String url = (String)extractedUrls.iterator().next();
+      extractedUrls.remove(url);
       if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, false)) {
 	wasError = true;
       }
@@ -201,13 +202,13 @@ public class GoslingCrawlerImpl implements Crawler {
    * This is the meat of the crawl.  Fetches the specified url and adds
    * any urls it harvests from it to extractedUrls
    * @param url url to fetch
-   * @param extractedUrls list to write harvested urls to
+   * @param extractedUrls set to write harvested urls to
    * @param parsedPages set containing all the pages that have already
    * been parsed (to make sure we don't loop)
    * @param cus cached url set that the url belongs to
    * @return true if there were no errors
    */
-  protected boolean doCrawlLoop(String url, List extractedUrls, 
+  protected boolean doCrawlLoop(String url, Set extractedUrls, 
 			     Set parsedPages, CachedUrlSet cus,
 			     boolean overWrite) {
     boolean wasError = false;
@@ -241,7 +242,7 @@ public class GoslingCrawlerImpl implements Crawler {
 	  //XXX quick fix; if statement should be removed when we rework
 	  //handling of error condition
 	  if (cu.hasContent()) {
-	    addUrlsToList(cu, extractedUrls);//IOException if the CU can't be read
+	    addUrlsToSet(cu, extractedUrls);//IOException if the CU can't be read
 	    parsedPages.add(uc.getUrl());
 	    numUrlsParsed++;
 	  }
@@ -259,13 +260,13 @@ public class GoslingCrawlerImpl implements Crawler {
 
   /**
    * Method which will parse the html file represented by cu and add all
-   * urls on it to list
+   * urls in it which should be cached to set
    *
    * @param cu object representing a html file in the local file system
-   * @param list list to which all the urs in cu should be added
+   * @param set set to which all the urs in cu should be added
    * @throws IOException
    */
-  protected static void addUrlsToList(CachedUrl cu, List list)
+  protected static void addUrlsToSet(CachedUrl cu, Set set)
       throws IOException {
     if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
@@ -283,8 +284,9 @@ public class GoslingCrawlerImpl implements Crawler {
 	logger.debug("Extracted "+nextUrl);
 
 	//should check if this is something we should cache first
-	if (!list.contains(nextUrl)) {
-	  list.add(nextUrl);
+// 	if (au.shouldBeCached(nextUrl) && !set.contains(nextUrl)) {
+	if (!set.contains(nextUrl)) {
+	  set.add(nextUrl);
 	}
       }
     }
