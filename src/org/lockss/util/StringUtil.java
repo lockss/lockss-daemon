@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.10 2002-12-30 23:04:29 tal Exp $
+ * $Id: StringUtil.java,v 1.11 2003-02-26 04:34:36 tal Exp $
  */
 
 /*
@@ -315,6 +315,20 @@ public class StringUtil {
       sb.append(buf, 0, len);
     }
     return sb.toString();
+  }
+
+  /**
+   * Compare two strings for equality or both null.
+   * @param s1 string 1
+   * @param s2 string 2
+   * @return true if strings are equal or both null
+   */
+  public static boolean equalStrings(String s1, String s2) {
+    if (s1 == null) {
+      return s2 == null;
+    } else {
+      return s1.equals(s2);
+    }
   }
 }
 
