@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.12 2002-11-07 22:40:45 troberts Exp $
+ * $Id: Crawler.java,v 1.13 2002-11-26 17:59:42 troberts Exp $
  */
 
 /*
@@ -57,21 +57,21 @@ public class Crawler {
 
 
   private static final String imgtag = "img";
+  private static final String imgsrc = "src";
+
+  private static final String atag = "a";
+  private static final String asrc = "href";
+
   private static final String frametag = "frame";
   private static final String linktag = "link";
   private static final String scripttag = "script";
   private static final String scripttagend = "/script";
-  private static final String imgsrc = "src";
-  private static final String atag = "a";
-  private static final String asrc = "href";
   private static final String bodytag = "body";
   private static final String tabletag = "table";
   private static final String tdtag = "tc";
   private static final String backgroundsrc = "background";
 
   private static Logger logger = Logger.getLogger("Crawler");
-
-  //  private static final int MAX_TAG_LENGTH = 2048;
 
   /**
    * Main method of the crawler; it loops through crawling and caching
@@ -82,21 +82,34 @@ public class Crawler {
    *
    */
   public static void doCrawl(ArchivalUnit au, CrawlSpec spec) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with a null ArchivalUnit");
+    }
+    else if (spec == null) {
+      throw new IllegalArgumentException("Called with a null CrawlSpec");
+    }
+
     List list = createInitialList(spec);
     CachedUrlSet cus = au.getAUCachedUrlSet();
     while (!list.isEmpty()) {
-      String url = (String)list.get(0);
+      String url = (String)list.remove(0);
+      logger.debug("Dequeued url from list: "+url);
       UrlCacher uc = cus.makeUrlCacher(url);
       if (uc.shouldBeCached()) {
 	if (!uc.getCachedUrl().exists()) {
-	  cacheAndHarvestLinks(uc, list);
+	  try {
+	    cacheAndHarvestLinks(uc, list);
+	  } catch (IOException ioe) {
+	    //XXX handle this better.  Requeue?
+	    logger.error("Problem caching or parsing "+uc+". Ignoring", ioe);
+	  }
 	  au.pause();
 	}
 	else {
 	  logger.info(uc+" exists, not caching");
 	}
       }
-      list.remove(uc.getUrl());
+      logger.debug("Removing from list: "+uc.getUrl());
     }
   }
 
@@ -105,27 +118,18 @@ public class Crawler {
    *
    * @param uc UrlCacher representing the url to be crawled
    * @param list List object to add new urls to
+   * @throws IOException if there is a problem caching the url or reading
+   * the local copy
    */
-  protected static void cacheAndHarvestLinks(UrlCacher uc, List list) {
-    try {
-      logger.info("caching "+uc);
-      uc.cache();
-    } catch (Exception e) {
-      e.printStackTrace();
-      //FIXME handle errors
-      //make sure uc doesn't exist
-      //if (premanent error)
-      //  remove from list
-    }
-    try {
-      CachedUrl cu = uc.getCachedUrl();
-      addUrlsToList(cu, list);
-    } catch (IOException ioe) {
-      ioe.printStackTrace();
-      //XXX handle this (probably not too major)
-      //couldn't open the local file
-    }
+  protected static void cacheAndHarvestLinks(UrlCacher uc, List list) 
+  throws IOException {
+    logger.info("caching "+uc);
+    uc.cache(); //IOException if there is a caching problem
+
+    CachedUrl cu = uc.getCachedUrl();
+    addUrlsToList(cu, list);//IOException if the CU can't be read
   }
+
   /**
    * Method to generate a List of urls to start a crawl at from a
    * CachedUrlSet.
@@ -150,26 +154,25 @@ public class Crawler {
    */
   protected static void addUrlsToList(CachedUrl cu, List list)
       throws IOException {
-    if (cu == null) {
-      return;
-    }
-    if (cu != null && shouldExtractLinksFromCachedUrl(cu)) {
+    if (shouldExtractLinksFromCachedUrl(cu)) {
       String cuStr = cu.getUrl();
       if (cuStr == null) {
 	return;
       }
 
       InputStream is = cu.openForReading();
-      if (is != null) {
-	Reader reader = new InputStreamReader(is);
-	URL srcUrl = new URL(cuStr);
-	String nextUrl = ExtractNextLink(reader, srcUrl);
-	while (nextUrl != null) {
-	  if (!list.contains(nextUrl)) {
-	    list.add(nextUrl);
-	  }
-	  nextUrl = ExtractNextLink(reader, srcUrl);
+      Reader reader = new InputStreamReader(is); //should do this elsewhere
+      URL srcUrl = new URL(cuStr);
+      logger.debug("Extracting urls from srcUrl");
+      String nextUrl = ExtractNextLink(reader, srcUrl);
+      while (nextUrl != null) {
+	logger.debug("Extracted "+nextUrl);
+
+	//should check if this is something we should cache first
+	if (!list.contains(nextUrl)) { 
+	  list.add(nextUrl);
 	}
+	nextUrl = ExtractNextLink(reader, srcUrl);
       }
     }
   }
@@ -183,12 +186,21 @@ public class Crawler {
    * @return true if cu has "content-type" set to "text/html", false otherwise
    */
   protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu) {
+    boolean returnVal = false;
     Properties props = cu.getProperties();
-    if (props == null){
-      return false;
+    if (props != null) {
+      String contentType = props.getProperty("content-type");
+      if (contentType != null) {
+	returnVal = contentType.equalsIgnoreCase("text/html");
+      }
     }
-    String contentType = props.getProperty("content-type");
-    return (contentType != null && contentType.equalsIgnoreCase("text/html"));
+    if (returnVal) {
+      logger.debug("I should try to extract links from "+cu);
+    } else {
+      logger.debug("I shouldn't try to extract links from "+cu);
+    }
+
+    return returnVal;
   }
 
   /**
