@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.2 2003-08-06 23:27:23 troberts Exp $
+ * $Id: FilterRunner.java,v 1.3 2003-09-09 20:23:07 troberts Exp $
  */
 
 /*
@@ -47,13 +47,12 @@ public class FilterRunner {
   public static Reader getFilteredReader(String fileName) throws IOException {
     List tagList =
       ListUtil.list(
-		    //   		    new HtmlTagFilter.TagPair("<!--", "-->"),
-		    new HtmlTagFilter.TagPair("This Article has been cited by:",
-					      "other online articles", true),
-		    new HtmlTagFilter.TagPair("<a NAME=\"otherarticles\">",
-					      "<HR NOSHADE ALIGN=LEFT WIDTH=450>", true),
-//      		    new HtmlTagFilter.TagPair("<script", "</script>", true),
-		    new HtmlTagFilter.TagPair("<", ">")
+		    new HtmlTagFilter.TagPair("<script", "</script>", true),
+		    new HtmlTagFilter.TagPair("<table", "</table>", true),
+		    new HtmlTagFilter.TagPair("This article has been cited by",
+					      " other articles:", true),
+		    new HtmlTagFilter.TagPair("[Medline", "]", true),
+ 		    new HtmlTagFilter.TagPair("<", ">")
  		    );
     
     return HtmlTagFilter.makeNestedFilter(new FileReader(fileName), tagList);
@@ -162,6 +161,34 @@ public class FilterRunner {
     return bytes;
   }
 
+  /**
+   * Use a nested LcapFilteredFileInputStreams
+   */
+  private static long filterFile6(File source, File dest) throws IOException {
+    InputStream is1 =
+      new ReaderInputStream(getFilteredReader(source.getAbsolutePath()));
+    InputStream is = new WhiteSpaceFilter(is1);
+//     OutputStream os = new FileOutputStream(dest);
+//     OutputStream os = new NullOutputStream();
+    OutputStream os = getOutputStream(dest);
+    long bytes = StreamUtil.copy(is, os);
+    is.close();
+    os.close();
+    return bytes;
+  }
+
+  /**
+   * Use a nested LcapFilteredFileInputStreams
+   */
+  private static long filterFile7(File source, File dest) throws IOException {
+    InputStream is = new WhiteSpaceFilter(new FileInputStream(source.getAbsolutePath()));
+    OutputStream os = getOutputStream(dest);
+    long bytes = StreamUtil.copy(is, os);
+    is.close();
+    os.close();
+    return bytes;
+  }
+
   private static long filterFile(File source, File dest, int method)
       throws IOException{
     switch (method) {
@@ -177,6 +204,10 @@ public class FilterRunner {
       return filterFile4(source, dest);
     case 5:
       return filterFile5(source, dest);
+    case 6:
+      return filterFile6(source, dest);
+    case 7:
+      return filterFile7(source, dest);
     }
     return -1;
   }
