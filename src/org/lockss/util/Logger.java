@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.28 2003-08-29 03:01:10 dshr Exp $
+ * $Id: Logger.java,v 1.29 2004-01-26 20:02:29 tyronen Exp $
  */
 
 /*
@@ -121,9 +121,9 @@ public class Logger {
 
   private static Logger myLog;
 
-  private int level;			// this log's level
+  int level;			// this log's level
   private String name;			// this log's name
-  
+
   static {
     // until we get configured, output to default target
     setDefaultTarget();
