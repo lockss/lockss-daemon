@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.40 2003-12-19 01:35:27 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.41 2004-01-16 09:34:06 eaalto Exp $
  */
 
 /*
@@ -383,13 +383,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
         // non-identical cases)
         try {
           Properties myProps = new SortedProperties();
-          myProps.load(new BufferedInputStream(new FileInputStream(
-              tempPropsFile)));
+          // make sure to close all streams or will fail on Windows
+          InputStream is = new BufferedInputStream(new FileInputStream(
+              tempPropsFile));
+          myProps.load(is);
+          is.close();
           myProps.setProperty(LOCKSS_VERSION_NUMBER,
                               Integer.toString(currentVersion));
           OutputStream os = new BufferedOutputStream(new FileOutputStream(
               tempPropsFile));
           myProps.store(os, "HTTP headers for " + url);
+          os.close();
         } catch (IOException ioe) {
           String err = "Couldn't reset property version number: " + url;
           logger.error(err);
