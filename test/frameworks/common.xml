@@ -89,6 +89,7 @@
 	<value>edu.wisc.library.plugin.BigBridgePlugin</value>
 	<value>edu.wisc.library.plugin.BigBridgeVol1Plugin</value>
 	<value>edu.columbia.plugin.JiwsPlugin</value>
+	<value>edu.nyu.plugin.LeedsICSPlugin</value>
       </list>
     </property>
 
@@ -152,6 +153,7 @@
 	  or pluginName='org.nypl.plugin.PoetryBayPlugin'
 	  or pluginName='gov.loc.plugin.TESLEJPlugin'
 	  or pluginName='org.nypl.plugin.WordsWithoutBordersPlugin'
+	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
 	  ]"
 	  />
       </property>
@@ -166,6 +168,63 @@
 
     <!-- Titles -->
     <property name="title">
+
+
+
+      <property name="LeedsICS2002">
+	<property name="title" value="Leeds International Classical Studies 2002" />
+	<property name="journalTitle" value="Leeds International Classical Studies" />
+	<property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.leeds.ac.uk/classics/lics" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="2002" />
+	</property>
+      </property>
+
+      <property name="LeedsICS2003">
+	<property name="title" value="Leeds International Classical Studies 2003" />
+	<property name="journalTitle" value="Leeds International Classical Studies" />
+	<property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.leeds.ac.uk/classics/lics" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="2003" />
+	</property>
+      </property>
+
+      <property name="LeedsICS200304">
+	<property name="title" value="Leeds International Classical Studies 2004" />
+	<property name="journalTitle" value="Leeds International Classical Studies" />
+	<property name="plugin" value="edu.nyu.plugin.LeedsICSPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.leeds.ac.uk/classics/lics" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="200304" />
+	</property>
+      </property>
+
       <property name="ip20">
 	<property name="title" value="Inverse Problems Volume 20" />
 	<property name="journalTitle" value="Inverse Problems" />
@@ -1385,6 +1444,111 @@
 	<property name="param.2">
 	  <property name="key" value="year" />
 	  <property name="value" value="2004" />
+	</property>
+      </property>
+
+      <property name="arkivoc2003">
+	<property name="title" value="Arkivoc 2003" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+      </property>
+
+      <property name="arkivoc2002">
+	<property name="title" value="Arkivoc 2002" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+      </property>
+
+      <property name="arkivoc2001">
+	<property name="title" value="Arkivoc 2001" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+      </property>
+
+      <property name="arkivoc2000">
+	<property name="title" value="Arkivoc 2000" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+      </property>
+
+      <property name="arkivoc1999">
+	<property name="title" value="Arkivoc 1999" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+      </property>
+
+      <property name="arkivoc1998">
+	<property name="title" value="Arkivoc 1998" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+      </property>
+
+      <property name="arkivoc1997">
+	<property name="title" value="Arkivoc 1997" />
+	<property name="estSize" value="110MB" />
+	<property name="journalTitle" value="Arkivoc" />
+	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.arkat-usa.org/ark/journal/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
 	</property>
       </property>
 
