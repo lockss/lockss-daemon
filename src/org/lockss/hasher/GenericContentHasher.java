@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.14 2003-05-22 23:20:38 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.15 2003-05-22 23:59:40 troberts Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class GenericContentHasher extends GenericHasher {
   private int hashState = HASHING_NAME;
 
   private byte[] nameBytes = null;
-  private byte[] contentBytes = new byte[1000];
+  private byte[] contentBytes = null;
   private int nameIdx = -1;
 
   private InputStream is = null;
@@ -160,8 +160,8 @@ public class GenericContentHasher extends GenericHasher {
       }
     }
     int bytesLeftToHash = numBytes - totalHashed;
-    if (contentBytes.length < (bytesLeftToHash)) {
-      contentBytes = new byte[bytesLeftToHash];
+    if (contentBytes == null || contentBytes.length < (bytesLeftToHash)) {
+      contentBytes = new byte[numBytes];
     }
     int bytesHashed = is.read(contentBytes, 0, bytesLeftToHash);
     if (log.isDebug3()) {
