@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.2 2004-09-08 23:52:35 smorabito Exp $
+ * $Id: ParamDoclet.java,v 1.3 2004-09-09 00:33:45 smorabito Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class ParamDoclet {
 	      info.usedIn.add(className);
 	    }
 	  } else if (name.startsWith("DEFAULT_")) {
-	    info.defaultValue = getDefaultValue(field);
+	    info.defaultValue = getDefaultValue(field, root);
 	  }
 	}
       }
@@ -226,7 +226,7 @@ public class ParamDoclet {
   /**
    * Cheesily use reflection to obtain the default value.p
    */
-  public static String getDefaultValue(FieldDoc field) {
+  public static String getDefaultValue(FieldDoc field, RootDoc root) {
     String defaultVal = null;
     try {
       ClassDoc classDoc = field.containingClass();
