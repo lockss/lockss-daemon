@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.3 2003-12-18 03:01:47 eaalto Exp $
+ * $Id: TestFileUtil.java,v 1.4 2003-12-19 01:31:31 eaalto Exp $
  */
 
 /*
@@ -122,7 +122,9 @@ public class TestFileUtil extends LockssTestCase {
   File createFile(String name, String content) throws Exception {
     File file = new File(name);
     FileOutputStream fos = new FileOutputStream(file);
-    StreamUtil.copy(new StringInputStream(content), fos);
+    InputStream sis = new StringInputStream(content);
+    StreamUtil.copy(sis, fos);
+    sis.close();
     fos.close();
     return file;
   }
