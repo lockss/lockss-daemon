@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.106 2003-04-17 05:55:26 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.107 2003-04-18 21:34:45 aalto Exp $
  */
 
 /*
@@ -434,6 +434,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
               new RangeCachedUrlSetSpec(baseUrl + url));
           markNodeForRepair(newCus, results);
           // only try one repair per poll
+          //XXX instead, allow multi-URL repair crawls and schedule one
+          // from a list of repairs
           repairMarked = true;
         }
       }
@@ -594,7 +596,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   }
 
   protected void setConfig(Configuration newConfig,
-                           Configuration oldConfig,
+                           Configuration prevConfig,
                            Set changedKeys) {
     recallDelay = newConfig.getTimeInterval(PARAM_RECALL_DELAY,
                                             DEFAULT_RECALL_DELAY);

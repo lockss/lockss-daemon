@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.18 2003-04-17 05:55:26 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.19 2003-04-18 21:34:45 aalto Exp $
  */
 
 /*
@@ -103,47 +103,6 @@ public class TreeWalkHandler {
     logger.debug3("treeWalkInterval reset to "+treeWalkInterval);
   }
 
-/* old version
-    void doTreeWalk() {
-    logger.debug("Attempting tree walk: " + theAu.getName());
-    NodeState topNode = manager.getNodeState(theAu.getAUCachedUrlSet());
-    if (topNode==null) {
-      logger.error("No NodeState found for AU.");
-    } else {
-      Iterator activePolls = topNode.getActivePolls();
-//    only continue if no top level poll scheduled or running
-      if (!activePolls.hasNext()) {
-        // check with crawl manager
-        if (!theCrawlManager.isCrawlingAU(theAu, null, null)) {
-          // query the AU if a top level poll should be started
-          if (theAu.shouldCallTopLevelPoll(manager.getAuState())) {
-            manager.callTopLevelPoll();
-            logger.debug("Requested top level poll.  Aborting...");
-          }
-          else {
-            // do the actual treewalk
-            logger.debug("Tree walk started: " + theAu.getName());
-            long startTime = TimeBase.nowMs();
-            nodeTreeWalk();
-            long elapsedTime = TimeBase.msSince(startTime);
-            updateEstimate(elapsedTime);
-          }
-        }
-        else {
-          logger.debug("Crawl manager active.  Aborting...");
-        }
-      }
-      else {
-        logger.debug("Top level poll active.  Aborting...");
-      }
-    }
-
-    //alert the AuState (it writes through)
-    manager.getAuState().setLastTreeWalkTime();
-    logger.debug("Tree walk finished.");
-  }
- */
-
 /**
  * The full treewalk only proceeds if no new content crawls or top level polls
  * are needed on the content.  As part of checking whether it should execute,
@@ -238,7 +197,8 @@ public class TreeWalkHandler {
         state = manager.getNodeState(
             theAu.makeCachedUrlSet(new RangeCachedUrlSetSpec(node.getUrl())));
         if (!checkNodeState(state)) {
-          //XXX abort without any further walking
+          // abort without any further walking
+          //XXX ok?
           return;
         }
       }
@@ -270,7 +230,8 @@ public class TreeWalkHandler {
         theRegulator.auActivityFinished(ActivityRegulator.TREEWALK, theAu);
         // take appropriate action
         manager.checkLastHistory(lastHistory, node, false);
-        //XXX abort treewalk
+        // abort treewalk
+        //XXX ok?
         treeWalkAborted = true;
         return false;
       }

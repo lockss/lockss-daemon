@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.31 2003-04-15 01:24:51 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.32 2003-04-18 21:34:45 aalto Exp $
  */
 
 /*
@@ -131,8 +131,6 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     if (spec instanceof SingleNodeCachedUrlSetSpec) {
       // return only this node
       logger.debug3("Returning singleton iterator...");
-      //XXX deprecated
-      //  return new SingletonIterator(makeCachedUrl(getUrl()));
       ArrayList list = new ArrayList(1);
       list.add(makeCachedUrl(getUrl()));
       return list.iterator();

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.30 2003-04-01 00:08:12 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.31 2003-04-18 21:34:45 aalto Exp $
  */
 
 /*
@@ -116,7 +116,6 @@ public class LockssRepositoryImpl implements LockssRepository {
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-    //XXX checkpoint here.
     theRepository = null;
   }
 

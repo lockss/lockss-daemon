@@ -1,5 +1,5 @@
 /*
- * $Id: MockRepositoryNode.java,v 1.2 2003-03-17 22:05:02 troberts Exp $
+ * $Id: MockRepositoryNode.java,v 1.3 2003-04-18 21:34:45 aalto Exp $
  */
 
 /*
@@ -78,12 +78,10 @@ public class MockRepositoryNode implements RepositoryNode {
   }
 
   public Properties getState() {
-    //XXX implement
     return null;
   }
 
   public void storeState(Properties newProps) {
-    //XXX implement
   }
 
   public boolean isLeaf() {
