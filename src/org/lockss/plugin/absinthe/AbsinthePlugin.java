@@ -1,5 +1,5 @@
 /*
- * $Id: AbsinthePlugin.java,v 1.4 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id: AbsinthePlugin.java,v 1.5 2004-01-03 06:20:59 tlipkis Exp $
  */
 
 /*
@@ -50,12 +50,6 @@ public class AbsinthePlugin
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
-  private static String titleSpec[][] = {
-      {
-      "ALR", AUPARAM_BASE_URL, "http://absinthe-literary-review.com/"
-  }
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -66,7 +60,6 @@ public class AbsinthePlugin
     configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
                                    ListUtil.list(AUPARAM_BASE_URL,
                                                  AUPARAM_YEAR));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

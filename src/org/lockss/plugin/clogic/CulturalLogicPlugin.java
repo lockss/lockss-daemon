@@ -1,5 +1,5 @@
 /*
- * $Id: CulturalLogicPlugin.java,v 1.2 2003-12-23 00:29:35 tlipkis Exp $
+ * $Id: CulturalLogicPlugin.java,v 1.3 2004-01-03 06:20:59 tlipkis Exp $
  */
 
 /*
@@ -51,11 +51,6 @@ public class CulturalLogicPlugin extends BasePlugin {
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
-  private static String titleSpec[][] = {
-      {
-      "Cultural Logic", AUPARAM_BASE_URL, "http://eserver.org/clogic/"}
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -66,7 +61,6 @@ public class CulturalLogicPlugin extends BasePlugin {
     configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
                                    ListUtil.list(AUPARAM_BASE_URL,
                                                  AUPARAM_YEAR));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

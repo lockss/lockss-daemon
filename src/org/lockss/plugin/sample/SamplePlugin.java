@@ -1,5 +1,5 @@
 /*
- * $Id: SamplePlugin.java,v 1.1 2003-12-15 23:10:56 clairegriffin Exp $
+ * $Id: SamplePlugin.java,v 1.2 2004-01-03 06:20:58 tlipkis Exp $
  */
 
 /*
@@ -56,13 +56,6 @@ public class SamplePlugin extends BasePlugin {
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_VOL = PD_VOL.getKey();
 
-  // This will appear in the configuration ui for this plugin.
-  // add one entry for each journal supported by this plugin
-  private static String titleSpec[][] = {
-    { "SampleJournal", AUPARAM_BASE_URL, "http://www.sample.com/samplejournal/"
-    }
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -72,7 +65,6 @@ public class SamplePlugin extends BasePlugin {
                                    ListUtil.list(PD_BASE, PD_VOL));
     configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
                                    ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

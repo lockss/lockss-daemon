@@ -1,5 +1,5 @@
 /*
- * $Id: AcsPlugin.java,v 1.7 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id: AcsPlugin.java,v 1.8 2004-01-03 06:20:59 tlipkis Exp $
  */
 
 /*
@@ -81,15 +81,6 @@ public class AcsPlugin extends BasePlugin {
   public static final String AUPARAM_ARTICLE_URL = PD_ARTICLE.getKey();
   public static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
-  private static String titleSpec[][] = {
-    { "JCICS",
-    AUPARAM_BASE_URL, "http://pubs3.acs.org/",
-    AUPARAM_ARTICLE_URL, "http://pubs.acs.org/",
-    AUPARAM_JOURNAL_KEY, "jcisd8",
-    AUPARAM_VOL, "43",
-    AUPARAM_YEAR, "2003"}
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -103,7 +94,6 @@ public class AcsPlugin extends BasePlugin {
                                                  AUPARAM_ARTICLE_URL,
                                                  AUPARAM_JOURNAL_KEY,
                                                  AUPARAM_VOL, AUPARAM_YEAR));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

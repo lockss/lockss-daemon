@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.5 2003-12-17 02:09:46 tlipkis Exp $
+ * $Id: IeeePlugin.java,v 1.6 2004-01-03 06:20:58 tlipkis Exp $
  */
 
 /*
@@ -71,15 +71,6 @@ public class IeeePlugin extends BasePlugin {
   public static final String AUPARAM_PUNUM = PD_PUNUM.getKey();
   public static final String AUPARAM_YEAR = PD_YEAR.getKey();
 
-
-  private static String titleSpec[][] = {
-      {
-      "Antennas and Propagation, Trans. of",
-      AUPARAM_BASE_URL, "http://xplqa.ieee.org/",
-      AUPARAM_PUNUM, "8",
-      AUPARAM_YEAR, "2003"}
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -89,7 +80,6 @@ public class IeeePlugin extends BasePlugin {
                                    ListUtil.list(PD_BASE, PD_PUNUM, PD_YEAR));
     configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
                                    ListUtil.list(AUPARAM_BASE_URL, AUPARAM_PUNUM, AUPARAM_YEAR));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

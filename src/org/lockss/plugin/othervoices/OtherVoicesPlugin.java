@@ -1,5 +1,5 @@
 /*
- * $Id: OtherVoicesPlugin.java,v 1.2 2003-12-23 00:29:35 tlipkis Exp $
+ * $Id: OtherVoicesPlugin.java,v 1.3 2004-01-03 06:20:58 tlipkis Exp $
  */
 
 /*
@@ -52,11 +52,6 @@ public class OtherVoicesPlugin
   public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
   public static final String AUPARAM_VOL = PD_VOL.getKey();
 
-  private static String titleSpec[][] = {
-      {
-      "Other Voices", AUPARAM_BASE_URL, "http://www.othervoices.org/"}
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -67,7 +62,6 @@ public class OtherVoicesPlugin
     configurationMap.putCollection(CM_DEFINING_CONFIG_PROPS_KEY,
                                    ListUtil.list(AUPARAM_BASE_URL,
                                                  AUPARAM_VOL));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

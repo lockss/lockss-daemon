@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMusePlugin.java,v 1.9 2003-12-23 00:29:35 tlipkis Exp $
+ * $Id: ProjectMusePlugin.java,v 1.10 2004-01-03 06:20:58 tlipkis Exp $
  */
 
 /*
@@ -54,12 +54,6 @@ public class ProjectMusePlugin
   public static final String AUPARAM_JOURNAL_DIR = PD_DIR.getKey();
   public static final String AUPARAM_VOL = PD_VOL.getKey();
 
-  private static String titleSpec[][] = {
-      {
-      "American Imago", AUPARAM_BASE_URL, "http://muse.jhu.edu/",
-      AUPARAM_JOURNAL_DIR, "american_imago"}
-  };
-
   public void initPlugin(LockssDaemon daemon){
     //todo: we override initPlugin largely to manually load the values that
     // should be put into the configuration map when we load it from disk
@@ -71,7 +65,6 @@ public class ProjectMusePlugin
                                    ListUtil.list(AUPARAM_BASE_URL,
                                                  AUPARAM_JOURNAL_DIR,
                                                  AUPARAM_VOL));
-    configurationMap.setMapElement(CM_TITLE_SPEC_KEY, titleSpec);
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }
