@@ -34,7 +34,9 @@ public class TestPoll extends TestCase {
   }
 
   protected InetAddress testaddr;
+  protected InetAddress testaddr1;
   protected LcapIdentity testID;
+  protected LcapIdentity testID1;
   protected LcapMessage[] testmsg;
   protected Poll[] testpolls;
   protected PollManager pollmanager;
@@ -50,6 +52,8 @@ public class TestPoll extends TestCase {
     try {
       testaddr = InetAddress.getByName("127.0.0.1");
       testID = idmgr.getIdentity(testaddr);
+      testaddr1 = InetAddress.getByName("123.3.4.5");
+      testID1 = idmgr.getIdentity(testaddr1);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -84,7 +88,9 @@ public class TestPoll extends TestCase {
     }
   }
 
-  /** tearDown method for test case */
+  /** tearDown method for test case
+   * @throws Exception if removePoll failed
+   */
   protected void tearDown() throws Exception {
     for(int i= 0; i< 3; i++) {
       pollmanager.removePoll(testpolls[i].m_key);
@@ -174,8 +180,8 @@ public class TestPoll extends TestCase {
       disagree_msg = LcapMessage.makeReplyMsg(agree_msg,
           pollmanager.generateRandomBytes(),
           pollmanager.generateRandomBytes(),
-           testentries1,LcapMessage.NAME_POLL_REP,
-          testduration, testID);
+           testentries1, LcapMessage.NAME_POLL_REP,
+          testduration, testID1);
     }
     catch (IOException ex) {
       fail("unable to generate a name poll reply");
@@ -188,7 +194,12 @@ public class TestPoll extends TestCase {
     np.m_tally.addVote(np.makeVote(disagree_msg, false));
     np.m_tally.addVote(np.makeVote(disagree_msg,false));
 
-
+    assertEquals(3, np.m_tally.numAgree);
+    assertEquals(4, np.m_tally.numDisagree);
+    assertTrue(!np.m_tally.didWinPoll());
+    np.buildPollLists(np.m_tally.pollVotes.iterator());
+    assertTrue(!Arrays.equals(np.m_tally.localEntries, np.m_tally.votedEntries));
+    assertTrue(Arrays.equals(testentries1,np.m_tally.votedEntries));
 
   }
 
@@ -235,6 +246,9 @@ public class TestPoll extends TestCase {
   /** test for method stopPoll(..) */
   public void testStopPoll() {
     Poll p = testpolls[1];
+    p.m_tally.quorum = 10;
+    p.m_tally.numAgree = 7;
+    p.m_tally.numDisagree = 3;
     p.m_pollstate = Poll.PS_WAIT_TALLY;
     p.stopPoll();
     assertTrue(p.m_pollstate == Poll.PS_COMPLETE);
