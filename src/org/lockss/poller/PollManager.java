@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.148.2.3 2004-11-16 01:53:13 tlipkis Exp $
+ * $Id: PollManager.java,v 1.148.2.4 2004-11-17 23:46:43 tlipkis Exp $
  */
 
 /*
@@ -554,8 +554,13 @@ public class PollManager
     synchronized (pollMapLock) {
       theRecentPolls.put(key, pme);
     }
+    // Don't tell the node manager about verify polls
+    // If closing a name poll that started ranged subpolls, don't tell
+    // the node manager about it until all ranged subpolls have finished
     if (tally.getType() != Poll.VERIFY_POLL && !pme.poll.isSubpollRunning()) {
-      if (tally.getType() != Poll.NAME_POLL && tally instanceof V1PollTally) {
+      // if closing last name poll, concatenate all the name lists into the
+      // first tally and pass that to node manager
+      if (tally.getType() == Poll.NAME_POLL && tally instanceof V1PollTally) {
 	V1PollTally lastTally = (V1PollTally)tally;
 	tally = lastTally.concatenateNameSubPollLists();
       }
