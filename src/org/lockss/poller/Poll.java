@@ -1,5 +1,5 @@
 /*
- * $Id: Poll.java,v 1.22 2002-12-03 03:35:59 claire Exp $
+* $Id: Poll.java,v 1.23 2002-12-04 23:59:49 aalto Exp $
  */
 
 /*
@@ -54,9 +54,9 @@ import org.lockss.util.*;
 public abstract class Poll {
   static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
   static final String PARAM_AGREE_VERIFY = Configuration.PREFIX +
-                                        "poll.agreeVerify";
+      "poll.agreeVerify";
   static final String PARAM_DISAGREE_VERIFY = Configuration.PREFIX +
-                                      "poll.disagreeVerify";
+      "poll.disagreeVerify";
 
   static final int DEFAULT_QUORUM = 5;
   static final int DEFAULT_AGREE_VERIFY = 20;
@@ -194,9 +194,9 @@ public abstract class Poll {
   void checkVote(byte[] hashResult, LcapMessage msg)  {
     byte[] hashed = msg.getHashed();
     log.debug("Checking "+
-	      String.valueOf(B64Code.encode(hashResult))+
-	      " against "+
-	      String.valueOf(B64Code.encode(hashed)));
+              String.valueOf(B64Code.encode(hashResult))+
+              " against "+
+              String.valueOf(B64Code.encode(hashed)));
     if(Arrays.equals(hashed, hashResult)) {
       handleAgreeVote(msg);
     }
@@ -303,7 +303,7 @@ public abstract class Poll {
     }
   }
 
-   /**
+  /**
    * start the poll.
    */
   void startPoll() {
@@ -326,6 +326,7 @@ public abstract class Poll {
    */
   void voteInPoll() {
     //we only vote if we don't already have a quorum
+//XXX m_quorum usage differs
     if((m_agree - m_disagree) <= m_quorum) {
       vote();
     }
@@ -406,9 +407,10 @@ public abstract class Poll {
     hasher.update(challenge, 0, challenge.length);
     hasher.update(verifier, 0, verifier.length);
     log.debug("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
-            +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
+              +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
     return hasher;
   }
+
 
   class PollHashCallback implements HashService.Callback {
 
@@ -432,7 +434,7 @@ public abstract class Poll {
 
       if(hash_completed)  {
         m_hash  = hasher.digest();
-	log.debug("Hash on " + urlset + " complete: "+
+        log.debug("Hash on " + urlset + " complete: "+
                   String.valueOf(B64Code.encode(m_hash)));
         scheduleVote();
       }
@@ -442,6 +444,7 @@ public abstract class Poll {
       }
     }
   }
+
 
   class VoteHashCallback implements HashService.Callback {
 
@@ -477,12 +480,13 @@ public abstract class Poll {
     public void timerExpired(Object cookie) {
       log.debug("VoteTimerCallback called, checking if I should vote");
       if(m_pollstate == PS_WAIT_VOTE) {
-	log.debug("I should vote");
+        log.debug("I should vote");
         voteInPoll();
-	log.debug("Just voted");
+        log.debug("Just voted");
       }
     }
   }
+
 
   class PollTimerCallback implements TimerQueue.Callback {
     /**
@@ -496,4 +500,68 @@ public abstract class Poll {
     }
   }
 
+
+  /**
+   * PollResults is a struct-like class which maintains the current state of
+   * votes within a poll.
+   */
+  public class PollResults {
+    public int type;
+    public long startTime;
+    public long duration;
+    public int numYes;
+    public int numNo;
+    public int wtYes;
+    public int wtNo;
+    public ArrayList pollVotes;
+
+    PollResults(int type, long startTime, long duration, int numYes,
+                int numNo, int wtYes, int wtNo, int quorum) {
+      this.type = type;
+      this.startTime = startTime;
+      this.duration = duration;
+      this.numYes = numYes;
+      this.numNo = numNo;
+      this.wtYes = wtYes;
+      this.wtNo = wtNo;
+      pollVotes = new ArrayList(quorum+1);
+    }
+
+    void addVote(PollVote vote) {
+      pollVotes.add(vote);
+    }
+  }
+
+
+  /**
+   * Vote is a simple class with an LcapIdentity and an agree boolean.
+   */
+  public class Vote {
+    public LcapIdentity id;
+    public boolean agree;
+
+    Vote(LcapIdentity id, boolean agree) {
+      this.id = id;
+      this.agree = agree;
+    }
+  }
+
+
+  /**
+   * PollVote extends the Vote class to include the challenge, verifier,
+   * and hash values for the vote.  These are needed to run a repair poll.
+   */
+  public class PollVote extends Vote {
+    public byte[] challenge;
+    public byte[] verifier;
+    public byte[] hash;
+
+    PollVote(byte[] challenge, byte[] verifier, byte[] hash,
+             LcapIdentity id, boolean agree) {
+      super(id, agree);
+      this.challenge = challenge;
+      this.verifier = verifier;
+      this.hash = hash;
+    }
+  }
 }
