@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.37 2003-06-01 21:00:13 tal Exp $
+ * $Id: LcapComm.java,v 1.38 2003-06-01 21:21:30 tal Exp $
  */
 
 /*
@@ -126,6 +126,7 @@ public class LcapComm extends BaseLockssManager {
    */
   public void stopService() {
     // TODO: checkpoint here.
+    getDaemon().getStatusService().unregisterStatusAccessor("CommStats");
     stop();
     super.stopService();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.9 2003-04-03 11:33:36 tal Exp $
+ * $Id: TestLcapComm.java,v 1.10 2003-06-01 21:21:30 tal Exp $
  */
 
 /*
@@ -64,12 +64,7 @@ public class TestLcapComm extends LockssTestCase {
   static final String PARAM_UNI_PORT_SEND = LcapComm.PARAM_UNI_PORT_SEND;
   static final String PARAM_MULTI_VERIFY = LcapComm.PARAM_MULTI_VERIFY;
 
-  private static final String c1 =
-    PARAM_MULTI_GROUP + "=239.3.4.5" + "\n" +
-    PARAM_MULTI_PORT + "=5432" + "\n" +
-    PARAM_UNI_PORT + "=2345" + "\n" +
-//     PARAM_UNI_PORT_SEND + "=" + "\n" +
-    PARAM_MULTI_VERIFY + "=yes";
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
 
   String testStr = "This is test data";
   byte[] testData;
@@ -107,9 +102,21 @@ public class TestLcapComm extends LockssTestCase {
 				     testAddr, testPort - 1);
 
     fact = new MockSocketFactory();
-    config = Configuration.readConfig(ListUtil.list(FileUtil.urlOfString(c1)));
+    Properties props = new Properties();
+    props.put(PARAM_MULTI_GROUP, "239.3.4.5");
+    props.put(PARAM_MULTI_PORT, "5432");
+    props.put(PARAM_UNI_PORT, "2345");
+//     PARAM_UNI_PORT_SEND + "=" + "\n" +
+    props.put(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    props.put(PARAM_MULTI_VERIFY, "yes");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    config = Configuration.getCurrentConfig();
+//     config = Configuration.readConfig(ListUtil.list(FileUtil.urlOfString(c1)));
     comm = new LcapComm(fact, config);
-    comm.start();
+    daemon.setCommManager(comm);
+    comm.initService(daemon);
+    daemon.getIdentityManager();
+    comm.startService();
     ssock = ((MockDatagramSocket)fact.ssocks.get(0));
     usock = ((MockDatagramSocket)fact.usocks.get(0));
     msock1 = ((MockMulticastSocket)fact.msocks.get(0));
@@ -121,7 +128,7 @@ public class TestLcapComm extends LockssTestCase {
 
   public void tearDown() throws Exception {
     if (comm != null) {
-      comm.stop();
+      comm.stopService();
       comm = null;
       fact = null;
     }
