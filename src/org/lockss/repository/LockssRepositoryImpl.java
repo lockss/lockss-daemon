@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.8 2002-11-27 20:34:18 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.9 2002-12-02 00:35:50 tal Exp $
  */
 
 /*
@@ -56,7 +56,8 @@ public class LockssRepositoryImpl implements LockssRepository {
   /**
    * Configuration parameter name for Lockss cache location.
    */
-  public static final String LOCKSS_CACHE_LOCATION_PARAM = "lockss.cache.location";
+  public static final String PARAM_CACHE_LOCATION =
+    Configuration.PREFIX + "cache.location";
   /**
    * Name of top directory in which the urls are cached.
    */
@@ -185,10 +186,9 @@ public class LockssRepositoryImpl implements LockssRepository {
    * @return a repository for the archive
    */
   public static LockssRepository repositoryFactory(ArchivalUnit au) {
-    String rootLocation = Configuration.getParam(Configuration.PREFIX +
-        LOCKSS_CACHE_LOCATION_PARAM);
+    String rootLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
     if (rootLocation==null) {
-      logger.error("Couldn't get "+LOCKSS_CACHE_LOCATION_PARAM+" from Configuration");
+      logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
       throw new LockssRepository.RepositoryStateException("Couldn't load param.");
     }
     StringBuffer buffer = new StringBuffer(rootLocation);

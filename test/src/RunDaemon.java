@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.5 2002-11-27 20:29:41 aalto Exp $
+ * $Id: RunDaemon.java,v 1.6 2002-12-02 00:35:50 tal Exp $
  */
 
 /*
@@ -46,6 +46,14 @@ import org.lockss.repository.LockssRepositoryImpl;
 
 public class RunDaemon {
   private static final String DEFAULT_DIR_PATH = "./";
+
+  static final String PARAM_CACHE_LOCATION =
+    LockssRepositoryImpl.PARAM_CACHE_LOCATION;
+  static final String PARAM_SHOULD_CALL_POLL =
+    Configuration.PREFIX+"shouldCallPoll";
+  static final String PARAM_POLL_TYPE =
+    Configuration.PREFIX+"poll.type";
+
   private static Logger log = Logger.getLogger("RunDaemon");
 
   private SimulatedArchivalUnit sau = null;
@@ -82,17 +90,16 @@ public class RunDaemon {
     HashService.start();
     LcapComm.startComm();
 
-    dirPath = Configuration.getParam(Configuration.PREFIX+
-                                     LockssRepositoryImpl.LOCKSS_CACHE_LOCATION_PARAM,
-				     DEFAULT_DIR_PATH);
+    dirPath =
+      Configuration.getParam(PARAM_CACHE_LOCATION, DEFAULT_DIR_PATH);
     boolean shouldCallPoll =
-      Configuration.getBooleanParam(Configuration.PREFIX+"shouldCallPoll",
+      Configuration.getBooleanParam(PARAM_SHOULD_CALL_POLL,
 				    false);
 
     sau = new SimulatedArchivalUnit(dirPath);
     org.lockss.plugin.Plugin.registerArchivalUnit(sau);
 
-    int poll_type = Configuration.getIntParam(Configuration.PREFIX+"poll.type",
+    int poll_type = Configuration.getIntParam(PARAM_POLL_TYPE,
         LcapMessage.CONTENT_POLL_REQ);
 
     createContent();

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.6 2002-11-22 02:58:17 claire Exp $
+ * $Id: LcapIdentity.java,v 1.7 2002-12-02 00:35:49 tal Exp $
  */
 
 /*
@@ -48,6 +48,8 @@ public class LcapIdentity {
   //TODO:
   //1) have hash of identities, so we can ensure uniqueness
   //2) hook up Configuration callback to change local identity
+
+  static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
 
   protected static final int INITIAL_REPUTATION = 500;
   protected static final int REPUTATION_NUMERATOR = 1000;
@@ -196,8 +198,7 @@ public class LcapIdentity {
    */
   public static LcapIdentity getLocalIdentity() {
     if(theLocalIdentity == null)  {
-      String identStr =
-	Configuration.getParam(Configuration.PREFIX+"localIPAddress");
+      String identStr = Configuration.getParam(PARAM_LOCAL_IP);
       try {
 	InetAddress addr = InetAddress.getByName(identStr);
 	theLocalIdentity = new LcapIdentity(addr);

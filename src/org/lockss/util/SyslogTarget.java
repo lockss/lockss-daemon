@@ -33,12 +33,15 @@ import org.lockss.daemon.*;
 
 public class SyslogTarget implements LogTarget{
   
+  static final String PREFIX = Logger.PREFIX+"syslog.";
+  static final String PARAM_DEFAULT_PORT = PREFIX + "port";
+  static final String PARAM_DEFAULT_HOST = PREFIX + "host";
+
   //FIXME get from props after TAL's commit
   private static final String DEFAULT_HOST = "127.0.0.1";
   private static final String DEFAULT_PORT = "514";
 
   static final int FACILITY = 8; //user level facility
-  static final String PREFIX = Logger.PREFIX+"syslog.";
 
   private int port;
   private String host;
@@ -99,11 +102,10 @@ public class SyslogTarget implements LogTarget{
     }
   }
 
-
   private void getProps(){
-    String portStr = Configuration.getParam(PREFIX+"port", DEFAULT_PORT);
+    String portStr = Configuration.getParam(PARAM_DEFAULT_PORT, DEFAULT_PORT);
     port = Integer.parseInt(portStr);
-    host = Configuration.getParam(PREFIX+"host", DEFAULT_HOST);
+    host = Configuration.getParam(PARAM_DEFAULT_HOST, DEFAULT_HOST);
   }
    
   public static void main(String[] args){
