@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrEditor.java,v 1.1 2004-05-25 00:17:44 clairegriffin Exp $
+ * $Id: ConfigParamDescrEditor.java,v 1.2 2004-06-07 23:42:02 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,9 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 import org.lockss.daemon.*;
+import org.lockss.devtools.plugindef.TextInputVerifer.*;
+import org.lockss.util.*;
+import java.beans.*;
 
 /**
  * <p>Title: </p>
@@ -45,7 +48,8 @@ import org.lockss.daemon.*;
  *
  */
 
-public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
+public class ConfigParamDescrEditor extends JDialog
+    implements EDPEditor {
   JPanel ButtonPanel = new JPanel();
   JButton okButton = new JButton();
   JButton cancelButton = new JButton();
@@ -61,7 +65,7 @@ public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
   JComboBox typeComboBox = new JComboBox();
   JLabel sizeLabel = new JLabel();
   JLabel descriptionLabel = new JLabel();
-  JFormattedTextField sizeTextField = new JFormattedTextField();
+  JTextField sizeTextField = new JTextField();
   JTextArea descriptionTextArea = new JTextArea();
   GridBagLayout gridBagLayout1 = new GridBagLayout();
 
@@ -115,16 +119,40 @@ public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
   }
 
   protected void updateData() {
-  if(m_paramDescr != null) {
-    m_paramDescr.setKey(keyTextField.getText());
-    m_paramDescr.setDisplayName(displayTextField.getText());
-    m_paramDescr.setSize(((Number)sizeTextField.getValue()).intValue());
-    m_paramDescr.setType(typeComboBox.getSelectedIndex()+1);
-    m_paramDescr.setDescription(descriptionTextArea.getText());
-    m_paramDescr.setDefinitional(definitionCheckBox.isSelected());
-    m_picker.addConfigParamDescr(m_paramDescr);
+    if (m_paramDescr != null && isValidData()) {
+      m_paramDescr.setKey(keyTextField.getText());
+      m_paramDescr.setDisplayName(displayTextField.getText());
+      m_paramDescr.setSize(Integer.parseInt(sizeTextField.getText()));
+      m_paramDescr.setType(typeComboBox.getSelectedIndex() + 1);
+      m_paramDescr.setDescription(descriptionTextArea.getText());
+      m_paramDescr.setDefinitional(definitionCheckBox.isSelected());
+      m_picker.addConfigParamDescr(m_paramDescr);
+    }
   }
-}
+
+  private boolean isValidData() {
+
+    if(StringUtil.isNullString(keyTextField.getText())) {
+      return false;
+    }
+
+    if(StringUtil.isNullString(displayTextField.getText())) {
+      return false;
+    }
+
+    if(StringUtil.isNullString(sizeTextField.getText())) {
+      return false;
+    }
+    try {
+      int val = Integer.parseInt(sizeTextField.getText());
+      if(val > 0) {
+        return true;
+      }
+    }
+    catch(Exception ex) {
+    }
+    return false;
+  }
 
   private void jbInit() throws Exception {
     jPanel1.setLayout(borderLayout2);
@@ -149,8 +177,10 @@ public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
     //sizeLabel.setFont(new java.awt.Font("DialogInput", 0, 12));
     descriptionLabel.setText("Description:");
     //descriptionLabel.setFont(new java.awt.Font("DialogInput", 0, 12));
-    sizeTextField.setValue(new Integer(10));
+    sizeTextField.setInputVerifier(new UnsignedIntegerVerifier());
+    sizeTextField.setText("10");
     sizeTextField.setColumns(10);
+    sizeTextField.setSize(sizeTextField.getPreferredSize());
     sizeTextField.setToolTipText("The size of the parameters input field.");
     descriptionTextArea.setToolTipText("explantory or help text.");
     descriptionTextArea.setText("");
@@ -160,6 +190,7 @@ public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
       typeComboBox.addItem(ConfigParamDescr.TYPE_STRINGS[i]);
     }
     descriptorPanel.setPreferredSize(new Dimension(405, 221));
+
     ButtonPanel.add(okButton, null);
     ButtonPanel.add(cancelButton, null);
     this.getContentPane().add(jPanel1,  BorderLayout.CENTER);
@@ -204,7 +235,7 @@ public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
 
 
   void okButton_actionPerformed(ActionEvent e) {
-    if(m_isEditable) {
+    if (m_isEditable) {
       updateData();
     }
     setVisible(false);
@@ -212,7 +243,6 @@ public class ConfigParamDescrEditor extends JDialog implements EDPEditor{
   }
 
   void cancelButton_actionPerformed(ActionEvent e) {
-    // just hide the dialog.
     setVisible(false);
     dispose();
   }

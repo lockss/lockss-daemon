@@ -129,21 +129,13 @@ public class CrawlRuleTestDialog extends JDialog {
   }
 
   void okButton_actionPerformed(ActionEvent e) {
-    try {
-
-      ArchivalUnit au = makeAu();
+    ArchivalUnit au = makeAu();
+    if(au != null) {
       testAu(au);
-    }
-    catch(Exception ex) {
-      JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit:\n"
-                                    + ex.getMessage(),
-                                    "CrawlRule Test Error",
-                                    JOptionPane.ERROR_MESSAGE);
-      ex.printStackTrace();
     }
   }
 
-  private ArchivalUnit makeAu() throws ConfigurationException {
+  private ArchivalUnit makeAu() {
     Properties props = new Properties();
     for (Iterator it = m_descrMap.keySet().iterator(); it.hasNext(); ) {
       String key = (String) it.next();
@@ -151,7 +143,16 @@ public class CrawlRuleTestDialog extends JDialog {
       props.put(key, value);
     }
     Configuration config = ConfigManager.fromProperties(props);
-    ArchivalUnit au = m_plugin.createAu(config);
+    ArchivalUnit au = null;
+    try {
+      au = m_plugin.createAu(config);
+    }
+    catch (Exception ex) {
+      JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit:\n"
+                                    + ex.getMessage(),
+                                    "CrawlRule Test Error",
+                                    JOptionPane.ERROR_MESSAGE);
+    }
     return au;
   }
 
