@@ -83,8 +83,8 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     fieldWidthLabel.setToolTipText("minimum number of digits");
     fieldWidthLabel.setText("parameter field width:");
     widthTextField.setToolTipText("");
-    widthTextField.setSelectionStart(1);
     widthTextField.setText("0");
+    widthTextField.setSelectionStart(1);
     paddingLabel.setText("padding:");
     spacesRadioButton.setText("pad with space");
     zeroRadioButton.setText("pad with zeros");
@@ -206,6 +206,7 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     else { // deactivate the box and set a
       paramComboBox.setEnabled(false);
       paramComboBox.setToolTipText("No configuration parameters available.");
+      setPadding(false);
     }
   }
 
