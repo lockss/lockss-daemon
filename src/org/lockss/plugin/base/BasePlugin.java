@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.20 2004-02-03 02:03:13 clairegriffin Exp $
+ * $Id: BasePlugin.java,v 1.21 2004-02-06 23:53:56 clairegriffin Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public abstract class BasePlugin
 					 Set changedKeys) {
 	  setConfig(newConfig, prevConfig, changedKeys);
 	}});
-
+    installCacheExceptionHandler();
   }
 
   public void stopPlugin() {
@@ -248,4 +248,7 @@ public abstract class BasePlugin
     return exceptionMap;
   }
 
+  protected void installCacheExceptionHandler() {
+    // default is to do nothing - override if you need one
+  }
 }

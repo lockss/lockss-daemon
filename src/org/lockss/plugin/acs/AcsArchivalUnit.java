@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.12 2004-01-27 01:03:45 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.13 2004-02-06 23:53:55 clairegriffin Exp $
  */
 
 /*
@@ -78,8 +78,10 @@ public class AcsArchivalUnit extends ConfigurableArchivalUnit {
   }
 
 
-  protected void setAuParams(Configuration config)
+  protected void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
+    super.loadAuConfigDescrs(config);
+
     // get the article root url
     articleUrl = configurationMap.getUrl(AcsPlugin.AUPARAM_ARTICLE_URL, null);
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SampleArchivalUnit.java,v 1.2 2004-01-13 04:46:26 clairegriffin Exp $
+ * $Id: SampleArchivalUnit.java,v 1.3 2004-02-06 23:54:13 clairegriffin Exp $
  */
 
 /*
@@ -70,8 +70,9 @@ public class SampleArchivalUnit extends ConfigurableArchivalUnit {
   }
 
 
-  public void setAuParams(Configuration config)
+  public void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
+    super.loadAuConfigDescrs(config);
     // get the volume string
     volume = configurationMap.getInt(SamplePlugin.AUPARAM_VOL, -1);
     if (volume <= 0) {

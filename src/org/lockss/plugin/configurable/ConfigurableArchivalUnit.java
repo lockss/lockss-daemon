@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.4 2004-01-27 04:07:09 tlipkis Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.5 2004-02-06 23:54:11 clairegriffin Exp $
  */
 
 /*
@@ -51,22 +51,18 @@ public class ConfigurableArchivalUnit
   static final protected String CM_AU_START_URL_KEY = "au_start_url";
   static final protected String CM_AU_NAME_KEY = "au_name";
   static final protected String CM_AU_RULES_KEY = "au_crawlrules";
-  static final protected String CM_AU_PARAMS_KEY = "au_params";
   static final protected String CM_AU_SHORT_YEAR_KEY = "au_short_";
-
-  static final protected String AUPARAM_USE_CRAWL_WINDOW = USE_CRAWL_WINDOW;
+  static final protected String CM_AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
 
   protected ExternalizableMap configurationMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
 
-
   protected ConfigurableArchivalUnit(Plugin myPlugin) {
     super(myPlugin);
     if (myPlugin != null) {
-      configurationMap = ((ConfigurablePlugin)myPlugin).getConfigurationMap();
+      configurationMap = ( (ConfigurablePlugin) myPlugin).getConfigurationMap();
     }
   }
-
 
   protected String makeStartUrl() {
     String startstr = configurationMap.getString(CM_AU_START_URL_KEY, "");
@@ -75,7 +71,7 @@ public class ConfigurableArchivalUnit
     return convstr;
   }
 
-  protected void loadDefiningConfig(Configuration config) throws
+  protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
     List descrList = plugin.getAuConfigDescrs();
     for (Iterator it = descrList.iterator(); it.hasNext(); ) {
@@ -86,8 +82,8 @@ public class ConfigurableArchivalUnit
         Object val = descr.getValueOfType(config.get(key));
         // we store years in two formats - short and long
         if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
-          int year = Integer.parseInt(((Integer) val).toString().substring(2));
-          configurationMap.putInt(CM_AU_SHORT_YEAR_KEY+key,year);
+          int year = Integer.parseInt( ( (Integer) val).toString().substring(2));
+          configurationMap.putInt(CM_AU_SHORT_YEAR_KEY + key, year);
         }
         configurationMap.setMapElement(key, val);
       }
@@ -116,19 +112,30 @@ public class ConfigurableArchivalUnit
     return new CrawlRules.FirstMatch(rules);
   }
 
+  protected CrawlWindow makeCrawlWindow() {
+    CrawlWindow window = null;
+    String window_class;
+    window_class = configurationMap.getString(CM_AU_CRAWL_WINDOW_KEY,
+                                              null);
+    if (window_class != null) {
+      try {
+        ConfigurableCrawlWindow ccw = (ConfigurableCrawlWindow)
+            Class.forName(window_class).newInstance();
+        window = ccw.makeCrawlWindow();
+      }
+      catch (Exception ex) {
+      }
+    }
+    return window;
+  }
+
   public FilterRule getFilterRule(String mimeType) {
     String filter = configurationMap.getString(mimeType, null);
-    if(filter != null) {
+    if (filter != null) {
       try {
         return (FilterRule) Class.forName(filter).newInstance();
       }
-      catch (ClassNotFoundException ex) {
-        return null;
-      }
-      catch (IllegalAccessException ex) {
-        return null;
-      }
-      catch (InstantiationException ex) {
+      catch (Exception ex) {
         return null;
       }
     }
@@ -140,18 +147,17 @@ public class ConfigurableArchivalUnit
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES
 // ---------------------------------------------------------------------
   private String[] getStringTokens(String tokenString) {
-    StringTokenizer st = new StringTokenizer(tokenString,"\n");
+    StringTokenizer st = new StringTokenizer(tokenString, "\n");
     int num_tokens = st.countTokens();
     String[] strs = new String[num_tokens];
-    for(int i=0; i < num_tokens; i++) {
+    for (int i = 0; i < num_tokens; i++) {
       strs[i] = st.nextToken();
     }
     return strs;
   }
 
-
   String convertVariableString(String variableString) {
-    if(StringUtil.isNullString(variableString)) {
+    if (StringUtil.isNullString(variableString)) {
       return variableString;
     }
     String[] strs = getStringTokens(variableString);
@@ -161,14 +167,14 @@ public class ConfigurableArchivalUnit
     for (int i = 1; i < strs.length && has_all_args; i++) {
       String key = strs[i];
       Object val = configurationMap.getMapElement(key);
-      if(val != null) {
+      if (val != null) {
         args.add(val);
       }
       else {
         has_all_args = false;
       }
     }
-    if(has_all_args) {
+    if (has_all_args) {
       PrintfFormat pf = new PrintfFormat(cur_str);
       cur_str = pf.sprintf(args.toArray());
     }
@@ -187,19 +193,23 @@ public class ConfigurableArchivalUnit
     for (int i = 2; i < strs.length && has_all_args; i++) {
       String key = strs[i];
       Object val = configurationMap.getMapElement(key);
-      if(val != null) {
-       args.add(val);
-     }
-     else {
-       has_all_args = false;
-     }
+      if (val != null) {
+        args.add(val);
+      }
+      else {
+        has_all_args = false;
+      }
     }
-    if(has_all_args) {
+    if (has_all_args) {
       PrintfFormat pf = new PrintfFormat(rule);
       rule = pf.sprintf(args.toArray());
       log.debug2("Adding crawl rule: " + rule);
       return new CrawlRules.RE(rule, value);
     }
     return null;
+  }
+
+  public interface ConfigurableCrawlWindow {
+    public CrawlWindow makeCrawlWindow();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCacheExceptionMap.java,v 1.1 2004-02-05 03:01:21 clairegriffin Exp $
+ * $Id: TestCacheExceptionMap.java,v 1.2 2004-02-06 23:54:13 clairegriffin Exp $
  */
 
 /*
@@ -267,7 +267,8 @@ public class TestCacheExceptionMap extends LockssTestCase {
     int result_code = 0;
 
     MockCacheExceptionHandler handler = new MockCacheExceptionHandler();
-    handler.setHandledCodes(handledCodes, cacheExceptionHandler);
+    handler.setHandledCodes(handledCodes);
+    handler.init(cacheExceptionHandler);
     // now lets find out if we actually handle the codes.
     // test the UnexpectedNoRetryException
     for(int ic =0; ic < handledCodes.length; ic++) {
@@ -305,9 +306,13 @@ public class TestCacheExceptionMap extends LockssTestCase {
     public MockCacheExceptionHandler() {
     }
 
-    void setHandledCodes(int[] returnCodes, CacheExceptionMap map) {
+    public void init(CacheExceptionMap map) {
+      if(m_returnCodes != null) {
+        map.storeArrayEntries(m_returnCodes, this.getClass().getName());
+      }
+    }
+    void setHandledCodes(int[] returnCodes) {
       m_returnCodes = returnCodes;
-      map.storeArrayEntries(returnCodes, this.getClass().getName());
     }
 
     /**

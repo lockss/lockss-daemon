@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.40 2004-01-13 04:46:27 clairegriffin Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.41 2004-02-06 23:54:14 clairegriffin Exp $
  */
 
 /*
@@ -190,7 +190,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  protected void setAuParams(Configuration config) throws
+  protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
     try {
       fileRoot = config.get(SimulatedPlugin.AU_PARAM_ROOT);
@@ -271,6 +271,4 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     }
   }
 
-  protected void loadDefiningConfig(Configuration config) {
-  }
 }

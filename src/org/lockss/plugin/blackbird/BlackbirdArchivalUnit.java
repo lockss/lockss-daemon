@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdArchivalUnit.java,v 1.2 2004-01-13 04:46:25 clairegriffin Exp $
+ * $Id: BlackbirdArchivalUnit.java,v 1.3 2004-02-06 23:53:56 clairegriffin Exp $
  */
 
 /*
@@ -71,8 +71,10 @@ public class BlackbirdArchivalUnit extends ConfigurableArchivalUnit {
     defaultFetchDelay = DEFAULT_PAUSE_TIME;
   }
 
-  protected void setAuParams(Configuration config)
+  protected void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
+    super.loadAuConfigDescrs(config);
+
     // get the base url string
     volume = configurationMap.getInt(BlackbirdPlugin.AUPARAM_VOL, -1);
     if (volume < 0) {

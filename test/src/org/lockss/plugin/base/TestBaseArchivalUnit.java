@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.15 2004-01-29 01:49:49 eaalto Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.16 2004-02-06 23:54:13 clairegriffin Exp $
  */
 
 /*
@@ -331,12 +331,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
       return m_startUrl;
     }
 
-    protected void setAuParams(Configuration config) throws
-        ConfigurationException {
-      // ok to do nothing - so do nothing.
-    }
-
-    protected void loadDefiningConfig(Configuration config) {
+     protected void loadAuConfigDescrs(Configuration config) {
     }
 
     protected FilterRule constructFilterRule(String mimeType) {

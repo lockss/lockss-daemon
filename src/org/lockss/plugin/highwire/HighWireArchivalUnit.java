@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.43 2004-01-29 01:49:51 eaalto Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.44 2004-02-06 23:54:12 clairegriffin Exp $
  */
 
 /*
@@ -85,24 +85,15 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
     return null;
   }
 
-  protected void setAuParams(Configuration config)
+  protected void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
 
+    super.loadAuConfigDescrs(config);
     volume = configurationMap.getInt(HighWirePlugin.AUPARAM_VOL, -1);
     if (volume < 0) {
       throw new ConfigurationException("Negative volume");
     }
-    logger.debug3("Setting 'use crawl window' to " + useCrawlWindow);
-  }
 
-
-  protected CrawlSpec makeCrawlSpec() throws REException {
-    CrawlRule rule = makeRules();
-    CrawlSpec spec = new CrawlSpec(startUrlString, rule);
-    if (useCrawlWindow) {
-      spec.setCrawlWindow(makeCrawlWindow());
-    }
-    return spec;
   }
 
   protected String makeName() {
@@ -144,7 +135,7 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  private CrawlWindow makeCrawlWindow() {
+  protected CrawlWindow makeCrawlWindow() {
     logger.debug("Creating crawl window...");
     // disallow crawls from 6am->9am
     Calendar start = Calendar.getInstance();
@@ -183,6 +174,9 @@ public class HighWireArchivalUnit extends ConfigurableArchivalUnit {
 
     configurationMap.putString("text/html",
                                "org.lockss.plugin.highwire.HighWireFilterRule");
+
+    configurationMap.putString(CM_AU_CRAWL_WINDOW_KEY,
+                               "org.lockss.plugin.highwire.HighwireCrawlWindow");
 
     List rules = new ArrayList();
     //rules.add(new CrawlRules.RE("^" + baseUrl.toString(),

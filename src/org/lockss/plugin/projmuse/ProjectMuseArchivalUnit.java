@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.21 2004-01-29 01:49:50 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.22 2004-02-06 23:54:13 clairegriffin Exp $
  */
 
 /*
@@ -87,8 +87,9 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
     return null;
   }
 
-  protected void setAuParams(Configuration config)
+  protected void loadAuConfigDescrs(Configuration config)
       throws ConfigurationException {
+    super.loadAuConfigDescrs(config);
     // get the base url string
     volume = configurationMap.getInt(ProjectMusePlugin.AUPARAM_VOL, -1);
     if (volume < 0) {

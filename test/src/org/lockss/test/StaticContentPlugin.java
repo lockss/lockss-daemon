@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.21 2004-01-27 04:07:04 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.22 2004-02-06 23:54:14 clairegriffin Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
      *
      * @param config Configuration
      */
-    protected void loadDefiningConfig(Configuration config) {
+    protected void loadAuConfigDescrs(Configuration config) {
     }
 
   }

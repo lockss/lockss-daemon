@@ -1,5 +1,5 @@
 /*
- * $Id: CacheExceptionHandler.java,v 1.2 2004-02-05 03:01:21 clairegriffin Exp $
+ * $Id: CacheExceptionHandler.java,v 1.3 2004-02-06 23:53:55 clairegriffin Exp $
  */
 
 /*
@@ -34,5 +34,6 @@ package org.lockss.plugin;
 import java.net.HttpURLConnection;
 
 public interface CacheExceptionHandler {
+  public void init(CacheExceptionMap map);
   public CacheException handleException(int code, HttpURLConnection connection);
 }

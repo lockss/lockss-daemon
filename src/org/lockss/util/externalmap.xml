@@ -37,6 +37,12 @@
                        type="integer">
                         <bind-xml name="Size" node="element"/>
                 </field>
+                <field name="definitional"
+                	type="boolean"
+                        set-method="setDefinitional"
+                        get-method="isDefinitional">
+                        <bind-xml name="Definitional" node="element"/>
+                </field>
 
         </class>
 </mapping>

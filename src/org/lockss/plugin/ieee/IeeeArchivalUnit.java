@@ -40,9 +40,10 @@ public class IeeeArchivalUnit extends ConfigurableArchivalUnit {
   }
 
 
- protected void setAuParams(Configuration config)
+ protected void loadAuConfigDescrs(Configuration config)
       throws ArchivalUnit.ConfigurationException {
 
+    super.loadAuConfigDescrs(config);
     puNumber = configurationMap.getInt(IeeePlugin.AUPARAM_PUNUM, -1);
     if (puNumber < 0) {
       throw new ConfigurationException("Publication Number - Out of Range.");

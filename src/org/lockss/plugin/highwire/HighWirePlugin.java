@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.32 2004-01-27 04:07:08 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.33 2004-02-06 23:54:12 clairegriffin Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class HighWirePlugin
     configurationMap.putString(CM_VERSION_KEY, CURRENT_VERSION);
     configurationMap.putCollection(CM_CONFIG_PROPS_KEY,
                                    ListUtil.list(PD_BASE, PD_VOL));
+
     // then call the overridden initializaton.
     super.initPlugin(daemon);
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: CulturalLogicArchivalUnit.java,v 1.3 2004-01-27 01:03:45 clairegriffin Exp $
+ * $Id: CulturalLogicArchivalUnit.java,v 1.4 2004-02-06 23:54:11 clairegriffin Exp $
  */
 
 /*
@@ -73,8 +73,10 @@ public class CulturalLogicArchivalUnit extends ConfigurableArchivalUnit {
     expectedUrlPath = "/clogic/";
   }
 
-  protected void setAuParams(Configuration config) throws
+  protected void loadAuConfigDescrs(Configuration config) throws
       ConfigurationException {
+    super.loadAuConfigDescrs(config);
+
     int i_year = configurationMap.getInt(CulturalLogicPlugin.AUPARAM_YEAR, -1);
     if (i_year < 0) {
       throw new ConfigurationException("Year Out of Range: " + i_year);
