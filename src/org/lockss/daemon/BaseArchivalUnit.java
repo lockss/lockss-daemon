@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.10 2003-02-13 06:28:51 claire Exp $
+ * $Id: BaseArchivalUnit.java,v 1.11 2003-02-20 22:26:16 tal Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon;
 import java.util.*;
 import gnu.regexp.*;
 import org.lockss.util.*;
+import org.lockss.plugin.*;
 import org.lockss.state.*;
 
 /**
@@ -45,6 +46,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   private static final int
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10000;
 
+  private Plugin plugin;
   protected CrawlSpec crawlSpec;
   private String idStr = null;
 
@@ -52,12 +54,13 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * Must invoke this constructor in plugin subclass.
    * @param spec the CrawlSpec
    */
-  protected BaseArchivalUnit(CrawlSpec spec) {
-    this();
+  protected BaseArchivalUnit(Plugin myPlugin, CrawlSpec spec) {
+    this(myPlugin);
     crawlSpec = spec;
   }
 
-  protected BaseArchivalUnit() {
+  protected BaseArchivalUnit(Plugin myPlugin) {
+    plugin = myPlugin;
   }
 
   // Factories that must be implemented by plugin subclass
@@ -70,7 +73,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the cus
    */
   public abstract CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-						      CachedUrlSetSpec cuss);
+						   CachedUrlSetSpec cuss);
 
   /**
    * Create an instance of the plugin-specific implementation of
@@ -80,7 +83,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return the CachedUrl
    */
   public abstract CachedUrl cachedUrlFactory(CachedUrlSet owner,
-						String url);
+					     String url);
 
   /**
    * Create an instance of the plugin-specific implementation of
@@ -89,8 +92,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @param url the url
    * @return the UrlCacher
    */
-  public abstract UrlCacher urlCacherFactory(CachedUrlSet  owner,
-						String url);
+  public abstract UrlCacher urlCacherFactory(CachedUrlSet owner,
+					     String url);
+
+  /**
+   * Return the Plugin's ID.
+   * @return the Plugin's ID.
+   */
+  public String getPluginId() {
+    return plugin.getPluginId();
+  }
 
   /**
    * Return the CrawlSpec.
