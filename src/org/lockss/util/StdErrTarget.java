@@ -34,58 +34,9 @@ import java.util.Date;
 
 /** A <code>LogTarget</code> implementation that outputs to System.err
  */
-public class StdErrTarget implements LogTarget {
-//    static final DateFormat df = DateFormat.getTimeInstance();
-  static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
-
-  private static long lastTimestamp = 0;
-
-  private PrintStream stream;
-
+public class StdErrTarget extends PrintStreamTarget {
   /** Create a log target that outputs to System.err */
   public StdErrTarget() {
-    this(System.err);
-  }
-
-  /** Create a log target that outputs to the supplied PrintStream */
-  StdErrTarget(PrintStream toStream) {
-    this.stream = toStream;
-  }
-
-  public void init() {
-  }
-
-  // Rather than synchronizing, build whole string and assume a single
-  // println will probably not get interleaved with another thread.
-  // If need to explicitly synchronize, do so on the class, not instance,
-  // as there could be multiple instances of this.  (Even that's not right,
-  // as it should synchronize with all other uses of the stream)
-
-  /** Write the message to stdout, prefaced by a timestamp if more than one
-   * day has passed since the last timestamp
-   */
-  public void handleMessage(Logger log, int msgLevel, String message) {
-    if (TimeBase.msSince(lastTimestamp) >= Constants.DAY &&
-	!TimeBase.isSimulated()) {
-      lastTimestamp = TimeBase.nowMs();
-      writeMessage(log, "Timestamp", TimeBase.nowDate().toString());
-    }
-    writeMessage(log, log.nameOf(msgLevel), message);
-  }
-
-  /** Write the message to stdout */
-  void writeMessage(Logger log, String msgLevel, String message) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(df.format(new Date()));
-    if (TimeBase.isSimulated()) {
-      sb.append("(sim ");
-      sb.append(TimeBase.nowMs());
-      sb.append(")");
-    }
-    sb.append(": ");
-    sb.append(msgLevel);
-    sb.append(": ");
-    sb.append(message);
-    stream.println(sb.toString());
+    super(System.err);
   }
 }
