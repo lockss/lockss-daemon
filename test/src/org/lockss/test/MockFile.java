@@ -1,5 +1,5 @@
 /*
- * $Id: MockFile.java,v 1.1 2003-07-19 00:05:52 troberts Exp $
+ * $Id: MockFile.java,v 1.2 2003-10-07 22:23:33 troberts Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ public class MockFile extends File {
 
   String path;
   boolean isDirectory = false;
+  boolean isFile = false;
   List children = new ArrayList();
 
   public MockFile(String path) {
@@ -107,7 +108,11 @@ public class MockFile extends File {
   }
 
   public boolean isFile() {
-    throw new UnsupportedOperationException("Not implemented");
+    return isFile;
+  }
+
+  public void setIsFile(boolean isFile) {
+    this.isFile = isFile;
   }
 
   public boolean isHidden() {
