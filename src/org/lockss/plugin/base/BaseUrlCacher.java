@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.21 2004-02-06 03:11:06 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.22 2004-02-09 22:54:13 troberts Exp $
  */
 
 /*
@@ -187,9 +187,7 @@ public class BaseUrlCacher implements UrlCacher {
    */
   protected InputStream getUncachedInputStream(long lastCached)
       throws IOException {
-    openConnection();
-    // set the user-agent
-    conn.setIfModifiedSince(lastCached);
+    openConnection(lastCached);
     InputStream input = conn.getInputStream();
     if (conn instanceof HttpURLConnection) {
       // http connection; check response code
@@ -203,7 +201,10 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   public Properties getUncachedProperties() throws IOException {
-    openConnection();
+    if (conn == null) {
+      throw new UnsupportedOperationException("Called getUncachedProperties before calling getUncachedInputStream.");
+    }
+//     openConnection();
     Properties props = new Properties();
     // set header properties in which we have interest
     props.setProperty("content-type", conn.getContentType());
@@ -243,7 +244,12 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  private void openConnection() throws IOException {
+  /**
+   * If we haven't already connected, creates a connection from url, setting
+   * the user-agent and ifmodifiedsince values.  Then actually connects to the 
+   * site and throws if we get an error code
+   */
+  private void openConnection(long lastCached) throws IOException {
     if (conn==null) {
       try {
         URL urlO = new URL(url);
@@ -253,6 +259,7 @@ public class BaseUrlCacher implements UrlCacher {
         throw exceptionMap.getHostException(ex.getMessage());
       }
       conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+      conn.setIfModifiedSince(lastCached);
       checkConnectException(conn);
     }
   }
