@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.26 2003-02-12 23:57:37 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.27 2003-02-13 02:18:13 aalto Exp $
  */
 
 /*
@@ -268,6 +268,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   void doTreeWalk() {
     if (theCrawlManager.canTreeWalkStart(managerAu, getAuState(), null, null)) {
       //XXX check for top level poll timing
+      // ask the Plugin
       // if it's been a really long time, schedule a new poll
       long startTime = TimeBase.nowMs();
       nodeTreeWalk(nodeMap);
@@ -300,15 +301,14 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     CrawlState crawlState = node.getCrawlState();
 
     // determine if there are active polls
-    boolean activePolls = false;
     Iterator polls = node.getActivePolls();
     while (polls.hasNext()) {
       PollState poll = (PollState)polls.next();
       if ((poll.getStatus()==PollState.RUNNING) ||
           (poll.getStatus()==PollState.REPAIRING) ||
           (poll.getStatus()==PollState.SCHEDULED)) {
-        activePolls = true;
-        break;
+        // if there are active polls, don't interfere
+        return;
       }
     }
     // at each node, check for crawl state
@@ -319,40 +319,33 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       case CrawlState.BACKGROUND_CRAWL:
       case CrawlState.NEW_CONTENT_CRAWL:
       case CrawlState.REPAIR_CRAWL:
-        if (crawlState.getStatus()==CrawlState.FINISHED) {
+        if (crawlState.getStatus() == CrawlState.FINISHED) {
           // if node is cached
           if (node.getCachedUrlSet().isCached(
               node.getCachedUrlSet().getPrimaryUrl())) {
-            // and no poll is currently running.
-            if (!activePolls) {
-              // if CrawlManager.shouldCrawl()
-              // then CrawlManager.scheduleBackgroundCrawl()
-            }
+            // if CrawlManager.shouldCrawl()
+            // then CrawlManager.scheduleBackgroundCrawl()
           }
         }
     }
     // check recent histories to see if something needs fixing
+    // if there are no current polls
     Iterator historyIt = node.getPollHistories();
     PollHistory lastHistory = null;
     while (historyIt.hasNext()) {
-      PollHistory thisHistory = (PollHistory)historyIt.next();
-      if ((lastHistory==null) ||
+      PollHistory thisHistory = (PollHistory) historyIt.next();
+      if ( (lastHistory == null) ||
           (thisHistory.startTime > lastHistory.startTime)) {
         lastHistory = thisHistory;
       }
     }
-    if (lastHistory!=null) {
+    if (lastHistory != null) {
       switch (lastHistory.status) {
         // if latest is PollState.LOST or PollState.REPAIRING
-        // and it's been a long time
+        // call a name poll to finish the repair which ended early
         case PollState.LOST:
         case PollState.REPAIRING:
-          //XXX calculate 'it's been a long time'
-          // or have Plugin do it?
-          if ((false) && (!activePolls)) {
-            // then call a name poll
-            callNamePoll(node.getCachedUrlSet());
-          }
+          callNamePoll(node.getCachedUrlSet());
           break;
         default:
           break;
@@ -445,8 +438,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
                     nodeState);
         } catch (IOException ioe) {
           logger.error("Repair attempt failed.", ioe);
-          //XXX schedule something?
-          // or allow treewalk to fix?
+          // the treewalk will fix this eventually
         }
       }
     }
@@ -494,8 +486,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
             addNewNodeState(newCus);
           } catch (Exception e) {
             logger.error("Couldn't fetch new node.", e);
-            //XXX schedule something
-            // or allow treewalk to fix?
+            // the treewalk will fix this eventually
           }
         }
       }
@@ -511,8 +502,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
           oldState.getCrawlState().type = CrawlState.NODE_DELETED;
         } catch (Exception e) {
           logger.error("Couldn't delete node.", e);
-          //XXX schedule something
-          // or allow treewalk to fix?
+          // the treewalk will fix this eventually
         }
       }
       pollState.status = PollState.REPAIRED;
@@ -527,7 +517,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
           LcapMessage.NAME_POLL_REQ);
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
-      //XXX schedule something?
+      // the treewalk will fix this eventually
     }
   }
 

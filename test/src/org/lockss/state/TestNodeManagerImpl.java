@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.18 2003-02-12 23:57:37 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.19 2003-02-13 02:18:13 aalto Exp $
  */
 
 /*
@@ -361,6 +361,8 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(MockPollManager.CONTENT_REQUESTED,
                  ((MockPollManager)theDaemon.getPollManager()).getPollStatus(
         TEST_URL+"/branch2/file2.doc"));
+    //XXX check the error which used to happen here when the normal PollManager
+    // was used (should have created an IO error, but didn't)
     assertEquals(PollState.WON, pollState.getStatus());
 
     // lost name poll
