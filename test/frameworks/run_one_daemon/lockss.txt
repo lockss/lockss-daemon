@@ -85,3 +85,4 @@ org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.badFileNum=1
 ##org.lockss.pollspec.uprBound=
 
 org.lockss.daemon.exit=false
+org.lockss.simulated_status_accessor.should_register=true
