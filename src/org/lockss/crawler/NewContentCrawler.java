@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.18 2004-05-26 07:04:42 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.19 2004-05-27 00:19:50 dcfok Exp $
  */
 
 /*
@@ -285,6 +285,9 @@ public class NewContentCrawler extends CrawlerImpl {
 	    //IOException if the CU can't be read
 	    parser.parseForUrls(cu, new MyFoundUrlCallback(parsedPages,
 							   extractedUrls, au));
+	    if (extractedUrls.remove(url)){
+	      logger.debug3("Removing self reference in "+url+" from the extracted list");
+	    }
 	  }
 
  	  crawlStatus.signalUrlParsed();
@@ -296,7 +299,7 @@ public class NewContentCrawler extends CrawlerImpl {
       logger.error("Problem parsing "+uc+". Ignoring", ioe);
       error = Crawler.STATUS_FETCH_ERROR;
     }
-    logger.debug3("Removing from list: "+uc.getUrl());
+    logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (error == 0);
   }
 
