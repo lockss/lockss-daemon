@@ -1,0 +1,14 @@
+#! /bin/bash
+
+PROP_URL_LIST="lockss.txt"
+
+CLASSPATH=`cat ${PROJECT_DIR}/lockss-gamma/test/test-classpath`
+export CLASSPATH
+
+echo running at `date`
+#echo CLASSPATH=$CLASSPATH
+# for large caches, need to pass "-ms4m -mx64m" to java
+java org.lockss.app.LockssDaemon ${PROP_URL_LIST} >>test.out 2>&1 &
+echo $! >dpid
+wait
+echo stopped with status $? at `date`
