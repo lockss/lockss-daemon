@@ -4,13 +4,6 @@ org.lockss.log.default.level=info
 org.lockss.ui.access.ip.logForbidden=true
 org.lockss.proxy.access.ip.logForbidden=true
 
-#au config settings
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.root=localA
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.depth=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=2
-org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=3
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.badFileLoc=1,1
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.badFileNum=1
 
 
 org.lockss.platform.diskSpacePaths=./cache
