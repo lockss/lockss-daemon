@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.68 2004-01-14 22:24:01 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.69 2004-01-14 22:51:09 tlipkis Exp $
  */
 
 /*
@@ -592,7 +592,7 @@ public class PluginManager extends BaseLockssManager {
     String pluginName = pluginNameFromKey(pluginKey);
     String confFile = null;
     if (xmlPlugins.contains(pluginName)) {
-      confFile = "/" + StringUtil.replaceString(pluginName, ".", "/") + ".xml";
+      confFile = pluginName;
       pluginName = getConfigurablePluginName();
     }
     Class pluginClass;
