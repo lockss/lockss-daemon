@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCallback.java,v 1.1 2003-01-29 19:55:18 troberts Exp $
+ * $Id: RepairCallback.java,v 1.2 2003-01-29 19:59:27 troberts Exp $
  */
 
 /*
@@ -33,7 +33,13 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 /**
+ * Interface to the callback used to signal the completion of a repair attempt
  */
 public interface RepairCallback {
+  /**
+   * @param success whether the repair was successful or not
+   * @param cookie object used by callback to designate which repair 
+   * attempt this is
+   */
   public void signalRepairAttemptCompleted(boolean success, Object cookie);
 }

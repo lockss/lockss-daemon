@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.1 2003-01-29 19:55:18 troberts Exp $
+ * $Id: CrawlManager.java,v 1.2 2003-01-29 19:59:27 troberts Exp $
  */
 
 /*
@@ -34,7 +34,17 @@ package org.lockss.crawler;
 import java.net.URL;
 
 /**
+ * This is the interface for the object which will sit between the crawler
+ * and the rest of the world.  It mediates the different crawl types.
  */
 public interface CrawlManager {
+  /**
+   * Schedules a repair crawl and calls cb.signalRepairAttemptCompleted
+   * when done.
+   * @param url URL that needs to be repaired
+   * @param cb callback to talk to when repair attempt is done
+   * @param cookie object that the callback needs to understand which
+   * repair we're referring to.
+   */
   public void scheduleRepair(URL url, RepairCallback cb, Object cookie);
 }
