@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.61 2004-12-15 00:35:00 troberts Exp $
+ * $Id: LockssTestCase.java,v 1.62 2005-01-04 03:07:14 tlipkis Exp $
  */
 
 /*
@@ -434,6 +434,31 @@ public class LockssTestCase extends TestCase {
    * @param actual the actual value
    */
   static public void assertIsomorphic(Object expected[], Collection actual) {
+    assertIsomorphic(null, expected, actual);
+  }
+
+  /**
+   * Asserts that the collections behind the iterator are isomorphic. If
+   * not an AssertionFailedError is thrown.
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertIsomorphic(String message,
+				      Iterator expected, Iterator actual) {
+    if (CollectionUtil.isIsomorphic(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /**
+   * Asserts that the collections behind the iterator are isomorphic. If
+   * not an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertIsomorphic(Iterator expected, Iterator actual) {
     assertIsomorphic(null, expected, actual);
   }
 
@@ -884,6 +909,11 @@ public class LockssTestCase extends TestCase {
       sb.append(element);
       fail(sb.toString());
     }
+  }
+
+  /** Fail, and output the stack trace of the Throwable */
+  protected static void fail(String message, Throwable t) {
+    fail(message + ": " + StringUtil.stackTraceString(t));
   }
 
   private static void failEquals(String message,
