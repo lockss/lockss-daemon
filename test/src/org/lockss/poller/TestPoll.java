@@ -12,6 +12,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.repository.LockssRepositoryServiceImpl;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends LockssTestCase {
@@ -50,7 +51,9 @@ public class TestPoll extends LockssTestCase {
     daemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     PluginUtil.registerArchivalUnit(testau);
-    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol");
+    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=/tmp";
+    TestIdentityManager.configParams("/tmp/iddb", "src/org/lockss/protocol",
+                                     cacheStr);
     idmgr = daemon.getIdentityManager();
     daemon.getHashService().startService();
     try {

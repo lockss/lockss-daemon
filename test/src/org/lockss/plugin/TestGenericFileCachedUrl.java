@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.2 2003-02-26 02:15:47 aalto Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.3 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ import org.lockss.util.StreamUtil;
  */
 public class TestGenericFileCachedUrl extends LockssTestCase {
   private LockssRepository repo;
-  private MockGenericFileArchivalUnit mau;
+  private MockGenericFileArchivalUnit mgfau;
   private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
   private CachedUrlSet cus;
 
@@ -59,13 +59,12 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
-    LockssRepository rep = theDaemon.getLockssRepository(new MockArchivalUnit());
-    mau = new MockGenericFileArchivalUnit(null);
-    repo = rep.repositoryFactory(mau);
+    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    mgfau = new MockGenericFileArchivalUnit(null);
+    repo = theDaemon.getLockssRepository(mgfau);
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    cus = mau.makeCachedUrlSet(rSpec);
+    cus = mgfau.makeCachedUrlSet(rSpec);
   }
 
   public void testGetUrl() throws Exception {

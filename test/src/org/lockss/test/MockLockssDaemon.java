@@ -16,7 +16,7 @@ public class MockLockssDaemon extends LockssDaemon {
   HashService hashService = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
-  LockssRepository lockssRepository = null;
+  LockssRepositoryService lockssRepositoryService = null;
   HistoryRepository historyRepository = null;
   ProxyHandler proxyHandler = null;
   CrawlManager crawlManager = null;
@@ -39,7 +39,7 @@ public class MockLockssDaemon extends LockssDaemon {
     hashService = null;
     pollManager = null;
     commManager = null;
-    lockssRepository = null;
+    lockssRepositoryService = null;
     historyRepository = null;
     proxyHandler = null;
     crawlManager = null;
@@ -100,24 +100,27 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * get a Lockss Repository instance.  This is broken and not AU specific,
-   * because using the proper factory method required Configuration parameters
-   * which weren't always set in the tests.
-   * @param au the ArchivalUnit (ignored)
+   * return the lockss repository service
+   * @return the LockssRepositoryService
+   */
+  public LockssRepositoryService getLockssRepositoryService() {
+    if (lockssRepositoryService == null) {
+      lockssRepositoryService = new LockssRepositoryServiceImpl();
+      try {
+        lockssRepositoryService.initService(this);
+      } catch (LockssDaemonException ex) { }
+      theManagers.put(LockssDaemon.LOCKSS_REPOSITORY_SERVICE,
+                      lockssRepositoryService);
+    }
+    return lockssRepositoryService;
+  }
+  /**
+   * get a Lockss Repository instance.
+   * @param au the ArchivalUnit
    * @return the LockssRepository
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
-    if (lockssRepository == null) {
-      LockssRepositoryImpl impl = new LockssRepositoryImpl();
-      try {
-        impl.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
-      lockssRepository = impl;
-      theManagers.put(LockssDaemon.LOCKSS_REPOSITORY, lockssRepository);
-    }
-    return lockssRepository;
+    return getLockssRepositoryService().addLockssRepository(au);
   }
 
   /**
@@ -282,12 +285,14 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the LockssRepository
-   * @param lockssRepo the new repository
+   * Set the LockssRepositoryService
+   * @param lockssRepoService the new repository service
    */
-  public void setLockssRepository(LockssRepository lockssRepo) {
-    lockssRepository = lockssRepo;
-    theManagers.put(LockssDaemon.LOCKSS_REPOSITORY, lockssRepository);
+  public void setLockssRepositoryService(LockssRepositoryService
+                                         lockssRepoService) {
+    lockssRepositoryService = lockssRepoService;
+    theManagers.put(LockssDaemon.LOCKSS_REPOSITORY_SERVICE,
+                    lockssRepositoryService);
   }
 
   /**
@@ -296,6 +301,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setNodeManagerService(NodeManagerService nms) {
     nodeManagerService = nms;
+    theManagers.put(LockssDaemon.NODE_MANAGER_SERVICE, nodeManagerService);
   }
 
   /**

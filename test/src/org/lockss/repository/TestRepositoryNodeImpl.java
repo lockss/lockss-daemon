@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.15 2003-03-01 02:01:24 aalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.16 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
  * This is the test class for org.lockss.repostiory.RepositoryNodeImpl
  */
 public class TestRepositoryNodeImpl extends LockssTestCase {
+  private MockLockssDaemon theDaemon = new MockLockssDaemon();
   private LockssRepository repo;
   private String tempDirPath;
   MockArchivalUnit mau;
@@ -52,13 +53,15 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
-    mau = new MockArchivalUnit(null);
-    repo = (new LockssRepositoryImpl()).repositoryFactory(mau);
+    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    mau = new MockArchivalUnit();
+    repo = theDaemon.getLockssRepository(mau);
   }
 
   public void tearDown() throws Exception {
     TimeBase.setReal();
+    theDaemon.getLockssRepositoryService().stopService();
+    theDaemon.stopDaemon();
     super.tearDown();
   }
 
@@ -80,7 +83,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   public void testFileLocation() throws Exception {
     createLeaf("http://www.example.com/testDir/branch1/leaf1", "test stream",
                null);
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
+    tempDirPath += LockssRepositoryServiceImpl.CACHE_ROOT_NAME;
     tempDirPath = RepositoryLocationUtil.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = RepositoryLocationUtil.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
@@ -96,7 +99,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode leaf =
         createLeaf("http://www.example.com/testDir/branch1/leaf1",
         "test stream", null);
-    tempDirPath += LockssRepositoryImpl.CACHE_ROOT_NAME;
+    tempDirPath += LockssRepositoryServiceImpl.CACHE_ROOT_NAME;
     tempDirPath = RepositoryLocationUtil.mapAuToFileLocation(tempDirPath, mau);
     tempDirPath = RepositoryLocationUtil.mapUrlToFileLocation(tempDirPath,
         "http://www.example.com/testDir/branch1/leaf1");
@@ -496,5 +499,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     String resultStr = baos.toString();
     baos.close();
     return resultStr;
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestRepositoryNodeImpl.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.10 2003-02-25 03:13:47 claire Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.11 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.Properties;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.StreamUtil;
-import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.repository.TestLockssRepositoryServiceImpl;
 import org.lockss.plugin.base.*;
 
 /**
@@ -47,7 +47,7 @@ import org.lockss.plugin.base.*;
  * @version 0.0
  */
 public class TestGenericFileUrlCacher extends LockssTestCase {
-  private MockGenericFileArchivalUnit mau;
+  private MockGenericFileArchivalUnit mgfau;
   private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
 
   public TestGenericFileUrlCacher(String msg) {
@@ -57,21 +57,21 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    mau = new MockGenericFileArchivalUnit(new CrawlSpec(tempDirPath, null));
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
-    theDaemon.getLockssRepository(new MockArchivalUnit());
+    mgfau = new MockGenericFileArchivalUnit(new CrawlSpec(tempDirPath, null));
+    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    theDaemon.getLockssRepository(mgfau);
   }
 
   public void testCache() throws IOException {
     MockGenericFileUrlCacher cacher = new MockGenericFileUrlCacher(
-        mau.getAUCachedUrlSet(), "http://www.example.com/testDir/leaf1");
+        mgfau.getAUCachedUrlSet(), "http://www.example.com/testDir/leaf1");
     cacher.setUncachedInputStream(new StringInputStream("test content"));
     Properties props = new Properties();
     props.setProperty("test1", "value1");
     cacher.setUncachedProperties(props);
     cacher.cache();
 
-    CachedUrl url = mau.cachedUrlFactory(mau.getAUCachedUrlSet(),
+    CachedUrl url = mgfau.cachedUrlFactory(mgfau.getAUCachedUrlSet(),
         "http://www.example.com/testDir/leaf1");
     InputStream is = url.openForReading();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
@@ -83,4 +83,10 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
     props = url.getProperties();
     assertTrue(props.getProperty("test1").equals("value1"));
   }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestGenericFileUrlCacher.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
+  }
+
 }

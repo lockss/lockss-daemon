@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.21 2003-03-01 02:01:24 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.22 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -56,21 +56,11 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    configCacheLocation(tempDirPath);
     mau = new MockArchivalUnit();
-    repo = (new LockssRepositoryImpl()).repositoryFactory(mau);
-  }
-
-  public void testRepositoryFactory() {
-    String auId = mau.getAUId();
-    LockssRepository repo1 = repo.repositoryFactory(mau);
-    assertNotNull(repo1);
-    mau.setAuId(auId + "test");
-    LockssRepository repo2 = repo.repositoryFactory(mau);
-    assertTrue(repo1 != repo2);
-    mau.setAuId(auId);
-    repo2 = repo.repositoryFactory(mau);
-    assertEquals(repo1, repo2);
+    String cacheLocation = LockssRepositoryServiceImpl.extendCacheLocation(
+        tempDirPath);
+    repo = new LockssRepositoryImpl(
+        RepositoryLocationUtil.mapAuToFileLocation(cacheLocation, mau), mau);
   }
 
   public void testFileLocation() throws Exception {
@@ -80,7 +70,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
                "test stream", null);
-    System.out.println(testFile.getAbsolutePath());
     assertTrue(testFile.exists());
     tempDirPath += "www.example.com/http/";
     testFile = new File(tempDirPath);
@@ -229,16 +218,14 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
   }
 
-  public static void configCacheLocation(String location)
-    throws IOException {
-    String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + location;
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(
-        FileUtil.urlOfString(s)));
-  }
-
   private RepositoryNode createLeaf(String url, String content,
                                     Properties props) throws Exception {
     return TestRepositoryNodeImpl.createLeaf(repo, url, content, props);
+  }
+
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestLockssRepositoryImpl.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
 
 }

@@ -8,11 +8,10 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import org.mortbay.util.*;
-import gnu.regexp.*;
-import org.lockss.hasher.HashService;
 import org.lockss.test.*;
-
+import org.mortbay.util.*;
+import org.lockss.hasher.HashService;
+import org.lockss.repository.TestLockssRepositoryServiceImpl;
 /** JUnitTest case for class: org.lockss.poller.PollManager */
 public class TestPollManager extends LockssTestCase {
 
@@ -38,12 +37,12 @@ public class TestPollManager extends LockssTestCase {
     super(_name);
   }
 
-  /** setUp method for test case */
   protected void setUp() throws Exception {
     super.setUp();
     daemon.getHashService().startService();
     daemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
+    TestLockssRepositoryServiceImpl.configCacheLocation("/tmp");
     daemon.getLockssRepository(testau);
     PluginUtil.registerArchivalUnit(testau);
     try {

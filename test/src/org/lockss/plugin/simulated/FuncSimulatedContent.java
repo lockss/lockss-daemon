@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.25 2003-03-01 01:29:31 tal Exp $
+ * $Id: FuncSimulatedContent.java,v 1.26 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -62,7 +62,8 @@ public class FuncSimulatedContent extends LockssTestCase {
     sau.setRootDir(tempDirPath);
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=1000";
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=1024";
-    String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
+    String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
+        tempDirPath;
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
     theDaemon = new MockLockssDaemon(ListUtil.list(FileUtil.urlOfString(s),
@@ -88,7 +89,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     sau = new SimulatedArchivalUnit();
     sau.setRootDir(tempDirPath);
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
 
     createContent();
     crawlContent();

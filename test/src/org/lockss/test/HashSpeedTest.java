@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.5 2003-02-27 21:56:17 tal Exp $
+ * $Id: HashSpeedTest.java,v 1.6 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.File;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.repository.LockssRepositoryServiceImpl;
 import org.lockss.util.ListUtil;
 import org.lockss.poller.PollManager;
 import org.lockss.crawler.GoslingCrawlerImpl;
@@ -87,7 +87,8 @@ public class HashSpeedTest extends LockssTestCase {
     sau.setRootDir(tempDirPath);
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration;
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + byteStep;
-    String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
+    String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
+        tempDirPath;
     TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
       FileUtil.urlOfString(s2), FileUtil.urlOfString(s3)));
     theDaemon.getLockssRepository(new MockArchivalUnit());

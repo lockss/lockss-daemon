@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.6 2003-03-01 02:56:06 aalto Exp $
+ * $Id: TestPluginManager.java,v 1.7 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.repository.LockssRepositoryServiceImpl;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
@@ -66,7 +68,10 @@ public class TestPluginManager extends LockssTestCase {
     p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
     p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
     p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-    p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n"; // value contains a dot
+    p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n" + // value contains a dot
+// needed to allow PluginManager to register AUs
+    LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=/tmp";
+
 
   PluginManager mgr;
 
@@ -76,6 +81,7 @@ public class TestPluginManager extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+
     mgr = new PluginManager();
     mgr.initService(theDaemon);
   }

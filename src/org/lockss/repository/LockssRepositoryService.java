@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManagerService.java,v 1.2 2003-03-04 00:16:12 aalto Exp $
+ * $Id: LockssRepositoryService.java,v 1.1 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -30,52 +30,31 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
+package org.lockss.repository;
 
 import java.util.*;
 import org.lockss.app.*;
+import org.lockss.daemon.Configuration;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.state.*;
 
 /**
- * Mock implementation of the NodeManagerService.
+ * Handles the LockssRepositories.
  */
-public class MockNodeManagerService implements NodeManagerService {
-  private static LockssDaemon theDaemon;
-  private static LockssManager theManager = null;
-  public HashMap auMaps = new HashMap();
+public interface LockssRepositoryService extends LockssManager {
+  /**
+   * Returns the LockssRepository matching that ArchivalUnit.
+   * Throws an IllegalArgumentException if there is no LockssRepository, since
+   * it should be loaded via 'addLockssRepository()' first.
+   * @param au the ArchivalUnit
+   * @return the LockssRepository
+   */
+  public LockssRepository getLockssRepository(ArchivalUnit au);
 
-  public MockNodeManagerService() { }
-
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if (theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-    } else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  public void startService() {
-  }
-
-  public void stopService() {
-  }
-
-  public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager nodeMan = (NodeManager)auMaps.get(au);
-    if (nodeMan==null) {
-      throw new IllegalArgumentException("NodeManager not created for au.");
-    }
-    return nodeMan;
-  }
-
-  public synchronized NodeManager addNodeManager(ArchivalUnit au) {
-    NodeManager nodeManager = (NodeManager)auMaps.get(au);
-    if (nodeManager==null) {
-      nodeManager = NodeManagerImpl.getTestNodeManager(au);
-      auMaps.put(au, nodeManager);
-    }
-    return nodeManager;
-  }
+  /**
+   * Factory method to add LockssRepository.  Calls 'startService()' on the
+   * ArchivalUnit-specific LockssRepository.
+   * @param au the ArchivalUnit being managed
+   * @return the new repository
+   */
+  public LockssRepository addLockssRepository(ArchivalUnit au);
 }

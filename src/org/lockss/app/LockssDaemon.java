@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.10 2003-03-01 02:56:06 aalto Exp $
+ * $Id: LockssDaemon.java,v 1.11 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class LockssDaemon {
   public static String CRAWL_MANAGER = "CrawlManager";
   public static String PLUGIN_MANAGER = "PluginManager";
   public static String POLL_MANAGER = "PollManager";
-  public static String LOCKSS_REPOSITORY = "LockssRepository";
+  public static String LOCKSS_REPOSITORY_SERVICE = "LockssRepositoryService";
   public static String HISTORY_REPOSITORY = "HistoryRepository";
   public static String NODE_MANAGER_SERVICE = "NodeManagerService";
   public static String PROXY_HANDLER = "ProxyHandler";
@@ -76,8 +76,8 @@ public class LockssDaemon {
   private static String DEFAULT_PLUGIN_MANAGER =
       "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
-  private static String DEFAULT_LOCKSS_REPOSITORY
-      = "org.lockss.repository.LockssRepositoryImpl";
+  private static String DEFAULT_LOCKSS_REPOSITORY_SERVICE
+      = "org.lockss.repository.LockssRepositoryServiceImpl";
   private static String DEFAULT_HISTORY_REPOSITORY
       = "org.lockss.state.HistoryRepositoryImpl";
   private static String DEFAULT_NODE_MANAGER_SERVICE =
@@ -105,7 +105,8 @@ public class LockssDaemon {
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
     new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
     new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
-    new ManagerDesc(LOCKSS_REPOSITORY, DEFAULT_LOCKSS_REPOSITORY),
+    new ManagerDesc(LOCKSS_REPOSITORY_SERVICE,
+                    DEFAULT_LOCKSS_REPOSITORY_SERVICE),
     new ManagerDesc(HISTORY_REPOSITORY, DEFAULT_HISTORY_REPOSITORY),
     new ManagerDesc(NODE_MANAGER_SERVICE, DEFAULT_NODE_MANAGER_SERVICE),
     new ManagerDesc(CRAWL_MANAGER, DEFAULT_CRAWL_MANAGER),
@@ -189,14 +190,22 @@ public class LockssDaemon {
   }
 
   /**
+   * return the node manager instance
+   * @return the NodeManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LockssRepositoryService getLockssRepositoryService() {
+    return (LockssRepositoryService) getManager(LOCKSS_REPOSITORY_SERVICE);
+  }
+
+  /**
    * get Lockss Repository instance
    * @param au the ArchivalUnit
    * @return the LockssRepository
    * @throws IllegalArgumentException if the manager is not available.
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
-    LockssRepository repo = (LockssRepository)getManager(LOCKSS_REPOSITORY);
-    return repo.repositoryFactory(au);
+    return getLockssRepositoryService().getLockssRepository(au);
   }
 
   /**

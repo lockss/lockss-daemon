@@ -36,13 +36,13 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
-import org.lockss.plugin.GenericFileCachedUrlSet;
-import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.plugin.*;
+import org.lockss.repository.TestLockssRepositoryServiceImpl;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   public static final long WEEK_MS = 1000 * 60 * 60 * 24 * 7;
-  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
+  private MockLockssDaemon theDaemon = new MockLockssDaemon();
+  private MockArchivalUnit mau;
 
   public TestHighWireArchivalUnit(String msg) {
     super(msg);
@@ -51,8 +51,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
-    theDaemon.getLockssRepository(new MockArchivalUnit());
+    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
   }
 
   public void testGetVolumeNum() {
@@ -92,6 +91,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     URL base = new URL("http://shadow1.stanford.edu/");
     int volume = 322;
     ArchivalUnit hwAu = makeAU(base, volume);
+    theDaemon.getLockssRepository(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =

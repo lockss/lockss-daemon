@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.25 2003-03-01 01:27:41 tal Exp $
+ * $Id: RunDaemon.java,v 1.26 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class RunDaemon
   private static final String DEFAULT_DIR_PATH = "./";
 
   static final String PARAM_CACHE_LOCATION =
-      LockssRepositoryImpl.PARAM_CACHE_LOCATION;
+      LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION;
   static final String PARAM_CALL_POLL = Configuration.PREFIX + "test.poll";
   static final String PARAM_RUN_TREEWALK = Configuration.PREFIX + "test.treewalk";
   static final String PARAM_TREEWALK_AUID = Configuration.PREFIX + "treewalk.auId";

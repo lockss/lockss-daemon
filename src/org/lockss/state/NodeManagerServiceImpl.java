@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerServiceImpl.java,v 1.2 2003-03-01 03:21:30 aalto Exp $
+ * $Id: NodeManagerServiceImpl.java,v 1.3 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.util.Logger;
 public class NodeManagerServiceImpl implements NodeManagerService {
   private static LockssDaemon theDaemon;
   private static LockssManager theManager = null;
-  private static HashMap auMaps = new HashMap();
+  private HashMap auMap = new HashMap();
   private static Logger logger = Logger.getLogger("NodeManagerService");
 
   public NodeManagerServiceImpl() { }
@@ -79,7 +79,7 @@ public class NodeManagerServiceImpl implements NodeManagerService {
 
 
   private void stopAllManagers() {
-    Iterator entries = auMaps.entrySet().iterator();
+    Iterator entries = auMap.entrySet().iterator();
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry)entries.next();
       NodeManager manager = (NodeManager)entry.getValue();
@@ -88,7 +88,7 @@ public class NodeManagerServiceImpl implements NodeManagerService {
   }
 
   public NodeManager getNodeManager(ArchivalUnit au) {
-    NodeManager nodeMan = (NodeManager)auMaps.get(au);
+    NodeManager nodeMan = (NodeManager)auMap.get(au);
     if (nodeMan==null) {
       logger.error("NodeManager not created for au: "+au);
       throw new IllegalArgumentException("NodeManager not created for au.");
@@ -96,13 +96,14 @@ public class NodeManagerServiceImpl implements NodeManagerService {
     return nodeMan;
   }
 
-  public synchronized void addNodeManager(ArchivalUnit au) {
-    NodeManager nodeManager = (NodeManager)auMaps.get(au);
+  public synchronized NodeManager addNodeManager(ArchivalUnit au) {
+    NodeManager nodeManager = (NodeManager)auMap.get(au);
     if (nodeManager==null) {
       nodeManager = new NodeManagerImpl(au);
-      auMaps.put(au, nodeManager);
+      auMap.put(au, nodeManager);
       nodeManager.initService(theDaemon);
       nodeManager.startService();
     }
+    return nodeManager;
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerService.java,v 1.2 2003-03-01 02:56:06 aalto Exp $
+ * $Id: NodeManagerService.java,v 1.3 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -44,16 +44,17 @@ public interface NodeManagerService extends LockssManager {
   /**
    * Returns the node manager matching that ArchivalUnit.
    * Throws an IllegalArgumentException if there is no NodeManager, since it
-   * should be loaded.
+   * should be loaded via 'addNodeManager()' first.
    * @param au the ArchivalUnit
    * @return the NodeManager
    */
   public NodeManager getNodeManager(ArchivalUnit au);
 
   /**
-   * Factory method to retrieve NodeManager.  Calls 'startService()' on the
+   * Factory method to add NodeManager.  Calls 'startService()' on the
    * ArchivalUnit-specific NodeManager.
    * @param au the ArchivalUnit being managed
+   * @return the NodeManager created
    */
-  public void addNodeManager(ArchivalUnit au);
+  public NodeManager addNodeManager(ArchivalUnit au);
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.19 2003-02-25 03:13:47 claire Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.20 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ import org.lockss.repository.TestRepositoryNodeImpl;
  */
 public class TestGenericFileCachedUrlSet extends LockssTestCase {
   private LockssRepository repo;
-  private MockGenericFileArchivalUnit mau;
+  private MockGenericFileArchivalUnit mgfau;
   private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
 
   public TestGenericFileCachedUrlSet(String msg) {
@@ -60,10 +60,17 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
-    LockssRepository rep = theDaemon.getLockssRepository(new MockArchivalUnit());
-    mau = new MockGenericFileArchivalUnit(null);
-    repo = rep.repositoryFactory(mau);
+    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    theDaemon.startDaemon();
+
+    mgfau = new MockGenericFileArchivalUnit(null);
+    repo = theDaemon.getLockssRepository(mgfau);
+  }
+
+  public void tearDown() throws Exception {
+    theDaemon.getLockssRepositoryService().stopService();
+    theDaemon.stopDaemon();
+    super.tearDown();
   }
 
   public void testFlatSetIterator() throws Exception {
@@ -74,7 +81,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.flatSetIterator();
     ArrayList childL = new ArrayList(3);
     while (setIt.hasNext()) {
@@ -97,7 +104,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.flatSetIterator();
     testRightClass((CachedUrlSetNode)setIt.next(),
                    "http://www.example.com/testDir/branch1", true);
@@ -118,7 +125,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.treeIterator();
     ArrayList childL = new ArrayList(4);
     while (setIt.hasNext()) {
@@ -148,7 +155,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.treeIterator();
     testRightClass((CachedUrlSetNode)setIt.next(),
                    "http://www.example.com/testDir/branch1", true);
@@ -188,7 +195,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     fileSet.treeIterator();
     assertEquals(4, ((GenericFileCachedUrlSet)fileSet).contentNodeCount);
     assertEquals(48, ((GenericFileCachedUrlSet)fileSet).totalNodeSize);
@@ -203,7 +210,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     }
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
-    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     long estimate = fileSet.estimatedHashDuration();
     assertTrue(estimate > 0);
     fileSet.storeActualHashDuration(estimate, null);

@@ -199,14 +199,19 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public static void configParams(String dbDir, String mapDir) {
+    configParams(dbDir, mapDir, null);
+  }
+  public static void configParams(String dbDir, String mapDir, String addParams) {
     String s = IdentityManager.PARAM_IDDB_DIR + "=" + dbDir;
     String s2 = IdentityManager.PARAM_IDDB_MAP_DIR + "=" + mapDir;
+    String configStr = s + "\n" + s2;
+    if (addParams!=null) {
+      configStr += "\n" + addParams;
+    }
 
     try {
-      TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s),
-          FileUtil.urlOfString(s2)));
-    }
-    catch (IOException ex) {
+      TestConfiguration.setCurrentConfigFromString(configStr);
+    } catch (IOException ex) {
       fail("Unable to initialize configuration parameters.");
     }
   }

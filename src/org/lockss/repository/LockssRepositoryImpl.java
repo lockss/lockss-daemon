@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.21 2003-03-01 02:01:24 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.22 2003-03-04 00:16:12 aalto Exp $
  */
 
 /*
@@ -54,16 +54,6 @@ import org.apache.commons.collections.ReferenceMap;
  */
 public class LockssRepositoryImpl implements LockssRepository {
   /**
-   * Configuration parameter name for Lockss cache location.
-   */
-  public static final String PARAM_CACHE_LOCATION =
-    Configuration.PREFIX + "cache.location";
-  /**
-   * Name of top directory in which the urls are cached.
-   */
-  public static final String CACHE_ROOT_NAME = "cache";
-
-  /**
    * Maximum number of node instances to cache.
    */
   public static final int MAX_LRUMAP_SIZE = 12;
@@ -78,16 +68,12 @@ public class LockssRepositoryImpl implements LockssRepository {
   private int refMisses = 0;
   private static Logger logger = Logger.getLogger("LockssRepository");
   private static LockssDaemon theDaemon = null;
-  private static LockssRepository theRepository = null;
-  // these are specifically non-static to allow the tests to work
-  // in practice, the singleton nature of theDaemon's repository
-  // allows these to act as if static
+  private LockssRepository theRepository = null;
   private String baseDir = null;
-  private HashMap repoMap = new HashMap();
 
   public LockssRepositoryImpl() { }
 
-  private LockssRepositoryImpl(String rootPath, ArchivalUnit au) {
+  LockssRepositoryImpl(String rootPath, ArchivalUnit au) {
     rootLocation = rootPath;
     repoAu = au;
     if (!rootLocation.endsWith(File.separator)) {
@@ -137,10 +123,12 @@ public class LockssRepositoryImpl implements LockssRepository {
   }
 
   private void setConfig(Configuration config, Configuration oldConfig) {
-    String cacheLoc = config.get(PARAM_CACHE_LOCATION);
+// don't change the config since you'll lose all history
+/*    String cacheLoc = config.get(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION);
     if (cacheLoc!=null) {
-      rootLocation = extendCacheLocation(cacheLoc);
+      rootLocation = LockssRepositoryServiceImpl.extendCacheLocation(cacheLoc);
     }
+ */
   }
 
   public RepositoryNode getNode(String url)
@@ -259,31 +247,4 @@ public class LockssRepositoryImpl implements LockssRepository {
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
 
-  public synchronized LockssRepository repositoryFactory(ArchivalUnit au) {
-    if (baseDir==null) {
-      baseDir = Configuration.getParam(PARAM_CACHE_LOCATION);
-      if (baseDir==null) {
-        logger.error("Couldn't get "+PARAM_CACHE_LOCATION+" from Configuration");
-        throw new LockssRepository.RepositoryStateException("Couldn't load param.");
-      }
-      baseDir = extendCacheLocation(baseDir);
-    }
-    LockssRepository repo = (LockssRepository)repoMap.get(au);
-    if (repo==null) {
-      repo = new LockssRepositoryImpl(
-          RepositoryLocationUtil.mapAuToFileLocation(baseDir, au), au);
-      repoMap.put(au, repo);
-    }
-    return repo;
-  }
-
-  private static String extendCacheLocation(String cacheDir) {
-    StringBuffer buffer = new StringBuffer(cacheDir);
-    if (!cacheDir.endsWith(File.separator)) {
-      buffer.append(File.separator);
-    }
-    buffer.append(CACHE_ROOT_NAME);
-    buffer.append(File.separator);
-    return buffer.toString();
-  }
 }
