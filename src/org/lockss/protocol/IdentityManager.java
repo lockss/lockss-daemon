@@ -1,3 +1,34 @@
+/*
+ * $Id: IdentityManager.java,v 1.4 2003-01-04 03:31:42 claire Exp $
+ */
+
+/*
+
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
 package org.lockss.protocol;
 
 import org.lockss.daemon.Configuration;
@@ -6,6 +37,11 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import org.lockss.util.Logger;
 import java.util.Random;
+import java.io.File;
+import org.exolab.castor.xml.Unmarshaller;
+import org.exolab.castor.xml.Marshaller;
+import java.io.FileWriter;
+import java.io.FileReader;
 
 /**
  * <p>Title: </p>
@@ -30,6 +66,8 @@ public class IdentityManager {
   static final String PARAM_VOTE_VERIFIED = Configuration.PREFIX + "id.voteVerified";
   static final String PARAM_VOTE_DISOWNED = Configuration.PREFIX + "id.voteDisowned";
 
+  static final String PARAM_IDENTITY_DB_DIR = Configuration.PREFIX + "identityDatabaseDir";
+  static final String IDENTITY_DB_FILENAME = "iddb.xml";
   /* Reputation constants */
   public static final int MAX_DELTA = 0;
   public static final int AGREE_VOTE = 1;
@@ -161,13 +199,43 @@ public class IdentityManager {
     reputationDeltas[VOTE_DISOWNED] = Configuration.getIntParam(PARAM_VOTE_DISOWNED, -400);
   }
 
-  void storeIdentities()  {
-    // XXX store our identities here
+  void reloadIdentities()  {
+ /*   try {
+      String fn = Configuration.getParam(PARAM_IDENTITY_DB, "/tmp/iddb")
+                  + File.separator + IDENTITY_DB_FILENAME;
+      File iddbFile = new File(fn);
+
+      Unmarshaller unmarshaller = new Unmarshaller(IdentityBean.class);
+      IdentityBean nhb = (IdentityBean)unmarshaller.unmarshal(new FileReader(iddbFile));
+      //XXX TODO  convert to our hashmap
+      //((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList(nhb.historyBeans));
+    } catch (Exception e) {
+      theLog.error("Couldn't load identity history: ", e);
+      throw new ProtocolException("Unable to load Identity Database XML");
+    }
+*/
+    theIdentities = new HashMap();
   }
 
-  void reloadIdentities()  {
-    // XXX load our saved Ids here
-    theIdentities = new HashMap();
+  void storeIdentities()  {
+/*
+    try {
+      String fn = Configuration.getParam(PARAM_IDENTITY_DB_DIR,"/tmp/iddb");
+
+      File iddbDir = new File(fn);
+      if (!iddbDir.exists()) {
+        iddbDir.mkdirs();
+      }
+      File iddbFile = new File(iddb, IDENTITY_DB_FILENAME);
+      IdentityBean nhb = new IdentityBean();
+     //XXX TODO: convert our hashmap
+      Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
+      marshaller.marshal(nhb);
+    } catch (Exception e) {
+      theLog.error("Couldn't store poll history: ", e);
+      throw new ProtocolException("Unable to store Identity Database XML");
+    }
+*/
   }
 
   //

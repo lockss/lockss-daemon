@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.9 2003-01-04 00:59:19 aalto Exp $
+ * $Id: LcapIdentity.java,v 1.10 2003-01-04 03:31:42 claire Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class LcapIdentity implements Serializable {
 
   int m_reputation;
   String m_idKey;
+
   static Logger theLog=Logger.getLogger("Identity");
 
   LcapIdentity(String idKey, int reputation) throws UnknownHostException {
@@ -213,25 +214,13 @@ public class LcapIdentity implements Serializable {
    * @return the address as dotted quartet sting
    */
   static String addrToString(InetAddress addr)  {
-    // inp is a 4-byte address - turn it into an InetAddress
-    byte[] inp = addr.getAddress();
-    Integer[] temp = new Integer[4];
-    for (int i = 0; i < 4; i++) {
-      temp[i] = new Integer(inp[i] < 0 ? 256 + inp[i] : inp[i]);
-    }
-    StringBuffer buf = new StringBuffer(temp[0].toString());
-    buf.append(".");
-    buf.append(temp[1]);
-    buf.append(".");
-    buf.append(temp[2]);
-    buf.append(".");
-    buf.append(temp[3]);
-    return buf.toString();
+    String ret = addr.getHostAddress();
+    return ret;
   }
 
   static InetAddress stringToAddr(String addr) throws UnknownHostException {
     InetAddress ret = InetAddress.getByName(addr);
     return ret;
-
   }
+
 }
