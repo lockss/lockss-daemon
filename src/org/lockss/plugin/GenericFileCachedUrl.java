@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.1 2002-10-23 23:45:49 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.2 2002-10-31 01:55:36 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.repository.*;
 
 /**
  * This is a generic file implementation of CachedUrl
@@ -45,42 +46,38 @@ import org.lockss.util.*;
  */
 
 public class GenericFileCachedUrl extends BaseCachedUrl {
+  private LockssRepository repository;
+  private LeafNode leaf = null;
+
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
+//XXX implement correct repo generation
+    repository = new LockssRepositoryImpl("");
   }
 
   public boolean exists() {
-    File file = new File(mapUrlToCacheFileName());
-    return file.exists();
+    ensureLeafLoaded();
+    return leaf.exists();
   }
 
   public InputStream openForReading() {
-    File file = new File(mapUrlToCacheFileName());
-    try {
-      if (file.exists()) {
-	return new FileInputStream(file);
-      }
-    } catch (FileNotFoundException fnfe) {
-      fnfe.printStackTrace();
-    }
-    return null;
+    ensureLeafLoaded();
+    return leaf.getInputStream();
   }
 
   public Properties getProperties() {
-    try {
-      File file = new File(mapUrlToCacheFileName() + ".props");
-      InputStream is = new FileInputStream(file);
-      Properties props = new Properties();
-      props.load(is);
-      is.close();
-      return props;
-    } catch (IOException e) {
-      return null;
-    }
+    ensureLeafLoaded();
+    return leaf.getProperties();
   }
 
-  private String mapUrlToCacheFileName() {
-    return GenericFileUrlCacher.mapUrlToCacheFileName(url);
+  private void ensureLeafLoaded() {
+    if (leaf==null) {
+      try {
+        leaf = (LeafNode)repository.getRepositoryNode(url);
+      } catch (Exception e) {
+        //XXX log failure
+      }
+    }
   }
 }
 

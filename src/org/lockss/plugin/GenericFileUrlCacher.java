@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.2 2002-10-24 02:16:36 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.3 2002-10-31 01:55:36 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.repository.*;
 
 /**
  * This is an abstract file implementation of UrlCacher.
@@ -51,67 +52,32 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
    */
   public static final String CACHE_ROOT = "cache";
 
+  private LockssRepository repository;
+
   public GenericFileUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
+//XXX implement correct repo generation
+    repository = new LockssRepositoryImpl("");
   }
 
   public void storeContent(InputStream input, Properties headers) throws IOException {
-    if (input != null) {
-      File file = new File(mapUrlToCacheFileName());
-      File parentDir = file.getParentFile();
-      if (!parentDir.exists()) {
-	parentDir.mkdirs();
+    LeafNode leaf = repository.createLeafNode(url);
+    leaf.makeNewVersion();
+    try {
+      if (input != null) {
+        OutputStream os = leaf.getNewOutputStream();
+        StreamUtil.copy(input, os);
+        os.close();
+        input.close();
       }
-      OutputStream os = new FileOutputStream(file);
-      StreamUtil.copy(input, os);
-      os.close();
-      input.close();
-    }
-    if (headers!=null) {
-      File file = new File(mapUrlToCacheFileName() + ".props");
-      File parentDir = file.getParentFile();
-      if (!parentDir.exists()) {
-        parentDir.mkdirs();
+      if (headers!=null) {
+        leaf.setNewProperties(headers);
       }
-      OutputStream os = new FileOutputStream(file);
-      headers.store(os, "HTTP headers for " + url);
-      os.close();
-    }
+    } catch (Exception e) { System.out.println(e); }
+    leaf.sealNewVersion();
   }
 
   public abstract InputStream getUncachedInputStream();
-
   public abstract Properties getUncachedProperties();
-
-  /**
-   * mapUrlToCacheFileName() is the name mapping method used by the GenericFileUrlCacher.
-   * This maps a given url to a cache file location.
-   * It is also used by the GenericFileCachedUrl to extract the content.
-   * It creates directories under a CACHE_ROOT location which mirror the html string.
-   * So 'http://www.journal.org/issue1/index.html' would be cached in the file:
-   * CACHE_ROOT/www.journal.org/http/issue1/index.html
-   */
-  public static String mapUrlToCacheFileName(String url) {
-    int idx = url.indexOf("://");
-    String fileName = CACHE_ROOT + File.separator;
-    if (idx>=0) {
-      String prefix = url.substring(0, idx);
-      String urlRemainder = url.substring(idx+3);
-      idx = urlRemainder.indexOf("/");
-      if (idx>=0) {
-        fileName += urlRemainder.substring(0, idx) + File.separator;
-        fileName += prefix + urlRemainder.substring(idx);
-      } else {
-        fileName += urlRemainder;
-      }
-    } else {
-      fileName += url;
-    }
-    return fileName;
-  }
-
-  private String mapUrlToCacheFileName() {
-    return mapUrlToCacheFileName(url);
-  }
 }
 

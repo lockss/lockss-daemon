@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.1 2002-10-23 23:45:49 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.2 2002-10-31 01:55:36 aalto Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.hasher.GenericCachedUrlSetHasher;
+import org.lockss.repository.*;
 
 /**
  * This is the CachedUrlSet implementation for the SimulatedPlugin.
@@ -52,23 +53,31 @@ import org.lockss.hasher.GenericCachedUrlSetHasher;
 public abstract class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private long lastDuration = 0;
   private Exception lastException = null;
+  private LockssRepository repository;
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
+//XXX implement correct repo generation
+    repository = new LockssRepositoryImpl("");
   }
 
   public Iterator flatSetIterator() {
     // XXX implement correctly
-    return null;
-  }
-
-  public Iterator treeSetIterator() {
-    // XXX implement correctly
+    // get local nodes (leaf and non)
+    // check to match against the spec
+    // sort
+    // pass back CachedUrlSets
     return null;
   }
 
   public Iterator leafIterator() {
     // XXX implement correctly
+    // get all local leaf nodes
+    // check to match against the spec
+    // sort locally?
+    // recurse through subdirectories which match
+    // sort globally?
+    // pass back CachedUrls
     return null;
   }
 
@@ -87,6 +96,7 @@ public abstract class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   public long estimatedHashDuration() {
     if (lastDuration>0) return lastDuration;
+    //XXX else estimate in some way
     return 0;
   }
 
