@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.28 2004-10-20 18:41:17 dcfok Exp $
+ * $Id: TestCrawlerImpl.java,v 1.29 2005-03-23 17:24:51 troberts Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
+import java.net.*;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -73,6 +74,10 @@ public class TestCrawlerImpl extends LockssTestCase {
     Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
+  private MockCachedUrlSet cus;
+  private String permissionPage = "http://example.com/permission.html";
+  private String permissionPage2 = "http://example.com/permission.html";
+
   public static Class testedClasses[] = {
     org.lockss.crawler.CrawlerImpl.class
   };
@@ -85,23 +90,23 @@ public class TestCrawlerImpl extends LockssTestCase {
     mau.setPlugin(new MockPlugin());
 
     startUrls = ListUtil.list(startUrl);
-    MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
+    cus = new MyMockCachedUrlSet(mau, null);
     mau.setAuCachedUrlSet(cus);
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
-    spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
+    crawlRule.addUrlToCrawl(permissionPage);
+
+    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
+			       crawlRule, 1);
+
     getMockLockssDaemon().getAlertManager();
     crawler = new TestableCrawlerImpl(mau, spec, aus);
     ((CrawlerImpl)crawler).lockssCheckers =
       ListUtil.list(new MyMockPermissionChecker(true));
 
-//     crawler = new NewContentCrawler(mau, spec, aus);
-//     // store the orignal checker and replace with a mock checker
-//     checker = (PermissionChecker)((CrawlerImpl)crawler).lockssCheckers.get(0);
-//     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(true));
-// //     crawler = new MyCrawler(mau, spec, aus);
-
     mau.setParser(parser);
+    mau.addUrl(startUrl);
+    mau.addUrl(permissionPage);
     Properties p = new Properties();
     p.setProperty(NewContentCrawler.PARAM_RETRY_PAUSE, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
@@ -171,6 +176,27 @@ public class TestCrawlerImpl extends LockssTestCase {
     TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
     crawler.setWatchdog(wdog);
     assertSame(wdog, crawler.wdog);
+  }
+
+  public void testMakeUrlCacher() {
+    MockUrlCacher uc = (MockUrlCacher) crawler.makeUrlCacher(startUrl);
+    assertNotNull(uc);
+    assertSame(crawler, uc.getPermissionMapSource());
+  }
+
+
+  public void testGetPermissionMap() throws MalformedURLException {
+    Set cachedUrls = cus.getCachedUrls();
+    assertSameElements(ListUtil.list(), cachedUrls);
+
+    PermissionMap pMap = crawler.getPermissionMap();
+    assertNotNull(pMap);
+    assertEquals(PermissionMap.PERMISSION_OK, 
+		 pMap.getStatus("http://example.com/blah.html"));
+
+    //verify that it fetched the permission page
+    cachedUrls = cus.getCachedUrls();
+    assertSameElements(ListUtil.list(permissionPage), cachedUrls);
   }
 
 
