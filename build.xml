@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.31 2003-03-12 01:59:10 tal Exp $
+ $Id: build.xml,v 1.32 2003-03-14 22:45:49 troberts Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -361,6 +361,7 @@ Args:
              windowtitle="LOCKSS API"
              doctitle="LOCKSS"
              verbose="false"
+	     failonerror="true"
              overview="${src}/overview.html"
              bottom="Copyright &#169; 2002 Board of Trustees of Leland Stanford Jr. University, all rights reserved.">
        <classpath refid="compile.classpath" />
