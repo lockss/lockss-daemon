@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.11 2004-10-05 22:52:46 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.12 2004-10-28 01:04:36 dshr Exp $
  */
 
 /*
@@ -71,9 +71,12 @@ public class TestV3Poll extends LockssTestCase {
     V3LcapMessage.MSG_EVALUATION_RECEIPT,
   };
   protected LcapMessage[] testV3msg = new LcapMessage[msgType.length];;
-  protected V3Poll[] testV3polls;
-  protected PollSpec[] testSpec = new PollSpec[msgType.length];
+  protected V3Voter voter;
+  protected V3Poller poller;
+  protected PollSpec pollSpec;
   protected PollManager pollmanager;
+  protected LcapStreamRouter voterRouter;
+  protected LcapStreamRouter pollerRouter;
 
   protected void setUp() throws Exception {
     super.setUp();
@@ -98,25 +101,19 @@ public class TestV3Poll extends LockssTestCase {
     theDaemon.getStreamRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
     TimeBase.setReal();
-    for(int i=0; i<testV3msg.length; i++) {
-      if (testV3msg[i] != null)
-	pollmanager.removePoll(testV3msg[i].getKey());
-    }
+    pollmanager.removePoll(voter.getKey());
+    pollmanager.removePoll(poller.getKey());
     theDaemon.getPollManager().stopService();
     theDaemon.getPluginManager().stopService();
     super.tearDown();
   }
 
-  // Tests XXX need tests
+  // Tests
 
-  public void testInitialVoterState() {
-    assertTrue(testV3polls[0] instanceof V3Voter);
-    assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
-		 V3Voter.STATE_INITIALIZING,
-		 testV3polls[0].getPollState());
+  public void testNormalPollWithOneVote() {
+    assertTrue(voter instanceof V3Voter);
+    assertTrue(poller instanceof V3Poller);
   }
-
-
 
   //  Support methods
 
@@ -153,6 +150,23 @@ public class TestV3Poll extends LockssTestCase {
     theDaemon.getActivityRegulator(testau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
+    // Make two FifoQueue objects
+    FifoQueue q1 = new FifoQueue();
+    FifoQueue q2 = new FifoQueue();
+    assertNotNull(q1);
+    assertNotNull(q2);
+    // Use the two to connect two MockLcapStreamRouter objects
+    // back-to-back.
+    voterRouter = new MockLcapStreamRouter(q1, q2);
+    pollerRouter = new MockLcapStreamRouter(q2, q1);
+    {
+      MockLcapStreamRouter mvoterRouter = (MockLcapStreamRouter) voterRouter;
+      MockLcapStreamRouter mpollerRouter = (MockLcapStreamRouter) pollerRouter;
+      mvoterRouter.setPartner(pollerRouter);
+      mpollerRouter.setPartner(voterRouter);
+    }
+    voterRouter.startService();
+    pollerRouter.startService();
   }
 
   private void initTestPeerIDs() {
@@ -183,9 +197,9 @@ public class TestV3Poll extends LockssTestCase {
 				    pollmanager);
     log.debug("Duration is " + duration);
     byte[] challenge = pollmanager.makeVerifier(duration);
+    pollSpec = spec;
 
     for (int i= 0; i<testV3msg.length; i++) {
-      testSpec[i] = spec;
       testV3msg[i] =
 	V3LcapMessage.makeRequestMsg(spec,
 				     null, // XXX entries not needed
@@ -201,27 +215,31 @@ public class TestV3Poll extends LockssTestCase {
   }
 
   private void initTestPolls() throws Exception {
-    testV3polls = new V3Poll[1];
-    for (int i = 0; i < testV3polls.length; i++) {
-      log.debug3("initTestPolls: V3 " + i);
-      BasePoll p = pollmanager.makePoll(testSpec[i],
-					testV3msg[i].getDuration(),
-					testV3msg[i].getChallenge(),
-					testV3msg[i].getVerifier(),
-					testV3msg[i].getOriginatorID(),
-					testV3msg[i].getHashAlgorithm());
-      log.debug("initTestPolls: V3 " + i + " returns " + p);
-      switch (i) {
-      case 0:
-	assertTrue(p instanceof V3Voter);
-	break;
-      default:
-	assertNull(p);
-	break;
-      }
-      testV3polls[i] = (V3Poll)p;
-      log.debug3("initTestPolls: " + i + " " + p.toString());
-    }
+    BasePoll p;
+    // Make the voter
+    theDaemon.setStreamRouterManager(voterRouter);
+    p = pollmanager.makePoll(pollSpec,
+			     testV3msg[0].getDuration(),
+			     testV3msg[0].getChallenge(),
+			     testV3msg[0].getVerifier(),
+			     testID1,
+			     testV3msg[0].getHashAlgorithm());
+    log.debug("initTestPolls: V3 voter returns " + p);
+    assertTrue(p instanceof V3Voter);
+    voter = (V3Voter) p;
+    log.debug3("initTestPolls: voter " + p.toString());
+    // Make the poller
+    theDaemon.setStreamRouterManager(pollerRouter);
+    p = pollmanager.makePoll(pollSpec,
+			     testV3msg[0].getDuration(),
+			     testV3msg[0].getChallenge(),
+			     testV3msg[0].getVerifier(),
+			     testID,
+			     testV3msg[0].getHashAlgorithm());
+    log.debug("initTestPolls: V3 poller returns " + p);
+    assertTrue(p instanceof V3Poller);
+    poller = (V3Poller) p;
+    log.debug3("initTestPolls: poller " + p.toString());
   }
 
   public class MyMockPlugin extends MockPlugin {
