@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.4 2005-03-18 09:09:21 smorabito Exp $
+ * $Id: TestPsmInterp.java,v 1.5 2005-03-19 09:09:25 tlipkis Exp $
  */
 
 /*
@@ -394,6 +394,7 @@ public class TestPsmInterp extends LockssTestCase {
   static class TestObj {
     long computeTime = 0;
     long timeout = 0;
+    long delay = 0;
     List userEvents = new ArrayList();
     void event(String event) {
       userEvents.add(event);
@@ -421,6 +422,11 @@ public class TestPsmInterp extends LockssTestCase {
 	// schedule a computation if requested, else signal NotSched event
 	if (obj.computeTime != 0) {
 	  TimerQueue.schedule(Deadline.in(obj.computeTime), tcb4, interp);
+	  if (obj.delay != 0) {
+	    // allow "computation" in timer thread to finish before proceding,
+	    // to force user events to occur in unexpected order
+	    TimerUtil.guaranteedSleep(obj.delay);
+	  }
 	  obj.event("sched");
 	  return Sched;
 	} else {
@@ -453,10 +459,11 @@ public class TestPsmInterp extends LockssTestCase {
     new PsmState("GiveUp").fail(),
   };
 
-  public void testCallback() {
+  public void testCallback(long computeTime, long delay) {
     PsmMachine mach = new PsmMachine("M1", states4, "Start");
     TestObj obj = new TestObj();
-    obj.computeTime = 100;
+    obj.computeTime = computeTime;
+    obj.delay = delay;
     MyInterp interp = new MyInterp(mach, obj);
     interp.init();
     // This machine doesn't need any more outside events to finish, so just
@@ -467,10 +474,19 @@ public class TestPsmInterp extends LockssTestCase {
       while (!interp.isFinalState()) {
 	TimerUtil.sleep(10);
       };
+      // user event "taskcomplete" happens in timer thread, could happen
+      // before "sched"
+      List okOrders =
+	ListUtil.list(ListUtil.list("sched", "taskcomplete", "done"),
+		      ListUtil.list("taskcomplete", "sched", "done"));
+      assertTrue("expected one of:<"+okOrders+"> but was:<"+obj.userEvents+">",
+		 okOrders.contains(obj.userEvents));
+      // but state order should always be the same
+      assertEquals(ListUtil.list("Start", "WaitCompute", "AlmostDone", "Done"),
+		   interp.states);
+
       assertTrue(interp.getFinalState().isSucceed());
       assertEquals("Done", interp.getFinalState().getName());
-      assertEquals(ListUtil.list("sched", "taskcomplete", "done"),
-		   obj.userEvents);
     } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
@@ -479,11 +495,24 @@ public class TestPsmInterp extends LockssTestCase {
     }
   }
 
-  public void testTimeoutDoesnt() {
+  public void testCallback() {
+    // normal task
+    testCallback(100, 0);
+    // quick task
+    testCallback(1, 0);
+    // normal task probably completes after task sched completes
+    testCallback(100, 10);
+    // short task completes before task sched completes
+    testCallback(1, 10);
+  }
+
+  public void testTimeout(long timeout, long computeTime, long delay,
+			  List okEvents, List expectedStates) {
     PsmMachine mach = new PsmMachine("M1", states4, "Start");
     TestObj obj = new TestObj();
-    obj.timeout = 5000;
-    obj.computeTime = 10;
+    obj.timeout = timeout;
+    obj.computeTime = computeTime;
+    obj.delay = delay;
     MyInterp interp = new MyInterp(mach, obj);
     interp.init();
     // This machine doesn't need any more outside events to finish, so just
@@ -496,45 +525,44 @@ public class TestPsmInterp extends LockssTestCase {
 	TimerUtil.sleep(10);
       };
       intr.cancel();
-      assertEquals("Done", interp.getFinalState().getName());
-      assertEquals(ListUtil.list("set timeout", "sched",
-				 "taskcomplete", "done"),
-		   obj.userEvents);
+      assertTrue("expected one of:<"+okEvents+"> but was:<"+obj.userEvents+">",
+		 okEvents.contains(obj.userEvents));
+      assertEquals(expectedStates, interp.states);
+      assertEquals(expectedStates.get(expectedStates.size()-1),
+		   interp.getFinalState().getName());
     } catch (InterruptedException e) {
     } finally {
       if (intr.did()) {
+	log.error("States: " + interp.states);
+	log.error("User events: " + obj.userEvents);
 	fail("testTimeout machine didn't reach final state");
       }
     }
   }
 
-  public void testTimeoutDoes() {
-    PsmMachine mach = new PsmMachine("M1", states4, "Start");
-    TestObj obj = new TestObj();
-    obj.timeout = 100;
-    obj.computeTime = 5 * Constants.SECOND;
-    MyInterp interp = new MyInterp(mach, obj);
-    interp.init();
-    // This machine doesn't need any more outside events to finish, so just
-    // wait for it
-    Interrupter intr = null;
-    try {
-      intr = interruptMeIn(Math.max(TIMEOUT_SHOULDNT, 10 * Constants.SECOND),
-				    true);
-      while (!interp.isFinalState()) {
-	TimerUtil.sleep(10);
-      };
-      intr.cancel();
-      assertTrue(interp.getFinalState().isFail());
-      assertEquals("GiveUp", interp.getFinalState().getName());
-      assertEquals(ListUtil.list("set timeout", "sched"),
-		   obj.userEvents);
-    } catch (InterruptedException e) {
-    } finally {
-      if (intr.did()) {
-	fail("testTimeout machine didn't reach final state");
-      }
-    }
+  public void testTimeout() {
+    List timeoutStates = 
+      ListUtil.list("Start", "WaitCompute", "GiveUp");
+    List timeoutEvents =
+      ListUtil.list(ListUtil.list("set timeout", "sched"),
+		    ListUtil.list("set timeout", "sched", "taskcomplete"));
+    List noTimeoutStates = 
+      ListUtil.list("Start", "WaitCompute", "AlmostDone", "Done");
+    List noTimeoutEvents =
+      ListUtil.list(ListUtil.list("set timeout", "sched",
+				  "taskcomplete", "done"),
+		    ListUtil.list("set timeout", "taskcomplete",
+				  "sched", "done"));
+    // timeout occurs
+    testTimeout(100, 5000, 0, timeoutEvents, timeoutStates);
+    // timeout occurs before sched action returns
+    testTimeout(1, 50, 10, timeoutEvents, timeoutStates);
+    // timeout occurs before sched action returns
+    testTimeout(1, 10, 200, timeoutEvents, timeoutStates);
+    // timeout doesn't occur
+    testTimeout(5000, 10, 0, noTimeoutEvents, noTimeoutStates);
+    // timeout doesn't, occur, task completes before task sched completes
+    testTimeout(5000, 1, 10, noTimeoutEvents, noTimeoutStates);
   }
 
   // Utility classes for everything above
@@ -627,6 +655,7 @@ public class TestPsmInterp extends LockssTestCase {
    * list */
   static class MyInterp extends PsmInterp {
     List events = new ArrayList();
+    List states = new ArrayList();
 
     public MyInterp(PsmMachine stateMachine, Object userData) {
       super(stateMachine, userData);
@@ -635,6 +664,7 @@ public class TestPsmInterp extends LockssTestCase {
     protected void eventMonitor(PsmState curState, PsmEvent event,
 				PsmAction action, PsmState newState) {
       events.add(new ER(curState, event, action, newState));
+      if (newState != null) states.add(newState.getName());
     }
     public void clear() {
       events.clear();
