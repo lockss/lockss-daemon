@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapDatagramComm.java,v 1.3 2004-10-11 00:56:40 tlipkis Exp $
+ * $Id: MockLcapDatagramComm.java,v 1.3.4.1 2005-01-27 00:34:46 tlipkis Exp $
  */
 
 /*
@@ -306,7 +306,11 @@ public class MockLcapDatagramComm extends LcapDatagramComm {
   private void processReceivedPacket(LockssReceivedDatagram ld) {
     if (verifyPacket(ld)) {
       log.debug("Received " + ld);
-      runHandlers(ld);
+      try {
+	runHandlers(ld);
+      } catch (ProtocolException e) {
+	log.warning("Cannot process incoming packet", e);
+      }
     }
   }
 
@@ -318,7 +322,7 @@ public class MockLcapDatagramComm extends LcapDatagramComm {
     }
   }
 
-  private void runHandlers(LockssReceivedDatagram ld) {
+  private void runHandlers(LockssReceivedDatagram ld) throws ProtocolException {
     int proto = ld.getProtocol();
     MessageHandler handler;
     if (proto < messageHandlers.size() &&

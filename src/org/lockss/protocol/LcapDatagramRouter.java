@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.6 2004-10-11 00:56:58 tlipkis Exp $
+ * $Id: LcapDatagramRouter.java,v 1.6.4.1 2005-01-27 00:34:47 tlipkis Exp $
  */
 
 /*
@@ -204,8 +204,8 @@ public class LcapDatagramRouter
   void processIncomingMessage(LockssReceivedDatagram dg) {
     LcapMessage msg;
     log.debug2("rcvd message: " + dg);
-    byte[] msgBytes = dg.getData();
     try {
+      byte[] msgBytes = dg.getData();
       msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
     } catch (IOException e) {
       // XXX move the constants to IdentityManager
