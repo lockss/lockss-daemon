@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.2 2004-01-04 06:14:31 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.3 2004-02-18 17:02:11 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.plugin.*;
  */
 public class TitleConfig {
   private String displayName;
+  private String journalTitle;
   private String pluginName;
   private String pluginVersion = null;
   private List params = null;
@@ -75,6 +76,15 @@ public class TitleConfig {
   }
 
   /**
+   * Set the journal title string.  This must be the same across all
+   * instances (volumes) of the same journal.
+   * @param journalTitle the journal title
+   */
+  public void setJournalTitle(String journalTitle) {
+    this.journalTitle = journalTitle;
+  }
+
+  /**
    * Set the parameter value list
    * @param params List of {@link ConfigParamAssignment}s
    */
@@ -94,6 +104,14 @@ public class TitleConfig {
    */
   public String getDisplayName() {
     return displayName;
+  }
+
+  /**
+   * Return the journal title string.  This must be the same across all
+   * instances (volumes) of the same journal
+   */
+  public String getJournalTitle() {
+    return journalTitle;
   }
 
   /**
@@ -149,6 +167,12 @@ public class TitleConfig {
     Properties p = new OrderedProperties();
     p.put(pre+"title", getDisplayName());
     p.put(pre+"plugin", getPluginName());
+    if (pluginVersion != null) {
+      p.put(pre+"pluginVersion", getPluginVersion());
+    }
+    if (journalTitle != null) {
+      p.put(pre+"journalTitle", getJournalTitle());
+    }
     if (params != null) {
       for (int ix = 0; ix < params.size(); ix++) {
 	ConfigParamAssignment cpa = (ConfigParamAssignment)params.get(ix);
@@ -164,9 +188,11 @@ public class TitleConfig {
     StringBuffer sb = new StringBuffer(40);
     sb.append("[Title: ");
     sb.append(displayName);
-    sb.append(", plugin:");
+    sb.append(", journal: ");
+    sb.append(journalTitle);
+    sb.append(", plugin: ");
     sb.append(pluginName);
-    sb.append(", params:");
+    sb.append(", params: ");
     sb.append(params);
     sb.append("]");
     return sb.toString();

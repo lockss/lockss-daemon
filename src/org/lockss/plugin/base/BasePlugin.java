@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.21 2004-02-06 23:53:56 clairegriffin Exp $
+ * $Id: BasePlugin.java,v 1.22 2004-02-18 17:02:10 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,9 @@ public abstract class BasePlugin
 
   // Below org.lockss.title.xxx.
   static final String TITLE_PARAM_TITLE = "title";
+  static final String TITLE_PARAM_JOURNAL = "journalTitle";
   static final String TITLE_PARAM_PLUGIN = "plugin";
+  static final String TITLE_PARAM_PLUGIN_VERSION = "pluginVersion";
   static final String TITLE_PARAM_PARAM = "param";
   // Below org.lockss.title.xxx.param.n.
   static final String TITLE_PARAM_PARAM_KEY = "key";
@@ -146,6 +148,8 @@ public abstract class BasePlugin
     String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
     String title = titleConfig.get(TITLE_PARAM_TITLE);
     TitleConfig tc = new TitleConfig(title, this);
+    tc.setPluginVersion(titleConfig.get(TITLE_PARAM_PLUGIN_VERSION));
+    tc.setJournalTitle(titleConfig.get(TITLE_PARAM_JOURNAL));
     List params = new ArrayList();
     Configuration allParams = titleConfig.getConfigTree(TITLE_PARAM_PARAM);
     for (Iterator iter = allParams.nodeIterator(); iter.hasNext(); ) {

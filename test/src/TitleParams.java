@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.2 2004-01-27 04:07:07 tlipkis Exp $
+ * $Id: TitleParams.java,v 1.3 2004-02-18 17:02:09 tlipkis Exp $
  */
 
 /*
@@ -46,15 +46,19 @@ public class TitleParams {
   public static void main(String argv[]) throws Exception {
     List configUrls = new ArrayList();
     String outputFile = null;
-    for (int ix = 0; ix < argv.length; ix++) {
-      String arg = argv[ix];
-      if (arg.startsWith("-c")) {
-	configUrls.add(FileTestUtil.urlOfFile(argv[++ix]));
-      } else if (arg.startsWith("-o")) {
-	outputFile = argv[++ix];
-      } else {
-	usage();
+    try {
+      for (int ix = 0; ix < argv.length; ix++) {
+	String arg = argv[ix];
+	if (arg.startsWith("-c")) {
+	  configUrls.add(FileTestUtil.urlOfFile(argv[++ix]));
+	} else if (arg.startsWith("-o")) {
+	  outputFile = argv[++ix];
+	} else {
+	  usage();
+	}
       }
+    } catch (ArrayIndexOutOfBoundsException e) {
+      usage();
     }
 
     PrintStream cout = System.err;
@@ -128,12 +132,17 @@ public class TitleParams {
       List params = plugin.getAuConfigDescrs();
       cout.print("Title: ");
       String title = cin.readLine();
+      cout.print("Journal Title: ");
+      String journalTitle = cin.readLine();
       String propId;
       do {
 	cout.print("Unique prop abbrev: ");
 	propId = cin.readLine();
       } while (!isLegalPropId(propId) || !uids.add(propId));
       TitleConfig tc = new TitleConfig(title, plugin);
+      if (!StringUtil.isNullString(journalTitle)) {
+	tc.setJournalTitle(journalTitle);
+      }
       tc.setParams(new ArrayList());
       for (Iterator iter = params.iterator(); iter.hasNext(); ) {
 	ConfigParamDescr descr = (ConfigParamDescr)iter.next();

@@ -10,6 +10,11 @@ cdproj()
   done
 }
 
+if [ "x$1" = "x" ]; then
+  echo "usage: $0 <outputfile>"
+  exit 1
+fi
+
 cdproj
 
 test/scripts/run-class -Dorg.lockss.defaultLogLevel=critical TitleParams -c test/frameworks/common.txt -o $1
