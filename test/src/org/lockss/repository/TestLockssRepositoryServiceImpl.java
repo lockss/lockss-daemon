@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryServiceImpl.java,v 1.5 2003-03-15 02:53:29 aalto Exp $
+ * $Id: TestLockssRepositoryServiceImpl.java,v 1.6 2003-04-16 02:23:06 aalto Exp $
  */
 
 /*
@@ -186,18 +186,21 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
 
   public void testGetLockssRepository() {
     String auId = mau.getAUId();
+    try {
+      lrsi.getLockssRepository(mau);
+      fail("Should throw IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+
     lrsi.addLockssRepository(mau);
     LockssRepository repo1 = lrsi.getLockssRepository(mau);
     assertNotNull(repo1);
-    mau.setAuId(auId + "test");
+
+    mau = new MockArchivalUnit();
     lrsi.addLockssRepository(mau);
     LockssRepository repo2 = lrsi.getLockssRepository(mau);
-    assertTrue(repo1 != repo2);
-    mau.setAuId(auId);
-    repo2 = lrsi.getLockssRepository(mau);
-    assertEquals(repo1, repo2);
+    assertNotSame(repo1, repo2);
 
-    mau.setAuId(auId + "test2");
+    mau = new MockArchivalUnit();
     try {
       lrsi.getLockssRepository(mau);
       fail("Should throw IllegalArgumentException.");

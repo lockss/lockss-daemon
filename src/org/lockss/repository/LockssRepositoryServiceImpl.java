@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.11 2003-04-03 11:33:36 tal Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.12 2003-04-16 02:23:06 aalto Exp $
  */
 
 /*
@@ -76,6 +76,9 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
 
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if (theManager == null) {
+      // blank the name map
+      nameMap = null;
+
       theDaemon = daemon;
       theManager = this;
       cacheLocation = Configuration.getParam(PARAM_CACHE_LOCATION);
