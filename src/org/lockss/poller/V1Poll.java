@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.20 2004-10-22 16:12:58 tlipkis Exp $
+* $Id: V1Poll.java,v 1.20.2.1 2004-10-28 08:22:24 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 
-import org.mortbay.util.*;
+import org.mortbay.util.B64Code;
 
 
 /**
@@ -106,9 +106,9 @@ public abstract class V1Poll extends BasePoll {
     m_challenge = challenge;
     m_verifier = pm.makeVerifier(duration);
 
-    log.debug("I think poll "+m_challenge
-	      +" will take me this long to hash "+m_hashTime);
-
+    log.debug("I think poll "+ challengeToKey(m_challenge)
+	      +" will take me this long to hash "+
+	      StringUtil.timeIntervalToString(m_hashTime));
     m_createTime = TimeBase.nowMs();
     getConfigValues();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.148 2004-10-21 22:51:57 clairegriffin Exp $
+ * $Id: PollManager.java,v 1.148.2.1 2004-10-28 08:22:24 tlipkis Exp $
  */
 
 /*
@@ -361,11 +361,11 @@ public class PollManager
 
   /**
    * Find the poll defined by the <code>Message</code>.  If the poll
-   * does not exist this will create a new poll
+   * does not exist this will create a new poll (iff there are no conflicts)
    * @param msg <code>Message</code>
-   * @return <code>Poll</code> which matches the message opcode.
-   * @throws IOException if message opcode is unknown or if new poll would
-   * conflict with currently running poll.
+   * @return <code>Poll</code> which matches the message opcode, or a new
+   * poll, or null if the new poll would conflict with a currently running poll.
+   * @throws IOException if message opcode is unknown.
    * @see <code>Poll.createPoll</code>
    */
   synchronized BasePoll findPoll(LcapMessage msg) throws IOException {
@@ -376,10 +376,16 @@ public class PollManager
     if(pme == null) {
       theLog.debug3("Making new poll: " + key);
       ret = makePoll(msg);
-      theLog.debug3("Done making new poll: "+ key);
+      if (theLog.isDebug3()) {
+	if (ret != null) {
+	  theLog.debug3("Made new poll: " + key);
+	} else {
+	  theLog.debug3("Did not make new poll: " + key);
+	}
+      }
     }
     else {
-      theLog.debug3("Returning existing poll:" + key);
+      theLog.debug3("Returning existing poll: " + key);
       ret = pme.poll;
     }
     return ret;
@@ -388,7 +394,9 @@ public class PollManager
   /**
    * make a new poll of the type and version defined by the incoming message.
    * @param msg <code>Message</code> to use for
-   * @return a new Poll object of the required type
+   * @return a new Poll object of the required type, or null if we don't
+   * want to run this poll now (<i>ie</i>, due to a conflict with another
+   * poll).
    * @throws ProtocolException if message opcode is unknown
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
@@ -461,7 +469,8 @@ public class PollManager
 	}
 	if (theLog.isDebug2()) {
 	  theLog.debug2("about to get lock for " + cus.toString() + " act " +
-			activity + " expire " + expiration);
+			activity + " for " +
+			StringUtil.timeIntervalToString(expiration));
 	}
         lock = ar.getCusActivityLock(cus, activity, expiration);
         if (lock==null) {
