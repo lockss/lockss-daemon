@@ -1,4 +1,8 @@
 /*
+ * $Id: FuncNewContentCrawler.java,v 1.6 2004-09-27 23:41:06 dcfok Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
