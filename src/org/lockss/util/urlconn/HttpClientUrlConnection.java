@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.13 2004-03-27 06:23:26 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.14 2004-04-19 02:44:22 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -140,9 +140,20 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // HttpClient methods.  Try to turn it back into the real exception.
       throw exceptionFromRecoverableException(e);
     } catch (HttpConnection.ConnectionTimeoutException e) {
-      // Host not responding (connect)
+      // Thrown by HttpClient if the connect timeout elapses before
+      // socket.connect() returns.
       // Turn this into a non HttpClient-specific exception
       throw new ConnectionTimeoutException(e);
+      // XXX If socket.connect() returns an error because the underlying
+      // socket connect times out, the behavior is platform dependent.  On
+      // Linux, java.net.ConnectException is thrown (same as for connection
+      // refused, and distunguishable only by the exception message).  On
+      // OpenBSD, java.net.SocketException is thrown with a message like
+      // "errno: 22, error: Invalid argument for fd: 3".  In lieu of a way
+      // to reliably determine when to turn these into a
+      // ConnectionTimeoutException, the solution for now is to use
+      // java-level connect timeouts that are shorter than the underlying
+      // socket connect timeout.
     }
   }
 
