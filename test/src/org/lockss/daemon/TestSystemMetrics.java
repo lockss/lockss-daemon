@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.5 2003-01-03 00:12:04 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.6 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestSystemMetrics extends LockssTestCase {
     assertEquals(estimate, estimate2);
   }
 
-  public static void configHashParams(int duration, int step)
+  public static void configHashParams(long duration, int step)
       throws IOException {
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration;
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + step;

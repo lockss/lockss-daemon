@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.12 2003-04-03 01:50:17 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.13 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ public class NodeStateImpl implements NodeState {
   protected List polls;
   protected List pollHistories = null;
   protected HistoryRepository repository;
+  protected long hashDuration = -1;
 
   // for marshalling only
   NodeStateImpl() { }
@@ -60,15 +61,17 @@ public class NodeStateImpl implements NodeState {
     for (int ii=0; ii<bean.pollBeans.size(); ii++) {
       polls.add(ii, new PollState((PollStateBean)bean.pollBeans.get(ii)));
     }
+    this.hashDuration = bean.getAverageHashDuration();
     this.repository = repository;
   }
 
-  NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
-                HistoryRepository repository) {
+  NodeStateImpl(CachedUrlSet cus, long hashDuration, CrawlState crawlState,
+                List polls, HistoryRepository repository) {
     this.cus = cus;
     this.crawlState = crawlState;
     this.polls = polls;
     this.repository = repository;
+    this.hashDuration = hashDuration;
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -77,6 +80,14 @@ public class NodeStateImpl implements NodeState {
 
   public CrawlState getCrawlState() {
     return crawlState;
+  }
+
+  public long getAverageHashDuration() {
+    return hashDuration;
+  }
+
+  void setLastHashDuration(long newDuration) {
+    hashDuration = newDuration;
   }
 
   public Iterator getActivePolls() {

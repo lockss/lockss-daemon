@@ -1,5 +1,5 @@
 /*
- * $Id: NodeState.java,v 1.6 2003-03-20 00:01:35 aalto Exp $
+ * $Id: NodeState.java,v 1.7 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -41,6 +41,12 @@ import org.lockss.plugin.CachedUrlSet;
  * poll histories.
  */
 public interface NodeState {
+  /**
+   * Returns the last hash duration.  -1 if no hash yet.
+   * @return the hash duration
+   */
+  public long getAverageHashDuration();
+
   /**
    * Get the {@link CachedUrlSet} with which this NodeState is associated.
    * @return the {@link CachedUrlSet}

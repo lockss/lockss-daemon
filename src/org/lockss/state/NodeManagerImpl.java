@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.87 2003-04-03 11:33:36 tal Exp $
+ * $Id: NodeManagerImpl.java,v 1.88 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -171,6 +171,21 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     crawl.type = CrawlState.NEW_CONTENT_CRAWL;
     crawl.startTime = getAuState().getLastCrawlTime();
     historyRepo.storeNodeState(topState);
+  }
+
+  public void hashFinished(CachedUrlSet cus, long hashDuration) {
+    if (hashDuration<0) {
+      logger.warning("Tried to update hash with negative duration.");
+      return;
+    }
+    NodeState state = getNodeState(cus);
+    if (state==null) {
+      logger.error("Updating state on non-existant node: "+cus.getUrl());
+      throw new IllegalArgumentException(
+          "Updating state on non-existant node.");
+    } else {
+      ((NodeStateImpl)state).setLastHashDuration(hashDuration);
+    }
   }
 
   public synchronized NodeState getNodeState(CachedUrlSet cus) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.24 2003-03-24 23:52:24 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.25 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.test.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.util.StreamUtil;
 import org.lockss.repository.TestRepositoryNodeImpl;
+import org.lockss.state.*;
 
 /**
  * This is the test class for
@@ -61,9 +62,11 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getLockssRepositoryService().startService();
+    theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgfau = new MockGenericFileArchivalUnit();
     repo = theDaemon.getLockssRepository(mgfau);
+    theDaemon.getNodeManager(mgfau);
   }
 
   public void tearDown() throws Exception {
@@ -218,6 +221,8 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testHashEstimation() throws Exception {
+    MockNodeManager nodeMan = (MockNodeManager)theDaemon.getNodeManager(mgfau);
+
     byte[] bytes = new byte[100];
     Arrays.fill(bytes, (byte)1);
     String testString = new String(bytes);
@@ -229,14 +234,24 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
     long estimate = fileSet.estimatedHashDuration();
     assertTrue(estimate > 0);
+
+    assertNull(nodeMan.hashCalls.get("http://www.example.com/testDir"));
+
     fileSet.storeActualHashDuration(estimate, null);
     // test return of stored duration
     long estimate2 = fileSet.estimatedHashDuration();
     assertEquals(estimate, estimate2);
+    assertEquals(estimate,
+                 ((Long)nodeMan.hashCalls.get(
+        "http://www.example.com/testDir")).intValue());
+
     // test averaging of durations
     fileSet.storeActualHashDuration(estimate2 + 200, null);
     long estimate3 = fileSet.estimatedHashDuration();
     assertEquals(estimate2 + 100, estimate3);
+    assertEquals(estimate3,
+                 ((Long)nodeMan.hashCalls.get(
+        "http://www.example.com/testDir")).intValue());
   }
 
   private RepositoryNode createLeaf(String url, String content,

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.9 2003-04-03 01:37:43 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.10 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -279,6 +279,10 @@ public class TreeWalkHandler {
     private boolean goOn = true;
     boolean doingTreeWalk = false;
     Deadline deadline;
+
+    public TreeWalkThread() {
+      super("TreeWalk: "+theAu.getName());
+    }
 
     public void run() {
       while (goOn) {

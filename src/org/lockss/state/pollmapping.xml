@@ -85,6 +85,10 @@
         </class>
         <class name="org.lockss.state.NodeStateBean">
                 <map-to xml="NodeState"/>
+                <field name="averageHashDuration"
+                       type="long">
+                        <bind-xml name="AverageHashDuration" node="element"/>
+                </field>
                 <field name="crawlStateBean"
                        type="org.lockss.state.CrawlStateBean">
                         <bind-xml name="CrawlState" node="element"/>

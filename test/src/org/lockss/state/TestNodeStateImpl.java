@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateImpl.java,v 1.10 2003-04-02 23:28:37 tal Exp $
+ * $Id: TestNodeStateImpl.java,v 1.11 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestNodeStateImpl extends LockssTestCase {
     polls.add(new PollState(1, "lwr1", "upr1", 1, 0, Deadline.MAX));
     polls.add(new PollState(2, "lwr2", "upr3", 1, 0, Deadline.MAX));
     polls.add(new PollState(3, "lwr3", "upr3", 1, 0, Deadline.MAX));
-    state = new NodeStateImpl(mcus, new CrawlState(-1, -1, -1), polls,
+    state = new NodeStateImpl(mcus, -1, new CrawlState(-1, -1, -1), polls,
                               new HistoryRepositoryImpl(tempDirPath));
   }
 
@@ -183,12 +183,18 @@ public class TestNodeStateImpl extends LockssTestCase {
     MockCachedUrlSet mcus = new MockCachedUrlSet(null, null);
     Vector childV = new Vector();
     mcus.setFlatIterator(childV.iterator());
-    state = new NodeStateImpl(mcus, null, null, null);
+    state = new NodeStateImpl(mcus, -1, null, null, null);
     assertFalse(state.isInternalNode());
 
     childV.addElement("test string");
     mcus.setFlatIterator(childV.iterator());
     assertTrue(state.isInternalNode());
+  }
+
+  public void testLastHashDuration() throws Exception {
+    assertEquals(-1, state.getAverageHashDuration());
+    state.setLastHashDuration(123);
+    assertEquals(123, state.getAverageHashDuration());
   }
 
   public static void main(String[] argv) {

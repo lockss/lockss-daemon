@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.8 2003-03-28 23:48:13 aalto Exp $
+ * $Id: SystemMetrics.java,v 1.9 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class SystemMetrics {
    */
   public static final String PARAM_HASH_TEST_BYTE_STEP =
       Configuration.PREFIX + "metrics.hash.stepsize";
-  static final int DEFAULT_HASH_DURATION = 1000;
+  static final long DEFAULT_HASH_DURATION = 10 * Constants.SECOND;
   static final int DEFAULT_HASH_STEP = 1024;
 
 
@@ -93,8 +93,8 @@ public class SystemMetrics {
       long timeTaken = 0;
       long bytesHashed = 0;
       boolean earlyFinish = false;
-      int hashDuration =
-          Configuration.getIntParam(PARAM_HASH_TEST_DURATION,
+      long hashDuration =
+          Configuration.getLongParam(PARAM_HASH_TEST_DURATION,
           DEFAULT_HASH_DURATION);
       int hashStep =
           Configuration.getIntParam(PARAM_HASH_TEST_BYTE_STEP,

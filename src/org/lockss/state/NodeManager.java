@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.20 2003-04-02 02:20:56 aalto Exp $
+ * $Id: NodeManager.java,v 1.21 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -85,6 +85,14 @@ public interface NodeManager extends LockssManager {
    * Alerts the NodeManager that a new top-level content crawl has finished.
    */
   public void newContentCrawlFinished();
+
+  /**
+   * Alerts the NodeManager that a hash finished on a specific
+   * {@link CachedUrlSet} with the specified duration.
+   * @param cus the {@link CachedUrlSet}
+   * @param hashDuration the duration, in ms
+   */
+  public void hashFinished(CachedUrlSet cus, long hashDuration);
 
   /**
    * For testing only.  Forces the NodeManager to run a treewalk, if none

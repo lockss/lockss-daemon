@@ -50,6 +50,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getLockssRepositoryService().startService();
+    theDaemon.setNodeManagerService(new MockNodeManagerService());
   }
 
   public void tearDown() throws Exception {
@@ -95,6 +96,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     int volume = 322;
     ArchivalUnit hwAu = makeAU(base, volume);
     theDaemon.getLockssRepository(hwAu);
+    theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =
@@ -107,6 +109,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     int volume = 322;
     ArchivalUnit hwAu = makeAU(base, volume);
     theDaemon.getLockssRepository(hwAu);
+    theDaemon.getNodeManager(hwAu);
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(base.toString());
     GenericFileCachedUrlSet cus = new GenericFileCachedUrlSet(hwAu, spec);
     UrlCacher uc =

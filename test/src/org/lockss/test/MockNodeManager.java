@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.8 2003-04-02 02:23:31 aalto Exp $
+ * $Id: MockNodeManager.java,v 1.9 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
-import java.util.Iterator;
+import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
@@ -46,6 +46,8 @@ public class MockNodeManager implements NodeManager {
   private static Logger logger = Logger.getLogger("MockNodeManager");
 
   private MockAuState aus;
+  private HashMap nodeMap = new HashMap();
+  public HashMap hashCalls = new HashMap();
 
   public void initService(LockssDaemon daemon)
       throws LockssDaemonException {
@@ -78,7 +80,11 @@ public class MockNodeManager implements NodeManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
-    throw new UnsupportedOperationException("Not implemented");
+    return (NodeState)nodeMap.get(cus.getUrl());
+  }
+
+  public void putNodeState(NodeState state) {
+    nodeMap.put(state.getCachedUrlSet().getUrl(), state);
   }
 
   public AuState getAuState() {
@@ -114,6 +120,10 @@ public class MockNodeManager implements NodeManager {
 
   public void newContentCrawlFinished() {
     aus.newCrawlFinished();
+  }
+
+  public void hashFinished(CachedUrlSet cus, long hashDuration) {
+    hashCalls.put(cus.getUrl(), new Long(hashDuration));
   }
 
   public void forceTreeWalk() {

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.28 2003-03-20 00:01:35 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.29 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import org.lockss.state.*;
 
 /**
  * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.
@@ -59,6 +60,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private long lastDuration = 0;
   private Exception lastException = null;
   private LockssRepository repository;
+  private NodeManager nodeManager;
   protected static Logger logger = Logger.getLogger("CachedUrlSet");
 
   int contentNodeCount = 0;
@@ -69,6 +71,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     LockssRepositoryService repService = (LockssRepositoryService)
         LockssDaemon.getManager(LockssDaemon.LOCKSS_REPOSITORY_SERVICE);
     repository = repService.getLockssRepository(owner);
+    NodeManagerService nodeService = (NodeManagerService)
+        LockssDaemon.getManager(LockssDaemon.NODE_MANAGER_SERVICE);
+    nodeManager = nodeService.getNodeManager(owner);
   }
 
   public boolean isLeaf() {
@@ -194,12 +199,21 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     } else {
       lastDuration = elapsed;
     }
+    nodeManager.hashFinished(this, lastDuration);
+
     lastException = err;
   }
 
   public long estimatedHashDuration() {
     if (lastDuration>0) return lastDuration;
     else {
+      NodeState state = nodeManager.getNodeState(this);
+      if (state!=null) {
+        lastDuration = state.getAverageHashDuration();
+        if (lastDuration>0) {
+          return lastDuration;
+        }
+      }
       // determine number of content nodes and total size
       calculateNodeCountAndSize();
       MessageDigest hasher = LcapMessage.getDefaultHasher();
@@ -209,14 +223,14 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       try {
         bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
       } catch (IOException ie) {
-        logger.error("Couldn't finish estimating hash time: "+ie);
+        logger.error("Couldn't finish estimating hash time: " + ie);
         return totalNodeSize * BYTES_PER_MS_DEFAULT;
       }
-      if (bytesPerMs==0) {
+      if (bytesPerMs == 0) {
         logger.warning("Couldn't estimate hash time: getting 0");
         return totalNodeSize * BYTES_PER_MS_DEFAULT;
       }
-      return (long)(totalNodeSize / bytesPerMs);
+      return (long) (totalNodeSize / bytesPerMs);
     }
   }
 

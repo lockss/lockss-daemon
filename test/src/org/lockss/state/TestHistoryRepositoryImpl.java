@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.22 2003-04-02 23:50:55 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.23 2003-04-04 23:50:11 aalto Exp $
  */
 
 /*
@@ -128,7 +128,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    NodeStateImpl nodeState = new NodeStateImpl(mcus, null, null, repository);
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
+                                                repository);
     List histories = ListUtil.list(createPollHistoryBean(3), createPollHistoryBean(3),
                                    createPollHistoryBean(3), createPollHistoryBean(3),
                                    createPollHistoryBean(3));
@@ -169,7 +170,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
-    NodeStateImpl nodeState = new NodeStateImpl(mcus, null, null, repository);
+    NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
+                                                repository);
     nodeState.setPollHistoryBeanList(new ArrayList());
     //storing empty vector
     repository.storePollHistories(nodeState);
@@ -186,7 +188,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
     mspec = new MockCachedUrlSetSpec("http://www.example2.com", null);
     mcus = new MockCachedUrlSet(mau, mspec);
-    nodeState = new NodeStateImpl(mcus, null, null, repository);
+    nodeState = new NodeStateImpl(mcus, -1, null, null, repository);
     filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
     filePath = LockssRepositoryServiceImpl.mapUrlToFileLocation(filePath,
@@ -237,7 +239,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     PollState poll2 = new PollState(2, "abc", "def", 3, 321, Deadline.at(654));
     polls.add(poll1);
     polls.add(poll2);
-    NodeState nodeState = new NodeStateImpl(mcus, crawl, polls, repository);
+    NodeState nodeState = new NodeStateImpl(mcus, 123321, crawl, polls,
+                                            repository);
     repository.storeNodeState(nodeState);
     String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -249,6 +252,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     nodeState = null;
     nodeState = repository.loadNodeState(mcus);
     assertSame(mcus, nodeState.getCachedUrlSet());
+
+    assertEquals(123321, nodeState.getAverageHashDuration());
 
     assertEquals(1, nodeState.getCrawlState().getType());
     assertEquals(2, nodeState.getCrawlState().getStatus());
