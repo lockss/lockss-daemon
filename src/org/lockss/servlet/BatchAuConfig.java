@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.6 2005-02-02 09:42:23 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.7 2005-02-09 19:10:35 tlipkis Exp $
  */
 
 /*
@@ -55,9 +55,14 @@ import org.lockss.daemon.status.*;
  */
 public class BatchAuConfig extends LockssServlet {
 
-  static final String PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT =
-    Configuration.PREFIX + "auconfig.includePluginInTitleSelect";
-  static final boolean DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT = false;
+  /** Controls the appearance (in select lists) of TitleSets that contain
+   * no actionable AUs.  If included, they are greyed. <ul><li><b>All</b>
+   * &mdash; they are always included,<li><b>Add</b> &mdash; they are
+   * included only in the Add Titles selection, omitted in
+   * others,<li><b>None</b> &mdash; they are not included.</ul> */
+  static final String PARAM_GREY_TITLESET_ACTION =
+    Configuration.PREFIX + "batchAuconfig.greyNonActionableTitleSets";
+  static final String DEFAULT_GREY_TITLESET_ACTION = "Add";
 
   static final String FOOT_REPO_CHOICE =
     "If only one choice is shown for an AU, the contents of that AU " +
@@ -109,6 +114,7 @@ public class BatchAuConfig extends LockssServlet {
   static final String SESSION_KEY_STATUS_TABLE = "StatusTable";
 
   private PluginManager pluginMgr;
+  private ConfigManager configMgr;
   private RemoteApi remoteApi;
 
   // Used to insert messages into the page
@@ -127,6 +133,7 @@ public class BatchAuConfig extends LockssServlet {
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     pluginMgr = getLockssDaemon().getPluginManager();
+    configMgr = getLockssDaemon().getConfigManager();
     remoteApi = getLockssDaemon().getRemoteApi();
   }
 
@@ -247,41 +254,67 @@ public class BatchAuConfig extends LockssServlet {
     Page page = newPage();
     addJavaScript(page);
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Select one or more collections of titles to "
-				 + verb.word + ", " +
-				 "then click Select Titles."));
-    Form frm = new Form(srvURL(myServletDescr(), null));
-    frm.method("POST");
-    frm.add(new Input(Input.Hidden, ACTION_TAG));
-    frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
+    Block topSelButtonRow = null;
     if (sets.size() >= 10) {
+      // add a top select button if more than 10 rows in table
       tbl.newRow();
+      topSelButtonRow = tbl.row();
       tbl.newCell("align=center colspan=2");
       tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
     }
+    int actualRows = 0;
+    boolean isAnySelectable = false;
+    String greyAction =
+      configMgr.getParam(PARAM_GREY_TITLESET_ACTION,
+			 DEFAULT_GREY_TITLESET_ACTION);
+    boolean doGrey = "All".equalsIgnoreCase(greyAction) ||
+      (verb == VERB_ADD && "Add".equalsIgnoreCase(greyAction));
     for (Iterator iter = sets.iterator(); iter.hasNext(); ) {
       TitleSet ts = (TitleSet)iter.next();
       if (verb.isTsAppropriateFor(ts)) {
 	RemoteApi.BatchAuStatus bas = verb.findAusInSetForVerb(remoteApi, ts);
 	int numOk = numOk(bas);
-	if (numOk > 0) {
+	if (numOk > 0 || doGrey) {
+	  actualRows++;
 	  tbl.newRow();
 	  tbl.newCell("align=right valign=center");
-	  tbl.add(checkBox(null, ts.getName(), KEY_TITLE_SET, false));
+	  if (numOk > 0) {
+	    isAnySelectable = true;
+	    tbl.add(checkBox(null, ts.getName(), KEY_TITLE_SET, false));
+	  }
 	  tbl.newCell("valign=center");
-	  tbl.add(ts.getName());
-	  tbl.add(" (");
-	  tbl.add(Integer.toString(numOk));
-	  tbl.add(")");
+	  String txt = ts.getName() + " (" + numOk + ")";
+	  if (numOk > 0) {
+	    tbl.add(txt);
+	  } else {
+	    tbl.add(greyText(txt));
+	  }
 	}
       }
     }
-    tbl.newRow();
-    tbl.newCell("align=center colspan=2");
-    tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
-    frm.add(tbl);
-    page.add(frm);
+    if (isAnySelectable) {
+      if (topSelButtonRow != null && actualRows < 10) {
+	// we added a top select button, but there didn't turn out to be
+	// more than 10 actual rows, so remove the button.
+	topSelButtonRow.reset();
+      }
+      page.add(getExplanationBlock("Select one or more collections of " +
+				   "titles to " + verb.word +
+				   ", then click Select Titles."));
+      tbl.newRow();
+      tbl.newCell("align=center colspan=2");
+      tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
+      Form frm = new Form(srvURL(myServletDescr(), null));
+      frm.method("POST");
+      frm.add(new Input(Input.Hidden, ACTION_TAG));
+      frm.add(new Input(Input.Hidden, KEY_VERB, verb.valStr));
+      frm.add(tbl);
+      page.add(frm);
+    } else {
+      page.add(getExplanationBlock("All titles in all predefined collections" +
+				   " of titles already exist on this cache."));
+    }
     endPage(page);
   }
 
