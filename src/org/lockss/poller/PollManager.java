@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.145 2004-10-02 13:08:24 dshr Exp $
+ * $Id: PollManager.java,v 1.146 2004-10-02 13:33:43 dshr Exp $
  */
 
 /*
@@ -181,6 +181,10 @@ public class PollManager
       return false;
     } else {
       long duration = pollFact.calcDuration(pollspec, this);
+      if (duration <= 0) {
+	theLog.debug("Duration for " + pollspec + " too short " + duration);
+	return false;
+      }
       byte[] challenge = makeVerifier(duration);
       byte[] verifier = makeVerifier(duration);
       try {

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.9 2004-10-02 01:16:25 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.10 2004-10-02 13:33:43 dshr Exp $
  */
 
 /*
@@ -202,6 +202,9 @@ public class V1PollFactory implements PollFactory {
     if (pollspec.getPollVersion() != 1) {
       throw new ProtocolException("V1PollFactory: bad version " +
 				  pollspec.getPollVersion());
+    }
+    if (duration <= 0) {
+      throw new ProtocolException("V1Pollfactory: bad duration " + duration);
     }
     switch (pollspec.getPollType()) {
       case Poll.CONTENT_POLL:
