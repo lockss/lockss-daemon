@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.148.2.1 2004-10-28 08:22:24 tlipkis Exp $
+ * $Id: PollManager.java,v 1.148.2.2 2004-11-05 23:43:30 smorabito Exp $
  */
 
 /*
@@ -256,9 +256,9 @@ public class PollManager
     }
   }
 
-  public ActivityRegulator.Lock acquirePollLock(Object key) {
+  public ActivityRegulator.Lock acquirePollLock(String key) {
     ActivityRegulator.Lock lock = null;
-    PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
+    PollManagerEntry pme = getCurrentOrRecentPollEntry(key);
     if(pme != null) {
       PollTally tally = pme.poll.getVoteTally();
       if(tally != null) {
