@@ -11,6 +11,10 @@ org.lockss.log.USock_9001_Rcv.level=debug
 org.lockss.log.USock_9000_Rcv.level=debug
 
 #au config settings
+org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fshadow1%2Elockss%2Eorg%2F&volume~322.pause_time=3s
+org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fshadow1%2Elockss%2Eorg%2F&volume~322.nc_interval=10w
+org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fshadow1%2Elockss%2Eorg%2F&volume~322.volume=322
+org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fshadow1%2Elockss%2Eorg%2F&volume~322.base_url=http://shadow1.lockss.org/
 
 #lockss repository settings
 org.lockss.cache.location=./
