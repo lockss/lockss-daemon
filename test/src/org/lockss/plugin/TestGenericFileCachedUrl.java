@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.12 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.13 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -56,12 +56,10 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHashService();
-    theDaemon.getLockssRepositoryService().startService();
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgfau = new MockGenericFileArchivalUnit();
     MockPlugin plugin = new MockPlugin();
@@ -75,7 +73,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepositoryService().stopService();
+    repo.stopService();
     super.tearDown();
   }
 
@@ -202,7 +200,7 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
 
    public void testGetReader() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
-  
+
     CachedUrl cu = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
     Reader reader = cu.getReader();
     CharArrayWriter writer = new CharArrayWriter(11);

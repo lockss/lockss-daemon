@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.47 2003-06-20 22:34:50 claire Exp $
+ * $Id: Configuration.java,v 1.48 2003-06-25 21:19:59 eaalto Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public abstract class Configuration {
   static String cacheConfigFiles[] = {
     CONFIG_FILE_UI_IP_ACCESS,
   };
-			     
+
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -285,7 +285,7 @@ public abstract class Configuration {
     if (!StringUtil.isNullString(space)) {
       String firstSpace =
 	((String)StringUtil.breakAt(space, ';', 1).elementAt(0));
-      platformOverride(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
+      platformOverride(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
 		       firstSpace);
       platformOverride(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 		       firstSpace);
@@ -350,7 +350,7 @@ public abstract class Configuration {
       }
     }
   }
-      
+
   /**
    * Unregister a <code>Configuration.Callback</code>.
    * @param c <code>Configuration.Callback</code> to remove.
@@ -910,9 +910,9 @@ public abstract class Configuration {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
-	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL, 
+	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
 						DEFAULT_RELOAD_INTERVAL);
-				    
+
 	}
 	long reloadRange = reloadInterval/4;
 	nextReload = Deadline.inRandomRange(reloadInterval - reloadRange,

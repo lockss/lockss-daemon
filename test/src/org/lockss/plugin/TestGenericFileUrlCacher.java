@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.17 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.18 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.StreamUtil;
-import org.lockss.repository.TestLockssRepositoryServiceImpl;
+import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.plugin.base.*;
 
 /**
@@ -55,12 +55,10 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     mgfau = new MockGenericFileArchivalUnit();
     mgfau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
-    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getHashService();
-    theDaemon.getLockssRepositoryService().startService();
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     MockPlugin plugin = new MockPlugin();
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
@@ -71,7 +69,6 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepositoryService().stopService();
     super.tearDown();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.12 2003-06-20 22:34:55 claire Exp $
+ * $Id: HashSpeedTest.java,v 1.13 2003-06-25 21:19:54 eaalto Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.repository.LockssRepositoryServiceImpl;
+import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.poller.PollManager;
 import org.lockss.crawler.GoslingCrawlerImpl;
 import org.lockss.protocol.*;
@@ -83,16 +83,13 @@ public class HashSpeedTest extends LockssTestCase {
     sau.setRootDir(tempDirPath);
     String s = SystemMetrics.PARAM_HASH_TEST_DURATION + "=" + duration;
     String s2 = SystemMetrics.PARAM_HASH_TEST_BYTE_STEP + "=" + byteStep;
-    String s3 = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
-        tempDirPath;
+    String s3 = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + tempDirPath;
     String configStr = s + "\n" + s2 + "\n" + s3;
     TestConfiguration.setCurrentConfigFromString(configStr);
-    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getLockssRepository(sau);
   }
 
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepositoryService().stopService();
     super.tearDown();
   }
 
@@ -116,7 +113,7 @@ public class HashSpeedTest extends LockssTestCase {
   private void crawlContent() {
     System.out.println("Crawling tree...");
     CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
-    Crawler crawler = 
+    Crawler crawler =
       new GoslingCrawlerImpl(sau, spec.getStartingUrls(), true);
     crawler.doCrawl(Deadline.MAX);
   }

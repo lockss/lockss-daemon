@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.36 2003-06-20 22:34:54 claire Exp $
+ * $Id: FuncSimulatedContent.java,v 1.37 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -68,8 +68,7 @@ public class FuncSimulatedContent
     Properties props = new Properties();
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
     props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
-    props.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
-                      tempDirPath);
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
                       tempDirPath);
     props.setProperty("org.lockss.au." + auId + ".root", tempDirPath);
@@ -92,20 +91,19 @@ public class FuncSimulatedContent
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
 
-    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getHistoryRepository().startService();
-    theDaemon.getNodeManagerService().startService();
     theDaemon.getHashService();
     sau = (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(
       0);
 
     theDaemon.getLockssRepository(sau);
-    theDaemon.getNodeManager(sau);
+    theDaemon.getNodeManager(sau).initService(theDaemon);
+    theDaemon.getNodeManager(sau).startService();
   }
 
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepositoryService().stopService();
-    theDaemon.getNodeManagerService().stopService();
+    theDaemon.getLockssRepository(sau).stopService();
+    theDaemon.getNodeManager(sau).stopService();
     theDaemon.getPluginManager().stopService();
     super.tearDown();
   }
@@ -129,7 +127,8 @@ public class FuncSimulatedContent
     sau = (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(
       1);
     theDaemon.getLockssRepository(sau);
-    theDaemon.getNodeManager(sau);
+    theDaemon.getNodeManager(sau).initService(theDaemon);
+    theDaemon.getNodeManager(sau).startService();
 
     createContent();
     crawlContent();

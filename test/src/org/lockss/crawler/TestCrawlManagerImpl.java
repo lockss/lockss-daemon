@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.21 2003-06-25 21:09:39 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.22 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
   public static final String GENERIC_URL = "http://www.example.com/index.html";
   private TestableCrawlManagerImpl crawlManager = null;
   private MockArchivalUnit mau = null;
-  private MyMockLockssDaemon theDaemon;
+  private MockLockssDaemon theDaemon;
   private MockNodeManager nodeManager;
   private MockActivityRegulator activityRegulator;
   private MockCrawler crawler;
@@ -63,12 +63,12 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     mau = new MockArchivalUnit();
 
     crawlManager = new TestableCrawlManagerImpl();
-    theDaemon = new MyMockLockssDaemon();
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
-    nodeManager = (MockNodeManager)theDaemon.getNodeManager(mau);
+    theDaemon = new MockLockssDaemon();
+    nodeManager = new MockNodeManager();
+    theDaemon.setNodeManager(nodeManager, mau);
 
     activityRegulator = new MockActivityRegulator(mau);
-    theDaemon.setActivityRegulator(activityRegulator);
+    theDaemon.setActivityRegulator(activityRegulator, mau);
 
     crawlManager.initService(theDaemon);
     crawlManager.startService();
@@ -101,7 +101,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     //shouldn't throw an exception
     crawlManager.startNewContentCrawl(mau, null, "blah");
   }
-  
+
   public void testNewCrawlDeadlineIsMax() {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
 
@@ -140,7 +140,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     activityRegulator.assertNewContentCrawlFinished();
   }
 
-  public void testRepairCrawlSignalsActivityRegulatorWhenDone() 
+  public void testRepairCrawlSignalsActivityRegulatorWhenDone()
       throws MalformedURLException {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
@@ -323,7 +323,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     assertNotEquals(lastCrawlTime, maus.getLastCrawlTime());
   }
 
-  public void testUnsucessfulCrawlDoesntUpdateLastCrawlTime() {
+  public void testUnsuccessfulCrawlDoesntUpdateLastCrawlTime() {
     MockAuState maus = new MockAuState();
     long lastCrawlTime = maus.getLastCrawlTime();
     nodeManager.setAuState(maus);
@@ -389,7 +389,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     private MockCrawler mockCrawler;
     protected Crawler makeCrawler(ArchivalUnit au, List urls,
 				  int type, boolean followLinks) {
-      
+
       mockCrawler.setAU(au);
       mockCrawler.setURLs(urls);
       mockCrawler.setFollowLinks(followLinks);
@@ -399,16 +399,6 @@ public class TestCrawlManagerImpl extends LockssTestCase {
 
     private void setTestCrawler(MockCrawler mockCrawler) {
       this.mockCrawler = mockCrawler;
-    }
-  }
-
-  private static class MyMockLockssDaemon extends MockLockssDaemon {
-    private ActivityRegulator ar;
-    public void setActivityRegulator(ActivityRegulator ar) {
-      this.ar = ar;
-    }
-    public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
-      return ar;
     }
   }
 }

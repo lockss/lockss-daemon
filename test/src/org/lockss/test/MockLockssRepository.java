@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.3 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockLockssRepository.java,v 1.4 2003-06-25 21:19:54 eaalto Exp $
  */
 
 /*
@@ -150,7 +150,8 @@ public class MockLockssRepository implements LockssRepository {
       nodeLocation = rootLocation;
       node = new MockRepositoryNode(url, nodeLocation);
     } else {
-      nodeLocation = LockssRepositoryServiceImpl.mapUrlToFileLocation(rootLocation, url);
+      nodeLocation = LockssRepositoryImpl.mapUrlToFileLocation(rootLocation,
+          url);
       node = new MockRepositoryNode(url, nodeLocation);
     }
 

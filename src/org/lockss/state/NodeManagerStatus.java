@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.10 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeManagerStatus.java,v 1.11 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.poller.*;
 import org.lockss.daemon.RangeCachedUrlSetSpec;
+import org.lockss.app.LockssDaemon;
 
 /**
  * Collect and report the status of the NodeManager
@@ -44,18 +45,17 @@ public class NodeManagerStatus {
   public static final String MANAGER_STATUS_TABLE_NAME = "NodeManagerTable";
   public static final String POLLHISTORY_STATUS_TABLE_NAME = "PollHistoryTable";
 
-  private static NodeManagerServiceImpl managerService;
+  private static LockssDaemon theDaemon;
   private static Logger logger = Logger.getLogger("NodeManagerStatus");
 
-  NodeManagerStatus(NodeManagerServiceImpl impl) {
-    managerService = impl;
+  NodeManagerStatus(LockssDaemon theDaemon) {
+    this.theDaemon = theDaemon;
   }
 
   private static NodeManagerImpl getNodeManager(String key) throws
-      StatusService.
-      NoSuchTableException {
+      StatusService.NoSuchTableException {
 
-    Iterator entries = managerService.getEntries();
+    Iterator entries = theDaemon.getNodeManagerEntries();
     while (entries.hasNext()) {
       Map.Entry entry = (Map.Entry) entries.next();
       NodeManager manager = (NodeManager) entry.getValue();
@@ -103,7 +103,7 @@ public class NodeManagerStatus {
 
     private List getRows(String key) {
       List rowL = new ArrayList();
-      Iterator entries = managerService.getEntries();
+      Iterator entries = theDaemon.getNodeManagerEntries();
       while (entries.hasNext()) {
         Map.Entry entry = (Map.Entry) entries.next();
         NodeManager manager = (NodeManager) entry.getValue();

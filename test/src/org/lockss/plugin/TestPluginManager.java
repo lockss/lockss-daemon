@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.17 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestPluginManager.java,v 1.18 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -36,14 +36,12 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import junit.framework.TestCase;
-//import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.repository.TestLockssRepositoryImpl;
-import org.lockss.repository.LockssRepositoryServiceImpl;
+import org.lockss.repository.*;
 import org.lockss.poller.PollSpec;
 
 /**
@@ -71,7 +69,7 @@ public class TestPluginManager extends LockssTestCase {
   static String mauauidKey2 = PropUtil.propsToCanonicalEncodedString(props2);
   static String mauauid2 = mockPlugKey+"&"+mauauidKey2;
 
-  static String p1param = 
+  static String p1param =
     PluginManager.PARAM_AU_TREE + "." + mockPlugKey + ".";
 
   static String p1a1param = p1param + mauauidKey1 + ".";
@@ -83,7 +81,8 @@ public class TestPluginManager extends LockssTestCase {
     p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
     p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n" + // value contains a dot
 // needed to allow PluginManager to register AUs
-    LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=/tmp";
+// leave value blank to allow 'doConfig()' to fill it in dynamically
+    LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=";
 
 
   PluginManager mgr;
@@ -96,8 +95,6 @@ public class TestPluginManager extends LockssTestCase {
     super.setUp();
 
     theDaemon = new MockLockssDaemon();
-    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
 
     mgr = new PluginManager();
     theDaemon.setPluginManager(mgr);
@@ -112,11 +109,11 @@ public class TestPluginManager extends LockssTestCase {
     super.tearDown();
   }
 
-
-
   private void doConfig() throws Exception {
     mgr.startService();
-    TestConfiguration.setCurrentConfigFromString(configStr);
+    String localConfig = configStr + getTempDir().getAbsolutePath() +
+        File.separator;
+    TestConfiguration.setCurrentConfigFromString(localConfig);
   }
 
   public void testNameFromKey() {
@@ -268,7 +265,7 @@ public class TestPluginManager extends LockssTestCase {
     String pluginId = "org|lockss|plugin|Blah";
 
     String actual = PluginManager.generateAUId(pluginId, props);
-    String expected = 
+    String expected =
       pluginId+"&"+
       "key%261~val%3D1&"+
       "key%2E3~val%3A3&"+

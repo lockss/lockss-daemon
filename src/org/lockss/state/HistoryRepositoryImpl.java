@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.35 2003-06-20 22:34:52 claire Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.36 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class HistoryRepositoryImpl
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    String auLoc = LockssRepositoryServiceImpl.mapAuToFileLocation(
+    String auLoc = LockssRepositoryImpl.mapAuToFileLocation(
         buffer.toString(), cus.getArchivalUnit());
     String urlStr = (String)cus.getUrl();
     if (AuUrl.isAuUrl(urlStr)) {
@@ -365,7 +365,7 @@ public class HistoryRepositoryImpl
         logger.error("Error testing URL: "+ie);
         throw new MalformedURLException ("Error testing URL.");
       }
-      return LockssRepositoryServiceImpl.mapUrlToFileLocation(auLoc, urlStr);
+      return LockssRepositoryImpl.mapUrlToFileLocation(auLoc, urlStr);
     }
   }
 
@@ -376,7 +376,7 @@ public class HistoryRepositoryImpl
     }
     buffer.append(HISTORY_ROOT_NAME);
     buffer.append(File.separator);
-    return LockssRepositoryServiceImpl.mapAuToFileLocation(buffer.toString(),
+    return LockssRepositoryImpl.mapAuToFileLocation(buffer.toString(),
         au);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.61 2003-06-23 19:24:00 claire Exp $
+ * $Id: TestPoll.java,v 1.62 2003-06-25 21:19:57 eaalto Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
-import org.lockss.repository.LockssRepositoryServiceImpl;
+import org.lockss.repository.LockssRepositoryImpl;
 
 /** JUnitTest case for class: org.lockss.poller.Poll */
 public class TestPoll extends LockssTestCase {
@@ -87,8 +87,8 @@ public class TestPoll extends LockssTestCase {
    */
   public void tearDown() throws Exception {
     pollmanager.stopService();
+    theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
-    theDaemon.getLockssRepositoryService().stopService();
     theDaemon.getRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
     TimeBase.setReal();
@@ -468,21 +468,16 @@ public class TestPoll extends LockssTestCase {
       fail("unable to create a temporary directory");
     }
 
-    String cacheStr = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION +"=" +
-        tempDirPath;
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
-		  tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
     theDaemon.getHashService().startService();
-    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
-    theDaemon.setNodeManager(new MockNodeManager(),testau);
+    theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.46 2003-06-20 22:34:51 claire Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.47 2003-06-25 21:19:59 eaalto Exp $
  */
 
 /*
@@ -69,12 +69,10 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
-    LockssRepositoryService repService = (LockssRepositoryService)
-        LockssDaemon.getManager(LockssDaemon.LOCKSS_REPOSITORY_SERVICE);
-    repository = repService.getLockssRepository(owner);
-    NodeManagerService nodeService = (NodeManagerService)
-        LockssDaemon.getManager(LockssDaemon.NODE_MANAGER_SERVICE);
-    nodeManager = nodeService.getNodeManager(owner);
+    repository = (LockssRepository)LockssDaemon.getAUSpecificManager(
+        LockssDaemon.LOCKSS_REPOSITORY, owner);
+    nodeManager = (NodeManager)LockssDaemon.getAUSpecificManager(
+        LockssDaemon.NODE_MANAGER, owner);
     hashService = (HashService)LockssDaemon.getManager(LockssDaemon.HASH_SERVICE);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.47 2003-06-23 19:24:00 claire Exp $
+ * $Id: TestPollManager.java,v 1.48 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 import org.mortbay.util.*;
 import org.lockss.hasher.HashService;
-import org.lockss.repository.TestLockssRepositoryServiceImpl;
+import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.repository.*;
 /** JUnitTest case for class: org.lockss.poller.PollManager */
 public class TestPollManager extends LockssTestCase {
@@ -79,8 +79,8 @@ public class TestPollManager extends LockssTestCase {
 
   public void tearDown() throws Exception {
     pollmanager.stopService();
+    theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
-    theDaemon.getLockssRepositoryService().stopService();
     theDaemon.getRouterManager().stopService();
     TimeBase.setReal();
     super.tearDown();
@@ -335,17 +335,14 @@ public class TestPollManager extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION,
-		  tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     theDaemon.getHashService().startService();
-    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getRouterManager().startService();
 
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
-    theDaemon.setNodeManager(new MockNodeManager(),testau);
+    theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
   }
 

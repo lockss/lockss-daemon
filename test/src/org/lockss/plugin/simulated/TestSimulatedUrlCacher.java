@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.17 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.18 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.io.*;
 import java.util.Properties;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
-import org.lockss.repository.TestLockssRepositoryServiceImpl;
+import org.lockss.repository.TestLockssRepositoryImpl;
 import org.lockss.plugin.*;
 import org.lockss.util.StreamUtil;
 
@@ -58,14 +58,12 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
 
     theDaemon = new MockLockssDaemon();
-    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
-
     mau = new MockArchivalUnit();
-    theDaemon.getLockssRepository(mau);
+
+    theDaemon.setLockssRepository(new MockLockssRepository(), mau);
   }
 
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepositoryService().stopService();
     super.tearDown();
   }
 

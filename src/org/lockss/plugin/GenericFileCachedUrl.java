@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.21 2003-06-20 22:34:51 claire Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.22 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
   private RepositoryNode leaf = null;
   protected static Logger logger = Logger.getLogger("CachedUrl");
 
-  private static final String PARAM_SHOULD_FILTER_HASH_STREAM = 
+  private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+".genericFileCachedUrl.filterHashStream";
 
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
@@ -98,7 +98,7 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
     logger.debug2("Not filtering "+url);
     return openForReading();
   }
-  
+
   public Reader getReader() {
     ensureLeafLoaded();
     return leaf.getNodeContents().reader;
@@ -116,9 +116,8 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
 
   private void ensureLeafLoaded() {
     if (repository==null) {
-      LockssRepositoryService repService = (LockssRepositoryService)
-          LockssDaemon.getManager(LockssDaemon.LOCKSS_REPOSITORY_SERVICE);
-      repository = repService.getLockssRepository(cus.getArchivalUnit());
+      repository = (LockssRepository)LockssDaemon.getAUSpecificManager(
+          LockssDaemon.LOCKSS_REPOSITORY, cus.getArchivalUnit());
     }
     if (leaf==null) {
       try {

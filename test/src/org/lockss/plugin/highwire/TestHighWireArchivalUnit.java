@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.24 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.25 2003-06-25 21:19:58 eaalto Exp $
  */
 
 /*
@@ -41,7 +41,8 @@ import org.lockss.util.*;
 import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
-import org.lockss.repository.TestLockssRepositoryServiceImpl;
+import org.lockss.repository.TestLockssRepositoryImpl;
+import org.lockss.repository.LockssRepository;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   private MockLockssDaemon theDaemon;
@@ -50,16 +51,13 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
 
     theDaemon = new MockLockssDaemon();
-    theDaemon.getLockssRepositoryService().startService();
     theDaemon.getHashService();
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
   }
 
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepositoryService().stopService();
     super.tearDown();
   }
 

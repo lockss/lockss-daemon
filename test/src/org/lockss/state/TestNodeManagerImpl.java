@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.88 2003-06-20 22:34:55 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.89 2003-06-25 21:19:55 eaalto Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.hasher.HashService;
-import org.lockss.repository.LockssRepositoryServiceImpl;
 import org.lockss.repository.*;
 import org.lockss.plugin.base.*;
 
@@ -62,7 +61,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon = new MockLockssDaemon();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     Properties p = new Properties();
-    p.setProperty(LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
@@ -106,9 +105,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public void tearDown() throws Exception {
     nodeManager.stopService();
     pollManager.stopService();
-    theDaemon.getHistoryRepository().stopService();
+    historyRepo.stopService();
+    theDaemon.getLockssRepository(mau).stopService();
     theDaemon.getHashService().stopService();
-    theDaemon.getLockssRepositoryService().stopService();
     PluginUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();
     TimeBase.setReal();
@@ -1123,6 +1122,45 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     return p;
   }
+
+/* XXX move to test of Daemon
+  public void testGetNodeManager() throws Exception {
+    String auId = mau.getAUId();
+
+    try {
+      nms.getNodeManager(mau);
+      fail("Should throw IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+
+    nms.addNodeManager(mau);
+    NodeManager node1 = nms.getNodeManager(mau);
+    assertNotNull(node1);
+
+    mau = new MockArchivalUnit();
+    theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);
+
+    nms.addNodeManager(mau);
+    NodeManager node2 = nms.getNodeManager(mau);
+    assertNotSame(node1, node2);
+
+    mau = new MockArchivalUnit();
+    try {
+      nms.getNodeManager(mau);
+      fail("Should throw IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+  }
+
+  public void testNodeManagerStartAndStop() {
+    nms.addNodeManager(mau);
+    NodeManagerImpl node = (NodeManagerImpl)nms.getNodeManager(mau);
+    // if the NodeManagerImpl has started, the thread is non-null
+    assertNotNull(node.treeWalkHandler);
+
+    nms.stopService();
+    // once stopped, the thread should be null
+    assertNull(node.treeWalkHandler);
+  }
+*/
 
   public static void main(String[] argv) {
     String[] testCaseList = {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.34 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.35 2003-06-25 21:19:55 eaalto Exp $
  */
 
 /*
@@ -45,10 +45,9 @@ import org.lockss.daemon.*;
  */
 
 public class TestLockssRepositoryImpl extends LockssTestCase {
-  private LockssRepository repo;
+  private LockssRepositoryImpl repo;
   private MockArchivalUnit mau;
   private String tempDirPath;
-  private String cacheLocation;
 
   public TestLockssRepositoryImpl(String msg) {
     super(msg);
@@ -57,16 +56,21 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    configCacheLocation(tempDirPath);
     mau = new MockArchivalUnit();
-    cacheLocation = LockssRepositoryServiceImpl.extendCacheLocation(
-        tempDirPath);
-    repo = new LockssRepositoryImpl(
-        LockssRepositoryServiceImpl.mapAuToFileLocation(cacheLocation, mau), mau);
+    repo = (LockssRepositoryImpl)LockssRepositoryImpl.createNewLockssRepository(
+        mau);
+  }
+
+  public void tearDown() throws Exception {
+    repo.stopService();
+    super.tearDown();
   }
 
   public void testFileLocation() throws Exception {
-    String cachePath = LockssRepositoryServiceImpl.mapAuToFileLocation(
-        cacheLocation, mau);
+    String cachePath = LockssRepositoryImpl.mapAuToFileLocation(
+        LockssRepositoryImpl.extendCacheLocation(tempDirPath),
+        mau);
     File testFile = new File(cachePath);
 
     createLeaf("http://www.example.com/testDir/branch1/leaf1",
@@ -311,6 +315,157 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(leaf.hasContent());
   }
 
+  // test static naming calls
+
+  public void testAuKey() {
+    String expectedStr = mau.getAUId();
+    assertEquals(expectedStr, LockssRepositoryImpl.getAuKey(mau));
+  }
+
+  public void testGetNewPluginDir() {
+    // call this to 'reblank' after the effects of setUp()
+    repo.stopService();
+
+    // should start with the char before 'a'
+    assertEquals(""+(char)('a'-1), LockssRepositoryImpl.lastPluginDir);
+    LockssRepositoryImpl.getNewPluginDir();
+    assertEquals("a", LockssRepositoryImpl.lastPluginDir);
+    LockssRepositoryImpl.getNewPluginDir();
+    assertEquals("b", LockssRepositoryImpl.lastPluginDir);
+
+    LockssRepositoryImpl.lastPluginDir = "z";
+    LockssRepositoryImpl.getNewPluginDir();
+    assertEquals("aa", LockssRepositoryImpl.lastPluginDir);
+    LockssRepositoryImpl.getNewPluginDir();
+    assertEquals("ab", LockssRepositoryImpl.lastPluginDir);
+    LockssRepositoryImpl.lastPluginDir = "az";
+    LockssRepositoryImpl.getNewPluginDir();
+    assertEquals("ba", LockssRepositoryImpl.lastPluginDir);
+    LockssRepositoryImpl.lastPluginDir = "czz";
+    LockssRepositoryImpl.getNewPluginDir();
+    assertEquals("daa", LockssRepositoryImpl.lastPluginDir);
+
+    LockssRepositoryImpl.lastPluginDir = ""+ (char)('a'-1);
+  }
+
+  public void testGetAuDirFromMap() {
+    HashMap newNameMap = new HashMap();
+    newNameMap.put(LockssRepositoryImpl.getAuKey(mau), "testDir");
+    LockssRepositoryImpl.nameMap = newNameMap;
+    StringBuffer buffer = new StringBuffer();
+    LockssRepositoryImpl.getAuDir(mau, buffer);
+    assertEquals("testDir", buffer.toString());
+  }
+
+  public void testSaveAndLoadNames() {
+    Properties newProps = new Properties();
+    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAUId());
+
+    HashMap newNameMap = new HashMap();
+    newNameMap.put(LockssRepositoryImpl.getAuKey(mau), "testDir");
+    LockssRepositoryImpl.nameMap = newNameMap;
+    String location = LockssRepositoryImpl.mapAuToFileLocation(
+        LockssRepositoryImpl.cacheLocation, mau);
+
+    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+    File idFile = new File(location + LockssRepositoryImpl.AU_ID_FILE);
+    assertTrue(idFile.exists());
+
+    newProps = LockssRepositoryImpl.getAuIdProperties(location);
+    assertNotNull(newProps);
+    assertEquals(mau.getAUId(),
+                 newProps.getProperty(LockssRepositoryImpl.AU_ID_PROP));
+  }
+
+  public void testLoadNameMap() {
+    Properties newProps = new Properties();
+    newProps.setProperty(LockssRepositoryImpl.AU_ID_PROP, mau.getAUId());
+    String location = LockssRepositoryImpl.cacheLocation + "ab";
+    LockssRepositoryImpl.saveAuIdProperties(location, newProps);
+
+    LockssRepositoryImpl.loadNameMap(LockssRepositoryImpl.cacheLocation);
+    assertEquals("ab", repo.nameMap.get(LockssRepositoryImpl.getAuKey(mau)));
+  }
+
+  public void testLoadNameMapSkipping() {
+    // clear the prop file from setUp()
+    String propsLoc = LockssRepositoryImpl.cacheLocation + "a" + File.separator +
+        LockssRepositoryImpl.AU_ID_FILE;
+    File propsFile = new File(propsLoc);
+    propsFile.delete();
+
+    LockssRepositoryImpl.loadNameMap(LockssRepositoryImpl.cacheLocation);
+    assertNull(LockssRepositoryImpl.nameMap.get(
+        LockssRepositoryImpl.getAuKey(mau)));
+  }
+
+  public void testMapAuToFileLocation() {
+    LockssRepositoryImpl.lastPluginDir = "ca";
+    String expectedStr = LockssRepositoryImpl.cacheLocation + "root/cb/";
+    assertEquals(expectedStr, LockssRepositoryImpl.mapAuToFileLocation(
+        LockssRepositoryImpl.cacheLocation+"root", new MockArchivalUnit()));
+  }
+
+  public void testGetAuDirSkipping() {
+    String location = LockssRepositoryImpl.cacheLocation + "root/ab";
+    File dirFile = new File(location);
+    dirFile.mkdirs();
+
+    LockssRepositoryImpl.lastPluginDir = "aa";
+    String expectedStr = LockssRepositoryImpl.cacheLocation + "root/ac/";
+    assertEquals(expectedStr, LockssRepositoryImpl.mapAuToFileLocation(
+        LockssRepositoryImpl.cacheLocation+"root", new MockArchivalUnit()));
+  }
+
+  public void testMapUrlToFileLocation() throws MalformedURLException {
+    String testStr = "http://www.example.com/branch1/branch2/index.html";
+    String expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
+    assertEquals(expectedStr, LockssRepositoryImpl.mapUrlToFileLocation("root",
+        testStr));
+
+    testStr = "hTTp://www.exaMPLE.com/branch1/branch2/index.html";
+    expectedStr = "root/www.example.com/http/branch1/branch2/index.html";
+    assertEquals(expectedStr, LockssRepositoryImpl.mapUrlToFileLocation("root",
+        testStr));
+
+    try {
+      testStr = ":/brokenurl.com/branch1/index/";
+      LockssRepositoryImpl.mapUrlToFileLocation("root", testStr);
+      fail("Should have thrown MalformedURLException");
+    } catch (MalformedURLException mue) {}
+  }
+
+/* XXX should be testing Daemon
+
+  public void testGetLockssRepository() {
+    String auId = mau.getAUId();
+    try {
+      repo.getLockssRepository(mau);
+      fail("Should throw IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+
+    repo.addLockssRepository(mau);
+    LockssRepository repo1 = repo.getLockssRepository(mau);
+    assertNotNull(repo1);
+
+    mau = new MockArchivalUnit();
+    repo.addLockssRepository(mau);
+    LockssRepository repo2 = repo.getLockssRepository(mau);
+    assertNotSame(repo1, repo2);
+
+    mau = new MockArchivalUnit();
+    try {
+      repo.getLockssRepository(mau);
+      fail("Should throw IllegalArgumentException.");
+    } catch (IllegalArgumentException iae) { }
+  }
+
+*/
+
+  public static void configCacheLocation(String location) throws IOException {
+    String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + location;
+    TestConfiguration.setCurrentConfigFromString(s);
+  }
 
   private RepositoryNode createLeaf(String url, String content,
                                     Properties props) throws Exception {
