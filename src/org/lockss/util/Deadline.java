@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.18 2003-03-26 23:15:13 tal Exp $
+ * $Id: Deadline.java,v 1.19 2003-03-27 03:05:28 tal Exp $
  */
 
 /*
@@ -187,6 +187,10 @@ public class Deadline implements Comparable {
 //   }
 
   private void checkReasonable() {
+    if (TimeBase.isSimulated()) {
+      // don't complain during testing
+      return;
+    }
     if (duration < 0 ||
 	(duration > (4 * Constants.WEEK) &&
 	 getExpirationTime() != TimeBase.NEVER)) {
