@@ -86,7 +86,7 @@ org.lockss.title.tal6.param.4.editable=true
 #Title: JCICS 2003 (ACS)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal7.title=JCICS 2003
-org.lockss.title.tal6.journalTitle=JCICS
+org.lockss.title.tal7.journalTitle=JCICS
 org.lockss.title.tal7.plugin=org.lockss.plugin.acs.AcsPlugin
 org.lockss.title.tal7.param.1.key=journal_key
 org.lockss.title.tal7.param.1.value=jcisd8
@@ -103,14 +103,14 @@ org.lockss.title.tal7.param.5.editable=true
 #Title: ALR (Absinthe Literary Review)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal8.title=ALR
-org.lockss.title.tal6.journalTitle=ALR
+org.lockss.title.tal8.journalTitle=ALR
 org.lockss.title.tal8.plugin=org.lockss.plugin.absinthe.AbsinthePlugin
 org.lockss.title.tal8.param.1.key=base_url
 org.lockss.title.tal8.param.1.value=http\://absinthe-literary-review.com/
 #Title: JHC (HighWire Press)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal9.title=JHC
-org.lockss.title.tal6.journalTitle=JHC
+org.lockss.title.tal9.journalTitle=JHC
 org.lockss.title.tal9.plugin=org.lockss.plugin.highwire.HighWirePlugin
 org.lockss.title.tal9.param.1.key=base_url
 org.lockss.title.tal9.param.1.value=http\://www.jhc.org/
