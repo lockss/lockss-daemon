@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.17 2003-03-28 22:49:49 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.18 2003-03-29 01:44:03 troberts Exp $
  */
 
 /*
@@ -308,8 +308,8 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
     private Map makeRow(Crawler crawler) {
       Map row = new HashMap();
       row.put(AU_COL_NAME, crawler.getAU().getName());
-      row.put(START_TIME_COL_NAME, new Long(crawler.getStartTime()));
-      row.put(END_TIME_COL_NAME, new Long(crawler.getEndTime()));
+      row.put(START_TIME_COL_NAME, makeNullOrLong(crawler.getStartTime()));
+      row.put(END_TIME_COL_NAME, makeNullOrLong(crawler.getEndTime()));
       row.put(NUM_URLS_FETCHED, new Long(crawler.getNumFetched()));
       row.put(NUM_URLS_PARSED, new Long(crawler.getNumParsed()));
       return row;
@@ -324,6 +324,13 @@ public class CrawlManagerImpl implements CrawlManager, LockssManager {
       table.setTitle("Crawl Status");
       table.setColumnDescriptors(colDescs);
       table.setRows(getRows(key));
+    }
+
+    /**
+     * @return null if num <= 0, a Long version of num otherwise
+     */
+    private Long makeNullOrLong(long num) {
+      return num <= 0 ? null : new Long(num);
     }
   }
 }
