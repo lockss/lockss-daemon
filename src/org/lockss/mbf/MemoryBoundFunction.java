@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.11 2003-09-05 22:43:48 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.12 2003-09-05 23:55:01 dshr Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public abstract class MemoryBoundFunction {
   protected byte[] nonce;
   protected long e;
   protected int[] proof;
-  protected int[] trace;
+  protected int[] signature;
   protected boolean verify;
   protected boolean finished;
   protected int pathLen;
@@ -56,6 +56,14 @@ public abstract class MemoryBoundFunction {
   protected MemoryBoundFunction() {
     }
 
+  /**
+   * Initialize an instance - called by the factory
+   * @param nVal a byte array containing the nonce
+   * @param eVal the effort sizer (# of low-order zeros in destination)
+   * @param lVal the effort sizer (length of each path)
+   * @param sVal an array of ints containing the proof
+   * @param maxPathVal maximum number of steps to verify
+   */
   protected void initialize(byte[] nVal,
 			    long eVal,
 			    int lVal,
@@ -76,7 +84,7 @@ public abstract class MemoryBoundFunction {
       verify = true;
       maxPath = maxPathVal;
     }
-    trace = null;
+    signature = null;
   }
 
   private void setup(byte[] nVal,
@@ -92,7 +100,7 @@ public abstract class MemoryBoundFunction {
    * Return true if the proof generation or verification is finished.
    * @return true if the proof generation or verification is finished.
    */
-  public boolean done() {
+  public boolean finished() {
     return (finished);
   }
 
@@ -114,18 +122,18 @@ public abstract class MemoryBoundFunction {
   }
 
   /**
-   * Obtain the trace of the MBF.  If this object has not yet finished,
+   * Obtain the signature of the MBF.  If this object has not yet finished,
    * throw MemoryBoundFunction Exception.
-   * The array returned contains the final value fetched from the
+   * The array returned contains the next value to be fetched from the
    * basis array for each path included in the proof (for a non-empty
    * proof) or for each path searched (for an empty proof).
-   * @return array of int containing the trace,  null if none available.
+   * @return array of int containing the signature,  null if none available.
    * 
    */
-  public int[] traceArray() throws MemoryBoundFunctionException {
+  public int[] signatureArray() throws MemoryBoundFunctionException {
     if (!finished)
       throw new MemoryBoundFunctionException("not finished");
-    return (trace);
+    return (signature);
   }
 
   /**
@@ -155,7 +163,7 @@ public abstract class MemoryBoundFunction {
    * as the current path.  Move up to "n" steps along the current path.
    * Set finished if appropriate.
    * @param n number of steps to move.
-   * @return true if no more work to do
+   * @return true if more work to do
    * 
    */
   public abstract boolean computeSteps(int n)

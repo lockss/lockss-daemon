@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.7 2003-09-05 02:45:20 dshr Exp $
+ * $Id: MBFV2.java,v 1.8 2003-09-05 23:55:01 dshr Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
   private CachedUrlSetHasher hasher;
   private int[] thisProof;
   private byte[] thisHash;
-  private int[] thisTrace;
+  private int[] thisSignature;
   private int index;
   private int bytesToGo;
   private int[][] ourProofs;
@@ -93,7 +93,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
     hasher = null;
     thisProof = null;
     thisHash = null;
-    thisTrace = null;
+    thisSignature = null;
     index = -1;
     bytesToGo = -1;
     firstProofNonce = null;
@@ -293,9 +293,9 @@ paths in the range.
     // previous proof signature
     proofDigest.update(prevHash);  //  Previous hash
     logger.debug("block " + index + " hash " + byteArrayToString(prevHash));
-    if (thisTrace == null) {
+    if (thisSignature == null) {
       // Use the previous proof - dangerous because too few bits
-      logger.debug("no trace");
+      logger.debug("no signature");
       if (prevProof.length > 0)
 	for (int i = 0; i < prevProof.length; i++) {
 	  byte[] tmp = intToByteArray(prevProof[i]);
@@ -306,14 +306,14 @@ paths in the range.
 	proofDigest.update(nonce);  // The previous proof itself
       }
     } else {
-      // Use the trace array as the nonce
-      logger.debug("trace length " + thisTrace.length);
-      for (int i = 0; i < thisTrace.length; i++) {
-	byte[] trace = intToByteArray(thisTrace[i]);
-	logger.debug("trace " + i + " is " + byteArrayToString(trace));
-	proofDigest.update(trace);  // The signature of the previous proof
+      // Use the signature array as the nonce
+      logger.debug("signature length " + thisSignature.length);
+      for (int i = 0; i < thisSignature.length; i++) {
+	byte[] signature = intToByteArray(thisSignature[i]);
+	logger.debug("signature " + i + " is " + byteArrayToString(signature));
+	proofDigest.update(signature);  // The signature of the previous proof
       }
-      thisTrace = null;
+      thisSignature = null;
     }
     return proofDigest.digest();
   }
@@ -366,11 +366,7 @@ paths in the range.
 					     stateName[currentState]);
     try{
       logger.debug("MBFV2: nonce " + byteArrayToString(firstProofNonce));
-      mbf = factory.make(firstProofNonce,
-			 e,
-			 1,
-			 null,
-			 100);
+      mbf = factory.makeGenerator(firstProofNonce, e, 1);
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
 					     ex.toString());
@@ -446,11 +442,7 @@ paths in the range.
       logger.debug("generateSteps: index " + index);
       thisHash = null;
       thisProof = null;
-      mbf = factory.make(nonce1,
-			 e,
-			 (1 << index),
-			 null,
-			 100);
+      mbf = factory.makeGenerator(nonce1, e, (1 << index));
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
 					     ex.toString() + " in " +
@@ -465,7 +457,7 @@ paths in the range.
     }
     // Work on generating the proof
     mbf.computeSteps(n);
-    if (mbf.done()) {
+    if (mbf.finished()) {
       logger.debug("generateSteps: proof finished");
       // Finished
       thisProof = mbf.result();
@@ -473,7 +465,7 @@ paths in the range.
 	throw new MemoryBoundFunctionException("Null proof in " +
 					       stateName[currentState]);
       saveProof(index, thisProof);
-      thisTrace = mbf.traceArray();
+      thisSignature = mbf.signatureArray();
       bytesToGo = (1 << index);
       setState(BlockHashGeneration);
       mbf = null;
@@ -503,11 +495,8 @@ paths in the range.
     thisHash = null;
     try{
       logger.debug("MBFV2: nonce " + byteArrayToString(firstProofNonce));
-      mbf = factory.make(firstProofNonce,
-			 e,
-			 (1 << index),
-			 thisProof,
-			 100); // XXX fix this
+      mbf = factory.makeVerifier(firstProofNonce, e, (1 << index),
+				 thisProof, 100); // XXX fix this
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
 					     ex.toString() + " in " +
@@ -599,11 +588,8 @@ paths in the range.
 						    ourProofs[index-1]);
       logger.debug("MBFV2: nonce " + index + " " + byteArrayToString(nonce1));
       thisProof = ourProofs[index];
-      mbf = factory.make(nonce1,
-			 e,
-			 (1 << index),
-			 thisProof,
-			 100); // XXX fix this
+      mbf = factory.makeVerifier(nonce1, e, (1 << index),
+				 thisProof, 100); // XXX fix this
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
 					     ex.toString() + " in " +
@@ -614,12 +600,12 @@ paths in the range.
 					     stateName[currentState]);
     // No proof yet - work on proof
     mbf.computeSteps(n);
-    if (mbf.done()) {
+    if (mbf.finished()) {
       // Finished
       thisProof = null;
-      thisTrace = mbf.traceArray();
-      logger.debug("verifier trace " + ((thisTrace == null) ? "null" :
-				       "length " + thisTrace.length));
+      thisSignature = mbf.signatureArray();
+      logger.debug("verifier signature " + ((thisSignature == null) ? "null" :
+				       "length " + thisSignature.length));
       bytesToGo = (1 << index);
       if (mbf.result() == null) {
 	logger.debug("verifySteps: proof invalid");

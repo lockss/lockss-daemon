@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.8 2003-09-05 02:45:20 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.9 2003-09-05 23:55:01 dshr Exp $
  */
 
 /*
@@ -78,6 +78,9 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static byte[] pollID = null;
   private static LcapIdentity voterID = null;
 
+  /**
+   * Set up the test case
+   */
   protected void setUp() throws Exception {
     super.setUp();
     log = Logger.getLogger("TestMemoryBoundFunction");
@@ -143,8 +146,8 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     super.tearDown();
   }
 
-  /*
-   * Test construct
+  /**
+   * Test factories
    */
   public void testConstructors() {
     byte[] nonce = new byte[4];
@@ -154,12 +157,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       for (int i = 0; i < MBFfactory.length; i++) {
 	try {
 	  MemoryBoundFunctionVote mbfv =
-	    MBFVfactory[j].generator(MBFfactory[i],
-				     nonce,
-				     3,
-				     cus,
-				     pollID,
-				     voterID);
+	    MBFVfactory[j].makeGenerator(MBFfactory[i],
+					 nonce,
+					 3,
+					 cus,
+					 pollID,
+					 voterID);
 	} catch (MemoryBoundFunctionException ex) {
 	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	       " threw " + ex.toString());
@@ -176,14 +179,14 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       for (int i = 0; i < MBFfactory.length; i++) {
 	try {
 	  MemoryBoundFunctionVote mbfv =
-	    MBFVfactory[j].verifier(MBFfactory[i],
-				    nonce,
-				    3,
-				    cus,
-				    sVals,
-				    hashVals,
-				    pollID,
-				    voterID);
+	    MBFVfactory[j].makeVerifier(MBFfactory[i],
+					nonce,
+					3,
+					cus,
+					sVals,
+					hashVals,
+					pollID,
+					voterID);
 	} catch (MemoryBoundFunctionException ex) {
 	  fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	       " threw " + ex.toString());
@@ -195,24 +198,37 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     }
   }
 
+  /**
+   * Test an agreeing vote
+   */
   public void testAgreeingVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
       for (int i = 0; i < MBFfactory.length; i++)
 	agreeingVote(i, j);
   }
-    
+
+  /**
+   * Test a disagreeing vote
+   */
   public void testDisagreeingVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
       for (int i = 0; i < MBFfactory.length; i++)
 	disagreeingVote(i, j);
   }
 
+  /**
+   * Test a vote whose CUS is half the length it is supposed to be
+   */
   public void testShortVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
       for (int i = 0; i < MBFfactory.length; i++)
 	shortVote(i, j);
   }
-    
+
+  /**
+   * Test verifying a vote with a nonce different from the one
+   * used to generate it.
+   */
   public void testInvalidNonce() {
     for (int j = 0; j < MBFVfactory.length; j++)
       for (int i = 0; i < MBFfactory.length; i++)
@@ -365,12 +381,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       fail("generator() - no CUS");
     MemoryBoundFunctionVote ret = null;
     try {
-      ret = MBFVfactory[j].generator(MBFfactory[i],
-				     nonce,
-				     3,
-				     cus,
-				     pollID,
-				     voterID);
+      ret = MBFVfactory[j].makeGenerator(MBFfactory[i],
+					 nonce,
+					 3,
+					 cus,
+					 pollID,
+					 voterID);
     } catch (MemoryBoundFunctionException ex) {
       fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	   " threw " + ex.toString());
@@ -427,14 +443,14 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 				   byte[][] hashArray) {
     MemoryBoundFunctionVote ret = null;
     try {
-      ret = MBFVfactory[j].verifier(MBFfactory[i],
-				    nonce,
-				    3,
-				    cus,
-				    proofArray,
-				    hashArray,
-				    pollID,
-				    voterID);
+      ret = MBFVfactory[j].makeVerifier(MBFfactory[i],
+					nonce,
+					3,
+					cus,
+					proofArray,
+					hashArray,
+					pollID,
+					voterID);
     } catch (MemoryBoundFunctionException ex) {
       fail("MBFVfactory for " + MBFVnames[j] + ":" + MBFnames[i] +
 	   " threw " + ex.toString());

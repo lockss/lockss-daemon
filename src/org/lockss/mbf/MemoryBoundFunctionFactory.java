@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.3 2003-09-05 22:43:48 dshr Exp $
+ * $Id: MemoryBoundFunctionFactory.java,v 1.4 2003-09-05 23:55:01 dshr Exp $
  */
 
 /*
@@ -39,7 +39,12 @@ import org.lockss.util.*;
  * @version 1.0
  */
 public class MemoryBoundFunctionFactory {
-  private static String[] names = {
+
+  /*
+   * The following arrays must be edited whenever a new implementation
+   * is introduced.  This should be an infrequent event.
+   */
+  private static String[] implNames = {
     "MBF1",
     "MBF2",
     "MOCK"
@@ -62,8 +67,8 @@ public class MemoryBoundFunctionFactory {
     throws NoSuchAlgorithmException {
     classToUse = null;
     implToUse = null;
-    for (int i = 0; i < names.length; i++) {
-      if (names[i].equals(impl))
+    for (int i = 0; i < implNames.length; i++) {
+      if (implNames[i].equals(impl))
 	implToUse = impls[i];
     }
     if (implToUse != null){
@@ -80,18 +85,35 @@ public class MemoryBoundFunctionFactory {
 
   /**
    * Returns an instance of the type of MBF indicated by "version"
+   * intended to generate a proof of effort.
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
+   * @param lVal the effort sizer (length of each path)
+   * @throws MemoryBoundFunctionException failure to create object
+   * @throws NoSuchAlgorithmException no such implementation
+   */
+  public MemoryBoundFunction makeGenerator(byte[] nVal, int eVal, int lVal)
+    throws NoSuchAlgorithmException, MemoryBoundFunctionException {
+    MemoryBoundFunction ret = makeVerifier(nVal, eVal, lVal, null, 0);
+    return (ret);
+  }
+
+  /**
+   * Returns an instance of the type of MBF indicated by "version"
+   * intended to verify a proof of effort.
+   * @param nVal a byte array containing the nonce
+   * @param eVal the effort sizer (# of low-order zeros in destination)
+   * @param lVal the effort sizer (length of each path)
    * @param sVal an array of ints containing the proof
    * @param maxPathVal maximum number of steps to verify
    * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
    */
-  public MemoryBoundFunction make(byte[] nVal,
-				  int eVal,
-				  int lVal,
-				  int[] sVal,
-				  long  maxPathVal)
+  public MemoryBoundFunction makeVerifier(byte[] nVal,
+					  int eVal,
+					  int lVal,
+					  int[] sVal,
+					  long  maxPathVal)
     throws NoSuchAlgorithmException, MemoryBoundFunctionException {
     MemoryBoundFunction ret = null;
     try {

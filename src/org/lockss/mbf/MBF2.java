@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.10 2003-09-05 22:43:48 dshr Exp $
+ * $Id: MBF2.java,v 1.11 2003-09-05 23:55:01 dshr Exp $
  */
 
 /*
@@ -80,8 +80,8 @@ public class MBF2 extends MemoryBoundFunction {
   private int numPath;
   // log2(number of entries expected in result) - should be param
   private int n;
-  // ArrayList that accumulates the final array values in each path
-  private ArrayList traceArrayList;
+  // ArrayList that accumulates the next value to be fetched in each path
+  private ArrayList signatureArrayList;
 
   /**
    * No-argument constructor for use with Class.newInstance()
@@ -94,6 +94,11 @@ public class MBF2 extends MemoryBoundFunction {
    * of effort using a memory-bound function technique as
    * described in "On The Cost Distribution Of A Memory Bound Function"
    * David S. H. Rosenthal
+   * @param nVal a byte array containing the nonce
+   * @param eVal the effort sizer (# of low-order zeros in destination)
+   * @param lVal the effort sizer (length of each path)
+   * @param sVal an array of ints containing the proof
+   * @param maxPathVal maximum number of steps to verify
    */
   protected void initialize(byte[] nVal,
 			    long eVal,
@@ -105,7 +110,7 @@ public class MBF2 extends MemoryBoundFunction {
     ensureConfigured();
     setup();
     ret = new ArrayList();
-    traceArrayList = new ArrayList();
+    signatureArrayList = new ArrayList();
     {
       // XXX this is total cruft.  n should be a parameter
       // of the MemoryBoundFunctionFactory.
@@ -248,7 +253,7 @@ public class MBF2 extends MemoryBoundFunction {
     // Remember the final value - XXX actually the next value that
     // would have been fetched if the path had continued
     boolean proofFailed = false;
-    traceArrayList.add(new Integer(wordAt(T, c)));
+    signatureArrayList.add(new Integer(wordAt(T, c)));
     if (proof == null) {
       logger.debug("numPath " + numPath + " max " + maxPath +
 		   " proof null ");
@@ -304,13 +309,13 @@ public class MBF2 extends MemoryBoundFunction {
 	  for (int i = 0; i < proofEntries.length; i++) {
 	    int proofEntry = ((Integer)proofEntries[i]).intValue();
 	    proof[i] = proofEntry;
-	    if (proofEntry <= 0 || proofEntry > traceArrayList.size())
+	    if (proofEntry <= 0 || proofEntry > signatureArrayList.size())
 	      throw new MemoryBoundFunctionException("proof entry " +
 						     proofEntry +
 						     " range " +
 						     proofEntries.length +
 						     " / " +
-						     traceArrayList.size());
+						     signatureArrayList.size());
 	  }
 	}
 	logger.debug("proof geenrated");
@@ -322,36 +327,36 @@ public class MBF2 extends MemoryBoundFunction {
     }
     if (finished && !proofFailed) {
       int[] proofs = proof;
-      Object[] traceEntries = traceArrayList.toArray();
+      Object[] signatureEntries = signatureArrayList.toArray();
       if (proofs.length > 0) {
 	// Non-empty proof
-	trace = new int[proofs.length];
+	signature = new int[proofs.length];
 	for (int i = 0; i < proofs.length; i++) {
 	  logger.debug("proof entry " + i + " is " + proofs[i]);
 	  int proofEntry = -1;
-	  // If we are verifying,  traceEntry only contains entries
+	  // If we are verifying,  signatureEntry only contains entries
 	  // corresponding to valid paths.  If we are generating,  it
 	  // contains entries for every index value.
 	  if (verify)
 	    proofEntry = i + 1;
 	  else
 	    proofEntry = proofs[i];
-	  if (proofEntry <= 0 || proofEntry > traceEntries.length)
-	    throw new MemoryBoundFunctionException("proof trace entry " +
+	  if (proofEntry <= 0 || proofEntry > signatureEntries.length)
+	    throw new MemoryBoundFunctionException("proof signature entry " +
 						   proofEntry +
 						   " range " +
 						   proofs.length +
 						   " / " +
-						   traceEntries.length);
-	  trace[i] = ((Integer)traceEntries[proofEntry-1]).intValue();
-	  logger.debug("trace entry " + i + " is " + trace[i]);
+						   signatureEntries.length);
+	  signature[i] = ((Integer)signatureEntries[proofEntry-1]).intValue();
+	  logger.debug("signature entry " + i + " is " + signature[i]);
 	}
       } else {
 	// Empty proof
-	trace = new int[traceEntries.length];
-	for (int i = 0; i <traceEntries.length; i++) {
-	  trace[i] = ((Integer)traceEntries[i]).intValue();
-	  logger.debug("trace entry " + i + " is " + trace[i]);
+	signature = new int[signatureEntries.length];
+	for (int i = 0; i < signatureEntries.length; i++) {
+	  signature[i] = ((Integer)signatureEntries[i]).intValue();
+	  logger.debug("signature entry " + i + " is " + signature[i]);
 	}
       }
     }

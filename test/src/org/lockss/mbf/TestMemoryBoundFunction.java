@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.6 2003-09-05 14:41:24 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.7 2003-09-05 23:55:01 dshr Exp $
  */
 
 /*
@@ -57,6 +57,9 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   };
   private static MemoryBoundFunctionFactory[] factory = null;
 
+  /**
+   * Set up test case
+   */
   protected void setUp() throws Exception {
     super.setUp();
     log = Logger.getLogger("TestMemoryBoundFunction");
@@ -115,7 +118,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     rand.nextBytes(nonce);
     for (int i = 0; i < factory.length; i++) {
       try {
-	MemoryBoundFunction tmp = factory[i].make(nonce, 3, 2048, null, 0);
+	MemoryBoundFunction tmp = factory[i].makeGenerator(nonce, 3, 2048);
 	if (tmp == null)
 	  fail(names[i] + " (generate) returned null");
       } catch (NoSuchAlgorithmException ex) {
@@ -128,7 +131,8 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       int[] good = new int[1];
       good[0] = 1;
       try {
-	MemoryBoundFunction tmp = factory[i].make(nonce, 3, 2048, good, 2048);
+	MemoryBoundFunction tmp = factory[i].makeVerifier(nonce, 3, 2048,
+							  good, 2048);
 	if (tmp == null)
 	  fail(names[i] + " (verify) returned null");
       } catch (NoSuchAlgorithmException ex) {
@@ -149,7 +153,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       try {
 	int[] bad = new int[12];
 	MemoryBoundFunction mbf =
-	  factory[i].make(nonce, 3, 2048, bad, 9);
+	  factory[i].makeVerifier(nonce, 3, 2048, bad, 9);
 	fail(names[i] + ": didn't throw exception on too-long proof");
       } catch (MemoryBoundFunctionException ex) {
 	// No action intended
@@ -187,7 +191,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   /**
    * Test one generate/verify pair for invalid nonce & proof
    */
-  public void dontTestBadProofBadNonce() throws IOException {
+  public void testBadProofBadNonce() throws IOException {
     for (int i = 0; i < names.length; i++)
       onePair(i, 63, 2048, false, false);
   }
@@ -356,10 +360,10 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     int[] res = null;
     try{
       MemoryBoundFunction mbf =
-	factory[index].make(nonce, e, l, null, 0);
+	factory[index].makeGenerator(nonce, e, l);
       pathsTried = 0;
       while (mbf.computeSteps(steps)) {
-	assertFalse(mbf.done());
+	assertFalse(mbf.finished());
 	pathsTried += steps;
       }
       pathsTried /= l;
@@ -400,9 +404,9 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       assertTrue(proof.length >= 1);
       try {
 	MemoryBoundFunction mbf2 =
-	  factory[index].make(nonce, e, l, proof, e);
+	  factory[index].makeVerifier(nonce, e, l, proof, e);
 	while (mbf2.computeSteps(steps)) {
-	  assertFalse(mbf2.done());
+	  assertFalse(mbf2.finished());
 	  pathsTried += steps;
 	}
 	pathsTried /= l;
