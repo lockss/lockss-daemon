@@ -1,5 +1,5 @@
 /*
- * $Id: LockssAuManager.java,v 1.1 2003-12-23 00:21:04 tlipkis Exp $
+ * $Id: LockssAuManager.java,v 1.2 2004-08-02 03:03:42 tlipkis Exp $
  */
 
 /*
@@ -39,25 +39,6 @@ import org.lockss.plugin.ArchivalUnit;
  */
 
 public interface LockssAuManager extends LockssManager {
-
-  /**
-   * init the manager - There is no guarantee that any other manager is
-   * loaded into memory.
-   * @param daemon the daemon that can be used to get additional services
-   * @throws LockssDaemonException if this manager was already inited.
-   */
-  public void initService(LockssDaemon daemon)
-      throws LockssDaemonException;
-
-  /**
-   * start the manager.  All managers are inited at this point
-   */
-  public void startService();
-
-  /**
-   * stop the manager
-   */
-  public void stopService();
 
   /**
    * Set the AU configuration.  Called between initService() and
