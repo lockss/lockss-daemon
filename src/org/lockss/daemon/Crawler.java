@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.3 2002-09-19 20:47:45 tal Exp $
+ * $Id: Crawler.java,v 1.4 2002-12-17 20:52:31 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 import java.io.IOException;
+import java.util.*;
 import org.lockss.util.Deadline;
 
 /**
@@ -43,20 +44,16 @@ import org.lockss.util.Deadline;
  * @version 0.0
  */
 public interface Crawler {
-    /**
-     * Fetch all files matching the <code>target</code> and (recursively)
-     * all files they refer to. provided that all files fetched must match
-     * <code>include</code> and no files fetched may match
-     * <code>exclude</code>.  Return a <code>CachedUrlSet</code>
-     * representing the exact set of files fetched (i.e. with no regular
-     * expressions).
-     * @param target   a <code>CachedUrlSet</code> object representing the
-     *                 starting point of the crawl.
-     * @param deadline the crawl must finish before this expires.
-     * @return         a <code>CachedUrlSet</code> object listing the files
-     *                 fetched,  or null if no files were fetched.
-     * @exception java.io.IOException on any number of IO problems.
-     */
-    public CachedUrlSet fetch(CachedUrlSet target,
-			      Deadline deadline) throws IOException;
+  /**
+   * Initiate a crawl starting with all the urls in urls
+   * @param au ArchivalUnit that we are doing this crawl for
+   * @param urls urls to start the crawl at
+   * @param followLinks if true, we'll parse fetched urls to harvest more
+   * @param overWrite true if we should overwrite existing content
+   * @param deadline maximum time to spend on this crawl
+   */
+
+  public void doCrawl(ArchivalUnit au, List urls,
+		      boolean followLinks, boolean overWrite,
+		      Deadline deadline);
 }
