@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.2 2003-02-27 04:04:28 tal Exp $
+ * $Id: MockPlugin.java,v 1.3 2003-04-04 08:40:01 tal Exp $
  */
 
 /*
@@ -48,7 +48,8 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   public static final String CONFIG_PROP_1 = "base_url";
   public static final String CONFIG_PROP_2 = "volume";
 
-  private String pluginId = "MockPlugin";
+//   private String pluginId = "MockPlugin";
+  private String pluginId;
   private int initCtr = 0;
   private int stopCtr = 0;
   private Configuration auConfig;
@@ -73,7 +74,11 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   }
 
   public String getPluginId() {
-    return pluginId;
+    if (pluginId == null) {
+      return super.getPluginId();
+    } else {
+      return pluginId;
+    }
   }
 
   public void setPluginId(String id) {

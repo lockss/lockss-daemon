@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.26 2003-04-03 11:33:36 tal Exp $
+ * $Id: PluginManager.java,v 1.27 2003-04-04 08:40:01 tal Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class PluginManager extends BaseLockssManager {
 	  Configuration auConf = pluginConf.getConfigTree(auKey);
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
-	    log.debug("Configuring AU id: " + auKey);
+	    log.debug("Configuring AU id: " + auKey, new Throwable());
 	    configureAU(plugin, auConf);
 	  } else {
 	    log.debug("Not configuring AU id: " + auKey +
@@ -156,8 +156,20 @@ public class PluginManager extends BaseLockssManager {
       throws ArchivalUnit.ConfigurationException {
     ArchivalUnit au = plugin.configureAU(auConf);
     getDaemon().startAUManagers(au);
-  }
+    putAuMap(plugin, au);
 
+  }
+  private HashMap auMap = new HashMap();
+
+  private void putAuMap(Plugin plugin, ArchivalUnit au) {
+    log.debug("putAuMap(" + plugin.getPluginId() + "|" + au.getAUId() +
+	      ", " + au);
+    auMap.put(plugin.getPluginId() + "|" + au.getAUId(), au);
+  }
+  ArchivalUnit getAu(String pluginId, String auId) {
+    log.debug("gutAu(" + pluginId + "|" + auId + ")");
+    return (ArchivalUnit)auMap.get(pluginId + "|" + auId);
+  }
   /**
    * load a plugin with the given class name from somewhere in our classpath
    * @param pluginId the unique name for this plugin
@@ -240,6 +252,14 @@ public class PluginManager extends BaseLockssManager {
    * @return the List of aus
    */
   public List getAllAUs() {
+    return getAllAUs2();
+  }
+
+  /**
+   * Return a list of all configured ArchivalUnits.
+   * @return the List of aus
+   */
+  public List getAllAUs1() {
     List res = new ArrayList();
     for (Iterator pi = plugins.values().iterator(); pi.hasNext(); ) {
       Plugin plug = (Plugin)pi.next();
@@ -249,12 +269,30 @@ public class PluginManager extends BaseLockssManager {
   }
 
   /**
+   * Return a list of all configured ArchivalUnits.
+   * @return the List of aus
+   */
+  public List getAllAUs2() {
+    return new ArrayList(auMap.values());
+  }
+
+  /**
    * Find the CachedUrlSet from a PollSpec.
    * @param spec the PollSpec (from an incoming message)
    * @return a CachedUrlSet for the plugin, au and URL in the spec, or
    * null if au not present on this cache
    */
   public CachedUrlSet findCachedUrlSet(PollSpec spec) {
+    return findCachedUrlSet2(spec);
+  }    
+
+  /**
+   * Find the CachedUrlSet from a PollSpec.
+   * @param spec the PollSpec (from an incoming message)
+   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
+   * null if au not present on this cache
+   */
+  public CachedUrlSet findCachedUrlSet1(PollSpec spec) {
     log.debug3(this +".findCachedUrlSet("+spec+")");
     String pluginId = spec.getPluginId();
     Plugin plugin = getPlugin(pluginId);
@@ -262,6 +300,30 @@ public class PluginManager extends BaseLockssManager {
     if (plugin == null) return null;
     String auId = spec.getAUId();
     ArchivalUnit au = plugin.getAU(auId);
+    log.debug3("au: " + au);
+    if (au == null) return null;
+    String url = spec.getUrl();
+    CachedUrlSet cus;
+    if (AuUrl.isAuUrl(url)) {
+      cus = au.getAUCachedUrlSet();
+    } else {
+      cus = au.makeCachedUrlSet(url, spec.getLwrBound(), spec.getUprBound());
+    }
+    log.debug3("ret cus: " + cus);
+    return cus;
+  }
+
+  /**
+   * Find the CachedUrlSet from a PollSpec.
+   * @param spec the PollSpec (from an incoming message)
+   * @return a CachedUrlSet for the plugin, au and URL in the spec, or
+   * null if au not present on this cache
+   */
+  public CachedUrlSet findCachedUrlSet2(PollSpec spec) {
+    log.debug3(this +".findCachedUrlSet2("+spec+")");
+    String pluginId = spec.getPluginId();
+    String auId = spec.getAUId();
+    ArchivalUnit au = getAu(pluginId, auId);
     log.debug3("au: " + au);
     if (au == null) return null;
     String url = spec.getUrl();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.12 2003-04-03 11:33:36 tal Exp $
+ * $Id: TestPluginManager.java,v 1.13 2003-04-04 08:40:01 tal Exp $
  */
 
 /*
@@ -163,6 +163,8 @@ public class TestPluginManager extends LockssTestCase {
     Configuration c2 = mau2.getConfiguration();
     assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
+
+    assertEquals(au1, mgr.getAu(mockPlugId, mauauid1));
   }
 
   public void testFindCUS() throws Exception {
