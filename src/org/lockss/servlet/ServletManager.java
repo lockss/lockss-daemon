@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.28 2004-03-04 19:21:16 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.29 2004-03-29 09:17:52 tlipkis Exp $
  */
 
 /*
@@ -263,6 +263,8 @@ public class ServletManager extends JettyManager {
 		       "org.lockss.servlet.AdminIpAccess");
     handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
 		       "org.lockss.servlet.ProxyIpAccess");
+    handler.addServlet("Hash CUS", "/HashCUS",
+		       "org.lockss.servlet.HashCUS");
     addServletIfAvailable(handler, "ThreadDump", "/ThreadDump",
 			  "org.lockss.servlet.ThreadDump");
     addServletIfAvailable(handler, "Api", "/Api",

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.37 2004-03-15 22:26:29 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.38 2004-03-29 09:17:52 tlipkis Exp $
  */
 
 /*
@@ -194,17 +194,9 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(AdminIpAccess.class, "Admin Access Control");
   protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
-//    protected static ServletDescr SERVLET_ADMIN_HOME =
-//      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
-//    protected static ServletDescr SERVLET_JOURNAL_STATUS =
-//      new ServletDescr(JournalStatus.class, "Journal Status",
-//  		     ServletDescr.STATUS);
-//    protected static ServletDescr SERVLET_JOURNAL_SETUP =
-//      new ServletDescr(JournalSettings.class, "Journal Setup",
-//  		     ServletDescr.PER_CLIENT);
-//    protected static ServletDescr SERVLET_DAEMON_STATUS =
-//      new ServletDescr(DaemonStatus.class, "Daemon Status",
-//  		     ServletDescr.STATUS + ServletDescr.NOT_IN_NAV);
+  protected static ServletDescr SERVLET_HASH_CUS =
+    new ServletDescr(HashCUS.class, "Hash CUS");
+
 
   // All servlets must be listed here (even if not in van table).
   // Order of descrs determines order in nav table.
@@ -214,6 +206,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_PROXY_ACCESS_CONTROL,
      SERVLET_PROXY_INFO,
      SERVLET_DAEMON_STATUS,
+     SERVLET_HASH_CUS,
      LINK_LOGS,
      SERVLET_THREAD_DUMP,
 //      SERVLET_ADMIN_HOME,
@@ -530,7 +523,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   /** Concatenate params for URL string */
-  String concatParams(String p1, String p2) {
+  static String concatParams(String p1, String p2) {
     if (p1 == null || p1.equals("")) {
       return p2;
     }
@@ -538,6 +531,18 @@ public abstract class LockssServlet extends HttpServlet
       return p1;
     }
     return p1 + "&" + p2;
+  }
+
+  /** Concatenate params for URL string */
+  String concatParams(Properties props) {
+    java.util.List list = new ArrayList();
+    StringBuffer sb = new StringBuffer();
+    for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      String val = props.getProperty(key);
+      list.add(key + "=" + val);
+    }
+    return StringUtil.separatedString(list, "&");
   }
 
   protected String urlEncode(String param) {
