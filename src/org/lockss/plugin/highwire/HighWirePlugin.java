@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.24 2003-07-30 05:36:52 tlipkis Exp $
+ * $Id: HighWirePlugin.java,v 1.25 2003-08-04 07:57:49 tlipkis Exp $
  */
 
 /*
@@ -51,9 +51,12 @@ import org.lockss.plugin.base.*;
 public class HighWirePlugin extends BasePlugin {
   public static final String LOG_NAME = "HighWirePlugin";
 
+  static final ConfigParamDescr PD_BASE = ConfigParamDescr.BASE_URL;
+  static final ConfigParamDescr PD_VOL = ConfigParamDescr.VOLUME_NUMBER;
+
   // public only so test methods can use them
-  public static final String AUPARAM_BASE_URL = "base_url";
-  public static final String AUPARAM_VOL = "volume";
+  public static final String AUPARAM_BASE_URL = PD_BASE.getKey();
+  public static final String AUPARAM_VOL = PD_VOL.getKey();
 
   private static String titleSpec[][] = {
     {"BMJ", AUPARAM_BASE_URL, "http://shadow1.lockss.org/"},
@@ -78,7 +81,7 @@ public class HighWirePlugin extends BasePlugin {
   }
 
   public List getAUConfigProperties() {
-    return ListUtil.list(AUPARAM_BASE_URL, AUPARAM_VOL);
+    return ListUtil.list(PD_BASE, PD_VOL);
   }
   
   public Collection getDefiningConfigKeys() {
