@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.8 2005-01-05 09:46:14 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.9 2005-01-06 02:38:50 tlipkis Exp $
  */
 
 /*
@@ -794,6 +794,9 @@ public class ConfigManager implements LockssManager {
       fileConfig = readCacheConfigFile(CONFIG_FILE_AU_CONFIG);
     } catch (FileNotFoundException e) {
       fileConfig = newConfiguration();
+    }
+    if (fileConfig.isSealed()) {
+      fileConfig = fileConfig.copy();
     }
     // first remove all existing values for the AU
     if (auPropKey != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.120 2005-01-04 03:00:30 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.121 2005-01-06 02:38:49 tlipkis Exp $
  */
 
 /*
@@ -679,7 +679,8 @@ public class PluginManager
       if (!auConf.isSealed()) {
 	auConf.put(AU_PARAM_DISPLAY_NAME, au.getName());
       } else if (StringUtil.isNullString(auConf.get(AU_PARAM_DISPLAY_NAME))) {
-	log.debug("Can't add name to sealed AU config", new Throwable());
+	log.debug("Can't add name to sealed AU config: " + auConf,
+		  new Throwable());
       }
     }
     updateAuConfigFile(au.getAuId(), auConf);

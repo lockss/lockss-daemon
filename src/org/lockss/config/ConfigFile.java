@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.5 2005-01-04 02:48:38 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.6 2005-01-06 02:38:50 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,7 @@ public abstract class ConfigFile {
       newConfig.getPropertyTree().load(in);
     }
     // update stored configuration atomically
+    newConfig.seal();
     m_config = newConfig;
   }
 

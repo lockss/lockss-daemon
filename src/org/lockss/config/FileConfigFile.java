@@ -1,5 +1,5 @@
 /*
- * $Id: FileConfigFile.java,v 1.2 2004-10-22 07:01:59 tlipkis Exp $
+ * $Id: FileConfigFile.java,v 1.3 2005-01-06 02:38:50 tlipkis Exp $
  */
 
 /*
@@ -74,6 +74,7 @@ public class FileConfigFile extends ConfigFile {
   public void storedConfig(Configuration newConfig) throws IOException {
     ConfigurationPropTreeImpl nc = new ConfigurationPropTreeImpl();
     nc.copyFrom(newConfig);
+    nc.seal();
     m_config = nc;
     m_lastModified = Long.toString(m_fileFile.lastModified());
     log.debug2("storedConfig at: " + m_lastModified);
