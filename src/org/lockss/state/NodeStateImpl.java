@@ -1,5 +1,5 @@
 /*
- * $Id: StateRepository.java,v 1.2 2002-12-17 23:35:14 aalto Exp $
+ * $Id: NodeStateImpl.java,v 1.1 2002-12-17 23:35:14 aalto Exp $
  */
 
 /*
@@ -33,33 +33,52 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.util.*;
 import org.lockss.daemon.CachedUrlSet;
-import java.util.List;
 
 /**
- * StateRepository is an inner layer of the NodeManager which handles the actual
- * storage of NodeStates.
+ * NodeState contains the current state information for a node, as well as the
+ * poll histories.
  */
-public interface StateRepository {
-  /**
-   * Loads a NodeState given a CachedUrlSet.  Poll histories are only loaded
-   * when NodeState.getPollHistories() is called.
-   * @param cus the cached url set used to identify the top node
-   * @return the NodeState
-   */
-  public NodeState loadNodeState(CachedUrlSet cus);
+public class NodeStateImpl implements NodeState {
+  CachedUrlSet cus;
+  CrawlState crawlState;
+  List polls;
+  List pollHistories;
+  StateRepository repository;
 
-  /**
-   * Stores a given NodeState.  If the NodeState's PollHistories are empty, it
-   * attempts to load them itself prior to storing.
-   * @param nodeState to store
-   */
-  public void storeNodeState(NodeState nodeState);
+  NodeStateImpl(CachedUrlSet cus, CrawlState crawlState, List polls,
+                StateRepository repostiory) {
+    this.cus = cus;
+    this.crawlState = crawlState;
+    this.polls = polls;
+    this.repository = repository;
+  }
 
-  /**
-   * Loads the poll histories into the given NodeState.
-   * @param nodeState the NodeState
-   */
-  public void loadPollHistories(NodeState nodeState);
+  public CachedUrlSet getCachedUrlSet() {
+    return cus;
+  }
 
+  public CrawlState getCrawlState() {
+    return crawlState;
+  }
+
+  public Iterator getActivePolls() {
+    return Collections.unmodifiableList(polls).iterator();
+  }
+
+  public Iterator getPollHistories() {
+    repository.loadPollHistories(this);
+    return Collections.unmodifiableList(pollHistories).iterator();
+  }
+
+  void addPollState(PollState new_poll) {
+    polls.add(new_poll);
+  }
+
+  void closeActivePoll(PollHistory finished_poll) {
+    repository.loadPollHistories(this);
+    pollHistories.add(finished_poll);
+    polls.remove(finished_poll);
+  }
 }

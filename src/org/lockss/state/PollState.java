@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.5 2002-12-14 00:14:09 aalto Exp $
+ * $Id: PollState.java,v 1.6 2002-12-17 23:35:14 aalto Exp $
  */
 
 /*
@@ -41,13 +41,18 @@ import org.lockss.util.Deadline;
  * PollState contains the state information for a poll current to a node.
  * There may be more than one active poll per node.
  */
-public class PollState {
+public class PollState implements Comparable {
   public static final int SCHEDULED = 1;
   public static final int RUNNING = 2;
   public static final int REPAIRING = 4;
   public static final int WON = 8;
   public static final int REPAIRED = 16;
   public static final int UNREPAIRABLE = 32;
+  public static final int ERR_SCHEDULE_HASH = 128;
+  public static final int ERR_HASHING = 256;
+  public static final int ERR_NO_QUORUM = 512;
+  public static final int ERR_IO = 1024;
+
 
   int type;
   String regExp;
@@ -103,6 +108,17 @@ public class PollState {
    */
   public Deadline getDeadline() {
     return deadline;
+  }
+
+  public int compareTo(Object obj) {
+    if (obj instanceof PollState) {
+      PollState ps2 = (PollState)obj;
+      String myKey = type + ":" + regExp;
+      String otherKey = ps2.getType() + ":" + ps2.getRegExp();
+      return myKey.compareTo(otherKey);
+    } else {
+      throw new UnsupportedOperationException("Comparing a PollState to a non-PollState object");
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: StateRepository.java,v 1.2 2002-12-17 23:35:14 aalto Exp $
+ * $Id: StateRepositoryImpl.java,v 1.1 2002-12-17 23:35:14 aalto Exp $
  */
 
 /*
@@ -34,32 +34,29 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import org.lockss.daemon.CachedUrlSet;
-import java.util.List;
 
 /**
  * StateRepository is an inner layer of the NodeManager which handles the actual
  * storage of NodeStates.
  */
-public interface StateRepository {
-  /**
-   * Loads a NodeState given a CachedUrlSet.  Poll histories are only loaded
-   * when NodeState.getPollHistories() is called.
-   * @param cus the cached url set used to identify the top node
-   * @return the NodeState
-   */
-  public NodeState loadNodeState(CachedUrlSet cus);
+public class StateRepositoryImpl implements StateRepository {
 
-  /**
-   * Stores a given NodeState.  If the NodeState's PollHistories are empty, it
-   * attempts to load them itself prior to storing.
-   * @param nodeState to store
-   */
-  public void storeNodeState(NodeState nodeState);
+  StateRepositoryImpl() {
 
-  /**
-   * Loads the poll histories into the given NodeState.
-   * @param nodeState the NodeState
-   */
-  public void loadPollHistories(NodeState nodeState);
+  }
+
+  public NodeState loadNodeState(CachedUrlSet cus) {
+    return null;
+  }
+
+  public void storeNodeState(NodeState nodeState) {
+
+  }
+
+  public void loadPollHistories(NodeState nodeState) {
+
+  }
+
+
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.4 2002-12-13 23:51:32 aalto Exp $
+ * $Id: NodeManager.java,v 1.5 2002-12-17 23:35:14 aalto Exp $
  */
 
 /*
@@ -76,22 +76,22 @@ public interface NodeManager {
   public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter);
 
   /**
-   * Returns an iterator of node histories for an ArchivalUnit, up to
+   * Returns an iterator of node poll histories for a CachedUrlSet, up to
    * a maximum number.
-   * @param au the ArchivalUnit to fetch histories for
+   * @param cus the cached url set used to identify the top node
    * @param maxNumber the maximum number to fetch
    * @return an Iterator of PollHistory objects
    */
-  public Iterator getNodeHistories(ArchivalUnit au, int maxNumber);
+  public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber);
 
   /**
-   * Returns an iterator of the node histories for an ArchivalUnit since a
-   * specific time.
-   * @param au the ArchivalUnit to fetch histories for
+   * Returns an iterator of the node poll histories for a CachedUrlSet since a
+   * specific start time.
+   * @param cus the cached url set used to identify the top node
    * @param since histories after this time (in ms)
    * @return an Iterator of PollHistory objects
    */
-  public Iterator getNodeHistoriesSince(ArchivalUnit au, Deadline since);
+  public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since);
 
   /**
    * Returns the estimated time it will take to walk a given

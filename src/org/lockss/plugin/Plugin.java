@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.4 2002-10-16 04:50:54 tal Exp $
+ * $Id: Plugin.java,v 1.5 2002-12-17 23:35:14 aalto Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 import org.lockss.daemon.*;
 
 /**
- * Plugin global functionality 
+ * Plugin global functionality
  *
  * @author  TAL
  * @version 0.0
@@ -55,7 +55,7 @@ public class Plugin {
       archivalUnits.addElement(au);
     }
   }
-      
+
   /**
    * Unregister the <code>ArchivalUnit</code>, so that
    * it will not be found by <code>Plugin.findArchivalUnit()</code>.
@@ -103,10 +103,26 @@ public class Plugin {
     return au.getAUCachedUrlSet();
   }
 
+  /**
+   * Get the list of ArchivalUnits.
+   * @return an Iterator of ArchivalUnits
+   */
+  public static Iterator getArchivalUnits() {
+    return Collections.unmodifiableList(archivalUnits).iterator();
+  }
+
+  /**
+   * Returns the number of archival units currently registered.
+   * @return an integer
+   */
+  public static int getNumArchivalUnits() {
+    return archivalUnits.size();
+  }
+
 //    /**
 //     * Find or create a <code>CachedUrlSet</code> representing the content
 //     * specified by the URL and pattern.
-//     * @param url 
+//     * @param url
 //     * @param regex
 //     */
 //    public static CachedUrlSet findCachedUrlSet(String url, String regex) {
