@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.9 2004-08-18 07:11:41 tlipkis Exp $
+ * $Id: XmlPropertyLoader.java,v 1.10 2004-08-20 02:56:43 smorabito Exp $
  */
 
 /*
@@ -511,7 +511,7 @@ public class XmlPropertyLoader {
 
       // If we don't have any attributes, short-circuit.
       if (attrs.getLength() == 0) {
-	return returnVal;
+	return true;
       }
 
       // Evaluate the attributes of the tag and set the
@@ -565,14 +565,14 @@ public class XmlPropertyLoader {
       /*
        * Group membership checking.
        */
-      if (group != null && m_sysGroup != null) {
+      if (group != null) {
 	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysGroup, group);
       }
 
       /*
        * Hostname checking.
        */
-      if (hostname != null && m_sysHostname != null) {
+      if (hostname != null) {
 	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysHostname, hostname);
       }
 
@@ -591,19 +591,23 @@ public class XmlPropertyLoader {
 
     boolean compareVersion(Version sysVersion, Version versionMin, Version versionMax) {
       boolean returnVal = true;
-      if (sysVersion != null) {
-	if (versionMin != null && versionMax != null) {
-	  // Have both min and max...
-	  returnVal &= ((sysVersion.toLong() >= versionMin.toLong()) &&
-			  (sysVersion.toLong() <= versionMax.toLong()));
-	} else if (versionMin != null) {
-	  // Have min...
-	  returnVal &= (sysVersion.toLong() >= versionMin.toLong());
-	} else if (versionMax != null) {
-	  // Have max...
-	  returnVal &= (sysVersion.toLong() <= versionMax.toLong());
-	}
+
+      if (sysVersion == null) {
+	return false;
       }
+
+      if (versionMin != null && versionMax != null) {
+	// Have both min and max...
+	returnVal &= ((sysVersion.toLong() >= versionMin.toLong()) &&
+		      (sysVersion.toLong() <= versionMax.toLong()));
+      } else if (versionMin != null) {
+	// Have min...
+	returnVal &= (sysVersion.toLong() >= versionMin.toLong());
+      } else if (versionMax != null) {
+	// Have max...
+	returnVal &= (sysVersion.toLong() <= versionMax.toLong());
+      }
+
       return returnVal;
     }
   }

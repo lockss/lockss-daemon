@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.7 2004-08-17 20:32:42 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.8 2004-08-20 02:56:42 smorabito Exp $
  */
 
 /*
@@ -48,9 +48,8 @@ import org.lockss.test.*;
 
 public class TestXmlPropertyLoader extends LockssTestCase {
 
-  private static PropertyTree m_props = null;
-  private static XmlPropertyLoader m_xmlPropertyLoader =
-    new MockXmlPropertyLoader();
+  private PropertyTree m_props = null;
+  private XmlPropertyLoader m_xmlPropertyLoader = null;
 
   public static Class testedClasses[] = {
     org.lockss.util.XmlPropertyLoader.class
@@ -58,7 +57,10 @@ public class TestXmlPropertyLoader extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    m_props = setUpPropertyTree();
+    m_xmlPropertyLoader = new MockXmlPropertyLoader();
+    // Set default values for testing conditionals.
+    setDefaultVersions();
+    parseXmlProperties();
   }
 
   public void tearDown() throws Exception {
@@ -68,11 +70,9 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   static Logger log = Logger.getLogger("TestXmlPropertyLoader");
 
   /**
-   * Set up a test XML configuration with good data.
+   * Parse the XML test configuration and set m_props.
    */
-  private PropertyTree setUpPropertyTree() throws IOException {
-    StringBuffer sb = new StringBuffer();
-
+  private void parseXmlProperties() throws IOException {
     String file = "configtest.xml";
     URL url = getClass().getResource(file);
     assertNotNull(file + " missing.", url);
@@ -81,7 +81,8 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     PropertyTree props = new PropertyTree();
 
     m_xmlPropertyLoader.loadProperties(props, istr);
-    return props;
+
+    m_props = props;
   }
 
   /**
@@ -251,7 +252,6 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   public void testConditionalCombo() throws IOException {
     assertEquals("bar", m_props.get("org.lockss.test.w"));
     assertEquals("foo", m_props.get("org.lockss.test.x"));
-
   }
 
   public void testBooleanAnd() throws IOException {
@@ -283,6 +283,62 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   public void testNestedBoolean() throws IOException {
     assertEquals("foo", m_props.get("org.lockss.nested.a"));
     assertEquals("bar", m_props.get("org.lockss.nested.b"));
+  }
+
+  /**
+   * If any of the internal system values (daemon version, platform
+   * version, hostname, or group) are null, all tests that depend on
+   * them should return false.
+   */
+  public void testNullHostname() throws IOException {
+    setVersions(null, null, null, null);
+    parseXmlProperties();
+    assertNull(m_props.get("org.lockss.test.s"));
+    assertNull(m_props.get("org.lockss.test.t"));
+    assertNull(m_props.get("org.lockss.nulltest.a"));
+    assertEquals("bar", m_props.get("org.lockss.nulltest.b"));
+  }
+
+  public void testNullGroup() throws IOException {
+    setVersions(null, null, null, null);
+    parseXmlProperties();    
+    assertNull(m_props.get("org.lockss.test.q"));
+    assertNull(m_props.get("org.lockss.test.r"));
+    assertNull(m_props.get("org.lockss.nulltest.c"));
+    assertEquals("bar", m_props.get("org.lockss.nulltest.d"));
+  }
+
+  public void testNullDaemonVersion() throws IOException {
+    setVersions(null, null, null, null);
+    parseXmlProperties();
+    assertNull(m_props.get("org.lockss.test.a"));
+    assertNull(m_props.get("org.lockss.test.b"));
+    assertNull(m_props.get("org.lockss.nulltest.e"));
+    assertEquals("bar", m_props.get("org.lockss.nulltest.f"));
+  }
+
+  public void testNullPlatformVersion() throws IOException {
+    setVersions(null, null, null, null);
+    parseXmlProperties();
+    assertNull(m_props.get("org.lockss.test.i"));
+    assertNull(m_props.get("org.lockss.test.j"));
+    assertNull(m_props.get("org.lockss.nulltest.g"));
+    assertEquals("bar", m_props.get("org.lockss.nulltest.h"));
+  }
+
+  /**
+   * Set default values for testing conditionals.
+   */
+  private void setDefaultVersions() {
+    ((MockXmlPropertyLoader)m_xmlPropertyLoader).setVersions("1.2.8", "135", "testhost", "beta");
+  }
+
+  /**
+   * Convenience method for overriding conditional values.
+   */
+  private void setVersions(String daemonVersion, String platformVersion,
+			   String hostname, String group) {
+    ((MockXmlPropertyLoader)m_xmlPropertyLoader).setVersions(null, null, null, null);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockXmlPropertyLoader.java,v 1.1 2004-06-14 03:08:45 smorabito Exp $
+ * $Id: MockXmlPropertyLoader.java,v 1.2 2004-08-20 02:56:43 smorabito Exp $
  */
 
 /*
@@ -35,21 +35,46 @@ package org.lockss.test;
 import org.lockss.util.*;
 
 public class MockXmlPropertyLoader extends XmlPropertyLoader {
+
   // Override getXXXVersion() methods to return known values for
   // unit testing.
+  private Version m_daemonVersion;
+  private Version m_platformVersion;
+  private String m_hostname;
+  private String m_group;
+
+  public void setVersions(String daemonVersion, String platformVersion,
+			  String hostname, String group) {
+    if (daemonVersion == null) {
+      this.m_daemonVersion = null;
+    } else {
+      this.m_daemonVersion = new DaemonVersion(daemonVersion);
+    }
+
+    if (platformVersion == null) {
+      this.m_platformVersion = null;
+    } else {
+      this.m_platformVersion = new PlatformVersion(platformVersion);
+    }
+
+    this.m_hostname = hostname;
+    this.m_group = group;
+  }
+
+
   public Version getDaemonVersion() {
-    return new DaemonVersion("1.2.8");
+    return m_daemonVersion;
   }
 
   public Version getPlatformVersion() {
-    return new PlatformVersion("135");
+    return m_platformVersion;
   }
 
   public String getPlatformHostname() {
-    return "testhost";
+    return m_hostname;
   }
 
   public String getPlatformGroup() {
-    return "beta";
+    return m_group;
   }
 }

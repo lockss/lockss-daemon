@@ -8,7 +8,7 @@
   <!ELEMENT and (and|or|not|test)*>
   <!ELEMENT or (and|or|not|test)*>
   <!ELEMENT not (and|or|not|test)*>
-  <!ELEMENT if (and|or|not|test|then|else|property)*>
+  <!ELEMENT if (and|or|not|then|else|property)*>
   <!ELEMENT then (property)*>
   <!ELEMENT else (property)*>
   <!ATTLIST property name CDATA #REQUIRED>
@@ -41,11 +41,11 @@
     <property name="c" value="foo"/>
   </property>
 
-  <!-- For testing purposes, override version information -->
-  <property name="org.lockss.daemon.version" value="1.2.8" />
-  <property name="org.lockss.platform.version" value="135" />
-  <property name="org.lockss.platform.group" value="beta" />
-  <property name="org.lockss.platform.hostname" value="testhost" />
+  <!-- For testing conditionals, these are the expected values: -->
+  <!--     Daemon Version: 1.2.8                                -->
+  <!--     Platform Version: 135                                -->
+  <!--     Hostname: testhost                                   -->
+  <!--     Group: beta                                          -->
 
   <property name="org.lockss">
     <property name="d">
@@ -180,8 +180,8 @@
 	<property name="test.x" value="bar"/>
       </else>
     </if>
-    
-    
+
+
     <!-- Test the legal formats for "and" booleans -->
     <if>
       <and>
@@ -228,7 +228,7 @@
       </else>
     </if>
 
-  
+
     <!-- Test the legal formats for "or" booleans -->
     <if>
       <or>
@@ -317,8 +317,8 @@
     </if>
     <if>
       <not>
-        <test group="foo" />
-        <test group="bar" />
+	<test group="foo" />
+	<test group="bar" />
       </not>
       <then>
 	<property name="not.f" value="foo"/>
@@ -386,6 +386,70 @@
 	<property name="nested.b" value="bar" />
       </else>
     </if>
+
+
+    <!-- These are all testing the correct behavior of null version, host, and group values -->
+    <!-- hostname -->
+    <if hostname="testhost">
+      <then>
+	<property name="nulltest.a" value="foo" />
+      </then>
+    </if>
+    <if hostname="testhost">
+      <then>
+	<property name="nulltest.b" value="foo" />
+      </then>
+      <else>
+	<property name="nulltest.b" value="bar" />
+      </else>
+    </if>
+
+    <!-- group -->
+    <if group="beta">
+      <then>
+	<property name="nulltest.c" value="foo" />
+      </then>
+    </if>
+    <if group="beta">
+      <then>
+	<property name="nulltest.d" value="foo" />
+      </then>
+      <else>
+	<property name="nulltest.d" value="bar" />
+      </else>
+    </if>
+
+    <!-- daemon version -->
+    <if daemonVersion="1.2.8">
+      <then>
+	<property name="nulltest.e" value="foo" />
+      </then>
+    </if>
+    <if daemonVersion="1.2.8">
+      <then>
+	<property name="nulltest.f" value="foo" />
+      </then>
+      <else>
+	<property name="nulltest.f" value="bar" />
+      </else>
+    </if>
+
+    <!-- platform version -->
+    <if platformVersion="135">
+      <then>
+	<property name="nulltest.g" value="foo" />
+      </then>
+    </if>
+    <if platformVersion="135">
+      <then>
+	<property name="nulltest.h" value="foo" />
+      </then>
+      <else>
+	<property name="nulltest.h" value="bar" />
+      </else>
+    </if>
+
+
   </property>
 
 </lockss-config>
