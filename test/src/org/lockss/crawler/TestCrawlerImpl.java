@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.13 2004-07-07 22:05:58 clairegriffin Exp $
+ * $Id: TestCrawlerImpl.java,v 1.14 2004-07-12 06:27:30 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(startUrl);
     spec = new CrawlSpec(startUrls, crawlRule);
+    new MockLockssDaemon().getAlertManager();
     crawler = new NewContentCrawler(mau, spec, aus);
 //     crawler = new MyCrawler(mau, spec, aus);
 

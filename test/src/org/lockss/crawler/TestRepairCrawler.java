@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.8 2004-03-24 19:03:22 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.9 2004-07-12 06:27:30 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    new MockLockssDaemon().getAlertManager();
+
     mau = new MockArchivalUnit();
     crawlRule = new MockCrawlRule();
 

@@ -65,13 +65,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    theDaemon = new MockLockssDaemon();
     this.setUp(DEFAULT_MAX_DEPTH);
   }
 
   public void setUp(int max) throws Exception {
-
-    super.setUp();
 
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
@@ -97,7 +94,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
                       SimulatedPlugin.AU_PARAM_BIN_FILE_SIZE, ""+fileSize);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    theDaemon = new MockLockssDaemon();
+//     theDaemon = new MockLockssDaemon();
+    theDaemon = getMockLockssDaemon();
+    theDaemon.getAlertManager();
     theDaemon.getPluginManager();
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();

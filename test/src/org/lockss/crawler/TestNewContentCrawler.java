@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.10 2004-07-07 22:05:58 clairegriffin Exp $
+ * $Id: TestNewContentCrawler.java,v 1.11 2004-07-12 06:27:30 tlipkis Exp $
  */
 
 /*
@@ -55,6 +55,8 @@ public class TestNewContentCrawler extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated(10);
+
+    new MockLockssDaemon().getAlertManager();
 
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
