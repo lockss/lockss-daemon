@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.13 2004-08-18 00:14:52 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.14 2004-08-18 07:31:09 tlipkis Exp $
  */
 
 /*
@@ -122,52 +122,61 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("def", ConfigManager.getParam("noprop", "def"));
   }
 
-  volatile Set diffSet = null;
+  volatile Configuration.Differences cbDiffs = null;
   List configs;
 
-  public void testCallback() throws IOException {
+  public void testCallbackWhenRegister() throws IOException {
     configs = new ArrayList();
     setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
 					      FileTestUtil.urlOfString(c1a)));
     assertEquals(0, configs.size());
+    Configuration config = ConfigManager.getCurrentConfig();
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences diffs) {
 	  assertNotNull(oldConfig);
 	  configs.add(newConfig);
+	  cbDiffs = diffs;
 	}
       });
     assertEquals(1, configs.size());
+    assertEquals(config, configs.get(0));
+    assertTrue(cbDiffs.contains("everything"));
+    assertNull(cbDiffs.getDifferenceSet());
   }
 
-  public void testCallbackDiffs() throws IOException {
+  public void testCallback() throws IOException {
     setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
 					      FileTestUtil.urlOfString(c1a)));
-    System.out.println(mgr.getCurrentConfig().toString());
+    log.debug(mgr.getCurrentConfig().toString());
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
 					 Configuration.Differences diffs) {
-	  System.out.println("Notify: " + diffs);
-	  diffSet = diffs.getDifferenceSet();
+	  log.debug("Notify: " + diffs);
+	  cbDiffs = diffs;
 	}
       });
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1a),
 						FileTestUtil.urlOfString(c1))));
-    assertEquals(SetUtil.set("prop2"), diffSet);
-    System.out.println(mgr.getCurrentConfig().toString());
+    assertTrue(cbDiffs.contains("prop2"));
+    assertFalse(cbDiffs.contains("prop4"));
+    assertEquals(SetUtil.set("prop2"), cbDiffs.getDifferenceSet());
+    log.debug(mgr.getCurrentConfig().toString());
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1))));
-    assertEquals(SetUtil.set("prop4"), diffSet);
-    System.out.println(mgr.getCurrentConfig().toString());
+    assertTrue(cbDiffs.contains("prop4"));
+    assertFalse(cbDiffs.contains("prop2"));
+    assertEquals(SetUtil.set("prop4"), cbDiffs.getDifferenceSet());
+    log.debug(mgr.getCurrentConfig().toString());
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
-    assertEquals(SetUtil.set("prop4", "prop2"), diffSet);
-    System.out.println(mgr.getCurrentConfig().toString());
+    assertEquals(SetUtil.set("prop4", "prop2"), cbDiffs.getDifferenceSet());
+    log.debug(mgr.getCurrentConfig().toString());
 
   }
 
@@ -180,7 +189,7 @@ public class TestConfigManager extends LockssTestCase {
     Configuration config = mgr.getCurrentConfig();
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
     assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
-                 config.get(FileTarget.PARAM_FILE));
+		 config.get(FileTarget.PARAM_FILE));
   }
 
   public void testPlatformAccess1() throws Exception {
@@ -247,7 +256,7 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("/a/b", config.get("org.lockss.cache.location"));
     assertEquals("/a/b", config.get("org.lockss.history.location"));
     assertEquals(FileUtil.sysDepPath("/a/b/iddb"),
-                 config.get("org.lockss.id.database.dir"));
+		 config.get("org.lockss.id.database.dir"));
   }
 
   public void testPlatformSmtp() throws Exception {
