@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.32 2004-08-22 02:12:18 tlipkis Exp $
+ * $Id: Deadline.java,v 1.32.2.1 2004-09-10 17:05:00 tlipkis Exp $
  */
 
 /*
@@ -314,7 +314,7 @@ public class Deadline implements Comparable {
    * @return true if expired
    */
   public synchronized boolean expired() {
-    return (!now().before(expiration));
+    return expiration.getTime() <= TimeBase.nowMs();
   }
 
   /**
