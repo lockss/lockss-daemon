@@ -1,5 +1,5 @@
 /*
- * $Id: TestStdErrTarget.java,v 1.3 2002-09-22 21:15:48 tal Exp $
+ * $Id: TestStdErrTarget.java,v 1.4 2003-04-02 10:53:23 tal Exp $
  */
 
 /*
@@ -48,22 +48,28 @@ public class TestStdErrTarget extends TestCase{
 
   public void testOutputStringFormat()
       throws REException {
-    StdErrTarget seTarget = new StdErrTarget();
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     PrintStream ps = new PrintStream(baos);
-    System.setErr(ps);
-    //    System.err.println("test");
+    StdErrTarget seTarget = new StdErrTarget(ps);
+
     String name = "log-id";
     String errorMessage = "error message";
+    // output the message twice
+    for (int ix = 2; ix > 0; ix--) {
+      seTarget.handleMessage(new Logger(Logger.LEVEL_DEBUG, name),
+			     Logger.LEVEL_ERROR,
+			     errorMessage);
+    }
 
-    seTarget.handleMessage(new Logger(Logger.LEVEL_DEBUG, name),
-			   Logger.LEVEL_ERROR,
-			   errorMessage);
-    
 //      RE regExp = 
 //        new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
-    RE regExp = 
-      new RE("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: Error: "+errorMessage+"\n");
+//     RE regExp = 
+//       new RE("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: Error: "+errorMessage+"\n");
+    // Should have one Timestamp: message followed by two copies of the message
+    String timestampRE = "\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: ";
+    String line1 = timestampRE + "Timestamp: .*\\n";
+    String line2 = timestampRE + "Error: "+errorMessage+"\\n";
+    RE regExp = new RE(line1 + line2 + line2);
     String debugString = baos.toString();
     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
 	       " Should be <time>: <error-level>: <error message>",
