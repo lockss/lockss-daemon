@@ -42,6 +42,29 @@ public class PrintfUtil {
     return printf_buf.toString();
   }
 
+  public static Object[] printfToElements(PrintfData data) {
+    ArrayList printf_elements = new ArrayList();
+    PrintfFormat pf = new PrintfFormat(data.getFormat());
+    Iterator it_frm = pf.getFormatElements().iterator();
+    PrintfFormat.ConversionSpecification cs = null;
+    char c = 0;
+    Iterator it_args = data.getArguments().iterator();
+    while (it_frm.hasNext()) {
+      cs = (PrintfFormat.ConversionSpecification) it_frm.next();
+      c = cs.getConversionCharacter();
+      if (c == '\0') {
+        printf_elements.add(new PrintfElement(true, cs.getLiteral()));
+      }
+      else if (c == '%') {
+        printf_elements.add(new PrintfElement(true, "%"));
+      }
+      else {
+        printf_elements.add(new PrintfElement(false, (String) it_args.next()));
+      }
+    }
+    return printf_elements.toArray();
+  }
+
   public static class PrintfData {
     String m_format;
     ArrayList m_arguments;
@@ -79,4 +102,23 @@ public class PrintfUtil {
     }
 
   }
+
+  public static class PrintfElement {
+    boolean m_isLiteral = true;
+    String m_element = "";
+
+    public PrintfElement(boolean isLiteral, String element) {
+      m_isLiteral = isLiteral;
+      m_element = element;
+    }
+
+    public boolean isLiteral() {
+      return m_isLiteral;
+    }
+
+    public String getElement() {
+      return m_element;
+    }
+  }
+
 }
