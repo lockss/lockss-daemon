@@ -1,5 +1,5 @@
 /*
- * $Id: RateLimiter.java,v 1.6 2004-09-27 22:39:04 smorabito Exp $
+ * $Id: RateLimiter.java,v 1.7 2005-02-16 00:40:31 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class RateLimiter {
   /** Create a RateLimiter according to the specified configuration parameters.
    * @param config the Configuration object
    * @param currentLimiter optional existing RateLimiter, return if it
-   * matches the current config balues
+   * matches the current config values
    * @param maxEventsParam name of the parameter specifying the maximum
    * number of events per interval
    * @param intervalParam name of the parameter specifying the length of
@@ -68,6 +68,51 @@ public class RateLimiter {
       return new RateLimiter(pkts, interval);
     } else {
       return currentLimiter;
+    }
+  }
+
+  /** Create a RateLimiter according to the specified configuration
+   * parameter, whose value should be a string:
+   * <i>events</i>/<i>time-interval</i>.
+   * @param config the Configuration object
+   * @param currentLimiter optional existing RateLimiter, return if it
+   * matches the current config value
+   * @param param name of the rate string config parameter
+   * @param dfault default rate string
+   * @return a new RateLimiter, or the exiting one if it's the same
+   * @throws RuntimeException iff the default string is unparseable and the
+   * parameter value is either empty or unparseable.
+   */
+  public static RateLimiter
+    getConfiguredRateLimiter(Configuration config, RateLimiter currentLimiter,
+			     String param, String dfault) {
+    String rate = config.get(param, dfault);
+    Ept ept;
+    try {
+      ept = new Ept(rate);
+    } catch (RuntimeException e) {
+      ept = new Ept(dfault);
+    }
+    if (currentLimiter == null ||
+	currentLimiter.getInterval() != ept.interval ||
+	currentLimiter.getLimit() != ept.events) {
+      return new RateLimiter(ept.events, ept.interval);
+    } else {
+      return currentLimiter;
+    }
+  }
+
+  // helper to parse rate string  <events> / <time-interval>
+  private static class Ept {
+    private int events;
+    private long interval;
+    Ept(String rate) {
+      List pair = StringUtil.breakAt(rate, '/', 3, false, true);
+      if (pair.size() != 2) {
+	throw new IllegalArgumentException("Rate not n/interval: " + rate);
+      }
+      events = Integer.parseInt((String)pair.get(0));
+      interval = StringUtil.parseTimeInterval((String)pair.get(1));
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRateLimiter.java,v 1.4 2004-07-12 06:25:59 tlipkis Exp $
+ * $Id: TestRateLimiter.java,v 1.5 2005-02-16 00:40:28 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import junit.framework.TestCase;
+import org.lockss.config.*;
 import org.lockss.test.*;
 
 
@@ -77,6 +78,12 @@ public class TestRateLimiter extends LockssTestCase {
     }
   }
 
+  public void testConstructor() {
+    RateLimiter lim = new RateLimiter(10, 100);
+    assertEquals(10, lim.getLimit());
+    assertEquals(100, lim.getInterval());
+  }
+
   public void testLimit() {
     TimeBase.setSimulated(1000);
     RateLimiter lim = new RateLimiter(2, 10);
@@ -97,6 +104,66 @@ public class TestRateLimiter extends LockssTestCase {
     lim.event();
     assertFalse(lim.isEventOk());
     assertEquals(5, lim.timeUntilEventOk());
+  }
+
+  public void testGetFromConfig1() {
+    RateLimiter lim;
+    Configuration config;
+    config = ConfigurationUtil.fromArgs("events", "7", "interval", "10m");
+    lim = RateLimiter.getConfiguredRateLimiter(config, null,
+					       "events", 3, "interval", 200);
+    assertEquals(7, lim.getLimit());
+    assertEquals(10 * Constants.MINUTE, lim.getInterval());
+    assertSame(lim, RateLimiter.getConfiguredRateLimiter(config, lim,
+							 "events", 3,
+							 "interval", 200));
+
+    config = ConfigurationUtil.fromArgs("events", "7");
+    lim = RateLimiter.getConfiguredRateLimiter(config, null,
+					       "events", 3, "interval", 200);
+    assertEquals(7, lim.getLimit());
+    assertEquals(200, lim.getInterval());
+
+    config = ConfigurationUtil.fromArgs("foo", "7");
+    lim = RateLimiter.getConfiguredRateLimiter(config, null,
+					       "events", 3, "interval", 200);
+    assertEquals(3, lim.getLimit());
+    assertEquals(200, lim.getInterval());
+  }
+
+  public void testGetFromConfig2() {
+    RateLimiter lim;
+    Configuration config;
+    config = ConfigurationUtil.fromArgs("rate1", "7/10m");
+    lim = RateLimiter.getConfiguredRateLimiter(config, null,
+					       "rate1", "3/200");
+    assertEquals(7, lim.getLimit());
+    assertEquals(10 * Constants.MINUTE, lim.getInterval());
+    assertSame(lim, RateLimiter.getConfiguredRateLimiter(config, lim,
+							 "rate1", "3/200"));
+
+    config = ConfigurationUtil.fromArgs("rate1", "4/20h");
+    lim = RateLimiter.getConfiguredRateLimiter(config, lim,
+					       "rate1", "3/200");
+    assertEquals(4, lim.getLimit());
+    assertEquals(20 * Constants.HOUR, lim.getInterval());
+
+    config = ConfigurationUtil.fromArgs("rate1", "xx/20h");
+    lim = RateLimiter.getConfiguredRateLimiter(config, lim,
+					       "rate1", "3/200");
+    assertEquals(3, lim.getLimit());
+    assertEquals(200, lim.getInterval());
+
+    config = ConfigurationUtil.fromArgs("rate1", "7/20q");
+    lim = RateLimiter.getConfiguredRateLimiter(config, lim,
+					       "rate1", "3/200");
+    assertEquals(3, lim.getLimit());
+    assertEquals(200, lim.getInterval());
+
+    config = ConfigurationUtil.fromArgs("norate", "foo");
+    lim = RateLimiter.getConfiguredRateLimiter(config, null, "rate1", "3/200");
+    assertEquals(3, lim.getLimit());
+    assertEquals(200, lim.getInterval());
   }
 
 }
