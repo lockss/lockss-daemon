@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.12 2003-10-08 21:48:20 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.13 2003-10-09 18:44:41 clairegriffin Exp $
  */
 
 /*
@@ -51,12 +51,20 @@ public class BaseUrlCacher implements UrlCacher {
   protected static Logger logger = Logger.getLogger("UrlCacher");
   private LockssRepository repository;
   /**
-   * LOCKSS is a trademark of Stanford.  Stanford grants you permission to
-   * use its trademark only in interactions with web servers, only by this
-   * code, and only for the purpose of populating a LOCKSS cache in
-   * accordance with the required publisher manifest wording.  If you adapt
-   * this code for some other purpose you may not use the LOCKSS trademark in
-   * the agent ID or elsewhere.
+   * LOCKSS is a trademark of Stanford University.  Stanford hereby grants you
+   * limited permission to use the LOCKSS trademark only in connection with
+   * this software, including in the User-Agent HTTP request header generated
+   * by the software and provided to web servers, provided the software or any
+   * output of the software is used solely for the purpose of populating a
+   * certified LOCKSS cache from a web server that has granted permission for
+   * the LOCKSS system to collect material.  You may not remove or delete any
+   * refernce to LOCKSS in the software indicating that LOCKSS is a mark owned
+   * by Stanford University.  No other permission is granted you to use the
+   * LOCKSS trademark or any other trademark of Stanford University.  Without
+   * limiting the foregoing, if you adapt or use the software for any other
+   * purpose, you must delete all references to or uses of the LOCKSS mark from
+   * the software.  All good will associated with your use of the LOCKSS mark
+   * shall inure to the benefit of Stanford University.
    */
   private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /**
