@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.109 2004-09-28 08:53:17 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.110 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -910,18 +910,17 @@ public class PluginManager
     ArchivalUnit au = getAuFromId(auId);
     if (log.isDebug3()) log.debug3("au: " + au);
     if (au == null) return null;
-    Plugin plugin = au.getPlugin();
     String url = spec.getUrl();
     CachedUrlSet cus;
     if (AuUrl.isAuUrl(url)) {
       cus = au.getAuCachedUrlSet();
     } else if ((spec.getLwrBound()!=null) &&
 	       (spec.getLwrBound().equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
-      cus = plugin.makeCachedUrlSet(au, new SingleNodeCachedUrlSetSpec(url));
+      cus = au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url));
     } else {
       RangeCachedUrlSetSpec rcuss =
 	new RangeCachedUrlSetSpec(url, spec.getLwrBound(), spec.getUprBound());
-      cus = plugin.makeCachedUrlSet(au, rcuss);
+      cus = au.makeCachedUrlSet(rcuss);
     }
     if (log.isDebug3()) log.debug3("ret cus: " + cus);
     return cus;
@@ -948,10 +947,9 @@ public class PluginManager
     for (Iterator iter = getAllAus().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       if (au.shouldBeCached(url)) {
-	Plugin plugin = au.getPlugin();
 	try {
 	  String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	  CachedUrl cu = plugin.makeCachedUrl(au.getAuCachedUrlSet(), siteUrl);
+	  CachedUrl cu = au.makeCachedUrl(au.getAuCachedUrlSet(), siteUrl);
 	  if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
 	    best = cu;
 	  }

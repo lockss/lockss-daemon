@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.12 2004-09-29 18:58:01 tlipkis Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.13 2004-10-06 23:52:58 clairegriffin Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.getPlugin().makeUrlCacher(cus, url);
+    UrlCacher uc = au.makeUrlCacher(cus, url);
     assertTrue(uc.shouldBeCached()==shouldCache);
   }
 

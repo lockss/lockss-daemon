@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.16 2004-09-29 18:58:02 tlipkis Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.17 2004-10-06 23:52:58 clairegriffin Exp $
  */
 
 /*
@@ -172,7 +172,7 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.getPlugin().makeUrlCacher(cus, url);
+    UrlCacher uc = au.makeUrlCacher(cus, url);
     if (shouldCache) {
       assertTrue(url+" incorrectly marked as shouldn't cache",
 		 uc.shouldBeCached());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.13 2004-09-29 18:57:59 tlipkis Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.14 2004-10-06 23:53:03 clairegriffin Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.getPlugin().makeUrlCacher(cus, url);
+    UrlCacher uc = au.makeUrlCacher(cus, url);
     assertTrue(uc.shouldBeCached()==shouldCache);
   }
 

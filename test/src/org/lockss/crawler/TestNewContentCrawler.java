@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.22 2004-09-27 22:38:45 smorabito Exp $
+ * $Id: TestNewContentCrawler.java,v 1.23 2004-10-06 23:52:57 clairegriffin Exp $
  */
 
 /*
@@ -196,7 +196,7 @@ public class TestNewContentCrawler extends LockssTestCase {
        new MyMockUnretryableCacheException("Test exception");
     cus.addUrl(url1, exception, DEFAULT_RETRY_TIMES);
     crawlRule.addUrlToCrawl(url1);
-    
+
     assertFalse(crawler.doCrawl0());
   }
 
@@ -746,7 +746,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url4= "http://www.foo.com/link4.html";
     List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MockPlugin());
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MockArchivalUnit());
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
@@ -764,7 +764,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url4= "http://www.foo.com/link4.html";
     List urls = ListUtil.list(url1,url2,url3,url4,permissionUrl1,permissionUrl2);
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockArchivalUnit());
 
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1, url2);
@@ -780,7 +780,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url3= "http://www.foo.com/link3.html";
     List urls = ListUtil.list(url1,url3,permissionUrl1,permissionUrl2);
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockPlugin());
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,1,urls, new MockArchivalUnit());
 
     setProperty(NewContentCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,""+true);
 
@@ -802,7 +802,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     // uc.cache() is called
     hMap.put((String) permissionUrl1.toLowerCase(),new Integer(4));
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MyMockPlugin(hMap));
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MyMockArchivalUnit(hMap));
 
     setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE,""+true);
 
@@ -823,7 +823,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     // uc.cache() is called
     hMap.put((String) permissionUrl1.toLowerCase(),new Integer(2));
 
-    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MyMockPlugin(hMap));
+    MockCachedUrlSet cus = permissionPageTestSetup(permissionList,2,urls, new MyMockArchivalUnit(hMap));
 
     setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
 
@@ -841,7 +841,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     List urls = ListUtil.list(url1,url3,permissionUrl1);
 
     MockCachedUrlSet cus =
-        permissionPageTestSetup(permissionList, 1, urls, new MockPlugin());
+        permissionPageTestSetup(permissionList, 1, urls, new MockArchivalUnit());
 
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1);
@@ -849,13 +849,9 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   private MockCachedUrlSet permissionPageTestSetup(List permissionPages,
-      int passPermissionCheck, List urlsToCrawl, MockPlugin mp) {
-    MockArchivalUnit mmau = new MockArchivalUnit();
-
-    //mmau.setNumPermissionGranted(passPermissionCheck);
-
+      int passPermissionCheck, List urlsToCrawl, MockArchivalUnit mmau) {
     //set plugin
-    mmau.setPlugin(mp);
+    mmau.setPlugin(new MockPlugin());
 
     //make cus , set Cus
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mmau, null);
@@ -888,12 +884,12 @@ public class TestNewContentCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 
-  private class MyMockPlugin extends MockPlugin {
+  private class MyMockArchivalUnit extends MockArchivalUnit {
 
     int numExceptionThrow=0;
     HashMap hMap=null;
 
-    public MyMockPlugin(HashMap hMap) {
+    public MyMockArchivalUnit(HashMap hMap) {
       super();
       this.hMap = hMap;
       //System.out.println("The hMap content:" + this.hMap.toString());
@@ -922,6 +918,7 @@ public class TestNewContentCrawler extends LockssTestCase {
       return muc;
     }
   }
+
 
   private class MyMockCrawlWindow implements CrawlWindow {
     int numTimesToReturnTrue = 0;

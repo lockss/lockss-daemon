@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.20 2004-04-05 07:58:02 tlipkis Exp $
+ * $Id: GenericContentHasher.java,v 1.21 2004-10-06 23:52:54 clairegriffin Exp $
  */
 
 /*
@@ -53,7 +53,8 @@ public class GenericContentHasher extends GenericHasher {
   private byte[] contentBytes = null;
   private int nameIdx = -1;
 
-  private Plugin plugin;
+
+  private ArchivalUnit au = null;
   private CachedUrl cu = null;
   private InputStream is = null;
   private long hashedContentSize = 0;
@@ -61,7 +62,7 @@ public class GenericContentHasher extends GenericHasher {
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
-    plugin = cus.getArchivalUnit().getPlugin();
+    au = cus.getArchivalUnit();
     iterator = cus.contentHashIterator();
     if (iterator == null) {
       throw new IllegalArgumentException("Called with a CachedUrlSet that "+
@@ -75,7 +76,7 @@ public class GenericContentHasher extends GenericHasher {
       switch (curElement.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:
         CachedUrlSet cus = (CachedUrlSet)curElement;
-        cu = plugin.makeCachedUrl(cus, cus.getUrl());
+        cu = au.makeCachedUrl(cus, cus.getUrl());
         break;
       case CachedUrlSetNode.TYPE_CACHED_URL:
         cu = (CachedUrl)curElement;

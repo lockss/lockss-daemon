@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.27 2004-09-29 18:58:02 tlipkis Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.28 2004-10-06 23:52:58 clairegriffin Exp $
  */
 
 /*
@@ -56,9 +56,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   MyMockBaseUrlCacher cacher;
   MockCachedUrlSet mcus;
-  MyMockPlugin plugin;
+  MockPlugin plugin;
 
-  private MockArchivalUnit mau;
+  private MyMockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private int pauseBeforeFetchCounter;
@@ -80,7 +80,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     mau = new MyMockArchivalUnit();
     mau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
-    plugin = new MyMockPlugin();
+    plugin = new MockPlugin();
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
 
@@ -529,7 +529,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testRedirectWritesBoth() throws Exception {
-    plugin.returnRealCachedUrl = true;
+    mau.returnRealCachedUrl = true;
     String redTo = "http://somewhere.else/foo";
     MockConnectionMockBaseUrlCacher muc =
         new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
@@ -560,7 +560,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testRedirectWritesAll() throws Exception {
     String content = "oft redirected content";
-    plugin.returnRealCachedUrl = true;
+    mau.returnRealCachedUrl = true;
     String redTo1 = "http://somewhere.else/foo";
     String redTo2 = "http://somewhere.else/bar/x.html";
     String redTo3 = "http://somewhere.else/bar/y.html";
@@ -602,7 +602,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testSimpleDirRedirect() throws Exception {
     String content = "oft redirected content";
-    plugin.returnRealCachedUrl = true;
+    mau.returnRealCachedUrl = true;
     String url = "http://a.b/bar";
     String redTo = url + "/";
     MockConnectionMockBaseUrlCacher muc =
@@ -629,7 +629,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testDirRedirect() throws Exception {
     PermissionMap map = new PermissionMap();
     String content = "oft redirected content";
-    plugin.returnRealCachedUrl = true;
+    mau.returnRealCachedUrl = true;
     String url = "http://a.b/bar";
     String redTo1 = "http://somewhere.else/foo";
     String redTo2 = "http://somewhere.else/foo/";
@@ -682,20 +682,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   private class MyMockPlugin extends MockPlugin {
-    boolean returnRealCachedUrl = false;
-
-    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-					 CachedUrlSetSpec cuss) {
-      return new BaseCachedUrlSet(owner, cuss);
-    }
-
-    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-      if (returnRealCachedUrl) {
-	return new BaseCachedUrl(owner, url);
-      } else {
-	return super.makeCachedUrl(owner, url);
-      }
-    }
   }
 
   // Allows a list of preconfigured MockLockssUrlConnection instances to be
@@ -766,6 +752,20 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   private class MyMockArchivalUnit extends MockArchivalUnit {
+    boolean returnRealCachedUrl = false;
+
+    public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+      return new BaseCachedUrlSet(this, cuss);
+    }
+
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      if (returnRealCachedUrl) {
+        return new BaseCachedUrl(owner, url);
+      } else {
+        return super.makeCachedUrl(owner, url);
+      }
+    }
+
     public void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.14 2004-10-02 01:15:55 tlipkis Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.15 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class BaseCachedUrlSet implements CachedUrlSet {
     } catch (MalformedURLException e) {
       return false;
     }
-    CachedUrl cu = plugin.makeCachedUrl(this, getUrl());
+    CachedUrl cu = au.makeCachedUrl(this, getUrl());
     return (cu == null ? false : cu.hasContent());
   }
 
@@ -164,12 +164,12 @@ public class BaseCachedUrlSet implements CachedUrlSet {
       while (children.hasNext()) {
         RepositoryNode child = (RepositoryNode)children.next();
         if (child.isLeaf()) {
-          CachedUrl newUrl = plugin.makeCachedUrl(this, child.getNodeUrl());
+          CachedUrl newUrl = au.makeCachedUrl(this, child.getNodeUrl());
           flatSet.add(newUrl);
         } else {
           CachedUrlSetSpec rSpec =
             new RangeCachedUrlSetSpec(child.getNodeUrl());
-          CachedUrlSet newSet = plugin.makeCachedUrlSet(au, rSpec);
+          CachedUrlSet newSet = au.makeCachedUrlSet(rSpec);
           flatSet.add(newSet);
         }
       }

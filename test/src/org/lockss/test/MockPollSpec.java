@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.3 2004-09-23 02:35:23 dshr Exp $
+ * $Id: MockPollSpec.java,v 1.4 2004-10-06 23:53:06 clairegriffin Exp $
  */
 
 /*
@@ -127,9 +127,7 @@ public class MockPollSpec extends PollSpec {
       }
     }
     CachedUrlSet cus =
-      plug.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(url,
-							  lwrBound,
-							  uprBound));
+      au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url, lwrBound, uprBound));
     return cus;
   }
 }

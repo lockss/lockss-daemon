@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.81 2004-09-27 22:39:12 smorabito Exp $
+ * $Id: BaseArchivalUnit.java,v 1.82 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -179,6 +179,18 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   public Configuration getConfiguration() {
     return auConfig;
+  }
+
+  public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
+    return new BaseCachedUrlSet(this, cuss);
+  }
+
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+    return new BaseCachedUrl(owner, url);
+  }
+
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+    return new BaseUrlCacher(owner, url);
   }
 
   private void checkLegalConfigChange(Configuration newConfig)
@@ -374,7 +386,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    */
   public CachedUrlSet getAuCachedUrlSet() {
     // tk - use singleton instance?
-    return getPlugin().makeCachedUrlSet(this, new AuCachedUrlSetSpec());
+    return makeCachedUrlSet(new AuCachedUrlSetSpec());
   }
 
   private Deadline nextFetchTime = Deadline.in(0);

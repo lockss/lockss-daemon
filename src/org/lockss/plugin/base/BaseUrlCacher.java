@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.39 2004-09-23 03:38:04 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.40 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   protected CachedUrlSet cus;
-  protected Plugin plugin;
+  protected ArchivalUnit au;
   protected String origUrl;		// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
   private List otherNames;
@@ -87,8 +87,8 @@ public class BaseUrlCacher implements UrlCacher {
     this.cus = owner;
     this.origUrl = url;
     this.fetchUrl = url;
-    ArchivalUnit au = owner.getArchivalUnit();
-    plugin = au.getPlugin();
+    au = owner.getArchivalUnit();
+    Plugin plugin = au.getPlugin();
     repository = plugin.getDaemon().getLockssRepository(au);
     resultMap = ((BasePlugin)plugin).getCacheResultMap();
   }
@@ -124,7 +124,7 @@ public class BaseUrlCacher implements UrlCacher {
    * @return the owner ArchivalUnit
    */
   public ArchivalUnit getArchivalUnit() {
-    return cus.getArchivalUnit();
+    return au;
   }
 
   /**
@@ -134,7 +134,7 @@ public class BaseUrlCacher implements UrlCacher {
    * @return a boolean indicating if it should be cached
    */
   public boolean shouldBeCached() {
-    return getArchivalUnit().shouldBeCached(origUrl);
+    return au.shouldBeCached(origUrl);
   }
 
   /**
@@ -143,7 +143,7 @@ public class BaseUrlCacher implements UrlCacher {
    * @return CachedUrl for the content stored.
    */
   public CachedUrl getCachedUrl() {
-    return plugin.makeCachedUrl(cus, origUrl);
+    return au.makeCachedUrl(cus, origUrl);
   }
 
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
@@ -173,7 +173,7 @@ public class BaseUrlCacher implements UrlCacher {
   public int cache() throws IOException {
     String lastModified = null;
     if (!forceRefetch) {
-      CachedUrl cachedVersion = plugin.makeCachedUrl(cus, origUrl);
+      CachedUrl cachedVersion = au.makeCachedUrl(cus, origUrl);
 
       // if it's been cached, get the last modified date and use that
       if ((cachedVersion!=null) && cachedVersion.hasContent()) {
@@ -187,7 +187,7 @@ public class BaseUrlCacher implements UrlCacher {
 
   private int cache(String lastModified) throws IOException {
     logger.debug3("Pausing before fetching content");
-    getArchivalUnit().pauseBeforeFetch();
+    au.pauseBeforeFetch();
     logger.debug3("Done pausing");
     InputStream input = getUncachedInputStream(lastModified);
     // null input indicates unmodified content, so skip caching
@@ -465,7 +465,7 @@ public class BaseUrlCacher implements UrlCacher {
     try {
       String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
       if (isRedirectOption(REDIRECT_OPTION_IF_CRAWL_SPEC)) {
-	if (!getArchivalUnit().shouldBeCached(newUrlString)) {
+	if (!au.shouldBeCached(newUrlString)) {
 	  logger.warning("Redirect not in crawl spec: " + newUrlString +
 			 " from: " + origUrl);
 	  return false;

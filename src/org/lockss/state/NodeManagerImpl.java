@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.191 2004-09-28 08:47:26 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.192 2004-10-06 23:52:56 clairegriffin Exp $
  */
 
 /*
@@ -609,7 +609,7 @@ public class NodeManagerImpl
       // append base url
       childUrl = baseUrl + url;
     }
-    return plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(childUrl));
+    return au.makeCachedUrlSet(new RangeCachedUrlSetSpec(childUrl));
   }
 
   /**
@@ -1564,7 +1564,7 @@ public class NodeManagerImpl
     ArchivalUnit au = cus.getArchivalUnit();
     Plugin plugin = au.getPlugin();
     CachedUrlSet newCus =
-      plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(base, lwr, upr));
+      au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
     PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.CONTENT_POLL);
     callPoll(spec);
   }
@@ -1578,8 +1578,7 @@ public class NodeManagerImpl
     ArchivalUnit au = cus.getArchivalUnit();
     Plugin plugin = au.getPlugin();
     CachedUrlSet newCus =
-      plugin.makeCachedUrlSet(au,
-			      new SingleNodeCachedUrlSetSpec(cus.getUrl()));
+      au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus, Poll.CONTENT_POLL);
     callPoll(spec);
   }
@@ -1663,7 +1662,7 @@ public class NodeManagerImpl
           case CachedUrlSetNode.TYPE_CACHED_URL:
             CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
 	    Plugin plugin = managedAu.getPlugin();
-            cus = plugin.makeCachedUrlSet(managedAu, rSpec);
+            cus = managedAu.makeCachedUrlSet(rSpec);
         }
         childList.add(cus);
       }
@@ -1748,7 +1747,7 @@ public class NodeManagerImpl
         // get cus
         Iterator cusKeys = repairs.keySet().iterator();
         String cusUrl = (String)cusKeys.next();
-        CachedUrlSet cus = managedAu.getPlugin().makeCachedUrlSet(managedAu,
+        CachedUrlSet cus = managedAu.makeCachedUrlSet(
             new RangeCachedUrlSetSpec(cusUrl));
 
         // get lock
@@ -1774,7 +1773,7 @@ public class NodeManagerImpl
         // make a list of cus activity requests
         while (cusKeys.hasNext()) {
           String cusUrl = (String)cusKeys.next();
-          CachedUrlSet cus = managedAu.getPlugin().makeCachedUrlSet(managedAu,
+          CachedUrlSet cus = managedAu.makeCachedUrlSet(
               new RangeCachedUrlSetSpec(cusUrl));
           NodeState node = getNodeState(cus);
           boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.49 2004-09-27 22:38:38 smorabito Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.50 2004-10-06 23:53:04 clairegriffin Exp $
  */
 
 /*
@@ -82,6 +82,12 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   /** Convenience methods, as most creators don't care about the plugin */
   public SimulatedArchivalUnit() {
     this(new SimulatedPlugin());
+  }
+
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+    String fileRoot =
+      ((SimulatedArchivalUnit)owner.getArchivalUnit()).getRootDir();
+    return new SimulatedUrlCacher(owner, url, fileRoot);
   }
 
 

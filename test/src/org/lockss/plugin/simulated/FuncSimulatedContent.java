@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.63 2004-07-16 22:53:08 smorabito Exp $
+ * $Id: FuncSimulatedContent.java,v 1.64 2004-10-06 23:53:04 clairegriffin Exp $
  */
 
 /*
@@ -228,8 +228,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void checkLeaf() {
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    Plugin plugin = sau.getPlugin();
-    CachedUrlSet set = plugin.makeCachedUrlSet(sau, spec);
+    CachedUrlSet set = sau.makeCachedUrlSet(spec);
     Iterator setIt = set.contentHashIterator();
     ArrayList childL = new ArrayList(16);
     while (setIt.hasNext()) {
@@ -262,8 +261,7 @@ public class FuncSimulatedContent extends LockssTestCase {
                                int branchNum, boolean isAbnormal,
                                boolean isDamaged) throws IOException {
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + path;
-    CachedUrl url =
-      sau.getPlugin().makeCachedUrl(sau.getAuCachedUrlSet(), file);
+    CachedUrl url = sau.makeCachedUrl(sau.getAuCachedUrlSet(), file);
     String content = getUrlContent(url);
     String expectedContent;
     if (path.endsWith(".html")) {
@@ -292,7 +290,7 @@ public class FuncSimulatedContent extends LockssTestCase {
   private void doDamageRemoveTest() throws Exception {
     /* Cache the file again; this time the damage should be gone */
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
-    UrlCacher uc = sau.getPlugin().makeUrlCacher(sau.getAuCachedUrlSet(),file);
+    UrlCacher uc = sau.makeUrlCacher(sau.getAuCachedUrlSet(),file);
     uc.setForceRefetch(true);
     uc.cache();
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
@@ -332,7 +330,7 @@ public class FuncSimulatedContent extends LockssTestCase {
 
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    set = sau.getPlugin().makeCachedUrlSet(sau, spec);
+    set = sau.makeCachedUrlSet(spec);
     hash2 = getHash(set, namesOnly);
     assertFalse(Arrays.equals(hash, hash2));
   }

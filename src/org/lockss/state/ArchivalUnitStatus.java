@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.21 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.22 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -311,7 +311,7 @@ public class ArchivalUnitStatus
           cus = (CachedUrlSet)cusn;
         } else {
           CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(cusn.getUrl());
-          cus = au.getPlugin().makeCachedUrlSet(au, spec);
+          cus = au.makeCachedUrlSet(spec);
         }
         try {
 	  Map row = makeRow(repo.getNode(cus.getUrl()),

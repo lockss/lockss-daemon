@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.2 2004-09-27 22:39:05 smorabito Exp $
+ * $Id: NodeManagerManager.java,v 1.3 2004-10-06 23:52:56 clairegriffin Exp $
  */
 
 /*
@@ -177,7 +177,7 @@ public class NodeManagerManager
 	NodeManager manager = (NodeManager)iter.next();
 	AuState auState = manager.getAuState();
         if (auState != null) {
-	  if (!includeInternalAus && 
+	  if (!includeInternalAus &&
 	      (auState.getArchivalUnit() instanceof RegistryArchivalUnit)) {
 	    continue;
 	  }
@@ -527,7 +527,7 @@ public class NodeManagerManager
       ArchivalUnit au = nodeManager.getAuState().getArchivalUnit();
       Plugin plugin = au.getPlugin();
       CachedUrlSet cus =
-	plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(url));
+	au.makeCachedUrlSet(new RangeCachedUrlSetSpec(url));
       NodeState state = nodeManager.getNodeState(cus);
       if (state == null) {
         logger.debug("unable to find a node state for " + url);

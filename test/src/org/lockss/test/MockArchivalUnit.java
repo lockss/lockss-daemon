@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.55 2004-09-27 22:38:35 smorabito Exp $
+ * $Id: MockArchivalUnit.java,v 1.56 2004-10-06 23:53:06 clairegriffin Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class MockArchivalUnit implements ArchivalUnit {
       return cus;
     } else {
       // else make one
-      return getPlugin().makeCachedUrlSet(this, new AuCachedUrlSetSpec());
+      return makeCachedUrlSet(new AuCachedUrlSetSpec());
     }
   }
 
@@ -127,6 +127,18 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public TypedEntryMap getProperties() {
     return propertyMap;
+  }
+
+  public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec spec) {
+    return new MockCachedUrlSet(this, spec);
+  }
+
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+    return ((MockCachedUrlSet)owner).makeCachedUrl(url);
+  }
+
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+    return ((MockCachedUrlSet)owner).makeUrlCacher(url);
   }
 
   /**

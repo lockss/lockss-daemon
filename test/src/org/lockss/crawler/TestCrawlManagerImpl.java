@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.48 2004-09-29 18:58:18 tlipkis Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.49 2004-10-06 23:52:56 clairegriffin Exp $
  */
 
 /*
@@ -82,8 +82,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.initService(theDaemon);
     crawlManager.startService();
 
-    cus = plugin.makeCachedUrlSet(mau,
-				  new SingleNodeCachedUrlSetSpec(GENERIC_URL));
+    cus = mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(GENERIC_URL));
     activityRegulator.setStartCusActivity(cus, true);
     activityRegulator.setStartAuActivity(true);
     crawler = new MockCrawler();
@@ -253,9 +252,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
     CachedUrlSet cus1 =
-      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url1));
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
     CachedUrlSet cus2 =
-      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url2));
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
 
     activityRegulator.setStartCusActivity(cus1, true);
     activityRegulator.setStartCusActivity(cus2, true);
@@ -351,9 +350,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
     CachedUrlSet cus1 =
-      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url1));
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
     CachedUrlSet cus2 =
-      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url2));
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
 
     activityRegulator.setStartCusActivity(cus1, true);
     activityRegulator.setStartCusActivity(cus2, false);
@@ -393,9 +392,9 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
     TestCrawlCB cb = new TestCrawlCB(sem);
     CachedUrlSet cus1 =
-      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url1));
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
     CachedUrlSet cus2 =
-      plugin.makeCachedUrlSet(mau, new SingleNodeCachedUrlSetSpec(url2));
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
 
     activityRegulator.setStartCusActivity(cus1, true);
     activityRegulator.setStartCusActivity(cus2, false);

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.30 2004-09-27 22:39:12 smorabito Exp $
+ * $Id: ArchivalUnit.java,v 1.31 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -207,6 +207,30 @@ public interface ArchivalUnit {
    * is none
    */
   public FilterRule getFilterRule(String mimeType);
+
+  /**
+   * Create a {@link CachedUrlSet}representing the content
+   * with a specific {@link CachedUrlSetSpec}.
+   * @param spec the {@link CachedUrlSetSpec}
+   * @return the created {@link CachedUrlSet}
+   */
+  public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec spec);
+
+  /**
+   * Create a {@link CachedUrl} object within the set.
+   * @param owner the {@link CachedUrlSet} owner
+   * @param url the url of interest
+   * @return a {@link CachedUrl} object representing the url.
+   */
+  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url);
+
+  /**
+   * Create a {@link UrlCacher} object within the set.
+   * @param owner the {@link CachedUrlSet} owner
+   * @param url the url of interest
+   * @return a {@link UrlCacher} object representing the url.
+   */
+  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url);
 
   /**
    * Return the {@link TitleConfig} that was (or might have been) used to

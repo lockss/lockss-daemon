@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.88 2004-10-02 13:08:25 dshr Exp $
+ * $Id: TestPoll.java,v 1.89 2004-10-06 23:53:05 clairegriffin Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestPoll extends LockssTestCase {
 
     initRequiredServices();
 
-    testau.setPlugin(new MyMockPlugin());
+    testau.setPlugin(new MockPlugin());
 
     initTestPeerIDs();
     initTestMsg();
@@ -397,8 +397,7 @@ public class TestPoll extends LockssTestCase {
                                        testmsg.getLwrBound(),
                                        testmsg.getUprBound());
     }
-    Plugin plugin = au.getPlugin();
-    CachedUrlSet cus = plugin.makeCachedUrlSet(au, cusSpec);
+    CachedUrlSet cus = au.makeCachedUrlSet(cusSpec);
     PollSpec spec = new PollSpec(cus, Poll.CONTENT_POLL);
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     V1Poll p = null;
@@ -521,20 +520,22 @@ public class TestPoll extends LockssTestCase {
       ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
       int opcode = LcapMessage.NAME_POLL_REQ + (i * 2);
       long duration = -1;
-      //  NB calcDuration is not applied to Verify polls.
+     //  NB calcDuration is not applied to Verify polls.
       switch (opcode) {
       case LcapMessage.NAME_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REQ:
-	duration = pf.calcDuration(spec, pollmanager);
+       // this will attempt to schedule and can return -1
+	duration = Math.max(pf.calcDuration(spec, pollmanager), 1000);
 	break;
       case LcapMessage.VERIFY_POLL_REQ:
-	duration = 100000; // Arbitrary
+      case LcapMessage.VERIFY_POLL_REP:
+        duration = 100000; // Arbitrary
 	break;
       default:
 	fail("Bad opcode " + opcode);
 	break;
       }
-	
+
       testV1msg[i] =
 	LcapMessage.makeRequestMsg(spec,
 				   agree_entries,
@@ -574,12 +575,6 @@ public class TestPoll extends LockssTestCase {
     }
   }
 
-  public class MyMockPlugin extends MockPlugin {
-    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-					 CachedUrlSetSpec cuss) {
-      return new PollTestPlugin.PTCachedUrlSet((MockArchivalUnit)owner, cuss);
-    }
-  }
 
   /** Executes the test case
    * @param argv array of Strings containing command line arguments

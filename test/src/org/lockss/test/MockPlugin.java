@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.18 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: MockPlugin.java,v 1.19 2004-10-06 23:53:06 clairegriffin Exp $
  */
 
 /*
@@ -161,17 +161,5 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
     aus.remove(au);
   }
 
-  public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-				       CachedUrlSetSpec spec) {
-    return new MockCachedUrlSet((MockArchivalUnit)owner, spec);
-  }
-
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    return ((MockCachedUrlSet)owner).makeCachedUrl(url);
-  }
-
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    return ((MockCachedUrlSet)owner).makeUrlCacher(url);
-  }
 
 }

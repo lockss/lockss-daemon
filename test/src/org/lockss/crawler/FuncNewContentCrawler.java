@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.7 2004-09-29 19:03:22 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.8 2004-10-06 23:52:56 clairegriffin Exp $
  */
 
 /*
@@ -32,19 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.crawler;
 
-import java.io.File;
-import java.security.MessageDigest;
+import java.io.*;
+import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.simulated.*;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.poller.PollManager;
-import org.lockss.crawler.NewContentCrawler;
-import org.lockss.protocol.*;
+import org.lockss.repository.*;
 import org.lockss.test.*;
-import java.util.Properties;
-import java.util.Iterator;
+import org.lockss.util.*;
 
 public class FuncNewContentCrawler extends LockssTestCase {
   private SimulatedArchivalUnit sau;
@@ -61,7 +57,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
         maxDepth = Integer.parseInt(args[0]);
       } catch (NumberFormatException ex) { }
     }
- 
+
     test.setUp(maxDepth);
     test.testRunSelf();
     test.tearDown();
@@ -133,10 +129,10 @@ public class FuncNewContentCrawler extends LockssTestCase {
        System.out.println("Starting to check through the simulated content. " +
 			  "Be patient to let it finish.");
        checkThruFileTree(f, myCUS);
-       
+
        System.out.println("Check finish.");
     } else {
-      System.out.println("Error: The root path of the simulated" + 
+      System.out.println("Error: The root path of the simulated" +
 			 " content ["+ dir +"] is not a directory");
     }
 
@@ -154,9 +150,9 @@ public class FuncNewContentCrawler extends LockssTestCase {
 	   String fileUrl = sau.mapContentFileNameToUrl(f[ix].getAbsolutePath());
 	   int fileLevel = sau.getLinkDepth(fileUrl);
 	   System.out.println("File: " + fileUrl + " in Level " + fileLevel);
-	   
-	   CachedUrl cu = sau.getPlugin().makeCachedUrl(myCUS, fileUrl);
-	   if (fileLevel <= maxDepth) { 
+
+	   CachedUrl cu = sau.makeCachedUrl(myCUS, fileUrl);
+	   if (fileLevel <= maxDepth) {
 	     assertTrue(cu !=null && cu.hasContent());
 	   } else {
 	     assertFalse(cu.hasContent());

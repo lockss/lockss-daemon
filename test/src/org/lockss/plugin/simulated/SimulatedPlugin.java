@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.19 2004-09-27 22:38:38 smorabito Exp $
+ * $Id: SimulatedPlugin.java,v 1.20 2004-10-06 23:53:05 clairegriffin Exp $
  */
 
 /*
@@ -306,10 +306,5 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
     aus.remove(au);
   }
 
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    String fileRoot =
-      ((SimulatedArchivalUnit)owner.getArchivalUnit()).getRootDir();
-    return new SimulatedUrlCacher(owner, url, fileRoot);
-  }
 
 }

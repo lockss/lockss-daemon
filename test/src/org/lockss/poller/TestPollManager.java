@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.72 2004-09-29 18:57:57 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.73 2004-10-06 23:53:05 clairegriffin Exp $
  */
 
 /*
@@ -358,9 +358,7 @@ public class TestPollManager extends LockssTestCase {
   public void testMakePollRequest() throws Exception {
     try {
       CachedUrlSet cus = null;
-      Plugin plugin = testau.getPlugin();
-      cus = plugin.makeCachedUrlSet(testau,
-				    new RangeCachedUrlSetSpec(rooturls[1]));
+      cus = testau.makeCachedUrlSet( new RangeCachedUrlSetSpec(rooturls[1]));
       PollSpec spec = new PollSpec(cus, lwrbnd, uprbnd, Poll.CONTENT_POLL);
       assertTrue(pollmanager.callPoll(spec));
     }
@@ -530,7 +528,7 @@ public class TestPollManager extends LockssTestCase {
 
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
-    ((MockArchivalUnit)testau).setPlugin(new MyMockPlugin());
+    ((MockArchivalUnit)testau).setPlugin(new MockPlugin());
     PluginUtil.registerArchivalUnit(testau);
 
     Properties p = new Properties();
@@ -599,13 +597,6 @@ public class TestPollManager extends LockssTestCase {
     }
     catch (Exception ex) {
       return null;
-    }
-  }
-
-  public class MyMockPlugin extends MockPlugin {
-    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-					 CachedUrlSetSpec cuss) {
-      return new PollTestPlugin.PTCachedUrlSet((MockArchivalUnit)owner, cuss);
     }
   }
 

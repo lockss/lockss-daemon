@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.25 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: StaticContentPlugin.java,v 1.26 2004-10-06 23:53:06 clairegriffin Exp $
  */
 
 /*
@@ -88,22 +88,6 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     aus.remove(au);
   }
 
-  public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-				       CachedUrlSetSpec cuss) {
-    return new SCUS(owner, cuss);
-  }
-
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    CachedUrl res = (CachedUrl)cuMap.get(url);;
-    log.debug("makeCachedUrl(" + url + ") = " + res);
-    return (CachedUrl)cuMap.get(url);
-  }
-
-  public org.lockss.plugin.UrlCacher makeUrlCacher(CachedUrlSet owner,
-						   String url) {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
 
   public class SAU extends BaseArchivalUnit {
 
@@ -117,6 +101,21 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
 
     protected String makeStartUrl() {
       throw new UnsupportedOperationException("Not Implemented");
+    }
+
+    public CachedUrlSet makeCachedUrlSet( CachedUrlSetSpec cuss) {
+      return new SCUS(this, cuss);
+    }
+
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      CachedUrl res = (CachedUrl)cuMap.get(url);;
+      log.debug("makeCachedUrl(" + url + ") = " + res);
+      return (CachedUrl)cuMap.get(url);
+    }
+
+    public org.lockss.plugin.UrlCacher makeUrlCacher(CachedUrlSet owner,
+                                                     String url) {
+      throw new UnsupportedOperationException("Not implemented");
     }
 
     public boolean shouldBeCached(String url) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.26 2004-09-27 22:39:12 smorabito Exp $
+ * $Id: BasePlugin.java,v 1.27 2004-10-06 23:52:55 clairegriffin Exp $
  */
 
 /*
@@ -242,19 +242,6 @@ public abstract class BasePlugin
    */
   public LockssDaemon getDaemon() {
     return theDaemon;
-  }
-
-  public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
-                                       CachedUrlSetSpec cuss) {
-    return new BaseCachedUrlSet(owner, cuss);
-  }
-
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    return new BaseCachedUrl(owner, url);
-  }
-
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    return new BaseUrlCacher(owner, url);
   }
 
   /**

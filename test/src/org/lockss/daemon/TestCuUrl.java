@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.7 2004-09-29 18:58:18 tlipkis Exp $
+ * $Id: TestCuUrl.java,v 1.8 2004-10-06 23:52:57 clairegriffin Exp $
  */
 
 /*
@@ -47,7 +47,6 @@ import org.lockss.repository.LockssRepositoryImpl;
 public class TestCuUrl extends LockssTestCase {
   static Logger log = Logger.getLogger("TestCuUrl");
   private MockLockssDaemon theDaemon;
-  private PluginManager pluginMgr;
   private UrlManager uMgr;
   private StaticContentPlugin.SAU au;
 
@@ -61,7 +60,7 @@ public class TestCuUrl extends LockssTestCase {
     theDaemon = getMockLockssDaemon();
 
     // make and init a real Pluginmgr
-    pluginMgr = theDaemon.getPluginManager();
+    theDaemon.getPluginManager();
 
     // make and start a UrlManager to set up the URLStreamHandlerFactory
     uMgr = new UrlManager();
@@ -117,7 +116,7 @@ public class TestCuUrl extends LockssTestCase {
     CachedUrlSet cus = au.getAuCachedUrlSet();
     log.debug("cus: " + cus);
     // non-existent url should return null CU
-    assertNull(au.getPlugin().makeCachedUrl(cus, "foobarnotthere"));
+    assertNull(au.makeCachedUrl(cus, "foobarnotthere"));
 
     tryUrl(au, cus, 0);
     tryUrl(au, cus, 1);
@@ -127,7 +126,7 @@ public class TestCuUrl extends LockssTestCase {
       throws Exception {
 
     // get a test CU
-    CachedUrl cu = au.getPlugin().makeCachedUrl(cus, new String(testUrls[n]));
+    CachedUrl cu = au.makeCachedUrl(cus, new String(testUrls[n]));
     assertNotNull(cu);
 
     // make a CuUrl URL from it

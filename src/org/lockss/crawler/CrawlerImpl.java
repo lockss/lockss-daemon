@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.33 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.34 2004-10-06 23:52:54 clairegriffin Exp $
  */
 
 /*
@@ -362,8 +362,7 @@ public abstract class CrawlerImpl implements Crawler {
    * connection pool set. */
   protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
     ArchivalUnit au = cus.getArchivalUnit();
-    Plugin plugin = au.getPlugin();
-    UrlCacher uc = plugin.makeUrlCacher(cus, url);
+    UrlCacher uc = au.makeUrlCacher(cus, url);
     uc.setConnectionPool(connectionPool);
     //uc.setPermissionMap(permission
     return uc;
