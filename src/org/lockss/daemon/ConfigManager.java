@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.17 2004-01-21 08:26:31 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.18 2004-02-23 09:13:22 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,8 @@ public class ConfigManager implements LockssManager {
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
   protected static Logger log =
-    Logger.getLogger("Config", Logger.getInitialDefaultLevel());
+    Logger.getLoggerWithInitialLevel("Config",
+				     Logger.getInitialDefaultLevel());
 
   protected LockssDaemon theDaemon = null;
 
@@ -279,8 +280,13 @@ public class ConfigManager implements LockssManager {
     }
     Configuration newConfig = newConfiguration();
     //    newConfig.setConfigUrls(urlList);
-    boolean gotIt = newConfig.loadList(urlList);
-    return gotIt ? newConfig : null;
+    try {
+      boolean gotIt = newConfig.loadList(urlList);
+      return gotIt ? newConfig : null;
+    } catch (Exception e) {
+      log.error("Error loading config", e);
+      return null;
+    }
   }
 
   boolean updateConfig() {
