@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.24 2003-07-27 01:41:24 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.25 2003-07-28 17:24:27 tlipkis Exp $
  */
 
 /*
@@ -137,6 +137,21 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("2", config.get("b"));
     // check that subconfig of sealed config is sealed
     assertSealed(config.getConfigTree("b"));
+  }    
+
+  public void testCopy() {
+    Configuration c1 = newConfiguration();
+    c1.put("a", "1");
+    c1.put("b", "2");
+    c1.put("b.x", "3");
+    c1.seal();
+    Configuration c2 = c1.copy();
+    assertEquals(3, c2.keySet().size());
+    assertEquals("1", c2.get("a"));
+    assertEquals("2", c2.get("b"));
+    assertFalse(c2.isSealed());
+    c2.put("a", "cc");
+    assertEquals("cc", c2.get("a"));
   }    
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
