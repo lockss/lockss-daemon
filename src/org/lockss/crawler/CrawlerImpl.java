@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.23 2004-07-19 22:34:40 dcfok Exp $
+ * $Id: CrawlerImpl.java,v 1.24 2004-07-28 18:20:22 tlipkis Exp $
  */
 
 /*
@@ -159,7 +159,7 @@ public abstract class CrawlerImpl implements Crawler {
     // fetch and cache the permission pages
     UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
     logger.debug("Checking for permissions on " + permissionPage);
-    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
+    uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
     try {
       if (!au.shouldBeCached(permissionPage)) {
 // 	alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR,
