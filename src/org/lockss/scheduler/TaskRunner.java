@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.28 2004-10-01 09:27:19 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.29 2004-10-02 01:16:44 tlipkis Exp $
  */
 
 /*
@@ -986,6 +986,7 @@ class TaskRunner {
 	      log.warning("Exception in task callback", e);
 	    }
 	  }
+	  pokeWDog();
 	}
 	stopWDog();
 	triggerWDogOnExit(false);
