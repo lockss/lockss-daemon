@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.44 2004-06-01 08:35:35 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.45 2004-06-07 19:21:23 tlipkis Exp $
  */
 
 /*
@@ -56,8 +56,7 @@ public abstract class LockssServlet extends HttpServlet
 
   // Constants
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
-//   static final String PARAM_IS_CLUSTER_ADMIN =
-//     Configuration.PREFIX + "clusterAdmin";
+
   static final String PARAM_CONTACT_ADDR =
     Configuration.PREFIX + "admin.contactEmail";
   static final String DEFAULT_CONTACT_ADDR = "contactnotset@notset";
@@ -66,6 +65,10 @@ public abstract class LockssServlet extends HttpServlet
     Configuration.PREFIX + "platform.version";
   static final String PARAM_ADMIN_ADDRESS =
     Configuration.PREFIX + "admin.IPAddress";
+
+  // Name given to form element whose value is the action that should be
+  // performed when the form is submitted.  (Not always the submit button.)
+  public static final String ACTION_TAG = "lockssAction";
 
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
@@ -104,6 +107,7 @@ public abstract class LockssServlet extends HttpServlet
   protected String adminAddr;
   protected String adminHost;
   protected String localAddr;
+  protected MultiPartRequest multiReq;
 
   private Vector footnotes;
   private int footNumber;
@@ -111,6 +115,8 @@ public abstract class LockssServlet extends HttpServlet
   ServletDescr _myServletDescr = null;
   private String myName = null;
 
+  // number submit buttons sequentially so unit tests can find them
+  private int submitButtonNumber = 0;
 
   /** Marker for servlets whose class can't be found */
   static class UnavailableServletMarker {
@@ -280,21 +286,31 @@ public abstract class LockssServlet extends HttpServlet
       if (clientAddr == null) {
 	clientAddr = getLocalIPAddr();
       }
+
+      submitButtonNumber = 0;
       lockssHandleRequest();
     }
     finally {
-      // Don't hold on to stuff forever
-      req = null;
-      resp = null;
-      reqURL = null;
-      adminDir = null;
-      localAddr = null;
-      footnotes = null;
-      _myServletDescr = null;
-      myName = null;
+      resetMyLocals();
+      resetLocals();
     }
   }
 
+  protected void resetLocals() {
+  }
+
+  protected void resetMyLocals() {
+    // Don't hold on to stuff forever
+    req = null;
+    resp = null;
+    reqURL = null;
+    adminDir = null;
+    localAddr = null;
+    footnotes = null;
+    _myServletDescr = null;
+    myName = null;
+    multiReq = null;
+  }
 
   // Return descriptor of running servlet
   protected ServletDescr myServletDescr() {
@@ -405,12 +421,6 @@ public abstract class LockssServlet extends HttpServlet
 
   boolean isLargeLogo() {
     return myServletDescr().isLargeLogo();
-  }
-
-  // machine predicates
-  boolean isClusterAdmin() {
-    return false;
-//     return Configuration.getBooleanParam(PARAM_IS_CLUSTER_ADMIN, false);
   }
 
   // user predicates
@@ -753,6 +763,39 @@ public abstract class LockssServlet extends HttpServlet
     return new Image("/images/" + file, w, h, border);
   }
 
+  /** Return a button that invokes the javascript submit routine with the
+   * specified action */
+  protected Element submitButton(String label, String action) {
+    return submitButton(label, action, null, null);
+  }
+
+
+  /** Return a button that invokes the javascript submit routine with the
+   * specified action, first storing the value in the specified form
+   * prop. */
+  protected Element submitButton(String label, String action,
+				 String prop, String value) {
+    Tag btn = new Tag("input");
+    btn.attribute("type", "button");
+    btn.attribute("value", label);
+    btn.attribute("id", "lsb." + (++submitButtonNumber));
+    setTabOrder(btn);
+    StringBuffer sb = new StringBuffer(40);
+    sb.append("lockssButton(this, '");
+    sb.append(action);
+    sb.append("'");
+    if (prop != null && value != null) {
+      sb.append(", '");
+      sb.append(prop);
+      sb.append("', '");
+      sb.append(value);
+      sb.append("'");
+    }
+    sb.append(")");
+    btn.attribute("onClick", sb.toString());
+    return btn;
+  }
+
   /** Add html tags to grey the text if isGrey is true */
   protected String greyText(String txt, boolean isGrey) {
     if (!isGrey) {
@@ -850,7 +893,19 @@ public abstract class LockssServlet extends HttpServlet
 	}
       }
     }
+    multiReq = multi;
     return multi;
+  }
+
+  public String getParameter(String name) {
+    String val = req.getParameter(name);
+    if (val == null && multiReq != null) {
+      val = multiReq.getString(name);
+    }
+    if (StringUtil.isNullString(val)) {
+      return null;
+    }
+    return val;
   }
 
   /** Return the daemon instance. */

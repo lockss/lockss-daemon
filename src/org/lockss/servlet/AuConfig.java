@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.26 2004-05-26 07:01:25 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.27 2004-06-07 19:21:25 tlipkis Exp $
  */
 
 /*
@@ -60,10 +60,6 @@ public class AuConfig extends LockssServlet {
 
   static Logger log = Logger.getLogger("AuConfig");
 
-  // Name given to form element whose value is the action that should be
-  // performed when the form is submitted.  (Not always the submit button.)
-  static final String ACTION_TAG = "lockssAction";
-
   static final String REPO_TAG = "lockssRepository";
 
   // prefix added to config prop keys when used in form, to avoid
@@ -87,11 +83,8 @@ public class AuConfig extends LockssServlet {
   Collection defKeys;			// plugin's definitional keys
   java.util.List editKeys;		// non-definitional keys
 
-  // number submit buttons sequentially so unit tests can find them
-  private int submitButtonNumber = 0;
-
   // don't hold onto objects after request finished
-  private void resetLocals() {
+  protected void resetLocals() {
     plugin = null;
     auConfig = null;
     formConfig = null;
@@ -100,6 +93,7 @@ public class AuConfig extends LockssServlet {
     defKeys = null;
     editKeys = null;
     multiReq = null;
+    super.resetLocals();
   }
 
   public void init(ServletConfig config) throws ServletException {
@@ -113,7 +107,6 @@ public class AuConfig extends LockssServlet {
     statusMsg = null;
     formConfig = null;
     titleConfig = null;
-    submitButtonNumber = 0;
     multiReq = null;
 
     action = req.getParameter(ACTION_TAG);
@@ -171,7 +164,6 @@ public class AuConfig extends LockssServlet {
 	displayAuSummary();
       }
     }
-    resetLocals();
   }
 
   /** Serve the contents of the local AU config file, as
@@ -1010,39 +1002,6 @@ public class AuConfig extends LockssServlet {
       comp.add("</font></center><br>");
     }
     return comp;
-  }
-
-  /** Return a button that invokes the javascript submit routine with the
-   * specified action */
-  protected Element submitButton(String label, String action) {
-    return submitButton(label, action, null, null);
-  }
-
-
-  /** Return a button that invokes the javascript submit routine with the
-   * specified action, first storing the value in the specified form
-   * prop. */
-  protected Element submitButton(String label, String action,
-				 String prop, String value) {
-    Tag btn = new Tag("input");
-    btn.attribute("type", "button");
-    btn.attribute("value", label);
-    btn.attribute("id", "lsb." + (++submitButtonNumber));
-    setTabOrder(btn);
-    StringBuffer sb = new StringBuffer(40);
-    sb.append("lockssButton(this, '");
-    sb.append(action);
-    sb.append("'");
-    if (prop != null && value != null) {
-      sb.append(", '");
-      sb.append(prop);
-      sb.append("', '");
-      sb.append(value);
-      sb.append("'");
-    }
-    sb.append(")");
-    btn.attribute("onClick", sb.toString());
-    return btn;
   }
 
   protected Element radioButton(String label, String key, boolean checked) {

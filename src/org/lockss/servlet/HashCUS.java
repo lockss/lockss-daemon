@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.6 2004-05-12 19:54:36 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.7 2004-06-07 19:21:24 tlipkis Exp $
  */
 
 /*
@@ -119,6 +119,11 @@ public class HashCUS extends LockssServlet {
   private String errMsg;
   private String statusMsg;
 
+  protected void resetLocals() {
+    resetVars();
+    super.resetLocals();
+  }
+
   void resetVars() {
     auid = null;
     url = null;
@@ -169,7 +174,6 @@ public class HashCUS extends LockssServlet {
 	}
       }
     displayPage();
-    resetVars();
   }
 
   boolean sendStream() {
@@ -257,14 +261,6 @@ public class HashCUS extends LockssServlet {
     }
     log.debug(""+cus);
     return true;
-  }
-
-  private String getParameter(String key) {
-    String val = req.getParameter(key);
-    if (StringUtil.isNullString(val)) {
-      return null;
-    }
-    return val;
   }
 
   private byte[] getB64Param(String key) {
