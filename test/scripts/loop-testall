@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cnt=0
+
+while rant test-all; do
+  let cnt++
+done
+echo
+echo Exited after $cnt iterations
