@@ -1,6 +1,6 @@
 #! /bin/bash
 
-PROP_URL_LIST="../common.txt lockss.txt lockss.opt"
+PROP_URL_LIST="../common.xml lockss.txt lockss.opt"
 
 # local copy of lockss jars allows recompile while we're running
 mkdir -p lib
