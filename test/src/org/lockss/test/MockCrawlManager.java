@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManager.java,v 1.4 2003-03-03 19:33:06 troberts Exp $
+ * $Id: MockCrawlManager.java,v 1.5 2003-03-03 19:36:54 troberts Exp $
  */
 
 /*
@@ -72,7 +72,6 @@ public class MockCrawlManager implements CrawlManager, LockssManager {
    */
   public boolean canTreeWalkStart(ArchivalUnit au, 
 				  CrawlManager.Callback cb, Object cookie) {
-    if (au.shouldCrawlForNewContent(
     scheduleNewContentCrawl(au, cb, cookie);
     return false;
   }
