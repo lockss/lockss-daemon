@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.136 2005-03-22 07:24:31 tlipkis Exp $
+ $Id: build.xml,v 1.137 2005-03-29 05:44:04 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -213,9 +213,12 @@ Args:
                      value="${classes}/org/lockss/htdocs/build.properties"/>
   <property name="build.filerev.file"
                      value="${classes}/revision-info"/>
+  <property name="jcoverage.ser" value="jcoverage.ser" />
 
   <property name="ant-contrib.resource"
                           value="net/sf/antcontrib/antcontrib.properties"/>
+
+  <property name="requires-1.4" value="test/requires-1.4"/>
 
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
@@ -500,6 +503,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${generated.classes}" quiet="true"/>
     <delete dir="${generated.test.classes}" quiet="true"/>
     <delete dir="${instrumented}" quiet="true"/>
+    <delete file="${jcoverage.ser}" quiet="true"/>
     <delete file="${lockss.tools.jar}" quiet="true"/>
     <delete file="${lockss.tools.test.jar}" quiet="true"/>
     <delete file="${lockss.generated.jar}" quiet="true"/>
@@ -558,6 +562,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
            >
        <classpath refid="test.compile.classpath" />
        <include name="**/*.java"/>
+       <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
     </javac>
     <copy todir="${test.classes}" >
        <fileset dir="${test.src}" >
@@ -1314,6 +1319,8 @@ Test results in ${test.results}
         <fileset dir="${test.src}">
           <include name="${include}" />
           <exclude name="${exclude}" />
+          <excludesfile name="${excludesfile}" if="excludesfile" />
+          <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
         </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
@@ -1475,6 +1482,7 @@ Test results in ${test.results}
      <else>
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
+         <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
       </fileset>
       <!-- test whether fileset is empty by converting it to a string -->
       <pathconvert refid="test.one.filesetid" property="test.one.files"
@@ -1573,6 +1581,25 @@ Test results in ${tools.test.results}
   <target name="test-tools-etal"
           description="Test the tools and generated classes"
 	  depends="test-tools,test-generated">
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="test-xml"
+   description="Run xmllint on xml files" >
+    <apply executable="xmllint" dir="${basedir}"
+           failonerror="true"
+           resultproperty="xmllint.result"
+           relative="true"
+           parallel="false">
+      <arg value="--noout"/>
+      <arg value="--valid"/>
+      <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
+      <fileset dir="${basedir}" includes="src/**/*.xml"/>
+<!--
+      <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
+      <fileset dir="${basedir}" includes="*/*/src/**/*.xml"/>
+-->
+    </apply>
   </target>
 
   <!-- ==================================================================== -->
@@ -1799,7 +1826,6 @@ Test results in ${tools.test.results}
   <target name="jcover"
    depends="prepare.run.test,check.junit,jar-tests"
    description="Run a set of test classes through jcoverage, named by the 'include' property." >
-    <property name="jcoverage.ser" value="jcoverage.ser" />
     <property name="tests" value="${include}/Test*" />
     <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
     <delete file="${jcoverage.ser}" quiet="true" />
