@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.21 2003-07-17 23:40:11 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.22 2003-07-21 08:36:07 tlipkis Exp $
  */
 
 /*
@@ -167,6 +167,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   // Descriptors for all servlets.
+  protected static ServletDescr SERVLET_AU_CONFIG =
+    new ServletDescr(AuConfig.class, "Journal Configuration");
   protected static ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
   protected static ServletDescr SERVLET_PROXY_INFO =
@@ -176,10 +178,10 @@ public abstract class LockssServlet extends HttpServlet
 		     ServletDescr.DEBUG_ONLY);
   protected static ServletDescr LINK_LOGS =
     new ServletDescr(null, "Logs", "log", ServletDescr.DEBUG_ONLY);
-   protected static ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
-     new ServletDescr(AdminIpAccess.class, "Admin Access Control");
-   protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
-     new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
+  protected static ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
+    new ServletDescr(AdminIpAccess.class, "Admin Access Control");
+  protected static ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
+    new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
 //    protected static ServletDescr SERVLET_ADMIN_HOME =
 //      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
 //    protected static ServletDescr SERVLET_JOURNAL_STATUS =
@@ -195,6 +197,7 @@ public abstract class LockssServlet extends HttpServlet
   // All servlets must be listed here (even if not in van table).
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
+     SERVLET_AU_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
      SERVLET_PROXY_INFO,
