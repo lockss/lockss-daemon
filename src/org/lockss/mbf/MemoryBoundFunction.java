@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.1 2003-07-21 02:39:29 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.2 2003-07-23 02:58:20 dshr Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import org.lockss.util.*;
  */
 public abstract class MemoryBoundFunction {
   protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
-  protected static int pathLen = 0;
   protected static byte[] basis = null;
   protected static File basisFile = null;
 
@@ -47,6 +46,7 @@ public abstract class MemoryBoundFunction {
   protected long arrayIndexStart;
   protected boolean verify;
   protected boolean finished;
+  protected int pathLen;
 
   /**
    * Public constructor for an object that will compute a proof
@@ -58,8 +58,8 @@ public abstract class MemoryBoundFunction {
    * @param eVal the effort sizer (# of low-order zeros in destination)
    *
    */
-  public MemoryBoundFunction(byte[] nVal, int eVal) {
-    setup(nVal, eVal);
+  public MemoryBoundFunction(byte[] nVal, long eVal, int lVal) {
+    setup(nVal, eVal, lVal);
     arrayIndexStart = -1;
   }
 
@@ -70,15 +70,16 @@ public abstract class MemoryBoundFunction {
    * @param sVal the starting point chosen by the prover
    * 
    */
-  public MemoryBoundFunction(byte[] nVal, long eVal, long sVal) {
-    setup(nVal, eVal);
+  public MemoryBoundFunction(byte[] nVal, long eVal, int lVal, long sVal) {
+    setup(nVal, eVal, lVal);
     arrayIndexStart = sVal;
     verify = true;
   }
 
-  private void setup(byte[] nVal, long eVal) {
+  private void setup(byte[] nVal, long eVal, int lVal) {
     nonce = nVal;
     e = eVal;
+    pathLen = lVal;
     finished = false;
     verify = false;
   }
@@ -130,9 +131,8 @@ public abstract class MemoryBoundFunction {
   }
 
   // test-only configuration
-  protected static void configure(File f, int l) {
+  protected static void configure(File f) {
     basisFile = f;
-    pathLen = l;
     logger.debug("configuration file " + basisFile.getPath() +
 		   " length " + basisFile.length());
   }

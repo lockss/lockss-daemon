@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.1 2003-07-21 02:39:29 dshr Exp $
+ * $Id: MBF1.java,v 1.2 2003-07-23 02:58:20 dshr Exp $
  */
 
 /*
@@ -58,9 +58,9 @@ public class MBF1 extends MemoryBoundFunction {
    * @param eVal the effort sizer (# of low-order zeros in destination)
    *
    */
-  public MBF1(byte[] nVal, int eVal)
+  public MBF1(byte[] nVal, int eVal, int lVal)
     throws MemoryBoundFunctionException {
-    super(nVal, eVal);
+    super(nVal, eVal, lVal);
     pathIndex = 0;
     arrayIndex = -1;
     ensureConfigured();
@@ -73,9 +73,9 @@ public class MBF1 extends MemoryBoundFunction {
    * @param sVal the starting point chosen by the prover
    * 
    */
-  public MBF1(byte[] nVal, int eVal, long sVal)
+  public MBF1(byte[] nVal, int eVal, int lVal, long sVal)
     throws MemoryBoundFunctionException {
-    super(nVal, eVal, sVal);
+    super(nVal, eVal, lVal, sVal);
     pathIndex = 0;
     arrayIndex = sVal;
     ensureConfigured();
