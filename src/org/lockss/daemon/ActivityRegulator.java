@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.33 2004-08-02 02:59:38 tlipkis Exp $
+ * $Id: ActivityRegulator.java,v 1.34 2004-08-18 00:15:00 tlipkis Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class ActivityRegulator
 
   protected void setConfig(Configuration newConfig,
                            Configuration prevConfig,
-                           Set changedKeys) {
+                           Configuration.Differences changedKeys) {
     // nothing to config
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.5 2004-08-02 02:59:35 tlipkis Exp $
+ * $Id: TestLockssDaemon.java,v 1.6 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class TestLockssDaemon extends LockssTestCase {
     }
     protected void setConfig(Configuration newConfig,
 			     Configuration prevConfig,
-			     Set changedKeys) {
+			     Configuration.Differences changedKeys) {
     }
     public void initService(LockssApp app) {
       events.add(new Event(this, "initService", app));

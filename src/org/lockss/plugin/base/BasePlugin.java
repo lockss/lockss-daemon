@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.23 2004-02-23 09:15:55 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.24 2004-08-18 00:14:56 tlipkis Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public abstract class BasePlugin
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration prevConfig,
-					 Set changedKeys) {
+					 Configuration.Differences changedKeys) {
 	  setConfig(newConfig, prevConfig, changedKeys);
 	}});
     installCacheExceptionHandler();
@@ -121,7 +121,7 @@ public abstract class BasePlugin
    */
   protected void setConfig(Configuration newConfig,
 			   Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     setTitleConfigFromConfig(newConfig.getConfigTree(PARAM_TITLE_DB));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.17 2004-07-12 23:01:53 smorabito Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.18 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,19 @@ public class ConfigurationPropTreeImpl extends Configuration {
     }
     ConfigurationPropTreeImpl c0 = (ConfigurationPropTreeImpl)c;
     return PropUtil.equalProps(props, c0.getPropertyTree());
+  }
+
+  /** Return the set of keys whose values differ.
+   * @param otherConfig the config to compare with.  May be null.
+   */
+  public Configuration.Differences differences(Configuration otherConfig) {
+    if (otherConfig == null) {
+      return Configuration.DIFFERENCES_ALL;
+    }
+    ConfigurationPropTreeImpl oc = (ConfigurationPropTreeImpl)otherConfig;
+    Set diffSet = PropUtil.differentKeysAndPrefixes(getPropertyTree(),
+						    oc.getPropertyTree());
+    return new Configuration.DifferencesSet(diffSet);
   }
 
   /** Return the set of keys whose values differ.

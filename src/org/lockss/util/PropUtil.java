@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.7 2004-05-04 22:21:56 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.8 2004-08-18 00:14:53 tlipkis Exp $
  */
 /*
 
@@ -99,13 +99,12 @@ public class PropUtil {
   }
 
   /**
-   * Compare two Properties, return the set of keys whose values are not
-   * equal.  (The set may contain keys that don't exist in one or the other
-   * Properties).
+   * Compare two Properties, return the set of keys whose values differ,
+   * including keys that don't exist in one or the other Properties).
    * @param p1 first Properties
    * @param p2 second Properties
-   * @return Set of keys whose values differ, or null if
-   * there are no differences.
+   * @return Set of keys whose values differ.  Returns empty set if there
+   * are no differences.
    */
   public static Set differentKeys(Properties p1, Properties p2) {
     if (p1 == null) {
@@ -130,6 +129,47 @@ public class PropUtil {
     p2Only.removeAll(keys1);
     res.addAll(p2Only);
     return res;
+  }
+
+  /**
+   * Compare two Properties, return the set of keys whose values differ,
+   * including all distinct prefixes of keys whose values differ.
+   * <i>E.g.</i>, if <code>foo.bar.frob</code> is in the set, then both
+   * <code>foo.bar</code> and <code>foo</code> will be in the set.
+   * @param p1 first PropertyTree
+   * @param p2 second PropertyTree
+   * @return Set of keys and prefixes whose values differ.  Returns empty
+   * set if there are no differences.
+   * @throw NullPointerException if either PropertyTree is null
+   */
+  public static Set differentKeysAndPrefixes(PropertyTree p1,
+					     PropertyTree p2) {
+    Set res = new HashSet();
+    Set keys1 = p1.keySet();
+    for (Iterator iter = keys1.iterator(); iter.hasNext();) {
+      String k1 = (String)iter.next();
+      if (! isKeySame(k1, p1, p2)) {
+	addKeyAndPrefixes(res, k1);
+      }
+    }
+    // add all the keys in p2 that don't appear in p1
+    Set p2Only = new HashSet(p2.keySet());
+    p2Only.removeAll(keys1);
+    for (Iterator iter = p2.keySet().iterator(); iter.hasNext();) {
+      String k2 = (String)iter.next();
+      if (!p1.containsKey(k2)) {
+	addKeyAndPrefixes(res, k2);
+      }
+    }
+    return res;
+  }
+
+  private static void addKeyAndPrefixes(Set set, String key) {
+    set.add(key);
+    int pos = 0;
+    while ((pos = key.indexOf(".", pos + 1)) > 0) {
+      set.add(key.substring(0, pos));
+    }
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.43 2004-04-29 10:12:25 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.44 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -292,13 +292,14 @@ class HashQueue implements Serializable {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
-					 Set changedKeys) {
+					 Configuration.Differences changedKeys) {
 	  setConfig(newConfig, changedKeys);
 	}
       });
   }
 
-  private void setConfig(Configuration config, Set changedKeys) {
+  private void setConfig(Configuration config,
+			 Configuration.Differences changedKeys) {
     hashPriority = config.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
     hashStepBytes = config.getInt(PARAM_STEP_BYTES, DEFAULT_STEP_BYTES);
     hashNumSteps = config.getInt(PARAM_NUM_STEPS, DEFAULT_NUM_STEPS);

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.49 2004-08-02 02:59:37 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.50 2004-08-18 00:14:56 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,8 @@ public class LcapComm extends BaseLockssDaemonManager {
   LcapComm(SocketFactory factory, Configuration config) {
     sockFact = factory;
     configure(config,
-	      ConfigManager.EMPTY_CONFIGURATION, Collections.EMPTY_SET);
+	      ConfigManager.EMPTY_CONFIGURATION,
+	      Configuration.DIFFERENCES_ALL);
   }
 
   /**
@@ -145,7 +146,7 @@ public class LcapComm extends BaseLockssDaemonManager {
    */
   protected void setConfig(Configuration config,
 			   Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     if (configShot.once()) {
       configure(config, prevConfig, changedKeys);
     }
@@ -154,7 +155,7 @@ public class LcapComm extends BaseLockssDaemonManager {
   /** Internal config, so can invoke from test constructor  */
   void configure(Configuration config,
 		 Configuration prevConfig,
-		 Set changedKeys) {
+		 Configuration.Differences changedKeys) {
     String groupName = null;
     String uniSendToName = null;
     try {

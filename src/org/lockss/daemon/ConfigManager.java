@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.31 2004-08-09 02:59:09 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.32 2004-08-18 00:15:00 tlipkis Exp $
  */
 
 /*
@@ -265,7 +265,7 @@ public class ConfigManager implements LockssManager {
   void runCallback(Configuration.Callback cb,
 		   Configuration newConfig,
 		   Configuration oldConfig,
-		   Set diffs) {
+		   Configuration.Differences diffs) {
     try {
       cb.configurationChanged(newConfig, oldConfig, diffs);
     } catch (Exception e) {
@@ -276,12 +276,12 @@ public class ConfigManager implements LockssManager {
   void runCallback(Configuration.Callback cb,
 		   Configuration newConfig,
 		   Configuration oldConfig) {
-    runCallback(cb, newConfig, oldConfig, newConfig.differentKeys(oldConfig));
+    runCallback(cb, newConfig, oldConfig, newConfig.differences(oldConfig));
   }
 
   void runCallbacks(Configuration newConfig,
 		    Configuration oldConfig,
-		    Set diffs) {
+		    Configuration.Differences diffs) {
     // copy the list of callbacks as it could change during the loop.
     List cblist = new ArrayList(configChangedCallbacks);
     for (Iterator iter = cblist.iterator(); iter.hasNext();) {
@@ -356,7 +356,7 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     setCurrentConfig(newConfig);
-    Set diffs = newConfig.differentKeys(oldConfig);
+    Configuration.Differences diffs = newConfig.differences(oldConfig);
     logConfigLoaded(newConfig, diffs, loadedCacheFiles);
     runCallbacks(newConfig, oldConfig, diffs);
     haveConfig.fill();
@@ -364,7 +364,7 @@ public class ConfigManager implements LockssManager {
   }
 
   private void logConfigLoaded(Configuration newConfig,
-			       Set diffs,
+			       Configuration.Differences diffs,
 			       List loadedCacheFiles) {
     StringBuffer sb = new StringBuffer("Config updated");
     if (configUrlList != null || loadedCacheFiles != null) {
@@ -475,8 +475,9 @@ public class ConfigManager implements LockssManager {
     config.put(accessParam, includeIps);
   }
 
-  private void logConfig(Configuration config, Set diffs) {
-    SortedSet keys = new TreeSet(diffs);
+  private void logConfig(Configuration config,
+			 Configuration.Differences diffs) {
+    SortedSet keys = new TreeSet(diffs.getDifferenceSet());
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (log.isDebug2() || !key.startsWith(PARAM_TITLE_DB)) {
@@ -933,27 +934,4 @@ public class ConfigManager implements LockssManager {
       }
     }
   }
-
-  /**
-   * The ConfigManager.Callback interface defines the callback registered
-   * by clients of ConfigManager who want to know when the configuration
-   * has changed.
-   */
-  public interface xxCallback {
-    /**
-     * Callback used to inform clients that something in the configuration
-     * has changed.  It is called after the new config is installed as
-     * current, as well as upon registration (if there is a current
-     * configuration at the time).  It is thus safe to rely solely on a
-     * configuration callback to receive configuration information.
-     * @param newConfig  the new (just installed) <code>Configuration</code>.
-     * @param oldConfig  the previous <code>Configuration</code>, or null
-     *                   if there was no previous config.
-     * @param changedKeys  the set of keys whose value has changed.
-     * @see Configuration#registerConfigurationCallback */
-    public void configurationChanged(Configuration newConfig,
-				     Configuration oldConfig,
-				     Set changedKeys);
-  }
-
 }

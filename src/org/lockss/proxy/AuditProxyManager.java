@@ -1,5 +1,5 @@
 /*
- * $Id: AuditProxyManager.java,v 1.2 2004-08-02 03:06:51 tlipkis Exp $
+ * $Id: AuditProxyManager.java,v 1.3 2004-08-18 00:14:55 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class AuditProxyManager extends BaseProxyManager {
   public static final String PARAM_PORT = PREFIX + "port";
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(ProxyManager.PARAM_IP_INCLUDE) ||
 	changedKeys.contains(ProxyManager.PARAM_IP_EXCLUDE) ||

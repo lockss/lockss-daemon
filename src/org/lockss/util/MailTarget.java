@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.9 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: MailTarget.java,v 1.10 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class MailTarget {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
         public void configurationChanged(Configuration newConfig,
 					   Configuration oldConfig,
-					   Set changedKeys) {
+					   Configuration.Differences changedKeys) {
           loadConfiguration();
         }});
     localHostName = IdentityManager.getLocalHostName();

@@ -1,5 +1,5 @@
 /*
- * $Id: SchedService.java,v 1.7 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: SchedService.java,v 1.8 2004-08-18 00:14:54 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class SchedService extends BaseLockssManager {
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
   }
 
   /** Attempt to add a task to the schedule.

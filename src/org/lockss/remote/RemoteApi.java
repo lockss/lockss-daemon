@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.13 2004-08-02 02:59:37 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.14 2004-08-18 00:14:55 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   /** No config */
   protected void setConfig(Configuration config, Configuration oldConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
   }
 
   /** Create or return an AuProxy for the AU corresponding to the auid.

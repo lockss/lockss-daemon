@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.7 2004-05-04 22:21:56 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.8 2004-08-18 00:14:51 tlipkis Exp $
  */
 
 /*
@@ -36,8 +36,8 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import junit.framework.TestCase;
+import org.mortbay.tools.*;
 import org.lockss.test.*;
-
 
 /**
  * Test class for <code>org.lockss.util.PropUtil</code>
@@ -124,6 +124,9 @@ public class TestPropUtil extends TestCase {
   }
 
   public void testDifferentKeys() {
+    assertEquals(p1.keySet(), PropUtil.differentKeys(p1, null));
+    assertEquals(p1.keySet(), PropUtil.differentKeys(null, p1));
+    assertNull(PropUtil.differentKeys(null, null));
     assertEquals(SetUtil.set(), PropUtil.differentKeys(p1, p1));
     assertEquals(SetUtil.set(), PropUtil.differentKeys(p1, p2));
     assertEquals(SetUtil.set("k2"), PropUtil.differentKeys(p1, p3));
@@ -137,6 +140,63 @@ public class TestPropUtil extends TestCase {
     assertEquals(SetUtil.set("k3"), PropUtil.differentKeys(p4, p1));
     assertEquals(SetUtil.set("k1"), PropUtil.differentKeys(p5, p1));
     assertEquals(SetUtil.set("k2","k3"), PropUtil.differentKeys(p6, p1));
+  }
+
+  public void testDifferentKeysAndPrefixesNull() {
+    PropertyTree pt1 = new PropertyTree();
+    try {
+      PropUtil.differentKeysAndPrefixes(pt1, null);
+      fail("differentKeysAndPrefixes with null arg should throw");
+    } catch (NullPointerException e) {
+    }
+    try {
+      PropUtil.differentKeysAndPrefixes(null, pt1);
+      fail("differentKeysAndPrefixes with null arg should throw");
+    } catch (NullPointerException e) {
+    }
+    try {
+      PropUtil.differentKeysAndPrefixes(null, null);
+      fail("differentKeysAndPrefixes with null arg should throw");
+    } catch (NullPointerException e) {
+    }
+  }
+
+  public void testDifferentKeysAndPrefixes() {
+    PropertyTree pt1 = new PropertyTree();
+    PropertyTree pt2 = new PropertyTree();
+    // same value
+    pt1.put("foox.bar.blecch", "123");
+    pt2.put("foox.bar.blecch", "123");
+    // different value
+    pt1.put("foo.bar.blecch", "123");
+    pt2.put("foo.bar.blecch", "124");
+    // same value in subtree in which there are differences
+    pt1.put("foo.bar.bleep", "123");
+    pt2.put("foo.bar.bleep", "123");
+    // pt1-only key, tree
+    pt1.put("foo.bar.gorp", "123");
+    pt1.put("x.y", "123");
+    // pt2-only key, tree
+    pt2.put("foo.bar.blah", "124");
+    pt2.put("bar.foo.blah", "124");
+    Set exp = SetUtil.set("foo", "foo.bar", "foo.bar.blecch",
+			  "foo.bar.gorp", "foo.bar.blah",
+			  "bar", "bar.foo", "bar.foo.blah",
+			  "x", "x.y");
+    assertEquals(exp, PropUtil.differentKeysAndPrefixes(pt1, pt2));
+    assertEquals(exp, PropUtil.differentKeysAndPrefixes(pt2, pt1));
+  }
+
+  public void testDifferentKeysAndPrefixesDoubleDot() {
+    // Due to oddities in PropertyTree (get(foo.bar) is same as get(foo..bar),
+    // don't make any assertions about result, just ensure double dot doesn't
+    // cause error
+    PropertyTree pt1 = new PropertyTree();
+    PropertyTree pt2 = new PropertyTree();
+    pt1.put("foox.bar.blecch", "123");
+    pt2.put("foo.bar..bleep", "123");
+    PropUtil.differentKeysAndPrefixes(pt1, pt2);
+    PropUtil.differentKeysAndPrefixes(pt2, pt1);
   }
 
   public void testPropsToEncodedStringNullProps() {
@@ -169,7 +229,7 @@ public class TestPropUtil extends TestCase {
     props.setProperty("key.3", "val:3");
     props.setProperty("key4", "val.4");
     String actual = PropUtil.propsToCanonicalEncodedString(props);
-    String expected = 
+    String expected =
       "key%261~val%3D1&"+
       "key%2E3~val%3A3&"+
       "key2~val+2&"+
@@ -178,8 +238,8 @@ public class TestPropUtil extends TestCase {
   }
 
   void assertEncodedPropsInverse(Properties props) {
-    String s = PropUtil.propsToCanonicalEncodedString(props);    
-    Properties newProps = PropUtil.canonicalEncodedStringToProps(s);    
+    String s = PropUtil.propsToCanonicalEncodedString(props);
+    Properties newProps = PropUtil.canonicalEncodedStringToProps(s);
     assertEquals(props, newProps);
   }
 

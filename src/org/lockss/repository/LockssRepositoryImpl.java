@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.58 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.59 2004-08-18 00:14:55 tlipkis Exp $
  */
 
 /*
@@ -127,7 +127,7 @@ public class LockssRepositoryImpl
   }
 
   protected void setConfig(Configuration newConfig, Configuration prevConfig,
-                           Set changedKeys) {
+                           Configuration.Differences changedKeys) {
     // at some point we'll have to respond to changes in the available disk
     // space list
 

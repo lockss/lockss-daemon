@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.1 2004-07-12 23:01:52 smorabito Exp $
+ * $Id: RegistryPlugin.java,v 1.2 2004-08-18 00:14:57 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class RegistryPlugin extends BasePlugin {
    */
   protected void setConfig(Configuration newConfig,
 			   Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     // No implementation.
   }
 

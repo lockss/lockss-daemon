@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.70 2004-08-02 02:59:38 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.71 2004-08-18 00:15:00 tlipkis Exp $
  */
 
 /*
@@ -125,7 +125,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   protected void setConfig(Configuration newConfig, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     contentCrawlExpiration =
       newConfig.getTimeInterval(PARAM_NEW_CONTENT_CRAWL_EXPIRATION,
 				DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION);

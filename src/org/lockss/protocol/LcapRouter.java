@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.34 2004-08-02 02:59:37 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.35 2004-08-18 00:14:56 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class LcapRouter extends BaseLockssDaemonManager {
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     fwdRateLimiter =
       RateLimiter.getConfiguredRateLimiter(config, fwdRateLimiter,
 					   PARAM_FWD_PKTS_PER_INTERVAL,

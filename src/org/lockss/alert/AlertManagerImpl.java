@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.6 2004-08-09 02:54:33 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.7 2004-08-18 00:15:01 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -95,7 +95,7 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
 
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
-					Set changedKeys) {
+					Configuration.Differences changedKeys) {
     alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
 				      DEFAULT_ALERTS_ENABLED);
     initialDelay = config.getTimeInterval(PARAM_DELAY_INITIAL,

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.4 2004-08-02 03:06:51 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.5 2004-08-18 00:14:55 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public abstract class BaseProxyManager extends JettyManager {
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
   }
 

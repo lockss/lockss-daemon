@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.4 2004-08-02 03:06:51 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.5 2004-08-18 00:14:54 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,8 @@ public class TinyUi extends BaseServletManager {
   public void startTiny() {
     log.debug("Starting");
     Configuration config = ConfigManager.getCurrentConfig();
-    setConfig(config, ConfigManager.EMPTY_CONFIGURATION, config.keySet());
+    setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
+	      Configuration.DIFFERENCES_ALL);
     startServlets();
   }
 

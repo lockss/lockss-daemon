@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.1 2004-08-02 03:06:51 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.2 2004-08-18 00:14:54 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public abstract class BaseServletManager extends JettyManager {
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     port = config.getInt(PARAM_PORT, DEFAULT_PORT);
     start = config.getBoolean(PARAM_START, DEFAULT_START);

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.9 2004-08-02 03:05:00 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.10 2004-08-18 00:14:54 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-                           Set changedKeys) {
+                           Configuration.Differences changedKeys) {
   }
 
   static class RepoStatusAccessor implements StatusAccessor {

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.128 2004-08-02 02:59:37 tlipkis Exp $
+ * $Id: PollManager.java,v 1.129 2004-08-18 00:14:56 tlipkis Exp $
  */
 
 /*
@@ -796,7 +796,7 @@ public class PollManager  extends BaseLockssDaemonManager {
 
   protected void setConfig(Configuration newConfig,
                            Configuration oldConfig,
-                           Set changedKeys) {
+                           Configuration.Differences changedKeys) {
     long aveDuration = newConfig.getTimeInterval(PARAM_NAMEPOLL_DEADLINE,
                                                   DEFAULT_NAMEPOLL_DEADLINE);
     m_minNamePollDuration = aveDuration - aveDuration / 4;

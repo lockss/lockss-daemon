@@ -1,5 +1,5 @@
 /*
- * $Id: NullMailService.java,v 1.1 2004-07-12 06:28:44 tlipkis Exp $
+ * $Id: NullMailService.java,v 1.2 2004-08-18 00:14:51 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class NullMailService extends BaseLockssManager
   implements MailService {
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
   }
 
   public boolean sendMail(String sender, String recipient, String body) {

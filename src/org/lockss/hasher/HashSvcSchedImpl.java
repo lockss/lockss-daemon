@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.12 2004-08-02 02:59:37 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.13 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class HashSvcSchedImpl
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
 				    DEFAULT_ESTIMATE_PAD_CONSTANT);
     estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,

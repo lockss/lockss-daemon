@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.11 2004-08-02 03:06:51 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.12 2004-08-18 00:14:58 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public abstract class JettyManager extends BaseLockssManager {
 
   // Set Jetty debug properties from config params
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     if (jettyLogInited) {
       if (changedKeys.contains(PARAM_JETTY_DEBUG)) {
 	boolean deb = config.getBoolean(PARAM_JETTY_DEBUG, 

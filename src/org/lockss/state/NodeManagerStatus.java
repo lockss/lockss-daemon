@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.20 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: NodeManagerStatus.java,v 1.21 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class NodeManagerStatus extends BaseLockssDaemonManager {
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-                           Set changedKeys) {
+                           Configuration.Differences changedKeys) {
   }
 
   private static NodeManagerImpl getNodeManager(String key,

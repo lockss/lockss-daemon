@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.66 2004-07-21 18:10:37 smorabito Exp $
+ * $Id: Configuration.java,v 1.67 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,11 @@ public abstract class Configuration {
 
   private static Configuration platformConfig =
     ConfigManager.EMPTY_CONFIGURATION;
+
+  /** A Configuration.Differences object representing a totally different
+   * Configuration */
+  public static Differences DIFFERENCES_ALL = new DifferencesAll();
+
 
   public static Version getPlatformVersion() {
     String ver = getPlatformConfig().get(PARAM_PLATFORM_VERSION);
@@ -251,6 +256,12 @@ public abstract class Configuration {
 
   abstract boolean store(OutputStream ostr, String header)
       throws IOException;
+
+  /** Return a Configuration.Differences representing the set of keys whose
+   * values differ.
+   * @param otherConfig the config to compare with.  May be null.
+   */
+  public abstract Differences differences(Configuration otherConfig);
 
   /** Return the set of keys whose values differ.
    * @param otherConfig the config to compare with.  May be null.
@@ -688,11 +699,59 @@ public abstract class Configuration {
      * @param newConfig  the new (just installed) <code>Configuration</code>.
      * @param oldConfig  the previous <code>Configuration</code>, or null
      *                   if there was no previous config.
-     * @param changedKeys  the set of keys whose value has changed.
+     * @param changes  the set of keys whose value has changed.
      * @see Configuration#registerConfigurationCallback */
     public void configurationChanged(Configuration newConfig,
 				     Configuration oldConfig,
-				     Set changedKeys);
+				     Configuration.Differences changes);
+  }
+
+  /** Differences represents the changes in a Configuration from the previous
+   * Configuration.  Its purpose is to allow Configuration callbacks to
+   * avoid unnecessary expensive work.
+   */
+  public interface Differences {
+    /** Determine whether the value of a key has changed.  Can also be used
+     * to termine whether there have been any changes in a named
+     * Configuration subtree.
+     * @param key the key or key prefix
+     * @return true iff the value of the key, or any key in the tree below
+     * it, has changed. */
+    public boolean contains(String key);
+
+    /** Return the set of changed keys, or null if all keys have changed.
+     * This method should not generally be used. */
+    public Set getDifferenceSet();
+  }
+
+  /** A Differences used when all keys have changed (<i>E.g.</i>, after the
+   * initial config load, or when a new config callback is registered). */
+  static class DifferencesAll implements Differences {
+    public boolean contains(String key) {
+      return true;
+    }
+
+    /** Return null, indicating that all keys have changed. */
+    public Set getDifferenceSet() {
+      return null;
+    }
+  }
+
+  /** A Differences that contains a set of changed keys and key prefixes */
+  static class DifferencesSet implements Differences {
+    private Set diffKeys;
+
+    DifferencesSet(Set diffKeys) {
+      this.diffKeys = diffKeys;
+    }
+
+    public boolean contains(String key) {
+      return diffKeys.contains(key);
+    }
+
+    public Set getDifferenceSet() {
+      return diffKeys;
+    }
   }
 
   /** Exception thrown for errors in accessors. */

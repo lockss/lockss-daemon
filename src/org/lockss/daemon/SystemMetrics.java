@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.22 2004-08-09 02:59:09 tlipkis Exp $
+ * $Id: SystemMetrics.java,v 1.23 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class SystemMetrics extends BaseLockssDaemonManager {
 
   public void setConfig(Configuration newConfig,
 			Configuration prevConfig,
-			Set changedKeys) {
+			Configuration.Differences changedKeys) {
     defaultSpeed = newConfig.getInt(PARAM_DEFAULT_HASH_SPEED,
                                     DEFAULT_DEFAULT_HASH_SPEED);
   }

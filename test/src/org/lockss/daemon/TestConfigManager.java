@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.12 2004-07-21 18:10:38 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.13 2004-08-18 00:14:52 tlipkis Exp $
  */
 
 /*
@@ -133,7 +133,7 @@ public class TestConfigManager extends LockssTestCase {
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
-					 Set changedKeys) {
+					 Configuration.Differences diffs) {
 	  assertNotNull(oldConfig);
 	  configs.add(newConfig);
 	}
@@ -148,9 +148,9 @@ public class TestConfigManager extends LockssTestCase {
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
-					 Set changedKeys) {
-	  System.out.println("Notify: " + changedKeys);
-	  diffSet = changedKeys;
+					 Configuration.Differences diffs) {
+	  System.out.println("Notify: " + diffs);
+	  diffSet = diffs.getDifferenceSet();
 	}
       });
     assertTrue(setCurrentConfigFromUrlList(ListUtil.

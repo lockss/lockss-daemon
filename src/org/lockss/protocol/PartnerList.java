@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.18 2004-06-29 19:16:53 smorabito Exp $
+ * $Id: PartnerList.java,v 1.19 2004-08-18 00:14:56 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ class PartnerList {
 
   /** Configure the PartnerList */
   public void setConfig(Configuration config, Configuration oldConfig,
-			Set changedKeys) {
+			Configuration.Differences changedKeys) {
     maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
     if (maxPartners != partners.getMaximumSize()) {
       partners.setMaximumSize(maxPartners);

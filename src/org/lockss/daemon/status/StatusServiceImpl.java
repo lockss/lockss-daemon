@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.22 2004-07-23 16:45:56 tlipkis Exp $
+ * $Id: StatusServiceImpl.java,v 1.23 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class StatusServiceImpl
   }
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
   }
 
   public StatusTable getTable(String tableName, String key) 

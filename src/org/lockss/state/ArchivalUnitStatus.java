@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.15 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.16 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class ArchivalUnitStatus extends BaseLockssDaemonManager {
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-                           Set changedKeys) {
+                           Configuration.Differences changedKeys) {
     nodesToDisplay = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
   }

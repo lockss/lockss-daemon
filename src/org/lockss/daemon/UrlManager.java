@@ -1,5 +1,5 @@
 /*
- * $Id: UrlManager.java,v 1.3 2004-08-02 02:59:38 tlipkis Exp $
+ * $Id: UrlManager.java,v 1.4 2004-08-18 00:14:59 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class UrlManager extends BaseLockssDaemonManager {
   }
 
   public void setConfig(Configuration config, Configuration prevConfig,
-			Set changedKeys) {
+			Configuration.Differences changedKeys) {
   }
 
   /** A URLStreamHandlerFactory that returns URLStreamHandlers for

@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.64 2004-07-21 07:06:28 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.65 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class TreeWalkHandler {
     configCallback = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
                                        Configuration oldConfig,
-                                       Set changedKeys) {
+                                       Configuration.Differences changedKeys) {
         setConfig(newConfig, oldConfig);
       }
     };

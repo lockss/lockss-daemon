@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.3 2004-08-09 02:59:10 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.4 2004-08-18 00:15:00 tlipkis Exp $
  */
 
 /*
@@ -420,7 +420,7 @@ public abstract class LockssApp {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration prevConfig,
-					 Set changedKeys) {
+					 Configuration.Differences changedKeys) {
 	  setConfig(newConfig, prevConfig, changedKeys);
 	}
       });
@@ -429,7 +429,7 @@ public abstract class LockssApp {
   boolean prevExitOnce = false;
 
   protected void setConfig(Configuration config, Configuration prevConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
 
     // temporary while debugging jvm DNS problem
     if (changedKeys.contains(PARAM_EXERCISE_DNS)) {

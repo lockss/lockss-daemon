@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.20 2004-08-09 02:59:09 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.21 2004-08-18 00:14:54 tlipkis Exp $
  */
 
 /*
@@ -114,13 +114,13 @@ class TaskRunner implements Serializable {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
-					 Set changedKeys) {
+					 Configuration.Differences changedKeys) {
 	  setConfig(newConfig, changedKeys);
 	}
       });
   }
 
-  private void setConfig(Configuration config, Set changedKeys) {
+  private void setConfig(Configuration config, Configuration.Differences changedKeys) {
     statsUpdateInterval =
       config.getTimeInterval(PARAM_STATS_UPDATE_INTERVAL,
 			     DEFAULT_STATS_UPDATE_INTERVAL);

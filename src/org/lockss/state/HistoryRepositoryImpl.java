@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.52 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.53 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class HistoryRepositoryImpl
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
   }
 
   public void setAuConfig(Configuration auConfig) {

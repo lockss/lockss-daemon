@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.3 2004-08-09 02:55:34 tlipkis Exp $
+ * $Id: SmtpMailService.java,v 1.4 2004-08-18 00:14:58 tlipkis Exp $
  *
 
  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -90,7 +90,7 @@ public class SmtpMailService extends BaseLockssManager implements MailService {
 
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
-					Set changedKeys) {
+					Configuration.Differences changedKeys) {
     enabled = config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED);
     maxRetries = config.getInt(PARAM_MAX_RETRIES, DEFAULT_MAX_RETRIES);
     maxQueuelen = config.getInt(PARAM_MAX_QUEUELEN, DEFAULT_MAX_QUEUELEN);

@@ -56,7 +56,7 @@ public class SyslogTarget implements LogTarget{
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
-					 Set changedKeys) {
+					 Configuration.Differences changedKeys) {
 	  setConfig(changedKeys);
 	}});
     try {
@@ -67,7 +67,7 @@ public class SyslogTarget implements LogTarget{
     }
   }
 
-  private void setConfig(Set changedKeys) {
+  private void setConfig(Configuration.Differences changedKeys) {
     port = Configuration.getIntParam(PARAM_PORT, DEFAULT_PORT);
     if (changedKeys.contains(PARAM_HOST)) {
       hostname = Configuration.getParam(PARAM_HOST, DEFAULT_HOST);

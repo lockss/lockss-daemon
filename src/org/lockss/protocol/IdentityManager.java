@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.40 2004-08-02 02:59:37 tlipkis Exp $
+* $Id: IdentityManager.java,v 1.41 2004-08-18 00:14:56 tlipkis Exp $
  */
 
 /*
@@ -532,7 +532,7 @@ public class IdentityManager extends BaseLockssDaemonManager {
   }
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
     reputationDeltas[MAX_DELTA] =
         config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
     reputationDeltas[AGREE_VOTE] =

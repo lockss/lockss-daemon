@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.9 2004-08-02 02:59:38 tlipkis Exp $
+ * $Id: WatchdogService.java,v 1.10 2004-08-18 00:14:59 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -73,7 +73,7 @@ public class WatchdogService extends BaseLockssManager {
 
   protected synchronized void setConfig(Configuration config,
 					Configuration prevConfig,
-					Set changedKeys) {
+					Configuration.Differences changedKeys) {
     if (changedKeys.contains(PARAM_PLATFORM_WDOG_DNS)) {
       doDns = config.getBoolean(PARAM_PLATFORM_WDOG_DNS,
 				DEFAULT_PLATFORM_WDOG_DNS);

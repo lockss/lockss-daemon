@@ -1,5 +1,5 @@
 /*
- * $Id: MockMailService.java,v 1.2 2004-07-19 08:30:24 tlipkis Exp $
+ * $Id: MockMailService.java,v 1.3 2004-08-18 00:14:51 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ public class MockMailService extends BaseLockssManager
   implements MailService {
 
   protected void setConfig(Configuration config, Configuration oldConfig,
-			   Set changedKeys) {
+			   Configuration.Differences changedKeys) {
   }
 
   public boolean sendMail(String sender, String recipient, String body) {

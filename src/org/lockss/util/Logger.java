@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.32 2004-07-12 06:23:21 tlipkis Exp $
+ * $Id: Logger.java,v 1.33 2004-08-18 00:14:53 tlipkis Exp $
  */
 
 /*
@@ -429,9 +429,9 @@ public class Logger {
       new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
-					 Set changedKeys) {
+					 Configuration.Differences diffs) {
 	  setAllLogLevels();
-	  if (changedKeys.contains(PARAM_LOG_TARGETS)) {
+	  if (diffs.contains(PARAM_LOG_TARGETS)) {
 	    setLogTargets();
 	  }
 	}
