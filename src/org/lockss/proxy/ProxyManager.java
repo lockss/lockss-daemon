@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.27 2004-10-18 03:37:19 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.28 2004-10-27 23:53:55 tlipkis Exp $
  */
 
 /*
@@ -64,8 +64,9 @@ public class ProxyManager extends BaseProxyManager {
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
-  /** Accept the old way of identifying repair requests by the user-agent.
-   * Default is true until all caches are converted to the new way. */
+  /** The amount of time after which the "down" status of a host is
+   * cleared, so that a request will once again cause a connection
+   * attempt */
   static final String PARAM_HOST_DOWN_RETRY = PREFIX + "hostDownRetry";
   static final long DEFAULT_HOST_DOWN_RETRY = 10 * Constants.MINUTE;
 
