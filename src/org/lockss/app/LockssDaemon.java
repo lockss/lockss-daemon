@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.50 2004-02-03 02:48:40 eaalto Exp $
+ * $Id: LockssDaemon.java,v 1.51 2004-03-02 03:41:22 eaalto Exp $
  */
 
 /*
@@ -117,6 +117,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String REMOTE_API = "RemoteApi";
   public static String URL_MANAGER = "UrlManager";
   public static String NODE_MANAGER_STATUS = "NodeManagerStatus";
+  public static String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
 
   /* the default classes that represent our managers */
   private static String DEFAULT_CONFIG_MANAGER =
@@ -151,6 +152,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     "org.lockss.remote.RemoteApi";
   private static String DEFAULT_NODE_MANAGER_STATUS =
     "org.lockss.state.NodeManagerStatus";
+  private static String DEFAULT_ARCHIVAL_UNIT_STATUS =
+    "org.lockss.state.ArchivalUnitStatus";
 
   // default AU specific manager factories
   private static String DEFAULT_ACTIVITY_REGULATOR =
@@ -202,6 +205,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
     new ManagerDesc(NODE_MANAGER_STATUS, DEFAULT_NODE_MANAGER_STATUS),
+    new ManagerDesc(ARCHIVAL_UNIT_STATUS, DEFAULT_ARCHIVAL_UNIT_STATUS),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
@@ -447,6 +451,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return (NodeManagerStatus) getManager(NODE_MANAGER_STATUS);
   }
 
+  /**
+   * return the ArchivalUnitStatus instance.
+   * @return ArchivalUnitStatus instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public ArchivalUnitStatus getArchivalUnitStatus() {
+    return (ArchivalUnitStatus) getManager(ARCHIVAL_UNIT_STATUS);
+  }
 
   // LockssAuManager accessors
 
