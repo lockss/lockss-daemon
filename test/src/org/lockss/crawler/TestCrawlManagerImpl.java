@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.27 2003-07-02 00:55:32 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.28 2003-07-02 22:40:13 troberts Exp $
  */
 
 /*
@@ -286,6 +286,29 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     assertTrue("Callback wasn't triggered", cb.wasTriggered());
   }
 
+  public void testRepairCrawlUnsucessfulIfCantGetAllLocks() {
+    String url1 = "http://www.example.com/index1.html";
+    String url2 = "http://www.example.com/index2.html";
+    List urls = ListUtil.list(url1, url2);
+
+    SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
+    TestCrawlCB cb = new TestCrawlCB(sem);
+    CachedUrlSet cus1 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url1));
+    CachedUrlSet cus2 =
+      mau.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(url2));
+
+    activityRegulator.setStartCusActivity(cus1, true);
+    activityRegulator.setStartCusActivity(cus2, false);
+
+    crawlManager.startRepair(mau, urls, cb, null);
+
+    waitForCrawlToFinish(sem);
+    assertTrue("Callback wasn't triggered", cb.wasTriggered());
+    assertFalse("Crawl was successful even though we couldn't lock everything",
+		cb.wasSuccessful());
+  }
+
   public void testRepairCallbackGetsCookie() {
     String cookie = "test cookie str";
     SimpleBinarySemaphore sem = new SimpleBinarySemaphore();
@@ -336,6 +359,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     SimpleBinarySemaphore sem;
     boolean called = false;
     Object cookie;
+    boolean success;
 
     public TestCrawlCB() {
       this(null);
@@ -346,11 +370,16 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     }
 
     public void signalCrawlAttemptCompleted(boolean success, Object cookie) {
+      this.success = success;
       called = true;
       this.cookie = cookie;
       if (sem != null) {
 	sem.give();
       }
+    }
+
+    public boolean wasSuccessful() {
+      return success;
     }
 
     public void signalCrawlSuspended(Object cookie) {
