@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.31 2003-04-28 23:48:12 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.32 2003-04-29 01:36:47 aalto Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ import org.lockss.hasher.HashService;
  */
 public class TestGenericFileCachedUrlSet extends LockssTestCase {
   private LockssRepository repo;
+  private NodeManager nodeMan;
   private MockGenericFileArchivalUnit mgfau;
   private MockLockssDaemon theDaemon;
 
@@ -73,11 +74,15 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
     mgfau.setPlugin(plugin);
     repo = theDaemon.getLockssRepository(mgfau);
-    theDaemon.getNodeManager(mgfau);
+    nodeMan = theDaemon.getNodeManager(mgfau);
+    ((NodeManagerImpl)nodeMan).killTreeWalk();
   }
 
   public void tearDown() throws Exception {
+    repo.stopService();
+    nodeMan.stopService();
     theDaemon.getLockssRepositoryService().stopService();
+    theDaemon.getHistoryRepository().stopService();
     theDaemon.stopDaemon();
     super.tearDown();
   }
@@ -278,8 +283,6 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       "http://www.example.com/testDir/branch1"
       };
     assertIsomorphic(expectedA, childL);
-
-
   }
 
   public void testHashIteratorClassCreation() throws Exception {
@@ -346,8 +349,6 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testHashEstimation() throws Exception {
-    NodeManager nodeMan = theDaemon.getNodeManager(mgfau);
-
     byte[] bytes = new byte[100];
     Arrays.fill(bytes, (byte)1);
     String testString = new String(bytes);
@@ -378,8 +379,6 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testIrregularHashEstimation() throws Exception {
-    NodeManager nodeMan = theDaemon.getNodeManager(mgfau);
-
     // check that estimation isn't changed for single node sets
     createLeaf("http://www.example.com/testDir", null, null);
     CachedUrlSetSpec sSpec =
@@ -406,7 +405,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     fileSet = mgfau.makeCachedUrlSet(rSpec);
     fileSet.storeActualHashDuration(100, null);
     assertEquals(100, nodeMan.getNodeState(fileSet).getAverageHashDuration());
-    fileSet.storeActualHashDuration(100, new HashService.Timeout("test"));
+    fileSet.storeActualHashDuration(10, new HashService.Timeout("test"));
     assertEquals(150, nodeMan.getNodeState(fileSet).getAverageHashDuration());
   }
 
