@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.35 2003-04-23 00:55:52 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.36 2003-04-28 23:48:12 aalto Exp $
  */
 
 /*
@@ -56,8 +56,8 @@ import org.lockss.state.*;
  */
 public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private static final int BYTES_PER_MS_DEFAULT = 100;
+  static final double TIMEOUT_INCREASE = 1.5;
 
-  private long lastDuration = 0;
   private Exception lastException = null;
   private LockssRepository repository;
   private NodeManager nodeManager;
@@ -134,18 +134,37 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
-    //average with current estimate to minimize effect of extreme results
-    if (lastDuration > 0) {
-      lastDuration = (lastDuration + elapsed) / 2;
-    } else {
-      lastDuration = elapsed;
+    //only store estimate if it was a full hash (not ranged or single node)
+    if ((spec instanceof SingleNodeCachedUrlSetSpec) ||
+        ((spec instanceof RangeCachedUrlSetSpec) &&
+         (((RangeCachedUrlSetSpec)spec).getLowerBound()!=null))) {
+      return;
     }
-    nodeManager.hashFinished(this, lastDuration);
-
+    // don't adjust for exceptions, except time-out exceptions
+    long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
     lastException = err;
+    if (err!=null) {
+      if (err instanceof HashService.Timeout) {
+        // increment current estimate by 50%, so as to avoid future timeouts
+        if (lastDuration > 0) {
+          nodeManager.hashFinished(this,
+                                   (long)(lastDuration * TIMEOUT_INCREASE));
+        }
+      }
+    } else {
+      //average with current estimate to minimize effect of extreme results
+      if (lastDuration > 0) {
+        lastDuration = (lastDuration + elapsed) / 2;
+      }
+      else {
+        lastDuration = elapsed;
+      }
+      nodeManager.hashFinished(this, lastDuration);
+    }
   }
 
   public long estimatedHashDuration() {
+    long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
     if (lastDuration>0) return lastDuration;
     else {
       NodeState state = nodeManager.getNodeState(this);

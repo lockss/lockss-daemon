@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.30 2003-04-22 22:59:28 troberts Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.31 2003-04-28 23:48:12 aalto Exp $
  */
 
 /*
@@ -37,11 +37,11 @@ import java.util.*;
 import java.net.MalformedURLException;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
+import org.lockss.state.*;
 import org.lockss.test.*;
 import org.lockss.plugin.simulated.SimulatedArchivalUnit;
 import org.lockss.util.StreamUtil;
-import org.lockss.repository.TestRepositoryNodeImpl;
-import org.lockss.state.*;
+import org.lockss.hasher.HashService;
 
 /**
  * This is the test class for
@@ -58,11 +58,15 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    TestLockssRepositoryServiceImpl.configCacheLocation(tempDirPath);
+    String s = LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION + "=" +
+        tempDirPath +"\n";
+    String s2 = HistoryRepositoryImpl.PARAM_HISTORY_LOCATION + "=" +
+        tempDirPath;
+    TestConfiguration.setCurrentConfigFromString(s + s2);
 
     theDaemon = new MockLockssDaemon();
     theDaemon.getLockssRepositoryService().startService();
-    theDaemon.setNodeManagerService(new MockNodeManagerService());
+    theDaemon.getHistoryRepository().startService();
 
     mgfau = new MockGenericFileArchivalUnit();
     MockPlugin plugin = new MockPlugin();
@@ -116,7 +120,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
 
   public void testFlatSetIteratorThrowsOnBogusURL() throws Exception {
     createLeaf("http://www.example.com/testDir/leaf4", null, null);
-    
+
     CachedUrlSetSpec rSpec =
         new RangeCachedUrlSetSpec("no_such_protoco://www.example.com/testDir");
     CachedUrlSet fileSet = mgfau.makeCachedUrlSet(rSpec);
@@ -303,13 +307,13 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     assertRightClass((CachedUrlSetNode)setIt.next(),
 		     "http://www.example.com/testDir/branch2/branch3", true);
     assertRightClass((CachedUrlSetNode)setIt.next(),
-		     "http://www.example.com/testDir/branch2/branch3/leaf2", 
+		     "http://www.example.com/testDir/branch2/branch3/leaf2",
 		     false);
     assertRightClass((CachedUrlSetNode)setIt.next(),
 		     "http://www.example.com/testDir/leaf3", false);
   }
 
-  private void assertRightClass(CachedUrlSetNode element, 
+  private void assertRightClass(CachedUrlSetNode element,
 				String url, boolean isCus) {
     assertEquals(url, element.getUrl());
     if (isCus) {
@@ -342,7 +346,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
   }
 
   public void testHashEstimation() throws Exception {
-    MockNodeManager nodeMan = (MockNodeManager)theDaemon.getNodeManager(mgfau);
+    NodeManager nodeMan = theDaemon.getNodeManager(mgfau);
 
     byte[] bytes = new byte[100];
     Arrays.fill(bytes, (byte)1);
@@ -356,23 +360,54 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     long estimate = fileSet.estimatedHashDuration();
     assertTrue(estimate > 0);
 
-    assertEquals(estimate, ((Long)nodeMan.hashCalls.get(
-        "http://www.example.com/testDir")).longValue());
+    assertEquals(estimate,
+                 nodeMan.getNodeState(fileSet).getAverageHashDuration());
 
     // test return of stored duration
     long estimate2 = fileSet.estimatedHashDuration();
     assertEquals(estimate, estimate2);
     assertEquals(estimate,
-                 ((Long)nodeMan.hashCalls.get(
-        "http://www.example.com/testDir")).intValue());
+                 nodeMan.getNodeState(fileSet).getAverageHashDuration());
 
     // test averaging of durations
     fileSet.storeActualHashDuration(estimate2 + 200, null);
     long estimate3 = fileSet.estimatedHashDuration();
     assertEquals(estimate2 + 100, estimate3);
     assertEquals(estimate3,
-                 ((Long)nodeMan.hashCalls.get(
-        "http://www.example.com/testDir")).intValue());
+                 nodeMan.getNodeState(fileSet).getAverageHashDuration());
+  }
+
+  public void testIrregularHashEstimation() throws Exception {
+    NodeManager nodeMan = theDaemon.getNodeManager(mgfau);
+
+    // check that estimation isn't changed for single node sets
+    createLeaf("http://www.example.com/testDir", null, null);
+    CachedUrlSetSpec sSpec =
+        new SingleNodeCachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mgfau.makeCachedUrlSet(sSpec);
+    fileSet.storeActualHashDuration(123, null);
+    assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
+
+    // check that estimation isn't changed for ranged sets
+    CachedUrlSetSpec rSpec =
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir", "ab", "yz");
+    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet.storeActualHashDuration(123, null);
+    assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
+
+    // check that estimation isn't changed for exceptions
+    rSpec = new RangeCachedUrlSetSpec("http://www.example.com/testDir");
+    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet.storeActualHashDuration(123, new Exception("bad"));
+    assertEquals(-1, nodeMan.getNodeState(fileSet).getAverageHashDuration());
+
+    // check that estimation is grown for timeout exceptions
+    rSpec = new RangeCachedUrlSetSpec("http://www.example.com/testDir");
+    fileSet = mgfau.makeCachedUrlSet(rSpec);
+    fileSet.storeActualHashDuration(100, null);
+    assertEquals(100, nodeMan.getNodeState(fileSet).getAverageHashDuration());
+    fileSet.storeActualHashDuration(100, new HashService.Timeout("test"));
+    assertEquals(150, nodeMan.getNodeState(fileSet).getAverageHashDuration());
   }
 
   private RepositoryNode createLeaf(String url, String content,
@@ -384,6 +419,4 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     String[] testCaseList = {TestGenericFileCachedUrlSet.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
-
-
 }
