@@ -1,5 +1,5 @@
 /*
- * $Id: AdminIpAccess.java,v 1.1 2003-07-17 23:39:44 tlipkis Exp $
+ * $Id: AdminIpAccess.java,v 1.2 2003-07-30 05:37:47 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,15 @@ public class AdminIpAccess extends IpAccessControl {
   static final String AC_PREFIX = ServletManager.IP_ACCESS_PREFIX;
   public static final String PARAM_IP_INCLUDE = AC_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = AC_PREFIX + "exclude";
+
+  private static final String exp =
+    "Enter the list of IP addresses that should be allowed to access the " +
+    "administrative user interface on this cache.  " +
+    commonExp;
+
+  protected String getExplanation() {
+    return exp;
+  }
 
   protected String getIncludeParam() {
     return PARAM_IP_INCLUDE;

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.1 2003-07-17 23:39:44 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.2 2003-07-30 05:37:47 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,15 @@ public class ProxyIpAccess extends IpAccessControl {
   static final String AC_PREFIX = ProxyManager.IP_ACCESS_PREFIX;
   public static final String PARAM_IP_INCLUDE = AC_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = AC_PREFIX + "exclude";
+
+  private static final String exp =
+    "Enter the list of IP addresses that should be allowed to use this " +
+    "cache as a proxy server, and access the content stored on it.  " +
+    commonExp;
+
+  protected String getExplanation() {
+    return exp;
+  }
 
   protected String getIncludeParam() {
     return PARAM_IP_INCLUDE;

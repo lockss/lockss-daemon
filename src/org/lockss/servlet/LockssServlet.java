@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.24 2003-07-27 01:42:20 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.25 2003-07-30 05:37:47 tlipkis Exp $
  */
 
 /*
@@ -517,7 +517,13 @@ public abstract class LockssServlet extends HttpServlet
 	} else {
 	  navTable.cell().attribute("COLSPAN=\"3\"");
 	}
+	if (false /*isThisServlet(d)*/) {
+	  navTable.add("<font size=-1 color=green>");
+	} else {
+	  navTable.add("<font size=-1>");
+	}
 	navTable.add(conditionalSrvLink(d, d.heading, isServletLinkInNav(d)));
+	navTable.add("</font>");
       }
     }
     navTable.newRow();
@@ -527,6 +533,14 @@ public abstract class LockssServlet extends HttpServlet
       Configuration.getParam(PARAM_CONTACT_ADDR, DEFAULT_CONTACT_ADDR);
     navTable.add(new Link("mailto:" + contactAddr, "Contact Us"));
     return navTable;
+  }
+
+  protected Table getExplanationBlock(String text) {
+    Table exp = new Table(0, "width=\"86%\"");
+    exp.center();
+    exp.newCell("align=center");
+    exp.add(text);
+    return exp;
   }
 
   protected String getRequestKey() {
@@ -561,6 +575,11 @@ public abstract class LockssServlet extends HttpServlet
 
   // Common page header
   private Composite getHeader() {
+    String heading = getHeading();
+    if (heading == null) {
+      heading = "Cache Administration";
+    }
+
     Composite comp = new Composite();
     Table table = new Table(0, " cellspacing=2 cellpadding=0 width=\"100%\"");
     comp.add(table);
@@ -576,24 +595,32 @@ public abstract class LockssServlet extends HttpServlet
     table.add(new Link("/index.html", logo));
     table.add(IMAGE_TM);
     table.newCell("valign=center align=center width=\"60%\"");
-    table.add("<h3>Permanent Publishing On The Web</h3>");
+    table.add("<h3>Permanent Publishing On The Web</h3><br>");
+    table.add("<font size=+2><b>");
+    table.add(heading);
+    table.add("</b></font>");
+
+    table.add("<br>");
+    Date startDate = getLockssDaemon().getStartDate();
+    String since =
+      StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
+    table.add(getMachineName() + " at " +
+	      headerDf.format(new Date()) + ", up " + since + "</center>");
 
 //     table.newCell("valign=center align=right width=\"25%\"");
     table.newCell("valign=center align=center width=\"20%\"");
     table.add(getNavTable());
 
-    comp.add("<br><center><font size=+2><b>Cache Administration</b></font></center>");
+//     comp.add("<br><center><font size=+2><b>Cache Administration</b></font></center>");
 //     comp.add("<center><b>" + machineName + "</b></center>");
-    String heading = getHeading();
-    if (heading != null)
-      comp.add("<br><center><font size=+1><b>"+heading+"</b></font></center>");
+//     comp.add("<br><center><font size=+1><b>"+heading+"</b></font></center>");
 
-    Date startDate = getLockssDaemon().getStartDate();
-    String since =
-      StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
-    comp.add("<center>" + getMachineName() + " at " +
-	     headerDf.format(new Date()) + ", up " + since + "</center>");
-    //       comp.add("<center>Running since " + headerDf.format(startDate) + "</center>");
+//     Date startDate = getLockssDaemon().getStartDate();
+//     String since =
+//       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
+//     comp.add("<center>" + getMachineName() + " at " +
+// 	     headerDf.format(new Date()) + ", up " + since + "</center>");
+//     //       comp.add("<center>Running since " + headerDf.format(startDate) + "</center>");
     comp.add("<br>");
     return comp;
   }

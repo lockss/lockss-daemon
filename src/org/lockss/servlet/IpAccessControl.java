@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.7 2003-07-17 23:39:44 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.8 2003-07-30 05:37:47 tlipkis Exp $
  */
 
 /*
@@ -53,9 +53,11 @@ public abstract class IpAccessControl extends LockssServlet {
     "class A, B or C subnets (<code>10.*.*.*</code> ,&nbsp " +
     "<code>172.16.31.*</code>) or CIDR notation " +
     "subnets (<code>172.16.31.0/24</code>). " +
-    "<br>Enter each address or subnet mask on a separate line. " +
-    "<br>Deny addresses supersede Allow addresses." +
-    "<br>If the Allow list is empty, no remote access will be allowed.";
+    "<br>Enter each address or subnet mask on a separate line. ";
+
+  protected static final String commonExp =
+    "To be allowed access, an IP address must match some entry on the " +
+    "allow list, and not match any entry on the deny list.";
 
   static Logger log = Logger.getLogger("IpAcc");
 
@@ -127,6 +129,8 @@ public abstract class IpAccessControl extends LockssServlet {
   private void displayPage(Vector incl, Vector excl)
       throws IOException {
     Page page = newPage();
+    page.add(getExplanationBlock(getExplanation()));
+    page.add("<br>");
     page.add(getIncludeExcludeElement(incl, excl));
     page.add(getFooter());
     page.write(resp.getWriter());
@@ -196,7 +200,7 @@ public abstract class IpAccessControl extends LockssServlet {
     centeredBlock.add(table);
     frm.add(centeredBlock);
     Input submit = new Input(Input.Submit, "action", "Update");
-    frm.add("<center>"+submit+"</center>");
+    frm.add("<br><center>"+submit+"</center>");
     comp.add(frm);
     return comp;
   }
@@ -273,6 +277,8 @@ public abstract class IpAccessControl extends LockssServlet {
 				   getConfigFileName(),
 				   getConfigFileComment());
   }
+
+  protected abstract String getExplanation();
 
   protected abstract String getIncludeParam();
 
