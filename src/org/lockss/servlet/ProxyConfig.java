@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.1 2003-07-13 20:54:53 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.2 2003-07-17 23:40:27 tlipkis Exp $
  */
 
 /*
@@ -74,7 +74,6 @@ public class ProxyConfig extends LockssServlet {
       return;
     }
 
-    // tk - for PAC, set to PAC mime type
     resp.setContentType("text/plain");
 
     try {
@@ -122,8 +121,12 @@ public class ProxyConfig extends LockssServlet {
   void generatePacFile() throws IOException {
     String pac = pi.generatePacFile(urlStems);
     wrtr = resp.getWriter();
-//     resp.setContentType("text/plain");
-    resp.setContentType("application/x-ns-proxy-autoconfig");
+
+    // Serve as PAC mime type if requested
+    String mime = req.getParameter("mime");
+    if ("pac".equalsIgnoreCase(mime)) {
+      resp.setContentType("application/x-ns-proxy-autoconfig");
+    }
 
     wrtr.print(pac);
   }
@@ -156,8 +159,9 @@ public class ProxyConfig extends LockssServlet {
     page.add("<ul>");
     addFmtLink(page, "PAC file", "pac",
 	       "Automatic proxy configuration for browsers. " +
-	       "Paste this URL into your browser's " +
-	       "Automatic proxy configuration: #");
+	       "Place the contents of this file on a server for your users " +
+	       "to configure their browsers (#)" +
+	       srvAbsLink(myServletDescr(), ".", "format=pac&mime=pac"));
 //     addFmtLink(page, "PAC file encapsulating ", "pac",
 // 	       "Automatic proxy configuration for browsers");
     addFmtLink(page, "EZproxy config fragment", "ezproxy",
