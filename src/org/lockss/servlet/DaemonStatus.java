@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.44 2004-10-18 03:41:34 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.45 2004-10-19 10:17:35 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,9 @@ public class DaemonStatus extends LockssServlet {
     statSvc = getLockssDaemon().getStatusService();
     pluginMgr = getLockssDaemon().getPluginManager();
   }
+
+  static final Set fixedParams =
+    SetUtil.set("text", "output", "options", "table", "key", "sort");
 
   /**
    * Handle a request
@@ -218,14 +221,25 @@ public class DaemonStatus extends LockssServlet {
     doTextStatusTable(wrtr);
   }
 
+  private StatusTable makeTable() throws StatusService.NoSuchTableException {
+    StatusTable table = new StatusTable(tableName, tableKey);
+    table.setOptions(tableOptions);
+    for (Enumeration en = req.getParameterNames(); en.hasMoreElements(); ) {
+      String name = (String)en.nextElement();
+      if (!fixedParams.contains(name)) {
+	table.setProperty(name, req.getParameter(name));
+      }
+    }
+    statSvc.fillInTable(table);
+    return table;
+  }
   // build and send an XML DOM Document of the StatusTable
   private void doXmlStatusTable()
       throws IOException, XmlDomBuilder.XmlDomException {
     PrintWriter wrtr = resp.getWriter();
     resp.setContentType("text/xml");
     try {
-      StatusTable statTable = statSvc.getTable(tableName, tableKey,
-					       tableOptions);
+      StatusTable statTable = makeTable();
       XmlStatusTable xmlTable = new XmlStatusTable(statTable);
       Document xmlTableDoc = xmlTable.getTableDocument();
       xmlTable.getXmlDomBuilder().serialize(xmlTableDoc, wrtr);
@@ -280,7 +294,7 @@ public class DaemonStatus extends LockssServlet {
     Page page;
     StatusTable statTable;
     try {
-      statTable = statSvc.getTable(tableName, tableKey, tableOptions);
+      statTable = makeTable();
     } catch (StatusService.NoSuchTableException e) {
       page = newTablePage();
       page.add("No such table: ");
@@ -382,7 +396,7 @@ public class DaemonStatus extends LockssServlet {
   private void doTextStatusTable(PrintWriter wrtr) throws IOException {
     StatusTable statTable;
     try {
-      statTable = statSvc.getTable(tableName, tableKey, tableOptions);
+      statTable = makeTable();
     } catch (StatusService.NoSuchTableException e) {
       wrtr.println("No table: " + e.toString());
       return;
@@ -435,7 +449,7 @@ public class DaemonStatus extends LockssServlet {
 	  Object val = rowMap.get(key);
 	  Object dispVal = StatusTable.getActualValue(val);
 	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	  wrtr.print(key + "=" + valStr);
+	  wrtr.print(key + "=" + StringUtil.csvEncode(valStr));
 	  if (iter.hasNext()) {
 	    wrtr.print(",");
 	  } else {
@@ -635,6 +649,16 @@ public class DaemonStatus extends LockssServlet {
       if (!StringUtil.isNullString(key)) {
 	sb.append("&key=");
 	sb.append(urlEncode(key));
+      }
+      Properties refProps = ref.getProperties();
+      if (refProps != null) {
+	for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext(); ) {
+	  Map.Entry ent = (Map.Entry)iter.next();
+	  sb.append("&");
+	  sb.append(ent.getKey());
+	  sb.append("=");
+	  sb.append(urlEncode((String)ent.getValue()));
+	}
       }
       return srvLink(myServletDescr(), getDisplayString1(ref.getValue(), type),
 		     sb.toString());
