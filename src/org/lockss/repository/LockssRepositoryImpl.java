@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.43 2003-12-23 00:26:14 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.44 2004-01-10 00:53:36 eaalto Exp $
  */
 
 /*
@@ -35,14 +35,13 @@ package org.lockss.repository;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.lang.ref.WeakReference;
+import java.net.MalformedURLException;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
-import java.net.MalformedURLException;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -88,7 +87,6 @@ public class LockssRepositoryImpl
   private static final String TEST_PREFIX = "/#tmp";
 
   private String rootLocation;
-  private ArchivalUnit repoAu;
   private LRUMap nodeCache;
   private ReferenceMap refMap;
   private int cacheHits = 0;
@@ -96,11 +94,9 @@ public class LockssRepositoryImpl
   private int refHits = 0;
   private int refMisses = 0;
   private static Logger logger = Logger.getLogger("LockssRepository");
-  private String baseDir = null;
 
-  LockssRepositoryImpl(String rootPath, ArchivalUnit au) {
+  LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
-    repoAu = au;
     if (!rootLocation.endsWith(File.separator)) {
       // this shouldn't happen
       rootLocation += File.separator;
@@ -123,6 +119,7 @@ public class LockssRepositoryImpl
 
   /** Called between initService() and startService(), then whenever the
    * AU's config changes.
+   * @param auConfig the new configuration
    */
   public void setAuConfig(Configuration auConfig) {
   }
@@ -329,8 +326,7 @@ public class LockssRepositoryImpl
     cacheLocation = extendCacheLocation(cacheLocation);
 
     return new LockssRepositoryImpl(
-        LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au),
-        au);
+        LockssRepositoryImpl.mapAuToFileLocation(cacheLocation, au));
   }
 
   static String extendCacheLocation(String cacheDir) {
