@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.14 2004-08-11 19:41:32 clairegriffin Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.14.6.1 2004-11-18 05:57:39 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin.simulated;
 
 import java.io.*;
 import java.util.*;
+import java.text.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.base.*;
@@ -133,7 +134,7 @@ public class SimulatedContentGenerator {
   private int numBranches = 4;
   // number of files per node
   private int numFilesPerBranch = 10;
-  private int maxFilenameLength = 20;
+  private int maxFilenameLength = -1; // vals <= 0 are ignored.
   private int binaryFileSize = 256;
   private boolean fillOutFilenames = false;
   private boolean oddBranchesHaveContent = false;
@@ -142,6 +143,9 @@ public class SimulatedContentGenerator {
   private boolean isAbnormalFile = false;
   private String abnormalBranchStr = "";
   private int abnormalFileNum = 0;
+
+  // Formatter to pad filename numbers with up to three leading zeros.
+  private static NumberFormat fileNameFormatter = new DecimalFormat("000");
 
   private String contentRoot;
 
@@ -601,26 +605,39 @@ public class SimulatedContentGenerator {
    * @param fileType file type (single type only)
    * @return standard file name
    */
-  public static String getFileName(int fileNum, int fileType) {
-    String fileName = FILE_PREFIX + fileNum;
+  public String getFileName(int fileNum, int fileType) {
+    StringBuffer fileName = new StringBuffer(fileNameFormatter.format(fileNum));
+
+    if (maxFilenameLength > 0) {
+      char[] buf = new char[maxFilenameLength];
+      // Generate maxFilenameLength letters in alphabetical order
+      // to append.
+      for (int i = 0; i < maxFilenameLength; i++) {
+	buf[i] = (char)((i % 26) + 'a');
+      }
+      fileName.append(buf);
+    } else {
+      fileName.append(FILE_PREFIX);
+    }
+    
     switch (fileType) {
       case FILE_TYPE_TXT:
-        fileName += ".txt";
+        fileName.append(".txt");
         break;
       case FILE_TYPE_HTML:
-        fileName += ".html";
+        fileName.append( ".html");
         break;
       case FILE_TYPE_PDF:
-        fileName += ".pdf";
+        fileName.append( ".pdf");
         break;
       case FILE_TYPE_JPEG:
-        fileName += ".jpg";
+        fileName.append( ".jpg");
         break;
       case FILE_TYPE_BIN:
-        fileName += ".bin";
+        fileName.append( ".bin");
         break;
     }
-    return fileName;
+    return fileName.toString();
   }
 
   public static String getDirectoryName(int branchNum) {
