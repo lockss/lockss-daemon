@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.24 2003-05-06 02:25:24 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.25 2003-05-06 20:05:28 aalto Exp $
  */
 
 /*
@@ -292,24 +292,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
    * @return true iff a top level poll should be called
    */
   public boolean shouldCallTopLevelPoll(AuState aus) {
-    Configuration config = Configuration.getCurrentConfig();
     if (nextPollInterval==-1) {
-      long minPollInterval =
-          config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
-                                 DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN);
-      long maxPollInterval =
-          config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MAX,
-                                 DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX);
-      if (maxPollInterval <= minPollInterval) {
-        maxPollInterval = 2 * minPollInterval;
-      }
-      nextPollInterval =
-          Deadline.inRandomRange(minPollInterval,
-                                 maxPollInterval).getRemainingTime();
+      nextPollInterval = getNextPollInterval();
     }
     if (curTopLevelPollProb==-1) {
       // reset to initial prob
-      curTopLevelPollProb = config.getPercentage(
+      curTopLevelPollProb = Configuration.getCurrentConfig().getPercentage(
           PARAM_TOPLEVEL_POLL_PROB_INITIAL, DEFAULT_TOPLEVEL_POLL_PROB_INITIAL);
     }
 
@@ -318,7 +306,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     logger.debug3("Poll interval: "+StringUtil.timeIntervalToString(
         nextPollInterval));
     logger.debug3("Poll likelihood: "+curTopLevelPollProb);
-    if (TimeBase.msSince(aus.getLastTopLevelPollTime()) > nextPollInterval) {
+    if (TimeBase.msSince(aus.getLastTopLevelPollTime()) >= nextPollInterval) {
       // reset poll interval regardless
       nextPollInterval = -1;
       // choose probabilistically whether to call
@@ -329,21 +317,42 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       } else {
         logger.debug("Skipping poll.");
         // decided not to call the poll
-        double topLevelPollProbMax =
-            config.getPercentage(PARAM_TOPLEVEL_POLL_PROB_MAX,
-                                 DEFAULT_TOPLEVEL_POLL_PROB_MAX);
-        if (curTopLevelPollProb < topLevelPollProbMax) {
-          // if less than max prob, increment
-          curTopLevelPollProb += config.getPercentage(
-              PARAM_TOPLEVEL_POLL_PROB_INCREMENT,
-              DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT);
-          if (curTopLevelPollProb > topLevelPollProbMax) {
-            curTopLevelPollProb = topLevelPollProbMax;
-          }
-        }
+        curTopLevelPollProb = incrementPollProb(curTopLevelPollProb);
       }
     }
     return false;
+  }
+
+  long getNextPollInterval() {
+    Configuration config = Configuration.getCurrentConfig();
+    long minPollInterval =
+        config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MIN,
+                               DEFAULT_TOP_LEVEL_POLL_INTERVAL_MIN);
+    long maxPollInterval =
+        config.getTimeInterval(PARAM_TOP_LEVEL_POLL_INTERVAL_MAX,
+                               DEFAULT_TOP_LEVEL_POLL_INTERVAL_MAX);
+    if (maxPollInterval <= minPollInterval) {
+      maxPollInterval = 2 * minPollInterval;
+    }
+    return Deadline.inRandomRange(minPollInterval,
+                                  maxPollInterval).getRemainingTime();
+  }
+
+  double incrementPollProb(double curProb) {
+    Configuration config = Configuration.getCurrentConfig();
+    double topLevelPollProbMax =
+        config.getPercentage(PARAM_TOPLEVEL_POLL_PROB_MAX,
+                             DEFAULT_TOPLEVEL_POLL_PROB_MAX);
+    if (curProb < topLevelPollProbMax) {
+      // if less than max prob, increment
+      curProb += config.getPercentage(
+          PARAM_TOPLEVEL_POLL_PROB_INCREMENT,
+          DEFAULT_TOPLEVEL_POLL_PROB_INCREMENT);
+      if (curProb > topLevelPollProbMax) {
+        curProb = topLevelPollProbMax;
+      }
+    }
+    return curProb;
   }
 
   protected void pause(long milliseconds) {

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.7 2003-04-02 00:19:40 aalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.8 2003-05-06 20:05:28 aalto Exp $
  */
 
 /*
@@ -77,6 +77,7 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
       if (dirContentFile.exists()) {
         return new BufferedInputStream(new FileInputStream(dirContentFile));
       } else {
+        logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
         return null;
       }
     } else {

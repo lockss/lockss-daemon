@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.1 2003-02-24 22:13:42 claire Exp $
+ * $Id: BaseUrlCacher.java,v 1.2 2003-05-06 20:05:28 aalto Exp $
  */
 
 /*
@@ -32,12 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.util.Logger;
 
 /**
  * Abstract base class for UrlCachers.
@@ -46,6 +44,7 @@ import org.lockss.plugin.*;
 public abstract class BaseUrlCacher implements UrlCacher {
   protected CachedUrlSet cus;
   protected String url;
+  protected static Logger logger = Logger.getLogger("UrlCacher");
 
   /**
    * Must invoke this constructor in plugin subclass.
@@ -114,8 +113,17 @@ public abstract class BaseUrlCacher implements UrlCacher {
    * @throws IOException
    */
   public void cache() throws IOException {
-    storeContent(getUncachedInputStream(),
-		 getUncachedProperties());
+    InputStream input = getUncachedInputStream();
+    Properties headers = getUncachedProperties();
+    if (input==null) {
+      logger.error("Received null inputstream for url '"+url+"'.");
+      throw new CachingException("Received null inputstream.");
+    }
+    if (headers==null) {
+      logger.error("Received null headers for url '"+url+"'.");
+      throw new CachingException("Received null headers.");
+    }
+    storeContent(input, headers);
   }
 
   protected abstract void storeContent(InputStream input,
@@ -123,4 +131,10 @@ public abstract class BaseUrlCacher implements UrlCacher {
       throws IOException;
   protected abstract InputStream getUncachedInputStream() throws IOException;
   protected abstract Properties getUncachedProperties() throws IOException;
+
+  public static class CachingException extends IOException {
+    public CachingException(String msg) {
+      super(msg);
+    }
+  }
 }
