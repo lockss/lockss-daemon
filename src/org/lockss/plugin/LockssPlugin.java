@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPlugin.java,v 1.3 2003-02-01 01:30:40 aalto Exp $
+ * $Id: LockssPlugin.java,v 1.4 2003-02-06 23:32:40 troberts Exp $
  */
 
 /*
@@ -99,6 +99,6 @@ public interface LockssPlugin {
    * @param configInfo the properties needed by this Archival Unit
    * @return the ArchivalUnit
    */
-  public ArchivalUnit getAUClass(Properties configInfo);
-
+  public ArchivalUnit findAU(Properties configInfo) 
+      throws AUInstantiationException;
 }
