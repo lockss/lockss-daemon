@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.6 2004-02-05 02:15:27 eaalto Exp $
+ * $Id: ExternalizableMap.java,v 1.7 2004-02-07 06:53:34 eaalto Exp $
  */
 
 /*
@@ -35,20 +35,20 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
-import org.exolab.castor.mapping.*;
-import org.exolab.castor.xml.*;
-import org.lockss.app.*;
-
 /**
  * ExternalizableMap: A class which allows a map to be loaded in or written as
  * an external xml file.
  * @version 1.0
  */
 public class ExternalizableMap {
-  static final String MAPPING_FILE_NAME = "externalmap.xml";
+  /**
+   * The mapping file for the map bean.
+   */
+  public static final String MAPPING_FILE_NAME =
+      "/org/lockss/util/externalmap.xml";
   HashMap descrMap;
-  Mapping mapping = null;
   private static Logger logger = Logger.getLogger("ExternalizableMap");
+  XmlMarshaller marshaller = new XmlMarshaller();
 
   public ExternalizableMap() {
     descrMap = new HashMap();
@@ -62,17 +62,16 @@ public class ExternalizableMap {
 
   public void setMapElement(String descrKey, Object descrElement) {
     synchronized(descrMap) {
-      if(descrElement instanceof URL) {
+      if (descrElement instanceof URL) {
         descrMap.put(descrKey, descrElement.toString());
-      }
-      else {
+      } else {
         descrMap.put(descrKey, descrElement);
       }
     }
   }
 
   public void loadMapFromResource(String mapLocation)
-  throws FileNotFoundException {
+      throws FileNotFoundException {
     InputStream mapStream = getClass().getResourceAsStream(mapLocation);
     if (mapStream == null) {
       descrMap = new HashMap();
@@ -82,13 +81,15 @@ public class ExternalizableMap {
 
     try {
       Reader reader = new BufferedReader(new InputStreamReader(mapStream));
-      Unmarshaller unmarshaller = new Unmarshaller(ExtMapBean.class);
-      unmarshaller.setMapping(getExtMapMapping());
-      ExtMapBean emp = (ExtMapBean) unmarshaller.unmarshal(reader);
-      descrMap = emp.getMapFromLists();
-      reader.close();
-    }
-    catch (org.exolab.castor.xml.MarshalException me) {
+      ExtMapBean emb = (ExtMapBean)marshaller.loadFromReader(reader,
+          ExtMapBean.class, marshaller.getMapping(MAPPING_FILE_NAME));
+      if (emb==null) {
+        descrMap = new HashMap();
+        String err = "Unable to load:" + mapLocation;
+        throw new FileNotFoundException(err);
+      }
+      descrMap = emb.getMapFromLists();
+    } catch (XmlMarshaller.MarshallingException me) {
       // we have a damaged file
       logger.error(me.toString());
       descrMap = new HashMap();
@@ -101,20 +102,16 @@ public class ExternalizableMap {
   }
 
   public void loadMap(String mapLocation, String mapName) {
-    File mapFile = null;
+    String mapFile = mapLocation + File.separator + mapName;
     try {
-      mapFile = new File(mapLocation, mapName);
-      if (!mapFile.exists()) {
+      ExtMapBean emb = (ExtMapBean)marshaller.load(mapFile, ExtMapBean.class,
+          MAPPING_FILE_NAME);
+      if (emb==null) {
         descrMap = new HashMap();
         return;
       }
-      FileReader reader = new FileReader(mapFile);
-      Unmarshaller unmarshaller = new Unmarshaller(ExtMapBean.class);
-      unmarshaller.setMapping(getExtMapMapping());
-      ExtMapBean emp = (ExtMapBean)unmarshaller.unmarshal(reader);
-      descrMap = emp.getMapFromLists();
-      reader.close();
-    } catch (org.exolab.castor.xml.MarshalException me) {
+      descrMap = emb.getMapFromLists();
+    } catch (XmlMarshaller.MarshallingException me) {
       // we have a damaged file
       logger.error(me.toString());
       descrMap = new HashMap();
@@ -127,53 +124,12 @@ public class ExternalizableMap {
 
   public void storeMap(String mapLocation, String mapName) {
     try {
-      File mapDir = new File(mapLocation);
-      if (!mapDir.exists()) {
-        mapDir.mkdirs();
-      }
-      File mapFile = new File(mapDir, mapName);
-      FileWriter writer = new FileWriter(mapFile);
-      ExtMapBean emp = new ExtMapBean();
-      emp.setListsFromMap(descrMap);
-      Marshaller marshaller = new Marshaller(new FileWriter(mapFile));
-      marshaller.setMapping(getExtMapMapping());
-      marshaller.marshal(emp);
-      writer.close();
+      ExtMapBean emb = new ExtMapBean();
+      emb.setListsFromMap(descrMap);
+      marshaller.store(mapLocation, mapName, emb, MAPPING_FILE_NAME);
     } catch (Exception e) {
       //logger.error("Couldn't store map: ", e);
     }
-  }
-
-  private void loadMapping() {
-    if (mapping==null) {
-      URL mappingLoc = getClass().getResource(MAPPING_FILE_NAME);
-      if (mappingLoc==null) {
-        logger.error("Couldn't find resource '"+MAPPING_FILE_NAME+"'");
-        throw new LockssDaemonException("Couldn't find mapping file.");
-      }
-
-      mapping = new Mapping();
-      try {
-        mapping.loadMapping(mappingLoc);
-      } catch (Exception e) {
-        logger.error("Couldn't load mapping file '"+mappingLoc+"'", e);
-        throw new LockssDaemonException("Couldn't load mapping file.");
-      }
-    }
-  }
-
-  public Mapping getExtMapMapping() {
-    if (mapping==null) {
-      loadMapping();
-      if (mapping==null) {
-        logger.error("Mapping file not loaded.");
-        throw new LockssDaemonException("Mapping file not loaded.");
-      }
-    } else if (mapping.getRoot().getClassMappingCount()==0) {
-      logger.error("Mapping file is empty.");
-      throw new LockssDaemonException("Mapping file is empty.");
-    }
-    return mapping;
   }
 
   /*
