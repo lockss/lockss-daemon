@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.15 2004-12-12 23:03:07 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.16 2005-01-04 03:01:38 tlipkis Exp $
  */
 
 /*
@@ -170,7 +170,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       if (auid == null) {
 	row.put("status", "No AUID");
       } else {
-	String auKey = PropKeyEncoder.decode(pluginMgr.auKeyFromAuId(auid));
+	String auKey = pluginMgr.auKeyFromAuId(auid);
 	row.put("auid", auKey);
 	row.put("plugin", PluginManager.pluginNameFromAuId(auid));
 	ArchivalUnit au = pluginMgr.getAuFromId(auid);
@@ -210,7 +210,7 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	      row.put("params", auidProps);
 	    }
 	  } catch (Exception e) {
-	    log.warning("Couldn't decode AUKey: " + auKey, e);
+	    log.warning("Couldn't decode AUKey in " + dir + ": " + auKey, e);
 	  }
 	  if (isOrphaned(auid, auidProps)) {
 	    row.put("status", "Orphaned");
@@ -240,25 +240,11 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
       Plugin plugin = pluginMgr.getPlugin(pluginKey);
       if (plugin == null) return true;
       List descrs = plugin.getAuConfigDescrs();
-      String auKey = PluginManager.auKeyFromAuId(auid);
       if (auidProps == null) {
 	return true;
       }
       Configuration defConfig = ConfigManager.fromProperties(auidProps);
-      return !isConfigCompatibleWithPlugin(defConfig, plugin);
-    }
-
-    boolean isConfigCompatibleWithPlugin(Configuration config, Plugin plugin) {
-      Set have = config.keySet();
-      Set need = new HashSet();
-      for (Iterator iter = plugin.getAuConfigDescrs().iterator();
-	   iter.hasNext();) {
-	ConfigParamDescr descr = (ConfigParamDescr)iter.next();
-	if (descr.isDefinitional()) {
-	  need.add(descr.getKey());
-	}
-      }
-      return have.equals(need);
+      return !AuUtil.isConfigCompatibleWithPlugin(defConfig, plugin);
     }
 
     Properties propsFromFile(File file) {
