@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.13 2003-03-18 22:27:57 troberts Exp $
+ * $Id: StatusTable.java,v 1.14 2003-03-19 04:18:23 tal Exp $
  */
 
 /*
@@ -167,21 +167,20 @@ public class StatusTable {
 
   private static class SortRuleComparator implements Comparator {
     List sortRules;
-    Map colTypeHash;
 
     public SortRuleComparator(List sortRules, List columnDescriptors) {
       this.sortRules = sortRules;
-      this.colTypeHash = getTypeHash(columnDescriptors);
+      setSortTypes(columnDescriptors);
     }
 
-    private HashMap getTypeHash(List columnDescriptors) {
-      HashMap typeHash = new HashMap(columnDescriptors.size());
-      Iterator it = columnDescriptors.iterator();
+    private void setSortTypes(List columnDescriptors) {
+      Iterator it = sortRules.iterator();
       while (it.hasNext()) {
-	ColumnDescriptor col = (ColumnDescriptor) it.next();
-	typeHash.put(col.getColumnName(), new Integer(col.getType()));
+	SortRule rule = (SortRule)it.next();
+	if (rule.getColumnType() < 0) {
+	  rule.inferColumnType(columnDescriptors);
+	}
       }
-      return typeHash;
     }
 
     public int compare(Object a, Object b) {
@@ -197,14 +196,7 @@ public class StatusTable {
 	Object valB = rowB.get(colName);
 
 	
-	Integer type = (Integer)colTypeHash.get(colName);
-	if (type == null) {
-	  //XXX currently this will throw a NullPointerException
-	  //XXX leave for debugging, remove before shipping
-	  logger.error("Got bad column name: "+colName);
-	}
-
-	switch (type.intValue()) {
+	switch (sortRule.getColumnType()) {
 	case ColumnDescriptor.TYPE_IP_ADDRESS:
 	  returnVal = compareInetAddresses((InetAddress)valA, 
 					   (InetAddress)valB);
@@ -247,10 +239,16 @@ public class StatusTable {
   public static class SortRule {
     String columnName;
     boolean sortAscending;
+    int columnType = -1;
     
     public SortRule(String columnName, boolean sortAscending) {
       this.columnName = columnName;
       this.sortAscending = sortAscending;
+    }
+
+    public SortRule(String columnName, boolean sortAscending, int columnType) {
+      this(columnName, sortAscending);
+      this.columnType = columnType;
     }
     /**
      * @returns name of the field to sort on
@@ -260,11 +258,36 @@ public class StatusTable {
     }
     
     /**
+     * @returns the value type for the column
+     */
+    public int getColumnType(){
+      return columnType;
+    }
+    
+    /**
      * @returns true if this column should be sorted in ascending order,
      * false if it should be sorted in descending order
      */
     public boolean sortAscending(){
       return sortAscending;
+    }
+
+    /**
+     * Lookup the column type in the columnDescriptors, store in self
+     * @param columnDescriptors
+     */
+    void inferColumnType(List columnDescriptors){
+      for (Iterator iter = columnDescriptors.iterator(); iter.hasNext(); ) {
+	ColumnDescriptor col = (ColumnDescriptor)iter.next();
+	if (columnName.equals(col.getColumnName())) {
+	  columnType = col.getType();
+	  return;
+	}
+      }
+      // XXX this isn't really an error, just somebody sorting on a
+      // column that isn't displayed.
+      logger.warning("Unknown type for sort column: "+ columnName);
+      columnType = ColumnDescriptor.TYPE_INT;
     }
   }
 
