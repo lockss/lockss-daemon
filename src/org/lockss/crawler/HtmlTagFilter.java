@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.1 2002-12-10 02:20:35 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.2 2002-12-12 23:14:30 aalto Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 import org.lockss.util.*;
 
 /**
- * This class is used to filter all content from a reader between two string 
+ * This class is used to filter all content from a reader between two string
  * (for instance "<!--" and "-->"
  */
 public class HtmlTagFilter extends Reader{
@@ -60,7 +60,7 @@ public class HtmlTagFilter extends Reader{
   }
 
   /**
-   * Create a HtmlTagFilter that will skip everything between the two tags of 
+   * Create a HtmlTagFilter that will skip everything between the two tags of
    * pair, properly handling nested tags
    * @param reader reader to filter from
    * @param pair TagPair representing the pair of strings to filter between
@@ -69,19 +69,19 @@ public class HtmlTagFilter extends Reader{
     this(reader);
     if (pair == null) {
       throw new IllegalArgumentException("Called with a null tag pair");
-    } 
+    }
     this.pair = pair;
     bufferCapacity = pair.getMaxTagLength();//getMaxTagLength(pairs);
   }
   /**
-   * Create a filter with multiple tags.  When filtering with multiple tags 
+   * Create a filter with multiple tags.  When filtering with multiple tags
    * it behaves as though everything between each pair is removed sequentially
    * (ie, everything between the first pair is filtered, then the second pair
-   * then the third, etc).  
+   * then the third, etc).
    *
    * @param reader reader to filter from
    * @param pairs List of TagPairs to filter between.
-   * @see read()
+   * @see HtmlTagFilter#read()
    */
   public HtmlTagFilter(Reader reader, List pairs) {
     // XXX add check to make sure no tag is a substring of another
@@ -100,11 +100,12 @@ public class HtmlTagFilter extends Reader{
   }
 
   /**
+   * Reads the next character.
    * @return next character or -1 if there is nothing left
    * @throws IOException if the reader it's constructed with throws
    */
   public int read() throws IOException {
-    //read until the buffer is at capacity 
+    //read until the buffer is at capacity
     //or there's nothing more in the reader
 
     //XXX do this more efficiently
@@ -130,12 +131,14 @@ public class HtmlTagFilter extends Reader{
 
  /**
    * Pull chars off the reader and put them into the char buffer until
-   * the reader has no more or we're at bufferCapacity.  
-   *
-   * return false if there were not enough chars on the reader to do this
+   * the reader has no more or we're at bufferCapacity.
+   * @param charBuffer a List of Character objects
+   * @param reader a Reader to pull chars from
+   * @return false if there were not enough chars on the reader to do this
+   * @throws IOException if the reader it's constructed with throws
    */
-  private boolean addCharToBuffer(List charBuffer, 
-				  Reader reader) 
+  private boolean addCharToBuffer(List charBuffer,
+				  Reader reader)
       throws IOException {
     int curKar;
     if ((curKar = reader.read()) == -1) {
@@ -168,27 +171,27 @@ public class HtmlTagFilter extends Reader{
   }
 
 
-  private void readThroughTag(List charBuffer, Reader reader, 
-			      TagPair pair) 
+  private void readThroughTag(List charBuffer, Reader reader,
+			      TagPair pair)
   throws IOException {
     int tagNesting = 0;
     logger.debug("reading through tag pair "+pair+" in "+charBuffer);
     do {
       logger.debug("tagNesting: "+tagNesting);
       if (startsWithTag(charBuffer, pair.getStart())) {
-	if (!removeAndReplaceChars(charBuffer, 
+	if (!removeAndReplaceChars(charBuffer,
 				   reader, pair.getStart().length())) {
 	  return;
 	}
 	tagNesting++;
       } else if (startsWithTag(charBuffer, pair.getEnd())) {
-	if (!removeAndReplaceChars(charBuffer, 
+	if (!removeAndReplaceChars(charBuffer,
 				   reader, pair.getEnd().length())) {
 	  return;
 	}
 	tagNesting--;
       } else {
-	if (!removeAndReplaceChars(charBuffer, 
+	if (!removeAndReplaceChars(charBuffer,
 				   reader, 1)) {
 	  return;
 	}
@@ -196,8 +199,8 @@ public class HtmlTagFilter extends Reader{
     } while (tagNesting > 0);
   }
 
-  private boolean removeAndReplaceChars(List charBuffer, 
-					Reader reader, int numChars) 
+  private boolean removeAndReplaceChars(List charBuffer,
+					Reader reader, int numChars)
   throws IOException {
     for (int ix=0; ix<numChars; ix++) {
       logger.debug("One loop: "+charBuffer);
@@ -282,8 +285,8 @@ public class HtmlTagFilter extends Reader{
     }
 
     public String toString() {
-      StringBuffer sb = new StringBuffer(start.length() 
-					 + end.length() 
+      StringBuffer sb = new StringBuffer(start.length()
+					 + end.length()
 					 + 10);
       sb.append("[TagPair: ");
       sb.append(start);
@@ -292,7 +295,7 @@ public class HtmlTagFilter extends Reader{
       sb.append("]");
       return sb.toString();
     }
-    
+
     public boolean equals(Object obj) {
       TagPair pair = (TagPair) obj;
       return (start.equals(pair.getStart()) && end.equals(pair.getEnd()));
