@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.63 2003-03-20 00:14:43 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.64 2003-03-20 01:53:21 aalto Exp $
  */
 
 /*
@@ -64,7 +64,6 @@ public class NodeManagerImpl implements NodeManager {
   private NodeManager theManager = null;
   static HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
-  long treeWalkEstimate = -1;
 
   ArchivalUnit managedAu;
   private AuState auState;
@@ -279,24 +278,33 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   public long getEstimatedTreeWalkDuration() {
-    if (treeWalkEstimate==-1) {
-      if (treeWalkThread!=null) {
-        treeWalkEstimate = treeWalkThread.getEstimatedTreeWalkDuration();
-      } else {
-        logger.warning("Can't estimate treewalk duration if thread not started.");
-        return 1;
+    long treeWalkEstimate = -1;
+    if (treeWalkThread!=null) {
+      logger.debug("Estimating treewalk...");
+      logger.debug3("Checking thread estimate...");
+      treeWalkEstimate  = treeWalkThread.getEstimatedTreeWalkDuration();
+      if (treeWalkEstimate < 0) {
+        treeWalkThread.calculateEstimatedTreeWalkDuration();
+
+        // give up after 10*the test duration
+        Deadline quitDeadline =
+            Deadline.in(10*treeWalkThread.treeWalkTestDuration);
+        while ((treeWalkEstimate < 0) && (!quitDeadline.expired())) {
+          treeWalkEstimate = treeWalkThread.getEstimatedTreeWalkDuration();
+          // sleep for a test duration
+          Deadline sleepDeadline =
+              Deadline.in(treeWalkThread.treeWalkTestDuration);
+          try {
+            sleepDeadline.sleep();
+          } catch (InterruptedException ie) { }
+        }
       }
+      logger.debug("Estimate: "+treeWalkEstimate);
+    } else {
+      logger.warning("Can't estimate treewalk duration if thread not started.");
+      return 1;
     }
     return treeWalkEstimate;
-  }
-
-  void updateEstimate(long elapsedTime) {
-    if (treeWalkEstimate==-1) {
-      treeWalkEstimate = elapsedTime;
-    } else {
-      // average with current estimate
-      treeWalkEstimate = (treeWalkEstimate + elapsedTime) / 2;
-    }
   }
 
   NodeState addNodeState(CachedUrlSet cus) {
@@ -459,6 +467,8 @@ public class NodeManagerImpl implements NodeManager {
   }
 
   void callTopLevelPoll() {
+    // make sure the treewalk has been estimated
+    getEstimatedTreeWalkDuration();
     try {
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
       new PollSpec(managedAu.getAUCachedUrlSet()));

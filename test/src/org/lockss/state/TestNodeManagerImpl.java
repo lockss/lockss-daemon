@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.44 2003-03-20 00:01:35 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.45 2003-03-20 01:53:21 aalto Exp $
  */
 
 /*
@@ -260,18 +260,6 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     nodeManager.stopService();
     assertNull(nodeManager.treeWalkThread);
-  }
-
-  public void testEstimatedTreeWalk() {
-    //XXX fix using simulated time
-    nodeManager.startService();
-    long estimate = nodeManager.getEstimatedTreeWalkDuration();
-    assertTrue(estimate > 0);
-    long newEstimate = 100;
-    nodeManager.updateEstimate(newEstimate);
-    long expectedEst = (estimate + newEstimate) / 2;
-    assertEquals(expectedEst, nodeManager.getEstimatedTreeWalkDuration());
-    nodeManager.stopService();
   }
 
   public void testMapErrorCodes() {

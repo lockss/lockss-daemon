@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkThread.java,v 1.2 2003-03-20 00:01:35 aalto Exp $
+ * $Id: TreeWalkThread.java,v 1.3 2003-03-20 01:53:21 aalto Exp $
  */
 
 /*
@@ -84,6 +84,9 @@ public class TreeWalkThread extends Thread {
   boolean goOn = true;
   Deadline deadline;
 
+  long treeWalkEstimate = -1;
+  EstimationThread estThread = null;
+
   Configuration.Callback configCallback;
 
   TreeWalkThread(String name, NodeManagerImpl manager,
@@ -113,54 +116,39 @@ public class TreeWalkThread extends Thread {
         PARAM_TREEWALK_ESTIMATE_DURATION, DEFAULT_TREEWALK_ESTIMATE_DURATION);
   }
 
-  public long getEstimatedTreeWalkDuration() {
-    // estimate via short walk
-    logger.debug("Estimating treewalk for: "+theAu.getName());
-    long timeTaken = 0;
-    long startTime = TimeBase.nowMs();
-    // start with top-level cus
-    CachedUrlSet cus = theAu.getAUCachedUrlSet();
-    Deadline estDeadline = Deadline.in(treeWalkTestDuration);
-    int nodesWalked = recurseEstimate(cus, estDeadline, 0);
-
-    timeTaken = TimeBase.nowMs() - startTime;
-    logger.debug("Treewalk estimate finished in time "+timeTaken+"ms with "+
-                 nodesWalked + " nodes walked.");
-    if (timeTaken == 0) {
-      logger.warning("Test finished in zero time after walking " +
-                     nodesWalked + " nodes.");
-      // returning a harmless constant
-      return 1;
-    }
-    // calculate
-    double nodesPerMs = ((double)timeTaken / nodesWalked);
-    // check size (node count) of tree
-    int nodeCount = manager.nodeMap.size();
-    return (long)(nodeCount * nodesPerMs);
-  }
-
-  int recurseEstimate(CachedUrlSet cus, Deadline estDeadline,
-                       int nodesWalked) {
-    // get the node state for the cus
-    // this should be the most expensive operation, since there
-    // are likely to be file operations involved
-    logger.debug3("Recursing estimate on cus: "+cus.getUrl());
-    NodeState state = manager.getNodeState(cus);
-    nodesWalked++;
-    Iterator children = cus.flatSetIterator();
-    while (!estDeadline.expired() && children.hasNext()) {
-      CachedUrlSetNode node = (CachedUrlSetNode)children.next();
-      if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL_SET) {
-        // recurse on the child cus
-        nodesWalked = recurseEstimate((CachedUrlSet)node, estDeadline, nodesWalked);
-      } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
-        // open a new state for the leaf and increment
-        state = manager.getNodeState(
-            theAu.makeCachedUrlSet(node.getUrl(), null, null));
-        nodesWalked++;
+  /**
+   * Starts calculating a new estimated treewalk duration by starting up an
+   * EstimationThread.
+   */
+  synchronized void calculateEstimatedTreeWalkDuration() {
+    if ((estThread==null) && (treeWalkEstimate==-1)) {
+      logger.debug("Estimating treewalk for: " + theAu.getName());
+      estThread = new EstimationThread();
+      estThread.start();
+    } else {
+      if (estThread!=null) {
+        logger.debug3("Calculation already in progress.");
+      } else {
+        logger.debug3("Treewalk estimation already concluded.");
       }
     }
-    return nodesWalked;
+  }
+
+  /**
+   * Returns the current treewalk estimate.
+   * @return the estimate, in ms
+   */
+  long getEstimatedTreeWalkDuration() {
+    return treeWalkEstimate;
+  }
+
+  void updateEstimate(long elapsedTime) {
+    if (treeWalkEstimate==-1) {
+      treeWalkEstimate = elapsedTime;
+    } else {
+      // average with current estimate
+      treeWalkEstimate = (treeWalkEstimate + elapsedTime) / 2;
+    }
   }
 
   void doTreeWalk() {
@@ -181,7 +169,7 @@ public class TreeWalkThread extends Thread {
           logger.debug("Tree walk started: "+theAu.getName());
           nodeTreeWalk(manager.nodeMap);
           long elapsedTime = TimeBase.nowMs() - startTime;
-          manager.updateEstimate(elapsedTime);
+          updateEstimate(elapsedTime);
         }
       }
     }
@@ -297,6 +285,9 @@ public class TreeWalkThread extends Thread {
     if (deadline != null) {
       deadline.expire();
     }
+    if (estThread!=null) {
+      estThread.interrupt();
+    }
   }
 
   public void run() {
@@ -312,6 +303,67 @@ public class TreeWalkThread extends Thread {
           deadline.sleep();
         } catch (InterruptedException ie) { }
       }
+    }
+  }
+
+  // for testing only
+  EstimationThread getTestThread() {
+    return new EstimationThread();
+  }
+
+  class EstimationThread extends Thread {
+
+    public void run() {
+      startEstimateCalculation();
+    }
+
+    // estimate via short walk
+    void startEstimateCalculation() {
+      long timeTaken = 0;
+      long startTime = TimeBase.nowMs();
+      // start with top-level cus
+      CachedUrlSet cus = theAu.getAUCachedUrlSet();
+      Deadline estDeadline = Deadline.in(treeWalkTestDuration);
+      int nodesWalked = recurseEstimate(cus, estDeadline, 0);
+
+      timeTaken = TimeBase.nowMs() - startTime;
+      logger.debug("Treewalk estimate finished in time " + timeTaken + "ms with " +
+                   nodesWalked + " nodes walked.");
+      if (timeTaken == 0) {
+        logger.warning("Test finished in zero time after walking " +
+                       nodesWalked + " nodes.");
+        // set to a harmless constant
+        treeWalkEstimate = 1;
+      }
+      // calculate
+      double nodesPerMs = ( (double) timeTaken / nodesWalked);
+      // check size (node count) of tree
+      int nodeCount = manager.nodeMap.size();
+      treeWalkEstimate = (long) (nodeCount * nodesPerMs);
+    }
+
+    private int recurseEstimate(CachedUrlSet cus, Deadline estDeadline,
+                         int nodesWalked) {
+      // get the node state for the cus
+      // this should be the most expensive operation, since there
+      // are likely to be file operations involved
+      logger.debug3("Recursing estimate on cus: "+cus.getUrl());
+      NodeState state = manager.getNodeState(cus);
+      nodesWalked++;
+      Iterator children = cus.flatSetIterator();
+      while (!estDeadline.expired() && children.hasNext()) {
+        CachedUrlSetNode node = (CachedUrlSetNode)children.next();
+        if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL_SET) {
+          // recurse on the child cus
+          nodesWalked = recurseEstimate((CachedUrlSet)node, estDeadline, nodesWalked);
+        } else if (node.getType()==CachedUrlSetNode.TYPE_CACHED_URL) {
+          // open a new state for the leaf and increment
+          state = manager.getNodeState(
+              theAu.makeCachedUrlSet(node.getUrl(), null, null));
+          nodesWalked++;
+        }
+      }
+      return nodesWalked;
     }
   }
 }
