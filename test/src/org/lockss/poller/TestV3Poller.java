@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.18 2004-11-24 21:33:22 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.19 2004-11-27 22:18:46 dshr Exp $
  */
 
 /*
@@ -531,8 +531,8 @@ public class TestV3Poller extends LockssTestCase {
     {
       // Make two FifoQueue objects
       FifoQueue q1 = new FifoQueue();
-      FifoQueue q2 = new FifoQueue();
       assertNotNull(q1);
+      FifoQueue q2 = new FifoQueue();
       assertNotNull(q2);
       // Use the two to create a MockLcapStreamRouter that has no
       // partner,  so sent messages go into the bitbucket and

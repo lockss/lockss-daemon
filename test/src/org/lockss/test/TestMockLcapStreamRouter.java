@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLcapStreamRouter.java,v 1.1.2.3 2004-11-18 15:45:10 dshr Exp $
+ * $Id: TestMockLcapStreamRouter.java,v 1.1.2.4 2004-11-27 22:18:47 dshr Exp $
  */
 
 /*
@@ -44,8 +44,8 @@ import org.lockss.config.*;
 import java.io.IOException;
 
 public class TestMockLcapStreamRouter extends LockssTestCase{
-  LcapStreamRouter lsr1 = null;
-  LcapStreamRouter lsr2 = null;
+  MockLcapStreamRouter loopbackRouter = null;
+  MockLcapStreamRouter bitbucketRouter = null;
   MyMessageHandler handler1 = null;
   MyMessageHandler handler2 = null;
   static Logger log = Logger.getLogger("TestMockLcapStreamRouter");
@@ -73,23 +73,17 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     assertNotNull(q2);
     // Use the two to connect two MockLcapStreamRouter objects
     // back-to-back.
-    lsr1 = new MockLcapStreamRouter(q1, q2);
-    lsr2 = new MockLcapStreamRouter(q2, q1);
-    lsr1.setConfig(config, config, null);
-    lsr2.setConfig(config, config, null);
-    {
-      MockLcapStreamRouter mlsr1 = (MockLcapStreamRouter) lsr1;
-      MockLcapStreamRouter mlsr2 = (MockLcapStreamRouter) lsr2;
-      mlsr1.setPartner(lsr2);
-      mlsr2.setPartner(lsr1);
-    }
-    lsr1.startService();
-    lsr2.startService();
+    loopbackRouter = new MockLcapStreamRouter(q1, null);
+    bitbucketRouter = new MockLcapStreamRouter(q1, q2);
+    loopbackRouter.setConfig(config, config, null);
+    bitbucketRouter.setConfig(config, config, null);
+    loopbackRouter.startService();
+    bitbucketRouter.startService();
     // Register handlers
     handler1 = new MyMessageHandler();
     handler2 = new MyMessageHandler();
-    lsr1.registerMessageHandler(handler1);
-    lsr2.registerMessageHandler(handler2);
+    loopbackRouter.registerMessageHandler(handler1);
+    bitbucketRouter.registerMessageHandler(handler2);
   }
 
   /** tearDown method for test case
@@ -98,15 +92,15 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
   public void tearDown() throws Exception {
     TimeBase.setReal();
     super.tearDown();
-    if (lsr1 != null) {
-      lsr1.unregisterMessageHandler(handler1);
-      lsr1.stopService();
-      lsr1 = null;
+    if (loopbackRouter != null) {
+      loopbackRouter.unregisterMessageHandler(handler1);
+      loopbackRouter.stopService();
+      loopbackRouter = null;
     }
-    if (lsr2 != null) {
-      lsr2.unregisterMessageHandler(handler2);
-      lsr2.stopService();
-      lsr2 = null;
+    if (bitbucketRouter != null) {
+      bitbucketRouter.unregisterMessageHandler(handler2);
+      bitbucketRouter.stopService();
+      bitbucketRouter = null;
     }
   }
 
@@ -115,16 +109,11 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     super(msg);
   }
 
-  public void testMessageExchange() {
+  public void testLoopbackRouter() {
     {
-      MockLcapStreamRouter mlsr1 = (MockLcapStreamRouter) lsr1;
-      MockLcapStreamRouter mlsr2 = (MockLcapStreamRouter) lsr2;
-      assertNotNull(mlsr1.getReceiveQueue());
-      assertNotNull(mlsr1.getSendQueue());
-      assertNotNull(mlsr2.getReceiveQueue());
-      assertNotNull(mlsr2.getSendQueue());
-      assertEquals(mlsr1.getReceiveQueue(), mlsr2.getSendQueue());
-      assertEquals(mlsr2.getReceiveQueue(), mlsr1.getSendQueue());
+      MockLcapStreamRouter mloopbackRouter = (MockLcapStreamRouter) loopbackRouter;
+      assertNotNull(mloopbackRouter.getReceiveQueue());
+      assertNull(mloopbackRouter.getSendQueue());
     }
     // Create a message
     V3LcapMessage sent = null;
@@ -133,38 +122,47 @@ public class TestMockLcapStreamRouter extends LockssTestCase{
     } catch (IOException ex) {
       fail("new MockV3LcapMessage() threw " + ex);
     }
-    // Tell lsr1 to send it to p2
+    // Tell loopbackRouter to send it to p2
     try {
-      lsr1.sendTo(sent, null, null);
+      loopbackRouter.sendTo(sent, null, null);
     } catch (IOException ex) {
-      fail("lsr1.sendTo() threw " + ex);
+      fail("loopbackRouter.sendTo() threw " + ex);
     }
     // Step time
     // Thread.yield();
     TimeBase.step(500);
     // Get message from handler
-    LcapMessage received = handler2.getMessage();
+    LcapMessage received = handler1.getMessage();
     assertNotNull(received);
     assertTrue(received instanceof V3LcapMessage);
     assertEquals(sent, received);
+  }
+
+  public void testBitbucketRouter() {
+    assertTrue(bitbucketRouter.sendQueueEmpty());
+    // Create a message
+    V3LcapMessage sent = null;
     try {
       sent = new MockV3LcapMessage();
     } catch (IOException ex) {
       fail("new MockV3LcapMessage() threw " + ex);
     }
     try {
-      lsr2.sendTo(sent, null, null);
+      bitbucketRouter.sendTo(sent, null, null);
     } catch (IOException ex) {
-      fail("lsr2.sendTo() threw " + ex);
+      fail("bitbucketRouter.sendTo() threw " + ex);
     }
     // Step time
     // Thread.yield();
     TimeBase.step(500);
     // Get message from handler
-    received = handler1.getMessage();
+    assertFalse(bitbucketRouter.sendQueueEmpty());
+    Deadline dl = Deadline.in(10);
+    V3LcapMessage received = bitbucketRouter.getSentMessage(dl);
     assertNotNull(received);
     assertTrue(received instanceof V3LcapMessage);
     assertEquals(sent, received);
+    assertTrue(bitbucketRouter.sendQueueEmpty());
   }
 
   public class MyMessageHandler implements LcapStreamRouter.MessageHandler {

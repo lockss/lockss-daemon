@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.8 2004-11-25 00:34:56 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.9 2004-11-27 22:18:47 dshr Exp $
  */
 
 /*
@@ -46,21 +46,30 @@ import org.lockss.util.*;
  * Runnable in order that its Thread can pull messages off the
  * queue and run the handlers on them,  replacing the Thread in
  * LcapStreamComm that would normally pull them off a socket.
+ *
+ * The router can run in two modes. In loopback mode,  messages
+ * sent are also received.  In bit-bucket mode,  messages are sent
+ * to the bit-bucket.
  */
 public class MockLcapStreamRouter extends LcapStreamRouter
   implements Runnable {
 
   boolean goOn = false;
   Thread myThread = null;
-  MockLcapStreamRouter partner = null;
+  boolean loopBackMode = false;
   FifoQueue myReceiveQueue = null;
   FifoQueue mySendQueue = null;
-  byte[] myKey = null;
+  byte[] key1 = null;
+  byte[] key2 = null;
   static Logger log = Logger.getLogger("MockLcapStreamRouter");
 
   public MockLcapStreamRouter(FifoQueue recv, FifoQueue send) {
     myReceiveQueue = recv;
-    mySendQueue = send;
+    if (send == null) {
+      loopBackMode = true;
+    } else {
+      mySendQueue = send;
+    }
   }
 
 
@@ -80,8 +89,6 @@ public class MockLcapStreamRouter extends LcapStreamRouter
       super.stopService();
     }
     myThread = null;
-    myReceiveQueue = null;
-    mySendQueue = null;
   }
 
   public void run() {
@@ -96,7 +103,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 	// No action intended
       }
       if (msg != null && !msg.isNoOp()) {
-	setKey(msg);
+	mapKey(msg);
 	log.debug("Pulled " + msg + " from receive Q");
 	runHandlers(msg);
       }
@@ -121,15 +128,15 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    */
   public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
     throws IOException {
-    setKey(msg);
-    log.debug("mock sendTo(" + msg + ")");
-    if (mySendQueue != null) {
+    mapKey(msg);
+    if (loopBackMode) {
+      log.debug("mock sendTo(" + msg + ") queued");
+      myReceiveQueue.put(msg);
+      myThread.interrupt();
+    } else {
+      log.debug("mock sendTo(" + msg + ") dropped");
       mySendQueue.put(msg);
-    }
-    if (partner != null) {
-      log.debug("Interrupting partner for " + msg);
-      partner.myThread.interrupt();
-    }
+    }      
     Thread.yield();
     if (origRateLimiter != null) {
       origRateLimiter.event();
@@ -140,27 +147,27 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public FifoQueue getReceiveQueue() {
     return myReceiveQueue;
   }
+
   public FifoQueue getSendQueue() {
     return mySendQueue;
-  }
-  public void setPartner(LcapStreamRouter other) {
-    partner = (MockLcapStreamRouter) other;
   }
 
   public V3LcapMessage getSentMessage(Deadline dl) {
     V3LcapMessage msg = null;
-    try {
-      int s = mySendQueue.size();
-      msg = (V3LcapMessage) mySendQueue.get(dl);
-      if ((s - mySendQueue.size()) != 1) {
-	log.error("get didn't remove msg");
+    if (!loopBackMode) {
+      try {
+	int s = mySendQueue.size();
+	msg = (V3LcapMessage) mySendQueue.get(dl);
+	if ((s - mySendQueue.size()) != 1) {
+	  log.error("get didn't remove msg");
+	}
+      } catch (InterruptedException ex) {
+	log.debug("getSentMessage() interrupted");
+	// No action intended
       }
-    } catch (InterruptedException ex) {
-      log.debug("getSentMessage() interrupted");
-      // No action intended
-    }
-    if (msg != null && !msg.isNoOp()) {
-      log.debug("Pulled " + msg + " from send Q");
+      if (msg != null && !msg.isNoOp()) {
+	log.debug("Pulled " + msg + " from send Q");
+      }
     }
     return msg;
   }
@@ -169,14 +176,26 @@ public class MockLcapStreamRouter extends LcapStreamRouter
     return (mySendQueue.isEmpty());
   }
 
-  private void setKey(V3LcapMessage msg) {
-    if (myKey != null) {
-      msg.setKey(myKey);
+  private void mapKey(V3LcapMessage msg) {
+    //  XXX this will screw things up royally when the challenge
+    //  XXX is actually used to compute votes.
+    byte[] key = msg.getChallenge();
+    if (key1 == null || key2 == null || key == null) {
+      log.debug("not mapping key " + key);
+      return;
+    }
+    if (key.equals(key1)) {
+      log.debug("Overriding " + key1 + " with " + key2);
+      msg.setKey(key2);
+    } else if (key.equals(key2)) {
+      log.debug("Overriding " + key2 + " with " + key1);
+      msg.setKey(key1);
     }
   }
 
-  public void setKey(byte[] key) {
-    myKey = key;
+  public void setKeyMap(byte[] k1, byte[] k2) {
+    key1 = k1;
+    key2 = k2;
   }
 
 }
