@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetSpec.java,v 1.6 2003-02-20 02:23:40 aalto Exp $
+ * $Id: MockCachedUrlSetSpec.java,v 1.7 2003-02-20 02:27:37 aalto Exp $
  */
 
 /*
@@ -46,8 +46,6 @@ import org.lockss.util.*;
 public class MockCachedUrlSetSpec implements CachedUrlSetSpec {
   private String root = null;
   private String regExp = null;
-  private List prefixList = null;
-
 
   public MockCachedUrlSetSpec() {
   }
