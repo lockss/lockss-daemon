@@ -49,4 +49,5 @@ for (( ix = 1; ix <= $rpt ; ix++)) ; do
     [ $showdots = 1 ] && echo -n .
   fi
 done
+echo
 echo $failcnt failures
