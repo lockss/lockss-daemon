@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.34 2003-01-09 01:55:38 aalto Exp $
+* $Id: Poll.java,v 1.35 2003-01-15 17:37:50 claire Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ public abstract class Poll implements Serializable {
   String m_key;            // the string we use to store this poll
   int m_pollstate;         // one of state constants above
   int m_pendingVotes;      // the number of votes waiting to be tallied
+
   VoteTally m_tally;       // the vote tallier
   PollManager m_pollmanager; // the pollmanager which should be used by this poll.
   IdentityManager idMgr = IdentityManager.getIdentityManager();
@@ -177,7 +178,7 @@ public abstract class Poll implements Serializable {
    */
   abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
                                 Serializable key,
-				HashService.Callback callback);
+                                HashService.Callback callback);
 
   /**
    * schedule a vote by a poll.  we've already completed the hash so we're
@@ -501,8 +502,6 @@ public abstract class Poll implements Serializable {
    */
   public class VoteTally {
     public int type;
-    public String url;           // the url for this poll
-    public String regExp;        // the regular expression for the poll
     public long startTime;
     public long duration;
     public int numAgree;     // The # of votes that agree with us
@@ -512,15 +511,16 @@ public abstract class Poll implements Serializable {
     public int quorum;       // The # of votes needed to have a quorum
     public ArrayList pollVotes;
     public String hashAlgorithm; // the algorithm used to hash this poll
+
+    Set   entries = null;  // the final tally set of entries in a name poll
+
     private Deadline replayDeadline = null;
     private Iterator replayIter = null;
     private ArrayList originalVotes = null;
 
-    VoteTally(int type, String url, String regExp, long startTime, long duration, int numAgree,
+    VoteTally(int type, long startTime, long duration, int numAgree,
               int numDisagree, int wtAgree, int wtDisagree) {
       this.type = type;
-      this.url = url;
-      this.regExp = regExp;
       this.startTime = startTime;
       this.duration = duration;
       this.numAgree = numAgree;
@@ -533,7 +533,7 @@ public abstract class Poll implements Serializable {
     }
 
     VoteTally(int type, String url, String regExp, long duration) {
-      this(type, url, regExp, m_createTime, duration, 0, 0, 0, 0);
+      this(type, m_createTime, duration, 0, 0, 0, 0);
     }
 
     /**
@@ -555,8 +555,31 @@ public abstract class Poll implements Serializable {
      * @return true if this Identity
      */
     public boolean isMyPoll() {
-      //XXX fix!
-      return true;
+      return idMgr.isLocalIdentity(m_msg.getOriginID());
+    }
+
+    /**
+     * Returns the url for this poll
+     * @return String the url
+     */
+    public String getUrl() {
+      return m_url;
+    }
+
+    /**
+     * Returns the reg expression
+     * @return String the reg expression filter for this poll
+     */
+    public String getRegExp() {
+      return m_regExp;
+    }
+
+    /**
+     * return an interator for the set of entries tallied during the vote
+     * @return the completed list of entries
+     */
+    public Iterator getEntries() {
+      return entries == null ? null : entries.iterator();
     }
 
     /**

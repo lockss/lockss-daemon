@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.5 2003-01-14 02:22:28 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.6 2003-01-15 17:37:50 claire Exp $
  */
 
 /*
@@ -264,8 +264,8 @@ public class NodeManagerImpl implements NodeManager {
         pollState.status = PollState.LOST;
         long duration = calculateDuration(nodeState.getCachedUrlSet(), false);
         try {
-          PollManager.getPollManager().makePollRequest(results.url,
-              results.regExp, LcapMessage.NAME_POLL_REQ, duration);
+          PollManager.getPollManager().makePollRequest(results.getUrl(),
+              results.getRegExp(), LcapMessage.NAME_POLL_REQ, duration);
         } catch (IOException ioe) {
           logger.error("Couldn't make name poll request.", ioe);
           //XXX throw something
@@ -306,7 +306,7 @@ public class NodeManagerImpl implements NodeManager {
       // if disagree
       pollState.status = PollState.REPAIRING;
       // iterate through master list
-      Iterator masterIt = null; //XXX receive from name poll
+      Iterator masterIt = results.getEntries();
       // compare against my list
       Iterator localIt = nodeState.getCachedUrlSet().flatSetIterator();
       Set localSet = createUrlSetFromCusIterator(localIt);
@@ -345,7 +345,7 @@ public class NodeManagerImpl implements NodeManager {
     Iterator polls = state.getActivePolls();
     while (polls.hasNext()) {
       PollState pollState = (PollState)polls.next();
-      if ((pollState.getRegExp() == results.regExp) &&
+      if ((pollState.getRegExp() == results.getRegExp()) &&
           (pollState.getType() == results.type)) {
         return pollState;
       }
