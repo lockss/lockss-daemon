@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireUrlCacher.java,v 1.7 2003-06-20 22:34:51 claire Exp $
+ * $Id: HighWireUrlCacher.java,v 1.8 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -32,13 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.highwire;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
 
 /**
  * This is the UrlCacher object for the HighWirePlugin
@@ -49,29 +44,9 @@ import org.lockss.plugin.base.*;
 
 public class HighWireUrlCacher extends GenericFileUrlCacher {
   protected static Logger logger = Logger.getLogger(HighWireArchivalUnit.LOG_NAME);
-  private URLConnection conn;
 
   public HighWireUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
-  }
-
-  protected InputStream getUncachedInputStream() throws IOException {
-    if (conn==null) {
-      URL urlO = new URL(url);
-      conn = urlO.openConnection();
-    }
-    return conn.getInputStream();
-  }
-
-  protected Properties getUncachedProperties() throws IOException {
-    Properties props = new Properties();
-    if (conn==null) {
-      URL urlO = new URL(url);
-      conn = urlO.openConnection();
-    }
-    String contentType = conn.getContentType();
-    props.setProperty("content-type", contentType);
-    return props;
   }
 }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.34 2003-07-11 23:31:28 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.35 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -190,6 +190,9 @@ public class NullPlugin {
     }
 
     public void cache() throws IOException {
+    }
+
+    public void forceCache() throws IOException {
     }
 
     public void storeContent(InputStream input,

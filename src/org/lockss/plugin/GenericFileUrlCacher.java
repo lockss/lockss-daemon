@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.18 2003-06-25 21:19:59 eaalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.19 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -73,8 +73,5 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
 
     leaf.sealNewVersion();
   }
-
-  protected abstract InputStream getUncachedInputStream() throws IOException;
-  protected abstract Properties getUncachedProperties() throws IOException;
 }
 

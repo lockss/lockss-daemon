@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.3 2003-06-20 22:34:51 claire Exp $
+ * $Id: UrlCacher.java,v 1.4 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -69,7 +69,15 @@ public interface UrlCacher {
 
     /**
      * Copies the content and properties from the source into the cache.
+     * Only caches if the content has been modified.
      * @throws java.io.IOException on many possible I/O problems.
      */
     public void cache() throws IOException;
+
+    /**
+     * Copies the content and properties from the source into the cache.
+     * Always caches even if the content hasn't been modified.
+     * @throws java.io.IOException on many possible I/O problems.
+     */
+    public void forceCache() throws IOException;
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.3 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.4 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.Properties;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
+import org.lockss.util.TimeBase;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -46,25 +47,69 @@ import org.lockss.test.*;
  */
 public class TestBaseUrlCacher extends LockssTestCase {
   MockBaseUrlCacher cacher;
+  MockCachedUrlSet mcus;
   private int pauseBeforeFetchCounter;
-  
+
   public void setUp() throws Exception {
     super.setUp();
-    cacher = new MockBaseUrlCacher(new MockCachedUrlSet("test url"),
-                                   "test url");
+
+    mcus = new MockCachedUrlSet("test url");
+    cacher = new MockBaseUrlCacher(mcus, "test url");
   }
 
   public void tearDown() throws Exception {
+    TimeBase.setReal();
     super.tearDown();
   }
 
   public void testCache() throws IOException {
     pauseBeforeFetchCounter = 0;
+
     cacher.input = new StringInputStream("test stream");
     cacher.headers = new Properties();
     cacher.cache();
+    // should cache
     assertTrue(cacher.wasStored);
     assertEquals(1, pauseBeforeFetchCounter);
+  }
+
+  public void testLastModifiedCache() throws IOException {
+    // add the 'cached' version
+    Properties cachedProps = new Properties();
+    cachedProps.setProperty("date", ""+12345);
+    mcus.addUrl("test stream", "test url", true, true, cachedProps);
+
+    TimeBase.setSimulated(10000);
+    cacher.input = new StringInputStream("test stream");
+    cacher.headers = new Properties();
+    cacher.cache();
+    // shouldn't cache
+    assertFalse(cacher.wasStored);
+
+    TimeBase.step(5000);
+    cacher.input = new StringInputStream("test stream");
+    cacher.headers = new Properties();
+    cacher.cache();
+    // should cache now
+    assertTrue(cacher.wasStored);
+
+    TimeBase.setReal();
+  }
+
+  public void testForceCache() throws IOException {
+    // add the 'cached' version
+    Properties cachedProps = new Properties();
+    cachedProps.setProperty("date", ""+12345);
+    mcus.addUrl("test stream", "test url", true, true, cachedProps);
+
+    TimeBase.setSimulated(10000);
+    cacher.input = new StringInputStream("test stream");
+    cacher.headers = cachedProps;
+    // should still cache
+    cacher.forceCache();
+    assertTrue(cacher.wasStored);
+
+    TimeBase.setReal();
   }
 
   public void testCacheExceptions() throws IOException {
@@ -76,12 +121,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     } catch (BaseUrlCacher.CachingException ce) { }
     assertFalse(cacher.wasStored);
 
+    // no exceptions from null inputstream
     cacher.input = null;
     cacher.headers = new Properties();
-    try {
-      cacher.cache();
-      fail("Should have thrown CachingException.");
-    } catch (BaseUrlCacher.CachingException ce) { }
+    cacher.cache();
+    // should simply skip
     assertFalse(cacher.wasStored);
 
     cacher.input = new StringInputStream("test stream");
@@ -108,8 +152,13 @@ public class TestBaseUrlCacher extends LockssTestCase {
       return new MyMockArchivalUnit();
     }
 
-    public InputStream getUncachedInputStream() {
-      return input;
+    public InputStream getUncachedInputStream(long lastCached) {
+      // simple version which returns null if shouldn't fetch
+      if (lastCached < TimeBase.nowMs()) {
+        return input;
+      } else {
+        return null;
+      }
     }
 
     public Properties getUncachedProperties() {

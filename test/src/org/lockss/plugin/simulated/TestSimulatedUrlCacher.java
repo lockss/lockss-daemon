@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.18 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.19 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     String testStr = "http://www.example.com/branch1";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, tempDirPath);
-    assertNull(suc.getUncachedInputStream());
+    assertNull(suc.getUncachedInputStream(0));
   }
 
   public void testBranchContent() throws Exception {
@@ -127,7 +127,7 @@ public class TestSimulatedUrlCacher extends LockssTestCase {
     String testStr = "http://www.example.com/branch1";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
         new MockCachedUrlSet(mau, null), testStr, tempDirPath);
-    InputStream is = suc.getUncachedInputStream();
+    InputStream is = suc.getUncachedInputStream(0);
     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
     StreamUtil.copy(is, baos);
     is.close();

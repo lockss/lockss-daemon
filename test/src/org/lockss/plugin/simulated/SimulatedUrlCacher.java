@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.10 2003-06-20 22:34:54 claire Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.11 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -69,9 +69,11 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
     }
   }
 
-  protected InputStream getUncachedInputStream() throws IOException {
-     if (contentFile!=null) {
-      return getDefaultStream(contentFile);
+  // overrides base behavior to get local file
+  protected InputStream getUncachedInputStream(long lastCached)
+      throws IOException {
+    if (contentFile!=null) {
+      return getDefaultStream(contentFile, lastCached);
     }
     makeContentName();
     contentFile = new File(contentName);
@@ -79,20 +81,26 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
       File dirContentFile = new File(
           SimulatedContentGenerator.getDirectoryContentFile(contentName));
       if (dirContentFile.exists()) {
-        return getDefaultStream(dirContentFile);
+        return getDefaultStream(dirContentFile, lastCached);
       } else {
         logger.error("Couldn't find file: "+dirContentFile.getAbsolutePath());
         return null;
       }
     } else {
-      return getDefaultStream(contentFile);
+      return getDefaultStream(contentFile, lastCached);
     }
   }
 
-  protected InputStream getDefaultStream(File file) throws IOException {
+  protected InputStream getDefaultStream(File file, long lastCached)
+      throws IOException {
+    if ((file.lastModified() <= lastCached) && !toBeDamaged()) {
+      logger.debug2("Unmodified content not cached for url '"+url+"'");
+      return null;
+    }
     return new SimulatedContentStream(new FileInputStream(file),toBeDamaged());
   }
 
+  // overrides base behavior
   protected Properties getUncachedProperties() throws IOException {
     if (props!=null) {
       return props;
@@ -111,6 +119,8 @@ public class SimulatedUrlCacher extends GenericFileUrlCacher {
       props.setProperty("content-type", "text/plain");
     }
     props.setProperty("content-url", url);
+    // set fetch time as now, since it should be the same system
+    props.setProperty("date", ""+TimeBase.nowMs());
     return props;
   }
 

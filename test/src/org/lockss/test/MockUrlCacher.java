@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.7 2003-06-20 22:34:56 claire Exp $
+ * $Id: MockUrlCacher.java,v 1.8 2003-07-18 02:14:25 eaalto Exp $
  */
 
 /*
@@ -124,6 +124,9 @@ public class MockUrlCacher implements UrlCacher {
     this.cachingException = e;
   }
 
+  public void forceCache() throws IOException {
+    cache();
+  }
 
   public void cache() throws IOException {
     if (cachingException != null) {
@@ -131,7 +134,7 @@ public class MockUrlCacher implements UrlCacher {
     }
     if (cus != null) {
       cus.addCachedUrl(url);
-    } 
+    }
     if (cu != null) {
       cu.setExists(true);
     }
@@ -140,13 +143,13 @@ public class MockUrlCacher implements UrlCacher {
   public InputStream getUncachedInputStream(){
     return uncachedIS;
   }
-  
+
   public Properties getUncachedProperties(){
     return uncachedProp;
   }
 
   //mock specific acessors
-  
+
   public void setCachedInputStream(InputStream is){
     cachedIS = is;
   }

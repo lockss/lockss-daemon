@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.5 2003-07-11 22:14:18 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.6 2003-07-18 02:14:26 eaalto Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
+import java.net.*;
 import java.util.Properties;
 import org.lockss.plugin.*;
 import org.lockss.util.Logger;
@@ -44,6 +45,7 @@ import org.lockss.util.Logger;
 public abstract class BaseUrlCacher implements UrlCacher {
   protected CachedUrlSet cus;
   protected String url;
+  private URLConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
 
   /**
@@ -108,32 +110,82 @@ public abstract class BaseUrlCacher implements UrlCacher {
     return getCachedUrlSet().makeCachedUrl(getUrl());
   }
 
-  /**
-   * Copy the content and properties from the source into the cache
-   * @throws IOException
-   */
   public void cache() throws IOException {
+    long lastCached = 0;
+    CachedUrl cachedVersion = cus.makeCachedUrl(url);
+    // if it's been cached, get the last caching time and use that
+    if ((cachedVersion!=null) && cachedVersion.hasContent()) {
+      Properties cachedProps = cachedVersion.getProperties();
+      try {
+        lastCached = Long.parseLong(cachedProps.getProperty("date"));
+      } catch (NumberFormatException nfe) { }
+    }
+    cache(lastCached);
+  }
+
+  public void forceCache() throws IOException {
+    // forces the cache
+    cache(0);
+  }
+
+  private void cache(long lastCached) throws IOException {
     logger.debug3("Pausing before fetching content");
     getArchivalUnit().pauseBeforeFetch();
     logger.debug3("Done pausing");
-    InputStream input = getUncachedInputStream();
+    InputStream input = getUncachedInputStream(lastCached);
     Properties headers = getUncachedProperties();
-    if (input==null) {
-      logger.error("Received null inputstream for url '"+url+"'.");
-      throw new CachingException("Received null inputstream.");
+    if (input!=null) {
+      // null input indicates unmodified content, so skip caching
+      if (headers == null) {
+        logger.error("Received null headers for url '" + url + "'.");
+        throw new CachingException("Received null headers.");
+      }
+      storeContent(input, headers);
     }
-    if (headers==null) {
-      logger.error("Received null headers for url '"+url+"'.");
-      throw new CachingException("Received null headers.");
-    }
-    storeContent(input, headers);
   }
 
-  protected abstract void storeContent(InputStream input,
-				       Properties props)
+  protected abstract void storeContent(InputStream input, Properties props)
       throws IOException;
-  protected abstract InputStream getUncachedInputStream() throws IOException;
-  protected abstract Properties getUncachedProperties() throws IOException;
+
+  /**
+   * Gets an InputStream for this URL, using the 'lastCached' time as
+   * 'if-modified-since'.  If a 304 is generated (not modified), it returns
+   * null.
+   * @param lastCached the last cached time
+   * @return the InputStream, or null
+   * @throws IOException
+   */
+  protected InputStream getUncachedInputStream(long lastCached)
+      throws IOException {
+    if (conn==null) {
+      URL urlObj = new URL(url);
+      conn = urlObj.openConnection();
+    }
+    conn.setIfModifiedSince(lastCached);
+    InputStream input = conn.getInputStream();
+    if (conn instanceof HttpURLConnection) {
+      // http connection; check response code
+      int code = ((HttpURLConnection)conn).getResponseCode();
+      if (code == HttpURLConnection.HTTP_NOT_MODIFIED) {
+        logger.debug2("Unmodified content not cached for url '"+url+"'");
+        return null;
+      }
+    }
+    return input;
+  }
+
+  protected Properties getUncachedProperties() throws IOException {
+    Properties props = new Properties();
+    if (conn==null) {
+      URL urlO = new URL(url);
+      conn = urlO.openConnection();
+    }
+    // set header properties in which we have interest
+    props.setProperty("content-type", conn.getContentType());
+    props.setProperty("content-url", url);
+    props.setProperty("date", ""+conn.getDate());
+    return props;
+  }
 
   public static class CachingException extends IOException {
     public CachingException(String msg) {
