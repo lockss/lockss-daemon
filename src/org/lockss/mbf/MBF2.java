@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.12 2003-09-06 14:01:12 dshr Exp $
+ * $Id: MBF2.java,v 1.13 2003-09-09 03:54:04 dshr Exp $
  */
 
 /*
@@ -107,34 +107,31 @@ public class MBF2 extends MemoryBoundFunction {
    * of effort using a memory-bound function technique as
    * described in "On The Cost Distribution Of A Memory Bound Function"
    * David S. H. Rosenthal
-   * @param nVal a byte array containing the nonce
+   * @param nonceVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
+   * @param nVal the proof density
    * @param sVal an array of ints containing the proof
    * @param maxPathVal maximum number of steps to verify
    */
-  protected void initialize(byte[] nVal,
+  protected void initialize(byte[] nonceVal,
 			    long eVal,
 			    int lVal,
+			    int nVal,
 			    int[] sVal,
 			    long  maxPathVal,
 			    byte[] A0array,
 			    byte[] Tarray)
     throws MemoryBoundFunctionException {
-    super.initialize(nVal, eVal, lVal, sVal, maxPathVal, A0array, Tarray);
+    super.initialize(nonceVal, eVal, lVal, nVal, sVal, maxPathVal,
+		     A0array, Tarray);
     A0 = A0array;
     T = Tarray;
     ensureConfigured();
     setup();
     ret = new ArrayList();
     signatureArrayList = new ArrayList();
-    {
-      // XXX this is total cruft.  n should be a parameter
-      // of the MemoryBoundFunctionFactory.
-      n = 4;
-      if (ourE < n)
-	n = ourE - 1;
-    }
+    n = nVal;
     logger.debug("MBF2: ourE " + ourE + " n " + n);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.5 2003-09-06 14:01:12 dshr Exp $
+ * $Id: MemoryBoundFunctionFactory.java,v 1.6 2003-09-09 03:54:04 dshr Exp $
  */
 
 /*
@@ -101,29 +101,35 @@ public class MemoryBoundFunctionFactory {
   /**
    * Returns an instance of the type of MBF indicated by "version"
    * intended to generate a proof of effort.
-   * @param nVal a byte array containing the nonce
+   * @param nonceVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
+   * @param nVal the proof density
    * @throws NoSuchAlgorithmException no such implementation
    * @throws InstantiationException XXX
    * @throws IllegalAccessException XXX
    * @throws MemoryBoundFunctionException could not initialize instance
    */
-  public MemoryBoundFunction makeGenerator(byte[] nVal, int eVal, int lVal)
+  public MemoryBoundFunction makeGenerator(byte[] nonceVal,
+					   int eVal,
+					   int lVal,
+					   int nVal)
     throws NoSuchAlgorithmException,
 	   InstantiationException,
 	   IllegalAccessException,
 	   MemoryBoundFunctionException {
-    MemoryBoundFunction ret = makeVerifier(nVal, eVal, lVal, null, 0);
+    MemoryBoundFunction ret =
+      makeVerifier(nonceVal, eVal, lVal, nVal, null, 0);
     return (ret);
   }
 
   /**
    * Returns an instance of the type of MBF indicated by "version"
    * intended to verify a proof of effort.
-   * @param nVal a byte array containing the nonce
+   * @param nonceVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
+   * @param nVal the proof density
    * @param sVal an array of ints containing the proof
    * @param maxPathVal maximum number of steps to verify
    * @throws NoSuchAlgorithmException no such implementation
@@ -131,9 +137,10 @@ public class MemoryBoundFunctionFactory {
    * @throws IllegalAccessException XXX
    * @throws MemoryBoundFunctionException could not initialize instance
    */
-  public MemoryBoundFunction makeVerifier(byte[] nVal,
+  public MemoryBoundFunction makeVerifier(byte[] nonceVal,
 					  int eVal,
 					  int lVal,
+					  int nVal,
 					  int[] sVal,
 					  long  maxPathVal)
     throws NoSuchAlgorithmException,
@@ -144,7 +151,7 @@ public class MemoryBoundFunctionFactory {
     if (classToUse == null)
       throw new NoSuchAlgorithmException();
     ret = (MemoryBoundFunction) classToUse.newInstance();
-    ret.initialize(nVal, eVal, lVal, sVal, maxPathVal, A0, T);
+    ret.initialize(nonceVal, eVal, lVal, nVal, sVal, maxPathVal, A0, T);
     return (ret);
   }
 

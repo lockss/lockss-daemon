@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.13 2003-09-06 14:01:12 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.14 2003-09-09 03:54:04 dshr Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ import org.lockss.util.*;
 public abstract class MemoryBoundFunction {
   protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
   protected static File basisFile = null;
-  protected static long basisLength = 0;
 
   protected byte[] nonce;
   protected long e;
@@ -58,21 +57,23 @@ public abstract class MemoryBoundFunction {
 
   /**
    * Initialize an instance - called by the factory
-   * @param nVal a byte array containing the nonce
+   * @param nonceVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
+   * @param nVal the proof density
    * @param sVal an array of ints containing the proof
    * @param maxPathVal maximum number of steps to verify
    */
-  protected void initialize(byte[] nVal,
+  protected void initialize(byte[] nonceVal,
 			    long eVal,
 			    int lVal,
+			    int nVal,
 			    int[] sVal,
 			    long  maxPathVal,
 			    byte[] A0array,
 			    byte[] Tarray)
     throws MemoryBoundFunctionException {
-    setup(nVal, eVal, lVal);
+    setup(nonceVal, eVal, lVal);
     if (sVal == null) {
       // Generating
       verify = false;
@@ -89,10 +90,10 @@ public abstract class MemoryBoundFunction {
     signature = null;
   }
 
-  private void setup(byte[] nVal,
+  private void setup(byte[] nonceVal,
 		     long eVal,
 		     int lVal) {
-    nonce = nVal;
+    nonce = nonceVal;
     e = eVal;
     pathLen = lVal;
     finished = false;
@@ -136,14 +137,6 @@ public abstract class MemoryBoundFunction {
     if (!finished)
       throw new MemoryBoundFunctionException("not finished");
     return (signature);
-  }
-
-  /**
-   * Return size of basis array.
-   * @return size of the basis array
-   */
-  public static long basisSize() {
-    return basisLength;
   }
 
   /**

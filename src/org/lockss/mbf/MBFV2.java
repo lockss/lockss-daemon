@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.9 2003-09-06 14:01:12 dshr Exp $
+ * $Id: MBFV2.java,v 1.10 2003-09-09 03:54:04 dshr Exp $
  */
 
 /*
@@ -366,7 +366,7 @@ paths in the range.
 					     stateName[currentState]);
     try{
       logger.debug("MBFV2: nonce " + byteArrayToString(firstProofNonce));
-      mbf = factory.makeGenerator(firstProofNonce, e, 1);
+      mbf = factory.makeGenerator(firstProofNonce, e, 1, 1);
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
 					     ex.toString());
@@ -448,7 +448,7 @@ paths in the range.
       logger.debug("generateSteps: index " + index);
       thisHash = null;
       thisProof = null;
-      mbf = factory.makeGenerator(nonce1, e, (1 << index));
+      mbf = factory.makeGenerator(nonce1, e, (1 << index), index/2);
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
 					     ex.toString() + " in " +
@@ -508,7 +508,7 @@ paths in the range.
     thisHash = null;
     try{
       logger.debug("MBFV2: nonce " + byteArrayToString(firstProofNonce));
-      mbf = factory.makeVerifier(firstProofNonce, e, (1 << index),
+      mbf = factory.makeVerifier(firstProofNonce, e, 1, 1,
 				 thisProof, 100); // XXX fix this
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +
@@ -608,7 +608,7 @@ paths in the range.
 						    ourProofs[index-1]);
       logger.debug("MBFV2: nonce " + index + " " + byteArrayToString(nonce1));
       thisProof = ourProofs[index];
-      mbf = factory.makeVerifier(nonce1, e, (1 << index),
+      mbf = factory.makeVerifier(nonce1, e, (1 << index), index/2,
 				 thisProof, 100); // XXX fix this
     } catch (NoSuchAlgorithmException ex) {
       throw new MemoryBoundFunctionException("factory throws " +

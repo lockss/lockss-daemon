@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.12 2003-09-06 14:01:12 dshr Exp $
+ * $Id: MBF1.java,v 1.13 2003-09-09 03:54:04 dshr Exp $
  */
 
 /*
@@ -101,21 +101,23 @@ public class MBF1 extends MemoryBoundFunction {
    * Cynthia Dwork, Andrew Goldberg and Moni Naor, "On Memory-
    * Bound Functions for Fighting Spam", in "Advances in Cryptology
    * (CRYPTO 2003)".
-   * @param nVal a byte array containing the nonce
+   * @param nonceVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
    * @param sVal an array of ints containing the proof
    * @param maxPathVal maximum number of steps to verify
    */
-  protected void initialize(byte[] nVal,
+  protected void initialize(byte[] nonceVal,
 			    long eVal,
 			    int lVal,
+			    int nVal,
 			    int[] sVal,
 			    long  maxPathVal,
 			    byte[] A0array,
 			    byte[] Tarray)
     throws MemoryBoundFunctionException {
-    super.initialize(nVal, eVal, lVal, sVal, maxPathVal, A0array, Tarray);
+    super.initialize(nonceVal, eVal, lVal, nVal, sVal, maxPathVal,
+		     A0array, Tarray);
     A0 = A0array;
     T = Tarray;
     ensureConfigured();

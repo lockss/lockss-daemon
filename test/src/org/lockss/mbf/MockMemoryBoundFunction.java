@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.8 2003-09-06 14:01:12 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.9 2003-09-09 03:54:04 dshr Exp $
  */
 
 /*
@@ -56,24 +56,26 @@ public class MockMemoryBoundFunction extends MemoryBoundFunction {
 
   /**
    * Initialize an object that will generate or verify a proof of effort
-   * @param nVal a byte array containing the nonce
+   * @param nonceVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param lVal the effort sizer (length of each path)
    * @param sVal an array of ints containing the proof
+   * @param nVal the proof density
    * @param maxPathVal maximum number of steps to verify
    * @param A0array basis byte array A0
    * @param Tarray basis byte array T
    */
-  protected void initialize(byte[] nVal,
+  protected void initialize(byte[] nonceVal,
 			    long eVal,
 			    int lVal,
+			    int nVal,
 			    int[] sVal,
 			    long  maxPathVal,
 			    byte[] A0array,
 			    byte[] Tarray)
     throws MemoryBoundFunctionException {
-    super.initialize(nVal, eVal, lVal, sVal, maxPathVal, A0array, Tarray);
-    basisLength = 16*1024*1024;
+    super.initialize(nonceVal, eVal, lVal, nVal, sVal, maxPathVal,
+		     A0array, Tarray);
     stepsToDo = e * pathLen;
     if (verify) {
       if (proof == null ||
