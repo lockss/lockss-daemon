@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusConstants.java,v 1.3 2004-03-06 00:42:59 eaalto Exp $
+ * $Id: XmlStatusConstants.java,v 1.4 2004-05-14 08:40:13 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ public class XmlStatusConstants {
   public static final String TYPE = "type";
   public static final String VALUE = "value";
   public static final String ROW = "row";
+  public static final String ROW_SEPARATOR = "rowseparator";
+  public static final String CELL = "cell";
   public static final String STANDARD_ELEM = "standard";
   public static final String REFERENCE_ELEM = "reference";
   public static final String FOOTNOTE = "footnote";
