@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.3 2003-06-26 23:54:40 eaalto Exp $
+ * $Id: MockCrawler.java,v 1.4 2003-07-02 00:57:33 troberts Exp $
  */
 
 /*
@@ -44,6 +44,11 @@ public class MockCrawler extends NullCrawler {
   Deadline deadline = null;
   boolean crawlSuccessful = true;
   int type = -1;
+  long startTime = -1;
+  long endTime = -1;
+  long numFetched = -1;
+  long numParsed = -1;
+
 
   public void setCrawlSuccessful(boolean crawlSuccessful) {
     this.crawlSuccessful = crawlSuccessful;
@@ -89,5 +94,37 @@ public class MockCrawler extends NullCrawler {
 
   public Collection getStartUrls() {
     return urls;
+  }
+
+  public void setStartTime(long time) {
+    startTime = time;
+  }
+
+  public void setEndTime(long time) {
+    endTime = time;
+  }
+
+  public void setNumFetched(long num) {
+    numFetched = num;
+  }
+
+  public void setNumParsed(long num) {
+    numParsed = num;
+  }
+
+  public long getStartTime() {
+    return startTime;
+  }
+
+  public long getEndTime() {
+    return endTime;
+  }
+
+  public long getNumFetched() {
+    return numFetched;
+  }
+
+  public long getNumParsed() {
+    return numParsed;
   }
 }
