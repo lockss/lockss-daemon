@@ -144,6 +144,17 @@ class FailingTestTestCase(LockssTestCase):
         log("Failing immediately.")
         self.fail("Failed on purpose.")
 
+class ImmediateSucceedingTestTestCase(unittest.TestCase):
+    def runTest(self):
+        """ Test case that succeeds immediately, without starting the daemons. """
+	return
+
+class ImmediateFailingTestTestCase(unittest.TestCase):
+    def runTest(self):
+        """ Test case that fails immediately, without starting the daemons. """
+        log("Failing immediately.")
+        self.fail("Failed on purpose.")
+
 ##
 ## Ensure caches can recover from simple file damage.
 ##
@@ -776,6 +787,16 @@ def failingTests():
     suite.addTest(FailingTestTestCase())
     return suite
 
+def immediateSucceedingTests():
+    suite = unittest.TestSuite()
+    suite.addTest(ImmediateSucceedingTestTestCase())
+    return suite
+
+def immediateFailingTests():
+    suite = unittest.TestSuite()
+    suite.addTest(ImmediateFailingTestTestCase())
+    return suite
+
 if __name__ == "__main__":
     try:
         unittest.main()
@@ -801,5 +822,5 @@ if __name__ == "__main__":
 
     except Exception, e:
         # Unhandled exception occured.
-        log.error("%s" % e)
+        log("%s" % e)
         sys.exit(1)
