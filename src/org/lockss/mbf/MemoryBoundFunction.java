@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.5 2003-08-05 00:55:30 dshr Exp $
+ * $Id: MemoryBoundFunction.java,v 1.6 2003-08-09 16:40:12 dshr Exp $
  */
 
 /*
@@ -32,14 +32,28 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.mbf;
 import java.io.*;
+import java.security.NoSuchAlgorithmException;
 import org.lockss.util.*;
 
 /**
+ * @author David S. H. Rosenthal
+ * @version 1.0
  */
-public abstract class MemoryBoundFunction {
+public class MemoryBoundFunction {
   protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
-  protected static byte[] basis = null;  // XXX move to implementation
   protected static File basisFile = null;
+  protected static long basisLength = 0;
+
+  private static String[] names = {
+    "MBF1",
+    "MBF2",
+    "MOCK"
+  };
+  private static String[] impls = {
+    "org.lockss.mbf.MBF1",
+    "org.lockss.mbf.MBF2",
+    "org.lockss.mbf.MockMemoryBoundFunction"
+  };
 
   protected byte[] nonce;
   protected long e;
@@ -48,46 +62,82 @@ public abstract class MemoryBoundFunction {
   protected boolean finished;
   protected int pathLen;
   protected long maxPath;
+  protected MemoryBoundFunctionSPI implSPI;
 
   /**
-   * Public constructor for an object that will compute a proof
-   * of effort using a memory-bound function technique.
-   * @param nVal a byte array containing the nonce
-   * @param eVal the effort sizer (# of low-order zeros in destination)
-   *
-   */
-  public MemoryBoundFunction(byte[] nVal, long eVal, int lVal) {
-    setup(nVal, eVal, lVal);
-    proof = null;
-  }
-
-  /**
-   * Public constructor for an object that will verify a proof of effort.
+   * Returns an instance of the type of MBF indicated by "version"
+   * @param version A string selecting the type of MBF
    * @param nVal a byte array containing the nonce
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param sVal an array of ints containing the proof
-   * 
+   * @param maxPathVal maximum number of steps to verify
+   * @throws NoSuchAlgorithmException no algorithm of type "version"
    */
-  public MemoryBoundFunction(byte[] nVal, long eVal, int lVal, int[] sVal, long  maxPathVal) {
-    setup(nVal, eVal, lVal);
-    proof = sVal;
-    verify = true;
-    maxPath = maxPathVal;
+  public static MemoryBoundFunction getInstance(String version,
+						byte[] nVal,
+						int eVal,
+						int lVal,
+						int[] sVal,
+						long  maxPathVal)
+    throws NoSuchAlgorithmException, MemoryBoundFunctionException {
+    for (int i = 0; i < names.length; i++) {
+      if (names[i].equals(version)) {
+	// Found it
+	try {
+	  Class cl = Class.forName(impls[i]);
+	  MemoryBoundFunctionSPI spi =
+	    (MemoryBoundFunctionSPI) cl.newInstance();
+	  MemoryBoundFunction ret =
+	    new MemoryBoundFunction(spi, nVal, eVal, lVal, sVal, maxPathVal);
+	  return (ret);
+	} catch (ClassNotFoundException ex) {
+	  throw new NoSuchAlgorithmException(impls[i]);
+	} catch (InstantiationException ex) {
+	  throw new NoSuchAlgorithmException(impls[i] + ": " + ex.toString());
+	} catch (IllegalAccessException ex) {
+	  throw new NoSuchAlgorithmException(impls[i] + ": " + ex.toString());
+	}
+      }
+    }
+    throw new NoSuchAlgorithmException(version);
   }
 
-  private void setup(byte[] nVal, long eVal, int lVal) {
+  private MemoryBoundFunction(MemoryBoundFunctionSPI spi,
+			      byte[] nVal,
+			      long eVal,
+			      int lVal,
+			      int[] sVal,
+			      long  maxPathVal)
+  throws MemoryBoundFunctionException {
+    setup(spi, nVal, eVal, lVal);
+    if (sVal == null) {
+      // Generating
+      verify = false;
+      proof = null;
+    } else {
+      proof = sVal;
+      verify = true;
+      maxPath = maxPathVal;
+    }
+    implSPI.initialize(this);
+  }
+
+  private void setup(MemoryBoundFunctionSPI spi,
+		     byte[] nVal,
+		     long eVal,
+		     int lVal) {
+    implSPI = spi;
     nonce = nVal;
     e = eVal;
     pathLen = lVal;
     finished = false;
-    verify = false;
   }
 
   /**
    * Return true if the proof generation or verification is finished.
    * @return true if the proof generation or verification is finished.
    */
-  public boolean finished() {
+  public boolean done() {
     return (finished);
   }
 
@@ -115,8 +165,17 @@ public abstract class MemoryBoundFunction {
    * @param n number of steps to move.
    * 
    */
-  public abstract boolean computeSteps(int n)
-    throws MemoryBoundFunctionException;
+  public boolean computeSteps(int n) throws MemoryBoundFunctionException {
+    return (implSPI.computeSteps(n));
+  }
+
+  /**
+   * Return size of basis array.
+   * @return size of the basis array
+   */
+  public static long basisSize() {
+    return basisLength;
+  }
 
   // configuration
   protected static void configure() {
@@ -127,7 +186,8 @@ public abstract class MemoryBoundFunction {
   // test-only configuration
   protected static void configure(File f) {
     basisFile = f;
+    basisLength = basisFile.length();
     logger.debug("configuration file " + basisFile.getPath() +
-		   " length " + basisFile.length());
+		   " length " + basisLength);
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.6 2003-08-05 00:55:30 dshr Exp $
+ * $Id: MBF1.java,v 1.7 2003-08-09 16:40:12 dshr Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
 
 /**
  */
-public class MBF1 extends MemoryBoundFunction {
+public class MBF1 extends MemoryBoundFunctionSPI {
   private static final String algRand = "SHA1PRNG";
   private static final String algHash = "SHA1";
   private static Random rand = null;
@@ -74,39 +74,28 @@ public class MBF1 extends MemoryBoundFunction {
   private int lowBit;
   // Hasher
   MessageDigest hasher;
+  // MemoryBoundFunction object being implemented
+  MemoryBoundFunction mbf;
 
 
   /**
-   * Public constructor for an object that will compute a proof
+   * No-argument constructor for use with Class.newInstance()
+   */
+  protected MBF1() {
+    mbf = null;
+  }
+
+  /**
+   * Initialize an object that will generate or verify a proof
    * of effort using a memory-bound function technique due to
    * Cynthia Dwork, Andrew Goldberg and Moni Naor, "On Memory-
    * Bound Functions for Fighting Spam", in "Advances in Cryptology
    * (CRYPTO 2003)".
-   * @param nVal a byte array containing the nonce
-   * @param eVal the effort sizer (roundup(log2(e), where e is the
-   *     number of low-order zeros in a successful path)
-   *
+   * @param wrapper the MemoryBoundFunction object being implemented
    */
-  public MBF1(byte[] nVal, int eVal, int lVal)
+  protected void initialize(MemoryBoundFunction wrapper)
     throws MemoryBoundFunctionException {
-    super(nVal, eVal, lVal);
-    ensureConfigured();
-    setup();
-  }
-
-  /**
-   * Public constructor for an object that will verify a proof of effort.
-   * @param nVal a byte array containing the nonce
-   * @param eVal the effort sizer (roundup(log2(e), where e is the
-   *     number of low-order zeros in a successful path)
-   * @param sVal a one-entry array with the starting point chosen by the prover
-   * 
-   */
-  public MBF1(byte[] nVal, int eVal, int lVal, int[] sVal, long maxPathVal)
-    throws MemoryBoundFunctionException {
-    super(nVal, eVal, lVal, sVal, maxPathVal);
-    if (sVal.length != 1)
-      throw new MemoryBoundFunctionException("bad proof length " + sVal.length);
+    mbf = wrapper;
     ensureConfigured();
     setup();
   }
@@ -135,15 +124,15 @@ public class MBF1 extends MemoryBoundFunction {
       createPath();
     }
     // Move up to "n" steps along the path
-    while (pathIndex < pathLen && n-- > 0) {
+    while (pathIndex < mbf.pathLen && n-- > 0) {
       stepAlongPath();
     }
     // If the current path has ended,  see if there is a match
-    if (pathIndex >= pathLen) {
+    if (pathIndex >= mbf.pathLen) {
       finishPath();
     }
     // Return true if there is more work to do.
-    return (!finished);
+    return (!mbf.finished);
   }
 
   // Return the 32-bit word at [i..(i+3)] in array arr.
@@ -164,8 +153,8 @@ public class MBF1 extends MemoryBoundFunction {
 
   // Path initialization
   private void createPath() throws MemoryBoundFunctionException {
-    if (verify)
-      k = proof[0];
+    if (mbf.verify)
+      k = mbf.proof[0];
     else
       k++;
     i = 0;
@@ -173,7 +162,7 @@ public class MBF1 extends MemoryBoundFunction {
     lowBit = -1;
     // Hash the nonce and the try count - we can always assume the
     // hasher is reset because we always leave it that way
-    hasher.update(nonce);
+    hasher.update(mbf.nonce);
     hasher.update((byte)(k & 0xff ));
     hasher.update((byte)((k >> 8) & 0xff));
     hasher.update((byte)((k >> 16) & 0xff));
@@ -234,11 +223,11 @@ public class MBF1 extends MemoryBoundFunction {
 		" >= " + ourE);
     if (lowBit >= ourE) {
       // We got a match, set finished
-      proof = new int[1];
-      proof[0] = 1;
-      finished = true;
-    } else if (verify) {
-      finished = true;
+      mbf.proof = new int[1];
+      mbf.proof[0] = 1;
+      mbf.finished = true;
+    } else if (mbf.verify) {
+      mbf.finished = true;
     } else {
       i = -1;
       j = -1;
@@ -250,13 +239,19 @@ public class MBF1 extends MemoryBoundFunction {
 
   // Instance initialization
   private void setup() throws MemoryBoundFunctionException {
+    if (mbf.verify) {
+      if (mbf.proof == null || mbf.proof.length != 1)
+	throw new MemoryBoundFunctionException("bad proof");
+      if (mbf.maxPath < 1)
+	throw new MemoryBoundFunctionException("too few paths");
+    }
     A = null;
     i = -1;
     j= -1;
     c = -1;
     k = 0;
     ourE = 1;
-    long tmp = (e < 0 ? -e : e);
+    long tmp = (mbf.e < 0 ? -mbf.e : mbf.e);
     while (tmp != 1) {
       ourE++;
       tmp >>>= 1;
@@ -273,14 +268,14 @@ public class MBF1 extends MemoryBoundFunction {
   // Class initialization
   private void ensureConfigured() throws MemoryBoundFunctionException {
     try {
-      logger.debug2("ensureConfigured " + basisFile.getPath() +
-		     " length " + basisFile.length());
-      FileInputStream fis = new FileInputStream(basisFile);
+      logger.debug2("ensureConfigured " + mbf.basisFile.getPath() +
+		     " length " + mbf.basisFile.length());
+      FileInputStream fis = new FileInputStream(mbf.basisFile);
       if (A0 == null) {
 	A0 = new byte[sizeA];
         int readSize = fis.read(A0);
 	if (readSize != sizeA)
-	  throw new MemoryBoundFunctionException(basisFile.getPath() +
+	  throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
 						 " short read " + readSize);
 	// We keep a second representation of A0 as a BigInteger
 	a0 = new BigInteger(A0);
@@ -292,13 +287,12 @@ public class MBF1 extends MemoryBoundFunction {
 	T = new byte[sizeT];
 	int readSize = fis.read(T);
 	if (readSize != sizeT)
-	  throw new MemoryBoundFunctionException(basisFile.getPath() +
+	  throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
 						 " short read " + readSize);
       }
-    } catch (IOException e) {
-      basis = null;
-      throw new MemoryBoundFunctionException(basisFile.getPath() + " throws " +
-					     e.toString());
+    } catch (IOException ex) {
+      throw new MemoryBoundFunctionException(mbf.basisFile.getPath() +
+					     " throws " + ex.toString());
     }
   }
 }
