@@ -11,12 +11,13 @@ import org.lockss.proxy.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
-import org.lockss.daemon.ActivityRegulator;
 
 public class MockLockssDaemon extends LockssDaemon {
   ActivityRegulator activityRegulator = null;
   HashService hashService = null;
+  SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
   LcapRouter routerManager = null;
@@ -88,6 +89,23 @@ public class MockLockssDaemon extends LockssDaemon {
       theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
     }
     return hashService;
+  }
+
+  /**
+   * return the SystemMetrics instance
+   * @return the SystemMetrics
+   */
+  public SystemMetrics getSystemMetrics() {
+    if (systemMetrics == null) {
+      systemMetrics = new SystemMetrics();
+      try {
+        systemMetrics.initService(this);
+      }
+      catch (LockssDaemonException ex) {
+      }
+      theManagers.put(LockssDaemon.SYSTEM_METRICS, systemMetrics);
+    }
+    return systemMetrics;
   }
 
   /**

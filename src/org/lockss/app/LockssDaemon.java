@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.23 2003-04-21 05:36:50 tal Exp $
+ * $Id: LockssDaemon.java,v 1.24 2003-04-30 23:38:23 tal Exp $
  */
 
 /*
@@ -72,6 +72,7 @@ public class LockssDaemon {
   public static String PROXY_MANAGER = "ProxyManager";
   public static String SERVLET_MANAGER = "ServletManager";
   public static String STATUS_SERVICE = "StatusService";
+  public static String SYSTEM_METRICS = "SystemMetrics";
   public static String URL_MANAGER = "UrlManager";
 
   /* the default classes that represent our managers */
@@ -100,6 +101,8 @@ public class LockssDaemon {
     "org.lockss.servlet.ServletManager";
   private static String DEFAULT_STATUS_SERVICE =
     "org.lockss.daemon.status.StatusServiceImpl";
+  private static String DEFAULT_SYSTEM_METRICS =
+    "org.lockss.daemon.SystemMetrics";
   private static String DEFAULT_URL_MANAGER =
     "org.lockss.daemon.UrlManager";
 
@@ -124,12 +127,13 @@ public class LockssDaemon {
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
+    new ManagerDesc(SYSTEM_METRICS, DEFAULT_SYSTEM_METRICS),
     new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
-    new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
     new ManagerDesc(LOCKSS_REPOSITORY_SERVICE,
                     DEFAULT_LOCKSS_REPOSITORY_SERVICE),
     new ManagerDesc(HISTORY_REPOSITORY, DEFAULT_HISTORY_REPOSITORY),
     new ManagerDesc(NODE_MANAGER_SERVICE, DEFAULT_NODE_MANAGER_SERVICE),
+    new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
     new ManagerDesc(CRAWL_MANAGER, DEFAULT_CRAWL_MANAGER),
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, DEFAULT_PLUGIN_MANAGER),
@@ -317,6 +321,15 @@ public class LockssDaemon {
    */
   public StatusService getStatusService() {
     return (StatusService) getManager(STATUS_SERVICE);
+  }
+
+  /**
+   * return the SystemMetrics instance.
+   * @returns SystemMetrics instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public SystemMetrics getSystemMetrics() {
+    return (SystemMetrics)getManager(SYSTEM_METRICS);
   }
 
   /**
