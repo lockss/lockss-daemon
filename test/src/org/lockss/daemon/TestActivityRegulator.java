@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.2 2003-04-15 00:36:05 aalto Exp $
+ * $Id: TestActivityRegulator.java,v 1.3 2003-04-16 02:23:48 aalto Exp $
  */
 
 /*
@@ -158,6 +158,77 @@ public class TestActivityRegulator extends LockssTestCase {
     assertTrue(allower.startAuActivity(allower.TOP_LEVEL_POLL, mau, 123));
   }
 
+  public void testCusRelationBlocking() {
+    MockCachedUrlSet mcus = new MockCachedUrlSet("http://www.example.com/test");
+    mcus.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.STANDARD_POLL, mcus, 123));
+
+    // child should be blocked
+    MockCachedUrlSet mcus2 = new MockCachedUrlSet("http://www.example.com/test/branch1");
+    mcus2.setArchivalUnit(mau);
+    assertFalse(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus2, 123));
+
+    // parent should be blocked on polls, but not crawls
+    mcus2 = new MockCachedUrlSet("http://www.example.com");
+    mcus2.setArchivalUnit(mau);
+    assertFalse(allower.startCusActivity(allower.STANDARD_POLL, mcus2, 123));
+    assertTrue(allower.startCusActivity(allower.REPAIR_CRAWL, mcus2, 123));
+
+    // peer should be ok
+    mcus2 = new MockCachedUrlSet("http://www.example.com/test2");
+    mcus2.setArchivalUnit(mau);
+    assertTrue(allower.startCusActivity(allower.BACKGROUND_CRAWL, mcus2, 123));
+  }
+
+  public void testGetRelation() {
+    assertEquals(ActivityRegulator.RELATION_SAME,
+                 allower.getRelation("http://www.example.com::range",
+                                     "http://www.example.com::range2"));
+    assertEquals(ActivityRegulator.RELATION_CHILD,
+                 allower.getRelation("http://www.example.com/test::range",
+                                     "http://www.example.com::range2"));
+    assertEquals(ActivityRegulator.RELATION_PARENT,
+                 allower.getRelation("http://www.example.com::range",
+                                     "http://www.example.com/test::range2"));
+    assertEquals(ActivityRegulator.RELATION_NONE,
+                 allower.getRelation("http://www.example.com/test::range",
+                                     "http://www.example.com/test2::range2"));
+  }
+
+  public void testIsAllowedOnAu() {
+    // nothing allowed on these
+    assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.NEW_CONTENT_CRAWL));
+    assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.TOP_LEVEL_POLL));
+    assertFalse(allower.isAllowedOnAu(allower.NO_ACTIVITY, allower.TREEWALK));
+
+    // only CUS activity allowed on CUS_ACTIVITY
+    assertTrue(allower.isAllowedOnAu(allower.BACKGROUND_CRAWL, allower.CUS_ACTIVITY));
+    assertTrue(allower.isAllowedOnAu(allower.REPAIR_CRAWL, allower.CUS_ACTIVITY));
+    assertTrue(allower.isAllowedOnAu(allower.STANDARD_POLL, allower.CUS_ACTIVITY));
+    assertFalse(allower.isAllowedOnAu(allower.NEW_CONTENT_CRAWL, allower.CUS_ACTIVITY));
+  }
+
+  public void testIsAllowedOnCus() {
+    // if a crawl-
+    //   allow nothing if same
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.BACKGROUND_CRAWL, allower.RELATION_SAME));
+    //   allow anything if parent
+    assertTrue(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.BACKGROUND_CRAWL, allower.RELATION_PARENT));
+    //   allow only crawls if child
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.BACKGROUND_CRAWL, allower.RELATION_CHILD));
+    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.BACKGROUND_CRAWL, allower.RELATION_CHILD));
+
+    // if a poll-
+    //   allow nothing if same
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_POLL, allower.RELATION_SAME));
+    //   allow nothing if parent
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_POLL, allower.RELATION_PARENT));
+    //   allow only crawls if child
+    assertFalse(allower.isAllowedOnCus(allower.NO_ACTIVITY, allower.STANDARD_POLL, allower.RELATION_CHILD));
+    assertTrue(allower.isAllowedOnCus(allower.REPAIR_CRAWL, allower.STANDARD_POLL, allower.RELATION_CHILD));
+
+  }
+
   public void testAuExpiration() {
     assertTrue(allower.startAuActivity(allower.NEW_CONTENT_CRAWL, mau, 10));
     assertEquals(allower.NEW_CONTENT_CRAWL, allower.getAuActivity(mau));
@@ -191,7 +262,14 @@ public class TestActivityRegulator extends LockssTestCase {
     expectedStr += "::";
     assertEquals(expectedStr, allower.getAuPrefix(mcus));
 
-    expectedStr += mcus.getUrl();
+    expectedStr += "test url::";
+    assertEquals(expectedStr, allower.getCusKey(mcus));
+
+    mcus = new MockCachedUrlSet(
+        new RangeCachedUrlSetSpec("test", "lwr", "upr"));
+    mcus.setArchivalUnit(mau);
+
+    expectedStr = mau.getGloballyUniqueId() + "::test::lwr-upr";
     assertEquals(expectedStr, allower.getCusKey(mcus));
   }
 

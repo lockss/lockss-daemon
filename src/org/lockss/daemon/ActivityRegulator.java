@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.2 2003-04-15 00:36:05 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.3 2003-04-16 02:23:48 aalto Exp $
  */
 
 /*
@@ -92,6 +92,11 @@ public class ActivityRegulator {
    */
   static final int NO_ACTIVITY = -1;
 
+  static final int RELATION_PARENT = -1;
+  static final int RELATION_SAME = 0;
+  static final int RELATION_CHILD = 1;
+  static final int RELATION_NONE = 99;
+
   private static Logger logger = Logger.getLogger("ActivityRegulator");
 
   HashMap auMap = new HashMap();
@@ -99,6 +104,11 @@ public class ActivityRegulator {
 
   public ActivityRegulator() {
     logger.debug2("ActivityRegulator created.");
+  }
+
+  public void freeAllLocks() {
+    auMap = new HashMap();
+    cusMap = new HashMap();
   }
 
   /**
@@ -113,7 +123,7 @@ public class ActivityRegulator {
                                               long expireIn) {
     // check if the au is free for this activity
     int auActivity = getAuActivity(au);
-    if (auActivity!=NO_ACTIVITY) {
+    if (!isAllowedOnAu(activity, auActivity)) {
       // au is being acted upon
       logger.debug3("AU '" + au.getName() + "' busy with " +
                     activityCodeToString(auActivity) + ". Couldn't start " +
@@ -139,7 +149,7 @@ public class ActivityRegulator {
                                                long expireIn) {
     // first, check if au is busy
     int auActivity = getAuActivity(cus.getArchivalUnit());
-    if ((auActivity!=NO_ACTIVITY) && (auActivity!=CUS_ACTIVITY)) {
+    if (!isAllowedOnAu(activity, auActivity)) {
       // au is being acted upon at the AU level
       logger.debug3("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
                     activityCodeToString(auActivity) + ". Couldn't start " +
@@ -149,11 +159,14 @@ public class ActivityRegulator {
     }
     // check if the cus is free for this activity
     int cusActivity = getCusActivity(cus);
-    if (cusActivity!=NO_ACTIVITY) {
+    if (!isAllowedOnCus(activity, cusActivity, RELATION_SAME)) {
       logger.debug3("CUS '" + cus.getUrl() + "' busy with " +
                     activityCodeToString(cusActivity) + ". Couldn't start " +
                     activityCodeToString(activity) + " on CUS '" +
                     cus.getUrl() + "'");
+      return false;
+    }
+    if (checkForRelatedCusActivity(activity, cus)) {
       return false;
     }
     setCusActivity(cus, activity, expireIn);
@@ -199,6 +212,7 @@ public class ActivityRegulator {
           logger.debug3("Removing expired "+activityCodeToString(value.activity) +
                         " on CUS '" + key + "'");
           cusMap.remove(key);
+          continue;
         }
         if (value.activity!=NO_ACTIVITY) {
           otherAuActivity = true;
@@ -211,6 +225,105 @@ public class ActivityRegulator {
       endAuActivity(CUS_ACTIVITY, cus.getArchivalUnit());
       logger.debug3("Finished " + activityCodeToString(CUS_ACTIVITY) +
                     " on AU '" + cus.getArchivalUnit().getName() + "'");
+    }
+  }
+
+  boolean checkForRelatedCusActivity(int activity, CachedUrlSet cus) {
+    String cusKey = getCusKey(cus);
+    Iterator cusIt = cusMap.entrySet().iterator();
+    while (cusIt.hasNext()) {
+      // check each other cus to see if it's related to this one
+      Map.Entry entry = (Map.Entry)cusIt.next();
+      String entryKey = (String)entry.getKey();
+      // need to append '/' to protect against substring matches
+      // i.e. /test vs. /test2
+      int relation = getRelation(entryKey, cusKey);
+      if (relation!=RELATION_NONE) {
+        ActivityEntry value = (ActivityEntry)entry.getValue();
+        if (value.isExpired()) {
+          logger.debug3("Removing expired " +
+                        activityCodeToString(value.activity) +
+                        " on CUS '" + entryKey + "'");
+          cusMap.remove(entryKey);
+          continue;
+        }
+        if (!isAllowedOnCus(activity, value.activity, relation)) {
+          String relationStr = (relation==RELATION_CHILD ? "Child" : "Parent");
+          logger.debug3(relationStr + " CUS '" + cus.getUrl() + "' busy with " +
+                        activityCodeToString(value.activity) +
+                        ". Couldn't start " + activityCodeToString(activity) +
+                        " on CUS '" + cus.getUrl() + "'");
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+
+  static int getRelation(String key1, String key2) {
+    String key1Sub = key1.substring(0, key1.lastIndexOf("::")) + "/";
+    String key2Sub = key2.substring(0, key2.lastIndexOf("::")) + "/";
+    if (key1Sub.equals(key2Sub)) {
+      return RELATION_SAME;
+    } else if (key1Sub.startsWith(key2Sub)) {
+      return RELATION_CHILD;
+    } else if (key2Sub.startsWith(key1Sub)) {
+      return RELATION_PARENT;
+    } else {
+      return RELATION_NONE;
+    }
+  }
+
+  static boolean isAllowedOnAu(int newActivity, int auActivity) {
+    switch (auActivity) {
+      case NEW_CONTENT_CRAWL:
+      case TOP_LEVEL_POLL:
+      case TREEWALK:
+        // no new activity allowed
+        return false;
+      case CUS_ACTIVITY:
+        // only other CUS activity is allowed while CUS activity is going on
+        return (isCusActivity(newActivity));
+      case NO_ACTIVITY:
+      default:
+        return true;
+    }
+  }
+
+  static boolean isAllowedOnCus(int newActivity, int cusActivity, int relation) {
+    switch (cusActivity) {
+      case BACKGROUND_CRAWL:
+      case REPAIR_CRAWL:
+        if (relation==RELATION_SAME) {
+          // only one action on a CUS at a time
+          return false;
+        } else if (relation==RELATION_PARENT) {
+          // if this CUS is a parent, any action allowed
+          return true;
+        } else {
+          // if this CUS is a child, only crawls allowed
+          return ((newActivity==BACKGROUND_CRAWL) ||
+                  (newActivity==REPAIR_CRAWL));
+        }
+      case STANDARD_POLL:
+        if (relation==RELATION_SAME) {
+          // only one action on a CUS at a time unless it's another poll and
+          // the ranges are different
+          if (newActivity==STANDARD_POLL) {
+
+          }
+          return false;
+        } else if (relation==RELATION_PARENT) {
+          // if this CUS is a parent, no action allowed
+          return false;
+        } else {
+          // if this CUS is a child, only crawls allowed
+          return ((newActivity==BACKGROUND_CRAWL) ||
+                  (newActivity==REPAIR_CRAWL));
+        }
+      case NO_ACTIVITY:
+      default:
+        return true;
     }
   }
 
@@ -289,7 +402,14 @@ public class ActivityRegulator {
   }
 
   static String getCusKey(CachedUrlSet cus) {
-    return getAuPrefix(cus) + cus.getUrl();
+    String key = getAuPrefix(cus) + cus.getUrl() + "::";
+    if (cus.getSpec() instanceof RangeCachedUrlSetSpec) {
+      RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)cus.getSpec();
+      if ((rSpec.getLowerBound()!=null) || (rSpec.getUpperBound()!=null)) {
+        key += rSpec.getLowerBound() + "-" + rSpec.getUpperBound();
+      }
+    }
+    return key;
   }
 
   public static String activityCodeToString(int activity) {
@@ -311,6 +431,31 @@ public class ActivityRegulator {
       case NO_ACTIVITY:
       default:
         return "No Activity";
+    }
+  }
+
+  static boolean isAuActivity(int activity) {
+    switch (activity) {
+      case NEW_CONTENT_CRAWL:
+      case TOP_LEVEL_POLL:
+      case TREEWALK:
+      case CUS_ACTIVITY:
+      case NO_ACTIVITY:
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  static boolean isCusActivity(int activity) {
+    switch (activity) {
+      case BACKGROUND_CRAWL:
+      case REPAIR_CRAWL:
+      case STANDARD_POLL:
+      case NO_ACTIVITY:
+        return true;
+      default:
+        return false;
     }
   }
 
