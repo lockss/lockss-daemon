@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.31 2003-04-15 01:24:51 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.32 2003-04-18 22:31:02 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
 import org.lockss.daemon.*;
@@ -237,6 +238,12 @@ public class MockCachedUrlSet implements CachedUrlSet {
   public void addUrl(String source, String url,
 		     boolean exists, boolean shouldCache,
 		     Properties props) {
+    addUrl(source, url, exists, shouldCache, props, null);
+  }
+
+  private void addUrl(String source, String url,
+		 boolean exists, boolean shouldCache,
+		 Properties props, IOException cacheException) {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setContent(source);
     cu.setProperties(props);
@@ -245,11 +252,21 @@ public class MockCachedUrlSet implements CachedUrlSet {
     MockUrlCacher uc = new MockUrlCacher(url, this);
     uc.setShouldBeCached(shouldCache);
     uc.setCachedUrl(cu);
+    if (cacheException != null) {
+      uc.setCachingException(cacheException);
+    }
 
     logger.debug("Adding "+url+" to cuHash and ucHash");
 
     cuHash.put(url, cu);
     ucHash.put(url, uc);
+  }
+
+  /**
+   * To be used when you want to set up a url that will throw an exception
+   */
+  public void addUrl(String url, IOException cacheException) {
+    addUrl("", url, false, true, new Properties(), cacheException);
   }
 
   /**

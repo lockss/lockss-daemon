@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.7 2003-03-27 22:05:03 troberts Exp $
+ * $Id: Crawler.java,v 1.8 2003-04-18 22:31:02 troberts Exp $
  */
 
 /*
@@ -49,9 +49,10 @@ public interface Crawler {
 
   /**
    * Initiate a crawl starting with all the urls in urls
+   * @return true if the crawl was successful
    * @param deadline maximum time to spend on this crawl
    */
-  public void doCrawl(Deadline deadline);
+  public boolean doCrawl(Deadline deadline);
 
   /**
    * Return the number of urls that have been fetched by this crawler

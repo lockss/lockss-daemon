@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.11 2003-04-02 23:28:37 tal Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.12 2003-04-18 22:31:02 troberts Exp $
  */
 
 /*
@@ -337,7 +337,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
-   }
+  }
 
   public void testDoesNotCacheFileWhichShouldNotBeCached() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
@@ -346,7 +346,6 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     crawler.doCrawl(Deadline.MAX);
     assertEquals(0, cus.getCachedUrls().size());
   }
-
 
   public void testParsesFileWithCharsetAfterContentType() {
     String url = "http://www.example.com/link1.html";
@@ -667,6 +666,33 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
   
+  public void testReturnsTrueWhenCrawlSucessful() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
+    cus.addUrl(LINKLESS_PAGE, url1, false, true);
+
+    assertTrue(crawler.doCrawl(Deadline.MAX));
+   }
+
+  public void testReturnsFalseWhenExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
+    cus.addUrl(url1, new IOException("Test exception"));
+
+    assertFalse(crawler.doCrawl(Deadline.MAX));
+  }
+
+  public void testReturnsTrueWhenFileNotFoundExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
+    cus.addUrl(url1, new FileNotFoundException("Test exception"));
+
+    assertTrue(crawler.doCrawl(Deadline.MAX));
+  }
+
   public void testGetStatusCrawlNotStarted() {
     assertEquals(-1, crawler.getStartTime());
     assertEquals(-1, crawler.getEndTime());

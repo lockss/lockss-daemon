@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.25 2003-04-18 20:56:48 aalto Exp $
+ * $Id: CrawlManagerImpl.java,v 1.26 2003-04-18 22:31:02 troberts Exp $
  */
 
 /*
@@ -251,7 +251,7 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     public void run() {
-      crawler.doCrawl(deadline);
+      boolean crawlSucessful = crawler.doCrawl(deadline);
       activeCrawls.remove(au);
 
       // if followLinks is true, assume it's a new content crawl
@@ -270,7 +270,7 @@ public class CrawlManagerImpl extends BaseLockssManager
         Iterator it = callbacks.iterator();
         while (it.hasNext()) {
           CrawlManager.Callback cb = (CrawlManager.Callback) it.next();
-          cb.signalCrawlAttemptCompleted(true, cookie);
+          cb.signalCrawlAttemptCompleted(crawlSucessful, cookie);
         }
       }
     }

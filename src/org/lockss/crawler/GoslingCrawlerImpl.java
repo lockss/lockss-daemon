@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.16 2003-03-27 22:05:03 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.17 2003-04-18 22:31:02 troberts Exp $
  */
 
 /*
@@ -165,10 +165,11 @@ public class GoslingCrawlerImpl implements Crawler {
    *
    * @param deadline when to terminate by
    */
-  public void doCrawl(Deadline deadline) {
+  public boolean doCrawl(Deadline deadline) {
     if (deadline == null) {
       throw new IllegalArgumentException("Called with a null Deadline");
     }
+    boolean wasError = false;
     logger.info("Beginning crawl of "+au);
     startTime = TimeBase.nowMs();
     CachedUrlSet cus = au.getAUCachedUrlSet();
@@ -178,15 +179,21 @@ public class GoslingCrawlerImpl implements Crawler {
 
     Iterator it = startUrls.iterator();
     while (it.hasNext() && !deadline.expired()) {
-      doCrawlLoop((String)it.next(), extractedUrls, parsedPages, cus, true);
+      if (!doCrawlLoop((String)it.next(), extractedUrls, 
+		       parsedPages, cus, true)) {
+	wasError = true;
+      }
     }
 
     while (!extractedUrls.isEmpty() && !deadline.expired()) {
       String url = (String)extractedUrls.remove(0);
-      doCrawlLoop(url, extractedUrls, parsedPages, cus, false);
+      if (!doCrawlLoop(url, extractedUrls, parsedPages, cus, false)) {
+	wasError = true;
+      }
     }
     logger.info("Finished crawl of "+au);
     endTime = TimeBase.nowMs();
+    return !wasError;
   }
 
 
@@ -198,10 +205,12 @@ public class GoslingCrawlerImpl implements Crawler {
    * @param parsedPages set containing all the pages that have already
    * been parsed (to make sure we don't loop)
    * @param cus cached url set that the url belongs to
+   * @return true if there were no errors
    */
-  protected void doCrawlLoop(String url, List extractedUrls, 
+  protected boolean doCrawlLoop(String url, List extractedUrls, 
 			     Set parsedPages, CachedUrlSet cus,
 			     boolean overWrite) {
+    boolean wasError = false;
     logger.debug("Dequeued url from list: "+url);
     UrlCacher uc = cus.makeUrlCacher(url);
     if (uc.shouldBeCached()) {
@@ -211,9 +220,12 @@ public class GoslingCrawlerImpl implements Crawler {
 	  logger.debug("caching "+uc);
 	  uc.cache(); //IOException if there is a caching problem
 	  numUrlsFetched++;
+	} catch (FileNotFoundException e) {
+	  logger.error(uc+" not found on publisher's site");
 	} catch (IOException ioe) {
 	  //XXX handle this better.  Requeue?
 	  logger.error("Problem caching "+uc+". Ignoring", ioe);
+	  wasError = true;
 	}
 	au.pause(); //XXX make sure we throw InterruptedExceptions
       }
@@ -237,9 +249,11 @@ public class GoslingCrawlerImpl implements Crawler {
       } catch (IOException ioe) {
 	//XXX handle this better.  Requeue?
 	logger.error("Problem parsing "+uc+". Ignoring", ioe);
+	wasError = true;
       }
     }
     logger.debug("Removing from list: "+uc.getUrl());
+    return !wasError;
   }
 
 
