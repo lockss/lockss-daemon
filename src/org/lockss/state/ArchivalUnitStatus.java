@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.22 2004-10-06 23:52:55 clairegriffin Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.23 2004-10-08 06:57:39 tlipkis Exp $
  */
 
 /*
@@ -227,9 +227,14 @@ public class ArchivalUnitStatus
       }
       try {
 	ArchivalUnit au = theDaemon.getPluginManager().getAuFromId(key);
+	if (au == null) {
+	  throw new StatusService.NoSuchTableException("Unknown auid: " + key);
+	}
 	populateTable(table, au, startRow);
       } catch (Exception e) {
-	throw new StatusService.NoSuchTableException("Unknown auid: " + key);
+	logger.warning("Error building table", e);
+	throw new StatusService.
+	  NoSuchTableException("Error building table for auid: " + key);
       }
     }
 
@@ -440,11 +445,8 @@ public class ArchivalUnitStatus
     private static final List sortRules =
       ListUtil.list(new StatusTable.SortRule("Cache", true));
 
-    private IdentityManager idManager;
-
     PeersAgreement(LockssDaemon theDaemon) {
       super(theDaemon);
-      idManager = theDaemon.getIdentityManager();
     }
 
     public void populateTable(StatusTable table, ArchivalUnit au, int startRow)
@@ -459,9 +461,9 @@ public class ArchivalUnitStatus
 	Map statsMap = buildCacheStats(au, nodeMan);
 	List rowL = new ArrayList();
 	for (Iterator iter = statsMap.keySet().iterator(); iter.hasNext(); ) {
-	  String identity = ((PeerIdentity)iter.next()).getIdString();
-	  CacheStats stats = (CacheStats)statsMap.get(identity);
-	  if (! idManager.isLocalIdentity(stats.identity)) {
+	  PeerIdentity peer = (PeerIdentity)iter.next();
+	  CacheStats stats = (CacheStats)statsMap.get(peer);
+	  if (! peer.isLocalIdentity()) {
 	    totalPeers++;
 	    if (stats.mostRecentVote.isAgreeVote()) {
 	      totalAgreement++;
@@ -484,11 +486,11 @@ public class ArchivalUnitStatus
 	long histTime = history.getStartTime();
 	for (Iterator votes_it = history.getVotes(); votes_it.hasNext(); ) {
 	  Vote vote = (Vote)votes_it.next();
-	  String identity = vote.getVoterIdentity().getIdString();
-	  CacheStats stats = (CacheStats)statsMap.get(identity);
+	  PeerIdentity peer = vote.getVoterIdentity();
+	  CacheStats stats = (CacheStats)statsMap.get(peer);
 	  if (stats == null) {
-	    stats = new CacheStats(identity);
-	    statsMap.put(identity, stats);
+	    stats = new CacheStats(peer);
+	    statsMap.put(peer, stats);
 	  }
 	  if (stats.mostRecentVote == null ||
 	      histTime > stats.mostRecentVoteTime) {
@@ -516,7 +518,7 @@ public class ArchivalUnitStatus
     }
 
     static class CacheStats {
-      String identity;
+      PeerIdentity peer;
       Vote mostRecentVote;
       long mostRecentVoteTime = 0;
       int totalPolls = 0;
@@ -526,16 +528,17 @@ public class ArchivalUnitStatus
       Vote lastDisagree;
       long lastDisagreeTime = 0;
 
-      CacheStats(String identity) {
-	this.identity = identity;
+      CacheStats(PeerIdentity peer) {
+	this.peer = peer;
       }
     }
 
     private Map makeRow(CacheStats stats) {
       HashMap rowMap = new HashMap();
 
-      Object id = stats.identity;
-      if (idManager.isLocalIdentity(stats.identity)) {
+      PeerIdentity peer = stats.peer;
+      Object id = peer.getIdString();
+      if (peer.isLocalIdentity()) {
 	StatusTable.DisplayedValue val =
 	  new StatusTable.DisplayedValue(id);
 	val.setBold(true);
