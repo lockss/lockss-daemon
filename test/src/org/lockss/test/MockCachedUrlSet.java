@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.6 2002-11-05 01:46:50 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.7 2002-11-06 18:31:26 troberts Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   private Vector urls = null;
   private Iterator flatIterator = null;
+  private Iterator leafIterator = null;
 
   public MockCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
@@ -80,7 +81,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
     return flatIterator;
   }
 
-  public void setFlatIterator(Iterator it){
+  public void setFlatIterator(Iterator it) {
     flatIterator = it;
   }
 
@@ -89,28 +90,32 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public Iterator leafIterator() {
-    return null;
+    return leafIterator;
+  }
+
+  public void setLeafIterator(Iterator it) {
+    leafIterator = it;
   }
 
   // Methods used by the poller
 
-  public CachedUrlSetHasher getContentHasher(MessageDigest hasher){
+  public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
     return null;
   }
 
-  public CachedUrlSetHasher getNameHasher(MessageDigest hasher){
+  public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
     return null;
   }
 
-  public Enumeration flatEnumeration(){
+  public Enumeration flatEnumeration() {
     return null;
   }
 
-  public Enumeration treeEnumeration(){
+  public Enumeration treeEnumeration() {
     return null;
   }
 
-  public long estimatedHashDuration(){
+  public long estimatedHashDuration() {
     return 0;
   }
 
@@ -119,11 +124,11 @@ public class MockCachedUrlSet implements CachedUrlSet {
 
   // Methods used by the crawler
 
-  public CachedUrl makeCachedUrl(String url){
+  public CachedUrl makeCachedUrl(String url) {
     return null;
   }
 
-  public UrlCacher makeUrlCacher(String url){
+  public UrlCacher makeUrlCacher(String url) {
     return null;
   }
 
