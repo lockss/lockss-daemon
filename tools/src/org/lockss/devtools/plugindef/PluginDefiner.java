@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.5 2004-06-23 22:07:30 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.6 2004-06-23 22:29:37 clairegriffin Exp $
  */
 
 /*
@@ -126,7 +126,9 @@ public class PluginDefiner extends JFrame {
     jMenuFileExit.setMnemonic('X');
     jMenuFileExit.setText("Exit");
     jMenuFileExit.addActionListener(new Configurator_jMenuFileExit_ActionAdapter(this));
+    jMenuHelp.setMnemonic('H');
     jMenuHelp.setText("Help");
+    jMenuHelpAbout.setMnemonic('A');
     jMenuHelpAbout.setText("About");
     jMenuHelpAbout.addActionListener(new Configurator_jMenuHelpAbout_ActionAdapter(this));
     jMenuEdit.setMnemonic('E');
@@ -161,12 +163,16 @@ public class PluginDefiner extends JFrame {
 
     contentPane.setMinimumSize(new Dimension(80, 200));
     contentPane.setPreferredSize(new Dimension(380, 320));
+    jMenuPlugin.setMnemonic('P');
     jMenuPlugin.setText("Plugin");
+    rulesTestMenuItem.setMnemonic('C');
     rulesTestMenuItem.setText("Test CrawlRules...");
     rulesTestMenuItem.addActionListener(new Configurator_rulesTestMenuItem_actionAdapter(this));
     filtersTestMenuItem.setText("Test Filters...");
+    expertModeMenuItem.setMnemonic('X');
     expertModeMenuItem.setText("ExpertMode");
     expertModeMenuItem.addActionListener(new Configurator_expertModeMenuItem_actionAdapter(this));
+    filtersTestMenuItem.setMnemonic('F');
     filtersTestMenuItem.setText("Test Filters");
     filtersTestMenuItem.addActionListener(new Configurator_filtersTestMenuItem_actionAdapter(this));
     jMenuFile.add(jMenuFileNew);
