@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.3 2003-02-22 01:07:34 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.4 2003-05-29 00:55:26 troberts Exp $
  */
 
 /*
@@ -120,6 +120,7 @@ public class HtmlTagFilter extends Reader {
       addCharToBuffer(charBuffer, reader);
     }
     if (charBuffer.size() < 1) {
+      logger.debug3("Read Returning -1, spot a");
       return -1;
     }
 
@@ -127,10 +128,11 @@ public class HtmlTagFilter extends Reader {
       readThroughTag(charBuffer, reader, pair);
     }
     if (charBuffer.size() == 0) {
+      logger.debug3("Read Returning -1, spot b");
       return -1;
     }
     char returnChar = ((Character)charBuffer.remove(0)).charValue();
-    logger.debug("Read returning "+returnChar);
+    logger.debug3("Read returning "+returnChar);
     return returnChar;
   }
 
@@ -246,9 +248,10 @@ public class HtmlTagFilter extends Reader {
   }
   
   public int read(char[] outputBuf, int off, int len) throws IOException {
+    logger.debug3("Read array called");
     for (int ix=0; ix<off; ix++) {
       if (read() == -1) {
- 	return 0;
+ 	return -1;
       }
     }
     int size = 0;
@@ -258,7 +261,8 @@ public class HtmlTagFilter extends Reader {
       outputBuf[size] = (char)curKar;
       size++;
     }
-    return size;
+    logger.debug3("Read array returning "+size);
+    return size == 0 ? -1 : size;
   }
   
   public boolean ready() {
@@ -283,7 +287,7 @@ public class HtmlTagFilter extends Reader {
 
     public TagPair(String start, String end) {
       if (start == null || end == null) {
-      throw new IllegalArgumentException("Called with a null start "+
+	throw new IllegalArgumentException("Called with a null start "+
 					 "or end string");
       }
       this.start = start;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.4 2003-03-04 01:02:06 aalto Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.5 2003-05-29 00:55:26 troberts Exp $
  */
 
 /*
@@ -117,6 +117,17 @@ public class TestHtmlTagFilter extends LockssTestCase {
 			new HtmlTagFilter.TagPair("blah", "blah2"));
 
     assertReaderMatchesString(content, reader);
+  }
+
+  public void testFiltersSingleCharTags() throws IOException {
+    String content = "This <is test >content";
+    String expectedContent = "This content";
+
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content),
+			new HtmlTagFilter.TagPair("<", ">"));
+
+    assertReaderMatchesString(expectedContent, reader);
   }
 
   public void testFiltersSingleTagsNoNesting() throws IOException {
@@ -265,7 +276,7 @@ public class TestHtmlTagFilter extends LockssTestCase {
     char actual[] = new char[expectedContent.length()];
     reader.read(actual);
     assertEquals(expectedContent, new String(actual));
-    assertEquals(0, reader.read(actual));
+    assertEquals(-1, reader.read(actual));
   }
 
   public void testReadWithOffsetAndLength() throws IOException {
@@ -283,6 +294,15 @@ public class TestHtmlTagFilter extends LockssTestCase {
     reader.read(actual);
     assertEquals("ent", new String(actual));
   }
+
+  public void testReadReturnsNegOneWithTooLargeOffset() throws IOException {
+    String content = "This "+startTag1+"is test "+endTag1+"content";
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+
+    char actual[] = new char[5];
+    assertEquals(-1, reader.read(actual, 100, 7));
+  }    
 
 
 
