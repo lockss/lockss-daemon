@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.1 2003-02-25 22:10:46 tal Exp $
+ * $Id: TestPollSpec.java,v 1.2 2003-02-26 04:42:23 tal Exp $
  */
 
 /*
@@ -60,8 +60,8 @@ public class TestPollSpec extends LockssTestCase {
 
     CachedUrlSet cus = new MockCachedUrlSet(au,
 					    new RangeCachedUrlSetSpec(url,
-								      upper,
-								      lower));
+								      lower,
+								      upper));
     PollSpec ps = new PollSpec(cus);
     assertEquals(auid, ps.getAUId());
     assertEquals(pluginid, ps.getPluginId());
