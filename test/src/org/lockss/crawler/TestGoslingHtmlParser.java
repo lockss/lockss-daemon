@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.10 2004-03-08 19:32:36 tlipkis Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.11 2004-03-09 23:24:53 troberts Exp $
  */
 
 /*
@@ -75,17 +75,24 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     }
   }
 
-//   public void testThrowsOnNullAu() {
-//     try {
-//       GoslingHtmlParser parser = new GoslingHtmlParser(null);
-//       fail("Trying to construct a GoslingHtmlParser with a null AU should throw");
-//     } catch (IllegalArgumentException iae) {
-//     }
-//   }
-
   public void testParsesHref() throws IOException {
     singleTagShouldParse("http://www.example.com/web_link.html",
   			 "<a href=", "</a>");
+  }
+
+  public void testParsesHrefWithTab() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.html",
+  			 "<a\thref=", "</a>");
+  }
+
+  public void testParsesHrefWithCarriageReturn() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.html",
+  			 "<a\rhref=", "</a>");
+  }
+
+  public void testParsesHrefWithNewLine() throws IOException {
+    singleTagShouldParse("http://www.example.com/web_link.html",
+  			 "<a\nhref=", "</a>");
   }
 
   public void testDoCrawlImage() throws IOException {
@@ -171,8 +178,8 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     singleTagParse(url, startTag, endTag, false);
   }
 
-  private void singleTagParse (String url, String startTag,
-			       String endTag, boolean shouldParse)
+  private void singleTagParse(String url, String startTag,
+			      String endTag, boolean shouldParse)
   throws IOException {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     String content = makeContent(url, startTag, endTag);
@@ -285,18 +292,29 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     checkBadTags(badTags, "</table>");
   }
 
-  public void testDoesntCollectHttps() throws IOException {
+  public void testCollectsHttps() throws IOException {
+    String url = "https://www.example.com/link3.html";
     String source =
       "<html><head><title>Test</title></head><body>"+
-      "<a href=\"https://www.example.com/link3.html\">link3</a>";
+      "<a href=\""+url+"\">link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testEmptyAttribute() throws IOException {
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=>link3</a>";
     assertEquals(SetUtil.set(), parseSingleSource(source));
   }
 
-  public void testDoesntThrowOnMalformedUrl() throws IOException {
+  //parser now should return urls for protocols we don't know.  Crawler will
+  //ignore them.
+  public void testParseUnknownProtocol() throws IOException {
+    String url = "badprotocol://www.example.com/link3.html";
     String source =
       "<html><head><title>Test</title></head><body>"+
-      "<a href=\"badprotocol://www.example.com/link3.html\">link3</a>";
-    assertEquals(SetUtil.set(), parseSingleSource(source));
+      "<a href=\""+url+"\">link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 
   public void testParsesFileWithQuotedUrls() throws IOException {
@@ -307,18 +325,18 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a href=\"http://www.example.com/link3.html\">link3</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
-  public void testDoHrefInAnchorJavascript() throws IOException {
-    String url= "http://www.example.com/link3.html";
-    String url2 = "http://www.example.com/link2.html";
-    String url3 = "http://www.example.com/link1.html";
+//   public void testDoHrefInAnchorJavascript() throws IOException {
+//     String url= "http://www.example.com/link3.html";
+//     String url2 = "http://www.example.com/link2.html";
+//     String url3 = "http://www.example.com/link1.html";
 
-    String source =
-      "<html><head><title>Test</title></head><body>"+
-      "<a href = javascript:newWindow('http://www.example.com/link3.html')</a>"
-    + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
-    + "<img src = javascript:popup('" + url3 + "') </img>";
-    assertEquals(SetUtil.set(url, url2), parseSingleSource(source));
-  }
+//     String source =
+//       "<html><head><title>Test</title></head><body>"+
+//       "<a href = javascript:newWindow('http://www.example.com/link3.html')</a>"
+//     + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
+//     + "<img src = javascript:popup('" + url3 + "') </img>";
+//     assertEquals(SetUtil.set(url, url2), parseSingleSource(source));
+//   }
 
   public void testSkipsComments() throws IOException {
     String url= "http://www.example.com/link3.html";
@@ -329,6 +347,60 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "Filler, with <b>bold</b> tags and<i>others</i>"+
       "<a href=http://www.example.com/link2.html>link2</a>-->"+
       "<a href=http://www.example.com/link3.html>link3</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testKeepsSpaceInUrl() throws IOException {
+    String url= "http://www.example.com/link%20with%20space.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"http://www.example.com/link with space.html\">Link</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testIgnoresNewLineInUrl() throws IOException {
+    String url= "http://www.example.com/linkwithspace.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"http://www.example.com/link\nwith\nspace.html\">Link</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testIgnoresNewLineInField() throws IOException {
+    String url= "http://www.example.com/link.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<img\nsrc=\"http://www.example.com/link.html\">Link</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testIgnoresCRInUrl() throws IOException {
+    String url= "http://www.example.com/linkwithspace.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\"http://www.example.com/link\rwith\rspace.html\">Link</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+
+  public void testKeepsDoubleQuoteInUrl() throws IOException {
+    String url= "http://www.example.com/link%22with%22quotes.html";
+    
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href='http://www.example.com/link\"with\"quotes.html'>Link</a>";
+    assertEquals(SetUtil.set(url), parseSingleSource(source));
+  }
+  
+  public void testKeepsSingleQuoteInUrl() throws IOException {
+    String url= "http://www.example.com/link'with'quotes.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href=\""+url+"\">Link</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
 

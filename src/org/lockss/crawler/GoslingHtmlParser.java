@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.12 2004-03-08 19:32:37 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.13 2004-03-09 23:24:52 troberts Exp $
  */
 
 /*
@@ -94,6 +94,15 @@ public class GoslingHtmlParser implements ContentParser {
   private static final String SRC = "src";
   private static final String BACKGROUNDSRC = "background";
   private static final String REFRESH = "refresh";
+  private static final String HTTP_EQUIV = "http-equiv";
+  private static final String HTTP_EQUIV_CONTENT = "content";
+  private static final String HTTP_EQUIV_URL = "url";
+
+  private static final String NEWLINE = "\n";
+  private static final String CARRIAGE_RETURN = "\r";
+
+  //smallest size any of the tags we're interested in can be; <a href=
+  private static final int MIN_TAG_LENGTH = 5;
 
   private static Logger logger = Logger.getLogger("GoslingHtmlParser");
 
@@ -122,18 +131,20 @@ public class GoslingHtmlParser implements ContentParser {
     Reader reader = cu.openForReading();
 
     String redirectedTo = getRedirectedTo(cu);
-    URL srcUrl = null;
+    String srcUrl = cuStr;
     if (redirectedTo != null) {
-      logger.debug3("redirected-to set to "+redirectedTo
-		    +". Using that as base URL");
-      srcUrl = new URL(redirectedTo);
-    } else {
-      srcUrl = new URL(cuStr);
-    }
+      if (logger.isDebug3()) {
+	logger.debug3("redirected-to set to "+redirectedTo
+		      +". Using that as base URL");
+      }
+      srcUrl = redirectedTo;
+    } 
     logger.debug3("Extracting urls from srcUrl");
     String nextUrl = null;
     while ((nextUrl = extractNextLink(reader, srcUrl)) != null) {
-      logger.debug3("Extracted "+nextUrl);
+      if (logger.isDebug3()) {
+	logger.debug3("Extracted "+nextUrl);
+      }
       cb.foundUrl(nextUrl);
     }
   }
@@ -156,12 +167,8 @@ public class GoslingHtmlParser implements ContentParser {
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected static String extractNextLink(Reader reader, URL srcUrl)
+  protected static String extractNextLink(Reader reader, String srcUrl)
       throws IOException, MalformedURLException {
-    if (reader == null) {
-      return null;
-    }
-    boolean inscript = false; //FIXME or I will break when we look at scripts
     String nextLink = null;
     int c = 0;
     StringBuffer lineBuf = new StringBuffer();
@@ -193,12 +200,8 @@ public class GoslingHtmlParser implements ContentParser {
 	  pos++;
 	  c = reader.read();
 	}
-	if (inscript) {
-	  //FIXME when you deal with the script problems
-	  //	  if(lookingAt(lineBuf, 0, pos, scripttagend)) {
-	  inscript = false;
-	  //}
-	} else if (lineBuf.length() >= 5) { //see if the lineBuf has a link tag
+	//optimization. if lineBuf is smaller than this, can't be any link
+	if (lineBuf.length() >= MIN_TAG_LENGTH) {
 	  nextLink = parseLink(lineBuf, srcUrl);
 	}
 	lineBuf = new StringBuffer();
@@ -209,7 +212,7 @@ public class GoslingHtmlParser implements ContentParser {
 
 
   private static boolean beginsWithTag(String s1, String tag) {
-    if (StringUtil.getIndexIgnoringCase(s1, tag) == 0) {
+    if (StringUtil.startsWithIgnoreCase(s1, tag)) {
       int len = tag.length();
       if (s1.length() > len && Character.isWhitespace(s1.charAt(len))) {
         return true;
@@ -230,56 +233,58 @@ public class GoslingHtmlParser implements ContentParser {
    * @return string representation of the url from the link tag
    * @throws MalformedURLException
    */
-  protected static String parseLink(StringBuffer link, URL srcUrl)
+  protected static String parseLink(StringBuffer link, String srcUrl)
       throws MalformedURLException {
     String returnStr = null;
 
     switch (link.charAt(0)) {
       case 'a': //<a href=http://www.yahoo.com>
       case 'A':
-        if (beginsWithTag(link.toString(),ATAG)) {
-          returnStr = getAttributeValue(ASRC, link.toString());
-          if (returnStr != null && returnStr.startsWith(JSCRIPTTAG)) {
-            returnStr = extractScriptUrl(returnStr);
-          }
+	//optimization, since we just have to check a single char
+	if (Character.isWhitespace(link.charAt(1))) { 
+          returnStr = getAttributeValue(ASRC, link);
+//           if (returnStr != null && returnStr.startsWith(JSCRIPTTAG)) {
+//             returnStr = extractScriptUrl(returnStr);
+//           }
         }
         break;
       case 'f': //<frame src=frame1.html>
       case 'F':
         if (beginsWithTag(link.toString(),FRAMETAG)) {
-          returnStr = getAttributeValue(SRC, link.toString());
+          returnStr = getAttributeValue(SRC, link);
         }
         break;
       case 'i': //<img src=image.gif>
       case 'I':
         if (beginsWithTag(link.toString(),IMGTAG)) {
-          returnStr = getAttributeValue(SRC, link.toString());
+          returnStr = getAttributeValue(SRC, link);
         }
         break;
       case 'l': //<link href=blah.css>
       case 'L':
         if (beginsWithTag(link.toString(),LINKTAG)) {
-          returnStr = getAttributeValue(ASRC, link.toString());
+          returnStr = getAttributeValue(ASRC, link);
         }
         break;
       case 'b': //<body backgroung=background.gif>
       case 'B':
         if (beginsWithTag(link.toString(),BODYTAG)) {
-          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+          returnStr = getAttributeValue(BACKGROUNDSRC, link);
         }
         break;
       case 's': //<script src=blah.js>
       case 'S':
         if (beginsWithTag(link.toString(),SCRIPTTAG)) {
-          returnStr = getAttributeValue(SRC, link.toString());
+          returnStr = getAttributeValue(SRC, link);
         }
         break;
       case 'm': //<meta http-equiv="refresh"
       case 'M': //"content="0; url=http://example.com/blah.html">
         if (beginsWithTag(link.toString(),METATAG)) {
-	  String httpEquiv = getAttributeValue("http-equiv", link.toString());
+	  String httpEquiv = getAttributeValue(HTTP_EQUIV, link);
 	  if (REFRESH.equalsIgnoreCase(httpEquiv)) {
-	    returnStr = getAttributeValue("url", link.toString());
+	    String content = getAttributeValue(HTTP_EQUIV_CONTENT, link);
+ 	    returnStr = getAttributeValue(HTTP_EQUIV_URL, content);
 	  }
         }
         break;
@@ -287,36 +292,40 @@ public class GoslingHtmlParser implements ContentParser {
       case 'T':
         if (beginsWithTag(link.toString(),TABLETAG) ||
           beginsWithTag(link.toString(),TDTAG)) {
-          returnStr = getAttributeValue(BACKGROUNDSRC, link.toString());
+          returnStr = getAttributeValue(BACKGROUNDSRC, link);
         }
         break;
       default:
         return null;
     }
     if (returnStr != null) {
-      returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
-      logger.debug3("Generating url from: " + srcUrl + " and " + returnStr);
-      if (StringUtil.getIndexIgnoringCase(returnStr, "https") == 0) {
-	logger.debug3("Ignoring https url: "+returnStr);
-        return null;
+      returnStr = StringUtil.trimAfterChars(returnStr, "#");
+      if (logger.isDebug3()) {
+	logger.debug3("Generating url from: " + srcUrl + " and " + returnStr);
       }
       try {
-	URL retUrl = new URL(srcUrl, returnStr);
-	returnStr = retUrl.toString();
+	returnStr = UrlUtil.resolveUri(srcUrl, returnStr);
       } catch (MalformedURLException e) {
 	logger.debug("Got a bad URL", e);
 	return null;
       }
-      logger.debug3("Parsed: " + returnStr);
-      return returnStr;
+      if (logger.isDebug3()) {
+	logger.debug3("Parsed: " + returnStr);
+      }
     }
-    return null;
+    return returnStr;
+  }
+
+  private static String getAttributeValue(String attribute, StringBuffer sb) {
+    return getAttributeValue(attribute, sb.toString());
   }
 
   private static String getAttributeValue(String attribute, String src) {
-    logger.debug3("looking for "+attribute+" in "+src);
-//  we need to allow for all whitespace in our tokenizer;
-    StringTokenizer st = new StringTokenizer(src, "\n\t\r =\"", true);
+    if (logger.isDebug3()) {
+      logger.debug3("looking for "+attribute+" in "+src);
+    }
+    //  we need to allow for all whitespace in our tokenizer;
+    StringTokenizer st = new StringTokenizer(src, "\n\t\r '=\"", true);
     String lastToken = null;
     while (st.hasMoreTokens()) {
       String token = st.nextToken();
@@ -325,43 +334,46 @@ public class GoslingHtmlParser implements ContentParser {
 	  lastToken = token;
 	}
       } else {
-        if (attribute.equalsIgnoreCase(lastToken))
-          while (st.hasMoreTokens()) {
-            token = st.nextToken();
-            // we need to allow for arguments in the url which use '='
-            if (!token.equals(" ") && !token.equals("\"")) {
-              StringBuffer sb = new StringBuffer(token);
-              while (st.hasMoreTokens()){// &&
-//                      !token.equals(" ") && !token.equals("\"")) {
-                token = st.nextToken();
-		if (token.equals(" ") || token.equals("\"")) {
-		  break; //we've hit the end of the attribute value
-		}
-                sb.append(token);
-              }
-              return sb.toString();
-            }
-          }
-
-//	if (attribute.equalsIgnoreCase(lastToken))
-//	  while (st.hasMoreTokens()) {
-//	    token = st.nextToken();
-//	    if (!token.equals(" ") && !token.equals("\"")) {
-//	      return token;
-//	    }
-//	  }
+        if (attribute.equalsIgnoreCase(lastToken)){
+	  if (st.hasMoreTokens()) {
+	    String firstToken = st.nextToken();
+	    if (firstToken.equals("\"")) {
+	      return getTokensUntil(st, "\"");
+	    } else if (firstToken.equals("'")){
+	      return getTokensUntil(st, "'");
+	    } else {
+	      StringBuffer sb = new StringBuffer(firstToken);
+	      sb.append(getTokensUntil(st, " "));
+	      return sb.toString();
+	    }
+	  }
+	}
       }
     }
     return null;
   }
 
-  private static String extractScriptUrl(String src) {
-    int begin = src.indexOf("'");
-    int end = src.indexOf("'",begin+1);
-    if(end > begin)
-      return src.substring(begin+1,end);
-    return src;
-  }
+    private static String getTokensUntil(StringTokenizer st, String endStr) {
+      StringBuffer sb = new StringBuffer();
+      while (st.hasMoreTokens()) {
+	String token = st.nextToken();
+	if (token.equals(endStr)) {
+	  break; //we've hit the end of the attribute value
+	} else if (!token.equals(NEWLINE) && !token.equals(CARRIAGE_RETURN)) {
+	sb.append(token);
+	}
+      }
+      return sb.toString();
+    }
+  
+
+//   private static String extractScriptUrl(String src) {
+//     int begin = src.indexOf("'");
+//     int end = src.indexOf("'",begin+1);
+//     if(end > begin)
+//       return src.substring(begin+1,end);
+//     return src;
+//   }
 
 
 
