@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+ * $Id: LockssResourceHandler.java,v 1.3 2004-02-27 00:21:18 tlipkis Exp $
  */
 
 /*
@@ -29,9 +29,10 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+// Portions are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.2 2003-06-20 22:34:51 claire Exp $
+// $Id: LockssResourceHandler.java,v 1.3 2004-02-27 00:21:18 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -48,12 +49,26 @@ import org.mortbay.util.*;
 /** Extension of ResourceHandler that allows flexibility in finding the
  * Resource.  Mostly copied here because some things in ResourceHandler
  * aren't public or protected. */
-public class LockssResourceHandler extends ResourceHandler {
+public class LockssResourceHandler extends AbstractHttpHandler {
     /* ----------------------------------------------------------------- */
     private boolean _acceptRanges=true;
     private boolean _redirectWelcomeFiles ;
     private String[] _methods=null;
     private String _allowed;
+    private boolean _dirAllowed=true;
+    private int _minGzipLength =-1;
+    private StringMap _methodMap = new StringMap();
+    {
+        setAllowedMethods(new String[]
+            {
+                HttpRequest.__GET,
+                HttpRequest.__MOVE,
+                HttpRequest.__POST,
+                HttpRequest.__HEAD,
+                HttpRequest.__OPTIONS,
+                HttpRequest.__TRACE
+            });
+    }
 
     /* ----------------------------------------------------------------- */
     /** Construct a ResourceHandler.
@@ -83,9 +98,43 @@ public class LockssResourceHandler extends ResourceHandler {
     }
 
     /* ------------------------------------------------------------ */
+    public void setAllowedMethods(String[] methods)
+    {
+        StringBuffer b = new StringBuffer();
+        _methods=methods;
+        _methodMap.clear();
+        for (int i=0;i<methods.length;i++)
+        {
+            _methodMap.put(methods[i],methods[i]);
+            if (i>0)
+                b.append(',');
+            b.append(methods[i]);
+        }
+        _allowed=b.toString();
+    }
+
+    /* ------------------------------------------------------------ */
+    public boolean isMethodAllowed(String method)
+    {
+        return _methodMap.get(method)!=null;
+    }
+
+    /* ------------------------------------------------------------ */
     public String getAllowedString()
     {
         return _allowed;
+    }
+    
+    /* ------------------------------------------------------------ */
+    public boolean isDirAllowed()
+    {
+        return _dirAllowed;
+    }
+    
+    /* ------------------------------------------------------------ */
+    public void setDirAllowed(boolean dirAllowed)
+    {
+        _dirAllowed = dirAllowed;
     }
     
     /* ------------------------------------------------------------ */
@@ -123,14 +172,41 @@ public class LockssResourceHandler extends ResourceHandler {
         _acceptRanges=ar;
     }
     
- 
-  /** Find and return the Resource or null if not found */
-  public Resource getResource(HttpRequest request, String pathInContext)
-      throws IOException {
-    Resource resource = getHttpContext().getResource(pathInContext);
-    return resource;
-  }
+    /* ------------------------------------------------------------ */
+    /** Get minimum content length for GZIP encoding.
+     * @return Minimum length of content for gzip encoding or -1 if disabled.
+     */
+    public int getMinGzipLength()
+    {
+        return _minGzipLength;
+    }
+    
+    /* ------------------------------------------------------------ */
+    /** Set minimum content length for GZIP encoding.
+     * @param minGzipLength If set to a positive integer, then static content
+     * larger than this will be served as gzip content encoded
+     * if a matching resource is found ending with ".gz"
+     */
+    public void setMinGzipLength(int minGzipLength)
+    {
+        _minGzipLength = minGzipLength;
+    }
 
+    
+    /* ------------------------------------------------------------ */
+    /** get Resource to serve.
+     * Map a path to a resource. The default implementation calls
+     * HttpContext.getResource but derived handers may provide
+     * their own mapping.
+     * @param pathInContext The path to find a resource for.
+     * @return The resource to serve.
+     */
+    protected Resource getResource(HttpRequest request, String pathInContext)
+        throws IOException
+    {
+        return getHttpContext().getResource(pathInContext);
+    }
+    
     /* ------------------------------------------------------------ */
     public void handle(String pathInContext,
                        String pathParams,
@@ -145,7 +221,6 @@ public class LockssResourceHandler extends ResourceHandler {
         if (resource==null)
             return;
 
-
         // Is the method allowed?
         if (!isMethodAllowed(request.getMethod()))
         {
@@ -153,7 +228,7 @@ public class LockssResourceHandler extends ResourceHandler {
             if (resource.exists())
             {
                 setAllowHeader(response);
-                response.sendError(response.__405_Method_Not_Allowed);
+                response.sendError(HttpResponse.__405_Method_Not_Allowed);
             }
             return;
         }
@@ -186,7 +261,7 @@ public class LockssResourceHandler extends ResourceHandler {
                 // anything else...
                 try{
                     if (resource.exists())
-                        response.sendError(response.__501_Not_Implemented);
+                        response.sendError(HttpResponse.__501_Not_Implemented);
                 }
                 catch(Exception e) {Code.ignore(e);}
             }
@@ -244,6 +319,7 @@ public class LockssResourceHandler extends ResourceHandler {
                     {
                         // Redirect to the index
                         ipath=URI.addPaths(getHttpContext().getContextPath(),ipath);
+                        response.setContentLength(0);
                         response.sendRedirect(ipath);
                     }
                     else
@@ -267,7 +343,7 @@ public class LockssResourceHandler extends ResourceHandler {
                 // Check modified dates
                 if (!passConditionalHeaders(request,response,resource))
                     return;
-                sendData(request,response,resource,true);
+                sendData(request,response,pathInContext,resource,true);
             }
             else
                 // don't know what it is
@@ -311,16 +387,17 @@ public class LockssResourceHandler extends ResourceHandler {
             {
                 if (resource.lastModified()/1000 > date/1000)
                 {
-                    response.sendError(response.__412_Precondition_Failed);
+                    response.sendError(HttpResponse.__412_Precondition_Failed);
                     return false;
                 }
             }
             
             if ((date=request.getDateField(HttpFields.__IfModifiedSince))>0)
             {
+                
                 if (resource.lastModified()/1000 <= date/1000)
                 {
-                    response.setStatus(response.__304_Not_Modified);
+                    response.setStatus(HttpResponse.__304_Not_Modified);
                     request.setHandled(true);
                     return false;
                 }
@@ -350,7 +427,7 @@ public class LockssResourceHandler extends ResourceHandler {
             if (!exists)
             {
                 if (!resource.getFile().mkdirs())
-                    response.sendError(response.__403_Forbidden, "Directories could not be created");
+                    response.sendError(HttpResponse.__403_Forbidden, "Directories could not be created");
                 else
                 {
                     request.setHandled(true);
@@ -386,7 +463,7 @@ public class LockssResourceHandler extends ResourceHandler {
             catch (Exception ex)
             {
                 Code.warning(ex);
-                response.sendError(response.__403_Forbidden,
+                response.sendError(HttpResponse.__403_Forbidden,
                                    ex.getMessage());
             }
         }
@@ -419,7 +496,7 @@ public class LockssResourceHandler extends ResourceHandler {
         catch (SecurityException sex)
         {
             Code.warning(sex);
-            response.sendError(response.__403_Forbidden, sex.getMessage());
+            response.sendError(HttpResponse.__403_Forbidden, sex.getMessage());
         }
     }
 
@@ -438,7 +515,7 @@ public class LockssResourceHandler extends ResourceHandler {
         String newPath = URI.canonicalPath(request.getField("New-uri"));
         if (newPath==null)
         {
-            response.sendError(response.__405_Method_Not_Allowed,
+            response.sendError(HttpResponse.__405_Method_Not_Allowed,
                                "Bad new uri");
             return;
         }
@@ -446,7 +523,7 @@ public class LockssResourceHandler extends ResourceHandler {
         String contextPath = getHttpContext().getContextPath();
         if (contextPath!=null && !newPath.startsWith(contextPath))
         {
-            response.sendError(response.__405_Method_Not_Allowed,
+            response.sendError(HttpResponse.__405_Method_Not_Allowed,
                                "Not in context");
             return;
         }
@@ -464,14 +541,14 @@ public class LockssResourceHandler extends ResourceHandler {
             Code.debug("Moving "+resource+" to "+newFile);
             resource.renameTo(newFile);
     
-            response.setStatus(response.__204_No_Content);
+            response.setStatus(HttpResponse.__204_No_Content);
             request.setHandled(true);
         }
         catch (Exception ex)
         {
             Code.warning(ex);
             setAllowHeader(response);
-            response.sendError(response.__405_Method_Not_Allowed,
+            response.sendError(HttpResponse.__405_Method_Not_Allowed,
                                "Error:"+ex);
             return;
         }
@@ -500,7 +577,17 @@ public class LockssResourceHandler extends ResourceHandler {
         HttpContext.ResourceMetaData metaData =
             (HttpContext.ResourceMetaData)resource.getAssociate();
 
-        response.setContentType(metaData.getEncoding());
+	String ctype = null;
+
+	// XXX should we copy more of the properties here?
+	if (resource instanceof CuUrlResource) {
+	  CuUrlResource cur = (CuUrlResource)resource;
+	  ctype = cur.getProperty("content-type");
+	}
+	if (ctype == null) {
+	  ctype = metaData.getEncoding();
+	}
+        response.setContentType(ctype);
         if (count != -1)
         {
             if (count==resource.length())
@@ -518,14 +605,13 @@ public class LockssResourceHandler extends ResourceHandler {
     /* ------------------------------------------------------------ */
     public void sendData(HttpRequest request,
                          HttpResponse response,
+                         String pathInContext,
                          Resource resource,
                          boolean writeHeaders)
         throws IOException
     {
         long resLength=resource.length();
         
-
-
         //  see if there are any range headers
         Enumeration reqRanges =
             request.getDotVersion()>0
@@ -534,12 +620,29 @@ public class LockssResourceHandler extends ResourceHandler {
         
         if (!writeHeaders || reqRanges == null || !reqRanges.hasMoreElements())
         {
-            //  if there were no ranges, send entire entity
-            if (writeHeaders)
-                writeHeaders(response,resource,resLength);
-            OutputStream out = response.getOutputStream();
-            resource.writeTo(out,0,resLength);            
+            // look for a gziped content.
+            Resource data=resource;
+            if (_minGzipLength>0)
+            {
+                String accept=request.getField(HttpFields.__AcceptEncoding);
+                if (accept!=null && resLength>_minGzipLength &&
+                    !pathInContext.endsWith(".gz"))
+                {
+                    Resource gz = getHttpContext().getResource(pathInContext+".gz");
+                    if (gz.exists() && accept.indexOf("gzip")>=0)
+                    {
+                        Code.debug("gzip=",gz);
+                        response.setField(HttpFields.__ContentEncoding,"gzip");
+                        data=gz;
+                        resLength=data.length();
+                    }
+                }
+            }
+            writeHeaders(response,resource,resLength);
+            
             request.setHandled(true);
+            OutputStream out = response.getOutputStream();
+            data.writeTo(out,0,resLength);
             return;
         }
             
@@ -553,9 +656,9 @@ public class LockssResourceHandler extends ResourceHandler {
         {
             Code.debug("no satisfiable ranges");
             writeHeaders(response, resource, resLength);
-            response.setStatus(response.__416_Requested_Range_Not_Satisfiable);
-            response.setReason((String)response.__statusMsg
-                               .get(TypeUtil.newInteger(response.__416_Requested_Range_Not_Satisfiable)));
+            response.setStatus(HttpResponse.__416_Requested_Range_Not_Satisfiable);
+            response.setReason((String)HttpResponse.__statusMsg
+                               .get(TypeUtil.newInteger(HttpResponse.__416_Requested_Range_Not_Satisfiable)));
 
             response.setField(HttpFields.__ContentRange, 
                               InclusiveByteRange.to416HeaderRangeString(resLength));
@@ -576,9 +679,9 @@ public class LockssResourceHandler extends ResourceHandler {
             Code.debug("single satisfiable range: " + singleSatisfiableRange);
             long singleLength = singleSatisfiableRange.getSize(resLength);
             writeHeaders(response,resource,singleLength);
-            response.setStatus(response.__206_Partial_Content);
-            response.setReason((String)response.__statusMsg
-                               .get(TypeUtil.newInteger(response.__206_Partial_Content)));
+            response.setStatus(HttpResponse.__206_Partial_Content);
+            response.setReason((String)HttpResponse.__statusMsg
+                               .get(TypeUtil.newInteger(HttpResponse.__206_Partial_Content)));
             response.setField(HttpFields.__ContentRange, 
                               singleSatisfiableRange.toHeaderRangeString(resLength));
             OutputStream out = response.getOutputStream();
@@ -598,9 +701,9 @@ public class LockssResourceHandler extends ResourceHandler {
             (HttpContext.ResourceMetaData)resource.getAssociate();
         String encoding = metaData.getEncoding();
         MultiPartResponse multi = new MultiPartResponse(response);
-        response.setStatus(response.__206_Partial_Content);
-        response.setReason((String)response.__statusMsg
-                           .get(TypeUtil.newInteger(response.__206_Partial_Content)));
+        response.setStatus(HttpResponse.__206_Partial_Content);
+        response.setReason((String)HttpResponse.__statusMsg
+                           .get(TypeUtil.newInteger(HttpResponse.__206_Partial_Content)));
 
 	// If the request has a "Request-Range" header then we need to
 	// send an old style multipart/x-byteranges Content-Type. This
@@ -646,7 +749,7 @@ public class LockssResourceHandler extends ResourceHandler {
             }
             else
                 // Handle cached resource
-                ((CachedResource)resource).writeTo(out,start,size);
+                resource.writeTo(out,start,size);
             
         }
         if (in!=null)
@@ -666,8 +769,13 @@ public class LockssResourceHandler extends ResourceHandler {
                        boolean parent)
         throws IOException
     {
+        if (!_dirAllowed)
+        {
+            response.sendError(HttpResponse.__403_Forbidden);
+            return;
+        }
+        
         request.setHandled(true);
-
         
         Code.debug("sendDirectory: "+resource);
         byte[] data=null;
@@ -677,20 +785,19 @@ public class LockssResourceHandler extends ResourceHandler {
         if (data==null)
         {
             String base = URI.addPaths(request.getPath(),"/");
-            ByteArrayISO8859Writer dir = getHttpContext()
-                .getDirectoryListing(resource,base,parent);
+            String dir = resource.getListHTML(base,parent);
             if (dir==null)
             {
                 response.sendError(HttpResponse.__403_Forbidden,
                                    "No directory");
                 return;
             }
-            data=dir.getByteArray();
+            data=dir.getBytes("UTF8");
             if (resource instanceof CachedResource)
                 ((CachedResource)resource).setCachedData(data);
         }
         
-        response.setContentType("text/html");
+        response.setContentType("text/html; charset=UTF8");
         response.setContentLength(data.length);
         
         if (request.getMethod().equals(HttpRequest.__HEAD))
@@ -703,5 +810,3 @@ public class LockssResourceHandler extends ResourceHandler {
         response.commit();
     }
 }
- 
- 
