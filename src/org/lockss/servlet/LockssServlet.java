@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.36 2004-03-04 19:24:11 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.36.2.1 2004-03-15 22:19:39 tlipkis Exp $
  */
 
 /*
@@ -656,7 +656,7 @@ public abstract class LockssServlet extends HttpServlet
 //     table.newCell("valign=top align=center width=" +
 // 		  (logo.width() + IMAGE_TM.width() + 20));
 
-    table.add(new Link("/index.html", logo));
+    table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
     table.add(IMAGE_TM);
 //     table.newCell("valign=center align=center width=\"60%\"");
     table.newCell("valign=top align=center width=\"60%\"");
