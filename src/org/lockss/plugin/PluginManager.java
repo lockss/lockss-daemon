@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.4 2003-02-06 05:16:06 claire Exp $
+ * $Id: PluginManager.java,v 1.5 2003-02-20 22:27:42 tal Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.util.*;
 import org.lockss.daemon.*;
+import org.lockss.util.*;
 import org.lockss.app.*;
 
 /**
@@ -43,28 +44,35 @@ import org.lockss.app.*;
  * @version 0.0
  */
 public class PluginManager implements LockssManager {
+  static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
+  private static String PARAM_PLUGIN_LOCATION =
+    Configuration.PREFIX + "pluginDir";
+  private static String DEFAULT_PLUGIN_LOCATION = "./plugins";
+
+  private static Logger log = Logger.getLogger("PluginMgr");
+
   private static PluginManager theManager = null;
   private static LockssDaemon theDaemon = null;
+  private String pluginDir = null;
 
+  private static Map plugins = new HashMap();
   private static Vector archivalUnits = new Vector();
 
 
-  /* ------- LockssManager implementation ------------------
+  /* ------- LockssManager implementation ------------------ */
   /**
    * init the plugin manager.
    * @param daemon the LockssDaemon instance
    * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager.initService()
+   * @see LockssManager#initService(LockssDaemon)
    */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-       theDaemon = daemon;
-       theManager = new PluginManager();
-     }
-     else {
-       throw new LockssDaemonException("Multiple Instantiation.");
-     }
-
+    if (theManager == null) {
+      theDaemon = daemon;
+      theManager = new PluginManager();
+    } else {
+      throw new LockssDaemonException("Multiple Instantiation.");
+    }
   }
 
   /**
@@ -72,7 +80,15 @@ public class PluginManager implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-
+    pluginDir = Configuration.getParam(PARAM_PLUGIN_LOCATION,
+                                       DEFAULT_PLUGIN_LOCATION);
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration oldConfig,
+					 Configuration newConfig,
+					 Set changedKeys) {
+	  setConfig(newConfig, changedKeys);
+	}
+      });
   }
 
   /**
@@ -80,8 +96,87 @@ public class PluginManager implements LockssManager {
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
-    // TODO: checkpoint here
+    // tk - checkpoint if nec.
+    for (Iterator iter = plugins.values().iterator(); iter.hasNext(); ) {
+      Plugin plugin = (Plugin)iter.next();
+      plugin.stopPlugin();
+    }
+
     theManager = null;
+  }
+
+  private void setConfig(Configuration config, Set changedKeys) {
+    Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
+    for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+      String pluginId = (String)iter.next();
+      Configuration pluginConf = config.getConfigTree(pluginId);
+      // tk - only if in changedKeys.  (but, compare subkey with whole key?)
+      configurePlugin(pluginId, pluginConf);
+    }
+  }
+
+  String pluginNameFromId(String key) {
+    // tk - needs to do real mapping from IDs obtained from all available
+    // plugins.
+    // for now, treat as class name with |'s instead of .'s
+    return StringUtil.replaceString(key, "|", ".");
+  }
+
+  private void configurePlugin(String pluginId, Configuration pluginConf) {
+    boolean pluginOk = ensurePluginLoaded(pluginId);
+    Plugin plugin = (Plugin)plugins.get(pluginId);
+    for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
+      String auKey = (String)iter.next();
+      if (pluginOk) {
+	log.debug("Configuring AU " + auKey);
+	try {
+	  plugin.configureAU(pluginConf.getConfigTree(auKey));
+	} catch (ArchivalUnit.ConfigurationException e) {
+	  log.error("Failed to configure AU " + auKey, e);
+	}
+      } else {
+	log.warning("Not configuring AU " + auKey);
+      }
+    }    
+  }
+
+  /**
+   * load a plugin with the given class name from somewhere in our classpath
+   * @param pluginName the unique name for this plugin
+   */
+  boolean ensurePluginLoaded(String pluginId) {
+    if (plugins.containsKey(pluginId)) {
+      return true;
+    }
+    String pluginName = pluginNameFromId(pluginId);
+    Class pluginClass;
+    try {
+      pluginClass = Class.forName(pluginName);
+    } catch (ClassNotFoundException e) {
+      log.debug(pluginName + " not on classpath");
+      // not on classpath
+      try {
+	// tk - search plugin dir for signed jar, try loading again
+	throw e;	       // for now, simulate failure of that process
+      } catch (ClassNotFoundException e1) {
+	// plugin is really not available
+	log.error(pluginName + " not found");
+	return false;
+      }
+    } catch (Exception e) {
+      // any other exception while loading class if not recoverable
+      log.error("Error loading " + pluginName, e);
+      return false;
+    }
+    try {
+      Plugin plugin = (Plugin)pluginClass.newInstance();
+      plugin.initPlugin();
+      plugins.put(pluginName, plugin);
+      return true;
+    } catch (Exception e) {
+      log.error("Error instantiating " + pluginName, e);
+      return false;
+    }
   }
 
   /**
@@ -106,7 +201,7 @@ public class PluginManager implements LockssManager {
 
   /**
    * Find the <code>ArchivalUnit</code>
-   * that comtains a URL.
+   * that contains a URL.
    * @param url The URL to search for.
    * @return The <code>ArchivalUnit</code> that contains the URL, or
    * null if none found.  It is an error for more than one
@@ -171,4 +266,21 @@ public class PluginManager implements LockssManager {
 //      }
 //      return au.makeCachedUrlSet(url, regex);
 //    }
+//   /**
+//    * init the plugins in the plugins directory
+//    */
+
+//   protected void initPlugins() {
+//     /* grab our 3rd party plugins and load them using security manager */
+//     String[] files = new java.io.File(pluginDir).list();
+//     for(int i= 0; i < files.length; i++) {
+//       if(files[i].endsWith(".jar")) {
+//         loadPlugin(files[i].substring(0,files[i].lastIndexOf(".jar")));
+//       }
+//       else {
+//         loadPlugin(files[i]);
+//       }
+//     }
+//   }
+
 }
