@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdArchivalUnit.java,v 1.3 2004-02-06 23:53:56 clairegriffin Exp $
+ * $Id: BlackbirdArchivalUnit.java,v 1.4 2004-02-10 01:09:08 clairegriffin Exp $
  */
 
 /*
@@ -32,15 +32,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.blackbird;
 
-import java.net.*;
 import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.state.AuState;
-import org.lockss.plugin.base.BaseArchivalUnit;
-import gnu.regexp.REException;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * This is a first cut at making a Blackbird plugin

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableArchivalUnit.java,v 1.5 2004-02-06 23:54:11 clairegriffin Exp $
+ * $Id: ConfigurableArchivalUnit.java,v 1.6 2004-02-10 01:09:08 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import gnu.regexp.*;
+import java.net.URL;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -52,6 +53,8 @@ public class ConfigurableArchivalUnit
   static final protected String CM_AU_NAME_KEY = "au_name";
   static final protected String CM_AU_RULES_KEY = "au_crawlrules";
   static final protected String CM_AU_SHORT_YEAR_KEY = "au_short_";
+  static final protected String CM_AU_HOST_SUFFIX = "_host";
+  static final protected String CM_AU_PATH_SUFFIX = "_path";
   static final protected String CM_AU_CRAWL_WINDOW_KEY = "au_crawlwindow";
 
   protected ExternalizableMap configurationMap;
@@ -61,6 +64,7 @@ public class ConfigurableArchivalUnit
     super(myPlugin);
     if (myPlugin != null) {
       configurationMap = ( (ConfigurablePlugin) myPlugin).getConfigurationMap();
+      initAuKeys();
     }
   }
 
@@ -80,12 +84,20 @@ public class ConfigurableArchivalUnit
 
       try {
         Object val = descr.getValueOfType(config.get(key));
+        configurationMap.setMapElement(key, val);
         // we store years in two formats - short and long
         if (descr.getType() == ConfigParamDescr.TYPE_YEAR) {
           int year = Integer.parseInt( ( (Integer) val).toString().substring(2));
           configurationMap.putInt(CM_AU_SHORT_YEAR_KEY + key, year);
         }
-        configurationMap.setMapElement(key, val);
+        if (descr.getType() == ConfigParamDescr.TYPE_URL) {
+          URL url = configurationMap.getUrl(key, null);
+          if(url != null) {
+            configurationMap.putString(key+CM_AU_HOST_SUFFIX, url.getHost());
+            configurationMap.putString(key+CM_AU_PATH_SUFFIX, url.getPath());
+          }
+        }
+
       }
       catch (Exception ex) {
         throw new ConfigurationException("Error configuring: " + key, ex);
@@ -207,6 +219,10 @@ public class ConfigurableArchivalUnit
       return new CrawlRules.RE(rule, value);
     }
     return null;
+  }
+
+  protected void initAuKeys() {
+    // does nothing
   }
 
   public interface ConfigurableCrawlWindow {

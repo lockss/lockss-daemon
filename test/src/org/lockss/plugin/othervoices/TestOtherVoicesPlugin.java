@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesPlugin.java,v 1.4 2004-01-27 04:07:05 tlipkis Exp $
+ * $Id: TestOtherVoicesPlugin.java,v 1.5 2004-02-10 01:09:11 clairegriffin Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ public class TestOtherVoicesPlugin extends LockssTestCase {
     super.setUp();
     plugin = new OtherVoicesPlugin();
     plugin.initPlugin(getMockLockssDaemon());
+    plugin.initPlugin(getMockLockssDaemon(),
+                      "org.lockss.plugin.othervoices.OtherVoicesPlugin");
   }
 
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.2 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.3 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -66,8 +66,9 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
       props.setProperty(EmlsPlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    EmlsArchivalUnit au = new EmlsArchivalUnit(new EmlsPlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    EmlsPlugin ap = new EmlsPlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    EmlsArchivalUnit au = new EmlsArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

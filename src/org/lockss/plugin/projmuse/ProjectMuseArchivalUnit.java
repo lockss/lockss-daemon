@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.22 2004-02-06 23:54:13 clairegriffin Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.23 2004-02-10 01:09:09 clairegriffin Exp $
  */
 
 /*
@@ -161,54 +161,4 @@ public class ProjectMuseArchivalUnit extends ConfigurableArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  protected void initAuKeys() {
-    StringBuffer sb = new StringBuffer("%sjournals%s/v%03d/\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.JOURNAL_DIR.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
-    String starturl = sb.toString();
-    configurationMap.putString(CM_AU_START_URL_KEY,starturl);
-
-    sb = new StringBuffer("%s, %s, vol. %d\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.JOURNAL_DIR.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
-    configurationMap.putString(CM_AU_NAME_KEY, sb.toString());
-
-    List rules = new ArrayList();
-    //rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.NO_MATCH_EXCLUDE));
-    sb.append("\n^%s\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(startUrlString, incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n");
-    sb.append(starturl);
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(urlRoot +
-    //                            "journals/"+journalDir+"/toc/[a-zA-Z]*" + volume +
-    //                            "\\..*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%sjournals/%s/toc/[a-zA-Z]*%d\\..*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.JOURNAL_DIR.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.VOLUME_NUMBER.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(urlRoot + "images/.*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%simages/.*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    configurationMap.putCollection(CM_AU_RULES_KEY, rules);
-
-    configurationMap.putString("text/html",
-                               "org.lockss.plugin.projmuse.ProjectMuseFilterRule");
-  }
 }

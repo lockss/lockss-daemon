@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.5 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestEmlsPlugin.java,v 1.6 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -45,7 +45,8 @@ public class TestEmlsPlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new EmlsPlugin();
-    plugin.initPlugin(getMockLockssDaemon());
+    plugin.initPlugin(getMockLockssDaemon(),
+                      "org.lockss.plugin.emls.EmlsPlugin");
   }
 
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {

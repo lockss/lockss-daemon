@@ -1,5 +1,5 @@
 /*
- * $Id: EmlsPlugin.java,v 1.7 2004-01-27 04:07:08 tlipkis Exp $
+ * $Id: EmlsPlugin.java,v 1.8 2004-02-10 01:09:08 clairegriffin Exp $
  */
 
 /*
@@ -31,14 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.emls;
 
-import java.util.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.plugin.base.BasePlugin;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.util.ListUtil;
-import org.lockss.app.LockssDaemon;
-import java.util.List;
+import org.lockss.plugin.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
 
 /**
  * EmlsPlugin: Plugin class for the Early Modern Literary Studies Plugin

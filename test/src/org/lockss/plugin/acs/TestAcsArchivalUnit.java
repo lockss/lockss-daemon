@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.6 2003-11-07 04:12:00 clairegriffin Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.7 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -85,8 +85,9 @@ public class TestAcsArchivalUnit
     props.setProperty(AcsPlugin.AUPARAM_YEAR, Integer.toString(year));
 
     Configuration config = ConfigurationUtil.fromProps(props);
-    AcsArchivalUnit au = new AcsArchivalUnit(new AcsPlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    AcsPlugin ap = new AcsPlugin();
+    ap.initPlugin(theDaemon, ap.getClass().getName());
+    AcsArchivalUnit au = new AcsArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

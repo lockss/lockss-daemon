@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.33 2003-12-11 21:22:22 eaalto Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.34 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -76,8 +76,9 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     }
     props.setProperty(HighWireArchivalUnit.AUPARAM_USE_CRAWL_WINDOW, ""+true);
     Configuration config = ConfigurationUtil.fromProps(props);
-    HighWireArchivalUnit au = new HighWireArchivalUnit(new HighWirePlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    HighWirePlugin ap = new HighWirePlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    HighWireArchivalUnit au = new HighWireArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

@@ -85,29 +85,29 @@ public class IeeeArchivalUnit extends ConfigurableArchivalUnit {
     final int incl = CrawlRules.RE.MATCH_INCLUDE;
     final int excl = CrawlRules.RE.MATCH_EXCLUDE;
     String base = baseUrl.toString();
-    if(base.endsWith("/"))
-      base = base.substring(0, base.length()-1);
 
-    rules.add(new CrawlRules.RE("^" + base, CrawlRules.RE.NO_MATCH_EXCLUDE));
+    rules.add(new CrawlRules.RE("^" + "http://" + baseUrl.getHost(),
+                                CrawlRules.RE.NO_MATCH_EXCLUDE));
 
     // include the stuff that determines how the page looks
     rules.add(new CrawlRules.RE(".*.gif", incl)); // gifs
     rules.add(new CrawlRules.RE(".*.jpg", incl)); // jpgs
 
     // include the toc for the archival year
-    rules.add(new CrawlRules.RE(base +"/xpl/RecentIssue.jsp.*puNumber="
+    rules.add(new CrawlRules.RE(base +"xpl/RecentIssue.jsp.*puNumber="
                                 + puNumber+".*year=" +puYear, incl));
 
     // issue page
-    rules.add(new CrawlRules.RE(base + "/xpl/tocresult.jsp.*isNumber=.*", incl));
+    rules.add(new CrawlRules.RE(base + "xpl/tocresult.jsp.*isNumber=.*", incl));
     // printable issue page
-    rules.add(new CrawlRules.RE(base + "/xpl/tocprint.jsp.*isNumber=.*", incl));
+    rules.add(new CrawlRules.RE(base + "xpl/tocprint.jsp.*isNumber=.*", incl));
 
     // article -pdf
-    rules.add(new CrawlRules.RE(base + "/iel5/" + puNumber + "/.*.pdf", incl));
+    rules.add(new CrawlRules.RE(base + "iel5/" + puNumber + "/.*.pdf", incl));
 
    // abstracts
-    rules.add(new CrawlRules.RE(base + ":80/xpls/abs_all.jsp.*", incl));
+   rules.add(new CrawlRules.RE("http://" +baseUrl.getHost()
+                               + ":80/xpls/abs_all.jsp.*", incl));
 
     logger.debug("Rules: " + rules);
     return new CrawlRules.FirstMatch(rules);

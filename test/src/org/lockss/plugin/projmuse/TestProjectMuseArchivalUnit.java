@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.9 2004-01-23 00:00:06 eaalto Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.10 2004-02-10 01:09:11 clairegriffin Exp $
  */
 
 /*
@@ -75,9 +75,9 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
       props.setProperty(ProjectMusePlugin.AUPARAM_JOURNAL_DIR, journalDir);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    ProjectMuseArchivalUnit au = new ProjectMuseArchivalUnit(
-        new ProjectMusePlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    ProjectMusePlugin ap = new ProjectMusePlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    ProjectMuseArchivalUnit au = new ProjectMuseArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

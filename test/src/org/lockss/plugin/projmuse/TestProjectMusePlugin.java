@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.9 2004-01-27 04:07:05 tlipkis Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.10 2004-02-10 01:09:11 clairegriffin Exp $
  */
 
 /*
@@ -46,7 +46,8 @@ public class TestProjectMusePlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new ProjectMusePlugin();
-    plugin.initPlugin(getMockLockssDaemon());
+    plugin.initPlugin(getMockLockssDaemon(),
+                      "org.lockss.plugin.projmuse.ProjectMusePlugin");
   }
 
   public void testGetAuNullConfig() throws ArchivalUnit.ConfigurationException {

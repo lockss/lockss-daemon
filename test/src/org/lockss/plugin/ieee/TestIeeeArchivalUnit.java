@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.4 2003-11-07 04:12:01 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.5 2004-02-10 01:09:11 clairegriffin Exp $
  */
 
 /*
@@ -75,8 +75,9 @@ public class TestIeeeArchivalUnit
     props.setProperty(IeeePlugin.AUPARAM_YEAR, Integer.toString(year));
 
     Configuration config = ConfigurationUtil.fromProps(props);
-    IeeeArchivalUnit au = new IeeeArchivalUnit(new IeeePlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    IeeePlugin ap = new IeeePlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    IeeeArchivalUnit au = new IeeeArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

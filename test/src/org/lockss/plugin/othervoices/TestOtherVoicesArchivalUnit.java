@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.2 2003-12-09 02:19:47 eaalto Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.3 2004-02-10 01:09:11 clairegriffin Exp $
  */
 
 /*
@@ -72,9 +72,9 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
       props.setProperty(OtherVoicesPlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    OtherVoicesArchivalUnit au = new OtherVoicesArchivalUnit(
-        new OtherVoicesPlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    OtherVoicesPlugin ap = new OtherVoicesPlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    OtherVoicesArchivalUnit au = new OtherVoicesArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

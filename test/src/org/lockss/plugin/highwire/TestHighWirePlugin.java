@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.18 2004-01-27 04:07:06 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.19 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -52,7 +52,9 @@ public class TestHighWirePlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new HighWirePlugin();
-    plugin.initPlugin(getMockLockssDaemon());
+    plugin.initPlugin(getMockLockssDaemon(),
+                      "org.lockss.plugin.highwire.HighWirePlugin");
+
   }
 
   public void testGetAuNullConfig()

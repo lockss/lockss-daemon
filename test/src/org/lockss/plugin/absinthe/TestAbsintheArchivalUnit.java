@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.3 2004-01-27 01:03:50 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.4 2004-02-10 01:09:09 clairegriffin Exp $
  */
 
 /*
@@ -66,8 +66,9 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
       props.setProperty(AbsinthePlugin.AUPARAM_BASE_URL, url.toString());
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    AbsintheArchivalUnit au = new AbsintheArchivalUnit(new AbsinthePlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    AbsinthePlugin ap = new AbsinthePlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    AbsintheArchivalUnit au = new AbsintheArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

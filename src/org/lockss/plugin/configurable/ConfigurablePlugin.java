@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurablePlugin.java,v 1.9 2004-02-06 23:54:11 clairegriffin Exp $
+ * $Id: ConfigurablePlugin.java,v 1.10 2004-02-10 01:09:08 clairegriffin Exp $
  */
 
 /*
@@ -51,9 +51,8 @@ public class ConfigurablePlugin extends BasePlugin {
   static final protected String CM_NAME_KEY = "plugin_name";
   static final protected String CM_VERSION_KEY = "plugin_version";
   static final protected String CM_CONFIG_PROPS_KEY = "plugin_config_props";
-  protected static final String CM_EXCEPTION_KEY = "plugin_exception_handler";
   protected static final String CM_EXCEPTION_HANDLER_KEY =
-      "plugin_cache_exception_handler";
+      "plugin_exception_handler";
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
   String mapName = null;
@@ -129,5 +128,16 @@ public class ConfigurablePlugin extends BasePlugin {
       class_name = this.getClass().getName();
     }
     return class_name;
+  }
+
+  // for testing writing and reading map files
+  public void writeMap(String mapLocation) {
+    if(mapName == null) {
+      ConfigurableArchivalUnit au = new ConfigurableArchivalUnit(this);
+      au.initAuKeys();
+      mapName = getPluginId().replace('.','/') + ".xml";
+      // store the configuration map
+      configurationMap.storeMap(mapLocation, mapName);
+    }
   }
 }

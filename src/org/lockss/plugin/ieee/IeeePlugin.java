@@ -1,5 +1,5 @@
 /*
- * $Id: IeeePlugin.java,v 1.8 2004-01-27 04:07:08 tlipkis Exp $
+ * $Id: IeeePlugin.java,v 1.9 2004-02-10 01:09:09 clairegriffin Exp $
  */
 
 /*
@@ -31,15 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.ieee;
 
-import org.lockss.plugin.base.BasePlugin;
-import org.lockss.plugin.*;
-import org.lockss.daemon.*;
-import org.lockss.util.*;
-
-import java.util.List;
-import java.util.Collection;
 import org.lockss.app.*;
+import org.lockss.daemon.*;
+import org.lockss.plugin.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
 
 /**
  * IeeePlugin: Plugin class for the Ieee Explore Plugin

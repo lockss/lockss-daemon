@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.2 2003-12-11 21:23:40 eaalto Exp $
+ * $Id: TestHistoryCooperativeArchivalUnit.java,v 1.3 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -75,9 +75,9 @@ public class TestHistoryCooperativeArchivalUnit extends LockssTestCase {
       props.setProperty(HistoryCooperativePlugin.AUPARAM_JOURNAL_DIR, journalDir);
     }
     Configuration config = ConfigurationUtil.fromProps(props);
-    HistoryCooperativeArchivalUnit au = new HistoryCooperativeArchivalUnit(
-        new HistoryCooperativePlugin());
-    au.getPlugin().initPlugin(theDaemon);
+    HistoryCooperativePlugin ap = new HistoryCooperativePlugin();
+    ap.initPlugin(theDaemon,ap.getClass().getName());
+    HistoryCooperativeArchivalUnit au = new HistoryCooperativeArchivalUnit(ap);
     au.setConfiguration(config);
     return au;
   }

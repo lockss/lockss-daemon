@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsPlugin.java,v 1.8 2004-01-27 04:07:07 tlipkis Exp $
+ * $Id: TestAcsPlugin.java,v 1.9 2004-02-10 01:09:10 clairegriffin Exp $
  */
 
 /*
@@ -45,7 +45,8 @@ public class TestAcsPlugin extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     plugin = new AcsPlugin();
-    plugin.initPlugin(getMockLockssDaemon());
+    plugin.initPlugin(getMockLockssDaemon(),
+                      "org.lockss.plugin.acs.AcsPlugin");
   }
 
 

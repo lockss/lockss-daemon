@@ -1,5 +1,5 @@
 /*
- * $Id: AbsintheArchivalUnit.java,v 1.9 2004-02-06 23:53:55 clairegriffin Exp $
+ * $Id: AbsintheArchivalUnit.java,v 1.10 2004-02-10 01:09:08 clairegriffin Exp $
  */
 
 /*
@@ -31,15 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin.absinthe;
 
-import java.net.*;
 import java.util.*;
-import org.lockss.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.state.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.base.*;
-import gnu.regexp.REException;
+import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.configurable.*;
+import org.lockss.util.*;
+import gnu.regexp.*;
 
 /**
  * AbsintheArchivalUnit: The Archival Unit Class for Absinthe Literary
@@ -118,64 +117,6 @@ public class AbsintheArchivalUnit extends ConfigurableArchivalUnit {
     return new CrawlRules.FirstMatch(rules);
   }
 
-  protected void initAuKeys() {
-    StringBuffer sb = new StringBuffer("%sarchives%02d.htm\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    sb.append("\n");
-    sb.append(CM_AU_SHORT_YEAR_KEY+ ConfigParamDescr.YEAR.getKey());
-    String starturl = sb.toString();
-    configurationMap.putString(CM_AU_START_URL_KEY,starturl);
 
-    sb = new StringBuffer("%s, %d\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    sb.append("\n");
-    sb.append(ConfigParamDescr.YEAR.getKey());
-    configurationMap.putString(CM_AU_NAME_KEY, sb.toString());
-
-    List rules = new ArrayList();
-    //rules.add(new CrawlRules.RE("^" + rootUrl, CrawlRules.RE.NO_MATCH_EXCLUDE));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.NO_MATCH_EXCLUDE));
-    sb.append("\n^%s\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(startUrlString, incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n");
-    sb.append(starturl);
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(rootUrl + "stories/.*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%sstories/.*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(rootUrl + "poetics/.*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%spoetics/.*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(rootUrl + "archives/.*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%sarchives/.*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(rootUrl + "book_reviews/book_reviews.htm", excl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_EXCLUDE));
-    sb.append("\n%sbook_reviews/book_reviews.htm\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(rootUrl + "book_reviews/.*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%sbook_reviews/.*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-    //rules.add(new CrawlRules.RE(rootUrl + "images/.*", incl));
-    sb = new StringBuffer(String.valueOf(CrawlRules.RE.MATCH_INCLUDE));
-    sb.append("\n%simages/.*\n");
-    sb.append(ConfigParamDescr.BASE_URL.getKey());
-    rules.add(sb.toString());
-
-    configurationMap.putCollection(CM_AU_RULES_KEY, rules);
-
-  }
 
 }
