@@ -40,13 +40,14 @@ org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.oddBranchC
 # poll settings
 org.lockss.poll.maxpolls=20
 org.lockss.poll.quorum=3
-org.lockss.poll.agreeVerify=0
-org.lockss.poll.disagreeVerify=0
+org.lockss.poll.agreeVerify=10
+org.lockss.poll.disagreeVerify=80
 org.lockss.poll.voteMargin=51
-org.lockss.poll.trustedMargin=51
+org.lockss.poll.trustedWeight=350
 org.lockss.poll.namepoll.deadline=5m
-org.lockss.poll.contentpoll.min=3m
-org.lockss.poll.contentpoll.max=10m
+
+org.lockss.poll.contentpoll.min=4m
+org.lockss.poll.contentpoll.max=12m
 
 org.lockss.treewalk.interval=5m
 org.lockss.treewalk.start.delay=10s
