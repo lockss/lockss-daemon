@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.3 2005-02-28 18:01:48 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.4 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -146,8 +146,6 @@ public class PsmInterp {
     } else if (resp.isTransition()) {
       String newStateName = resp.getNewState();
       PsmState newState = machine.getState(newStateName);
-      if (newState == null) {
-      }
       enterState(newState, event, eventCtr);
     } else {
       PsmAction action = resp.getAction();

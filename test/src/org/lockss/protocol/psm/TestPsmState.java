@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmState.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+ * $Id: TestPsmState.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,24 @@ import org.lockss.util.*;
 
 public class TestPsmState extends LockssTestCase {
 
+  private class Invitation extends PsmMsgEvent {}
+  private class EngravedInvitation extends Invitation {}
+  private class Vote extends PsmMsgEvent {}
+  private class Solicit extends PsmMsgEvent {}
+  PsmEvent Invitation = new Invitation();
+  PsmEvent EngravedInvitation = new EngravedInvitation();
+  PsmEvent Vote = new Vote();
+  PsmEvent Solicit = new Solicit();
+
+  PsmAction action = new PsmAction() {
+      public PsmEvent run(PsmEvent event, PsmInterp interp) { return null; }};
+  PsmResponse r1 = new PsmResponse(PsmEvents.Else, "s1");
+  PsmResponse r2 = new PsmResponse(PsmEvents.MsgEvent, "sMsg");
+  PsmResponse r2a = new PsmResponse(Invitation, "sInv");
+  PsmResponse r2aa = new PsmResponse(EngravedInvitation, "sEng");
+  PsmResponse r2b = new PsmResponse(Vote, "sVote");
+  PsmResponse r2c = new PsmResponse(Solicit, "sSol");
+
   public void testNullConstructorArgs() {
     try {
       new PsmState(null);
@@ -57,31 +75,23 @@ public class TestPsmState extends LockssTestCase {
     } catch (RuntimeException e) { }
   }
 
-  private class Invitation extends PsmMsgEvent {}
-  private class EngravedInvitation extends Invitation {}
-  private class Vote extends PsmMsgEvent {}
-  private class Solicit extends PsmMsgEvent {}
-  PsmEvent Invitation = new Invitation();
-  PsmEvent EngravedInvitation = new EngravedInvitation();
-  PsmEvent Vote = new Vote();
-  PsmEvent Solicit = new Solicit();
-
-  PsmAction action = new PsmAction() {
-      public PsmEvent run(PsmEvent event, PsmInterp interp) { return null; }};
-  PsmResponse r1 = new PsmResponse(PsmEvents.Else, "s1");
-  PsmResponse r2 = new PsmResponse(PsmEvents.MsgEvent, "sMsg");
-  PsmResponse r2a = new PsmResponse(Invitation, "sInv");
-  PsmResponse r2aa = new PsmResponse(EngravedInvitation, "sEng");
-  PsmResponse r2b = new PsmResponse(Vote, "sVote");
-  PsmResponse r2c = new PsmResponse(Solicit, "sSol");
+  public void testUnmatchableResponse() {
+    String msg = "Impossible-to-match response should throw";
+    assertTrue(r2.getEvent().isa(r1.getEvent()));
+    new PsmState("s1", action, r2aa, r2a, r2b, r2, r1);
+    try {
+      new PsmState("s1", action, r1, r2);
+      fail(msg);
+    } catch (PsmException.IllegalStateMachine e) { }
+    new PsmState("s1", action, r2aa, r2a, r2b, r2, r1);
+    try {
+      new PsmState("s1", action, r2a, r2b, r2, r1, r2aa);
+      fail(msg);
+    } catch (RuntimeException e) { }
+  }
 
   public void testGetResponse() {
     PsmState s1;
-    s1 = new PsmState("s1", action, r1, r2);
-    assertSame(r1, s1.getResponse(PsmEvents.Else));
-    assertSame(r1, s1.getResponse(PsmEvents.MsgEvent));
-    assertSame(r1, s1.getResponse(Vote));
-
     s1 = new PsmState("s1", action, r2, r1);
     assertSame(r1, s1.getResponse(PsmEvents.Else));
     assertSame(r2, s1.getResponse(PsmEvents.MsgEvent));
@@ -149,22 +159,22 @@ public class TestPsmState extends LockssTestCase {
     assertSame(action, s1.getEntryAction());
     assertIsomorphic(ListUtil.list(r1), s1.getResponses());
 
-    s1 = new PsmState("s1", action, r1, r2);
+    s1 = new PsmState("s1", action, r2, r1);
     assertEquals("s1", s1.getName());
     assertSame(action, s1.getEntryAction());
-    assertIsomorphic(ListUtil.list(r1, r2), s1.getResponses());
+    assertIsomorphic(ListUtil.list(r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", action, r1, r2, r2a);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a), s1.getResponses());
+    s1 = new PsmState("s1", action, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", action, r1, r2, r2a, r2aa);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a, r2aa), s1.getResponses());
+    s1 = new PsmState("s1", action, r2aa, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2aa, r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", action, r1, r2, r2a, r2aa, r2b);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a, r2aa, r2b), s1.getResponses());
+    s1 = new PsmState("s1", action, r2b, r2aa, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2b, r2aa, r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", action, r1, r2, r2a, r2aa, r2b, r2c);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a, r2aa, r2b, r2c),
+    s1 = new PsmState("s1", action, r2c, r2b, r2aa, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2c, r2b, r2aa, r2a, r2, r1),
 		     s1.getResponses());
 
     s1 = new PsmState("s1");
@@ -177,20 +187,20 @@ public class TestPsmState extends LockssTestCase {
     assertNull(s1.getEntryAction());
     assertIsomorphic(ListUtil.list(r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r1, r2);
-    assertIsomorphic(ListUtil.list(r1, r2), s1.getResponses());
+    s1 = new PsmState("s1", r2, r1);
+    assertIsomorphic(ListUtil.list(r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r1, r2, r2a);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a), s1.getResponses());
+    s1 = new PsmState("s1", r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r1, r2, r2a, r2aa);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a, r2aa), s1.getResponses());
+    s1 = new PsmState("s1", r2aa, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2aa, r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r1, r2, r2a, r2aa, r2b);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a, r2aa, r2b), s1.getResponses());
+    s1 = new PsmState("s1", r2b, r2aa, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2b, r2aa, r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r1, r2, r2a, r2aa, r2b, r2c);
-    assertIsomorphic(ListUtil.list(r1, r2, r2a, r2aa, r2b, r2c),
+    s1 = new PsmState("s1", r2c, r2b, r2aa, r2a, r2, r1);
+    assertIsomorphic(ListUtil.list(r2c, r2b, r2aa, r2a, r2, r1),
 		     s1.getResponses());
   }
 

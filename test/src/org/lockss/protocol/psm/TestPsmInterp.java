@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,8 @@ public class TestPsmInterp extends LockssTestCase {
       fail("null machine should throw");
     } catch (RuntimeException e) { }
     // null userData is ok
-    new PsmInterp(mach1, null);
+    PsmInterp interp = new PsmInterp(mach1, null);
+    assertNull(interp.getUserData());
   }
 
   // Can't call init() twice
@@ -111,7 +112,7 @@ public class TestPsmInterp extends LockssTestCase {
     try {
       interp.init();
       fail("Second call to init() should throw");
-    } catch (RuntimeException e) {
+    } catch (IllegalStateException e) {
     }
   }
 
@@ -144,7 +145,7 @@ public class TestPsmInterp extends LockssTestCase {
     }
   }
 
-  // Loop between two states
+  // Loop between two states, in init()
   public void testLoopTwo() {
     PsmState[] statesLoopTwo = {
       new PsmState("Start", new MyAction(Sched),
@@ -156,6 +157,26 @@ public class TestPsmInterp extends LockssTestCase {
     PsmInterp interp = new MyInterp(mach, null);
     try {
       interp.init();
+      fail("Should threw if state loop");
+    } catch (PsmException.MaxChainedEvents e) {
+    }
+  }
+
+  // Loop between two states, in handleEvent()
+  public void testLoopHandle() {
+    PsmState[] statesLoopTwo = {
+      new PsmState("Start",
+		   new PsmResponse(Sched, "one")),
+      new PsmState("one", new MyAction(SendOk),
+		   new PsmResponse(SendOk, "two")),
+      new PsmState("two", new MyAction(SendOk),
+		   new PsmResponse(SendOk, "one")),
+    };
+    PsmMachine mach = new PsmMachine("M1", statesLoopTwo, "Start");
+    PsmInterp interp = new MyInterp(mach, null);
+    interp.init();
+    try {
+      interp.handleEvent(Sched);
       fail("Should threw if state loop");
     } catch (PsmException.MaxChainedEvents e) {
     }

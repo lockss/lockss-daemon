@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmEvents.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+ * $Id: TestPsmEvents.java,v 1.2 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class TestPsmEvents extends LockssTestCase {
     assertSame(PsmEvents.Event, PsmEvents.Else);
     assertTrue(PsmEvents.Event.isa(PsmEvents.Event));
     assertTrue(PsmEvents.Start.isa(PsmEvents.Event));
-    assertFalse(PsmEvents.Event.isa(PsmEvents.Start));
+    assertIsBelow(PsmEvents.Start, PsmEvents.Event);
     assertIsBelow(PsmEvents.MsgEvent, PsmEvents.Event);
     assertIsBelow(PsmEvents.Timeout, PsmEvents.Error);
   }

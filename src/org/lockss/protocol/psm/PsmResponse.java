@@ -1,5 +1,5 @@
 /*
-* $Id: PsmResponse.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+* $Id: PsmResponse.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -52,15 +52,14 @@ public class PsmResponse {
    * signalled.
    */
   public PsmResponse(PsmEvent event, String newState) {
-    if (event == null)
+    if (event == null) {
       throw new PsmException.IllegalStateMachine("event is null");
-    if (newState == null)
-      throw new PsmException.IllegalStateMachine("event is null");
+    }
+    if (StringUtil.isNullString(newState)) {
+      throw new PsmException.IllegalStateMachine("newState is null string");
+    }
     this.event = event;
     this.newState = newState;
-    if (newState.equalsIgnoreCase("wait")) {
-      isWait = true;
-    }
   }
 
   /** Create a response that maps the event to the specified action.

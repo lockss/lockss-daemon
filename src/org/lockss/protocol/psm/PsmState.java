@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+* $Id: PsmState.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -273,9 +273,18 @@ public class PsmState {
     if (name == null)
       throw new PsmException.IllegalStateMachine("name is null");
     for (int ix = 0; ix < responses.length; ix++) {
-      if (responses[ix] == null) {
+      PsmResponse resp = responses[ix];
+      if (resp == null) {
 	throw new PsmException.IllegalStateMachine("Response array contains null(s)");
       }
+      PsmEvent event = resp.getEvent();
+      for (int iy = 0; iy < ix; iy++) {
+	if (event.isa(responses[iy].getEvent())) {
+	  String msg = "State " + getName() + ": Response " + ix + " (" +
+	    resp + ") subsumed by response " + iy + " (" + responses[iy] + ")";
+	  throw new PsmException.IllegalStateMachine(msg);
+	}
+      }      
     }
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMachine.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+* $Id: PsmMachine.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -118,9 +118,6 @@ public class PsmMachine {
 
   /** Find the state with the given name */
   public PsmState getState(String name) {
-    if (stateMap == null) {
-      buildStateMap();
-    }
     return (PsmState)stateMap.get(name);
   }
 
@@ -136,12 +133,5 @@ public class PsmMachine {
       }
       stateMap = newmap;
     }
-  }
-
-  // prototype for List.toArray() calls
-  static final PsmState[] EMPTY_PSM_STATE_ARRAY = new PsmState[0];
-
-  PsmState[] stateArray(List lst) {
-    return (PsmState[])lst.toArray(EMPTY_PSM_STATE_ARRAY);
   }
 }

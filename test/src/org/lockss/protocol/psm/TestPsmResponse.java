@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmResponse.java,v 1.2 2005-02-24 04:25:59 tlipkis Exp $
+ * $Id: TestPsmResponse.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
  */
 
 /*
@@ -47,19 +47,23 @@ public class TestPsmResponse extends LockssTestCase {
     try {
       new PsmResponse(null, action);
       fail("null event should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmResponse(null);
       fail("null event should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmResponse(PsmEvents.MsgEvent, (PsmAction)null);
       fail("null action should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
     try {
       new PsmResponse(PsmEvents.MsgEvent, (String)null);
       fail("null next state should throw");
-    } catch (RuntimeException e) { }
+    } catch (PsmException.IllegalStateMachine e) { }
+    try {
+      new PsmResponse(PsmEvents.MsgEvent, "");
+      fail("null next state should throw");
+    } catch (PsmException.IllegalStateMachine e) { }
   }
 
   public void testAccessors() {
