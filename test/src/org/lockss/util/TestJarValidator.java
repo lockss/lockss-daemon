@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.1 2004-09-01 20:14:44 smorabito Exp $
+ * $Id: TestJarValidator.java,v 1.2 2004-09-02 23:10:11 smorabito Exp $
  */
 
 /*
@@ -49,51 +49,50 @@ import org.lockss.daemon.*;
  */
 public class TestJarValidator extends LockssTestCase {
 
-  private static final String name = "Good User";
-  private static final String alias = "good";
-  private static final String badName = "Bad User";
-  private static final String badAlias = "bad";
+  private static final String name = "Good Guy";
+  private static final String alias = "goodguy";
+  private static final String badName = "Bad Guy";
+  private static final String badAlias = "badguy";
   private static final String password = "f00bar";
 
   public static Class testedClasses[] = {
     org.lockss.util.JarValidator.class
   };
 
-  private String goodPubKeystore;
-  private String goodPrivKeystore;
-  private String badPubKeystore;
-  private String badPrivKeystore;
+  private KeyStore pubKeystore;
+
+  private KeyStore goodPrivKeystore;
+  private KeyStore badPrivKeystore;
 
   private String testJar;
 
-  private KeyStore keystore;
   private File tmpDir;
 
   public void setUp() throws Exception {
     tmpDir = getTempDir();
-    // Set up full paths.
-    goodPrivKeystore = getFullPath("good-private.keystore");
-    goodPubKeystore = getFullPath("good-public.keystore");
-    badPrivKeystore = getFullPath("bad-private.keystore");
-    // not used, but it'll get created anyway.
-    badPubKeystore = getFullPath("bad-public.keystore");
+    // Set up keystores
+    goodPrivKeystore =
+      getKeystoreResource("org/lockss/test/goodguy.keystore", password);
+    badPrivKeystore =
+      getKeystoreResource("org/lockss/test/badguy.keystore", password);
+    pubKeystore =
+      getKeystoreResource("org/lockss/test/public.keystore", password);
+
     // The jar file we'll be creating.
     testJar = getFullPath("test.jar");
-    // Generate keystores used to sign and verify good code.
-    KeystoreTestUtils.createKeystores(goodPubKeystore, goodPrivKeystore,
-				      password, alias, name);
-    // Generate keystores used to sign bad code.
-    KeystoreTestUtils.createKeystores(badPubKeystore, badPrivKeystore,
-				      password, badAlias, badName);
-    // Load the keystore we'll use for verifying code.
-    keystore = KeyStore.getInstance("JKS", "SUN");
-    keystore.load(new FileInputStream(goodPubKeystore),
-		  password.toCharArray());
 
     // Make a test jar.
     Map entries = new HashMap();
     entries.put("foo/bar/Baz.txt", "This is a test file.");
     JarTestUtils.createStringJar(testJar, entries);
+  }
+
+  private KeyStore getKeystoreResource(String name, String pass) 
+      throws Exception {
+    KeyStore ks = KeyStore.getInstance("JKS", "SUN");
+    ks.load(ClassLoader.getSystemClassLoader().
+	    getResourceAsStream(name), pass.toCharArray());
+    return ks;
   }
 
   public void testNullKeystore() throws Exception {
@@ -120,7 +119,7 @@ public class TestJarValidator extends LockssTestCase {
     MockCachedUrl goodCu =
       new MockCachedUrl("http://foo.com/test.jar", testJar);
     JarValidator validator =
-      new JarValidator(keystore, getTempDir());
+      new JarValidator(pubKeystore, getTempDir());
     File f = null;
     try {
       f = validator.getBlessedJar(goodCu);
@@ -137,7 +136,7 @@ public class TestJarValidator extends LockssTestCase {
     MockCachedUrl badCu =
       new MockCachedUrl("http://foo.com/test.jar", testJar);
     JarValidator validator =
-      new JarValidator(keystore, getTempDir());
+      new JarValidator(pubKeystore, getTempDir());
     File f = null;
     try {
       f = validator.getBlessedJar(badCu);
@@ -153,7 +152,7 @@ public class TestJarValidator extends LockssTestCase {
     MockCachedUrl unsignedCu =
       new MockCachedUrl("http://foo.com/test.jar", testJar);
     JarValidator validator =
-      new JarValidator(keystore, getTempDir());
+      new JarValidator(pubKeystore, getTempDir());
     File f = null;
     try {
       f = validator.getBlessedJar(unsignedCu);

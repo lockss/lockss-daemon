@@ -1,5 +1,5 @@
 /*
- * $Id: JarSigner.java,v 1.1 2004-09-01 20:14:44 smorabito Exp $
+ * $Id: JarSigner.java,v 1.2 2004-09-02 23:10:12 smorabito Exp $
  */
 
 /*
@@ -66,8 +66,7 @@ public class JarSigner {
    * @param keystore The keystore containing the private key with
    * which to sign jars.
    * @param alias The alias to use when signing jars.
-   * @param storePass The password to use when accessing the private keystore.
-   * @param keyPass The password to use when signing jars.
+   * @param pass The password to use when signing.
    * @param messageDigest The message digest to use when signing
    * jars (i.e., SHA-1).
    *
@@ -79,20 +78,17 @@ public class JarSigner {
    * @throws NoSuchProviderException
    * @throws IOException
    */
-  public JarSigner(String keystore, String alias, String storePass,
-		   String keyPass, MessageDigest messageDigest)
+  public JarSigner(KeyStore keystore, String alias, String pass,
+		   MessageDigest messageDigest)
       throws NoSuchAlgorithmException, KeyStoreException,
 	     CertificateException, UnrecoverableKeyException,
 	     NoSuchProviderException, IOException {
 
     this.alias = alias;
-    this.password = keyPass.toCharArray();
+    this.password = pass.toCharArray();
     this.messageDigest = messageDigest;
-
-    KeyStore ks = KeyStore.getInstance("JKS", "SUN");
-    ks.load(new FileInputStream(keystore), storePass.toCharArray());
-
-    Key key = ks.getKey(alias, password);
+    
+    Key key = keystore.getKey(alias, password);
 
     if (key instanceof PrivateKey) {
       this.privateKey = (PrivateKey)key;
@@ -102,7 +98,7 @@ public class JarSigner {
     }
 
     java.security.cert.Certificate[] certs =
-      ks.getCertificateChain(alias);
+      keystore.getCertificateChain(alias);
 
     // Convert to an array of X509Certificates.
     this.certChain = new X509Certificate[certs.length];
@@ -124,7 +120,7 @@ public class JarSigner {
    * @param keystore The keystore containing the private key with
    * which to sign jars.
    * @param alias The alias to use when signing jars.
-   * @param password The password to use when accessing the keystores.
+   * @param password The password to use when signing.
    *
    * @throws IllegalArgumentException if no private key is found for
    * the specified alias.
@@ -134,12 +130,11 @@ public class JarSigner {
    * @throws NoSuchProviderException
    * @throws IOException
    */
-  public JarSigner(String keystore, String alias, String password)
+  public JarSigner(KeyStore keystore, String alias, String password)
       throws NoSuchAlgorithmException, KeyStoreException,
 	     CertificateException, UnrecoverableKeyException,
 	     NoSuchProviderException, IOException {
-    this(keystore, alias, password, password,
-	 MessageDigest.getInstance("SHA1"));
+    this(keystore, alias, password, MessageDigest.getInstance("SHA1"));
   }
 
   /**

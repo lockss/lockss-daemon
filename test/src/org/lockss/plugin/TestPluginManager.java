@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.44 2004-09-01 20:14:45 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.45 2004-09-02 23:10:12 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.*;
+import java.security.KeyStore;
 import junit.framework.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
@@ -75,10 +76,10 @@ public class TestPluginManager extends LockssTestCase {
 
   private String pluginDir;
   private String pluginJar;
-  private String pubKeystore;
-  private String privKeystore;
-  private String signAlias = "test-user";
-  private String password = "password";
+  private KeyStore pubKeystore;
+  private KeyStore privKeystore;
+  private String signAlias = "goodguy";
+  private String password = "f00bar";
 
   PluginManager mgr;
 
@@ -628,12 +629,21 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
+  private KeyStore getKeystoreResource(String name, String pass)
+      throws Exception {
+    KeyStore ks = KeyStore.getInstance("JKS", "SUN");
+    ks.load(ClassLoader.getSystemClassLoader().
+	    getResourceAsStream(name), pass.toCharArray());
+    return ks;
+  }
+
   private void prepareLoadablePluginTests() throws Exception {
     pluginJar = pluginDir + "plugin.jar";
-    pubKeystore = pluginDir + "pub.keystore";
-    privKeystore = pluginDir + "priv.keystore";
-    KeystoreTestUtils.createKeystores(pubKeystore, privKeystore,
-				      password, signAlias, "Test User");
+    pubKeystore =
+      getKeystoreResource("org/lockss/test/public.keystore", password);
+    privKeystore =
+      getKeystoreResource("org/lockss/test/goodguy.keystore", password);
+
     String xmlFile = "org/lockss/test/MockConfigurablePlugin.xml";
     Map resourceMap = new HashMap();
     resourceMap.put(xmlFile, xmlFile);
@@ -644,7 +654,7 @@ public class TestPluginManager extends LockssTestCase {
 
     Properties p = new Properties();
     p.setProperty(PluginManager.PARAM_KEYSTORE_LOCATION,
-		  pubKeystore);
+		  "org/lockss/test/public.keystore");
     p.setProperty(PluginManager.PARAM_KEYSTORE_PASSWORD,
 		  password);
     ConfigurationUtil.setCurrentConfigFromProps(p);
