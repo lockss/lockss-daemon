@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.61 2004-09-02 01:53:55 smorabito Exp $
+ * $Id: LockssDaemon.java,v 1.61.2.1 2004-09-15 22:00:06 smorabito Exp $
  */
 
 /*
@@ -172,10 +172,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected static HashMap auManagerFactoryMap = new HashMap();
 
   private static LockssDaemon theDaemon;
-  private static String testGroup;
 
   protected LockssDaemon(List propUrls) {
     super(propUrls);
+    theDaemon = this;
+  }
+
+  protected LockssDaemon(List propUrls, String groupName) {
+    super(propUrls, groupName);
     theDaemon = this;
   }
 
@@ -209,11 +213,6 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /** Stop the daemon.  Currently only used in testing. */
   public void stopDaemon() {
     stopApp();
-  }
-
-  // Test Group accessor
-  public static String getTestGroup() {
-    return testGroup;
   }
 
   // LockssManager accessors
@@ -687,56 +686,58 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   /**
    * Parse and handle command line arguments.
    */
-  private static Vector handleArgs(String[] args) {
-    Vector urls = new Vector();
+  protected static StartupOptions getStartupOptions(String[] args) {
+    List propUrls = new ArrayList();
+    String groupName = null;
 
-    boolean hasGroup = false;
-    boolean hasPropList = false;
-    
-    String group = null;
-    List propList = new ArrayList();
-    
-    for (int i = 0; i < args.length; i++) {
-      if ("-g".equals(args[i]) && i < (args.length - 1)) {
-        group = args[++i];
-        hasGroup = true;
+    // True if named command line arguments are being passed to
+    // the daemon at startup.  Otherwise, just treat the command
+    // line arguments as if they were a list of URLs, for backward
+    // compatibility and testing.
+    boolean useNewSyntax = false;
+
+    List tmpList = new ArrayList();
+    for (int i = 0; i < args.length - 1; i++) {
+      if (args[i].equals(StartupOptions.OPTION_GROUP)) {
+	groupName = args[++i];
+	useNewSyntax = true;
       }
-      else if ("-p".equals(args[i]) && i < (args.length - 1)) {
-        propList.add(args[++i]);
-        hasPropList = true;
-      }
-    }
-    
-    if (hasGroup && hasPropList) {
-      testGroup = group;
-      // For now, select just one of the prop files to load at random.
-      //
-      // TODO: If not available, keep selecting prop files to load
-      // until one is loaded, or the list is exhausted.
-      int arg = (int)(Math.random() * propList.size());
-      urls.add(propList.get(arg));
-      urls.add("local.txt");
-    } else {
-      // Otherwise, behave as if we had been called with the old
-      // platform's startup URL list.
-      for (int i = 0; i < args.length; i++) {
-        urls.add(args[i]);
+      else if (args[i].equals(StartupOptions.OPTION_PROPURL)) {
+	// TODO: If not available, keep selecting prop files to load
+	// until one is loaded, or the list is exhausted.
+	// For now, just select one at random.
+	Vector v = StringUtil.breakAt(args[++i], ';', -1, true, true);
+	int idx = (int)(Math.random() * v.size());
+	propUrls.add(v.get(idx));
+	useNewSyntax = true;
       }
     }
 
-    return urls;
+    if (!useNewSyntax) {
+      propUrls = ListUtil.fromArray(args);
+    }
+
+    return new StartupOptions(propUrls, groupName);
   }
 
-  // Main entry to daemon
-
+  /**
+   * Main entry to the daemon.  Startup arguments:
+   *
+   * -p url1
+   *     Load properties from url1
+   * -p url1 -p url2;url3;url4
+   *     Load properties from url1 AND from one of
+   *     (url2 | url3 | url4)
+   * -g group_name
+   *     Set the daemon group to 'group_name'
+   */
   public static void main(String[] args) {
-    Vector urls;
     LockssDaemon daemon;
-
-    urls = handleArgs(args);
+    StartupOptions opts = getStartupOptions(args);
 
     try {
-      daemon = new LockssDaemon(urls);
+      daemon = new LockssDaemon(opts.getPropUrls(),
+				opts.getGroupName());
       daemon.startDaemon();
       // raise priority after starting other threads, so we won't get
       // locked out and fail to exit when told.
@@ -758,4 +759,30 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     System.exit(0);
   }
 
+  /**
+   * Command line startup options container.
+   * Currently supports propUrl (-p) and daemon group (-g)
+   * parameters.
+   */
+  static class StartupOptions {
+
+    public static final String OPTION_PROPURL = "-p";
+    public static final String OPTION_GROUP = "-g";
+
+    private String groupName;
+    private List propUrls;
+
+    public StartupOptions(List propUrls, String groupName) {
+      this.propUrls = propUrls;
+      this.groupName = groupName;
+    }
+
+    public List getPropUrls() {
+      return propUrls;
+    }
+
+    public String getGroupName() {
+      return groupName;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.70 2004-09-02 01:53:54 smorabito Exp $
+ * $Id: Configuration.java,v 1.70.2.1 2004-09-15 22:00:06 smorabito Exp $
  */
 
 /*
@@ -62,6 +62,9 @@ public abstract class Configuration {
   /** Platform host name. */
   public static final String PARAM_PLATFORM_HOSTNAME =
     ConfigManager.PARAM_PLATFORM_FQDN;
+  /** Test group. */
+  public static final String PARAM_DAEMON_GROUP =
+    DAEMON + "group";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -121,7 +124,7 @@ public abstract class Configuration {
   }
 
   public static String getPlatformGroup() {
-    return LockssDaemon.getTestGroup();
+    return getPlatformConfig().get(PARAM_DAEMON_GROUP);
   }
 
   public static String getPlatformHostname() {

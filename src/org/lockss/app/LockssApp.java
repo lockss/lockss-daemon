@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.4 2004-08-18 00:15:00 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.4.2.1 2004-09-15 22:00:06 smorabito Exp $
  */
 
 /*
@@ -108,6 +108,7 @@ public abstract class LockssApp {
   }
 
   protected List propUrls = null;
+  protected String groupName = null;
 
   protected boolean appInited = false;	// true after all managers inited
   protected boolean appRunning = false; // true after all managers started
@@ -128,6 +129,12 @@ public abstract class LockssApp {
 
   protected LockssApp(List propUrls) {
     this.propUrls = propUrls;
+    theApp = this;
+  }
+
+  protected LockssApp(List propUrls, String groupName) {
+    this.propUrls = propUrls;
+    this.groupName = groupName;
     theApp = this;
   }
 
@@ -323,7 +330,7 @@ public abstract class LockssApp {
    */
   protected void initManagers() throws Exception {
     ManagerDesc[] managerDescs = getManagerDescs();
-    
+
     for(int i=0; i< managerDescs.length; i++) {
       ManagerDesc desc = managerDescs[i];
       if (managerMap.get(desc.key) != null) {
@@ -407,7 +414,7 @@ public abstract class LockssApp {
    * init our configuration and extract any parameters we will use locally
    */
   protected void initProperties() {
-    ConfigManager configMgr = ConfigManager.makeConfigManager(propUrls);
+    ConfigManager configMgr = ConfigManager.makeConfigManager(propUrls, groupName);
     configMgr.initService(this);
     configMgr.startService();
     log.info("Waiting for config");
