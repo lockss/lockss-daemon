@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.28 2003-04-24 22:07:16 tal Exp $
+* $Id: IdentityManager.java,v 1.29 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -61,15 +61,34 @@ public class IdentityManager extends BaseLockssManager {
 
   static final String PREFIX = Configuration.PREFIX + "id.";
   static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";
+  static final int DEFAULT_MAX_DELTA = 100;
+
   static final String PARAM_AGREE_DELTA = PREFIX + "agreeDelta";
+  static final int DEFAULT_AGREE_DELTA = 100;
+
   static final String PARAM_DISAGREE_DELTA = PREFIX + "disagreeDelta";
+  static final int DEFAULT_DISAGREE_DELTA = -150;
+
   static final String PARAM_CALL_INTERNAL = PREFIX + "callInternalDelta";
-  static final String PARAM_SPOOF_DETECTED = PREFIX + "spoofDetected";
+  static final int DEFAULT_CALL_INTERNAL = 100;
+
+  static final String PARAM_SPOOF_DETECTED = PREFIX + "spoofDetected"; //no
+  static final int DEFAULT_SPOOF_DETECTED = -30;
+
   static final String PARAM_REPLAY_DETECTED = PREFIX + "replayDetected";
-  static final String PARAM_ATTACK_DETECTED = PREFIX + "attackDetected";
+  static final int DEFAULT_REPLAY_DETECTED = -20;
+
+  static final String PARAM_ATTACK_DETECTED = PREFIX + "attackDetected"; //no
+  static final int DEFAULT_ATTACK_DETECTED = -500;
+
   static final String PARAM_VOTE_NOTVERIFIED = PREFIX + "voteNotVerified ";
+  static final int DEFAULT_VOTE_NOTVERIFIED = -30;
+
   static final String PARAM_VOTE_VERIFIED = PREFIX + "voteVerified";
+  static final int DEFAULT_VOTE_VERIFIED = 40;
+
   static final String PARAM_VOTE_DISOWNED = PREFIX + "voteDisowned";
+  static final int DEFAULT_VOTE_DISOWNED = -400;
 
   public static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
@@ -383,25 +402,25 @@ public class IdentityManager extends BaseLockssManager {
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Set changedKeys) {
     reputationDeltas[MAX_DELTA] =
-        config.getInt(PARAM_MAX_DELTA, 100);
+        config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
     reputationDeltas[AGREE_VOTE] =
-        config.getInt(PARAM_AGREE_DELTA, 100);
+        config.getInt(PARAM_AGREE_DELTA, DEFAULT_AGREE_DELTA);
     reputationDeltas[DISAGREE_VOTE] =
-        config.getInt(PARAM_DISAGREE_DELTA, -150);
+        config.getInt(PARAM_DISAGREE_DELTA, DEFAULT_DISAGREE_DELTA);
     reputationDeltas[CALL_INTERNAL] =
-        config.getInt(PARAM_CALL_INTERNAL, 100);
+        config.getInt(PARAM_CALL_INTERNAL, DEFAULT_CALL_INTERNAL);
     reputationDeltas[SPOOF_DETECTED] =
-        config.getInt(PARAM_SPOOF_DETECTED, -30);
+        config.getInt(PARAM_SPOOF_DETECTED, DEFAULT_SPOOF_DETECTED);
     reputationDeltas[REPLAY_DETECTED] =
-        config.getInt(PARAM_REPLAY_DETECTED, -20);
+        config.getInt(PARAM_REPLAY_DETECTED, DEFAULT_REPLAY_DETECTED);
     reputationDeltas[ATTACK_DETECTED] =
-        config.getInt(PARAM_ATTACK_DETECTED, -500);
+        config.getInt(PARAM_ATTACK_DETECTED, DEFAULT_ATTACK_DETECTED);
     reputationDeltas[VOTE_NOTVERIFIED] =
-        config.getInt(PARAM_VOTE_NOTVERIFIED, -30);
+        config.getInt(PARAM_VOTE_NOTVERIFIED, DEFAULT_VOTE_NOTVERIFIED);
     reputationDeltas[VOTE_VERIFIED] =
-        config.getInt(PARAM_VOTE_VERIFIED, 40);
+        config.getInt(PARAM_VOTE_VERIFIED, DEFAULT_VOTE_VERIFIED);
     reputationDeltas[VOTE_DISOWNED] =
-        config.getInt(PARAM_VOTE_DISOWNED, -400);
+        config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
   }
 
   private static final List statusSortRules =

@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.6 2003-05-06 00:58:26 aalto Exp $
+ * $Id: MailTarget.java,v 1.7 2003-05-06 01:45:46 troberts Exp $
  */
 
 /*
@@ -73,7 +73,8 @@ public class MailTarget {
       "email.enabled";
 
   static final int DEFAULT_SMTPPORT = 25;
-  static final boolean DEFAULT_LOG_EMAIL_ENABLED = true;
+  static final boolean DEFAULT_EMAIL_ENABLED = false;
+
   static final String ERROR_SUBJECT = "Error on machine ";
   static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
@@ -130,10 +131,12 @@ public class MailTarget {
   private void loadConfiguration() {
     smtpHost = Configuration.getParam(PARAM_SMTPHOST);
     smtpPort = Configuration.getIntParam(PARAM_SMTPPORT, DEFAULT_SMTPPORT);
+
     toAddr = Configuration.getParam(PARAM_EMAIL_TO);
     fromAddr = Configuration.getParam(PARAM_EMAIL_FROM);
-    emailEnabled = Configuration.getBooleanParam(PARAM_EMAIL_ENABLED,
-        DEFAULT_LOG_EMAIL_ENABLED);
+    emailEnabled = 
+      Configuration.getBooleanParam(PARAM_EMAIL_ENABLED, 
+				    DEFAULT_EMAIL_ENABLED);
     if ((smtpHost==null) || (toAddr==null) || (fromAddr==null)) {
       String parameter = PARAM_SMTPHOST;
       if (toAddr==null) {

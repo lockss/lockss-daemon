@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.21 2003-04-17 04:04:40 tal Exp $
+ * $Id: Logger.java,v 1.22 2003-05-06 01:45:46 troberts Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ public class Logger {
 
   static final String PREFIX = Configuration.PREFIX + "log.";
   static final String PARAM_DEFAULT_LEVEL = PREFIX + "default.level";
+  static final String DEFAULT_DEFAULT_LEVEL = "info";
+
   static final String PARAM_LOG_LEVEL = PREFIX + "<logname>.level";
   static final String PARAM_LOG_TARGETS = PREFIX + "targets";
 
@@ -182,7 +184,8 @@ public class Logger {
     String levelName =
       Configuration.getParam(StringUtil.replaceString(PARAM_LOG_LEVEL,
 						      "<logname>", name),
-			     Configuration.getParam(PARAM_DEFAULT_LEVEL));
+			     Configuration.getParam(PARAM_DEFAULT_LEVEL,
+						    DEFAULT_DEFAULT_LEVEL));
     int level = 0;
     try {
       level = levelOf(levelName);

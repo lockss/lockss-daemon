@@ -61,7 +61,7 @@ public class TestMailTarget extends LockssTestCase {
     assertEquals(25, target.smtpPort);
     assertEquals("target@t.com", target.toAddr);
     assertEquals("source@s.com", target.fromAddr);
-    assertTrue(target.emailEnabled);
+    assertFalse(target.emailEnabled);
 
     //retesting without defaults
     String s = MailTarget.PARAM_SMTPHOST + "=1.2.3.5";

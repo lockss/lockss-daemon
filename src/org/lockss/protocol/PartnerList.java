@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.13 2003-04-30 23:43:29 tal Exp $
+ * $Id: PartnerList.java,v 1.14 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ class PartnerList {
 
   static final long DEFAULT_MIN_PARTNER_REMOVE_INTERVAL = Constants.HOUR;
   static final int DEFAULT_MAX_PARTNERS = 3;
-  static final long DEFAULT_RECENT_MULTICAST_INTERVAL = Constants.HOUR;
+  static final long DEFAULT_RECENT_MULTICAST_INTERVAL = 90 * Constants.MINUTE;
 
   static Logger log = Logger.getLogger("PartnerList");
 

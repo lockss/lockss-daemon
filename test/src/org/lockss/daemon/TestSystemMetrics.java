@@ -1,5 +1,5 @@
 /*
- * $Id: TestSystemMetrics.java,v 1.10 2003-05-06 01:01:09 aalto Exp $
+ * $Id: TestSystemMetrics.java,v 1.11 2003-05-06 01:45:46 troberts Exp $
  */
 
 /*
@@ -81,7 +81,8 @@ public class TestSystemMetrics extends LockssTestCase {
 
     assertTrue(estimate < byteCount);
     // minimum amount of time would be delay * number of hash steps
-    int expectedMin = (byteCount * 10) / SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP;
+    int expectedMin = 
+      (byteCount * 10) / SystemMetrics.DEFAULT_HASH_TEST_BYTE_STEP;
     assertTrue(duration > expectedMin);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.43 2003-05-05 17:45:21 tal Exp $
+ * $Id: Configuration.java,v 1.44 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public abstract class Configuration {
 
   static final String MYPREFIX = PREFIX + "config.";
   static final String PARAM_RELOAD_INTERVAL = MYPREFIX + "reloadInterval";
+  static final long DEFAULT_RELOAD_INTERVAL = 30 * Constants.MINUTE;
   static final String PARAM_CONFIG_PATH = MYPREFIX + "configFilePath";
 
   /** Common prefix of platform config params */
@@ -82,6 +83,10 @@ public abstract class Configuration {
   static final String PARAM_PLATFORM_ADMIN_EMAIL = PLATFORM + "sysadminemail";
   static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
   static final String PARAM_PLATFORM_LOG_FILE = PLATFORM + "logfile";
+
+  static final String PARAM_PLATFORM_SMTP_HOST = PLATFORM + "smtphost";
+  static final String PARAM_PLATFORM_SMTP_PORT = PLATFORM + "smtpport";
+  static final String PARAM_PLATFORM_PIDFILE = PLATFORM + "pidfile";
 
 
   // MUST pass in explicit log level to avoid recursive call back to
@@ -239,10 +244,13 @@ public abstract class Configuration {
 		       new File(logdir, logfile).toString());
     }
 
-    String ip = get(PARAM_PLATFORM_IP_ADDRESS);
-    if (ip != null) {
-      platformOverride(IdentityManager.PARAM_LOCAL_IP, ip);
-    }
+    conditionalPlatformOverride(PARAM_PLATFORM_IP_ADDRESS,
+				IdentityManager.PARAM_LOCAL_IP);
+
+    conditionalPlatformOverride(PARAM_PLATFORM_SMTP_PORT,
+				MailTarget.PARAM_SMTPPORT);
+    conditionalPlatformOverride(PARAM_PLATFORM_SMTP_HOST,
+				MailTarget.PARAM_SMTPHOST);
 
     String platformSubnet = get(PARAM_PLATFORM_ACCESS_SUBNET);
     appendPlatformAccess(ServletManager.PARAM_IP_INCLUDE, platformSubnet);
@@ -267,6 +275,13 @@ public abstract class Configuration {
       log.warning("with platform-derived value: " + val);
     }
     put(key, val);
+  }
+
+  private void conditionalPlatformOverride(String platformKey, String key) {
+    String value = get(platformKey);
+    if (value != null) {
+      platformOverride(key, value);
+    }
   }
 
   private void appendPlatformAccess(String accessParam,
@@ -806,8 +821,9 @@ public abstract class Configuration {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
-	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
-					30 * Constants.MINUTE);
+	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL, 
+						DEFAULT_RELOAD_INTERVAL);
+				    
 	}
 	long reloadRange = reloadInterval/4;
 	Deadline nextReload =

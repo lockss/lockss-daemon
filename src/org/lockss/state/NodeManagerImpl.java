@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.117 2003-05-06 00:59:50 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.118 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   public static final String PARAM_NODESTATE_CACHE_SIZE =
       Configuration.PREFIX + "state.cache.size";
 
-  static final int DEFAULT_CACHE_SIZE = 100;
+  static final int DEFAULT_NODESTATE_CACHE_SIZE = 100;
 
   /**
    * This parameter indicates how long since the last unsuccessful poll on a
@@ -72,7 +72,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   AuState auState;
   NodeStateCache nodeCache;
   HashMap activeNodes;
-  int maxCacheSize = DEFAULT_CACHE_SIZE;
+  int maxCacheSize = DEFAULT_NODESTATE_CACHE_SIZE;
   long recallDelay = DEFAULT_RECALL_DELAY;
   /**
    * the set of nodes marked damaged.
@@ -633,7 +633,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                                             DEFAULT_RECALL_DELAY);
     if (changedKeys.contains(PARAM_NODESTATE_CACHE_SIZE)) {
       maxCacheSize = newConfig.getInt(PARAM_NODESTATE_CACHE_SIZE,
-                                      DEFAULT_CACHE_SIZE);
+                                      DEFAULT_NODESTATE_CACHE_SIZE);
       if (nodeCache != null) {
         nodeCache.setCacheSize(maxCacheSize);
       }

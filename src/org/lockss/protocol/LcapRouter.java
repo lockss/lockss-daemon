@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.23 2003-04-30 23:43:29 tal Exp $
+ * $Id: LcapRouter.java,v 1.24 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -67,11 +67,13 @@ public class LcapRouter extends BaseLockssManager {
     Configuration.PREFIX + "platform.localIPs";
 
   static final int DEFAULT_ORIG_PKTS_PER_INTERVAL = 40;
-  static final long DEFAULT_ORIG_PKT_INTERVAL = 10 * Constants.SECOND;
+  static final long DEFAULT_ORIG_PKT_INTERVAL = 8 * Constants.MINUTE;
   static final int DEFAULT_FWD_PKTS_PER_INTERVAL = 40;
   static final long DEFAULT_FWD_PKT_INTERVAL = 10 * Constants.SECOND;
   static final double DEFAULT_PROB_PARTNER_ADD = 0.5;
   static final int DEFAULT_DUP_MSG_HASH_SIZE = 100;
+  static final int DEFAULT_INITIAL_HOPCOUNT = 2;
+  static final int DEFAULT_BEACON_INTERVAL = 0;
 
   static Logger log = Logger.getLogger("Router");
 
@@ -138,13 +140,14 @@ public class LcapRouter extends BaseLockssManager {
 		     PARAM_ORIG_PKTS_PER_INTERVAL, PARAM_ORIG_PKT_INTERVAL,
 		     DEFAULT_ORIG_PKTS_PER_INTERVAL, DEFAULT_ORIG_PKT_INTERVAL);
     if (changedKeys.contains(PARAM_BEACON_INTERVAL)) {
-      beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL, 0);
+      beaconInterval = config.getTimeInterval(PARAM_BEACON_INTERVAL, 
+					      DEFAULT_BEACON_INTERVAL);
       startBeacon();
     }
     probAddPartner = config.getPercentage(PARAM_PROB_PARTNER_ADD,
 					  DEFAULT_PROB_PARTNER_ADD);
     initialHopCount =
-      config.getInt(PARAM_INITIAL_HOPCOUNT, LcapMessage.MAX_HOP_COUNT_LIMIT);
+      config.getInt(PARAM_INITIAL_HOPCOUNT, DEFAULT_INITIAL_HOPCOUNT);
 
     int dupSize =
       config.getInt(PARAM_DUP_MSG_HASH_SIZE, DEFAULT_DUP_MSG_HASH_SIZE);

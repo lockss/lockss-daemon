@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.19 2003-04-22 17:59:57 tal Exp $
+ * $Id: ServletManager.java,v 1.20 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -61,9 +61,10 @@ public class ServletManager extends JettyManager {
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
+  public static final boolean DEFAULT_LOG_FORBIDDEN = false;
 
   public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
-
+  public static final boolean DEFAULT_USER_AUTH = true;
   public static final String PARAM_LOGDIR =
     Configuration.PREFIX +  "platform.logdirectory";
 
@@ -120,14 +121,15 @@ public class ServletManager extends JettyManager {
     port = config.getInt(PARAM_PORT, DEFAULT_PORT);
     start = config.getBoolean(PARAM_START, DEFAULT_START);
     logdir = config.get(PARAM_LOGDIR);
-    doAuth = config.getBoolean(PARAM_USER_AUTH, true);
+    doAuth = config.getBoolean(PARAM_USER_AUTH, DEFAULT_USER_AUTH);
 
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
       includeIps = config.get(PARAM_IP_INCLUDE, "");
       excludeIps = config.get(PARAM_IP_EXCLUDE, "");
-      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
+      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, 
+				       DEFAULT_LOG_FORBIDDEN);
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
       setIpFilters();

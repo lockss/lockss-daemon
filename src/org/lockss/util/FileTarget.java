@@ -41,7 +41,6 @@ public class FileTarget extends PrintStreamTarget {
   public static final String PARAM_FILE = PREFIX + "file";
 
   private static final long DEFAULT_REOPEN_INTERVAL = 10 * Constants.MINUTE;
-  private static final String DEFAULT_FILE = "/var/log/lockss/daemon";
 
   private String filename;
   private File logfile;
@@ -68,7 +67,10 @@ public class FileTarget extends PrintStreamTarget {
     reopenInterval = config.getTimeInterval(PARAM_REOPEN_INTERVAL,
 					    DEFAULT_REOPEN_INTERVAL);
     if (filename == null) {
-      filename = config.get(PARAM_FILE, DEFAULT_FILE);
+      filename = config.get(PARAM_FILE);
+      if (filename == null) {
+	throw new RuntimeException("No log target filename specified");
+      }
       logfile = new File(filename);
     }
   }

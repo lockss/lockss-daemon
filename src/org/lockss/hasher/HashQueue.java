@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.36 2003-05-03 00:11:11 tal Exp $
+ * $Id: HashQueue.java,v 1.37 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -48,9 +48,16 @@ import org.lockss.plugin.*;
 class HashQueue implements Serializable {
   static final String PREFIX = Configuration.PREFIX + "hasher.";
   static final String PARAM_PRIORITY = PREFIX + "priority";
+  static final int DEFAULT_PRIORITY = Thread.MIN_PRIORITY;
+
   static final String PARAM_STEP_BYTES = PREFIX + "stepBytes";
+  static final int DEFAULT_STEP_BYTES = 10000;
+
   static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
+  static final int DEFAULT_NUM_STEPS = 10;
+
   static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
+  static final int DEFAULT_COMPLETED_MAX = 50;
 
   protected static Logger log = Logger.getLogger("HashQueue");
 
@@ -283,10 +290,10 @@ class HashQueue implements Serializable {
   }
 
   private void setConfig(Configuration config, Set changedKeys) {
-    hashPriority = config.getInt(PARAM_PRIORITY, Thread.MIN_PRIORITY);
-    hashStepBytes = config.getInt(PARAM_STEP_BYTES, 10000);
-    hashNumSteps = config.getInt(PARAM_NUM_STEPS, 10);
-    int cMax = config.getInt(PARAM_COMPLETED_MAX, 50);
+    hashPriority = config.getInt(PARAM_PRIORITY, DEFAULT_PRIORITY);
+    hashStepBytes = config.getInt(PARAM_STEP_BYTES, DEFAULT_STEP_BYTES);
+    hashNumSteps = config.getInt(PARAM_NUM_STEPS, DEFAULT_NUM_STEPS);
+    int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
     if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
       synchronized (completed) {
 	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, 50));

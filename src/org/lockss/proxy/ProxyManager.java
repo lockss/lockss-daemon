@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.11 2003-04-22 17:59:23 tal Exp $
+ * $Id: ProxyManager.java,v 1.12 2003-05-06 01:45:45 troberts Exp $
  */
 
 /*
@@ -49,16 +49,17 @@ public class ProxyManager extends JettyManager {
   private static Logger log = Logger.getLogger("Proxy");
   public static final String PREFIX = Configuration.PREFIX + "proxy.";
   public static final String PARAM_START = PREFIX + "start";
+  public static final boolean DEFAULT_START = true;
+
   public static final String PARAM_PORT = PREFIX + "port";
+  public static final int DEFAULT_PORT = 9090;
 
   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
-
-  public static final String PARAM_PLATFORM_ACCESS_SUBNET =
-    Configuration.PARAM_PLATFORM_ACCESS_SUBNET;
+  public static final boolean DEFAULT_LOG_FORBIDDEN = false;
 
   private int port;
   private boolean start;
@@ -92,14 +93,15 @@ public class ProxyManager extends JettyManager {
   protected void setConfig(Configuration config, Configuration prevConfig,
 			   Set changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
-    port = config.getInt(PARAM_PORT, 9090);
-    start = config.getBoolean(PARAM_START, true);
+    port = config.getInt(PARAM_PORT, DEFAULT_PORT);
+    start = config.getBoolean(PARAM_START, DEFAULT_START);
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
 	changedKeys.contains(PARAM_LOG_FORBIDDEN)) {
       includeIps = config.get(PARAM_IP_INCLUDE, "");
       excludeIps = config.get(PARAM_IP_EXCLUDE, "");
-      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, false);
+      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN, 
+				       DEFAULT_LOG_FORBIDDEN);
       log.debug("Installing new ip filter: incl: " + includeIps +
 		", excl: " + excludeIps);
       setIpFilter();
