@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.22 2003-04-30 23:00:58 aalto Exp $
+ * $Id: BaseArchivalUnit.java,v 1.23 2003-05-01 00:43:15 aalto Exp $
  */
 
 /*
@@ -286,6 +286,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     logger.debug3("Poll interval: "+StringUtil.timeIntervalToString(
         nextPollInterval));
     if (TimeBase.msSince(aus.getLastTopLevelPollTime()) > nextPollInterval) {
+      // reset poll interval
+      nextPollInterval = -1;
       return true;
     }
     return false;
