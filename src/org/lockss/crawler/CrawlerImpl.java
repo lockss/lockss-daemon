@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.24 2004-07-28 18:20:22 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.25 2004-07-28 22:49:28 dcfok Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public abstract class CrawlerImpl implements Crawler {
 
   int crawlPermission(String permissionPage) {
     
-    int crawl_ok = PermissionRecord.PERMISSION_UNCHECKED;
+    int crawl_ok = PermissionMap.PERMISSION_UNCHECKED;
     String err = Crawler.STATUS_PUB_PERMISSION;
     CachedUrlSet ownerCus = au.getAuCachedUrlSet();
 
@@ -183,7 +183,7 @@ public abstract class CrawlerImpl implements Crawler {
 	    new InputStreamReader(is, Constants.DEFAULT_ENCODING);
 	  if (!au.checkCrawlPermission(reader)) {
 	    logger.error("No crawl permission on " + permissionPage);
-	    crawl_ok = PermissionRecord.PERMISSION_NOT_OK;
+	    crawl_ok = PermissionMap.PERMISSION_NOT_OK;
 	    alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION,
 					      au).
 				setAttribute(Alert.ATTR_TEXT,
@@ -196,7 +196,7 @@ public abstract class CrawlerImpl implements Crawler {
 					      DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
 	      logger.debug3("Permission granted. Caching permission page.");
 	      storePermissionPage(ownerCus, permissionPage);
-	      crawl_ok = PermissionRecord.PERMISSION_OK;
+	      crawl_ok = PermissionMap.PERMISSION_OK;
 	      if (crawlStatus.getCrawlError() == err){
 		crawlStatus.setCrawlError(null);
 	      }
@@ -205,14 +205,14 @@ public abstract class CrawlerImpl implements Crawler {
 		logger.debug3("Permission granted. Storing permission page.");
 		is.reset();
 		uc.storeContent(is, uc.getUncachedProperties());
-		crawl_ok = PermissionRecord.PERMISSION_OK;
+		crawl_ok = PermissionMap.PERMISSION_OK;
 		if (crawlStatus.getCrawlError() == err){
 		  crawlStatus.setCrawlError(null);
 		}
 	      } catch (IOException e) {
 		logger.debug("Couldn't store from existing stream, refetching", e);
 		storePermissionPage(ownerCus, permissionPage);
-		crawl_ok = PermissionRecord.PERMISSION_OK;
+		crawl_ok = PermissionMap.PERMISSION_OK;
 		if (crawlStatus.getCrawlError() == err){
 		  crawlStatus.setCrawlError(null);
 		}
@@ -232,10 +232,10 @@ public abstract class CrawlerImpl implements Crawler {
 				       "\ncould not be fetched. " +
 				       "The error was:\n" +
 				       ex.getMessage() + "\n"));
-      crawl_ok = PermissionRecord.FETCH_PERMISSION_FAILED;
+      crawl_ok = PermissionMap.FETCH_PERMISSION_FAILED;
     }
 
-    if (crawl_ok != PermissionRecord.PERMISSION_OK) {
+    if (crawl_ok != PermissionMap.PERMISSION_OK) {
       crawlStatus.setCrawlError(err);
     }
     return crawl_ok;
