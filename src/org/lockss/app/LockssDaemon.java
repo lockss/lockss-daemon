@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.7 2003-02-24 22:13:41 claire Exp $
+ * $Id: LockssDaemon.java,v 1.8 2003-02-25 03:13:46 claire Exp $
  */
 
 /*
@@ -75,10 +75,10 @@ public class LockssDaemon {
   private static String DEFAULT_PLUGIN_MANAGER = "org.lockss.plugin.PluginManager";
   private static String DEFAULT_POLL_MANAGER = "org.lockss.poller.PollManager";
   private static String DEFAULT_LOCKSS_REPOSITORY
-      = "org.lockss.repository.LockssRepository";
+      = "org.lockss.repository.LockssRepositoryImpl";
   private static String DEFAULT_HISTORY_REPOSITORY
-      = "org.lockss.state.HistoryRepository";
-  private static String DEFAULT_NODE_MANAGER = "org.lockss.state.NodeManager";
+      = "org.lockss.state.HistoryRepositoryImpl";
+  private static String DEFAULT_NODE_MANAGER = "org.lockss.state.NodeManagerImpl";
   private static String DEFAULT_PROXY_HANDLER = "org.lockss.proxy.ProxyHandler";
 
 
@@ -118,7 +118,7 @@ public class LockssDaemon {
 
   // Need to preserve order so managers are started and stopped in the
   // right order.  This does not need to be synchronized.
-  private static Map theManagers = new SequencedHashMap();
+  protected static Map theManagers = new SequencedHashMap();
 
   boolean running = false;
 

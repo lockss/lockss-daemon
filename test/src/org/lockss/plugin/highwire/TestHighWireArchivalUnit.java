@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
 
 public class TestHighWireArchivalUnit extends LockssTestCase {
   public static final long WEEK_MS = 1000 * 60 * 60 * 24 * 7;
+  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
 
   public TestHighWireArchivalUnit(String msg) {
     super(msg);
@@ -51,6 +52,7 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     super.setUp();
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    theDaemon.getLockssRepository(new MockArchivalUnit());
   }
 
   public void testGetVolumeNum() {

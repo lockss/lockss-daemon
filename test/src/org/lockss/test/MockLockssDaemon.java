@@ -12,7 +12,8 @@ import org.lockss.crawler.*;
 import org.lockss.plugin.*;
 import org.lockss.app.*;
 
-public class MockLockssDaemon extends LockssDaemon {
+public class MockLockssDaemon
+    extends LockssDaemon {
   HashService hashService = null;
   PollManager pollManager = null;
   LcapComm commManager = null;
@@ -23,7 +24,6 @@ public class MockLockssDaemon extends LockssDaemon {
   CrawlManager crawlManager = null;
   PluginManager pluginManager = null;
   IdentityManager identityManager = null;
-
 
   public MockLockssDaemon(List urls) {
     super(urls);
@@ -50,13 +50,14 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the HashService
    */
   public HashService getHashService() {
-    if(hashService == null) {
+    if (hashService == null) {
       hashService = new HashService();
       try {
         hashService.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
+      theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
     }
     return hashService;
   }
@@ -66,13 +67,14 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the PollManager
    */
   public PollManager getPollManager() {
-    if(pollManager == null) {
+    if (pollManager == null) {
       pollManager = new PollManager();
       try {
         pollManager.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
+      theManagers.put(LockssDaemon.POLL_MANAGER, pollManager);
     }
     return pollManager;
   }
@@ -82,13 +84,14 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the LcapComm
    */
   public LcapComm getCommManager() {
-    if(commManager == null) {
+    if (commManager == null) {
       commManager = new LcapComm();
       try {
         commManager.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
+      theManagers.put(LockssDaemon.COMM_MANAGER, hashService);
     }
     return commManager;
   }
@@ -102,13 +105,14 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public LockssRepository getLockssRepository(ArchivalUnit au) {
     if (lockssRepository == null) {
-      LockssRepositoryImpl impl= new LockssRepositoryImpl();
+      LockssRepositoryImpl impl = new LockssRepositoryImpl();
       try {
         impl.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
       lockssRepository = impl;
+      theManagers.put(LockssDaemon.LOCKSS_REPOSITORY, lockssRepository);
     }
     return lockssRepository;
   }
@@ -118,7 +122,7 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the HistoryRepository
    */
   public HistoryRepository getHistoryRepository() {
-    if(historyRepository == null) {
+    if (historyRepository == null) {
       HistoryRepositoryImpl impl = new HistoryRepositoryImpl();
       try {
         impl.initService(this);
@@ -126,6 +130,7 @@ public class MockLockssDaemon extends LockssDaemon {
       catch (LockssDaemonException ex) {
       }
       historyRepository = impl;
+      theManagers.put(LockssDaemon.HISTORY_REPOSITORY, historyRepository);
     }
     return historyRepository;
   }
@@ -136,7 +141,7 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the NodeManager
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
-    if(nodeManager == null) {
+    if (nodeManager == null) {
       NodeManagerImpl impl = new NodeManagerImpl();
       try {
         impl.initService(this);
@@ -144,6 +149,7 @@ public class MockLockssDaemon extends LockssDaemon {
       catch (LockssDaemonException ex) {
       }
       nodeManager = impl;
+      theManagers.put(LockssDaemon.NODE_MANAGER, nodeManager);
     }
     return nodeManager.managerFactory(au);
   }
@@ -153,13 +159,14 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the ProxyHandler
    */
   public ProxyHandler getProxyHandler() {
-    if(proxyHandler == null) {
+    if (proxyHandler == null) {
       proxyHandler = new ProxyHandler();
       try {
         proxyHandler.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
+      theManagers.put(LockssDaemon.PROXY_HANDLER, proxyHandler);
     }
     return proxyHandler;
   }
@@ -169,7 +176,7 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the CrawlManager
    */
   public CrawlManager getCrawlManager() {
-    if(crawlManager == null) {
+    if (crawlManager == null) {
       CrawlManagerImpl impl = new CrawlManagerImpl();
       try {
         impl.initService(this);
@@ -177,6 +184,7 @@ public class MockLockssDaemon extends LockssDaemon {
       catch (LockssDaemonException ex) {
       }
       crawlManager = impl;
+      theManagers.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
     }
     return crawlManager;
   }
@@ -186,13 +194,14 @@ public class MockLockssDaemon extends LockssDaemon {
    * @return the PluginManager
    */
   public PluginManager getPluginManager() {
-    if(pluginManager == null) {
+    if (pluginManager == null) {
       pluginManager = new PluginManager();
       try {
         pluginManager.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
+      theManagers.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
     }
     return pluginManager;
   }
@@ -203,7 +212,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
 
   public IdentityManager getIdentityManager() {
-    if(identityManager == null) {
+    if (identityManager == null) {
       identityManager = new IdentityManager();
       try {
         identityManager.initService(this);
@@ -211,6 +220,7 @@ public class MockLockssDaemon extends LockssDaemon {
       catch (LockssDaemonException ex) {
       }
     }
+    theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
     return identityManager;
   }
 
@@ -220,6 +230,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setCommManager(LcapComm commMan) {
     commManager = commMan;
+    theManagers.put(LockssDaemon.COMM_MANAGER, hashService);
   }
 
   /**
@@ -228,6 +239,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setCrawlManager(CrawlManager crawlMan) {
     crawlManager = crawlMan;
+    theManagers.put(LockssDaemon.CRAWL_MANAGER, crawlManager);
   }
 
   /**
@@ -236,6 +248,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setHashService(HashService hashServ) {
     hashService = hashServ;
+    theManagers.put(LockssDaemon.HASH_SERVICE, hashService);
   }
 
   /**
@@ -244,6 +257,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setHistoryRepository(HistoryRepository histRepo) {
     historyRepository = histRepo;
+    theManagers.put(LockssDaemon.HISTORY_REPOSITORY, historyRepository);
   }
 
   /**
@@ -252,6 +266,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setIdentityManager(IdentityManager idMan) {
     identityManager = idMan;
+    theManagers.put(LockssDaemon.IDENTITY_MANAGER, identityManager);
   }
 
   /**
@@ -260,6 +275,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setLockssRepository(LockssRepository lockssRepo) {
     lockssRepository = lockssRepo;
+    theManagers.put(LockssDaemon.LOCKSS_REPOSITORY, lockssRepository);
   }
 
   /**
@@ -268,6 +284,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setNodeManager(NodeManager nodeMan) {
     nodeManager = nodeMan;
+    theManagers.put(LockssDaemon.NODE_MANAGER, nodeManager);
   }
 
   /**
@@ -276,6 +293,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setPluginManager(PluginManager pluginMan) {
     pluginManager = pluginMan;
+    theManagers.put(LockssDaemon.PLUGIN_MANAGER, pluginManager);
   }
 
   /**
@@ -284,6 +302,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setPollManager(PollManager pollMan) {
     pollManager = pollMan;
+    theManagers.put(LockssDaemon.POLL_MANAGER, pollManager);
   }
 
   /**
@@ -292,6 +311,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setProxyHandler(ProxyHandler proxyHand) {
     proxyHandler = proxyHand;
+    theManagers.put(LockssDaemon.PROXY_HANDLER, proxyHandler);
   }
 
 }

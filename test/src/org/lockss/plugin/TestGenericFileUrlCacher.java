@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.9 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.10 2003-02-25 03:13:47 claire Exp $
  */
 
 /*
@@ -48,6 +48,7 @@ import org.lockss.plugin.base.*;
  */
 public class TestGenericFileUrlCacher extends LockssTestCase {
   private MockGenericFileArchivalUnit mau;
+  private MockLockssDaemon theDaemon = new MockLockssDaemon(null);
 
   public TestGenericFileUrlCacher(String msg) {
     super(msg);
@@ -58,6 +59,7 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
     String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     mau = new MockGenericFileArchivalUnit(new CrawlSpec(tempDirPath, null));
     TestLockssRepositoryImpl.configCacheLocation(tempDirPath);
+    theDaemon.getLockssRepository(new MockArchivalUnit());
   }
 
   public void testCache() throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.23 2003-02-24 22:13:41 claire Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.24 2003-02-25 03:13:46 claire Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.security.*;
 import java.net.MalformedURLException;
 
+import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.repository.*;
@@ -45,7 +46,6 @@ import org.lockss.poller.PollManager;
 import org.lockss.protocol.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import org.lockss.plugin.base.BaseCachedUrlSet;
 
 /**
  * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.
@@ -66,8 +66,9 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
-    //XXX fix to use demon
-    repository = (new LockssRepositoryImpl()).repositoryFactory(owner);
+    LockssRepository rep = (LockssRepository)LockssDaemon.getManager(
+        LockssDaemon.LOCKSS_REPOSITORY);
+    repository = rep.repositoryFactory(owner);
   }
 
   public boolean isLeaf() {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.36 2003-02-24 22:13:42 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.37 2003-02-25 03:13:47 claire Exp $
  */
 
 /*
@@ -148,6 +148,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   }
 
   public NodeState getNodeState(CachedUrlSet cus) {
+    logger.debug("Getting " + cus.getUrl());
     return (NodeState)nodeMap.get(cus.getUrl());
   }
 
@@ -386,6 +387,7 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
   }
 
   private void addNewNodeState(CachedUrlSet cus) {
+    logger.debug("Adding NewNodeState: " + cus.toString());
     NodeState state = new NodeStateImpl(cus, new CrawlState(-1,
         CrawlState.FINISHED, 0), new ArrayList(), repository);
     nodeMap.put(cus.getUrl(), state);

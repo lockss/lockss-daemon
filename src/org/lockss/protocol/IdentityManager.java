@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.16 2003-02-20 00:57:28 claire Exp $
+* $Id: IdentityManager.java,v 1.17 2003-02-25 03:13:46 claire Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ import org.lockss.poller.Vote;
  * @version 1.0
  */
 
-public class IdentityManager {
+public class IdentityManager implements LockssManager {
 
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
   static final String PARAM_MAX_DELTA = Configuration.PREFIX + "id.maxReputationDelta";

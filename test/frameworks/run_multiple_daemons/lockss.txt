@@ -2,13 +2,15 @@
 org.lockss.log.default.level=info
 org.lockss.log.Poll.level=debug
 org.lockss.log.Comm.level=debug
+org.lockss.log.NodeManager.level=debug
 org.lockss.log.Message.level=debug
 org.lockss.log.GenericHasher.level=info
 org.lockss.log.MSock_3456_Rcv.level=debug
 org.lockss.log.USock_9001_Rcv.level=debug
 org.lockss.log.USock_9000_Rcv.level=debug
 
-#org.lockss.cache.location
+#lockss repository settings
+org.lockss.cache.location=./
 
 org.lockss.parameterReloadInterval = 600000
 
@@ -16,6 +18,15 @@ org.lockss.parameterReloadInterval = 600000
 #org.lockss.hasher.numSteps
 #org.lockss.hasher.priority
 #org.lockss.hasher.stepBytes
+
+#identity manager settings
+org.lockss.id.databaseDir=/tmp/iddb
+org.lockss.id.mappingFile=/tmp/iddb
+
+#lockss state settings
+org.lockss.history.location=/tmp/rep
+org.lockss.history.mapping.file=/tmp/rep/pollmapping.xml
+
 
 #comm settings
 org.lockss.comm.multicast.group=239.4.5.6
