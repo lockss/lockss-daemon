@@ -1,5 +1,5 @@
 /*
- * $Id: BaseLockssManager.java,v 1.5 2003-03-29 20:25:39 tal Exp $
+ * $Id: BaseLockssManager.java,v 1.6 2003-04-03 11:28:18 tal Exp $
  */
 
 /*
@@ -44,21 +44,31 @@ public abstract class BaseLockssManager implements LockssManager {
   private LockssManager theManager = null;
   protected LockssDaemon theDaemon = null;
   private Configuration.Callback configCallback;
-  private Logger log=Logger.getLogger("BaseLockssManager");
+  private static Logger log=Logger.getLogger("BaseLockssManager");
 
+  /** Called to initialize each service in turn.  Service should extend
+   * this to perform any internal initialization necessary before service
+   * can be called from outside.  No calls to other services may be made in
+   * this method. */
   public void initService(LockssDaemon daemon) throws LockssDaemonException {
     if(theManager == null) {
       theDaemon = daemon;
       theManager = this;
+      registerDefaultConfigCallback();
     }
     else {
       throw new LockssDaemonException("Multiple Instantiation.");
     }
   }
 
+  /** Called to start each service in turn, after all services have been
+   * initialized.  Service should extend this to perform any startup
+   * necessary. */
   public void startService() {
   }
 
+  /** Called to stop a service.  Service should extend this to stop all
+   * ongoing activity (<i>eg</i>, threads). */
   public void stopService() {
     // checkpoint here
     unregisterConfig();
@@ -69,7 +79,12 @@ public abstract class BaseLockssManager implements LockssManager {
     return theDaemon;
   }
 
-  protected void registerConfigCallback(Configuration.Callback callback) {
+  /** Return true iff all the daemon services have been initialized. */
+  protected boolean isDaemonInited() {
+    return theDaemon.isDaemonInited();
+  }
+
+  private void registerConfigCallback(Configuration.Callback callback) {
     if(callback == null || this.configCallback != null) {
       throw new LockssDaemonException("Invalid callback registration: "
                                        + callback);
@@ -78,31 +93,38 @@ public abstract class BaseLockssManager implements LockssManager {
     Configuration.registerConfigurationCallback(configCallback);
   }
 
-  protected void registerDefaultConfigCallback() {
+  private void registerDefaultConfigCallback() {
     configCallback = new DefaultConfigCallback();
     Configuration.registerConfigurationCallback(configCallback);
   }
 
-  protected void unregisterConfig() {
+  private void unregisterConfig() {
     if(configCallback != null) {
       Configuration.unregisterConfigurationCallback(configCallback);
       configCallback = null;
     }
   }
 
-  protected void setConfig(Configuration newConfig,
-                           Configuration oldConfig,
-                           Set changedKeys) {
-    /** override to actually set the config **/
-    log.error("setConfig called, should be overridden for correct behaviour");
-
+  /** Convenience method to (re)invoke the manager's setConfig(new, old,
+   * ...) method with the current config and empty previous config. */
+  protected void resetConfig() {
+    Configuration cur = Configuration.getCurrentConfig();
+    setConfig(cur, Configuration.EMPTY_CONFIGURATION, cur.keySet());
   }
 
-  class DefaultConfigCallback implements Configuration.Callback {
+  /** Managers must implement this method.  It is called once at daemon
+   * init time (during initService()) and again whenever the current
+   * configuration changes.  This method should not invoke other services
+   * unless isDaemonInited() is true. */
+  protected abstract void setConfig(Configuration newConfig,
+				    Configuration prevConfig,
+				    Set changedKeys);
+
+  private class DefaultConfigCallback implements Configuration.Callback {
     public void configurationChanged(Configuration newConfig,
-                                     Configuration oldConfig,
+                                     Configuration prevConfig,
                                      Set changedKeys) {
-      setConfig(newConfig, oldConfig, changedKeys);
+      setConfig(newConfig, prevConfig, changedKeys);
     }
   }
 }
