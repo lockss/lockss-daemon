@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.20 2005-01-11 01:55:14 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.21 2005-01-12 02:12:40 troberts Exp $
  */
 
 /*
@@ -47,6 +47,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String END_TIME_COL_NAME = "end";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
+  private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
@@ -70,9 +71,11 @@ public class CrawlManagerStatus implements StatusAccessor {
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
 				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
+				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(START_URLS, "starting url",
+		  new ColumnDescriptor(START_URLS, "Starting Url(s)",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -177,10 +180,13 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(CRAWL_TYPE, type);
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
-//     row.put(NUM_URLS_FETCHED, new Long(status.getNumFetched()));
     row.put(NUM_URLS_FETCHED, 
 	    new StatusTable.Reference(new Long(status.getNumFetched()),
-				      "single_crawl_status", idx.toString()));
+				      "single_crawl_status", "fetched;"+idx));
+
+    row.put(NUM_URLS_WITH_ERRORS, 
+	    new StatusTable.Reference(new Long(status.getNumUrlsWithErrors()),
+				      "single_crawl_status", "error;"+idx));
 
     row.put(NUM_URLS_NOT_MODIFIED, new Long(status.getNumNotModified()));
     row.put(NUM_URLS_PARSED, new Long(status.getNumParsed()));

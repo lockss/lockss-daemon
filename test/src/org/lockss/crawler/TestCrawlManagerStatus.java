@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.15 2005-01-11 01:55:14 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.16 2005-01-12 02:12:42 troberts Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String END_TIME_COL_NAME = "end";
   private static final String NUM_URLS_PARSED = "num_urls_parsed";
   private static final String NUM_URLS_FETCHED = "num_urls_fetched";
+  private static final String NUM_URLS_WITH_ERRORS = "num_urls_with_errors";
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
@@ -76,9 +77,11 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_FETCHED, "Fetched",
 				       ColumnDescriptor.TYPE_INT),
+		  new ColumnDescriptor(NUM_URLS_WITH_ERRORS, "Errors",
+				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
-		  new ColumnDescriptor(START_URLS, "starting url",
+		  new ColumnDescriptor(START_URLS, "Starting Url(s)",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -170,6 +173,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     status.setEndTime(2);
     status.setNumFetched(3);
     status.setNumParsed(4);
+    status.setNumUrlsWithErrors(5);
     status.setAu(makeMockAuWithId("id1"));
 
     MockCrawlStatus status2 = new MockCrawlStatus();
@@ -177,6 +181,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     status2.setEndTime(8);
     status2.setNumFetched(9);
     status2.setNumParsed(10);
+    status2.setNumUrlsWithErrors(11);
     status2.setAu(makeMockAuWithId("id2"));
 
     statusSource.setCrawlStatusList(ListUtil.list(status, status2));
@@ -190,10 +195,18 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     Map map = (Map)rows.get(1);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
+
     StatusTable.Reference ref  =
       (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
     assertEquals(new Long(3), ref.getValue());
     assertEquals("single_crawl_status", ref.getTableName());
+    assertEquals("fetched;0", ref.getKey());
+
+    ref = (StatusTable.Reference)map.get(NUM_URLS_WITH_ERRORS);
+    assertEquals(new Long(5), ref.getValue());
+    assertEquals("single_crawl_status", ref.getTableName());
+    assertEquals("error;0", ref.getKey());
+
     assertEquals(new Long(4), map.get(NUM_URLS_PARSED));
 
     map = (Map)rows.get(0);
