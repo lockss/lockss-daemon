@@ -1,5 +1,5 @@
 /*
- * $Id: RunHashTest.java,v 1.3 2003-08-21 19:28:40 eaalto Exp $
+ * $Id: RunHashTest.java,v 1.4 2003-10-28 23:44:26 eaalto Exp $
  */
 
 /*
@@ -28,7 +28,7 @@ package org.lockss.test;
 
 import java.io.*;
 import org.lockss.util.*;
-import org.lockss.crawler.HtmlTagFilter;
+import org.lockss.filter.HtmlTagFilter;
 import org.lockss.plugin.CachedUrl;
 
 public class RunHashTest {
