@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.1 2002-11-06 18:33:26 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.2 2002-11-23 01:23:48 troberts Exp $
  */
 
 /*
@@ -62,14 +62,17 @@ public class GenericContentHasher extends GenericHasher {
     int totalHashed = 0;
 
     if (hashState == HASHING_NAME) {
+      log.debug("Hashing name");
       if (nameBytes == null) {
 	String url = cu.getUrl();
 	StringBuffer sb = new StringBuffer(url.length()+2);
 	sb.append(DELIMITER);
 	sb.append(url);
 	sb.append(DELIMITER);
-	nameBytes = (sb.toString().getBytes());
+	String nameStr = sb.toString();
+	nameBytes = (nameStr.getBytes());
 	nameIdx = 0;
+	log.debug("got new name to hash: "+nameStr);
       }
       int bytesRemaining = nameBytes.length - nameIdx;
       int len = 
@@ -78,13 +81,16 @@ public class GenericContentHasher extends GenericHasher {
       digest.update(nameBytes, nameIdx, len);
       nameIdx += len;
       if (nameIdx >= nameBytes.length) {
+	log.debug("done hashing name: "+cu);
 	hashState = HASHING_CONTENT;
 	nameBytes = null;
       }
       totalHashed += len;
     }
     if(hashState == HASHING_CONTENT) {
+      log.debug("hashing content");
       if(is == null) {
+	log.debug("opening "+cu+" for hashing");
 	is = cu.openForReading();
       }
       byte[] bytes = new byte[numBytes - totalHashed];
@@ -94,6 +100,7 @@ public class GenericContentHasher extends GenericHasher {
       }
       digest.update(bytes, 0, bytesHashed);
       if (bytesHashed < bytes.length) {
+	log.debug("done hashing content: "+cu);
 	hashState = HASHING_NAME;
 	shouldGetNextElement = true;
 	is = null;
