@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.7 2003-03-04 01:02:05 aalto Exp $
+ * $Id: TestDeadline.java,v 1.8 2003-03-21 07:30:25 tal Exp $
  */
 
 /*
@@ -94,6 +94,36 @@ public class TestDeadline extends LockssTestCase {
     assertFalse(p1.before(p1));
     assertTrue(p1.before(p2));
     assertFalse(p2.before(p1));
+  }
+
+  public void testNever() {
+    Deadline never = Deadline.NEVER;
+    try {
+      never.expire();
+      fail("Constant deadline allowed modification");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      never.expireIn(20);
+      fail("Constant deadline allowed modification");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      never.expireAt(40);
+      fail("Constant deadline allowed modification");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      never.later(45);
+      fail("Constant deadline allowed modification");
+    } catch (UnsupportedOperationException e) {
+    }
+    try {
+      never.sooner(45);
+      fail("Constant deadline allowed modification");
+    } catch (UnsupportedOperationException e) {
+    }
+    assertFalse(never.expired());
   }
 
   public void testSleep() {

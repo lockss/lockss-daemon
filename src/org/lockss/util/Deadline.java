@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.16 2003-03-05 22:55:28 aalto Exp $
+ * $Id: Deadline.java,v 1.17 2003-03-21 07:30:25 tal Exp $
  */
 
 /*
@@ -38,7 +38,8 @@ import java.text.*;
  */
 public class Deadline implements Comparable {
   /** A long time from now (but not really never). */
-  public static final Deadline NEVER = new Deadline(Long.MAX_VALUE);
+  public static final Deadline NEVER =
+    new Deadline(new ConstantDate(TimeBase.NEVER));
 
   protected static Logger log = Logger.getLogger("Deadline");
 
