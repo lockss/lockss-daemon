@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.1 2002-08-31 06:58:16 tal Exp $
+ * $Id: TestFileUtil.java,v 1.2 2002-10-25 21:46:55 tal Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.test.*;
  * test class for org.lockss.util.TestFileUtil
  */
 
-public class TestFileUtil extends TestCase {
+public class TestFileUtil extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.test.FileUtil.class
   };
@@ -50,9 +50,6 @@ public class TestFileUtil extends TestCase {
 
   public TestFileUtil(String msg){
     super(msg);
-  }
-
-  public void setUp(){
   }
 
   public void testTempFile() throws IOException {
@@ -82,5 +79,39 @@ public class TestFileUtil extends TestCase {
     assertEquals(testStr, res);
   }
 
+  public void testTempDir() throws IOException {
+    try {
+      File dir = FileUtil.createTempDir("pre", "suff", new File("/nosuchdir"));
+      fail("Shouldn't be able to create temp dir in /nosuchdir");
+    } catch (IOException e) {
+    }
+    File dir = FileUtil.createTempDir("pre", "suff");
+    assertTrue(dir.exists());
+    assertTrue(dir.isDirectory());
+    assertEquals(0, dir.listFiles().length);
+    File f = new File(dir, "foo");
+    assertTrue(!f.exists());
+    assertTrue(f.createNewFile());
+    assertTrue(f.exists());
+    assertEquals(1, dir.listFiles().length);
+    assertEquals("foo", dir.listFiles()[0].getName());
+    assertTrue(f.delete());
+    assertEquals(0, dir.listFiles().length);
+    assertTrue(dir.delete());
+    assertTrue(!dir.exists());
+  }
+
+  public void testDelTree() throws IOException {
+    File dir = FileUtil.createTempDir("deltree", null);
+    File d1 = new File(dir, "foo");
+    assertTrue(d1.mkdir());
+    File d2 = new File(d1, "bar");
+    assertTrue(d2.mkdir());
+    assertTrue(new File(dir, "f1").createNewFile());
+    assertTrue(new File(d1, "d1f1").createNewFile());
+    assertTrue(new File(d2, "d2f1").createNewFile());
+    assertTrue(!dir.delete());
+    assertTrue(FileUtil.delTree(dir));
+  }
 }
 
