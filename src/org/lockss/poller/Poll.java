@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.13 2002-11-20 21:26:58 claire Exp $
+* $Id: Poll.java,v 1.14 2002-11-21 04:53:53 claire Exp $
  */
 
 /*
@@ -78,13 +78,11 @@ public abstract class Poll {
   Deadline m_voteTime;    // when to vote
   Deadline m_deadline;    // when election is over
 
-  LcapIdentity m_caller;       // who called the poll
-  boolean m_voted;         // true if we've voted
+  LcapIdentity m_caller;   // who called the poll
   int m_replyOpcode = -1;  // opcode used to reply to poll
   long m_hashTime;         // an estimate of the time it will take to hash
   int m_counting;          // the number of polls currently active
   long m_createTime;       // poll creation time
-  boolean m_voteChecked;   // have we voted on this specific message????
   String m_key;            // the string we use to store this poll
 
   /**
@@ -109,12 +107,9 @@ public abstract class Poll {
     m_challenge = msg.getChallenge();
     m_verifier = PollManager.makeVerifier();
     m_caller = msg.getOriginID();
-    m_voteChecked = false;
-    m_voted = false;
     m_key = PollManager.makeKey(m_challenge);
 
   }
-
 
 
   /**
@@ -131,6 +126,7 @@ public abstract class Poll {
     return sb.toString();
   }
 
+  abstract void receiveMessage(LcapMessage msg);
 
   /**
    * schedule the hash for this poll.
@@ -264,9 +260,6 @@ public abstract class Poll {
     }
   }
 
-  abstract void receiveMessage(LcapMessage msg);
-
-
 
   /**
    * start the poll.
@@ -281,13 +274,12 @@ public abstract class Poll {
   }
 
   /**
-   * cast a vote in the current poll
+   * cast our vote in the current poll
    */
   void voteInPoll() {
     //we only vote if we don't already have a quorum
     if((m_agree - m_disagree) <= m_quorum) {
       vote();
-      m_voted = true;
     }
   }
 
@@ -320,6 +312,7 @@ public abstract class Poll {
   void stopVote() {
     m_counting--;
   }
+
 
 
   /**

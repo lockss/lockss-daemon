@@ -1,3 +1,35 @@
+/*
+* $Id: PollManager.java,v 1.6 2002-11-21 04:53:53 claire Exp $
+ */
+
+/*
+
+Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.poller;
 
 import java.io.*;
@@ -343,7 +375,7 @@ public class PollManager {
    * @return the array of bytes representing the verifier
    */
   static byte[] makeVerifier() {
-    byte[] s_bytes = generateSecret();
+    byte[] s_bytes = generateRandomBytes();
     byte[] v_bytes = generateVerifier(s_bytes);
     if(v_bytes != null) {
       rememberVerifier(v_bytes, s_bytes);
@@ -369,10 +401,10 @@ public class PollManager {
   }
 
   /**
-   * generate a random array of bytes which constitute a secret
+   * generate a random array of 20 bytes
    * @return the array of bytes
    */
-  static byte[] generateSecret() {
+  static byte[] generateRandomBytes() {
     byte[] secret = new byte[20];
     theRandom.nextBytes(secret);
     return secret;
@@ -385,14 +417,9 @@ public class PollManager {
    */
   static byte[] generateVerifier(byte[] secret) {
     byte[] verifier = null;
-
-    try {
-      MessageDigest hasher = MessageDigest.getInstance(HASH_ALGORITHM);
-      hasher.update(secret, 0, secret.length);
-      verifier = hasher.digest();
-    }
-    catch (NoSuchAlgorithmException ex) {
-    }
+    MessageDigest hasher = getHasher();
+    hasher.update(secret, 0, secret.length);
+    verifier = hasher.digest();
 
     return verifier;
   }
