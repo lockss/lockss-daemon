@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.19 2003-03-12 02:43:29 aalto Exp $
+* $Id: IdentityManager.java,v 1.20 2003-04-02 01:41:01 tal Exp $
  */
 
 /*
@@ -31,27 +31,17 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.protocol;
 
-import org.lockss.daemon.Configuration;
-import java.util.HashMap;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import org.lockss.util.Logger;
-import java.util.Random;
-import java.io.File;
-import org.exolab.castor.xml.Unmarshaller;
-import org.exolab.castor.xml.Marshaller;
-import java.io.FileWriter;
-import java.io.FileReader;
-import java.util.List;
-import java.util.Iterator;
-import java.util.Collection;
-import java.util.ArrayList;
-import org.exolab.castor.mapping.Mapping;
-import org.exolab.castor.mapping.*;
 import java.io.*;
+import java.net.*;
+import java.util.*;
+import org.lockss.daemon.*;
+import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.poller.Vote;
-import java.net.URL;
+import org.exolab.castor.xml.Unmarshaller;
+import org.exolab.castor.xml.Marshaller;
+import org.exolab.castor.mapping.Mapping;
+import org.exolab.castor.mapping.*;
 
 /**
  * <p>Title: </p>
@@ -62,21 +52,23 @@ import java.net.URL;
  * @version 1.0
  */
 
-public class IdentityManager implements LockssManager {
+public class IdentityManager extends BaseLockssManager {
 
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
-  static final String PARAM_MAX_DELTA = Configuration.PREFIX + "id.maxReputationDelta";
-  static final String PARAM_AGREE_DELTA = Configuration.PREFIX + "id.agreeDelta";
-  static final String PARAM_DISAGREE_DELTA = Configuration.PREFIX + "id.disagreeDelta";
-  static final String PARAM_CALL_INTERNAL = Configuration.PREFIX + "id.callInternalDelta";
-  static final String PARAM_SPOOF_DETECTED = Configuration.PREFIX + "id.spoofDetected";
-  static final String PARAM_REPLAY_DETECTED = Configuration.PREFIX + "id.replayDetected";
-  static final String PARAM_ATTACK_DETECTED = Configuration.PREFIX + "id.attackDetected";
-  static final String PARAM_VOTE_NOTVERIFIED = Configuration.PREFIX + "id.voteNotVerified ";
-  static final String PARAM_VOTE_VERIFIED = Configuration.PREFIX + "id.voteVerified";
-  static final String PARAM_VOTE_DISOWNED = Configuration.PREFIX + "id.voteDisowned";
 
-  static final String PARAM_IDDB_DIR = Configuration.PREFIX + "id.database.dir";
+  static final String PREFIX = Configuration.PREFIX + "id.";
+  static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";
+  static final String PARAM_AGREE_DELTA = PREFIX + "agreeDelta";
+  static final String PARAM_DISAGREE_DELTA = PREFIX + "disagreeDelta";
+  static final String PARAM_CALL_INTERNAL = PREFIX + "callInternalDelta";
+  static final String PARAM_SPOOF_DETECTED = PREFIX + "spoofDetected";
+  static final String PARAM_REPLAY_DETECTED = PREFIX + "replayDetected";
+  static final String PARAM_ATTACK_DETECTED = PREFIX + "attackDetected";
+  static final String PARAM_VOTE_NOTVERIFIED = PREFIX + "voteNotVerified ";
+  static final String PARAM_VOTE_VERIFIED = PREFIX + "voteVerified";
+  static final String PARAM_VOTE_DISOWNED = PREFIX + "voteDisowned";
+
+  static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
   static final String IDDB_FILENAME = "iddb.xml";
   static final String IDDB_MAP_FILENAME = "idmapping.xml";
@@ -93,48 +85,31 @@ public class IdentityManager implements LockssManager {
   public static final int VOTE_VERIFIED = 8;
   public static final int VOTE_DISOWNED = 9;
 
-  int[] reputationDeltas;
-
-
   static final int INITIAL_REPUTATION = 500;
   static final int REPUTATION_NUMERATOR = 1000;
 
   static Logger theLog=Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
-  LcapIdentity theLocalIdentity = null;
+
   static String localIdentityStr = null;
+
+  int[] reputationDeltas = new int[10];
+
+  LcapIdentity theLocalIdentity = null;
   Mapping mapping = null;
 
   HashMap theIdentities = new HashMap(); // all known identities
 
-  private static IdentityManager theManager = null;
-  private static LockssDaemon theDaemon = null;
-
   public IdentityManager() { }
 
   /**
-   * init the plugin manager.
-   * @param daemon the LockssDaemon instance
-   * @throws LockssDaemonException if we already instantiated this manager
-   * @see org.lockss.app.LockssManager#initService(LockssDaemon daemon)
-   */
-  public void initService(LockssDaemon daemon) throws LockssDaemonException {
-    if(theManager == null) {
-      theDaemon = daemon;
-      theManager = this;
-      configure();
-      reloadIdentities();
-    }
-    else {
-      throw new LockssDaemonException("Multiple Instantiation.");
-    }
-  }
-
-  /**
-   * start the plugin manager.
+   * start the identity manager.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
+    super.startService();
+    registerDefaultConfigCallback();
+    reloadIdentities();
   }
 
   /**
@@ -147,11 +122,8 @@ public class IdentityManager implements LockssManager {
     }
     catch (ProtocolException ex) {
     }
-
-    theManager = null;
+    super.stopService();
   }
-
-
 
   /**
    * public constructor for the creation of an Identity object
@@ -365,7 +337,6 @@ public class IdentityManager implements LockssManager {
   }
 
 
-
   Mapping getMapping() {
 
     if (mapping==null) {
@@ -386,29 +357,28 @@ public class IdentityManager implements LockssManager {
     return mapping;
   }
 
-  void configure() {
-    reputationDeltas = new int[10];
-
+  protected void setConfig(Configuration config, Configuration oldConfig,
+			   Set changedKeys) {
     reputationDeltas[MAX_DELTA] =
-        Configuration.getIntParam(PARAM_MAX_DELTA, 100);
+        config.getInt(PARAM_MAX_DELTA, 100);
     reputationDeltas[AGREE_VOTE] =
-        Configuration.getIntParam(PARAM_AGREE_DELTA, 100);
+        config.getInt(PARAM_AGREE_DELTA, 100);
     reputationDeltas[DISAGREE_VOTE] =
-        Configuration.getIntParam(PARAM_DISAGREE_DELTA, -150);
+        config.getInt(PARAM_DISAGREE_DELTA, -150);
     reputationDeltas[CALL_INTERNAL] =
-        Configuration.getIntParam(PARAM_CALL_INTERNAL, 100);
+        config.getInt(PARAM_CALL_INTERNAL, 100);
     reputationDeltas[SPOOF_DETECTED] =
-        Configuration.getIntParam(PARAM_SPOOF_DETECTED, -30);
+        config.getInt(PARAM_SPOOF_DETECTED, -30);
     reputationDeltas[REPLAY_DETECTED] =
-        Configuration.getIntParam(PARAM_REPLAY_DETECTED, -20);
+        config.getInt(PARAM_REPLAY_DETECTED, -20);
     reputationDeltas[ATTACK_DETECTED] =
-        Configuration.getIntParam(PARAM_ATTACK_DETECTED, -500);
+        config.getInt(PARAM_ATTACK_DETECTED, -500);
     reputationDeltas[VOTE_NOTVERIFIED] =
-        Configuration.getIntParam(PARAM_VOTE_NOTVERIFIED, -30);
+        config.getInt(PARAM_VOTE_NOTVERIFIED, -30);
     reputationDeltas[VOTE_VERIFIED] =
-        Configuration.getIntParam(PARAM_VOTE_VERIFIED, 40);
+        config.getInt(PARAM_VOTE_VERIFIED, 40);
     reputationDeltas[VOTE_DISOWNED] =
-        Configuration.getIntParam(PARAM_VOTE_DISOWNED, -400);
+        config.getInt(PARAM_VOTE_DISOWNED, -400);
   }
 
 }
