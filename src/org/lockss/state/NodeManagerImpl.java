@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.155 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.156 2003-10-07 22:08:37 eaalto Exp $
  */
 
 /*
@@ -306,7 +306,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       // normal poll
 
       // set states correctly
-      logger.debug3("Prev node state: "+nodeState.getStateString());
+      logger.debug2("Prev node state: "+nodeState.getStateString());
       switch (nodeState.getState()) {
         case NodeState.INITIAL:
         case NodeState.OK:
@@ -369,7 +369,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
                   nodeState.getCachedUrlSet().getUrl() + " " +
                   pollState.getLwrBound() + "-" +
                   pollState.getUprBound() + "'");
-    logger.debug3("New node state: "+nodeState.getStateString());
+    logger.debug2("New node state: "+nodeState.getStateString());
   }
 
   public void updatePollResults(CachedUrlSet cus, Tallier results) {
@@ -430,9 +430,16 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     if (!isRangedPoll) {
       if (!checkValidStatesForResults(pollState, nodeState,
                                       results.getCachedUrlSet().getSpec())) {
+        StringBuffer buffer = new StringBuffer();
+        if (results.getCachedUrlSet().getSpec().isSingleNode()) {
+          buffer.append("Single Node ");
+        }
+        buffer.append(pollState.getTypeString());
+        buffer.append(" Poll, ");
+        buffer.append(pollState.getStatusString());
         logger.error("Invalid node state for poll state: " +
                      nodeState.getStateString() + " for " +
-                     pollState.getTypeString());
+                     buffer.toString());
       }
     }
 
@@ -705,10 +712,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
           case NodeState.SNCUSS_POLL_RUNNING:
           case NodeState.SNCUSS_POLL_REPLAYING:
             if (results.isMyPoll()) {
-              nodeState.setState(
-                  NodeState.POSSIBLE_DAMAGE_BELOW);
-            }
-            else {
+              nodeState.setState(NodeState.POSSIBLE_DAMAGE_BELOW);
+            } else {
               // not mine, so done
               nodeState.setState(NodeState.OK);
             }
@@ -846,8 +851,11 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   boolean checkCurrentState(PollState lastOrCurrentPoll, Tallier results,
                             NodeState nodeState, boolean reportOnly)
       throws IOException {
-    logger.debug2("Checking node: "+nodeState.getCachedUrlSet().getUrl());
-    logger.debug2("State: "+nodeState.getStateString());
+    // only log when in treewalk (once) or updating results
+    if ((reportOnly) || (results!=null)) {
+      logger.debug2("Checking node: " + nodeState.getCachedUrlSet().getUrl());
+      logger.debug2("State: " + nodeState.getStateString());
+    }
     switch (nodeState.getState()) {
       case NodeState.NEEDS_POLL:
       case NodeState.NEEDS_REPLAY_POLL:
