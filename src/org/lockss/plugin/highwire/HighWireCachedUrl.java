@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCachedUrl.java,v 1.6.2.2 2003-09-08 23:51:10 troberts Exp $
+ * $Id: HighWireCachedUrl.java,v 1.6.2.3 2003-09-12 23:08:50 troberts Exp $
  */
 
 /*
@@ -45,6 +45,9 @@ import org.lockss.plugin.base.*;
 import org.lockss.plugin.*;
 
 public class HighWireCachedUrl extends GenericFileCachedUrl {
+  private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
+    Configuration.PREFIX+".HighWireCachedUrl.filterHashStream";
+
   public HighWireCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
   } 
@@ -56,25 +59,27 @@ public class HighWireCachedUrl extends GenericFileCachedUrl {
      * 2)Need to have a filter that just removes a fixed string, rather than
      *  tags
      */
+    
+    if (Configuration.getBooleanParam(PARAM_SHOULD_FILTER_HASH_STREAM, true)) {
+      logger.debug3("Filtering on, returning filtered stream");
+      Properties props = getProperties();
+      if ("text/html".equals(props.getProperty("content-type"))) {
+	logger.debug2("Filtering "+url);
+	List tagList =
+	  ListUtil.list(
+			new HtmlTagFilter.TagPair("<script", "</script>", true),
+			new HtmlTagFilter.TagPair("<table", "</table>", true),
+			new HtmlTagFilter.TagPair("This article has been cited by",
+						  " other articles:", true),
+			new HtmlTagFilter.TagPair("[Medline", "]", true),
+			new HtmlTagFilter.TagPair("<", ">")
+			);
+	
 
-    logger.debug3("Filtering on, returning filtered stream");
-    Properties props = getProperties();
-    if ("text/html".equals(props.getProperty("content-type"))) {
-      logger.debug2("Filtering "+url);
-      List tagList =
-	ListUtil.list(
-		      new HtmlTagFilter.TagPair("<script", "</script>", true),
-		      new HtmlTagFilter.TagPair("<table", "</table>", true),
-		      new HtmlTagFilter.TagPair("This article has been cited by",
-						" other articles:", true),
-		      new HtmlTagFilter.TagPair("[Medline", "]", true),
-		      new HtmlTagFilter.TagPair("<", ">")
-		      );
-
-
-      Reader filteredReader =
-	HtmlTagFilter.makeNestedFilter(getReader(), tagList);
-      return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+	Reader filteredReader =
+	  HtmlTagFilter.makeNestedFilter(getReader(), tagList);
+	return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+      }
     }
     logger.debug2("Not filtering "+url);
     return openForReading();
