@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.7 2003-03-31 23:31:29 claire Exp $
+ * $Id: MockNodeManager.java,v 1.8 2003-04-02 02:23:31 aalto Exp $
  */
 
 /*
@@ -112,12 +112,17 @@ public class MockNodeManager implements NodeManager {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-
-  public void startTreeWalk() {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
   public void newContentCrawlFinished() {
     aus.newCrawlFinished();
   }
+
+  public void forceTreeWalk() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public void forceTopLevelPoll() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+
 }
