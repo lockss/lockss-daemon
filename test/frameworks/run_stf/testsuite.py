@@ -55,8 +55,9 @@ default 'testsuite.props' in the current working directory:
 
 # Global constants
 propFile = './testsuite.props'
-curFramework = None
+frameworkList = []
 config = loadConfig(propFile)
+deleteAfterSuccess = config.get('deleteAfterSuccess', True)
 
 ##
 ## Super class for all LOCKSS daemon test cases.
@@ -65,7 +66,6 @@ class LockssTestCase(unittest.TestCase):
     def __init__(self):
         unittest.TestCase.__init__(self)
 
-        self.deleteAfterSuccess = config.get('deleteAfterSuccess', False)
         self.delayShutdown = config.get('delayShutdown', False)
         self.timeout = int(config.get('timeout', 60 * 45))
 
@@ -95,8 +95,8 @@ class LockssTestCase(unittest.TestCase):
 
         ## global ('static') reference to the current framework, so we
         ## can clean up after a user interruption
-        global curFramework
-        curFramework = self.framework
+        global frameworkList
+        frameworkList.append(self.framework)
 
         ##
         ## Start the framework.
@@ -119,22 +119,30 @@ class LockssTestCase(unittest.TestCase):
 
 
     def tearDown(self):
-        log("Before...")
-        if self.failureException:
-            log("Test failed.  Error: %s " % self.failureException)
-        log("After...")
-            
         if self.delayShutdown:
             raw_input(">>> Delaying shutdown.  Press any key to continue...")
 
         self.framework.stop()
         self.failIf(self.framework.isRunning,
                     'Framework did not stop.')
-        if self.deleteAfterSuccess and not self.failureException:
-            self.framework.clean()
 
         unittest.TestCase.tearDown(self)
 
+##
+## Sanity check self-test cases.  Please ignore these.
+##
+
+class SucceedingTestTestCase(LockssTestCase):
+    def runTest(self):
+        """ Test case that succeeds immediately after daemons start. """
+        log("Succeeding immediately.")
+        return
+
+class FailingTestTestCase(LockssTestCase):
+    def runTest(self):
+        """ Test case that fails immediately after daemons start. """
+        log("Failing immediately.")
+        self.fail("Failed on purpose.")
 
 ##
 ## Ensure caches can recover from simple file damage.
@@ -758,11 +766,40 @@ def randomTests():
     suite.addTest(RandomizedExtraFileTestCase())
     return suite
 
+def succeedingTests():
+    suite = unittest.TestSuite()
+    suite.addTest(SucceedingTestTestCase())
+    return suite
+
+def failingTests():
+    suite = unittest.TestSuite()
+    suite.addTest(FailingTestTestCase())
+    return suite
+
 if __name__ == "__main__":
     try:
         unittest.main()
-        sys.exit(0)
-    except Exception:
-        if curFramework and curFramework.isRunning:
-            curFramework.stop()
+    except SystemExit, e:
+        # unittest.main() is very unfortunate here.  It does a
+        # sys.exit (which raises SystemExit), instead of letting you
+        # clean up after it in the try: The SystemExit exception has
+        # one attribute, 'code', which is either True if an error
+        # occured while running the tests, or False if the tests ran
+        # successfully.
+
+        for fw in frameworkList:
+            if fw.isRunning: fw.stop()
+
+        if e.code:
+            sys.exit(1)
+        else:
+            if deleteAfterSuccess:
+                for fw in frameworkList:
+                    fw.clean()
+
+            sys.exit(0)
+
+    except Exception, e:
+        # Unhandled exception occured.
+        log.error("%s" % e)
         sys.exit(1)
