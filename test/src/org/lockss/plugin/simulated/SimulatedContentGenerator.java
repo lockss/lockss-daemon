@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.3 2002-11-25 22:01:25 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.4 2002-12-03 23:07:06 aalto Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class SimulatedContentGenerator {
   public SimulatedContentGenerator(String rootPath) {
     contentRootParent = rootPath;
     if (contentRootParent.length()>0 &&
-        contentRootParent.charAt(contentRootParent.length()-1)!=File.separatorChar) {
+        !contentRootParent.endsWith(File.separator)) {
       contentRootParent += File.separator;
     }
     contentRoot = contentRootParent + ROOT_NAME;
