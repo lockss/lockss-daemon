@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.1 2003-07-13 20:53:48 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.2 2003-07-17 23:38:56 tlipkis Exp $
  */
 
 /*
@@ -59,6 +59,17 @@ public class TestProxyInfo extends LockssTestCase {
     String h = "1.3.4.22";
     Properties p = new Properties();
     p.put(IdentityManager.PARAM_LOCAL_IP, h);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(h, new ProxyInfo().getProxyHost());
+    assertEquals("foo", new ProxyInfo("foo").getProxyHost());
+  }
+
+  // platform param should supersede local ip
+  public void testGetProxyHostFromPlatform() {
+    String h = "fq.dn.org";
+    Properties p = new Properties();
+    p.put(ConfigManager.PARAM_PLATFORM_FQDN, h);
+    p.put(IdentityManager.PARAM_LOCAL_IP, "superseded.by.platform");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     assertEquals(h, new ProxyInfo().getProxyHost());
     assertEquals("foo", new ProxyInfo("foo").getProxyHost());

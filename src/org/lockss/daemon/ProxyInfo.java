@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.1 2003-07-13 20:53:48 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.2 2003-07-17 23:38:57 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,10 @@ public class ProxyInfo {
    */
   String getProxyHost() {
     if (proxyHost == null) {
-      proxyHost = Configuration.getParam(IdentityManager.PARAM_LOCAL_IP);
+      proxyHost =
+	Configuration.getParam(ConfigManager.PARAM_PLATFORM_FQDN,
+			       Configuration.getParam(IdentityManager.
+						      PARAM_LOCAL_IP));
     }
     return proxyHost;
   }
