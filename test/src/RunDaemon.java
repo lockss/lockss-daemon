@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.30 2003-03-15 00:56:19 tal Exp $
+ * $Id: RunDaemon.java,v 1.31 2003-03-26 23:04:32 troberts Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class RunDaemon
       LockssRepositoryServiceImpl.PARAM_CACHE_LOCATION;
 
   static final String PARAM_REG_SIMUL_STATUS_ACCESSOR = 
-    Configuration.PREFIX + "simulated_status_accessor.should_register";
+    Configuration.PREFIX + "shouldRegisterSimSA";
   
   static final String PARAM_CALL_POLL = Configuration.PREFIX + "test.poll";
   static final String PARAM_RUN_TREEWALK = Configuration.PREFIX + "test.treewalk";
