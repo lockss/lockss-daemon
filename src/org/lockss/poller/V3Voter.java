@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.9 2004-10-04 23:06:21 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.10 2004-10-05 00:37:24 dshr Exp $
  */
 
 /*
@@ -261,6 +261,8 @@ public class V3Voter extends V3Poll {
       log.warning("could not schedule effort proof " + vote.toString() +
 		  " for " + msg.toString());
       m_state = STATE_FINALIZING;
+      m_pollstate = ERR_IO; // XXX choose better
+      stopPoll();
     }
   }
 
@@ -347,9 +349,8 @@ public class V3Voter extends V3Poll {
 	log.debug("PollAckEffortProofCallback: " + ((String) cookie) +
 		  " threw " + e);
 	m_state = STATE_FINALIZING;
-	if (m_pollstate != PS_COMPLETE) {
-	  stopPoll();
-	}
+	m_pollstate = ERR_IO; // XXX choose better
+	stopPoll();
       } else {
 	log.debug("PollAckEffortProofCallback: " + ((String) cookie));
 	m_state = STATE_WAITING_POLL_PROOF;
@@ -369,6 +370,9 @@ public class V3Voter extends V3Poll {
 				     Exception e) {
       if (e != null) {
 	log.debug("Poll effort verification threw: " + e);
+	m_pollstate = ERR_IO; // XXX choose better
+	m_state = STATE_FINALIZING;
+	stopPoll();
 	return;
       }
       if (!ep.isVerified()) {
@@ -418,9 +422,8 @@ public class V3Voter extends V3Poll {
 	log.debug("VoteGenerationCallback: " + ((String) cookie) +
 		  " threw " + e);
 	m_state = STATE_FINALIZING;
-	if (m_pollstate != PS_COMPLETE) {
-	  stopPoll();
-	}
+	m_pollstate = ERR_IO; // XXX choose better
+	stopPoll();
       } else {
 	log.debug("VoteGenerationCallback: " + ((String) cookie));
 	m_state = STATE_WAITING_REPAIR_REQ;

@@ -1,5 +1,5 @@
 /*
- * $Id: MockEffortService.java,v 1.1.2.4 2004-10-04 21:55:06 dshr Exp $
+ * $Id: MockEffortService.java,v 1.1.2.5 2004-10-05 00:37:24 dshr Exp $
  */
 
 /*
@@ -134,12 +134,12 @@ public class MockEffortService extends BaseLockssDaemonManager
     final Proof ep = effortProof;
     final ProofCallback cb = callback;
     final Deadline dl = timer;
+    final Exception ex = myProofException;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
 	  log.debug("Effort generation callback for " + ((String) tqCookie));
-	  cb.generationFinished(ep, dl, (Serializable)tqCookie,
-				myProofException);
+	  cb.generationFinished(ep, dl, (Serializable)tqCookie, ex);
 	}
       };
     TimerQueue.schedule(Deadline.in(proofDuration), tqcb, cookie);
@@ -168,15 +168,13 @@ public class MockEffortService extends BaseLockssDaemonManager
     final Proof ep = effortProof;
     final ProofCallback cb = callback;
     final Deadline dl = timer;
+    final Exception ex = myProofException;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
 	  log.debug("Effort callback for " + ((String) tqCookie) + " with " +
 		    dl.getRemainingTime() + " to go");
-	  cb.verificationFinished(ep,
-				  dl,
-				  (Serializable)tqCookie,
-				  myProofException);
+	  cb.verificationFinished(ep, dl, (Serializable)tqCookie, ex);
 	}
       };
     TimerQueue.schedule(Deadline.in(proofDuration), tqcb, cookie);
@@ -216,12 +214,12 @@ public class MockEffortService extends BaseLockssDaemonManager
     final Vote vote = voteSpec;
     final VoteCallback cb = callback;
     final Deadline dl = timer;
+    final Exception ex = myProofException;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
 	  log.debug("Vote generation callback for " + ((String) tqCookie));
-	  cb.generationFinished(vote, dl, (Serializable)tqCookie,
-				myVoteException);
+	  cb.generationFinished(vote, dl, (Serializable)tqCookie, ex);
 	}
       };
     TimerQueue.schedule(Deadline.in(voteDuration), tqcb, cookie);
@@ -250,14 +248,12 @@ public class MockEffortService extends BaseLockssDaemonManager
     final Vote vote = voteSpec;
     final VoteCallback cb = callback;
     final Deadline dl = timer;
+    final Exception ex = myProofException;
     // XXX
     TimerQueue.Callback tqcb = new TimerQueue.Callback() {
 	public void timerExpired(Object tqCookie) {
 	  log.debug("Vote generation callback for " + ((String) tqCookie));
-	  cb.verificationFinished(vote,
-				  dl,
-				  (Serializable)tqCookie,
-				  myVoteException);
+	  cb.verificationFinished(vote, dl, (Serializable)tqCookie, ex);
 	}
       };
     TimerQueue.schedule(Deadline.in(voteDuration), tqcb, cookie);
