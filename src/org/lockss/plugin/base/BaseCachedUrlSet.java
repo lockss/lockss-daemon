@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.7 2003-09-17 06:09:59 troberts Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.8 2003-09-19 22:34:02 eaalto Exp $
  */
 
 /*
@@ -32,15 +32,38 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
+import java.io.*;
 import java.util.*;
+import java.security.*;
+import java.net.MalformedURLException;
 import org.lockss.plugin.*;
+import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.hasher.*;
+import org.lockss.repository.*;
+import org.lockss.util.*;
+import org.lockss.protocol.*;
+import org.lockss.plugin.base.*;
+import org.lockss.state.*;
+import org.lockss.poller.PollManager;
 
 /**
- * Abstract base class for CachedUrlSets.
+ * Base class for CachedUrlSets.  Utilizes the LockssRepository.
  * Plugins may extend this to get some common CachedUrlSet functionality.
  */
-public abstract class BaseCachedUrlSet implements CachedUrlSet {
+public class BaseCachedUrlSet implements CachedUrlSet {
+  private static final int BYTES_PER_MS_DEFAULT = 100;
+  static final double TIMEOUT_INCREASE = 1.5;
+
+  private Exception lastException = null;
+  private LockssDaemon theDaemon;
+  private LockssRepository repository;
+  private NodeManager nodeManager;
+  private HashService hashService;
+  protected static Logger logger = Logger.getLogger("CachedUrlSet");
+
+ // int contentNodeCount = 0;
+  long totalNodeSize = 0;
   protected ArchivalUnit au;
   protected CachedUrlSetSpec spec;
 
@@ -52,6 +75,10 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
   public BaseCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     this.spec = spec;
     this.au = owner;
+    theDaemon = owner.getPlugin().getDaemon();
+    repository = theDaemon.getLockssRepository(owner);
+    nodeManager = theDaemon.getNodeManager(owner);
+    hashService = theDaemon.getHashService();
   }
 
   /**
@@ -101,6 +128,184 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
     return CachedUrlSetNode.TYPE_CACHED_URL_SET;
   }
 
+  public boolean isLeaf() {
+    try {
+      return repository.getNode(getUrl()).isLeaf();
+    } catch (MalformedURLException mue) {
+      logger.error("Bad url in spec: " + getUrl());
+      throw new LockssRepository.RepositoryStateException("Bad url in spec: "
+                                                          +getUrl());
+    }
+  }
+
+  public Iterator flatSetIterator() {
+    if (spec.isSingleNode()) {
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
+    TreeSet flatSet = new TreeSet(new UrlComparator());
+    String prefix = spec.getUrl();
+    try {
+      RepositoryNode intNode = repository.getNode(prefix);
+      Iterator children = intNode.listNodes(spec, false);
+      while (children.hasNext()) {
+        RepositoryNode child = (RepositoryNode)children.next();
+        if (child.isLeaf()) {
+          Plugin plugin = au.getPlugin();
+          CachedUrl newUrl = plugin.makeCachedUrl(this, child.getNodeUrl());
+          flatSet.add(newUrl);
+        } else {
+          CachedUrlSetSpec rSpec =
+            new RangeCachedUrlSetSpec(child.getNodeUrl());
+          Plugin plugin = au.getPlugin();
+          CachedUrlSet newSet = plugin.makeCachedUrlSet(au, rSpec);
+          flatSet.add(newSet);
+        }
+      }
+    } catch (MalformedURLException mue) {
+      logger.error("Bad url in spec: "+prefix);
+      throw new RuntimeException("Bad url in spec: "+prefix);
+    }
+    return flatSet.iterator();
+  }
+
+  /**
+   * This returns an iterator over all nodes in the CachedUrlSet.  This
+   * includes the node itself if either it's got a RangedCachedUrlSetSpec with
+   * no range or a SingleNodeCachedUrlSetSpec
+   * @return an {@link Iterator}
+   */
+  public Iterator contentHashIterator() {
+    return new CUSIterator();
+  }
+
+  public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
+    return contentHasherFactory(this, hasher);
+  }
+
+  public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
+    return nameHasherFactory(this, hasher);
+  }
+
+  public void storeActualHashDuration(long elapsed, Exception err) {
+    //only store estimate if it was a full hash (not ranged or single node)
+    if (spec.isSingleNode() || spec.isRangeRestricted()) {
+      return;
+    }
+    // don't adjust for exceptions, except time-out exceptions
+    long currentEstimate =
+      nodeManager.getNodeState(this).getAverageHashDuration();
+    long newEst;
+
+    lastException = err;
+    if (err!=null) {
+      if (err instanceof HashService.Timeout) {
+        // timed out - guess 50% longer next time
+        if (currentEstimate > elapsed) {
+          // But if the current estimate is longer than this one took, we
+          // must have already adjusted it after this one was scheduled.
+          // Don't adjust it again, to avoid it becoming huge due to a series
+          // of timeouts
+          return;
+        }
+        newEst = (long)(elapsed * TIMEOUT_INCREASE);
+      } else {
+        // other error - don't update estimate
+        return;
+      }
+    } else {
+      //average with current estimate to minimize effect of extreme results
+      if (currentEstimate > 0) {
+        newEst = (currentEstimate + elapsed) / 2;
+      }
+      else {
+        newEst = elapsed;
+      }
+    }
+    nodeManager.hashFinished(this, newEst);
+  }
+
+  public long estimatedHashDuration() {
+    return hashService.padHashEstimate(makeHashEstimate());
+  }
+
+  private long makeHashEstimate() {
+    // if this is a single node spec, don't use standard estimation
+    if (spec.isSingleNode()) {
+      long contentSize = 0;
+      try {
+        RepositoryNode node = repository.getNode(spec.getUrl());
+        if (!node.hasContent()) {
+          return 0;
+        }
+        contentSize = node.getContentSize();
+        MessageDigest hasher = LcapMessage.getDefaultHasher();
+        CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
+        SystemMetrics metrics = theDaemon.getSystemMetrics();
+        long bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
+        if (bytesPerMs == 0) {
+          logger.warning("Couldn't estimate hash time: getting 0");
+          return contentSize / BYTES_PER_MS_DEFAULT;
+        }
+        return (contentSize / bytesPerMs);
+      } catch (Exception e) {
+        logger.error("Couldn't finish estimating hash time: " + e);
+        return contentSize / BYTES_PER_MS_DEFAULT;
+      }
+    }
+    long lastDuration = nodeManager.getNodeState(this).getAverageHashDuration();
+    if (lastDuration>0) {
+      return lastDuration;
+    } else {
+      NodeState state = nodeManager.getNodeState(this);
+      if (state!=null) {
+        lastDuration = state.getAverageHashDuration();
+        if (lastDuration>0) {
+          return lastDuration;
+        }
+      }
+      // determine total size
+      calculateNodeSize();
+      MessageDigest hasher = LcapMessage.getDefaultHasher();
+      CachedUrlSetHasher cush = contentHasherFactory(this, hasher);
+      long bytesPerMs = 0;
+      SystemMetrics metrics = theDaemon.getSystemMetrics();
+      try {
+        bytesPerMs = metrics.getBytesPerMsHashEstimate(cush, hasher);
+      } catch (IOException ie) {
+        logger.error("Couldn't finish estimating hash time: " + ie);
+        return totalNodeSize / BYTES_PER_MS_DEFAULT;
+      }
+      if (bytesPerMs == 0) {
+        logger.warning("Couldn't estimate hash time: getting 0");
+        return totalNodeSize / BYTES_PER_MS_DEFAULT;
+      }
+      lastDuration = (long) (totalNodeSize / bytesPerMs);
+      // store hash estimate
+      nodeManager.hashFinished(this, lastDuration);
+      return lastDuration;
+    }
+  }
+
+  protected CachedUrlSetHasher contentHasherFactory(CachedUrlSet owner,
+                                                    MessageDigest hasher) {
+    return new GenericContentHasher(owner, hasher);
+  }
+  protected CachedUrlSetHasher nameHasherFactory(CachedUrlSet owner,
+                                                 MessageDigest hasher) {
+    return new GenericNameHasher(owner, hasher);
+  }
+
+  void calculateNodeSize() {
+    if (totalNodeSize==0) {
+      try {
+        totalNodeSize = repository.getNode(spec.getUrl()).getTreeContentSize(spec);
+      } catch (MalformedURLException mue) {
+        // this shouldn't happen
+        logger.error("Malformed URL exception on "+spec.getUrl());
+      }
+    }
+  }
+
   /**
    * Overrides Object.hashCode().
    * Returns the hashcode of the spec.
@@ -124,6 +329,27 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
       return false;
     }
   }
+
+  private static class UrlComparator implements Comparator {
+    public int compare(Object o1, Object o2) {
+      String prefix = null;
+      String prefix2 = null;
+      if ((o1 instanceof CachedUrlSetNode)
+          && (o2 instanceof CachedUrlSetNode)) {
+        prefix = ((CachedUrlSetNode)o1).getUrl();
+        prefix2 = ((CachedUrlSetNode)o2).getUrl();
+      } else {
+        throw new IllegalStateException("Bad object in iterator: " +
+                                        o1.getClass() + "," +
+                                        o2.getClass());
+      }
+      if (prefix.equals(prefix2)) {
+        throw new UnsupportedOperationException("Comparing equal prefixes: "+prefix);
+      }
+      return prefix.compareTo(prefix2);
+    }
+  }
+
 
 /**
  * Iterator over all the elements in a CachedUrlSet

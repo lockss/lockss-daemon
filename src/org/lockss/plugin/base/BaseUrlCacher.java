@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.9 2003-09-17 06:09:59 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.10 2003-09-19 22:34:02 eaalto Exp $
  */
 
 /*
@@ -36,26 +36,26 @@ import java.io.*;
 import java.net.*;
 import java.util.Properties;
 import org.lockss.plugin.*;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
+import org.lockss.repository.*;
 
 /**
- * Abstract base class for UrlCachers.
+ * Base class for UrlCachers.  Utilizes the LockssRepository for caching, and
+ * URL connections for fetching.
  * Plugins may extend this to get some common UrlCacher functionality.
  */
-public abstract class BaseUrlCacher implements UrlCacher {
+public class BaseUrlCacher implements UrlCacher {
   protected CachedUrlSet cus;
   protected String url;
   private URLConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
+  private LockssRepository repository;
 
-  /**
-   * Must invoke this constructor in plugin subclass.
-   * @param owner the CachedUrlSet which ownes the url
-   * @param url the url string
-   */
-  protected BaseUrlCacher(CachedUrlSet owner, String url) {
+  public BaseUrlCacher(CachedUrlSet owner, String url) {
     this.cus = owner;
     this.url = url;
+    ArchivalUnit au = owner.getArchivalUnit();
+    repository = au.getPlugin().getDaemon().getLockssRepository(au);
   }
 
   /**
@@ -88,7 +88,6 @@ public abstract class BaseUrlCacher implements UrlCacher {
    * @return the owner ArchivalUnit
    */
   public ArchivalUnit getArchivalUnit() {
-    CachedUrlSet cus = getCachedUrlSet();
     return cus.getArchivalUnit();
   }
 
@@ -145,8 +144,21 @@ public abstract class BaseUrlCacher implements UrlCacher {
     }
   }
 
-  protected abstract void storeContent(InputStream input, Properties props)
-      throws IOException;
+  protected void storeContent(InputStream input, Properties headers)
+      throws IOException {
+    logger.debug3("Caching url '"+url+"'");
+    RepositoryNode leaf = repository.createNewNode(url);
+    leaf.makeNewVersion();
+
+    OutputStream os = leaf.getNewOutputStream();
+    StreamUtil.copy(input, os);
+    os.close();
+    input.close();
+
+    leaf.setNewProperties(headers);
+
+    leaf.sealNewVersion();
+  }
 
   /**
    * Gets an InputStream for this URL, using the 'lastCached' time as

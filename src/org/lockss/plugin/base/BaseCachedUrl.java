@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.3 2003-09-13 00:46:42 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.4 2003-09-19 22:34:02 eaalto Exp $
  */
 
 /*
@@ -36,26 +36,24 @@ import java.util.Properties;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.daemon.*;
+import org.lockss.repository.*;
+import java.net.MalformedURLException;
 
-/** Abstract base class for CachedUrls.
+/** Base class for CachedUrls.  Expects the LockssRepository for storage.
  * Plugins may extend this to get some common CachedUrl functionality.
  */
-public abstract class BaseCachedUrl implements CachedUrl {
+public class BaseCachedUrl implements CachedUrl {
   protected CachedUrlSet cus;
   protected String url;
   protected static Logger logger = Logger.getLogger("CachedUrl");
 
+  private LockssRepository repository;
+  private RepositoryNode leaf = null;
+
   private static final String PARAM_SHOULD_FILTER_HASH_STREAM =
     Configuration.PREFIX+".baseCachedUrl.filterHashStream";
 
-
-  /**
-   * Must invoke this constructor in plugin subclass.
-   * @param owner the CachedUrlSet owner
-   * @param url the url
-   */
-  protected BaseCachedUrl(CachedUrlSet owner, String url) {
+  public BaseCachedUrl(CachedUrlSet owner, String url) {
     this.cus = owner;
     this.url = url;
   }
@@ -111,6 +109,47 @@ public abstract class BaseCachedUrl implements CachedUrl {
       return openForReading();
     }
   }
+
+  public boolean hasContent() {
+    ensureLeafLoaded();
+    return leaf.hasContent();
+  }
+
+  public InputStream openForReading() {
+    ensureLeafLoaded();
+    return leaf.getNodeContents().input;
+  }
+
+  public Reader getReader() {
+    ensureLeafLoaded();
+    return leaf.getNodeContents().reader;
+  }
+
+  public Properties getProperties() {
+    ensureLeafLoaded();
+    return leaf.getNodeContents().props;
+  }
+
+  public byte[] getUnfilteredContentSize() {
+    ensureLeafLoaded();
+    return ByteArray.encodeLong(leaf.getContentSize());
+  }
+
+  private void ensureLeafLoaded() {
+    if (repository==null) {
+      ArchivalUnit au = getArchivalUnit();
+      repository = au.getPlugin().getDaemon().getLockssRepository(au);
+    }
+    if (leaf==null) {
+      try {
+        leaf = repository.createNewNode(url);
+      } catch (MalformedURLException mue) {
+        logger.error("Couldn't load node due to bad url: "+url);
+        throw new IllegalArgumentException("Couldn't parse url properly.");
+      }
+    }
+  }
+
   private InputStream getFilteredStream() {
     ArchivalUnit au = getArchivalUnit();
     Properties props = getProperties();
@@ -119,7 +158,7 @@ public abstract class BaseCachedUrl implements CachedUrl {
     if (fr != null) {
       return fr.createFilteredInputStream(getReader());
     } else {
-      logger.warning("No FilterRule, not filtering");
+      logger.debug("No FilterRule, not filtering");
     }
     return openForReading();
   }

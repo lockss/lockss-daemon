@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.5 2003-09-17 06:10:00 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.6 2003-09-19 22:34:02 eaalto Exp $
  */
 
 /*
@@ -33,11 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.base;
 
 import java.io.*;
-import java.util.Properties;
+import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
+import org.lockss.repository.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
@@ -46,15 +47,38 @@ import org.lockss.util.TimeBase;
  * @version 0.0
  */
 public class TestBaseUrlCacher extends LockssTestCase {
-  MockBaseUrlCacher cacher;
+  MyMockBaseUrlCacher cacher;
   MockCachedUrlSet mcus;
+  private MockArchivalUnit mau;
+  private MockLockssDaemon theDaemon;
   private int pauseBeforeFetchCounter;
+
+  private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
 
   public void setUp() throws Exception {
     super.setUp();
 
-    mcus = new MockCachedUrlSet("test url");
-    cacher = new MockBaseUrlCacher(mcus, "test url");
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    Properties props = new Properties();
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+
+    theDaemon = new MockLockssDaemon();
+    theDaemon.getHashService();
+
+    mau = new MyMockArchivalUnit();
+    mau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
+    MockPlugin plugin = new MyMockPlugin();
+    plugin.initPlugin(theDaemon);
+    plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
+    mau.setPlugin(plugin);
+
+    theDaemon.getLockssRepository(mau);
+    theDaemon.getNodeManager(mau);
+
+    mcus = new MockCachedUrlSet(TEST_URL);
+    mcus.setArchivalUnit(mau);
+    cacher = new MyMockBaseUrlCacher(mcus, TEST_URL);
   }
 
   public void tearDown() throws Exception {
@@ -65,8 +89,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testCache() throws IOException {
     pauseBeforeFetchCounter = 0;
 
-    cacher.input = new StringInputStream("test stream");
-    cacher.headers = new Properties();
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new Properties();
     cacher.cache();
     // should cache
     assertTrue(cacher.wasStored);
@@ -76,19 +100,19 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testLastModifiedCache() throws IOException {
     // add the 'cached' version
     Properties cachedProps = new Properties();
-    cachedProps.setProperty("date", ""+12345);
-    mcus.addUrl("test stream", "test url", true, true, cachedProps);
+    cachedProps.setProperty("date", "12345");
+    mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
-    cacher.input = new StringInputStream("test stream");
-    cacher.headers = new Properties();
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new Properties();
     cacher.cache();
     // shouldn't cache
     assertFalse(cacher.wasStored);
 
     TimeBase.step(5000);
-    cacher.input = new StringInputStream("test stream");
-    cacher.headers = new Properties();
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new Properties();
     cacher.cache();
     // should cache now
     assertTrue(cacher.wasStored);
@@ -99,12 +123,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testForceCache() throws IOException {
     // add the 'cached' version
     Properties cachedProps = new Properties();
-    cachedProps.setProperty("date", ""+12345);
-    mcus.addUrl("test stream", "test url", true, true, cachedProps);
+    cachedProps.setProperty("date", "12345");
+    mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
-    cacher.input = new StringInputStream("test stream");
-    cacher.headers = cachedProps;
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = cachedProps;
     // should still cache
     cacher.forceCache();
     assertTrue(cacher.wasStored);
@@ -113,8 +137,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCacheExceptions() throws IOException {
-    cacher.input = new StringInputStream("test stream");
-    cacher.headers = null;
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = null;
     try {
       cacher.cache();
       fail("Should have thrown CachingException.");
@@ -122,16 +146,35 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertFalse(cacher.wasStored);
 
     // no exceptions from null inputstream
-    cacher.input = null;
-    cacher.headers = new Properties();
+    cacher._input = null;
+    cacher._headers = new Properties();
     cacher.cache();
     // should simply skip
     assertFalse(cacher.wasStored);
 
-    cacher.input = new StringInputStream("test stream");
-    cacher.headers = new Properties();
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new Properties();
     cacher.cache();
     assertTrue(cacher.wasStored);
+  }
+
+  public void testFileCache() throws IOException {
+    cacher._input = new StringInputStream("test content");
+    Properties props = new Properties();
+    props.setProperty("test1", "value1");
+    cacher._headers = props;
+    cacher.cache();
+
+    CachedUrl url = new BaseCachedUrl(mcus, TEST_URL);
+    InputStream is = url.openForReading();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
+    StreamUtil.copy(is, baos);
+    is.close();
+    assertTrue(baos.toString().equals("test content"));
+    baos.close();
+
+    props = url.getProperties();
+    assertTrue(props.getProperty("test1").equals("value1"));
   }
 
   public static void main(String[] argv) {
@@ -139,33 +182,46 @@ public class TestBaseUrlCacher extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  private class MockBaseUrlCacher extends BaseUrlCacher {
-    InputStream input = null;
-    Properties headers = null;
-    boolean wasStored = false;
-
-    public MockBaseUrlCacher(CachedUrlSet owner, String url) {
-      super(owner, url);
+  private class MyMockPlugin extends MockPlugin {
+    public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
+                                         CachedUrlSetSpec cuss) {
+      return new BaseCachedUrlSet(owner, cuss);
     }
 
-    public ArchivalUnit getArchivalUnit() {
-      return new MyMockArchivalUnit();
+    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
+      return ((MockCachedUrlSet)owner).makeCachedUrl(url);
+    }
+
+    public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
+      return new BaseUrlCacher(owner,url);
+    }
+  }
+
+  private class MyMockBaseUrlCacher extends BaseUrlCacher {
+    InputStream _input = null;
+    Properties _headers = null;
+    boolean wasStored = false;
+
+    public MyMockBaseUrlCacher(CachedUrlSet owner, String url) {
+      super(owner, url);
     }
 
     public InputStream getUncachedInputStream(long lastCached) {
       // simple version which returns null if shouldn't fetch
       if (lastCached < TimeBase.nowMs()) {
-        return input;
+        return _input;
       } else {
         return null;
       }
     }
 
     public Properties getUncachedProperties() {
-      return headers;
+      return _headers;
     }
 
-    public void storeContent(InputStream input, Properties headers) {
+    public void storeContent(InputStream input, Properties headers)
+        throws IOException {
+      super.storeContent(input, headers);
       wasStored = true;
     }
   }
@@ -173,10 +229,6 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private class MyMockArchivalUnit extends MockArchivalUnit {
     public void pauseBeforeFetch() {
       pauseBeforeFetchCounter++;
-    }
-    
-    public Plugin getPlugin() {
-      return new MockPlugin();
     }
   }
 }
