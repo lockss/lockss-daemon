@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterRunner.java,v 1.1 2003-10-07 22:24:25 troberts Exp $
+ * $Id: TestFilterRunner.java,v 1.2 2003-10-10 22:16:14 troberts Exp $
  */
 
 /*
@@ -66,11 +66,13 @@ public class TestFilterRunner extends LockssTestCase {
     }
   }
   
-  public void testDirThrowsOnSrcOtherThanDir() 
+  public void testDirThrowsOnExistingSrcOtherThanDir() 
       throws FileNotFoundException, IOException {
     try {
+      MockFile src = new MockFile("blah");
+      src.setExists(true);
       FilterRunner.filterDirectory(new MockFilterRule(),
-				   new MockFile("blah"),
+				   src, 
 				   new MockFile("blah2"));
       fail("Calling filterSingleFile with a src file that returns false "
 	   +"on isFile() should have thrown");
@@ -91,17 +93,31 @@ public class TestFilterRunner extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
+ 
+  public void testFilterDirectoryCreatesDirIfItDoesntExist()
+      throws FileNotFoundException, IOException {
+    MockFile src = new MockFile("blah");
+    src.setIsDirectory(true);
+    src.setExists(true);
+    MockFile dest = new MockFile("blah2");
+    dest.setExists(false);
+
+    FilterRunner.filterDirectory(new MockFilterRule(), src, dest);
+    dest.assertMkdirCalled();
+  }
 
   public void testDirThrowsOnDestOtherThanDir() 
       throws FileNotFoundException, IOException {
     try {
       MockFile src = new MockFile("blah");
       src.setIsDirectory(true);
-      FilterRunner.filterDirectory(new MockFilterRule(),
-				   src,
-				   new MockFile("blah2"));
-      fail("Calling filterSingleFile with a src file that returns false "
-	   +"on isFile() should have thrown");
+      src.setExists(true);
+      MockFile dest = new MockFile("blah2");
+      dest.setExists(true);
+      dest.setIsDirectory(false);
+      FilterRunner.filterDirectory(new MockFilterRule(), src, dest);
+      fail("Calling filterSingleFile with a dest file that returns false "
+	   +"on isDirectory() should have thrown");
     } catch (IllegalArgumentException e) {
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: FilterRunner.java,v 1.5 2003-10-07 22:24:24 troberts Exp $
+ * $Id: FilterRunner.java,v 1.6 2003-10-10 22:16:14 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.crawler.*;
 import org.lockss.plugin.FilterRule;
+import org.lockss.plugin.highwire.HighWireFilterRule;
 import org.lockss.filter.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -54,9 +55,14 @@ public class FilterRunner {
       throw new IllegalArgumentException("Called with src that isn't a directory: "+srcDir);
     } else if (destDir == null) {
       throw new IllegalArgumentException("Called with null dest directory");
-    } else if (!destDir.isDirectory()) {
+    } else if (destDir.exists() && !destDir.isDirectory()) {
       throw new IllegalArgumentException("Called with dest that isn't a directory: "+destDir);
     } 
+
+    if (!destDir.exists()) {
+      destDir.mkdir();
+    }
+
     File children[] = srcDir.listFiles();
     for (int ix=0; ix<children.length; ix++) {
       if (children[ix].isFile()) {
@@ -88,14 +94,21 @@ public class FilterRunner {
       file = file.substring(file.lastIndexOf(File.separator));
       dest = new File(dest, file);
     } 
-    System.out.println("Filtering "+src+" to "+dest);
+//     System.out.println("Filtering "+src+" to "+dest);
     Reader reader = new FileReader(src);
+    dest.createNewFile();
     OutputStream os = new FileOutputStream(dest);
     StreamUtil.copy(filter.createFilteredInputStream(reader), os);
   }
 
-  public void main(String args[]) {
-    
+  public static void main(String args[]) {
+    String src = args[0];
+    String dest = args[1];
+    FilterRule filter = new HighWireFilterRule();
+    try {
+      filterDirectory(filter, new File(src), new File(dest));
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
-
 }
