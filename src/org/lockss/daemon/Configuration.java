@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.33 2003-04-04 08:38:38 tal Exp $
+ * $Id: Configuration.java,v 1.34 2003-04-07 18:37:49 tal Exp $
  */
 
 /*
@@ -253,10 +253,15 @@ public abstract class Configuration {
       try {
 	load(url);
       } catch (IOException e) {
-	// This load failed.  Fail the whole thing.
-	log.warning("Couldn't load props from " + url + ": " + e.toString());
-	reset();			// ensure config is empty
-	return false;
+	if (e instanceof FileNotFoundException &&
+	    StringUtil.endsWithIgnoreCase(url.toString(), ".opt")) {
+	  log.info("Not loading props from nonexistent optional file: " + url);
+	} else {
+	  // This load failed.  Fail the whole thing.
+	  log.warning("Couldn't load props from " + url + ": " + e.toString());
+	  reset();			// ensure config is empty
+	  return false;
+	}
       }
     }
     return true;
