@@ -49,6 +49,7 @@ public class DirectoryEntryImpl extends RepositoryEntryImpl implements Directory
       entryDir.mkdirs();
     }
     File[] children = entryDir.listFiles(new CussFileFilter(filter));
+    Arrays.sort(children, new FileComparator());
     Vector childV = new Vector();
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
@@ -62,8 +63,6 @@ public class DirectoryEntryImpl extends RepositoryEntryImpl implements Directory
         childV.addElement(new DirectoryEntryImpl(childUrl, rootLocation));
       }
     }
-    //XXX sort files
-
     return childV.iterator();
   }
 
@@ -81,6 +80,14 @@ public class DirectoryEntryImpl extends RepositoryEntryImpl implements Directory
     public boolean accept(File pathname) {
       if (spec==null) return true;
       else return spec.matches(pathname.getAbsolutePath());
+    }
+  }
+
+  private class FileComparator implements Comparator {
+    public int compare(Object o1, Object o2) {
+      if ((o1 instanceof File) && (o2 instanceof File)) {
+        return ((File)o1).compareTo((File)o2);
+      } else return -1;
     }
   }
 }

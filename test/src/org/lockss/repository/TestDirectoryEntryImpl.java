@@ -1,5 +1,5 @@
 /*
- * $Id: TestDirectoryEntryImpl.java,v 1.1 2002-10-30 00:29:25 aalto Exp $
+ * $Id: TestDirectoryEntryImpl.java,v 1.2 2002-10-30 20:00:46 aalto Exp $
  */
 
 /*
@@ -116,5 +116,40 @@ public class TestDirectoryEntryImpl extends LockssTestCase {
       }
     }
     assertTrue(count==3);
+  }
+  public void testEntrySort() {
+    String tempDirPath = "";
+    try {
+      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
+    } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
+    LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
+    LeafEntry leaf = repo.createLeafEntry("testDir/branch1/leaf1");
+    leaf.makeNewVersion();
+    leaf.closeNewVersion();
+    leaf = repo.createLeafEntry("testDir/branch2/leaf2");
+    leaf.makeNewVersion();
+    leaf.closeNewVersion();
+    leaf = repo.createLeafEntry("testDir/leaf4");
+    leaf.makeNewVersion();
+    leaf.closeNewVersion();
+    leaf = repo.createLeafEntry("testDir/leaf3");
+    leaf.makeNewVersion();
+    leaf.closeNewVersion();
+
+    DirectoryEntry dirEntry = new DirectoryEntryImpl("testDir", tempDirPath);
+    Iterator childIt = dirEntry.listEntries(null);
+    assertTrue(childIt.hasNext());
+    RepositoryEntry entry = (RepositoryEntry)childIt.next();
+    assertTrue(entry.getEntryUrl().equals("testDir/branch1"));
+    assertTrue(childIt.hasNext());
+    entry = (RepositoryEntry)childIt.next();
+    assertTrue(entry.getEntryUrl().equals("testDir/branch2"));
+    assertTrue(childIt.hasNext());
+    entry = (RepositoryEntry)childIt.next();
+    assertTrue(entry.getEntryUrl().equals("testDir/leaf3"));
+    assertTrue(childIt.hasNext());
+    entry = (RepositoryEntry)childIt.next();
+    assertTrue(entry.getEntryUrl().equals("testDir/leaf4"));
+    assertTrue(!childIt.hasNext());
   }
 }
