@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
+ * $Id: V3PollFactory.java,v 1.1.2.3 2004-10-01 15:12:05 dshr Exp $
  */
 
 /*
@@ -206,6 +206,7 @@ public class V3PollFactory implements PollFactory {
   public long calcDuration(int opcode, CachedUrlSet cus, PollManager pm) {
     long ret = -1;
     // XXX
+    ret = 1000000;
     return ret;
   }
 

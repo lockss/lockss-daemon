@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.109 2004-09-28 08:53:17 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.109.2.1 2004-10-01 15:12:04 dshr Exp $
  */
 
 /*
@@ -195,7 +195,9 @@ public class PluginManager
       Plugin plugin = (Plugin)iter.next();
       plugin.stopPlugin();
     }
-    statusSvc.unregisterStatusAccessor("LoadablePluginTable");
+    if (statusSvc != null) {
+	statusSvc.unregisterStatusAccessor("LoadablePluginTable");
+    }
     super.stopService();
   }
 

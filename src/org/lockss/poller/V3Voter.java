@@ -1,5 +1,5 @@
 /*
-* $Id: V3Voter.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
+* $Id: V3Voter.java,v 1.1.2.3 2004-10-01 15:12:05 dshr Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class V3Voter extends V3Poll {
     if (m_pollstate != PS_INITING)
       return;
     // XXX
-    if (true) {
+    if (false) {
       m_pollstate = ERR_SCHEDULE_HASH;
       log.debug("couldn't schedule our hash:" + m_deadline + ", stopping poll.");
       stopPoll();
@@ -188,6 +188,11 @@ public class V3Voter extends V3Poll {
       log.warning("Expecting a Poll but got: " + msg.toString());
       //  XXX should abort poll?
       return;
+    }
+    // XXX
+    if (true) {
+	m_state = STATE_SENDING_POLL_ACK;
+	return;
     }
     EffortService.Callback cb = new PollAckEffortCallback();
     EffortService.Proof ep = msg.getEffortProof();

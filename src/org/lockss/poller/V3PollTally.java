@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollTally.java,v 1.1.2.1 2004-09-30 01:06:16 dshr Exp $
+ * $Id: V3PollTally.java,v 1.1.2.2 2004-10-01 15:12:05 dshr Exp $
  */
 
 /*
@@ -62,6 +62,7 @@ public class V3PollTally extends PollTally {
 	  wtDisagree, quorum, hashAlgorithm);
     log.debug3("First V3PollTally constructor type " + type + " - " +
 		toString());
+    result = RESULT_POLLING;
   }
 
   V3PollTally(V3Poll owner, int type, long startTime,

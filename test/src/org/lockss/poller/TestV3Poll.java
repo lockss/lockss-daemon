@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.1 2004-10-01 01:13:50 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.2 2004-10-01 15:12:05 dshr Exp $
  */
 
 /*
@@ -101,15 +101,44 @@ public class TestV3Poll extends LockssTestCase {
       if (testV3msg[i] != null)
 	pollmanager.removePoll(testV3msg[i].getKey());
     }
+    theDaemon.getPollManager().stopService();
+    theDaemon.getPluginManager().stopService();
     super.tearDown();
   }
 
     // Tests
 
-    public void testInitialPollState() {
-	assertEquals("Poll " + testV3polls[0] + " should be in SendingPollAck",
+    public void testInitialVoterState() {
+	assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
 		     V3Voter.STATE_INITIALIZING,
 		     testV3polls[0].getPollState());
+    }
+
+    public void testVoterStateTransitions() {
+	String key = testV3polls[0].getKey();
+	assertEquals("Poll " + testV3polls[0] + " should be in Initializing",
+		     V3Voter.STATE_INITIALIZING,
+		     testV3polls[0].getPollState());
+	assertTrue("Poll " + testV3polls[0] + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	try {
+	    pollmanager.handleIncomingMessage(testV3msg[0]);
+	} catch (IOException ex) {
+	    fail("Message " + testV3msg[0].toString() + " threw " + ex);
+	}
+	assertEquals("Poll " + testV3polls[0] + " should be in SendingPollAck",
+		     V3Voter.STATE_SENDING_POLL_ACK,
+		     testV3polls[0].getPollState());
+	assertTrue("Poll " + testV3polls[0] + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
     }
 
     //  Support methods
@@ -135,10 +164,6 @@ public class TestV3Poll extends LockssTestCase {
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "false");
-    // XXX we need to disable verification of votes because the
-    // voter isn't really there
-    p.setProperty(V1Poll.PARAM_AGREE_VERIFY, "0");
-    p.setProperty(V1Poll.PARAM_DISAGREE_VERIFY, "0");
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();
     idmgr.startService();
@@ -158,6 +183,7 @@ public class TestV3Poll extends LockssTestCase {
       } catch (IdentityManager.MalformedIdentityKeyException ex) {
 	  fail("can't open test host:" + ex);
       }
+      assertTrue(testID.isLocalIdentity());
       assertFalse(testID1.isLocalIdentity());
 
   }
