@@ -1,5 +1,5 @@
 /*
- * $Id: MockInputStream.java,v 1.1 2003-02-25 22:05:01 troberts Exp $
+ * $Id: MockInputStream.java,v 1.2 2003-02-26 02:40:20 troberts Exp $
  */
 
 /*
@@ -46,6 +46,13 @@ public class MockInputStream extends InputStream {
   private int zeroInterval = 0;
   private int curInterval = 0;
 
+  /**
+   * Signals that the InputStream should reset
+   */
+  public void regenerate() {
+    is = null;
+    isClosed = false;
+  }
 
   public void setZeroInterval(int zeroInterval) {
     this.zeroInterval = zeroInterval;
