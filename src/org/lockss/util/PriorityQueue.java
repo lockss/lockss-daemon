@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.10 2003-06-20 22:34:53 claire Exp $
+ * $Id: PriorityQueue.java,v 1.11 2003-10-29 23:29:07 tlipkis Exp $
  */
 
 /*
@@ -146,7 +146,7 @@ public class PriorityQueue implements Queue {
    * in the queue more than once, the behavior is undefined.
    * @return true iff the element was present in the queue
    */
-  public boolean remove(Object obj) {
+  public synchronized boolean remove(Object obj) {
     return queue.remove(obj);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: FifoQueue.java,v 1.8 2003-06-20 22:34:53 claire Exp $
+ * $Id: FifoQueue.java,v 1.9 2003-10-29 23:29:07 tlipkis Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class FifoQueue implements Queue {
    * in the queue more than once, the behavior is undefined.
    * @return true iff the element was present in the queue
    */
-  public boolean remove(Object obj) {
+  public synchronized boolean remove(Object obj) {
     return queue.remove(obj);
   }
 
