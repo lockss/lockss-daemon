@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.1 2004-02-23 09:21:22 tlipkis Exp $
+ * $Id: CacheException.java,v 1.2 2004-03-07 08:38:57 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -40,6 +40,7 @@ import org.lockss.plugin.*;
  * errors into one of these categories, so that the generic crawler can
  * handle the error in a standardized way. */
 public class CacheException extends IOException {
+  protected static boolean defaultSuppressStackTrace = true;
 
   protected String message;
   protected Exception nestedException = null;
@@ -47,7 +48,7 @@ public class CacheException extends IOException {
   // Most of these exceptions are created at a known place (in
   // HttpResultMap) and there is no point in polluting logs with stack
   // traces.
-  protected boolean suppressStackTrace = true;
+  protected boolean suppressStackTrace = defaultSuppressStackTrace;
 
   public CacheException() {
     super();
@@ -56,6 +57,13 @@ public class CacheException extends IOException {
   public CacheException(String message) {
     super(message);
     this.message = message;
+  }
+
+  public static boolean
+    setDefaultSuppressStackTrace(boolean defaultSuppress) {
+    boolean res = defaultSuppressStackTrace;
+    defaultSuppressStackTrace = defaultSuppress;
+    return res;
   }
 
   void initMessage(String message) {
@@ -79,6 +87,8 @@ public class CacheException extends IOException {
       super.printStackTrace();
     } else if (nestedException != null) {
       nestedException.printStackTrace();
+    } else {
+      System.err.println(this);
     }
   }
 
@@ -90,6 +100,8 @@ public class CacheException extends IOException {
       super.printStackTrace(s);
     } else if (nestedException != null) {
       nestedException.printStackTrace(s);
+    } else {
+      s.println(this);
     }
   }
 
@@ -101,6 +113,8 @@ public class CacheException extends IOException {
       super.printStackTrace(s);
     } else if (nestedException != null) {
       nestedException.printStackTrace(s);
+    } else {
+      s.println(this);
     }
   }
 
