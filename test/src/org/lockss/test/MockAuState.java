@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.5 2003-03-01 02:01:23 aalto Exp $
+ * $Id: MockAuState.java,v 1.6 2003-03-03 19:34:02 troberts Exp $
  */
 
 /*
@@ -66,6 +66,9 @@ public class MockAuState extends AuState {
     lastTreeWalk = newTreeWalkTime;
   }
 
+  public void newCrawlFinished() {
+    super.newCrawlFinished();
+  }
 
 }
 
