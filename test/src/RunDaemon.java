@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.42 2004-08-02 02:59:36 tlipkis Exp $
+ * $Id: RunDaemon.java,v 1.43 2004-08-21 06:54:29 tlipkis Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class RunDaemon
 
   private void startWalk(ArchivalUnit au) {
     NodeManagerImpl nodeMgr = (NodeManagerImpl)getNodeManager(au);
-    nodeMgr.forceTreeWalk();
+//     nodeMgr.forceTreeWalk();
   }
 
   private void callPoll() {
