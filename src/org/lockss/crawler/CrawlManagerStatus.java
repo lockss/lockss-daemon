@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.10 2003-12-23 00:34:07 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.10.6.1 2004-03-22 22:27:19 troberts Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class CrawlManagerStatus implements StatusAccessor {
     "No permission from publisher";
   public static final String WINDOW_CLOSED_STRING = "Crawl window closed";
   public static final String UNKNOWN_STRING = "Unknown";
+
+  private List sortRules = null;
 
   private List colDescs =
     ListUtil.list(
@@ -183,6 +185,17 @@ public class CrawlManagerStatus implements StatusAccessor {
     String key = table.getKey();
     table.setColumnDescriptors(colDescs);
     table.setRows(getRows(key));
+
+    table.setDefaultSortRules(makeSortRules());
+  }
+
+  private List makeSortRules() {
+    if (sortRules == null) {
+      sortRules = new ArrayList(2);
+      sortRules.add(new StatusTable.SortRule(START_TIME_COL_NAME, false));
+      sortRules.add(new StatusTable.SortRule(END_TIME_COL_NAME, false));
+    }
+    return sortRules;
   }
 
   private String statusToString(int status) {
