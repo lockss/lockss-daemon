@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapSocket.java,v 1.11 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestLcapSocket.java,v 1.12 2004-01-20 18:22:49 tlipkis Exp $
  */
 
 /*
@@ -58,14 +58,15 @@ public class TestLcapSocket extends LockssTestCase {
   String testStr = "This is test data";
   byte[] testData = testStr.getBytes();
   int testPort = 1234;
-  InetAddress testAddr;
+  IPAddr testAddr;
   DatagramPacket testPacket;
 
   public void setUp() throws Exception {
     super.setUp();
-    testAddr = InetAddress.getByName("127.0.0.1");
+    testAddr = IPAddr.getByName("127.0.0.1");
     testPacket =
-      new DatagramPacket(testData, testData.length, testAddr, testPort);
+      new DatagramPacket(testData, testData.length,
+			 testAddr.getInetAddr(), testPort);
   }
 
   /** Sender sends a packet to a mock datagram socket in a while */
@@ -121,8 +122,8 @@ public class TestLcapSocket extends LockssTestCase {
   public void testMulticastReceive() throws Exception {
     Queue rcvQ = new FifoQueue();
     MockMulticastSocket mskt = new MockMulticastSocket();
-    LcapSocket.Multicast lskt = new LcapSocket.Multicast(rcvQ, mskt,
-							 (InetAddress)null);
+    LcapSocket.Multicast lskt =
+      new LcapSocket.Multicast(rcvQ, mskt, IPAddr.getByName("127.0.0.1"));
     mskt.addToReceiveQueue(testPacket);
     Interrupter intr = interruptMeIn(500);
     PrivilegedAccessor.invokeMethod(lskt, "receivePacket");

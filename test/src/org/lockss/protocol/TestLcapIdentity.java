@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.21 2003-09-16 23:31:19 eaalto Exp $
+ * $Id: TestLcapIdentity.java,v 1.22 2004-01-20 18:22:49 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestLcapIdentity extends LockssTestCase {
 
   static String fakeIdString = "127.0.0.1";
   static LcapIdentity fakeId = null;
-  InetAddress testAddress;
+  IPAddr testAddress;
   int testReputation;
   Object testIdKey;
   LcapMessage testMsg= null;
@@ -77,8 +77,8 @@ public class TestLcapIdentity extends LockssTestCase {
       setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(prop)));
     idmgr = daemon.getIdentityManager();
     try {
-      fakeId = new LcapIdentity(InetAddress.getByName(fakeIdString));
-      testAddress = InetAddress.getByName("127.0.0.1");
+      fakeId = new LcapIdentity(IPAddr.getByName(fakeIdString));
+      testAddress = IPAddr.getByName("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

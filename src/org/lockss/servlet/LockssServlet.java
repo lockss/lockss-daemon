@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.32 2003-12-17 02:06:01 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.33 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -313,7 +313,7 @@ public abstract class LockssServlet extends HttpServlet
   String getLocalIPAddr() {
     if (localAddr == null) {
       try {
-	InetAddress localHost = InetAddress.getLocalHost();
+	IPAddr localHost = IPAddr.getLocalHost();
 	localAddr = localHost.getHostAddress();
       } catch (UnknownHostException e) {
 	// shouldn't happen
@@ -342,7 +342,7 @@ public abstract class LockssServlet extends HttpServlet
       // might be the address of a NAT that we're behind.)
       String host = reqURL.getHost();
       try {
-	InetAddress localHost = InetAddress.getByName(host);
+	IPAddr localHost = IPAddr.getByName(host);
 	String ip = localHost.getHostAddress();
 	myName = getMachineName(ip);
       } catch (UnknownHostException e) {
@@ -356,7 +356,7 @@ public abstract class LockssServlet extends HttpServlet
 
   String getMachineName(String ip) {
     try {
-      InetAddress inet = InetAddress.getByName(ip);
+      IPAddr inet = IPAddr.getByName(ip);
       return inet.getHostName();
     } catch (UnknownHostException e) {
       log.warning("getMachineName", e);
@@ -367,7 +367,7 @@ public abstract class LockssServlet extends HttpServlet
   // return IP given name or IP
   String getMachineIP(String name) {
     try {
-      InetAddress inet = InetAddress.getByName(name);
+      IPAddr inet = IPAddr.getByName(name);
       return inet.getHostAddress();
     } catch (UnknownHostException e) {
       return null;

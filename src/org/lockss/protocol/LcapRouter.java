@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.28 2003-06-20 22:34:52 claire Exp $
+ * $Id: LcapRouter.java,v 1.29 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -241,8 +241,8 @@ public class LcapRouter extends BaseLockssManager {
 
   // decide where to forward incoming message
   void routeIncomingMessage(LockssReceivedDatagram dg, LcapMessage msg) {
-    InetAddress sender = dg.getSender();
-    InetAddress originator = msg.getOriginAddr();
+    IPAddr sender = dg.getSender();
+    IPAddr originator = msg.getOriginAddr();
     idEvent(originator, LcapIdentity.EVENT_ORIG, msg);
     if (!msg.isNoOp()) {
       idEvent(originator, LcapIdentity.EVENT_ORIG_OP, msg);
@@ -279,7 +279,7 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
-  void idEvent(InetAddress addr, int event, LcapMessage msg) {
+  void idEvent(IPAddr addr, int event, LcapMessage msg) {
     LcapIdentity id = idMgr.findIdentity(addr);
     if (id != null) {
       id.rememberEvent(event, msg);
@@ -334,10 +334,10 @@ public class LcapRouter extends BaseLockssManager {
    * originator may be null to disable this test.
    */
   void doUnicast(LockssDatagram dg, RateLimiter limiter,
-		 InetAddress sender, InetAddress originator) {
+		 IPAddr sender, IPAddr originator) {
     Collection partners = partnerList.getPartners();
     for (Iterator iter = partners.iterator(); iter.hasNext(); ) {
-      InetAddress part = (InetAddress)iter.next();
+      IPAddr part = (IPAddr)iter.next();
       // *** Either or both of sender and originator may be null here,
       //     so equals() will be false. ***
       if (!(part.equals(sender) || part.equals(originator))) {
@@ -363,9 +363,9 @@ public class LcapRouter extends BaseLockssManager {
     }
   }
 
-  private InetAddress localIp;
+  private IPAddr localIp;
 
-  InetAddress getLocalIdentityAddr() {
+  IPAddr getLocalIdentityAddr() {
     if (localIp == null) {
       localIp = idMgr.getLocalIdentity().getAddress();
     }

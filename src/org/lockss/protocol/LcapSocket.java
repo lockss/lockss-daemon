@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.12 2003-06-20 22:34:52 claire Exp $
+ * $Id: LcapSocket.java,v 1.13 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -201,17 +201,17 @@ public class LcapSocket {
      * @param grp The multicast group to join
      * @param port The UDP port to which to bind the socket
     */
-    public Multicast(Queue rcvQ, InetAddress grp, int port)
+    public Multicast(Queue rcvQ, IPAddr grp, int port)
 	throws IOException {
       this(rcvQ, new MulticastSocket(port), grp);
     }
 
     /** Create a Multicast receive socket that receives from the multicast
      * socket.  Intended for internal use and testing only. */
-    Multicast(Queue rcvQ, MulticastSocket sock, InetAddress grp)
+    Multicast(Queue rcvQ, MulticastSocket sock, IPAddr grp)
 	throws IOException {
       super(rcvQ, sock);
-      sock.joinGroup(grp);
+      sock.joinGroup(grp.getInetAddr());
     }
 
     /** Mark the packet as multicast, add to the queue */

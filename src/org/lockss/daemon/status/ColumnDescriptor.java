@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.3 2003-07-01 19:45:18 troberts Exp $
+ * $Id: ColumnDescriptor.java,v 1.4 2004-01-20 18:22:51 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class ColumnDescriptor {
   public static final int TYPE_STRING=4;  
   
   /**
-   * Instanceof InetAddress
+   * Instanceof IPAddr
    */
   public static final int TYPE_IP_ADDRESS=5;
 

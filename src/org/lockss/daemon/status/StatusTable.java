@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.26 2003-12-23 00:32:12 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.27 2004-01-20 18:22:51 tlipkis Exp $
  */
 
 /*
@@ -424,8 +424,7 @@ public class StatusTable {
 	
 	switch (sortRule.getColumnType()) {
 	case ColumnDescriptor.TYPE_IP_ADDRESS:
-	  returnVal = compareInetAddresses((InetAddress)valA, 
-					   (InetAddress)valB);
+	  returnVal = compareIPAddrs((IPAddr)valA, (IPAddr)valB);
 	  break;
 	case ColumnDescriptor.TYPE_INT:
 	case ColumnDescriptor.TYPE_FLOAT:
@@ -441,7 +440,7 @@ public class StatusTable {
       return returnVal;
     }
     
-    private int compareInetAddresses(InetAddress addr1, InetAddress addr2) {
+    private int compareIPAddrs(IPAddr addr1, IPAddr addr2) {
       return (addr1.getHostAddress().compareTo(addr2.getHostAddress()));
     }
 

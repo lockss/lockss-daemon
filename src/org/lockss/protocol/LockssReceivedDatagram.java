@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.8 2003-06-20 22:34:52 claire Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.9 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -63,9 +63,9 @@ public class LockssReceivedDatagram extends LockssDatagram {
     return packet;
   }
 
-  /** Return the sender's InetAddress */
-  public InetAddress getSender() {
-    return packet.getAddress();
+  /** Return the sender's IPAddr */
+  public IPAddr getSender() {
+    return new IPAddr(packet.getAddress());
   }
 
   /** Return the data portion of the received packet */

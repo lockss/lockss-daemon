@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.15 2003-12-23 00:34:06 tlipkis Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.16 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -561,13 +561,13 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"name", "Name", new Integer(ColumnDescriptor.TYPE_STRING)}
   };
  
-  public void testSortsInetAddresses() 
+  public void testSortsIPAddres() 
       throws UnknownHostException, StatusService.NoSuchTableException {
     Object[][] inetAddrRowArray = {
-      {InetAddress.getByName("127.0.0.2"), "A"},
-      {InetAddress.getByName("127.0.0.1"), "B"},
-      {InetAddress.getByName("127.0.0.4"), "C"},
-      {InetAddress.getByName("127.0.0.3"), "D"}
+      {IPAddr.getByName("127.0.0.2"), "A"},
+      {IPAddr.getByName("127.0.0.1"), "B"},
+      {IPAddr.getByName("127.0.0.4"), "C"},
+      {IPAddr.getByName("127.0.0.3"), "D"}
     };    
     String key = "key1";
     MockStatusAccessor statusAccessor = 

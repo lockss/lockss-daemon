@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.35 2004-01-13 01:09:54 eaalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.36 2004-01-20 18:22:49 tlipkis Exp $
  */
 
 /*
@@ -342,7 +342,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     LcapIdentity testID = null;
     LcapMessage testmsg = null;
     try {
-      InetAddress testAddr = InetAddress.getByName("127.0.0.1");
+      IPAddr testAddr = IPAddr.getByName("127.0.0.1");
       testID = theDaemon.getIdentityManager().findIdentity(testAddr);
     }
     catch (UnknownHostException ex) {

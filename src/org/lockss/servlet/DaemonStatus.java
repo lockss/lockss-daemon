@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.29 2004-01-03 06:24:13 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.30 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -415,7 +415,7 @@ public class DaemonStatus extends LockssServlet {
 	}
 	return dateString(d);
       case ColumnDescriptor.TYPE_IP_ADDRESS:
-	return ((InetAddress)val).getHostAddress();
+	return ((IPAddr)val).getHostAddress();
       case ColumnDescriptor.TYPE_TIME_INTERVAL:
 	long millis = ((Number)val).longValue();
 	return StringUtil.timeIntervalToString(millis);

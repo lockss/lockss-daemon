@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.53 2004-01-12 06:23:12 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.54 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -265,6 +265,7 @@ public class TreeWalkHandler {
   boolean recurseTreeWalk(CachedUrlSet cus) {
     if (activityLock.isExpired()) {
       // lost lock, so abort treewalk
+      logger.debug("Lost activity lock, aborting");
       treeWalkAborted = true;
     }
     if (treeWalkAborted) {
@@ -347,7 +348,7 @@ public class TreeWalkHandler {
     try {
       if (manager.checkCurrentState(lastHistory, null, node, true)) {
         // mark node for action
-        logger.debug3("Found necessary poll. Caching info and aborting treewalk...");
+        logger.debug2("Found necessary poll. Caching info and aborting treewalk...");
         cachedHistory = lastHistory;
         cachedNode = node;
 
@@ -368,7 +369,7 @@ public class TreeWalkHandler {
    */
   void callPollIfNecessary() {
     if (cachedNode != null) {
-      logger.debug3("Calling poll on node '" +
+      logger.debug2("Calling poll on node '" +
                     cachedNode.getCachedUrlSet().getUrl() + "'");
       try {
         manager.checkCurrentState(cachedHistory, null, cachedNode, false);
@@ -431,7 +432,7 @@ public class TreeWalkHandler {
    * Ends the treewalk process.
    */
   public void end() {
-    logger.debug3("TreeWalkHandler terminated.");
+    logger.debug2("TreeWalkHandler terminated.");
     if (treeWalkThread!=null) {
       treeWalkThread.end();
     }

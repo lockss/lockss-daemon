@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.22 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestIdentityManager.java,v 1.23 2004-01-20 18:22:49 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.protocol;
 
 import java.io.IOException;
 import java.util.*;
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import org.lockss.daemon.Configuration;
 import org.lockss.daemon.TestConfiguration;
@@ -46,7 +45,7 @@ import java.io.File;
 public class TestIdentityManager extends LockssTestCase {
   static String fakeIdString = "213.239.33.100";
   static LcapIdentity fakeId = null;
-  InetAddress testAddress;
+  IPAddr testAddress;
   int testReputation;
   Object testIdKey;
   private static String urlstr = "http://www.test.org";
@@ -73,7 +72,7 @@ public class TestIdentityManager extends LockssTestCase {
 
     try {
       fakeId = idmgr.findIdentity(LcapIdentity.stringToAddr(fakeIdString));
-      testAddress = InetAddress.getByName("127.0.0.1");
+      testAddress = IPAddr.getByName("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

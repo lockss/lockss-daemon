@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.8 2003-06-20 22:34:53 claire Exp $
+ * $Id: MailTarget.java,v 1.9 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -97,9 +97,9 @@ public class MailTarget {
 
     if (localHostName == null) {
       logger.error("Couldn't find localhost from IdentityManager; "+
-                   "attempting to look up from InetAddress");
+                   "attempting to look up from IPAddr");
       try {
-        localHostName = InetAddress.getLocalHost().getHostName();
+        localHostName = IPAddr.getLocalHost().getHostName();
       } catch (UnknownHostException ex) {
         logger.error("Couldn't determine localhost.", ex);
         throw new IllegalStateException("Couldn't determine localhost");

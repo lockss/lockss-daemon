@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.44 2003-09-26 23:50:39 eaalto Exp $
+ * $Id: LcapMessage.java,v 1.45 2004-01-20 18:22:50 tlipkis Exp $
  */
 
 /*
@@ -26,7 +26,6 @@
 
 package org.lockss.protocol;
 
-import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.util.Arrays;
@@ -97,7 +96,7 @@ public class LcapMessage
   int m_length; // length of remaining packet
 
   /* items which are in the property list */
-  InetAddress m_originAddr; // the address of the originator
+  IPAddr m_originAddr; // the address of the originator
   protected String m_hashAlgorithm; // the algorithm used to hash
   byte m_ttl; // The original time-to-live
   long m_startTime; // the original start time
@@ -552,7 +551,7 @@ public class LcapMessage
     return m_ttl;
   }
 
-  public InetAddress getOriginAddr() {
+  public IPAddr getOriginAddr() {
     return m_originAddr;
   }
 
