@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileLocationUtil.java,v 1.3 2003-02-24 22:13:43 claire Exp $
+ * $Id: TestFileLocationUtil.java,v 1.4 2003-02-26 21:34:52 tal Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ public class TestFileLocationUtil extends LockssTestCase {
 
   public void testMapAuToFileLocation() {
     ArchivalUnit mau = new MockArchivalUnit();
-    String expectedStr = "root/none/";
+    // tk will have to change when AUId -> path uses some encoding
+    String expectedStr = "root/" + mau.getAUId() + "/";
     assertEquals(expectedStr,
                  FileLocationUtil.mapAuToFileLocation("root", mau));
   }

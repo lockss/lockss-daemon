@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.19 2003-02-26 02:19:27 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.20 2003-02-26 21:34:52 tal Exp $
  */
 
 /*
@@ -74,7 +74,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testFileLocation() throws Exception {
-    tempDirPath += "cache/none/";
+    // tk will have to change when AUId -> path uses some encoding
+    tempDirPath += "cache/" + mau.getAUId() + "/";
     File testFile = new File(tempDirPath);
     assertTrue(!testFile.exists());
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.9 2003-02-26 02:15:47 aalto Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.10 2003-02-26 21:34:52 tal Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String idKey;
   private HistoryRepositoryImpl repository;
   private MockLockssDaemon theDaemon;
+  private MockArchivalUnit mau;
 
   public TestHistoryRepositoryImpl(String msg) {
     super(msg);
@@ -61,6 +62,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     super.setUp();
     theDaemon = new MockLockssDaemon(null);
     theDaemon.startDaemon();
+    mau = new MockArchivalUnit();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     configHistoryParams(tempDirPath);
     repository = new HistoryRepositoryImpl(tempDirPath);
@@ -68,7 +70,6 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetNodeLocation() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
@@ -88,7 +89,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   public void testStorePollHistories() throws Exception {
     MockCachedUrlSetSpec mspec =
         new MockCachedUrlSetSpec("http://www.example.com", null);
-    CachedUrlSet mcus = new MockCachedUrlSet(mspec);
+    CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     NodeStateImpl nodeState = new NodeStateImpl(mcus, null, null, repository);
     List histories = ListUtil.list(createPollHistoryBean(3), createPollHistoryBean(3),
                                    createPollHistoryBean(3), createPollHistoryBean(3),
@@ -96,7 +97,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     nodeState.setPollHistoryBeanList(histories);
     repository.storePollHistories(nodeState);
     String filePath = FileLocationUtil.mapAuToFileLocation(tempDirPath +
-        HistoryRepositoryImpl.HISTORY_ROOT_NAME, new MockArchivalUnit());
+        HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
     filePath = FileLocationUtil.mapUrlToFileLocation(filePath,
         "http://www.example.com/"+HistoryRepositoryImpl.HISTORY_FILE_NAME);
     File xmlFile = new File(filePath);
@@ -127,7 +128,6 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreAuState() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
     AuState auState = new AuState(mau, 123, 321);
     repository.storeAuState(auState);
     String filePath = FileLocationUtil.mapAuToFileLocation(tempDirPath +
