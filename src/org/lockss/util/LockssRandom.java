@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRandom.java,v 1.1 2002-11-19 23:27:14 tal Exp $
+ * $Id: LockssRandom.java,v 1.2 2002-11-20 00:02:05 tal Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class LockssRandom extends java.util.Random {
   /** Returns a pseudorandom, uniformly distributed int value between 0
    * (inclusive) and the specified value (exclusive), drawn from this
    * random number generator's sequence.  The algorithm is similar to that
-   * given in the javadoc for {@link Java.util.Random#nextInt(int)}.
+   * given in the javadoc for {@link java.util.Random#nextInt(int)}.
    */
   public long nextLong(long n) {
     if (n<=0) {

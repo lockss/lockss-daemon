@@ -1,5 +1,5 @@
 /*
- * $Id: PriorityQueue.java,v 1.5 2002-11-19 23:28:02 tal Exp $
+ * $Id: PriorityQueue.java,v 1.6 2002-11-20 00:02:05 tal Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.util.*;
  * Elements must implement the Comparable interface (or be accepted
  * by the specified Comparator).
  * Elements are sorted in order upon insertion.  If any element changes
- * in a way that might affect its sort order, {@link sort()} must be
+ * in a way that might affect its sort order, {@link #sort()} must be
  * called to resort the queue.
  */
 public class PriorityQueue implements Queue {
