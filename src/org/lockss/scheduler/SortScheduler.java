@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.2 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.3 2003-12-10 18:38:14 tlipkis Exp $
  */
 
 /*
@@ -163,8 +163,8 @@ public class SortScheduler implements Scheduler {
 	    if (log.isDebug3())
 	      log.debug3("reduced " + intrvl + " by " + btask.getLoadFactor());
 	    if (intrvl.loadFactor < 0.0) {
-	    if (log.isDebug2())
-	      log.debug2("initIntrTskList: loadFactor < 0: " + intrvl);
+	      if (log.isDebug2())
+		log.debug2("initIntrTskList: loadFactor < 0: " + intrvl);
 	      return false;
 	    }
 	    intrvl.backgroundTaskList.add(td);
@@ -336,7 +336,7 @@ public class SortScheduler implements Scheduler {
   /** Struct representing an interval in which tasks can be placed, and
    * during which task order is immaterial, because no task window
    * boundaries occur during the interval. */
-   class SchedInterval extends Interval {
+  class SchedInterval extends Interval {
     long duration;			// length of interval
     long unscheduledTime;		// available cpu time (adjusted for
 					// load factor)
@@ -473,9 +473,9 @@ public class SortScheduler implements Scheduler {
     public String toString() {
       StringBuffer sb = new StringBuffer();
       sb.append("[");
-      sb.append(getBegin().getExpirationTime());
+      sb.append(getBegin().shortString());
       sb.append("-");
-      sb.append(getEnd().getExpirationTime());
+      sb.append(getEnd().shortString());
       if (loadFactor != 1.0) {
 	sb.append("*");
 	sb.append(loadFactor);

@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.3 2003-11-19 08:46:47 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.4 2003-12-10 18:38:14 tlipkis Exp $
  */
 
 /*
@@ -199,7 +199,12 @@ public class SchedulableTask implements Serializable, Cloneable {
 	  if (res == 0) {
 	    // Don't ever return 0, as these are used in TreeSets, which
 	    // consider sort order equality to mean object equality
-	    res = t2.hashCode() - t1.hashCode();
+
+	    // tk - This is still not sufficient, as java doesn't guarantee
+	    // that different objects have different hash codes.  As
+	    // currently used these will always have a schedSeq by the time
+	    // they're put in a TreeSet, but this needs a real solutionB
+	    res = System.identityHashCode(t2) - System.identityHashCode(t1);
 	  }
 	}
 	return res;

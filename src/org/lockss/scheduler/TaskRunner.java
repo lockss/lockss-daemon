@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.7 2003-12-09 02:33:24 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.8 2003-12-10 18:38:14 tlipkis Exp $
  */
 
 /*
@@ -301,26 +301,6 @@ class TaskRunner implements Serializable {
   double backgroundLoadFactor = 0.0;
   LinkedList extraBackgroundEvents = new LinkedList();
 
-  /** Return the earliest starting time of any step task, or null if
-   * none */
-  Deadline findEarlistStepTaskTime() {
-    if (acceptedTasks == null || acceptedTasks.isEmpty()) {
-      return null;
-    }
-    Deadline earliest = null;
-    for (Iterator iter = acceptedTasks.iterator(); iter.hasNext();) {
-      SchedulableTask task = (SchedulableTask)iter.next();
-      if (!task.isBackgroundTask()) {
-	if (earliest == null) {
-	  earliest = task.getEarlistStart();
-	} else {
-	  earliest = Deadline.earliest(earliest, task.getEarlistStart());
-	}
-      }
-    }
-    return earliest;
-  }
-    
   void reschedule() {
     Scheduler scheduler = schedulerFactory.createScheduler(acceptedTasks);
     if (scheduler.createSchedule()) {
@@ -344,24 +324,15 @@ class TaskRunner implements Serializable {
     if (findTaskToRun0()) {
       return true;
     }
-    if (false) {
-      Deadline earliest = findEarlistStepTaskTime();
-      if (earliest == null || runningDeadline.minus(earliest) < 10) {
-	return false;
-      }
-      reschedule();
-      return findTaskToRun0();
-    } else {
-      Schedule.Chunk chunk = findRunnableChunk();
-      if (chunk != null) {
-	// runningDeadline should still be what findTaskToRun0 found - the
-	// next event in the schedule
-	runningChunk = chunk;
-	runningTask = chunk.getTask();
-	return true;
-      }
-      return false;
+    Schedule.Chunk chunk = findRunnableChunk();
+    if (chunk != null) {
+      // runningDeadline should still be what findTaskToRun0 found - the
+      // next event in the schedule
+      runningChunk = chunk;
+      runningTask = chunk.getTask();
+      return true;
     }
+    return false;
   }
 
   /** Find a chunk with a runnable task (one whose earliest start has been
