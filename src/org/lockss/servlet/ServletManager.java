@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.29 2004-03-29 09:17:52 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.29.4.1 2004-06-16 06:45:36 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,9 @@ public class ServletManager extends JettyManager {
   public void stopService() {
     try {
       if (server != null) {
+	runningOnPort(port);
 	server.stop();
+	server = null;
       }
     } catch (InterruptedException e) {
       log.warning("Interrupted while stopping server");
@@ -206,6 +208,7 @@ public class ServletManager extends JettyManager {
 
       // Start the http server
       server.start ();
+      runningOnPort(port);
     } catch (Exception e) {
       log.warning("Couldn't start servlets", e);
     }
