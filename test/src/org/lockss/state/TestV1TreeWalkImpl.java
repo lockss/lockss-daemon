@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1TreeWalkImpl.java,v 1.3 2004-09-29 18:57:55 tlipkis Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.4 2004-12-07 08:46:05 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
+import org.lockss.protocol.*;
 import org.lockss.repository.*;
 
 public class TestV1TreeWalkImpl extends LockssTestCase {

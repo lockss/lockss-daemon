@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.55 2004-12-02 23:53:37 troberts Exp $
+ * $Id: IdentityManager.java,v 1.56 2004-12-07 08:46:06 tlipkis Exp $
  */
 
 /*
@@ -300,7 +300,7 @@ public class IdentityManager
   }
 
   /** Find or create unique instance of LcapIdentity. */
-  private LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
+  protected LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
       throws MalformedIdentityKeyException {
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
@@ -312,8 +312,8 @@ public class IdentityManager
   }
 
   /** Find or create unique instance of LcapIdentity. */
-  private LcapIdentity findLcapIdentity(PeerIdentity pid,
-					IPAddr addr, int port) {
+  protected LcapIdentity findLcapIdentity(PeerIdentity pid,
+					  IPAddr addr, int port) {
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
       if (lid == null) {
@@ -528,7 +528,7 @@ public class IdentityManager
   }
 
 
-  /** Reload the perr data from the identity database.  This may overwrite
+  /** Reload the peer data from the identity database.  This may overwrite
    * the LcapIdentity instance for local identity(s).  That may not be
    * appropriate if this is ever called other than at startup. */
   private void reloadIdentities() {
