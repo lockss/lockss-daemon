@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.9 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.10 2003-12-23 00:34:07 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,10 @@ public class CrawlManagerStatus implements StatusAccessor {
 
   public CrawlManagerStatus(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
+  }
+
+  public String getDisplayName() {
+    return "Crawl Status";
   }
 
   private List getRows(String key) {
@@ -177,7 +181,6 @@ public class CrawlManagerStatus implements StatusAccessor {
       throw new IllegalArgumentException("Called with null StatusTable");
     }
     String key = table.getKey();
-    table.setTitle("Crawl Status");
     table.setColumnDescriptors(colDescs);
     table.setRows(getRows(key));
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.9 2003-12-12 00:56:59 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.10 2003-12-23 00:34:06 tlipkis Exp $
  */
 
 /*
@@ -733,11 +733,15 @@ class TaskRunner implements Serializable {
 
 
   private class Status implements StatusAccessor {
+
+    public String getDisplayName() {
+      return "Scheduler Queue";
+    }
+
     public void populateTable(StatusTable table) {
       String key = table.getKey();
       int scheme = parseSortScheme(key);
 
-      table.setTitle("Scheduler Queue");
       table.setTitleFootnote(getTitleFootnote(scheme));
       table.setColumnDescriptors(statusColDescs);
       table.setDefaultSortRules(statusSortRules);

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.14 2003-08-09 20:37:22 tlipkis Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.15 2003-12-23 00:34:06 tlipkis Exp $
  */
 
 /*
@@ -452,10 +452,10 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
   static Object[][] allTablesExpectedRowArray = 
   {
-    {new StatusTable.Reference("A_table", "A_table", null)},
-    {new StatusTable.Reference("B Title", "B_table", null)},
-    {new StatusTable.Reference("F_table", "F_table", null)},
-    {new StatusTable.Reference("Z_table", "Z_table", null)},
+    {new StatusTable.Reference("MockStatusAccessor", "A_table", null)},
+    {new StatusTable.Reference("MockStatusAccessor", "B_table", null)},
+    {new StatusTable.Reference("MockStatusAccessor", "F_table", null)},
+    {new StatusTable.Reference("MockStatusAccessor", "Z_table", null)},
   };
 
   public void testGetTableOfAllTables() 
@@ -481,7 +481,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
     List expectedRows = MockStatusAccessor.makeRowsFrom(expectedCols,
 					  allTablesExpectedRowArray);
-    assertRowsEqual(expectedRows, table.getSortedRows());
+    assertRowsEqualNoOrder(expectedRows, table.getSortedRows());
   }
   
   MockStatusAccessor makeMockStatusAccessor(String title) {
@@ -517,7 +517,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
     List expectedRows = MockStatusAccessor.makeRowsFrom(expectedCols,
 					  allTablesExpectedRowArray);
-    assertRowsEqual(expectedRows, table.getSortedRows());
+    assertRowsEqualNoOrder(expectedRows, table.getSortedRows());
   }
   
   
@@ -607,6 +607,16 @@ public class TestStatusServiceImpl extends LockssTestCase {
     }
   }
 
+  // This should be equivalent to Set.equals(), but when called on two sets
+  // of Maps that fails and this succeeds.  What am I missing?
+  private void assertRowsEqualNoOrder(Collection expected, Collection actual) {
+    assertEquals("Different number of rows", expected.size(), actual.size());
+    Iterator expectedIt = expected.iterator();
+    while (expectedIt.hasNext()) {
+      Map expectedMap = (Map)expectedIt.next();
+      assertTrue("missing: " + expectedMap, actual.contains(expectedMap));
+    }
+  }
   
   private void assertColumnDescriptorsEqual(List expected, List actual) {
     assertEquals("Lists had different sizes", expected.size(), actual.size());
@@ -657,6 +667,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
   public void testSAThrowsAreTrapped() throws 
     StatusService.NoSuchTableException {
     StatusAccessor statusAccessor = new StatusAccessor() {
+	public String getDisplayName() {
+	  return null;
+	}
 	public void populateTable(StatusTable table) {
 	  throw new NullPointerException();
 	}

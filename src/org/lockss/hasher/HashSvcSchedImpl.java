@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.5 2003-11-20 01:07:56 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.6 2003-12-23 00:34:06 tlipkis Exp $
  */
 
 /*
@@ -386,9 +386,13 @@ public class HashSvcSchedImpl
 
 
   private class Status implements StatusAccessor {
+
+    public String getDisplayName() {
+      return "Hash Queue";
+    }
+
     public void populateTable(StatusTable table) {
       String key = table.getKey();
-      table.setTitle("Hash Queue");
       table.setTitleFootnote(FOOT_TITLE);
       table.setColumnDescriptors(statusColDescs);
       table.setDefaultSortRules(statusSortRules);

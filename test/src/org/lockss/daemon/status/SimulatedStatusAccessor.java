@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.11 2003-06-20 22:34:53 claire Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.12 2003-12-23 00:34:06 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,10 @@ public class SimulatedStatusAccessor {
       ColumnDescriptor.TYPE_IP_ADDRESS,
       ColumnDescriptor.TYPE_DATE,
     };
+
+    public String getDisplayName() {
+      return title;
+    }
 
     private List makeColumns(int ncols) {
       List columns = new ArrayList(ncols);

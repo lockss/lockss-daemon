@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.33 2003-12-17 02:09:45 tlipkis Exp $
+* $Id: IdentityManager.java,v 1.34 2003-12-23 00:34:06 tlipkis Exp $
  */
 
 /*
@@ -459,9 +459,13 @@ public class IdentityManager extends BaseLockssManager {
 
 
   private class Status implements StatusAccessor {
+
+    public String getDisplayName() {
+      return "Cache Identities";
+    }
+
     public void populateTable(StatusTable table) {
       String key = table.getKey();
-      table.setTitle("Cache Identities");
       table.setColumnDescriptors(statusColDescs);
       table.setDefaultSortRules(statusSortRules);
       table.setRows(getRows(key));

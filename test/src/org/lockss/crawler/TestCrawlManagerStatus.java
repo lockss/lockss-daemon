@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.7 2003-12-13 01:28:27 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.8 2003-12-23 00:34:06 tlipkis Exp $
  */
 
 /*
@@ -86,6 +86,10 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     assertFalse(cmStatus.requiresKey());
   }
 
+  public void testDisplayName() {
+    assertEquals("Crawl Status", cmStatus.getDisplayName());
+  }
+
   public void testPopulateTableNullTable() {
     try {
       cmStatus.populateTable(null);
@@ -97,7 +101,6 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   public void testPopulateTableNoCrawls() {
     StatusTable table = new StatusTable("test");
     cmStatus.populateTable(table);
-    assertEquals("Crawl Status", table.getTitle());
     assertEquals(0, table.getSortedRows().size());
     assertEquals(expectedColDescs, table.getColumnDescriptors());
     assertEquals(new ArrayList(), table.getSortedRows());
@@ -131,7 +134,6 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 
 
     cmStatus.populateTable(table);
-    assertEquals("Crawl Status", table.getTitle());
     assertEquals(expectedColDescs, table.getColumnDescriptors());
     List rows = table.getSortedRows();
     int expectedElements = 1;
@@ -165,7 +167,6 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     statusSource.setActiveAus(ListUtil.list("id1", "id2"));
 
     cmStatus.populateTable(table);
-    assertEquals("Crawl Status", table.getTitle());
     assertEquals(expectedColDescs, table.getColumnDescriptors());
     List rows = table.getSortedRows();
     int expectedElements = 2;
