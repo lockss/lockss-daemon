@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.2 2004-10-06 00:12:01 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.3 2004-10-06 00:26:23 dshr Exp $
  */
 
 /*
@@ -116,13 +116,13 @@ public class TestV3Poller extends LockssTestCase {
 		 testV3polls[0].getPollState());
   }
 
-  public void dontTestVoterDuration() {
+  public void testVoterDuration() {
     V3Poller poll = (V3Poller) testV3polls[0];
     long duration = poll.getDeadline().getRemainingTime();
     final int numSteps = 10;
     long step = (duration - 1) / numSteps;
     String key = poll.getKey();
-    assertTrue(step > 1);
+    assertTrue("Duration " + duration + " means step " + step, step > 1);
     assertEquals("Poll " + poll + " should be in Initializing",
 		 V3Poller.STATE_INITIALIZING,
 		 poll.getPollState());

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.142.2.4 2004-10-06 00:12:01 dshr Exp $
+ * $Id: PollManager.java,v 1.142.2.5 2004-10-06 00:26:22 dshr Exp $
  */
 
 /*
@@ -185,7 +185,8 @@ public class PollManager
       byte[] challenge = makeVerifier(duration);
       byte[] verifier = makeVerifier(duration);
       int pollVersion = pollspec.getPollVersion();
-      theLog.debug("calling a version " + pollVersion + " poll" );
+      theLog.debug("calling a version " + pollVersion + " poll duration " +
+		   duration);
       PeerIdentity myID = theIDManager.getLocalPeerIdentity(pollVersion);
       try {
 	BasePoll thePoll = makePoll(pollspec, duration, challenge, verifier,
