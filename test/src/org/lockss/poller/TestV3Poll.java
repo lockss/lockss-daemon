@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.3 2004-10-01 18:46:58 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.4 2004-10-01 19:50:53 dshr Exp $
  */
 
 /*
@@ -161,6 +161,16 @@ public class TestV3Poll extends LockssTestCase {
 	}
 	assertEquals("Poll " + testV3polls[0] + " should be in SendingVote",
 		     V3Voter.STATE_SENDING_VOTE,
+		     testV3polls[0].getPollState());
+	assertTrue("Poll " + testV3polls[0] + " should be active",
+		   pollmanager.isPollActive(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be closed",
+		   pollmanager.isPollClosed(key));
+	assertFalse("Poll " + testV3polls[0] + " should not be suspended",
+		   pollmanager.isPollSuspended(key));
+	TimeBase.step(1000);
+	assertEquals("Poll " + testV3polls[0] + " should be in WaitingRepairReq",
+		     V3Voter.STATE_WAITING_REPAIR_REQ,
 		     testV3polls[0].getPollState());
 	assertTrue("Poll " + testV3polls[0] + " should be active",
 		   pollmanager.isPollActive(key));

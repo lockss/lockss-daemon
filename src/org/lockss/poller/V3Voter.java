@@ -1,5 +1,5 @@
 /*
-* $Id: V3Voter.java,v 1.1.2.4 2004-10-01 18:46:58 dshr Exp $
+* $Id: V3Voter.java,v 1.1.2.5 2004-10-01 19:50:53 dshr Exp $
  */
 
 /*
@@ -191,7 +191,7 @@ public class V3Voter extends V3Poll {
       //  XXX should abort poll?
       return;
     }
-    EffortService.Callback cb = new PollAckEffortCallback(m_pollmanager);
+    EffortService.ProofCallback cb = new PollAckEffortCallback(m_pollmanager);
     EffortService.Proof ep = null;
     EffortService es = null;
     if (false) {
@@ -222,8 +222,29 @@ public class V3Voter extends V3Poll {
       //  XXX should abort poll?
       return;
     }
-    // XXX do a PollProof?
-    m_state = STATE_SENDING_VOTE;
+    EffortService.VoteCallback cb = new VoteGenerationCallback(m_pollmanager);
+    EffortService.Vote vote = null;
+    EffortService es = null;
+    if (false) {
+	// XXX
+	// vote = msg.getVoteSpec();
+	es = vote.getEffortService();
+    } else {
+	// XXX
+	es = theEffortService;
+	vote = es.makeVote();
+    }
+    Deadline timer = msg.getDeadline();
+    Serializable cookie = msg.getKey();
+    if (es.generateVote(vote, timer, cb, cookie)) {
+      // vote generation successfuly scheduled
+	log.debug("Scheduled vote callback for " + ((String)cookie));
+      m_state = STATE_SENDING_VOTE;
+    } else {
+      log.warning("could not schedule effort proof " + vote.toString() +
+		  " for " + msg.toString());
+      m_state = STATE_FINALIZING;
+    }
   }
 
   private void doRepairReqMessage(V3LcapMessage msg) {
@@ -280,7 +301,7 @@ public class V3Voter extends V3Poll {
     return sb.toString();
   }
 
-  class PollAckEffortCallback implements EffortService.Callback {
+  class PollAckEffortCallback implements EffortService.ProofCallback {
       private PollManager pollMgr = null;
       PollAckEffortCallback(PollManager pm) {
 	  pollMgr = pm;
@@ -299,6 +320,28 @@ public class V3Voter extends V3Poll {
 	log.debug("PollAckEffortProofCallback: " + ((String) cookie));
 	V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
 	p.m_state = STATE_WAITING_POLL_PROOF;
+    }
+
+  }
+
+  class VoteGenerationCallback implements EffortService.VoteCallback {
+      private PollManager pollMgr = null;
+      VoteGenerationCallback(PollManager pm) {
+	  pollMgr = pm;
+      }
+    /**
+     * Called to indicate generation of a vote is complete.
+     * @param vote the Vote in question
+     * @param cookie used to disambiguate callbacks
+     * @param e the exception that caused the effort proof to fail
+     */
+    public void generationFinished(EffortService.Vote vote,
+				   Serializable cookie,
+				   Exception e) {
+      // XXX
+	log.debug("VoteGenerationCallback: " + ((String) cookie));
+	V3Voter p = (V3Voter) pollMgr.getPoll((String) cookie);
+	p.m_state = STATE_WAITING_REPAIR_REQ;
     }
 
   }
