@@ -110,18 +110,18 @@
                 </field>
         </class>
         <class name="org.lockss.state.PollStateBean">
-                <map-to xml="CrawlState"/>
+                <map-to xml="PollState"/>
                 <field name="type"
                        type="integer">
                         <bind-xml name="Type" node="element"/>
                 </field>
                 <field name="lwrBound"
                        type="java.lang.String">
-                        <bind-xml name="LowerBound" node="element"/>
+                        <bind-xml name="LwrBound" node="element"/>
                 </field>
                 <field name="uprBound"
                        type="java.lang.String">
-                        <bind-xml name="UpperBound" node="element"/>
+                        <bind-xml name="UprBound" node="element"/>
                 </field>
                 <field name="status"
                        type="integer">
