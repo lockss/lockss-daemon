@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.2 2003-03-21 07:26:17 tal Exp $
+ * $Id: ParamDoc.java,v 1.3 2003-05-06 01:45:16 troberts Exp $
  */
 
 /*
@@ -43,6 +43,9 @@ public class ParamDoc {
 
   static Map paramMap = new TreeMap();
   static Map classMap = new TreeMap();
+  static Map paramToSymbol = new HashMap();
+
+  static Map defaultMap = new TreeMap();
 
   public static void main(String argv[]) {
     Vector jars = new Vector();
@@ -63,8 +66,10 @@ public class ParamDoc {
 	doClass(ent);
       }
     }
-    System.out.println("Parameters by class");
-    printMap(classMap);
+    System.out.println("Params with defaults");
+    printDefaults();
+//     System.out.println("\nParameters by class");
+//     printMap(classMap);
     System.out.println("\nParameters by name");
     printMap(paramMap);
   }
@@ -80,13 +85,39 @@ public class ParamDoc {
       Collections.sort(list);
       int len = key.length();
       for (Iterator iter = list.iterator(); iter.hasNext(); ) {
-	if (len > COL) {
+	if (len >= COL) {
 	  System.out.println();
 	  len = 0;
 	}
 	System.out.print(nblanks(COL - len));
 	System.out.println((String)iter.next());
 	len = 0;
+      }
+    }
+  }
+
+  static void printDefaults() {
+    for (Iterator paramNameIter = defaultMap.keySet().iterator();
+	 paramNameIter.hasNext(); ) {
+      String paramName = (String)paramNameIter.next();
+      Object defaultVal;
+
+      defaultVal = defaultMap.get(paramName);
+
+      System.out.print(paramName);
+      int len = paramName.length();
+      if (len >= COL) {
+	System.out.println();
+	len = 0;
+      }
+      System.out.print(nblanks(COL - len));
+      System.out.print(defaultVal);
+      if (defaultVal instanceof Long) {
+	String timeStr = 
+	  StringUtil.timeIntervalToString(((Long)defaultVal).longValue());
+	System.out.println(" ("+timeStr+")");
+      } else {
+	System.out.println();
       }
     }
   }
@@ -113,26 +144,81 @@ public class ParamDoc {
       return;
     }
     Field flds[] = cls.getDeclaredFields();
+
+    Map defaultSymToDefVal = new HashMap(); //def symbol to def value
+    Map paramToSymbol = new HashMap(); //param symbol to param name
+
     for (int ix = 0; ix < flds.length; ix++) {
-      doField(cls, flds[ix]);
+      doField(cls, flds[ix], paramToSymbol);
+      doFieldDefault(cls, flds[ix], defaultSymToDefVal);
+    }
+    for (Iterator it = paramToSymbol.keySet().iterator(); it.hasNext();) {
+      String paramName = (String)it.next();
+      String paramSym = (String)paramToSymbol.get(paramName);
+      String defaultSym = "DEFAULT"+paramSym.substring(5);
+      Object defaultVal = defaultSymToDefVal.get(defaultSym);
+
+      putIfNotDifferent(defaultMap, paramName, 
+			defaultVal != null ? defaultVal : "(none)", 
+			"Conflicting defaults");
     }
   }
 
-  static void doField(Class cls, Field fld) {
+  static void doField(Class cls, Field fld, Map paramToSymbol) {
     String fname = fld.getName();
+    
     if (Modifier.isStatic(fld.getModifiers()) &&
 	String.class == fld.getType() &&
 	fname.startsWith("PARAM_")) {
-      String val;
+      String paramName;
       try {
 	fld.setAccessible(true);
-	val = (String)fld.get(null);
+	paramName = (String)fld.get(null);
       } catch (IllegalAccessException e) {
 	log.error(fld.toString(), e);
 	return;
       }
-      addParam(paramMap, val, cls.getName());
-      addParam(classMap, cls.getName(), val);
+      addParam(paramMap, paramName, cls.getName());
+      addParam(classMap, cls.getName(), paramName);
+      putIfNotDifferent(paramToSymbol, paramName, fname, 
+			"Multiple symbols used to define parameter name ");
+    }
+  }
+
+  static void doFieldDefault(Class enclosingClass, Field fld, 
+			     Map defaultSymToDefVal) {
+    String fname = fld.getName();
+    
+    if (Modifier.isStatic(fld.getModifiers()) &&
+	fname.startsWith("DEFAULT_")) {
+      Object defaultVal;
+      try {
+	fld.setAccessible(true);
+	Class cls = fld.getType();
+	if (int.class == cls) {
+	  defaultVal = new Integer(fld.getInt(null));
+	} else if (long.class == cls) {
+	  defaultVal = new Long(fld.getLong(null));
+	} else if (boolean.class == cls) {
+	  defaultVal = new Boolean(fld.getBoolean(null));
+	} else {
+	  defaultVal = fld.get(null);
+	}
+      } catch (IllegalAccessException e) {
+	log.error(fld.toString(), e);
+	return;
+      }
+
+      defaultSymToDefVal.put(fname, defaultVal);
+    }
+  }
+
+  static void putIfNotDifferent(Map map, Object key, Object val, String msg) {
+    Object existingVal = map.get(key);
+    if (existingVal != null && !existingVal.equals(val)) {
+      System.err.println(msg+" "+key+" "+val+" "+existingVal);
+    } else {
+      map.put(key, val);
     }
   }
 
