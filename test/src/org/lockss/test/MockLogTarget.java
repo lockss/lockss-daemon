@@ -1,8 +1,6 @@
-package org.lockss.test;
-
-import java.util.Vector;
-import java.util.Enumeration;
-import org.lockss.util.LogTarget;
+/*
+ * $Id: MockLogTarget.java,v 1.2 2002-08-31 07:00:20 tal Exp $
+ */
 
 /*
 
@@ -32,6 +30,11 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
+package org.lockss.test;
+
+import java.util.*;
+import org.lockss.util.*;
+
 /**
  * Mock implementation of LogTarget
  */
@@ -47,15 +50,23 @@ public class MockLogTarget implements LogTarget{
    * Adds the message and severity to a Vector, so they can be retrieved 
    * by unit tests
    */
-  public void handleMessage(String callerId, String message, String severity){
-    String logInfo[] = new String[3];
-    logInfo[0] = callerId;
-    logInfo[1] = message;
-    logInfo[2] = severity;
-    messages.add(logInfo);
+  public void handleMessage(Logger log, int msgLevel, String message) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(log.nameOf(msgLevel));
+    sb.append(": ");
+    sb.append(message);
+    messages.add(sb.toString());
   }
 
-  public Enumeration getMessages(){
-    return messages.elements();
+  public Iterator messageIterator() {
+    return messages.iterator();
+  }
+
+  public int messageCount() {
+    return messages.size();
+  }
+
+  public void resetMessages() {
+    messages.clear();
   }
 }
