@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.14 2003-03-13 18:54:55 troberts Exp $
+ * $Id: LockssDaemon.java,v 1.15 2003-03-21 20:42:32 tal Exp $
  */
 
 /*
@@ -63,6 +63,7 @@ public class LockssDaemon {
   /* the parameter strings that represent our managers */
   public static String HASH_SERVICE = "HashService";
   public static String COMM_MANAGER = "CommManager";
+  public static String ROUTER_MANAGER = "RouterManager";
   public static String IDENTITY_MANAGER = "IdentityManager";
   public static String CRAWL_MANAGER = "CrawlManager";
   public static String PLUGIN_MANAGER = "PluginManager";
@@ -77,6 +78,8 @@ public class LockssDaemon {
   /* the default classes that represent our managers */
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
+  private static String DEFAULT_ROUTER_MANAGER =
+    "org.lockss.protocol.LcapRouter";
   private static String DEFAULT_IDENTITY_MANAGER
       = "org.lockss.protocol.IdentityManager";
   private static String DEFAULT_CRAWL_MANAGER =
@@ -114,8 +117,10 @@ public class LockssDaemon {
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   private ManagerDesc[] managerDescs = {
+    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
     new ManagerDesc(COMM_MANAGER, DEFAULT_COMM_MANAGER),
+    new ManagerDesc(ROUTER_MANAGER, DEFAULT_ROUTER_MANAGER),
     new ManagerDesc(IDENTITY_MANAGER, DEFAULT_IDENTITY_MANAGER),
     new ManagerDesc(POLL_MANAGER, DEFAULT_POLL_MANAGER),
     new ManagerDesc(LOCKSS_REPOSITORY_SERVICE,
@@ -127,11 +132,10 @@ public class LockssDaemon {
     new ManagerDesc(PLUGIN_MANAGER, DEFAULT_PLUGIN_MANAGER),
     // start proxy and servlets after plugin manager
     new ManagerDesc(SERVLET_MANAGER, DEFAULT_SERVLET_MANAGER),
-    new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(PROXY_MANAGER, DEFAULT_PROXY_MANAGER),
   };
 
-  private static Logger log = Logger.getLogger("RunDaemon");
+  private static Logger log = Logger.getLogger("LockssDaemon");
   protected List propUrls = null;
   private String cacheDir = null;
   private String configDir = null;
@@ -216,6 +220,15 @@ public class LockssDaemon {
    */
   public LcapComm getCommManager()  {
     return (LcapComm) getManager(COMM_MANAGER);
+  }
+
+  /**
+   * return the communication router manager instance
+   * @return the LcapRouter
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public LcapRouter getRouterManager()  {
+    return (LcapRouter) getManager(ROUTER_MANAGER);
   }
 
   /**
@@ -408,6 +421,7 @@ public class LockssDaemon {
    * @throws Exception if load fails
    */
   LockssManager loadManager(String managerName) throws Exception {
+    log.debug("Loading manager " + managerName);
     try {
       Class manager_class = Class.forName(managerName);
       LockssManager mgr = (LockssManager) manager_class.newInstance();
