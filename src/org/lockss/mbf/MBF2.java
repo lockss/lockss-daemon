@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.1 2003-08-05 00:55:30 dshr Exp $
+ * $Id: MBF2.java,v 1.2 2003-08-07 20:02:23 dshr Exp $
  */
 
 /*
@@ -167,7 +167,7 @@ public class MBF2 extends MemoryBoundFunction {
   }
 
   // Choose the next path to try
-  private void choosePath() throws MemoryBoundFunctionException {
+  private void choosePath() {
     // Set k to the index of the next path to try
     if (verify) {
       // XXX - should choose paths in random order

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMBF2.java,v 1.1 2003-08-05 00:55:30 dshr Exp $
+ * $Id: TestMBF2.java,v 1.2 2003-08-07 20:02:23 dshr Exp $
  */
 
 /*
@@ -74,6 +74,32 @@ public class TestMBF2 extends LockssTestCase {
     super.tearDown();
   }
 
+  // XXX test behavior of empty proof
+  // XXX test each exception
+  // XXX separate timing tests etc into Func
+
+  /**
+   * Test exceptions
+   */
+  public void testExceptions() {
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    try {
+      int[] bad = new int[0];
+      MemoryBoundFunction mbf = new MBF2(nonce, 3, 2048, bad, 9);
+      fail("Didn't throw exception on empty proof");
+    } catch (MemoryBoundFunctionException ex) {
+      // No action intended
+    }
+    try {
+      int[] bad = new int[12];
+      MemoryBoundFunction mbf = new MBF2(nonce, 3, 2048, bad, 9);
+      fail("Didn't throw exception on empty proof");
+    } catch (MemoryBoundFunctionException ex) {
+      // No action intended
+    }
+  }
+
   /**
    * Test one generate/verify pair
    */
@@ -84,9 +110,9 @@ public class TestMBF2 extends LockssTestCase {
   /*
    * Test a series of generate/verify pairs
    */
-  public void dontTestMultiple() throws IOException {
+  public void testMultiple() throws IOException {
     for (int i = 0; i < 64; i++) {
-      onePair(15, 32);
+      onePair(31, 32);
     }
   }
 
@@ -97,7 +123,7 @@ public class TestMBF2 extends LockssTestCase {
    * * Increasing e increases the factor by which generate is more
    *   costly than verify.
    */
-  public void dontTestTimingOne() throws IOException {
+  public void testTimingOne() throws IOException {
     byte[] nonce = new byte[24];
     int e;
     int l;
@@ -107,8 +133,8 @@ public class TestMBF2 extends LockssTestCase {
     long totalVerifyTime;
 
     // Generate time > Verify time
-    e = 7;
-    l = 128;
+    e = 31;
+    l = 2048;
     totalGenerateTime = totalVerifyTime = 0;
     for (int i = 0; i < numTries; i++) {
       rand.nextBytes(nonce);
@@ -126,10 +152,10 @@ public class TestMBF2 extends LockssTestCase {
     assertTrue(totalGenerateTime > totalVerifyTime);
   }    
 
-  public void dontTestTimingTwo() throws IOException {
+  public void testTimingTwo() throws IOException {
     byte[] nonce = new byte[24];
     int e = 63;
-    int[] l = { 8, 64, 256 };
+    int[] l = { 64, 256, 1024, 4096 };
     int[] proof;
     int numTries = 20;
     long[] totalGenerateTime = new long[l.length];
@@ -157,7 +183,7 @@ public class TestMBF2 extends LockssTestCase {
 	log.info("timing(" + e + ",[" + l[j] + "," + l[j-1] + "]) test " +
 		 totalVerifyTime[j] + " > " + totalVerifyTime[j-1] + " msec");
 	assertTrue(totalGenerateTime[j] > totalGenerateTime[j-1]);
-	if (false) {
+	if (true) {
 	  // We'd like to be able to say this but it seems we can't
 	  assertTrue(totalVerifyTime[j] > totalVerifyTime[j-1]);
 	}
@@ -165,7 +191,7 @@ public class TestMBF2 extends LockssTestCase {
     }
   }
 
-  public void dontTestTimingThree() throws IOException {
+  public void testTimingThree() throws IOException {
     byte[] nonce = new byte[24];
     int[] e = { 3, 15, 63 };
     int l = 64;
@@ -246,12 +272,12 @@ public class TestMBF2 extends LockssTestCase {
     int[] res = mbf.result();
     if (res.length > 0) {
       for (int i = 0; i < res.length; i++) {
-	log.info("generate [" + i + "] "  + res[i] + " tries " + pathsTried);
+	log.debug("generate [" + i + "] "  + res[i] + " tries " + pathsTried);
 	assertTrue(res[i] >= 0);
 	assertTrue(res[i] < basis.length);
       }
     } else {
-      log.info("generate [" + res.length + "]  tries " + pathsTried);
+      log.debug("generate [" + res.length + "]  tries " + pathsTried);
       res = null;
     }
     return (res);
@@ -271,11 +297,11 @@ public class TestMBF2 extends LockssTestCase {
       pathsTried /= l;
       int[] res2 = mbf2.result();
       if (res2 == null)
-	log.info("verify [" + proof.length + "] fails" + pathsTried + " tries");
+	log.debug("verify [" + proof.length + "] fails" + pathsTried + " tries");
       else {
 	ret = true;
 	for (int i = 0; i < res2.length; i++) {
-	  log.info("verify [" + i + "] " + res2[i] + " OK tries " + pathsTried);
+	  log.debug("verify [" + i + "] " + res2[i] + " OK tries " + pathsTried);
 	}
       }
     }      
