@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.11 2003-01-14 02:22:28 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.12 2003-01-14 22:28:56 aalto Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   }
 
   public int getCurrentVersion() {
-    if (!hasContent()) {
+    if ((!hasContent()) && (!isInactive())) {
       logger.error("Cannot get version if no content: "+url);
       throw new UnsupportedOperationException("No content to version.");
     }
@@ -382,6 +382,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
       loadCurrentPropsFile();
       loadTempCacheFile();
       loadTempPropsFile();
+    } else if ((currentVersion==0)||(currentVersion==INACTIVE_VERSION)) {
+      return;
     }
     if (!cacheLocationFile.exists()) {
       currentVersion = 0;
