@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrl.java,v 1.10 2003-06-02 21:46:11 troberts Exp $
+ * $Id: TestGenericFileCachedUrl.java,v 1.11 2003-06-03 00:06:50 troberts Exp $
  */
 
 /*
@@ -148,22 +148,36 @@ public class TestGenericFileCachedUrl extends LockssTestCase {
     assertEquals("<test stream>", baos.toString());
   }
 
-//   public void testOpenForHashingCanFilter() throws Exception {
-//     String config = 
-//       "org.lockss.genericFileCachedUrl.filterHashStream=true";
-//     TestConfiguration.setCurrentConfigFromString(config);
-//     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
+  public void testOpenForHashingCanFilter() throws Exception {
+    String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
+    Properties props = new Properties();
+    props.setProperty("content-type", "text/html");
+    TestConfiguration.setCurrentConfigFromString(config);
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
 
-//     CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
-//     InputStream urlIs = url.openForHashing();
-//     ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
-//     StreamUtil.copy(urlIs, baos);
-//     assertEquals("", baos.toString());
-//   }
+    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    InputStream urlIs = url.openForHashing();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    StreamUtil.copy(urlIs, baos);
+    assertEquals("", baos.toString());
+  }
+
+  public void testOpenForHashingDoesntFilterNonHtml() throws Exception {
+    String config = "org.lockss.genericFileCachedUrl.filterHashStream=true";
+    Properties props = new Properties();
+    props.setProperty("content-type", "blah");
+    TestConfiguration.setCurrentConfigFromString(config);
+    createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", props);
+
+    CachedUrl url = cus.makeCachedUrl("http://www.example.com/testDir/leaf1");
+    InputStream urlIs = url.openForHashing();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
+    StreamUtil.copy(urlIs, baos);
+    assertEquals("<test stream>", baos.toString());
+  }
 
   public void testOpenForHashingWontFilterIfConfigedNotTo() throws Exception {
-    String config = 
-      "org.lockss.genericFileCachedUrl.filterHashStream=false";
+    String config = "org.lockss.genericFileCachedUrl.filterHashStream=false";
     TestConfiguration.setCurrentConfigFromString(config);
     createLeaf("http://www.example.com/testDir/leaf1", "<test stream>", null);
 
