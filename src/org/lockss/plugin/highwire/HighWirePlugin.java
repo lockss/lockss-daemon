@@ -1,5 +1,5 @@
 /*
- * $Id: HighWirePlugin.java,v 1.4 2002-10-01 06:12:15 tal Exp $
+ * $Id: HighWirePlugin.java,v 1.5 2002-10-08 01:08:31 tal Exp $
  */
 
 /*
@@ -61,9 +61,7 @@ import org.lockss.plugin.*;
  * @version 0.0
  */
  
-public class HighWirePlugin implements CachedUrlSet{
-
-
+public class HighWirePlugin implements ArchivalUnit {
 
   private String url;
   private Vector urls;
@@ -188,6 +186,12 @@ public class HighWirePlugin implements CachedUrlSet{
 
   public UrlCacher makeUrlCacher(String url){
     return new HighWireCachedUrl(url, this);
+  }
+
+  // ArchivalUnit methods
+
+  public CachedUrlSet makeCachedUrlSet(String url, String regexp) {
+    return null;
   }
 
   //other

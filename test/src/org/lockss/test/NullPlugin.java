@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.2 2002-10-01 06:12:15 tal Exp $
+ * $Id: NullPlugin.java,v 1.3 2002-10-08 01:08:31 tal Exp $
  */
 
 /*
@@ -178,6 +178,17 @@ public class NullPlugin {
 
     public Enumeration treeEnumeration() {
       return new EmptyEnumeration();
+    }
+
+  }
+
+  public static class ArchivalUnit
+    extends CachedUrlSet
+    implements org.lockss.daemon.ArchivalUnit {
+
+    public org.lockss.daemon.CachedUrlSet makeCachedUrlSet(String url,
+							   String regexp) {
+      return null;
     }
   }
 

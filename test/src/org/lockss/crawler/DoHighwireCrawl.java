@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.1 2002-08-02 19:34:42 tal Exp $
+ * $Id: DoHighwireCrawl.java,v 1.2 2002-10-08 01:08:31 tal Exp $
  */
 
 /*
@@ -61,17 +61,17 @@ public class DoHighwireCrawl {
     }
     String start = args[i];
 
-    CachedUrlSet cus = new HighWirePlugin("http://shadow3.stanford.edu", 324);
+    ArchivalUnit au = new HighWirePlugin("http://shadow3.stanford.edu", 324);
     CachedUrlSetSpec cuss = new GenericCachedUrlSetSpec(start, "");
-    cus.addToList(cuss);
+    au.addToList(cuss);
     if (proxyFlg) {
-      org.lockss.plugin.Plugin.registerCachedUrlSet(cus);
+      org.lockss.plugin.Plugin.registerArchivalUnit(au);
       ProxyHandler.startProxy();
       System.err.println("Proxy started");
 
     }
     if (crawlFlg) {
-      Crawler.doCrawl(cus);
+      Crawler.doCrawl(au);
     }
   }
 }

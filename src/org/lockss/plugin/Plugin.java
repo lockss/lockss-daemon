@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.1 2002-07-17 09:02:22 tal Exp $
+ * $Id: Plugin.java,v 1.2 2002-10-08 01:08:31 tal Exp $
  */
 
 /*
@@ -43,46 +43,61 @@ import org.lockss.daemon.*;
  */
 public class Plugin {
 
-  private static Vector cachedUrlSets = new Vector();
+  private static Vector archivalUnits = new Vector();
 
   /**
-   * Register the <code>CachedUrlSet</code>, so that
-   * it can be found by <code>Plugin.findCachedUrlSet()</code>.
-   * @param cus <code>CachedUrlSet</code> to add.
+   * Register the <code>ArchivalUnit</code>, so that
+   * it can be found by <code>Plugin.findArchivalUnit()</code>.
+   * @param au <code>ArchivalUnit</code> to add.
    */
-  public static void registerCachedUrlSet(CachedUrlSet cus) {
-    if (!cachedUrlSets.contains(cus)) {
-      cachedUrlSets.addElement(cus);
+  public static void registerArchivalUnit(ArchivalUnit au) {
+    if (!archivalUnits.contains(au)) {
+      archivalUnits.addElement(au);
     }
   }
       
   /**
-   * Unregister the <code>CachedUrlSet</code>, so that
-   * it will not be found by <code>Plugin.findCachedUrlSet()</code>.
-   * @param cus <code>CachedUrlSet</code> to remove.
+   * Unregister the <code>ArchivalUnit</code>, so that
+   * it will not be found by <code>Plugin.findArchivalUnit()</code>.
+   * @param au <code>ArchivalUnit</code> to remove.
    */
-  public static void unregisterCachedUrlSet(CachedUrlSet cus) {
-    cachedUrlSets.remove(cus);
+  public static void unregisterArchivalUnit(ArchivalUnit au) {
+    archivalUnits.remove(au);
   }
 
   /**
-   * Find the <code>CachedUrlSet</code> that comtains a URL.
+   * Find the <code>ArchivalUnit</code> (thus the <code>CachedUrlSet</code>)
+   * that comtains a URL.
    * @param url The URL to search for.
-   * @return The <code>CachedUrlSet</code> that contains the URL, or
-   * null if none found.  If more than one <code>CachedUrlSet</code>
-   * contains the URL, the earliest one registered is returned.
+   * @return The <code>ArchivalUnit</code> that contains the URL, or
+   * null if none found.  It is an error for more than one
+   * <code>ArchivalUnit</code> to contain the url.
    */
-  public static CachedUrlSet findCachedUrlSet(String url) {
-    for (Iterator iter = cachedUrlSets.iterator();
+  public static ArchivalUnit findArchivalUnit(String url) {
+    for (Iterator iter = archivalUnits.iterator();
 	 iter.hasNext();) {
       Object o = iter.next();
-      if (o instanceof CachedUrlSet) {
-	CachedUrlSet cus = (CachedUrlSet)o;
-	if (cus.memberOfSet(url)) {
-	  return cus;
+      if (o instanceof ArchivalUnit) {
+	ArchivalUnit au = (ArchivalUnit)o;
+	if (au.memberOfSet(url)) {
+	  return au;
 	}
       }
     }
     return null;
+  }
+
+  /**
+   * Find or create a <code>CachedUrlSet</code> representing the content
+   * specified by the URL and pattern.
+   * @param url 
+   * @param regex
+   */
+  public static CachedUrlSet findCachedUrlSet(String url, String regex) {
+    ArchivalUnit au = findArchivalUnit(url);
+    if (au == null) {
+      return null;
+    }
+    return au.makeCachedUrlSet(url, regex);
   }
 }

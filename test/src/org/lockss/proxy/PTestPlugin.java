@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.3 2002-09-19 20:56:06 tal Exp $
+ * $Id: PTestPlugin.java,v 1.4 2002-10-08 01:08:31 tal Exp $
  */
 
 /*
@@ -82,11 +82,11 @@ class PTestPlugin {
     }
   }
 
-  static class CUS extends NullPlugin.CachedUrlSet {
+  static class AU extends NullPlugin.ArchivalUnit {
     private Hashtable map = new Hashtable();
 
     public String toString() {
-      return "[cus: " + map + "]";
+      return "[au: " + map + "]";
     }
 
     private void storeCachedUrl(CachedUrl cu) {
@@ -106,13 +106,13 @@ class PTestPlugin {
     }
   }
 
-  public static CachedUrlSet makeTest() {
-    CUS cus = new CUS();
-    cus.storeCachedUrl(new CU("http://foo.bar/one", "text/plain",
+  public static ArchivalUnit makeTest() {
+    AU au = new AU();
+    au.storeCachedUrl(new CU("http://foo.bar/one", "text/plain",
 				      "this is one text\n"));
-    cus.storeCachedUrl(new CU("http://foo.bar/two", "text/html",
+    au.storeCachedUrl(new CU("http://foo.bar/two", "text/html",
 				      "<html><h3>this is two html</h3></html>"));
-    org.lockss.plugin.Plugin.registerCachedUrlSet(cus);
-    return cus;
+    org.lockss.plugin.Plugin.registerArchivalUnit(au);
+    return au;
   }
 }
