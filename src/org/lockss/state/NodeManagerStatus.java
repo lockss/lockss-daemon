@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.16 2004-01-29 01:46:28 eaalto Exp $
+ * $Id: NodeManagerStatus.java,v 1.17 2004-02-25 21:08:28 eaalto Exp $
  */
 
 /*
@@ -36,8 +36,6 @@ import org.lockss.app.*;
 
 /**
  * Collect and report the status of the NodeManager
- * @author Claire Griffin
- * @version 1.0
  */
 public class NodeManagerStatus extends BaseLockssManager {
   public static final String SERVICE_STATUS_TABLE_NAME =
@@ -52,24 +50,27 @@ public class NodeManagerStatus extends BaseLockssManager {
 
     StatusService statusServ = theDaemon.getStatusService();
 
-    statusServ.registerStatusAccessor(NodeManagerStatus.SERVICE_STATUS_TABLE_NAME,
-                                      new NodeManagerStatus.ServiceStatus(theDaemon));
-    statusServ.registerStatusAccessor(NodeManagerStatus.MANAGER_STATUS_TABLE_NAME,
-                                      new NodeManagerStatus.ManagerStatus(theDaemon));
-    statusServ.registerStatusAccessor(NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME,
-                                      new NodeManagerStatus.PollHistoryStatus(theDaemon));
+    statusServ.registerStatusAccessor(
+      NodeManagerStatus.SERVICE_STATUS_TABLE_NAME,
+      new NodeManagerStatus.ServiceStatus(theDaemon));
+    statusServ.registerStatusAccessor(
+      NodeManagerStatus.MANAGER_STATUS_TABLE_NAME,
+      new NodeManagerStatus.ManagerStatus(theDaemon));
+    statusServ.registerStatusAccessor(
+      NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME,
+      new NodeManagerStatus.PollHistoryStatus(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
   public void stopService() {
     // unregister our status accessors
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.unregisterStatusAccessor(NodeManagerStatus.
-        SERVICE_STATUS_TABLE_NAME);
-    statusServ.unregisterStatusAccessor(NodeManagerStatus.
-        MANAGER_STATUS_TABLE_NAME);
-    statusServ.unregisterStatusAccessor(NodeManagerStatus.
-        POLLHISTORY_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(
+      NodeManagerStatus.SERVICE_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(
+      NodeManagerStatus.MANAGER_STATUS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(
+      NodeManagerStatus.POLLHISTORY_STATUS_TABLE_NAME);
     logger.debug2("Status accessors unregistered.");
 
     super.stopService();
@@ -86,15 +87,14 @@ public class NodeManagerStatus extends BaseLockssManager {
 	 iter.hasNext(); ) {
       NodeManager manager = (NodeManager)iter.next();
       if (manager.getAuState().au.getAuId().equals(key)) {
-        return (NodeManagerImpl) manager;
+        return (NodeManagerImpl)manager;
       }
     }
     throw new StatusService.NoSuchTableException("No NodeManager for ID " +
                                                  key);
   }
 
-  static class ServiceStatus
-      implements StatusAccessor {
+  static class ServiceStatus implements StatusAccessor {
     static final String TABLE_TITLE = "NodeManager Service Table";
 
     private static final List columnDescriptors = ListUtil.list(
@@ -120,31 +120,24 @@ public class NodeManagerStatus extends BaseLockssManager {
       return TABLE_TITLE;
     }
 
-    public void populateTable(StatusTable table) throws StatusService.
-        NoSuchTableException {
-      String key = table.getKey();
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
-      table.setRows(getRows(key));
+      table.setRows(getRows());
     }
 
     public boolean requiresKey() {
       return false;
     }
 
-    private boolean matchKey(NodeManager manager, String key) {
-      return true;
-    }
-
-    private List getRows(String key) {
+    private List getRows() {
       List rowL = new ArrayList();
       for (Iterator iter = theDaemon.getAllNodeManagers().iterator();
 	   iter.hasNext(); ) {
 	NodeManager manager = (NodeManager)iter.next();
-        if (key == null || matchKey(manager, key)) {
-          if(manager.getAuState() != null) {
-            rowL.add(makeRow(manager));
-          }
+        if (manager.getAuState() != null) {
+          rowL.add(makeRow(manager));
         }
       }
       return rowL;
@@ -157,7 +150,7 @@ public class NodeManagerStatus extends BaseLockssManager {
 
       //"AuID"
       rowMap.put("AuName", ManagerStatus.makeNodeManagerRef(au.getName(),
-							    au.getAuId()));
+          au.getAuId()));
 
       //"Status"
       rowMap.put("CrawlTime", new Long(state.getLastCrawlTime()));
@@ -211,8 +204,8 @@ public class NodeManagerStatus extends BaseLockssManager {
 	UnsupportedOperationException("Node table has no generic title");
     }
 
-    public void populateTable(StatusTable table) throws StatusService.
-        NoSuchTableException {
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
       NodeManagerImpl nodeManager = getNodeManager(table.getKey(), theDaemon);
       String auname = nodeManager.getAuState().getArchivalUnit().getName();
 
@@ -248,9 +241,10 @@ public class NodeManagerStatus extends BaseLockssManager {
       return "NodeManager Table for Archival Unit " + key;
     }
 
+    // currently unused
     private void filterActiveNodes(List entriesList, NodeState state) {
       int status = state.getCrawlState().getStatus();
-      if ( (status != CrawlState.FINISHED) &&
+      if ((status != CrawlState.FINISHED) &&
           (status != CrawlState.NODE_DELETED)) {
         entriesList.add(state);
       }
@@ -367,8 +361,8 @@ public class NodeManagerStatus extends BaseLockssManager {
 	UnsupportedOperationException("Node table has no generic title");
     }
 
-    public void populateTable(StatusTable table) throws StatusService.
-        NoSuchTableException {
+    public void populateTable(StatusTable table)
+        throws StatusService.NoSuchTableException {
       String key = table.getKey();
       String filter = getPollFilterFromKey(key);
       NodeManagerImpl nodeManager = getNodeManagerFromKey(key, filter);
@@ -387,7 +381,8 @@ public class NodeManagerStatus extends BaseLockssManager {
     // utility methods for making a Reference
 
     public static StatusTable.Reference makeNodeRef(Object value,
-        String auId, String url, String filter) {
+                                                    String auId, String url,
+                                                    String filter) {
       StringBuffer key_buf = new StringBuffer(filter);
       key_buf.append(auId);
       key_buf.append("&");
@@ -404,8 +399,7 @@ public class NodeManagerStatus extends BaseLockssManager {
 
       if (filter.equals(ACTIVE_POLLS_FILTER)) {
         histories = state.getActivePolls();
-      }
-      else {
+      } else {
         histories = state.getPollHistories();
       }
       while (histories.hasNext()) {
@@ -424,7 +418,7 @@ public class NodeManagerStatus extends BaseLockssManager {
       // PollTime
       rowMap.put("StartTime", new Long(history.getStartTime()));
       long duration = 0;
-      if(history instanceof PollHistory) {
+      if (history instanceof PollHistory) {
         // Duration
         duration = ((PollHistory)history).getDuration();
       }
@@ -439,43 +433,41 @@ public class NodeManagerStatus extends BaseLockssManager {
       int agree = 0;
       int disagree = 0;
 
-      if(history instanceof PollHistory) {
+      if (history instanceof PollHistory) {
         Iterator votes = ((PollHistory)history).getVotes();
         while (votes.hasNext()) {
-          Vote vote = (Vote) votes.next();
+          Vote vote = (Vote)votes.next();
           if (vote.isAgreeVote()) {
             agree++;
-          }
-          else {
+          } else {
             disagree++;
           }
         }
-     }
-     // YesVotes
-     rowMap.put("NumAgree", new Integer(agree));
-     // NoVotes
-     rowMap.put("NumDisagree", new Integer(disagree));
+      }
+      // YesVotes
+      rowMap.put("NumAgree", new Integer(agree));
+      // NoVotes
+      rowMap.put("NumDisagree", new Integer(disagree));
 
       return rowMap;
     }
 
     // key support
 
-    private String getPollFilterFromKey(String key) throws
-        StatusService.NoSuchTableException {
+    private String getPollFilterFromKey(String key)
+        throws StatusService.NoSuchTableException {
       if (key.startsWith(ALL_POLLS_FILTER)) {
         return ALL_POLLS_FILTER;
-      }
-      else if (key.startsWith(ACTIVE_POLLS_FILTER)) {
+      } else if (key.startsWith(ACTIVE_POLLS_FILTER)) {
         return ACTIVE_POLLS_FILTER;
-      }
-      else {
-        throw new StatusService.NoSuchTableException("Unknown filter for key: " + key);
+      } else {
+        throw new StatusService.NoSuchTableException("Unknown filter for key: "+
+                                                     key);
       }
     }
 
-    private NodeManagerImpl getNodeManagerFromKey(String key, String filter) throws
-        StatusService.NoSuchTableException {
+    private NodeManagerImpl getNodeManagerFromKey(String key, String filter)
+        throws StatusService.NoSuchTableException {
       int pos = filter.length();
 
       String au_id = key.substring(pos, key.lastIndexOf("&"));
@@ -483,8 +475,8 @@ public class NodeManagerStatus extends BaseLockssManager {
       return getNodeManager(au_id, theDaemon);
     }
 
-    private NodeState getNodeStateFromKey(NodeManager nodeManager, String key) throws
-        StatusService.NoSuchTableException {
+    private NodeState getNodeStateFromKey(NodeManager nodeManager, String key)
+        throws StatusService.NoSuchTableException {
       int pos = key.lastIndexOf("&");
       String url = key.substring(pos + 1);
       logger.debug("finding node state for url: " + url);
