@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.7 2004-09-13 04:02:23 dshr Exp $
+ * $Id: VoteBean.java,v 1.8 2004-09-20 14:20:39 dshr Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import org.lockss.poller.Vote;
-import org.lockss.protocol.LcapIdentity;
 import org.lockss.protocol.IdentityManager;
 import java.net.UnknownHostException;
 
@@ -61,7 +60,7 @@ public class VoteBean extends Vote {
    * @param vote the Vote
    */
   VoteBean(Vote vote) {
-    idStr = vote.getIdentityKey();
+    idStr = vote.getVoterIdentity().getIdString();
     agree = vote.isAgreeVote();
     challengeStr = vote.getChallengeString();
     verifierStr = vote.getVerifierString();

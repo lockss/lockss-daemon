@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.19 2004-09-15 22:56:32 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.20 2004-09-20 14:20:38 dshr Exp $
  */
 
 /*
@@ -457,7 +457,7 @@ public class ArchivalUnitStatus
 	Map statsMap = buildCacheStats(au, nodeMan);
 	List rowL = new ArrayList();
 	for (Iterator iter = statsMap.keySet().iterator(); iter.hasNext(); ) {
-	  String identity = (String)iter.next();
+	  String identity = ((PeerIdentity)iter.next()).getIdString();
 	  CacheStats stats = (CacheStats)statsMap.get(identity);
 	  if (! idManager.isLocalIdentity(stats.identity)) {
 	    totalPeers++;
@@ -482,7 +482,7 @@ public class ArchivalUnitStatus
 	long histTime = history.getStartTime();
 	for (Iterator votes_it = history.getVotes(); votes_it.hasNext(); ) {
 	  Vote vote = (Vote)votes_it.next();
-	  String identity = vote.getIdentityKey();
+	  String identity = vote.getVoterIdentity().getIdString();
 	  CacheStats stats = (CacheStats)statsMap.get(identity);
 	  if (stats == null) {
 	    stats = new CacheStats(identity);

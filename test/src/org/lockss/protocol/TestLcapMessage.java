@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.34 2004-09-16 21:29:19 dshr Exp $
+ * $Id: TestLcapMessage.java,v 1.35 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -39,9 +39,10 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
-import org.lockss.poller.TestPoll;
 import org.lockss.poller.*;
+import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.util.*;
+import org.lockss.app.LockssDaemon;
 
 /** JUnitTest case for class: org.lockss.protocol.Message */
 public class TestLcapMessage extends LockssTestCase {
@@ -54,9 +55,10 @@ public class TestLcapMessage extends LockssTestCase {
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   protected IPAddr testaddr;
-  protected LcapIdentity testID;
+  protected PeerIdentity testID;
   protected LcapMessage testmsg;
   protected static String archivalID = "TestAU_1.0";
+  private static LockssDaemon theDaemon = null;
 
   public TestLcapMessage(String _name) {
     super(_name);
@@ -65,8 +67,25 @@ public class TestLcapMessage extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    theDaemon = new MockLockssDaemon();
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    IdentityManager idmgr = theDaemon.getIdentityManager();
+    idmgr.startService();
     try {
       testaddr = IPAddr.getByName("127.0.0.1");
+      testID = idmgr.stringToPeerIdentity("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -81,9 +100,8 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_targetUrl = urlstr;
     testmsg.m_lwrBound = lwrbnd;
     testmsg.m_uprBound = uprbnd;
-    testID = new LcapIdentity(testaddr, 0);
 
-    testmsg.m_originatorID = testaddr.toString();
+    testmsg.m_originatorID = testID;
     testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;
@@ -150,7 +168,7 @@ public class TestLcapMessage extends LockssTestCase {
     noop_msg = LcapMessage.makeNoOpMsg(testID, testbytes);
 
     // now check the fields we expect to be valid
-    assertEquals(testaddr.toString(), noop_msg.m_originatorID);
+    assertTrue(testID == noop_msg.m_originatorID);
     assertEquals(LcapMessage.NO_OP, noop_msg.m_opcode);
     assertEquals(testbytes, noop_msg.m_verifier);
   }
@@ -171,7 +189,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     LcapMessage msg = new LcapMessage(msgbytes);
     // now test to see if we got back what we started with
-    assertEquals(testaddr.toString(), msg.m_originatorID);
+    assertTrue(testID == msg.m_originatorID);
     assertEquals(LcapMessage.NO_OP, msg.m_opcode);
     assertEquals(testbytes, msg.m_verifier);
   }
@@ -189,7 +207,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     // now test to see if we got back what we expected
 
-    assertEquals(testaddr.toString(), rep_msg.m_originatorID);
+    assertTrue(testID == rep_msg.m_originatorID);
     assertEquals(5, rep_msg.m_ttl);
     assertEquals(LcapMessage.CONTENT_POLL_REP, rep_msg.m_opcode);
     assertEquals(testmsg.m_hashAlgorithm, rep_msg.m_hashAlgorithm);
@@ -219,7 +237,7 @@ public class TestLcapMessage extends LockssTestCase {
     assertEquals(spec.getPollVersion(), 1);
     assertEquals(1, req_msg.getPollVersion());
     assertEquals("Plug42", req_msg.getPluginVersion());
-    assertEquals(testaddr.toString(), req_msg.m_originatorID);
+    assertTrue(testID == req_msg.m_originatorID);
     assertEquals(LcapMessage.CONTENT_POLL_REQ, req_msg.m_opcode);
     assertFalse(req_msg.m_multicast);
     assertEquals(archivalID, req_msg.m_archivalID);
@@ -238,7 +256,7 @@ public class TestLcapMessage extends LockssTestCase {
 
     LcapMessage msg = new LcapMessage(msgbytes);
     // now test to see if we got back what we started with
-    assertEquals(testaddr.toString(), msg.m_originatorID);
+    assertTrue(testID == msg.m_originatorID);
     assertEquals(5, msg.m_ttl);
     assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);
@@ -263,7 +281,7 @@ public class TestLcapMessage extends LockssTestCase {
     msg = new LcapMessage(msg.encodeMsg());
     // now test to see if we got back what we started with
     assertEquals(3, msg.m_hopCount);
-    assertEquals(testaddr.toString(), msg.m_originatorID);
+    assertTrue(testID == msg.m_originatorID);
     assertEquals(5, msg.m_ttl);
     assertEquals(LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);

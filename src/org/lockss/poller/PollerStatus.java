@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.15 2004-09-13 04:02:21 dshr Exp $
+* $Id: PollerStatus.java,v 1.16 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -471,10 +471,10 @@ public class PollerStatus {
     private Map makeRow(Vote vote) {
       HashMap rowMap = new HashMap();
 
-      rowMap.put("Identity", vote.getIdentityKey());
-      LcapIdentity id = pollManager.getIdentityManager().findIdentity(
-          vote.getIdentityKey());
-      rowMap.put("Reputation", String.valueOf(id.getReputation()));
+      PeerIdentity pid = vote.getVoterIdentity();
+      rowMap.put("Identity", pid.getIdString());
+      int reputation = pollManager.getIdentityManager().getReputation(pid);
+      rowMap.put("Reputation", String.valueOf(reputation));
       rowMap.put("Agree", String.valueOf(vote.agree));
       rowMap.put("Challenge", vote.getChallengeString());
       rowMap.put("Verifier",vote.getVerifierString());

@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.44 2004-09-16 21:29:16 dshr Exp $
+ * $Id: IdentityManager.java,v 1.45 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
+import org.lockss.poller.Vote;
 
 /**
  * Abstraction for identity of a LOCKSS cache.  Currently wraps an IP address.
@@ -49,7 +50,7 @@ import org.lockss.app.*;
 public class IdentityManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
-  static Logger log = Logger.getLogger("IdentityManager");
+  public static Logger log = Logger.getLogger("IdentityManager");
 
   public static final String PARAM_LOCAL_IP =
     Configuration.PREFIX + "localIPAddress";
@@ -107,10 +108,26 @@ public class IdentityManager
   static final int INITIAL_REPUTATION = 500;
   static final int REPUTATION_NUMERATOR = 1000;
 
-  static Random theRandom = new Random();
+  static LockssRandom theRandom = new LockssRandom();
 
+  /*
+   * There are two classes representing the identity of a peer.
+   * PeerData is used only by the IdentityManager; instances
+   * contain all the actual information about the peer.  PeerIdentity
+   * is an opaque cookie that the IdentityManager provides to its
+   * clients; they use it to refer to a peer without having a reference
+   * to an instance of PeerData.  Peers have very long lives and
+   * potentially have a lot of information but only a few will be
+   * actively in use at any one time. The PeerData
+   * is found by looking up the PeerIdentity in a HashMap called
+   * thePeerCache;  it should be a cache of active PeerData
+   * instances but it currently contains all of them.
+   * XXX currently using LcapIdentity instead of PeerData
+   */
   protected static String localIdentityStr;
-  LcapIdentity theLocalIdentity;
+  protected static LcapIdentity theLocalLcapIdentity;
+  protected static PeerIdentity theLocalPeerIdentity;
+  protected static IPAddr theLocalIPAddr = null;
 
   int[] reputationDeltas = new int[10];
 
@@ -126,29 +143,24 @@ public class IdentityManager
 
   public IdentityManager() { }
 
-  public void initService(LockssDaemon daemon) {
+  public void initService(LockssDaemon daemon) throws LockssAppException {
     super.initService(daemon);
     localIdentityStr = Configuration.getParam(PARAM_LOCAL_IP);
-    log.debug("localIdentityStr: " + localIdentityStr);
+    try {
+      theLocalIPAddr = IPAddr.getByName(localIdentityStr);
+    } catch (UnknownHostException uhe) {
+      log.error(PARAM_LOCAL_IP +
+		" can't be looked up - IdentityManager cannot start.");
+      throw new
+	LockssAppException(PARAM_LOCAL_IP +
+			   " can't be looked up - IdentityManager cannot start.");
+    }
     if (localIdentityStr == null) {
       log.error(PARAM_LOCAL_IP +
 		" is not set - IdentityManager cannot start.");
       throw new
 	LockssAppException(PARAM_LOCAL_IP +
 			      " is not set - IdentityManager cannot start.");
-    }
-    makeLocalIdentity();
-  }
-
-  protected void makeLocalIdentity() throws LockssAppException {
-    try {
-      IPAddr addr = IPAddr.getByName(localIdentityStr);
-      // XXX the local identity for now is V1
-      theLocalIdentity = new LcapIdentity(addr, 0);
-    } catch (UnknownHostException uhe) {
-      log.error("Could not resolve: " + localIdentityStr, uhe);
-      throw new
-	LockssAppException("Could not resolve: " + localIdentityStr);
     }
   }
 
@@ -158,14 +170,27 @@ public class IdentityManager
    */
   public void startService() {
     super.startService();
+    theLocalPeerIdentity = PeerIdentity.stringToIdentity(localIdentityStr);
+    synchronized (theIdentities) {
+      if (!theIdentities.containsKey(theLocalPeerIdentity)) {
+	// XXX V1-specific
+	theIdentities.put(theLocalPeerIdentity,
+			  new LcapIdentity(theLocalIPAddr, 0));
+      }
+    }
     reloadIdentities();
-    log.info("Local identity: " + getLocalIdentity());
+    
+    log.info("Local identity: " + getLocalPeerIdentity());
     getDaemon().getStatusService().registerStatusAccessor("Identities",
 							  new Status());
+    Vote.setIdentityManager(this); 
+    LcapMessage.setIdentityManager(this);
+    PartnerList.setIdentityManager(this);
+    IdentityAgreement.setIdentityManager(this);
   }
 
   /**
-   * stop the plugin manager
+   * stop the identity manager
    * @see org.lockss.app.LockssManager#stopService()
    */
   public void stopService() {
@@ -175,113 +200,126 @@ public class IdentityManager
     catch (ProtocolException ex) {
     }
     super.stopService();
+    Vote.setIdentityManager(null);
+    LcapMessage.setIdentityManager(null);
+    PartnerList.setIdentityManager(null);
   }
 
   /**
-   * public constructor for the creation of an Identity object
-   * from an address.
-   * @param addr the IPAddr
-   * @return a pre-existing or newly constructed Identity
+   * ipAddrToPeerIdentity returns the peer identity matching the
+   * IP address and port.  An instance is created if necesary.
+   * Used only by LcapRouter (and soon by its stream analog).
+   * @param addr the IPAddr of the peer, null for the local peer
+   * @param port the port of the peer
+   * @return the PeerIdentity representing the peer
    */
-  public LcapIdentity findIdentity(IPAddr addr, int port) {
-    LcapIdentity ret;
-
-    if(addr == null)  {
-      ret = getLocalIdentity();
-    }
-    else  {
-      String idKey = LcapIdentity.makeIdKey(addr, port);
-      ret = getIdentity(idKey);
-      if(ret == null)  try {
-        ret = new LcapIdentity(idKey, INITIAL_REPUTATION);
-        theIdentities.put(idKey, ret);
-      } catch (UnknownHostException uhe) {
-	log.warning("Can't create identity for " + idKey);
+  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port) {
+    PeerIdentity ret = null;
+    if (addr == null) {
+      ret = theLocalPeerIdentity;
+    } else {
+      ret = PeerIdentity.ipAddrToIdentity(addr, port);
+      synchronized (theIdentities) {
+	if (!theIdentities.containsKey(ret)) {
+	  theIdentities.put(ret, new LcapIdentity(addr, port));
+	}
       }
     }
-
     return ret;
   }
 
-  /**
-   * public constructor for the creation of an Identity object
-   * from an ID key.
-   * @param idKey the ID key
-   * @return a pre-existing or newly constructed Identity
-   */
-  public LcapIdentity findIdentity(String idKey) {
-    LcapIdentity ret;
+  public PeerIdentity ipAddrToPeerIdentity(IPAddr addr) {
+    return ipAddrToPeerIdentity(addr, 0);
+  }
 
-    if(idKey == null)  {
-      ret = getLocalIdentity();
-    }
-    else  {
-      ret = getIdentity(idKey);
-      if(ret == null)  try {
-        ret = new LcapIdentity(idKey, INITIAL_REPUTATION);
-        theIdentities.put(idKey, ret);
-      } catch (UnknownHostException uhe) {
-	log.warning("Can't create identity for " + idKey);
+  /**
+   * stringToPeerIdentity returns the peer identity matching the
+   * String ip address and port.  An instance is created if necesary.
+   * Used only by LcapMessage (and soon by its stream analog).
+   * @param idKey the ip addr and port of the peer, null for the local peer
+   * @return the PeerIdentity representing the peer
+   */
+  public PeerIdentity stringToPeerIdentity(String idKey)
+    throws UnknownHostException {
+    PeerIdentity ret = null;
+    if (idKey == null) {
+      ret = theLocalPeerIdentity;
+    } else {
+      ret = PeerIdentity.stringToIdentity(idKey);
+      synchronized (theIdentities) {
+	if (!theIdentities.containsKey(ret)) {
+	  theIdentities.put(ret, new LcapIdentity(idKey));
+	}
       }
     }
-
     return ret;
   }
 
 
+  public IPAddr identityToIPAddr(PeerIdentity pid)
+    throws UnknownHostException {
+    LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
+    if (lid == null) {
+      log.error(pid.toString() + " has no LcapIdentity");
+    } else if (lid.getPort() != 0) {
+      log.error(pid.toString() + " is not a V1 identity");
+    } else {
+      return lid.getAddress();
+    }
+    throw new UnknownHostException(pid.toString());
+  }
+ 
   /**
-   * get and return an already created identity
-   * @param idKey the key for the identity we want to find
-   * @return the LcapIdentity or null
+   * getLocalPeerIdentity returns the local peer identity
+   * @return the local peer identity
    */
-  public LcapIdentity getIdentity(Object idKey)  {
-    return (LcapIdentity)theIdentities.get(idKey);
+  public PeerIdentity getLocalPeerIdentity() {
+    return theLocalPeerIdentity;
   }
 
   /**
-   * Get the Identity of the local host
-   * @return LcapIdentity for the local host
+   * getLocalIPAddr returns the IPAddr of the local peer
+   * @return the IPAddr of the local peer
    */
-  public LcapIdentity getLocalIdentity() {
-    return theLocalIdentity;
+  public static IPAddr getLocalIPAddr() {
+    return theLocalIPAddr;
   }
 
   /**
-   * Get the local host name
-   * @return hostname as a String
-   */
-  public static String getLocalHostName() {
-    return localIdentityStr;
-  }
-
-  /**
-   * return true if this Identity is the same as the local host
-   * @param id the LcapIdentity
+   * return true if this PeerIdentity is the same as the local host
+   * @param id the PeerIdentity
    * @return boolean true if is the local identity, false otherwise
    */
-  public boolean isLocalIdentity(LcapIdentity id) {
-    return theLocalIdentity.isEqual(id);
+  public boolean isLocalIdentity(PeerIdentity id) {
+    return (theLocalPeerIdentity == id);
   }
 
   /**
-   * return true if this Identity is the same as the local host
-   * @param id the ID string
-   * @return boolean true if this is the local identity, false otherwise
+   * return true if this PeerIdentity is the same as the local host
+   * @param id a String representing the PeerIdentity
+   * @return boolean true if is the local identity, false otherwise
    */
-  public boolean isLocalIdentity(String id) {
-    return (localIdentityStr.equals(id));
+  public boolean isLocalIdentity(String idStr) {
+    boolean ret = false;
+    try {
+      ret = isLocalIdentity(stringToPeerIdentity(idStr));
+    } catch (UnknownHostException uhe) {
+      // No action intended
+    }
+    return ret;
   }
 
   /**
-   * returns true if the IPAddr is the same as the IPAddr for our
-   * local host
-   * @param addr the address to check
-   * @return boolean true if the this is IPAddr is considered local
+   * rememberEvent associates the event with the peer identity
+   * @param id the PeerIdentity
+   * @param event the event code
+   * @param msg the LcapMessage involved
    */
-  public boolean isLocalIdentity(IPAddr addr) {
-    return theLocalIdentity.m_address.equals(addr);
+  public void rememberEvent(PeerIdentity id, int event, LcapMessage msg) {
+    LcapIdentity lid = (LcapIdentity)theIdentities.get(id);
+    if (lid != null)
+      lid.rememberEvent(event, msg);
   }
-
   /**
    * return the max value of an Identity's reputation
    * @return the int value of max reputation
@@ -290,18 +328,53 @@ public class IdentityManager
     return REPUTATION_NUMERATOR;
   }
 
-  public void changeReputation(String idKey, int changeKind) {
-    LcapIdentity id = findIdentity(idKey);
-    changeReputation(id, changeKind);
+  /**
+   * getReputation returns the reputation of the peer
+   * @param id the PeerIdentity
+   * @return the reputation
+   */
+  public int getReputation(PeerIdentity id) {
+    int ret = 0;
+    LcapIdentity lid = (LcapIdentity)theIdentities.get(id);
+    if (lid == null) {
+      log.error("Can't find LcapIdentity for " + id.toString());
+    } else {
+      ret = lid.getReputation();
+    }
+    return ret;
   }
 
-  public void changeReputation(LcapIdentity id, int changeKind) {
-    int delta = reputationDeltas[changeKind];
-    int max_delta = reputationDeltas[MAX_DELTA];
-    int reputation = id.getReputation();
+  /**
+   * getReputationDelta returns the amount of reputation change that
+   * reflects the specified kind of event.
+   * @param changeKind the type of event
+   * @return the delta that would be applied to a peer's reputation
+   */
+  protected int getReputationDelta(int changeKind) {
+    int ret = -1;
+    if (changeKind >= 0 && changeKind < reputationDeltas.length)
+      ret = reputationDeltas[changeKind];
+    return ret;
+  }
     
-    if (id == theLocalIdentity) {
-      log.debug(id.getIdKey() + " ignoring reputation delta " + delta);
+  /**
+   * changeReputation makes the change to the reputation of the peer "id"
+   * matching the event "changeKind"
+   * @param id the PeerIdentity of the peer to affect
+   * @param changeKind the type of event that is being reflected
+   */
+  public void changeReputation(PeerIdentity id, int changeKind) {
+    int delta = getReputationDelta(changeKind);
+    int max_delta = reputationDeltas[MAX_DELTA];
+    LcapIdentity lid = (LcapIdentity)theIdentities.get(id);
+    if (lid == null) {
+      log.error("Can't find LcapIdentity for " + id.toString());
+      return;
+    }
+    int reputation = lid.getReputation();
+    
+    if (id == theLocalPeerIdentity) {
+      log.debug(id.toString() + " ignoring reputation delta " + delta);
       return;
     }
 
@@ -323,13 +396,13 @@ public class IdentityManager
       }
     }
     if (delta != 0)
-      log.debug(id.getIdKey() +" change reputation from " + reputation +
+      log.debug(id.toString() +" change reputation from " + reputation +
 		" to " + (reputation + delta));
-    id.changeReputation(delta);
+    lid.changeReputation(delta);
   }
 
 
-  void reloadIdentities() {
+  private void reloadIdentities() {
     try {
       String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
       if (iddbDir==null) {
@@ -348,11 +421,20 @@ public class IdentityManager
       } else {
         setIdentities(idlb.getIdBeans());
       }
+      if (!theIdentities.containsKey(theLocalPeerIdentity)) {
+	theIdentities.put(theLocalPeerIdentity,
+			  new LcapIdentity(localIdentityStr));
+      }
     } catch (Exception e) {
       log.warning("Couldn't load identity database: " + e.getMessage());
     }
   }
 
+
+  /**
+   * storeIdentities is used by the PollManager to record the result of
+   * tallying a poll.
+   */
   public void storeIdentities() throws ProtocolException {
     try {
       String fn = Configuration.getParam(PARAM_IDDB_DIR);
@@ -374,7 +456,7 @@ public class IdentityManager
   }
 
 
-  IdentityListBean getIdentityListBean() {
+  public IdentityListBean getIdentityListBean() {
     synchronized(theIdentities) {
       List beanList = new ArrayList(theIdentities.size());
       Iterator mapIter = theIdentities.values().iterator();
@@ -388,15 +470,16 @@ public class IdentityManager
     }
   }
 
-  void setIdentities(Collection idList) {
+  private void setIdentities(Collection idList) {
     Iterator beanIter = idList.iterator();
     synchronized(theIdentities) {
       while (beanIter.hasNext()) {
         IdentityBean bean = (IdentityBean)beanIter.next();
         String idKey = bean.getKey();
         try {
+	  PeerIdentity pid = PeerIdentity.stringToIdentity(idKey);
           LcapIdentity id = new LcapIdentity(idKey, bean.getReputation());
-          theIdentities.put(idKey, id);
+          theIdentities.put(pid, id);
         }
         catch (UnknownHostException ex) {
           log.warning("Error reloading identity-Unknown Host: " + idKey);
@@ -410,18 +493,18 @@ public class IdentityManager
   /**
    * Signals that we've agreed with id on a top level poll on au.
    * Only called if we're both on the winning side
-   * @param cacheAddr the address
+   * @param pid the PeerIdentity of the agreeing peer
    * @param au the {@link ArchivalUnit}
    */
-  public void signalAgreed(String cacheAddr, ArchivalUnit au) {
-    signalAgreed(cacheAddr, au, TimeBase.nowMs());
+  public void signalAgreed(PeerIdentity pid, ArchivalUnit au) {
+    signalAgreed(pid, au, TimeBase.nowMs());
   }
 
-  private void signalAgreed(String cacheAddr, ArchivalUnit au, long time) {
+  private void signalAgreed(PeerIdentity pid, ArchivalUnit au, long time) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
-    } else if (cacheAddr == null) {
-      throw new IllegalArgumentException("Called with null cacheAddr");
+    } else if (pid == null) {
+      throw new IllegalArgumentException("Called with null pid");
     }
     synchronized (identityMapLock) { //using as the lock for all 3 maps
       ensureIdentityMapsLoaded(au);
@@ -430,14 +513,14 @@ public class IdentityManager
 	map = new HashMap();
 	agreeMap.put(au, map);
       }
-      map.put(cacheAddr, new Long(time));
+      map.put(pid, new Long(time));
 
       map = (Map)cachesToFetchFrom.get(au);
       if (map == null) {
 	map = new HashMap();
 	cachesToFetchFrom.put(au, map);
       }
-      map.put(cacheAddr, new Long(time));
+      map.put(pid, new Long(time));
       storeIdentityAgreement(au);
     }
   }
@@ -445,18 +528,18 @@ public class IdentityManager
   /**
    * Signals that we've disagreed with id on any level poll on au.
    * Only called if we're on the winning side
-   * @param cacheAddr the address
+   * @param pid the PeerIdentity of the disagreeing peer
    * @param au the {@link ArchivalUnit}
    */
-  public void signalDisagreed(String cacheAddr, ArchivalUnit au) {
-    signalDisagreed(cacheAddr, au, TimeBase.nowMs());
+  public void signalDisagreed(PeerIdentity pid, ArchivalUnit au) {
+    signalDisagreed(pid, au, TimeBase.nowMs());
   }
 
-  private void signalDisagreed(String cacheAddr, ArchivalUnit au, long time) {
+  private void signalDisagreed(PeerIdentity pid, ArchivalUnit au, long time) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
-    } else if (cacheAddr == null) {
-      throw new IllegalArgumentException("Called with null cacheAddr");
+    } else if (pid == null) {
+      throw new IllegalArgumentException("Called with null pid");
     }
     synchronized (identityMapLock) { //using as the lock for all 3 maps
       ensureIdentityMapsLoaded(au);
@@ -465,13 +548,13 @@ public class IdentityManager
 	map = new HashMap();
 	disagreeMap.put(au, map);
       }
-      map.put(cacheAddr, new Long(time));
+      map.put(pid, new Long(time));
 
       map = (Map)cachesToFetchFrom.get(au);
       if (map == null) {
  	return;
       }
-      map.remove(cacheAddr);
+      map.remove(pid);
       if (map.size() == 0) {
  	cachesToFetchFrom.remove(au);
       }
@@ -480,8 +563,8 @@ public class IdentityManager
   }
 
   /**
-   * @param au ArchivalUnit to look up LcapIdentities for
-   * @return a map of LcapIdentity -> last agreed time.
+   * @param au ArchivalUnit to look up PeerIdentities for
+   * @return a map of PeerIdentity -> last agreed time.
    */
   public Map getCachesToRepairFrom(ArchivalUnit au) {
     if (au == null) {
@@ -520,10 +603,10 @@ public class IdentityManager
       while (it.hasNext()) {
 	IdentityAgreement ida = (IdentityAgreement)it.next();
 	if (ida.getLastAgree() > 0) {
-	  signalAgreed(ida.getId(), au, ida.getLastAgree());
+	  signalAgreed(ida.getPeerIdentity(), au, ida.getLastAgree());
 	}
 	if (ida.getLastDisagree() > 0) {
-	  signalDisagreed(ida.getId(), au, ida.getLastDisagree());
+	  signalDisagreed(ida.getPeerIdentity(), au, ida.getLastDisagree());
 	}
       }
     }
@@ -545,13 +628,13 @@ public class IdentityManager
     if (agreeMapForAu != null && agreeMapForAu.size() > 0) {
       Iterator it = agreeMapForAu.keySet().iterator();
       while (it.hasNext()) {
-	String id = (String)it.next();
-	Long time = (Long)agreeMapForAu.get(id);
-	IdentityAgreement ida = new IdentityAgreement(id);
+	PeerIdentity pid = (PeerIdentity)it.next();
+	Long time = (Long)agreeMapForAu.get(pid);
+	IdentityAgreement ida = new IdentityAgreement(pid);
 	ida.setLastAgree(time.longValue());
 
 	list.add(ida);
-	map.put(id, ida);
+	map.put(pid, ida);
       }
     }
 
@@ -559,13 +642,13 @@ public class IdentityManager
     if (disagreeMapForAu != null && disagreeMapForAu.size() > 0) {
       Iterator it = disagreeMapForAu.keySet().iterator();
       while (it.hasNext()) {
-	String id = (String)it.next();
-	Long time = (Long)disagreeMapForAu.get(id);
-	IdentityAgreement ida = (IdentityAgreement)map.get(id);
+	PeerIdentity pid = (PeerIdentity)it.next();
+	Long time = (Long)disagreeMapForAu.get(pid);
+	IdentityAgreement ida = (IdentityAgreement)map.get(pid);
 	if (ida == null) { //wasn't set in the previous loop
-	  ida = new IdentityAgreement(id);
+	  ida = new IdentityAgreement(pid);
 	  list.add(ida);
-	  map.put(id, ida);
+	  map.put(pid, ida);
 	}
 	ida.setLastDisagree(time.longValue());
       }
@@ -638,13 +721,18 @@ public class IdentityManager
     private long lastAgree = 0;
     private long lastDisagree = 0;
     private String id = null;
+    private static IdentityManager idMgr = null;
 
-    public IdentityAgreement(String id) {
-      this.id = id;
+    public IdentityAgreement(PeerIdentity pid) {
+      this.id = pid.getIdString();
     }
 
     // needed for marshalling
     public IdentityAgreement() {}
+
+    private static void setIdentityManager(IdentityManager idm) {
+      idMgr = idm;
+    }
 
     public long getLastAgree() {
       return lastAgree;
@@ -664,6 +752,16 @@ public class IdentityManager
 
     public String getId() {
       return id;
+    }
+
+    public PeerIdentity getPeerIdentity() {
+      PeerIdentity ret = null;
+      try {
+	ret = idMgr.stringToPeerIdentity(id);
+      } catch (UnknownHostException uhe) {
+	// No action intended
+      }
+      return ret;
     }
 
     public void setId(String id) {
@@ -743,13 +841,14 @@ public class IdentityManager
     private Map makeRow(LcapIdentity id) {
       Map row = new HashMap();
       String idKey = id.getIdKey();
-      if (isLocalIdentity(idKey)) {
+      PeerIdentity pid = PeerIdentity.stringToIdentity(idKey);
+      if (isLocalIdentity(pid)) {
 	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(idKey);
+	  new StatusTable.DisplayedValue(pid.toString());
 	val.setBold(true);
 	row.put("ip", val);
       } else {
-	row.put("ip", idKey);
+	row.put("ip", pid.toString());
       }
       row.put("lastPkt", new Long(id.getLastActiveTime()));
       row.put("lastOp", new Long(id.getLastOpTime()));

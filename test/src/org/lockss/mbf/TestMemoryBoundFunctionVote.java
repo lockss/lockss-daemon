@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.13 2003-10-14 17:47:00 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.14 2004-09-20 14:20:39 dshr Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.util.*;
 import org.lockss.protocol.*;
+import org.lockss.repository.LockssRepositoryImpl;
+import org.lockss.app.LockssDaemon;
 
 /**
  * JUnitTest case for class: org.lockss.mbf.MemoryBoundFunctionVote and
@@ -76,9 +78,10 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static byte[] goodContent = null;
   private static byte[] badContent = null;
   private static byte[] pollID = null;
-  private static LcapIdentity voterID = null;
+  private static PeerIdentity voterID = null;
   private static byte[] basisT = null;
   private static byte[] basisA0 = null;
+  private static IdentityManager idmgr = null;
 
   /**
    * Set up the test case by creating the two basis arrays and a good
@@ -90,6 +93,20 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     log = Logger.getLogger("TestMemoryBoundFunction");
+    LockssDaemon theDaemon = new MockLockssDaemon();
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    idmgr = theDaemon.getIdentityManager();
     if (false)
       rand = new Random(100);
     else 
@@ -138,9 +155,9 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     pollID = new byte[20];
     rand.nextBytes(pollID);
     try {
-      voterID = new LcapIdentity("127.0.0.1", 1);
+      voterID = idmgr.stringToPeerIdentity("127.0.0.1");
     } catch (UnknownHostException ex) {
-      fail("LcapIdentity throws: " + ex.toString());
+      fail("PeerIdentity throws: " + ex.toString());
     }
   }
 

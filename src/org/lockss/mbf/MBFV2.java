@@ -1,5 +1,5 @@
 /*
- * $Id: MBFV2.java,v 1.12 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: MBFV2.java,v 1.13 2004-09-20 14:20:35 dshr Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 				 int eVal,
 				 CachedUrlSet cusVal,
 				 byte[] pollID,
-				 LcapIdentity voterID)
+				 PeerIdentity voterID)
     throws MemoryBoundFunctionException {
     super.setupGeneration(fact, nVal, eVal, cusVal, pollID, voterID);
     setup(nVal, eVal, cusVal, pollID, voterID);
@@ -151,7 +151,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 				int sVals[][],
 				byte[][] hashes,
 				byte[] pollID,
-				LcapIdentity voterID)
+				PeerIdentity voterID)
     throws MemoryBoundFunctionException {
     super.setupVerification(fact, nVal, eVal, cusVal, sVals, hashes,
 			    pollID, voterID);
@@ -170,7 +170,7 @@ public class MBFV2 extends MemoryBoundFunctionVote {
 		     int eVal,
 		     CachedUrlSet cusVal,
 		     byte[] pollID,
-		     LcapIdentity voterID) throws
+		     PeerIdentity voterID) throws
     MemoryBoundFunctionException {
     finished = false;
     if (proofDigest == null) try {

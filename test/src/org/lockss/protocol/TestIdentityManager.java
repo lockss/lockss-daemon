@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.27 2004-09-13 04:02:24 dshr Exp $
+ * $Id: TestIdentityManager.java,v 1.28 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -40,9 +40,6 @@ import org.lockss.test.*;
 
 /** JUnitTest case for class: org.lockss.protocol.IdentityManager */
 public class TestIdentityManager extends LockssTestCase {
-  static String fakeIdString = "213.239.33.100";
-  static LcapIdentity fakeId = null;
-  IPAddr testAddress;
   int testReputation;
   Object testIdKey;
 //  private static String urlstr = "http://www.test.org";
@@ -54,6 +51,9 @@ public class TestIdentityManager extends LockssTestCase {
 
   private MockLockssDaemon theDaemon;
   private IdentityManager idmgr;
+  PeerIdentity peer1;
+  PeerIdentity peer2;
+  PeerIdentity peer3;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -66,33 +66,63 @@ public class TestIdentityManager extends LockssTestCase {
 
     theDaemon = new MockLockssDaemon();
     idmgr = theDaemon.getIdentityManager();
+    idmgr.startService();
 
-    try {
-      fakeId = idmgr.findIdentity(fakeIdString);
-      testAddress = IPAddr.getByName("127.0.0.1");
-    }
-    catch (UnknownHostException ex) {
-      fail("can't open test host");
-    }
     testReputation = IdentityManager.INITIAL_REPUTATION;
-    testIdKey = LcapIdentity.makeIdKey(testAddress, 0);
 
   }
 
   public void tearDown() throws Exception {
-    idmgr.stopService();
+    if (idmgr != null) {
+      idmgr.stopService();
+      idmgr = null;
+    }
     super.tearDown();
   }
 
-  /** test for method getIdentity(..) */
-  public void testFindIdentity() {
-    assertNotNull(fakeId);
-    assertEquals(fakeId, idmgr.findIdentity(fakeId.getAddress(), 0));
+  /** test for method stringToPeerIdentity **/
+  public void testStringToPeerIdentity() {
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    assertTrue(peer1 != null);
+    assertTrue(peer1 == idmgr.stringToPeerIdentity("127.0.0.1"));
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    assertTrue(peer2 != null);
+    assertNotEquals(peer1, peer2);
+    peer3 = idmgr.stringToPeerIdentity("127.0.0.2:300");
+    assertTrue(peer3 != null);
+    assertNotEquals(peer3, peer2);
+    assertNotEquals(peer3, peer1);
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
-  /** test for method findIdentity(..) */
-  public void testGetIdentity() {
-    assertTrue(idmgr.getIdentity(fakeId.getIdKey()) != null);
+  /** test for method ipAddrToPeerIdentity **/
+  public void testIPAddrToPeerIdentity() {
+    IPAddr ip1 = null;
+    IPAddr ip2 = null;
+    IPAddr ip3 = null;
+
+    try {
+      ip1 = IPAddr.getByName("127.0.0.1");
+      ip2 = IPAddr.getByName("127.0.0.2");
+      ip3 = IPAddr.getByName("127.0.0.3");
+    peer1 = idmgr.ipAddrToPeerIdentity(ip1);
+    assertTrue(peer1 != null);
+    assertTrue(peer1 == idmgr.stringToPeerIdentity("127.0.0.1"));
+    peer2 = idmgr.ipAddrToPeerIdentity(ip2);
+    assertTrue(peer2 != null);
+    assertNotEquals(peer1, peer2);
+    assertTrue(peer2 == idmgr.stringToPeerIdentity("127.0.0.2"));
+    peer3 = idmgr.ipAddrToPeerIdentity(ip2, 300);
+    assertTrue(peer3 != null);
+    assertNotEquals(peer3, peer2);
+    assertNotEquals(peer3, peer1);
+    assertTrue(peer3 == idmgr.stringToPeerIdentity("127.0.0.2:300"));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method getLocalIdentity(..) */
@@ -116,119 +146,148 @@ public class TestIdentityManager extends LockssTestCase {
 
   /** test for method agreeWithVote(..) */
   public void testAgreeWithVote() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.AGREE_VOTE);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1, IdentityManager.AGREE_VOTE);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.AGREE_VOTE],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
 
   }
 
   /** test for method disagreeWithVote(..) */
   public void testDisagreeWithVote() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.DISAGREE_VOTE);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.DISAGREE_VOTE);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.DISAGREE_VOTE],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method callInternalPoll(..) */
   public void testCallInternalPoll() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.CALL_INTERNAL);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.CALL_INTERNAL);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.CALL_INTERNAL],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method spoofDetected(..) */
   public void testSpoofDetected() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.SPOOF_DETECTED);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.SPOOF_DETECTED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.SPOOF_DETECTED],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method replayDected(..) */
   public void testReplayDected() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.REPLAY_DETECTED);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.REPLAY_DETECTED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.REPLAY_DETECTED],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method acttackDetected(..) */
   public void testAttackDetected() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.ATTACK_DETECTED);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.ATTACK_DETECTED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.ATTACK_DETECTED],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method voteNotVerify(..) */
   public void testVoteNotVerify() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.VOTE_NOTVERIFIED);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.VOTE_NOTVERIFIED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.VOTE_NOTVERIFIED],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method voteVerify(..) */
   public void testVoteVerify() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.VOTE_VERIFIED);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.VOTE_VERIFIED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.VOTE_VERIFIED],
-                    fakeId.getReputation());
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   /** test for method voteDisown(..) */
   public void testVoteDisown() {
-    int rep = fakeId.getReputation();
-    idmgr.changeReputation(fakeId,IdentityManager.VOTE_DISOWNED);
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    int rep = idmgr.getReputation(peer1);
+    idmgr.changeReputation(peer1,IdentityManager.VOTE_DISOWNED);
     checkReputation(rep, idmgr.reputationDeltas[IdentityManager.VOTE_DISOWNED],
-                    fakeId.getReputation());
-  }
-
-  /** test for method changeReputation(..) */
-  public void testChangeReputation() {
-    // test simple change
-    int rep = fakeId.getReputation();
-    fakeId.changeReputation(50);
-    assertTrue(rep+50 >= fakeId.getReputation());
-    fakeId.changeReputation(-150);
-    rep = fakeId.getReputation();
-    assertTrue(rep-150 <= fakeId.getReputation());
-
-    // test upper and lower bounds
-    rep = fakeId.getReputation();
-    fakeId.changeReputation(IdentityManager.MAX_DELTA * 10);
-    assertTrue(fakeId.getReputation() <=
-               rep +IdentityManager.MAX_DELTA);
-    rep = fakeId.getReputation();
-    fakeId.changeReputation(-IdentityManager.MAX_DELTA * 10);
-    assertTrue(fakeId.getReputation() >=
-               rep -IdentityManager.MAX_DELTA);
+                    idmgr.getReputation(peer1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testStoreIdentities() throws UnknownHostException {
-    String fakeIdString1 = "213.239.33.100";
-    String fakeIdString2 = "213.239.33.101";
-    String fakeIdString3 = "213.239.33.102";
+    try {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
 
     try {
-      assertNotNull(idmgr.findIdentity(fakeIdString1));
-      assertNotNull(idmgr.findIdentity(fakeIdString2));
-      assertNotNull(idmgr.findIdentity(fakeIdString3));
       idmgr.storeIdentities();
     } catch (ProtocolException ex) {
       fail("identity db store failed");
     }
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testSetAgreedThrowsOnNullAu() throws UnknownHostException {
-    String id = "127.0.0.1";
     try {
-      idmgr.signalAgreed(id, null);
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    try {
+      idmgr.signalAgreed(peer1, null);
       fail("Should have thrown on a null au");
     } catch (IllegalArgumentException e) {
+    }
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
     }
   }
 
@@ -242,11 +301,15 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testSetDisagreedThrowsOnNullAu() throws UnknownHostException {
-    String id = "127.0.0.1";
     try {
-      idmgr.signalDisagreed(id, null);
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    try {
+      idmgr.signalDisagreed(peer1, null);
       fail("Should have thrown on a null au");
     } catch (IllegalArgumentException e) {
+    }
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
     }
   }
 
@@ -274,40 +337,47 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testGetAgreed() throws UnknownHostException {
-
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
 
     MockArchivalUnit mau = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
 
-    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(peer1, mau);
     TimeBase.step();
-    idmgr.signalAgreed(id2, mau);
+    idmgr.signalAgreed(peer2, mau);
     Map expected = new HashMap();
-    expected.put(id1, new Long(10));
-    expected.put(id2, new Long(11));
+    expected.put(peer1, new Long(10));
+    expected.put(peer2, new Long(11));
     assertEquals(expected, idmgr.getAgreed(mau));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testDisagreeDoesntRemove() throws UnknownHostException {
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
 
     MockArchivalUnit mau = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    idmgr.signalAgreed(id1, mau);
-    idmgr.signalAgreed(id2, mau);
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalAgreed(peer2, mau);
 
-    idmgr.signalDisagreed(id1, mau);
+    idmgr.signalDisagreed(peer1, mau);
 
     Map expected = new HashMap();
-    expected.put(id1, new Long(10));
-    expected.put(id2, new Long(10));
+    expected.put(peer1, new Long(10));
+    expected.put(peer2, new Long(10));
 
     assertEquals(expected, idmgr.getAgreed(mau));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testGetCachesToRepairFromThrowsOnNullAu()
@@ -326,127 +396,148 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testCachesToRepairFrom() throws UnknownHostException {
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
 
     MockArchivalUnit mau = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(peer1, mau);
     TimeBase.step();
-    idmgr.signalAgreed(id2, mau);
+    idmgr.signalAgreed(peer2, mau);
     Map expected = new HashMap();
-    expected.put(id1, new Long(10));
-    expected.put(id2, new Long(11));
+    expected.put(peer1, new Long(10));
+    expected.put(peer2, new Long(11));
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testAgreeUpdatesTime() throws UnknownHostException {
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
 
     MockArchivalUnit mau = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
 
-    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(peer1, mau);
     TimeBase.step(15);
-    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(peer1, mau);
 
     Map expected = new HashMap();
-    expected.put(id1, new Long(25));
+    expected.put(peer1, new Long(25));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testDisagreeNullsMap() throws UnknownHostException {
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
 
     MockArchivalUnit mau = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(peer1, mau);
 
-    idmgr.signalDisagreed(id1, mau);
+    idmgr.signalDisagreed(peer1, mau);
 
     Map expected = new HashMap();
 
     assertNull(idmgr.getCachesToRepairFrom(mau));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testDisagreeRemoves() throws UnknownHostException {
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
 
     MockArchivalUnit mau = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    idmgr.signalAgreed(id1, mau);
-    idmgr.signalAgreed(id2, mau);
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalAgreed(peer2, mau);
 
-    idmgr.signalDisagreed(id1, mau);
+    idmgr.signalDisagreed(peer1, mau);
 
     Map expected = new HashMap();
-    expected.put(id2, new Long(10));
+    expected.put(peer2, new Long(10));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testMultipleAus() throws UnknownHostException {
+    try {
     TimeBase.setSimulated(10);
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
 
     MockArchivalUnit mau1 = new MockArchivalUnit();
     MockArchivalUnit mau2 = new MockArchivalUnit();
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau1);
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau2);
 
-    idmgr.signalAgreed(id1, mau1);
-    idmgr.signalAgreed(id2, mau2);
+    idmgr.signalAgreed(peer1, mau1);
+    idmgr.signalAgreed(peer2, mau2);
 
-    idmgr.signalDisagreed(id1, mau2);
+    idmgr.signalDisagreed(peer1, mau2);
 
     Map expected = new HashMap();
-    expected.put(id2, new Long(10));
+    expected.put(peer2, new Long(10));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau2));
 
     expected = new HashMap();
-    expected.put(id1, new Long(10));
+    expected.put(peer1, new Long(10));
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testStoreIdentityAgreement() {
+    try {
     MockArchivalUnit mau1 = new MockArchivalUnit();
     MockHistoryRepository hRep = new MockHistoryRepository();
     theDaemon.setHistoryRepository(hRep, mau1);
 
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
 
-    idmgr.signalAgreed(id1, mau1);
-    idmgr.signalAgreed(id2, mau1);
+    idmgr.signalAgreed(peer1, mau1);
+    idmgr.signalAgreed(peer2, mau1);
 
-    idmgr.signalDisagreed(id1, mau1);
-    idmgr.signalDisagreed(id3, mau1);
+    idmgr.signalDisagreed(peer1, mau1);
+    idmgr.signalDisagreed(peer3, mau1);
 
     Set expected = new HashSet(3);
 
     IdentityManager.IdentityAgreement ida =
-        new IdentityManager.IdentityAgreement(id1);
+        new IdentityManager.IdentityAgreement(peer1);
     ida.setLastAgree(10);
     ida.setLastDisagree(10);
     expected.add(ida);
     assertContains(hRep.getStoredIdentityAgreement(), ida);
 
-    ida = new IdentityManager.IdentityAgreement(id2);
+    ida = new IdentityManager.IdentityAgreement(peer2);
     ida.setLastAgree(10);
     expected.add(ida);
     assertContains(hRep.getStoredIdentityAgreement(), ida);
 
-    ida = new IdentityManager.IdentityAgreement(id3);
+    ida = new IdentityManager.IdentityAgreement(peer3);
     ida.setLastDisagree(10);
     expected.add(ida);
     assertContains(hRep.getStoredIdentityAgreement(), ida);
@@ -455,45 +546,52 @@ public class TestIdentityManager extends LockssTestCase {
 //     assertSameElements(expected, hRep.getStoredIdentityAgreement());
 
     assertEquals(3, hRep.getStoredIdentityAgreement().size());
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public void testLoadIdentityAgreement() {
+    try {
     MockArchivalUnit mau1 = new MockArchivalUnit();
     MockHistoryRepository hRep = new MockHistoryRepository();
     theDaemon.setHistoryRepository(hRep, mau1);
 
-    String id1 = "127.0.0.1";
-    String id2 = "127.0.0.2";
-    String id3 = "127.0.0.3";
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
 
     List loadList = new ArrayList(3);
 
     IdentityManager.IdentityAgreement ida =
-        new IdentityManager.IdentityAgreement(id1);
+        new IdentityManager.IdentityAgreement(peer1);
     ida.setLastAgree(10);
     ida.setLastDisagree(10);
     loadList.add(ida);
 
-    ida = new IdentityManager.IdentityAgreement(id2);
+    ida = new IdentityManager.IdentityAgreement(peer2);
     ida.setLastAgree(10);
     loadList.add(ida);
 
-    ida = new IdentityManager.IdentityAgreement(id3);
+    ida = new IdentityManager.IdentityAgreement(peer3);
     ida.setLastDisagree(10);
     loadList.add(ida);
 
     hRep.setLoadedIdentityAgreement(loadList);
 
     Map expected = new HashMap();
-    expected.put(id2, new Long(10));
+    expected.put(peer2, new Long(10));
 
     assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
 
     expected = new HashMap();
-    expected.put(id1, new Long(10));
-    expected.put(id2, new Long(10));
+    expected.put(peer1, new Long(10));
+    expected.put(peer2, new Long(10));
 
     assertEquals(expected, idmgr.getAgreed(mau1));
+    } catch (UnknownHostException uhe) {
+      fail(uhe.toString());
+    }
   }
 
   public static void main(String[] argv) {

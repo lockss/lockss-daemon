@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.132 2004-09-16 21:29:16 dshr Exp $
+ * $Id: PollManager.java,v 1.133 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -545,10 +545,10 @@ public class PollManager
    * send a message to the unicast address given by an identity
    * @param msg the LcapMessage to send
    * @param au the ArchivalUnit for this message
-   * @param id the LcapIdentity of the identity to send to
+   * @param id the PeerIdentity of the identity to send to
    * @throws IOException
    */
-  void sendMessageTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
+  void sendMessageTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
     theRouter.sendTo(msg, au, id);
   }
@@ -573,14 +573,12 @@ public class PollManager
         makeVerifier(duration),     // we get a new verifier for this poll
         LcapMessage.VERIFY_POLL_REQ,
         duration,
-        theIDManager.getLocalIdentity());
+        theIDManager.getLocalPeerIdentity());
 
-    String originatorID = vote.getIdentityKey();
-    //  XXX we use port 0 here because it is a V1 poll
-    LcapIdentity originator = theIDManager.findIdentity(originatorID);
+    PeerIdentity originatorID = vote.getVoterIdentity();
     theLog.debug2("sending our verification request to " +
-                  originator.toHost());
-    sendMessageTo(reqmsg, cus.getArchivalUnit(), originator);
+                  originatorID.toString());
+    sendMessageTo(reqmsg, cus.getArchivalUnit(), originatorID);
     // since we won't be getting this message make sure we create our own poll
     BasePoll poll = makePoll(reqmsg);
   }

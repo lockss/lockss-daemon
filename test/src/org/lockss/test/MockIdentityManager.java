@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.8 2004-09-13 04:02:25 dshr Exp $
+* $Id: MockIdentityManager.java,v 1.9 2004-09-20 14:20:41 dshr Exp $
  */
 
 /*
@@ -41,25 +41,34 @@ import org.lockss.plugin.*;
  * Mock override of IdentityManager.
  */
 public class MockIdentityManager extends IdentityManager {
-  public HashMap idMap = new HashMap();
+  public HashMap idMap = null;
 
   public Map agreeMap = new HashMap();
 
-  public MockIdentityManager() { }
-  public void initService(LockssDaemon daemon) throws LockssAppException {
-    localIdentityStr = "127.1.2.3";
-    makeLocalIdentity();
-  }
-  public void startService() { }
-  public void stopService() {
-    idMap = new HashMap();
+  public MockIdentityManager() {
+    super();
   }
 
-  public void changeReputation(String id, int changeKind) {
+  public void initService(LockssDaemon daemon) throws LockssAppException {
+    log.debug("MockIdentityManager: initService");
+    super.initService(daemon);
+  }
+  public void startService() {
+    log.debug("MockIdentityManager: startService");
+    super.startService();
+    idMap = new HashMap();
+  }
+  public void stopService() {
+    log.debug("MockIdentityManager: stopService");
+    super.stopService();
+    idMap = null;
+  }
+
+  public void changeReputation(PeerIdentity id, int changeKind) {
     idMap.put(id, new Integer(changeKind));
   }
 
-  public int lastChange(String id) {
+  public int lastChange(PeerIdentity id) {
     Integer change = (Integer)idMap.get(id);
     if (change==null) {
       return -1;
@@ -67,11 +76,11 @@ public class MockIdentityManager extends IdentityManager {
     return change.intValue();
   }
 
-  public void signalAgreed(LcapIdentity id, ArchivalUnit au) {
+  public void signalAgreed(PeerIdentity id, ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public void signalDisagreed(LcapIdentity id, ArchivalUnit au) {
+  public void signalDisagreed(PeerIdentity id, ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
 

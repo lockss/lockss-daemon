@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVoteFactory.java,v 1.3 2003-09-05 23:55:01 dshr Exp $
+ * $Id: MemoryBoundFunctionVoteFactory.java,v 1.4 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class MemoryBoundFunctionVoteFactory {
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param cusVal the CachedUrlSet to be hashed as part of the vote
    * @param pollID the byte array ID of the poll
-   * @param voterID the LcapIdentity of the voter
+   * @param voterID the PeerIdentity of the voter
    * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
    */
@@ -99,7 +99,7 @@ public class MemoryBoundFunctionVoteFactory {
 					       int eVal,
 					       CachedUrlSet cusVal,
 					       byte[] pollID,
-					       LcapIdentity voterID)
+					       PeerIdentity voterID)
     throws NoSuchAlgorithmException, MemoryBoundFunctionException {
     MemoryBoundFunctionVote ret = null;
     try {
@@ -125,7 +125,7 @@ public class MemoryBoundFunctionVoteFactory {
    * @param sVals the array of arrray of ints forming the proof
    * @param hashVals the array of hashes
    * @param pollID the byte array ID of the poll
-   * @param voterID the LcapIdentity of the voter
+   * @param voterID the PeerIdentity of the voter
    * @throws MemoryBoundFunctionException failure to create object
    * @throws NoSuchAlgorithmException no such implementation
    */
@@ -136,7 +136,7 @@ public class MemoryBoundFunctionVoteFactory {
 					      int[][] sVals,
 					      byte[][] hashVals,
 					      byte[] pollID,
-					      LcapIdentity voterID)
+					      PeerIdentity voterID)
     throws NoSuchAlgorithmException, MemoryBoundFunctionException {
     MemoryBoundFunctionVote ret = null;
     try {

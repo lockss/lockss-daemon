@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.13 2004-09-13 04:02:24 dshr Exp $
+ * $Id: TestLcapRouter.java,v 1.14 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestLcapRouter extends LockssTestCase {
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
   private IdentityManager idmgr;
   protected IPAddr testaddr;
-  protected LcapIdentity testID;
+  protected PeerIdentity testID;
   protected LcapMessage testmsg;
   protected static String archivalID = "TestAU_1.0";
   LockssDatagram dg;
@@ -108,6 +108,8 @@ public class TestLcapRouter extends LockssTestCase {
       throws IOException {
     try {
       testaddr = IPAddr.getByName(originator);
+      testID =
+	idmgr.stringToPeerIdentity(originator);
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
@@ -122,9 +124,8 @@ public class TestLcapRouter extends LockssTestCase {
     testmsg.m_targetUrl = urlstr;
     testmsg.m_lwrBound = lwrbnd;
     testmsg.m_uprBound = uprbnd;
-    testID = new LcapIdentity(testaddr, 0);
 
-    testmsg.m_originatorID = testaddr.toString();
+    testmsg.m_originatorID = testID;
     testmsg.m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     testmsg.m_startTime = 123456789;
     testmsg.m_stopTime = 987654321;

@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.5 2004-09-16 21:29:16 dshr Exp $
+ * $Id: V1NamePoll.java,v 1.6 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -63,8 +63,9 @@ public class V1NamePoll extends V1Poll {
    */
   void castOurVote() {
     LcapMessage msg;
-    LcapIdentity local_id = idMgr.getLocalIdentity();
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity();
     long remainingTime = m_deadline.getRemainingTime();
+    log.debug("castOurVote: " + local_id);
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier,
                                      getEntries(), m_replyOpcode,

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMailTarget.java,v 1.9 2003-09-16 23:28:36 eaalto Exp $
+ * $Id: TestMailTarget.java,v 1.10 2004-09-20 14:20:42 dshr Exp $
  */
 
 /*
@@ -41,6 +41,8 @@ import org.lockss.protocol.IdentityManager;
 
 public class TestMailTarget extends LockssTestCase {
   private MailTarget target;
+  private MockLockssDaemon theDaemon;
+  private IdentityManager idmanager;
 
   public TestMailTarget(String msg) {
     super(msg);
@@ -51,11 +53,22 @@ public class TestMailTarget extends LockssTestCase {
     String s = MailTarget.PARAM_SMTPHOST + "=1.2.3.4";
     String s2 = MailTarget.PARAM_EMAIL_TO + "=target@t.com";
     String s3 = MailTarget.PARAM_EMAIL_FROM + "=source@s.com";
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String s4 = IdentityManager.PARAM_IDDB_DIR+"="+tempDirPath + "iddb";
+    String s5 = IdentityManager.PARAM_LOCAL_IP+"="+"127.1.2.3";
+      
     ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(
-        FileTestUtil.urlOfString(s), FileTestUtil.urlOfString(s2),
-        FileTestUtil.urlOfString(s3)));
+        FileTestUtil.urlOfString(s),
+	FileTestUtil.urlOfString(s2),
+        FileTestUtil.urlOfString(s3),
+        FileTestUtil.urlOfString(s4),
+        FileTestUtil.urlOfString(s5)
+	));
     target = new MailTarget();
-    System.err.println("Ignore IdentityManager error:");
+    theDaemon = new MockLockssDaemon();
+    idmanager = theDaemon.getIdentityManager();
+    idmanager.startService();
+
     target.init();
   }
 

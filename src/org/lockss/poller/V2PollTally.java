@@ -1,5 +1,5 @@
 /*
- * $Id: V2PollTally.java,v 1.4 2004-07-23 16:44:10 tlipkis Exp $
+ * $Id: V2PollTally.java,v 1.5 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -197,12 +197,12 @@ public class V2PollTally extends PollTally {
   }
 
 
-  void adjustReputation(LcapIdentity voterID, int repDelta) {
+  void adjustReputation(PeerIdentity voterID, int repDelta) {
     // XXX should not need this
     throw new UnsupportedOperationException();
   }
 
-  void addVote(Vote vote, LcapIdentity id, boolean isLocal) {
+  void addVote(Vote vote, PeerIdentity id, boolean isLocal) {
     throw new UnsupportedOperationException();
   }
 

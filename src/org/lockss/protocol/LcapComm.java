@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.51 2004-08-22 02:05:53 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.52 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -240,7 +240,7 @@ public class LcapComm
 
   IPAddr getLocalIdentityAddr() {
     if (localIp == null) {
-      localIp = idMgr.getLocalIdentity().getAddress();
+      localIp = idMgr.getLocalIPAddr();
     }
     return localIp;
   }
@@ -270,7 +270,8 @@ public class LcapComm
       throw new IllegalStateException("Multicast group not configured");
     }
     updateOutStats(ld, multiPort, true);
-    sendTo(ld, group, multiPort);
+    DatagramPacket pkt = ld.makeSendPacket(group, multiPort);
+    sendSock.send(pkt);
   }
 
   /** Unicast a message to a single cache.
@@ -280,27 +281,30 @@ public class LcapComm
    * @param id the identity of the cache to which to send the message
    * @throws IOException
    */
-  public void sendTo(LockssDatagram ld, ArchivalUnit au, LcapIdentity id)
+  public void sendTo(LockssDatagram ld, ArchivalUnit au, PeerIdentity id)
       throws IOException {
     if (uniSendToPort < 0) {
       throw new IllegalStateException("Unicast port not configured");
     }
     log.debug2("sendTo(" + ld + ", " + id + ")");
-    sendTo(ld,
-	   (uniSendToAddr == null ? id.getAddress() : uniSendToAddr),
-	   uniSendToPort);
+    PeerIdentity pid = id;
+    if (uniSendToAddr != null) {
+      pid = idMgr.ipAddrToPeerIdentity(uniSendToAddr, 0);
+    }
+    sendTo(ld, pid, uniSendToPort);
   }
 
-  void sendTo(LockssDatagram ld, IPAddr addr)
+  void sendTo(LockssDatagram ld, PeerIdentity id)
       throws IOException {
     updateOutStats(ld, uniSendToPort, false);
-    sendTo(ld, addr, uniSendToPort);
+    sendTo(ld, id, uniSendToPort);
   }
 
-  void sendTo(LockssDatagram ld, IPAddr addr, int port)
+  void sendTo(LockssDatagram ld, PeerIdentity id, int port)
       throws IOException {
-    log.debug2("sending "+ ld +" to "+ addr +":"+ port);
-    DatagramPacket pkt = ld.makeSendPacket(addr, port);
+    log.debug2("sending "+ ld +" to "+ id +":"+ port);
+    IPAddr ipAddr = idMgr.identityToIPAddr(id);
+    DatagramPacket pkt = ld.makeSendPacket(ipAddr, port);
     sendSock.send(pkt);
   }
 

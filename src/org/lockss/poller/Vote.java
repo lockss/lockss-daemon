@@ -1,5 +1,5 @@
 /*
-* $Id: Vote.java,v 1.11 2004-09-13 04:02:21 dshr Exp $
+* $Id: Vote.java,v 1.12 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -33,10 +33,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import org.mortbay.util.B64Code;
-import org.lockss.protocol.LcapIdentity;
+import org.lockss.protocol.PeerIdentity;
+import org.lockss.protocol.IdentityManager;
 import org.lockss.protocol.LcapMessage;
 import java.util.Arrays;
 import java.io.Serializable;
+import java.net.UnknownHostException;
 import org.lockss.app.LockssDaemon;
 import org.lockss.util.*;
 
@@ -45,26 +47,19 @@ import org.lockss.util.*;
  * to run a repair poll.
  */
 public class Vote implements Serializable {
-  // We don't store the LcapIdentity object itself so that IdentityManager
-  // can change the representation of identities dynamically.
-  private String voterID = null;
+  private PeerIdentity voterID = null;
   protected boolean agree = false;
   private ActiveVote activeInfo = null;
+  private static IdentityManager idMgr = null;
+  static Logger theLog = Logger.getLogger("Vote");
 
   protected Vote() {
   }
 
 
   Vote(byte[] challenge, byte[] verifier, byte[] hash,
-       LcapIdentity id, boolean agree) {
-    this.voterID = id.getIdKey();
-    this.agree = agree;
-    activeInfo = new V1ActiveVote(challenge, verifier, hash);
-  }
-
-  Vote(byte[] challenge, byte[] verifier, byte[] hash,
-       String idKey, boolean agree) {
-    this.voterID = idKey;
+       PeerIdentity id, boolean agree) {
+    this.voterID = id;
     this.agree = agree;
     activeInfo = new V1ActiveVote(challenge, verifier, hash);
   }
@@ -79,27 +74,40 @@ public class Vote implements Serializable {
          msg.getOriginatorID(), agree);
   }
 
+  public static void setIdentityManager(IdentityManager im) {
+    idMgr = im;
+  }
+
   /**
    * Create a Vote object from strings.  used by VoteBean
-   * XXX VoteBean should not need the challenge, verifier and hash.
    * @param challengeStr B64 encoded string of the challenge
    * @param verifierStr B64 encoded string of the challenge
    * @param hashStr B64 encoded string of the challenge
-   * @param idStr the string ID of the voter's identity
+   * @param id the peer ID of the voter's identity
    * @param agree boolean indiciating agreement or disagreement
    * @return newly created Vote object
    */
 
-  protected Vote makeVote(String challengeStr, String verifierStr, String hashStr,
-                 String idStr, boolean agree) {
-    Vote vote = new Vote();
-    vote.voterID = idStr;
-    vote.agree = agree;
-    // XXX the ActiveVote info should not be needed
-    if (challengeStr != null && verifierStr != null && hashStr != null) {
-      activeInfo = new V1ActiveVote(B64Code.decode(challengeStr.toCharArray()),
-				    B64Code.decode(verifierStr.toCharArray()),
-				    B64Code.decode(hashStr.toCharArray()));
+  protected Vote makeVote(String challengeStr,
+			  String verifierStr,
+			  String hashStr,
+			  String idStr,
+			  boolean agree) {
+    Vote vote = null;
+    try {
+      PeerIdentity pid = idMgr.stringToPeerIdentity(idStr);
+      vote = new Vote();
+      vote.voterID = pid;
+      vote.agree = agree;
+      // XXX the ActiveVote info should not be needed
+      if (challengeStr != null && verifierStr != null && hashStr != null) {
+	activeInfo =
+	  new V1ActiveVote(B64Code.decode(challengeStr.toCharArray()),
+			   B64Code.decode(verifierStr.toCharArray()),
+			   B64Code.decode(hashStr.toCharArray()));
+      }
+    } catch (UnknownHostException uhe) {
+      theLog.error("Can't get peer identity for " + idStr + " throws " + uhe);
     }
     return vote;
   }
@@ -143,9 +151,9 @@ public class Vote implements Serializable {
 
   /**
    * Return the Identity key of the voter
-   * @return <code>LcapIdentity</code> the id
+   * @return <code>PeerIdentity</code> the id
    */
-  public String getIdentityKey() {
+  public PeerIdentity getVoterIdentity() {
     return voterID;
   }
 

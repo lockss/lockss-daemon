@@ -1,5 +1,5 @@
 /*
- * $Id: TestPartnerList.java,v 1.11 2004-08-18 00:14:51 tlipkis Exp $
+ * $Id: TestPartnerList.java,v 1.12 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.repository.LockssRepositoryImpl;
 
 /**
  * Test class for org.lockss.protocol.PartnerList
@@ -58,10 +59,12 @@ public class TestPartnerList extends LockssTestCase {
   static final String IP4 = "1.1.1.4";
 
   PartnerList pl;
-  IPAddr inet1;
-  IPAddr inet2;
-  IPAddr inet3;
-  IPAddr inet4;
+  PeerIdentity peer1;
+  PeerIdentity peer2;
+  PeerIdentity peer3;
+  PeerIdentity peer4;
+  private static MockLockssDaemon daemon = new MockLockssDaemon(null);
+  private static IdentityManager idmgr = null;
 
   private void setConfig(PartnerList pl, Configuration config) {
     pl.setConfig(config, ConfigManager.EMPTY_CONFIGURATION,
@@ -71,13 +74,30 @@ public class TestPartnerList extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated();
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    if (idmgr == null) {
+      idmgr = daemon.getIdentityManager();
+      idmgr.startService();
+    }
+    peer1 = idmgr.stringToPeerIdentity("1.1.1.1");
+    peer2 = idmgr.stringToPeerIdentity("1.1.1.2");
+    peer3 = idmgr.stringToPeerIdentity("1.1.1.3");
+    peer4 = idmgr.stringToPeerIdentity("1.1.1.4");
     pl = new PartnerList();
     setConfig(pl, getConfig(DEF_MIN_PARTNER_REMOVE_INTERVAL, DEF_MAX_PARTNERS,
 			    DEF_MULTICAST_INTERVAL, DEF_PARTNERS));
-    inet1 = IPAddr.getByName(IP1);
-    inet2 = IPAddr.getByName(IP2);
-    inet3 = IPAddr.getByName(IP3);
-    inet4 = IPAddr.getByName(IP4);
   }
 
   public void tearDown() throws Exception {
@@ -101,14 +121,14 @@ public class TestPartnerList extends LockssTestCase {
 
   private void removeAll() {
     for (Iterator iter = pl.getPartners().iterator(); iter.hasNext(); ) {
-      IPAddr ip = (IPAddr)iter.next();
-      pl.removePartner(ip);
+      PeerIdentity id = (PeerIdentity)iter.next();
+      pl.removePartner(id);
     }
   }
 
   public void testInitialPartnerList() {
     // partners in newly configured PartnerList should be default partner list
-    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
+    assertEquals(SetUtil.set(peer1, peer2), setOf(pl.getPartners()));
   }
 
   private Set setOf(Collection coll) {
@@ -119,17 +139,17 @@ public class TestPartnerList extends LockssTestCase {
   }
 
   public void testRemovePartner() {
-    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
-    pl.removePartner(inet1);
-    assertEquals(SetUtil.set(inet2), setOf(pl.getPartners()));
+    assertEquals(SetUtil.set(peer1, peer2), setOf(pl.getPartners()));
+    pl.removePartner(peer1);
+    assertEquals(SetUtil.set(peer2), setOf(pl.getPartners()));
   }
 
   public void testNoAddMulticastPartner() {
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
-    pl.multicastPacketReceivedFrom(inet3);
-    // inet3 shouldn't get added because recently seen a multicast from it
-    pl.addPartner(inet3);
+    pl.multicastPacketReceivedFrom(peer3);
+    // peer3 shouldn't get added because recently seen a multicast from it
+    pl.addPartner(peer3);
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
   }
 
@@ -137,9 +157,9 @@ public class TestPartnerList extends LockssTestCase {
     // this depends on not exceeding max partners (which is 3)
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
-    pl.addPartner(inet3);
-    assertEquals(SetUtil.set(inet3), setOf(pl.getPartners()));
-    pl.multicastPacketReceivedFrom(inet3);
+    pl.addPartner(peer3);
+    assertEquals(SetUtil.set(peer3), setOf(pl.getPartners()));
+    pl.multicastPacketReceivedFrom(peer3);
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
   }
 
@@ -147,50 +167,50 @@ public class TestPartnerList extends LockssTestCase {
     // this depends on not exceeding max partners (which is 3)
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
-    pl.addPartner(inet3);
-    assertEquals(SetUtil.set(inet3), setOf(pl.getPartners()));
-    pl.addPartner(inet4, 0.0);
-    assertEquals(SetUtil.set(inet3), setOf(pl.getPartners()));
-    pl.addPartner(inet4, 1.0);
-    assertEquals(SetUtil.set(inet3, inet4), setOf(pl.getPartners()));
+    pl.addPartner(peer3);
+    assertEquals(SetUtil.set(peer3), setOf(pl.getPartners()));
+    pl.addPartner(peer4, 0.0);
+    assertEquals(SetUtil.set(peer3), setOf(pl.getPartners()));
+    pl.addPartner(peer4, 1.0);
+    assertEquals(SetUtil.set(peer3, peer4), setOf(pl.getPartners()));
   }
 
   public void testAddPartnerOverMax() {
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
-    pl.addPartner(inet1);
-    assertEquals(SetUtil.set(inet1), setOf(pl.getPartners()));
+    pl.addPartner(peer1);
+    assertEquals(SetUtil.set(peer1), setOf(pl.getPartners()));
     // want them added at different times so can predict remove order
     TimeBase.step();
-    pl.addPartner(inet2, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
+    pl.addPartner(peer2, 1.0);
+    assertEquals(SetUtil.set(peer1, peer2), setOf(pl.getPartners()));
     TimeBase.step();
-    pl.addPartner(inet3, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2, inet3), setOf(pl.getPartners()));
+    pl.addPartner(peer3, 1.0);
+    assertEquals(SetUtil.set(peer1, peer2, peer3), setOf(pl.getPartners()));
     TimeBase.step();
-    // adding this one should cause oldest (inet1) to be removed
-    pl.addPartner(inet4, 1.0);
-    assertEquals(SetUtil.set(inet2, inet3, inet4), setOf(pl.getPartners()));
+    // adding this one should cause oldest (peer1) to be removed
+    pl.addPartner(peer4, 1.0);
+    assertEquals(SetUtil.set(peer2, peer3, peer4), setOf(pl.getPartners()));
     TimeBase.step();
-    pl.addPartner(inet1, 1.0);
-    assertEquals(SetUtil.set(inet1, inet3, inet4), setOf(pl.getPartners()));
+    pl.addPartner(peer1, 1.0);
+    assertEquals(SetUtil.set(peer1, peer3, peer4), setOf(pl.getPartners()));
   }
 
   public void testAddPartnerTimeToRemove() {
     removeAll();
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
-    pl.addPartner(inet1);
-    assertEquals(SetUtil.set(inet1), setOf(pl.getPartners()));
+    pl.addPartner(peer1);
+    assertEquals(SetUtil.set(peer1), setOf(pl.getPartners()));
     // want them added at different times so can predict remove order
     TimeBase.step();
-    pl.addPartner(inet2, 1.0);
-    assertEquals(SetUtil.set(inet1, inet2), setOf(pl.getPartners()));
+    pl.addPartner(peer2, 1.0);
+    assertEquals(SetUtil.set(peer1, peer2), setOf(pl.getPartners()));
     // step past minPartnerRemoveInterval
     TimeBase.step(1000);
-    // adding this should remove oldest, inet1, because it's been more the
+    // adding this should remove oldest, peer1, because it's been more the
     // minPartnerRemoveInterval since last remove
-    pl.addPartner(inet3, 1.0);
-    assertEquals(SetUtil.set(inet2, inet3), setOf(pl.getPartners()));
+    pl.addPartner(peer3, 1.0);
+    assertEquals(SetUtil.set(peer2, peer3), setOf(pl.getPartners()));
   }
 
   public void testAddPartnerRestoresDefault() {
@@ -199,11 +219,11 @@ public class TestPartnerList extends LockssTestCase {
     // make sure past lastPartnerRemoveTime
     TimeBase.step(1000);
     // adding this should then remove it, then add one from the default list
-    pl.addPartner(inet3);
+    pl.addPartner(peer3);
     Set p = setOf(pl.getPartners());
     assertEquals(1, p.size());
-    assertTrue(p.equals(SetUtil.set(inet1)) ||
-	       p.equals(SetUtil.set(inet2)));
+    assertTrue(p.equals(SetUtil.set(peer1)) ||
+	       p.equals(SetUtil.set(peer2)));
   }
 
   public void testAddFromDefaultWhenEmpty() {
@@ -216,7 +236,7 @@ public class TestPartnerList extends LockssTestCase {
     TimeBase.step(1000);
     // adding this should then remove it, then add one from the default list
     // which is empty, leaving the partner list empty, and not throwing
-    pl.addPartner(inet3);
+    pl.addPartner(peer3);
     assertEquals(EMPTY_SET, setOf(pl.getPartners()));
   }
 

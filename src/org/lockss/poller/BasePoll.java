@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.5 2004-09-13 04:02:21 dshr Exp $
+* $Id: BasePoll.java,v 1.6 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public abstract class BasePoll implements Poll, Serializable {
   LcapMessage m_msg;      // The message which triggered the poll
   CachedUrlSet m_cus;     // the cached url set from the archival unit
   PollSpec m_pollspec;
-  String m_callerID;       // ID key for peer that called poll
+  PeerIdentity m_callerID; // identity of the peer that called poll
   PollManager m_pollmanager; // the pollmanager for this poll.
   IdentityManager idMgr;
   long m_createTime;        // poll creation time
@@ -108,14 +108,16 @@ public abstract class BasePoll implements Poll, Serializable {
    * @return true if  we called the poll
    */
   public boolean isMyPoll() {
-    return idMgr.isLocalIdentity(m_callerID);
+    boolean ret = idMgr.isLocalIdentity(m_callerID);
+    log.debug("isMyPoll(" + m_callerID.toString() + ") = " + ret);
+    return ret;
   }
 
   /**
    * Returns the ID key for the peer that called the poll
    * @return the ID key for the peer that called the poll
    */
-  public String getCallerID() {
+  public PeerIdentity getCallerID() {
     return m_callerID;
   }
 

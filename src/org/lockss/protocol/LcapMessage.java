@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.48 2004-09-13 04:02:22 dshr Exp $
+ * $Id: LcapMessage.java,v 1.49 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class LcapMessage
   int m_length; // length of remaining packet
 
   /* items which are in the property list */
-  String m_originatorID; // the ID key for the originator
+  PeerIdentity m_originatorID; // the peer identity of the originator
   protected String m_hashAlgorithm; // the algorithm used to hash
   byte m_ttl; // The original time-to-live
   long m_startTime; // the original start time
@@ -123,6 +123,7 @@ public class LcapMessage
   private static byte[] pollVersionByte = { '1', '2' };
   private static Logger log = Logger.getLogger("LcapMessage");
   private String m_key = null;
+  private static IdentityManager idMgr = null;
 
   protected LcapMessage() throws IOException {
     m_props = new EncodedProperty();
@@ -134,7 +135,8 @@ public class LcapMessage
 
   }
 
-  protected LcapMessage(byte[] encodedBytes) throws IOException {
+  protected LcapMessage(byte[] encodedBytes)
+    throws IOException {
     m_props = new EncodedProperty();
 
     try {
@@ -177,7 +179,7 @@ public class LcapMessage
   }
 
   protected LcapMessage(LcapMessage trigger,
-                        LcapIdentity localID,
+                        PeerIdentity localID,
                         byte[] verifier,
                         byte[] hashedContent,
                         ArrayList entries,
@@ -194,7 +196,7 @@ public class LcapMessage
     m_archivalID = trigger.getArchivalId();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
-    m_originatorID = localID.getIdKey();
+    m_originatorID = localID;
     m_verifier = verifier;
     m_hashed = hashedContent;
     m_opcode = opcode;
@@ -204,6 +206,10 @@ public class LcapMessage
     m_multicast = false;
     m_pollVersion = trigger.getPollVersion();
     m_pluginVersion = trigger.getPluginVersion();
+  }
+
+  protected static void setIdentityManager(IdentityManager im) {
+    idMgr = im;
   }
 
   public static String getDefaultHashAlgorithm() {
@@ -242,12 +248,12 @@ public class LcapMessage
     m_props.setProperty(key, value);
   }
 
-  static public LcapMessage makeNoOpMsg(LcapIdentity originator,
+  static public LcapMessage makeNoOpMsg(PeerIdentity originator,
                                         byte[] verifier) throws
       IOException {
     LcapMessage msg = new LcapMessage();
     if (msg != null) {
-      msg.m_originatorID = originator.getIdKey();
+      msg.m_originatorID = originator;
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
@@ -277,7 +283,7 @@ public class LcapMessage
                                            byte[] verifier,
                                            int opcode,
                                            long timeRemaining,
-                                           LcapIdentity localID
+                                           PeerIdentity localID
                                            ) throws IOException {
 
     LcapMessage msg = new LcapMessage(pollspec,
@@ -287,7 +293,7 @@ public class LcapMessage
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
-      msg.m_originatorID = localID.getIdKey();
+      msg.m_originatorID = localID;
     }
     msg.storeProps();
     return msg;
@@ -312,7 +318,7 @@ public class LcapMessage
                                          ArrayList entries,
                                          int opcode,
                                          long timeRemaining,
-                                         LcapIdentity localID) throws
+                                         PeerIdentity localID) throws
       IOException {
     if (hashedContent == null) {
       log.error("Making a reply message with null hashed content");
@@ -348,7 +354,8 @@ public class LcapMessage
    * @param encodedBytes the array of encoded bytes
    * @throws IOException
    */
-  public void decodeMsg(byte[] encodedBytes) throws IOException {
+  public void decodeMsg(byte[] encodedBytes)
+    throws IOException {
     long duration;
     long elapsed;
     String addr;
@@ -398,8 +405,7 @@ public class LcapMessage
     // the immutable stuff
     port = m_props.getInt("origPort", -1);
     String addr_str = m_props.getProperty("origIP");
-    // omit :port here to indicate V1 identity
-    m_originatorID = addr_str;
+    m_originatorID = idMgr.stringToPeerIdentity(addr_str);
 
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
     m_ttl = (byte) m_props.getInt("ttl", 0);
@@ -440,7 +446,7 @@ public class LcapMessage
     // make sure the props table is up to date
     try {
       // use port 0 here - it will be ignored in the string
-      m_props.setProperty("origIP", m_originatorID);
+      m_props.setProperty("origIP", m_originatorID.getIdString());
     }
     catch (NullPointerException npe) {
       throw new ProtocolException("encode - null origin host address.");
@@ -558,7 +564,7 @@ public class LcapMessage
     return m_ttl;
   }
 
-  public String getOriginatorID() {
+  public PeerIdentity getOriginatorID() {
     return m_originatorID;
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.12 2004-09-13 04:02:21 dshr Exp $
+* $Id: V1Poll.java,v 1.13 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -119,8 +119,16 @@ public abstract class V1Poll extends BasePoll {
    * @return a String
    */
   public String toString() {
+    String pollType = "Unk";
+    if (this instanceof V1NamePoll)
+      pollType = "Name";
+    if (this instanceof V1ContentPoll)
+      pollType = "Content";
+    if (this instanceof V1VerifyPoll)
+      pollType = "Verify";
     StringBuffer sb = new StringBuffer("[Poll: ");
-    sb.append("url set:");
+    sb.append(pollType);
+    sb.append(" url set:");
     sb.append(" ");
     sb.append(m_cus.toString());
     sb.append(" ");
@@ -181,12 +189,14 @@ public abstract class V1Poll extends BasePoll {
               vote.getHashString());
 
     boolean agree = vote.setAgreeWithHash(hashResult);
-    LcapIdentity id = idMgr.findIdentity(vote.getIdentityKey());
+    PeerIdentity voterID = vote.getVoterIdentity();
+    boolean isLocalVote = idMgr.isLocalIdentity(voterID);
 
-    if(!idMgr.isLocalIdentity(vote.getIdentityKey())) {
+    if(!isLocalVote) {
       verify = randomVerify(vote, agree);
     }
-    m_tally.addVote(vote, id, idMgr.isLocalIdentity(id));
+    // XXX addVote doesn't need both vote and voterID
+    m_tally.addVote(vote, voterID, isLocalVote);
   }
 
   /**
@@ -197,9 +207,9 @@ public abstract class V1Poll extends BasePoll {
    * @return true if we called a verify poll, false otherwise.
    */
   boolean randomVerify(Vote vote, boolean isAgreeVote) {
-    LcapIdentity id = idMgr.findIdentity(vote.getIdentityKey());
+    PeerIdentity id = vote.getVoterIdentity();
     int max = idMgr.getMaxReputation();
-    int weight = id.getReputation();
+    int weight = idMgr.getReputation(id);
     double verify;
     boolean callVerifyPoll = false;
 
@@ -209,7 +219,7 @@ public abstract class V1Poll extends BasePoll {
     else {
       verify = (((double)weight) / (2*max)) * m_disagreeVer;
     }
-    log.debug3("probablitiy of verifying this vote = " + verify);
+    log.debug3("probability of verifying this vote = " + verify);
     try {
       if(ProbabilisticChoice.choose(verify)) {
         long remainingTime = m_deadline.getRemainingTime();
@@ -233,7 +243,7 @@ public abstract class V1Poll extends BasePoll {
    */
   void castOurVote() {
     LcapMessage msg;
-    LcapIdentity local_id = idMgr.getLocalIdentity();
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity();
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
@@ -340,16 +350,15 @@ public abstract class V1Poll extends BasePoll {
    * @return boolean true if the poll should run, false otherwise
    */
   boolean shouldCheckVote(LcapMessage msg) {
-    String voterID = msg.getOriginatorID();
-    LcapIdentity voter = idMgr.findIdentity(voterID);
+    PeerIdentity voterID = msg.getOriginatorID();
 
     // make sure we haven't already voted
-    if(m_tally.hasVoted(voter)) {
-      log.warning("Ignoring multiple vote from " + voter);
-      int oldRep = voter.getReputation();
-      idMgr.changeReputation(voter, IdentityManager.REPLAY_DETECTED);
-      int newRep = voter.getReputation();
-      m_tally.adjustReputation(voter,newRep-oldRep);
+    if(m_tally.hasVoted(voterID)) {
+      log.warning("Ignoring multiple vote from " + voterID);
+      int oldRep = idMgr.getReputation(voterID);
+      idMgr.changeReputation(voterID, IdentityManager.REPLAY_DETECTED);
+      int newRep = idMgr.getReputation(voterID);
+      m_tally.adjustReputation(voterID, newRep-oldRep);
       return false;
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.116 2004-09-16 21:29:19 dshr Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.117 2004-09-20 14:20:41 dshr Exp $
  */
 
 /*
@@ -51,7 +51,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Random random = new Random();
 
   private MockLockssDaemon theDaemon;
-  MockIdentityManager idManager;
+  private MockIdentityManager idManager;
+
+  static Logger log = Logger.getLogger("TestNodeManagerImpl");
 
   public void setUp() throws Exception {
     super.setUp();
@@ -77,11 +79,15 @@ public class TestNodeManagerImpl extends LockssTestCase {
 
     pollManager = new MockPollManager();
     theDaemon.setPollManager(pollManager);
-    idManager = new MockIdentityManager();
-    idManager.initService(theDaemon);
-    theDaemon.setIdentityManager(idManager);
     pollManager.initService(theDaemon);
     pollManager.startService();
+
+    log.debug("Starting the Identity Manager");
+    idManager = new MockIdentityManager();
+    theDaemon.setIdentityManager(idManager);
+    idManager.initService(theDaemon);
+    idManager.startService();
+    log.debug("Identity Manager started");
 
     // create au state so thread doesn't throw null pointers
     theDaemon.getLockssRepository(mau).createNewNode(TEST_URL);
@@ -103,6 +109,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.stopService();
     pollManager.stopService();
     historyRepo.stopService();
+    idManager.stopService();
     theDaemon.getLockssRepository(mau).stopService();
     theDaemon.getHashService().stopService();
     PluginUtil.unregisterAllArchivalUnits();
@@ -480,7 +487,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               true);
     nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
+    log.debug("1 node state " + nodeState.getStateString());
+    log.debug("1 poll state " + pollState.getStatusString());
     state = nodeManager.handleContentPoll(pollState, results, nodeState);
+    log.debug("2 node state " + nodeState.getStateString());
+    log.debug("2 poll state " + pollState.getStatusString());
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, state);
@@ -603,7 +614,11 @@ public class TestNodeManagerImpl extends LockssTestCase {
                               Deadline.MAX,
                               true);
     nodeState.setState(NodeState.NAME_REPLAYING);
+    log.debug("3 node state " + nodeState.getStateString());
+    log.debug("3 poll state " + pollState.getStatusString());
     state = nodeManager.handleNamePoll(pollState, results, nodeState);
+    log.debug("4 node state " + nodeState.getStateString());
+    log.debug("4 poll state " + pollState.getStatusString());
     assertEquals(PollState.REPAIRED, pollState.getStatus());
     assertEquals(NodeState.NEEDS_REPLAY_POLL, nodeState.getState());
     assertEquals(NodeState.NEEDS_REPLAY_POLL, state);
@@ -750,6 +765,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
     CachedUrlSet cus = getCus(mau, TEST_URL);
 
     NodeState nodeState = nodeManager.getNodeState(cus);
+    // XXX what state should this node be in?
+    log.debug("5 node state " + nodeState.getStateString());
+    assertEquals(NodeState.INITIAL, nodeState.getState());
+    
     // create erroneous SN name poll
     namePoll = createPoll(TEST_URL, ".", null, false, true, 15, 5);
     PollTally results = namePoll.getVoteTally();
@@ -761,6 +780,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     nodeManager.startPoll(cus, results, false);
     nodeManager.updatePollResults(cus, results);
     // shouldn't call SNCUSS with no content
+    log.debug("6 node state " + nodeState.getStateString());
     assertEquals(NodeState.POSSIBLE_DAMAGE_BELOW, nodeState.getState());
     assertNull(pollManager.getPollStatus(TEST_URL));
   }
@@ -784,7 +804,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     // should call SNCUSS
     assertEquals(NodeState.POSSIBLE_DAMAGE_HERE, nodeState.getState());
     assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 pollManager.getPollStatus(TEST_URL));  // XXX failing
+		 pollManager.getPollStatus(TEST_URL));  // XXX failing
   }
 
   public void testRepairOnStart() throws Exception {
@@ -907,9 +927,9 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(PollState.WON, pollState.getStatus());
     assertEquals(TimeBase.nowMs(), auState.getLastTopLevelPollTime());
     assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 pollManager.getPollStatus("testDir1"));  // XXX failing
+		 pollManager.getPollStatus("testDir1"));  // XXX failing
     assertEquals(MockPollManager.CONTENT_REQUESTED,
-                 pollManager.getPollStatus("testDir2"));
+		 pollManager.getPollStatus("testDir2"));
   }
 
   public void testUpdateInconclusivePolls() throws Exception {
@@ -1192,7 +1212,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
       if (!vote.isAgreeVote()) {
         repChange = IdentityManager.DISAGREE_VOTE;
       }
-      assertEquals(repChange, idManager.lastChange(vote.getIdentityKey()));
+      assertEquals(repChange, idManager.lastChange(vote.getVoterIdentity()));
     }
   }
 
@@ -1306,14 +1326,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Poll createPoll(String url, String lwrBound, String uprBound,
                           boolean isContentPoll, boolean isLocal,
                           int numAgree, int numDisagree) throws Exception {
-    LcapIdentity testID = null;
+    PeerIdentity testID = null;
     LcapMessage testmsg = null;
     if (isLocal) {
-      testID = idManager.getLocalIdentity();
+      testID = idManager.getLocalPeerIdentity();
     } else {
       try {
         IPAddr testAddr = IPAddr.getByName("123.3.4.5");
-        testID = idManager.findIdentity(testAddr, 0);
+        testID = idManager.ipAddrToPeerIdentity(testAddr, 0);
       } catch (UnknownHostException ex) {
         fail("can't open test host");
       }
@@ -1335,11 +1355,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
     } catch (IOException ex) {
       fail("can't create test name message" + ex.toString());
     }
-    log.debug("daemon = " + theDaemon);
 
     Poll p = TestPoll.createCompletedPoll(theDaemon, mau,
                                           testmsg, numAgree, numDisagree);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
+
+    log.debug("createPoll " + (isLocal ? "local" : "remote") + " peer " +
+	      testID.toString() + " isMyPoll " + p.isMyPoll());
 
     return p;
   }

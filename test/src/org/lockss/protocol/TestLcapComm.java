@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.13 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestLcapComm.java,v 1.14 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.repository.LockssRepositoryImpl;
 
 
 /**
@@ -70,6 +71,7 @@ public class TestLcapComm extends LockssTestCase {
   byte[] testData;
   byte[] testPktData;
   int testPort = 1234;
+  PeerIdentity testID;
   IPAddr testAddr;
   String[] ar1 = {"foo"};
   byte[] chal = {1,2,3,4,5,6,7,8,9,10};
@@ -85,6 +87,7 @@ public class TestLcapComm extends LockssTestCase {
   MockDatagramSocket usock;
   MockMulticastSocket msock1;
   MockMulticastSocket msock2;
+  private IdentityManager idmgr;
 
   SimpleQueue rcvdMsgs;
 
@@ -92,7 +95,23 @@ public class TestLcapComm extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     testData = testStr.getBytes();
+    String tempDirPath = null;
+    try {
+      tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    }
+    catch (IOException ex) {
+      fail("unable to create a temporary directory");
+    }
+
+    Properties p = new Properties();
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    idmgr = daemon.getIdentityManager();
+    // idmgr.startService();
     testAddr = IPAddr.getByName("127.0.0.1");
+    testID = idmgr.stringToPeerIdentity("127.0.0.1");
     testSend = new LockssDatagram(LockssDatagram.PROTOCOL_TEST, testData);
     byte[] testHeader = {0, 0, 0, LockssDatagram.PROTOCOL_TEST};
     testPktData = ByteArray.concat(testHeader, testData);
@@ -115,7 +134,6 @@ public class TestLcapComm extends LockssTestCase {
     comm = new LcapComm(fact, config);
     daemon.setCommManager(comm);
     comm.initService(daemon);
-    daemon.getIdentityManager();
     comm.startService();
     ssock = ((MockDatagramSocket)fact.ssocks.get(0));
     usock = ((MockDatagramSocket)fact.usocks.get(0));
@@ -132,12 +150,16 @@ public class TestLcapComm extends LockssTestCase {
       comm = null;
       fact = null;
     }
+    if (idmgr != null) {
+      idmgr.stopService();
+      idmgr = null;
+    }
     super.tearDown();
   }
 
   public void testUnicastSend() throws Exception {
     assertTrue(ssock.getSentPackets().isEmpty());
-    comm.sendTo(testSend, testAddr, testPort);
+    comm.sendTo(testSend, testID, testPort);
     DatagramPacket sent = (DatagramPacket)ssock.getSentPackets().elementAt(0);
     assertEquals(testAddr, new IPAddr(sent.getAddress()));
     assertEquals(testPort, sent.getPort());

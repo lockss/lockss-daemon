@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.1 2004-09-16 21:29:16 dshr Exp $
+ * $Id: V1PollFactory.java,v 1.2 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public class V1PollFactory implements PollFactory {
                                  verifier,
                                  opcode,
                                  duration,
-                                 im.getLocalIdentity());
+                                 im.getLocalPeerIdentity());
     // before we actually send the message make sure that another poll
     // isn't going to conflict with this and create a split poll
     if(checkForConflicts(cus,pm) == null) {

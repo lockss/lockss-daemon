@@ -1,5 +1,5 @@
 /*
- * $Id: MailTarget.java,v 1.10 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: MailTarget.java,v 1.11 2004-09-20 14:20:39 dshr Exp $
  */
 
 /*
@@ -93,17 +93,17 @@ public class MailTarget {
 					   Configuration.Differences changedKeys) {
           loadConfiguration();
         }});
-    localHostName = IdentityManager.getLocalHostName();
+    try {
+      localHostName = IdentityManager.getLocalIPAddr().getHostName();
 
-    if (localHostName == null) {
-      logger.error("Couldn't find localhost from IdentityManager; "+
-                   "attempting to look up from IPAddr");
-      try {
+      if (localHostName == null) {
+	logger.error("Couldn't find localhost from IdentityManager; "+
+		     "attempting to look up from IPAddr");
         localHostName = IPAddr.getLocalHost().getHostName();
-      } catch (UnknownHostException ex) {
-        logger.error("Couldn't determine localhost.", ex);
-        throw new IllegalStateException("Couldn't determine localhost");
       }
+    } catch (UnknownHostException ex) {
+      logger.error("Couldn't determine localhost.", ex);
+      throw new IllegalStateException("Couldn't determine localhost");
     }
   }
 

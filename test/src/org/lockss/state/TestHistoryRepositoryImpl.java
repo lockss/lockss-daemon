@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.46 2004-09-13 04:02:24 dshr Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.47 2004-09-20 14:20:41 dshr Exp $
  */
 
 /*
@@ -46,10 +46,13 @@ import org.lockss.util.*;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
   private String tempDirPath;
-  private String idKey;
   private HistoryRepositoryImpl repository;
   private MockLockssDaemon theDaemon;
   private MockArchivalUnit mau;
+  private IdentityManager idmgr;
+  private String idKey;
+  private PeerIdentity testID1 = null;
+  private PeerIdentity testID2 = null;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -61,10 +64,19 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     repository = (HistoryRepositoryImpl)
         HistoryRepositoryImpl.createNewHistoryRepository(mau);
     repository.startService();
-    idKey = createIdentityKey();
+    if (idmgr == null) {
+      idmgr = theDaemon.getIdentityManager();
+      idmgr.startService();
+    }
+    testID1 = idmgr.stringToPeerIdentity("127.1.2.3");
+    testID2 = idmgr.stringToPeerIdentity("127.4.5.6");
   }
 
   public void tearDown() throws Exception {
+    if (idmgr != null) {
+      idmgr.stopService();
+      idmgr = null;
+    }
     repository.stopService();
     super.tearDown();
   }
@@ -377,10 +389,12 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreIdentityAgreements() throws Exception {
-    IdentityManager.IdentityAgreement id1 = new IdentityManager.IdentityAgreement("id1");
+    IdentityManager.IdentityAgreement id1 =
+      new IdentityManager.IdentityAgreement(testID1);
     id1.setLastAgree(123);
     id1.setLastDisagree(321);
-    IdentityManager.IdentityAgreement id2 = new IdentityManager.IdentityAgreement("id2");
+    IdentityManager.IdentityAgreement id2 =
+      new IdentityManager.IdentityAgreement(testID2);
     id2.setLastAgree(456);
     id2.setLastDisagree(654);
 
@@ -394,12 +408,15 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     List idList = repository.loadIdentityAgreements();
     assertEquals(2, idList.size());
     id1 = (IdentityManager.IdentityAgreement)idList.get(0);
-    assertEquals("id1", id1.getId());
+    assertTrue(id1 != null);
+    assertTrue("testID1 is " + testID1.toString() + " but got " +
+	       id1.getPeerIdentity().toString(),
+	       testID1 == id1.getPeerIdentity());
     assertEquals(123, id1.getLastAgree());
     assertEquals(321, id1.getLastDisagree());
 
     id2 = (IdentityManager.IdentityAgreement)idList.get(1);
-    assertEquals("id2", id2.getId());
+    assertTrue(testID2 == id2.getPeerIdentity());
     assertEquals(456, id2.getLastAgree());
     assertEquals(654, id2.getLastDisagree());
   }
@@ -419,17 +436,12 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     return new PollHistoryBean(new PollHistory(state, 0, votes));
   }
 
-  private String createIdentityKey() throws Exception {
-    theDaemon.getIdentityManager().findIdentity("127.0.0.1");
-    return "127.0.0.1";
-  }
-
   public static void configHistoryParams(String rootLocation)
     throws IOException {
     Properties p = new Properties();
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, rootLocation);
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, rootLocation);
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.7");
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
 

@@ -1,5 +1,5 @@
 /*
-* $Id: V1VerifyPoll.java,v 1.6 2004-09-13 04:02:21 dshr Exp $
+* $Id: V1VerifyPoll.java,v 1.7 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -140,8 +140,8 @@ class V1VerifyPoll extends V1Poll {
  }
 
   private void performHash(LcapMessage msg) {
-    LcapIdentity id = idMgr.findIdentity(msg.getOriginatorID());
-    int weight = id.getReputation();
+    PeerIdentity id = msg.getOriginatorID();
+    int weight = idMgr.getReputation(id);
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
     MessageDigest hasher = m_pollmanager.getHasher(msg);
@@ -163,8 +163,7 @@ class V1VerifyPoll extends V1Poll {
    */
   private void updateReputation(boolean voteAgreed)  {
     log.info(m_msg.toString() + " tally " + toString());
-    LcapIdentity id = idMgr.findIdentity(m_callerID);
-    int oldRep = id.getReputation();
+    int oldRep = idMgr.getReputation(m_callerID);
     int agree = m_tally.numAgree;
     int disagree = m_tally.numDisagree;
     if(voteAgreed) {
@@ -175,17 +174,17 @@ class V1VerifyPoll extends V1Poll {
     }
     if ((agree + disagree) < 1) {
       log.debug("vote failed to verify");
-      idMgr.changeReputation(id, IdentityManager.VOTE_NOTVERIFIED);
+      idMgr.changeReputation(m_callerID, IdentityManager.VOTE_NOTVERIFIED);
     } else if (agree > 0 && disagree == 0) {
       log.debug("vote successfully verified");
-      idMgr.changeReputation(id, IdentityManager.VOTE_VERIFIED);
+      idMgr.changeReputation(m_callerID, IdentityManager.VOTE_VERIFIED);
     } else {
       log.debug("vote disowned.");
-      idMgr.changeReputation(id, IdentityManager.VOTE_DISOWNED);
+      idMgr.changeReputation(m_callerID, IdentityManager.VOTE_DISOWNED);
     }
-    int newRep = id.getReputation();
+    int newRep = idMgr.getReputation(m_callerID);
     if(originalPoll != null) {
-      originalPoll.getVoteTally().adjustReputation(id, newRep -oldRep);
+      originalPoll.getVoteTally().adjustReputation(m_callerID, newRep -oldRep);
       log.debug("adjusted voter reputation in poll: " + originalPoll.getKey());
     }
   }
@@ -207,9 +206,9 @@ class V1VerifyPoll extends V1Poll {
         null,
         LcapMessage.VERIFY_POLL_REP,
         msg.getDuration(),
-        idMgr.getLocalIdentity());
+        idMgr.getLocalPeerIdentity());
 
-    LcapIdentity originator = idMgr.findIdentity(msg.getOriginatorID());
+    PeerIdentity originator = msg.getOriginatorID();
     log.debug("sending our verification reply to " + originator.toString());
     PollSpec spec = new PollSpec(repmsg);
     au = spec.getCachedUrlSet().getArchivalUnit();

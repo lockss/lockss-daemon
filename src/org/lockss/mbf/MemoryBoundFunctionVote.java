@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.9 2003-12-17 02:09:47 tlipkis Exp $
+ * $Id: MemoryBoundFunctionVote.java,v 1.10 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public abstract class MemoryBoundFunctionVote {
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param cusVal the CachedUrlSet containing the content to be voted on
    * @param pollID the byte array ID of the poll
-   * @param voterID the LcapIdentity of the voter
+   * @param voterID the PeerIdentity of the voter
    *
    */
   protected void setupGeneration(MemoryBoundFunctionFactory fact,
@@ -84,7 +84,7 @@ public abstract class MemoryBoundFunctionVote {
 				 int eVal,
 				 CachedUrlSet cusVal,
 				 byte[] pollID,
-				 LcapIdentity voterID)
+				 PeerIdentity voterID)
     throws MemoryBoundFunctionException {
     if (fact == null)
       throw new MemoryBoundFunctionException("no factory");
@@ -106,7 +106,7 @@ public abstract class MemoryBoundFunctionVote {
    * @param sVals the starting points chosen by the prover for each block
    * @param hashVals the hashes of each block
    * @param pollID the byte array ID of the poll
-   * @param voterID the LcapIdentity of the voter
+   * @param voterID the PeerIdentity of the voter
    * 
    */
   protected void setupVerification(MemoryBoundFunctionFactory fact,
@@ -116,7 +116,7 @@ public abstract class MemoryBoundFunctionVote {
 				   int[][] sVals,
 				   byte[][] hashVals,
 				   byte[] pollID,
-				   LcapIdentity voterID)
+				   PeerIdentity voterID)
     throws MemoryBoundFunctionException {
     if (fact == null)
       throw new MemoryBoundFunctionException("no factory");
@@ -138,7 +138,7 @@ public abstract class MemoryBoundFunctionVote {
 		     int eVal,
 		     CachedUrlSet cusVal,
 		     byte[] pollID,
-		     LcapIdentity voterID) {
+		     PeerIdentity voterID) {
     factory = fact;
     nonce = nVal;
     e = eVal;
@@ -148,7 +148,7 @@ public abstract class MemoryBoundFunctionVote {
     agreeing = true;
     cus = cusVal;
     poll = pollID;
-    voter = voterID.getIdKey().getBytes();
+    voter = voterID.getIdString().getBytes();
   }
 
   /**

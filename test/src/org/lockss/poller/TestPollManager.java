@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.63 2004-09-16 21:29:19 dshr Exp $
+ * $Id: TestPollManager.java,v 1.64 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -63,8 +63,7 @@ public class TestPollManager extends LockssTestCase {
   protected static ArchivalUnit testau;
   private MockLockssDaemon theDaemon;
 
-  protected IPAddr testaddr;
-  protected LcapIdentity testID;
+  protected PeerIdentity testID;
   protected LcapMessage[] testmsg;
   protected PollManager pollmanager;
   protected IdentityManager idmanager;
@@ -141,11 +140,9 @@ public class TestPollManager extends LockssTestCase {
 				   idmanager);
 	assertTrue(p instanceof V1Poll);
 	// assertTrue(p.isMyPoll());
-	assertEquals("Poll caller ID is " + p.getCallerID() +
-		   " but message ID is " + testmsg[i].getOriginatorID(),
-		   p.getCallerID(), testmsg[i].getOriginatorID());
 	assertTrue(p.getMessage() == testmsg[i]);
 	assertTrue(p.getPollSpec().equals(ps[i]));
+	assertTrue(p.getCallerID() == testmsg[i].getOriginatorID());
       } catch (ProtocolException pe) {
 	fail("createPoll " + testmsg[i] + " threw " + pe);
       }
@@ -518,6 +515,7 @@ public class TestPollManager extends LockssTestCase {
 
     theDaemon.setNodeManager(new MockNodeManager(), testau);
     pollmanager.startService();
+    idmanager.startService();
   }
 
   private void addRequiredConfig(Properties p) {
@@ -535,8 +533,7 @@ public class TestPollManager extends LockssTestCase {
 
   private void initTestAddr() {
     try {
-      testaddr = IPAddr.getByName("127.0.0.1");
-      testID = theDaemon.getIdentityManager().findIdentity(testaddr, 0);
+      testID = theDaemon.getIdentityManager().stringToPeerIdentity("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");

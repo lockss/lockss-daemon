@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.37 2004-09-13 04:02:22 dshr Exp $
+ * $Id: LcapRouter.java,v 1.38 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class LcapRouter
     comm = getDaemon().getCommManager();
     idMgr = getDaemon().getIdentityManager();
     pollMgr = getDaemon().getPollManager();
-    partnerList.setLocalIP(getLocalIdentityAddr());
+    partnerList.setIdentityManager(idMgr);
 
     comm.registerMessageHandler(LockssDatagram.PROTOCOL_LCAP,
 				new LcapComm.MessageHandler() {
@@ -153,7 +153,7 @@ public class LcapRouter
 
   /** Multicast a message to all caches holding the ArchivalUnit.  All
    * messages originated by this cache go through either this or {@link
-   * #sendTo(LcapMessage, ArchivalUnit, LcapIdentity)}.
+   * #sendTo(LcapMessage, ArchivalUnit, PeerIdentity)}.
    * @param msg the message to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
@@ -177,7 +177,7 @@ public class LcapRouter
    * @param id the identity of the cache to which to send the message
    * @throws IOException if message couldn't be sent
    */
-  public void sendTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
+  public void sendTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
     msg.setHopCount(initialHopCount);
     log.debug2("sendTo(" + msg + ", " + id + ")");
@@ -197,7 +197,9 @@ public class LcapRouter
     try {
       msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
     } catch (IOException e) {
-      idEvent(dg.getSender(), LcapIdentity.EVENT_ERRPKT, null);
+      // XXX move the constants to IdentityManager
+      PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
+      idEvent(pid, LcapIdentity.EVENT_ERRPKT, null);
       log.error("Couldn't decode incoming message", e);
       return;
     }
@@ -228,7 +230,8 @@ public class LcapRouter
     String verifier = String.valueOf(B64Code.encode(msg.getVerifier()));
     if (recentVerifiers.put(verifier, verObj) != null) {
       log.debug2("Discarding dup from " + dg.getSender() + ": " + msg);
-      idEvent(dg.getSender(), LcapIdentity.EVENT_DUPLICATE, msg);
+      PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
+      idEvent(pid, LcapIdentity.EVENT_DUPLICATE, msg);
       return true;
     }
     return false;
@@ -236,19 +239,18 @@ public class LcapRouter
 
   // decide where to forward incoming message
   void routeIncomingMessage(LockssReceivedDatagram dg, LcapMessage msg) {
-    try {
-      IPAddr sender = dg.getSender();
-      IPAddr originator = LcapIdentity.stringToAddr(msg.getOriginatorID());
-      idEvent(originator, LcapIdentity.EVENT_ORIG, msg);
+    PeerIdentity senderID = idMgr.ipAddrToPeerIdentity(dg.getSender());
+    PeerIdentity originatorID = msg.getOriginatorID();
+    idEvent(originatorID, LcapIdentity.EVENT_ORIG, msg);
       if (!msg.isNoOp()) {
-	idEvent(originator, LcapIdentity.EVENT_ORIG_OP, msg);
+	idEvent(originatorID, LcapIdentity.EVENT_ORIG_OP, msg);
       }
-      if (sender.equals(originator)) {
-	idEvent(sender, LcapIdentity.EVENT_SEND_ORIG, msg);
+      if (senderID == originatorID) {
+	idEvent(senderID, LcapIdentity.EVENT_SEND_ORIG, msg);
       } else {
-	idEvent(sender, LcapIdentity.EVENT_SEND_FWD, msg);
+	idEvent(senderID, LcapIdentity.EVENT_SEND_FWD, msg);
       }
-      log.debug2("incoming orig: " + originator + " , sender: " + sender);
+      log.debug2("incoming orig: " + originatorID + " , sender: " + senderID);
       if (isEligibleToForward(dg, msg)) {
 	//XXX need to clone message here to avoid overwrite problems
 	msg.setHopCount(msg.getHopCount() - 1);
@@ -256,34 +258,27 @@ public class LcapRouter
 	  LockssDatagram fwddg = new LockssDatagram(dg.getProtocol(),
 						  msg.encodeMsg());
 	  if (dg.isMulticast()) {
-	    partnerList.multicastPacketReceivedFrom(sender);
-	    if (!sender.equals(originator)) {
-	      partnerList.addPartner(originator, probAddPartner);
+	    partnerList.multicastPacketReceivedFrom(senderID);
+	    if (senderID != originatorID) {
+	      partnerList.addPartner(originatorID, probAddPartner);
 	    }
-	    doUnicast(fwddg, fwdRateLimiter, sender, originator);
+	    doUnicast(fwddg, fwdRateLimiter, senderID, originatorID);
 	  } else {
-	    partnerList.addPartner(sender, 1.0);
-	    if (!sender.equals(originator)) {
-	      partnerList.addPartner(originator, probAddPartner);
+	    partnerList.addPartner(senderID, 1.0);
+	    if (senderID != originatorID) {
+	      partnerList.addPartner(originatorID, probAddPartner);
 	    }
 	    doMulticast(fwddg, fwdRateLimiter, null);
-	    doUnicast(fwddg, fwdRateLimiter, sender, originator);
+	    doUnicast(fwddg, fwdRateLimiter, senderID, originatorID);
 	  }
 	} catch (IOException e) {
 	  log.warning("Couldn't forward message", e);
 	}
       }
-    } catch (UnknownHostException uhe) {
-      log.warning("Couldn't find sender of " + msg.toString());
-    }
   }
 
-  void idEvent(IPAddr addr, int event, LcapMessage msg) {
-    // Use port 0 to indicate V1 identity
-    LcapIdentity id = idMgr.findIdentity(addr, 0);
-    if (id != null) {
-      id.rememberEvent(event, msg);
-    }
+  void idEvent(PeerIdentity pid, int event, LcapMessage msg) {
+    idMgr.rememberEvent(pid, event, msg);
   }
 
   boolean isEligibleToForward(LockssReceivedDatagram dg, LcapMessage msg) {
@@ -323,7 +318,7 @@ public class LcapRouter
   // true if either the packet's source address is one of my interfaces,
   // or if I am (my identity is) the originator
   boolean didIOriginateOrSend(LockssReceivedDatagram dg, LcapMessage msg) {
-    if (msg.getOriginatorID().equals(idMgr.getLocalHostName())) {
+    if (idMgr.isLocalIdentity(msg.getOriginatorID())) {
       return true;
     }
     return comm.didISend(dg);
@@ -334,13 +329,13 @@ public class LcapRouter
    * originator may be null to disable this test.
    */
   void doUnicast(LockssDatagram dg, RateLimiter limiter,
-		 IPAddr sender, IPAddr originator) {
+		 PeerIdentity senderID, PeerIdentity originatorID) {
     Collection partners = partnerList.getPartners();
     for (Iterator iter = partners.iterator(); iter.hasNext(); ) {
-      IPAddr part = (IPAddr)iter.next();
+      PeerIdentity part = (PeerIdentity)iter.next();
       // *** Either or both of sender and originator may be null here,
       //     so equals() will be false. ***
-      if (!(part.equals(sender) || part.equals(originator))) {
+      if (!(part == senderID || part == originatorID)) {
 	try {
 	  comm.sendTo(dg, part);
 	  updateBeacon();
@@ -363,19 +358,10 @@ public class LcapRouter
     }
   }
 
-  private IPAddr localIp;
-
-  IPAddr getLocalIdentityAddr() {
-    if (localIp == null) {
-      localIp = idMgr.getLocalIdentity().getAddress();
-    }
-    return localIp;
-  }
-
   void sendNoOp() {
     try {
       LcapMessage noOp =
-	LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity(),
+	LcapMessage.makeNoOpMsg(idMgr.getLocalPeerIdentity(),
 				pollMgr.generateRandomBytes());
       log.debug2("noop: " + noOp);
       send(noOp, null);

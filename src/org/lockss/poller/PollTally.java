@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.26 2004-09-16 21:29:16 dshr Exp $
+ * $Id: PollTally.java,v 1.27 2004-09-20 14:20:36 dshr Exp $
  */
 
 /*
@@ -191,15 +191,14 @@ public abstract class PollTally implements Tallier{
 
   /**
    * Determine if the voter with a given ID has voted
-   * @param voterID the LcapIdentity of the voter to check
+   * @param voterID the PeerIdentity of the voter to check
    * @return true if a vote can be found for this Identity.
    */
-  boolean hasVoted(LcapIdentity voter) {
+  boolean hasVoted(PeerIdentity voterID) {
     Iterator it = pollVotes.iterator();
-    String voterID = voter.getIdKey();
     while(it.hasNext()) {
       Vote vote = (Vote) it.next();
-      if(voterID.equals(vote.getIdentityKey())) {
+      if(voterID == vote.getVoterIdentity()) {
         return true;
       }
     }
@@ -249,10 +248,10 @@ public abstract class PollTally implements Tallier{
 
   /**
    * adjust the reputation of a user after running a verify poll.
-   * @param voterID the LcapIdentity of the voter to adjust
+   * @param voterID the PeerIdentity of the voter to adjust
    * @param repDelta the amount by which to adjust the reputation.
    */
-  abstract void adjustReputation(LcapIdentity voterID, int repDelta);
+  abstract void adjustReputation(PeerIdentity voterID, int repDelta);
 
   /**
    * Description: a class for the entries returned in a Name poll

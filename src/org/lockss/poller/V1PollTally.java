@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.11 2004-09-13 04:02:21 dshr Exp $
+ * $Id: V1PollTally.java,v 1.12 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -274,12 +274,12 @@ public class V1PollTally extends PollTally {
 
 
 
-  void adjustReputation(LcapIdentity voter, int repDelta) {
+  void adjustReputation(PeerIdentity voterID, int repDelta) {
     synchronized (this) {
       Iterator it = pollVotes.iterator();
       while (it.hasNext()) {
         Vote vote = (Vote) it.next();
-        if (voter.getIdKey().equals(vote.getIdentityKey())) {
+        if (voterID == vote.getVoterIdentity()) {
           if (vote.isAgreeVote()) {
             wtAgree += repDelta;
           }
@@ -292,8 +292,8 @@ public class V1PollTally extends PollTally {
     }
   }
 
-  void addVote(Vote vote, LcapIdentity id, boolean isLocal) {
-    int weight = id.getReputation();
+  void addVote(Vote vote, PeerIdentity id, boolean isLocal) {
+    int weight = idManager.getReputation(id);
 
     synchronized (this) {
       if(vote.isAgreeVote()) {
@@ -410,29 +410,29 @@ class ReplayVoteCallback implements HashService.Callback {
      *                contains the hash.
      * @param e       the exception that caused the hash to fail.
      */
-    public void hashingFinished(CachedUrlSet urlset,
-                                Object cookie,
-                                MessageDigest hasher,
-                                Exception e) {
-      boolean hash_completed = e == null ? true : false;
-
-      if (hash_completed) {
-        Vote v = (Vote) cookie;
-        LcapIdentity id = idManager.findIdentity(v.getIdentityKey());
-        if (idManager.isLocalIdentity(id)) {
-          poll.copyVote(v,true);
-        }
-        else {
-          v.setAgreeWithHash(hasher.digest());
-        }
-        addVote(v, id, idManager.isLocalIdentity(id));
-        replayNextVote();
+  public void hashingFinished(CachedUrlSet urlset,
+			      Object cookie,
+			      MessageDigest hasher,
+			      Exception e) {
+    boolean hash_completed = e == null ? true : false;
+    
+    if (hash_completed) {
+      Vote v = (Vote) cookie;
+      PeerIdentity id = v.getVoterIdentity();
+      boolean isLocalVote = idManager.isLocalIdentity(id);
+      if (isLocalVote) {
+	poll.copyVote(v,true);
       }
       else {
-        log.warning("replay vote hash failed with exception:" + e.getMessage());
+	v.setAgreeWithHash(hasher.digest());
       }
+      addVote(v, id, isLocalVote);
+      replayNextVote();
+    }
+    else {
+      log.warning("replay vote hash failed with exception:" + e.getMessage());
     }
   }
-
+}
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.22 2004-09-13 04:02:22 dshr Exp $
+ * $Id: LcapIdentity.java,v 1.23 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import java.io.Serializable;
 
 /**
  * quick and dirty wrapper class for a network identity.
- * Should this class implement <code>PeerIdentity</code>?
  * @author Claire Griffin
  * @version 1.0
  */
@@ -77,16 +76,16 @@ public class LcapIdentity implements Serializable {
   int m_reputation;
   String m_idKey;
 
-  static Logger theLog=Logger.getLogger("Identity");
+  static Logger theLog=Logger.getLogger("LcapIdentity");
 
-  public LcapIdentity(String idKey)
+  protected LcapIdentity(String idKey)
     throws UnknownHostException {
     m_idKey = idKey;
     m_reputation = IdentityManager.INITIAL_REPUTATION;
     m_address = stringToAddr(idKey);
     m_port = stringToPort(idKey);
   }
-  public LcapIdentity(String idKey, int reputation)
+  protected LcapIdentity(String idKey, int reputation)
     throws UnknownHostException {
     m_idKey = idKey;
     m_reputation = reputation;
@@ -102,6 +101,7 @@ public class LcapIdentity implements Serializable {
     m_idKey = makeIdKey(addr, port);
     m_reputation = IdentityManager.INITIAL_REPUTATION;
     m_address = addr;
+    m_port = port;
   }
 
 
@@ -288,7 +288,8 @@ public class LcapIdentity implements Serializable {
     int colon = idKey.indexOf(':');
     IPAddr ret = null;
     if (colon > 0) {
-      ret = IPAddr.getByName(idKey.substring(0,colon-1));
+      // XXX V3 identity not really supported
+      ret = IPAddr.getByName(idKey.substring(0,colon));
     } else if (colon < 0) {
       // V1 identity,  no port part
       ret = IPAddr.getByName(idKey);

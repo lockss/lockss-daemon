@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.25 2004-09-16 21:29:19 dshr Exp $
+ * $Id: TestLcapIdentity.java,v 1.26 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestLcapIdentity extends LockssTestCase {
   static LcapIdentity fakeId = null;
   IPAddr testAddress;
   int testReputation;
-  Object testIdKey;
+  PeerIdentity testID;
   LcapMessage testMsg= null;
   private static String urlstr = "http://www.test.org";
   private static String lwrbnd = "test1.doc";
@@ -84,7 +84,7 @@ public class TestLcapIdentity extends LockssTestCase {
       fail("can't open test host");
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
-    testIdKey = LcapIdentity.makeIdKey(testAddress, 0);
+    testID = idmgr.stringToPeerIdentity("127.0.0.1");
     PollSpec spec = new MockPollSpec(archivalid, urlstr, lwrbnd, uprbnd,
 				     Poll.CONTENT_POLL);
     testMsg = LcapMessage.makeRequestMsg(spec,
@@ -93,39 +93,7 @@ public class TestLcapIdentity extends LockssTestCase {
 					 testbytes,
 					 LcapMessage.CONTENT_POLL_REQ,
 					 100000,
-					 fakeId);
-  }
-
-  /** test for method getIdentity(..) */
-  public void testGetIdentity() {
-    LcapIdentity id1 = idmgr.findIdentity(testAddress, 0);
-    assertTrue(id1 != null);
-    // try and get the identity we just added
-    LcapIdentity id2 = idmgr.getIdentity(id1.m_idKey);
-    assertTrue(id2.isEqual(id1));
-  }
-
-  /** test for method getLocalIdentity(..)
-   * @throws IOException
-   */
-  public void testGetLocalIdentity() throws IOException {
-    String host = "1.2.3.4";
-
-    LcapIdentity ident = idmgr.getLocalIdentity();
-    assertEquals(host, ident.toHost());
-    assertNotNull(ident.getAddress());
-    assertEquals(host, ident.getAddress().getHostAddress());
-  }
-
-  /** test for method isLocalIdentity(..) */
-  public void testIsLocalIdentity() {
-  }
-
-  /** test for method isEqual(..) */
-  public void testIsEqual() {
-    LcapIdentity id1 = idmgr.findIdentity(testAddress, 0);
-    LcapIdentity id2 = idmgr.getIdentity(id1.m_idKey);
-    assertEquals((String)id1.m_idKey,(String)id2.m_idKey);
+					 testID);
   }
 
   /** test for method toString(..) */
@@ -133,11 +101,6 @@ public class TestLcapIdentity extends LockssTestCase {
     String s = fakeId.toString();
     assertTrue(s.equals((String)fakeId.m_idKey));
   }
-
-  /** test for method toHost(..) */
-  public void testToHost() {
-  }
-
 
   /** test for method rememberActive(..) */
   public void testRememberActive() {

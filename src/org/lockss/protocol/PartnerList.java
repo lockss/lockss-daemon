@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.19 2004-08-18 00:14:56 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.20 2004-09-20 14:20:37 dshr Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ class PartnerList {
 
   static Logger log = Logger.getLogger("PartnerList");
 
-  static Random random = new Random();
+  static LockssRandom random = new LockssRandom();
 
   // partners is an LRUMap that records the most recent time an entry was
   // automatically removed
@@ -74,15 +74,16 @@ class PartnerList {
   long recentMulticastInterval;
   long minPartnerRemoveInterval;
   int maxPartners;
-  IPAddr localIP;
+  static IdentityManager idMgr = null;
+  PeerIdentity localPeer;
 
   /** Create a PartnerList */
   public PartnerList() {
   }
 
-  /** Tell us the local IP address */
-  public void setLocalIP(IPAddr local) {
-    localIP = local;
+  /** Tell us the local peer ID */
+  public static void setIdentityManager(IdentityManager im) {
+    idMgr = im;
   }
 
   /** Configure the PartnerList */
@@ -101,12 +102,11 @@ class PartnerList {
     if (changedKeys.contains(PARAM_DEFAULT_LIST)) {
       List stringList = config.getList(PARAM_DEFAULT_LIST);
       List newDefaultList = new ArrayList();
-      for (Iterator iter = stringList.iterator(); iter.hasNext(); ) {
-	try {
-	  newDefaultList.add(IPAddr.getByName((String)iter.next()));
-	} catch (UnknownHostException e) {
-	  log.warning("Can't add default partner", e);
-	}
+      for (Iterator iter = stringList.iterator(); iter.hasNext(); ) try {
+	PeerIdentity partner = idMgr.stringToPeerIdentity((String)iter.next());
+	newDefaultList.add(partner);
+      } catch (UnknownHostException uhe) {
+	log.error("default partner list throvi ws " + uhe);
       }
       if (newDefaultList.isEmpty()) {
 	log.error("Default partner list is empty");
@@ -126,37 +126,37 @@ class PartnerList {
   /** Inform the PartnerList that a multicast packet was received.
    * @param ip the address of the packet sender
    */
-  public void multicastPacketReceivedFrom(IPAddr ip) {
-    removePartner(ip);
-    lastMulticastReceived.put(ip, nowLong());
+  public void multicastPacketReceivedFrom(PeerIdentity id) {
+    removePartner(id);
+    lastMulticastReceived.put(id, nowLong());
   }
 
   /** Possibly add a partner to the list
    * @param partnerIP the address of the partner
    * @probability the probability of adding the partner
    */
-  public void addPartner(IPAddr partnerIP, double probability) {
-    log.debug2("addPartner(" + partnerIP + ", " + probability + ")");
+  public void addPartner(PeerIdentity id, double probability) {
+    log.debug2("addPartner(" + id + ", " + probability + ")");
     if (ProbabilisticChoice.choose(probability)) {
-      addPartner(partnerIP);
+      addPartner(id);
     }
   }
 
-  void addPartner(IPAddr partnerIP) {
+  void addPartner(PeerIdentity id) {
     // don't ever add ourself
-    if (partnerIP.equals(localIP)) {
+    if (idMgr.isLocalIdentity(id)) {
       return;
     }
     // don't add if recently received multicast from him
-    Long lastRcv = (Long)lastMulticastReceived.get(partnerIP);
+    Long lastRcv = (Long)lastMulticastReceived.get(id);
     if (lastRcv != null &&
 	(TimeBase.msSince(lastRcv.longValue()) < recentMulticastInterval)) {
       return;
     }
-    if (log.isDebug() && !partners.containsKey(partnerIP)) {
-      log.debug("Adding partner " + partnerIP);
+    if (log.isDebug() && !partners.containsKey(id)) {
+      log.debug("Adding partner " + id);
     }
-    partners.put(partnerIP, nowLong());
+    partners.put(id, nowLong());
     if (TimeBase.msSince(lastPartnerRemoveTime) > minPartnerRemoveInterval) {
       removeLeastRecent();
     }
@@ -171,13 +171,13 @@ class PartnerList {
     Collections.shuffle(defaultPartnerList);
     // then add all its elements.
     for (Iterator iter = defaultPartnerList.iterator(); iter.hasNext(); ) {
-      IPAddr ip = (IPAddr)iter.next();
-      addPartner(ip);
+      PeerIdentity id = (PeerIdentity)iter.next();
+      addPartner(id);
     }
   }
 
   void removeLeastRecent() {
-    IPAddr oldest = (IPAddr)partners.getFirstKey();
+    PeerIdentity oldest = (PeerIdentity)partners.getFirstKey();
     if (oldest != null) {
       removePartner(oldest);
     }
@@ -186,10 +186,10 @@ class PartnerList {
   /** Remove a partner from the list
    * @param partnerIP the partner to remove
    */
-  public void removePartner(IPAddr partnerIP) {
-    if (partners.containsKey(partnerIP)) {
-      log.debug("Removing partner " + partnerIP);
-      partners.remove(partnerIP);
+  public void removePartner(PeerIdentity id) {
+    if (partners.containsKey(id)) {
+      log.debug("Removing partner " + id);
+      partners.remove(id);
       lastPartnerRemoveTime = TimeBase.nowMs();
     }
   }
@@ -197,7 +197,7 @@ class PartnerList {
   void addFromDefaultList() {
     if (!defaultPartnerList.isEmpty()) {
       int ix = random.nextInt(defaultPartnerList.size());
-      addPartner((IPAddr)defaultPartnerList.get(ix));
+      addPartner((PeerIdentity)defaultPartnerList.get(ix));
     }
   }
 
@@ -205,16 +205,4 @@ class PartnerList {
     return new Long(TimeBase.nowMs());
   }
 
-//   static class Element {
-//     IPAddr addr;
-//     long lastReceiveTime;
-
-//     Element(LcapIdentity id) throws UnknownHostException {
-//       this(id.getAddress());
-//     }
-
-//     Element(IPAddr ip) {
-//       addr = ip;
-//     }
-//   }
 }

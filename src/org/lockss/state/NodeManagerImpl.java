@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.187 2004-09-16 21:29:17 dshr Exp $
+ * $Id: NodeManagerImpl.java,v 1.188 2004-09-20 14:20:38 dshr Exp $
  */
 
 /*
@@ -1144,7 +1144,7 @@ public class NodeManagerImpl
       Iterator votes_it = history.getVotes();
       while(votes_it.hasNext()) {
         Vote vote = (Vote) votes_it.next();
-        String voterID = vote.getIdentityKey();
+        PeerIdentity voterID = vote.getVoterIdentity();
         ArrayList list = (ArrayList) voteMap.get(voterID);
         if(list == null) {
           list = new ArrayList();
@@ -1711,7 +1711,7 @@ public class NodeManagerImpl
       Vote vote = (Vote) voteIt.next();
       int repChange = vote.isAgreeVote() ? agreeChange : disagreeChange;
 
-      String originatorID = vote.getIdentityKey();
+      PeerIdentity originatorID = vote.getVoterIdentity();
       idManager.changeReputation(originatorID, repChange);
       if (results.getTallyResult() == Tallier.RESULT_WON) {
 	if (vote.isAgreeVote()) {

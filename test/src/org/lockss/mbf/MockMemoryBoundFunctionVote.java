@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunctionVote.java,v 1.4 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: MockMemoryBoundFunctionVote.java,v 1.5 2004-09-20 14:20:39 dshr Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    * @param eVal the effort sizer (# of low-order zeros in destination)
    * @param cusVal the CachedUrlSet containing the content to be voted on
    * @param pollID the byte array ID for the poll
-   * @param voterID the LcapIdentity of the voter
+   * @param voterID the PeerIdentity of the voter
    *
    */
   protected void setupGeneration(MemoryBoundFunctionFactory fact,
@@ -81,7 +81,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
 				 int eVal,
 				 CachedUrlSet cusVal,
 				 byte[] pollID,
-				 LcapIdentity voterID) 
+				 PeerIdentity voterID) 
     throws MemoryBoundFunctionException {
     super.setupGeneration(fact, nVal, eVal, cusVal, pollID, voterID);
     setup(nVal, eVal, cusVal);
@@ -98,7 +98,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    * @param sVals the starting points chosen by the prover for each block
    * @param hashes the hashes of each block
    * @param pollID the byte array ID for the poll
-   * @param voterID the LcapIdentity of the voter
+   * @param voterID the PeerIdentity of the voter
    * 
    */
   public void setupVerification(MemoryBoundFunctionFactory fact,
@@ -108,7 +108,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
 				int sVals[][],
 				byte[][] hashes,
 				byte[] pollID,
-				LcapIdentity voterID)
+				PeerIdentity voterID)
     throws MemoryBoundFunctionException {
     super.setupVerification(fact, nVal, eVal, cusVal, sVals, hashes,
 			    pollID, voterID);

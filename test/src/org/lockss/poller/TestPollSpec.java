@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.14 2004-09-16 21:29:19 dshr Exp $
+ * $Id: TestPollSpec.java,v 1.15 2004-09-20 14:20:40 dshr Exp $
  */
 
 /*
@@ -103,10 +103,9 @@ public class TestPollSpec extends LockssTestCase {
     CachedUrlSet cus =
       new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
     PollSpec ps = new PollSpec(cus, Poll.CONTENT_POLL);
-    LcapIdentity id = null;
+    PeerIdentity id = null;
     try {
-      IPAddr addr = IPAddr.getByName("127.0.0.1");
-      id = theDaemon.getIdentityManager().findIdentity(addr, 0);
+      id = theDaemon.getIdentityManager().stringToPeerIdentity("127.0.0.1");
     }
     catch (UnknownHostException ex) {
       fail("can't open test host");
