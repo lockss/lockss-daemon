@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.9 2002-12-15 00:15:36 tal Exp $
+ * $Id: LcapComm.java,v 1.10 2002-12-15 00:34:25 tal Exp $
  */
 
 /*
@@ -414,15 +414,14 @@ public class LcapComm {
    * @param msg the message to send
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
-   * @deprecated Use {@link #sendMessageTo(LockssDatagram, ArchivalUnit,
-   * LcapIdentity)}
+   * @deprecated Use {@link #send(LockssDatagram, ArchivalUnit)}
    */
   public static void sendMessage(LcapMessage msg, ArchivalUnit au)
       throws IOException {
     if (singleton == null) {
       throw new IllegalStateException("LcapComm singleton not created");
     }
-    singleton.send(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+    getComm().send(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 				      msg.encodeMsg()),
 		   au);
   }
@@ -432,7 +431,7 @@ public class LcapComm {
    * @param au archival unit for which this message is relevant.  Used to
    * determine which multicast socket/port to send to.
    * @param id the identity of the cache to which to send the message
-   * @deprecated Use {@link #sendMessageTo(LockssDatagram, ArchivalUnit,
+   * @deprecated Use {@link #sendTo(LockssDatagram, ArchivalUnit,
    * LcapIdentity)}
    */
   public static void sendMessageTo(LcapMessage msg, ArchivalUnit au,
@@ -441,8 +440,8 @@ public class LcapComm {
     if (singleton == null) {
       throw new IllegalStateException("LcapComm singleton not created");
     }
-    singleton.sendTo(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
+    getComm().sendTo(new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					msg.encodeMsg()),
-		   au, id);
+		     au, id);
   }
 }
