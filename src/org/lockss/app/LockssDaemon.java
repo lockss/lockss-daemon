@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.40 2003-11-13 11:15:48 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.40.2.1 2003-11-19 06:21:14 tlipkis Exp $
  */
 
 /*
@@ -636,9 +636,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   protected void initManagers() throws Exception {
     for(int i=0; i< managerDescs.length; i++) {
       ManagerDesc desc = managerDescs[i];
-      String mgr_name = Configuration.getParam(MANAGER_PREFIX + desc.key,
-					       desc.defaultClass);
-      LockssManager mgr = loadManager(mgr_name);
+      LockssManager mgr = initManager(desc);
       theManagers.put(desc.key, mgr);
     }
     daemonInited = true;
@@ -683,24 +681,44 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
-   * Load the managers with the manager class name
-   * @param managerName the class name of the manager to load
+   * Load and init the specified manager.  If the manager class is
+   * specified by a config parameter and cannot be loaded, fall back to the
+   * default class.
+   * @param desc entry describing manager to load
    * @return the manager that has been loaded
    * @throws Exception if load fails
    */
-  protected LockssManager loadManager(String managerName) throws Exception {
-    log.debug("Loading manager " + managerName);
+  protected LockssManager initManager(ManagerDesc desc) throws Exception {
+    String managerName = Configuration.getParam(MANAGER_PREFIX + desc.key,
+						desc.defaultClass);
+    LockssManager mgr;
     try {
-      Class manager_class = Class.forName(managerName);
-      LockssManager mgr = (LockssManager) manager_class.newInstance();
+      mgr = loadManager(managerName);
+    } catch (ClassNotFoundException e) {
+      log.warning("Couldn't load manager class " + managerName);
+      if (!managerName.equals(desc.defaultClass)) {
+	log.warning("Trying default manager class " + desc.defaultClass);
+	mgr = loadManager(desc.defaultClass);
+      } else {
+	throw e;
+      }
+    }
+    try {
       // call init on the service
       mgr.initService(this);
       return mgr;
-    }
-    catch (Exception ex) {
+    } catch (Exception ex) {
       log.error("Unable to instantiate Lockss Manager "+ managerName, ex);
       throw(ex);
     }
+  }
+
+  protected LockssManager loadManager(String managerClassName)
+      throws ClassNotFoundException, InstantiationException,
+	     IllegalAccessException {
+    log.debug("Loading manager " + managerClassName);
+    Class mgrClass = Class.forName(managerClassName);
+    return (LockssManager)mgrClass.newInstance();
   }
 
   /**
