@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.8 2004-04-27 19:39:23 tlipkis Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.9 2004-08-21 06:52:50 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,6 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
     repo = theDaemon.getLockssRepository(mau);
     nodeMan = theDaemon.getNodeManager(mau);
     nodeMan.startService();
-    ((NodeManagerImpl)nodeMan).killTreeWalk();
   }
 
   public void tearDown() throws Exception {

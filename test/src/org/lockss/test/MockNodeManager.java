@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.17 2004-08-02 02:59:35 tlipkis Exp $
+ * $Id: MockNodeManager.java,v 1.18 2004-08-21 06:52:49 tlipkis Exp $
  */
 
 /*
@@ -132,10 +132,6 @@ public class MockNodeManager implements NodeManager {
     hashCalls.put(cus.getUrl(), new Long(hashDuration));
   }
 
-  public void forceTreeWalk() {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
   public void forceTopLevelPoll() {
     throw new UnsupportedOperationException("Not implemented");
   }
@@ -145,6 +141,16 @@ public class MockNodeManager implements NodeManager {
   }
 
   public void scheduleRepairs(ActivityRegulator.Lock activityLock) {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public boolean checkCurrentState(PollState lastOrCurrentPoll,
+				   NodeState nodeState) {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public void callNecessaryPolls(PollState lastOrCurrentPoll,
+				 NodeState nodeState) {
     throw new UnsupportedOperationException("Not implemented");
   }
 

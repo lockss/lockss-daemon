@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.29 2004-04-08 01:11:58 eaalto Exp $
+ * $Id: NodeManager.java,v 1.30 2004-08-21 06:52:51 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.io.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.app.*;
@@ -107,4 +108,27 @@ public interface NodeManager extends LockssAuManager {
    * @param auLock the Activity lock for the whole AU
    */
   public void scheduleRepairs(ActivityRegulator.Lock auLock);
+
+
+  /**
+   * Looks at the state of the node, and indicates if a poll needs to be called.
+   * It does not schedule polls, which should be done via
+   * 'callNecessaryPolls()'.  Called from the treewalk
+   * @param lastOrCurrentPoll the most recent poll (could be active)
+   * @param nodeState the {@link NodeState}
+   * @return true if action should be taken
+   * @throws IOException
+   */
+  boolean checkCurrentState(PollState lastOrCurrentPoll, NodeState nodeState)
+      throws IOException;
+
+  /**
+   * Looks at the state of the node, and takes appropriate action.  Called
+   * from the treewalk.
+   * @param lastOrCurrentPoll the most recent poll (could be active)
+   * @param nodeState the {@link NodeState}
+   * @throws IOException
+   */
+  void callNecessaryPolls(PollState lastOrCurrentPoll, NodeState nodeState)
+      throws IOException;
 }

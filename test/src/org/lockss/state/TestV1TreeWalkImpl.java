@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.38 2004-06-08 19:49:53 tlipkis Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.1 2004-08-21 06:52:49 tlipkis Exp $
  */
 
 /*
@@ -28,6 +28,7 @@ package org.lockss.state;
 
 import java.io.*;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -35,12 +36,12 @@ import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 
-public class TestTreeWalkHandler extends LockssTestCase {
+public class TestV1TreeWalkImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
   private String tempDirPath;
   private MockArchivalUnit mau = null;
   private NodeManagerImpl nodeManager;
-  private TreeWalkHandler treeWalkHandler;
+  private MyTreeWalkImpl twi;
   private MockPollManager pollMan;
   private MockCrawlManager crawlMan;
 
@@ -53,15 +54,16 @@ public class TestTreeWalkHandler extends LockssTestCase {
     Properties props = new Properties();
     props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-                      tempDirPath);
-    props.setProperty(TreeWalkHandler.PARAM_TREEWALK_INTERVAL, "100");
+		      tempDirPath);
+    props.setProperty(TreeWalkManager.PARAM_TREEWALK_INTERVAL_MIN, "100");
+    props.setProperty(TreeWalkManager.PARAM_TREEWALK_INTERVAL_MAX, "100");
     props.setProperty(NodeManagerImpl.PARAM_RECALL_DELAY, "5s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
     mau.setAuCachedUrlSet(TestNodeManagerImpl.makeFakeAuCus(mau,
-        TEST_URL, 2, 2));
+	TEST_URL, 2, 2));
     theDaemon.getPluginManager();
     PluginUtil.registerArchivalUnit(mau);
 
@@ -78,27 +80,24 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     nodeManager = new NodeManagerImpl(mau);
     nodeManager.initService(theDaemon);
-    HistoryRepository historyRepo = new HistoryRepositoryImpl(mau, tempDirPath);
-    historyRepo.startService();
-    nodeManager.historyRepo = historyRepo;
+    theDaemon.setNodeManager(nodeManager, mau);
+
+    HistoryRepository historyRepo =
+      new HistoryRepositoryImpl(mau, tempDirPath);
     theDaemon.setHistoryRepository(historyRepo, mau);
+
+    nodeManager.historyRepo = historyRepo;
+    historyRepo.startService();
+    nodeManager.startService();
 
     theDaemon.getActivityRegulator(mau).startService();
 
-    // can't call 'startService()' since thread can't start
-    nodeManager.nodeCache = new NodeStateCache(10);
-    nodeManager.activeNodes = new HashMap();
-    nodeManager.damagedNodes = new DamagedNodeSet(mau, historyRepo);
-    nodeManager.auState = historyRepo.loadAuState();
-    nodeManager.pollManager = pollMan;
-
-    treeWalkHandler = new TreeWalkHandler(nodeManager, theDaemon);
+    twi = new MyTreeWalkImpl(theDaemon, mau);
 
     TestNodeManagerImpl.loadNodeStates(mau, nodeManager);
   }
 
   public void tearDown() throws Exception {
-    treeWalkHandler.end();
     nodeManager.stopService();
     pollMan.stopService();
     crawlMan.stopService();
@@ -114,8 +113,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
     mau.setShouldCrawlForNewContent(false);
     mau.setShouldCallTopLevelPoll(false);
 
-    treeWalkHandler.doTreeWalk();
-    treeWalkHandler.callPollIfNecessary();
+    twi.doTreeWalk();
+    twi.doDeferredAction();
     assertNull(crawlMan.getAuStatus(mau));
     assertNull(pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
   }
@@ -125,8 +124,8 @@ public class TestTreeWalkHandler extends LockssTestCase {
     mau.setShouldCrawlForNewContent(false);
     mau.setShouldCallTopLevelPoll(true);
 
-    treeWalkHandler.doTreeWalk();
-    treeWalkHandler.callPollIfNecessary();
+    twi.doTreeWalk();
+    twi.doDeferredAction();
     assertNull(crawlMan.getAuStatus(mau));
     assertEquals(MockPollManager.CONTENT_REQUESTED,
 		 pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
@@ -140,16 +139,16 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // set up damage in tree
     CachedUrlSet subCus = (CachedUrlSet)
-        mau.getAuCachedUrlSet().flatSetIterator().next();
+	mau.getAuCachedUrlSet().flatSetIterator().next();
     NodeState node = nodeManager.getNodeState(subCus);
     node.setState(NodeState.CONTENT_LOST);
 
     // should find damage and schedule
-    treeWalkHandler.doTreeWalk();
-    treeWalkHandler.callPollIfNecessary();
+    twi.doTreeWalk();
+    twi.doDeferredAction();
     assertNull(crawlMan.getAuStatus(mau));
     assertEquals(pollMan.getPollStatus(subCus.getUrl()),
-                 MockPollManager.NAME_REQUESTED);
+		 MockPollManager.NAME_REQUESTED);
     // no top-level poll run
     assertNull(pollMan.getPollStatus(mau.getAuCachedUrlSet().getUrl()));
 
@@ -159,45 +158,17 @@ public class TestTreeWalkHandler extends LockssTestCase {
   public void testTreeWalkStartYesCrawl() {
     //should abort walk and schedule crawl
     mau.setShouldCrawlForNewContent(true);
-    treeWalkHandler.doTreeWalk();
-    treeWalkHandler.callPollIfNecessary();
+    twi.doTreeWalk();
+    twi.doDeferredAction();
     assertEquals(MockCrawlManager.SCHEDULED, crawlMan.getAuStatus(mau));
-  }
-
-  /**
-   * After initialized with no treewalk run, the thread should be ready to
-   * immediately start a treewalk.
-   */
-  public void testTreeWalkShouldStartIfNoneHaveRun() {
-    assertTrue(treeWalkHandler.timeUntilTreeWalkStart() <= 0);
-  }
-
-  public void testTreeWalkShouldntStartIfOneJustRan() throws IOException {
-    String configString = "org.lockss.treewalk.interval=10d";
-    ConfigurationUtil.setCurrentConfigFromString(configString);
-    treeWalkHandler.doTreeWalk();
-    treeWalkHandler.callPollIfNecessary();
-    assertFalse(treeWalkHandler.timeUntilTreeWalkStart() <= 0);
-  }
-
-  public void testTreeWalkShouldStartIfIntervalElapsed() throws IOException {
-    String configString = "org.lockss.treewalk.interval=100";
-    ConfigurationUtil.setCurrentConfigFromString(configString);
-    treeWalkHandler.doTreeWalk();
-    treeWalkHandler.callPollIfNecessary();
-
-    TimerUtil.guaranteedSleep(100);
-
-    long tutws = treeWalkHandler.timeUntilTreeWalkStart();
-    assertTrue(tutws + " > 0", tutws <= 0);
   }
 
   public void testCheckNodeStateCrawling() throws Exception {
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
-        TestNodeManagerImpl.getCus(mau, TEST_URL));
+	TestNodeManagerImpl.getCus(mau, TEST_URL));
 
-    treeWalkHandler.checkNodeState(node);
-    treeWalkHandler.callPollIfNecessary();
+    twi.checkNodeState(node);
+    twi.doDeferredAction();
     assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
     if (node.cus.hasContent()) {
       //XXX uncomment when CrawlManager ready
@@ -212,20 +183,20 @@ public class TestTreeWalkHandler extends LockssTestCase {
     TimeBase.setSimulated(10000);
 
     // give it a lock to avoid null pointer
-    treeWalkHandler.activityLock =
-        theDaemon.getActivityRegulator(mau).getAuActivityLock(
-        ActivityRegulator.TREEWALK, 123321);
+    twi.activityLock =
+	theDaemon.getActivityRegulator(mau).getAuActivityLock(
+	ActivityRegulator.TREEWALK, 123321);
 
     NodeStateImpl node = (NodeStateImpl)nodeManager.getNodeState(
-        TestNodeManagerImpl.getCus(mau, TEST_URL));
+	TestNodeManagerImpl.getCus(mau, TEST_URL));
 
     // should ignore if active poll
     PollState pollState = new PollState(Poll.NAME_POLL, "", "",
-                                        PollState.RUNNING, 1,
-                                        Deadline.MAX, true);
+					PollState.RUNNING, 1,
+					Deadline.MAX, true);
     node.addPollState(pollState);
-    treeWalkHandler.checkNodeState(node);
-    treeWalkHandler.callPollIfNecessary();
+    twi.checkNodeState(node);
+    twi.doDeferredAction();
     // no poll in manager since we just created a PollState
     assertNull(pollMan.getPollStatus(TEST_URL));
     assertNull(crawlMan.getUrlStatus(TEST_URL));
@@ -246,17 +217,17 @@ public class TestTreeWalkHandler extends LockssTestCase {
   }
 
   private void checkPollTest(int nodeState, long startTime,
-                             boolean shouldSchedule, boolean isContent,
-                             NodeStateImpl node) {
+			     boolean shouldSchedule, boolean isContent,
+			     NodeStateImpl node) {
     // reset treewalkaborted
-    treeWalkHandler.treeWalkAborted = false;
+    twi.treeWalkAborted = false;
     node.setState(nodeState);
-    assertEquals(!shouldSchedule, treeWalkHandler.checkNodeState(node));
-    treeWalkHandler.callPollIfNecessary();
+    assertEquals(!shouldSchedule, twi.checkNodeState(node));
+    twi.doDeferredAction();
     if (shouldSchedule) {
       assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
 		   (isContent ? MockPollManager.CONTENT_REQUESTED :
-                    MockPollManager.NAME_REQUESTED));
+		    MockPollManager.NAME_REQUESTED));
       pollMan.thePolls.remove(TEST_URL);
     } else {
       assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
@@ -268,9 +239,9 @@ public class TestTreeWalkHandler extends LockssTestCase {
     TimeBase.setSimulated(10000);
 
     // get lock to avoid null pointer
-    treeWalkHandler.activityLock =
-        theDaemon.getActivityRegulator(mau).getAuActivityLock(
-        ActivityRegulator.TREEWALK, 123321);
+    twi.activityLock =
+	theDaemon.getActivityRegulator(mau).getAuActivityLock(
+	ActivityRegulator.TREEWALK, 123321);
 
     CachedUrlSet cus = mau.getAuCachedUrlSet();
     CachedUrlSet subCus = (CachedUrlSet)cus.flatSetIterator().next();
@@ -279,99 +250,53 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     // set parent node to be running a poll
     PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
-                                           PollState.RUNNING, 123, 1,
-                                           null, true);
+					   PollState.RUNNING, 123, 1,
+					   null, true);
     node.closeActivePoll(pollHist);
     node.setState(NodeState.NAME_RUNNING);
 
     // should act on the parent node
-    assertFalse(treeWalkHandler.recurseTreeWalk(cus));
-    treeWalkHandler.callPollIfNecessary();
+    assertFalse(twi.recurseTreeWalk(cus));
+    twi.doDeferredAction();
     assertEquals(pollMan.getPollStatus(cus.getUrl()),
-                 MockPollManager.NAME_REQUESTED);
+		 MockPollManager.NAME_REQUESTED);
     assertNull(pollMan.getPollStatus(subCus.getUrl()));
     pollMan.thePolls.remove(cus.getUrl());
     // reset treewalk
-    treeWalkHandler.activityLock.expire();
-    treeWalkHandler.treeWalkAborted = false;
+    twi.activityLock.expire();
+    twi.treeWalkAborted = false;
 
     // get lock to avoid null pointer
-    treeWalkHandler.activityLock =
-        theDaemon.getActivityRegulator(mau).getAuActivityLock(
-        ActivityRegulator.TREEWALK, 123321);
+    twi.activityLock =
+	theDaemon.getActivityRegulator(mau).getAuActivityLock(
+	ActivityRegulator.TREEWALK, 123321);
 
     // set both nodes to be running a poll
     pollHist = new PollHistory(Poll.NAME_POLL, "", "",
-                               PollState.RUNNING, 456, 1,
-                               null, true);
+			       PollState.RUNNING, 456, 1,
+			       null, true);
     node.closeActivePoll(pollHist);
     node.setState(NodeState.NAME_RUNNING);
     subNode.closeActivePoll(pollHist);
     subNode.setState(NodeState.NAME_RUNNING);
 
     // should act on the sub-node, not the node
-    assertFalse(treeWalkHandler.recurseTreeWalk(cus));
-    treeWalkHandler.callPollIfNecessary();
+    assertFalse(twi.recurseTreeWalk(cus));
+    twi.doDeferredAction();
     assertNull(pollMan.getPollStatus(cus.getUrl()));
     assertEquals(pollMan.getPollStatus(subCus.getUrl()),
-                 MockPollManager.NAME_REQUESTED);
+		 MockPollManager.NAME_REQUESTED);
 
     TimeBase.setReal();
   }
 
-  public void testAverageTreeWalkDuration() {
-    // starts with default estimate
-    assertEquals(treeWalkHandler.DEFAULT_TREEWALK_INITIAL_ESTIMATE,
-                 treeWalkHandler.getEstimatedTreeWalkDuration());
-    treeWalkHandler.updateEstimate(100);
-    // first value gets set to MIN_TREEWALK_ESTIMATE, since to small
-    assertEquals(treeWalkHandler.MIN_TREEWALK_ESTIMATE,
-                 treeWalkHandler.getEstimatedTreeWalkDuration());
-    treeWalkHandler.updateEstimate(treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200);
-    // no averaging, so just padded by 1.25
-    long expectedL = (long)((treeWalkHandler.MIN_TREEWALK_ESTIMATE + 200) *
-        treeWalkHandler.DEFAULT_TREEWALK_ESTIMATE_PADDING_MULTIPLIER);
-    assertEquals(expectedL, treeWalkHandler.getEstimatedTreeWalkDuration());
-  }
-/*
-  private Poll createPoll(String url, boolean isContentPoll, int numAgree,
-                          int numDisagree) throws Exception {
-    LcapIdentity testID = null;
-    LcapMessage testmsg = null;
-    try {
-      IPAddr testAddr = IPAddr.getByName("127.0.0.1");
-      testID = theDaemon.getIdentityManager().findIdentity(testAddr);
+  class MyTreeWalkImpl extends V1TreeWalkImpl {
+    public MyTreeWalkImpl(LockssDaemon daemon, ArchivalUnit au) {
+      super(daemon, au);
     }
-    catch (UnknownHostException ex) {
-      fail("can't open test host");
-    }
-    byte[] bytes = new byte[20];
-    random.nextBytes(bytes);
-    try {
 
-      testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec(mau.getAuId(),
-                       url, "lwr", "upr", null),
-          null,
-          bytes,
-          bytes,
-          (isContentPoll ? LcapMessage.CONTENT_POLL_REQ :
-           LcapMessage.NAME_POLL_REQ),
-          123321,
-          testID);
+    public boolean doTreeWalk() {
+      return doTreeWalk(Deadline.in(10000000));
     }
-    catch (IOException ex) {
-      fail("can't create test name message" + ex.toString());
-    }
-    log.debug("daemon = " + theDaemon);
-    Poll p = TestPoll.createCompletedPoll(theDaemon, mau,
-                                          testmsg, numAgree, numDisagree);
-    TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
-    return p;
-  }
-*/
-  public static void main(String[] argv) {
-    String[] testCaseList = {TestTreeWalkHandler.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
   }
 }

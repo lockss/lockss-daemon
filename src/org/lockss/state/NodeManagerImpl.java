@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.182 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.183 2004-08-21 06:52:51 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,6 @@ public class NodeManagerImpl
   DamagedNodeSet damagedNodes;
 
   private static Logger logger = Logger.getLogger("NodeManager");
-  TreeWalkHandler treeWalkHandler;
 
   NodeManagerImpl(ArchivalUnit au) {
     managedAu = au;
@@ -117,15 +116,11 @@ public class NodeManagerImpl
     auState = historyRepo.loadAuState();
     damagedNodes = historyRepo.loadDamagedNodeSet();
 
-    // starts the treewalk
-    treeWalkHandler = new TreeWalkHandler(this, theDaemon);
-    treeWalkHandler.start();
     logger.debug2("NodeManager successfully started");
   }
 
   public void stopService() {
     if (logger.isDebug()) logger.debug("Stopping: " + managedAu);
-    killTreeWalk();
     activeNodes.clear();
     damagedNodes.clear();
     nodeCache.clear();
@@ -229,23 +224,6 @@ public class NodeManagerImpl
    */
   Iterator getCacheEntries() {
     return nodeCache.snapshot().iterator();
-  }
-
-  public void forceTreeWalk() {
-    logger.debug2("Forcing treewalk...");
-    if (treeWalkHandler == null) {
-      treeWalkHandler = new TreeWalkHandler(this, theDaemon);
-      treeWalkHandler.start();
-    }
-    treeWalkHandler.forceTreeWalk();
-  }
-
-  public void killTreeWalk() {
-    logger.debug2("Killing treewalk thread...");
-    if (treeWalkHandler != null) {
-      treeWalkHandler.end();
-      treeWalkHandler = null;
-    }
   }
 
   public void forceTopLevelPoll() {
@@ -874,7 +852,8 @@ public class NodeManagerImpl
    * @param nodeState the {@link NodeState}
    * @throws IOException
    */
-  void callNecessaryPolls(PollState lastOrCurrentPoll, NodeState nodeState)
+  public void callNecessaryPolls(PollState lastOrCurrentPoll,
+				 NodeState nodeState)
       throws IOException {
     callNecessaryPolls(lastOrCurrentPoll, null, nodeState,
                        nodeState.getState());
@@ -906,7 +885,8 @@ public class NodeManagerImpl
    * @return true if action should be taken
    * @throws IOException
    */
-  boolean checkCurrentState(PollState lastOrCurrentPoll, NodeState nodeState)
+  public boolean checkCurrentState(PollState lastOrCurrentPoll,
+				   NodeState nodeState)
       throws IOException {
     return checkCurrentState(lastOrCurrentPoll, null, nodeState,
                              nodeState.getState(), true);
