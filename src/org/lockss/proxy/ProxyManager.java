@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.10 2003-04-18 20:24:28 tal Exp $
+ * $Id: ProxyManager.java,v 1.11 2003-04-22 17:59:23 tal Exp $
  */
 
 /*
@@ -131,6 +131,10 @@ public class ProxyManager extends JettyManager {
 
       // Create a context
       HttpContext context = server.getContext(null, "/");
+
+      // In this environment there is no point in consuming memory with
+      // cached resources
+      context.setMaxCachedFileSize(0);
 
       // IpAccessHandler is first
       accessHandler = new IpAccessHandler("Proxy");
