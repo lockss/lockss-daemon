@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.2 2002-11-05 01:46:50 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.3 2002-11-06 00:04:23 aalto Exp $
  */
 
 /*
@@ -32,8 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
-import gnu.regexp.RE;
-import gnu.regexp.REException;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
@@ -120,11 +118,21 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   /**
+   * Returns the {@link SimulatedContentGenerator} for setting
+   * parameters.
+   * @return the generator
+   */
+
+  public SimulatedContentGenerator getContentGenerator() {
+    return scgen;
+  }
+
+  /**
    * mapUrlToContentFileName()
    * This maps a given url to a content file location.
    *
-   * @param url
-   * @return fileName
+   * @param url the url to map
+   * @return fileName the mapping result
    */
   public static String mapUrlToContentFileName(String url) {
     int lastSlashIdx = url.lastIndexOf("/");
