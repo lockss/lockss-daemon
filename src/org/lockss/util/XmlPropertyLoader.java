@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.14 2004-09-27 22:39:03 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.15 2004-10-01 17:50:07 smorabito Exp $
  */
 
 /*
@@ -32,13 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.util.*;
 import java.io.*;
+import java.util.*;
+
 import javax.xml.parsers.*;
-import org.mortbay.tools.PropertyTree;
+
+import org.lockss.config.*;
+import org.mortbay.tools.*;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
-import org.lockss.config.Configuration;
 
 public class XmlPropertyLoader {
 

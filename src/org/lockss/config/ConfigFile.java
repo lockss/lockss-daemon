@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.1 2004-09-27 22:09:15 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.2 2004-10-01 17:50:09 smorabito Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.config;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
+
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 

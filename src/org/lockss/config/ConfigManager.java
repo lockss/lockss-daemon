@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.1 2004-09-27 22:09:15 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.2 2004-10-01 17:50:08 smorabito Exp $
  */
 
 /*
@@ -36,8 +36,8 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.app.*;
-import org.lockss.mail.*;
 import org.lockss.hasher.*;
+import org.lockss.mail.*;
 import org.lockss.protocol.*;
 import org.lockss.proxy.*;
 import org.lockss.repository.*;

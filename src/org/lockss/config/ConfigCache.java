@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.1 2004-09-27 22:09:15 smorabito Exp $
+ * $Id: ConfigCache.java,v 1.2 2004-10-01 17:50:09 smorabito Exp $
  */
 
 /*
@@ -32,10 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
-import java.util.*;
 import java.io.*;
-import java.net.*;
-import org.apache.commons.collections.SequencedHashMap;
+import java.util.*;
+
+import org.apache.commons.collections.*;
 import org.lockss.util.*;
 
 /**

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.2 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.3 2004-10-01 17:50:08 smorabito Exp $
  */
 
 /*
@@ -32,12 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.config;
 
-import java.util.*;
 import java.io.*;
-import java.net.*;
-import java.text.*;
-import org.lockss.util.*;
+import java.util.*;
 
+import org.lockss.util.*;
 import org.mortbay.tools.*;
 
 /** <code>ConfigurationPropTreeImpl</code> represents the config parameters

@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.2 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: Configuration.java,v 1.3 2004-10-01 17:50:08 smorabito Exp $
  */
 
 /*
@@ -33,10 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
 
-import org.lockss.app.LockssDaemon;
 import org.lockss.util.*;
 
 /** <code>Configuration</code> provides access to the LOCKSS configuration
