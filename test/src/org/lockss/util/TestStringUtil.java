@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.2 2002-09-11 00:52:56 tal Exp $
+ * $Id: TestStringUtil.java,v 1.3 2002-10-16 04:59:47 tal Exp $
  */
 
 /*
@@ -115,4 +115,11 @@ public class TestStringUtil extends TestCase{
     String a[] = {"a", "b", "c"};
     assertEquals("a,b,c", StringUtil.separatedString(a, ","));
   }
+
+  public void testEscapeNonAlphaNum() {
+    assertEquals("", StringUtil.escapeNonAlphaNum(""));
+    assertEquals("123", StringUtil.escapeNonAlphaNum("123"));
+    assertEquals("\\ 1\\.2\\\\3\\?", StringUtil.escapeNonAlphaNum(" 1.2\\3?"));
+  }
+
 }
