@@ -95,6 +95,12 @@
 
     <!-- Title Sets -->
     <property name="titleSet">
+      <property name="alltitles">
+	<property name="class" value="alltitles" />
+      </property>
+      <property name="activeaus">
+	<property name="class" value="activeaus" />
+      </property>
       <property name="1">
 	<property name="name" value="All Project Muse Titles" />
 	<property name="class" value="xpath" />
