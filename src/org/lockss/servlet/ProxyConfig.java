@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.4 2004-06-07 19:29:59 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.5 2004-06-22 23:13:59 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import java.text.*;
+import org.mortbay.http.*;
 import org.mortbay.html.*;
 import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
@@ -52,6 +53,7 @@ import org.lockss.plugin.*;
 public class ProxyConfig extends LockssServlet {
 
   private String action;
+  private String auth;
   private PrintWriter wrtr = null;
   private String encapsulate;
   private ProxyInfo pi;
@@ -63,6 +65,7 @@ public class ProxyConfig extends LockssServlet {
   // don't hold onto objects after request finished
   protected void resetLocals() {
     wrtr = null;
+    auth = null;
     super.resetLocals();
   }
 
@@ -76,7 +79,13 @@ public class ProxyConfig extends LockssServlet {
    * @throws IOException
    */
   public void lockssHandleRequest() throws IOException {
+    auth = req.getHeader(HttpFields.__Authorization);
     action = getParameter("action");
+    if (StringUtil.isNullString(action)) {
+      // remain compatible with previous PAC URL, which people may have
+      // configured into browsers or stored elsewhere
+      action = getParameter("format");
+    }      
     if (StringUtil.isNullString(action)) {
       try {
 	getMultiPartRequest(100000);
@@ -189,12 +198,14 @@ public class ProxyConfig extends LockssServlet {
 	pac = pi.encapsulatePacFile(urlStems, encap, null);
       } else {
 	try {
+// 	  pac = pi.encapsulatePacFileFromURL(urlStems, url, auth);
 	  pac = pi.encapsulatePacFileFromURL(urlStems, url);
 	} catch (UnknownHostException e) {
 	  displayForm("Error reading PAC file from URL: " + url +
 		      "<br>No such host: " + e.getMessage());
 	  return;
 	} catch (IOException e) {
+	  log.warning("Error reading PAC file from URL: " + url, e);
 	  displayForm("Error reading PAC file from URL: " + url +
 		      "<br>" + e.toString());
 	  return;
