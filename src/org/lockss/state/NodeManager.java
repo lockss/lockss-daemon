@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.27 2004-02-05 02:18:01 eaalto Exp $
+ * $Id: NodeManager.java,v 1.28 2004-02-07 06:47:16 eaalto Exp $
  */
 
 /*
@@ -102,10 +102,11 @@ public interface NodeManager extends LockssAuManager {
   public boolean repairsNeeded();
 
   /**
-   * Schedules any necessary repairs.
-   * @param activityLock the Activity lock
+   * Schedules any necessary repairs.  Takes an AU-level lock and converts
+   * it into the necessary CUS-level repair locks.
+   * @param auLock the Activity lock for the whole AU
    */
-  public void scheduleRepairs(ActivityRegulator.Lock activityLock);
+  public void scheduleRepairs(ActivityRegulator.Lock auLock);
 
   /**
    * For testing only.  Forces the NodeManager to run a treewalk, if none
