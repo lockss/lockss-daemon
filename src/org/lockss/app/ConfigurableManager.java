@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurableManager.java,v 1.1 2004-08-22 02:05:57 tlipkis Exp $
+ * $Id: ConfigurableManager.java,v 1.2 2004-09-07 07:26:05 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public interface ConfigurableManager {
    * unless isAppInited() is true.
    * @param newConfig the new {@link Configuration}
    * @param prevConfig the previous {@link Configuration}
-   * @param changedKeys the {@link Set} of changed keys
+   * @param changedKeys the keys whose values have changed
    */
   void setConfig(Configuration newConfig,
 		 Configuration prevConfig,

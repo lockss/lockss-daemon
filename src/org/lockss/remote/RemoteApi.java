@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.15 2004-08-22 02:05:52 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.16 2004-09-07 07:26:04 tlipkis Exp $
  */
 
 /*
@@ -512,7 +512,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
   }
 
   /** Object describing results of AU config restore operation.  Basically
-   * a list of {@link RestoreStatus}, one for each AU restore attempted */
+   * a list of {@link RemoteApi.RestoreStatus}, one for each AU restore
+   * attempted */
   public static class RestoreAllStatus {
     static Comparator statusComparator = new RestoreStatusOrderComparator();
     private List statusList = new ArrayList();

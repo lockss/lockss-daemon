@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.10 2004-08-18 20:01:24 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.11 2004-09-07 07:26:04 tlipkis Exp $
  */
 /*
 
@@ -145,7 +145,7 @@ public class PropUtil {
    * @param p2 second PropertyTree
    * @return Set of keys and prefixes whose values differ.  Returns empty
    * set if there are no differences.
-   * @throw NullPointerException if either PropertyTree is null
+   * @throws NullPointerException if either PropertyTree is null
    */
   public static Set differentKeysAndPrefixes(PropertyTree p1,
 					     PropertyTree p2) {
