@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.123 2005-01-07 09:21:12 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.124 2005-01-07 22:05:36 smorabito Exp $
  */
 
 /*
@@ -772,6 +772,9 @@ public class PluginManager
   public void deactivateAuConfiguration(ArchivalUnit au) throws IOException {
     log.debug("Deactivating AU: " + au);
     Configuration config = getStoredAuConfiguration(au);
+    if (config.isSealed()) {
+      config = config.copy();
+    }
     config.put(AU_PARAM_DISABLED, "true");
     updateAuConfigFile(au, config);
   }
