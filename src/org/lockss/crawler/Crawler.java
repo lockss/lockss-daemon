@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.10 2002-11-06 01:17:29 tal Exp $
+ * $Id: Crawler.java,v 1.11 2002-11-07 02:14:03 aalto Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import org.lockss.util.*;
 public class Crawler{
   /**
    * TODO
-   * 1) write state to harddrive using whatever system we come up for for the 
+   * 1) write state to harddrive using whatever system we come up for for the
    * rest of LOCKSS
    * 2) check deadline and die if we run too long
    */
@@ -74,12 +74,12 @@ public class Crawler{
   //  private static final int MAX_TAG_LENGTH = 2048;
 
   /**
-   * Main method of the crawler; it loops through crawling and caching 
+   * Main method of the crawler; it loops through crawling and caching
    * urls.
    *
    * @param rootUrls CachedUrlSet encapsulating the starting point of the
    * crawl and the rules for which urls to cache
-   * 
+   *
    */
   public static void doCrawl(ArchivalUnit au, CrawlSpec spec){
     List list = createInitialList(spec);
@@ -111,7 +111,7 @@ public class Crawler{
     if (uc.shouldBeCached()){
       if (!uc.getCachedUrl().exists()) {
 	try{
-	  pause(); //XXX should get from plugin
+//	  pause(); //XXX should get from plugin
 	  logger.info("caching "+uc);
 	  uc.cache();
 	}catch (Exception e){
@@ -137,7 +137,7 @@ public class Crawler{
     list.remove(uc.getUrl());
   }
   /**
-   * Method to generate a List of urls to start a crawl at from a 
+   * Method to generate a List of urls to start a crawl at from a
    * CachedUrlSet.
    *
    * @param spec CrawlSpec from which the starting points with be fetched.
@@ -152,7 +152,7 @@ public class Crawler{
   }
 
   /**
-   * Method which will parse the html file represented by cu and add all 
+   * Method which will parse the html file represented by cu and add all
    * urls on it to list
    *
    *@param cu object representing a html file in the local file system
@@ -169,14 +169,14 @@ public class Crawler{
 	return;
       }
 //check to see if we should even try to parse the file
-//       if (cuStr.indexOf("html") < 0 && 
+//       if (cuStr.indexOf("html") < 0 &&
 // 	  cuStr.indexOf("htm") < 0){ //XXX hack for now
 // 	return;
 //       }
-      
+
       InputStream is = cu.openForReading();
       if (is != null){
-	Reader reader = new InputStreamReader(cu.openForReading());
+	Reader reader = new InputStreamReader(is);
 	URL srcUrl = new URL(cuStr);
 	String nextUrl = ExtractNextLink(reader, srcUrl);
 	while (nextUrl != null){
@@ -196,7 +196,7 @@ public class Crawler{
    *
    * @param cu CachedUrl representing the web page we may parse
    * @return true if cu has "content-type" set to "text/html", false otherwise
-   */  
+   */
   protected static boolean shouldExtractLinksFromCachedUrl(CachedUrl cu){
     Properties props = cu.getProperties();
     if (props == null){
@@ -219,7 +219,6 @@ public class Crawler{
     if (reader == null){
       return null;
     }
-
     boolean inscript = false; //FIXME or I will break when we look at scripts
     String nextLink = null;
     int c = 0;
@@ -230,12 +229,12 @@ public class Crawler{
       do{
 	c = reader.read();
       }while (c >= 0 && c != '<');
-      
+
       if (c == '<') {
 	int pos = 0;
 	c = reader.read();
 	while (c >= 0 && c != '>') {
-	  if(pos==2 && c=='-' && lineBuf.charAt(0)=='!' 
+	  if(pos==2 && c=='-' && lineBuf.charAt(0)=='!'
 	     && lineBuf.charAt(1)=='-') {
 	    // comment
 	    pos = 0;
@@ -264,16 +263,16 @@ public class Crawler{
     }
     return nextLink;
   }
-  
 
 
-  
+
+
   /**
    * Method to take a link tag, and parse out the URL it points to, returning
    * a string representation of the url (lifted and rewritten from the Gosling
    * crawler)
    *
-   * @param link StringBuffer containing the text of a link tag (everything 
+   * @param link StringBuffer containing the text of a link tag (everything
    * between < and > (ie, "a href=http://www.test.org")
    * @param srcUrl URL object representing the page on which this
    * url was taken from (for resolving relative tags)
@@ -321,7 +320,7 @@ public class Crawler{
     if (linkIdx < 0){
       return null;
     }
-    int idx = linkIdx + key.length(); 
+    int idx = linkIdx + key.length();
     while (idx < link.length() &&
 	   (link.charAt(idx) == '"' ||
 	    link.charAt(idx) == ' ' ||
@@ -336,6 +335,6 @@ public class Crawler{
     returnStr = StringUtil.trimAfterChars(returnStr, " #\"");
     URL retUrl = new URL(srcUrl, returnStr);
     return retUrl.toString();
-  } 
+  }
 
 }
