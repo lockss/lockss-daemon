@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.2 2004-02-10 02:26:05 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.3 2004-02-10 04:55:03 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -53,6 +53,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 
   private static Logger log = Logger.getLogger("LockssThread");
 
+  private OneShotSemaphore runningSem = new OneShotSemaphore();
   private Map wdogParamNameMap = new HashMap();
   private Map prioParamNameMap = new HashMap();
   private volatile boolean triggerOnExit = false;
@@ -71,6 +72,41 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 
   protected LockssThread(String name) {
     super(name);
+  }
+
+  /** Declare that the thread is running and initialized. */
+  protected void nowRunning() {
+    runningSem.fill();
+  }
+
+  /** Wait until the thread is running and initialized.  Useful to ensure
+   * the thread has finished its initialization before it is asked to do
+   * anything.  If used in the method that starts the thread, prevents test
+   * code from finishing before the thread starts, which can cause
+   * watchdogs to trigger spuriously.
+   * @param timeout Deadline that limits how long to wait for the thread to
+   * start running.
+   * @return true iff the thread has said it's running, false if timeout or
+   * interrupted.
+   */
+  public boolean waitRunning(Deadline timeout) {
+    try {
+      return runningSem.waitFull(timeout);
+    } catch (InterruptedException e) {
+    }
+    return runningSem.isFull();
+  }
+
+  /** Wait until the thread is running and initialized.  Useful to ensure
+   * the thread has finished its initialization before it is asked to do
+   * anything.  If used in the method that starts the thread, prevents test
+   * code from finishing before the thread starts, which can cause
+   * watchdogs to trigger spuriously.
+   * @return true iff the thread has said it's running, false if timeout or
+   * interrupted.
+   */
+  public boolean waitRunning() {
+    return waitRunning(Deadline.MAX);
   }
 
   /** Set the priority of the thread from a parameter value
@@ -140,8 +176,12 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * false; threads that are supposed to be persistent and never exit
    * should set this true. */
   public void triggerWDogOnExit(boolean triggerOnExit) {
+    if (this.triggerOnExit != triggerOnExit) {
+      logEvent(triggerOnExit ?
+	       "Enabling thread exit" : "Disabling thread exit",
+	       false);
+    }
     this.triggerOnExit = triggerOnExit;
-    logEvent("On Exit", false);
   }
 
   /** Called if thread is hung (hasn't poked the watchdog in too long).

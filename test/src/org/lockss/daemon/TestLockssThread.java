@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssThread.java,v 1.2 2004-02-10 02:26:05 tlipkis Exp $
+ * $Id: TestLockssThread.java,v 1.3 2004-02-10 04:55:03 tlipkis Exp $
  */
 
 /*
@@ -110,6 +110,14 @@ public class TestLockssThread extends LockssTestCase {
     }
   }
 
+  public void testWaitRunning() throws Exception {
+    TimeBase.setReal();
+    TestThread thr = new TestThread("Test");
+    assertFalse(thr.waitRunning(Deadline.EXPIRED));
+    thr.start();
+    assertTrue(thr.waitRunning(Deadline.in(TIMEOUT_SHOULDNT)));
+  }
+
   // Thread updates watchdog frequently enough
   public void testDogNoHang() throws Exception {
     TestThread thr = new TestThread("Test");
@@ -204,6 +212,7 @@ public class TestLockssThread extends LockssTestCase {
       if (triggerOnExit) {
 	triggerWDogOnExit(true);
       }
+      nowRunning();
       startSem.give();
       if (dogInterval != 0) {
 	for (int ix = 0; ix < 10; ix++) {
