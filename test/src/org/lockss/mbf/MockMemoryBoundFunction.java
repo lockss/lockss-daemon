@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.9 2003-09-09 03:54:04 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.10 2003-09-10 04:09:43 dshr Exp $
  */
 
 /*
@@ -74,12 +74,23 @@ public class MockMemoryBoundFunction extends MemoryBoundFunction {
 			    byte[] A0array,
 			    byte[] Tarray)
     throws MemoryBoundFunctionException {
+    switch (Tarray.length) {
+    case 16*1024*1024:
+    case 1024*1024:
+      if (A0array.length != 1024) {
+	throw new MemoryBoundFunctionException(A0array.length + "/" +
+					       Tarray.length + " bad length");
+      }
+      break;
+    default:
+      throw new MemoryBoundFunctionException(A0array.length + "/" +
+					     Tarray.length + " bad length");
+    }
     super.initialize(nonceVal, eVal, lVal, nVal, sVal, maxPathVal,
 		     A0array, Tarray);
     stepsToDo = e * pathLen;
     if (verify) {
-      if (proof == null ||
-	  proof.length > e)
+      if (proof == null || proof.length > e || proof.length == 0)
 	throw new MemoryBoundFunctionException("bad proof");
       if (maxPath < 1)
 	throw new MemoryBoundFunctionException("too few paths");

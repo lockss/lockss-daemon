@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.10 2003-09-06 14:01:12 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.11 2003-09-10 04:09:43 dshr Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     else 
       rand = new Random(System.currentTimeMillis());
     if (basisT == null) {
-      basisT = new byte[16*1024*1024];
+      basisT = new byte[/* 16* */ 1024*1024];
       rand.nextBytes(basisT);
       log.info(basisT.length + " bytes of T created");
     }

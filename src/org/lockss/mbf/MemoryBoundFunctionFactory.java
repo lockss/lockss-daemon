@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionFactory.java,v 1.6 2003-09-09 03:54:04 dshr Exp $
+ * $Id: MemoryBoundFunctionFactory.java,v 1.7 2003-09-10 04:09:42 dshr Exp $
  */
 
 /*
@@ -83,10 +83,6 @@ public class MemoryBoundFunctionFactory {
       // Found it
       if (A0array == null || Tarray == null) {
 	throw new MemoryBoundFunctionException("Array is null");
-      }
-      if (A0array.length != 1024 || Tarray.length != 16*1024*1024) {
-	throw new MemoryBoundFunctionException(A0array.length + "/" +
-					       Tarray.length + " bad length");
       }
       classToUse = Class.forName(implToUse);
       logger.info("factory for " + impl + " size " + A0array.length +

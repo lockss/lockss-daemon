@@ -1,5 +1,5 @@
 /*
- * $Id: MBF1.java,v 1.13 2003-09-09 03:54:04 dshr Exp $
+ * $Id: MBF1.java,v 1.14 2003-09-10 04:09:42 dshr Exp $
  */
 
 /*
@@ -116,6 +116,18 @@ public class MBF1 extends MemoryBoundFunction {
 			    byte[] A0array,
 			    byte[] Tarray)
     throws MemoryBoundFunctionException {
+    switch (Tarray.length) {
+    case 16*1024*1024:
+    case 1024*1024:
+      if (A0array.length != 1024) {
+	throw new MemoryBoundFunctionException(A0array.length + "/" +
+					       Tarray.length + " bad length");
+      }
+      break;
+    default:
+      throw new MemoryBoundFunctionException(A0array.length + "/" +
+					     Tarray.length + " bad length");
+    }
     super.initialize(nonceVal, eVal, lVal, nVal, sVal, maxPathVal,
 		     A0array, Tarray);
     A0 = A0array;
@@ -206,11 +218,22 @@ public class MBF1 extends MemoryBoundFunction {
 	A[m] = ba[m];
       else
 	A[m] = 0;
-    c = wordAt(A, 0) & 0x00fffffc; // "Bottom" 22 bits of A
+    switch (T.length) {
+    case 16*1024*1024:
+      c = wordAt(A, 0) & 0x00fffffc; // "Bottom" 22 bits of A
+      break;
+    case 1024*1024:
+      c = wordAt(A, 0) & 0x000ffffc; // "Bottom" 18 bits of A
+      break;
+    }
   }
 
   private int cyclicRightShift11(int a) {
     return ((a >>> 11) | ((a & 0x7ff) << 21));
+  }
+
+  private int cyclicRightShift15(int a) {
+    return ((a >>> 15) | ((a & 0x7fff) << 17));
   }
 
   // Path step
@@ -223,7 +246,15 @@ public class MBF1 extends MemoryBoundFunction {
     // logger.info("Step at " + c + " indices [" + i + "," + j + "]");
     // feed bits from T into A[i] and rotate them
     int tmp1 = wordAt(T, c);
-    int tmp2 = cyclicRightShift11(wordAt(A, i) + tmp1);
+    int tmp2 = 0;
+    switch (T.length) {
+    case 16*1024*1024:
+      tmp2 = cyclicRightShift11(wordAt(A, i) + tmp1);
+      break;
+    case 1024*1024:
+      tmp2 = cyclicRightShift15(wordAt(A, i) + tmp1);
+      break;
+    }      
     setWordAt(A, i, tmp2);
     // swap A[i] and A[j]
     tmp2 = wordAt(A, i);
@@ -231,7 +262,14 @@ public class MBF1 extends MemoryBoundFunction {
     setWordAt(A, i, tmp3);
     setWordAt(A, j, tmp2);
     // update c
-    c = (tmp1 ^ wordAt(A, (tmp2 + tmp3) & 0x3fc)) & 0x00fffffc;
+    switch (T.length) {
+    case 16*1024*1024:
+      c = (tmp1 ^ wordAt(A, (tmp2 + tmp3) & 0x3fc)) & 0x00fffffc;
+      break;
+    case 1024*1024:
+      c = (tmp1 ^ wordAt(A, (tmp2 + tmp3) & 0x3fc)) & 0x000ffffc;
+      break;
+    }
     if (c < 0 || c > (T.length-4) || ( c & 0x3 ) != 0)
       throw new MemoryBoundFunctionException("bad c " + c + " T[" +
 					     T.length + "]");

@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.10 2003-09-10 03:17:01 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.11 2003-09-10 04:09:43 dshr Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     else 
       rand = new Random(System.currentTimeMillis());
     if (basisT == null) {
-      basisT = new byte[16*1024*1024];
+      basisT = new byte[/* 16 * */1024*1024];
       rand.nextBytes(basisT);
       log.info(basisT.length + " bytes of T created");
     }
@@ -116,8 +116,30 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     } catch (Exception ex) {
       fail("BOGUS threw " + ex.toString());
     }
-    if (!gotException)
-      fail("BOGUS didn't throw MemoryBoundFunctionException");
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    for (int i = 0; i < names.length; i++) {
+      byte[] bad1 = new byte[4];
+      byte[] bad2 = new byte[16];
+      gotException = false;
+      MemoryBoundFunctionFactory tmpFactory = null;
+      try {
+	tmpFactory = new MemoryBoundFunctionFactory(names[i], bad1, bad2);
+      } catch (Exception ex) {
+	fail(names[i] + " factory threw " + ex.toString());
+      }
+      try {
+	MemoryBoundFunction tmpMBF =
+	  tmpFactory.makeGenerator(nonce, 7, 256, 2);
+      } catch (MemoryBoundFunctionException ex) {
+	gotException = true;
+      } catch (Exception ex) {
+	fail(names[i] + " makeGenerator threw " + ex.toString());
+      }
+      if (!gotException) {
+	fail(names[i] + " makeGenerator did not throw");
+      }
+    }
     if (factory == null) {
       factory = new MemoryBoundFunctionFactory[names.length];
       for (int i = 0; i < names.length; i++) {
@@ -128,8 +150,6 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 	}
       }
     }
-    byte[] nonce = new byte[4];
-    rand.nextBytes(nonce);
     for (int i = 0; i < factory.length; i++) {
       try {
 	MemoryBoundFunction tmp =
@@ -157,7 +177,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
   /**
    * Test exceptions
    */
-  public void testExceptions() {
+  public void testLongProof() {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
     for (int i = 0; i < factory.length; i++) {
@@ -168,6 +188,28 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 	fail(names[i] + ": didn't throw exception on too-long proof");
       } catch (MemoryBoundFunctionException ex) {
 	// No action intended
+      } catch (Exception ex) {
+	fail(names[i] + ": threw " + ex.toString());
+      }
+    }
+  }
+
+  public void testEmptyProof() {
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    for (int i = 0; i < factory.length; i++) {
+      try {
+	int[] bad = new int[0];
+	MemoryBoundFunction mbf =
+	  factory[i].makeVerifier(nonce, 7, 256, 2, bad, 9);
+	// Empty proofs are OK for MBF2
+	if (!names[i].equals("MBF2")) {
+	  fail(names[i] + ": didn't throw exception on empty proof");
+	}
+      } catch (MemoryBoundFunctionException ex) {
+	if (names[i].equals("MBF2")) {
+	  fail(names[i] + " threw " + ex.toString());
+	}
       } catch (Exception ex) {
 	fail(names[i] + ": threw " + ex.toString());
       }
