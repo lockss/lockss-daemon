@@ -1,5 +1,5 @@
 /*
- * $Id: AcsArchivalUnit.java,v 1.5 2003-10-08 23:36:55 clairegriffin Exp $
+ * $Id: AcsArchivalUnit.java,v 1.6 2003-10-09 22:58:28 eaalto Exp $
  */
 
 /*
@@ -226,6 +226,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
   }
 
   /**
+   * @param mimeType the mime type
    * @return null since we're not currently filtering Muse content
    */
   public FilterRule getFilterRule(String mimeType) {
@@ -252,7 +253,7 @@ public class AcsArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules(base, jkey, volume);
-    return new CrawlSpec(startUrlString, rule, 2);
+    return new CrawlSpec(startUrlString, rule, null, 2);
   }
 
   private CrawlRule makeRules(URL urlRoot, String jkey, int volume)

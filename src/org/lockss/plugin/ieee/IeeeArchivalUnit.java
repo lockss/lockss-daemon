@@ -150,7 +150,7 @@ public class IeeeArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules(base, pub, year);
-    return new CrawlSpec(makeStartUrl(base, pub, year), rule, 1);
+    return new CrawlSpec(makeStartUrl(base, pub, year), rule, null, 1);
   }
 
   public String getManifestPage() {
@@ -167,6 +167,7 @@ public class IeeeArchivalUnit extends BaseArchivalUnit {
   }
 
   /**
+   * @param mimeType the mime type
    * @return null since we're not currently filtering Muse content
    */
   public FilterRule getFilterRule(String mimeType) {
