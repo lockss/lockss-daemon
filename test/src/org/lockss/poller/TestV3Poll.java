@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.15 2004-11-18 15:45:08 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.16 2004-11-22 22:27:21 dshr Exp $
  */
 
 /*
@@ -193,7 +193,6 @@ public class TestV3Poll extends LockssTestCase {
     idmgr.startService();
     //theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
-    theDaemon.getStreamRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getEffortService().startService();
     theDaemon.getActivityRegulator(testau).startService();

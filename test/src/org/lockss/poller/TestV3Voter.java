@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Voter.java,v 1.1.2.4 2004-11-18 15:45:08 dshr Exp $
+ * $Id: TestV3Voter.java,v 1.1.2.5 2004-11-22 22:27:21 dshr Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestV3Voter extends LockssTestCase {
 		 testV3polls[0].getPollState());
   }
 
-  public void dontTestVoterDuration() {
+  public void testVoterDuration() {
     V3Voter poll = (V3Voter) testV3polls[0];
     long duration = testV3msg[0].getDuration();
     final int numSteps = 10;
@@ -154,7 +154,7 @@ public class TestV3Voter extends LockssTestCase {
     assertTrue(votes.isEmpty());
   }
 
-  public void dontTestNormalVoterStateTransitions() {
+  public void testNormalVoterStateTransitions() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -304,7 +304,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestVoterBadMessageOrderOne() {
+  public void testVoterBadMessageOrderOne() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -349,7 +349,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestVoterBadMessageOrderTwo() {
+  public void testVoterBadMessageOrderTwo() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -429,7 +429,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestVoterBadMessageOrderThree() {
+  public void testVoterBadMessageOrderThree() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -570,7 +570,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestBadEffortOnPoll() {
+  public void testBadEffortOnPoll() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -625,7 +625,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestBadPollProofEffort() {
+  public void testBadPollProofEffort() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -716,7 +716,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestExceptionOnPollEffortVerification() {
+  public void testExceptionOnPollEffortVerification() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -772,7 +772,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestExceptionOnPollAckEffortGeneration() {
+  public void testExceptionOnPollAckEffortGeneration() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -838,7 +838,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestExceptionOnPollProofEffortVerification() {
+  public void testExceptionOnPollProofEffortVerification() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -929,7 +929,7 @@ public class TestV3Voter extends LockssTestCase {
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestExceptionOnVoteGeneration() {
+  public void testExceptionOnVoteGeneration() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -1060,6 +1060,19 @@ public class TestV3Voter extends LockssTestCase {
     idmgr.startService();
     //theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
+    {
+      // Make two FifoQueue objects
+      FifoQueue q1 = new FifoQueue();
+      FifoQueue q2 = new FifoQueue();
+      assertNotNull(q1);
+      assertNotNull(q2);
+      // Use the two to create a MockLcapStreamRouter that has no
+      // partner,  so sent messages go into the bitbucket and
+      // received messages have to be simulated via the receiveMessage()
+      // method.
+      LcapStreamRouter myRouter = new MockLcapStreamRouter(q1, q2);
+      theDaemon.setStreamRouterManager(myRouter);
+    }
     theDaemon.getStreamRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getEffortService().startService();

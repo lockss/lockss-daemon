@@ -1,28 +1,28 @@
 /*
- * $Id: V3LcapMessage.java,v 1.1.2.5 2004-11-18 15:45:07 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.1.2.6 2004-11-22 22:27:20 dshr Exp $
  */
 
 /*
- Copyright (c) 2004 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
- */
+  Copyright (c) 2004 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
+*/
 
 package org.lockss.protocol;
 
@@ -69,7 +69,7 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     6-7       property length
     8-27      SHA-1 hash of encoded properties
     28-End    encoded properties
-   */
+  */
   private static Logger log = Logger.getLogger("V3LcapMessage");
   /* items which are not in the property list */
   int m_pollVersion; // poll version number
@@ -100,7 +100,7 @@ public class V3LcapMessage implements LcapMessage, Serializable {
 
   private EncodedProperty m_props;
   private static byte[] signature = {
-      'l', 'p', 'm'};
+    'l', 'p', 'm'};
   private static byte[] pollVersionByte = { '1', '2' };
   private String m_key = null;
 
@@ -126,11 +126,11 @@ public class V3LcapMessage implements LcapMessage, Serializable {
   }
 
   protected V3LcapMessage(PollSpec ps,
-                        ArrayList entries,
-                        byte ttl,
-                        byte[] challenge,
-                        byte[] verifier,
-                        byte[] hashedData,
+			  ArrayList entries,
+			  byte ttl,
+			  byte[] challenge,
+			  byte[] verifier,
+			  byte[] hashedData,
 			  int opcode,
 			  String hashAlgorithm) throws IOException {
     this();
@@ -157,11 +157,11 @@ public class V3LcapMessage implements LcapMessage, Serializable {
   }
 
   protected V3LcapMessage(V3LcapMessage trigger,
-                        PeerIdentity localID,
-                        byte[] verifier,
-                        byte[] hashedContent,
-                        ArrayList entries,
-                        int opcode) throws IOException {
+			  PeerIdentity localID,
+			  byte[] verifier,
+			  byte[] hashedContent,
+			  ArrayList entries,
+			  int opcode) throws IOException {
 
     this();
     // copy the essential information from the trigger packet
@@ -237,18 +237,18 @@ public class V3LcapMessage implements LcapMessage, Serializable {
    * @throws IOException if message construction failed
    */
   static public V3LcapMessage makeReplyMsg(V3LcapMessage trigger,
-                                         byte[] hashedContent,
-                                         byte[] verifier,
-                                         ArrayList entries,
-                                         int opcode,
-                                         long timeRemaining,
-                                         PeerIdentity localID) throws
-      IOException {
+					   byte[] hashedContent,
+					   byte[] verifier,
+					   ArrayList entries,
+					   int opcode,
+					   long timeRemaining,
+					   PeerIdentity localID) throws
+					     IOException {
     if (hashedContent == null) {
       log.error("Making a reply message with null hashed content");
     }
     V3LcapMessage msg = new V3LcapMessage(trigger, localID, verifier,
-                                      hashedContent, entries, opcode);
+					  hashedContent, entries, opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
@@ -266,104 +266,104 @@ public class V3LcapMessage implements LcapMessage, Serializable {
    * @throws IOException
    */
   static public V3LcapMessage decodeToMsg(byte[] data,
-                                        boolean mcast) throws IOException {
+					  boolean mcast) throws IOException {
     V3LcapMessage msg = new V3LcapMessage(data);
     return msg;
   }
 
-    protected byte[] wrapPacket() {
-	return new byte[0];
-    }
+  protected byte[] wrapPacket() {
+    return new byte[0];
+  }
 
   /**
    * get a property that was decoded and stored for this packet
    * @param key - the property name under which the it is stored
    * @return a string representation of the property
    */
-    public String getPacketProperty(String key) {
-	String ret = "";
-	// XXX
-	return ret;
-    }
+  public String getPacketProperty(String key) {
+    String ret = "";
+    // XXX
+    return ret;
+  }
 
   /**
    * set or add a new property into the packet.
    * @param key the key under which to store the property
    * @param value the value to store
    */
-    public void setMsgProperty(String key, String value) {
-	String ret = "";
-	// XXX
-	return;
-    }
+  public void setMsgProperty(String key, String value) {
+    String ret = "";
+    // XXX
+    return;
+  }
 
   /**
    * decode the raw packet data into a property table
    * @param encodedBytes the array of encoded bytes
    * @throws IOException
    */
-    public void decodeMsg(byte[] encodedBytes) throws IOException {
-	// XXX
-    }
+  public void decodeMsg(byte[] encodedBytes) throws IOException {
+    // XXX
+  }
 
   /**
    * encode the message from a props table into a stream of bytes
    * @return the encoded message as bytes
    * @throws IOException if the packet can not be encoded
    */
-    public byte[] encodeMsg() throws IOException {
-	byte[] ret = new byte[0];
-	// XXX
-	return ret;
-    }
+  public byte[] encodeMsg() throws IOException {
+    byte[] ret = new byte[0];
+    // XXX
+    return ret;
+  }
 
   /**
    * store the local variables in the property table
    * @throws IOException if the packet can not be stored
    */
-    public void storeProps() throws IOException {
-	// XXX
-    }
+  public void storeProps() throws IOException {
+    // XXX
+  }
 
 
-    public long getDuration() {
+  public long getDuration() {
     long now = TimeBase.nowMs();
     long ret = m_stopTime - now;
     if (ret < 0)
       ret = 0;
     return ret;
-    }
+  }
 
-    public long getElapsed() {
+  public long getElapsed() {
     long now = TimeBase.nowMs();
     long ret = now - m_startTime;
     if (now > m_stopTime)
       ret = m_stopTime - m_startTime;
     return ret;
-    }
+  }
 
-    public boolean isReply() {
-	boolean ret = false;
-	// XXX
-	return ret;
-    }
+  public boolean isReply() {
+    boolean ret = false;
+    // XXX
+    return ret;
+  }
 
-    public boolean isNamePoll() {
-	return false;
-    }
+  public boolean isNamePoll() {
+    return false;
+  }
 
-    public boolean isContentPoll() {
-	return true;
-    }
+  public boolean isContentPoll() {
+    return true;
+  }
 
-    public boolean isVerifyPoll() {
-	return false;
-    }
+  public boolean isVerifyPoll() {
+    return false;
+  }
 
-    public boolean isNoOp() {
-	//  XXX not needed
-	return false;
-    }
+  public boolean isNoOp() {
+    //  XXX not needed
+    return false;
+  }
 
   /* methods to support data access */
   public long getStartTime() {
@@ -398,29 +398,29 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     return m_pluginVersion;
   }
 
-    public boolean getMulticast() {
-	return false;
-    }
+  public boolean getMulticast() {
+    return false;
+  }
 
-    public void setMulticast(boolean multicast) {
-	// No action intended
-    }
+  public void setMulticast(boolean multicast) {
+    // No action intended
+  }
 
-    public int getPollVersion() {
-	return 3;
-    }
+  public int getPollVersion() {
+    return 3;
+  }
 
-    public void setPollVersion(int vers) {
-	// No action intended
-    }
+  public void setPollVersion(int vers) {
+    // No action intended
+  }
 
-    public boolean supportedPollVersion(int vers) {
-	return (vers == 3);
-    }
+  public boolean supportedPollVersion(int vers) {
+    return (vers == 3);
+  }
 
-    public ArrayList getEntries() {
-	return null;
-    }
+  public ArrayList getEntries() {
+    return null;
+  }
 
   public String getLwrRemain() {
     return m_lwrRem;
@@ -438,29 +438,29 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     return m_uprBound;
   }
 
-    public byte getHopCount() {
-	return 0;
-    }
+  public byte getHopCount() {
+    return 0;
+  }
 
-    public void setHopCount(int hopCount) {
-	// No action intended
-    }
+  public void setHopCount(int hopCount) {
+    // No action intended
+  }
 
   public byte[] getChallenge() {
     return m_challenge;
   }
 
-    public byte[] getVerifier() {
-	byte[] ret = new byte[0];
-	// XXX
-	return ret;
-    }
+  public byte[] getVerifier() {
+    byte[] ret = new byte[0];
+    // XXX
+    return ret;
+  }
 
-    public byte[] getHashed() {
-	byte[] ret = new byte[0];
-	// XXX
-	return ret;
-    }
+  public byte[] getHashed() {
+    byte[] ret = new byte[0];
+    // XXX
+    return ret;
+  }
 
   public String getTargetUrl() {
     return m_targetUrl;
@@ -484,15 +484,15 @@ public class V3LcapMessage implements LcapMessage, Serializable {
     return m_key;
   }
 
-    public String entriesToString(int maxBufSize) {
-	return "";
-    }
+  public String entriesToString(int maxBufSize) {
+    return "";
+  }
 
-    public ArrayList stringToEntries(String estr) {
-	ArrayList ret = new ArrayList(0);
-	// XXX
-	return ret;
-    }
+  public ArrayList stringToEntries(String estr) {
+    ArrayList ret = new ArrayList(0);
+    // XXX
+    return ret;
+  }
 
 
     

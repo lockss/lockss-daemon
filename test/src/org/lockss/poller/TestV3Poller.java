@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.15 2004-11-18 15:45:08 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.16 2004-11-22 22:27:21 dshr Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class TestV3Poller extends LockssTestCase {
 		 testV3polls[0].getPollState());
   }
 
-  public void dontTestVoterDuration() {
+  public void testVoterDuration() {
     V3Poller poll = (V3Poller) testV3polls[0];
     long duration = poll.getDeadline().getRemainingTime();
     final int numSteps = 10;
@@ -153,7 +153,7 @@ public class TestV3Poller extends LockssTestCase {
     assertTrue(votes.isEmpty());
   }
 
-  public void dontTestNormalVoterStateTransitions() {
+  public void testNormalVoterStateTransitions() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -184,14 +184,14 @@ public class TestV3Poller extends LockssTestCase {
 		 V3Poller.STATE_FINALIZING,
 		 poll.getPollState());
     assertFalse("Poll " + poll + " should not be active",
-	       pollmanager.isPollActive(key));
+		pollmanager.isPollActive(key));
     assertTrue("Poll " + poll + " should not be closed",
-		pollmanager.isPollClosed(key));
+	       pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestPollWithNineAgreeVoters() {
+  public void testPollWithNineAgreeVoters() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -224,14 +224,14 @@ public class TestV3Poller extends LockssTestCase {
 		 V3Poller.STATE_FINALIZING,
 		 poll.getPollState());
     assertFalse("Poll " + poll + " should not be active",
-	       pollmanager.isPollActive(key));
+		pollmanager.isPollActive(key));
     assertTrue("Poll " + poll + " should not be closed",
-		pollmanager.isPollClosed(key));
+	       pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
   }
 
-  public void dontTestPollWithThreeAgreeThreeDisagreeThreeInvalidVoters() {
+  public void testPollWithThreeAgreeThreeDisagreeThreeInvalidVoters() {
     //  Set up effort service stuff
     MockEffortService es = (MockEffortService)theDaemon.getEffortService();
     es.setGenerateProofResult(true);
@@ -270,9 +270,9 @@ public class TestV3Poller extends LockssTestCase {
 		 V3Poller.STATE_FINALIZING,
 		 poll.getPollState());
     assertFalse("Poll " + poll + " should not be active",
-	       pollmanager.isPollActive(key));
+		pollmanager.isPollActive(key));
     assertTrue("Poll " + poll + " should not be closed",
-		pollmanager.isPollClosed(key));
+	       pollmanager.isPollClosed(key));
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
   }
@@ -499,6 +499,19 @@ public class TestV3Poller extends LockssTestCase {
     idmgr.startService();
     //theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
+    {
+      // Make two FifoQueue objects
+      FifoQueue q1 = new FifoQueue();
+      FifoQueue q2 = new FifoQueue();
+      assertNotNull(q1);
+      assertNotNull(q2);
+      // Use the two to create a MockLcapStreamRouter that has no
+      // partner,  so sent messages go into the bitbucket and
+      // received messages have to be simulated via the receiveMessage()
+      // method.
+      LcapStreamRouter myRouter = new MockLcapStreamRouter(q1, q2);
+      theDaemon.setStreamRouterManager(myRouter);
+    }
     theDaemon.getStreamRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getEffortService().startService();

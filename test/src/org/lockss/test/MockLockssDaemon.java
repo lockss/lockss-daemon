@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.44.2.2 2004-10-01 18:46:59 dshr Exp $
+ * $Id: MockLockssDaemon.java,v 1.44.2.3 2004-11-22 22:27:21 dshr Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class MockLockssDaemon extends LockssDaemon {
   LcapDatagramComm commManager = null;
   LcapDatagramRouter datagramRouterManager = null;
   LcapStreamRouter streamRouterManager = null;
-    EffortService effortService = null;
+  EffortService effortService = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
@@ -575,7 +575,7 @@ public class MockLockssDaemon extends LockssDaemon {
     } catch (Exception e) {
       log.error("Error starting au manager", e);
       throw new LockssAppException("Can't load au manager: " +
-				      e.toString());
+				   e.toString());
     }
   }
 
@@ -595,7 +595,7 @@ public class MockLockssDaemon extends LockssDaemon {
   /** Overridden to prevent manager from being started */
   public void startOrReconfigureAuManagers(ArchivalUnit au,
 					   Configuration auConfig)
-      throws Exception {
+    throws Exception {
   }
 
   /** Return ActivityRegulator for AU */
@@ -633,7 +633,7 @@ public class MockLockssDaemon extends LockssDaemon {
       return super.getHistoryRepository(au);
     } catch (IllegalArgumentException e) {
       return (HistoryRepository)newAuManager(LockssDaemon.HISTORY_REPOSITORY,
-          au);
+					     au);
     }
   }
 

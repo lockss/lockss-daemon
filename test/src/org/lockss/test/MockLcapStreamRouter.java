@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.4 2004-11-18 15:45:10 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.5 2004-11-22 22:27:21 dshr Exp $
  */
 
 /*
@@ -91,11 +91,11 @@ public class MockLcapStreamRouter extends LcapStreamRouter
       try {
 	msg = (V3LcapMessage) myReceiveQueue.get(dl);
       } catch (InterruptedException ex) {
-	  log.debug("Q runner interrupted");
+	log.debug("Q runner interrupted");
 	// No action intended
       }
       if (msg != null && !msg.isNoOp()) {
-	  log.debug("Pulled " + msg + " from receive Q");
+	log.debug("Pulled " + msg + " from receive Q");
 	runHandlers(msg);
       }
     }
@@ -118,11 +118,11 @@ public class MockLcapStreamRouter extends LcapStreamRouter
    * @throws IOException if message couldn't be sent
    */
   public void sendTo(V3LcapMessage msg, ArchivalUnit au, PeerIdentity id)
-      throws IOException {
-      log.debug("mock sendTo(" + msg + ")");
-    mySendQueue.put(msg);
+    throws IOException {
+    log.debug("mock sendTo(" + msg + ")");
     if (partner != null) {
-	log.debug("Interrupting partner for " + msg);
+      mySendQueue.put(msg);
+      log.debug("Interrupting partner for " + msg);
       partner.myThread.interrupt();
     }
     Thread.yield();
