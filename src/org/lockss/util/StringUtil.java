@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.19 2003-04-04 08:41:33 tal Exp $
+ * $Id: StringUtil.java,v 1.20 2003-04-07 18:37:02 tal Exp $
  */
 
 /*
@@ -256,6 +256,11 @@ public class StringUtil {
     return -1;
   }
 
+  public static boolean endsWithIgnoreCase(String str, String end) {
+    int lend = end.length();
+    return str.regionMatches(true, str.length() - lend, end, 0, lend);
+  }
+
   /* Return the substring following the final dot */
   public static String shortName(Object object) {
     if (object == null) {
@@ -373,9 +378,9 @@ public class StringUtil {
     return hostname.substring(start, end);
   }
 
-  /** Parse a string as a time interval.  An interval is specified
-   * as an integer with an optional suffix.  No suffix means milliseconds,
-   * s, m, h, d, w indicates seconds, minutes, hours, days and weeks
+  /** Parse a string as a time interval.  An interval is specified as an
+   * integer with an optional suffix.  No suffix means milliseconds, s, m,
+   * h, d, w indicates seconds, minutes, hours, days and weeks
    * respectively.
    * @param the interval
    * @return interval in milliseconds
