@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.33 2003-10-08 21:20:53 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.33.2.1 2003-10-09 23:22:46 eaalto Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     super.setUp();
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
-    mau.setCrawlSpec(new CrawlSpec("blah", null, 1));
+    mau.setCrawlSpec(new CrawlSpec("blah", null, null, 1));
     plugin = mau.getPlugin();
 
     crawlManager = new TestableCrawlManagerImpl();
@@ -436,7 +436,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
     crawlManager.startRepair(mau, ListUtil.list(GENERIC_URL),
 			     new TestCrawlCB(sem1), null, null);
     MockArchivalUnit mau2 = new MockArchivalUnit();
-    mau2.setCrawlSpec(new CrawlSpec("blah", null, 1));
+    mau2.setCrawlSpec(new CrawlSpec("blah", null, null, 1));
 
     theDaemon.setNodeManager(nodeManager, mau2);
     MockActivityRegulator activityRegulator2 = new MockActivityRegulator(mau2);
