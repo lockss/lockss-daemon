@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.5 2003-01-07 02:03:29 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.6 2003-02-27 21:53:17 tal Exp $
  */
 
 /*
@@ -38,7 +38,8 @@ import org.lockss.util.StringUtil;
 import org.lockss.test.*;
 
 /**
- * This is a convenience class which takes care of handling the content tree itself
+ * This is a convenience class which takes care of handling the content
+ * tree itself
  *
  * @author  Emil Aalto
  * @version 0.0
@@ -46,13 +47,17 @@ import org.lockss.test.*;
 
 public class SimulatedContentGenerator {
 /**
- * Content of a generated text or html file.  Values are substituted for the %Xs.
+ * Content of a generated text or html file.  Values are substituted for
+ * the %Xs.
  */
-  public static final String NORMAL_FILE_CONTENT = "This is file %1, depth %2, branch %3.";
+  public static final String NORMAL_FILE_CONTENT =
+    "This is file %1, depth %2, branch %3.";
   /**
-   * Content of a generated text or html file with 'abnormal' status.  Values are substituted for the %Xs.
+   * Content of a generated text or html file with 'abnormal' status.
+   * Values are substituted for the %Xs.
    */
-  public static final String ABNORMAL_FILE_CONTENT = "This is abnormal file %1, depth %2, branch %3.";
+  public static final String ABNORMAL_FILE_CONTENT =
+    "This is abnormal file %1, depth %2, branch %3.";
 /**
  * Name of top directory in which the content is generated.
  */
@@ -62,32 +67,39 @@ public class SimulatedContentGenerator {
    */
   public static final String FILE_PREFIX = "file";
   /**
-   * The name prefix for generated sub-directories.  The local branch number is appended.
+   * The name prefix for generated sub-directories.  The local branch
+   * number is appended.
    */
   public static final String BRANCH_PREFIX = "branch";
   /**
-   * The name of the 'index' file in each directory which lists the children as html links for crawling.
+   * The name of the 'index' file in each directory which lists the
+   * children as html links for crawling.
    */
   public static final String INDEX_NAME = "index.html";
 
  /**
-  * File-type value for text files.  Independent bitwise from the other file-types.
+  * File-type value for text files.  Independent bitwise from the other
+  * file-types.
   */
   public static final int FILE_TYPE_TXT = 1;
   /**
-   * File-type value for html files.  Independent bitwise from the other file-types.
+   * File-type value for html files.  Independent bitwise from the other
+   * file-types.
    */
   public static final int FILE_TYPE_HTML = 2;
   /**
-   * File-type value for pdf files.  Independent bitwise from the other file-types.
+   * File-type value for pdf files.  Independent bitwise from the other
+   * file-types.
    */
   public static final int FILE_TYPE_PDF = 4;
   /**
-   * File-type value for jpeg files.  Independent bitwise from the other file-types.
+   * File-type value for jpeg files.  Independent bitwise from the other
+   * file-types.
    */
   public static final int FILE_TYPE_JPEG = 8;
   /**
-   * File-type value for binary files.  Independent bitwise from the other file-types.
+   * File-type value for binary files.  Independent bitwise from the other
+   * file-types.
    */
   public static final int FILE_TYPE_BIN = 16;
 
@@ -137,7 +149,9 @@ public class SimulatedContentGenerator {
   /**
    * @param newNumBranches new number of branches per internal node
    */
-  public void setNumBranches(int newNumBranches) { numBranches = newNumBranches; }
+  public void setNumBranches(int newNumBranches) {
+    numBranches = newNumBranches;
+  }
   /**
    * @return number of files per internal node
    */
@@ -145,7 +159,9 @@ public class SimulatedContentGenerator {
   /**
    * @param newNumFiles new number of files per internal node
    */
-  public void setNumFilesPerBranch(int newNumFiles) { numFilesPerBranch = newNumFiles; }
+  public void setNumFilesPerBranch(int newNumFiles) {
+    numFilesPerBranch = newNumFiles;
+  }
   /**
    * @return the size binary files will be created as
    */
@@ -153,7 +169,9 @@ public class SimulatedContentGenerator {
   /**
    * @param newBinarySize new binary file size
    */
-  public void setBinaryFileSize(int newBinarySize) { binaryFileSize = newBinarySize; }
+  public void setBinaryFileSize(int newBinarySize) {
+    binaryFileSize = newBinarySize;
+  }
   /**
    * @return maximum length for a file name
    */
@@ -161,12 +179,16 @@ public class SimulatedContentGenerator {
   /**
    * @param newMaxLength new maximum length for a file name
    */
-  public void setMaxFilenameLength(int newMaxLength) { maxFilenameLength = newMaxLength; }
+  public void setMaxFilenameLength(int newMaxLength) {
+    maxFilenameLength = newMaxLength;
+  }
   /**
    * Determine whether or not to expand all file names to maximum length.
    * @param fillOut expand to max length
    */
-  public void setFillOutFilenamesFully(boolean fillOut) { fillOutFilenames = fillOut; }
+  public void setFillOutFilenamesFully(boolean fillOut) {
+    fillOutFilenames = fillOut;
+  }
   /**
    * Returns whether or not set to expand all file names to maximum length.
    * @return is expanding to max length
@@ -233,11 +255,11 @@ public class SimulatedContentGenerator {
     FileUtil.delTree(new File(contentRoot));
   }
 /**
- * Generates a content tree using the current parameters.
- * Depth of 0 is root (and files) only.  Depth >0 is number of sub-levels.
- * Each directory contains the set number of files X number of file types
- * (so for numFiles=2, types=TXT + HTML, each directory would contain 2 txt files,
- * 2 html files, the index file, and any subdirectories).
+ * Generates a content tree using the current parameters.  Depth of 0 is
+ * root (and files) only.  Depth >0 is number of sub-levels.  Each
+ * directory contains the set number of files X number of file types (so
+ * for numFiles=2, types=TXT + HTML, each directory would contain 2 txt
+ * files, 2 html files, the index file, and any subdirectories).
  */
   public void generateContentTree() {
     // make an appropriate file tree
@@ -257,11 +279,13 @@ public class SimulatedContentGenerator {
       }
     }
     for (int jj=1; jj<=getNumFilesPerBranch(); jj++) {
-      generateFile(treeRoot, jj, 0, 0, (alterFile && (jj==getAbnormalFileNumber())));
+      generateFile(treeRoot, jj, 0, 0,
+		   (alterFile && (jj==getAbnormalFileNumber())));
     }
     generateIndexFile(treeRoot);
   }
-  private void recurseGenerateBranch(File parentDir, int branchNum, int depth, boolean onAbnormalPath) {
+  private void recurseGenerateBranch(File parentDir, int branchNum,
+				     int depth, boolean onAbnormalPath) {
     // generates this branch, its files, and its subbranches (if any)
     String branchName = getDirectoryName(branchNum);
     File branchFile = new File(parentDir, branchName);
@@ -280,7 +304,8 @@ public class SimulatedContentGenerator {
       }
     }
     for (int jj=1; jj<=getNumFilesPerBranch(); jj++) {
-      generateFile(branchFile, jj, depth, branchNum, (alterFile && (jj==getAbnormalFileNumber())));
+      generateFile(branchFile, jj, depth, branchNum,
+		   (alterFile && (jj==getAbnormalFileNumber())));
     }
     generateIndexFile(branchFile);
   }
@@ -299,7 +324,8 @@ public class SimulatedContentGenerator {
     } catch (Exception e) { System.err.println(e); }
   }
 
-  private void generateFile(File parentDir, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+  private void generateFile(File parentDir, int fileNum, int depth,
+			    int branchNum, boolean isAbnormal) {
     // generate said file, with correct content
     // generate one type for each necessary
     if ((getFileTypes() & FILE_TYPE_TXT) > 0) {
@@ -319,13 +345,15 @@ public class SimulatedContentGenerator {
     }
   }
 
-  private void createTxtFile(File parentDir, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+  private void createTxtFile(File parentDir, int fileNum, int depth,
+			     int branchNum, boolean isAbnormal) {
     try {
       String fileName = getFileName(fileNum, FILE_TYPE_TXT);
       File file = new File(parentDir, fileName);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
-      String file_content = getFileContent(fileNum, depth, branchNum, isAbnormal);
+      String file_content =
+	getFileContent(fileNum, depth, branchNum, isAbnormal);
       pw.print(file_content);
       pw.flush();
       pw.close();
@@ -333,20 +361,23 @@ public class SimulatedContentGenerator {
     } catch (Exception e) { System.err.println(e); }
   }
 
-  private void createHtmlFile(File parentDir, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+  private void createHtmlFile(File parentDir, int fileNum, int depth,
+			      int branchNum, boolean isAbnormal) {
     try {
       String filename = getFileName(fileNum, FILE_TYPE_HTML);
       File file = new File(parentDir, filename);
       FileOutputStream fos = new FileOutputStream(file);
       PrintWriter pw = new PrintWriter(fos);
-      String file_content = getHtmlFileContent(filename, fileNum, depth, branchNum, isAbnormal);
+      String file_content = getHtmlFileContent(filename, fileNum, depth,
+					       branchNum, isAbnormal);
       pw.print(file_content);
       pw.flush();
       pw.close();
       fos.close();
     } catch (Exception e) { System.err.println(e); }
   }
-  private void createPdfFile(File parentDir, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+  private void createPdfFile(File parentDir, int fileNum, int depth,
+			     int branchNum, boolean isAbnormal) {
     try {
       String fileName = getFileName(fileNum, FILE_TYPE_PDF);
       File file = new File(parentDir, fileName);
@@ -360,7 +391,8 @@ public class SimulatedContentGenerator {
       fos.close();
     } catch (Exception e) { System.err.println(e); }
   }
-  private void createJpegFile(File parentDir, int fileNum, int depth, int branchNum, boolean isAbnormal) {
+  private void createJpegFile(File parentDir, int fileNum, int depth,
+			      int branchNum, boolean isAbnormal) {
     try {
       String fileName = getFileName(fileNum, FILE_TYPE_JPEG);
       File file = new File(parentDir, fileName);
@@ -396,7 +428,8 @@ public class SimulatedContentGenerator {
    * @param isAbnormal whether or not to generate abnormal content
    * @return file content
    */
-  public static String getFileContent(int fileNum, int depth, int branchNum, boolean isAbnormal) {
+  public static String getFileContent(int fileNum, int depth,
+				      int branchNum, boolean isAbnormal) {
     String file_content = NORMAL_FILE_CONTENT;
     if (isAbnormal) file_content = ABNORMAL_FILE_CONTENT;
     file_content = StringUtil.replaceString(file_content, "%1", ""+fileNum);
@@ -416,8 +449,10 @@ public class SimulatedContentGenerator {
    * @return file content
    */
   public static String getHtmlFileContent(String filename, int fileNum,
-                                          int depth, int branchNum, boolean isAbnormal) {
-    String file_content = "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
+                                          int depth, int branchNum,
+					  boolean isAbnormal) {
+    String file_content =
+      "<HTML><HEAD><TITLE>" + filename + "</TITLE></HEAD><BODY>\n";
     file_content += getFileContent(fileNum, depth, branchNum, isAbnormal);
     file_content += "\n</BODY></HTML>";
     return file_content;
@@ -433,11 +468,13 @@ public class SimulatedContentGenerator {
    */
 
   public static String getIndexContent(File directory, String filename) {
-    if ((directory==null) || (!directory.exists()) || (!directory.isDirectory())) {
+    if ((directory==null) || (!directory.exists()) ||
+	(!directory.isDirectory())) {
       return "";
     }
     String fullName = directory.getName() + File.separator + filename;
-    String file_content = "<HTML><HEAD><TITLE>" + fullName + "</TITLE></HEAD><BODY>";
+    String file_content =
+      "<HTML><HEAD><TITLE>" + fullName + "</TITLE></HEAD><BODY>";
     file_content += "<B>"+fullName+"</B>";
 
     File[] children = directory.listFiles();
