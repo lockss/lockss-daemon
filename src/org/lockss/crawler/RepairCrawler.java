@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.32 2004-10-18 03:34:17 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.33 2004-11-12 23:29:02 troberts Exp $
  */
 
 /*
@@ -166,15 +166,16 @@ public class RepairCrawler extends CrawlerImpl {
 	break;
       }
       if (spec.isIncluded(url)) {
-	boolean crawlRes = false;
+	String crawlRes = null;
 	try {
 	  crawlRes = doCrawlLoop(url, cus);
 	} catch (RuntimeException e) {
 	  logger.warning("Unexpected exception in crawl", e);
+	  crawlRes = Crawler.STATUS_ERROR;
 	}
-	if (!crawlRes) {
+	if (crawlRes != null) {
 	  if (crawlStatus.getCrawlError() == null) {
-	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
+	    crawlStatus.setCrawlError(crawlRes);
 	  }
 	}
       } else {
@@ -206,7 +207,7 @@ public class RepairCrawler extends CrawlerImpl {
     return (crawlStatus.getCrawlError() == null);
   }
 
-  protected boolean doCrawlLoop(String url, CachedUrlSet cus) {
+  protected String doCrawlLoop(String url, CachedUrlSet cus) {
     String error = null;
     logger.debug2("Dequeued url from list: "+url);
     UrlCacher uc = makeUrlCacher(cus, url);
@@ -234,6 +235,7 @@ public class RepairCrawler extends CrawlerImpl {
 	  }
 	} catch (LockssUrlConnection.CantProxyException e){
 	  logger.warning("Failed to fetch from caches", e);
+	  error = Crawler.STATUS_FETCH_ERROR;
 	}
       } else if (fetchPublisher){ //(2) publisher only
 	try {
@@ -241,6 +243,7 @@ public class RepairCrawler extends CrawlerImpl {
 	  fetchFromPublisher(uc);
 	} catch (CacheException e) {
 	  logger.warning(uc+" not found on publisher's site",e);
+	  error = Crawler.STATUS_FETCH_ERROR;
 	}
       } else if (shouldFetchFromCache()) { //(3) caches then publisher
 	try {
@@ -250,7 +253,12 @@ public class RepairCrawler extends CrawlerImpl {
 	  fetchFromSomeCache(uc, numCacheRetries);
 	} catch (LockssUrlConnection.CantProxyException e) {
 	  logger.debug3("Failed, so trying to fetch from publisher");
-	  fetchFromPublisher(uc);
+	  try {
+	    fetchFromPublisher(uc);
+	  } catch (CacheException ex) {
+	    logger.warning(uc+" not found on publisher's site",e);
+	    error = Crawler.STATUS_FETCH_ERROR;
+	  }
 	}
       } else { //(4) publisher then caches
 	try {
@@ -259,7 +267,12 @@ public class RepairCrawler extends CrawlerImpl {
 	} catch (CacheException e){
 	  logger.warning(uc+" not found on publisher's site",e);
 	  logger.debug3("Trying to fetch from other caches");
-	  fetchFromSomeCache(uc, numCacheRetries);
+	  try {
+	    fetchFromSomeCache(uc, numCacheRetries);
+	  } catch (LockssUrlConnection.CantProxyException ex){
+	    logger.warning("Failed to fetch from caches", e);
+	    error = Crawler.STATUS_FETCH_ERROR;
+	  }
 	}
       }
       crawlStatus.signalUrlFetched();
@@ -278,7 +291,7 @@ public class RepairCrawler extends CrawlerImpl {
       logger.critical("Unexpected IOException during crawl", e);
       error = Crawler.STATUS_FETCH_ERROR;
     }
-    return (error == null);
+    return error;
   }
 
   private boolean shouldFetchFromCache() {
