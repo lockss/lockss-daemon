@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.3 2003-12-13 01:28:27 troberts Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.4 2004-10-13 06:21:28 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 // import java.lang.*;
 import java.util.*;
+import org.lockss.app.*;
 import org.lockss.plugin.*;
 import org.lockss.crawler.*;
 
@@ -40,6 +41,11 @@ public class MockCrawlManagerStatusSource
     implements CrawlManager.StatusSource {
   private Collection activeAus;
   private Map map = new HashMap();
+  private LockssDaemon daemon;
+
+  public MockCrawlManagerStatusSource(LockssDaemon daemon) {
+    this.daemon = daemon;
+  }
 
   public Collection getActiveAus() {
     return activeAus;
@@ -57,4 +63,7 @@ public class MockCrawlManagerStatusSource
     map.put(auid, crawlStatus);
   }
 
+  public LockssDaemon getDaemon() {
+    return daemon;
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.12 2004-10-12 23:44:46 smorabito Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.13 2004-10-13 06:21:28 tlipkis Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     MockLockssDaemon theDaemon = new MockLockssDaemon();
     theDaemon.setPluginManager(new PluginManager());
 
-    statusSource = new MockCrawlManagerStatusSource();
+    statusSource = new MockCrawlManagerStatusSource(theDaemon);
     cmStatus = new CrawlManagerStatus(statusSource);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.16 2004-10-12 23:44:47 smorabito Exp $
+ * $Id: CrawlManagerStatus.java,v 1.17 2004-10-13 06:21:29 tlipkis Exp $
  */
 
 /*
@@ -95,8 +95,7 @@ public class CrawlManagerStatus implements StatusAccessor {
 
   public CrawlManagerStatus(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
-    this.pluginMgr =
-      (PluginManager)LockssApp.getManager(LockssDaemon.PLUGIN_MANAGER);
+    this.pluginMgr = statusSource.getDaemon().getPluginManager();
   }
 
   public String getDisplayName() {

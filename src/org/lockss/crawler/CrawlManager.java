@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.20 2004-01-13 02:37:05 troberts Exp $
+ * $Id: CrawlManager.java,v 1.21 2004-10-13 06:21:29 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.crawler;
 
 import java.util.Collection;
 import org.lockss.daemon.*;
+import org.lockss.app.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
 
@@ -105,5 +106,8 @@ public interface CrawlManager {
      * objects for <code>au</code>
      */
     public Collection getCrawlStatus(String auid);
+
+    /** Return the dameon instance */
+    public LockssDaemon getDaemon();
   } 
 }
