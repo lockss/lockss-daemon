@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.75 2003-05-05 21:21:55 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.76 2003-05-06 00:59:50 aalto Exp $
  */
 
 /*
@@ -65,6 +65,7 @@ public class TestNodeManagerImpl
     p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
     p.setProperty(NodeManagerImpl.PARAM_NODESTATE_CACHE_SIZE, "10");
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.1.2.3");
+    p.setProperty(NodeManagerImpl.PARAM_RECALL_DELAY, "5s");
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     mau = new MockArchivalUnit();
