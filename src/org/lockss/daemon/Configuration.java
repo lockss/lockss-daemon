@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.8 2002-11-22 17:43:02 tal Exp $
+ * $Id: Configuration.java,v 1.9 2002-11-25 21:28:53 tal Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public abstract class Configuration {
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
   private static Configuration currentConfig = newConfiguration();
-  private static boolean haveConfig = false;
+  private static OneShotSemaphore haveConfig = new OneShotSemaphore();
 
   private static HandlerThread handlerThread; // reload handler thread
 
@@ -78,17 +78,25 @@ public abstract class Configuration {
   }
 
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
-   * time a configuration has been loaded.) */
-  public static boolean waitConfig(/*Deadline*/) {
-    while (!haveConfig) {
-      // tk - need real semaphore here, but don't have right kind
+   * time a configuration has been loaded.)
+   * @param timer limits the time to wait.  If null, returns immediately.
+   * @return true if configured, false if timer expired.
+   */
+  public static boolean waitConfig(Deadline timer) {
+    while (!haveConfig.isFull() && !timer.expired()) {
       try {
-	Deadline.in(200).sleep();
+	haveConfig.waitFull(timer);
       } catch (InterruptedException e) {
-	// ignore, just keep waiting
+	// no action - check timer
       }
     }
-    return haveConfig;;
+    return haveConfig.isFull();
+  }
+
+  /** Wait until the system is configured.  (<i>Ie</i>, until the first
+   * time a configuration has been loaded.) */
+  public static boolean waitConfig() {
+    return waitConfig(Deadline.NEVER);
   }
 
   static void setCurrentConfig(Configuration newConfig) {
@@ -96,7 +104,7 @@ public abstract class Configuration {
       log.warning("attempt to install null Configuration");
     }
     currentConfig = newConfig;
-    haveConfig = true;
+    haveConfig.fill();
   }
 
   static void runCallback(Callback cb,
@@ -181,7 +189,7 @@ public abstract class Configuration {
     registerConfigurationCallback(Callback c) {
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
-      if (haveConfig) {
+      if (haveConfig.isFull()) {
 	runCallback(c, null, currentConfig);
       }
     }
@@ -491,7 +499,7 @@ public abstract class Configuration {
 	Deadline nextReload =
 	  Deadline.inRandomRange(reloadInterval - reloadRange,
 				 reloadInterval + reloadRange);
-	log.info(nextReload.toString());
+	log.debug(nextReload.toString());
 	if (goOn) {
 	  try {
 	    nextReload.sleep();
