@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.11 2003-03-19 04:18:55 tal Exp $
+ * $Id: HashService.java,v 1.12 2003-03-27 03:04:16 tal Exp $
  */
 
 /*
@@ -49,6 +49,16 @@ import org.lockss.plugin.*;
  * not lock out smaller requests.
  */
 public class HashService implements LockssManager {
+  /** Constant by which hash estimates are increased */
+  static String PARAM_ESTIMATE_PAD_CONSTANT =
+    Configuration.PREFIX + "hasher.estimate.pad.constant";
+  /** Percentage by which hash estimates are increased */
+  static String PARAM_ESTIMATE_PAD_PERCENT =
+    Configuration.PREFIX + "hasher.estimate.pad.percent";
+
+  private static int DEFAULT_ESTIMATE_PAD_CONSTANT = 10;
+  private static int DEFAULT_ESTIMATE_PAD_PERCENT = 10;
+
   // Queue of outstanding hash requests.  The currently executing request,
   // if any, is on the queue, but not necessarily still at the head.
   // Currently there is a single hash queue.  (Might make sense to have
@@ -56,6 +66,8 @@ public class HashService implements LockssManager {
   private static HashQueue theQueue = null;
   private static HashService theService = null;
   private LockssDaemon theDaemon = null;
+  private long estPadConstant = 0;
+  private long estPadPercent = 0;
 
   public HashService() {}
 
@@ -82,6 +94,13 @@ public class HashService implements LockssManager {
   public void startService() {
     theQueue = new HashQueue();
     theQueue.init();
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration oldConfig,
+					 Configuration newConfig,
+					 Set changedKeys) {
+	  setConfig(newConfig);
+	}
+      });
     theDaemon.getStatusService().registerStatusAccessor("HashQ",
 							theQueue.getStatusAccessor());
   }
@@ -99,6 +118,13 @@ public class HashService implements LockssManager {
     theQueue = null;
 
     theService = null;
+  }
+
+  private void setConfig(Configuration config) {
+    estPadConstant = config.getLong(PARAM_ESTIMATE_PAD_CONSTANT,
+				    DEFAULT_ESTIMATE_PAD_CONSTANT);
+    estPadPercent = config.getLong(PARAM_ESTIMATE_PAD_PERCENT,
+				   DEFAULT_ESTIMATE_PAD_PERCENT);
   }
 
   /**
@@ -129,7 +155,8 @@ public class HashService implements LockssManager {
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
 			    urlset.getContentHasher(hasher),
-			    urlset.estimatedHashDuration(), "C");
+			    padEstimate(urlset.estimatedHashDuration()),
+			    "C");
     return scheduleReq(req);
   }
 
@@ -163,6 +190,11 @@ public class HashService implements LockssManager {
 			    // tk - get better duration estimate
 			    urlset.getNameHasher(hasher), 1000, "N");
     return scheduleReq(req);
+  }
+
+  /** Add the configured padding percentage, plus the constant */
+  long padEstimate(long estimate) {
+    return estimate + ((estimate * estPadPercent) / 100) + estPadConstant;
   }
 
   private boolean scheduleReq(HashQueue.Request req) {
