@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.18 2004-02-23 09:13:22 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.19 2004-04-27 19:36:53 tlipkis Exp $
  */
 
 /*
@@ -279,7 +279,6 @@ public class ConfigManager implements LockssManager {
       return null;
     }
     Configuration newConfig = newConfiguration();
-    //    newConfig.setConfigUrls(urlList);
     try {
       boolean gotIt = newConfig.loadList(urlList);
       return gotIt ? newConfig : null;
