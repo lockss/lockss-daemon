@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.25 2003-03-25 01:04:05 troberts Exp $
+ * $Id: HashQueue.java,v 1.26 2003-03-26 00:48:01 tal Exp $
  */
 
 /*
@@ -490,11 +490,21 @@ class HashQueue implements Serializable {
 		    
 
   private class Status implements StatusAccessor {
-    public List getColumnDescriptors(String key) {
-      return statusColDescs;
+    public void populateTable(StatusTable table) {
+      String key = table.getKey();
+      table.setTitle("Hash Queue");
+      table.setTitleFootnote(FOOT_TITLE);
+      table.setColumnDescriptors(statusColDescs);
+      table.setDefaultSortRules(statusSortRules);
+      table.setRows(getRows(key));
+      table.setSummaryInfo(getSummaryInfo(key));
     }
 
-    public List getRows(String key) {
+    public boolean requiresKey() {
+      return false;
+    }
+
+    private List getRows(String key) {
       List table = new ArrayList();
       int ix = 0;
       for (ListIterator iter = getQlistSnapshot().listIterator();
@@ -536,22 +546,7 @@ class HashQueue implements Serializable {
       }
     }
 
-    public List getDefaultSortRules(String key) {
-      return statusSortRules;
-    }
-
-    public boolean requiresKey() {
-      return false;
-    }
-
-    public String getTitle(String key) {
-      return "Hash Queue";
-    }
-
-    /**
-     * Returns null
-     */
-    public List getSummaryInfo(String key) {
+    private List getSummaryInfo(String key) {
       List res = new ArrayList();
       res.add(new StatusTable.SummaryInfo("Total bytes hashed",
 					  ColumnDescriptor.TYPE_INT,
@@ -576,14 +571,6 @@ class HashQueue implements Serializable {
       return res;
     }
 
-    public void populateTable(StatusTable table) {
-      String key = table.getKey();
-      table.setTitle(getTitle(key));
-      table.setColumnDescriptors(getColumnDescriptors(key));
-      table.setDefaultSortRules(getDefaultSortRules(key));
-      table.setRows(getRows(key));
-      table.setSummaryInfo(getSummaryInfo(key));
-    }
   }
 
   static class ReqState implements Comparable {
