@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.75 2003-04-16 05:53:27 aalto Exp $
+* $Id: PollManager.java,v 1.76 2003-04-16 19:23:07 claire Exp $
  */
 
 /*
@@ -680,6 +680,8 @@ public class PollManager  extends BaseLockssManager {
 
       case LcapMessage.CONTENT_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REP:
+        long estTime = cus.estimatedHashDuration();
+//      long adjTime = estTime * SystemMetrics.getAverageHashRate() / m_lowestHashRate;
         ret = cus.estimatedHashDuration() * 2 * (quorum + 1);
         ret = ret < m_minContentPollDuration ? m_minContentPollDuration :
             (ret > m_maxContentPollDuration ? m_maxContentPollDuration : ret);
