@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.7 2004-01-22 07:39:02 tlipkis Exp $
+ * $Id: WatchdogService.java,v 1.8 2004-02-09 22:09:56 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,7 +44,9 @@ import org.lockss.daemon.*;
 public class WatchdogService extends BaseLockssManager {
 
   // It would be simpler to do this with a thread, but using the TimerQueue
-  // ensures that the watchdog isn't poked if the TimerQueue dies.
+  // ensures that the watchdog isn't poked if the TimerQueue dies.  If this
+  // is changed to not use TimerQueue, then TimerQueue should have a
+  // watchdog enabled around the timer callbacks.
 
   static final String PREFIX = Configuration.PLATFORM + "watchdog.";
 
@@ -60,6 +62,7 @@ public class WatchdogService extends BaseLockssManager {
   protected static Logger log = Logger.getLogger("PlatformWatchdog");
   private File watchedFile = null;
   private boolean enabled = false;
+  private boolean stopped = false;
   private long interval;
   private TimerQueue.Request req;
 
@@ -115,10 +118,19 @@ public class WatchdogService extends BaseLockssManager {
     super.stopService();
   }
 
+  /** Force the platform to kill the daemon, by stopping the updating of
+   * the file */
+  public synchronized void forceStop() {
+    stopped = true;
+    stopRunning();
+  }
+
   private synchronized void enable() {
-    stopRunning();		      // First, ensure no current timer req
-    enabled = true;
-    woof();
+    if (!stopped) {
+      stopRunning();		      // First, ensure no current timer req
+      enabled = true;
+      woof();
+    }
   }
 
   private synchronized void disable() {
@@ -126,7 +138,7 @@ public class WatchdogService extends BaseLockssManager {
       log.info("Disabling watchdog");
     }
     stopRunning();
-    if (watchedFile != null && watchedFile.exists()) {
+    if (!stopped && watchedFile != null && watchedFile.exists()) {
       try {
 	watchedFile.delete();
       } catch (Exception e) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestWatchdogService.java,v 1.8 2004-01-22 07:39:02 tlipkis Exp $
+ * $Id: TestWatchdogService.java,v 1.9 2004-02-09 22:09:56 tlipkis Exp $
  */
 
 /*
@@ -150,5 +150,31 @@ public class TestWatchdogService extends LockssTestCase {
     // now unconfigure it.  the file should be deleted
     config(tmpfile.toString(), "0");
     assertFalse(tmpfile.exists());
+  }
+
+  public void testForceStop() throws Exception {
+    File tmpfile = FileTestUtil.tempFile("wdog");
+
+    // configure a 10 second watchdog
+    config(tmpfile.toString(), "10s");
+
+    TimeBase.setSimulated(9000);
+    wdog.startService();
+    // should happen immediately, when service is started
+    // ensure file mod time is correct
+    assertTrue(tmpfile.exists());
+    long e1 = TimeBase.nowMs();
+    assertEquals(e1, tmpfile.lastModified());
+
+    wdog.forceStop();
+
+    // 20 seconds later, it should still be there, but not get updated
+    TimeBase.step(20 * Constants.SECOND);
+    assertTrue(tmpfile.exists());
+    assertEquals(e1, tmpfile.lastModified());
+
+    // now unconfigure it.  the file should not be deleted
+    config(tmpfile.toString(), "0");
+    assertTrue(tmpfile.exists());
   }
 }
