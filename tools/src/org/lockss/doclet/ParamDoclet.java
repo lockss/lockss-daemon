@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoclet.java,v 1.4 2004-12-08 23:55:24 tlipkis Exp $
+ * $Id: ParamDoclet.java,v 1.5 2004-12-09 01:13:24 tlipkis Exp $
  */
 
 /*
@@ -245,9 +245,7 @@ public class ParamDoclet {
 	defaultVal = (new Boolean(fld.getBoolean(null))).toString();
       } else {
 	Object dval = fld.get(null);
-	if (dval != null) {
-	  defaultVal = dval.toString();
-	}
+	defaultVal = (dval != null) ? dval.toString() : "(null)";
       }
     } catch (Exception e) {
       root.printError(field.name() + ": " + e);
