@@ -1,0 +1,26 @@
+#!/bin/sh
+
+usage() {
+  echo "usage: $0 <url1> <url2>"
+  echo "  Loads two prop files (txt or xml) and outputs any differences"
+  echo "  in the resulting Configuration.  Exits with zero status if same."
+  exit 2
+}
+
+[ "$#" -ne "2" ] && usage
+
+f1="$1"
+f2="$2"
+TEMP_PREFIX=/tmp/props
+t1=`mktemp ${TEMP_PREFIX}.XXXXXX`
+t2=`mktemp ${TEMP_PREFIX}.XXXXXX`
+
+test/scripts/run-class ConfigDump -t -o $t1 "$f1"
+test/scripts/run-class ConfigDump -t -o $t2 "$f2"
+if diff -U 0 -L "$f1" -L "$f2" $t1 $t2; then
+ exit=0
+else
+ exit=1
+fi
+rm $t1 $t2
+exit $exit
