@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.5 2002-11-05 21:07:36 tal Exp $
+ * $Id: LockssTestCase.java,v 1.6 2002-11-06 21:17:12 tal Exp $
  */
 
 /*
@@ -153,8 +153,8 @@ public class LockssTestCase extends TestCase {
   }
 
   /** Asserts that the two DatagramPackets have equal contents */
-  public static void assertEqualPkts(DatagramPacket expected,
-				     DatagramPacket actual) {
+  public static void assertEquals(DatagramPacket expected,
+				  DatagramPacket actual) {
     assertEquals(expected.getAddress(), actual.getAddress());
     assertEquals(expected.getPort(), actual.getPort());
     assertEquals(expected.getLength(), actual.getLength());
