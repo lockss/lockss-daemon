@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.6 2004-02-09 22:14:15 tlipkis Exp $
+ * $Id: ParamDoc.java,v 1.7 2004-02-10 02:28:09 tlipkis Exp $
  */
 
 /*
@@ -41,6 +41,9 @@ public class ParamDoc {
   static final String blanks = "                                                                                ";
   static final String WDOG_PATTERN = 
     org.lockss.daemon.LockssThread.PARAM_NAMED_WDOG_INTERVAL;
+
+  static final String PRIORITY_PATTERN = 
+    org.lockss.daemon.LockssThread.PARAM_NAMED_THREAD_PRIORITY;
 
   private static Logger log = Logger.getLogger("ParamDoc");
 
@@ -184,10 +187,24 @@ public class ParamDoc {
 	paramSymToDefaultSym.put(fname, "DEFAULT"+fname.substring(5));
       } else if (fname.startsWith("WDOG_PARAM_")) {
 	paramName = getParamString(cls, fld, fname);
-	paramSymToDefaultSym.put(fname, StringUtil.replaceString(fname, "_PARAM_", "_DEFAULT_"));
+	paramSymToDefaultSym.put(fname,
+				 StringUtil.replaceString(fname,
+							  "_PARAM_",
+							  "_DEFAULT_"));
 	if (paramName != null) {
 	  paramName =
 	    StringUtil.replaceString(WDOG_PATTERN, "<name>", paramName);
+	  wdogSymbolToName.put(fname, paramName);
+	}
+      } else if (fname.startsWith("PRIORITY_PARAM_")) {
+	paramName = getParamString(cls, fld, fname);
+	paramSymToDefaultSym.put(fname,
+				 StringUtil.replaceString(fname,
+							  "_PARAM_",
+							  "_DEFAULT_"));
+	if (paramName != null) {
+	  paramName =
+	    StringUtil.replaceString(PRIORITY_PATTERN, "<name>", paramName);
 	  wdogSymbolToName.put(fname, paramName);
 	}
       }
@@ -205,7 +222,9 @@ public class ParamDoc {
     String fname = fld.getName();
     
     if (Modifier.isStatic(fld.getModifiers())) {
-      if (fname.startsWith("DEFAULT_") || fname.startsWith("WDOG_DEFAULT")) {
+      if (fname.startsWith("DEFAULT_") ||
+	  fname.startsWith("WDOG_DEFAULT") ||
+	  fname.startsWith("PRIORITY_DEFAULT")) {
 	Object defaultVal;
 	try {
 	  fld.setAccessible(true);
