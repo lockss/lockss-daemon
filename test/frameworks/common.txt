@@ -28,6 +28,7 @@ org.lockss.title.tal1.param.2.key=Pu_Number
 org.lockss.title.tal1.param.2.value=8
 org.lockss.title.tal1.param.3.key=year
 org.lockss.title.tal1.param.3.value=2003
+org.lockss.title.tal1.param.3.editable=true
 #Title: American Imago (Project Muse)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal2.title=American Imago
@@ -68,6 +69,7 @@ org.lockss.title.tal6.param.3.key=base_url
 org.lockss.title.tal6.param.3.value=http\://pubs3.acs.org/
 org.lockss.title.tal6.param.4.key=volume
 org.lockss.title.tal6.param.4.value=43
+org.lockss.title.tal6.param.4.editable=true
 #Title: JCICS 2003 (ACS)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal7.title=JCICS 2003
@@ -80,8 +82,10 @@ org.lockss.title.tal7.param.3.key=base_url
 org.lockss.title.tal7.param.3.value=http\://pubs3.acs.org/
 org.lockss.title.tal7.param.4.key=year
 org.lockss.title.tal7.param.4.value=2003
+org.lockss.title.tal7.param.4.editable=true
 org.lockss.title.tal7.param.5.key=volume
 org.lockss.title.tal7.param.5.value=43
+org.lockss.title.tal7.param.5.editable=true
 #Title: ALR (Absinthe Literary Review)
 #Fri Jan 02 14:29:37 PST 2004
 org.lockss.title.tal8.title=ALR
