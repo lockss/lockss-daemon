@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.38 2003-08-07 00:48:41 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.39 2003-09-16 23:45:28 eaalto Exp $
  */
 
 /*
@@ -348,17 +348,19 @@ public class HistoryRepositoryImpl
         URL testUrl = new URL(urlStr);
         String path = testUrl.getPath();
         if (path.indexOf("/.")>=0) {
-          // filtering to remove urls including '..' and such
-          path = TEST_PREFIX + path;
-          File testFile = new File(path);
-          String canonPath = testFile.getCanonicalPath();
-          if (canonPath.startsWith(TEST_PREFIX)) {
+          if (FileUtil.isLegalPath(path)) {
+            // canonicalize to remove urls including '..' and '.'
+            path = TEST_PREFIX + path;
+            File testFile = new File(path);
+            String canonPath = testFile.getCanonicalPath();
+            String sysDepPrefix = FileUtil.sysDepPath(TEST_PREFIX);
+            int pathIndex = canonPath.indexOf(sysDepPrefix) +
+                sysDepPrefix.length();
             urlStr = testUrl.getProtocol() + "://" +
-                testUrl.getHost().toLowerCase()
-                + canonPath.substring(TEST_PREFIX.length());
-          }
-          else {
-            logger.error("Illegal URL detected: " + urlStr);
+                testUrl.getHost().toLowerCase() +
+                FileUtil.sysIndepPath(canonPath.substring(pathIndex));
+          } else {
+            logger.error("Illegal URL detected: "+urlStr);
             throw new MalformedURLException("Illegal URL detected.");
           }
         }

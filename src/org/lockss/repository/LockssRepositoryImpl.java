@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.40 2003-09-09 20:35:16 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.41 2003-09-16 23:45:28 eaalto Exp $
  */
 
 /*
@@ -215,13 +215,17 @@ public class LockssRepositoryImpl extends BaseLockssManager implements LockssRep
         URL testUrl = new URL(url);
         String path = testUrl.getPath();
         if (path.indexOf("/.")>=0) {
-          // filtering to remove urls including '..' and '.'
-          path = TEST_PREFIX + path;
-          File testFile = new File(path);
-          String canonPath = testFile.getCanonicalPath();
-          if (canonPath.startsWith(TEST_PREFIX)) {
-            urlKey = testUrl.getProtocol() + "://" + testUrl.getHost().toLowerCase()
-                   + canonPath.substring(TEST_PREFIX.length());
+          if (FileUtil.isLegalPath(path)) {
+            // canonicalize to remove urls including '..' and '.'
+            path = TEST_PREFIX + path;
+            File testFile = new File(path);
+            String canonPath = testFile.getCanonicalPath();
+            String sysDepPrefix = FileUtil.sysDepPath(TEST_PREFIX);
+            int pathIndex = canonPath.indexOf(sysDepPrefix) +
+                sysDepPrefix.length();
+            urlKey = testUrl.getProtocol() + "://" +
+                testUrl.getHost().toLowerCase() +
+                FileUtil.sysIndepPath(canonPath.substring(pathIndex));
           } else {
             logger.error("Illegal URL detected: "+url);
             throw new MalformedURLException("Illegal URL detected.");
