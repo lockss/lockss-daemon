@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.59 2004-12-09 08:22:10 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.60 2004-12-14 22:02:50 troberts Exp $
  */
 
 /*
@@ -263,6 +263,49 @@ public class LockssTestCase extends TestCase {
       return;
     }
     failNotEquals(message, expected, actual);
+  }
+
+  /**
+   * Asserts that an int is positive
+   */
+  static public void assertPositive(int value) {
+    assertPositive(null, value);
+  }
+
+  static public void assertPositive(String msg, int value) {
+    StringBuffer sb = new StringBuffer();
+    if (msg != null) {
+      sb.append(msg);
+      sb.append(" ");
+    }
+    sb.append("Expected a positive value but got ");
+    sb.append(value);
+    assertTrue(sb.toString(), value>0);
+  }
+
+  /**
+   * Asserts that an int is negative
+   */
+  static public void assertNegative(int value) {
+    assertNegative(null, value);
+  }
+
+  static public void assertNegative(String msg, int value) {
+    StringBuffer sb = new StringBuffer();
+    if (msg != null) {
+      sb.append(msg);
+      sb.append(" ");
+    }
+    sb.append("Expected a positive value but got ");
+    sb.append(value);
+    assertTrue(sb.toString(), value<0);
+  }
+  /**
+   * Asserts that c1.compareTo(c2) > 0 and c2.compareTo(c1) < 0
+   */
+  static public void assertGreaterThan(Comparable c1, Comparable c2) {
+    assertPositive(c1.compareTo(c2));
+    assertNegative(c2.compareTo(c1));
   }
 
   /**
