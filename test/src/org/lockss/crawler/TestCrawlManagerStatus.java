@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.1 2003-07-02 00:56:05 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.2 2003-07-18 22:18:24 troberts Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.crawler.*;
+import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 
 public class TestCrawlManagerStatus extends LockssTestCase {
@@ -50,6 +51,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String NUM_CACHE_HITS = "num_cache_hits";
   private static final String CACHE_HITS_PERCENT = "cache_hits_percent";
   private static final String START_URLS = "start_urls";
+  private static final String NC_TYPE = "New Content";
+  private static final String REPAIR_TYPE = "Repair";
 
   private static List expectedColDescs =
     ListUtil.list(
@@ -113,7 +116,6 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     crawler.setEndTime(2);
     crawler.setNumFetched(3);
     crawler.setNumParsed(4);
-//     MockArchivalUnit mau1 = makeMockAUWithId("test_key");
      crawler.setAU(new MockArchivalUnit());
 
     MockCrawler crawler2 = new MockCrawler();
@@ -178,5 +180,33 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     assertEquals(new Long(10), map.get(NUM_URLS_PARSED));
   }
 
+
+  public void testCrawlType() {
+    StatusTable table = new StatusTable("test");
+
+    MockCrawler crawler = new MockCrawler();
+    crawler.setType(Crawler.NEW_CONTENT);
+    crawler.setAU(new MockArchivalUnit());
+
+    MockCrawler crawler2 = new MockCrawler();
+    crawler2.setType(Crawler.REPAIR);
+    crawler2.setAU(new MockArchivalUnit());
+
+    statusSource.setCrawls(ListUtil.list(crawler), "key1");
+    statusSource.setCrawls(ListUtil.list(crawler2), "key2");
+    statusSource.setActiveAUs(ListUtil.list("key1", "key2"));
+
+    cmStatus.populateTable(table);
+    assertEquals(expectedColDescs, table.getColumnDescriptors());
+    List rows = table.getSortedRows();
+    int expectedElements = 2;
+    assertEquals(expectedElements, rows.size());
+
+    Map map = (Map)rows.get(0);
+    assertEquals(NC_TYPE, map.get(CRAWL_TYPE));
+
+    map = (Map)rows.get(1);
+    assertEquals(REPAIR_TYPE, map.get(CRAWL_TYPE));
+  }
 
 }

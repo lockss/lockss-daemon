@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.1 2003-07-02 00:56:04 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.2 2003-07-18 22:18:24 troberts Exp $
  */
 
 /*
@@ -145,7 +145,13 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   private String getTypeString(int type) {
-    return "blah";
+    switch(type) {
+      case Crawler.NEW_CONTENT:
+	return NC_TYPE;
+      case Crawler.REPAIR:
+	return REPAIR_TYPE;
+    }
+    return "Unknown";
   }
 
   private Map makeRow(Crawler crawler) {
