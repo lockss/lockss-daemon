@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.1 2003-03-27 00:50:23 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.2 2003-03-27 21:47:17 troberts Exp $
  */
 
 /*
@@ -95,8 +95,6 @@ public class TestTreeWalkHandler extends LockssTestCase {
 
     treeWalkHandler = new TreeWalkHandler(nodeManager,
                                          theDaemon.getCrawlManager());
-    // need to set a deadline manually since the thread isn't running
-    treeWalkHandler.deadline = Deadline.NEVER;
 
     TestNodeManagerImpl.loadNodeStates(mau, nodeManager);
   }

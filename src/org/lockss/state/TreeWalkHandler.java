@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.1 2003-03-27 00:50:23 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.2 2003-03-27 21:47:17 troberts Exp $
  */
 
 /*
@@ -75,8 +75,8 @@ public class TreeWalkHandler {
   long treeWalkInterval;
   long topPollInterval;
   long treeWalkTestDuration;
-  // deadline used by the treewalk
-  Deadline deadline;
+
+  boolean treeWalkAborted;
 
 //  long treeWalkEstimate = -1;
  // EstimationThread estThread = null;
@@ -149,7 +149,7 @@ public class TreeWalkHandler {
    * @param cus the {@link CachedUrlSet} to walk
    */
   void recurseTreeWalk(CachedUrlSet cus) {
-    if (deadline.expired()) {
+    if (treeWalkAborted) {
       // treewalk has been terminated
       return;
     }
@@ -256,14 +256,14 @@ public class TreeWalkHandler {
    */
   class TreeWalkThread extends Thread {
     private boolean goOn = true;
+    Deadline deadline;
 
     public void run() {
       while (goOn) {
         long timeToStart = timeUntilTreeWalkStart();
         if (timeToStart <= 0) {
-          // get a non-ending deadline which can be expired to terminate
-          // the treewalk early.
-          deadline = Deadline.NEVER;
+
+	  treeWalkAborted = false;
           doTreeWalk();
         }
         else {
@@ -280,6 +280,7 @@ public class TreeWalkHandler {
 
     public void end() {
       goOn = false;
+      treeWalkAborted = true;
       if (deadline != null) {
         deadline.expire();
       }
