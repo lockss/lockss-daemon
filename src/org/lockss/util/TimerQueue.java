@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.1 2002-11-15 01:24:03 tal Exp $
+ * $Id: TimerQueue.java,v 1.2 2002-11-19 23:29:12 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -47,23 +47,40 @@ public class TimerQueue implements Serializable {
    */
   public static boolean schedule(Deadline deadline, Callback callback,
 				 Object cookie) {
-    return singleton.add(new Request(deadline, callback, cookie));
+    return singleton.add(deadline, callback, cookie);
   }
 
-  private boolean add(Request req) {
+  private void someDeadlineChanged() {
+    queue.sort();
+    if (timerThread != null) {
+      timerThread.interrupt();
+    }
+  }
+
+  private boolean add(Deadline deadline, Callback callback, Object cookie) {
+    Request req = new Request(deadline, callback, cookie);
+    req.deadline.registerCallback(req.deadlineCb);
     queue.put(req);
+    if (timerThread != null) {
+      timerThread.interrupt();
+    }
     return true;
   }
 
-  static class Request implements Serializable, Comparable {
+  class Request implements Serializable, Comparable {
     Deadline deadline;
     Callback callback;
     Object cookie;
+    Deadline.Callback deadlineCb;
 
     Request(Deadline deadline, Callback callback, Object cookie) {
       this.deadline = deadline;
       this.callback = callback;
       this.cookie = cookie;
+      deadlineCb = new Deadline.Callback() {
+	  public void changed(Deadline deadline) {
+	    someDeadlineChanged();
+	  }};
     }
 
     public int compareTo(Object o) {
@@ -73,6 +90,7 @@ public class TimerQueue implements Serializable {
 
   private void doNotify(Request req) {
     // tk - run these in a separate thread
+    req.deadline.unregisterCallback(req.deadlineCb);
     try {
       req.callback.timerExpired(req.cookie);
     } catch (Exception e) {
@@ -97,7 +115,7 @@ public class TimerQueue implements Serializable {
     }
   }
 
-  // Hash thread
+  // Timer thread
   private class TimerThread extends Thread {
     private boolean goOn = false;
 
@@ -111,12 +129,15 @@ public class TimerQueue implements Serializable {
 //       }
       goOn = true;
 
-      ProbabilisticTimer timeout = new ProbabilisticTimer(60000, 10000);
+      Deadline timeout = Deadline.in(60000);
       while (goOn) {
 	try {
-	  Request req = (Request)queue.get(timeout);
+	  Request req = (Request)queue.peekWait(timeout);
 	  if (req != null) {
-	    doNotify(req);
+	    req.deadline.sleep();
+	    if (req.deadline.expired()) {
+	      doNotify(req);
+	    }
 	  }
 	} catch (InterruptedException e) {
 	  // no action - expected when stopping
@@ -134,7 +155,7 @@ public class TimerQueue implements Serializable {
   }
   /**
    * The TimerQueue.Callback interface defines the
-   * method that will be called then a timer expires.
+   * method that will be called when a timer expires.
    */
   public interface Callback {
     /**
