@@ -105,7 +105,6 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     startUrlLabel.setToolTipText("");
     startUrlLabel.setText("Starting URL:");
     panel1.setPreferredSize(new Dimension(400, 400));
-    outputTextPane.setEditable(false);
     outputScrollPane.setMinimumSize(new Dimension(100, 100));
     outputScrollPane.setPreferredSize(new Dimension(400, 400));
     outputScrollPane.setToolTipText("");
@@ -122,6 +121,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         cancelButton_actionPerformed(e);
       }
     });
+    outputTextPane.setEditable(false);
     getContentPane().add(panel1);
     panel1.add(infoPanel, BorderLayout.NORTH);
     infoPanel.add(startUrlLabel, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
@@ -154,6 +154,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     String startUrl = startUrlTextField.getText();
     int depth = Integer.parseInt(depthTextField.getText());
     long delay = Integer.parseInt(delayTextField.getText()) * Constants.SECOND;
+    outputTextPane.setText("");
     try {
       CrawlRuleTester tester = new CrawlRuleTester(m_msgHandler, depth, delay,
           startUrl, m_au.getCrawlSpec());
@@ -161,7 +162,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
     }
     catch (Exception ex) {
       JOptionPane.showMessageDialog(this,
-                                    "Unable to create an Archival Unit:\n"
+                                    "Error occured while checking crawl rules:\n"
                                     + ex.getMessage(),
                                     "CrawlRule Test Error",
                                     JOptionPane.ERROR_MESSAGE);
@@ -185,6 +186,7 @@ public class CrawlRuleTestResultsDialog extends JDialog {
         outputTextPane.getDocument().insertString(
             outputTextPane.getDocument().getLength(), message,
             m_attributes[messageType]);
+
       }
       catch (BadLocationException ex) {
         ex.printStackTrace();
