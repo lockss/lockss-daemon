@@ -1,5 +1,5 @@
 /*
- * $Id: DoLater.java,v 1.2 2002-09-23 02:57:31 tal Exp $
+ * $Id: DoLater.java,v 1.3 2002-11-12 18:04:50 tal Exp $
  */
 
 /*
@@ -125,6 +125,7 @@ public abstract class DoLater extends Thread {
 	}
       }
     } catch (InterruptedException e) {
+      // exit thread
     }
   }
 
