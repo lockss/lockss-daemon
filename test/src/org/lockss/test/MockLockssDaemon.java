@@ -18,7 +18,7 @@ public class MockLockssDaemon extends LockssDaemon {
   LcapComm commManager = null;
   LockssRepositoryService lockssRepositoryService = null;
   HistoryRepository historyRepository = null;
-  ProxyHandler proxyHandler = null;
+  ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   PluginManager pluginManager = null;
   IdentityManager identityManager = null;
@@ -41,7 +41,7 @@ public class MockLockssDaemon extends LockssDaemon {
     commManager = null;
     lockssRepositoryService = null;
     historyRepository = null;
-    proxyHandler = null;
+    proxyManager = null;
     crawlManager = null;
     pluginManager = null;
     identityManager = null;
@@ -170,20 +170,20 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the proxy handler instance
-   * @return the ProxyHandler
+   * return the proxy manager instance
+   * @return the ProxyManager
    */
-  public ProxyHandler getProxyHandler() {
-    if (proxyHandler == null) {
-      proxyHandler = new ProxyHandler();
+  public ProxyManager getProxyManager() {
+    if (proxyManager == null) {
+      proxyManager = new ProxyManager();
       try {
-        proxyHandler.initService(this);
+        proxyManager.initService(this);
       }
       catch (LockssDaemonException ex) {
       }
-      theManagers.put(LockssDaemon.PROXY_HANDLER, proxyHandler);
+      theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
     }
-    return proxyHandler;
+    return proxyManager;
   }
 
   /**
@@ -339,12 +339,12 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the ProxyHandler
-   * @param proxyHand the new handler
+   * Set the ProxyManager
+   * @param proxyMgr the new manager
    */
-  public void setProxyHandler(ProxyHandler proxyHand) {
-    proxyHandler = proxyHand;
-    theManagers.put(LockssDaemon.PROXY_HANDLER, proxyHandler);
+  public void setProxyManager(ProxyManager proxyMgr) {
+    proxyManager = proxyMgr;
+    theManagers.put(LockssDaemon.PROXY_MANAGER, proxyManager);
   }
 
 }
