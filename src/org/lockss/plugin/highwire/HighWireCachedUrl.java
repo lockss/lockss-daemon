@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireCachedUrl.java,v 1.7 2003-09-04 23:41:11 troberts Exp $
+ * $Id: HighWireCachedUrl.java,v 1.8 2003-09-09 00:55:59 troberts Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class HighWireCachedUrl extends GenericFileCachedUrl {
 
       Reader filteredReader =
 	HtmlTagFilter.makeNestedFilter(getReader(), tagList);
-      return new ReaderInputStream(filteredReader);
+      return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
     }
     logger.debug2("Not filtering "+url);
     return openForReading();
