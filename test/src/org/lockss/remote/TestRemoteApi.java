@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.1 2004-01-04 06:18:35 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.2 2004-01-12 06:20:26 tlipkis Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class TestRemoteApi extends LockssTestCase {
     assertSame(rapi.findAuProxy(mau2), (AuProxy)mapped.get(1));
   }
 
-  public void testFindPluginProxy() {
+  public void testFindPluginProxy() throws Exception {
     MockPlugin mp1 = new MockPlugin();
     PluginProxy pp1 = rapi.findPluginProxy(mp1);
     assertNotNull(pp1);

@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.2 2004-01-08 22:43:48 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.3 2004-01-12 06:20:26 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class RemoteApi extends BaseLockssManager {
       return null;
     }
     AuProxy aup = (AuProxy)auProxies.get(au);
-    if (aup == null || aup.getAu() != au) {
+    if (aup == null) {
       aup = new AuProxy(au, this);
       auProxies.put(au, aup);
     }
@@ -104,7 +104,19 @@ public class RemoteApi extends BaseLockssManager {
    * the given id.
    */
   public PluginProxy findPluginProxy(String pluginid) {
-    return findPluginProxy(getPluginFromId(pluginid));
+    PluginProxy pluginp = (PluginProxy)pluginProxies.get(pluginid);
+    if (pluginp == null || pluginp.getPlugin() != getPluginFromId(pluginid)) {
+      String key = pluginMgr.pluginKeyFromId(pluginid);
+      pluginMgr.ensurePluginLoaded(key);
+      try {
+	pluginp = new PluginProxy(pluginid, this);
+      } catch (PluginProxy.NoSuchPlugin e) {
+	return null;
+      }
+      pluginProxies.put(pluginid, pluginp);
+      pluginProxies.put(pluginp.getPlugin(), pluginp);
+    }
+    return pluginp;
   }
 
   /** Create or return  PluginProxy for the Plugin
@@ -116,8 +128,9 @@ public class RemoteApi extends BaseLockssManager {
       return null;
     }
     PluginProxy pluginp = (PluginProxy)pluginProxies.get(plugin);
-    if (pluginp == null || pluginp.getPlugin() != plugin) {
+    if (pluginp == null) {
       pluginp = new PluginProxy(plugin, this);
+      pluginProxies.put(plugin.getPluginId(), pluginp);
       pluginProxies.put(plugin, pluginp);
     }
     return pluginp;
@@ -196,10 +209,10 @@ public class RemoteApi extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deleteAuConfiguration(AuProxy aup)
+  public void deleteAu(AuProxy aup)
       throws ArchivalUnit.ConfigurationException, IOException {
     ArchivalUnit au = aup.getAu();
-    pluginMgr.deleteAuConfiguration(au);
+    pluginMgr.deleteAu(au);
   }
 
   /**
@@ -208,10 +221,15 @@ public class RemoteApi extends BaseLockssManager {
    * @throws ArchivalUnit.ConfigurationException
    * @throws IOException
    */
-  public void deactivateAuConfiguration(AuProxy aup)
+  public void deactivateAu(AuProxy aup)
       throws ArchivalUnit.ConfigurationException, IOException {
     ArchivalUnit au = aup.getAu();
-    pluginMgr.deactivateAuConfiguration(au);
+    pluginMgr.deactivateAu(au);
+  }
+
+  // temporary
+  public boolean isRemoveStoppedAus() {
+    return pluginMgr.isRemoveStoppedAus();
   }
 
   /**
@@ -271,6 +289,6 @@ public class RemoteApi extends BaseLockssManager {
   }
 
   String pluginIdFromAuId(String auid) {
-    return pluginMgr.pluginIdFromAuId(auid);
+    return pluginMgr.pluginNameFromAuId(auid);
   }
 }
