@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpUtil.java,v 1.2 2005-01-04 03:04:45 tlipkis Exp $
+ * $Id: TestRegexpUtil.java,v 1.2.2.1 2005-01-19 01:39:07 tlipkis Exp $
  */
 
 /*
@@ -88,6 +88,11 @@ public class TestRegexpUtil extends LockssTestCase {
     assertFalse(RegexpUtil.isMatchRe("foobar", "^obar"));
     // repeat
     assertFalse(RegexpUtil.isMatchRe("foobar", "^obar"));
+  }
+
+  public void testXPathIsMatchRe() throws Exception {
+    assertTrue(RegexpUtil.XpathUtil.isMatchRe("foobar", "ob"));
+    assertFalse(RegexpUtil.XpathUtil.isMatchRe("foobar", ""));
   }
 
 }
