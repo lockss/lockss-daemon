@@ -16,6 +16,12 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.histcoop.HistoryCooperativePlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;
 
+# Temporary list of plugins that should be loaded as ConfigurablePlugins
+# with a xml file.  These need not be included in the registry.
+
+#org.lockss.plugin.xmlPlugins=\
+#    org.lockss.plugin.othervoices.OtherVoicesPlugin;
+
 # Title database
 
 #Title: Antennas and Propagation, Trans. of (IEEE)
