@@ -1,5 +1,5 @@
 /*
- * $Id: TestWrapperLogger.java,v 1.2 2003-09-26 23:47:45 eaalto Exp $
+ * $Id: TestWrapperLogger.java,v 1.3 2004-01-26 20:00:35 tyronen Exp $
  */
 
 /*
@@ -133,6 +133,7 @@ public class TestWrapperLogger extends LockssTestCase {
   public void testThrowable() throws IOException {
     WrapperLogger.setLevel(Logger.LEVEL_WARNING);
     Exception e = new Exception("dummy exception");
+    tgt.resetMessages();
     WrapperLogger.record_throwable(classname,methodname,e);
     assertTrue(tgt.hasMessage(getExceptionLogMessage(e)));
     WrapperLogger.setLevel(Logger.LEVEL_CRITICAL);
