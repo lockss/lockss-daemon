@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunction.java,v 1.3 2003-08-25 23:58:49 dshr Exp $
+ * $Id: MockMemoryBoundFunction.java,v 1.4 2003-08-26 20:27:52 dshr Exp $
  */
 
 /*
@@ -92,10 +92,15 @@ public class MockMemoryBoundFunction extends MemoryBoundFunctionSPI {
 	boolean match = (mockProof != null &&
 			 mockProof.length == mbf.proof.length);
 	for (int i = 0; i < mockProof.length; i++)
-	  if (match && mockProof[i] != mbf.proof[i])
+	  if (match && mockProof[i] != mbf.proof[i]) {
 	    match = false;
+	  } else {
+	    logger.info("proof check " + i + " " + mockProof[i] +
+			" = " + mbf.proof[i]);
+	  }
 	if (!match)
 	  mbf.proof = null;  // Proof invalid
+	logger.info("proof is " + (mbf.proof != null ? " valid" : "invalid"));
       } else {
 	// We're generating
 	mbf.proof = new int[mockProof.length];

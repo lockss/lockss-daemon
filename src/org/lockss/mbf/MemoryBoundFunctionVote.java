@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunctionVote.java,v 1.4 2003-08-25 23:58:49 dshr Exp $
+ * $Id: MemoryBoundFunctionVote.java,v 1.5 2003-08-26 20:27:51 dshr Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.plugin.*;
  * @version 1.0
  */
 public abstract class MemoryBoundFunctionVote {
-  protected static Logger logger = Logger.getLogger("MemoryBoundFunction");
+  protected static Logger logger = Logger.getLogger("MemoryBoundFunctionVote");
   protected static byte[] basis = null;
   protected static File basisFile = null;
 

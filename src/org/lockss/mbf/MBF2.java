@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.4 2003-08-24 22:38:25 dshr Exp $
+ * $Id: MBF2.java,v 1.5 2003-08-26 20:27:51 dshr Exp $
  */
 
 /*
@@ -236,11 +236,19 @@ public class MBF2 extends MemoryBoundFunctionSPI {
       if (!match()) {
 	// This is supposed to be a match but isn't,
 	// verification failed.
+	logger.info("proof invalid");
+	for (int i = 0; i < mbf.proof.length; i++) {
+	  logger.info("\t" + i + "\t" + mbf.proof[i]);
+	}
 	mbf.finished = true;
 	mbf.proof = null;
       } else if (numPath >= mbf.maxPath || numPath >= mbf.proof.length) {
 	// XXX should check inter-proof spaces too
 	mbf.finished = true;
+	logger.info("proof valid");
+	for (int i = 0; i < mbf.proof.length; i++) {
+	  logger.info("\t" + i + "\t" + mbf.proof[i]);
+	}
       } else
 	pathIndex = -1;
     } else {

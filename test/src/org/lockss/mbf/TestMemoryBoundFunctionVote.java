@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.4 2003-08-26 01:08:20 dshr Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.5 2003-08-26 20:27:52 dshr Exp $
  */
 
 /*
@@ -55,12 +55,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   private static String[] MBFnames = {
     "MOCK",  // NB - must be first
     // "MBF1",
-    "MBF2",
+    // "MBF2",
   };
   private static MemoryBoundFunctionFactory[] MBFfactory = null;
   private static String[] MBFVnames = {
     "MOCK",  // NB - must be first
-    // "MBFV2",
+    "MBFV2",
   };
   private static MemoryBoundFunctionVoteFactory[] MBFVfactory = null;
   private static final int numSteps = 16;
@@ -160,20 +160,90 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     }
   }
 
-  public void testOnePair() {
+  public void testAgreeingVote() {
     for (int j = 0; j < MBFVfactory.length; j++)
       for (int i = 0; i < MBFfactory.length; i++)
-	onePair(i, j);
+	agreeingVote(i, j);
   }
     
-  public void onePair(int i, int j) {
+  public void testDisagreeingVote() {
+    for (int j = 0; j < MBFVfactory.length; j++)
+      for (int i = 0; i < MBFfactory.length; i++)
+	disagreeingVote(i, j);
+  }
+    
+  public void testInvalidVote() {
+    for (int j = 0; j < MBFVfactory.length; j++)
+      for (int i = 0; i < MBFfactory.length; i++)
+	invalidVote(i, j);
+  }
+    
+  public void testShortVote() {
+    for (int j = 0; j < MBFVfactory.length; j++)
+      for (int i = 0; i < MBFfactory.length; i++)
+	shortVote(i, j);
+  }
+    
+  private void agreeingVote(int i, int j) {
     byte[] nonce = new byte[4];
     rand.nextBytes(nonce);
-    CachedUrlSet cus = goodCUS(128);
-    if (cus == null)
-      fail("goodCUS() returned null");
+    CachedUrlSet cus1 = goodCUS(128);
+    if (cus1 == null)
+      fail("goodCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    CachedUrlSet cus2 = goodCUS(128);
+    if (cus2 == null)
+      fail("goodCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    onePair(i, j, cus1, cus2, nonce, nonce, true, true);
+  }
+
+  private void disagreeingVote(int i, int j) {
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    CachedUrlSet cus1 = badCUS(128);
+    if (cus1 == null)
+      fail("badCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    CachedUrlSet cus2 = goodCUS(128);
+    if (cus2 == null)
+      fail("goodCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    onePair(i, j, cus1, cus2, nonce, nonce, false, true);
+  }
+
+  private void invalidVote(int i, int j) {
+    byte[] nonce1 = new byte[4];
+    rand.nextBytes(nonce1);
+    byte[] nonce2 = new byte[4];
+    rand.nextBytes(nonce2);
+    CachedUrlSet cus1 = goodCUS(128);
+    if (cus1 == null)
+      fail("badCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    CachedUrlSet cus2 = goodCUS(128);
+    if (cus2 == null)
+      fail("goodCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    onePair(i, j, cus1, cus2, nonce1, nonce2, true, false);
+  }
+
+  private void shortVote(int i, int j) {
+    byte[] nonce = new byte[4];
+    rand.nextBytes(nonce);
+    CachedUrlSet cus1 = goodCUS(128);
+    if (cus1 == null)
+      fail("goodCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    CachedUrlSet cus2 = shortCUS(128);
+    if (cus2 == null)
+      fail("goodCUS() returned null " + MBFnames[i] + "," + MBFVnames[j]);
+    onePair(i, j, cus1, cus2, nonce, nonce, false, true);
+  }
+
+  
+  private void onePair(int i, int j,
+		       CachedUrlSet cus1, 
+		       CachedUrlSet cus2,
+		       byte[] nonce1,
+		       byte[] nonce2,
+		       boolean shouldBeAgreeing,
+		       boolean shouldBeValid) {
     // Make a generator
-    MemoryBoundFunctionVote gen = generator(i, j, nonce, cus);
+    MemoryBoundFunctionVote gen = generator(i, j, nonce1, cus1);
     assertFalse(gen==null);
     if (i == 0) {
       // Set the proof array that the MockMemoryBoundFunction will return
@@ -186,31 +256,32 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 	assertFalse(gen.finished());
       }
     } catch (MemoryBoundFunctionException ex) {
-      fail("generator.computeSteps() threw " + ex.toString());
+      fail("generator.computeSteps() threw " + ex.toString() + " for "  + MBFnames[i] + "," + MBFVnames[j]);
     }
     assertTrue(gen.finished());
     // Recover the vote
     int[][] proofArray = gen.getProofArray();
     if (proofArray == null)
-      fail("generated a null proof array");
+      fail("generated a null proof array " + MBFnames[i] + "," + MBFVnames[j]);
     // Recover the hashes
     byte[][] hashArray = gen.getHashArray();
     if (hashArray == null)
-      fail("generated a null proof array");
+      fail("generated a null proof array " + MBFnames[i] + "," + MBFVnames[j]);
     if (proofArray.length != hashArray.length)
       fail("proof " + proofArray.length + " hash " +
-	   hashArray.length + " not equal");
+	   hashArray.length + " not equal " + MBFnames[i] + "," + MBFVnames[j]);
     // Make a verifier
-    cus = goodCUS(128);
-    if (cus == null)
-      fail("goodCUS() returned null");
-    MemoryBoundFunctionVote ver = verifier(i, j, nonce, cus,
+    MemoryBoundFunctionVote ver = verifier(i, j, nonce2, cus2,
 					   proofArray, hashArray);
     assertFalse(ver==null);
     if (i == 0) {
       // Set the proof array that the MockMemoryBoundFunction will return
       // for generation and use for verification
-      MockMemoryBoundFunction.setProof(goodProof);
+      MockMemoryBoundFunction.setProof(shouldBeValid ? goodProof : badProof);
+    }
+    if (j == 0) {
+      ((MockMemoryBoundFunctionVote)ver).setValid(shouldBeValid);
+      ((MockMemoryBoundFunctionVote)ver).setAgreeing(shouldBeAgreeing);
     }
     // Verify the vote
     try {
@@ -218,24 +289,28 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 	assertFalse(ver.finished());
       }
     } catch (MemoryBoundFunctionException ex) {
-      fail("verifier.computeSteps() threw " + ex.toString());
+      fail("verifier.computeSteps() threw " + ex.toString() + " for " + MBFnames[i] + "," + MBFVnames[j]);
     }
     assertTrue(ver.finished());
     // Get valid/invalid
     try {
       boolean valid = ver.valid();
-      if (!valid)
-	fail("verifier declared valid vote invalid");
+      if (shouldBeValid && !valid)
+	fail("verifier declared valid vote invalid " + MBFnames[i] + "," + MBFVnames[j]);
+      else if (!shouldBeValid && valid)
+	fail("verifier declared invalid vote valid " + MBFnames[i] + "," + MBFVnames[j]);
     } catch (MemoryBoundFunctionException ex) {
       fail("verifier.valid() threw " + ex.toString());
     }
     // Get agreeing/disagreeing
     try {
       boolean agreeing = ver.agreeing();
-      if (!agreeing)
-	fail("verifier declared agreeing vote disgreeing");
+      if (shouldBeAgreeing && !agreeing)
+	fail("verifier declared agreeing vote disgreeing " + MBFnames[i] + "," + MBFVnames[j]);
+      else if (!shouldBeAgreeing && agreeing)
+	fail("verifier declared disagreeing vote agreeing " + MBFnames[i] + "," + MBFVnames[j]);
     } catch (MemoryBoundFunctionException ex) {
-      fail("verifier.agreeing() threw " + ex.toString());
+      fail("verifier.agreeing() threw " + ex.toString() + " for " + MBFnames[i] + "," + MBFVnames[j]);
     }
   }
 
@@ -260,7 +335,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 	fail("generator() - null AU");
       String auid = au.getAUId();
       if (auid == null)
-	fail("generator() - null auID");
+	fail("generator() - null auID " + MBFnames[i] + "," + MBFVnames[j]);
       log.info("generator() " + MBFVnames[j] + ":" + MBFnames[i] +
 	       " for " + auid);
     }
@@ -339,8 +414,6 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 	{1,2,3,4,5,6,7,8,9,10}
       };
       ((MockMemoryBoundFunctionVote)ret).setHashes(hashes);
-      ((MockMemoryBoundFunctionVote)ret).setValid(true);
-      ((MockMemoryBoundFunctionVote)ret).setAgreeing(true);
       ((MockMemoryBoundFunctionVote)ret).setStepCount(256);
     }
     return ret;
@@ -362,11 +435,26 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
 
   private CachedUrlSet badCUS(int bytes) {
     MockArchivalUnit au = new MockArchivalUnit();
+    au.setAuId("TestMemoryBoundFunctionVote:badAU");
+    MockCachedUrlSetHasher hash = new MockCachedUrlSetHasher(bytes);
+    MockCachedUrlSet ret = new MockCachedUrlSet();
+    byte[] nonce = new byte[goodContent.length()];
+    rand.nextBytes(nonce);
+    ret.setContentToBeHashed(nonce); 
+    ret.setArchivalUnit(au);
+    ret.setContentHasher(hash);
+    return (ret);
+  }
+
+  private CachedUrlSet shortCUS(int bytes) {
+    MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId("TestMemoryBoundFunctionVote:goodAU");
     MockCachedUrlSetHasher hash = new MockCachedUrlSetHasher(bytes);
     MockCachedUrlSet ret = new MockCachedUrlSet();
-    byte[] nonce = new byte[32];
-    rand.nextBytes(nonce);
+    byte[] nonce = new byte[goodContent.length()/2];
+    byte[] n2 = goodContent.getBytes();
+    for (int i = 0; i < nonce.length; i++)
+      nonce[i] = n2[i];
     ret.setContentToBeHashed(nonce); 
     ret.setArchivalUnit(au);
     ret.setContentHasher(hash);
