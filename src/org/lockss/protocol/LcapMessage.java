@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.3 2002-11-21 20:23:45 tal Exp $
+ * $Id: LcapMessage.java,v 1.4 2002-11-22 02:13:32 troberts Exp $
  */
 
 /*
@@ -340,7 +340,9 @@ public class LcapMessage {
     m_challenge = m_props.getByteArray("challenge", new byte[0]);
     m_verifier = m_props.getByteArray("verifier", new byte[0]);
     m_hashed = m_props.getByteArray("hashed", new byte[0]);
-    m_entries = stringToEntries(m_props.getProperty("entries"));
+    if (m_props.getProperty("entries") != null) {
+      m_entries = stringToEntries(m_props.getProperty("entries"));
+    }
     // calculate start and stop times
     long now = TimeBase.nowMs();
     m_startTime = now - elapsed;
@@ -366,7 +368,9 @@ public class LcapMessage {
     m_props.putByteArray("challenge", m_challenge);
     m_props.putByteArray("verifier", m_verifier);
     m_props.putByteArray("hashed", m_hashed);
-    m_props.setProperty("entries",entriesToString());
+    if (m_entries != null) {
+      m_props.setProperty("entries",entriesToString());
+    }
 
     byte[] prop_bytes = m_props.encode();
     byte[] hash_bytes = computeHash(prop_bytes);
@@ -488,6 +492,23 @@ public class LcapMessage {
     return buf.toString();
   }
 
+  public String toString() {
+    StringBuffer sb = new StringBuffer();
+    sb.append("[LcapMessage: ");
+    sb.append(m_targetUrl);
+    sb.append(" ");
+    sb.append(m_regExp);
+    sb.append(" ");
+    sb.append(m_opcode);
+    sb.append(" ");
+    sb.append(m_challenge);
+    sb.append(" ");
+    sb.append(m_verifier);
+    sb.append(" ");
+    sb.append(m_hashed);
+    sb.append("]");
+    return sb.toString();
+  }
   String[] stringToEntries(String estr) {
     StringTokenizer tokenizer = new StringTokenizer(estr,"\n");
     String[] ret = new String[tokenizer.countTokens()];
