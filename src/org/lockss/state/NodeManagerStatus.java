@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.7 2003-04-24 17:26:20 tal Exp $
+ * $Id: NodeManagerStatus.java,v 1.8 2003-05-06 03:09:48 claire Exp $
  */
 
 /*
@@ -350,10 +350,10 @@ public class NodeManagerStatus {
       }
       else {
         histories = state.getPollHistories();
-        while (histories.hasNext()) {
-          PollState history = (PollState) histories.next();
-          entriesL.add(makeRow(history));
-        }
+      }
+      while (histories.hasNext()) {
+        PollState history = (PollState) histories.next();
+        entriesL.add(makeRow(history));
       }
       return entriesL;
     }
