@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuStateImpl.java,v 1.10 2003-11-07 19:12:42 troberts Exp $
+ * $Id: TestAuStateImpl.java,v 1.11 2003-11-13 19:53:41 troberts Exp $
  */
 
 /*
@@ -86,10 +86,11 @@ public class TestAuStateImpl extends LockssTestCase {
   }
 
   public void testGetUrls() {
-    LinkedList stringList = new LinkedList();
-    stringList.add("test");
+    HashSet stringCollection = new HashSet();
+    stringCollection.add("test");
 
-    AuState auState = new AuState(mau, -1, -1, 123, stringList, historyRepo);
+    AuState auState =
+      new AuState(mau, -1, -1, 123, stringCollection, historyRepo);
     Collection col = auState.getCrawlUrls();
     Iterator colIter = col.iterator();
     assertTrue(colIter.hasNext());
@@ -99,7 +100,7 @@ public class TestAuStateImpl extends LockssTestCase {
 
   public void testUpdateUrls() {
     AuState auState =
-      new AuState(mau, -1, -1, 123, new LinkedList(), historyRepo);
+      new AuState(mau, -1, -1, 123, new HashSet(), historyRepo);
     assertTrue(historyRepo.storedAus.isEmpty());
 
     Collection col = auState.getCrawlUrls();
@@ -125,7 +126,7 @@ public class TestAuStateImpl extends LockssTestCase {
 
   public void testForceUpdateUrls() {
     AuState auState =
-      new AuState(mau, -1, -1, 123, new LinkedList(), historyRepo);
+      new AuState(mau, -1, -1, 123, new HashSet(), historyRepo);
     assertTrue(historyRepo.storedAus.isEmpty());
 
     Collection col = auState.getCrawlUrls();

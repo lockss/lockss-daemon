@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.44 2003-11-11 01:48:19 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.45 2003-11-13 19:53:40 troberts Exp $
  */
 
 /*
@@ -293,7 +293,7 @@ public class GoslingCrawlerImpl implements Crawler {
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
     
-    List urlsToCrawl = aus.getCrawlUrls();
+    Collection urlsToCrawl = aus.getCrawlUrls();
     while (!extractedUrls.isEmpty()) {
       String url = (String)extractedUrls.iterator().next();
       extractedUrls.remove(url);
@@ -302,7 +302,7 @@ public class GoslingCrawlerImpl implements Crawler {
 
     
     while (!urlsToCrawl.isEmpty() && !deadline.expired() && !windowClosed) {
-      String nextUrl = (String)urlsToCrawl.remove(0);
+      String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
       // check crawl window during crawl
       if ((spec!=null) && (!spec.canCrawl())) {
         logger.debug("Crawl canceled: outside of crawl window");

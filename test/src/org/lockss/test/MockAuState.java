@@ -1,5 +1,5 @@
 /*
- * $Id: MockAuState.java,v 1.11 2003-11-07 19:12:42 troberts Exp $
+ * $Id: MockAuState.java,v 1.12 2003-11-13 19:53:41 troberts Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.plugin.ArchivalUnit;
 
 public class MockAuState extends AuState {
 
-  LinkedList crawlUrls = new LinkedList();
+  HashSet crawlUrls = new HashSet();
   int updatedCrawlUrlsCalled = 0;
 
   public MockAuState(ArchivalUnit au) {
@@ -60,7 +60,7 @@ public class MockAuState extends AuState {
   }
 
   public MockAuState(ArchivalUnit au, long lastCrawlTime, long lastPollTime,
-                     long lastTreeWalk, LinkedList crawlUrls,
+                     long lastTreeWalk, HashSet crawlUrls,
                      HistoryRepository historyRepo) {
     super(au, lastCrawlTime, lastPollTime, lastTreeWalk,
 	  crawlUrls, historyRepo);
@@ -82,7 +82,7 @@ public class MockAuState extends AuState {
     super.newCrawlFinished();
   }
 
-  public LinkedList getCrawlUrls() {
+  public HashSet getCrawlUrls() {
     return crawlUrls;
   }
 
