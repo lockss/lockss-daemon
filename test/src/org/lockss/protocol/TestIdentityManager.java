@@ -187,6 +187,27 @@ public class TestIdentityManager extends TestCase {
                rep -IdentityManager.MAX_DELTA);
   }
 
+  public void testStoreIdentities() {
+    String fakeIdString1 = "213.239.33.100";
+    String fakeIdString2 = "213.239.33.101";
+    String fakeIdString3 = "213.239.33.102";
+
+    try {
+      try {
+        assertNotNull(idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString1)));
+        assertNotNull(idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString2)));
+        assertNotNull(idmgr.getIdentity(LcapIdentity.stringToAddr(fakeIdString3)));
+      }
+      catch (UnknownHostException ex) {
+        fail("can't open test host");
+      }
+      idmgr.storeIdentities();
+    }
+    catch (ProtocolException ex) {
+      fail("identity db store failed");
+    }
+  }
+
   /** Executes the test case */
   public static void main(String[] argv) {
     String[] testCaseList = {TestIdentityManager.class.getName()};

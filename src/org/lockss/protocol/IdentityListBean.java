@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityListBean.java,v 1.1 2003-01-07 03:09:51 claire Exp $
+ * $Id: IdentityListBean.java,v 1.2 2003-01-09 03:55:44 claire Exp $
  */
 
 /*
@@ -34,11 +34,14 @@ package org.lockss.protocol;
 import java.util.Collection;
 
 public class IdentityListBean {
-  public Collection identityList;
+  Collection identityList;
 
   public IdentityListBean() {
   }
 
+  public IdentityListBean(Collection idList) {
+    identityList = idList;
+  }
   public void setIdentityList(Collection idList) {
     identityList = idList;
   }

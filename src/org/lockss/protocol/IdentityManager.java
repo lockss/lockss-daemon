@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.5 2003-01-07 03:09:51 claire Exp $
+ * $Id: IdentityManager.java,v 1.6 2003-01-09 03:55:44 claire Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.Collection;
 import java.util.ArrayList;
+import org.exolab.castor.mapping.Mapping;
 
 /**
  * <p>Title: </p>
@@ -70,8 +71,9 @@ public class IdentityManager {
   static final String PARAM_VOTE_VERIFIED = Configuration.PREFIX + "id.voteVerified";
   static final String PARAM_VOTE_DISOWNED = Configuration.PREFIX + "id.voteDisowned";
 
-  static final String PARAM_IDENTITY_DB_DIR = Configuration.PREFIX + "identityDatabaseDir";
-  static final String IDENTITY_DB_FILENAME = "iddb.xml";
+  static final String PARAM_IDDB_DIR = Configuration.PREFIX + "id.databaseDir";
+  static final String PARAM_IDDB_MAP_FILENAME = Configuration.PREFIX + "id.mappingFile";
+  static final String IDDB_FILENAME = "iddb.xml";
   /* Reputation constants */
   public static final int MAX_DELTA = 0;
   public static final int AGREE_VOTE = 1;
@@ -87,15 +89,18 @@ public class IdentityManager {
   int[] reputationDeltas;
 
 
-  protected static final int INITIAL_REPUTATION = 500;
-  protected static final int REPUTATION_NUMERATOR = 1000;
-  private static IdentityManager theIdentityManager = null;
+  static final int INITIAL_REPUTATION = 500;
+  static final int REPUTATION_NUMERATOR = 1000;
+
   static Logger theLog=Logger.getLogger("IdentityManager");
   static Random theRandom = new Random();
   LcapIdentity theLocalIdentity = null;
   String localIdentityStr = null;
+  Mapping mapping = null;
 
   HashMap theIdentities = null; // all known identities
+
+  private static IdentityManager theIdentityManager = null;
 
   private IdentityManager() {
     configure();
@@ -205,11 +210,11 @@ public class IdentityManager {
 
   void reloadIdentities() {
     try {
-      String fn = Configuration.getParam(PARAM_IDENTITY_DB_DIR, "/tmp/iddb")
-                + File.separator + IDENTITY_DB_FILENAME;
+      String fn = Configuration.getParam(PARAM_IDDB_DIR, "/tmp/iddb")
+                + File.separator + IDDB_FILENAME;
       File iddbFile = new File(fn);
 
-      Unmarshaller unmarshaller = new Unmarshaller(IdentityBean.class);
+      Unmarshaller unmarshaller = new Unmarshaller(IdentityListBean.class);
       IdentityListBean idlb = (IdentityListBean)unmarshaller.unmarshal(
           new FileReader(iddbFile));
       setIdentities(idlb.getIdentityList());
@@ -222,13 +227,14 @@ public class IdentityManager {
 
   void storeIdentities() throws ProtocolException {
     try {
-      String fn = Configuration.getParam(PARAM_IDENTITY_DB_DIR,"/tmp/iddb");
+      String fn = Configuration.getParam(PARAM_IDDB_DIR,"/tmp/iddb");
 
       File iddbDir = new File(fn);
       if (!iddbDir.exists()) {
         iddbDir.mkdirs();
       }
-      File iddbFile = new File(iddbDir, IDENTITY_DB_FILENAME);
+      File iddbFile = new File(iddbDir, IDDB_FILENAME);
+
       IdentityListBean idlb = getIdentityListBean();
       Marshaller marshaller = new Marshaller(new FileWriter(iddbFile));
       marshaller.marshal(idlb);
@@ -240,7 +246,6 @@ public class IdentityManager {
   }
 
   IdentityListBean getIdentityListBean() {
-    IdentityListBean listBean = new IdentityListBean();
 
     synchronized(theIdentities) {
       List beanList = new ArrayList(theIdentities.size());
@@ -250,7 +255,7 @@ public class IdentityManager {
         IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
         beanList.add(bean);
       }
-      listBean.setIdentityList(beanList);
+      IdentityListBean listBean = new IdentityListBean(beanList);
       return listBean;
     }
   }
@@ -274,7 +279,6 @@ public class IdentityManager {
   }
 
 
-  //
   public void changeReputation(LcapIdentity id, int changeKind) {
     int delta = reputationDeltas[changeKind];
     int max_delta = reputationDeltas[MAX_DELTA];
