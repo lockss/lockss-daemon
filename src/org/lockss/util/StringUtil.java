@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.16 2003-03-17 08:19:41 tal Exp $
+ * $Id: StringUtil.java,v 1.17 2003-03-19 04:20:56 tal Exp $
  */
 
 /*
@@ -444,23 +444,28 @@ public class StringUtil {
    */
   public static String timeIntervalToString(long millis) {
     StringBuffer sb = new StringBuffer();
-    boolean force = false;
-    String stop = null;
-    for (int ix = 0; ix < units.length; ix++) {
-      UD iu = units[ix];
-      long n = millis / iu.millis;
-      if (force || n >= iu.threshold) {
-	millis %= iu.millis;
-	sb.append(n);
-	sb.append(iu.str);
-	force = true;
-	if (stop == null) {
-	  if (iu.stop != null) {
-	    stop = iu.stop;
-	  }
-	} else {
-	  if (stop.equals(iu.str)) {
-	    break;
+    if (millis < 10 * Constants.SECOND) {
+      sb.append(millis);
+      sb.append("ms");
+    } else {
+      boolean force = false;
+      String stop = null;
+      for (int ix = 0; ix < units.length; ix++) {
+	UD iu = units[ix];
+	long n = millis / iu.millis;
+	if (force || n >= iu.threshold) {
+	  millis %= iu.millis;
+	  sb.append(n);
+	  sb.append(iu.str);
+	  force = true;
+	  if (stop == null) {
+	    if (iu.stop != null) {
+	      stop = iu.stop;
+	    }
+	  } else {
+	    if (stop.equals(iu.str)) {
+	      break;
+	    }
 	  }
 	}
       }
