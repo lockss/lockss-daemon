@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.1 2002-10-23 23:41:35 aalto Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.2 2002-10-24 02:17:43 aalto Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class TestSimulatedContentGenerator extends TestCase {
 
  /* public void testContentTree() {
     //XXX get root dir from system props
+  //XXX bug: will fail if more than one file type
     SimulatedContentGenerator scgen = new SimulatedContentGenerator("");
     scgen.setTreeDepth(2);
     scgen.setNumBranches(2);

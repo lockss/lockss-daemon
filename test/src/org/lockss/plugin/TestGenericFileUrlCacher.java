@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.1 2002-10-23 23:45:49 aalto Exp $
+ * $Id: TestGenericFileUrlCacher.java,v 1.2 2002-10-24 02:17:43 aalto Exp $
  */
 
 /*
@@ -58,6 +58,10 @@ public class TestGenericFileUrlCacher extends TestCase {
     String testStr = "http://www.example.com/branch1/branch2/index.html";
     String expectedStr = GenericFileUrlCacher.CACHE_ROOT +
                          "/www.example.com/http/branch1/branch2/index.html";
+    assertTrue(GenericFileUrlCacher.mapUrlToCacheFileName(testStr).equals(expectedStr));
+
+    testStr = ":/brokenurl.com/branch1/index/";
+    expectedStr = GenericFileUrlCacher.CACHE_ROOT + "/:/brokenurl.com/branch1/index/";
     assertTrue(GenericFileUrlCacher.mapUrlToCacheFileName(testStr).equals(expectedStr));
   }
 }
