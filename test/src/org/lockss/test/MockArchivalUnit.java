@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.45 2004-01-28 02:21:46 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.46 2004-01-28 21:09:20 troberts Exp $
  */
 
 /*
@@ -64,6 +64,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   private Plugin plugin;
 
   private FilterRule filterRule = null;
+  private ContentParser parser = null;
 
   public MockArchivalUnit(){
   }
@@ -246,16 +247,20 @@ public class MockArchivalUnit implements ArchivalUnit {
     shouldCallTopLevelPoll = val;
   }
 
-  public ContentParser getContentParser(String mimeType) {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
   public FilterRule getFilterRule(String mimeType) {
     return filterRule;
   }
 
   public void setFilterRule(FilterRule filterRule) {
     this.filterRule = filterRule;
+  }
+
+  public ContentParser getContentParser(String mimeType) {
+    return parser;
+  }
+
+  public void setParser(ContentParser parser) {
+    this.parser = parser;
   }
 
   public String toString() {
