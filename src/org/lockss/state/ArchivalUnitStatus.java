@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.5 2004-03-24 02:37:31 eaalto Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.6 2004-03-27 02:38:16 eaalto Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
    * The maximum number of nodes to display in a single page of the ui.
    */
   public static final String PARAM_MAX_NODES_TO_DISPLAY =
-      "org.lockss.state.max.nodes.to.display";
+      Configuration.PREFIX + "state.max.nodes.to.display";
   static final int DEFAULT_MAX_NODES_TO_DISPLAY = 100;
 
   public static final String SERVICE_STATUS_TABLE_NAME =
@@ -320,7 +320,7 @@ public class ArchivalUnitStatus extends BaseLockssManager {
       String status;
       if (node.isDeleted()) {
         status = "Deleted";
-      } else if (node.isInactive()) {
+      } else if (node.isContentInactive()) {
         status = "Inactive";
       } else if (state.hasDamage()) {
         status = "Damaged";
