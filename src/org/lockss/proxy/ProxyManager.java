@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.13 2003-06-20 22:34:52 claire Exp $
+ * $Id: ProxyManager.java,v 1.14 2003-07-13 20:54:11 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,11 @@ public class ProxyManager extends JettyManager {
 		", excl: " + excludeIps);
       setIpFilter();
     }
+  }
+
+  /** @return the proxy port */
+  public int getProxyPort() {
+    return port;
   }
 
   void setIpFilter() {
