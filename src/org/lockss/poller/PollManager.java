@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.61 2003-03-31 23:31:29 claire Exp $
+* $Id: PollManager.java,v 1.62 2003-04-01 23:51:33 claire Exp $
  */
 
 /*
@@ -578,23 +578,23 @@ public class PollManager  extends BaseLockssManager {
   protected void setConfig(Configuration oldConfig,
                            Configuration newConfig,
                            Set changedKeys) {
-    long aveDuration = newConfig.getLongParam(PARAM_NAMEPOLL_DEADLINE,
+    long aveDuration = newConfig.getTimeInterval(PARAM_NAMEPOLL_DEADLINE,
                                                   DEFAULT_NAMEPOLL_DEADLINE);
     m_minNamePollDuration = aveDuration - aveDuration / 4;
     m_maxNamePollDuration = aveDuration + aveDuration / 4;
 
-    m_minContentPollDuration = newConfig.getLongParam(PARAM_CONTENTPOLL_MIN,
+    m_minContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MIN,
         DEFAULT_CONTENTPOLL_MIN);
-    m_maxContentPollDuration = newConfig.getLongParam(PARAM_CONTENTPOLL_MAX,
+    m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
         DEFAULT_CONTENTPOLL_MAX);
 
     m_quorum = newConfig.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
 
-    m_recentPollExpireTime = newConfig.getLongParam(PARAM_RECENT_EXPIRATION,
+    m_recentPollExpireTime = newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
         DEFAULT_RECENT_EXPIRATION);
-    m_replayPollExpireTime = newConfig.getLongParam(PARAM_REPLAY_EXPIRATION,
+    m_replayPollExpireTime = newConfig.getTimeInterval(PARAM_REPLAY_EXPIRATION,
         DEFAULT_REPLAY_EXPIRATION);
-    m_verifierExpireTime = newConfig.getLongParam(PARAM_VERIFY_EXPIRATION,
+    m_verifierExpireTime = newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
                                         DEFAULT_VERIFY_EXPIRATION);
   }
 
