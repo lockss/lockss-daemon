@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.9 2003-02-26 02:40:56 troberts Exp $
+ * $Id: GenericContentHasher.java,v 1.10 2003-03-18 01:32:57 troberts Exp $
  */
 
 /*
@@ -43,12 +43,15 @@ public class GenericContentHasher extends GenericHasher {
   private static final int HASHING_NAME = 1;
   private static final int HASHING_CONTENT = 2;
 
+  private static final byte NO_CONTENT = -1;
+
   private int hashState = HASHING_NAME;
 
   private byte[] nameBytes = null;
   private int nameIdx = -1;
 
   private InputStream is = null;
+  private boolean hashedRootCus = false;
 
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
@@ -98,11 +101,16 @@ public class GenericContentHasher extends GenericHasher {
       nameIdx = 0;
       log.debug("got new name to hash: "+nameStr);
 
-      byte[] sizeBytes = cu.getContentSize();
-      log.debug3("sizeBytes has length of "+sizeBytes.length);
-      digest.update((byte)sizeBytes.length);
-      digest.update(sizeBytes);
-      totalHashed += (sizeBytes.length+1);
+      if (cu.hasContent()) {
+	byte[] sizeBytes = cu.getContentSize();
+	log.debug3("sizeBytes has length of "+sizeBytes.length);
+	digest.update((byte)sizeBytes.length);
+	digest.update(sizeBytes);
+	totalHashed += (sizeBytes.length+1);
+      } else {
+	digest.update(NO_CONTENT);
+	totalHashed++;
+      }
     } 
 
     int bytesRemaining = nameBytes.length - nameIdx;
@@ -125,8 +133,15 @@ public class GenericContentHasher extends GenericHasher {
     int totalHashed = 0;
     log.debug("hashing content");
     if(is == null) {
-      log.debug("opening "+cu+" for hashing");
-      is = cu.openForReading();
+      if (cu.hasContent()) {
+	log.debug("opening "+cu+" for hashing");
+	is = cu.openForHashing();
+      } else {
+	log.debug(cu+" has no content, not hashing");
+	hashState = HASHING_NAME;
+	shouldGetNextElement = true;
+	return totalHashed;
+      }
     }
     byte[] bytes = new byte[numBytes - totalHashed];
     int bytesHashed = is.read(bytes);
@@ -147,5 +162,14 @@ public class GenericContentHasher extends GenericHasher {
     log.debug3(totalHashed+" bytes hashed in this step");
     return totalHashed;
   }
+
+  protected CachedUrlSetNode getNextElement() {
+    if (!hashedRootCus) {
+      hashedRootCus = true;
+      return cus.makeCachedUrl(cus.getUrl());
+    }
+    return super.getNextElement();
+  }
+
 
 }

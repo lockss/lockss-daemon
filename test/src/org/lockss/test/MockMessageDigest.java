@@ -1,5 +1,5 @@
 /*
- * $Id: MockMessageDigest.java,v 1.5 2002-11-13 05:09:49 aalto Exp $
+ * $Id: MockMessageDigest.java,v 1.6 2003-03-18 01:32:57 troberts Exp $
  */
 
 /*
@@ -120,6 +120,13 @@ public class MockMessageDigest extends MessageDigest {
       output[i] = getUpdatedByte();
     }
     return length;
+  }
+
+  /**
+   * Return the number of bytes we have left
+   */
+  public int getNumRemainingBytes() {
+    return inputList.size();
   }
 
   protected void engineUpdate(byte input) {

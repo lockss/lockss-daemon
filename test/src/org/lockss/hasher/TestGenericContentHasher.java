@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.12 2003-03-04 01:02:06 aalto Exp $
+ * $Id: TestGenericContentHasher.java,v 1.13 2003-03-18 01:32:57 troberts Exp $
  */
 
 /*
@@ -42,7 +42,8 @@ import org.lockss.util.TimeBase;
 import org.lockss.plugin.*;
 
 public class TestGenericContentHasher extends LockssTestCase {
-  private static final String TEST_URL = "http://www.test.com/blah/blah.html";
+  private static final String TEST_URL_BASE = "http://www.test.com/blah/";
+  private static final String TEST_URL = TEST_URL_BASE+"blah.html";
   private static final String TEST_FILE_CONTENT = "This is a test file ";
 
 
@@ -91,36 +92,25 @@ public class TestGenericContentHasher extends LockssTestCase {
     }
   }
 
-  public void testHashNoFiles() throws IOException, FileNotFoundException {
+  public void testHashNoChildren() throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(0);
+    byte[] bytes = getExpectedCUSBytes(cus);
+
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-
-    assertEquals(-1, dig.getUpdatedByte());
+    hashAndCompare(bytes, hasher, bytes.length);
   }
 
-  public void testHashSingleFile() throws IOException, FileNotFoundException {
+  public void testHashSingleChild() throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(1);
     byte[] bytes = getExpectedCUSBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
-    int bytesHashed = 0;
-    int bytesExpected = bytes.length;
-    while (bytesHashed < bytesExpected) {
-      assertFalse(hasher.finished());
-      bytesHashed += hasher.hashStep(bytesExpected);
-    }
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
+    hashAndCompare(bytes, hasher, bytes.length);
   }
 
-  public void testHashSingleFileBigContent()
+  public void testHashSingleChildBigContent()
       throws IOException, FileNotFoundException {
     StringBuffer sb = new StringBuffer();
     for (int ix=0; ix<1000; ix++) {
@@ -132,26 +122,57 @@ public class TestGenericContentHasher extends LockssTestCase {
     String url = "http://www.example.com";
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setContent(content);
+    cu.setExists(true);
     Vector files = new Vector();
     files.add(cu);
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
+    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
     cus.setTreeItSource(files);
 
     byte[] bytes = getExpectedCUSBytes(cus);
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
 
-    int bytesHashed = 0;
-    int bytesExpected = bytes.length;
-    while (bytesHashed < bytesExpected) {
-      assertFalse(hasher.finished());
-      bytesHashed += hasher.hashStep(bytesExpected);
-    }
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
+    hashAndCompare(bytes, hasher, bytes.length);
+  }
+
+  public void testHashConsistant() throws IOException {
+    MockCachedUrlSet cus = makeFakeCachedUrlSet(3);
+    cus.addUrl("blah", TEST_URL_BASE, true, true);
+    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
+    
+    hashToEnd(hasher, 10);
+
+    MockMessageDigest dig2 = new MockMessageDigest();
+    cus = makeFakeCachedUrlSet(3);
+    cus.addUrl("blah", TEST_URL_BASE, true, true);
+    hasher = new GenericContentHasher(cus, dig2);
+    
+    hashToEnd(hasher, 15);
+
+    assertEquals(dig, dig2);
+  }
+
+
+  public void testNoContentHashedDifferentThan0Content() throws IOException {
+    String url = "http://www.example.com";
+
+    MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
+    cus.addUrl("", TEST_URL_BASE, false, true);
+    cus.setTreeItSource(new ArrayList());
+    GenericContentHasher hasher = new GenericContentHasher(cus, dig);
+
+    hashToEnd(hasher, 10);
+
+    MockMessageDigest dig2 = new MockMessageDigest();
+    cus = new MockCachedUrlSet(TEST_URL_BASE);
+    cus.addUrl("", TEST_URL_BASE, true, true);
+    cus.setTreeItSource(new ArrayList());
+    hasher = new GenericContentHasher(cus, dig2);
+
+    hashToEnd(hasher, 15);
+
+    assertNotEquals(dig, dig2);
   }
 
   public void testInputStreamIsClosed() throws IOException {
@@ -159,10 +180,12 @@ public class TestGenericContentHasher extends LockssTestCase {
     MockInputStream is = new MockInputStream();
     is.setContent("blah");
     cu.setInputStream(is);
+    cu.setExists(true);
 
     Vector files = new Vector();
     files.add(cu);
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
+    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
     cus.setTreeIterator(files.iterator());
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
@@ -178,11 +201,12 @@ public class TestGenericContentHasher extends LockssTestCase {
     MockInputStream is = new MockInputStream();
     is.setContent(content);
     cu.setInputStream(is);
-
+    cu.setExists(true);
 
     Vector files = new Vector();
     files.add(cu);
-    MockCachedUrlSet cus = new MockCachedUrlSet();
+    MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
+    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
     cus.setTreeItSource(files);
 
     byte[] expectedBytes = getExpectedCUSBytes(cus);
@@ -202,93 +226,67 @@ public class TestGenericContentHasher extends LockssTestCase {
     assertEquals(0, hasher.hashStep(1));
     assertTrue(hasher.finished());
 
-    for (int ix=0; ix<expectedBytes.length; ix++) {
-      assertEquals(expectedBytes[ix], dig.getUpdatedByte());
-    }
+    assertBytesEqualDigest(expectedBytes, dig);
   }
 
   public void testHashMultipleFiles()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCUSBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-
-    assertEquals(bytes.length, hasher.hashStep(bytes.length));
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
+    
+    hashAndCompare(expectedBytes, hasher, expectedBytes.length);
   }
 
   public void testHashMultipleFilesSmallSteps()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCUSBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-    int totalHashed = 0;
-    while (!hasher.finished()) {
-      totalHashed += hasher.hashStep(5);
-    }
-    assertEquals(bytes.length, totalHashed);
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
+
+    hashAndCompare(expectedBytes, hasher, 5);
   }
 
   public void testHashMultipleFilesStepsLargerThanCU()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCUSBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-    int totalHashed = 0;
-    while (!hasher.finished()) {
-      totalHashed += hasher.hashStep(bytes.length/5 + 10);
-    }
-    assertEquals(bytes.length, totalHashed);
-
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
+    hashAndCompare(expectedBytes, hasher, expectedBytes.length/5 + 10);
   }
 
   public void testHashMultipleFilesTooLargeStep()
       throws IOException, FileNotFoundException {
     CachedUrlSet cus = makeFakeCachedUrlSet(5);
-    byte[] bytes = getExpectedCUSBytes(cus);
+    byte[] expectedBytes = getExpectedCUSBytes(cus);
 
 
     GenericContentHasher hasher = new GenericContentHasher(cus, dig);
-    int totalHashed = 0;
-    while (!hasher.finished()) {
-      totalHashed += hasher.hashStep(bytes.length + 10);
-    }
-    assertEquals(bytes.length, totalHashed);
-
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
+    hashAndCompare(expectedBytes, hasher, expectedBytes.length + 10);
   }
 
-  private CachedUrlSet makeFakeCachedUrlSet(int numFiles)
+  private MockCachedUrlSet makeFakeCachedUrlSet(int numFiles)
       throws IOException, FileNotFoundException {
-    Vector files = new Vector(numFiles);
+    Vector files = new Vector(numFiles+1);
+
+    MockCachedUrlSet cus = new MockCachedUrlSet(TEST_URL_BASE);
+    cus.addUrl(TEST_FILE_CONTENT+" base", TEST_URL_BASE, true, true);
+
     for (int ix=0; ix < numFiles; ix++) {
       String url = TEST_URL+ix;
+      String content = TEST_FILE_CONTENT+ix;
       MockCachedUrl cu = new MockCachedUrl(url);
 
-      cu.setContent(TEST_FILE_CONTENT+ix);
-
+      cu.setContent(content);
+      cu.setExists(true);
       files.add(cu);
     }
-    MockCachedUrlSet cus = new MockCachedUrlSet();
     cus.setTreeItSource(files);
     return cus;
   }
@@ -297,11 +295,21 @@ public class TestGenericContentHasher extends LockssTestCase {
     Iterator it = cus.treeIterator();
     List byteArrays = new LinkedList();
     int totalSize = 0;
-    while (it.hasNext()) {
-      CachedUrl cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
+
+    CachedUrl cu = cus.makeCachedUrl(cus.getUrl());
+    if (cu.hasContent()) {
       byte[] arr = getExpectedCUBytes(cu);
       totalSize += arr.length;
       byteArrays.add(arr);
+    }
+      
+    while (it.hasNext()) {
+      cu = cachedUrlSetNodeToCachedUrl((CachedUrlSetNode) it.next());
+      if (cu.hasContent()) {
+	byte[] arr = getExpectedCUBytes(cu);
+	totalSize += arr.length;
+	byteArrays.add(arr);
+      }
     }
     byte[] returnArr = new byte[totalSize];
     int pos = 0;
@@ -348,5 +356,65 @@ public class TestGenericContentHasher extends LockssTestCase {
       returnArr[curPos++] = nameBytes[ix];
     }
     return returnArr;
+  }
+
+  /**
+   * Will hash through in intervals of stepSize and then compare the hashed
+   * bytes to the expected bytes
+   */
+  private void hashAndCompare(byte[] expectedBytes, 
+			      GenericContentHasher hasher,
+			      int stepSize) throws IOException {
+    hashToLength(hasher, expectedBytes.length, stepSize);
+    assertBytesEqualDigest(expectedBytes, dig);
+  }
+  
+  private void hashToLength(GenericContentHasher hasher, 
+			    int length, int stepSize) throws IOException {
+    int numBytesHashed = 0;
+    while (numBytesHashed < length) {
+      assertFalse(hasher.finished());
+      numBytesHashed += hasher.hashStep(stepSize);
+    }
+    assertEquals(0, hasher.hashStep(1));
+    assertTrue(hasher.finished());
+  }
+
+  private void hashToEnd(GenericContentHasher hasher, int stepSize) 
+    throws IOException {
+    while (!hasher.finished()) {
+      hasher.hashStep(stepSize);
+    }
+  }
+
+  private void assertBytesEqualDigest(byte[] expectedBytes, 
+				      MockMessageDigest dig) {
+    for (int ix=0; ix<expectedBytes.length; ix++) {
+      assertEquals(expectedBytes[ix], dig.getUpdatedByte());
+    }
+  }
+
+  private void assertEquals(MockMessageDigest dig1, MockMessageDigest dig2) {
+    assertEquals(dig1.getNumRemainingBytes(), dig2.getNumRemainingBytes());
+    while (dig1.getNumRemainingBytes() > 0) {
+      assertEquals(dig1.getUpdatedByte(), dig2.getUpdatedByte());
+    }
+  }
+
+  private void assertNotEquals(MockMessageDigest dig1, 
+			       MockMessageDigest dig2) {
+    if (dig1.getNumRemainingBytes() != dig2.getNumRemainingBytes()) {
+      return;
+    }
+    while (dig1.getNumRemainingBytes() > 0) {
+      if (dig1.getUpdatedByte() != dig2.getUpdatedByte()) {
+	return;
+      }
+    }
+    if (dig1.getNumRemainingBytes() != dig2.getNumRemainingBytes()) {
+      return;
+    }
+
+    fail("MockMessageDigests were equal");
   }
 }
