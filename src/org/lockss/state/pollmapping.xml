@@ -95,7 +95,7 @@
                 </field>
                 <field name="repairNodeBean"
                        type="org.lockss.util.ExtMapBean">
-                        <bind-xml name="ExternalMap" node="element"/>
+                        <bind-xml name="RepairMap" node="element"/>
                 </field>
         </class>
         <class name="org.lockss.state.NodeStateBean">
