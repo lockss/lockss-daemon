@@ -1,5 +1,5 @@
 /*
- * $Id: IPAddr.java,v 1.2 2004-01-20 19:23:00 tlipkis Exp $
+ * $Id: IPAddr.java,v 1.3 2004-01-21 08:28:36 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import java.net.*;
  * simply forward to the wrapped InetAddress
  */
 public class IPAddr implements java.io.Serializable {
-  private static boolean minimizeDNS = false;
+  private static boolean exerciseDNS = false;
   private InetAddress ina;
 
   /** Create a new IPAddr from an existing InetAddress.  Should be used
@@ -60,11 +60,11 @@ public class IPAddr implements java.io.Serializable {
     this.ina = ina;
   }
 
-  /** Set the wrapper class to minimize the use of DNS, by not doing
-   * reverse lookups in toString().
+  /** Set the wrapper class to maximize the use of DNS, by doing reverse
+   * lookups in toString().
    * @param val if true, will minimize the use of DNS */
-  public static void setMinimizeDNS(boolean val) {
-    minimizeDNS = val;
+  public static void setExerciseDNS(boolean val) {
+    exerciseDNS = val;
   }
 
   /** Extract the wrapped InetAddress to pass to a socket, datagram,
@@ -99,10 +99,10 @@ public class IPAddr implements java.io.Serializable {
   }
 
   public String toString() {
-    if (minimizeDNS) {
-      return ina.getHostAddress();
-    } else {
+    if (exerciseDNS) {
       return ina.toString();
+    } else {
+      return ina.getHostAddress();
     }
   }
 
