@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.50 2003-07-14 06:44:50 tlipkis Exp $
+ * $Id: Configuration.java,v 1.51 2003-07-21 08:33:12 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,21 @@ public abstract class Configuration {
 
   // instance methods
 
+  /** Return a copy of the configuration with the specified prefix
+   * prepended to all keys. */
+  public Configuration addPrefix(String prefix) {
+    if (!prefix.endsWith(".")) {
+      prefix = prefix + ".";
+    }
+    Configuration res = ConfigManager.newConfiguration();
+    for (Iterator iter = keySet().iterator(); iter.hasNext();) {
+      String key = (String)iter.next();
+      res.put(prefix + key, get(key));
+    }
+    return res;
+  }
+
+
   /**
    * Try to load config from a list or urls
    * @return true iff properties were successfully loaded
@@ -137,6 +152,9 @@ public abstract class Configuration {
   }
 
   abstract boolean load(InputStream istr)
+      throws IOException;
+
+  abstract boolean store(OutputStream ostr, String header)
       throws IOException;
 
   /** Return the set of keys whose values differ.
@@ -194,7 +212,7 @@ public abstract class Configuration {
     if (bool != null) {
       return bool.booleanValue();
     }
-    throw new InvalidParam("Not a boolean value: " + key + " = " + val);
+    throw newInvalid("Not a boolean value: ", key, val);
   }
 
   /** Return the config value as a boolean.  If it's missing, return the
@@ -223,7 +241,7 @@ public abstract class Configuration {
     try {
       return Integer.parseInt(val);
     } catch (NumberFormatException e) {
-      throw new InvalidParam("Not an int value: " + key + " = " + val);
+      throw newInvalid("Not an int value: ", key, val);
     }
   }
 
@@ -253,7 +271,7 @@ public abstract class Configuration {
     try {
       return Long.parseLong(val);
     } catch (NumberFormatException e) {
-      throw new InvalidParam("Not a long value: " + key + " = " + val);
+      throw newInvalid("Not a long value: ", key, val);
     }
   }
 
@@ -288,8 +306,7 @@ public abstract class Configuration {
     try {
       return StringUtil.parseTimeInterval(val);
     } catch (Exception e) {
-      throw new InvalidParam("Not a time interval value: " +
-			     key + " = " + val);
+      throw newInvalid("Not a time interval value: ", key, val);
     }
   }
 
@@ -326,8 +343,8 @@ public abstract class Configuration {
   public float getPercentage(String key) throws InvalidParam {
     int val = getInt(key);
     if (val < 0 || val > 100) {
-      throw new InvalidParam("Not an integer between 0 and 100: " +
-			     key + " = " + val);
+      throw newInvalid("Not an integer between 0 and 100: ", key,
+		       Integer.toString(val));
     }
     return ((float)val) / (float)100.0;
   }
@@ -358,6 +375,14 @@ public abstract class Configuration {
     return ((float)val) / 100.0f;
   }
 
+  InvalidParam newInvalid(String msg, String key, String val) {
+    return new InvalidParam(msg  + key + " = " + quoteVal(val));
+  }
+
+  String quoteVal(String val) {
+    return "\"" + val + "\"";
+  }
+
   // must be implemented by implementation subclass
 
   abstract void reset();
@@ -384,6 +409,11 @@ public abstract class Configuration {
    * @param val the new value
    */
   public abstract void put(String key, String val);
+
+  /** Remove the value associated with <code>key</code>.
+   * @param key the config key to remove
+   */
+  public abstract void remove(String key);
 
   /** Seal the configuration so that no changes can be made */
   public abstract void seal();

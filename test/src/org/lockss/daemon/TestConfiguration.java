@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.22 2003-07-14 06:44:50 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.23 2003-07-21 08:33:12 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,47 @@ public class TestConfiguration extends LockssTestCase {
   private Configuration newConfiguration() {
     return new ConfigurationPropTreeImpl();
   }
+
+  public void testSet() {
+    Configuration config = newConfiguration();
+    assertEquals(0, config.keySet().size());
+    config.put("a", "b");
+    assertEquals(1, config.keySet().size());
+    assertEquals("b", config.get("a"));
+  }    
+
+  public void testRemove() {
+    Configuration config = newConfiguration();
+    config.put("a", "1");
+    config.put("b", "2");
+    assertEquals(2, config.keySet().size());
+    assertEquals("1", config.get("a"));
+    assertEquals("2", config.get("b"));
+    config.remove("a");
+    assertEquals(1, config.keySet().size());
+    assertEquals(null, config.get("a"));
+    assertEquals("2", config.get("b"));
+  }    
+
+  public void testSeal() {
+    Configuration config = newConfiguration();
+    config.put("a", "1");
+    config.put("b", "2");
+    config.seal();
+    try {
+      config.put("b", "3");
+      fail("put into sealed config should throw IllegalStateException");
+    } catch (IllegalStateException e) {
+    }
+    try {
+      config.remove("a");
+      fail("remove from sealed config should throw IllegalStateException");
+    } catch (IllegalStateException e) {
+    }
+    assertEquals(2, config.keySet().size());
+    assertEquals("1", config.get("a"));
+    assertEquals("2", config.get("b"));
+  }    
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
     String f = FileUtil.urlOfString(c1);
@@ -213,4 +254,18 @@ public class TestConfiguration extends LockssTestCase {
     }
   }
 
+  public void testAddPrefix() throws Exception {
+    Properties props = new Properties();
+    props.put("p1", "a");
+    props.put("p2", "b");
+    Configuration c1 = ConfigurationUtil.fromProps(props);
+    Configuration c2 = c1.addPrefix("a");
+    Configuration c3 = c1.addPrefix("foo.bar.");
+    assertEquals(2, c2.keySet().size());
+    assertEquals("a", c2.get("a.p1"));
+    assertEquals("b", c2.get("a.p2"));
+    assertEquals(2, c3.keySet().size());
+    assertEquals("a", c3.get("foo.bar.p1"));
+    assertEquals("b", c3.get("foo.bar.p2"));
+  }
 }

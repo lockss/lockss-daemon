@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.7 2003-06-20 22:34:50 claire Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.8 2003-07-21 08:33:12 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,11 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return true;
   }
 
+  boolean store(OutputStream ostr, String header) throws IOException {
+    props.store(ostr, header);
+    return true;
+  }
+
   void reset() {
     props.clear();
   }
@@ -102,6 +107,16 @@ public class ConfigurationPropTreeImpl extends Configuration {
       throw new IllegalStateException("Can't modify sealed configuration");
     }
     props.setProperty(key, val);
+  }
+
+  /** Remove the value associated with <code>key</code>.
+   * @param key the config key to remove
+   */
+  public void remove(String key) {
+    if (isSealed) {
+      throw new IllegalStateException("Can't modify sealed configuration");
+    }
+    props.remove(key);
   }
 
   public void seal() {
