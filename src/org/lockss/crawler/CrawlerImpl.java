@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.30 2004-09-21 23:10:16 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.31 2004-09-22 02:45:13 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,15 @@ public abstract class CrawlerImpl implements Crawler {
     Configuration.PREFIX + "crawler.timeout.data";
   public static long DEFAULT_DATA_TIMEOUT = 30 * Constants.MINUTE;
 
+  /** Proxy host for crawls (except repair-from-cache) */
+  public static final String PARAM_PROXY_HOST =
+    Configuration.PREFIX + "crawler.proxy.host";
+
+  /** Proxy port for crawls (except repair-from-cache) */
+  public static final String PARAM_PROXY_PORT =
+    Configuration.PREFIX + "crawler.proxy.port";
+  public static final int DEFAULT_PROXY_PORT = -1;
+
   public static final String PARAM_REFETCH_PERMISSIONS_PAGE =
     Configuration.PREFIX + "crawler.storePermissionsRefetch";
   public static final boolean DEFAULT_REFETCH_PERMISSIONS_PAGE = false;
@@ -99,6 +108,9 @@ public abstract class CrawlerImpl implements Crawler {
   protected List lockssCheckers = null;
   protected AlertManager alertMgr;
 
+  protected String proxyHost = null;
+  protected int proxyPort;
+
   protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
@@ -112,28 +124,35 @@ public abstract class CrawlerImpl implements Crawler {
     this.aus = aus;
     lockssCheckers = new LockssPermission().getCheckers();
     permissionCheckers.addAll(spec.getPermissionCheckers());
-    connectionPool = new LockssUrlConnectionPool();
 
-    long connectTimeout =
-      Configuration.getTimeIntervalParam(PARAM_CONNECT_TIMEOUT,
-					 DEFAULT_CONNECT_TIMEOUT);
-    long dataTimeout =
-      Configuration.getTimeIntervalParam(PARAM_DATA_TIMEOUT,
-					 DEFAULT_DATA_TIMEOUT);
+    alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
+  }
+
+  protected void setCrawlConfig(Configuration config) {
+    long connectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT,
+						 DEFAULT_CONNECT_TIMEOUT);
+    long dataTimeout = config.getTimeInterval(PARAM_DATA_TIMEOUT,
+					      DEFAULT_DATA_TIMEOUT);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
-    alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
+
+    proxyHost = config.get(PARAM_PROXY_HOST);
+    proxyPort = config.getInt(PARAM_PROXY_PORT, DEFAULT_PROXY_PORT);
+    if (StringUtil.isNullString(proxyHost) || proxyPort <= 0) {
+      proxyHost = null;
+    } else {
+      if (logger.isDebug()) logger.debug("Proxying through " + proxyHost
+					 + ":" + proxyPort);
+    }
   }
 
   public ArchivalUnit getAu() {
     return au;
   }
 
-
   public Crawler.Status getStatus() {
     return crawlStatus;
   }
-
 
   public void abortCrawl() {
     crawlAborted = true;
@@ -147,6 +166,7 @@ public abstract class CrawlerImpl implements Crawler {
    * @return true if no errors
    */
   public boolean doCrawl() {
+    setCrawlConfig(ConfigManager.getCurrentConfig());
     if (crawlAborted) {
       //don't start an aborted crawl
       return false;

@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.35 2004-09-21 23:10:39 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.36 2004-09-22 02:45:13 tlipkis Exp $
  */
 
 /*
@@ -76,12 +76,23 @@ public class NewContentCrawler extends CrawlerImpl {
 
   private PermissionMap permissionMap = new PermissionMap();
 
-  private boolean alwaysReparse;
-  private boolean usePersistantList;
+  private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
+  private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
+  private int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
+  private int maxRetries = DEFAULT_RETRY_TIMES;
 
   public NewContentCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     super(au, spec, aus);
     crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), getType());
+  }
+
+  protected void setCrawlConfig(Configuration config) {
+    super.setCrawlConfig(config);
+    alwaysReparse = config.getBoolean(PARAM_REPARSE_ALL, DEFAULT_REPARSE_ALL);
+    usePersistantList = config.getBoolean(PARAM_PERSIST_CRAWL_LIST,
+					  DEFAULT_PERSIST_CRAWL_LIST);
+    maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
+    maxRetries = config.getInt(PARAM_RETRY_TIMES, DEFAULT_RETRY_TIMES);
   }
 
   public int getType() {
@@ -92,19 +103,8 @@ public class NewContentCrawler extends CrawlerImpl {
     if (crawlAborted) {
       return aborted();
     }
-    alwaysReparse =
-      Configuration.getBooleanParam(PARAM_REPARSE_ALL, DEFAULT_REPARSE_ALL);
-    usePersistantList =
-      Configuration.getBooleanParam(PARAM_PERSIST_CRAWL_LIST,
-				    DEFAULT_PERSIST_CRAWL_LIST);
-
-    int maxDepth = Configuration.getIntParam(PARAM_MAX_CRAWL_DEPTH,
-					     DEFAULT_MAX_CRAWL_DEPTH);
-
-    logger.info("Max. crawl depth is set to be " + maxDepth);
-
-//     logger.info("Beginning crawl of "+au);
-//     crawlStatus.signalCrawlStarted();
+    logger.info("Beginning depth " + maxDepth + " crawl of " + au);
+    crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
     Set parsedPages = new HashSet();
 
@@ -312,6 +312,9 @@ public class NewContentCrawler extends CrawlerImpl {
     UrlCacher uc = super.makeUrlCacher(cus, url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     uc.setPermissionMap(permissionMap);
+    if (proxyHost != null) {
+      uc.setProxy(proxyHost, proxyPort);
+    }
     return uc;
   }
 
@@ -341,8 +344,7 @@ public class NewContentCrawler extends CrawlerImpl {
 	    return false;
 	  }
 
-	  cacheWithRetries(uc, Configuration.getIntParam(PARAM_RETRY_TIMES,
-							 DEFAULT_RETRY_TIMES));
+	  cacheWithRetries(uc, maxRetries);
 	}
       } catch (CacheException e) {
 	// Failed.  Don't try this one again during this crawl.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.12 2004-08-12 23:15:16 clairegriffin Exp $
+ * $Id: TestRepairCrawler.java,v 1.13 2004-09-22 02:45:00 tlipkis Exp $
  */
 
 /*
@@ -387,6 +387,12 @@ public class TestRepairCrawler extends LockssTestCase {
       super(au, spec, aus, repairUrls, percentFetchFromCache);
     }
 
+    protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
+      MockUrlCacher uc = new MyMockUrlCacher(url);
+      uc.setForceRefetch(true);
+      return uc;
+    }
+
     protected void fetchFromCache(UrlCacher uc, String id) throws IOException {
       fetchCacheCnt++;
       cacheLastCall = ++fetchSequence;
@@ -430,5 +436,30 @@ public class TestRepairCrawler extends LockssTestCase {
       return (String)contentMap.get(url);
     }
 
+  }
+  public class MyMockUrlCacher extends MockUrlCacher {
+
+    public MyMockUrlCacher(String url) {
+      super(url);
+    }
+
+    public MyMockUrlCacher(String url, MockCachedUrlSet cus){
+      super(url, cus);
+    }
+
+    public boolean shouldBeCached(){
+      return true;
+    }
+
+    public void setProxy(String proxyHost, int proxyPort) {
+    }
+
+    public InputStream getUncachedInputStream() throws IOException {
+      throw new IOException("Expected Exception");
+    }
+
+    public CIProperties getUncachedProperties(){
+      return new CIProperties();
+    }
   }
 }
