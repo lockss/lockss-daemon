@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.61 2004-06-14 03:08:43 smorabito Exp $
+ * $Id: Configuration.java,v 1.62 2004-06-15 21:43:18 tlipkis Exp $
  */
 
 /*
@@ -307,7 +307,7 @@ public abstract class Configuration {
     if (bool != null) {
       return bool.booleanValue();
     }
-    log.warning("getBoolean(\'" + key + "\") = \"" + val + "\"");
+    log.warning("getBoolean(\"" + key + "\") = \"" + val + "\"");
     return dfault;
   }
 
