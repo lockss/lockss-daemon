@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.96 2003-05-08 05:53:28 claire Exp $
+* $Id: PollManager.java,v 1.97 2003-05-08 23:38:31 claire Exp $
  */
 
 /*
@@ -632,7 +632,7 @@ public class PollManager  extends BaseLockssManager {
   /**
    * make a verifier by generating a secret and hashing it. Then store the
    * verifier/secret pair in the verifiers table.
-   * @param the duration the item we're verifying is expected to take.
+   * @param duration time the item we're verifying is expected to take.
    * @return the array of bytes representing the verifier
    */
   byte[] makeVerifier(long duration) {
