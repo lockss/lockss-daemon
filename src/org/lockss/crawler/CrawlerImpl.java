@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.19 2004-07-07 22:05:45 clairegriffin Exp $
+ * $Id: CrawlerImpl.java,v 1.20 2004-07-12 06:12:34 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.URL;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
+import org.lockss.alert.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.plugin.*;
@@ -94,6 +95,8 @@ public abstract class CrawlerImpl implements Crawler {
   protected abstract boolean doCrawl0();
   public abstract int getType();
 
+  protected AlertManager alertMgr;
+
   protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
@@ -115,6 +118,7 @@ public abstract class CrawlerImpl implements Crawler {
 					 DEFAULT_DATA_TIMEOUT);
     connectionPool.setConnectTimeout(connectTimeout);
     connectionPool.setDataTimeout(dataTimeout);
+    alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
   }
 
   public ArchivalUnit getAu() {
@@ -159,6 +163,11 @@ public abstract class CrawlerImpl implements Crawler {
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
     try {
       if (!au.shouldBeCached(manifest)) {
+// 	alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR,
+// 					  au).
+// 			    setAttribute(ATTR_TEXT, "Permission page " +
+// 					 manifest +
+// 					 " is not within the crawl spec"));
 	logger.warning("Manifest not within CrawlSpec");
       } else if ((au.getCrawlSpec()!=null) && !au.getCrawlSpec().canCrawl()) {
 	logger.debug("Couldn't start crawl due to crawl window.");
@@ -176,6 +185,13 @@ public abstract class CrawlerImpl implements Crawler {
 	  crawl_ok = au.checkCrawlPermission(reader);
 	  if (!crawl_ok) {
 	    logger.error("Couldn't start crawl due to missing permission.");
+	    alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION,
+					      au).
+				setAttribute(Alert.ATTR_TEXT,
+					     "The page at " + manifest +
+					     "\ndoes not contain the " +
+					     "LOCKSS permission statement.\n" +
+					     "No collection was done."));
 	  } else {
 	    if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
 					      DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
@@ -199,6 +215,13 @@ public abstract class CrawlerImpl implements Crawler {
       }
     } catch (Exception ex) {
       logger.error("Exception reading manifest", ex);
+      alertMgr.raiseAlert(Alert.auAlert(Alert.PERMISSION_PAGE_FETCH_ERROR, au).
+			  setAttribute(Alert.ATTR_TEXT,
+				       "The LOCKSS permission page at " +
+				       manifest +
+				       "\ncould not be fetched. " +
+				       "The error was:\n" +
+				       ex.getMessage() + "\n"));
       crawlStatus.setCrawlError(Crawler.STATUS_FETCH_ERROR);
       return false;
     }
