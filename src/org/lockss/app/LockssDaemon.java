@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.58 2004-08-02 02:59:38 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.59 2004-08-21 06:49:04 tlipkis Exp $
  */
 
 /*
@@ -89,12 +89,14 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String LOCKSS_REPOSITORY = "LockssRepository";
   public static String HISTORY_REPOSITORY = "HistoryRepository";
   public static String NODE_MANAGER = "NodeManager";
+  public static String TREEWALK_MANAGER = "TreeWalkManager";
   public static String PROXY_MANAGER = "ProxyManager";
   public static String AUDIT_PROXY_MANAGER = "AuditProxyManager";
   public static String SYSTEM_METRICS = "SystemMetrics";
   public static String REMOTE_API = "RemoteApi";
   public static String URL_MANAGER = "UrlManager";
   public static String NODE_MANAGER_STATUS = "NodeManagerStatus";
+  public static String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
   public static String REPOSITORY_STATUS = "RepositoryStatus";
   public static String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
 
@@ -111,6 +113,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(IDENTITY_MANAGER, "org.lockss.protocol.IdentityManager"),
     new ManagerDesc(POLL_MANAGER, "org.lockss.poller.PollManager"),
     new ManagerDesc(CRAWL_MANAGER, "org.lockss.crawler.CrawlManagerImpl"),
+    new ManagerDesc(TREEWALK_MANAGER, "org.lockss.state.TreeWalkManager"),
     // start plugin manager after generic services
     new ManagerDesc(PLUGIN_MANAGER, "org.lockss.plugin.PluginManager"),
     // start proxy and servlets after plugin manager
@@ -143,6 +146,9 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     // NodeManager uses LockssRepository, HistoryRepository, and
     // ActivityRegulator
     new ManagerDesc(NODE_MANAGER, "org.lockss.state.NodeManagerImpl$Factory"),
+    // AuTreeWalkManager uses NodeManager
+    new ManagerDesc(AU_TREEWALK_MANAGER,
+		    "org.lockss.state.AuTreeWalkManager$Factory"),
   };
 
   // Maps au to sequenced map of managerKey -> manager instance
@@ -265,6 +271,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   }
 
   /**
+   * return the treewalk manager instance
+   * @return the TreeWalkManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public TreeWalkManager getTreeWalkManager()  {
+    return (TreeWalkManager)getManager(TREEWALK_MANAGER);
+  }
+
+  /**
    * return the SystemMetrics instance.
    * @return SystemMetrics instance.
    * @throws IllegalArgumentException if the manager is not available.
@@ -361,6 +376,16 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public NodeManager getNodeManager(ArchivalUnit au) {
     return (NodeManager)getAuManager(NODE_MANAGER, au);
+  }
+
+  /**
+   * Return the AuTreeWalkManager instance
+   * @param au the ArchivalUnit
+   * @return the AuTreeWalkManager
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public AuTreeWalkManager getAuTreeWalkManager(ArchivalUnit au) {
+    return (AuTreeWalkManager)getAuManager(AU_TREEWALK_MANAGER, au);
   }
 
   /**
