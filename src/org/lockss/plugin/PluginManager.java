@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.88.2.4 2004-07-23 22:13:43 smorabito Exp $
+ * $Id: PluginManager.java,v 1.88.2.5 2004-08-02 20:35:39 tlipkis Exp $
  */
 
 /*
@@ -421,6 +421,12 @@ public class PluginManager extends BaseLockssManager {
     try {
       ArchivalUnit au = plugin.configureAu(auConf,
 					   (ArchivalUnit)auMap.get(auId));
+      if (!auId.equals(au.getAuId())) {
+	throw new ArchivalUnit.ConfigurationException("Configured AU has "
+						      +"unexpected AUId, "
+						      +"is: "+au.getAuId()
+						      +" expected: "+auId);
+      }
       log.debug("Configured AU " + au);
       try {
 	getDaemon().startOrReconfigureAuManagers(au, auConf);
@@ -428,13 +434,6 @@ public class PluginManager extends BaseLockssManager {
 	throw new
 	  ArchivalUnit.ConfigurationException("Couldn't configure AU managers",
 					      e);
-      }
-      log.debug("putAuMap(" + au.getAuId() +", " + au);
-      if (!auId.equals(au.getAuId())) {
-	throw new ArchivalUnit.ConfigurationException("Configured AU has "
-						      +"unexpected AUId, "
-						      +"is: "+au.getAuId()
-						      +" expected: "+auId);
       }
       putAuInMap(au);
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -474,7 +473,6 @@ public class PluginManager extends BaseLockssManager {
 	  ArchivalUnit.ConfigurationException("Couldn't start AU processes",
 					      e);
       }
-      log.debug("putAuMap(" + au.getAuId() +", " + au);
       putAuInMap(au);
       return au;
     } catch (ArchivalUnit.ConfigurationException e) {
@@ -523,6 +521,7 @@ public class PluginManager extends BaseLockssManager {
   }
 
   protected void putAuInMap(ArchivalUnit au) {
+    log.debug("putAuMap(" + au.getAuId() +", " + au);
     auMap.put(au.getAuId(), au);
     auSet.add(au);
   }

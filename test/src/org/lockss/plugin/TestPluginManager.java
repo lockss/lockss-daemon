@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.38.2.1 2004-07-16 22:32:58 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.38.2.2 2004-08-02 20:35:38 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.state.HistoryRepositoryImpl;
  * Test class for org.lockss.plugin.PluginManager
  */
 public class TestPluginManager extends LockssTestCase {
-  private MockLockssDaemon theDaemon;
+  private MyMockLockssDaemon theDaemon;
 
   static String mockPlugKey = "org|lockss|test|MockPlugin";
   static Properties props1 = new Properties();
@@ -82,7 +82,7 @@ public class TestPluginManager extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
 
-    theDaemon = new MockLockssDaemon();
+    theDaemon = new MyMockLockssDaemon();
 
     mgr = new MockPluginManager();
     theDaemon.setPluginManager(mgr);
@@ -316,6 +316,37 @@ public class TestPluginManager extends LockssTestCase {
       fail("createAU threw RuntimeException");
     }
 
+  }
+
+  public void testConfigureAuWithBogusAuid() throws Exception {
+    minimalConfig();
+    String pid = new ThrowingMockPlugin().getPluginId();
+    String key = PluginManager.pluginKeyFromId(pid);
+    assertTrue(mgr.ensurePluginLoaded(key));
+    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    assertNotNull(mpi);
+    // verify doesn't get created if auid doesn't match config
+    try {
+      mgr.configureAu(mpi, ConfigurationUtil.fromArgs("a", "c"), "bogos_auid");
+      fail("Should have thrown ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
+      log.debug(e.toString());
+    }
+    assertEmpty(theDaemon.getAuMgrsStarted());
+  }
+
+  static class MyMockLockssDaemon extends MockLockssDaemon {
+    List auMgrsStarted = new ArrayList();
+
+    public void startOrReconfigureAuManagers(ArchivalUnit au,
+					     Configuration auConfig)
+	throws Exception {
+      auMgrsStarted.add(au);
+    }
+    List getAuMgrsStarted() {
+      return auMgrsStarted;
+    }
+    
   }
 
   static class MockPluginManager extends PluginManager {
