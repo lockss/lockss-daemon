@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapIdentity.java,v 1.30 2005-03-18 09:09:21 smorabito Exp $
+ * $Id: TestLcapIdentity.java,v 1.31 2005-03-23 07:01:12 smorabito Exp $
  */
 
 /*
@@ -103,16 +103,19 @@ public class TestLcapIdentity extends LockssTestCase {
 
   /** test for method rememberActive(..) */
   public void testRememberActive() {
-    long inc_pkts = fakeId.m_incrPackets;
-    long tot_pkts = fakeId.m_totalPackets;
+    // XXX: Stubbed for V3
+    if (testMsg instanceof V1LcapMessage) {
+      long inc_pkts = fakeId.m_incrPackets;
+      long tot_pkts = fakeId.m_totalPackets;
 
-    fakeId.rememberActive(false,testMsg);
-    assertEquals(inc_pkts + 1, fakeId.m_incrPackets);
-    assertEquals(tot_pkts + 1, fakeId.m_totalPackets);
-    String verifier = String.valueOf(B64Code.encode(testMsg.getVerifier()));
-    Integer cnt = (Integer)fakeId.m_pktsThisInterval.get(verifier);
-    assertNotNull(cnt);
-    assertEquals(1, cnt.intValue());
+      fakeId.rememberActive(false,testMsg);
+      assertEquals(inc_pkts + 1, fakeId.m_incrPackets);
+      assertEquals(tot_pkts + 1, fakeId.m_totalPackets);
+      String verifier = String.valueOf(B64Code.encode(((V1LcapMessage)testMsg).getVerifier()));
+      Integer cnt = (Integer)fakeId.m_pktsThisInterval.get(verifier);
+      assertNotNull(cnt);
+      assertEquals(1, cnt.intValue());
+    }
   }
 
   /** test for method rememberValidOriginator(..) */

@@ -1,5 +1,5 @@
 /*
- * $Id: V1ContentPoll.java,v 1.8 2005-03-18 09:09:16 smorabito Exp $
+ * $Id: V1ContentPoll.java,v 1.9 2005-03-23 07:01:08 smorabito Exp $
  */
 
 /*
@@ -100,18 +100,22 @@ public class V1ContentPoll extends V1Poll {
    * @param msg the V1LcapMessage containing the vote we're going to check
    */
   void startVoteCheck(LcapMessage msg) {
-    super.startVoteCheck();
+    // XXX: Stubbed for V3.
+    if (msg instanceof V1LcapMessage) {
+      super.startVoteCheck();
 
-    if (shouldCheckVote(msg)) {
-      Vote vote = new Vote(msg, false);
+      if (shouldCheckVote(msg)) {
+	Vote vote = new Vote(msg, false);
 
-      MessageDigest hasher = getInitedHasher(msg.getChallenge(),
-					     msg.getVerifier());
+	MessageDigest hasher =
+	  getInitedHasher(((V1LcapMessage)msg).getChallenge(),
+			  ((V1LcapMessage)msg).getVerifier());
 
-      if (!scheduleHash(hasher, m_hashDeadline, vote,
-			new VoteHashCallback())) {
-	log.info(m_key + " no time to hash vote by " + m_hashDeadline);
-	stopVoteCheck();
+	if (!scheduleHash(hasher, m_hashDeadline, vote,
+			  new VoteHashCallback())) {
+	  log.info(m_key + " no time to hash vote by " + m_hashDeadline);
+	  stopVoteCheck();
+	}
       }
     }
   }

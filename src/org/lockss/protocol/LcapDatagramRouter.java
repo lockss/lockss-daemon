@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.10 2005-03-18 09:09:17 smorabito Exp $
+ * $Id: LcapDatagramRouter.java,v 1.11 2005-03-23 07:01:09 smorabito Exp $
  */
 
 /*
@@ -291,14 +291,21 @@ public class LcapDatagramRouter
   }
 
   boolean isDuplicate(LockssReceivedDatagram dg, LcapMessage msg) {
-    String verifier = String.valueOf(B64Code.encode(msg.getVerifier()));
-    if (recentVerifiers.put(verifier, verObj) != null) {
-      log.debug2("Discarding dup from " + dg.getSender() + ": " + msg);
-      PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
-      idEvent(pid, LcapIdentity.EVENT_DUPLICATE, msg);
-      return true;
-    }
-    return false;
+    if (msg instanceof V1LcapMessage) {
+      String verifier = String.valueOf(B64Code.encode(((V1LcapMessage)msg).getVerifier()));
+      if (recentVerifiers.put(verifier, verObj) != null) {
+	log.debug2("Discarding dup from " + dg.getSender() + ": " + msg);
+	PeerIdentity pid = idMgr.ipAddrToPeerIdentity(dg.getSender());
+	idEvent(pid, LcapIdentity.EVENT_DUPLICATE, msg);
+	return true;
+      }
+      return false;
+    } else if (msg instanceof V3LcapMessage) {
+      // XXX: Implement.  Stubbed for V3.
+      return false;
+    } else {
+      return false;
+    } 
   }
 
   // if a long time since any message received from id not on partner list,

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.26 2005-03-18 09:09:17 smorabito Exp $
+ * $Id: LcapIdentity.java,v 1.27 2005-03-23 07:01:09 smorabito Exp $
  */
 
 /*
@@ -236,25 +236,29 @@ public class LcapIdentity {
    * @param msg the active message
    */
   public void rememberActive(boolean NoOp, LcapMessage msg) {
-    m_lastActiveTime = TimeBase.nowMs();
-    if (!NoOp) {
-      m_lastOpTime = m_lastActiveTime;
-    }
-    m_incrPackets++;
-    m_totalPackets++;
-    if (msg.getOriginatorId() == m_pid) {
-      char[] encoded = B64Code.encode(msg.getVerifier());
+    // XXX: V3LcapMessages do not have a verifier, this method will
+    // have to change.
+    if (msg instanceof V1LcapMessage) {
+      m_lastActiveTime = TimeBase.nowMs();
+      if (!NoOp) {
+	m_lastOpTime = m_lastActiveTime;
+      }
+      m_incrPackets++;
+      m_totalPackets++;
+      if (msg.getOriginatorId() == m_pid) {
+	char[] encoded = B64Code.encode(((V1LcapMessage)msg).getVerifier());
 
-      String verifier = String.valueOf(encoded);
-      Integer count = (Integer) m_pktsThisInterval.get(verifier);
-      if (count != null) {
-	// We've seen this packet before
-	count = new Integer(count.intValue() + 1);
+	String verifier = String.valueOf(encoded);
+	Integer count = (Integer) m_pktsThisInterval.get(verifier);
+	if (count != null) {
+	  // We've seen this packet before
+	  count = new Integer(count.intValue() + 1);
+	}
+	else {
+	  count = new Integer(1);
+	}
+	m_pktsThisInterval.put(verifier, count);
       }
-      else {
-	count = new Integer(1);
-      }
-      m_pktsThisInterval.put(verifier, count);
     }
   }
 

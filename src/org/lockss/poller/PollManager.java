@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.153 2005-03-18 09:09:16 smorabito Exp $
+ * $Id: PollManager.java,v 1.154 2005-03-23 07:00:59 smorabito Exp $
  */
 
 /*
@@ -406,23 +406,26 @@ public class PollManager
     theLog.debug("Got message: " + msg);
     BasePoll ret_poll = null;
     PollSpec spec = null;
+
     if (msg instanceof V1LcapMessage) {
-      spec = new PollSpec((V1LcapMessage)msg);
+      V1LcapMessage v1msg = (V1LcapMessage)msg;
+      spec = new PollSpec(v1msg);
+      long duration = v1msg.getDuration();
+      byte[] challenge = v1msg.getChallenge();
+      byte[] verifier = v1msg.getVerifier();
+      PeerIdentity orig = v1msg.getOriginatorId();
+      String hashAlg = v1msg.getHashAlgorithm();
+
+      ret_poll = makePoll(spec, duration, challenge, verifier, orig, hashAlg);
+      if (ret_poll != null) {
+	ret_poll.setMessage(v1msg);
+      }
     } else if (msg instanceof V3LcapMessage) {
-      spec = new PollSpec((V3LcapMessage)msg);
+      // XXX: Implement.
     } else {
       throw new ProtocolException("Unexpected LCAP Message type.");
     }
-    long duration = msg.getDuration();
-    byte[] challenge = msg.getChallenge();
-    byte[] verifier = msg.getVerifier();
-    PeerIdentity orig = msg.getOriginatorId();
-    String hashAlg = msg.getHashAlgorithm();
 
-    ret_poll = makePoll(spec, duration, challenge, verifier, orig, hashAlg);
-    if (ret_poll != null) {
-      ret_poll.setMessage(msg);
-    }
     return ret_poll;
   }
 
@@ -745,22 +748,29 @@ public class PollManager
   }
 
   private boolean isDuplicateMessage(LcapMessage msg) {
-    byte[] verifier = msg.getVerifier();
-    String ver = String.valueOf(B64Code.encode(verifier));
-    // lock paranoia - access (synchronized) thePolls outside theVerifiers lock
-    boolean havePoll = thePolls.contains(msg.getKey());
-
-    synchronized (theVerifiers) {
-      String secret = (String)theVerifiers.get(ver);
-      // if we have a secret and we don't have a poll
-      // we made the original message but haven't made a poll yet
-      if(!StringUtil.isNullString(secret) && !havePoll) {
-	return false;
+    if (msg instanceof V1LcapMessage) {
+      byte[] verifier = ((V1LcapMessage)msg).getVerifier();
+      String ver = String.valueOf(B64Code.encode(verifier));
+      // lock paranoia - access (synchronized) thePolls outside theVerifiers lock
+      boolean havePoll = thePolls.contains(msg.getKey());
+      
+      synchronized (theVerifiers) {
+	String secret = (String)theVerifiers.get(ver);
+	// if we have a secret and we don't have a poll
+	// we made the original message but haven't made a poll yet
+	if(!StringUtil.isNullString(secret) && !havePoll) {
+	  return false;
+	}
+	else if(secret == null) { // we didn't make the verifier-we don't have a secret
+	  rememberVerifier(verifier, null, msg.getDuration());
+	}
+	return secret != null;   // we made the verifier-we should have a secret
       }
-      else if(secret == null) { // we didn't make the verifier-we don't have a secret
-	rememberVerifier(verifier,null, msg.getDuration());
-      }
-      return secret != null;   // we made the verifier-we should have a secret
+    } else if (msg instanceof V3LcapMessage) {
+      // XXX: Implement - Stubbed for V3
+      return false;
+    } else {
+      return false;
     }
   }
 

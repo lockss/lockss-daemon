@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.8 2005-03-18 09:09:19 smorabito Exp $
+ * $Id: EncodedProperty.java,v 1.9 2005-03-23 07:01:10 smorabito Exp $
  */
 
 /*
@@ -223,7 +223,7 @@ public class EncodedProperty extends Properties {
 
     EncodedProperty ret = new EncodedProperty();
     try {
-      ret.decode(getByteArray(key, EMPTY_BYTE_ARRAY));
+      ret.decode(encodedVal);
     } catch (IOException ex) {
       log.error("Unexpected IOException while decoding EncodedProperty: " + ex);
     }
@@ -270,17 +270,17 @@ public class EncodedProperty extends Properties {
    * <p>Internally, the list is represented by zero or more encoded
    * EncodedProperty objects, separated by carriage returns, '\n'.</p>
    */
-  public void putEncodedPropertyList(String key, ArrayList value)
+  public void putEncodedPropertyList(String key, List value)
       throws IOException {
-    int len = value.size();
-
     StringBuffer encodedValues = new StringBuffer();
 
     // For each value, encode and append to the string buffer.
-    for (int i = 0; i < len; i++) {
-      EncodedProperty props = (EncodedProperty)value.get(i);
+    int len = value.size();
+    int count = 0;
+    for (Iterator ix = value.iterator(); ix.hasNext(); ) {
+      EncodedProperty props = (EncodedProperty)ix.next();
       encodedValues.append(encodedPropertyToString(props));
-      if (i < len - 1) {
+      if (count++ < len - 1) {
 	encodedValues.append("\n");
       }
     }
@@ -288,7 +288,7 @@ public class EncodedProperty extends Properties {
     setProperty(key, encodedValues.toString());
   }
 
-  public ArrayList getEncodedPropertyList(String key)
+  public List getEncodedPropertyList(String key)
       throws IOException {
     String value = getProperty(key);
     if (value == null) {
@@ -296,7 +296,7 @@ public class EncodedProperty extends Properties {
     }
 
     StringTokenizer tokenizer = new StringTokenizer(value, "\n", false);
-    ArrayList entries = new ArrayList();
+    List entries = new ArrayList();
 
     while (tokenizer.hasMoreTokens()) {
       EncodedProperty p = stringToEncodedProperty(tokenizer.nextToken());

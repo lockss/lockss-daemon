@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.55 2005-03-18 09:09:17 smorabito Exp $
+ * $Id: LcapMessage.java,v 1.56 2005-03-23 07:01:09 smorabito Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.mortbay.util.B64Code;
  */
 
 public abstract class LcapMessage {
-  
+
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
     "protocol.hashAlgorithm";
   public static final String PARAM_MAX_PKT_SIZE = Configuration.PREFIX +
@@ -56,30 +56,22 @@ public abstract class LcapMessage {
 
   public static final String DEFAULT_HASH_ALGORITHM = "SHA-1";
   public static final int SHA_LENGTH = 20;
-  public static final int MAX_HOP_COUNT_LIMIT = 16;
   public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
   public static final byte[] signature = { 'l', 'p', 'm' };
 
   /* items that are not in the property list */
   protected int m_pollVersion; // poll version number
-  protected byte[] m_pktHash; // hash of remaining packet
-  protected int m_length; // length of remaining packet
 
   /* items that are in the property list */
   protected PeerIdentity m_originatorID; // the peer identity of the originator
   protected String m_hashAlgorithm; // the algorithm used to hash
-  protected byte m_ttl; // The original time-to-live
   protected long m_startTime; // the original start time
   protected long m_stopTime; // the original stop time
   protected int m_opcode; // the kind of packet
   protected String m_pluginVersion; // the plugin version
   protected String m_archivalID; // the archival unit
   protected String m_targetUrl; // the target URL
-  protected byte[] m_challenge; // the challenge bytes
-  protected byte[] m_verifier; // the verifier bytes
-  protected byte[] m_hashed; // the hash of content
-
-  protected String m_key = null;
+  protected String m_key = null; // Unique key for this LcapMessage
 
   protected EncodedProperty m_props;
 
@@ -105,7 +97,7 @@ public abstract class LcapMessage {
    * @throws IOException
    */
   public abstract void decodeMsg(InputStream inputStream) throws IOException;
-  
+
   /**
    * encode the message from a props table into a stream of bytes
    * @return the encoded message as bytes
@@ -114,13 +106,13 @@ public abstract class LcapMessage {
   public abstract byte[] encodeMsg() throws IOException;
 
   /**
-   * Return an output stream from which to read bytes representing
+   * Return an input stream from which to read bytes representing
    * the encoded form of this message.
    *
    * @return An output stream containing the bytes of this message.
    * @throws IOException if the packet cannot be encoded.
    */
-  public abstract ByteArrayOutputStream getOutputStream() throws IOException;
+  public abstract InputStream getInputStream() throws IOException;
 
   /**
    * store the local variables in the property table
@@ -132,7 +124,7 @@ public abstract class LcapMessage {
 
   abstract public String getKey();
 
-  abstract public boolean supportedPollVersion(int vers);
+  abstract public boolean isPollVersionSupported(int vers);
 
   abstract public boolean isNoOp();
 
@@ -176,6 +168,7 @@ public abstract class LcapMessage {
     m_stopTime = l;
   }
 
+  /*
   public byte getTimeToLive() {
     return m_ttl;
   }
@@ -183,6 +176,7 @@ public abstract class LcapMessage {
   public void setTimeToLive(byte b) {
     m_ttl = b;
   }
+  */
 
   public PeerIdentity getOriginatorId() {
     return m_originatorID;
@@ -214,30 +208,6 @@ public abstract class LcapMessage {
 
   public void setPollVersion(int vers) {
     m_pollVersion = vers;
-  }
-
-  public byte[] getChallenge() {
-    return m_challenge;
-  }
-
-  public void setChallenge(byte[] b) {
-    m_challenge = b;
-  }
-
-  public byte[] getVerifier() {
-    return m_verifier;
-  }
-
-  public void setVerifier(byte[] b) {
-    m_verifier = b;
-  }
-
-  public byte[] getHashed() {
-    return m_hashed;
-  }
-
-  public void setHashed(byte[] b) {
-    m_hashed = b;
   }
 
   public String getTargetUrl() {
@@ -289,6 +259,11 @@ public abstract class LcapMessage {
   //
   // Utility methods
   //
+
+  /**
+   * Used by V1LcapMessage and V3LcapMessage to verify message-level
+   * checksums.  SHA1 is used as the digest algorithm.
+   */
   protected boolean verifyHash(byte[] hashValue, byte[] data) {
     try {
       MessageDigest hasher = MessageDigest.getInstance("SHA");
@@ -300,6 +275,10 @@ public abstract class LcapMessage {
     }
   }
 
+  /**
+   * Used by V1LcapMessage and V3LcapMessage to compute a message-level
+   * verification checksum.  SHA1 is used as the digest algorithm.
+   */
   protected byte[] computeHash(byte[] data) {
     try {
       MessageDigest hasher = MessageDigest.getInstance("SHA");

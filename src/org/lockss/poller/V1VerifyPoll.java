@@ -1,5 +1,5 @@
 /*
- * $Id: V1VerifyPoll.java,v 1.11 2005-03-18 09:09:16 smorabito Exp $
+ * $Id: V1VerifyPoll.java,v 1.12 2005-03-23 07:01:08 smorabito Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ class V1VerifyPoll extends V1Poll {
       try {
 	log.debug("sending our verify reply now.");
 	// send our reply message
-	sendVerifyReply(m_msg);
+	sendVerifyReply((V1LcapMessage)m_msg);
       }
       catch (IOException ex) {
 	m_pollstate = ERR_IO;
@@ -141,7 +141,7 @@ class V1VerifyPoll extends V1Poll {
     }
   }
 
-  private void performHash(LcapMessage msg) {
+  private void performHash(V1LcapMessage msg) {
     PeerIdentity id = msg.getOriginatorId();
     int weight = idMgr.getReputation(id);
     byte[] challenge = msg.getChallenge();
@@ -191,7 +191,7 @@ class V1VerifyPoll extends V1Poll {
     }
   }
 
-  private void sendVerifyReply(LcapMessage msg) throws IOException  {
+  private void sendVerifyReply(V1LcapMessage msg) throws IOException  {
     String url = msg.getTargetUrl();
     ArchivalUnit au;
     String chal = String.valueOf(B64Code.encode(msg.getChallenge()));
@@ -238,7 +238,7 @@ class V1VerifyPoll extends V1Poll {
       log.debug("VerifyTimerCallback called, checking if I should verify");
       if(m_pollstate == PS_WAIT_HASH) {
 	log.debug("I should verify ");
-	LcapMessage msg = (LcapMessage) cookie;
+	V1LcapMessage msg = (V1LcapMessage) cookie;
 	performHash(msg);
 	stopVoteCheck();
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: V1LcapMessage.java,v 1.2 2005-03-18 09:09:18 smorabito Exp $
+ * $Id: V1LcapMessage.java,v 1.3 2005-03-23 07:01:09 smorabito Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.mortbay.util.B64Code;
 /**
  * <p>Encapsulation of a V1 protocol message which has been received or
  * will be sent over the wire.</p>
- * 
+ *
  * @author Claire Griffin
  * @version 1.0
  */
@@ -54,14 +54,15 @@ public class V1LcapMessage extends LcapMessage {
   public static final int VERIFY_POLL_REP = 5;
   public static final int NO_OP = 6;
 
+  public static final int MAX_HOP_COUNT_LIMIT = 16;
   public static final int DEFAULT_MAX_PKT_SIZE = 1422;
+  public static final byte[] pollVersionByte = { '1', '2' };
 
   public static final String[] POLL_OPCODES =  {"NameReq", "NameRep",
 						"ContentReq", "ContentRep",
 						"VerifyReq", "VerifyRep",
 						"NoOp" };
-  
-  public static final byte[] pollVersionByte = { '1', '2' };
+
 
   // V1 specific properties.
   protected int m_maxSize;
@@ -73,7 +74,10 @@ public class V1LcapMessage extends LcapMessage {
   protected String m_uprRem; // the remaining entries upr bound (opt)
   protected ArrayList m_entries; // the name poll entry list (opt)
 
-  private EncodedProperty m_props;
+  protected byte[] m_challenge; // the challenge bytes
+  protected byte[] m_verifier; // the verifier bytes
+  protected byte[] m_hashed; // the hash of content
+
 
   static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
@@ -91,8 +95,8 @@ public class V1LcapMessage extends LcapMessage {
 
   protected V1LcapMessage() throws IOException {
     m_props = new EncodedProperty();
-    m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_POLL_VERSION,
-					      PollSpec.DEFAULT_USE_POLL_VERSION);
+    m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V1_POLL_VERSION,
+					      PollSpec.DEFAULT_USE_V1_POLL_VERSION);
     m_maxSize = Configuration.getIntParam(PARAM_MAX_PKT_SIZE,
 					  DEFAULT_MAX_PKT_SIZE);
   }
@@ -107,8 +111,9 @@ public class V1LcapMessage extends LcapMessage {
     }
   }
 
-  protected V1LcapMessage(PollSpec ps, ArrayList entries, byte ttl,
-			  byte[] challenge, byte[] verifier, byte[] hashedData, int opcode)
+  protected V1LcapMessage(PollSpec ps, ArrayList entries,
+			  byte[] challenge, byte[] verifier,
+			  byte[] hashedData, int opcode)
       throws IOException {
     this();
     // assign the data
@@ -116,13 +121,12 @@ public class V1LcapMessage extends LcapMessage {
     m_uprBound = ps.getUprBound();
     m_lwrBound = ps.getLwrBound();
     m_archivalID = ps.getAuId();
-    m_ttl = ttl;
     m_challenge = challenge;
     m_verifier = verifier;
     m_hashed = hashedData;
     m_opcode = opcode;
     m_entries = entries;
-    m_hashAlgorithm = getDefaultHashAlgorithm();
+    m_hashAlgorithm = LcapMessage.getDefaultHashAlgorithm();
     m_pollVersion = ps.getPollVersion();
     m_pluginVersion = ps.getPluginVersion();
     // null the remaining undefined data
@@ -134,12 +138,12 @@ public class V1LcapMessage extends LcapMessage {
   }
 
   protected V1LcapMessage(V1LcapMessage trigger, PeerIdentity localID,
-			  byte[] verifier, byte[] hashedContent, ArrayList entries, int opcode)
+			  byte[] verifier, byte[] hashedContent,
+			  ArrayList entries, int opcode)
       throws IOException {
     this();
     // copy the essential information from the trigger packet
     m_hopCount = trigger.getHopCount();
-    m_ttl = trigger.getTimeToLive();
     m_challenge = trigger.getChallenge();
     m_targetUrl = trigger.getTargetUrl();
     m_uprBound = trigger.getUprBound();
@@ -158,29 +162,13 @@ public class V1LcapMessage extends LcapMessage {
     m_pluginVersion = trigger.getPluginVersion();
   }
 
-  public static String getDefaultHashAlgorithm() {
-    String algorithm = Configuration.getParam(PARAM_HASH_ALGORITHM,
-					      DEFAULT_HASH_ALGORITHM);
-    return algorithm;
-  }
-
-  public static MessageDigest getDefaultHasher() {
-    MessageDigest hasher = null;
-    try {
-      hasher = MessageDigest.getInstance(getDefaultHashAlgorithm());
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("Unable to run - no hasher");
-    }
-    return hasher;
-  }
-
   public void decodeMsg(byte[] encodedBytes) throws IOException {
     this.decodeMsg(new ByteArrayInputStream(encodedBytes));
   }
 
   /**
    * decode the raw packet data into a property table
-   * 
+   *
    * @param encodedBytes the array of encoded bytes
    * @throws IOException
    */
@@ -194,7 +182,7 @@ public class V1LcapMessage extends LcapMessage {
     // read in the three header bytes
     for (int i = 0; i < signature.length; i++) {
       if (signature[i] != dis.readByte()) {
-        throw new ProtocolException("Invalid Signature");
+	throw new ProtocolException("Invalid Signature");
       }
     }
     // read in the poll version byte and decode
@@ -202,7 +190,7 @@ public class V1LcapMessage extends LcapMessage {
     byte ver = dis.readByte();
     for (int i = 0; i < pollVersionByte.length; i++) {
       if (pollVersionByte[i] == ver)
-        m_pollVersion = i + 1;
+	m_pollVersion = i + 1;
     }
     if (m_pollVersion <= 0) {
       throw new ProtocolException("Unsupported inbound poll version: " + ver);
@@ -227,7 +215,6 @@ public class V1LcapMessage extends LcapMessage {
     String addr_str = m_props.getProperty("origIP");
     m_originatorID = m_idManager.stringToPeerIdentity(addr_str);
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
-    m_ttl = (byte) m_props.getInt("ttl", 0);
     duration = m_props.getInt("duration", 0) * 1000;
     elapsed = m_props.getInt("elapsed", 0) * 1000;
     m_opcode = m_props.getInt("opcode", -1);
@@ -250,16 +237,12 @@ public class V1LcapMessage extends LcapMessage {
 
   /**
    * encode the message from a props table into a stream of bytes
-   * 
+   *
    * @return the encoded message as bytes
    * @throws IOException if the packet can not be encoded
    */
   public byte[] encodeMsg() throws IOException {
-    return getOutputStream().toByteArray();
-  }
-
-  public ByteArrayOutputStream getOutputStream() throws IOException {
-    if (!supportedPollVersion(m_pollVersion))
+    if (!isPollVersionSupported(m_pollVersion))
       throw new ProtocolException("Unsupported outbound poll version: "
 				  + m_pollVersion);
     byte[] prop_bytes = m_props.encode();
@@ -275,12 +258,16 @@ public class V1LcapMessage extends LcapMessage {
     dos.writeShort(prop_bytes.length);
     dos.write(hash_bytes);
     dos.write(prop_bytes);
-    return baos;
+    return baos.toByteArray();
+  }
+
+  public InputStream getInputStream() throws IOException {
+    return new ByteArrayInputStream(encodeMsg());
   }
 
   /**
    * store the local variables in the property table
-   * 
+   *
    * @throws IOException if the packet can not be stored
    */
   public void storeProps() throws IOException {
@@ -296,8 +283,11 @@ public class V1LcapMessage extends LcapMessage {
       m_props.putByteArray("verifier", m_verifier);
       return;
     }
-    m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
-    m_props.putInt("ttl", m_ttl);
+    m_props.setProperty("hashAlgorithm", getHashAlgorithm());
+    // TTL is not used by any V1 or V3 functionality, but this prop
+    // should continue to exist for backward compatibility with
+    // pre-1.8 daemons.
+    m_props.putInt("ttl", 0);
     m_props.putInt("duration", (int) (getDuration() / 1000));
     m_props.putInt("elapsed", (int) (getElapsed() / 1000));
     m_props.putInt("opcode", m_opcode);
@@ -325,16 +315,16 @@ public class V1LcapMessage extends LcapMessage {
       m_maxSize -= diff_pktsize;
       int remaining_bytes = m_maxSize - cur_bytes.length - 28;
       if (m_entries != null) {
-        m_props.setProperty("entries", entriesToString(remaining_bytes));
+	m_props.setProperty("entries", entriesToString(remaining_bytes));
       }
       if (m_lwrRem != null) {
-        m_props.setProperty("lwrRem", m_lwrRem);
+	m_props.setProperty("lwrRem", m_lwrRem);
       }
       if (m_uprRem != null) {
-        m_props.setProperty("uprRem", m_uprRem);
+	m_props.setProperty("uprRem", m_uprRem);
       }
       if (m_pluginVersion != null) {
-        m_props.setProperty("plugVer", m_pluginVersion);
+	m_props.setProperty("plugVer", m_pluginVersion);
       }
       long pktsize = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					encodeMsg()).getPacketSize();
@@ -354,7 +344,7 @@ public class V1LcapMessage extends LcapMessage {
       return false;
     return true;
   }
-  
+
   public boolean isReply() {
     return ((m_opcode != NO_OP) && (m_opcode % 2 == 1)) ? true : false;
   }
@@ -373,14 +363,38 @@ public class V1LcapMessage extends LcapMessage {
 
   public boolean isNoOp() {
     return m_opcode == NO_OP;
-  }  
+  }
 
-  public boolean supportedPollVersion(int vers) {
+  public boolean isPollVersionSupported(int vers) {
     return (vers > 0 && vers <= pollVersionByte.length);
   }
 
   public String getOpcodeString() {
     return POLL_OPCODES[m_opcode];
+  }
+
+  public byte[] getChallenge() {
+    return m_challenge;
+  }
+
+  public void setChallenge(byte[] b) {
+    m_challenge = b;
+  }
+
+  public byte[] getVerifier() {
+    return m_verifier;
+  }
+
+  public void setVerifier(byte[] b) {
+    m_verifier = b;
+  }
+
+  public byte[] getHashed() {
+    return m_hashed;
+  }
+
+  public void setHashed(byte[] b) {
+    m_hashed = b;
   }
 
   public String toString() {
@@ -511,15 +525,15 @@ public class V1LcapMessage extends LcapMessage {
   // Factory Methods
   //
   static public V1LcapMessage makeNoOpMsg(PeerIdentity originator,
-                                          byte[] verifier) throws IOException {
+					  byte[] verifier) throws IOException {
     V1LcapMessage msg = new V1LcapMessage();
     if (msg != null) {
       msg.m_originatorID = originator;
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
-      msg.m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_POLL_VERSION,
-						    PollSpec.DEFAULT_USE_POLL_VERSION);
+      msg.m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V1_POLL_VERSION,
+						    PollSpec.DEFAULT_USE_V1_POLL_VERSION);
     }
     msg.storeProps();
     return msg;
@@ -527,7 +541,7 @@ public class V1LcapMessage extends LcapMessage {
 
   /**
    * make a message to request a poll using a pollspec
-   * 
+   *
    * @param pollspec the pollspec specifying the url and bounds of interest
    * @param entries the array of entries found in the name poll
    * @param challenge the challange bytes
@@ -539,12 +553,12 @@ public class V1LcapMessage extends LcapMessage {
    * @throws IOException if unable to create message
    */
   static public V1LcapMessage makeRequestMsg(PollSpec pollspec,
-                                             ArrayList entries,
-                                             byte[] challenge, byte[] verifier,
-                                             int opcode, long timeRemaining,
-                                             PeerIdentity localID)
+					     ArrayList entries,
+					     byte[] challenge, byte[] verifier,
+					     int opcode, long timeRemaining,
+					     PeerIdentity localID)
       throws IOException {
-    V1LcapMessage msg = new V1LcapMessage(pollspec, entries, (byte) 0,
+    V1LcapMessage msg = new V1LcapMessage(pollspec, entries,
 					  challenge, verifier, null, opcode);
     if (msg != null) {
       msg.m_startTime = TimeBase.nowMs();
@@ -557,7 +571,7 @@ public class V1LcapMessage extends LcapMessage {
 
   /**
    * static method to make a reply message
-   * 
+   *
    * @param trigger the message which trggered the reply
    * @param hashedContent the hashed content bytes
    * @param verifier the veerifier bytes
@@ -569,10 +583,10 @@ public class V1LcapMessage extends LcapMessage {
    * @throws IOException if message construction failed
    */
   static public V1LcapMessage makeReplyMsg(LcapMessage trigger,
-                                           byte[] hashedContent,
-                                           byte[] verifier, ArrayList entries,
-                                           int opcode, long timeRemaining,
-                                           PeerIdentity localID)
+					   byte[] hashedContent,
+					   byte[] verifier, ArrayList entries,
+					   int opcode, long timeRemaining,
+					   PeerIdentity localID)
       throws IOException {
     if (hashedContent == null) {
       log.error("Making a reply message with null hashed content");
@@ -589,7 +603,7 @@ public class V1LcapMessage extends LcapMessage {
 
   /**
    * a static method to create a new message from a Datagram Packet
-   * 
+   *
    * @param data the data from the message packet
    * @param mcast true if packet was from a multicast socket
    * @return a new Message object

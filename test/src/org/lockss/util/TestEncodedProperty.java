@@ -1,5 +1,5 @@
 /*
- * $Id: TestEncodedProperty.java,v 1.4 2005-03-18 09:09:23 smorabito Exp $
+ * $Id: TestEncodedProperty.java,v 1.5 2005-03-23 07:01:13 smorabito Exp $
  */
 
 /*
@@ -70,14 +70,21 @@ public class TestEncodedProperty extends LockssTestCase {
     p2.setProperty("test", "Nested Value");
     p1.putEncodedProperty("nested", p2);
 
-    // Add a list of nested properties.
+    // Add a two-level-deep nested property
     EncodedProperty p3 = new EncodedProperty();
     EncodedProperty p4 = new EncodedProperty();
+    p4.setProperty("test", "Double Nested");
+    p3.putEncodedProperty("nested2", p4);
+    p1.putEncodedProperty("nested1", p3);
+
+    // Add a list of nested properties.
     EncodedProperty p5 = new EncodedProperty();
-    p3.setProperty("foo", "bar0");
-    p4.setProperty("foo", "bar1");
-    p5.setProperty("foo", "bar2");
-    nestedPropList = (ArrayList)ListUtil.list(p3, p4, p5);
+    EncodedProperty p6 = new EncodedProperty();
+    EncodedProperty p7 = new EncodedProperty();
+    p5.setProperty("foo", "bar0");
+    p6.setProperty("foo", "bar1");
+    p7.setProperty("foo", "bar2");
+    nestedPropList = (ArrayList)ListUtil.list(p5, p6, p7);
     p1.putEncodedPropertyList("nestedlist", nestedPropList);
   }
 
@@ -94,17 +101,22 @@ public class TestEncodedProperty extends LockssTestCase {
 
     // Test nested property
     EncodedProperty nested = p1.getEncodedProperty("nested");
-    assertIsomorphicProperties(p2, nested);
+    assertEquals(p2, nested);
     assertEquals("Nested Value", p2.getProperty("test"));
 
+    // Test two-level nesting.
+    EncodedProperty nested1 = p1.getEncodedProperty("nested1");
+    EncodedProperty nested2 = nested1.getEncodedProperty("nested2");
+    assertEquals("Double Nested", nested2.getProperty("test"));
+
     // Test nested property list
-    ArrayList l = p1.getEncodedPropertyList("nestedlist");
+    List l = p1.getEncodedPropertyList("nestedlist");
     assertEquals(l.size(), nestedPropList.size());
 
     // Should be in the same order.
     for (int i = 0; i < l.size(); i++) {
-      assertIsomorphicProperties((EncodedProperty)(l.get(i)),
-				 (EncodedProperty)(nestedPropList.get(i)));
+      assertEquals((EncodedProperty)(l.get(i)),
+		   (EncodedProperty)(nestedPropList.get(i)));
     }
   }
 
@@ -132,7 +144,7 @@ public class TestEncodedProperty extends LockssTestCase {
     try {
       byte[] encoded1 = p1.encode();
       other.decode(encoded1);
-      assertIsomorphicProperties(p1, other);
+      assertEquals(p1, other);
     } catch (IOException ex) {
       fail("Should not have thrown.", ex);
     }
@@ -143,7 +155,7 @@ public class TestEncodedProperty extends LockssTestCase {
     try {
       byte[] encoded2 = p1.encode("UTF-16");
       other.decode(encoded2, "UTF-16");
-      assertIsomorphicProperties(p1, other);
+      assertEquals(p1, other);
     } catch (IOException ex) {
       fail("Should not have thrown.", ex);
     }
@@ -172,23 +184,5 @@ public class TestEncodedProperty extends LockssTestCase {
     } catch (IOException ex) {
       fail("Should not have thrown IO Exception", ex);
     }
-  }
-
-  /**
-   * Assert that two maps contain the same keys and values.
-   */
-  private void assertIsomorphicProperties(Properties a, Properties b) {
-    List aKeys = new ArrayList(a.keySet());
-    List bKeys = new ArrayList(b.keySet());
-    List aValues = new ArrayList(a.values());
-    List bValues = new ArrayList(b.values());
-
-    Collections.sort(aKeys);
-    Collections.sort(bKeys);
-    Collections.sort(aValues);
-    Collections.sort(bValues);
-
-    assertIsomorphic(aKeys, bKeys);
-    assertIsomorphic(aValues, bValues);
   }
 }

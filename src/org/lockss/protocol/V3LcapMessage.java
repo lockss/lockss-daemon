@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.2 2005-03-18 09:09:18 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.3 2005-03-23 07:01:09 smorabito Exp $
  */
 
 /*
@@ -46,24 +46,29 @@ import org.mortbay.util.B64Code;
  * and Upper bounds or remainders like V1 LCAP Messages.
  */
 public class V3LcapMessage extends LcapMessage {
-  public static final int MSG_POLL = 0;
-  public static final int MSG_POLL_ACK = 1;
-  public static final int MSG_POLL_PROOF = 2;
-  public static final int MSG_VOTE = 3;
-  public static final int MSG_REPAIR_REQ = 4;
-  public static final int MSG_REPAIR_REP = 5;
-  public static final int MSG_EVALUATION_RECEIPT = 6;
-  public static final int MSG_NO_OP = 7;
+  public static final int MSG_POLL = 10;
+  public static final int MSG_POLL_ACK = 11;
+  public static final int MSG_POLL_PROOF = 12;
+  public static final int MSG_VOTE = 13;
+  public static final int MSG_REPAIR_REQ = 14;
+  public static final int MSG_REPAIR_REP = 15;
+  public static final int MSG_EVALUATION_RECEIPT = 16;
+  public static final int MSG_NO_OP = 17;
 
+  // XXX: There should be a more general way to do this.
+  public static final int POLL_MESSAGES_BASE = 10;
   public static final String[] POLL_MESSAGES = {
     "Poll", "PollAck", "PollProof", "Vote", "RepairReq",
     "RepairRep", "EvaluationReceipt", "NoOp"
   };
 
-  public static final byte[] pollVersionByte = { '1', '2', '3'};
+  public static final byte[] pollVersionByte = {'1'};
 
   private static Logger log = Logger.getLogger("V3LcapMessage");
 
+  // V3 Specific properties.
+  private byte[] m_challenge;
+  
   private ArrayList m_voteBlocks; // List<V3VoteBlock> of vote blocks.
 
   /*
@@ -80,35 +85,19 @@ public class V3LcapMessage extends LcapMessage {
   public V3LcapMessage() {
     m_props = new EncodedProperty();
     m_voteBlocks = new ArrayList();
-    m_hashAlgorithm = getDefaultHashAlgorithm();
-    m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_POLL_VERSION,
-					      PollSpec.DEFAULT_USE_POLL_VERSION);
+    m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V3_POLL_VERSION,
+					      PollSpec.DEFAULT_USE_V3_POLL_VERSION);
   }
 
   public V3LcapMessage(int opcode, PeerIdentity origin, String url, long start,
-		       long stop, byte ttl, byte[] challenge, byte[] verifier,
-		       byte[] hashed) {
+		       long stop, byte[] challenge) {
     this();
     m_opcode = opcode;
     m_originatorID = origin;
     m_targetUrl = url;
     m_startTime = start;
     m_stopTime = stop;
-    m_ttl = ttl;
     m_challenge = challenge;
-    m_verifier = verifier;
-    m_hashed = hashed;
-  }
-
-  public V3LcapMessage(int opcode, PeerIdentity origin, String url, long start,
-		       long stop, byte ttl, byte[] challenge, byte[] verifier,
-		       byte[] hashed, Collection voteblocks) {
-    this(opcode, origin, url, start, stop, ttl, challenge, verifier, hashed);
-    if (voteblocks != null) {
-      for (Iterator ix = voteblocks.iterator(); ix.hasNext(); ) {
-	m_voteBlocks.add((V3LcapMessage.VoteBlock)ix.next());
-      }
-    }
   }
 
   /**
@@ -188,15 +177,12 @@ public class V3LcapMessage extends LcapMessage {
     String addr_str = m_props.getProperty("origIP");
     m_originatorID = m_idManager.stringToPeerIdentity(addr_str);
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
-    m_ttl = (byte) m_props.getInt("ttl", 0);
     duration = m_props.getInt("duration", 0) * 1000;
     elapsed = m_props.getInt("elapsed", 0) * 1000;
     m_opcode = m_props.getInt("opcode", -1);
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_challenge = m_props.getByteArray("challenge", EMPTY_BYTE_ARRAY);
-    m_verifier = m_props.getByteArray("verifier", EMPTY_BYTE_ARRAY);
-    m_hashed = m_props.getByteArray("hashed", EMPTY_BYTE_ARRAY);
     m_pluginVersion = m_props.getProperty("plugVer");
 
     m_voteBlocks = new ArrayList();
@@ -204,9 +190,8 @@ public class V3LcapMessage extends LcapMessage {
     // Decode the list of vote blocks.
     // encodedVoteBlocks is a list of EncodedProperty objects, each one
     // representing a VoteBlock
-    ArrayList encodedVoteBlocks = m_props.getEncodedPropertyList("voteblocks");
+    List encodedVoteBlocks = m_props.getEncodedPropertyList("voteblocks");
     if (encodedVoteBlocks != null) {
-      // XXX: Should this ever be allowed?
       for (Iterator ix = encodedVoteBlocks.iterator(); ix.hasNext(); ) {
 	EncodedProperty vbProps = (EncodedProperty)ix.next();
 	VoteBlock vb = new VoteBlock();
@@ -230,7 +215,7 @@ public class V3LcapMessage extends LcapMessage {
 
   /**
    * Build out this message from a byte array.
-   * 
+   *
    * @param encodedBytes The encoded byte array representing this message.
    */
   public void decodeMsg(byte[] encodedBytes) throws IOException {
@@ -238,16 +223,8 @@ public class V3LcapMessage extends LcapMessage {
   }
 
   public byte[] encodeMsg() throws IOException {
-    return getOutputStream().toByteArray();
-  }
-
-  /**
-   * Obtain an OutputStream representing the encoded bytes of this
-   * message.
-   */
-  public ByteArrayOutputStream getOutputStream() throws IOException {
     storeProps();
-    if (!supportedPollVersion(m_pollVersion))
+    if (!isPollVersionSupported(m_pollVersion))
       throw new ProtocolException("Unsupported outbound poll version: "
 				  + m_pollVersion);
     byte[] prop_bytes = m_props.encode();
@@ -260,7 +237,15 @@ public class V3LcapMessage extends LcapMessage {
     dos.writeShort(prop_bytes.length);
     dos.write(hash_bytes);
     dos.write(prop_bytes);
-    return baos;
+    return baos.toByteArray();
+  }
+
+  /**
+   * Obtain an InputStream from which the bytes of this message can
+   * be read.
+   */
+  public InputStream getInputStream() throws IOException {
+    return new ByteArrayInputStream(encodeMsg());
   }
 
   /**
@@ -269,18 +254,18 @@ public class V3LcapMessage extends LcapMessage {
   public void storeProps() throws IOException {
     // make sure the props table is up to date
     try {
-      // use port 0 here - it will be ignored in the string
+      // PeerIdentity.getIdString() returns an IP:Port string.
       m_props.put("origIP", m_originatorID.getIdString());
+      // m_props.put("origPort", m_originatorID.getIdString());
     } catch (NullPointerException npe) {
       throw new ProtocolException("encode - null origin host address.");
     }
     if (m_opcode == MSG_NO_OP) {
       m_props.putInt("opcode", m_opcode);
-      m_props.putByteArray("verifier", m_verifier);
+      m_props.putByteArray("challenge", m_challenge);
       return;
     }
-    m_props.setProperty("hashAlgorithm", m_hashAlgorithm);
-    m_props.putInt("ttl", m_ttl);
+    m_props.setProperty("hashAlgorithm", getHashAlgorithm());
     m_props.putInt("duration", (int) (getDuration() / 1000));
     m_props.putInt("elapsed", (int) (getElapsed() / 1000));
     m_props.putInt("opcode", m_opcode);
@@ -289,16 +274,15 @@ public class V3LcapMessage extends LcapMessage {
       m_props.setProperty("plugVer", m_pluginVersion);
     }
     if (m_archivalID == null) {
-      m_archivalID = "UNKNOWN";
+      throw new ProtocolException("Null AU ID not allowed.");
     }
     m_props.setProperty("au", m_archivalID);
     m_props.putByteArray("challenge", m_challenge);
-    m_props.putByteArray("verifier", m_verifier);
-    if (m_hashed != null) {
-      m_props.putByteArray("hashed", m_hashed);
-    } else if (isReply()) { // if we're a reply we'd better have a hash
-      throw new ProtocolException("encode - missing hash in reply packet.");
-    }
+
+    // XXX: These should eventually be refactored out of the encoded
+    // property object.  The large size of some AUs will quickly lead
+    // to memory exhaustion if a lot of EncodedProperty objects full
+    // of VoteBlocks are hanging around.
 
     // Store the vote block list
     ArrayList encodedVoteBlocks = new ArrayList();
@@ -316,8 +300,8 @@ public class V3LcapMessage extends LcapMessage {
       vbProps.putByteArray("pr", vb.getProof());
       encodedVoteBlocks.add(vbProps);
     }
-    if (log.isDebug2()) {
-      log.debug2("[storeProps] Storing encodedVoteBlocks: " + encodedVoteBlocks);
+    if (log.isDebug3()) {
+      log.debug3("[storeProps] Storing encodedVoteBlocks: " + encodedVoteBlocks);
     }
     m_props.putEncodedPropertyList("voteblocks", encodedVoteBlocks);
   }
@@ -329,22 +313,24 @@ public class V3LcapMessage extends LcapMessage {
     return m_key;
   }
 
-  public boolean isReply() {
-    return ((m_opcode == MSG_POLL_ACK) ||
-	    (m_opcode == MSG_VOTE) ||
-	    (m_opcode == MSG_REPAIR_REP));
-  }
-
   public boolean isNoOp() {
     return m_opcode == MSG_NO_OP;
   }
 
-  public boolean supportedPollVersion(int vers) {
-    return vers == 3;
+  public boolean isPollVersionSupported(int vers) {
+    return (vers > 0 && vers <= pollVersionByte.length);
   }
 
   public String getOpcodeString() {
-    return POLL_MESSAGES[m_opcode];
+    return POLL_MESSAGES[m_opcode - POLL_MESSAGES_BASE];
+  }
+
+  public byte[] getChallenge() {
+    return m_challenge;
+  }
+
+  public void setChallenge(byte[] b) {
+    m_challenge = b;
   }
 
   // Vote Block accessors and iterator
@@ -370,23 +356,47 @@ public class V3LcapMessage extends LcapMessage {
   // Factory Methods
   //
   static public V3LcapMessage makeNoOpMsg(PeerIdentity originator,
-                                          byte[] verifier) throws IOException {
+					  byte[] challenge) throws IOException {
     V3LcapMessage msg = new V3LcapMessage();
     msg.m_originatorID = originator;
     msg.m_opcode = MSG_NO_OP;
-    msg.m_verifier = verifier;
-    msg.m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_POLL_VERSION,
-						  PollSpec.DEFAULT_USE_POLL_VERSION);
+    msg.m_challenge = challenge;
+    msg.m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V3_POLL_VERSION,
+						  PollSpec.DEFAULT_USE_V3_POLL_VERSION);
     return msg;
   }
 
   /**
+   * Make a NoOp message with randomly generated bytes.
+   */
+  static public V3LcapMessage makeNoOpMsg(PeerIdentity originator) throws IOException {
+    return V3LcapMessage.makeNoOpMsg(originator, V3LcapMessage.makeRandomBytes(20));
+  }
+
+  /**
+   * Return an array of random bytes of the specified size.  Due to
+   * Java's unsigned types, the resulting array will only hold values
+   * between 0 and 127.
+   */
+  private static byte[] makeRandomBytes(int size) {
+    byte[] retVal = new byte[size];
+    LockssRandom rand = new LockssRandom();
+    long top = 0x7F; //  bloody unsigned types.
+    for (int i = 0; i < size; i++) {
+      retVal[i] = (byte)rand.nextLong(top);
+    }
+    if (log.isDebug3()) {
+      log.debug3("[makeRandomBytes] Returning random byte array: " + new String(B64Code.encode(retVal)));
+    }
+    return retVal;
+  }
+
+  /**
    * make a message to request a poll using a pollspec.
-   * 
+   *
    * @param pollspec the pollspec specifying the url and bounds of interest
    * @param voteblocks the voteblocks found in the message
    * @param challenge the challange bytes
-   * @param verifier the verifier bytes
    * @param opcode the kind of poll being requested
    * @param timeRemaining  the time remaining for this poll
    * @param localID the identity of the requestor
@@ -394,17 +404,15 @@ public class V3LcapMessage extends LcapMessage {
    * @throws IOException if unable to create message
    */
   static public V3LcapMessage makeRequestMsg(PollSpec ps,
-					     Collection voteBlocks,
-                                             byte[] challenge,
-					     byte[] verifier,
-                                             int opcode,
+					     byte[] challenge,
+					     int opcode,
 					     long timeRemaining,
-                                             PeerIdentity origin) 
+					     PeerIdentity origin)
       throws IOException {
     long now = TimeBase.nowMs();
     V3LcapMessage msg =
-      new V3LcapMessage(opcode, origin, ps.getUrl(), now, now + timeRemaining,
-			(byte)0, challenge, verifier, null, voteBlocks);
+      new V3LcapMessage(opcode, origin, ps.getUrl(), now,
+			now + timeRemaining, challenge);
     msg.setArchivalId(ps.getAuId());
     msg.setPollVersion(ps.getPollVersion());
     msg.setPluginVersion(ps.getPluginVersion());
@@ -413,10 +421,8 @@ public class V3LcapMessage extends LcapMessage {
 
   /**
    * static method to make a reply message
-   * 
+   *
    * @param trigger the message which trggered the reply
-   * @param hashedContent the hashed content bytes
-   * @param verifier the veerifier bytes
    * @param opcode an opcode for this message
    * @param timeRemaining the time remaining on the poll
    * @param localID the identity of the requestor
@@ -424,22 +430,20 @@ public class V3LcapMessage extends LcapMessage {
    * @throws IOException if message construction failed
    */
   static public V3LcapMessage makeReplyMsg(V3LcapMessage trigger,
-                                           byte[] hashedContent, byte[] verifier,
-                                           int opcode, long timeRemaining,
-                                           PeerIdentity origin)
+					   int opcode, long timeRemaining,
+					   PeerIdentity origin)
       throws IOException {
-    if (hashedContent == null) {
-      log.error("Making a reply message with null hashed content");
-    }
-
     long now = TimeBase.nowMs();
 
-    V3LcapMessage msg = 
-      new V3LcapMessage(opcode, origin, trigger.getTargetUrl(),
+    V3LcapMessage msg =
+      new V3LcapMessage(opcode, origin,
+			trigger.getTargetUrl(),
 			now, now + timeRemaining,
-			trigger.getTimeToLive(), trigger.getChallenge(),
-			hashedContent, verifier,
-			ListUtil.fromIterator(trigger.getVoteBlockIterator()));
+			trigger.getChallenge());
+    List voteBlocks = ListUtil.fromIterator(trigger.getVoteBlockIterator());
+    for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {
+      msg.addVoteBlock((VoteBlock)ix.next());
+    }
     msg.setHashAlgorithm(trigger.getHashAlgorithm());
     msg.setArchivalId(trigger.getArchivalId());
     msg.setPollVersion(trigger.getPollVersion());
@@ -452,7 +456,7 @@ public class V3LcapMessage extends LcapMessage {
   //      will have to change when the underlying structure is
   //      refactored from an in-memory arraylist to a
   //      disk backed structure.
-  //      
+  //
   public String toString() {
     StringBuffer sb = new StringBuffer();
     sb.append("[V3LcapMessage: from ");
@@ -466,205 +470,11 @@ public class V3LcapMessage extends LcapMessage {
       sb.append(getOpcodeString());
       sb.append(" C:");
       sb.append(String.valueOf(B64Code.encode(m_challenge)));
-      sb.append(" V:");
-      sb.append(String.valueOf(B64Code.encode(m_verifier)));
-      if (m_hashed != null) { //can be null for a request message
-	sb.append(" H:");
-	sb.append(String.valueOf(B64Code.encode(m_hashed)));
-      }
       sb.append(" B:");
       sb.append(String.valueOf(m_voteBlocks.size()));
-      if (m_pollVersion > 1)
-	sb.append(" ver " + m_pollVersion);
+      sb.append(" ver " + m_pollVersion);
     }
     sb.append("]");
     return sb.toString();
-  }
-
-  /**
-   * A simple bean representing a V3 vote block -- a file, or part of a file.
-   */
-  public static class VoteBlock {
-    private String m_fileName;
-    private int m_filteredLength;
-    private int m_filteredOffset;
-    private int m_unfilteredLength;
-    private int m_unfilteredOffset;
-    private byte[] m_plainHash;
-    private byte[] m_challengeHash;
-    private byte[] m_proof;
-
-    public VoteBlock() { }
-
-    // Convenience constructor for testing.
-    public VoteBlock(String fileName, int fLength, int fOffset,
-		     int uLength, int uOffset, byte[] plHash,
-		     byte[] chHash, byte[] proof) {
-      m_fileName = fileName;
-      m_filteredLength = fLength;
-      m_filteredOffset = fOffset;
-      m_unfilteredLength = uLength;
-      m_unfilteredOffset = uOffset;
-      m_plainHash = plHash;
-      m_challengeHash = chHash;
-      m_proof = proof;
-    }
-    
-
-    public String getFileName() {
-      return m_fileName;
-    }
-
-    public void setFileName(String s) {
-      m_fileName = s;
-    }
-
-    public int getFilteredLength() {
-      return m_filteredLength;
-    }
-
-    public void setFilteredLength(int i) {
-      m_filteredLength = i;
-    }
-
-    public int getFilteredOffset() {
-      return m_filteredOffset;
-    }
-
-    public void setFilteredOffset(int i) {
-      m_filteredOffset = i;
-    }
-
-    public int getUnfilteredLength() {
-      return m_unfilteredLength;
-    }
-
-    public void setUnfilteredLength(int i) {
-      m_unfilteredLength = i;
-    }
-
-    public int getUnfilteredOffset() {
-      return m_unfilteredOffset;
-    }
-
-    public void setUnfilteredOffset(int i) {
-      m_unfilteredOffset = i;
-    }
-
-    public byte[] getPlainHash() {
-      return m_plainHash;
-    }
-
-    public void setPlainHash(byte[] b) {
-      m_plainHash = b;
-    }
-
-    public byte[] getChallengeHash() {
-      return m_challengeHash;
-    }
-
-    public void setChallengeHash(byte[] b) {
-      m_challengeHash = b;
-    }
-
-    public byte[] getProof() {
-      return m_proof;
-    }
-
-    public void setProof(byte[] b) {
-      m_proof = b;
-    }
-
-    public String toString() {
-      StringBuffer sb = new StringBuffer("[VoteBlock: ");
-      sb.append("fn = " + m_fileName + ", ");
-      sb.append("fl = " + m_filteredLength + ", ");
-      sb.append("fo = " + m_filteredOffset + ", ");
-      sb.append("ul = " + m_unfilteredLength + ", ");
-      sb.append("uo = " + m_unfilteredOffset + ", ");
-      sb.append("ph = " + 
-		m_plainHash == null ? "null" : new String(B64Code.encode(m_plainHash))
-		+ ", ");
-      sb.append("ch = " +
-		m_challengeHash == null ? "null" : new String(B64Code.encode(m_challengeHash))
-		+ ", ");
-      sb.append("pr = " + 
-		m_proof == null ? "null" : new String(B64Code.encode(m_proof))
-		+ " ]");
-      return sb.toString();
-    }
-
-    public boolean equals(Object o) {
-      if (o == this) {
-	return true;
-      }
-
-      if (!(o instanceof VoteBlock)) {
-	return false;
-      }
-
-      VoteBlock vb = (VoteBlock)o;
-      return vb.m_fileName.equals(m_fileName) &&
-	vb.m_filteredLength == m_filteredLength &&
-	vb.m_filteredOffset == m_filteredOffset &&
-	vb.m_unfilteredLength == m_unfilteredLength &&
-	vb.m_unfilteredOffset == m_unfilteredOffset &&
-	Arrays.equals(vb.m_plainHash, m_plainHash) &&
-	Arrays.equals(vb.m_challengeHash, m_challengeHash) &&
-	Arrays.equals(vb.m_proof, m_proof);
-    }
-
-    public int hashCode() {
-      int result = 17;
-      result = 37 * result + m_fileName.hashCode();
-      result = 37 * result + m_filteredLength;
-      result = 37 * result + m_filteredOffset;
-      result = 37 * result + m_unfilteredLength;
-      result = 37 * result + m_unfilteredOffset;
-      for (int i = 0; i < m_plainHash.length; i++) {
-	result = 37 * result + m_plainHash[i];
-      }
-      for (int i = 0; i < m_challengeHash.length; i++) {
-	result = 37 * result + m_challengeHash[i];
-      }
-      for (int i = 0; i < m_proof.length; i++) {
-	result = 37 * result + m_proof[i];
-      }
-      return result;
-    }
-  }
-
-  /**
-   * A Comparator class for V3 VoteBlocks.
-   */
-  public static class VoteBlockComparator implements Comparator {
-    public int compare(Object o1, Object o2) {
-      int filteredLength1 = ((V3LcapMessage.VoteBlock)o1).getFilteredLength();
-      int filteredLength2 = ((V3LcapMessage.VoteBlock)o2).getFilteredLength();
-
-      if (filteredLength1 > filteredLength2) {
-	return 1;
-      } else if (filteredLength2 > filteredLength1) {
-	return -1;
-      }
-
-      // Filtered lengths are equal, compare unfiltered length
-
-      int unfilteredLength1 = ((V3LcapMessage.VoteBlock)o1).getUnfilteredLength();
-      int unfilteredLength2 = ((V3LcapMessage.VoteBlock)o2).getUnfilteredLength();
-
-      if (unfilteredLength1 > unfilteredLength2) {
-	return 1;
-      } else if (unfilteredLength2 > unfilteredLength1) {
-	return -1;
-      }
-
-      // Unfiltered lengths are equal, compare file names
-      
-      String fn1 = ((V3LcapMessage.VoteBlock)o1).getFileName();
-      String fn2 = ((V3LcapMessage.VoteBlock)o2).getFileName();
-
-      return fn1.compareTo(fn2);
-    }
   }
 }

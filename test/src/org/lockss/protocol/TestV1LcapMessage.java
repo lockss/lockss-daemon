@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1LcapMessage.java,v 1.2 2005-03-18 09:09:21 smorabito Exp $
+ * $Id: TestV1LcapMessage.java,v 1.3 2005-03-23 07:01:12 smorabito Exp $
  */
 
 /*
@@ -103,7 +103,6 @@ public class TestV1LcapMessage extends LockssTestCase {
     testmsg.m_multicast = false;
     testmsg.m_hopCount = 2;
 
-    testmsg.m_ttl = 5;
     testmsg.m_challenge = testbytes;
     testmsg.m_verifier = testbytes;
     testmsg.m_hashed = testbytes;
@@ -203,7 +202,6 @@ public class TestV1LcapMessage extends LockssTestCase {
     // now test to see if we got back what we expected
 
     assertTrue(testID == rep_msg.m_originatorID);
-    assertEquals(5, rep_msg.m_ttl);
     assertEquals(V1LcapMessage.CONTENT_POLL_REP, rep_msg.m_opcode);
     assertEquals(testmsg.m_hashAlgorithm, rep_msg.m_hashAlgorithm);
     assertEquals(testmsg.m_pluginVersion, rep_msg.m_pluginVersion);
@@ -252,7 +250,6 @@ public class TestV1LcapMessage extends LockssTestCase {
     V1LcapMessage msg = new V1LcapMessage(msgbytes);
     // now test to see if we got back what we started with
     assertTrue(testID == msg.m_originatorID);
-    assertEquals(5, msg.m_ttl);
     assertEquals(V1LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);
     assertEquals(2, msg.m_hopCount);
@@ -277,7 +274,6 @@ public class TestV1LcapMessage extends LockssTestCase {
     // now test to see if we got back what we started with
     assertEquals(3, msg.m_hopCount);
     assertTrue(testID == msg.m_originatorID);
-    assertEquals(5, msg.m_ttl);
     assertEquals(V1LcapMessage.CONTENT_POLL_REQ, msg.m_opcode);
     assertFalse(msg.m_multicast);
 
