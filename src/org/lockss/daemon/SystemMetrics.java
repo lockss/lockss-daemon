@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.19 2004-01-09 09:15:57 eaalto Exp $
+ * $Id: SystemMetrics.java,v 1.20 2004-01-09 19:57:38 eaalto Exp $
  */
 
 /*
@@ -126,8 +126,8 @@ public class SystemMetrics extends BaseLockssManager {
    * @return hash speed in bytes/ms
    * @throws IOException
    */
-  public int getHashSpeedEstimate(CachedUrlSetHasher hasher,
-				  MessageDigest digest)
+  private int getHashSpeedEstimate(CachedUrlSetHasher hasher,
+                                   MessageDigest digest)
       throws IOException {
     Integer estimate = (Integer)estimateTable.get(digest.getAlgorithm());
     if (estimate==null) {
