@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.30 2003-05-02 21:57:39 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.31 2003-06-03 00:07:36 aalto Exp $
  */
 
 /*
@@ -261,23 +261,37 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
 
     spec1 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
-    spec2 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
 
-    spec1 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com");
     spec2 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
 
     // test for different AUs
-    spec1 = new RangeCachedUrlSetSpec("htpp://www.example.com");
-    spec2 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
     cus1 = new MockCachedUrlSet(mau, spec1);
     cus2 = new MockCachedUrlSet(new MockArchivalUnit(), spec2);
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
+
+    // test for exclusive ranges
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com", "/abc", "/xyz");
+    spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test");
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
+    // this range is inclusive, so should be parent
+    assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
+    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus2, cus1));
+    spec1 = new RangeCachedUrlSetSpec("http://www.example.com", "/abc", "/mno");
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    // this range is exclusive, so should be no relation
+    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
+    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus2, cus1));
   }
 
   public void testConsistencyCheck() throws Exception {
