@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.14 2005-01-08 00:47:05 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.15 2005-01-11 01:55:14 troberts Exp $
  */
 
 /*
@@ -82,6 +82,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
+
   public void setUp() throws Exception {
     // Must set up a plugin manager for these tests, otherwise
     // nullpointerexception is thrown when the CrawlManagerStatus
@@ -133,7 +134,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     status.setEndTime(2);
     status.setNumFetched(3);
     status.setNumParsed(4);
-    status.setAu(new MockArchivalUnit());
+    status.setAu(makeMockAuWithId("test_key"));
 
 
     MockCrawlStatus status2 = new MockCrawlStatus();
@@ -141,9 +142,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     status2.setEndTime(8);
     status2.setNumFetched(9);
     status2.setNumParsed(10);
-    status2.setAu(new MockArchivalUnit());
-    statusSource.setCrawlStatus(ListUtil.list(status), "test_key");
-    statusSource.setCrawlStatus(ListUtil.list(status2), "not_test_key");
+    status2.setAu(makeMockAuWithId("not_test_key"));
+    statusSource.setCrawlStatusList(ListUtil.list(status, status2));
 
 
     cmStatus.populateTable(table);
@@ -155,7 +155,10 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     Map map = (Map)rows.get(0);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
-    assertEquals(new Long(3), map.get(NUM_URLS_FETCHED));
+    StatusTable.Reference ref  =
+      (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
+    assertEquals(new Long(3), ref.getValue());
+    assertEquals("single_crawl_status", ref.getTableName());
     assertEquals(new Long(4), map.get(NUM_URLS_PARSED));
   }
 
@@ -167,17 +170,16 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     status.setEndTime(2);
     status.setNumFetched(3);
     status.setNumParsed(4);
-    status.setAu(new MockArchivalUnit());
+    status.setAu(makeMockAuWithId("id1"));
 
     MockCrawlStatus status2 = new MockCrawlStatus();
     status2.setStartTime(7);
     status2.setEndTime(8);
     status2.setNumFetched(9);
     status2.setNumParsed(10);
-    status2.setAu(new MockArchivalUnit());
-    statusSource.setCrawlStatus(ListUtil.list(status), "id1");
-    statusSource.setCrawlStatus(ListUtil.list(status2), "id2");
-    statusSource.setActiveAus(ListUtil.list("id1", "id2"));
+    status2.setAu(makeMockAuWithId("id2"));
+
+    statusSource.setCrawlStatusList(ListUtil.list(status, status2));
 
     cmStatus.populateTable(table);
     assertEquals(expectedColDescs, table.getColumnDescriptors());
@@ -188,13 +190,19 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     Map map = (Map)rows.get(1);
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
-    assertEquals(new Long(3), map.get(NUM_URLS_FETCHED));
+    StatusTable.Reference ref  =
+      (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
+    assertEquals(new Long(3), ref.getValue());
+    assertEquals("single_crawl_status", ref.getTableName());
     assertEquals(new Long(4), map.get(NUM_URLS_PARSED));
 
     map = (Map)rows.get(0);
     assertEquals(new Long(7), map.get(START_TIME_COL_NAME));
     assertEquals(new Long(8), map.get(END_TIME_COL_NAME));
-    assertEquals(new Long(9), map.get(NUM_URLS_FETCHED));
+
+    ref = (StatusTable.Reference)map.get(NUM_URLS_FETCHED);
+    assertEquals(new Long(9), ref.getValue());
+    assertEquals("single_crawl_status", ref.getTableName());
     assertEquals(new Long(10), map.get(NUM_URLS_PARSED));
   }
 
@@ -205,9 +213,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     MockCrawlStatus status = makeStatus(Crawler.NEW_CONTENT, "Unknown");
     MockCrawlStatus status2 = makeStatus(Crawler.REPAIR, "Unknown");
 
-    statusSource.setCrawlStatus(ListUtil.list(status), "key1");
-    statusSource.setCrawlStatus(ListUtil.list(status2), "key2");
-    statusSource.setActiveAus(ListUtil.list("key1", "key2"));
+    statusSource.setCrawlStatusList(ListUtil.list(status, status2));
 
     cmStatus.populateTable(table);
     assertEquals(expectedColDescs, table.getColumnDescriptors());
@@ -234,10 +240,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     MockCrawlStatus status3 = makeStatus(Crawler.REPAIR,
 					Crawler.STATUS_ERROR);
 
-    statusSource.setCrawlStatus(ListUtil.list(status), "key1");
-    statusSource.setCrawlStatus(ListUtil.list(status2), "key2");
-    statusSource.setCrawlStatus(ListUtil.list(status3), "key3");
-    statusSource.setActiveAus(ListUtil.list("key1", "key2", "key3"));
+    statusSource.setCrawlStatusList(ListUtil.list(status, status2, status3));
 
     cmStatus.populateTable(table);
     assertEquals(expectedColDescs, table.getColumnDescriptors());
@@ -265,10 +268,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 
     MockCrawlStatus status3 = makeStatus(Crawler.REPAIR, 2, 4);
 
-    statusSource.setCrawlStatus(ListUtil.list(status), "key1");
-    statusSource.setCrawlStatus(ListUtil.list(status2), "key2");
-    statusSource.setCrawlStatus(ListUtil.list(status3), "key3");
-    statusSource.setActiveAus(ListUtil.list("key1", "key2", "key3"));
+    statusSource.setCrawlStatusList(ListUtil.list(status, status2, status3));
 
     cmStatus.populateTable(table);
     assertEquals(expectedColDescs, table.getColumnDescriptors());
@@ -288,6 +288,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
     assertEquals(new Long(1), map.get(START_TIME_COL_NAME));
     assertEquals(new Long(2), map.get(END_TIME_COL_NAME));
   }
+
+
 
   private static MockCrawlStatus makeStatus(int type, long start, long end) {
     MockCrawlStatus status = makeStatus(type, "Unknown");

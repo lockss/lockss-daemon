@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlManagerStatusSource.java,v 1.4 2004-10-13 06:21:28 tlipkis Exp $
+ * $Id: MockCrawlManagerStatusSource.java,v 1.5 2005-01-11 01:55:15 troberts Exp $
  */
 
 /*
@@ -39,28 +39,35 @@ import org.lockss.crawler.*;
 
 public class MockCrawlManagerStatusSource
     implements CrawlManager.StatusSource {
-  private Collection activeAus;
-  private Map map = new HashMap();
+  private List crawlStatusList;
   private LockssDaemon daemon;
 
   public MockCrawlManagerStatusSource(LockssDaemon daemon) {
     this.daemon = daemon;
   }
 
-  public Collection getActiveAus() {
-    return activeAus;
+//   public Collection getActiveAus() {
+//     return activeAus;
+//   }
+
+//   public void setActiveAus(Collection activeAus) {
+//     this.activeAus = activeAus;
+//   }
+
+//   public Collection getCrawlStatus(String auid) {
+//     return (Collection) map.get(auid);
+//   }
+
+//   public void setCrawlStatus(Collection crawlStatus, String auid) {
+//     map.put(auid, crawlStatus);
+//   }
+
+  public List getCrawlStatusList() {
+    return crawlStatusList;
   }
 
-  public void setActiveAus(Collection activeAus) {
-    this.activeAus = activeAus;
-  }
-
-  public Collection getCrawlStatus(String auid) {
-    return (Collection) map.get(auid);
-  }
-
-  public void setCrawlStatus(Collection crawlStatus, String auid) {
-    map.put(auid, crawlStatus);
+  public void setCrawlStatusList(List crawlStatusList) {
+    this.crawlStatusList = crawlStatusList;
   }
 
   public LockssDaemon getDaemon() {

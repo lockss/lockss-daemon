@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.79 2005-01-07 01:19:02 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.80 2005-01-11 01:55:14 troberts Exp $
  */
 
 /*
@@ -83,6 +83,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
    * 3)check crawl schedule rules
    */
   private static final String CRAWL_STATUS_TABLE_NAME = "crawl_status_table";
+  private static final String SINGLE_CRAWL_STATUS_TABLE_NAME =
+    "single_crawl_status";
 
   private static final long DEFAULT_NEW_CONTENT_CRAWL_EXPIRATION =
     10 * Constants.DAY;
@@ -111,7 +113,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     18 * Constants.HOUR;
 
   //Tracking crawls for the status info
-  private MultiMap crawlHistory = new MultiHashMap();
+//   private MultiMap crawlHistory = new MultiHashMap();
+  private List crawlList = new ArrayList();
 
   private MultiMap runningCrawls = new MultiHashMap();
 
@@ -132,8 +135,10 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     super.startService();
 
     StatusService statusServ = theDaemon.getStatusService();
-    statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME,
-				      new CrawlManagerStatus(this));
+    CrawlManagerStatus cmStatus = new CrawlManagerStatus(this);
+    statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, cmStatus);
+    statusServ.registerStatusAccessor(SINGLE_CRAWL_STATUS_TABLE_NAME,
+				      new SingleCrawlStatus(cmStatus));
   }
 
   /**
@@ -276,7 +281,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 			  locks.keySet(), percentRepairFromCache);
       CrawlThread crawlThread =
 	new CrawlThread(crawler, cb, cookie, locks.values());
-      crawlHistory.put(au.getAuId(), crawler.getStatus());
+      crawlList.add(crawler.getStatus());
+//       crawlHistory.put(au.getAuId(), crawler.getStatus());
       synchronized (runningCrawls) {
 	runningCrawls.put(au, crawler);
 	crawlThread.start();
@@ -399,7 +405,8 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       CrawlSpec spec = au.getCrawlSpec();
       Crawler crawler = makeNewContentCrawler(au, spec);
       crawlThread = new CrawlThread(crawler, cb, cookie, SetUtil.set(lock));
-      crawlHistory.put(au.getAuId(), crawler.getStatus());
+      crawlList.add(crawler.getStatus());
+//       crawlHistory.put(au.getAuId(), crawler.getStatus());
       synchronized (runningCrawls) {
         runningCrawls.put(au, crawler);
       }
@@ -512,12 +519,17 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   }
 
   //CrawlManager.StartSource methods
-  public Collection getActiveAus() {
-    return crawlHistory.keySet();
+//   public Collection getActiveAus() {
+//     return crawlHistory.keySet();
+//   }
+
+//   public Collection getCrawlStatus(String auid) {
+//     Collection returnColl = (Collection)crawlHistory.get(auid);
+//     return returnColl != null ? returnColl : Collections.EMPTY_LIST;
+//   }
+
+  public List getCrawlStatusList() {
+    return crawlList;
   }
 
-  public Collection getCrawlStatus(String auid) {
-    Collection returnColl = (Collection)crawlHistory.get(auid);
-    return returnColl != null ? returnColl : Collections.EMPTY_LIST;
-  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.19 2005-01-08 00:47:05 troberts Exp $
+ * $Id: CrawlManagerStatus.java,v 1.20 2005-01-11 01:55:14 troberts Exp $
  */
 
 /*
@@ -85,9 +85,16 @@ public class CrawlManagerStatus implements StatusAccessor {
   private CrawlManager.StatusSource statusSource;
   private PluginManager pluginMgr;
 
+  private List statusObjects = new ArrayList();
+  private Map statusIndex = new HashMap();
+
   public CrawlManagerStatus(CrawlManager.StatusSource statusSource) {
     this.statusSource = statusSource;
     this.pluginMgr = statusSource.getDaemon().getPluginManager();
+  }
+
+  protected CrawlManagerStatus() {
+    //for testing
   }
 
   public String getDisplayName() {
@@ -95,42 +102,51 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   private List getRows(String key, boolean includeInternalAus) {
-    if (key == null) {
-      return getAllCrawls(includeInternalAus);
-    }
-
+    List allCrawls = statusSource.getCrawlStatusList();
     List rows = new ArrayList();
-    addCrawls(key, rows, includeInternalAus);
-    return rows;
-  }
-
-  private void addCrawls(String key, List rows, boolean includeInternalAus) {
-    Collection crawls = statusSource.getCrawlStatus(key);
-    if (crawls != null) {
-      for (Iterator it = crawls.iterator(); it.hasNext();) {
+    if (allCrawls != null) {
+      
+      for (Iterator it = allCrawls.iterator(); it.hasNext();) {
 	Crawler.Status crawlStat = (Crawler.Status)it.next();
 	if (!includeInternalAus &&
 	    pluginMgr.isInternalAu(crawlStat.getAu())) {
+	  continue;
+	} else if (key != null && !key.equals(crawlStat.getAu().getAuId())) {
 	  continue;
 	}
 	rows.add(makeRow(crawlStat));
       }
     }
+    return rows;
   }
 
-  private List getAllCrawls(boolean includeInternalAus) {
-    Collection aus = statusSource.getActiveAus();
+//   private void addCrawls(String key, List rows, boolean includeInternalAus) {
+//     Collection crawls = statusSource.getCrawlStatus(key);
+//     if (crawls != null) {
+//       for (Iterator it = crawls.iterator(); it.hasNext();) {
+// 	Crawler.Status crawlStat = (Crawler.Status)it.next();
+// 	if (!includeInternalAus &&
+// 	    pluginMgr.isInternalAu(crawlStat.getAu())) {
+// 	  continue;
+// 	}
+// 	rows.add(makeRow(crawlStat));
+//       }
+//     }
+//   }
+
+//   private List getAllCrawls(boolean includeInternalAus) {
+//     Collection aus = statusSource.getActiveAus();
 
 
-    List crawls = new ArrayList();
-    if (aus != null) {
-      for (Iterator it = aus.iterator(); it.hasNext();) {
-	String auid = (String)it.next();
-	addCrawls(auid, crawls, includeInternalAus);
-      }
-    }
-    return crawls;
-  }
+//     List crawls = new ArrayList();
+//     if (aus != null) {
+//       for (Iterator it = aus.iterator(); it.hasNext();) {
+// 	String auid = (String)it.next();
+// 	addCrawls(auid, crawls, includeInternalAus);
+//       }
+//     }
+//     return crawls;
+//   }
 
 
 
@@ -147,6 +163,13 @@ public class CrawlManagerStatus implements StatusAccessor {
   }
 
   private Map makeRow(Crawler.Status status) {
+    Integer idx = (Integer)statusIndex.get(status);
+    if (idx == null) {
+      statusObjects.add(status);
+      idx = new Integer(statusObjects.size() - 1);
+      statusIndex.put(status, idx);
+    }
+
     String type = getTypeString(status.getType());
     Map row = new HashMap();
     ArchivalUnit au = status.getAu();
@@ -154,7 +177,11 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(CRAWL_TYPE, type);
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
-    row.put(NUM_URLS_FETCHED, new Long(status.getNumFetched()));
+//     row.put(NUM_URLS_FETCHED, new Long(status.getNumFetched()));
+    row.put(NUM_URLS_FETCHED, 
+	    new StatusTable.Reference(new Long(status.getNumFetched()),
+				      "single_crawl_status", idx.toString()));
+
     row.put(NUM_URLS_NOT_MODIFIED, new Long(status.getNumNotModified()));
     row.put(NUM_URLS_PARSED, new Long(status.getNumParsed()));
     row.put(START_URLS,
@@ -178,7 +205,9 @@ public class CrawlManagerStatus implements StatusAccessor {
     }
     String key = table.getKey();
     table.setColumnDescriptors(colDescs);
-    table.setRows(getRows(key, table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS)));
+    boolean includeInternalAus =
+      table.getOptions().get(StatusTable.OPTION_INCLUDE_INTERNAL_AUS); 
+    table.setRows(getRows(key, includeInternalAus));
 
     table.setDefaultSortRules(makeSortRules());
   }
@@ -191,4 +220,9 @@ public class CrawlManagerStatus implements StatusAccessor {
     }
     return sortRules;
   }
+
+  public Crawler.Status getStatusObject(int idx) {
+    return (Crawler.Status)statusObjects.get(idx);
+  }
+
 }

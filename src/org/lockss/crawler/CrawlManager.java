@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.22 2005-01-07 01:19:02 troberts Exp $
+ * $Id: CrawlManager.java,v 1.23 2005-01-11 01:55:14 troberts Exp $
  */
 
 /*
@@ -91,13 +91,18 @@ public interface CrawlManager {
   }
 
   public interface StatusSource {
+//     /**
+//      * return a collection of ArchivalUnits that have crawl history (either
+//      * active or completed crawls)
+//      * @return collection of AUs that have crawl history (either active or
+//      * completed crawls)
+//      */
+//     public Collection getActiveAus();
+
     /**
-     * return a collection of ArchivalUnits that have crawl history (either
-     * active or completed crawls)
-     * @return collection of AUs that have crawl history (either active or
-     * completed crawls)
+     * Return a list of all the Crawler.Status objects for existing crawls
      */
-    public Collection getActiveAus();
+    public List getCrawlStatusList();
 
     /**
      * return a <code>Collection</code> of {@link CrawlManagerStatus}
@@ -108,7 +113,7 @@ public interface CrawlManager {
      * @return <code>Collection</code> of {@link CrawlManagerStatus}
      * objects for <code>au</code>
      */
-    public Collection getCrawlStatus(String auid);
+//     public Collection getCrawlStatus(String auid);
 
     /** Return the dameon instance */
     public LockssDaemon getDaemon();
