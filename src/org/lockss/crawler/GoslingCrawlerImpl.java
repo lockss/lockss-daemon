@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.21 2003-05-01 01:42:55 troberts Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.22 2003-05-07 20:33:49 tal Exp $
  */
 
 /*
@@ -234,7 +234,6 @@ public class GoslingCrawlerImpl implements Crawler {
 	logger.error("Problem caching "+uc+". Ignoring", ioe);
 	wasError = true;
       }
-      au.pause(); //XXX make sure we throw InterruptedExceptions
     }
     else {
       if (!parsedPages.contains(uc.getUrl())) {
