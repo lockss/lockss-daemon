@@ -1,5 +1,5 @@
 /*
- * $Id: ListUtil.java,v 1.8 2003-06-26 22:04:22 eaalto Exp $
+ * $Id: ListUtil.java,v 1.9 2003-07-23 06:41:17 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -197,6 +197,15 @@ public class ListUtil {
 	}
 	return l;
     }
+
+  /** Create a list containing the elements of an iterator */
+  public static List fromIterator(Iterator iterator) {
+    List l = list();
+    while (iterator.hasNext()) {
+      l.add(iterator.next());
+    }
+    return l;
+  }
 
   /** Create a list containing the elements of a comma separated string */
     public static List fromCSV(String csv) {
