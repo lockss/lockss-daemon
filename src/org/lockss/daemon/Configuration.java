@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.40 2003-04-23 20:31:12 tal Exp $
+ * $Id: Configuration.java,v 1.41 2003-04-29 00:13:25 tal Exp $
  */
 
 /*
@@ -534,7 +534,7 @@ public abstract class Configuration {
     String val = get(key);
     try {
       return StringUtil.parseTimeInterval(val);
-    } catch (NumberFormatException e) {
+    } catch (Exception e) {
       throw new InvalidParam("Not a time interval value: " +
 			     key + " = " + val);
     }
@@ -557,7 +557,7 @@ public abstract class Configuration {
     }
     try {
       return StringUtil.parseTimeInterval(val);
-    } catch (NumberFormatException e) {
+    } catch (Exception e) {
       log.warning("getTimeInterval(\'" + key + "\") = \"" + val + "\"");
       return dfault;
     }
