@@ -44,8 +44,8 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     }
   }
 
-  public FilterRulesEditor() {
-    this(null, "", false);
+  public FilterRulesEditor(Frame frame) {
+    this(null, "Filter Rules", false);
   }
 
   private void jbInit() throws Exception {

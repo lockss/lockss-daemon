@@ -2,9 +2,10 @@ package org.lockss.devtools.plugindef;
 
 import javax.swing.UIManager;
 import java.awt.*;
+import javax.swing.*;
 
 public class PluginDefinerApp {
-  boolean packFrame = false;
+  boolean packFrame = true;
 
   //Construct the application
   public PluginDefinerApp() {
@@ -34,7 +35,9 @@ public class PluginDefinerApp {
   //Main method
   public static void main(String[] args) {
     try {
-      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+      //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+      JFrame.setDefaultLookAndFeelDecorated(true);
+      JDialog.setDefaultLookAndFeelDecorated(true);
     }
     catch (Exception e) {
       e.printStackTrace();

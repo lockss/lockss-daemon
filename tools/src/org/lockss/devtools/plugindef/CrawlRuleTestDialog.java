@@ -46,8 +46,8 @@ public class CrawlRuleTestDialog extends JDialog {
     }
   }
 
-  public CrawlRuleTestDialog() {
-    this(null, "", false);
+  public CrawlRuleTestDialog(Frame frame) {
+    this(frame, "", false);
   }
 
   /**

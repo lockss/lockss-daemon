@@ -39,8 +39,8 @@ public class ExceptionsMapEditor extends JDialog implements EDPEditor {
     }
   }
 
-  public ExceptionsMapEditor() {
-    this(null, "", false);
+  public ExceptionsMapEditor(Frame frame) {
+    this(frame, "Exception Mapping", false);
   }
 
   private void jbInit() throws Exception {

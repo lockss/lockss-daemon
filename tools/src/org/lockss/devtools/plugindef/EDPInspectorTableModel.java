@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.3 2004-06-05 02:30:12 clairegriffin Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.4 2004-06-14 20:04:56 clairegriffin Exp $
  */
 
 /*
@@ -105,7 +105,8 @@ public class EDPInspectorTableModel extends AbstractTableModel
   Object[][] data;
   EditableDefinablePlugin m_plugin;
 
-  public EDPInspectorTableModel() {
+  public EDPInspectorTableModel(JFrame parentFrame) {
+    inspectorCellEditor.initEditors(parentFrame);
     int numEntries = inspectorEntries.length;
     data = new Object[numEntries][cols.length];
     for (int i = 0; i < numEntries; i++) {

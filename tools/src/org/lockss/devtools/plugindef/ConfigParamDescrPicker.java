@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.2 2004-06-03 02:44:32 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.3 2004-06-14 20:04:56 clairegriffin Exp $
  */
 
 /*
@@ -90,8 +90,8 @@ public class ConfigParamDescrPicker
     }
   }
 
-  public ConfigParamDescrPicker() {
-    this(null, "", false);
+  public ConfigParamDescrPicker(Frame frame) {
+    this(frame, "Configuration Parameter Picker", false);
   }
 
   private void jbInit() throws Exception {
@@ -281,6 +281,7 @@ public class ConfigParamDescrPicker
     plugin = data.getPlugin();
     initLists();
   }
+
 }
 
 class ConfigParamDescrPicker_RemoveButton_actionAdapter

@@ -52,8 +52,8 @@ public class TimeEditor extends JDialog implements EDPEditor {
     }
   }
 
-  public TimeEditor() {
-    this(null, "", false);
+  public TimeEditor(Frame frame) {
+    this(frame, "Time Editor", false);
   }
 
   private void jbInit() throws Exception {

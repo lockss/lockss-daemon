@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.2 2004-06-05 02:30:12 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.3 2004-06-14 20:04:57 clairegriffin Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class PluginDefiner extends JFrame {
   EditableDefinablePlugin edp = null;
   String location = null;
   String name = null;
-  EDPInspectorTableModel inspectorModel = new EDPInspectorTableModel();
+  EDPInspectorTableModel inspectorModel = new EDPInspectorTableModel(this);
   GridBagLayout gridBagLayout1 = new GridBagLayout();
   JMenu jMenuPlugin = new JMenu();
   JMenuItem rulesTestMenuItem = new JMenuItem();
@@ -117,10 +117,12 @@ public class PluginDefiner extends JFrame {
     jMenuEditDelete.setText("Delete");
     jTable1.setBorder(BorderFactory.createEtchedBorder());
     jTable1.setMinimumSize(new Dimension(50, 200));
+    jTable1.setOpaque(true);
     jTable1.setPreferredSize(new Dimension(360, 300));
     jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
     jTable1.setCellSelectionEnabled(true);
     jTable1.setColumnSelectionAllowed(false);
+    jTable1.setIntercellSpacing(new Dimension(5, 2));
     jTable1.setModel(inspectorModel);
     jTable1.setRowHeight(20);
 
@@ -149,7 +151,7 @@ public class PluginDefiner extends JFrame {
     jMenuEdit.add(jMenuEditCopy);
     jMenuEdit.add(jMenuEditPaste);
     jMenuEdit.add(jMenuEditDelete);
-    contentPane.add(jTable1,   new GridBagConstraints(0, 1, 1, 1, 1.0, 1.0
+    contentPane.add(jTable1,     new GridBagConstraints(0, 1, 1, 1, 1.0, 1.0
             ,GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(2, 2, 2, 2), 360, 0));
     jMenuPlugin.add(expertModeMenuItem);
     jMenuPlugin.addSeparator();

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.3 2004-06-03 02:44:32 clairegriffin Exp $
+ * $Id: CrawlRuleEditor.java,v 1.4 2004-06-14 20:04:56 clairegriffin Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   JComboBox m_kindBox = new JComboBox(CrawlRuleTemplate.RULE_KIND_STRINGS);
   JButton upButton = new JButton();
   JButton dnButton = new JButton();
-
+  private Frame m_frame;
 
   public CrawlRuleEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -76,8 +76,9 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     }
   }
 
-  public CrawlRuleEditor() {
-    this(null, "Crawl Rule Editor", false);
+  public CrawlRuleEditor(Frame frame) {
+    this(frame, "Crawl Rule Editor", false);
+    m_frame = frame;
   }
 
   private void jbInit() throws Exception {
@@ -312,9 +313,10 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     PrintfEditor m_editor;
     EDPCellData m_data;
 
+
     CrawlRuleCellEditor() {
       m_button = makeButton(CMD_STRING);
-      m_editor = new PrintfEditor();
+      m_editor = new PrintfEditor(m_frame, "Crawl Rule");
     }
 
     public Object getCellEditorValue() {

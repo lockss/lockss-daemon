@@ -9,8 +9,7 @@ import javax.swing.border.*;
 
 import org.lockss.daemon.*;
 
-public class PrintfEditor extends JDialog
-    implements EDPEditor {
+public class PrintfEditor extends JDialog implements EDPEditor {
   protected PrintfTemplate originalTemplate;
   protected transient PrintfTemplate editTemplate;
   private EDPCellData m_data;
@@ -44,12 +43,14 @@ public class PrintfEditor extends JDialog
   JPanel InsertPanel = new JPanel();
   GridLayout gridLayout1 = new GridLayout();
 
-  public PrintfEditor() {
+  public PrintfEditor(Frame frame, String title) {
+    super(frame, title, false);
+
     originalTemplate = new PrintfTemplate();
     editTemplate = new PrintfTemplate();
-
     try {
       jbInit();
+      pack();
       initMatches();
     }
     catch (Exception e) {
@@ -76,7 +77,7 @@ public class PrintfEditor extends JDialog
     cancelButton.setText("Cancel");
     cancelButton.addActionListener(new
                                    PrintfTemplateEditor_cancelButton_actionAdapter(this));
-    this.setTitle("Template Editor");
+    this.setTitle(this.getTitle() + " Template Editor");
     formatPanel.setLayout(gridBagLayout1);
     formatLabel.setFont(new java.awt.Font("DialogInput", 0, 12));
     formatLabel.setText("Format String:");
@@ -161,7 +162,6 @@ public class PrintfEditor extends JDialog
                                            new Insets(6, 5, 6, 5), 300, 34));
     this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     buttonGroup.add(cancelButton);
-
   }
 
   void saveButton_actionPerformed(ActionEvent e) {
@@ -298,6 +298,7 @@ public class PrintfEditor extends JDialog
     formatTextArea.setText(template.m_format);
     parameterTextArea.setText(template.getTokenString());
   }
+
 
 }
 

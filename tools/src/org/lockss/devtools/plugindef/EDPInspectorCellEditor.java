@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.3 2004-06-05 02:30:12 clairegriffin Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.4 2004-06-14 20:04:56 clairegriffin Exp $
  */
 
 /*
@@ -50,42 +50,32 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
     implements TableCellEditor, ActionListener {
 
   protected static final String PICKER = "picker";
-  protected static final String TEMPLATE = "template";
+  protected static final String AUNAME = "auname";
+  protected static final String STARTURL = "starturl";
   protected static final String CRAWLRULE = "rules";
   protected static final String FILTERS = "filters";
   protected static final String EXCEPTIONS = "exceptions";
-  protected static final String TIME = "time";
+  protected static final String PAUSETIME = "pausetime";
+  protected static final String CRAWLINTV = "crawlinterval";
 
-  JButton pickerButton = makeButton(PICKER);
-  JButton templateButton = makeButton(TEMPLATE);
-  JButton rulesButton = makeButton(CRAWLRULE);
-  JButton filtersButton = makeButton(FILTERS);
-  JButton exceptionsButton = makeButton(EXCEPTIONS);
-  JButton timeButton = makeButton(TIME);
 
-  ConfigParamDescrPicker paramPicker = new ConfigParamDescrPicker();
-  PrintfEditor templateEditor = new PrintfEditor();
-  CrawlRuleEditor rulesEditor = new CrawlRuleEditor();
-  FilterRulesEditor filtersEditor = new FilterRulesEditor();
-  ExceptionsMapEditor exceptionsEditor = new ExceptionsMapEditor();
-  TimeEditor timeEditor = new TimeEditor();
+  protected static final int PLUGIN_NAME = 0;
+  protected static final int PLUGIN_ID = 1;
+  protected static final int PLUGIN_VERSION = 2;
+  protected static final int PLUGIN_PARAMS = 3;
+  protected static final int PLUGIN_START_URL = 4;
+  protected static final int PLUGIN_AUNAME =5;
+  protected static final int PLUGIN_CRAWLRULES=6;
+  protected static final int PLUGIN_PAUSETIME=7;
+  protected static final int PLUGIN_CRAWLINTV=8;
+  protected static final int PLUGIN_CRAWLDEPTH=9;
+  protected static final int PLUGIN_CRAWLWINDOW=10;
+  protected static final int PLUGIN_FILTER=11;
+  protected static final int PLUGIN_EXCEPTION=12;
+  protected static final int PLUGIN_EXMAP = 13;
+  protected static final int NUMEDITORS=14;
 
-  protected CellEditorEntry[] editorEntries = {
-      null, // plugin name
-      null, // plugin id
-      null, // plugin version
-      new CellEditorEntry(PICKER, paramPicker, pickerButton), // configuration parameters
-      new CellEditorEntry(TEMPLATE,templateEditor,templateButton), // start url template
-      new CellEditorEntry(TEMPLATE,templateEditor,templateButton),  // au name template
-      new CellEditorEntry(CRAWLRULE,rulesEditor,rulesButton), // crawl rules
-      new CellEditorEntry(TIME,timeEditor, timeButton), // pause between fetch
-      new CellEditorEntry(TIME,timeEditor, timeButton), // content crawl interval
-      null, // crawl depth
-      null, // crawl window class
-      new CellEditorEntry(FILTERS,filtersEditor, filtersButton),// filter classes
-      null, // crawl exception class
-      new CellEditorEntry(EXCEPTIONS,exceptionsEditor,exceptionsButton) // exception remappings
-  };
+  protected CellEditorEntry[] editorEntries;
 
   public EDPInspectorCellEditor() {
   }
@@ -94,6 +84,45 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
     return "Edit...";
   }
 
+  public void initEditors(JFrame parentFrame) {
+    editorEntries = new CellEditorEntry[NUMEDITORS];
+
+    // configuration parameters
+    editorEntries[PLUGIN_PARAMS] =
+        new CellEditorEntry(PICKER, new ConfigParamDescrPicker(parentFrame),
+                            makeButton(PICKER));
+    // start url template
+    editorEntries[PLUGIN_START_URL] =
+        new CellEditorEntry(STARTURL,
+                            new PrintfEditor(parentFrame,"Starting Url"),
+                            makeButton(STARTURL));
+    // au name template
+    editorEntries[PLUGIN_AUNAME] =
+        new CellEditorEntry(AUNAME,
+                            new PrintfEditor(parentFrame, "AU Name"),
+                            makeButton(AUNAME));
+    // crawl rules
+    editorEntries[PLUGIN_CRAWLRULES] =
+        new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
+                            makeButton(CRAWLRULE));
+    // pause between fetch
+    editorEntries[PLUGIN_PAUSETIME] =
+        new CellEditorEntry(PAUSETIME, new TimeEditor(parentFrame),
+                            makeButton(PAUSETIME));
+    // content crawl interval
+    editorEntries[PLUGIN_CRAWLINTV] =
+        new CellEditorEntry(CRAWLINTV, new TimeEditor(parentFrame),
+                            makeButton(CRAWLINTV));
+    // filter classes
+    editorEntries[PLUGIN_FILTER] =
+        new CellEditorEntry(FILTERS, new FilterRulesEditor(parentFrame),
+                            makeButton(FILTERS));
+    // exception remappings
+    editorEntries[PLUGIN_EXMAP] =
+        new CellEditorEntry(EXCEPTIONS, new ExceptionsMapEditor(parentFrame),
+                            makeButton(EXCEPTIONS));
+
+  }
   /**
    * getTableCellEditorComponent
    *
@@ -129,7 +158,9 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
     for(int i=0; i < editorEntries.length; i++) {
       if(editorEntries[i] != null &&
          editorEntries[i].m_command.equals(e.getActionCommand())) {
-        editorEntries[i].m_dialog.setVisible(true);
+        JDialog dlg = editorEntries[i].m_dialog;
+        dlg.setVisible(true);
+        dlg.toFront();
         fireEditingStopped();
       }
     }
