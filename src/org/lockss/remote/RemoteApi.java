@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.29 2005-02-09 19:10:17 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.30 2005-02-14 03:30:10 tlipkis Exp $
  */
 
 /*
@@ -729,10 +729,16 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	stat.setStatus("DNE", STATUS_ORDER_LOW);
 	stat.setExplanation("Does not exist");
       } else {
-	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
-					     tc.getConfig());
-	stat.setAuid(auid);
-	if (pluginMgr.getAuFromId(auid) == null) {
+	try {
+	  String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
+					       tc.getConfig());
+	  stat.setAuid(auid);
+	  if (pluginMgr.getAuFromId(auid) == null) {
+	    stat.setStatus("DNE", STATUS_ORDER_LOW);
+	    stat.setExplanation("Does not exist");
+	  }
+	} catch (RuntimeException e) {
+	  log.warning("Can't generate auid for: " + tc, e);
 	  stat.setStatus("DNE", STATUS_ORDER_LOW);
 	  stat.setExplanation("Does not exist");
 	}
@@ -765,16 +771,20 @@ public class RemoteApi extends BaseLockssDaemonManager {
       String plugName = tc.getPluginName();
       PluginProxy pluginp = findPluginProxy(plugName);
       if (pluginp != null) {
-	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
-					     tc.getConfig());
-	if (inactiveAuids.contains(auid)) {
-	  BatchAuStatus.Entry stat =
-	    batchProcessOneAu(false, true, pluginp, auid, tc.getConfig());
-	  stat.setTitleConfig(tc);
-	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
-	    stat.setName(tc.getDisplayName());
+	try {
+	  String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
+					       tc.getConfig());
+	  if (inactiveAuids.contains(auid)) {
+	    BatchAuStatus.Entry stat =
+	      batchProcessOneAu(false, true, pluginp, auid, tc.getConfig());
+	    stat.setTitleConfig(tc);
+	    if ("Unknown".equalsIgnoreCase(stat.getName())) {
+	      stat.setName(tc.getDisplayName());
+	    }
+	    bas.add(stat);
 	  }
-	  bas.add(stat);
+	} catch (RuntimeException e) {
+	  log.warning("Can't generate auid for: " + tc, e);
 	}
       }
     }

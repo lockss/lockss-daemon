@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.7 2005-01-19 04:16:50 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.8 2005-02-14 03:30:11 tlipkis Exp $
  */
 
 /*
@@ -178,10 +178,10 @@ public class TitleConfig {
     return res;
   }
 
-  /** Return true if it the suppied config is consistent with this title,
-   * and there are no editable definitional params.  This is used to
-   * determine whether this title's title is apporpriate to use for an
-   * AU */
+  /** Return true if the supplied config is consistent with this title,
+   * and there are no editable definitional params.
+   * @param config an AU config tree
+   */
   public boolean matchesConfig(Configuration config) {
     if (params == null || config == null) {
       return false;
@@ -198,6 +198,38 @@ public class TitleConfig {
     }
     return true;
   }
+
+  /** Return true if this titleConfig completely defines an Au (<i>ie</i>,
+   * all definitional parameters have non editable values).
+   * @param plugin
+   */
+  public boolean isSingleAu(Plugin plugin) {
+    if (params == null) {
+      return false;
+    }
+    for (Iterator iter = plugin.getAuConfigDescrs().iterator();
+	 iter.hasNext(); ) {
+      ConfigParamDescr reqd = (ConfigParamDescr)iter.next();
+      if (reqd.isDefinitional()) {
+	if (!hasDescr(reqd)) {
+	  return false;
+	}
+      }
+    }
+    return true;
+  }
+
+  private boolean hasDescr(ConfigParamDescr descr) {
+    for (Iterator iter = params.iterator(); iter.hasNext(); ) {
+      ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
+      ConfigParamDescr cpd = cpa.getParamDescr();
+      if (!cpa.isEditable() && descr.equals(cpd)) {
+	return true;
+      }
+    }
+    return false;
+  }
+
 
   /** Generate Properties that will result in this TitleConfig when loaded
    * by BasePlugin */

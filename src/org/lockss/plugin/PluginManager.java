@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.128 2005-02-02 09:42:29 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.129 2005-02-14 03:30:10 tlipkis Exp $
  */
 
 /*
@@ -409,7 +409,11 @@ public class PluginManager
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       if (descr.isDefinitional()) {
 	String key = descr.getKey();
-	props.setProperty(key, auConfig.get(key));
+	String val = auConfig.get(key);
+	if (val == null) {
+	  throw new NullPointerException(key + " is null in: " + auConfig);
+	}
+	props.setProperty(key, val);
       }
     }
     return generateAuId(plugin.getPluginId(), props);

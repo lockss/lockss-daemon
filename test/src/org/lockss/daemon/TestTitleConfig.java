@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.5 2005-01-19 04:16:34 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.6 2005-02-14 03:30:09 tlipkis Exp $
  */
 
 /*
@@ -118,6 +118,33 @@ public class TestTitleConfig extends LockssTestCase {
     // then make a param editable, which should make it not match
     a1.setEditable(true);
     assertFalse(tc1.matchesConfig(config));
+  }
+
+  public void testIsSingleAu() {
+    ConfigParamDescr d1 = new ConfigParamDescr("key1");
+    ConfigParamDescr d2 = new ConfigParamDescr("key2");
+    ConfigParamDescr d3 = new ConfigParamDescr("key3");
+    d3.setDefinitional(false);
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    ConfigParamAssignment a3 = new ConfigParamAssignment(d3, "bar");
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    MockPlugin mp = new MockPlugin();
+    // matching plugin descrs and tc descrs
+    mp.setAuConfigDescrs(ListUtil.list(d1, d2));
+    assertTrue(tc1.isSingleAu(mp));
+    // tc missing required plugin param
+    tc1.setParams(ListUtil.list(a1));
+    assertFalse(tc1.isSingleAu(mp));
+    // tc has the one required, extra plugin param (d3) ok
+    mp.setAuConfigDescrs(ListUtil.list(d1, d3));
+    assertTrue(tc1.isSingleAu(mp));
+    // extra params in tc ok
+    tc1.setParams(ListUtil.list(a1, a2, a3));
+    assertTrue(tc1.isSingleAu(mp));
+    mp.setAuConfigDescrs(ListUtil.list(d1, d2, d3));
+    assertTrue(tc1.isSingleAu(mp));
   }
 
   public void testEqualsHashWithNulls() {
