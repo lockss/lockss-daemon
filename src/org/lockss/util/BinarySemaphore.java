@@ -1,5 +1,5 @@
 /*
- * $Id: BinarySemaphore.java,v 1.6 2003-06-20 22:34:53 claire Exp $
+ * $Id: BinarySemaphore.java,v 1.7 2004-08-31 04:07:12 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,7 +39,7 @@ import java.util.*;
  */
 public class BinarySemaphore {
   private boolean state = false;
-    
+
   /** Wait until the semaphore is full or the timer expires.
    * If the semaphore is already full, return immediately.
    * Use {@link Deadline#expire()} to make this return early.
@@ -49,9 +49,11 @@ public class BinarySemaphore {
    * became full), else false (timer expired).
    * @throws InterruptedException if interrupted while waiting
    */
-  synchronized public boolean take(Deadline timer)
-      throws InterruptedException {
+  public boolean take(Deadline timer) throws InterruptedException {
     if (timer != null) {
+      // Don't call any methods on the timer while holding the semaphore's
+      // lock, or we create a potential deadlock.
+
       final Thread thread = Thread.currentThread();
       Deadline.Callback cb = new Deadline.Callback() {
 	  public void changed(Deadline deadline) {
@@ -59,25 +61,34 @@ public class BinarySemaphore {
 	  }};
       try {
 	timer.registerCallback(cb);
-	while (!state && !timer.expired()) {
-	  this.wait(timer.getSleepTime());
+	while (!timer.expired()) {
+	  long sleep = timer.getSleepTime();
+	  synchronized (this) {
+	    this.wait(sleep);
+	    if (state) {
+	      state = false;
+	      return true;
+	    }
+	  }
 	}
       } finally {
 	timer.unregisterCallback(cb);
       }
     }
-    if (state) {
-      state = false;
-      return true;
-    } else {
-      return false;
+    synchronized (this) {
+      if (state) {
+	state = false;
+	return true;
+      } else {
+	return false;
+      }
     }
   }
 
   /** Fill the semaphore.  If another thread is waiting for the
    * semaphore to be full, it will proceed.  If multiple threads are waiting,
    * one of them will proceed.
-   */     
+   */
   synchronized public void give() {
     state = true;
     this.notifyAll();
