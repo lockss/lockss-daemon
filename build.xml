@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.80 2004-05-21 21:09:51 clairegriffin Exp $
+ $Id: build.xml,v 1.81 2004-06-01 08:29:56 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -197,6 +197,7 @@ Args:
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xmlparser.jar}" />
+    <pathelement path="${oro.jar}" />
   </path>
 
   <path id="run.classpath">
@@ -877,6 +878,21 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     </apply>
     <property name="tagsfile" location="TAGS" />
     <echo>Tags written to ${tagsfile}</echo>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="javap" depends="jar-tests"
+   description="Disassemble the class named by class prop, with additional args in args prop" >
+    <property name="args" value="" />
+    <pathconvert refid="test.run.classpath" property="tmp.test.clspth"
+      targetos="${detected.os}" />
+    <exec executable="javap" dir="${basedir}"
+          failonerror="true" >
+      <arg value="-classpath"/>
+      <arg value="${tmp.test.clspth}"/>
+      <arg line="${args}" />
+      <arg value="${class}"/>
+    </exec>
   </target>
 
   <!-- ==================================================================== -->
