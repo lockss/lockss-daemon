@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.46 2004-01-04 06:47:25 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.47 2004-01-10 01:06:19 eaalto Exp $
  */
 
 /*
@@ -32,18 +32,18 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.base;
 
+import java.io.*;
+import java.net.*;
 import java.util.*;
+import java.text.SimpleDateFormat;
 import gnu.regexp.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.state.*;
-import org.lockss.daemon.*;
-import org.apache.commons.collections.LRUMap;
-import java.text.SimpleDateFormat;
-import java.io.*;
-import java.net.*;
-import org.lockss.daemon.Configuration.*;
 import org.lockss.filter.*;
+import org.lockss.daemon.*;
+import org.lockss.daemon.Configuration.*;
+import org.apache.commons.collections.LRUMap;
 
 /**
  * Abstract base class for ArchivalUnits.
@@ -106,7 +106,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       DEFAULT_NEW_CONTENT_CRAWL_INTERVAL = 2 * Constants.WEEK;
   protected Plugin plugin;
   protected CrawlSpec crawlSpec;
-  private String idStr = null;
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
@@ -130,8 +129,8 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   protected BaseArchivalUnit(Plugin myPlugin) {
     plugin = myPlugin;
-    if(myPlugin != null) {
-      configMap = ( (BasePlugin) myPlugin).getConfigurationMap();
+    if (myPlugin != null) {
+      configMap = ((BasePlugin)myPlugin).getConfigurationMap();
     }
   }
 
@@ -148,7 +147,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       checkLegalConfigChange(config);
     }
     auConfig = config;
-    if(config == null) {
+    if (config == null) {
       throw new ConfigurationException("Null Configuration");
     }
     loadDefiningConfig(config);
@@ -177,15 +176,15 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   void loadDefiningConfig(Configuration config) throws ConfigurationException {
     List descrList = plugin.getAuConfigProperties();
-    for (Iterator it = descrList.iterator(); it.hasNext(); ) {
+    for (Iterator it = descrList.iterator(); it.hasNext();) {
       Object next = it.next();
       // check for simulated plugin configuration
-      if (!(next instanceof ConfigParamDescr)){
+      if (!(next instanceof ConfigParamDescr)) {
         logger.debug("AU config properties are not of type ConfigParamDescr" +
                      "- skipping configuration map storage.");
         return;
       }
-      ConfigParamDescr descr = (ConfigParamDescr) next;
+      ConfigParamDescr descr = (ConfigParamDescr)next;
       String key = descr.getKey();
       switch (descr.getType()) {
         case ConfigParamDescr.TYPE_INT:
@@ -333,7 +332,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (!nextFetchTime.expired()) {
       try {
 	nextFetchTime.sleep();
-      } catch (InterruptedException ie) {
+      } catch (InterruptedException ignore) {
 	// no action
       }
     }
@@ -515,7 +514,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Get the URL for a key from the configuration, check for validity and return
    * it.
-   * @param urlKey the key from the ConfigurationParmDescr of the url to extract
+   * @param descr the ConfigurationParmDescr of the url to extract
    * @param config the Configuration object from which to extract the url
    * @return a URL for the key
    * @throws ConfigurationException thrown if there is no matching entry or
@@ -533,8 +532,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     }
     try {
       url = new URL(urlStr);
-    }
-    catch (MalformedURLException murle) {
+    } catch (MalformedURLException murle) {
       throw new ConfigurationException("Bad URL for " + paramString(descr), murle);
     }
     if (url == null) {
@@ -552,22 +550,19 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   /**
    * Get the integer from the configuration, check for validity and return it.
-   * @param intKey the key from the CofnigurationParamDescr of the integer to
-   * extract.
+   * @param descr the ConfigurationParamDescr of the integer to extract.
    * @param config the Configuration from which to extract the integer
    * @return an int
    * @throws ConfigurationException thrown if the key is not found or the entry
    * is not an int.
    */
-  protected int loadConfigInt(ConfigParamDescr descr,
-			      Configuration config)
+  protected int loadConfigInt(ConfigParamDescr descr, Configuration config)
       throws ConfigurationException {
     String key = descr.getKey();
     int value = -1;
     try {
       value = config.getInt(key);
-    }
-    catch (InvalidParam ip) {
+    } catch (InvalidParam ip) {
       throw new ConfigurationException("Invalid value for " +
 				       paramString(descr) +
 				       ": " + ip.getMessage());
@@ -577,16 +572,14 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
 
   /**
    * Get the string from the configuration.
-   * @param strKey the key from rht ConfigurationParamDescr of the string to
-   * extract
+   * @param descr the ConfigurationParamDescr of the string to extract
    * @param config the Configuration from which to extract the string
    * @return the String
    * @throws ConfigurationException thrown if the configuration does not contain
    * the key.
    */
   protected String loadConfigString(ConfigParamDescr descr,
-				    Configuration config)
-      throws ConfigurationException {
+      Configuration config) throws ConfigurationException {
     String key = descr.getKey();
     String value = null;
     value = config.get(key);
