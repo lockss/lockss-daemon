@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.22 2004-01-31 22:57:12 tlipkis Exp $
+ * $Id: PollSpec.java,v 1.23 2004-03-29 09:16:43 tlipkis Exp $
  */
 
 /*
@@ -125,6 +125,17 @@ public class PollSpec {
     uprBound = msg.getUprBound();
     lwrBound = msg.getLwrBound();
     pollVersion = msg.getPollVersion();
+    cus = getPluginManager().findCachedUrlSet(this);
+  }
+
+  /**
+   * Construct a PollSpec from explicit args
+   */
+  public PollSpec(String auId, String url, String lower, String upper) {
+    this.auId = auId;
+    this.url = url;
+    uprBound = upper;
+    lwrBound = lower;
     cus = getPluginManager().findCachedUrlSet(this);
   }
 
