@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.25 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.26 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -138,12 +138,20 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
     }
   }
 
+  public void testGetUrlStems() throws Exception {
+    String stem1 = "http://www.example.com";
+    HighWireArchivalUnit hwau1 = makeAU(new URL(stem1 + "/"), 10);
+    assertEquals(ListUtil.list(stem1), hwau1.getUrlStems());
+    String stem2 = "http://www.example.com:8080";
+    HighWireArchivalUnit hwau2 = makeAU(new URL(stem2 + "/"), 10);
+    assertEquals(ListUtil.list(stem2), hwau2.getUrlStems());
+  }
+
   public void testGetNewContentCrawlUrls() throws Exception {
     URL url = new URL("http://www.example.com/");
     String expectedStr = "http://www.example.com/lockss-volume10.shtml";
     HighWireArchivalUnit hwau = makeAU(url, 10);
     assertEquals(expectedStr, hwau.getNewContentCrawlUrls().get(0));
-
   }
 
   public void testShouldDoNewContentCrawlTooEarly() throws Exception {

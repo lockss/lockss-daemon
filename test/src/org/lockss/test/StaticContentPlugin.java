@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.8 2003-06-20 22:34:56 claire Exp $
+ * $Id: StaticContentPlugin.java,v 1.9 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,10 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public List getNewContentCrawlUrls() {
+      throw new UnsupportedOperationException("Not implemented");
+    }
+
+    public Collection getUrlStems() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

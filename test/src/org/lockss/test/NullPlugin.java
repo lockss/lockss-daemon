@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.33 2003-06-20 22:34:56 claire Exp $
+ * $Id: NullPlugin.java,v 1.34 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -305,6 +305,10 @@ public class NullPlugin {
 
     public boolean shouldBeCached(String url) {
       return false;
+    }
+
+    public Collection getUrlStems() {
+      return Collections.EMPTY_LIST;
     }
 
     public String getPluginId() {

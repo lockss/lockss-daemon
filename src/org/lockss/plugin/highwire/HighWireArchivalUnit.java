@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.25 2003-06-20 22:34:51 claire Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.26 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -194,6 +194,16 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
     rules.add(new CrawlRules.RE("http://.*/.*/.*", excl));
     logger.debug("Rules: "+rules);
     return new CrawlRules.FirstMatch(rules);
+  }
+
+  public Collection getUrlStems() {
+    try {
+      URL stem = new URL(base.getProtocol(), base.getHost(), base.getPort(),
+			 "");
+      return ListUtil.list(stem.toString());
+    } catch (MalformedURLException e) {
+      return Collections.EMPTY_LIST;
+    }
   }
 
   public long getFetchDelay() {

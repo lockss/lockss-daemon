@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.12 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.13 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -108,4 +108,9 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
   public List getNewContentCrawlUrls() {
     throw new UnsupportedOperationException("Not implemented");
   }
+
+  public Collection getUrlStems() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.11 2003-06-20 22:34:51 claire Exp $
+ * $Id: ArchivalUnit.java,v 1.12 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -84,6 +84,14 @@ public interface ArchivalUnit {
    * @return the {@link CrawlSpec} for the AU
    */
   public CrawlSpec getCrawlSpec();
+
+  /**
+   * Return stems (protocol and host) of URLs in the AU.  Used for external
+   * proxy configuration.  All URLs in the AU much match at least one stem;
+   * it's okay for there to be matching URLs that aren't in the AU.
+   * @return a Collection of URL stems
+   */
+  public Collection getUrlStems();
 
   /**
    * Returns a unique string identifier for the {@link Plugin}.

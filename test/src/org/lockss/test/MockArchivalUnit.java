@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.30 2003-06-30 23:08:16 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.31 2003-07-11 23:31:28 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,10 @@ public class MockArchivalUnit implements ArchivalUnit {
 
   public void setCrawlSpec(CrawlSpec spec) {
     this.spec = spec;
+  }
+
+  public Collection getUrlStems() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public CachedUrlSet getAUCachedUrlSet() {
