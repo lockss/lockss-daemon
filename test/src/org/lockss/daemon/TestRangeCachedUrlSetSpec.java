@@ -1,5 +1,5 @@
 /*
- * $Id: TestRangeCachedUrlSetSpec.java,v 1.9 2003-06-06 05:56:07 tal Exp $
+ * $Id: TestRangeCachedUrlSetSpec.java,v 1.10 2003-06-09 21:47:16 aalto Exp $
  */
 
 /*
@@ -122,10 +122,15 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
   public void testMatchNoRange() {
     RangeCachedUrlSetSpec cuss1 = new RangeCachedUrlSetSpec("foo");
     assertTrue(cuss1.matches("foo"));// not ranged, should match prefix
-    assertTrue(cuss1.matches("foobar"));
+    assertFalse(cuss1.matches("foobar"));
     assertTrue(cuss1.matches("foo/bar"));
     assertFalse(cuss1.matches("fo"));
     assertFalse(cuss1.matches("1foo"));
+
+    cuss1 = new RangeCachedUrlSetSpec("foo/");
+    assertFalse(cuss1.matches("foo"));// not ranged, should match prefix
+    assertFalse(cuss1.matches("foobar"));
+    assertTrue(cuss1.matches("foo/bar"));
   }
 
   public void testMatchLower() {
@@ -381,23 +386,23 @@ public class TestRangeCachedUrlSetSpec extends LockssTestCase {
 
   private CachedUrlSetSpec makeCuss(int ix) {
     switch (ix) {
-    case 1: return new AUCachedUrlSetSpec(); 
-    case 2: return new SingleNodeCachedUrlSetSpec("a"); 
-    case 3: return new SingleNodeCachedUrlSetSpec("a/b"); 
-    case 4: return new SingleNodeCachedUrlSetSpec("a/c"); 
-    case 5: return new RangeCachedUrlSetSpec("a"); 
-    case 6: return new RangeCachedUrlSetSpec("a/b"); 
-    case 7: return new RangeCachedUrlSetSpec("a/c"); 
-    case 8: return new RangeCachedUrlSetSpec("a", null, "/b"); 
-    case 9: return new RangeCachedUrlSetSpec("a", null, "/c"); 
-    case 10: return new RangeCachedUrlSetSpec("a/b", null, "/b"); 
-    case 11: return new RangeCachedUrlSetSpec("a/b", null, "/c"); 
-    case 12: return new RangeCachedUrlSetSpec("a/b", "/a", null); 
-    case 13: return new RangeCachedUrlSetSpec("a/b", "/b", null); 
-    case 14: return new RangeCachedUrlSetSpec("a/b", "/a", "/b"); 
-    case 15: return new RangeCachedUrlSetSpec("a/b", "/a", "/c"); 
-    case 16: return new RangeCachedUrlSetSpec("a/b", "/b", "/b"); 
-    case 17: return new RangeCachedUrlSetSpec("a/b", "/c", "/c"); 
+    case 1: return new AUCachedUrlSetSpec();
+    case 2: return new SingleNodeCachedUrlSetSpec("a");
+    case 3: return new SingleNodeCachedUrlSetSpec("a/b");
+    case 4: return new SingleNodeCachedUrlSetSpec("a/c");
+    case 5: return new RangeCachedUrlSetSpec("a");
+    case 6: return new RangeCachedUrlSetSpec("a/b");
+    case 7: return new RangeCachedUrlSetSpec("a/c");
+    case 8: return new RangeCachedUrlSetSpec("a", null, "/b");
+    case 9: return new RangeCachedUrlSetSpec("a", null, "/c");
+    case 10: return new RangeCachedUrlSetSpec("a/b", null, "/b");
+    case 11: return new RangeCachedUrlSetSpec("a/b", null, "/c");
+    case 12: return new RangeCachedUrlSetSpec("a/b", "/a", null);
+    case 13: return new RangeCachedUrlSetSpec("a/b", "/b", null);
+    case 14: return new RangeCachedUrlSetSpec("a/b", "/a", "/b");
+    case 15: return new RangeCachedUrlSetSpec("a/b", "/a", "/c");
+    case 16: return new RangeCachedUrlSetSpec("a/b", "/b", "/b");
+    case 17: return new RangeCachedUrlSetSpec("a/b", "/c", "/c");
     }
     return null;
   }
