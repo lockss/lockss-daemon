@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.16 2004-08-18 00:14:53 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.17 2004-08-18 07:10:42 tlipkis Exp $
  */
 
 /*
@@ -266,7 +266,7 @@ public class ArchivalUnitStatus extends BaseLockssDaemonManager {
                          NodeManager nodeMan, int startRow) {
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
-      int endRow1 = startRow + nodesToDisplay; // end row + 1
+     int endRow1 = startRow + nodesToDisplay; // end row + 1
 
       if (startRow > 0) {
         // add 'previous'
