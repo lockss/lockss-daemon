@@ -1,5 +1,5 @@
 /*
- * $Id: FuncJetty.java,v 1.1 2003-04-29 23:07:45 aalto Exp $
+ * $Id: FuncJetty.java,v 1.2 2003-04-29 23:22:46 aalto Exp $
  */
 
 /*
@@ -55,6 +55,7 @@ public class FuncJetty extends LockssTestCase {
     props.setProperty("test", "value");
     props.setProperty("test-prop", "prop-%"+propName+"%");
     props.setProperty("prop-%"+propName+"%", "value2");
+    props.setProperty("prop-%test%", "value-%test%");
 
     PropertyTree propTree = new PropertyTree(props);
     // normal property
@@ -65,5 +66,7 @@ public class FuncJetty extends LockssTestCase {
     assertEquals("value2", propTree.getProperty("prop-%"+propName+"%"));
     // uses local value correctly
     assertEquals("prop-value", propTree.getProperty(propName));
+    // doesn't expand for local parameters
+    assertEquals("value-%test%", propTree.getProperty("prop-%test%"));
   }
 }
