@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.29 2002-12-19 01:14:30 claire Exp $
+* $Id: Poll.java,v 1.30 2002-12-19 01:44:23 claire Exp $
  */
 
 /*
@@ -478,6 +478,7 @@ public abstract class Poll implements Serializable {
     public int wtNo;         // The weight of the votes that disagree with us
     public int quorum;       // The # of votes needed to have a quorum
     public ArrayList pollVotes;
+    public String hashAlgorithm; // the algorithm used to hash this poll
 
     VoteTally(int type, long startTime, long duration, int numYes,
               int numNo, int wtYes, int wtNo) {
@@ -490,6 +491,7 @@ public abstract class Poll implements Serializable {
       this.wtNo = wtNo;
       quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
       pollVotes = new ArrayList(quorum * 2);
+      hashAlgorithm = m_msg.getHashAlgorithm();
     }
 
     VoteTally(int type, long duration) {
