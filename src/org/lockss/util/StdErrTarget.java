@@ -28,13 +28,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.text.DateFormat;
+import java.text.*;
 import java.util.Date;
 
 /** A <code>LogTarget</code> implementation that outputs to System.err
  */
 public class StdErrTarget implements LogTarget {
-  static final DateFormat df = DateFormat.getTimeInstance();
+//    static final DateFormat df = DateFormat.getTimeInstance();
+  static final DateFormat df = new SimpleDateFormat("HH:mm:ss.SSS");
 
   // Rather than synchronizing, build whole string and assume a single
   // println will probably not get interleaved with another thread.

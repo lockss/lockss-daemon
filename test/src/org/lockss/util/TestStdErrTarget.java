@@ -1,5 +1,5 @@
 /*
- * $Id: TestStdErrTarget.java,v 1.2 2002-08-31 07:05:15 tal Exp $
+ * $Id: TestStdErrTarget.java,v 1.3 2002-09-22 21:15:48 tal Exp $
  */
 
 /*
@@ -60,8 +60,10 @@ public class TestStdErrTarget extends TestCase{
 			   Logger.LEVEL_ERROR,
 			   errorMessage);
     
+//      RE regExp = 
+//        new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
     RE regExp = 
-      new RE("\\d(\\d)?:\\d\\d:\\d\\d (A|P)M: Error: "+errorMessage+"\n");
+      new RE("\\d(\\d)?:\\d\\d:\\d\\d\\.\\d\\d\\d: Error: "+errorMessage+"\n");
     String debugString = baos.toString();
     assertTrue("Debug string: \""+debugString+"\" not of correct format."+
 	       " Should be <time>: <error-level>: <error message>",
