@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.50 2004-04-13 22:21:25 eaalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.51 2004-04-13 22:22:25 eaalto Exp $
  */
 
 /*
@@ -300,7 +300,7 @@ public class LockssRepositoryImpl
 
     // canonicalize "dir" and "dir/"
     // XXX if these are ever two separate nodes, this is wrong
-    if (canonUrl.endsWith("/")) {
+    if (canonUrl.endsWith(UrlUtil.URL_PATH_SEPARATOR)) {
       canonUrl = canonUrl.substring(0, canonUrl.length()-1);
     }
 
