@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.5 2004-01-07 18:56:14 tlipkis Exp $
+ * $Id: ParamDoc.java,v 1.6 2004-02-09 22:14:15 tlipkis Exp $
  */
 
 /*
@@ -39,11 +39,16 @@ import org.lockss.util.*;
 
 public class ParamDoc {
   static final String blanks = "                                                                                ";
+  static final String WDOG_PATTERN = 
+    org.lockss.daemon.LockssThread.PARAM_NAMED_WDOG_INTERVAL;
+
   private static Logger log = Logger.getLogger("ParamDoc");
 
   static Map paramMap = new TreeMap();
   static Map classMap = new TreeMap();
   static Map paramToSymbol = new HashMap();
+  static Map paramSymToDefaultSym = new HashMap();
+  static Map wdogSymbolToName = new HashMap();
 
   static Map defaultMap = new TreeMap();
 
@@ -155,7 +160,7 @@ public class ParamDoc {
     for (Iterator it = paramToSymbol.keySet().iterator(); it.hasNext();) {
       String paramName = (String)it.next();
       String paramSym = (String)paramToSymbol.get(paramName);
-      String defaultSym = "DEFAULT"+paramSym.substring(5);
+      String defaultSym = (String)paramSymToDefaultSym.get(paramSym);
       Object defaultVal = defaultSymToDefVal.get(defaultSym);
 
       if (defaultVal != null) {
@@ -172,23 +177,26 @@ public class ParamDoc {
     String fname = fld.getName();
     
     if (Modifier.isStatic(fld.getModifiers()) &&
-	String.class == fld.getType() &&
-	fname.startsWith("PARAM_")) {
-      String paramName;
-      try {
-	fld.setAccessible(true);
-	paramName = (String)fld.get(null);
-      } catch (IllegalAccessException e) {
-	log.error(fld.toString(), e);
-	return;
+	String.class == fld.getType()) {
+      String paramName = null;
+      if (fname.startsWith("PARAM_")) {
+	paramName = getParamString(cls, fld, fname);
+	paramSymToDefaultSym.put(fname, "DEFAULT"+fname.substring(5));
+      } else if (fname.startsWith("WDOG_PARAM_")) {
+	paramName = getParamString(cls, fld, fname);
+	paramSymToDefaultSym.put(fname, StringUtil.replaceString(fname, "_PARAM_", "_DEFAULT_"));
+	if (paramName != null) {
+	  paramName =
+	    StringUtil.replaceString(WDOG_PATTERN, "<name>", paramName);
+	  wdogSymbolToName.put(fname, paramName);
+	}
       }
-      if (paramName.indexOf("..") >= 0 && !paramMap.containsKey(paramName)) {
-	System.err.println("*** Suspicious parameter name: " + paramName);
-      }	
-      addParam(paramMap, paramName, cls.getName());
-      addParam(classMap, cls.getName(), paramName);
-      putIfNotDifferent(paramToSymbol, paramName, fname, 
-			"Multiple symbols used to define parameter name ");
+      if (paramName != null) {
+	addParam(paramMap, paramName, cls.getName());
+	addParam(classMap, cls.getName(), paramName);
+	putIfNotDifferent(paramToSymbol, paramName, fname, 
+			  "Multiple symbols used to define parameter name ");
+      }
     }
   }
 
@@ -196,30 +204,46 @@ public class ParamDoc {
 			     Map defaultSymToDefVal) {
     String fname = fld.getName();
     
-    if (Modifier.isStatic(fld.getModifiers()) &&
-	fname.startsWith("DEFAULT_")) {
-      Object defaultVal;
-      try {
-	fld.setAccessible(true);
-	Class cls = fld.getType();
-	if (int.class == cls) {
-	  defaultVal = new Integer(fld.getInt(null));
-	} else if (long.class == cls) {
-	  defaultVal = new Long(fld.getLong(null));
-	} else if (boolean.class == cls) {
-	  defaultVal = new Boolean(fld.getBoolean(null));
-	} else {
-	  defaultVal = fld.get(null);
+    if (Modifier.isStatic(fld.getModifiers())) {
+      if (fname.startsWith("DEFAULT_") || fname.startsWith("WDOG_DEFAULT")) {
+	Object defaultVal;
+	try {
+	  fld.setAccessible(true);
+	  Class cls = fld.getType();
+	  if (int.class == cls) {
+	    defaultVal = new Integer(fld.getInt(null));
+	  } else if (long.class == cls) {
+	    defaultVal = new Long(fld.getLong(null));
+	  } else if (boolean.class == cls) {
+	    defaultVal = new Boolean(fld.getBoolean(null));
+	  } else {
+	    defaultVal = fld.get(null);
+	  }
+	} catch (IllegalAccessException e) {
+	  log.error(fld.toString(), e);
+	  return;
 	}
-      } catch (IllegalAccessException e) {
-	log.error(fld.toString(), e);
-	return;
-      }
 
-      defaultSymToDefVal.put(fname, defaultVal);
+	defaultSymToDefVal.put(fname, defaultVal);
+      }
     }
   }
 
+  static String getParamString(Class cls, Field fld, String fname) {
+    String paramName;
+    try {
+      fld.setAccessible(true);
+      paramName = (String)fld.get(null);
+    } catch (IllegalAccessException e) {
+      log.error(fld.toString(), e);
+      return null;
+    }
+    if (paramName.indexOf("..") >= 0 && !paramMap.containsKey(paramName)) {
+      System.err.println("*** Suspicious parameter name: " + paramName);
+    }
+    return paramName;
+  }
+    
   static void putIfNotDifferent(Map map, Object key, Object val, String msg) {
     Object existingVal = map.get(key);
     if (existingVal != null && !existingVal.equals(val)) {
