@@ -28,6 +28,8 @@ org.lockss.plugin.registry=\
 
 org.lockss.plugin.xmlPlugins=\
     org.lockss.plugin.emls.EmlsPlugin;\
+    org.lockss.plugin.acs.AcsPlugin;\
+    org.lockss.plugin.ieee.IeeePlugin;\
     org.lockss.plugin.histcoop.HistoryCooperativePlugin;\
     org.lockss.plugin.highwire.HighWirePlugin;\
     org.lockss.plugin.projmuse.ProjectMusePlugin;\
