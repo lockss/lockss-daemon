@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.31 2004-11-11 00:40:45 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.32 2005-01-26 00:25:20 troberts Exp $
  */
 
 /*
@@ -629,6 +629,44 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo3, null, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
+  public void testRedirectWritesNoTemp() throws Exception {
+    String content = "oft redirected content";
+    mau.returnRealCachedUrl = true;
+    String redTo1 = "http://somewhere.else/foo";
+    String redTo2 = "http://somewhere.else/bar/x.html";
+    String redTo3 = "http://somewhere.else/bar/y.html";
+    MockConnectionMockBaseUrlCacher muc =
+        new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    PermissionMap map = new PermissionMap();
+    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    muc.setPermissionMap(map);
+    muc.addConnection(makeConn(302, "Moved to Spain", redTo1));
+    muc.addConnection(makeConn(303, "Moved to Spain", redTo2));
+    muc.addConnection(makeConn(307, "Moved to Spain", redTo3));
+    muc.addConnection(makeConn(200, "Ok", null, content));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
+    mau.addUrlToBeCached(redTo1);
+    mau.addUrlToBeCached(redTo2);
+    mau.addUrlToBeCached(redTo3);
+    muc.cache();
+    CIProperties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("location"));
+    //XXX now we're not tracking the interveaning URLs
+    assertEquals(redTo3, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
+
+    // verify all have the correct contents, and all but the last have a
+    // redirected-to header
+    assertCuContents(TEST_URL, content);
+    assertCuNoContent(redTo1);
+    assertCuNoContent(redTo2);
+    assertCuNoContent(redTo3);
+
+    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_REDIRECTED_TO);
+
+    assertCuProperty(TEST_URL, redTo3, CachedUrl.PROPERTY_CONTENT_URL);
+  }
+
   public void testSimpleDirRedirect() throws Exception {
     String content = "oft redirected content";
     mau.returnRealCachedUrl = true;
@@ -697,6 +735,13 @@ public class TestBaseUrlCacher extends LockssTestCase {
     CachedUrl cu = new BaseCachedUrl(mau, url);
     InputStream is = cu.getUnfilteredInputStream();
     assertReaderMatchesString(contents, new InputStreamReader(is));
+  }
+  /**
+   * Assert that this url has no content
+   */
+  void assertCuNoContent(String url) throws IOException {
+    CachedUrl cu = new BaseCachedUrl(mau, url);
+    assertFalse(cu.hasContent());
   }
 
   void assertCuProperty(String url, String expected, String key) {

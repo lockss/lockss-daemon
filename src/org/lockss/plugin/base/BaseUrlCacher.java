@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.42 2004-11-11 00:40:44 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.43 2005-01-26 00:25:19 troberts Exp $
  */
 
 /*
@@ -396,7 +396,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  logger.warning("Max redirects hit, not redirecting " + origUrl +
 			 " past " + fetchUrl);
 	  throw e;
-	} else if (!processRedirectResponse()) {
+	} else if (!processRedirectResponse(e instanceof CacheException.NoRetryPermUrlException)) {
 	  throw e;
 	}
       }
@@ -431,6 +431,7 @@ public class BaseUrlCacher implements UrlCacher {
       }
       conn.setFollowRedirects(isRedirectOption(REDIRECT_OPTION_FOLLOW_AUTO));
       conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+
       if (lastModified != null) {
 	conn.setIfModifiedSince(lastModified);
       }
@@ -450,8 +451,10 @@ public class BaseUrlCacher implements UrlCacher {
 
   /** Handle a single redirect response: determine whether it should be
    * followed and change the state (fetchUrl) to set up for the next fetch.
+   * @param writeToRedirectedUrl boolean indicating whether content should
+   * be written to the redirected URL
    * @return true if another request should be issued, false if not. */
-  private boolean processRedirectResponse() {
+  private boolean processRedirectResponse(boolean writeToRedirectedUrl) {
     //get the location header to find out where to redirect to
     String location = conn.getResponseHeaderValue("location");
     if (location == null) {
@@ -498,10 +501,13 @@ public class BaseUrlCacher implements UrlCacher {
       // (Still. sigh.)  The node should be written only once, so don't add
       // another entry for the slash redirection.
 
-      if (!UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
+      if (writeToRedirectedUrl &&
+	  !UrlUtil.isDirectoryRedirection(fetchUrl, newUrlString)) {
 	if (otherNames == null) {
 	  otherNames = new ArrayList();
 	}
+	//XXX don't add to otherNames if 302, 303, 307
+	//
 	otherNames.add(newUrlString);
       }
       fetchUrl = newUrlString;
