@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.7 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: ProxyIpAccess.java,v 1.8 2004-10-18 03:38:28 tlipkis Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class ProxyIpAccess extends IpAccessControl {
   }
 
   protected void doUpdate() throws IOException {
-    auditPort = 0;
+    auditPort = -1;
     try {
       auditPort = Integer.parseInt(formAuditPort);
     } catch (NumberFormatException e) {
@@ -108,10 +108,7 @@ public class ProxyIpAccess extends IpAccessControl {
 	return;
       }
     }
-    // Must check port legailty even if not enabling, or illegal port could
-    // get into config file, where it would erroneously cause
-    // isLegalAuditPort() to succeed next time.
-    if (!isLegalAuditPort(auditPort)) {
+    if (formAuditEnable && !isLegalAuditPort(auditPort)) {
       errMsg = "Illegal audit proxy port number: " + formAuditPort +
 	", must be >=1024 and not in use";
       displayPage();
@@ -123,8 +120,8 @@ public class ProxyIpAccess extends IpAccessControl {
 
   boolean isLegalAuditPort(int port) {
     return (port >= 1024 &&
-	    (port == Configuration.getIntParam(PARAM_AUDIT_PORT, 0)
-	     || !org.lockss.jetty.JettyManager.isPortInUse(port)));
+	    getLockssApp().getResourceManager().
+	    isTcpPortAvailable(port, AuditProxyManager.SERVER_NAME));
   }
 
   boolean getDefaultAuditEnable() {
@@ -140,26 +137,7 @@ public class ProxyIpAccess extends IpAccessControl {
     if (StringUtil.isNullString(port)) {
       port = Configuration.getParam(PARAM_AUDIT_PORT);
     }
-    if (StringUtil.isNullString(port)) {
-      port = Integer.toString(getProxyPort() + 1);
-    }
     return port;
-  }
-
-  private int proxyPort = -1;
-
-  int getProxyPort() {
-    if (proxyPort == -1) {
-      try {
-	ProxyManager mgr =
-	  (ProxyManager)LockssDaemon.getManager(LockssDaemon.PROXY_MANAGER);
-	proxyPort = mgr.getProxyPort();
-      } catch (IllegalArgumentException e) {
-	proxyPort = Configuration.getIntParam(ProxyManager.PARAM_PORT,
-					      ProxyManager.DEFAULT_PORT);
-      }
-    }
-    return proxyPort;
   }
 
   static final String AUDIT_FOOT =
