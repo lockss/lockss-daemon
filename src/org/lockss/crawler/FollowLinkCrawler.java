@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.18.2.3 2005-01-19 18:05:17 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.18.2.4 2005-01-31 22:57:20 tlipkis Exp $
  */
 
 /*
@@ -401,6 +401,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	    parsedPages.add(uc.getUrl());
 	  }
 	}
+	cu.release();
       }
     } catch (IOException ioe) {
       //XXX handle this better.  Requeue?

@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.61 2005-01-07 09:21:46 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.61.2.1 2005-01-31 22:57:17 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public static final String PARAM_VERSION_TIMEOUT = Configuration.PREFIX +
       "repository.version.timeout";
   static final long DEFAULT_VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
+
+  /** If true, the release method actually closes streams.  If false it
+   * does nothing.  This should go away after the 1.6 release. */
+  public static final String PARAM_ENABLE_RELEASE =
+    Configuration.PREFIX + "repository.enableRelease";
+  public static boolean DEFAULT_ENABLE_RELEASE = true;
+
+  /** If true, input streams are monitored for missed close()s */
+  public static final String PARAM_MONITOR_INPUT_STREAMS =
+    Configuration.PREFIX + "monitor.inputStreams";
+  public static boolean DEFAULT_MONITOR_INPUT_STREAMS = false;
 
   // properties set in the content properties, such as 'current.props'
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
@@ -1328,7 +1339,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
 
     public void release() {
-      is = null;
+      if (is != null) {
+	if (Configuration.getBooleanParam(PARAM_ENABLE_RELEASE,
+					  DEFAULT_ENABLE_RELEASE)) {
+	  try {
+	    is.close();
+	  } catch (IOException e) {
+	    logger.warning("Error closing RNC stream", e);
+	  }
+	}
+	is = null;
+      }
     }
 
     private void assertContent() {
@@ -1343,6 +1364,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	assertContent();
 	try {
 	  is = new BufferedInputStream(new FileInputStream(curInputFile));
+	  if (Configuration.getBooleanParam(PARAM_MONITOR_INPUT_STREAMS,
+					    DEFAULT_MONITOR_INPUT_STREAMS)) {
+	    is = new MonitoringInputStream(is, curInputFile.toString());
+	  }
 	  props = (Properties)curProps.clone();
 	} catch (IOException e) {
 	  logger.error("Couldn't get inputstream for '" +
