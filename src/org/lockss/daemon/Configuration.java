@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.26 2003-03-24 01:22:32 tal Exp $
+ * $Id: Configuration.java,v 1.27 2003-03-28 08:12:22 tal Exp $
  */
 
 /*
@@ -75,6 +75,9 @@ public abstract class Configuration {
   private static OneShotSemaphore haveConfig = new OneShotSemaphore();
 
   private static HandlerThread handlerThread; // reload handler thread
+
+  private static long reloadInterval = 10 * Constants.MINUTE;
+
 
   // Factory to create instance of appropriate class
   static Configuration newConfiguration() {
@@ -186,7 +189,9 @@ public abstract class Configuration {
     }
     Configuration oldConfig = currentConfig;
     if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
-      log.info("Config unchanged, not updated");
+      if (reloadInterval >= 10 * Constants.MINUTE) {
+	log.info("Config unchanged, not updated");
+      }
       return false;
     }
     setCurrentConfig(newConfig);
@@ -648,7 +653,6 @@ public abstract class Configuration {
 
     public void run() {
       Thread.currentThread().setPriority(Thread.MIN_PRIORITY);
-      long reloadInterval = 10 * Constants.MINUTE;
       goOn = true;
 
       // repeat every 10ish minutes until first successful load, then
@@ -661,7 +665,7 @@ public abstract class Configuration {
 	  }
 	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
-	  reloadInterval = getLongParam(PARAM_RELOAD_INTERVAL,
+	  reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
 					30 * Constants.MINUTE);
 	}
 	long reloadRange = reloadInterval/4;
