@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.1 2004-07-12 06:19:53 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.2 2004-07-12 22:37:49 tlipkis Exp $
  */
 
 /*
@@ -69,9 +69,7 @@ public class TinyUi extends JettyManager {
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
 
   public static final String PARAM_USER_AUTH = PREFIX + "access.auth";
-  public static final boolean DEFAULT_USER_AUTH = false;
-  public static final String PARAM_LOGDIR =
-    Configuration.PREFIX +  "platform.logdirectory";
+  public static final boolean DEFAULT_USER_AUTH = true;
 
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
@@ -197,7 +195,7 @@ public class TinyUi extends JettyManager {
 	}
 	setConfiguredPasswords(realm);
 	if (realm.isEmpty()) {
-	  log.warning("No users created, UI is effectively disabled.");
+	  log.warning("No users created, tiny UI is effectively disabled.");
 	}
       }
 
@@ -260,7 +258,7 @@ public class TinyUi extends JettyManager {
     // add handlers in the order they should be tried.
 
     // user authentication handler
-//     setContextAuthHandler(context, realm);
+    setContextAuthHandler(context, realm);
 
     // Create a servlet container
     ServletHandler handler = new ServletHandler();
@@ -321,7 +319,7 @@ public class TinyUi extends JettyManager {
   public static class TinyServlet extends HttpServlet {
     private ServletContext context;
     private String[] tinyData;
-    
+
     public void init(ServletConfig config) throws ServletException {
       super.init(config);
       context = config.getServletContext();
@@ -329,8 +327,8 @@ public class TinyUi extends JettyManager {
     }
 
     public void doGet(HttpServletRequest request,
-                      HttpServletResponse response) 
-        throws ServletException, IOException {
+		      HttpServletResponse response)
+	throws ServletException, IOException {
       Page page= new Page();
       page.title("LOCKSS cache");
       page.addHeader("");
