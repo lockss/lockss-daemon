@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlStatus.java,v 1.6 2005-01-11 01:57:39 troberts Exp $
+ * $Id: MockCrawlStatus.java,v 1.6.2.1 2005-01-19 17:05:25 troberts Exp $
  */
 
 /*
@@ -33,16 +33,22 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import org.lockss.daemon.Crawler;
 import org.lockss.plugin.ArchivalUnit;
-import java.util.Set;
+import java.util.*;
 
 public class MockCrawlStatus extends Crawler.Status {
   private static final int UNDEFINED_TYPE = -1;
 
   String crawlStatus = null;
   boolean crawlEndSignaled = false;
+  long numParsed = 0;
   long numFetched = 0;
+  long numErrors = 0;
+  long numNotModified = 0;
 
   Set urlsFetched = null;
+  Set urlsParsed = null;
+  Set urlsNotModified = null;
+  Map errorUrls = null;
 
 
   public MockCrawlStatus(int type) {
@@ -78,6 +84,59 @@ public class MockCrawlStatus extends Crawler.Status {
       return urlsFetched.size();
     }
     return numFetched;
+  }
+
+  public void setUrlsWithErrors(Map errorUrls) {
+    this.errorUrls = errorUrls;
+  }
+
+  public void setNumUrlsWithErrors(int num) {
+    this.numErrors = num;
+  }
+
+  public void setUrlsNotModified(Set urlsNotModified) {
+    this.urlsNotModified = urlsNotModified;
+  }
+
+  public Set getUrlsParsed() {
+    return urlsParsed;
+  }
+
+  public void setUrlsParsed(Set urlsParsed) {
+    this.urlsParsed = urlsParsed;
+  }
+
+  public Set getUrlsNotModified() {
+    return urlsNotModified;
+  }
+
+  public void setNumNotModified(int numNotModified) {
+    this.numNotModified = numNotModified;
+  }
+
+  public long getNumNotModified() {
+    if (urlsNotModified != null) {
+      return urlsNotModified.size();
+    }
+    return numNotModified;
+  }
+
+  public long getNumUrlsWithErrors() {
+    if (errorUrls != null) {
+      return urlsWithErrors.size();
+    }
+    return numErrors;
+  }
+
+  public long getNumParsed() {
+    if (urlsParsed != null) {
+      return urlsParsed.size();
+    }
+    return numParsed;
+  }
+
+  public Map getUrlsWithErrors() {
+    return errorUrls;
   }
 
   public void setUrlsFetched(Set urlsFetched) {

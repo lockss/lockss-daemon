@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.21 2004-10-13 23:07:38 clairegriffin Exp $
+ * $Id: MockUrlCacher.java,v 1.21.4.1 2005-01-19 17:05:25 troberts Exp $
  */
 
 /*
@@ -156,6 +156,8 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public int cache() throws IOException {
+    int resultCode;
+
     if(cus == null) System.out.println("Warning cache() called with null cus");
     if (cus != null) {
       cus.signalCacheAttempt(url);
@@ -178,6 +180,17 @@ public class MockUrlCacher implements UrlCacher {
 	cus.addCachedUrl(url);
       }
     }
+
+
+    //XXX messy
+    //content already there, so we should be doing a not modified response
+//     if (!forceRefetch && cu.hasContent()) {
+    if (cu.hasContent()) {
+      return CACHE_RESULT_NOT_MODIFIED;
+    } 
+    
+    //otherwise, mark that there is content and send a fetched response
+
     if (cu != null) {
       cu.setExists(true);
     }
