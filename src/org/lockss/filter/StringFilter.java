@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.1 2003-09-10 22:59:02 troberts Exp $
+ * $Id: StringFilter.java,v 1.2 2003-12-11 22:36:50 eaalto Exp $
  */
 
 /*
@@ -38,25 +38,27 @@ import org.lockss.util.*;
 import org.lockss.daemon.Configuration;
 
 public class StringFilter extends Reader {
-  
+
   public static final int DEFAULT_BUFFER_CAPACITY = 256;
   public static final String PARAM_BUFFER_CAPACITY =
     Configuration.PREFIX + "filter.buffer_capacity";
 
   private static Logger logger = Logger.getLogger("StringFilter");
   private boolean streamDone = false;
-  
+
   private int bufferCapacity;
-  
+
   private FilterCharRing charBuffer = null;
   private Reader reader;
   private String str;
+  private String replaceStr = null;
   private boolean ignoreCase = false;
+  private int replaceIndex = -1;
 
   public StringFilter(Reader reader) {
     if (reader == null) {
       throw new IllegalArgumentException("Called with a null reader");
-    } 
+    }
     this.reader = reader;
   }
 
@@ -64,17 +66,36 @@ public class StringFilter extends Reader {
     this(reader);
     if (str == null) {
       throw new IllegalArgumentException("Called with a null string");
-    } 
+    }
     this.str = str;
     init();
   }
 
+  public StringFilter(Reader reader, String origStr, String replaceStr) {
+    this(reader, origStr);
+    this.replaceStr = replaceStr;
+  }
+
+  public void setIgnoreCase(boolean ignoreCase) {
+    this.ignoreCase = ignoreCase;
+  }
+
+  public boolean ignoresCase() {
+    return ignoreCase;
+  }
+
+  /**
+   * Factory method for a series of nested StringFilters, with no replacement.
+   * @param reader the source Reader
+   * @param strList a List of strings to remove
+   * @return the nested StringFilter
+   */
   public static StringFilter makeNestedFilter(Reader reader, List strList) {
     if (reader == null) {
       throw new IllegalArgumentException("Called with a null Reader");
     } else if (strList == null) {
       throw new IllegalArgumentException("Called with a null List");
-    } else if (strList.size() <=0) {
+    } else if (strList.size() <= 0) {
       throw new IllegalArgumentException("Called with a empty list");
     }
     Reader curReader = reader;
@@ -83,6 +104,38 @@ public class StringFilter extends Reader {
     }
     return (StringFilter)curReader;
   }
+
+  /**
+   * Factory method for a series of nested StringFilters, with an array of
+   * strings and their replacements (may be null for none).
+   * @param reader the source Reader
+   * @param strArray 2-dimensional array of strings and replacements
+   * @param ignoreCase set for all the filters
+   * @return the nested StringFilter
+   */
+  public static StringFilter makeNestedFilter(Reader reader,
+                                              String[][] strArray,
+                                              boolean ignoreCase) {
+    if (reader == null) {
+      throw new IllegalArgumentException("Called with a null Reader");
+    } else if (strArray == null) {
+      throw new IllegalArgumentException("Called with a null List");
+    } else if ((strArray.length <= 0) || (strArray[0].length <= 0)) {
+      throw new IllegalArgumentException("Called with a empty array");
+    }
+    Reader curReader = reader;
+    for (int ix = 0; ix < strArray.length; ix++) {
+      String srcStr = strArray[ix][0];
+      String replaceStr = null;
+      if (strArray[ix].length > 1) {
+        replaceStr = strArray[ix][1];
+      }
+      curReader = new StringFilter(curReader, srcStr, replaceStr);
+      ((StringFilter)curReader).setIgnoreCase(ignoreCase);
+    }
+    return (StringFilter)curReader;
+  }
+
 
 //   /**
 //    * @param reader Reader to filter
@@ -141,11 +194,25 @@ public class StringFilter extends Reader {
     } else if (len == 0) {
       return 0;
     }
-    
 
     int numLeft = len;
     boolean matchedStr = false;
-    while (numLeft > 0 && (!streamDone || charBuffer.size() > 0)) {
+    while (numLeft > 0 &&
+           (!streamDone || (charBuffer.size() > 0) || (replaceIndex >=0))) {
+      // if we need to insert the replacement string
+      if (replaceIndex >= 0) {
+        // work through the replace string until either it's done
+        // or we've done enough chars
+        while (numLeft > 0 && (replaceIndex < replaceStr.length())) {
+          outputBuf[off + (len - numLeft)] = replaceStr.charAt(replaceIndex++);
+          numLeft--;
+        }
+        // reset the index if done with the replace string
+        if (replaceIndex >= replaceStr.length()) {
+          replaceIndex = -1;
+        }
+      }
+
       if (charBuffer.size() < str.length()) {
 	streamDone = charBuffer.refillBuffer(reader);
       }
@@ -158,7 +225,7 @@ public class StringFilter extends Reader {
 	charBuffer.remove(outputBuf, off + (len - numLeft), numToReturn);
 	numLeft -= numToReturn;
       } else {
-	int idx =0;
+	int idx = 0;
 	while (!matchedStr && idx < numLeft
 	       && idx+str.length() <= charBuffer.size()) {
 	  matchedStr = charBuffer.startsWith(idx, str, ignoreCase);
@@ -172,10 +239,15 @@ public class StringFilter extends Reader {
 	numLeft -= idx;
 	if (matchedStr) {
 	  charBuffer.clear(str.length());
+          if (replaceStr!=null) {
+            // set the replace index to the start of the string
+            replaceIndex = 0;
+          }
 	  matchedStr = false;
 	}
       }
     }
+
     int numRead = len - numLeft;
     return numRead == 0 ? -1 : numRead;
   }
