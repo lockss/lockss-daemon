@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.23 2003-03-21 19:40:52 tal Exp $
+ * $Id: HashQueue.java,v 1.24 2003-03-24 01:22:32 tal Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ class HashQueue implements Serializable {
   static final String PARAM_PRIORITY = PREFIX + "priority";
   static final String PARAM_STEP_BYTES = PREFIX + "stepBytes";
   static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
-  static final String PARAM_COMPLETED_MAX = PREFIX + "keepCompleted";
+  static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
 
   protected static Logger log = Logger.getLogger("HashQueue");
 

@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: LockssServlet.java,v 1.5 2003-03-19 04:19:50 tal Exp $
+// $Id: LockssServlet.java,v 1.6 2003-03-24 01:22:32 tal Exp $
 // ========================================================================
 
 /*
@@ -53,14 +53,14 @@ public abstract class LockssServlet extends HttpServlet
 
   // Constants
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
-  static final String PARAM_IS_CLUSTER_ADMIN =
-    Configuration.PREFIX + "clusterAdmin";
+//   static final String PARAM_IS_CLUSTER_ADMIN =
+//     Configuration.PREFIX + "clusterAdmin";
   static final String PARAM_CONTACT_ADDR =
-    Configuration.PREFIX + "contactAddr";
+    Configuration.PREFIX + "admin.contactEmail";
   static final String PARAM_PLATFORM_VERSION =
-    Configuration.PREFIX + "floppyVersion";
+    Configuration.PREFIX + "platform.version";
   static final String PARAM_ADMIN_ADDRESS =
-    Configuration.PREFIX + "adminAddress";
+    Configuration.PREFIX + "admin.IPAddress";
 
   static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
 					      160, 160, 0);
@@ -320,7 +320,8 @@ public abstract class LockssServlet extends HttpServlet
 
   // machine predicates
   boolean isClusterAdmin() {
-    return Configuration.getBooleanParam(PARAM_IS_CLUSTER_ADMIN, false);
+    return false;
+//     return Configuration.getBooleanParam(PARAM_IS_CLUSTER_ADMIN, false);
   }
 
   // Called when a servlet doesn't get the parameters it expects/needs

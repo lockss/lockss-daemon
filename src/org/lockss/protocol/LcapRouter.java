@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.2 2003-03-22 03:05:21 tal Exp $
+ * $Id: LcapRouter.java,v 1.3 2003-03-24 01:22:32 tal Exp $
  */
 
 /*
@@ -52,12 +52,12 @@ import org.apache.commons.collections.LRUMap;
  * including forwarding received unicast packets.
  */
 public class LcapRouter extends BaseLockssManager {
-  static final String PREFIX = Configuration.PREFIX + "comm.router";
+  static final String PREFIX = Configuration.PREFIX + "comm.router.";
   static final String SENDRATE_PREFIX = Configuration.PREFIX + "maxSendRate.";
   static final String PARAM_PKTS_PER_INTERVAL = SENDRATE_PREFIX + "packets";
   static final String PARAM_PKT_INTERVAL = SENDRATE_PREFIX + "interval";
   static final String PARAM_BEACON_INTERVAL = PREFIX + "beacon.interval";
-  static final String PARAM_INITIAL_HOPCOUNT = PREFIX + ".maxHopCount";
+  static final String PARAM_INITIAL_HOPCOUNT = PREFIX + "maxHopCount";
 
   static final String PARAM_PROB_PARTNER_ADD =
     PREFIX + "partnerAddProbability";

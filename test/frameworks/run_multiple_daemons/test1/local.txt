@@ -26,3 +26,4 @@ org.lockss.pollspec.auId=localA
 org.lockss.pollspec.url=http://www.example.com
 #org.lockss.pollspec.lwrBound=
 #org.lockss.pollspec.uprBound=
+#org.lockss.hasher.historySize=4
