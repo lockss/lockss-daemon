@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssUrlConnectionPool.java,v 1.1 2004-02-23 09:25:48 tlipkis Exp $
+ * $Id: TestLockssUrlConnectionPool.java,v 1.2 2004-02-27 00:24:47 tlipkis Exp $
  */
 
 /*
@@ -100,6 +100,17 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     pool.setDataTimeout(666);
     assertEquals(444, getConnectionTimeout(client));
     assertEquals(666, getTimeout(client));
+  }
+
+  public void testMultiThreaded() {
+    pool.setMultiThreaded(8, 3);
+    HttpClient client = pool.getHttpClient();
+    HttpConnectionManager mgr = client.getHttpConnectionManager();
+    assertTrue(mgr instanceof MultiThreadedHttpConnectionManager);
+    MultiThreadedHttpConnectionManager mtm = 
+      (MultiThreadedHttpConnectionManager)mgr;
+    assertEquals(8, mtm.getMaxTotalConnections());
+    assertEquals(3, mtm.getMaxConnectionsPerHost());
   }
 
   class MockHttpClient extends HttpClient {
