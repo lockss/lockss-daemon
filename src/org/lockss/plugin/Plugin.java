@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.19 2004-01-27 04:07:10 tlipkis Exp $
+ * $Id: Plugin.java,v 1.20 2004-01-31 22:54:07 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public interface Plugin {
   public String getVersion();
 
   /**
-   * Return the humad-readable name of the plugin
+   * Return the human-readable name of the plugin
    * @return the name
    */
   public String getPluginName();
