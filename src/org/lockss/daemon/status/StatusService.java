@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.3 2003-03-13 23:14:23 troberts Exp $
+ * $Id: StatusService.java,v 1.4 2003-03-14 01:42:15 troberts Exp $
  */
 
 /*
@@ -51,18 +51,18 @@ public interface StatusService {
    * @param tableName name of the table to get
    * @param key object which further specifies the needed table
    * @returns StatusTable object with specified name
-   * @throws  StatusService.Error if there is no status table with 
-   * that name-key combination
+   * @throws  StatusService.NoSuchTableException if there is no status table 
+   * with that name-key combination
    */
-  public StatusTable getTable(String tableName, Object key) 
-      throws StatusService.Error;
+  public StatusTable getTable(String tableName, String key) 
+      throws StatusService.NoSuchTableException;
 
   /**
    * Register a StatusAccessor that knows how to get a table for a certain name
    * @param tableName name of the table that statusAccessor can provide
    * @param statusAccessor StatusAccessor that can provide the specified table
-   * @throws StatusService.RuntimeError if multiple StatusAccessors are 
-   * registered to the same tableName
+   * @throws StatusService.MultpleRegistrationException if multiple 
+   * StatusAccessors are registered to the same tableName
    */
   public void registerStatusAccessor(String tableName, 
  				     StatusAccessor statusAccessor);
@@ -77,17 +77,18 @@ public interface StatusService {
   /**
    * Thrown for various errors related to status queries
    */  
-  public class Error extends Exception {
-    public Error(String msg) {
+  public class NoSuchTableException extends Exception {
+    public NoSuchTableException(String msg) {
       super(msg);
     }
   }
 
   /**
-   * Thrown for errors which we don't expect/intend to catch
+   * Thrown when multiple StatusAccessors are registered for the same 
+   * table name
    */
-  public class RuntimeError extends RuntimeException {
-    public RuntimeError(String msg) {
+  public class MultipleRegistrationException extends RuntimeException {
+    public MultipleRegistrationException(String msg) {
       super(msg);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.3 2003-03-13 23:13:41 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.4 2003-03-14 01:42:15 troberts Exp $
  */
 
 /*
@@ -45,35 +45,37 @@ public interface StatusAccessor {
    * @param key object (such as AUID) designating which table to return 
    * @return List of ColumnDescriptor objects for the fields this 
    * StatusAccessor supplies
-   * @throws StatusService.Error if we get a key that we don't recognize or 
-   * have a table for
+   * @throws StatusService.NoSuchTableException if we get a key that we don't 
+   * recognize or have a table for
    */
-  public List getColumnDescriptors(Object key) throws StatusService.Error;
+  public List getColumnDescriptors(String key) 
+      throws StatusService.NoSuchTableException;
 
   /**
    * Gets the status rows for a specified key
    * @param key string which designates a set of status rows to return
    * @return List of status rows (Maps) for the specified key
-   * @throws StatusService.Error if we get a key that we don't recognize or 
-   * have a table for
+   * @throws StatusService.NoSuchTableException if we get a key that we don't 
+   * recognize or have a table for
    */
-  public List getRows(Object key) throws StatusService.Error;
+  public List getRows(String key) throws StatusService.NoSuchTableException;
 
   /**
    * Gives list of the default sort rules for this status info for a given key
    * @param key key identifying the table for which to get the sort rules
    * @returns list of the default sort rules for this status info
-   * @throws StatusService.Error if we get a key that we don't recognize or 
-   * have a table for
+   * @throws StatusService.NoSuchTableException if we get a key that we don't 
+   * recognize or have a table for
    */
-  public List getDefaultSortRules(Object key) throws StatusService.Error;
+  public List getDefaultSortRules(String key) 
+      throws StatusService.NoSuchTableException;
 
   /**
    * Returns whether this StatusAccessor has status informtion that doesn't
    * require a key.  In other words, can you call 
    * {@link #getColumnDescriptors}, {@link #getRows} or 
    * {@link #getDefaultSortRules} with a null key without getting a 
-   * {@link StatusService.Error}
+   * {@link StatusService.NoSuchTableException}
    * @returns true if this can give status information for a null key
    */
   public boolean requiresKey();

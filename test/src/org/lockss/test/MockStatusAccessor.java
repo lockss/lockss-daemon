@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.4 2003-03-13 23:13:41 troberts Exp $
+ * $Id: MockStatusAccessor.java,v 1.5 2003-03-14 01:42:15 troberts Exp $
  */
 
 /*
@@ -48,32 +48,33 @@ public class MockStatusAccessor implements StatusAccessor {
     defaultSortRules = new HashMap();
   }
 
-  public List getColumnDescriptors(Object key) throws StatusService.Error{
+  public List getColumnDescriptors(String key) 
+      throws StatusService.NoSuchTableException{
     return (List)columnDescriptors.get(key);
   }
 
-  public void setColumnDescriptors(List columnDescriptors, Object key) {
+  public void setColumnDescriptors(List columnDescriptors, String key) {
     this.columnDescriptors.put(key, columnDescriptors);
   }
 
-  public List getRows(Object key) throws StatusService.Error {
+  public List getRows(String key) throws StatusService.NoSuchTableException {
     List list = (List)rows.get(key);
     if (list == null) {
-      throw new StatusService.Error("Bad key: "+key);
+      throw new StatusService.NoSuchTableException("Bad key: "+key);
     }
     return list;
   }
 
-  public void setRows(List rows, Object key) {
+  public void setRows(List rows, String key) {
     this.rows.put(key, rows);
   }
 
-  public List getDefaultSortRules(Object key) {
+  public List getDefaultSortRules(String key) {
     List list = (List)defaultSortRules.get(key);
     return list;
   }
 
-  public void setDefaultSortRules(List sortRules, Object key) {
+  public void setDefaultSortRules(List sortRules, String key) {
     defaultSortRules.put(key, sortRules);
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.1 2003-03-14 00:28:28 troberts Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.2 2003-03-14 01:42:15 troberts Exp $
  */
 
 /*
@@ -72,15 +72,15 @@ public class SimulatedStatusAccessor implements StatusAccessor {
     return sortRules;
   }
 
-  public List getColumnDescriptors(Object key) throws StatusService.Error {
+  public List getColumnDescriptors(String key) {
     return columns;
   }
 
-  public List getRows(Object key) throws StatusService.Error {
+  public List getRows(String key) {
     return rows;
   }
 
-  public List getDefaultSortRules(Object key) throws StatusService.Error {
+  public List getDefaultSortRules(String key) {
     return sortRules;
   }
 

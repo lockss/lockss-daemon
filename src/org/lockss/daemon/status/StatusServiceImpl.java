@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.5 2003-03-14 00:28:01 troberts Exp $
+ * $Id: StatusServiceImpl.java,v 1.6 2003-03-14 01:42:15 troberts Exp $
  */
 
 /*
@@ -50,16 +50,18 @@ public class StatusServiceImpl
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
   }
 
-  public StatusTable getTable(String tableName, Object key) 
-      throws StatusService.Error {
+  public StatusTable getTable(String tableName, String key) 
+      throws StatusService.NoSuchTableException {
     if (tableName == null) {
-      throw new StatusService.Error("Called with null tableName");
+      throw new 
+	StatusService.NoSuchTableException("Called with null tableName");
     }
     StatusAccessor statusAccessor = 
       (StatusAccessor)statusAccessors.get(tableName);
 
     if (statusAccessor == null) {
-      throw new StatusService.Error("Table not found: "+tableName+" "+key);
+      throw new StatusService.NoSuchTableException("Table not found: "
+						   +tableName+" "+key);
     } 
     StatusTable table = 
       new StatusTable(tableName, key, 
@@ -73,8 +75,9 @@ public class StatusServiceImpl
     registerStatusAccessor(String tableName, StatusAccessor statusAccessor){
 
     if (statusAccessors.get(tableName) != null) {
-      throw new StatusService.RuntimeError("Called multiple times for "
-					   +tableName);
+      throw new StatusService.MultipleRegistrationException("Called multiple "
+							    +"times for "
+							    +tableName);
     }
     statusAccessors.put(tableName, statusAccessor);
     logger.info("Registered statusAccessor for table "+tableName);
@@ -123,11 +126,18 @@ public class StatusServiceImpl
       sortRules = ListUtil.list(sortRule);
     }
 
-    public List getColumnDescriptors(Object key) throws StatusService.Error {
+    public List getColumnDescriptors(String key) 
+	throws StatusService.NoSuchTableException {
+      if (key != null) {
+	throw new StatusService.NoSuchTableException("No table for key "+key);
+      }
       return columns;
     }
 
-    public List getRows(Object key) throws StatusService.Error {
+    public List getRows(String key) throws StatusService.NoSuchTableException {
+      if (key != null) {
+	throw new StatusService.NoSuchTableException("No table for key "+key);
+      }
       List tableNames =  getAllTableNames();
       Iterator it = tableNames.iterator();
       List rows = new ArrayList(tableNames.size());
@@ -141,7 +151,11 @@ public class StatusServiceImpl
       return rows;
     }
 
-    public List getDefaultSortRules(Object key) throws StatusService.Error {
+    public List getDefaultSortRules(String key) 
+	throws StatusService.NoSuchTableException {
+      if (key != null) {
+	throw new StatusService.NoSuchTableException("No table for key "+key);
+      }
       return sortRules;
     }
 
