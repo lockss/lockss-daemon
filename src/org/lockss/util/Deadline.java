@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.34 2004-10-08 06:58:40 tlipkis Exp $
+ * $Id: Deadline.java,v 1.35 2004-12-07 08:44:25 tlipkis Exp $
  */
 
 /*
@@ -347,8 +347,10 @@ public class Deadline implements Comparable {
   }
 
   /** Cause the deadline to expire immediately */
-  public synchronized void expire() {
-    expiration.setTime(0);
+  public void expire() {
+    synchronized (this) {
+      expiration.setTime(0);
+    }
     changed();
   }
 
@@ -356,9 +358,11 @@ public class Deadline implements Comparable {
    * Change expiration time to time n.
    * @param millis new expire time
    */
-  public synchronized void expireAt(long millis) {
-    expiration.setTime(millis);
-    duration = millis - nowMs();
+  public void expireAt(long millis) {
+    synchronized (this) {
+      expiration.setTime(millis);
+      duration = millis - nowMs();
+    }
     changed();
   }
 
@@ -366,9 +370,11 @@ public class Deadline implements Comparable {
    * Change expiration time to n milliseconds from now.
    * @param millis new expire interval
    */
-  public synchronized void expireIn(long millis) {
-    expiration.setTime(nowMs() + millis);
-    duration = millis;
+  public void expireIn(long millis) {
+    synchronized (this) {
+      expiration.setTime(nowMs() + millis);
+      duration = millis;
+    }
     changed();
   }
 
@@ -376,7 +382,7 @@ public class Deadline implements Comparable {
    * Add <code>delta</code> milliseconds to the deadline.
    * @param delta new ms to add
    */
-  public synchronized void later(long delta) {
+  public void later(long delta) {
     expireAt(expiration.getTime() + delta);
   }
 
@@ -384,7 +390,7 @@ public class Deadline implements Comparable {
    * Subtract <code>delta</code> from the deadline.
    * @param delta new ms to remove
    */
-  public synchronized void sooner(long delta) {
+  public void sooner(long delta) {
     expireAt(expiration.getTime() - delta);
   }
 
@@ -407,10 +413,13 @@ public class Deadline implements Comparable {
     subscribers.remove(callback);
   }
 
-  /** Call dedlineChanged() method of all sunbscribers   */
-  protected synchronized void changed() {
-    if (subscribers != null) {
-      for (Iterator iter = subscribers.iterator(); iter.hasNext(); ) {
+  /** Call deadlineChanged() method of all sunbscribers.  NB: This must not
+   * be synchronized, nor called from a synchronized method  */
+  protected void changed() {
+    // Make copy so can iterate unsynchronized
+    List subs = getSubscriberSnapshot();
+    if (subs != null) {
+      for (Iterator iter = subs.iterator(); iter.hasNext(); ) {
 	// tk - run these in a separate thread
 	try {
 	  Callback cb = (Callback)iter.next();
@@ -420,6 +429,10 @@ public class Deadline implements Comparable {
 	}
       }
     }
+  }
+
+  private synchronized List getSubscriberSnapshot() {
+    return subscribers == null ? null : new ArrayList(subscribers);
   }
 
   protected static Date now() {
