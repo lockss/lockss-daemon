@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.8 2003-09-05 02:45:20 dshr Exp $
+ * $Id: MBF2.java,v 1.9 2003-09-05 14:41:24 dshr Exp $
  */
 
 /*
@@ -352,9 +352,9 @@ public class MBF2 extends MemoryBoundFunctionSPI {
 	  logger.debug("trace entry " + i + " is " + mbf.trace[i]);
 	}
       }
-      if (mbf.verify && proofFailed)
-	mbf.proof = null;
     }
+    if (mbf.verify && proofFailed)
+      mbf.proof = null;
   }
 
   // Instance initialization
