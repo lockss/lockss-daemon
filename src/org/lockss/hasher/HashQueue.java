@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.39 2003-06-20 22:34:51 claire Exp $
+ * $Id: HashQueue.java,v 1.40 2003-11-11 20:31:49 tlipkis Exp $
  */
 
 /*
@@ -46,18 +46,17 @@ import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 class HashQueue implements Serializable {
-  static final String PREFIX = Configuration.PREFIX + "hasher.";
-  static final String PARAM_PRIORITY = PREFIX + "priority";
-  static final int DEFAULT_PRIORITY = Thread.MIN_PRIORITY;
+  static final String PARAM_PRIORITY = HashService.PARAM_PRIORITY;
+  static final int DEFAULT_PRIORITY = HashService.DEFAULT_PRIORITY;
 
-  static final String PARAM_STEP_BYTES = PREFIX + "stepBytes";
-  static final int DEFAULT_STEP_BYTES = 10000;
+  static final String PARAM_STEP_BYTES = HashService.PARAM_STEP_BYTES;
+  static final int DEFAULT_STEP_BYTES = HashService.DEFAULT_STEP_BYTES;
 
-  static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
-  static final int DEFAULT_NUM_STEPS = 10;
+  static final String PARAM_NUM_STEPS = HashService.PARAM_NUM_STEPS;
+  static final int DEFAULT_NUM_STEPS = HashService.DEFAULT_NUM_STEPS;
 
-  static final String PARAM_COMPLETED_MAX = PREFIX + "historySize";
-  static final int DEFAULT_COMPLETED_MAX = 50;
+  static final String PARAM_COMPLETED_MAX = HashService.PARAM_COMPLETED_MAX;
+  static final int DEFAULT_COMPLETED_MAX = HashService.DEFAULT_COMPLETED_MAX;
 
   protected static Logger log = Logger.getLogger("HashQueue");
 
@@ -91,6 +90,10 @@ class HashQueue implements Serializable {
   // Return head of queue or null if empty
   synchronized Request head() {
     return qlist.isEmpty() ? null : (Request)qlist.getFirst();
+  }
+
+  boolean isIdle() {
+    return qlist.isEmpty();
   }
 
   // scan queue, removing and notifying hashes that have finshed or errored
