@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.3 2002-11-06 00:04:23 aalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.4 2002-11-07 02:15:29 aalto Exp $
  */
 
 /*
@@ -49,15 +49,20 @@ import org.lockss.plugin.*;
 
 public class SimulatedArchivalUnit extends BaseArchivalUnit {
 /**
- * This is the url prefix which the SimAU pretends to be.
+ * This is the url which the Crawler should start at.
  */
-  public static final String SIMULATED_URL = "http://www.example.com";
+  public static final String SIMULATED_URL_START = "http://www.example.com/index.html";
+  /**
+   * This is the root of the url which the SimAU pretends to be.
+   * It is replaced with the actual directory root.
+   */
+  public static final String SIMULATED_URL_ROOT = "http://www.example.com";
 
   private String fileRoot; //root directory for the generated content
   private SimulatedContentGenerator scgen;
 
   public SimulatedArchivalUnit(String new_fileRoot) {
-    super(new CrawlSpec(SIMULATED_URL, null));
+    super(new CrawlSpec(SIMULATED_URL_START, null));
     fileRoot = new_fileRoot;
     scgen = new SimulatedContentGenerator(fileRoot);
   }
@@ -71,16 +76,16 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   public CachedUrl cachedUrlFactory(CachedUrlSet owner, String url) {
-    return new GenericFileCachedUrl(owner, url);
+    return new GenericFileCachedUrl(owner, checkUrlFormat(url));
   }
 
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-    return new SimulatedUrlCacher(owner, url);
+    return new SimulatedUrlCacher(owner, checkUrlFormat(url), fileRoot);
   }
 
   public CachedUrlSet getAUCachedUrlSet() {
     return new GenericFileCachedUrlSet(this,
-               new RECachedUrlSetSpec(SIMULATED_URL));
+               new RECachedUrlSetSpec(SIMULATED_URL_ROOT));
   }
 
   public String getPluginId() {
@@ -135,19 +140,27 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return fileName the mapping result
    */
   public static String mapUrlToContentFileName(String url) {
+    String urlStr = checkUrlFormat(url);
+    urlStr = StringUtil.replaceString(urlStr, SIMULATED_URL_ROOT,
+                             SimulatedContentGenerator.ROOT_NAME);
+    return urlStr;
+  }
+
+  private static String checkUrlFormat(String url) {
     int lastSlashIdx = url.lastIndexOf("/");
     int lastPeriodIdx = url.lastIndexOf(".");
 
-    String fileName = StringUtil.replaceString(url, SIMULATED_URL,
-                                 SimulatedContentGenerator.ROOT_NAME);
-
-    if (lastSlashIdx >= lastPeriodIdx) {
+    if ((lastSlashIdx >= lastPeriodIdx) ||
+        (StringUtil.countOccurences(url, "/")==2)) {
+      StringBuffer buffer = new StringBuffer(url);
       if (!url.endsWith("/")) {
-        fileName += "/";
+        buffer.append("/");
       }
-      fileName += "index.html";
+      buffer.append("index.html");
+      return buffer.toString();
+    } else {
+      return url;
     }
-    return fileName;
   }
 
 }

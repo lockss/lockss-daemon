@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.1 2002-10-25 23:41:17 aalto Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.2 2002-11-07 02:15:29 aalto Exp $
  */
 
 /*
@@ -417,12 +417,7 @@ public class SimulatedContentGenerator {
       if (child.isDirectory()) {
         subLink += File.separator + SimulatedContentGenerator.INDEX_NAME;
       }
-      file_content += "<BR><A HREF=\"" + subLink + "\">" + subLink + "</A>";    // assumes the value of NORMAL_FILE_CONTENT is unchanged
-      // assumes the value of NORMAL_FILE_CONTENT is unchanged
-      // assumes the value of NORMAL_FILE_CONTENT is unchanged
-      // assumes the value of NORMAL_FILE_CONTENT is unchanged
-      // assumes the value of NORMAL_FILE_CONTENT is unchanged
-
+      file_content += "<BR><A HREF=\"" + subLink + "\">" + subLink + "</A>";
     }
     file_content += "</BODY></HTML>";
     return file_content;

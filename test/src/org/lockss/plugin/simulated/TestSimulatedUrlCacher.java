@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.2 2002-11-05 01:49:54 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.3 2002-11-07 02:15:30 aalto Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class TestSimulatedUrlCacher extends TestCase {
   public void testHtmlProperties() {
     String testStr = "http://www.example.com/index.html";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
-        new MockCachedUrlSet(null), testStr);
+        new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("text/html"));
     assertTrue(prop.getProperty("content-url").equals(testStr));
@@ -61,7 +61,7 @@ public class TestSimulatedUrlCacher extends TestCase {
   public void testTextProperties() {
     String testStr = "http://www.example.com/file.txt";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
-        new MockCachedUrlSet(null), testStr);
+        new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("text/plain"));
     assertTrue(prop.getProperty("content-url").equals(testStr));
@@ -69,7 +69,7 @@ public class TestSimulatedUrlCacher extends TestCase {
   public void testPdfProperties() {
     String testStr = "http://www.example.com/file.pdf";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
-        new MockCachedUrlSet(null), testStr);
+        new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("application/pdf"));
     assertTrue(prop.getProperty("content-url").equals(testStr));
@@ -77,7 +77,7 @@ public class TestSimulatedUrlCacher extends TestCase {
   public void testJpegProperties() {
     String testStr = "http://www.example.com/image.jpg";
     SimulatedUrlCacher suc = new SimulatedUrlCacher(
-        new MockCachedUrlSet(null), testStr);
+        new MockCachedUrlSet(null), testStr, "");
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("image/jpeg"));
     assertTrue(prop.getProperty("content-url").equals(testStr));

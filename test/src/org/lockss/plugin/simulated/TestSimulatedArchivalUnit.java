@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedArchivalUnit.java,v 1.2 2002-10-24 02:17:43 aalto Exp $
+ * $Id: TestSimulatedArchivalUnit.java,v 1.3 2002-11-07 02:15:30 aalto Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestSimulatedArchivalUnit extends TestCase {
     //XXX test the changes
   }
   public void testMapUrlToContentFileName(String url) {
-    String testStr = SimulatedArchivalUnit.SIMULATED_URL + "/branch1/branch2";
+    String testStr = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1/branch2";
     String expectedStr = SimulatedContentGenerator.ROOT_NAME + "/branch1/branch2/index.html";
     assertTrue(SimulatedArchivalUnit.mapUrlToContentFileName(testStr).equals(expectedStr));
 

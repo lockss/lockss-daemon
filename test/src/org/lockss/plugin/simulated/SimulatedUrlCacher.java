@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.1 2002-10-25 23:41:17 aalto Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.2 2002-11-07 02:15:30 aalto Exp $
  */
 
 /*
@@ -46,25 +46,48 @@ import org.lockss.plugin.*;
  */
 
 public class SimulatedUrlCacher extends GenericFileUrlCacher {
-  public SimulatedUrlCacher(CachedUrlSet owner, String url) {
+  private String fileRoot;
+  private String contentName = null;
+  private File contentFile = null;
+  private Properties props = null;
+
+  public SimulatedUrlCacher(CachedUrlSet owner, String url, String contentRoot) {
     super(owner, url);
+    this.fileRoot = contentRoot;
   }
 
   public InputStream getUncachedInputStream() {
-    File file = new File(mapUrlToContentFileName());
-    try {
-      if (file.exists()) {
-        return new FileInputStream(file);
+    if (contentFile!=null) {
+      try {
+        return new FileInputStream(contentFile);
+      } catch (FileNotFoundException fnfe) {
+        logger.error("Couldn't find content file '"+contentFile.getAbsolutePath()+"'");
+        return null;
       }
-    } catch (FileNotFoundException fnfe) {
-      fnfe.printStackTrace();
     }
-    return null;
+    if (contentName==null) {
+      StringBuffer buffer = new StringBuffer(fileRoot);
+      if (!fileRoot.endsWith(File.separator)) {
+        buffer.append(File.separator);
+      }
+      buffer.append(mapUrlToContentFileName());
+      contentName = buffer.toString();
+    }
+    contentFile = new File(contentName);
+    try {
+      return new FileInputStream(contentFile);
+    } catch (FileNotFoundException fnfe) {
+      logger.error("Couldn't find content file '"+contentFile.getAbsolutePath()+"'");
+      return null;
+    }
   }
 
 
   public Properties getUncachedProperties() {
-    Properties props = new Properties();
+    if (props!=null) {
+      return props;
+    }
+    props = new Properties();
     String fileName = mapUrlToContentFileName().toLowerCase();
     if (fileName.endsWith(".txt")) {
       props.setProperty("content-type", "text/plain");
