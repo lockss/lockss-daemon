@@ -1,5 +1,5 @@
 /*
-* $Id: MockSystemMetrics.java,v 1.1 2003-09-23 07:43:35 eaalto Exp $
+* $Id: MockSystemMetrics.java,v 1.2 2004-01-09 19:56:58 eaalto Exp $
  */
 
 /*
@@ -53,6 +53,25 @@ public class MockSystemMetrics extends SystemMetrics {
 
   public int getHashSpeed() {
     return hashSpeed;
+  }
+
+  public int getBytesPerMsHashEstimate(CachedUrlSetHasher hasher,
+                                       MessageDigest digest)
+      throws IOException {
+    if (hashSpeed >= 0) {
+      return hashSpeed;
+    } else {
+      return super.getBytesPerMsHashEstimate(hasher, digest);
+    }
+  }
+
+  public int getBytesPerMsHashEstimate()
+      throws NoHashEstimateAvailableException {
+    if (hashSpeed >= 0) {
+      return hashSpeed;
+    } else {
+      return super.getBytesPerMsHashEstimate();
+    }
   }
 
   public int measureHashSpeed(CachedUrlSetHasher hasher, MessageDigest digest)
