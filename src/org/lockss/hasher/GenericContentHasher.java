@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.21 2004-10-06 23:52:54 clairegriffin Exp $
+ * $Id: GenericContentHasher.java,v 1.22 2004-10-13 23:07:17 clairegriffin Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class GenericContentHasher extends GenericHasher {
       switch (curElement.getType()) {
       case CachedUrlSetNode.TYPE_CACHED_URL_SET:
         CachedUrlSet cus = (CachedUrlSet)curElement;
-        cu = au.makeCachedUrl(cus, cus.getUrl());
+        cu = au.makeCachedUrl(cus.getUrl());
         break;
       case CachedUrlSetNode.TYPE_CACHED_URL:
         cu = (CachedUrl)curElement;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.13 2004-09-22 02:45:00 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.14 2004-10-13 23:07:19 clairegriffin Exp $
  */
 
 /*
@@ -69,15 +69,14 @@ public class TestRepairCrawler extends LockssTestCase {
     getMockLockssDaemon().getAlertManager();
 
     mau = new MockArchivalUnit();
+    cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     crawlRule = new MockCrawlRule();
 
     crawlRule.addUrlToCrawl(url1);
 
     spec = new CrawlSpec(startUrls, crawlRule);
-    cus = new MockCachedUrlSet(mau, null);
-    cus.addUrl(url1);
 
-    mau.setAuCachedUrlSet(cus);
+    mau.addUrl(url1);
     mau.setPlugin(new MockPlugin());
 
     List repairUrls = ListUtil.list(url1);
@@ -147,9 +146,9 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl1 = "http://example.com/forcecache1.html";
     String repairUrl2 = "http://example.com/forcecache2.html";
     String repairUrl3 = "http://example.com/forcecache3.html";
-    cus.addUrl(repairUrl1);
-    cus.addUrl(repairUrl2);
-    cus.addUrl(repairUrl3);
+    mau.addUrl(repairUrl1);
+    mau.addUrl(repairUrl2);
+    mau.addUrl(repairUrl3);
     crawlRule.addUrlToCrawl(repairUrl1);
     crawlRule.addUrlToCrawl(repairUrl2);
     crawlRule.addUrlToCrawl(repairUrl3);
@@ -171,11 +170,11 @@ public class TestRepairCrawler extends LockssTestCase {
     String url1 = "http://www.example.com/link1.html";
     String url2 = "http://www.example.com/link2.html";
 
-    cus.addUrl(repairUrl1);
+    mau.addUrl(repairUrl1);
     parser.addUrlSetToReturn(repairUrl1, SetUtil.set(url1, url2, repairUrl2));
-    cus.addUrl(repairUrl2);
-    cus.addUrl(url1);
-    cus.addUrl(url2);
+    mau.addUrl(repairUrl2);
+    mau.addUrl(url1);
+    mau.addUrl(url2);
     crawlRule.addUrlToCrawl(repairUrl1);
     crawlRule.addUrlToCrawl(repairUrl2);
     crawlRule.addUrlToCrawl(url1);
@@ -193,7 +192,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testPluginThrowsRuntimeException() {
     String repairUrl = "http://example.com/forcecache.html";
-    cus.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
+    mau.addUrl(repairUrl, new ExpectedRuntimeException("Test exception"), 0);
     List repairUrls = ListUtil.list(repairUrl);
      crawlRule.addUrlToCrawl(repairUrl);
     spec = new CrawlSpec(startUrls, startUrls, crawlRule, 1);
@@ -388,7 +387,7 @@ public class TestRepairCrawler extends LockssTestCase {
     }
 
     protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
-      MockUrlCacher uc = new MyMockUrlCacher(url);
+      MockUrlCacher uc = new MyMockUrlCacher(url, (MockArchivalUnit)au);
       uc.setForceRefetch(true);
       return uc;
     }
@@ -409,7 +408,7 @@ public class TestRepairCrawler extends LockssTestCase {
       pubLastCall = ++fetchSequence;
 
       //setup so that uc.cache will throw CacheException
-      MockUrlCacher muc = new MockUrlCacher(uc.getUrl());
+      MockUrlCacher muc = new MockUrlCacher(uc.getUrl(), mau);
       muc.setCachingException(new CacheException(),1);
 
       super.fetchFromPublisher(muc);
@@ -439,12 +438,8 @@ public class TestRepairCrawler extends LockssTestCase {
   }
   public class MyMockUrlCacher extends MockUrlCacher {
 
-    public MyMockUrlCacher(String url) {
-      super(url);
-    }
-
-    public MyMockUrlCacher(String url, MockCachedUrlSet cus){
-      super(url, cus);
+    public MyMockUrlCacher(String url, MockArchivalUnit mau) {
+      super(url, mau);
     }
 
     public boolean shouldBeCached(){

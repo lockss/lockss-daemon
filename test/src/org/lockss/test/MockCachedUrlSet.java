@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.48 2004-03-27 02:34:51 eaalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.49 2004-10-13 23:07:38 clairegriffin Exp $
  */
 
 /*
@@ -66,8 +66,6 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private Collection flatSource = null;
   private Collection hashSource = null;
 
-  private Hashtable ucHash = new Hashtable();
-  private Hashtable cuHash = new Hashtable();
 
   private long actualHashDuration;
 
@@ -113,10 +111,13 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean hasContent() {
+    CachedUrl cu = null;
     if (hasContentIsSet) {
       return this.hasContent;
     }
-    CachedUrl cu = (CachedUrl)cuHash.get(getUrl());
+    if(au != null) {
+      cu = au.makeCachedUrl(getUrl());
+    }
     if (cu != null) {
       return cu.hasContent();
     } else {
@@ -233,109 +234,8 @@ public class MockCachedUrlSet implements CachedUrlSet {
     return actualHashDuration;
   }
 
-  // Methods used by the crawler
-
-  public CachedUrl makeCachedUrl(String url) {
-    CachedUrl cu = null;
-    if (cuHash != null) {
-      cu = (CachedUrl)cuHash.get(url);
-      logger.debug(cu+" came from cuHash");
-    } else {
-      logger.debug("cuHash is null, so makeCachedUrl is returning null");
-    }
-    return cu;
-  }
-
- public UrlCacher makeUrlCacher(String url) {
-    UrlCacher uc = null;
-    if (ucHash != null) {
-      uc = (UrlCacher)ucHash.get(url);
-      logger.debug(uc+" came from ucHash");
-    } else {
-      logger.debug("ucHash is null, so makeUrlCacher is returning null");
-    }
-    return uc;
-  }
-
   //methods used to generate proper mock objects
 
-  public void addContent(String url, String content) {
-    MockCachedUrl cu = (MockCachedUrl)makeCachedUrl(url);
-    if (cu != null) {
-      cu.setContent(content);
-    }
-  }
-
-  /**
-   * Sets up a cached url and url cacher for this url
-   * @param url url for which we should set up a CachedUrl and UrlCacher
-   * @param exists whether this url should act like it's already in the cache
-   * @param shouldCache whether this url should say to cache it or not
-   * @param props CIProperties to be associated with this url
-   */
-  public void addUrl(String url, boolean exists, boolean shouldCache,
-		     CIProperties props) {
-    addUrl(url, exists, shouldCache, props, null, 0);
-  }
-
-  private void addUrl(String url, boolean exists, boolean shouldCache,
-		      CIProperties props, Exception cacheException,
-		      int timesToThrow) {
-    MockCachedUrl cu = new MockCachedUrl(url, this);
-//     cu.setContent(source);
-    cu.setProperties(props);
-    cu.setExists(exists);
-
-    MockUrlCacher uc = makeMockUrlCacher(url, this);
-    uc.setShouldBeCached(shouldCache);
-    if (shouldCache && au != null) {
-      au.addUrlToBeCached(url);
-    }
-    uc.setCachedUrl(cu);
-    if (cacheException != null) {
-      if (cacheException instanceof IOException) {
-	uc.setCachingException((IOException)cacheException, timesToThrow);
-      } else if (cacheException instanceof RuntimeException) {
-	uc.setCachingException((RuntimeException)cacheException, timesToThrow);
-      }
-    }
-    logger.debug("Adding "+url+" to cuHash and ucHash");
-
-    cuHash.put(url, cu);
-    ucHash.put(url, uc);
-  }
-
-  protected MockUrlCacher makeMockUrlCacher(String url,
-					    MockCachedUrlSet parent) {
-    return new MockUrlCacher(url, this);
-  }
-
-  /**
-   * To be used when you want to set up a url that will throw an exception
-   * @param url the url
-   * @param cacheException the IOException to throw
-   * @param timesToThrow number of times to throw the exception
-   */
-  public void addUrl(String url,
-		     Exception cacheException, int timesToThrow) {
-    addUrl(url, false, true, new CIProperties(),
-	   cacheException, timesToThrow);
-  }
-
-  /**
-   * Same as above, but with exists defaulting to false, shouldCache to false
-   * and props to "content-type=text/html"
-   * @param url the url
-   */
-  public void addUrl(String url) {
-    addUrl(url, false, true);
-  }
-
-  public void addUrl(String url, boolean exists, boolean shouldCache) {
-    CIProperties props = new CIProperties();
-    props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    addUrl(url, exists, shouldCache, props);
-  }
 
   public String getUrl() {
     if (url != null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.34 2004-10-06 23:52:54 clairegriffin Exp $
+ * $Id: CrawlerImpl.java,v 1.35 2004-10-13 23:07:16 clairegriffin Exp $
  */
 
 /*
@@ -261,8 +261,7 @@ public abstract class CrawlerImpl implements Crawler {
 
     PermissionChecker checker;
     // fetch and cache the permission page
-    CachedUrlSet ownerCus = au.getAuCachedUrlSet();
-    UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
+    UrlCacher uc = makeUrlCacher(permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
 
     InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
@@ -282,7 +281,7 @@ public abstract class CrawlerImpl implements Crawler {
           }
           catch (IOException e) {
             is.close();
-            uc = makeUrlCacher(ownerCus, permissionPage);
+            uc = makeUrlCacher(permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
             is = new BufferedInputStream(uc.getUncachedInputStream());
 	    crawlStatus.signalUrlFetched();
@@ -311,7 +310,7 @@ public abstract class CrawlerImpl implements Crawler {
           }
           catch (IOException e) {
             is.close();
-            uc = makeUrlCacher(ownerCus, permissionPage);
+            uc = makeUrlCacher(permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
             is = new BufferedInputStream(uc.getUncachedInputStream());
 	    crawlStatus.signalUrlFetched();
@@ -342,7 +341,7 @@ public abstract class CrawlerImpl implements Crawler {
   void storePermissionPage(CachedUrlSet ownerCus, String permissionPage)
       throws IOException {
     // XXX can't reuse UrlCacher
-    UrlCacher uc = makeUrlCacher(ownerCus, permissionPage);
+    UrlCacher uc = makeUrlCacher(permissionPage);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW);
     updateCacheStats(uc.cache());
   }
@@ -360,9 +359,9 @@ public abstract class CrawlerImpl implements Crawler {
 
   /** All UrlCachers should be made via this method, so they get their
    * connection pool set. */
-  protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
-    ArchivalUnit au = cus.getArchivalUnit();
-    UrlCacher uc = au.makeUrlCacher(cus, url);
+  protected UrlCacher makeUrlCacher(String url) {
+    UrlCacher uc = au.makeUrlCacher(url);
+    System.out.println("\n" + au +" returned " + uc + " for " + url);
     uc.setConnectionPool(connectionPool);
     //uc.setPermissionMap(permission
     return uc;

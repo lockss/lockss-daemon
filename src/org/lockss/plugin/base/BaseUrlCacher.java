@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.40 2004-10-06 23:52:55 clairegriffin Exp $
+ * $Id: BaseUrlCacher.java,v 1.41 2004-10-13 23:07:18 clairegriffin Exp $
  */
 
 /*
@@ -83,11 +83,12 @@ public class BaseUrlCacher implements UrlCacher {
   private int proxyPort;
   private Properties reqProps;
 
-  public BaseUrlCacher(CachedUrlSet owner, String url) {
-    this.cus = owner;
+  public BaseUrlCacher(ArchivalUnit owner, String url) {
+    //this.cus = owner;
     this.origUrl = url;
     this.fetchUrl = url;
-    au = owner.getArchivalUnit();
+    //au = owner.getArchivalUnit();
+    au = owner;
     Plugin plugin = au.getPlugin();
     repository = plugin.getDaemon().getLockssRepository(au);
     resultMap = ((BasePlugin)plugin).getCacheResultMap();
@@ -143,7 +144,7 @@ public class BaseUrlCacher implements UrlCacher {
    * @return CachedUrl for the content stored.
    */
   public CachedUrl getCachedUrl() {
-    return au.makeCachedUrl(cus, origUrl);
+    return au.makeCachedUrl(origUrl);
   }
 
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
@@ -173,7 +174,7 @@ public class BaseUrlCacher implements UrlCacher {
   public int cache() throws IOException {
     String lastModified = null;
     if (!forceRefetch) {
-      CachedUrl cachedVersion = au.makeCachedUrl(cus, origUrl);
+      CachedUrl cachedVersion = getCachedUrl();
 
       // if it's been cached, get the last modified date and use that
       if ((cachedVersion!=null) && cachedVersion.hasContent()) {

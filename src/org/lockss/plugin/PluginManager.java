@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.115 2004-10-13 01:01:11 smorabito Exp $
+ * $Id: PluginManager.java,v 1.116 2004-10-13 23:07:17 clairegriffin Exp $
  */
 
 /*
@@ -976,7 +976,7 @@ public class PluginManager
       if (au.shouldBeCached(url)) {
 	try {
 	  String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	  CachedUrl cu = au.makeCachedUrl(au.getAuCachedUrlSet(), siteUrl);
+	  CachedUrl cu = au.makeCachedUrl(siteUrl);
 	  if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
 	    best = cu;
 	  }

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedUrlCacher.java,v 1.18 2004-10-06 23:53:05 clairegriffin Exp $
+ * $Id: SimulatedUrlCacher.java,v 1.19 2004-10-13 23:07:24 clairegriffin Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class SimulatedUrlCacher extends BaseUrlCacher {
   private File contentFile = null;
   private CIProperties props = null;
 
-  public SimulatedUrlCacher(CachedUrlSet owner, String url, String contentRoot) {
+  public SimulatedUrlCacher(ArchivalUnit owner, String url, String contentRoot) {
     super(owner, url);
     this.fileRoot = contentRoot;
   }

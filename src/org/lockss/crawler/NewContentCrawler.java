@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.41 2004-10-11 08:09:05 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.42 2004-10-13 23:07:16 clairegriffin Exp $
  */
 
 /*
@@ -102,8 +102,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	}
 
  	if (spec.isIncluded(url)) {
-	  if (!fetchAndParse(url, extractedUrls, parsedPages,
-			     cus, true, true)) {
+	  if (!fetchAndParse(url, extractedUrls, parsedPages, true, true)) {
 	    if (crawlStatus.getCrawlError() == null) {
 	      crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
 	    }

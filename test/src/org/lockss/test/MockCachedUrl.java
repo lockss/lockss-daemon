@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.25 2004-09-08 01:25:47 smorabito Exp $
+ * $Id: MockCachedUrl.java,v 1.26 2004-10-13 23:07:38 clairegriffin Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.*;
  */
 
 public class MockCachedUrl implements CachedUrl {
-  private CachedUrlSet cus;
+  private ArchivalUnit au;
   private String url;
   private InputStream cachedIS;
   private CIProperties cachedProp;
@@ -61,9 +61,9 @@ public class MockCachedUrl implements CachedUrl {
     this.url = url;
   }
 
-  public MockCachedUrl(String url, CachedUrlSet cus) {
+  public MockCachedUrl(String url, ArchivalUnit au) {
     this(url);
-    this.cus = cus;
+    this.au = au;
   }
 
   /**
@@ -71,7 +71,7 @@ public class MockCachedUrl implements CachedUrl {
    *
    * @param url
    * @param file The name of the file to load.
-   * @param isResource If true, load the file name as a 
+   * @param isResource If true, load the file name as a
    * resource.  If false, load as a file.
    */
   public MockCachedUrl(String url, String file, boolean isResource) {
@@ -81,11 +81,7 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public ArchivalUnit getArchivalUnit() {
-    if (cus!=null) {
-      return cus.getArchivalUnit();
-    } else {
-      return null;
-    }
+    return au;
   }
 
   public String getUrl() {
@@ -101,10 +97,6 @@ public class MockCachedUrl implements CachedUrl {
     }
 
     throw new UnsupportedOperationException("Not implemented");
-  }
-
-  public CachedUrlSet getCachedUrlSet() {
-    return cus;
   }
 
   public boolean hasContent() {
@@ -131,7 +123,7 @@ public class MockCachedUrl implements CachedUrl {
 	if (isResource) {
 	  return ClassLoader.getSystemClassLoader().
 	    getResourceAsStream(cachedFile);
-	} else {  
+	} else {
 	  return new FileInputStream(cachedFile);
 	}
       }

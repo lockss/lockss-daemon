@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.15 2004-10-06 23:53:00 clairegriffin Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.16 2004-10-13 23:07:22 clairegriffin Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class TestIeeeArchivalUnit
 
   private void shouldCacheTest(String url, boolean shouldCache,
 			       ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(cus, url);
+    UrlCacher uc = au.makeUrlCacher(url);
     assertEquals(shouldCache, uc.shouldBeCached());
   }
 

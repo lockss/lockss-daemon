@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.20 2004-09-23 03:38:03 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.21 2004-10-13 23:07:38 clairegriffin Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.crawler.PermissionMap;
  */
 
 public class MockUrlCacher implements UrlCacher {
+  private MockArchivalUnit au = null;
   private MockCachedUrlSet cus = null;
   private MockCachedUrl cu;
   private String url;
@@ -61,13 +62,10 @@ public class MockUrlCacher implements UrlCacher {
   private boolean forceRefetch = false;
   private PermissionMap permissionMap;
 
-  public MockUrlCacher(String url){
+  public MockUrlCacher(String url, MockArchivalUnit au){
     this.url = url;
-  }
-
-  public MockUrlCacher(String url, MockCachedUrlSet cus){
-    this(url);
-    this.cus = cus;
+    this.au = au;
+    this.cus = (MockCachedUrlSet)au.getAuCachedUrlSet();
   }
 
   public String getUrl() {
@@ -158,6 +156,7 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public int cache() throws IOException {
+    if(cus == null) System.out.println("Warning cache() called with null cus");
     if (cus != null) {
       cus.signalCacheAttempt(url);
     }

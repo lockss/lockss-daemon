@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrlSet.java,v 1.11 2004-10-06 23:52:58 clairegriffin Exp $
+ * $Id: TestBaseCachedUrlSet.java,v 1.12 2004-10-13 23:07:20 clairegriffin Exp $
  */
 
 /*
@@ -560,12 +560,12 @@ public class TestBaseCachedUrlSet extends LockssTestCase {
       return new BaseCachedUrlSet(this, cuss);
     }
 
-    public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-      return new BaseCachedUrl(owner, url);
+    public CachedUrl makeCachedUrl(String url) {
+      return new BaseCachedUrl(this, url);
     }
 
-    public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-      return new BaseUrlCacher(owner,url);
+    public UrlCacher makeUrlCacher(String url) {
+      return new BaseUrlCacher(this,url);
     }
 
     public FilterRule getFilterRule(String mimeType) {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.56 2004-10-06 23:53:06 clairegriffin Exp $
+ * $Id: MockArchivalUnit.java,v 1.57 2004-10-13 23:07:38 clairegriffin Exp $
  */
 
 /*
@@ -62,11 +62,13 @@ public class MockArchivalUnit implements ArchivalUnit {
   private HashSet urlsToCache = new HashSet();
 
   private Plugin plugin;
+  private Hashtable ucHash = new Hashtable();
+  private Hashtable cuHash = new Hashtable();
 
   private FilterRule filterRule = null;
   private ContentParser parser = null;
   private TypedEntryMap propertyMap = null;
-
+  private static final Logger logger = Logger.getLogger("MockArchivalUnit");
   public MockArchivalUnit(){
   }
 
@@ -92,7 +94,8 @@ public class MockArchivalUnit implements ArchivalUnit {
       return cus;
     } else {
       // else make one
-      return makeCachedUrlSet(new AuCachedUrlSetSpec());
+      cus = makeCachedUrlSet(new AuCachedUrlSetSpec());
+      return cus;
     }
   }
 
@@ -133,12 +136,38 @@ public class MockArchivalUnit implements ArchivalUnit {
     return new MockCachedUrlSet(this, spec);
   }
 
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    return ((MockCachedUrlSet)owner).makeCachedUrl(url);
+  public CachedUrl makeCachedUrl(String url) {
+    CachedUrl cu = null;
+    if (cuHash != null) {
+      cu = (CachedUrl)cuHash.get(url);
+      logger.debug(cu+" came from cuHash");
+    } else {
+      logger.debug("cuHash is null, so makeCachedUrl is returning null");
+    }
+    return cu;
   }
 
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    return ((MockCachedUrlSet)owner).makeUrlCacher(url);
+ public UrlCacher makeUrlCacher(String url) {
+    UrlCacher uc = null;
+    if (ucHash != null) {
+      uc = (UrlCacher)ucHash.get(url);
+      logger.debug(uc+" came from ucHash");
+    } else {
+      logger.debug("ucHash is null, so makeUrlCacher is returning null");
+    }
+    return uc;
+  }
+
+  public void addContent(String url, String content) {
+    MockCachedUrl cu = (MockCachedUrl)makeCachedUrl(url);
+    if (cu != null) {
+      cu.setContent(content);
+    }
+  }
+
+
+  protected MockUrlCacher makeMockUrlCacher(String url) {
+    return new MockUrlCacher(url, this);
   }
 
   /**
@@ -154,21 +183,70 @@ public class MockArchivalUnit implements ArchivalUnit {
     return new MockArchivalUnit(rootSpec);
   }
 
-  // Methods used by the crawler
+  /**
+   * Sets up a cached url and url cacher for this url
+   * @param url url for which we should set up a CachedUrl and UrlCacher
+   * @param exists whether this url should act like it's already in the cache
+   * @param shouldCache whether this url should say to cache it or not
+   * @param props CIProperties to be associated with this url
+   */
+  public void addUrl(String url, boolean exists, boolean shouldCache,
+                     CIProperties props) {
+    addUrl(url, exists, shouldCache, props, null, 0);
+  }
+  /**
+   * To be used when you want to set up a url that will throw an exception
+   * @param url the url
+   * @param cacheException the IOException to throw
+   * @param timesToThrow number of times to throw the exception
+   */
+  public void addUrl(String url,
+                     Exception cacheException, int timesToThrow) {
+    addUrl(url, false, true, new CIProperties(), cacheException, timesToThrow);
+  }
 
-//   public CachedUrlSet makeCachedUrlSet(CachedUrlSetSpec cuss) {
-//     return new MockCachedUrlSet(this, cuss);
-//   }
+  /**
+   * Same as above, but with exists defaulting to false, shouldCache to false
+   * and props to "content-type=text/html"
+   * @param url the url
+   */
+  public void addUrl(String url) {
+    addUrl(url, false, true);
+  }
 
-//   public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-//     // keep functionality from MockCachedUrlSet
-//     return ((MockCachedUrlSet)owner).makeCachedUrl(url);
-//   }
+  public void addUrl(String url, boolean exists, boolean shouldCache) {
+    CIProperties props = new CIProperties();
+    props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
+    addUrl(url, exists, shouldCache, props);
+  }
 
-//   public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-//     // keep functionality from MockCachedUrlSet
-//     return ((MockCachedUrlSet)owner).makeUrlCacher(url);
-//   }
+
+  private void addUrl(String url, boolean exists, boolean shouldCache,
+                      CIProperties props, Exception cacheException,
+                      int timesToThrow) {
+    MockCachedUrl cu = new MockCachedUrl(url, this);
+//     cu.setContent(source);
+    cu.setProperties(props);
+    cu.setExists(exists);
+
+    MockUrlCacher uc = makeMockUrlCacher(url);
+    uc.setShouldBeCached(shouldCache);
+    if (shouldCache) {
+      addUrlToBeCached(url);
+    }
+    uc.setCachedUrl(cu);
+    if (cacheException != null) {
+      if (cacheException instanceof IOException) {
+        uc.setCachingException((IOException)cacheException, timesToThrow);
+      } else if (cacheException instanceof RuntimeException) {
+        uc.setCachingException((RuntimeException)cacheException, timesToThrow);
+      }
+    }
+    logger.info(this + "Adding "+url+" to cuHash and ucHash");
+
+    cuHash.put(url, cu);
+    ucHash.put(url, uc);
+  }
 
   public void addUrlToBeCached(String url) {
     urlsToCache.add(url);

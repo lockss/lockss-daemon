@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.52 2004-09-27 22:38:43 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.53 2004-10-13 23:07:19 clairegriffin Exp $
  */
 
 /*
@@ -396,7 +396,7 @@ public class TestPluginManager extends LockssTestCase {
     minimalConfig();
     String pid = new ThrowingMockPlugin().getPluginId();
     String key = PluginManager.pluginKeyFromId(pid);
-   
+
     assertTrue(mgr.ensurePluginLoaded(key));
     ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
     assertNotNull(mpi);
@@ -427,7 +427,7 @@ public class TestPluginManager extends LockssTestCase {
 				    ConfigurationUtil.fromArgs("foo", "bar"));
     try {
       mgr.setAndSaveAuConfiguration(au3, props);
-      
+
       mgr.deleteAu(au3);
     } catch (Exception e) {
       fail("Deleting AU should not have thrown: " + e);
@@ -588,7 +588,7 @@ public class TestPluginManager extends LockssTestCase {
     assertNull(mgr.findMostRecentCachedUrl(url1));
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
     MockCachedUrlSet mcuss = new MockCachedUrlSet(au1, cuss);
-    mcuss.addUrl(url1, true, true, null);
+    au1.addUrl(url1, true, true, null);
     au1.setAuCachedUrlSet(mcuss);
     CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
     assertNotNull(cu);
@@ -623,7 +623,7 @@ public class TestPluginManager extends LockssTestCase {
     // create mock structure so that url0 exists with content
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
     MockCachedUrlSet mcuss = new MockCachedUrlSet(mau, cuss);
-    mcuss.addUrl(url0, true, true, null);
+    mau.addUrl(url0, true, true, null);
     mau.setAuCachedUrlSet(mcuss);
     // url1 should now be found, as url0
     CachedUrl cu = mgr.findMostRecentCachedUrl(url1);

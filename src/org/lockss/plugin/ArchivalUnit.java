@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnit.java,v 1.31 2004-10-06 23:52:55 clairegriffin Exp $
+ * $Id: ArchivalUnit.java,v 1.32 2004-10-13 23:07:17 clairegriffin Exp $
  */
 
 /*
@@ -222,7 +222,7 @@ public interface ArchivalUnit {
    * @param url the url of interest
    * @return a {@link CachedUrl} object representing the url.
    */
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url);
+  public CachedUrl makeCachedUrl(String url);
 
   /**
    * Create a {@link UrlCacher} object within the set.
@@ -230,7 +230,7 @@ public interface ArchivalUnit {
    * @param url the url of interest
    * @return a {@link UrlCacher} object representing the url.
    */
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url);
+  public UrlCacher makeUrlCacher(String url);
 
   /**
    * Return the {@link TitleConfig} that was (or might have been) used to

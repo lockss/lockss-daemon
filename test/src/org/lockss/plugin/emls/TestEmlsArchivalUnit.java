@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsArchivalUnit.java,v 1.14 2004-10-06 23:52:58 clairegriffin Exp $
+ * $Id: TestEmlsArchivalUnit.java,v 1.15 2004-10-13 23:07:21 clairegriffin Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class TestEmlsArchivalUnit extends LockssTestCase {
 
   private void shouldCacheTest(String url, boolean shouldCache,
                                ArchivalUnit au, CachedUrlSet cus) {
-    UrlCacher uc = au.makeUrlCacher(cus, url);
+    UrlCacher uc = au.makeUrlCacher(url);
     assertTrue(uc.shouldBeCached()==shouldCache);
   }
 

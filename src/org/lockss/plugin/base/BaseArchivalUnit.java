@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.84 2004-10-11 05:43:52 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.85 2004-10-13 23:07:18 clairegriffin Exp $
  */
 
 /*
@@ -185,12 +185,12 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     return new BaseCachedUrlSet(this, cuss);
   }
 
-  public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-    return new BaseCachedUrl(owner, url);
+  public CachedUrl makeCachedUrl(String url) {
+    return new BaseCachedUrl(this, url);
   }
 
-  public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-    return new BaseUrlCacher(owner, url);
+  public UrlCacher makeUrlCacher(String url) {
+    return new BaseUrlCacher(this, url);
   }
 
   private void checkLegalConfigChange(Configuration newConfig)

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCachedUrl.java,v 1.12 2004-10-06 23:52:58 clairegriffin Exp $
+ * $Id: TestBaseCachedUrl.java,v 1.13 2004-10-13 23:07:20 clairegriffin Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
   }
 
   public void testFilterParamDefault() {
-     MyCachedUrl cu = new MyCachedUrl();
+     MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
      cu.openForHashing();
      assertFalse(cu.gotUnfilteredStream());
    }
@@ -88,7 +88,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
    public void testFilterParamFilterOn() throws IOException {
      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=true";
      ConfigurationUtil.setCurrentConfigFromString(config);
-     MyCachedUrl cu = new MyCachedUrl();
+     MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
      cu.openForHashing();
      assertFalse(cu.gotUnfilteredStream());
    }
@@ -96,7 +96,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
    public void testFilterParamFilterOff() throws IOException {
      String config = PARAM_SHOULD_FILTER_HASH_STREAM+"=false";
      ConfigurationUtil.setCurrentConfigFromString(config);
-     MyCachedUrl cu = new MyCachedUrl();
+     MyCachedUrl cu = new MyCachedUrl(new MyAu(), null);
      cu.openForHashing();
      assertTrue(cu.gotUnfilteredStream());
    }
@@ -105,7 +105,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
      createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
 
      CachedUrl url =
-       mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      assertEquals("http://www.example.com/testDir/leaf1", url.getUrl());
    }
 
@@ -114,9 +114,9 @@ public class TestBaseCachedUrl extends LockssTestCase {
      createLeaf("http://www.example.com/testDir/leaf2", null, null);
 
      CachedUrl url =
-       mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      assertTrue(url.isLeaf());
-     url = mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
+     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf2");
      assertTrue(url.isLeaf());
    }
 
@@ -126,15 +126,15 @@ public class TestBaseCachedUrl extends LockssTestCase {
      createLeaf("http://www.example.com/testDir/leaf3", "", null);
 
      CachedUrl url =
-       mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      BigInteger bi = new BigInteger(url.getUnfilteredContentSize());
      assertEquals(11, bi.intValue());
 
-     url = mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
+     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf2");
      bi = new BigInteger(url.getUnfilteredContentSize());
      assertEquals(12, bi.intValue());
 
-     url = mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf3");
+     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf3");
      bi = new BigInteger(url.getUnfilteredContentSize());
      assertEquals(0, bi.intValue());
    }
@@ -145,19 +145,19 @@ public class TestBaseCachedUrl extends LockssTestCase {
      createLeaf("http://www.example.com/testDir/leaf3", "", null);
 
      CachedUrl url =
-       mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      InputStream urlIs = url.getUnfilteredInputStream();
      ByteArrayOutputStream baos = new ByteArrayOutputStream(11);
      StreamUtil.copy(urlIs, baos);
      assertEquals("test stream", baos.toString());
 
-     url = mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf2");
+     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf2");
      urlIs = url.getUnfilteredInputStream();
      baos = new ByteArrayOutputStream(12);
      StreamUtil.copy(urlIs, baos);
      assertEquals("test stream2", baos.toString());
 
-     url = mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf3");
+     url = mau.makeCachedUrl("http://www.example.com/testDir/leaf3");
      urlIs = url.getUnfilteredInputStream();
      baos = new ByteArrayOutputStream(0);
      StreamUtil.copy(urlIs, baos);
@@ -170,7 +170,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
 
     CachedUrl url =
-      mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+      mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.getUnfilteredInputStream();
     assertNotEquals(str, StringUtil.fromInputStream(urlIs));
   }
@@ -184,7 +184,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
     mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
 
     CachedUrl url =
-      mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+      mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
     InputStream urlIs = url.openForHashing();
     assertNotEquals(str, StringUtil.fromInputStream(urlIs));
   }
@@ -198,7 +198,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
      mau.setFilterRule(new MyMockFilterRule(new StringReader(str)));
 
      CachedUrl url =
-         mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+         mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      InputStream urlIs = url.openForHashing();
      assertEquals(str, StringUtil.fromInputStream(urlIs));
    }
@@ -210,7 +210,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
      createLeaf("http://www.example.com/testDir/leaf1", null, newProps);
 
      CachedUrl url =
-       mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      CIProperties urlProps = url.getProperties();
      assertEquals("value", urlProps.getProperty("test"));
      assertEquals("value2", urlProps.getProperty("test2"));
@@ -220,7 +220,7 @@ public class TestBaseCachedUrl extends LockssTestCase {
      createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
 
      CachedUrl cu =
-       mau.makeCachedUrl(cus, "http://www.example.com/testDir/leaf1");
+       mau.makeCachedUrl("http://www.example.com/testDir/leaf1");
      Reader reader = cu.openForReading();
      CharArrayWriter writer = new CharArrayWriter(11);
      StreamUtil.copy(reader, writer);
@@ -237,12 +237,12 @@ public class TestBaseCachedUrl extends LockssTestCase {
        return new BaseCachedUrlSet(this, cuss);
      }
 
-     public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-       return new BaseCachedUrl(owner, url);
+     public CachedUrl makeCachedUrl(String url) {
+       return new BaseCachedUrl(this, url);
      }
 
-     public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-       return new BaseUrlCacher(owner,url);
+     public UrlCacher makeUrlCacher(String url) {
+       return new BaseUrlCacher(this, url);
      }
    }
 
@@ -273,14 +273,11 @@ public class TestBaseCachedUrl extends LockssTestCase {
      private boolean gotUnfilteredStream = false;
      private CIProperties props = new CIProperties();
 
-     public MyCachedUrl() {
-       super(null, null);
+     public MyCachedUrl(ArchivalUnit au, String url) {
+       super(au, url);
        props.setProperty(PROPERTY_CONTENT_TYPE, "text/html");
      }
 
-     public ArchivalUnit getArchivalUnit() {
-       return new MyAu();
-     }
 
      public InputStream getUnfilteredInputStream() {
        gotUnfilteredStream = true;

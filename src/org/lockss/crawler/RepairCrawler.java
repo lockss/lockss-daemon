@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.29 2004-09-27 22:39:15 smorabito Exp $
+ * $Id: RepairCrawler.java,v 1.30 2004-10-13 23:07:16 clairegriffin Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class RepairCrawler extends CrawlerImpl {
   /** We always want our UrlCacher to follow redirects in crawl spec, but
    * store only the one node we requested. */
   protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
-    UrlCacher uc = super.makeUrlCacher(cus, url);
+    UrlCacher uc = super.makeUrlCacher(url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_IN_SPEC);
     uc.setForceRefetch(true);
     return uc;

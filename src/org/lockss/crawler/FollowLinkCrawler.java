@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.3 2004-10-11 08:09:39 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.4 2004-10-13 23:07:16 clairegriffin Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.state.*;
 
 /**
  * A abstract class that implemented by NewContentCrawler and OaiCrawler
- * it has the follow link mechanism that used by NewContentCrawler 
+ * it has the follow link mechanism that used by NewContentCrawler
  * and OaiCrawler.
  */
 public abstract class FollowLinkCrawler extends CrawlerImpl {
@@ -100,7 +100,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   /**
    * This method is implemented in NewContentCrawler and OaiCrawler.
    * It gives the different crawlers to have different mechanism to collect
-   * those "initial" urls of a crawl. The method will also fetch those 
+   * those "initial" urls of a crawl. The method will also fetch those
    * "initial" urls into the cache.
    *
    * @return a set of urls to crawl for updated contents
@@ -117,7 +117,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
     maxRetries = config.getInt(PARAM_RETRY_TIMES, DEFAULT_RETRY_TIMES);
   }
-  
+
   /**
    * One can update the Max. Crawl Depth before calling doCrawl10().
    * Currently used only for "Not Follow Link" mode in OaiCrawler
@@ -148,7 +148,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     if (!checkPermissionList(permissionList)){
       return aborted();
     }
-    
+
     extractedUrls = getUrlsToFollow();
 
     if (crawlAborted) {
@@ -157,7 +157,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
-    Collection urlsToCrawl; 
+    Collection urlsToCrawl;
 
     if (usePersistantList) {
       urlsToCrawl = aus.getCrawlUrls();
@@ -184,8 +184,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	}
 	boolean crawlRes = false;
 	try {
-	  crawlRes = fetchAndParse(nextUrl, extractedUrls, parsedPages,
- 	  			   cus, false, alwaysReparse);
+	  crawlRes = fetchAndParse(nextUrl, extractedUrls, parsedPages, false, alwaysReparse);
 	} catch (RuntimeException e) {
 	  logger.warning("Unexpected exception in crawl", e);
 	}
@@ -212,7 +211,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       logger.debug("urlsToCrawl contains: " + urlsToCrawl);
     }
     logger.info("Crawled depth = " + lvlCnt);
-    
+
     if (crawlAborted) {
         return aborted();
     }
@@ -290,8 +289,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   }
 
   /** We always want our UrlCacher to store all redirected copies */
-  protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
-    UrlCacher uc = super.makeUrlCacher(cus, url);
+  protected UrlCacher makeUrlCacher(String url) {
+    UrlCacher uc = super.makeUrlCacher(url);
     uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
     uc.setPermissionMap(permissionMap);
     if (proxyHost != null) {
@@ -300,15 +299,13 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     return uc;
   }
 
-  protected boolean fetchAndParse(String url, Collection extractedUrls,
-				Set parsedPages, CachedUrlSet cus,
-				boolean fetchIfChanged, boolean reparse) {
+  protected boolean fetchAndParse(String url, Collection extractedUrls, Set parsedPages, boolean fetchIfChanged, boolean reparse) {
 
     String error = null;
     logger.debug3("Dequeued url from list: "+url);
 
     //makeUrlCacher needed to handle connection pool
-    UrlCacher uc = makeUrlCacher(cus, url);
+    UrlCacher uc = makeUrlCacher(url);
 
     // don't cache if already cached, unless overwriting
     if (fetchIfChanged || !uc.getCachedUrl().hasContent()) {
@@ -416,7 +413,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	  }
 
 	  //makeUrlCacher needed to handle connection pool
-	  uc = makeUrlCacher(uc.getCachedUrlSet(), uc.getUrl());
+	  uc = makeUrlCacher(uc.getUrl());
 	} else {
 	  logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
 			 + uc);
@@ -464,7 +461,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	  printFailedWarning = false;
 	case PermissionMap.FETCH_PERMISSION_FAILED:
 	  if (printFailedWarning) {
-	    logger.warning("Fail to fetch permission page on host :" + 
+	    logger.warning("Fail to fetch permission page on host :" +
 			   urlPermissionUrl);
 	  }
 	  if (permissionFailedRetry) {
