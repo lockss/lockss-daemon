@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.6 2002-11-01 09:23:21 tal Exp $
+ * $Id: Logger.java,v 1.7 2002-11-23 01:24:45 troberts Exp $
  */
 
 /*
@@ -311,7 +311,7 @@ public class Logger {
    * Return true if this log is logging at or above specified level
    * @param level name
    */
-  boolean isLevel(String level) {
+  public boolean isLevel(String level) {
     return this.level >= levelOf(level);
   }
 
