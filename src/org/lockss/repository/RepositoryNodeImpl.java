@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.49 2004-03-30 02:09:58 eaalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.50 2004-04-02 23:24:38 eaalto Exp $
  */
 
 /*
@@ -299,7 +299,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
       // call invalidate on parent
       RepositoryNodeImpl parentNode = determineParentNode();
       if (parentNode != null) {
-        parentNode.invalidateCachedValues(false);
+        if (!parentNode.getNodeUrl().equals(getNodeUrl())) {
+          // don't loop by mistake if we've reached the top
+          // (shouldn't be possible anyway)
+          parentNode.invalidateCachedValues(false);
+        }
       }
     }
   }

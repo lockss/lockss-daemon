@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.36 2004-03-30 02:09:58 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.37 2004-04-02 23:24:38 eaalto Exp $
  */
 
 /*
@@ -614,16 +614,25 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
   }
 
   public void testCacheInvalidation() throws Exception {
+    RepositoryNodeImpl root =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com",
+                                       "test", null);
     RepositoryNodeImpl branch =
         (RepositoryNodeImpl)createLeaf("http://www.example.com/branch",
                                        "test", null);
+    RepositoryNodeImpl branch2 =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/branch2",
+                                       "test", null);
     RepositoryNodeImpl leaf =
-        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/leaf",
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/branch/branch2/leaf",
                                        "test", null);
     assertNull(branch.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
     assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
-    branch.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "456");
-    branch.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "1");
+    root.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "789");
+    root.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "3");
+    // don't set branch so the invalidate stops there
+    branch2.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "456");
+    branch2.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "1");
     leaf.nodeProps.setProperty(leaf.TREE_SIZE_PROPERTY, "123");
     leaf.nodeProps.setProperty(leaf.CHILD_COUNT_PROPERTY, "0");
 
@@ -632,8 +641,14 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertNull(leaf.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
     assertNull(leaf.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
     // cleared
+    assertNull(branch2.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertNull(branch2.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    // cleared (invalidate should stop, since there was nothing to invalidate)
     assertNull(branch.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
     assertNull(branch.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
+    // Not cleared
+    assertEquals("789", root.nodeProps.getProperty(leaf.TREE_SIZE_PROPERTY));
+    assertEquals("3", root.nodeProps.getProperty(leaf.CHILD_COUNT_PROPERTY));
   }
 
   public void testTreeSizeCaching() throws Exception {
