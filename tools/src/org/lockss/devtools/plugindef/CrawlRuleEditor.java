@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRuleEditor.java,v 1.1 2004-05-25 00:17:44 clairegriffin Exp $
+ * $Id: CrawlRuleEditor.java,v 1.2 2004-06-01 22:38:38 clairegriffin Exp $
  */
 
 /*
@@ -60,6 +60,8 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   JTable rulesTable = new JTable();
   JButton addButton = new JButton();
   JComboBox m_kindBox = new JComboBox(CrawlRuleTemplate.RULE_KIND_STRINGS);
+  JButton upButton = new JButton();
+  JButton dnButton = new JButton();
 
 
   public CrawlRuleEditor(Frame frame, String title, boolean modal) {
@@ -78,7 +80,6 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
   }
 
   private void jbInit() throws Exception {
-    setSize(390,180);
     rulesPanel.setLayout(borderLayout1);
     deleteButton.setText("Delete");
     deleteButton.addActionListener(new CrawlRuleEditor_deleteButton_actionAdapter(this));
@@ -89,15 +90,21 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
     rulesTable.setBorder(BorderFactory.createRaisedBevelBorder());
     rulesTable.setRowHeight(20);
     rulesTable.setModel(m_model);
-    rulesPanel.setMinimumSize(new Dimension(125, 50));
-    rulesPanel.setPreferredSize(new Dimension(380, 100));
-    buttonPanel.setMinimumSize(new Dimension(125, 34));
-    buttonPanel.setPreferredSize(new Dimension(380, 40));
+    rulesPanel.setMinimumSize(new Dimension(150, 50));
+    rulesPanel.setPreferredSize(new Dimension(440, 100));
+    buttonPanel.setMinimumSize(new Dimension(150, 34));
+    buttonPanel.setPreferredSize(new Dimension(440, 40));
     addButton.setText("Add");
     addButton.addActionListener(new CrawlRuleEditor_addButton_actionAdapter(this));
+    upButton.setText("Up");
+    upButton.addActionListener(new CrawlRuleEditor_upButton_actionAdapter(this));
+    dnButton.setText("Down");
+    dnButton.addActionListener(new CrawlRuleEditor_dnButton_actionAdapter(this));
     getContentPane().add(rulesPanel);
     rulesPanel.add(rulesTable, BorderLayout.CENTER);
     this.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
+    buttonPanel.add(upButton, null);
+    buttonPanel.add(dnButton, null);
     buttonPanel.add(addButton, null);
     buttonPanel.add(deleteButton, null);
     buttonPanel.add(okButton, null);
@@ -126,6 +133,21 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
 
   void cancelButton_actionPerformed(ActionEvent e) {
     setVisible(false);
+  }
+
+  void dnButton_actionPerformed(ActionEvent e) {
+    int row = rulesTable.getSelectedRow();
+
+    CrawlRuleModel model = (CrawlRuleModel) rulesTable.getModel();
+    model.moveData(row, row + 1);
+  }
+
+  void upButton_actionPerformed(ActionEvent e) {
+    int row = rulesTable.getSelectedRow();
+
+    CrawlRuleModel model = (CrawlRuleModel) rulesTable.getModel();
+    model.moveData(row, row - 1);
+
   }
 
   /**
@@ -256,6 +278,22 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       fireTableDataChanged();
     }
 
+    /**
+     * moveData
+     *
+     * @param row int
+     * @param i int
+     */
+    private void moveData(int curRow, int newRow) {
+      int lastRow = m_tableData.size() -1;
+      if(curRow >=0 && curRow <= lastRow && newRow >=0 &&
+        newRow <= lastRow) {
+        Object[] curData = (Object[])m_tableData.elementAt(curRow);
+        m_tableData.removeElementAt(curRow);
+        m_tableData.insertElementAt(curData, newRow);
+        fireTableDataChanged();
+      }
+    }
   }
 
   class CrawlRuleCellEditor
@@ -337,6 +375,8 @@ public class CrawlRuleEditor extends JDialog implements EDPEditor{
       m_model.fireTableDataChanged();
     }
   }
+
+
 }
 
 
@@ -381,5 +421,27 @@ class CrawlRuleEditor_addButton_actionAdapter implements java.awt.event.ActionLi
   }
   public void actionPerformed(ActionEvent e) {
     adaptee.addButton_actionPerformed(e);
+  }
+}
+
+class CrawlRuleEditor_upButton_actionAdapter implements java.awt.event.ActionListener {
+  CrawlRuleEditor adaptee;
+
+  CrawlRuleEditor_upButton_actionAdapter(CrawlRuleEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.upButton_actionPerformed(e);
+  }
+}
+
+class CrawlRuleEditor_dnButton_actionAdapter implements java.awt.event.ActionListener {
+  CrawlRuleEditor adaptee;
+
+  CrawlRuleEditor_dnButton_actionAdapter(CrawlRuleEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.dnButton_actionPerformed(e);
   }
 }

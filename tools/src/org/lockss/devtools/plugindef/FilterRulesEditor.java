@@ -30,6 +30,8 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
   JButton addButton = new JButton();
   JButton cancelButton = new JButton();
   JButton deleteButton = new JButton();
+  JButton upButton = new JButton();
+  JButton dnButton = new JButton();
 
   public FilterRulesEditor(Frame frame, String title, boolean modal) {
     super(frame, title, modal);
@@ -63,6 +65,12 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     deleteButton.setToolTipText("Delete the currently selected item.");
     deleteButton.setText("Delete");
     deleteButton.addActionListener(new FilterRulesEditor_deleteButton_actionAdapter(this));
+    upButton.setText("Up");
+    upButton.addActionListener(new FilterRulesEditor_upButton_actionAdapter(this));
+    dnButton.setText("Down");
+    dnButton.addActionListener(new FilterRulesEditor_dnButton_actionAdapter(this));
+    buttonPanel.add(dnButton, null);
+    buttonPanel.add(upButton, null);
     buttonPanel.add(addButton, null);
     buttonPanel.add(deleteButton, null);
     getContentPane().add(panel1);
@@ -128,6 +136,20 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
     setVisible(false);
   }
 
+  void dnButton_actionPerformed(ActionEvent e) {
+    int row = filtersTable.getSelectedRow();
+
+    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
+    model.moveData(row, row+1);
+  }
+
+  void upButton_actionPerformed(ActionEvent e) {
+    int row = filtersTable.getSelectedRow();
+
+    FilterRulesTableModel model = (FilterRulesTableModel) filtersTable.getModel();
+    model.moveData(row, row-1);
+
+  }
 
   class FilterRulesTableModel extends AbstractTableModel {
     String[] columnNames = {"Mime Type", "Filter Class"};
@@ -194,9 +216,24 @@ public class FilterRulesEditor extends JDialog implements EDPEditor {
       }
       fireTableDataChanged();
     }
+
+    /**
+     * moveData
+     *
+     * @param row int
+     * @param i int
+     */
+    private void moveData(int curRow, int newRow) {
+      int lastRow = rowData.size() -1;
+      if(curRow >=0 && curRow <= lastRow && newRow >=0 &&
+        newRow <= lastRow) {
+        Object[] curData = (Object[])rowData.elementAt(curRow);
+        rowData.removeElementAt(curRow);
+        rowData.insertElementAt(curData, newRow);
+        fireTableDataChanged();
+      }
+    }
   }
-
-
 }
 
 
@@ -242,5 +279,27 @@ class FilterRulesEditor_cancelButton_actionAdapter implements java.awt.event.Act
   }
   public void actionPerformed(ActionEvent e) {
     adaptee.cancelButton_actionPerformed(e);
+  }
+}
+
+class FilterRulesEditor_dnButton_actionAdapter implements java.awt.event.ActionListener {
+  FilterRulesEditor adaptee;
+
+  FilterRulesEditor_dnButton_actionAdapter(FilterRulesEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.dnButton_actionPerformed(e);
+  }
+}
+
+class FilterRulesEditor_upButton_actionAdapter implements java.awt.event.ActionListener {
+  FilterRulesEditor adaptee;
+
+  FilterRulesEditor_upButton_actionAdapter(FilterRulesEditor adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.upButton_actionPerformed(e);
   }
 }
