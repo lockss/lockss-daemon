@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.8 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: V1PollFactory.java,v 1.9 2004-10-02 01:16:25 tlipkis Exp $
  */
 
 /*
@@ -313,7 +313,9 @@ public class V1PollFactory implements PollFactory {
     }
     while(iter.hasNext()) {
       PollSpec ps = (PollSpec)iter.next();
-      theLog.debug("compare " + cus + " with " + ps.getCachedUrlSet());
+      if (theLog.isDebug2()) {
+	theLog.debug2("compare " + cus + " with " + ps.getCachedUrlSet());
+      }
       if (ps.getPollType() != Poll.VERIFY_POLL) {
 	CachedUrlSet pcus = ps.getCachedUrlSet();
         int rel_pos = cus.cusCompare(pcus);
