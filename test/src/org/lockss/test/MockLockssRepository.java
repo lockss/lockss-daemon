@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssRepository.java,v 1.9 2004-04-29 10:10:40 tlipkis Exp $
+ * $Id: MockLockssRepository.java,v 1.10 2004-06-17 06:17:25 eaalto Exp $
  */
 
 /*
@@ -95,6 +95,9 @@ public class MockLockssRepository implements LockssRepository {
     if (node!=null) {
       node.deactivateContent();
     }
+  }
+
+  public void nodeConsistencyCheck() {
   }
 
   private synchronized RepositoryNode getNode(String url, boolean create)

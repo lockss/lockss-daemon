@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.55 2004-05-16 08:44:57 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.56 2004-06-17 06:17:26 eaalto Exp $
  */
 
 /*
@@ -95,6 +95,10 @@ public class RepositoryNodeImpl implements RepositoryNode {
   static final String TEMP_PROPS_FILENAME = "temp.props";
   static final String INACTIVE_FILENAME = "inactive";
   static final String INACTIVE_PROPS_FILENAME = "inactive.props";
+
+  // the extension appended to faulty files when the consistency check
+  // renames them (to allow the node to function properly)
+  static final String FAULTY_FILE_EXTENSION = ".ERROR";
   // special-case versions
   static final int INACTIVE_VERSION = -99;
   static final int DELETED_VERSION = -98;
@@ -119,8 +123,8 @@ public class RepositoryNodeImpl implements RepositoryNode {
   protected File nodePropsFile = null;
   protected File currentCacheFile;
   protected File currentPropsFile;
-  private File tempCacheFile;
-  private File tempPropsFile;
+  File tempCacheFile;
+  File tempPropsFile;
 
   // identity url and location
   protected String url;
@@ -297,6 +301,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return Integer.parseInt(childCount);
     }
 
+    // get unfiltered node list
     int count = getNodeList(null, false).size();
     nodeProps.setProperty(CHILD_COUNT_PROPERTY, Integer.toString(count));
     writeNodeProperties();
@@ -834,7 +839,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Run to make sure that all values are initialized and up-to-date.
    */
-  private void ensureCurrentInfoLoaded() {
+  void ensureCurrentInfoLoaded() {
     if ((currentVersion==0) || (currentVersion==INACTIVE_VERSION) ||
         (currentVersion==DELETED_VERSION)) {
       // node already initialized and has no active content,
@@ -874,7 +879,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Initializes the file handles.
    */
-  private void initFiles() {
+  void initFiles() {
     initNodeRoot();
     initCurrentCacheFile();
     initCurrentPropsFile();
@@ -886,11 +891,11 @@ public class RepositoryNodeImpl implements RepositoryNode {
   /**
    * Load the node properties.
    */
-  private void loadNodeProps() {
+  void loadNodeProps() {
     try {
       // check properties to see if deleted
-      InputStream is = new BufferedInputStream(
-          new FileInputStream(nodePropsFile));
+      InputStream is =
+          new BufferedInputStream(new FileInputStream(nodePropsFile));
       nodeProps.load(is);
       is.close();
       nodePropsLoaded = true;
@@ -988,6 +993,207 @@ public class RepositoryNodeImpl implements RepositoryNode {
        }
     }
     return -1;
+  }
+
+  /**
+   * Checks the internal consistency of the node.  It repairs any damage it
+   * can, but otherwise returns false if the node is inconsistent.
+   * @return boolean false iff irreparably inconsistent
+   */
+  boolean checkNodeConsistency() {
+    logger.debug2("Checking consistency on '"+url+"'.");
+    if (newVersionOpen) {
+      //XXX should throw?  Not sure.
+      logger.debug("New version open.  Skipping...");
+      return true;
+    }
+    // if broken repair if possible, else return false
+    // don't start with 'ensureCurrentInfoLoaded()', since it may be broken
+    // init the first files
+    initFiles();
+    if (!checkNodeRootConsistency()) {
+      logger.error("Couldn't create node root location.");
+      return false;
+    }
+
+    // check if content expected
+    if ((currentVersion>0) || (currentVersion==INACTIVE_VERSION) ||
+        (currentVersion==DELETED_VERSION)) {
+      if (!checkContentConsistency()) {
+        return false;
+      }
+    } else {
+      // check if version inaccurate (0, but content present)
+      if (currentVersion==0) {
+        if (getContentDir().exists()) {
+          logger.debug("Content dir exists, though no content expected.");
+        }
+      }
+    }
+
+    // try to load info
+    try {
+      ensureCurrentInfoLoaded();
+    } catch (LockssRepositoryImpl.RepositoryStateException rse) {
+      logger.error("Still can't load info: "+rse);
+      return false;
+    }
+
+    logger.debug3("Node consistent.");
+    return true;
+  }
+
+  /**
+   * Checks the consistency of the node root location and properties.
+   * @return boolean false iff inconsistent
+   */
+  boolean checkNodeRootConsistency() {
+    // -root directory exists and is a directory
+    if (!ensureDirExists(nodeRootFile)) {
+      return false;
+    }
+
+    // -if node properties exists, check that it's readable
+    if (nodePropsFile.exists()) {
+      try {
+        loadNodeProps();
+      } catch (LockssRepositoryImpl.RepositoryStateException rse) {
+        logger.warning("Renaming faulty 'nodeProps' to 'nodeProps.ERROR'");
+        // as long as the rename goes correctly, we can proceed
+        if (!nodePropsFile.renameTo(new File(nodePropsFile.getAbsolutePath() +
+            FAULTY_FILE_EXTENSION))) {
+          logger.error("Error renaming nodeProps file");
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
+  /**
+   * Check if the content directory is consistent.  Repair if possible, and
+   * return 'false' whenever no repair possible.
+   * @return boolean true if repaired or no damage
+   */
+  boolean checkContentConsistency() {
+    // -content dir should exist as a directory
+    if (!ensureDirExists(getContentDir())) {
+      logger.error("Couldn't create content directory.");
+      return false;
+    }
+
+    // assuming the content dir exists, check the content
+
+    // -if content, content files exist
+    if (currentVersion>0) {
+      if (!checkFileExists(currentCacheFile, "Current cache file") ||
+          !checkFileExists(currentPropsFile, "Current props file")) {
+        return false;
+      }
+    }
+    // -if inactive, inactive files exist
+    if (currentVersion==INACTIVE_VERSION) {
+      if (!checkFileExists(getInactiveCacheFile(), "Inactive cache file") ||
+          !checkFileExists(getInactivePropsFile(), "Inactive props file")) {
+        return false;
+      }
+    }
+
+    // check if child count accurate in cache
+    checkChildCountCacheAccuracy();
+
+    // remove any residual files
+    // -check temp cache and prop files
+    if (tempCacheFile.exists()) {
+      logger.debug("Deleting temp cache file...");
+      tempCacheFile.delete();
+    }
+    if (tempPropsFile.exists()) {
+      logger.debug("Deleting temp props file...");
+      tempPropsFile.delete();
+    }
+    return true;
+  }
+
+  /**
+   * Makes sure the given file exists as a directory.  If a file exists in
+   * that location, the file is renamed to 'file.ERROR' and the directory is
+   * created.  Returns false if the rename fails, or the dir couldn't be
+   * created.
+   * @param dirFile the directory
+   * @return boolean false iff the dir couldn't be created
+   */
+  boolean ensureDirExists(File dirFile) {
+    // --rename if a file at that position
+    if (dirFile.isFile()) {
+      logger.error("Exists but as a file: " + dirFile.getAbsolutePath());
+      logger.error("Renaming file to 'xxx.ERROR'...");
+      if (!dirFile.renameTo(new File(dirFile.getAbsolutePath() +
+          FAULTY_FILE_EXTENSION))) {
+        logger.error("Error renaming file");
+        return false;
+      }
+    }
+
+    // create the dir if absent
+    if (!dirFile.exists()) {
+      logger.warning("Directory missing: " + dirFile.getAbsolutePath());
+      logger.warning("Creating directory...");
+      dirFile.mkdirs();
+    }
+    // make sure no problems
+    return (dirFile.exists() && dirFile.isDirectory());
+  }
+
+  /**
+   * Checks to see if the file exists.  Returns false if it doesn't, or if
+   * it's a directory.  Renames the directory to 'dir.ERROR' before returning,
+   * so that the node can be fixed later.
+   * @param testFile File to test
+   * @param desc the file description, used for logging
+   * @return boolean true iff the file exists
+   */
+  static boolean checkFileExists(File testFile, String desc) {
+    if (!testFile.exists()) {
+      logger.warning(desc+" not found.");
+      return false;
+    } else if (testFile.isDirectory()) {
+      logger.error(desc+" a directory.");
+      testFile.renameTo(new File(testFile.getAbsolutePath() +
+          FAULTY_FILE_EXTENSION));
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Checks the accuracy of the cached child count, and invalidates it
+   * if wrong.
+   */
+  void checkChildCountCacheAccuracy() {
+    int count = 0;
+    File[] children = nodeRootFile.listFiles();
+    for (int ii=0; ii<children.length; ii++) {
+      File child = children[ii];
+      if (!child.isDirectory()) continue;
+      if (child.getName().equals(contentDir.getName())) continue;
+      count++;
+    }
+
+    String childCount = nodeProps.getProperty(CHILD_COUNT_PROPERTY);
+    if (isPropValid(childCount)) {
+      // return if found
+      int cachedCount = Integer.parseInt(childCount);
+      if (cachedCount != count) {
+        logger.warning("Cached child count erroneous: was " +
+            cachedCount + ", but is "+count);
+        nodeProps.setProperty(CHILD_COUNT_PROPERTY, INVALID);
+      } else {
+        logger.debug3("No inaccuracy in cached child count.");
+      }
+    } else {
+      logger.debug3("No cached child count.");
+    }
   }
 
   /**

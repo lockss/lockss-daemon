@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.41 2004-04-14 23:46:18 eaalto Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.42 2004-06-17 06:17:26 eaalto Exp $
  */
 
 /*
@@ -539,6 +539,10 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     RepositoryNode.RepositoryNodeContents contents = leaf.getNodeContents();
     props = contents.getProperties();
     // close stream to allow the file to be renamed later
+    // XXX 'getProperties()' creates an input stream, and 'release()' just
+    // sets it to null.  The rename still fails in Windows unless the stream
+    // is closed first.
+    contents.getInputStream().close();
     contents.release();
 
     assertEquals("value 1", props.getProperty("test 1"));
@@ -928,14 +932,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertFalse(dirEntry.isDeleted());
   }
 
-
   public void testGetFileStrings() throws Exception {
-    RepositoryNodeImpl node = (RepositoryNodeImpl) repo.createNewNode(
+    RepositoryNodeImpl node = (RepositoryNodeImpl)repo.createNewNode(
         "http://www.example.com/test.url");
     node.initNodeRoot();
     String contentStr = FileUtil.sysDepPath(node.nodeLocation + "/#content");
     assertEquals(contentStr, node.getContentDir().toString());
-    contentStr = contentStr + "/";
+    contentStr = contentStr + File.separator;
     String expectedStr = contentStr + "123";
     assertEquals(expectedStr,
                  node.getVersionedCacheFile(123).getAbsolutePath());
@@ -948,14 +951,224 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertEquals(expectedStr, node.getInactivePropsFile().getAbsolutePath());
   }
 
+  public void testCheckNodeConsistency() throws Exception {
+    // check returns proper values for errors
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)repo.createNewNode("http://www.example.com/testDir"));
+    leaf.makeNewVersion();
+    // should abort and return true since version open
+    leaf.failRootConsist = true;
+    assertTrue(leaf.checkNodeConsistency());
+
+    // finish write
+    leaf.setNewProperties(new Properties());
+    writeToLeaf(leaf, "test stream");
+    leaf.sealNewVersion();
+
+    // should return false if node root fails
+    assertFalse(leaf.checkNodeConsistency());
+    leaf.failRootConsist = false;
+    assertTrue(leaf.checkNodeConsistency());
+
+    // check returns false if content fails
+    leaf.failContentConsist = true;
+    assertFalse(leaf.checkNodeConsistency());
+    leaf.failContentConsist = false;
+    assertTrue(leaf.checkNodeConsistency());
+
+    // check returns false if current info load fails
+    leaf.failEnsureCurrentLoaded = true;
+    assertFalse(leaf.checkNodeConsistency());
+    leaf.failEnsureCurrentLoaded = false;
+    assertTrue(leaf.checkNodeConsistency());
+  }
+
+  public void testCheckNodeRootConsistency() throws Exception {
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)repo.createNewNode("http://www.example.com/testDir"));
+    leaf.createNodeLocation();
+    assertTrue(leaf.nodeRootFile.exists());
+    // returns true when normal
+    assertTrue(leaf.checkNodeRootConsistency());
+
+    leaf.nodeRootFile.delete();
+    assertFalse(leaf.nodeRootFile.exists());
+    // creates dir, returns true when missing
+    assertTrue(leaf.checkNodeRootConsistency());
+    assertTrue(leaf.nodeRootFile.exists());
+    assertTrue(leaf.nodeRootFile.isDirectory());
+
+    // fail node props load
+    leaf.getChildCount();
+    assertTrue(leaf.nodePropsFile.exists());
+    File renameFile = new File(leaf.nodePropsFile.getAbsolutePath()+
+        leaf.FAULTY_FILE_EXTENSION);
+    assertFalse(renameFile.exists());
+    leaf.failPropsLoad = true;
+    assertTrue(leaf.checkNodeRootConsistency());
+    assertFalse(leaf.nodePropsFile.exists());
+    assertTrue(renameFile.exists());
+  }
+
+  public void testCheckContentConsistency() throws Exception {
+    MyMockRepositoryNode leaf = new MyMockRepositoryNode(
+        (RepositoryNodeImpl)createLeaf("http://www.example.com/testDir",
+        "test stream", null));
+    leaf.ensureCurrentInfoLoaded();
+
+    // should return false if content dir fails
+    leaf.failEnsureDirExists = true;
+    assertFalse(leaf.checkContentConsistency());
+    leaf.failEnsureDirExists = false;
+    assertTrue(leaf.checkContentConsistency());
+
+    // should return false if content file absent
+    File renameFile =
+        new File(leaf.currentCacheFile.getAbsolutePath()+"RENAME");
+    assertTrue(leaf.currentCacheFile.renameTo(renameFile));
+    assertFalse(leaf.checkContentConsistency());
+    renameFile.renameTo(leaf.currentCacheFile);
+    assertTrue(leaf.checkContentConsistency());
+
+    // should return false if content props absent
+    leaf.currentPropsFile.renameTo(renameFile);
+    assertFalse(leaf.checkContentConsistency());
+    renameFile.renameTo(leaf.currentPropsFile);
+    assertTrue(leaf.checkContentConsistency());
+
+    // should return false if inactive and files missing
+    leaf.currentVersion = leaf.INACTIVE_VERSION;
+    assertFalse(leaf.checkContentConsistency());
+    leaf.currentPropsFile.renameTo(leaf.getInactivePropsFile());
+    assertFalse(leaf.checkContentConsistency());
+    leaf.currentCacheFile.renameTo(leaf.getInactiveCacheFile());
+    assertTrue(leaf.checkContentConsistency());
+    leaf.getInactivePropsFile().renameTo(leaf.currentPropsFile);
+    assertFalse(leaf.checkContentConsistency());
+    // finish restoring
+    leaf.getInactiveCacheFile().renameTo(leaf.currentCacheFile);
+    leaf.currentVersion = 1;
+    assertTrue(leaf.checkContentConsistency());
+
+    // remove residual files
+    // - create files
+    FileOutputStream fos = new FileOutputStream(leaf.tempCacheFile);
+    StringInputStream sis = new StringInputStream("test stream");
+    StreamUtil.copy(sis, fos);
+    fos.close();
+    sis.close();
+
+    fos = new FileOutputStream(leaf.tempPropsFile);
+    sis = new StringInputStream("test stream");
+    StreamUtil.copy(sis, fos);
+    fos.close();
+    sis.close();
+
+    // should be removed
+    assertTrue(leaf.tempCacheFile.exists());
+    assertTrue(leaf.tempPropsFile.exists());
+    assertTrue(leaf.checkContentConsistency());
+    assertFalse(leaf.tempCacheFile.exists());
+    assertFalse(leaf.tempPropsFile.exists());
+}
+
+
+  public void testEnsureDirExists() throws Exception {
+    RepositoryNodeImpl leaf =
+        (RepositoryNodeImpl)createLeaf("http://www.example.com", null, null);
+    File testDir = new File(tempDirPath, "testDir");
+    // should return true if dir exists
+    testDir.mkdir();
+    assertTrue(testDir.exists());
+    assertTrue(testDir.isDirectory());
+    assertTrue(leaf.ensureDirExists(testDir));
+
+    // should create dir, return true if not exists
+    testDir.delete();
+    assertFalse(testDir.exists());
+    assertTrue(leaf.ensureDirExists(testDir));
+    assertTrue(testDir.exists());
+    assertTrue(testDir.isDirectory());
+
+    // should rename file, create dir, return true if file exists
+    // -create file
+    testDir.delete();
+    FileOutputStream fos = new FileOutputStream(testDir);
+    StringInputStream sis = new StringInputStream("test stream");
+    StreamUtil.copy(sis, fos);
+    fos.close();
+    sis.close();
+    assertTrue(testDir.exists());
+    assertTrue(testDir.isFile());
+
+    // rename via 'ensureDirExists()'
+    File renameFile = new File(tempDirPath, "testDir"+
+        RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
+    assertFalse(renameFile.exists());
+    assertTrue(leaf.ensureDirExists(testDir));
+    assertTrue(testDir.isDirectory());
+    assertEquals("test stream", StringUtil.fromFile(renameFile));
+  }
+
+  public void testCheckFileExists() throws Exception {
+    // return false if doesn't exist
+    File testFile = new File(tempDirPath, "testFile");
+    assertFalse(testFile.exists());
+    assertFalse(RepositoryNodeImpl.checkFileExists(testFile, "test file"));
+
+    // rename if dir (to make room for file creation), then return false
+    testFile.mkdir();
+    File renameDir = new File(tempDirPath, "testFile"+
+        RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
+    assertTrue(testFile.exists());
+    assertTrue(testFile.isDirectory());
+    assertFalse(renameDir.exists());
+    assertFalse(RepositoryNodeImpl.checkFileExists(testFile, "test file"));
+    assertFalse(testFile.exists());
+    assertTrue(renameDir.exists());
+    assertTrue(renameDir.isDirectory());
+
+    // return true if exists
+    FileOutputStream fos = new FileOutputStream(testFile);
+    StringInputStream sis = new StringInputStream("test stream");
+    StreamUtil.copy(sis, fos);
+    fos.close();
+    sis.close();
+    assertTrue(testFile.exists());
+    assertTrue(testFile.isFile());
+    assertTrue(RepositoryNodeImpl.checkFileExists(testFile, "test file"));
+    assertEquals("test stream", StringUtil.fromFile(testFile));
+  }
+
+  public void testCheckChildCountCacheAccuracy() throws Exception {
+    createLeaf("http://www.example.com/testDir/branch2", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch3", "test stream", null);
+
+    RepositoryNodeImpl dirEntry =
+        (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
+    assertEquals(2, dirEntry.getChildCount());
+    assertEquals("2",
+        dirEntry.nodeProps.getProperty(dirEntry.CHILD_COUNT_PROPERTY));
+
+    // check that no change to valid count cache
+    dirEntry.checkChildCountCacheAccuracy();
+    assertEquals("2",
+        dirEntry.nodeProps.getProperty(dirEntry.CHILD_COUNT_PROPERTY));
+
+    // check that invalid cache removed
+    dirEntry.nodeProps.setProperty(dirEntry.CHILD_COUNT_PROPERTY, "3");
+    dirEntry.checkChildCountCacheAccuracy();
+    assertEquals(dirEntry.INVALID,
+        dirEntry.nodeProps.getProperty(dirEntry.CHILD_COUNT_PROPERTY));
+  }
+
   private RepositoryNode createLeaf(String url, String content,
-                                    Properties props) throws Exception {
+      Properties props) throws Exception {
     return createLeaf(repo, url, content, props);
   }
 
   public static RepositoryNode createLeaf(LockssRepository repo, String url,
-                                   String content, Properties props)
-      throws Exception {
+      String content, Properties props) throws Exception {
     RepositoryNode leaf = repo.createNewNode(url);
     leaf.makeNewVersion();
     writeToLeaf(leaf, content);
@@ -994,10 +1207,17 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  // this class only overrides 'getDatedVersionedPropsFile()' so I can
-  // manipulate the file names for testing
+  // this class overrides 'getDatedVersionedPropsFile()' so I can
+  // manipulate the file names for testing.  Also allows 'loadNodeProps()
+  // to fail on demand
   static class MyMockRepositoryNode extends RepositoryNodeImpl {
     long dateValue;
+    boolean failPropsLoad = false;
+    boolean failRootConsist = false;
+    boolean failContentConsist = false;
+    boolean failEnsureCurrentLoaded = false;
+    static boolean failEnsureDirExists = false;
+
     MyMockRepositoryNode(RepositoryNodeImpl nodeImpl) {
       super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
     }
@@ -1009,6 +1229,46 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
       buffer.append("-");
       buffer.append(dateValue);
       return new File(getContentDir(), buffer.toString());
+    }
+
+    void loadNodeProps() {
+      if (failPropsLoad) {
+        throw new LockssRepository.RepositoryStateException("Couldn't load properties file.");
+      } else {
+        super.loadNodeProps();
+      }
+    }
+
+    boolean checkNodeRootConsistency() {
+      if (failRootConsist) {
+        return false;
+      } else {
+        return super.checkNodeRootConsistency();
+      }
+    }
+
+    boolean checkContentConsistency() {
+      if (failContentConsist) {
+        return false;
+      } else {
+        return super.checkContentConsistency();
+      }
+    }
+
+    void ensureCurrentInfoLoaded() {
+      if (failEnsureCurrentLoaded) {
+        throw new LockssRepository.RepositoryStateException("Couldn't load current info.");
+      } else {
+        super.ensureCurrentInfoLoaded();
+      }
+    }
+
+    boolean ensureDirExists(File dirFile) {
+      if (failEnsureDirExists) {
+        return false;
+      } else {
+        return super.ensureDirExists(dirFile);
+      }
     }
   }
 }

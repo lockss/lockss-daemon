@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.56 2004-05-24 22:19:10 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.57 2004-06-17 06:17:26 eaalto Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class LockssRepositoryImpl
   private static final String TEST_PREFIX = "/#tmp";
 
   private String rootLocation;
-  private LRUMap nodeCache;
+  LRUMap nodeCache; // made non-private for testing
   private int nodeCacheSize = DEFAULT_MAX_LRUMAP_SIZE;
   private ReferenceMap refMap;
   private int cacheHits = 0;
@@ -242,6 +242,39 @@ public class LockssRepositoryImpl
   int getCacheMisses() { return cacheMisses; }
   int getRefHits() { return refHits; }
   int getRefMisses() { return refMisses; }
+
+  public void nodeConsistencyCheck() {
+    // traverse the node tree from the top
+    RepositoryNode topNode;
+    try {
+      topNode = getNode(AuUrl.PROTOCOL_COLON);
+      recurseConsistencyCheck((RepositoryNodeImpl)topNode);
+    } catch (MalformedURLException ignore) { }
+  }
+
+  /**
+   * Checks the consistency of the node, and continues with its children
+   * if it's consistent.
+   * @param node RepositoryNodeImpl the node to check
+   */
+  private void recurseConsistencyCheck(RepositoryNodeImpl node) {
+    logger.debug2("Checking node '"+node.getNodeUrl()+"'...");
+    // check consistency at each node
+    // correct/deactivate as necessary
+    // 'checkNodeConsistency()' will repair if possible
+    if (node.checkNodeConsistency()) {
+      logger.debug3("Node consistent; recursing on children...");
+      List children = node.getNodeList(null, false);
+      Iterator iter = children.iterator();
+      while (iter.hasNext()) {
+        RepositoryNodeImpl child = (RepositoryNodeImpl)iter.next();
+        recurseConsistencyCheck(child);
+      }
+    } else {
+      logger.debug3("Node inconsistent; deactivating...");
+      deactivateInconsistentNode(node);
+    }
+  }
 
   /**
    * This is called when a node is in an inconsistent state.  It simply creates
@@ -431,7 +464,8 @@ public class LockssRepositoryImpl
    * Finds the directory for this AU.  If none found in the map, designates
    * a new dir for it.
    * @param au the AU
-   * @param buffer a StringBuffer to add the dir name to.
+   * @param repoCachePath the cache path
+   * @return the dir String
    */
   static String getAuDir(ArchivalUnit au, String repoCachePath) {
     if (nameMap == null) {
@@ -492,7 +526,6 @@ public class LockssRepositoryImpl
   /** Return next string in the sequence "a", "b", ... "z", "aa", "ab", ... */
   static String getNextDirName(String old) {
     StringBuffer sb = new StringBuffer(old);
-    boolean charChanged = false;
     // go through and increment the first non-'z' char
     // counts back from the last char, so 'aa'->'ab', not 'ba'
     for (int ii=sb.length()-1; ii>=0; ii--) {
@@ -502,7 +535,7 @@ public class LockssRepositoryImpl
 	return sb.toString();
       }
       sb.setCharAt(ii, 'a');
-    }      
+    }
     sb.insert(0, 'a');
     return sb.toString();
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.51 2004-05-24 22:19:09 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.52 2004-06-17 06:17:26 eaalto Exp $
  */
 
 /*
@@ -178,14 +178,17 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testGetNodeWithQuery() throws Exception {
-    createLeaf("http://www.example.com/testDir?leaf=2",
-               "test stream", null);
+    // check if '?' allowed on system
+    if (FileUtil.canWriteToFileWithChar(tempDirPath, '?')) {
+      createLeaf("http://www.example.com/testDir?leaf=2",
+          "test stream", null);
 
-    RepositoryNode node = repo.getNode("http://www.example.com/testDir");
-    assertNull(node);
-    node = repo.getNode("http://www.example.com/testDir?leaf=2");
-    assertTrue(node.hasContent());
-    assertEquals("http://www.example.com/testDir?leaf=2", node.getNodeUrl());
+      RepositoryNode node = repo.getNode("http://www.example.com/testDir");
+      assertNull(node);
+      node = repo.getNode("http://www.example.com/testDir?leaf=2");
+      assertTrue(node.hasContent());
+      assertEquals("http://www.example.com/testDir?leaf=2", node.getNodeUrl());
+    }
   }
 
   public void testDotUrlHandling() throws Exception {
@@ -325,6 +328,41 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     assertFalse(leaf.hasContent());
   }
 
+  public void testRecursiveConsistencyCheck() throws Exception {
+    createLeaf("http://www.example.com", "test stream", null);
+    createLeaf("http://www.example.com/testDir", "test stream", null);
+    createLeaf("http://www.example.com/testDir/leaf", "test stream", null);
+
+    RepositoryNodeImpl dir = (RepositoryNodeImpl)
+      repo.getNode("http://www.example.com");
+
+    // set leaves inconsistent
+    RepositoryNodeImpl leaf = (RepositoryNodeImpl)
+      repo.getNode("http://www.example.com/testDir");
+    MyMockRepositoryNode mockLeaf = new MyMockRepositoryNode(leaf);
+    mockLeaf.isConsistent = false;
+    repo.nodeCache.put("http://www.example.com/testDir", mockLeaf);
+    // set leaf inconsistent
+    leaf = (RepositoryNodeImpl)
+        repo.getNode("http://www.example.com/testDir/leaf");
+    MyMockRepositoryNode mockLeaf2 = new MyMockRepositoryNode(leaf);
+    mockLeaf.isConsistent = false;
+    repo.nodeCache.put("http://www.example.com/testDir/leaf", mockLeaf);
+
+    // everything starts active
+    assertFalse(dir.isContentInactive());
+    assertFalse(mockLeaf.isContentInactive());
+    assertFalse(mockLeaf2.isContentInactive());
+
+    // run check
+    repo.nodeConsistencyCheck();
+
+    // leaf, but not its child, should be deactivated
+    assertFalse(dir.isContentInactive());
+    assertTrue(mockLeaf.isContentInactive());
+    assertFalse(mockLeaf2.isContentInactive());
+  }
+
   // test static naming calls
 
   public void testGetNextDirName() {
@@ -431,4 +469,17 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
+  /**
+   * This class overrides 'checkNodeConsistency()' so I can manipulate it.
+   */
+  static class MyMockRepositoryNode extends RepositoryNodeImpl {
+    boolean isConsistent = true;
+    MyMockRepositoryNode(RepositoryNodeImpl nodeImpl) {
+      super(nodeImpl.url, nodeImpl.nodeLocation, nodeImpl.repository);
+    }
+
+    boolean checkNodeConsistency() {
+      return isConsistent;
+    }
+  }
 }

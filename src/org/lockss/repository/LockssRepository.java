@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepository.java,v 1.16 2004-03-27 02:37:24 eaalto Exp $
+ * $Id: LockssRepository.java,v 1.17 2004-06-17 06:17:26 eaalto Exp $
  */
 
 /*
@@ -76,8 +76,7 @@ public interface LockssRepository extends LockssAuManager {
    * Traverses the node hierarchy and tests internal state consistency for each
    * node.  Corrects and logs any correctable errors it encounters.
    */
-  //XXX implement proper 'fsck' sometime
-//  public void nodeConsistencyCheck();
+  public void nodeConsistencyCheck();
 
   /**
    * Thrown when an unexpected error is encountered while caching.
