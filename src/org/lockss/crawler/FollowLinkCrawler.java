@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.1 2004-09-27 23:02:43 dcfok Exp $
+ * $Id: FollowLinkCrawler.java,v 1.2 2004-10-08 22:47:38 dcfok Exp $
  */
 
 /*
@@ -100,11 +100,14 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   /**
    * This method is implemented in NewContentCrawler and OaiCrawler.
    * It gives the different crawlers to have different mechanism to collect
-   * those "initial" urls of a crawl.
+   * those "initial" urls of a crawl. The method will also fetch those 
+   * "initial" urls into the cache.
    *
    * @return a set of urls to crawl for updated contents
    */
-  protected abstract Set getLinks();
+  protected abstract Set getUrlsToFollow();
+
+  protected abstract boolean shouldFollowLink();
 
   protected void setCrawlConfig(Configuration config) {
     super.setCrawlConfig(config);
@@ -113,6 +116,17 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 					  DEFAULT_PERSIST_CRAWL_LIST);
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
     maxRetries = config.getInt(PARAM_RETRY_TIMES, DEFAULT_RETRY_TIMES);
+  }
+  
+  /**
+   * One can update the Max. Crawl Depth before calling doCrawl10().
+   * Currently used only for "Not Follow Link" mode in OaiCrawler
+   *
+   * @param newMax the new max. crawl depth
+   */
+  protected void setMaxDepth(int newMax){
+    logger.debug3("changing max crawl depth from " + maxDepth + " to " + newMax);
+    maxDepth = newMax;
   }
 
   protected boolean doCrawl0() {
@@ -134,8 +148,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     if (!checkPermissionList(permissionList)){
       return aborted();
     }
-
-    extractedUrls = getLinks();
+    
+    extractedUrls = getUrlsToFollow();
 
     if (crawlAborted) {
         return aborted();
@@ -190,14 +204,15 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       lvlCnt++;
     } // end of outer while
 
-    if (!urlsToCrawl.isEmpty()) {
+    if (!urlsToCrawl.isEmpty() && shouldFollowLink() ) {
+      //when there are more Url to crawl in  new content crawl or follow link moded oai crawl
       logger.error("Site depth exceeds max. crawl depth. Stopped Crawl of " + au.getName() +
 		   " at depth " + (lvlCnt-1));
       crawlStatus.setCrawlError("Site depth exceeded max. crawl depth");
       logger.debug2("urlsToCrawl contains: " + urlsToCrawl);
-      logger.info("Site depth = " + (lvlCnt-1));
+      logger.info("Crawled depth = " + (lvlCnt-1));
     } else {
-      logger.info("Site depth = "+ (lvlCnt-1));
+      logger.info("Crawled depth = "+ (lvlCnt-1));
     }
     
     if (crawlAborted) {
