@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.39 2003-05-06 03:51:00 claire Exp $
+* $Id: VerifyPoll.java,v 1.40 2003-05-06 04:03:57 claire Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ class VerifyPoll extends Poll {
     byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
     if(secret == null) {
       log.error("Verify poll reply failed.  Unable to find secret for: "
-                + B64Code.encode(msg.getChallenge()));
+                + String.valueOf(B64Code.encode(msg.getChallenge())));
       return;
     }
     byte[] verifier = m_pollmanager.makeVerifier();
