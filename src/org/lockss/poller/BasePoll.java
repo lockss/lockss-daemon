@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.8.2.2 2004-10-06 00:12:00 dshr Exp $
+* $Id: BasePoll.java,v 1.8.2.3 2004-10-07 18:22:30 dshr Exp $
  */
 
 /*
@@ -202,5 +202,17 @@ public abstract class BasePoll implements Poll {
    * @return the newly created Vote
    */
   abstract Vote copyVote(Vote vote, boolean agree);
+
+  /**
+   * Return the challenge for the poll.
+   * @return the challenge
+   */
+  abstract public byte[] getChallenge();
+
+  /**
+   * return the verifier for the poll.
+   * @return the verifier
+   */
+  abstract public byte[] getVerifier();
 
 }

@@ -1,5 +1,5 @@
 /*
-* $Id: V3Poll.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
+* $Id: V3Poll.java,v 1.1.2.3 2004-10-07 18:22:30 dshr Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public abstract class V3Poll extends BasePoll {
 
   protected V3PollTally m_tally;
   protected int m_pendingVotes;
+  protected byte[] m_challenge;
 
   /**
    * create a new poll from a message
@@ -73,6 +74,7 @@ public abstract class V3Poll extends BasePoll {
     // now copy the msg elements we need
     // XXX
     m_pendingVotes = 0;
+    m_challenge = challenge;
     getConfigValues();
     m_tally = new V3PollTally(this, CONTENT_POLL, m_createTime,
 			      duration, pollspec.getQuorum(), hashAlg);
@@ -145,6 +147,14 @@ public abstract class V3Poll extends BasePoll {
     log.debug3("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
               +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
     return hasher;
+  }
+
+  public byte[] getChallenge() {
+    return m_challenge;
+  }
+
+  public byte[] getVerifier() {
+    return new byte[0];
   }
 
 }

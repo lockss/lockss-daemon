@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1.2.4 2004-10-07 02:17:05 dshr Exp $
+ * $Id: TestV3Poller.java,v 1.1.2.5 2004-10-07 18:22:30 dshr Exp $
  */
 
 /*
@@ -84,8 +84,8 @@ public class TestV3Poller extends LockssTestCase {
     testau.setPlugin(new MyMockPlugin());
 
     initTestPeerIDs();
-    initTestMsg();
     initTestPolls();
+    initTestMsg();
   }
 
   /** tearDown method for test case
@@ -180,6 +180,7 @@ public class TestV3Poller extends LockssTestCase {
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
     TimeBase.step(500);
+    // Decide to solicit a vote from testID1,  go to SendingPoll
     poll.solicitVoteFrom(testID1);
     assertEquals("Poll " + poll + " should be in SendingPoll",
 		 V3Poller.STATE_SENDING_POLL,
@@ -191,6 +192,7 @@ public class TestV3Poller extends LockssTestCase {
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
     TimeBase.step(500);
+    // And after a while go to WaitingPollAck
     assertEquals("Poll " + poll + " should be in WaitingPollAck",
 		 V3Poller.STATE_WAITING_POLL_ACK,
 		 poll.getPollState());
@@ -201,6 +203,42 @@ public class TestV3Poller extends LockssTestCase {
     assertFalse("Poll " + poll + " should not be suspended",
 		pollmanager.isPollSuspended(key));
     TimeBase.step(500);
+    //  Receive a PollAck message, go to SendingPollProof
+    try {
+      pollmanager.handleIncomingMessage(testV3msg[1]);
+    } catch (IOException ex) {
+      fail("Message " + testV3msg[1].toString() + " threw " + ex);
+    }
+    assertEquals("Poll " + poll + " should be in SendingPollProof",
+		 V3Poller.STATE_SENDING_POLL_PROOF,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(500);
+    assertEquals("Poll " + poll + " should be in SendingPollProof",
+		 V3Poller.STATE_SENDING_POLL_PROOF,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+    TimeBase.step(500);
+    assertEquals("Poll " + poll + " should be in WaitingPollProof",
+		 V3Poller.STATE_WAITING_VOTE,
+		 poll.getPollState());
+    assertTrue("Poll " + poll + " should be active",
+	       pollmanager.isPollActive(key));
+    assertFalse("Poll " + poll + " should not be closed",
+		pollmanager.isPollClosed(key));
+    assertFalse("Poll " + poll + " should not be suspended",
+		pollmanager.isPollSuspended(key));
+
   }
 
   //  Support methods
@@ -258,17 +296,13 @@ public class TestV3Poller extends LockssTestCase {
     assertNotNull("PollFactory should not be null", ppf);
     assertTrue(ppf instanceof V3PollFactory);
     V3PollFactory pf = (V3PollFactory)ppf;
-    PollSpec spec = new MockPollSpec(testau, rootV3urls[0],
-				     lwrbnd, uprbnd, Poll.CONTENT_POLL,
-				     Poll.V3_POLL);
-    assertEquals(spec.getPollType(), Poll.CONTENT_POLL);
-    assertEquals(spec.getPollVersion(), Poll.V3_POLL);
+    PollSpec spec = testSpec[0];
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     long duration = pf.calcDuration(Poll.CONTENT_POLL,
 				    spec.getCachedUrlSet(),
 				    pollmanager);
     log.debug("Duration is " + duration);
-    byte[] challenge = pollmanager.makeVerifier(duration);
+    byte[] challenge = testV3polls[0].getChallenge();
 
     for (int i= 0; i<testV3msg.length; i++) {
       testSpec[i] = spec;
@@ -279,7 +313,7 @@ public class TestV3Poller extends LockssTestCase {
 				     pollmanager.makeVerifier(duration),
 				     msgType[i],
 				     duration,
-				     testID);
+				     testID1);
       assertNotNull(testV3msg[i]);
       log.debug("Made " + testV3msg[i] + " from " + spec);
     }
@@ -287,6 +321,14 @@ public class TestV3Poller extends LockssTestCase {
   }
 
   private void initTestPolls() throws Exception {
+    PollSpec spec = new MockPollSpec(testau, rootV3urls[0],
+				     lwrbnd, uprbnd, Poll.CONTENT_POLL,
+				     Poll.V3_POLL);
+    assertEquals(spec.getPollType(), Poll.CONTENT_POLL);
+    assertEquals(spec.getPollVersion(), Poll.V3_POLL);
+    for (int i= 0; i<testV3msg.length; i++) {
+      testSpec[i] = spec;
+    }
     testV3polls = new V3Poll[1];
     for (int i = 0; i < testV3polls.length; i++) {
       log.debug3("initTestPolls: V3 " + i);
