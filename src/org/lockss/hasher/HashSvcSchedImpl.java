@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.8 2004-01-13 10:20:25 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.9 2004-04-27 19:37:41 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class HashSvcSchedImpl
   private long estPadPercent = 0;
   private List queue = new LinkedList();
   private HistoryList completed = new HistoryList(DEFAULT_COMPLETED_MAX);
+  // lock object for both queue and completed
+  private String queueLock = new String();
   private int hashStepBytes = DEFAULT_STEP_BYTES;
   private BigInteger totalBytesHashed = BigInteger.valueOf(0);
   private int reqCtr = 0;
@@ -97,7 +99,7 @@ public class HashSvcSchedImpl
 					      DEFAULT_NAME_HASH_ESTIMATE);
     int cMax = config.getInt(PARAM_COMPLETED_MAX, DEFAULT_COMPLETED_MAX);
     if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
-      synchronized (completed) {
+      synchronized (queueLock) {
 	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, cMax));
       }
     }
@@ -171,7 +173,7 @@ public class HashSvcSchedImpl
    * @param au the AU
    */
   public void cancelAuHashes(ArchivalUnit au) {
-    synchronized (queue) {
+    synchronized (queueLock) {
       for (Iterator iter = queue.listIterator(); iter.hasNext(); ) {
 	HashTask task = (HashTask)iter.next();
 	if (task.urlset.getArchivalUnit() == au) {
@@ -210,8 +212,12 @@ public class HashSvcSchedImpl
     task.setOverrunAllowed(true);
     if (sched.scheduleTask(task)) {
       task.hashReqSeq = ++reqCtr;
-      synchronized (queue) {
-	queue.add(task);
+      synchronized (queueLock) {
+	if (!task.finished) {
+	  // Don't put on waiting queue if task has already finished (and
+	  // been removed from waiting queue).
+	  queue.add(task);
+	}
       }
       return true;
     } else {
@@ -236,12 +242,12 @@ public class HashSvcSchedImpl
   }
 
   List getQueueSnapshot() {
-    synchronized (queue) {
+    synchronized (queueLock) {
       return new ArrayList(queue);
     }
   }
   List getCompletedSnapshot() {
-    synchronized (completed) {
+    synchronized (queueLock) {
       return new ArrayList(completed);
     }
   }
@@ -255,7 +261,7 @@ public class HashSvcSchedImpl
     int hashReqSeq = -1;
     int type;
     int sched;
-    int finish;
+    boolean finished = false;
     long bytesHashed = 0;
     long unaccountedBytesHashed = 0;
 
@@ -311,6 +317,7 @@ public class HashSvcSchedImpl
     }
 
     private void doFinished() {
+      finished = true;
       try {
 	if (type == HashService.CONTENT_HASH) {
 	  // tk - change interface to tell CUS what type of hash finished
@@ -327,10 +334,8 @@ public class HashSvcSchedImpl
       callback = null;
       cookie = null;
       urlsetHasher = null;
-      synchronized (queue) {
+      synchronized (queueLock) {
 	queue.remove(this);
-      }
-      synchronized (completed) {
 	completed.add(this);
       }
     }
