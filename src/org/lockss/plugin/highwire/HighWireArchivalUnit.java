@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireArchivalUnit.java,v 1.22 2003-04-21 05:38:18 tal Exp $
+ * $Id: HighWireArchivalUnit.java,v 1.23 2003-04-28 21:06:33 troberts Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   /**
    * Configuration parameter for pause time in Highwire crawling.
    */
-  public static final String AUPARAM_PAUSE_TIME = "pause.time";
+  public static final String AUPARAM_PAUSE_TIME = "pause_time";
   private static final long DEFAULT_PAUSE_TIME = 10 * Constants.SECOND;
 
   private static final String EXPECTED_URL_PATH = "/";
@@ -84,6 +84,8 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public void setConfiguration(Configuration config)
       throws ArchivalUnit.ConfigurationException {
     super.setConfiguration(config);
+
+    logger.debug3("Changing config: "+config);
 
     if (config == null) {
       throw new ArchivalUnit.ConfigurationException("Null configInfo");
@@ -120,23 +122,26 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
 						    base.getPath());
     }
 
-   try {
+    try {
       this.crawlSpec = makeCrawlSpec(base, volume);
     } catch (REException e) {
       // tk - not right.  Illegal RE is caused by internal error, not config
       // error
       throw new ArchivalUnit.ConfigurationException("Illegal RE", e);
     }
-    pauseMS = Configuration.getTimeIntervalParam(AUPARAM_PAUSE_TIME,
-						 DEFAULT_PAUSE_TIME);
-    ncCrawlInterval =
-      Configuration.getTimeIntervalParam(AUPARAM_NC_INTERVAL,
- 					 DEFAULT_NC_INTERVAL);
+   
+    pauseMS = config.getTimeInterval(AUPARAM_PAUSE_TIME, DEFAULT_PAUSE_TIME);
+    logger.debug3("Set pause value to "+pauseMS);
+
+
+    ncCrawlInterval = config.getTimeInterval(AUPARAM_NC_INTERVAL,
+					     DEFAULT_NC_INTERVAL);
+    logger.debug3("Set new content crawl interval to "+ncCrawlInterval);
   }
 
 
   public CachedUrlSet cachedUrlSetFactory(ArchivalUnit owner,
-      CachedUrlSetSpec cuss) {
+					  CachedUrlSetSpec cuss) {
     return new GenericFileCachedUrlSet(owner, cuss);
   }
 
@@ -196,7 +201,7 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   }
 
   public String getName() {
-//     String host = StringUtil.trimHostName(base.getHost());
+    //     String host = StringUtil.trimHostName(base.getHost());
     String host = base.getHost();
     return host + ", vol. " + volume;
   }
@@ -222,6 +227,4 @@ public class HighWireArchivalUnit extends BaseArchivalUnit {
   public List getNewContentCrawlUrls() {
     return ListUtil.list(makeStartUrl(base, volume));
   }
-
-
 }
