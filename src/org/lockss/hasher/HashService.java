@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.5 2002-11-23 01:51:47 tal Exp $
+ * $Id: HashService.java,v 1.6 2002-12-16 19:44:18 tal Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class HashService {
 				    MessageDigest hasher,
 				    Deadline deadline,
 				    Callback callback,
-				    Object cookie) {
+				    Serializable cookie) {
     HashQueue.Request req =
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
@@ -111,7 +111,7 @@ public class HashService {
 				  MessageDigest hasher,
 				  Deadline deadline,
 				  Callback callback,
-				  Object cookie) {
+				  Serializable cookie) {
     HashQueue.Request req =
       new HashQueue.Request(urlset, hasher, deadline,
 			    callback, cookie,
@@ -145,7 +145,7 @@ public class HashService {
    * <code>HashService.Callback</code> is used to notify hash requestors
    * that their hash has succeeded or failed.
    */
-  public interface Callback {
+  public interface Callback extends Serializable {
     /**
      * Called to indicate that hashing the content or names of a
      * <code>CachedUrlSet</code> object has succeeded, if <code>e</code>

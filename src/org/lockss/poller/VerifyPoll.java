@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.19 2002-12-16 06:04:28 claire Exp $
+* $Id: VerifyPoll.java,v 1.20 2002-12-16 19:44:18 tal Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ class VerifyPoll extends Poll {
    * @return true we never do anything here
    */
   boolean scheduleHash(MessageDigest hasher, Deadline timer,
-                                Object key, HashService.Callback callback) {
+		       Serializable key, HashService.Callback callback) {
     return true;
   }
 

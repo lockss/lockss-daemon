@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.18 2002-12-16 06:04:28 claire Exp $
+* $Id: ContentPoll.java,v 1.19 2002-12-16 19:44:18 tal Exp $
  */
 
 /*
@@ -103,7 +103,7 @@ public class ContentPoll extends Poll {
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
+  boolean scheduleHash(MessageDigest hasher, Deadline timer, Serializable key,
                                 HashService.Callback callback) {
     return HashService.hashContent( m_urlSet, hasher, timer, callback, key);
   }

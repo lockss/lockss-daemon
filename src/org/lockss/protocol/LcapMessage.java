@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.10 2002-12-03 03:35:59 claire Exp $
+ * $Id: LcapMessage.java,v 1.11 2002-12-16 19:45:16 tal Exp $
  */
 
 /*
@@ -38,11 +38,7 @@ import java.security.MessageDigest;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 import org.lockss.util.*;
-import java.io.IOException;
-import java.io.DataInputStream;
-import java.io.ByteArrayInputStream;
-import java.io.DataOutputStream;
-import java.io.ByteArrayOutputStream;
+import java.io.*;
 import org.mortbay.util.B64Code;
 
 
@@ -53,7 +49,7 @@ import org.mortbay.util.B64Code;
  * @version 1.0
  */
 
-public class LcapMessage {
+public class LcapMessage implements Serializable {
   public static final int NAME_POLL_REQ = 0;
   public static final int NAME_POLL_REP = 1;
   public static final int CONTENT_POLL_REQ = 2;

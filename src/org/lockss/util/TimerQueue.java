@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.6 2002-12-16 06:58:47 tal Exp $
+ * $Id: TimerQueue.java,v 1.7 2002-12-16 19:44:18 tal Exp $
  *
 
 Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
@@ -46,7 +46,7 @@ public class TimerQueue implements Serializable {
    * will be called with <code>cookie</code> as an argument.
    */
   public static boolean schedule(Deadline deadline, Callback callback,
-				 Object cookie) {
+				 Serializable cookie) {
     return singleton.add(deadline, callback, cookie);
   }
 
@@ -158,7 +158,7 @@ public class TimerQueue implements Serializable {
    * The TimerQueue.Callback interface defines the
    * method that will be called when a timer expires.
    */
-  public interface Callback {
+  public interface Callback extends Serializable {
     /**
      * Called when the timer expires.
      * @param cookie  data supplied by caller to schedule()
