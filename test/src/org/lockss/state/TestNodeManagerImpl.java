@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.117 2004-09-20 14:20:41 dshr Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.118 2004-09-23 02:35:22 dshr Exp $
  */
 
 /*
@@ -1356,8 +1356,10 @@ public class TestNodeManagerImpl extends LockssTestCase {
       fail("can't create test name message" + ex.toString());
     }
 
-    Poll p = TestPoll.createCompletedPoll(theDaemon, mau,
-                                          testmsg, numAgree, numDisagree);
+    Poll p = TestPoll.createCompletedPoll(theDaemon,
+					  mau,
+                                          testmsg, numAgree, numDisagree,
+					  pollManager);
     TestHistoryRepositoryImpl.configHistoryParams(tempDirPath);
 
     log.debug("createPoll " + (isLocal ? "local" : "remote") + " peer " +

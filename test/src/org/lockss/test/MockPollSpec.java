@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.2 2004-09-16 21:29:19 dshr Exp $
+ * $Id: MockPollSpec.java,v 1.3 2004-09-23 02:35:23 dshr Exp $
  */
 
 /*
@@ -79,6 +79,10 @@ public class MockPollSpec extends PollSpec {
 		      int pollType) {
     super(makeCus(auId, url, lwrBound, uprBound, pluginVersion),
 	  lwrBound, uprBound, pollType);
+  }
+
+  public MockPollSpec(PollSpec ps, int pollType) {
+    super(ps, pollType);
   }
 
   public String getPluginVersion() {

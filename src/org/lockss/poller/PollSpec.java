@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.25 2004-09-20 14:20:36 dshr Exp $
+ * $Id: PollSpec.java,v 1.26 2004-09-23 02:35:22 dshr Exp $
  */
 
 /*
@@ -162,6 +162,22 @@ public class PollSpec {
     this.pollVersion = pollVersion;
   }
 
+  /**
+   * Construct a PollSpec from another PollSpec and a poll type
+   * XXX it seems that other constructors are not setting all fields
+   */
+  public PollSpec(PollSpec ps, int pollType) {
+    this.auId = ps.auId;
+    this.pluginVersion = ps.pluginVersion;
+    this.url = ps.url;
+    this.uprBound = ps.uprBound;
+    this.lwrBound = ps.lwrBound;
+    this.cus = ps.cus;
+    this.pluginMgr = ps.pluginMgr;
+    this.pollVersion = ps.pollVersion;
+    this.pollType = pollType;
+  }
+    
   /** Setup common to most constructors */
   private void commonSetup(CachedUrlSet cus,
 			   String lwrBound,

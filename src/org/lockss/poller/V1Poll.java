@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.13 2004-09-20 14:20:36 dshr Exp $
+* $Id: V1Poll.java,v 1.14 2004-09-23 02:35:22 dshr Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ public abstract class V1Poll extends BasePoll {
     }
 
     m_challenge = msg.getChallenge();
-    m_verifier = m_pollmanager.makeVerifier(msg.getDuration());
+    m_verifier = pm.makeVerifier(msg.getDuration());
 
     log.debug("I think poll "+m_challenge
 	      +" will take me this long to hash "+m_hashTime);
@@ -227,8 +227,27 @@ public abstract class V1Poll extends BasePoll {
         long minTime = now + (remainingTime/2) - (remainingTime/4);
         long maxTime = now + (remainingTime/2) + (remainingTime/4);
         long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
+	log.debug("Calling a verify poll...");
+	byte[] challenge = vote.getVerifier(); // challenge is the old verifier
+	byte[] verifier = m_pollmanager.makeVerifier(duration);
+	PollSpec pollspec = new PollSpec(m_pollspec, Poll.VERIFY_POLL);
+	LcapMessage reqmsg =
+	  LcapMessage.makeRequestMsg(pollspec,
+				     null,
+				     challenge,
+				     verifier,
+				     LcapMessage.VERIFY_POLL_REQ,
+				     duration,
+				     idMgr.getLocalPeerIdentity());
 
-        m_pollmanager.requestVerifyPoll(m_pollspec, duration, vote);
+	PeerIdentity originatorID = vote.getVoterIdentity();
+	log.debug2("sending our verification request to " +
+		   originatorID.toString());
+	m_pollmanager.sendMessageTo(reqmsg,
+				    m_cus.getArchivalUnit(),
+				    originatorID);
+	// we won't be getting this message so make sure we create our own poll
+	BasePoll poll = m_pollmanager.makePoll(reqmsg);
         callVerifyPoll = true;
       }
     }

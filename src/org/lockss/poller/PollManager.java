@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.136 2004-09-22 23:50:20 clairegriffin Exp $
+ * $Id: PollManager.java,v 1.137 2004-09-23 02:35:22 dshr Exp $
  */
 
 /*
@@ -467,67 +467,6 @@ public class PollManager
   }
 
   /**
-   * create a poll of the type indicated by the LcapMessage opcode.
-   * @param msg the message which triggered this poll
-   * @param pollspec the PollSpec which describes the poll
-   * @return a newly created Poll object
-   * @throws ProtocolException if the opcode in the message is of an unknown
-   * type.
-   */
-  protected BasePoll createPoll(LcapMessage msg, PollSpec pollspec)
-      throws ProtocolException {
-    BasePoll ret_poll = null;
-
-    switch (msg.getOpcode()) {
-      case LcapMessage.CONTENT_POLL_REP:
-      case LcapMessage.CONTENT_POLL_REQ:
-        theLog.debug3("Making a content poll on "+ pollspec);
-	switch (pollspec.getPollVersion()) {
-	case 1:
-	  ret_poll = new V1ContentPoll(msg, pollspec, this);
-	  break;
-	case 2:
-	  ret_poll = new V2ContentPoll(msg, pollspec, this);
-	  break;
-	default:
-	  throw new ProtocolException("Unsupported content poll version: " +
-				      pollspec.getPollVersion());
-	}
-        break;
-      case LcapMessage.NAME_POLL_REP:
-      case LcapMessage.NAME_POLL_REQ:
-        theLog.debug3("Making a name poll on "+pollspec);
-	switch (pollspec.getPollVersion()) {
-	case 1:
-	  ret_poll = new V1NamePoll(msg, pollspec, this);
-	  break;
-	case 2:
-	  ret_poll = new V2NamePoll(msg, pollspec, this);
-	  break;
-	default:
-	  throw new ProtocolException("Unsupported name poll version: " +
-				      pollspec.getPollVersion());
-	}
-        break;
-      case LcapMessage.VERIFY_POLL_REP:
-      case LcapMessage.VERIFY_POLL_REQ:
-        theLog.debug3("Making a verify poll on "+pollspec);
-	switch (pollspec.getPollVersion()) {
-	case 1:
-	  ret_poll = new V1VerifyPoll(msg, pollspec, this);
-	  break;
-	default:
-	  throw new ProtocolException("Unsupported verify poll version: " +
-				      pollspec.getPollVersion());
-	}
-        break;
-      default:
-        throw new ProtocolException("Unknown opcode:" + msg.getOpcode());
-    }
-    return ret_poll;
-  }
-
-  /**
    * getActivePollSpecIterator returns an Iterator over the set of
    * PollSpec instances which currently have active polls.
    * @return Iterator over set of PollSpec
@@ -571,37 +510,6 @@ public class PollManager
       throws IOException {
     theRouter.sendTo(msg, au, id);
   }
-
-
-
-  /**
-   * request a verify poll by creating a new LcapMessage and sending it.
-   * @param pollspec the PollSpec describing the request poll
-   * @param duration the duration of the poll
-   * @param vote to be verifed
-   * @throws IOException if messge creation fails or the message cannot be sent.
-   */
-  void requestVerifyPoll(PollSpec pollspec, long duration, Vote vote)
-      throws IOException {
-
-    theLog.debug("Calling a verify poll...");
-    CachedUrlSet cus = pollspec.getCachedUrlSet();
-    LcapMessage reqmsg = LcapMessage.makeRequestMsg(pollspec,
-        null,
-        vote.getVerifier(),         // the challenge  becomes the verifier
-        makeVerifier(duration),     // we get a new verifier for this poll
-        LcapMessage.VERIFY_POLL_REQ,
-        duration,
-        theIDManager.getLocalPeerIdentity());
-
-    PeerIdentity originatorID = vote.getVoterIdentity();
-    theLog.debug2("sending our verification request to " +
-                  originatorID.toString());
-    sendMessageTo(reqmsg, cus.getArchivalUnit(), originatorID);
-    // since we won't be getting this message make sure we create our own poll
-    BasePoll poll = makePoll(reqmsg);
-  }
-
 
   /**
    * Called by verify polls to get the array of bytes that represents the

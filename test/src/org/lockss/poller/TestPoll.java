@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.81 2004-09-22 19:13:03 dshr Exp $
+ * $Id: TestPoll.java,v 1.82 2004-09-23 02:35:22 dshr Exp $
  */
 
 /*
@@ -133,7 +133,7 @@ public class TestPoll extends LockssTestCase {
 				   testID);
     log.debug3("testCheeckVote 2");
     V1Poll p = null;
-    p = createCompletedPoll(theDaemon, testau, msg, 8,2);
+    p = createCompletedPoll(theDaemon, testau, msg, 8,2, pollmanager);
     assertTrue(p instanceof V1NamePoll);
     log.debug3("testCheeckVote 3");
     assertNotNull(p);
@@ -327,7 +327,7 @@ public class TestPoll extends LockssTestCase {
 				 testID);
 
     // make our poll
-    np = (V1NamePoll) pollmanager.createPoll(poll_msg, spec);
+    np = (V1NamePoll) new V1NamePoll(poll_msg, spec, pollmanager);
 
     // generate agree vote msg
     agree_msg = LcapMessage.makeReplyMsg(poll_msg,
@@ -384,7 +384,8 @@ public class TestPoll extends LockssTestCase {
 					   ArchivalUnit au,
 					   LcapMessage testmsg,
 					   int numAgree,
-					   int numDisagree)
+					   int numDisagree,
+					   PollManager pollmanager)
       throws Exception {
     log.debug("createCompletedPoll: au: " + au.toString() + " peer " +
 	      testmsg.getOriginatorID() + " votes " + numAgree + "/" +
@@ -400,16 +401,17 @@ public class TestPoll extends LockssTestCase {
     }
     Plugin plugin = au.getPlugin();
     CachedUrlSet cus = plugin.makeCachedUrlSet(au, cusSpec);
-    log.debug3("createCompletedPoll 1");
     PollSpec spec = new PollSpec(cus, Poll.CONTENT_POLL);
-    log.debug3("createCompletedPoll 1");
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
-    log.debug3("createCompletedPoll 1");
-    BasePoll pp = daemon.getPollManager().createPoll(testmsg, spec);
-    log.debug3("createCompletedPoll 1");
-    assertNotNull(pp);
-    assertTrue(pp instanceof V1Poll);
-    V1Poll p = (V1Poll) pp;
+    V1Poll p = null;
+    if (testmsg.isContentPoll()) {
+      p = new V1ContentPoll(testmsg, spec, pollmanager);
+    } else if (testmsg.isNamePoll()) {
+      p = new V1NamePoll(testmsg, spec, pollmanager);
+    } else if (testmsg.isVerifyPoll()) {
+      p = new V1VerifyPoll(testmsg, spec, pollmanager);
+    }
+    assertNotNull(p);
     p.m_tally.quorum = numAgree + numDisagree;
     p.m_tally.numAgree = numAgree;
     p.m_tally.numDisagree = numDisagree;

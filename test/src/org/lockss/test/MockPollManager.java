@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.13 2004-09-16 21:29:19 dshr Exp $
+* $Id: MockPollManager.java,v 1.14 2004-09-23 02:35:23 dshr Exp $
  */
 
 /*
@@ -124,49 +124,6 @@ public class MockPollManager extends PollManager {
     String ret = (String)thePolls.get(key);
     theLog.debug("MockPollManager: getPollStatus(" + key + ") " + ret);
     return ret;
-  }
-
-  public BasePoll createPoll(LcapMessage msg, PollSpec pollspec) throws ProtocolException {
-    theLog.debug("MockPollManager: createPoll(" + pollspec.getUrl() + ") ");
-    int polltype = pollspec.getPollType();
-    switch (pollspec.getPollVersion()) {
-    case 1:
-      int opcode = msg.getOpcode();
-      switch (opcode) {
-      case LcapMessage.CONTENT_POLL_REQ:
-      case LcapMessage.CONTENT_POLL_REP:
-	if (polltype != Poll.CONTENT_POLL)
-	  theLog.error("calling " + LcapMessage.POLL_OPCODES[opcode] +
-		       " on spec " + Poll.PollName[polltype]);
-	break;
-      case LcapMessage.NAME_POLL_REQ:
-      case LcapMessage.NAME_POLL_REP:
-	if (polltype != Poll.NAME_POLL)
-	  theLog.error("calling " + LcapMessage.POLL_OPCODES[opcode] +
-		       " on spec " + Poll.PollName[polltype]);
-	break;
-      case LcapMessage.VERIFY_POLL_REQ:
-      case LcapMessage.VERIFY_POLL_REP:
-	if (polltype != Poll.VERIFY_POLL)
-	  theLog.error("calling " + LcapMessage.POLL_OPCODES[opcode] +
-		       " on spec " + Poll.PollName[polltype]);
-	break;
-      default:
-	theLog.error("Bad V1 poll message opcode: " +  opcode);
-	polltype = -1;
-      }
-      break;
-    default:
-      theLog.error("No support for V" + pollspec.getPollVersion() + " yet");
-      polltype = -1;
-    }
-    if (polltype != -1) {
-      callPoll(pollspec);
-      return super.createPoll(msg, pollspec);
-    } else {
-      return null;
-    }
-
   }
 
 }

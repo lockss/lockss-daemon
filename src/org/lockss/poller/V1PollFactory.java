@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.2 2004-09-20 14:20:36 dshr Exp $
+ * $Id: V1PollFactory.java,v 1.3 2004-09-23 02:35:22 dshr Exp $
  */
 
 /*
@@ -179,6 +179,7 @@ public class V1PollFactory implements PollFactory {
   /**
    * createPoll is invoked when an incoming message requires a new
    * Poll to be created.
+   * @param msg the LcapMessage that caused the new poll
    * @param pollspec the PollSpec for the poll.
    * @param pm the PollManager that called this method
    * @return a Poll object describing the new poll.
