@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.4 2002-11-26 17:59:26 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.5 2002-12-03 23:06:30 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.test.MockCachedUrlSetSpec;
 public class MockArchivalUnit implements ArchivalUnit {
   private CrawlSpec spec;
   private String pluginId = "mock";
-  private String auId = "null";
+  private String auId = "none";
   private CachedUrlSet cus = null;
 
 
