@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.7 2004-06-07 19:21:24 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.8 2004-06-22 23:13:37 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,7 @@ public class HashCUS extends LockssServlet {
   CachedUrlSet cus;
   CachedUrlSetHasher cush;
   int nbytes = 1000;
+  long elapsedTime;
 
   MessageDigest hasher;
   byte[] hashResult;
@@ -285,6 +286,8 @@ public class HashCUS extends LockssServlet {
     page.write(resp.getWriter());
   }
 
+  private static final NumberFormat fmt_2dec = new DecimalFormat("0.00");
+
   private Element makeResult() {
     Table tbl = new Table(0, "align=center");
     tbl.newRow();
@@ -299,7 +302,16 @@ public class HashCUS extends LockssServlet {
     }
     addResultRow(tbl, "Size", Integer.toString(bytesHashed));
     addResultRow(tbl, "Hash", byteString(hashResult));
-    
+    long bpms = bytesHashed / elapsedTime;
+    String s;
+    if (bpms >= 100) {
+      s = Long.toString(bpms);
+    } else {
+      double fbpms = ((double)bytesHashed) / ((double)elapsedTime);
+      s = fmt_2dec.format(fbpms);
+    }
+    addResultRow(tbl, "Time", elapsedTime + " ms, " + s + " bytes/ms");
+
     if (recordFile != null && recordFile.exists()) {
       tbl.newRow("valign=bottom");
       tbl.newCell();
@@ -468,6 +480,7 @@ public class HashCUS extends LockssServlet {
 
   private void doHash() {
     bytesHashed = 0;
+    long startTime = TimeBase.nowMs();
     try {
       while (!cush.finished()) {
 	bytesHashed += cush.hashStep(nbytes);
@@ -476,6 +489,8 @@ public class HashCUS extends LockssServlet {
       log.warning("doHash()", e);
       errMsg = "Error hashing: " + e.toString();
     }
+    elapsedTime = TimeBase.msSince(startTime);
+
     log.debug("Bytes hashed: " + bytesHashed);
     showResult = true;
     hashResult = hasher.digest();
