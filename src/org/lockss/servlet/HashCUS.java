@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.14 2004-09-29 06:36:20 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.15 2005-01-04 03:03:05 tlipkis Exp $
  */
 
 /*
@@ -397,7 +397,7 @@ public class HashCUS extends LockssServlet {
 	       HASH_TYPE_SNCUSS.equals(hashType)));
     tbl.newRow();
     tbl.newCell(COL2CENTER);
-    tbl.add(cb("Record filtered stream", "true", KEY_RECORD, isRecord));
+    tbl.add(checkBox("Record filtered stream", "true", KEY_RECORD, isRecord));
 
     centeredBlock.add(tbl);
     frm.add(centeredBlock);
@@ -427,19 +427,6 @@ public class HashCUS extends LockssServlet {
   Element rb(String label, String value, String key, boolean checked) {
     Composite c = new Composite();
     Input in = new Input(Input.Radio, key, value);
-    if (checked) {
-      in.check();
-    }
-    setTabOrder(in);
-    c.add(in);
-    c.add(" ");
-    c.add(label);
-    return c;
-  }
-
-  Element cb(String label, String value, String key, boolean checked) {
-    Composite c = new Composite();
-    Input in = new Input(Input.Checkbox, key, value);
     if (checked) {
       in.check();
     }
