@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.38 2003-09-16 23:28:35 eaalto Exp $
+ * $Id: LockssTestCase.java,v 1.39 2003-10-07 22:22:14 troberts Exp $
  */
 
 /*
@@ -758,6 +758,19 @@ public class LockssTestCase extends TestCase {
     assertTrue("Expected "+expected+" but was "+actual,
 	       org.apache.commons.collections.
 	       CollectionUtils.isEqualCollection(expected, actual));
+  }
+
+  /**
+   * Asserts that a string matches the content of a reader
+   */
+  public static void assertReaderMatchesString(String expected, Reader reader)
+      throws IOException{
+    StringBuffer actual = new StringBuffer(expected.length());
+    int kar;
+    while ((kar = reader.read()) != -1) {
+      actual.append((char)kar);
+    }
+    assertEquals(expected, actual.toString());
   }
 
   /** Abstraction to do something in another thread, after a delay,
