@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.9 2004-10-12 22:03:23 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.10 2004-10-19 23:37:39 tlipkis Exp $
  */
 
 /*
@@ -58,10 +58,11 @@ public class AuTreeWalkManager
   // to schedule a task.  There is only one task present at a time; the
   // current task is always completed or cancelled before another task is
   // scheduled.
-  BackgroundTask curTask;
-  TreeWalkRunner runningRunner = null;
+  volatile BackgroundTask curTask;
+  volatile TreeWalkRunner runningRunner = null;
 
   long treeWalkEstimate = -1;
+  long lastStartTime = 0;
 
   AuTreeWalkManager(ArchivalUnit au) {
     this.au = au;
@@ -279,16 +280,15 @@ public class AuTreeWalkManager
 
   /**
    * Picks the time to next run the treewalk
-   * @param minDelay minimum interval before start.
    * @return start time
    */
   long chooseTimeToRun() {
     long now = TimeBase.nowMs();
-    long lastTreeWalkTime = nodeMgr.getAuState().getLastTreeWalkTime();
-//     if (lastTreeWalkTime <= 0) {
-//       log.debug("First time");
-//       return now + twm.paramStartDelay;
-//     }
+    // Don't completely rely on time in state, which might not get updated
+    // in unit test
+    long lastTreeWalkTime =
+      Math.min(nodeMgr.getAuState().getLastTreeWalkTime(),
+	       lastStartTime);
     if ((now - lastTreeWalkTime) > twm.paramTreeWalkIntervalMax) {
       return now + Constants.HOUR;
     }
@@ -334,6 +334,7 @@ public class AuTreeWalkManager
 
   void startThread(BackgroundTask task) {
     TreeWalkRunner runner = newRunner(au, task);
+    lastStartTime = task.getStart().getExpirationTime();
     try {
       executeRunner(runner);
       runningRunner = runner;
