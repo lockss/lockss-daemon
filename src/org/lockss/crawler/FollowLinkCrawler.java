@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.12 2004-11-17 01:14:29 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.13 2004-12-02 00:14:04 dcfok Exp $
  */
 
 /*
@@ -90,6 +90,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   protected CachedUrlSet cus;
   protected Set parsedPages;
   protected Set extractedUrls;
+  protected boolean cachingStartUrls = false; //added to report an error when
+                                              //not able to cache a starting Url
 
   public FollowLinkCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
@@ -392,7 +394,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (error == null);
   }
- 
+
   private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
     int retriesLeft = maxTries;
@@ -424,8 +426,14 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	  //makeUrlCacher needed to handle connection pool
 	  uc = makeUrlCacher(uc.getUrl());
 	} else {
-	  logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
-			 + uc);
+	  if (cachingStartUrls) { //if cannot fetch anyone of StartUrls
+	    logger.error("Failed to cache " + maxTries +" times on start url " +
+			 uc.getUrl() + " .Skipping it.");
+	    crawlStatus.setCrawlError("Fail to cache start url: "+ uc.getUrl() );
+	  } else {
+	    logger.warning("Failed to cache "+ maxTries +" times.  Skipping "
+			   + uc);
+	  }
 	  throw e;
 	}
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.45 2004-11-11 01:32:07 dcfok Exp $
+ * $Id: NewContentCrawler.java,v 1.46 2004-12-02 00:14:04 dcfok Exp $
  */
 
 /*
@@ -81,7 +81,8 @@ public class NewContentCrawler extends FollowLinkCrawler {
       //return null;
     }
 
-    Iterator it = spec.getStartingUrls().iterator(); //getStartingUrls();
+    Iterator it = spec.getStartingUrls().iterator(); 
+    cachingStartUrls = true; //added to report error when fail to fetch startUrl
     for (int ix=0; ix<refetchDepth && it.hasNext(); ix++) {
 
       //don't use clear() or it will empty the iterator
@@ -122,6 +123,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
       lvlCnt++;
       it = extractedUrls.iterator();
     } // end for loop
+    cachingStartUrls = false;
 
     return extractedUrls;
   } // end of getUrlsToFollow()

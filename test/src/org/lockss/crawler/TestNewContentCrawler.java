@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.27 2004-11-29 23:42:02 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.28 2004-12-02 00:14:03 dcfok Exp $
  */
 
 /*
@@ -206,7 +206,6 @@ public class TestNewContentCrawler extends LockssTestCase {
     MyMockRetryableCacheException exception =
       new MyMockRetryableCacheException("Test exception");
     mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES-1);
-    
     String url1="http://www.example.com/blah.html";
     mau.addUrl(url1, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
@@ -214,6 +213,30 @@ public class TestNewContentCrawler extends LockssTestCase {
     
     assertTrue(crawler.doCrawl0());
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
+    assertEquals(expected, cus.getCachedUrls());
+  }
+
+  public void testReturnsFalseWhenOneOfStartUrlsFailedToBeFetched() {
+    String startUrl2 = "http://www.foo.com/default.html";
+    String permissionPage2 = "http://www.foo.com/permission.html";
+    List permissionList = ListUtil.list(permissionPage, permissionPage2);
+    mau.addUrl(permissionPage2);
+    crawlRule.addUrlToCrawl(permissionPage2);
+
+    List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
+    spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 1);
+    crawler = new NewContentCrawler(mau, spec, new MockAuState());
+    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(2));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    MyMockRetryableCacheException exception =
+      new MyMockRetryableCacheException("Test exception");
+    mau.addUrl(startUrl, exception, DEFAULT_RETRY_TIMES);
+    mau.addUrl(startUrl2, true, true);
+    crawlRule.addUrlToCrawl(startUrl2);
+
+    assertFalse(crawler.doCrawl());
+    Set expected = SetUtil.set(startUrl2, permissionPage, permissionPage2);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -252,7 +275,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(expected, cus.getCachedUrls());
   }
 
-  public void testReturnsTrueWhenNonFailingExceptionThrown() {
+  public void testReturnsTrueWhenNonFailingExceptionThrownOnStartUrl() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, new CacheException.NoRetryDeadLinkException("Test exception"), 1);
 
