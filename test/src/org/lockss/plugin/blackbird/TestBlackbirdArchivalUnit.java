@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlackbirdArchivalUnit.java,v 1.9 2004-03-01 06:10:41 clairegriffin Exp $
+ * $Id: TestBlackbirdArchivalUnit.java,v 1.10 2004-03-06 00:48:58 clairegriffin Exp $
  */
 
 /*
@@ -176,14 +176,6 @@ public class TestBlackbirdArchivalUnit extends LockssTestCase {
     String expectedStr = ROOT_URL+"lockss/lockss-volume2.htm";
     DefinableArchivalUnit bbAu = makeAu(url, 2);
     assertEquals(expectedStr, bbAu.getManifestPage());
-  }
-
-  public void testPathInUrlThrowsException() throws Exception {
-    URL url = new URL(ROOT_URL+"path");
-    try {
-      makeAu(url, 2);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testGetUrlStems() throws Exception {

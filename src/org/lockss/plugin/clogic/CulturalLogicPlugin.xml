@@ -1,51 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExternalizableMap>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_start_url</MapKeys>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_name</MapKeys>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlrules</MapKeys>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_name</MapKeys>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys>
-  <MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_expected_base_path</MapKeys>
-  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%slockss-%d.html
+<Elements><MapElement><ElementKey>au_expected_base_path</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">/clogic/</ElementValue></MapElement><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%slockss-%d.html
 base_url
-year</MapValues>
-  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Cultural Logic</MapValues>
-  <MapValues>
-    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4
+year</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Cultural Logic</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4
 ^%s
-base_url</string>
-    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+base_url</string><string xsi:type="java:java.lang.String">1
 %slockss-%d.html
 base_url
-year</string>
-    <string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+year</string><string xsi:type="java:java.lang.String">1
 %s%d/.*
 base_url
-year</string>
-  </MapValues>
-  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s%s, %d
+year</string></ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s%s, %d
 base_url_host
 base_url_path
-year</MapValues>
-  <MapValues>
-    <ConfigParamDescr>
-      <Key>base_url</Key>
-      <DisplayName>Base URL</DisplayName>
-      <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
-      <Type>3</Type>
-      <Size>40</Size>
-      <Definitional>true</Definitional>
-    </ConfigParamDescr>
-    <ConfigParamDescr>
-      <Key>year</Key>
-      <DisplayName>Year</DisplayName>
-      <Description>Four digit year (e.g., 2004)</Description>
-      <Type>4</Type>
-      <Size>4</Size>
-      <Definitional>true</Definitional>
-    </ConfigParamDescr>
-  </MapValues>
-  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</MapValues>
-  <MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">/clogic/</MapValues>
-</ExternalizableMap>
+year</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement><MapElement><ElementKey>plugin_version</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</ElementValue></MapElement></Elements>

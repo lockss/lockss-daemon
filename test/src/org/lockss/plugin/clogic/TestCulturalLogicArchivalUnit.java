@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicArchivalUnit.java,v 1.6 2004-03-01 06:10:41 clairegriffin Exp $
+ * $Id: TestCulturalLogicArchivalUnit.java,v 1.7 2004-03-06 00:48:58 clairegriffin Exp $
  */
 
 /*
@@ -149,14 +149,6 @@ public class TestCulturalLogicArchivalUnit extends LockssTestCase {
     String expectedStr = ROOT_URL+"lockss-2003.html";
     DefinableArchivalUnit clAu = makeAu(url, "2003");
     assertEquals(expectedStr, clAu.getManifestPage());
-  }
-
-  public void testBadPathInUrlThrowsException() throws Exception {
-    URL url = new URL(ROOT_URL+"path");
-    try {
-      makeAu(url, "2000");
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testGetUrlStems() throws Exception {

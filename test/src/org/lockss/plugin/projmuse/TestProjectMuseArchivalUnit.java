@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseArchivalUnit.java,v 1.14 2004-03-01 06:10:42 clairegriffin Exp $
+ * $Id: TestProjectMuseArchivalUnit.java,v 1.15 2004-03-06 00:48:59 clairegriffin Exp $
  */
 
 /*
@@ -196,14 +196,6 @@ public class TestProjectMuseArchivalUnit extends LockssTestCase {
     expectedStr = ROOT_URL+"journals/"+DIR+"/v006/";
     pmAu = makeAu(url, 6, DIR);
     assertEquals(expectedStr, pmAu.getManifestPage());
-  }
-
-  public void testPathInUrlThrowsException() throws Exception {
-    URL url = new URL(ROOT_URL+"path");
-    try {
-      makeAu(url, 60, DIR);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testGetUrlStems() throws Exception {

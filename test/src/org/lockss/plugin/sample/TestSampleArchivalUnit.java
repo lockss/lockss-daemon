@@ -1,5 +1,5 @@
 /*
- * $Id: TestSampleArchivalUnit.java,v 1.2 2004-02-17 21:46:11 clairegriffin Exp $
+ * $Id: TestSampleArchivalUnit.java,v 1.3 2004-03-06 00:48:59 clairegriffin Exp $
  */
 
 /*
@@ -75,14 +75,6 @@ public class TestSampleArchivalUnit extends LockssTestCase {
       makeAu(url, -1);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) { }
-  }
-
-  public void testPathInUrlThrowsException() throws Exception {
-    URL url = new URL(ROOT_URL+"path");
-    try {
-      makeAu(url, 108);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testMakeName() throws Exception {

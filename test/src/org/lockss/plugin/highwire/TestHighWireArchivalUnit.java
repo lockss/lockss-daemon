@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.40 2004-03-01 06:10:42 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.41 2004-03-06 00:48:59 clairegriffin Exp $
  */
 
 /*
@@ -147,15 +147,6 @@ public class TestHighWireArchivalUnit extends LockssTestCase {
 
     DefinableArchivalUnit hwau = makeAu(url, 10, 2004);
     assertEquals(expectedStr, hwau.getManifestPage());
-  }
-
-  public void testPathInUrlThrowsException() throws Exception {
-    URL url = new URL("http://www.example.com/path");
-    try {
-      makeAu(url, 10, 2004);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) {
-    }
   }
 
   public void testGetUrlStems() throws Exception {

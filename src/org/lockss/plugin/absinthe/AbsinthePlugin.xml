@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExternalizableMap><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_start_url</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_name</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_crawlrules</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">au_name</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_config_props</MapKeys><MapKeys xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">plugin_version</MapKeys><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%sarchives%02d.htm
+<Elements><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%sarchives%02d.htm
 base_url
-au_short_year</MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Absinthe Literary Review</MapValues><MapValues><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4
+au_short_year</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Absinthe Literary Review</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4
 ^%s
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+base_url</string><string xsi:type="java:java.lang.String">1
 %sarchives%02d.htm
 base_url
-au_short_year</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+au_short_year</string><string xsi:type="java:java.lang.String">1
 %sstories/.*
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+base_url</string><string xsi:type="java:java.lang.String">1
 %spoetics/.*
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+base_url</string><string xsi:type="java:java.lang.String">1
 %sarchives/.*
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2
+base_url</string><string xsi:type="java:java.lang.String">2
 %sbook_reviews/book_reviews.htm
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+base_url</string><string xsi:type="java:java.lang.String">1
 %sbook_reviews/.*
-base_url</string><string xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1
+base_url</string><string xsi:type="java:java.lang.String">1
 %simages/.*
-base_url</string></MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, %d
+base_url</string></ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, %d
 base_url_host
-year</MapValues><MapValues><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr></MapValues><MapValues xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</MapValues></ExternalizableMap>
+year</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement><MapElement><ElementKey>plugin_version</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</ElementValue></MapElement></Elements>

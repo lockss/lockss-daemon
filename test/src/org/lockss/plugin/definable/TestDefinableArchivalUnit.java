@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.2 2004-03-01 06:31:29 clairegriffin Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.3 2004-03-06 00:48:58 clairegriffin Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import gnu.regexp.*;
+import org.lockss.crawler.*;
 
 /**
  * TestConfigurableArchivalUnit: test case for the ConfigurableArchivalUnit
@@ -163,4 +164,19 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     assertEquals("return valuse", expectedReturn, actualReturn);
   }
 
+  public void testGetContentParser() {
+    // test we find the default
+    ContentParser parser = null;
+    parser = cau.getContentParser("text/html");
+    assertTrue(parser instanceof org.lockss.crawler.GoslingHtmlParser);
+
+    // test we don't find one that doesn't exist
+    parser = cau.getContentParser("text/ram");
+    assertNull(parser);
+
+    // test we find one we've added
+    map.putString("text/ram_parser", "org.lockss.crawler.RamParser");
+    parser = cau.getContentParser("text/ram");
+    assertTrue(parser instanceof org.lockss.crawler.RamParser);
+  }
 }

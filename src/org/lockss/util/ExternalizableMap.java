@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.8 2004-03-01 06:10:40 clairegriffin Exp $
+ * $Id: ExternalizableMap.java,v 1.9 2004-03-06 00:48:58 clairegriffin Exp $
  */
 
 /*
@@ -76,65 +76,58 @@ public class ExternalizableMap {
     }
   }
 
+
   public void loadMapFromResource(String mapLocation)
       throws FileNotFoundException {
     InputStream mapStream = getClass().getResourceAsStream(mapLocation);
     if (mapStream == null) {
-      descrMap = new HashMap();
       String err = "Unable to load:" + mapLocation;
       throw new FileNotFoundException(err);
     }
-
     try {
       Reader reader = new BufferedReader(new InputStreamReader(mapStream));
-      ExtMapBean emb = (ExtMapBean)marshaller.loadFromReader(reader,
+      ExtMapBean em = (ExtMapBean) marshaller.loadFromReader(reader,
           ExtMapBean.class, marshaller.getMapping(MAPPING_FILE_NAME));
-      if (emb==null) {
-        descrMap = new HashMap();
-        String err = "Unable to load:" + mapLocation;
-        throw new FileNotFoundException(err);
+      if (em != null) {
+        descrMap = em.getMap();
+        //storeMap("src", mapLocation);
       }
-      descrMap = emb.getMapFromLists();
-    } catch (XmlMarshaller.MarshallingException me) {
+    }
+    catch (XmlMarshaller.MarshallingException me) {
       // we have a damaged file
-      logger.error(me.toString());
-      descrMap = new HashMap();
+      throw new FileNotFoundException("Damaged XML file: " + me.toString());
     }
     catch (Exception e) {
       // some other error occured
-      logger.error(e.toString());
-      descrMap = new HashMap();
+      throw new FileNotFoundException("Error: " + e.toString());
     }
   }
 
   public void loadMap(String mapLocation, String mapName) {
     String mapFile = mapLocation + File.separator + mapName;
     try {
-      ExtMapBean emb = (ExtMapBean)marshaller.load(mapFile, ExtMapBean.class,
+      ExtMapBean em = (ExtMapBean)marshaller.load(mapFile, ExtMapBean.class,
           MAPPING_FILE_NAME);
-      if (emb==null) {
-        descrMap = new HashMap();
+      if (em==null) {
         return;
       }
-      descrMap = emb.getMapFromLists();
-    } catch (XmlMarshaller.MarshallingException me) {
+      descrMap = em.getMap();
+   } catch (XmlMarshaller.MarshallingException me) {
       // we have a damaged file
       logger.error(me.toString());
-      descrMap = new HashMap();
     } catch (Exception e) {
       // some other error occured
       logger.error(e.toString());
-      descrMap = new HashMap();
     }
   }
 
   public void storeMap(String mapLocation, String mapName) {
     try {
-      ExtMapBean emb = new ExtMapBean();
-      emb.setListsFromMap(descrMap);
-      marshaller.store(mapLocation, mapName, emb, MAPPING_FILE_NAME);
-    } catch (Exception e) {
-      //logger.error("Couldn't store map: ", e);
+      ExtMapBean em = new ExtMapBean(descrMap);
+      marshaller.store(mapLocation, mapName, em, MAPPING_FILE_NAME);
+    }
+    catch (Exception e) {
+      logger.error("Couldn't store map: ", e);
     }
   }
 
@@ -143,7 +136,6 @@ public class ExternalizableMap {
    *  methods for retrieving typed data or returning a default
    *
    */
-
   public String getString(String key, String def) {
     String ret = def;
     String value = (String)getMapElement(key);
@@ -292,3 +284,4 @@ public class ExternalizableMap {
  */
 
 }
+

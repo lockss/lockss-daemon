@@ -1,5 +1,5 @@
 /*
- * $Id: TestOtherVoicesArchivalUnit.java,v 1.7 2004-03-01 06:10:42 clairegriffin Exp $
+ * $Id: TestOtherVoicesArchivalUnit.java,v 1.8 2004-03-06 00:48:59 clairegriffin Exp $
  */
 
 /*
@@ -176,14 +176,6 @@ public class TestOtherVoicesArchivalUnit extends LockssTestCase {
     String expectedStr = ROOT_URL+"lockss-volume2.html";
     DefinableArchivalUnit ovAu = makeAu(url, 2);
     assertEquals(expectedStr, ovAu.getManifestPage());
-  }
-
-  public void testPathInUrlThrowsException() throws Exception {
-    URL url = new URL(ROOT_URL+"path");
-    try {
-      makeAu(url, 2);
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testGetUrlStems() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAbsintheArchivalUnit.java,v 1.8 2004-03-01 06:10:41 clairegriffin Exp $
+ * $Id: TestAbsintheArchivalUnit.java,v 1.9 2004-03-06 00:48:58 clairegriffin Exp $
  */
 
 /*
@@ -179,14 +179,6 @@ public class TestAbsintheArchivalUnit extends LockssTestCase {
     String expectedStr = ROOT_URL+"archives04.htm";
     DefinableArchivalUnit pmAu = makeAu(url, "2004");
     assertEquals(expectedStr, pmAu.getManifestPage());
-  }
-
-  public void testPathInUrlThrowsException() throws Exception {
-    URL url = new URL(ROOT_URL+"path");
-    try {
-      makeAu(url, "2003");
-      fail("Should have thrown ArchivalUnit.ConfigurationException");
-    } catch(ArchivalUnit.ConfigurationException e) { }
   }
 
   public void testGetUrlStems() throws Exception {

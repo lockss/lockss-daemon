@@ -3,18 +3,26 @@
                          "http://castor.exolab.org/mapping.dtd">
 
 <mapping>
-        <class name="org.lockss.util.ExtMapBean">
-                <map-to xml="ExternalizableMap"/>
-                <field name="keyList"
-                       type="java.util.ArrayList">
-                        <bind-xml name="MapKeys" node="element"/>
-                </field>
-                <field name="valueList"
-                       type="java.util.ArrayList">
-                        <bind-xml name="MapValues" node="element"/>
-                </field>
+	<class name="org.lockss.util.ExtMapBean">
+  	<map-to xml="Elements" />
+  	<field name="elements"
+               type="org.lockss.util.ExtMapElement"
+               collection="collection"
+               get-method="getValues" set-method="addElement">
+              <bind-xml node="element" name="MapElement" />
+        </field>
         </class>
-
+        <class name="org.lockss.util.ExtMapElement">
+          <map-to xml="ExtMapElement"/>
+                <field name="elementKey"
+                       type="java.lang.String">
+                        <bind-xml name="ElementKey" node="element"/>
+                </field>
+                <field name="elementValue"
+                       type="java.lang.Object">
+                        <bind-xml name="ElementValue" node="element"/>
+                </field>
+	</class>
         <class name="org.lockss.daemon.ConfigParamDescr">
           <map-to xml="ConfigParamDescr"/>
                 <field name="key"

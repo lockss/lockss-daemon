@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.1 2004-03-01 06:10:40 clairegriffin Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.2 2004-03-06 00:48:56 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.plugin.base.*;
 import org.lockss.util.*;
 import gnu.regexp.*;
 import java.net.URL;
+import org.lockss.crawler.*;
 
 /**
  * <p>ConfigurableArchivalUnit: An implementatation of Base Archival Unit used
@@ -61,6 +62,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       "au_def_new_content_crawl";
   static final public String CM_AU_DEFAULT_PAUSE_TIME = "au_def_pause_time";
   static final public String CM_AU_MANIFEST_KEY = "au_manifest";
+  static final public String CM_AU_PARSER_SUFFIX = "_parser";
+  static final public String CM_AU_FILTER_SUFFIX = "_filter";
 
   protected ExternalizableMap definitionMap;
   static Logger log = Logger.getLogger("ConfigurableArchivalUnit");
@@ -130,7 +133,6 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       }
     }
     // now load any specialized parameters
-    expectedUrlPath = definitionMap.getString(CM_AU_EXPECTED_PATH,"/");
     defaultFetchDelay =
         definitionMap.getLong(CM_AU_DEFAULT_PAUSE_TIME,
                                  DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS);
@@ -191,20 +193,44 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected FilterRule constructFilterRule(String mimeType) {
-    String filter = definitionMap.getString(mimeType, null);
+    String filter = definitionMap.getString(mimeType + CM_AU_FILTER_SUFFIX,
+                                            null);
     if (filter != null) {
       try {
         return (FilterRule) Class.forName(filter).newInstance();
       }
       catch (Exception ex) {
         throw new DefinablePlugin.InvalidDefinitionException(
-       auName + " failed to create filter rule from " + filter, ex);
+       auName + " unable to create FilterRule: " + filter, ex);
 
       }
     }
 
     return super.constructFilterRule(mimeType);
   }
+
+  /**
+   * Currently the only ContentParser we have is GoslingHtmlParser, so this
+   * gets returned for any string that starts with "test/html".  Null otherwise
+   * @param mimeType mime type to get a content parser for
+   * @return GoslingHtmlParser if mimeType starts with "test/html",
+   * null otherwise
+   */
+  public ContentParser getContentParser(String mimeType) {
+    String parser_cl = definitionMap.getString(mimeType + CM_AU_PARSER_SUFFIX,
+                                               null);
+    if (parser_cl != null) {
+      try {
+        return (ContentParser) Class.forName(parser_cl).newInstance();
+      }
+      catch (Exception ex) {
+        throw new DefinablePlugin.InvalidDefinitionException(
+       auName + " unable to create ContentParser: " + parser_cl, ex);
+      }
+    }
+    return super.getContentParser(mimeType);
+  }
+
 
 // ---------------------------------------------------------------------
 //   VARIABLE ARGUMENT REPLACEMENT SUPPORT ROUTINES

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.59 2004-03-06 00:02:23 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.60 2004-03-06 00:48:56 clairegriffin Exp $
  */
 
 /*
@@ -113,7 +113,6 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   static Logger logger = Logger.getLogger("BaseArchivalUnit");
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
-  protected String expectedUrlPath = "/";
   protected long minFetchDelay = 6 * Constants.SECOND;
   protected long fetchDelay;
   protected long defaultFetchDelay = DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS;
@@ -568,12 +567,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     if (url == null) {
       throw new ConfigurationException("Null url for " + paramString(descr));
     }
-    if (!expectedUrlPath.equals(url.getPath())) {
-      throw new ConfigurationException(paramString(descr) +
-				       " has illegal path: " +
-                                       url.getPath() + ", expected: " +
-                                       expectedUrlPath);
-    }
+    // TODO: We need to come up with a way to handle expected path
 
     return url;
   }
