@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.15 2003-05-06 01:45:45 troberts Exp $
+ * $Id: LockssServlet.java,v 1.16 2003-05-07 08:45:09 tal Exp $
  */
 
 /*
@@ -113,6 +113,7 @@ public abstract class LockssServlet extends HttpServlet
     public static int PER_CLIENT = 2;	// per client (takes client arg)
     public static int NOT_IN_NAV = 4;	// no link in nav table
     public static int LARGE_LOGO = 8;	// use large LOCKSS logo
+    public static int DEBUG_ONLY = 0x10; // debug user only
     public static int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
     public ServletDescr(Class cls, String heading, String name, int flags) {
@@ -133,6 +134,10 @@ public abstract class LockssServlet extends HttpServlet
       this(classForName(className), heading);
     }
 
+    public ServletDescr(String className, String heading, int flags) {
+      this(classForName(className), heading, flags);
+    }
+
     static Class classForName(String className) {
       try {
 	return Class.forName(className);
@@ -149,6 +154,9 @@ public abstract class LockssServlet extends HttpServlet
     boolean isInNavTable() {
       return (flags & NOT_IN_NAV) == 0;
     }
+    boolean isDebugOnly() {
+      return (flags & DEBUG_ONLY) != 0;
+    }
     boolean isLargeLogo() {
       return (flags & LARGE_LOGO) != 0;
     }
@@ -158,7 +166,10 @@ public abstract class LockssServlet extends HttpServlet
   protected static ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
   protected static ServletDescr SERVLET_THREAD_DUMP =
-    new ServletDescr("org.lockss.servlet.ThreadDump", "Thread Dump");
+    new ServletDescr("org.lockss.servlet.ThreadDump", "Thread Dump",
+		     ServletDescr.DEBUG_ONLY);
+  protected static ServletDescr LINK_LOGS =
+    new ServletDescr(null, "Logs", "log", ServletDescr.DEBUG_ONLY);
 //    protected static ServletDescr SERVLET_ADMIN_HOME =
 //      new ServletDescr(Admin.class, "Admin Home", ServletDescr.LARGE_LOGO);
 //    protected static ServletDescr SERVLET_JOURNAL_STATUS =
@@ -177,6 +188,7 @@ public abstract class LockssServlet extends HttpServlet
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
      SERVLET_DAEMON_STATUS,
+     LINK_LOGS,
      SERVLET_THREAD_DUMP,
 //      SERVLET_ADMIN_HOME,
 //      SERVLET_JOURNAL_STATUS,
@@ -190,7 +202,9 @@ public abstract class LockssServlet extends HttpServlet
   static {
     for (int i = 0; i < servletDescrs.length; i++) {
       ServletDescr d = servletDescrs[i];
-      servletToDescr.put(d.cls, d);
+      if (d.cls != null) {
+	servletToDescr.put(d.cls, d);
+      }
     }
   };
 
@@ -201,7 +215,7 @@ public abstract class LockssServlet extends HttpServlet
     // that's in the map.
     for (int i = 0; i < servletDescrs.length; i++) {
       d = servletDescrs[i];
-      if (d.cls.isInstance(o)) {
+      if (d.cls != null && d.cls.isInstance(o)) {
 	// found a descr that describes a superclass.  Add actual class to map
 	servletToDescr.put(o.getClass(), d);
 	return d;
@@ -304,8 +318,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
 
-  boolean includeServletInNav(ServletDescr d) {
-    return !isThisServlet(d) || includeMeInNav();
+  boolean isServletLinkInNav(ServletDescr d) {
+    return !isThisServlet(d) || linkMeInNav();
   }
 
   boolean isThisServlet(ServletDescr d) {
@@ -313,8 +327,8 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   /** servlets may override this to determine whether they should be
-   * included in nav table */
-  protected boolean includeMeInNav() {
+   * a link in nav table */
+  protected boolean linkMeInNav() {
     return false;
   }
 
@@ -326,6 +340,11 @@ public abstract class LockssServlet extends HttpServlet
   boolean isClusterAdmin() {
     return false;
 //     return Configuration.getBooleanParam(PARAM_IS_CLUSTER_ADMIN, false);
+  }
+
+  // user predicates
+  protected boolean isDebugUser() {
+    return req.isUserInRole("debugRole");
   }
 
   // Called when a servlet doesn't get the parameters it expects/needs
@@ -432,6 +451,11 @@ public abstract class LockssServlet extends HttpServlet
   }
 
 
+  protected boolean isServletInNav(ServletDescr d) {
+    if (!isDebugUser() && d.isDebugOnly()) return false;
+    return d.isInNavTable() && (!d.isPerClient() || isPerClient());
+  }
+
   // Build servlet navigation table
   private Table getNavTable() {
     Table navTable = new Table(0, " CELLSPACING=2 CELLPADDING=0 ");
@@ -439,7 +463,7 @@ public abstract class LockssServlet extends HttpServlet
 
     for (int i = 0; i < servletDescrs.length; i++) {
       ServletDescr d = servletDescrs[i];
-      if (d.isInNavTable() && (!d.isPerClient() || isPerClient())) {
+      if (isServletInNav(d)) {
 	navTable.newRow();
 	navTable.newCell();
 	if (d.isPerClient()) {
@@ -460,7 +484,7 @@ public abstract class LockssServlet extends HttpServlet
 	} else {
 	  navTable.cell().attribute("COLSPAN=\"3\"");
 	}
-	navTable.add(conditionalSrvLink(d, d.heading, includeServletInNav(d)));
+	navTable.add(conditionalSrvLink(d, d.heading, isServletLinkInNav(d)));
       }
     }
     navTable.newRow();

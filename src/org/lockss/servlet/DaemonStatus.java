@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.20 2003-05-05 17:45:41 tal Exp $
+ * $Id: DaemonStatus.java,v 1.21 2003-05-07 08:45:09 tal Exp $
  */
 
 /*
@@ -383,7 +383,7 @@ public class DaemonStatus extends LockssServlet {
 
 
   // make me a link in nav table unless I'm displaying table of all tables
-  protected boolean includeMeInNav() {
+  protected boolean linkMeInNav() {
     return !StatusService.ALL_TABLES_TABLE.equals(tableName);
   }
 }
