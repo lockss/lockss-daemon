@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.39 2003-03-05 01:59:56 claire Exp $
+* $Id: PollManager.java,v 1.40 2003-03-05 02:02:14 claire Exp $
  */
 
 /*
@@ -539,7 +539,7 @@ public class PollManager  implements LockssManager {
          long earliest = ret - ret/4;
          long latest = ret + ret/4;
          ret = earliest + theRandom.nextLong(latest - earliest);
-         ret = ret * 2 * (quorum +1);
+         //ret = ret * 2 * (quorum +1);
         theLog.debug("Name Poll duration: " + ret);
         break;
 
