@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.6 2004-07-14 20:46:03 clairegriffin Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.7 2004-07-16 19:42:49 clairegriffin Exp $
  */
 
 /*
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.devtools.plugindef;
 
-import java.lang.reflect.*;
 import java.util.*;
 
 import org.lockss.daemon.*;

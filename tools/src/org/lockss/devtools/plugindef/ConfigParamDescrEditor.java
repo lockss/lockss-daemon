@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrEditor.java,v 1.3 2004-06-15 04:14:43 clairegriffin Exp $
+ * $Id: ConfigParamDescrEditor.java,v 1.4 2004-07-16 19:42:49 clairegriffin Exp $
  */
 
 /*
@@ -118,7 +118,7 @@ public class ConfigParamDescrEditor extends JDialog
     }
   }
 
-  protected void updateData() {
+  protected boolean updateData() {
     if (m_paramDescr != null && isValidData()) {
       m_paramDescr.setKey(keyTextField.getText());
       m_paramDescr.setDisplayName(displayTextField.getText());
@@ -126,8 +126,9 @@ public class ConfigParamDescrEditor extends JDialog
       m_paramDescr.setType(typeComboBox.getSelectedIndex() + 1);
       m_paramDescr.setDescription(descriptionTextArea.getText());
       m_paramDescr.setDefinitional(definitionCheckBox.isSelected());
-      m_picker.addConfigParamDescr(m_paramDescr);
+      return m_picker.addConfigParamDescr(m_paramDescr);
     }
+    return false;
   }
 
   private boolean isValidData() {
@@ -236,7 +237,9 @@ public class ConfigParamDescrEditor extends JDialog
 
   void okButton_actionPerformed(ActionEvent e) {
     if (m_isEditable) {
-      updateData();
+      if (!updateData()) {
+        return;
+      }
     }
     setVisible(false);
     dispose();
