@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.5 2003-02-20 22:27:42 tal Exp $
+ * $Id: PluginManager.java,v 1.6 2003-02-22 03:00:33 tal Exp $
  */
 
 /*
@@ -80,8 +80,6 @@ public class PluginManager implements LockssManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    pluginDir = Configuration.getParam(PARAM_PLUGIN_LOCATION,
-                                       DEFAULT_PLUGIN_LOCATION);
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
@@ -106,10 +104,12 @@ public class PluginManager implements LockssManager {
   }
 
   private void setConfig(Configuration config, Set changedKeys) {
+    pluginDir = config.get(PARAM_PLUGIN_LOCATION, DEFAULT_PLUGIN_LOCATION);
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
     for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
       String pluginId = (String)iter.next();
-      Configuration pluginConf = config.getConfigTree(pluginId);
+      log.debug("Configuring plugin id: " + pluginId);
+      Configuration pluginConf = allPlugs.getConfigTree(pluginId);
       // tk - only if in changedKeys.  (but, compare subkey with whole key?)
       configurePlugin(pluginId, pluginConf);
     }
@@ -122,13 +122,22 @@ public class PluginManager implements LockssManager {
     return StringUtil.replaceString(key, "|", ".");
   }
 
+  /**
+   * Return the plugin with the given id.  Mostly for testing.
+   * @return the plugin or null
+   */
+  Plugin getPlugin(String pluginId) {
+    return (Plugin)plugins.get(pluginId);
+  }
+
   private void configurePlugin(String pluginId, Configuration pluginConf) {
     boolean pluginOk = ensurePluginLoaded(pluginId);
-    Plugin plugin = (Plugin)plugins.get(pluginId);
+    Plugin plugin = getPlugin(pluginId);
+    log.debug("Configuring plugin conf: " + pluginConf);
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
       if (pluginOk) {
-	log.debug("Configuring AU " + auKey);
+	log.debug("Configuring AU id: " + auKey);
 	try {
 	  plugin.configureAU(pluginConf.getConfigTree(auKey));
 	} catch (ArchivalUnit.ConfigurationException e) {
@@ -171,7 +180,7 @@ public class PluginManager implements LockssManager {
     try {
       Plugin plugin = (Plugin)pluginClass.newInstance();
       plugin.initPlugin();
-      plugins.put(pluginName, plugin);
+      plugins.put(pluginId, plugin);
       return true;
     } catch (Exception e) {
       log.error("Error instantiating " + pluginName, e);

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.1 2003-02-20 22:28:19 tal Exp $
+ * $Id: BasePlugin.java,v 1.2 2003-02-22 03:00:46 tal Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.plugin.*;
  * class to get some common Plugin functionality.
  */
 public abstract class BasePlugin implements Plugin {
+  static Logger log = Logger.getLogger("BasePlugin");
   protected Map auMap = new HashMap();
 
   /**
@@ -64,20 +65,27 @@ public abstract class BasePlugin implements Plugin {
   }
 
   public Collection getAllAUs() {
+    log.debug("getAllAus: auMap: " + auMap);
     return auMap.values();
   }
 
   public ArchivalUnit configureAU(Configuration config)
       throws ArchivalUnit.ConfigurationException {
-    String auId = getAUIdFromConfig(config);
+    String auId = encodeAUId(getAUIdFromConfig(config));
     ArchivalUnit au = getAU(auId);
     if (au != null) {
       au.setConfiguration(config);
     } else {
       au = createAU(config);
       auMap.put(auId, au);
+      log.debug("auMap.put(" + auId + ", " + au + ")");
+      log.debug("auMap: " + auMap);
     }
     return au;
+  }
+
+  String encodeAUId(String id) {
+    return StringUtil.replaceString(id, ".", "|");
   }
 
 }
