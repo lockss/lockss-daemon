@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.7 2004-01-04 06:13:45 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.8 2004-01-22 01:34:39 clairegriffin Exp $
  */
 
 /*
@@ -35,6 +35,8 @@ package org.lockss.daemon;
 import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Descriptor for a configuration parameter, and instances of descriptors
@@ -48,6 +50,10 @@ public class ConfigParamDescr implements Comparable {
   public static final int TYPE_INT = 2;
   /** Value is a URL */
   public static final int TYPE_URL = 3;
+  /** Value is a 4 digit year */
+  public static final int TYPE_YEAR = 4;
+  /** Value is a true or false */
+  public static final int TYPE_BOOLEAN = 5;
 
   public static final ConfigParamDescr VOLUME_NUMBER = new ConfigParamDescr();
   static {
@@ -63,6 +69,7 @@ public class ConfigParamDescr implements Comparable {
     YEAR.setDisplayName("Year");
     YEAR.setType(TYPE_INT);
     YEAR.setSize(4);
+    YEAR.setDescription("Must be four digits eg 2003.");
   }
 
   public static final ConfigParamDescr BASE_URL = new ConfigParamDescr();
@@ -97,6 +104,8 @@ public class ConfigParamDescr implements Comparable {
   private String description;		// explanatory test
   private int type = TYPE_STRING;
   private int size = 0;			// size of input field
+  private boolean definitional = true;  // true if this parameter
+                                        // is not required to define the au.
 
   public ConfigParamDescr() {
   }
@@ -185,6 +194,86 @@ public class ConfigParamDescr implements Comparable {
     this.size = size;
   }
 
+  public void setDefinitional(boolean isDefinitional) {
+    definitional = isDefinitional;
+  }
+
+  public boolean isDefinitional() {
+    return definitional;
+  }
+
+  public boolean isValidValueOfType(String val) {
+    try {
+      return getValueOfType(val) != null;
+    }
+    catch (InvalidFormatException ex) {
+      return false;
+    }
+  }
+
+  public Object getValueOfType(String val) throws InvalidFormatException {
+    Object ret_val = null;
+    switch (type) {
+      case TYPE_INT:
+        try {
+          ret_val = new Integer(val);
+        } catch (NumberFormatException nfe) {
+          throw new InvalidFormatException("Invalid Int: " + val);
+        }
+        break;
+      case TYPE_STRING:
+        if (!StringUtil.isNullString(val)) {
+          ret_val = val;
+        }
+        else {
+          throw new InvalidFormatException("Invalid String: " + val);
+        }
+        break;
+      case TYPE_URL:
+        try {
+          ret_val = new URL(val);
+        }
+        catch (MalformedURLException ex) {
+          throw new InvalidFormatException("Invalid URL: " + val, ex);
+        }
+        break;
+      case TYPE_YEAR:
+        if (val.length() == 4) {
+          try {
+            int i_val = Integer.parseInt(val);
+            if (i_val > 0) {
+              ret_val = new Integer(val);
+            }
+          }
+          catch (NumberFormatException fe) {
+          }
+        }
+        if(ret_val == null) {
+          throw new InvalidFormatException("Invalid Year: " + val);
+        }
+        break;
+      case TYPE_BOOLEAN:
+        if(val.equalsIgnoreCase("true") ||
+           val.equalsIgnoreCase("yes") ||
+           val.equalsIgnoreCase("on") ||
+           val.equalsIgnoreCase("1")) {
+          ret_val = Boolean.TRUE;
+        }
+        else if(val.equalsIgnoreCase("false") ||
+           val.equalsIgnoreCase("no") ||
+           val.equalsIgnoreCase("off") ||
+           val.equalsIgnoreCase("0")) {
+          ret_val = Boolean.FALSE;
+        }
+        else
+          throw new InvalidFormatException("Invalid Boolean: " + val);
+        break;
+      default:
+        throw new InvalidFormatException("Unknown type: " + type);
+    }
+    return ret_val;
+  }
+
   public int compareTo(Object o) {
     ConfigParamDescr od = (ConfigParamDescr)o;
     return getDisplayName().compareTo(od.getDisplayName());
@@ -225,4 +314,22 @@ public class ConfigParamDescr implements Comparable {
     hash += key.hashCode();
     return hash;
   }
+
+  public class InvalidFormatException extends Exception {
+    private Throwable nestedException;
+
+    public InvalidFormatException(String msg) {
+      super(msg);
+    }
+
+    public InvalidFormatException(String msg, Throwable e) {
+      super(msg + (e.getMessage() == null ? "" : (": " + e.getMessage())));
+      this.nestedException = e;
+    }
+
+    public Throwable getNestedException() {
+      return nestedException;
+    }
+  }
+
 }
