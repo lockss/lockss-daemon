@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.57 2003-08-06 06:25:08 tlipkis Exp $
+ $Id: build.xml,v 1.58 2003-09-04 23:11:16 tyronen Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -50,6 +50,7 @@ Args:
   -Dlogtarget=Class        Set default log target.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dtimeout=msecs          Override the default test failure timeout.
+  -Dhalt=true              Stop a set of tests in the event of an error.
 </description>
 
   <!-- Defaults -->
@@ -61,6 +62,7 @@ Args:
   <property name="fork" value="yes" />
   <property name="forkc" value="yes" />
   <property name="exclude" value="" />
+  <property name="halt" value="true" />
 
 
   <property environment="env"/>
@@ -88,21 +90,28 @@ Args:
   <property name="ant.src"       value="${ant}/src"/>
   <property name="ant.classes"   value="${ant}/classes" />
 
-  <property name="doclet"           value="${basedir}/doclet"/>
-  <property name="doclet.src"       value="${doclet}/src"/>
-  <property name="doclet.classes"   value="${doclet}/classes" />
+  <property name="tools"           value="${basedir}/tools"/>
+  <property name="tools.src"       value="${tools}/src"/>
+  <property name="tools.classes"   value="${tools}/classes" />
   
-  <property name="doclet.test"      value="${doclet}/test"/>
-  <property name="doclet.test.src"  value="${doclet.test}/src"/>
-  <property name="doclet.test.classes" value="${doclet.test}/classes"/>
-
-  <property name="plugin.src"     value="${src}/org/lockss/plugin" />
-  <property name="plugin.test"    value="${test.src}/org/lockss/plugin" />
-  <property name="plugin.test.wrapper" value="${plugin.test}/wrapper/" />
-  <property name="wrapper.doclet" value="org.lockss.doclet.WrapperGenerator" />
-  <property name="plugin.wrapper.template" 
-            value="${plugin.test.wrapper}/pluginwrapper.xml" />
+  <property name="tools.test"      value="${tools}/test"/>
+  <property name="tools.test.src"  value="${tools.test}/src"/>
+  <property name="tools.test.classes" value="${tools.test}/classes"/>
+  <property name="tools.test.results" value="${tools.test}/results"/>
+ 
+  <property name="generated"           value="${basedir}/generated"/>
+  <property name="generated.src"       value="${generated}/src"/>
+  <property name="generated.classes"   value="${generated}/classes" />
   
+  <property name="generated.test"      value="${generated}/test"/>
+  <property name="generated.test.src"  value="${generated.test}/src"/>
+  <property name="generated.test.classes" value="${generated.test}/classes"/>
+  <property name="generated.test.results" value="${generated.test}/results"/>
+  
+  <property name="wrapper.path"    value="org/lockss/plugin/wrapper"/>
+  <property name="tobewrapped.src" value="${src}/org/lockss/plugin"/>
+  <property name="plugin.wrapper.template" value="${tools.src}/pluginwrapper.xml" />
+  	    
   <property name="javadoc"        value="${basedir}/javadoc"/>
   <property name="test.javadoc"   value="${test}/javadoc"/>
   <property name="depend.cache"   value="${basedir}/.depend"/>
@@ -127,13 +136,15 @@ Args:
   <property name="httpunit.jar"    value="${test.lib}/httpunit.jar"/>
   <property name="htmlparser.jar"  value="${test.lib}/nekohtml.jar"/>
   <property name="js.jar"  value="${test.lib}/js.jar"/>
-  <property name="tools.jar"      value="${java.lib}/tools.jar"/>
+  <property name="jdk.tools.jar"      value="${java.lib}/tools.jar"/>
 
   <property name="lockss.jar"     value="${lib}/lockss.jar"/>
   <property name="lockss.test.jar" value="${test.lib}/lockss-test.jar"/>
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
-  <property name="lockss.doclet.jar" value="${lib}/lockss-doclet.jar"/>
-  <property name="lockss.doclet.test.jar" value="${lib}/lockss-doclet-test.jar"/>
+  <property name="lockss.tools.jar" value="${lib}/lockss-tools.jar"/>
+  <property name="lockss.tools.test.jar" value="${lib}/lockss-tools-test.jar"/>
+  <property name="lockss.generated.jar" value="${lib}/lockss-generated.jar"/>
+  <property name="lockss.generated.test.jar" value="${lib}/lockss-generated-test.jar"/>
 
   <property name="ant-contrib.jar"      value="${lib}/ant-contrib-0.1.jar"/>
 
@@ -187,28 +198,45 @@ Args:
     <pathelement path="${lockss.ant.jar}" />
   </path>
 
-  <path id="doclet.compile.classpath">
+  <path id="tools.compile.classpath">
     <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
-    <pathelement path="${tools.jar}" />
+    <pathelement path="${jdk.tools.jar}" />
   </path>
 
-  <path id="doclet.run.classpath">
+  <path id="generated.compile.classpath">
+    <path refid="tools.compile.classpath" />
+  </path>
+
+  <path id="tools.run.classpath">
+    <path refid="tools.compile.classpath" />
+    <pathelement path="${lockss.tools.jar}" />
+  </path>
+
+  <path id="tools.test.compile.classpath">
     <path refid="test.run.classpath" />
-    <pathelement path="${lockss.doclet.jar}" />
+    <pathelement path="${jdk.tools.jar}" />
+  </path>
+   
+  <path id="generated.test.compile.classpath">
+    <path refid="tools.test.compile.classpath" />
+    <pathelement path="${lockss.generated.jar}" />
   </path>
 
-  <path id="doclet.test.compile.classpath">
-    <path refid="test.compile.classpath" />
-    <pathelement path="${lockss.doclet.jar}" />
-    <pathelement path="${lockss.test.jar}" />
-    <pathelement path="${tools.jar}" />
+  <path id="tools.test.run.classpath">
+    <path refid="tools.test.compile.classpath" />
+    <pathelement path="${lockss.tools.test.jar}" />
+    <pathelement path="${lockss.generated.jar}" />
   </path>
-
-  <path id="doclet.test.run.classpath">
-    <path refid="doclet.test.compile.classpath" />
-    <pathelement path="${lockss.ant.jar}" />
-    <pathelement path="${lockss.doclet.test.jar}" />
+  
+ <path id="generated.test.run.classpath">
+    <path refid="tools.test.run.classpath" />
+    <pathelement path="${lockss.generated.test.jar}" />
+  </path>
+  
+  <path id="one.test.run.classpath" >
+    <path refid="generated.test.run.classpath" />
+    <pathelement path="${lockss.tools.jar}"/>
   </path>
   
   <path id="ant-contrib.classpath">
@@ -254,6 +282,15 @@ Args:
     </if>
   </target>
 
+  <target name="-check-if-1.4">
+    <condition property="jvm-1.4">
+      <equals arg1="1.4" arg2="${ant.java.version}"/>
+    </condition>
+    <fail unless="jvm-1.4">
+The target you have selected requires compiling under JDK 1.4.  Use the rant -1.4 option
+    </fail>
+  </target>
+
   <target name="prepare.run.test"
        depends="prepare.test,-set.junit.logger.task.available">
   </target>
@@ -270,7 +307,7 @@ Args:
          classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
   </target>
 
-  <target name="-set.junit.logger.task.available"
+  <target name="-set.junit.logger.task.available" depends="jar-ant"
         unless="junit.logger.task.available">
     <available property="junit.logger.task.available" 
          classname="org.lockss.ant.LoggingJUnitTask" />
@@ -280,22 +317,32 @@ Args:
       </classpath>        
     </taskdef>
   </target>
+  
+  <target name="-set.wrap.task.available" unless="wrap.task.available">
+     <available property="wrap.task.available" classname="org.lockss.ant.WrapTask"/>
+     <taskdef name="wrap" classname="org.lockss.ant.WrapTask">
+       <classpath> 
+         <path refid="test.run.classpath" />
+      </classpath>        
+    </taskdef>
+  </target>
 
   <target name="-set.junit.available" unless="junit.available">
     <available property="junit.available" 
                classname="junit.framework.Test" />
   </target>
-
+  
+  <target name="-using-junit1" 
+          depends="-set.junit.available,-set.junit.task.available,-set.junit.logger.task.available"/>
+  
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
-  <target name="clean" depends="clean-tempbuild"
+  <target name="clean" depends="clean-tempbuild,clean-tools"
    description="Delete all generated files and dirs" >
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
     <delete dir="${ant.classes}" quiet="true"/>
-    <delete dir="${doclet.classes}" quiet="true"/>
-    <delete dir="${doclet.test.classes}" quiet="true"/>
     <delete dir="${depend.cache}" quiet="true"/>
     <delete dir="${test.results}" quiet="true"/>
     <delete dir="${javadoc}" quiet="true"/>
@@ -303,16 +350,30 @@ Args:
     <delete file="${lockss.jar}" quiet="true"/>
     <delete file="${lockss.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
-    <delete file="${lockss.doclet.jar}" quiet="true"/>
-    <delete file="${lockss.doclet.test.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
   </target>
-  
+
   <target name="clean-tempbuild"
    description="Delete temporary build dirs" >
     <delete dir="${temp.build}" quiet="true"/>
   </target>
+  
+  <!-- The tools jar has a separate cleaning target because
+       it requires a separate JDK 1.4 compilation -->
+  <target name="clean-tools"
+          description="Cleans tools jars">
+    <delete dir="${generated.src}" quiet="true"/>
+    <delete dir="${tools.classes}" quiet="true"/>
+    <delete dir="${tools.test.classes}" quiet="true"/>
+    <delete dir="${generated.classes}" quiet="true"/>
+    <delete dir="${generated.test.classes}" quiet="true"/>
+    <delete file="${lockss.tools.jar}" quiet="true"/>
+    <delete file="${lockss.tools.test.jar}" quiet="true"/>
+    <delete file="${lockss.generated.jar}" quiet="true"/>
+    <delete file="${lockss.generated.test.jar}" quiet="true"/>
+  </target>
+  
   <!-- ==================================================================== -->
   <target name="depend-lockss" depends="prepare"
    description="Process Java dependencies in LOCKSS classes" >
@@ -379,37 +440,69 @@ Args:
        <include name="**/*.java"/>
     </javac>
   </target>
-
+   
   <!-- ==================================================================== -->
-  <target name="compile-doclet" depends="jar-lockss"
-   description="Compile the LOCKSS doclets" >
-    <mkdir dir="${doclet.classes}" />
-    <javac srcdir="${doclet.src}"
-           destdir="${doclet.classes}"
+  <target name="compile-tools" 
+          depends="jar-lockss,-check-if-1.4"
+          description="Compile the LOCKSS tools">
+    <mkdir dir="${tools.classes}" />
+    <javac srcdir="${tools.src}"
+           destdir="${tools.classes}"
            debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
            >
-       <classpath refid="doclet.compile.classpath" />
+       <classpath refid="tools.compile.classpath" />
        <include name="**/*.java"/>
     </javac>
   </target>
-  
-  <target name="compile-doclet-tests" depends="jar-doclet,jar-tests"
-   description="Compile the LOCKSS test classes for doclets" >
-    <mkdir dir="${doclet.test.classes}" />
-    <javac srcdir="${doclet.test.src}"
-           destdir="${doclet.test.classes}"
+ 
+  <target name="compile-generated" depends="prepare,generate-plugin-wrapper,jar-lockss"
+          description="Compile generated classes">
+    <mkdir dir="${generated.classes}"/>
+    <javac srcdir="${generated.src}"
+           destdir="${generated.classes}"
 	   debug="${javac.debug}"
            optimize="${javac.optimize}"
            deprecation="${javac.deprecation}"
            fork="${forkc}"
            >
-       <classpath refid="doclet.test.compile.classpath" />
+       <classpath refid="generated.compile.classpath" />
        <include name="**/*.java"/>
     </javac>
   </target>
+  
+  <target name="compile-tools-tests" depends="jar-tools,jar-tests,jar-generated"
+   description="Compile the LOCKSS test classes for tools" >
+    <mkdir dir="${tools.test.classes}" />
+    <javac srcdir="${tools.test.src}"
+           destdir="${tools.test.classes}"
+	   debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           fork="${forkc}"
+           >
+       <classpath refid="tools.test.compile.classpath" />
+       <include name="**/*.java"/>
+   </javac>
+  </target>
+  
+    <target name="compile-generated-tests" depends="jar-generated,jar-tests"
+   description="Compile the LOCKSS test classes for generated" >
+    <mkdir dir="${generated.test.classes}" />
+    <javac srcdir="${generated.test.src}"
+           destdir="${generated.test.classes}"
+	   debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           fork="${forkc}"
+           >
+       <classpath refid="generated.test.compile.classpath" />
+       <include name="**/*.java"/>
+   </javac>
+  </target>
+
 
   <!-- ==================================================================== -->
   <target name="build-info-if-needed">
@@ -450,13 +543,13 @@ Args:
 
     <!-- Concatenate all CVS/Entries files.   Not ideal, as dir names
          must be inferred, but it's fast, done entirely within Ant,
-         and includes files that don't have $Id: build.xml,v 1.57 2003-08-06 06:25:08 tlipkis Exp $ line -->
+         and includes files that don't have $Id: build.xml,v 1.58 2003-09-04 23:11:16 tyronen Exp $ line -->
     <concat destfile="${build.filerev.file}">
        <fileset dir="${src}" includes="**/CVS/Entries" defaultexcludes="no" />
     </concat>
 <!--
  Some other ways to do this.
-     Extract cvs $Id: build.xml,v 1.57 2003-08-06 06:25:08 tlipkis Exp $ lines from all files, with shell command:
+     Extract cvs $Id: build.xml,v 1.58 2003-09-04 23:11:16 tyronen Exp $ lines from all files, with shell command:
      sh -c "find . -type f -print0 | xargs -0 '"'egrep '\$Id(:.*)?\$'"'"
     <exec executable="sh" dir="${src}" output="${build.filerev.file}">
       <arg line="-c &quot;find . -type f  -print0 | xargs -0 egrep &apos;&quot;&apos;\$Id(:.*)?\$&apos;&quot;&apos;&quot;" />
@@ -501,21 +594,37 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jar-doclet" depends="compile-doclet"
-   description="Jar the doclet classes" >
-    <jar jarfile="${lockss.doclet.jar}" basedir="${doclet.classes}" >
+  <target name="jar-tools" depends="compile-tools"
+   description="Jar the tools classes" >
+    <jar jarfile="${lockss.tools.jar}" basedir="${tools.classes}" >
        <include name="**/" />
     </jar>
   </target>
 
   <!-- ==================================================================== -->
-  <target name="jar-doclet-tests" depends="compile-doclet-tests"
-   description="Jar the doclet test classes" >
-    <jar jarfile="${lockss.doclet.test.jar}" basedir="${doclet.test.classes}" >
+  <target name="jar-tools-tests" depends="compile-tools-tests"
+   description="Jar the tools test classes" >
+    <jar jarfile="${lockss.tools.test.jar}" basedir="${tools.test.classes}" >
        <include name="**/" />
     </jar>
   </target>
 
+  <!-- ==================================================================== -->
+  <target name="jar-generated" depends="compile-generated"
+   description="Jar the generated classes" >
+    <jar jarfile="${lockss.generated.jar}" basedir="${generated.classes}" >
+       <include name="**/*" />
+    </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="jar-generated-tests" depends="compile-generated-tests"
+   description="Jar the generateds test classes" >
+    <jar jarfile="${lockss.generated.test.jar}" basedir="${generated.test.classes}" >
+       <include name="**/*"/>
+   </jar>
+  </target>
+    
   <!-- ==================================================================== -->
   <target name="jar-ant" depends="compile-ant"
    description="Jar the LOCKSS ant extensions" >
@@ -588,16 +697,17 @@ Args:
     </javadoc>
   </target>
   
-  <target name="generate-plugin-wrapper" depends="jar-doclet">
-    <javadoc sourcepath="${plugin.src}"
-	     Private="yes">
-      <doclet name="${wrapper.doclet}">
-        <param name="-template" value="${plugin.wrapper.template}" />
-	<param name="-d" value="${plugin.test.wrapper}" />
-	<param name="-interface" />
-      </doclet>
-      <fileset dir="${plugin.src}" includes="*.java" excludes="Generic*.java" />
-    </javadoc>     
+  <target name="generate-plugin-wrapper" 
+          depends="jar-ant,jar-tools,-set.wrap.task.available">
+    <mkdir dir="${generated.src}/${wrapper.path}"/>
+    <wrap srcdir="${tobewrapped.src}"
+        template="${plugin.wrapper.template}"
+	destdir="${generated.src}/${wrapper.path}"
+	interface="true" >
+     <fileset dir="${tools.src}/org/lockss/doclet" includes="WrapperGenerator.java"/>
+     <fileset dir="${ant.src}/org/lockss/ant" includes="WrapTask.java" />
+     <classpath refid="tools.run.classpath" />
+    </wrap>
   </target>
 
   <!-- ==================================================================== -->
@@ -608,7 +718,7 @@ Args:
   </target>
 
   <!-- ==================================================================== -->
-  <target name="index" depends="jar-doclet"
+  <target name="index" depends="jar-tools"
    description="Print an index for a .java file">
     <tempfile property="index.file" destdir="${java.io.tmpdir}"
        prefix="index"/>
@@ -621,7 +731,7 @@ Args:
        failonerror="true"
        access="private">
       <doclet name="org.lockss.doclet.Indexer"
-              path="${lockss.doclet.jar}">
+              path="${lockss.tools.jar}">
 	<param name="-o" value="${index.file}" />
   	<param name="-dots" value="0" />
       </doclet>
@@ -718,7 +828,7 @@ Test results in ${test.results}
     </echo>
     <property name="include" value="**/Test*.java" />
     <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
+    <junit1 fork="no" printsummary="yes" haltonerror="${halt}" haltonfailure="${halt}">
      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${include}" />
@@ -747,7 +857,7 @@ Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
     <junit1 fork="yes" printsummary="yes"
-            haltonerror="yes" haltonfailure="yes">
+            haltonerror="${halt}" haltonfailure="${halt}">
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Func*.java" />
@@ -834,7 +944,7 @@ Test results in ${test.results}
       <test fork="${fork}" name="${class}" />
       <formatter type="plain" usefile="false" />                  
       <classpath> 
-         <path refid="test.run.classpath" />
+ 	 <path refid="one.test.run.classpath" />
       </classpath>        
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
@@ -846,24 +956,26 @@ Test results in ${test.results}
   </target>
 
   <!-- ==================================================================== -->
-  <target name="test-doclets"
-   depends="prepare.run.test,check.junit,jar-doclet-tests"
-   description="Run all doclet tests (doclet/test/src/**/Test*.class)" >
+  <target name="test-tools"
+   depends="-check-if-1.4,-using-junit1,jar-tools-tests"
+   description="Run all tools tests" >
     <echo>
-Test results in ${test.results}
+Test results in ${tools.test.results}
     </echo>
-    <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+    <mkdir dir="${tools.test.results}"/>
+    <delete file="${tools.test.results}/*" quiet="true" />
+    <junit1 fork="no" printsummary="yes" haltonerror="${halt}" haltonfailure="${halt}"
          filtertrace="yes"
          showoutput="${showoutput}">
-      <batchtest fork="${fork}" todir="${test.results}">
-        <fileset dir="${doclet.test.src}">
+      <batchtest fork="${fork}" todir="${tools.test.results}">
+        <fileset dir="${tools.test.src}">
           <include name="**/Test*.java" />
-        </fileset>
+	  <include name="**/Func*.java"/>
+       </fileset>
       </batchtest>
       <formatter type="plain" usefile="true" />
       <classpath>
-         <path refid="doclet.test.run.classpath" />
+         <path refid="tools.test.run.classpath" />
       </classpath>        
       <sysproperty key="java.library.path" value="${test.native}"/>
       <sysproperty key="org.lockss.unitTesting" value="true"/>
@@ -873,14 +985,58 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit1>
   </target>
-      
+
+    <target name="test-generated"
+   depends="-check-if-1.4,-using-junit1,jar-generated-tests"
+   description="Run all tests of generated" >
+    <echo>
+Test results in ${tools.test.results}
+    </echo>
+    <mkdir dir="${generated.test.results}"/>
+    <delete file="${generated.test.results}/*" quiet="true" />
+    <junit1 fork="no" printsummary="yes" haltonerror="${halt}" haltonfailure="${halt}"
+         filtertrace="yes"
+         showoutput="${showoutput}">
+      <batchtest fork="${fork}" todir="${generated.test.results}">
+        <fileset dir="${generated.test.src}">
+          <include name="org/lockss/plugin/**/Test*.java" />
+	  <include name="org/lockss/plugin/**/Func*.java"/>
+        </fileset>
+      </batchtest>
+      <formatter type="plain" usefile="true" />
+      <classpath>
+         <path refid="generated.test.run.classpath" />
+      </classpath>        
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
+  </target>
   
+  <target name="test-tools-etal"
+          description="Test the tools and generated classes"
+	  depends="test-tools,test-generated">
+  </target>
+
   <!-- ==================================================================== -->
   <target name="rebuild-all"
    depends="clean,test-all,javadoc,javadoc-test"
    description="Clean, build and test all, and javadoc." >
   </target>
 
+  <target name="rebuild-tools"
+          depends="clean-tools,-check-if-1.4,test-tools-etal"
+	  description="Clean, build, and test tools">
+  </target>
+  
+  <target name="rebuild-all-with-tools"
+          depends="rebuild-all,rebuild-tools"
+	  description="Clean, build, test daemon and tools">
+  </target>
+  
   <!-- ==================================================================== -->
   <target name="checkout-and-build"
      depends="check.contrib"
@@ -968,8 +1124,7 @@ Test results in ${test.results}
     <fail message="
  The &lt;junit&gt; task is not available.
  You need to install the Ant optional tasks .jar in the [ant]/lib directory.
- Please see Ant's JUnit task doc for more information"
-   />
+ Please see Ant's JUnit task doc for more information"   />
   </target>
 
   <target name="check.junit.jar" unless="junit.available" >

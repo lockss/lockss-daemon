@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileUrlCacher.java,v 1.21 2003-09-04 23:11:17 tyronen Exp $
+ * $Id: TestWrappedUrlCacher.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -30,24 +30,23 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.plugin;
+package org.lockss.plugin.wrapper;
 
 import java.io.*;
 import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
-import org.lockss.util.StreamUtil;
+import org.lockss.util.*;
 import org.lockss.repository.LockssRepositoryImpl;
-import org.lockss.plugin.base.*;
+import org.lockss.plugin.*;
 
 /**
- * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
+ * This is the test class for org.lockss.plugin.wrapper.WrappedUrlCacher
  *
- * @author  Emil Aalto
- * @version 0.0
+ * Based on the code of TestGenericFileUrlCacher
  */
-public class TestGenericFileUrlCacher extends LockssTestCase {
-  private MockGenericFileArchivalUnit mgfau;
+public class TestWrappedUrlCacher extends LockssTestCase {
+  private WrappedArchivalUnit wau;
   private MockLockssDaemon theDaemon;
 
   public void setUp() throws Exception {
@@ -61,15 +60,17 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
     theDaemon.getHashService();
 
 
-    mgfau = new MockGenericFileArchivalUnit();
+    MockGenericFileArchivalUnit mgfau = new MockGenericFileArchivalUnit();
+    wau = (WrappedArchivalUnit)WrapperState.getWrapper(mgfau);
     mgfau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
     MockPlugin plugin = new MockPlugin();
-    plugin.initPlugin(theDaemon);
+    WrappedPlugin wplug = (WrappedPlugin)WrapperState.getWrapper(plugin);
+    wplug.initPlugin(theDaemon);
     plugin.setDefiningConfigKeys(Collections.EMPTY_LIST);
-    mgfau.setPlugin(plugin);
+    mgfau.setPlugin(wplug);
 
-    theDaemon.getLockssRepository(mgfau);
-    theDaemon.getNodeManager(mgfau);
+    theDaemon.getLockssRepository(wau);
+    theDaemon.getNodeManager(wau);
   }
 
   public void tearDown() throws Exception {
@@ -77,16 +78,17 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
   }
 
   public void testCache() throws IOException {
-    MockGenericFileUrlCacher cacher = new MockGenericFileUrlCacher(
-        mgfau.getAUCachedUrlSet(), "http://www.example.com/testDir/leaf1");
+    MockWrappedUrlCacher cacher = new MockWrappedUrlCacher(
+        wau.getAUCachedUrlSet(), "http://www.example.com/testDir/leaf1");
     cacher.setUncachedInputStream(new StringInputStream("test content"));
     Properties props = new Properties();
     props.setProperty("test1", "value1");
+    WrappedUrlCacher wcacher = (WrappedUrlCacher)WrapperState.getWrapper(cacher);
     cacher.setUncachedProperties(props);
-    cacher.cache();
+    wcacher.cache();
 
-    CachedUrl url = mgfau.cachedUrlFactory(mgfau.getAUCachedUrlSet(),
-        "http://www.example.com/testDir/leaf1");
+    WrappedCachedUrl url = (WrappedCachedUrl)wau.makeCachedUrl(
+        wau.getAUCachedUrlSet(),"http://www.example.com/testDir/leaf1");
     InputStream is = url.openForReading();
     ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
     StreamUtil.copy(is, baos);
@@ -99,9 +101,34 @@ public class TestGenericFileUrlCacher extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = { TestGenericFileUrlCacher.class.getName()};
+    String[] testCaseList = { TestWrappedUrlCacher.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
+  private class MockWrappedUrlCacher extends GenericFileUrlCacher {
+    private InputStream uncachedIS;
+    private Properties uncachedProp;
+
+    public MockWrappedUrlCacher(CachedUrlSet owner, String url) {
+      super(owner, url);
+    }
+
+    public InputStream getUncachedInputStream(long lastCached) {
+      return uncachedIS;
+    }
+
+    public Properties getUncachedProperties() {
+      return uncachedProp;
+    }
+
+    //mock specific acessors
+    public void setUncachedInputStream(InputStream is) {
+      uncachedIS = is;
+    }
+
+    public void setUncachedProperties(Properties prop) {
+      uncachedProp = prop;
+    }
+  }
 
 }

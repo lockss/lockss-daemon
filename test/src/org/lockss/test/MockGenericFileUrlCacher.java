@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.6 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: MockGenericFileUrlCacher.java,v 1.5 2003-09-04 23:11:18 tyronen Exp $
  */
 
 /*
@@ -32,62 +32,36 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.test;
 
+import java.io.*;
 import java.util.*;
-import org.lockss.util.*;
+import org.lockss.plugin.*;
 
 /**
- * Mock implementation of LogTarget
+ * This is a mock version of <code>UrlCacher</code> used for testing
  */
 
-public class MockLogTarget implements LogTarget{
-  static Logger log = Logger.getLogger("Mock log target");
-  Vector messages;
-  int initCount = 0;
+public class MockGenericFileUrlCacher extends GenericFileUrlCacher {
+    private InputStream uncachedIS;
+    private Properties uncachedProp;
 
-  public MockLogTarget(){
-    messages = new Vector();
-  }
+    public MockGenericFileUrlCacher(CachedUrlSet owner, String url) {
+      super(owner, url);
+    }
 
-  public void init() {
-    initCount++;
-  }
+    public InputStream getUncachedInputStream(long lastCached) {
+      return uncachedIS;
+    }
 
-  /**
-   * Adds the message and severity to a Vector, so they can be retrieved
-   * by unit tests
-   */
-  public void handleMessage(Logger log, int msgLevel, String message) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(log.nameOf(msgLevel));
-    sb.append(": ");
-    sb.append(message);
-    String str = sb.toString();
-    messages.add(str);
-    if (Logger.LEVEL_DEBUG == msgLevel) {
-      System.err.println("Recursive log call; should only happen once.");
-      log.debug("This is a recursive log message which should not be logged");
+    public Properties getUncachedProperties() {
+      return uncachedProp;
+    }
+
+    //mock specific acessors
+    public void setUncachedInputStream(InputStream is) {
+      uncachedIS = is;
+    }
+
+    public void setUncachedProperties(Properties prop) {
+      uncachedProp = prop;
     }
   }
-
-  public Iterator messageIterator() {
-    return messages.iterator();
-  }
-
-  public int messageCount() {
-    return messages.size();
-  }
-
-  public void resetMessages() {
-    messages.clear();
-  }
-
-  public int initCount() {
-    return initCount;
-  }
-
-  public boolean hasMessage(String str) {
-    Set mset = new HashSet();
-    mset.addAll(messages);
-    return mset.contains(str);
-  }
-}

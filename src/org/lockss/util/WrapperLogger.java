@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperLogger.java,v 1.1 2003-07-25 00:29:05 tyronen Exp $
+ * $Id: WrapperLogger.java,v 1.2 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -32,40 +32,59 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 /**
- * <p>Title: </p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2003</p>
- * <p>Company: </p>
- * @author not attributable
- * @version 1.0
+ * <p>Title: WrapperLogger</p>
+ * <p>Description: Static class for use in the wrapper layer</p>
+ * @author Tyrone Nicholas
  */
 import java.util.*;
 
 public class WrapperLogger {
 
-  static Logger wrapLog = Logger.getLogger("wrappedPlugin");
-  static final int LOG_LEVEL = Logger.LEVEL_DEBUG3;
+  public static final String WRAPPED_LOG_NAME = "WrappedPlugin";
+
+  private static Logger wrapLog;
+
+  static {
+   wrapLog = Logger.getLogger(WRAPPED_LOG_NAME);
+  }
 
   public static void record_call(String classname, String methodname,
                                  List args) {
-    StringBuffer buf = new StringBuffer("Method");
+    StringBuffer buf = new StringBuffer("Method ");
     buf.append(methodname);
     buf.append(" of class ");
     buf.append(classname);
     buf.append(" was called with arguments ");
     Iterator it = args.iterator();
-
+    while (it.hasNext()) {
+      try {
+        buf.append(it.next().toString());
+      } catch (NullPointerException e) {
+        // Plugin.configureAU is supposed to be called with a null parameter,
+        // that is its normal operation
+        if (!classname.equals("Plugin") || !methodname.equals("configureAU")) {
+          wrapLog.warning("Null argument passed to method " + methodname +
+                          " of class " + classname);
+        }
+      }
+      buf.append(", ");
+    }
+    int len = buf.length();
+    buf.delete(len-2,len);
+    wrapLog.debug3(buf.toString());
   }
+
 
   public static void record_throwable(String classname, String methodname,
                                       Throwable e) {
-    wrapLog.log(LOG_LEVEL,"Method " + methodname + "of class " + classname, e);
+    wrapLog.warning("Method " + methodname + " of class " + classname, e);
   }
 
   public static void record_val(String classname, String methodname,
                                 Object retval) {
-    wrapLog.log(LOG_LEVEL,"Method " + methodname + "of class " + classname
-                + "returned value " + retval.toString());
+    String value = (retval==null) ? "null" : retval.toString();
+    wrapLog.debug3("Method " + methodname + " of class " + classname
+                + " returned " + value);
   }
 
   public static void record_val(String classname, String methodname,
@@ -111,5 +130,8 @@ public class WrapperLogger {
     record_val(classname, methodname, new Long(retval));
   }
 
+  public static void setLevel(int level) {
+    wrapLog.setLevel(level);
+  }
 
 }

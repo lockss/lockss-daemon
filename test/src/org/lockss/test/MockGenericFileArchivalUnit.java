@@ -1,5 +1,5 @@
 /*
- * $Id: MockGenericFileArchivalUnit.java,v 1.14 2003-08-30 00:35:30 clairegriffin Exp $
+ * $Id: MockGenericFileArchivalUnit.java,v 1.15 2003-09-04 23:11:18 tyronen Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class MockGenericFileArchivalUnit extends BaseArchivalUnit {
   }
 
   public UrlCacher urlCacherFactory(CachedUrlSet owner, String url) {
-    return null;
+    return new MockGenericFileUrlCacher(owner,url);
   }
 
   public CachedUrlSet getAUCachedUrlSet() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.23 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: TestPluginManagerWrapping.java,v 1.1 2003-09-04 23:11:16 tyronen Exp $
  */
 
 /*
@@ -33,25 +33,25 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.io.*;
-import java.net.*;
 import java.util.*;
-import junit.framework.*;
+
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
+import org.lockss.plugin.wrapper.*;
 import org.lockss.poller.*;
-import org.lockss.util.*;
-import org.lockss.test.*;
 import org.lockss.repository.*;
-import org.lockss.poller.PollSpec;
+import org.lockss.test.*;
+import org.lockss.util.*;
+import junit.framework.*;
 
 /**
  * Test class for org.lockss.plugin.PluginManager
  */
 
-public class TestPluginManager extends LockssTestCase {
+public class TestPluginManagerWrapping extends LockssTestCase {
   private MockLockssDaemon theDaemon;
 
   static String mockPlugKey = "org|lockss|test|MockPlugin";
+
   static Properties props1 = new Properties();
   static Properties props2 = new Properties();
   static {
@@ -78,6 +78,8 @@ public class TestPluginManager extends LockssTestCase {
   static String configStr =
     p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
     p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
+    p1a1param + "reserved.wrapper=true\n" +
+    p1a2param + "reserved.wrapper=true\n" +
     p1a2param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
     p1a2param + MockPlugin.CONFIG_PROP_2 + "=va.l3\n" + // value contains a dot
 // needed to allow PluginManager to register AUs
@@ -87,7 +89,7 @@ public class TestPluginManager extends LockssTestCase {
 
   PluginManager mgr;
 
-  public TestPluginManager(String msg) {
+  public TestPluginManagerWrapping(String msg) {
     super(msg);
   }
 
@@ -100,6 +102,7 @@ public class TestPluginManager extends LockssTestCase {
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
     mgr.initService(theDaemon);
+
   }
 
   public void tearDown() throws Exception {
@@ -122,53 +125,33 @@ public class TestPluginManager extends LockssTestCase {
 				  File.separator);
   }
 
-  public void testNameFromKey() {
-    assertEquals("org.lockss.Foo", PluginManager.pluginNameFromKey("org|lockss|Foo"));
-  }
-
-  public void testKeyFromName() {
-    assertEquals("org|lockss|Foo", PluginManager.pluginKeyFromName("org.lockss.Foo"));
-  }
-
-  public void testKeyFromId() {
-    assertEquals("org|lockss|Foo", PluginManager.pluginKeyFromId("org.lockss.Foo"));
-  }
-
-  public void testEnsurePluginLoaded() throws Exception {
-    // non-existent class shouldn't load
-    assertFalse(mgr.ensurePluginLoaded("org|lockss|NoSuchClass"));
-    // MockPlugin should load
-    assertTrue(mgr.ensurePluginLoaded(mockPlugKey));
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
-    assertNotNull(mpi);
-    assertEquals(1, mpi.getInitCtr());	// should have been inited once
-
-    // second time shouldn't reload, reinstantiate, or reinitialize plugin
-    assertTrue(mgr.ensurePluginLoaded(mockPlugKey));
-    MockPlugin mpi2 = (MockPlugin)mgr.getPlugin(mockPlugKey);
-    assertSame(mpi, mpi2);
-    assertEquals(1, mpi.getInitCtr());
+  WrappedPlugin getWrappedPlugin() throws Exception {
+    assertTrue(WrapperState.isUsingWrapping());
+    WrappedPlugin wplug = (WrappedPlugin)
+        mgr.getPlugin(mockPlugKey);
+    assertNotNull(wplug.getOriginal());
+    return wplug;
   }
 
   public void testStop() throws Exception {
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
-    assertEquals(0, mpi.getStopCtr());
+    WrappedPlugin mpi = getWrappedPlugin();
+    assertEquals(0, ((MockPlugin)mpi.getOriginal()).getStopCtr());
     mgr.stopService();
-    assertEquals(1, mpi.getStopCtr());
+    assertEquals(1, ((MockPlugin)mpi.getOriginal()).getStopCtr());
   }
 
   public void testAUConfig() throws Exception {
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    WrappedPlugin mpi = getWrappedPlugin();
     // plugin should be registered
     assertNotNull(mpi);
     // should have been inited once
-    assertEquals(1, mpi.getInitCtr());
+    assertEquals(1, ((MockPlugin)mpi.getOriginal()).getInitCtr());
 
     // get the two archival units
-    ArchivalUnit au1 = mgr.getAuFromId(mauauid1);
-    ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
+    WrappedArchivalUnit au1 = (WrappedArchivalUnit)mgr.getAuFromId(mauauid1);
+    WrappedArchivalUnit au2 = (WrappedArchivalUnit)mgr.getAuFromId(mauauid2);
 
     // verify the plugin's set of all AUs is {au1, au2}
     Collection aus = mpi.getAllAUs();
@@ -176,15 +159,13 @@ public class TestPluginManager extends LockssTestCase {
 
     // verify au1's configuration
     assertEquals(mauauid1, au1.getAUId());
-    MockArchivalUnit mau1 = (MockArchivalUnit)au1;
-    Configuration c1 = mau1.getConfiguration();
+    Configuration c1 = au1.getConfiguration();
     assertEquals("val1", c1.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("val2", c1.get(MockPlugin.CONFIG_PROP_2));
 
     // verify au1's configuration
     assertEquals(mauauid2, au2.getAUId());
-    MockArchivalUnit mau2 = (MockArchivalUnit)au2;
-    Configuration c2 = mau2.getConfiguration();
+    Configuration c2 = au2.getConfiguration();
     assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
     assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
 
@@ -193,17 +174,17 @@ public class TestPluginManager extends LockssTestCase {
 
   public void testCreateAU() throws Exception {
     minimalConfig();
-    String pid = new ThrowingMockPlugin().getPluginId();
+    Plugin plug = new ThrowingMockPlugin();
+    String pid = plug.getPluginId();
     String key = PluginManager.pluginKeyFromId(pid);
-    assertTrue(mgr.ensurePluginLoaded(key));
-    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
-    assertNotNull(mpi);
+    WrappedPlugin mpi = (WrappedPlugin)WrapperState.getWrapper(plug);
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config);
+    WrappedArchivalUnit au = (WrappedArchivalUnit)mgr.createAu(mpi, config);
 
     // verify put in PluginManager map
     String auid = au.getAUId();
-    ArchivalUnit aux = mgr.getAuFromId(auid);
+
+    WrappedArchivalUnit aux = (WrappedArchivalUnit)mgr.getAuFromId(auid);
     assertSame(au, aux);
 
     // verify got right config
@@ -213,37 +194,41 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(mpi, au.getPlugin());
 
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
-    mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
+    ((ThrowingMockPlugin)mpi.getOriginal()).setCfgEx(
+        new ArchivalUnit.ConfigurationException("should be thrown"));
     try {
       ArchivalUnit au2 = mgr.createAu(mpi, config);
-      fail("createAU should have thrown ArchivalUnit.ConfigurationException");
+      fail("createAu should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
-    mpi.setRtEx(new NullPointerException("Should be caught"));
+    ((ThrowingMockPlugin)mpi.getOriginal()).setRtEx(
+        new NullPointerException("Should be caught"));
     try {
       ArchivalUnit au2 = mgr.createAu(mpi, config);
-      fail("createAU should have thrown ArchivalUnit.ConfigurationException");
+      fail("createAu should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
     } catch (RuntimeException e) {
-      fail("createAU threw RuntimeException");
+      fail("createAu threw RuntimeException");
     }
 
   }
 
   public void testConfigureAU() throws Exception {
     minimalConfig();
-    String pid = new ThrowingMockPlugin().getPluginId();
+    Plugin plug = new ThrowingMockPlugin();
+    String pid = plug.getPluginId();
     String key = PluginManager.pluginKeyFromId(pid);
-    assertTrue(mgr.ensurePluginLoaded(key));
-    ThrowingMockPlugin mpi = (ThrowingMockPlugin)mgr.getPlugin(key);
+    mgr.ensurePluginLoaded(key);
+    WrappedPlugin mpi = (WrappedPlugin)WrapperState.getWrapper(plug);
     assertNotNull(mpi);
+    WrapperState.pointWrappedPlugin(mpi,pid);
     Configuration config = ConfigurationUtil.fromArgs("a", "b");
-    ArchivalUnit au = mgr.createAu(mpi, config);
+    WrappedArchivalUnit au = (WrappedArchivalUnit)mgr.createAu(mpi, config);
 
     String auid = au.getAUId();
-    ArchivalUnit aux = mgr.getAuFromId(auid);
+    WrappedArchivalUnit aux = (WrappedArchivalUnit)mgr.getAuFromId(auid);
     assertSame(au, aux);
 
     // verify can reconfig
@@ -253,21 +238,22 @@ public class TestPluginManager extends LockssTestCase {
     assertEquals(1, auConfig.keySet().size());
 
     // verify turns RuntimeException into ArchivalUnit.ConfigurationException
-    mpi.setCfgEx(new ArchivalUnit.ConfigurationException("should be thrown"));
+    ((ThrowingMockPlugin)mpi.getOriginal()).setCfgEx(
+        new ArchivalUnit.ConfigurationException("should be thrown"));
     try {
       mgr.configureAu(mpi, config, auid);
-      fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
+      fail("configureAu should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
     }
 
-    mpi.setRtEx(new NullPointerException("Should be caught"));
+    ((ThrowingMockPlugin)mpi.getOriginal()).setRtEx(new NullPointerException("Should be caught"));
     try {
       mgr.configureAu(mpi, config, auid);
-      fail("configureAU should have thrown ArchivalUnit.ConfigurationException");
+      fail("configureAu should have thrown ArchivalUnit.ConfigurationException");
     } catch (ArchivalUnit.ConfigurationException e) {
       // this is what's expected
     } catch (RuntimeException e) {
-      fail("createAU threw RuntimeException");
+      fail("createAu threw RuntimeException");
     }
 
   }
@@ -311,15 +297,15 @@ public class TestPluginManager extends LockssTestCase {
     String upper = "xyz";
 
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    WrappedPlugin mpi = getWrappedPlugin();
 
     // make a PollSpec with info from a manually created CUS, which should
     // match one of the registered AUs
-    CachedUrlSet protoCus = makeCUS(mpi, mauauid1, url, lower, upper);
+    WrappedCachedUrlSet protoCus = makeCUS(mpi, mauauid1, url, lower, upper);
     PollSpec ps1 = new PollSpec(protoCus);
 
     // verify PluginManager can make a CUS for the PollSpec
-    CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
+    WrappedCachedUrlSet cus = (WrappedCachedUrlSet)mgr.findCachedUrlSet(ps1);
     assertNotNull(cus);
     // verify the CUS's CUSS
     CachedUrlSetSpec cuss = cus.getSpec();
@@ -333,10 +319,10 @@ public class TestPluginManager extends LockssTestCase {
     // as we made a fake mock one to build PollSpec, and PluginManager will
     // have created & configured a real mock one.
 
-    CachedUrlSet protoAuCus = makeAUCUS(mpi, mauauid1);
+    WrappedCachedUrlSet protoAuCus = makeAUCUS(mpi, mauauid1);
     PollSpec ps2 = new PollSpec(protoAuCus);
 
-    CachedUrlSet aucus = mgr.findCachedUrlSet(ps2);
+    WrappedCachedUrlSet aucus = (WrappedCachedUrlSet)mgr.findCachedUrlSet(ps2);
     assertNotNull(aucus);
     CachedUrlSetSpec aucuss = aucus.getSpec();
     assertTrue(aucuss instanceof AUCachedUrlSetSpec);
@@ -347,7 +333,7 @@ public class TestPluginManager extends LockssTestCase {
     String lower = PollSpec.SINGLE_NODE_LWRBOUND;
 
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    WrappedPlugin mpi = getWrappedPlugin();
 
     // make a PollSpec with info from a manually created CUS, which should
     // match one of the registered AUs
@@ -355,7 +341,7 @@ public class TestPluginManager extends LockssTestCase {
     PollSpec ps1 = new PollSpec(protoCus);
 
     // verify PluginManager can make a CUS for the PollSpec
-    CachedUrlSet cus = mgr.findCachedUrlSet(ps1);
+    WrappedCachedUrlSet cus = (WrappedCachedUrlSet)mgr.findCachedUrlSet(ps1);
     assertNotNull(cus);
     // verify the CUS's CUSS
     CachedUrlSetSpec cuss = cus.getSpec();
@@ -368,51 +354,25 @@ public class TestPluginManager extends LockssTestCase {
     String url1 = "http://foo.bar/baz";
     String url2 = "http://foo.bar/not";
     doConfig();
-    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    WrappedPlugin mpi = getWrappedPlugin();
 
     // get the two archival units
-    MockArchivalUnit au1 = (MockArchivalUnit)mgr.getAuFromId(mauauid1);
-    ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
+    WrappedArchivalUnit au1 = (WrappedArchivalUnit)mgr.getAuFromId(mauauid1);
+    WrappedArchivalUnit au2 = (WrappedArchivalUnit)mgr.getAuFromId(mauauid2);
     assertNull(mgr.findMostRecentCachedUrl(url1));
     CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(prefix, null);
-    MockCachedUrlSet mcuss = new MockCachedUrlSet(au1, cuss);
-    mcuss.addUrl("foo", url1, true, true, null);
-    au1.setAUCachedUrlSet(mcuss);
-    CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
+    WrappedCachedUrlSet mcuss = (WrappedCachedUrlSet)WrapperState.getWrapper(
+        new MockCachedUrlSet((MockArchivalUnit)au1.getOriginal(), cuss));
+    ((MockCachedUrlSet)mcuss.getOriginal()).addUrl(
+        "foo", url1, true, true, null);
+    ((MockArchivalUnit)au1.getOriginal()).setAUCachedUrlSet(mcuss);
+    WrappedCachedUrl cu = (WrappedCachedUrl)mgr.findMostRecentCachedUrl(url1);
     assertNotNull(cu);
     assertEquals(url1, cu.getUrl());
     assertNull(mgr.findMostRecentCachedUrl(url2));
   }
 
-  public void testGenerateAuId() {
-    Properties props = new Properties();
-    props.setProperty("key&1", "val=1");
-    props.setProperty("key2", "val 2");
-    props.setProperty("key.3", "val:3");
-    props.setProperty("key4", "val.4");
-    String pluginId = "org|lockss|plugin|Blah";
-
-    String actual = PluginManager.generateAUId(pluginId, props);
-    String expected =
-      pluginId+"&"+
-      "key%261~val%3D1&"+
-      "key%2E3~val%3A3&"+
-      "key2~val+2&"+
-      "key4~val%2E4";
-    assertEquals(expected, actual);
-  }
-
-
-  public void testConfigKeyFromAuId() {
-    String pluginId = "org|lockss|plugin|Blah";
-    String auId = "base_url~foo&volume~123";
-
-    String totalId = PluginManager.generateAuId(pluginId, auId);
-    String expectedStr = pluginId + "." + auId;
-    assertEquals(expectedStr, PluginManager.configKeyFromAuId(totalId));
-  }
-
-  public CachedUrlSet makeCUS(Plugin plugin, String auid, String url,
+  WrappedCachedUrlSet makeCUS(Plugin plugin, String auid, String url,
 			       String lower, String upper) {
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
@@ -423,50 +383,143 @@ public class TestPluginManager extends LockssTestCase {
 					    new RangeCachedUrlSetSpec(url,
 								      lower,
 								      upper));
-    return cus;
+    return (WrappedCachedUrlSet)WrapperState.getWrapper(cus);
   }
 
-  public CachedUrlSet makeAUCUS(Plugin plugin, String auid) {
+  WrappedCachedUrlSet makeAUCUS(Plugin plugin, String auid) {
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
     au.setPlugin(plugin);
     au.setPluginId(plugin.getPluginId());
 
     CachedUrlSet cus = new MockCachedUrlSet(au, new AUCachedUrlSetSpec());
-    return cus;
+    return (WrappedCachedUrlSet)WrapperState.getWrapper(cus);
   }
 
-  private static String wkey = "org|lockss|plugin|wrapper|WrappedPlugin";
 
-  public void testWrappedAU() {
-    if (!WrapperState.isUsingWrapping()) {
-      try {
-        mgr.startService();
-        String localConfig = p1a1param + MockPlugin.CONFIG_PROP_1 + "=val1\n" +
-            p1a1param + MockPlugin.CONFIG_PROP_2 + "=val2\n" +
-            p1a1param + "reserved.wrapper=true\n" +
-            LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" +
-            getTempDir().getAbsolutePath() + File.separator + "\n";
-        ConfigurationUtil.setCurrentConfigFromString(localConfig);
-        ArchivalUnit wau = (ArchivalUnit) mgr.getAuFromId(
-            mauauid1);
-        Plugin wplug = (Plugin) wau.getPlugin();
-        MockPlugin mock = (MockPlugin) WrapperState.getOriginal(wplug);
-        assertSame(mock,wplug);
-        MockArchivalUnit mau = (MockArchivalUnit) WrapperState.getOriginal(wau);
-        assertSame(mock, mau.getPlugin());
-        assertSame(mau,wau);
-      } catch (IOException e) {
-        fail(e.getMessage());
-      } catch (ClassCastException e) {
-        fail("WrappedArchivalUnit not found.");
+  public void testWrappedAU() throws Exception {
+    try {
+      doConfig();
+      WrappedArchivalUnit wau = (WrappedArchivalUnit) mgr.getAuFromId(mauauid1);
+      assertNotNull(wau);
+      WrappedPlugin wplug = (WrappedPlugin)wau.getPlugin();
+      MockPlugin mock = (MockPlugin)wplug.getOriginal();
+      MockArchivalUnit mau = (MockArchivalUnit)wau.getOriginal();
+      assertSame(mock,mau.getPlugin());
+    } catch (IOException e) {
+      fail(e.getMessage());
+    } catch (ClassCastException e) {
+      fail("WrappedArchivalUnit not found.");
+    }
+  }
+
+  public void testWrapping() throws Exception {
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
+    WrappedPlugin wplug = (WrappedPlugin)mgr.getPlugin(MockPlugin.KEY);
+    assertNotNull(wplug);
+  }
+
+  private ArchivalUnit getSingleAu(Plugin plugin) {
+    Collection coll = plugin.getAllAUs();
+    Iterator it = coll.iterator();
+    if (it.hasNext()) {
+      return (ArchivalUnit) it.next();
+    } else {
+      return null;
+    }
+  }
+
+  private Properties makeProperties(String key, Map definingKeys,
+      Map otherKeys, boolean wrapped) throws Exception {
+    StringBuffer buf = new StringBuffer(PluginManager.PARAM_AU_TREE);
+    buf.append('.');
+    buf.append(key);
+    buf.append('.');
+    Iterator it = definingKeys.keySet().iterator();
+    while (it.hasNext()) {
+      String defKey = (String)it.next();
+      buf.append(defKey);
+      buf.append('~');
+      buf.append((String)definingKeys.get(defKey));
+      buf.append('&');
+    }
+    buf.delete(buf.length()-1,buf.length());
+    Properties props = new Properties();
+    String prefix = buf.toString() + '.';
+    it = definingKeys.keySet().iterator();
+    while (it.hasNext()) {
+      String defKey = (String)it.next();
+      props.setProperty(prefix + defKey,(String)definingKeys.get(defKey));
+    }
+    if (wrapped) {
+      props.setProperty(prefix + "reserved.wrapper", "true");
+    }
+    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+                      getTempDir().getAbsolutePath() + File.separator);
+    if (otherKeys!=null) {
+      it = otherKeys.keySet().iterator();
+      while (it.hasNext()) {
+        String defKey = (String) it.next();
+        props.setProperty(prefix + defKey, (String) otherKeys.get(defKey));
       }
     }
+    return props;
+  }
+
+  public static class Mock2Plugin extends MockPlugin {
+     static final String KEY =
+         PluginManager.pluginKeyFromName(
+        "org|lockss|plugin|TestPluginManagerWrapping$Mock2Plugin");
+  }
+
+  private Properties makeMockProperties(boolean orig, boolean wrapped)
+      throws Exception {
+    Map map = new HashMap();
+    map.put(MockPlugin.CONFIG_PROP_1, "home");
+    map.put(MockPlugin.CONFIG_PROP_2, "val1");
+    Map other = new HashMap();
+    if (orig) {
+      return makeProperties(MockPlugin.KEY, map, null, wrapped);
+    } else {
+      return makeProperties(Mock2Plugin.KEY,map,null,wrapped);
+    }
+  }
+
+  public void testDoesntPermitUnwrappedIfWrappedExists() throws Exception {
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
+    WrappedPlugin wmock = (WrappedPlugin) mgr.getPlugin(MockPlugin.KEY);
+    assertNotNull(wmock);
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,false));
+    assertSame(wmock,mgr.getPlugin(MockPlugin.KEY));
+  }
+
+  public void testDoesntPermitWrappedIfUnwrappedExists() throws Exception {
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,false));
+    MockPlugin mock = (MockPlugin)mgr.getPlugin(MockPlugin.KEY);
+    assertNotNull(mock);
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
+    assertSame(mock,mgr.getPlugin(MockPlugin.KEY));
+  }
+
+  public void testTwoPlugins() throws Exception {
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(true,true));
+    WrappedPlugin wmock = (WrappedPlugin) mgr.getPlugin(MockPlugin.KEY);
+    assertNotNull(wmock);
+    ConfigurationUtil.setCurrentConfigFromProps(makeMockProperties(false, true));
+    WrappedPlugin wmock2 = (WrappedPlugin) mgr.getPlugin(Mock2Plugin.KEY);
+    assertNotNull(wmock2);
+    assertNotSame(wmock, wmock2);
+    assertNotSame(wmock.getOriginal(), wmock2.getOriginal());
+    WrappedArchivalUnit wau = (WrappedArchivalUnit) getSingleAu(wmock);
+    WrappedArchivalUnit wau2 = (WrappedArchivalUnit) getSingleAu(wmock2);
+    assertNotNull(wau);
+    assertNotNull(wau2);
   }
 
   public static Test suite() {
     TestSuite suite = new TestSuite();
-    suite.addTestSuite(TestPluginManager.class);
+    //suite.addTest(TestSuite.createTest(TestPluginManagerWrapping.class,"testWrappedAU"));
+    suite.addTestSuite(TestPluginManagerWrapping.class);
     return suite;
   }
 

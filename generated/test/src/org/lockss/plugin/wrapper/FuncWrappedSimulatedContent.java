@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.40 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: FuncWrappedSimulatedContent.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -24,122 +24,121 @@
  in this Software without prior written authorization from Stanford University.
  */
 
-package org.lockss.plugin.simulated;
+package org.lockss.plugin.wrapper;
 
 import java.util.*;
 import java.io.*;
-import java.security.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
+import org.lockss.crawler.GoslingCrawlerImpl;
 import org.lockss.daemon.*;
 import org.lockss.repository.*;
+import java.security.*;
 import org.lockss.plugin.*;
-import org.lockss.crawler.GoslingCrawlerImpl;
+import org.lockss.plugin.simulated.*;
 import org.lockss.state.HistoryRepositoryImpl;
 import junit.framework.*;
 
 /**
- * Test class for functional tests on the content.
+ * Adapted from FuncSimulatedContent; repeats much of it but using the wrapped
+ * classes instead
  */
-public class FuncSimulatedContent
-  extends LockssTestCase {
+public class FuncWrappedSimulatedContent extends LockssTestCase {
   private SimulatedArchivalUnit sau;
+  private WrappedArchivalUnit wau;
   private MockLockssDaemon theDaemon;
 
-  private boolean firstTestRun = false;
-
-  private static String DAMAGED_CACHED_URL = "/branch2/branch2/file2.txt";
-
-  public FuncSimulatedContent(String msg) {
+  public FuncWrappedSimulatedContent(String msg) {
     super(msg);
+  }
+
+  private void addToBuf(StringBuffer buf, String propname, String propval) {
+    buf.append(propname);
+    buf.append('=');
+    buf.append(propval);
+    buf.append('\n');
+  }
+
+  private void addAuConfigToBuf(StringBuffer buf, String auId, String tempDirPath) {
+    String pauId = "org.lockss.au." + auId + '.';
+    addToBuf(buf, pauId + "root", tempDirPath);
+    addToBuf(buf, pauId + "depth", "2");
+    addToBuf(buf, pauId + "branch", "2");
+    addToBuf(buf, pauId + "numFiles", "2");
+    addToBuf(buf, pauId + "reserved.wrapper", "true");
+  }
+
+  private String makeConfig() throws IOException {
+    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+    String tempDirPath2 = getTempDir().getAbsolutePath() + File.separator;
+    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+        PropKeyEncoder.encode(tempDirPath);
+    String auId2 = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
+        PropKeyEncoder.encode(tempDirPath2);
+    StringBuffer buf = new StringBuffer();
+    addToBuf(buf, SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
+    addToBuf(buf, SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
+    addToBuf(buf, LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    addToBuf(buf, HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, tempDirPath);
+    addAuConfigToBuf(buf,auId,tempDirPath);
+    addAuConfigToBuf(buf,auId2,tempDirPath);
+    return buf.toString();
   }
 
   public void setUp() throws Exception {
     super.setUp();
-    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    String tempDirPath2 = getTempDir().getAbsolutePath() + File.separator;
-    String auId = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath);
-    String auId2 = "org|lockss|plugin|simulated|SimulatedPlugin.root~" +
-      PropKeyEncoder.encode(tempDirPath2);
-    Properties props = new Properties();
-    props.setProperty(SystemMetrics.PARAM_HASH_TEST_DURATION, "1000");
-    props.setProperty(SystemMetrics.PARAM_HASH_TEST_BYTE_STEP, "1024");
-    props.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    props.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
-                      tempDirPath);
-    props.setProperty("org.lockss.au." + auId + ".root", tempDirPath);
-    props.setProperty("org.lockss.au." + auId + ".depth", "2");
-    props.setProperty("org.lockss.au." + auId + ".branch", "2");
-    props.setProperty("org.lockss.au." + auId + ".numFiles", "2");
 
-    props.setProperty("org.lockss.au." + auId + ".badCachedFileLoc", "2,2");
-    props.setProperty("org.lockss.au." + auId + ".badCachedFileNum", "2");
-    props.setProperty("org.lockss.au." + auId2 + ".badCachedFileLoc", "2,2");
-    props.setProperty("org.lockss.au." + auId2 + ".badCachedFileNum", "2");
-
-    props.setProperty("org.lockss.au." + auId2 + ".root", tempDirPath2);
-    props.setProperty("org.lockss.au." + auId2 + ".depth", "2");
-    props.setProperty("org.lockss.au." + auId2 + ".branch", "2");
-    props.setProperty("org.lockss.au." + auId2 + ".numFiles", "2");
-    ConfigurationUtil.setCurrentConfigFromProps(props);
-
+    ConfigurationUtil.setCurrentConfigFromString(makeConfig());
     theDaemon = new MockLockssDaemon();
     theDaemon.setDaemonInited(true);
     theDaemon.getPluginManager().startService();
 
     theDaemon.getHistoryRepository().startService();
     theDaemon.getHashService();
-    sau = (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(
-      0);
-
-    theDaemon.getLockssRepository(sau);
-    theDaemon.getNodeManager(sau).initService(theDaemon);
-    theDaemon.getNodeManager(sau).startService();
+    init();
   }
 
+  void init() {
+    Collection coll = theDaemon.getPluginManager().getAllAUs();
+    Iterator it = coll.iterator();
+    while (it.hasNext()) {
+      Object au = it.next();
+      if (au instanceof WrappedArchivalUnit) {
+        wau = (WrappedArchivalUnit) au;
+      }
+    }
+    assertNotNull(wau);
+    sau = (SimulatedArchivalUnit)wau.getOriginal();
+
+    theDaemon.getLockssRepository(wau);
+    theDaemon.getNodeManager(wau).initService(theDaemon);
+    theDaemon.getNodeManager(wau).startService();
+ }
+
+
   public void tearDown() throws Exception {
-    theDaemon.getLockssRepository(sau).stopService();
-    theDaemon.getNodeManager(sau).stopService();
-    theDaemon.getPluginManager().stopService();
-    super.tearDown();
+   theDaemon.getLockssRepository(wau).stopService();
+   theDaemon.getNodeManager(wau).stopService();
+   //theDaemon.getNodeManager(sau).stopService();
+   wau.getPlugin().stopPlugin();
+   theDaemon.getPluginManager().stopService();
+   super.tearDown();
   }
 
   public void testSimulatedContent() throws Exception {
     createContent();
     crawlContent();
     checkContent();
+    theDaemon.getNodeManager(wau).startService();
     hashContent();
-
-    doDamageRemoveTest();
-  }
-
-  public void testDualContentHash() throws Exception {
-    createContent();
-    crawlContent();
-    CachedUrlSet set = sau.getAUCachedUrlSet();
-    byte[] nameH = getHash(set, true);
-    byte[] contentH = getHash(set, false);
-
-    sau = (SimulatedArchivalUnit) theDaemon.getPluginManager().getAllAUs().get(
-      1);
-    theDaemon.getLockssRepository(sau);
-    theDaemon.getNodeManager(sau).initService(theDaemon);
-    theDaemon.getNodeManager(sau).startService();
-
-    createContent();
-    crawlContent();
-    set = sau.getAUCachedUrlSet();
-    byte[] nameH2 = getHash(set, true);
-    byte[] contentH2 = getHash(set, false);
-    assertTrue(Arrays.equals(nameH, nameH2));
-    assertTrue(Arrays.equals(contentH, contentH2));
+    doTestDualContentHash();
   }
 
   private void createContent() {
     SimulatedContentGenerator scgen = sau.getContentGenerator();
-    scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML + SimulatedContentGenerator.FILE_TYPE_TXT);
+    scgen.setFileTypes(SimulatedContentGenerator.FILE_TYPE_HTML
+                       + SimulatedContentGenerator.FILE_TYPE_TXT);
     scgen.setAbnormalFile("1,1", 1);
     scgen.setOddBranchesHaveContent(true);
 
@@ -149,9 +148,10 @@ public class FuncSimulatedContent
   }
 
   private void crawlContent() {
-    CrawlSpec spec = new CrawlSpec(SimulatedArchivalUnit.SIMULATED_URL_START, null);
+    CrawlSpec spec = new CrawlSpec(
+        SimulatedArchivalUnit.SIMULATED_URL_START, null);
     Crawler crawler =
-      new GoslingCrawlerImpl(sau, spec.getStartingUrls(), true);
+      new GoslingCrawlerImpl(wau, spec.getStartingUrls(), true);
     crawler.doCrawl(Deadline.MAX);
   }
 
@@ -161,19 +161,13 @@ public class FuncSimulatedContent
     checkStoredContent();
   }
 
-  private void hashContent() throws Exception {
-    measureHashSpeed();
-    hashSet(true);
-    hashSet(false);
-  }
-
   private void checkRoot() {
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
     Iterator setIt = set.flatSetIterator();
     ArrayList childL = new ArrayList(1);
-    CachedUrlSet cus = null;
+    WrappedCachedUrlSet cus = null;
     while (setIt.hasNext()) {
-      cus = (CachedUrlSet) setIt.next();
+      cus = (WrappedCachedUrlSet) setIt.next();
       childL.add(cus.getUrl());
     }
 
@@ -202,7 +196,8 @@ public class FuncSimulatedContent
   private void checkLeaf() {
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    CachedUrlSet set = sau.makeCachedUrlSet(spec);
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)
+        wau.makeCachedUrlSet(spec);
     Iterator setIt = set.contentHashIterator();
     ArrayList childL = new ArrayList(16);
     while (setIt.hasNext()) {
@@ -231,11 +226,25 @@ public class FuncSimulatedContent
     assertIsomorphic(expectedA, childL);
   }
 
+  private String getUrlContent(WrappedCachedUrl url) throws IOException {
+    InputStream content = url.openForReading();
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    StreamUtil.copy(content, baos);
+    content.close();
+    String contentStr = new String(baos.toByteArray());
+    baos.close();
+    return contentStr;
+  }
+
   private void checkUrlContent(String path, int fileNum, int depth,
                                int branchNum, boolean isAbnormal,
                                boolean isDamaged) throws IOException {
-    String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + path;
-    CachedUrl url = sau.cachedUrlFactory(sau.getAUCachedUrlSet(), file);
+    CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(
+        SimulatedArchivalUnit.SIMULATED_URL_ROOT);
+    WrappedCachedUrlSet urlset = (WrappedCachedUrlSet)
+    wau.makeCachedUrlSet(spec);
+    WrappedCachedUrl url = (WrappedCachedUrl)wau.makeCachedUrl(urlset,
+        SimulatedArchivalUnit.SIMULATED_URL_ROOT + path);
     String content = getUrlContent(url);
     String expectedContent;
     if (path.endsWith(".html")) {
@@ -258,18 +267,21 @@ public class FuncSimulatedContent
   private void checkStoredContent() throws IOException {
     checkUrlContent("/file1.txt", 1, 0, 0, false, false);
     checkUrlContent("/branch1/branch1/file1.txt", 1, 2, 1, true, false);
-    checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, true);
   }
 
-  private void doDamageRemoveTest() throws Exception
-  {
-    /* Cache the file again; this time the damage should be gone */
-    String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
-    UrlCacher uc = sau.urlCacherFactory(sau.getAUCachedUrlSet(),file);
-    uc.forceCache();
-    checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
+  public void doTestDualContentHash() throws Exception {
+    createContent();
+    crawlContent();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
+    byte[] nameH = getHash(set, true);
+    byte[] contentH = getHash(set, false);
   }
 
+  private void hashContent() throws Exception {
+    measureHashSpeed();
+    hashSet(true);
+    hashSet(false);
+  }
 
   private void measureHashSpeed() throws Exception {
     MessageDigest dig = null;
@@ -279,31 +291,29 @@ public class FuncSimulatedContent
     catch (NoSuchAlgorithmException ex) {
       fail("No algorithm.");
     }
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
     CachedUrlSetHasher hasher = set.getContentHasher(dig);
     SystemMetrics metrics = theDaemon.getSystemMetrics();
     int estimate = metrics.getBytesPerMsHashEstimate(hasher, dig);
     assertTrue(estimate > 0);
-    long estimatedTime = set.estimatedHashDuration();
-    long size = ( (Long) PrivilegedAccessor.getValue(set, "totalNodeSize")).
+    CachedUrlSet origset = (CachedUrlSet)set.getOriginal();
+    long estimatedTime = origset.estimatedHashDuration();
+    long size = ( (Long) PrivilegedAccessor.getValue(origset, "totalNodeSize")).
       longValue();
     assertTrue(size > 0);
-    System.out.println("b/ms: " + estimate);
-    System.out.println("size: " + size);
-    System.out.println("estimate: " + estimatedTime);
     assertEquals(estimatedTime,
                  theDaemon.getHashService().padHashEstimate(size / estimate));
   }
 
   private void hashSet(boolean namesOnly) throws IOException {
-    CachedUrlSet set = sau.getAUCachedUrlSet();
+    WrappedCachedUrlSet set = (WrappedCachedUrlSet)wau.getAUCachedUrlSet();
     byte[] hash = getHash(set, namesOnly);
     byte[] hash2 = getHash(set, namesOnly);
     assertTrue(Arrays.equals(hash, hash2));
 
     String parent = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1";
     CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(parent);
-    set = sau.cachedUrlSetFactory(sau, spec);
+    set = (WrappedCachedUrlSet)wau.makeCachedUrlSet(spec);
     hash2 = getHash(set, namesOnly);
     assertFalse(Arrays.equals(hash, hash2));
   }
@@ -321,8 +331,8 @@ public class FuncSimulatedContent
     return dig.digest();
   }
 
-  private void hash(CachedUrlSet set, MessageDigest dig, boolean namesOnly) throws
-    IOException {
+  private void hash(CachedUrlSet set, MessageDigest dig, boolean namesOnly)
+      throws IOException {
     CachedUrlSetHasher hasher = null;
     if (namesOnly) {
       hasher = set.getNameHasher(dig);
@@ -335,32 +345,16 @@ public class FuncSimulatedContent
     while (!hasher.finished()) {
       bytesHashed += hasher.hashStep(256);
     }
-    timeTaken = System.currentTimeMillis() - timeTaken;
-    if ( (timeTaken > 0) && (bytesHashed > 500)) {
-      System.out.println("Bytes hashed: " + bytesHashed);
-      System.out.println("Time taken: " + timeTaken + "ms");
-      System.out.println("Bytes/sec: " + (bytesHashed * 1000 / timeTaken));
-    }
-  }
-
-  private String getUrlContent(CachedUrl url) throws IOException {
-    InputStream content = url.openForReading();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    StreamUtil.copy(content, baos);
-    content.close();
-    String contentStr = new String(baos.toByteArray());
-    baos.close();
-    return contentStr;
   }
 
   public static void main(String[] argv) {
     String[] testCaseList = {
-      FuncSimulatedContent.class.getName()};
+      FuncWrappedSimulatedContent.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 
   public static Test suite() {
-    return new TestSuite(FuncSimulatedContent.class);
+    return new TestSuite(FuncWrappedSimulatedContent.class);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: WrapperGenerator.java,v 1.4 2003-07-28 23:00:24 tyronen Exp $
+ * $Id: WrapperGenerator.java,v 1.1 2003-09-04 23:11:18 tyronen Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class WrapperGenerator extends Doclet {
   /** Command-line option to specify output directory */
   static final String directoryOption = "-d";
 
-  /** Command-line option; if specified, do interfaces only */
+  /** Command-line option; if specified, do interfaces only  */
   static final String interfaceOption = "-interface";
 
   /** Prefix, defaults to "Wrapped" */
@@ -149,16 +149,16 @@ public class WrapperGenerator extends Doclet {
   static boolean interfacesOnly = false;
 
   /** Name of variable to be used in generated class to hold delegated
-   * original class
-   */
+   * original class  */
   static final String returnValue = "returnValue";
 
   /** Name of variable to be used in generated class to hold wrapped class */
   static final String wrappedVariableName = "wrappedReturnValue";
 
   /** Variables holding GNU regular expression objects */
-  static RE classnameRE, methodnameRE, returnTypeRE, invokeMethodRE,
-  listparamsRE, beginLineRE, returnValueRE, modifyParamsRE, publicRE, nullRE;
+  static RE classnameRE, methodnameRE, returnTypeRE, invokeMethodRE, throwRE,
+  listparamsRE, beginLineRE, returnValueRE, modifyParamsRE, publicRE, nullRE,
+  wrappedRetvalRE;
 
   /** Part of the doclet API; called by Javadoc for each command-line option
    * to verify the number of arguments
@@ -217,8 +217,10 @@ public class WrapperGenerator extends Doclet {
     invokeMethodRE = new RE("#RUN");
     listparamsRE = new RE("#LISTPARAMS");
     modifyParamsRE = new RE("(\\w+)\\(#MODIFYPARAMS\\);");
+    throwRE = new RE("#THROW (\\w+);");
     beginLineRE = new RE("^(.)",RE.REG_MULTILINE,RESyntax.RE_SYNTAX_PERL5_S);
     returnValueRE = new RE("#RETVAL");
+    wrappedRetvalRE = new RE("#WRAPPED_RETVAL");
     publicRE = new RE("public ");
     nullRE = new RE("#NULLVAL");
   }
@@ -387,21 +389,27 @@ public class WrapperGenerator extends Doclet {
   String classname;
   String fullclassname;
 
+  /** Name of wrapped inner variable */
+  String innerObjectName;
 
   void writeWrapperClass(ClassDoc cl) throws IOException {
     classname = cl.name();
     fullclassname = cl.qualifiedTypeName();
+    innerObjectName = makeInnerName(classname);
     BufferedWriter wr = new BufferedWriter(new FileWriter(new File(
-    outputDir, prefix + cl.name() + ".java")));
+    outputDir, prefix + classname + ".java")));
     writePackageLine(cl, wr);
     writeImportDirectives(cl, wr);
+    writeComments(wr);
     writeClassDecl(cl, wr);
-    writeInnerObject(cl.name(), wr);
+   // writeStaticInitializer(wr);
+    writeInnerObject(wr);
     writeExtra(cl, wr);
     alreadyWrittenConstructors.clear();
     alreadyWrittenMethods.clear();
     writeAllConstructors(cl, wr);
     writeAllMethods(cl, wr);
+    writeStandardMethods(wr);
     wr.write("\n}\n");
     wr.close();
   }
@@ -410,13 +418,16 @@ public class WrapperGenerator extends Doclet {
   void writeClassDecl(ClassDoc cl, Writer wr) throws IOException {
     wr.write("public class ");
     wr.write(prefix);
-    wr.write(cl.name());
-    if (cl.isInterface()) {
-      wr.write(" implements ");
-    } else {
+    wr.write(classname);
+    if (!cl.isInterface()) {
       wr.write(" extends ");
+      wr.write(classname);
     }
-    wr.write(cl.name());
+    wr.write(" implements Wrapped");
+    if (cl.isInterface()) {
+      wr.write(", ");
+      wr.write(classname);
+    }
     wr.write(" {\n\n");
   }
 
@@ -448,6 +459,8 @@ public class WrapperGenerator extends Doclet {
       writeImportLine(impline, wr);
     }
     writeImportLine("org.lockss.util.ListUtil", wr);
+    writeImportLine("org.lockss.util.WrapperLogger", wr);
+    writeImportLine("org.lockss.plugin.WrapperState",wr);
     if (!packageName.startsWith("#CLASS_PACKAGE") &&
     !packageName.startsWith("#BLANK")) {
       writeImportLine(cl.qualifiedTypeName(), wr);
@@ -479,12 +492,29 @@ public class WrapperGenerator extends Doclet {
     wr.write(";\n");
   }
 
+  void writeComments(Writer wr) throws IOException {
+    wr.write("/** *****************************************************\n");
+    wr.write(" *                 --   DO NOT EDIT   --                *\n");
+    wr.write(" *           THIS CLASS CONSISTS OF GENERATED CODE      *\n");
+    wr.write(" *  Edit the WrapperGenerator class or template file    *\n");
+    wr.write(" *             if you wish to make changes              *\n");
+    wr.write(" ********************************************************/\n\n");
+  }
+
+  /** Write a static initializer to register with WrapperState */
+  void writeStaticInitializer(Writer wr) throws IOException {
+    wr.write("  static {\n");
+    wr.write("    WrapperState.register(\"");
+    wr.write(fullclassname);
+    wr.write("\");\n  }\n\n");
+  }
+
   /** Write the declaration of the instance of the delegated original class */
-  void writeInnerObject(String name, Writer wr) throws IOException {
+  void writeInnerObject(Writer wr) throws IOException {
     wr.write("  private ");
-    wr.write(name);
+    wr.write(classname);
     wr.write(' ');
-    wr.write(makeInnerName(name));
+    wr.write(innerObjectName);
     wr.write(";");
   }
 
@@ -502,9 +532,10 @@ public class WrapperGenerator extends Doclet {
       writeConstructors(cptr, wr);
       cptr = cptr.superclass();
     }
-    while (cptr != null && !cptr.qualifiedTypeName().equals("java.lang.Object"));
+    while (cptr != null && !cptr.qualifiedTypeName().equals(
+        "java.lang.Object"));
     // write constructor that takes original class as argument
-    writeWrapperConstructor(cl.name(), wr);
+    writeWrapperConstructor(wr);
   }
 
   Set alreadyWrittenConstructors = new HashSet();
@@ -526,10 +557,10 @@ public class WrapperGenerator extends Doclet {
   throws IOException {
     String output = substituteRE(constructorTemplate, scon);
     writeDecl(scon, wr);
-    writeModifiedParms(output, scon, wr);
+    writeModifiedMethodBody(output, scon, wr);
   }
 
-  void writeWrapperConstructor(String classname, Writer wr) throws IOException {
+  void writeWrapperConstructor(Writer wr) throws IOException {
     wr.write("\n\n  public ");
     wr.write(prefix);
     wr.write(classname);
@@ -537,7 +568,7 @@ public class WrapperGenerator extends Doclet {
     wr.write(classname);
     wr.write(" original) {\n");
     wr.write("    ");
-    wr.write(makeInnerName(classname));
+    wr.write(innerObjectName);
     wr.write(" = original;\n");
     wr.write("  }");
   }
@@ -556,13 +587,31 @@ public class WrapperGenerator extends Doclet {
     }
   }
 
+  boolean isStandardMethod(MethodDoc method) {
+    return (
+    (method.name().equals("equals") &&
+    method.returnType().typeName().equals("boolean")
+    && method.parameters().length==1
+    && method.parameters()[0].typeName().equals("java.lang.Object"))
+    ||
+    (method.name().equals("hashCode") &&
+    method.returnType().typeName().equals("int")
+    && method.parameters().length==0)
+    ||
+    (method.name().equals("finalize") &&
+   method.returnType().typeName().equals("void")
+   && method.parameters().length==0)
+   );
+
+  }
+
   void writeMethods(MethodDoc[] methods, Writer wr)
       throws IOException {
     for (int i = 0; i < methods.length; i++) {
       MethodDoc method = methods[i];
       if (!alreadyWrittenMethods.contains(method)) {
         alreadyWrittenMethods.add(method);
-        if (method.isPublic() && method.isIncluded()) {
+        if (method.isPublic() && method.isIncluded() && !isStandardMethod(method)) {
           SourceMethod srcMethod = new SourceMethod(method);
             if (srcMethod.returnType.equals("void")) {
               writeVoidBody(srcMethod, wr);
@@ -583,23 +632,24 @@ public class WrapperGenerator extends Doclet {
     String output = substituteRE(voidTemplate, method);
     output = returnTypeRE.substituteAll(output, method.returnType);
     writeDecl(method, wr);
-    writeModifiedParms(output, method, wr);
+    writeModifiedMethodBody(output, method, wr);
   }
 
   void writeNonvoidBody(SourceMethod method, Writer wr)
   throws IOException {
     String output = substituteRE(nonvoidTemplate,method);
     output = returnTypeRE.substituteAll(output, method.returnType);
+    output = returnValueRE.substituteAll(output, returnValue);
     String substName = (method.returnsWrapped) ? wrappedVariableName :
         returnValue;
-    output = returnValueRE.substituteAll(output, substName);
+    output = wrappedRetvalRE.substituteAll(output, substName);
     output = nullRE.substituteAll(output, method.nullText());
     writeDecl(method, wr);
     writeLocalDecl(method.returnType + method.returnDimension, returnValue, wr);
     if (method.returnsWrapped) {
       writeLocalDecl(prefix + method.returnType, wrappedVariableName, wr);
     }
-    writeModifiedParms(output, method, wr);
+    writeModifiedMethodBody(output, method, wr);
   }
 
   /** Writes a declaration of a local variable */
@@ -618,6 +668,7 @@ public class WrapperGenerator extends Doclet {
     output = methodnameRE.substituteAll(output, method.methodname);
     output = invokeMethodRE.substituteAll(output, method.runText());
     output = listparamsRE.substituteAll(output, method.paramsAsString());
+    output = throwRE.substituteAll(output, method.throwText());
     return output;
   }
 
@@ -630,7 +681,7 @@ public class WrapperGenerator extends Doclet {
   }
 
   /** Do the substitution for the #MODIFYPARAMS macro */
-  void writeModifiedParms(String output, SourceExecMember method, Writer wr)
+  void writeModifiedMethodBody(String output, SourceExecMember method, Writer wr)
   throws IOException {
     String substr;
     if (method.params.length==0) {
@@ -686,7 +737,7 @@ public class WrapperGenerator extends Doclet {
     String nopublic = publicRE.substituteAll(method.modifiers,"");
     wr.write(nopublic);
     String origname = method.methodname;
-    method.methodname = prefix + method.methodname;
+    method.methodname = prefix + '_' + method.methodname;
     wr.write(method.declText());
     method.methodname = origname;
     wr.write(" {\n");
@@ -697,6 +748,29 @@ public class WrapperGenerator extends Doclet {
     wr.write("\n  }");
   }
 
+  void writeStandardMethods(Writer wr) throws IOException {
+    wr.write("\n\n");
+    wr.write("  protected void finalize() throws Throwable {\n");
+    wr.write("    WrapperState.removeWrapping(");
+    wr.write(innerObjectName);
+    wr.write(");\n");
+    wr.write("    ");
+    wr.write(innerObjectName);
+    wr.write(" = null;\n");
+    wr.write("    super.finalize();\n");
+    wr.write("  }\n\n");
+    wr.write("  public Object getOriginal() {\n");
+    wr.write("    return ");
+    wr.write(innerObjectName);
+    wr.write(";\n");
+    wr.write("  }\n\n");
+    wr.write("  public String getOriginalClassName() {\n");
+    wr.write("    return \"");
+    wr.write(fullclassname);
+    wr.write("\";\n");
+    wr.write("  }");
+  }
+
   /** This inner class represents a single method or constructor, each of
    * which has its own subclass.
    */
@@ -705,6 +779,7 @@ public class WrapperGenerator extends Doclet {
     String modifiers;
     String throwlist;
     Parameter[] params;
+    ClassDoc[] exceptions;
 
     SourceExecMember(ExecutableMemberDoc method) {
       params = method.parameters();
@@ -713,7 +788,8 @@ public class WrapperGenerator extends Doclet {
       if (!modifiers.equals("")) {
         modifiers += ' ';
       }
-      throwlist = makeThrowList(method.thrownExceptions());
+      exceptions = method.thrownExceptions();
+      makeThrowList();
     }
 
     /** Check to make sure no array arguments in the parameter list */
@@ -727,7 +803,7 @@ public class WrapperGenerator extends Doclet {
     }
 
     /** Generate the text of the throws clause of a method */
-    String makeThrowList(ClassDoc[] exceptions) {
+    void makeThrowList() {
       StringBuffer buf = new StringBuffer("");
       if (exceptions.length > 0) {
         buf.append(" throws ");
@@ -737,7 +813,7 @@ public class WrapperGenerator extends Doclet {
         }
         buf.delete(buf.length() - 2, buf.length());
       }
-      return buf.toString();
+      throwlist = buf.toString();
     }
 
     /** Generate the text of the method declaration */
@@ -765,8 +841,8 @@ public class WrapperGenerator extends Doclet {
       buf.append(param.name());
     }
 
-    String makeWrappedParamName(String name) {
-      return "wrapped" + name;
+    String makeUnWrappedParamName(String name) {
+      return "unwrapped" + name;
     }
 
     String wrapParams() {
@@ -775,15 +851,12 @@ public class WrapperGenerator extends Doclet {
         Parameter param = params[i];
         String typename = param.type().typeName();
         if (isWrapped(param.typeName())) {
-        //  buf.append("\n      ");
-          buf.append(prefix);
           buf.append(typename);
           buf.append(' ');
-          buf.append(makeWrappedParamName(param.name()));
+          buf.append(makeUnWrappedParamName(param.name()));
           buf.append(" = (");
-          buf.append(prefix);
           buf.append(typename);
-          buf.append(")WrapperState.getWrapper(");
+          buf.append(")WrapperState.getOriginal(");
           buf.append(param.name());
           buf.append(");\n      ");
         }
@@ -791,9 +864,9 @@ public class WrapperGenerator extends Doclet {
       return buf.toString();
     }
 
-    String wrapNameIfNecessary(Parameter param) {
+    String unwrapNameIfNecessary(Parameter param) {
       if (isWrapped(param.typeName())) {
-       return makeWrappedParamName(param.name());
+       return makeUnWrappedParamName(param.name());
      } else {
        return param.name();
      }
@@ -805,11 +878,11 @@ public class WrapperGenerator extends Doclet {
       buf.append('(');
       for (int i = 0; i < params.length - 1; i++) {
         Parameter param = params[i];
-        buf.append(wrapNameIfNecessary(param));
+        buf.append(unwrapNameIfNecessary(param));
         buf.append(", ");
       }
       if (params.length > 0) {
-        buf.append(wrapNameIfNecessary(params[params.length - 1]));
+        buf.append(unwrapNameIfNecessary(params[params.length - 1]));
       }
       buf.append(')');
       return buf.toString();
@@ -840,6 +913,25 @@ public class WrapperGenerator extends Doclet {
       }
       buf.append(')');
       return buf.toString();
+    }
+
+    String throwText() {
+      StringWriter sw = new StringWriter();
+      PrintWriter pw = new PrintWriter(sw);
+      pw.println("if ($1 instanceof RuntimeException) {");
+      pw.println("        throw (RuntimeException)$1;");
+      for (int i=0; i<exceptions.length; i++) {
+        pw.print("      } else if ($1 instanceof ");
+        pw.print(exceptions[i].name());
+        pw.println(") {");
+        pw.print("        throw (");
+        pw.print(exceptions[i].name());
+        pw.println(")$1;");
+      }
+      pw.println("      } else {");
+      pw.println("        throw new RuntimeException($1.getMessage());");
+      pw.print("      }");
+      return sw.toString();
     }
 
   }
@@ -878,9 +970,10 @@ public class WrapperGenerator extends Doclet {
       }
       if (isSpecialMethod(this)) {
         buf.append(prefix);
+        buf.append('_');
       } else {
         if (!isStatic) {
-          buf.append(makeInnerName(classname));
+          buf.append(innerObjectName);
         }
         else {
           buf.append(classname);
@@ -925,7 +1018,7 @@ public class WrapperGenerator extends Doclet {
 
     String runText() {
       StringBuffer buf = new StringBuffer(wrapParams());
-      buf.append(makeInnerName(classname));
+      buf.append(innerObjectName);
       buf.append(" = new ");
       buf.append(classname);
       buf.append(super.runText());

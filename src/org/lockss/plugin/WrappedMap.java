@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.6 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: WrappedMap.java,v 1.1 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -30,64 +30,62 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
+package org.lockss.plugin;
 
 import java.util.*;
-import org.lockss.util.*;
 
 /**
- * Mock implementation of LogTarget
+ * <p>Title: WrappedMap</p>
+ * <p>Description: Like a HashMap, but unwraps keys if necessary.  It cannot
+ * be instantiated directly; use the <code>
+ * WrapperState.createWrappedMapIfAvailable<code> method.  </p>
+ * @author Tyrone Nicholas
+ * @version 1.0
  */
 
-public class MockLogTarget implements LogTarget{
-  static Logger log = Logger.getLogger("Mock log target");
-  Vector messages;
-  int initCount = 0;
+class WrappedMap extends HashMap implements Map {
 
-  public MockLogTarget(){
-    messages = new Vector();
+  /* Override default constructors with package-protected versions
+     to force use of factory method in WrapperState */
+  WrappedMap() {
+    super();
   }
 
-  public void init() {
-    initCount++;
+  WrappedMap(int initialCapacity) {
+    super(initialCapacity);
   }
 
-  /**
-   * Adds the message and severity to a Vector, so they can be retrieved
-   * by unit tests
-   */
-  public void handleMessage(Logger log, int msgLevel, String message) {
-    StringBuffer sb = new StringBuffer();
-    sb.append(log.nameOf(msgLevel));
-    sb.append(": ");
-    sb.append(message);
-    String str = sb.toString();
-    messages.add(str);
-    if (Logger.LEVEL_DEBUG == msgLevel) {
-      System.err.println("Recursive log call; should only happen once.");
-      log.debug("This is a recursive log message which should not be logged");
+  WrappedMap(int initialCapacity, float loadFactor) {
+    super(initialCapacity,loadFactor);
+  }
+
+  WrappedMap(Map t) {
+    super(t.size());
+    Iterator it = t.entrySet().iterator();
+    while (it.hasNext()) {
+      Map.Entry entry = (Map.Entry)it.next();
+      put(entry.getKey(),entry.getValue());
     }
   }
 
-  public Iterator messageIterator() {
-    return messages.iterator();
+  Object unwrap(Object obj) {
+    if (obj instanceof Wrapped) {
+      return ((Wrapped)obj).getOriginal();
+    } else {
+      return obj;
+    }
   }
 
-  public int messageCount() {
-    return messages.size();
+  public boolean containsKey(Object key) {
+    return super.containsKey(unwrap(key));
   }
 
-  public void resetMessages() {
-    messages.clear();
+  public Object get(Object key) {
+    return super.get(unwrap(key));
   }
 
-  public int initCount() {
-    return initCount;
+  public Object put(Object key, Object value) {
+    return super.put(unwrap(key),value);
   }
 
-  public boolean hasMessage(String str) {
-    Set mset = new HashSet();
-    mset.addAll(messages);
-    return mset.contains(str);
-  }
 }

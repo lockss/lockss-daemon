@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.46 2003-08-28 00:11:53 eaalto Exp $
+ * $Id: PluginManager.java,v 1.47 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -174,19 +174,67 @@ public class PluginManager extends BaseLockssManager {
     return (Plugin)pluginMap.get(pluginKey);
   }
 
+  static final String PARAM_WRAPPER = "reserved.wrapper";
+
+  /** Returns true if the reserved.wrapper key is true */
+  private boolean isAuWrapped(Configuration auConf) {
+    try {
+      return WrapperState.isUsingWrapping() &&
+          auConf.getConfigTree("reserved").getBoolean("wrapper");
+    }
+    catch (Configuration.InvalidParam e) {
+      return false;
+    }
+  }
+
+  private Configuration removeWrapper(Configuration auConf) {
+    Configuration copy = auConf.copy();
+    if (copy.containsKey(PARAM_WRAPPER)) {
+      copy.remove(PARAM_WRAPPER);
+    }
+    return copy;
+  }
+
   private void configurePlugin(String pluginKey, Configuration pluginConf,
 			       Configuration oldPluginConf) {
-    boolean pluginOk = ensurePluginLoaded(pluginKey);
-    Plugin plugin = getPlugin(pluginKey);
     for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
-      if (pluginOk) {
+//      if (pluginOk) {
 	try {
 	  Configuration auConf = pluginConf.getConfigTree(auKey);
 	  Configuration oldAuConf = oldPluginConf.getConfigTree(auKey);
 	  if (!auConf.equals(oldAuConf)) {
 	    log.debug("Configuring AU id: " + auKey);
-	    configureAu(plugin, auConf, generateAuId(pluginKey, auKey));
+            if (!isAuWrapped(auConf)) {
+                boolean pluginOk = ensurePluginLoaded(pluginKey);
+                if (pluginOk) {
+                  Plugin plugin = getPlugin(pluginKey);
+                  if (WrapperState.isWrappedPlugin(plugin)) {
+                    throw new ArchivalUnit.ConfigurationException(
+                    "An attempt was made to have load unwrapped " + auKey + " from plugin " + pluginKey + " which is already wrapped.");
+                  }
+                  configureAu(plugin, auConf, generateAuId(pluginKey, auKey));
+                } else {
+                  log.warning("Not configuring AU " + auKey);
+                }
+            } else {
+              if ((pluginMap.containsKey(pluginKey)) &&
+                    (!WrapperState.isWrappedPlugin(pluginMap.get(pluginKey)))) {
+                throw new ArchivalUnit.ConfigurationException(
+                  "An attempt was made to wrap AU " + auKey + " from plugin " + pluginKey + " which is already loaded.");
+              }
+              Plugin wrappedPlugin = WrapperState.retrieveWrappedPlugin(
+                pluginKey, theDaemon);
+              if (wrappedPlugin==null) {
+                log.warning("Not configuring AU " + auKey);
+                log.error("Error instantiating " + WrapperState.WRAPPED_PLUGIN_NAME);
+              } else {
+                setPlugin(pluginKey,wrappedPlugin);
+                Configuration wrappedAuConf = removeWrapper(auConf);
+                configureAu(wrappedPlugin, wrappedAuConf, generateAuId(
+                    pluginKey, auKey));
+              }
+            }
 	  } else {
 	    log.debug("Not configuring AU id: " + auKey +
 		      ", already configured");
@@ -196,9 +244,9 @@ public class PluginManager extends BaseLockssManager {
 	} catch (Exception e) {
 	  log.error("Unexpected exception configuring AU " + auKey, e);
 	}
-      } else {
+  /*    } else {
 	log.warning("Not configuring AU " + auKey);
-      }
+      }*/
     }
   }
 
@@ -370,14 +418,9 @@ public class PluginManager extends BaseLockssManager {
     return config.getConfigTree(prefix);
   }
 
-  /**
-   * Load a plugin with the given class name from somewhere in our classpath
-   * @param pluginKey the key for this plugin
-   * @return true if loaded
-   */
-  public boolean ensurePluginLoaded(String pluginKey) {
+  Plugin retrievePlugin(String pluginKey) throws Exception {
     if (pluginMap.containsKey(pluginKey)) {
-      return true;
+      return (Plugin)pluginMap.get(pluginKey);
     }
     String pluginName = pluginNameFromKey(pluginKey);
     Class pluginClass;
@@ -387,24 +430,47 @@ public class PluginManager extends BaseLockssManager {
       log.debug(pluginName + " not on classpath");
       // not on classpath
       try {
-	// tk - search plugin dir for signed jar, try loading again
-	throw e;	       // for now, simulate failure of that process
-      } catch (ClassNotFoundException e1) {
-	// plugin is really not available
-	log.error(pluginName + " not found");
-	return false;
+        // tk - search plugin dir for signed jar, try loading again
+        throw e; // for now, simulate failure of that process
       }
-    } catch (Exception e) {
+      catch (ClassNotFoundException e1) {
+        // plugin is really not available
+        log.error(pluginName + " not found");
+        return null;
+      }
+    }
+    catch (Exception e) {
       // any other exception while loading class if not recoverable
       log.error("Error loading " + pluginName, e);
-      return false;
+      return null;
     }
-    try {
-      log.debug("Instantiating " + pluginClass);
-      Plugin plugin = (Plugin)pluginClass.newInstance();
-      plugin.initPlugin(theDaemon);
-      setPlugin(pluginKey, plugin);
+    log.debug("Instantiating " + pluginClass);
+    Plugin plugin = (Plugin) pluginClass.newInstance();
+    plugin.initPlugin(theDaemon);
+    return plugin;
+  }
+
+
+  /**
+   * Load a plugin with the given class name from somewhere in our classpath
+   * @param pluginKey the key for this plugin
+   * @return true if loaded
+   */
+  public boolean ensurePluginLoaded(String pluginKey) {
+    if (pluginMap.containsKey(pluginKey)) {
       return true;
+    }
+    String pluginName = "";
+    try {
+      pluginName = pluginNameFromKey(pluginKey);
+      Plugin plugin = retrievePlugin(pluginKey);
+      if (plugin != null) {
+        setPlugin(pluginKey, plugin);
+        return true;
+      }
+      else {
+        return false;
+      }
     } catch (Exception e) {
       log.error("Error instantiating " + pluginName, e);
       return false;
@@ -413,7 +479,7 @@ public class PluginManager extends BaseLockssManager {
 
   // separate method so can be called by test code
   private void setPlugin(String pluginKey, Plugin plugin) {
-    log.debug3(this +".setPlugin(" + pluginKey + ", " + plugin + ")");
+    log.debug3("PluginManager.setPlugin(" + pluginKey + ", " + plugin.getPluginName() + ")");
     pluginMap.put(pluginKey, plugin);
     titleMap = null;
   }

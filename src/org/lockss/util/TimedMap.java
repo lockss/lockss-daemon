@@ -1,4 +1,8 @@
 /*
+ * $Id: TimedMap.java,v 1.3 2003-09-04 23:11:17 tyronen Exp $
+ */
+
+/*
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.

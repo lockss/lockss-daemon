@@ -1,5 +1,5 @@
 /*
- * $Id: Deadline.java,v 1.25 2003-06-20 22:34:53 claire Exp $
+ * $Id: Deadline.java,v 1.26 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -464,7 +464,7 @@ public class Deadline implements Comparable {
     try {
       registerCallback(cb);
       while ((nap = getSleepTime()) > 0) {
-	thread.sleep(nap);
+	Thread.sleep(nap);
       }
     } finally {
       unregisterCallback(cb);

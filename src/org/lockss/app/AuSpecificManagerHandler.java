@@ -1,5 +1,5 @@
 /*
- * $Id: AuSpecificManagerHandler.java,v 1.2 2003-08-21 19:30:26 eaalto Exp $
+ * $Id: AuSpecificManagerHandler.java,v 1.3 2003-09-04 23:11:17 tyronen Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.app;
 import java.util.*;
 import org.lockss.util.Logger;
 import org.lockss.daemon.ActivityRegulator;
-import org.lockss.plugin.ArchivalUnit;
+import org.lockss.plugin.*;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.state.NodeManagerImpl;
 
@@ -144,7 +144,9 @@ public class AuSpecificManagerHandler {
     HashMap map = (HashMap)auSpecificManagers.get(managerKey);
     if (map==null) {
       log.debug3("Initializing hashmap for "+managerKey);
-      map = new HashMap();
+      //map = new HashMap();
+      // Use of the WrappedMap takes care of the case when wrapped AUs are used
+      map = WrapperState.createWrappedMapIfAvailable();
       auSpecificManagers.put(managerKey, map);
     }
     return map;
