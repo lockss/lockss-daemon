@@ -28,6 +28,7 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.bepress.BePressPlugin;\
     org.lockss.plugin.bioone.BioOnePlugin;\
     org.lockss.plugin.disputatio.DisputatioPlugin;\
+    org.lockss.plugin.GendersPlugin;\
     edu.harvard.plugin.jrs.JRSPlugin;\
     edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin;\
     edu.indiana.lib.plugin.jcjpc.JcjpcPlugin;\
@@ -37,6 +38,8 @@ org.lockss.plugin.registry=\
     edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin;\
     org.nypl.plugin.WordsWithoutBordersPlugin;\
     org.nypl.plugin.PoetryBayPlugin;\
+    gov.loc.plugin.TESLEJPlugin;\
+    org.molvis.plugin.MolVisPlugin;\
     org.lockss.plugin.ojs.OJSPlugin;
 
 # List of plugins that should be loaded as ConfigurablePlugins with an xml
@@ -493,3 +496,12 @@ org.lockss.title.bmcr5.param.1.value=http\://ccat.sas.upenn.edu/bmcr/
 org.lockss.title.bmcr5.param.2.key=year
 org.lockss.title.bmcr5.param.2.value=1990
 
+org.lockss.title.teslej8.title=TESL-EJ Volume 8
+org.lockss.title.teslej8.journalTitle=TESL-EJ
+org.lockss.title.teslej8.plugin=gov.loc.plugin.TESLEJPlugin
+org.lockss.title.teslej8.param.1.key=base_url
+org.lockss.title.teslej8.param.1.value=http\://writing.berkeley.edu/TESL-EJ/
+org.lockss.title.teslej8.param.2.key=volume
+org.lockss.title.teslej8.param.2.value=8
+org.lockss.title.teslej8.param.2.key=num_issue_range
+org.lockss.title.teslej8.param.2.value=29-32
