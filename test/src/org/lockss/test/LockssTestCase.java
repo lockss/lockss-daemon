@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.44 2004-01-03 06:30:24 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.45 2004-01-22 02:01:50 tlipkis Exp $
  */
 
 /*
@@ -534,6 +534,29 @@ public class LockssTestCase extends TestCase {
   public static void assertEquals(String message,
 				  Object[] expected, Object[] actual) {
     if (Arrays.equals(expected, actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /**
+   * Asserts that the two URLs are equal
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  public static void assertEquals(URL expected, URL actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /**
+   * Asserts that the two URLs are equal
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  public static void assertEquals(String message,
+				  URL expected, URL actual) {
+    if (UrlUtil.equalUrls(expected, actual)) {
       return;
     }
     failNotEquals(message, expected, actual);
