@@ -3,6 +3,9 @@
 # scripts
 
 # List the plugins that should be included in UI menus.
+# (Don't comment out lines in the middle of the list; it will cause all
+# following lines to be ignored.)
+
 org.lockss.plugin.registry=\
     org.lockss.plugin.highwire.HighWirePlugin;\
     org.lockss.plugin.projmuse.ProjectMusePlugin;\
@@ -13,7 +16,93 @@ org.lockss.plugin.registry=\
     org.lockss.plugin.histcoop.HistoryCooperativePlugin;\
     org.lockss.plugin.othervoices.OtherVoicesPlugin;
 
+# Title database
 
-org.lockss.ui.access.ip.logForbidden=true
-org.lockss.proxy.access.ip.logForbidden=true
-
+#Title: Antennas and Propagation, Trans. of (IEEE)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal1.title=Antennas and Propagation, Trans. of
+org.lockss.title.tal1.plugin=org.lockss.plugin.ieee.IeeePlugin
+org.lockss.title.tal1.param.1.key=base_url
+org.lockss.title.tal1.param.1.value=http\://xplqa.ieee.org/
+org.lockss.title.tal1.param.2.key=Pu_Number
+org.lockss.title.tal1.param.2.value=8
+org.lockss.title.tal1.param.3.key=year
+org.lockss.title.tal1.param.3.value=2003
+#Title: American Imago (Project Muse)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal2.title=American Imago
+org.lockss.title.tal2.plugin=org.lockss.plugin.projmuse.ProjectMusePlugin
+org.lockss.title.tal2.param.1.key=base_url
+org.lockss.title.tal2.param.1.value=http\://muse.jhu.edu/
+org.lockss.title.tal2.param.2.key=journal_dir
+org.lockss.title.tal2.param.2.value=american_imago
+#Title: EMLS (Early Modern Literary Studies)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal3.title=EMLS
+org.lockss.title.tal3.plugin=org.lockss.plugin.emls.EmlsPlugin
+org.lockss.title.tal3.param.1.key=base_url
+org.lockss.title.tal3.param.1.value=http\://www.shu.ac.uk/emls/
+#Title: Other Voices (Other Voices)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal4.title=Other Voices
+org.lockss.title.tal4.plugin=org.lockss.plugin.othervoices.OtherVoicesPlugin
+org.lockss.title.tal4.param.1.key=base_url
+org.lockss.title.tal4.param.1.value=http\://www.othervoices.org/
+#Title: American Historical Review (History Cooperative)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal5.title=American Historical Review
+org.lockss.title.tal5.plugin=org.lockss.plugin.histcoop.HistoryCooperativePlugin
+org.lockss.title.tal5.param.1.key=base_url
+org.lockss.title.tal5.param.1.value=http\://www.historycooperative.org/
+org.lockss.title.tal5.param.2.key=journal_dir
+org.lockss.title.tal5.param.2.value=ahr
+#Title: JCICS (ACS)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal6.title=JCICS
+org.lockss.title.tal6.plugin=org.lockss.plugin.acs.AcsPlugin
+org.lockss.title.tal6.param.1.key=journal_key
+org.lockss.title.tal6.param.1.value=jcisd8
+org.lockss.title.tal6.param.2.key=article_url
+org.lockss.title.tal6.param.2.value=http\://pubs.acs.org/
+org.lockss.title.tal6.param.3.key=base_url
+org.lockss.title.tal6.param.3.value=http\://pubs3.acs.org/
+org.lockss.title.tal6.param.4.key=volume
+org.lockss.title.tal6.param.4.value=43
+#Title: JCICS 2003 (ACS)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal7.title=JCICS 2003
+org.lockss.title.tal7.plugin=org.lockss.plugin.acs.AcsPlugin
+org.lockss.title.tal7.param.1.key=journal_key
+org.lockss.title.tal7.param.1.value=jcisd8
+org.lockss.title.tal7.param.2.key=article_url
+org.lockss.title.tal7.param.2.value=http\://pubs.acs.org/
+org.lockss.title.tal7.param.3.key=base_url
+org.lockss.title.tal7.param.3.value=http\://pubs3.acs.org/
+org.lockss.title.tal7.param.4.key=year
+org.lockss.title.tal7.param.4.value=2003
+org.lockss.title.tal7.param.5.key=volume
+org.lockss.title.tal7.param.5.value=43
+#Title: ALR (Absinthe Literary Review)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal8.title=ALR
+org.lockss.title.tal8.plugin=org.lockss.plugin.absinthe.AbsinthePlugin
+org.lockss.title.tal8.param.1.key=base_url
+org.lockss.title.tal8.param.1.value=http\://absinthe-literary-review.com/
+#Title: JHC (HighWire Press)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal9.title=JHC
+org.lockss.title.tal9.plugin=org.lockss.plugin.highwire.HighWirePlugin
+org.lockss.title.tal9.param.1.key=base_url
+org.lockss.title.tal9.param.1.value=http\://www.jhc.org/
+#Title: Test - Shadow1 (HighWire Press)
+#Fri Jan 02 14:29:37 PST 2004
+org.lockss.title.tal10.title=Test - Shadow1
+org.lockss.title.tal10.plugin=org.lockss.plugin.highwire.HighWirePlugin
+org.lockss.title.tal10.param.1.key=base_url
+org.lockss.title.tal10.param.1.value=http\://shadow1.lockss.org/
+#Title: Cultural Logic (Cultural Logic)
+#Fri Jan 02 19:43:26 PST 2004
+org.lockss.title.cl1.title=Cultural Logic
+org.lockss.title.cl1.plugin=org.lockss.plugin.clogic.CulturalLogicPlugin
+org.lockss.title.cl1.param.1.key=base_url
+org.lockss.title.cl1.param.1.value=http\://eserver.org/clogic/
