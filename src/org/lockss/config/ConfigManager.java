@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.13 2005-02-02 09:42:48 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.13.2.1 2005-03-14 23:31:20 tlipkis Exp $
  */
 
 /*
@@ -396,7 +396,11 @@ public class ConfigManager implements LockssManager {
       String url = (String)iter.next();
       try {
 	ConfigFile cf = configCache.get(url);
-	config.load(cf);
+	if (cf.isLoaded()) {
+	  config.load(cf);
+	} else {
+	  throw new IOException(cf.getLoadErrorMessage());
+	}
       } catch (IOException e) {
 	if (e instanceof FileNotFoundException &&
 	    StringUtil.endsWithIgnoreCase(url, ".opt")) {
