@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.5 2004-01-22 23:49:03 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.6 2004-01-28 21:08:24 troberts Exp $
  */
 
 /*
@@ -143,7 +143,6 @@ public class CrawlerImpl implements Crawler {
     this.type = type;
     this.aus = aus;
     crawlStatus = new Crawler.Status(au, spec.getStartingUrls(), type);
-    setParser(new GoslingHtmlParser(au));
   }
 
   private CrawlerImpl(ArchivalUnit au, CrawlSpec spec,
@@ -410,14 +409,10 @@ public class CrawlerImpl implements Crawler {
 
   private ContentParser getContentParser(CachedUrl cu) {
     Properties props = cu.getProperties();
+    ArchivalUnit au = cu.getArchivalUnit();
     if (props != null) {
       String contentType = props.getProperty("content-type");
-      if (contentType == null) {
-	return null;
-      } 
-      if (contentType.toLowerCase().startsWith("text/html")) {
-	return myParser;
-      }
+      return au.getContentParser(contentType);
     }
     return null;
   }
@@ -482,10 +477,6 @@ public class CrawlerImpl implements Crawler {
     sb.append(au.toString());
     sb.append("]");
     return sb.toString();
-  }
-
-  public void setParser(ContentParser parser) {
-    this.myParser = parser;
   }
 
   private static class MyFoundUrlCallback
