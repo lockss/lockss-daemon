@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.56 2003-03-11 04:20:16 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.57 2003-03-12 21:30:28 claire Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class NodeManagerImpl implements NodeManager {
 
     if (shouldStartTreeWalkThread) {
       treeWalkThread = new TreeWalkThread("TreeWalk: " + managedAu.getName(),
-					  getAuState().getLastTreeWalkTime());
+                                          getAuState().getLastTreeWalkTime());
       treeWalkThread.start();
     }
     logger.debug("NodeManager sucessfully started");
@@ -461,7 +461,7 @@ public class NodeManagerImpl implements NodeManager {
         case CachedUrlSetNode.TYPE_CACHED_URL:
           CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getUrl());
           CachedUrlSet newSet =
-	    ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
+            ((BaseArchivalUnit)managedAu).makeCachedUrlSet(rSpec);
           addNewNodeState(newSet);
       }
     }
@@ -471,8 +471,8 @@ public class NodeManagerImpl implements NodeManager {
     logger.debug("Adding NewNodeState: " + cus.toString());
     NodeState state =
       new NodeStateImpl(cus,
-			new CrawlState(-1, CrawlState.FINISHED, 0),
-			new ArrayList(), repository);
+                        new CrawlState(-1, CrawlState.FINISHED, 0),
+                        new ArrayList(), repository);
     nodeMap.put(cus.getUrl(), state);
   }
 
@@ -481,12 +481,12 @@ public class NodeManagerImpl implements NodeManager {
     if (pollState == null) {
       logger.error("Results updated for a non-existent poll.");
       throw new UnsupportedOperationException("Results updated for a "
-					      +"non-existent poll.");
+                                              +"non-existent poll.");
     }
     if (results.getErr() < 0) {
       pollState.status = mapResultsErrorToPollError(results.getErr());
       logger.info("Poll didn't finish fully.  Error code: "
-		  + pollState.status);
+                  + pollState.status);
       return;
     }
 
@@ -502,33 +502,39 @@ public class NodeManagerImpl implements NodeManager {
       logger.error("Updating state for invalid results type: " +
                    results.getType());
       throw new UnsupportedOperationException("Updating state for invalid "
-					      +"results type.");
+                                              +"results type.");
     }
   }
 
   void handleContentPoll(PollState pollState, Poll.VoteTally results,
                                  NodeState nodeState) {
+    logger.debug("handling content poll results: " + results);
     if (results.didWinPoll()) {
       // if agree
       if (pollState.getStatus() == PollState.RUNNING) {
+        logger.debug2("setting poll state to won.");
         // if normal poll, we won!
         pollState.status = PollState.WON;
       } else if (pollState.getStatus() == PollState.REPAIRING) {
         // if repair poll, we're repaired
+        logger.debug2("setting poll state to repaired.");
         pollState.status = PollState.REPAIRED;
       }
       updateReputations(results);
     } else {
       // if disagree
       if (pollState.getStatus() == PollState.REPAIRING) {
+        logger.debug2("setting poll state to unrepairable.");
         // if repair poll, can't be repaired
         pollState.status = PollState.UNREPAIRABLE;
         updateReputations(results);
       } else if (nodeState.isInternalNode()) {
+        logger.debug2("setting poll state to lost, calling name poll.");
         // if internal node, we need to call a name poll
         pollState.status = PollState.LOST;
         callNamePoll(nodeState.getCachedUrlSet());
       } else {
+        logger.debug2("setting poll state to repairing, marking node for repair.");
         // if leaf node, we need to repair
         pollState.status = PollState.REPAIRING;
         try {
@@ -543,11 +549,13 @@ public class NodeManagerImpl implements NodeManager {
 
   void handleNamePoll(PollState pollState, Poll.VoteTally results,
                               NodeState nodeState) {
+    logger.debug2("handling name poll results " + results);
     if (results.didWinPoll()) {
       // if agree
       if (results.isMyPoll()) {
         // if poll is mine
         try {
+          logger.debug2("won name poll, calling content poll on subnodes.");
           callContentPollOnSubNodes(nodeState, results);
           pollState.status = PollState.WON;
         } catch (Exception e) {
@@ -555,11 +563,13 @@ public class NodeManagerImpl implements NodeManager {
           pollState.status = PollState.ERR_IO;
         }
       } else {
+        logger.debug2("won name poll, setting state to WON");
         // if poll is not mine stop - set to WON
         pollState.status = PollState.WON;
       }
     } else {
       // if disagree
+      logger.debug2("lost name poll, collecting repair info.");
       pollState.status = PollState.REPAIRING;
       Iterator masterIt = results.getCorrectEntries();
       Iterator localIt = results.getLocalEntries();
@@ -575,6 +585,7 @@ public class NodeManagerImpl implements NodeManager {
         } else {
           // if not found locally, fetch
           try {
+            logger.debug3("marking missing node for repair " + url);
             CachedUrlSet newCus = au.makeCachedUrlSet(url, null, null);
             markNodeForRepair(newCus, results);
             //add to NodeState list
@@ -589,6 +600,7 @@ public class NodeManagerImpl implements NodeManager {
       while (localIt.hasNext()) {
         // for extra items - deletion
         String url = (String)localIt.next();
+        logger.debug3("deleting node: " + url);
         try {
           CachedUrlSet oldCus = au.makeCachedUrlSet(url, null, null);
           deleteNode(oldCus);
@@ -711,6 +723,7 @@ public class NodeManagerImpl implements NodeManager {
       String upr = ( (CachedUrlSet) childList.get(mid)).getSpec().getUrl();
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
       PollSpec pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
+      logger.debug2("calling first content poll on " + pspec);
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                              pspec);
 
@@ -720,10 +733,12 @@ public class NodeManagerImpl implements NodeManager {
           getUrl();
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
       pspec = new PollSpec(results.getCachedUrlSet(), lwr, upr);
+      logger.debug2("calling second content poll on " + pspec);
       theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
                                              pspec);
     }
     else {
+      logger.debug2("calling content poll on all items.");
       for(int i=0; i< childList.size(); i++) {
         theDaemon.getPollManager().requestPoll(LcapMessage.CONTENT_POLL_REQ,
         new PollSpec((CachedUrlSet)childList.get(i)));
@@ -807,25 +822,25 @@ public class NodeManagerImpl implements NodeManager {
     public void end() {
       goOn = false;
       if (deadline != null) {
-	deadline.expire();
+        deadline.expire();
       }
     }
 
     public void run() {
       while (goOn) {
-	if (shouldTreeWalkStart()) {
-	  doTreeWalk();
-	} else {
-	  long delta = (long)((double)MAX_DEVIATION*treeWalkInterval);
-	  logger.debug3("Creating a deadline for "+treeWalkInterval
-			+" with delta of "+delta);
-	  deadline =
-	    Deadline.inRandomDeviation(treeWalkInterval, delta);
-	  try {
-	    deadline.sleep();
-	  } catch (InterruptedException ie) {
-	  }
-	}
+        if (shouldTreeWalkStart()) {
+          doTreeWalk();
+        } else {
+          long delta = (long)((double)MAX_DEVIATION*treeWalkInterval);
+          logger.debug3("Creating a deadline for "+treeWalkInterval
+                        +" with delta of "+delta);
+          deadline =
+            Deadline.inRandomDeviation(treeWalkInterval, delta);
+          try {
+            deadline.sleep();
+          } catch (InterruptedException ie) {
+          }
+        }
       }
     }
   }

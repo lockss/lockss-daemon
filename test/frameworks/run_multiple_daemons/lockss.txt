@@ -1,14 +1,14 @@
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=info
-org.lockss.log.PollManager.level=debug
-org.lockss.log.Poll.level=debug
+org.lockss.log.PollManager.level=debug3
+org.lockss.log.Poll.level=info
 org.lockss.log.Comm.level=info
-org.lockss.log.NodeManager.level=debug
+org.lockss.log.NodeManager.level=debug3
 org.lockss.log.Message.level=info
 org.lockss.log.GenericHasher.level=info
-org.lockss.log.MSock_3456_Rcv.level=debug
-org.lockss.log.USock_9001_Rcv.level=debug
-org.lockss.log.USock_9000_Rcv.level=debug
+org.lockss.log.MSock_3456_Rcv.level=info
+org.lockss.log.USock_9001_Rcv.level=info
+org.lockss.log.USock_9000_Rcv.level=info
 
 #au config settings
 org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.localA.root=localA
