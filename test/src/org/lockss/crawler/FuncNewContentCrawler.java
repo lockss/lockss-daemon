@@ -51,7 +51,7 @@ public class FuncNewContentCrawler extends LockssTestCase {
   private static int maxDepth=DEFAULT_MAX_DEPTH;
 
   public static void main(String[] args) throws Exception {
-    FuncNewContentCrawlerTest test = new FuncNewContentCrawlerTest();
+    FuncNewContentCrawler test = new FuncNewContentCrawler();
     if (args.length>0) {
       try {
         maxDepth = Integer.parseInt(args[0]);
