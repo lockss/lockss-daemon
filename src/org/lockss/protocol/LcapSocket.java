@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.2 2002-11-06 21:19:20 tal Exp $
+ * $Id: LcapSocket.java,v 1.3 2002-11-19 23:26:36 tal Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class LcapSocket {
 	  while (goOn) {
 	    receivePacket();
 	  }
-	  //        } catch (InterruptedException e) {
+//        } catch (InterruptedException e) {
 	} catch (IOException e) {
 	  // tk - what do to here?
 	  log.warning("receive()", e);
