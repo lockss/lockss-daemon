@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.7 2003-02-25 22:08:34 troberts Exp $
+ * $Id: GenericNameHasher.java,v 1.8 2003-02-26 21:33:17 troberts Exp $
  */
 
 /*
@@ -41,11 +41,12 @@ import org.lockss.plugin.*;
  * General class to handle name hashing
  */
 public class GenericNameHasher extends GenericHasher {
-  public static final char DELIMITER= '\n';
+  private static final byte NO_CONTENT=0;
+  private static final byte CONTENT_LEAF=1;
+  private static final byte CONTENT_NOT_LEAF=2;
 
   byte[] nameBytes = null;
   int nameIdx = -1;
-  boolean onFirstElement = true;
 
   public GenericNameHasher(CachedUrlSet cus, MessageDigest dig) {
     super(cus, dig);
@@ -58,30 +59,39 @@ public class GenericNameHasher extends GenericHasher {
 
   protected int hashElementUpToNumBytes(CachedUrlSetNode element, 
 					int numBytes) {
+    int totalHashed = 0;
     if (nameBytes == null) {
       String nameStr = element.getUrl();
+      log.debug3("Getting new name: "+nameStr);
       StringBuffer sb = new StringBuffer(nameStr.length()+1);
-      if (!onFirstElement) {
-	sb.append(DELIMITER);
-      }
-      else {
-	onFirstElement = false;
-      }
       sb.append(nameStr);
       nameBytes = (sb.toString().getBytes());
       nameIdx = 0;
+
+      if (element.hasContent()) {
+	digest.update(element.isLeaf() ? CONTENT_LEAF : CONTENT_NOT_LEAF);
+      } else {
+	digest.update(NO_CONTENT);
+      }
+
+      byte[] sizeBytes = ByteArray.encodeLong(nameStr.length());
+      digest.update((byte)sizeBytes.length);
+      digest.update(sizeBytes);
+      totalHashed += sizeBytes.length + 2;
     }
 
     int len = Math.min(numBytes, (nameBytes.length - nameIdx));
 
     digest.update(nameBytes, nameIdx, len);
     nameIdx += len;
+    totalHashed += len;
     if (nameIdx >= nameBytes.length) {
       shouldGetNextElement = true;
       element = null;
       nameBytes = null;
     }
-    return len;
+    log.debug3("Hashed "+totalHashed+" bytes in this step");
+    return totalHashed;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.6 2003-02-26 20:38:54 aalto Exp $
+ * $Id: TestGenericNameHasher.java,v 1.7 2003-02-26 21:33:17 troberts Exp $
  */
 
 /*
@@ -41,10 +41,9 @@ import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
 public class TestGenericNameHasher extends LockssTestCase {
-  private static final char DELIMITER = '\n';
-
-  private static final byte IS_NOT_LEAF=0;
-  private static final byte IS_LEAF=1;
+  private static final byte CUSN_NO_CONTENT=0;
+  private static final byte CUSN_CONTENT_LEAF=1;
+  private static final byte CUSN_CONTENT_NOT_LEAF=2;
 
   public TestGenericNameHasher(String msg) {
     super(msg);
@@ -85,113 +84,156 @@ public class TestGenericNameHasher extends LockssTestCase {
   public void testUnfinishedHasherNotFinished() {
     String name = "TestName1";
     MockMessageDigest dig = new MockMessageDigest();
-    CachedUrlSetHasher hasher = createHasherFromName(name, dig);
+    MockCachedUrlSet cus = new MockCachedUrlSet(name);
+    cus.setHasContent(true);
+    cus.setIsLeaf(false);
+    MockCachedUrlSet root = new MockCachedUrlSet();
+    root.setFlatItSource(ListUtil.list(cus));
+    
+    CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
+    
     assertTrue(!hasher.finished());
   }
 
   public void testHashOneName() throws IOException {
     String name = "TestName1";
     MockMessageDigest dig = new MockMessageDigest();
-    CachedUrlSetHasher hasher = createHasherFromName(name, dig);
 
-    byte[] bytes = name.getBytes();
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(1, hasher.hashStep(1));
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
-
-
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-  }
-
-  public void testHashMultNameEqualToNumBytes() throws IOException {
-    String nameStub = "TestName";
-    Vector childNodeNames = new Vector();
-    int numChildNodes = 5;
-    for (int ix=0; ix<numChildNodes; ix++) {
-      String name = nameStub+ix;
-      childNodeNames.add(name);
-    }
-    MockMessageDigest dig = new MockMessageDigest();
-    CachedUrlSetHasher hasher =
-      createHasherFromNameVector(childNodeNames, dig);
-
-    for (int ix=0; ix<numChildNodes; ix++) {
-      String name = (String)childNodeNames.elementAt(ix);
-      if (ix != 0) {
-	String delimStr = String.valueOf(DELIMITER);
-	hashAndCompareByteArray(delimStr.getBytes(), hasher, dig);
-      }
-      hashAndCompareByteArray(name.getBytes(), hasher, dig);
-    }
-    assertEquals(0, hasher.hashStep(1));
-    assertTrue(hasher.finished());
-  }
-
-  public void testHashMultNameLessThanNumBytes() throws IOException {
-    Vector childNodeNames = new Vector();
-    int numChildNodes = 5;
-    for (int ix=0; ix<numChildNodes; ix++) {
-      String name = "TestName"+ix;
-      childNodeNames.add(name);
-    }
-    MockMessageDigest dig = new MockMessageDigest();
-    CachedUrlSetHasher hasher =
-      createHasherFromNameVector(childNodeNames, dig);
-
-    byte[] bytes = nameVectorToBytes(childNodeNames, DELIMITER);
-
-    assertEquals(bytes.length, hasher.hashStep(bytes.length+100));
-    for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals(bytes[ix], dig.getUpdatedByte());
-    }
-    assertTrue(hasher.finished());
-  }
-
-  private GenericNameHasher createHasherFromNameVector(Vector names,
-						       MessageDigest dig) {
-    Iterator it = names.iterator();
-    Vector childNodes = new Vector();
-    while(it.hasNext()) {
-      String curName = (String)it.next();
-      CachedUrlSetSpec cuss = new MockCachedUrlSetSpec(curName, null);
-      MockCachedUrlSet cus = new MockCachedUrlSet(null, cuss);
-      childNodes.add(cus);
-    }
+    MockCachedUrlSet cus = new MockCachedUrlSet(name);
+    cus.setHasContent(true);
+    cus.setIsLeaf(false);
     MockCachedUrlSet root = new MockCachedUrlSet();
-    root.setFlatIterator(childNodes.iterator());
+    root.setFlatItSource(ListUtil.list(cus));
+    
+    CachedUrlSetHasher hasher = new GenericNameHasher(root, dig);
 
-    return new GenericNameHasher(root, dig);
-  }
-
-  private GenericNameHasher createHasherFromName(String name,
-						 MessageDigest dig) {
-    Vector names = new Vector();
-    names.add(name);
-    return createHasherFromNameVector(names, dig);
-  }
-
-  private byte[] nameVectorToBytes(Vector names, char delim) {
-    Iterator it = names.iterator();
-    StringBuffer sb = new StringBuffer();
-    sb.append((String)it.next());
-    while (it.hasNext()) {
-      sb.append(delim);
-      sb.append((String)it.next());
+    byte[] bytes = getExpectedCUSBytes(root);
+    int totalHashed = 0;
+    while (!hasher.finished()) {
+      totalHashed += hasher.hashStep(1);
     }
-    return sb.toString().getBytes();
-  }
-
-  private void hashAndCompareByteArray(byte[] bytes,
-				       CachedUrlSetHasher hasher,
-				       MockMessageDigest dig)
-      throws IOException {
-    assertEquals(bytes.length, hasher.hashStep(bytes.length));
+    assertEquals(bytes.length, totalHashed);
+    assertEquals(0, hasher.hashStep(1));
+    assertTrue(hasher.finished());
     for (int ix=0; ix<bytes.length; ix++) {
-      assertEquals("Byte mismatch at index "+ix, bytes[ix],
-		   dig.getUpdatedByte());
+      assertEquals(bytes[ix], dig.getUpdatedByte());
     }
+  }
+
+   public void testComplexHashSmallStep() throws IOException {
+     MockMessageDigest dig = new MockMessageDigest();
+     CachedUrlSet cus = makeTestCUS();
+     CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
+     byte[] expectedBytes = getExpectedCUSBytes(cus);
+   
+     int totalHashed = 0;
+     while (!hasher.finished()) {
+       totalHashed += hasher.hashStep(1);
+     }
+     assertEquals(expectedBytes.length, totalHashed);
+     for (int ix=0; ix<expectedBytes.length; ix++) {
+       assertEquals(expectedBytes[ix], dig.getUpdatedByte());
+     }
+   }
+
+   public void testComplexHashLargerStep() throws IOException {
+     MockMessageDigest dig = new MockMessageDigest();
+     CachedUrlSet cus = makeTestCUS();
+     CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
+     byte[] expectedBytes = getExpectedCUSBytes(cus);
+   
+     int totalHashed = 0;
+     while (!hasher.finished()) {
+       totalHashed += hasher.hashStep(20);
+     }
+     assertEquals(expectedBytes.length, totalHashed);
+     for (int ix=0; ix<expectedBytes.length; ix++) {
+       assertEquals(expectedBytes[ix], dig.getUpdatedByte());
+     }
+   }
+
+   public void testComplexHashVeryLargeStep() throws IOException {
+     MockMessageDigest dig = new MockMessageDigest();
+     CachedUrlSet cus = makeTestCUS();
+     CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
+     byte[] expectedBytes = getExpectedCUSBytes(cus);
+   
+     int totalHashed = 0;
+     while (!hasher.finished()) {
+       totalHashed += hasher.hashStep(10000);
+     }
+     assertEquals(expectedBytes.length, totalHashed);
+     for (int ix=0; ix<expectedBytes.length; ix++) {
+       assertEquals(expectedBytes[ix], dig.getUpdatedByte());
+     }
+   }
+
+  private CachedUrlSet makeTestCUS() {
+    List list = new LinkedList();
+    MockCachedUrlSet cus = new MockCachedUrlSet("TestName1");
+    cus.setHasContent(true);
+    cus.setIsLeaf(false);
+    list.add(cus);
+
+    cus = new MockCachedUrlSet("AnotherTestName");
+    cus.setHasContent(true);
+    cus.setIsLeaf(true);
+    list.add(cus);
+
+    cus = new MockCachedUrlSet("StillAnotherTestName");
+    cus.setHasContent(false);
+    cus.setIsLeaf(false);
+    list.add(cus);
+
+    MockCachedUrlSet root = new MockCachedUrlSet();
+    root.setFlatItSource(list);
+    return root;
+  }
+
+  private byte[] getExpectedCUSBytes(CachedUrlSet cus) throws IOException {
+    Iterator it = cus.flatSetIterator();
+    List byteArrays = new LinkedList();
+    int totalSize = 0;
+    while (it.hasNext()) {
+      CachedUrlSetNode cusn = (CachedUrlSetNode) it.next();
+      byte[] arr = getExpectedCUSNBytes(cusn);
+      totalSize += arr.length;
+      byteArrays.add(arr);
+    }
+    byte[] returnArr = new byte[totalSize];
+    int pos = 0;
+    it = byteArrays.iterator();
+    while (it.hasNext()) {
+      byte[] curArr = (byte[]) it.next();
+      for (int ix=0; ix<curArr.length; ix++) {
+	returnArr[pos++] = curArr[ix];
+      }
+    }
+    return returnArr;
+  }
+
+  private byte[] getExpectedCUSNBytes(CachedUrlSetNode cusn) {
+    String name = cusn.getUrl();
+    byte[] sizeBytes = ByteArray.encodeLong(name.length());
+    byte[] returnArray = new byte[name.length() + sizeBytes.length + 2];
+    
+    if (cusn.hasContent()) {
+      returnArray[0] = 
+	cusn.isLeaf() ? CUSN_CONTENT_LEAF : CUSN_CONTENT_NOT_LEAF;
+    } else {
+      returnArray[0] = CUSN_NO_CONTENT;
+    }
+    returnArray[1] = (byte)sizeBytes.length;
+    int curPos = 2;
+    for (int ix=0; ix<sizeBytes.length; ix++) {
+      returnArray[curPos++] = sizeBytes[ix];
+    }
+
+    byte[] nameBytes = name.getBytes();
+    for (int ix=0; ix<nameBytes.length; ix++) {
+      returnArray[curPos++] = nameBytes[ix];
+    }
+    return returnArray;
   }
 }
 
