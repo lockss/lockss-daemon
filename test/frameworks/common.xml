@@ -45,6 +45,9 @@
     <property name="thread.hungThreadDump" value="true"/>
 
 
+    <!-- Use new UI Home servlet -->
+    <property name="admin.redirectRoot" value="Home" />
+
     <!-- Plugin Registery:
     List the plugins that should be included in UI menus. -->
     <property name="plugin.registry">
@@ -115,6 +118,7 @@
       <!-- Title: EMLS (Early Modern Literary Studies) -->
       <property name="emls9">
 	<property name="title" value="EMLS Volume 9" />
+	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="EMLS" />
 	<property name="plugin" value="org.lockss.plugin.emls.EmlsPlugin" />
 	<property name="param.1">
@@ -144,6 +148,7 @@
       
       <property name="ahr108">
 	<property name="title" value="American Historical Review Volume 108" />
+	<property name="estSize" value="22MB" />
 	<property name="journalTitle" value="American Historical Review" />
 	<property name="plugin" value="org.lockss.plugin.histcoop.HistoryCooperativePlugin" />
 	<property name="param.1">
@@ -162,6 +167,7 @@
 
       <property name="alr2003">
 	<property name="title" value="ALR 2003" />
+	<property name="estSize" value="1.5MB" />
 	<property name="journalTitle" value="ALR" />
 	<property name="plugin" value="org.lockss.plugin.absinthe.AbsinthePlugin" />
 	<property name="param.1">
@@ -176,6 +182,7 @@
 
       <property name="jhc52">
 	<property name="title" value="JHC Volume 52" />
+	<property name="estSize" value="290MB" />
 	<property name="journalTitle" value="JHC" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="param.1">
@@ -190,6 +197,7 @@
 
       <property name="blackbird2">
 	<property name="title" value="Blackbird Volume 2" />
+	<property name="estSize" value="1.7GB" />
 	<property name="journalTitle" value="Blackbird" />
 	<property name="plugin" value="org.lockss.plugin.blackbird.BlackbirdPlugin" />
 	<property name="param.1">
@@ -204,6 +212,7 @@
 
       <property name="culturallogic2003">
 	<property name="title" value="Cultural Logic 2003" />
+	<property name="estSize" value="6MB" />
 	<property name="journalTitle" value="Cultural Logic" />
 	<property name="plugin" value="org.lockss.plugin.clogic.CulturalLogicPlugin" />
 	<property name="param.1">
@@ -218,6 +227,7 @@
 
       <property name="ecp2004">
         <property name="title" value="Electronic Communications In Probability 2004" />
+	<property name="estSize" value="4.5MB" />
         <property name="journalTitle" value="Electronic Communications In Probability" />
         <property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
         <property name="param.1">
@@ -232,6 +242,7 @@
 
       <property name="ejp2004">
 	<property name="title" value="Electronic Journal Of Probability 2004" />
+	<property name="estSize" value="11MB" />
 	<property name="journalTitle" value="Electronic Journal Of Probability" />
 	<property name="plugin" value="org.lockss.plugin.ojs.OJSPlugin" />
 	<property name="param.1">
@@ -246,6 +257,7 @@
 
       <property name="snde8">
 	<property name="title" value="Studies in Nonlinear Dynamics and Econometrics Volume 8" />
+	<property name="estSize" value="22MB" />
 	<property name="journalTitle" value="Studies in Nonlinear Dynamics and Econometrics" />
 	<property name="plugin" value="org.lockss.plugin.bepress.BePressPlugin" />
 	<property name="param.1">
@@ -264,6 +276,7 @@
 
       <property name="bmcr2004">
 	<property name="title" value="Bryn Mawr Classical Review 2004" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Bryn Mawr Classical Review" />
 	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
 	<property name="param.1">
@@ -278,6 +291,7 @@
 
       <property name="bmcr2003">
 	<property name="title" value="Bryn Mawr Classical Review 2003" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Bryn Mawr Classical Review" />
 	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
 	<property name="param.1">
@@ -292,6 +306,7 @@
 
       <property name="bmcr2002">
 	<property name="title" value="Bryn Mawr Classical Review 2002" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Bryn Mawr Classical Review" />
 	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
 	<property name="param.1">
@@ -306,6 +321,7 @@
 
       <property name="bmcr2001">
 	<property name="title" value="Bryn Mawr Classical Review 2001" />
+	<property name="estSize" value="6MB" />
 	<property name="journalTitle" value="Bryn Mawr Classical Review" />
 	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
 	<property name="param.1">
@@ -320,6 +336,7 @@
 
       <property name="bmcr1990">
 	<property name="title" value="Bryn Mawr Classical Review 1990" />
+	<property name="estSize" value="300KB" />
 	<property name="journalTitle" value="Bryn Mawr Classical Review" />
 	<property name="plugin" value="edu.princeton.plugin.bmcr.BMCRPlugin" />
 	<property name="param.1">
@@ -334,6 +351,7 @@
 
       <property name="clcweb2004">
 	<property name="title" value="CLCWeb Volume 6 (2004)" />
+	<property name="estSize" value="4MB" />
 	<property name="journalTitle" value="CLCWeb" />
 	<property name="plugin" value="edu.upenn.library.plugin.clcweb.CLCWebPlugin" />
 	<property name="param.1">
@@ -352,6 +370,7 @@
 
       <property name="jcjpc10">
 	<property name="title" value="Journal of Criminal Justice and Popular Culture Volume 10" />
+	<property name="estSize" value="8MB" />
 	<property name="journalTitle" value="Journal of Criminal Justice and Popular Culture" />
 	<property name="plugin" value="edu.indiana.lib.plugin.jcjpc.JcjpcPlugin" />
 	<property name="param.1">
@@ -366,6 +385,7 @@
 
       <property name="jrs2004">
 	<property name="title" value="Journal of Religion and Society 2004" />
+	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="Journal of Religion and Society" />
 	<property name="plugin" value="edu.harvard.plugin.jrs.JRSPlugin" />
 	<property name="param.1">
@@ -380,6 +400,7 @@
 
       <property name="urdu18">
 	<property name="title" value="The Annual of Urdu Studies Volume 18 (2003)" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="The Annual of Urdu Studies" />
 	<property name="plugin" value="edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin" />
 	<property name="param.1">
@@ -394,6 +415,7 @@
 
       <property name="pm1">
 	<property name="title" value="American Imago Volume 60" />
+	<property name="estSize" value="5MB" />
 	<property name="journalTitle" value="American Imago" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -413,6 +435,7 @@
 
       <property name="pm12">
 	<property name="title" value="American Jewish History Volume 91" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="American Jewish History" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -431,6 +454,7 @@
 
       <property name="pm13">
 	<property name="title" value="Emily Dickinson Journal Volume 13" />
+	<property name="estSize" value="6MB" />
 	<property name="journalTitle" value="Emily Dickinson Journal" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -449,6 +473,7 @@
 
       <property name="pm14">
 	<property name="title" value="Henry James Review Volume 25" />
+	<property name="estSize" value="4.4MB" />
 	<property name="journalTitle" value="Henry James Review" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -467,6 +492,7 @@
 
       <property name="pm15">
 	<property name="title" value="Human Rights Quarterly Volume 25" />
+	<property name="estSize" value="12MB" />
 	<property name="journalTitle" value="Human Rights Quarterly" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -485,6 +511,7 @@
 
       <property name="pm16">
 	<property name="title" value="Journal of Asian American Studies Volume 6" />
+	<property name="estSize" value="4MB" />
 	<property name="journalTitle" value="Journal of Asian American Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -503,6 +530,7 @@
 
       <property name="pm17">
 	<property name="title" value="Journal of College Student Development Volume 44" />
+	<property name="estSize" value="26MB" />
 	<property name="journalTitle" value="Journal of College Student Development" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -521,6 +549,7 @@
 
       <property name="pm20">
 	<property name="title" value="Journal of Colonialism and Colonial History Volume 4" />
+	<property name="estSize" value="2.5MB" />
 	<property name="journalTitle" value="Journal of Colonialism and Colonial History" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -539,6 +568,7 @@
 
       <property name="pm19">
 	<property name="title" value="Journal of Democracy Volume 14" />
+	<property name="estSize" value="12MB" />
 	<property name="journalTitle" value="Journal of Democracy" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -558,6 +588,7 @@
 
       <property name="pm21">
 	<property name="title" value="Modern Fiction Studies Volume 49" />
+	<property name="estSize" value="12.5MB" />
 	<property name="journalTitle" value="Modern Fiction Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -576,6 +607,7 @@
 
       <property name="pm22">
 	<property name="title" value="Journal of Early Christian Studies Volume 11" />
+	<property name="estSize" value="6.5MB" />
 	<property name="journalTitle" value="Journal of Early Christian Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -594,6 +626,7 @@
 
       <property name="pm23">
 	<property name="title" value="Journal of Modern Greek Studies Volume 21" />
+	<property name="estSize" value="2.5MB" />
 	<property name="journalTitle" value="Journal of Modern Greek Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -613,6 +646,7 @@
 
       <property name="pm24">
 	<property name="title" value="Journal of the History of Ideas Volume 64" />
+	<property name="estSize" value="11MB" />
 	<property name="journalTitle" value="Journal of the History of Ideas" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -631,6 +665,7 @@
 
       <property name="pm25">
 	<property name="title" value="Journal of the History of Philosophy Volume 41" />
+	<property name="estSize" value="10MB" />
 	<property name="journalTitle" value="Journal of the History of Philosophy" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -649,6 +684,7 @@
 
       <property name="pm26">
 	<property name="title" value="Journal of Women's History Volume 15" />
+	<property name="estSize" value="13MB" />
 	<property name="journalTitle" value="Journal of Women's History" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -667,6 +703,7 @@
 
       <property name="pm27">
 	<property name="title" value="Kennedy Institute of Ethics Journal Volume 13" />
+	<property name="estSize" value="5MB" />
 	<property name="journalTitle" value="Kennedy Institute of Ethics Journal" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -685,6 +722,7 @@
 
       <property name="pm28">
 	<property name="title" value="Late Imperial China Volume 24" />
+	<property name="estSize" value="9MB" />
 	<property name="journalTitle" value="Late Imperial China" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -703,6 +741,7 @@
 
       <property name="pm29">
 	<property name="title" value="Lion and the Unicorn Volume 27" />
+	<property name="estSize" value="11MB" />
 	<property name="journalTitle" value="Lion and the Unicorn" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -721,6 +760,7 @@
 
       <property name="pm30">
 	<property name="title" value="Literature and Medicine Volume 22" />
+	<property name="estSize" value="3MB" />
 	<property name="journalTitle" value="Literature and Medicine" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -739,6 +779,7 @@
 
       <property name="pm31">
 	<property name="title" value="MLN Volume 118" />
+	<property name="estSize" value="20MB" />
 	<property name="journalTitle" value="MLN" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -757,6 +798,7 @@
 
       <property name="poetrybay2004">
 	<property name="title" value="Poetry Bay 2004" />
+	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="Poetry Bay" />
 	<property name="plugin" value="org.nypl.plugin.PoetryBayPlugin" />
 	<property name="param.1">
@@ -771,6 +813,7 @@
 
       <property name="wordswithoutborders2004">
 	<property name="title" value="Words Without Borders 2004" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Words Without Borders" />
 	<property name="plugin" value="org.nypl.plugin.WordsWithoutBordersPlugin" />
 	<property name="param.1">
@@ -785,6 +828,7 @@
 
       <property name="ambio33">
 	<property name="title" value="AMBIO: A Journal of the Human Environment Volume 33" />
+	<property name="estSize" value="50MB" />
 	<property name="journalTitle" value="AMBIO: A Journal of the Human Environment" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -804,6 +848,7 @@
 
       <property name="abt66">
 	<property name="title" value="The American Biology Teacher Volume 66" />
+	<property name="estSize" value="40MB" />
 	<property name="journalTitle" value="The American Biology Teacher" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -822,6 +867,7 @@
 
       <property name="fren94">
 	<property name="title" value="American Fern Journal Volume 94" />
+	<property name="estSize" value="5MB" />
 	<property name="journalTitle" value="American Fern Journal" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -840,6 +886,7 @@
 
       <property name="amn152">
 	<property name="title" value="The American Midland Naturalist Volume 152" />
+	<property name="estSize" value="9MB" />
 	<property name="journalTitle" value="The American Midland Naturalist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -858,6 +905,7 @@
 
       <property name="amn460">
 	<property name="title" value="American Museum Novitates Volume 460" />
+	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="American Museum Novitates" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -876,6 +924,7 @@
 
       <property name="americanzoo41">
 	<property name="title" value="American Zoologist Volume 41" />
+	<property name="estSize" value="50MB" />
 	<property name="journalTitle" value="American Zoologist" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -894,6 +943,7 @@
 
       <property name="esa97">
 	<property name="title" value="Annals of the Entomological Society of America Volume 97" />
+	<property name="estSize" value="121MB" />
 	<property name="journalTitle" value="Annals of the Entomological Society of America" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -912,6 +962,7 @@
 
       <property name="avs7">
 	<property name="title" value="Applied Vegetation Science Volume 7" />
+	<property name="estSize" value="22MB" />
 	<property name="journalTitle" value="Applied Vegetation Science" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -930,6 +981,7 @@
 
       <property name="aaaresearch36">
 	<property name="title" value="Arctic, Antarctic, and Alpine Research Volume 36" />
+	<property name="estSize" value="15MB" />
 	<property name="journalTitle" value="Arctic, Antarctic, and Alpine Research" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -948,6 +1000,7 @@
 
       <property name="auk121">
 	<property name="title" value="The Auk Volume 121" />
+	<property name="estSize" value="86MB" />
 	<property name="journalTitle" value="The Auk" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -966,6 +1019,7 @@
 
       <property name="aviandiseases48">
 	<property name="title" value="Avian Diseases Volume 48" />
+	<property name="estSize" value="22MB" />
 	<property name="journalTitle" value="Avian Diseases" />
 	<property name="plugin" value="org.lockss.plugin.bioone.BioOnePlugin" />
 	<property name="param.1">
@@ -985,6 +1039,7 @@
 
       <property name="africa_today51">
 	<property name="title" value="Africa Today Volume 51" />
+	<property name="estSize" value="6MB" />
 	<property name="journalTitle" value="Africa Today" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1003,6 +1058,7 @@
 
       <property name="eservice_journal">
 	<property name="title" value="eService Journal Volume 3" />
+	<property name="estSize" value="3MB" />
 	<property name="journalTitle" value="eService Journal" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1021,6 +1077,7 @@
 
       <property name="history_and_memory16">
 	<property name="title" value="History and Memory Volume 16" />
+	<property name="estSize" value="4.4MB" />
 	<property name="journalTitle" value="History and Memory" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1039,6 +1096,7 @@
 
       <property name="hypatia19">
 	<property name="title" value="Hypatia Volume 19" />
+	<property name="estSize" value="19MB" />
 	<property name="journalTitle" value="" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1057,6 +1115,7 @@
 
       <property name="ij_of_global_legal_studies">
 	<property name="title" value="Indiana Journal of Global Legal Studies Volume 11" />
+	<property name="estSize" value="6MB" />
 	<property name="journalTitle" value="Indiana Journal of Global Legal Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1075,6 +1134,7 @@
 
       <property name="israel_studies9">
 	<property name="title" value="Israel Studies Volume 9" />
+	<property name="estSize" value="12.5MB" />
 	<property name="journalTitle" value="Israel Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1093,6 +1153,7 @@
 
       <property name="jewish_social_studies10">
 	<property name="title" value="Jewish Social Studies Volume 10" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Jewish Social Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1111,6 +1172,7 @@
 
       <property name="journal_of_folklore_research41">
 	<property name="title" value="Journal of Folklore Research Volume 41" />
+	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="Journal of Folklore Research" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1129,6 +1191,7 @@
 
       <property name="journal_of_modern_literature27">
 	<property name="title" value="Journal of Modern Literature Volume 27" />
+	<property name="estSize" value="6MB" />
 	<property name="journalTitle" value="Journal of Modern Literature" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1147,6 +1210,7 @@
 
       <property name="meridians4">
 	<property name="title" value="Meridians Volume 4" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Meridians" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1165,6 +1229,7 @@
 
       <property name="teslej8">
 	<property name="title" value="TESL-EJ Volume 8" />
+	<property name="estSize" value="1.8MB" />
 	<property name="journalTitle" value="TESL-EJ" />
 	<property name="plugin" value="gov.loc.plugin.TESLEJPlugin" />
 	<property name="param.1">
@@ -1240,6 +1305,7 @@
       
       <property name="arkivoc2004">
 	<property name="title" value="Arkivoc 2004" />
+	<property name="estSize" value="110MB" />
 	<property name="journalTitle" value="Arkivoc" />
 	<property name="plugin" value="edu.fcla.plugin.arkivoc.ArkivocPlugin" />
 	<property name="param.1">
@@ -1254,6 +1320,7 @@
 
       <property name="disputatio2004">
 	<property name="title" value="Disputatio 2004" />
+	<property name="estSize" value="500KB" />
 	<property name="journalTitle" value="Disputatio" />
 	<property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
 	<property name="param.1">
@@ -1267,6 +1334,7 @@
       </property>
 
       <property name="disputatio2003">
+	<property name="estSize" value="4MB" />
 	<property name="title" value="Disputatio 2003" />
 	<property name="journalTitle" value="Disputatio" />
 	<property name="plugin" value="org.lockss.plugin.disputatio.DisputatioPlugin" />
@@ -1282,6 +1350,7 @@
 
       <property name="molvis9">
 	<property name="title" value="Molecular Vision Volume 9" />
+	<property name="estSize" value="40MB" />
 	<property name="journalTitle" value="Molecular Vision" />
 	<property name="plugin" value="org.molvis.plugin.MolVisPlugin" />
 	<property name="param.1">
@@ -1295,6 +1364,7 @@
       </property>
       <property name="intermarium2004">
 	<property name="title" value="Intermarium 2004" />
+	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="Intermarium" />
 	<property name="plugin" value="edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin" />
 	<property name="param.1">
@@ -1313,6 +1383,7 @@
 
       <property name="mitejmes2004">
 	<property name="title" value="MIT E-journal of Middle East Studies 2004" />
+	<property name="estSize" value="2.2MB" />
 	<property name="journalTitle" value="MIT E-journal of Middle East Studies" />
 	<property name="plugin" value="edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin" />
 	<property name="param.1">
@@ -1326,6 +1397,7 @@
       </property>
       <property name="pm10">
 	<property name="title" value="Eighteenth-Century Studies Volume 36" />
+	<property name="estSize" value="15MB" />
 	<property name="journalTitle" value="Eighteenth-Century Studies" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1346,6 +1418,7 @@
       <!-- Date: Fri Jan 02 14:29:37 PST 2004 -->
       <property name="pm11">
 	<property name="title" value="ELH Volume 70" />
+	<property name="estSize" value="11.5MB" />
 	<property name="journalTitle" value="ELH" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1364,6 +1437,7 @@
       <!-- Title: American Journal of Mathematics (Project Muse) -->
       <property name="pm2">
 	<property name="title" value="American Journal of Mathematics Volume 125" />
+	<property name="estSize" value="15MB" />
 	<property name="journalTitle" value="American Journal of Mathematics" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1383,6 +1457,7 @@
       <!-- Title: American Journal of Philology (Project Muse) -->
       <property name="pm3">
 	<property name="title" value="American Journal of Philology Volume 124" />
+	<property name="estSize" value="12MB" />
 	<property name="journalTitle" value="American Journal of Philology" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1402,6 +1477,7 @@
       <!-- Title: American Quarterly (Project Muse) -->
       <property name="pm4">
 	<property name="title" value="American Quarterly Volume 55" />
+	<property name="estSize" value="11MB" />
 	<property name="journalTitle" value="American Quarterly" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1421,6 +1497,7 @@
       <!-- Title: Arethusa (Project Muse) -->
       <property name="pm5">
 	<property name="title" value="Arethusa Volume 36" />
+	<property name="estSize" value="4MB" />
 	<property name="journalTitle" value="Arethusa" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1439,6 +1516,7 @@
       <!-- Title: Bulletin of the History of Medicine (Project Muse) -->
       <property name="pm6">
 	<property name="title" value="Bulletin of the History of Medicine Volume 77" />
+	<property name="estSize" value="21MB" />
 	<property name="journalTitle" value="Bulletin of the History of Medicine" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1458,6 +1536,7 @@
       <!-- Title: Callaloo (Project Muse) -->
       <property name="pm7">
 	<property name="title" value="Callaloo Volume 26" />
+	<property name="estSize" value="26MB" />
 	<property name="journalTitle" value="Callaloo" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1477,6 +1556,7 @@
       <!-- Title: Comparative Technology Transfer and Society (Project Muse) -->
       <property name="pm8">
 	<property name="title" value="Comparative Technology Transfer and Society Volume 1" />
+	<property name="estSize" value="10MB" />
 	<property name="journalTitle" value="Comparative Technology Transfer and Society" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1496,6 +1576,7 @@
       <!-- Title: Configurations (Project Muse) -->
       <property name="pm9">
 	<property name="title" value="Configurations Volume 11" />
+	<property name="estSize" value="7MB" />
 	<property name="journalTitle" value="Configurations" />
 	<property name="plugin" value="org.lockss.plugin.projmuse.ProjectMusePlugin" />
 	<property name="param.1">
@@ -1514,6 +1595,7 @@
 
       <property name="cjpcr13">
 	<property name="title" value="Cyberjournal for Pentecostal-Charismatic Research Issue 13" />
+	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="Cyberjournal for Pentecostal-Charismatic Research" />
 	<property name="plugin" value="gov.loc.plugin.CJPentecostalCharismaticResearchPlugin" />
 	<property name="param.1">
@@ -1528,6 +1610,7 @@
 
       <property name="jiws">
 	<property name="title" value="Journal of International Women's Studies 2004" />
+	<property name="estSize" value="4MB" />
 	<property name="journalTitle" value="Journal of International Women's Studies" />
 	<property name="plugin" value="edu.columbia.plugin.JiwsPlugin" />
 	<property name="param.1">
@@ -1542,6 +1625,7 @@
 
       <property name="cr2004">
 	<property name="title" value="Cortland Review 2004" />
+	<property name="estSize" value="1MB" />
 	<property name="journalTitle" value="Cortland Review" />
 	<property name="plugin" value="edu.wisc.library.plugin.CortlandReviewPlugin" />
 	<property name="param.1">
@@ -1560,6 +1644,7 @@
 
       <property name="bb2">
 	<property name="title" value="Big Bridge Volume 2" />
+	<property name="estSize" value="37MB" />
 	<property name="journalTitle" value="Big Bridge" />
 	<property name="plugin" value="edu.wisc.library.plugin.BigBridgePlugin" />
 	<property name="param.1">
@@ -1579,6 +1664,7 @@
 
       <property name="genders2004">
 	<property name="title" value="Genders 2004" />
+	<property name="estSize" value="2MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
@@ -1597,6 +1683,7 @@
 
       <property name="genders2003">
 	<property name="title" value="Genders 2003" />
+	<property name="estSize" value="4MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
@@ -1615,6 +1702,7 @@
 
       <property name="genders2002">
 	<property name="title" value="Genders 2002" />
+	<property name="estSize" value="4.8MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
@@ -1633,6 +1721,7 @@
 
       <property name="genders2001">
 	<property name="title" value="Genders 2001" />
+	<property name="estSize" value="6.4MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
@@ -1651,6 +1740,7 @@
 
       <property name="genders2000">
 	<property name="title" value="Genders 2000" />
+	<property name="estSize" value="4.1MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
@@ -1669,6 +1759,7 @@
 
       <property name="genders1999">
 	<property name="title" value="Genders 1999" />
+	<property name="estSize" value="2.6MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
@@ -1687,6 +1778,7 @@
 
       <property name="genders1998">
 	<property name="title" value="Genders 1998" />
+	<property name="estSize" value="4.5MB" />
 	<property name="journalTitle" value="Genders" />
 	<property name="plugin" value="org.lockss.plugin.GendersPlugin" />
 	<property name="param.1">
