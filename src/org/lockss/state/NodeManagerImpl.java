@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.94 2003-04-10 05:39:28 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.95 2003-04-10 05:47:31 claire Exp $
  */
 
 /*
@@ -407,6 +407,7 @@ public class NodeManagerImpl
       case PollState.RUNNING:
         // if this poll should be running make sure it is running.
         if (!pollManager.isPollRunning(lastHistory.getType(), lastPollSpec)) {
+          logger.debug2("treewalk - re-calling last running poll");
           callLastPoll(lastPollSpec, lastHistory);
           return true;
         }
@@ -418,6 +419,7 @@ public class NodeManagerImpl
         break;
       case PollState.LOST:
         if (lastHistory.getType() == Poll.CONTENT_POLL) {
+          logger.debug2("treewalk - calling namepoll for lost content poll");
           callNamePoll(lastPollSpec);
           return true;
         }
@@ -434,6 +436,7 @@ public class NodeManagerImpl
         // if we ended with an error and it was our poll,
         // we need to recall this poll.
         if (lastHistory.getOurPoll()) {
+          logger.debug2("treewalk - re-calling last error poll");
           callLastPoll(lastPollSpec, lastHistory);
           return true;
         }
