@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.14 2003-06-26 23:59:02 eaalto Exp $
+ * $Id: CrawlManager.java,v 1.15 2003-07-02 00:55:02 troberts Exp $
  */
 
 /*
@@ -51,8 +51,8 @@ public interface CrawlManager {
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
    */
-  public void scheduleRepair(ArchivalUnit au, Collection urls,
-			     CrawlManager.Callback cb, Object cookie);
+  public void startRepair(ArchivalUnit au, Collection urls,
+			  CrawlManager.Callback cb, Object cookie);
 
   /**
    * Starts a new content crawl
@@ -74,5 +74,25 @@ public interface CrawlManager {
      * attempt this is
      */
     public void signalCrawlAttemptCompleted(boolean success, Object cookie);
+  }
+
+  public interface StatusSource {
+    /**
+     * return a collection of ArchivalUnits that have crawl history (either
+     * active or completed crawls)
+     * @return collection of AUs that have crawl history (either active or
+     * completed crawls)
+     */
+    public Collection getActiveAUs();
+
+    /**
+     * return a <code>Collection</code> of {@link Crawler}s doing repair
+     * crawls for <code>au</code>
+     *
+     * @param au {@link ArchivalUnit} to get {@link Crawler}s doing repair
+     * crawls for
+     * @return <code>Collection</code> of {@link Crawler}s for <code>au</code>
+     */
+    public Collection getCrawls(String auid);
   }
 }
