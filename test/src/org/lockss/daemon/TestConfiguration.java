@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.25 2003-07-28 17:24:27 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.26 2003-09-16 23:31:20 eaalto Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class TestConfiguration extends LockssTestCase {
     config.put("a", "b");
     assertEquals(1, config.keySet().size());
     assertEquals("b", config.get("a"));
-  }    
+  }
 
   public void testRemove() {
     Configuration config = newConfiguration();
@@ -84,7 +84,7 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(1, config.keySet().size());
     assertEquals(null, config.get("a"));
     assertEquals("2", config.get("b"));
-  }    
+  }
 
   public void testRemoveTree() {
     Configuration config = newConfiguration();
@@ -105,7 +105,7 @@ public class TestConfiguration extends LockssTestCase {
     // removing a non-existent tree should do nothing
     config.removeConfigTree("dkdkdk");
     assertEquals(3, config.keySet().size());
-  }    
+  }
 
   private void assertSealed(Configuration config) {
     try {
@@ -137,7 +137,7 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("2", config.get("b"));
     // check that subconfig of sealed config is sealed
     assertSealed(config.getConfigTree("b"));
-  }    
+  }
 
   public void testCopy() {
     Configuration c1 = newConfiguration();
@@ -152,10 +152,10 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse(c2.isSealed());
     c2.put("a", "cc");
     assertEquals("cc", c2.get("a"));
-  }    
+  }
 
   public void testLoad() throws IOException, Configuration.InvalidParam {
-    String f = FileUtil.urlOfString(c1);
+    String f = FileTestUtil.urlOfString(c1);
     Configuration config = newConfiguration();
     config.load(f);
     assertEquals("12", config.get("prop1"));
@@ -197,8 +197,8 @@ public class TestConfiguration extends LockssTestCase {
 
   public void testLoadList() throws IOException {
     Configuration config = newConfiguration();
-    config.loadList(ListUtil.list(FileUtil.urlOfString(c1),
-				  FileUtil.urlOfString(c1a)));
+    config.loadList(ListUtil.list(FileTestUtil.urlOfString(c1),
+				  FileTestUtil.urlOfString(c1a)));
     assertEquals("12", config.get("prop1"));
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));
@@ -245,7 +245,7 @@ public class TestConfiguration extends LockssTestCase {
 
   public void testStruct() throws IOException {
     Configuration config = newConfiguration();
-    config.load(FileUtil.urlOfString(c2));
+    config.load(FileTestUtil.urlOfString(c2));
     Set set = new HashSet();
     for (Iterator iter = config.keyIterator(); iter.hasNext();) {
       set.add(iter.next());

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.6 2003-07-16 00:05:06 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.7 2003-09-16 23:28:35 eaalto Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -48,7 +48,7 @@ public class ConfigurationUtil {
    */
   public static Configuration fromString(String s)
       throws IOException {
-    List l = ListUtil.list(FileUtil.urlOfString(s));
+    List l = ListUtil.list(FileTestUtil.urlOfString(s));
     return mgr().readConfig(l);
   }
 
@@ -74,7 +74,7 @@ public class ConfigurationUtil {
     } catch (InstantiationException e) {
       // because I don't want to change all the callers of this
       throw new RuntimeException(e.toString());
-    }      
+    }
   }
 
   /** Create a Configuration from the contents of the URLs in the list

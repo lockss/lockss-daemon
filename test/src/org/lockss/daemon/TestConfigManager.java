@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.5 2003-09-03 17:59:52 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.6 2003-09-16 23:31:19 eaalto Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestConfigManager extends LockssTestCase {
 
   public void testParam() throws IOException, Configuration.InvalidParam {
     Configuration config = mgr.newConfiguration();
-    config.load(FileUtil.urlOfString(c2));
+    config.load(FileTestUtil.urlOfString(c2));
     mgr.setCurrentConfig(config);
     assertEquals("12", ConfigManager.getParam("prop.p1"));
     assertEquals("foobar", ConfigManager.getParam("prop.p2"));
@@ -104,13 +104,13 @@ public class TestConfigManager extends LockssTestCase {
 
   boolean setCurrentConfigFromString(String s)
       throws IOException {
-    return setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+    return setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(s)));
   }
 
   public void testCurrentConfig() throws IOException {
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1),
-						FileUtil.urlOfString(c1a))));
+					   list(FileTestUtil.urlOfString(c1),
+						FileTestUtil.urlOfString(c1a))));
     assertEquals("12", ConfigManager.getParam("prop1"));
     Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("12", config.get("prop1"));
@@ -127,8 +127,8 @@ public class TestConfigManager extends LockssTestCase {
 
   public void testCallback() throws IOException {
     configs = new ArrayList();
-    setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
-					      FileUtil.urlOfString(c1a)));
+    setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
+					      FileTestUtil.urlOfString(c1a)));
     assertEquals(0, configs.size());
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
@@ -142,8 +142,8 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testCallbackDiffs() throws IOException {
-    setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
-					      FileUtil.urlOfString(c1a)));
+    setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
+					      FileTestUtil.urlOfString(c1a)));
     System.out.println(mgr.getCurrentConfig().toString());
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
@@ -154,18 +154,18 @@ public class TestConfigManager extends LockssTestCase {
 	}
       });
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1a),
-						FileUtil.urlOfString(c1))));
+					   list(FileTestUtil.urlOfString(c1a),
+						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop2"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1),
-						FileUtil.urlOfString(c1))));
+					   list(FileTestUtil.urlOfString(c1),
+						FileTestUtil.urlOfString(c1))));
     assertEquals(SetUtil.set("prop4"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
-					   list(FileUtil.urlOfString(c1),
-						FileUtil.urlOfString(c1a))));
+					   list(FileTestUtil.urlOfString(c1),
+						FileTestUtil.urlOfString(c1a))));
     assertEquals(SetUtil.set("prop4", "prop2"), diffSet);
     System.out.println(mgr.getCurrentConfig().toString());
 
@@ -179,9 +179,10 @@ public class TestConfigManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = mgr.getCurrentConfig();
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
-    assertEquals("/var/log/foo/bar", config.get(FileTarget.PARAM_FILE));
+    assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
+                 config.get(FileTarget.PARAM_FILE));
   }
- 
+
   public void testPlatformAccess1() throws Exception {
     // platform access set, ui and proxy access not set
     Properties props = new Properties();
@@ -234,7 +235,8 @@ public class TestConfigManager extends LockssTestCase {
     Configuration config = mgr.getCurrentConfig();
     assertEquals("/a/b", config.get("org.lockss.cache.location"));
     assertEquals("/a/b", config.get("org.lockss.history.location"));
-    assertEquals("/a/b/iddb", config.get("org.lockss.id.database.dir"));
+    assertEquals(FileUtil.sysDepPath("/a/b/iddb"),
+                 config.get("org.lockss.id.database.dir"));
   }
 
   public void testPlatformSmtp() throws Exception {
@@ -243,9 +245,9 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.platform.smtpport", "25");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = mgr.getCurrentConfig();
-    assertEquals("smtp.example.com", 
+    assertEquals("smtp.example.com",
 		 config.get("org.lockss.log.target.MailTarget.smtphost"));
-    assertEquals("25", 
+    assertEquals("25",
 		 config.get("org.lockss.log.target.MailTarget.smtpport"));
   }
 

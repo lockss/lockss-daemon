@@ -1,5 +1,5 @@
 /*
- * $Id: BasicHashSpeedTest.java,v 1.2 2003-06-20 22:34:55 claire Exp $
+ * $Id: BasicHashSpeedTest.java,v 1.3 2003-09-16 23:28:34 eaalto Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class BasicHashSpeedTest {
       files[ix] = generateFile(fileSize);
     }
     System.out.println("Done generating files");
-    
+
     long hashTime = 0;
 
     for (int ix=0; ix<numFiles; ix++) {
@@ -63,17 +63,17 @@ public class BasicHashSpeedTest {
     System.out.println("Rate: "+
 		       computeSecPerGB(hashTime,fileSize*numFiles)+"sec/GB");
   }
-  
+
   private static double computeSecPerGB(double ms, double numBytes) {
     return (ms/1000) / (numBytes / 1000000000);
   }
 
   private static File generateFile(long fileSize) throws IOException {
-    File file = FileUtil.tempFile("BasicHashSpeedTest", new File("./"));
+    File file = FileTestUtil.tempFile("BasicHashSpeedTest", new File("./"));
     FileOutputStream fos = new FileOutputStream(file);
     Random random = new Random();
     long bytesLeft = fileSize;
-    
+
     byte[] bytes = new byte[FILE_STEP_SIZE];
     while (bytesLeft > 0) {
       random.nextBytes(bytes);
@@ -84,7 +84,7 @@ public class BasicHashSpeedTest {
     return file;
   }
 
-  private static long hash(File file) 
+  private static long hash(File file)
       throws IOException, NoSuchAlgorithmException {
     System.out.println("Hashing");
     MessageDigest dig = MessageDigest.getInstance("SHA");

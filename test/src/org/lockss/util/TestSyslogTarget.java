@@ -1,5 +1,5 @@
 /*
- * $Id: TestSyslogTarget.java,v 1.6 2003-07-14 06:46:38 tlipkis Exp $
+ * $Id: TestSyslogTarget.java,v 1.7 2003-09-16 23:28:36 eaalto Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestSyslogTarget extends LockssTestCase {
   public TestSyslogTarget(String msg){
     super(msg);
   }
-  
+
   private SyslogTarget newSyslogTarget() {
     SyslogTarget target = new SyslogTarget();
     target.init();
@@ -58,21 +58,21 @@ public class TestSyslogTarget extends LockssTestCase {
   public void testSeverityToFacility(){
     assertEquals(10,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_CRITICAL));
-    assertEquals(11, 
+    assertEquals(11,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR));
-    assertEquals(12, 
+    assertEquals(12,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_WARNING));
-    assertEquals(14, 
+    assertEquals(14,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_INFO));
-    assertEquals(15, 
+    assertEquals(15,
 		 SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_DEBUG));
   }
 
   private void setConfig(String host, int port) throws Exception {
-    String conf1 = 
+    String conf1 =
       PARAM_HOST + "=" + host + "\n" +
       PARAM_PORT + "=" + port + "\n";
-    List list = ListUtil.list(FileUtil.urlOfString(conf1));
+    List list = ListUtil.list(FileTestUtil.urlOfString(conf1));
     ConfigurationUtil.setCurrentConfigFromUrlList(list);
   }
 
@@ -81,7 +81,7 @@ public class TestSyslogTarget extends LockssTestCase {
     String expectedHost = "199.99.9.99";
     setConfig(expectedHost, expectedPort);
 
-    String expectedDataStr = 
+    String expectedDataStr =
       "<"+SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR)+">"+
       "LOCKSS: TestMessage";
     byte[] expectedData = expectedDataStr.getBytes();
@@ -94,7 +94,7 @@ public class TestSyslogTarget extends LockssTestCase {
     DatagramPacket packet = (DatagramPacket)packets.elementAt(0);
     assertEquals(expectedPort, packet.getPort());
     assertEquals(expectedHost, packet.getAddress().getHostAddress());
-    
+
     byte[] data = packet.getData();
     assertEquals(expectedData.length, packet.getLength());
     assertEquals(new String(expectedData), new String(data));
@@ -110,18 +110,18 @@ public class TestSyslogTarget extends LockssTestCase {
     catch (BindException e) {
       fail("Could not bind to port " + port + ": " + e);
     }
-    String expectedMsg = 
+    String expectedMsg =
       "<"+SyslogTarget.loggerSeverityToSyslogSeverity(Logger.LEVEL_ERROR)+">"+
       "LOCKSS: TestMessage";
 
     byte[] msgBytes = expectedMsg.getBytes();
-    
+
     SyslogTarget target = newSyslogTarget();
     target.handleMessage((Logger)null, Logger.LEVEL_ERROR, "TestMessage");
-    
+
     DatagramPacket recPacket = dsl.getPacket();
     assertTrue(recPacket != null);
-    
+
     byte[] recData = recPacket.getData();
 
     assertEquals(msgBytes.length, recPacket.getLength());

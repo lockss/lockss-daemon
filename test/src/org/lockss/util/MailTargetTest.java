@@ -1,5 +1,5 @@
 /*
- * $Id: MailTargetTest.java,v 1.4 2003-07-14 06:46:38 tlipkis Exp $
+ * $Id: MailTargetTest.java,v 1.5 2003-09-16 23:28:36 eaalto Exp $
  */
 
 /*
@@ -54,8 +54,8 @@ public class MailTargetTest extends LockssTestCase {
     String s2 = MailTarget.PARAM_EMAIL_TO + "=" + emailTo;
     String s3 = MailTarget.PARAM_EMAIL_FROM + "=" + emailFrom;
     ConfigurationUtil.setCurrentConfigFromUrlList(ListUtil.list(
-        FileUtil.urlOfString(s), FileUtil.urlOfString(s2),
-        FileUtil.urlOfString(s3)));
+        FileTestUtil.urlOfString(s), FileTestUtil.urlOfString(s2),
+        FileTestUtil.urlOfString(s3)));
     target = new MailTarget();
     target.init();
   }
