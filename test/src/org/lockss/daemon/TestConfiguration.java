@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.2 2002-09-05 22:15:00 tal Exp $
+ * $Id: TestConfiguration.java,v 1.3 2002-09-09 20:31:32 tal Exp $
  */
 
 /*
@@ -209,7 +209,7 @@ public class TestConfiguration extends TestCase {
     setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(c1),
 					      FileUtil.urlOfString(c1a)));
     System.out.println(Configuration.getCurrentConfig().toString());
-    Configuration.registerConfigurationCallback(new ConfigurationCallback() {
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
