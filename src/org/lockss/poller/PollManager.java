@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.28 2003-02-11 00:58:16 aalto Exp $
+* $Id: PollManager.java,v 1.29 2003-02-11 19:31:36 claire Exp $
  */
 
 /*
@@ -179,7 +179,9 @@ public class PollManager  implements LockssManager {
     Poll p = findPoll(msg);
     if (p != null) {
       p.receiveMessage(msg);
-      // NodeManager.updatePollState(???);
+      CachedUrlSet cus = p.getCachedUrlSet();
+      theDaemon.getNodeManager(p.getArchivalUnit()).startPoll(cus,
+          p.getVoteTally());
     }
     else {
       theLog.info("Unable to create poll for Message: " + msg.toString());
