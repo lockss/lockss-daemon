@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.16 2003-09-26 23:52:17 eaalto Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.17 2004-01-31 22:53:50 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     }
     if (lowerBound != null && upperBound != null &&
 	lowerBound.compareTo(upperBound) > 0) {
-      throw new IllegalArgumentException("RangeCachedUrlSetSpec with lower bound > upper bound");
+      throw new IllegalArgumentException("RangeCachedUrlSetSpec with lower bound > upper bound (l: " + lowerBound + ", u: " + upperBound + ")");
     }
     this.prefix = urlPrefix;
     this.upperBound = upperBound;
