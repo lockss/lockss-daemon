@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrl.java,v 1.2 2002-10-31 01:55:36 aalto Exp $
+ * $Id: GenericFileCachedUrl.java,v 1.3 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -37,9 +37,11 @@ import java.util.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.repository.*;
+import java.net.MalformedURLException;
 
 /**
- * This is a generic file implementation of CachedUrl
+ * This is a generic file implementation of CachedUrl which uses the
+ * {@link LockssRepository}.
  *
  * @author  Emil Aalto
  * @version 0.0
@@ -48,11 +50,11 @@ import org.lockss.repository.*;
 public class GenericFileCachedUrl extends BaseCachedUrl {
   private LockssRepository repository;
   private LeafNode leaf = null;
+  protected static Logger logger = Logger.getLogger("CachedUrl", Logger.LEVEL_DEBUG);
 
   public GenericFileCachedUrl(CachedUrlSet owner, String url) {
     super(owner, url);
-//XXX implement correct repo generation
-    repository = new LockssRepositoryImpl("");
+    repository = LockssRepositoryImpl.repositoryFactory(owner.getArchivalUnit());
   }
 
   public boolean exists() {
@@ -74,8 +76,8 @@ public class GenericFileCachedUrl extends BaseCachedUrl {
     if (leaf==null) {
       try {
         leaf = (LeafNode)repository.getRepositoryNode(url);
-      } catch (Exception e) {
-        //XXX log failure
+      } catch (MalformedURLException mue) {
+        logger.error("Couldn't load node due ot bad url: "+url);
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.2 2002-10-31 01:55:36 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.3 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -32,61 +32,120 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.io.*;
 import java.util.*;
 import java.security.MessageDigest;
-import gnu.regexp.RE;
-import gnu.regexp.REException;
+import java.net.MalformedURLException;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.lockss.plugin.*;
 import org.lockss.hasher.GenericCachedUrlSetHasher;
 import org.lockss.repository.*;
+import gnu.regexp.RE;
 
 /**
- * This is the CachedUrlSet implementation for the SimulatedPlugin.
+ * This is an abstract CachedUrlSet implementation which uses the {@link LockssRepository}.
  *
  * @author  Emil Aalto
  * @version 0.0
  */
 
-public abstract class GenericFileCachedUrlSet extends BaseCachedUrlSet {
+public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   private long lastDuration = 0;
   private Exception lastException = null;
   private LockssRepository repository;
+  protected static Logger logger = Logger.getLogger("CachedUrlSet", Logger.LEVEL_DEBUG);
 
   public GenericFileCachedUrlSet(ArchivalUnit owner, CachedUrlSetSpec spec) {
     super(owner, spec);
-//XXX implement correct repo generation
-    repository = new LockssRepositoryImpl("");
+    repository = LockssRepositoryImpl.repositoryFactory(owner);
   }
 
   public Iterator flatSetIterator() {
-    // XXX implement correctly
-    // get local nodes (leaf and non)
-    // check to match against the spec
-    // sort
-    // pass back CachedUrlSets
-    return null;
+    List nodes = spec.getPrefixList();
+    if (nodes.size()>1) {
+      // currently does not support more than one prefix
+      logger.error("More than one prefix found in CachedUrlSetSpec.");
+      throw new UnsupportedOperationException("More than one prefix found in CachedUrlSetSpec.");
+    }
+    TreeSet setTree = new TreeSet(new UrlComparator());
+    if (nodes.size()==1) {
+      String prefix = (String)nodes.get(0);
+      try {
+        InternalNode intNode = (InternalNode)repository.getRepositoryNode(prefix);
+        Iterator children = intNode.listNodes(spec);
+        while (children.hasNext()) {
+          RepositoryNode child = (RepositoryNode)children.next();
+          CachedUrlSetSpec rSpec =
+              new RECachedUrlSetSpec(child.getNodeUrl(), (RE)null);
+          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
+          setTree.add(newSet);
+        }
+      } catch (ClassCastException cce) {
+        logger.error("Spec url points to leaf: "+prefix);
+      } catch (MalformedURLException mue) {
+        logger.error("Bad url in spec: "+prefix);
+      } catch (Exception e) {
+        // this shouldn't occur
+        logger.error(e.getMessage());
+      }
+    }
+    return setTree.iterator();
   }
 
   public Iterator leafIterator() {
-    // XXX implement correctly
-    // get all local leaf nodes
-    // check to match against the spec
-    // sort locally?
-    // recurse through subdirectories which match
-    // sort globally?
-    // pass back CachedUrls
-    return null;
+    List nodes = spec.getPrefixList();
+    if (nodes.size()>1) {
+      // currently does not support more than one prefix
+      logger.error("More than one prefix found in CachedUrlSetSpec.");
+      throw new UnsupportedOperationException("More than one prefix found in CachedUrlSetSpec.");
+    }
+    TreeSet leafSet = new TreeSet(new UrlComparator());
+    if (nodes.size()==1) {
+      String prefix = (String)nodes.get(0);
+      try {
+        InternalNode intNode = (InternalNode)repository.getRepositoryNode(prefix);
+        Iterator children = intNode.listNodes(spec);
+        while (children.hasNext()) {
+          RepositoryNode child = (RepositoryNode)children.next();
+          if (child.isLeaf()) {
+            CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+                child.getNodeUrl());
+            leafSet.add(newUrl);
+          } else {
+            recurseLeafFetch((InternalNode)child, leafSet);
+          }
+        }
+      } catch (ClassCastException cce) {
+        logger.error("Spec url points to leaf: "+prefix);
+      } catch (MalformedURLException mue) {
+        logger.error("Bad url in spec: "+prefix);
+      } catch (Exception e) {
+        // this shouldn't occur
+        logger.error(e.getMessage());
+      }
+    }
+    return leafSet.iterator();
+  }
+
+  private void recurseLeafFetch(InternalNode node, TreeSet set) {
+    Iterator children = node.listNodes(null);
+    while (children.hasNext()) {
+      RepositoryNode child = (RepositoryNode)children.next();
+      if (child.isLeaf()) {
+        CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+            child.getNodeUrl());
+        set.add(newUrl);
+      } else {
+        recurseLeafFetch((InternalNode)child, set);
+      }
+    }
   }
 
   public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
-    return new GenericCachedUrlSetHasher(this, hasher, false);
+    return contentHasherFactory(this, hasher);
   }
 
   public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
-    return new GenericCachedUrlSetHasher(this, hasher, true);
+    return nameHasherFactory(this, hasher);
   }
 
   public void storeActualHashDuration(long elapsed, Exception err) {
@@ -101,6 +160,34 @@ public abstract class GenericFileCachedUrlSet extends BaseCachedUrlSet {
   }
 
   public CachedUrl makeCachedUrl(String url) {
-    return new GenericFileCachedUrl(this, url);
+    return ((BaseArchivalUnit)au).cachedUrlFactory(this, url);
+  }
+
+  public UrlCacher makeUrlCacher(String url) {
+    return ((BaseArchivalUnit)au).urlCacherFactory(this, url);
+  }
+
+  protected CachedUrlSetHasher contentHasherFactory(CachedUrlSet owner,
+      MessageDigest hasher) {
+    return new GenericCachedUrlSetHasher(owner, hasher, false);
+  }
+  protected CachedUrlSetHasher nameHasherFactory(CachedUrlSet owner,
+      MessageDigest hasher) {
+    return new GenericCachedUrlSetHasher(owner, hasher, true);
+  }
+
+  private class UrlComparator implements Comparator {
+    public int compare(Object o1, Object o2) {
+      if ((o1 instanceof CachedUrlSet) && (o2 instanceof CachedUrlSet)) {
+        String prefix = (String)((CachedUrlSet)o1).getSpec().getPrefixList().get(0);
+        String prefix2 = (String)((CachedUrlSet)o2).getSpec().getPrefixList().get(0);
+        if (prefix.equals(prefix2)) {
+          throw new UnsupportedOperationException("Comparing equal CachedUrlSet prefixes: "+prefix);
+        }
+        return prefix.compareTo(prefix2);
+      } else if ((o1 instanceof CachedUrl) && (o2 instanceof CachedUrl)) {
+        return ((CachedUrl)o1).getUrl().compareTo(((CachedUrl)o2).getUrl());
+      } else return -1;
+    }
   }
 }

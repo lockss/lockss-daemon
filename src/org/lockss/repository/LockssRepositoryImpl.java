@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.3 2002-11-02 00:57:50 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.4 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.*;
 import java.lang.ref.WeakReference;
 import org.lockss.util.StringUtil;
 import org.apache.commons.collections.*;
+import org.lockss.daemon.ArchivalUnit;
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -58,7 +59,7 @@ public class LockssRepositoryImpl implements LockssRepository {
   private ReferenceMap refMap;
 
 
-  public LockssRepositoryImpl(String rootPath) {
+  private LockssRepositoryImpl(String rootPath) {
     rootLocation = rootPath;
     if (!rootLocation.endsWith(File.separator)) {
       rootLocation += File.separator;
@@ -145,6 +146,23 @@ public class LockssRepositoryImpl implements LockssRepository {
     buffer.append(url.getProtocol());
     buffer.append(StringUtil.replaceString(url.getPath(), "/", File.separator));
     return buffer.toString();
+  }
+
+  /**
+   * Creates a LockssRepository for the given {@link ArchivalUnit} at
+   * a cache location specific to that archive.
+   * @param au ArchivalUnit to be cached
+   * @return a repository for the archive
+   */
+  public static LockssRepository repositoryFactory(ArchivalUnit au) {
+    //XXX root from Configuration
+    StringBuffer pathB = new StringBuffer();
+    pathB.append(au.getPluginId());
+    if (!au.getAUId().equals("")) {
+      pathB.append(File.separator);
+      pathB.append(au.getAUId());
+    }
+    return new LockssRepositoryImpl(pathB.toString());
   }
 
 }

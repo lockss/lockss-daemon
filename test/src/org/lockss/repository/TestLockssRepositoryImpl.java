@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.3 2002-11-02 00:57:50 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.4 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -42,18 +42,28 @@ import java.net.MalformedURLException;
  */
 
 public class TestLockssRepositoryImpl extends LockssTestCase {
+  private LockssRepository repo;
 
   public TestLockssRepositoryImpl(String msg) {
     super(msg);
   }
 
-
-  public void testGetRepositoryEntry() throws MalformedURLException {
+  public void setUp() throws Exception {
+    super.setUp();
     String tempDirPath = "";
     try {
       tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
     } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
-    LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
+    MockArchivalUnit mau = new MockArchivalUnit(null);
+    mau.setPluginId(tempDirPath);
+    repo = LockssRepositoryImpl.repositoryFactory(mau);
+  }
+
+  public void tearDown() throws Exception {
+    super.tearDown();
+  }
+
+  public void testGetRepositoryEntry() throws MalformedURLException {
     LeafNode leaf =
         repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
@@ -86,11 +96,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testCaching() throws MalformedURLException {
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
-    LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
     LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();
@@ -115,11 +120,6 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testWeakReferenceCaching() throws MalformedURLException {
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
-    LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
     LeafNode leaf = repo.createLeafNode("http://www.example.com/testDir/leaf1");
     leaf.makeNewVersion();
     leaf.sealNewVersion();

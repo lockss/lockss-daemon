@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileUrlCacher.java,v 1.3 2002-10-31 01:55:36 aalto Exp $
+ * $Id: GenericFileUrlCacher.java,v 1.4 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -39,25 +39,21 @@ import org.lockss.util.*;
 import org.lockss.repository.*;
 
 /**
- * This is an abstract file implementation of UrlCacher.
- * The source for the content needs to be provided in any extension.
+ * This is an abstract file implementation of UrlCacher which uses the
+ * {@link LockssRepository}. The source for the content needs to be provided
+ * in any extension.
  *
  * @author  Emil Aalto
  * @version 0.0
  */
 
 public abstract class GenericFileUrlCacher extends BaseUrlCacher {
-  /**
-   * Name of top directory in which the urls are cached.
-   */
-  public static final String CACHE_ROOT = "cache";
-
   private LockssRepository repository;
+  protected static Logger logger = Logger.getLogger("UrlCacher", Logger.LEVEL_DEBUG);
 
   public GenericFileUrlCacher(CachedUrlSet owner, String url) {
     super(owner, url);
-//XXX implement correct repo generation
-    repository = new LockssRepositoryImpl("");
+    repository = LockssRepositoryImpl.repositoryFactory(owner.getArchivalUnit());
   }
 
   public void storeContent(InputStream input, Properties headers) throws IOException {
@@ -73,7 +69,9 @@ public abstract class GenericFileUrlCacher extends BaseUrlCacher {
       if (headers!=null) {
         leaf.setNewProperties(headers);
       }
-    } catch (Exception e) { System.out.println(e); }
+    } catch (Exception e) {
+      logger.error("Couldn't store content for '"+leaf.getNodeUrl()+"'");
+    }
     leaf.sealNewVersion();
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestInternalNodeImpl.java,v 1.2 2002-11-02 00:57:50 aalto Exp $
+ * $Id: TestInternalNodeImpl.java,v 1.3 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -43,8 +43,24 @@ import java.net.MalformedURLException;
  */
 
 public class TestInternalNodeImpl extends LockssTestCase {
+  private LockssRepository repo;
   public TestInternalNodeImpl(String msg) {
     super(msg);
+  }
+
+  public void setUp() throws Exception {
+    super.setUp();
+    String tempDirPath = "";
+    try {
+      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
+    } catch (Exception ex) { assertTrue("Couldn't get tempDir.", false); }
+    MockArchivalUnit mau = new MockArchivalUnit(null);
+    mau.setPluginId(tempDirPath);
+    repo = LockssRepositoryImpl.repositoryFactory(mau);
+  }
+
+  public void tearDown() throws Exception {
+    super.tearDown();
   }
 
   public void testRepositoryImpl() {
@@ -65,11 +81,6 @@ public class TestInternalNodeImpl extends LockssTestCase {
   }
 
   public void testListEntries() throws MalformedURLException {
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception ex) { fail("Couldn't create tempDir."); }
-    LockssRepositoryImpl repo = new LockssRepositoryImpl(tempDirPath);
     LeafNode leaf =
         repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();
@@ -84,11 +95,7 @@ public class TestInternalNodeImpl extends LockssTestCase {
     leaf.makeNewVersion();
     leaf.sealNewVersion();
 
-    String cacheLocation = tempDirPath +
-       LockssRepositoryImpl.mapUrlToCacheLocation("http://www.example.com/testDir");
-    InternalNode dirEntry =
-        new InternalNodeImpl("http://www.example.com/testDir", cacheLocation,
-                             tempDirPath, repo);
+    InternalNode dirEntry = (InternalNode)repo.getRepositoryNode("http://www.example.com/testDir");
     Iterator childIt = dirEntry.listNodes(null);
     int count = 0;
     while (childIt.hasNext()) {
@@ -106,10 +113,7 @@ public class TestInternalNodeImpl extends LockssTestCase {
     }
     assertTrue(count==7);
 
-    cacheLocation = tempDirPath +
-      LockssRepositoryImpl.mapUrlToCacheLocation("http://www.example.com/testDir/branch1");
-    dirEntry = new InternalNodeImpl("http://www.example.com/testDir/branch1",
-                                    cacheLocation, tempDirPath, repo);
+    dirEntry = (InternalNode)repo.getRepositoryNode("http://www.example.com/testDir/branch1");
     childIt = dirEntry.listNodes(null);
     count = 0;
     while (childIt.hasNext()) {
@@ -125,11 +129,6 @@ public class TestInternalNodeImpl extends LockssTestCase {
     assertTrue(count==3);
   }
   public void testEntrySort() throws MalformedURLException {
-    String tempDirPath = "";
-    try {
-      tempDirPath = super.getTempDir().getAbsolutePath() + File.separator;
-    } catch (Exception ex) { fail("Couldn't get tempDir."); }
-    LockssRepository repo = new LockssRepositoryImpl(tempDirPath);
     LeafNode leaf =
         repo.createLeafNode("http://www.example.com/testDir/branch1/leaf1");
     leaf.makeNewVersion();

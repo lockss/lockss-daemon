@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedUrlCacher.java,v 1.1 2002-10-23 23:41:35 aalto Exp $
+ * $Id: TestSimulatedUrlCacher.java,v 1.2 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.plugin.simulated;
 import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import java.util.Properties;
+import org.lockss.test.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedUrlCacher
@@ -48,30 +49,35 @@ public class TestSimulatedUrlCacher extends TestCase {
   public TestSimulatedUrlCacher(String msg) {
     super(msg);
   }
+
   public void testHtmlProperties() {
     String testStr = "http://www.example.com/index.html";
-    SimulatedUrlCacher suc = new SimulatedUrlCacher(null, testStr);
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(
+        new MockCachedUrlSet(null), testStr);
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("text/html"));
     assertTrue(prop.getProperty("content-url").equals(testStr));
   }
   public void testTextProperties() {
     String testStr = "http://www.example.com/file.txt";
-    SimulatedUrlCacher suc = new SimulatedUrlCacher(null, testStr);
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(
+        new MockCachedUrlSet(null), testStr);
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("text/plain"));
     assertTrue(prop.getProperty("content-url").equals(testStr));
   }
   public void testPdfProperties() {
     String testStr = "http://www.example.com/file.pdf";
-    SimulatedUrlCacher suc = new SimulatedUrlCacher(null, testStr);
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(
+        new MockCachedUrlSet(null), testStr);
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("application/pdf"));
     assertTrue(prop.getProperty("content-url").equals(testStr));
   }
   public void testJpegProperties() {
     String testStr = "http://www.example.com/image.jpg";
-    SimulatedUrlCacher suc = new SimulatedUrlCacher(null, testStr);
+    SimulatedUrlCacher suc = new SimulatedUrlCacher(
+        new MockCachedUrlSet(null), testStr);
     Properties prop = suc.getUncachedProperties();
     assertTrue(prop.getProperty("content-type").equals("image/jpeg"));
     assertTrue(prop.getProperty("content-url").equals(testStr));

@@ -1,5 +1,5 @@
 /*
- * $Id: InternalNodeImpl.java,v 1.2 2002-11-02 00:57:50 aalto Exp $
+ * $Id: InternalNodeImpl.java,v 1.3 2002-11-05 01:49:54 aalto Exp $
  */
 
 /*
@@ -58,10 +58,8 @@ public class InternalNodeImpl extends RepositoryNodeImpl
     if (!entryDir.exists()) {
       return (new Vector()).iterator();
     }
-    File[] children = entryDir.listFiles(new CussFileFilter(filter));
+    File[] children = entryDir.listFiles();
     Arrays.sort(children, new FileComparator());
-//XXX get repo correctly
-    LockssRepository repo = new LockssRepositoryImpl(rootLocation);
     Vector childV = new Vector();
     for (int ii=0; ii<children.length; ii++) {
       File child = children[ii];
@@ -69,16 +67,18 @@ public class InternalNodeImpl extends RepositoryNodeImpl
       File childLeaf = new File(child, LeafNodeImpl.LEAF_FILE_NAME);
       boolean isLeaf = childLeaf.exists();
       String childUrl = this.url + File.separator + child.getName();
-      try {
-        childV.addElement(repo.getRepositoryNode(childUrl));
-      } catch (MalformedURLException mue) {
-        logger.error("Malformed child url: "+childUrl);
+      if ((filter==null) || (filter.matches(childUrl))) {
+        try {
+          childV.addElement(repository.getRepositoryNode(childUrl));
+        } catch (MalformedURLException mue) {
+          logger.error("Malformed child url: "+childUrl);
+        }
       }
     }
     return childV.iterator();
   }
 
-  private class CussFileFilter implements FileFilter {
+/*  private class CussFileFilter implements FileFilter {
     private CachedUrlSetSpec spec;
 
     public CussFileFilter(CachedUrlSetSpec spec) {
@@ -87,10 +87,13 @@ public class InternalNodeImpl extends RepositoryNodeImpl
 
     public boolean accept(File pathname) {
       if (spec==null) return true;
-      else return spec.matches(pathname.getAbsolutePath());
+      else {
+        String url = LockssRepositoryImpl.mapUrlToCacheLocation()
+        return spec.matches(pathname.getAbsolutePath());
+      }
     }
   }
-
+ */
   private class FileComparator implements Comparator {
     public int compare(Object o1, Object o2) {
       if ((o1 instanceof File) && (o2 instanceof File)) {
