@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.71 2003-05-01 22:05:05 claire Exp $
+* $Id: Poll.java,v 1.72 2003-05-01 22:24:15 claire Exp $
  */
 
 /*
@@ -310,8 +310,7 @@ public abstract class Poll implements Serializable {
     TimerQueue.schedule(m_deadline, new PollTimerCallback(), this);
     scheduleVote();
 
-    Deadline pt = Deadline.atRandomRange(m_hashTime + TimeBase.nowMs(),
-                                         m_voteTime.getExpirationTime());
+    Deadline pt = Deadline.in(m_voteTime.getRemainingTime() - 1000);
     MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
     m_pollstate = PS_WAIT_HASH;
     if(!scheduleHash(hasher, pt, m_msg, new PollHashCallback())) {
