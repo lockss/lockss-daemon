@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.3 2002-10-06 21:22:04 tal Exp $
+ * $Id: CollectionUtil.java,v 1.4 2002-10-16 03:42:07 tal Exp $
  */
 
 /*
@@ -63,6 +63,18 @@ public class CollectionUtil {
    * same type.
    */
   public static boolean isIsomorphic(Collection a, Collection b) {
+    if (a == null) {
+      return b == null;
+    }
+    // Sigh, can't rely on overloading to catch Sets due to static typing.
+    // (E.g., we're likely to be called from assertIsomorphic())
+    if (a instanceof Set) {
+      return ((Set)a).equals(b);
+    }
+    // Similarly.
+    if (!isCompatibleTypes(a, b)) {
+      return false;
+    }
     return isIsomorphic(a.iterator(), b.iterator());
   }
 
@@ -79,5 +91,11 @@ public class CollectionUtil {
   /** Return true iff the two arrays are isomorphic */
   public static boolean isIsomorphic(Object a[], Object b[]) {
     return isIsomorphic(new ArrayIterator(a), new ArrayIterator(b));
+  }
+
+  // Check that the two collection types can possibly be equal.
+  // Ordered vs. unordered (e.g., Set) can't be.
+  private static boolean isCompatibleTypes(Collection a, Collection b) {
+    return (a instanceof Set) == (b instanceof Set);
   }
 }
