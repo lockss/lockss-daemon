@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.14 2003-02-21 22:51:02 aalto Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.15 2003-02-26 02:19:27 aalto Exp $
  */
 
 /*
@@ -62,17 +62,17 @@ public class RepositoryNodeImpl implements RepositoryNode {
   private int currentVersion = -1;
 
   private String contentBufferStr = null;
-  private File nodeRootFile = null;
+  protected File nodeRootFile = null;
   private File cacheLocationFile;
   private File currentCacheFile;
   private File currentPropsFile;
   private File tempCacheFile;
   private File tempPropsFile;
 
-  private String url;
-  private String nodeLocation;
-  private static Logger logger = Logger.getLogger("RepositoryNode");
-  private LockssRepositoryImpl repository;
+  protected String url;
+  protected String nodeLocation;
+  protected static Logger logger = Logger.getLogger("RepositoryNode");
+  protected LockssRepositoryImpl repository;
   // preset so testIllegalOperations() doesn't null pointer
   private Deadline versionTimeout = Deadline.at(0);
 
@@ -496,7 +496,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     cacheLocationFile = new File(getContentDirBuffer().toString());
   }
 
-  private void loadNodeRoot() {
+  protected void loadNodeRoot() {
     nodeRootFile = new File(nodeLocation);
   }
 

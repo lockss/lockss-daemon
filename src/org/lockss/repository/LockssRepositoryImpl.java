@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.18 2003-02-24 22:13:42 claire Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.19 2003-02-26 02:19:27 aalto Exp $
  */
 
 /*
@@ -38,11 +38,10 @@ import java.util.*;
 import java.lang.ref.WeakReference;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.*;
+import org.lockss.util.*;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
-import org.lockss.util.*;
-import org.lockss.plugin.*;
-
 
 /**
  * LockssRepository is used to organize the urls being cached.
@@ -70,6 +69,7 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
   public static final int MAX_LRUMAP_SIZE = 12;
 
   private String rootLocation;
+  private ArchivalUnit repoAu;
   private LRUMap nodeCache;
   private ReferenceMap refMap;
   private int cacheHits = 0;
@@ -87,8 +87,9 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
 
   public LockssRepositoryImpl() { }
 
-  private LockssRepositoryImpl(String rootPath) {
+  private LockssRepositoryImpl(String rootPath, ArchivalUnit au) {
     rootLocation = rootPath;
+    repoAu = au;
     if (!rootLocation.endsWith(File.separator)) {
       // this shouldn't happen
       rootLocation += File.separator;
@@ -199,7 +200,13 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
       refMisses++;
     }
 
-    String nodeLocation = FileLocationUtil.mapUrlToFileLocation(rootLocation, url);
+    String nodeLocation;
+    if (AuUrl.isAuUrl(url)) {
+      // base directory of ArchivalUnit
+      nodeLocation = rootLocation;
+    } else {
+      nodeLocation = FileLocationUtil.mapUrlToFileLocation(rootLocation, url);
+    }
     if (!create) {
       // if not creating, check for existence
       File nodeDir = new File(nodeLocation);
@@ -211,7 +218,12 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
         throw new LockssRepository.RepositoryStateException("Invalid cache file.");
       }
     }
-    node = new RepositoryNodeImpl(url, nodeLocation, this);
+    if (AuUrl.isAuUrl(url)) {
+      // base directory of ArchivalUnit
+      node = new AuNodeImpl(url, nodeLocation, this);
+    } else {
+      node = new RepositoryNodeImpl(url, nodeLocation, this);
+    }
 
     // add to node cache and weak reference cache
     nodeCache.put(url, node);
@@ -250,7 +262,8 @@ public class LockssRepositoryImpl implements LockssRepository, LockssManager {
     }
     LockssRepository repo = (LockssRepository)repoMap.get(au);
     if (repo==null) {
-      repo = new LockssRepositoryImpl(FileLocationUtil.mapAuToFileLocation(baseDir, au));
+      repo = new LockssRepositoryImpl(
+          FileLocationUtil.mapAuToFileLocation(baseDir, au), au);
       repoMap.put(au, repo);
     }
     return repo;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.18 2003-02-24 22:13:42 claire Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.19 2003-02-26 02:19:27 aalto Exp $
  */
 
 /*
@@ -34,13 +34,11 @@ package org.lockss.repository;
 
 import java.io.*;
 import java.util.*;
-import java.net.MalformedURLException;
+import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.daemon.Configuration;
-import org.lockss.daemon.TestConfiguration;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 /**
  * This is the test class for org.lockss.daemon.LockssRepositoryImpl
@@ -100,21 +98,42 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
                "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf4", "test stream", null);
 
-    RepositoryNode node =
-        repo.getNode("http://www.example.com/testDir");
+    RepositoryNode node = repo.getNode("http://www.example.com/testDir");
     assertTrue(!node.hasContent());
     assertEquals("http://www.example.com/testDir", node.getNodeUrl());
     node = repo.getNode("http://www.example.com/testDir/branch1");
     assertTrue(!node.hasContent());
     assertEquals("http://www.example.com/testDir/branch1", node.getNodeUrl());
-    node =
-        repo.getNode("http://www.example.com/testDir/branch2/leaf3");
+    node = repo.getNode("http://www.example.com/testDir/branch2/leaf3");
     assertTrue(node.hasContent());
     assertEquals("http://www.example.com/testDir/branch2/leaf3",
                  node.getNodeUrl());
     node = repo.getNode("http://www.example.com/testDir/leaf4");
     assertTrue(node.hasContent());
     assertEquals("http://www.example.com/testDir/leaf4", node.getNodeUrl());
+  }
+
+  public void testGetAuNode() throws Exception {
+    createLeaf("http://www.example.com/testDir1/leaf1", "test stream", null);
+    createLeaf("http://www.example.com/testDir2/leaf2", "test stream", null);
+    createLeaf("http://image.example.com/testDir3/leaf3", "test stream", null);
+    createLeaf("ftp://www.example.com/file", "test stream", null);
+
+    RepositoryNode auNode = repo.getNode(AuUrl.PROTOCOL_COLON+"//www.example.com");
+    assertTrue(!auNode.hasContent());
+    assertEquals(AuUrl.PROTOCOL +"://www.example.com", auNode.getNodeUrl());
+    Iterator childIt = auNode.listNodes(null, false);
+    ArrayList childL = new ArrayList(3);
+    while (childIt.hasNext()) {
+      RepositoryNode node = (RepositoryNode)childIt.next();
+      childL.add(node.getNodeUrl());
+    }
+    String[] expectedA = new String[] {
+      "ftp://www.example.com",
+      "http://image.example.com",
+      "http://www.example.com",
+      };
+    assertIsomorphic(expectedA, childL);
   }
 
   public void testDeleteNode() throws Exception {
@@ -135,11 +154,9 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
     assertEquals(0, repoImpl.getCacheHits());
     assertEquals(2, repoImpl.getCacheMisses());
-    RepositoryNode leaf =
-        repo.getNode("http://www.example.com/testDir/leaf1");
+    RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/leaf1");
     assertEquals(1, repoImpl.getCacheHits());
-    RepositoryNode leaf2 =
-        repo.getNode("http://www.example.com/testDir/leaf1");
+    RepositoryNode leaf2 = repo.getNode("http://www.example.com/testDir/leaf1");
     assertSame(leaf, leaf2);
     assertEquals(2, repoImpl.getCacheHits());
     assertEquals(2, repoImpl.getCacheMisses());
@@ -149,8 +166,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     createLeaf("http://www.example.com/testDir/leaf1", null, null);
 
     LockssRepositoryImpl repoImpl = (LockssRepositoryImpl)repo;
-    RepositoryNode leaf =
-        repo.getNode("http://www.example.com/testDir/leaf1");
+    RepositoryNode leaf = repo.getNode("http://www.example.com/testDir/leaf1");
     RepositoryNode leaf2 = null;
     int loopSize = 1;
     int refHits = 0;
@@ -172,8 +188,10 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   public void testCusCompare() throws Exception {
-    CachedUrlSetSpec spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    CachedUrlSetSpec spec2 = new RangeCachedUrlSetSpec("http://www.example.com");
+    CachedUrlSetSpec spec1 =
+        new RangeCachedUrlSetSpec("http://www.example.com/test");
+    CachedUrlSetSpec spec2 =
+        new RangeCachedUrlSetSpec("http://www.example.com");
     MockCachedUrlSet cus1 = new MockCachedUrlSet(spec1);
     MockCachedUrlSet cus2 = new MockCachedUrlSet(spec2);
     assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
@@ -195,11 +213,13 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
     v2.addElement("test 3");
     cus1.setFlatItSource(v);
     cus2.setFlatIterator(v2.iterator());
-    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
+    assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP,
+                 repo.cusCompare(cus1, cus2));
 
     v2.addElement("test 2");
     cus2.setFlatIterator(v2.iterator());
-    assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
+    assertEquals(LockssRepository.SAME_LEVEL_OVERLAP,
+                 repo.cusCompare(cus1, cus2));
 
     spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir2");
     spec2 = new RangeCachedUrlSetSpec("http://www.example.com/subdir");
@@ -211,7 +231,8 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   public static void configCacheLocation(String location)
     throws IOException {
     String s = LockssRepositoryImpl.PARAM_CACHE_LOCATION + "=" + location;
-    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(FileUtil.urlOfString(s)));
+    TestConfiguration.setCurrentConfigFromUrlList(ListUtil.list(
+        FileUtil.urlOfString(s)));
   }
 
   private RepositoryNode createLeaf(String url, String content,
