@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.3 2003-03-15 00:27:22 troberts Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.4 2003-03-15 00:56:45 tal Exp $
  */
 
 /*
@@ -33,63 +33,139 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon.status;
 
 import java.util.*;
+import java.net.*;
+import org.lockss.app.*;
+import org.lockss.util.*;
 import org.lockss.daemon.status.*;
 
-public class SimulatedStatusAccessor implements StatusAccessor {
-  private List columns;
-  private List rows;
-  private List sortRules;
+public class SimulatedStatusAccessor {
+  private static Logger log = Logger.getLogger("SimStatus");
 
-  public SimulatedStatusAccessor() {
-    columns = makeColumns();
-    rows = makeRows();
-    sortRules = makeSortRules();
+  public static void register(LockssDaemon daemon) {
+    log.debug("registering");
+    StatusService statusService = daemon.getStatusService();
+    statusService.registerStatusAccessor("table1", new SimAccessor1());
+    statusService.registerStatusAccessor("table2", new SimAccessor2());
+  }
+
+  private static class SimAccessor implements StatusAccessor {
+    private List columns;
+    private List rows;
+    private List sortRules;
+    private String title = "Untitled";
+
+    public SimAccessor(String title, int nrows, int ncols) {
+      this.title = title;
+      columns = makeColumns(ncols);
+      rows = makeRows(nrows, ncols);
+      sortRules = makeSortRules();
+    }
+
+    int ctype[] = {
+      StatusTable.TYPE_STRING,
+      StatusTable.TYPE_INT,
+      StatusTable.TYPE_PERCENT,
+      StatusTable.TYPE_TIME_INTERVAL,
+      StatusTable.TYPE_FLOAT,
+      StatusTable.TYPE_IP_ADDRESS,
+      StatusTable.TYPE_DATE,
+    };
+
+    private List makeColumns(int ncols) {
+      List columns = new ArrayList(ncols);
+      for (int ix = 1; ix <= ncols; ix++) {
+	columns.add(new StatusTable.ColumnDescriptor(coltag(ix),
+						     "Column " + ix, 
+						     coltype(ix-1)));
+      }
+      return columns;
+    }
+
+    private int coltype(int col) {
+      return ctype[col % ctype.length];
+    }
+
+    private String coltag(int col) {
+      return "column_" + col;
+    }
+
+    private Object colval(int row, int col) {
+      switch (coltype(col-1)) {
+      case StatusTable.TYPE_STRING:
+      default:
+	return "xyzzy_" + row;
+      case StatusTable.TYPE_INT:
+	return new Integer(row);
+      case StatusTable.TYPE_PERCENT:
+	return new Float(1.0 / row);
+      case StatusTable.TYPE_TIME_INTERVAL:
+	return new Integer((59 << row) * Constants.SECOND);
+      case StatusTable.TYPE_FLOAT:
+	return new Float(1.0 / row);
+      case StatusTable.TYPE_IP_ADDRESS:
+	try {
+	  return InetAddress.getByName("10.1.0.42");
+	} catch (UnknownHostException e) {
+	  return null;
+	}
+      case StatusTable.TYPE_DATE:
+	return new Date(TimeBase.nowMs() + (Constants.DAY * row));
+      }
+    }
+
+    private List makeRows(int nrows, int ncols) {
+      List rows = new ArrayList();
+      for (int rx=0; rx < nrows; rx++) {
+	Map row = new HashMap();
+	for (int cx = 1; cx <= ncols; cx++) {
+	  if (rx != 3 || cx != 2) {
+	    row.put(coltag(cx), colval(rx, cx));
+	  }
+	}
+	rows.add(row);
+      }
+      return rows;
+    }
+
+    private List makeSortRules() {
+      List sortRules = new ArrayList();
+      sortRules.add(new StatusTable.SortRule("column_1", true));
+      return sortRules;
+    }
+
+    public List getColumnDescriptors(String key) {
+      return columns;
+    }
+
+    public List getRows(String key) {
+      return rows;
+    }
+
+    public List getDefaultSortRules(String key) {
+      return sortRules;
+    }
+
+    public boolean requiresKey() {
+      return false;
+    }
+
+    public String getTitle(String key) {
+      return title;
+    }
+
   }
   
-  private List makeColumns() {
-    List columns = new ArrayList();
-    columns.add(new StatusTable.ColumnDescriptor("column_1", "Column 1", 
-						 StatusTable.TYPE_STRING));
-    columns.add(new StatusTable.ColumnDescriptor("column_2", "Column 2", 
-						 StatusTable.TYPE_INT));
-    return columns;
-  }
-
-  private List makeRows() {
-    List rows = new ArrayList();
-    for (int ix=0; ix<5; ix++) {
-      Map row = new HashMap();
-      row.put("column_1", "val"+ix);
-      row.put("column_2", new Integer(ix));
-      rows.add(row);
+  private static class SimAccessor1 extends SimAccessor {
+    SimAccessor1() {
+      super("Table 1", 9, 2);
     }
-    return rows;
+
   }
 
-  private List makeSortRules() {
-    List sortRules = new ArrayList();
-    sortRules.add(new StatusTable.SortRule("column_1", true));
-    return sortRules;
-  }
+  private static class SimAccessor2 extends SimAccessor {
+    SimAccessor2() {
+      super("Silly Table 2", 7, 6);
+    }
 
-  public List getColumnDescriptors(String key) {
-    return columns;
   }
-
-  public List getRows(String key) {
-    return rows;
-  }
-
-  public List getDefaultSortRules(String key) {
-    return sortRules;
-  }
-
-  public boolean requiresKey() {
-    return false;
-  }
-
-  public String getTitle(String key) {
-    return "Simulated Table for key "+key;
-  }
-
 }
