@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.9 2003-03-22 01:15:19 aalto Exp $
+ * $Id: AuState.java,v 1.10 2003-03-28 22:49:04 troberts Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.util.Date;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.TimeBase;
 
@@ -111,7 +112,10 @@ public class AuState {
     StringBuffer sb = new StringBuffer();
     sb.append("[AuState: ");
     sb.append("lastCrawlTime=");
-    sb.append(lastCrawlTime);
+    sb.append(new Date(lastCrawlTime));
+    sb.append(", ");
+    sb.append("lastTopLevelPoll=");
+    sb.append(new Date(lastTopLevelPoll));
     sb.append("]");
     return sb.toString();
   }
