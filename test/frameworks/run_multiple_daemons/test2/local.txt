@@ -1,3 +1,6 @@
+#org.lockss.ui.start=yes
+#org.lockss.ui.port=8082
+
 org.lockss.localIPAddress=2.2.2.2
 org.lockss.comm.unicast.port=9001
 org.lockss.comm.unicast.sendToPort=9000

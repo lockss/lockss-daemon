@@ -29,7 +29,8 @@ org.lockss.id.database.dir=/tmp/iddb
 org.lockss.history.location=./history
 
 #comm settings
-org.lockss.startNetServers=no
+org.lockss.ui.start=no
+org.lockss.proxy.start=no
 org.lockss.comm.multicast.group=239.4.5.7
 #org.lockss.comm.multicast.port=3456
 org.lockss.comm.multicast.port=localIp

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.1 2003-03-12 22:11:20 tal Exp $
+ * $Id: ProxyManager.java,v 1.2 2003-03-14 22:00:10 tal Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy;
 
+import java.util.*;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
@@ -42,12 +43,16 @@ import org.mortbay.http.*;
 /** LOCKSS proxy manager.
  */
 public class ProxyManager extends JettyManager {
-  // this should be moved, as it applies to both proxy and servlet ports
-  public static final String PARAM_START_NET_SERVERS =
-    Configuration.PREFIX + "startNetServers";
+
+  public static final String PREFIX = Configuration.PREFIX + "proxy.";
+  public static final String PARAM_START = PREFIX + "start";
+  public static final String PARAM_PORT = PREFIX + "port";
 
   private static LockssDaemon theDaemon = null;
   private static ProxyManager theManager = null;
+
+  private int port;
+  private boolean start;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -71,11 +76,17 @@ public class ProxyManager extends JettyManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    if (!Configuration.getBooleanParam(PARAM_START_NET_SERVERS, true)) {
-      return;
+    Configuration.registerConfigurationCallback(new Configuration.Callback() {
+	public void configurationChanged(Configuration oldConfig,
+					 Configuration newConfig,
+					 Set changedKeys) {
+	  setConfig(newConfig, oldConfig);
+	}
+      });
+    if (start) {
+      super.startService();
+      startProxy();
     }
-    super.startService();
-    startProxy();
   }
 
   /**
@@ -88,6 +99,11 @@ public class ProxyManager extends JettyManager {
     theManager = null;
   }
 
+  private void setConfig(Configuration config, Configuration oldConfig) {
+    port = config.getInt(PARAM_PORT, 9090);
+    start = config.getBoolean(PARAM_START, true);
+  }
+
   /** Start a Jetty handler for the proxy */
   public void startProxy() {
     try {
@@ -95,7 +111,7 @@ public class ProxyManager extends JettyManager {
       HttpServer server = new HttpServer();
 
       // Create a port listener
-      HttpListener listener = server.addListener(new InetAddrPort (9090));
+      HttpListener listener = server.addListener(new InetAddrPort(port));
 
       // Create a context
       HttpContext context = server.getContext(null, "/");

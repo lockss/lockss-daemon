@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.2 2003-03-14 01:39:38 tal Exp $
+ * $Id: ServletManager.java,v 1.3 2003-03-14 22:00:10 tal Exp $
  */
 
 /*
@@ -45,9 +45,10 @@ import org.mortbay.jetty.servlet.*;
  * Servlet starter
  */
 public class ServletManager extends JettyManager {
-  // this isn't the right place for this
-  public static final String PARAM_START_NET_SERVERS =
-    Configuration.PREFIX + "startNetServers";
+
+  public static final String PREFIX = Configuration.PREFIX + "ui.";
+  public static final String PARAM_START = PREFIX + "start";
+  public static final String PARAM_PORT = PREFIX + "port";
 
   private static Logger log = Logger.getLogger("ServletMgr");
 
@@ -56,6 +57,9 @@ public class ServletManager extends JettyManager {
 
   private Map servlets = new HashMap();
   private HttpServer server;
+
+  private int port;
+  private boolean start;
 
   public ServletManager() {
   }
@@ -82,10 +86,6 @@ public class ServletManager extends JettyManager {
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
-    if (!Configuration.getBooleanParam(PARAM_START_NET_SERVERS, true)) {
-      return;
-    }
-    super.startService();
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
@@ -93,7 +93,10 @@ public class ServletManager extends JettyManager {
 	  setConfig(newConfig, oldConfig);
 	}
       });
-    startServlets();
+    if (start) {
+      super.startService();
+      startServlets();
+    }
   }
 
   /**
@@ -111,6 +114,8 @@ public class ServletManager extends JettyManager {
   }
 
   private void setConfig(Configuration config, Configuration oldConfig) {
+    port = config.getInt(PARAM_PORT, 8081);
+    start = config.getBoolean(PARAM_START, true);
   }
 
   public void startServlets() {
@@ -119,7 +124,7 @@ public class ServletManager extends JettyManager {
       server = new HttpServer();
 
       // Create a port listener
-      HttpListener listener = server.addListener(new InetAddrPort(8081));
+      HttpListener listener = server.addListener(new InetAddrPort(port));
 
       configureDebugServlets();
 //       configureAdminServlets();
