@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.44 2004-10-22 00:43:49 troberts Exp $
+ * $Id: NewContentCrawler.java,v 1.45 2004-11-11 01:32:07 dcfok Exp $
  */
 
 /*
@@ -89,8 +89,10 @@ public class NewContentCrawler extends FollowLinkCrawler {
 
       while (it.hasNext() && !crawlAborted) {
 	String url = (String)it.next();
-	//catch and warn if there's a url in the start urls
-	//that we shouldn't cache
+	//XXX should we add code here to check if the URL is in the protocol
+	//we are supporting right now ? or the check is done in plugin already ?
+	//same apply to check if the url is Malformed
+
 	logger.debug2("Trying to process " +url);
 
         // check crawl window during crawl
@@ -103,7 +105,9 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	if (parsedPages.contains(url)) {
 	  continue;
 	}
-
+	
+	//catch and warn if there's a url in the start urls
+	//that we shouldn't cache
  	if (spec.isIncluded(url)) {
 	  if (!fetchAndParse(url, extractedUrls, parsedPages, true, true)) {
 	    if (crawlStatus.getCrawlError() == null) {
@@ -120,7 +124,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
     } // end for loop
 
     return extractedUrls;
-  } // end of getLink()
+  } // end of getUrlsToFollow()
 
   protected boolean shouldFollowLink(){
     return true;

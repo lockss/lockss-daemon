@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.9 2004-11-11 00:35:08 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.10 2004-11-11 01:32:07 dcfok Exp $
  */
 
 /*
@@ -120,6 +120,11 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
    * One can update the Max. Crawl Depth before calling doCrawl10().
    * Currently used only for "Not Follow Link" mode in OaiCrawler
    *
+   * This method will be no longer useful if we change the behavior in getUrlsToFollow()
+   * in OaiCrawler also fetch and parse the url inside the response. I want to discuss 
+   * about this, but I prefer more the way it is now, ie. OaiCrawler.getUrlsToFollow()
+   * does not fetch and parse the url inside the response
+   *
    * @param newMax the new max. crawl depth
    */
   protected void setMaxDepth(int newMax){
@@ -149,6 +154,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     }
 
     extractedUrls = getUrlsToFollow();
+    logger.debug3("Urls extracted from getUrlsToFollow() : "
+		  + extractedUrls.toString() );
 
     if (crawlAborted) {
         return aborted();
@@ -156,7 +163,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
     //we don't alter the crawl list from AuState until we've enumerated the
     //urls that need to be recrawled.
-    Collection urlsToCrawl;
+    Set urlsToCrawl;
 
     if (usePersistantList) {
       urlsToCrawl = aus.getCrawlUrls();
@@ -172,13 +179,22 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
       extractedUrls = new HashSet(); // level (N+1)'s Urls
 
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
-	String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
+	//XXX Could we have a SetUtil.removeElement() instead ?
+	String nextUrl = (String)CollectionUtil.removeElement((Collection) urlsToCrawl);
 
 	logger.debug3("Trying to process " + nextUrl);
 
 	// check crawl window during crawl
 	if (!withinCrawlWindow()) {
 	  crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
+	  if (usePersistantList) {
+	    // add the nextUrl back to the collection
+	    urlsToCrawl.add(nextUrl);
+
+	    //XXX we can actually do this in another way, which is not update the
+	    // the crawlUrls in AuState, however, I do not know when crawlUrls is
+	    // being updated.
+	  }
 	  return false;
 	}
 	boolean crawlRes = false;
@@ -302,6 +318,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
     // don't cache if already cached, unless overwriting
     if (fetchIfChanged || !uc.getCachedUrl().hasContent()) {
+
       try {
 	if (failedUrls.contains(uc.getUrl())) {
 	  //skip if it's already failed
@@ -309,7 +326,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	} else {
 
 	  // checking the crawl permission of the url's host
-	  if (!checkHostPermission(url,true)){
+	  if (!checkHostPermission(uc.getUrl(),true)){
 	    if (crawlStatus.getCrawlError() == null) {
 	      crawlStatus.setCrawlError("No permission to collect " + url);
 	    }
@@ -333,6 +350,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	logger.error("Unexpected Exception during crawl, continuing", e);
 	error = Crawler.STATUS_FETCH_ERROR;
       }
+
     } else {
       if (wdog != null) {
 	wdog.pokeWDog();
@@ -343,6 +361,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	return true;
       }
     }
+
+    // parse the page
     try {
       if (!parsedPages.contains(uc.getUrl())) {
 	logger.debug3("Parsing "+uc);
@@ -372,7 +392,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     logger.debug3("Removing from parsing list: "+uc.getUrl());
     return (error == null);
   }
-
+ 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
     int retriesLeft = maxTries;
@@ -421,14 +441,15 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
    */
   protected boolean checkHostPermission(String url ,boolean permissionFailedRetry) {
     int urlPermissionStatus = -1;
-    String urlPermissionUrl = "";
+    String urlPermissionUrl = null;
     try {
       urlPermissionStatus = permissionMap.getStatus(url);
       urlPermissionUrl = permissionMap.getPermissionUrl(url);
     } catch (MalformedURLException e) {
-      //XXX should catch this in PermissionMap ?
-      logger.error("The url is malformed :" + url);
+      logger.error("The url is malformed :" + url, e);
       crawlStatus.setCrawlError("Malformed Url: " + url);
+      //there is no point go to the switch statement with MalformedURLException
+      return false;
     }
     boolean printFailedWarning = true;
     switch (urlPermissionStatus) {
@@ -441,10 +462,11 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
         case PermissionMap.PERMISSION_OK:
 	  return true;
 	case PermissionMap.PERMISSION_NOT_OK:
-	  logger.error("Abort crawl. No permission statement is found at: " +
+	  logger.error("No permission statement is found at: " +
 		       urlPermissionUrl);
 	  crawlStatus.setCrawlError("No permission statement at: " + urlPermissionUrl);
-	  //abort crawl or skip all the page with this host ?
+	  //abort crawl or skip all the url with this host ?
+	  //currently we just ignore urls with this host.
 	  return false;
 	case PermissionMap.PERMISSION_UNCHECKED:
 	  //should not be in this state as each permissionPage should be checked in the first iteration
@@ -453,7 +475,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
           // fall through, re-fetch permission like FETCH_PERMISSION_FAILED
 	case PermissionMap.FETCH_PERMISSION_FAILED:
 	  if (printFailedWarning) {
-	    logger.warning("Fail to fetch permission page on host :" +
+	    logger.warning("Failed to fetch permission page on host :" +
 			   urlPermissionUrl);
 	  }
 	  if (permissionFailedRetry) {
@@ -463,16 +485,17 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	      permissionMap.putStatus(urlPermissionUrl,
 				      crawlPermission(urlPermissionUrl));
 	    } catch (MalformedURLException e){
-	      //XXX should catch in PermissionMap ?
-	      logger.error("Malformed urlPermissionUrl", e);
-	      crawlStatus.setCrawlError("MalFormedUrl :"+ urlPermissionUrl);
+	      //XXX can we handle this better by centralizing the check of MalformedURL ?
+	      logger.error("Malformed urlPermissionUrl :" + urlPermissionUrl, e);
+	      crawlStatus.setCrawlError("MalFormedUrl :" + urlPermissionUrl);
 	      return false;
 	    }
 	    return checkHostPermission(url,false);
 	  } else {
-	    //abort crawl or skip all the page with this host ?
-	    logger.error("Abort crawl. Cannot fetch permission page");
-	    crawlStatus.setCrawlError("Cannot fetch permission page" + urlPermissionUrl);
+	    logger.error("Cannot fetch permission page on the second attempt : " + urlPermissionUrl);
+	    crawlStatus.setCrawlError("Cannot fetch permission page on the second attempt :" + urlPermissionUrl);
+	    //abort crawl or skip all the url with this host?
+	    //currently we just ignore urls with this host.
 	    return false;
 	  }
 	default :
@@ -533,6 +556,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	  }
 	} 
       } catch (MalformedURLException e) {
+	//XXX what exactly does this log want to tell?
 	logger.warning("Normalizing", e);
       } catch (PluginBehaviorException e) {
 	logger.warning("Normalizing", e);
