@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.3 2002-10-16 04:59:47 tal Exp $
+ * $Id: TestStringUtil.java,v 1.4 2002-10-24 23:22:08 aalto Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestStringUtil extends TestCase{
   public TestStringUtil(String msg) {
     super(msg);
   }
-  
+
   public void testNullStr() {
     assertNull(StringUtil.trimAfterChars(null, null));
   }
@@ -92,7 +92,7 @@ public class TestStringUtil extends TestCase{
     String testStr = "blahTeStblah";
     assertEquals(4, StringUtil.getIndexIgnoringCase(testStr, "test"));
   }
-  
+
   public void testGetIndexIgnoringCaseDoesntChangeStrs() {
     String testStr = "blahTeStblah";
     String testSubStr = "test";
@@ -100,7 +100,7 @@ public class TestStringUtil extends TestCase{
     assertEquals("test", testSubStr);
     assertEquals("blahTeStblah", testStr);
   }
-  
+
   public void testSeparatedString() {
     assertEquals("1,2,3",
 		 StringUtil.separatedString(ListUtil.list("1","2","3"), ","));
@@ -122,4 +122,11 @@ public class TestStringUtil extends TestCase{
     assertEquals("\\ 1\\.2\\\\3\\?", StringUtil.escapeNonAlphaNum(" 1.2\\3?"));
   }
 
+  public void testSubstringCount() {
+    assertEquals(0, StringUtil.substringCount("", ""));
+    assertEquals(0, StringUtil.substringCount("test", ""));
+    assertEquals(2, StringUtil.substringCount("test.test", "test"));
+    assertEquals(2, StringUtil.substringCount("testtest", "test"));
+    assertEquals(2, StringUtil.substringCount("xxxxxy", "xx"));
+  }
 }

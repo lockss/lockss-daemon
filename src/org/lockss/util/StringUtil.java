@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.3 2002-10-16 03:49:51 tal Exp $
+ * $Id: StringUtil.java,v 1.4 2002-10-24 23:22:08 aalto Exp $
  */
 
 /*
@@ -242,6 +242,28 @@ public class StringUtil {
    */
   public static String escapeNonAlphaNum(String str) {
     return alphanum.substituteAll(str, "\\$1");
+  }
+
+  /**
+   * Returns the number of instances of a particular substring in a string.
+   * This ignores overlap, starting from the left, so 'xxxxxy' would have
+   * 2 instances of 'xx', not 4.  Empty string as a substring returns 0.
+   */
+  public static int substringCount(String str, String subStr) {
+    if (subStr.equals("")) return 0;
+    String copyStr = str;
+    int count = 0;
+    while (true) {
+      int idx = copyStr.indexOf(subStr);
+      if (idx<0) break;
+      else {
+        count++;
+        if (copyStr.length() > idx+subStr.length()) {
+          copyStr = copyStr.substring(idx + subStr.length());
+        } else break;
+      }
+    }
+    return count;
   }
 }
 
