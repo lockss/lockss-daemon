@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.20 2004-03-18 03:34:22 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.21 2004-03-23 23:05:48 troberts Exp $
  */
 
 /*
@@ -196,7 +196,15 @@ public class RepairCrawler extends CrawlerImpl {
   protected void fetchFromCache(UrlCacher uc) throws IOException {
     IdentityManager idm = getIdentityManager();
     Map map = idm.getAgreed(au);
-    Iterator it = map.keySet().iterator();
+    if (map == null) {
+      throw new CantProxyException("We don't have agree history with any caches");
+    } 
+    Set keySet = map.keySet();
+    if (keySet == null) {
+      logger.warning("Got a null keyset, this probably shouldn't happen");
+      throw new CantProxyException("Couldn't get a cache we agree with");
+    }
+    Iterator it = keySet.iterator();
     if (it.hasNext()) {
       fetchFromCache(uc, (String)it.next());
     }
@@ -219,6 +227,11 @@ public class RepairCrawler extends CrawlerImpl {
     conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
     conn.execute();
 
+    int resCode = conn.getResponseCode();
+    if (resCode != 200) {
+      throw new CantProxyException("Attempting to fetch from "
+				   +id+" got a "+resCode);
+    }
     uc.storeContent(conn.getResponseInputStream(),
 		    getPropertiesFromConn(conn, uc.getUrl(), id));
   }
@@ -260,5 +273,11 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   static class CantProxyException extends IOException {
+    public CantProxyException(String msg) {
+      super(msg);
+    }
+    public CantProxyException() {
+      super();
+    }
   }
 }
