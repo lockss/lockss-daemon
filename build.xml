@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.15 2002-11-01 09:22:46 tal Exp $
+ $Id: build.xml,v 1.16 2002-11-06 03:50:52 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -31,6 +31,10 @@ in this Software without prior written authorization from Stanford University.
 -->
 
 <project name="LOCKSS Gamma" default="test-all" basedir=".">
+
+  <!-- Set to yes (on command line) to see output as it happens -->
+  <property name="showoutput" value="no" />
+
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
   <property name="build.sysclasspath" value="ignore" />
@@ -411,12 +415,14 @@ Test results in ${test.results}
    depends="prepare.test,check.junit,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
     <property name="loglevel" value="" />
+    <echo>showoutput=${showoutput} </echo>
     <echo>
 Running tests for class ${class}
 Test results in ${test.results}
     </echo>
     <delete file="${test.results}/*" quiet="true" />
-    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes">
+    <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+        showoutput="${showoutput}">
       <batchtest fork="no" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Test*.java" />
@@ -442,7 +448,9 @@ Test results in ${test.results}
    depends="prepare.test,check.junit,jar-tests"
    description="Run a single test class, named by the 'class' property" >
     <property name="loglevel" value="" />
-    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes">
+    <echo>showoutput=${showoutput} </echo>
+    <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
+         showoutput="${showoutput}">
       <test fork="no" name="${class}" />
       <formatter type="plain" usefile="false" />                  
       <classpath> 
