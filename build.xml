@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.47 2003-06-20 22:34:50 claire Exp $
+ $Id: build.xml,v 1.48 2003-06-25 21:27:34 troberts Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -66,7 +66,7 @@ Args:
   <property name="build.sysclasspath" value="ignore" />
 
   <!--  CVS-related -->
-  <property name="cvs.project"    value="lockss-gamma" />
+  <property name="cvs.project"    value="lockss-daemon" />
 
   <!--  Directories -->
   <property name="java.lib"       value="${env.JAVA_HOME}/lib" />
@@ -770,7 +770,7 @@ Test results in ${test.results}
   to ${temp.build.dir}</echo>
       </else>
      </if>
-     <cvs command="-Q checkout" package="lockss-gamma" dest="${temp.build.dir}"
+     <cvs command="-z3Q checkout" package="lockss-daemon" dest="${temp.build.dir}"
        tag="${cvstag}" failonerror="true"/>
      <echo>Building and testing in ${temp.build.dir}</echo>
 <!--
