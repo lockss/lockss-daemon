@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.11 2003-03-19 04:18:55 tal Exp $
+ * $Id: TestHashQueue.java,v 1.12 2003-03-21 07:32:36 tal Exp $
  */
 
 /*
@@ -209,7 +209,7 @@ public class TestHashQueue extends LockssTestCase {
     q.removeCompleted();
     List exp = ListUtil.list(r1);
     assertEquals(exp, cookieList);
-    assertEquals(exp, q.getCompleted());
+    assertEquals(exp, q.getCompletedSnapshot());
     // make r2 timeout
     TimeBase.step(11000);
     // r3 is finished
@@ -221,7 +221,7 @@ public class TestHashQueue extends LockssTestCase {
     // check that they all finished, and in the right order
     Object exp2[] = {r1, r2, r3, r4};
     assertIsomorphic(exp2, cookieList);
-    assertIsomorphic(exp2, q.getCompleted());
+    assertIsomorphic(exp2, q.getCompletedSnapshot());
     // check their exceptions
     assertTrue(eList.get(0) instanceof HashService.Timeout);
     assertTrue(eList.get(1) instanceof HashService.Timeout);

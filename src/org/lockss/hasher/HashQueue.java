@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.21 2003-03-21 01:11:24 troberts Exp $
+ * $Id: HashQueue.java,v 1.22 2003-03-21 07:32:36 tal Exp $
  */
 
 /*
@@ -50,13 +50,13 @@ class HashQueue implements Serializable {
   static final String PARAM_PRIORITY = PREFIX + "priority";
   static final String PARAM_STEP_BYTES = PREFIX + "stepBytes";
   static final String PARAM_NUM_STEPS = PREFIX + "numSteps";
-  static final String PARAM_COMPLETED_MAX = PREFIX + "numCompleted";
+  static final String PARAM_COMPLETED_MAX = PREFIX + "keepCompleted";
 
   protected static Logger log = Logger.getLogger("HashQueue");
 
   private LinkedList qlist = new LinkedList(); // the queue
-  private LinkedList completed = new LinkedList(); // last n completed requests
-  private int completedMax = 50;
+  // last n completed requests
+  private HistoryList completed = new HistoryList(50);
   private HashThread hashThread;
   private BinarySemaphore sem = new BinarySemaphore();
   private int hashPriority = -1;
@@ -69,6 +69,16 @@ class HashQueue implements Serializable {
   private long totalTime = 0;
 
   HashQueue() {
+  }
+
+  private synchronized List getQlistSnapshot() {
+    return new ArrayList(qlist);
+  }
+
+  List getCompletedSnapshot() {
+    synchronized (completed) {
+      return new ArrayList(completed);
+    }
   }
 
   // Return head of queue or null if empty
@@ -108,18 +118,9 @@ class HashQueue implements Serializable {
     iter.remove();
     req.urlset.storeActualHashDuration(req.timeUsed, req.e);
     done.add(req);
-    addToCompleted(req);
-  }
-
-  private void addToCompleted(Request req) {
-    if (completed.size() > completedMax) {
-      completed.remove(0);
+    synchronized (completed) {
+      completed.add(req);
     }
-    completed.add(req);
-  }
-
-  List getCompleted() {
-    return completed;
   }
 
   // separated out so callbacks are run outside of synchronized block,
@@ -218,16 +219,21 @@ class HashQueue implements Serializable {
 	public void configurationChanged(Configuration oldConfig,
 					 Configuration newConfig,
 					 Set changedKeys) {
-	  setConfig(newConfig);
+	  setConfig(newConfig, changedKeys);
 	}
       });
   }
 
-  private void setConfig(Configuration config) {
+  private void setConfig(Configuration config, Set changedKeys) {
     hashPriority = config.getInt(PARAM_PRIORITY, -1);
     hashStepBytes = config.getInt(PARAM_STEP_BYTES, 10000);
     hashNumSteps = config.getInt(PARAM_NUM_STEPS, 10);
-    completedMax = config.getInt(PARAM_COMPLETED_MAX, 50);
+    int cMax = config.getInt(PARAM_COMPLETED_MAX, 50);
+    if (changedKeys.contains(PARAM_COMPLETED_MAX) ) {
+      synchronized (completed) {
+	completed.setMax(config.getInt(PARAM_COMPLETED_MAX, 50));
+      }
+    }
   }
 
   // Request - hash queue element.
@@ -447,14 +453,17 @@ class HashQueue implements Serializable {
     ListUtil.list(new StatusTable.SortRule("state", true),
 		  new StatusTable.SortRule("sort", true));
 
-  static final String FOOT_IN = "Order in which requests were made.  " +
+  static final String FOOT_IN = "Order in which requests were made.";
+
+  static final String FOOT_OVER = "Red indicates overrun.";
+
+  static final String FOOT_TITLE =
     "Pending requests are first in table, in the order they will be executed."+
     "  Completed requests follow, in the order they were completed " +
     "(most recent first).";
 
-  static final String FOOT_OVER = "Red indicates overrun.";
-
   private static final List statusColDescs =
+
     ListUtil.list(
 		  new ColumnDescriptor("sched", "In",
 				       ColumnDescriptor.TYPE_INT, FOOT_IN),
@@ -488,10 +497,12 @@ class HashQueue implements Serializable {
     public List getRows(String key) {
       List table = new ArrayList();
       int ix = 0;
-      for (ListIterator iter = qlist.listIterator(); iter.hasNext();) {
+      for (ListIterator iter = getQlistSnapshot().listIterator();
+	   iter.hasNext();) {
 	table.add(makeRow((Request)iter.next(), false, ix));
       }
-      for (ListIterator iter = completed.listIterator(); iter.hasNext();) {
+      for (ListIterator iter = getCompletedSnapshot().listIterator();
+	   iter.hasNext();) {
 	table.add(makeRow((Request)iter.next(), true, 0));
       }
       return table;
@@ -518,10 +529,10 @@ class HashQueue implements Serializable {
     private ReqState getState(Request req, boolean done) {
       if (req.overrun()) {
 	return (done ? REQ_STATE_DONE_O :
-		(req == head()) ? REQ_STATE_DONE_O : REQ_STATE_WAIT_O);
+		(req == head()) ? REQ_STATE_RUN_O : REQ_STATE_WAIT_O);
       } else {
 	return (done ? REQ_STATE_DONE :
-		(req == head()) ? REQ_STATE_DONE : REQ_STATE_WAIT);
+		(req == head()) ? REQ_STATE_RUN : REQ_STATE_WAIT);
       }
     }
 
@@ -570,6 +581,7 @@ class HashQueue implements Serializable {
 					  getColumnDescriptors(key),
 					  getDefaultSortRules(key),
 					  getRows(key), getSummaryInfo(key));
+      table.setTitleFootnote(FOOT_TITLE);
       return table;
     }
 
