@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.9 2004-07-23 16:44:10 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.10 2004-08-09 23:54:04 clairegriffin Exp $
  */
 
 /*
@@ -32,20 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import java.io.*;
 import java.security.*;
 import java.util.*;
 
-import org.mortbay.util.B64Code;
+import org.lockss.alert.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import org.lockss.state.PollHistory;
-import org.lockss.state.NodeManager;
-import org.lockss.daemon.status.*;
-import org.lockss.alert.*;
 
 /**
  * V1PollTally is a struct-like class which maintains the current
@@ -231,6 +226,24 @@ public class V1PollTally extends PollTally {
 
   boolean haveQuorum() {
     return numAgree + numDisagree >= quorum;
+  }
+
+  boolean canResolve() {
+    double num_votes = numAgree + numDisagree;
+
+    if(num_votes >= quorum * 2) {
+      double act_margin;
+      if (numAgree > numDisagree) {
+        act_margin = (double) numAgree / num_votes;
+      }
+      else {
+        act_margin = (double) numDisagree / num_votes;
+      }
+      if (act_margin < voteMargin) {
+        return false;
+      }
+    }
+    return true;
   }
 
   boolean isWithinMargin() {

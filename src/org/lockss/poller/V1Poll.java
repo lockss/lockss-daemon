@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.10 2004-07-23 16:44:10 tlipkis Exp $
+* $Id: V1Poll.java,v 1.11 2004-08-09 23:54:04 clairegriffin Exp $
  */
 
 /*
@@ -34,18 +34,14 @@ package org.lockss.poller;
 
 import java.io.*;
 import java.security.*;
-import java.util.*;
 
-
-import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import org.lockss.state.PollHistory;
-import org.lockss.state.NodeManager;
-import org.lockss.daemon.status.*;
+
+import org.mortbay.util.*;
 
 
 /**
@@ -362,7 +358,11 @@ public abstract class V1Poll extends BasePoll {
       return false;
     }
 
-    // are we too busy
+    if(!m_tally.canResolve()) {
+      log.info(m_key +
+               " unable to resolve split poll, ignoring additional votes.");
+    }
+      // are we too busy
     if(tooManyPending())  {
       log.info(m_key + " too busy to count " + m_pendingVotes + " votes");
       return false;
@@ -447,7 +447,7 @@ public abstract class V1Poll extends BasePoll {
         scheduleVote();
       }
       else {
-        log.debug("Hash failed : " + e.getMessage());
+        log.debug("Poll hash failed : " + e.getMessage());
         m_pollstate = ERR_HASHING;
       }
     }
