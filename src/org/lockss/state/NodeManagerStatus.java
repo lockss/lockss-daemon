@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.11 2003-06-25 21:19:58 eaalto Exp $
+ * $Id: NodeManagerStatus.java,v 1.12 2003-06-26 22:03:59 eaalto Exp $
  */
 
 /*
@@ -141,6 +141,7 @@ public class NodeManagerStatus {
 
     private static final List columnDescriptors = ListUtil.list(
         new ColumnDescriptor("URL", "URL", ColumnDescriptor.TYPE_STRING),
+        new ColumnDescriptor("State", "State", ColumnDescriptor.TYPE_STRING),
         new ColumnDescriptor("CrawlTime", "Last Crawl",
                              ColumnDescriptor.TYPE_DATE),
         new ColumnDescriptor("CrawlType", "Crawl Type",
@@ -216,6 +217,9 @@ public class NodeManagerStatus {
       String url = state.getCachedUrlSet().getUrl();
       // URL
       rowMap.put("URL", url);
+
+      // State
+      rowMap.put("State", state.getStateString());
 
       CrawlState crawl_state = state.getCrawlState();
       // CrawlTime
