@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.35 2003-05-01 20:00:33 tal Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.36 2003-05-01 20:02:39 tal Exp $
  */
 
 /*
@@ -429,7 +429,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     // simulate a timeout
     fileSet.storeActualHashDuration(200, new HashService.Timeout("test"));
     assertEquals(300, nodeMan.getNodeState(fileSet).getAverageHashDuration());
-    // and another,less that current estimate, should change it
+    // and another,less than current estimate, shouldn't change it
     fileSet.storeActualHashDuration(100, new HashService.Timeout("test"));
     assertEquals(300, nodeMan.getNodeState(fileSet).getAverageHashDuration());
   }
