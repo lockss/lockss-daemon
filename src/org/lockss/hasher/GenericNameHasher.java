@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.9 2003-05-07 18:34:34 troberts Exp $
+ * $Id: GenericNameHasher.java,v 1.10 2003-05-22 23:20:38 troberts Exp $
  */
 
 /*
@@ -61,7 +61,9 @@ public class GenericNameHasher extends GenericHasher {
     int totalHashed = 0;
     if (nameBytes == null) {
       String nameStr = element.getUrl();
-      log.debug3("Getting new name: "+nameStr);
+      if (log.isDebug3()) {
+	log.debug3("Getting new name: "+nameStr);
+      }
       StringBuffer sb = new StringBuffer(nameStr.length()+1);
       sb.append(nameStr);
       nameBytes = (sb.toString().getBytes());
@@ -89,7 +91,9 @@ public class GenericNameHasher extends GenericHasher {
       element = null;
       nameBytes = null;
     }
-    log.debug3("Hashed "+totalHashed+" bytes in this step");
+    if (log.isDebug3()) {
+      log.debug3("Hashed "+totalHashed+" bytes in this step");
+    }
     return totalHashed;
   }
 

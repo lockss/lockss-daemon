@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.13 2003-04-15 01:27:01 aalto Exp $
+ * $Id: GenericContentHasher.java,v 1.14 2003-05-22 23:20:38 troberts Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class GenericContentHasher extends GenericHasher {
   private int hashState = HASHING_NAME;
 
   private byte[] nameBytes = null;
+  private byte[] contentBytes = new byte[1000];
   private int nameIdx = -1;
 
   private InputStream is = null;
@@ -100,11 +101,15 @@ public class GenericContentHasher extends GenericHasher {
       String nameStr = sb.toString();
       nameBytes = nameStr.getBytes();
       nameIdx = 0;
-      log.debug3("got new name to hash: "+nameStr);
+      if (log.isDebug3()) {
+	log.debug3("got new name to hash: "+nameStr);
+      }
 
       if (cu.hasContent()) {
 	byte[] sizeBytes = cu.getContentSize();
-	log.debug3("sizeBytes has length of "+sizeBytes.length);
+	if (log.isDebug3()) {
+	  log.debug3("sizeBytes has length of "+sizeBytes.length);
+	}
 	digest.update((byte)sizeBytes.length);
 	digest.update(sizeBytes);
 	totalHashed += (sizeBytes.length+1);
@@ -117,16 +122,22 @@ public class GenericContentHasher extends GenericHasher {
     int bytesRemaining = nameBytes.length - nameIdx;
     int len = numBytes < bytesRemaining ? numBytes : bytesRemaining;
 
-    log.debug3("Going to hash "+len+" name bytes");
+    if (log.isDebug3()) {
+      log.debug3("Going to hash "+len+" name bytes");
+    }
     digest.update(nameBytes, nameIdx, len);
     nameIdx += len;
     if (nameIdx >= nameBytes.length) {
-      log.debug3("done hashing name: "+cu);
+      if (log.isDebug3()) {
+	log.debug3("done hashing name: "+cu);
+      }
       hashState = HASHING_CONTENT;
       nameBytes = null;
     }
     totalHashed += len;
-    log.debug3(totalHashed+" bytes hashed in this step");
+    if (log.isDebug3()) {
+      log.debug3(totalHashed+" bytes hashed in this step");
+    }
     return totalHashed;
   }
 
@@ -135,23 +146,34 @@ public class GenericContentHasher extends GenericHasher {
     log.debug3("hashing content");
     if(is == null) {
       if (cu.hasContent()) {
-	log.debug3("opening "+cu+" for hashing");
+	if (log.isDebug3()) {
+	  log.debug3("opening "+cu+" for hashing");
+	}
 	is = cu.openForHashing();
       } else {
-	log.debug3(cu+" has no content, not hashing");
+	if (log.isDebug3()) {
+	  log.debug3(cu+" has no content, not hashing");
+	}
 	hashState = HASHING_NAME;
 	shouldGetNextElement = true;
 	return totalHashed;
       }
     }
-    byte[] bytes = new byte[numBytes - totalHashed];
-    int bytesHashed = is.read(bytes);
-    log.debug3("Read "+bytesHashed+" bytes from the input stream");
-    if (bytesHashed >= 0) {
-      digest.update(bytes, 0, bytesHashed);
+    int bytesLeftToHash = numBytes - totalHashed;
+    if (contentBytes.length < (bytesLeftToHash)) {
+      contentBytes = new byte[bytesLeftToHash];
     }
-    if (bytesHashed != 0 && bytesHashed < bytes.length) {
-      log.debug3("done hashing content: "+cu);
+    int bytesHashed = is.read(contentBytes, 0, bytesLeftToHash);
+    if (log.isDebug3()) {
+      log.debug3("Read "+bytesHashed+" bytes from the input stream");
+    }
+    if (bytesHashed >= 0) {
+      digest.update(contentBytes, 0, bytesHashed);
+    }
+    if (bytesHashed != 0 && bytesHashed < bytesLeftToHash) {
+      if (log.isDebug3()) {
+	log.debug3("done hashing content: "+cu);
+      }
       hashState = HASHING_NAME;
       shouldGetNextElement = true;
       is.close();
@@ -160,7 +182,9 @@ public class GenericContentHasher extends GenericHasher {
     if (bytesHashed > 0) {
       totalHashed += bytesHashed;
     }
-    log.debug3(totalHashed+" bytes hashed in this step");
+    if (log.isDebug3()) {
+      log.debug3(totalHashed+" bytes hashed in this step");
+    }
     return totalHashed;
   }
 
