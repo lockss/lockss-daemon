@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.41 2003-04-29 00:13:25 tal Exp $
+ * $Id: Configuration.java,v 1.42 2003-04-30 23:38:51 tal Exp $
  */
 
 /*
@@ -256,6 +256,8 @@ public abstract class Configuration {
 		       firstSpace);
       platformOverride(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
 		       firstSpace);
+      platformOverride(IdentityManager.PARAM_IDDB_DIR,
+		       new File(firstSpace, "iddb").toString());
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.17 2003-04-18 20:23:55 tal Exp $
+ * $Id: TestConfiguration.java,v 1.18 2003-04-30 23:38:51 tal Exp $
  */
 
 /*
@@ -355,5 +355,6 @@ public class TestConfiguration extends LockssTestCase {
     Configuration config = Configuration.getCurrentConfig();
     assertEquals("/a/b", config.get("org.lockss.cache.location"));
     assertEquals("/a/b", config.get("org.lockss.history.location"));
+    assertEquals("/a/b/iddb", config.get("org.lockss.id.database.dir"));
   }
 }
