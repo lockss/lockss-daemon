@@ -1,5 +1,5 @@
 /*
- * $Id: TestMockLcapStreamRouter.java,v 1.1.2.1 2004-10-27 14:55:48 dshr Exp $
+ * $Id: TestMockLcapStreamRouter.java,v 1.1.2.2 2004-10-27 17:11:58 dshr Exp $
  */
 
 /*
@@ -55,6 +55,12 @@ public class TestMockLcapStreamRouter extends TestCase{
     // back-to-back.
     lsr1 = new MockLcapStreamRouter(q1, q2);
     lsr2 = new MockLcapStreamRouter(q2, q1);
+    {
+      MockLcapStreamRouter mlsr1 = (MockLcapStreamRouter) lsr1;
+      MockLcapStreamRouter mlsr2 = (MockLcapStreamRouter) lsr2;
+      mlsr1.setPartner(lsr2);
+      mlsr2.setPartner(lsr1);
+    }
     lsr1.startService();
     lsr2.startService();
     // Register handlers
@@ -112,7 +118,7 @@ public class TestMockLcapStreamRouter extends TestCase{
       fail("lsr1.sendTo() threw " + ex);
     }
     // Step time
-    Thread.yield();
+    // Thread.yield();
     TimeBase.step(500);
     // Get message from handler
     LcapMessage received = handler2.getMessage();
@@ -129,7 +135,7 @@ public class TestMockLcapStreamRouter extends TestCase{
       fail("lsr2.sendTo() threw " + ex);
     }
     // Step time
-    Thread.yield();
+    // Thread.yield();
     TimeBase.step(500);
     // Get message from handler
     received = handler1.getMessage();

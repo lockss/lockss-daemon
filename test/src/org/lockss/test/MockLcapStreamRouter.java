@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapStreamRouter.java,v 1.1.2.2 2004-10-27 14:55:48 dshr Exp $
+ * $Id: MockLcapStreamRouter.java,v 1.1.2.3 2004-10-27 17:11:58 dshr Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class MockLcapStreamRouter extends LcapStreamRouter
 
   boolean goOn = false;
   Thread myThread = null;
+  MockLcapStreamRouter partner = null;
   FifoQueue myReceiveQueue = null;
   FifoQueue mySendQueue = null;
 
@@ -114,6 +115,10 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public void sendTo(LcapMessage msg, ArchivalUnit au, PeerIdentity id)
       throws IOException {
     mySendQueue.put(msg);
+    if (partner != null) {
+      partner.myThread.interrupt();
+    }
+    Thread.yield();
     if (origRateLimiter != null) {
       origRateLimiter.event();
     }
@@ -125,5 +130,8 @@ public class MockLcapStreamRouter extends LcapStreamRouter
   public FifoQueue getSendQueue() {
     return mySendQueue;
   }
-
+  public void setPartner(LcapStreamRouter other) {
+    partner = (MockLcapStreamRouter) other;
+  }
+  
 }
