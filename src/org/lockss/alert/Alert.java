@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: Alert.java,v 1.2 2004-07-19 08:23:33 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class Alert {
   public static String ATTR_AU_TITLE = "au_title";
   public static String ATTR_IS_CONTENT = "is_content";
   public static String ATTR_IS_CACHE = "is_cache";
+  /** If true, prevents delayed notification */
+  public static String ATTR_IS_TIME_CRITICAL = "is_time_critical";
   public static String ATTR_SEVERITY = "severity";
   public static String ATTR_RPT_ACTION = "foo";
 
@@ -136,15 +138,18 @@ public class Alert {
 
   public static Alert DISK_SPACE_LOW =
     new Alert("DiskSpaceLow").
-    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
   public static Alert DISK_SPACE_FULL =
     new Alert("DiskSpaceFull").
-    setAttribute(ATTR_SEVERITY, SEVERITY_CRITICAL);
+    setAttribute(ATTR_SEVERITY, SEVERITY_CRITICAL).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
   public static Alert INTERNAL_ERROR =
     new Alert("InternalError").
-    setAttribute(ATTR_SEVERITY, SEVERITY_ERROR);
+    setAttribute(ATTR_SEVERITY, SEVERITY_ERROR).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
 
   private Map attributes;
@@ -296,11 +301,15 @@ public class Alert {
 
   /** Return the attribute value as a boolean */
   public boolean getBool(String attr) {
-    Boolean n = (Boolean)attributes.get(attr);
-    if (n != null) {
-      return n.booleanValue();
+    try {
+      Boolean n = (Boolean)attributes.get(attr);
+      if (n != null) {
+	return n.booleanValue();
+      }
+      return false;
+    } catch (ClassCastException e) {
+      return false;
     }
-    return false;
   }
 
   /** Return the value of the NAME attribute */
@@ -347,13 +356,17 @@ public class Alert {
 
   /** Return the name of the alert severity */
   public String getSeverityString() {
-    int sev = getInt(ATTR_SEVERITY);
-    if (sev <= SEVERITY_TRACE) return "trace";
-    if (sev <= SEVERITY_INFO) return "info";
-    if (sev <= SEVERITY_WARNING) return "warning";
-    if (sev <= SEVERITY_ERROR) return "error";
-    if (sev <= SEVERITY_CRITICAL) return "critical";
-    return "unknown";
+    try {
+      int sev = getInt(ATTR_SEVERITY);
+      if (sev <= SEVERITY_TRACE) return "trace";
+      if (sev <= SEVERITY_INFO) return "info";
+      if (sev <= SEVERITY_WARNING) return "warning";
+      if (sev <= SEVERITY_ERROR) return "error";
+      if (sev <= SEVERITY_CRITICAL) return "critical";
+      return "unknown";
+    } catch (RuntimeException e) {
+      return "unknown";
+    }
   }
 
   public String getMailSubject() {
