@@ -1,5 +1,5 @@
 /*
- * $Id: PropKeyEncoder.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: PropKeyEncoder.java,v 1.3 2004-03-18 20:14:11 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,8 @@ public class PropKeyEncoder {
    * @param   s   <code>String</code> to be translated.
    * @return  the translated <code>String</code>.
    */
+  // This is very much like URLEncoder.encode, but with a slightly
+  // different set of characters needing encoding.
   public static String encode(String s) {
     int maxBytesPerChar = 10;
     StringBuffer out = new StringBuffer(s.length());
@@ -113,5 +115,17 @@ public class PropKeyEncoder {
     }
 
     return out.toString();
+  }
+
+  /**
+   * Undoes <code>x-www-form-urlencode</code> format.
+   *
+   * @param   s A <code>x-www-form-urlencoded</code> String
+   * @return  the original String
+   */
+  public static String decode(String s) {
+    // we encode in the same format as URLEncoder, so can use URLDecoder to
+    // decode.
+    return java.net.URLDecoder.decode(s);
   }
 }
