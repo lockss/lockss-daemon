@@ -1,5 +1,5 @@
 /*
- * $Id: TestTimerQueue.java,v 1.3 2002-12-15 00:13:16 tal Exp $
+ * $Id: TestTimerQueue.java,v 1.4 2003-01-05 00:47:23 tal Exp $
  */
 
 /*
@@ -57,7 +57,8 @@ public class TestTimerQueue extends LockssTestCase {
   }
 
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     TimeBase.setSimulated();
   }
 
