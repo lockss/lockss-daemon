@@ -97,7 +97,7 @@ public class MockLockssDaemon extends LockssDaemon {
       }
       catch (LockssDaemonException ex) {
       }
-      theManagers.put(LockssDaemon.COMM_MANAGER, hashService);
+      theManagers.put(LockssDaemon.COMM_MANAGER, commManager);
     }
     return commManager;
   }
@@ -114,7 +114,7 @@ public class MockLockssDaemon extends LockssDaemon {
       }
       catch (LockssDaemonException ex) {
       }
-      theManagers.put(LockssDaemon.ROUTER_MANAGER, hashService);
+      theManagers.put(LockssDaemon.ROUTER_MANAGER, routerManager);
     }
     return routerManager;
   }
@@ -282,7 +282,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setCommManager(LcapComm commMan) {
     commManager = commMan;
-    theManagers.put(LockssDaemon.COMM_MANAGER, hashService);
+    theManagers.put(LockssDaemon.COMM_MANAGER, commManager);
   }
 
   /**
@@ -291,7 +291,7 @@ public class MockLockssDaemon extends LockssDaemon {
    */
   public void setRouterManager(LcapRouter routerMan) {
     routerManager = routerMan;
-    theManagers.put(LockssDaemon.ROUTER_MANAGER, hashService);
+    theManagers.put(LockssDaemon.ROUTER_MANAGER, routerManager);
   }
 
   /**
