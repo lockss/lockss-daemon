@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.18 2005-02-02 09:42:26 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.19 2005-02-18 23:21:38 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,10 @@ public class PollerStatus {
       if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
 	table.setColumnDescriptors(columnDescriptors);
 	table.setDefaultSortRules(sortRules);
-	table.setRows(getRows(props, cnts));
+	table.setRows(processPolls(props, cnts, true));
+      } else {
+	// still need to process all polls to compute totals
+	processPolls(props, cnts, false);
       }
       table.setTitle(getTitle(props));
       // add how-to-filter-by-AU footnote iff not already filtering by AU,
@@ -117,8 +120,8 @@ public class PollerStatus {
       return false;
     }
 
-    // routines to make a row
-    private List getRows(Properties props, PollCounts cnts)
+    private List processPolls(Properties props, PollCounts cnts,
+			      boolean generateRows)
 	throws StatusService.NoSuchTableException {
       ArrayList rowL = new ArrayList();
       Iterator it = pollManager.getPolls();
@@ -129,7 +132,7 @@ public class PollerStatus {
         if (matchAu(entry, props)) {
 	  // include in counts if poll's AU matches filter
 	  cnts.incrStatusCnt(entry.getStatusString());
-	  if (matchKey(entry, props)) {
+	  if (generateRows && matchKey(entry, props)) {
 	    // include row only if all filters match
 	    rowL.add(makeRow(entry));
 	  }
