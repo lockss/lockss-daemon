@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.2 2003-03-13 02:00:36 troberts Exp $
+ * $Id: StatusAccessor.java,v 1.3 2003-03-13 23:13:41 troberts Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public interface StatusAccessor {
   /**
    * Get the description (name, title and type) for the fields this 
    * StatusAccessor will return, for the given key
-   * @param key object (such as AU) designating which table to return 
+   * @param key object (such as AUID) designating which table to return 
    * @return List of ColumnDescriptor objects for the fields this 
    * StatusAccessor supplies
    * @throws StatusService.Error if we get a key that we don't recognize or 
@@ -52,7 +52,7 @@ public interface StatusAccessor {
 
   /**
    * Gets the status rows for a specified key
-   * @param key Object which designates a set of status rows to return
+   * @param key string which designates a set of status rows to return
    * @return List of status rows (Maps) for the specified key
    * @throws StatusService.Error if we get a key that we don't recognize or 
    * have a table for
@@ -67,4 +67,15 @@ public interface StatusAccessor {
    * have a table for
    */
   public List getDefaultSortRules(Object key) throws StatusService.Error;
+
+  /**
+   * Returns whether this StatusAccessor has status informtion that doesn't
+   * require a key.  In other words, can you call 
+   * {@link #getColumnDescriptors}, {@link #getRows} or 
+   * {@link #getDefaultSortRules} with a null key without getting a 
+   * {@link StatusService.Error}
+   * @returns true if this can give status information for a null key
+   */
+  public boolean requiresKey();
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.3 2003-03-13 03:17:01 aalto Exp $
+ * $Id: MockStatusAccessor.java,v 1.4 2003-03-13 23:13:41 troberts Exp $
  */
 
 /*
@@ -37,11 +37,8 @@ import org.lockss.daemon.status.*;
 
 public class MockStatusAccessor implements StatusAccessor {
   private boolean requiresKey = false;
-  private List columnDescriptorsKeyless;
-  private List rowsKeyless;
   private Map columnDescriptors;
   private Map rows;
-  private List defaultSortRulesKeyless;
   private Map defaultSortRules;
 
 
@@ -80,5 +77,11 @@ public class MockStatusAccessor implements StatusAccessor {
     defaultSortRules.put(key, sortRules);
   }
 
+  public void setRequiresKey(boolean requiresKey) {
+    this.requiresKey = requiresKey;
+  }
 
+  public boolean requiresKey() {
+    return requiresKey;
+  }
 }
