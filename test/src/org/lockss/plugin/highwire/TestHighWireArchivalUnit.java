@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWireArchivalUnit.java,v 1.42 2004-07-07 22:06:01 clairegriffin Exp $
+ * $Id: TestHighWireArchivalUnit.java,v 1.43 2004-07-23 16:44:09 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,6 @@ package org.lockss.plugin.highwire;
 import java.io.File;
 import java.net.*;
 import java.util.*;
-import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.state.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuCachedUrlSetSpec.java,v 1.1 2003-09-26 23:44:20 eaalto Exp $
+ * $Id: TestAuCachedUrlSetSpec.java,v 1.2 2004-07-23 16:44:09 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 import java.util.*;
 import junit.framework.TestCase;
-import gnu.regexp.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
 import org.lockss.util.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.23 2003-12-17 02:09:45 tlipkis Exp $
+ * $Id: PollTally.java,v 1.24 2004-07-23 16:44:10 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.*;
 import java.security.*;
 import java.util.*;
 
-import gnu.regexp.*;
 import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.31 2004-01-31 22:58:38 tlipkis Exp $
+ * $Id: TestLcapMessage.java,v 1.32 2004-07-23 16:44:09 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 import org.lockss.test.*;
-import gnu.regexp.*;
 import org.lockss.poller.TestPoll;
 import org.lockss.poller.*;
 import org.lockss.util.*;

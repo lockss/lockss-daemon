@@ -1,5 +1,5 @@
 /*
- * $Id: PermutationIterator.java,v 1.1 2003-09-08 19:27:12 tlipkis Exp $
+ * $Id: PermutationIterator.java,v 1.2 2004-07-23 16:44:10 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.lang.reflect.*;
-import gnu.regexp.*;
 
 /**
  * An iterator over arrays of permutations of integers.  Each call to

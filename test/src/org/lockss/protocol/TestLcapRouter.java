@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapRouter.java,v 1.11 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestLcapRouter.java,v 1.12 2004-07-23 16:44:09 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.io.DataInputStream;
 import java.net.*;
 import java.io.*;
 import java.util.*;
-import gnu.regexp.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.poller.*;

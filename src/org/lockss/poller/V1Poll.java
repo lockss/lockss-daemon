@@ -1,5 +1,5 @@
 /*
-* $Id: V1Poll.java,v 1.9 2004-07-12 23:41:42 clairegriffin Exp $
+* $Id: V1Poll.java,v 1.10 2004-07-23 16:44:10 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.security.*;
 import java.util.*;
 
 
-import gnu.regexp.*;
 import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;

@@ -1,5 +1,5 @@
 /*
-* $Id: V2Poll.java,v 1.1 2003-07-16 17:34:39 dshr Exp $
+* $Id: V2Poll.java,v 1.2 2004-07-23 16:44:10 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,6 @@ import java.security.*;
 import java.util.*;
 
 
-import gnu.regexp.*;
 import org.mortbay.util.B64Code;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;

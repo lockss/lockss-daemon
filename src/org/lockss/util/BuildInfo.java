@@ -1,5 +1,5 @@
 /*
- * $Id: BuildInfo.java,v 1.4 2003-08-15 21:31:26 tlipkis Exp $
+ * $Id: BuildInfo.java,v 1.5 2004-07-23 16:44:10 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.util.*;
 import java.io.*;
-import gnu.regexp.*;
 
 /**
  * static methods to retrieve various info about the build environment
