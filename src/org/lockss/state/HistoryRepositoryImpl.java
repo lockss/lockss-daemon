@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.43 2004-02-05 02:18:01 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.44 2004-02-07 00:13:26 troberts Exp $
  */
 
 /*
@@ -223,6 +223,15 @@ public class HistoryRepositoryImpl
           "Couldn't load history.");
     }
   }
+
+  public void storeIdentityAgreement(List list) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public List loadIdentityAgreement() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
 
   public void storeAuState(AuState auState) {
     try {
