@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.5 2004-10-25 22:47:06 tlipkis Exp $
+ * $Id: FuncSchedService.java,v 1.6 2004-10-26 18:50:25 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.plugin.*;
  */
 
 public class FuncSchedService extends LockssTestCase {
+  static Logger log = Logger.getLogger("FuncSchedService");
 
   public static Class testedClasses[] = {
     org.lockss.scheduler.SchedService.class,
@@ -72,8 +73,7 @@ public class FuncSchedService extends LockssTestCase {
     try {
       intr = interruptMeIn(TIMEOUT_SHOULDNT);
       while (!svc.isIdle()) {
-	TimeBase.step(10);
- 	TimerUtil.guaranteedSleep(10);
+	TimerUtil.guaranteedSleep(100);
       }
       intr.cancel();
     } finally {
@@ -89,32 +89,32 @@ public class FuncSchedService extends LockssTestCase {
 			   loadFactor, cb);
   }
 
-  SchedulableTask taskToAbort = null;
-
   public void testOneBack() throws Exception {
-    TimeBase.setSimulated(100);
     final List rec = new ArrayList();
     TaskCallback cb = new TaskCallback() {
 	public void taskEvent(SchedulableTask task, Schedule.EventType event) {
 	  rec.add(new BERec(Deadline.in(0), (BackgroundTask)task, event));
-	  if (event == Schedule.EventType.START) {
-	    if (task == taskToAbort) {
-	      task.cancel();
-	    }
-	  }
 	}};
-  
-    BackgroundTask task = btask(100, 200, .1, cb);
-    assertTrue(svc.scheduleTask(task));
-    waitUntilDone();
-    List exp = ListUtil.list(new BERec(200, task, Schedule.EventType.START),
-			     new BERec(300, task, Schedule.EventType.FINISH));
-    assertEquals(exp, rec);
-    //    t1.taskIsFinished();
+    // Scheduling may legitimately fail if machine is slow or busy.
+    // Successively try more distant times in the future until it succeeds.
+
+    long future = 10;
+    for (int ix = 1; ix <= 10; ix++) {
+      BackgroundTask task = btask(future, future + 100, .1, cb);
+      if (svc.scheduleTask(task)) {
+	log.debug("scheduled with future = " + future);
+	waitUntilDone();
+	List exp = ListUtil.list(new BERec(task, Schedule.EventType.START),
+				 new BERec(task, Schedule.EventType.FINISH));
+	assertEquals(exp, rec);
+	return;
+      }
+      future = 2 * future;
+    }
+    fail("Couldn't schedule background task within " +
+	 StringUtil.timeIntervalToString(future));
   }
- 
-  
-  
+
   // Background event record
   class BERec {
     Deadline when;
