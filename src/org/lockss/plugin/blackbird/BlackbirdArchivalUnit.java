@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdArchivalUnit.java,v 1.4.2.1 2004-02-11 20:59:19 eaalto Exp $
+ * $Id: BlackbirdArchivalUnit.java,v 1.4.2.2 2004-02-11 21:08:40 eaalto Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class BlackbirdArchivalUnit extends ConfigurableArchivalUnit {
     String ret;
     StringBuffer sb = new StringBuffer();
     sb.append(baseUrl.toString());
-    sb.append("lockss-volume");
+    sb.append("lockss/lockss-volume");
     sb.append(volume);
     sb.append(".htm");
     ret = sb.toString();
