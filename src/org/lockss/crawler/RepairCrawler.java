@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.25 2004-09-01 02:27:21 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.25.2.1 2004-09-23 01:07:03 tlipkis Exp $
  */
 
 /*
@@ -333,6 +333,7 @@ public class RepairCrawler extends CrawlerImpl {
     logger.debug2("Trying to fetch from "+id);
     conn.setProxy(id, proxyPort);
     conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+    conn.setRequestProperty("X-Lockss", "Repair");
     conn.execute();
 
     int resCode = conn.getResponseCode();
