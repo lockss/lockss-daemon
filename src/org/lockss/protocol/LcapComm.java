@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.17 2003-02-24 22:13:42 claire Exp $
+ * $Id: LcapComm.java,v 1.18 2003-03-19 07:57:14 tal Exp $
  */
 
 /*
@@ -237,6 +237,11 @@ public class LcapComm implements LockssManager {
     sendTo(ld,
 	   (uniSendToAddr == null ? id.getAddress() : uniSendToAddr),
 	   uniSendToPort);
+  }
+
+  void sendTo(LockssDatagram ld, InetAddress addr)
+      throws IOException {
+    sendTo(ld, addr, uniSendToPort);
   }
 
   void sendTo(LockssDatagram ld, InetAddress addr, int port)
