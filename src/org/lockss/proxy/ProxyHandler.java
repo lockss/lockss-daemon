@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.30 2004-10-01 09:26:21 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.31 2004-10-06 04:45:02 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.30 2004-10-01 09:26:21 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.31 2004-10-06 04:45:02 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -84,6 +84,8 @@ public class ProxyHandler extends AbstractHttpHandler {
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickFailConnPool = null;
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
+  private boolean isFailOver = false;
+  private URI failOverTargetUri;
 
   ProxyHandler(LockssDaemon daemon) {
     theDaemon = daemon;
@@ -109,6 +111,14 @@ public class ProxyHandler extends AbstractHttpHandler {
    * will never be proxied */
   public void setFromCacheOnly(boolean flg) {
     neverProxy = flg;
+  }
+
+  /** Set a target to use as a base (protocol, host, port) for all incoming
+   * request URLs.  To be used to cause the proxy to serve locally cached
+   * content in response to direct (non-proxy) GET requests. */
+  public void setProxiedTarget(String target) {
+    failOverTargetUri = new URI(target);
+    isFailOver = true;
   }
 
   protected int _tunnelTimeoutMs=250;
@@ -178,6 +188,16 @@ public class ProxyHandler extends AbstractHttpHandler {
     if (log.isDebug3()) {
       log.debug3("pathInContext="+pathInContext);
       log.debug3("URI="+uri);
+    }
+    if (isFailOver) {
+      if (uri.getHost() == null && failOverTargetUri.getHost() != null) {
+	uri.setHost(failOverTargetUri.getHost());
+	uri.setPort(failOverTargetUri.getPort());
+	uri.setScheme(failOverTargetUri.getScheme());
+      }
+      if (log.isDebug2()) log.debug2("Failover URI: " + uri);
+    } else {
+      // XXX what to do here?
     }
 
     String urlString = uri.toString();

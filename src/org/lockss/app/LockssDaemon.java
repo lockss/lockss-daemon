@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.67 2004-09-28 08:53:19 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.68 2004-10-06 04:45:02 tlipkis Exp $
  */
 
 /*
@@ -106,6 +106,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String TREEWALK_MANAGER = "TreeWalkManager";
   public static String PROXY_MANAGER = "ProxyManager";
   public static String AUDIT_PROXY_MANAGER = "AuditProxyManager";
+  public static String FAIL_OVER_PROXY_MANAGER = "FailOverProxyManager";
   public static String SYSTEM_METRICS = "SystemMetrics";
   public static String REMOTE_API = "RemoteApi";
   public static String URL_MANAGER = "UrlManager";
@@ -138,6 +139,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(SERVLET_MANAGER, "org.lockss.servlet.LocalServletManager"),
     new ManagerDesc(PROXY_MANAGER, "org.lockss.proxy.ProxyManager"),
     new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
+    new ManagerDesc(FAIL_OVER_PROXY_MANAGER ,
+		    "org.lockss.proxy.FailOverProxyManager"),
     // comm layer at end so don't process messages until other services ready
     new ManagerDesc(DATAGRAM_COMM_MANAGER,
 		    "org.lockss.protocol.LcapDatagramComm"),
