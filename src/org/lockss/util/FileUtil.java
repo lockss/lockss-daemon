@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.2 2003-09-18 06:50:12 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.3 2003-12-18 03:01:47 eaalto Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -30,11 +30,14 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.File;
+import java.io.*;
+import java.util.Arrays;
 
 /** Utilities for Files
  */
 public class FileUtil {
+  static final int FILE_CHUNK_SIZE = 1024;
+
   /**
    * Converts the file path given into a system-dependent form.
    * For example, 'var/foo/bar' becomes 'var\foo\bar' on a Windows machine
@@ -106,5 +109,70 @@ public class FileUtil {
       if (index < 0) break;
     };
     return true;
+  }
+
+  /**
+   * Compares the content of two files and returns true if they are the same.
+   * If either file is null or a directory, returns false.
+   * @param file1 the first file
+   * @param file2 the second file
+   * @return true iff content is identical
+   * @throws IOException
+   */
+  public static boolean isContentEqual(File file1, File file2)
+      throws IOException {
+    if ((file1==null) || (file2==null)) {
+      // null is never equal
+      return false;
+    }
+
+    if ((file1.isDirectory()) || (file2.isDirectory())) {
+      // don't compare directories
+      return false;
+    }
+
+    if (file1.length() != file2.length()) {
+      // easy length check
+      return false;
+    }
+
+    // compare both streams
+    FileInputStream fis1 = null;
+    FileInputStream fis2 = null;
+    try {
+      fis1 = new FileInputStream(file1);
+      fis2 = new FileInputStream(file2);
+
+      byte[] bytes1 = new byte[FILE_CHUNK_SIZE];
+      byte[] bytes2 = new byte[FILE_CHUNK_SIZE];
+      while (true) {
+        int bytesRead1 = fis1.read(bytes1);
+        int bytesRead2 = fis2.read(bytes2);
+
+        if (bytesRead1 != bytesRead2) {
+          // shouldn't really happen, since lengths are equal
+          return false;
+        } else if (bytesRead1==-1) {
+          // EOF reached, exit
+          break;
+        }
+
+        if (!Arrays.equals(bytes1, bytes2)) {
+          return false;
+        }
+      }
+      return true;
+    } catch (FileNotFoundException fnfe) {
+      // if the file is absent, no comparison
+      return false;
+    } finally {
+      // make sure to close open inputstreams
+      if (fis1!=null) {
+        fis1.close();
+      }
+      if (fis2!=null) {
+        fis2.close();
+      }
+    }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.2 2003-09-18 06:50:12 tlipkis Exp $
+ * $Id: TestFileUtil.java,v 1.3 2003-12-18 03:01:47 eaalto Exp $
  */
 
 /*
@@ -32,14 +32,21 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.File;
-import org.lockss.test.LockssTestCase;
+import java.io.*;
+import org.lockss.test.*;
 
 /**
  * test class for org.lockss.util.TestFileTestUtil
  */
 
 public class TestFileUtil extends LockssTestCase {
+  String tempDirPath;
+
+  public void setUp() throws Exception {
+    super.setUp();
+    tempDirPath = getTempDir().getAbsolutePath() + File.separator;
+  }
+
   public void testSysDepPath() {
     String testStr = "test/var\\foo";
     String expectedStr = "test"+File.separator+"var"+File.separator+"foo";
@@ -93,6 +100,31 @@ public class TestFileUtil extends LockssTestCase {
     assertFalse(isLegal("var/../../foo"));
     assertFalse(isLegal("var/.././.."));
     assertFalse(isLegal("var/.././..///"));
+  }
+
+  public void testFileContentIsIdentical() throws Exception {
+    File file1 = createFile(tempDirPath + "file1", "content 1");
+    File file2 = createFile(tempDirPath + "file2", "content 2");
+    File file3 = createFile(tempDirPath + "file3", "content 1");
+    // shorter length
+    File file4 = createFile(tempDirPath + "file4", "con 4");
+
+    assertFalse(FileUtil.isContentEqual(file1, null));
+    assertFalse(FileUtil.isContentEqual(null, file1));
+    assertFalse(FileUtil.isContentEqual(null, null));
+    assertFalse(FileUtil.isContentEqual(file1, file2));
+    assertFalse(FileUtil.isContentEqual(file1, file4));
+
+    assertTrue(FileUtil.isContentEqual(file1, file1));
+    assertTrue(FileUtil.isContentEqual(file1, file3));
+  }
+
+  File createFile(String name, String content) throws Exception {
+    File file = new File(name);
+    FileOutputStream fos = new FileOutputStream(file);
+    StreamUtil.copy(new StringInputStream(content), fos);
+    fos.close();
+    return file;
   }
 
 }
