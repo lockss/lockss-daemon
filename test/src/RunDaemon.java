@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.1 2002-11-05 21:09:46 tal Exp $
+ * $Id: RunDaemon.java,v 1.2 2002-11-23 01:21:30 troberts Exp $
  */
 
 /*
@@ -36,15 +36,29 @@ import java.net.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.HashService;
 import org.lockss.protocol.LcapComm;
+import org.lockss.plugin.simulated.*;
+import org.lockss.test.*;
+import org.lockss.protocol.*;
+import org.lockss.poller.*;
+import org.lockss.util.*;
+import org.lockss.crawler.*;
 
 public class RunDaemon {
+  private static final String DEFAULT_DIR_PATH = "./";
+  private static Logger log = Logger.getLogger("RunDaemon");
+
+  private SimulatedArchivalUnit sau = null;
+  private List propUrls = null;
+  private String dirPath = null;
+
   public static void main(String argv[]) {
     Vector urls = new Vector();
     for (int i=0; i<argv.length; i++) {
       urls.add(argv[i]);
     }
     try {
-      runDaemon(urls);
+      RunDaemon daemon = new RunDaemon(urls);
+      daemon.runDaemon();
     } catch (Throwable e) {
       System.err.println("Exception thrown in main loop:");
       e.printStackTrace();
@@ -54,9 +68,58 @@ public class RunDaemon {
     }
   }
    
-  public static void runDaemon(List urls) {
-    Configuration.startHandler(urls);
+  RunDaemon(List propUrls){
+    this.propUrls = propUrls;
+  }
+
+  public void runDaemon() {
+    Configuration.startHandler(propUrls);
+    System.err.println("Sleeping so config can get set");
+    Configuration.waitConfig();
+    System.err.println("Awake");
+
     HashService.start();
     LcapComm.startComm();
+
+    dirPath = Configuration.getParam(Configuration.PREFIX+"cache.location",
+				     DEFAULT_DIR_PATH);
+    boolean shouldCallPoll = 
+      Configuration.getBooleanParam(Configuration.PREFIX+"shouldCallPoll",
+				    false);
+
+    sau = new SimulatedArchivalUnit(dirPath);
+    org.lockss.plugin.Plugin.registerArchivalUnit(sau);
+
+    createContent();
+    crawlContent();
+    if (shouldCallPoll) {
+      try {
+	Thread.currentThread().sleep(1000);
+	PollManager.makePollRequest("http://www.example.com/", ".*",  
+				    LcapMessage.CONTENT_POLL_REQ,
+				    5, InetAddress.getByName("239.4.5.6"),
+				    1 * 60 * 1000, 60 * 1000);
+      } catch (Exception e) {
+	e.printStackTrace();
+      } 
+    }
+    else {
+    }
+  }
+
+  private void createContent() {
+    SimulatedContentGenerator scgen = sau.getContentGenerator();
+    scgen.setTreeDepth(2);
+    scgen.setNumBranches(2);
+    scgen.setNumFilesPerBranch(2);
+    scgen.setFileTypes(scgen.FILE_TYPE_HTML+scgen.FILE_TYPE_TXT);
+    scgen.setAbnormalFile("1,1", 1);
+
+    sau.generateContentTree();
+  }
+
+  private void crawlContent() {
+    CrawlSpec spec = new CrawlSpec(sau.SIMULATED_URL_START, null);
+    org.lockss.crawler.Crawler.doCrawl(sau, spec);
   }
 }
