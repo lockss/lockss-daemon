@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.5 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.6 2004-10-22 07:01:59 tlipkis Exp $
  */
 
 /*
@@ -734,9 +734,9 @@ public class ConfigManager implements LockssManager {
    * @param cacheConfigFileName filename, no path
    * @param header file header string
    */
-  public void writeCacheConfigFile(Configuration config,
-				   String cacheConfigFileName,
-				   String header)
+  public synchronized void writeCacheConfigFile(Configuration config,
+						String cacheConfigFileName,
+						String header)
       throws IOException {
     if (cacheConfigDir == null) {
       log.warning("Attempting to write cache config file: " +
@@ -758,6 +758,12 @@ public class ConfigManager implements LockssManager {
 				 tempfile + " to: " + cfile);
     }
     log.debug2("Wrote cache config file: " + cfile);
+    ConfigFile cf = configCache.justGet(cfile.toString());
+    if (cf instanceof FileConfigFile) {
+      ((FileConfigFile)cf).storedConfig(tmpConfig);
+    } else {
+      log.warning("Not a FileConfigFile: " + cf);
+    }
     if (handlerThread != null) {
       handlerThread.forceReload();
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigCache.java,v 1.3 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: TestConfigCache.java,v 1.4 2004-10-22 07:01:58 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,9 @@ public class TestConfigCache extends LockssTestCase {
     String url = null;
     try {
       url = FileTestUtil.urlOfString(config1);
-      cache.ensureLoaded(url);
+      ConfigFile cf = cache.get(url);
+      assertNotNull(cf);
+      assertSame(cf, cache.justGet(url));
     } catch (IOException ex) {
       fail("Unable to load local config file " + url + " :" + ex);
     }

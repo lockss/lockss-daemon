@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.2 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: TestConfiguration.java,v 1.3 2004-10-22 07:01:58 tlipkis Exp $
  */
 
 /*
@@ -178,10 +178,26 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals("cc", c2.get("a"));
   }
 
+  public void testCopyFrom() {
+    Configuration c1 = newConfiguration();
+    c1.put("a", "1");
+    c1.put("b", "2");
+    c1.put("b.x", "3");
+    c1.seal();
+    Configuration c2 = newConfiguration();
+    c2.copyFrom(c1);
+    assertEquals(3, c2.keySet().size());
+    assertEquals("1", c2.get("a"));
+    assertEquals("2", c2.get("b"));
+    assertFalse(c2.isSealed());
+    c2.put("a", "cc");
+    assertEquals("cc", c2.get("a"));
+  }
+
   public void testLoad() throws IOException, Configuration.InvalidParam {
     String f = FileTestUtil.urlOfString(c1);
     Configuration config = newConfiguration();
-    config.load(new FileConfigFile(f));
+    config.load(loadFCF(f));
     assertEquals("12", config.get("prop1"));
     assertEquals("12", config.get("prop1", "wrong"));
     assertEquals("foobar", config.get("prop2"));
@@ -224,7 +240,7 @@ public class TestConfiguration extends LockssTestCase {
   
   public void testGetList() throws IOException {
     Configuration config = newConfiguration();
-    config.load(new FileConfigFile(FileTestUtil.urlOfString(c3)));
+    config.load(loadFCF(FileTestUtil.urlOfString(c3)));
     try {
       List l = config.getList("prop.p1");
       assertNotNull(l);
@@ -244,7 +260,7 @@ public class TestConfiguration extends LockssTestCase {
 
   public void testGetListEmptyStrings() throws IOException {
     Configuration config = newConfiguration();
-    config.load(new FileConfigFile(FileTestUtil.urlOfString("prop.p1=a;;b;")));
+    config.load(loadFCF(FileTestUtil.urlOfString("prop.p1=a;;b;")));
     assertEquals(ListUtil.list("a", "b"), config.getList("prop.p1"));
   }
 
@@ -288,7 +304,7 @@ public class TestConfiguration extends LockssTestCase {
 
   public void testStruct() throws IOException {
     Configuration config = newConfiguration();
-    config.load(new FileConfigFile(FileTestUtil.urlOfString(c2)));
+    config.load(loadFCF(FileTestUtil.urlOfString(c2)));
     Set set = new HashSet();
     for (Iterator iter = config.keyIterator(); iter.hasNext();) {
       set.add(iter.next());
@@ -366,5 +382,11 @@ public class TestConfiguration extends LockssTestCase {
     assertEquals(2, c3.keySet().size());
     assertEquals("a", c3.get("foo.bar.p1"));
     assertEquals("b", c3.get("foo.bar.p2"));
+  }
+
+  private ConfigFile loadFCF(String url) throws IOException {
+    ConfigFile cf = new FileConfigFile(url);
+    cf.reload();
+    return cf;
   }
 }

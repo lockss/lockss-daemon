@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: ConfigCache.java,v 1.5 2004-10-22 07:01:59 tlipkis Exp $
  */
 
 /*
@@ -54,12 +54,21 @@ public class ConfigCache {
 
 
   /**
-   * Retrieve a configuration file from the cache.
+   * Retrieve or create the ConfigFile for the url or file, loading or
+   * reloading it if necessary.
    */
   public ConfigFile get(String url) throws IOException {
     ensureLoaded(url);
     ConfigFile confFile = (ConfigFile)m_configMap.get(url);
     return confFile;
+  }
+
+  /**
+   * Return the ConfigFile for the url or file, without reloading it.
+   * @return the ConfigFile or null if no such
+   */
+  public ConfigFile justGet(String url) throws IOException {
+    return (ConfigFile)m_configMap.get(url);
   }
 
   /**
@@ -71,23 +80,27 @@ public class ConfigCache {
 
     if (m_configMap.containsKey(url)) {
       // already exists, just reload
-      log.debug2("Cache hit, reloading.");
+      log.debug2("Reloading " + url);
       ((ConfigFile)m_configMap.get(url)).reload();
     } else {
       // doesn't yet exist in the cache, attempt to add it.
-      log.debug2("Cache miss, trying to add new file.");
+      log.debug2("Adding " + url);
       try {
 	if (UrlUtil.isHttpUrl(url)) {
 	  cf = new HTTPConfigFile(url);
 	} else {
 	  cf = new FileConfigFile(url);
 	}	
+	// ensure the file is loaded
+	if (!cf.reload()) {
+	  log.warning("Configuration file not loaded: " + url);
+	}
 	m_configMap.put(url, cf);
       } catch (IOException ex) {
 	// If we catch any IO exception, remove the offending
 	// file from the cache.  The daemon will try to reload it
 	// at the next reload interval anyway.
-	log.debug2("Unable to load file, not caching: " + url);
+	log.debug2("Error loading, not caching " + url, ex);
 	remove(url);
 	throw ex;
       }

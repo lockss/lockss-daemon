@@ -1,5 +1,5 @@
 /*
- * $Id: FileConfigFile.java,v 1.1 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: FileConfigFile.java,v 1.2 2004-10-22 07:01:59 tlipkis Exp $
  */
 
 /*
@@ -44,9 +44,11 @@ import org.lockss.util.urlconn.*;
  */
 
 public class FileConfigFile extends ConfigFile {
+  private File m_fileFile;
 
   public FileConfigFile(String url) throws IOException {
     super(url);
+    m_fileFile = makeFile(url);
   }
 
   /**
@@ -56,7 +58,7 @@ public class FileConfigFile extends ConfigFile {
    * NB: Java 1.4 supports constructing File objects from a file: URI,
    * which will eliminate the need for this method.
    */
-  private File getFile(String file)
+  private File makeFile(String file)
       throws IOException, MalformedURLException {
     if (UrlUtil.isFileUrl(file)) {
       String fileLoc = file.substring("file:".length());
@@ -66,16 +68,26 @@ public class FileConfigFile extends ConfigFile {
     }
   }
 
+  /** Notify us that the file was just written, with these contents, so we
+   * can remember the modification time. */
+  // XXX ConfigFile should handle file writing internally
+  public void storedConfig(Configuration newConfig) throws IOException {
+    ConfigurationPropTreeImpl nc = new ConfigurationPropTreeImpl();
+    nc.copyFrom(newConfig);
+    m_config = nc;
+    m_lastModified = Long.toString(m_fileFile.lastModified());
+    log.debug2("storedConfig at: " + m_lastModified);
+  }
+
   /**
    * Load a config from a local file if it has changed on disk.
    */
   protected synchronized boolean reload() throws IOException {
-    File f = getFile(m_fileUrl);
 
     // The semantics of this are a bit odd, because File.lastModified()
     // returns a long, but we store it as a String.  We're not comparing,
     // just checking equality, so this should be OK
-    String lm = Long.toString(f.lastModified());
+    String lm = Long.toString(m_fileFile.lastModified());
 
     // Only reload the file if the last modified timestamp is different.
     if (!lm.equals(m_lastModified)) {
@@ -83,17 +95,18 @@ public class FileConfigFile extends ConfigFile {
 	if (m_lastModified == null) {
 	  log.debug2("No previous file loaded, loading: " + m_fileUrl);
 	} else {
-	  log.debug2("File has changed on disk, reloading: " + m_fileUrl);
+	  log.debug2("File has new time (" + m_lastModified +
+		     "), reloading: " + m_fileUrl);
 	}
       }
-      m_lastModified = Long.toString(f.lastModified());
+      m_lastModified = Long.toString(m_fileFile.lastModified());
       m_lastAttempt = TimeBase.nowMs();
       InputStream in = null;
       m_IOException = null;
 
       // Open an output stream to write to our string
       try {
-	in = new FileInputStream(f);
+	in = new FileInputStream(m_fileFile);
       } catch (FileNotFoundException ex) {
 	// Perfectly normal behavior for some local config files which
 	// may not exist.  Throw and let the ConfigCache worry about

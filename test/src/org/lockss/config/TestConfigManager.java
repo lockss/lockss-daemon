@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
+ * $Id: TestConfigManager.java,v 1.5 2004-10-22 07:01:58 tlipkis Exp $
  */
 
 /*
@@ -72,9 +72,15 @@ public class TestConfigManager extends LockssTestCase {
     "prop.p3.b=false\n" +
     "otherprop.p3.b=foo\n";
 
+  private ConfigFile loadFCF(String url) throws IOException {
+    ConfigFile cf = new FileConfigFile(url);
+    cf.reload();
+    return cf;
+  }
+
   public void testParam() throws IOException, Configuration.InvalidParam {
     Configuration config = mgr.newConfiguration();
-    config.load(new FileConfigFile(FileTestUtil.urlOfString(c2)));
+    config.load(loadFCF(FileTestUtil.urlOfString(c2)));
     mgr.setCurrentConfig(config);
     assertEquals("12", ConfigManager.getParam("prop.p1"));
     assertEquals("foobar", ConfigManager.getParam("prop.p2"));
