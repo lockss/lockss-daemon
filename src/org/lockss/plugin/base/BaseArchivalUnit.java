@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.8 2003-03-20 00:38:04 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.9 2003-03-26 23:14:35 tal Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.daemon.*;
  * Plugins may extend this to get some common ArchivalUnit functionality.
  */
 public abstract class BaseArchivalUnit implements ArchivalUnit {
-  private static final int
+  private static final long
     DEFAULT_MILLISECONDS_BETWEEN_CRAWL_HTTP_REQUESTS = 10 * Constants.SECOND;
 
   private Plugin plugin;

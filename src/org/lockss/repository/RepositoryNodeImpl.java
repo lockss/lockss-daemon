@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.18 2003-03-14 22:20:02 troberts Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.19 2003-03-26 23:14:35 tal Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.daemon.CachedUrlSetSpec;
  * meta-information of urls being cached.
  */
 public class RepositoryNodeImpl implements RepositoryNode {
-  static final int VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
+  static final long VERSION_TIMEOUT = 5 * Constants.HOUR; // 5 hours
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
   static final String CONTENT_DIR = "#content";
   static final String CURRENT_SUFFIX = ".current";

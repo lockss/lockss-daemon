@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.4 2003-03-21 07:31:44 tal Exp $
+ * $Id: TimeBase.java,v 1.5 2003-03-26 23:14:35 tal Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class TimeBase {
   }
 
   /** Step simulated time base by n ticks */
-  public static void step(int n) {
+  public static void step(long n) {
     if (!isSimulated) {
       throw new IllegalStateException("Can't step TimeBase when in real mode");
     }

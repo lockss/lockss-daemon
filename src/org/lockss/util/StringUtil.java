@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.17 2003-03-19 04:20:56 tal Exp $
+ * $Id: StringUtil.java,v 1.18 2003-03-26 23:14:35 tal Exp $
  */
 
 /*
@@ -386,7 +386,7 @@ public class StringUtil {
       int len = str.length();
       char suffix = str.charAt(len - 1);
       String numstr;
-      int mult = 1;
+      long mult = 1;
       if (Character.isDigit(suffix)) {
 	numstr = str;
       } else {

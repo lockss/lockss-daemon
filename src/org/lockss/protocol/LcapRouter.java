@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.3 2003-03-24 01:22:32 tal Exp $
+ * $Id: LcapRouter.java,v 1.4 2003-03-26 23:14:35 tal Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class LcapRouter extends BaseLockssManager {
 
 
   static final int defaultPktsPerInterval = 40;
-  static final int defaultPktInterval = 10 * Constants.SECOND;
+  static final long defaultPktInterval = 10 * Constants.SECOND;
 
   static Logger log = Logger.getLogger("Router");
 
@@ -110,10 +110,9 @@ public class LcapRouter extends BaseLockssManager {
   }
 
   private void setConfig(Configuration config, Set changedKeys) {
-    long interval = config.getTimeInterval(PARAM_PKTS_PER_INTERVAL,
-					   defaultPktsPerInterval);
-    int limit =
-      config.getInt(PARAM_PKT_INTERVAL, defaultPktInterval);
+    long interval = config.getTimeInterval(PARAM_PKT_INTERVAL,
+					   defaultPktInterval);
+    int limit = config.getInt(PARAM_PKTS_PER_INTERVAL, defaultPktsPerInterval);
     if (rateLimiter == null || rateLimiter.getInterval() != interval ||
 	rateLimiter.getLimit() != limit) {
       rateLimiter = new RateLimiter(limit, interval);
