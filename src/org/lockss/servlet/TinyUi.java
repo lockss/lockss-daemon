@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.6 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: TinyUi.java,v 1.7 2004-10-18 03:38:12 tlipkis Exp $
  */
 
 /*
@@ -54,13 +54,14 @@ import org.mortbay.html.*;
  * the application is running, so must not reply on any services.
  */
 public class TinyUi extends BaseServletManager {
+  public static final String SERVER_NAME = "TinyUi";
   private static Logger log = Logger.getLogger("TinyUi");
 
   private HashUserRealm realm;
   private String[] tinyData;
 
   public TinyUi() {
-    super("TinyUI");
+    super(SERVER_NAME);
   }
 
   public TinyUi(String[] tinyData) {

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.8 2004-09-27 22:39:09 smorabito Exp $
+ * $Id: BaseProxyManager.java,v 1.9 2004-10-18 03:38:12 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected String includeIps;
   protected String excludeIps;
   protected boolean logForbidden;
-  private ProxyAccessHandler accessHandler;
+  private IpAccessHandler accessHandler;
 
   /* ------- LockssManager implementation ------------------ */
   /**
@@ -102,13 +102,14 @@ public abstract class BaseProxyManager extends JettyManager {
     }
   }
 
-  /** Start a Jetty handler for the proxy */
+  /** Start a Jetty handler for the proxy.  May be called redundantly, or
+   * to change ports.  */
   protected void startProxy() {
     log.debug("StartProxy");
-    if (runningOnPort == port) {
+    if (isRunningOnPort(port)) {
       return;
     }
-    if (runningOnPort > 0) {
+    if (isServerRunning()) {
       stopProxy();
     }
     HttpServer server;

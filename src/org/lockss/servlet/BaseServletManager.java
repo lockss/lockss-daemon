@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.4 2004-09-27 22:39:06 smorabito Exp $
+ * $Id: BaseServletManager.java,v 1.5 2004-10-18 03:38:12 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,6 @@ public abstract class BaseServletManager extends JettyManager {
     "out", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
   };
 
-  protected String serverName;		// for identification in messages
   protected int port;
   private boolean start;
   private String includeIps;
@@ -100,10 +99,8 @@ public abstract class BaseServletManager extends JettyManager {
   List accessHandlers = new ArrayList();
 
   public BaseServletManager(String serverName) {
-    this.serverName = serverName;
+    super(serverName);
   }
-
-  /* ------- LockssManager implementation ------------------ */
 
   /** Start servlets  */
   public void startService() {

@@ -1,5 +1,5 @@
 /*
- * $Id: FailOverProxyManager.java,v 1.1 2004-10-06 04:45:02 tlipkis Exp $
+ * $Id: FailOverProxyManager.java,v 1.2 2004-10-18 03:38:12 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.mortbay.http.handler.*;
  * the proxied-for host and port explicitly configured.
  */
 public class FailOverProxyManager extends BaseProxyManager {
-
+  public static final String SERVER_NAME = "FailOverProxy";
   private static Logger log = Logger.getLogger("FailOverProxy");
   public static final String PREFIX = Configuration.PREFIX + "proxy.failover.";
   public static final String PARAM_START = PREFIX + "start";
@@ -58,6 +58,10 @@ public class FailOverProxyManager extends BaseProxyManager {
   public static final String PARAM_PORT = PREFIX + "port";
 
   private String target;
+
+  protected String getServerName() {
+    return SERVER_NAME;
+  }
 
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
@@ -76,7 +80,7 @@ public class FailOverProxyManager extends BaseProxyManager {
       target = config.get(PARAM_TARGET);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
       if (start) {
-	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
+	if (getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}
       } else if (isServerRunning()) {
