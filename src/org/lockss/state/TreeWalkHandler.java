@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.45 2003-11-15 00:50:37 eaalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.46 2003-11-18 00:05:37 eaalto Exp $
  */
 
 /*
@@ -231,8 +231,9 @@ public class TreeWalkHandler {
       } catch (Exception e) {
         logger.error("Error in treewalk: ", e);
       } finally {
-        if (!activityLock.isExpired()) {
-          // release the lock
+        if ((activityLock.getActivity() == ActivityRegulator.TREEWALK) &&
+            !activityLock.isExpired()) {
+          // release the lock on the treewalk
           activityLock.expire();
         }
         treeWalkAborted = false;
@@ -360,15 +361,17 @@ public class TreeWalkHandler {
   long timeUntilTreeWalkStart() {
     // if treewalk is forced
     if (forceTreeWalk) {
-      logger.debug("Forcing treewalk start-in time of -1.");
+      logger.debug("Forcing treewalk start-in time of 0.");
       forceTreeWalk = false;
-      return -1;
+      return 0;
     }
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
     long timeSinceLastTW = TimeBase.msSince(lastTreeWalkTime);
     logger.debug3(StringUtil.timeIntervalToString(timeSinceLastTW) +
                   " since last treewalk");
-    return treeWalkInterval - timeSinceLastTW;
+    return (treeWalkInterval > timeSinceLastTW
+            ? treeWalkInterval - timeSinceLastTW
+            : 0);
   }
 
   /*
@@ -499,7 +502,8 @@ public class TreeWalkHandler {
                             startDeadline.toString());
               break;
             } else {
-	      if (startDeadline.getExpirationTime() > (3 * Constants.WEEK)) {
+	      if (TimeBase.msSince(startDeadline.getExpirationTime()) >
+                  (3 * Constants.WEEK)) {
 		// If can't fit it into schedule in next 3 weeks, give up
 		// and try again in an hour.  Prevents infinite looping
 		// trying to create a schedule.
