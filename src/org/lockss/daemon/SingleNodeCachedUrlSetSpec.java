@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.4 2003-06-03 22:08:06 tal Exp $
+ * $Id: SingleNodeCachedUrlSetSpec.java,v 1.5 2003-06-06 05:55:25 tal Exp $
  */
 
 /*
@@ -42,8 +42,13 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   /**
    * Create a SingleNodeCachedUrlSetSpec
    * @param url the url
+   * @throws NullPointerException if the url is null
    */
   public SingleNodeCachedUrlSetSpec(String url) {
+    if (url == null) {
+      throw
+	new NullPointerException("SingleNodeCachedUrlSetSpec with null URL");
+    }
     this.url = url;
   }
 
