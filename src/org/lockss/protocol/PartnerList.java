@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.10 2003-04-03 11:34:29 tal Exp $
+ * $Id: PartnerList.java,v 1.11 2003-04-23 20:33:39 tal Exp $
  */
 
 /*
@@ -140,6 +140,9 @@ class PartnerList {
 	(TimeBase.msSince(lastRcv.longValue()) < recentMulticastInterval)) {
       return;
     }
+    if (log.isDebug() && !partners.containsKey(partnerIP)) {
+      log.debug("Adding partner " + partnerIP);
+    }
     partners.put(partnerIP, nowLong());
     if (TimeBase.msSince(lastPartnerRemoveTime) > minPartnerRemoveInterval) {
       removeLeastRecent();
@@ -168,6 +171,7 @@ class PartnerList {
    */
   public void removePartner(InetAddress partnerIP) {
     if (partners.containsKey(partnerIP)) {
+      log.debug("Removing partner " + partnerIP);
       partners.remove(partnerIP);
       lastPartnerRemoveTime = TimeBase.nowMs();
     }
