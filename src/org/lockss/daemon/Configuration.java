@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.3 2002-09-05 22:13:34 tal Exp $
+ * $Id: Configuration.java,v 1.4 2002-09-09 20:29:54 tal Exp $
  */
 
 /*
@@ -58,7 +58,6 @@ public abstract class Configuration {
 
   private static List configChangedCallbacks = new ArrayList();
 
-  private static String configUrls;	// <sp> separated string of urls
   private static List configUrlList;	// list of urls
 
   // Current configuration instance.
@@ -88,16 +87,19 @@ public abstract class Configuration {
 			   Configuration newConfig) {
     for (Iterator iter = configChangedCallbacks.iterator();
 	 iter.hasNext();) {
-      ConfigurationCallback c = (ConfigurationCallback)iter.next();
+      Callback c = (Callback)iter.next();
       c.configurationChanged(oldConfig, newConfig,
 			     newConfig.differentKeys(oldConfig));
     }
   }
 
-  void setConfigUrls(String urls) {
-    configUrls = urls;
+  static void setConfigUrls(List urls) {
+    configUrlList = new ArrayList(urls);
+  }
+
+  static void setConfigUrls(String urls) {
     configUrlList = new ArrayList();
-    for (StringTokenizer st = new StringTokenizer(configUrls);
+    for (StringTokenizer st = new StringTokenizer(urls);
 	 st.hasMoreElements(); ) {
       String url = st.nextToken();
       configUrlList.add(url);
@@ -127,7 +129,7 @@ public abstract class Configuration {
       return false;
     }
     Configuration oldConfig = currentConfig;
-    if (newConfig.equals(oldConfig)) {
+    if (!oldConfig.isEmpty() && newConfig.equals(oldConfig)) {
       log.info("Config unchanged, not updated");
       return false;
     }
@@ -138,23 +140,23 @@ public abstract class Configuration {
   }
 
   /**
-   * Register a <code>ConfigurationCallback</code>, which will be
+   * Register a <code>Configuration.Callback</code>, which will be
    * called whenever the current configuration has changed.
-   * @param c <code>ConfigurationCallback</code> to add.
+   * @param c <code>Configuration.Callback</code> to add.
    */
   public static void
-    registerConfigurationCallback(ConfigurationCallback c) {
+    registerConfigurationCallback(Callback c) {
     if (!configChangedCallbacks.contains(c)) {
       configChangedCallbacks.add(c);
     }
   }
       
   /**
-   * Unregister a <code>ConfigurationCallback</code>.
-   * @param c <code>ConfigurationCallback</code> to remove.
+   * Unregister a <code>Configuration.Callback</code>.
+   * @param c <code>Configuration.Callback</code> to remove.
    */
   public static void
-    unregisterConfigurationCallback(ConfigurationCallback c) {
+    unregisterConfigurationCallback(Callback c) {
     configChangedCallbacks.remove(c);
   }
 
@@ -171,7 +173,7 @@ public abstract class Configuration {
 	load(url);
       } catch (IOException e) {
 	// This load failed.  Fail the whole thing.
-	log.warning("Couldn't load props from " + url, e);
+	log.warning("Couldn't load props from " + url + ": " + e.toString());
 	reset();			// ensure config is empty
 	return false;
       }
@@ -188,6 +190,11 @@ public abstract class Configuration {
       throws IOException;
 
   abstract Set differentKeys(Configuration otherConfig);
+
+  /** Return true iff config has no keys/ */
+  public boolean isEmpty() {
+    return !(keyIterator().hasNext());
+  }
 
   /** Return the config value associated with <code>key</code>.
    * If the value is null or the key is missing, return <code>dfault</code>.
@@ -386,6 +393,11 @@ public abstract class Configuration {
     return currentConfig.nodeIterator(key);
   }
 
+  public static void startHandler(List urls) {
+    setConfigUrls(urls);
+    startHandler();
+  }
+
   public static void startHandler() {
     if (handlerThread != null) {
       log.warning("Handler already running; stopping old one first");
@@ -438,6 +450,7 @@ public abstract class Configuration {
 	}
 	ProbabilisticTimer nextReload =
 	  new ProbabilisticTimer(reloadInterval, reloadInterval/4);
+	log.info(nextReload.toString());
 	if (goOn) {
 	  nextReload.sleepUntil();
 	}
@@ -448,6 +461,24 @@ public abstract class Configuration {
       goOn = false;
       this.interrupt();
     }
+  }
+
+  /**
+   * The <code>Configuration.Callback</code> interface defines the
+   * callback registered by clients of <code>Configuration</code>
+   * who want to know when the configuration has changed.
+   */
+  public interface Callback {
+    /**
+     * Called to indicate that something in the configuration has changed.
+     * It is called after the new config is installed as current.
+     * @param newConfig  the new (just installed) <code>Configuration</code>.
+     * @param oldConfig  the previous <code>Configuration</code>.
+     * @param changedKeys  the set of keys whose value has changed.
+     */
+    public void configurationChanged(Configuration oldConfig,
+				     Configuration newConfig,
+				     Set changedKeys);
   }
 
   /** Exception thrown for errors in accessors. */
