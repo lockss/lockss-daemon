@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.1 2003-04-03 05:22:02 claire Exp $
+ * $Id: NodeManagerStatus.java,v 1.2 2003-04-05 04:03:42 claire Exp $
  */
 
 /*
@@ -30,6 +30,7 @@ import org.lockss.daemon.status.*;
 import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.poller.*;
 
 /**
  * Collect and report the status of the NodeManager
@@ -37,8 +38,10 @@ import org.lockss.util.*;
  * @version 1.0
  */
 public class NodeManagerStatus {
-  public static final String SERVICE_STATUS_TABLE_NAME = "NodeManagerServiceTable";
+  public static final String SERVICE_STATUS_TABLE_NAME =
+      "NodeManagerServiceTable";
   public static final String MANAGER_STATUS_TABLE_NAME = "NodeManagerTable";
+  public static final String POLLHISTORY_STATUS_TABLE_NAME = "PollHistoryTable";
 
   private static NodeManagerServiceImpl managerService;
 
@@ -46,9 +49,24 @@ public class NodeManagerStatus {
     managerService = impl;
   }
 
+  private static NodeManagerImpl getNodeManager(String key) throws
+      StatusService.
+      NoSuchTableException {
 
+    Iterator entries = managerService.getEntries();
+    while (entries.hasNext()) {
+      Map.Entry entry = (Map.Entry) entries.next();
+      NodeManager manager = (NodeManager) entry.getValue();
+      if (manager.getAuState().au.getAUId().equals(key)) {
+        return (NodeManagerImpl) manager;
+      }
+    }
+    throw new StatusService.NoSuchTableException("No NodeManager for ID " +
+                                                 key);
+  }
 
-  static class ServiceStatus implements StatusAccessor {
+  static class ServiceStatus
+      implements StatusAccessor {
     static final String TABLE_TITLE = "NodeManager Service Table";
 
     private static final List columnDescriptors = ListUtil.list
@@ -89,10 +107,12 @@ public class NodeManagerStatus {
       List rowL = new ArrayList();
       Iterator entries = managerService.getEntries();
       while (entries.hasNext()) {
-        Map.Entry entry = (Map.Entry)entries.next();
-        NodeManager manager = (NodeManager)entry.getValue();
+        Map.Entry entry = (Map.Entry) entries.next();
+        NodeManager manager = (NodeManager) entry.getValue();
         if (key == null || matchKey(manager, key)) {
-          rowL.add(makeRow(manager));
+          if(manager.getAuState() != null) {
+            rowL.add(makeRow(manager));
+          }
         }
       }
       return rowL;
@@ -121,8 +141,8 @@ public class NodeManagerStatus {
     }
   }
 
-
-  static class ManagerStatus implements StatusAccessor {
+  static class ManagerStatus
+      implements StatusAccessor {
 
     static final String TABLE_TITLE = "NodeManager Status Table";
 
@@ -135,7 +155,7 @@ public class NodeManagerStatus {
         new ColumnDescriptor("CrawlStatus", "Crawl Status",
                              ColumnDescriptor.TYPE_STRING),
         new ColumnDescriptor("NumPolls", "Polls Run",
-                            ColumnDescriptor.TYPE_INT),
+                             ColumnDescriptor.TYPE_INT),
         new ColumnDescriptor("ActivePolls", "Active Polls",
                              ColumnDescriptor.TYPE_INT),
         new ColumnDescriptor("PollTime", "Last Poll",
@@ -153,7 +173,6 @@ public class NodeManagerStatus {
          new StatusTable.SortRule("URL", true)
          );
 
-
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
       String key = table.getKey();
@@ -163,7 +182,6 @@ public class NodeManagerStatus {
       table.setColumnDescriptors(columnDescriptors);
       table.setDefaultSortRules(sortRules);
       table.setRows(getRows(nodeManager));
-      //table.setSummaryInfo(getSummary(nodeManager));
     }
 
     public boolean requiresKey() {
@@ -172,22 +190,21 @@ public class NodeManagerStatus {
 
     // utility methods for making a Reference
 
-    public static StatusTable.Reference makeNodeManagerRef(Object value, String key) {
+    public static StatusTable.Reference makeNodeManagerRef(Object value,
+        String key) {
       return new StatusTable.Reference(value, MANAGER_STATUS_TABLE_NAME, key);
     }
 
     private List getRows(NodeManagerImpl nodeManager) {
       Iterator entries = nodeManager.getCacheEntries();
+      String auId = nodeManager.getAuState().getArchivalUnit().getAUId();
       ArrayList entriesL = new ArrayList();
       while (entries.hasNext()) {
-        Map.Entry entry = (Map.Entry) entries.next();
-        String key = (String) entry.getKey();
-        NodeState state = (NodeState) entry.getValue();
-        entriesL.add(makeRow(state));
+        NodeState state = (NodeState) entries.next();
+        entriesL.add(makeRow(auId, state));
       }
       return entriesL;
     }
-
 
     private String getTitle(String key) {
       return "NodeManager Table for Archival Unit " + key;
@@ -201,40 +218,42 @@ public class NodeManagerStatus {
       }
     }
 
-    private NodeManagerImpl getNodeManager(String key) throws StatusService.
-        NoSuchTableException {
-
-      Iterator entries = managerService.getEntries();
-      while (entries.hasNext()) {
-        Map.Entry entry = (Map.Entry) entries.next();
-        NodeManager manager = (NodeManager) entry.getValue();
-        if (manager.getAuState().au.getAUId().equals(key)) {
-          return (NodeManagerImpl)manager;
-        }
-      }
-      throw new StatusService.NoSuchTableException("No NodeManager for ID " +
-          key);
-    }
-
-    private Map makeRow(NodeState state) {
+    private Map makeRow(String auId, NodeState state) {
       HashMap rowMap = new HashMap();
+      String url = state.getCachedUrlSet().getUrl();
       // URL
-      rowMap.put("URL", state.getCachedUrlSet().getUrl());
+      rowMap.put("URL", url);
+
       CrawlState crawl_state = state.getCrawlState();
       // CrawlTime
-      rowMap.put("CrawlTime",new Long(crawl_state.getStartTime()));
+      rowMap.put("CrawlTime", new Long(crawl_state.getStartTime()));
       // CrawlType
-      rowMap.put("CrawlType",crawl_state.getTypeString());
+      rowMap.put("CrawlType", crawl_state.getTypeString());
       // CrawlStatus
       rowMap.put("CrawlStatus", crawl_state.getStatusString());
-      // ActivePolls
-      rowMap.put("ActivePolls",new Integer(getActivePolls(state).size()));
-      // NumPolls
-      rowMap.put("NumPolls",new Integer(getPollHistories(state).size()));
+
+      // ActivePolls with a reference to a active poll history table
+      StatusTable.Reference ref = PollHistoryStatus.makeNodeRef(
+          new Integer(getActivePolls(state).size()),
+          auId,
+          url,
+          PollHistoryStatus.ACTIVE_POLLS_FILTER);
+      rowMap.put("ActivePolls", ref);
+
+      // NumPolls with a reference to a all poll history table
+      ref = PollHistoryStatus.makeNodeRef(
+          new Integer(getPollHistories(state).size()),
+          auId,
+          url,
+          PollHistoryStatus.ALL_POLLS_FILTER);
+      rowMap.put("NumPolls", ref);
+
+      // our most recent poll data
       PollHistory poll_history = state.getLastPollHistory();
-      if(poll_history != null) {
+      if (poll_history != null) {
         // PollTime
-        rowMap.put("PollTime", poll_history.getDeadline());
+        rowMap.put("PollTime",
+                   new Long(poll_history.getStartTime()));
         // PollType
         rowMap.put("PollType", poll_history.getTypeString());
         // PollRange
@@ -243,7 +262,7 @@ public class NodeManagerStatus {
         rowMap.put("PollStatus", poll_history.getStatusString());
       }
       else {
-        rowMap.put("PollTime",new Long(0));
+        rowMap.put("PollTime", new Long(0));
       }
 
       return rowMap;
@@ -267,6 +286,165 @@ public class NodeManagerStatus {
         historiesL.add(history);
       }
       return historiesL;
+    }
+  }
+
+  static class PollHistoryStatus
+      implements StatusAccessor {
+    static final String TABLE_TITLE = "Node Poll History Table";
+
+    public static String ALL_POLLS_FILTER = "ALLPOLLS:";
+    public static String ACTIVE_POLLS_FILTER = "ACTIVEPOLLS:";
+
+    private static final List columnDescriptors = ListUtil.list(
+        new ColumnDescriptor("StartTime", "Start Time",
+                             ColumnDescriptor.TYPE_DATE),
+        new ColumnDescriptor("Duration", "Duration",
+                             ColumnDescriptor.TYPE_TIME_INTERVAL),
+        new ColumnDescriptor("Type", "Type",
+                             ColumnDescriptor.TYPE_STRING),
+        new ColumnDescriptor("Range", "Range",
+                             ColumnDescriptor.TYPE_STRING),
+        new ColumnDescriptor("Status", "Status",
+                             ColumnDescriptor.TYPE_STRING),
+        new ColumnDescriptor("NumAgree", "Agree",
+                             ColumnDescriptor.TYPE_INT),
+        new ColumnDescriptor("NumDisagree", "Disagree",
+                             ColumnDescriptor.TYPE_INT)
+        );
+
+    private static final List sortRules = ListUtil.list
+        (new StatusTable.SortRule("StartTime", false)
+         );
+
+    public void populateTable(StatusTable table) throws StatusService.
+        NoSuchTableException {
+      String key = table.getKey();
+      String filter = getPollFilterFromKey(key);
+      NodeManagerImpl nodeManager = getNodeManagerFromKey(key, filter);
+      NodeState nodeState = getNodeStateFromKey(nodeManager, key);
+
+      table.setTitle(getTitle(nodeState));
+      table.setColumnDescriptors(columnDescriptors);
+      table.setDefaultSortRules(sortRules);
+      table.setRows(getRows(nodeState, filter));
+    }
+
+    public boolean requiresKey() {
+      return true;
+    }
+
+    // utility methods for making a Reference
+
+    public static StatusTable.Reference makeNodeRef(Object value,
+        String auId, String url, String filter) {
+      StringBuffer key_buf = new StringBuffer(ACTIVE_POLLS_FILTER);
+      key_buf.append(auId);
+      key_buf.append("&");
+      key_buf.append(url);
+      return new StatusTable.Reference(value,
+                                       POLLHISTORY_STATUS_TABLE_NAME,
+                                       key_buf.toString());
+    }
+
+    // support for completing the table
+    private List getRows(NodeState state, String filter) {
+      Iterator histories;
+      ArrayList entriesL = new ArrayList();
+
+      if (filter.equals(ACTIVE_POLLS_FILTER)) {
+        histories = state.getActivePolls();
+      }
+      else {
+        histories = state.getPollHistories();
+        while (histories.hasNext()) {
+          PollState history = (PollState) histories.next();
+          entriesL.add(makeRow(history));
+        }
+      }
+      return entriesL;
+    }
+
+    private String getTitle(NodeState state) {
+      return "Poll History at Node " + state.getCachedUrlSet().getUrl();
+    }
+
+    private Map makeRow(PollState history) {
+      HashMap rowMap = new HashMap();
+      // PollTime
+      rowMap.put("StartTime", new Long(history.getStartTime()));
+      long duration = 0;
+      if(history instanceof PollHistory) {
+        // Duration
+        duration = ((PollHistory)history).getDuration();
+      }
+      rowMap.put("Duration", new Long(duration));
+     // PollType
+      rowMap.put("Type", history.getTypeString());
+      // PollRange
+      rowMap.put("Range", history.getRangeString());
+      // PollStatus
+      rowMap.put("Status", history.getStatusString());
+
+      int agree = 0;
+      int disagree = 0;
+
+      if(history instanceof PollHistory) {
+        Iterator votes = ((PollHistory)history).getVotes();
+        while (votes.hasNext()) {
+          Vote vote = (Vote) votes.next();
+          if (vote.isAgreeVote()) {
+            agree++;
+          }
+          else {
+            disagree++;
+          }
+        }
+     }
+     // YesVotes
+     rowMap.put("NumAgree", new Integer(agree));
+     // NoVotes
+     rowMap.put("NumDisagree", new Integer(disagree));
+
+      return rowMap;
+    }
+
+    // key support
+
+    private String getPollFilterFromKey(String key) throws
+        StatusService.NoSuchTableException {
+      if (key.startsWith(ALL_POLLS_FILTER)) {
+        return ALL_POLLS_FILTER;
+      }
+      else if (key.startsWith(ACTIVE_POLLS_FILTER)) {
+        return ACTIVE_POLLS_FILTER;
+      }
+      else {
+        throw new StatusService.NoSuchTableException("Unknown filter for key: " + key);
+      }
+    }
+
+    private NodeManagerImpl getNodeManagerFromKey(String key, String filter) throws
+        StatusService.NoSuchTableException {
+      int pos = filter.length();
+
+      String au_id = key.substring(pos, key.lastIndexOf("&"));
+
+      return getNodeManager(au_id);
+    }
+
+    private NodeState getNodeStateFromKey(NodeManager nodeManager, String key) throws
+        StatusService.NoSuchTableException {
+      int pos = key.lastIndexOf("&");
+      String url = key.substring(pos + 1);
+      ArchivalUnit au = nodeManager.getAuState().getArchivalUnit();
+      CachedUrlSet cus = au.makeCachedUrlSet(url, null, null);
+      NodeState state = nodeManager.getNodeState(cus);
+      if (state == null) {
+        throw new StatusService.NoSuchTableException("No Node State for "
+            + key);
+      }
+      return state;
     }
   }
 }
