@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbabilisticTimer.java,v 1.1 2002-09-02 04:12:17 tal Exp $
+ * $Id: TestProbabilisticTimer.java,v 1.2 2002-09-09 20:32:41 tal Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public class TestProbabilisticTimer extends TestCase {
   public static Class testedClasses[] = {
     org.lockss.util.ProbabilisticTimer.class
   };
+  static final int MAX_DURATION = 9999999;
 
   public TestProbabilisticTimer(String msg) {
     super(msg);
@@ -53,29 +54,29 @@ public class TestProbabilisticTimer extends TestCase {
 
   public void testDuration() {
     Random random = new Random();
-    // with no range, delay should always be the same
+    // with no range, duration should always be the same
     for (int ix = 0; ix < 5; ix++) {
-      int r = random.nextInt();
+      int r = random.nextInt(MAX_DURATION);
       ProbabilisticTimer p = new ProbabilisticTimer(r);
-      assertEquals(r, p.getDelay());
+      assertEquals(r, p.getDuration());
     }
-    // with a range, delay should be within the right range, and
+    // with a range, duration should be within the right range, and
     // should not always be the same.
     for (int ix = 0; ix < 5; ix++) {
-      int r = random.nextInt();
-      ProbabilisticTimer p0 = new ProbabilisticTimer(r, 100.0);
+      int r = random.nextInt(MAX_DURATION);
+      ProbabilisticTimer p0 = new ProbabilisticTimer(r, 1000.0);
       boolean differs = false;
       for (int rpt = 0; rpt < 10; rpt++) {
-	ProbabilisticTimer p = new ProbabilisticTimer(r, 100.0);
-	long pd = p.getDelay();
-	assertTrue(pd > (r - 1000) && pd < (r + 1000));
-	if (p0.getDelay() != pd) {
+	ProbabilisticTimer p = new ProbabilisticTimer(r, 1000.0);
+	long pd = p.getDuration();
+	assertTrue(pd > (r - 10000) && pd < (r + 10000));
+	if (p0.getDuration() != pd) {
 	  differs = true;
 	}
       }
       if (!differs) {
 	fail("10 instances of new ProbabilisticTimer(" + r + ", 100.0)" +
-	     " all had the same delay: " + p0.getDelay());
+	     " all had the same duration: " + p0.getDuration());
       }
     }
   }
