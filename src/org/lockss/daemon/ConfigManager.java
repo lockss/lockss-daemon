@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.15 2004-01-03 06:16:31 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.16 2004-01-14 05:24:30 tlipkis Exp $
  */
 
 /*
@@ -255,8 +255,8 @@ public class ConfigManager implements LockssManager {
   }
 
   void runCallbacks(Configuration newConfig,
-		    Configuration oldConfig) {
-    Set diffs = newConfig.differentKeys(oldConfig);
+		    Configuration oldConfig,
+		    Set diffs) {
     // copy the list of callbacks as it could change during the loop.
     List cblist = new ArrayList(configChangedCallbacks);
     for (Iterator iter = cblist.iterator(); iter.hasNext();) {
@@ -304,13 +304,15 @@ public class ConfigManager implements LockssManager {
       return false;
     }
     setCurrentConfig(newConfig);
-    logConfigLoaded(newConfig, loadedCacheFiles);
-    runCallbacks(newConfig, oldConfig);
+    Set diffs = newConfig.differentKeys(oldConfig);
+    logConfigLoaded(newConfig, diffs, loadedCacheFiles);
+    runCallbacks(newConfig, oldConfig, diffs);
     haveConfig.fill();
     return true;
   }
 
   private void logConfigLoaded(Configuration newConfig,
+			       Set diffs,
 			       List loadedCacheFiles) {
     StringBuffer sb = new StringBuffer("Config updated");
     if (configUrlList != null || loadedCacheFiles != null) {
@@ -325,7 +327,7 @@ public class ConfigManager implements LockssManager {
     }
     log.info(sb.toString());
     if (log.isDebug()) {
-      logConfig(newConfig);
+      logConfig(newConfig, diffs);
     }
   }
 
@@ -406,11 +408,11 @@ public class ConfigManager implements LockssManager {
   }
 
 
-  private void logConfig(Configuration config) {
-    SortedSet keys = new TreeSet();
-    for (Iterator iter = config.keyIterator(); iter.hasNext(); ) {
-      keys.add((String)iter.next());
-    }
+  private void logConfig(Configuration config, Set diffs) {
+    SortedSet keys = new TreeSet(diffs);
+//     for (Iterator iter = config.keyIterator(); iter.hasNext(); ) {
+//       keys.add((String)iter.next());
+//     }
     for (Iterator iter = keys.iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       if (log.isDebug2() || !key.startsWith(PARAM_TITLE_DB)) {
