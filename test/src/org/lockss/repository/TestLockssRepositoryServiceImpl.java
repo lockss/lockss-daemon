@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryServiceImpl.java,v 1.6 2003-04-16 02:23:06 aalto Exp $
+ * $Id: TestLockssRepositoryServiceImpl.java,v 1.7 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -65,9 +65,8 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
   }
 
   public void testAuKey() {
-    String expectedStr = mau.getPluginId() + ":" + mau.getAUId();
+    String expectedStr = mau.getAUId();
     assertEquals(expectedStr, lrsi.getAuKey(mau));
-    assertEquals(expectedStr, lrsi.makeAuKey(mau.getPluginId(), mau.getAUId()));
   }
 
   public void testGetNewPluginDir() {
@@ -104,7 +103,6 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
 
   public void testSaveAndLoadNames() {
     Properties newProps = new Properties();
-    newProps.setProperty(lrsi.PLUGIN_ID_PROP, mau.getPluginId());
     newProps.setProperty(lrsi.AU_ID_PROP, mau.getAUId());
 
     HashMap newNameMap = new HashMap();
@@ -118,13 +116,11 @@ public class TestLockssRepositoryServiceImpl extends LockssTestCase {
 
     newProps = lrsi.getAuIdProperties(location);
     assertNotNull(newProps);
-    assertEquals(mau.getPluginId(), newProps.getProperty(lrsi.PLUGIN_ID_PROP));
     assertEquals(mau.getAUId(), newProps.getProperty(lrsi.AU_ID_PROP));
   }
 
   public void testLoadNameMap() {
     Properties newProps = new Properties();
-    newProps.setProperty(lrsi.PLUGIN_ID_PROP, mau.getPluginId());
     newProps.setProperty(lrsi.AU_ID_PROP, mau.getAUId());
     String location = lrsi.cacheLocation + File.separator + "ab";
     lrsi.saveAuIdProperties(location, newProps);

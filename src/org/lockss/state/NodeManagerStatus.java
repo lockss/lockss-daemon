@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerStatus.java,v 1.3 2003-04-15 01:27:00 aalto Exp $
+ * $Id: NodeManagerStatus.java,v 1.4 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -70,9 +70,7 @@ public class NodeManagerStatus {
       implements StatusAccessor {
     static final String TABLE_TITLE = "NodeManager Service Table";
 
-    private static final List columnDescriptors = ListUtil.list
-        (new ColumnDescriptor("PluginID", "Plugin ID",
-                              ColumnDescriptor.TYPE_STRING),
+    private static final List columnDescriptors = ListUtil.list(
          new ColumnDescriptor("AuID", "AU ID", ColumnDescriptor.TYPE_STRING),
          new ColumnDescriptor("CrawlTime", "Last Crawl Time",
                               ColumnDescriptor.TYPE_DATE),
@@ -82,10 +80,8 @@ public class NodeManagerStatus {
                               ColumnDescriptor.TYPE_DATE)
          );
 
-    private static final List sortRules = ListUtil.list
-        (new StatusTable.SortRule("PluginID", true),
-         new StatusTable.SortRule("AuID", true)
-         );
+    private static final List sortRules = 
+      ListUtil.list(new StatusTable.SortRule("AuID", true));
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
@@ -123,11 +119,6 @@ public class NodeManagerStatus {
       HashMap rowMap = new HashMap();
       AuState state = manager.getAuState();
       ArchivalUnit au = state.getArchivalUnit();
-
-      //"PluginID"
-      String shortID = au.getPluginId();
-      shortID = shortID.substring(shortID.lastIndexOf('|') + 1);
-      rowMap.put("PluginID", shortID);
 
       //"AuID"
       rowMap.put("AuID", ManagerStatus.makeNodeManagerRef(au.getAUId(),

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.13 2003-04-17 00:28:10 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.14 2003-04-17 02:16:57 troberts Exp $
  */
 
 /*
@@ -272,8 +272,7 @@ public class TestTreeWalkHandler extends LockssTestCase {
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec(mau.getPluginId(),
-                       mau.getAUId(),
+          new PollSpec(mau.getAUId(),
                        url, "lwr", "upr", null),
           null,
           bytes,

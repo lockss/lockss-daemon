@@ -22,7 +22,6 @@ public class TestLcapIdentity extends LockssTestCase {
   private static String urlstr = "http://www.test.org";
   private static String lwrbnd = "test1.doc";
   private static String uprbnd = "test3.doc";
-  private static String pluginid = "testplugin 1.0";
   private static String archivalid = "testarchive 1.0";
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
@@ -47,8 +46,7 @@ public class TestLcapIdentity extends LockssTestCase {
     testReputation = IdentityManager.INITIAL_REPUTATION;
     testIdKey = LcapIdentity.makeIdKey(testAddress);
     try {
-      PollSpec spec = new PollSpec(pluginid, archivalid, urlstr,
-				   lwrbnd, uprbnd,null);
+      PollSpec spec = new PollSpec(archivalid, urlstr, lwrbnd, uprbnd,null);
       testMsg = LcapMessage.makeRequestMsg(spec,
           testentries,
           testbytes,

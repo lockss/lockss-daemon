@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.15 2003-04-17 00:55:50 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.16 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String toString() {
-    return "[BAU: "+getPluginId()+":"+getAUId()+"]";
+    return "[BAU: "+getAUId()+"]";
   }
 
   /**

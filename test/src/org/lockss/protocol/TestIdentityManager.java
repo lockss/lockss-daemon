@@ -23,7 +23,6 @@ public class TestIdentityManager extends LockssTestCase {
   private static byte[] testbytes = {1,2,3,4,5,6,7,8,9,10};
   private static String[] testentries = {"test1.doc",
                                          "test2.doc", "test3.doc"};
-  private static String pluginid = "testplugin 1.0";
 
   private MockLockssDaemon theDaemon;
   private IdentityManager idmgr;

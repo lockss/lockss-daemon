@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.2 2003-04-17 00:55:51 troberts Exp $
+* $Id: CuUrl.java,v 1.3 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -82,14 +82,11 @@ public class CuUrl {
   public static URL fromCu(ArchivalUnit au, CachedUrl cu)
       throws MalformedURLException {
     String auId = au.getAUId();
-    String pluginId = au.getPluginId();
     String url = cu.getUrl();
     if (log.isDebug3()) {
-      log.debug3("fromCu("+cu+"): pid: " + pluginId + ", auid: " + auId +
-		 ", url: " + url);
+      log.debug3("fromCu("+cu+"): auid: " + auId +", url: " + url);
     }
-    URL res = new URL(PROTOCOL, (pluginId + "!" + auId),
-		      "/" + URLEncoder.encode(url));
+    URL res = new URL(PROTOCOL, auId, "/" + URLEncoder.encode(url));
     return res;
   }
 
@@ -98,7 +95,6 @@ public class CuUrl {
 
     private String urlString;		// string representation of our URL
 
-    private String pluginId;
     private String auId;
     private String cachedUrlString;
     private CachedUrl cu;
@@ -124,17 +120,7 @@ public class CuUrl {
 	log.debug3("spec:" + spec);
 	log.debug3("cachedUrlString:" + cachedUrlString);
       }
-      int pos = id.indexOf('!');
-      if (pos == -1) {
-	throw new MalformedURLException("no ! found in url host:" + url);
-      }
-
-      try {
-	pluginId = id.substring(0, pos++);
-	auId = id.substring(pos, id.length());
-      } catch (Exception e) {
-	throw new MalformedURLException(e.toString());
-      }
+      auId = id;
     }
 
     /** Look up the CachedUrl */

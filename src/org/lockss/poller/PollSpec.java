@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.9 2003-04-16 05:56:22 aalto Exp $
+ * $Id: PollSpec.java,v 1.10 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -50,7 +50,6 @@ public class PollSpec {
   public static final String SINGLE_NODE_LWRBOUND = ".";
 
   private String auId;
-  private String pluginId;
   private String url;
   private String uprBound = null;
   private String lwrBound = null;
@@ -60,16 +59,14 @@ public class PollSpec {
   /**
    * constructor for a "mock" poll spec
    * @param auId the archival unit id
-   * @param pluginId the plugin id
    * @param url the url
    * @param lwrBound the lower bound of the url
    * @param uprBound the upper bound of the url
    * @param cus the cached url set
    */
-  public PollSpec(String pluginId, String auId, String url,
+  public PollSpec(String auId, String url,
                   String lwrBound, String uprBound, CachedUrlSet cus) {
     this.auId = auId;
-    this.pluginId = pluginId;
     this.url = url;
     this.uprBound = uprBound;
     this.lwrBound = lwrBound;
@@ -87,7 +84,6 @@ public class PollSpec {
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
     auId = au.getAUId();
-    pluginId = au.getPluginId();
     CachedUrlSetSpec cuss = cus.getSpec();
     url = cuss.getUrl();
     this.lwrBound = lwrBound;
@@ -102,7 +98,6 @@ public class PollSpec {
     this.cus = cus;
     ArchivalUnit au = cus.getArchivalUnit();
     auId = au.getAUId();
-    pluginId = au.getPluginId();
     CachedUrlSetSpec cuss = cus.getSpec();
     url = cuss.getUrl();
     if (cuss instanceof RangeCachedUrlSetSpec) {
@@ -122,7 +117,6 @@ public class PollSpec {
    */
   public PollSpec(LcapMessage msg) {
     auId = msg.getArchivalID();
-    pluginId = msg.getPluginID();
     url = msg.getTargetUrl();
     uprBound = msg.getUprBound();
     lwrBound = msg.getLwrBound();
@@ -131,10 +125,6 @@ public class PollSpec {
 
   public CachedUrlSet getCachedUrlSet() {
     return cus;
-  }
-
-  public String getPluginId() {
-    return pluginId;
   }
 
   public String getAUId() {
@@ -180,7 +170,7 @@ public class PollSpec {
   }
 
   public String toString() {
-    return "[PS: pid=" + pluginId + ", auid=" + auId + ", url=" + url
+    return "[PS: pid=" + "auid=" + auId + ", url=" + url
       + ", l=" + lwrBound + ", u=" + uprBound + "]";
   }
 }

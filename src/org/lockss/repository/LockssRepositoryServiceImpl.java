@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.12 2003-04-16 02:23:06 aalto Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.13 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -210,7 +210,6 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
       nameMap.put(auKey, auDir);
       String auLocation = buffer.toString() + auDir;
       Properties idProps = new Properties();
-      idProps.setProperty(PLUGIN_ID_PROP, au.getPluginId());
       idProps.setProperty(AU_ID_PROP, au.getAUId());
       saveAuIdProperties(auLocation, idProps);
     }
@@ -238,8 +237,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
         // if no properties were found, just continue
         continue;
       }
-      nameMap.put(makeAuKey(idProps.getProperty(PLUGIN_ID_PROP),
-                            idProps.getProperty(AU_ID_PROP)), dirName);
+      nameMap.put(idProps.getProperty(AU_ID_PROP), dirName);
     }
   }
 
@@ -304,11 +302,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   }
 
   static String getAuKey(ArchivalUnit au) {
-    return makeAuKey(au.getPluginId(), au.getAUId());
-  }
-
-  static String makeAuKey(String pluginId, String auId) {
-    return pluginId + ":" + auId;
+    return au.getAUId();
   }
 
 }

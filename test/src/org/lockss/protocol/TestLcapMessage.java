@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.20 2003-04-03 19:39:31 tal Exp $
+ * $Id: TestLcapMessage.java,v 1.21 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -57,7 +57,6 @@ public class TestLcapMessage extends LockssTestCase {
   protected InetAddress testaddr;
   protected LcapIdentity testID;
   protected LcapMessage testmsg;
-  protected static String pluginID = "TestPlugin_1.0";
   protected static String archivalID = "TestAU_1.0";
 
   public TestLcapMessage(String _name) {
@@ -98,7 +97,6 @@ public class TestLcapMessage extends LockssTestCase {
     testmsg.m_hashed = testbytes;
     testmsg.m_opcode = LcapMessage.CONTENT_POLL_REQ;
     testmsg.m_entries = testentries = TestPoll.makeEntries(1, 25);
-    testmsg.m_pluginID = pluginID;
     testmsg.m_archivalID = archivalID;
 
   }
@@ -196,7 +194,6 @@ public class TestLcapMessage extends LockssTestCase {
     assertEquals(rep_msg.m_ttl,5);
     assertEquals(rep_msg.m_opcode,LcapMessage.CONTENT_POLL_REP);
     assertEquals(rep_msg.m_hashAlgorithm,testmsg.m_hashAlgorithm);
-    assertEquals(rep_msg.m_pluginID, testmsg.m_pluginID);
     // TODO: figure out how to test time
     assertEquals(rep_msg.m_multicast ,false);
     assertEquals(2, rep_msg.m_hopCount);
@@ -211,8 +208,7 @@ public class TestLcapMessage extends LockssTestCase {
   public void testRequestMessageCreation() {
     LcapMessage req_msg = null;
     try {
-      PollSpec spec = new PollSpec(pluginID, archivalID,urlstr,
-				   lwrbnd, uprbnd,null);
+      PollSpec spec = new PollSpec(archivalID,urlstr, lwrbnd, uprbnd,null);
       req_msg = LcapMessage.makeRequestMsg(spec,
                                            testentries,
                                            testbytes,
@@ -227,7 +223,6 @@ public class TestLcapMessage extends LockssTestCase {
     assertEquals(req_msg.m_originAddr, testaddr);
     assertEquals(req_msg.m_opcode,LcapMessage.CONTENT_POLL_REQ);
     assertEquals(req_msg.m_multicast ,false);
-    assertEquals(req_msg.m_pluginID, pluginID);
     assertEquals(req_msg.m_archivalID, archivalID);
     assertTrue(Arrays.equals(req_msg.m_challenge,testbytes));
     assertTrue(Arrays.equals(req_msg.m_verifier,testbytes));

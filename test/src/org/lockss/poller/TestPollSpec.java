@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.4 2003-03-25 01:26:24 aalto Exp $
+ * $Id: TestPollSpec.java,v 1.5 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -67,13 +67,11 @@ public class TestPollSpec extends LockssTestCase {
 
   public void testFromCus() {
     String auid = "aaai1";
-    String pluginid = "p|2";
     String url = "http://foo.bar/";
     String lower = "lll";
     String upper = "hhh";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
-    au.setPluginId(pluginid);
 
     CachedUrlSet cus = new MockCachedUrlSet(au,
 					    new RangeCachedUrlSetSpec(url,
@@ -81,7 +79,6 @@ public class TestPollSpec extends LockssTestCase {
 								      upper));
     PollSpec ps = new PollSpec(cus);
     assertEquals(auid, ps.getAUId());
-    assertEquals(pluginid, ps.getPluginId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());
@@ -90,13 +87,11 @@ public class TestPollSpec extends LockssTestCase {
   public void testFromLcapMessage() {
     byte[] testbytes = {0,1,2,3,4,5,6,8,10};
     String auid = "aaai1";
-    String pluginid = "p|2";
     String url = "http://foo.bar/";
     String lower = "lll";
     String upper = "hhh";
     MockArchivalUnit au = new MockArchivalUnit();
     au.setAuId(auid);
-    au.setPluginId(pluginid);
     CachedUrlSet cus = new MockCachedUrlSet(au,
                                             new RangeCachedUrlSetSpec(url,
                                                                       lower,
@@ -126,7 +121,6 @@ public class TestPollSpec extends LockssTestCase {
     }
     ps = new PollSpec(msg);
     assertEquals(auid, ps.getAUId());
-    assertEquals(pluginid, ps.getPluginId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
     assertEquals(upper, ps.getUprBound());

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.30 2003-04-03 19:39:32 tal Exp $
+ * $Id: LcapMessage.java,v 1.31 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -99,7 +99,6 @@ public class LcapMessage
   long m_stopTime; // the original stop time
   int m_opcode; // the kind of packet
   protected String m_archivalID; // the archival unit
-  protected String m_pluginID; // the plugin
   protected String m_targetUrl; // the target URL
   protected String m_lwrBound; // the boundary for the url range (opt)
   protected String m_uprBound; // the boundary for the url range (opt)
@@ -146,7 +145,6 @@ public class LcapMessage
     m_uprBound = ps.getUprBound();
     m_lwrBound = ps.getLwrBound();
     m_archivalID = ps.getAUId();
-    m_pluginID = ps.getPluginId();
     m_ttl = ttl;
     m_challenge = challenge;
     m_verifier = verifier;
@@ -177,7 +175,6 @@ public class LcapMessage
     m_targetUrl = trigger.getTargetUrl();
     m_uprBound = trigger.getUprBound();
     m_lwrBound = trigger.getLwrBound();
-    m_pluginID = trigger.getPluginID();
     m_archivalID = trigger.getArchivalID();
     m_entries = entries;
     m_hashAlgorithm = trigger.getHashAlgorithm();
@@ -379,7 +376,6 @@ public class LcapMessage
     duration = m_props.getInt("duration", 0) * 1000;
     elapsed = m_props.getInt("elapsed", 0) * 1000;
     m_opcode = m_props.getInt("opcode", -1);
-    m_pluginID = m_props.getProperty("plugin", "UNKNOWN");
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_lwrBound = m_props.getProperty("lwrBnd");
@@ -429,11 +425,6 @@ public class LcapMessage
     if (m_uprBound != null) {
       m_props.setProperty("uprBnd", m_uprBound);
     }
-
-    if (m_pluginID == null) {
-      m_pluginID = "UNKNOWN";
-    }
-    m_props.setProperty("plugin", m_pluginID);
 
     if (m_archivalID == null) {
       m_archivalID = "UNKNOWN";
@@ -524,10 +515,6 @@ public class LcapMessage
 
   public String getOpcodeString() {
     return POLL_OPCODES[m_opcode];
-  }
-
-  public String getPluginID() {
-    return m_pluginID;
   }
 
   public String getArchivalID() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.68 2003-04-17 00:51:17 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.69 2003-04-17 02:16:57 troberts Exp $
  */
 
 /*
@@ -656,8 +656,7 @@ public class TestNodeManagerImpl
     try {
 
       testmsg = LcapMessage.makeRequestMsg(
-          new PollSpec(mau.getPluginId(),
-                       mau.getAUId(),
+          new PollSpec(mau.getAUId(),
                        url, lwrBound, uprBound, null),
           null,
           bytes,

@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.1 2003-04-11 05:37:51 claire Exp $
+* $Id: PollerStatus.java,v 1.2 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -64,24 +64,25 @@ public class PollerStatus {
     static final int STRINGTYPE = ColumnDescriptor.TYPE_STRING;
     static final int DATETYPE = ColumnDescriptor.TYPE_DATE;
 
-    private static final List sortRules =
-        ListUtil.list(new StatusTable.SortRule("PluginID", true),
-        new StatusTable.SortRule("AuID", true),
-        new StatusTable.SortRule("URL", true),
-        new StatusTable.SortRule("Deadline", false)
-        );
+    private static final List sortRules = 
+      ListUtil.list(
+		    new StatusTable.SortRule("AuID", true),
+		    new StatusTable.SortRule("URL", true),
+		    new StatusTable.SortRule("Deadline", false)
+		    );
     private static final List columnDescriptors =
-        ListUtil.list(new ColumnDescriptor("PluginID", "Plugin ID", STRINGTYPE),
-        new ColumnDescriptor("AuID", "Archive", STRINGTYPE),
-        new ColumnDescriptor("URL", "URL", STRINGTYPE),
-        new ColumnDescriptor("Range", "Range", STRINGTYPE),
-        new ColumnDescriptor("PollType", "Poll Type", STRINGTYPE),
-        new ColumnDescriptor("Status", "Status", STRINGTYPE),
-        new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
-        new ColumnDescriptor("PollID", "Poll ID", STRINGTYPE)
-        );
+        ListUtil.list(
+		      new ColumnDescriptor("AuID", "Archive", STRINGTYPE),
+		      new ColumnDescriptor("URL", "URL", STRINGTYPE),
+		      new ColumnDescriptor("Range", "Range", STRINGTYPE),
+		      new ColumnDescriptor("PollType", "Poll Type", 
+					   STRINGTYPE),
+		      new ColumnDescriptor("Status", "Status", STRINGTYPE),
+		      new ColumnDescriptor("Deadline", "Deadline", DATETYPE),
+		      new ColumnDescriptor("PollID", "Poll ID", STRINGTYPE)
+		      );
     private static String[] allowedKeys = {
-      "Plugin:", "AU:", "URL:", "PollType:", "Status:"};
+      "AU:", "URL:", "PollType:", "Status:"};
 
     public void populateTable(StatusTable table) throws StatusService.
         NoSuchTableException {
@@ -97,10 +98,6 @@ public class PollerStatus {
     }
 
     // utility methods for making a Reference
-
-    public StatusTable.Reference makePluginRef(Object value, String key) {
-      return new StatusTable.Reference(value, TABLE_NAME, "Plugin:" + key);
-    }
 
     public StatusTable.Reference makeAURef(Object value, String key) {
       return new StatusTable.Reference(value, TABLE_NAME, "AU:" + key);
@@ -135,10 +132,6 @@ public class PollerStatus {
     private Map makeRow(PollManager.PollManagerEntry entry) {
       HashMap rowMap = new HashMap();
       PollSpec spec = entry.spec;
-      //"PluginID"
-      String shortID = spec.getPluginId();
-      shortID = shortID.substring(shortID.lastIndexOf('|') + 1);
-      rowMap.put("PluginID", shortID);
       //"AuID"
       rowMap.put("AuID", spec.getAUId());
       //"URL"
@@ -178,12 +171,7 @@ public class PollerStatus {
       boolean isMatch = false;
       PollSpec spec = entry.spec;
       String keyValue = key.substring(key.indexOf(':') + 1);
-      if (key.startsWith("Plugin:")) {
-        if (spec.getPluginId().equals(keyValue)) {
-          isMatch = true;
-        }
-      }
-      else if (key.startsWith("AU:")) {
+      if (key.startsWith("AU:")) {
         if (spec.getAUId().equals(keyValue)) {
           isMatch = true;
         }

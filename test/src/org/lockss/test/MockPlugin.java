@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.5 2003-04-17 00:55:50 troberts Exp $
+ * $Id: MockPlugin.java,v 1.6 2003-04-17 02:16:57 troberts Exp $
  */
 
 /*
@@ -49,7 +49,6 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   public static final String CONFIG_PROP_1 = "base_url";
   public static final String CONFIG_PROP_2 = "volume";
 
-//   private String pluginId = "MockPlugin";
   private String pluginId;
   private int initCtr = 0;
   private int stopCtr = 0;

@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.35 2003-04-17 00:55:50 troberts Exp $
+ * $Id: RunDaemon.java,v 1.36 2003-04-17 02:16:58 troberts Exp $
  */
 
 /*
@@ -59,12 +59,8 @@ public class RunDaemon
       + "test.doTreewalk";
   static final String PARAM_TREEWALK_AUID = Configuration.PREFIX
       + "test.treewalk.auId";
-  static final String PARAM_TREEWALK_PLUGINID = Configuration.PREFIX
-      + "test.treewalk.pluginId";
   static final String PARAM_POLL_TYPE = Configuration.PREFIX
       + "test.polltype";
-  static final String PARAM_PS_PLUGINID = Configuration.PREFIX
-      + "test.pollspec.pluginId";
   static final String PARAM_PS_AUID = Configuration.PREFIX
       + "test.pollspec.auId";
   static final String PARAM_PS_URL = Configuration.PREFIX
@@ -151,13 +147,12 @@ public class RunDaemon
   private void callPoll() {
     int poll_type = Configuration.getIntParam(PARAM_POLL_TYPE,
                                               LcapMessage.CONTENT_POLL_REQ);
-    String pluginId = Configuration.getParam(PARAM_PS_PLUGINID);
     String auId = Configuration.getParam(PARAM_PS_AUID);
     String url = Configuration.getParam(PARAM_PS_URL, "LOCKSSAU:");
     String lwrBound = Configuration.getParam(PARAM_PS_LWRBND);
     String uprBound = Configuration.getParam(PARAM_PS_UPRBND);
 
-    PollSpec spec = new PollSpec(pluginId, auId, url,lwrBound,uprBound, null);
+    PollSpec spec = new PollSpec(auId, url,lwrBound,uprBound, null);
 
     CachedUrlSet cus = getPluginManager().findCachedUrlSet(spec);
     try {
