@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.36 2004-10-02 01:16:56 tlipkis Exp $
+ * $Id: Logger.java,v 1.37 2004-12-08 00:53:13 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+import org.apache.commons.collections.map.ReferenceMap;
 
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
@@ -126,6 +127,12 @@ public class Logger {
     };
 
   private static Logger myLog;
+
+  // Use weak map so dead threads can get GCed
+  private static int threadCtr = 0;
+  private static Map threadIds = new ReferenceMap(ReferenceMap.WEAK,
+						  ReferenceMap.HARD);;
+
 
   int level;			// this log's level
   private String name;			// this log's name
@@ -558,6 +565,8 @@ public class Logger {
   public void log(int level, String msg, Throwable e) {
     if (isLevel(level)) {
       StringBuffer sb = new StringBuffer();
+      sb.append(getThreadId(Thread.currentThread()));
+      sb.append("-");
       sb.append(name);
       sb.append(": ");
       sb.append(msg);
@@ -581,6 +590,29 @@ public class Logger {
    */
   public void log(int level, String msg) {
     log(level, msg, null);
+  }
+
+  String getThreadId(Thread thread) {
+    String id;
+    boolean created = false;
+    synchronized (threadIds) {
+      id = (String)threadIds.get(thread);
+      if (id == null) {
+	id = Integer.toString(++threadCtr);
+	threadIds.put(thread, id);
+	created = true;
+      }
+    }
+    // This recursive call MUST be AFTER the threadIds map is updated, but
+    // there is no reason to do it while synchronized
+    if (created) {
+      info("ThreadId " + id + " is " + thread.getName());
+    }
+    return id;
+  }
+
+  int getThreadMapSize() {
+    return threadIds.size();
   }
 
   // Invoke all the targets to write a message.

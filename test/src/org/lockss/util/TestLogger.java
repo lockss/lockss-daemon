@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.20 2004-07-12 06:28:59 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.21 2004-12-08 00:53:13 tlipkis Exp $
  */
 
 /*
@@ -189,8 +189,8 @@ public class TestLogger extends LockssTestCase {
   }
 
   static String testOutputOutput[] = {
-    "Warning: test-log: msg2 warning",
-    "Error: test-log: msg3 error",
+    "Warning: 1-test-log: msg2 warning",
+    "Error: 1-test-log: msg3 error",
   };
 
   public void testOutput() {
@@ -259,8 +259,8 @@ public class TestLogger extends LockssTestCase {
     while (iter.hasNext()) {
       System.err.println((String)iter.next());
     }
-    assertIsomorphic(ListUtil.list("Warning: test-log1: msg2 warning",
-				   "Error: test-log1: msg3 error"),
+    assertIsomorphic(ListUtil.list("Warning: 1-test-log1: msg2 warning",
+				   "Error: 1-test-log1: msg3 error"),
 		     target.getMessages());
   }
 
@@ -271,5 +271,34 @@ public class TestLogger extends LockssTestCase {
     l.setLevel(Logger.LEVEL_DEBUG);
     l.debug("debug message, shouldn't cause recursion");
   }
+
+  // test that the thread id map doesn't prevent old threads from being
+  // GCed
+  public void testThreadId() throws Exception {
+    Logger log = Logger.getLogger("testThreadId");
+    int rpt = 100000;
+    int mapsize = 0;
+    final Logger tlog = Logger.getLogger("jack");
+    MockLogTarget target = new MockLogTarget();
+    tlog.setTarget(target);
+    for (int ix = 0; ix < rpt; ix++) {
+      Thread th = new Thread("iter " + ix) {
+	  public void run() {
+	    tlog.info(getName());
+	  }};
+      th.start();
+      th.join();    
+      int s = tlog.getThreadMapSize();
+      if (s < ix) {
+	System.err.println("Map went from " + mapsize + " to " + s +
+			     " on iteration " + ix);
+	return;
+      } else {
+	mapsize = s;
+      }
+    }
+    fail("No thread IDs were collected after " + rpt + " iterations.");
+  }
+
 }
 

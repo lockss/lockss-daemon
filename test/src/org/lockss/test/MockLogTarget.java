@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.8 2004-02-23 09:18:35 tlipkis Exp $
+ * $Id: MockLogTarget.java,v 1.9 2004-12-08 00:53:13 tlipkis Exp $
  */
 
 /*
@@ -90,9 +90,7 @@ public class MockLogTarget implements LogTarget{
   }
 
   public boolean hasMessage(String str) {
-    Set mset = new HashSet();
-    mset.addAll(messages);
-    return mset.contains(str);
+    return messages.contains(str);
   }
 
   public void dumpMessages() {
