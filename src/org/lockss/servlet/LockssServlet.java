@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.43 2004-05-26 23:00:35 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.44 2004-06-01 08:35:35 tlipkis Exp $
  */
 
 /*
@@ -647,7 +647,11 @@ public abstract class LockssServlet extends HttpServlet
     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
     page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
 
-    page.addHeader("<style type=\"text/css\"><!-- sup {font-weight: normal} --> </STYLE>");
+    page.addHeader("<style type=\"text/css\"><!--\n" +
+		   "sup {font-weight: normal; vertical-align: super}\n" +
+		   "A.colhead, A.colhead:link, A.colhead:visited { text-decoration: none ; font-weight: bold ; color: blue }\n" +
+		   "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
+		   "--> </STYLE>");
 
     if (heading != null)
       page.title("LOCKSS: " + heading);
@@ -734,6 +738,14 @@ public abstract class LockssServlet extends HttpServlet
 
 //     comp.add("<center><font size=-1>" + vDaemon + "</font></center>");
     return comp;
+  }
+
+  // create an image that will display the tooltip on mouse hover
+  static Image image(String file, int w, int h, int border, String tooltip) {
+    Image img = image(file, w, h, border);
+    img.alt(tooltip);			// some browsers (IE) use alt tag
+    img.attribute("title", tooltip);	// some (Mozilla) use title tag
+    return img;
   }
 
   // eventually this should calculate w & h
