@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.18 2003-02-15 01:41:55 aalto Exp $
+ * $Id: MockCachedUrlSet.java,v 1.19 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -221,6 +221,11 @@ public class MockCachedUrlSet implements CachedUrlSet {
       return null;
     }
   }
+
+  public String getName() {
+    return getPrimaryUrl();
+  }
+
 
   public void addCachedUrl(String url) {
     cachedUrls.add(url);

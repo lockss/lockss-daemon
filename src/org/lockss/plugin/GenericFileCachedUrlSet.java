@@ -1,5 +1,5 @@
 /*
- * $Id: GenericFileCachedUrlSet.java,v 1.19 2003-02-15 01:41:55 aalto Exp $
+ * $Id: GenericFileCachedUrlSet.java,v 1.20 2003-02-20 01:37:24 aalto Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
       logger.error("More than one prefix found in CachedUrlSetSpec.");
       throw new UnsupportedOperationException("More than one prefix found in CachedUrlSetSpec.");
     }
-    TreeSet setTree = new TreeSet(new UrlComparator());
+    TreeSet flatSet = new TreeSet(new UrlComparator());
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
       try {
@@ -85,8 +85,15 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
           RepositoryNode child = (RepositoryNode)children.next();
           CachedUrlSetSpec rSpec =
               new RangeCachedUrlSetSpec(child.getNodeUrl());
-          CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(rSpec);
-          setTree.add(newSet);
+          if (child.listNodes(rSpec, true).hasNext()) {
+            CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
+                rSpec);
+            flatSet.add(newSet);
+          } else {
+            CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+                child.getNodeUrl());
+            flatSet.add(newUrl);
+          }
         }
       } catch (MalformedURLException mue) {
         logger.error("Bad url in spec: "+prefix);
@@ -95,7 +102,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         logger.error(e.getMessage());
       }
     }
-    return setTree.iterator();
+    return flatSet.iterator();
   }
 
   public Iterator treeIterator() {
@@ -107,7 +114,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     }
     contentNodeCount = 0;
     totalNodeSize = 0;
-    TreeSet leafSet = new TreeSet(new UrlComparator());
+    TreeSet treeSet = new TreeSet(new UrlComparator());
     if (nodes.size()==1) {
       String prefix = (String)nodes.get(0);
       try {
@@ -116,14 +123,22 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         while (children.hasNext()) {
           // add all nodes to tree iterator, regardless of content
           RepositoryNode child = (RepositoryNode)children.next();
-          CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-              child.getNodeUrl());
-          leafSet.add(newUrl);
+          CachedUrlSetSpec rSpec =
+              new RangeCachedUrlSetSpec(child.getNodeUrl());
+          if (child.listNodes(rSpec, true).hasNext()) {
+            CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
+                rSpec);
+            treeSet.add(newSet);
+          } else {
+            CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+                child.getNodeUrl());
+            treeSet.add(newUrl);
+          }
           if (child.hasContent()) {
             contentNodeCount++;
             totalNodeSize += child.getContentSize();
           }
-          recurseLeafFetch(child, leafSet);
+          recurseLeafFetch(child, treeSet);
         }
       } catch (MalformedURLException mue) {
         logger.error("Bad url in spec: "+prefix);
@@ -132,7 +147,7 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
         logger.error(e.getMessage());
       }
     }
-    return leafSet.iterator();
+    return treeSet.iterator();
   }
 
   private void recurseLeafFetch(RepositoryNode node, TreeSet set) {
@@ -140,9 +155,17 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
     while (children.hasNext()) {
       // add all nodes to tree iterator, regardless of content
       RepositoryNode child = (RepositoryNode)children.next();
-      CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
-          child.getNodeUrl());
-      set.add(newUrl);
+      CachedUrlSetSpec rSpec =
+          new RangeCachedUrlSetSpec(child.getNodeUrl());
+      if (child.listNodes(rSpec, true).hasNext()) {
+        CachedUrlSet newSet = ((BaseArchivalUnit)au).makeCachedUrlSet(
+            rSpec);
+        set.add(newSet);
+      } else {
+        CachedUrl newUrl = ((BaseArchivalUnit)au).cachedUrlFactory(this,
+            child.getNodeUrl());
+        set.add(newUrl);
+      }
       if (child.hasContent()) {
         contentNodeCount++;
         totalNodeSize += child.getContentSize();
@@ -230,20 +253,20 @@ public class GenericFileCachedUrlSet extends BaseCachedUrlSet {
 
   private class UrlComparator implements Comparator {
     public int compare(Object o1, Object o2) {
-      if ((o1 instanceof CachedUrlSet) && (o2 instanceof CachedUrlSet)) {
-        String prefix = (String)((CachedUrlSet)o1).getPrimaryUrl();
-        String prefix2 = (String)((CachedUrlSet)o2).getPrimaryUrl();
-        if (prefix.equals(prefix2)) {
-          throw new UnsupportedOperationException("Comparing equal CachedUrlSet prefixes: "+prefix);
-        }
-        return prefix.compareTo(prefix2);
-      } else if ((o1 instanceof CachedUrl) && (o2 instanceof CachedUrl)) {
-        return ((CachedUrl)o1).getUrl().compareTo(((CachedUrl)o2).getUrl());
+      String prefix = null;
+      String prefix2 = null;
+      if ((o1 instanceof NamedElement) && (o2 instanceof NamedElement)) {
+        prefix = ((NamedElement)o1).getName();
+        prefix2 = ((NamedElement)o2).getName();
       } else {
         throw new IllegalStateException("Bad object in iterator: " +
                                         o1.getClass() + "," +
                                         o2.getClass());
       }
+      if (prefix.equals(prefix2)) {
+        throw new UnsupportedOperationException("Comparing equal prefixes: "+prefix);
+      }
+      return prefix.compareTo(prefix2);
     }
   }
 }

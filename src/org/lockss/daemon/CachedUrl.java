@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.6 2002-10-16 04:50:54 tal Exp $
+ * $Id: CachedUrl.java,v 1.7 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ import java.util.Properties;
  * @author  David S. H. Rosenthal
  * @see UrlCacher
  * @version 0.0 */
-public interface CachedUrl {
+public interface CachedUrl extends NamedElement {
     /**
      * Return the url being represented
      * @return the <code>String</code> url being represented.

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrlSet.java,v 1.7 2003-01-28 02:06:13 aalto Exp $
+ * $Id: BaseCachedUrlSet.java,v 1.8 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -104,6 +104,14 @@ public abstract class BaseCachedUrlSet implements CachedUrlSet {
    */
   public String getPrimaryUrl() {
     return spec.getPrimaryUrl();
+  }
+
+  /**
+   * Returns the main url.
+   * @return the url
+   */
+  public String getName() {
+    return getPrimaryUrl();
   }
 
   /**

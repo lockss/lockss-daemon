@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.3 2003-02-20 01:37:24 aalto Exp $
+ * $Id: NamedElement.java,v 1.1 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -30,54 +30,18 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.hasher;
-import java.security.*;
-import java.util.*;
-import org.lockss.daemon.*;
-import org.lockss.util.*;
+package org.lockss.daemon;
 
 /**
- * General class to handle name hashing
+ * This interface a superclass for the CachedUrlSet and CachedUrl interfaces.
+ * It simply provides a mechanism for easily getting the urls of lists of those
+ * classes.
  */
-public class GenericNameHasher extends GenericHasher {
-  public static final char DELIMITER= '\n';
+public interface NamedElement {
 
-  byte[] nameBytes = null;
-  int nameIdx = -1;
-  boolean onFirstElement = true;
-
-  public GenericNameHasher(CachedUrlSet cus, MessageDigest dig) {
-    super(cus, dig);
-    iterator = cus.flatSetIterator();
-  }
-
-  protected int hashElementUpToNumBytes(NamedElement element, int numBytes) {
-    if (nameBytes == null) {
-      String nameStr = element.getName();
-      StringBuffer sb = new StringBuffer(nameStr.length()+1);
-      if (!onFirstElement) {
-	sb.append(DELIMITER);
-      }
-      else {
-	onFirstElement = false;
-      }
-      sb.append(nameStr);
-      nameBytes = (sb.toString().getBytes());
-      nameIdx = 0;
-    }
-
-    int len = numBytes < (nameBytes.length - nameIdx)
-      ? numBytes : (nameBytes.length - nameIdx);
-    digest.update(nameBytes, nameIdx, len);
-    nameIdx += len;
-    if (nameIdx >= nameBytes.length) {
-      shouldGetNextElement = true;
-      element = null;
-      nameBytes = null;
-    }
-    return len;
-  }
-
+  /**
+   * Returns the name of this element (typically the url).
+   * @return the name
+   */
+  public String getName();
 }
-
-

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.12 2003-02-15 01:41:55 aalto Exp $
+ * $Id: CachedUrlSet.java,v 1.13 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import java.security.MessageDigest;
  * @author  David S. H. Rosenthal
  * @version 0.0
  */
-public interface CachedUrlSet {
+public interface CachedUrlSet extends NamedElement {
   /**
    * @return the {@link ArchivalUnit} to which this CachedUrlSet belongs
    */
@@ -85,20 +85,22 @@ public interface CachedUrlSet {
     public CachedUrlSetHasher getNameHasher(MessageDigest hasher);
 
     /**
-     * Return an <code>Iterator</code> of <code>CachedUrlSet</code>
+     * Return an <code>Iterator</code> of <code>NamedElement</code>
      * objects representing the direct descendants of this
-     * <code>CachedUrlSet</code> object.
-     * @return an <code>Iterator</code> of the <code>CachedUrlSet</code>
+     * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
+     * and CachedUrls for leaf nodes.
+     * @return an <code>Iterator</code> of the <code>NamedElement</code>
      *         matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */
     public Iterator flatSetIterator();
 
     /**
-     * Return an <code>Iterator</code> of <code>CachedUrl/code>
+     * Return an <code>Iterator</code> of <code>NamedElement</code>
      * objects representing all the nodes of the tree rooted at this
-     * <code>CachedUrlSet</code> object.
-     * @return an <code>Iterator</code> of <code>CachedUrl</code>s
+     * <code>CachedUrlSet</code>.  These are CachedUrlSets for internal nodes
+     * and CachedUrls for leaf nodes.
+     * @return an <code>Iterator</code> of <code>NamedElement</code>s
      *         for all the nodes matching the members of the
      *         <code>CachedUrlSetSpec</code> list.
      */

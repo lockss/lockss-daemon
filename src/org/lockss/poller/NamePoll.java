@@ -1,5 +1,5 @@
 /*
- * $Id: NamePoll.java,v 1.32 2003-02-20 00:57:28 claire Exp $
+ * $Id: NamePoll.java,v 1.33 2003-02-20 01:37:24 aalto Exp $
  */
 
 /*
@@ -158,10 +158,9 @@ public class NamePoll
       Iterator it = m_urlSet.flatSetIterator();
       ArrayList alist = new ArrayList();
       String baseUrl = m_urlSet.getSpec().getPrimaryUrl();
-      while (it.hasNext()) {
-        CachedUrlSet cus = (CachedUrlSet) it.next();
-        String name = (String) cus.getPrimaryUrl();
-        if (name.startsWith(baseUrl)) {
+      while(it.hasNext()) {
+        String name = ((NamedElement)it.next()).getName();
+        if(name.startsWith(baseUrl)) {
           name = name.substring(name.length());
         }
         alist.add(name);
@@ -169,7 +168,6 @@ public class NamePoll
       m_entries = (String[]) alist.toArray(new String[alist.size()]);
     }
     return m_entries;
-
   }
 
   void buildPollLists(Iterator voteIter) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericFileCachedUrlSet.java,v 1.14 2003-02-15 01:41:55 aalto Exp $
+ * $Id: TestGenericFileCachedUrlSet.java,v 1.15 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -79,8 +79,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     Iterator setIt = fileSet.flatSetIterator();
     ArrayList childL = new ArrayList(3);
     while (setIt.hasNext()) {
-      CachedUrlSet childSet = (CachedUrlSet)setIt.next();
-      childL.add(childSet.getPrimaryUrl());
+      childL.add(((NamedElement)setIt.next()).getName());
     }
     // should be sorted
     String[] expectedA = new String[] {
@@ -89,6 +88,28 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
       "http://www.example.com/testDir/leaf4"
       };
     assertIsomorphic(expectedA, childL);
+  }
+
+  public void testFlatSetIteratorClassCreation() throws Exception {
+    createLeaf("http://www.example.com/testDir/leaf1", "test stream", null);
+    createLeaf("http://www.example.com/testDir/branch1/leaf2",
+               null, null);
+    createLeaf("http://www.example.com/testDir/branch2/leaf3",
+               "test stream", null);
+
+    CachedUrlSetSpec rSpec =
+        new RangeCachedUrlSetSpec("http://www.example.com/testDir");
+    CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
+    Iterator setIt = fileSet.flatSetIterator();
+    NamedElement element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch1", element.getName());
+    assertTrue(element instanceof CachedUrlSet);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2", element.getName());
+    assertTrue(element instanceof CachedUrlSet);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/leaf1", element.getName());
+    assertTrue(element instanceof CachedUrl);
   }
 
   public void testTreeIterator() throws Exception {
@@ -106,8 +127,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     Iterator setIt = fileSet.treeIterator();
     ArrayList childL = new ArrayList(4);
     while (setIt.hasNext()) {
-      CachedUrl childUrl = (CachedUrl)setIt.next();
-      childL.add(childUrl.getUrl());
+      childL.add(((NamedElement)setIt.next()).getName());
     }
     // should be sorted
     String[] expectedA = new String[] {
@@ -121,9 +141,7 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
     assertIsomorphic(expectedA, childL);
   }
 
-  public void testTreeIteratorWithInternalContent() throws Exception {
-    // no longer much difference between this and the last test, since content
-    // is now irrelevant to being included in the iteration
+  public void testTreeIteratorClassCreation() throws Exception {
     createLeaf("http://www.example.com/testDir/branch1",
                "test stream", null);
     createLeaf("http://www.example.com/testDir/leaf3", "test stream", null);
@@ -138,21 +156,24 @@ public class TestGenericFileCachedUrlSet extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/testDir");
     CachedUrlSet fileSet = mau.makeCachedUrlSet(rSpec);
     Iterator setIt = fileSet.treeIterator();
-    ArrayList childL = new ArrayList(4);
-    while (setIt.hasNext()) {
-      CachedUrl childUrl = (CachedUrl)setIt.next();
-      childL.add(childUrl.getUrl());
-    }
-    // should be sorted
-    String[] expectedA = new String[] {
-      "http://www.example.com/testDir/branch1",
-      "http://www.example.com/testDir/branch1/leaf1",
-      "http://www.example.com/testDir/branch2",
-      "http://www.example.com/testDir/branch2/branch3",
-      "http://www.example.com/testDir/branch2/branch3/leaf2",
-      "http://www.example.com/testDir/leaf3"
-      };
-    assertIsomorphic(expectedA, childL);
+    NamedElement element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch1", element.getName());
+    assertTrue(element instanceof CachedUrlSet);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch1/leaf1", element.getName());
+    assertTrue(element instanceof CachedUrl);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2", element.getName());
+    assertTrue(element instanceof CachedUrlSet);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2/branch3", element.getName());
+    assertTrue(element instanceof CachedUrlSet);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/branch2/branch3/leaf2", element.getName());
+    assertTrue(element instanceof CachedUrl);
+    element = (NamedElement)setIt.next();
+    assertEquals("http://www.example.com/testDir/leaf3", element.getName());
+    assertTrue(element instanceof CachedUrl);
   }
 
   public void testNodeCounting() throws Exception {

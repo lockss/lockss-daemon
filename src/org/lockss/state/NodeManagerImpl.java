@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.31 2003-02-20 00:57:28 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.32 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -370,8 +370,15 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
     // recurse the set's children
     Iterator children = cus.flatSetIterator();
     while (children.hasNext()) {
-      CachedUrlSet child = (CachedUrlSet)children.next();
-      recurseLoadCachedUrlSets(child);
+      NamedElement child = (NamedElement)children.next();
+      if (child instanceof CachedUrlSet) {
+        recurseLoadCachedUrlSets((CachedUrlSet)child);
+      } else {
+        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getName());
+        CachedUrlSet newSet = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
+            rSpec);
+        addNewNodeState(newSet);
+      }
     }
   }
 
@@ -578,8 +585,16 @@ public class NodeManagerImpl implements NodeManager, LockssManager {
       Poll.VoteTally results) throws IOException {
     Iterator children = state.getCachedUrlSet().flatSetIterator();
     while (children.hasNext()) {
-      CachedUrlSet child = (CachedUrlSet)children.next();
-      theDaemon.getPollManager().requestPoll(child, null, null,
+      NamedElement child = (NamedElement)children.next();
+      CachedUrlSet cus = null;
+      if (child instanceof CachedUrlSet) {
+        cus = (CachedUrlSet)child;
+      } else {
+        CachedUrlSetSpec rSpec = new RangeCachedUrlSetSpec(child.getName());
+        cus = ((BaseArchivalUnit)managerAu).makeCachedUrlSet(
+            rSpec);
+      }
+      theDaemon.getPollManager().requestPoll(cus, null, null,
           LcapMessage.CONTENT_POLL_REQ);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.3 2003-02-15 01:41:55 aalto Exp $
+ * $Id: GenericContentHasher.java,v 1.4 2003-02-20 01:37:24 aalto Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class GenericContentHasher extends GenericHasher {
 
   private byte[] nameBytes = null;
   private int nameIdx = -1;
-  
+
   private InputStream is = null;
 
 
@@ -56,9 +56,15 @@ public class GenericContentHasher extends GenericHasher {
     iterator = cus.treeIterator();
   }
 
-  protected int hashElementUpToNumBytes(Object element, int numBytes) 
+  protected int hashElementUpToNumBytes(NamedElement element, int numBytes)
       throws IOException {
-    CachedUrl cu = (CachedUrl) element;
+    CachedUrl cu = null;
+    if (element instanceof CachedUrlSet) {
+      CachedUrlSet cus = (CachedUrlSet)element;
+      cu = cus.makeCachedUrl(cus.getPrimaryUrl());
+    } else if (element instanceof CachedUrl) {
+      cu = (CachedUrl)element;
+    }
     int totalHashed = 0;
 
     if (hashState == HASHING_NAME) {
@@ -75,8 +81,7 @@ public class GenericContentHasher extends GenericHasher {
 	log.debug("got new name to hash: "+nameStr);
       }
       int bytesRemaining = nameBytes.length - nameIdx;
-      int len = 
-	numBytes < bytesRemaining ? numBytes : bytesRemaining;
+      int len = numBytes < bytesRemaining ? numBytes : bytesRemaining;
 
       digest.update(nameBytes, nameIdx, len);
       nameIdx += len;
@@ -87,7 +92,7 @@ public class GenericContentHasher extends GenericHasher {
       }
       totalHashed += len;
     }
-    if(hashState == HASHING_CONTENT) {
+    if (hashState == HASHING_CONTENT) {
       log.debug("hashing content");
       if(is == null) {
 	log.debug("opening "+cu+" for hashing");

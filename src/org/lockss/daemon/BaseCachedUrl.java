@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.4 2002-11-02 02:38:08 troberts Exp $
+ * $Id: BaseCachedUrl.java,v 1.5 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -43,26 +43,43 @@ public abstract class BaseCachedUrl implements CachedUrl {
   protected CachedUrlSet cus;
   protected String url;
 
-  /** Must invoke this constructor in plugin subclass. */
+  /**
+   * Must invoke this constructor in plugin subclass.
+   * @param owner the CachedUrlSet owner
+   * @param url the url
+   */
   protected BaseCachedUrl(CachedUrlSet owner, String url) {
     this.cus = owner;
     this.url = url;
   }
 
-  /** Return the URL */
+  /**
+   * Return the URL
+   * @return the url
+   */
   public String getUrl() {
     return url;
   }
 
   /**
-   * Overrides normal <code>toString()</code> to return a string like "BCU: <url>"
+   * Returns the url.
+   * @return the url
    */
-  public String toString(){
+  public String getName() {
+    return getUrl();
+  }
+
+  /**
+   * Overrides normal <code>toString()</code> to return a string like "BCU: <url>"
+   * @return the string form
+   */
+  public String toString() {
     return "[BCU: "+url+"]";
   }
 
   /**
    * Return the CachedUrlSet to which this CachedUrl belongs.
+   * @return the CachedUrlSet
    */
   public CachedUrlSet getCachedUrlSet() {
     return cus;
@@ -70,6 +87,7 @@ public abstract class BaseCachedUrl implements CachedUrl {
 
   /**
    * Return the ArchivalUnit to which this CachedUrl belongs.
+   * @return the ArchivalUnit
    */
   public ArchivalUnit getArchivalUnit() {
     CachedUrlSet cus = getCachedUrlSet();

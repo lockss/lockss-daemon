@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.14 2003-02-15 01:41:55 aalto Exp $
+ * $Id: NullPlugin.java,v 1.15 2003-02-20 01:37:23 aalto Exp $
  */
 
 /*
@@ -63,6 +63,10 @@ public class NullPlugin {
 
     public String getUrl() {
       return null;
+    }
+
+    public String getName() {
+      return getUrl();
     }
 
     public boolean exists() {
@@ -196,6 +200,10 @@ public class NullPlugin {
 
     public String getPrimaryUrl() {
       return "null";
+    }
+
+    public String getName() {
+      return getPrimaryUrl();
     }
 
   }
