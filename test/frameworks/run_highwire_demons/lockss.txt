@@ -9,6 +9,7 @@ org.lockss.au.org|lockss|plugin|highwire|HighWirePlugin.base_url~http%3A%2F%2Fsh
 
 #lockss repository settings
 org.lockss.cache.location=./
+org.lockss.platform.diskSpacePaths=./
 
 org.lockss.parameterReloadInterval = 1m
 
@@ -53,3 +54,6 @@ org.lockss.comm.router.beacon.interval=1m
 org.lockss.metrics.slowest.hashrate = 250
 
 
+
+#uncomment this to allow external access your ui
+#org.lockss.ui.access.ip.include=<address_here>
