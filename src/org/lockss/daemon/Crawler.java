@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.10 2003-06-20 22:34:50 claire Exp $
+ * $Id: Crawler.java,v 1.11 2003-06-26 23:59:02 eaalto Exp $
  */
 
 /*
@@ -98,6 +98,6 @@ public interface Crawler {
    * Returns the starting urls for this crawler
    * @return starting urls for this crawler
    */
-  public List getStartUrls();
+  public Collection getStartUrls();
 
 }

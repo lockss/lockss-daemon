@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManager.java,v 1.13 2003-06-25 21:55:17 troberts Exp $
+ * $Id: CrawlManager.java,v 1.14 2003-06-26 23:59:02 eaalto Exp $
  */
 
 /*
@@ -31,8 +31,8 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
-import java.net.URL;
-import java.util.List;
+
+import java.util.Collection;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
 import org.lockss.plugin.*;
@@ -46,24 +46,12 @@ public interface CrawlManager {
    * Schedules a repair crawl and calls cb.signalRepairAttemptCompleted
    * when done.
    * @param au ArchivalUnit that the crawl manager should check
-   * @param url URL that needs to be repaired
+   * @param urls url Strings that need to be repaired
    * @param cb callback to talk to when repair attempt is done
    * @param cookie object that the callback needs to understand which
    * repair we're referring to.
    */
-  public void scheduleRepair(ArchivalUnit au, URL url,
-			     CrawlManager.Callback cb, Object cookie);
-
-  /**
-   * Schedules a repair crawl and calls cb.signalRepairAttemptCompleted
-   * when done.
-   * @param au ArchivalUnit that the crawl manager should check
-   * @param urls list of URLs that need to be repaired
-   * @param cb callback to talk to when repair attempt is done
-   * @param cookie object that the callback needs to understand which
-   * repair we're referring to.
-   */
-  public void scheduleRepair(ArchivalUnit au, List urls,
+  public void scheduleRepair(ArchivalUnit au, Collection urls,
 			     CrawlManager.Callback cb, Object cookie);
 
   /**

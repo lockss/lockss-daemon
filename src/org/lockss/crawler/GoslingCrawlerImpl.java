@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingCrawlerImpl.java,v 1.27 2003-06-20 22:34:50 claire Exp $
+ * $Id: GoslingCrawlerImpl.java,v 1.28 2003-06-26 23:59:02 eaalto Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class GoslingCrawlerImpl implements Crawler {
   private static Logger logger = Logger.getLogger("GoslingCrawlerImpl");
 
   private ArchivalUnit au;
-  private List startUrls;
+  private Collection startUrls;
   private boolean followLinks;
 
   private long startTime = -1;
@@ -125,10 +125,11 @@ public class GoslingCrawlerImpl implements Crawler {
   /**
    * Construct a crawl object; does NOT start the crawl
    * @param au {@link ArchivalUnit} that this crawl will happen on
-   * @param startUrls List of Strings representing the starting urls for crawl
+   * @param startUrls Collection of Strings representing the starting urls for crawl
+   * @param type the crawler type
    * @param followLinks whether or not to extract and follow links
    */
-  public GoslingCrawlerImpl(ArchivalUnit au, List startUrls,
+  public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
 			    int type, boolean followLinks) {
     if (au == null) {
       throw new IllegalArgumentException("Called with a null ArchivalUnit");
@@ -141,7 +142,7 @@ public class GoslingCrawlerImpl implements Crawler {
     this.type = type;
   }
 
-  public GoslingCrawlerImpl(ArchivalUnit au, List startUrls,
+  public GoslingCrawlerImpl(ArchivalUnit au, Collection startUrls,
 			    boolean followLinks) {
     this(au, startUrls, Crawler.NEW_CONTENT, followLinks);
   }
@@ -165,7 +166,7 @@ public class GoslingCrawlerImpl implements Crawler {
     return au;
   }
 
-  public List getStartUrls() {
+  public Collection getStartUrls() {
     return startUrls;
   }
 

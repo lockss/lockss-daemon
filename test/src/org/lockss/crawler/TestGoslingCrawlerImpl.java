@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.15 2003-06-20 22:34:53 claire Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.16 2003-06-26 23:59:01 eaalto Exp $
  */
 
 /*
@@ -34,7 +34,6 @@ package org.lockss.crawler;
 
 import java.io.*;
 import java.util.*;
-import java.net.*;
 import junit.framework.TestCase;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
@@ -47,17 +46,15 @@ import org.lockss.plugin.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-
-
 public class TestGoslingCrawlerImpl extends LockssTestCase {
   private MockArchivalUnit mau = null;
-  private List urlList = null;
+  private Collection urlSet = null;
   private GoslingCrawlerImpl crawler = null;
 
   public static final String EMPTY_PAGE = "";
   public static final String LINKLESS_PAGE = "Nothing here";
 
-  public static final String startUrl = 
+  public static final String startUrl =
     "http://www.example.com/index.html";
 
 
@@ -79,15 +76,15 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
 
     mau = new MockArchivalUnit();
 
-    urlList = ListUtil.list(startUrl);
+    urlSet = SetUtil.set(startUrl);
     MockCachedUrlSet cus = new MyMockCachedUrlSet(mau, null);
     mau.setAUCachedUrlSet(cus);
-    crawler = new GoslingCrawlerImpl(mau, urlList, Crawler.NEW_CONTENT, true);
+    crawler = new GoslingCrawlerImpl(mau, urlSet, Crawler.NEW_CONTENT, true);
   }
 
   public void testThrowsForNullAU() {
     try {
-      crawler = 
+      crawler =
 	new GoslingCrawlerImpl(null, ListUtil.list("http://www.example.com"),
 			       Crawler.NEW_CONTENT, false);
       fail("Trying to construct a GoslingCrawlerImpl with a null ArchivalUnit"
@@ -95,7 +92,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
-  
+
   public void testThrowsForNullStartUrlList() {
     try {
       crawler = new GoslingCrawlerImpl(new MockArchivalUnit(), null, false);
@@ -105,7 +102,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
-  
+
   public void testDoCrawlThrowsForNullDeadline() {
     try {
       crawler.doCrawl(null);
@@ -114,7 +111,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
-  
+
   public void testDoCrawlOnePageNoLinks() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(LINKLESS_PAGE, startUrl);
@@ -144,14 +141,14 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testDoCrawlImageWithSrcInAltTagAfterSrcProper() {
     String url= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<img src="+url+" alt=src>link3</a>";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url);
     assertEquals(expected, cus.getCachedUrls());
@@ -283,20 +280,20 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     checkBadTags(badTags, "</table>");
   }
 
-  private void singleTagShouldCrawl(String url, 
-				    String openTag, 
+  private void singleTagShouldCrawl(String url,
+				    String openTag,
 				    String closeTag) {
     singleTagCrawl(url, openTag, closeTag, true);
   }
 
-  private void singleTagShouldNotCrawl(String url, 
-				       String openTag, 
+  private void singleTagShouldNotCrawl(String url,
+				       String openTag,
 				       String closeTag) {
     singleTagCrawl(url, openTag, closeTag, false);
   }
 
-  private void singleTagCrawl(String url, 
-			      String openTag, 
+  private void singleTagCrawl(String url,
+			      String openTag,
 			      String closeTag,
 			      boolean shouldCache) {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
@@ -402,14 +399,14 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testParsesFileWithQuotedUrls() {
     String url= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=\"http://www.example.com/link3.html\">link3</a>";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url);
     assertEquals(expected, cus.getCachedUrls());
@@ -418,7 +415,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testSkipsComments() {
     String url= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<!--<a href=http://www.example.com/link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -428,7 +425,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url);
     assertEquals(expected, cus.getCachedUrls());
@@ -439,7 +436,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -451,7 +448,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
@@ -462,7 +459,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/dir/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -474,7 +471,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
@@ -484,7 +481,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     String url1= "http://www.example.com/branch1/index.html";
     String url2= "http://www.example.com/branch2/index.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=branch1/index.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -494,7 +491,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url1, url2);
     assertEquals(expected, cus.getCachedUrls());
@@ -529,15 +526,15 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testDoesNotFollowLinksWhenToldNotTo() {
     String url= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url+">link3</a>";
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url);
-    
-    crawler = new GoslingCrawlerImpl(mau, urlList, false);
+
+    crawler = new GoslingCrawlerImpl(mau, urlSet, false);
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl);
     assertEquals(expected, cus.getCachedUrls());
@@ -546,8 +543,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testDoesNotFollowLinksWhenToldNotToMultipleLinks() {
     String excludeUrl = "http://www.example.com/link3.html";
     String includeUrl = "http://www.example.com/link2.html";
-    urlList = ListUtil.list(startUrl, includeUrl);
-    String source = 
+    urlSet = ListUtil.list(startUrl, includeUrl);
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+excludeUrl+">link3</a>";
 
@@ -555,8 +552,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, excludeUrl);
     cus.addUrl(LINKLESS_PAGE, includeUrl);
-    
-    crawler = new GoslingCrawlerImpl(mau, urlList, false);
+
+    crawler = new GoslingCrawlerImpl(mau, urlSet, false);
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, includeUrl);
     assertEquals(expected, cus.getCachedUrls());
@@ -565,8 +562,8 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
   public void testWillParseExistingPagesForUrls() {
     String url1 = "http://www.example.com/link3.html";
     String url2 = "http://www.example.com/link4.html";
-    urlList = ListUtil.list(startUrl);
-    String source = 
+    urlSet = ListUtil.list(startUrl);
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link3</a>";
 
@@ -574,7 +571,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(source, startUrl, true, true);
     cus.addUrl("<a href="+url2+">link4</a>", url1, true, true);
     cus.addUrl(LINKLESS_PAGE, url2);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(url2, startUrl);
     assertEquals(expected, cus.getCachedUrls());
@@ -594,7 +591,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href=http://www.example.com/link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -606,18 +603,18 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     crawler.doCrawl(Deadline.in(2));
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
-  
+
   public void testDoesNotLoopOnSelfReferentialPage() {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -630,7 +627,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
@@ -641,7 +638,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source1 = 
+    String source1 =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -649,7 +646,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+startUrl+">start page</a>"+
       "<a href="+url3+">link3</a>";
 
-    String source2 = 
+    String source2 =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+startUrl+">link1</a>";
 
@@ -659,13 +656,13 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(source2, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     crawler.doCrawl(Deadline.MAX);
     Set expected = SetUtil.set(startUrl, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
-  
-  public void testReturnsTrueWhenCrawlSucessful() {
+
+  public void testReturnsTrueWhenCrawlSuccessful() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAUCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     cus.addUrl("<a href="+url1+">test</a>", startUrl, false, true);
@@ -704,7 +701,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
 
-    String source = 
+    String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href="+url1+">link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
@@ -716,7 +713,7 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
     cus.addUrl(LINKLESS_PAGE, url1);
     cus.addUrl(LINKLESS_PAGE, url2);
     cus.addUrl(LINKLESS_PAGE, url3);
-    
+
     long expectedStart = TimeBase.nowMs();
     crawler.doCrawl(Deadline.MAX);
     long expectedEnd = TimeBase.nowMs();
