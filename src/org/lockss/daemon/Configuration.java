@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.6 2002-11-19 23:26:16 tal Exp $
+ * $Id: Configuration.java,v 1.7 2002-11-21 20:23:45 tal Exp $
  */
 
 /*
@@ -446,7 +446,7 @@ public abstract class Configuration {
 	  if (!goOn) {
 	    break;
 	  }
-	  lastReload = System.currentTimeMillis();
+	  lastReload = TimeBase.nowMs();
 	  //  	stopAndOrStartThings(true);
 	  reloadInterval = Integer.getInteger(Configuration.PREFIX +
 					      "parameterReloadInterval",

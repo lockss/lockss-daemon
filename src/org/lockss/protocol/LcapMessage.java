@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.2 2002-11-20 00:31:05 troberts Exp $
+ * $Id: LcapMessage.java,v 1.3 2002-11-21 20:23:45 tal Exp $
  */
 
 /*
@@ -37,8 +37,7 @@ import java.net.UnknownHostException;
 import java.security.MessageDigest;
 import java.util.Arrays;
 import java.util.StringTokenizer;
-import org.lockss.util.EncodedProperty;
-import org.lockss.util.Logger;
+import org.lockss.util.*;
 import java.io.IOException;
 import java.io.DataInputStream;
 import java.io.ByteArrayInputStream;
@@ -214,7 +213,7 @@ public class LcapMessage {
     LcapMessage msg = new LcapMessage(targetUrl,regExp,entries,group,ttl,
 				      challenge,verifier,new byte[0],opcode);
     if (msg != null) {
-      msg.m_startTime = System.currentTimeMillis();
+      msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_originID = localID;
       msg.m_hopCount = ttl;
@@ -244,7 +243,7 @@ public class LcapMessage {
     LcapMessage msg = new LcapMessage(trigger, localID, verifier, 
 				      hashedContent, opcode);
     if (msg != null) {
-      msg.m_startTime = System.currentTimeMillis();
+      msg.m_startTime = TimeBase.nowMs();
       msg.m_stopTime = msg.m_startTime + timeRemaining;
       msg.m_targetUrl = trigger.getTargetUrl();
       msg.m_regExp = trigger.getRegExp();
@@ -343,7 +342,7 @@ public class LcapMessage {
     m_hashed = m_props.getByteArray("hashed", new byte[0]);
     m_entries = stringToEntries(m_props.getProperty("entries"));
     // calculate start and stop times
-    long now = System.currentTimeMillis();
+    long now = TimeBase.nowMs();
     m_startTime = now - elapsed;
     m_stopTime = now + duration;
   }
@@ -386,7 +385,7 @@ public class LcapMessage {
   }
 
   public long getDuration() {
-    long now = System.currentTimeMillis();
+    long now = TimeBase.nowMs();
     long ret = m_stopTime - now;
     if (ret < 0)
       ret = 0;
@@ -394,7 +393,7 @@ public class LcapMessage {
   }
 
   public long getElapsed() {
-    long now = System.currentTimeMillis();
+    long now = TimeBase.nowMs();
     long ret = now - m_startTime;
     if (now > m_stopTime)
       ret = m_stopTime - m_startTime;

@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.6 2002-11-19 23:26:16 tal Exp $
+ * $Id: HashQueue.java,v 1.7 2002-11-21 20:23:45 tal Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ class HashQueue implements Serializable {
     long totalDuration = 0;
     long durationUntilNewReq = -1;
     int pos = 0;
-    long now = System.currentTimeMillis();
+    long now = TimeBase.nowMs();
     if (log.isDebug()) log.debug("Insert: " + req);
     for (ListIterator iter = qlist.listIterator(); iter.hasNext();) {
       Request qreq = (Request)iter.next();
@@ -305,7 +305,7 @@ class HashQueue implements Serializable {
       // watch for overrun only if it hasn't overrun yet
       overrunDeadline = Deadline.in(req.curEst());
     }
-    long startTime = System.currentTimeMillis();
+    long startTime = TimeBase.nowMs();
     try {
       // repeat up to nsteps steps, while goOn is true,
       // the request we're working on is still at the head of the queue,
@@ -335,7 +335,7 @@ class HashQueue implements Serializable {
       // tk - should this catch all Throwable?
       req.e = e;
     }
-    req.timeUsed += System.currentTimeMillis() - startTime;
+    req.timeUsed += TimeBase.nowMs() - startTime;
     return req;
   }
 

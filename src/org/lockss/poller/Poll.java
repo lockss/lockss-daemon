@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.14 2002-11-21 04:53:53 claire Exp $
+* $Id: Poll.java,v 1.15 2002-11-21 20:23:45 tal Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public abstract class Poll {
     m_msg = msg;
     m_urlSet = urlSet;
 
-    m_createTime = System.currentTimeMillis();
+    m_createTime = TimeBase.nowMs();
 
     // now copy the msg elements we need
     m_url = msg.getTargetUrl();
