@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingCrawlerImpl.java,v 1.23 2003-10-09 22:56:17 eaalto Exp $
+ * $Id: TestGoslingCrawlerImpl.java,v 1.24 2003-10-10 19:21:44 eaalto Exp $
  */
 
 /*
@@ -794,9 +794,10 @@ public class TestGoslingCrawlerImpl extends LockssTestCase {
       "<a href="+url2+">link2</a>"+
       "<a href="+url3+">link3</a>";
 
-    mau.setCrawlSpec(new CrawlSpec(startUrl, null,
-                                   new MockCrawlWindowRuleThatCountsDown(3),
-                                   1));
+    CrawlSpec spec = new CrawlSpec(startUrl, null);
+    spec.setCrawlWindowRule(new MockCrawlWindowRuleThatCountsDown(3));
+    mau.setCrawlSpec(spec);
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     cus.addUrl(source, startUrl);
     cus.addUrl(LINKLESS_PAGE, url1);

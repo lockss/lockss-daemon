@@ -150,7 +150,7 @@ public class IeeeArchivalUnit extends BaseArchivalUnit {
       throws REException {
 
     CrawlRule rule = makeRules(base, pub, year);
-    return new CrawlSpec(makeStartUrl(base, pub, year), rule, null, 1);
+    return new CrawlSpec(makeStartUrl(base, pub, year), rule);
   }
 
   public String getManifestPage() {

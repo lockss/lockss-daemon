@@ -1,5 +1,5 @@
 /*
- * $Id: ProjectMuseArchivalUnit.java,v 1.14 2003-10-09 22:58:28 eaalto Exp $
+ * $Id: ProjectMuseArchivalUnit.java,v 1.15 2003-10-10 19:21:45 eaalto Exp $
  */
 
 /*
@@ -181,7 +181,7 @@ public class ProjectMuseArchivalUnit extends BaseArchivalUnit {
   private CrawlSpec makeCrawlSpec(URL base, int volume) throws REException {
 
     CrawlRule rule = makeRules(base, journalDir, volume);
-    return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule, null, 1);
+    return new CrawlSpec(makeStartUrl(base, journalDir, volume), rule);
   }
 
   public String getManifestPage() {

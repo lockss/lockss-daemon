@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.36 2003-10-09 22:58:27 eaalto Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.37 2003-10-10 19:21:44 eaalto Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     } catch (Configuration.InvalidParam e) {
       throw new ArchivalUnit.ConfigurationException("Bad config value", e);
     }
-    this.crawlSpec = new CrawlSpec(SIMULATED_URL_START, null, null, 1);
+    this.crawlSpec = new CrawlSpec(SIMULATED_URL_START, null);
   }
 
   public String getName() {

@@ -146,7 +146,7 @@ class RuleTester {
           props.getProperty("BASE_CRAWL_DEPTH", "1"));
 
       // now load the crawl rules
-      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props), null, baseCrawlDepth);
+      m_crawlSpec = new CrawlSpec(m_baseUrl, makeRules(props), baseCrawlDepth);
     }
     catch (IOException ex) {
       exitOnError("Error processing prop file: ", ex);

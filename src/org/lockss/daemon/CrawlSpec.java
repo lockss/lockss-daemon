@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.5 2003-10-09 23:00:18 eaalto Exp $
+ * $Id: CrawlSpec.java,v 1.6 2003-10-10 19:21:45 eaalto Exp $
  */
 
 /*
@@ -44,20 +44,40 @@ public final class CrawlSpec {
   private CrawlWindowRule window;
   private int recrawlDepth = -1;
 
-  /** Create a CrawlSpec with the specified start list and rule.
+  /**
+   * Create a CrawlSpec with the specified start list and rule.  Defaults to
+   * recrawlDepth of 1.
    * @param startUrls a list of Strings specifying starting points
    * for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
-   * @param window window to determine when crawling is permitted.  A null
-   * window always allows.
+   * @throws IllegalArgumentException if the url list is empty.
+   * @throws NullPointerException if any elements of startUrls is null.
+   * @throws ClassCastException if any elements of startUrls is not a String.
+   */
+  public CrawlSpec(List startUrls, CrawlRule rule) throws ClassCastException {
+    int len = startUrls.size();
+    if (len == 0) {
+      throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
+    }
+    startList = ListUtil.immutableListOfType(startUrls, String.class);
+    this.rule = rule;
+    this.recrawlDepth = 1;
+  }
+
+  /**
+   * Create a CrawlSpec with the specified start list and rule.
+   * @param startUrls a list of Strings specifying starting points
+   * for the crawl
+   * @param rule filter to determine which URLs encountered in the crawl
+   * should themselves be crawled.  A null rule is always true.
    * @param recrawlDepth depth to always refetch
    * @throws IllegalArgumentException if the url list is empty.
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public CrawlSpec(List startUrls, CrawlRule rule, CrawlWindowRule window,
-                   int recrawlDepth) throws ClassCastException {
+  public CrawlSpec(List startUrls, CrawlRule rule, int recrawlDepth)
+      throws ClassCastException {
     int len = startUrls.size();
     if (len == 0) {
       throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
@@ -67,22 +87,49 @@ public final class CrawlSpec {
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
-    this.window = window;
     this.recrawlDepth = recrawlDepth;
   }
 
-  /** Create a CrawlSpec with the specified single start url and rule.
+  /**
+   * Create a CrawlSpec with the specified single start url and rule.
+   * Defaults to recrawl depth of 1.
    * @param url specifies the starting point for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
-   * @param window window to determine when crawling is permitted.  A null
-   * window always allows.
+   * @throws NullPointerException if the url is null.
+   */
+  public CrawlSpec(String url, CrawlRule rule) {
+    this(ListUtil.list(url), rule);
+  }
+
+  /**
+   * Create a CrawlSpec with the specified single start url and rule.
+   * @param url specifies the starting point for the crawl
+   * @param rule filter to determine which URLs encountered in the crawl
+   * should themselves be crawled.  A null rule is always true.
    * @param recrawlDepth depth to always refetch
    * @throws NullPointerException if the url is null.
    */
-  public CrawlSpec(String url, CrawlRule rule, CrawlWindowRule window,
-                   int recrawlDepth) {
-    this(ListUtil.list(url), rule, window, recrawlDepth);
+  public CrawlSpec(String url, CrawlRule rule, int recrawlDepth) {
+    this(ListUtil.list(url), rule, recrawlDepth);
+  }
+
+
+  /**
+   * Returns the CrawlWindowRule, or null.
+   * @return the {@link CrawlWindowRule}
+   */
+  public CrawlWindowRule getCrawlWindowRule() {
+    return window;
+  }
+
+  /**
+   * Sets the CrawlWindowRule (null for none) to determine when crawling is
+   * permitted.  A null window always allows.
+   * @param window the {@link CrawlWindowRule}
+   */
+  public void setCrawlWindowRule(CrawlWindowRule window) {
+    this.window = window;
   }
 
   /**

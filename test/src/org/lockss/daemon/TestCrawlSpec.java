@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlSpec.java,v 1.5 2003-10-09 23:00:18 eaalto Exp $
+ * $Id: TestCrawlSpec.java,v 1.6 2003-10-10 19:21:44 eaalto Exp $
  */
 
 /*
@@ -49,30 +49,30 @@ public class TestCrawlSpec extends LockssTestCase {
 
   public void testEmptySpec() throws REException {
     try {
-      CrawlSpec cs = new CrawlSpec((String)null, null, null, 1);
+      CrawlSpec cs = new CrawlSpec((String)null, null);
       fail("CrawlSpec with null starting point should throw");
     } catch (NullPointerException e) { }
     try {
-      CrawlSpec cs = new CrawlSpec((List)null, null, null, 1);
+      CrawlSpec cs = new CrawlSpec((List)null, null);
       fail("CrawlSpec with null starting point should throw");
     } catch (NullPointerException e) { }
     try {
-      CrawlSpec cs = new CrawlSpec(Collections.EMPTY_LIST, null, null, 1);
+      CrawlSpec cs = new CrawlSpec(Collections.EMPTY_LIST, null);
       fail("CrawlSpec with null starting point should throw");
     } catch (IllegalArgumentException e) { }
     String foo[] = {"foo"};
-    CrawlSpec cs1 = new CrawlSpec(foo[0], null, null, 1);
+    CrawlSpec cs1 = new CrawlSpec(foo[0], null);
     assertIsomorphic(foo, cs1.getStartingUrls());
-    CrawlSpec cs2 = new CrawlSpec(ListUtil.fromArray(foo), null, null, 1);
+    CrawlSpec cs2 = new CrawlSpec(ListUtil.fromArray(foo), null);
     assertIsomorphic(foo, cs2.getStartingUrls());
     String foobar[] = {"foo", "bar"};
-    CrawlSpec cs3 = new CrawlSpec(ListUtil.fromArray(foobar), null, null, 1);
+    CrawlSpec cs3 = new CrawlSpec(ListUtil.fromArray(foobar), null);
     assertIsomorphic(foobar, cs3.getStartingUrls());
   }
 
   public void testNoModify() {
     List l1 = ListUtil.list("one", "two");
-    CrawlSpec cs = new CrawlSpec(l1, null, null, 1);
+    CrawlSpec cs = new CrawlSpec(l1, null);
     List l2 = cs.getStartingUrls();
     assertEquals(l1, l2);
     try {
@@ -85,7 +85,7 @@ public class TestCrawlSpec extends LockssTestCase {
   }
 
   public void testNullRule() throws REException {
-    CrawlSpec cs1 = new CrawlSpec("foo", null, null, 1);
+    CrawlSpec cs1 = new CrawlSpec("foo", null);
     assertTrue(cs1.isIncluded(null));
     assertTrue(cs1.isIncluded("foo"));
     assertTrue(cs1.isIncluded("bar"));
@@ -94,8 +94,7 @@ public class TestCrawlSpec extends LockssTestCase {
   public void testIncluded() throws REException {
     CrawlSpec cs1 =
       new CrawlSpec("foo",
-                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE),
-                    null, 1);
+                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE));
     try {
       assertFalse(cs1.isIncluded(null));
       fail("CrawlSpec.inIncluded(null) should throw");
@@ -109,8 +108,8 @@ public class TestCrawlSpec extends LockssTestCase {
     MyMockCrawlWindowRule window = new MyMockCrawlWindowRule();
     CrawlSpec cs1 =
       new CrawlSpec("foo",
-                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE),
-                    window, 1);
+                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE));
+    cs1.setCrawlWindowRule(window);
     assertTrue(cs1.canCrawl());
     window.setAllowCrawl(false);
     assertFalse(cs1.canCrawl());
@@ -118,7 +117,7 @@ public class TestCrawlSpec extends LockssTestCase {
 
   public void testThrowsIfRecrawlDepthLessThanOne() {
     try {
-      CrawlSpec cs = new CrawlSpec("blah", null, null, 0);
+      CrawlSpec cs = new CrawlSpec("blah", null, 0);
       fail("Trying to construct a CrawlSpec with a RecrawlDepth less "
 	   +"than 1 should have thrown");
     } catch (IllegalArgumentException e) {
