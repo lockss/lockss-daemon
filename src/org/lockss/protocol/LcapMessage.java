@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.29 2003-03-28 23:39:17 tal Exp $
+ * $Id: LcapMessage.java,v 1.30 2003-04-03 19:39:32 tal Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class LcapMessage
   public static final int CONTENT_POLL_REP = 3;
   public static final int VERIFY_POLL_REQ = 4;
   public static final int VERIFY_POLL_REP = 5;
-  public static final int NO_OP = -1;
+  public static final int NO_OP = 6;
 
   public static final String PARAM_HASH_ALGORITHM = Configuration.PREFIX +
       "protocol.hashAlgorithm";
@@ -64,7 +64,9 @@ public class LcapMessage
   public static final String[] POLL_OPCODES = {
       "NameReq", "NameRep",
       "ContentReq", "ContentRep",
-      "VerifyReq", "VerifyRep" };
+      "VerifyReq", "VerifyRep",
+      "NoOp"
+  };
 
   public static final String[] POLL_NAMES = {
       "NamePoll", "ContentPoll", "VerfiyPoll"};
@@ -480,7 +482,7 @@ public class LcapMessage
   }
 
   public boolean isReply() {
-    return (m_opcode % 2 == 1) ? true : false;
+    return ((m_opcode != NO_OP) && (m_opcode % 2 == 1)) ? true : false;
   }
 
   public boolean isNamePoll() {
@@ -643,23 +645,27 @@ public class LcapMessage
   public String toString() {
     StringBuffer sb = new StringBuffer();
     sb.append("[LcapMessage: ");
-    sb.append(m_targetUrl);
-    sb.append(" ");
-    sb.append(m_lwrBound);
-    sb.append("-");
-    sb.append(m_uprBound);
-    sb.append(" ");
-    sb.append(POLL_OPCODES[m_opcode]);
-    sb.append(" C:");
-    sb.append(String.valueOf(B64Code.encode(m_challenge)));
-    sb.append(" V:");
-    sb.append(String.valueOf(B64Code.encode(m_verifier)));
-    if (m_hashed != null) { //can be null for a request message
-      sb.append(" H:");
-      sb.append(String.valueOf(B64Code.encode(m_hashed)));
-    }
-    if(m_entries != null) {
+    if (isNoOp()) {
+      sb.append(POLL_OPCODES[m_opcode]);
+    } else {
+      sb.append(m_targetUrl);
+      sb.append(" ");
+      sb.append(m_lwrBound);
+      sb.append("-");
+      sb.append(m_uprBound);
+      sb.append(" ");
+      sb.append(POLL_OPCODES[m_opcode]);
+      sb.append(" C:");
+      sb.append(String.valueOf(B64Code.encode(m_challenge)));
+      sb.append(" V:");
+      sb.append(String.valueOf(B64Code.encode(m_verifier)));
+      if (m_hashed != null) { //can be null for a request message
+	sb.append(" H:");
+	sb.append(String.valueOf(B64Code.encode(m_hashed)));
+      }
+      if(m_entries != null) {
 
+      }
     }
     sb.append("]");
     return sb.toString();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapMessage.java,v 1.19 2003-03-28 23:39:17 tal Exp $
+ * $Id: TestLcapMessage.java,v 1.20 2003-04-03 19:39:31 tal Exp $
  */
 
 /*
@@ -137,6 +137,12 @@ public class TestLcapMessage extends LockssTestCase {
     // now check the fields we expect to be valid
     assertEquals(noop_msg.m_originAddr, testaddr);
     assertEquals(noop_msg.m_opcode,LcapMessage.NO_OP);
+  }
+
+  public void testNoOpMessageToString() throws IOException {
+    LcapMessage noop_msg = LcapMessage.makeNoOpMsg(testID);
+
+    noop_msg.toString();
   }
 
   public void testNoOpEncoding() {
