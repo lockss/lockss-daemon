@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.37 2003-05-08 05:53:28 claire Exp $
+ * $Id: LcapMessage.java,v 1.37.6.1 2003-06-17 01:08:34 aalto Exp $
  */
 
 /*
@@ -442,6 +442,12 @@ public class LcapMessage
     else if (m_opcode % 2 == 1) { // if we're a reply we'd better have a hash
       throw new ProtocolException("encode - missing hash in reply packet.");
     }
+
+    // blank these to avoid counting their length twice
+    m_props.remove("entries");
+    m_props.remove("lwrRem");
+    m_props.remove("uprRem");
+
     byte[] cur_bytes = m_props.encode();
     int remaining_bytes = MAX_PACKET_SIZE - cur_bytes.length - 28;
     if (remaining_bytes < 0) {
@@ -603,10 +609,12 @@ public class LcapMessage
     m_lwrRem = null;
     m_uprRem = null;
     log.debug3("Entries To String max buffer size: " + maxBufSize);
-    for (int i = 0; i < m_entries.size(); i++) {
+    int entryCount;
+    for (entryCount = 0; entryCount < m_entries.size(); entryCount++) {
       // if the length of this entry < max buffer
       byte[] cur_bytes = m_props.encodeString(buf.toString());
-      PollTally.NameListEntry entry = (PollTally.NameListEntry) m_entries.get(i);
+      PollTally.NameListEntry entry =
+          (PollTally.NameListEntry) m_entries.get(entryCount);
       byte[] entry_bytes = m_props.encodeString(entry.name);
       if (cur_bytes.length + entry_bytes.length < maxBufSize) {
         buf.append(entry.name);
@@ -624,8 +632,9 @@ public class LcapMessage
         break;
       }
     }
-    log.debug3("Entries string: " + buf.toString()
+    log.debug3("Outgoing entries string: " + buf.toString()
               + " l_rem: " + m_lwrRem + " u_rem: " + m_uprRem);
+    log.debug3("Entry count: "+entryCount);
     return buf.toString();
   }
 
@@ -643,6 +652,9 @@ public class LcapMessage
       boolean hasContent = mark.equals("\r") ? true : false;
       entries.add(new PollTally.NameListEntry(hasContent, name));
     }
+    log.debug3("Incoming entries string: " + estr
+              + " l_rem: " + m_lwrRem + " u_rem: " + m_uprRem);
+    log.debug3("Entry count: "+entries.size());
     return entries;
   }
 

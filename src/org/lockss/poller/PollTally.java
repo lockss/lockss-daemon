@@ -278,11 +278,6 @@ public class PollTally {
         status = won ? STATE_WON : STATE_LOST;
       }
     }
-    if((type == Poll.NAME_POLL) && (status != STATE_WON)) {
-      log.debug2("lost a name poll, building poll list");
-      ((NamePoll)poll).buildPollLists(pollVotes.iterator());
-    }
-
   }
 
   void verifyTally() {
