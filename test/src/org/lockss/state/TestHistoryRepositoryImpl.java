@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.27 2003-04-24 22:08:52 tal Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.28 2003-05-30 01:45:21 aalto Exp $
  */
 
 /*
@@ -100,8 +100,8 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
     assertEquals(expected, location);
 
-    mspec = new MockCachedUrlSetSpec(
-        "http://www.example.com/branch/./test", null);
+    mspec = new MockCachedUrlSetSpec("http://www.example.com/branch/./test",
+                                     null);
     mcus = new MockCachedUrlSet(mau, mspec);
     location = repository.getNodeLocation(mcus);
     expected = LockssRepositoryServiceImpl.mapUrlToFileLocation(expectedStart,
@@ -109,21 +109,20 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
     assertEquals(expected, location);
 
-
     try {
       mspec = new MockCachedUrlSetSpec("http://www.example.com/..", null);
       mcus = new MockCachedUrlSet(mau, mspec);
       location = repository.getNodeLocation(mcus);
       fail("Should have thrown MalformedURLException.");
-    }
-    catch (MalformedURLException mue) {}
+    } catch (MalformedURLException mue) { }
+
     try {
       mspec = new MockCachedUrlSetSpec(
           "http://www.example.com/test/../../test2", null);
       mcus = new MockCachedUrlSet(mau, mspec);
       location = repository.getNodeLocation(mcus);
       fail("Should have thrown MalformedURLException.");
-    } catch (MalformedURLException mue) {}
+    } catch (MalformedURLException mue) { }
   }
 
   public void testLoadMapping() throws Exception {
@@ -267,7 +266,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   }
 
   public void testStoreNodeState() throws Exception {
-    TimeBase.setSimulated();
+    TimeBase.setSimulated(100);
     CachedUrlSet mcus = new MockCachedUrlSet(mau, new RangeCachedUrlSetSpec(
         "http://www.example.com"));
     CrawlState crawl = new CrawlState(1, 2, 123);
@@ -278,6 +277,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     polls.add(poll2);
     NodeState nodeState = new NodeStateImpl(mcus, 123321, crawl, polls,
                                             repository);
+    ((NodeStateImpl)nodeState).setState(NodeState.DAMAGE_AT_OR_BELOW);
     repository.storeNodeState(nodeState);
     String filePath = LockssRepositoryServiceImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -295,6 +295,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertEquals(1, nodeState.getCrawlState().getType());
     assertEquals(2, nodeState.getCrawlState().getStatus());
     assertEquals(123, nodeState.getCrawlState().getStartTime());
+    assertEquals(NodeState.DAMAGE_AT_OR_BELOW, nodeState.getState());
 
     Iterator pollIt = nodeState.getActivePolls();
     assertTrue(pollIt.hasNext());
