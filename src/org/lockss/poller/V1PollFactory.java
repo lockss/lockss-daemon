@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.3 2004-09-23 02:35:22 dshr Exp $
+ * $Id: V1PollFactory.java,v 1.4 2004-09-23 17:38:44 dshr Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class V1PollFactory implements PollFactory {
 
 
   /**
-   * pollShouldBeCreated is invoked to check for conflicts or other
+   * shouldPollBeCreated is invoked to check for conflicts or other
    * version-specific reasons why the poll should not be created at
    * this time.
    * @param msg the LcapMessage that triggered the new Poll
@@ -227,7 +227,7 @@ public class V1PollFactory implements PollFactory {
    * @param pm the PollManager that called this method.
    * @return true if it is OK to call the poll
    */
-   public boolean pollShouldBeCreated(LcapMessage msg,
+   public boolean shouldPollBeCreated(LcapMessage msg,
 					 PollSpec pollspec,
 					 PollManager pm,
 					 IdentityManager im) {
@@ -354,7 +354,7 @@ public class V1PollFactory implements PollFactory {
 	dur = max;
       }
       theLog.debug3("Trying to schedule poll of duration: " + dur);
-      if (canSchedulePoll(dur, hashTime, pm)) {
+      if (canPollBeScheduled(dur, hashTime, pm)) {
 	theLog.debug2("Poll duration: " +
 		      StringUtil.timeIntervalToString(dur));
 	return dur;
@@ -373,7 +373,7 @@ public class V1PollFactory implements PollFactory {
     return -1;
   }
 
-  public boolean canSchedulePoll(long pollTime, long hashTime,
+  public boolean canPollBeScheduled(long pollTime, long hashTime,
 				  PollManager pm) {
     theLog.debug("Try to schedule " + pollTime + " poll " + hashTime + " poll");
     if (hashTime > pollTime) {

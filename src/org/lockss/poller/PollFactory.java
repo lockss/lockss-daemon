@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.1 2004-09-16 21:29:16 dshr Exp $
+* $Id: PollFactory.java,v 1.2 2004-09-23 17:38:43 dshr Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public interface PollFactory {
 		      IdentityManager im) throws ProtocolException;
 
   /**
-   * pollShouldBeCreated is invoked to check for conflicts or other
+   * shouldPollBeCreated is invoked to check for conflicts or other
    * version-specific reasons why the poll should not be created at
    * this time.
    * @param msg the LcapMessage that triggered the new Poll
@@ -86,7 +86,7 @@ public interface PollFactory {
    * @param im the IdentityManager
    * @return true if it is OK to call the poll
    */
-   boolean pollShouldBeCreated(LcapMessage msg,
+   boolean shouldPollBeCreated(LcapMessage msg,
 			       PollSpec pollspec,
 			       PollManager pm,
 			       IdentityManager im);
@@ -120,9 +120,5 @@ public interface PollFactory {
   public long getMaxNamePollDuration();
 
   public long getMinNamePollDuration();
-
-  public long calcDuration(int pollType, CachedUrlSet cus, PollManager pm);
-
-  public boolean canSchedulePoll(long pollTime, long hashTime, PollManager pm);
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.137 2004-09-23 02:35:22 dshr Exp $
+ * $Id: PollManager.java,v 1.138 2004-09-23 17:38:44 dshr Exp $
  */
 
 /*
@@ -356,7 +356,7 @@ public class PollManager
     }
 
     // check for conflicts
-    if (!pf[pollVersion].pollShouldBeCreated(msg, spec, this, theIDManager)) {
+    if (!pf[pollVersion].shouldPollBeCreated(msg, spec, this, theIDManager)) {
       theLog.debug("Poll request ignored");
       return null;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.67 2004-09-23 02:35:22 dshr Exp $
+ * $Id: TestPollManager.java,v 1.68 2004-09-23 17:38:46 dshr Exp $
  */
 
 /*
@@ -152,15 +152,18 @@ public class TestPollManager extends LockssTestCase {
   /** test for V1 method PollFactory.pollShouldBeCalled(..) */
   public void testV1PollShouldBeCalled() throws Exception {
     // lets try to run two V1 content polls in the same location
-    PollFactory pf = pollmanager.getPollFactory(1);
+    PollFactory ppf = pollmanager.getPollFactory(1);
+    assertNotNull(ppf);
+    assertTrue(ppf instanceof V1PollFactory);
+    V1PollFactory pf = (V1PollFactory) ppf;
 
-   LcapMessage[] sameroot = new LcapMessage[3];
-   PollSpec[] spec = new PollSpec[3];
-   int[] pollType = {
-     Poll.NAME_POLL,
-     Poll.CONTENT_POLL,
-     Poll.VERIFY_POLL,
-   };
+    LcapMessage[] sameroot = new LcapMessage[3];
+    PollSpec[] spec = new PollSpec[3];
+    int[] pollType = {
+      Poll.NAME_POLL,
+      Poll.CONTENT_POLL,
+      Poll.VERIFY_POLL,
+    };
 
    for(int i= 0; i<3; i++) {
      spec[i] = new MockPollSpec(testau, urlstr, lwrbnd, uprbnd, pollType[i]);
@@ -179,27 +182,27 @@ public class TestPollManager extends LockssTestCase {
    // differnt content poll should be ok
 
    assertTrue("different content poll s/b ok",
-	      pf.pollShouldBeCreated(testmsg[1], new PollSpec(testmsg[1]),
+	      pf.shouldPollBeCreated(testmsg[1], new PollSpec(testmsg[1]),
 				     pollmanager, idmanager));
 
    // same content poll same range s/b a conflict
    assertFalse("same content poll root s/b conflict",
-	       pf.pollShouldBeCreated(sameroot[1], new PollSpec(sameroot[1]),
+	       pf.shouldPollBeCreated(sameroot[1], new PollSpec(sameroot[1]),
 				     pollmanager, idmanager));
 
    // different name poll should be ok
    assertTrue("different name poll s/b ok",
-	      pf.pollShouldBeCreated(testmsg[0], new PollSpec(testmsg[0]),
+	      pf.shouldPollBeCreated(testmsg[0], new PollSpec(testmsg[0]),
 				     pollmanager, idmanager));
 
    // same name poll s/b conflict
    assertFalse("same name poll root s/b conflict",
-	       pf.pollShouldBeCreated(sameroot[0], new PollSpec(sameroot[0]),
+	       pf.shouldPollBeCreated(sameroot[0], new PollSpec(sameroot[0]),
 				     pollmanager, idmanager));
 
    // verify poll should be ok
    assertTrue("verify poll s/b ok",
-	      pf.pollShouldBeCreated(testmsg[2], new PollSpec(testmsg[2]),
+	      pf.shouldPollBeCreated(testmsg[2], new PollSpec(testmsg[2]),
 				     pollmanager, idmanager));
 
    // remove the poll
@@ -263,11 +266,11 @@ public class TestPollManager extends LockssTestCase {
     // Accept polls that finish no earlier than this
     pf.setMinPollDeadline(Deadline.in(1000));
     // this one can't
-    assertFalse(pf.canSchedulePoll(500, 100, mpm));
+    assertFalse(pf.canPollBeScheduled(500, 100, mpm));
     // can
-    assertTrue(pf.canSchedulePoll(2000, 100, mpm));
+    assertTrue(pf.canPollBeScheduled(2000, 100, mpm));
     // neededTime > duration
-    assertFalse(pf.canSchedulePoll(500, 600, mpm));
+    assertFalse(pf.canPollBeScheduled(500, 600, mpm));
   }
 
   //  Now test the PollManager itself

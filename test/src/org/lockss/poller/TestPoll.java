@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.82 2004-09-23 02:35:22 dshr Exp $
+ * $Id: TestPoll.java,v 1.83 2004-09-23 17:38:45 dshr Exp $
  */
 
 /*
@@ -494,9 +494,11 @@ public class TestPoll extends LockssTestCase {
       Poll.CONTENT_POLL,
       Poll.VERIFY_POLL,
     };
-    PollFactory pf = pollmanager.getPollFactory(1);
+    PollFactory ppf = pollmanager.getPollFactory(1);
+    assertNotNull("PollFactory should not be null", ppf);
     // XXX V1 support mandatory
-    assertNotNull("PollFactory should not be null", pf);
+    assertTrue(ppf instanceof V1PollFactory);
+    V1PollFactory pf = (V1PollFactory)ppf;
 
     for (int i= 0; i<testV1msg.length; i++) {
       PollSpec spec = new MockPollSpec(testau, rootV1urls[i],
@@ -530,7 +532,10 @@ public class TestPoll extends LockssTestCase {
     }
 
     testV2msg = new LcapMessage[2];
-    pf = pollmanager.getPollFactory(2);
+    ppf = pollmanager.getPollFactory(2);
+    assertNotNull(ppf);
+    assertTrue(ppf instanceof V2PollFactory);
+    V2PollFactory p2f = (V2PollFactory)ppf;
 
     for (int i= 0; i<testV2msg.length; i++) {
       PollSpec spec = new MockPollSpec(testau, rootV2urls[i],
@@ -544,7 +549,7 @@ public class TestPoll extends LockssTestCase {
       switch (opcode) {
       case LcapMessage.NAME_POLL_REQ:
       case LcapMessage.CONTENT_POLL_REQ:
-	duration = pf.calcDuration(opcode,spec.getCachedUrlSet(),pollmanager);
+	duration = p2f.calcDuration(opcode,spec.getCachedUrlSet(),pollmanager);
 	break;
       case LcapMessage.VERIFY_POLL_REQ:
 	duration = 100000; // Arbitrary
