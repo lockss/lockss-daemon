@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.22 2003-02-24 22:13:43 claire Exp $
+ * $Id: NullPlugin.java,v 1.23 2003-02-25 22:56:16 aalto Exp $
  */
 
 /*
@@ -133,6 +133,14 @@ public class NullPlugin {
 
     public InputStream openForReading() {
       return new StringInputStream("");
+    }
+
+    public InputStream openForHashing() {
+      return openForReading();
+    }
+
+    public byte[] getContentSize() {
+      return new byte[0];
     }
 
     public Properties getProperties() {

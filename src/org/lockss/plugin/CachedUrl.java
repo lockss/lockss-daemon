@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrl.java,v 1.1 2003-02-24 22:13:41 claire Exp $
+ * $Id: CachedUrl.java,v 1.2 2003-02-25 22:56:16 aalto Exp $
  */
 
 /*
@@ -34,8 +34,7 @@ package org.lockss.plugin;
 
 import java.io.*;
 import java.util.Properties;
-
-import org.lockss.daemon.*;
+//import org.lockss.daemon.CachedUrlSetNode;
 
 /**
  * <code>CachedUrl</code> is used to access the contents and
@@ -61,6 +60,14 @@ public interface CachedUrl extends CachedUrlSetNode {
      *         unfiltered content of the cached url can be read.
      */
     public InputStream openForReading();
+
+    /**
+     * Get an inputstream of the content suitable for hashing.
+     * Probably filtered.
+     * @return an InputStream
+     */
+    public InputStream openForHashing();
+
     /**
      * Get the properties attached to the url in the cache, if any.
      * @return the <code>Properties</code> object attached to the
@@ -68,4 +75,10 @@ public interface CachedUrl extends CachedUrlSetNode {
      *         empty <code>Properties</code> object is returned.
      */
     public Properties getProperties();
+
+    /**
+     * Return the content size.
+     * @return a byte[]
+     */
+    public byte[] getContentSize();
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.8 2003-02-24 22:13:42 claire Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.9 2003-02-25 22:56:16 aalto Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
+import java.io.File;
 
 /**
  * This is ArchivalUnit of the simulated plugin, used for testing purposes.
@@ -162,14 +163,14 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   }
 
   private static String checkUrlFormat(String url) {
-    int lastSlashIdx = url.lastIndexOf("/");
+    int lastSlashIdx = url.lastIndexOf(File.separator);
     int lastPeriodIdx = url.lastIndexOf(".");
 
     if ((lastSlashIdx >= lastPeriodIdx) ||
-        (StringUtil.countOccurences(url, "/")==2)) {
+        (StringUtil.countOccurences(url, File.separator)==2)) {
       StringBuffer buffer = new StringBuffer(url);
-      if (!url.endsWith("/")) {
-        buffer.append("/");
+      if (!url.endsWith(File.separator)) {
+        buffer.append(File.separator);
       }
       buffer.append("index.html");
       return buffer.toString();
