@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.4 2003-10-09 18:56:10 troberts Exp $
+ * $Id: CrawlSpec.java,v 1.5 2003-10-09 23:00:18 eaalto Exp $
  */
 
 /*
@@ -41,6 +41,7 @@ import org.lockss.util.*;
 public final class CrawlSpec {
   private List startList;
   private CrawlRule rule;
+  private CrawlWindowRule window;
   private int recrawlDepth = -1;
 
   /** Create a CrawlSpec with the specified start list and rule.
@@ -48,12 +49,15 @@ public final class CrawlSpec {
    * for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
+   * @param window window to determine when crawling is permitted.  A null
+   * window always allows.
+   * @param recrawlDepth depth to always refetch
    * @throws IllegalArgumentException if the url list is empty.
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public CrawlSpec(List startUrls, CrawlRule rule, int recrawlDepth)
-      throws ClassCastException {
+  public CrawlSpec(List startUrls, CrawlRule rule, CrawlWindowRule window,
+                   int recrawlDepth) throws ClassCastException {
     int len = startUrls.size();
     if (len == 0) {
       throw new IllegalArgumentException("CrawlSpec starting point list must not be empty");
@@ -63,6 +67,7 @@ public final class CrawlSpec {
     }
     startList = ListUtil.immutableListOfType(startUrls, String.class);
     this.rule = rule;
+    this.window = window;
     this.recrawlDepth = recrawlDepth;
   }
 
@@ -70,10 +75,14 @@ public final class CrawlSpec {
    * @param url specifies the starting point for the crawl
    * @param rule filter to determine which URLs encountered in the crawl
    * should themselves be crawled.  A null rule is always true.
+   * @param window window to determine when crawling is permitted.  A null
+   * window always allows.
+   * @param recrawlDepth depth to always refetch
    * @throws NullPointerException if the url is null.
    */
-  public CrawlSpec(String url, CrawlRule rule, int recrawlDepth) {
-    this(ListUtil.list(url), rule, recrawlDepth);
+  public CrawlSpec(String url, CrawlRule rule, CrawlWindowRule window,
+                   int recrawlDepth) {
+    this(ListUtil.list(url), rule, window, recrawlDepth);
   }
 
   /**
@@ -92,6 +101,11 @@ public final class CrawlSpec {
    */
   public boolean isIncluded(String url) {
     return (rule == null) ? true : (rule.match(url) == CrawlRule.INCLUDE);
+  }
+
+  public boolean canCrawl() {
+    return (window==null) ? true :
+        (window.canCrawl() == CrawlWindowRule.INCLUDE);
   }
 
   /**
