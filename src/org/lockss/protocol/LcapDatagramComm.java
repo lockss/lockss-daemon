@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.52 2004-09-20 14:20:37 dshr Exp $
+ * $Id: LcapDatagramComm.java,v 1.1 2004-09-22 19:13:03 dshr Exp $
  */
 
 /*
@@ -43,11 +43,11 @@ import org.lockss.app.*;
 import org.lockss.plugin.*;
 
 /**
- * LcapComm supports datagram (multicast and/or unicast) communication
+ * LcapDatagramComm supports datagram (multicast and/or unicast) communication
  * between LOCKSS caches.  The packets sent at this level are {@link
  * LockssDatagram}s.  They are sent and received via {@link LcapSocket}s.
  */
-public class LcapComm
+public class LcapDatagramComm
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
   static final String PARAM_LOCAL_IPS =
@@ -104,12 +104,12 @@ public class LcapComm
 
   private Vector messageHandlers = new Vector();
 
-  public LcapComm() {
+  public LcapDatagramComm() {
     sockFact = new NormalSocketFactory();
   }
 
   /** For testing */
-  LcapComm(SocketFactory factory, Configuration config) {
+  LcapDatagramComm(SocketFactory factory, Configuration config) {
     sockFact = factory;
     configure(config,
 	      ConfigManager.EMPTY_CONFIGURATION,
@@ -446,7 +446,7 @@ public class LcapComm
   }
 
   /**
-   * Register a {@link LcapComm.MessageHandler}, which will be called
+   * Register a {@link LcapDatagramComm.MessageHandler}, which will be called
    * whenever a message is received.
    * @param protocol an int representing the protocol
    * @param handler MessageHandler to add
@@ -463,7 +463,7 @@ public class LcapComm
   }
 
   /**
-   * Unregister a {@link LcapComm.MessageHandler}.
+   * Unregister a {@link LcapDatagramComm.MessageHandler}.
    * @param protocol an int representing the protocol
    */
   public void unregisterMessageHandler(int protocol) {
@@ -511,7 +511,7 @@ public class LcapComm
 	}
       }
       // prevent rcvThread changing during ensureQRunner() or stop()
-      synchronized (LcapComm.this) {
+      synchronized (LcapDatagramComm.this) {
 	rcvThread = null;
       }
     }
@@ -527,15 +527,15 @@ public class LcapComm
   }
 
   /**
-   * The <code>LcapComm.MessageHandler</code> interface defines the
-   * callback registered by clients of {@link LcapComm} who want to process
+   * The <code>LcapDatagramComm.MessageHandler</code> interface defines the
+   * callback registered by clients of {@link LcapDatagramComm} who want to process
    * incoming messages
    */
   public interface MessageHandler {
     /**
      * Callback used to inform clients that a message has been received.
      * @param ld  the received LockssReceivedDatagram
-     * @see LcapComm#registerMessageHandler */
+     * @see LcapDatagramComm#registerMessageHandler */
     public void handleMessage(LockssReceivedDatagram ld);
   }
 

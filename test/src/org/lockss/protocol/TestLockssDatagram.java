@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDatagram.java,v 1.7 2004-01-20 18:22:49 tlipkis Exp $
+ * $Id: TestLockssDatagram.java,v 1.8 2004-09-22 19:13:04 dshr Exp $
  */
 
 /*
@@ -112,8 +112,8 @@ public class TestLockssDatagram extends LockssTestCase {
 
   public void testCompressedEncodeDecode() throws Exception {
     Properties props = new Properties();
-    props.put(LcapComm.PARAM_COMPRESS_PACKETS, "true");
-    props.put(LcapComm.PARAM_COMPRESS_MIN, "10");
+    props.put(LcapDatagramComm.PARAM_COMPRESS_PACKETS, "true");
+    props.put(LcapDatagramComm.PARAM_COMPRESS_MIN, "10");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     LockssDatagram dg = new LockssDatagram(27, testData);
     IPAddr testAddr = IPAddr.getByName("10.4.111.27");

@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.134 2004-09-22 17:42:27 dshr Exp $
+ * $Id: PollManager.java,v 1.135 2004-09-22 19:13:02 dshr Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class PollManager
     theAlertManager = theDaemon.getAlertManager();
 
     // register a message handler with the router
-    theRouter = theDaemon.getRouterManager();
+    theRouter = theDaemon.getDatagramRouterManager();
     m_msgHandler =  new RouterMessageHandler();
     theRouter.registerMessageHandler(m_msgHandler);
 

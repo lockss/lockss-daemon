@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapComm.java,v 1.15 2004-09-21 21:25:00 dshr Exp $
+ * $Id: TestLcapDatagramComm.java,v 1.1 2004-09-22 19:13:04 dshr Exp $
  */
 
 /*
@@ -44,26 +44,26 @@ import org.lockss.repository.LockssRepositoryImpl;
 
 
 /**
- * This is the test class for org.lockss.protocol.LcapComm
+ * This is the test class for org.lockss.protocol.LcapDatagramComm
  */
 
-public class TestLcapComm extends LockssTestCase {
+public class TestLcapDatagramComm extends LockssTestCase {
   public static Class testedClasses[] = {
-    org.lockss.protocol.LcapComm.class
+    org.lockss.protocol.LcapDatagramComm.class
   };
 
-  public TestLcapComm(String msg) {
+  public TestLcapDatagramComm(String msg) {
     super(msg);
   }
 
   static Logger log = Logger.getLogger("SockTest");
   static int TIMEOUT = 1000;
 
-  static final String PARAM_MULTI_GROUP = LcapComm.PARAM_MULTI_GROUP;
-  static final String PARAM_MULTI_PORT = LcapComm.PARAM_MULTI_PORT;
-  static final String PARAM_UNI_PORT = LcapComm.PARAM_UNI_PORT;
-  static final String PARAM_UNI_PORT_SEND = LcapComm.PARAM_UNI_PORT_SEND;
-  static final String PARAM_MULTI_VERIFY = LcapComm.PARAM_MULTI_VERIFY;
+  static final String PARAM_MULTI_GROUP = LcapDatagramComm.PARAM_MULTI_GROUP;
+  static final String PARAM_MULTI_PORT = LcapDatagramComm.PARAM_MULTI_PORT;
+  static final String PARAM_UNI_PORT = LcapDatagramComm.PARAM_UNI_PORT;
+  static final String PARAM_UNI_PORT_SEND = LcapDatagramComm.PARAM_UNI_PORT_SEND;
+  static final String PARAM_MULTI_VERIFY = LcapDatagramComm.PARAM_MULTI_VERIFY;
 
   private static MockLockssDaemon daemon = new MockLockssDaemon(null);
 
@@ -80,7 +80,7 @@ public class TestLcapComm extends LockssTestCase {
   DatagramPacket testPacket2;
 
   MyMockSocketFactory fact;
-  LcapComm comm;
+  LcapDatagramComm comm;
   Configuration config;
 
   MockDatagramSocket ssock;
@@ -131,8 +131,8 @@ public class TestLcapComm extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(props);
     config = Configuration.getCurrentConfig();
 //     config = Configuration.readConfig(ListUtil.list(FileUtil.urlOfString(c1)));
-    comm = new LcapComm(fact, config);
-    daemon.setCommManager(comm);
+    comm = new LcapDatagramComm(fact, config);
+    daemon.setDatagramCommManager(comm);
     comm.initService(daemon);
     comm.startService();
     ssock = ((MockDatagramSocket)fact.ssocks.get(0));
@@ -230,7 +230,7 @@ public class TestLcapComm extends LockssTestCase {
     assertTrue(rcvdMsgs.isEmpty());
   }
 
-  class MessageHandler implements LcapComm.MessageHandler {
+  class MessageHandler implements LcapDatagramComm.MessageHandler {
     public void handleMessage(LockssReceivedDatagram rd) {
       rcvdMsgs.put(rd);
     }
@@ -238,7 +238,7 @@ public class TestLcapComm extends LockssTestCase {
 
   /** Mock socket factory creates LcapSockets with mock datagram/multicast
    * sockets. */
-  static class MyMockSocketFactory implements LcapComm.SocketFactory {
+  static class MyMockSocketFactory implements LcapDatagramComm.SocketFactory {
     List msocks = new ArrayList();
     List usocks = new ArrayList();
     List ssocks = new ArrayList();

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLcapDatagramRouter.java,v 1.1 2004-09-22 17:42:30 dshr Exp $
+ * $Id: TestLcapDatagramRouter.java,v 1.2 2004-09-22 19:13:04 dshr Exp $
  */
 
 /*
@@ -66,14 +66,14 @@ public class TestLcapDatagramRouter extends LockssTestCase {
     setConfig();
     idmgr = daemon.getIdentityManager();
     // this causes error messages, but need to start comm so it gets idmgr.
-    daemon.getCommManager().startService();
-    rtr = daemon.getRouterManager();
+    daemon.getDatagramCommManager().startService();
+    rtr = daemon.getDatagramRouterManager();
     rtr.startService();
     TimeBase.setSimulated(20000);
   }
 
   public void tearDown() throws Exception {
-    LcapComm comm = daemon.getCommManager();
+    LcapDatagramComm comm = daemon.getDatagramCommManager();
     if (comm != null) {
       comm.stopService();
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDatagram.java,v 1.10 2004-04-13 21:34:36 tlipkis Exp $
+ * $Id: LockssDatagram.java,v 1.11 2004-09-22 19:13:03 dshr Exp $
  */
 
 /*
@@ -150,10 +150,10 @@ public class LockssDatagram {
 
   boolean isCompressed() {
     Configuration config = Configuration.getCurrentConfig();
-    return (config.getBoolean(LcapComm.PARAM_COMPRESS_PACKETS,
-			      LcapComm.DEFAULT_COMPRESS_PACKETS) &&
-	    payload.length >= config.getInt(LcapComm.PARAM_COMPRESS_MIN,
-					    LcapComm.DEFAULT_COMPRESS_MIN));
+    return (config.getBoolean(LcapDatagramComm.PARAM_COMPRESS_PACKETS,
+			      LcapDatagramComm.DEFAULT_COMPRESS_PACKETS) &&
+	    payload.length >= config.getInt(LcapDatagramComm.PARAM_COMPRESS_MIN,
+					    LcapDatagramComm.DEFAULT_COMPRESS_MIN));
   }
 
 

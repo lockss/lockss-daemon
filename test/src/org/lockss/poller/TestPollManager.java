@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.64 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestPollManager.java,v 1.65 2004-09-22 19:13:03 dshr Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class TestPollManager extends LockssTestCase {
     idmanager.stopService();
     theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
-    theDaemon.getRouterManager().stopService();
+    theDaemon.getDatagramRouterManager().stopService();
     TimeBase.setReal();
     super.tearDown();
   }
@@ -510,7 +510,7 @@ public class TestPollManager extends LockssTestCase {
 
     theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
-    theDaemon.getRouterManager().startService();
+    theDaemon.getDatagramRouterManager().startService();
     theDaemon.getActivityRegulator(testau).startService();
 
     theDaemon.setNodeManager(new MockNodeManager(), testau);

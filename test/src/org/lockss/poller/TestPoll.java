@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.80 2004-09-20 14:20:40 dshr Exp $
+ * $Id: TestPoll.java,v 1.81 2004-09-22 19:13:03 dshr Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestPoll extends LockssTestCase {
     pollmanager.stopService();
     theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
-    theDaemon.getRouterManager().stopService();
+    theDaemon.getDatagramRouterManager().stopService();
     theDaemon.getSystemMetrics().stopService();
     TimeBase.setReal();
     for(int i=0; i<testV1msg.length; i++) {
@@ -468,7 +468,7 @@ public class TestPoll extends LockssTestCase {
     idmgr.startService();
     //theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
-    theDaemon.getRouterManager().startService();
+    theDaemon.getDatagramRouterManager().startService();
     theDaemon.getSystemMetrics().startService();
     theDaemon.getActivityRegulator(testau).startService();
     theDaemon.setNodeManager(new MockNodeManager(), testau);

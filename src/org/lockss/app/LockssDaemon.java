@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.64 2004-09-22 17:42:26 dshr Exp $
+ * $Id: LockssDaemon.java,v 1.65 2004-09-22 19:13:01 dshr Exp $
  */
 
 /*
@@ -92,8 +92,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static String ALERT_MANAGER = "AlertManager";
   public static String HASH_SERVICE = "HashService";
   public static String TIMER_SERVICE = "TimerService";
-  public static String COMM_MANAGER = "CommManager";
-  public static String ROUTER_MANAGER = "RouterManager";
+  public static String DATAGRAM_COMM_MANAGER = "DatagramCommManager";
+  public static String DATAGRAM_ROUTER_MANAGER = "DatagramRouterManager";
   public static String IDENTITY_MANAGER = "IdentityManager";
   public static String CRAWL_MANAGER = "CrawlManager";
   public static String PLUGIN_MANAGER = "PluginManager";
@@ -138,8 +138,10 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(PROXY_MANAGER, "org.lockss.proxy.ProxyManager"),
     new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
     // comm layer at end so don't process messages until other services ready
-    new ManagerDesc(COMM_MANAGER, "org.lockss.protocol.LcapComm"),
-    new ManagerDesc(ROUTER_MANAGER, "org.lockss.protocol.LcapDatagramRouter"),
+    new ManagerDesc(DATAGRAM_COMM_MANAGER,
+		    "org.lockss.protocol.LcapDatagramComm"),
+    new ManagerDesc(DATAGRAM_ROUTER_MANAGER,
+		    "org.lockss.protocol.LcapDatagramRouter"),
     new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
     new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS,
@@ -257,11 +259,11 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 
   /**
    * return the communication manager instance
-   * @return the LcapComm
+   * @return the LcapDatagramComm
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public LcapComm getCommManager()  {
-    return (LcapComm) getManager(COMM_MANAGER);
+  public LcapDatagramComm getDatagramCommManager()  {
+    return (LcapDatagramComm) getManager(DATAGRAM_COMM_MANAGER);
   }
 
   /**
@@ -269,8 +271,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    * @return the LcapDatagramRouter
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public LcapDatagramRouter getRouterManager()  {
-    return (LcapDatagramRouter) getManager(ROUTER_MANAGER);
+  public LcapDatagramRouter getDatagramRouterManager()  {
+    return (LcapDatagramRouter) getManager(DATAGRAM_ROUTER_MANAGER);
   }
 
   /**

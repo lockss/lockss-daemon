@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.42 2004-09-22 17:42:30 dshr Exp $
+ * $Id: MockLockssDaemon.java,v 1.43 2004-09-22 19:13:05 dshr Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class MockLockssDaemon extends LockssDaemon {
   SchedService schedService = null;
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
-  LcapComm commManager = null;
+  LcapDatagramComm commManager = null;
   LcapDatagramRouter routerManager = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
@@ -225,12 +225,13 @@ public class MockLockssDaemon extends LockssDaemon {
 
   /**
    * return the communication manager instance
-   * @return the LcapComm
+   * @return the LcapDatagramComm
    */
-  public LcapComm getCommManager() {
+  public LcapDatagramComm getDatagramCommManager() {
     if (commManager == null) {
-      commManager = (LcapComm)newManager(LockssDaemon.COMM_MANAGER);
-      managerMap.put(LockssDaemon.COMM_MANAGER, commManager);
+      commManager =
+	(LcapDatagramComm)newManager(LockssDaemon.DATAGRAM_COMM_MANAGER);
+      managerMap.put(LockssDaemon.DATAGRAM_COMM_MANAGER, commManager);
     }
     return commManager;
   }
@@ -239,10 +240,11 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the router manager instance
    * @return the LcapDatagramRouter
    */
-  public LcapDatagramRouter getRouterManager() {
+  public LcapDatagramRouter getDatagramRouterManager() {
     if (routerManager == null) {
-      routerManager = (LcapDatagramRouter)newManager(LockssDaemon.ROUTER_MANAGER);
-      managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
+      routerManager =
+	(LcapDatagramRouter)newManager(LockssDaemon.DATAGRAM_ROUTER_MANAGER);
+      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, routerManager);
     }
     return routerManager;
   }
@@ -360,18 +362,18 @@ public class MockLockssDaemon extends LockssDaemon {
    * Set the CommManager
    * @param commMan the new manager
    */
-  public void setCommManager(LcapComm commMan) {
+  public void setDatagramCommManager(LcapDatagramComm commMan) {
     commManager = commMan;
-    managerMap.put(LockssDaemon.COMM_MANAGER, commManager);
+    managerMap.put(LockssDaemon.DATAGRAM_COMM_MANAGER, commManager);
   }
 
   /**
    * Set the RouterManager
    * @param routerMan the new manager
    */
-  public void setRouterManager(LcapDatagramRouter routerMan) {
+  public void setDatagramRouterManager(LcapDatagramRouter routerMan) {
     routerManager = routerMan;
-    managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
+    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, routerManager);
   }
 
   /**

@@ -1,5 +1,5 @@
 /*
- * $Id: RunDaemon.java,v 1.45 2004-09-16 21:29:18 dshr Exp $
+ * $Id: RunDaemon.java,v 1.46 2004-09-22 19:13:03 dshr Exp $
  */
 
 /*
@@ -31,7 +31,6 @@ import java.net.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.hasher.HashService;
-import org.lockss.protocol.LcapComm;
 import org.lockss.plugin.simulated.*;
 import org.lockss.test.*;
 import org.lockss.protocol.*;
