@@ -87,7 +87,7 @@ public class TestPoll extends TestCase {
     }
     // test for creation
     try {
-      p = Poll.makePoll(m);
+      p = PollManager.makePoll(m);
     }
     catch (IOException ex) {
       fail("content poll failed");
@@ -98,7 +98,7 @@ public class TestPoll extends TestCase {
     // lets see if we can find it
     Poll foundp = null;
     try {
-      foundp = Poll.findPoll(m);
+      foundp = PollManager.findPoll(m);
     }
     catch (IOException ex) {
       fail("content poll mismatch in findPoll");
@@ -130,7 +130,7 @@ public class TestPoll extends TestCase {
     }
     // test for creation
     try {
-      p = Poll.makePoll(m);
+      p = PollManager.makePoll(m);
     }
     catch (IOException ex) {
       fail("name poll creation failed" + ex.toString());
@@ -141,7 +141,7 @@ public class TestPoll extends TestCase {
     // lets see if we can find it
     Poll foundp = null;
     try {
-      foundp = Poll.findPoll(m);
+      foundp = PollManager.findPoll(m);
     }
     catch (IOException ex) {
       fail("name poll mismatch in findPoll");
@@ -173,7 +173,7 @@ public class TestPoll extends TestCase {
     }
     // test for creation
     try {
-      p = Poll.makePoll(m);
+      p = PollManager.makePoll(m);
     }
     catch (IOException ex) {
       fail("verify poll creation failed");
@@ -184,7 +184,7 @@ public class TestPoll extends TestCase {
     // lets see if we can find it
     Poll foundp = null;
     try {
-      foundp = Poll.findPoll(m);
+      foundp = PollManager.findPoll(m);
     }
     catch (IOException ex) {
       fail("verify poll mismatch in findPoll");
@@ -216,7 +216,7 @@ public class TestPoll extends TestCase {
     }
     // test for creation
     try {
-      p = Poll.makePoll(m);
+      p = PollManager.makePoll(m);
     }
     catch (IOException ex) {
     }
@@ -238,7 +238,7 @@ public class TestPoll extends TestCase {
     }
     // this should also fail
     try {
-      p = Poll.makePoll(m);
+      p = PollManager.makePoll(m);
     }
     catch (IOException ex) {
     }
