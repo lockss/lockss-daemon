@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.97 2003-05-08 23:38:31 claire Exp $
+* $Id: PollManager.java,v 1.98 2003-05-17 00:12:48 aalto Exp $
  */
 
 /*
@@ -357,9 +357,8 @@ public class PollManager  extends BaseLockssManager {
       // get expiration time for the lock
       long expiration = 2 * msg.getDuration();
       if (AuUrl.isAuUrl(cus.getUrl())) {
-        if (!theDaemon.getActivityRegulator().startAuActivity(
-            ActivityRegulator.TOP_LEVEL_POLL,
-            cus.getArchivalUnit(), expiration)) {
+        if (!theDaemon.getActivityRegulator(cus.getArchivalUnit()).startAuActivity(
+            ActivityRegulator.TOP_LEVEL_POLL, expiration)) {
           theLog.debug2("New top-level poll aborted due to activity lock.");
           return null;
         }
@@ -375,7 +374,7 @@ public class PollManager  extends BaseLockssManager {
                           ActivityRegulator.STANDARD_CONTENT_POLL :
                           ActivityRegulator.STANDARD_NAME_POLL);
         }
-        if (!theDaemon.getActivityRegulator().startCusActivity(activity,
+        if (!theDaemon.getActivityRegulator(cus.getArchivalUnit()).startCusActivity(activity,
             cus, expiration)) {
           theLog.debug2("New poll aborted due to activity lock.");
           return null;
@@ -417,8 +416,8 @@ public class PollManager  extends BaseLockssManager {
    */
   private void freePollLock(CachedUrlSet cus, boolean isContentPoll) {
     if (AuUrl.isAuUrl(cus.getUrl())) {
-      theDaemon.getActivityRegulator().auActivityFinished(
-          ActivityRegulator.TOP_LEVEL_POLL, cus.getArchivalUnit());
+      theDaemon.getActivityRegulator(cus.getArchivalUnit()).auActivityFinished(
+          ActivityRegulator.TOP_LEVEL_POLL);
     } else {
       int activity;
       if (cus.getSpec() instanceof SingleNodeCachedUrlSetSpec) {
@@ -430,7 +429,7 @@ public class PollManager  extends BaseLockssManager {
                     ActivityRegulator.STANDARD_CONTENT_POLL :
                     ActivityRegulator.STANDARD_NAME_POLL);
       }
-      theDaemon.getActivityRegulator().cusActivityFinished(activity, cus);
+      theDaemon.getActivityRegulator(cus.getArchivalUnit()).cusActivityFinished(activity, cus);
     }
   }
 

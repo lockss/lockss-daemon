@@ -15,7 +15,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 
 public class MockLockssDaemon extends LockssDaemon {
-  ActivityRegulator activityRegulator = null;
+  ActivityRegulatorService activityRegulatorService = null;
   HashService hashService = null;
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
@@ -42,7 +42,7 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   public void stopDaemon() {
-    activityRegulator = null;
+    activityRegulatorService = null;
     hashService = null;
     pollManager = null;
     commManager = null;
@@ -58,21 +58,32 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the activity regulator instance
+   * return the activity regulator service
+   * @return the ActivityRegulatorService
+   */
+  public ActivityRegulatorService getActivityRegulatorService() {
+    if (activityRegulatorService == null) {
+      activityRegulatorService = new ActivityRegulatorServiceImpl();
+      try {
+        activityRegulatorService.initService(this);
+      }
+      catch (LockssDaemonException ex) { }
+      theManagers.put(LockssDaemon.ACTIVITY_REGULATOR_SERVICE,
+                      activityRegulatorService);
+    }
+    return activityRegulatorService;
+  }
+
+  /**
+   * get an ActivityRegulator instance.
+   * @param au the ArchivalUnit
    * @return the ActivityRegulator
    */
-  public ActivityRegulator getActivityRegulator() {
-    if (activityRegulator == null) {
-      activityRegulator = new ActivityRegulator();
-      try {
-        activityRegulator.initService(this);
-      }
-      catch (LockssDaemonException ex) {
-      }
-      theManagers.put(LockssDaemon.ACTIVITY_REGULATOR, activityRegulator);
-    }
-    return activityRegulator;
+  public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
+    getActivityRegulatorService().addActivityRegulator(au);
+    return getActivityRegulatorService().getActivityRegulator(au);
   }
+
 
   /**
    * return the hash service instance
@@ -340,12 +351,13 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the ActivityRegulator
-   * @param activityReg the new regulator
+   * Set the ActivityRegulatorService
+   * @param activityRegServ the new regulator service
    */
-  public void setActivityRegulator(ActivityRegulator activityReg) {
-    activityRegulator = activityReg;
-    theManagers.put(LockssDaemon.ACTIVITY_REGULATOR, activityRegulator);
+  public void setActivityRegulatorService(ActivityRegulatorService activityRegServ) {
+    activityRegulatorService = activityRegServ;
+    theManagers.put(LockssDaemon.ACTIVITY_REGULATOR_SERVICE,
+                    activityRegulatorService);
   }
 
   /**

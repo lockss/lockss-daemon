@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityRegulator.java,v 1.12 2003-04-26 01:14:30 aalto Exp $
+ * $Id: ActivityRegulator.java,v 1.13 2003-05-17 00:12:48 aalto Exp $
  */
 
 /*
@@ -33,10 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.util.*;
-
-import org.lockss.app.BaseLockssManager;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
+import org.lockss.app.BaseLockssManager;
 
 /**
  * The ActivityAllower is queried by the various managers when they wish to
@@ -107,11 +106,12 @@ public class ActivityRegulator extends BaseLockssManager {
 
   private static Logger logger = Logger.getLogger("ActivityRegulator");
 
-  HashMap auMap = new HashMap();
   HashMap cusMap = new HashMap();
+  ArchivalUnit au;
+  ActivityEntry curAuActivity = null;
 
-  public ActivityRegulator() {
-    logger.debug2("ActivityRegulator created.");
+  public ActivityRegulator(ArchivalUnit au) {
+    this.au = au;
   }
 
   public void startService() {
@@ -120,7 +120,6 @@ public class ActivityRegulator extends BaseLockssManager {
 
   public void stopService() {
     logger.debug2("ActivityRegulator stopped.");
-    auMap.clear();
     cusMap.clear();
     super.stopService();
   }
@@ -131,20 +130,16 @@ public class ActivityRegulator extends BaseLockssManager {
     // nothing to config
   }
 
-
-
   /**
    * Tries to start a particular AU-level activity.  If it can, it sets
    * the state to indicate that the requested activity is now running.
    * @param newActivity the activity int
-   * @param au the {@link ArchivalUnit}
    * @param expireIn expire in X ms
    * @return true iff the activity was marked as started
    */
-  public synchronized boolean startAuActivity(int newActivity, ArchivalUnit au,
-                                              long expireIn) {
+  public synchronized boolean startAuActivity(int newActivity, long expireIn) {
     // check if the au is free for this activity
-    int curActivity = getAuActivity(au);
+    int curActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, curActivity)) {
       // au is being acted upon
       logger.debug2("AU '" + au.getName() + "' busy with " +
@@ -153,7 +148,7 @@ public class ActivityRegulator extends BaseLockssManager {
       return false;
     }
 
-    setAuActivity(au, newActivity, expireIn);
+    setAuActivity(newActivity, expireIn);
     logger.debug("Started " + activityCodeToString(newActivity) + " on AU '" +
                  au.getName() + "'");
     return true;
@@ -170,7 +165,7 @@ public class ActivityRegulator extends BaseLockssManager {
   public synchronized boolean startCusActivity(int newActivity, CachedUrlSet cus,
                                                long expireIn) {
     // first, check if au is busy
-    int auActivity = getAuActivity(cus.getArchivalUnit());
+    int auActivity = getAuActivity();
     if (!isAllowedOnAu(newActivity, auActivity)) {
       // au is being acted upon at the AU level
       logger.debug2("AU '" + cus.getArchivalUnit().getName() + "' busy with " +
@@ -201,11 +196,10 @@ public class ActivityRegulator extends BaseLockssManager {
    * Alert the ActivityRegulator that a particular AU-level activity has
    * finished.
    * @param activity the activity int
-   * @param au the {@link ArchivalUnit}
    */
-  public synchronized void auActivityFinished(int activity, ArchivalUnit au) {
+  public synchronized void auActivityFinished(int activity) {
     // change state to reflect
-    endAuActivity(activity, au);
+    endAuActivity(activity);
     logger.debug("Finished " + activityCodeToString(activity) + " on AU '" +
                   au.getName() + "'");
   }
@@ -222,31 +216,27 @@ public class ActivityRegulator extends BaseLockssManager {
                   cus.getUrl() + "'");
 
     boolean otherAuActivity = false;
-    String auKeyPrefix = getAuPrefix(cus);
     Iterator cusIt = cusMap.entrySet().iterator();
     while (cusIt.hasNext()) {
       // check each other cus to see if it's acting on this AU
       Map.Entry entry = (Map.Entry)cusIt.next();
-      String key = (String)entry.getKey();
-      if (key.startsWith(auKeyPrefix)) {
-        ActivityEntry value = (ActivityEntry)entry.getValue();
-        if (value.isExpired()) {
-          logger.debug3("Removing expired "+activityCodeToString(value.activity) +
-                        " on CUS '" + key + "'");
-          cusMap.remove(key);
-          continue;
-        }
-        if (value.activity!=NO_ACTIVITY) {
-          otherAuActivity = true;
-          break;
-        }
+      ActivityEntry value = (ActivityEntry)entry.getValue();
+      if (value.isExpired()) {
+        logger.debug3("Removing expired "+activityCodeToString(value.activity) +
+                      " on CUS '" + entry.getKey() + "'");
+        cusMap.remove(entry.getKey());
+        continue;
+      }
+      if (value.activity!=NO_ACTIVITY) {
+        otherAuActivity = true;
+        break;
       }
     }
     if (!otherAuActivity) {
       // no other CUS activity on this AU, so free it up
-      endAuActivity(CUS_ACTIVITY, cus.getArchivalUnit());
+      endAuActivity(CUS_ACTIVITY);
       logger.debug2("Finished " + activityCodeToString(CUS_ACTIVITY) +
-                    " on AU '" + cus.getArchivalUnit().getName() + "'");
+                    " on AU '" + au.getName() + "'");
     }
   }
 
@@ -381,30 +371,30 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  int getAuActivity(ArchivalUnit au) {
-    ActivityEntry entry = (ActivityEntry)auMap.get(getAuKey(au));
-    if (entry==null)  {
+  int getAuActivity() {
+    if (curAuActivity==null)  {
       return NO_ACTIVITY;
-    } else if (entry.isExpired()) {
-      auMap.remove(getAuKey(au));
-      logger.debug3("Removing expired " + activityCodeToString(entry.activity) +
+    } else if (curAuActivity.isExpired()) {
+      logger.debug3("Removing expired " +
+                    activityCodeToString(curAuActivity.activity) +
                     " on AU '" + au.getName() + "'");
+      curAuActivity = null;
       return NO_ACTIVITY;
     } else {
-      return entry.activity;
+      return curAuActivity.activity;
     }
   }
 
-  void setAuActivity(ArchivalUnit au, int activity, long expireIn) {
-    auMap.put(getAuKey(au), new ActivityEntry(activity, expireIn));
+  void setAuActivity(int activity, long expireIn) {
+    curAuActivity = new ActivityEntry(activity, expireIn);
   }
 
-  void endAuActivity(int activity, ArchivalUnit au) {
-    int curActivity = getAuActivity(au);
+  void endAuActivity(int activity) {
+    int curActivity = getAuActivity();
     // only end if this is my activity, in case it already timed out and
     // something else started
     if (curActivity == activity) {
-      auMap.remove(getAuKey(au));
+      curAuActivity = null;
     } else {
       logger.debug2(activityCodeToString(curActivity) + " running on AU '"+
                     au.getName() + "', so couldn't end " +
@@ -430,8 +420,7 @@ public class ActivityRegulator extends BaseLockssManager {
     // set CUS state
     cusMap.put(getCusKey(cus), new ActivityEntry(activity, expireIn));
     // set AU state to indicate CUS activity (resets expiration time)
-    auMap.put(getAuKey(cus.getArchivalUnit()),
-              new ActivityEntry(CUS_ACTIVITY, expireIn));
+    curAuActivity = new ActivityEntry(CUS_ACTIVITY, expireIn);
   }
 
   void endCusActivity(int activity, CachedUrlSet cus) {
@@ -447,16 +436,8 @@ public class ActivityRegulator extends BaseLockssManager {
     }
   }
 
-  static String getAuPrefix(CachedUrlSet cus) {
-    return getAuKey(cus.getArchivalUnit()) + "::";
-  }
-
-  static String getAuKey(ArchivalUnit au) {
-    return au.getAUId();
-  }
-
   static String getCusKey(CachedUrlSet cus) {
-    String key = getAuPrefix(cus) + cus.getUrl() + "::";
+    String key = cus.getUrl() + "::";
     if (cus.getSpec() instanceof RangeCachedUrlSetSpec) {
       RangeCachedUrlSetSpec rSpec = (RangeCachedUrlSetSpec)cus.getSpec();
       if ((rSpec.getLowerBound()!=null) || (rSpec.getUpperBound()!=null)) {

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.31 2003-05-07 00:29:18 troberts Exp $
+ * $Id: CrawlManagerImpl.java,v 1.32 2003-05-17 00:12:48 aalto Exp $
  */
 
 /*
@@ -86,7 +86,6 @@ public class CrawlManagerImpl extends BaseLockssManager
 
   private Map newContentCrawls = new HashMap();
   private Map repairCrawls = new HashMap();
-  private static ActivityRegulator regulator;
   private Set activeCrawls = new HashSet();
 
   private long contentCrawlExpiration;
@@ -101,7 +100,6 @@ public class CrawlManagerImpl extends BaseLockssManager
    */
   public void startService() {
     super.startService();
-    regulator = theDaemon.getActivityRegulator();
 
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.registerStatusAccessor(CRAWL_STATUS_TABLE_NAME, new Status());
@@ -151,10 +149,10 @@ public class CrawlManagerImpl extends BaseLockssManager
     }
 
     // check with regulator and start repair
-    if (regulator.startCusActivity(ActivityRegulator.REPAIR_CRAWL,
-                                   au.makeCachedUrlSet(
+    if (theDaemon.getActivityRegulator(au).startCusActivity(
+        ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
         new SingleNodeCachedUrlSetSpec(url.toString())),
-                                   repairCrawlExpiration)) {
+        repairCrawlExpiration)) {
       CrawlThread crawlThread =
           new CrawlThread(au, ListUtil.list(url.toString()),
                           false, Deadline.MAX, ListUtil.list(cb), cookie);
@@ -192,8 +190,8 @@ public class CrawlManagerImpl extends BaseLockssManager
   public void startNewContentCrawl(ArchivalUnit au, CrawlManager.Callback cb,
                                    Object cookie) {
     logger.debug3("Scheduling new content crawl for AU '" + au.getName() + "'");
-    if (regulator.startAuActivity(ActivityRegulator.NEW_CONTENT_CRAWL,
-                                  au, contentCrawlExpiration)) {
+    if (theDaemon.getActivityRegulator(au).startAuActivity(
+        ActivityRegulator.NEW_CONTENT_CRAWL, contentCrawlExpiration)) {
       activeCrawls.add(au);
       scheduleNewContentCrawl(au, cb, cookie);
     } else {
@@ -232,7 +230,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       crawlsForAu.add(crawler);
     }
   }
-  
+
   private void triggerCrawlCallbacks(Vector callbacks) {
     if (callbacks != null) {
       Iterator it = callbacks.iterator();
@@ -279,12 +277,13 @@ public class CrawlManagerImpl extends BaseLockssManager
       // if followLinks is true, assume it's a new content crawl
       // free activity regulator so polls can resume
       if (followLinks) {
-        regulator.auActivityFinished(ActivityRegulator.NEW_CONTENT_CRAWL, au);
+        theDaemon.getActivityRegulator(au).auActivityFinished(
+            ActivityRegulator.NEW_CONTENT_CRAWL);
       } else {
         // otherwise, assume it's a repair crawl
         String url = (String)urls.get(0);
-        regulator.cusActivityFinished(ActivityRegulator.REPAIR_CRAWL,
-                                      au.makeCachedUrlSet(
+        theDaemon.getActivityRegulator(au).cusActivityFinished(
+            ActivityRegulator.REPAIR_CRAWL, au.makeCachedUrlSet(
             new SingleNodeCachedUrlSetSpec(url)));
       }
 
@@ -364,7 +363,7 @@ public class CrawlManagerImpl extends BaseLockssManager
       return rows;
     }
 
-    private void addCrawlsFromMap(String key, Map crawlMap, 
+    private void addCrawlsFromMap(String key, Map crawlMap,
 				  String type, List rows) {
       synchronized(crawlMap) {
 	List crawlsForAu = (List) crawlMap.get(key);
@@ -374,7 +373,7 @@ public class CrawlManagerImpl extends BaseLockssManager
 	    rows.add(makeRow(type, (Crawler) it.next()));
 	  }
 	}
-      } 
+      }
     }
 
     private List getAllCrawls() {

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.28 2003-05-10 02:44:07 tal Exp $
+ * $Id: LockssDaemon.java,v 1.29 2003-05-17 00:12:48 aalto Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class LockssDaemon {
   private static String MANAGER_PREFIX = Configuration.PREFIX + "manager.";
 
   /* the parameter strings that represent our managers */
-  public static String ACTIVITY_REGULATOR = "ActivityRegulator";
+  public static String ACTIVITY_REGULATOR_SERVICE = "ActivityRegulatorService";
   public static String HASH_SERVICE = "HashService";
   public static String COMM_MANAGER = "CommManager";
   public static String ROUTER_MANAGER = "RouterManager";
@@ -84,8 +84,8 @@ public class LockssDaemon {
   public static String URL_MANAGER = "UrlManager";
 
   /* the default classes that represent our managers */
-  private static String DEFAULT_ACTIVITY_REGULATOR =
-      "org.lockss.daemon.ActivityRegulator";
+  private static String DEFAULT_ACTIVITY_REGULATOR_SERVICE =
+      "org.lockss.daemon.ActivityRegulatorServiceImpl";
   private static String DEFAULT_HASH_SERVICE = "org.lockss.hasher.HashService";
   private static String DEFAULT_COMM_MANAGER = "org.lockss.protocol.LcapComm";
   private static String DEFAULT_ROUTER_MANAGER =
@@ -131,7 +131,8 @@ public class LockssDaemon {
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
   private ManagerDesc[] managerDescs = {
-    new ManagerDesc(ACTIVITY_REGULATOR, DEFAULT_ACTIVITY_REGULATOR),
+    new ManagerDesc(ACTIVITY_REGULATOR_SERVICE,
+                    DEFAULT_ACTIVITY_REGULATOR_SERVICE),
     new ManagerDesc(STATUS_SERVICE, DEFAULT_STATUS_SERVICE),
     new ManagerDesc(URL_MANAGER, DEFAULT_URL_MANAGER),
     new ManagerDesc(HASH_SERVICE, DEFAULT_HASH_SERVICE),
@@ -217,7 +218,7 @@ public class LockssDaemon {
   }
 
   /**
-   * Return a lockss manager this will need to be cast to the appropriate 
+   * Return a lockss manager this will need to be cast to the appropriate
    * class.
    * @param managerKey the name of the manager
    * @return a lockss manager
@@ -236,8 +237,9 @@ public class LockssDaemon {
    * @param au the ArchivalUnit
    */
   public void startAUManagers(ArchivalUnit au) {
-    // lockss repository needs to be started first
-    // as the node manager uses it
+    // this order can't be changed, as the other two use the ActivityRegulator
+    // and the NodeManager uses the LockssRepository
+    getActivityRegulatorService().addActivityRegulator(au);
     getLockssRepositoryService().addLockssRepository(au);
     getNodeManagerService().addNodeManager(au);
   }
@@ -390,13 +392,24 @@ public class LockssDaemon {
   }
 
   /**
-   * return the ActivityRegulator
-   * @return ActivityRegulator
+   * return the ActivityRegulatorService
+   * @return ActivityRegulatorService
    * @throws IllegalArgumentException if the manager is not available.
    */
-  public ActivityRegulator getActivityRegulator() {
-    return (ActivityRegulator) getManager(ACTIVITY_REGULATOR);
+  public ActivityRegulatorService getActivityRegulatorService() {
+    return (ActivityRegulatorService) getManager(ACTIVITY_REGULATOR_SERVICE);
   }
+
+  /**
+   * get ActivityRegulator instance
+   * @param au the ArchivalUnit
+   * @return the ActivityRegulator
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public ActivityRegulator getActivityRegulator(ArchivalUnit au) {
+    return getActivityRegulatorService().getActivityRegulator(au);
+  }
+
 
   public void stopDaemon() {
     stop();
@@ -470,7 +483,7 @@ public class LockssDaemon {
 	  timeToExit.expireAt(tmp.getExpirationTime());
 	}
       }
-    }    
+    }
 
     // THIS MUST BE LAST IN THIS ROUTINE
     boolean exitOnce = config.getBoolean(PARAM_DAEMON_EXIT_ONCE,

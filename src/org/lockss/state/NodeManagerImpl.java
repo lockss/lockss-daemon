@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.125 2003-05-09 23:00:57 aalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.126 2003-05-17 00:12:48 aalto Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     historyRepo = theDaemon.getHistoryRepository();
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
-    regulator = theDaemon.getActivityRegulator();
+    regulator = theDaemon.getActivityRegulator(managedAu);
 
     nodeCache = new NodeStateCache(maxCacheSize);
     activeNodes = new HashMap();
@@ -456,7 +456,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
       ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
       // iterate through master list
       boolean repairMarked = false;
-      boolean namePollRequest = false;
       while (masterIt.hasNext()) {
         PollTally.NameListEntry entry =
             (PollTally.NameListEntry) masterIt.next();
@@ -497,7 +496,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
               RepositoryNodeImpl repairNode =
                   (RepositoryNodeImpl) lockssRepo.createNewNode(newCus.getUrl());
               repairNode.createNodeLocation();
-              namePollRequest = true;
               logger.debug("Node created in repository.");
             } catch (MalformedURLException mue) {
               // this shouldn't happen
