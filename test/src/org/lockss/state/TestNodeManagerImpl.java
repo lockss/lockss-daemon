@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.80 2003-05-08 08:20:57 aalto Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.81 2003-05-10 02:23:06 aalto Exp $
  */
 
 /*
@@ -40,8 +40,7 @@ import org.lockss.repository.LockssRepositoryServiceImpl;
 import org.lockss.repository.*;
 import org.lockss.plugin.base.*;
 
-public class TestNodeManagerImpl
-    extends LockssTestCase {
+public class TestNodeManagerImpl extends LockssTestCase {
   public static final String TEST_URL = "http://www.example.com";
   private static Logger log = Logger.getLogger("TestNMI");
   private String tempDirPath;
@@ -81,7 +80,6 @@ public class TestNodeManagerImpl
     idManager = new MockIdentityManager();
     idManager.initService(theDaemon);
     theDaemon.setIdentityManager(idManager);
-//    theDaemon.setLockssRepositoryService(new MockLockssRepositoryService());
     pollManager.initService(theDaemon);
     pollManager.startService();
 
@@ -108,6 +106,7 @@ public class TestNodeManagerImpl
     pollManager.stopService();
     theDaemon.getHistoryRepository().stopService();
     theDaemon.getHashService().stopService();
+    theDaemon.getLockssRepositoryService().stopService();
     PluginUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();
     TimeBase.setReal();

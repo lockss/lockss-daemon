@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryServiceImpl.java,v 1.13 2003-04-17 02:16:58 troberts Exp $
+ * $Id: LockssRepositoryServiceImpl.java,v 1.14 2003-05-10 02:23:06 aalto Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class LockssRepositoryServiceImpl implements LockssRepositoryService {
   private static LockssManager theManager = null;
   private HashMap auMap = new HashMap();
   private static Logger logger = Logger.getLogger("LockssRepositoryService");
-  static String cacheLocation = null;
+  String cacheLocation = null;
 
   // used for name mapping
   static HashMap nameMap = null;
