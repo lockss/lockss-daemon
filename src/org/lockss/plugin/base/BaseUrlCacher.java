@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.15 2003-11-01 00:06:45 eaalto Exp $
+ * $Id: BaseUrlCacher.java,v 1.16 2003-11-06 00:30:12 eaalto Exp $
  */
 
 /*
@@ -227,8 +227,9 @@ public class BaseUrlCacher implements UrlCacher {
       }
       if (value!=null) {
         // only store headers with values
+        // qualify header names to avoid conflict with our properties
         if (key!=null) {
-          props.setProperty(key, value);
+          props.setProperty("header-"+key, value);
         } else {
           // the first header field has a null key
           props.setProperty("header-"+index, value);
