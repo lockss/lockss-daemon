@@ -1,5 +1,5 @@
 /*
- * $Id: TestTreeWalkHandler.java,v 1.19 2003-05-06 01:10:28 aalto Exp $
+ * $Id: TestTreeWalkHandler.java,v 1.20 2003-05-08 08:20:57 aalto Exp $
  */
 
 /*
@@ -237,9 +237,9 @@ public class TestTreeWalkHandler extends LockssTestCase {
     pollMan.thePolls.remove(TEST_URL);
 
     // these are always false
-    checkPollingTest(PollState.WON, 456, false, node);
+    checkPollingTestCallsContent(PollState.WON, 456, node);
     pollMan.thePolls.remove(TEST_URL);
-    checkPollingTest(PollState.REPAIRED, 567, false, node);
+    checkPollingTestCallsContent(PollState.REPAIRED, 567, node);
     pollMan.thePolls.remove(TEST_URL);
 
     // this is true since we're going to try again
@@ -276,6 +276,19 @@ public class TestTreeWalkHandler extends LockssTestCase {
     } else {
       assertNull(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()));
     }
+    assertNull(crawlMan.getUrlStatus(node.getCachedUrlSet().getUrl()));
+  }
+
+  private void checkPollingTestCallsContent(int pollState, long startTime,
+                                            NodeStateImpl node) {
+    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+                                           pollState, startTime, 1,
+                                           null, true);
+    // doesn't clear old histories, so startTime must be used appropriately
+    node.closeActivePoll(pollHist);
+    assertEquals(false, treeWalkHandler.checkNodeState(node));
+    assertEquals(pollMan.getPollStatus(node.getCachedUrlSet().getUrl()),
+                 MockPollManager.CONTENT_REQUESTED);
     assertNull(crawlMan.getUrlStatus(node.getCachedUrlSet().getUrl()));
   }
 

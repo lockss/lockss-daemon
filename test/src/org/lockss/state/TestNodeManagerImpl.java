@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.79 2003-05-08 01:19:41 claire Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.80 2003-05-08 08:20:57 aalto Exp $
  */
 
 /*
@@ -542,32 +542,32 @@ public class TestNodeManagerImpl
     NodeState nodeState = nodeManager.getNodeState(getCUS(mau, TEST_URL));
 
     // these are true if the pollmanager doesn't know about them
-    historyCheckTest(PollState.SCHEDULED, nodeState, true);
-    historyCheckTest(PollState.SCHEDULED, nodeState, false);
+    historyCheckTestName(PollState.SCHEDULED, nodeState, true);
+    historyCheckTestName(PollState.SCHEDULED, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
-    historyCheckTest(PollState.RUNNING, nodeState, true);
-    historyCheckTest(PollState.RUNNING, nodeState, false);
+    historyCheckTestName(PollState.RUNNING, nodeState, true);
+    historyCheckTestName(PollState.RUNNING, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
-    historyCheckTest(PollState.REPAIRING, nodeState, true);
-    historyCheckTest(PollState.REPAIRING, nodeState, false);
+    historyCheckTestName(PollState.REPAIRING, nodeState, true);
+    historyCheckTestName(PollState.REPAIRING, nodeState, false);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // shouldn't act if it isn't our poll
-    historyCheckTest(Poll.NAME_POLL, PollState.UNFINISHED, nodeState, false, false);
-    historyCheckTest(Poll.NAME_POLL, PollState.UNFINISHED, nodeState, true, true);
+    historyCheckTestName(Poll.NAME_POLL, PollState.UNFINISHED, nodeState, false, false);
+    historyCheckTestName(Poll.NAME_POLL, PollState.UNFINISHED, nodeState, true, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
 
-    // these are false
-    historyCheckTest(PollState.WON, nodeState, false);
+    // these call content polls
+    historyCheckTestCallsContent(PollState.WON, nodeState);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
-    historyCheckTest(PollState.REPAIRED, nodeState, false);
+    historyCheckTestCallsContent(PollState.REPAIRED, nodeState);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // this is true because we're going to try and fix unrepairable
-    historyCheckTest(PollState.UNREPAIRABLE, nodeState, true);
+    historyCheckTestName(PollState.UNREPAIRABLE, nodeState, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // this true for lost polls
@@ -577,17 +577,17 @@ public class TestNodeManagerImpl
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
 
     // this is true, since we called the poll
-    historyCheckTest(PollState.ERR_IO, nodeState, true);
+    historyCheckTestName(PollState.ERR_IO, nodeState, true);
     ( (MockPollManager) theDaemon.getPollManager()).thePolls.remove(TEST_URL);
     TimeBase.setReal();
   }
 
   private void historyCheckTest(int pollType, int pollState, NodeState node,
                                 boolean shouldSchedule) {
-    historyCheckTest(pollType, pollState, node, true, shouldSchedule);
+    historyCheckTestName(pollType, pollState, node, true, shouldSchedule);
   }
 
-  private void historyCheckTest(int pollType, int pollState, NodeState node,
+  private void historyCheckTestName(int pollType, int pollState, NodeState node,
                                 boolean ourPoll, boolean shouldSchedule) {
     PollHistory history = new PollHistory(pollType, null, null,
                                           pollState, 123,
@@ -608,9 +608,24 @@ public class TestNodeManagerImpl
     }
   }
 
-  private void historyCheckTest(int pollState, NodeState node,
+  private void historyCheckTestName(int pollState, NodeState node,
                                 boolean shouldSchedule) {
     historyCheckTest(Poll.NAME_POLL, pollState, node, shouldSchedule);
+  }
+
+  private void historyCheckTestCallsContent(int pollState, NodeState node) {
+    PollHistory history = new PollHistory(Poll.NAME_POLL, null, null,
+                                          pollState, 123,
+                                          123, null,
+                                          true);
+    assertTrue(nodeManager.checkLastHistory(history, node, true));
+    assertNull(( (MockPollManager) theDaemon.getPollManager()).
+               getPollStatus(TEST_URL));
+    assertTrue(nodeManager.checkLastHistory(history, node, false));
+    assertEquals(MockPollManager.CONTENT_REQUESTED,
+                 ( (MockPollManager) theDaemon.getPollManager()).
+                 getPollStatus(
+        TEST_URL));
   }
 
   private void reputationChangeTest(PollTally results) {
