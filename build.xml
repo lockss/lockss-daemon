@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.29 2003-02-26 21:25:48 tal Exp $
+ $Id: build.xml,v 1.30 2003-02-27 23:30:48 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -42,6 +42,7 @@ Args:
   -Dfile=path/to/file       Specify file for print or index.
                                File is relative to project base dir
   -Dtimeout=msecs           Override the default test failure timeout.
+  -Dkeeptempfiles=true      Don't delete temp files after tests run.
 </description>
 
   <!-- Set to yes (on command line) to see output as it happens -->
@@ -501,6 +502,7 @@ Args:
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the junit tests (test/src/**/Test*.class" >
     <property name="loglevel" value="" />
+    <property name="keeptempfiles" value="" />
     <property name="timeout" value="" />
     <echo>
 Test results in ${test.results}
@@ -516,8 +518,9 @@ Test results in ${test.results}
       <classpath>
          <path refid="test.run.classpath" />
       </classpath>        
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
@@ -527,6 +530,7 @@ Test results in ${test.results}
    depends="prepare.test,check.junit,jar-tests"
    description="Run all the functional tests (test/src/**/Func*.class" >
     <property name="loglevel" value="" />
+    <property name="keeptempfiles" value="" />
     <property name="timeout" value="" />
     <echo>
 Test results in ${test.results}
@@ -542,8 +546,9 @@ Test results in ${test.results}
       <classpath>
          <path refid="test.run.classpath" />
       </classpath>        
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
@@ -611,6 +616,7 @@ Test results in ${test.results}
    description="Run a single test class, named by the 'class' property" >
     <property name="loglevel" value="" />
     <property name="timeout" value="" />
+    <property name="keeptempfiles" value="" />
     <junit fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
          showoutput="${showoutput}">
       <test fork="no" name="${class}" />
@@ -618,8 +624,9 @@ Test results in ${test.results}
       <classpath> 
          <path refid="test.run.classpath" />
       </classpath>        
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
       <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
     </junit>
   </target>
