@@ -5,8 +5,6 @@ org.lockss.comm.unicast.port=9002
 org.lockss.comm.unicast.sendToPort=9000
 org.lockss.comm.unicast.sendToAddr=127.0.0.1
 
-org.lockss.cache.location=.
-
 #test settings
 org.lockss.test.doTreewalk=false
 org.lockss.test.treewalk.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~localA
