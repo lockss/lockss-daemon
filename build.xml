@@ -1,6 +1,6 @@
 <!--
 ========================================================================
- $Id: build.xml,v 1.10 2002-09-04 18:11:42 tal Exp $
+ $Id: build.xml,v 1.11 2002-09-04 18:59:38 tal Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2002 Board of Trustees of Leland Stanford Jr. University,
@@ -115,11 +115,6 @@ in this Software without prior written authorization from Stanford University.
     <path refid="compile.classpath" />
     <pathelement path="${java.class.path}" />
   </path>
-
-  <!--  Non-standard tasks -->
-  <taskdef resource="${ant-contrib.resource}">
-   <classpath refid="ant-contrib.classpath"/>
-  </taskdef>
 
   <!-- ==================================================================== -->
   <!--  Setup tasks -->
@@ -456,6 +451,7 @@ Test results in ${test.results}
      <echo>*** Failed temp checkout left in
 *** ${temp.build.dir}
 *** Use clean-tempbuild target to delete it.</echo>
+     <fail message="Recursive build failed."/>
     </catch>
    </trycatch>
   </target>
@@ -489,9 +485,22 @@ Test results in ${test.results}
   </target>
 
   <target name="check.contrib"
-   depends="prepare.contrib,check.ant-contrib.jar" />
+   depends="prepare.contrib,load.ant-contrib,check.ant-contrib.jar" />
+
+  <target name="load.ant-contrib" unless="ant-contrib.loaded" >
+   <!--  Non-standard tasks -->
+   <taskdef resource="${ant-contrib.resource}">
+    <classpath refid="ant-contrib.classpath"/>
+   </taskdef>
+   <property name="ant-contrib.loaded" value="true" />
+  </target>
 
   <target name="check.ant-contrib.jar" unless="ant-contrib.available" >
+  <!--  Non-standard tasks -->
+  <taskdef resource="${ant-contrib.resource}">
+   <classpath refid="ant-contrib.classpath"/>
+  </taskdef>
+
     <fail message="You need to place a copy of ant-contrib-0.1.jar in ${lib}." />
   </target>
 
