@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.25 2005-01-04 03:01:24 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.26 2005-01-05 09:46:29 tlipkis Exp $
  */
 
 /*
@@ -35,8 +35,7 @@ package org.lockss.remote;
 import java.io.*;
 import java.util.*;
 import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
@@ -60,14 +59,13 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
+  private RepositoryManager repoMgr;
 
   // cache for proxy objects
   private ReferenceMap auProxies = new ReferenceMap(ReferenceMap.WEAK,
 						    ReferenceMap.WEAK);
   private ReferenceMap pluginProxies = new ReferenceMap(ReferenceMap.WEAK,
 							ReferenceMap.WEAK);
-  private PlatformInfo platInfo = PlatformInfo.getInstance();
-
   public RemoteApi() {
   }
 
@@ -75,6 +73,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     super.startService();
     pluginMgr = getDaemon().getPluginManager();
     configMgr = getDaemon().getConfigManager();
+    repoMgr = getDaemon().getRepositoryManager();
   }
 
   /** Create or return an AuProxy for the AU corresponding to the auid.
@@ -318,17 +317,15 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   /** Return list of repository specs for all available repositories */
   public List getRepositoryList() {
-    return configMgr.getRepositoryList();
+    return repoMgr.getRepositoryList();
   }
 
-  public PlatformInfo.DF getRepositoryDF(String repo) {
-    String path = LockssRepositoryImpl.getLocalRepositoryPath(repo);
-    log.debug("path: " + path);
-    try {
-      return platInfo.getDF(path);
-    } catch (PlatformInfo.UnsupportedException e) {
-      return null;
-    }
+  public List findExistingRepositoriesFor(String auid) {
+    return repoMgr.findExistingRepositoriesFor(auid);
+  }
+
+  public PlatformInfo.DF getRepositoryDF(String repoName) {
+    return repoMgr.getRepositoryDF(repoName);
   }
 
   ArchivalUnit getAuFromId(String auid) {
@@ -445,8 +442,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * an unknown format, unsupported version, or contains keys this
    * operation isn't allowed to modify.
    */
-  public BatchAuStatus batchAddAus(boolean doCreate, Configuration allAuConfig)
-      throws InvalidAuConfigBackupFile {
+  public BatchAuStatus batchAddAus(boolean doCreate,
+				   Configuration allAuConfig) {
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
     BatchAuStatus bas = new BatchAuStatus();
     for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
@@ -526,6 +523,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 					Configuration auConfig) {
     BatchAuStatus.Entry stat = new BatchAuStatus.Entry(auid);
     stat.setAuid(auid);
+    stat.setRepoNames(repoMgr.findExistingRepositoriesFor(auid));
     Configuration oldConfig = pluginMgr.getStoredAuConfiguration(auid);
     String name = null;
     if (oldConfig != null) {
@@ -538,8 +536,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
     if (pluginp == null) {
       stat.setStatus("Error", STATUS_ORDER_ERROR);
-      stat.setExplanation("Plugin " + PluginManager.pluginNameFromAuId(auid) +
-			  " not found, cannot create AU");
+      stat.setExplanation("Plugin not found: " +
+			  PluginManager.pluginNameFromAuId(auid));
       return stat;
     }
 
@@ -554,13 +552,15 @@ public class RemoteApi extends BaseLockssDaemonManager {
       }
       if (normOld.equals(normNew)) {
 	log.debug("Restore: same config: " + auid);
-	stat.setStatus("Already Exists", STATUS_ORDER_LOW);
+	stat.setStatus("Exists", STATUS_ORDER_LOW);
+	stat.setExplanation("Already Exists");
       } else {
 	log.debug("Restore: conflicting config: " + auid +
 		  ", current: " + normOld + ", new: " + normNew);
 	stat.setStatus("Conflict", STATUS_ORDER_ERROR);
 	Set diffKeys = normNew.differentKeys(normOld);
 	StringBuffer sb = new StringBuffer();
+	sb.append("Conflict:<br>");
 	for (Iterator iter = diffKeys.iterator(); iter.hasNext(); ) {
 	  String key = (String)iter.next();
 	  String foo = "Key: " + key + ", current=" + normOld.get(key) +
@@ -579,7 +579,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 						    pluginp.getPlugin())) {
       // no current config, new config not compatible with plugin
       stat.setStatus("Error", STATUS_ORDER_ERROR);
-      stat.setExplanation("Incompatible with plugin");
+      stat.setExplanation("Incompatible with plugin " +
+			  pluginp.getPlugin().getPluginName());
       stat.setConfig(auConfig);
     } else {
       // no current config, try to create (maybe)
@@ -628,13 +629,13 @@ public class RemoteApi extends BaseLockssDaemonManager {
     Set tcs = findAusInSets(sets);
     for (Iterator iter = tcs.iterator(); iter.hasNext(); ) {
       TitleConfig tc = (TitleConfig)iter.next();
-      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
+      BatchAuStatus.Entry stat;
       String plugName = tc.getPluginName();
       PluginProxy pluginp = findPluginProxy(plugName);
       if (pluginp == null) {
+	stat = new BatchAuStatus.Entry();
 	stat.setStatus("Error", STATUS_ORDER_ERROR);
-	stat.setExplanation("Plugin " + plugName +
-			    " not found, cannot create AU");
+	stat.setExplanation("Plugin not found: " + plugName);
       } else {
 	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
 					     tc.getConfig());
@@ -665,12 +666,14 @@ public class RemoteApi extends BaseLockssDaemonManager {
       PluginProxy pluginp = findPluginProxy(plugName);
       if (pluginp == null) {
 	stat.setStatus("DNE", STATUS_ORDER_LOW);
+	stat.setExplanation("Does not exist");
       } else {
 	String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
 					     tc.getConfig());
 	stat.setAuid(auid);
 	if (pluginMgr.getAuFromId(auid) == null) {
 	  stat.setStatus("DNE", STATUS_ORDER_LOW);
+	  stat.setExplanation("Does not exist");
 	}
       }
       ras.add(stat);
@@ -713,11 +716,22 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	ok++;
       }
     }
-    public boolean isActionable() {
+    public boolean hasOk() {
       List lst = getStatusList();
       for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
 	BatchAuStatus.Entry status = (BatchAuStatus.Entry)iter.next();
-	if (status.getStatus() == null) {
+	if (status.isOk()) {
+	  return true;
+	}
+      }
+      return false;
+    }
+
+    public boolean hasNotOk() {
+      List lst = getStatusList();
+      for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	BatchAuStatus.Entry status = (BatchAuStatus.Entry)iter.next();
+	if (!status.isOk()) {
 	  return true;
 	}
       }
@@ -733,6 +747,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     private String explanation;
     private TitleConfig tc;
     private Configuration config;
+    private List repoNames;
     private int order = 0;
 
     Entry() {
@@ -749,6 +764,9 @@ public class RemoteApi extends BaseLockssDaemonManager {
     public String getStatus() {
       return status;
     }
+    public boolean isOk() {
+      return status == null;
+    }
     public String getExplanation() {
       return explanation;
     }
@@ -763,6 +781,12 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	return tc.getConfig();
       }
       return null;
+    }
+    public List getRepoNames() {
+      return repoNames;
+    }
+    public void setRepoNames(List lst) {
+      repoNames = lst;
     }
     void setStatus(String s, int order) {
       this.status = s;
