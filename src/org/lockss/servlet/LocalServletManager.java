@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.7 2005-01-04 03:03:33 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.8 2005-03-02 21:09:31 ssmail Exp $
  */
 
 /*
@@ -189,7 +189,7 @@ public class LocalServletManager extends BaseServletManager {
     addServletIfAvailable(handler, "ThreadDump", "/ThreadDump",
 			  "org.lockss.servlet.ThreadDump");
     addServletIfAvailable(handler, "Api", "/Api",
-			  "org.lockss.ui.servlet.Api");
+			  "org.lockss.uiapi.servlet.Api");
     context.addHandler(handler);
 
     // ResourceHandler should come after servlets
