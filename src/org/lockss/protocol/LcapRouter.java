@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.12 2003-04-02 02:41:53 tal Exp $
+ * $Id: LcapRouter.java,v 1.13 2003-04-02 10:51:35 tal Exp $
  */
 
 /*
@@ -216,6 +216,7 @@ public class LcapRouter extends BaseLockssManager {
     try {
       msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
     } catch (IOException e) {
+      idEvent(dg.getSender(), LcapIdentity.EVENT_ERRPKT, null);
       log.error("Couldn't decode incoming message", e);
       return;
     }
@@ -245,6 +246,15 @@ public class LcapRouter extends BaseLockssManager {
   void routeIncomingMessage(LockssReceivedDatagram dg, LcapMessage msg) {
     InetAddress sender = dg.getSender();
     InetAddress originator = msg.getOriginAddr();
+    idEvent(originator, LcapIdentity.EVENT_ORIG, msg);
+    if (!msg.isNoOp()) {
+      idEvent(originator, LcapIdentity.EVENT_ORIG_OP, msg);
+    }
+    if (!sender.equals(originator)) {
+      idEvent(sender, LcapIdentity.EVENT_SEND_ORIG, msg);
+    } else {
+      idEvent(sender, LcapIdentity.EVENT_SEND_FWD, msg);
+    }
     log.debug2("incoming orig: " + originator + " , sender: " + sender);
     if (isEligibleToForward(dg, msg)) {
       msg.setHopCount(msg.getHopCount() - 1);
@@ -262,6 +272,13 @@ public class LcapRouter extends BaseLockssManager {
 	doMulticast(dg, fwdRateLimiter, null);
 	doUnicast(dg, fwdRateLimiter, sender, originator);
       }
+    }
+  }
+
+  void idEvent(InetAddress addr, int event, LcapMessage msg) {
+    LcapIdentity id = idMgr.findIdentity(addr);
+    if (id != null) {
+      id.rememberEvent(event, msg);
     }
   }
 
