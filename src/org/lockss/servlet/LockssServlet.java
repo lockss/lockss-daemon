@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: LockssServlet.java,v 1.6 2003-03-24 01:22:32 tal Exp $
+// $Id: LockssServlet.java,v 1.7 2003-04-04 08:40:47 tal Exp $
 // ========================================================================
 
 /*
@@ -48,6 +48,8 @@ import org.lockss.daemon.*;
 
 /** Abstract base class for LOCKSS servlets
  */
+// SingleThreadModel causes servlet instances to be assigned to only a
+// single thread (request) at a time.
 public abstract class LockssServlet extends HttpServlet
   implements SingleThreadModel {
 
@@ -62,6 +64,7 @@ public abstract class LockssServlet extends HttpServlet
   static final String PARAM_ADMIN_ADDRESS =
     Configuration.PREFIX + "admin.IPAddress";
 
+  static final String BACKGROUND_COLOR = "#FFFFFF";
   static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
 					      160, 160, 0);
   static final Image IMAGE_LOGO_SMALL = image("lockss-logo-small.gif",
@@ -69,15 +72,13 @@ public abstract class LockssServlet extends HttpServlet
   static final Image IMAGE_TM = image("tm.gif", 16, 16, 0);
   static final Image IMAGE_LOCKSS_RED = image("lockss-type-red.gif",
 					      595, 31, 0);
-  private static final String fPageColor = "#FFFFFF";
-  private static final int servletPort = 8081;
-  protected static final String journalPropKey = "org.lockss.journal";
-  protected static final String clientPropFile = "local.txt";
+
   protected static final String footAccessDenied =
     "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS cache, or your workstation is allowed access by the publisher.";
 
-  protected ServletContext context;
   protected static Logger log = Logger.getLogger("LockssServlet");
+
+  protected ServletContext context;
 
   private LockssDaemon theDaemon = null;
 
@@ -210,22 +211,6 @@ public abstract class LockssServlet extends HttpServlet
     return getHeading(myServletDescr());
   }
 
-  // root of admin files on disk
-  protected String getAdminDir() {
-    if (adminDir == null) {
-      adminDir = context.getRealPath("/");
-    }
-    return adminDir;
-  }
-
-  protected File getClientDir(String client) {
-    return new File(getAdminDir() + File.separator + client);
-  }
-
-  protected File getClientPropFile(String client) {
-    return new File(getClientDir(client), clientPropFile);
-  }
-
   String getLocalIPAddr() {
     if (localAddr == null) {
       try {
@@ -342,10 +327,10 @@ public abstract class LockssServlet extends HttpServlet
     return true;
   }
 
-  // Construct servlet URL, with params as necessary
-  // Avoid generating a hostname different from that used in the original
-  // request, or browsers will prompt again for login
-
+  /** Construct servlet URL, with params as necessary.  Avoid generating a
+   *  hostname different from that used in the original request, or
+   *  browsers will prompt again for login
+   */
   String srvURL(ServletDescr d, String params) {
     StringBuffer sb = new StringBuffer();
     StringBuffer paramsb = new StringBuffer();
@@ -386,15 +371,18 @@ public abstract class LockssServlet extends HttpServlet
     return sb.toString();
   }
 
+  /** Return a link to a servlet */
+  String srvLink(ServletDescr d, String text) {
+    return srvLink(d, text, null);
+  }
+
+  /** Return a link to a servlet with params */
   String srvLink(ServletDescr d, String text, String params) {
     return new Link(srvURL(d, params),
 		    (text != null ? text : d.heading)).toString();
   }
 
-  String srvLink(ServletDescr d, String text) {
-    return srvLink(d, text, null);
-  }
-
+  /** Return text as a link iff isLink */
   String conditionalSrvLink(ServletDescr d, String text, String params,
 			    boolean isLink) {
     if (isLink) {
@@ -404,10 +392,12 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
+  /** Return text as a link iff isLink */
   String conditionalSrvLink(ServletDescr d, String text, boolean isLink) {
     return conditionalSrvLink(d, text, null, isLink);
   }
 
+  /** Concatenate params for URL string */
   String concatParams(String p1, String p2) {
     if (p1 == null || p1.equals("")) {
       return p2;
@@ -471,7 +461,7 @@ public abstract class LockssServlet extends HttpServlet
     return key;
   }
 
-  // Common page setup
+  /** Common page setup. */
   protected Page newPage() {
     Page page = new Page();
     String heading = getHeading();
@@ -487,15 +477,10 @@ public abstract class LockssServlet extends HttpServlet
     else
       page.title("LOCKSS");
 
-    page.attribute("BGCOLOR", fPageColor);
+    page.attribute("BGCOLOR", BACKGROUND_COLOR);
 
     page.add(getHeader());
     return page;
-  }
-
-  // eventually this should calculate w & h
-  static Image image(String file, int w, int h, int border) {
-    return new Image("/images/" + file, w, h, border);
   }
 
   // Common page header
@@ -511,7 +496,6 @@ public abstract class LockssServlet extends HttpServlet
 //     table.newCell("valign=top width=\"25%\"");
 //     table.newCell("valign=top align=center width=" +
 // 		  (logo.width() + IMAGE_TM.width() + 20));
-
 
     table.add(new Link("/index.html", logo));
     table.add(IMAGE_TM);
@@ -534,12 +518,12 @@ public abstract class LockssServlet extends HttpServlet
   // Common page footer
   public Element getFooter() {
     Composite comp = new Composite();
-    String floppyVer = Configuration.getParam(PARAM_PLATFORM_VERSION);
+    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
     String buildTimeStamp =
       BuildInfo.getBuildProperty(BuildInfo.BUILD_TIMESTAMP);
     String buildHost =
       BuildInfo.getBuildProperty(BuildInfo.BUILD_HOST);
-    String ver = "Daemon built " + buildTimeStamp + " on " + buildHost;
+    String vDaemon = "Daemon built " + buildTimeStamp + " on " + buildHost;
 
     addNotes(comp);
     comp.add("<p>");
@@ -553,14 +537,20 @@ public abstract class LockssServlet extends HttpServlet
     comp.add(table);
 
     comp.add("<center><font size=-1>" +
-	     (floppyVer == null || floppyVer.equals("")
-	      ? ver
-	      : ver + " Floppy" + floppyVer) +
+	     (vPlatform == null || vPlatform.equals("")
+	      ? vDaemon
+	      : vDaemon + " Floppy" + vPlatform) +
 	     "</font></center>");
     return comp;
   }
 
-  // Store a footnote, assign it a number, return html for footnote reference
+  // eventually this should calculate w & h
+  static Image image(String file, int w, int h, int border) {
+    return new Image("/images/" + file, w, h, border);
+  }
+
+  /** Store a footnote, assign it a number, return html for footnote
+   * reference. */
   protected String addFootnote(String s) {
     if (s == null || s.length() == 0) {
       return "";
@@ -580,7 +570,7 @@ public abstract class LockssServlet extends HttpServlet
     return "<sup>" + (n+1) + "</sup>";
   }
 
-  // Add accumulated footnotes
+  /** Add accumulated footnotes to Composite. */
   protected void addNotes(Composite elem) {
     if (footnotes == null || footNumber == 0) {
       return;
@@ -588,19 +578,20 @@ public abstract class LockssServlet extends HttpServlet
     elem.add("<p><b>Notes:</b>");
     elem.add("<ol><font size=-1>");
     for (int n = 0; n < footNumber; n++) {
-      elem.add("<li value=" + (n+1) + ">" + footnotes.elementAt(n) /*+
-								     "<br><br>"*/);
+      elem.add("<li value=" + (n+1) + ">" + footnotes.elementAt(n));
     }
     footnotes.removeAllElements();
     elem.add("</font></ol>");
   }
 
+  /** Run once when servlet loaded. */
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
     context = config.getServletContext();
     theDaemon = (LockssDaemon)context.getAttribute("LockssDaemon");
   }
 
+  /** Return the daemon instance. */
   protected LockssDaemon getLockssDaemon() {
     return theDaemon;
   }
@@ -613,16 +604,18 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
-  // Servlets must implement this method
+  /** Servlets must implement this method. */
   protected abstract void lockssHandle() throws ServletException, IOException;
 
-  // Common request handling
+  /** Common request handling. */
   public void service(HttpServletRequest req, HttpServletResponse resp)
       throws ServletException, IOException {
     try {
       this.req = req;
       this.resp = resp;
-      //        logParams();
+      if (log.isDebug3()) {
+	logParams();
+      }
       resp.setContentType("text/html");
       footNumber = 0;
       reqURL = new URL(UrlUtil.getRequestURL(req));
@@ -651,31 +644,53 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
-  // Load property tree from file
-  public PropertyTree loadTree(String filename) throws IOException {
-    PropertyTree tree = new PropertyTree();
-    InputStream istr = new FileInputStream(filename);
-    tree.load(istr);
-    istr.close();
-    return tree;
-  }
+  // unused code
 
-  // Save property tree to file
-  public void saveTree(PropertyTree t, String filename, String  header)
-      throws IOException {
-    FileWriter fw = new FileWriter(filename);
-    if (header != null) {
-      fw.write("#" + header + "\n");
-    }
-    Enumeration e = t.keys();
-    while (e.hasMoreElements()){
-      String key = (String)e.nextElement();
-      String val = ((String) t.get(key)).trim();
-      if (val != null)
-        fw.write(key.trim() + "=" + val  + "\n");
-      else
-        fw.write(key.trim() + "=\n");
-    }
-    fw.close();
-  }
+//   // root of admin files on disk
+//   protected String getAdminDir() {
+//     if (adminDir == null) {
+//       adminDir = context.getRealPath("/");
+//     }
+//     return adminDir;
+//   }
+
+//   protected static final String clientPropFile = "local.txt";
+
+//   protected File getClientDir(String client) {
+//     return new File(getAdminDir() + File.separator + client);
+//   }
+
+//   protected File getClientPropFile(String client) {
+//     return new File(getClientDir(client), clientPropFile);
+//   }
+
+
+
+//   // Load property tree from file
+//   public PropertyTree loadTree(String filename) throws IOException {
+//     PropertyTree tree = new PropertyTree();
+//     InputStream istr = new FileInputStream(filename);
+//     tree.load(istr);
+//     istr.close();
+//     return tree;
+//   }
+
+//   // Save property tree to file
+//   public void saveTree(PropertyTree t, String filename, String  header)
+//       throws IOException {
+//     FileWriter fw = new FileWriter(filename);
+//     if (header != null) {
+//       fw.write("#" + header + "\n");
+//     }
+//     Enumeration e = t.keys();
+//     while (e.hasMoreElements()){
+//       String key = (String)e.nextElement();
+//       String val = ((String) t.get(key)).trim();
+//       if (val != null)
+//         fw.write(key.trim() + "=" + val  + "\n");
+//       else
+//         fw.write(key.trim() + "=\n");
+//     }
+//     fw.close();
+//   }
 }
