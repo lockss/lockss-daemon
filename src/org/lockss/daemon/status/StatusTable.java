@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.11 2003-03-17 21:48:36 troberts Exp $
+ * $Id: StatusTable.java,v 1.12 2003-03-18 02:27:53 troberts Exp $
  */
 
 /*
@@ -46,6 +46,9 @@ public class StatusTable {
   private List columnDescriptors;
   private List rows;
   private List defaultSortRules;
+  private static Logger logger = Logger.getLogger("StatusTable");
+
+
   /**
    * @param name String representing table name
    * @param key String representing the key for this table, may be null
@@ -177,9 +180,15 @@ public class StatusTable {
 	Object valA = rowA.get(colName);
 	Object valB = rowB.get(colName);
 
-	int curType = ((Integer)colTypeHash.get(colName)).intValue();
+	
+	Integer type = (Integer)colTypeHash.get(colName);
+	if (type == null) {
+	  //XXX currently this will throw a NullPointerException
+	  //XXX leave for debugging, remove before shipping
+	  logger.error("Got bad column name: "+colName);
+	}
 
-	switch (curType) {
+	switch (type.intValue()) {
 	case ColumnDescriptor.TYPE_IP_ADDRESS:
 	  returnVal = compareInetAddresses((InetAddress)valA, 
 					   (InetAddress)valB);
