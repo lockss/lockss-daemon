@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.20 2003-02-22 03:01:57 tal Exp $
+ * $Id: NullPlugin.java,v 1.21 2003-02-24 18:39:53 tal Exp $
  */
 
 /*
@@ -79,17 +79,17 @@ public class NullPlugin {
     }
 
     public String getAUIdFromConfig(Configuration config) 
-	throws ArchivalUnit.ConfigurationException {
+	throws org.lockss.daemon.ArchivalUnit.ConfigurationException {
       return null;
     }
 
     public org.lockss.daemon.ArchivalUnit configureAU(Configuration config)
-	throws ArchivalUnit.ConfigurationException {
+	throws org.lockss.daemon.ArchivalUnit.ConfigurationException {
       return null;
     }
 
     public org.lockss.daemon.ArchivalUnit createAU(Configuration auConfig)
-	throws ArchivalUnit.ConfigurationException {
+	throws org.lockss.daemon.ArchivalUnit.ConfigurationException {
       return null;
     }
 
