@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.4 2005-01-19 04:15:35 tlipkis Exp $
+ * $Id: BaseTitleSet.java,v 1.5 2005-02-09 19:09:43 tlipkis Exp $
  */
 
 /*
@@ -46,6 +46,8 @@ public abstract class BaseTitleSet implements TitleSet {
   protected String name;
 
   public BaseTitleSet(LockssDaemon daemon, String name) {
+    if (daemon == null) throw new NullPointerException("null daemon");
+    if (name == null) throw new NullPointerException("null name");
     this.daemon = daemon;
     this.name = name;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.2 2005-01-13 08:10:13 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.3 2005-02-09 19:09:41 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,8 @@ public class TestTitleSetXpath extends LockssTestCase {
   TitleConfig tc1, tc2, tc3, tc4, tc5, tc6;
   List titles;
 
-  public void setUp() {
+  public void setUp() throws Exception {
+    super.setUp();
     makeTitles();
   }
 

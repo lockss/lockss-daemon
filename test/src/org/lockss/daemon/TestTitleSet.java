@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSet.java,v 1.1 2005-01-04 02:58:12 tlipkis Exp $
+ * $Id: TestTitleSet.java,v 1.2 2005-02-09 19:09:41 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,24 @@ public class TestTitleSet extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon();
+  }
+
+  public void testIll() throws Exception {
+    try {
+      new TitleSetAllTitles(null);
+      fail("Should throw NullPointerException");
+    } catch (NullPointerException e) {
+    }
+    try {
+      new TitleSetXpath(null, "T1", "[foo]");
+      fail("Should throw NullPointerException");
+    } catch (NullPointerException e) {
+    }
+    try {
+      new TitleSetXpath(daemon, null, "[foo]");
+      fail("Should throw NullPointerException");
+    } catch (NullPointerException e) {
+    }
   }
 
   public void testSort() throws Exception {
