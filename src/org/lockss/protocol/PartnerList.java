@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.12 2003-04-24 01:00:22 tal Exp $
+ * $Id: PartnerList.java,v 1.13 2003-04-30 23:43:29 tal Exp $
  */
 
 /*
@@ -73,14 +73,21 @@ class PartnerList {
   List defaultPartnerList;
   long recentMulticastInterval;
   long minPartnerRemoveInterval;
+  int maxPartners;
+  InetAddress localIP;
 
   /** Create a PartnerList */
   public PartnerList() {
   }
 
+  /** Tell us the local IP address */
+  public void setLocalIP(InetAddress local) {
+    localIP = local;
+  }
+
   /** Configure the PartnerList */
   public void setConfig(Configuration config) {
-    int maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
+    maxPartners = config.getInt(PARAM_MAX_PARTNERS, DEFAULT_MAX_PARTNERS);
     if (maxPartners != partners.getMaximumSize()) {
       partners.setMaximumSize(maxPartners);
     }
@@ -114,15 +121,6 @@ class PartnerList {
     return new ArrayList(partners.keySet());
   }
 
-  /** Called from LcapRouter.doUnicast(), check that localIP isn't in
-   * partner list */
-  void checkLocalIp(InetAddress local) {
-    if (partners.containsKey(local)) {
-      log.warning("Local IP found in partner list: " + local);
-      removePartner(local);
-    }
-  }
-
   /** Inform the PartnerList that a multicast packet was received.
    * @param ip the address of the packet sender
    */
@@ -143,6 +141,10 @@ class PartnerList {
   }
 
   void addPartner(InetAddress partnerIP) {
+    // don't ever add ourself
+    if (partnerIP.equals(localIP)) {
+      return;
+    }
     // don't add if recently received multicast from him
     Long lastRcv = (Long)lastMulticastReceived.get(partnerIP);
     if (lastRcv != null &&
@@ -163,6 +165,9 @@ class PartnerList {
 
   void addDefaultPartners() {
     lastPartnerRemoveTime = TimeBase.nowMs();
+    // randomly permute the defaultPartnerList
+    Collections.shuffle(defaultPartnerList);
+    // then add all its elements.
     for (Iterator iter = defaultPartnerList.iterator(); iter.hasNext(); ) {
       InetAddress ip = (InetAddress)iter.next();
       addPartner(ip);
