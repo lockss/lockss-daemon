@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.7 2003-04-01 22:27:02 aalto Exp $
+ * $Id: TreeWalkHandler.java,v 1.8 2003-04-02 02:20:56 aalto Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ public class TreeWalkHandler {
   long treeWalkTestDuration;
 
   boolean treeWalkAborted;
+  boolean forceTreeWalk = false;
 
   long treeWalkEstimate = -1;
 
@@ -210,6 +211,12 @@ public class TreeWalkHandler {
    * @return time in ms
    */
   long timeUntilTreeWalkStart() {
+    // if treewalk is forced
+    if (forceTreeWalk) {
+      logger.debug("Forcing treewalk start-in time of -1.");
+      forceTreeWalk = false;
+      return -1;
+    }
     long lastTreeWalkTime = manager.getAuState().getLastTreeWalkTime();
     long timeSinceLastTW = TimeBase.msSince(lastTreeWalkTime);
     logger.debug3(timeSinceLastTW+" since last treewalk");
@@ -241,19 +248,41 @@ public class TreeWalkHandler {
   }
 
   /**
+   * Used for testing.  Starts a treewalk if one isn't already running.
+   */
+  void forceTreeWalk() {
+    boolean threadWasNull = false;
+    if (treeWalkThread!=null) {
+      treeWalkThread = new TreeWalkThread();
+      threadWasNull = true;
+    }
+    if (!treeWalkThread.doingTreeWalk) {
+      forceTreeWalk = true;
+      if (threadWasNull) {
+        treeWalkThread.start();
+      } else {
+        // just wake it up
+        treeWalkThread.deadline.expire();
+      }
+    }
+  }
+
+  /**
    * The thread which handles the treewalk itself.
    */
   class TreeWalkThread extends Thread {
     private boolean goOn = true;
+    boolean doingTreeWalk = false;
     Deadline deadline;
 
     public void run() {
       while (goOn) {
         long timeToStart = timeUntilTreeWalkStart();
         if (timeToStart <= 0) {
+          doingTreeWalk = true;
           doTreeWalk();
-        }
-        else {
+          doingTreeWalk = false;
+        } else {
           long delta = (long) ( (double) MAX_DEVIATION * timeToStart);
           logger.debug3("Creating a deadline for " + timeToStart +
                         " with delta of " + delta);
@@ -274,14 +303,11 @@ public class TreeWalkHandler {
     }
   }
 
-  // Estimation code removed until needed.
-
-
   /*
-   * Returns the current treewalk estimate.
+   * Returns the current treewalk average.  -1 until a treewalk is run.
    * @return the estimate, in ms
    */
-  long getEstimatedTreeWalkDuration() {
+  long getAverageTreeWalkDuration() {
     return treeWalkEstimate;
   }
 

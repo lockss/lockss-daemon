@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateCache.java,v 1.2 2003-04-01 00:57:17 aalto Exp $
+ * $Id: NodeStateCache.java,v 1.3 2003-04-02 02:20:56 aalto Exp $
  */
 
 /*
@@ -32,6 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
+import java.util.*;
+import org.lockss.util.SetUtil;
 import org.lockss.daemon.Configuration;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
@@ -78,7 +80,7 @@ public class NodeStateCache {
    * @param urlKey the url key
    * @return the {@link NodeState}
    */
-  public NodeState getState(String urlKey) {
+  public synchronized NodeState getState(String urlKey) {
     NodeState node = (NodeState)lruMap.get(urlKey);
     if (node!=null) {
       cacheHits++;
@@ -102,9 +104,17 @@ public class NodeStateCache {
    * @param urlKey the url
    * @param node the {@link NodeState}
    */
-  public void putState(String urlKey, NodeState node) {
+  public synchronized void putState(String urlKey, NodeState node) {
     refMap.put(urlKey, node);
     lruMap.put(urlKey, node);
+  }
+
+  /**
+   * Returns a snapshot iterator of the cache's entries.
+   * @return an {@link Iterator} of {@link NodeState}s
+   */
+  public synchronized Collection snapshot() {
+    return new ArrayList(lruMap.entrySet());
   }
 
   int getCacheHits() { return cacheHits; }

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.80 2003-04-01 03:10:47 claire Exp $
+ * $Id: NodeManagerImpl.java,v 1.81 2003-04-02 02:20:56 aalto Exp $
  */
 
 /*
@@ -103,7 +103,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
    */
   public void stopService() {
     logger.debug("NodeManager being stopped");
-    // checkpoint here
     if (treeWalkHandler!=null) {
       treeWalkHandler.end();
       treeWalkHandler = null;
@@ -112,11 +111,22 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     logger.debug("NodeManager sucessfully stopped");
   }
 
+  public void forceTreeWalk() {
+    logger.info("Forcing treewalk...");
+    if (treeWalkHandler==null) {
+      treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
+      treeWalkHandler.start();
+    }
+    treeWalkHandler.forceTreeWalk();
+  }
 
-  public void startTreeWalk() {
-    logger.info("Starting treewalk");
-    treeWalkHandler = new TreeWalkHandler(this, theDaemon.getCrawlManager());
-    treeWalkHandler.doTreeWalk();
+  public void forceTopLevelPoll() {
+    logger.info("Forcing top level poll...");
+    NodeState topNode = getNodeState(managedAu.getAUCachedUrlSet());
+    Iterator activePolls = topNode.getActivePolls();
+    if (!activePolls.hasNext()) {
+      callTopLevelPoll();
+    }
   }
 
   public void startPoll(CachedUrlSet cus, PollTally state) {
@@ -180,15 +190,14 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     return state;
   }
 
-
   public AuState getAuState() {
     return auState;
   }
 
-  Iterator getEntries() {
-    //XXX this only returns nodes currently in the LRUMap
-    //XXX use snapshot method
-    return nodeCache.lruMap.entrySet().iterator();
+  Iterator getCacheEntries() {
+    // this only returns nodes currently in the cache, but it's only used
+    // by the UI so that's not a problem
+    return nodeCache.snapshot().iterator();
   }
 
   void updateState(NodeState state, PollTally results) {
@@ -355,7 +364,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   void callNamePoll(CachedUrlSet cus) {
     try {
       pollManager.requestPoll(LcapMessage.NAME_POLL_REQ,
-                                             new PollSpec(cus));
+                              new PollSpec(cus));
     } catch (IOException ioe) {
       logger.error("Couldn't make name poll request.", ioe);
       // the treewalk will fix this eventually
@@ -365,7 +374,7 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
   void callTopLevelPoll() {
     try {
       pollManager.requestPoll(LcapMessage.CONTENT_POLL_REQ,
-      new PollSpec(managedAu.getAUCachedUrlSet()));
+                              new PollSpec(managedAu.getAUCachedUrlSet()));
       logger.info("Top level poll started.");
     } catch (IOException ioe) {
       logger.error("Couldn't make top level poll request.", ioe);
@@ -379,7 +388,8 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
     ((NodeStateImpl)nodeState).closeActivePoll(history);
     logger.debug2("Closing poll for url '" +
                   nodeState.getCachedUrlSet().getUrl() + " " +
-                  pollState.getLwrBound() + "-" + pollState.getUprBound() + "'");
+                  pollState.getLwrBound() + "-" +
+                  pollState.getUprBound() + "'");
     // if this is an AU top-level content poll
     // update the AuState to indicate the poll is finished
     if ((AuUrl.isAuUrl(nodeState.getCachedUrlSet().getUrl())) &&
@@ -449,7 +459,6 @@ public class NodeManagerImpl extends BaseLockssManager implements NodeManager {
 
   private void callContentPollsOnSubNodes(NodeState state, PollTally results)
       throws IOException {
-
     Iterator children = results.getCachedUrlSet().flatSetIterator();
     List childList = convertChildrenToCUSList(children);
     // Divide the list in two and call two new content polls

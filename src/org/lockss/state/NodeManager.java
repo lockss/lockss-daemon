@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.19 2003-04-01 03:10:47 claire Exp $
+ * $Id: NodeManager.java,v 1.20 2003-04-02 02:20:56 aalto Exp $
  */
 
 /*
@@ -82,48 +82,21 @@ public interface NodeManager extends LockssManager {
   public AuState getAuState();
 
   /**
-   * Returns an iterator of all node states currently being crawled
-   * @param cus the cached url set used to identify the top node
-   * @return an Iterator of NodeStates
-   */
- // public Iterator getActiveCrawledNodes(CachedUrlSet cus);
-
-  /**
-   * Returns an iterator of all node states in which a poll is running,
-   * filtered by bitwise addition of states.
-   * @param cus the cached url set used to identify the top node
-   * @param filter the bitwise state filter
-   * @return an Iterator of NodeStates
-   */
-  //public Iterator getFilteredPolledNodes(CachedUrlSet cus, int filter);
-
-  /**
-   * Returns an iterator of node poll histories for a CachedUrlSet, up to
-   * a maximum number.
-   * @param cus the cached url set used to identify the top node
-   * @param maxNumber the maximum number to fetch
-   * @return an Iterator of PollHistory objects
-   */
- // public Iterator getNodeHistories(CachedUrlSet cus, int maxNumber);
-
-  /**
-   * Returns an iterator of the node poll histories for a CachedUrlSet since a
-   * specific start time.
-   * @param cus the cached url set used to identify the top node
-   * @param since histories after this time (in ms)
-   * @return an Iterator of PollHistory objects
-   */
-  //public Iterator getNodeHistoriesSince(CachedUrlSet cus, Deadline since);
-
-  /**
-   * Do one tree walk.  XXX this should probably be handled by making the
-   * node manager kick off a thread when it starts to run the tree walk every
-   * X minutes
-   */
-  public void startTreeWalk();
-
-  /**
    * Alerts the NodeManager that a new top-level content crawl has finished.
    */
   public void newContentCrawlFinished();
+
+  /**
+   * For testing only.  Forces the NodeManager to run a treewalk, if none
+   * currently running.
+   */
+  public void forceTreeWalk();
+
+  /**
+   * For testing only.  Forces the NodeManager to call a top level poll, if none
+   * currently running.
+   */
+  public void forceTopLevelPoll();
+
+
 }
