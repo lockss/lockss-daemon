@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.15 2003-04-09 23:46:29 aalto Exp $
+ * $Id: DaemonStatus.java,v 1.16 2003-04-21 05:39:15 tal Exp $
  */
 
 /*
@@ -337,11 +337,7 @@ public class DaemonStatus extends LockssServlet {
 	} else {
 	  return val.toString();
 	}
-	if (d.getTime() == 0) {
-	  return "never";
-	} else {
-	  return df.format(d);
-	}
+	return dateString(d);
       case ColumnDescriptor.TYPE_IP_ADDRESS:
 	return ((InetAddress)val).getHostAddress();
       case ColumnDescriptor.TYPE_TIME_INTERVAL:
@@ -359,6 +355,16 @@ public class DaemonStatus extends LockssServlet {
       return val.toString();
     }
   }
+
+  String dateString(Date d) {
+    long val = d.getTime();
+    if (val == 0 || val == -1) {
+      return "never";
+    } else {
+      return df.format(d);
+    }
+  }
+
 
   // make me a link in nav table unless I'm displaying table of all tables
   protected boolean includeMeInNav() {
