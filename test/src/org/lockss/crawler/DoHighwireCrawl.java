@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.10 2003-02-06 23:33:38 troberts Exp $
+ * $Id: DoHighwireCrawl.java,v 1.11 2003-02-20 22:30:34 tal Exp $
  */
 
 /*
@@ -31,15 +31,25 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
+import java.util.*;
 import java.net.URL;
 import org.lockss.daemon.*;
 import org.lockss.plugin.PluginManager;
-import org.lockss.plugin.highwire.HighWireArchivalUnit;
+import org.lockss.plugin.highwire.*;
 import org.lockss.proxy.ProxyHandler;
 import org.lockss.util.Deadline;
 import org.lockss.test.*;
 
 public class DoHighwireCrawl {
+
+  private static HighWireArchivalUnit makeAU(URL url, int volume)
+      throws ArchivalUnit.ConfigurationException, ClassNotFoundException {
+    Properties props = new Properties();
+    props.setProperty(HighWirePlugin.VOL_PROP, Integer.toString(volume));
+    props.setProperty(HighWirePlugin.BASE_URL_PROP, url.toString());
+    Configuration config = ConfigurationUtil.fromProps(props);
+    return new HighWireArchivalUnit(null, config);
+  }
 
   public static void main(String args[]) throws Exception {
     boolean proxyFlg = false;
@@ -61,7 +71,7 @@ public class DoHighwireCrawl {
     URL base = new URL(args[i]);
     int volume = Integer.parseInt(args[i+1]);
 
-    ArchivalUnit au = new HighWireArchivalUnit(base, volume);
+    ArchivalUnit au = makeAU(base, volume);
     MockLockssDaemon daemon = new MockLockssDaemon(null);
     daemon.startDaemon();
     daemon.getPluginManager().registerArchivalUnit(au);
