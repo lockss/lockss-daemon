@@ -1,5 +1,5 @@
 /*
- * $Id: HttpResultMap.java,v 1.2 2004-03-07 08:40:02 tlipkis Exp $
+ * $Id: HttpResultMap.java,v 1.3 2004-03-09 04:15:32 clairegriffin Exp $
  */
 
 /*
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util.urlconn;
 
-import java.io.*;
 import java.util.*;
 
 /**
@@ -40,21 +39,16 @@ import java.util.*;
  */
 
 public class HttpResultMap implements CacheResultMap {
-//   int[] SuccessCodes = {200, 203};
   int[] SuccessCodes = {200, 203, 304};
-  int[] SameUrlCodes = {
-      408, 413, 500, 502, 503, 504};
-  int[] MovePermCodes = {
-      301};
-  int[] MoveTempCodes = {
-      307, 303, 302};
-  int[] UnimplementedCodes = {
-      300, 204};
-  int[] ExpectedCodes = {
-      401, 402, 403, 404, 405, 406, 407, 410, 305};
+  int[] SameUrlCodes = { 408, 413, 500, 502, 503, 504};
+  int[] MovePermCodes = {301};
+  int[] MoveTempCodes = { 307, 303, 302};
+  int[] UnimplementedCodes = {};
+  int[] ExpectedCodes = { 401, 402, 403,  407};
+  int[] RetryDeadLinkCodes = {};
+  int[] NoRetryDeadLinkCodes= {204, 300, 305, 404, 405, 406, 410};
   int[] UnexpectedCodes = {
-//       201, 202, 205, 206, 304, 306, 400, 409,
-       201, 202, 205, 206, 306, 400, 409,
+      201, 202, 205, 206, 306, 400, 409,
       411, 412, 414, 415, 416, 417, 501, 505};
 
   HashMap exceptionTable = new HashMap();
@@ -68,15 +62,19 @@ public class HttpResultMap implements CacheResultMap {
     storeArrayEntries(SameUrlCodes,
                       CacheException.RetrySameUrlException.class);
     storeArrayEntries(MovePermCodes,
-                      CacheException.RetryPermUrlException.class);
+                      CacheException.NoRetryPermUrlException.class);
     storeArrayEntries(MoveTempCodes,
-                      CacheException.RetryTempUrlException.class);
+                      CacheException.NoRetryTempUrlException.class);
     storeArrayEntries(UnimplementedCodes,
                       CacheException.UnimplementedCodeException.class);
     storeArrayEntries(ExpectedCodes,
                       CacheException.ExpectedNoRetryException.class);
     storeArrayEntries(UnexpectedCodes,
                       CacheException.UnexpectedNoRetryException.class);
+    storeArrayEntries(RetryDeadLinkCodes,
+                      CacheException.RetryDeadLinkException.class);
+    storeArrayEntries(NoRetryDeadLinkCodes,
+                      CacheException.NoRetryDeadLinkException.class);
   }
 
   public void storeArrayEntries(int[] codeArray, Class exceptionClass) {
@@ -89,7 +87,8 @@ public class HttpResultMap implements CacheResultMap {
     exceptionTable.put(new Integer(code), exceptionClass);
   }
 
-  protected Class getExceptionClass(int resultCode) {
+
+  public Class getExceptionClass(int resultCode) {
     return (Class) exceptionTable.get(new Integer(resultCode));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.2 2004-03-01 06:31:28 clairegriffin Exp $
+ * $Id: DefinablePlugin.java,v 1.3 2004-03-09 04:15:31 clairegriffin Exp $
  */
 
 /*
@@ -53,7 +53,9 @@ public class DefinablePlugin extends BasePlugin {
   static final public String CM_VERSION_KEY = "plugin_version";
   static final public String CM_CONFIG_PROPS_KEY = "plugin_config_props";
   static final public String CM_EXCEPTION_HANDLER_KEY =
-      "plugin_exception_handler";
+      "plugin_cache_result_handler";
+  static final public String CM_EXCEPTION_LIST_KEY =
+      "plugin_cache_result_list";
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
   protected String mapName = null;
@@ -61,7 +63,7 @@ public class DefinablePlugin extends BasePlugin {
   static Logger log = Logger.getLogger("ConfigurablePlugin");
 
   protected ExternalizableMap definitionMap = new ExternalizableMap();
-
+  protected CacheResultHandler resultHandler = null;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
@@ -106,20 +108,50 @@ public class DefinablePlugin extends BasePlugin {
     return definitionMap;
   }
 
-  protected void installCacheResultHandler()
-      throws InvalidDefinitionException {
-    CacheResultHandler handler = null;
+  CacheResultHandler getCacheResultHandler() {
+    return resultHandler;
+  }
+
+  protected void installCacheExceptionHandler() throws InvalidDefinitionException {
+
+    // we support two form of result handlers... either a class which handles
+    // installing the numbers as well as handling any exceptions
     String handler_class = null;
     handler_class = definitionMap.getString(CM_EXCEPTION_HANDLER_KEY, null);
     if (handler_class != null) {
       try {
-        handler =
+        resultHandler =
             (CacheResultHandler) Class.forName(handler_class).newInstance();
-        handler.init(resultMap);
+        resultHandler.init(resultMap);
       }
       catch (Exception ex) {
         throw new InvalidDefinitionException(mapName
         + " has invalid Exception handler: " + handler_class);
+      }
+    }
+    else {// or a list of remappings
+      Collection results;
+      results = definitionMap.getCollection(CM_EXCEPTION_LIST_KEY, null);
+      if (results != null) {
+        // add each entry
+        for (Iterator it = results.iterator(); it.hasNext(); ) {
+          String entry = (String) it.next();
+          try {
+            Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
+            String class_name = (String) s_vec.get(1);
+            int code = Integer.parseInt(((String) s_vec.get(0)));
+            // now lets add the entry into the map.
+            Class result_class = null;
+            result_class = Class.forName(class_name);
+            ( (HttpResultMap) resultMap).storeMapEntry(code, result_class);
+          }
+          catch (Exception ex1) {
+            throw new InvalidDefinitionException(mapName
+                                                 + " has invalid entry: "
+                                                 + entry);
+          }
+
+        }
       }
     }
   }
@@ -154,4 +186,5 @@ public class DefinablePlugin extends BasePlugin {
       return nestedException;
     }
   }
+
 }

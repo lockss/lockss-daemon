@@ -1,5 +1,5 @@
 /*
- * $Id: CacheResultMap.java,v 1.1 2004-02-23 09:21:22 tlipkis Exp $
+ * $Id: CacheResultMap.java,v 1.2 2004-03-09 04:15:32 clairegriffin Exp $
  */
 
 /*
@@ -31,8 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.util.urlconn;
 
-import java.io.*;
-import java.util.*;
+
 //import java.net.HttpURLConnection;
 
 /**

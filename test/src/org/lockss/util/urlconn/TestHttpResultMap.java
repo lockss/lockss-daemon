@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpResultMap.java,v 1.1 2004-02-23 09:22:47 tlipkis Exp $
+ * $Id: TestHttpResultMap.java,v 1.2 2004-03-09 04:15:33 clairegriffin Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestHttpResultMap extends LockssTestCase {
       result_code = checkArray[ic];
       exception = resultMap.mapException(null,result_code, "foo");
       assertTrue("code:" + result_code, exception instanceof
-                 CacheException.RetryPermUrlException);
+                 CacheException.NoRetryPermUrlException);
     }
 
     // test the RetryTempUrlException
@@ -91,7 +91,7 @@ public class TestHttpResultMap extends LockssTestCase {
       result_code = checkArray[ic];
       exception = resultMap.mapException(null,result_code, "foo");
       assertTrue("code:" + result_code, exception instanceof
-                 CacheException.RetryTempUrlException);
+                 CacheException.NoRetryTempUrlException);
     }
 
     // test the UnimplementedCodeException
@@ -137,12 +137,12 @@ public class TestHttpResultMap extends LockssTestCase {
     // test the RetryPermUrlException
     checkArray = resultMap.MovePermCodes;
     checkExceptionClass(checkArray,
-			CacheException.RetryPermUrlException.class);
+			CacheException.NoRetryPermUrlException.class);
 
     // test the RetryTempUrlException
     checkArray = resultMap.MoveTempCodes;
     checkExceptionClass(checkArray,
-			CacheException.RetryTempUrlException.class);
+			CacheException.NoRetryTempUrlException.class);
 
     // test the UnimplentedCodeException
     checkArray = resultMap.UnimplementedCodes;
@@ -158,6 +158,14 @@ public class TestHttpResultMap extends LockssTestCase {
     checkArray = resultMap.UnexpectedCodes;
     checkExceptionClass(checkArray,
 			CacheException.UnexpectedNoRetryException.class);
+
+    checkArray = resultMap.RetryDeadLinkCodes;
+    checkExceptionClass(checkArray,
+                        CacheException.RetryDeadLinkException.class);
+
+    checkArray = resultMap.NoRetryDeadLinkCodes;
+    checkExceptionClass(checkArray,
+                        CacheException.NoRetryDeadLinkException.class);
   }
 
   public void testClassTree() {
@@ -185,23 +193,29 @@ public class TestHttpResultMap extends LockssTestCase {
     assertTrue(checkClass.getName(),
 	       exception instanceof CacheException.RetryableException);
 
-    // test base RetryNewUrlException root
-    checkClass = CacheException.RetryNewUrlException.class;
+    // test the RetryDeadLinkException
+    checkClass = CacheException.RetryDeadLinkException.class;
     exception = makeException(checkClass);
     assertTrue(checkClass.getName(),
-	       exception instanceof CacheException.RetryableException);
+               exception instanceof CacheException.RetryableException);
+
+    // test base RetryNewUrlException root
+    checkClass = CacheException.NoRetryNewUrlException.class;
+    exception = makeException(checkClass);
+    assertTrue(checkClass.getName(),
+	       exception instanceof CacheException.UnretryableException);
 
     // test the RetryPermUrlException
-    checkClass = CacheException.RetryPermUrlException.class;
+    checkClass = CacheException.NoRetryPermUrlException.class;
     exception = makeException(checkClass);
     assertTrue(checkClass.getName(),
-	       exception instanceof CacheException.RetryNewUrlException);
+	       exception instanceof CacheException.NoRetryNewUrlException);
 
     // test the RetryTempUrlException
-    checkClass = CacheException.RetryTempUrlException.class;
+    checkClass = CacheException.NoRetryTempUrlException.class;
     exception = makeException(checkClass);
     assertTrue(checkClass.getName(),
-	       exception instanceof CacheException.RetryNewUrlException);
+	       exception instanceof CacheException.NoRetryNewUrlException);
 
     // test the UnimplentedCodeException
     checkClass = CacheException.UnimplementedCodeException.class;
@@ -214,6 +228,11 @@ public class TestHttpResultMap extends LockssTestCase {
     exception = makeException(checkClass);
     assertTrue(checkClass.getName(),
 	       exception instanceof CacheException.UnretryableException);
+
+    checkClass = CacheException.NoRetryDeadLinkException.class;
+    exception = makeException(checkClass);
+    assertTrue(checkClass.getName(),
+               exception instanceof CacheException.ExpectedNoRetryException);
 
    // test the UnexpectedNoRetryException
     checkClass = CacheException.UnexpectedNoRetryException.class;

@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.3 2004-03-08 19:31:08 tlipkis Exp $
+ * $Id: CacheException.java,v 1.4 2004-03-09 04:15:32 clairegriffin Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -30,8 +30,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util.urlconn;
 
-import java.io.IOException;
-import org.lockss.plugin.*;
+import java.io.*;
+import java.util.*;
 
 /** Hierarchy of exceptions that may be returned from a plugin's {@link
  * org.lockss.plugin.UrlCacher#cache()} method, or its componenet methods
@@ -40,10 +40,14 @@ import org.lockss.plugin.*;
  * errors into one of these categories, so that the generic crawler can
  * handle the error in a standardized way. */
 public class CacheException extends IOException {
+  public static final int ATTRIBUTE_FAIL = 1;
+  public static final int ATTRIBUTE_RETRY = 2;
+
   protected static boolean defaultSuppressStackTrace = true;
 
   protected String message;
   protected Exception nestedException = null;
+  protected BitSet attributeBits = new BitSet();
 
   // Most of these exceptions are created at a known place (in
   // HttpResultMap) and there is no point in polluting logs with stack
@@ -52,11 +56,13 @@ public class CacheException extends IOException {
 
   public CacheException() {
     super();
+    setAttributes();
   }
 
   public CacheException(String message) {
     super(message);
     this.message = message;
+    setAttributes();
   }
 
   public static boolean
@@ -79,6 +85,14 @@ public class CacheException extends IOException {
     return nestedException;
   }
 
+  public boolean getAttribute(int attribute) {
+    return attributeBits.get(attribute);
+  }
+
+  protected void setAttributes() {
+
+  }
+
   /** If stack trace is suppressed, substitute the stack trace of the
    * nested exception, if any.  Should be cleaned up, but achieves the
    * desired effect for now. */
@@ -95,7 +109,7 @@ public class CacheException extends IOException {
   /** If stack trace is suppressed, substitute the stack trace of the
    * nested exception, if any.  Should be cleaned up, but achieves the
    * desired effect for now. */
-  public void printStackTrace(java.io.PrintStream s) { 
+  public void printStackTrace(java.io.PrintStream s) {
     if (!suppressStackTrace) {
       super.printStackTrace(s);
     } else if (nestedException != null) {
@@ -108,7 +122,7 @@ public class CacheException extends IOException {
   /** If stack trace is suppressed, substitute the stack trace of the
    * nested exception, if any.  Should be cleaned up, but achieves the
    * desired effect for now. */
-  public void printStackTrace(java.io.PrintWriter s) { 
+  public void printStackTrace(java.io.PrintWriter s) {
     if (!suppressStackTrace) {
       super.printStackTrace(s);
     } else if (nestedException != null) {
@@ -119,8 +133,7 @@ public class CacheException extends IOException {
   }
 
   /** Unknown response code */
-  public static class UnknownCodeException
-      extends CacheException {
+  public static class UnknownCodeException extends CacheException {
 
     public UnknownCodeException() {
       super();
@@ -128,6 +141,10 @@ public class CacheException extends IOException {
 
     public UnknownCodeException(String message) {
       super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.set(ATTRIBUTE_FAIL);
     }
   }
 
@@ -141,6 +158,11 @@ public class CacheException extends IOException {
     public RetryableException(String message) {
       super(message);
     }
+
+    protected void setAttributes() {
+      attributeBits.set(ATTRIBUTE_RETRY);
+      attributeBits.set(ATTRIBUTE_FAIL);
+    }
   }
 
   /** An error that should be retried with the same URL */
@@ -153,44 +175,24 @@ public class CacheException extends IOException {
     public RetrySameUrlException(String message) {
       super(message);
     }
+
   }
 
-  /** An error that should be retried with a different URL (in the
-   * Location: response header), <i>ie</i>, a redirect */
-  public static class RetryNewUrlException
-      extends RetryableException {
-    public RetryNewUrlException() {
+  public static class RetryDeadLinkException extends RetryableException {
+    public RetryDeadLinkException() {
       super();
     }
 
-    public RetryNewUrlException(String message) {
+    public RetryDeadLinkException(String message) {
       super(message);
+    }
+
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.clear(ATTRIBUTE_FAIL);
     }
   }
 
-  /** Permanent redirect */
-  public static class RetryPermUrlException
-      extends RetryNewUrlException {
-    public RetryPermUrlException() {
-      super();
-    }
-
-    public RetryPermUrlException(String message) {
-      super(message);
-    }
-  }
-
-  /** Temporary redirect */
-  public static class RetryTempUrlException
-      extends RetryNewUrlException {
-    public RetryTempUrlException() {
-      super();
-    }
-
-    public RetryTempUrlException(String message) {
-      super(message);
-    }
-  }
 
   /** An error that is likely permanent and not likely to succeed if
    * retried.
@@ -203,6 +205,10 @@ public class CacheException extends IOException {
 
     public UnretryableException(String message) {
       super(message);
+    }
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_RETRY);
+      attributeBits.set(ATTRIBUTE_FAIL);
     }
   }
 
@@ -247,6 +253,49 @@ public class CacheException extends IOException {
     }
   }
 
+  /** An error that should be retried with a different URL (in the
+   * Location: response header), <i>ie</i>, a redirect */
+  public static class NoRetryNewUrlException
+      extends UnretryableException {
+    public NoRetryNewUrlException() {
+      super();
+    }
+
+    public NoRetryNewUrlException(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_RETRY);
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+
+  }
+
+  /** Permanent redirect */
+  public static class NoRetryPermUrlException
+      extends NoRetryNewUrlException {
+    public NoRetryPermUrlException() {
+      super();
+    }
+
+    public NoRetryPermUrlException(String message) {
+      super(message);
+    }
+  }
+
+  /** Temporary redirect */
+  public static class NoRetryTempUrlException
+      extends NoRetryNewUrlException {
+    public NoRetryTempUrlException() {
+      super();
+    }
+
+    public NoRetryTempUrlException(String message) {
+      super(message);
+    }
+  }
+
   /** Unretryable errors that are expectd to happen in normal operation and
    * don't necessarily indicate anything is wrong. */
   public static class ExpectedNoRetryException
@@ -260,6 +309,22 @@ public class CacheException extends IOException {
     }
   }
 
+  public static class NoRetryDeadLinkException
+      extends ExpectedNoRetryException {
+    public NoRetryDeadLinkException() {
+      super();
+    }
+
+    public NoRetryDeadLinkException(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_RETRY);
+      attributeBits.clear(ATTRIBUTE_FAIL);
+    }
+
+  }
   /** Unretryable errors that are not expected to happen in normal
    * operation and might warrant a message or alert. */
   public static class UnexpectedNoRetryException
@@ -303,6 +368,11 @@ public class CacheException extends IOException {
 
     public UnimplementedCodeException(String message) {
       super(message);
+    }
+
+    protected void setAttributes() {
+      attributeBits.clear(ATTRIBUTE_RETRY);
+      attributeBits.clear(ATTRIBUTE_FAIL);
     }
   }
 }

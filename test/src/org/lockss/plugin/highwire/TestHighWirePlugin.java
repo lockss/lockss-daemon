@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.23 2004-03-01 06:10:42 clairegriffin Exp $
+ * $Id: TestHighWirePlugin.java,v 1.24 2004-03-09 04:15:32 clairegriffin Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.plugin.definable.*;
+import org.lockss.util.urlconn.*;
 
 public class TestHighWirePlugin extends LockssTestCase {
   static final String BASE_URL_KEY = ConfigParamDescr.BASE_URL.getKey();
@@ -125,5 +126,13 @@ public class TestHighWirePlugin extends LockssTestCase {
 			       ConfigParamDescr.VOLUME_NUMBER,
                                ConfigParamDescr.YEAR),
 		 plugin.getAuConfigDescrs());
+  }
+
+  public void testHandles404Result() throws Exception {
+    String name = "org.lockss.util.urlconn.CacheException$RetryDeadLinkException";
+    Class expected = Class.forName(name);
+    Class found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
+    assertEquals(expected, found);
+
   }
 }

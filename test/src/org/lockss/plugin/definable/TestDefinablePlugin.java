@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.2 2004-03-01 06:31:29 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.3 2004-03-09 04:15:32 clairegriffin Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.plugin.base.*;
+import org.lockss.util.urlconn.*;
 
 /**
  * <p>TestConfigurablePlugin: test case for ConfigurablePlugin</p>
@@ -169,4 +170,48 @@ public class TestDefinablePlugin extends LockssTestCase {
 
   }
 
+  public void testInstallCacheExceptionHandler() {
+    DefinablePlugin plugin = new DefinablePlugin();
+    ExternalizableMap map = plugin.getDefinitionMap();
+    String name = new MockHttpResultHandler().getClass().getName();
+    // test using a special class
+    map.putString(DefinablePlugin.CM_EXCEPTION_HANDLER_KEY,name);
+    plugin.installCacheExceptionHandler();
+    assertTrue(plugin.getCacheResultHandler() instanceof MockHttpResultHandler);
+
+  }
+
+  public void testInstallCacheExceptionEntries() throws Exception {
+    DefinablePlugin plugin = new DefinablePlugin();
+    ExternalizableMap map = plugin.getDefinitionMap();
+    // nothing installed should give the default
+    String name = "org.lockss.util.urlconn.CacheException$NoRetryDeadLinkException";
+    Class expected = Class.forName(name);
+    Class found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
+    assertEquals(expected, found);
+
+    // test using a single entry
+    name = "org.lockss.util.urlconn.CacheException$RetryDeadLinkException";
+    map.putCollection(DefinablePlugin.CM_EXCEPTION_LIST_KEY,
+        ListUtil.list("404="+name));
+    plugin.installCacheExceptionHandler();
+    expected = Class.forName(name);
+    found =( (HttpResultMap) plugin.getCacheResultMap()).getExceptionClass(404);
+    assertEquals(expected, found);
+  }
+
+  static public class MockHttpResultHandler implements CacheResultHandler {
+   public MockHttpResultHandler() {
+   }
+
+   public void init(CacheResultMap crmap) {
+     ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
+   }
+
+   public CacheException handleResult(int code,
+                                      LockssUrlConnection connection) {
+     return null;
+   }
+
+ }
 }

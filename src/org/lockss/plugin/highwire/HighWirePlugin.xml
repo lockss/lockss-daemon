@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Elements><MapElement><ElementKey>au_start_url</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://%s/contents-by-date.%d.shtml
+<Elements>
+  <MapElement>
+    <ElementKey>au_start_url</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://%s/contents-by-date.%d.shtml
 base_url_host
-year</ElementValue></MapElement><MapElement><ElementKey>plugin_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">HighWire Press</ElementValue></MapElement><MapElement><ElementKey>au_crawlwindow</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighwireCrawlWindow</ElementValue></MapElement><MapElement><ElementKey>au_crawlrules</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><string xsi:type="java:java.lang.String">4
+year</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">HighWire Press</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlwindow</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighwireCrawlWindow</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_crawlrules</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <string xsi:type="java:java.lang.String">4
 ^%s
-base_url</string><string xsi:type="java:java.lang.String">1
+base_url</string>
+      <string xsi:type="java:java.lang.String">1
 http://%s/contents-by-date.%d.shtml
 base_url_host
-year</string><string xsi:type="java:java.lang.String">2
-.*ck=nck.*</string><string xsi:type="java:java.lang.String">2
-.*adclick.*</string><string xsi:type="java:java.lang.String">2
-.*/cgi/mailafriend.*</string><string xsi:type="java:java.lang.String">1
-.*/content/current/.*</string><string xsi:type="java:java.lang.String">1
+year</string>
+      <string xsi:type="java:java.lang.String">2
+.*ck=nck.*</string>
+      <string xsi:type="java:java.lang.String">2
+.*adclick.*</string>
+      <string xsi:type="java:java.lang.String">2
+.*/cgi/mailafriend.*</string>
+      <string xsi:type="java:java.lang.String">1
+.*/content/current/.*</string>
+      <string xsi:type="java:java.lang.String">1
 .*/content/vol%d/.*
-volume</string><string xsi:type="java:java.lang.String">1
+volume</string>
+      <string xsi:type="java:java.lang.String">1
 .*/cgi/content/.*/%d/.*
-volume</string><string xsi:type="java:java.lang.String">1
+volume</string>
+      <string xsi:type="java:java.lang.String">1
 .*/cgi/reprint/%d/.*
-volume</string><string xsi:type="java:java.lang.String">1
-.*/icons.*</string><string xsi:type="java:java.lang.String">1
-.*/math.*</string><string xsi:type="java:java.lang.String">2
-http://.*/.*/.*</string></ElementValue></MapElement><MapElement><ElementKey>au_name</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, vol. %d
+volume</string>
+      <string xsi:type="java:java.lang.String">1
+.*/icons.*</string>
+      <string xsi:type="java:java.lang.String">1
+.*/math.*</string>
+      <string xsi:type="java:java.lang.String">2
+http://.*/.*/.*</string>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>au_name</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">%s, vol. %d
 base_url_host
-volume</ElementValue></MapElement><MapElement><ElementKey>text/html_filter</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue></MapElement><MapElement><ElementKey>plugin_config_props</ElementKey><ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><ConfigParamDescr><Key>base_url</Key><DisplayName>Base URL</DisplayName><Description>Usually of the form http://&lt;journal-name&gt;.com/</Description><Type>3</Type><Size>40</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>volume</Key><DisplayName>Volume No.</DisplayName><Type>6</Type><Size>8</Size><Definitional>true</Definitional></ConfigParamDescr><ConfigParamDescr><Key>year</Key><DisplayName>Year</DisplayName><Description>Four digit year (e.g., 2004)</Description><Type>4</Type><Size>4</Size><Definitional>true</Definitional></ConfigParamDescr></ElementValue></MapElement><MapElement><ElementKey>plugin_version</ElementKey><ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</ElementValue></MapElement></Elements>
+volume</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>text/html_filter</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_config_props</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ConfigParamDescr>
+        <Key>base_url</Key>
+        <DisplayName>Base URL</DisplayName>
+        <Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+        <Type>3</Type>
+        <Size>40</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>volume</Key>
+        <DisplayName>Volume No.</DisplayName>
+        <Type>6</Type>
+        <Size>8</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+      <ConfigParamDescr>
+        <Key>year</Key>
+        <DisplayName>Year</DisplayName>
+        <Description>Four digit year (e.g., 2004)</Description>
+        <Type>4</Type>
+        <Size>4</Size>
+        <Definitional>true</Definitional>
+      </ConfigParamDescr>
+    </ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_version</ElementKey>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pre-release</ElementValue>
+  </MapElement>
+  <MapElement>
+    <ElementKey>plugin_cache_result_list</ElementKey>
+    <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <string xsi:type="java:java.lang.String">404=org.lockss.util.urlconn.CacheException$RetryDeadLinkException</string>
+    </ElementValue>
+  </MapElement>
+</Elements>
