@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.14 2004-03-06 00:38:35 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.15 2004-03-07 08:36:32 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,9 @@ import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.daemon.*;
 import org.lockss.test.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
+import org.lockss.util.urlconn.*;
 import org.lockss.repository.*;
 
 /**
@@ -49,11 +51,16 @@ import org.lockss.repository.*;
 public class TestBaseUrlCacher extends LockssTestCase {
   MyMockBaseUrlCacher cacher;
   MockCachedUrlSet mcus;
+  MyMockPlugin plugin;
+
   private MockArchivalUnit mau;
   private MockLockssDaemon theDaemon;
+  private LockssRepository repo;
   private int pauseBeforeFetchCounter;
 
-  private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
+  private static final String TEST_URL =
+    "http://www.example.com/testDir/leaf1";
+  private boolean saveDefaultSuppressStackTrace;
 
   public void setUp() throws Exception {
     super.setUp();
@@ -68,20 +75,25 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     mau = new MyMockArchivalUnit();
     mau.setCrawlSpec(new CrawlSpec(tempDirPath, null));
-    MockPlugin plugin = new MyMockPlugin();
+    plugin = new MyMockPlugin();
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
 
-    theDaemon.getLockssRepository(mau);
-    theDaemon.getNodeManager(mau);
+    repo =
+      (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
+					       mau);
+    theDaemon.setLockssRepository(repo, mau);
 
     mcus = new MockCachedUrlSet(TEST_URL);
     mcus.setArchivalUnit(mau);
     cacher = new MyMockBaseUrlCacher(mcus, TEST_URL);
+    saveDefaultSuppressStackTrace =
+      CacheException.setDefaultSuppressStackTrace(false);
   }
 
   public void tearDown() throws Exception {
     TimeBase.setReal();
+    CacheException.setDefaultSuppressStackTrace(saveDefaultSuppressStackTrace);
     super.tearDown();
   }
 
@@ -131,7 +143,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     cacher._input = new StringInputStream("test stream");
     cacher._headers = cachedProps;
     // should still cache
-    cacher.forceCache();
+    cacher.setForceRefetch(true);
+    cacher.cache();
     assertTrue(cacher.wasStored);
 
     TimeBase.setReal();
@@ -168,18 +181,14 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     CachedUrl url = new BaseCachedUrl(mcus, TEST_URL);
     InputStream is = url.getUnfilteredInputStream();
-    ByteArrayOutputStream baos = new ByteArrayOutputStream(12);
-    StreamUtil.copy(is, baos);
-    is.close();
-    assertTrue(baos.toString().equals("test content"));
-    baos.close();
+    assertReaderMatchesString("test content", new InputStreamReader(is));
 
     props = url.getProperties();
-    assertTrue(props.getProperty("test1").equals("value1"));
+    assertEquals("value1", props.getProperty("test1"));
   }
 
   public void testCheckConnection() {
-    MyMockLockssUrlConnection  conn = new MyMockLockssUrlConnection();
+    MockLockssUrlConnection  conn = new MockLockssUrlConnection();
     conn.setResponseCode(200);
     conn.setResponseMessage("OK");
     try {
@@ -200,29 +209,299 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   }
 
-  public static void main(String[] argv) {
-    String[] testCaseList = { TestBaseUrlCacher.class.getName()};
-    junit.swingui.TestRunner.main(testCaseList);
+  // The following tests do not use MyMockBaseUrlCacher, so test more of
+  // BaseUrlCacher.  Mostly they test its behavior wrt the connection.
+  // MockConnectionMockBaseUrlCacher is used to create a mock connection.
+
+  MockLockssUrlConnection makeConn(int respCode, String respMessage,
+				   String redirectTo) {
+    return makeConn(respCode, respMessage, redirectTo, null);
+  }
+
+  MockLockssUrlConnection makeConn(int respCode, String respMessage,
+				   String redirectTo, String inputStream) {
+    MockLockssUrlConnection mconn = new MockLockssUrlConnection();
+    mconn.setResponseCode(respCode);
+    mconn.setResponseMessage(respMessage);
+    if (redirectTo != null) {
+      mconn.setResponseHeader("location", redirectTo);
+    }
+    mconn.setResponseContentType("");
+    mconn.setResponseContentEncoding("");
+    mconn.setResponseDate(0);
+    if (inputStream != null) {
+      mconn.setResponseInputStream(new StringInputStream(inputStream));
+    }
+    return mconn;
+  }
+
+  // Shouldn't generate if-modified-since header because no existing content
+  public void testIfModifiedConnectionNoContent() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.setForceRefetch(false);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertNull("444332", mconn.getRequestProperty("if-modified-since"));
+  }
+
+  
+  MockConnectionMockBaseUrlCacher makeMucWithContent() {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    Properties cuprops = new Properties();
+    cuprops.setProperty("date", "12345000");
+    mcus.addUrl(TEST_URL, true, true, cuprops);
+    return muc;
+  }
+
+  // Should generate if-modified-since header
+  public void testIfModifiedConnection() throws Exception {
+    MockConnectionMockBaseUrlCacher muc = makeMucWithContent();
+    MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.setForceRefetch(false);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertEquals("Thu, 01 Jan 1970 03:25:45 GMT",
+		 mconn.getRequestProperty("if-modified-since"));
+  }
+
+  // Shouldn't generate if-modified-since header because forceRefetch true
+  public void testForcedConnection() throws Exception {
+    MockConnectionMockBaseUrlCacher muc = makeMucWithContent();
+    MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
+    muc.addConnection(mconn);
+    muc.setForceRefetch(true);
+    muc.cache();
+    assertEquals(TEST_URL, mconn.getURL());
+    assertNull(mconn.getRequestProperty("if-modified-since"));
+  }
+
+  // Should throw exception derived from response code
+  public void testConnectionError() throws Exception {
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
+    muc.addConnection(mconn);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown ExpectedNoRetryException");
+    } catch (CacheException.ExpectedNoRetryException e) {
+      assertEquals("404 Not fond", e.getMessage());
+    }
+  }
+
+  // Shouldn't follow redirect because told not to.
+  public void testNoRedirect() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(301, "Moved to tears",
+			       "http://elsewhere.org/foo"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_DONT_FOLLOW);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown RetryNewUrlException");
+    } catch (CacheException.RetryNewUrlException e) {
+      assertEquals("301 Moved to Spain", e.getMessage());
+      Properties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("_header_location"));
+    }
+  }
+
+  // Can't test REDIRECT_SCHEME_FOLLOW because MockLockssUrlConnection
+  // doesn't do redirection.
+
+  // Should follow redirection to URL in crawl spec
+  public void testRedirectInSpec() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    mau.addUrlToBeCached(redTo);
+    InputStream is = muc.getUncachedInputStream();
+    Properties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("_header_location"));
+    assertEquals(redTo, p.getProperty("redirected-to"));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+    // Make sure the UrlCacher still has the original URL
+    assertEquals(TEST_URL, muc.getUrl());
+  }
+
+  // Should not follow redirection to URL not in crawl spec
+  public void testRedirectNotInSpec() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Fresno", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown RetryNewUrlException");
+    } catch (CacheException.RetryNewUrlException e) {
+      assertEquals("301 Moved to Fresno", e.getMessage());
+      Properties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("_header_location"));
+    }
+  }
+
+  // Should follow redirection to URL in crawl spec
+  public void testRedirectChain() throws Exception {
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", "http://2.2/a"));
+    muc.addConnection(makeConn(301, "Moved to Spain", "http://2.2/b"));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    mau.addUrlToBeCached("http://2.2/a");
+    mau.addUrlToBeCached("http://2.2/b");
+    mau.addUrlToBeCached(redTo);
+    InputStream is = muc.getUncachedInputStream();
+    Properties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("_header_location"));
+    assertEquals(redTo, p.getProperty("redirected-to"));
+    assertReaderMatchesString("bar", new InputStreamReader(is));
+  }
+
+  // Should throw because of max redirections
+  public void testRedirectChainMax() throws Exception {
+    String redTo = "http://foo.bar/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    for (int ix = 0; ix < (1+BaseUrlCacher.MAX_REDIRECTS); ix++) {
+      muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    }
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    mau.addUrlToBeCached(redTo);
+    try {
+      InputStream is = muc.getUncachedInputStream();
+      fail("Should have thrown RetryNewUrlException");
+    } catch (CacheException.RetryNewUrlException e) {
+      assertEquals("301 Moved to Spain", e.getMessage());
+      Properties p = muc.getUncachedProperties();
+      assertEquals(redTo, p.getProperty("_header_location"));
+    }
+  }
+
+  public void testRedirectWritesBoth() throws Exception {
+    plugin.returnRealCachedUrl = true;
+    String redTo = "http://somewhere.else/foo";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo));
+    muc.addConnection(makeConn(200, "Ok", null, "bar"));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    mau.addUrlToBeCached(redTo);
+    muc.cache();
+    Properties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("_header_location"));
+    assertEquals(redTo, p.getProperty("redirected-to"));
+
+    assertCuContents(TEST_URL, "bar");
+    assertCuContents(redTo, "bar");
+    assertCuProperty(TEST_URL, redTo, "redirected-to");
+    assertCuProperty(redTo, redTo, "redirected-to");
+  }
+
+  public void testRedirectWritesAll() throws Exception {
+    String content = "oft redirected content";
+    plugin.returnRealCachedUrl = true;
+    String redTo1 = "http://somewhere.else/foo";
+    String redTo2 = "http://somewhere.else/bar/x.html";
+    String redTo3 = "http://somewhere.else/bar/y.html";
+    MockConnectionMockBaseUrlCacher muc =
+      new MockConnectionMockBaseUrlCacher(mcus, TEST_URL);
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
+    muc.addConnection(makeConn(301, "Moved to Spain", redTo3));
+    muc.addConnection(makeConn(200, "Ok", null, content));
+    muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL);
+    mau.addUrlToBeCached(redTo1);
+    mau.addUrlToBeCached(redTo2);
+    mau.addUrlToBeCached(redTo3);
+    muc.cache();
+    Properties p = muc.getUncachedProperties();
+    assertNull(p.getProperty("_header_location"));
+    assertEquals(redTo3, p.getProperty("redirected-to"));
+
+    assertCuContents(TEST_URL, content);
+    assertCuContents(redTo1, content);
+    assertCuContents(redTo2, content);
+    assertCuContents(redTo3, content);
+    assertCuProperty(TEST_URL, redTo3, "redirected-to");
+  }
+
+  void assertCuContents(String url, String contents) throws IOException {
+    CachedUrl cu = new BaseCachedUrl(mcus, url);
+    InputStream is = cu.getUnfilteredInputStream();
+    assertReaderMatchesString(contents, new InputStreamReader(is));
+  }
+
+  void assertCuProperty(String url, String expected, String key) {
+    CachedUrl cu = new BaseCachedUrl(mcus, url);
+    Properties props = cu.getProperties();
+    assertEquals(expected, props.getProperty(key));
   }
 
   private class MyMockPlugin extends MockPlugin {
+    boolean returnRealCachedUrl = false;
+
     public CachedUrlSet makeCachedUrlSet(ArchivalUnit owner,
                                          CachedUrlSetSpec cuss) {
       return new BaseCachedUrlSet(owner, cuss);
     }
 
     public CachedUrl makeCachedUrl(CachedUrlSet owner, String url) {
-      return ((MockCachedUrlSet)owner).makeCachedUrl(url);
-    }
-
-    public UrlCacher makeUrlCacher(CachedUrlSet owner, String url) {
-      return new BaseUrlCacher(owner,url);
+      if (returnRealCachedUrl) {
+	return new BaseCachedUrl(owner, url);
+      } else {
+	return super.makeCachedUrl(owner, url);
+      }
     }
   }
 
+  // Allows a list of preconfigured MockLockssUrlConnection instances to be
+  // used for successive redirect fetches.
+  private class MockConnectionMockBaseUrlCacher extends BaseUrlCacher {
+    List connections = new ArrayList();
+
+    public MockConnectionMockBaseUrlCacher(CachedUrlSet owner, String url) {
+      super(owner, url);
+    }
+
+    void addConnection(MockLockssUrlConnection conn) {
+      connections.add(conn);
+    }
+
+    protected LockssUrlConnection makeConnection(String url,
+						 LockssUrlConnectionPool pool)
+	throws IOException {
+      if (connections != null && !connections.isEmpty()) {
+	MockLockssUrlConnection mconn =
+	  (MockLockssUrlConnection)connections.remove(0);
+	mconn.setURL(url);
+	return mconn;	
+      } else {
+	return new MockLockssUrlConnection();
+      }
+    }
+
+  }
+
+  // Mock BaseUrlCacher that fakes the connection
   private class MyMockBaseUrlCacher extends BaseUrlCacher {
     InputStream _input = null;
-    Properties _headers = null;
+    Properties _headers;
     boolean wasStored = false;
 
     public MyMockBaseUrlCacher(CachedUrlSet owner, String url) {
@@ -256,28 +535,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
-  private class MyMockLockssUrlConnection extends MockLockssUrlConnection {
-    private int m_responseCode;
-    private String m_responseMessage;
-
-    public MyMockLockssUrlConnection() {
-
-    }
-
-    public int  getResponseCode() {
-      return m_responseCode;
-    }
-
-    public String getResponseMessage() {
-      return m_responseMessage;
-    }
-
-    public void setResponseCode(int responseCode) {
-      m_responseCode = responseCode;
-    }
-
-    public void setResponseMessage(String message) {
-      m_responseMessage = message;
-    }
+  public static void main(String[] argv) {
+    String[] testCaseList = { TestBaseUrlCacher.class.getName()};
+    junit.swingui.TestRunner.main(testCaseList);
   }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.25 2004-02-27 00:19:08 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.26 2004-03-07 08:36:32 tlipkis Exp $
  */
 
 /*
@@ -43,35 +43,50 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 /**
- * Base class for UrlCachers.  Utilizes the LockssRepository for caching, and
- * URL connections for fetching.
- * Plugins may extend this to get some common UrlCacher functionality.
+ * Basic, fully functional UrlCacher.  Utilizes the LockssRepository for
+ * caching, and {@link LockssUrlConnection}s for fetching.  Plugins may
+ * extend this to achieve, <i>eg</i>, specialized host connection or
+ * authentication.  The redirection semantics offered here must be
+ * preserved.
  */
 public class BaseUrlCacher implements UrlCacher {
-  protected CachedUrlSet cus;
-  protected String url;
-  private LockssUrlConnectionPool connectionPool;
-  private LockssUrlConnection conn;
   protected static Logger logger = Logger.getLogger("UrlCacher");
-  private LockssRepository repository;
-  private CacheResultMap resultMap;
+
+  /** Maximum number of redirects that will be followed */
+  static final int MAX_REDIRECTS = 10;
+
   public static final String HEADER_PREFIX = "_header_";
 
+  protected CachedUrlSet cus;
+  protected Plugin plugin;
+  protected String origUrl;		// URL with which I was created
+  protected String fetchUrl;		// possibly affected by redirects
+  private List otherNames;
+  protected boolean forceRefetch = false;
+  protected int redirectScheme = REDIRECT_SCHEME_FOLLOW;
+  private LockssUrlConnectionPool connectionPool;
+  private LockssUrlConnection conn;
+  private LockssRepository repository;
+  private CacheResultMap resultMap;
+  private Properties uncachedProperties;
 
   public BaseUrlCacher(CachedUrlSet owner, String url) {
     this.cus = owner;
-    this.url = url;
+    this.origUrl = url;
+    this.fetchUrl = url;
     ArchivalUnit au = owner.getArchivalUnit();
-    repository = au.getPlugin().getDaemon().getLockssRepository(au);
-    resultMap = ((BasePlugin)au.getPlugin()).getCacheResultMap();
+    plugin = au.getPlugin();
+    repository = plugin.getDaemon().getLockssRepository(au);
+    resultMap = ((BasePlugin)plugin).getCacheResultMap();
   }
 
   /**
-   * Return the URL in string form
+   * Return the URL in string form.  Always returns the original URL,
+   * independent of any redirects followed.
    * @return the url string
    */
   public String getUrl() {
-    return url;
+    return origUrl;
   }
 
   /**
@@ -80,11 +95,11 @@ public class BaseUrlCacher implements UrlCacher {
    * @return the class-url string
    */
   public String toString() {
-    return "[BUC: "+url+"]";
+    return "[BUC: "+origUrl+"]";
   }
 
   /**
-   * Return the CachedUrlSet to which this CachedUrl belongs.
+   * Return the CachedUrlSet to which this UrlCacher belongs.
    * @return the owner CachedUrlSet
    */
   public CachedUrlSet getCachedUrlSet() {
@@ -100,12 +115,13 @@ public class BaseUrlCacher implements UrlCacher {
   }
 
   /**
-   * Return <code>true</code> if the underlying url is one that
-   * the plug-in believes should be preserved.
+   * Return <code>true</code> if the underlying url is one that the plug-in
+   * believes should be preserved.  (<i>Ie</i>, is within the AU's
+   * crawlSpec.)
    * @return a boolean indicating if it should be cached
    */
   public boolean shouldBeCached() {
-    return getArchivalUnit().shouldBeCached(getUrl());
+    return getArchivalUnit().shouldBeCached(origUrl);
   }
 
   /**
@@ -114,30 +130,34 @@ public class BaseUrlCacher implements UrlCacher {
    * @return CachedUrl for the content stored.
    */
   public CachedUrl getCachedUrl() {
-    return getArchivalUnit().getPlugin().makeCachedUrl(cus, url);
+    return plugin.makeCachedUrl(cus, origUrl);
   }
 
   public void setConnectionPool(LockssUrlConnectionPool connectionPool) {
     this.connectionPool = connectionPool;
   }
 
-  public void cache() throws IOException {
-    long lastCached = 0;
-    Plugin plugin = getArchivalUnit().getPlugin();
-    CachedUrl cachedVersion = plugin.makeCachedUrl(cus, url);
-    // if it's been cached, get the last caching time and use that
-    if ((cachedVersion!=null) && cachedVersion.hasContent()) {
-      Properties cachedProps = cachedVersion.getProperties();
-      try {
-        lastCached = Long.parseLong(cachedProps.getProperty("date"));
-      } catch (NumberFormatException nfe) { }
-    }
-    cache(lastCached);
+  public void setForceRefetch(boolean force) {
+    this.forceRefetch = force;
   }
 
-  public void forceCache() throws IOException {
-    // forces the cache
-    cache(0);
+  public void setRedirectScheme(int scheme) {
+    this.redirectScheme = scheme;
+  }
+
+  public void cache() throws IOException {
+    long lastCached = 0;
+    if (!forceRefetch) {
+      CachedUrl cachedVersion = plugin.makeCachedUrl(cus, origUrl);
+      // if it's been cached, get the last caching time and use that
+      if ((cachedVersion!=null) && cachedVersion.hasContent()) {
+	Properties cachedProps = cachedVersion.getProperties();
+	try {
+	  lastCached = Long.parseLong(cachedProps.getProperty("date"));
+	} catch (NumberFormatException nfe) { }
+      }
+    }
+    cache(lastCached);
   }
 
   private void cache(long lastCached) throws IOException {
@@ -150,7 +170,7 @@ public class BaseUrlCacher implements UrlCacher {
       try {
 	Properties headers = getUncachedProperties();
 	if (headers == null) {
-	  String err = "Received null headers for url '" + url + "'.";
+	  String err = "Received null headers for url '" + origUrl + "'.";
 	  logger.error(err);
 	  throw new NullPointerException(err);
 	}
@@ -161,9 +181,29 @@ public class BaseUrlCacher implements UrlCacher {
     }
   }
 
+  /** Store into the repository the content and headers from a successful
+   * fetch.  If redirects were followed and the redirect scheme is
+   * REDIRECT_SCHEME_STORE_ALL, store the content and headers under each
+   * name in the chain of redirections.
+   */
   public void storeContent(InputStream input, Properties headers)
       throws IOException {
-    logger.debug3("Storing url '"+url+"'");
+    if (logger.isDebug3()) logger.debug3("Storing url '"+ origUrl +"'");
+    storeContentIn(origUrl, input, headers);
+    if (otherNames != null) {
+      CachedUrl cu = getCachedUrl();
+      for (Iterator iter = otherNames.iterator(); iter.hasNext(); ) {
+	String name = (String)iter.next();
+	if (logger.isDebug3())
+	  logger.debug3("Storing in redirected-to url '"+ name +"'");
+	InputStream is = cu.getUnfilteredInputStream();
+	storeContentIn(name, is, headers);
+      }
+    }
+  }
+
+  public void storeContentIn(String url, InputStream input, Properties headers)
+      throws IOException {
     RepositoryNode leaf = null;
     try {
       leaf = repository.createNewNode(url);
@@ -171,15 +211,14 @@ public class BaseUrlCacher implements UrlCacher {
 
       OutputStream os = leaf.getNewOutputStream();
       StreamUtil.copy(input, os);
-      os.close();
       input.close();
+      os.close();
     }
     catch (IOException ex) {
       throw resultMap.getRepositoryException(ex);
     }
 
     leaf.setNewProperties(headers);
-
     leaf.sealNewVersion();
   }
 
@@ -204,7 +243,8 @@ public class BaseUrlCacher implements UrlCacher {
 	// http connection; check response code
 	int code = conn.getResponseCode();
 	if (code == HttpURLConnection.HTTP_NOT_MODIFIED) {
-	  logger.debug2("Unmodified content not cached for url '"+url+"'");
+	  logger.debug2("Unmodified content not cached for url '" +
+			origUrl + "'");
 	  return null;
 	}
       }
@@ -222,18 +262,23 @@ public class BaseUrlCacher implements UrlCacher {
       throw new UnsupportedOperationException("Called getUncachedProperties before calling getUncachedInputStream.");
     }
 //     openConnection();
-    Properties props = new Properties();
-    // set header properties in which we have interest
-    props.setProperty("content-type", conn.getResponseContentType());
-    props.setProperty("date", Long.toString(conn.getResponseDate()));
-    props.setProperty("content-url", url);
-    conn.storeResponseHeaderInto(props, HEADER_PREFIX);
-    String actualURL = conn.getActualUrl();
-    if (!url.equals(actualURL)) {
-      logger.info("setProperty(\"redirected-to\", " + actualURL + ")");
-      props.setProperty("redirected-to", actualURL);
+    if (uncachedProperties == null) {
+      Properties props = new Properties();
+      // set header properties in which we have interest
+      props.setProperty("content-type", conn.getResponseContentType());
+      props.setProperty("date", Long.toString(conn.getResponseDate()));
+      // XXX this property does not have consistent semantics.  It will be
+      // set to the first url in a chain of redirects that led to content,
+      // which could be different depending on fetch order.
+      props.setProperty("content-url", origUrl);
+      conn.storeResponseHeaderInto(props, HEADER_PREFIX);
+      String actualURL = conn.getActualUrl();
+      if (!origUrl.equals(actualURL)) {
+	props.setProperty("redirected-to", actualURL);
+      }
+      uncachedProperties = props;
     }
-    return props;
+    return uncachedProperties;
   }
 
   void checkConnectException(LockssUrlConnection conn) throws IOException {
@@ -244,6 +289,9 @@ public class BaseUrlCacher implements UrlCacher {
       }
       CacheException c_ex = resultMap.checkResult(conn);
       if(c_ex != null) {
+	// The stack below here is misleading.  Makes more sense for it
+	// to reflect the point at which it's thrown
+	c_ex.fillInStackTrace();
         throw c_ex;
       }
     }
@@ -256,22 +304,110 @@ public class BaseUrlCacher implements UrlCacher {
    */
   private void openConnection(long lastCached) throws IOException {
     if (conn==null) {
+      switch (redirectScheme) {
+      case REDIRECT_SCHEME_FOLLOW:
+      case REDIRECT_SCHEME_DONT_FOLLOW:
+	openOneConnection(lastCached);
+	break;
+      case REDIRECT_SCHEME_STORE_ALL:
+	openWithRedirects(lastCached);
+	break;
+      }
+    }
+  }
+
+  private void openWithRedirects(long lastCached) throws IOException {
+    int retry = 0;
+    while (true) {
       try {
-        conn = UrlUtil.openConnection(url, connectionPool);
-	conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
-	if (lastCached > 0) {
-	  conn.setIfModifiedSince(lastCached);
+	openOneConnection(lastCached);
+	break;
+      } catch (CacheException.RetryNewUrlException e) {
+	if (++retry >= MAX_REDIRECTS) {
+	  logger.warning("Max redirects hit, not redirecting " + origUrl +
+			 " past " + fetchUrl);
+	  throw e;
+	} else if (!processRedirectResponse()) {
+	  throw e;
 	}
-	conn.execute();
       }
-      catch (IOException ex) {
-	logger.warning("openConnection", ex);
-        throw resultMap.getHostException(ex);
-      } catch (RuntimeException e) {
- 	logger.warning("openConnection: unexpected exception", e);
-	throw e;
+    }
+  }
+
+  protected LockssUrlConnection makeConnection(String url,
+					       LockssUrlConnectionPool pool)
+      throws IOException {
+    return UrlUtil.openConnection(url, pool);
+  }
+
+  /**
+   * If we haven't already connected, creates a connection from url, setting
+   * the user-agent and ifmodifiedsince values.  Then actually connects to the 
+   * site and throws if we get an error code
+   */
+  private void openOneConnection(long lastCached) throws IOException {
+    try {
+      conn = makeConnection(fetchUrl, connectionPool);
+      switch (redirectScheme) {
+      case REDIRECT_SCHEME_FOLLOW:
+	conn.setFollowRedirects(true);
+	break;
+      case REDIRECT_SCHEME_STORE_ALL:
+      case REDIRECT_SCHEME_DONT_FOLLOW:
+	conn.setFollowRedirects(false);
+	break;
       }
-      checkConnectException(conn);
+      conn.setRequestProperty("user-agent", LockssDaemon.getUserAgent());
+      if (lastCached > 0) {
+	conn.setIfModifiedSince(lastCached);
+      }
+      conn.execute();
+    }
+    catch (IOException ex) {
+      logger.warning("openConnection", ex);
+      throw resultMap.getHostException(ex);
+    } catch (RuntimeException e) {
+      logger.warning("openConnection: unexpected exception", e);
+      throw e;
+    }
+    checkConnectException(conn);
+  }
+
+  private boolean processRedirectResponse() {
+    //get the location header to find out where to redirect to
+    String location = conn.getResponseHeaderValue("location");
+    if (location == null) {
+      // got a redirect response, but no location header
+      logger.error("Received redirect response " + conn.getResponseCode()
+		   + " but no location header");
+      return false;
+    }
+    if (logger.isDebug3()) {
+      logger.debug3("Redirect requested from '" + fetchUrl +
+		    "' to '" + location + "'");
+    }
+    // update the current location with the redirect location.
+    try {
+      String newUrlString = UrlUtil.resolveUri(fetchUrl, location);
+      if (redirectScheme == REDIRECT_SCHEME_STORE_ALL) {
+	if (!getArchivalUnit().shouldBeCached(newUrlString)) {
+	  logger.warning("Redirect not in crawl spec: " + newUrlString +
+			 " from: " + origUrl);
+	  return false;
+	}
+      }
+
+      conn.release();
+      conn = null;
+      fetchUrl = newUrlString;
+      if (otherNames == null) {
+	otherNames = new ArrayList();
+      }
+      otherNames.add(fetchUrl);
+      return true;
+    } catch (MalformedURLException e) {
+      logger.warning("Redirected location '" + location + "' is malformed", e);
+      return false;
     }
   }
 }
