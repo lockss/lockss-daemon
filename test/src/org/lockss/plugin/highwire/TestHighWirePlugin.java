@@ -53,8 +53,8 @@ public class TestHighWirePlugin extends LockssTestCase {
       throws ArchivalUnit.ConfigurationException {
     try {
       plugin.configureAU(null);
-      fail("Didn't throw IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
+      fail("Didn't throw ArchivalUnit.ConfigurationException");
+    } catch (ArchivalUnit.ConfigurationException e) {
     }
   }
 
@@ -109,6 +109,7 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testGetPluginName() {
-    assertEquals("HighWirePlugin", plugin.getPluginId());
+    assertEquals("org|lockss|plugin|highwire|HighWirePlugin",
+		 plugin.getPluginId());
   }
 }
