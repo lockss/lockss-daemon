@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.9 2003-06-03 05:49:33 tal Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.10 2003-06-03 22:07:33 tal Exp $
  */
 
 /*
@@ -81,13 +81,18 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
+   * @param url the url to match
    * @return true if the URL's prefix matches ours, and the remaining
    * substring is within the range defined by upper and lower bounds, if
-   * any.
+   * any.  The URL of a node does not match the range-restricted CUSS at
+   * that node.
    */
   public boolean matches(String url) {
     if (!url.startsWith(prefix)) {
       return false;
+    }
+    if (url.equals(prefix)) {
+      return !isRangeRestricted();
     }
     return inRange(url);
   }
@@ -108,6 +113,10 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return lowerBound != null || upperBound != null;
   }
 
+  /**
+   * @arg spec the set to test disjointness with
+   * @return true if the two sets are disjoint
+   */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
     if (spec.isSingleNode()) {
       return !subsumes(spec);
@@ -130,10 +139,14 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     throw new RuntimeException("Unknown CUSS type: " + spec);
   }
 
+  /**
+   * @arg spec the set to test subsumption of
+   * @return true if spec is entirely contained in this one
+   */
   public boolean subsumes(CachedUrlSetSpec spec) {
     if (spec.isSingleNode()) {
       String specUrl = spec.getUrl();
-      return !prefix.equals(specUrl) && matches(specUrl);
+      return matches(specUrl);
     }
     if (spec.isAU()) {
       return false;
@@ -154,7 +167,6 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Compares two specs.
    * @param obj the other spec
    * @return true if the prefix and ranges are equal.
    */
@@ -178,9 +190,6 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return prefix;
   }
 
-  /**
-   * @return String representaion of this object
-   */
   public String toString() {
     StringBuffer sb = new StringBuffer("[CUSS: ");
     sb.append(prefix);
@@ -202,7 +211,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * @return a hash made form the prefix and bounds.
+   * @return a hash made from the prefix and bounds.
    */
   public int hashCode() {
     int hash = 0x40700704;
@@ -217,15 +226,15 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * return the upper bound of the range
-   * @return the string representing the upper boundary
+   * Return the upper bound of the range
+   * @return the String representing the upper boundary
    */
   public String getUpperBound() {
     return upperBound;
   }
 
   /**
-   * return the lower bound of the range
+   * Return the lower bound of the range
    * @return the String representing the lower boundary
    */
   public String getLowerBound() {
@@ -251,7 +260,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * return true if the url is in the bounded range.
+   * Return true if the url is in the bounded range.
    * @param url the url to check
    * @return true if the url is between upper and lower bound
    */
