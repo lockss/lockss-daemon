@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.167 2004-02-06 03:11:31 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.168 2004-02-07 02:00:01 troberts Exp $
  */
 
 /*
@@ -1525,10 +1525,10 @@ public class NodeManagerImpl
       if (results.getTallyResult() == Tallier.RESULT_WON) {
 	if (vote.isAgreeVote()) {
 // 	  if (top level poll) { //XXX add this check
-	  idManager.signalAgreed(id, managedAu);
+	  idManager.signalAgreed(id.toHost(), managedAu);
 // 	  }
 	} else {
-	  idManager.signalDisagreed(id, managedAu);
+	  idManager.signalDisagreed(id.toHost(), managedAu);
 	}
       }
     }
