@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.1 2003-05-29 00:57:50 troberts Exp $
+ * $Id: ReaderInputStream.java,v 1.2 2003-05-29 01:01:34 troberts Exp $
  */
 
 /*
@@ -38,16 +38,8 @@ import java.io.*;
  */
 
 public class ReaderInputStream extends InputStream {
-//   public static final int BUFFER_SIZE = 100;
   Reader reader = null;
   protected static Logger logger = Logger.getLogger("ReaderInputStream");
-//   Writer writer = null;
-//   InputStream is = null;
-//   boolean readerEmpty = false;
-
-//   char charBuffer[] = new char[BUFFER_SIZE];
-//   int bytesWaiting = 0;
-
 
   public int read() throws IOException {
     logger.debug("Calling read");
@@ -67,35 +59,8 @@ public class ReaderInputStream extends InputStream {
     return bytes[0];
   }
   
-//   public int read() throws IOException {
-//     System.err.println("STOP");
-//      if (is.available() <= 0) {
-//       if (readerEmpty || !populateWriter(reader, writer)) {
-// 	writer.close();
-// 	return -1;
-//       }
-//       System.err.println("ava: "+is.available());
-// //       return -2;
-//     }
-//     return is.read();
-//   }
-
-//   private boolean populateWriter(Reader reader, Writer writer) 
-//       throws IOException {
-//     if (reader.read(charBuffer) == -1) {
-//       readerEmpty = true;
-//       writer.write(-1);
-//       return false;
-//     }
-//     writer.write(charBuffer);
-//     return true;
-//   }
-
   public ReaderInputStream(Reader reader) throws IOException {
     this.reader = new BufferedReader(reader);
-//     PipedInputStream pipedIS = new PipedInputStream();
-//     this.is = pipedIS;
-//     this.writer = new OutputStreamWriter(new PipedOutputStream(pipedIS));
   }
 
 }
