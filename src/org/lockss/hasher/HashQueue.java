@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.8 2002-11-23 01:31:57 troberts Exp $
+ * $Id: HashQueue.java,v 1.9 2002-11-23 01:51:47 tal Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ class HashQueue implements Serializable {
 	iter.previous();
 	while (iter.hasNext()) {
 	  qreq = (Request)iter.next();
-	  if (req.overrun()) {
+	  if (qreq.overrun()) {
 	    // don't let overrunners prevent others from getting into queue.
 	    break;
 	  }
@@ -296,12 +296,7 @@ class HashQueue implements Serializable {
     }
   }
 
-  Request runNSteps(int nsteps, int nbytes, Boolean goOn) {
-    Request req = head();
-    if (req == null) {
-      log.debug("runNSteps no work");
-      return null;
-    }
+  void runNSteps(Request req, int nsteps, int nbytes, Boolean goOn) {
     CachedUrlSetHasher ush = req.urlsetHasher;
     req.firstOverrun = false;
     Deadline overrunDeadline = null;
@@ -340,18 +335,24 @@ class HashQueue implements Serializable {
       req.e = e;
     }
     req.timeUsed += TimeBase.nowMs() - startTime;
-    return req;
   }
 
+  // Run up to n steps of the request at the head of the queue, and call
+  // its callback if it's done.
+  // Return true if we did any work, false if no requests on queue.
   boolean runAndNotify(int nsteps, int nbytes, Boolean goOn) {
-    Request req = runNSteps(nsteps, nbytes, goOn);
+    Request req = head();
     if (req == null) {
+      log.debug("runAndNotify no work");
       return false;
     }
+    runNSteps(req, nsteps, nbytes, goOn);
     if (req.firstOverrun) {
       reschedule();
     }
-    if (req.finished()) {
+    // need to do this more often than just when one finishes, so will
+    // notice those that expired.  Better way than every time?
+    if (true || req.finished()) {
       removeCompleted();
     }
     return true;
@@ -378,8 +379,8 @@ class HashQueue implements Serializable {
 	    sem.take(timeout);
 	  }
 	}
-//       } catch (InterruptedException e) {
-// 	// no action - expected when stopping
+      } catch (InterruptedException e) {
+ 	// no action - expected when stopping
       } catch (Exception e) {
 	log.error("Unexpected exception caught in hash thread", e);
       } finally {
