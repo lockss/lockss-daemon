@@ -64,6 +64,7 @@ public class PrintfEditor extends JDialog implements EDPEditor {
     buttonPanel.setLayout(flowLayout1);
     formatPanel.setBorder(BorderFactory.createEtchedBorder());
     formatPanel.setMinimumSize(new Dimension(400, 270));
+    formatPanel.setPreferredSize(new Dimension(400, 270));
     parameterPanel.setLayout(gridBagLayout2);
     parameterLabel.setText("Parameters:");
     parameterLabel.setFont(new java.awt.Font("DialogInput", 0, 12));

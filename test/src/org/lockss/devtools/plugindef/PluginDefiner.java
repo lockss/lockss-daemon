@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.2 2004-05-13 02:21:49 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.3 2004-05-14 05:37:11 clairegriffin Exp $
  */
 
 /*
@@ -193,7 +193,6 @@ public class PluginDefiner extends JFrame {
        || jFileChooser1.getSelectedFile() != null) {
       name = jFileChooser1.getSelectedFile().getName();
       location = jFileChooser1.getSelectedFile().getParent();
-      System.out.println("Open file name:" + name + " - path:" + location);
       edp = new EditableDefinablePlugin();
       edp.loadMap(location, name);
       // update the table
@@ -202,8 +201,6 @@ public class PluginDefiner extends JFrame {
   }
 
   void jMenuFileSave_actionPerformed(ActionEvent e) {
-    String cmd = e.getActionCommand();
-    System.out.println(cmd);
     if(e.getActionCommand().equals("SaveAs") ||
        edp == null || edp.getMapName() == null) {
       int option = jFileChooser1.showSaveDialog(this);
@@ -212,7 +209,6 @@ public class PluginDefiner extends JFrame {
         return;
       name = jFileChooser1.getSelectedFile().getName();
       location = jFileChooser1.getSelectedFile().getParent();
-      System.out.println("Save file name: " + name + " - path: " + location);
     }
 
     // write the file
@@ -238,7 +234,8 @@ public class PluginDefiner extends JFrame {
   }
 
   void filtersTestMenuItem_actionPerformed(ActionEvent e) {
-    //TODO run the filters test
+    JDialog dialog = new FilterTestDialog(this, edp);
+    dialog.show();
   }
 
 }

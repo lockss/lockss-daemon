@@ -39,7 +39,7 @@ public class CrawlRuleTestDialog extends JDialog {
   JTextField depthTextField = new JTextField();
   JLabel delayLabel = new JLabel();
   JTextField delayTextField = new JTextField();
-
+  JFileChooser fileChooser = new JFileChooser();
   GridBagLayout gridBagLayout1 = new GridBagLayout();
   JPanel parameterPanel = new JPanel();
   TitledBorder parameterBorder;
@@ -90,7 +90,7 @@ public class CrawlRuleTestDialog extends JDialog {
         CrawlRuleTestDialog_cancelButton_actionAdapter(this));
     infoPanel.setBorder(infoBorder);
     infoPanel.setMinimumSize(new Dimension(300, 80));
-    infoPanel.setPreferredSize(new Dimension(400, 80));
+    infoPanel.setPreferredSize(new Dimension(400, 90));
     infoPanel.setLayout(gridBagLayout1);
     buttonPanel.setBorder(null);
     buttonPanel.setMinimumSize(new Dimension(300, 35));
@@ -101,7 +101,7 @@ public class CrawlRuleTestDialog extends JDialog {
     startUrlTextField.setMinimumSize(new Dimension(200, 19));
     startUrlTextField.setPreferredSize(new Dimension(290, 19));
     startUrlTextField.setToolTipText("Enter URL from which to start check.");
-    startUrlTextField.setText("http:\\\\");
+    startUrlTextField.setText("http://");
     depthLabel.setText("Test Depth:");
     depthTextField.setMinimumSize(new Dimension(200, 19));
     depthTextField.setPreferredSize(new Dimension(100, 19));
@@ -198,12 +198,17 @@ public class CrawlRuleTestDialog extends JDialog {
       }
       Configuration config = ConfigurationUtil.fromProps(props);
       ArchivalUnit au = m_plugin.createAu(config);
-      BufferedWriter writer = null;
-      CrawlRuleTester tester = new CrawlRuleTester(writer, depth, delay,
-                         startUrl, au.getCrawlSpec());
+      int option = fileChooser.showSaveDialog(this);
+      if(option == fileChooser.APPROVE_OPTION ||
+         fileChooser.getSelectedFile() != null) {
+        String fileName = fileChooser.getSelectedFile().getAbsolutePath();
 
-      setVisible(false);
-      tester.runTest();
+        CrawlRuleTester tester = new CrawlRuleTester(fileName, depth, delay,
+            startUrl, au.getCrawlSpec());
+
+        setVisible(false);
+        tester.runTest();
+      }
     }
 
     catch(Exception ex) {

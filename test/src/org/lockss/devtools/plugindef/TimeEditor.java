@@ -67,8 +67,8 @@ public class TimeEditor extends JDialog implements EDPEditor {
     weekLabel.setText("Week");
     dayLabel.setText("Day");
     hourLabel.setText("Hour");
-    minLabel.setText("Mins ");
-    secLabel.setText("Secs");
+    minLabel.setText("Min");
+    secLabel.setText("Sec");
     millisLabel.setText("Ms");
     weekTextField.setPreferredSize(new Dimension(64, 20));
     weekTextField.setText("0");
@@ -85,9 +85,9 @@ public class TimeEditor extends JDialog implements EDPEditor {
     timePanel.setBorder(BorderFactory.createEtchedBorder());
     timePanel.setMaximumSize(new Dimension(2147483647, 2147483647));
     timePanel.setPreferredSize(new Dimension(120, 180));
-    mainPanel.setMinimumSize(new Dimension(140, 220));
+    mainPanel.setMinimumSize(new Dimension(120, 230));
     mainPanel.setOpaque(true);
-    mainPanel.setPreferredSize(new Dimension(140, 220));
+    mainPanel.setPreferredSize(new Dimension(120, 230));
     mainPanel.setVerifyInputWhenFocusTarget(true);
     getContentPane().add(mainPanel);
     mainPanel.add(timePanel, BorderLayout.CENTER);
@@ -112,8 +112,8 @@ public class TimeEditor extends JDialog implements EDPEditor {
             ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(12, 15, 0, 36), 9, 0));
     timePanel.add(hourLabel,  new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0
             ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(12, 15, 0, 36), 3, 0));
-    timePanel.add(minLabel,  new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0
-            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(12, 15, 0, 36), -1, 0));
+    timePanel.add(minLabel,   new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0
+            ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(12, 15, 0, 36), 0, 0));
     timePanel.add(secLabel,  new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0
             ,GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(12, 15, 0, 36), 6, 0));
     timePanel.add(millisLabel,  new GridBagConstraints(1, 5, 1, 1, 0.0, 0.0
@@ -136,11 +136,17 @@ public class TimeEditor extends JDialog implements EDPEditor {
       weekTextField.setText(String.valueOf(cur_interval));
       time_remaining -= cur_interval * Constants.WEEK;
     }
+    else {
+      weekTextField.setText("0");
+    }
 
     cur_interval = time_remaining / Constants.DAY;
     if (cur_interval > 0) {
       dayTextField.setText(String.valueOf(cur_interval));
       time_remaining -= cur_interval * Constants.DAY;
+    }
+    else {
+      dayTextField.setText("0");
     }
 
     cur_interval = time_remaining / Constants.HOUR;
@@ -148,11 +154,17 @@ public class TimeEditor extends JDialog implements EDPEditor {
       hourTextField.setText(String.valueOf(cur_interval));
       time_remaining -= cur_interval * Constants.HOUR;
     }
+    else {
+      hourTextField.setText("0");
+    }
 
     cur_interval = time_remaining / Constants.MINUTE;
     if (cur_interval > 0) {
       minTextField.setText(String.valueOf(cur_interval));
       time_remaining -= cur_interval * Constants.MINUTE;
+    }
+    else {
+      minTextField.setText("0");
     }
 
     cur_interval = time_remaining / Constants.SECOND;
@@ -160,17 +172,33 @@ public class TimeEditor extends JDialog implements EDPEditor {
       secTextField.setText(String.valueOf(cur_interval));
       time_remaining -= cur_interval * Constants.SECOND;
     }
+    else {
+      secTextField.setText("0");
+    }
+
     millisTextField.setText(String.valueOf(time_remaining));
   }
 
   void storeCellData() {
     long cur_time = 0;
-    cur_time += Long.parseLong(weekTextField.getText()) * Constants.WEEK;
-    cur_time += Long.parseLong(dayTextField.getText())* Constants.DAY;
-    cur_time += Long.parseLong(hourTextField.getText())* Constants.HOUR;
-    cur_time += Long.parseLong(minTextField.getText())* Constants.MINUTE;
-    cur_time += Long.parseLong(secTextField.getText())* Constants.SECOND;
-    cur_time += Long.parseLong(millisTextField.getText());
+    String time_str = weekTextField.getText();
+    if(!time_str.equals(""))
+      cur_time += Long.parseLong(time_str) * Constants.WEEK;
+    time_str = dayTextField.getText();
+    if(!time_str.equals(""))
+      cur_time += Long.parseLong(time_str)* Constants.DAY;
+    time_str = hourTextField.getText();
+    if(!time_str.equals(""))
+      cur_time += Long.parseLong(time_str)* Constants.HOUR;
+    time_str = minTextField.getText();
+    if(!time_str.equals(""))
+      cur_time += Long.parseLong(time_str)* Constants.MINUTE;
+    time_str = secTextField.getText();
+    if(!time_str.equals(""))
+      cur_time += Long.parseLong(time_str)* Constants.SECOND;
+    time_str = millisTextField.getText();
+    if(!time_str.equals(""))
+      cur_time += Long.parseLong(time_str);
     m_cellData.updateStringData(String.valueOf(cur_time));
   }
 

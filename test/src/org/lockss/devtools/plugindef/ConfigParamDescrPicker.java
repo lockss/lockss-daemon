@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.1 2004-05-11 03:43:29 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.2 2004-05-14 05:37:11 clairegriffin Exp $
  */
 
 /*
@@ -137,8 +137,8 @@ public class ConfigParamDescrPicker
     availableBorder.setTitle("Available Parameters");
     availableBorder.setBorder(BorderFactory.createEtchedBorder());
     availableBorder.setTitleFont(new java.awt.Font("Dialog", 0, 12));
-    mainPanel.setMinimumSize(new Dimension(320, 200));
-    mainPanel.setPreferredSize(new Dimension(320, 200));
+    mainPanel.setMinimumSize(new Dimension(400, 220));
+    mainPanel.setPreferredSize(new Dimension(400, 250));
     ButtonPanel.add(OkButton, null);
     ButtonPanel.add(CancelButton, null);
     ButtonPanel.add(CreateButton, null);
