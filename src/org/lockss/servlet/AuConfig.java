@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.7 2003-08-06 06:26:51 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.8 2003-09-11 07:47:50 tlipkis Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class AuConfig extends LockssServlet {
   Plugin plugin;			// current plugin
   Configuration auConfig;		// current config from AU
   Configuration formConfig;		// config read from form
+  Configuration titleConfig;		// config specified by title DB
   java.util.List auConfigParams;
   Collection defKeys;			// plugin's definitional keys
   java.util.List editKeys;		// non-definitional keys
@@ -79,6 +80,7 @@ public class AuConfig extends LockssServlet {
     plugin = null;
     auConfig = null;
     formConfig = null;
+    titleConfig = null;
     auConfigParams = null;
     defKeys = null;
     editKeys = null;
@@ -96,6 +98,7 @@ public class AuConfig extends LockssServlet {
     errMsg = null;
     statusMsg = null;
     formConfig = null;
+    titleConfig = null;
     submitButtonNumber = 0;
 
     op: {
@@ -153,13 +156,13 @@ public class AuConfig extends LockssServlet {
     resetLocals();
   }
 
-  /** Display "Add Volume" button and list of configured AUs with Edit
+  /** Display "Add Archival Unit" button and list of configured AUs with Edit
    * buttons */
   private void displayAuSummary() throws IOException {
     Page page = newPage();
     addJavaScript(page);
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Add a new volume, or edit an existing one."));
+    page.add(getExplanationBlock("Add a new Archival Unit, or edit an existing one."));
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
     // make form findable by unit tests
@@ -187,7 +190,7 @@ public class AuConfig extends LockssServlet {
     tbl.newCell("align=right valign=center");
     tbl.add(submitButton("Add", "Add"));
     tbl.newCell("valign=center");
-    tbl.add("Add new Volume");
+    tbl.add("Add new Archival Unit");
   }
 
   /** Add an Edit row to the table */
@@ -208,7 +211,7 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
 
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Editing Configuration of: " +
+    page.add(getExplanationBlock("Editing configuration of: " +
 				 encodedAuName(au)));
 
     java.util.List actions = ListUtil.list("Unconfigure");
@@ -226,7 +229,7 @@ public class AuConfig extends LockssServlet {
     fetchAuConfig(au);
 
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Restoring Configuration of: " +
+    page.add(getExplanationBlock("Restoring configuration of: " +
 				 encodedAuName(au)));
 
     java.util.List actions =
@@ -249,7 +252,9 @@ public class AuConfig extends LockssServlet {
       }
       // tk - need to deal with > 1 plugin for title
       plugin = (Plugin)c.iterator().next();
-      formConfig = plugin.getConfigForTitle(title);
+      if (formConfig == null) {
+	formConfig = plugin.getConfigForTitle(title);
+      }
     } else {
       String pid = req.getParameter("PluginId");
       String pKey;
@@ -274,13 +279,16 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
     page.add(getErrBlock());
     page.add(getExplanationBlock((StringUtil.isNullString(title)
-				  ? "Creating new journal volume"
-				  : ("Creating new volume of " +
+				  ? "Creating new Archival Unit"
+				  : ("Creating new Archival Unit of " +
 				     encodeText(title))) +
 				 " with plugin: " +
-				 encodeText(plugin.getPluginName())));
+				 encodeText(plugin.getPluginName()) +
+				 "<br>Edit the parameters then click Create"));
 
     Form frm = createAUEditForm(ListUtil.list("Create"), null, true);
+    // Ensure still have title info if come back here on error
+    frm.add(new Input(Input.Hidden, "Title", title));
     page.add(frm);
     endPage(page);
   }
@@ -290,25 +298,34 @@ public class AuConfig extends LockssServlet {
   private void displayAddAu() throws IOException {
     Page page = newPage();
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Add New Journal Volume"));
+    String addExp = "Adding new Archival Unit" +
+      "<br>First, select a title or a publisher plugin." +
+      addFootnote("Configuring an AU requires choosing a publisher-dependent"
+		  + " plugin, then filling in a set of parameters.  "
+		  + "Predefined titles implicitly specify a plugin and "
+		  + "some of the parameter values.");
+    page.add(getExplanationBlock(addExp));
 
     Form frm = new Form(srvURL(myServletDescr(), null));
     frm.method("POST");
-    frm.add("<center>");
+//     frm.add("<center>");
+    Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
 
     Collection titles = pluginMgr.findAllTitles();
     if (!titles.isEmpty()) {
-      frm.add("<br>Choose a title:<br>");
+      tbl.newRow();
+      tbl.newCell("colspan=3 align=center");
+      tbl.add("Choose a title:<br>");
       Select sel = new Select("Title", false);
       sel.add("-no selection-", true, "");
       for (Iterator iter = titles.iterator(); iter.hasNext(); ) {
 	String title = (String)iter.next();
 	sel.add(encodeText(title), false);
       }
-      frm.add(sel);
-      frm.add("<br>or");
+      tbl.add(sel);
+//       frm.add("<br>- or-");
+      addOr(tbl);
     }
-
     SortedMap pMap = new TreeMap();
     for (Iterator iter = pluginMgr.getRegisteredPlugins().iterator();
 	 iter.hasNext(); ) {
@@ -317,7 +334,9 @@ public class AuConfig extends LockssServlet {
     }
 
     if (!pMap.isEmpty()) {
-      frm.add("<br>Choose a plugin:<br>");
+      tbl.newRow();
+      tbl.newCell("colspan=3 align=center");
+      tbl.add("Choose a plugin:<br>");
       Select sel = new Select("PluginId", false);
       sel.add("-no selection-", true, "");
       for (Iterator iter = pMap.keySet().iterator(); iter.hasNext(); ) {
@@ -325,20 +344,37 @@ public class AuConfig extends LockssServlet {
 	Plugin p = (Plugin)pMap.get(pName);
 	sel.add(encodeText(pName), false, p.getPluginId());
       }
-      frm.add(sel);
-      frm.add("<br>or");
+      tbl.add(sel);
+      addOr(tbl);
     }
-    frm.add("<br>Enter the class name of a plugin:<br>");
+    tbl.newRow();
+    tbl.newCell("colspan=3 align=center");
+    tbl.add("Enter the class name of a plugin:<br>");
     Input in = new Input(Input.Text, "PluginClass");
     in.setSize(40);
-    frm.add(in);
-    frm.add("<br><br>");
-    frm.add(new Input(Input.Hidden, ACTION_TAG, "EditNew"));
-    frm.add(new Input(Input.Submit, "button", "Configure Volume"));
+    tbl.add(in);
+    tbl.newRow();
+    tbl.newCell("colspan=3 align=center");
+    tbl.add("<br>");
+    tbl.add("Then click to edit parameter values");
+    tbl.add("<br>");
+    tbl.add(new Input(Input.Hidden, ACTION_TAG, "EditNew"));
+    tbl.add(new Input(Input.Submit, "button", "Edit Parameters"));
+    frm.add(tbl);
     page.add(frm);
     page.add("</center><br>");
 
     endPage(page);
+  }
+
+  void addOr(Table tbl) {
+    tbl.newRow();
+    tbl.newCell("align=right");
+    tbl.add("<hr align=right width=100>");
+    tbl.newCell("align=center");
+    tbl.add("or");
+    tbl.newCell("align=left");
+    tbl.add("<hr align=left width=100>");
   }
 
   /** Create a form to edit a (possibly not-yet-existing) AU.
@@ -353,8 +389,16 @@ public class AuConfig extends LockssServlet {
       throws IOException {
     boolean isNew = au == null;
 
-    Configuration initVals = formConfig != null ? formConfig : auConfig;
-    if (initVals == null) {
+    Configuration initVals;
+    Collection noEditKeys = Collections.EMPTY_SET;
+    if (titleConfig != null) {
+      initVals = titleConfig;
+      noEditKeys = titleConfig.keySet();
+    } else if (formConfig != null) {
+      initVals = formConfig;
+    } else if (auConfig != null) {
+      initVals = auConfig;
+    } else {
       initVals = ConfigManager.EMPTY_CONFIGURATION;
     }
 
@@ -364,13 +408,16 @@ public class AuConfig extends LockssServlet {
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     tbl.newRow();
     tbl.newCell("colspan=2 align=center");
-    tbl.add("Volume Definition");
+    tbl.add("Archival Unit Definition");
 //     tbl.add(isNew ? "Defining Properties" : "Fixed Properties");
+
     addPropRows(tbl, getDefKeys(), initVals,
-		(isNew
-		 ? (org.apache.commons.collections.CollectionUtils.
-		    subtract(getDefKeys(), initVals.keySet()))
-		 : null));
+		(isNew ? getDefKeys() : null));
+//     addPropRows(tbl, getDefKeys(), initVals,
+// 		(isNew
+// 		 ? (org.apache.commons.collections.CollectionUtils.
+// 		    subtract(getDefKeys(), noEditKeys))
+// 		 : null));
 
     tbl.newRow();
     tbl.newRow();
@@ -456,7 +503,7 @@ public class AuConfig extends LockssServlet {
     try {
       ArchivalUnit au =
 	pluginMgr.createAndSaveAUConfiguration(plugin, formConfig);
-      statusMsg = "Volume created.";
+      statusMsg = "Archival Unit created.";
       displayEditAu(au);
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Error configuring AU", e);
@@ -478,7 +525,7 @@ public class AuConfig extends LockssServlet {
 	isChanged(pluginMgr.getStoredAuConfiguration(au), formConfig)) {
       try {
 	pluginMgr.setAndSaveAUConfiguration(au, formConfig);
-	statusMsg = "Volume configuration saved.";
+	statusMsg = "Archival Unit configuration saved.";
       } catch (ArchivalUnit.ConfigurationException e) {
 	log.error("Couldn't reconfigure AU", e);
 	errMsg = encodeText(e.getMessage());
@@ -499,7 +546,7 @@ public class AuConfig extends LockssServlet {
       " when configuration changes are backed up to the configuration floppy.";
     String unconfigureFoot =
       "Unconfigure will not take effect until the next daemon restart." +
-      "  At that point the volume will be inactive, but its contents" +
+      "  At that point the Archival Unit will be inactive, but its contents" +
       " will remain in the cache untill the deletion is made permanent." +
       " Permanent deletion occurs only during a reboot, when configuration" +
       " changes are backed up to the configuration floppy. (NIY)";
@@ -522,7 +569,7 @@ public class AuConfig extends LockssServlet {
   private void doUnconfigureAu(ArchivalUnit au) throws IOException {
     try {
       pluginMgr.deleteAUConfiguration(au);
-      statusMsg = "Volume configuration removed.";
+      statusMsg = "Archival Unit configuration removed.";
     } catch (ArchivalUnit.ConfigurationException e) {
       log.error("Can't happen", e);
       errMsg = encodeText(e.getMessage());

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.2 2003-08-09 20:38:44 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.3 2003-09-11 07:47:50 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestAuConfig extends LockssServletTestCase {
     assertEquals(1, auTable.getRowCount());
     assertEquals(2, auTable.getColumnCount());
     assertEquals("", auTable.getCellAsText(0,0));
-    assertEquals("Add new Volume", auTable.getCellAsText(0,1));
+    assertEquals("Add new Archival Unit", auTable.getCellAsText(0,1));
     TableCell cell = auTable.getTableCell(0,0);
     HTMLElement elem = cell.getElementWithID("lsb.1");
     Button btn = (Button)elem;
