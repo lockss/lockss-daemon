@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.59 2004-08-18 00:14:55 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.60 2004-08-18 07:09:12 tlipkis Exp $
  */
 
 /*
