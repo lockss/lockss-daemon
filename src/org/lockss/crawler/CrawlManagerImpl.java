@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.72.2.2 2004-10-19 06:23:15 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.72.2.3 2004-10-19 19:10:42 tlipkis Exp $
  */
 
 /*
@@ -193,15 +193,14 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  /** Return true if the rate limiter for au in rateLimiterMap does not
-   * allow at event at the current time.  If the rate limiter allows an
-   * event, signal the event and return false. */
-  private boolean isRateLimitExceeded(ArchivalUnit au,
-				      Map rateLimiterMap,
-				      String maxEventsParam,
-				      int maxEvantDefault,
-				      String intervalParam,
-				      long intervalDefault) {
+  /** Return the rate limiter for the au in the rateLimiterMap, creating it
+   * with appropriate parameters if it does not exist. */
+  private RateLimiter getRateLimiter(ArchivalUnit au,
+				     Map rateLimiterMap,
+				     String maxEventsParam,
+				     int maxEvantDefault,
+				     String intervalParam,
+				     long intervalDefault) {
     RateLimiter limiter;
     synchronized (rateLimiterMap) {
       limiter = (RateLimiter)rateLimiterMap.get(au);
@@ -214,11 +213,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 	rateLimiterMap.put(au, limiter);
       }
     }
-    if (limiter.isEventOk()) {
-      limiter.event();
-      return false;
-    }
-    return true;
+    return limiter;
   }
       
   /** Reset the parameters of all the rate limiters in the map. */
@@ -252,7 +247,17 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (urls == null) {
       throw new IllegalArgumentException("Called with null URL");
     }
-
+    // check rate limiter before obtaining locks
+    RateLimiter limiter = getRateLimiter(au, repairRateLimiters,
+					 PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+					 DEFAULT_MAX_REPAIR_CRAWLS_PER_INTERVAL,
+					 PARAM_MAX_REPAIR_CRAWLS_INTERVAL,
+					 DEFAULT_MAX_REPAIR_CRAWLS_INTERVAL);
+    if (!limiter.isEventOk()) {
+      logger.debug("Repair aborted due to rate limiter.");
+      callCallback(cb, cookie, false);
+      return;
+    }
     // check with regulator and start repair
     Map locks = getRepairLocks(au, urls, lock);
     if (locks.isEmpty()) {
@@ -260,15 +265,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       callCallback(cb, cookie, false);
       return;
     }
-    if (isRateLimitExceeded(au, repairRateLimiters,
-			    PARAM_MAX_REPAIR_CRAWLS_PER_INTERVAL,
-			    DEFAULT_MAX_REPAIR_CRAWLS_PER_INTERVAL,
-			    PARAM_MAX_REPAIR_CRAWLS_INTERVAL,
-			    DEFAULT_MAX_REPAIR_CRAWLS_INTERVAL)) {
-      logger.debug("Repair aborted due to rate limiter.");
-      callCallback(cb, cookie, false);
-      return;
-    }
+    limiter.event();
     try {
       if (locks.size() < urls.size()) {
 	cb = new FailingCallbackWrapper(cb);
@@ -339,6 +336,18 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     if (au == null) {
       throw new IllegalArgumentException("Called with null AU");
     }
+    // check rate limiter before obtaining lock
+    RateLimiter limiter =
+      getRateLimiter(au, newContentRateLimiters,
+		     PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+		     DEFAULT_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
+		     PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL,
+		     DEFAULT_MAX_NEW_CONTENT_CRAWLS_INTERVAL);
+    if (!limiter.isEventOk()) {
+      logger.debug("New content aborted due to rate limiter.");
+      callCallback(cb, cookie, false);
+      return;
+    }
     if ((lock==null) || (lock.isExpired())) {
       lock = getNewContentLock(au);
     } else {
@@ -351,15 +360,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
       callCallback(cb, cookie, false);
       return;
     }
-    if (isRateLimitExceeded(au, newContentRateLimiters,
-			    PARAM_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
-			    DEFAULT_MAX_NEW_CONTENT_CRAWLS_PER_INTERVAL,
-			    PARAM_MAX_NEW_CONTENT_CRAWLS_INTERVAL,
-			    DEFAULT_MAX_NEW_CONTENT_CRAWLS_INTERVAL)) {
-      logger.debug("New content aborted due to rate limiter.");
-      callCallback(cb, cookie, false);
-      return;
-    }
+    limiter.event();
     try {
       scheduleNewContentCrawl(au, cb, cookie, lock);
     } catch (Exception e) {
