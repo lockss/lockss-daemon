@@ -1,8 +1,8 @@
 # configure simulated AU
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=3
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.depth=2
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=4
-#org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.root=localA
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.branch=3
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.depth=2
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.numFiles=4
+org.lockss.au.org|lockss|plugin|simulated|SimulatedPlugin.root~localA.root=localA
 
 # LOCKSS & LCAP tuning parameters
 org.lockss.log.default.level=debug
