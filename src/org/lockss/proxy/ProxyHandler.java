@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.32 2004-10-08 06:57:20 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.33 2004-10-18 03:37:19 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.32 2004-10-08 06:57:20 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.33 2004-10-18 03:37:19 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -203,12 +203,14 @@ public class ProxyHandler extends AbstractHttpHandler {
     String urlString = uri.toString();
     CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
     boolean isRepairRequest = proxyMgr.isRepairRequest(request);
+    boolean isInCache = cu != null && cu.hasContent();
 
     if (log.isDebug2()) {
       log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
     }
-    if (isRepairRequest || neverProxy) {
-      if (cu != null && cu.hasContent()) {
+    if (isRepairRequest || neverProxy ||
+	(isInCache && proxyMgr.isHostDown(uri.getHost()))) {
+      if (isInCache) {
 	if (isRepairRequest && log.isDebug()) {
 	  log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
 	}
@@ -221,6 +223,14 @@ public class ProxyHandler extends AbstractHttpHandler {
 	request.setHandled(true);
 	return; 
       }
+    }
+    if ((proxyMgr.getHostDownAction() ==
+	 ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
+	&& proxyMgr.isHostDown(uri.getHost())) {
+      sendErrorPage(request, response, 504,
+		    "Unable to connect to", uri.getHost(),
+		    "Host not responding (cached status)");
+      return;
     }
     if (UrlUtil.isHttpUrl(urlString)) {
       if (HttpRequest.__GET.equals(request.getMethod())) {
@@ -395,10 +405,16 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     LockssUrlConnection conn = null;
     try {
+      boolean useQuick =
+	(isInCache ||
+	 (proxyMgr.isHostDown(request.getURI().getHost()) &&
+	  (proxyMgr.getHostDownAction() ==
+	   ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK)));
+
       conn =
 	UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
 			       UrlUtil.minimallyEncodeUrl(urlString),
-			       (isInCache ? quickFailConnPool : connPool));
+			       (useQuick ? quickFailConnPool : connPool));
 
       conn.setFollowRedirects(false);
 
@@ -493,11 +509,14 @@ public class ProxyHandler extends AbstractHttpHandler {
       } catch (IOException e) {
 	// if we get any error and it's in the cache, serve it from there
 	if (isInCache) {
+	  // if connection timed out, remember host is down for a little while
+	  if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
+	    proxyMgr.setHostDown(request.getURI().getHost());
+	  }
 	  serveFromCache(pathInContext, pathParams, request, response, cu);
 	} else {
 	  // else generate an error page
 	  sendProxyErrorPage(e, request, response);
-	  request.setHandled(true);
 	}
 	return;
       }
@@ -779,11 +798,11 @@ public class ProxyHandler extends AbstractHttpHandler {
 		    "Server not responding");
       return;
     }
-    if (e instanceof java.io.IOException) {
-      sendErrorPage(request, response, 502,
-		    "Error communicating with", uri.getHost(), e.getMessage());
-      return;
-    }
+//     if (e instanceof java.io.IOException) {
+    sendErrorPage(request, response, 502,
+		  "Error communicating with", uri.getHost(), e.getMessage());
+    return;
+//     }
   }
 
   void sendErrorPage(HttpRequest request,
@@ -833,5 +852,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     response.setContentLength(writer.size());
     writer.writeTo(response.getOutputStream());
     writer.destroy();
+
+    request.setHandled(true);
   }
 }

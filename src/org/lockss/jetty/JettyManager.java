@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.16 2004-09-27 22:39:13 smorabito Exp $
+ * $Id: JettyManager.java,v 1.17 2004-10-18 03:37:19 tlipkis Exp $
  */
 
 /*
@@ -48,33 +48,52 @@ import org.mortbay.util.Code;
  */
 public abstract class JettyManager
   extends BaseLockssManager implements ConfigurableManager {
-  static final String PREFIX = Configuration.PREFIX + "jetty.debug";
+  static final String PREFIX = Configuration.PREFIX + "jetty.";
+  static final String DEBUG_PREFIX = Configuration.PREFIX + "jetty.debug";
 
-  static final String PARAM_JETTY_DEBUG = PREFIX;
+  static final String PARAM_JETTY_DEBUG = DEBUG_PREFIX;
   static final boolean DEFAULT_JETTY_DEBUG = false;
 
-  static final String PARAM_JETTY_DEBUG_PATTERNS = PREFIX + ".patterns";
+  static final String PARAM_JETTY_DEBUG_PATTERNS = DEBUG_PREFIX + ".patterns";
 
-  static final String PARAM_JETTY_DEBUG_VERBOSE = PREFIX + ".verbose";
+  static final String PARAM_JETTY_DEBUG_VERBOSE = DEBUG_PREFIX + ".verbose";
   static final int DEFAULT_JETTY_DEBUG_VERBOSE = 0;
-//   static final String PARAM_JETTY_DEBUG_OPTIONS = PREFIX + ".options";
+//   static final String PARAM_JETTY_DEBUG_OPTIONS = DEBUG_PREFIX + ".options";
+
+  public static final String PARAM_NAMED_SERVER_PRIORITY =
+    PREFIX + "<name>.priority";
+
+  private String prioParam;
 
   private static Logger log = Logger.getLogger("JettyMgr");
   private static boolean jettyLogInited = false;
-  private static Set portsInUse = Collections.synchronizedSet(new HashSet());
 
+  protected ResourceManager resourceMgr;
+  // Used as token in resource reservations, and in messages
+  protected String serverName;
   protected HttpServer runningServer;
-  protected int runningOnPort = -1;
+  protected int ownedPort = -1;
 
   public JettyManager() {
   }
 
+  public JettyManager(String serverName) {
+    this.serverName = serverName;
+    prioParam = StringUtil.replaceString(PARAM_NAMED_SERVER_PRIORITY,
+					 "<name>", serverName);
+  }
+
+  protected String getServerName() {
+    return serverName;
+  }
+
   /**
-   * start the manager.
+   * Start the manager.  Note: not called by TinyUI.
    * @see org.lockss.app.LockssManager#startService()
    */
   public void startService() {
     super.startService();
+    resourceMgr = getApp().getResourceManager();
     installJettyLog();
     resetConfig();
   }
@@ -110,17 +129,30 @@ public abstract class JettyManager
 	Code.setVerbose(ver);
       }
     }
+    if (runningServer != null && changedKeys.contains(prioParam)) {
+      setListenerParams(runningServer);
+    }
   }
 
   long[] delayTime = {10 * Constants.SECOND, 60 * Constants.SECOND, 0};
 
   protected boolean startServer(HttpServer server, int port) {
+    return startServer(server, port, getServerName());
+  }
+
+  protected boolean startServer(HttpServer server, int port,
+				String serverName) {
     try {
+      if (resourceMgr != null &&
+	  !resourceMgr.reserveTcpPort(port, serverName)) {
+	return false;
+      }
+      ownedPort = port;
+      setListenerParams(server);
       for (int ix = 0; ix < delayTime.length; ix++) {
 	try {
 	  server.start();
 	  runningServer = server;
-	  runningOnPort(port);
 	  return true;
 	} catch (org.mortbay.util.MultiException e) {
 	  log.debug("multi", e);
@@ -133,44 +165,73 @@ public abstract class JettyManager
     } catch (Exception e) {
       log.warning("Couldn't start servlets", e);
     }
+    releasePort(serverName);
+    ownedPort = -1;
     return false;
   }
 
-  public void stopServer() {
+
+  /** Set the priority at which all requests will be handled */
+  private void setListenerParams(HttpServer server) {
+    String name = getServerName();
+    int prio = getPriorityFromParam(name);
+    log.debug("Setting priority of " + name + " listener to " + prio);
+    HttpListener listeners[] = server.getListeners();
+    for (int ix = 0; ix < listeners.length; ix++) {
+      if (listeners[ix] instanceof org.mortbay.util.ThreadPool) {
+	org.mortbay.util.ThreadPool tpool =
+	  (org.mortbay.util.ThreadPool)listeners[ix];
+	if (prio != -1) {
+	  tpool.setThreadsPriority(prio);
+	}
+	// Set the name for threads in the pool, to id them in thread
+	// dumps.  I think this is suppoesd to be done with
+	// ThreadPool.setName(), as setPoolName() affects more stuff, but
+	// this is what's necessary in Jetty 4.2.17.
+	if (!tpool.isStarted()) {	// can't change name after started
+	  tpool.setPoolName(name);
+	}
+      }
+    }
+  }
+
+  int getPriorityFromParam(String name) {
+    if (prioParam == null) {
+      prioParam = StringUtil.replaceString(PARAM_NAMED_SERVER_PRIORITY,
+					   "<name>", name);
+    }
+    return Configuration.getIntParam(prioParam, -1);
+  }
+
+  private void releasePort(String serverName) {
+    if (resourceMgr != null) {
+      resourceMgr.releaseTcpPort(ownedPort, serverName);
+      ownedPort = -1;
+    }
+  }
+
+  protected void stopServer() {
+    stopServer(getServerName());
+  }
+
+  protected void stopServer(String serverName) {
     try {
       if (runningServer != null) {
-	runningOnPort(-1);
 	runningServer.stop();
 	runningServer = null;
+	releasePort(serverName);
       }
     } catch (InterruptedException e) {
       log.warning("Interrupted while stopping server");
     }
   }
 
-  protected void runningOnPort(int port) {
-    if (log.isDebug2()) {
-      log.debug2("runningOnPort(" + port + "), in use: " + portsInUse);
-    }
-    if (runningOnPort > 0) {
-      portsInUse.remove(new Integer(runningOnPort));
-      runningOnPort = -1;
-    }
-    if (port > 0) {
-      portsInUse.add(new Integer(port));
-      runningOnPort = port;
-    }
+  public boolean isServerRunning() {
+    return runningServer != null;
   }
 
-  protected boolean isServerRunning() {
-    return (runningOnPort > 0);
+  public boolean isRunningOnPort(int port) {
+    return ownedPort == port && isServerRunning();
   }
 
-  public static boolean isPortInUse(int port) {
-    if (log.isDebug2()) {
-      log.debug2("portsInUse(" + port + ") = " +
-		 portsInUse.contains(new Integer(port)));
-    }
-    return portsInUse.contains(new Integer(port));
-  }
 }

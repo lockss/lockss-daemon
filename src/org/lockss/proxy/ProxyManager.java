@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.26 2004-10-01 09:26:21 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.27 2004-10-18 03:37:19 tlipkis Exp $
  */
 
 /*
@@ -47,8 +47,9 @@ import org.mortbay.http.handler.*;
 /** LOCKSS proxy manager, starts main proxy.
  */
 public class ProxyManager extends BaseProxyManager {
-
+  public static final String SERVER_NAME = "Proxy";
   private static Logger log = Logger.getLogger("Proxy");
+
   public static final String PREFIX = Configuration.PREFIX + "proxy.";
   public static final String PARAM_START = PREFIX + "start";
   public static final boolean DEFAULT_START = true;
@@ -65,8 +66,29 @@ public class ProxyManager extends BaseProxyManager {
 
   /** Accept the old way of identifying repair requests by the user-agent.
    * Default is true until all caches are converted to the new way. */
+  static final String PARAM_HOST_DOWN_RETRY = PREFIX + "hostDownRetry";
+  static final long DEFAULT_HOST_DOWN_RETRY = 10 * Constants.MINUTE;
+
+  public static final int HOST_DOWN_NO_CACHE_ACTION_504 = 1;
+  public static final int HOST_DOWN_NO_CACHE_ACTION_QUICK = 2;
+  public static final int HOST_DOWN_NO_CACHE_ACTION_NORMAL = 3;
+  public static final int HOST_DOWN_NO_CACHE_ACTION_DEFAULT =
+    HOST_DOWN_NO_CACHE_ACTION_NORMAL;
+
+  /** For hosts believed to be down, this controls what we do with requests
+   * for content not in the cache.  <ul><li><code>1</code>: Return
+   * an immediate error.  <li><code>2</code>: Attempt to contact using
+   * the quick-timeout connection pool.  <li><code>3</code>: Attempt
+   * to contact normally.</ul>
+   */
+  static final String PARAM_HOST_DOWN_ACTION = PREFIX + "hostDownAction";
+  static final int DEFAULT_HOST_DOWN_ACTION =
+    HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
+
+  /** Accept the old way of identifying repair requests by the user-agent.
+   * Default is true until all caches are converted to the new way. */
   static final String PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR =
-    Configuration.PREFIX + "proxy.lockssUserAgentImpliesRepair";
+    PREFIX + "lockssUserAgentImpliesRepair";
   static final boolean DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR = true;
 
   public static final String PARAM_PROXY_MAX_TOTAL_CONN =
@@ -99,24 +121,40 @@ public class ProxyManager extends BaseProxyManager {
   private boolean lockssUserAgentImpliesRepair =
     DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR;
 
+  protected String getServerName() {
+    return SERVER_NAME;
+  }
+
+  private long paramHostDownRetryTime = DEFAULT_HOST_DOWN_RETRY;
+  private int paramHostDownAction = HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
+  private FixedTimedMap hostsDown = new FixedTimedMap(paramHostDownRetryTime);
+
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
     super.setConfig(config, prevConfig, changedKeys);
     if (changedKeys.contains(PREFIX)) {
-      includeIps = config.get(PARAM_IP_INCLUDE, "");
-      excludeIps = config.get(PARAM_IP_EXCLUDE, "");
-      logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
-				       DEFAULT_LOG_FORBIDDEN);
-      lockssUserAgentImpliesRepair =
-	config.getBoolean(PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR,
-			   DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR);
-      log.debug("Installing new ip filter: incl: " + includeIps +
-		", excl: " + excludeIps);
-      setIpFilter();
-
       port = config.getInt(PARAM_PORT, DEFAULT_PORT);
       start = config.getBoolean(PARAM_START, DEFAULT_START);
+
       if (start) {
+	includeIps = config.get(PARAM_IP_INCLUDE, "");
+	excludeIps = config.get(PARAM_IP_EXCLUDE, "");
+	logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
+					 DEFAULT_LOG_FORBIDDEN);
+	lockssUserAgentImpliesRepair =
+	  config.getBoolean(PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR,
+			    DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR);
+	log.debug("Installing new ip filter: incl: " + includeIps +
+		  ", excl: " + excludeIps);
+	setIpFilter();
+
+	paramHostDownRetryTime =
+	  config.getTimeInterval(PARAM_HOST_DOWN_RETRY,
+				 DEFAULT_HOST_DOWN_RETRY);
+	hostsDown.setInterval(paramHostDownRetryTime);
+	paramHostDownAction =   config.getInt(PARAM_HOST_DOWN_ACTION,
+					      DEFAULT_HOST_DOWN_ACTION);
+
 	if (!isServerRunning() && getDaemon().isDaemonRunning()) {
 	  startProxy();
 	}
@@ -124,6 +162,10 @@ public class ProxyManager extends BaseProxyManager {
 	stopProxy();
       }
     }
+  }
+
+  public int getHostDownAction() {
+    return paramHostDownAction;
   }
 
   /** @return the proxy port */
@@ -184,5 +226,13 @@ public class ProxyManager extends BaseProxyManager {
       return lockssFlags.contains(Constants.X_LOCKSS_REPAIR);
     }
     return false;
+  }
+
+  public boolean isHostDown(String host) {
+    return hostsDown.containsKey(host);
+  }
+
+  public void setHostDown(String host) {
+    hostsDown.put(host, "");
   }
 }
