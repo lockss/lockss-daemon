@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poll.java,v 1.1.2.7 2004-10-04 21:55:06 dshr Exp $
+ * $Id: TestV3Poll.java,v 1.1.2.8 2004-10-04 23:06:22 dshr Exp $
  */
 
 /*
@@ -610,6 +610,7 @@ public class TestV3Poll extends LockssTestCase {
     long duration = pf.calcDuration(Poll.CONTENT_POLL,
 				    spec.getCachedUrlSet(),
 				    pollmanager);
+    log.debug("Duration is " + duration);
     byte[] challenge = pollmanager.makeVerifier(duration);
 
     for (int i= 0; i<testV3msg.length; i++) {

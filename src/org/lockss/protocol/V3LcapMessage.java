@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.1.2.2 2004-10-01 01:13:49 dshr Exp $
+ * $Id: V3LcapMessage.java,v 1.1.2.3 2004-10-04 23:06:22 dshr Exp $
  */
 
 /*
@@ -198,7 +198,7 @@ public class V3LcapMessage extends LcapMessage implements Serializable {
   }
 
   public Deadline getDeadline() {
-    Deadline ret = Deadline.at(1000);  // XX
+    Deadline ret = Deadline.at(m_stopTime);
     // XXX
     return ret;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1.2.8 2004-10-04 21:55:05 dshr Exp $
+ * $Id: V3Voter.java,v 1.1.2.9 2004-10-04 23:06:21 dshr Exp $
  */
 
 /*
@@ -319,6 +319,8 @@ public class V3Voter extends V3Poll {
     }
     sb.append(" key: ");
     sb.append(m_key);
+    sb.append(" to go ");
+    sb.append(m_deadline.getRemainingTime());
     sb.append(" state: ");
     sb.append(stateName[m_state]);
     sb.append("]");
