@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.29 2003-04-24 01:22:26 aalto Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.30 2003-05-02 21:57:39 aalto Exp $
  */
 
 /*
@@ -205,20 +205,20 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
         new RangeCachedUrlSetSpec("http://www.example.com/test");
     CachedUrlSetSpec spec2 =
         new RangeCachedUrlSetSpec("http://www.example.com");
-    MockCachedUrlSet cus1 = new MockCachedUrlSet(spec1);
-    MockCachedUrlSet cus2 = new MockCachedUrlSet(spec2);
+    MockCachedUrlSet cus1 = new MockCachedUrlSet(mau, spec1);
+    MockCachedUrlSet cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
 
     spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
     spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir");
-    cus1 = new MockCachedUrlSet(spec1);
-    cus2 = new MockCachedUrlSet(spec2);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
 
     spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
     spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test/");
-    cus1 = new MockCachedUrlSet(spec1);
-    cus2 = new MockCachedUrlSet(spec2);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
     Vector v = new Vector(2);
     v.addElement("test 1");
     v.addElement("test 2");
@@ -236,21 +236,48 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
 
     spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test/subdir2");
     spec2 = new RangeCachedUrlSetSpec("http://www.example.com/subdir");
-    cus1 = new MockCachedUrlSet(spec1);
-    cus2 = new MockCachedUrlSet(spec2);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
 
+    // test for single node specs
     spec1 = new SingleNodeCachedUrlSetSpec("http://www.example.com");
     spec2 = new RangeCachedUrlSetSpec("http://www.example.com/test");
-    cus1 = new MockCachedUrlSet(spec1);
-    cus2 = new MockCachedUrlSet(spec2);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
 
     spec1 = new RangeCachedUrlSetSpec("http://www.example.com/test");
     spec2 = new SingleNodeCachedUrlSetSpec("http://www.example.com");
-    cus1 = new MockCachedUrlSet(spec1);
-    cus2 = new MockCachedUrlSet(spec2);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
     assertEquals(LockssRepository.SAME_LEVEL_NO_OVERLAP, repo.cusCompare(cus1, cus2));
+
+    // test for Au urls
+    spec1 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
+    spec2 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
+    assertEquals(LockssRepository.SAME_LEVEL_OVERLAP, repo.cusCompare(cus1, cus2));
+
+    spec1 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
+    spec2 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
+    assertEquals(LockssRepository.ABOVE, repo.cusCompare(cus1, cus2));
+
+    spec1 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    spec2 = new RangeCachedUrlSetSpec(AuUrl.PROTOCOL_COLON);
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(mau, spec2);
+    assertEquals(LockssRepository.BELOW, repo.cusCompare(cus1, cus2));
+
+    // test for different AUs
+    spec1 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    spec2 = new RangeCachedUrlSetSpec("htpp://www.example.com");
+    cus1 = new MockCachedUrlSet(mau, spec1);
+    cus2 = new MockCachedUrlSet(new MockArchivalUnit(), spec2);
+    assertEquals(LockssRepository.NO_RELATION, repo.cusCompare(cus1, cus2));
   }
 
   public void testConsistencyCheck() throws Exception {

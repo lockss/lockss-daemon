@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.32 2003-04-24 01:22:26 aalto Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.33 2003-05-02 21:57:39 aalto Exp $
  */
 
 /*
@@ -135,8 +135,23 @@ public class LockssRepositoryImpl implements LockssRepository {
   }
 
   public int cusCompare(CachedUrlSet cus1, CachedUrlSet cus2) {
+    // check that they're in the same AU
+    if (!cus1.getArchivalUnit().equals(cus2.getArchivalUnit())) {
+      return LockssRepository.NO_RELATION;
+    }
     String url1 = cus1.getUrl();
     String url2 = cus2.getUrl();
+    // check for top-level urls
+    if ((AuUrl.isAuUrl(url1)) || (AuUrl.isAuUrl(url2))) {
+      if (url1.equals(url2)) {
+        return LockssRepository.SAME_LEVEL_OVERLAP;
+      } else if (AuUrl.isAuUrl(url1)) {
+        return LockssRepository.ABOVE;
+      } else {
+        return LockssRepository.BELOW;
+      }
+    }
+
     if (!url1.endsWith(File.separator)) {
       url1 += File.separator;
     }
