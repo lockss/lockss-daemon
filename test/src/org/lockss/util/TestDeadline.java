@@ -1,5 +1,5 @@
 /*
- * $Id: TestDeadline.java,v 1.5 2002-12-16 00:59:01 tal Exp $
+ * $Id: TestDeadline.java,v 1.6 2002-12-30 20:39:40 tal Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class TestDeadline extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       Deadline t = Deadline.in(100);
       while (!t.expired()) {
 	try {
@@ -114,9 +114,6 @@ public class TestDeadline extends LockssTestCase {
 	fail("sleep(100) returned early in " + delay);
       }
       assertTrue(t.expired());
-      if (delay > 800) {
-	fail("sleep(100) returned late in " + delay);
-      }
       intr.cancel();
     } catch (InterruptedException e) {
     } finally {
@@ -130,12 +127,13 @@ public class TestDeadline extends LockssTestCase {
     Interrupter intr = null;
     DoLater doer = null;
     try {
-      final Deadline t = Deadline.inRandomRange(950, 1050);
+      final Deadline t = Deadline.inRandomRange(TIMEOUT_SHOULDNT + 950,
+						TIMEOUT_SHOULDNT + 1050);
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       doer = new DoLater(100) {
 	  protected void doit() {
-	    t.sooner(800);
+	    t.sooner(TIMEOUT_SHOULDNT + 800);
 	  }
 	};
       doer.start();
@@ -149,9 +147,6 @@ public class TestDeadline extends LockssTestCase {
       long delay = TimerUtil.timeSince(start);
       if (delay < 130) {
 	fail("sleep(950, 1050), faster(800) returned early in " + delay);
-      }
-      if (delay > 900) {
-	fail("sleep(950, 1050), faster(800) returned late in " + delay);
       }
       intr.cancel();
       doer.cancel();
@@ -177,8 +172,9 @@ public class TestDeadline extends LockssTestCase {
     Expirer expr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
-      Deadline t = Deadline.inRandomRange(1450, 1550);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
+      Deadline t = Deadline.inRandomRange(TIMEOUT_SHOULDNT + 1450,
+					  TIMEOUT_SHOULDNT + 1550);
       expr = expireIn(100, t);
       while (!t.expired()) {
 	try {
@@ -190,9 +186,6 @@ public class TestDeadline extends LockssTestCase {
       long delay = TimerUtil.timeSince(start);
       if (delay < 80) {
 	fail("sleep(1450, 1550) expired early in " + delay);
-      }
-      if (delay > 800) {
-	fail("sleep(1450, 1550) expired late in " + delay);
       }
       intr.cancel();
     } catch (InterruptedException e) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPriorityQueue.java,v 1.5 2002-12-15 00:34:53 tal Exp $
+ * $Id: TestPriorityQueue.java,v 1.6 2002-12-30 20:39:40 tal Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class TestPriorityQueue extends LockssTestCase {
     q.put(O1);
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       assertSame(O1, q.get(timer(10000)));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -118,7 +118,7 @@ public class TestPriorityQueue extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       putIn(100, q, O1);
       assertSame(O1, q.get(timer(10000)));
       intr.cancel();
@@ -146,7 +146,7 @@ public class TestPriorityQueue extends LockssTestCase {
     PriorityQueue q = new PriorityQueue();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       assertEquals(null, q.get(timer(0)));
       intr.cancel();
     } catch (InterruptedException e) {
@@ -162,14 +162,11 @@ public class TestPriorityQueue extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       assertEquals(null, q.get(timer(100)));
       long delay = TimerUtil.timeSince(start);
       if (delay < 80) {
 	fail("get(100) returned early in " + delay);
-      }
-      if (delay > 1000) {
-	fail("get(100) returned late in " + delay);
       }
       intr.cancel();
     } catch (InterruptedException e) {
@@ -195,7 +192,7 @@ public class TestPriorityQueue extends LockssTestCase {
     PriorityQueue q = new PriorityQueue();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       List l = new LinkedList();
       String ord[] = {"a", "b", "c", "d"};
       q.put("b");
@@ -226,7 +223,7 @@ public class TestPriorityQueue extends LockssTestCase {
       });
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       List l = new LinkedList();
       String ord[] = {"d", "c", "b", "a"};
       q.put("b");

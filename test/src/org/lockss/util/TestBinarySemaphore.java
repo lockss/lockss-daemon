@@ -1,5 +1,5 @@
 /*
- * $Id: TestBinarySemaphore.java,v 1.5 2002-12-15 00:10:48 tal Exp $
+ * $Id: TestBinarySemaphore.java,v 1.6 2002-12-30 20:39:40 tal Exp $
  */
 
 /*
@@ -99,7 +99,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     BinarySemaphore sem = new BinarySemaphore();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       if (sem.take(Deadline.in(0))) {
 	fail("take(0) of empty semaphore returned true");
       }
@@ -117,7 +117,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     sem.give();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       if (!sem.take(Deadline.in(0))) {
 	fail("take(0) of full semaphore returned false");
       }
@@ -134,7 +134,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     BinarySemaphore sem = new BinarySemaphore();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       if (sem.take(null)) {
 	fail("take(0) of empty semaphore returned true");
       }
@@ -152,7 +152,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     sem.give();
     Interrupter intr = null;
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       if (!sem.take(null)) {
 	fail("take(0) of full semaphore returned false");
       }
@@ -171,7 +171,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     Deadline t = Deadline.in(100);
     Date start = new Date();
     try {
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       if (sem.take(t)) {
 	fail("take(100) of empty semaphore returned true");
       }
@@ -179,9 +179,6 @@ public class TestBinarySemaphore extends LockssTestCase {
       System.out.println("take returned in " + delay);
       if (delay < 80) {
 	fail("take(100) of empty returned early in " + delay);
-      }
-      if (delay > 1000) {
-	fail("take(100) of empty returned late in " + delay);
       }
       intr.cancel();
     } catch (InterruptedException e) {
@@ -201,7 +198,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     Expirer expr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       Deadline t = Deadline.in(2000);
       expr = expireIn(100, t);
       if (sem.take(t)) {
@@ -210,9 +207,6 @@ public class TestBinarySemaphore extends LockssTestCase {
       long delay = TimerUtil.timeSince(start);
       if (delay < 80) {
 	fail("take(2000) of empty returned early in " + delay);
-      }
-      if (delay > 800) {		// possible fail on slow machine
-	fail("take(2000) of empty expire()d late in " + delay);
       }
       expr.cancel();
       intr.cancel();
@@ -230,7 +224,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       if (!sem.take(Deadline.in(1000))) {
 	fail("take(1000) of full returned false");
       }
@@ -252,7 +246,7 @@ public class TestBinarySemaphore extends LockssTestCase {
     Interrupter intr = null;
     try {
       Date start = new Date();
-      intr = interruptMeIn(TIMEOUT_SHOULDNT);
+      intr = interruptMeIn(TIMEOUT_SHOULDNT, true);
       giveIn(100, sem);
       if (!sem.take(Deadline.in(1000))) {
 	fail("take(1000) of semaphore given() after 100 returned false");
