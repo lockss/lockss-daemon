@@ -1,5 +1,5 @@
 /*
-* $Id: NamePoll.java,v 1.5 2002-11-07 07:40:26 claire Exp $
+* $Id: NamePoll.java,v 1.6 2002-11-08 01:16:40 claire Exp $
  */
 
 /*
@@ -62,6 +62,9 @@ public class NamePoll extends Poll {
     m_thread = new Thread(this, "NamePoll-" + m_seq);
   }
 
+  /**
+   * tally the poll results
+   */
   protected void tally() {
     int yes;
     int no;
@@ -73,21 +76,68 @@ public class NamePoll extends Poll {
       yesWt = m_agreeWt;
       noWt = m_disagreeWt;
     }
- /* we need to extract all of the relevant info */
-
     thePolls.remove(m_key);
     //recordTally(m_urlset, this, yes, no, yesWt, noWt, m_replyOpcode);
   }
 
-  void checkVote(byte[] hashResult, Message msg)  {
-    byte[] H = msg.getHashed();
-    if(Arrays.equals(H, hashResult)) {
-      handleDisagreeVote(msg);
+  /**
+   * prepare to run a poll.  This should check any conditions that might
+   * make running a poll unneccessary.
+   * @param msg the message which is triggering the poll
+   * @return boolean true if the poll should run, false otherwise
+   */
+  boolean preparePoll(Message msg) {
+    // Is this is a replay of a local packet?
+    if (msg.isLocal()) {
+      if (m_voteChecked) {
+        log.debug(m_key + "local replay ignored");
+        return false;
+      }
+      m_voteChecked = true;
     }
-    else {
-      handleAgreeVote(msg);
+    // make sure we have the right poll
+    byte[] C = msg.getChallenge();
+
+    if(C.length != m_challenge.length)  {
+      log.debug(m_key + " challenge length mismatch");
+      return false;
     }
+
+    if(!Arrays.equals(C, m_challenge))  {
+      log.debug(m_key + " challenge mismatch");
+      return false;
+    }
+
+    String key = makeKey(msg.getTargetUrl(),
+                                msg.getRegExp(),
+                                msg.getOpcode());
+    if (!m_key.equals(key)) {
+      log.debug(m_key + " target mismatch: " + key);
+      return false;
+    }
+    // make sure our vote will actually matter
+    int vote_margin =  m_agree - m_disagree;
+    if(vote_margin > m_quorum)  {
+      log.info(m_key + " " +  vote_margin + " lead is enough");
+      return false;
+    }
+
+    // are we too busy
+    if((m_counting - 1) > m_quorum)  {
+      log.info(m_key + " too busy to count " + m_counting + " votes");
+      return false;
+    }
+
+    // do we have time to complete the hash
+    int votes = m_agree + m_disagree + m_counting - 1;
+    long duration = msg.getDuration();
+    if (votes > 0 && duration < m_hashTime) {
+      log.info(m_key + " no time to hash vote " + duration + ":" + m_hashTime);
+      return false;
+    }
+    return true;
   }
+
 
   /**
    * schedule the hash for this poll.
@@ -114,7 +164,7 @@ public class NamePoll extends Poll {
                                  timer,
                                  new HashCallback(),
                                  this);
- }
+  }
 
   static class NPVoteChecker extends VoteChecker {
 
@@ -128,49 +178,12 @@ public class NamePoll extends Poll {
       }
       Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
       try {
-        // Is this is a replay of a local packet?
-        if (m_msg.isLocal()) {
-          if (m_poll.m_voteChecked) {
-            m_poll.log.debug(m_poll.m_key + "local replay ignored");
-            return;
-          }
-          m_poll.m_voteChecked = true;
-        }
-        // make sure we have the right poll
-        byte[] C = m_msg.getChallenge();
 
-        if(C.length != m_poll.m_challenge.length)  {
-          m_poll.log.debug(m_poll.m_key + " challenge length mismatch");
-          return;
-        }
-
-        if(!Arrays.equals(C, m_poll.m_challenge))  {
-          m_poll.log.debug(m_poll.m_key + " challenge mismatch");
-          return;
-        }
-
-       // make sure our vote will actually matter
-        int vote_margin =  m_poll.m_agree - m_poll.m_disagree;
-        if(vote_margin > m_poll.m_quorum)  {
-          m_poll.log.info(m_poll.m_key + " " +  vote_margin + " lead is enough");
-          return;
-        }
-
-        // are we too busy
-        if((m_poll.m_counting - 1) > m_poll.m_quorum)  {
-          m_poll.log.info(m_poll.m_key + " too busy to count " + m_poll.m_counting + " votes");
-          return;
-        }
-
-        // do we have time to complete the hash
-        int votes = m_poll.m_agree + m_poll.m_disagree + m_poll.m_counting - 1;
-        long duration = m_msg.getDuration();
-        if (votes > 0 && duration < m_hashTime) {
-          m_poll.log.info(m_poll.m_key + " no time to hash vote " + duration + ":" + m_hashTime);
+        if(!m_poll.preparePoll(m_msg)) {
           return;
         }
         m_poll.scheduleHash(m_poll.m_challenge, m_poll.m_verifier, m_urlSet,
-                            new ProbabilisticTimer(duration));
+                            new ProbabilisticTimer(m_msg.getDuration()));
       } catch (Exception e) {
         m_poll.log.error(m_poll.m_key + "vote check fail" + e);
       }

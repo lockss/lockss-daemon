@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.5 2002-11-07 07:40:26 claire Exp $
+* $Id: Poll.java,v 1.6 2002-11-08 01:16:40 claire Exp $
  */
 
 /*
@@ -113,14 +113,12 @@ public abstract class Poll implements Runnable {
     m_url = msg.getTargetUrl();
     m_regExp = msg.getRegExp();
     m_arcUnit = Plugin.findArchivalUnit(m_url);
-    if(m_arcUnit != null) {
-      try {
-        m_urlSet = m_arcUnit.makeCachedUrlSet(m_url, m_regExp);
-        m_hashTime = m_urlSet.estimatedHashDuration();
-      }
-      catch (REException ex) {
-        log.error("invalid RegExpression: " + m_regExp, ex);
-      }
+    try {
+      m_urlSet = m_arcUnit.makeCachedUrlSet(m_url, m_regExp);
+      m_hashTime = m_urlSet.estimatedHashDuration();
+    }
+    catch (REException ex) {
+      log.error("invalid RegExpression: " + m_regExp, ex);
     }
     m_deadline = new ProbabilisticTimer(msg.getDuration());
     m_challenge = msg.getChallenge();
@@ -230,6 +228,26 @@ public abstract class Poll implements Runnable {
   }
 
   /**
+   * handle an incoming message packet.  This will create a poll if
+   * one is not already running. It will then call recieveMessage on
+   * the poll.  This was moved from node state which kept track of the polls
+   * running in the node.  This will need to be moved or amended to support this.
+   * @param msg the message used to generate the poll
+   * @throws IOException thrown if the poll was unsucessfully created
+   */
+  public static void handleMessage(Message msg) throws IOException {
+    Poll p = findPoll(msg);
+    if (p == null) {
+      log.error("Unable to create poll for Message: " + msg.toString());
+      throw new Message.ProtocolException("Failed to create poll for "
+          + msg.toString());
+    }
+    // XXX - we need to notify someone that this poll is running in this node!!!
+    p.receiveMessage(msg, p.m_deadline.getRemainingTime());
+  }
+
+
+  /**
    * handle a message which may be a incoming vote
    * @param msg the Message to handle
    * @param hashTime the time available for a hash
@@ -249,10 +267,10 @@ public abstract class Poll implements Runnable {
         vc = new VerifyPoll.VPVoteChecker(this,msg,m_urlSet, hashTime);
         break;
     }
-    // start the reply polls and increment our poll counter
+    // start the poll and increment our poll counter
     if(vc != null) {
-      vc.start();
       m_counting++;
+      vc.start();
     }
   }
 
@@ -300,6 +318,7 @@ public abstract class Poll implements Runnable {
     }
     return ret;
   }
+
   /**
    * run method for this thread
    */
@@ -363,8 +382,29 @@ public abstract class Poll implements Runnable {
   abstract boolean scheduleHash(byte[] C, byte[] V, CachedUrlSet urlSet,
                                 ProbabilisticTimer timer);
 
+  /**
+   * prepare to run a poll.  This should check any conditions that might
+   * make running a poll unneccessary.
+   * @param msg the message which is triggering the poll
+   * @return boolean true if the poll should run, false otherwise
+   */
+  abstract boolean preparePoll(Message msg);
 
-  abstract void checkVote(byte[] hashResult, Message msg);
+  /**
+   * check the hash result obtained by the hasher with one stored in the
+   * originating method.
+   * @param hashResult byte array containing the result of the hasher
+   * @param msg the original Message.
+   */
+  void checkVote(byte[] hashResult, Message msg)  {
+    byte[] H = msg.getHashed();
+    if(Arrays.equals(H, hashResult)) {
+      handleDisagreeVote(msg);
+    }
+    else {
+      handleAgreeVote(msg);
+    }
+  }
 
   /**
    * expire any deadlines and stop this thread
