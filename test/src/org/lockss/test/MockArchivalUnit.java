@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.27 2003-06-12 23:46:43 tyronen Exp $
+ * $Id: MockArchivalUnit.java,v 1.28 2003-06-12 23:59:25 tyronen Exp $
  */
 
 /*
@@ -149,7 +149,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   public final String getAUId() {
     if (auId != null) {
       return auId;
-    }
+    } 
     if (plugin == null) {
       return defaultAUId;
     }
@@ -205,9 +205,6 @@ public class MockArchivalUnit implements ArchivalUnit {
     shouldCallTopLevelPoll = val;
   }
 
-  public boolean isDamaged(String url) {
-    return false;
-  }
 
 }
 
