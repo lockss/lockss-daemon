@@ -1,5 +1,5 @@
 /*
-* $Id: IdentityManager.java,v 1.20 2003-04-02 01:41:01 tal Exp $
+* $Id: IdentityManager.java,v 1.21 2003-04-02 02:04:39 tal Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ import org.exolab.castor.mapping.*;
  */
 
 public class IdentityManager extends BaseLockssManager {
+  protected static Logger log = Logger.getLogger("IDMgr");
 
   static final String PARAM_LOCAL_IP = Configuration.PREFIX + "localIPAddress";
 
@@ -110,6 +111,7 @@ public class IdentityManager extends BaseLockssManager {
     super.startService();
     registerDefaultConfigCallback();
     reloadIdentities();
+    log.info("Local identity: " + getLocalIdentity());
   }
 
   /**
