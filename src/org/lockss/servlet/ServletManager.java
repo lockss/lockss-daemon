@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.26 2004-01-03 06:23:23 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.27 2004-02-27 00:22:24 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
-import org.mortbay.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
@@ -71,6 +70,12 @@ public class ServletManager extends JettyManager {
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
 
+  public static final String PARAM_PLATFORM_USERNAME =
+    Configuration.PLATFORM + "ui.username";
+  public static final String PARAM_PLATFORM_PASSWORD =
+    Configuration.PLATFORM + "ui.password";
+
+
   private static Logger log = Logger.getLogger("ServletMgr");
 
   private static String textMimes[] = {
@@ -86,7 +91,9 @@ public class ServletManager extends JettyManager {
   private boolean logForbidden;
   private boolean doAuth;
   private String logdir;
-  private UserRealm realm;
+  private HashUserRealm realm;
+  private String platUser;
+  private String platPass;
 
   List accessHandlers = new ArrayList();
 
@@ -122,6 +129,8 @@ public class ServletManager extends JettyManager {
     start = config.getBoolean(PARAM_START, DEFAULT_START);
     logdir = config.get(PARAM_LOGDIR);
     doAuth = config.getBoolean(PARAM_USER_AUTH, DEFAULT_USER_AUTH);
+    platUser = config.get(PARAM_PLATFORM_USERNAME);
+    platPass = config.get(PARAM_PLATFORM_PASSWORD);
 
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
@@ -154,22 +163,42 @@ public class ServletManager extends JettyManager {
     ah.setAllowLocal(true);
   }
 
+  // Manually install password set by platform config.
+  // XXX Doesn't handle roles, will need to be integrated with daemon
+  // password setting mechanism
+  private void setConfiguredPasswords(HashUserRealm realm) {
+    if (!StringUtil.isNullString(platUser) &&
+	!StringUtil.isNullString(platPass)) {
+      realm.put(platUser, platPass);
+    }
+  }
+
   public void startServlets() {
     try {
       // Create the server
       server = new HttpServer();
 
       // Create a port listener
-      HttpListener listener = server.addListener(new InetAddrPort(port));
+      HttpListener listener =
+	server.addListener(new org.mortbay.util.InetAddrPort(port));
 
       // create auth realm
       if (doAuth) {
-	URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
-	if (propsUrl != null) {
-	  log.debug("passwd props file: " + propsUrl);
-	  realm = new HashUserRealm(UI_REALM, propsUrl.toString());
-	} else {
-	  log.warning("Passwd file not found, not authenticating users.");
+	try {
+	  URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
+	  if (propsUrl != null) {
+	    log.debug("passwd props file: " + propsUrl);
+	    realm = new HashUserRealm(UI_REALM, propsUrl.toString());
+	  }
+	} catch (IOException e) {
+	  log.warning("Error loading admin.props", e);
+	}
+	if (realm == null) {
+	  realm = new HashUserRealm(UI_REALM);
+	}
+	setConfiguredPasswords(realm);
+	if (realm.isEmpty()) {
+	  log.warning("No users created, UI is effectively disabled.");
 	}
       }
 
@@ -245,7 +274,7 @@ public class ServletManager extends JettyManager {
     log.debug("Resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    ResourceHandler rHandler = new LockssResourceHandler();
+    LockssResourceHandler rHandler = new LockssResourceHandler();
     //       rHandler.setDirAllowed(false);
     //       rHandler.setPutAllowed(false);
     //       rHandler.setDelAllowed(false);
@@ -270,7 +299,7 @@ public class ServletManager extends JettyManager {
     log.debug("Images resource URL: " + resourceUrl);
 
     context.setResourceBase(resourceUrl.toString());
-    ResourceHandler rHandler = new LockssResourceHandler();
+    LockssResourceHandler rHandler = new LockssResourceHandler();
     context.addHandler(rHandler);
 
     // NotFoundHandler
@@ -285,14 +314,14 @@ public class ServletManager extends JettyManager {
     setContextAuthHandler(logContext, realm);
 
     // log dir resource
-    String logdirname = (logdir != null) ? logdir : ".";
+    String logdirname = (logdir != null) ? logdir : "";
     URL logResourceUrl=new URL("file", null,
 			       new File(logdirname).getAbsolutePath());
     log.debug("Log Resource URL: " + logResourceUrl);
     logContext.setResourceBase(logResourceUrl.toString());
-    ResourceHandler logRHandler = new LockssResourceHandler();
-    //       rHandler.setDirAllowed(false);
-    //       rHandler.setPutAllowed(false);
+    LockssResourceHandler logRHandler = new LockssResourceHandler();
+    logRHandler.setDirAllowed(true);
+    //    logRHandler.setPutAllowed(false);
     //       rHandler.setDelAllowed(false);
     //       rHandler.setAcceptRanges(true);
     logContext.addHandler(logRHandler);
