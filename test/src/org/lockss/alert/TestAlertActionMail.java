@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.1.2.1 2004-07-19 08:24:33 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.1.2.2 2004-07-21 07:02:24 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class TestAlertActionMail extends LockssTestCase {
     String date = body[line++];
     assertTrue(date.startsWith("Date: "));
     assertEquals("Subject: LOCKSS cache warning: AName", body[line++]);
-    assertEquals("X-Mailer: LOCKSS daemon", body[line++]);
+    assertEquals("X-Mailer: " + getXMailer(), body[line++]);
     assertEquals("", body[line++]);
   }
 
@@ -123,8 +123,16 @@ public class TestAlertActionMail extends LockssTestCase {
     assertTrue(date.startsWith("Date: "));
     assertEquals("Subject: LOCKSS cache warning: AName (multiple)",
 		 body[line++]);
-    assertEquals("X-Mailer: LOCKSS daemon", body[line++]);
+    assertEquals("X-Mailer: " + getXMailer(), body[line++]);
     assertEquals("", body[line++]);
+  }
+
+  String getXMailer() {
+    String release = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
+    if (release != null) {
+      return "LOCKSS daemon " + release;
+    }
+    return "LOCKSS daemon";
   }
 
   static class MyMockMailService extends MockMailService {
