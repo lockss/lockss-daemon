@@ -1,5 +1,5 @@
 /*
-* $Id: PollManager.java,v 1.115 2003-10-31 18:34:30 dshr Exp $
+* $Id: PollManager.java,v 1.116 2003-11-11 20:33:31 tlipkis Exp $
  */
 
 /*
@@ -822,8 +822,8 @@ public class PollManager  extends BaseLockssManager {
     return theSystemMetrics.getBytesPerMsHashEstimate();
   }
 
-  static long getAvailableHashTimeBefore(Deadline when) {
-    return theHashService.getAvailableHashTimeBefore(when);
+  static boolean canHashBeScheduledBefore(long duration, Deadline when) {
+    return theHashService.canHashBeScheduledBefore(duration, when);
   }
 
 // ----------------  Callbacks -----------------------------------

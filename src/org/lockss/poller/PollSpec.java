@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.18 2003-10-31 18:34:30 dshr Exp $
+ * $Id: PollSpec.java,v 1.19 2003-11-11 20:33:31 tlipkis Exp $
  */
 
 /*
@@ -262,8 +262,7 @@ public class PollSpec {
 
   boolean canSchedulePoll(long pollTime, long neededTime, PollManager pm) {
     Deadline when = Deadline.in(pollTime);
-    long timeAvail = pm.getAvailableHashTimeBefore(when);
-    return timeAvail >= neededTime;
+    return pm.canHashBeScheduledBefore(neededTime, when);
   }
 
   long getAdjustedEstimate(long estTime, PollManager pm) {
