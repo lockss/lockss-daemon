@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.1 2003-09-13 00:45:56 troberts Exp $
+ * $Id: HighWireFilterRule.java,v 1.2 2003-10-28 23:46:26 eaalto Exp $
  */
 
 /*
@@ -31,32 +31,35 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin.highwire;
+
 import java.io.*;
-import java.util.*;
+import java.util.List;
 import org.lockss.util.*;
-import org.lockss.filter.WhiteSpaceFilter;
-import org.lockss.crawler.HtmlTagFilter;
+import org.lockss.filter.*;
 import org.lockss.plugin.FilterRule;
 
 public class HighWireFilterRule implements FilterRule {
+  public static final String CITATION_STRING =
+      "This article has been cited by other articles:";
+  public static final String MEDLINE_STRING = "[Medline]";
+
   public InputStream createFilteredInputStream(Reader reader) {
     /*
-     * Needs to be better (TSR 9-2-03):  
+     * Needs to be better (TSR 9-2-03):
      * 1)Filtering out everything in a table is pretty good, but over filters
-     * 2)Need to have a filter that just removes a fixed string, rather than
-     *  tags
+     * 2) May want to filter comments in the future
      */
 
-    List tagList =
-      ListUtil.list(
-		    new HtmlTagFilter.TagPair("<script", "</script>", true),
-		    new HtmlTagFilter.TagPair("<table", "</table>", true),
-		    new HtmlTagFilter.TagPair("This article has been cited by",
-					      " other articles:", true),
-		    new HtmlTagFilter.TagPair("[Medline", "]", true),
-		    new HtmlTagFilter.TagPair("<", ">")
-		    );
-    Reader filteredReader = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    return new WhiteSpaceFilter(new ReaderInputStream(filteredReader));
+
+    List tagList = ListUtil.list(
+//        new HtmlTagFilter.TagPair("<!--", "-->", true),
+        new HtmlTagFilter.TagPair("<script", "</script>", true),
+        new HtmlTagFilter.TagPair("<table", "</table>", true),
+        new HtmlTagFilter.TagPair("<", ">")
+        );
+    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
+    Reader medFilter = new StringFilter(tagFilter, MEDLINE_STRING);
+    Reader citeFilter = new StringFilter(medFilter, CITATION_STRING);
+    return new WhiteSpaceFilter(new ReaderInputStream(citeFilter));
   }
 }
