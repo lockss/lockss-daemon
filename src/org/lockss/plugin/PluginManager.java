@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.77 2004-03-26 17:58:49 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.78 2004-04-07 20:23:04 tlipkis Exp $
  */
 
 /*
@@ -779,7 +779,9 @@ public class PluginManager extends BaseLockssManager {
 	Collection titles = p.getSupportedTitles();
 	for (Iterator iter2 = titles.iterator(); iter2.hasNext();) {
 	  String title = (String)iter2.next();
-	  map.put(title, p);
+	  if (title != null) {
+	    map.put(title, p);
+	  }
 	}
       }
     }
