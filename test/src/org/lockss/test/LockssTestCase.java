@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.13 2002-12-11 01:22:01 tal Exp $
+ * $Id: LockssTestCase.java,v 1.14 2002-12-12 20:50:39 tal Exp $
  */
 
 /*
@@ -283,15 +283,58 @@ public class LockssTestCase extends TestCase {
 
   // tk do a better job of printing collections
   static private void failNotEquals(String message,
-					Object expected, Object actual) {
+				    Object expected, Object actual) {
     String formatted= "";
     if (message != null)
       formatted= message+" ";
     fail(formatted+"expected:<"+expected+"> but was:<"+actual+">");
   }
 
+  // tk do a better job of printing collections
   static private void failNotEquals(String message,
-					Object[] expected, Object actual) {
+				    int[] expected, int[] actual) {
+    String formatted= "";
+    if (message != null)
+      formatted= message+" ";
+    fail(formatted+"expected:<"+arrayString(expected)+
+	 "> but was:<"+arrayString(actual)+">");
+  }
+
+  static protected Object[] objArray(int[] a) {
+    Object[] o = new Object[a.length];
+    for (int ix = 0; ix < a.length; ix++) {
+      o[ix] = new Integer(a[ix]);
+    }
+    return o;
+  }
+
+  static protected String arrayString(int[] a) {
+    return StringUtil.separatedString(objArray(a), ", ");
+  }
+
+  static private void failNotEquals(String message,
+				    byte[] expected, byte[] actual) {
+    String formatted= "";
+    if (message != null)
+      formatted= message+" ";
+    fail(formatted+"expected:<"+arrayString(expected)+
+	 "> but was:<"+arrayString(actual)+">");
+  }
+
+  static protected Object[] objArray(byte[] a) {
+    Object[] o = new Object[a.length];
+    for (int ix = 0; ix < a.length; ix++) {
+      o[ix] = new Integer(a[ix]);
+    }
+    return o;
+  }
+
+  static protected String arrayString(byte[] a) {
+    return StringUtil.separatedString(objArray(a), ", ");
+  }
+
+  static private void failNotEquals(String message,
+				    Object[] expected, Object actual) {
     StringBuffer sb = new StringBuffer(100);
     sb.append("[");
     for (int ix=0; ix<expected.length; ix++) {
