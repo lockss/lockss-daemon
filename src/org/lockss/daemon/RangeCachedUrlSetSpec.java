@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.11 2003-06-06 05:55:25 tal Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.12 2003-06-06 23:15:11 aalto Exp $
  */
 
 /*
@@ -98,6 +98,16 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return inRange(url);
   }
 
+  private boolean isInitialPathComponent(String path, String ofPath) {
+    // is initial path if starts with
+    if (!ofPath.startsWith(path)) {
+      return false;
+    } else {
+      // and next char is '/' (so 'foo' doesn't start 'foobar' but does 'foo/bar')
+      return (ofPath.charAt(path.length()) == UrlUtil.URL_PATH_SEPARATOR_CHAR);
+    }
+  }
+
   /** @return false */
   public boolean isAU() {
     return false;
@@ -115,7 +125,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * @arg spec the set to test disjointness with
+   * @param spec the set to test disjointness with
    * @return true if the two sets are disjoint
    */
   public boolean isDisjoint(CachedUrlSetSpec spec) {
@@ -144,7 +154,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * @arg spec the set to test subsumption of
+   * @param spec the set to test subsumption of
    * @return true if spec is entirely contained in this one
    */
   public boolean subsumes(CachedUrlSetSpec spec) {
