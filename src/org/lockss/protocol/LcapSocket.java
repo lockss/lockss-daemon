@@ -1,5 +1,5 @@
 /*
- * $Id: LcapSocket.java,v 1.9 2002-12-16 22:51:13 tal Exp $
+ * $Id: LcapSocket.java,v 1.10 2003-04-30 01:02:22 tal Exp $
  */
 
 /*
@@ -174,7 +174,7 @@ public class LcapSocket {
     /* Mark the packet as unicast, add to the queue */
     void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(false);
-      log.debug("Received " + dg);
+      log.debug2("Received " + dg);
       rcvQ.put(dg);
     }
 
@@ -212,7 +212,7 @@ public class LcapSocket {
     /** Mark the packet as multicast, add to the queue */
     void processReceivedDatagram(LockssReceivedDatagram dg) {
       dg.setMulticast(true);
-      log.debug("Received " + dg);
+      log.debug2("Received " + dg);
       rcvQ.put(dg);
     }
 

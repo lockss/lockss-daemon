@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.21 2003-04-24 22:07:42 tal Exp $
+ * $Id: LcapRouter.java,v 1.22 2003-04-30 01:02:22 tal Exp $
  */
 
 /*
@@ -184,7 +184,7 @@ public class LcapRouter extends BaseLockssManager {
    */
   public void send(LcapMessage msg, ArchivalUnit au) throws IOException {
     msg.setHopCount(initialHopCount);
-    log.debug("send(" + msg + ")");
+    log.debug2("send(" + msg + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
     doMulticast(dg, origRateLimiter, au);
@@ -203,7 +203,7 @@ public class LcapRouter extends BaseLockssManager {
   public void sendTo(LcapMessage msg, ArchivalUnit au, LcapIdentity id)
       throws IOException {
     msg.setHopCount(initialHopCount);
-    log.debug("sendTo(" + msg + ", " + id + ")");
+    log.debug2("sendTo(" + msg + ", " + id + ")");
     LockssDatagram dg = new LockssDatagram(LockssDatagram.PROTOCOL_LCAP,
 					   msg.encodeMsg());
     comm.sendTo(dg, au, id);
@@ -215,7 +215,7 @@ public class LcapRouter extends BaseLockssManager {
   // to handlers
   void processIncomingMessage(LockssReceivedDatagram dg) {
     LcapMessage msg;
-    log.debug("rcvd message: " + dg);
+    log.debug2("rcvd message: " + dg);
     byte[] msgBytes = dg.getData();
     try {
       msg = LcapMessage.decodeToMsg(msgBytes, dg.isMulticast());
@@ -319,7 +319,7 @@ public class LcapRouter extends BaseLockssManager {
     }
 
     if (!fwdRateLimiter.isEventOk()) {	// exceeded max send packet rate
-      log.debug("Not forwarding, forwarding rate exceeded");
+      log.warning("Not forwarding, forwarding rate exceeded");
       return false;
     }
 
@@ -405,7 +405,7 @@ public class LcapRouter extends BaseLockssManager {
       LcapMessage noOp =
 	LcapMessage.makeNoOpMsg(idMgr.getLocalIdentity(),
 				pollMgr.generateRandomBytes());
-      log.debug("noop: " + noOp);
+      log.debug2("noop: " + noOp);
       send(noOp, null);
     } catch (IOException e) {
       log.warning("Couldn't send NoOp message", e);
@@ -465,10 +465,10 @@ public class LcapRouter extends BaseLockssManager {
 	  beaconDeadline.sleep();
 	  if (goOn && beaconDeadline.expired()) {
 	    if (origRateLimiter.isEventOk()) {
-	      log.debug3("Beacon send");
+	      log.debug("Beacon send");
 	      sendNoOp();
 	    } else {
-	      log.debug("Message originate rate exceeded, not sending noop");
+	      log.warning("Message originate rate exceeded, not sending noop");
 	    }
 	    beaconDeadline.expireIn(beaconInterval);
 	  }

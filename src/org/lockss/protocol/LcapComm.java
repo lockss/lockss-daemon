@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.29 2003-04-21 22:22:17 claire Exp $
+ * $Id: LcapComm.java,v 1.30 2003-04-30 01:02:22 tal Exp $
  */
 
 /*
@@ -213,7 +213,7 @@ public class LcapComm extends BaseLockssManager {
     if (uniSendToPort < 0) {
       throw new IllegalStateException("Unicast port not configured");
     }
-    log.debug("sendTo(" + ld + ", " + id + ")");
+    log.debug2("sendTo(" + ld + ", " + id + ")");
     sendTo(ld,
 	   (uniSendToAddr == null ? id.getAddress() : uniSendToAddr),
 	   uniSendToPort);
@@ -226,7 +226,7 @@ public class LcapComm extends BaseLockssManager {
 
   void sendTo(LockssDatagram ld, InetAddress addr, int port)
       throws IOException {
-    log.debug("sending "+ ld +" to "+ addr +":"+ port);
+    log.debug2("sending "+ ld +" to "+ addr +":"+ port);
     DatagramPacket pkt = ld.makeSendPacket(addr, port);
     sendSock.send(pkt);
   }
@@ -329,7 +329,7 @@ public class LcapComm extends BaseLockssManager {
 
   private void processReceivedPacket(LockssReceivedDatagram ld) {
     if (verifyPacket(ld)) {
-      log.debug("Received " + ld);
+      log.debug2("Received " + ld);
       runHandlers(ld);
     }
   }
