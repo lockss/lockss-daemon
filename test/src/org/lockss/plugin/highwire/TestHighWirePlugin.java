@@ -31,6 +31,7 @@ import java.net.*;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.plugin.*;
+import org.lockss.daemon.*;
 
 public class TestHighWirePlugin extends LockssTestCase {
   private HighWirePlugin plugin;
@@ -47,7 +48,8 @@ public class TestHighWirePlugin extends LockssTestCase {
     plugin.initPlugin();
   }
 
-  public void testGetAUNullConfig() throws AUInstantiationException {
+  public void testGetAUNullConfig() 
+      throws ArchivalUnit.InstantiationException {
     try {
       plugin.findAU(null);
       fail("Didn't throw IllegalArgumentException");
@@ -56,7 +58,7 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testGetAUHandlesBadUrl() 
-      throws AUInstantiationException, MalformedURLException {
+      throws ArchivalUnit.InstantiationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(VOL_PROP, "322");
     props.setProperty(BASE_URL_PROP, "blah");
@@ -64,8 +66,8 @@ public class TestHighWirePlugin extends LockssTestCase {
     try {
       HighWireArchivalUnit au = 
 	(HighWireArchivalUnit) plugin.findAU(props);
-      fail ("Didn't throw AUInstantiationException when given a bad url");
-    } catch (AUInstantiationException auie) {
+      fail ("Didn't throw InstantiationException when given a bad url");
+    } catch (ArchivalUnit.InstantiationException auie) {
       MalformedURLException murle = 
 	(MalformedURLException)auie.getNestedException();
       assertNotNull(auie.getNestedException());
@@ -73,7 +75,7 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testGetAUConstructsProperAU() 
-      throws AUInstantiationException, MalformedURLException {
+      throws ArchivalUnit.InstantiationException, MalformedURLException {
     Properties props = new Properties();
     props.setProperty(VOL_PROP, "322");
     props.setProperty(BASE_URL_PROP, "http://www.example.com/");
@@ -84,7 +86,7 @@ public class TestHighWirePlugin extends LockssTestCase {
   }
 
   public void testFindAUReturnsExistingAU() 
-      throws AUInstantiationException{
+      throws ArchivalUnit.InstantiationException{
     Properties props = new Properties();
     props.setProperty(VOL_PROP, "322");
     props.setProperty(BASE_URL_PROP, "http://www.example.com/");
@@ -98,7 +100,5 @@ public class TestHighWirePlugin extends LockssTestCase {
     HighWireArchivalUnit au2 = (HighWireArchivalUnit) plugin.findAU(props);
 
     assertSame(au1, au2);
-
   }
-
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssPlugin.java,v 1.4 2003-02-06 23:32:40 troberts Exp $
+ * $Id: LockssPlugin.java,v 1.5 2003-02-07 01:07:07 troberts Exp $
  */
 
 /*
@@ -100,5 +100,5 @@ public interface LockssPlugin {
    * @return the ArchivalUnit
    */
   public ArchivalUnit findAU(Properties configInfo) 
-      throws AUInstantiationException;
+      throws ArchivalUnit.InstantiationException;
 }
