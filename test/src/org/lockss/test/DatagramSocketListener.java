@@ -125,7 +125,7 @@ public class DatagramSocketListener implements Runnable{
 
   /**
    * @param numPackets number of packets you want the listener to expect
-   * @returns a new <code>DatagramSocketListener</code> object bound to 
+   * @return a new <code>DatagramSocketListener</code> object bound to 
    * an open port.
    */
   public static DatagramSocketListener createOnOpenPort(int numPackets) 
@@ -147,7 +147,7 @@ public class DatagramSocketListener implements Runnable{
   }
 
   /**
-   * @returns the port that this object is bound to or will bind to when 
+   * @return the port that this object is bound to or will bind to when 
    * <code>beginListening()</code> is called
    * @see #beginListening()
    */
