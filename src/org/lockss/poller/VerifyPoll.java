@@ -1,5 +1,5 @@
 /*
-* $Id: VerifyPoll.java,v 1.9 2002-11-14 03:58:09 claire Exp $
+* $Id: VerifyPoll.java,v 1.10 2002-11-15 04:08:25 claire Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * @author Claire Griffin
  * @version 1.0
  */
-class VerifyPoll extends Poll implements Runnable {
+class VerifyPoll extends Poll {
   private static int m_seq = 0;
 
   public VerifyPoll(LcapMessage msg, CachedUrlSet urlSet) {
@@ -53,35 +53,23 @@ class VerifyPoll extends Poll implements Runnable {
     m_replyOpcode = LcapMessage.VERIFY_POLL_REP;
     m_quorum = 1;
     m_seq++;
-    m_thread = new Thread(this,"Verify Poll - "	+ m_seq);
   }
 
-  /**
-   * run method for a verify poll.  Overrides the run method in
-   * Poll.run.
-   */
-  public void run() {
-    Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
+  void startPoll() {
+    // if someone else called the poll, we verify and we're done
 
-    try {
-      if (m_caller == null) {   // we called this poll
-        while(!m_deadline.expired()) {
-          m_deadline.sleepUntil();
-        }
-        closeThePoll(m_urlSet, m_challenge);
-        tally();
-      }
-      else {			// someone else called this poll
+    if(m_caller != null && !m_caller.isLocalIdentity()) {
+      try {
         replyVerify(m_msg);
         PollManager.removePoll(m_key);
       }
-    } catch (OutOfMemoryError e) {
-      System.exit(-11);
-    } catch (IOException e) {
-      log.error(m_key + " election failed " + e);
-      abort();
-    }
+      catch (IOException ex) {
+        log.error(m_key + " election failed " + ex);
+        abort();
+       }
+     }
   }
+
 
   /**
    * will request a verify at random based on some percentage.
@@ -100,15 +88,15 @@ class VerifyPoll extends Poll implements Runnable {
   /**
    * schedule the hash for this poll. Provided for completeness
    * this method always returns true and should never be called.
-   * @param C the challenge
-   * @param V the verifier
+   * @param challenge the challenge bytes
+   * @param verifier the verifier bytes
    * @param urlSet the cachedUrlSet
    * @param timer the probabilistic timer
    * @param key the Object which will be returned from the hasher, either the
    * poll or the VoteChecker.
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(byte[] C, byte[] V, CachedUrlSet urlSet,
+  boolean scheduleHash(byte[] challenge, byte[] verifier, CachedUrlSet urlSet,
                        ProbabilisticTimer timer, Object key) {
     return true;
   }
@@ -131,23 +119,19 @@ class VerifyPoll extends Poll implements Runnable {
   }
 
   /**
-   * prepare to run a poll.  This should check any conditions that might
+   * prepare to check a vote.  This should check any conditions that might
    * make running a poll unneccessary.  This will also actually perform the
    * hash and check the results.
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean preparePoll(LcapMessage msg)  {
-    if(msg.isLocal())  {
-      log.info("Ignoring our verify vote: " + m_key);
-      return false;
-    }
-    byte[] C = msg.getChallenge();
-    if(C.length != m_challenge.length)  {
+  boolean prepareVoteCheck(LcapMessage msg)  {
+    byte[] challenge = msg.getChallenge();
+    if(challenge.length != m_challenge.length)  {
       log.error(m_key + ":challenge length mismatch.");
       return false;
     }
-    if(!Arrays.equals(C, m_challenge))  {
+    if(!Arrays.equals(challenge, m_challenge))  {
       log.error(m_key + ":challenge mismatch");
       return false;
     }
@@ -155,10 +139,10 @@ class VerifyPoll extends Poll implements Runnable {
   }
 
   private boolean performHash(LcapMessage msg) {
-    byte[] C = msg.getChallenge();
-    byte[] H = msg.getHashed();
+    byte[] challenge = msg.getChallenge();
+    byte[] hashed = msg.getHashed();
     MessageDigest hasher;
-    // check this vote verification H in the message should
+    // check this vote verification hashed in the message should
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
     try {
@@ -168,9 +152,9 @@ class VerifyPoll extends Poll implements Runnable {
       log.error(m_key + "failed to find hash algorithm");
       return false;
     }
-    hasher.update(H,0,H.length);
-    byte[] HofH = hasher.digest();
-    if(!Arrays.equals(C, HofH))  {
+    hasher.update(hashed,0,hashed.length);
+    byte[] HofHashed = hasher.digest();
+    if(!Arrays.equals(challenge, HofHashed))  {
       handleDisagreeVote(msg);
     }
     else  {
@@ -225,27 +209,11 @@ class VerifyPoll extends Poll implements Runnable {
       super(poll, msg, urlSet, hashTime);
     }
 
-    public void run() {
-      if(!m_keepGoing) {
-        return;
+    public void startVote() {
+      if(m_poll.prepareVoteCheck(m_msg)) {
+        ((VerifyPoll)m_poll).performHash(m_msg);
       }
-      Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
-      try {
-        if(!m_poll.preparePoll(m_msg)) {
-          return;
-        }
-        if(!((VerifyPoll)m_poll).performHash(m_msg)) {
-          return;
-        }
-      } catch (Exception e) {
-        m_poll.log.error(m_poll.m_key + "vote check fail" + e);
-      }
-      finally {
-        synchronized (m_poll) {
-          m_poll.m_voteCheckers.remove(this);
-          m_poll.m_counting--;
-        }
-      }
+      stopVote();
     }
   }
 

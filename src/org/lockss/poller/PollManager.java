@@ -78,8 +78,9 @@ public class PollManager {
       thePolls.put(ret_poll.m_key, ret_poll);
     }
     return ret_poll;
-
   }
+
+
   /**
    * make an election by sending a request packet.  This is only
    * called from the tree walk. The poll remains pending in the
@@ -110,14 +111,11 @@ public class PollManager {
         (byte)timeToLive,
         challenge,verifier,opcode,timeUntilCount,
         LcapIdentity.getLocalIdentity());
-    ArchivalUnit conflict = checkForConflicts(msg);
-    if (conflict != null)
-      throw new ProtocolException(makeKey(url,regexp,opcode) +
-                                  " conflicts with " + conflict +
-                                  " in createElection()");
+
     theLog.debug("send" +  msg.toString());
-    LcapComm.sendMessage(msg,Plugin.findArchivalUnit(url));
+    LcapComm.sendMessage(msg, Plugin.findArchivalUnit(url));
   }
+
 
   /**
    * Find the poll defined by the <code>Message</code>.  If the poll
@@ -129,13 +127,14 @@ public class PollManager {
    * @see <code>Poll.createPoll</code>
    */
   public static Poll findPoll(LcapMessage msg) throws IOException {
-    String key = makeKey(msg.getTargetUrl(),msg.getRegExp(),msg.getOpcode());
+    String key = makeKey(msg.getChallenge());
     Poll ret = (Poll)thePolls.get(key);
     if(ret == null) {
       ret = makePoll(msg);
     }
     return ret;
   }
+
 
   /**
    * handle an incoming message packet.  This will create a poll if
@@ -156,6 +155,7 @@ public class PollManager {
     p.receiveMessage(msg, p.m_deadline.getRemainingTime());
   }
 
+
   /**
    * remove the poll represented by the given key from the poll table and
    * return it.
@@ -165,6 +165,7 @@ public class PollManager {
   static Poll removePoll(String key) {
     return (Poll)thePolls.remove(key);
   }
+
 
   /**
    * check for conflicts between the poll defined by the Message and any
@@ -261,14 +262,63 @@ public class PollManager {
     return url_set;
   }
 
-/*
-  static String makeKey(byte[] verifierBytes) {
-    return String.valueOf(B64Code.encode(verifierBytes));
-  }
-*/
+  /**
+   * record the poll results
+   * @param arcUnit the archival unit in which this poll took place
+   * @param poll the Poll which we just completed
+   * @param yes the number of yes votes
+   * @param no the number of no votes
+   * @param yesWt the weight or strength of the yes votes
+   * @param noWt the weight or strength of the no votes
+   * @param replyOpcode the LcapMessage opcode to reply with
+   */
+  static void rememberTally(ArchivalUnit arcUnit,
+                            Poll poll,
+                            int yes, int no,
+                            int yesWt, int noWt,
+                            int replyOpcode) {
+    String result;
+    int averageVoteQuality;
 
-  static String makeKey(String sUrl, String sRegExp, int opcode) {
-    return new String(sUrl + " " + sRegExp + " " + opcode);
+    if (no > yes) {
+      result = "lost";
+      averageVoteQuality = noWt/no;
+
+    } else if (yes > no) {
+      result = "won";
+      averageVoteQuality = yesWt/yes;
+    }
+    else {
+      result = "tied";
+      averageVoteQuality = (yesWt + noWt)/(yes + no);
+    }
+
+    theLog.info(poll.toString() + " " + result + " avq " + averageVoteQuality);
+    // XXX now pass on the result and call any needed polls
+  }
+
+  /**
+   * record whether we agree or disagree with a single vote in a poll.
+   * @param msg - the LcapMessage containing the vote
+   * @param vote true if we agree with the vote, false otherwise.
+   */
+  static void rememberVote(LcapMessage msg, boolean vote) {
+    // XXX implement this
+  }
+
+  /**
+   * close the poll from any further voting
+   * @param urlSet the url set on whcih we've been working
+   * @param challenge the poll signature
+   */
+  static void closeThePoll(CachedUrlSet urlSet, byte[] challenge)  {
+    // XXX implement this
+  }
+
+
+
+  static String makeKey(byte[] keyBytes) {
+    return String.valueOf(B64Code.encode(keyBytes));
   }
 
   static byte[] makeVerifier() {
@@ -290,13 +340,13 @@ public class PollManager {
     return null;
   }
 
-  static private byte[] generateSecret() {
+  static byte[] generateSecret() {
     byte[] secret = new byte[20];
     theRandom.nextBytes(secret);
     return secret;
   }
 
-  static private byte[] generateVerifier(byte[] secret) {
+  static byte[] generateVerifier(byte[] secret) {
     byte[] verifier = null;
 
     try {

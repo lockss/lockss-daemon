@@ -1,5 +1,5 @@
 /*
-* $Id: ContentPoll.java,v 1.9 2002-11-14 03:58:09 claire Exp $
+* $Id: ContentPoll.java,v 1.10 2002-11-15 04:08:25 claire Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.util.*;
  * @version 1.0
  */
 
-public class ContentPoll extends Poll implements Runnable {
+public class ContentPoll extends Poll {
 
   private static int seq = 0;
 
@@ -56,47 +56,29 @@ public class ContentPoll extends Poll implements Runnable {
     super(msg, urlSet);
     m_replyOpcode = LcapMessage.CONTENT_POLL_REP;
     seq++;
-
-    m_thread =  new Thread(this, "Content Poll-" + seq);
   }
 
 
-
   /**
-   * prepare to run a poll.  This should check any conditions that might
-   * make running a poll unneccessary.
+   * prepare to check a vote in a poll.  This should check any conditions that
+   *  might make running a vote check unneccessary.
    * @param msg the message which is triggering the poll
    * @return boolean true if the poll should run, false otherwise
    */
-  boolean preparePoll(LcapMessage msg) {
-    // Is this is a replay of a local packet?
-    if (msg.isLocal()) {
-      if (m_voteChecked) {
-        log.debug(m_key + "local replay ignored");
-        return false;
-      }
-      m_voteChecked = true;
-    }
+  boolean prepareVoteCheck(LcapMessage msg) {
     // make sure we have the right poll
-    byte[] C = msg.getChallenge();
+    byte[] challenge = msg.getChallenge();
 
-    if(C.length != m_challenge.length)  {
+    if(challenge.length != m_challenge.length)  {
       log.debug(m_key + " challenge length mismatch");
       return false;
     }
 
-    if(!Arrays.equals(C, m_challenge))  {
+    if(!Arrays.equals(challenge, m_challenge))  {
       log.debug(m_key + " challenge mismatch");
       return false;
     }
 
-    String key = PollManager.makeKey(msg.getTargetUrl(),
-                                     msg.getRegExp(),
-                                     msg.getOpcode());
-    if (!m_key.equals(key)) {
-      log.debug(m_key + " target mismatch: " + key);
-      return false;
-    }
     // make sure our vote will actually matter
     int vote_margin =  m_agree - m_disagree;
     if(vote_margin > m_quorum)  {
@@ -122,15 +104,15 @@ public class ContentPoll extends Poll implements Runnable {
 
   /**
    * schedule the hash for this poll.
-   * @param C the challenge
-   * @param V the verifier
+   * @param challenge the challenge
+   * @param verifier the verifier
    * @param urlSet the cachedUrlSet
    * @param timer the probabilistic timer
    * @param key the Object which will be returned from the hasher, either the
    * poll or the VoteChecker.
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(byte[] C, byte[] V, CachedUrlSet urlSet,
+  boolean scheduleHash(byte[] challenge, byte[] verifier, CachedUrlSet urlSet,
                        ProbabilisticTimer timer, Object key) {
     MessageDigest hasher = null;
     CachedUrlSet urlset = null;
@@ -139,8 +121,8 @@ public class ContentPoll extends Poll implements Runnable {
     } catch (NoSuchAlgorithmException ex) {
       return false;
     }
-    hasher.update(C, 0, C.length);
-    hasher.update(V, 0, V.length);
+    hasher.update(challenge, 0, challenge.length);
+    hasher.update(verifier, 0, verifier.length);
     return HashService.hashContent( urlSet, hasher, timer,
                                     new HashCallback(), key);
   }
@@ -151,27 +133,12 @@ public class ContentPoll extends Poll implements Runnable {
       super(poll, msg, urlSet, hashTime);
     }
 
-    public void run() {
-      if(!m_keepGoing) {
-        return;
-      }
-      Thread.currentThread().setPriority(Thread.NORM_PRIORITY);
-      try {
-        if(!m_poll.preparePoll(m_msg)) {
-          return;
-        }
+    void startVote() {
+      if(m_poll.prepareVoteCheck(m_msg)) {
         m_poll.scheduleHash(m_poll.m_challenge, m_poll.m_verifier, m_urlSet,
                             new ProbabilisticTimer(m_msg.getDuration()), this);
-      } catch (Exception e) {
-        m_poll.log.error(m_poll.m_key + "vote check fail", e);
-      }
-      finally {
-        synchronized (m_poll) {
-          m_poll.m_voteCheckers.remove(this);
-          m_poll.m_counting--;
-        }
       }
     }
-  }
 
+  }
 }
