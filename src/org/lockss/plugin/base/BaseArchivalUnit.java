@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.77 2004-09-09 00:51:19 clairegriffin Exp $
+ * $Id: BaseArchivalUnit.java,v 1.78 2004-09-20 17:47:38 clairegriffin Exp $
  */
 
 /*
@@ -256,6 +256,9 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   TitleConfig findTitleConfig(Configuration config) {
+    if(plugin.getSupportedTitles() == null)  {
+      return null;
+    }
     for (Iterator iter = plugin.getSupportedTitles().iterator();
 	 iter.hasNext(); ) {
       String title = (String)iter.next();
@@ -321,7 +324,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
       URL stem = new URL(baseUrl.getProtocol(), baseUrl.getHost(),
                          baseUrl.getPort(), "");
       return ListUtil.list(stem.toString());
-    } catch (MalformedURLException e) {
+    } catch (Exception e) {
       return Collections.EMPTY_LIST;
     }
   }

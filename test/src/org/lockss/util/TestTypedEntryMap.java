@@ -1,5 +1,5 @@
 /*
- * $Id: TestTypedEntryMap.java,v 1.1 2004-09-01 23:41:08 clairegriffin Exp $
+ * $Id: TestTypedEntryMap.java,v 1.2 2004-09-20 17:47:39 clairegriffin Exp $
  */
 
 /*
@@ -34,29 +34,53 @@ package org.lockss.util;
 
 import java.net.*;
 import java.util.*;
-import java.io.File;
-import org.lockss.test.LockssTestCase;
-import org.lockss.daemon.ConfigParamDescr;
+
+import org.lockss.test.*;
 
 public class TestTypedEntryMap extends LockssTestCase {
   static String key = "key_string";
   static String wrongKey = "wrong_key_string";
   TypedEntryMap map;
-  private String tempDirPath;
 
   public void setUp() throws Exception {
     super.setUp();
     map = new TypedEntryMap();
   }
 
+  public void testMapElements() {
+    String value = "test_value";
+    assertEquals(Collections.EMPTY_SET, map.entrySet());
+    assertEquals(Collections.EMPTY_SET, map.keySet());
+
+    map.setMapElement(key, value);
+    assertEquals(1, map.entrySet().size());
+    assertEquals(1, map.keySet().size());
+    assertEquals(value, map.getMapElement(key));
+
+    map.removeMapElement(key);
+    assertEquals(Collections.EMPTY_SET, map.entrySet());
+    assertEquals(Collections.EMPTY_SET, map.keySet());
+  }
+
+
   public void testString() {
     String value = "test_value";
     String defaultValue = "default_string";
 
     map.putString(key, value);
+   // using default, still returns value
     assertEquals(value, map.getString(key, defaultValue));
     assertNull(map.getString(wrongKey, null));
     assertEquals(defaultValue, map.getString(wrongKey, defaultValue));
+    // no default, returns value
+    assertEquals(value, map.getString(key));
+    try {
+      // no entry, throws
+      map.getString(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testBoolean() {
@@ -67,6 +91,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     assertEquals(value, map.getBoolean(key, defaultValue));
 
     assertEquals(defaultValue, map.getBoolean(wrongKey, defaultValue));
+    // no default, returns value
+    assertEquals(value, map.getBoolean(key));
+    try {
+      // no entry, throws
+      map.getBoolean(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testDouble() {
@@ -76,6 +109,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     map.putDouble(key, value);
     assertEquals(value, map.getDouble(key, defaultValue), 0);
     assertEquals(defaultValue, map.getDouble(wrongKey, defaultValue), 0);
+    // no default, returns value
+    assertEquals(value, map.getDouble(key),0);
+    try {
+      // no entry, throws
+      map.getDouble(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testFloat() {
@@ -85,6 +127,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     map.putFloat(key, value);
     assertEquals(value, map.getFloat(key, defaultValue),0);
     assertEquals(defaultValue, map.getFloat(wrongKey, defaultValue),0);
+    // no default, returns value
+    assertEquals(value, map.getFloat(key),0);
+    try {
+      // no entry, throws
+      map.getFloat(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testInt() {
@@ -94,6 +145,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     map.putInt(key, value);
     assertEquals(value, map.getInt(key, defaultValue));
     assertEquals(defaultValue, map.getInt(wrongKey, defaultValue));
+    // no default, returns value
+    assertEquals(value, map.getInt(key));
+    try {
+      // no entry, throws
+      map.getInt(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testLong() {
@@ -103,6 +163,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     map.putLong(key, value);
     assertEquals(value, map.getLong(key, defaultValue));
     assertEquals(defaultValue, map.getLong(wrongKey, defaultValue));
+    // no default, returns value
+    assertEquals(value, map.getLong(key));
+    try {
+      // no entry, throws
+      map.getLong(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testUrl() {
@@ -118,6 +187,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     assertNull(map.getUrl(wrongKey, null));
     assertEquals(defaultValue, map.getUrl(wrongKey, defaultValue));
 
+    // no default, returns value
+    assertEquals(value, map.getUrl(key));
+    try {
+      // no entry, throws
+      map.getUrl(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testCollection() {
@@ -128,6 +206,15 @@ public class TestTypedEntryMap extends LockssTestCase {
     assertEquals(value, map.getCollection(key, defaultValue));
     assertNull(map.getCollection(wrongKey, null));
     assertEquals(defaultValue, map.getCollection(wrongKey, defaultValue));
+    // no default, returns value
+    assertEquals(value, map.getCollection(key));
+    try {
+      // no entry, throws
+      map.getCollection(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 
   public void testMap() {
@@ -140,5 +227,14 @@ public class TestTypedEntryMap extends LockssTestCase {
     assertEquals(value, map.getMap(key, defaultValue));
     assertNull(map.getMap(wrongKey, null));
     assertEquals(defaultValue, map.getMap(wrongKey, defaultValue));
+    // no default, returns value
+    assertEquals(value, map.getMap(key));
+    try {
+      // no entry, throws
+      map.getMap(wrongKey);
+      assertFalse("failed to throw, when no entry and no default given.",false);
+    }
+    catch(NoSuchElementException ex) {
+    }
   }
 }
