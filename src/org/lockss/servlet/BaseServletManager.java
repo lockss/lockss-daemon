@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.6 2004-11-10 20:07:26 smorabito Exp $
+ * $Id: BaseServletManager.java,v 1.7 2004-12-07 21:19:58 tlipkis Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public abstract class BaseServletManager extends JettyManager {
 			       new File(logdirname).getAbsolutePath());
     log.debug("Log Resource URL: " + logResourceUrl);
     context.setResourceBase(logResourceUrl.toString());
-    LockssResourceHandler logRHandler = new LockssResourceHandler(getDaemon());
+    ResourceHandler logRHandler = new ResourceHandler();
     logRHandler.setDirAllowed(true);
     //    logRHandler.setPutAllowed(false);
     //       rHandler.setDelAllowed(false);
