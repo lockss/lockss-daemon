@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.1 2004-02-20 05:28:17 eaalto Exp $
+ * $Id: TestXmlStatusTable.java,v 1.2 2004-02-20 22:04:40 eaalto Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class TestXmlStatusTable extends LockssTestCase {
     assertEquals("sum value", builder.getText(value));
   }
 
-  public void testFormatByType() {
+  public void testFormatByType() throws Exception {
     Object testObj = null;
 
     assertEquals("", format(testObj, ColumnDescriptor.TYPE_STRING));
@@ -195,7 +195,9 @@ public class TestXmlStatusTable extends LockssTestCase {
     assertEquals(sdf.format(testObj),
                  format(testObj, ColumnDescriptor.TYPE_DATE));
 
-    //XXX test InetAddress
+    testObj = IPAddr.getLocalHost();
+    assertEquals(IPAddr.getLocalHost().getHostAddress(),
+                 format(testObj, ColumnDescriptor.TYPE_IP_ADDRESS));
 
     long timeInt = Constants.HOUR + Constants.MINUTE;
     testObj = new Long(timeInt);
