@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.24 2004-02-03 23:19:37 troberts Exp $
+ * $Id: TestIdentityManager.java,v 1.25 2004-02-07 02:00:25 troberts Exp $
  */
 
 /*
@@ -79,6 +79,7 @@ public class TestIdentityManager extends LockssTestCase {
     }
     testReputation = IdentityManager.INITIAL_REPUTATION;
     testIdKey = LcapIdentity.makeIdKey(testAddress);
+
   }
 
   public void tearDown() throws Exception {
@@ -231,7 +232,7 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testSetAgreedThrowsOnNullAu() throws UnknownHostException {
-    LcapIdentity id = new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    String id = "127.0.0.1";
     try {
       idmgr.signalAgreed(id, null);
       fail("Should have thrown on a null au");
@@ -249,7 +250,7 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testSetDisagreedThrowsOnNullAu() throws UnknownHostException {
-    LcapIdentity id = new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    String id = "127.0.0.1";
     try {
       idmgr.signalDisagreed(id, null);
       fail("Should have thrown on a null au");
@@ -274,19 +275,21 @@ public class TestIdentityManager extends LockssTestCase {
     }
   }
 
-  public void testGetAgreeNoneSet() throws UnknownHostException {
+  public void testGetAgreedNoneSet() throws UnknownHostException {
     MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     assertNull(idmgr.getAgreed(mau));
   }
 
-  public void testGetAgree() throws UnknownHostException {
+  public void testGetAgreed() throws UnknownHostException {
+
     TimeBase.setSimulated(10);
-    LcapIdentity id1 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
-    LcapIdentity id2 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.2"));
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
 
     MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
+
     idmgr.signalAgreed(id1, mau);
     TimeBase.step();
     idmgr.signalAgreed(id2, mau);
@@ -296,12 +299,63 @@ public class TestIdentityManager extends LockssTestCase {
     assertEquals(expected, idmgr.getAgreed(mau));
   }
 
-  public void testAgreeUpdatesTime() throws UnknownHostException {
+  public void testDisagreeDoesntRemove() throws UnknownHostException {
     TimeBase.setSimulated(10);
-    LcapIdentity id1 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
 
     MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
+    idmgr.signalAgreed(id1, mau);
+    idmgr.signalAgreed(id2, mau);
+
+    idmgr.signalDisagreed(id1, mau);
+
+    Map expected = new HashMap();
+    expected.put(id1, new Long(10)); 
+    expected.put(id2, new Long(10)); 
+
+    assertEquals(expected, idmgr.getAgreed(mau));
+  }
+
+  public void testGetCachesToRepairFromThrowsOnNullAu()
+      throws UnknownHostException {
+    try {
+      idmgr.getCachesToRepairFrom(null);
+      fail("Should have thrown on a null au");
+    } catch (IllegalArgumentException e) {
+    }
+  }
+
+  public void testGetCachesToRepairFromNoneSet() throws UnknownHostException {
+    MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
+    assertNull(idmgr.getCachesToRepairFrom(mau));
+  }
+
+  public void testCachesToRepairFrom() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
+    idmgr.signalAgreed(id1, mau);
+    TimeBase.step();
+    idmgr.signalAgreed(id2, mau);
+    Map expected = new HashMap();
+    expected.put(id1, new Long(10));
+    expected.put(id2, new Long(11));
+    assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
+  }
+
+  public void testAgreeUpdatesTime() throws UnknownHostException {
+    TimeBase.setSimulated(10);
+    String id1 = "127.0.0.1";
+
+    MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
+
     idmgr.signalAgreed(id1, mau);
     TimeBase.step(15);
     idmgr.signalAgreed(id1, mau);
@@ -309,32 +363,31 @@ public class TestIdentityManager extends LockssTestCase {
     Map expected = new HashMap();
     expected.put(id1, new Long(25));
 
-    assertEquals(expected, idmgr.getAgreed(mau));
+    assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
   }
 
   public void testDisagreeNullsMap() throws UnknownHostException {
     TimeBase.setSimulated(10);
-    LcapIdentity id1 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
+    String id1 = "127.0.0.1";
 
     MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     idmgr.signalAgreed(id1, mau);
 
     idmgr.signalDisagreed(id1, mau);
 
     Map expected = new HashMap();
 
-    assertNull(idmgr.getAgreed(mau));
+    assertNull(idmgr.getCachesToRepairFrom(mau));
   }
 
   public void testDisagreeRemoves() throws UnknownHostException {
     TimeBase.setSimulated(10);
-    LcapIdentity id1 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
-    LcapIdentity id2 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.2"));
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
 
     MockArchivalUnit mau = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     idmgr.signalAgreed(id1, mau);
     idmgr.signalAgreed(id2, mau);
 
@@ -343,20 +396,19 @@ public class TestIdentityManager extends LockssTestCase {
     Map expected = new HashMap();
     expected.put(id2, new Long(10)); 
 
-    assertEquals(expected, idmgr.getAgreed(mau));
+    assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
   }
 
   public void testMultipleAus() throws UnknownHostException {
     TimeBase.setSimulated(10);
-    LcapIdentity id1 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.1"));
-    LcapIdentity id2 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.2"));
-    LcapIdentity id3 =
-      new LcapIdentity(LcapIdentity.stringToAddr("127.0.0.3"));
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
 
     MockArchivalUnit mau1 = new MockArchivalUnit();
     MockArchivalUnit mau2 = new MockArchivalUnit();
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau1);
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau2);
 
     idmgr.signalAgreed(id1, mau1);
     idmgr.signalAgreed(id2, mau2);
@@ -366,10 +418,89 @@ public class TestIdentityManager extends LockssTestCase {
     Map expected = new HashMap();
     expected.put(id2, new Long(10)); 
 
-    assertEquals(expected, idmgr.getAgreed(mau2));
+    assertEquals(expected, idmgr.getCachesToRepairFrom(mau2));
 
     expected = new HashMap();
     expected.put(id1, new Long(10)); 
+    assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
+  }
+
+  public void testStoreIdentityAgreement() {
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockHistoryRepository hRep = new MockHistoryRepository();
+    theDaemon.setHistoryRepository(hRep, mau1);
+
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
+
+    idmgr.signalAgreed(id1, mau1);
+    idmgr.signalAgreed(id2, mau1);
+
+    idmgr.signalDisagreed(id1, mau1);
+    idmgr.signalDisagreed(id3, mau1);
+
+    Set expected = new HashSet(3);
+
+    IdentityManager.IdentityAgreement ida =
+      new IdentityManager.IdentityAgreement(id1);
+    ida.setLastAgree(10);
+    ida.setLastDisagree(10);
+    expected.add(ida);
+    assertContains(hRep.getStoredIdentityAgreement(), ida);
+
+    ida = new IdentityManager.IdentityAgreement(id2);
+    ida.setLastAgree(10);
+    expected.add(ida);
+    assertContains(hRep.getStoredIdentityAgreement(), ida);
+
+    ida = new IdentityManager.IdentityAgreement(id3);
+    ida.setLastDisagree(10);
+    expected.add(ida);
+    assertContains(hRep.getStoredIdentityAgreement(), ida);
+
+    //XXX figure out why this one doesn't work when the above do
+//     assertSameElements(expected, hRep.getStoredIdentityAgreement());
+
+    assertEquals(3, hRep.getStoredIdentityAgreement().size());
+  }
+
+  public void testLoadIdentityAgreement() {
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockHistoryRepository hRep = new MockHistoryRepository();
+    theDaemon.setHistoryRepository(hRep, mau1);
+
+    String id1 = "127.0.0.1";
+    String id2 = "127.0.0.2";
+    String id3 = "127.0.0.3";
+
+    List loadList = new ArrayList(3);
+
+    IdentityManager.IdentityAgreement ida =
+      new IdentityManager.IdentityAgreement(id1);
+    ida.setLastAgree(10);
+    ida.setLastDisagree(10);
+    loadList.add(ida);
+
+    ida = new IdentityManager.IdentityAgreement(id2);
+    ida.setLastAgree(10);
+    loadList.add(ida);
+
+    ida = new IdentityManager.IdentityAgreement(id3);
+    ida.setLastDisagree(10);
+    loadList.add(ida);
+
+    hRep.setLoadedIdentityAgreement(loadList);
+
+    Map expected = new HashMap();
+    expected.put(id2, new Long(10)); 
+
+    assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
+    
+    expected = new HashMap();
+    expected.put(id1, new Long(10)); 
+    expected.put(id2, new Long(10)); 
+
     assertEquals(expected, idmgr.getAgreed(mau1));
   }
 
