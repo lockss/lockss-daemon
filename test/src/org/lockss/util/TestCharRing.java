@@ -1,5 +1,5 @@
 /*
- * $Id: TestCharRing.java,v 1.2 2003-06-05 21:53:13 troberts Exp $
+ * $Id: TestCharRing.java,v 1.3 2003-06-12 00:55:51 troberts Exp $
  */
 
 /*
@@ -34,92 +34,220 @@ package org.lockss.util;
 import org.lockss.test.*;
 
 public class TestCharRing extends LockssTestCase {
-  CharRing ra;
+  CharRing cr;
 
-  public void setUp() {
-    ra = new CharRing(5);
-    ra.add('a');
-    ra.add('b');
-    ra.add('c');
-    ra.add('d');
-    ra.add('e');
+  public void setUp() throws CharRing.RingFullException {
+    cr = new CharRing(5);
+    cr.add('a');
+    cr.add('b');
+    cr.add('c');
+    cr.add('d');
+    cr.add('e');
   }
 
 
   public void testBadSizeThrows() {
     try {
-      CharRing ra = new CharRing(0);
+      CharRing cr = new CharRing(0);
       fail("Trying to create a CharRing with a size of "
 	   +"zero should have thrown");
     } catch (IllegalArgumentException e) {
     }
   }
 
+  public void testGetNthChar() {
+    assertEquals('a', cr.getNthChar(0));
+    assertEquals('b', cr.getNthChar(1));
+    assertEquals('c', cr.getNthChar(2));
+    assertEquals('d', cr.getNthChar(3));
+    assertEquals('e', cr.getNthChar(4));
+  }
+
+  public void testGetNthCharThrowsIfLargerThanCapacity() {
+    try {
+      cr.getNthChar(5);
+      fail("getNthChar should have thrown when N was greater than capacity");
+    } catch (CharRing.BadIndexException e) {
+    }
+  }
+
+  public void testGetNthCharThrowsIfLargerThanSize() {
+    cr.remove();
+    try {
+      cr.getNthChar(4);
+      fail("getNthChar should have thrown when N was greater than size");
+    } catch (CharRing.BadIndexException e) {
+    }
+  }
+
   public void testCapacityIsCorrect() {
-    CharRing ra = new CharRing(5);
-    assertEquals(5, ra.capacity());
-  }
-
-  public void testHeadGetsFirst() {
-    assertEquals('a', ra.getHead());
-  }
-
-  public void testTailGetsLast() {
-    assertEquals('e', ra.getTail());
+    CharRing cr = new CharRing(5);
+    assertEquals(5, cr.capacity());
   }
 
   public void testAddingTooManyThrows() {
     try {
-      ra.add('f');
+      cr.add('f');
       fail("Adding a 6th element to a 5 element CharRing should have thrown");
-    } catch (UnsupportedOperationException e) {
+    } catch (CharRing.RingFullException e) {
     }
   }
 
   public void testRemoveDoes() {
-    assertEquals('a', ra.remove());
-    assertEquals('b', ra.getHead());
+    assertEquals('a', cr.remove());
+    assertEquals('b', cr.getNthChar(0));
+  }
+  
+  public void testRemoveThrowsIfNothingLeft() {
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    try {
+      cr.remove();
+      fail("remove() on empty char ring should have thrown");
+    } catch (CharRing.BadIndexException e) {
+    }
   }
 
   public void testSize() {
-    assertEquals(5, ra.size());
-    ra.remove();
-    assertEquals(4, ra.size());
+    assertEquals(5, cr.size());
+    cr.remove();
+    assertEquals(4, cr.size());
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    assertEquals(0, cr.size());
   }
 
-  public void testWrapping() {
-    ra.remove();
-    ra.add('f');
-    assertEquals('f', ra.getTail());
+  public void testWrapping() throws CharRing.RingFullException {
+    cr.remove();
+    cr.add('f');
+    assertEquals('f', cr.getNthChar(cr.size()-1));
 
-    ra.remove();
-    ra.add('g');
-    assertEquals('g', ra.getTail());
+    cr.remove();
+    cr.add('g');
+    assertEquals('g', cr.getNthChar(cr.size()-1));
   }
 
-  public void testGetIndex() {
-    assertEquals('a', ra.getChar(ra.getHeadIndex()));
-    assertEquals('e', ra.getChar(ra.getTailIndex()));
+  public void testHeadWraps() throws CharRing.RingFullException {
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    cr.remove();
+    cr.add('f');
+    assertEquals('f', cr.getNthChar(0));
   }
 
-  public void testMultipleGetIndex() {
-    int headIndex = ra.getHeadIndex();
-    for (int ix = 0; ix < ra.capacity()-1; ix++) {
-      headIndex = ra.incrementIndex(headIndex);
+  public void testClear0() {
+    cr.clear(0);
+    assertEquals('a', cr.getNthChar(0));
+  }
+
+  public void testClearMany() {
+    cr.clear(2);
+    assertEquals('c', cr.getNthChar(0));
+    cr.clear(1);
+    assertEquals('d', cr.getNthChar(0));
+    assertEquals(2, cr.size());
+  }
+
+  public void testClearThrowsIfOverSize() {
+    try {
+      cr.clear(6);
+      fail("clear(6) Should have thrown");
+    } catch (CharRing.BadIndexException e) {
     }
-    assertEquals('e', ra.getChar(headIndex));
-    headIndex = ra.incrementIndex(headIndex);
-    assertEquals('a', ra.getChar(headIndex));
   }
 
-  public void testHeadWraps() {
-    ra.remove();
-    ra.remove();
-    ra.remove();
-    ra.remove();
-    ra.remove();
-    ra.add('f');
-    assertEquals('f', ra.getHead());
+  public void testArrayAddThrowsIfArrayTooBig() {
+    char chars[] = {'z', 'x', 'y'};
+    CharRing cr = new CharRing(1);
+    try {
+      cr.add(chars);
+      fail("Add should have thrown with too many chars");
+    } catch (CharRing.RingFullException e) {
+    }
   }
 
+  public void testArrayAddNoWrap() throws CharRing.RingFullException {
+    char chars[] = {'z', 'x', 'y'};
+    CharRing cr = new CharRing(3);
+    cr.add(chars);
+    assertEquals('z', cr.remove());
+    assertEquals('x', cr.remove());
+    assertEquals('y', cr.remove());
+    assertEquals(0, cr.size());
+  }
+
+  public void testArrayAddWrap() throws CharRing.RingFullException {
+    char chars[] = {'z', 'x', 'y'};
+    CharRing cr = new CharRing(3);
+    cr.add('b');
+    cr.remove();
+    cr.add(chars);
+    assertEquals('z', cr.remove());
+    assertEquals('x', cr.remove());
+    assertEquals('y', cr.remove());
+    assertEquals(0, cr.size());
+  }
+
+  public void testArrayAddWrapWPosAndLength()
+      throws CharRing.RingFullException {
+    char chars[] = {'z', 'x', 'y', 'q'};
+    CharRing cr = new CharRing(3);
+    cr.add('b');
+    cr.remove();
+    cr.add(chars, 1, 2);
+    assertEquals('x', cr.remove());
+    assertEquals('y', cr.remove());
+    assertEquals(0, cr.size());
+  }
+
+  public void testAddArrayShorterThanCharRing()
+      throws CharRing.RingFullException {
+    char chars[] = {'z', 'x', 'y', 'q'};
+    CharRing cr = new CharRing(5);
+    cr.add(chars, 1, 2);
+    assertEquals('x', cr.remove());
+    assertEquals('y', cr.remove());
+    assertEquals(0, cr.size());
+  }
+
+  public void testArrayRemoveEmptyCharRing() {
+    char chars[] = new char[4];
+    assertEquals(0, new CharRing(4).remove(chars));
+  }
+
+  public void testArrayRemoveNoWrap() {
+    char chars[] = new char[4];
+    assertEquals(4, cr.remove(chars));
+    assertEquals('a', chars[0]);
+    assertEquals('b', chars[1]);
+    assertEquals('c', chars[2]);
+    assertEquals('d', chars[3]);
+  }
+
+  public void testArrayRemoveNoWrapWithPosAndLen() {
+    char chars[] = {'w', 'x', 'y', 'z'};
+    assertEquals(2, cr.remove(chars, 1, 2));
+    assertEquals('w', chars[0]);
+    assertEquals('a', chars[1]);
+    assertEquals('b', chars[2]);
+    assertEquals('z', chars[3]);
+  }
+
+  public void testArrayRemoveWrap() throws CharRing.RingFullException {
+    char chars[] = new char[4];
+    cr.remove();
+    cr.add('e');
+    assertEquals(4, cr.remove(chars));
+    assertEquals('b', chars[0]);
+    assertEquals('c', chars[1]);
+    assertEquals('d', chars[2]);
+    assertEquals('e', chars[3]);
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlTagFilter.java,v 1.5 2003-06-02 23:48:08 troberts Exp $
+ * $Id: HtmlTagFilter.java,v 1.6 2003-06-12 00:55:51 troberts Exp $
  */
 
 /*
@@ -48,11 +48,14 @@ public class HtmlTagFilter extends Reader {
    * 3)Use better string searching algorithm
    */
 
+
   Reader reader = null;
   TagPair pair = null;
-//   List charBuffer = null;
-  Buffer charBuffer = null;
-  int bufferCapacity = 0;
+  CharRing charBuffer = null;
+//   Buffer charBuffer = null;
+  int minBufferSize = 0;
+  int bufferCapacity = 256;
+  char[] preBuffer = new char[bufferCapacity];
   boolean streamDone = false;
   boolean withinIgnoredTag = false;
 
@@ -78,8 +81,10 @@ public class HtmlTagFilter extends Reader {
       throw new IllegalArgumentException("Called with a null tag pair");
     }
     this.pair = pair;
-    bufferCapacity = pair.getMaxTagLength();
-    charBuffer = new BoundedFifoBuffer(bufferCapacity);
+    minBufferSize = pair.getMaxTagLength();
+    logger.debug3("minBufferSize1: "+minBufferSize);
+    bufferCapacity = Math.max(minBufferSize, bufferCapacity);
+    charBuffer = new CharRing(bufferCapacity);
   }
   /**
    * Create a filter with multiple tags.  When filtering with multiple tags
@@ -101,94 +106,95 @@ public class HtmlTagFilter extends Reader {
       throw new IllegalArgumentException("Called with empty tag pair list");
     }
     this.pair = (TagPair) pairs.get(pairs.size()-1);
-    bufferCapacity = pair.getMaxTagLength();
-    charBuffer = new BoundedFifoBuffer(bufferCapacity);
+    minBufferSize = pair.getMaxTagLength();
+    bufferCapacity = Math.max(minBufferSize, bufferCapacity);
+    charBuffer = new CharRing(bufferCapacity);
     if (pairs.size() >= 2) {
       this.reader = new HtmlTagFilter(reader, 
 				      pairs.subList(0,pairs.size()-1));
     }
   }
 
-  /**
-   * Reads the next character.
-   * @return next character or -1 if there is nothing left
-   * @throws IOException if the reader it's constructed with throws
-   */
-  public int read() throws IOException {
-    //read until the buffer is at capacity
-    //or there's nothing more in the reader
+//   /**
+//    * Reads the next character.
+//    * @return next character or -1 if there is nothing left
+//    * @throws IOException if the reader it's constructed with throws
+//    */
+//   public int read() throws IOException {
+//     //read until the buffer is at capacity
+//     //or there's nothing more in the reader
 
-    //XXX do this more efficiently
-    while (charBuffer.size() < bufferCapacity && !streamDone) {
-      addCharToBuffer(charBuffer, reader);
-    }
-    if (charBuffer.size() < 1) {
-      logger.debug3("Read Returning -1, spot a");
-      return -1;
-    }
+//     //XXX do this more efficiently
+//     refillBuffer(charBuffer, reader);
+//     if (charBuffer.size() < 1) {
+//       logger.debug3("Read Returning -1, spot a");
+//       return -1;
+//     }
 
-    if (startsWithTag(charBuffer, pair.getStart())) {
-      readThroughTag(charBuffer, reader, pair);
-    }
-    if (charBuffer.size() == 0) {
-      logger.debug3("Read Returning -1, spot b");
-      return -1;
-    }
-    char returnChar = ((Character)charBuffer.remove()).charValue();
-    if (logger.isDebug3()) {
-      logger.debug3("Read returning "+returnChar);
-    }
-    return returnChar;
-  }
+//     if (startsWithTag(charBuffer, pair.getStart())) {
+//       readThroughTag(charBuffer, reader, pair);
+//     }
+//     if (charBuffer.size() == 0) {
+//       logger.debug3("Read Returning -1, spot b");
+//       return -1;
+//     }
+//     char returnChar = charBuffer.remove();
+//     if (logger.isDebug3()) {
+//       logger.debug3("Read returning "+returnChar);
+//     }
+//     return returnChar;
+//   }
 
- /**
-   * Pull chars off the reader and put them into the char buffer until
-   * the reader has no more or we're at bufferCapacity.
-   * @param charBuffer a List of Character objects
-   * @param reader a Reader to pull chars from
-   * @return false if there were not enough chars on the reader to do this
-   * @throws IOException if the reader it's constructed with throws
-   */
-  private boolean addCharToBuffer(Buffer charBuffer, Reader reader)
+
+  private void refillBuffer(CharRing charBuffer, Reader reader) 
       throws IOException {
+    logger.debug3("Refilling buffer");
     int curKar;
-    if ((curKar = reader.read()) == -1) {
-      streamDone = true;
-      return false;
-    } else {
-      if (logger.isDebug3()) {
-	logger.debug3("Adding "+(char)curKar+" to charBuffer");
+
+    int charsNeeded = charBuffer.capacity() - charBuffer.size();
+    while (charsNeeded > 0) {
+      int charsRead = reader.read(preBuffer, 0, charsNeeded);
+      if (charsRead == -1) {
+	streamDone = true;
+	return;
       }
-      charBuffer.add(new Character((char)curKar));
+      try{
+	charBuffer.add(preBuffer, 0, charsRead);
+      } catch (CharRing.RingFullException e) {
+	//XXX handle this
+	logger.error("Overfilled a CharRing", e);
+      }
+      charsNeeded = charBuffer.capacity() - charBuffer.size();
     }
-    return true;
   }
 
+  private boolean startsWithTag(CharRing charBuffer, String tag) {
+    return startsWithTag(charBuffer, 0, tag);
+  }
 
-  private boolean startsWithTag(Buffer charBuffer, String tag) {
+  private boolean startsWithTag(CharRing charBuffer, int idx, String tag) {
     //XXX reimplement with DNA searching algorithm
 
     if (logger.isDebug3()) {
-      logger.debug3("checking if "+charBuffer+" starts with "+tag);
+      logger.debug3("checking if \""+charBuffer+"\" has \""
+		    +tag+"\" at index "+idx);
     }
     //less common case than first char not match, but we have to check for 
     //size before that anyway
-    if (charBuffer.size() < tag.length()) {
+    if (charBuffer.size() < tag.length() + idx) {
       return false;
     }
-    char firstChar = ((Character)charBuffer.get()).charValue();
-    if (!charEqualsIgnoreCase(firstChar, tag.charAt(0))) {
-      return false;
-    }
-    //XXX don't use an iterator, slow
-    Iterator it = charBuffer.iterator();
+
+    int ringArrayIdx = idx;
     int charPos = 0;
-    while (it.hasNext() && charPos < tag.length()) {
-      char curChar = ((Character)it.next()).charValue();
+    while (ringArrayIdx < charBuffer.size()
+	   && charPos < tag.length()) {
+      char curChar = charBuffer.getNthChar(ringArrayIdx);
       if (!charEqualsIgnoreCase(curChar, tag.charAt(charPos))) {
 	logger.debug3("It doesn't");
 	return false;
       }
+      ringArrayIdx++;
       charPos++;
     }
     logger.debug3("It does");
@@ -200,7 +206,7 @@ public class HtmlTagFilter extends Reader {
   }
 
 
-  private void readThroughTag(Buffer charBuffer, Reader reader,
+  private void readThroughTag(CharRing charBuffer, Reader reader,
 			      TagPair pair)
   throws IOException {
     int tagNesting = 0;
@@ -212,41 +218,27 @@ public class HtmlTagFilter extends Reader {
 	logger.debug3("tagNesting: "+tagNesting);
       }
       if (startsWithTag(charBuffer, pair.getStart())) {
-	if (!removeAndReplaceChars(charBuffer,
-				   reader, pair.getStart().length())) {
-	  return;
-	}
+	removeAndReplaceChars(charBuffer, reader, pair.getStart().length());
 	tagNesting++;
       } else if (startsWithTag(charBuffer, pair.getEnd())) {
-	if (!removeAndReplaceChars(charBuffer,
-				   reader, pair.getEnd().length())) {
-	  return;
-	}
+	removeAndReplaceChars(charBuffer, reader, pair.getEnd().length());
 	tagNesting--;
       } else {
-	if (!removeAndReplaceChars(charBuffer,
-				   reader, 1)) {
-	  return;
-	}
+	removeAndReplaceChars(charBuffer, reader, 1);
+      }
+      if (streamDone && charBuffer.size() == 0) {
+	return;
       }
     } while (tagNesting > 0);
   }
-
-  private boolean removeAndReplaceChars(Buffer charBuffer,
-					Reader reader, int numChars)
-  throws IOException {
-    for (int ix=0; ix<numChars; ix++) {
-      if (logger.isDebug3()) {
-	logger.debug3("One loop: "+charBuffer);
-      }
-      if (charBuffer.size() == 0) {
-	logger.debug3("removeAndReplaceChars ran out of chars, returning");
-	return false;
-      }
-      charBuffer.remove();
-      addCharToBuffer(charBuffer, reader);
-    }
-    return true;
+  
+  private void removeAndReplaceChars(CharRing charBuffer,
+				     Reader reader, int numChars)
+      throws IOException {
+    charBuffer.clear(numChars);
+    if (charBuffer.size() < minBufferSize) {
+      refillBuffer(charBuffer, reader);
+    } 
   }
 
   public void mark(int readAheadLimit) {
@@ -257,30 +249,48 @@ public class HtmlTagFilter extends Reader {
     throw new UnsupportedOperationException("Not Implemented");
   }
 
-  public int read(char[] outputBuf) throws IOException {
-    return read(outputBuf, 0, outputBuf.length);
-  }
-  
   public int read(char[] outputBuf, int off, int len) throws IOException {
-    logger.debug3("Read array called");
-    for (int ix=0; ix<off; ix++) {
-      if (read() == -1) {
- 	return -1;
+    if (logger.isDebug3()) {
+      logger.debug3("Read array called with: ");
+      logger.debug3("off: "+off);
+      logger.debug3("len: "+len);
+    }
+
+    if ((off < 0) || (len < 0) || ((off + len) > outputBuf.length)) {
+      throw new IndexOutOfBoundsException();
+    } else if (len ==0) {
+      return 0;
+    }
+    
+
+    int numLeft = len;
+    boolean matchedTag = false;
+    while (numLeft > 0
+	   && (!streamDone || charBuffer.size() > 0)) {
+      if (charBuffer.size() < minBufferSize) {
+	refillBuffer(charBuffer, reader);
+      }
+      int idx =0;
+      while (!matchedTag && idx < numLeft && idx < charBuffer.size()) {
+	matchedTag = startsWithTag(charBuffer, idx, pair.getStart());
+	if (!matchedTag) {
+	  idx++;
+	}
+      }
+      if (idx > 0) {
+	charBuffer.remove(outputBuf, off + (len - numLeft), idx);
+      }
+      numLeft -= idx;
+      if (matchedTag) {
+	readThroughTag(charBuffer, reader, pair);
+	matchedTag = false;
+	System.err.println("rtt: "+charBuffer);
       }
     }
-    int size = 0;
-    int curKar;
-    int charsToRead = len < outputBuf.length ? len : outputBuf.length;
-    while (size < charsToRead && (curKar = read()) != -1) {
-      outputBuf[size] = (char)curKar;
-      size++;
-    }
-    if (logger.isDebug3()) {
-      logger.debug3("Read array returning "+size);
-    }
-    return size == 0 ? -1 : size;
+    int numRead = len - numLeft;
+    return numRead == 0 ? -1 : numRead;
   }
-  
+
   public boolean ready() {
     throw new UnsupportedOperationException("Not Implemented");
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlTagFilter.java,v 1.5 2003-05-29 00:55:26 troberts Exp $
+ * $Id: TestHtmlTagFilter.java,v 1.6 2003-06-12 00:55:51 troberts Exp $
  */
 
 /*
@@ -221,6 +221,8 @@ public class TestHtmlTagFilter extends LockssTestCase {
 
 
    public void testFiltersMultipleTagsNoNesting() throws IOException {
+    System.err.println("STOP1");
+     
     String content =
       "This "+startTag1+"is "+endTag1
       +"test "+startTag2+"content"+endTag2+"here";
@@ -279,36 +281,91 @@ public class TestHtmlTagFilter extends LockssTestCase {
     assertEquals(-1, reader.read(actual));
   }
 
-  public void testReadWithOffsetAndLength() throws IOException {
-    String content = "This "+startTag1+"is test "+endTag1+"content";
-    String expectedContent = "is cont";
-
+  public void testArrayReadThrowsOnNullArray() throws IOException {
+    String content = "This is test content";
     HtmlTagFilter reader =
       new HtmlTagFilter(new StringReader(content), tagPair1);
-
-    char actual[] = new char[expectedContent.length()];
-    assertEquals(7, reader.read(actual, 2, 7));
-    assertEquals(expectedContent, new String(actual));
-
-    actual = new char[3];
-    reader.read(actual);
-    assertEquals("ent", new String(actual));
+    
+    try {
+      reader.read(null, 0, 5);
+      fail("Calling read with an null array should have thrown");
+    } catch (RuntimeException e) {
+    }
   }
 
-  public void testReadReturnsNegOneWithTooLargeOffset() throws IOException {
-    String content = "This "+startTag1+"is test "+endTag1+"content";
+  public void testArrayReadThrowsOnBadOffset() throws IOException {
+    String content = "This is test content";
     HtmlTagFilter reader =
       new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    try {
+      reader.read(new char[10], -1, 5);
+      fail("Calling read with a negative offset should have thrown");
+    } catch (IndexOutOfBoundsException e) {
+    }
 
-    char actual[] = new char[5];
-    assertEquals(-1, reader.read(actual, 100, 7));
-  }    
+    try {
+      reader.read(new char[10], 11, 5);
+      fail("Calling read with an offset bigger than array length "
+	   +"should have thrown");
+    } catch (IndexOutOfBoundsException e) {
+    }
+  }
+
+  public void testArrayReadThrowsOnBadOffsetLengthCombo() throws IOException {
+    String content = "This is test content";
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    
+    try {
+      reader.read(new char[10], 0, 12);
+      fail("Calling read with a length bigger than array length should throw");
+    } catch (IndexOutOfBoundsException e) {
+    }
+
+    try {
+      reader.read(new char[10], 5, 7);
+      fail("Calling read with (offset+length) bigger than "
+	   +"array length should thrown");
+    } catch (IndexOutOfBoundsException e) {
+    }
+  }
+
+  public void testArrayReadUnfilteredString() throws IOException {
+    String content = "This is test content";
+    char chars[] = new char[256];
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    assertEquals(20, reader.read(chars));
+    assertEquals(content, new String(chars, 0, 20));
+  }
+    
+  public void testArrayReadUnfilteredStringWithOffset() throws IOException {
+    String content = "This is test content";
+    char chars[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g',
+		    'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o' };
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    assertEquals(10, reader.read(chars, 5, 10));
+    assertEquals("abcdeThis is te", new String(chars, 0, 15));
+  }
+    
+  public void testArrayReadFilteredString() throws IOException {
+    String content = "This "+startTag1+"is test "+endTag1+"content";
+    String expectedContent = "This content";
+
+    char chars[] = new char[256];
+    HtmlTagFilter reader =
+      new HtmlTagFilter(new StringReader(content), tagPair1);
+    assertEquals(expectedContent.length(), reader.read(chars));
+    assertEquals(expectedContent,
+		 new String(chars, 0, expectedContent.length()));
+  }
+    
 
 
-
-  private void assertReaderMatchesString(String expected,
-					 Reader reader)
-  throws IOException{
+  private void assertReaderMatchesString(String expected, Reader reader)
+      throws IOException{
     StringBuffer actual = new StringBuffer(expected.length());
     int kar;
     while ((kar = reader.read()) != -1) {

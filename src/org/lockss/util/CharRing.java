@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.1 2003-06-05 21:48:59 troberts Exp $
+ * $Id: CharRing.java,v 1.2 2003-06-12 00:55:51 troberts Exp $
  */
 
 /*
@@ -57,11 +57,24 @@ public class CharRing {
     return chars.length;
   }
 
-  public void add(char kar) {
-    if (size == chars.length) {
-      throw new UnsupportedOperationException("Array is full");
+  public char getNthChar(int n) {
+    if (n >= chars.length) {
+      throw new BadIndexException("Tried to get the "+n
+				  +" element in a ring of length "
+				  +chars.length);
+    } else if (n >= size) {
+      throw new BadIndexException("Tried to get the "+n
+				  +" element in a ring with "
+				  +chars.length+" elements");
     }
-    tail = incrementIndex(tail);
+    return chars[incrementIndex(head, n)];
+  }
+
+  public void add(char kar) throws RingFullException {
+    if (size == chars.length) {
+      throw new RingFullException("Array is full");
+    }
+    incrementTail(1);
     if (logger.isDebug2()) {
       logger.debug2("Adding "+kar+" to "+toString());
     }
@@ -69,30 +82,55 @@ public class CharRing {
     size++;
   }
 
-  public char getHead() {
-    if (logger.isDebug2()) {
-      logger.debug2("Getting head from "+toString());
-    }
 
-    if (logger.isDebug2()) {
-      logger.debug2("Returning "+chars[head]);
+  public void add(char newChars[]) throws RingFullException {
+    add(newChars, 0, newChars.length);
+  }
+  
+  public void add(char newChars[], int pos, int length)
+      throws RingFullException {
+    if (length + size > chars.length) {
+      throw new RingFullException("Array is full");
     }
-    return chars[head];
+    incrementTail(1);
+    int addToEnd = Math.min(length, chars.length - tail);
+    int addToStart = length - addToEnd;
+
+    System.arraycopy(newChars, pos, chars, tail, addToEnd);
+    System.arraycopy(newChars, pos+addToEnd, chars, 0, addToStart);
+
+    incrementTail(newChars.length-1);
+    size += length;
   }
 
-  public char getTail() {
-    if (logger.isDebug2()) {
-      logger.debug2("Getting tail from "+toString());
-    }
-    return chars[tail];
-  }
+
+//   public char getHead() {
+//     if (logger.isDebug2()) {
+//       logger.debug2("Getting head from "+toString());
+//     }
+
+//     if (logger.isDebug2()) {
+//       logger.debug2("Returning "+chars[head]);
+//     }
+//     return chars[head];
+//   }
+
+//   public char getTail() {
+//     if (logger.isDebug2()) {
+//       logger.debug2("Getting tail from "+toString());
+//     }
+//     return chars[tail];
+//   }
 
   public char remove() {
+    if (size == 0) {
+      throw new BadIndexException("remove() called on empty CharRing");
+    }
     if (logger.isDebug2()) {
       logger.debug2("Removing head from "+toString());
     }
-    char returnKar = getHead();
-    head = incrementIndex(head);
+    char returnKar = chars[head];
+    incrementHead(1);
     size--;
 
     if (logger.isDebug2()) {
@@ -102,21 +140,69 @@ public class CharRing {
     return returnKar;
   }
 
-  public int incrementIndex(int idx) {
-    int nextIdx = idx+1;
-    return nextIdx == chars.length ? 0 : nextIdx;
+  public int remove(char returnChars[]) {
+    return remove(returnChars, 0, returnChars.length);
   }
 
-  public int getHeadIndex() {
-    return head;
+  public int remove(char returnChars[], int pos, int len) {
+    int numToReturn = Math.min(len, size);
+    if (numToReturn == 0) {
+      return 0;
+    }
+    
+    if (tail < head) {
+      int chunk1 = Math.min(numToReturn, chars.length-head);
+      int chunk2 = numToReturn - chunk1;
+      System.arraycopy(chars, head, returnChars, pos, chunk1);
+      System.arraycopy(chars, 0, returnChars, pos + chunk1, chunk2);
+    } else {
+      System.arraycopy(chars, head, returnChars, pos, numToReturn);
+    }
+
+    incrementHead(numToReturn);
+    size -= numToReturn;
+    return numToReturn;
   }
 
-  public int getTailIndex() {
-    return tail;
+//   private int incrementIndex(int idx) {
+//     return incrementIndex(idx, 1);
+// //     int nextIdx = idx+1;
+// //     return nextIdx == chars.length ? 0 : nextIdx;
+//   }
+
+  private int incrementIndex(int idx, int amt) {
+    idx += amt;
+    return idx % chars.length;
   }
 
-  public char getChar(int idx) {
-    return chars[idx];
+  private void incrementHead(int amt) {
+    head = incrementIndex(head, amt);
+  }
+
+  private void incrementTail(int amt) {
+    tail = incrementIndex(tail, amt);
+  }
+
+//   public int getHeadIndex() {
+//     return head;
+//   }
+
+//   public int getTailIndex() {
+//     return tail;
+//   }
+
+//   public char getChar(int idx) {
+//     return chars[idx];
+//   }
+
+
+  public void clear(int num) {
+    if (num > size) {
+      throw new BadIndexException("Tried to clear "+num
+				  +" chars, but we only have "+size);
+    }
+    incrementHead(num);
+    size -= num;
   }
 
   public String toString() {
@@ -124,9 +210,21 @@ public class CharRing {
     int curIdx = head;
     for (int ix=0; ix<size; ix++) {
       sb.append(chars[curIdx]);
-      curIdx = incrementIndex(curIdx);
+      curIdx = incrementIndex(curIdx, 1);
     } 
     return sb.toString();
+  }
+
+  public static class RingFullException extends Exception {
+    public RingFullException(String msg) {
+      super(msg);
+    }
+  }
+
+  public static class BadIndexException extends RuntimeException {
+    public BadIndexException(String msg) {
+      super(msg);
+    }
   }
 
 }
