@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.52 2005-01-05 09:47:21 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.52.2.1 2005-01-19 01:38:46 tlipkis Exp $
  */
 
 /*
@@ -275,11 +275,6 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_RAISE_ALERT,
      LINK_CONTACT,
      LINK_HELP,
-//      SERVLET_ADMIN_HOME,
-//      SERVLET_JOURNAL_STATUS,
-//      SERVLET_JOURNAL_SETUP,
-//      SERVLET_DAEMON_STATUS,
-//      SERVLET_ACCESS_CONTROL,
   };
 
   // Create mapping from servlet class to ServletDescr
@@ -693,18 +688,11 @@ public abstract class LockssServlet extends HttpServlet
 	navTable.add("</font>");
       }
     }
-//     navTable.newRow();
-//     navTable.newCell();
-//     navTable.cell().attribute("COLSPAN=\"3\"");
-//     String contactAddr =
-//       Configuration.getParam(PARAM_CONTACT_ADDR, DEFAULT_CONTACT_ADDR);
-//     navTable.add("<font size=-1>");
-//     navTable.add(new Link("mailto:" + contactAddr, "Contact Us"));
     navTable.add("</font>");
     return navTable;
   }
 
-  protected Table getExplanationBlock(String text) {
+  protected Table getExplanationBlock(Object text) {
     Table exp = new Table(0, "width=\"85%\"");
     exp.center();
     exp.newCell("align=center");
@@ -986,8 +974,14 @@ public abstract class LockssServlet extends HttpServlet
     elem.add("</font></ol>");
   }
 
-  protected void addJavaScript(Composite comp) {
+  protected void addJavaScript0(Composite comp) {
     Script script = new Script(getJavascript());
+    comp.add(script);
+  }
+
+  protected void addJavaScript(Composite comp) {
+    Script script = new Script("");
+    script.attribute("src", "admin.js");
     comp.add(script);
   }
 
