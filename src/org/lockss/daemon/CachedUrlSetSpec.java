@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetSpec.java,v 1.8 2003-06-03 01:52:50 tal Exp $
+ * $Id: CachedUrlSetSpec.java,v 1.9 2003-06-03 05:49:33 tal Exp $
  */
 
 /*
@@ -34,15 +34,14 @@ package org.lockss.daemon;
 import java.util.List;
 
 /**
- * Specifies a set of URLs, starting at a single root.  Used by
- * <code>CachedUrlSet</code> to determine which URLs are included, and to
- * enumerate starting points.
+ * Specifies a set of URLs, all having a common root (URL prefix).  Used by
+ * <code>CachedUrlSet</code> to determine which URLs are included.
  */
 public interface CachedUrlSetSpec {
   /**
    * Determine whether a url is part of this <code>CachedUrlSetSpec</code>.
    * @param url The url.
-   * @return true iff the url matches the spec
+   * @return true iff the url is contained in the set described by the spec
    */
   public boolean matches(String url);
 
@@ -60,41 +59,43 @@ public interface CachedUrlSetSpec {
   public boolean equals(Object obj);
 
   /**
-   * Returns the url referenced by the spec.
+   * Return the common URL prefix.
    * @return the url
    */
   public String getUrl();
 
   /**
-   * Return true if CachedUrlSetSpec specifies a set which is disjoint from
-   * the argument set.  It is not meaningful to compare CUSSes belonging to
-   * different AUs.
+   * Return true if this set is disjoint from the argument set.  It is not
+   * meaningful to compare CUSSes belonging to different AUs.
    * @return true if the two sets are disjoint
    */
   public boolean isDisjoint(CachedUrlSetSpec spec);
 
   /**
-   * Return true if CachedUrlSetSpec specifies a set which completely
-   * contains the argument argument set.  It is not meaningful to compare
-   * CUSSes belonging to different AUs.
-   * @return true if the argument set is subsumes by this one
+   * Return true if this set completely contains the argument set.  It is
+   * not meaningful to compare CUSSes belonging to different AUs.
+   * @return true if the set specified by <code>spec</code> is subsumed by
+   * this one.
    */
   public boolean subsumes(CachedUrlSetSpec spec);
 
   /**
-   * Return true if CachedUrlSetSpec specifies an entire AU
+   * Return true if the CachedUrlSetSpec specifies an entire AU.
    * @return true if an AUCUSS
    */
   public boolean isAU();
 
   /**
-   * Return true if CachedUrlSetSpec specifies the content at a single node
+   * Return true if the CachedUrlSetSpec specifies the content at a single
+   * node.
    * @return true if a SNCUSS
    */
   public boolean isSingleNode();
 
   /**
-   * Return true if CachedUrlSetSpec specifies a restricted range of children
+   * Return true if the CachedUrlSetSpec specifies a range of child nodes.
+   * This should return true only for RangeCachedUrlSetSpecs that have a
+   * non-null lower or upper bound.
    * @return true if a range restricted RangeCachedUrlSetSpec
    */
   public boolean isRangeRestricted();

@@ -1,5 +1,5 @@
 /*
- * $Id: SingleNodeCachedUrlSetSpec.java,v 1.2 2003-06-03 01:52:50 tal Exp $
+ * $Id: SingleNodeCachedUrlSetSpec.java,v 1.3 2003-06-03 05:49:33 tal Exp $
  */
 
 /*
@@ -33,9 +33,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 /**
- * A CachedUrlSetSpec that represents a single node only.
+ * SingleNodeCachedUrlSetSpec represents a single node (URL).  It is used to
+ * refer to the single content file at a node, not including the children.
  */
-
 public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   private String url;
 
@@ -56,22 +56,24 @@ public class SingleNodeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Always returns true iff the urls match
    * @param url the url to match
-   * @return true if matches
+   * @return true if the url is equal to this spec's url.
    */
   public boolean matches(String url) {
     return this.url.equals(url);
   }
 
+  /** @return false */
   public boolean isAU() {
     return false;
   }
 
+  /** @return true */
   public boolean isSingleNode() {
     return true;
   }
 
+  /** @return false */
   public boolean isRangeRestricted() {
     return false;
   }

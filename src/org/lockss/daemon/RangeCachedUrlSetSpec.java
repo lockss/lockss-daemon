@@ -1,5 +1,5 @@
 /*
- * $Id: RangeCachedUrlSetSpec.java,v 1.8 2003-06-03 01:52:50 tal Exp $
+ * $Id: RangeCachedUrlSetSpec.java,v 1.9 2003-06-03 05:49:33 tal Exp $
  */
 
 /*
@@ -36,23 +36,28 @@ import java.util.*;
 import org.lockss.util.*;
 
 /**
- * A CachedUrlSetSpec that matches based on a URL prefix and an optional
- * set of upper and lower bounds which are used to define the range
+ * A CachedUrlSetSpec that specifies all or part of a subtree, rooted at
+ * the prefix URL.  If neither lower nor upper bound is specified, the set
+ * is the entire subtree, including the node named by the URL.  If either
+ * bound is specified, the set is the union of the subtrees rooted at all
+ * of this node's children whose names fall within the bounds, inclusive.
+ * The node named by the URL is not considered part of the set in this case.
  * @author Claire Griffin
  * @version 1.0
  */
-
 public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   private String prefix;
   private String upperBound;
   private String lowerBound;
 
   /**
-   * Create a RangeCachedUrlSetSpec that matches URLs that start with the prefix
-   * and is between the range of lower and upper bound.
+   * Create a RangeCachedUrlSetSpec that matches URLs that start with the
+   * prefix and are within the specified range.
    * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
-   * @param upperBound upper boundary of the prefix range inclusive
-   * @param lowerBound lower boundary of the prefix range inclusive.
+   * @param lowerBound lower boundary of the prefix range, inclusive.  If
+   * null, the range is unbounded at the bottom.
+   * @param upperBound upper boundary of the prefix range, inclusive.  If
+   * null, the range is unbounded at the top.
    * @throws NullPointerException if the prefix is null
    */
   public RangeCachedUrlSetSpec(String urlPrefix,
@@ -66,7 +71,8 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Create a RangeCachedUrlSetSpec that matches URLs that start with the prefix
+   * Create a RangeCachedUrlSetSpec that matches URLs that start with the
+   * prefix, including that URL.
    * @param urlPrefix Common prefix of URLs in the CachedUrlSetSpec.
    * @throws NullPointerException if the prefix is null
    */
@@ -75,10 +81,9 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Return true if the URL begins with the prefix and is within
-   * the ranges defined by upper and lower bounds if any.
-   * @param url to match
-   * @return true if it matches
+   * @return true if the URL's prefix matches ours, and the remaining
+   * substring is within the range defined by upper and lower bounds, if
+   * any.
    */
   public boolean matches(String url) {
     if (!url.startsWith(prefix)) {
@@ -87,14 +92,18 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
     return inRange(url);
   }
 
+  /** @return false */
   public boolean isAU() {
     return false;
   }
 
+  /** @return false */
   public boolean isSingleNode() {
     return false;
   }
 
+  /* @return true iff either the lower or upper bound, or both, is
+   * non-null. */
   public boolean isRangeRestricted() {
     return lowerBound != null || upperBound != null;
   }
@@ -145,10 +154,9 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Overrides Object.equals().
-   * Compares the lists and REs of the two specs.
+   * Compares two specs.
    * @param obj the other spec
-   * @return true if the lists and REs are equal
+   * @return true if the prefix and ranges are equal.
    */
   public boolean equals(Object obj) {
     if (obj instanceof RangeCachedUrlSetSpec) {
@@ -163,7 +171,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Returns the first url in the prefix list, or null if none.
+   * Returns the prefix URL.
    * @return the url
    */
   public String getUrl() {
@@ -171,7 +179,6 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * overrides Object.toString()
    * @return String representaion of this object
    */
   public String toString() {
@@ -195,24 +202,22 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * Overrides Object.hashCode().
-   * Returns the hash of the strings
-   * @return the hashcode
+   * @return a hash made form the prefix and bounds.
    */
   public int hashCode() {
     int hash = 0x40700704;
     hash += prefix.hashCode();
     if (lowerBound != null) {
-      hash += lowerBound.hashCode();
+      hash += 3 * lowerBound.hashCode();
     }
     if (upperBound != null) {
-      hash += upperBound.hashCode();
+      hash += 5 * upperBound.hashCode();
     }
     return hash;
   }
 
   /**
-   * return the upper bounds of the range
+   * return the upper bound of the range
    * @return the string representing the upper boundary
    */
   public String getUpperBound() {
@@ -220,13 +225,14 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * return the lower bounds of the range
+   * return the lower bound of the range
    * @return the String representing the lower boundary
    */
   public String getLowerBound() {
     return lowerBound;
   }
 
+  // Cache the concatenated bounds strings used by inRange()
   String us;
   String ls;
 
@@ -245,7 +251,7 @@ public class RangeCachedUrlSetSpec implements CachedUrlSetSpec {
   }
 
   /**
-   * return true if the url is in the bounded range
+   * return true if the url is in the bounded range.
    * @param url the url to check
    * @return true if the url is between upper and lower bound
    */
