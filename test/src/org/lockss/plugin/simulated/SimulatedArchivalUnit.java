@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.43 2004-06-05 00:08:02 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.44 2004-07-04 05:12:55 eaalto Exp $
  */
 
 /*
@@ -32,13 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
+import java.net.*;
 import java.util.*;
 import java.io.File;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
-import java.net.*;
 import org.lockss.daemon.Configuration;
 
 /**
@@ -70,7 +70,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
   private String fileRoot; //root directory for the generated content
   private SimulatedContentGenerator scgen;
   private String auId = StringUtil.gensym("SimAU_");
-  private String simRoot; //sim root dir returned by content generator
+  String simRoot; //sim root dir returned by content generator
 
   Set toBeDamaged = new HashSet();
 
@@ -180,8 +180,9 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return fileName the mapping result
    */
   public static String mapUrlToContentFileName(String url) {
-    return StringUtil.replaceString(url, SIMULATED_URL_ROOT,
-                                    SimulatedContentGenerator.ROOT_NAME);
+    String baseStr =  StringUtil.replaceString(url, SIMULATED_URL_ROOT,
+        SimulatedContentGenerator.ROOT_NAME);
+    return FileUtil.sysDepPath(baseStr);
   }
 
   /**
@@ -190,10 +191,14 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
    * @return fileName the mapping result
    */
   public String mapContentFileNameToUrl(String filename) {
-    return StringUtil.replaceString(filename, simRoot, SIMULATED_URL_ROOT);
+    String baseStr = StringUtil.replaceString(filename, simRoot,
+        SIMULATED_URL_ROOT);
+    return FileUtil.sysIndepPath(baseStr);
   }
 
-  /** @return the number of links between the top index page and the url.
+  /**
+   * @param url the url to parse
+   * @return the number of links between the top index page and the url.
    * This knows about the structure of the simulated content */
   public int getLinkDepth(String url) {
     String relname = StringUtil.replaceString(url, SIMULATED_URL_ROOT, "");
@@ -203,7 +208,7 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     File absfile = new File(absname);
     File relfile = new File(relname);
     String name = (absfile.isDirectory()
-		   ? SimulatedContentGenerator.INDEX_NAME 
+		   ? SimulatedContentGenerator.INDEX_NAME
 		   : relfile.getName());
     if (SimulatedContentGenerator.INDEX_NAME.equals(name)) {
       return dirDepth;

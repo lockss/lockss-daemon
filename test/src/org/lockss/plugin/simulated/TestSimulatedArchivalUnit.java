@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedArchivalUnit.java,v 1.6 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestSimulatedArchivalUnit.java,v 1.7 2004-07-04 05:12:55 eaalto Exp $
  */
 
 /*
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin.simulated;
 
-import org.lockss.daemon.*;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.FileUtil;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.SimulatedArchivalUnit
@@ -41,10 +41,9 @@ import org.lockss.test.LockssTestCase;
  * @author  Emil Aalto
  * @version 0.0
  */
-
-
 public class TestSimulatedArchivalUnit extends LockssTestCase {
- public TestSimulatedArchivalUnit(String msg) {
+
+  public TestSimulatedArchivalUnit(String msg) {
     super(msg);
   }
 
@@ -55,16 +54,31 @@ public class TestSimulatedArchivalUnit extends LockssTestCase {
 //    assertTrue(scg.isContentTree());
     //XXX test for no changes
   }
+
   public void testAlterContentTree() {
     //XXX test the changes
   }
-  public void testMapUrlToContentFileName(String url) {
+
+  public void testMapUrlToContentFileName() {
     String testStr = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1/branch2";
-    String expectedStr = SimulatedContentGenerator.ROOT_NAME + "/branch1/branch2/index.html";
-    assertEquals(expectedStr, SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
+    String expectedStr = SimulatedContentGenerator.ROOT_NAME + "/branch1/branch2";
+    assertEquals(FileUtil.sysDepPath(expectedStr),
+        SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
 
     testStr = "ftp://www.wrong.com/branch2/branch3";
-    expectedStr = "ftp://www.wrong.com/branch2/branch3/index.html";
-    assertEquals(expectedStr, SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
+    expectedStr = "ftp://www.wrong.com/branch2/branch3";
+    assertEquals(FileUtil.sysDepPath(expectedStr),
+        SimulatedArchivalUnit.mapUrlToContentFileName(testStr));
   }
+
+  public void testMapContentFileNameToUrl() {
+    // make sure to test proper file separator manipulation
+    String MY_ROOT = "/simcontent/test";
+    SimulatedArchivalUnit sau = new SimulatedArchivalUnit();
+    sau.simRoot = FileUtil.sysDepPath(MY_ROOT);
+    String testStr = MY_ROOT + "/branch1/branch2";
+    String expectedStr = SimulatedArchivalUnit.SIMULATED_URL_ROOT + "/branch1/branch2";
+    assertEquals(expectedStr, sau.mapContentFileNameToUrl(FileUtil.sysDepPath(testStr)));
+  }
+
 }
