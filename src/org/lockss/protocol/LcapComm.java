@@ -1,5 +1,5 @@
 /*
- * $Id: LcapComm.java,v 1.46 2004-02-10 04:55:58 tlipkis Exp $
+ * $Id: LcapComm.java,v 1.47 2004-06-01 08:35:06 tlipkis Exp $
  */
 
 /*
@@ -699,6 +699,7 @@ public class LcapComm extends BaseLockssManager {
     }
 
     public void populateTable(StatusTable table) {
+      table.setResortable(false);
       String key = table.getKey();
       String tfoot = "Statistics are for LCAP traffic only.  " +
 	"Traffic due to fetching content (crawling) is not included.";
