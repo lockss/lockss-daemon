@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.54 2004-12-02 14:48:26 troberts Exp $
+ * $Id: IdentityManager.java,v 1.55 2004-12-02 23:53:37 troberts Exp $
  */
 
 /*
@@ -222,13 +222,17 @@ public class IdentityManager
     if (localPeerIdentities[Poll.V3_POLL] != null) {
       log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_POLL));
     }
-    status = new IdentityManagerStatus(theIdentities);
+    status = makeStatusAccessor(theIdentities);
     getDaemon().getStatusService().registerStatusAccessor("Identities",
 							  status);
 
     Vote.setIdentityManager(this);
     LcapMessage.setIdentityManager(this);
     IdentityAgreement.setIdentityManager(this);
+  }
+
+  protected IdentityManagerStatus makeStatusAccessor(Map theIdentities) {
+    return new IdentityManagerStatus(theIdentities);
   }
 
   /**
@@ -438,8 +442,9 @@ public class IdentityManager
    */
   public void rememberEvent(PeerIdentity id, int event, LcapMessage msg) {
     LcapIdentity lid = (LcapIdentity)theIdentities.get(id);
-    if (lid != null)
+    if (lid != null) {
       lid.rememberEvent(event, msg);
+    }
   }
   /**
    * return the max value of an Identity's reputation
