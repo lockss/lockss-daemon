@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistory.java,v 1.13 2003-08-02 00:17:09 eaalto Exp $
+ * $Id: PollHistory.java,v 1.14 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -28,19 +28,17 @@
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.protocol.LcapIdentity;
 
 /**
  * PollHistory contains the information for a completed poll.  It extends
  * PollState but ignores 'getDeadline()' (returns null).
  */
-public class PollHistory
-    extends PollState {
+public class PollHistory extends PollState {
   long duration;
   Collection votes;
 
   /**
-   * Empty constructor used for marshalling.  Needed to create the
+   * Empty constructor used for marshalling.  Needed to create the sub-class
    * PollHistoryBean.
    */
   public PollHistory() {
@@ -49,6 +47,17 @@ public class PollHistory
     votes = new ArrayList();
   }
 
+  /**
+   * Standard constructor to create a PollHistory.
+   * @param type int
+   * @param lwrBound String
+   * @param uprBound String
+   * @param status int
+   * @param startTime long
+   * @param duration long
+   * @param votes Collection
+   * @param ourPoll boolean
+   */
   PollHistory(int type, String lwrBound, String uprBound, int status,
               long startTime,
               long duration, Collection votes, boolean ourPoll) {
@@ -57,6 +66,12 @@ public class PollHistory
     this.votes = votes;
   }
 
+  /**
+   * Convenience constructor to create a PollHistory from a PollState.
+   * @param state PollState
+   * @param duration long
+   * @param votes Collection
+   */
   PollHistory(PollState state, long duration, Collection votes) {
     this(state.type, state.lwrBound, state.uprBound, state.status,
          state.startTime, duration, votes, state.ourPoll);

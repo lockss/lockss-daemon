@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkHandler.java,v 1.59 2004-02-10 04:55:57 tlipkis Exp $
+ * $Id: TreeWalkHandler.java,v 1.60 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -116,6 +116,7 @@ public class TreeWalkHandler {
   static final String PRIORITY_PARAM_TREEWALK = "TreeWalk";
   static final int PRIORITY_DEFAULT_TREEWALK = -1;
 
+  // managers, lock, and AU
   NodeManagerImpl manager;
   private LockssDaemon theDaemon;
   private CrawlManager theCrawlManager;
@@ -125,6 +126,7 @@ public class TreeWalkHandler {
 
   private Logger logger = Logger.getLogger("TreeWalkHandler");
 
+  // thread and interval values
   TreeWalkThread treeWalkThread;
   long treeWalkInterval;
   long topPollInterval;
@@ -132,7 +134,7 @@ public class TreeWalkHandler {
   long initialEstimate;
   float estGrowth;
   float estPadding;
-  boolean useScheduler;
+  boolean useScheduler;  // true if the scheduler should be used
 
   long sleepInterval;
   long sleepDuration; // this is calculated
@@ -150,12 +152,14 @@ public class TreeWalkHandler {
   Configuration.Callback configCallback;
 
   TreeWalkHandler(NodeManagerImpl manager, LockssDaemon theDaemon) {
+    // sets the managers
     this.manager = manager;
     theAu = manager.managedAu;
     this.theCrawlManager = theDaemon.getCrawlManager();
     this.theRegulator = theDaemon.getActivityRegulator(theAu);
     this.theDaemon = theDaemon;
 
+    // configures the config callback
     configCallback = new Configuration.Callback() {
       public void configurationChanged(Configuration newConfig,
                                        Configuration oldConfig,
@@ -192,18 +196,24 @@ public class TreeWalkHandler {
     logger.debug3("treeWalkInterval reset to "+treeWalkInterval);
   }
 
+  /**
+   * Determines the sleep duration from the desired interval and current load.
+   * @param interval desired interval
+   * @param load current load, as percentage
+   * @return long proper sleep duration
+   */
   private long calculateSleepDuration(long interval, double load) {
     // duration must be sufficient for overall load to equal the load factor
     // if interval is assumed 100% and sleep duration is 0%
     return (long)(interval/load) - interval;
   }
 
-/**
- * The full treewalk only proceeds if no new content crawls or top level polls
- * are needed on the content.  As part of checking whether it should execute,
- * it triggers these actions by the CrawlManager and the NodeManager before
- * aborting its treewalk attempt.
- */
+  /**
+   * The full treewalk only proceeds if no new content crawls or top level polls
+   * are needed on the content.  As part of checking whether it should execute,
+   * it triggers these actions by the CrawlManager and the NodeManager before
+   * aborting its treewalk attempt.
+   */
   void doTreeWalk() {
     treeWalkAborted = false;
 
@@ -259,6 +269,9 @@ public class TreeWalkHandler {
     logger.debug("Tree walk finished.");
   }
 
+  /**
+   * Starts the actual treewalk.
+   */
   private void nodeTreeWalk() {
     // initialize sleep interval
     nextSleep = Deadline.in(sleepInterval);
@@ -284,6 +297,7 @@ public class TreeWalkHandler {
       return false;
     }
 
+    // check the watchdog each loop
     if (wdog != null) {
       wdog.pokeWDog();
     }
@@ -435,6 +449,11 @@ public class TreeWalkHandler {
     return treeWalkEstimate;
   }
 
+  /**
+   * Updates the estimate with the last time.  Pads by 'estPadding', and sets
+   * a minimum of MIN_TREEWALK_ESTIMATE.
+   * @param elapsedTime the elapsed time
+   */
   void updateEstimate(long elapsedTime) {
     // no averaging, just padding
     treeWalkEstimate = (long)(estPadding * elapsedTime);
@@ -637,6 +656,11 @@ public class TreeWalkHandler {
       }
     }
 
+    /**
+     * Picks the new time to run the thread, factoring in a delay if desired.
+     * @param additionalDelay long
+     * @return long new time to start
+     */
     long chooseTimeToRun(long additionalDelay) {
       long timeToStart = timeUntilTreeWalkStart() + additionalDelay;
 
@@ -665,6 +689,9 @@ public class TreeWalkHandler {
       }
     }
 
+    /**
+     * Callback for treewalk tasks.
+     */
     private class TreeWalkTaskCallback implements TaskCallback {
       public void taskEvent(SchedulableTask task, Schedule.EventType event)
           throws Abort {
@@ -691,6 +718,9 @@ public class TreeWalkHandler {
       }
     }
 
+    /**
+     * Callback for treewalk scheduling.
+     */
     class TreeWalkTimerCallback implements TimerQueue.Callback {
       /**
        * Called when the timer expires.

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.24 2004-03-11 02:30:15 eaalto Exp $
+ * $Id: NodeStateImpl.java,v 1.25 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -69,9 +69,12 @@ public class NodeStateImpl implements NodeState {
   protected long hashDuration = -1;
   protected int curState = INITIAL;
 
-  // for marshalling only
-  NodeStateImpl() { }
-
+  /**
+   * Constructor to create NodeState from a NodeStateBean after unmarshalling.
+   * @param cus CachedUrlSet
+   * @param bean NodeStateBean
+   * @param repository HistoryRepository
+   */
   NodeStateImpl(CachedUrlSet cus, NodeStateBean bean,
                 HistoryRepository repository) {
     this.cus = cus;
@@ -85,6 +88,14 @@ public class NodeStateImpl implements NodeState {
     this.repository = repository;
   }
 
+  /**
+   * Standard constructor to create a NodeState.
+   * @param cus CachedUrlSet
+   * @param hashDuration long
+   * @param crawlState CrawlState
+   * @param polls List of PollState objects
+   * @param repository HistoryRepository
+   */
   NodeStateImpl(CachedUrlSet cus, long hashDuration, CrawlState crawlState,
                 List polls, HistoryRepository repository) {
     this.cus = cus;
@@ -206,6 +217,7 @@ public class NodeStateImpl implements NodeState {
 
   protected void addPollState(PollState new_poll) {
     polls.add(new_poll);
+    // write-through
     repository.storeNodeState(this);
   }
 
@@ -241,18 +253,29 @@ public class NodeStateImpl implements NodeState {
     repository.storePollHistories(this);
   }
 
+  /**
+   * Accessor for unmarshalling the list of PollHistoryBeans.  Converts
+   * from PollHistoryBeans to PollHistories.
+   * @param new_histories List
+   */
   protected void setPollHistoryBeanList(List new_histories) {
     // create new sorted list
     pollHistories = new ArrayList(new_histories.size());
     Iterator beanIter = new_histories.iterator();
     while (beanIter.hasNext()) {
       PollHistoryBean bean = (PollHistoryBean)beanIter.next();
+      // get the PollHistory from the bean
       pollHistories.add(bean.getPollHistory());
     }
     // sort and trim
     trimHistoriesIfNeeded(false);
   }
 
+  /**
+   * Accessor for marshalling the list of PollHistoryBeans.  Converts from
+   * PollHistories to PollHistoryBeans.
+   * @return List the list of beans
+   */
   protected List getPollHistoryBeanList() {
     if (pollHistories==null) {
       return Collections.EMPTY_LIST;
@@ -261,6 +284,7 @@ public class NodeStateImpl implements NodeState {
     Iterator histIter = pollHistories.iterator();
     while (histIter.hasNext()) {
       PollHistory history = (PollHistory)histIter.next();
+      // convert to a bean
       histBeans.add(new PollHistoryBean(history));
     }
     return histBeans;
@@ -306,6 +330,10 @@ public class NodeStateImpl implements NodeState {
     }
   }
 
+  /**
+   * Comparator to sort PollHistory objects.  Sorts by start time, in reverse
+   * order (most recent first).
+   */
   static class HistoryComparator implements Comparator {
     // sorts in reverse order, with largest startTime first
     public int compare(Object o1, Object o2) {

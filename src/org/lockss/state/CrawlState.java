@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlState.java,v 1.8 2004-02-07 06:46:40 eaalto Exp $
+ * $Id: CrawlState.java,v 1.9 2004-04-01 02:44:31 eaalto Exp $
  */
 
 /*
@@ -50,15 +50,28 @@ public class CrawlState {
   int status;
   long startTime;
 
-  // only for marshalling
-  CrawlState() { }
+  /**
+   * Simple constructor to allow bean creation during unmarshalling.  Not used
+   * by CrawlState, but by it's sub-class, CrawlStateBean.
+   */
+  public CrawlState() { }
 
+  /**
+   * Constructor to create CrawlState from a CrawlStateBean after unmarshalling.
+   * @param bean CrawlStateBean the bean
+   */
   CrawlState(CrawlStateBean bean) {
     this.type = bean.getType();
     this.status = bean.getStatus();
     this.startTime = bean.getStartTime();
   }
 
+  /**
+   * Constructor to create a standard CrawlState.
+   * @param type the type
+   * @param status the status
+   * @param startTime the start time
+   */
   CrawlState(int type, int status, long startTime) {
     this.type = type;
     this.status = status;

@@ -1,5 +1,5 @@
 /*
- * $Id: PollState.java,v 1.24 2003-06-20 22:34:52 claire Exp $
+ * $Id: PollState.java,v 1.25 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -27,8 +27,6 @@
 
 package org.lockss.state;
 
-import java.util.Iterator;
-import org.lockss.plugin.CachedUrlSet;
 import org.lockss.util.Deadline;
 import org.lockss.poller.PollSpec;
 
@@ -59,8 +57,16 @@ public class PollState implements Comparable {
   Deadline deadline;
   boolean ourPoll;
 
-  // for marshalling only
+  /**
+   * Empty constructor to allow bean creation during unmarshalling.  Not used
+   * by PollState, but by its sub-class PollStateBean.
+   */
   PollState() { }
+
+  /**
+   * Constructor to create a PollState from a PollStateBean.
+   * @param bean PollStateBean
+   */
   PollState(PollStateBean bean) {
     this.type = bean.getType();
     this.lwrBound = bean.getLwrBound();
@@ -71,6 +77,16 @@ public class PollState implements Comparable {
     this.ourPoll = bean.isOurPoll();
   }
 
+  /**
+   * Standard constructor to create a PollState.
+   * @param type int
+   * @param lwrBound String
+   * @param uprBound String
+   * @param status int
+   * @param startTime long
+   * @param deadline Deadline
+   * @param ourPoll boolean
+   */
   PollState(int type, String lwrBound, String uprBound, int status,
             long startTime, Deadline deadline, boolean ourPoll) {
     this.type = type;
@@ -122,6 +138,10 @@ public class PollState implements Comparable {
     return uprBound;
   }
 
+  /**
+   * Returns a human-readable version of the range.
+   * @return String the String version
+   */
   public String getRangeString() {
     if ((lwrBound!=null) && (lwrBound.equals(PollSpec.SINGLE_NODE_LWRBOUND))) {
       return "single node";
@@ -149,7 +169,7 @@ public class PollState implements Comparable {
   }
 
   /**
-   * return the status of the poll as a string.
+   * Returns the status of the poll as a string.
    * @return the string representing the current status
    */
   public String getStatusString() {
@@ -222,32 +242,37 @@ public class PollState implements Comparable {
             (status==ERR_UNDEFINED));
   }
 
+  /**
+   * Returns a String.compareTo() of the two type:lwr:upr strings.  Throws an
+   * UnsupportedOperationException if called on a non-PollState.
+   * @param obj must be a PollState
+   * @return int results of String.compareTo()
+   */
   public int compareTo(Object obj) {
     if (obj instanceof PollState) {
       PollState ps2 = (PollState) obj;
       StringBuffer myKey = new StringBuffer();
       myKey.append(type);
-      if(lwrBound != null) {
+      if (lwrBound != null) {
         myKey.append(":");
         myKey.append(lwrBound);
       }
-      if(uprBound != null) {
+      if (uprBound != null) {
         myKey.append(":");
         myKey.append(uprBound);
       }
       StringBuffer otherKey = new StringBuffer();
       otherKey.append(ps2.getType());
-      if(ps2.getLwrBound() != null) {
+      if (ps2.getLwrBound() != null) {
         otherKey.append(":");
         otherKey.append(ps2.getLwrBound());
       }
-      if(ps2.getUprBound() != null) {
+      if (ps2.getUprBound() != null) {
         otherKey.append(":");
         otherKey.append(ps2.getUprBound());
       }
       return myKey.toString().compareTo(otherKey.toString());
-    }
-    else {
+    } else {
       throw new UnsupportedOperationException(
           "Comparing a PollState to a non-PollState object");
     }
@@ -256,8 +281,7 @@ public class PollState implements Comparable {
   public boolean equals(Object obj) {
     if (obj instanceof PollState) {
       return compareTo(obj) == 0;
-    }
-    else {
+    } else {
       return false;
     }
   }

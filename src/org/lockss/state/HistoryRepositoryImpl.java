@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.47 2004-03-27 02:40:00 eaalto Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.48 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -45,8 +45,8 @@ import org.lockss.daemon.Configuration;
 import org.lockss.protocol.*;
 
 /**
- * HistoryRepository is an inner layer of the NodeManager which handles the actual
- * storage of NodeStates.
+ * HistoryRepository is an inner layer of the NodeManager which handles the
+ * actual storage of NodeStates.
  */
 public class HistoryRepositoryImpl
   extends BaseLockssManager implements HistoryRepository {
@@ -81,6 +81,7 @@ public class HistoryRepositoryImpl
 
   private ArchivalUnit storedAu;
 
+  // location of base dir for history files
   private String rootLocation;
   private static Logger logger = Logger.getLogger("HistoryRepository");
 
@@ -100,6 +101,7 @@ public class HistoryRepositoryImpl
       logger.error(msg);
       throw new LockssDaemonException(msg);
     }
+    // check if file updates are needed
     checkFileChange();
   }
 
@@ -118,7 +120,9 @@ public class HistoryRepositoryImpl
   public void storeNodeState(NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     try {
-      logger.debug3("Storing state for CUS '" + cus.getUrl() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Storing state for CUS '" + cus.getUrl() + "'");
+      }
       store(getNodeLocation(cus), NODE_FILE_NAME, new NodeStateBean(nodeState));
     } catch (Exception e) {
       logger.error("Couldn't store node state: ", e);
@@ -130,10 +134,13 @@ public class HistoryRepositoryImpl
   public NodeState loadNodeState(CachedUrlSet cus) {
     try {
       String fileName = getNodeLocation(cus) + File.separator + NODE_FILE_NAME;
-      logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Loading state for CUS '" + cus.getUrl() + "'");
+      }
       NodeStateBean nsb = (NodeStateBean)load(fileName, NodeStateBean.class);
       if (nsb==null) {
         logger.debug3("No node state file for node '"+cus.getUrl()+"'");
+        // default NodeState
         return new NodeStateImpl(cus, -1,
                                  new CrawlState(-1, CrawlState.FINISHED, 0),
                                  new ArrayList(), this);
@@ -142,7 +149,7 @@ public class HistoryRepositoryImpl
     } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Marshalling exception on node state for '" +
                    cus.getUrl() + "': " + me.getMessage());
-      // continue
+      // continue with default NodeState (just a little lost state)
       return new NodeStateImpl(cus, -1,
                                new CrawlState(-1, CrawlState.FINISHED, 0),
                                new ArrayList(), this);
@@ -157,7 +164,9 @@ public class HistoryRepositoryImpl
   public void storePollHistories(NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     try {
-      logger.debug3("Storing histories for CUS '"+cus.getUrl()+"'");
+      if (logger.isDebug3()) {
+        logger.debug3("Storing histories for CUS '" + cus.getUrl() + "'");
+      }
       NodeHistoryBean nhb = new NodeHistoryBean();
       nhb.historyBeans = ((NodeStateImpl)nodeState).getPollHistoryBeanList();
       store(getNodeLocation(cus), HISTORY_FILE_NAME, nhb);
@@ -174,23 +183,29 @@ public class HistoryRepositoryImpl
     try {
       String fileName = getNodeLocation(cus)+File.separator+HISTORY_FILE_NAME;
       nodeFile = new File(fileName);
-      logger.debug3("Loading histories for CUS '"+cus.getUrl()+"'");
+      if (logger.isDebug3()) {
+        logger.debug3("Loading histories for CUS '" + cus.getUrl() + "'");
+      }
       NodeHistoryBean nhb = (NodeHistoryBean)load(fileName,
           NodeHistoryBean.class);
       if (nhb==null) {
         logger.debug3("No histories to load.");
+        // bean not found, so use empty list
         ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
         return;
       }
       if (nhb.historyBeans==null) {
         logger.debug3("Empty history list loaded.");
+        // empty list
         nhb.historyBeans = new ArrayList();
       }
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(
           new ArrayList(nhb.historyBeans));
     } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Parsing exception.  Moving file to '.old'");
+      // don't delete file, because we don't want to lose any history
       nodeFile.renameTo(new File(nodeFile.getAbsolutePath()+".old"));
+      // continue with empty list
       ((NodeStateImpl)nodeState).setPollHistoryBeanList(new ArrayList());
     } catch (Exception e) {
       logger.error("Couldn't load poll history: ", e);
@@ -201,8 +216,10 @@ public class HistoryRepositoryImpl
 
   public void storeIdentityAgreements(List idList) {
     try {
-      logger.debug3("Storing identity agreements for AU '" +
-          storedAu.getName() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Storing identity agreements for AU '" +
+                      storedAu.getName() + "'");
+      }
       store(rootLocation, IDENTITY_AGREEMENT_FILE_NAME,
           new IdentityAgreementList(idList));
     } catch (Exception e) {
@@ -214,21 +231,24 @@ public class HistoryRepositoryImpl
 
   public List loadIdentityAgreements() {
     try {
-      logger.debug3("Loading identity agreements for AU '" +
-          storedAu.getName() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Loading identity agreements for AU '" +
+                      storedAu.getName() + "'");
+      }
       IdentityAgreementList idList =
           (IdentityAgreementList)load(
           rootLocation + IDENTITY_AGREEMENT_FILE_NAME,
           IdentityAgreementList.class);
       if (idList==null) {
         logger.debug2("No identities file for AU '"+storedAu.getName()+"'");
+        // empty list
         return new ArrayList();
       }
       return idList.getList();
     } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Marshalling exception for identity agreements: " +
           me.getMessage());
-      // continue
+      // continue with empty list
       return new ArrayList();
     } catch (Exception e) {
       logger.error("Couldn't load identity agreements: ", e);
@@ -240,8 +260,10 @@ public class HistoryRepositoryImpl
 
   public void storeAuState(AuState auState) {
     try {
-      logger.debug3("Storing state for AU '" +
-                    auState.getArchivalUnit().getName() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Storing state for AU '" +
+                      auState.getArchivalUnit().getName() + "'");
+      }
       store(rootLocation, AU_FILE_NAME, new AuStateBean(auState));
     } catch (Exception e) {
       logger.error("Couldn't store au state: ", e);
@@ -252,11 +274,14 @@ public class HistoryRepositoryImpl
 
   public AuState loadAuState() {
     try {
-      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+      }
       AuStateBean asb = (AuStateBean)load(rootLocation + AU_FILE_NAME,
           AuStateBean.class);
       if (asb==null) {
         logger.debug2("No au state file for AU '"+storedAu.getName()+"'");
+        // none found, so use default
         return new AuState(storedAu, -1, -1, -1, null, this);
       }
       // does not load in an old treewalk time, so that one will be run
@@ -267,7 +292,7 @@ public class HistoryRepositoryImpl
     } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Marshalling exception for au state '"+
           storedAu.getName() + "': " + me.getMessage());
-      // continue
+      // continue with default AuState (a little state lost)
       return new AuState(storedAu, -1, -1, -1, null, this);
     } catch (Exception e) {
       logger.error("Couldn't load au state: ", e);
@@ -278,8 +303,10 @@ public class HistoryRepositoryImpl
 
   public void storeDamagedNodeSet(DamagedNodeSet nodeSet) {
     try {
-      logger.debug3("Storing damaged nodes for AU '" +
-          nodeSet.theAu.getName() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Storing damaged nodes for AU '" +
+                      nodeSet.theAu.getName() + "'");
+      }
       store(rootLocation, DAMAGED_NODES_FILE_NAME, nodeSet);
     } catch (Exception e) {
       logger.error("Couldn't store damaged nodes: ", e);
@@ -290,20 +317,28 @@ public class HistoryRepositoryImpl
 
   public DamagedNodeSet loadDamagedNodeSet() {
     try {
-      logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+      if (logger.isDebug3()) {
+        logger.debug3("Loading state for AU '" + storedAu.getName() + "'");
+      }
       DamagedNodeSet damNodes = (DamagedNodeSet)load(
           rootLocation + DAMAGED_NODES_FILE_NAME, DamagedNodeSet.class);
       if (damNodes==null) {
-        logger.debug2("No damaged node file for AU '"+storedAu.getName()+"'");
+        if (logger.isDebug2()) {
+          logger.debug2("No damaged node file for AU '" + storedAu.getName() +
+                        "'");
+        }
+        // empty set
         return new DamagedNodeSet(storedAu, this);
       }
+      // set these fields manually, since there are no setters to avoid
+      // marshalling them
       damNodes.theAu = storedAu;
       damNodes.repository = this;
       return damNodes;
     } catch (XmlMarshaller.MarshallingException me) {
       logger.error("Marshalling exception for damaged nodes for '"+
                    storedAu.getName()+"': " + me.getMessage());
-      // continue
+      // continue with empty set can't read
       return new DamagedNodeSet(storedAu, this);
     } catch (Exception e) {
       logger.error("Couldn't load damaged nodes: ", e);
@@ -312,6 +347,13 @@ public class HistoryRepositoryImpl
     }
   }
 
+  /**
+   * Utility function to marshall classes.
+   * @param root the root dir
+   * @param fileName the file name
+   * @param storeObj the Object to marshall
+   * @throws Exception
+   */
   void store(String root, String fileName, Object storeObj)
       throws Exception {
     XmlMarshaller marshaller = new XmlMarshaller();
@@ -319,12 +361,26 @@ public class HistoryRepositoryImpl
         marshaller.getMapping(MAPPING_FILES));
   }
 
+  /**
+   * Utility function to unmarshall classes.
+   * @param fileName the file name
+   * @param loadClass the Class type
+   * @return Object the unmarshalled Object
+   * @throws Exception
+   */
   Object load(String fileName, Class loadClass) throws Exception {
     XmlMarshaller marshaller = new XmlMarshaller();
     return marshaller.load(fileName, loadClass,
         marshaller.getMapping(MAPPING_FILES));
   }
 
+  /**
+   * Calculates the node location from a CUS url.  Utilizes LockssRepositoryImpl
+   * static functions.
+   * @param cus CachedUrlSet
+   * @return String the file system location
+   * @throws MalformedURLException
+   */
   protected String getNodeLocation(CachedUrlSet cus)
       throws MalformedURLException {
     String urlStr = (String)cus.getUrl();
@@ -340,6 +396,11 @@ public class HistoryRepositoryImpl
   // They should be used when necessary, then commented out until the next
   // implementation is required.
 
+  /**
+   * Checks the file system to see if name updates are necessary.  Currently
+   * converts from 'au_state.xml' to '#au_state.xml', and similarly with
+   * the other state files.
+   */
   void checkFileChange() {
     if ((theDaemon==null) || (theDaemon.getPluginManager()==null)) {
       // abort if null, for test code
@@ -372,6 +433,11 @@ public class HistoryRepositoryImpl
     logger.debug("Finished updating.");
   }
 
+  /**
+   * Recursively checks for name changes.
+   * @param nodeDir File
+   * @throws MalformedURLException
+   */
   void recurseFileChange(File nodeDir) throws MalformedURLException {
     File[] children = nodeDir.listFiles();
     for (int ii=0; ii<children.length; ii++) {
@@ -413,6 +479,11 @@ public class HistoryRepositoryImpl
         LockssRepositoryImpl.mapAuToFileLocation(historyLocation, au));
   }
 
+  /**
+   * Convenience function to add the 'cache' to the root location.
+   * @param cacheDir dir to put cache in
+   * @return String full cache location
+   */
   static String extendCacheLocation(String cacheDir) {
     StringBuffer buffer = new StringBuffer(cacheDir);
     if (!cacheDir.endsWith(File.separator)) {
@@ -423,10 +494,13 @@ public class HistoryRepositoryImpl
     return buffer.toString();
   }
 
+  /**
+   * Factory class to create HistoryRepositories.
+   */
   public static class Factory implements LockssAuManager.Factory {
-  public LockssAuManager createAuManager(ArchivalUnit au) {
-    return createNewHistoryRepository(au);
+    public LockssAuManager createAuManager(ArchivalUnit au) {
+      return createNewHistoryRepository(au);
+    }
   }
-}
 
 }

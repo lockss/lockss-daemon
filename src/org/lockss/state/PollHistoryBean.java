@@ -1,5 +1,5 @@
 /*
- * $Id: PollHistoryBean.java,v 1.9 2003-06-20 22:34:52 claire Exp $
+ * $Id: PollHistoryBean.java,v 1.10 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -34,23 +34,30 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.protocol.LcapIdentity;
-import org.lockss.poller.Vote;
 import java.net.*;
+import org.lockss.poller.Vote;
 import org.lockss.util.Logger;
 
 /**
  * PollHistoryBean is a settable version of PollHistory used purely for
- * marshalling purposes.
+ * marshalling purposes.  It also handles conversion of Votes to and from
+ * VoteBeans.
  */
 public class PollHistoryBean extends PollHistory {
   public Collection voteBeans;
   static Logger log=Logger.getLogger("PollHistoryBean");
 
+  /**
+   * Empty constructor for bean creation during unmarshalling.
+   */
   public PollHistoryBean() {
     voteBeans = new ArrayList();
   }
 
+  /**
+   * Constructor to create the bean from a PollHistory prior to marshalling.
+   * @param history the PollHistory
+   */
   PollHistoryBean(PollHistory history) {
     super(history.type, history.lwrBound, history.uprBound, history.status,
           history.startTime, history.duration, history.votes, history.ourPoll);
@@ -58,6 +65,11 @@ public class PollHistoryBean extends PollHistory {
     convertVotesToVoteBeans();
   }
 
+  /**
+   * Handles proper conversion of VoteBeans to Votes before creating a
+   * PollHistory.
+   * @return PollHistory the PollHistory
+   */
   PollHistory getPollHistory() {
     convertVoteBeansToVotes();
     return new PollHistory(type, lwrBound, uprBound, status,
@@ -111,6 +123,10 @@ public class PollHistoryBean extends PollHistory {
     super.duration = duration;
   }
 
+  /**
+   * Sets whether it's our poll.
+   * @param ourPoll true iff our poll
+   */
   public void setOurPoll(boolean ourPoll) {
     super.ourPoll = ourPoll;
   }
@@ -130,7 +146,6 @@ public class PollHistoryBean extends PollHistory {
   public void setVoteBeans(Collection voteBeans) {
     this.voteBeans = voteBeans;
   }
-
 
   /**
    * Populates the list of votebeans from the votes list.  This is used purely
@@ -167,6 +182,10 @@ public class PollHistoryBean extends PollHistory {
     }
   }
 
+  /**
+   * Override which does the conversion from unmarshalled VoteBeans to Votes.
+   * @return Iterator Votes
+   */
   public Iterator getVotes() {
     convertVoteBeansToVotes();
     return super.getVotes();

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeHistoryBean.java,v 1.2 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeHistoryBean.java,v 1.3 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -34,11 +34,14 @@ package org.lockss.state;
 
 import java.util.Collection;
 
+/**
+ * NodeHistoryBean allows the marshalling of a group of PollHistoryBeans.
+ */
 public class NodeHistoryBean {
   public Collection historyBeans;
 
   /**
-   * Empty constructor for bean creation during marshalling
+   * Empty constructor for bean creation during unmarshalling.
    */
   public NodeHistoryBean() {
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.5 2004-03-06 00:48:57 clairegriffin Exp $
+ * $Id: DamagedNodeSet.java,v 1.6 2004-04-01 02:44:31 eaalto Exp $
  */
 
 /*
@@ -38,7 +38,9 @@ import org.lockss.plugin.*;
 import org.lockss.util.ExtMapBean;
 
 /**
- * DamagedNodeMap is a write-through persistent wrapper for a hashmap.
+ * DamagedNodeMap is a write-through persistent wrapper for a hashmap and a set.
+ * It stores a Set of nodes with damage and a map of CachedUrlSets which need
+ * repair.
  */
 public class DamagedNodeSet {
   HashSet nodesWithDamage;
@@ -49,12 +51,16 @@ public class DamagedNodeSet {
   HistoryRepository repository;
   ArchivalUnit theAu;
 
-  public DamagedNodeSet() {
-    // initialize here so that if there's no set to load, it's not null
-    nodesWithDamage = new HashSet();
-    cusToRepair = new HashMap();
-  }
+  /**
+   * Simple constructor to allow bean creation during unmarshalling.
+   */
+  public DamagedNodeSet() { }
 
+  /**
+   * Standard constructor to create AU-specific DamagedNodeSet
+   * @param au ArchivalUnit
+   * @param repository HistoryRepository
+   */
   public DamagedNodeSet(ArchivalUnit au, HistoryRepository repository) {
     this.theAu = au;
     this.repository = repository;
@@ -66,16 +72,32 @@ public class DamagedNodeSet {
     return theAu;
   }
 
+  /**
+   * Clears both the damaged nodes and the CUSs to repair.
+   */
   public void clear() {
     nodesWithDamage.clear();
     cusToRepair.clear();
   }
 
+  /**
+   * Checks if the given url is damaged.
+   * @param nodeUrl the url
+   * @return boolean true iff damaged
+   */
   public boolean containsWithDamage(String nodeUrl) {
     return nodesWithDamage.contains(nodeUrl);
   }
 
+  /**
+   * Checks if the url needs repair.  'To repair' urls are associated with
+   * a specific CUS, as several child repairs can be called by one lost poll.
+   * @param cus the repairing CUS
+   * @param nodeUrl the url to repair
+   * @return boolean true iff the url needs repair under that CUS
+   */
   public boolean containsToRepair(CachedUrlSet cus, String nodeUrl) {
+    // get the url list associated with that CUS url, if any
     ArrayList urlArray = (ArrayList)cusToRepair.get(cus.getUrl());
     if (urlArray!=null) {
       return urlArray.contains(nodeUrl);
@@ -83,12 +105,23 @@ public class DamagedNodeSet {
     return false;
   }
 
+  /**
+   * Add this url to the list of nodes with damage, and write-through.
+   * @param nodeUrl the damaged url
+   */
   public void addToDamage(String nodeUrl) {
     nodesWithDamage.add(nodeUrl);
     repository.storeDamagedNodeSet(this);
   }
 
+  /**
+   * Add the collection of url Strings to the CUS's repair list, merging
+   * with any already present.  Writes through.
+   * @param cus the repairing CUS
+   * @param nodeUrls the urls to repair
+   */
   public void addToRepair(CachedUrlSet cus, Collection nodeUrls) {
+    // all repairs are associated with a specific CUS
     ArrayList urlArray = (ArrayList)cusToRepair.get(cus.getUrl());
     // merge the urls with any already stored
     if (urlArray==null) {
@@ -106,11 +139,20 @@ public class DamagedNodeSet {
     repository.storeDamagedNodeSet(this);
   }
 
+  /**
+   * Remove the url from the damage list.
+   * @param nodeUrl url to remove
+   */
   public void removeFromDamage(String nodeUrl) {
     nodesWithDamage.remove(nodeUrl);
     repository.storeDamagedNodeSet(this);
   }
 
+  /**
+   * Remove the url from the 'to repair' list.
+   * @param cus the repairing CUS
+   * @param nodeUrl the repaired url
+   */
   public void removeFromRepair(CachedUrlSet cus, String nodeUrl) {
     Collection urls = (Collection)cusToRepair.get(cus.getUrl());
     if (urls!=null) {
@@ -122,27 +164,53 @@ public class DamagedNodeSet {
     repository.storeDamagedNodeSet(this);
   }
 
+  /**
+   * Iterator of damaged url Strings.
+   * @return Iterator the url Strings
+   */
   public Iterator damageIterator() {
     return nodesWithDamage.iterator();
   }
 
+  // accessors used for marshalling
+
+  /**
+   * Returns the Set of damaged url Strings.
+   * @return HashSet the damaged urls
+   */
   public HashSet getDamagedNodes() {
     return nodesWithDamage;
   }
 
+  /**
+   * Sets the Set of damaged url Strings
+   * @param nodes HashSet the new Set
+   */
   public void setDamagedNodes(HashSet nodes) {
     this.nodesWithDamage = nodes;
   }
 
+  /**
+   * Returns the map of CUS-List entries for nodes to repair.
+   * @return HashMap the map
+   */
   public HashMap getNodesToRepair() {
     return cusToRepair;
   }
 
+  /**
+   * Accessor for marshalling the repair map.  Converts to {@link ExtMapbean}.
+   * @return ExtMapBean the map bean
+   */
   public ExtMapBean getRepairNodeBean() {
     ExtMapBean bean = new ExtMapBean(cusToRepair);
     return bean;
   }
 
+  /**
+   * Accessor for unmarshalling the repair map.  Converts from {@link ExtMapBean}.
+   * @param mapBean ExtMapBean the map bean
+   */
   public void setRepairNodeBean(ExtMapBean mapBean) {
     cusToRepair = mapBean.getMap();
   }

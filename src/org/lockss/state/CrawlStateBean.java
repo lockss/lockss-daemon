@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlStateBean.java,v 1.3 2004-02-07 06:46:40 eaalto Exp $
+ * $Id: CrawlStateBean.java,v 1.4 2004-04-01 02:44:31 eaalto Exp $
  */
 
 /*
@@ -34,11 +34,18 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 /**
- * CrawlStateBean marshals the CrawlState.
+ * CrawlStateBean is a settable version of the CrawlState to allow marshalling.
  */
 public class CrawlStateBean extends CrawlState {
+  /**
+   * Simple constructor to allow bean creation during unmarshalling.
+   */
   public CrawlStateBean() { }
 
+  /**
+   * Constructor to create the bean from a CrawlState prior to marshalling.
+   * @param state the CrawlState
+   */
   CrawlStateBean(CrawlState state) {
     this.type = state.getType();
     this.status = state.getStatus();

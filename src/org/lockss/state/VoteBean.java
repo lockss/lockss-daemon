@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.5 2003-06-20 22:34:52 claire Exp $
+ * $Id: VoteBean.java,v 1.6 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import org.lockss.poller.Vote;
 import org.lockss.protocol.LcapIdentity;
 import java.net.UnknownHostException;
 
+/**
+ * Simple class to allow marshalling of Vote instances.
+ */
 public class VoteBean extends Vote {
   public String idStr = null;
   public String challengeStr = null;

@@ -1,5 +1,5 @@
 /*
- * $Id: PollStateBean.java,v 1.4 2003-06-20 22:34:52 claire Exp $
+ * $Id: PollStateBean.java,v 1.5 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -27,21 +27,23 @@
 
 package org.lockss.state;
 
-import java.util.Iterator;
-import org.lockss.plugin.CachedUrlSet;
-import org.lockss.util.Deadline;
-
 /**
- * PollState contains the state information for a poll current to a node.
- * There may be more than one active poll per node.
+ * Simple class to allow marshalling of PollState instances.  Adds necessary
+ * accessors.
  */
 public class PollStateBean extends PollState {
   long deadlineTime;
 
+  /**
+   * Empty constructor to allow bean creation during unmarshalling.
+   */
   public PollStateBean() {
-
   }
 
+  /**
+   * Constructor to create the bean from a PollState prior to marshalling.
+   * @param poll the PollState
+   */
   public PollStateBean(PollState poll) {
     this.type = poll.getType();
     this.lwrBound = poll.getLwrBound();

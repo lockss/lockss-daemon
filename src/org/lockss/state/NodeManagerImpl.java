@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.174 2004-03-27 02:33:46 eaalto Exp $
+ * $Id: NodeManagerImpl.java,v 1.175 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -71,23 +71,25 @@ public class NodeManagerImpl
 
   static final boolean DEFAULT_RESTART_NONEXPIRED_POLLS = false;
 
+  // the various necessary managers
   HistoryRepository historyRepo;
   private LockssRepository lockssRepo;
   PollManager pollManager;
   ActivityRegulator regulator;
   static SimpleDateFormat sdf = new SimpleDateFormat();
 
+  // state and caches for this AU
   ArchivalUnit managedAu;
   AuState auState;
   NodeStateCache nodeCache;
   HashMap activeNodes;
+  // standard start values of parameters
   int maxCacheSize = DEFAULT_NODESTATE_CACHE_SIZE;
   long recallDelay = DEFAULT_RECALL_DELAY;
   boolean restartNonexpiredPolls = DEFAULT_RESTART_NONEXPIRED_POLLS;
-  /**
-   * the set of nodes marked damaged (these are nodes which have lost content
-   * poll).
-   */
+
+   //the set of nodes marked damaged (these are nodes which have lost content
+   // poll).
   DamagedNodeSet damagedNodes;
 
   private static Logger logger = Logger.getLogger("NodeManager");
@@ -99,18 +101,21 @@ public class NodeManagerImpl
 
   public void startService() {
     super.startService();
+    // gets all the managers
     if (logger.isDebug()) logger.debug("Starting: " + managedAu);
     historyRepo = theDaemon.getHistoryRepository(managedAu);
     lockssRepo = theDaemon.getLockssRepository(managedAu);
     pollManager = theDaemon.getPollManager();
     regulator = theDaemon.getActivityRegulator(managedAu);
 
+    // initializes the state info
     nodeCache = new NodeStateCache(maxCacheSize);
     activeNodes = new HashMap();
 
     auState = historyRepo.loadAuState();
     damagedNodes = historyRepo.loadDamagedNodeSet();
 
+    // starts the treewalk
     treeWalkHandler = new TreeWalkHandler(this, theDaemon);
     treeWalkHandler.start();
     logger.debug2("NodeManager successfully started");
@@ -144,10 +149,6 @@ public class NodeManagerImpl
     }
   }
 
-  /** Called between initService() and startService(), then whenever the
-   * AU's config changes.
-   * @param auConfig the new configuration
-   */
   public void setAuConfig(Configuration auConfig) {
   }
 
@@ -155,7 +156,7 @@ public class NodeManagerImpl
     String url = cus.getUrl();
     NodeState node = nodeCache.getState(url);
     if (node == null) {
-      // if in repository, add
+      // if in repository, add to our state list
       try {
         if (lockssRepo.getNode(url) != null) {
           node = createNodeState(cus);
@@ -170,6 +171,12 @@ public class NodeManagerImpl
     return node;
   }
 
+  /**
+   * Creates or loads a new NodeState instance (not in cache) and runs a
+   * dead poll check against it.
+   * @param cus CachedUrlSet
+   * @return NodeState
+   */
   NodeState createNodeState(CachedUrlSet cus) {
     // load from file cache, or get a new one
     NodeState state = historyRepo.loadNodeState(cus);
@@ -200,7 +207,7 @@ public class NodeManagerImpl
       for (int ii=0; ii<pollsToRemove.size(); ii++) {
         logger.debug("Dead poll being removed for CUS '" + cus.getUrl() + "'");
         PollHistory history = (PollHistory)pollsToRemove.get(ii);
-        ( (NodeStateImpl) state).closeActivePoll(history);
+        ((NodeStateImpl)state).closeActivePoll(history);
       }
     }
 
@@ -212,9 +219,13 @@ public class NodeManagerImpl
     return auState;
   }
 
+  /**
+   * Returns a list of cached NodeStates.  This only returns nodes currently in
+   * the cache, rather than a full list, but it's only used by the UI so that's
+   * not a problem.
+   * @return Iterator the NodeStates
+   */
   Iterator getCacheEntries() {
-    // this only returns nodes currently in the cache, but it's only used
-    // by the UI so that's not a problem
     return nodeCache.snapshot().iterator();
   }
 
@@ -247,16 +258,19 @@ public class NodeManagerImpl
   public boolean shouldStartPoll(CachedUrlSet cus, Tallier state) {
     NodeState nodeState = getNodeState(cus);
 
+    // check if node exists
     if (nodeState == null) {
       logger.error("Failed to find a valid node state for: " + cus);
       return false;
     }
 
+    // make sure not damaged (if not my poll)
     if (!state.isMyPoll() && hasDamage(cus)) {
       logger.info("CUS has damage, not starting poll: " + cus);
       return false;
     }
 
+    // make sure crawl isn't needed
     if (managedAu.shouldCrawlForNewContent(auState)) {
       logger.info("New content crawl needed, not starting poll: " + managedAu);
       return false;
@@ -327,6 +341,7 @@ public class NodeManagerImpl
           break;
         default:
           logger.error("Invalid nodestate: " + nodeState.getStateString());
+          // set to 'default' states for new polls
           status = PollState.RUNNING;
           if (cus.getSpec().isSingleNode()) {
             nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
@@ -353,6 +368,7 @@ public class NodeManagerImpl
   }
 
   public void updatePollResults(CachedUrlSet cus, Tallier results) {
+    // node should be in 'active' list under poll key
     NodeState nodeState = (NodeState)activeNodes.get(results.getPollKey());
     if (nodeState==null) {
       nodeState = getNodeState(cus);
@@ -386,13 +402,18 @@ public class NodeManagerImpl
       logger.error("Updating state on non-existant node: " + cus.getUrl());
       throw new IllegalArgumentException(
           "Updating state on non-existant node.");
-    }
-    else {
+    } else {
       logger.debug3("Hash finished for CUS '" + cus.getUrl() + "'");
-      ( (NodeStateImpl) state).setLastHashDuration(hashDuration);
+      ((NodeStateImpl)state).setLastHashDuration(hashDuration);
     }
   }
 
+  /**
+   * Update the PollState and NodeState to reflect the finished poll.  Sets the
+   * node to be ready for its next action.
+   * @param nodeState NodeState
+   * @param results Tallier
+   */
   void updateState(NodeState nodeState, Tallier results) {
     logger.debug3("Prior node state: "+nodeState.getStateString());
 
@@ -403,10 +424,12 @@ public class NodeManagerImpl
                                               + "non-existent poll.");
     }
 
+    // determine if ranged, as those don't update as much
     boolean isRangedPoll =
         results.getCachedUrlSet().getSpec().isRangeRestricted();
     int lastState = -1;
 
+    // log if current state is invalid for finishing poll
     if (!isRangedPoll) {
       if (!checkValidStatesForResults(pollState, nodeState,
                                       results.getCachedUrlSet().getSpec())) {
@@ -423,6 +446,7 @@ public class NodeManagerImpl
       }
     }
 
+    // update poll state properly for errors
     try {
       boolean notFinished = false;
       switch (results.getTallyResult()) {
@@ -437,7 +461,6 @@ public class NodeManagerImpl
           logger.info("Poll finished without quorum");
           notFinished = true;
           break;
-
         case Tallier.RESULT_TOO_CLOSE:
         case Tallier.RESULT_UNTRUSTED:
           pollState.status = PollState.INCONCLUSIVE;
@@ -447,9 +470,9 @@ public class NodeManagerImpl
           break;
         case Tallier.RESULT_WON:
         case Tallier.RESULT_LOST:
-
           // set last state in case it changes
           lastState = nodeState.getState();
+          // update depending on poll type if successful
           if (results.getType() == Poll.CONTENT_POLL) {
             handleContentPoll(pollState, results, nodeState);
           } else if (results.getType() == Poll.NAME_POLL) {
@@ -633,6 +656,13 @@ public class NodeManagerImpl
     return repairsDone;
   }
 
+  /**
+   * Creates a CUS from the child url (typically a simple name) and its parent
+   * NodeState, usually be appending the two together.
+   * @param url String
+   * @param nodeState NodeState
+   * @return CachedUrlSet
+   */
   private CachedUrlSet getChildCus(String url, NodeState nodeState) {
     ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
     Plugin plugin = au.getPlugin();
@@ -648,6 +678,13 @@ public class NodeManagerImpl
     return plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(childUrl));
   }
 
+  /**
+   * Handles state for successful content polls.  Sets the PollState and
+   * NodeState appropriately
+   * @param pollState PollState
+   * @param results Tallier
+   * @param nodeState NodeState
+   */
   void handleContentPoll(PollState pollState, Tallier results,
                          NodeState nodeState) {
     logger.debug("handling content poll results: " + results);
@@ -745,6 +782,13 @@ public class NodeManagerImpl
     }
   }
 
+  /**
+   * Handles state for successful name polls.  Updates PollState and NodeState
+   * appropriately.
+   * @param pollState PollState
+   * @param results Tallier
+   * @param nodeState NodeState
+   */
   void handleNamePoll(PollState pollState, Tallier results,
                       NodeState nodeState) {
     logger.debug2("handling name poll results " + results);
@@ -781,7 +825,7 @@ public class NodeManagerImpl
             }
             break;
           case NodeState.NAME_REPLAYING:
-            //XXX should replay content poll, but set to NEEDS_POLL for now
+            //XXX should replay content poll, but treated as NEEDS_POLL for now
             nodeState.setState(NodeState.NEEDS_REPLAY_POLL);
         }
       }
@@ -854,7 +898,7 @@ public class NodeManagerImpl
               // if ranged, we know the names are accurate from the previous
               // name poll, so continue as if it had won
               logger.debug2("sub-dividing under lost ranged content poll");
-              callContentPollsOnSubNodes(nodeState, results.getCachedUrlSet());
+              callContentPollsOnSubNodes(results.getCachedUrlSet());
           } else {
             // call name poll if not ranged or no results to use
             logger.debug2(
@@ -893,10 +937,12 @@ public class NodeManagerImpl
                 // running it otherwise
                 if (!reportOnly) {
                   logger.debug("re-calling last unfinished poll.");
-                  logger.debug2("lastHistory: " + lastHistory.getTypeString() +
-                                ", " +
-                                lastHistory.getStatusString() + ", " +
-                                sdf.format(new Date(lastHistory.startTime)));
+                  if (logger.isDebug2()) {
+                    logger.debug2("lastHistory: " + lastHistory.getTypeString() +
+                                  ", " +
+                                  lastHistory.getStatusString() + ", " +
+                                  sdf.format(new Date(lastHistory.startTime)));
+                  }
                   // set state appropriately for restart
                   switch (nodeState.getState()) {
                     case NodeState.CONTENT_RUNNING:
@@ -989,7 +1035,7 @@ public class NodeManagerImpl
           // call a content poll on this node's subnodes
           CachedUrlSet cusToUse = (results!=null ? results.getCachedUrlSet() :
                                    nodeState.getCachedUrlSet());
-          callContentPollsOnSubNodes(nodeState, cusToUse);
+          callContentPollsOnSubNodes(cusToUse);
         }
         return true;
       case NodeState.POSSIBLE_DAMAGE_HERE:
@@ -1073,6 +1119,14 @@ public class NodeManagerImpl
     return false;
   }
 
+  /**
+   * Determines if the current state is appropriate for the type of poll
+   * currently finishing.
+   * @param poll PollState
+   * @param node NodeState
+   * @param spec CachedUrlSetSpec
+   * @return boolean true iff the states are consistent
+   */
   boolean checkValidStatesForResults(PollState poll, NodeState node,
                                      CachedUrlSetSpec spec) {
     boolean isContent = poll.getType()==Poll.CONTENT_POLL;
@@ -1157,10 +1211,12 @@ public class NodeManagerImpl
                 TimeBase.nowMs())) {
               if (!reportOnly) {
                 logger.debug("Re-calling last unfinished poll.");
-                logger.debug2("lastHistory: " + lastHistory.getTypeString() +
-                              ", " +
-                              lastHistory.getStatusString() + ", " +
-                              sdf.format(new Date(lastHistory.startTime)));
+                if (logger.isDebug2()) {
+                  logger.debug2("lastHistory: " + lastHistory.getTypeString() +
+                                ", " +
+                                lastHistory.getStatusString() + ", " +
+                                sdf.format(new Date(lastHistory.startTime)));
+                }
                 callLastPoll(lastPollSpec, lastHistory);
               }
               return true;
@@ -1206,9 +1262,11 @@ public class NodeManagerImpl
               // found the failed poll, rerunning
               if (!reportOnly) {
                 logger.debug("Re-calling previous poll.");
-                logger.debug2("lastHistory: "+lastHistory.getTypeString() +
-                              ", " + lastHistory.getStatusString() + ", " +
-                              sdf.format(new Date(lastHistory.startTime)));
+                if (logger.isDebug2()) {
+                  logger.debug2("lastHistory: " + lastHistory.getTypeString() +
+                                ", " + lastHistory.getStatusString() + ", " +
+                                sdf.format(new Date(lastHistory.startTime)));
+                }
                 callLastPoll(prevPollSpec, prevHistory);
               }
               return true;
@@ -1220,30 +1278,20 @@ public class NodeManagerImpl
         }
         break;
       case PollState.LOST:
-/*
-        // since we didn't find anything below this, recall the name poll
-        if (!reportOnly) {
-          logger.debug("Calling name poll for lost poll.");
-          logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
-                       lastHistory.getStatusString() + ", " +
-                       sdf.format(new Date(lastHistory.startTime)));
-          callNamePoll(lastPollSpec);
-        }
-        return true;
-  */
-
         // since we didn't find anything below this, it's time to recall the
         // upper poll.  But 'checkCurrentState()' will take care of that
         return false;
       case PollState.UNREPAIRABLE:
-        // TODO: this needs to be fixed eventually but for now we only get
+        // XXX this needs to be fixed eventually but for now we only get
         // our stuff from the publisher we're going to keep trying until we
         // fail.
         if (!reportOnly) {
           logger.debug("Re-calling poll on unrepairable node to trigger repair");
-          logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
-                       lastHistory.getStatusString() + ", " +
-                       sdf.format(new Date(lastHistory.startTime)));
+          if (logger.isDebug2()) {
+            logger.debug2("lastHistory: " + lastHistory.getTypeString() + ", " +
+                          lastHistory.getStatusString() + ", " +
+                          sdf.format(new Date(lastHistory.startTime)));
+          }
           callLastPoll(lastPollSpec, lastHistory);
         }
         return true;
@@ -1257,9 +1305,11 @@ public class NodeManagerImpl
         if (lastHistory.isOurPoll()) {
           if (!reportOnly) {
             logger.debug("Recalling last unsuccessful poll");
-            logger.debug2("lastHistory: "+lastHistory.getTypeString() + ", " +
-                         lastHistory.getStatusString() + ", " +
-                         sdf.format(new Date(lastHistory.startTime)));
+            if (logger.isDebug2()) {
+              logger.debug2("lastHistory: " + lastHistory.getTypeString() +
+                            ", " + lastHistory.getStatusString() + ", " +
+                            sdf.format(new Date(lastHistory.startTime)));
+            }
             callLastPoll(lastPollSpec, lastHistory);
           }
           return true;
@@ -1268,6 +1318,11 @@ public class NodeManagerImpl
     return false;
   }
 
+  /**
+   * Gets the poll key from a PollHistory.
+   * @param history PollHistory
+   * @return String the key
+   */
   String findKey(PollHistory history) {
     Iterator votes = history.getVotes();
     if (votes.hasNext()) {
@@ -1277,32 +1332,53 @@ public class NodeManagerImpl
     return "";
   }
 
-
+  /**
+   * Convenience method to call a top-level poll.
+   */
   void callTopLevelPoll() {
     PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet());
     try {
-      logger.debug2("Calling a top level poll on " + spec);
+      if (logger.isDebug2()) {
+        logger.debug2("Calling a top level poll on " + spec);
+      }
       pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
-    }
-    catch (IOException ioe) {
+    } catch (IOException ioe) {
       logger.error("Exception calling top level poll on " + spec, ioe);
     }
   }
 
+  /**
+   * Closes the poll described in the PollState, creating a new PollHistory in
+   * the NodeState.
+   * @param pollState PollState
+   * @param duration long
+   * @param votes Collection
+   * @param nodeState NodeState
+   */
   void closePoll(PollState pollState, long duration, Collection votes,
                          NodeState nodeState) {
     PollHistory history = new PollHistory(pollState, duration, votes);
-    ( (NodeStateImpl) nodeState).closeActivePoll(history);
-    logger.debug2("Closing poll for url '" +
-                  nodeState.getCachedUrlSet().getUrl() + " " +
-                  pollState.getLwrBound() + "-" +
-                  pollState.getUprBound() + "'");
+    ((NodeStateImpl)nodeState).closeActivePoll(history);
+    if (logger.isDebug2()) {
+      logger.debug2("Closing poll for url '" +
+                    nodeState.getCachedUrlSet().getUrl() + " " +
+                    pollState.getLwrBound() + "-" +
+                    pollState.getUprBound() + "'");
+    }
   }
 
+  /**
+   * Finds a PollState in the NodeState which matches the results spec.
+   * @param state NodeState
+   * @param results Tallier
+   * @return PollState null if not found
+   */
   private PollState getPollState(NodeState state, Tallier results) {
     Iterator polls = state.getActivePolls();
     PollSpec spec = results.getPollSpec();
-    logger.debug2("Getting poll state for spec: " + spec);
+    if (logger.isDebug2()) {
+      logger.debug2("Getting poll state for spec: " + spec);
+    }
     while (polls.hasNext()) {
       PollState pollState = (PollState) polls.next();
       if (StringUtil.equalStrings(pollState.getLwrBound(), spec.getLwrBound()) &&
@@ -1314,6 +1390,11 @@ public class NodeManagerImpl
     return null;
   }
 
+  /**
+   * Maps from Poll error codes to PollState error codes.
+   * @param resultsErr the Poll.ERR_xxx
+   * @return int the PollState.ERR_xxx
+   */
   static int mapResultsErrorToPollError(int resultsErr) {
     switch (resultsErr) {
       case Poll.ERR_HASHING:
@@ -1326,6 +1407,16 @@ public class NodeManagerImpl
     return PollState.ERR_UNDEFINED;
   }
 
+  /**
+   * Marks the given urls for repair, associating them with the repairing CUS.
+   * Then calls the CrawlManager and starts a repair crawl on them.  Requires
+   * an activity lock on the repairing CUS.
+   * @param urls the urls to repair
+   * @param pollKey the active poll
+   * @param cus the repairing CUS
+   * @param isNamePoll true iff a name poll
+   * @param lock the activity lock
+   */
   void markNodesForRepair(Collection urls, String pollKey,
       CachedUrlSet cus, boolean isNamePoll, ActivityRegulator.Lock lock) {
     if (pollKey!=null) {
@@ -1335,13 +1426,13 @@ public class NodeManagerImpl
       logger.debug2("no poll found to suspend");
     }
 
-    if (urls.size() == 1) {
-      logger.debug2("scheduling repair");
-    } else {
-      logger.debug2("scheduling "+urls.size()+" repairs");
-    }
-
     if (logger.isDebug2()) {
+      if (urls.size() == 1) {
+        logger.debug2("scheduling repair");
+      } else {
+        logger.debug2("scheduling " + urls.size() + " repairs");
+      }
+
       Iterator iter = urls.iterator();
       while (iter.hasNext()) {
         String url = (String)iter.next();
@@ -1350,6 +1441,7 @@ public class NodeManagerImpl
         }
       }
     }
+
     damagedNodes.addToRepair(cus, urls);
 
     PollCookie cookie = new PollCookie(cus, pollKey, isNamePoll, urls);
@@ -1357,20 +1449,33 @@ public class NodeManagerImpl
         new ContentRepairCallback(), cookie, lock);
   }
 
+  /**
+   * Deletes the node from the LockssRepository.
+   * @param cus CachedUrlSet
+   * @throws IOException
+   */
   private void deleteNode(CachedUrlSet cus) throws IOException {
-    // delete the node from the LockssRepository
     LockssRepository repository = theDaemon.getLockssRepository(managedAu);
     repository.deleteNode(cus.getUrl());
   }
 
+  /**
+   * Deactivates the node in the LockssRepository.
+   * @param cus CachedUrlSet
+   * @throws IOException
+   */
   private void deactivateNode(CachedUrlSet cus) throws IOException {
-    // deactivate the node from the LockssRepository
     LockssRepository repository = theDaemon.getLockssRepository(managedAu);
     repository.deactivateNode(cus.getUrl());
   }
 
-  private void callContentPollsOnSubNodes(NodeState state, CachedUrlSet cus)
-      throws IOException {
+  /**
+   * Calls content polls on the children of the CUS.  Subdivides via two ranged
+   * polls if the child count is greater than four.
+   * @param cus CachedUrlSet
+   * @throws IOException
+   */
+  private void callContentPollsOnSubNodes(CachedUrlSet cus) throws IOException {
     Iterator children = cus.flatSetIterator();
     List childList = convertChildrenToCusList(children);
     // Divide the list in two and call two new content polls
@@ -1387,8 +1492,7 @@ public class NodeManagerImpl
       lwr = ((CachedUrlSet) childList.get(mid + 1)).getUrl();
       upr = ((CachedUrlSet) childList.get(childList.size() - 1)).getUrl();
       callContentPoll(cus, lwr, upr);
-    }
-    else if (childList.size() > 0) {
+    } else if (childList.size() > 0) {
       logger.debug2("less than 4 children, calling content poll on each.");
       for (int i = 0; i < childList.size(); i++) {
         callContentPoll((CachedUrlSet)childList.get(i), null, null);
@@ -1398,13 +1502,21 @@ public class NodeManagerImpl
     }
   }
 
+  /**
+   * Calls a content poll on the CUS with the given bounds (can be null).
+   * @param cus CachedUrlSet
+   * @param lwr lower bound
+   * @param upr upper bound
+   * @throws IOException
+   */
   private void callContentPoll(CachedUrlSet cus, String lwr, String upr)
       throws IOException {
     String base = cus.getUrl();
-    if(lwr != null) {
+    // check the bounds and trim the base url, if present
+    if (lwr != null) {
       lwr = lwr.startsWith(base) ? lwr.substring(base.length()) : lwr;
     }
-    if(upr != null) {
+    if (upr != null) {
       upr = upr.startsWith(base) ? upr.substring(base.length()) : upr;
     }
     ArchivalUnit au = cus.getArchivalUnit();
@@ -1412,10 +1524,17 @@ public class NodeManagerImpl
     CachedUrlSet newCus =
       plugin.makeCachedUrlSet(au, new RangeCachedUrlSetSpec(base, lwr, upr));
     PollSpec spec = new PollSpec(newCus, lwr, upr);
-    logger.debug2("Calling a content poll on " + spec);
+    if (logger.isDebug2()) {
+      logger.debug2("Calling a content poll on " + spec);
+    }
     pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
   }
 
+  /**
+   * Calls a single node content poll on the CUS.
+   * @param cus CachedUrlSet
+   * @throws IOException
+   */
   private void callSingleNodeContentPoll(CachedUrlSet cus) throws IOException {
     // create a 'single node' CachedUrlSet
     ArchivalUnit au = cus.getArchivalUnit();
@@ -1424,48 +1543,70 @@ public class NodeManagerImpl
       plugin.makeCachedUrlSet(au,
 			      new SingleNodeCachedUrlSetSpec(cus.getUrl()));
     PollSpec spec = new PollSpec(newCus);
-    logger.debug2("Calling a content poll on " + spec);
+    if (logger.isDebug2()) {
+      logger.debug2("Calling a content poll on " + spec);
+    }
     pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
   }
 
-
+  /**
+   * Recalls a poll matching the last poll given by the PollState.
+   * @param spec new spec
+   * @param lastPoll last poll to recall
+   */
   private void callLastPoll(PollSpec spec, PollState lastPoll) {
     try {
       if (lastPoll.type == Poll.CONTENT_POLL) {
-        logger.debug2("Calling a content poll on " + spec);
+        if (logger.isDebug2()) {
+          logger.debug2("Calling a content poll on " + spec);
+        }
         pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
-      }
-      else if (lastPoll.type == Poll.NAME_POLL) {
-        logger.debug2("Calling a name poll on " + spec);
+      } else if (lastPoll.type == Poll.NAME_POLL) {
+        if (logger.isDebug2()) {
+          logger.debug2("Calling a name poll on " + spec);
+        }
         pollManager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
       }
-    }
-    catch (IOException ioe) {
+    } catch (IOException ioe) {
       logger.error("Exception calling poll on " + spec, ioe);
     }
   }
 
-
+  /**
+   * Calls a name poll with the given spec.
+   * @param spec PollSpec
+   */
   private void callNamePoll(PollSpec spec) {
     try {
-      logger.debug2("Calling a name poll on " + spec);
+      if (logger.isDebug2()) {
+        logger.debug2("Calling a name poll on " + spec);
+      }
       pollManager.sendPollRequest(LcapMessage.NAME_POLL_REQ, spec);
-    }
-    catch (IOException ioe) {
+    } catch (IOException ioe) {
       logger.error("Exception calling name poll on " + spec, ioe);
     }
   }
 
+  /**
+   * Calls a content poll with the given spec.
+   * @param spec PollSpec
+   */
   private void callContentPoll(PollSpec spec) {
     try {
-      logger.debug2("Calling a content poll on " + spec);
+      if (logger.isDebug2()) {
+        logger.debug2("Calling a content poll on " + spec);
+      }
       pollManager.sendPollRequest(LcapMessage.CONTENT_POLL_REQ, spec);
-    }
-    catch (IOException ioe) {
+    } catch (IOException ioe) {
       logger.error("Exception calling content poll on " + spec, ioe);
     }
   }
 
+  /**
+   * Converts a list of CachedUrlSetNodes into a list of CachedUrlSets.
+   * @param children Iterator of CUSNodes
+   * @return List of CUSs
+   */
   private List convertChildrenToCusList(Iterator children) {
     ArrayList childList = new ArrayList();
     if (children != null) {
@@ -1487,12 +1628,19 @@ public class NodeManagerImpl
     return childList;
   }
 
+  /**
+   * Returns true if the CUS has damage.
+   * @param cus CachedUrlSet
+   * @return boolean true iff has damage.
+   */
   boolean hasDamage(CachedUrlSet cus) {
     boolean hasDamage = false;
     synchronized (damagedNodes) {
+      // check if this url is damaged
       if (damagedNodes.containsWithDamage(cus.getUrl())) {
         return true;
       }
+      // check if the CUS contains any of the other damaged nodes
       Iterator damagedIt = damagedNodes.damageIterator();
       while (damagedIt.hasNext()) {
         String url = (String) damagedIt.next();
@@ -1504,6 +1652,10 @@ public class NodeManagerImpl
     return hasDamage;
   }
 
+  /**
+   * Update reputations based on the results.
+   * @param results Tallier
+   */
   private void updateReputations(Tallier results) {
     IdentityManager idManager = theDaemon.getIdentityManager();
     Iterator voteIt = results.getPollVotes().iterator();
@@ -1513,8 +1665,7 @@ public class NodeManagerImpl
     if (results.getTallyResult() == Tallier.RESULT_WON) {
       agreeChange = IdentityManager.AGREE_VOTE;
       disagreeChange = IdentityManager.DISAGREE_VOTE;
-    }
-    else if (results.getTallyResult() == Tallier.RESULT_LOST) {
+    } else if (results.getTallyResult() == Tallier.RESULT_LOST) {
       agreeChange = IdentityManager.DISAGREE_VOTE;
       disagreeChange = IdentityManager.AGREE_VOTE;
     }
@@ -1545,6 +1696,12 @@ public class NodeManagerImpl
     return list;
   }
 
+  /**
+   * Checks if the given spec was a content poll on the top level.
+   * @param spec CachedUrlSetSpec
+   * @param type poll type
+   * @return boolean true iff content on AU spec
+   */
   boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type) {
     return (spec.isAu() && (type == Poll.CONTENT_POLL));
   }
@@ -1618,6 +1775,9 @@ public class NodeManagerImpl
     }
   }
 
+  /**
+   * Callback for a content repair crawl.
+   */
   class ContentRepairCallback implements CrawlManager.Callback {
     /**
      * @param success whether the repair was successful or not
@@ -1668,6 +1828,10 @@ public class NodeManagerImpl
     }
   }
 
+  /**
+   * Cookie object for content repair crawl.  Contains the CUS, poll key,
+   * type, and list of urls to repair.
+   */
   static class PollCookie {
     CachedUrlSet cus;
     String pollKey;

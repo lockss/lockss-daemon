@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateCache.java,v 1.8 2003-06-20 22:34:52 claire Exp $
+ * $Id: NodeStateCache.java,v 1.9 2004-04-01 02:44:32 eaalto Exp $
  */
 
 /*
@@ -33,13 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import org.lockss.util.SetUtil;
-import org.lockss.daemon.Configuration;
 import org.apache.commons.collections.LRUMap;
 import org.apache.commons.collections.ReferenceMap;
 
 /**
- * Subclass of the LRUMap, which holds {@link NodeState} objects and saves them
+ * Wrapper for an LRUMap, which holds {@link NodeState} objects and saves them
  * via the {@link HistoryRepository} upon removal.  Also contains a weak
  * reference map to protect against multiple instances of the same NodeState.
  */
@@ -48,11 +46,16 @@ public class NodeStateCache {
   ReferenceMap refMap = new ReferenceMap(ReferenceMap.HARD,
                                          ReferenceMap.WEAK);
 
+  // logging variables
   private int cacheHits = 0;
   private int cacheMisses = 0;
   private int refHits = 0;
   private int refMisses = 0;
 
+  /**
+   * Standard constructor.  Size must be positive.
+   * @param maxSize maximum size for the LRUMap
+   */
   public NodeStateCache(int maxSize) {
     if (maxSize<=0) {
       throw new IllegalArgumentException("Cache size must be greater than zero");
@@ -85,15 +88,18 @@ public class NodeStateCache {
    * @return the {@link NodeState}
    */
   public synchronized NodeState getState(String urlKey) {
+    // first check the LRUMap
     NodeState node = (NodeState)lruMap.get(urlKey);
     if (node!=null) {
       cacheHits++;
       return node;
     } else {
       cacheMisses++;
+      // then check the refMap to see if one is still in use
       node = (NodeState)refMap.get(urlKey);
       if (node!=null) {
         refHits++;
+        // if found, put back in LRUMap
         lruMap.put(urlKey, node);
         return node;
       } else {
@@ -121,10 +127,15 @@ public class NodeStateCache {
     return new HashSet(lruMap.values());
   }
 
+  /**
+   * Clears both the LRUMap and the reference map.
+   */
   public void clear() {
     lruMap.clear();
     refMap.clear();
   }
+
+  // logging accessors
 
   int getCacheHits() { return cacheHits; }
   int getCacheMisses() { return cacheMisses; }

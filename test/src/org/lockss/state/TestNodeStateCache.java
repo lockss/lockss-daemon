@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeStateCache.java,v 1.7 2003-06-20 22:34:55 claire Exp $
+ * $Id: TestNodeStateCache.java,v 1.8 2004-04-01 02:44:31 eaalto Exp $
  */
 
 /*
@@ -32,21 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.io.*;
 import java.util.*;
-import java.net.*;
 import org.lockss.test.*;
-import org.lockss.util.*;
 import org.lockss.plugin.*;
-import org.lockss.daemon.*;
 
 /**
- * This is the test class for org.lockss.daemon.LockssRepositoryImpl
+ * This is the test class for org.lockss.daemon.NodeStateCache
  */
-
 public class TestNodeStateCache extends LockssTestCase {
   private MockHistoryRepository repo;
-  private String tempDirPath;
   private NodeStateCache cache;
 
   public void setUp() throws Exception {
@@ -59,7 +53,7 @@ public class TestNodeStateCache extends LockssTestCase {
     assertEquals(10, cache.getCacheSize());
 
     for (int ii=0; ii<11; ii++) {
-      cache.putState("test"+ii, new NodeStateImpl());
+      cache.putState("test"+ii, new NodeStateImpl(null, -1, null, null, null));
     }
     assertEquals(10, cache.lruMap.size());
 
@@ -67,7 +61,7 @@ public class TestNodeStateCache extends LockssTestCase {
     assertEquals(20, cache.getCacheSize());
 
     for (int ii=0; ii<21; ii++) {
-      cache.putState("test"+ii, new NodeStateImpl());
+      cache.putState("test"+ii, new NodeStateImpl(null, -1, null, null, null));
     }
     assertEquals(20, cache.lruMap.size());
 
