@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.45 2004-10-19 10:17:35 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.46 2005-01-07 09:23:41 tlipkis Exp $
  */
 
 /*
@@ -612,7 +612,6 @@ public class DaemonStatus extends LockssServlet {
   private String getColAlignment(ColumnDescriptor cd) {
     switch (cd.getType()) {
     case ColumnDescriptor.TYPE_STRING:
-    case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
     case ColumnDescriptor.TYPE_DATE:
     case ColumnDescriptor.TYPE_IP_ADDRESS:
     case ColumnDescriptor.TYPE_TIME_INTERVAL:
@@ -620,6 +619,7 @@ public class DaemonStatus extends LockssServlet {
       return "LEFT";
     case ColumnDescriptor.TYPE_INT:
     case ColumnDescriptor.TYPE_PERCENT:
+    case ColumnDescriptor.TYPE_FLOAT:	// tk - should align decimal points?
       return "RIGHT";
     }
   }
@@ -686,6 +686,7 @@ public class DaemonStatus extends LockssServlet {
   }
 
   static NumberFormat bigIntFmt = NumberFormat.getInstance();
+  static NumberFormat floatFmt = new DecimalFormat("0.0");
   static {
 //     if (bigIntFmt instanceof DecimalFormat) {
 //       ((DecimalFormat)bigIntFmt).setDecimalSeparatorAlwaysShown(true);
@@ -708,9 +709,10 @@ public class DaemonStatus extends LockssServlet {
 	}
 	// fall thru
       case ColumnDescriptor.TYPE_STRING:
-      case ColumnDescriptor.TYPE_FLOAT:
       default:
 	return val.toString();
+      case ColumnDescriptor.TYPE_FLOAT:
+	return floatFmt.format(((Number)val).doubleValue());
       case ColumnDescriptor.TYPE_PERCENT:
 	float fv = ((Number)val).floatValue();
 	return Integer.toString(Math.round(fv * 100)) + "%";
