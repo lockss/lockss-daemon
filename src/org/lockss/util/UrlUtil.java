@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.24 2004-09-27 22:39:04 smorabito Exp $
+ * $Id: UrlUtil.java,v 1.25 2004-10-20 21:49:50 smorabito Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -255,6 +255,11 @@ public class UrlUtil {
   public static boolean isHttpUrl(String url) {
     return StringUtil.startsWithIgnoreCase(url, "http:") ||
       StringUtil.startsWithIgnoreCase(url, "https:");
+  }
+
+  /** Return true if a file: url */
+  public static boolean isFileUrl(String url) {
+    return StringUtil.startsWithIgnoreCase(url, "file:");
   }
 
   /**

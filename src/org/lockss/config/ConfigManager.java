@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.4 2004-10-12 22:56:57 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.5 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -130,6 +130,10 @@ public class ConfigManager implements LockssManager {
     EMPTY_CONFIGURATION.seal();
   }
 
+  // Platform config
+  private static Configuration platformConfig =
+    ConfigManager.EMPTY_CONFIGURATION;
+
   // Current configuration instance.
   // Start with an empty one to avoid errors in the static accessors.
   private Configuration currentConfig = EMPTY_CONFIGURATION;
@@ -189,6 +193,7 @@ public class ConfigManager implements LockssManager {
     configUrlList = null;
     cacheConfigInited = false;
     cacheConfigDir = null;
+    // Reset the config cache.
     configCache = new ConfigCache();
     stopHandler();
     haveConfig = new OneShotSemaphore();
@@ -255,6 +260,14 @@ public class ConfigManager implements LockssManager {
     return config;
   }
 
+  public static Configuration getPlatformConfig() {
+    Configuration res = getCurrentConfig();
+    if (res.isEmpty()) {
+      res = platformConfig;
+    }
+    return res;
+  }
+
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
    * time a configuration has been loaded.)
    * @param timer limits the time to wait.  If null, returns immediately.
@@ -317,7 +330,7 @@ public class ConfigManager implements LockssManager {
     }
     Configuration newConfig = newConfiguration();
     try {
-      boolean gotIt = newConfig.loadList(urlList);
+      boolean gotIt = loadList(newConfig, urlList);
       if (gotIt) {
 	recentLoadError = null;
 	if (groupName != null) {
@@ -335,6 +348,57 @@ public class ConfigManager implements LockssManager {
       recentLoadError = e.toString();
       return null;
     }
+  }
+
+  boolean loadList(Configuration config, List urls) {
+    return loadList(config, urls, false);
+  }
+
+  /**
+   * Try to load config from a list or urls
+   * @return true iff properties were successfully loaded
+   */
+  boolean loadList(Configuration config, List urls, boolean failOk) {
+    // Complete kludge until platform support changed.  Load local.txt
+    // first so can use values from it to control parsing of other files.
+    // Also save it so we can get local config values later even if
+    // rest of load fails
+    for (Iterator iter = urls.iterator(); iter.hasNext();) {
+      String url = (String)iter.next();
+      if (StringUtil.endsWithIgnoreCase(url, "local.txt")) {
+	try {
+	  ConfigFile cf = configCache.get(url);
+	  config.load(cf);
+	  platformConfig = config.copy();
+	  platformConfig.seal();
+	} catch (IOException e) {
+	  log.warning("Couldn't preload local.txt", e);
+	}
+      }
+    }
+
+    // Load all of the config files in order.
+    for (Iterator iter = urls.iterator(); iter.hasNext();) {
+      String url = (String)iter.next();
+      try {
+	ConfigFile cf = configCache.get(url);
+	config.load(cf);
+      } catch (IOException e) {
+	if (e instanceof FileNotFoundException &&
+	    StringUtil.endsWithIgnoreCase(url, ".opt")) {
+	  log.info("Not loading props from nonexistent optional file: " + url);
+	} else {
+	  // This load failed.  Fail the whole thing.
+	  if (!failOk) {
+	    log.warning("Couldn't load props from " + url + ": " +
+			e.toString());
+	    config.reset();  // ensure config is empty
+	  }
+	  return false;
+	}
+      }
+    }
+    return true;
   }
 
   String getLoadErrorMessage(ConfigFile cf) {
@@ -606,7 +670,7 @@ public class ConfigManager implements LockssManager {
     for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
       File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
       log.debug2("Loading cache config from " + cfile);
-      boolean gotIt = config.loadList(ListUtil.list(cfile.toString()), true);
+      boolean gotIt = loadList(config, ListUtil.list(cfile.toString()), true);
       if (gotIt) {
 	res.add(cfile.toString());
       }
@@ -621,27 +685,22 @@ public class ConfigManager implements LockssManager {
    */
   public Configuration readCacheConfigFile(String cacheConfigFileName)
       throws IOException {
+
     if (cacheConfigDir == null) {
       log.warning("Attempting to read cache config file: " +
 		  cacheConfigFileName + ", but no cache config dir exists");
       throw new RuntimeException("No cache config dir");
     }
-    File cfile = new File(cacheConfigDir, cacheConfigFileName);
-    log.debug2("Reading cache config file: " + cfile.toString());
-    InputStream is = new FileInputStream(cfile);
-    Configuration res = newConfiguration();
 
-    if (StringUtil.endsWithIgnoreCase(cacheConfigFileName, ".xml")) {
-      res.loadXmlProperties(is);
-    } else {
-      res.loadTextProperties(is);
-    }
-
-    is.close();
+    String cfile = new File(cacheConfigDir, cacheConfigFileName).toString();
+    log.debug2("Reading cache config file: " + cfile);
+    ConfigFile cf = configCache.get(cfile);
+    Configuration res = cf.getConfiguration();
     return res;
   }
 
-  /** Return the contents of the local AU config file.
+  /** 
+   * Return the contents of the local AU config file.
    * @return the Configuration from the AU config file, or an empty config
    * if no config file found
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.3 2004-10-01 17:50:08 smorabito Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -57,21 +57,6 @@ public class ConfigurationPropTreeImpl extends Configuration {
 
   PropertyTree getPropertyTree() {
     return props;
-  }
-
-  /**
-   * Load plain text Java properties.
-   */
-  boolean loadTextProperties(InputStream istr) throws IOException {
-    props.load(istr);
-    return true;
-  }
-
-  /**
-   * Load LOCKSS XML properties
-   */
-  boolean loadXmlProperties(InputStream istr) throws IOException {
-    return XmlPropertyLoader.load(props, istr);
   }
 
   boolean store(OutputStream ostr, String header) throws IOException {

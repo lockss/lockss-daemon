@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.3 2004-10-12 22:02:18 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestConfigManager extends LockssTestCase {
 
   public void testParam() throws IOException, Configuration.InvalidParam {
     Configuration config = mgr.newConfiguration();
-    config.load(new ConfigFile(FileTestUtil.urlOfString(c2)));
+    config.load(new FileConfigFile(FileTestUtil.urlOfString(c2)));
     mgr.setCurrentConfig(config);
     assertEquals("12", ConfigManager.getParam("prop.p1"));
     assertEquals("foobar", ConfigManager.getParam("prop.p2"));
@@ -447,6 +447,16 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("333", c2.get("org.lockss.au.fooauid.baz"));
   }
 
+  public void testLoadList() throws IOException {
+    Configuration config = newConfiguration();
+    mgr.loadList(config, ListUtil.list(FileTestUtil.urlOfString(c1),
+				       FileTestUtil.urlOfString(c1a)));
+    assertEquals("12", config.get("prop1"));
+    assertEquals("xxx", config.get("prop2"));
+    assertTrue(config.getBoolean("prop3", false));
+    assertEquals("yyy", config.get("prop4"));
+  }
+
   public void testFromProperties() throws Exception {
     Properties props = new Properties();
     props.put("foo", "23");
@@ -455,5 +465,9 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals(2, config.keySet().size());
     assertEquals("23", config.get("foo"));
     assertEquals("false", config.get("bar"));
+  }
+
+  private Configuration newConfiguration() {
+    return new ConfigurationPropTreeImpl();
   }
 }

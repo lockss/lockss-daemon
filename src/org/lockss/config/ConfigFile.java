@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.2 2004-10-01 17:50:09 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.3 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -43,19 +43,19 @@ import org.lockss.util.urlconn.*;
  * generic config (either plain text or XML)
  */
 
-public class ConfigFile {
+public abstract class ConfigFile {
   public static final int XML_FILE = 0;
   public static final int PROPERTIES_FILE = 1;
 
-  private int m_fileType;
-  private String m_lastModified;
-  private String m_fileUrl;
-  private String m_fileContents;
-  private String m_loadError = "Not loaded yet";
-  private IOException m_IOException;
-  private long m_lastAttempt;
+  protected int m_fileType;
+  protected String m_lastModified;
+  protected String m_fileUrl;
+  protected String m_loadError = "Not yet loaded";
+  protected IOException m_IOException;
+  protected long m_lastAttempt;
+  protected ConfigurationPropTreeImpl m_config;
 
-  private static Logger log = Logger.getLogger("ConfigFile");
+  protected static Logger log = Logger.getLogger("ConfigFile");
 
   /**
    * Read the contents of a file or the results of a URL fetch into
@@ -65,7 +65,17 @@ public class ConfigFile {
    */
   public ConfigFile(String url)
       throws IOException {
-    if (!load(url)) {
+
+    if (StringUtil.endsWithIgnoreCase(url, ".xml")) {
+      m_fileType = ConfigFile.XML_FILE;
+    } else {
+      m_fileType = ConfigFile.PROPERTIES_FILE;
+    }
+
+    m_fileUrl = url;
+
+    // ensure the file is loaded
+    if (!reload()) {
       log.warning("Configuration file not loaded: " + url);
     }
   }
@@ -94,172 +104,32 @@ public class ConfigFile {
     return m_loadError == null;
   }
 
-  /**
-   * Return an inputstream of the file contents.
-   */
-  public InputStream getInputStream() throws IOException {
-    if (m_fileContents == null) {
-      if (m_IOException != null) {
-	throw m_IOException;
-      } else if (m_loadError != null) {
-	throw new IOException("Error reading file: " + m_loadError);
-      } else {
-	throw new IllegalStateException("Config file not loaded: " +
-					this.toString());
-      }
-    }
-    return new ReaderInputStream(new StringReader(m_fileContents));
+  public Configuration getConfiguration() {
+    return m_config;
   }
 
   /**
-   * Attempt to re-load the file contents.
+   * Subclasses must implement this method to load a Configuration
+   * object from the supplied URL (file or remote).
    */
-  public void reload() throws IOException {
-    if (m_fileUrl != null) {
-      load(m_fileUrl);
-    }
-  }
+  protected abstract boolean reload()
+      throws IOException;
 
-  /**
-   * KLUDGE: Part of the XML configuration file transition.
-   *
-   * Given a URL, return a version that ends with ".xml".  For
-   * example, "lockss.txt" -> "lockss.xml", "foobar" -> "foobar.xml"
-   */
-  private String makeXmlUrl(String url) {
-    return StringUtil.upToFinal(url, ".") + ".xml";
-  }
-
-  /**
-   * KLUDGE: Part of the XML configuration file transition.
-   *
-   * Given a URL, attempt to open an input stream.
-   */
-  private Reader getUrlInputStream(String url)
-      throws IOException, MalformedURLException {
-    Reader in = null;
-
-    URL u = new URL(url);
-    LockssUrlConnection conn = UrlUtil.openConnection(url);
-
-    if (m_fileContents != null && m_lastModified != null) {
-      log.debug2("Setting request if-modified-since to: " + m_lastModified);
-      conn.setIfModifiedSince(m_lastModified);
-    }
-
-    conn.execute();
-
-    if (conn.isHttp()) {
-      int resp = conn.getResponseCode();
-      String respMsg = conn.getResponseMessage();
-      log.debug2(url + " request got response: " + resp + ": " + respMsg);
-      switch (resp) {
-      case HttpURLConnection.HTTP_OK:
-	m_loadError = null;
-	m_lastModified = conn.getResponseHeaderValue("last-modified");
-	log.debug2("Storing this config's last-modified as: " +
-		   m_lastModified);
-	in = new InputStreamReader(conn.getResponseInputStream());
-	log.debug2("New file, or file changed.  Loading file from " +
-		   "remote connection:" + url);
-	break;
-      case HttpURLConnection.HTTP_NOT_MODIFIED:
-	m_loadError = null;
-	log.debug3("Not reloading");
-	break;
-      default:
-	m_loadError = resp + ": " + respMsg;
-      }
+  protected void setConfigFrom(InputStream in) throws IOException {
+    m_config = new ConfigurationPropTreeImpl();
+    // Load the configuration
+    if (m_fileType == XML_FILE) {
+      XmlPropertyLoader.load(m_config.getPropertyTree(), in);
     } else {
-      in = new InputStreamReader(conn.getResponseInputStream());
-      m_loadError = null;
+      m_config.getPropertyTree().load(in);
     }
-    return in;
-  }
-
-  /**
-   * Load a URL or file.  If there is no current "last modified"
-   * time, try to load it unconditionally.  Otherwise, send a
-   * conditional GET with an "if-modified-since" header.
-   */
-  private synchronized boolean load(String url) throws IOException {
-    m_lastAttempt = TimeBase.nowMs();
-    Reader in = null;
-    Writer out = new StringWriter();
-    m_fileUrl = url;
-
-    // TODO: This check may or may not even be necessary.  If it
-    // proves to be useful, it may need to be improved in the
-    // future.
-    if (StringUtil.endsWithIgnoreCase(url, ".xml")) {
-      m_fileType = ConfigFile.XML_FILE;
-    } else {
-      m_fileType = ConfigFile.PROPERTIES_FILE;
-    }
-
-    m_IOException = null;
-    // Open an output stream to write to our string
-    try {
-      // KLUDGE: Part of the XML config file transition.  If this is
-      // an HTTP URL and we have never loaded the file before, see if an
-      // XML version of the file is available first.  If none can be
-      // found, try the original URL.
-      //
-      // This logic can and should go away when we're no longer in a
-      // transition period, and the platform knows about XML config
-      // files.
-      if (!Boolean.getBoolean("org.lockss.config.noXmlHack") &&
-	  m_fileContents == null &&
-	  m_fileType == PROPERTIES_FILE && 
-	  UrlUtil.isHttpUrl(url)) {
-	String xmlUrl = makeXmlUrl(url);
-
-	try {
-	  log.debug2("First pass: Trying to load XML-ized URL: " + xmlUrl);
-	  in = getUrlInputStream(xmlUrl);
-	} catch (Exception ignore) {;}
-	
-	if (in != null) {
-	  // This is really an XML file, deceitfully set the URL and
-	  // file type for when we reload.
-	  m_fileType = XML_FILE;
-	  m_fileUrl = xmlUrl;
-	} else {
-	  // This is not an XML file, try to load the real URL name.
-	  log.debug2("Second pass: That didn't work, trying to " +
-		     "load original URL: " + url);
-	  in = getUrlInputStream(url);
-	}
-      } else {
-	in = getUrlInputStream(url);	
-      }
-    } catch (MalformedURLException ex) {
-      in = new InputStreamReader(new FileInputStream(url));
-      log.debug2("Loading local file unconditionally: " + url);
-    } catch (IOException ex) {
-      log.warning("Unexpected exception trying to load " +
-		  "config file (" + url + "): " + ex);
-      m_IOException = ex;
-      throw ex;
-    }
-
-    if (in != null) {
-      StreamUtil.copy(in, out);
-
-      out.flush();
-      m_fileContents = out.toString();
-      in.close();
-      out.close();
-    }
-
-    return m_fileContents != null;
   }
 
   /**
    * Used for logging and testing and debugging.
    */
   public String toString() {
-    return "{url=" + m_fileUrl + "; isLoaded=" + (m_fileContents != null) +
+    return "{url=" + m_fileUrl + "; isLoaded=" + (m_config != null) +
       "; lastModified=" + m_lastModified + "}";
   }
 }

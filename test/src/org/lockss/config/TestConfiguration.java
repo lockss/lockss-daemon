@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.1 2004-09-27 22:10:13 smorabito Exp $
+ * $Id: TestConfiguration.java,v 1.2 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -181,7 +181,7 @@ public class TestConfiguration extends LockssTestCase {
   public void testLoad() throws IOException, Configuration.InvalidParam {
     String f = FileTestUtil.urlOfString(c1);
     Configuration config = newConfiguration();
-    config.load(new ConfigFile(f));
+    config.load(new FileConfigFile(f));
     assertEquals("12", config.get("prop1"));
     assertEquals("12", config.get("prop1", "wrong"));
     assertEquals("foobar", config.get("prop2"));
@@ -219,22 +219,12 @@ public class TestConfiguration extends LockssTestCase {
     assertFalse( config.containsKey("propnot"));
   }
 
-  public void testLoadList() throws IOException {
-    Configuration config = newConfiguration();
-    config.loadList(ListUtil.list(FileTestUtil.urlOfString(c1),
-				  FileTestUtil.urlOfString(c1a)));
-    assertEquals("12", config.get("prop1"));
-    assertEquals("xxx", config.get("prop2"));
-    assertTrue(config.getBoolean("prop3", false));
-    assertEquals("yyy", config.get("prop4"));
-  }
-
   private static final String c3 =
     "prop.p1=a;b;c;d;e;f;g";
   
   public void testGetList() throws IOException {
     Configuration config = newConfiguration();
-    config.load(new ConfigFile(FileTestUtil.urlOfString(c3)));
+    config.load(new FileConfigFile(FileTestUtil.urlOfString(c3)));
     try {
       List l = config.getList("prop.p1");
       assertNotNull(l);
@@ -254,7 +244,7 @@ public class TestConfiguration extends LockssTestCase {
 
   public void testGetListEmptyStrings() throws IOException {
     Configuration config = newConfiguration();
-    config.load(new ConfigFile(FileTestUtil.urlOfString("prop.p1=a;;b;")));
+    config.load(new FileConfigFile(FileTestUtil.urlOfString("prop.p1=a;;b;")));
     assertEquals(ListUtil.list("a", "b"), config.getList("prop.p1"));
   }
 
@@ -298,7 +288,7 @@ public class TestConfiguration extends LockssTestCase {
 
   public void testStruct() throws IOException {
     Configuration config = newConfiguration();
-    config.load(new ConfigFile(FileTestUtil.urlOfString(c2)));
+    config.load(new FileConfigFile(FileTestUtil.urlOfString(c2)));
     Set set = new HashSet();
     for (Iterator iter = config.keyIterator(); iter.hasNext();) {
       set.add(iter.next());

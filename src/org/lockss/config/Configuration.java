@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.3 2004-10-01 17:50:08 smorabito Exp $
+ * $Id: Configuration.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -108,13 +108,13 @@ public abstract class Configuration {
     return ver == null ? null : new DaemonVersion(ver);
   }
 
-  private static Configuration platformConfig =
-    ConfigManager.EMPTY_CONFIGURATION;
-
   /** A Configuration.Differences object representing a totally different
    * Configuration */
   public static Differences DIFFERENCES_ALL = new DifferencesAll();
 
+  public static Configuration getPlatformConfig() {
+    return ConfigManager.getPlatformConfig();
+  }
 
   public static Version getPlatformVersion() {
     String ver = getPlatformConfig().get(PARAM_PLATFORM_VERSION);
@@ -127,14 +127,6 @@ public abstract class Configuration {
 
   public static String getPlatformHostname() {
     return getPlatformConfig().get(PARAM_PLATFORM_HOSTNAME);
-  }
-
-  public static Configuration getPlatformConfig() {
-    Configuration res = ConfigManager.getCurrentConfig();
-    if (res.isEmpty()) {
-      res = platformConfig;
-    }
-    return res;
   }
 
   /** Return a copy of the configuration with the specified prefix
@@ -169,74 +161,12 @@ public abstract class Configuration {
   }
 
   /**
-   * Try to load config from a list or urls
-   * @return true iff properties were successfully loaded
+   * Given a Config File, load its configuration into this one.  This
+   * will overwrite any existing properties with the properties from
+   * the Config File.
    */
-  boolean loadList(List urls) {
-    return loadList(urls, false);
-  }
-
-  /**
-   * Try to load config from a list or urls
-   * @return true iff properties were successfully loaded
-   */
-  boolean loadList(List urls, boolean failOk) {
-    ConfigCache configCache = getConfigCache();
-    // Complete kludge until platform support changed.  Load local.txt
-    // first so can use values from it to control parsing of other files.
-    // Also save it so we can get local config values later even if
-    // rest of load fails
-    for (Iterator iter = urls.iterator(); iter.hasNext();) {
-      String url = (String)iter.next();
-      if (StringUtil.endsWithIgnoreCase(url, "local.txt")) {
-	try {
-	  configCache.load(url);
-	  load(configCache.get(url));
-	  platformConfig = this.copy();
-	  platformConfig.seal();
-	} catch (IOException e) {
-	  log.warning("Couldn't preload local.txt", e);
-	}
-      }
-    }
-
-    // Load all of the config files in order.
-    for (Iterator iter = urls.iterator(); iter.hasNext();) {
-      String url = (String)iter.next();
-      try {
-	configCache.load(url);
-	load(configCache.get(url));
-      } catch (IOException e) {
-	if (e instanceof FileNotFoundException &&
-	    StringUtil.endsWithIgnoreCase(url, ".opt")) {
-	  log.info("Not loading props from nonexistent optional file: " + url);
-	} else {
-	  // This load failed.  Fail the whole thing.
-	  if (!failOk) {
-	    log.warning("Couldn't load props from " + url + ": " +
-			e.toString());
-	    reset();  // ensure config is empty
-	  }
-	  return false;
-	}
-      }
-    }
-
-    return true;
-  }
-
-  /**
-   * Given a ConfigFile, parse and load its properties.
-   */
-  void load(ConfigFile conf) throws IOException {
-    InputStream bis = new BufferedInputStream(conf.getInputStream());
-    if (conf.getFileType() == ConfigFile.XML_FILE) {
-      loadXmlProperties(bis);
-    } else {
-      loadTextProperties(bis);
-    }
-
-    bis.close();
+  void load(ConfigFile file) {
+    copyConfigTreeFrom(file.getConfiguration());
   }
 
   /** Return the first ConfigFile that got an error */
@@ -244,19 +174,17 @@ public abstract class Configuration {
     ConfigCache configCache = getConfigCache();
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
-      ConfigFile cf = configCache.get(url);
+      ConfigFile cf = null;
+      try {
+	cf = configCache.get(url);
+      } catch (IOException ignore) {
+      }
       if (cf != null && !cf.isLoaded()) {
 	return cf;
       }
     }
     return null;
   }
-
-  abstract boolean loadXmlProperties(InputStream istr)
-      throws IOException;
-
-  abstract boolean loadTextProperties(InputStream istr)
-      throws IOException;
 
   abstract boolean store(OutputStream ostr, String header)
       throws IOException;
@@ -512,9 +440,13 @@ public abstract class Configuration {
     remove(rootKey);
   }
 
-  /** Remove the subtree below the specified key.
-   * @param rootKey The key at the root of the subtree to be deleted.  This
-   * key and all below it are removed.
+  /** 
+   * Copy the contents of another configuration relative to the
+   * specified "root" key.
+   *
+   * @param fromConfig The Configuration from which to copy.
+   * @param root The root key from which to copy.
+   *
    */
   public void copyConfigTreeFrom(Configuration fromConfig, String root) {
     Configuration subtree = fromConfig.getConfigTree(root);
@@ -531,6 +463,20 @@ public abstract class Configuration {
     }
   }
 
+  /**
+   * Copy the entire contents of another configuration into this one.
+   * @param fromConfig The Configuration from which to copy.
+   */
+  public void copyConfigTreeFrom(Configuration fromConfig) {
+    if (fromConfig.isEmpty()) {
+      return;
+    }
+
+    for (Iterator iter = fromConfig.keyIterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      put(key, fromConfig.get(key));
+    }
+  }
 
   // must be implemented by implementation subclass
 

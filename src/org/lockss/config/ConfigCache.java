@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.3 2004-10-11 00:56:59 tlipkis Exp $
+ * $Id: ConfigCache.java,v 1.4 2004-10-20 21:49:50 smorabito Exp $
  */
 
 /*
@@ -50,97 +50,62 @@ public class ConfigCache {
     Logger.getLoggerWithInitialLevel("ConfigCache",
 				     Logger.getInitialDefaultLevel());
 
-  private LinkedMap m_remoteFileMap = new LinkedMap();
-  private LinkedMap m_localFileMap = new LinkedMap();
+  private LinkedMap m_configMap = new LinkedMap();
 
 
   /**
    * Retrieve a configuration file from the cache.
    */
-  public ConfigFile get(String url) {
-    ConfigFile confFile = null;
-
-    if (UrlUtil.isHttpUrl(url)) {
-      confFile = (ConfigFile)m_remoteFileMap.get(url);
-    } else {
-      confFile = (ConfigFile)m_localFileMap.get(url);
-    }
-
+  public ConfigFile get(String url) throws IOException {
+    ensureLoaded(url);
+    ConfigFile confFile = (ConfigFile)m_configMap.get(url);
     return confFile;
   }
 
-
   /**
-   * Insert a configuration file into the cache.  If the file
-   * is already in the cache, it will be reloaded if it has changed.
+   * Ensure that a file exists in the cache with the most recent
+   * available version.
    */
-  public void load(String url) throws IOException {
-    try {
-      // Store the configuration in the right hashmap
-      if (UrlUtil.isHttpUrl(url)) {
-	put(m_remoteFileMap, url);
-      } else {
-	put(m_localFileMap, url);
+  public void ensureLoaded(String url) throws IOException {
+    ConfigFile cf = null;
+
+    if (m_configMap.containsKey(url)) {
+      // already exists, just reload
+      log.debug2("Cache hit, reloading.");
+      ((ConfigFile)m_configMap.get(url)).reload();
+    } else {
+      // doesn't yet exist in the cache, attempt to add it.
+      log.debug2("Cache miss, trying to add new file.");
+      try {
+	if (UrlUtil.isHttpUrl(url)) {
+	  cf = new HTTPConfigFile(url);
+	} else {
+	  cf = new FileConfigFile(url);
+	}	
+	m_configMap.put(url, cf);
+      } catch (IOException ex) {
+	// If we catch any IO exception, remove the offending
+	// file from the cache.  The daemon will try to reload it
+	// at the next reload interval anyway.
+	log.debug2("Unable to load file, not caching: " + url);
+	remove(url);
+	throw ex;
       }
-    } catch (IOException ex) {
-      // If we catch any IO exception, remove the offending
-      // file from the cache.  The daemon will try to reload it
-      // at the next reload interval anyway.
-      log.debug2("Unable to load file, not caching.");
-      remove(url);
-      throw ex;
     }
   }
 
   public synchronized void remove(String url) {
-    if (UrlUtil.isHttpUrl(url)) {
-      m_remoteFileMap.remove(url);
-    } else {
-      m_localFileMap.remove(url);
-    }
+    m_configMap.remove(url);
   }
-
-  /**
-   * Utility method to create a ConfigFile and put it into the right
-   * cache.  If the ConfigFile is already in the cache, just ask it to
-   * reload its content.
-   */
-  private synchronized void put(Map map, String url)
-      throws IOException {
-    if (map.containsKey(url)) {
-      log.debug2("put: cache hit, reloading.");
-      ((ConfigFile)map.get(url)).reload();
-    } else {
-      log.debug2("put: cache miss, adding new file.");
-      ConfigFile cf = new ConfigFile(url);
-      map.put(url, cf);
-    }
-  }
-
-  /**
-   * Return all remotely-loaded config files.
-   */
-  public List getRemoteConfigFiles() {
-    return new ArrayList(m_remoteFileMap.values());
-  }
-
-  /**
-   * Return all locally-loaded config files.
-   */
-  public List getLocalConfigFiles() {
-    return new ArrayList(m_localFileMap.values());
-  }
-
+  
   /**
    * Return all config files.
    */
   public List getConfigFiles() {
-    List allConfigFiles = new ArrayList(m_localFileMap.values());
-    allConfigFiles.addAll(m_remoteFileMap.values());
-    return allConfigFiles;
+    return new ArrayList(m_configMap.values());
   }
 
   public int size() {
-    return m_localFileMap.size() + m_remoteFileMap.size();
+    return m_configMap.size();
   }
 }
