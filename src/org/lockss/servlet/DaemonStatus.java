@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.43 2004-09-28 08:53:15 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.44 2004-10-18 03:41:34 tlipkis Exp $
  */
 
 /*
@@ -68,8 +68,14 @@ public class DaemonStatus extends LockssServlet {
   private String sortKey;
   private StatusService statSvc;
   private int outputFmt;
+  private java.util.List rules;
   private BitSet tableOptions;
   private PluginManager pluginMgr;
+
+  protected void resetLocals() {
+    super.resetLocals();
+    rules = null;
+  }
 
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
@@ -158,7 +164,7 @@ public class DaemonStatus extends LockssServlet {
     page.add(warning);
   }
 
-  private void doHtmlStatusTable() throws IOException {
+  private Page newTablePage() throws IOException {
     Page page = newPage();
     resp.setContentType("text/html");
 
@@ -182,7 +188,12 @@ public class DaemonStatus extends LockssServlet {
     //       page.add(srvLink(SERVLET_DAEMON_STATUS, ".",
     // 		       concatParams("text=1", req.getQueryString())));
     //       page.add("</center><br><br>");
-    doHtmlOrTextStatusTable(page, null);
+
+    return page;
+  }
+
+  private void doHtmlStatusTable() throws IOException {
+    Page page = doHtmlStatusTable0();
     page.add(getFooter());
     page.write(resp.getWriter());
   }
@@ -204,7 +215,7 @@ public class DaemonStatus extends LockssServlet {
 		 ",up=" + TimeBase.msSince(startDate.getTime()) +
 		 ",version=" + BuildInfo.getBuildInfoString() +
 		 vPlatform);
-    doHtmlOrTextStatusTable(null, wrtr);
+    doTextStatusTable(wrtr);
   }
 
   // build and send an XML DOM Document of the StatusTable
@@ -242,37 +253,8 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  // Build the table, adding elements to page or writing text to wrtr
-  private void doHtmlOrTextStatusTable(Page page, PrintWriter wrtr)
-      throws IOException {
-    StatusTable statTable;
-    try {
-      statTable = statSvc.getTable(tableName, tableKey, tableOptions);
-    } catch (StatusService.NoSuchTableException e) {
-      if (outputFmt == OUTPUT_HTML) {
-	page.add("No such table: ");
-	page.add(e.toString());
-      } else {
-	wrtr.println("No table: " + e.toString());
-      }
-      return;
-    } catch (Exception e) {
-      if (outputFmt == OUTPUT_HTML) {
-	page.add("Error getting table: ");
-	String emsg = e.toString();
-	page.add(emsg);
-	page.add("<br><pre>    ");
-	page.add(StringUtil.trimStackTrace(emsg,
-					   StringUtil.stackTraceString(e)));
-	page.add("</pre>");
-      } else {
-	wrtr.println("Error getting table: " + e.toString());
-      }
-      return;
-    }
-    java.util.List colList = statTable.getColumnDescriptors();
+  private java.util.List getRowList(StatusTable statTable) {
     java.util.List rowList;
-    java.util.List rules = null;
     if (sortKey != null) {
       try {
 	rules = makeSortRules(statTable, sortKey);
@@ -290,6 +272,126 @@ public class DaemonStatus extends LockssServlet {
     } else {
       rowList = statTable.getSortedRows();
     }
+    return rowList;
+  }
+
+  // Build the table, adding elements to page
+  private Page doHtmlStatusTable0() throws IOException {
+    Page page;
+    StatusTable statTable;
+    try {
+      statTable = statSvc.getTable(tableName, tableKey, tableOptions);
+    } catch (StatusService.NoSuchTableException e) {
+      page = newTablePage();
+      page.add("No such table: ");
+      page.add(e.toString());
+      return page;
+    } catch (Exception e) {
+      page = newTablePage();
+      page.add("Error getting table: ");
+      String emsg = e.toString();
+      page.add(emsg);
+      page.add("<br><pre>    ");
+      page.add(StringUtil.trimStackTrace(emsg,
+					 StringUtil.stackTraceString(e)));
+      page.add("</pre>");
+      return page;
+    }
+    java.util.List colList = statTable.getColumnDescriptors();
+    java.util.List rowList = getRowList(statTable);
+    String title0 = statTable.getTitle();
+    String titleFoot = statTable.getTitleFootnote();
+
+    page = newTablePage();
+    Table table = null;
+
+    // convert list of ColumnDescriptors to array of ColumnDescriptors
+    ColumnDescriptor cds[];
+    int cols;
+    if (colList != null) {
+      cds = (ColumnDescriptor [])colList.toArray(new ColumnDescriptor[0]);
+      cols = cds.length;
+    } else {
+      cds = new ColumnDescriptor[0];
+      cols = 1;
+    }
+    if (true || !rowList.isEmpty()) {
+      // if table not empty, output column headings
+
+      // Make the table.  Make a narrow empty column between real columns,
+      // for spacing.  Resulting table will have 2*cols-1 columns
+      table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
+      String title = title0 + addFootnote(titleFoot);
+
+      table.newRow();
+      table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
+      table.newRow();
+      addSummaryInfo(table, statTable, cols);
+
+      if (colList != null) {
+	// output column headings
+	for (int ix = 0; ix < cols; ix++) {
+	  ColumnDescriptor cd = cds[ix];
+	  table.newCell("class=colhead valign=bottom align=" +
+			((cols == 1) ? "center" : getColAlignment(cd)));
+	  table.add(getColumnTitleElement(statTable, cd, rules));
+	  if (ix < (cols - 1)) {
+	    table.newCell("width=8");
+	    table.add("&nbsp;");
+	  }
+	}
+      }
+    }
+    if (rowList != null) {
+      // output rows
+      for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
+	Map rowMap = (Map)rowIter.next();
+	if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
+	  table.newRow();
+	  table.newCell("align=center colspan=" + (cols * 2 - 1));
+	  table.add("<hr>");
+	}
+	table.newRow();
+	for (int ix = 0; ix < cols; ix++) {
+	  ColumnDescriptor cd = cds[ix];
+	  Object val = rowMap.get(cd.getColumnName());
+
+	  table.newCell("valign=top align=" + getColAlignment(cd));
+	  table.add(getDisplayString(val, cd.getType()));
+	  if (ix < (cols - 1)) {
+	    table.newCell();	// empty column for spacing
+	  }
+	}
+      }
+    }
+    if (table != null) {
+      Form frm = new Form(srvURL(myServletDescr(), null));
+      // use GET so user can refresh in browser
+      frm.method("GET");
+      frm.add(table);
+      page.add(frm);
+      page.add("<br>");
+      String heading = getHeading();
+      // put table name in page title so appears in browser title & tabs
+      page.title("LOCKSS: " + title0 + " - " + heading);
+    }
+    return page;
+  }
+
+  // Build the table, writing text to wrtr
+  private void doTextStatusTable(PrintWriter wrtr) throws IOException {
+    StatusTable statTable;
+    try {
+      statTable = statSvc.getTable(tableName, tableKey, tableOptions);
+    } catch (StatusService.NoSuchTableException e) {
+      wrtr.println("No table: " + e.toString());
+      return;
+    } catch (Exception e) {
+      wrtr.println("Error getting table: " + e.toString());
+      return;
+    }
+    java.util.List colList = statTable.getColumnDescriptors();
+    java.util.List rowList = getRowList(statTable);
     String title0 = statTable.getTitle();
     String titleFoot = statTable.getTitleFootnote();
 
@@ -311,89 +413,36 @@ public class DaemonStatus extends LockssServlet {
       // Make the table.  Make a narrow empty column between real columns,
       // for spacing.  Resulting table will have 2*cols-1 columns
       table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-      if (outputFmt == OUTPUT_HTML) {
-	String title = title0 + addFootnote(titleFoot);
-
-	table.newRow();
-	table.addHeading(title, "ALIGN=CENTER COLSPAN=" + (cols * 2 - 1));
-	table.newRow();
-	addSummaryInfo(table, statTable, cols);
-
-	if (colList != null) {
-	  // output column headings
-	  for (int ix = 0; ix < cols; ix++) {
-	    ColumnDescriptor cd = cds[ix];
-	    table.newCell("class=colhead valign=bottom align=" +
-			  ((cols == 1) ? "center" : getColAlignment(cd)));
-	    table.add(getColumnTitleElement(statTable, cd, rules));
-	    if (ix < (cols - 1)) {
-	      table.newCell("width=8");
-	      table.add("&nbsp;");
-	    }
-	  }
-	}
-      } else {
-	wrtr.println();
-	wrtr.println("table=" + title0);
-	if (tableKey != null) {
-	  wrtr.println("key=" + tableKey);
-	}
-	// tk write summary info
+      wrtr.println();
+      wrtr.println("table=" + title0);
+      if (tableKey != null) {
+	wrtr.println("key=" + tableKey);
       }
+      // tk write summary info
 
     }
     if (rowList != null) {
       // output rows
       for (Iterator rowIter = rowList.iterator(); rowIter.hasNext(); ) {
 	Map rowMap = (Map)rowIter.next();
-	if (outputFmt == OUTPUT_HTML) {
-	  if (rowMap.get(StatusTable.ROW_SEPARATOR) != null) {
-	    table.newRow();
-	    table.newCell("align=center colspan=" + (cols * 2 - 1));
-	    table.add("<hr>");
+	for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
+	  Object o = iter.next();
+	  if (!(o instanceof String)) {
+	    // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
+	    continue;
 	  }
-	  table.newRow();
-	  for (int ix = 0; ix < cols; ix++) {
-	    ColumnDescriptor cd = cds[ix];
-	    Object val = rowMap.get(cd.getColumnName());
-
-	    table.newCell("valign=top align=" + getColAlignment(cd));
-	    table.add(getDisplayString(val, cd.getType()));
-	    if (ix < (cols - 1)) {
-	      table.newCell();	// empty column for spacing
-	    }
-	  }
-	} else {
-	  for (Iterator iter = rowMap.keySet().iterator(); iter.hasNext(); ) {
-	    Object o = iter.next();
-	    if (!(o instanceof String)) {
-	      // ignore special markers (eg, StatusTable.ROW_SEPARATOR)
-	      continue;
-	    }
-	    String key = (String)o;
-	    Object val = rowMap.get(key);
-	    Object dispVal = StatusTable.getActualValue(val);
-	    String valStr = dispVal != null ? dispVal.toString() : "(null)";
-	    wrtr.print(key + "=" + valStr);
-	    if (iter.hasNext()) {
-	      wrtr.print(",");
-	    } else {
-	      wrtr.println();
-	    }
+	  String key = (String)o;
+	  Object val = rowMap.get(key);
+	  Object dispVal = StatusTable.getActualValue(val);
+	  String valStr = dispVal != null ? dispVal.toString() : "(null)";
+	  wrtr.print(key + "=" + valStr);
+	  if (iter.hasNext()) {
+	    wrtr.print(",");
+	  } else {
+	    wrtr.println();
 	  }
 	}
       }
-    }
-    if (outputFmt == OUTPUT_HTML && table != null) {
-      Form frm = new Form(srvURL(myServletDescr(), null));
-      // use GET so user can refresh in browser
-      frm.method("GET");
-      frm.add(table);
-      page.add(frm);
-      page.add("<br>");
-      String heading = getHeading();
-      // put table name in page title so appears in browser title & tabs
-      page.title("LOCKSS: " + title0 + " - " + heading);
     }
   }
 
