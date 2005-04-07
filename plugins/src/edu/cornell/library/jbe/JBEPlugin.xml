@@ -15,7 +15,6 @@
 <MapElement>
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<string xsi:type="java:java.lang.String">1,"http://jbe\.la\.psu\.edu/fonts/tcrUnicode\.TTF"</string>
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%sLOCKSS-manifest-jbe-v%d.html", base_url, volume</string>
 <string xsi:type="java:java.lang.String">1,"%s%d/.*", base_url, volume</string>
