@@ -1,5 +1,5 @@
 /*
- * $Id: IOPFilterRule.java,v 1.1 2005-03-15 07:43:32 tlipkis Exp $
+ * $Id: IOPFilterRule.java,v 1.2 2005-04-07 20:50:41 troberts Exp $
  */
 
 /*
@@ -44,6 +44,9 @@ import org.lockss.plugin.FilterRule;
 public class IOPFilterRule implements FilterRule {
   public Reader createFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
+	//content box
+        new HtmlTagFilter.TagPair("<div id=\"art-opts\">", "</div>", true),
+        new HtmlTagFilter.TagPair("<ul class=\"art-opts-mm\">", "</ul>", true),
 	//hackish, but this will remove the links to the refs, which change
 	//over time
         new HtmlTagFilter.TagPair("<span class=\"smltxt\">", "</span>", true),
