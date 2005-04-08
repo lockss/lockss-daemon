@@ -1,5 +1,5 @@
 /*
- * $Id: IOPFilterRule.java,v 1.2 2005-04-07 20:50:41 troberts Exp $
+ * $Id: IOPFilterRule.java,v 1.3 2005-04-08 17:03:55 troberts Exp $
  */
 
 /*
@@ -44,6 +44,11 @@ import org.lockss.plugin.FilterRule;
 public class IOPFilterRule implements FilterRule {
   public Reader createFilteredReader(Reader reader) {
     List tagList = ListUtil.list(
+	//cruft in the TOC
+        new HtmlTagFilter.TagPair("<td class=\"toc_left\">", "</td>", true),
+
+        new HtmlTagFilter.TagPair("&nbsp;|&nbsp; <a title=\"Citing articles: ", "Citing articles</a>", true),
+
 	//content box
         new HtmlTagFilter.TagPair("<div id=\"art-opts\">", "</div>", true),
         new HtmlTagFilter.TagPair("<ul class=\"art-opts-mm\">", "</ul>", true),
