@@ -3975,7 +3975,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="1" />
 	</property>
       </property>
@@ -3990,7 +3990,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="2" />
 	</property>
       </property>
@@ -4005,7 +4005,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="3" />
 	</property>
       </property>
@@ -4020,7 +4020,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="4" />
 	</property>
       </property>
@@ -4035,7 +4035,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="4S1" />
 	</property>
       </property>
@@ -4050,11 +4050,26 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="5" />
 	</property>
       </property>
 
+      <property name="nsr5s1">
+	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 5 Supplement 1" />
+	<property name="estSize" value="" />
+	<property name="journalTitle" value="MRS Internet Journal of Nitride Semiconductor Research" />
+	<property name="plugin" value="org.lockss.plugin.msr.MSRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://nsr.mij.mrs.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume_str" />
+	  <property name="value" value="5S1" />
+	</property>
+      </property>
+      
       <property name="nsr6">
 	<property name="title" value="MRS Internet Journal of Nitride Semiconductor Research Volume 6" />
 	<property name="estSize" value="" />
@@ -4065,7 +4080,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="6" />
 	</property>
       </property>
@@ -4080,7 +4095,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="7" />
 	</property>
       </property>
@@ -4095,7 +4110,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="8" />
 	</property>
       </property>
@@ -4110,7 +4125,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="9" />
 	</property>
       </property>
@@ -4125,7 +4140,7 @@
 	  <property name="value" value="http://nsr.mij.mrs.org/" />
 	</property>
 	<property name="param.2">
-	  <property name="key" value="volume" />
+	  <property name="key" value="volume_str" />
 	  <property name="value" value="10" />
 	</property>
       </property>

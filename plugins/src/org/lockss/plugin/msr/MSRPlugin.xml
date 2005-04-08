@@ -6,7 +6,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>au_name</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Nitride Semiconductor Research %d", volume</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Nitride Semiconductor Research %s", volume_str</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_name</ElementKey>
@@ -16,7 +16,7 @@
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%s%d/.*", base_url, volume</string>
+<string xsi:type="java:java.lang.String">1,"%s%s/.*", base_url, volume_str</string>
 <string xsi:type="java:java.lang.String">1,"%sGIFS/", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%sgifs/", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%sstyles/", base_url</string>
@@ -24,11 +24,18 @@
 </MapElement>
 <MapElement>
 <ElementKey>au_start_url</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s%d/", base_url, volume</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s%s/", base_url, volume_str</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_config_props</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>volume</Key>
+<DisplayName>Volume No.</DisplayName>
+<Type>6</Type>
+<Size>8</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
 <ConfigParamDescr>
 <Key>base_url</Key>
 <DisplayName>Base URL</DisplayName>
@@ -38,10 +45,11 @@
 <Definitional>true</Definitional>
 </ConfigParamDescr>
 <ConfigParamDescr>
-<Key>volume</Key>
-<DisplayName>Volume No.</DisplayName>
-<Type>6</Type>
-<Size>8</Size>
+<Key>volume_str</Key>
+<DisplayName>Volume String</DisplayName>
+<Description>String definition of a volume.</Description>
+<Type>1</Type>
+<Size>40</Size>
 <Definitional>true</Definitional>
 </ConfigParamDescr>
 </ElementValue>
