@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.12 2005-03-18 09:09:15 smorabito Exp $
+* $Id: BasePoll.java,v 1.13 2005-04-19 03:08:32 smorabito Exp $
  */
 
 /*
@@ -89,8 +89,8 @@ public abstract class BasePoll implements Poll {
    * @param key the string key used to locate the poll
    * @param duration the duration of the poll
    */
-  BasePoll(PollSpec pollspec, PollManager pm, PeerIdentity orig, String key,
-	   long duration) {
+  protected BasePoll(PollSpec pollspec, PollManager pm, PeerIdentity orig, String key,
+		     long duration) {
     m_pollmanager = pm;
     idMgr = pm.getIdentityManager();
     m_callerID = orig;
@@ -184,24 +184,24 @@ public abstract class BasePoll implements Poll {
    * Recieve and incoming message from the PollManager
    * @param msg the incoming msg containing a vote for this poll
    */
-  abstract void receiveMessage(LcapMessage msg);
+  abstract protected void receiveMessage(LcapMessage msg);
 
   /**
    * start the poll.
    */
-  abstract void startPoll();
+  abstract protected void startPoll();
 
 
   /**
    * Is our poll currently in an error state
    * @return true if the poll state is an error value
    */
-  abstract boolean isErrorState();
+  abstract protected boolean isErrorState();
 
   /**
    * Stop the poll when our deadline expired or our poll has ended in error.
    */
-  abstract void stopPoll();
+  abstract protected void stopPoll();
 
   /**
    * Make a copy of the values in a vote changing only whether we agree or
@@ -210,6 +210,6 @@ public abstract class BasePoll implements Poll {
    * @param agree the Boolean representing the value to set our vote to.
    * @return the newly created Vote
    */
-  abstract Vote copyVote(Vote vote, boolean agree);
+  abstract protected Vote copyVote(Vote vote, boolean agree);
 
 }

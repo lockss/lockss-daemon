@@ -1,10 +1,10 @@
 /*
-* $Id: PsmMsgEvent.java,v 1.2 2005-04-19 03:08:33 smorabito Exp $
+ * $Id: StateTable.java,v 1.1 2005-04-19 03:08:32 smorabito Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,31 +29,15 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.protocol.psm;
 
-import java.util.*;
-import org.lockss.protocol.*;
+package org.lockss.poller.v3;
 
-/**
- * Top of hierarchy of incoming message events.  Extends PsmEvent with a
- * slot for the received message.
- */
-public class PsmMsgEvent extends PsmEvent {
-  private LcapMessage receivedMessage;
+import org.lockss.protocol.psm.PsmInterp;
 
-  public PsmMsgEvent() {
-  }
+public interface StateTable {
 
-  /** Create a message event holding the received message */
-  public PsmMsgEvent(LcapMessage receivedMessage) {
-    this.receivedMessage = receivedMessage;
-  }
-
-  public LcapMessage getMessage() {
-    return receivedMessage;
-  }
-
-  void setMessage(LcapMessage receivedMessage) {
-    this.receivedMessage = receivedMessage;
-  }
+  /**
+   * Return the state machine interpreter for this table.
+   */
+  public PsmInterp getInterp();
 }

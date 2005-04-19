@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.24 2005-03-18 09:09:16 smorabito Exp $
+ * $Id: V1Poll.java,v 1.25 2005-04-19 03:08:32 smorabito Exp $
  */
 
 /*
@@ -310,7 +310,7 @@ public abstract class V1Poll extends BasePoll {
   /**
    * start the poll.
    */
-  void startPoll() {
+  protected void startPoll() {
     if (m_pollstate != PS_INITING)
       return;
     m_pollstate = PS_WAIT_HASH;
@@ -374,7 +374,7 @@ public abstract class V1Poll extends BasePoll {
    * is our poll currently in an error condition
    * @return true if the poll state is an error value
    */
-  boolean isErrorState() {
+  protected boolean isErrorState() {
     return m_pollstate < 0;
   }
 
@@ -382,7 +382,7 @@ public abstract class V1Poll extends BasePoll {
    * finish the poll once the deadline has expired. we update our poll record
    * and prevent any more activity in this poll.
    */
-  void stopPoll() {
+  protected void stopPoll() {
     if(isErrorState()) {
       log.debug("poll stopped with error: " + ERROR_STRINGS[ -m_pollstate]);
     }
@@ -442,7 +442,7 @@ public abstract class V1Poll extends BasePoll {
   /**
    * stop and record a vote cast in this poll
    */
-  void stopVoteCheck() {
+  protected void stopVoteCheck() {
     m_pendingVotes--;
     log.debug3("Number pending votes = " + m_pendingVotes);
   }
@@ -455,7 +455,7 @@ public abstract class V1Poll extends BasePoll {
     return m_pendingVotes > m_tally.quorum + 1;
   }
 
-  Vote copyVote(Vote vote, boolean agree) {
+  protected Vote copyVote(Vote vote, boolean agree) {
     Vote v = new Vote(vote);
     v.agree = agree;
     return v;

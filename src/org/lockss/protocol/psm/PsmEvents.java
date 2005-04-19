@@ -1,5 +1,5 @@
 /*
-* $Id: PsmEvents.java,v 1.1 2005-02-23 02:19:05 tlipkis Exp $
+* $Id: PsmEvents.java,v 1.2 2005-04-19 03:08:33 smorabito Exp $
  */
 
 /*
@@ -62,4 +62,5 @@ public class PsmEvents {
   private static class Start extends PsmEvent {}
   private static class Error extends PsmEvent {}
   private static class Timeout extends Error {}
+
 }

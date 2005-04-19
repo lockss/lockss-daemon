@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.4 2005-02-21 03:09:23 tlipkis Exp $
+ * $Id: ByteArray.java,v 1.5 2005-04-19 03:08:33 smorabito Exp $
  */
 
 /*
@@ -114,5 +114,22 @@ public class ByteArray {
   public static long decodeLong(byte[] b) {
     BigInteger bigI = new BigInteger(b);
     return bigI.longValue();
+  }
+
+  /**
+   * Return a pseudo-random array of bytes of length len.
+   *
+   * @param len The size of the array to return.
+   * @return A pseudo-random array of bytes.
+   */
+  public static byte[] makeRandomBytes(int len) {
+    byte[] retVal = new byte[len];
+    int top = 0xFF;
+
+    LockssRandom rand = new LockssRandom();
+    for (int i = 0; i < len; i++) {
+      retVal[i] = (byte)rand.nextInt(top);
+    }
+    return retVal;
   }
 }

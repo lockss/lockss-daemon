@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poll.java,v 1.2 2005-03-18 09:09:16 smorabito Exp $
+ * $Id: V3Poll.java,v 1.1 2005-04-19 03:08:32 smorabito Exp $
  */
 
 /*
@@ -30,8 +30,9 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.poller;
+package org.lockss.poller.v3;
 
+import org.lockss.poller.*;
 import org.lockss.protocol.*;
 
 /**
@@ -48,28 +49,28 @@ public class V3Poll extends BasePoll {
     return null;
   }
 
-  public V3Poll(PollSpec pollspec, PollManager pm,
+  protected V3Poll(PollSpec pollspec, PollManager pm,
 		PeerIdentity orig, String key, long duration) {
     super(pollspec, pm, orig, key, duration);
   }
 
-  public void receiveMessage(LcapMessage msg) {
+  protected void receiveMessage(LcapMessage msg) {
     ;
   }
 
-  public void startPoll() {
+  protected void startPoll() {
     ;
   }
 
-  public boolean isErrorState() {
+  protected boolean isErrorState() {
     return false;
   }
 
-  public void stopPoll() {
+  protected void stopPoll() {
     ;
   }
 
-  public Vote copyVote(Vote vote, boolean agree) {
+  protected Vote copyVote(Vote vote, boolean agree) {
     return null;
   }
 

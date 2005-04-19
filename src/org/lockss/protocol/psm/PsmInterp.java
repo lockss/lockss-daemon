@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.4 2005-03-01 03:50:48 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.5 2005-04-19 03:08:33 smorabito Exp $
  */
 
 /*
@@ -93,6 +93,10 @@ public class PsmInterp {
   /** Return the final state iff it has been reached, else null */
   public PsmState getFinalState() {
     return isFinalState() ? curState : null;
+  }
+
+  public PsmState getCurrentState() {
+    return curState;
   }
 
   /** Return true if the machine is waiting for an event. */

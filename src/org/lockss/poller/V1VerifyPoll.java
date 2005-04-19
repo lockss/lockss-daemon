@@ -1,5 +1,5 @@
 /*
- * $Id: V1VerifyPoll.java,v 1.12 2005-03-23 07:01:08 smorabito Exp $
+ * $Id: V1VerifyPoll.java,v 1.13 2005-04-19 03:08:32 smorabito Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ class V1VerifyPoll extends V1Poll {
    * handle a message which may be a incoming vote
    * @param msg the Message to handle
    */
-  void receiveMessage(LcapMessage msg) {
+  protected void receiveMessage(LcapMessage msg) {
     log.debug("receiving verify message" + msg.toString());
     int opcode = msg.getOpcode();
     if(opcode == V1LcapMessage.VERIFY_POLL_REP) {
@@ -105,7 +105,7 @@ class V1VerifyPoll extends V1Poll {
   /**
    * start the poll.  set a deadline in which to actually verify the message.
    */
-  void startPoll() {
+  protected void startPoll() {
     log.debug("Starting new verify poll:" + m_key);
     if(!idMgr.isLocalIdentity(m_callerID)) {
       long now = TimeBase.nowMs();

@@ -1,5 +1,5 @@
 /*
- * $Id: V1ContentPoll.java,v 1.9 2005-03-23 07:01:08 smorabito Exp $
+ * $Id: V1ContentPoll.java,v 1.10 2005-04-19 03:08:32 smorabito Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class V1ContentPoll extends V1Poll {
    * handle a message which may be a incoming vote
    * @param msg the Message to handle
    */
-  void receiveMessage(LcapMessage msg) {
+  protected void receiveMessage(LcapMessage msg) {
     int opcode = msg.getOpcode();
 
     if (m_msg == null) {
