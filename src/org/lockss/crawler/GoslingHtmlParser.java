@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.25 2005-02-28 23:19:34 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.26 2005-04-19 20:11:15 troberts Exp $
  */
 
 /*
@@ -86,6 +86,11 @@ public class GoslingHtmlParser implements ContentParser {
   public static final String PARAM_BUFFER_CAPACITY =
     Configuration.PREFIX + "crawler.buffer_capacity";
 
+  public static final boolean DEFAULT_PARSE_JS = false;
+  public static final String PARAM_PARSE_JS =
+    Configuration.PREFIX + "crawler.parse_js";
+
+
   private static final String METATAG = "meta";
   private static final String IMGTAG = "img";
   private static final String EMBEDTAG = "embed";
@@ -132,11 +137,14 @@ public class GoslingHtmlParser implements ContentParser {
 
   private CharRing ring;
   private int ringCapacity;
+  private boolean shouldParseJavaScript;
   private boolean isTrace = logger.isDebug2();
 
   public GoslingHtmlParser() {
     ringCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
-						 DEFAULT_BUFFER_CAPACITY);
+					     DEFAULT_BUFFER_CAPACITY);
+    shouldParseJavaScript =
+      Configuration.getBooleanParam(PARAM_PARSE_JS, DEFAULT_PARSE_JS);
   }
 
   public GoslingHtmlParser(int ringCapacity) {
@@ -423,7 +431,8 @@ public class GoslingHtmlParser implements ContentParser {
 	if (baseUrl == null) {
 	  baseUrl = new URL(srcUrl);
 	}
-	returnStr = UrlUtil.resolveUri(baseUrl, returnStr);
+	returnStr = resolveUri(baseUrl, returnStr);
+// 	returnStr = UrlUtil.resolveUri(baseUrl, returnStr);
       } catch (MalformedURLException e) {
 	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
 		     "\", link: \"" + returnStr + "\"",
@@ -435,6 +444,32 @@ public class GoslingHtmlParser implements ContentParser {
       }
     }
     return returnStr;
+  }
+
+  /**
+   * Handle resolving of a URI from a base url and a relative url.
+   * Called out separately so we can add exceptions (like javascript) here
+   */
+  private String resolveUri(URL base, String relative)
+      throws MalformedURLException {
+    if(base != null && "javascript".equalsIgnoreCase(base.getProtocol())
+       || 
+       relative != null && StringUtil.startsWithIgnoreCase(relative,
+							   "javascript:")) {
+      return resolveJavascriptUrl(base, relative);
+    }
+    return UrlUtil.resolveUri(baseUrl, relative);
+  }
+
+  protected String resolveJavascriptUrl(URL base, String relative)
+      throws MalformedURLException {
+    if (!shouldParseJavaScript) {
+      logger.debug("Configured to ignore javascript urls, so skipping");
+      return null;
+    }
+    logger.debug("Tried to resolve javascript URI "+base+" "+relative);
+    relative = UrlUtil.parseJavascriptUrl(relative);
+    return UrlUtil.resolveUri(base, relative);
   }
 
   String getAttributeValue(String attribute, StringBuffer sb) {

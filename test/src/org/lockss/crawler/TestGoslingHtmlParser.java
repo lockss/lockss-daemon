@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.18 2005-02-28 23:19:35 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.19 2005-04-19 20:11:17 troberts Exp $
  */
 
 /*
@@ -382,6 +382,38 @@ public class TestGoslingHtmlParser extends LockssTestCase {
       "<a href=\"http://www.example.com/link3.html\">link3</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
+
+  public void testDontParseJSByDefault() throws IOException {
+    String url= "http://www.example.com/link3.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link1.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href = javascript:newWindow('http://www.example.com/link3.html')</a>"
+    + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
+    + "<img src = javascript:popup('" + url3 + "') </img>";
+    assertEquals(SetUtil.set(), parseSingleSource(source));
+  }
+
+  public void testParseJSIfConf() throws IOException {
+    Properties p = new Properties();
+    p.setProperty(GoslingHtmlParser.PARAM_PARSE_JS, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    parser = new GoslingHtmlParser();
+
+    String url= "http://www.example.com/link3.html";
+    String url2 = "http://www.example.com/link2.html";
+    String url3 = "http://www.example.com/link1.html";
+
+    String source =
+      "<html><head><title>Test</title></head><body>"+
+      "<a href = javascript:newWindow('http://www.example.com/link3.html')</a>"
+    + "<a href = javascript:popup('http://www.example.com/link2.html')</a>"
+    + "<img src = javascript:popup('" + url3 + "') </img>";
+    assertEquals(SetUtil.set(url, url2, url3), parseSingleSource(source));
+  }
+
 //   public void testDoHrefInAnchorJavascript() throws IOException {
 //     String url= "http://www.example.com/link3.html";
 //     String url2 = "http://www.example.com/link2.html";
