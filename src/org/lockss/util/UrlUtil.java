@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.27 2005-01-10 06:23:21 smorabito Exp $
+ * $Id: UrlUtil.java,v 1.28 2005-04-19 20:10:07 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -374,6 +374,56 @@ public class UrlUtil {
     String encodedUri = minimallyEncodeUrl(possiblyRelativeUrl.trim());
     URL url = new URL(baseUrl, encodedUri);
     return url.toString();
+  }
+  
+  /**
+   * Takes a javascript url of the following formats:
+   * javascript:newWindow('http://www.example.com/link3.html')
+   * javascript:popup('http://www.example.com/link3.html')
+   * and resolves it to a URL
+   */
+
+  public static String[] supportedJSFunctions =
+  {
+    "newWindow",
+    "popup"
+  };
+
+  public static String parseJavascriptUrl(String jsUrl) {
+    
+    int jsIdx = StringUtil.indexOfIgnoreCase(jsUrl, "javascript:");
+    if (jsIdx < 0) {
+      log.debug("Doesn't appear to be a javascript URL: "+jsUrl);
+      return null;
+    }
+
+    int protocolEnd = jsIdx + "javascript:".length();
+    int funcEnd = -1;
+
+    for (int ix=0; ix<supportedJSFunctions.length && funcEnd==-1; ix++) {
+      if (jsUrl.regionMatches(true, protocolEnd,
+			      supportedJSFunctions[ix], 0,
+			      supportedJSFunctions[ix].length())) {
+	funcEnd = protocolEnd + supportedJSFunctions[ix].length();
+	log.debug3("matched supported JS function "+supportedJSFunctions[ix]);
+	break;
+      } 
+    }
+
+    if (funcEnd == -1) {
+      // if we got here, there was no match
+      log.debug("Can't parse js url: "+jsUrl);
+      return null;
+    }
+
+    int urlStart = funcEnd+1;//+1 to skip the "("
+    char firstChar = jsUrl.charAt(urlStart);
+
+    if (firstChar == '\'') {
+      urlStart++;
+    }
+    String url = jsUrl.substring(urlStart); 
+    return StringUtil.trimAfterChars(url, ")'");
   }
 
   // resolveUri() using HttpClient URI.  Allows all protocols (no
