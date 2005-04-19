@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.52 2005-02-18 23:23:06 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.53 2005-04-19 20:09:30 troberts Exp $
  */
 
 /*
@@ -297,10 +297,9 @@ public class StringUtil {
       return null;
     }
     if (chars != null) {
-      for (int jx=0, len = chars.length(); jx < len; jx++) {
-	int pos = str.indexOf(chars.charAt(jx));
-	if (pos >= 0) {
-	  return str.substring(0, pos);
+      for (int ix=0; ix<str.length(); ix++) {
+	if (chars.indexOf(str.charAt(ix)) >= 0) {
+	  return str.substring(0, ix);
 	}
       }
     }

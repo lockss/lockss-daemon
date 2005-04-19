@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.46 2005-02-18 23:23:06 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.47 2005-04-19 20:09:32 troberts Exp $
  */
 
 /*
@@ -83,6 +83,10 @@ public class TestStringUtil extends LockssTestCase {
 		 StringUtil.trimAfterChars("test blah", "! \""));
     assertEquals("test",
 		 StringUtil.trimAfterChars("test\"blah", "! \""));
+
+    assertEquals("test",
+		 StringUtil.trimAfterChars("test !blah", "! \""));
+
   }
 
   public void testTruncateAt() {
