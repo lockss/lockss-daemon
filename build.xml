@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.139 2005-04-18 21:37:54 troberts Exp $
+ $Id: build.xml,v 1.140 2005-04-19 18:28:56 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1462,13 +1462,10 @@ Test results in ${tools.test.results}
            relative="true"
            parallel="false">
       <arg value="--noout"/>
-      <arg value="--valid"/>
       <fileset dir="${basedir}" includes="test/frameworks/*.xml"/>
       <fileset dir="${basedir}" includes="src/**/*.xml"/>
-<!--
       <fileset dir="${basedir}" includes="*/src/**/*.xml"/>
       <fileset dir="${basedir}" includes="*/*/src/**/*.xml"/>
--->
     </apply>
   </target>
 
