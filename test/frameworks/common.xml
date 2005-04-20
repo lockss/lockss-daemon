@@ -159,6 +159,7 @@
 	  or pluginName='org.nypl.plugin.WordsWithoutBordersPlugin'
 	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
 	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
+	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
 	  ]"
 	  />
       </property>
