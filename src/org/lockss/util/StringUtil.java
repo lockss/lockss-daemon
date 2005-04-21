@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.53 2005-04-19 20:09:30 troberts Exp $
+ * $Id: StringUtil.java,v 1.53.2.1 2005-04-21 07:08:58 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.apache.oro.text.regex.*;
 public class StringUtil {
 
   /**
-   * Replace all occurances of oldstr in source with newstr
+   * Replace all occurrences of oldstr in source with newstr
    * @param source string to be modified
    * @param oldstr string to be replace
    * @param newstr string to replace oldstr
@@ -279,27 +279,24 @@ public class StringUtil {
     return breakAt(s, sep, maxItems, false);
   }
 
-  /** Temporary name for truncateAtAny() */
-  public static String trimAfterChars(String str, String chars) {
-    return truncateAtAny(str, chars);
-  }
-
   /**
-   * Trim the end off of a string starting at any of the characters specified.
+   * Trim the end off of a string starting at the first occurrence of any
+   * of the characters specified.
    *
    * @param str String to trim
    * @param chars String containing the chars to trim at
-   * @return str turncated at the first occurance of any of the chars, or
-   * the original string if no occurances
+   * @return str turncated at the first occurrence of any of the chars, or
+   * the original string if no occurrence
    */
   public static String truncateAtAny(String str, String chars) {
     if (str == null) {
       return null;
     }
     if (chars != null) {
-      for (int ix=0; ix<str.length(); ix++) {
-	if (chars.indexOf(str.charAt(ix)) >= 0) {
-	  return str.substring(0, ix);
+      for (int jx=0, len = chars.length(); jx < len; jx++) {
+	int pos = str.indexOf(chars.charAt(jx));
+	if (pos >= 0) {
+	  str = str.substring(0, pos);
 	}
       }
     }
@@ -311,8 +308,8 @@ public class StringUtil {
    *
    * @param str String to trim
    * @param chr char to trim at
-   * @return str turncated at the first occurance of char, or
-   * the original string if no occurance
+   * @return str turncated at the first occurrence of char, or
+   * the original string if no occurrence
    */
   public static String truncateAt(String str, char chr) {
     if (str == null) {
@@ -831,7 +828,7 @@ public class StringUtil {
   }    
 
   /**
-   * Returns the index of the nth occurance of searchStr in sourceStr or -1
+   * Returns the index of the nth occurrence of searchStr in sourceStr or -1
    * if there aren't n instances of searchStr in sourceStr
    */
   public static int nthIndexOf(int n, String sourceStr, String searchStr) {

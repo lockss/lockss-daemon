@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.28 2005-04-19 20:10:07 troberts Exp $
+ * $Id: UrlUtil.java,v 1.28.2.1 2005-04-21 07:08:58 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -423,7 +423,7 @@ public class UrlUtil {
       urlStart++;
     }
     String url = jsUrl.substring(urlStart); 
-    return StringUtil.trimAfterChars(url, ")'");
+    return StringUtil.truncateAtAny(url, ")'");
   }
 
   // resolveUri() using HttpClient URI.  Allows all protocols (no

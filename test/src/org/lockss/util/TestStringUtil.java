@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.47 2005-04-19 20:09:32 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.47.2.1 2005-04-21 07:08:58 tlipkis Exp $
  */
 
 /*
@@ -54,48 +54,51 @@ public class TestStringUtil extends LockssTestCase {
     super(msg);
   }
 
-  public void testNullStr() {
-    assertNull(StringUtil.trimAfterChars(null, null));
+  public void testTruncateAtAnyNullStr() {
+    assertNull(StringUtil.truncateAtAny(null, null));
   }
 
-  public void testNullChars() {
+  public void testTruncateAtAnyNullChars() {
     String testStr = "test";
     assertEquals(testStr,
-		 StringUtil.trimAfterChars(testStr, null));
+		 StringUtil.truncateAtAny(testStr, null));
   }
 
-  public void testNoMatch() {
+  public void testTruncateAtAnyNoMatch() {
     String testStr = "test!blah";
     assertEquals("test!blah",
-		 StringUtil.trimAfterChars(testStr, " "));
+		 StringUtil.truncateAtAny(testStr, " "));
   }
 
-  public void testSingleChar() {
+  public void testTruncateAtAnySingleChar() {
     String testStr = "test!blah";
     assertEquals("test",
-		 StringUtil.trimAfterChars(testStr, "!"));
+		 StringUtil.truncateAtAny(testStr, "!"));
   }
 
-  public void testMultiChars() {
+  public void testTruncateAtAnyMultiChars() {
     assertEquals("test",
-		 StringUtil.trimAfterChars("test!blah", "! \""));
+		 StringUtil.truncateAtAny("test!blah", "! \""));
     assertEquals("test",
-		 StringUtil.trimAfterChars("test blah", "! \""));
+		 StringUtil.truncateAtAny("test blah", "! \""));
     assertEquals("test",
-		 StringUtil.trimAfterChars("test\"blah", "! \""));
-
+		 StringUtil.truncateAtAny("test\"blah", "! \""));
+    // ensure finds the first occurrence of *any* of the chars
     assertEquals("test",
-		 StringUtil.trimAfterChars("test !blah", "! \""));
+		 StringUtil.truncateAtAny("test !blah", "! \""));
 
   }
 
   public void testTruncateAt() {
+    assertNull(StringUtil.truncateAt(null, 'a'));
     assertEquals("test",
 		 StringUtil.truncateAt("test!blah", '!'));
     assertEquals("",
 		 StringUtil.truncateAt("!blah", '!'));
     assertEquals("test",
 		 StringUtil.truncateAt("test|", '|'));
+    assertEquals("test",
+		 StringUtil.truncateAt("test|foo|bar", '|'));
     assertEquals("test|blah",
 		 StringUtil.truncateAt("test|blah", '0'));
   }
