@@ -1,5 +1,5 @@
 /*
- * $Id: TestResourceManager.java,v 1.1 2004-10-18 03:35:11 tlipkis Exp $
+ * $Id: TestResourceManager.java,v 1.1.8.1 2005-04-21 07:13:30 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 
+import org.lockss.util.*;
 import org.lockss.test.*;
 
 /**
@@ -75,5 +76,23 @@ public class TestResourceManager extends LockssTestCase {
     // available to anyone after released
     assertTrue(rmgr.releaseTcpPort(5432, "bar"));
     assertTrue(rmgr.releaseTcpPort(5432, "foo"));
+  }
+
+  public void testGetUsableTcpPorts() {
+    String srvr = "server";
+    assertNull(rmgr.getUsableTcpPorts(srvr));
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_PORTS,
+				  "9900;1234;1235");
+    assertEquals(ListUtil.list("9900", "1234", "1235"),
+		 rmgr.getUsableTcpPorts(srvr));
+    assertTrue(rmgr.reserveTcpPort(1234, srvr));
+    assertEquals(ListUtil.list("9900", "1234", "1235"),
+		 rmgr.getUsableTcpPorts(srvr));
+    assertTrue(rmgr.reserveTcpPort(1235, "another service"));
+    assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableTcpPorts(srvr));
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_PORTS,
+				  "9900;1234;1235;333-444");
+    assertEquals(ListUtil.list("9900", "1234", "333-444"),
+		 rmgr.getUsableTcpPorts(srvr));
   }
 }

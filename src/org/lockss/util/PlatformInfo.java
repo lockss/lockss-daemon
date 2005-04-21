@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.9 2005-03-11 02:12:19 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.9.2.1 2005-04-21 07:13:30 tlipkis Exp $
  */
 
 /*
@@ -37,12 +37,18 @@ import java.util.*;
 import java.text.*;
 import java.io.*;
 import java.net.*;
+import org.lockss.config.Configuration;
 
 /** Utilities to communicate with platform to get info or take action not
  * possible from Java */
 public class PlatformInfo {
   protected static Logger log = Logger.getLogger("PlatformInfo");
   private static final DecimalFormat percentFmt = new DecimalFormat("0%");
+
+  /** Should be set to allowed TCP ports, based on platform- (and group-)
+   * dependent packet filters */
+  public static final String PARAM_UNFILTERED_PORTS =
+    Configuration.PLATFORM + "unfilteredTcpPorts";
 
   static PlatformInfo instance;
 
@@ -63,6 +69,11 @@ public class PlatformInfo {
       }
     }
     return instance;
+  }
+
+  public List getUnfilteredTcpPorts() {
+    Configuration config = Configuration.getCurrentConfig();
+    return config.getList(PARAM_UNFILTERED_PORTS);
   }
 
   /** Return the PID of the executing process, if possible.

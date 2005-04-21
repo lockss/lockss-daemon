@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.9 2005-01-20 04:25:42 tlipkis Exp $
+ * $Id: ProxyIpAccess.java,v 1.9.4.1 2005-04-21 07:13:30 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,8 @@ package org.lockss.servlet;
 
 import java.io.*;
 import java.util.*;
+import java.util.List;
+import javax.servlet.*;
 import org.mortbay.html.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
@@ -55,6 +57,7 @@ public class ProxyIpAccess extends IpAccessControl {
     "cache as a proxy server, and access the content stored on it.  " +
     commonExp;
 
+  private ResourceManager resourceMgr;
   private boolean formAuditEnable;
   private String formAuditPort;
   private int auditPort;
@@ -63,6 +66,11 @@ public class ProxyIpAccess extends IpAccessControl {
     super.resetLocals();
     formAuditEnable = false;
     formAuditPort = null;
+  }
+
+  public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    resourceMgr = getLockssApp().getResourceManager();
   }
 
   protected String getExplanation() {
@@ -112,8 +120,8 @@ public class ProxyIpAccess extends IpAccessControl {
 
   boolean isLegalAuditPort(int port) {
     return (port >= 1024 &&
-	    getLockssApp().getResourceManager().
-	    isTcpPortAvailable(port, AuditProxyManager.SERVER_NAME));
+	    resourceMgr.isTcpPortAvailable(port,
+					   AuditProxyManager.SERVER_NAME));
   }
 
   boolean getDefaultAuditEnable() {
@@ -139,6 +147,10 @@ public class ProxyIpAccess extends IpAccessControl {
     "content stored on the cache.  All requests for content not on the " +
     "cache will return a \"404 Not Found\" error.";
 
+  static final String FILTER_FOOT =
+    "Other ports can be configured but may not be reachable due to " +
+    "packet filters.";
+
   protected Composite getAdditionalFormElement() {
     Table tbl = new Table(0, "align=center cellpadding=10");
     tbl.newRow();
@@ -158,6 +170,24 @@ public class ProxyIpAccess extends IpAccessControl {
     portElem.setSize(6);
     setTabOrder(portElem);
     tbl.add(portElem);
+    // avoid breaking anything with this patch
+    try {
+      List usablePorts =
+	resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME);
+      if (usablePorts != null) {
+	tbl.add("<br>");
+	if (usablePorts.isEmpty()) {
+	  tbl.add("(No available ports)");
+	  tbl.add(addFootnote(AUDIT_FOOT));
+	} else {
+	  tbl.add("Available ports");
+	  tbl.add(addFootnote(FILTER_FOOT));
+	  tbl.add(": ");
+	  tbl.add(StringUtil.separatedString(usablePorts, ", "));
+	}
+      }
+    } catch (Exception ignore) {
+    }
     return tbl;
   }
 
