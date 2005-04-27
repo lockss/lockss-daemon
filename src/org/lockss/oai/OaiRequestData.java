@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRequestData.java,v 1.5 2005-02-02 09:42:30 tlipkis Exp $
+ * $Id: OaiRequestData.java,v 1.6 2005-04-27 18:31:01 troberts Exp $
  */
 
 /*
@@ -77,6 +77,10 @@ public class OaiRequestData {
     this.urlContainerTagName = tagName;
     this.auSetSpec = setSpec;
     this.metadataPrefix = prefix;
+
+    //XXX added
+    this.metadataHandler = new Oai_dcHandler();
+
   }
 
   /**
