@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.29 2005-03-23 17:02:30 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.30 2005-04-27 18:31:17 troberts Exp $
  */
 
 /*
@@ -124,6 +124,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     for (Iterator it = descrList.iterator(); it.hasNext(); ) {
       ConfigParamDescr descr = (ConfigParamDescr) it.next();
       String key = descr.getKey();
+      log.debug3("loading value for key: "+key);
 
       try {
         Object val = descr.getValueOfType(config.get(key));
@@ -140,8 +141,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
             paramMap.putString(key+AU_PATH_SUFFIX, url.getPath());
           }
         }
-     }
-      catch (Exception ex) {
+      } catch (Exception ex) {
         throw new ConfigurationException("Error configuring: " + key, ex);
       }
     }
@@ -200,11 +200,14 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected OaiRequestData makeOaiData() {
-    String oai_request_url =
-        paramMap.getString(ConfigParamDescr.OAI_REQUEST_URL.getKey());
+    URL oai_request_url =
+        paramMap.getUrl(ConfigParamDescr.OAI_REQUEST_URL.getKey());
+    String oaiRequestUrlStr = oai_request_url.toString();
     String oai_au_spec =
         paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
-    return new OaiRequestData(oai_request_url,
+    log.debug3("Creating OaiRequestData with oaiRequestUrlStr" + 
+	       oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
+    return new OaiRequestData(oaiRequestUrlStr,
                       "http://purl.org/dc/elements/1.1/",
                       "identifier",
                       oai_au_spec,
