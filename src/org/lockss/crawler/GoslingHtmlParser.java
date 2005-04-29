@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.26 2005-04-19 20:11:15 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.26.2.1 2005-04-29 22:36:45 troberts Exp $
  */
 
 /*
@@ -452,9 +452,7 @@ public class GoslingHtmlParser implements ContentParser {
    */
   private String resolveUri(URL base, String relative)
       throws MalformedURLException {
-    if(base != null && "javascript".equalsIgnoreCase(base.getProtocol())
-       || 
-       relative != null && StringUtil.startsWithIgnoreCase(relative,
+    if(relative != null && StringUtil.startsWithIgnoreCase(relative,
 							   "javascript:")) {
       return resolveJavascriptUrl(base, relative);
     }
