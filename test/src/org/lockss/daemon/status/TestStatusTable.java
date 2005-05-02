@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.7 2005-01-19 18:10:37 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.8 2005-05-02 19:24:12 tlipkis Exp $
  */
 
 /*
@@ -28,10 +28,19 @@ package org.lockss.daemon.status;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.servlet.*;
 
 
 public class TestStatusTable extends LockssTestCase {
   StatusTable table;
+
+  static LockssServlet.ServletDescr srvDescr =
+    new LockssServlet.ServletDescr(LockssServlet.class, "name");
+  static Properties args = new Properties();
+  static {
+    args.setProperty("foo", "bar");
+  }
+
 
   public void setUp() {
     table = new StatusTable("table1", "key1");
@@ -224,17 +233,23 @@ public class TestStatusTable extends LockssTestCase {
     }
   }
 
-
   public void testEmbeddedValue() {
     Integer val = new Integer(3);
     StatusTable.DisplayedValue dval = new StatusTable.DisplayedValue(val);
     StatusTable.Reference rval = new StatusTable.Reference(val, "foo", "bar");
-    // should be able to embed DisplayedValue in Reference
+    StatusTable.SrvLink lval = new StatusTable.SrvLink(val, srvDescr, args);
+    // should be able to embed DisplayedValue in Reference or SrvLink
     new StatusTable.Reference(dval, "foo", "bar");
+    new StatusTable.SrvLink(dval, srvDescr, args);
 
     try {
       new StatusTable.DisplayedValue(rval);
       fail("Shouldn't be able to embed Reference in DisplayedValue");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new StatusTable.DisplayedValue(lval);
+      fail("Shouldn't be able to embed SrvLink in DisplayedValue");
     } catch (IllegalArgumentException e) {
     }
     try {
@@ -247,9 +262,24 @@ public class TestStatusTable extends LockssTestCase {
       fail("Shouldn't be able to embed Reference in Reference");
     } catch (IllegalArgumentException e) {
     }
+    try {
+      new StatusTable.SrvLink(lval, srvDescr, args);
+      fail("Shouldn't be able to embed SrvLink in SrvLink");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new StatusTable.Reference(lval, "foo", "bar");
+      fail("Shouldn't be able to embed SrvLink in Reference");
+    } catch (IllegalArgumentException e) {
+    }
+    try {
+      new StatusTable.SrvLink(rval, srvDescr, args);
+      fail("Shouldn't be able to embed Reference in SrvLink");
+    } catch (IllegalArgumentException e) {
+    }
   }
 
-  public void testGetActualValue() {
+  public void testReferenceGetActualValue() {
     Integer val = new Integer(3);
     StatusTable.DisplayedValue dval = new StatusTable.DisplayedValue(val);
     StatusTable.Reference rval = new StatusTable.Reference(val, "foo", "bar");
@@ -278,6 +308,36 @@ public class TestStatusTable extends LockssTestCase {
     ref = new StatusTable.Reference("C", "blah", "key1");
     assertTrue(ref.equals(new StatusTable.Reference("C", "blah", "key1")));
     assertFalse(ref.equals(new StatusTable.Reference("C", "blah", "key")));
+  }
+
+  public void testSrvLinkGetActualValue() {
+    Integer val = new Integer(3);
+    StatusTable.DisplayedValue dval = new StatusTable.DisplayedValue(val);
+    StatusTable.SrvLink lval = new StatusTable.SrvLink(val, srvDescr, args);
+    StatusTable.SrvLink ldval = new StatusTable.SrvLink(dval, srvDescr, args);
+
+    assertEquals(val, StatusTable.getActualValue(val));
+    assertEquals(val, StatusTable.getActualValue(dval));
+    assertEquals(val, StatusTable.getActualValue(lval));
+    assertEquals(val, StatusTable.getActualValue(ldval));
+  }
+
+  public void testSrvLink() {
+    StatusTable.SrvLink lnk = new StatusTable.SrvLink("C", srvDescr, args);
+    assertEquals("C", lnk.getValue());
+    assertEquals(srvDescr, lnk.getServletDescr());
+    assertEquals(args, lnk.getArgs());
+  }
+
+  public void testSrvLinkEquals() {
+    StatusTable.SrvLink lnk = new StatusTable.SrvLink("C", srvDescr, args);
+    assertFalse(lnk.equals("blah"));
+    assertTrue(lnk.equals(new StatusTable.SrvLink("C", srvDescr, args)));
+    assertFalse(lnk.equals(new StatusTable.SrvLink("D", srvDescr, args)));
+    assertFalse(lnk.equals(new StatusTable.SrvLink("C", srvDescr, null)));
+    assertFalse(lnk.equals(new StatusTable.SrvLink("C", new LockssServlet.ServletDescr(LockssServlet.class, "bar"), args)));
+    assertFalse(lnk.equals(new StatusTable.SrvLink("C", srvDescr,
+						   new Properties())));
   }
 
 }

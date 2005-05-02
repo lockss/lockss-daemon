@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.39 2005-02-02 09:42:46 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.40 2005-05-02 19:24:14 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.daemon.status;
 import java.util.*;
 import java.net.*;
 import org.lockss.util.*;
+import org.lockss.servlet.LockssServlet.ServletDescr;
 
 /**
  * Returned by {@link StatusService#getTable(String, String)} 
@@ -252,11 +253,10 @@ public class StatusTable {
   }
 
   /** Return the actual value, possibly embedded in a {@link
-   * StatusTable.DisplayedValue} and/or a {@link
-   * StatusTable.Reference}
-   * @param value an object, possibly an DisplayedValue or Reference
-   * @return The innermost embedded value that is not an DisplayedValue
-   * or a Reference.
+   * StatusTable.DisplayedValue} and/or a {@link StatusTable.LinkValue}
+   * @param value an object, possibly a DisplayedValue or LinkValue
+   * @return The innermost embedded value that is not a DisplayedValue
+   * or a LinkValue.
    */
   public static Object getActualValue(Object value) {
     while (value instanceof EmbeddedValue) {
@@ -315,6 +315,12 @@ public class StatusTable {
     public Object getValue();
   }
 
+  /** Marker interface for EmbeddedValues that represent some form of link.
+   * A LinkValue may not be embedded in another LinkValue, directly or
+   * indirectly. */
+  public interface LinkValue extends EmbeddedValue {
+  }
+
   /**
    * Wrapper for a value with additional display properties.
    */
@@ -323,11 +329,11 @@ public class StatusTable {
     private String color = null;
     private boolean bold = false;
 
-    /** Create a DisplayedValue with the specified value.  Any value is
-     * legal except a Reference or another DisplayedValue. */
+    /** Create a DisplayedValue with the specified value.  Any
+     * non-EmbeddedValue value is legal. */
     public DisplayedValue(Object value) {
       if (value instanceof EmbeddedValue) {
-	throw new IllegalArgumentException("Value of a DisplayedValue can't be a DisplayedValue or Reference");
+	throw new IllegalArgumentException("Value of a DisplayedValue can't be an EmbeddedValue");
       }
       this.value = value;
     }
@@ -365,7 +371,7 @@ public class StatusTable {
   /**
    * Object which refers to another table
    */
-  public static class Reference implements EmbeddedValue {
+  public static class Reference implements LinkValue {
     private Object value;
     private String tableName;
     private String key;
@@ -374,14 +380,14 @@ public class StatusTable {
     /**
      * Create a Reference object with an embedded value.
      * @param value value to be displayed.  Any value is
-     * legal except a Reference or a DisplayedValue.
+     * legal except another LinkValue
      * @param tableName name of the {@link StatusTable} that this 
      * links to
      * @param key object further specifying the table this links to
      */
     public Reference(Object value, String tableName, String key){
-      if (value instanceof Reference) {
-	throw new IllegalArgumentException("Value of a Reference can't be a Reference");
+      if (value instanceof LinkValue) {
+	throw new IllegalArgumentException("Value of a Reference can't be a LinkValue");
       }
       this.value = value;
       this.tableName = tableName;
@@ -437,6 +443,67 @@ public class StatusTable {
 
       //true iff both strings are equal or null
       return StringUtil.equalStrings(key, ref.getKey());
+    }
+
+    public int hashCode() {
+      throw new UnsupportedOperationException();
+    }
+  }
+
+  /**
+   * Object wrapping a link to a servlet
+   */
+  public static class SrvLink implements LinkValue {
+    private Object value;
+    private ServletDescr srvDescr;
+    private Properties args;
+
+    /**
+     * Create a SrvLink object with an embedded value and a URL to link to.
+     * @param value value to be displayed.  Any value is legal except
+     * another LinkValue.
+     * @param url the URL to link to
+     */
+    public SrvLink(Object value, ServletDescr srvDescr, Properties args){
+      if (value instanceof LinkValue) {
+	throw new IllegalArgumentException("Value of a SrvLink can't be a LinkValue");
+      }
+      this.value = value;
+      this.srvDescr = srvDescr;
+      this.args = args;
+    }
+
+    public Object getValue() {
+      return value;
+    }
+    
+    public ServletDescr getServletDescr() {
+      return srvDescr;
+    }
+
+    public Properties getArgs() {
+      return args;
+    }
+
+    public String toString() {
+      StringBuffer sb = new StringBuffer();
+      sb.append("[StatusTable.SrvLink:");
+      sb.append(value);
+      sb.append(", ");
+      sb.append(srvDescr.getName());
+      sb.append(args);
+      sb.append("]");
+      return sb.toString();
+    }
+
+    public boolean equals(Object obj) {
+      if (! (obj instanceof StatusTable.SrvLink)) {
+  	return false;
+      }
+      StatusTable.SrvLink link = (StatusTable.SrvLink)obj;
+      return value.equals(link.getValue()) &&
+	srvDescr.equals(link.getServletDescr()) &&
+	args.equals(link.getArgs());
     }
 
     public int hashCode() {
@@ -512,8 +579,8 @@ public class StatusTable {
       while (returnVal == 0 && it.hasNext()){
 	SortRule sortRule = (SortRule)it.next();
 	String colName = sortRule.getColumnName();
-	// Either object might be either a Reference or an
-	// DisplayedValue.  We want to compare the actual value.
+	// Either object might be either an EmbeddedValue.  We want to
+	// compare the actual value.
 	Object valA = getActualValue(rowA.get(colName));
 	Object valB = getActualValue(rowB.get(colName));
 	returnVal = sortRule.compare(valA, valB);
