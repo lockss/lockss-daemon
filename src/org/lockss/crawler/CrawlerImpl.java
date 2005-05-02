@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.42 2005-03-23 17:24:50 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.43 2005-05-02 23:59:39 troberts Exp $
  */
 
 /*
@@ -112,8 +112,8 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
   protected abstract boolean doCrawl0();
   public abstract int getType();
 
-  protected ArrayList permissionCheckers = new ArrayList();
-  protected List lockssCheckers = null;
+  protected ArrayList pluginPermissionCheckers = new ArrayList();
+  protected List daemonPermissionCheckers = null;
   protected AlertManager alertMgr;
 
   protected String proxyHost = null;
@@ -132,8 +132,24 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     this.au = au;
     this.spec = spec;
     this.aus = aus;
-    lockssCheckers = new LockssPermission().getCheckers();
-    permissionCheckers.addAll(spec.getPermissionCheckers());
+
+    /**
+     There are two types of checkers: daemon and plug-in. The daemon ones are
+     required, in that you must satisfy one of them to crawl a site.  The
+     plug-in ones are optional, in that you don't need to specify any.
+     However, you must satisfy each plug-in permission checker that is
+     specified.
+
+     The idea is that the plug-in can make the permission requirements more
+     restrictive, but not less.
+    */
+
+    //At least one of these checkers must satisfied for us to crawl a site
+    daemonPermissionCheckers = new LockssPermission().getCheckers();
+
+    //Specified by the plug-in, this can be a null set.  We must satisfy 
+    //all of these to crawl a site.
+    pluginPermissionCheckers.addAll(spec.getPermissionCheckers());
 
     alertMgr = (AlertManager)org.lockss.app.LockssDaemon.getManager(org.lockss.app.LockssDaemon.ALERT_MANAGER);
   }
@@ -296,13 +312,15 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     boolean needPermission = true;
     try {
       // check the lockss checkers and find at least one checker that matches
-      for (Iterator it = lockssCheckers.iterator(); it.hasNext() && needPermission; ) {
+      for (Iterator it = daemonPermissionCheckers.iterator(); it.hasNext() && needPermission; ) {
         is.mark(PERM_BUFFER_MAX);
         checker = (PermissionChecker) it.next();
         Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-        if (checker.checkPermission(reader)) {
+        if (checker.checkPermission(reader, permissionPage)) {
           needPermission = false;
-          try {
+	  break; //we just need one permission to de sucessful here
+	} else {
+	  try {
             is.reset();
           }
           catch (IOException e) {
@@ -321,11 +339,11 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
         return false;
       }
       // now check for the required permission from the plugin
-      for (Iterator it = permissionCheckers.iterator(); it.hasNext(); ) {
+      for (Iterator it = pluginPermissionCheckers.iterator(); it.hasNext(); ) {
         is.mark(PERM_BUFFER_MAX);
         checker = (PermissionChecker) it.next();
         Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-        if (!checker.checkPermission(reader)) {
+        if (!checker.checkPermission(reader, permissionPage)) {
           logger.error("No plugin crawl permission on " + permissionPage);
           is.close();
           return false;
