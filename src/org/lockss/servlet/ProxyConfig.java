@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.8 2005-01-19 23:31:43 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.9 2005-05-02 19:26:56 tlipkis Exp $
  */
 
 /*
@@ -243,7 +243,7 @@ public class ProxyConfig extends LockssServlet {
     Page page = newPage();;
     resp.setContentType("text/html");
     //    table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     // use GET so user can copy parameterized URL
     frm.method("GET");
     frm.add("<p>This page is used to obtain proxy configuration " +
@@ -303,7 +303,7 @@ public class ProxyConfig extends LockssServlet {
   void generateEncapForm(String error) throws IOException {
     Page page = newPage();;
     resp.setContentType("text/html");
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     frm.attribute("enctype", "multipart/form-data");
     frm.add(new Input(Input.Hidden, "pacform", "1"));

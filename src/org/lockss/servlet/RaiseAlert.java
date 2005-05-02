@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.1 2004-07-12 06:18:24 tlipkis Exp $
+ * $Id: RaiseAlert.java,v 1.2 2005-05-02 19:26:56 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,7 @@ public class RaiseAlert extends LockssServlet {
     Composite comp = new Composite();
     Block centeredBlock = new Block(Block.Center);
 
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 
     Table autbl = new Table(0, "cellpadding=0");

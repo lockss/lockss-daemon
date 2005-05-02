@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.18 2005-03-18 09:09:18 smorabito Exp $
+ * $Id: HashCUS.java,v 1.19 2005-05-02 19:26:57 tlipkis Exp $
  */
 
 /*
@@ -350,7 +350,7 @@ public class HashCUS extends LockssServlet {
     Composite comp = new Composite();
     Block centeredBlock = new Block(Block.Center);
 
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 
     Table autbl = new Table(0, "cellpadding=0");

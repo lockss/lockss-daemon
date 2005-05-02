@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: UiHome.java,v 1.3 2005-01-04 03:03:59 tlipkis Exp $
+// $Id: UiHome.java,v 1.4 2005-05-02 19:26:56 tlipkis Exp $
 // ========================================================================
 
 /*
@@ -88,7 +88,7 @@ public class UiHome extends LockssServlet {
 	navTable.newRow("valign=top");
 	navTable.newCell();
 	navTable.add("<font size=+1>");
-	navTable.add(srvLink(d, d.heading, null));
+	navTable.add(srvLink(d, d.heading));
 	navTable.add("</font>");
 	navTable.newCell();
 	navTable.add(expl);

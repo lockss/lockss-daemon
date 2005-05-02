@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.37 2005-02-02 09:42:23 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.38 2005-05-02 19:26:57 tlipkis Exp $
  */
 
 /*
@@ -182,7 +182,7 @@ public class AuConfig extends LockssServlet {
 				 (allAUs.isEmpty()
 				  ? "."
 				  : ", or edit an existing one.")));
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     // make form findable by unit tests
     frm.attribute("id", "AuSummaryForm");
@@ -378,7 +378,7 @@ public class AuConfig extends LockssServlet {
 		  + "some of the parameter values.");
     page.add(getExplanationBlock(addExp));
 
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 //     frm.add("<center>");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
@@ -520,7 +520,7 @@ public class AuConfig extends LockssServlet {
       initVals = ConfigManager.EMPTY_CONFIGURATION;
     }
 
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");

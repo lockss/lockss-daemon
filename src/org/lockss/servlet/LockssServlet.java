@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.54 2005-02-02 09:42:23 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.55 2005-05-02 19:26:56 tlipkis Exp $
  */
 
 /*
@@ -129,7 +129,7 @@ public abstract class LockssServlet extends HttpServlet
 
   // Servlet descriptor.
   // also used for non-servlet links.  should be refactored.
-  static class ServletDescr {
+  public static class ServletDescr {
     public Class cls;
     public String heading;	// display name
     public String name;		// url path component to invoke servlet
@@ -176,6 +176,10 @@ public abstract class LockssServlet extends HttpServlet
       }	
     }
 
+    public String getName() {
+      return name;
+    }
+
     String getExplanation() {
       return expl;
     }
@@ -209,11 +213,15 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(UiHome.class, "Cache Administration",
 		     ServletDescr.NOT_IN_NAV + ServletDescr.LARGE_LOGO);
   protected static final ServletDescr SERVLET_AU_CONFIG =
-    new ServletDescr(AuConfig.class, "Manual Journal Configuration");
+    new ServletDescr(AuConfig.class, "Manual Journal Configuration",
+		     ServletDescr.NOT_IN_NAV);
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr(BatchAuConfig.class, "Journal Configuration");
   protected static final ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class, "Daemon Status");
+  public static final ServletDescr SERVLET_DISPLAY_CONTENT =
+    new ServletDescr(ViewContent.class, "View Content",
+		     ServletDescr.DEBUG_ONLY + ServletDescr.NOT_IN_NAV);
   protected static final ServletDescr SERVLET_PROXY_INFO =
     new ServletDescr(ProxyConfig.class, "Proxy Info", "info/ProxyInfo", 0);
   protected static final ServletDescr SERVLET_THREAD_DUMP =
@@ -270,6 +278,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_PROXY_ACCESS_CONTROL,
      SERVLET_PROXY_INFO,
      SERVLET_DAEMON_STATUS,
+     SERVLET_DISPLAY_CONTENT,
      SERVLET_HASH_CUS,
      LINK_LOGS,
      SERVLET_THREAD_DUMP,
@@ -511,12 +520,22 @@ public abstract class LockssServlet extends HttpServlet
     return true;
   }
 
-  /** Construct servlet URL, with params as necessary.  Avoid generating a
-   *  hostname different from that used in the original request, or
-   *  browsers will prompt again for login
+  /** Construct servlet URL
+   */
+  String srvURL(ServletDescr d) {
+    return srvURL(null, d, null);
+  }
+
+  /** Construct servlet URL with params
    */
   String srvURL(ServletDescr d, String params) {
     return srvURL(null, d, params);
+  }
+
+  /** Construct servlet URL with params
+   */
+  String srvURL(ServletDescr d, Properties params) {
+    return srvURL(null, d, concatParams(params));
   }
 
   /** Construct servlet absolute URL, with params as necessary.
@@ -573,13 +592,19 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Return a link to a servlet */
   String srvLink(ServletDescr d, String text) {
-    return srvLink(d, text, null);
+    return srvLink(d, text, (String)null);
   }
 
   /** Return a link to a servlet with params */
   String srvLink(ServletDescr d, String text, String params) {
     return new Link(srvURL(d, params),
 		    (text != null ? text : d.heading)).toString();
+  }
+
+  /** Return a link to a servlet with params */
+  String srvLink(ServletDescr d, String text, Properties params) {
+    return new Link(srvURL(d, params),
+		    text).toString();
   }
 
   /** Return an absolute link to a servlet with params */
@@ -605,10 +630,10 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Concatenate params for URL string */
   static String concatParams(String p1, String p2) {
-    if (p1 == null || p1.equals("")) {
+    if (StringUtil.isNullString(p1)) {
       return p2;
     }
-    if (p2 == null || p2.equals("")) {
+    if (StringUtil.isNullString(p2)) {
       return p1;
     }
     return p1 + "&" + p2;
@@ -616,11 +641,16 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Concatenate params for URL string */
   String concatParams(Properties props) {
+    if (props == null) {
+      return null;
+    }
     java.util.List list = new ArrayList();
     for (Iterator iter = props.keySet().iterator(); iter.hasNext(); ) {
       String key = (String)iter.next();
       String val = props.getProperty(key);
-      list.add(key + "=" + urlEncode(val));
+      if (!StringUtil.isNullString(val)) {
+	list.add(key + "=" + urlEncode(val));
+      }
     }
     return StringUtil.separatedString(list, "&");
   }
@@ -710,28 +740,48 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Common page setup. */
   protected Page newPage() {
-    Page page = new Page();
-    String heading = getHeading();
-
-    page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
-    page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
-    page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
-
+    Page page = addBarePageHeading(new Page());
+    
     page.addHeader("<style type=\"text/css\"><!--\n" +
 		   "sup {font-weight: normal; vertical-align: super}\n" +
 		   "A.colhead, A.colhead:link, A.colhead:visited { text-decoration: none ; font-weight: bold ; color: blue }\n" +
 		   "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
 		   "--> </STYLE>");
-
-    if (heading != null)
-      page.title("LOCKSS: " + heading);
-    else
-      page.title("LOCKSS");
+    if (isFramed()) {
+      page.addHeader("<base target=\"_top\">");
+    }
+    page.title(getPageTitle());
 
     page.attribute("BGCOLOR", BACKGROUND_COLOR);
-
     page.add(getHeader());
     return page;
+  }
+
+  protected Page addBarePageHeading(Page page) {
+    page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
+    page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
+    page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
+    page.addHeader("<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />");
+    return page;
+  }
+
+  private boolean isFramed = false;
+
+  protected boolean isFramed() {
+    return isFramed;
+  }
+
+  protected void setFramed(boolean v) {
+    isFramed = v;
+  }
+
+  protected String getPageTitle() {
+    String heading = getHeading();
+    if (heading != null) {
+      return "LOCKSS: " + heading;
+    } else {
+      return "LOCKSS";
+    }
   }
 
   // Common page header
@@ -1021,7 +1071,7 @@ public abstract class LockssServlet extends HttpServlet
     Composite warning = new Composite();
     warning.add("<center><font color=red size=+1>");
     warning.add("This LOCKSS Cache is still starting.  Please ");
-    warning.add(srvLink(myServletDescr(), "try again"));
+    warning.add(srvLink(myServletDescr(), "try again", getParamsAsProps()));
     warning.add(" in a moment.");
     warning.add("</font></center><br>");
     page.add(warning);

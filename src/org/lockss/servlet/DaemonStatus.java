@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.49 2005-02-18 23:22:45 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.50 2005-05-02 19:26:57 tlipkis Exp $
  */
 
 /*
@@ -387,7 +387,7 @@ public class DaemonStatus extends LockssServlet {
       }
     }
     if (table != null) {
-      Form frm = new Form(srvURL(myServletDescr(), null));
+      Form frm = new Form(srvURL(myServletDescr()));
       // use GET so user can refresh in browser
       frm.method("GET");
       frm.add(table);
@@ -651,33 +651,50 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  // turn References into html links
+  // Process References and other links
   private String getDisplayString0(Object val, int type) {
     if (val instanceof StatusTable.Reference) {
-      StatusTable.Reference ref = (StatusTable.Reference)val;
-      StringBuffer sb = new StringBuffer();
-      sb.append("table=");
-      sb.append(ref.getTableName());
-      String key = ref.getKey();
-      if (!StringUtil.isNullString(key)) {
-	sb.append("&key=");
-	sb.append(urlEncode(key));
-      }
-      Properties refProps = ref.getProperties();
-      if (refProps != null) {
-	for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext(); ) {
-	  Map.Entry ent = (Map.Entry)iter.next();
-	  sb.append("&");
-	  sb.append(ent.getKey());
-	  sb.append("=");
-	  sb.append(urlEncode((String)ent.getValue()));
-	}
-      }
-      return srvLink(myServletDescr(), getDisplayString1(ref.getValue(), type),
-		     sb.toString());
+      return getRefString((StatusTable.Reference)val, type);
+    } else if (val instanceof StatusTable.SrvLink) {
+      return getSrvLinkString((StatusTable.SrvLink)val, type);
+    } else if (val instanceof StatusTable.LinkValue) {
+      // A LinkValue type we don't know about.  Just display its embedded
+      // value.
+      return getDisplayString1(StatusTable.getActualValue(val), type);
     } else {
       return getDisplayString1(val, type);
     }
+  }
+  
+  // turn References into html links
+  private String getRefString(StatusTable.Reference ref, int type) {
+    StringBuffer sb = new StringBuffer();
+    sb.append("table=");
+    sb.append(ref.getTableName());
+    String key = ref.getKey();
+    if (!StringUtil.isNullString(key)) {
+      sb.append("&key=");
+      sb.append(urlEncode(key));
+    }
+    Properties refProps = ref.getProperties();
+    if (refProps != null) {
+      for (Iterator iter = refProps.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry ent = (Map.Entry)iter.next();
+	sb.append("&");
+	sb.append(ent.getKey());
+	sb.append("=");
+	sb.append(urlEncode((String)ent.getValue()));
+      }
+    }
+    return srvLink(myServletDescr(), getDisplayString1(ref.getValue(), type),
+		   sb.toString());
+  }
+
+  // turn UrlLink into html link
+  private String getSrvLinkString(StatusTable.SrvLink link, int type) {
+    return srvLink(link.getServletDescr(),
+		   getDisplayString1(link.getValue(), type),
+		   link.getArgs());
   }
 
   // add display attributes from a DisplayedValue
@@ -801,7 +818,7 @@ public class DaemonStatus extends LockssServlet {
       if (!foundIt) {
         sel.add(" ", true, "");
       }
-      Form frm = new Form(srvURL(myServletDescr(), null));
+      Form frm = new Form(srvURL(myServletDescr()));
       // use GET so user can refresh in browser
       frm.method("GET");
       frm.add(sel);

@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.19 2005-02-02 09:42:23 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.20 2005-05-02 19:26:57 tlipkis Exp $
  */
 
 /*
@@ -175,7 +175,7 @@ public abstract class IpAccessControl extends LockssServlet {
     String excString = null;
 
     Composite comp = new Composite();
-    Form frm = new Form(srvURL(myServletDescr(), null));
+    Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 
     if (errMsg != null) {
