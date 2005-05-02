@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.29 2005-02-02 09:42:22 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.30 2005-05-02 19:27:39 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import org.lockss.app.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
+import org.lockss.servlet.LockssServlet;
 
 /**
  * Collect and report the status of the ArchivalUnits
@@ -45,12 +46,20 @@ import org.lockss.repository.*;
 public class ArchivalUnitStatus
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
+  public static final String PREFIX = Configuration.PREFIX + "auStatus.";
   /**
-   * The maximum number of nodes to display in a single page of the ui.
+   * The default maximum number of nodes to display in a single page of the ui.
    */
   public static final String PARAM_MAX_NODES_TO_DISPLAY =
-      Configuration.PREFIX + "state.max.nodes.to.display";
+    PREFIX + "nodesPerPage";
   static final int DEFAULT_MAX_NODES_TO_DISPLAY = 100;
+
+  /**
+   * Node URLs are links to cached content page if true
+   */
+  public static final String PARAM_CONTENT_IS_LINK =
+    PREFIX + "contentUrlIsLink";
+  static final boolean DEFAULT_CONTENT_IS_LINK = true;
 
   public static final String SERVICE_STATUS_TABLE_NAME =
       "ArchivalUnitStatusTable";
@@ -61,7 +70,8 @@ public class ArchivalUnitStatus
   static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
   private static Logger logger = Logger.getLogger("AuStatus");
-  private static int defaultNumRows;
+  private static int defaultNumRows = DEFAULT_MAX_NODES_TO_DISPLAY;
+  private static boolean isContentIsLink = DEFAULT_CONTENT_IS_LINK;
 
   public void startService() {
     super.startService();
@@ -92,6 +102,8 @@ public class ArchivalUnitStatus
 			Configuration.Differences changedKeys) {
     defaultNumRows = config.getInt(PARAM_MAX_NODES_TO_DISPLAY,
                                    DEFAULT_MAX_NODES_TO_DISPLAY);
+    isContentIsLink = config.getBoolean(PARAM_CONTENT_IS_LINK,
+					DEFAULT_CONTENT_IS_LINK);
   }
 
   static class AuSummary implements StatusAccessor {
@@ -365,7 +377,7 @@ public class ArchivalUnitStatus
 
       List rowL = new ArrayList();
       Iterator cusIter = au.getAuCachedUrlSet().contentHashIterator();
-     int endRow1 = startRow + numRows; // end row + 1
+      int endRow1 = startRow + numRows; // end row + 1
 
       if (startRow > 0) {
         // add 'previous'
@@ -389,7 +401,7 @@ public class ArchivalUnitStatus
           cus = au.makeCachedUrlSet(spec);
         }
         try {
-	  Map row = makeRow(repo.getNode(cus.getUrl()),
+	  Map row = makeRow(au, repo.getNode(cus.getUrl()),
 			    nodeMan.getNodeState(cus));
 	  row.put("sort", new Integer(curRow));
           rowL.add(row);
@@ -403,9 +415,23 @@ public class ArchivalUnitStatus
       return rowL;
     }
 
-    private Map makeRow(RepositoryNode node, NodeState state) {
+    private Map makeRow(ArchivalUnit au, RepositoryNode node,
+			NodeState state) {
+      String url = node.getNodeUrl();
+      boolean hasContent = node.hasContent();
+      Object val;
       HashMap rowMap = new HashMap();
-      rowMap.put("NodeName", node.getNodeUrl());
+      if (hasContent && isContentIsLink) {
+	Properties args = new Properties();
+	args.setProperty("auid", au.getAuId());
+	args.setProperty("url", url);
+	val = new StatusTable.SrvLink(url,
+				      LockssServlet.SERVLET_DISPLAY_CONTENT,
+				      args);
+      } else {
+	val = url;
+      }
+      rowMap.put("NodeName", val);
 
       String status = null;
       if (node.isDeleted()) {
@@ -420,14 +446,13 @@ public class ArchivalUnitStatus
       if (status != null) {
 	rowMap.put("NodeStatus", status);
       }
-      boolean content = node.hasContent();
       Object versionObj = DASH;
       Object sizeObj = DASH;
-      if (content) {
+      if (hasContent) {
         versionObj = new OrderedObject(new Long(node.getCurrentVersion()));
         sizeObj = new OrderedObject(new Long(node.getContentSize()));
       }
-      rowMap.put("NodeHasContent", (content ? "yes" : "no"));
+      rowMap.put("NodeHasContent", (hasContent ? "yes" : "no"));
       rowMap.put("NodeVersion", versionObj);
       rowMap.put("NodeContentSize", sizeObj);
       if (!node.isLeaf()) {
