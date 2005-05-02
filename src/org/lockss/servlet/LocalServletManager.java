@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.9 2005-03-11 02:12:21 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.10 2005-05-02 19:25:28 tlipkis Exp $
  */
 
 /*
@@ -67,9 +67,16 @@ public class LocalServletManager extends BaseServletManager {
   public static final String PARAM_REDIRECT_ROOT = PREFIX + "redirectRoot";
   public static final String DEFAULT_REDIRECT_ROOT = null;
 
+  static final String PARAM_INFRAME_CONTENT_TYPES =
+    PREFIX + "view.inFrameTypes";
+  static final String DEFAULT_INFRAME_CONTENT_TYPES =
+    "text;image;application/pdf";
+
+
   private String redirectRootTo = DEFAULT_REDIRECT_ROOT;
   private LockssResourceHandler rootResourceHandler;
   private HashUserRealm realm;
+  private List inFrameContentTypes;
 
   public LocalServletManager() {
     super(SERVER_NAME);
@@ -90,12 +97,24 @@ public class LocalServletManager extends BaseServletManager {
       LockssServlet.setContactAddr(config.get(PARAM_CONTACT_ADDR,
 					      DEFAULT_CONTACT_ADDR));
       LockssServlet.setHelpUrl(config.get(PARAM_HELP_URL, DEFAULT_HELP_URL));
+
+      if (changedKeys.contains(PARAM_INFRAME_CONTENT_TYPES)) {
+	inFrameContentTypes = config.getList(PARAM_INFRAME_CONTENT_TYPES);
+	if (inFrameContentTypes == null || inFrameContentTypes.isEmpty()) {
+	  inFrameContentTypes =
+	    StringUtil.breakAt(DEFAULT_INFRAME_CONTENT_TYPES, ';', 0, true);
+	}
+      }
     }
   }
 
   private void setRedirectRootTo(LockssResourceHandler rh, String redTo) {
     rootResourceHandler.setRedirectRootTo(StringUtil.isNullString(redTo)
 					  ? null : redTo);
+  }
+
+  List inFrameContentTypes() {
+    return inFrameContentTypes;
   }
 
   public void startServlets() {
@@ -178,6 +197,8 @@ public class LocalServletManager extends BaseServletManager {
 		       "org.lockss.servlet.AuConfig");
     handler.addServlet("DaemonStatus", "/DaemonStatus",
 		       "org.lockss.servlet.DaemonStatus");
+    handler.addServlet("ViewContent", "/ViewContent",
+		       "org.lockss.servlet.ViewContent");
     handler.addServlet("AdminIpAccess", "/AdminIpAccess",
 		       "org.lockss.servlet.AdminIpAccess");
     handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
