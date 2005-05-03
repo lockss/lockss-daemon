@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringPermissionChecker.java,v 1.2 2004-08-19 00:02:21 clairegriffin Exp $
+ * $Id: TestStringPermissionChecker.java,v 1.3 2005-05-03 00:02:44 troberts Exp $
  */
 
 /*
@@ -56,11 +56,11 @@ public class TestStringPermissionChecker extends LockssTestCase {
     checker = new StringPermissionChecker(PERMISSION_STRING);
     // check the correct string
     Reader reader = new StringReader(s_ok);
-    assertTrue(checker.checkPermission(reader));
+    assertTrue(checker.checkPermission(reader, null));
 
     // check an incorrect string
     reader = new StringReader(s_rev);
-    assertFalse(checker.checkPermission(reader));
+    assertFalse(checker.checkPermission(reader, null));
 
   }
 
@@ -77,15 +77,15 @@ public class TestStringPermissionChecker extends LockssTestCase {
     checker.setFlag(bitNumber, false);
 
     Reader reader = new StringReader(s_ok);
-    assertTrue(checker.checkPermission(reader));
+    assertTrue(checker.checkPermission(reader, null));
 
     reader = new StringReader(s_lwr);
-    assertFalse(checker.checkPermission(reader));
+    assertFalse(checker.checkPermission(reader, null));
 
     // test INGNORE_CASE TRUE
     checker.setFlag(bitNumber, true);
     reader = new StringReader(s_lwr);
-    assertTrue(checker.checkPermission(reader));
+    assertTrue(checker.checkPermission(reader, null));
   }
 
   public void testCheckCrawlPermissionWithWhitespace() {
@@ -107,7 +107,7 @@ public class TestStringPermissionChecker extends LockssTestCase {
     checker = new StringPermissionChecker(PERMISSION_STRING,
                                           new WhiteSpaceFilterRule());
     Reader reader = new StringReader(testStr);
-    assertTrue(checker.checkPermission(reader));
+    assertTrue(checker.checkPermission(reader, null));
 
     // different whitespace
     sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
@@ -118,7 +118,7 @@ public class TestStringPermissionChecker extends LockssTestCase {
     testStr = sb.toString();
 
     reader = new StringReader(testStr);
-    assertTrue(checker.checkPermission(reader));
+    assertTrue(checker.checkPermission(reader, null));
 
     // extra whitespace
     sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
@@ -129,7 +129,7 @@ public class TestStringPermissionChecker extends LockssTestCase {
     testStr = sb.toString();
 
     reader = new StringReader(testStr);
-    assertTrue(checker.checkPermission(reader));
+    assertTrue(checker.checkPermission(reader, null));
 
     // missing whitespace
     sb = new StringBuffer("laa-dee-dah-LOCK-KCOL\n\n");
@@ -139,7 +139,7 @@ public class TestStringPermissionChecker extends LockssTestCase {
     testStr = sb.toString();
 
     reader = new StringReader(testStr);
-    assertFalse(checker.checkPermission(reader));
+    assertFalse(checker.checkPermission(reader, null));
   }
 
 

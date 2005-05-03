@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.3 2004-12-18 01:44:56 dcfok Exp $
+ * $Id: TestOaiCrawler.java,v 1.4 2005-05-03 00:02:44 troberts Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class TestOaiCrawler extends LockssTestCase {
     mau.addUrl(permissionUrl);
     spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, false);
     crawler = new OaiCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
   }
 
@@ -167,7 +167,7 @@ public class TestOaiCrawler extends LockssTestCase {
     //set the crawler
     crawler = new MyOaiCrawler(mau, spec, aus);
     ((MyOaiCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    ((MyOaiCrawler)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((MyOaiCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(1));
 
     //do the crawl
     assertTrue(crawler.doCrawl());
@@ -193,7 +193,7 @@ public class TestOaiCrawler extends LockssTestCase {
      * @param reader Reader
      * @return boolean
      */
-    public boolean checkPermission(Reader reader) {
+    public boolean checkPermission(Reader reader, String permissionUrl) {
         if (numPermissionGranted-- > 0) {
           return true;
         } else {

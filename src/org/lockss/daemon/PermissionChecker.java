@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionChecker.java,v 1.1 2004-08-11 19:41:44 clairegriffin Exp $
+ * $Id: PermissionChecker.java,v 1.2 2005-05-03 00:02:41 troberts Exp $
  */
 
 /*
@@ -38,7 +38,8 @@ public interface PermissionChecker {
    * check for a permission object by reading data from a InputStream.
    *
    * @param inputReader the InputStream to search for the content
+   * @param url url of the permission page we're checking
    * @return boolean true iff the permission object is found.
    */
-  public boolean checkPermission(Reader inputReader);
+  public boolean checkPermission(Reader inputReader, String url);
 }

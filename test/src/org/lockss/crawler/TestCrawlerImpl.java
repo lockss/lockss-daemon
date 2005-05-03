@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.29 2005-03-23 17:24:51 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.30 2005-05-03 00:02:42 troberts Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
     getMockLockssDaemon().getAlertManager();
     crawler = new TestableCrawlerImpl(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers =
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(true));
 
     mau.setParser(parser);
@@ -463,7 +463,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 //     crawler = new TestableCrawlerImpl(mau, spec, aus);
 // //     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-//     ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MockPermissionChecker(true));
+//     ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(true));
 
 //     mau.setParser(parser);
 //     crawler.doCrawl();
@@ -500,7 +500,7 @@ public class TestCrawlerImpl extends LockssTestCase {
     }
   }
 
-  private class MyMockPermissionChecker implements PermissionChecker{
+  private class MyMockPermissionChecker implements PermissionChecker {
     boolean permission = false;
 
     MyMockPermissionChecker(boolean permission) {
@@ -513,7 +513,7 @@ public class TestCrawlerImpl extends LockssTestCase {
      * @param reader Reader
      * @return boolean
      */
-    public boolean checkPermission(Reader reader) {
+    public boolean checkPermission(Reader reader, String permissionUrl) {
       return permission;
     }
 

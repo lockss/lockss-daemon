@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionChecker.java,v 1.1 2005-03-18 18:05:13 troberts Exp $
+ * $Id: MockPermissionChecker.java,v 1.2 2005-05-03 00:02:45 troberts Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class MockPermissionChecker implements PermissionChecker {
    * @param reader Reader
    * @return boolean
    */
-  public boolean checkPermission(Reader reader) {
+  public boolean checkPermission(Reader reader, String permissionUrl) {
     if (numPermissionGranted-- > 0) {
       return true;
     } else {

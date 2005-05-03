@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.4 2005-03-18 18:12:12 troberts Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.5 2005-05-03 00:02:43 troberts Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new TestableFollowLinkCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).lockssCheckers =
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setParser(parser);
@@ -395,7 +395,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     //    crawler = new NewContentCrawler(mau, spec, aus);
     //     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(new MyMockPermissionChecker(100));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(100));
 
     //    mau.setParser(parser);
     
@@ -644,7 +644,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     //set Crawler
     crawler = new TestableFollowLinkCrawler(mmau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).lockssCheckers = ListUtil.list(
+    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(
         new MyMockPermissionChecker(passPermissionCheck));
 
     //set parser
@@ -884,7 +884,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     }
   }
 
-  private class MyMockPermissionChecker implements PermissionChecker{
+  private class MyMockPermissionChecker implements PermissionChecker {
     int numPermissionGranted=0;
 
     MyMockPermissionChecker(int numPermissionGranted) {
@@ -901,7 +901,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
      * @param reader Reader
      * @return boolean
      */
-    public boolean checkPermission(Reader reader) {
+    public boolean checkPermission(Reader reader, String permissionUrl) {
         if (numPermissionGranted-- > 0) {
           return true;
         } else {

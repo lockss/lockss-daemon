@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.22 2005-03-23 17:25:22 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.23 2005-05-03 00:02:44 troberts Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(url1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).lockssCheckers =
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(1));
   }
 

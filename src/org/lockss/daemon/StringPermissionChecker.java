@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.3 2004-08-20 22:56:16 clairegriffin Exp $
+ * $Id: StringPermissionChecker.java,v 1.4 2005-05-03 00:02:42 troberts Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ public class StringPermissionChecker implements PermissionChecker {
     m_encoding = encoding;
   }
 
-  public boolean checkPermission(Reader reader) {
+  public boolean checkPermission(Reader reader, String permissionUrl) {
     boolean permission_ok = false;
     String matchstr = m_matchString;
     int ch;
