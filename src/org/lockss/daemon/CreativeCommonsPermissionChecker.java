@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.3 2005-03-19 09:08:39 tlipkis Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.4 2005-05-03 00:00:33 troberts Exp $
  */
 
 /*
@@ -106,15 +106,25 @@ public class CreativeCommonsPermissionChecker
    * the licenseURI must be "http://some.url/foo/", or the license will
    * not be considered valid.
    */
-  public CreativeCommonsPermissionChecker(String licenseURI) {
+  /*  public CreativeCommonsPermissionChecker(String licenseURI) {
     m_licenseURI = licenseURI;
+  }
+  */
+
+  public CreativeCommonsPermissionChecker() {
   }
 
   /**
    * Check for "Distribution" permission granted by a Creative Commons
    * License.
    */
-  public boolean checkPermission(Reader reader) {
+  public boolean checkPermission(Reader reader, String permissionUrl) {
+    if (reader == null) {
+      throw new NullPointerException("Called with null reader");
+    } else if (permissionUrl == null) {
+      throw new NullPointerException("Called with null permissionUrl"); 
+    }
+
     String rdfString;
 
     try {
@@ -140,7 +150,8 @@ public class CreativeCommonsPermissionChecker
     parser.setErrorHandler(new LoggingErrorHandler());
     try {
       InputSource source = new InputSource(new StringReader(rdfString));
-      source.setSystemId(m_licenseURI);
+//       source.setSystemId(m_licenseURI);
+      source.setSystemId(permissionUrl);
       parser.parse(source, new ModelConsumer(model));
     } catch (Exception ex) {
       // Can throw SAXException or ModelException
@@ -153,7 +164,9 @@ public class CreativeCommonsPermissionChecker
     try {
       // Find the license type to use as the subject key
       // for obtaining "permission" triples from this RDF model.
-      Model license = (Model)model.find(new ResourceImpl(m_licenseURI), LICENSE, null);
+      Model license =
+// 	(Model)model.find(new ResourceImpl(m_licenseURI), LICENSE, null);
+	(Model)model.find(new ResourceImpl(permissionUrl), LICENSE, null);
 
       if (license == null) {
 	log.warning("No 'license' resource.  Invalid CC RDF.");
@@ -237,6 +250,7 @@ public class CreativeCommonsPermissionChecker
 	}
 
 	if (in_pos == start_len) {
+	  log.debug3("Found start of RDF");
 	  found_start = true;
 	  in_pos = 0;
 	  continue;
@@ -248,6 +262,7 @@ public class CreativeCommonsPermissionChecker
 	  in_pos = 0;
 	}
 	if (in_pos == end_len) {
+	  log.debug3("Found end of RDF");
 	  found_end = true;
 	  break; // done with this stream.
 	}
@@ -257,6 +272,7 @@ public class CreativeCommonsPermissionChecker
     if (found_end) {
       return new String(buf, 0, buf_pos);
     } else {
+      log.debug3("Got to end of reader and didn't find the RDF end");
       return null;
     }
   }
