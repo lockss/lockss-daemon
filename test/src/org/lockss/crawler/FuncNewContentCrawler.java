@@ -1,5 +1,5 @@
 /*
- * $Id: FuncNewContentCrawler.java,v 1.12 2005-01-04 02:50:39 tlipkis Exp $
+ * $Id: FuncNewContentCrawler.java,v 1.13 2005-05-03 00:04:12 troberts Exp $
  */
 
 /*
@@ -159,9 +159,11 @@ public class FuncNewContentCrawler extends LockssTestCase {
 
 	   CachedUrl cu = sau.makeCachedUrl(fileUrl);
 	   if (fileLevel <= maxDepth) {
-	     assertTrue(cu !=null && cu.hasContent());
+// 	     assertTrue(cu !=null && cu.hasContent());
+	     assertTrue(cu + " has no content", cu.hasContent());
 	   } else {
-	     assertFalse(cu.hasContent());
+	     assertFalse(cu + " has content when it shouldn't",
+			 cu.hasContent());
 	   }
 	 }
     }
