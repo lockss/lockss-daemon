@@ -1,5 +1,5 @@
 /*
- * $Id: StateTable.java,v 1.1 2005-04-19 03:08:32 smorabito Exp $
+ * $Id: PollerTallyActions.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
  */
 
 /*
@@ -32,12 +32,46 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import org.lockss.protocol.psm.PsmInterp;
+import org.lockss.protocol.psm.*;
 
-public interface StateTable {
+public class PollerTallyActions {
+  public static PsmEvent handleInitialize(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
 
-  /**
-   * Return the state machine interpreter for this table.
-   */
-  public PsmInterp getInterp();
+  public static PsmEvent handleVerifyVoteEffort(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleTally(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleProveRepairEffort(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleSendRepairRequest(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleReceivedRepair(PsmMsgEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtRepairOk;
+  }
+
+  public static PsmEvent handleSendReceipt(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
 }
