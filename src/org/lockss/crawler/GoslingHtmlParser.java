@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.26 2005-04-19 20:11:15 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.27 2005-05-04 00:23:39 troberts Exp $
  */
 
 /*
@@ -91,33 +91,33 @@ public class GoslingHtmlParser implements ContentParser {
     Configuration.PREFIX + "crawler.parse_js";
 
 
-  private static final String METATAG = "meta";
-  private static final String IMGTAG = "img";
-  private static final String EMBEDTAG = "embed";
-  private static final String OBJECTTAG = "object";
-  private static final String ATAG = "a";
-  private static final String APPLETTAG = "applet";
-  private static final String BASETAG = "base";
-  private static final String FRAMETAG = "frame";
-  private static final String LINKTAG = "link";
-  private static final String SCRIPTTAG = "script";
-  private static final String SCRIPTTAGEND = "/script";
-  private static final String BODYTAG = "body";
-  private static final String TABLETAG = "table";
-  private static final String TDTAG = "tc";
-  private static final String JSCRIPTTAG = "javascript";
-  private static final String HREF = "href";
-  private static final String SRC = "src";
-  private static final String CODE = "code";
-  private static final String CODEBASE = "codebase";
-  private static final String BACKGROUNDSRC = "background";
-  private static final String REFRESH = "refresh";
-  private static final String HTTP_EQUIV = "http-equiv";
-  private static final String HTTP_EQUIV_CONTENT = "content";
-  private static final String HTTP_EQUIV_URL = "url";
+  protected static final String METATAG = "meta";
+  protected static final String IMGTAG = "img";
+  protected static final String EMBEDTAG = "embed";
+  protected static final String OBJECTTAG = "object";
+  protected static final String ATAG = "a";
+  protected static final String APPLETTAG = "applet";
+  protected static final String BASETAG = "base";
+  protected static final String FRAMETAG = "frame";
+  protected static final String LINKTAG = "link";
+  protected static final String SCRIPTTAG = "script";
+  protected static final String SCRIPTTAGEND = "/script";
+  protected static final String BODYTAG = "body";
+  protected static final String TABLETAG = "table";
+  protected static final String TDTAG = "tc";
+  protected static final String JSCRIPTTAG = "javascript";
+  protected static final String HREF = "href";
+  protected static final String SRC = "src";
+  protected static final String CODE = "code";
+  protected static final String CODEBASE = "codebase";
+  protected static final String BACKGROUNDSRC = "background";
+  protected static final String REFRESH = "refresh";
+  protected static final String HTTP_EQUIV = "http-equiv";
+  protected static final String HTTP_EQUIV_CONTENT = "content";
+  protected static final String HTTP_EQUIV_URL = "url";
 
-  private static final char NEWLINE_CHAR = '\n';
-  private static final char CARRIAGE_RETURN_CHAR = '\r';
+  protected static final char NEWLINE_CHAR = '\n';
+  protected static final char CARRIAGE_RETURN_CHAR = '\r';
 
   //smallest size any of the tags we're interested in can be; <a href=
   private static final int MIN_TAG_LENGTH = 5;
@@ -130,8 +130,8 @@ public class GoslingHtmlParser implements ContentParser {
 
   private static Logger logger = Logger.getLogger("GoslingHtmlParser");
 
-  private String srcUrl = null;
-  private URL baseUrl = null;
+  protected String srcUrl = null;
+  protected URL baseUrl = null;
   private Reader reader;
   private boolean readerEof;
 
@@ -310,11 +310,11 @@ public class GoslingHtmlParser implements ContentParser {
     return false;
   }
 
-  private boolean beginsWithTag(StringBuffer sb, String tag) {
+  protected boolean beginsWithTag(StringBuffer sb, String tag) {
     return beginsWithTag(sb.toString(), tag);
   }
 
-  private boolean beginsWithTag(String s1, String tag) {
+  protected boolean beginsWithTag(String s1, String tag) {
     if (StringUtil.startsWithIgnoreCase(s1, tag)) {
       int len = tag.length();
       if (s1.length() > len && Character.isWhitespace(s1.charAt(len))) {
@@ -450,7 +450,7 @@ public class GoslingHtmlParser implements ContentParser {
    * Handle resolving of a URI from a base url and a relative url.
    * Called out separately so we can add exceptions (like javascript) here
    */
-  private String resolveUri(URL base, String relative)
+  protected String resolveUri(URL base, String relative)
       throws MalformedURLException {
     if(base != null && "javascript".equalsIgnoreCase(base.getProtocol())
        || 
@@ -472,11 +472,11 @@ public class GoslingHtmlParser implements ContentParser {
     return UrlUtil.resolveUri(base, relative);
   }
 
-  String getAttributeValue(String attribute, StringBuffer sb) {
+  protected String getAttributeValue(String attribute, StringBuffer sb) {
     return getAttributeValue(attribute, sb.toString());
   }
 
-  String getAttributeValue(String attribute, String src) {
+  protected String getAttributeValue(String attribute, String src) {
     if (isTrace) {
       logger.debug3("looking for "+attribute+" in "+src);
     }
