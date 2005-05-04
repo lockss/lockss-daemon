@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodAction.java,v 1.1 2005-05-04 19:04:09 smorabito Exp $
+ * $Id: TestPsmMethodAction.java,v 1.2 2005-05-04 22:45:21 smorabito Exp $
  */
 
 /*
@@ -94,11 +94,48 @@ public class TestPsmMethodAction extends LockssTestCase {
   }
 
   /**
-   * Ensure that constructing with a non-public Actions handler class
-   * throws appropriately.
+   * Ensure that constructing with a method that has the wrong
+   * return type throws.
+   */
+  public void testWrongReturnTypeThrows() {
+    try {
+      PsmMethodAction wrongReturnType =
+	new PsmMethodAction(MyActionHandlers.class, "wrongReturnType");
+      fail("Should have thrown PsmMethodActionException");
+    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      ;
+    }
+  }
+
+  /**
+   * Ensure that constructing with non-public Actions handler classes
+   * or methods throw appropriately.
    */
   public void testNonPublicClassConstructionThrows() {
     PsmMethodAction action = null;
+    // Methods
+    try {
+      action = new PsmMethodAction(MyActionHandlers.class,
+				   "privateMethod");
+      fail("Should have thrown PsmMethodActionException");
+    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      ; // This is expected
+    }
+    try {
+      action = new PsmMethodAction(MyActionHandlers.class,
+				   "packageMethod");
+      fail("Should have thrown PsmMethodActionException");
+    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      ; // This is expected
+    }
+    try {
+      action = new PsmMethodAction(MyActionHandlers.class,
+				   "protectedMethod");
+      fail("Should have thrown PsmMethodActionException");
+    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      ; // This is expected
+    }
+    // Classes
     try {
       action = new PsmMethodAction(PrivateActionHandlers.class,
 				   "handleFoo");
@@ -122,6 +159,7 @@ public class TestPsmMethodAction extends LockssTestCase {
     }
   }
 
+
   /**
    * Class that defines a number of handler methods.
    */
@@ -137,6 +175,24 @@ public class TestPsmMethodAction extends LockssTestCase {
     /** Non-static methods should cause PsmMethodActionExceptions. */
     public PsmEvent handleBaz(PsmEvent evt, PsmInterp interp) {
       return bazEvent;
+    }
+
+    /** Invalid return type. */
+    public static Object wrongReturnType(PsmEvent evt, PsmInterp interp) {
+      return null;
+    }
+
+    /** Non-public methods. */
+    PsmEvent privateMethod(PsmEvent evt, PsmInterp interp) {
+      return null;
+    }
+
+    PsmEvent packageMethod(PsmEvent evt, PsmInterp interp) {
+      return null;
+    }
+
+    PsmEvent protectedMethod(PsmEvent evt, PsmInterp interp) {
+      return null;
     }
   }
 

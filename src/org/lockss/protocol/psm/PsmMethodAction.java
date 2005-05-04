@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMethodAction.java,v 1.1 2005-05-04 19:04:10 smorabito Exp $
+* $Id: PsmMethodAction.java,v 1.2 2005-05-04 22:45:20 smorabito Exp $
  */
 
 /*
@@ -44,6 +44,10 @@ public class PsmMethodAction extends PsmAction {
   }
 
   public PsmMethodAction(Class c, String m) {
+    this(c, m, new Class[] {PsmEvent.class, PsmInterp.class});
+  }
+
+  protected PsmMethodAction(Class c, String m, Class[] argArray) {
     // This prevents IllegalAccessExceptions when attempting to
     // invoke methods on a class that is in another package and not
     // defined 'public'.
@@ -52,20 +56,29 @@ public class PsmMethodAction extends PsmAction {
     }
 					
     try {
-      method = c.getMethod(m, new Class[] {PsmEvent.class, PsmInterp.class});
+      method = c.getMethod(m, argArray);
     } catch (NoSuchMethodException ex) {
       throw new PsmMethodActionException(ex.toString() + ": method " + m);
     }
 
-    if (!Modifier.isStatic(method.getModifiers())) {
+    if (PsmEvent.class != method.getReturnType()) {
+      throw new PsmMethodActionException("Method return type must be PsmEvent");
+    }
+
+    if (!Modifier.isStatic(method.getModifiers()) ||
+	!Modifier.isPublic(method.getModifiers())) {
       throw new PsmMethodActionException("Method " + m +
-					 " is not static.");
+					 " must be static and public.");
     }
   }
-    
+
   public PsmEvent run(PsmEvent event, PsmInterp interp) {
+    return this.run(event, interp, new Object[]{event, interp});
+  }
+
+  protected PsmEvent run(PsmEvent event, PsmInterp interp, Object[] argArray) {
     try {
-      return (PsmEvent)method.invoke(null, new Object[]{event, interp});
+      return (PsmEvent)method.invoke(null, argArray);
     } catch (IllegalAccessException ex) {
       throw new PsmMethodActionException(ex.toString());
     } catch (InvocationTargetException ex) {
