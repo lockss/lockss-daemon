@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.30 2005-04-27 18:31:17 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.31 2005-05-06 00:07:08 troberts Exp $
  */
 
 /*
@@ -63,6 +63,9 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_CRAWL_DEPTH = "au_crawl_depth";
   static final public String AU_MANIFEST_KEY = "au_manifest";
   static final public String AU_URL_NORMALIZER_KEY = "au_url_normalizer";
+
+  static final public String AU_PERMISSION_CHECKER_FACTORY =
+    "au_permission_checker_factory";
 
 
   protected ClassLoader classLoader;
@@ -221,6 +224,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     CrawlRule rule = makeRules();
     String crawl_type = definitionMap.getString(DefinablePlugin.CM_CRAWL_TYPE,
                                                 DefinablePlugin.CRAWL_TYPES[0]);
+    //XXX put makePermissionCheckersHere
+
     if(crawl_type.equals(DefinablePlugin.CRAWL_TYPES[1])) { // oai-crawl
       boolean follow_links =
           definitionMap.getBoolean(DefinablePlugin.CM_FOLLOW_LINKS, true);
@@ -230,9 +235,25 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     else  { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
       //XXX change to a list
+//       String startUrl = paramMap.getString(AU_START_URL);
+
+//       return new SpiderCrawlSpec(ListUtil.list(startUrl),
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
-				 getPermissionPages(), rule, depth);
+				 getPermissionPages(), rule, depth,
+				 makePermissionCheckers());
     }
+  }
+
+  protected List makePermissionCheckers() {
+    String permissionCheckerFactoryClass =
+      definitionMap.getString(AU_PERMISSION_CHECKER_FACTORY, null);
+    if (permissionCheckerFactoryClass == null) {
+      return new ArrayList();
+    }
+    PermissionCheckerFactory fact =
+      (PermissionCheckerFactory) loadClass(permissionCheckerFactoryClass,
+					   PermissionCheckerFactory.class);
+    return fact.createPermissionCheckers(this);
   }
 
   protected CrawlWindow makeCrawlWindow() {
@@ -301,12 +322,10 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       Object obj = null;
       try {
         obj = Class.forName(className, true, classLoader).newInstance();
-      }
-      catch (Exception ex) {
+      } catch (Exception ex) {
         throw new InvalidDefinitionException(
             auName + " unable to create " + loadedClass + ": " + className, ex);
-      }
-      catch (LinkageError le) {
+      } catch (LinkageError le) {
         throw new InvalidDefinitionException(
             auName + " unable to create " + loadedClass + ": " + className, le);
 

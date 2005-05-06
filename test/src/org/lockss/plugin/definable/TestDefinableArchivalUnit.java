@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.17 2005-03-15 07:42:39 tlipkis Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.18 2005-05-06 00:07:08 troberts Exp $
  */
 
 /*
@@ -58,10 +58,13 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   private static String PLUGIN_NAME = "Test Plugin";
   private static String CURRENT_VERSION = "Version 1.0";
 
+  DefinablePlugin cp;
+
+
   protected void setUp() throws Exception {
     super.setUp();
 
-    DefinablePlugin cp = new DefinablePlugin();
+    cp = new DefinablePlugin();
     defMap = cp.getDefinitionMap();
     cau = new DefinableArchivalUnit(cp, defMap);
     configMap = cau.getProperties();
@@ -290,6 +293,15 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
                  rules.match("http://www.example.com/"));
   }
 
+
+  public static class NegativeCrawlRuleFactory
+    implements CrawlRuleFromAuFactory {
+
+    public CrawlRule createCrawlRule(ArchivalUnit au) {
+      return new NegativeCrawlRule();
+    }
+  }
+  
   public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
     defMap.putString(DefinableArchivalUnit.AU_RULES_KEY,
 		  "org.lockss.bogus.FakeClass");
@@ -302,6 +314,56 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   }
 
 
+  public void testMakePermissionCheckersNone() {
+    List permissionCheckers = cau.makePermissionCheckers();
+    assertEquals(0, permissionCheckers.size());
+  }
+
+  public void testMakePermissionCheckers() {
+    defMap.putString(DefinableArchivalUnit.AU_PERMISSION_CHECKER_FACTORY,
+ 		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyPermissionCheckerFactory");
+    List permissionCheckers = cau.makePermissionCheckers();
+    assertEquals(1, permissionCheckers.size());
+  }
+
+  public static class MyPermissionCheckerFactory
+    implements PermissionCheckerFactory {
+    public List createPermissionCheckers(ArchivalUnit au) {
+      List checkers = new ArrayList();
+      checkers.add(new MockPermissionChecker());
+      return checkers;
+    }
+  }
+
+  private static class MockPermissionChecker implements PermissionChecker {
+    public boolean checkPermission(Reader inputReader, String url) {
+      throw new UnsupportedOperationException("not implemented");
+    } 
+  }
+
+  /*
+  public void testMakeCrawlSpec() throws Exception {
+    Properties props = new Properties();
+//      props.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+//      props.setProperty(ConfigParamDescr.VOLUME_NUMBER.getKey(), "10");
+//      props.setProperty(BaseArchivalUnit.PAUSE_TIME_KEY, "10000");
+//      props.setProperty(BaseArchivalUnit.USE_CRAWL_WINDOW, "true");
+//      props.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "10000");
+//      Configuration config = ConfigurationUtil.fromProps(props);
+
+     cau.setConfiguration(ConfigurationUtil.fromProps(props));
+
+     defMap.putString("plugin_crawl_type", "HTML Links");
+     defMap.putString("au_manifest", "http://www.example.com");
+//      defMap.putString("au_start_url", "http://www.example.com");
+//     cau = new DefinableArchivalUnit(cp, defMap);
+
+    CrawlSpec spec = cau.makeCrawlSpec();
+    assertNotNull("makeCrawlSpec returned a null crawl spec", spec);
+    assertTrue("makeCrawlSpec should have returned a SpiderCrawlSpec",
+	       spec instanceof SpiderCrawlSpec);
+  }
+  */
   public void testSiteNormalizeUrlNull() {
     UrlNormalizer urlNormalizer = cau.makeUrlNormalizer();
     assertNull(urlNormalizer);
@@ -358,13 +420,6 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
 	       org.lockss.plugin.definable.TestDefinableArchivalUnit.MyMockFilterRule);
   }
 
-  public static class NegativeCrawlRuleFactory
-    implements CrawlRuleFromAuFactory {
-
-    public CrawlRule createCrawlRule(ArchivalUnit au) {
-      return new NegativeCrawlRule();
-    }
-  }
 
   public static class PositiveCrawlRuleFactory
     implements CrawlRuleFromAuFactory {
