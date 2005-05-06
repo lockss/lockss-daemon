@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMethodAction.java,v 1.2 2005-05-04 22:45:20 smorabito Exp $
+* $Id: PsmMethodAction.java,v 1.3 2005-05-06 17:24:58 smorabito Exp $
  */
 
 /*
@@ -54,17 +54,30 @@ public class PsmMethodAction extends PsmAction {
     if (!Modifier.isPublic(c.getModifiers())) {
       throw new PsmMethodActionException("Action class must be public.");
     }
-					
+
     try {
       method = c.getMethod(m, argArray);
     } catch (NoSuchMethodException ex) {
       throw new PsmMethodActionException(ex.toString() + ": method " + m);
     }
 
+    // Check each exception this method declares thrown.  If it declares
+    // exceptions, and any of them are not runtime exceptions, abort.
+    Class[] exceptionTypes = method.getExceptionTypes();
+    for (int i = 0; i < exceptionTypes.length; i++) {
+      Class exceptionClass = exceptionTypes[i];
+      if (!RuntimeException.class.isAssignableFrom(exceptionClass)) {
+	throw new PsmMethodActionException("Method must not declare non-Runtime "+
+					   "exceptions.");
+      }
+    }
+
+    // Ensure that the method returns PsmEvent
     if (PsmEvent.class != method.getReturnType()) {
       throw new PsmMethodActionException("Method return type must be PsmEvent");
     }
 
+    // Ensure that both the method is both public and static.
     if (!Modifier.isStatic(method.getModifiers()) ||
 	!Modifier.isPublic(method.getModifiers())) {
       throw new PsmMethodActionException("Method " + m +
@@ -80,9 +93,22 @@ public class PsmMethodAction extends PsmAction {
     try {
       return (PsmEvent)method.invoke(null, argArray);
     } catch (IllegalAccessException ex) {
+      // This really should never happen, given the checks at
+      // construction time.
       throw new PsmMethodActionException(ex.toString());
     } catch (InvocationTargetException ex) {
-      throw new PsmMethodActionException(ex.toString());
+      // This may occur if the method throws a runtime exception.
+      // Rather than wrap it in a PsmMethodActionException, let
+      // it percolate up.  This cast should never fail, but if it
+      // does, throw PsmMethodActionException.
+      try {
+	throw (RuntimeException)(ex.getTargetException());
+      } catch (ClassCastException cce) {
+	throw new PsmMethodActionException("Exception thrown from " +
+					   "target method invocation " +
+					   " is not a Runtime Exception: " +
+					   cce.toString());
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodMsgAction.java,v 1.2 2005-05-04 22:45:21 smorabito Exp $
+ * $Id: TestPsmMethodMsgAction.java,v 1.3 2005-05-06 17:24:57 smorabito Exp $
  */
 
 /*
@@ -32,9 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.protocol.psm;
 
+import java.io.IOException;
+
 import org.lockss.test.*;
 import org.lockss.protocol.*;
-
 
 /**
  */
@@ -106,6 +107,34 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
       PsmMethodAction wrongReturnType =
 	new PsmMethodAction(MyActionHandlers.class, "wrongReturnType");
       fail("Should have thrown PsmMethodActionException");
+    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      ;
+    }
+  }
+
+  /**
+   * Ensure that constructing with methods that declare
+   * RuntimeExceptions succeeds.
+   */
+  public void testRuntimeExceptionDeclarationSucceeds() {
+    PsmMethodAction action1 =
+      new PsmMethodAction(MyActionHandlers.class,
+			  "throwRuntimeException");
+
+    PsmMethodAction action2 =
+      new PsmMethodAction(MyActionHandlers.class,
+			  "throwPsmMethodActionException");
+  }
+
+  /**
+   * Ensure that constructing with methods that declare 
+   * non-RuntimeExceptions fails.
+   */
+  public void testNonRuntimeExceptionDeclarationThrows() {
+    try {
+      PsmMethodAction action1 =
+	new PsmMethodAction(MyActionHandlers.class,
+			    "throwIoException");
     } catch (PsmMethodAction.PsmMethodActionException ex) {
       ;
     }
@@ -186,16 +215,34 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
     }
 
     /** Non-public methods. */
-    PsmEvent privateMethod(PsmEvent evt, PsmInterp interp) {
+    private static PsmEvent privateMethod(PsmEvent evt, PsmInterp interp) {
       return null;
     }
 
-    PsmEvent packageMethod(PsmEvent evt, PsmInterp interp) {
+    static PsmEvent packageMethod(PsmEvent evt, PsmInterp interp) {
       return null;
     }
 
-    PsmEvent protectedMethod(PsmEvent evt, PsmInterp interp) {
+    protected static PsmEvent protectedMethod(PsmEvent evt, PsmInterp interp) {
       return null;
+    }
+
+    /** Methods that declare exceptions. */
+    public static PsmEvent throwRuntimeException(PsmEvent evt, PsmInterp interp)
+	throws RuntimeException {
+      throw new RuntimeException();
+    }
+
+    // Subclasses of RuntimeException should be OK.
+    public static PsmEvent throwPsmMethodActionException(PsmEvent evt, PsmInterp interp)
+	throws PsmMethodAction.PsmMethodActionException {
+      throw new PsmMethodAction.PsmMethodActionException();
+    }
+
+    // IOException should not be OK.
+    public static PsmEvent throwIoException(PsmEvent evt, PsmInterp interp)
+	throws IOException {
+      throw new IOException();
     }
   }
 
