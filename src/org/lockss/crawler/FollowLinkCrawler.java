@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.23 2005-03-18 18:09:43 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.24 2005-05-12 00:23:49 troberts Exp $
  */
 
 /*
@@ -340,7 +340,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	  ContentParser parser = getContentParser(cu);
 	  if (parser != null) {
 	    //IOException if the CU can't be read
-	    parser.parseForUrls(cu, new MyFoundUrlCallback(parsedPages,
+	    parser.parseForUrls(cu.openForReading(),
+				PluginUtil.getBaseUrl(cu),
+				new MyFoundUrlCallback(parsedPages,
 							   extractedUrls, au));
 	    if (extractedUrls.remove(url)){
 	      logger.debug3("Removing self reference in "+url+" from the extracted list");

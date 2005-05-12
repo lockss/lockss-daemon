@@ -1,5 +1,5 @@
 /*
- * $Id: ContentParser.java,v 1.2 2004-01-22 23:49:03 troberts Exp $
+ * $Id: ContentParser.java,v 1.3 2005-05-12 00:23:49 troberts Exp $
  */
 
 /*
@@ -38,11 +38,10 @@ import org.lockss.plugin.*;
 
 public interface ContentParser {
   /**
-   * Parse cu for urls and call cb.foundUrl on each found one
-   * @param cu CachedUrl to parse for urls
-   * @param cb FoundUrlCallBack
+   * Parse reader for urls and call cb.foundUrl on each found one
    */
-  public void parseForUrls(CachedUrl cu, FoundUrlCallback cb)
+  public void parseForUrls(Reader reader, String srcUrl,
+			   ContentParser.FoundUrlCallback cb)
       throws IOException;
   
   /**

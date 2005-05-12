@@ -1,5 +1,5 @@
 /*
- * $Id: RamParser.java,v 1.4 2004-03-11 01:19:30 troberts Exp $
+ * $Id: RamParser.java,v 1.5 2005-05-12 00:23:49 troberts Exp $
  */
 
 /*
@@ -69,9 +69,24 @@ public class RamParser implements ContentParser {
       throw new IllegalArgumentException("Called with null callback");
     }
     reader = new BufferedReader(cu.openForReading());
-    for (String line = reader.readLine();
+    parseForUrls(reader, null, cb);
+  }
+
+  public void parseForUrls(Reader reader, String srcUrl,
+			   ContentParser.FoundUrlCallback cb)
+      throws IOException {
+
+//     if (cu == null) {
+//       throw new IllegalArgumentException("Called with null cu");
+//     } else
+    if (cb == null) {
+      throw new IllegalArgumentException("Called with null callback");
+    }
+//     reader = new BufferedReader(cu.openForReading());
+    BufferedReader bReader = new BufferedReader(reader);
+    for (String line = bReader.readLine();
 	 line != null;
-	 line = reader.readLine()) {
+	 line = bReader.readLine()) {
       line = line.trim();
       if (StringUtil.startsWithIgnoreCase(line, "http://")) {
 	cb.foundUrl(UrlUtil.stripQuery(line));

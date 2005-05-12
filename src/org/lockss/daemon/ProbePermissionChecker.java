@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.1 2005-05-04 00:23:20 troberts Exp $
+ * $Id: ProbePermissionChecker.java,v 1.2 2005-05-12 00:23:49 troberts Exp $
  */
 
 /*
@@ -66,7 +66,9 @@ public class ProbePermissionChecker implements PermissionChecker {
   public boolean checkPermission(Reader inputReader, String permissionUrl) {
     CustomHtmlParser parser = new CustomHtmlParser();
     try {
-      parser.parseForUrls(au.makeCachedUrl(permissionUrl),
+      CachedUrl cu = au.makeCachedUrl(permissionUrl);
+      Reader reader = cu.openForReading();
+      parser.parseForUrls(reader, PluginUtil.getBaseUrl(cu),
 			  new MyFoundUrlCallback());
     } catch (IOException ex) {
       logger.error("Exception trying to parse permission url "+permissionUrl,

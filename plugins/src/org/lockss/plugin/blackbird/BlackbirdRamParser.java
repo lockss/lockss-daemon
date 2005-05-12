@@ -1,5 +1,5 @@
 /*
- * $Id: BlackbirdRamParser.java,v 1.1 2005-03-15 07:43:37 tlipkis Exp $
+ * $Id: BlackbirdRamParser.java,v 1.2 2005-05-12 00:23:49 troberts Exp $
  */
 
 /*
@@ -45,8 +45,14 @@ public class BlackbirdRamParser implements ContentParser {
     parser = RamParser.makeTranslatingRamParser(source, dest);
   }
 
-  public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb)
+//   public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb)
+//       throws IOException {
+//     parser.parseForUrls(cu, cb);
+//   }
+
+  public void parseForUrls(Reader reader, String srcUrl,
+			   ContentParser.FoundUrlCallback cb)
       throws IOException {
-    parser.parseForUrls(cu, cb);
+    parser.parseForUrls(reader, srcUrl, cb);
   }
 }
