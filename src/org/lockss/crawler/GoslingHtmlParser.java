@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.27 2005-05-04 00:23:39 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.28 2005-05-12 00:24:26 troberts Exp $
  */
 
 /*
@@ -152,35 +152,33 @@ public class GoslingHtmlParser implements ContentParser {
   }
 
   /**
-   * Method which will parse the html file represented by cu call
+   * Method which will parse the html file represented by reader and call
    * cb.foundUrl() for each url found
    *
-   * @param cu object representing a html file in the local file system
-   * @param cb callback to call each time a url is found
    * @throws IOException
    */
-  public void parseForUrls(CachedUrl cu, ContentParser.FoundUrlCallback cb)
+  public void parseForUrls(Reader reader, String srcUrl,
+			   ContentParser.FoundUrlCallback cb)
       throws IOException {
-    if (cu == null) {
-      throw new IllegalArgumentException("Called with null cu");
+    if (reader == null) {
+      throw new IllegalArgumentException("Called with null reader");
+    } else if (srcUrl == null) {
+      throw new IllegalArgumentException("Called with null srcUrl");
     } else if (cb == null) {
       throw new IllegalArgumentException("Called with null callback");
     }
+    this.srcUrl = srcUrl;
+    this.reader = reader;
+
     try {
-      srcUrl = getBaseUrl(cu);
-      if (srcUrl == null) {
-	logger.error("CachedUrl getUrl() and content-url prop are null: "+cu);
-	return;
-      }
       baseUrl = null;
 
-      reader = cu.openForReading();
       readerEof = false;
       ring = new CharRing(ringCapacity);
 
       if (isTrace) logger.debug2("Extracting urls from " + srcUrl);
       String nextUrl = null;
-      while ((nextUrl = extractNextLink(reader, ring)) != null) {
+      while ((nextUrl = extractNextLink(ring)) != null) {
 	if (isTrace) {
 	  logger.debug2("Extracted "+nextUrl);
 	}
@@ -198,20 +196,6 @@ public class GoslingHtmlParser implements ContentParser {
     }
   }
 
-  private String getBaseUrl(CachedUrl cu) {
-    CIProperties props = cu.getProperties();
-    if (props != null) {
-      String redir = props.getProperty(CachedUrl.PROPERTY_CONTENT_URL); 
-      if (redir != null) {
-	if (isTrace) {
-	  logger.debug3("redirected-to set to "+ redir
-			+". Using that as base URL");
-	}
-	return redir;
-      }
-    }
-    return cu.getUrl();
-  }
 
   /**
    * Read through the reader stream, extract and return the next url found
@@ -222,7 +206,7 @@ public class GoslingHtmlParser implements ContentParser {
    * @throws IOException
    * @throws MalformedURLException
    */
-  protected String extractNextLink(Reader reader, CharRing ring)
+  protected String extractNextLink(CharRing ring)
       throws IOException, MalformedURLException {
     while (refill()) {
       //skip to the next tag
@@ -231,7 +215,7 @@ public class GoslingHtmlParser implements ContentParser {
 	ring.clear();
 	continue;
       } else {
-	if (isTrace) logger.debug3("Found < at " + idx);
+// 	if (isTrace) logger.debug3("Found < at " + idx);
 	ring.skip(idx + 1);
 	if (!refill()) return null;
 	if (ring.get(0) == '!' && ring.get(1) == '-' && ring.get(2) == '-') {
@@ -259,7 +243,7 @@ public class GoslingHtmlParser implements ContentParser {
 	    if (!refill()) break;
 	    idx = ring.indexOf(">", -1, false);
 	    if (idx >= 0) {
-	      if (isTrace) logger.debug3("Found > at " + idx);
+// 	      if (isTrace) logger.debug3("Found > at " + idx);
 	      if (tagBuf == null) {
 		// If this is first chunk of tag, and it's too short, no
 		// need to call parseLink, so avoid creating StringBuffer.
@@ -390,6 +374,7 @@ public class GoslingHtmlParser implements ContentParser {
         } else if (beginsWithTag(link, BASETAG)) {
 	  String newBase = getAttributeValue(HREF, link);
  	  if (UrlUtil.isAbsoluteUrl(newBase)) {
+	    logger.debug3("base tag found, setting srcUrl to: " + newBase);
 	    srcUrl = newBase;
 	    baseUrl = null;
  	  }
@@ -429,6 +414,7 @@ public class GoslingHtmlParser implements ContentParser {
       }
       try {
 	if (baseUrl == null) {
+	  logger.debug3("baseUrl is null, setting to srcUrl: "+srcUrl);
 	  baseUrl = new URL(srcUrl);
 	}
 	returnStr = resolveUri(baseUrl, returnStr);

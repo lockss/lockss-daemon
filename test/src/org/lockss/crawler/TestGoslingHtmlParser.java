@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.19 2005-04-19 20:11:17 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.20 2005-05-12 00:24:26 troberts Exp $
  */
 
 /*
@@ -59,9 +59,19 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     cb = new MyFoundUrlCallback();
   }
 
-  public void testThrowsOnNullCachedUrl() throws IOException {
+  public void testThrowsOnNullReader() throws IOException {
     try {
-      parser.parseForUrls(null, new MyFoundUrlCallback());
+      parser.parseForUrls(null, "http://www.example.com/",
+			  new MyFoundUrlCallback());
+      fail("Calling parseForUrls with a null reader should have thrown");
+    } catch (IllegalArgumentException iae) {
+    }
+  }
+
+  public void testThrowsOnNullSourceUrl() throws IOException {
+    try {
+      parser.parseForUrls(new StringReader("Blah"), null,
+			  new MyFoundUrlCallback());
       fail("Calling parseForUrls with a null CachedUrl should have thrown");
     } catch (IllegalArgumentException iae) {
     }
@@ -69,13 +79,15 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
   public void testThrowsOnNullCallback() throws IOException {
     try {
-      parser.parseForUrls(new MockCachedUrl("http://www.example.com/"), null);
+      parser.parseForUrls(new StringReader("blah"),
+			  "http://www.example.com/", null);
       fail("Calling parseForUrls with a null FoundUrlCallback should have thrown");
     } catch (IllegalArgumentException iae) {
     }
   }
 
   public void testParsesHref() throws IOException {
+    System.err.println("STOP1");
     singleTagShouldParse("http://www.example.com/web_link.html",
   			 "<a href=", "</a>");
   }
@@ -133,7 +145,8 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl(startUrl);
     mcu.setContent(source);
 
-    parser.parseForUrls(mcu, cb);
+//     parser.parseForUrls(mcu, cb);
+    parser.parseForUrls(new StringReader(source), startUrl, cb);
 
     Set expected = SetUtil.set(url);
     assertEquals(expected, cb.getFoundUrls());
@@ -202,7 +215,9 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     mcu.setContent(content);
 
     MyFoundUrlCallback cb = new MyFoundUrlCallback();
-    parser.parseForUrls(mcu, cb);
+//     parser.parseForUrls(mcu, cb);
+    parser.parseForUrls(new StringReader(content),
+			"http://www.example.com", cb);
 
     if (shouldParse) {
       Set expected = SetUtil.set(url);
@@ -605,7 +620,9 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
     
-    parser.parseForUrls(mcu, cb);
+//     parser.parseForUrls(mcu, cb);
+    parser.parseForUrls(new StringReader(source),
+			"http://www.example.com", cb);
     
     return cb.getFoundUrls();
   }
@@ -624,7 +641,9 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
 
-    parser.parseForUrls(mcu, cb);
+//     parser.parseForUrls(mcu, cb);
+    parser.parseForUrls(new StringReader(source),
+			"http://www.example.com", cb);
 
     Set expected = SetUtil.set(url1, url2);
     assertEquals(expected, cb.getFoundUrls());
@@ -645,32 +664,11 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah/");
     mcu.setContent(source);
 
-    parser.parseForUrls(mcu, cb);
+//     parser.parseForUrls(mcu, cb);
+    parser.parseForUrls(new StringReader(source),
+			"http://www.example.com/blah/", cb);
 
     Set expected = SetUtil.set(url1, url2, url3);
-    assertEquals(expected, cb.getFoundUrls());
-  }
-
-  public void testRelativeLinksUseRedirectedToAsBase() throws IOException {
-    String url1= "http://www.example.com/extra_level/branch1/index.html";
-    String url2= "http://www.example.com/extra_level/branch2/index.html";
-
-    String source =
-      "<html><head><title>Test</title></head><body>"+
-      "<a href=branch1/index.html>link1</a>"+
-      "Filler, with <b>bold</b> tags and<i>others</i>"+
-      "<a href=branch2/index.html>link2</a>";
-
-    MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
-    CIProperties props = new CIProperties();
-    props.put(CachedUrl.PROPERTY_CONTENT_URL,
-	      "http://www.example.com/extra_level/");
-    mcu.setContent(source);
-    mcu.setProperties(props);
-
-    parser.parseForUrls(mcu, cb);
-
-    Set expected = SetUtil.set(url1, url2);
     assertEquals(expected, cb.getFoundUrls());
   }
 
