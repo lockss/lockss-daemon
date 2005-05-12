@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.2 2005-01-19 04:15:56 tlipkis Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.3 2005-05-12 00:22:22 troberts Exp $
  */
 
 /*
@@ -100,8 +100,8 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
   }
 
   public void test1() throws Exception {
-    PluginUtil.registerArchivalUnit(mp, mau1);
-    PluginUtil.registerArchivalUnit(mp, mau2);
+    PluginTestUtil.registerArchivalUnit(mp, mau1);
+    PluginTestUtil.registerArchivalUnit(mp, mau2);
     mau1.setTitleConfig(tc1);
     mau2.setTitleConfig(tc2);
     pluginMgr.updateAuConfigFile(mau1.getAuId(), mau1.getConfiguration());

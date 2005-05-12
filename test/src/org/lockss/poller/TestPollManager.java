@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.76 2005-03-18 09:09:20 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.77 2005-05-12 00:22:23 troberts Exp $
  */
 
 /*
@@ -532,7 +532,7 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rooturls);
     ((MockArchivalUnit)testau).setPlugin(new MockPlugin());
-    PluginUtil.registerArchivalUnit(testau);
+    PluginTestUtil.registerArchivalUnit(testau);
 
     Properties p = new Properties();
     addRequiredConfig(p);

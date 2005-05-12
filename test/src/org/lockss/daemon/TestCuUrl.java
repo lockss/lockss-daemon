@@ -1,5 +1,5 @@
 /*
- * $Id: TestCuUrl.java,v 1.9 2004-10-13 23:07:19 clairegriffin Exp $
+ * $Id: TestCuUrl.java,v 1.10 2005-05-12 00:26:25 troberts Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class TestCuUrl extends LockssTestCase {
     StaticContentPlugin spl = new StaticContentPlugin();
     spl.initPlugin(theDaemon);
     au = (StaticContentPlugin.SAU)spl.createAu(null);
-    PluginUtil.registerArchivalUnit(spl, au);
+    PluginTestUtil.registerArchivalUnit(spl, au);
     fillAu(au);
 
     theDaemon.getLockssRepository(au);

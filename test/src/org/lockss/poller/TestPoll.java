@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.90 2005-03-18 09:09:19 smorabito Exp $
+ * $Id: TestPoll.java,v 1.91 2005-05-12 00:22:23 troberts Exp $
  */
 
 /*
@@ -459,7 +459,7 @@ public class TestPoll extends LockssTestCase {
 
     theDaemon.getPluginManager();
     testau = PollTestPlugin.PTArchivalUnit.createFromListOfRootUrls(rootV1urls);
-    PluginUtil.registerArchivalUnit(testau);
+    PluginTestUtil.registerArchivalUnit(testau);
 
     String tempDirPath = null;
     try {

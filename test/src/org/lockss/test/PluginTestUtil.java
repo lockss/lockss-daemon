@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.6 2003-09-26 23:49:01 eaalto Exp $
+ * $Id: PluginTestUtil.java,v 1.1 2005-05-12 00:22:24 troberts Exp $
  */
 
 /*
@@ -43,8 +43,8 @@ import org.lockss.app.*;
  * Utilities for manipulating plugins and their components in tests
  */
 
-public class PluginUtil {
-  static Logger log = Logger.getLogger("PluginUtil");
+public class PluginTestUtil {
+  static Logger log = Logger.getLogger("PluginTestUtil");
   static List aulist = new LinkedList();
 
   public static void registerArchivalUnit(Plugin plug, ArchivalUnit au) {

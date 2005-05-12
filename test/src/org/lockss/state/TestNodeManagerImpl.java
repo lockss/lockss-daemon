@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.126 2005-03-18 09:09:22 smorabito Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.127 2005-05-12 00:22:23 troberts Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -66,7 +66,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     mau.setAuCachedUrlSet(makeFakeCus(mau, TEST_URL, 2, 2));
     theDaemon.getNodeManagerManager();
     theDaemon.getPluginManager();
-    PluginUtil.registerArchivalUnit(mau);
+    PluginTestUtil.registerArchivalUnit(mau);
     crawlManager = new MockCrawlManager();
     theDaemon.setCrawlManager(crawlManager);
     pollManager = new MockPollManager();
@@ -99,7 +99,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     idManager.stopService();
     theDaemon.getLockssRepository(mau).stopService();
     theDaemon.getHashService().stopService();
-    PluginUtil.unregisterAllArchivalUnits();
+    PluginTestUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();
     TimeBase.setReal();
     super.tearDown();

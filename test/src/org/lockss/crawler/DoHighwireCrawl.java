@@ -1,5 +1,5 @@
 /*
- * $Id: DoHighwireCrawl.java,v 1.30 2005-03-15 07:42:42 tlipkis Exp $
+ * $Id: DoHighwireCrawl.java,v 1.31 2005-05-12 00:22:22 troberts Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class DoHighwireCrawl {
     theDaemon.startDaemon();
 
     ArchivalUnit au = makeAu(base, volume,2004);
-    PluginUtil.registerArchivalUnit(au);
+    PluginTestUtil.registerArchivalUnit(au);
     if (proxyFlg) {
 //  This should already be started now.
 //      daemon.getProxyHandler().startProxy();

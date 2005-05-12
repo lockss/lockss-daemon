@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1TreeWalkImpl.java,v 1.4 2004-12-07 08:46:05 tlipkis Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.5 2005-05-12 00:22:23 troberts Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
     mau.setAuCachedUrlSet(TestNodeManagerImpl.makeFakeAuCus(mau,
 	TEST_URL, 2, 2));
     theDaemon.getPluginManager();
-    PluginUtil.registerArchivalUnit(mau);
+    PluginTestUtil.registerArchivalUnit(mau);
 
     crawlMan = new MockCrawlManager();
     theDaemon.setCrawlManager(crawlMan);
@@ -102,7 +102,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
     nodeManager.stopService();
     pollMan.stopService();
     crawlMan.stopService();
-    PluginUtil.unregisterAllArchivalUnits();
+    PluginTestUtil.unregisterAllArchivalUnits();
     theDaemon.stopDaemon();
     TimeBase.setReal();
     super.tearDown();

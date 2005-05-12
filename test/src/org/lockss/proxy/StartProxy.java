@@ -1,5 +1,5 @@
 /*
- * $Id: StartProxy.java,v 1.10 2004-08-02 02:59:35 tlipkis Exp $
+ * $Id: StartProxy.java,v 1.11 2005-05-12 00:22:23 troberts Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class StartProxy {
   public static void main(String args[]) {
     MockLockssDaemon daemon = new MockLockssDaemon(null);
     ArchivalUnit au = PTestPlugin.makeTestAu();
-    PluginUtil.registerArchivalUnit(au);
+    PluginTestUtil.registerArchivalUnit(au);
 
     ProxyManager manager = new ProxyManager();
     try {
