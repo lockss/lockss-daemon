@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.1 2005-05-04 00:23:20 troberts Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.2 2005-05-12 00:25:30 troberts Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
 
     pc = new ProbePermissionChecker(new MockPermissionChecker(100),
 				    mau); 
-    assertTrue("Gave permission when there was no probe",
+    assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
   }
