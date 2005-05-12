@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.32 2005-05-03 00:02:43 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.33 2005-05-12 00:25:15 troberts Exp $
  */
 
 /*
@@ -476,7 +476,8 @@ public class TestNewContentCrawler extends LockssTestCase {
     List updatedStartUrls = ListUtil.list(startUrl, startUrl2);
     spec = new SpiderCrawlSpec(updatedStartUrls, permissionList, crawlRule, 2);
     crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(2));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(2));
 
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1= "http://www.example.com/link1.html";
@@ -509,8 +510,8 @@ public class TestNewContentCrawler extends LockssTestCase {
 
     assertTrue(crawler.doCrawl());
     // url6 is not expected as refetch depth is 2 and it already exists.
-    Set expected = SetUtil.set(permissionPage, permissionPage2, startUrl, startUrl2, 
-			       url1, url2, url3, url4, url5);
+    Set expected = SetUtil.set(permissionPage, permissionPage2, startUrl,
+			       startUrl2, url1, url2, url3, url4, url5);
     assertEquals(expected, cus.getCachedUrls());
   }
 
@@ -534,7 +535,8 @@ public class TestNewContentCrawler extends LockssTestCase {
 
 
     crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(100));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(100));
 
     mau.setParser(parser);
     assertFalse(crawler.doCrawl());
@@ -581,9 +583,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
 
 
-    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), crawlRule, 1);
+    spec = new SpiderCrawlSpec(startUrls,
+			       ListUtil.list(permissionPage), crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(100));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(100));
 
     mau.addUrl(startUrl, false, true);
     crawlRule.addUrlToCrawl(startUrl);
