@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.27 2005-01-31 23:14:42 tlipkis Exp $
+ * $Id: MockCachedUrl.java,v 1.28 2005-05-12 00:25:41 troberts Exp $
  */
 
 /*
@@ -96,7 +96,7 @@ public class MockCachedUrl implements CachedUrl {
       return reader;
     }
 
-    throw new UnsupportedOperationException("Not implemented");
+    return new StringReader("");
   }
 
   public boolean hasContent() {
