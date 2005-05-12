@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringFilter.java,v 1.6 2005-02-21 03:03:23 tlipkis Exp $
+ * $Id: TestStringFilter.java,v 1.7 2005-05-12 20:08:20 tlipkis Exp $
  */
 
 /*
@@ -39,19 +39,19 @@ import java.io.*;
 public class TestStringFilter extends LockssTestCase {
 
   abstract class Fact {
-    abstract StringFilter make(String input);
+    abstract StringFilter make(String input, int buflen);
   }
 
-  /** Check that the filtered string matches expected.  Test with varying
-   * buffer lengths */
+  /** Check that the filtered string matches expected.  Tests with varying
+   * filter buffer lengths and read buffer lengths */
   private void assertFilterString(String expected, String input,
 				  final String filter,
 				  final boolean ignoreCase)
       throws IOException {
-    assertFilterString(expected, input, new Fact() {
-	StringFilter make(String input) {
+    assertFilterString(expected, input, true, new Fact() {
+	StringFilter make(String input, int buflen) {
 	  StringFilter filt =
-	    new StringFilter(new StringReader(input), filter);
+	    new StringFilter(new StringReader(input), buflen, filter);
 	  filt.setIgnoreCase(ignoreCase);
 	  return filt;
 	}});
@@ -61,10 +61,23 @@ public class TestStringFilter extends LockssTestCase {
 				  final List filterList,
 				  final boolean ignoreCase)
       throws IOException {
-    assertFilterString(expected, input, new Fact() {
-	StringFilter make(String input) {
+    assertFilterString(expected, input, false, new Fact() {
+	StringFilter make(String input, int buflen) {
 	  StringFilter filt =
 	    StringFilter.makeNestedFilter(new StringReader(input), filterList);
+	  filt.setIgnoreCase(ignoreCase);
+	  return filt;
+	}});
+  }
+
+  private void assertReplaceString(String expected, String input,
+				   final String search, final String replace,
+				   final boolean ignoreCase)
+      throws IOException {
+    assertFilterString(expected, input, true, new Fact() {
+	StringFilter make(String input, int buflen) {
+	  StringFilter filt =
+	    new StringFilter(new StringReader(input), buflen, search, replace);
 	  filt.setIgnoreCase(ignoreCase);
 	  return filt;
 	}});
@@ -74,8 +87,8 @@ public class TestStringFilter extends LockssTestCase {
 				   final String[][] strArray,
 				   final boolean ignoreCase)
       throws IOException {
-    assertFilterString(expected, input, new Fact() {
-	StringFilter make(String input) {
+    assertFilterString(expected, input, false, new Fact() {
+	StringFilter make(String input, int buflen) {
 	  StringFilter filt =
 	    StringFilter.makeNestedFilter(new StringReader(input), strArray,
 					  ignoreCase);
@@ -86,60 +99,34 @@ public class TestStringFilter extends LockssTestCase {
   /** Check that the filtered string matches expected.  Test with varying
    * buffer lengths */
   private void assertFilterString(String expected, String input,
-				  final String filter,
-				  final int bufSize)
-      throws IOException {
-    assertFilterString(expected, input, new Fact() {
-	StringFilter make(String input) {
-	  StringFilter filt =
-	    new StringFilter(new StringReader(input), bufSize, filter);
-	  return filt;
-	}});
-  }
-
-  private void assertReplaceString(String expected, String input,
-				   final String search, final String replace,
-				   final boolean ignoreCase)
-      throws IOException {
-    assertFilterString(expected, input, new Fact() {
-	StringFilter make(String input) {
-	  StringFilter filt =
-	    new StringFilter(new StringReader(input), search, replace);
-	  filt.setIgnoreCase(ignoreCase);
-	  return filt;
-	}});
-  }
-
-  private void assertReplaceString(String expected, String input,
-				   final String search, final String replace,
-				   final int bufSize)
-      throws IOException {
-    assertFilterString(expected, input, new Fact() {
-	StringFilter make(String input) {
-	  StringFilter filt =
-	    new StringFilter(new StringReader(input), bufSize,
-			     search, replace);
-	  return filt;
-	}});
-  }
-
-  /** Check that the filtered string matches expected.  Test with varying
-   * buffer lengths */
-  private void assertFilterString(String expected, String input,
+				  boolean multipleBufferSizes,
 				  Fact filterFact)
       throws IOException {
-    for (int len = 1; len <= input.length() * 2; len++) {
-      StringFilter reader = filterFact.make(input);
-      assertReaderMatchesString(expected, reader, len);
-      assertEquals(-1, reader.read());
+    if (multipleBufferSizes) {
+      for (int len1 = 1; len1 <= input.length() * 2; len1++) {
+	for (int len2 = 1; len2 <= input.length() * 2; len2++) {
+	  assertFilterString(expected, input, len1, len2, filterFact);
+	}
+      }
+    } else {
+      assertFilterString(expected, input, -1, expected.length() * 2,
+			 filterFact);
     }
-    for (int len = 1; len <= input.length() * 2; len++) {
-      StringFilter reader = filterFact.make(input);
-      assertOffsetReaderMatchesString(expected, reader, len);
-      assertEquals(-1, reader.read());
-    }
-    StringFilter reader = filterFact.make(input);
+    StringFilter reader = filterFact.make(input, -1);
     assertReaderMatchesStringSlow(expected, reader);
+    assertEquals(-1, reader.read());
+  }
+
+  private void assertFilterString(String expected, String input,
+				  int filterLen, int readLen,
+				  Fact filterFact)
+      throws IOException {
+    StringFilter reader;
+    reader = filterFact.make(input, filterLen);
+    assertReaderMatchesString(expected, reader, readLen);
+    assertEquals(-1, reader.read());
+    reader = filterFact.make(input, filterLen);
+    assertOffsetReaderMatchesString(expected, reader, readLen);
     assertEquals(-1, reader.read());
   }
 
@@ -227,16 +214,15 @@ public class TestStringFilter extends LockssTestCase {
     assertFilterString("This is a test string", str, "REMOVE", false);
   }
 
-  //Series of tests where the buffer size is the same size as the
-  //filtered string
-  public void testFiltersOneStringSameSizeAsBuff() throws IOException {
-    String str = "REMOVEThis is a test string";
-    assertFilterString("This is a test string", str, "REMOVE", 6);
+  public void testOverlap() throws IOException {
+    String str = "This aaab is a test string";
+    String rem = "aab";
+    assertFilterString("This a is a test string", str, rem, false);
   }
 
-  public void testFiltersOneStringOverflowBuffer() throws IOException {
-    String str = "ThisREMOVE is a test string";
-    assertFilterString("This is a test string", str, "REMOVE", 6);
+  public void testFiltersAfterPartialMatch() throws IOException {
+    String str = "REMREMOVEThis is a test string";
+    assertFilterString("REMThis is a test string", str, "REMOVE", false);
   }
 
   public void testMakeNestedFiltersNullReader() {
@@ -281,19 +267,15 @@ public class TestStringFilter extends LockssTestCase {
   }
 
   // same tests, testing string replacement
-  // large buffer
   public void testDoesntReplaceIfNoMatchingString() throws IOException {
     String str = "This is a test string";
     assertReplaceString(str, str, "REMOVE", "REPLACE", false);
-    assertReplaceString(str, str, "REMOVE", "REPLACE", 6);
   }
 
   public void testReplacesOneString() throws IOException {
     String str = "This is a REMOVEtest string";
     assertReplaceString("This is a REPLACEtest string", str,
 			"REMOVE", "REPLACE", false);
-    assertReplaceString("This is a REPLACEtest string", str,
-			"REMOVE", "REPLACE", 6);
   }
 
   public void testReplacesOneStringIgnoreCase() throws IOException {
@@ -305,58 +287,35 @@ public class TestStringFilter extends LockssTestCase {
   public void testReplacesOneStringDontIgnoreCase() throws IOException {
     String str = "This is a ReMovetest string";
     assertReplaceString(str, str, "REMOVE", "REPLACE", false);
-    assertReplaceString(str, str, "REMOVE", "REPLACE", 6);
   }
 
   public void testReplacesOneStringBeginning() throws IOException {
     String str = "REMOVEThis is a test string";
     assertReplaceString("REPLACEThis is a test string", str,
 			"REMOVE", "REPLACE", false);
-    assertReplaceString("REPLACEThis is a test string", str,
-			"REMOVE", "REPLACE", 6);
   }
 
   public void testReplacesOneStringEnd() throws IOException {
     String str = "This is a test stringREMOVE";
     assertReplaceString("This is a test stringREPLACE", str,
 			"REMOVE", "REPLACE", false);
-    assertReplaceString("This is a test stringREPLACE", str,
-			"REMOVE", "REPLACE", 6);
   }
 
   public void testReplacesOneStringMulti() throws IOException {
     String str = "This is a REMOVEtest stringREMOVE";
     assertReplaceString("This is a REPLACEtest stringREPLACE", str,
 			"REMOVE", "REPLACE", false);
-    assertReplaceString("This is a REPLACEtest stringREPLACE", str,
-			"REMOVE", "REPLACE", 6);
   }
 
   public void testReplaceWithEmptyString() throws IOException {
     String str = "This is a REMOVEtest stringREMOVE";
     assertReplaceString("This is a test string", str,
 			"REMOVE", "", false);
-    assertReplaceString("This is a test string", str,
-			"REMOVE", "", 6);
-  }
-
-  //small buffer
-  public void testReplacesOneStringSameSizeAsBuff() throws IOException {
-    String str = "REMOVEThis is a test string";
-    assertReplaceString("REPLACEThis is a test string", str,
-			"REMOVE", "REPLACE", 6);
-  }
-
-  public void testReplacesOneStringOverflowBuffer() throws IOException {
-    String str = "ThisREMOVE is a test string";
-    assertReplaceString("ThisREPLACE is a test string", str,
-			"REMOVE", "REPLACE", 6);
   }
 
   public void testReplaceWithNull() throws IOException {
     String str = "This is a REMOVEtest string";
     assertReplaceString("This is a test string", str, "REMOVE", null, false);
-    assertReplaceString("This is a test string", str, "REMOVE", null, 6);
   }
 
   // multi string

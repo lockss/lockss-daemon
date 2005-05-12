@@ -1,5 +1,5 @@
 /*
- * $Id: StringFilter.java,v 1.7 2005-02-21 03:03:23 tlipkis Exp $
+ * $Id: StringFilter.java,v 1.8 2005-05-12 20:08:21 tlipkis Exp $
  */
 
 /*
@@ -92,6 +92,10 @@ public class StringFilter extends Reader {
     if (bufferCapacity < 0) {
       bufferCapacity = Configuration.getIntParam(PARAM_BUFFER_CAPACITY,
 						 DEFAULT_BUFFER_CAPACITY);
+    }
+    // Avoid problems caused by buffer smaller than search string
+    if (bufferCapacity < strlen) {
+      bufferCapacity = strlen;
     }
     this.replaceStr = replaceStr;
     if (replaceStr != null) {
