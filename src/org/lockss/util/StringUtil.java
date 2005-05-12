@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.54 2005-04-21 07:20:48 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.55 2005-05-12 17:32:16 troberts Exp $
  */
 
 /*
@@ -45,6 +45,9 @@ import org.apache.oro.text.regex.*;
  */
 
 public class StringUtil {
+
+  static Logger logger = Logger.getLogger("StringUtil");
+
 
   /**
    * Replace all occurrences of oldstr in source with newstr
@@ -844,5 +847,60 @@ public class StringUtil {
     return idx;
   }
 
+  /**
+   * Scans through the reader looking for the String str; case sensitive
+   * @param reader Reader to search; it will be at least partially consumed
+   * @returns true if the string is found, false if the end of reader is
+   * reached without finding the string
+   */
+  public static boolean containsString(Reader reader, String str)
+      throws IOException {
+    return StringUtil.containsString(reader, str, false);
+  }
 
+  /**
+   * Scans through the reader looking for the String str
+   * @param reader Reader to search; it will be at least partially consumed
+   * @param ignoreCase whether to ignore case or not
+   * @returns true if the string is found, false if the end of reader is
+   * reached without finding the string
+   */
+  public static boolean containsString(Reader reader, String str,
+				       boolean ignoreCase)
+      throws IOException {
+    if (reader == null) {
+      throw new NullPointerException("Called with a null reader");
+    } else if (str == null) {
+      throw new NullPointerException("Called with a null string");
+    } else if (str.length() == 0) {
+      logger.warning("containsString called with an empty string");
+      return false;
+    }
+    boolean permission_ok = false;
+    int ch;
+    int p_index = 0;
+    if (ignoreCase) {
+      str = str.toLowerCase();
+    }
+    /*
+    if (m_filter != null) {
+      reader = m_filter.createFilteredReader(reader);
+      } */
+    do {
+      ch = reader.read();
+      if(ignoreCase && ch != -1) {
+	ch = Character.toLowerCase((char)ch);
+      }
+      char nextChar = str.charAt(p_index);
+      
+      if (nextChar == ch) {
+	if (++p_index == str.length()) {
+	  return true;
+	}
+      } else {
+	p_index = 0;
+      }
+    } while (ch != -1); // while not eof
+    return false;
+  }
 }

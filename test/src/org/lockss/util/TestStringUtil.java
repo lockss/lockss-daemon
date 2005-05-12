@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.48 2005-04-21 07:20:47 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.49 2005-05-12 17:32:16 troberts Exp $
  */
 
 /*
@@ -582,4 +582,75 @@ System.out.println("s: "+s);
     assertEquals("infinite", StringUtil.protectedDivide(10, 0, "infinite"));
   }
 
+  public void testFindStringNoReader() throws IOException {
+    try {
+      StringUtil.containsString(null, "Random String");
+      fail("StringUtil.containsString(null, String) should throw a NPE");
+    } catch (NullPointerException ex) {
+    }
+  }
+
+  public void testFindStringNoString() throws IOException {
+    try {
+      StringUtil.containsString(new StringReader("Random String"), null);
+      fail("StringUtil.containsString(Reader, null) should throw a NPE");
+    } catch (NullPointerException ex) {
+    }
+  }
+
+  public void testFindString() throws IOException {
+    String stringToFind = "special string";
+    String readerStr = "Blah blah blah "+stringToFind+"blah blah";
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(readerStr),
+					 stringToFind));
+  }
+
+  public void testFindStringBeginning() throws IOException {
+    String stringToFind = "special string";
+    String readerStr = stringToFind + "Blah blah blah blah blah";
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(readerStr),
+					 stringToFind));
+  }
+  
+  public void testFindStringEnd() throws IOException {
+    String stringToFind = "special string";
+    String readerStr = "Blah blah blah "+stringToFind;
+    assertTrue("Didn't find string when it should",
+	       StringUtil.containsString(new StringReader(readerStr),
+					 stringToFind));
+  }
+  
+
+  //To make sure searching for an empty string fails, but doesn't throw
+  public void testFindStringBlankString() throws IOException {
+    assertFalse("Search for empty string should always fail",
+		StringUtil.containsString(new StringReader("Blah blah blah"),
+					  ""));
+  }
+
+  //To make sure searching and empty reader fails, but doesn't throw
+  public void testFindStringEmptyReader() throws IOException {
+    assertFalse("Search of empty reader should always fail",
+		StringUtil.containsString(new StringReader(""), "blah blah"));
+  }
+
+  public void testContainsStringDefaultCaseSensitive() throws IOException {
+    assertFalse("Incorrectly matched string ignoring case by default",
+		StringUtil.containsString(new StringReader("Test BlaH test"),
+					  "blah"));
+  }
+
+  public void testContainsStringParamCaseSensitive() throws IOException {
+    assertFalse("Incorrectly matched string ignoring case",
+		StringUtil.containsString(new StringReader("Test BlaH test"),
+					  "blah", false));
+  }
+
+  public void testContainsStringParamCaseInsensitive() throws IOException {
+    assertTrue("Didn't matched string ignoring case",
+	       StringUtil.containsString(new StringReader("Test BlaH test"),
+					 "blah", true));
+  }
 }
