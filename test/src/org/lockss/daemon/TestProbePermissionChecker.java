@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.2 2005-05-12 00:25:30 troberts Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.3 2005-05-13 17:42:39 troberts Exp $
  */
 
 /*
@@ -103,28 +103,47 @@ public class TestProbePermissionChecker extends LockssTestCase {
 
   public void testProbe() {
     MockArchivalUnit mau = new MockArchivalUnit();
+    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
+
     String url = "http://www.example.com";
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWProbe);
+    mau.addUrl(probeUrl, true, true);
+    mau.addContent(probeUrl, "");
 
-    pc = new ProbePermissionChecker(new MockPermissionChecker(100),
-				    mau); 
+    MockPermissionChecker mockPC = new MockPermissionChecker(100);
+
+    pc = new ProbePermissionChecker(mockPC, mau); 
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
+    assertEquals(probeUrl, mockPC.getPermissionUrl()); 
   }
 
   public void testProbeCheckerRefuses() {
     MockArchivalUnit mau = new MockArchivalUnit();
+    String probeUrl = "http://www.example.com/cgi/content/full/14/9/1109";
+
     String url = "http://www.example.com";
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWProbe);
+    mau.addUrl(probeUrl, true, true);
+//     mau.addContent(probeUrl, "");
 
-    pc = new ProbePermissionChecker(new MockPermissionChecker(0),
-				    mau); 
+    MockPermissionChecker mockPC = new MockPermissionChecker(0);
+
+    pc = new ProbePermissionChecker(mockPC, mau); 
     assertFalse("Gave permission when the nested checker denied it",
 	       pc.checkPermission(new StringReader(htmlSourceWProbe),
 				  "http://www.example.com"));
     
+    assertEquals(probeUrl, mockPC.getPermissionUrl()); 
   }
+  /*
+  private static class MyHighWireLoginPageChecker
+    extends HighWireLoginPageChecker {
+    public MyHighWireLoginPageChecker() {
+    }
+  }
+  */
 }
