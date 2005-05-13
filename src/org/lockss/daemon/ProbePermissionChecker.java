@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.2 2005-05-12 00:23:49 troberts Exp $
+ * $Id: ProbePermissionChecker.java,v 1.3 2005-05-13 17:42:29 troberts Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.crawler.*;
  */
 
 public class ProbePermissionChecker implements PermissionChecker {
-  String probeStr = null;
+  String probeUrl = null; 
   PermissionChecker checker;
 
   private static Logger logger = Logger.getLogger("ProbePermissionChecker");
@@ -66,18 +66,18 @@ public class ProbePermissionChecker implements PermissionChecker {
   public boolean checkPermission(Reader inputReader, String permissionUrl) {
     CustomHtmlParser parser = new CustomHtmlParser();
     try {
-      CachedUrl cu = au.makeCachedUrl(permissionUrl);
-      Reader reader = cu.openForReading();
-      parser.parseForUrls(reader, PluginUtil.getBaseUrl(cu),
+      parser.parseForUrls(inputReader, permissionUrl,
 			  new MyFoundUrlCallback());
     } catch (IOException ex) {
       logger.error("Exception trying to parse permission url "+permissionUrl,
 		   ex);
       return false;
     }
-    if (probeStr != null) {
-      Reader reader = au.makeCachedUrl(permissionUrl).openForReading();
-      return checker.checkPermission(reader, permissionUrl);
+    if (probeUrl != null) {
+      //XXX this is wrong
+      //We need something like HighWireLoginPageChecker that gets called here 
+      Reader reader = au.makeCachedUrl(probeUrl).openForReading();
+      return checker.checkPermission(reader, probeUrl);
     }
     return false;
   }
@@ -95,7 +95,7 @@ public class ProbePermissionChecker implements PermissionChecker {
         case 'L':
 	  if (beginsWithTag(link, LINKTAG)) {
 	    returnStr = getAttributeValue(HREF, link);
-	    probeStr = getAttributeValue(LOCKSSPROBE, link);
+	    String probeStr = getAttributeValue(LOCKSSPROBE, link);
 	    if (probeStr == null || !"true".equalsIgnoreCase(probeStr)) {
 	      returnStr = null;
 	    }
@@ -125,13 +125,12 @@ public class ProbePermissionChecker implements PermissionChecker {
     }
   }
   
-  static class MyFoundUrlCallback
-    implements ContentParser.FoundUrlCallback {
+  private class MyFoundUrlCallback implements ContentParser.FoundUrlCallback {
     public MyFoundUrlCallback() {
     }
 
     public void foundUrl(String url) {
-      String probeUrl = url;
+      probeUrl = url;
     }
   }
 }
