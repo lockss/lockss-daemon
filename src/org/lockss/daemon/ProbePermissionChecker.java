@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.3 2005-05-13 17:42:29 troberts Exp $
+ * $Id: ProbePermissionChecker.java,v 1.4 2005-05-13 23:31:00 troberts Exp $
  */
 
 /*
@@ -86,8 +86,7 @@ public class ProbePermissionChecker implements PermissionChecker {
   private class CustomHtmlParser extends GoslingHtmlParser {
     private static final String LOCKSSPROBE = "lockss-probe";
 
-    protected String parseLink(StringBuffer link)
-	throws MalformedURLException {
+    protected String extractLinkFromTag(StringBuffer link) {
       String returnStr = null;
 
       switch (link.charAt(0)) {
@@ -104,23 +103,6 @@ public class ProbePermissionChecker implements PermissionChecker {
         default:
 	  return null;
       }
-      
-      if (returnStr != null) {
-	logger.debug2("Generating url from: " + srcUrl
-		      + " and " + returnStr);
-	try {
-	  if (baseUrl == null) {
-	    baseUrl = new URL(srcUrl);
-	  }
-	  returnStr = resolveUri(baseUrl, returnStr);
-	} catch (MalformedURLException e) {
-	  logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
-		       "\", link: \"" + returnStr + "\"",
-		       e);
-	  return null;
-	}
-	logger.debug2("Parsed: " + returnStr);
-      }
       return returnStr;
     }
   }
@@ -130,6 +112,9 @@ public class ProbePermissionChecker implements PermissionChecker {
     }
 
     public void foundUrl(String url) {
+      if (probeUrl != null) {
+	logger.warning("Old probe url ("+probeUrl+") overwritten by"+url);
+      }
       probeUrl = url;
     }
   }
