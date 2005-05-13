@@ -179,9 +179,10 @@ public class CrawlRuleTester extends Thread {
       if (type == null || !type.toLowerCase().startsWith("text/html"))
         return;
       InputStreamReader reader = new InputStreamReader(conn.getInputStream());
-      MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
+//       MyMockCachedUrl mcu = new MyMockCachedUrl(srcUrl.toString(), reader);
       GoslingHtmlParser parser = new GoslingHtmlParser();
-      parser.parseForUrls(mcu, new MyFoundUrlCallback());
+      parser.parseForUrls(reader, srcUrl.toString() ,
+			  new MyFoundUrlCallback());
     }
     catch (MalformedURLException murle) {
       murle.printStackTrace();
