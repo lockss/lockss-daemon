@@ -1,5 +1,5 @@
 /*
- * $Id: MockPermissionChecker.java,v 1.2 2005-05-03 00:02:45 troberts Exp $
+ * $Id: MockPermissionChecker.java,v 1.3 2005-05-13 17:43:33 troberts Exp $
  */
 
 /*
@@ -33,9 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 import java.io.Reader;
 import org.lockss.daemon.PermissionChecker;
+import org.lockss.util.*;
 
 public class MockPermissionChecker implements PermissionChecker {
+  private static Logger logger = Logger.getLogger("MockPermissionChecker");
+
   int numPermissionGranted=0;
+
+  String permissionUrl = null;
 
   public MockPermissionChecker(int numPermissionGranted) {
     this.numPermissionGranted = numPermissionGranted;
@@ -52,12 +57,19 @@ public class MockPermissionChecker implements PermissionChecker {
    * @return boolean
    */
   public boolean checkPermission(Reader reader, String permissionUrl) {
+    this.permissionUrl = permissionUrl;
     if (numPermissionGranted-- > 0) {
+      logger.debug3("Granting permission on "+permissionUrl);
       return true;
     } else {
+      logger.debug3("Denying permission on "+permissionUrl);
       return false;
     }
-
   }
+
+  public String getPermissionUrl() {
+    return this.permissionUrl;
+  }
+
 }
 
