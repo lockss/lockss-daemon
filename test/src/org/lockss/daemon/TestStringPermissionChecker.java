@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringPermissionChecker.java,v 1.3 2005-05-03 00:02:44 troberts Exp $
+ * $Id: TestStringPermissionChecker.java,v 1.4 2005-05-13 17:42:56 troberts Exp $
  */
 
 /*
@@ -62,6 +62,12 @@ public class TestStringPermissionChecker extends LockssTestCase {
     reader = new StringReader(s_rev);
     assertFalse(checker.checkPermission(reader, null));
 
+  }
+
+  public void testCheckPermissionRequiresBackup() {
+    checker = new StringPermissionChecker("ab");
+    Reader reader = new StringReader("aab");
+    assertTrue(checker.checkPermission(reader, null));
   }
 
   public void testSetIgnoreCaseFlag() {

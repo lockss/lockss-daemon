@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.4 2005-05-03 00:02:42 troberts Exp $
+ * $Id: StringPermissionChecker.java,v 1.5 2005-05-13 17:42:56 troberts Exp $
  */
 
 /*
@@ -72,41 +72,20 @@ public class StringPermissionChecker implements PermissionChecker {
   }
 
   public boolean checkPermission(Reader reader, String permissionUrl) {
-    boolean permission_ok = false;
-    String matchstr = m_matchString;
-    int ch;
-    int p_index = 0;
-
-    if (m_flags.get(IGNORE_CASE)) {
-      matchstr = matchstr.toLowerCase();
+    if (m_filter != null) {
+      reader = m_filter.createFilteredReader(reader);
+      m_logger.debug3("Creating filtered reader to check permissions");
     }
+
     try {
-      if (m_filter != null) {
-        reader = m_filter.createFilteredReader(reader);
-      }
-      do {
-        ch = reader.read();
-        if(m_flags.get(IGNORE_CASE) && ch != -1) {
-          ch = Character.toLowerCase((char)ch);
-        }
-        char nextChar = matchstr.charAt(p_index);
-
-        if (nextChar == ch) {
-          if (++p_index == m_matchString.length()) {
-            return true;
-          }
-        }
-        else {
-          p_index = 0;
-        }
-      }
-      while (ch != -1); // while not eof
-    }
-    catch (IOException ex) {
+      return StringUtil.containsString(reader, m_matchString,
+				       m_flags.get(IGNORE_CASE));
+    } catch (IOException ex) {
       m_logger.warning("Exception occured while checking for permission: "
                        + ex.toString());
-    }
-    return permission_ok;
+    } 
+
+    return false;
   }
 
   static public class StringFilterRule implements FilterRule {
