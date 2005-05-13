@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.50 2005-05-13 15:17:28 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.51 2005-05-13 23:31:29 troberts Exp $
  */
 
 /*
@@ -622,12 +622,34 @@ System.out.println("s: "+s);
 					 stringToFind));
   }
   
+  public void testGetCharsNullStr() throws IOException {
+    assertEquals(new Char[0], StringUtil.getChars(null));
+  }
 
-  //To make sure searching for an empty string fails, but doesn't throw
+
+  //To make sure searching for an empty string throws
   public void testFindStringBlankString() throws IOException {
-    assertFalse("Search for empty string should always fail",
-		StringUtil.containsString(new StringReader("Blah blah blah"),
-					  ""));
+    try {
+      StringUtil.containsString(new StringReader("Blah blah blah"), "");
+      fail("Search for empty string should throw");
+    } catch (IllegalArgumentException ex) {
+    }
+  }
+
+  public void testFindStringBlankStringEmptyReader() throws IOException {
+    try {
+      StringUtil.containsString(new StringReader(""), "");
+      fail("Search for empty string should throw");
+    } catch (IllegalArgumentException ex) {
+    }
+  }
+
+  public void testFindString0Buffer() throws IOException {
+    try {
+      StringUtil.containsString(new StringReader("Blah blah blah"), "blah", 0);
+      fail("Calling containsString with a 0 buffer should throw");
+    } catch (IllegalArgumentException ex) {
+    }
   }
 
   //To make sure searching and empty reader fails, but doesn't throw
@@ -640,17 +662,27 @@ System.out.println("s: "+s);
     assertFalse("Incorrectly matched string ignoring case by default",
 		StringUtil.containsString(new StringReader("Test BlaH test"),
 					  "blah"));
+    assertFalse("Incorrectly matched string ignoring case by default",
+		StringUtil.containsString(new StringReader("Test BlaH test"),
+					  "BLAH"));
   }
 
   public void testContainsStringParamCaseSensitive() throws IOException {
     assertFalse("Incorrectly matched string ignoring case",
 		StringUtil.containsString(new StringReader("Test BlaH test"),
 					  "blah", false));
+
+    assertFalse("Incorrectly matched string ignoring case",
+		StringUtil.containsString(new StringReader("Test BlaH test"),
+					  "BLAH", false));
   }
   public void testContainsStringParamCaseInsensitive() throws IOException {
     assertTrue("Didn't matched string ignoring case",
 	       StringUtil.containsString(new StringReader("Test BlaH test"),
 					 "blah", true));
+    assertTrue("Didn't matched string ignoring case",
+	       StringUtil.containsString(new StringReader("Test BlaH test"),
+					 "BLAH", true));
   }
 
   public void testContainsStringPartialMatch() throws IOException {
