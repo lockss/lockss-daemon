@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.51 2005-05-13 23:31:29 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.52 2005-05-13 23:33:50 troberts Exp $
  */
 
 /*
@@ -622,11 +622,6 @@ System.out.println("s: "+s);
 					 stringToFind));
   }
   
-  public void testGetCharsNullStr() throws IOException {
-    assertEquals(new Char[0], StringUtil.getChars(null));
-  }
-
-
   //To make sure searching for an empty string throws
   public void testFindStringBlankString() throws IOException {
     try {
