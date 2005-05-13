@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.28 2005-05-12 00:24:26 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.29 2005-05-13 23:30:38 troberts Exp $
  */
 
 /*
@@ -308,29 +308,15 @@ public class GoslingHtmlParser implements ContentParser {
     return false;
   }
 
-  /**
-   * Method to take a link tag, and parse out the URL it points to, returning
-   * a string representation of the url (lifted and rewritten from the Gosling
-   * crawler), including the reference tag
-   *
-   * @param link StringBuffer containing the text of a link tag (everything
-   * between < and > (ie, "a href=http://www.test.org")
-   * @return string representation of the url from the link tag
-   * @throws MalformedURLException
-   */
-  protected String parseLink(StringBuffer link)
-      throws MalformedURLException {
-    String returnStr = null;
 
+  protected String extractLinkFromTag(StringBuffer link) {
+    String returnStr = null;
     switch (link.charAt(0)) {
       case 'a': //<a href=http://www.yahoo.com>
       case 'A':
 	//optimization, since we just have to check a single char
 	if (Character.isWhitespace(link.charAt(1))) { 
           returnStr = getAttributeValue(HREF, link);
-//           if (returnStr != null && returnStr.startsWith(JSCRIPTTAG)) {
-//             returnStr = extractScriptUrl(returnStr);
-//           }
         } else {
 	  if (beginsWithTag(link, APPLETTAG)) {
 	    returnStr = getAttributeValue(CODE, link);
@@ -406,9 +392,24 @@ public class GoslingHtmlParser implements ContentParser {
       default:
         return null;
     }
+    return returnStr;
+  }
+
+  /**
+   * Method to take a link tag, and parse out the URL it points to, returning
+   * a string representation of the url (lifted and rewritten from the Gosling
+   * crawler), including the reference tag
+   *
+   * @param link StringBuffer containing the text of a link tag (everything
+   * between < and > (ie, "a href=http://www.test.org")
+   * @return string representation of the url from the link tag
+   * @throws MalformedURLException
+   */
+  protected String parseLink(StringBuffer link)
+      throws MalformedURLException {
+    String returnStr = extractLinkFromTag(link);
+
     if (returnStr != null) {
-//       returnStr = Translate.decode(returnStr);
-//       returnStr = StringUtil.truncateAt(returnStr, '#');
       if (isTrace) {
 	logger.debug2("Generating url from: " + srcUrl + " and " + returnStr);
       }
@@ -418,7 +419,6 @@ public class GoslingHtmlParser implements ContentParser {
 	  baseUrl = new URL(srcUrl);
 	}
 	returnStr = resolveUri(baseUrl, returnStr);
-// 	returnStr = UrlUtil.resolveUri(baseUrl, returnStr);
       } catch (MalformedURLException e) {
 	logger.debug("Couldn't resolve URL, base: \"" + srcUrl +
 		     "\", link: \"" + returnStr + "\"",
