@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.60 2004-12-12 22:59:27 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.61 2005-05-13 17:43:17 troberts Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class MockArchivalUnit implements ArchivalUnit {
     CachedUrl cu = null;
     if (cuHash != null) {
       cu = (CachedUrl)cuHash.get(url);
-      logger.debug(cu+" came from cuHash");
+      logger.debug(cu+" came from cuHash for "+url);
     } else {
       logger.debug("cuHash is null, so makeCachedUrl is returning null");
     }
