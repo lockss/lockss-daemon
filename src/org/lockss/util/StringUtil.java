@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.57 2005-05-13 23:31:15 troberts Exp $
+ * $Id: StringUtil.java,v 1.58 2005-05-16 23:42:17 troberts Exp $
  */
 
 /*
@@ -989,8 +989,8 @@ public class StringUtil {
      * </PRE>
      */
     public BoyerMoore() {
-	skip = new int[MAXCHAR];
-	d = null;
+      skip = new int[MAXCHAR];
+      d = null;
     }
 
 
@@ -1003,8 +1003,8 @@ public class StringUtil {
      * Shortcut constructor
      */
     public BoyerMoore(byte[] pattern) {
-	this();
-	compile(pattern);
+      this();
+      compile(pattern);
     }
 
 
@@ -1012,8 +1012,8 @@ public class StringUtil {
      * Shortcut constructor
      */
     public BoyerMoore(String pattern) {
-	this();
-	compile(pattern.getBytes());
+      this();
+      compile(pattern.getBytes());
     }
 
 
@@ -1023,7 +1023,7 @@ public class StringUtil {
      * @param pattern What we're looking for.
      */
     public void compile(String pattern) {
-	compile(pattern.getBytes());
+      compile(pattern.getBytes());
     }
 
 
@@ -1033,50 +1033,53 @@ public class StringUtil {
      * @param pattern What we're looking for.
      */
     public void compile(byte[] pattern) {
-	pat = pattern;
-	patLen = pat.length;
+      pat = pattern;
+      patLen = pat.length;
 
-	int j, k, m, t, t1, q, q1;
-	int f[] = new int[patLen];
-	d = new int[patLen];
+      int j, k, m, t, t1, q, q1;
+      int f[] = new int[patLen];
+      d = new int[patLen];
 
-	m = patLen;
-	for (k = 0; k < MAXCHAR; k++)
-	    skip[k] = m;
+      m = patLen;
+      for (k = 0; k < MAXCHAR; k++) {
+	skip[k] = m;
+      }
 
-	for (k = 1; k <= m; k++) {
-	    d[k-1] = (m << 1) - k;
-	    skip[(pat[k-1] & 0xff)] = m - k;    // cast to unsigned byte
+      for (k = 1; k <= m; k++) {
+	d[k-1] = (m << 1) - k;
+	skip[(pat[k-1] & 0xff)] = m - k;    // cast to unsigned byte
+      }
+
+      t = m + 1;
+      for (j = m; j > 0; j--) {
+	f[j-1] = t;
+	while (t <= m && pat[j-1] != pat[t-1]) {
+	  d[t-1] = (d[t-1] < m - j) ? d[t-1] : m - j;
+	  t = f[t-1];
 	}
+	t--;
+      }
+      q = t;
+      t = m + 1 - q;
+      q1 = 1;
+      t1 = 0;
 
-	t = m + 1;
-	for (j = m; j > 0; j--) {
-	    f[j-1] = t;
-	    while (t <= m && pat[j-1] != pat[t-1]) {
-		d[t-1] = (d[t-1] < m - j) ? d[t-1] : m - j;
-		t = f[t-1];
-	    }
-	    t--;
+      for (j = 1; j <= t; j++) {
+	f[j-1] = t1;
+	while (t1 >= 1 && pat[j-1] != pat[t1-1]) {
+	  t1 = f[t1-1];
 	}
-	q = t;
-	t = m + 1 - q;
-	q1 = 1;
-	t1 = 0;
+	t1++;
+      }
 
-	for (j = 1; j <= t; j++) {
-	    f[j-1] = t1;
-	    while (t1 >= 1 && pat[j-1] != pat[t1-1])
-		t1 = f[t1-1];
-	    t1++;
+      while (q < m) {
+	for (k = q1; k <= q; k++) {
+	  d[k-1] = (d[k-1] < m + q - k) ? d[k-1] : m + q - k;
 	}
-
-	while (q < m) {
-	    for (k = q1; k <= q; k++)
-		d[k-1] = (d[k-1] < m + q - k) ? d[k-1] : m + q - k;
-	    q1 = q + 1;
-	    q = q + t - f[t-1];
-	    t = f[t-1];
-	}
+	q1 = q + 1;
+	q = q + t - f[t-1];
+	t = f[t-1];
+      }
     }
 
 
@@ -1090,17 +1093,17 @@ public class StringUtil {
      * @return Vector containing all matching positions in buffer.
      */
     public Vector searchAll(char text[], int start, int end) {
-	Vector results = new Vector();
-	int pos = start;
+      Vector results = new Vector();
+      int pos = start;
 	
-	while ((pos = search(text, pos, end)) >= 0) {
-            if (pos >= 0) {
-		results.addElement(new Integer(pos));
-		pos += patLen;
-            }
+      while ((pos = search(text, pos, end)) >= 0) {
+	if (pos >= 0) {
+	  results.addElement(new Integer(pos));
+	  pos += patLen;
 	}
+      }
 
-	return results;
+      return results;
     }
 
 
@@ -1119,60 +1122,66 @@ public class StringUtil {
      * @see #partialMatch()
      */
     public int search(char text[], int start, int end) {
-	partial = 0;	// assume no partial match
+      partial = 0;	// assume no partial match
 
-	if (d == null)
-	    return -1;	// no pattern compiled, nothing matches.
+      if (d == null) {
+	return -1;	// no pattern compiled, nothing matches.
+      }
 
-	int m = patLen;
-	if (m == 0)
-	    return 0;
+      int m = patLen;
+      if (m == 0) {
+	return 0;
+      }
 
-	int k, j = 0;
-	int max = 0;	// used in calculation of partial match. Max distand we jumped.
+      int k, j = 0;
+      int max = 0;	// used in calculation of partial match. Max distand we jumped.
 
-	for (k = start+m-1; k < end+m-1;) {
-	    // set up possible partial match
-	    int save_k = k;
-	    if (k >= end)
-		partial = m - (k-end+1);
-
-	    // scan string vs. pattern
-	    // ignore positions beyond end of buffer
-	    for (j = m-1; j >= 0; j--, k--) {
-	      if (k < end && possiblyLower(text[k]) != pat[j])
-		    break;   // confirmed non-match
-	    }
-
-	    // did we make it all the way through the string?
-	    if (j == -1)
-		return (partial == 0 ? k+1 : -1);   // full or partial match?
-
-	    // skip to next possible start
-	    int z = skip[(possiblyLower(text[k]) & 0xff)];    // cast to unsigned byte
-	    max = (z > d[j]) ? z : d[j];
-	    if (save_k < end)
-		k += max;
-	    else
-		k = save_k+1;  // calculation doesn't work past end of buffer,
-	                       // just do it by hand
-	    partial = 0;
+      for (k = start+m-1; k < end+m-1;) {
+	// set up possible partial match
+	int save_k = k;
+	if (k >= end) {
+	  partial = m - (k-end+1);
 	}
 
-	/*
+	// scan string vs. pattern
+	// ignore positions beyond end of buffer
+	for (j = m-1; j >= 0; j--, k--) {
+	  if (k < end && possiblyLower(text[k]) != pat[j]) {
+	    break;   // confirmed non-match
+	  }
+	}
+
+	// did we make it all the way through the string?
+	if (j == -1) {
+	  return (partial == 0 ? k+1 : -1);   // full or partial match?
+	}
+	// skip to next possible start
+	int z = skip[(possiblyLower(text[k]) & 0xff)];    // cast to unsigned byte
+	max = (z > d[j]) ? z : d[j];
+	if (save_k < end) {
+	  k += max;
+	} else {
+	  k = save_k+1;  
+	  // calculation doesn't work past end of buffer,
+	  // just do it by hand
+	}
+	partial = 0;
+      }
+
+      /*
 	if (k >= end && k < end+m-1) {    // if we're near end of buffer --
-	    k = end-1;     // i.e. k - (k-end+1)
-	    for (j = partial-1; j >= 0 && text[k] == pat[j]; j--)
-		k--;
+	k = end-1;     // i.e. k - (k-end+1)
+	for (j = partial-1; j >= 0 && text[k] == pat[j]; j--)
+	k--;
 
-	    if (j >= 0)
-		partial = 0;    // no partial match
+	if (j >= 0)
+	partial = 0;    // no partial match
 
-	    return -1;	// not a real match
+	return -1;	// not a real match
 	}
-	*/
+      */
 
-	return -1;	// No match
+      return -1;	// No match
     }
 
     private char possiblyLower(char kar) {
@@ -1198,9 +1207,7 @@ public class StringUtil {
      * partial match
      */
     public int partialMatch() {
-	return partial;
+      return partial;
     }
-}
-
-
+  }
 }
