@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.39 2005-02-02 09:42:22 tlipkis Exp $
+ * $Id: Logger.java,v 1.40 2005-05-16 21:36:54 tlipkis Exp $
  */
 
 /*
@@ -597,6 +597,16 @@ public class Logger {
 
   public void setIdThread(boolean ena) {
     idThread = ena;
+  }
+
+  public void threadNameChanged() {
+    Thread thread = Thread.currentThread();
+    synchronized (threadIds) {
+      String id = (String)threadIds.get(thread);
+      if (id != null) {
+	info("ThreadId " + id + " is now " + thread.getName());
+      }
+    }
   }
 
   String getThreadId(Thread thread) {
