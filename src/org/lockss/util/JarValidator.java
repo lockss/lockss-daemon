@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.4 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: JarValidator.java,v 1.5 2005-05-16 21:36:08 tlipkis Exp $
  */
 
 /*
@@ -216,7 +216,7 @@ public class JarValidator {
 	  // more work to see if our keystore holds the signing public
 	  // key under a different certificate (this should usually
 	  // not be the case!)
-	  log.debug("Found trusted certificate alias: " + signer);
+	  log.debug2("Found trusted certificate alias: " + signer);
 	  return;
 	}
 
