@@ -1,5 +1,5 @@
 /*
- * $Id: TestByteArray.java,v 1.4 2005-02-21 03:09:23 tlipkis Exp $
+ * $Id: TestByteArray.java,v 1.5 2005-05-16 21:34:42 tlipkis Exp $
  */
 
 /*
@@ -99,6 +99,14 @@ public class TestByteArray extends LockssTestCase {
     ByteArray.encodeInt(-1, tst, 4);
     assertEquals(12345679, ByteArray.decodeInt(tst, 0));
     assertEquals(-1, ByteArray.decodeInt(tst, 4));
+  }
+
+  public void testDecodeByte() {
+    byte arr[] = {1, 2, (byte)0xff, (byte)0x80};
+    assertEquals(1, ByteArray.decodeByte(arr, 0));
+    assertEquals(2, ByteArray.decodeByte(arr, 1));
+    assertEquals(0xff, ByteArray.decodeByte(arr, 2));
+    assertEquals(0x80, ByteArray.decodeByte(arr, 3));
   }
 
   public void testEncodeLongSimple() {

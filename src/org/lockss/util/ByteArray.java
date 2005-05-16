@@ -1,5 +1,5 @@
 /*
- * $Id: ByteArray.java,v 1.5 2005-04-19 03:08:33 smorabito Exp $
+ * $Id: ByteArray.java,v 1.6 2005-05-16 21:34:42 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,15 @@ public class ByteArray {
     b[pos + 1] = (byte)(n & 0xFF);
     n >>>= 8;
     b[pos    ] = (byte)(n & 0xFF);
+  }
+
+  /**
+   * Decode 1 byte at pos into an int (treating byte as unsigned)
+   * @param b byte array
+   * @param pos position in array
+   */
+  public static int decodeByte(byte[] b, int pos) {
+    return (((int)b[pos]) & 0xFF);
   }
 
   /** Return the concatenation of two byte arrays. */
