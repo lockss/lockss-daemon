@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.9 2003-07-28 23:53:13 troberts Exp $
+ * $Id: StreamUtil.java,v 1.10 2005-05-16 21:37:33 tlipkis Exp $
  */
 
 /*
@@ -90,5 +90,51 @@ public class StreamUtil {
     writer.flush();
     return totalCharCount;
   }
+
+  /** Read size bytes from stream into buf.  Keeps trying to read until
+   * enough bytes have been read or EOF or error.
+   * @param ins stream to read from
+   * @param buf buffer to read into
+   * @param size number of bytes to read
+   * @return number of bytes read, which will be less than size iff EOF is
+   * reached
+   * @throws IOException
+   */
+  public static int readBytes(InputStream ins, byte[] buf, int size)
+      throws IOException {
+    int off = 0;
+    while ( off < size) {
+      int nread = ins.read(buf, off, size - off);
+      if (nread == -1) {
+	return off;
+      }
+      off += nread;
+    }
+    return off;
+  }
+
+  /** Read from two input streams and compare their contents.  The streams
+   * are not closed, and may get left at any position.
+   * @param ins1 1st stream
+   * @param ins2 2nd stream
+   * @return true iff streams have same contents and reach EOF at the same
+   * point.
+   * @throws IOException
+   */
+  public static boolean compare(InputStream ins1, InputStream ins2)
+      throws IOException {
+    byte[] b1 = new byte[BUFFER_SIZE];
+    byte[] b2 = new byte[BUFFER_SIZE];
+    while (true) {
+      int len1 = readBytes(ins1, b1, BUFFER_SIZE);
+      int len2 = readBytes(ins2, b2, BUFFER_SIZE);
+      if (len1 != len2) return false;
+      if (len1 == 0) return true;
+      for (int ix = 0; ix < len1; ix++) {
+	if (b1[ix] != b2[ix]) return false;
+      }
+    }
+  }
+
 }
 
