@@ -1,5 +1,5 @@
 /*
- * $Id: StreamUtil.java,v 1.10 2005-05-16 21:37:33 tlipkis Exp $
+ * $Id: StreamUtil.java,v 1.11 2005-05-17 23:12:11 troberts Exp $
  */
 
 /*
@@ -105,6 +105,28 @@ public class StreamUtil {
     int off = 0;
     while ( off < size) {
       int nread = ins.read(buf, off, size - off);
+      if (nread == -1) {
+	return off;
+      }
+      off += nread;
+    }
+    return off;
+  }
+
+  /** Read size chars from reader into buf.  Keeps trying to read until
+   * enough chars have been read or EOF or error.
+   * @param reader reader to read from 
+   * @param buf buffer to read into
+   * @param size number of chars to read
+   * @return number of chars read, which will be less than size iff EOF is
+   * reached
+   * @throws IOException
+   */
+  public static int readChars(Reader reader, char[] buf, int size)
+      throws IOException {
+    int off = 0;
+    while (off < size) {
+      int nread = reader.read(buf, off, size - off);
       if (nread == -1) {
 	return off;
       }

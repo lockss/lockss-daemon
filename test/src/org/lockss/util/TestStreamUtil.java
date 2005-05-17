@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.8 2005-05-16 21:37:33 tlipkis Exp $
+ * $Id: TestStreamUtil.java,v 1.9 2005-05-17 23:12:12 troberts Exp $
  */
 
 /*
@@ -167,6 +167,73 @@ public class TestStreamUtil extends LockssTestCase {
     outs.close();
   }
 
+  public void testReadBufReader() throws IOException {
+    int len = 12;
+    char[] buf = new char[len];
+    Reader reader = new StringReader("0103456789abcdefghijklmnopq");
+    StreamUtil.readChars(reader, buf, len);
+    char[] exp = {'0', '1', '0', '3', '4', '5', '6', '7', '8', '9', 'a', 'b'};
+    assertEquals(exp, buf);
+  }
+
+  
+  public void testReadCharShortRead() throws Exception {
+    char[] snd1 = {'0', '1', 0, '3'};
+    final int len = 12;
+    final char[] buf = new char[len];
+    PipedWriter outs = new PipedWriter();
+    final Reader ins = new PipedReader(outs);
+    final Exception[] ex = {null};
+    final int[] res = {0};
+    Thread th = new Thread() {
+	public void run() {
+	  try {
+	    res[0] = StreamUtil.readChars(ins, buf, len);
+	    StreamUtil.readChars(ins, buf, len);
+	  } catch (IOException e) {
+	    ex[0] = e;
+	  }
+	}};
+    th.start();
+    outs.write(snd1);
+    outs.close();
+    th.join();    
+
+    assertEquals(snd1.length, res[0]);
+    assertEquals(null, ex[0]);
+  }
+  
+  public void testReadCharMultipleRead() throws Exception {
+    char[] snd1 = {'0', '1', 0, '3'};
+    char[] snd2 = {'4', '5', '6', '7', '8', '9', 'a', 'b'};
+    char[] exp = {'0', '1', 0, '3', '4', '5', '6', '7', '8', '9', 'a', 'b'};
+    final int len = exp.length;
+    final char[] buf = new char[len];
+    PipedWriter outs = new PipedWriter();
+    final Reader ins = new PipedReader(outs);
+    final Exception[] ex = {null};
+    final int[] res = {0};
+    Thread th = new Thread() {
+	public void run() {
+	  try {
+	    res[0] = StreamUtil.readChars(ins, buf, len);
+	  } catch (IOException e) {
+	    ex[0] = e;
+	  }
+	}};
+    th.start();
+    outs.write(snd1);
+    TimerUtil.guaranteedSleep(100);
+    outs.write(snd2);
+    outs.flush();
+    th.join();    
+
+    assertEquals(exp, buf);
+    assertEquals(len, res[0]);
+    assertNull(ex[0]);
+    outs.close();
+  }
+  
   public void testCompareStreams() throws IOException {
     String s1 = "01\0003456789abcdefghijklmnopq";
     assertTrue(StreamUtil.compare(new StringInputStream(""),
