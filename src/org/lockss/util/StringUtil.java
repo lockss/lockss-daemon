@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.58 2005-05-16 23:42:17 troberts Exp $
+ * $Id: StringUtil.java,v 1.59 2005-05-17 00:12:06 troberts Exp $
  */
 
 /*
@@ -936,7 +936,7 @@ public class StringUtil {
     private static final int MAXCHAR = 256;
     // Maximum chars in character set.
 
-    private byte pat[];	// Byte representation of pattern
+    private char pat[];	// Byte representation of pattern
     private int patLen;
     private int partial;
     // Bytes of a partial match found at the end of a text buffer
@@ -998,11 +998,11 @@ public class StringUtil {
       this();
       this.ignoreCase = ignoreCase;
     }
-
+  
     /**
      * Shortcut constructor
      */
-    public BoyerMoore(byte[] pattern) {
+    public BoyerMoore(char[] pattern) {
       this();
       compile(pattern);
     }
@@ -1013,7 +1013,7 @@ public class StringUtil {
      */
     public BoyerMoore(String pattern) {
       this();
-      compile(pattern.getBytes());
+      compile(pattern.toCharArray());
     }
 
 
@@ -1023,16 +1023,16 @@ public class StringUtil {
      * @param pattern What we're looking for.
      */
     public void compile(String pattern) {
-      compile(pattern.getBytes());
+      compile(pattern.toCharArray());
     }
-
+    
 
     /**
      * Compiles the text pattern for searching.
      *
      * @param pattern What we're looking for.
      */
-    public void compile(byte[] pattern) {
+    public void compile(char[] pattern) {
       pat = pattern;
       patLen = pat.length;
 
@@ -1146,7 +1146,9 @@ public class StringUtil {
 	// scan string vs. pattern
 	// ignore positions beyond end of buffer
 	for (j = m-1; j >= 0; j--, k--) {
-	  if (k < end && possiblyLower(text[k]) != pat[j]) {
+	  if (k < end &&
+	      (ignoreCase ? Character.toLowerCase(text[k]) : text[k])
+	      != pat[j]) {
 	    break;   // confirmed non-match
 	  }
 	}
@@ -1155,14 +1157,16 @@ public class StringUtil {
 	if (j == -1) {
 	  return (partial == 0 ? k+1 : -1);   // full or partial match?
 	}
+
 	// skip to next possible start
-	int z = skip[(possiblyLower(text[k]) & 0xff)];    // cast to unsigned byte
+	int z =
+	  skip[ignoreCase ? Character.toLowerCase(text[k]) : text[k]];
+
 	max = (z > d[j]) ? z : d[j];
 	if (save_k < end) {
 	  k += max;
 	} else {
-	  k = save_k+1;  
-	  // calculation doesn't work past end of buffer,
+	  k = save_k+1;  // calculation doesn't work past end of buffer,
 	  // just do it by hand
 	}
 	partial = 0;
@@ -1210,4 +1214,6 @@ public class StringUtil {
       return partial;
     }
   }
+
+
 }
