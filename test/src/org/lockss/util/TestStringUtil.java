@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.52 2005-05-13 23:33:50 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.53 2005-05-17 23:12:35 troberts Exp $
  */
 
 /*
@@ -704,5 +704,27 @@ System.out.println("s: "+s);
     assertTrue("Didn't find string when it should",
                StringUtil.containsString(new StringReader(readerStr),
                                          stringToFind));
+  }
+
+
+  //network streams can underfill buffers; this test make sure we 
+  //handle a situation when the reader will return a series of small chars
+  public void testFindStringUnderfullsBuffer() throws IOException {
+    String stringToFind = "abcdefgh";
+    String readerStr = "blah abcdefgh blah";
+    assertTrue("Didn't find string when it should",
+               StringUtil.containsString(new SlowStringReader(readerStr),
+                                         stringToFind));
+  }
+
+
+  private static class SlowStringReader extends StringReader {
+    public SlowStringReader(String str) {
+      super(str);
+    }
+
+    public int read(char[] cbuf, int off, int len) throws IOException {
+      return super.read(cbuf, off, (len < 2 ? len : 2));
+    }
   }
 }
