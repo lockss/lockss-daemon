@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.5 2005-03-11 02:12:22 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.6 2005-05-18 05:48:12 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -100,7 +100,11 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   }
 
   private String getName() {
-    return name;
+    if (thread != null) {
+      return thread.getName();
+    } else {
+      return name;
+    }
   }
 
   /** Declare that the thread is running and initialized. */
