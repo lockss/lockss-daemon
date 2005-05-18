@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.4 2005-05-13 23:31:00 troberts Exp $
+ * $Id: ProbePermissionChecker.java,v 1.5 2005-05-18 23:36:21 troberts Exp $
  */
 
 /*
@@ -47,13 +47,16 @@ import org.lockss.crawler.*;
 
 public class ProbePermissionChecker implements PermissionChecker {
   String probeUrl = null; 
-  PermissionChecker checker;
+  LoginPageChecker checker;
+
+  static final int PERM_BUFFER_MAX = 16 * 1024;
+
 
   private static Logger logger = Logger.getLogger("ProbePermissionChecker");
 
   ArchivalUnit au;
 
-  public ProbePermissionChecker(PermissionChecker checker, ArchivalUnit au) {
+  public ProbePermissionChecker(LoginPageChecker checker, ArchivalUnit au) {
     if (checker == null) {
       throw new NullPointerException("Called with null permission checker");
     } else if (au == null) {
@@ -65,6 +68,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 
   public boolean checkPermission(Reader inputReader, String permissionUrl) {
     CustomHtmlParser parser = new CustomHtmlParser();
+    logger.debug3("Checking permission on "+permissionUrl);
     try {
       parser.parseForUrls(inputReader, permissionUrl,
 			  new MyFoundUrlCallback());
@@ -74,10 +78,25 @@ public class ProbePermissionChecker implements PermissionChecker {
       return false;
     }
     if (probeUrl != null) {
-      //XXX this is wrong
-      //We need something like HighWireLoginPageChecker that gets called here 
-      Reader reader = au.makeCachedUrl(probeUrl).openForReading();
-      return checker.checkPermission(reader, probeUrl);
+      logger.debug3("Found probeUrl "+probeUrl);
+      try {
+	UrlCacher uc = au.makeUrlCacher(probeUrl);
+	InputStream is = new BufferedInputStream(uc.getUncachedInputStream());
+	Properties props = uc.getUncachedProperties();
+
+//         is.mark(PERM_BUFFER_MAX);
+
+	Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+	
+	boolean isLoginPage = checker.isLoginPage(props, reader);
+	logger.debug3(isLoginPage ? "Found a login page" : "Not a login page");
+	return !isLoginPage;
+      } catch (IOException ex) {
+	logger.error("Exception trying to check for login page "+probeUrl, ex);
+	return false;
+      }
+    } else {
+      logger.warning("Didn't find a probe URL on "+permissionUrl);
     }
     return false;
   }
@@ -92,6 +111,7 @@ public class ProbePermissionChecker implements PermissionChecker {
       switch (link.charAt(0)) {
         case 'l': //<link href=blah.css>
         case 'L':
+	  logger.debug3("Looking for probe in "+link);
 	  if (beginsWithTag(link, LINKTAG)) {
 	    returnStr = getAttributeValue(HREF, link);
 	    String probeStr = getAttributeValue(LOCKSSPROBE, link);

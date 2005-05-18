@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.3 2005-05-13 17:42:39 troberts Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.4 2005-05-18 23:36:21 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.daemon;
 
 import java.io.*;
+import java.util.*;
 import org.lockss.test.*;
 
 public class TestProbePermissionChecker extends LockssTestCase {
@@ -82,7 +83,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
 
   public void testConstructorNullArchivalUnit() {
     try {
-      new ProbePermissionChecker(new MockPermissionChecker(100), null);
+      new ProbePermissionChecker(new MockLoginPageChecker(), null);
       fail("Calling ProbePermissionChecker constructor with a null Archival Unit should throw");
     } catch (NullPointerException ex) {
     }
@@ -94,8 +95,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWOProbe);
 
-    pc = new ProbePermissionChecker(new MockPermissionChecker(100),
-				    mau);
+    pc = new ProbePermissionChecker(new MockLoginPageChecker(), mau);
     assertFalse("Incorrectly gave permission when there was no probe",
 		pc.checkPermission(new StringReader(htmlSourceWOProbe),
 				   url));
@@ -111,13 +111,12 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(probeUrl, true, true);
     mau.addContent(probeUrl, "");
 
-    MockPermissionChecker mockPC = new MockPermissionChecker(100);
+    MockLoginPageChecker mockLPC = new MockLoginPageChecker(false);
 
-    pc = new ProbePermissionChecker(mockPC, mau); 
+    pc = new ProbePermissionChecker(mockLPC, mau); 
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(new StringReader(htmlSourceWProbe),
 				   "http://www.example.com"));
-    assertEquals(probeUrl, mockPC.getPermissionUrl()); 
   }
 
   public void testProbeCheckerRefuses() {
@@ -128,22 +127,30 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addUrl(url, true, true);
     mau.addContent(url, htmlSourceWProbe);
     mau.addUrl(probeUrl, true, true);
-//     mau.addContent(probeUrl, "");
 
-    MockPermissionChecker mockPC = new MockPermissionChecker(0);
+    MockLoginPageChecker mockLPC = new MockLoginPageChecker(true);
 
-    pc = new ProbePermissionChecker(mockPC, mau); 
+    pc = new ProbePermissionChecker(mockLPC, mau); 
     assertFalse("Gave permission when the nested checker denied it",
 	       pc.checkPermission(new StringReader(htmlSourceWProbe),
 				  "http://www.example.com"));
     
-    assertEquals(probeUrl, mockPC.getPermissionUrl()); 
   }
-  /*
-  private static class MyHighWireLoginPageChecker
-    extends HighWireLoginPageChecker {
-    public MyHighWireLoginPageChecker() {
+
+  private static class MockLoginPageChecker implements LoginPageChecker {
+    private boolean returnVal = false;
+
+    public MockLoginPageChecker() {
+      this(false);
+    }
+
+    public MockLoginPageChecker(boolean returnVal) {
+      this.returnVal = returnVal;
+    }
+
+
+    public boolean isLoginPage(Properties props, Reader reader) {
+      return returnVal;
     }
   }
-  */
 }
