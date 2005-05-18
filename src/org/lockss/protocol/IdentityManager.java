@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.58 2005-03-18 09:09:17 smorabito Exp $
+ * $Id: IdentityManager.java,v 1.59 2005-05-18 05:45:53 tlipkis Exp $
  */
 
 /*
@@ -56,10 +56,16 @@ public class IdentityManager
   public static final String PARAM_LOCAL_IP =
     Configuration.PREFIX + "localIPAddress";
 
-  /** The tcp port for the local V3 identity.  A V3 identity will be
-   * created only if this is set. */
+  /** The tcp port for the local V3 identity (at
+   * org.lockss.localIPAddress).  Can be overridden by
+   * org.lockss.localV3Identity */
   public static final String PARAM_LOCAL_V3_PORT =
     Configuration.PREFIX + "localV3Port";
+
+  /** Local V3 identity string.  If this is set it will take precedence
+   * over org.lockss.localV3Port */
+  public static final String PARAM_LOCAL_V3_IDENTITY =
+    Configuration.PREFIX + "localV3Identity";
 
   static final String PREFIX = Configuration.PREFIX + "id.";
   static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";
@@ -98,6 +104,9 @@ public class IdentityManager
   // fully qualify for XmlMarshaller
   public static final String MAPPING_FILE_NAME =
     "/org/lockss/protocol/idmapping.xml";
+
+  static final String V3_ID_SEPARATOR = ";";
+  static final char V3_ID_SEPARATOR_CHAR = ';';
 
   /* Reputation constants */
   public static final int MAX_DELTA = 0;
@@ -162,8 +171,11 @@ public class IdentityManager
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
     super.initService(daemon);
-
     // initializing these here makes testing more predictable
+    setupLocalIdentities();
+  }
+
+  void setupLocalIdentities() {
     localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
     theIdentities = new HashMap();
     thePeerIdentities = new HashMap();
@@ -194,19 +206,25 @@ public class IdentityManager
       throw new LockssAppException("IdentityManager: " + msg);
     }
     // Create V3 identity if configured
-    if (config.containsKey(PARAM_LOCAL_V3_PORT)) {
+    String v3idstr = config.get(PARAM_LOCAL_V3_IDENTITY);
+    if (StringUtil.isNullString(v3idstr) &&
+	config.containsKey(PARAM_LOCAL_V3_PORT)) {
       int localV3Port = config.getInt(PARAM_LOCAL_V3_PORT, -1);
       if (localV3Port > 0) {
-	try {
-	  localPeerIdentities[Poll.V3_POLL] =
-	    findLocalPeerIdentity(ipAddrToKey(theLocalIPAddr, localV3Port));
-	} catch (MalformedIdentityKeyException e) {
-	  String msg = "Cannot start: Can't create local V3 identity:" +
-	    theLocalIPAddr + ":" + localV3Port;
-	  log.critical(msg, e);
-	  throw new LockssAppException("IdentityManager: " + msg);
-	}
+	v3idstr = ipAddrToKey(localV1IdentityStr, localV3Port);
       }
+    }
+    if (v3idstr != null) {
+      try {
+	localPeerIdentities[Poll.V3_POLL] = findLocalPeerIdentity(v3idstr);
+      } catch (MalformedIdentityKeyException e) {
+	String msg = "Cannot start: Can't create local V3 identity: " +
+	  v3idstr;
+	log.critical(msg, e);
+	throw new LockssAppException("IdentityManager: " + msg);
+      }
+//     } else {
+//       log.debug("No V3 identity created");
     }
   }
 
@@ -268,7 +286,7 @@ public class IdentityManager
   }
 
   /** Find or create unique instance of PeerIdentity */
-  private PeerIdentity findPeerIdentity(String key) {
+  public PeerIdentity findPeerIdentity(String key) {
     synchronized (thePeerIdentities) {
       PeerIdentity pid = (PeerIdentity)thePeerIdentities.get(key);
       if (pid == null) {
@@ -323,10 +341,14 @@ public class IdentityManager
     }
   }
 
-  private static String ipAddrToKey(IPAddr addr, int port) {
+  public static String ipAddrToKey(String addr, int port) {
     return ((port == 0)
-	    ? addr.toString()
-	    : addr.toString() + ":" + String.valueOf(port));
+	    ? addr
+	    : addr + V3_ID_SEPARATOR + String.valueOf(port));
+  }
+
+  public static String ipAddrToKey(IPAddr addr, int port) {
+    return ipAddrToKey(addr.getHostAddress(), port);
   }
 
   /**
