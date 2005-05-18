@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.48 2005-02-21 03:06:40 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.49 2005-05-18 05:46:50 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,9 @@ public class MockLockssDaemon extends LockssDaemon {
   SystemMetrics systemMetrics = null;
   PollManager pollManager = null;
   LcapDatagramComm commManager = null;
-  LcapDatagramRouter routerManager = null;
+  LcapStreamComm scommManager = null;
+  LcapDatagramRouter datagramRouterManager = null;
+  LcapRouter routerManager = null;
   ProxyManager proxyManager = null;
   CrawlManager crawlManager = null;
   RepositoryManager repositoryManager = null;
@@ -94,6 +96,7 @@ public class MockLockssDaemon extends LockssDaemon {
     schedService = null;
     pollManager = null;
     commManager = null;
+    scommManager = null;
     proxyManager = null;
     crawlManager = null;
     treeWalkManager = null;
@@ -239,7 +242,7 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the communication manager instance
+   * return the datagram communication manager instance
    * @return the LcapDatagramComm
    */
   public LcapDatagramComm getDatagramCommManager() {
@@ -252,14 +255,41 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * return the router manager instance
+   * return the stream communication manager instance
+   * @return the LcapStreamComm
+   */
+  public LcapStreamComm getStreamCommManager() {
+    if (scommManager == null) {
+      scommManager =
+	(LcapStreamComm)newManager(LockssDaemon.STREAM_COMM_MANAGER);
+      managerMap.put(LockssDaemon.STREAM_COMM_MANAGER, scommManager);
+    }
+    return scommManager;
+  }
+
+  /**
+   * return the datagram router manager instance
    * @return the LcapDatagramRouter
    */
   public LcapDatagramRouter getDatagramRouterManager() {
+    if (datagramRouterManager == null) {
+      datagramRouterManager =
+	(LcapDatagramRouter)newManager(LockssDaemon.DATAGRAM_ROUTER_MANAGER);
+      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER,
+		     datagramRouterManager);
+    }
+    return datagramRouterManager;
+  }
+
+  /**
+   * return the router manager instance
+   * @return the LcapRouter
+   */
+  public LcapRouter getRouterManager() {
     if (routerManager == null) {
       routerManager =
-	(LcapDatagramRouter)newManager(LockssDaemon.DATAGRAM_ROUTER_MANAGER);
-      managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, routerManager);
+	(LcapRouter)newManager(LockssDaemon.ROUTER_MANAGER);
+      managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
     }
     return routerManager;
   }
@@ -374,7 +404,7 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
-   * Set the CommManager
+   * Set the datagram CommManager
    * @param commMan the new manager
    */
   public void setDatagramCommManager(LcapDatagramComm commMan) {
@@ -383,12 +413,31 @@ public class MockLockssDaemon extends LockssDaemon {
   }
 
   /**
+   * Set the stream CommManager
+   * @param commMan the new manager
+   */
+  public void setStreamCommManager(LcapStreamComm scommMan) {
+    scommManager = scommMan;
+    managerMap.put(LockssDaemon.STREAM_COMM_MANAGER, scommManager);
+  }
+
+  /**
+   * Set the DatagramRouterManager
+   * @param routerMan the new manager
+   */
+  public void setDatagramRouterManager(LcapDatagramRouter datagramRouterMan) {
+    datagramRouterManager = datagramRouterMan;
+    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, 
+		   datagramRouterManager);
+  }
+
+  /**
    * Set the RouterManager
    * @param routerMan the new manager
    */
-  public void setDatagramRouterManager(LcapDatagramRouter routerMan) {
+  public void setRouterManager(LcapRouter routerMan) {
     routerManager = routerMan;
-    managerMap.put(LockssDaemon.DATAGRAM_ROUTER_MANAGER, routerManager);
+    managerMap.put(LockssDaemon.ROUTER_MANAGER, routerManager);
   }
 
   /**
