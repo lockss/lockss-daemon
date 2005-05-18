@@ -127,6 +127,11 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.iop.IOPPlugin']" />
       </property>
+      <property name="highwire">
+	<property name="name" value="All HighWire Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin]" />
+      </property>
       <property name="locksscard">
 	<property name="name" value="LOCKSS Card" />
 	<property name="class" value="xpath" />
