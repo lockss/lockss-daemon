@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.11 2005-01-26 18:21:40 tlipkis Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.12 2005-05-18 05:46:34 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class LockssReceivedDatagram extends LockssDatagram {
   }
 
   /** Return the received DatagramPacket */
-  public DatagramPacket getPacket() {
+  DatagramPacket getPacket() {
     return packet;
   }
 
