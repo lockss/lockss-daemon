@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.64 2005-02-23 02:23:33 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.65 2005-05-18 05:50:02 tlipkis Exp $
  */
 
 /*
@@ -38,8 +38,7 @@ import java.net.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.daemon.*;
-import junit.framework.TestCase;
-import junit.framework.TestResult;
+import junit.framework.*;
 import org.apache.oro.text.regex.*;
 
 
@@ -172,6 +171,30 @@ public class LockssTestCase extends TestCase {
     LockssThread.disableWatchdog(false);
   }
 
+  // variant harness
+  /** Return a TestSuite with the combined tests in all the variant
+   * classes.  Useful to run common tests with variant configurations or
+   * implementation classes.
+   */
+  public static Test variantSuites(Class[] variants) {
+    TestSuite[] suites = new TestSuite[variants.length];
+    for (int ix = 0; ix < variants.length; ix++) {
+      final Class var = variants[ix];
+      TestSuite varSuite = new TestSuite(var) {
+	  public void run(TestResult result) {
+	    log.debug("Variant suite: " + StringUtil.shortName(var));
+	    super.run(result);
+	  }};
+      suites[ix] = varSuite;
+    }
+    TestSuite res = new TestSuite();
+    for (int ix = 0; ix < suites.length; ix++) {
+      res.addTest(suites[ix]);
+    }
+    return res;
+  }
+
+  // assertSuccessRate harness
   double successRate;
   int successMaxRepetitions;
   int successMaxFailures;
@@ -1287,6 +1310,7 @@ public class LockssTestCase extends TestCase {
     private long wait;
     private boolean want = true;
     private boolean did = false;
+    private boolean threadDump = false;
 
     protected DoLater(long waitMs) {
       wait = waitMs;
@@ -1329,6 +1353,13 @@ public class LockssTestCase extends TestCase {
 	  if (want) {
 	    want = false;
 	    did = true;
+	    if (threadDump) {
+	      try {
+		DebugUtils.getInstance().threadDump();
+		TimerUtil.guaranteedSleep(1000);
+	      } catch (Exception e) {
+	      }
+	    }
 	    doit();
 	  }
 	}
@@ -1340,11 +1371,16 @@ public class LockssTestCase extends TestCase {
 	}
       }
     }
+
+    /** Get a thread dump before triggering the event */
+    public void setThreadDump() {
+      threadDump = true;
+    }
+
   }
   /** Interrupter interrupts a thread in a while */
   public class Interrupter extends DoLater {
     private Thread thread;
-    private boolean threadDump = false;
 
     Interrupter(long waitMs, Thread thread) {
       super(waitMs);
@@ -1355,19 +1391,7 @@ public class LockssTestCase extends TestCase {
     /** Interrupt the thread */
     protected void doit() {
       log.debug("Interrupting");
-      if (threadDump) {
-	try {
-	  DebugUtils.getInstance().threadDump();
-	  TimerUtil.guaranteedSleep(1000);
-	} catch (Exception e) {
-	}
-      }
       thread.interrupt();
-    }
-
-    /** Interrupt the thread */
-    public void setThreadDump() {
-      threadDump = true;
     }
   }
 
