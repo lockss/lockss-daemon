@@ -11,12 +11,16 @@
 </ElementValue>
 </MapElement>
 <MapElement>
+<ElementKey>au_permission_checker_factory</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</ElementValue>
+</MapElement> 
+<MapElement>
 <ElementKey>text/html_filter</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_name</ElementKey>
