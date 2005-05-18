@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.11 2005-03-23 07:01:09 smorabito Exp $
+ * $Id: LcapDatagramRouter.java,v 1.12 2005-05-18 05:47:47 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class LcapDatagramRouter
   static final String PRIORITY_PARAM_BEACON = "Beacon";
   static final int PRIORITY_DEFAULT_BEACON = -1;
 
-  static Logger log = Logger.getLogger("Router");
+  static Logger log = Logger.getLogger("DGramRouter");
 
   private boolean enabled = LcapDatagramComm.DEFAULT_ENABLED;
   private LcapDatagramComm comm;

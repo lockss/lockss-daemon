@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.77 2005-05-12 00:22:23 troberts Exp $
+ * $Id: TestPollManager.java,v 1.78 2005-05-18 05:47:46 tlipkis Exp $
  */
 
 /*
@@ -89,6 +89,7 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.getLockssRepository(testau).stopService();
     theDaemon.getHashService().stopService();
     theDaemon.getDatagramRouterManager().stopService();
+    theDaemon.getRouterManager().stopService();
     TimeBase.setReal();
     super.tearDown();
   }
@@ -541,6 +542,7 @@ public class TestPollManager extends LockssTestCase {
     theDaemon.getSchedService().startService();
     theDaemon.getHashService().startService();
     theDaemon.getDatagramRouterManager().startService();
+    theDaemon.getRouterManager().startService();
     theDaemon.getActivityRegulator(testau).startService();
 
     theDaemon.setNodeManager(new MockNodeManager(), testau);
