@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.2 2005-03-23 07:01:12 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.3 2005-05-18 05:51:14 tlipkis Exp $
  */
 
 /*
@@ -121,13 +121,14 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   public void testNoOpMessageToString() throws IOException {
     V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes);
-    String expectedResult = "[V3LcapMessage: from [Peer: 127.0.0.1], NoOp]";
+    String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
+      ", NoOp]";
     assertEquals(expectedResult, noopMsg.toString());
   }
 
   public void testTestMessageToString() throws IOException {
-    String expectedResult = "[V3LcapMessage: from " +
-      "[Peer: 127.0.0.1], http://www.example.com Vote " +
+    String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
+      ", http://www.example.com Vote " +
       "C:AAECAwQFBgcICQoLDA0ODxAREhMU B:10 ver 1]";
     assertEquals(expectedResult, m_testMsg.toString());
   }
