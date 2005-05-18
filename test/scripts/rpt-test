@@ -65,6 +65,10 @@ export CLASSPATH
 
 failcnt=0
 
+msg="Starting $rpt iterations at `date`"
+echo "$msg" >> $stderr
+echo "$msg" >> $stdout
+
 let ix=1
 while [ $ix -le $rpt ]; do
   echo "** iter $ix" >> $stderr
