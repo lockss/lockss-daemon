@@ -1,5 +1,5 @@
 /*
- * $Id: IOUtil.java,v 1.1 2005-05-16 21:35:54 tlipkis Exp $
+ * $Id: IOUtil.java,v 1.2 2005-05-18 05:48:48 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,13 @@ public class IOUtil {
     
   /** Call close() on the Socket, ignoring any errors */
   public static void safeClose(Socket s) {
+    try {
+      s.close();
+    } catch (Exception e) {}
+  }
+
+  /** Call close() on the ServerSocket, ignoring any errors */
+  public static void safeClose(ServerSocket s) {
     try {
       s.close();
     } catch (Exception e) {}
