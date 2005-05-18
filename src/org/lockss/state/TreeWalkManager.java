@@ -1,5 +1,5 @@
 /*
- * $Id: TreeWalkManager.java,v 1.3 2004-09-27 22:39:05 smorabito Exp $
+ * $Id: TreeWalkManager.java,v 1.4 2005-05-18 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -180,7 +180,7 @@ public class TreeWalkManager
     pool = new PooledExecutor(paramMaxPoolSize);
     pool.setMinimumPoolSize(paramMinPoolSize);
     pool.setKeepAliveTime(paramPoolKeepaliveTime);
-    log.debug2("Threewalk thread pool min, max: " +
+    log.debug2("Treewalk thread pool min, max: " +
 	      pool.getMinimumPoolSize() + ", " + pool.getMaximumPoolSize());
     pool.abortWhenBlocked();
   }
