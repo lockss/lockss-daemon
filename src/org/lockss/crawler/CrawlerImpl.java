@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.43 2005-05-02 23:59:39 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.44 2005-05-18 23:35:49 troberts Exp $
  */
 
 /*
@@ -322,8 +322,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
 	} else {
 	  try {
             is.reset();
-          }
-          catch (IOException e) {
+          } catch (IOException e) {
             is.close();
             uc = makeUrlCacher(permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
@@ -338,6 +337,18 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
         is.close();
         return false;
       }
+
+      if (pluginPermissionCheckers.size() > 0) {
+	try {
+	  is.reset();
+	} catch (IOException e) {
+	  is.close();
+	  uc = makeUrlCacher(permissionPage);
+	  uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+	  is = new BufferedInputStream(uc.getUncachedInputStream());
+	  crawlStatus.signalUrlFetched(uc.getUrl());
+	}
+      }
       // now check for the required permission from the plugin
       for (Iterator it = pluginPermissionCheckers.iterator(); it.hasNext(); ) {
         is.mark(PERM_BUFFER_MAX);
@@ -347,12 +358,10 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
           logger.error("No plugin crawl permission on " + permissionPage);
           is.close();
           return false;
-        }
-        else {
+        } else {
           try {
             is.reset();
-          }
-          catch (IOException e) {
+          } catch (IOException e) {
             is.close();
             uc = makeUrlCacher(permissionPage);
             uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
