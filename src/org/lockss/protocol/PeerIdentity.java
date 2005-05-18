@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.3 2004-09-29 06:39:14 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.4 2005-05-18 05:52:17 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,7 @@ import org.lockss.util.*;
 public class PeerIdentity {
   static Logger theLog=Logger.getLogger("PeerIdentity");
   private String key;
+  private transient PeerAddress pAddr;
 
   PeerIdentity(String newKey) {
     key = newKey;
@@ -54,17 +55,33 @@ public class PeerIdentity {
    * understandable to humans.
    */
   public String toString() {
-    return "[Peer: " + key + "]";
+    StringBuffer sb = new StringBuffer();
+    sb.append("[");
+    if (isLocalIdentity()) sb.append("L");
+    sb.append("Peer: ");
+    sb.append(key);
+//     sb.append(", ");
+//     sb.append(System.identityHashCode(this));
+    sb.append("]");
+    return sb.toString();
   }
 
   /**
    * getIdString returns a string describing the peer that is
    * parseable and convertable into a PeerIdentity object.  At
    * present this is a dotted-quad IP address optionally followed
-   * by a colon and a nuberic port number
+   * by a colon and a numeric port number
    */
   public String getIdString() {
     return key;
+  }
+
+  public PeerAddress getPeerAddress()
+      throws IdentityManager.MalformedIdentityKeyException {
+    if (pAddr == null) {
+      pAddr = PeerAddress.makePeerAddress(this, key);
+    }
+    return pAddr;
   }
 
   /** Return true iff this is a local PeerIdentity.
