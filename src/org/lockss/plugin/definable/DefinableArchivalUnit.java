@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.31 2005-05-06 00:07:08 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.32 2005-05-20 23:42:12 troberts Exp $
  */
 
 /*
@@ -67,6 +67,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   static final public String AU_PERMISSION_CHECKER_FACTORY =
     "au_permission_checker_factory";
 
+  static final public String AU_LOGIN_PAGE_CHECKER = "au_login_page_checker";
 
   protected ClassLoader classLoader;
   protected ExternalizableMap definitionMap;
@@ -230,7 +231,8 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
       boolean follow_links =
           definitionMap.getBoolean(DefinablePlugin.CM_FOLLOW_LINKS, true);
       return new OaiCrawlSpec(makeOaiData(), getPermissionPages(),
-                              Collections.EMPTY_LIST, rule, follow_links);
+                              Collections.EMPTY_LIST, rule, follow_links,
+			      makeLoginPageChecker());
     }
     else  { // for now use the default spider crawl spec
       int depth = definitionMap.getInt(AU_CRAWL_DEPTH, DEFAULT_AU_CRAWL_DEPTH);
@@ -240,8 +242,21 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
 //       return new SpiderCrawlSpec(ListUtil.list(startUrl),
       return new SpiderCrawlSpec(ListUtil.list(startUrlString),
 				 getPermissionPages(), rule, depth,
-				 makePermissionCheckers());
+				 makePermissionCheckers(),
+				 makeLoginPageChecker());
     }
+  }
+
+  protected LoginPageChecker makeLoginPageChecker() {
+    String loginPageCheckerClass =
+      definitionMap.getString(AU_LOGIN_PAGE_CHECKER, null);
+    if (loginPageCheckerClass == null) {
+      return null;
+    }
+    LoginPageChecker checker =
+      (LoginPageChecker) loadClass(loginPageCheckerClass,
+				   LoginPageChecker.class);
+    return checker;
   }
 
   protected List makePermissionCheckers() {

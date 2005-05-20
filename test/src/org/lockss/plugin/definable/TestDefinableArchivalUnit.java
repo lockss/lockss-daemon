@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.18 2005-05-06 00:07:08 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.19 2005-05-20 23:42:12 troberts Exp $
  */
 
 /*
@@ -340,6 +340,23 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       throw new UnsupportedOperationException("not implemented");
     } 
   }
+
+  public void testMakeLoginPageCheckers() {
+    assertNull(cau.makeLoginPageChecker());
+  }
+
+  public void testMakeLoginPageChecker() {
+    defMap.putString(DefinableArchivalUnit.AU_LOGIN_PAGE_CHECKER,
+ 		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyLoginPageChecker");
+    assertNotNull(cau.makeLoginPageChecker()); 
+  }
+
+  public static class MyLoginPageChecker implements LoginPageChecker {
+    public boolean isLoginPage(Properties props, Reader reader) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+  }
+
 
   /*
   public void testMakeCrawlSpec() throws Exception {
