@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerMessage.java,v 1.1 2005-05-18 05:45:16 tlipkis Exp $
+ * $Id: TestPeerMessage.java,v 1.2 2005-05-20 07:28:24 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestPeerMessage extends LockssTestCase {
     pid = new MyPeerIdentity();
   }
 
-  public void assertAccessorsThrow(PeerMessage pm) throws Exception {
+  public void assertReadAccessorsThrow(PeerMessage pm) throws Exception {
     try {
       pm.getInputStream();
       fail("getInputStream() should throw when no data");
@@ -97,13 +97,13 @@ public class TestPeerMessage extends LockssTestCase {
 
   public void testNoData() throws Exception {
     PeerMessage pm = makePeerMessage(4);
-    assertAccessorsThrow(pm);
+    assertReadAccessorsThrow(pm);
     assertEquals(4, pm.getProtocol());
     OutputStream os = pm.getOutputStream();
     // should still throw until output stream closed
-    assertAccessorsThrow(pm);
+    assertReadAccessorsThrow(pm);
     StreamUtil.copy(new ByteArrayInputStream(testData), os);
-    assertAccessorsThrow(pm);
+    assertReadAccessorsThrow(pm);
     try {
       pm.getOutputStream();
       fail("getOutputStream() should throw when called twice");
@@ -115,7 +115,7 @@ public class TestPeerMessage extends LockssTestCase {
     PeerMessage pm = makePeerMessage(4);
     OutputStream os = pm.getOutputStream();
     StreamUtil.copy(new ByteArrayInputStream(testData), os);
-    assertAccessorsThrow(pm);
+    assertReadAccessorsThrow(pm);
     os.close();
     try {
       pm.getOutputStream();
@@ -132,7 +132,7 @@ public class TestPeerMessage extends LockssTestCase {
   public void testZeroData() throws Exception {
     PeerMessage pm = makePeerMessage(4);
     OutputStream os = pm.getOutputStream();
-    assertAccessorsThrow(pm);
+    assertReadAccessorsThrow(pm);
     os.close();
     try {
       pm.getOutputStream();
@@ -157,17 +157,34 @@ public class TestPeerMessage extends LockssTestCase {
     String s1 = "01\0003456789abcdefghijklmnopq";
     PeerMessage pm1 = makePeerMessage(1);
     PeerMessage pm2 = makePeerMessage(1);
-    assertEquals(pm1, pm2);
+    assertEqualsNotSame(pm1, pm2);
     pm2.setSender(pid);
     assertNotEquals(pm1, pm2);
     assertNotEquals(pm1, makePeerMessage(2));
     assertNotEquals(pm1, makePeerMessage(1, s1));
-    assertNotEquals(pm1, makePeerMessage(1, s1));
 
-    assertEquals(makePeerMessage(1, ""), makePeerMessage(1, ""));
-    assertEquals(makePeerMessage(1, s1), makePeerMessage(1, s1));
+    assertEqualsNotSame(makePeerMessage(1, ""), makePeerMessage(1, ""));
+    assertEqualsNotSame(makePeerMessage(1, s1), makePeerMessage(1, s1));
     assertNotEquals(makePeerMessage(1, s1), makePeerMessage(0, s1));
     assertNotEquals(makePeerMessage(1, s1), makePeerMessage(1, s1 + "A"));
+  }
+
+  public void testEqualsButSender() throws Exception {
+    String s1 = "01\0003456789abcdefghijklmnopq";
+    PeerMessage pm1 = makePeerMessage(1);
+    PeerMessage pm2 = makePeerMessage(1);
+    assertTrue(pm1.equalsButSender(pm2));
+    pm2.setSender(pid);
+    assertTrue(pm1.equalsButSender(pm2));
+    assertFalse(pm1.equalsButSender(makePeerMessage(2)));
+    assertFalse(pm1.equalsButSender(makePeerMessage(1, s1)));
+
+    assertEqualsNotSame(makePeerMessage(1, ""), makePeerMessage(1, ""));
+    assertEqualsNotSame(makePeerMessage(1, s1), makePeerMessage(1, s1));
+    PeerMessage pm = makePeerMessage(1, s1);
+    assertTrue(pm.equalsButSender(makePeerMessage(1, s1)));
+    assertFalse(pm.equalsButSender(makePeerMessage(0, s1)));
+    assertFalse(pm.equalsButSender(makePeerMessage(1, s1+"A")));
   }
 
   public void testDelete() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.1 2005-05-18 05:52:17 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.2 2005-05-20 07:28:24 tlipkis Exp $
  */
 
 /*
@@ -36,18 +36,29 @@ import java.net.*;
 import org.lockss.util.*;
 
 /**
- * Abstraction of protocol-specific peer addresses, currently UDP
- * (V1) or TCP (V3)
+ * Abstraction of protocol-specific peer addresses, currently UDP (V1) or
+ * TCP (V3).  Should be used only be comm code when necessary to establish
+ * a connection to the peer.  For perr identification purposes, always use
+ * {@link PeerIdentity}
  */
+
+// Everything in here should be package access.  It's public only so it's
+// included in javadoc
+
 public abstract class PeerAddress {
   static Logger log = Logger.getLogger("PeerAddress");
-  private PeerIdentity pid;
+  private String key;
 
-  PeerAddress(PeerIdentity pid) {
-    this.pid = pid;
+  protected PeerAddress(String key) {
+    this.key = key;
   }
 
-  static PeerAddress makePeerAddress(PeerIdentity pid, String key)
+  protected static PeerAddress makePeerAddress(PeerIdentity pid) 
+      throws IdentityManager.MalformedIdentityKeyException {
+    return makePeerAddress(pid.getIdString());
+  }
+
+  protected static PeerAddress makePeerAddress(String key)
       throws IdentityManager.MalformedIdentityKeyException {
     try {
       List parts =
@@ -56,11 +67,13 @@ public abstract class PeerAddress {
       switch (parts.size()) {
       case 1:
 	ip = (String)parts.get(0);
-	return new Udp(pid, IPAddr.getByName(ip));
+	checkIpAddr(ip);
+	return new Udp(key, IPAddr.getByName(ip));
       case 2:
 	ip = (String)parts.get(0);
+	checkIpAddr(ip);
 	int port = Integer.parseInt((String)parts.get(1));
-	return new Tcp(pid, IPAddr.getByName(ip), port);
+	return new Tcp(key, IPAddr.getByName(ip), port);
       default:
 	throw new
 	  IdentityManager.MalformedIdentityKeyException("Unparseable PeerId: "
@@ -79,23 +92,42 @@ public abstract class PeerAddress {
     }
   }
 
-  static abstract class Ip extends PeerAddress {
+  abstract boolean isStream();
+
+  /** Check for legal numeric IP address, throw
+   * MalformedIdentityKeyException if not.  Currently accepts only IPV4
+   * addresses
+   */
+  private static void checkIpAddr(String addr)
+      throws IdentityManager.MalformedIdentityKeyException {
+    try {
+      new IpFilter.Addr(addr);
+    } catch (IpFilter.MalformedException e) {
+      throw new IdentityManager.MalformedIdentityKeyException(e.toString());
+    }
+  }
+
+  protected static abstract class Ip extends PeerAddress {
     IPAddr addr;
 
-    private Ip(PeerIdentity pid, IPAddr addr) {
-      super(pid);
+    private Ip(String key, IPAddr addr) {
+      super(key);
       this.addr = addr;
     }
 
-    IPAddr getIPAddr() {
+    protected IPAddr getIPAddr() {
       return addr;
     }
   }
 
-  static class Udp extends Ip {
+  protected static class Udp extends Ip {
 
-    Udp(PeerIdentity pid, IPAddr addr) {
-      super(pid, addr);
+    Udp(String key, IPAddr addr) {
+      super(key, addr);
+    }
+
+    boolean isStream() {
+      return false;
     }
 
     public boolean equals(Object o) {
@@ -115,19 +147,23 @@ public abstract class PeerAddress {
     }
   }
 
-  static class Tcp extends Ip {
+  protected static class Tcp extends Ip {
     private short port;
 
-    Tcp(PeerIdentity pid, IPAddr addr, int port) {
-      super(pid, addr);
+    Tcp(String key, IPAddr addr, int port) {
+      super(key, addr);
       if (port < 0 || port > 65535) {
 	throw new IllegalArgumentException("Illegal TCP port: " + port);
       }
       this.port = (short)port;
     }
 
-    short getPort() {
+    protected short getPort() {
       return port;
+    }
+
+    boolean isStream() {
+      return true;
     }
 
     public boolean equals(Object o) {

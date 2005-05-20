@@ -1,5 +1,5 @@
 /*
- * $Id: PeerIdentity.java,v 1.4 2005-05-18 05:52:17 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.5 2005-05-20 07:28:24 tlipkis Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class PeerIdentity {
   public PeerAddress getPeerAddress()
       throws IdentityManager.MalformedIdentityKeyException {
     if (pAddr == null) {
-      pAddr = PeerAddress.makePeerAddress(this, key);
+      pAddr = PeerAddress.makePeerAddress(key);
     }
     return pAddr;
   }

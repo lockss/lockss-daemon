@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.1 2005-05-18 05:52:17 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.2 2005-05-20 07:28:24 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import java.util.*;
 
 /** Test case for class: org.lockss.protocol.PeerAddress */
 public class TestPeerAddress extends LockssTestCase {
+  static Logger log = Logger.getLogger("TestPeerAddress");
 
   private IdentityManager idmgr;
 
@@ -63,48 +64,93 @@ public class TestPeerAddress extends LockssTestCase {
 
   // test constructor, accessors, equals
   public void testUDPAddr() throws Exception {
-    PeerIdentity pid = newPI(ipstr);
-    PeerAddress.Udp pa1 = new PeerAddress.Udp(pid, ipaddr);
-    PeerAddress.Udp pa1a = new PeerAddress.Udp(pid, ipaddr);
-    PeerAddress.Udp pa2 = new PeerAddress.Udp(pid, ipaddr2);
-    assertTrue(pa1.equals(pa1a));
-    assertFalse(pa1.equals(pa2));
-    assertEquals(ipaddr, pa1.getIPAddr());
+    PeerAddress.Udp pa1 = new PeerAddress.Udp(ipstr, ipaddr);
+    assertTrue(pa1.equals(new PeerAddress.Udp(ipstr, ipaddr)));
+    assertFalse(pa1.equals(new PeerAddress.Udp(ipstr, ipaddr2)));
+    assertFalse(pa1.equals(new PeerAddress.Tcp(ipstr, ipaddr2, 0)));
+    assertSame(ipaddr, pa1.getIPAddr());
   }
 
   // test make from key
   public void testMakeUDPAddr() throws Exception {
-    PeerIdentity pid = newPI(ipstr);
-    PeerAddress pa = PeerAddress.makePeerAddress(pid, ipstr);
+    PeerAddress pa = PeerAddress.makePeerAddress(ipstr);
     assertTrue(pa instanceof PeerAddress.Udp);
     PeerAddress.Udp paUdp = (PeerAddress.Udp)pa;
     assertEquals(ipaddr, paUdp.getIPAddr());
+    PeerIdentity pid = newPI(ipstr);
     assertEquals(pa, pid.getPeerAddress());
   }
 
   // test constructor, accessors, equals
   public void testTCPAddr() throws Exception {
-    PeerIdentity pid = newPI(ipstr);
-    PeerAddress.Tcp pa1 = new PeerAddress.Tcp(pid, ipaddr, port);
-    PeerAddress.Tcp pa1a = new PeerAddress.Tcp(pid, ipaddr, port);
-    PeerAddress.Tcp pa2 = new PeerAddress.Tcp(pid, ipaddr, port+1);
-    PeerAddress.Tcp pa3 = new PeerAddress.Tcp(pid, ipaddr2, port);
-    assertTrue(pa1.equals(pa1a));
-    assertFalse(pa1.equals(pa2));
-    assertFalse(pa1.equals(pa3));
-    assertEquals(ipaddr, pa1.getIPAddr());
+    PeerAddress.Tcp pa1 = new PeerAddress.Tcp(ipstr, ipaddr, port);
+    assertTrue(pa1.equals(new PeerAddress.Tcp(ipstr, ipaddr, port)));
+    assertFalse(pa1.equals(new PeerAddress.Tcp(ipstr, ipaddr, port+1)));
+    assertFalse(pa1.equals(new PeerAddress.Tcp(ipstr, ipaddr2, port)));
+    assertFalse(pa1.equals(new PeerAddress.Udp(ipstr, ipaddr)));
+    assertSame(ipaddr, pa1.getIPAddr());
     assertEquals(port, pa1.getPort());
   }
 
   // test make from key
   public void testMakeTCPAddr() throws Exception {
     String key = ipstr + IdentityManager.V3_ID_SEPARATOR + port;
-    PeerIdentity pid = newPI(key);
-    PeerAddress pa = PeerAddress.makePeerAddress(pid, key);
+    PeerAddress pa = PeerAddress.makePeerAddress(key);
     assertTrue(pa instanceof PeerAddress.Tcp);
     PeerAddress.Tcp paTcp = (PeerAddress.Tcp)pa;
     assertEquals(ipaddr, paTcp.getIPAddr());
     assertEquals(port, paTcp.getPort());
+    PeerIdentity pid = newPI(key);
     assertEquals(pa, pid.getPeerAddress());
+  }
+
+  public void assertIllegal(String key) {
+    try {
+    PeerAddress pad = PeerAddress.makePeerAddress(key);
+      fail("Should be illegal PeerAddress: " + key + ", was " + pad);
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+    }
+  }
+
+  public void assertLegal(String key) {
+    try {
+      PeerAddress.makePeerAddress(key);
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+      fail("Should be legal PeerAddress: " + key);
+    }
+  }
+  
+  public void lll(String key) throws Exception {
+    log.info(key + ": " + PeerAddress.makePeerAddress(key));
+  }
+
+  static String SEP = IdentityManager.V3_ID_SEPARATOR;
+
+  public void testIllegalIdKey() throws Exception {
+    assertIllegal(null);
+    assertIllegal("");
+    assertLegal("1.2.3.4");
+    assertIllegal("1.2.3.4" + SEP);
+    assertLegal("1.2.3.4" + SEP + "65535");
+    assertIllegal("1.2.3.4" + SEP + "65536");
+    assertIllegal("1.2.3.4" + SEP + "x");
+    assertIllegal("1.2.3.4" + SEP + "-2");
+    assertIllegal("1.2.3.4" + SEP + "1234" + SEP);
+    assertIllegal("1.2.3.4" + SEP + "1234" + SEP + "1");
+    assertIllegal("1.2.3.4" + SEP);
+    assertIllegal("1.2.3.4" + SEP + SEP);
+    assertIllegal(SEP);
+    assertIllegal(SEP + "1");
+
+    // no abbreviated IP address
+    assertIllegal("1");
+    assertIllegal("1.2");
+    // no IPV6 addresses for now
+    assertIllegal("11:22:33:44:55:66:77:88");
+    assertIllegal("::1");
+
+    // no dns lookup
+    assertIllegal("lockss.org");
+    assertIllegal("::1");
   }
 }
