@@ -19,6 +19,10 @@
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue>
 </MapElement>
 <MapElement>
+<ElementKey>au_login_page_checker</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireLoginPageChecker</ElementValue>
+</MapElement>
+<MapElement>
 <ElementKey>plugin_version</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
 </MapElement>
