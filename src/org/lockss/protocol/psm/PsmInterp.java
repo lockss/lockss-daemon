@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.5 2005-04-19 03:08:33 smorabito Exp $
+* $Id: PsmInterp.java,v 1.6 2005-05-20 07:28:43 tlipkis Exp $
  */
 
 /*
@@ -255,7 +255,7 @@ public class PsmInterp {
   static class StateTimerCallback implements TimerQueue.Callback {
     public void timerExpired(Object cookie) {
       log.debug2("StateTimerCallback: " + cookie);
-      ((StateTimer)cookie).timerExpired();
+      ((PsmInterp.StateTimer)cookie).timerExpired();
     }
     public String toString() {
       return "PSMStateTimer";
