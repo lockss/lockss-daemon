@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.7 2004-11-11 00:40:45 troberts Exp $
+ * $Id: CacheException.java,v 1.8 2005-05-20 23:43:28 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -40,8 +40,17 @@ import java.util.*;
  * errors into one of these categories, so that the generic crawler can
  * handle the error in a standardized way. */
 public class CacheException extends IOException {
+  //Exceptions with this attribute will cause the crawl to be marked
+  //as a failure
   public static final int ATTRIBUTE_FAIL = 1;
+
+  //Exceptions with this attribute will cause the URL being fetched to be
+  //retried a fixed number of times
   public static final int ATTRIBUTE_RETRY = 2;
+
+  //Exceptions with this attribute will signal that we have a serious error
+  //such as a permission problem or a site wide issue
+  public static final int ATTRIBUTE_FATAL = 3;
 
   protected static boolean defaultSuppressStackTrace = true;
 
@@ -209,6 +218,21 @@ public class CacheException extends IOException {
     protected void setAttributes() {
       attributeBits.clear(ATTRIBUTE_RETRY);
       attributeBits.set(ATTRIBUTE_FAIL);
+    }
+  }
+
+  public static class PermissionException extends UnretryableException {
+    public PermissionException() {
+      super();
+    }
+
+    public PermissionException(String message) {
+      super(message);
+    }
+
+    protected void setAttributes() {
+      super.setAttributes();
+      attributeBits.set(ATTRIBUTE_FATAL);
     }
   }
 
