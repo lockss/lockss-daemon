@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.6 2005-05-12 00:24:42 troberts Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.7 2005-05-20 23:43:04 troberts Exp $
  */
 
 /*
@@ -237,6 +237,33 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
+
+  public void testExitsWhenPermissionExceptionThrown() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/blah2.html";
+    String url3="http://www.example.com/blah3.html";
+
+    mau.addUrl(startUrl, false, true);
+
+    ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1,
+								     url2,
+								     url3));
+    MyMockRetryableCacheException exception =
+      new MyMockRetryableCacheException("Test exception");
+    mau.addUrl(url1);
+    crawlRule.addUrlToCrawl(url1);
+
+    mau.addUrl(url2, new CacheException.PermissionException(),
+	       DEFAULT_RETRY_TIMES+1);
+    crawlRule.addUrlToCrawl(url2);
+
+    mau.addUrl(url3);
+    crawlRule.addUrlToCrawl(url3);
+
+    assertFalse(crawler.doCrawl0());
+  }
+
 
   public void testReturnsDoesntRetryWhenUnretryableExceptionThrown() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
