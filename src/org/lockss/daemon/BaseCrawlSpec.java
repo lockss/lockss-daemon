@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.2 2004-12-07 17:56:10 troberts Exp $
+ * $Id: BaseCrawlSpec.java,v 1.3 2005-05-20 23:44:57 troberts Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 
   protected List permissionList;
   protected List permissionCheckers = Collections.EMPTY_LIST;
+  protected LoginPageChecker loginPageChecker = null;
   protected CrawlRule rule;
   protected CrawlWindow window;
 
@@ -57,7 +58,9 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
    */
   protected BaseCrawlSpec(List permissionUrls,
 			  CrawlRule rule, 
-			  List permissionCheckers) throws ClassCastException {
+			  List permissionCheckers,
+			  LoginPageChecker loginPageChecker)
+      throws ClassCastException {
 
     if(permissionUrls.isEmpty()) {
       //do we want to throw if we have no permission urls?
@@ -72,6 +75,8 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
     //XXX empty permissionChecker list as it is plugin specific, 
     // so no isEmpty() check
     this.permissionCheckers = permissionCheckers;
+
+    this.loginPageChecker = loginPageChecker;
   }
 
   /**
@@ -111,6 +116,10 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 
   public List getPermissionCheckers() {
     return permissionCheckers;
+  }
+
+  public LoginPageChecker getLoginPageChecker() {
+    return loginPageChecker;
   }
 
 }

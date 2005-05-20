@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.5 2005-02-02 09:42:47 tlipkis Exp $
+ * $Id: OaiCrawlSpec.java,v 1.6 2005-05-20 23:44:57 troberts Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 	 ListUtil.list("http://171.66.236.27:8181/html/permission.html"),
 	 Collections.EMPTY_LIST,
  	 rule,
- 	 false);
+ 	 false, null);
   }
 
 //   public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule) {
@@ -75,7 +75,8 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 	 permissionList,
 	 Collections.EMPTY_LIST,
  	 rule,
- 	 follow);
+ 	 follow,
+	 null);
   }
 
   //----------------------------------------------------
@@ -97,11 +98,9 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 		      List permissionUrls,
 		      List permissionCheckers,
 		      CrawlRule rule,
-		      boolean followLink
-		      ) {
-    super(permissionUrls,
-	  rule,
-	  permissionCheckers);
+		      boolean followLink,
+		      LoginPageChecker loginPageChecker) {
+    super(permissionUrls, rule, permissionCheckers, loginPageChecker);
     if (oaiRequestData == null){
       throw new IllegalArgumentException("Called with null oaiRequestData");
     }

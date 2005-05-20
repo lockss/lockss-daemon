@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseCrawlSpec.java,v 1.2 2004-12-07 17:56:10 troberts Exp $
+ * $Id: TestBaseCrawlSpec.java,v 1.3 2005-05-20 23:44:57 troberts Exp $
  */
 
 /*
@@ -51,43 +51,50 @@ public class TestBaseCrawlSpec extends LockssTestCase {
 
   public void testNullPermissionUrls() throws LockssRegexpException {
     try {
-      BaseCrawlSpec cs = new TestableBaseCrawlSpec((List) null, rule, null);
+      BaseCrawlSpec cs =
+	new TestableBaseCrawlSpec((List) null, rule, null, null);
       fail("BaseCrawlSpec with null permission url should throw");
     } catch (NullPointerException e) { }
     try {
       BaseCrawlSpec cs = new TestableBaseCrawlSpec(Collections.EMPTY_LIST, 
-					   rule , null);
+						   rule , null, null);
       fail("BaseCrawlSpec with null permission url should throw");
     } catch (IllegalArgumentException e) { }
   }
   
   public void testGetPermissionPages() throws LockssRegexpException {
     String foo[] = {"foo"};
-    BaseCrawlSpec cs1 = new TestableBaseCrawlSpec(ListUtil.list(foo[0]), rule, null);
+    BaseCrawlSpec cs1 =
+      new TestableBaseCrawlSpec(ListUtil.list(foo[0]), rule, null, null);
     assertIsomorphic(foo, cs1.getPermissionPages());
-    BaseCrawlSpec cs2 = new TestableBaseCrawlSpec(ListUtil.fromArray(foo), rule, null);
+    BaseCrawlSpec cs2 =
+      new TestableBaseCrawlSpec(ListUtil.fromArray(foo), rule, null, null);
     assertIsomorphic(foo, cs2.getPermissionPages());
     String foobar[] = {"foo", "bar"};
-    BaseCrawlSpec cs3 = new TestableBaseCrawlSpec(ListUtil.fromArray(foobar), rule, null);
+    BaseCrawlSpec cs3 =
+      new TestableBaseCrawlSpec(ListUtil.fromArray(foobar), rule, null, null);
     assertIsomorphic(foobar, cs3.getPermissionPages());
   }
 
   public void testGetPermissionCheckers() throws LockssRegexpException {
     List foo = ListUtil.list("foo");
     String checkers[] = {"one"};
-    BaseCrawlSpec cs1 = new TestableBaseCrawlSpec(foo, rule, 
-					  ListUtil.list(checkers[0]));
+    BaseCrawlSpec cs1 =
+      new TestableBaseCrawlSpec(foo, rule, ListUtil.list(checkers[0]), null);
     assertIsomorphic(checkers, cs1.getPermissionCheckers());
-    BaseCrawlSpec cs2 = new TestableBaseCrawlSpec(foo, rule, ListUtil.fromArray(checkers));
+    BaseCrawlSpec cs2 =
+      new TestableBaseCrawlSpec(foo, rule, ListUtil.fromArray(checkers), null);
     assertIsomorphic(checkers, cs2.getPermissionCheckers());
     String otherCheckers[] = {"one", "two"};
-    BaseCrawlSpec cs3 = new TestableBaseCrawlSpec(foo, rule, ListUtil.fromArray(otherCheckers));
+    BaseCrawlSpec cs3 =
+      new TestableBaseCrawlSpec(foo, rule,
+				ListUtil.fromArray(otherCheckers), null);
     assertIsomorphic(otherCheckers, cs3.getPermissionCheckers());
   }
 
   public void testNoModifyPermissionList() {
     List l1 = ListUtil.list("one", "two");
-    BaseCrawlSpec cs = new TestableBaseCrawlSpec(l1, rule, null);
+    BaseCrawlSpec cs = new TestableBaseCrawlSpec(l1, rule, null, null);
     List l2 = cs.getPermissionPages();
     assertEquals(l1, l2);
     try {
@@ -113,7 +120,9 @@ public class TestBaseCrawlSpec extends LockssTestCase {
   public void testIncluded() throws LockssRegexpException {
     BaseCrawlSpec cs1 =
       new TestableBaseCrawlSpec(ListUtil.list("foo"),
-                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE), null);
+				new CrawlRules.RE("foo[12]*",
+						  CrawlRules.RE.MATCH_INCLUDE),
+				null, null);
     try {
       assertFalse(cs1.isIncluded(null));
       fail("CrawlSpec.inIncluded(null) should throw");
@@ -127,7 +136,9 @@ public class TestBaseCrawlSpec extends LockssTestCase {
     MockCrawlWindow window = new MockCrawlWindow();
     BaseCrawlSpec cs1 =
       new TestableBaseCrawlSpec(ListUtil.list("foo"),
-                    new CrawlRules.RE("foo[12]*", CrawlRules.RE.MATCH_INCLUDE), null);
+				new CrawlRules.RE("foo[12]*",
+						  CrawlRules.RE.MATCH_INCLUDE),
+				null, null);
     cs1.setCrawlWindow(window);
     assertTrue(cs1.inCrawlWindow());
     window.setAllowCrawl(false);
@@ -135,10 +146,11 @@ public class TestBaseCrawlSpec extends LockssTestCase {
   }
 
   private static class TestableBaseCrawlSpec extends BaseCrawlSpec {
-    protected TestableBaseCrawlSpec(List permissionUrls,
-		   CrawlRule rule, 
-		   List permissionCheckers) throws ClassCastException {
-      super(permissionUrls, rule, permissionCheckers);
+    protected TestableBaseCrawlSpec(List permissionUrls, CrawlRule rule, 
+				    List permissionCheckers,
+				    LoginPageChecker loginPageChecker)
+	throws ClassCastException {
+      super(permissionUrls, rule, permissionCheckers, loginPageChecker);
     }
   }
 
