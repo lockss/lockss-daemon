@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.65 2005-05-18 05:50:02 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.66 2005-05-20 07:29:00 tlipkis Exp $
  */
 
 /*
@@ -272,13 +272,49 @@ public class LockssTestCase extends TestCase {
   }
 
   /**
+   * Asserts that two objects are equal, but not the same object
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertEqualsNotSame(Object expected, Object actual) {
+    assertEqualsNotSame(null, expected, actual);
+  }
+
+  /**
+   * Asserts that two objects are equal, but not the same object
+   * @param message the message to give on failure
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertEqualsNotSame(String message,
+					 Object expected, Object actual) {
+    if (expected == actual) {
+      failSame(message);
+    }
+    if (expected.equals(actual)) {
+      return;
+    }
+    failNotEquals(message, expected, actual);
+  }
+
+  /**
+   * Asserts that two Maps are equal (contain the same mappings).
+   * If they are not an AssertionFailedError is thrown.
+   * @param expected the expected value
+   * @param actual the actual value
+   */
+  static public void assertEquals(Map expected, Map actual) {
+    assertEquals(null, expected, actual);
+  }
+
+  /**
    * Asserts that two Maps are equal (contain the same mappings).
    * If they are not an AssertionFailedError is thrown.
    * @param message the message to give on failure
    * @param expected the expected value
    * @param actual the actual value
    */
-  static public void assertEqual(String message, Map expected, Map actual) {
+  static public void assertEquals(String message, Map expected, Map actual) {
     if (expected == null && actual == null) {
       return;
     }
@@ -398,16 +434,6 @@ public class LockssTestCase extends TestCase {
       } 
     }
     fail(msg);
-  }
-
-  /**
-   * Asserts that two Maps are equal (contain the same mappings).
-   * If they are not an AssertionFailedError is thrown.
-   * @param expected the expected value
-   * @param actual the actual value
-   */
-  static public void assertEqual(Map expected, Map actual) {
-    assertEqual(null, expected, actual);
   }
 
   /**
@@ -992,6 +1018,13 @@ public class LockssTestCase extends TestCase {
       formatted= message+" ";
     fail(formatted+"expected:<"+arrayString(expected)+
 	 "> but was:<"+arrayString(actual)+">");
+  }
+
+  static protected void failSame(String message) {
+    String formatted= "";
+    if (message != null)
+      formatted= message+" ";
+    fail(formatted+"expected not same");
   }
 
   static protected Object[] objArray(int[] a) {
