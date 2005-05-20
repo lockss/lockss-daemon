@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.24 2005-05-12 00:23:49 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.25 2005-05-20 23:45:15 troberts Exp $
  */
 
 /*
@@ -187,10 +187,11 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	}
 	boolean crawlRes = false;
 	try {
-	  crawlRes = fetchAndParse(nextUrl, extractedUrls, parsedPages, false, alwaysReparse);
+	  crawlRes = fetchAndParse(nextUrl, extractedUrls,
+				   parsedPages, false, alwaysReparse);
 	} catch (RuntimeException e) {
 	  logger.warning("Unexpected exception in crawl", e);
-	}
+	} 
 	if  (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -269,7 +270,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     return uc;
   }
 
-  protected boolean fetchAndParse(String url, Collection extractedUrls, Set parsedPages, boolean fetchIfChanged, boolean reparse) {
+  protected boolean fetchAndParse(String url, Collection extractedUrls,
+				  Set parsedPages, boolean fetchIfChanged,
+				  boolean reparse) {
 
     String error = null;
     logger.debug3("Dequeued url from list: "+url);
@@ -299,21 +302,26 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
 	  cacheWithRetries(uc, maxRetries);
 	}
-      } catch (CacheException e) {
+      } catch (CacheException ex) {
 	// Failed.  Don't try this one again during this crawl.
 	failedUrls.add(uc.getUrl());
-	crawlStatus.signalErrorForUrl(uc.getUrl(), e.getMessage());
-	if (e.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
-	  logger.error("Problem caching "+uc+". Continuing", e);
+	crawlStatus.signalErrorForUrl(uc.getUrl(), ex.getMessage());
+	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FAIL)) {
+	  logger.error("Problem caching "+uc+". Continuing", ex);
 	  error = Crawler.STATUS_FETCH_ERROR;
 	} else {
-	  logger.warning(uc+" not found on publisher's site", e);
+	  logger.warning(uc+" not found on publisher's site", ex);
 	}
-      } catch (Exception e) {
+	if (ex.isAttributeSet(CacheException.ATTRIBUTE_FATAL)) {
+	  logger.error("Found a fatal error with "+uc+". Aborting crawl");
+	  crawlAborted = true;
+	  return false;
+	}
+      } catch (Exception ex) {
 	failedUrls.add(uc.getUrl());
-	crawlStatus.signalErrorForUrl(uc.getUrl(), e.toString());
+	crawlStatus.signalErrorForUrl(uc.getUrl(), ex.toString());
 	//XXX not expected
-	logger.error("Unexpected Exception during crawl, continuing", e);
+	logger.error("Unexpected Exception during crawl, continuing", ex);
 	error = Crawler.STATUS_FETCH_ERROR;
       }
 
