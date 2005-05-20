@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.1 2005-05-18 05:44:20 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.2 2005-05-20 07:28:00 tlipkis Exp $
  */
 
 /*
@@ -140,6 +140,7 @@ public class BlockingStreamComm
   private PooledExecutor pool;
 
   private boolean enabled = DEFAULT_ENABLED;
+  private boolean running = false;
 
   private SocketFactory sockFact;
   private ServerSocket listenSock;
@@ -185,7 +186,9 @@ public class BlockingStreamComm
    */
   public void stopService() {
 //     getDaemon().getStatusService().unregisterStatusAccessor("SCommStats");
-    stop();
+    if (running) {
+      stop();
+    }
     super.stopService();
   }
 
@@ -399,6 +402,7 @@ public class BlockingStreamComm
    */
   public void sendTo(PeerMessage msg, PeerIdentity id, RateLimiter limiter)
       throws IOException {
+    if (!running) throw new IllegalStateException("SComm not running");
     if (msg == null) throw new NullPointerException("Null message");
     if (id == null) throw new NullPointerException("Null peer");
     if (log.isDebug3()) log.debug3("sending "+ msg +" to "+ id);
@@ -449,9 +453,11 @@ public class BlockingStreamComm
 	getSocketFactory().newServerSocket(port, paramBacklog);
     } catch (IOException e) {
       log.critical("Can't create listen socket", e);
+      return;
     }
     ensureQRunner();
     ensureListener();
+    running = true;
   }
 
   void ensureQRunner() {
@@ -480,6 +486,7 @@ public class BlockingStreamComm
 
   // stop all threads and channels
   void stop() {
+    running = false;
     synchronized (threadLock) {
       if (listenThread != null) {
 	log.info("Stopping listen thread");
@@ -495,7 +502,9 @@ public class BlockingStreamComm
     stopChannels(channels);
     stopChannels(rcvChannels);
     log.debug2("shutting down pool");
-    pool.shutdownNow();
+    if (pool != null) {
+      pool.shutdownNow();
+    }
     log.debug2("pool shut down ");
   }
 

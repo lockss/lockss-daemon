@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.41 2005-05-18 05:41:06 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.42 2005-05-20 07:28:00 tlipkis Exp $
  */
 
 /*
@@ -179,6 +179,8 @@ public class LcapRouter
       runHandlers(lmsg);
     } catch (Exception e) {
       log.warning("Processing incoming " + pmsg);
+    } finally {
+      pmsg.delete();
     }
   }
 

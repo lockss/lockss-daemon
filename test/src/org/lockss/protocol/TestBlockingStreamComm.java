@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.1 2005-05-18 05:44:19 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.2 2005-05-20 07:27:59 tlipkis Exp $
  */
 
 /*
@@ -52,11 +52,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
     BlockingPeerChannel.class,
   };
 
-  static Logger log = Logger.getLogger("SCommTest");
+  static Logger log = Logger.getLogger("TestBlockingStreamComm");
 
   static final int MAX_COMMS = 5;
 
-  static final int HEADER_LEN = BlockingPeerChannel.HEADER_LEN;
+  static final int HEADER_LEN = PeerChannel.HEADER_LEN;
+  static final int HEADER_CHECK = PeerChannel.HEADER_CHECK;
+  static final int HEADER_OFF_CHECK = PeerChannel.HEADER_OFF_CHECK;
+  static final int HEADER_OFF_OP = PeerChannel.HEADER_OFF_OP;
+  static final int HEADER_OFF_LEN = PeerChannel.HEADER_OFF_LEN;
+  static final int HEADER_OFF_PROTO = PeerChannel.HEADER_OFF_PROTO;
+  static final byte OP_PEERID = PeerChannel.OP_PEERID;
+  static final byte OP_DATA = PeerChannel.OP_DATA;
 
   private MockLockssDaemon daemon;
 
@@ -65,16 +72,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
   PeerAddress.Tcp[] pads = new PeerAddress.Tcp[MAX_COMMS];
   MyBlockingStreamComm[] comms = new MyBlockingStreamComm[MAX_COMMS];
   SimpleQueue[] rcvdMsgss = new SimpleQueue[MAX_COMMS];
+
   int testport1, testport2;
   PeerIdentity pid1, pid2;
   PeerAddress.Tcp pad1, pad2;
   MyBlockingStreamComm comm1, comm2;
-  SimpleQueue rcvdMsgs1 = new SimpleQueue.Fifo();
-  SimpleQueue rcvdMsgs2 = new SimpleQueue.Fifo();
+  SimpleQueue rcvdMsgs1;
+  SimpleQueue rcvdMsgs2;
 
   String testStr1 = "This is test data 1";
   String testStr2 = "This message contains a null \000 character";
-  String testStr3 = "They that can give up essential liberty to obtain " +
+  String testStr3 =
+    "They that can give up essential liberty to obtain " +
     "a little temporary safety deserve neither liberty nor safety.";
   PeerMessage msg1, msg2, msg3;
 
@@ -83,15 +92,15 @@ public class TestBlockingStreamComm extends LockssTestCase {
   private byte[] peerbuf = new byte[BlockingPeerChannel.MAX_PEERID_LEN];
 
   Properties cprops = new Properties();
-  Configuration config;
   private IdentityManager idmgr;
-  MySocketFactory fact;
   SimpleBinarySemaphore sem;
+  SimpleQueue assocQ;
   boolean useInternalSockets = false;
 
   public void setUp() throws Exception {
     super.setUp();
     sem = new SimpleBinarySemaphore();
+    assocQ = new SimpleQueue.Fifo();
     daemon = getMockLockssDaemon();
     String tempDirPath = null;
     try {
@@ -109,8 +118,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     idmgr.initService(daemon);
     daemon.setDaemonInited(true);
 //    idmgr.startService();
-    fact = new MySocketFactory();
-    config = Configuration.getCurrentConfig();
     setupMessages();
     useInternalSockets(false);
   }
@@ -152,10 +159,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   void setupRealPid(int ix) throws IOException {
-    testports[ix] = findUnboundTcpPort();
-    pids[ix] = findPeerId("127.0.0.1", testports[ix]);
-    pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
-    peerhack(ix);
+    if (pids[ix] == null) {
+      testports[ix] = findUnboundTcpPort();
+      pids[ix] = findPeerId("127.0.0.1", testports[ix]);
+      pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
+      peerhack(ix);
+    }
   }
 
   void peerhack(int ix) {
@@ -175,12 +184,14 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   void setupInternalPid(int ix) throws IOException {
-    InetAddress ip = InternalSocket.internalInetAddr;
-    String addr = ip.getHostAddress();
-    testports[ix] = InternalServerSocket.findUnboundPort(2000);
-    pids[ix] = findPeerId(addr, testports[ix]);
-    pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
-    peerhack(ix);
+    if (pids[ix] == null) {
+      InetAddress ip = InternalSocket.internalInetAddr;
+      String addr = ip.getHostAddress();
+      testports[ix] = InternalServerSocket.findUnboundPort(2000);
+      pids[ix] = findPeerId(addr, testports[ix]);
+      pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
+      peerhack(ix);
+    }
   }
 
   void setupComm(int ix) throws IOException {
@@ -244,6 +255,37 @@ public class TestBlockingStreamComm extends LockssTestCase {
     return pm;
   }
 
+  /** Write a peerid message to an output stream */
+  void writePeerId(OutputStream outs, String idstr) throws IOException {
+    writeHeader(outs, PeerChannel.OP_PEERID, idstr.length(), 0);
+    outs.write(idstr.getBytes());
+    outs.flush();
+  }
+
+  /** Write a message header to an output stream */
+  void writeHeader(OutputStream outs, int op, int len, int proto)
+      throws IOException {
+    byte[] sndHeader = new byte[HEADER_LEN];
+    sndHeader[HEADER_OFF_CHECK] = HEADER_CHECK;
+    sndHeader[HEADER_OFF_OP] = (byte)op;
+    ByteArray.encodeInt(len, sndHeader, HEADER_OFF_LEN);
+    ByteArray.encodeInt(proto, sndHeader, HEADER_OFF_PROTO);
+    outs.write(sndHeader);
+  }
+
+  /** Read header from input stream, check that it's a message header */
+  public void assertRcvHeader(InputStream ins, int op) throws IOException {
+    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+    assertHeaderOp(rcvHeader, op);
+  }
+
+  /** Read message data from input stream, return as String */
+  String rcvMsgData(InputStream ins) throws IOException {
+    int len = ByteArray.decodeInt(rcvHeader, 2);
+    StreamUtil.readBytes(ins, peerbuf, len);
+    return new String(peerbuf, 0, len);
+  }
+
   /** Assert that buf contains a valid header */
   public void assertHeader(byte[] buf) {
     assertEquals(PeerChannel.HEADER_CHECK, buf[PeerChannel.HEADER_OFF_CHECK]);
@@ -290,6 +332,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
       fail("stateTrans should have thrown");
     } catch (IllegalStateException e) {
     }
+    // array version of stateTrans() nyi
 //     int[] lst = {2, 4, 6};
 //     assertTrue(chan.stateTrans(lst, 6, "shouldn't"));
 //     assertTrue(chan.stateTrans(lst, 8, "shouldn't"));
@@ -382,25 +425,81 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void testRefused() throws IOException {
+    List event;
     setupComm1();
     setupPid(2);
-    comm1.setDissocSem(sem);
+    comm1.setAssocQueue(assocQ);
     comm1.sendTo(msg1, pid2, null);
-    if (!sem.take(TIMEOUT_SHOULDNT)) {
-      fail("Refused channel didn't dissociate itself from comm1");
-    }
+    assertNotNull("Connecting channel didn't dissociate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Connecting channel didn't dissociate",
+		 "dissoc", event.get(0));
     assertEmpty(comm1.channels);
     assertEmpty(comm1.rcvChannels);
   }
 
   public void testIncoming() throws IOException {
     setupComm1();
+    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
     Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
-    SockAbort intr = abortIn(TIMEOUT_SHOULDNT, sock);
+    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
     InputStream ins = sock.getInputStream();
     StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
     assertHeaderOp(rcvHeader, PeerChannel.OP_PEERID);
-    intr.cancel();
+    assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    intr1.cancel();
+    intr2.cancel();
+  }
+
+  public void testIncomingPeerId(String peerid, boolean isGoodId)
+      throws IOException {
+    log.debug("Incoming send pid " + peerid); 
+    setupComm1();
+    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+    InputStream ins = sock.getInputStream();
+    OutputStream outs = sock.getOutputStream();
+    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+    assertHeaderOp(rcvHeader, PeerChannel.OP_PEERID);
+    assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    comm1.setAssocQueue(assocQ);
+    writePeerId(outs, peerid);
+    List event;
+    if (isGoodId) {
+      assertNotNull("Connecting channel didn't associate",
+		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+      assertEquals("Connecting channel didn't associate",
+		   "assoc", event.get(0));
+      assertEquals(1, comm1.channels.size());
+      assertEquals(0, comm1.rcvChannels.size());
+    } else {
+      assertNotNull("Connecting channel didn't dissociate",
+		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+      assertEquals("Connecting channel didn't dissociate",
+		   "dissoc", event.get(0));
+      assertEquals(0, comm1.channels.size());
+      assertEquals(0, comm1.rcvChannels.size());
+    }
+    intr1.cancel();
+    intr2.cancel();
+  }
+
+  public void testIncomingGoodPeerId1() throws IOException {
+    setupPid(2);
+    testIncomingPeerId(pid2.getIdString(), true);
+  }
+
+  public void testIncomingBadPeerId1() throws IOException {
+    // illegal tcp port
+    int bogusport = 0x10005;
+    String bogus1 = findPeerId("127.0.0.1", bogusport).getIdString();
+    testIncomingPeerId(bogus1, false);
+  }
+
+  public void testIncomingBadPeerId2() throws IOException {
+    // V1 (non-stream) id
+    testIncomingPeerId("127.0.0.1", false);
   }
 
   public void testOrig() throws IOException {
@@ -412,14 +511,67 @@ public class TestBlockingStreamComm extends LockssTestCase {
     Socket sock = server.accept();
     InputStream ins = sock.getInputStream();
     SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
-    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, PeerChannel.OP_PEERID);
-    int len = ByteArray.decodeInt(rcvHeader, 2);
-    StreamUtil.readBytes(ins, peerbuf, len);
-    String foo = new String(peerbuf, 0, len);
-    assertEquals(pid1.getIdString(), foo);
+    assertRcvHeader(ins, OP_PEERID);
+    assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    IOUtil.safeClose(server);
+    IOUtil.safeClose(sock);
     intr.cancel();
     intr2.cancel();
+  }
+
+  public void testOrigPeerId(String peerid, boolean isGoodId)
+      throws IOException {
+    log.debug("Orig, send pid " + peerid);
+    setupComm1();
+    comm1.setAssocQueue(assocQ);
+    setupPid(2);
+    log.debug2("Listening on " + pad2.getPort());
+    ServerSocket server = new ServerSocket(pad2.getPort());
+    SockAbort intr = abortIn(TIMEOUT_SHOULDNT, server);
+    comm1.findOrMakeChannel(pid2);
+    Socket sock = server.accept();
+    InputStream ins = sock.getInputStream();
+    OutputStream outs = sock.getOutputStream();
+    assertRcvHeader(ins, OP_PEERID);
+    assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    writePeerId(outs, peerid);
+    List event;
+    if (isGoodId) {
+      assertNull("Connecting channel shouldn't call associate",
+		 assocQ.get(TIMEOUT_SHOULD));
+      assertEquals(1, comm1.channels.size());
+      assertEquals(0, comm1.rcvChannels.size());
+    } else {
+      assertNotNull("Connecting channel didn't dissociate",
+		    (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+      assertEquals("Connecting channel didn't dissociate",
+		   "dissoc", event.get(0));
+      assertEquals(0, comm1.channels.size());
+      assertEquals(0, comm1.rcvChannels.size());
+    }
+    IOUtil.safeClose(server);
+    IOUtil.safeClose(sock);
+    intr.cancel();
+  }
+
+  public void testOrigGoodPeerId1() throws IOException {
+    setupPid(2);
+    testOrigPeerId(pid2.getIdString(), true);
+  }
+
+  public void testOrigBadPeerId1() throws IOException {
+    // illegal tcp port
+    int bogusport = 0x10005;
+    String bogus1 = findPeerId("127.0.0.1", bogusport).getIdString();
+    testOrigPeerId(bogus1, false);
+  }
+
+  // any illegal pid sent to originator causes conflict (can't be equal to
+  // actual address used to open conn) before legality check, so this is
+  // equivalent to the previous test
+  public void testOrigBadPeerId2() throws IOException {
+    // V1 (non-stream) id
+    testOrigPeerId("127.0.0.1", false);
   }
 
   public void testSingleConnect() throws IOException {
@@ -536,7 +688,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEquals(1, comm2.rcvChannels.size());
   }
 
-  // allow channel to timeout and close
+  // allow channel to timeout and close after use
   public void testChannelCloseAfterTimeout() throws IOException {
     TimeBase.setSimulated(1000);
     PeerMessage msgIn;
@@ -544,7 +696,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
     setupComm1();
     setupComm2();
-    comm1.setDissocSem(sem);
+    comm1.setAssocQueue(assocQ);
     comm1.sendTo(msg1, pid2, null);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     comm2.sendTo(msg2, pid1, null);
@@ -552,13 +704,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
     TimeBase.step(4000);
     assertEquals(1, comm1.channels.size());
     TimeBase.step(2000);
-    assertTrue("Channel didn't close automatically after timeout",
-	       sem.take(TIMEOUT_SHOULDNT + 20000));
+    List event;
+    assertNotNull("Channel didn't close automatically after timeout",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't close automatically after timeout",
+		 "dissoc", event.get(0));
     assertEquals(0, comm1.channels.size());
     assertEquals(0, comm1.rcvChannels.size());
   }
 
-  public void xtestMultipleChannels() throws IOException {
+  // create MAX_COMMS comm instances, have each of them sent messages to
+  // each
+  public void testMultipleChannels() throws IOException {
     for (int comm = 0; comm < MAX_COMMS; comm++) {
       setupComm(comm);
     }
@@ -590,26 +747,34 @@ public class TestBlockingStreamComm extends LockssTestCase {
   class MyBlockingStreamComm extends BlockingStreamComm {
     SocketFactory sockFact;
     PeerIdentity localId;
-    SimpleBinarySemaphore dissocSem;
+    SimpleQueue assocEvents;
     SimpleBinarySemaphore acceptSem;
 
     MyBlockingStreamComm(PeerIdentity localId) {
       this.localId = localId;
+      sockFact = new MySocketFactory();
     }
 
     SocketFactory getSocketFactory() {
-      return fact;
+      return sockFact;
     }
 
     protected PeerIdentity getLocalPeerIdentity() {
       return localId;
     }
 
+    void associateChannelWithPeer(BlockingPeerChannel chan,
+				  PeerIdentity peer) {
+      super.associateChannelWithPeer(chan, peer);
+      if (assocEvents != null) {
+	assocEvents.put(ListUtil.list("assoc", this));
+      }
+    }
     void dissociateChannelFromPeer(BlockingPeerChannel chan,
-						PeerIdentity peer) {
+				   PeerIdentity peer) {
       super.dissociateChannelFromPeer(chan, peer);
-      if (dissocSem != null) {
-	dissocSem.give();
+      if (assocEvents != null) {
+	assocEvents.put(ListUtil.list("dissoc", this));
       }
     }
 
@@ -620,12 +785,42 @@ public class TestBlockingStreamComm extends LockssTestCase {
       super.processIncomingConnection(sock);
     }
 
-    void setDissocSem(SimpleBinarySemaphore sem) {
-      dissocSem = sem;
+    void setAssocQueue(SimpleQueue sem) {
+      assocEvents = sem;
     }
     void setAcceptSem(SimpleBinarySemaphore sem) {
       acceptSem = sem;
     }
+
+    /** Mock socket factory creates LcapSockets with mock datagram/multicast
+     * sockets. */
+    class MySocketFactory implements BlockingStreamComm.SocketFactory {
+
+      public ServerSocket newServerSocket(int port, int backlog)
+	  throws IOException {
+	return (useInternalSockets ? new InternalServerSocket(port, backlog)
+		: new ServerSocket(port, backlog));
+      }
+
+      public Socket newSocket(IPAddr addr, int port) throws IOException {
+	return (useInternalSockets ? new InternalSocket(addr.getInetAddr(), port)
+		: new Socket(addr.getInetAddr(), port));
+      }
+
+      public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
+						Socket sock)
+	  throws IOException {
+	return new MyBlockingPeerChannel(comm, sock);
+      }
+
+      public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
+						PeerIdentity peer)
+	  throws IOException {
+	return new MyBlockingPeerChannel(comm, peer);
+      }
+
+    }
+
   }
 
   static class MyBlockingPeerChannel extends BlockingPeerChannel {
@@ -651,13 +846,14 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   }
 
-
+  int nextPort = 2000;
+  
   int findUnboundTcpPort() {
-    int start = 2000;
-    for (int p = start; p < 65535; p++) {
+    for (int p = nextPort; p < 65535; p++) {
       try {
 	ServerSocket sock = new ServerSocket(p);
 	sock.close();
+	nextPort = p + 1;
 	return p;
       } catch (IOException e) {
       }
@@ -676,35 +872,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
       log.debug("handleMessage(" + msg + ")");
       queue.put(msg);
     }
-  }
-
-  /** Mock socket factory creates LcapSockets with mock datagram/multicast
-   * sockets. */
- class MySocketFactory implements BlockingStreamComm.SocketFactory {
-
-    public ServerSocket newServerSocket(int port, int backlog)
-	throws IOException {
-      return (useInternalSockets ? new InternalServerSocket(port, backlog)
-	      : new ServerSocket(port, backlog));
-    }
-
-    public Socket newSocket(IPAddr addr, int port) throws IOException {
-      return (useInternalSockets ? new InternalSocket(addr.getInetAddr(), port)
-	      : new Socket(addr.getInetAddr(), port));
-    }
-
-    public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
-					      Socket sock)
-	throws IOException {
-      return new MyBlockingPeerChannel(comm, sock);
-    }
-
-    public BlockingPeerChannel newPeerChannel(BlockingStreamComm comm,
-					      PeerIdentity peer)
-	throws IOException {
-      return new MyBlockingPeerChannel(comm, peer);
-    }
-
   }
 
   static class MyIdentityManager extends IdentityManager {
