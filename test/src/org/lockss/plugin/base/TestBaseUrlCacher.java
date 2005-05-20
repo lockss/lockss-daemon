@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.36 2005-03-23 17:26:13 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.37 2005-05-20 23:42:39 troberts Exp $
  */
 
 /*
@@ -789,6 +789,60 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo1, redTo2, CachedUrl.PROPERTY_CONTENT_URL);
     assertCuProperty(redTo2, redTo2, CachedUrl.PROPERTY_CONTENT_URL);
   }
+
+
+  public void testCacheLPC() throws IOException {
+    MyMockLoginPageChecker loginPageChecker =
+      new MyMockLoginPageChecker(false);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+					 ListUtil.list("http://example.com"),
+					 null, 99,
+					 new ArrayList(), loginPageChecker));
+    
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+
+    assertTrue(loginPageChecker.wasCalled());
+  }
+
+  public void testCacheLPCLoginPage() throws IOException {
+    MyMockLoginPageChecker loginPageChecker =
+      new MyMockLoginPageChecker(true);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+					 ListUtil.list("http://example.com"),
+					 null, 99,
+					 new ArrayList(), loginPageChecker));
+    
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    try {
+      cacher.cache();
+      fail("Should have thrown a CacheException.UnretryableException");
+    } catch (CacheException.PermissionException ex) {
+    }
+  }
+
+  class MyMockLoginPageChecker implements LoginPageChecker {
+    private boolean wasCalled = false;
+    private boolean isLoginPage;
+
+    MyMockLoginPageChecker(boolean isLoginPage) {
+      this.isLoginPage = isLoginPage;
+    }
+
+    public boolean isLoginPage(Properties props, Reader reader) {
+      wasCalled = true;
+      return this.isLoginPage;
+    }
+
+    public boolean wasCalled() {
+      return this.wasCalled;
+    }
+  }
+
 
   void assertCuContents(String url, String contents) throws IOException {
     CachedUrl cu = new BaseCachedUrl(mau, url);

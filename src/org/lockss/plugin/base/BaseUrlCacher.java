@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.51 2005-03-24 00:54:35 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.52 2005-05-20 23:42:39 troberts Exp $
  */
 
 /*
@@ -219,12 +219,27 @@ public class BaseUrlCacher implements UrlCacher {
 	  headers = getHeaders();
 	}
       }
+      checkLoginPage(input, headers);
       storeContent(input, headers);
       return CACHE_RESULT_FETCHED;
     } finally {
       if (input != null) {
 	input.close();
       }
+    }
+  }
+
+  private void checkLoginPage(InputStream input, Properties headers)
+      throws IOException {
+    LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
+    if (checker != null) {
+      logger.debug3("Found a login page checker");
+      Reader reader = new InputStreamReader(input, Constants.DEFAULT_ENCODING);
+      if (checker.isLoginPage(headers, reader)) {
+	throw new CacheException.PermissionException("Found a login page");
+      }
+    } else {
+      logger.debug3("Didn't find a login page checker"); 
     }
   }
 
