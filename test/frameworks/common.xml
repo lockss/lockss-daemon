@@ -130,7 +130,7 @@
       <property name="highwire">
 	<property name="name" value="All HighWire Titles" />
 	<property name="class" value="xpath" />
-	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin]" />
+	<property name="xpath" value="[pluginName='org.lockss.plugin.highwire.HighWirePlugin']" />
       </property>
       <property name="locksscard">
 	<property name="name" value="LOCKSS Card" />
@@ -172,6 +172,7 @@
 	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
 	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
 	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
+	  or pluginName='org.lockss.plugin.jmir.JMIRPlugin'
 	  ]"
 	  />
       </property>
@@ -380,6 +381,104 @@
 	<property name="param.2">
 	  <property name="key" value="volume" />
 	  <property name="value" value="14" />
+	</property>
+      </property>
+
+      <property name="jimr2005">
+	<property name="title" value="Journal of Medical Internet Research 2005" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="jimr2004">
+	<property name="title" value="Journal of Medical Internet Research 2004" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+      </property>
+
+      <property name="jimr2003">
+	<property name="title" value="Journal of Medical Internet Research 2003" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+      </property>
+
+      <property name="jimr2002">
+	<property name="title" value="Journal of Medical Internet Research 2002" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+      </property>
+
+      <property name="jimr2001">
+	<property name="title" value="Journal of Medical Internet Research 2001" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+      </property>
+
+      <property name="jimr2000">
+	<property name="title" value="Journal of Medical Internet Research 2000" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+      </property>
+
+      <property name="jimr1999">
+	<property name="title" value="Journal of Medical Internet Research 1999" />
+	<property name="journalTitle" value="Journal of Medical Internet Research" />
+	<property name="plugin" value="org.lockss.plugin.jmir.JMIRPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.jmir.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
 	</property>
       </property>
 
