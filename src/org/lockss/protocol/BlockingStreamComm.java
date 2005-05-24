@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.2 2005-05-20 07:28:00 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.3 2005-05-24 07:26:06 tlipkis Exp $
  */
 
 /*
@@ -153,6 +153,7 @@ public class BlockingStreamComm
   private FifoQueue rcvQueue;		// received packets from LcapSocket
   private ReceiveThread rcvThread;
   private ListenThread listenThread;
+  // Synchronization lock for rcv thread, listen thread manipulations
   private Object threadLock = new Object();
 
   // Maps PeerIdentity to primary PeerChannel
@@ -160,7 +161,7 @@ public class BlockingStreamComm
   // Maps PeerIdentity to secondary PeerChannel
   Map rcvChannels = new HashMap();
 
-  private Vector messageHandlers = new Vector();
+  private Vector messageHandlers = new Vector(); // Vector is synchronized
 
   public BlockingStreamComm() {
     sockFact = new NormalSocketFactory();
@@ -276,7 +277,6 @@ public class BlockingStreamComm
     return idMgr.getLocalPeerIdentity(Poll.V3_POLL);
   }
 
-  // overridable for testing
   PeerIdentity findPeerIdentity(String idkey) {
     return idMgr.findPeerIdentity(idkey);
   }
@@ -366,32 +366,34 @@ public class BlockingStreamComm
       throws IOException {
     synchronized (channels) {
       BlockingPeerChannel chan = (BlockingPeerChannel)channels.get(pid);
-      if (chan == null) {
-	chan = (BlockingPeerChannel)rcvChannels.get(pid);
-	if (chan == null) {
-	  if (channels.size() >= paramMaxChannels) {
-	    // need to maintain queue of messages waiting for active channel?
-	    throw new IOException("Too many open channels");
-	  }
-	  chan = getSocketFactory().newPeerChannel(this, pid);
-	  channels.put(pid, chan);
-	  log.debug("Added " + chan);
-	  try {
-	    chan.startOriginate();
-	  } catch (IOException e) {
-	    log.warning("Can't make channel", e);
-	    channels.remove(pid);
-	    log.debug("Removed " + chan);
-	    throw e;
-	  }
-	}
-      } else {
+      if (chan != null) {
+	return chan;
+      }
+      chan = (BlockingPeerChannel)rcvChannels.get(pid);
+      if (chan != null) {
 	// found secondary, no primary.  promote secondary to primary
 	channels.put(pid, chan);
 	rcvChannels.remove(pid);
 	log.debug("Promoted " + chan);
+	return chan;
       }
-      return chan;
+      // new primary channel, if we have room
+      if (channels.size() >= paramMaxChannels) {
+	// need to maintain queue of messages waiting for active channel?
+	throw new IOException("Too many open channels");
+      }
+      chan = getSocketFactory().newPeerChannel(this, pid);
+      channels.put(pid, chan);
+      log.debug("Added " + chan);
+      try {
+	chan.startOriginate();
+	return chan;
+      } catch (IOException e) {
+	log.warning("Can't make channel", e);
+	channels.remove(pid);
+	log.debug("Removed " + chan);
+	throw e;
+      }
     }
   }
 
@@ -512,6 +514,7 @@ public class BlockingStreamComm
   void stopChannels(Map map) {
     List lst;
     synchronized (channels) {
+      // make copy while map is locked
       lst = new ArrayList(map.values());
     }
     for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
@@ -588,14 +591,16 @@ public class BlockingStreamComm
    * @param handler MessageHandler to add
    */
   public void registerMessageHandler(int protocol, MessageHandler handler) {
-    if (protocol >= messageHandlers.size()) {
-      messageHandlers.setSize(protocol + 1);
+    synchronized (messageHandlers) {
+      if (protocol >= messageHandlers.size()) {
+	messageHandlers.setSize(protocol + 1);
+      }
+      if (messageHandlers.get(protocol) != null) {
+	throw
+	  new RuntimeException("Protocol " + protocol + " already registered");
+      }
+      messageHandlers.set(protocol, handler);
     }
-    if (messageHandlers.get(protocol) != null) {
-      throw
-	new RuntimeException("Protocol " + protocol + " already registered");
-    }
-    messageHandlers.set(protocol, handler);
   }
 
   /**
@@ -658,7 +663,7 @@ public class BlockingStreamComm
 	      if (log.isDebug3()) log.debug3("Rcvd " + qObj);
 	      processReceivedPacket((PeerMessage)qObj);
 	    } else {
-	      log.warning("NonP-eerMessage on rcv queue" + qObj);
+	      log.warning("Non-PeerMessage on rcv queue" + qObj);
 	    }
 	  }
 	} catch (InterruptedException e) {

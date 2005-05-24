@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.2 2005-05-20 07:28:00 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.3 2005-05-24 07:26:06 tlipkis Exp $
  */
 
 /*
@@ -423,8 +423,14 @@ class BlockingPeerChannel implements PeerChannel {
       switch (op) {
       case OP_PEERID:
 	readPeerId();
-	reader.setRunnerName();
-	writer.setRunnerName();
+	// Ensure thread name includes peer, for better logging.
+	synchronized (stateLock) {
+	  if (state != STATE_CLOSING) {
+	    // reader, writer can get set to null while in STATE_CLOSING
+	    if (reader != null) reader.setRunnerName();
+	    if (writer != null) writer.setRunnerName();
+	  }
+	}
 	break;
       case OP_DATA:
 	readDataMsg();

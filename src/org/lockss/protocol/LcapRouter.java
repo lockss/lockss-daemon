@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.42 2005-05-20 07:28:00 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.43 2005-05-24 07:26:06 tlipkis Exp $
  */
 
 /*
@@ -156,7 +156,6 @@ public class LcapRouter
 
   /** Decode a PeerMessage into a V3LcapMessage  */
   V3LcapMessage makeV3LcapMessage(PeerMessage pmsg) throws IOException {
-    OutputStream out = null;
     InputStream in = null;
     try {
       in = pmsg.getInputStream();
