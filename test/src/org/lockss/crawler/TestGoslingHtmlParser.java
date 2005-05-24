@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.20 2005-05-12 00:24:26 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.21 2005-05-24 20:38:26 troberts Exp $
  */
 
 /*
@@ -478,21 +478,26 @@ public class TestGoslingHtmlParser extends LockssTestCase {
     assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
   }
 
-  public void testInterpretatesBadBase() throws IOException {
+  //Relative URLs before a malforned base tag should be extracted, as well
+  //as any absolute URLs after the malformed base tag
+  public void testInterpretatesMalformedBase() throws IOException {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example2.com/link2.html";
     String url3= "http://www.example2.com/link3.html";
+    String url4= "http://www.example3.com/link3.html";
 
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<base href=http://www.example.com>"+
       "<a href=link1.html>link1</a>"+
       "Filler, with <b>bold</b> tags and<i>others</i>"+
-      "<base href=http://www.example2.com>"+
+      "<base href=javascript:www.example2.com>"+
       "<a href=link2.html>link2</a>"+
       "<base href=www.example.com>"+
-      "<a href=link3.html>link3</a>";
-    assertEquals(SetUtil.set(url1, url2, url3), parseSingleSource(source));
+      "<a href=http://www.example2.com/link3.html>link3</a>"+
+      "<base href=http://www.example3.com>"+
+      "<a href=link3.html>link4</a>";
+    assertEquals(SetUtil.set(url1, url3, url4), parseSingleSource(source));
   }
 
   public void testSkipsComments() throws IOException {
