@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.44 2005-05-18 23:35:49 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.45 2005-05-24 23:22:28 troberts Exp $
  */
 
 /*
@@ -317,18 +317,12 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
         checker = (PermissionChecker) it.next();
         Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
         if (checker.checkPermission(reader, permissionPage)) {
+	  logger.debug3("Found permission on "+checker);
           needPermission = false;
 	  break; //we just need one permission to de sucessful here
 	} else {
-	  try {
-            is.reset();
-          } catch (IOException e) {
-            is.close();
-            uc = makeUrlCacher(permissionPage);
-            uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
-            is = new BufferedInputStream(uc.getUncachedInputStream());
-	    crawlStatus.signalUrlFetched(uc.getUrl());
-          }
+	  logger.debug3("Didn't find permission on "+checker);
+	  is = resetInputStream(is, permissionPage);
         }
       }
       // if we didn't find at least one required lockss permission - fail.
@@ -338,17 +332,10 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
         return false;
       }
 
-      if (pluginPermissionCheckers.size() > 0) {
-	try {
-	  is.reset();
-	} catch (IOException e) {
-	  is.close();
-	  uc = makeUrlCacher(permissionPage);
-	  uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
-	  is = new BufferedInputStream(uc.getUncachedInputStream());
-	  crawlStatus.signalUrlFetched(uc.getUrl());
-	}
-      }
+      //either the pluginPermissionCheckers will need this
+      //or the storeContent call will
+      is = resetInputStream(is, permissionPage);
+
       // now check for the required permission from the plugin
       for (Iterator it = pluginPermissionCheckers.iterator(); it.hasNext(); ) {
         is.mark(PERM_BUFFER_MAX);
@@ -359,23 +346,14 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
           is.close();
           return false;
         } else {
-          try {
-            is.reset();
-          } catch (IOException e) {
-            is.close();
-            uc = makeUrlCacher(permissionPage);
-            uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
-            is = new BufferedInputStream(uc.getUncachedInputStream());
-	    crawlStatus.signalUrlFetched(uc.getUrl());
-          }
+	  is = resetInputStream(is, permissionPage);
         }
       }
       if (Configuration.getBooleanParam(PARAM_REFETCH_PERMISSIONS_PAGE,
                                         DEFAULT_REFETCH_PERMISSIONS_PAGE)) {
         logger.debug3("Permission granted. Caching permission page.");
         storePermissionPage(au.getAuCachedUrlSet(), permissionPage);
-      }
-      else {
+      } else {
         uc.storeContent(is, uc.getUncachedProperties());
       }
 
@@ -389,6 +367,25 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     }
 
     return true;
+  }
+
+  /**
+   * Try to reset the provided input stream, if we can't then return 
+   * new input stream for the given url
+   */
+  private InputStream resetInputStream(InputStream is, String url)
+      throws IOException {
+    try {
+      is.reset();
+    } catch (IOException e) {
+      logger.debug("Couldn't reset input stream, so getting new one");
+      is.close();
+      UrlCacher uc = makeUrlCacher(url);
+      uc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
+      is = new BufferedInputStream(uc.getUncachedInputStream());
+      crawlStatus.signalUrlFetched(uc.getUrl());
+    }
+    return is;
   }
 
   /**
