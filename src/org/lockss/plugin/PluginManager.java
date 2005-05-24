@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.132 2005-03-31 04:23:40 smorabito Exp $
+ * $Id: PluginManager.java,v 1.133 2005-05-24 07:22:47 tlipkis Exp $
  */
 
 /*
@@ -193,8 +193,7 @@ public class PluginManager
     statusSvc = getDaemon().getStatusService();
     // Initialize the plugin directory.
     initPluginDir();
-    statusSvc.registerStatusAccessor("LoadablePluginTable",
-				     new LoadablePluginStatus());
+    PluginStatus.register(getDaemon(), this);
   }
 
   /**
@@ -207,7 +206,7 @@ public class PluginManager
       Plugin plugin = (Plugin)iter.next();
       plugin.stopPlugin();
     }
-    statusSvc.unregisterStatusAccessor("LoadablePluginTable");
+    PluginStatus.unregister(getDaemon());
     super.stopService();
   }
 
@@ -1166,6 +1165,11 @@ public class PluginManager
     return pluginMap.values();
   }
 
+  /** @return URL of loadable plugin */
+  String getLoadablePluginUrl(Plugin plugin) {
+    return (String)pluginCus.get(pluginKeyFromId(plugin.getPluginId()));
+  }
+
   /**
    * Load all plugin registry plugins.
    */
@@ -1261,15 +1265,21 @@ public class PluginManager
       ensurePluginLoaded(key);
       newKeys.add(key);
     }
+
     // remove plugins that are no longer listed, unless they have one or
     // more configured AUs
     synchronized (pluginMap) {
-      for (Iterator iter = pluginMap.keySet().iterator(); iter.hasNext(); ) {
-	String name = (String)iter.next();
+      for (Iterator iter = pluginMap.entrySet().iterator(); iter.hasNext(); ) {
+	Map.Entry entry = (Map.Entry)iter.next();
+	Plugin plug = (Plugin)entry.getValue();
+	String name = (String)entry.getKey();
 	String key = pluginKeyFromName(name);
-	if (!classloaderMap.containsKey(key) && !newKeys.contains(key)) {
+	if (!isInternalPlugin(plug) &&
+	    !classloaderMap.containsKey(key) &&
+	    !newKeys.contains(key)) {
 	  Configuration tree = currentAllPlugs.getConfigTree(key);
 	  if (tree == null || tree.isEmpty()) {
+	    log.debug("Removing plugin " + name, new Throwable());
 	    iter.remove();
 	  }
 	}
@@ -1710,62 +1720,6 @@ public class PluginManager
      */
     public boolean needsWait() {
       return (0 != registryUrls.size());
-    }
-  }
-
-  /**
-   * Status Accessor for Loadable Plugins.  Gives name, version, classname, and
-   * registry JAR information for each loadable plugin the cache has installed.
-   */
-  private class LoadablePluginStatus implements StatusAccessor {
-    private final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("plugin", CatalogueOrderComparator.SINGLETON));
-
-    private final List colDescs =
-      ListUtil.list(
-		    new ColumnDescriptor("plugin", "Name",
-					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("version", "Version",
-					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("id", "Plugin ID",
-					 ColumnDescriptor.TYPE_STRING),
-		    new ColumnDescriptor("cu", "Loaded From",
-					 ColumnDescriptor.TYPE_STRING)
-		    );
-
-    public String getDisplayName() {
-      return "Loadable Plugins";
-    }
-
-    public boolean requiresKey() {
-      return false;
-    }
-
-    public List getRows() {
-      List table = new ArrayList();
-
-      // All loadable plugins are in the classloader map.
-      for (Iterator keysIter = classloaderMap.keySet().iterator(); keysIter.hasNext(); ) {
-	Map row = new HashMap();
-
-	String pluginKey = (String)keysIter.next();
-	Plugin plugin = getPlugin(pluginKey);
-
-	row.put("plugin", plugin.getPluginName());
-	row.put("version", plugin.getVersion());
-	row.put("id", plugin.getPluginId());
-	row.put("cu", (String)pluginCus.get(pluginKey));
-
-	table.add(row);
-      }
-
-      return table;
-    }
-
-    public void populateTable(StatusTable table) {
-      table.setColumnDescriptors(colDescs);
-      table.setDefaultSortRules(sortRules);
-      table.setRows(getRows());
     }
   }
 

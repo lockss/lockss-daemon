@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.10 2005-03-23 17:03:25 troberts Exp $
+ * $Id: DefinablePlugin.java,v 1.11 2005-05-24 07:22:47 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class DefinablePlugin extends BasePlugin {
     return au;
   }
 
-  ExternalizableMap getDefinitionMap() {
+  public ExternalizableMap getDefinitionMap() {
     return definitionMap;
   }
 
