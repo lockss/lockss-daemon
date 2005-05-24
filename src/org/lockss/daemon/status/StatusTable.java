@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.40 2005-05-02 19:24:14 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.41 2005-05-24 07:20:58 tlipkis Exp $
  */
 
 /*
@@ -529,6 +529,10 @@ public class StatusTable {
       this.title = title;
       this.type = type;
       this.value = value;
+    }
+
+    public SummaryInfo(String title, int type, int value) {
+      this(title, type, new Integer(value));
     }
 
     public String getTitle() {
