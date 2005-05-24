@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.19 2005-04-19 20:10:17 troberts Exp $
+ * $Id: TestUrlUtil.java,v 1.20 2005-05-24 20:38:05 troberts Exp $
  */
 
 /*
@@ -449,6 +449,12 @@ public class TestUrlUtil extends LockssTestCase {
     assertEquals("link2.html",
 		 UrlUtil.parseJavascriptUrl("javascript:newWindow(link2.html)"));
 
+  }
+
+  public void testIsMalformedUrl() {
+    assertFalse(UrlUtil.isMalformedUrl("http://www.example.com"));
+    assertTrue(UrlUtil.isMalformedUrl("blah blah blah"));
+    assertTrue(UrlUtil.isMalformedUrl("javascript:popup(blah)"));
   }
 
 }

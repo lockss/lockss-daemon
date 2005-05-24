@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.29 2005-04-21 07:20:47 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.30 2005-05-24 20:38:04 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -451,6 +451,16 @@ public class UrlUtil {
 //       throw new MalformedURLException(e.toString());
 //     }
 //   }
+
+  public static boolean isMalformedUrl(String url) {
+    try {
+      new URL(url);
+      return false;
+    } catch (MalformedURLException ex) {
+      log.warning("Malformed URL "+url, ex);
+      return true;
+    }
+  }
 
   public static boolean isAbsoluteUrl(String url) {
     if (url != null) {
