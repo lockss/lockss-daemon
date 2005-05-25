@@ -20,7 +20,7 @@ log_file=log.txt
 trap "exit 1" 2 
 
 python testsuite.py $test_type > $log_file 2>&1 
-mail $address -s "Test finished on $host" < $log_file
+mail -s "Test finished on $host" $address < $log_file
 echo "run finished, removing log files"
 rm  $log_file
 ./clean.sh
