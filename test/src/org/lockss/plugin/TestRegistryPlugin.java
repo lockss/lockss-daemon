@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.3 2004-09-29 18:58:03 tlipkis Exp $
+ * $Id: TestRegistryPlugin.java,v 1.4 2005-05-25 07:36:36 tlipkis Exp $
  */
 
 /*
@@ -91,15 +91,6 @@ public class TestRegistryPlugin extends LockssTestCase {
     assertEquals("http://foo.com", (urlStems.get(0).toString()));
   }
 
-  // This is really a test of RegistryArchivalUnit, but it seems
-  // pointless to create a whole new test class just for this.
-
-  public void testShouldCallTopLevelPoll() throws Exception {
-    RegistryArchivalUnit au = new RegistryArchivalUnit(m_plugin);
-    // Expect that "shouldCallTopLevelPoll" will always return false.
-    assertFalse(au.shouldCallTopLevelPoll(null));
-  }
-
   // Both of these methods are currently empty implementations on
   // RegistryPlugin, but it's nice to exercise them anyway, since they
   // are part of Plugin's public interface.
@@ -111,4 +102,5 @@ public class TestRegistryPlugin extends LockssTestCase {
   public void testSetConfig() throws Exception {
     m_plugin.setConfig(null, null, null);
   }
+
 }

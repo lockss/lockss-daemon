@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryArchivalUnit.java,v 1.13 2005-05-20 23:44:57 troberts Exp $
+ * $Id: RegistryArchivalUnit.java,v 1.14 2005-05-25 07:36:36 tlipkis Exp $
  */
 
 /*
@@ -31,8 +31,12 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.plugin;
 
+import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.htmlparser.*;
+import org.htmlparser.tags.*;
+import org.htmlparser.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.state.*;
@@ -50,6 +54,8 @@ import org.lockss.crawler.*;
  */
 
 public class RegistryArchivalUnit extends BaseArchivalUnit {
+  protected static final Logger log = Logger.getLogger("RegistryArchivalUnit");
+
   /** The interval between recrawls of the loadable plugin
       registry AUs.  */
   static final String PARAM_REGISTRY_CRAWL_INTERVAL =
@@ -70,7 +76,8 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
   private String m_registryUrl = null;
   private int m_maxRefetchDepth = NewContentCrawler.DEFAULT_MAX_CRAWL_DEPTH;
   private List m_permissionCheckers = null;
-  protected Logger log = Logger.getLogger("RegistryArchivalUnit");
+  private boolean recomputeRegName = true;
+  private String regName = null;
 
   public RegistryArchivalUnit(RegistryPlugin plugin) {
     super(plugin);
@@ -114,6 +121,45 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
     return "Plugin registry at '" + m_registryUrl + "'";
   }
 
+  public String getName() {
+    if (recomputeRegName) {
+      regName = recomputeRegName();
+    }
+    if (regName != null) {
+      return regName;
+    } else {
+      return super.getName();
+    }
+  }
+
+  // If there is a <title> element on the start page, use that as our AU
+  // name
+  String recomputeRegName() {
+    try {
+      CachedUrl cu = makeCachedUrl(m_registryUrl);
+      if (cu == null) return null;
+      URL cuUrl = CuUrl.fromCu(cu);
+      Parser parser = new Parser(cuUrl.toString());
+      Node nodes [] = parser.extractAllNodesThatAre(TitleTag.class);
+      recomputeRegName = false;
+      if (nodes.length < 1) return null;
+      // Get the first title found
+      TitleTag tag = (TitleTag)nodes[0];
+      if (tag == null) return null;
+      return tag.getTitle();
+    } catch (MalformedURLException e) {
+      log.warning("recomputeRegName", e);
+      return null;
+    } catch (ParserException e) {
+      if (e.getThrowable() instanceof FileNotFoundException) {
+	log.warning("recomputeRegName: " + e.getThrowable().toString());
+      } else {
+	log.warning("recomputeRegName", e);
+      }
+      return null;
+    }
+  }
+
   /**
    * return a string that points to the plugin registry page.
    * @return a string that points to the plugin registry page for
@@ -149,6 +195,14 @@ public class RegistryArchivalUnit extends BaseArchivalUnit {
    */
   protected CrawlRule makeRules() {
     return new RegistryRule();
+  }
+
+  // Might need to recompute name if refetch start page
+  public UrlCacher makeUrlCacher(String url) {
+    if (url.equals(m_registryUrl)) {
+      recomputeRegName = true;
+    }
+    return super.makeUrlCacher(url);
   }
 
   // Registry AU crawl rule implementation
