@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.11 2005-05-24 07:22:47 tlipkis Exp $
+ * $Id: DefinablePlugin.java,v 1.12 2005-05-25 07:35:17 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import java.util.*;
 import java.io.FileNotFoundException;
+import java.net.*;
 
 /**
  * <p>DefinablePlugin: a plugin which uses the data stored in an
@@ -72,6 +73,7 @@ public class DefinablePlugin extends BasePlugin {
   protected ExternalizableMap definitionMap = new ExternalizableMap();
   protected CacheResultHandler resultHandler = null;
   protected ClassLoader classLoader;
+  protected String loadedFrom;
 
   public void initPlugin(LockssDaemon daemon, String extMapName)
       throws FileNotFoundException {
@@ -87,9 +89,16 @@ public class DefinablePlugin extends BasePlugin {
     String mapFile = mapName.replace('.', '/') + MAP_SUFFIX;
     // load the configuration map from jar file
     definitionMap.loadMapFromResource(mapFile, classLoader);
-
+    URL url = classLoader.getResource(mapFile);
+    if (url != null) {
+      loadedFrom = url.toString();
+    }
     // then call the overridden initializaton.
     super.initPlugin(daemon);
+  }
+
+  public String getLoadedFrom() {
+    return loadedFrom;
   }
 
   public String getPluginName() {

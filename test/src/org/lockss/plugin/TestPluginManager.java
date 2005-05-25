@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.57 2005-03-31 04:23:39 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.58 2005-05-25 07:35:16 tlipkis Exp $
  */
 
 /*
@@ -756,9 +756,11 @@ public class TestPluginManager extends LockssTestCase {
     return ks;
   }
 
-  private void prepareLoadablePluginTests() throws Exception {
+  private void prepareLoadablePluginTests(Properties p) throws Exception {
     pluginJar = "org/lockss/test/good-plugin.jar";
-    Properties p = new Properties();
+    if (p == null) {
+      p = new Properties();
+    }
     p.setProperty(PluginManager.PARAM_KEYSTORE_LOCATION,
 		  pubKeystore);
     p.setProperty(PluginManager.PARAM_KEYSTORE_PASSWORD,
@@ -770,19 +772,37 @@ public class TestPluginManager extends LockssTestCase {
 
 
   /** Test loading a loadable plugin. */
-  public void testLoadLoadablePlugin() throws Exception {
-    prepareLoadablePluginTests();
+  public void testLoadLoadablePlugin(boolean preferLoadable) throws Exception {
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PREFER_LOADABLE_PLUGIN,
+		  "" + preferLoadable);
+    prepareLoadablePluginTests(p);
     String pluginKey = "org|lockss|test|MockConfigurablePlugin";
     // Set up a MyMockRegistryArchivalUnit with the right data.
     List plugins =
       ListUtil.list(pluginJar);
-    List registryAus =
-      ListUtil.list(new MyMockRegistryArchivalUnit(plugins));
+    MyMockRegistryArchivalUnit mmau = new MyMockRegistryArchivalUnit(plugins);
+    List registryAus = ListUtil.list(mmau);
     assertNull(mgr.getPlugin(pluginKey));
     mgr.processRegistryAus(registryAus);
     Plugin mockPlugin = mgr.getPlugin(pluginKey);
     assertNotNull(mockPlugin);
     assertEquals("1", mockPlugin.getVersion());
+    PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(mockPlugin);
+    assertEquals(mmau.getNthUrl(1), info.getCuUrl());
+    log.debug("isLoadable: " + info.isOnLoadablePath());
+    assertEquals(preferLoadable, info.isOnLoadablePath());
+    assertSame(mockPlugin, info.getPlugin());
+  }
+
+  /** Load a loadable plugin, preferring the loadable version. */
+  public void testLoadLoadablePlugin() throws Exception {
+    testLoadLoadablePlugin(true);
+  }
+
+  /** Load a loadable plugin, preferring the library jar version. */
+  public void testLoadLoadablePlugin2() throws Exception {
+    testLoadLoadablePlugin(false);
   }
 
   public static Test suite() {
@@ -803,9 +823,13 @@ public class TestPluginManager extends LockssTestCase {
       int n = 0;
       for (Iterator iter = jarFiles.iterator(); iter.hasNext(); ) {
 	n++;
-	cus.addCu(new MockCachedUrl("http://foo.bar/test" + n + ".jar",
+	cus.addCu(new MockCachedUrl(getNthUrl(n),
 				    (String)iter.next(), true));
       }
+    }
+
+    public String getNthUrl(int n) {
+      return "http://foo.bar/test" + n + ".jar";
     }
 
     public CachedUrlSet getAuCachedUrlSet() {

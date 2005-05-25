@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.133 2005-05-24 07:22:47 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.134 2005-05-25 07:35:17 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,17 @@ public class PluginManager
   static final String PARAM_PLUGIN_REGISTRIES =
     Configuration.PREFIX + "plugin.registries";
 
+  /** If true (the default), plugins that appear both in a loadable plugin
+   * registry jar and on the local classpath will be loaded from the
+   * downloaded registry jar.  If false such plugins will be loaded from
+   * the local classpath.  This is useful in development, where
+   * lockss-plugins.jar is on the classpath.  Normal true setting simulates
+   * production behavior, loading plugins from registry.  Set false to test
+   * plugins from the local build. */
+  static final String PARAM_PREFER_LOADABLE_PLUGIN =
+    Configuration.PREFIX + "plugin.preferLoadable";
+  static final boolean DEFAULT_PREFER_LOADABLE_PLUGIN = true;
+
   /** Common prefix of plugin keystore params */
   static final String KEYSTORE_PREFIX =
     Configuration.PREFIX + "plugin.keystore.";
@@ -152,20 +163,19 @@ public class PluginManager
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = Collections.synchronizedMap(new HashMap());
   private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
-  private Map classloaderMap = Collections.synchronizedMap(new HashMap());
   private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
 
   // A set of all aus sorted by title.  The UI relies on this behavior.
   private Set auSet = Collections.synchronizedSet(new TreeSet(auComparator));
 
-  // Map of plugin keys to loadable plugin JAR CachedUrls, used by
-  // the loadable plugin status accessor.
-  private Map pluginCus = Collections.synchronizedMap(new HashMap());
+  // Map of plugin key to PluginInfo
+  private Map pluginfoMap = Collections.synchronizedMap(new HashMap());
 
   private KeyStore keystore;
   private JarValidator jarValidator;
   private boolean keystoreInited = false;
   private boolean loadablePluginsReady = false;
+  private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
   private long registryTimeout = Configuration.
     getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
 					    DEFAULT_PLUGIN_LOAD_TIMEOUT);
@@ -246,6 +256,11 @@ public class PluginManager
     if (changedKeys.contains(PARAM_PLUGIN_LOAD_TIMEOUT)) {
       registryTimeout = config.getTimeInterval(PARAM_PLUGIN_LOAD_TIMEOUT,
 					       DEFAULT_PLUGIN_LOAD_TIMEOUT);
+    }
+
+    if (changedKeys.contains(PARAM_PREFER_LOADABLE_PLUGIN)) {
+      preferLoadablePlugin = config.getBoolean(PARAM_PREFER_LOADABLE_PLUGIN,
+					       DEFAULT_PREFER_LOADABLE_PLUGIN);
     }
 
     // If the keystore or password has changed, update.
@@ -385,6 +400,13 @@ public class PluginManager
     // tk - needs to do real mapping from IDs obtained from all available
     // plugins.
     return StringUtil.replaceString(id, ".", "|");
+  }
+
+  /**
+   * Return the plugin's key
+   */
+  public static String getPluginKey(Plugin plugin) {
+    return pluginKeyFromId(plugin.getPluginId());
   }
 
   /**
@@ -806,6 +828,17 @@ public class PluginManager
   }
 
   /**
+   * Return true if the specified Plugin is a Loadable plugin 
+   */
+  public boolean isLoadablePlugin(Plugin plugin) {
+    PluginInfo info = (PluginInfo)pluginfoMap.get(getPluginKey(plugin));
+    if (info == null) {
+      return false;
+    }
+    return info.isOnLoadablePath();
+  }
+
+  /**
    * Return the stored config info for an AU (from config file, not from
    * AU instance).
    * @param au the ArchivalUnit
@@ -846,10 +879,13 @@ public class PluginManager
    * clasloader is 'null', this method will use the default
    * classloader.
    */
-  Plugin retrievePlugin(String pluginKey, ClassLoader loader)
+  PluginInfo retrievePlugin(String pluginKey, ClassLoader loader)
       throws Exception {
+    if (pluginfoMap.containsKey(pluginKey)) {
+      return (PluginInfo)pluginfoMap.get(pluginKey);
+    }
     if (pluginMap.containsKey(pluginKey)) {
-      return (Plugin)pluginMap.get(pluginKey);
+      return new PluginInfo((Plugin)pluginMap.get(pluginKey), loader, null);
     }
 
     if (loader == null) {
@@ -859,7 +895,7 @@ public class PluginManager
     String pluginName = pluginNameFromKey(pluginKey);
 
     Plugin classPlugin = null;
-    Plugin xmlPlugin = null;
+    DefinablePlugin xmlPlugin = null;
 
     boolean foundClassPlugin = false;
     boolean foundXmlPlugin = false;
@@ -881,7 +917,7 @@ public class PluginManager
       log.debug3(pluginName + ": Loading XML definition.");
       Class c = Class.forName(getConfigurablePluginName(), true, loader);
       xmlPlugin = (DefinablePlugin)c.newInstance();
-      ((DefinablePlugin)xmlPlugin).initPlugin(theDaemon, pluginName, loader);
+      xmlPlugin.initPlugin(theDaemon, pluginName, loader);
       foundXmlPlugin = true;
     } catch (Exception ex) {
       log.debug3(pluginName + ": XML definition not found on classpath: " + ex);
@@ -897,26 +933,32 @@ public class PluginManager
       switch(getPreferredPluginType()) {
       case PREFER_XML_PLUGIN:
 	log.debug(pluginName + ": Creating definable plugin.");
-	return xmlPlugin;
+	foundClassPlugin = false;
+	break;
       case PREFER_CLASS_PLUGIN:
 	log.debug(pluginName + ": Instantiating plugin class.");
-	return classPlugin;
+	foundXmlPlugin = false;
+	break;
       default:
 	log.warning(pluginName + ": Unable to determine which " +
 		    "to load!  Plugin not loaded.");
 	return null;
       }
+    }
+    // Now at most one version is true
+    if (foundClassPlugin) {
+      String path = pluginName.replace('.', '/').concat(".class");
+      URL url = loader.getResource(path);
+      PluginInfo info = new PluginInfo(classPlugin, loader, url.toString());
+      return info;
+    } else if (foundXmlPlugin) {
+      String url = xmlPlugin.getLoadedFrom();
+      PluginInfo info = new PluginInfo(xmlPlugin, loader, url);
+      return info;
     } else {
-      // Only one was successfully found.
-      if (foundClassPlugin) {
-	return classPlugin;
-      } else if (foundXmlPlugin) {
-	return xmlPlugin;
-      } else {
-	// Error -- this plugin was not found.
-	log.error(pluginName + " could not be loaded.", new Throwable());
-	return null;
-      }
+      // Error -- this plugin was not found.
+      log.error(pluginName + " could not be loaded.", new Throwable());
+      return null;
     }
   }
 
@@ -944,8 +986,11 @@ public class PluginManager
    * @return true if loaded
    */
   public boolean ensurePluginLoaded(String pluginKey) {
-    ClassLoader loader = (ClassLoader)classloaderMap.get(pluginKey);
-
+    ClassLoader loader = null;
+    PluginInfo info = (PluginInfo)pluginfoMap.get(pluginKey);
+    if (info != null) {
+      loader = info.getClassLoader();
+    }
     if (loader == null) {
       loader = this.getClass().getClassLoader();
     }
@@ -957,9 +1002,10 @@ public class PluginManager
     String pluginName = "";
     try {
       pluginName = pluginNameFromKey(pluginKey);
-      Plugin plugin = retrievePlugin(pluginKey, loader);
-      if (plugin != null) {
-	setPlugin(pluginKey, plugin);
+      info = retrievePlugin(pluginKey, loader);
+      if (info != null) {
+	setPlugin(pluginKey, info.getPlugin());
+	pluginfoMap.put(pluginKey, info);
 	return true;
       }
       else {
@@ -1165,9 +1211,9 @@ public class PluginManager
     return pluginMap.values();
   }
 
-  /** @return URL of loadable plugin */
-  String getLoadablePluginUrl(Plugin plugin) {
-    return (String)pluginCus.get(pluginKeyFromId(plugin.getPluginId()));
+  /** @return loadable PluginInfo for plugin, or null */
+  PluginInfo getLoadablePluginInfo(Plugin plugin) {
+    return (PluginInfo)pluginfoMap.get(getPluginKey(plugin));
   }
 
   /**
@@ -1272,14 +1318,14 @@ public class PluginManager
       for (Iterator iter = pluginMap.entrySet().iterator(); iter.hasNext(); ) {
 	Map.Entry entry = (Map.Entry)iter.next();
 	Plugin plug = (Plugin)entry.getValue();
-	String name = (String)entry.getKey();
-	String key = pluginKeyFromName(name);
+	String key = (String)entry.getKey();
 	if (!isInternalPlugin(plug) &&
-	    !classloaderMap.containsKey(key) &&
+	    !isLoadablePlugin(plug) &&
+// 	    !pluginfoMap.containsKey(key) &&
 	    !newKeys.contains(key)) {
 	  Configuration tree = currentAllPlugs.getConfigTree(key);
 	  if (tree == null || tree.isEmpty()) {
-	    log.debug("Removing plugin " + name, new Throwable());
+	    log.debug("Removing plugin " + key, new Throwable());
 	    iter.remove();
 	  }
 	}
@@ -1557,9 +1603,14 @@ public class PluginManager
 
 	      // Load the plugin classes
 	      ClassLoader pluginLoader = null;
+	      URL blessedUrl;
 	      try {
+		blessedUrl = blessedJar.toURL();
+		URL[] urls = new URL[] { blessedUrl };
 		pluginLoader =
-		  new URLClassLoader(new URL[] { blessedJar.toURL() });
+		  preferLoadablePlugin
+		  ? new LoadablePluginClassLoader(urls)
+		  : new URLClassLoader(urls);
 	      } catch (MalformedURLException ex) {
 		log.error("Malformed URL exception attempting to create " +
 			  "classloader for plugin JAR " + blessedJar);
@@ -1573,10 +1624,22 @@ public class PluginManager
 		pluginName = (String)pluginIter.next();
 		String key = pluginKeyFromName(pluginName);
 
-		Plugin plugin = null;
-
+		Plugin plugin;
+		PluginInfo info;
 		try {
-		  plugin = retrievePlugin(pluginName, pluginLoader);
+		  info = retrievePlugin(pluginName, pluginLoader);
+		  info.setCuUrl(url);
+		  info.setRegistryAu(au);
+		  String jar = info.getJarUrl();
+		  if (jar != null) {
+		    // If the blessed jar path is a substring of the jar:
+		    // url from which the actual plugin resource or class
+		    // was loaded, then it is a loadable plugin.
+		    boolean isLoadable =
+		      jar.indexOf(blessedUrl.getFile()) > 0;
+		    info.setIsOnLoadablePath(isLoadable);
+		  }
+		  plugin = info.getPlugin();
 		} catch (Exception ex) {
 		  log.error("Unable to load plugin " + pluginName +
 			    ", skipping: " + ex.getMessage());
@@ -1587,13 +1650,12 @@ public class PluginManager
 
 		try {
 		  version = new PluginVersion(plugin.getVersion());
+		  info.setVersion(version);
 		} catch (IllegalArgumentException ex) {
 		  // Don't let this runtime exception stop the daemon.  Skip the plugin.
 		  log.error("Skipping plugin " + pluginName + ": " + ex.getMessage());
 		  continue;
 		}
-
-		PluginInfo info = new PluginInfo(plugin, version, pluginLoader, url);
 
 		if (pluginMap.containsKey(key)) {
 		  // Plugin already exists in the global plugin map.
@@ -1646,20 +1708,21 @@ public class PluginManager
 
     // After the temporary plugin map has been built, install it into
     // the global maps.
+    List classloaders = new ArrayList();
     for (Iterator pluginIter = tmpMap.entrySet().iterator();
 	 pluginIter.hasNext(); ) {
       Map.Entry entry = (Map.Entry)pluginIter.next();
       String key = (String)entry.getKey();
       log.debug2("Adding to plugin map: " + key);
       PluginInfo info = (PluginInfo)entry.getValue();
-      classloaderMap.put(key, info.getClassLoader());
-      pluginCus.put(key, info.getCuUrl());
+      pluginfoMap.put(key, info);
+      classloaders.add(info.getClassLoader());
       setPlugin(key, info.getPlugin());
     }
 
     // Add the JAR's bundled titledb config (if any)
     // to the ConfigManager.
-    configMgr.addTitleDbConfigFrom(classloaderMap.values());
+    configMgr.addTitleDbConfigFrom(classloaders);
 
     // Cleanup as a hint to GC.
     tmpMap.clear();
@@ -1727,18 +1790,19 @@ public class PluginManager
    * A simple class that wraps information about a loadable plugin,
    * used during the loading process.
    */
-  private static class PluginInfo {
+  static class PluginInfo {
     private Plugin plugin;
+    private ArchivalUnit registryAu;
     private PluginVersion version;
     private ClassLoader classLoader;
     private String cuUrl;
+    private String jarUrl;
+    private boolean isOnLoadablePath = false;;
 
-    public PluginInfo(Plugin plugin, PluginVersion version,
-		      ClassLoader classLoader, String cuUrl) {
+    public PluginInfo(Plugin plugin, ClassLoader classLoader, String jarUrl) {
       this.plugin = plugin;
-      this.version = version;
       this.classLoader = classLoader;
-      this.cuUrl = cuUrl;
+      this.jarUrl = jarUrl;
     }
 
     public Plugin getPlugin() {
@@ -1749,12 +1813,40 @@ public class PluginManager
       return version;
     }
 
+    public void setVersion(PluginVersion version) {
+      this.version = version;
+    }
+
     public ClassLoader getClassLoader() {
       return classLoader;
     }
 
     public String getCuUrl() {
       return cuUrl;
+    }
+
+    public void setCuUrl(String cuUrl) {
+      this.cuUrl = cuUrl;
+    }
+
+    public ArchivalUnit getRegistryAu() {
+      return registryAu;
+    }
+
+    public void setRegistryAu(ArchivalUnit registryAu) {
+      this.registryAu = registryAu;
+    }
+
+    public String getJarUrl() {
+      return jarUrl;
+    }
+
+    public boolean isOnLoadablePath() {
+      return isOnLoadablePath;
+    }
+
+    public void setIsOnLoadablePath(boolean val) {
+      this.isOnLoadablePath = val;
     }
   }
 }
