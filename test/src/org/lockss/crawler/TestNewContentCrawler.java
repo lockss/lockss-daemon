@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.34 2005-05-25 18:14:13 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.35 2005-05-25 20:21:07 troberts Exp $
  */
 
 /*
@@ -210,7 +210,7 @@ public class TestNewContentCrawler extends LockssTestCase {
   }
 
   public void testRecrawlNotRefetchPages() {
-    SpecialParserArchivalUnit mau = new SpecialParserArchivalUnit(2);
+    SpecialParserArchivalUnit mau = new SpecialParserArchivalUnit(3);
     mau.setPlugin(new MockPlugin());
     mau.setAuId("MyMockTestAu");
     mau.addUrl(permissionPage);
@@ -723,7 +723,7 @@ public class TestNewContentCrawler extends LockssTestCase {
       this.numTimesToParse = numTimesToParse;
     }
 
-    public ContentParser getContentParser() {
+    public ContentParser getContentParser(String mimeType) {
       if (numTimesToParse > 0) {
 	numTimesToParse--;
 	return parser;
