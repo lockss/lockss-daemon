@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.9 2004-05-14 16:10:39 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.10 2005-05-25 07:34:01 tlipkis Exp $
  */
 
 /*
@@ -231,38 +231,48 @@ public class XmlStatusTable {
   Element addValueElement(Element parent, Object value, int type) {
     if (value instanceof List) {
       for (Iterator iter = ((List)value).iterator(); iter.hasNext(); ) {
-	addReferenceValueElement(parent, iter.next(), type);
+	addLinkValueElement(parent, iter.next(), type);
       }
     } else {
-      addReferenceValueElement(parent, value, type);
+      addLinkValueElement(parent, value, type);
     }
     return parent;
   }
 
   /** Add value element to parent, possibly embedding in reference element */
-  Element addReferenceValueElement(Element parent, Object value, int type) {
+  Element addLinkValueElement(Element parent, Object value, int type) {
     if (value instanceof StatusTable.Reference) {
-      // Reference
-      Element element =
-	xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
-      Element refElement =
-	xmlBuilder.createElement(element, XmlStatusConstants.REFERENCE_ELEM);
-
-      StatusTable.Reference reference = (StatusTable.Reference)value;
-      addTextElement(refElement, XmlStatusConstants.NAME,
-		     reference.getTableName());
-      if (reference.getKey() != null) {
-	addTextElement(refElement, XmlStatusConstants.KEY, reference.getKey());
-      }
-      addNonRefValueElement(refElement, reference.getValue(), type);
-      return element;
+      return addReferenceValueElement(parent, (StatusTable.Reference)value,
+				      type);
+//     } else if (value instanceof StatusTable.SrvLink) {
+//       return addSrvLinkValueElement(parent, (StatusTable.SrvLink)value,
+// 				    type);
+    } else if (value instanceof StatusTable.LinkValue) {
+      // A LinkValue type we don't know about.  Just display its embedded
+      // value.
+      return addNonLinkValueElement(parent, StatusTable.getActualValue(value),
+				    type);
     } else {
-      return addNonRefValueElement(parent, value, type);
+      return addNonLinkValueElement(parent, value, type);
     }
   }
 
+  Element addReferenceValueElement(Element parent,
+				   StatusTable.Reference refVal, int type) {
+    Element element =
+      xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
+    Element refElement =
+      xmlBuilder.createElement(element, XmlStatusConstants.REFERENCE_ELEM);
+    addTextElement(refElement, XmlStatusConstants.NAME, refVal.getTableName());
+    if (refVal.getKey() != null) {
+      addTextElement(refElement, XmlStatusConstants.KEY, refVal.getKey());
+    }
+    addNonLinkValueElement(refElement, refVal.getValue(), type);
+    return element;
+  }
+
   /** Add value element to parent, with any display attributes */
-  Element addNonRefValueElement(Element parent, Object value, int type) {
+  Element addNonLinkValueElement(Element parent, Object value, int type) {
     Element element =
       xmlBuilder.createElement(parent, XmlStatusConstants.VALUE);
     if (value instanceof StatusTable.DisplayedValue) {
