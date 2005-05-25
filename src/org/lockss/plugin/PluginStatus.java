@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.1 2005-05-24 07:22:47 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.2 2005-05-25 07:35:51 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,16 @@ class PluginStatus {
     this.daemon = daemon;
     this.mgr = mgr;
   }
+
+  String getPluginType(Plugin plugin) {
+    if (mgr.isLoadablePlugin(plugin)) {
+      return "Loadable";
+    } else if (mgr.isInternalPlugin(plugin)) {
+      return "Internal";
+    } else {
+      return "Builtin";
+    }
+  }
 }
 
 /**
@@ -84,10 +94,14 @@ class Plugins extends PluginStatus implements StatusAccessor {
 				       ColumnDescriptor.TYPE_STRING),
 		  new ColumnDescriptor("version", "Version",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("id", "Plugin ID",
+		  new ColumnDescriptor("type", "Type",
 				       ColumnDescriptor.TYPE_STRING),
-		  new ColumnDescriptor("cu", "Loaded From",
+// 		  new ColumnDescriptor("id", "Plugin ID",
+// 				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor("registry", "Registry",
 				       ColumnDescriptor.TYPE_STRING)
+// 		  new ColumnDescriptor("cu", "Loaded From",
+// 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
   Plugins(LockssDaemon daemon, PluginManager mgr) {
@@ -123,8 +137,17 @@ class Plugins extends PluginStatus implements StatusAccessor {
 						   plugin));
 	row.put("version", plugin.getVersion());
 	row.put("id", plugin.getPluginId());
-	row.put("cu", mgr.getLoadablePluginUrl(plugin));
-
+	row.put("type", getPluginType(plugin));
+	if (mgr.isLoadablePlugin(plugin)) {
+	  PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plugin);
+	  if (info != null) {
+// 	    row.put("cu", info.getCuUrl());
+	    ArchivalUnit au = info.getRegistryAu();
+	    if (au != null) {
+	      row.put("registry", au.getName());
+	    }
+	  }
+	}
 	rows.add(row);
       }
     }
@@ -176,9 +199,9 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 
   public void populateTable(StatusTable table, Plugin plug) {
     table.setTitle(getTitle(plug));
-    table.setColumnDescriptors(colDescs);
     table.setDefaultSortRules(sortRules);
     if (plug instanceof DefinablePlugin) {
+      table.setColumnDescriptors(colDescs);
       table.setRows(getRows((DefinablePlugin)plug));
     }
     // isLoadable()
@@ -205,32 +228,43 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 
   private List getSummaryInfo(Plugin plug) {
     List res = new ArrayList();
-    res.add(new StatusTable.SummaryInfo("Name:",
+    res.add(new StatusTable.SummaryInfo("Name",
 					ColumnDescriptor.TYPE_STRING,
 					plug.getPluginName()));
 
-    res.add(new StatusTable.SummaryInfo("Id:",
+    res.add(new StatusTable.SummaryInfo("Id",
 					ColumnDescriptor.TYPE_STRING,
 					plug.getPluginId()));
 
-    res.add(new StatusTable.SummaryInfo("Version:",
+    res.add(new StatusTable.SummaryInfo("Version",
 					ColumnDescriptor.TYPE_STRING,
 					plug.getVersion()));
 
-    res.add(new StatusTable.SummaryInfo("# AUs:",
+    res.add(new StatusTable.SummaryInfo("# AUs",
 					ColumnDescriptor.TYPE_STRING,
 					plug.getAllAus().size()));
 
-    String url = mgr.getLoadablePluginUrl(plug);
-    if (url != null) {
-//       res.add(new StatusTable.SummaryInfo("Loaded from",
-// 					  ColumnDescriptor.TYPE_STRING,
-// 					  url));
-      CachedUrl cu = mgr.findMostRecentCachedUrl(url);
-      ArchivalUnit au = cu.getArchivalUnit();
-      res.add(new StatusTable.SummaryInfo("Plugin Registry",
-					  ColumnDescriptor.TYPE_STRING,
-					  au.getName()));
+    res.add(new StatusTable.SummaryInfo("Type",
+					ColumnDescriptor.TYPE_STRING,
+					getPluginType(plug)));
+    if (mgr.isLoadablePlugin(plug)) {
+      PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plug);
+      if (info != null) {
+	String url = info.getCuUrl();
+	if (url != null) {
+	  CachedUrl cu = mgr.findMostRecentCachedUrl(url);
+	  ArchivalUnit au = info.getRegistryAu();
+	  res.add(new StatusTable.SummaryInfo("Plugin Registry",
+					      ColumnDescriptor.TYPE_STRING,
+					      au.getName()));
+	  res.add(new StatusTable.SummaryInfo("URL",
+					      ColumnDescriptor.TYPE_STRING,
+					      url));
+// 	  res.add(new StatusTable.SummaryInfo("Loaded from",
+// 					      ColumnDescriptor.TYPE_STRING,
+// 					      info.getJarUrl()));
+	}
+      }
     }
     return res;
   }
