@@ -1,33 +1,33 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.6 2004-10-23 01:38:22 clairegriffin Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.7 2005-05-25 23:47:37 smorabito Exp $
  */
 
 /*
- Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+  Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+  all rights reserved.
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+  STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+  Except as contained in this notice, the name of Stanford University shall not
+  be used in advertising or otherwise to promote the sale, use or other dealings
+  in this Software without prior written authorization from Stanford University.
 
- */
+*/
 package org.lockss.devtools.plugindef;
 
 import javax.swing.table.*;
@@ -36,19 +36,19 @@ import java.awt.*;
 import javax.swing.event.*;
 
 public class EDPInspectorTableModel extends AbstractTableModel
-    implements ChangeListener {
+  implements ChangeListener {
 
   static EDPInspectorCellEditor inspectorCellEditor = new EDPInspectorCellEditor();
 
   static JComboBox crawlTypeBox = new JComboBox(new String[] {
-                                                "HTML Links",
-                                                "OAI"
+    "HTML Links",
+    "OAI"
   });
 
   static DefaultCellEditor crawlTypeEditor = new DefaultCellEditor(crawlTypeBox);
 
   static final String[] cols = {
-      "Plugin Field", "Assigned Value"};
+    "Plugin Field", "Assigned Value"};
   static final class InspectorEntry {
     String m_pluginKey;
     String m_title;
@@ -62,53 +62,57 @@ public class EDPInspectorTableModel extends AbstractTableModel
   }
 
   static final InspectorEntry[] inspectorEntries = {
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
-                         "Plugin Version", null),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
-                         "Configuration Parameters", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
-                         "Start URL Template", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
-                         inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
-                         inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
-                         "Pause Time Between Fetches", inspectorCellEditor),
-      new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
-                         "New Content Crawl Interval", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_DEPTH,
-                         "Default Crawl Depth", null),
-      new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
-                         "Crawl Window Class", null),
-      new InspectorEntry(EditableDefinablePlugin.AU_FILTER_SUFFIX,
-                         "Filter Class", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
-                         "Crawl Exception Class", null),
-      new InspectorEntry(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
-                         "Cache Exception Map", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.CM_CRAWL_TYPE,
-                         "Crawl Type", crawlTypeEditor)
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
+		       "Plugin Version", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
+		       "Configuration Parameters", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NOTES, "Plugin Notes",
+		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
+		       "Start URL Template", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
+		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
+		       "Pause Time Between Fetches", inspectorCellEditor),
+    new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
+			"New Content Crawl Interval", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_DEPTH,
+		       "Default Crawl Depth", null),
+    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
+		       "Crawl Window Class", null),
+    new InspectorEntry(EditableDefinablePlugin.AU_FILTER_SUFFIX,
+		       "Filter Class", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
+		       "Crawl Exception Class", null),
+    new InspectorEntry(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
+		       "Cache Exception Map", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.CM_CRAWL_TYPE,
+		       "Crawl Type", crawlTypeEditor)
   };
 
   static final InspectorEntry[] requiredEntries = {
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
-                         "Plugin Version", null),
-      new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
-                         "Configuration Parameters", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
-                         "Start URL Template", inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
-                        inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
-                         inspectorCellEditor),
-      new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
-                         "Pause Time Between Fetches", inspectorCellEditor),
-      new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
-                         "New Content Crawl Interval", inspectorCellEditor)
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NAME, "Plugin Name", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_IDENTIFIER, "Plugin ID", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_VERSION,
+		       "Plugin Version", null),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_PROPS,
+		       "Configuration Parameters", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.PLUGIN_NOTES, "Plugin Notes",
+		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_START_URL,
+		       "Start URL Template", inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_NAME, "AU Name Template",
+		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
+		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
+		       "Pause Time Between Fetches", inspectorCellEditor),
+    new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
+			"New Content Crawl Interval", inspectorCellEditor)
   };
 
   boolean isExpertMode = false;
@@ -166,7 +170,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
       EDPCellData cell_data = (EDPCellData) obj;
       Object value = cell_data.getData();
       if (inspectorEntries[rowIndex].m_editor != inspectorCellEditor) {
-        return value;
+	return value;
       }
       return cell_data;
     }
@@ -194,7 +198,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
     m_plugin = edp;
     for (int row = 0; row < inspectorEntries.length; row++) {
       EDPCellData cell_data = new EDPCellData(edp,
-                                            inspectorEntries[row].m_pluginKey);
+					      inspectorEntries[row].m_pluginKey);
       cell_data.addChangeListener(this);
       data[row][1] = cell_data;
     }
@@ -213,23 +217,23 @@ public class EDPInspectorTableModel extends AbstractTableModel
     for (int row = 0; row < inspectorEntries.length; row++) {
       curString = data[row][col].toString();
       if (curString.length() > longestStr.length()) {
-        longestStr = curString;
+	longestStr = curString;
       }
     }
     TableCellRenderer headerRenderer =
-        table.getTableHeader().getDefaultRenderer();
+      table.getTableHeader().getDefaultRenderer();
 
     column = table.getColumnModel().getColumn(col);
 
     comp = headerRenderer.getTableCellRendererComponent(
-        null, column.getHeaderValue(),
-        false, false, 0, 0);
+							null, column.getHeaderValue(),
+							false, false, 0, 0);
     headerWidth = comp.getPreferredSize().width;
 
     comp = table.getDefaultRenderer(getColumnClass(col)).
-        getTableCellRendererComponent(
-        table, longestStr,
-        false, false, 0, col);
+      getTableCellRendererComponent(
+				    table, longestStr,
+				    false, false, 0, col);
     cellWidth = comp.getPreferredSize().width;
 
     column.setPreferredWidth(Math.max(headerWidth, cellWidth));
@@ -238,7 +242,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
   public void setCellEditor(CellEditorJTable.CellEditorModel editorModel) {
     for (int row = 0; row < inspectorEntries.length; row++) {
       if (inspectorEntries[row].m_editor != null) {
-        editorModel.addEditorForCell(row, 1, inspectorEntries[row].m_editor);
+	editorModel.addEditorForCell(row, 1, inspectorEntries[row].m_editor);
       }
     }
   }

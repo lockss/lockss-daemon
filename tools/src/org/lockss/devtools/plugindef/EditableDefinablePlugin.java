@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.12 2005-02-14 03:31:29 tlipkis Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.13 2005-05-25 23:47:37 smorabito Exp $
  */
 
 /*
@@ -40,53 +40,55 @@ import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 
 public class EditableDefinablePlugin
-    extends DefinablePlugin {
+  extends DefinablePlugin {
 
   static final protected String PLUGIN_NAME
-      = DefinablePlugin.CM_NAME_KEY;
+    = DefinablePlugin.CM_NAME_KEY;
   static final protected String PLUGIN_VERSION
-      = DefinablePlugin.CM_VERSION_KEY;
+    = DefinablePlugin.CM_VERSION_KEY;
   static final protected String PLUGIN_PROPS
-      = DefinablePlugin.CM_CONFIG_PROPS_KEY;
+    = DefinablePlugin.CM_CONFIG_PROPS_KEY;
+  static final protected String PLUGIN_NOTES
+    = DefinablePlugin.CM_NOTES_KEY;
   static final protected String PLUGIN_EXCEPTION_HANDLER
-      = DefinablePlugin.CM_EXCEPTION_HANDLER_KEY;
+    = DefinablePlugin.CM_EXCEPTION_HANDLER_KEY;
   static final protected String CM_EXCEPTION_LIST_KEY
-      = DefinablePlugin.CM_EXCEPTION_LIST_KEY;
+    = DefinablePlugin.CM_EXCEPTION_LIST_KEY;
   static final protected String CM_CRAWL_TYPE
-      = DefinablePlugin.CM_CRAWL_TYPE;
+    = DefinablePlugin.CM_CRAWL_TYPE;
   static final protected String[] CRAWL_TYPES
-      = DefinablePlugin.CRAWL_TYPES;
+    = DefinablePlugin.CRAWL_TYPES;
 
   static final protected String PLUGIN_IDENTIFIER = "plugin_identifier";
 
   static final protected String AU_START_URL
-      = DefinableArchivalUnit.AU_START_URL_KEY;
+    = DefinableArchivalUnit.AU_START_URL_KEY;
   static final protected String AU_NAME
-      = DefinableArchivalUnit.AU_NAME_KEY;
+    = DefinableArchivalUnit.AU_NAME_KEY;
   static final protected String AU_RULES
-      = DefinableArchivalUnit.AU_RULES_KEY;
+    = DefinableArchivalUnit.AU_RULES_KEY;
   static final protected String AU_CRAWL_WINDOW
-      = DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY;
+    = DefinableArchivalUnit.AU_CRAWL_WINDOW_KEY;
   static final protected String AU_EXPECTED_PATH
-      = DefinableArchivalUnit.AU_EXPECTED_PATH;
+    = DefinableArchivalUnit.AU_EXPECTED_PATH;
   static final protected String AU_CRAWL_DEPTH
-      = DefinableArchivalUnit.AU_CRAWL_DEPTH;
+    = DefinableArchivalUnit.AU_CRAWL_DEPTH;
   static final protected String AU_NEWCONTENT_CRAWL
-      = DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY;
+    = DefinableArchivalUnit.AU_DEFAULT_NC_CRAWL_KEY;
   static final protected String AU_PAUSE_TIME
-      = DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME;
+    = DefinableArchivalUnit.AU_DEFAULT_PAUSE_TIME;
   static final protected String AU_MANIFEST
-      = DefinableArchivalUnit.AU_MANIFEST_KEY;
+    = DefinableArchivalUnit.AU_MANIFEST_KEY;
   static final protected String AU_PARSER_SUFFIX
-      = DefinableArchivalUnit.AU_PARSER_SUFFIX;
+    = DefinableArchivalUnit.AU_PARSER_SUFFIX;
   static final public String AU_FILTER_SUFFIX
-      = DefinableArchivalUnit.AU_FILTER_SUFFIX;
+    = DefinableArchivalUnit.AU_FILTER_SUFFIX;
 
   static public String[] CONFIG_PARAM_TYPES = ConfigParamDescr.TYPE_STRINGS;
 
   static public Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
   static Logger log = Logger.getLogger(PluginDefinerApp.LOG_ROOT +
-                                       ".editableDefinablePlugin");
+				       ".editableDefinablePlugin");
 
   public EditableDefinablePlugin() {
   }
@@ -192,7 +194,7 @@ public class EditableDefinablePlugin
     for (Iterator it = rules.iterator(); it.hasNext(); ) {
       String str = (String) it.next();
       if (str.equals(rule)) {
-        return;
+	return;
       }
     }
     rules.add(rule);
@@ -206,7 +208,7 @@ public class EditableDefinablePlugin
     for (Iterator it = rules.iterator(); it.hasNext(); ) {
       String str = (String) it.next();
       if (str.equals(rule)) {
-        it.remove();
+	it.remove();
       }
     }
 
@@ -220,7 +222,7 @@ public class EditableDefinablePlugin
     }
     catch (Exception ex) {
       throw new DefinablePlugin.InvalidDefinitionException(
-          "Unable to create crawl window class: " + crawlWindow, ex);
+							   "Unable to create crawl window class: " + crawlWindow, ex);
     }
   }
 
@@ -235,12 +237,12 @@ public class EditableDefinablePlugin
   public void setAuFilter(String mimetype, List rules) {
     if (rules.size() > 0) {
       try {
-        FilterRule rule = new DefinableFilterRule(rules);
-        definitionMap.putCollection(mimetype + AU_FILTER_SUFFIX, rules);
+	FilterRule rule = new DefinableFilterRule(rules);
+	definitionMap.putCollection(mimetype + AU_FILTER_SUFFIX, rules);
       }
       catch (Exception ex) {
-        throw new DefinablePlugin.InvalidDefinitionException(
-        "Unable to create filter from " + rules + " for mimetype " + mimetype);
+	throw new DefinablePlugin.InvalidDefinitionException(
+							     "Unable to create filter from " + rules + " for mimetype " + mimetype);
       }
     }
     else {
@@ -252,18 +254,18 @@ public class EditableDefinablePlugin
 
     try {
       if(filter.indexOf(" ") != -1 || filter.indexOf(".") == -1
-         || filter.endsWith(".")) {
-        throw new DefinablePlugin.InvalidDefinitionException(
-         filter + "is not a class name! Ignoring filter for " + mimetype );
+	 || filter.endsWith(".")) {
+	throw new DefinablePlugin.InvalidDefinitionException(
+							     filter + "is not a class name! Ignoring filter for " + mimetype );
       }
       definitionMap.putString(mimetype + AU_FILTER_SUFFIX, filter);
       FilterRule rule = (FilterRule) Class.forName(filter).newInstance();
     }
     catch (Exception ex) {
- /*     throw new DefinablePlugin.InvalidDefinitionException(
-          "Unable to create filter rule class " + filter +
-          "for mimetype " + mimetype);
-*/
+      /*     throw new DefinablePlugin.InvalidDefinitionException(
+	     "Unable to create filter rule class " + filter +
+	     "for mimetype " + mimetype);
+      */
     }
   }
 
@@ -273,8 +275,8 @@ public class EditableDefinablePlugin
     for(Iterator it = keyset.iterator(); it.hasNext();) {
       String key = (String) it.next();
       if(key.endsWith(AU_FILTER_SUFFIX)) {
-        String mimetype = key.substring(0,key.lastIndexOf(AU_FILTER_SUFFIX));
-        rules.put(mimetype, definitionMap.getMapElement(key));
+	String mimetype = key.substring(0,key.lastIndexOf(AU_FILTER_SUFFIX));
+	rules.put(mimetype, definitionMap.getMapElement(key));
       }
     }
     return rules;
@@ -302,10 +304,10 @@ public class EditableDefinablePlugin
 
   public long getNewContentCrawlIntv() {
     return definitionMap.getLong(AU_NEWCONTENT_CRAWL,
-         DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
+				 DefinableArchivalUnit.DEFAULT_NEW_CONTENT_CRAWL_INTERVAL);
   }
 
- public  void removeNewContentCrawlIntv() {
+  public  void removeNewContentCrawlIntv() {
     definitionMap.removeMapElement(AU_NEWCONTENT_CRAWL);
   }
 
@@ -315,7 +317,7 @@ public class EditableDefinablePlugin
 
   public int getAuCrawlDepth() {
     return definitionMap.getInt(AU_CRAWL_DEPTH,
-                                DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
+				DefinableArchivalUnit.DEFAULT_AU_CRAWL_DEPTH);
   }
 
   public void removeAuCrawlDepth() {
@@ -328,7 +330,7 @@ public class EditableDefinablePlugin
 
   public long getAuPauseTime() {
     return definitionMap.getLong(AU_PAUSE_TIME,
-            DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
+				 DefinableArchivalUnit.DEFAULT_FETCH_DELAY);
   }
 
   public void removeAuPauseTime() {
@@ -377,11 +379,23 @@ public class EditableDefinablePlugin
 
   public String getPluginVersion() {
     return definitionMap.getString(PLUGIN_VERSION,
-                                   DefinablePlugin.DEFAULT_PLUGIN_VERSION);
+				   DefinablePlugin.DEFAULT_PLUGIN_VERSION);
   }
 
   public void removePluginVersion() {
     definitionMap.removeMapElement(PLUGIN_VERSION);
+  }
+
+  public void setPluginNotes(String notes) {
+    definitionMap.putString(PLUGIN_NOTES, notes);
+  }
+
+  public String getPluginNotes() {
+    return definitionMap.getString(PLUGIN_NOTES, null);
+  }
+
+  public void removePluginNotes() {
+    definitionMap.removeMapElement(PLUGIN_NOTES);
   }
 
   public void setPluginConfigDescrs(HashSet descrs) {
@@ -400,26 +414,26 @@ public class EditableDefinablePlugin
       int type = cpd.getType();
       pd_map.put(key, cpd);
       if (type == ConfigParamDescr.TYPE_YEAR) {
-        key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
-        ConfigParamDescr descr = copyDescr(cpd);
-        descr.setDescription(cpd.getDescription() + " (2 digit)");
-        descr.setDisplayName(cpd.getDisplayName() + " (2 digit)");
-        descr.setKey(key);
-        pd_map.put(key, descr);
+	key = DefinableArchivalUnit.AU_SHORT_YEAR_PREFIX + key;
+	ConfigParamDescr descr = copyDescr(cpd);
+	descr.setDescription(cpd.getDescription() + " (2 digit)");
+	descr.setDisplayName(cpd.getDisplayName() + " (2 digit)");
+	descr.setKey(key);
+	pd_map.put(key, descr);
       }
       else if (type == ConfigParamDescr.TYPE_URL) {
-        String mod_key = key + DefinableArchivalUnit.AU_HOST_SUFFIX;
-        ConfigParamDescr descr = copyDescr(cpd);
-        descr.setDescription(cpd.getDescription() + " (Host)");
-        descr.setDisplayName(cpd.getDisplayName() + " (Host)");
-        descr.setKey(key);
-        pd_map.put(mod_key, descr);
-        mod_key = key + DefinableArchivalUnit.AU_PATH_SUFFIX;
-        descr = copyDescr(cpd);
-        descr.setDescription(cpd.getDescription() + " (Path)");
-        descr.setDisplayName(cpd.getDisplayName() + " (Path)");
-        descr.setKey(key);
-        pd_map.put(mod_key, descr);
+	String mod_key = key + DefinableArchivalUnit.AU_HOST_SUFFIX;
+	ConfigParamDescr descr = copyDescr(cpd);
+	descr.setDescription(cpd.getDescription() + " (Host)");
+	descr.setDisplayName(cpd.getDisplayName() + " (Host)");
+	descr.setKey(key);
+	pd_map.put(mod_key, descr);
+	mod_key = key + DefinableArchivalUnit.AU_PATH_SUFFIX;
+	descr = copyDescr(cpd);
+	descr.setDescription(cpd.getDescription() + " (Path)");
+	descr.setDisplayName(cpd.getDisplayName() + " (Path)");
+	descr.setKey(key);
+	pd_map.put(mod_key, descr);
       }
     }
     return pd_map;
@@ -444,11 +458,11 @@ public class EditableDefinablePlugin
     try {
       definitionMap.putString(PLUGIN_EXCEPTION_HANDLER, handler);
       CacheResultHandler obj =
-          (CacheResultHandler) Class.forName(handler).newInstance();
+	(CacheResultHandler) Class.forName(handler).newInstance();
     }
     catch (Exception ex) {
       throw new DefinablePlugin.InvalidDefinitionException(
-          "Unable to create exception handler " + handler, ex);
+							   "Unable to create exception handler " + handler, ex);
     }
 
   }
@@ -481,9 +495,9 @@ public class EditableDefinablePlugin
     List xlist = (List) definitionMap.getCollection(CM_EXCEPTION_LIST_KEY, null);
     if(xlist != null) {
       for(Iterator it = xlist.iterator(); it.hasNext();) {
-        String  entry = (String) it.next();
-        Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
-        handlers.put((String)s_vec.get(0), (String) s_vec.get(1));
+	String  entry = (String) it.next();
+	Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
+	handlers.put((String)s_vec.get(0), (String) s_vec.get(1));
       }
     }
     return handlers;
@@ -498,8 +512,8 @@ public class EditableDefinablePlugin
       Vector s_vec = StringUtil.breakAt(entry, '=', 2, true, true);
       int code = Integer.parseInt( ( (String) s_vec.get(0)));
       if (code == resultCode) {
-        it.remove();
-        break;
+	it.remove();
+	break;
       }
     }
     // if this was the last entry we remove the item from the definition map
@@ -525,7 +539,7 @@ public class EditableDefinablePlugin
     for(Iterator it = knownDescrs.iterator(); it.hasNext();) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       if(cpd.getKey() == key) {
-        addConfigParamDescr(cpd);
+	addConfigParamDescr(cpd);
       }
     }
   }
@@ -535,7 +549,7 @@ public class EditableDefinablePlugin
     for(Iterator it = knownDescrs.iterator(); it.hasNext();) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       if(cpd.getKey() == key) {
-        return cpd;
+	return cpd;
       }
     }
     return null;
@@ -544,7 +558,7 @@ public class EditableDefinablePlugin
   public Collection getConfigParamDescrs() {
     List defaultConfigParam = ListUtil.list(getConfigParamDescr("base_url"));
     List descrlist = (List) definitionMap.getCollection(PLUGIN_PROPS,
-        defaultConfigParam);
+							defaultConfigParam);
     return SetUtil.fromList(descrlist);
   }
 
@@ -555,8 +569,8 @@ public class EditableDefinablePlugin
     for (Iterator it = descrlist.iterator(); it.hasNext(); ) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       if (cpd.getKey().equals(key)) {
-        it.remove();
-        break;
+	it.remove();
+	break;
       }
     }
   }
@@ -595,7 +609,7 @@ public class EditableDefinablePlugin
     for(Iterator it = rules.iterator(); it.hasNext();) {
       CrawlRuleTemplate crt = new CrawlRuleTemplate((String)it.next());
       if(crt.m_tokens.contains(key)) {
-        return false;
+	return false;
       }
     }
     return true;
@@ -611,9 +625,9 @@ public class EditableDefinablePlugin
     Class[] ce_classes = ce.getDeclaredClasses();
     for (int ic = 0; ic < ce_classes.length; ic++) {
       try {
-        if (ce_classes[ic].newInstance() instanceof CacheException) {
-          exceptions.add(ce_classes[ic].getName());
-        }
+	if (ce_classes[ic].newInstance() instanceof CacheException) {
+	  exceptions.add(ce_classes[ic].getName());
+	}
       }
       catch (IllegalAccessException ex) {
       }
@@ -645,8 +659,8 @@ public class EditableDefinablePlugin
     List descrlist = (List) definitionMap.getCollection(PLUGIN_PROPS, null);
     if (descrlist != null) {
       for (Iterator it = descrlist.iterator(); it.hasNext(); ) {
-        ConfigParamDescr cpd = (ConfigParamDescr) it.next();
-        descrs.add(cpd);
+	ConfigParamDescr cpd = (ConfigParamDescr) it.next();
+	descrs.add(cpd);
       }
     }
   }
@@ -656,8 +670,8 @@ public class EditableDefinablePlugin
     ArrayList args = new ArrayList();
     try {
       for (int i = 0; i < strs.length; i++) {
-        Object val = definitionMap.getMapElement(strs[i]);
-        args.add(val);
+	Object val = definitionMap.getMapElement(strs[i]);
+	args.add(val);
       }
       PrintfFormat pf = new PrintfFormat(format);
       return pf.sprintf(args.toArray()) != null;

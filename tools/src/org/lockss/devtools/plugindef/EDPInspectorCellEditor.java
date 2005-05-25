@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.4 2004-06-14 20:04:56 clairegriffin Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.5 2005-05-25 23:47:37 smorabito Exp $
  */
 
 /*
@@ -47,9 +47,10 @@ import java.awt.*;
  */
 
 public class EDPInspectorCellEditor extends AbstractCellEditor
-    implements TableCellEditor, ActionListener {
+  implements TableCellEditor, ActionListener {
 
   protected static final String PICKER = "picker";
+  protected static final String NOTES = "notes";
   protected static final String AUNAME = "auname";
   protected static final String STARTURL = "starturl";
   protected static final String CRAWLRULE = "rules";
@@ -63,17 +64,18 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
   protected static final int PLUGIN_ID = 1;
   protected static final int PLUGIN_VERSION = 2;
   protected static final int PLUGIN_PARAMS = 3;
-  protected static final int PLUGIN_START_URL = 4;
-  protected static final int PLUGIN_AUNAME =5;
-  protected static final int PLUGIN_CRAWLRULES=6;
-  protected static final int PLUGIN_PAUSETIME=7;
-  protected static final int PLUGIN_CRAWLINTV=8;
-  protected static final int PLUGIN_CRAWLDEPTH=9;
-  protected static final int PLUGIN_CRAWLWINDOW=10;
-  protected static final int PLUGIN_FILTER=11;
-  protected static final int PLUGIN_EXCEPTION=12;
-  protected static final int PLUGIN_EXMAP = 13;
-  protected static final int NUMEDITORS=14;
+  protected static final int PLUGIN_NOTES = 4;
+  protected static final int PLUGIN_START_URL = 5;
+  protected static final int PLUGIN_AUNAME = 6;
+  protected static final int PLUGIN_CRAWLRULES = 7;
+  protected static final int PLUGIN_PAUSETIME = 8;
+  protected static final int PLUGIN_CRAWLINTV = 9;
+  protected static final int PLUGIN_CRAWLDEPTH = 10;
+  protected static final int PLUGIN_CRAWLWINDOW = 11;
+  protected static final int PLUGIN_FILTER = 12;
+  protected static final int PLUGIN_EXCEPTION = 13;
+  protected static final int PLUGIN_EXMAP = 14;
+  protected static final int NUMEDITORS = 15;
 
   protected CellEditorEntry[] editorEntries;
 
@@ -89,38 +91,44 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
 
     // configuration parameters
     editorEntries[PLUGIN_PARAMS] =
-        new CellEditorEntry(PICKER, new ConfigParamDescrPicker(parentFrame),
-                            makeButton(PICKER));
+      new CellEditorEntry(PICKER, new ConfigParamDescrPicker(parentFrame),
+			  makeButton(PICKER));
+
+    // plugin notes
+    editorEntries[PLUGIN_NOTES] =
+      new CellEditorEntry(NOTES, new NotesEditor(parentFrame, "Plugin Notes"),
+			  makeButton(NOTES));
+
     // start url template
     editorEntries[PLUGIN_START_URL] =
-        new CellEditorEntry(STARTURL,
-                            new PrintfEditor(parentFrame,"Starting Url"),
-                            makeButton(STARTURL));
+      new CellEditorEntry(STARTURL,
+			  new PrintfEditor(parentFrame,"Starting Url"),
+			  makeButton(STARTURL));
     // au name template
     editorEntries[PLUGIN_AUNAME] =
-        new CellEditorEntry(AUNAME,
-                            new PrintfEditor(parentFrame, "AU Name"),
-                            makeButton(AUNAME));
+      new CellEditorEntry(AUNAME,
+			  new PrintfEditor(parentFrame, "AU Name"),
+			  makeButton(AUNAME));
     // crawl rules
     editorEntries[PLUGIN_CRAWLRULES] =
-        new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
-                            makeButton(CRAWLRULE));
+      new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
+			  makeButton(CRAWLRULE));
     // pause between fetch
     editorEntries[PLUGIN_PAUSETIME] =
-        new CellEditorEntry(PAUSETIME, new TimeEditor(parentFrame),
-                            makeButton(PAUSETIME));
+      new CellEditorEntry(PAUSETIME, new TimeEditor(parentFrame),
+			  makeButton(PAUSETIME));
     // content crawl interval
     editorEntries[PLUGIN_CRAWLINTV] =
-        new CellEditorEntry(CRAWLINTV, new TimeEditor(parentFrame),
-                            makeButton(CRAWLINTV));
+      new CellEditorEntry(CRAWLINTV, new TimeEditor(parentFrame),
+			  makeButton(CRAWLINTV));
     // filter classes
     editorEntries[PLUGIN_FILTER] =
-        new CellEditorEntry(FILTERS, new FilterRulesEditor(parentFrame),
-                            makeButton(FILTERS));
+      new CellEditorEntry(FILTERS, new FilterRulesEditor(parentFrame),
+			  makeButton(FILTERS));
     // exception remappings
     editorEntries[PLUGIN_EXMAP] =
-        new CellEditorEntry(EXCEPTIONS, new ExceptionsMapEditor(parentFrame),
-                            makeButton(EXCEPTIONS));
+      new CellEditorEntry(EXCEPTIONS, new ExceptionsMapEditor(parentFrame),
+			  makeButton(EXCEPTIONS));
 
   }
   /**
@@ -164,7 +172,7 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
         fireEditingStopped();
       }
     }
-   }
+  }
 
   JButton makeButton(String command) {
     JButton button = new JButton();

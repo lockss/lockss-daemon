@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.4 2004-10-23 01:38:22 clairegriffin Exp $
+ * $Id: EDPCellData.java,v 1.5 2005-05-25 23:47:37 smorabito Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class EDPCellData {
   ArrayList m_listeners = new ArrayList();
 
   EDPCellData(EditableDefinablePlugin edp, String key, Object data,
-             String displayString) {
+	      String displayString) {
     m_plugin = edp;
     m_key = key;
     m_data = data;
@@ -63,6 +63,9 @@ public class EDPCellData {
     }
     else if(key.equals(edp.PLUGIN_VERSION)) {
       m_data = edp.getPluginVersion();
+    }
+    else if(key.equals(edp.PLUGIN_NOTES)) {
+      m_data = edp.getPluginNotes();
     }
     else if(key.equals(edp.PLUGIN_PROPS)) {
       m_data = edp.getConfigParamDescrs();
@@ -100,7 +103,7 @@ public class EDPCellData {
       m_data = edp.getSingleExceptionHandlers();
     }
     else if(key.equals(edp.CM_CRAWL_TYPE)) {
-      m_data =edp.getCrawlType();
+      m_data = edp.getCrawlType();
     }
   }
 
@@ -148,13 +151,13 @@ public class EDPCellData {
   public String toString() {
     if(m_displayString == null) {
       if (m_data instanceof Collection || m_data instanceof Map) {
-        m_displayString = ELLIPSIS;
+	m_displayString = ELLIPSIS;
       }
       else if (m_data == null) {
-        m_displayString = "NONE";
+	m_displayString = "NONE";
       }
       else {
-        m_displayString = m_data.toString();
+	m_displayString = m_data.toString();
       }
     }
     return m_displayString;
@@ -187,6 +190,11 @@ public class EDPCellData {
     else if(m_key.equals(m_plugin.PLUGIN_VERSION)) {
       m_data = data;
       m_plugin.setPluginVersion((String)m_data);
+    }
+    else if(m_key.equals(m_plugin.PLUGIN_NOTES)) {
+      m_data = data;
+      m_plugin.setPluginNotes((String)m_data);
+      m_displayString = data;
     }
     else if(m_key.equals(m_plugin.AU_CRAWL_DEPTH)) {
       m_data = new Integer(data);
