@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.33 2005-05-12 00:25:15 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.34 2005-05-25 18:14:13 troberts Exp $
  */
 
 /*
@@ -169,6 +169,92 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
    }
+
+  public void testDoCrawlNotRefetchPages() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/blah2.html";
+    String url3="http://www.example.com/blah3.html";
+    String url4="http://www.example.com/blah4.html";
+    mau.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url1, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url2, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url3, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url4, SetUtil.set(url1, url2, url3, url4));
+    mau.addUrl(url1, false, true);
+    mau.addUrl(url2, false, true);
+    mau.addUrl(url3, false, true);
+    mau.addUrl(url4, false, true);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+    crawlRule.addUrlToCrawl(url4);
+
+    assertTrue(crawler.doCrawl0());
+    Set expected =
+      SetUtil.set(permissionPage, startUrl, url1, url2, url3, url4);
+    assertEquals(expected, cus.getCachedUrls());
+
+    assertNumTimesCrawled(1, url1, cus);
+    assertNumTimesCrawled(1, url2, cus);
+    assertNumTimesCrawled(1, url3, cus);
+    assertNumTimesCrawled(1, url4, cus);
+    assertNumTimesCrawled(1, startUrl, cus);
+   }
+
+  public void assertNumTimesCrawled(int num, String url,
+				    MockCachedUrlSet cus) {
+    assertEquals("Crawled "+url+" an unexpected number of times.",
+		 1, cus.getNumCacheAttempts(url));
+  }
+
+  public void testRecrawlNotRefetchPages() {
+    SpecialParserArchivalUnit mau = new SpecialParserArchivalUnit(2);
+    mau.setPlugin(new MockPlugin());
+    mau.setAuId("MyMockTestAu");
+    mau.addUrl(permissionPage);
+    mau.setParser(parser);
+
+    spec =
+      new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
+			  crawlRule, 90);
+    crawler = new MyNewContentCrawler(mau, spec, new MockAuState());
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(1));
+
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    String url2="http://www.example.com/blah2.html";
+    String url3="http://www.example.com/blah3.html";
+    String url4="http://www.example.com/blah4.html";
+    mau.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url1, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url2, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url3, SetUtil.set(url1, url2, url3, url4));
+    parser.addUrlSetToReturn(url4, SetUtil.set(url1, url2, url3, url4));
+    mau.addUrl(url1, false, true);
+    mau.addUrl(url2, false, true);
+    mau.addUrl(url3, false, true);
+    mau.addUrl(url4, false, true);
+    crawlRule.addUrlToCrawl(url1);
+    crawlRule.addUrlToCrawl(url2);
+    crawlRule.addUrlToCrawl(url3);
+    crawlRule.addUrlToCrawl(url4);
+
+    assertTrue(crawler.doCrawl0());
+    Set expected =
+      SetUtil.set(permissionPage, startUrl, url1, url2, url3, url4);
+    assertEquals(expected, cus.getCachedUrls());
+
+    assertNumTimesCrawled(1, url1, cus);
+    assertNumTimesCrawled(1, url2, cus);
+    assertNumTimesCrawled(1, url3, cus);
+    assertNumTimesCrawled(1, url4, cus);
+    assertNumTimesCrawled(1, startUrl, cus);
+   }
+
 
   public void testReturnsFalseWhenFailingUnretryableExceptionThrownOnStartUrl() {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
@@ -629,6 +715,23 @@ public class TestNewContentCrawler extends LockssTestCase {
     }
   }
 
+  private class SpecialParserArchivalUnit extends MockArchivalUnit {
+    int numTimesToParse;
+
+    public SpecialParserArchivalUnit(int numTimesToParse) {
+      super();
+      this.numTimesToParse = numTimesToParse;
+    }
+
+    public ContentParser getContentParser() {
+      if (numTimesToParse > 0) {
+	numTimesToParse--;
+	return parser;
+      }
+      return null;
+    }
+  }
+
   private class MyMockArchivalUnit extends MockArchivalUnit {
     MyMockUrlCacher lastMmuc;
 
@@ -636,7 +739,6 @@ public class TestNewContentCrawler extends LockssTestCase {
       lastMmuc = new MyMockUrlCacher(url, this);
       return lastMmuc;
     }
-
   }
 
 
