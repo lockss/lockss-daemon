@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.1 2005-05-25 07:36:36 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.2 2005-05-25 19:24:12 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,8 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     // make and init a real Pluginmgr
     pluginMgr = daemon.getPluginManager();
 
-    // make and start a UrlManager to set up the URLStreamHandlerFactory
+    // Make and start a UrlManager to set up the URLStreamHandlerFactory.
+    // This is all so the cuurl created below can be opened by the parser
     UrlManager uMgr = new UrlManager();
     uMgr.initService(daemon);
     daemon.setDaemonInited(true);
@@ -102,7 +103,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     assertFalse(au.shouldCallTopLevelPoll(null));
   }
 
-  public void testRecomputeRegName() throws Exception {
+  public void testRecomputeRegNameTitle() throws Exception {
     Properties auProps = new Properties();
     auProps.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
     Configuration auConfig = ConfigurationUtil.fromProps(auProps);
@@ -111,8 +112,37 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
     PluginTestUtil.registerArchivalUnit(regPlugin, au);
     TypedEntryMap map = au.getProperties();
     au.addContent(map.getString(ArchivalUnit.AU_START_URL),
-		  "<html><head>\n<title>This Title No Verb</title>");
+		  "<html><head><h2>foobar</h2>\n" +
+		  "<title>This Title No Verb</title></head></html>");
     assertEquals("This Title No Verb", au.recomputeRegName());
+  }
+
+  public void testRecomputeRegNameTowTitles() throws Exception {
+    Properties auProps = new Properties();
+    auProps.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    Configuration auConfig = ConfigurationUtil.fromProps(auProps);
+    MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
+    au.setConfiguration(auConfig);
+    PluginTestUtil.registerArchivalUnit(regPlugin, au);
+    TypedEntryMap map = au.getProperties();
+    au.addContent(map.getString(ArchivalUnit.AU_START_URL),
+		  "<html><head><h2>foobar</h2>\n" +
+		  "<title>First Title No Verb</title>" +
+		  "<title>Second Title No Verb</title></head></html>");
+    assertEquals("First Title No Verb", au.recomputeRegName());
+  }
+
+  public void testRecomputeRegNameNoTitle() throws Exception {
+    Properties auProps = new Properties();
+    auProps.setProperty(ConfigParamDescr.BASE_URL.getKey(), baseUrl);
+    Configuration auConfig = ConfigurationUtil.fromProps(auProps);
+    MyRegistryArchivalUnit au = new MyRegistryArchivalUnit(regPlugin);
+    au.setConfiguration(auConfig);
+    PluginTestUtil.registerArchivalUnit(regPlugin, au);
+    TypedEntryMap map = au.getProperties();
+    au.addContent(map.getString(ArchivalUnit.AU_START_URL),
+		  "<html><h3>This Page No Title</h3></html>");
+    assertEquals(null, au.recomputeRegName());
   }
 
   // Both of these methods are currently empty implementations on
