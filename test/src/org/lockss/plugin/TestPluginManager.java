@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.58 2005-05-25 07:35:16 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.59 2005-05-26 08:31:28 tlipkis Exp $
  */
 
 /*
@@ -198,20 +198,38 @@ public class TestPluginManager extends LockssTestCase {
     String n1 = "org.lockss.test.MockPlugin";
     String n2 = ThrowingMockPlugin.class.getName();
     assertEmpty(mgr.getRegisteredPlugins());
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_REGISTRY,
-				  n1 + ";" + n2);
+    Properties p = new Properties();
+    p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
     Plugin p1 = mgr.getPlugin(mgr.pluginKeyFromName(n1));
     assertNotNull(p1);
     assertTrue(p1.toString(), p1 instanceof MockPlugin);
     Plugin p2 = mgr.getPlugin(mgr.pluginKeyFromName(n2));
     assertNotNull(p2);
     assertTrue(p2.toString(), p2 instanceof ThrowingMockPlugin);
-    assertEquals(2, mgr.getRegisteredPlugins().size());
-    ConfigurationUtil.setFromArgs(PluginManager.PARAM_PLUGIN_REGISTRY, n1);
-    assertEquals(1, mgr.getRegisteredPlugins().size());
+    assertEquals(SetUtil.set(p1, p2),
+		 SetUtil.theSet(mgr.getRegisteredPlugins()));
+    p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(SetUtil.set(p1, p2),
+		 SetUtil.theSet(mgr.getRegisteredPlugins()));
+    p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(SetUtil.set(p1, p2),
+		 SetUtil.theSet(mgr.getRegisteredPlugins()));
+    p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
+    p.setProperty(PluginManager.PARAM_PLUGIN_RETRACT, n2);
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    assertEquals(SetUtil.set(p1),
+		 SetUtil.theSet(mgr.getRegisteredPlugins()));
     assertNull(mgr.getPlugin(mgr.pluginKeyFromName(n2)));
-    assertNotNull(mgr.getPlugin(mgr.pluginKeyFromName(n1)));
-    assertTrue(mgr.getPlugin(mgr.pluginKeyFromName(n1)) instanceof MockPlugin);
+    assertSame(p1, mgr.getPlugin(mgr.pluginKeyFromName(n1)));
+    p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
+    p.setProperty(PluginManager.PARAM_PLUGIN_RETRACT, "");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    p2 = mgr.getPlugin(mgr.pluginKeyFromName(n2));
+    assertNotNull(p2);
+    assertTrue(p2.toString(), p2 instanceof ThrowingMockPlugin);
   }
 
   public void testEnsurePluginLoadedXml() throws Exception {

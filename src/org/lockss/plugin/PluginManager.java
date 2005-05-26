@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.134 2005-05-25 07:35:17 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.135 2005-05-26 08:31:29 tlipkis Exp $
  */
 
 /*
@@ -72,6 +72,10 @@ public class PluginManager
   /** A list of plugins to load at startup. */
   static final String PARAM_PLUGIN_REGISTRY =
     Configuration.PREFIX + "plugin.registry";
+
+  /** List of plugins not to load, or to remove if already loaded. */
+  static final String PARAM_PLUGIN_RETRACT =
+    Configuration.PREFIX + "plugin.retract";
 
   static final String PARAM_REMOVE_STOPPED_AUS =
     Configuration.PREFIX + "plugin.removeStoppedAus";
@@ -159,6 +163,9 @@ public class PluginManager
   private final Attributes.Name LOADABLE_PLUGIN_ATTR =
     new Attributes.Name("Lockss-Plugin");
 
+  // List of names of plugins not to load
+  List retract = null;
+
   // maps plugin key(not id) to plugin
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
   private Map auMap = Collections.synchronizedMap(new HashMap());
@@ -234,7 +241,7 @@ public class PluginManager
     Configuration config = Configuration.getCurrentConfig();
     log.debug("Initializing loadable plugin registries before starting AUs");
     initLoadablePluginRegistries(config.getList(PARAM_PLUGIN_REGISTRIES));
-    initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
+    initPluginRegistry(config);
     configureAllPlugins(config);
 
     loadablePluginsReady = true;
@@ -281,8 +288,10 @@ public class PluginManager
       }
 
       // Process the built-in plugin registry.
-      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY)) {
-	initPluginRegistry(config.getList(PARAM_PLUGIN_REGISTRY));
+      if (changedKeys.contains(PARAM_PLUGIN_REGISTRY) ||
+	  changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
+	retract = config.getList(PARAM_PLUGIN_RETRACT);
+	initPluginRegistry(config);
       }
 
       // Process any changed AU config
@@ -887,7 +896,14 @@ public class PluginManager
     if (pluginMap.containsKey(pluginKey)) {
       return new PluginInfo((Plugin)pluginMap.get(pluginKey), loader, null);
     }
-
+    if (retract != null && !retract.isEmpty()) {
+      String name = pluginNameFromKey(pluginKey);
+      if (retract.contains(name)) {
+	log.debug3("Not loading " + name +
+		   " because it's on the retract list");
+	return null;
+      }
+    }
     if (loader == null) {
       loader = this.getClass().getClassLoader();
     }
@@ -1025,6 +1041,12 @@ public class PluginManager
     }
     pluginMap.put(pluginKey, plugin);
     resetTitles();
+  }
+
+  void removePlugin(String key) {
+    log.debug("Removing plugin " + key);
+    pluginMap.remove(key);
+    pluginfoMap.remove(key);
   }
 
   protected String getConfigurablePluginName() {
@@ -1301,9 +1323,9 @@ public class PluginManager
     processRegistryAus(loadAus);
   }
 
-
   // Synch the plugin registry with the plugins listed in names
-  void initPluginRegistry(List nameList) {
+  void initPluginRegistry(Configuration config) {
+    List nameList = config.getList(PARAM_PLUGIN_REGISTRY);
     Collection newKeys = new HashSet();
     for (Iterator iter = nameList.iterator(); iter.hasNext(); ) {
       String name = (String)iter.next();
@@ -1312,21 +1334,19 @@ public class PluginManager
       newKeys.add(key);
     }
 
-    // remove plugins that are no longer listed, unless they have one or
-    // more configured AUs
+    // remove plugins on retract list, unless they have one or more
+    // configured AUs
     synchronized (pluginMap) {
-      for (Iterator iter = pluginMap.entrySet().iterator(); iter.hasNext(); ) {
-	Map.Entry entry = (Map.Entry)iter.next();
-	Plugin plug = (Plugin)entry.getValue();
-	String key = (String)entry.getKey();
-	if (!isInternalPlugin(plug) &&
-	    !isLoadablePlugin(plug) &&
-// 	    !pluginfoMap.containsKey(key) &&
-	    !newKeys.contains(key)) {
-	  Configuration tree = currentAllPlugs.getConfigTree(key);
-	  if (tree == null || tree.isEmpty()) {
-	    log.debug("Removing plugin " + key, new Throwable());
-	    iter.remove();
+      if (retract != null) {
+	for (Iterator iter = retract.iterator(); iter.hasNext(); ) {
+	  String name = (String)iter.next();
+	  String key = pluginKeyFromName(name);
+	  Plugin plug = getPlugin(key);
+	  if (plug != null && !isInternalPlugin(plug)) {
+	    Configuration tree = currentAllPlugs.getConfigTree(key);
+	    if (tree == null || tree.isEmpty()) {
+	      removePlugin(key);
+	    }
 	  }
 	}
       }
