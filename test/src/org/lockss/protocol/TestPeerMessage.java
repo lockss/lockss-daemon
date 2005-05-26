@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerMessage.java,v 1.2 2005-05-20 07:28:24 tlipkis Exp $
+ * $Id: TestPeerMessage.java,v 1.3 2005-05-26 08:33:13 tlipkis Exp $
  */
 
 /*
@@ -163,10 +163,16 @@ public class TestPeerMessage extends LockssTestCase {
     assertNotEquals(pm1, makePeerMessage(2));
     assertNotEquals(pm1, makePeerMessage(1, s1));
 
-    assertEqualsNotSame(makePeerMessage(1, ""), makePeerMessage(1, ""));
-    assertEqualsNotSame(makePeerMessage(1, s1), makePeerMessage(1, s1));
-    assertNotEquals(makePeerMessage(1, s1), makePeerMessage(0, s1));
-    assertNotEquals(makePeerMessage(1, s1), makePeerMessage(1, s1 + "A"));
+    assertEqualsNotSame(makePeerMessage(1, ""),
+			makePeerMessage(1, ""));
+    assertEqualsNotSame(makePeerMessage(1, s1),
+			makePeerMessage(1, new String(s1)));
+    assertNotEquals(makePeerMessage(1, s1),
+		    makePeerMessage(0, s1));
+    assertNotEquals(makePeerMessage(1, s1),
+		    makePeerMessage(1, s1 + "A"));
+    assertNotEquals(makePeerMessage(1, s1 + "A"),
+		    makePeerMessage(1, s1 + "B"));
   }
 
   public void testEqualsButSender() throws Exception {
