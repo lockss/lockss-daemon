@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.2 2005-05-25 07:35:51 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.3 2005-05-26 08:31:58 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.util.*;
 import org.lockss.app.*;
 import org.lockss.daemon.status.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.plugin.definable.DefinablePlugin;
 
 /** Base class for plugin status accessors, and static register/unregister
@@ -44,6 +45,12 @@ class PluginStatus {
   static Logger log = Logger.getLogger("PluginStatus");
   final static String PLUGIN_TABLE = "Plugins";
   final static String PLUGIN_DETAIL = "PluginDetail";
+
+  /** If true the definition of definable plugins will be displayed along
+   * with its details. */
+  static final String PARAM_PLUGIN_SHOWDEF =
+    Configuration.PREFIX + "plugin.showDef";
+  static final boolean DEFAULT_PLUGIN_DHOWDEF = false;
 
   LockssDaemon daemon;
   PluginManager mgr;
@@ -200,21 +207,21 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
   public void populateTable(StatusTable table, Plugin plug) {
     table.setTitle(getTitle(plug));
     table.setDefaultSortRules(sortRules);
-    if (plug instanceof DefinablePlugin) {
+    ExternalizableMap plugDef = null;
+    if (ConfigManager.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
+				      DEFAULT_PLUGIN_DHOWDEF) &&
+	plug instanceof DefinablePlugin) {
+      DefinablePlugin dplug = (DefinablePlugin)plug;
+      plugDef = dplug.getDefinitionMap();
       table.setColumnDescriptors(colDescs);
-      table.setRows(getRows((DefinablePlugin)plug));
+      table.setRows(getRows(dplug, plugDef));
     }
-    // isLoadable()
-    if (false) {
-      table.setRows(getRows((DefinablePlugin)plug));
-    }
-    table.setSummaryInfo(getSummaryInfo(plug));
+    table.setSummaryInfo(getSummaryInfo(plug, plugDef));
   }
 
-  public List getRows(DefinablePlugin plug) {
+  public List getRows(DefinablePlugin plug, ExternalizableMap plugDef) {
     List rows = new ArrayList();
-    ExternalizableMap def = plug.getDefinitionMap();
-    for (Iterator iter = def.entrySet().iterator(); iter.hasNext(); ) {
+    for (Iterator iter = plugDef.entrySet().iterator(); iter.hasNext(); ) {
       Map.Entry entry = (Map.Entry)iter.next();
       String key = (String)entry.getKey();
       String val = entry.getValue().toString();
@@ -226,7 +233,7 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     return rows;
   }
 
-  private List getSummaryInfo(Plugin plug) {
+  private List getSummaryInfo(Plugin plug, ExternalizableMap plugDef) {
     List res = new ArrayList();
     res.add(new StatusTable.SummaryInfo("Name",
 					ColumnDescriptor.TYPE_STRING,
@@ -240,6 +247,14 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 					ColumnDescriptor.TYPE_STRING,
 					plug.getVersion()));
 
+    if (plugDef != null) {
+      String notes = plugDef.getString(DefinablePlugin.CM_NOTES_KEY, null);
+      if (notes != null) {
+	res.add(new StatusTable.SummaryInfo("Notes",
+					    ColumnDescriptor.TYPE_STRING,
+					    HtmlUtil.htmlEncode(notes)));
+      }
+    }
     res.add(new StatusTable.SummaryInfo("# AUs",
 					ColumnDescriptor.TYPE_STRING,
 					plug.getAllAus().size()));
