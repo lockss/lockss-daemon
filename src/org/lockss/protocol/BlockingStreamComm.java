@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.3 2005-05-24 07:26:06 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.4 2005-05-26 08:32:32 tlipkis Exp $
  */
 
 /*
@@ -84,10 +84,14 @@ public class BlockingStreamComm
     PREFIX + "timeout.connect";
   static final long DEFAULT_CONNECT_TIMEOUT = 2 * Constants.MINUTE;
 
-  /** Data timeout, channel is aborted if read times out */
+  /** Data timeout (SO_TIMEOUT), channel is aborted if read times out.
+   * This should be disabled (zero) because the read side of a channel may
+   * legitimately be idle for a long time (if the channel is sending), and
+   * interrupted reads apparently cannot reliably be resumed.  If the
+   * channel is truly idle, the send side should close it. */
   public static final String PARAM_DATA_TIMEOUT =
     PREFIX + "timeout.data";
-  static final long DEFAULT_DATA_TIMEOUT = 10 * Constants.MINUTE;
+  static final long DEFAULT_DATA_TIMEOUT = 0;
 
   /** Time after which idle channel will be closed */
   public static final String PARAM_CHANNEL_IDLE_TIME =
@@ -104,6 +108,12 @@ public class BlockingStreamComm
   public static final String PARAM_MIN_FILE_MESSAGE_SIZE =
     PREFIX + "minFileMessageSize";
   static final int DEFAULT_MIN_FILE_MESSAGE_SIZE = 1024;
+
+  /** FilePeerMessage will be used for messages larger than this, else
+   * MemoryPeerMessage */
+  public static final String PARAM_MAX_MESSAGE_SIZE =
+    PREFIX + "maxMessageSize";
+  static final int DEFAULT_MAX_MESSAGE_SIZE = 100 * 1024;
 
   /** Dir for PeerMessage data storage */
   public static final String PARAM_DATA_DIR =
@@ -127,6 +137,7 @@ public class BlockingStreamComm
 
 
   private int paramMinFileMessageSize = DEFAULT_MIN_FILE_MESSAGE_SIZE;
+  private int paramMaxMessageSize = DEFAULT_MAX_MESSAGE_SIZE;
   private File dataDir = null;
   private int paramBacklog = DEFAULT_LISTEN_BACKLOG;
   private int paramMaxChannels = DEFAULT_MAX_CHANNELS;
@@ -137,6 +148,7 @@ public class BlockingStreamComm
   private long paramSoTimeout = DEFAULT_DATA_TIMEOUT;
   private long paramSendWakeupTime = DEFAULT_SEND_WAKEUP_TIME;
   private long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
+  private long lastHungCheckTime = 0;
   private PooledExecutor pool;
 
   private boolean enabled = DEFAULT_ENABLED;
@@ -210,6 +222,8 @@ public class BlockingStreamComm
       // these params can be changed on the fly
       paramMinFileMessageSize = config.getInt(PARAM_MIN_FILE_MESSAGE_SIZE,
 					      DEFAULT_MIN_FILE_MESSAGE_SIZE);
+      paramMaxMessageSize = config.getInt(PARAM_MAX_MESSAGE_SIZE,
+					  DEFAULT_MAX_MESSAGE_SIZE);
       if (changedKeys.contains(PARAM_DATA_DIR)) {
 	String paramDataDir = config.get(PARAM_DATA_DIR, DEFAULT_DATA_DIR);
 	File dir = new File(paramDataDir);
@@ -303,6 +317,14 @@ public class BlockingStreamComm
 
   long getChannelIdleTime() {
     return paramChannelIdleTime;
+  }
+
+  long getChannelHungTime() {
+    return paramChannelIdleTime + 1000;
+  }
+
+  int getMaxMessageSize() {
+    return paramMaxMessageSize;
   }
 
   PeerIdentity getMyPeerId() {
@@ -523,6 +545,20 @@ public class BlockingStreamComm
     }
   }
 
+  // poke channels that might have hung sender
+  void checkHungChannels() {
+    log.debug3("Doing hung check");
+    List lst;
+    synchronized (channels) {
+      // make copy while map is locked
+      lst = new ArrayList(channels.values());
+    }
+    for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+      BlockingPeerChannel chan = (BlockingPeerChannel)iter.next();
+      chan.checkHung();
+    }
+  }
+
   /**
    * Execute the runnable in a pool thread
    * @param run the Runnable to be run
@@ -635,10 +671,9 @@ public class BlockingStreamComm
   // Receive thread
   private class ReceiveThread extends LockssThread {
     private volatile boolean goOn = true;
-    private long sleep = Constants.MINUTE;
-    private Deadline timeout = Deadline.in(sleep);
-
-    private ReceiveThread(String name) {
+    private Deadline timeout = Deadline.in(getChannelHungTime());
+    
+    ReceiveThread(String name) {
       super(name);
     }
 
@@ -653,7 +688,7 @@ public class BlockingStreamComm
 	try {
 	  synchronized (timeout) {
 	    if (goOn) {
-	      timeout.expireIn(sleep);
+	      timeout.expireIn(getChannelHungTime());
 	    }
 	  }
 	  if (log.isDebug3()) log.debug3("rcvQueue.get(" + timeout + ")");
@@ -666,6 +701,11 @@ public class BlockingStreamComm
 	      log.warning("Non-PeerMessage on rcv queue" + qObj);
 	    }
 	  }
+	  if (TimeBase.msSince(lastHungCheckTime) >
+	      getChannelHungTime()) {
+	    checkHungChannels();
+	    lastHungCheckTime = TimeBase.nowMs();
+	  }	    
 	} catch (InterruptedException e) {
 	  // just wake up and check for exit
 	} finally {

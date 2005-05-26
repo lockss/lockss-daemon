@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.2 2005-05-20 07:27:59 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.3 2005-05-26 08:32:31 tlipkis Exp $
  */
 
 /*
@@ -54,6 +54,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   static Logger log = Logger.getLogger("TestBlockingStreamComm");
 
+  // limit on number of BlockingStreamComm instances, and number created by
+  // testMultipleChannels
   static final int MAX_COMMS = 5;
 
   static final int HEADER_LEN = PeerChannel.HEADER_LEN;
@@ -65,7 +67,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
   static final byte OP_PEERID = PeerChannel.OP_PEERID;
   static final byte OP_DATA = PeerChannel.OP_DATA;
 
-  private MockLockssDaemon daemon;
+  // Arrays store multiple instances of test objects (ports, PeerIds,
+  // queues, etc).  Usually used in parallel (comms[n] has local id
+  // pids[n], on port testports[n]
 
   int[] testports = new int[MAX_COMMS];
   PeerIdentity[] pids = new PeerIdentity[MAX_COMMS];
@@ -73,26 +77,31 @@ public class TestBlockingStreamComm extends LockssTestCase {
   MyBlockingStreamComm[] comms = new MyBlockingStreamComm[MAX_COMMS];
   SimpleQueue[] rcvdMsgss = new SimpleQueue[MAX_COMMS];
 
+  // Convenience equivalents to [1] and [2] entries in arrays
   int testport1, testport2;
   PeerIdentity pid1, pid2;
   PeerAddress.Tcp pad1, pad2;
   MyBlockingStreamComm comm1, comm2;
-  SimpleQueue rcvdMsgs1;
-  SimpleQueue rcvdMsgs2;
+  SimpleQueue rcvdMsgs1, rcvdMsgs2;
 
   String testStr1 = "This is test data 1";
   String testStr2 = "This message contains a null \000 character";
   String testStr3 =
     "They that can give up essential liberty to obtain " +
     "a little temporary safety deserve neither liberty nor safety.";
+
   PeerMessage msg1, msg2, msg3;
 
-  private byte[] rcvHeader = new byte[BlockingPeerChannel.HEADER_LEN];
-  private byte[] sndHeader = new byte[BlockingPeerChannel.HEADER_LEN];
+  // buffers for manually sending to or receiving from an scomm under test
+  private byte[] rcvHeader = new byte[HEADER_LEN];
+  private byte[] sndHeader = new byte[HEADER_LEN];
   private byte[] peerbuf = new byte[BlockingPeerChannel.MAX_PEERID_LEN];
 
-  Properties cprops = new Properties();
+  private MockLockssDaemon daemon;
   private IdentityManager idmgr;
+
+  Properties cprops = new Properties();	// some tests add more to this and
+					// reconfigure
   SimpleBinarySemaphore sem;
   SimpleQueue assocQ;
   boolean useInternalSockets = false;
@@ -109,7 +118,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     catch (IOException ex) {
       fail("unable to create a temporary directory");
     }
-
     cprops.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     cprops.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
@@ -153,15 +161,30 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
+  /** Create a PeerIdentity for a port on localhost
+   */
+  void setupRealPid(int ix) throws IOException {
+    if (pids[ix] == null) {
+      testports[ix] = findUnboundTcpPort();
+      pids[ix] = findPeerId("127.0.0.1", testports[ix]);
+      pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
+      peerhack(ix);
+    }
+  }
+
   PeerIdentity findPeerId(String addr, int port) {
     String id = IdentityManager.ipAddrToKey(addr, port);
     return idmgr.findPeerIdentity(id);
   }
 
-  void setupRealPid(int ix) throws IOException {
+  /** Create a PeerIdentity for an InternalSocket
+   */
+  void setupInternalPid(int ix) throws IOException {
     if (pids[ix] == null) {
-      testports[ix] = findUnboundTcpPort();
-      pids[ix] = findPeerId("127.0.0.1", testports[ix]);
+      InetAddress ip = InternalSocket.internalInetAddr;
+      String addr = ip.getHostAddress();
+      testports[ix] = InternalServerSocket.findUnboundPort(2000);
+      pids[ix] = findPeerId(addr, testports[ix]);
       pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
       peerhack(ix);
     }
@@ -183,17 +206,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
-  void setupInternalPid(int ix) throws IOException {
-    if (pids[ix] == null) {
-      InetAddress ip = InternalSocket.internalInetAddr;
-      String addr = ip.getHostAddress();
-      testports[ix] = InternalServerSocket.findUnboundPort(2000);
-      pids[ix] = findPeerId(addr, testports[ix]);
-      pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
-      peerhack(ix);
-    }
-  }
-
+  /** Create and start BlockingStreamComm instance ix, register message
+   * handlers for it
+   */
   void setupComm(int ix) throws IOException {
     if (pids[ix] == null) setupPid(ix);
     comms[ix] = new MyBlockingStreamComm(pids[ix]);
@@ -236,7 +251,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     msg3 = makePeerMessage(3, testStr3);
   }
 
-
   PeerMessage makePeerMessage(int proto) throws IOException {
     PeerMessage pm = new MyMemoryPeerMessage();
     pm.setProtocol(proto);
@@ -255,9 +269,26 @@ public class TestBlockingStreamComm extends LockssTestCase {
     return pm;
   }
 
+  PeerMessage makePeerMessage(int proto, String data, int rpt)
+      throws IOException {
+    PeerMessage pm = makePeerMessage(proto);
+    byte[] bdata = data.getBytes();
+    OutputStream os = pm.getOutputStream();
+    for (int ix = rpt; ix > 0; ix--) {
+      os.write(bdata);
+    }
+    os.close();
+    return pm;
+  }
+
+  /** Write a peerid message to an output stream */
+  void writePeerId(OutputStream outs, PeerIdentity pid) throws IOException {
+    writePeerId(outs, pid.getIdString());
+  }
+
   /** Write a peerid message to an output stream */
   void writePeerId(OutputStream outs, String idstr) throws IOException {
-    writeHeader(outs, PeerChannel.OP_PEERID, idstr.length(), 0);
+    writeHeader(outs, OP_PEERID, idstr.length(), 0);
     outs.write(idstr.getBytes());
     outs.flush();
   }
@@ -288,13 +319,13 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   /** Assert that buf contains a valid header */
   public void assertHeader(byte[] buf) {
-    assertEquals(PeerChannel.HEADER_CHECK, buf[PeerChannel.HEADER_OFF_CHECK]);
+    assertEquals(HEADER_CHECK, buf[HEADER_OFF_CHECK]);
   }
 
   /** Assert that buf contains a valid header with expected op */
   public void assertHeaderOp(byte[] buf, int op) {
     assertHeader(buf);
-    assertEquals(op, buf[PeerChannel.HEADER_OFF_OP]);
+    assertEquals(op, buf[HEADER_OFF_OP]);
   }
 
   /** Assert that messages are the same except for sender id */
@@ -445,13 +476,13 @@ public class TestBlockingStreamComm extends LockssTestCase {
     SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
     InputStream ins = sock.getInputStream();
     StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, PeerChannel.OP_PEERID);
+    assertHeaderOp(rcvHeader, OP_PEERID);
     assertEquals(pid1.getIdString(), rcvMsgData(ins));
     intr1.cancel();
     intr2.cancel();
   }
 
-  public void testIncomingPeerId(String peerid, boolean isGoodId)
+  public void testIncomingRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
     log.debug("Incoming send pid " + peerid); 
     setupComm1();
@@ -461,7 +492,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     InputStream ins = sock.getInputStream();
     OutputStream outs = sock.getOutputStream();
     StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
-    assertHeaderOp(rcvHeader, PeerChannel.OP_PEERID);
+    assertHeaderOp(rcvHeader, OP_PEERID);
     assertEquals(pid1.getIdString(), rcvMsgData(ins));
     comm1.setAssocQueue(assocQ);
     writePeerId(outs, peerid);
@@ -485,24 +516,24 @@ public class TestBlockingStreamComm extends LockssTestCase {
     intr2.cancel();
   }
 
-  public void testIncomingGoodPeerId1() throws IOException {
+  public void testIncomingRcvGoodPeerId1() throws IOException {
     setupPid(2);
-    testIncomingPeerId(pid2.getIdString(), true);
+    testIncomingRcvPeerId(pid2.getIdString(), true);
   }
 
-  public void testIncomingBadPeerId1() throws IOException {
+  public void testIncomingRcvBadPeerId1() throws IOException {
     // illegal tcp port
     int bogusport = 0x10005;
     String bogus1 = findPeerId("127.0.0.1", bogusport).getIdString();
-    testIncomingPeerId(bogus1, false);
+    testIncomingRcvPeerId(bogus1, false);
   }
 
-  public void testIncomingBadPeerId2() throws IOException {
+  public void testIncomingRcvBadPeerId2() throws IOException {
     // V1 (non-stream) id
-    testIncomingPeerId("127.0.0.1", false);
+    testIncomingRcvPeerId("127.0.0.1", false);
   }
 
-  public void testOrig() throws IOException {
+  public void testOriginate() throws IOException {
     setupComm1();
     setupPid(2);
     ServerSocket server = new ServerSocket(pad2.getPort());
@@ -519,7 +550,17 @@ public class TestBlockingStreamComm extends LockssTestCase {
     intr2.cancel();
   }
 
-  public void testOrigPeerId(String peerid, boolean isGoodId)
+  public void testOriginateToBadPeerId() throws IOException {
+    setupComm1();
+    PeerIdentity bad1 = findPeerId("127.0.0.1", 100000);
+    try {
+      comm1.sendTo(msg1, bad1, null);
+      fail("sendTo(..., " + bad1 + ") should throw");
+    } catch (IdentityManager.MalformedIdentityKeyException e) {
+    }
+  }
+
+  public void testOriginateRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
     log.debug("Orig, send pid " + peerid);
     setupComm1();
@@ -554,24 +595,122 @@ public class TestBlockingStreamComm extends LockssTestCase {
     intr.cancel();
   }
 
-  public void testOrigGoodPeerId1() throws IOException {
+  public void testOriginateRcvGoodPeerId1() throws IOException {
     setupPid(2);
-    testOrigPeerId(pid2.getIdString(), true);
+    testOriginateRcvPeerId(pid2.getIdString(), true);
   }
 
-  public void testOrigBadPeerId1() throws IOException {
+  public void testOriginateRcvBadPeerId1() throws IOException {
     // illegal tcp port
     int bogusport = 0x10005;
     String bogus1 = findPeerId("127.0.0.1", bogusport).getIdString();
-    testOrigPeerId(bogus1, false);
+    testOriginateRcvPeerId(bogus1, false);
   }
 
   // any illegal pid sent to originator causes conflict (can't be equal to
   // actual address used to open conn) before legality check, so this is
   // equivalent to the previous test
-  public void testOrigBadPeerId2() throws IOException {
+  public void testOriginateRcvBadPeerId2() throws IOException {
     // V1 (non-stream) id
-    testOrigPeerId("127.0.0.1", false);
+    testOriginateRcvPeerId("127.0.0.1", false);
+  }
+
+  // Don't know how to test this without actually waiting for socket to timeout
+  public void XXXtestHangingClose() throws IOException {
+    TimeBase.setSimulated(1000);
+    cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "5000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    setupComm1();
+    setupPid(2);
+    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT, sock);
+    InputStream ins = sock.getInputStream();
+    OutputStream outs = sock.getOutputStream();
+    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+    assertHeaderOp(rcvHeader, OP_PEERID);
+    assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    comm1.setAssocQueue(assocQ);
+    writePeerId(outs, pid2);
+    // wait for it to get peerid before sending to it
+    List event;
+    assertNotNull("Channel didn't assoc",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't assoc",
+		 "assoc", event.get(0));
+    assertEquals(1, comm1.channels.size());
+    msg1 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
+    int msgsize = msg1.getDataSize();
+    int tobuffer = 20 * (sock.getReceiveBufferSize() +
+			sock.getSendBufferSize());
+    for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
+//       comm1.sendTo(msg1, pid2, null);
+    }
+    assertEquals(1, comm1.channels.size());
+    BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
+    assertNotNull("Didn't find expected channel", chan);
+//     assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
+    assertEquals(0, comm1.rcvChannels.size());
+    TimeBase.step(6000);
+    assertEquals(0, ins.available());
+    assertNotNull("Channel didn't close automatically after timeout",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't close automatically after timeout",
+		 "dissoc", event.get(0));
+    assertFalse(intr1.did());
+    assertFalse(intr2.did());
+    intr1.cancel();
+    intr2.cancel();
+  }
+
+  public void testHangingSend() throws IOException {
+    TimeBase.setSimulated(1000);
+    cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "5000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    setupComm1();
+    setupPid(2);
+    Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
+    Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
+    SockAbort intr2 = abortIn(TIMEOUT_SHOULDNT * 2, sock);
+    InputStream ins = sock.getInputStream();
+    OutputStream outs = sock.getOutputStream();
+    StreamUtil.readBytes(ins, rcvHeader, HEADER_LEN);
+    assertHeaderOp(rcvHeader, OP_PEERID);
+    assertEquals(pid1.getIdString(), rcvMsgData(ins));
+    comm1.setAssocQueue(assocQ);
+    writePeerId(outs, pid2);
+    // wait for it to get peerid before sending to it
+    List event;
+    assertNotNull("Channel didn't assoc",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't assoc",
+		 "assoc", event.get(0));
+    assertEquals(1, comm1.channels.size());
+    // a 30KB message
+    msg1 = makePeerMessage(1, "123456789012345678901234567890", 1000);
+    int msgsize = msg1.getDataSize();
+    int tobuffer = 200 * (sock.getReceiveBufferSize() +
+			sock.getSendBufferSize());
+    for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
+      comm1.sendTo(msg1, pid2, null);
+    }
+    assertEquals(1, comm1.channels.size());
+    BlockingPeerChannel chan = (BlockingPeerChannel)comm1.channels.get(pid2);
+    assertNotNull("Didn't find expected channel", chan);
+    assertFalse("Send queue shouldn't be empty", chan.isSendIdle());
+    assertEquals(0, comm1.rcvChannels.size());
+
+    // give hung checker a chance to run.  If fails, interrupter will stop us
+    while (null == (event = (List)assocQ.get(10))) {
+      TimeBase.step(6000);
+    }
+    assertNotNull("Channel didn't close automatically after timeout", event);
+    assertEquals("Channel didn't close automatically after timeout",
+		 "dissoc", event.get(0));
+    assertFalse(intr1.did());
+    assertFalse(intr2.did());
+    intr1.cancel();
+    intr2.cancel();
   }
 
   public void testSingleConnect() throws IOException {
@@ -623,6 +762,66 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEqualsMessageFrom(msg3, pid1, msgIn);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     assertEqualsMessageFrom(msg2, pid1, msgIn);
+  }
+
+  public void testLargeMsg() throws IOException {
+    cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "1000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+
+    PeerMessage msgIn;
+    setupComm1();
+    setupComm2();
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
+    comm1.sendTo(msg1, pid2, null);
+    comm1.sendTo(msg2, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof FilePeerMessage);
+  }
+
+  public void testFileMessage() throws IOException {
+    cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "1000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+
+    PeerMessage msgIn;
+    setupComm1();
+    setupComm2();
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
+    comm1.sendTo(msg1, pid2, null);
+    comm1.sendTo(msg2, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg2, pid1, msgIn);
+    assertTrue(msgIn.toString(), msgIn instanceof FilePeerMessage);
+  }
+
+  public void testMaxMsg() throws IOException {
+    cprops.setProperty(BlockingStreamComm.PARAM_MAX_MESSAGE_SIZE, "2000");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+
+    PeerMessage msgIn;
+    setupComm1();
+    setupComm2();
+    List event;
+    comm2.setAssocQueue(assocQ);
+    comm1.sendTo(msg1, pid2, null);
+    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    assertNotNull("Channel didn't associate",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't associate",
+		 "assoc", event.get(0));
+    comm1.sendTo(msg2, pid2, null);
+    assertNotNull("Channel didn't close on too-large message",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't close automatically after timeout",
+		 "dissoc", event.get(0));
   }
 
   // force delayed connect in one direction
@@ -704,6 +903,28 @@ public class TestBlockingStreamComm extends LockssTestCase {
     TimeBase.step(4000);
     assertEquals(1, comm1.channels.size());
     TimeBase.step(2000);
+    List event;
+    assertNotNull("Channel didn't close automatically after timeout",
+		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
+    assertEquals("Channel didn't close automatically after timeout",
+		 "dissoc", event.get(0));
+    assertEquals(0, comm1.channels.size());
+    assertEquals(0, comm1.rcvChannels.size());
+  }
+
+  // read (so) timeout should abort channel
+  public void testReadTimeout() throws IOException {
+    TimeBase.setSimulated(1000);
+    PeerMessage msgIn;
+    cprops.setProperty(BlockingStreamComm.PARAM_CHANNEL_IDLE_TIME, "10h");
+    cprops.setProperty(BlockingStreamComm.PARAM_DATA_TIMEOUT, "100");
+    ConfigurationUtil.setCurrentConfigFromProps(cprops);
+    setupComm1();
+    setupComm2();
+    comm1.setAssocQueue(assocQ);
+    comm1.sendTo(msg1, pid2, null);
+    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
+    assertEqualsMessageFrom(msg1, pid1, msgIn);
     List event;
     assertNotNull("Channel didn't close automatically after timeout",
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
@@ -890,6 +1111,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   SockAbort abortIn(long inMs, Socket sock) {
     SockAbort sa = new SockAbort(inMs, sock);
+    if (Boolean.getBoolean("org.lockss.test.threadDump")) {
+      sa.setThreadDump();
+    }
     sa.start();
     return sa;
   }
@@ -922,16 +1146,16 @@ public class TestBlockingStreamComm extends LockssTestCase {
     protected void doit() {
       try {
 	if (sock != null) {
-	  sock.close();
 	  log.debug("Closing sock");
+	  sock.close();
 	}
       } catch (IOException e) {
 	log.warning("sock", e);
       }
       try {
 	if (servsock != null) {
-	  servsock.close();
 	  log.debug("Closing servsock");
+	  servsock.close();
 	}
       } catch (IOException e) {
 	log.warning("servsock", e);
