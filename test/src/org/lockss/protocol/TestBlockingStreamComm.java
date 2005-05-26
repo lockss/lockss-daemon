@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.3 2005-05-26 08:32:31 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.4 2005-05-26 16:08:19 tlipkis Exp $
  */
 
 /*
@@ -212,7 +212,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
   void setupComm(int ix) throws IOException {
     if (pids[ix] == null) setupPid(ix);
     comms[ix] = new MyBlockingStreamComm(pids[ix]);
-    daemon.setStreamCommManager(comms[ix]);
     comms[ix].initService(daemon);
     comms[ix].startService();
     rcvdMsgss[ix] = new SimpleQueue.Fifo();
@@ -243,6 +242,22 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   void setupComm2() throws IOException {
     setupComm(2);
+  }
+
+  int nextPort = 2000;
+  
+  int findUnboundTcpPort() {
+    for (int p = nextPort; p < 65535; p++) {
+      try {
+	ServerSocket sock = new ServerSocket(p);
+	sock.close();
+	nextPort = p + 1;
+	return p;
+      } catch (IOException e) {
+      }
+    }
+    log.error("Couldn't find unused TCP port");
+    return -1;
   }
 
   void setupMessages() throws IOException {
@@ -417,7 +432,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     chan = new BlockingPeerChannel(comm1, pid1, ins, null);
     assertFalse(chan.readHeader());
 
-    ins = new StringInputStream("1");
+    ins = new StringInputStream("\177");
     chan = new BlockingPeerChannel(comm1, pid1, ins, null);
     try {
       chan.readHeader();
@@ -484,7 +499,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testIncomingRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
-    log.debug("Incoming send pid " + peerid); 
+    log.debug("Incoming rcv pid " + peerid); 
     setupComm1();
     Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
     Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
@@ -691,6 +706,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     int msgsize = msg1.getDataSize();
     int tobuffer = 200 * (sock.getReceiveBufferSize() +
 			sock.getSendBufferSize());
+    // Send lots of data to ensure send thread blocks waiting for socket to
+    // have buffer space
     for (int bytes = 0; bytes < tobuffer; bytes += msgsize) {
       comm1.sendTo(msg1, pid2, null);
     }
@@ -762,24 +779,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEqualsMessageFrom(msg3, pid1, msgIn);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     assertEqualsMessageFrom(msg2, pid1, msgIn);
-  }
-
-  public void testLargeMsg() throws IOException {
-    cprops.setProperty(BlockingStreamComm.PARAM_MIN_FILE_MESSAGE_SIZE, "1000");
-    ConfigurationUtil.setCurrentConfigFromProps(cprops);
-
-    PeerMessage msgIn;
-    setupComm1();
-    setupComm2();
-    msg2 = makePeerMessage(1, "1234567890123456789012345678901234567890", 100);
-    comm1.sendTo(msg1, pid2, null);
-    comm1.sendTo(msg2, pid2, null);
-    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg1, pid1, msgIn);
-    assertTrue(msgIn.toString(), msgIn instanceof MemoryPeerMessage);
-    msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg2, pid1, msgIn);
-    assertTrue(msgIn.toString(), msgIn instanceof FilePeerMessage);
   }
 
   public void testFileMessage() throws IOException {
@@ -948,8 +947,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
 	comms[comm].sendTo(pm, pids[peer], null);
       }
     }
-//     TimerUtil.guaranteedSleep(1000);
-//     DebugUtils.getInstance().threadDump();
     for (int comm = 0; comm < MAX_COMMS; comm++) {
       Set peers = allPeers();
       while (!peers.isEmpty()) {
@@ -1013,8 +1010,9 @@ public class TestBlockingStreamComm extends LockssTestCase {
       acceptSem = sem;
     }
 
-    /** Mock socket factory creates LcapSockets with mock datagram/multicast
-     * sockets. */
+    /** Socket factory creates either real or internal sockets, and
+     * MyBlockingPeerChannels.
+     */
     class MySocketFactory implements BlockingStreamComm.SocketFactory {
 
       public ServerSocket newServerSocket(int port, int backlog)
@@ -1067,23 +1065,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   }
 
-  int nextPort = 2000;
-  
-  int findUnboundTcpPort() {
-    for (int p = nextPort; p < 65535; p++) {
-      try {
-	ServerSocket sock = new ServerSocket(p);
-	sock.close();
-	nextPort = p + 1;
-	return p;
-      } catch (IOException e) {
-      }
-    }
-    log.error("Couldn't find unused TCP port");
-    return -1;
-  }
-
-
   class MessageHandler implements BlockingStreamComm.MessageHandler {
     SimpleQueue queue;
     public MessageHandler(SimpleQueue queue) {
@@ -1127,8 +1108,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     return sa;
   }
 
-
-  /** SockAbort aborts a socket by closing it and interrupting the thread */
+  /** SockAbort aborts a socket by closing it
+   */
   class SockAbort extends DoLater {
     Socket sock;
     ServerSocket servsock;
