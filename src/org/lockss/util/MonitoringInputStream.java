@@ -1,5 +1,5 @@
 /*
- * $Id: MonitoringInputStream.java,v 1.2 2005-01-31 23:02:15 tlipkis Exp $
+ * $Id: MonitoringInputStream.java,v 1.3 2005-05-26 08:32:46 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class MonitoringInputStream extends InputStream {
   private InputStream in;
   private String name;
   private String openTrace;
-  private String closeTrace;
+//   private String closeTrace;
   private String closeAbortTrace;
   private boolean isOpen = true;
 
@@ -71,7 +71,7 @@ public class MonitoringInputStream extends InputStream {
     return in.available();
   }
   public void close() throws IOException {
-    closeTrace = StringUtil.stackTraceString(new Exception("Close"));
+//     closeTrace = StringUtil.stackTraceString(new Exception("Close"));
     try {
       in.close();
     } catch (IOException e) {
