@@ -1,5 +1,5 @@
 /*
- * $Id: PluginStatus.java,v 1.3 2005-05-26 08:31:58 tlipkis Exp $
+ * $Id: PluginStatus.java,v 1.4 2005-05-27 08:33:49 tlipkis Exp $
  */
 
 /*
@@ -208,13 +208,14 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
     table.setTitle(getTitle(plug));
     table.setDefaultSortRules(sortRules);
     ExternalizableMap plugDef = null;
-    if (ConfigManager.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
-				      DEFAULT_PLUGIN_DHOWDEF) &&
-	plug instanceof DefinablePlugin) {
+    if (plug instanceof DefinablePlugin) {
       DefinablePlugin dplug = (DefinablePlugin)plug;
       plugDef = dplug.getDefinitionMap();
-      table.setColumnDescriptors(colDescs);
-      table.setRows(getRows(dplug, plugDef));
+      if (ConfigManager.getBooleanParam(PARAM_PLUGIN_SHOWDEF,
+					DEFAULT_PLUGIN_DHOWDEF)) {
+	table.setColumnDescriptors(colDescs);
+	table.setRows(getRows(dplug, plugDef));
+      }
     }
     table.setSummaryInfo(getSummaryInfo(plug, plugDef));
   }
@@ -255,13 +256,12 @@ class PluginDetail extends PluginStatus implements StatusAccessor {
 					    HtmlUtil.htmlEncode(notes)));
       }
     }
-    res.add(new StatusTable.SummaryInfo("# AUs",
-					ColumnDescriptor.TYPE_STRING,
-					plug.getAllAus().size()));
-
     res.add(new StatusTable.SummaryInfo("Type",
 					ColumnDescriptor.TYPE_STRING,
 					getPluginType(plug)));
+    res.add(new StatusTable.SummaryInfo("# AUs",
+					ColumnDescriptor.TYPE_STRING,
+					plug.getAllAus().size()));
     if (mgr.isLoadablePlugin(plug)) {
       PluginManager.PluginInfo info = mgr.getLoadablePluginInfo(plug);
       if (info != null) {
