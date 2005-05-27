@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.4 2005-05-26 16:08:19 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.5 2005-05-27 08:35:47 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.protocol;
 import java.util.*;
 import java.io.*;
 import java.net.*;
-
+import junit.framework.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -100,11 +100,18 @@ public class TestBlockingStreamComm extends LockssTestCase {
   private MockLockssDaemon daemon;
   private IdentityManager idmgr;
 
-  Properties cprops = new Properties();	// some tests add more to this and
+  Properties cprops;			// some tests add more to this and
 					// reconfigure
   SimpleBinarySemaphore sem;
   SimpleQueue assocQ;
   boolean useInternalSockets = false;
+
+  TestBlockingStreamComm(String name) {
+    super(name);
+  }
+
+  void addSuiteProps(Properties p) {
+  }
 
   public void setUp() throws Exception {
     super.setUp();
@@ -118,6 +125,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     catch (IOException ex) {
       fail("unable to create a temporary directory");
     }
+    cprops = new Properties();
+    addSuiteProps(cprops);
     cprops.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     cprops.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(cprops);
@@ -366,13 +375,13 @@ public class TestBlockingStreamComm extends LockssTestCase {
     setupComm1();
     BlockingPeerChannel chan =
       new BlockingPeerChannel(comm1, pid1, null, null);
-    chan.state = 0;
+    assertEquals(0, chan.getState());
     assertFalse(chan.stateTrans(1, 2));
-    assertEquals(0, chan.state);
+    assertEquals(0, chan.getState());
     assertTrue(chan.stateTrans(0, 3));
-    assertEquals(3, chan.state);
+    assertEquals(3, chan.getState());
     assertTrue(chan.stateTrans(3, 4, "shouldn't"));
-    assertEquals(4, chan.state);
+    assertEquals(4, chan.getState());
     try {
       chan.stateTrans(3, 4, "should error");
       fail("stateTrans should have thrown");
@@ -383,31 +392,31 @@ public class TestBlockingStreamComm extends LockssTestCase {
 //     assertTrue(chan.stateTrans(lst, 6, "shouldn't"));
 //     assertTrue(chan.stateTrans(lst, 8, "shouldn't"));
 //     assertFalse(chan.stateTrans(lst, 8));
-//     assertEquals(8, chan.state);
+//     assertEquals(8, chan.getState());
   }
 
   public void testNotStateTrans() throws IOException {
     setupComm1();
     BlockingPeerChannel chan =
       new BlockingPeerChannel(comm1, pid1, null, null);
-    chan.state = 0;
+    assertEquals(0, chan.getState());
     assertFalse(chan.notStateTrans(0, 2));
-    assertEquals(0, chan.state);
+    assertEquals(0, chan.getState());
     assertTrue(chan.notStateTrans(1, 3));
-    assertEquals(3, chan.state);
+    assertEquals(3, chan.getState());
     assertTrue(chan.notStateTrans(2, 5, "shouldn't"));
-    assertEquals(5, chan.state);
+    assertEquals(5, chan.getState());
     try {
       chan.notStateTrans(5, 4, "should error");
       fail("notStateTrans should have thrown");
     } catch (IllegalStateException e) {
     }
-    assertEquals(5, chan.state);
+    assertEquals(5, chan.getState());
     int[] lst = {2, 4, 6};
     assertTrue(chan.notStateTrans(lst, 3, "shouldn't"));
     assertTrue(chan.notStateTrans(lst, 4, "shouldn't"));
     assertFalse(chan.notStateTrans(lst, 8));
-    assertEquals(4, chan.state);
+    assertEquals(4, chan.getState());
   }
 
   public void testReadHeader() throws IOException {
@@ -417,7 +426,10 @@ public class TestBlockingStreamComm extends LockssTestCase {
     byte[] buf = new byte[HEADER_LEN];
     InputStream ins = new ByteArrayInputStream(hdr);
     BlockingPeerChannel chan = new BlockingPeerChannel(comm1, pid1, ins, null);
+    long t0 = chan.getLastActiveTime();
     assertTrue(chan.readHeader());
+    // ensure using a readbytes() that updates the time
+    assertNotEquals(t0, chan.getLastActiveTime());
 
     hdr[0] = 42;
     ins = new ByteArrayInputStream(hdr);
@@ -1144,4 +1156,72 @@ public class TestBlockingStreamComm extends LockssTestCase {
     }
   }
 
+  // Variants:
+
+  /** Buffered socket OutputStream */
+  public static class Buff extends TestBlockingStreamComm {
+    public Buff(String name) {
+      super(name);
+    }
+    public void addSuiteProps(Properties p) {
+      p.setProperty(BlockingStreamComm.PARAM_IS_BUFFERED_SEND, "true");
+      p.setProperty(BlockingStreamComm.PARAM_TCP_NODELAY, "false");
+    }
+  }
+
+  /** Unbuffered socket OutputStream */
+  public static class UnBuff extends TestBlockingStreamComm {
+    public UnBuff(String name) {
+      super(name);
+    }
+    public void addSuiteProps(Properties p) {
+      p.setProperty(BlockingStreamComm.PARAM_IS_BUFFERED_SEND, "false");
+      p.setProperty(BlockingStreamComm.PARAM_TCP_NODELAY, "false");
+    }
+  }
+
+  /** Buffered OutputStream, TCP_NODELAY */
+  public static class BuffNoDelay extends TestBlockingStreamComm {
+    public BuffNoDelay(String name) {
+      super(name);
+    }
+    public void addSuiteProps(Properties p) {
+      p.setProperty(BlockingStreamComm.PARAM_IS_BUFFERED_SEND, "true");
+      p.setProperty(BlockingStreamComm.PARAM_TCP_NODELAY, "true");
+    }
+  }
+
+  /** Unbuffered OutputStream, TCP_NODELAY */
+  public static class UnBuffNoDelay extends TestBlockingStreamComm {
+    public UnBuffNoDelay(String name) {
+      super(name);
+    }
+    public void addSuiteProps(Properties p) {
+      p.setProperty(BlockingStreamComm.PARAM_IS_BUFFERED_SEND, "false");
+      p.setProperty(BlockingStreamComm.PARAM_TCP_NODELAY, "true");
+    }
+  }
+
+  /** Channel threads run at high priority */
+  public static class HighPri extends TestBlockingStreamComm {
+    public HighPri(String name) {
+      super(name);
+    }
+    public void addSuiteProps(Properties p) {
+      String prop = "org.lockss.thread." +
+	BlockingStreamComm.PRIORITY_PARAM_CHANNEL + ".priority";
+      p.setProperty(prop, "5");
+    }
+  }
+
+
+  public static Test suite() {
+    return variantSuites(new Class[] {
+      Buff.class,
+//       UnBuff.class,
+//       BuffNoDelay.class,
+      UnBuffNoDelay.class,
+      HighPri.class,
+    });
+  }
 }
