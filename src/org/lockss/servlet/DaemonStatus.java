@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.50 2005-05-02 19:26:57 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.51 2005-05-27 08:34:45 tlipkis Exp $
  */
 
 /*
@@ -598,10 +598,17 @@ public class DaemonStatus extends LockssServlet {
 	if (sInfo.getFootnote() != null) {
 	  sb.append(addFootnote(sInfo.getFootnote()));
 	}
-	sb.append("</b>: ");
-	sb.append(getDisplayString(sInfo.getValue(), sInfo.getType()));
+	sb.append("</b>:&nbsp;");
 	table.newCell("COLSPAN=" + (cols * 2 - 1));
-	table.add(sb.toString());
+	// make a 2 cell table for each row, so multiline values will be
+	// aligned
+ 	Table itemtab = new Table(0, "align=left cellspacing=0 cellpadding=0");
+	itemtab.newRow();
+	itemtab.newCell("valign=top");
+	itemtab.add(sb.toString());
+	itemtab.newCell();
+	itemtab.add(getDisplayString(sInfo.getValue(), sInfo.getType()));
+	table.add(itemtab);
       }
       table.newRow();
     }
