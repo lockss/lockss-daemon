@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.11 2005-02-16 19:39:46 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.12 2005-05-27 01:29:34 smorabito Exp $
  */
 
 /*
@@ -72,27 +72,21 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   /**
    * Parse the XML test configuration and set m_props.
    */
-  private void parseXmlProperties() throws IOException {
+  private void parseXmlProperties() throws Exception {
     String file = "configtest.xml";
     URL url = getClass().getResource(file);
     assertNotNull(file + " missing.", url);
     InputStream istr = UrlUtil.openInputStream(url.toString());
 
     PropertyTree props = new PropertyTree();
-
-    try {
-      m_xmlPropertyLoader.loadProperties(props, istr);
-    } catch (Throwable t) {
-      fail("Should not have thrown.");
-    }
-
+    m_xmlPropertyLoader.loadProperties(props, istr);
     m_props = props;
   }
 
   /**
    * Test known-bad XML.
    */
-  public void testUnknownXmlTag() throws IOException {
+  public void testUnknownXmlTag() throws Exception {
     PropertyTree props = new PropertyTree();
     StringBuffer sb = new StringBuffer();
     sb.append("<lockss-config>\n");
@@ -110,7 +104,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   /**
    * Test mixing daemon version and daemon min / daemon max (illegal)
    */
-  public void testIllegalDaemonVersionCombo() throws IOException {
+  public void testIllegalDaemonVersionCombo() throws Exception {
     PropertyTree props = new PropertyTree();
     StringBuffer sb = new StringBuffer();
     sb.append("<lockss-config>\n");
@@ -133,7 +127,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   /**
    * Test mixing platform version and platform min / platform max (illegal)
    */
-  public void testIllegalPlatformVersionCombo() throws IOException {
+  public void testIllegalPlatformVersionCombo() throws Exception {
     PropertyTree props = new PropertyTree();
     StringBuffer sb = new StringBuffer();
     sb.append("<lockss-config>\n");
@@ -156,35 +150,35 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   /**
    * Test basic non-nested property getting from the static config.
    */
-  public void testGet() throws IOException {
+  public void testGet() throws Exception {
     assertEquals("foo", m_props.get("a"));
   }
 
   /**
    * Test a nested property.
    */
-  public void testNestedGet() throws IOException {
+  public void testNestedGet() throws Exception {
     assertEquals("foo", m_props.get("b.c"));
   }
 
   /**
    * Test value tag (not in a list)
    */
-  public void testValueTag() throws IOException {
+  public void testValueTag() throws Exception {
     assertEquals("bar", m_props.get("d"));
   }
 
   /**
    * Test a non-existent property.
    */
-  public void testNullValue() throws IOException {
+  public void testNullValue() throws Exception {
     assertNull(m_props.get("this.prop.does.not.exist"));
   }
 
   /**
    * Test getting a list out of the config.
    */
-  public void testGetList() throws IOException {
+  public void testGetList() throws Exception {
     String s = m_props.getProperty("org.lockss.d");
     assertNotNull(s);
     Vector v = StringUtil.breakAt(s, ';', -1, true, true);
@@ -241,7 +235,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    * Test to be sure that XML entities don't split list
    * entries.
    */
-  public void testListEntities() throws IOException {
+  public void testListEntities() throws Exception {
     String s = m_props.getProperty("org.lockss.listtest");
     assertNotNull(s);
     Vector v = StringUtil.breakAt(s, ';', -1, true, true);
@@ -249,54 +243,54 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("this&should&be&one&value", v.get(0));
   }
 
-  public void testDaemonVersionEquals() throws IOException {
+  public void testDaemonVersionEquals() throws Exception {
     assertNull(m_props.get("org.lockss.test.a"));
     assertEquals("foo", m_props.get("org.lockss.test.b"));
   }
 
-  public void testDaemonVersionMax() throws IOException {
+  public void testDaemonVersionMax() throws Exception {
     assertNull(m_props.get("org.lockss.test.c"));
     assertEquals("foo", m_props.get("org.lockss.test.d"));
   }
 
-  public void testDaemonVersionMin() throws IOException {
+  public void testDaemonVersionMin() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.e"));
     assertNull(m_props.get("org.lockss.test.f"));
 
   }
 
-  public void testDaemonVersionMaxAndMin() throws IOException {
+  public void testDaemonVersionMaxAndMin() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.g"));
     assertNull(m_props.get("org.lockss.test.h"));
   }
 
-  public void testPlatformVersionEquals() throws IOException {
+  public void testPlatformVersionEquals() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.i"));
     assertNull(m_props.get("org.lockss.test.j"));
 
   }
 
-  public void testPlatformVersionMax() throws IOException {
+  public void testPlatformVersionMax() throws Exception {
     assertNull(m_props.get("org.lockss.test.k"));
     assertEquals("foo", m_props.get("org.lockss.test.l"));
   }
 
-  public void testPlatformVersionMin() throws IOException {
+  public void testPlatformVersionMin() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.m"));
     assertNull(m_props.get("org.lockss.test.n"));
   }
 
-  public void testPlatformVersionMinAndMax() throws IOException {
+  public void testPlatformVersionMinAndMax() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.o"));
     assertNull(m_props.get("org.lockss.test.p"));
   }
 
-  public void testGroupMembership() throws IOException {
+  public void testGroupMembership() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.q"));
     assertNull(m_props.get("org.lockss.test.r"));
   }
 
-  public void testHostnameMembership() throws IOException {
+  public void testHostnameMembership() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.test.s"));
     assertNull(m_props.get("org.lockss.test.t"));
   }
@@ -306,17 +300,17 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.test.v"));
   }
 
-  public void testConditionalCombo() throws IOException {
+  public void testConditionalCombo() throws Exception {
     assertEquals("bar", m_props.get("org.lockss.test.w"));
     assertEquals("foo", m_props.get("org.lockss.test.x"));
   }
 
-  public void testTestNonNested() throws IOException {
+  public void testTestNonNested() throws Exception {
     assertEquals("bar", m_props.get("org.lockss.test.y"));
     assertEquals("foo", m_props.get("org.lockss.test.z"));
   }
 
-  public void testBooleanAnd() throws IOException {
+  public void testBooleanAnd() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.and.a"));
     assertNull(m_props.get("org.lockss.and.b"));
     assertEquals("foo", m_props.get("org.lockss.and.c"));
@@ -324,7 +318,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.and.e"));
   }
 
-  public void testBooleanOr() throws IOException {
+  public void testBooleanOr() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.or.a"));
     assertNull(m_props.get("org.lockss.or.b"));
     assertEquals("foo", m_props.get("org.lockss.or.c"));
@@ -332,7 +326,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.or.e"));
   }
 
-  public void testBooleanNot() throws IOException {
+  public void testBooleanNot() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.not.a"));
     assertNull(m_props.get("org.lockss.not.b"));
     assertEquals("foo", m_props.get("org.lockss.not.c"));
@@ -342,9 +336,10 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.not.g"));
   }
 
-  public void testNestedBoolean() throws IOException {
+  public void testNestedBoolean() throws Exception {
     assertEquals("foo", m_props.get("org.lockss.nested.a"));
     assertEquals("bar", m_props.get("org.lockss.nested.b"));
+    assertEquals("bar", m_props.get("org.lockss.nested.c"));
   }
 
   /**
@@ -352,7 +347,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
    * version, hostname, or group) are null, all tests that depend on
    * them should return false.
    */
-  public void testNullHostname() throws IOException {
+  public void testNullHostname() throws Exception {
     setVersions(null, null, null, null);
     parseXmlProperties();
     assertNull(m_props.get("org.lockss.test.s"));
@@ -361,7 +356,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.nulltest.b"));
   }
 
-  public void testNullGroup() throws IOException {
+  public void testNullGroup() throws Exception {
     setVersions(null, null, null, null);
     parseXmlProperties();    
     assertNull(m_props.get("org.lockss.test.q"));
@@ -370,7 +365,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.nulltest.d"));
   }
 
-  public void testNullDaemonVersion() throws IOException {
+  public void testNullDaemonVersion() throws Exception {
     setVersions(null, null, null, null);
     parseXmlProperties();
     assertNull(m_props.get("org.lockss.test.a"));
@@ -379,7 +374,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
     assertEquals("bar", m_props.get("org.lockss.nulltest.f"));
   }
 
-  public void testNullPlatformVersion() throws IOException {
+  public void testNullPlatformVersion() throws Exception {
     setVersions(null, null, null, null);
     parseXmlProperties();
     assertNull(m_props.get("org.lockss.test.i"));

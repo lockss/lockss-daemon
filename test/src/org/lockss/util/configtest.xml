@@ -366,6 +366,8 @@
 
     <!-- Test nested booleans -->
     <!-- Expected values at each level are in the comments. -->
+
+    <!-- 1. Outer-level and -->
     <if>
       <and>
 	<not>
@@ -388,6 +390,7 @@
       </else>
     </if>
 
+    <!-- 2. Outer-level or -->
     <if>
       <or>
 	<not>
@@ -406,10 +409,32 @@
 	<property name="nested.b" value="foo" />
       </then>
       <else>
-	<property name="nested.b" value="bar" />
+	<property name="nested.b" value="bar" /> <!-- expected result -->
       </else>
     </if>
 
+    <!-- 3. Outer-level not -->
+    <if>
+      <not>
+	<or>
+	  <test hostname="testhost1" /> <!-- false -->
+	  <or>
+	    <test group="foo" /> <!-- false -->
+	    <test group="bar" /> <!-- true -->
+	  </or> <!-- true -->
+	  <and>
+	    <test group="beta" /> <!-- true -->
+	    <test daemonVersionMin="1.0.0" daemonVersionMax="2.0.0" /> <!-- true -->
+	  </and> <!-- true -->
+	</or> <!-- true -->
+      </not> <!-- false -->
+      <then>
+	<property name="nested.c" value="foo" />
+      </then>
+      <else>
+	<property name="nested.c" value="bar" /> <!-- expected result -->
+      </else>
+    </if>
 
     <!-- These are all testing the correct behavior of null version, host, and group values -->
     <!-- hostname -->

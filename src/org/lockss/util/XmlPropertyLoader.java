@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.18 2005-02-16 19:39:48 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.19 2005-05-27 01:29:35 smorabito Exp $
  */
 
 /*
@@ -112,6 +112,10 @@ public class XmlPropertyLoader {
     // the property tree is.
     private Stack m_propStack = new Stack();
 
+    // Stack of conditionals being evaluated.  Empty if not inside
+    // a conditional statement.
+    private Stack m_condStack = new Stack();
+
     // The current state of the test.
     private boolean m_testEval = false;
 
@@ -128,12 +132,6 @@ public class XmlPropertyLoader {
     private boolean m_inElse = false;
     // True iff the parser is currently inside a "then" element.
     private boolean m_inThen = false;
-    // True iff the parser is currently inside an "and" element.
-    private boolean m_inAnd = false;
-    // True iff the parser is currently inside an "or" element.
-    private boolean m_inOr = false;
-    // True iff the parser is currently inside a "not" element.
-    private boolean m_inNot = false;
 
     // False iff the conditions in the propgroup attribute conditionals
     // are not satisfied.
@@ -238,11 +236,11 @@ public class XmlPropertyLoader {
       } else if (TAG_VALUE.equals(qName)) {
 	endValueTag();
       } else if (TAG_AND.equals(qName)) {
-	endAndTag();
+	endCondTag();
       } else if (TAG_OR.equals(qName)) {
-	endOrTag();
+	endCondTag();
       } else if (TAG_NOT.equals(qName)) {
-	endNotTag();
+	endCondTag();
       } else if (TAG_TEST.equals(qName)) {
 	endTestTag();
       } else if (TAG_LOCKSSCONFIG.equals(qName)) {
@@ -311,7 +309,9 @@ public class XmlPropertyLoader {
      */
     private void startIfTag(Attributes attrs) {
       m_inIf = true;
-      m_evalIf = evaluateAttributes(attrs);
+      if (attrs.getLength() > 0) {
+	m_evalIf = evaluateAttributes(attrs);
+      }
     }
 
     /**
@@ -339,24 +339,33 @@ public class XmlPropertyLoader {
      * Handle encountering a starting "and" tag.
      */
     private void startAndTag() {
-      m_inAnd = true;
-      m_evalIf = true; // 'and' evaluates to true by default.
+      if (m_condStack.isEmpty()) {
+	m_evalIf = true; // 'and' expressions start out true
+      }
+
+      m_condStack.push(TAG_AND);
     }
 
     /**
      * Handle encountering a starting "or" tag.
      */
     private void startOrTag() {
-      m_inOr = true;
-      m_evalIf = false; // 'or' evaluates to false by default.
+      if (m_condStack.isEmpty()) {
+	m_evalIf = false; // 'or' expressions start out false
+      }
+
+      m_condStack.push(TAG_OR);
     }
 
     /**
      * Handle encountering a starting "not" tag.
      */
     private void startNotTag() {
-      m_inNot = true;
-      m_evalIf = true; // 'not' evaluates to true by default.
+      if (m_condStack.isEmpty()) {
+	m_evalIf = true; // 'not' expressions start out true
+      }
+
+      m_condStack.push(TAG_NOT);
     }
 
 
@@ -364,7 +373,9 @@ public class XmlPropertyLoader {
      * Set the state of the test evaluation boolean.
      */
     private void startTestTag(Attributes attrs) {
-      m_testEval = evaluateAttributes(attrs);
+      if (attrs.getLength() > 0) {
+	m_testEval = evaluateAttributes(attrs);
+      }
     }
 
     /**
@@ -440,42 +451,41 @@ public class XmlPropertyLoader {
     }
 
     /**
-     * Handle encountering the end of an "and" tag.
+     * Handle encountering the end of a boolean conditional.
      */
-    private void endAndTag() {
-      m_inAnd = false;
-    }
+    private void endCondTag() {
+      m_condStack.pop();
 
-    /**
-     * Handle encountering the end of an "or" tag.
-     */
-    private void endOrTag() {
-      m_inOr = false;
-    }
-
-    /**
-     * Handle encountering the end of a "not" tag.
-     */
-    private void endNotTag() {
-      m_inNot = false;
+      // Handle nesting by conding with previous boolean level.
+      if (!m_condStack.isEmpty()) {
+	evalCurrentCondStackLevel();
+      }
     }
 
     /**
      * Handle encountering the end of a "test" tag.
      */
     private void endTestTag() {
-      if (m_inAnd) {
-	m_evalIf &= m_testEval;
-      } else if (m_inOr) {
-	m_evalIf |= m_testEval;
-      } else if (m_inNot) {
-	m_evalIf &= !m_testEval;
-      } else {
+      if (m_condStack.isEmpty()) {
 	// If we're not in a conditional at all, this should be a single
 	// <test>, i.e. <if><test foo="bar"/><then>...</then></if>. Just
 	// apply the current test results
 	m_evalIf = m_testEval;
+      } else {
+	evalCurrentCondStackLevel();
       }
+    }
+
+    // Utility method used by endCondTag and endTestTag
+    private void evalCurrentCondStackLevel() {
+      String cond = (String)m_condStack.peek();
+      if (cond == TAG_AND) {
+	m_evalIf &= m_testEval;
+      } else if (cond == TAG_OR) {
+	m_evalIf |= m_testEval;
+      } else if (cond == TAG_NOT) {
+	m_evalIf &= !m_testEval;
+      }      
     }
 
     /**
@@ -505,11 +515,6 @@ public class XmlPropertyLoader {
      */
     public boolean evaluateAttributes(Attributes attrs) {
       boolean returnVal = true;
-
-      // If we don't have any attributes, short-circuit.
-      if (attrs.getLength() == 0) {
-	return true;
-      }
 
       // Evaluate the attributes of the tag and set the
       // value "returnVal" appropriately.
