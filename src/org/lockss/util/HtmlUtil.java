@@ -1,5 +1,5 @@
 /*
- * $Id: HtmlUtil.java,v 1.2 2004-10-23 01:01:03 clairegriffin Exp $
+ * $Id: HtmlUtil.java,v 1.3 2005-05-27 08:35:04 tlipkis Exp $
  */
 
 /*
@@ -96,8 +96,10 @@ public class HtmlUtil {
 	sb.append("&quot;");
 	break;
 	// Special characters
+      case '\n':
+	sb.append("<br>");
+	break;
 	/*
-	  case '\n':
 	  case '\t':
 	  case '\r':
 	  break;

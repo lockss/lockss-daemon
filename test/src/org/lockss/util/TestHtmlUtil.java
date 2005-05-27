@@ -1,5 +1,5 @@
 /*
- * $Id: TestHtmlUtil.java,v 1.1 2003-08-06 06:27:57 tlipkis Exp $
+ * $Id: TestHtmlUtil.java,v 1.2 2005-05-27 08:35:04 tlipkis Exp $
  */
 
 /*
@@ -69,6 +69,7 @@ public class TestHtmlUtil extends LockssTestCase {
     assertEquals("&#31;", HtmlUtil.encode("\037", encode));
     assertEquals("ab&#31;\40\177&#128;&#254;bc&#255;",
 		 HtmlUtil.encode("ab\037\040\177\200\376bc\377", encode));
+    assertEquals("foo<br>bar", HtmlUtil.encode("foo\nbar", encode));
   }
 
   public void testEncodeText() {
