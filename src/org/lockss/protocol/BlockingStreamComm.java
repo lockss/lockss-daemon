@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.4 2005-05-26 08:32:32 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.5 2005-05-27 08:34:29 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,14 @@ public class BlockingStreamComm
     PREFIX + "messageDataDir";
   static final String DEFAULT_DATA_DIR = System.getProperty("java.io.tmpdir");
 
+  /** Wrap Socket OutputStream in BufferedOutputStream? */
+  public static final String PARAM_IS_BUFFERED_SEND = PREFIX + "bufferedSend";
+  static final boolean DEFAULT_IS_BUFFERED_SEND = true;
+
+  /** TCP_NODELAY */
+  public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNodelay";
+  static final boolean DEFAULT_TCP_NODELAY = true;
+
   static final String WDOG_PARAM_SCOMM = "SComm";
   static final long WDOG_DEFAULT_SCOMM = 1 * Constants.HOUR;
 
@@ -148,6 +156,8 @@ public class BlockingStreamComm
   private long paramSoTimeout = DEFAULT_DATA_TIMEOUT;
   private long paramSendWakeupTime = DEFAULT_SEND_WAKEUP_TIME;
   private long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
+  private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
+  private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
   private long lastHungCheckTime = 0;
   private PooledExecutor pool;
 
@@ -224,12 +234,16 @@ public class BlockingStreamComm
 					      DEFAULT_MIN_FILE_MESSAGE_SIZE);
       paramMaxMessageSize = config.getInt(PARAM_MAX_MESSAGE_SIZE,
 					  DEFAULT_MAX_MESSAGE_SIZE);
+      paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
+					      DEFAULT_IS_BUFFERED_SEND);
+      paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
+					      DEFAULT_TCP_NODELAY);
       if (changedKeys.contains(PARAM_DATA_DIR)) {
 	String paramDataDir = config.get(PARAM_DATA_DIR, DEFAULT_DATA_DIR);
 	File dir = new File(paramDataDir);
 	if (dir.exists() || dir.mkdirs()) {
 	  dataDir = dir;
-	  log.debug("Message data dir: " + dataDir);
+	  log.debug2("Message data dir: " + dataDir);
 	} else {
 	  log.warning("No message data dir: " + dir);
 	  dataDir = null;
@@ -295,6 +309,10 @@ public class BlockingStreamComm
     return idMgr.findPeerIdentity(idkey);
   }
   
+  PeerIdentity getMyPeerId() {
+    return myPeerId;
+  }
+
   Queue getReceiveQueue() {
     return rcvQueue;
   }
@@ -327,8 +345,12 @@ public class BlockingStreamComm
     return paramMaxMessageSize;
   }
 
-  PeerIdentity getMyPeerId() {
-    return myPeerId;
+  boolean isBufferedSend() {
+    return paramIsBufferedSend;
+  }
+
+  boolean isTcpNodelay() {
+    return paramIsTcpNodelay;
   }
 
   /**
@@ -564,7 +586,13 @@ public class BlockingStreamComm
    * @param run the Runnable to be run
    * @throws RuntimeException if no pool thread is available
    */
-  void execute(Runnable run) {
+  void execute(Runnable run) throws InterruptedException {
+    if (run == null)
+      log.warning("Executing " + run, new Throwable());
+    pool.execute(run);
+  }
+
+  void XXXexecute(Runnable run) {
     try {
       if (run == null)
 	log.warning("Executing " + run, new Throwable());

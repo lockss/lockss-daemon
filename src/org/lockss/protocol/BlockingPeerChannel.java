@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.4 2005-05-26 08:32:32 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.5 2005-05-27 08:34:29 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ class BlockingPeerChannel implements PeerChannel {
   static final int STATE_CLOSING = 8;
   static final int STATE_CLOSED = 9;
 
-  int state;
+  private int state;
   private Object stateLock = new Object();
 
   volatile private PeerIdentity peer;
@@ -130,9 +130,17 @@ class BlockingPeerChannel implements PeerChannel {
 //     return peer;
 //   }
 
-  void setState(int newState) {
+  long getLastActiveTime() {
+    return lastActiveTime;
+  }
+
+  private void setState(int newState) {
     if (log.isDebug3()) log.debug3(p()+"State: " + state + " -> " + newState);
     state = newState;
+  }
+
+  int getState() {
+    return state;
   }
 
   /** If currently in state <code>from</code>, transition to state
@@ -224,7 +232,7 @@ class BlockingPeerChannel implements PeerChannel {
     return false;
   }
 
-  // These are the two entry points from BlockingStreamComm
+  // These are the main entry points from BlockingStreamComm
 
   /** Start thread to connect to the peer and start channel threads.
    */
@@ -237,9 +245,15 @@ class BlockingPeerChannel implements PeerChannel {
     }
     if (stateTrans(STATE_INIT, STATE_CONNECTING, "startOriginate")) {
       ChannelConnecter runner = new ChannelConnecter();
+      runner.setTimeout(scomm.getConnectTimeout());
       try {
 	scomm.execute(runner);
 	connecter = runner;
+      } catch (InterruptedException e) {
+      // Can happen if we get aborted while starting pool thread
+	log.warning("startOriginate()", e);
+	stateTrans(STATE_CONNECTING, STATE_CLOSED);
+	throw new IOException(e.toString());
       } catch (Exception e) {
 	log.warning("Can't start channel connecter", e);
 	stateTrans(STATE_CONNECTING, STATE_CLOSED);
@@ -252,8 +266,29 @@ class BlockingPeerChannel implements PeerChannel {
    */
   public void startIncoming() throws IOException {
     if (stateTrans(STATE_ACCEPTED, STATE_STARTING, "startIncoming")) {
-      startConnectedChannel();
+      try {
+	startConnectedChannel();
+      } catch (IOException e) {
+	abortChannel();
+      }
     }
+  }
+
+  /** Send a message to our peer, return true iff we expect to be able to
+   * send it
+   */
+  public boolean send(PeerMessage msg) {
+    synchronized (stateLock) {
+      switch (state) {
+      case STATE_CLOSED:
+      case STATE_CLOSING:
+      case STATE_CONNECT_FAIL:
+	return false;
+      default:
+	sendQueue.put(msg);
+	return true;
+      }
+    }    
   }
 
   /** Initialize streams, start reader and writer threads
@@ -262,9 +297,15 @@ class BlockingPeerChannel implements PeerChannel {
     assertState(STATE_STARTING, "startConnectedChannel");
     try {
       sock.setSoTimeout((int)scomm.getSoTimeout());
+      boolean nodelay = scomm.isTcpNodelay();
+      if (log.isDebug3()) log.debug3(p()+"Setting NoDelay " + nodelay);
+      sock.setTcpNoDelay(nodelay);
       ins = sock.getInputStream();
       outs = sock.getOutputStream();
-
+      if (scomm.isBufferedSend()) {
+	outs = new BufferedOutputStream(outs, COPY_BUFFER_SIZE);
+	if (log.isDebug3()) log.debug3(p()+"Buffering output");
+      }
       // writer must be started first as reader refers to writer thread (to
       // set name when peerid received)
       startWriter();
@@ -272,11 +313,9 @@ class BlockingPeerChannel implements PeerChannel {
       stateTrans(STATE_STARTING, STATE_OPEN);
     } catch (IOException e) {
       log.error("Channel didn't start", e);
-      abortChannel();
       throw e;
     } catch (Exception e) {
       log.error("Channel didn't start", e);
-      abortChannel();
       throw new IOException(e.toString());
     }
   }
@@ -345,7 +384,9 @@ class BlockingPeerChannel implements PeerChannel {
       try {
 	stateTrans(STATE_CONNECTING, STATE_STARTING);
 	startConnectedChannel();
-      } catch (IOException ignore) {
+      } catch (IOException e) {
+	abortChannel();
+	return;
       }
     } else {
       throw new IllegalArgumentException("Unknown PeerAddress: " + pad);
@@ -360,9 +401,12 @@ class BlockingPeerChannel implements PeerChannel {
     try {
       reader = runner;
       scomm.execute(runner);
+    } catch (InterruptedException e) {
+      // Can happen if we get aborted while starting pool thread
+      log.warning("startReader()", e);
+      abortChannel();
     } catch (RuntimeException e) {
-      log.warning("Exception starting channel thread", e);
-      reader = null;
+      log.warning("startReader()", e);
       abortChannel();
     }
   }
@@ -370,34 +414,19 @@ class BlockingPeerChannel implements PeerChannel {
   /** Start the writer thread
    */
   synchronized void startWriter() {
-    if (writer == null) {
-      log.debug3("Starting writer");
-      ChannelWriter runner = new ChannelWriter();
-      try {
-	scomm.execute(runner);
-	writer = runner;
-      } catch (RuntimeException e) {
-	log.warning("Exception starting channel thread", e);
-	abortChannel();
-      }
+    log.debug3("Starting writer");
+    ChannelWriter runner = new ChannelWriter();
+    try {
+      scomm.execute(runner);
+      writer = runner;
+    } catch (InterruptedException e) {
+      // Can happen if we get aborted while starting pool thread
+      log.warning("startWriter()", e);
+      abortChannel();
+    } catch (RuntimeException e) {
+      log.warning("startWriter()", e);
+      abortChannel();
     }
-  }
-
-  /** Send a message to our peer, return true iff we expect to be able to
-   * send it
-   */
-  boolean send(PeerMessage msg) {
-    synchronized (stateLock) {
-      switch (state) {
-      case STATE_CLOSED:
-      case STATE_CLOSING:
-      case STATE_CONNECT_FAIL:
-	return false;
-      default:
-	sendQueue.put(msg);
-	return true;
-      }
-    }    
   }
 
   // Message reception, invoked by ChannelReader
@@ -438,12 +467,18 @@ class BlockingPeerChannel implements PeerChannel {
 	}
       }
     } catch (SocketException e) {
-      // These are expected when closing connection; don't log stack trace
-      log.warning("handleInputStream: " + e.toString());
+      // Expected when closing
+      if (!(state == STATE_CLOSED || state == STATE_CLOSING)) {
+	log.warning("handleInputStream: " + e.toString());
+      }
       abortChannel();
     } catch (IOException e) {
       // These are unexpected
-      log.warning("handleInputStream", e);
+      if (log.isDebug3()) {
+	log.warning("handleInputStream", e);
+      } else {
+	log.warning("handleInputStream: " + e.toString());
+      }
       abortChannel();
     }
     // exit thread
@@ -453,7 +488,7 @@ class BlockingPeerChannel implements PeerChannel {
    */
   void readMessages(ChannelRunner runner) throws IOException {
     while (runner.goOn() && readHeader()) {
-      int op = rcvHeader[HEADER_OFF_OP];
+      int op = getRcvdMessageOp();
       if (peer == null && op != OP_PEERID) {
 	throw new ProtocolException("Didn't receive peerid first: " + op);
       }
@@ -543,7 +578,7 @@ class BlockingPeerChannel implements PeerChannel {
 
   /** Read size bytes into buf */
   boolean readBuf(byte[] buf, int size) throws IOException {
-    int len = StreamUtil.readBytes(ins, buf, size);
+    int len = readBytes(ins, buf, size);
     if (len == size) return true;
     if (len == 0) return false;
     throw new ProtocolException("Connection closed in middle of message");
@@ -596,6 +631,10 @@ class BlockingPeerChannel implements PeerChannel {
     return ByteArray.decodeInt(rcvHeader, HEADER_OFF_LEN);
   }
 
+  int getRcvdMessageOp() {
+    return ByteArray.decodeByte(rcvHeader, HEADER_OFF_OP);
+  }
+
   // Message sending, invoked by ChannelWriter
 
   boolean isSendIdle() {
@@ -635,13 +674,25 @@ class BlockingPeerChannel implements PeerChannel {
 	  msg.delete();
 	  lastSendTime = lastActiveTime = TimeBase.nowMs();
 	  synchronized (stateLock) {
+	    // if draining output and nothing left to send, close.  Check
+	    // now rather than waiting for peekWait() to timeout.
 	    if (state == STATE_DRAIN_OUTPUT && isSendIdle()) {
 	      stopChannel();
-	      break;
+	      return;
 	    }
 	  }
 	}
 	synchronized (stateLock) {
+	  if (!isSendIdle()) {
+	    // if something got queued before state locked, continue sending
+	    continue;
+	  }
+	  // if draining output, close.  Must check this again because it
+	  // might have become true during peekWait()
+	  if (state == STATE_DRAIN_OUTPUT) {
+	    stopChannel();
+	    return;
+	  }
 	  if (TimeBase.msSince(lastActiveTime) > scomm.getChannelIdleTime()) {
 	    // time to close channel.  shutdown output only in case peer is
 	    // now sending message
