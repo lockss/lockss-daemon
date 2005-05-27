@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.40 2005-05-16 21:36:54 tlipkis Exp $
+ * $Id: Logger.java,v 1.41 2005-05-27 08:35:23 tlipkis Exp $
  */
 
 /*
@@ -90,6 +90,10 @@ public class Logger {
    * loops, or per-file, per-hash step, etc.) */
   public static final int LEVEL_DEBUG3 = 7;
 
+  /** Log level (numeric) at which stack traces will be included */
+  static final String PARAM_STACKTRACE_LEVEL = PREFIX + "stackTraceLevel";
+  static final int DEFAULT_STACKTRACE_LEVEL = LEVEL_DEBUG;
+
   // Mapping between numeric level and string
   static LevelDescr levelDescrs[] = {
     new LevelDescr(LEVEL_CRITICAL, "Critical"),
@@ -106,6 +110,8 @@ public class Logger {
 
   // Default default log level if config parameter not set.
   private static final int DEFAULT_LEVEL = LEVEL_INFO;
+
+  private static int paramStackTraceLevel = DEFAULT_STACKTRACE_LEVEL;
 
   private static/* final*/ Map logs = new HashMap();
   private static List targets = new ArrayList();
@@ -445,6 +451,8 @@ public class Logger {
 	    if (diffs.contains(PARAM_LOG_TARGETS)) {
 	      setLogTargets();
 	    }
+	    paramStackTraceLevel = newConfig.getInt(PARAM_STACKTRACE_LEVEL,
+						    DEFAULT_STACKTRACE_LEVEL);
 	  }
 	}
       };
@@ -578,9 +586,11 @@ public class Logger {
 	String emsg = e.toString();
 	sb.append(": ");
 	sb.append(emsg);
-	sb.append("\n    ");
-	sb.append(StringUtil.trimStackTrace(emsg,
-					    StringUtil.stackTraceString(e)));
+	if (isLevel(paramStackTraceLevel)) {
+	  sb.append("\n    ");
+	  sb.append(StringUtil.trimStackTrace(emsg,
+					      StringUtil.stackTraceString(e)));
+	}
       }
       writeMsg(level, sb.toString());
     }
