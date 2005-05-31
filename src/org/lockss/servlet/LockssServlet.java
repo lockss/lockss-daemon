@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.55 2005-05-02 19:26:56 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.56 2005-05-31 19:20:18 tlipkis Exp $
  */
 
 /*
@@ -136,13 +136,13 @@ public abstract class LockssServlet extends HttpServlet
     public String expl;
     public int flags = 0;
     // flags
-    public static int ON_CLIENT = 1;	// runs on client (else on admin)
-    public static int PER_CLIENT = 2;	// per client (takes client arg)
-    public static int NOT_IN_NAV = 4;	// no link in nav table
-    public static int LARGE_LOGO = 8;	// use large LOCKSS logo
-    public static int DEBUG_ONLY = 0x10; // debug user only
-    public static int NAME_IS_URL = 0x20; // debug user only
-    public static int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
+    public static final int ON_CLIENT = 1; // runs on client (else on admin)
+    public static final int PER_CLIENT = 2; // per client (takes client arg)
+    public static final int NOT_IN_NAV = 4; // no link in nav table
+    public static final int LARGE_LOGO = 8; // use large LOCKSS logo
+    public static final int DEBUG_ONLY = 0x10; // debug user only
+    public static final int NAME_IS_URL = 0x20; // debug user only
+    public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
     public ServletDescr(Class cls, String heading, String name, int flags) {
       this.cls = cls;
