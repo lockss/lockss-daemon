@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.135 2005-05-26 08:31:29 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.136 2005-05-31 19:19:21 tlipkis Exp $
  */
 
 /*
@@ -270,6 +270,12 @@ public class PluginManager
 					       DEFAULT_PREFER_LOADABLE_PLUGIN);
     }
 
+    // must set retract before loadablePluginsReady is true as
+    // retrievePlugin() may be called before that
+    if (changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
+      retract = config.getList(PARAM_PLUGIN_RETRACT);
+    }
+
     // If the keystore or password has changed, update.
     if (changedKeys.contains(KEYSTORE_PREFIX)) {
       initKeystore();
@@ -290,7 +296,6 @@ public class PluginManager
       // Process the built-in plugin registry.
       if (changedKeys.contains(PARAM_PLUGIN_REGISTRY) ||
 	  changedKeys.contains(PARAM_PLUGIN_RETRACT)) {
-	retract = config.getList(PARAM_PLUGIN_RETRACT);
 	initPluginRegistry(config);
       }
 
@@ -896,10 +901,10 @@ public class PluginManager
     if (pluginMap.containsKey(pluginKey)) {
       return new PluginInfo((Plugin)pluginMap.get(pluginKey), loader, null);
     }
+    String pluginName = pluginNameFromKey(pluginKey);
     if (retract != null && !retract.isEmpty()) {
-      String name = pluginNameFromKey(pluginKey);
-      if (retract.contains(name)) {
-	log.debug3("Not loading " + name +
+      if (retract.contains(pluginName)) {
+	log.debug3("Not loading " + pluginName +
 		   " because it's on the retract list");
 	return null;
       }
@@ -908,7 +913,6 @@ public class PluginManager
       loader = this.getClass().getClassLoader();
     }
 
-    String pluginName = pluginNameFromKey(pluginKey);
 
     Plugin classPlugin = null;
     DefinablePlugin xmlPlugin = null;
