@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.3 2005-02-16 19:39:53 smorabito Exp $
+ * $Id: HTTPConfigFile.java,v 1.4 2005-05-31 19:18:20 tlipkis Exp $
  */
 
 /*
@@ -135,14 +135,12 @@ public class HTTPConfigFile extends ConfigFile {
       } else {
 	in = getUrlInputStream(m_fileUrl);	
       }
-    } catch (MalformedURLException ex) {
-      log.error("Malformed config file URL: " + ex);
-      return false;
     } catch (IOException ex) {
       log.warning("Unexpected exception trying to load " +
 		  "config file (" + m_fileUrl + "): " + ex);
       m_IOException = ex;
-      throw ex;
+      m_loadError = ex.toString();
+      return false;
     }
 
     // "in" will be null if HTTP contents did not change (this is the

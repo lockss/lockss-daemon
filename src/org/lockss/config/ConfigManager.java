@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.14 2005-03-14 23:31:46 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.15 2005-05-31 19:18:20 tlipkis Exp $
  */
 
 /*
@@ -408,8 +408,7 @@ public class ConfigManager implements LockssManager {
 	} else {
 	  // This load failed.  Fail the whole thing.
 	  if (!failOk) {
-	    log.warning("Couldn't load props from " + url + ": " +
-			e.toString());
+	    log.warning("Couldn't load props from " + url, e);
 	    config.reset();  // ensure config is empty
 	  }
 	  return false;
