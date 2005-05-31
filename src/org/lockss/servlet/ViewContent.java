@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.1 2005-05-02 19:26:55 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.2 2005-05-31 19:20:50 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class ViewContent extends LockssServlet {
       return;
     }
     cu = au.makeCachedUrl(url);
-    if (cu == null) {
+    if (cu == null || !cu.hasContent()) {
       displayError("URL " + url + " not found in AU: " + au.getName());
       return;
     }
@@ -168,17 +168,6 @@ public class ViewContent extends LockssServlet {
     set.frame(0,1).name("CuContent", srvURL(myServletDescr(), args));
     set.write(resp.getWriter());
   }
-
-  void displayError(String error) {
-  }
-
-//   void err() {
-//     if (error != null) {
-//       frm.add("<p><font color=red>");
-//       frm.add(error);
-//       frm.add("</font>");
-//     }
-//   }
 
   void displaySummary(boolean contentInOtherFrame) throws IOException {
     LockssRepository repo = getLockssDaemon().getLockssRepository(au);
@@ -247,26 +236,23 @@ public class ViewContent extends LockssServlet {
   }
 
   void displayContent() {
-    if (!cu.hasContent()) {
+    if (log.isDebug3()) {
+      log.debug3("props: " + props);
+      log.debug3("ctype: " + ctype);
+      log.debug3("clen: " + clen);
     }
-    log.debug("has content");
-    log.debug("props: " + props);
-    log.debug("ctype: " + ctype);
     resp.setContentType(ctype);
-    log.debug("clen: " + clen);
     if (clen <= Integer.MAX_VALUE) {
       resp.setContentLength((int)clen);
     }
     OutputStream out = null;
     InputStream in = null;
     try {
-      log.debug("opening out");
-
       out = resp.getOutputStream();
       in = cu.getUnfilteredInputStream();
       StreamUtil.copy(in, out);
     } catch (IOException e) {
-      log.warning("", e);
+      log.warning("Copying CU to HTTP stream", e);
     } finally {
       if (in != null) try {in.close();} catch (IOException ignore) {}
       if (out != null) try {out.close();} catch (IOException ignore) {}
@@ -281,84 +267,16 @@ public class ViewContent extends LockssServlet {
   void displayForm(String error) throws IOException {
   }
 
-  void generateHelpPage(String error) throws IOException {
-  }
-
-  void addFmtElement(Composite comp, String title, String format,
-		     String text) {
-    ServletDescr desc = myServletDescr();
-    String fmt = "action=" + format;
-    String absUrl = "<code>" + srvAbsURL(desc, fmt) + "</code>";
-    Composite elem = new Composite();
-    elem.add(StringUtil.replaceString(text, "#", absUrl));
-    addFmtElement(comp, title, format, elem);
-  }
-
-  void addFmtElement(Composite comp, String title, String format,
-		     Element elem) {
-    ServletDescr desc = myServletDescr();
-    String fmt = "action=" + format;
-    comp.add("<li>");
-    comp.add(srvLink(desc, title, fmt));
-    comp.add(". ");
-    comp.add(elem);
-    comp.add("</li>");
-  }
-
-  void generateEncapForm(String error) throws IOException {
+  void displayError(String error) throws IOException {
     Page page = newPage();;
-    resp.setContentType("text/html");
-    Form frm = new Form(srvURL(myServletDescr()));
-    frm.method("POST");
-    frm.attribute("enctype", "multipart/form-data");
-    frm.add(new Input(Input.Hidden, "pacform", "1"));
-    frm.add(new Input(Input.Hidden, "action", "Combined PAC"));
-//     frm.add(new Input(Input.Hidden, ACTION_TAG));
-    Table tbl = new Table(0, "align=center cellspacing=16 cellpadding=0");
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add("Generate a PAC file that combines the rules from an existing PAC file with the rules for this cache.");
-    if (error != null) {
-      tbl.newRow();
-      tbl.newCell("align=center");
-      tbl.add("<font color=red>");
-      tbl.add(error);
-      tbl.add("</font>");
-    }
-    tbl.newRow();
-    tbl.newCell("align=center");
-
-    String url = getParameter("encapsulated_url");
-    Input urlin = new Input(Input.Text, "encapsulated_url",
-			    (url != null ? url : ""));
-    urlin.setSize(40);
-    tbl.add("Enter the URL of a remote PAC file:<br>");
-    tbl.add(urlin);
-
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add("or the name of a local PAC file:<br>");
-    tbl.add(new Input(Input.File, "pac_contents1"));
-
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(new Input(Input.Submit, "dummy", "Generate Combined PAC"));
-
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add("or enter PAC file contents here:<br>");
-    TextArea txt = new MyTextArea("pac_contents2");
-    txt.setSize(80, 20);
-    tbl.add(txt);
-
-    tbl.newRow();
-    tbl.newCell("align=center");
-    tbl.add(new Input(Input.Submit, "dummy", "Generate Combined PAC"));
-
-    frm.add(tbl);
-    page.add(frm);
+    Composite comp = new Composite();
+    comp.add("<center><font color=red size=+1>");
+    comp.add(error);
+    comp.add("</font></center><br>");
+    page.add(comp);
     page.add(getFooter());
     page.write(resp.getWriter());
   }
+
 
 }
