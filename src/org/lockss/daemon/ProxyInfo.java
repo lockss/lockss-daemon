@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyInfo.java,v 1.11 2005-02-02 09:42:47 tlipkis Exp $
+ * $Id: ProxyInfo.java,v 1.12 2005-06-02 16:39:40 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class ProxyInfo {
     Map map = new HashMap();
     PluginManager pmgr =
       (PluginManager)LockssDaemon.getManager(LockssDaemon.PLUGIN_MANAGER);
-    for (Iterator iter = pmgr.getAllAus().iterator(); iter.hasNext(); ) {
+    for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       if (!pmgr.isInternalAu(au)) {
 	for (Iterator urlIter = au.getUrlStems().iterator();

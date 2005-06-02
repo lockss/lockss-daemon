@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetActiveAus.java,v 1.2 2005-05-12 00:22:22 troberts Exp $
+ * $Id: TestTitleSetActiveAus.java,v 1.3 2005-06-02 16:39:40 tlipkis Exp $
  */
 
 /*
@@ -46,15 +46,19 @@ import org.lockss.util.*;
 public class TestTitleSetActiveAus extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestTitleSetActiveAus");
 
-  PluginManager pluginMgr;
+  MockLockssDaemon daemon;
+  MyPluginManager pluginMgr;
   MockPlugin mp;
   MyMockArchivalUnit mau1, mau2;
-  TitleConfig tc1, tc2, tc3, tc4, tc5, tc6;
+  TitleConfig tc1, tc2;
   ConfigParamAssignment cpa1, cpa2, cpa3;
 
   public void setUp() throws Exception {
     super.setUp();
-    pluginMgr = getMockLockssDaemon().getPluginManager();
+    daemon = getMockLockssDaemon();
+    pluginMgr = new MyPluginManager();
+    daemon.setPluginManager(pluginMgr);
+    pluginMgr.initService(daemon);
     pluginMgr.startService();
     mp = new MockPlugin();
     ConfigParamDescr d1 = new ConfigParamDescr("key1");
@@ -65,7 +69,8 @@ public class TestTitleSetActiveAus extends LockssTestCase {
 
     tc1 = new TitleConfig("title1", mp);
     tc1.setParams(ListUtil.list(cpa1, cpa2));
-
+    tc2 = new TitleConfig("title2", mp);
+    tc2.setParams(ListUtil.list(cpa3));
     mp.setAuConfigDescrs(ListUtil.list(d1, d2));
     mau1 = new MyMockArchivalUnit();
     mau2 = new MyMockArchivalUnit();
@@ -85,13 +90,34 @@ public class TestTitleSetActiveAus extends LockssTestCase {
   }
 
   public void testFromAu() throws Exception {
-    PluginTestUtil.registerArchivalUnit(mp, mau1);
+    RegistryPlugin rplug = new RegistryPlugin();
+    // ensure that internal AU doesn't produce title entries
+    MyRegistryArchivalUnit rau = new MyRegistryArchivalUnit(rplug);
     mau1.setTitleConfig(tc1);
+    rau.setTitleConfig(tc2);
+    pluginMgr.addAu(mau1);
+    pluginMgr.addAu(rau);
     Collection set =
       new TitleSetActiveAus(getMockLockssDaemon()).getTitles();
-    assertEquals(1, set.size());
+    System.err.println(set.getClass().toString());
+    assertEquals(SetUtil.set(tc1), SetUtil.theSet(set));
+
     List lst = new ArrayList(set);
     assertSame(tc1, lst.get(0));
+    assertEquals(1, set.size());
+  }
+
+  static class MyRegistryArchivalUnit extends RegistryArchivalUnit {
+    TitleConfig tc;
+    public MyRegistryArchivalUnit(RegistryPlugin plugin) {
+      super(plugin);
+    }
+    public TitleConfig getTitleConfig() {
+      return tc;
+    }
+    public void setTitleConfig(TitleConfig tc) {
+      this.tc = tc;
+    }
   }
 
   public void testSynthesized() throws Exception {
@@ -113,6 +139,23 @@ public class TestTitleSetActiveAus extends LockssTestCase {
     }
     public void setTitleConfig(TitleConfig tc) {
       titleConfig = tc;
+    }
+  }
+
+  class MyPluginManager extends PluginManager {
+    private List aus;
+    public List getAllAus() {
+      if (aus == null) {
+	return super.getAllAus();
+      } else {
+	return aus;
+      }
+    }
+    public void addAu(ArchivalUnit au) {
+      if (aus == null) {
+	aus = new ArrayList();
+      }
+      aus.add(au);
     }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryArchivalUnit.java,v 1.2 2005-05-25 19:24:12 tlipkis Exp $
+ * $Id: TestRegistryArchivalUnit.java,v 1.3 2005-06-02 16:39:40 tlipkis Exp $
  */
 
 /*
@@ -95,6 +95,7 @@ public class TestRegistryArchivalUnit extends LockssTestCase {
 		 paramMap.getLong(ArchivalUnit.AU_NEW_CRAWL_INTERVAL));
     assertEquals(12 * Constants.SECOND,
 		 paramMap.getLong(ArchivalUnit.AU_FETCH_DELAY));
+    assertEquals("org|lockss|plugin|TestRegistryArchivalUnit$MyRegistryPlugin&base_url~http%3A%2F%2Ffoo%2Ecom%2Fbar", au.getAuId());
   }
 
   public void testShouldCallTopLevelPoll() throws Exception {
