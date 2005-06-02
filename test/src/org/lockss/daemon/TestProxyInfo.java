@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyInfo.java,v 1.9 2004-12-09 08:21:44 tlipkis Exp $
+ * $Id: TestProxyInfo.java,v 1.9.8.1 2005-06-02 16:36:08 tlipkis Exp $
  */
 
 /*
@@ -91,6 +91,45 @@ public class TestProxyInfo extends LockssTestCase {
       map.put(urlStem, au);
     }
     return map;
+  }
+
+  public void testGetUrlStemMap() throws Exception {
+    String stem1 = "http://foo1/";
+    String stem2 = "http://foo2/";
+    String stem3 = "http://foo3/";
+    getMockLockssDaemon().getPluginManager();
+    MyMockArchivalUnit au1 = new MyMockArchivalUnit();
+    au1.setUrlStems(ListUtil.list(stem1, stem2));
+    MyRegistryArchivalUnit au2 =
+      new MyRegistryArchivalUnit(new RegistryPlugin());
+    au2.setUrlStems(ListUtil.list(stem3));
+    Map map = pi.getUrlStemMap(ListUtil.list(au1, au2));
+    assertSame(au1, map.get(stem1));
+    assertSame(au1, map.get(stem2));
+    assertEquals(2, map.size());
+  }
+
+  class MyMockArchivalUnit extends MockArchivalUnit {
+    private Collection urlStems;
+    public Collection getUrlStems() {
+      return urlStems;
+    }
+    void setUrlStems(Collection urlStems) {
+      this.urlStems = urlStems;
+    }
+  }
+
+  class MyRegistryArchivalUnit extends RegistryArchivalUnit {
+    private Collection urlStems;
+    public MyRegistryArchivalUnit(RegistryPlugin plugin) {
+      super(plugin);
+    }
+    public Collection getUrlStems() {
+      return urlStems;
+    }
+    void setUrlStems(Collection urlStems) {
+      this.urlStems = urlStems;
+    }
   }
 
   public void testGeneratePacEntry() throws Exception {
