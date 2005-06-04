@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.17 2005-03-18 18:07:49 troberts Exp $
+ * $Id: UrlCacher.java,v 1.18 2005-06-04 18:54:27 tlipkis Exp $
  */
 
 /*
@@ -93,6 +93,7 @@ public interface UrlCacher {
   /**
    * Return the {@link CachedUrlSet} to which this UrlCacher belongs.
    * @return the parent set
+   * @deprecated Not used, kept only for plugin binary compatibility
    */
   public CachedUrlSet getCachedUrlSet();
 

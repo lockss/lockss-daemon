@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.52 2005-05-20 23:42:39 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.53 2005-06-04 18:54:27 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,6 @@ public class BaseUrlCacher implements UrlCacher {
     GMT_DATE_FORMAT.setTimeZone(TimeZone.getTimeZone("GMT"));
   }
 
-  protected CachedUrlSet cus;
   protected ArchivalUnit au;
   protected String origUrl;		// URL with which I was created
   protected String fetchUrl;		// possibly affected by redirects
@@ -90,7 +89,6 @@ public class BaseUrlCacher implements UrlCacher {
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
-    //this.cus = owner;
     this.origUrl = url;
     this.fetchUrl = url;
     //au = owner.getArchivalUnit();
@@ -121,9 +119,10 @@ public class BaseUrlCacher implements UrlCacher {
   /**
    * Return the CachedUrlSet to which this UrlCacher belongs.
    * @return the owner CachedUrlSet
+   * @deprecated Not used, kept for plugin binary compatibility
    */
   public CachedUrlSet getCachedUrlSet() {
-    return cus;
+    throw new UnsupportedOperationException("No longer implemented");
   }
 
   /**
