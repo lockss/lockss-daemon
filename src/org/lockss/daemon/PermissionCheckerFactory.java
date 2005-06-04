@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionCheckerFactory.java,v 1.1 2005-05-06 00:06:31 troberts Exp $
+ * $Id: PermissionCheckerFactory.java,v 1.2 2005-06-04 19:21:33 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ public interface PermissionCheckerFactory {
 
   /**
    * @param au ArchivalUnit that these permission checkers will be used on
-   * @returns a list of permission checkers, which may be empty
+   * @return a list of permission checkers, which may be empty
    */
   public List createPermissionCheckers(ArchivalUnit au);
 

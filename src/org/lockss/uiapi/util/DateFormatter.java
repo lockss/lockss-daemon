@@ -1,5 +1,5 @@
 /*
- * $Id: DateFormatter.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: DateFormatter.java,v 1.2 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -71,7 +71,7 @@ import java.text.*;
   
   /**
    * Format a "short" date
-   * @date Date object
+   * @param date Date object
    * @return <code>MM/dd/yy HH:mm:ss</code>
    */
   public static String shortFormat(Date date) {
@@ -80,7 +80,7 @@ import java.text.*;
   
   /**
    * Format a "long" date
-   * @date Date object
+   * @param date Date object
    * @return <code>dd-MM-yyyy HH:mm:ss</code>
    */
   public static String explicitFormat(Date date) {

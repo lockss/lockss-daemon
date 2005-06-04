@@ -1,5 +1,5 @@
 /*
- * $Id: EncodedProperty.java,v 1.9 2005-03-23 07:01:10 smorabito Exp $
+ * $Id: EncodedProperty.java,v 1.10 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class EncodedProperty extends Properties {
 
   /**
    * decode the string to a property table using the given char set.
-   * @param encodedBytes the string to decode
+   * @param encBytes the bytes to decode
    * @param charset the charecter set to use in decoding the string
    */
   public void decode(byte[] encBytes, String charset)

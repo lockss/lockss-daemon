@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.30 2005-05-24 20:38:26 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.31 2005-06-04 19:21:34 tlipkis Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class GoslingHtmlParser implements ContentParser {
    * Read through the reader stream, extract and return the next url found
    * (after decoding any html entities in it)
    *
-   * @param reader Reader object to extract the link from
+   * @param ring CharRing from which to read characters
    * @return String representing the next url in reader
    * @throws IOException
    * @throws MalformedURLException

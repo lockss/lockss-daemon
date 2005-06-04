@@ -1,5 +1,5 @@
 /*
- * $Id: ParseUtils.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: ParseUtils.java,v 1.2 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -377,7 +377,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * Get an ArrayList of all occurances of named text in the requested scope
    * @param xmlUtils XML utilities object
    * @param document Document (DOM) to inspect
-   * @param textName Name of the text element
+   * @param textElementName Name of the text element
    * @return List of all associated text messages
    */
   public static ArrayList getElementTextList(XmlUtils xmlUtils,
@@ -391,8 +391,9 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * Get an ArrayList of all occurances of named text in the requested scope
    * @param xmlUtils XML utilities object
    * @param document Document (DOM) to inspect
-   * @param textName Name of the text element
-   * @param rootName Name of starting element within the response document
+   * @param textElementName Name of the text element
+   * @param rootElementName Name of starting element within the response
+   * document
    * @return List of all associated text messages
    */
   public static ArrayList getElementTextList(XmlUtils xmlUtils, 

@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.5 2005-02-19 01:18:08 dcfok Exp $
+ * $Id: OaiHandler.java,v 1.6 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -81,13 +81,13 @@ public class OaiHandler {
   // the root node of all the oai records retrieved in this request
   private Set oaiRecords = new HashSet();
 
-   /**
-   * Constructor
-   * @param oaiData OaiRequestData which is constructed by OaiCrawlSpec
-   * @param fromDate create date of records the Oai request want from
-   * @param untilDate create date of records the Oai request want until
-   * @param maxRetries retry limit of oai request when retriable error is encountered
-   */
+//    /**
+//    * Constructor
+//    * @param oaiData OaiRequestData which is constructed by OaiCrawlSpec
+//    * @param fromDate create date of records the Oai request want from
+//    * @param untilDate create date of records the Oai request want until
+//    * @param maxRetries retry limit of oai request when retriable error is encountered
+//    */
 //   public OaiHandler(OaiRequestData oaiData, 
 // 		    String fromDate, 
 // 		    String untilDate, 
@@ -130,7 +130,8 @@ public class OaiHandler {
    * 2. get all the information we need from the ListRecords
    * 3. create another ListRecords if there is a resumptionToken
    * 
-   * @param listRecords the ListRecords object need to be processed
+   * @param maxRetries number of times to retry the request if it fails due
+   * to badResumptionToken
    */
   public void processResponse(int maxRetries){
     if (listRecords == null){
@@ -170,7 +171,7 @@ public class OaiHandler {
                            +"and metadataPrefix arguments results in an empty list.");
 	  } else if (errCode == "badResumptionToken") {
 	    if ( retries < maxRetries) {
-	      logger.info("badResumptionToke error, re-issue a new oai request");
+	      logger.info("badResumptionToken error, re-issue a new oai request");
 	      listRecords = issueRequest(oaiData, fromDate, untilDate);
 	      retries++;
 	      continue nextListRecords;

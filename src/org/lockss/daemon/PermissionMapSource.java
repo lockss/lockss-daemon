@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMapSource.java,v 1.1 2005-03-18 18:03:55 troberts Exp $
+ * $Id: PermissionMapSource.java,v 1.2 2005-06-04 19:21:33 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.crawler.*;
  */
 public interface PermissionMapSource {
   /**
-   * @returns an appropriate PermissionMap object
+   * @return an appropriate PermissionMap object
    */
   public PermissionMap getPermissionMap();
 }

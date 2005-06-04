@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.25 2005-03-23 17:26:48 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.26 2005-06-04 19:21:31 tlipkis Exp $
  */
 
 /*
@@ -234,7 +234,7 @@ public class MockUrlCacher implements UrlCacher {
   /**
    * setPermissionMap
    *
-   * @param permissionMap PermissionMap
+   * @param pmSource PermissionMap source
    */
   public void setPermissionMapSource(PermissionMapSource pmSource) {
     this.permissionMapSource = pmSource;

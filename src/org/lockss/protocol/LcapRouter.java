@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.43 2005-05-24 07:26:06 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.44 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -126,7 +126,6 @@ public class LcapRouter
 
   /** Send a message to a peer.
    * @param msg the message to send
-   * @param au archival unit for which this message is relevant (not used).
    * @param id the identity of the peer to which to send the message
    * @throws IOException if message couldn't be sent
    */

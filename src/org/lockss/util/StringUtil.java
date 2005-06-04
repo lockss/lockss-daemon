@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.60 2005-05-17 23:12:34 troberts Exp $
+ * $Id: StringUtil.java,v 1.61 2005-06-04 19:21:31 tlipkis Exp $
  */
 
 /*
@@ -851,7 +851,7 @@ public class StringUtil {
   /**
    * Scans through the reader looking for the String str; case sensitive
    * @param reader Reader to search; it will be at least partially consumed
-   * @returns true if the string is found, false if the end of reader is
+   * @return true if the string is found, false if the end of reader is
    * reached without finding the string
    */
   public static boolean containsString(Reader reader, String str)
@@ -875,7 +875,7 @@ public class StringUtil {
    * Scans through the reader looking for the String str
    * @param reader Reader to search; it will be at least partially consumed
    * @param ignoreCase whether to ignore case or not
-   * @returns true if the string is found, false if the end of reader is
+   * @return true if the string is found, false if the end of reader is
    * reached without finding the string
    */
   public static boolean containsString(Reader reader, String str,

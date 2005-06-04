@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.20 2005-05-02 19:26:57 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.21 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -300,7 +300,6 @@ public abstract class IpAccessControl extends LockssServlet {
 
   /**
    * Save the include and exclude lists to the access control file
-   * @return whether the save was successful
    */
   protected void saveChanges() throws IOException {
     Properties props = new Properties();

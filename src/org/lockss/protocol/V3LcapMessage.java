@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.4 2005-04-19 03:08:32 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.5 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -376,12 +376,11 @@ public class V3LcapMessage extends LcapMessage {
   /**
    * make a message to request a poll using a pollspec.
    *
-   * @param pollspec the pollspec specifying the url and bounds of interest
-   * @param voteblocks the voteblocks found in the message
+   * @param ps the pollspec specifying the url and bounds of interest
    * @param challenge the challange bytes
    * @param opcode the kind of poll being requested
    * @param timeRemaining  the time remaining for this poll
-   * @param localID the identity of the requestor
+   * @param origin the identity of the requestor
    * @return message the new V3LcapMessage
    * @throws IOException if unable to create message
    */
@@ -407,7 +406,7 @@ public class V3LcapMessage extends LcapMessage {
    * @param trigger the message which trggered the reply
    * @param opcode an opcode for this message
    * @param timeRemaining the time remaining on the poll
-   * @param localID the identity of the requestor
+   * @param origin the identity of the requestor
    * @return a new Message object
    * @throws IOException if message construction failed
    */

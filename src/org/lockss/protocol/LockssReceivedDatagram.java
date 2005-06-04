@@ -1,5 +1,5 @@
 /*
- * $Id: LockssReceivedDatagram.java,v 1.12 2005-05-18 05:46:34 tlipkis Exp $
+ * $Id: LockssReceivedDatagram.java,v 1.13 2005-06-04 19:21:32 tlipkis Exp $
  */
 
 /*
@@ -105,16 +105,16 @@ public class LockssReceivedDatagram extends LockssDatagram {
     if (len < 0) {
       throw new ProtocolException("short packet, len: " + len);
     }
-    byte[] pktData = packet.getData();
-    protocol = ByteArray.decodeInt(pktData, 0);
+    byte[] data = packet.getData();
+    protocol = ByteArray.decodeInt(data, 0);
     payload = new byte[len];
-    System.arraycopy(pktData, HEADER_LENGTH, payload, 0, len);
+    System.arraycopy(data, HEADER_LENGTH, payload, 0, len);
   }
 
   private void decodeCompressedPacket()
       throws IOException {
-    byte[] pktData = packet.getData();
-    InputStream gzin = new GZIPInputStream(new ByteArrayInputStream(pktData));
+    byte[] data = packet.getData();
+    InputStream gzin = new GZIPInputStream(new ByteArrayInputStream(data));
     ByteArrayOutputStream baos =
       new ByteArrayOutputStream(packet.getLength() * 4);
     byte[] header = new byte[HEADER_LENGTH];

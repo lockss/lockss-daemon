@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.49 2005-05-18 05:46:50 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.50 2005-06-04 19:21:31 tlipkis Exp $
  */
 
 /*
@@ -414,7 +414,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   /**
    * Set the stream CommManager
-   * @param commMan the new manager
+   * @param scommMan the new manager
    */
   public void setStreamCommManager(LcapStreamComm scommMan) {
     scommManager = scommMan;
@@ -423,7 +423,7 @@ public class MockLockssDaemon extends LockssDaemon {
 
   /**
    * Set the DatagramRouterManager
-   * @param routerMan the new manager
+   * @param datagramRouterMan the new manager
    */
   public void setDatagramRouterManager(LcapDatagramRouter datagramRouterMan) {
     datagramRouterManager = datagramRouterMan;
