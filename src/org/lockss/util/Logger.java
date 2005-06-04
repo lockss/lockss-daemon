@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.41 2005-05-27 08:35:23 tlipkis Exp $
+ * $Id: Logger.java,v 1.42 2005-06-04 18:59:49 tlipkis Exp $
  */
 
 /*
@@ -523,8 +523,7 @@ public class Logger {
    * @param levelName level string
    */
   public void setLevel(String levelName) {
-    int level = levelOf(levelName);
-    setLevel(level);
+    setLevel(levelOf(levelName));
   }
 
   /**

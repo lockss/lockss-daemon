@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.30 2005-05-02 19:27:39 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.31 2005-06-04 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -394,7 +394,7 @@ public class ArchivalUnitStatus
           continue;
         }
         CachedUrlSet cus;
-        if (cusn.getType() == cusn.TYPE_CACHED_URL_SET) {
+        if (cusn.getType() == CachedUrlSetNode.TYPE_CACHED_URL_SET) {
           cus = (CachedUrlSet)cusn;
         } else {
           CachedUrlSetSpec spec = new RangeCachedUrlSetSpec(cusn.getUrl());

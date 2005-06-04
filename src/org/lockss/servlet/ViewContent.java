@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.2 2005-05-31 19:20:50 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.3 2005-06-04 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -87,8 +87,7 @@ public class ViewContent extends LockssServlet {
     pluginMgr = getLockssDaemon().getPluginManager();
     try {
       srvltMgr =
-	(LocalServletManager)
-	getLockssDaemon().getManager(LockssDaemon.SERVLET_MANAGER);
+	(LocalServletManager) getLockssDaemon().getServletManager();
     } catch (RuntimeException e) {
       log.warning("Can't find LocalServletManager", e);
     }

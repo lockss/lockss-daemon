@@ -1,5 +1,5 @@
 /*
- * $Id: V1LcapMessage.java,v 1.3 2005-03-23 07:01:09 smorabito Exp $
+ * $Id: V1LcapMessage.java,v 1.4 2005-06-04 18:59:54 tlipkis Exp $
  */
 
 /*
@@ -77,9 +77,6 @@ public class V1LcapMessage extends LcapMessage {
   protected byte[] m_challenge; // the challenge bytes
   protected byte[] m_verifier; // the verifier bytes
   protected byte[] m_hashed; // the hash of content
-
-
-  static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
   /*
     byte
@@ -169,7 +166,7 @@ public class V1LcapMessage extends LcapMessage {
   /**
    * decode the raw packet data into a property table
    *
-   * @param encodedBytes the array of encoded bytes
+   * @param is the InputStrem from which the encoded message data will be read
    * @throws IOException
    */
   public void decodeMsg(InputStream is) throws IOException {

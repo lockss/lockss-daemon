@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.136 2005-05-31 19:19:21 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.137 2005-06-04 18:59:56 tlipkis Exp $
  */
 
 /*
@@ -183,9 +183,7 @@ public class PluginManager
   private boolean keystoreInited = false;
   private boolean loadablePluginsReady = false;
   private boolean preferLoadablePlugin = DEFAULT_PREFER_LOADABLE_PLUGIN;
-  private long registryTimeout = Configuration.
-    getCurrentConfig().getTimeIntervalParam(PARAM_PLUGIN_LOAD_TIMEOUT,
-					    DEFAULT_PLUGIN_LOAD_TIMEOUT);
+  private long registryTimeout = DEFAULT_PLUGIN_LOAD_TIMEOUT;
 
   private Map titleMap = null;
   private List allTitles = null;
@@ -821,8 +819,8 @@ public class PluginManager
   }
 
   public boolean isRemoveStoppedAus() {
-    return configMgr.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
-				     DEFAULT_REMOVE_STOPPED_AUS);
+    return ConfigManager.getBooleanParam(PARAM_REMOVE_STOPPED_AUS,
+					 DEFAULT_REMOVE_STOPPED_AUS);
   }
 
   /**

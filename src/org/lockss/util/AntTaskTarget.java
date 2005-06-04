@@ -1,5 +1,5 @@
 /*
- * $Id: AntTaskTarget.java,v 1.3 2003-06-20 22:34:52 claire Exp $
+ * $Id: AntTaskTarget.java,v 1.4 2005-06-04 18:59:49 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class AntTaskTarget implements LogTarget {
       sb.append(")");
     }
     sb.append(": ");
-    sb.append(log.nameOf(msgLevel));
+    sb.append(Logger.nameOf(msgLevel));
     sb.append(": ");
     sb.append(message);
     writeMsg(sb.toString());

@@ -1,5 +1,5 @@
 /*
- * $Id: TimerUtil.java,v 1.6 2003-07-17 05:22:30 tlipkis Exp $
+ * $Id: TimerUtil.java,v 1.7 2005-06-04 18:59:48 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TimerUtil {
    * @throws InterruptedException
    */
   public static void sleep(long ms) throws InterruptedException {
-    Thread.currentThread().sleep(ms);
+    Thread.sleep(ms);
   }
 
   // Is there a use for one that just returns if interrupted?

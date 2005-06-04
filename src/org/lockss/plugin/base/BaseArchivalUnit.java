@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.91 2005-03-23 17:25:44 troberts Exp $
+ * $Id: BaseArchivalUnit.java,v 1.92 2005-06-04 18:59:55 tlipkis Exp $
  */
 
 /*
@@ -392,11 +392,11 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   public String siteNormalizeUrl(String url) {
-    UrlNormalizer urlNormalizer =
+    UrlNormalizer normmalizer =
       (UrlNormalizer)paramMap.getMapElement(AU_URL_NORMALIZER);
 
-    if (urlNormalizer != null) {
-      return urlNormalizer.normalizeUrl(url, this);
+    if (normmalizer != null) {
+      return normmalizer.normalizeUrl(url, this);
     }
     return url;
   }

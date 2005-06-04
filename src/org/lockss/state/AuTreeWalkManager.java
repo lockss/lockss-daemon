@@ -1,5 +1,5 @@
 /*
- * $Id: AuTreeWalkManager.java,v 1.12 2005-02-21 03:08:33 tlipkis Exp $
+ * $Id: AuTreeWalkManager.java,v 1.13 2005-06-04 18:59:51 tlipkis Exp $
  */
 
 /*
@@ -128,13 +128,15 @@ public class AuTreeWalkManager
       try {
 	thread = Thread.currentThread();
 	Deadline finishBy = task.getFinish();
-	setPriority(twm.PRIORITY_PARAM_TREEWALK, twm.PRIORITY_DEFAULT_TREEWALK);
+	setPriority(TreeWalkManager.PRIORITY_PARAM_TREEWALK,
+		    TreeWalkManager.PRIORITY_DEFAULT_TREEWALK);
 	if (task.isFinished() || finishBy.expired()) {
 	  return;
 	}
 	triggerWDogOnExit(true);
 //       nowRunning();
-	startWDog(twm.WDOG_PARAM_TREEWALK, twm.WDOG_DEFAULT_TREEWALK);
+	startWDog(TreeWalkManager.WDOG_PARAM_TREEWALK,
+		  TreeWalkManager.WDOG_DEFAULT_TREEWALK);
 	happened = runWalker(finishBy);
       } finally {
 	// we are done running, in the sense that we should no longer be

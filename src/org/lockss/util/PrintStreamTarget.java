@@ -1,5 +1,5 @@
 /*
- * $Id: PrintStreamTarget.java,v 1.5 2005-01-04 03:04:25 tlipkis Exp $
+ * $Id: PrintStreamTarget.java,v 1.6 2005-06-04 18:59:49 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class PrintStreamTarget implements LogTarget {
       emitTimestamp(log);
       nextTimestamp.expireIn(Constants.DAY);
     }
-    writeMessage(log, log.nameOf(msgLevel), message);
+    writeMessage(log, Logger.nameOf(msgLevel), message);
   }
 
   protected void emitTimestamp(Logger log) {

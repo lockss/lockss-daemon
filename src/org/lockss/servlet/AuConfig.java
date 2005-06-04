@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.38 2005-05-02 19:26:57 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.39 2005-06-04 18:59:53 tlipkis Exp $
  */
 
 /*
@@ -386,8 +386,8 @@ public class AuConfig extends LockssServlet {
     java.util.List titles = remoteApi.findAllTitles();
     if (!titles.isEmpty()) {
       boolean includePluginInTitleSelect =
-	configMgr.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
-				  DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT);
+	ConfigManager.getBooleanParam(PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT,
+				      DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT);
       tbl.newRow();
       tbl.newCell("align=center");
       tbl.add("Choose a title:<br>");
@@ -461,10 +461,10 @@ public class AuConfig extends LockssServlet {
     SortedMap pMap = new TreeMap();
     for (Iterator iter = remoteApi.getRegisteredPlugins().iterator();
 	 iter.hasNext(); ) {
-      PluginProxy plugin = (PluginProxy)iter.next();
-      String name = plugin.getPluginName();
+      PluginProxy pp = (PluginProxy)iter.next();
+      String name = pp.getPluginName();
       if (name != null) {
-	pMap.put(name, plugin);
+	pMap.put(name, pp);
       }
     }
     return pMap;
@@ -731,16 +731,16 @@ public class AuConfig extends LockssServlet {
   /** Process the Update button */
   private void updateAu(AuProxy au, String msg) throws IOException {
     fetchAuConfig(au);
-    Configuration formConfig = getAuConfigFromForm(false);
+    Configuration formAuConfig = getAuConfigFromForm(false);
     // compare new config against current only, not stored config.  AU
     // config params set in global props file (for forcing crawl, etc.)
     // cause latter to see changes even when we don't need to update.
     boolean checkStored = false;
-    if (isChanged(auConfig, formConfig) ||
+    if (isChanged(auConfig, formAuConfig) ||
 	(checkStored &&
-	 isChanged(remoteApi.getStoredAuConfiguration(au), formConfig))) {
+	 isChanged(remoteApi.getStoredAuConfiguration(au), formAuConfig))) {
       try {
-	remoteApi.setAndSaveAuConfiguration(au, formConfig);
+	remoteApi.setAndSaveAuConfiguration(au, formAuConfig);
 	statusMsg = msg + " Archival Unit:<br>" + encodeText(au.getName());
 	displayAuSummary();
 	return;

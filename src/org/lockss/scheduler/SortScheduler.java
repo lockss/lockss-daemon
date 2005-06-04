@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.9 2005-02-21 03:07:32 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.10 2005-06-04 18:59:53 tlipkis Exp $
  */
 
 /*
@@ -597,10 +597,10 @@ public class SortScheduler implements Scheduler {
 		     "), unsched = " + td.unschedTaskTime);
 	if (td.unschedTaskTime > 0 && !isDisjoint(td.getWindow())) {
 	  long taskTime = Math.min(unscheduledTime, td.unschedTaskTime);
-	  long duration = (long)(taskTime / loadFactor);
+	  long taskDur = (long)(taskTime / loadFactor);
 	  if (log.isDebug3())
 	    log.debug3("add task " + tix + "(" + stask.cookie +
-		       "), time = " + taskTime + ", duration = " + duration);
+		       "), time = " + taskTime + ", duration = " + taskDur);
 	  td.unschedTaskTime -= taskTime;
 	  unscheduledTime -= taskTime;
 	  // these times may have past if creating a schedule with tasks
@@ -611,13 +611,13 @@ public class SortScheduler implements Scheduler {
 			   Deadline.restoreDeadlineAt(chunkStart +
 						      chunkOffset),
 			   Deadline.restoreDeadlineAt(chunkStart +
-						      chunkOffset + duration),
+						      chunkOffset + taskDur),
 			   taskTime);
 	  if (td.unschedTaskTime <= 0) {
 	    chunk.setTaskEnd();
 	  }
 	  chunks.add(chunk);
-	  chunkOffset += duration;
+	  chunkOffset += taskDur;
 	  unscheduledTasks.remove(stask);
 	}
       }

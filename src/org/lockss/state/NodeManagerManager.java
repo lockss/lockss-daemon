@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerManager.java,v 1.7 2004-12-07 05:17:51 tlipkis Exp $
+ * $Id: NodeManagerManager.java,v 1.8 2005-06-04 18:59:50 tlipkis Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class NodeManagerManager
         new StatusTable.SortRule("URL", true)
         );
 
-    private static NodeManagerManager mgr;
+    private NodeManagerManager mgr;
 
     ManagerStatus(NodeManagerManager mgr) {
       this.mgr = mgr;
@@ -428,7 +428,7 @@ public class NodeManagerManager
     private static final List sortRules =
         ListUtil.list(new StatusTable.SortRule("StartTime", false));
 
-    private static NodeManagerManager mgr;
+    private NodeManagerManager mgr;
 
     PollHistoryStatus(NodeManagerManager mgr) {
       this.mgr = mgr;

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetXpath.java,v 1.4 2005-01-19 04:15:35 tlipkis Exp $
+ * $Id: TitleSetXpath.java,v 1.5 2005-06-04 18:59:57 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TitleSetXpath extends BaseTitleSet {
       throw new IllegalArgumentException("XPath predicate must be enclosed in \"[\" ... \"]\"");
     }
     xpath = "." + xpathPred;
-    expr = sharedContext.compile(xpath);
+    expr = JXPathContext.compile(xpath);
   }
 
   /** Filter a collection of titles by the xpath predicate

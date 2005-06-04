@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.17 2005-02-02 09:42:45 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.18 2005-06-04 18:59:57 tlipkis Exp $
  */
 
 /*
@@ -258,7 +258,7 @@ public class HashSvcSchedImpl
   class HashTask extends StepTask {
     CachedUrlSet urlset;
     MessageDigest hasher;
-    HashService.Callback callback;
+    HashService.Callback hashCallback;
     CachedUrlSetHasher urlsetHasher;
     int hashReqSeq = -1;
     int type;
@@ -269,7 +269,7 @@ public class HashSvcSchedImpl
     HashTask(CachedUrlSet urlset,
 	     MessageDigest hasher,
 	     Deadline deadline,
-	     HashService.Callback callback,
+	     HashService.Callback hashCallback,
 	     Object cookie,
 	     CachedUrlSetHasher urlsetHasher,
 	     long estimatedDuration,
@@ -288,7 +288,7 @@ public class HashSvcSchedImpl
 	    cookie);
       this.urlset = urlset;
       this.hasher = hasher;
-      this.callback = callback;
+      this.hashCallback = hashCallback;
       this.urlsetHasher = urlsetHasher;
       this.type = type;
     }
@@ -324,15 +324,15 @@ public class HashSvcSchedImpl
 	  // tk - change interface to tell CUS what type of hash finished
 	  urlset.storeActualHashDuration(getTimeUsed(), getExcption());
 	}
-	if (callback != null) {
-	  callback.hashingFinished(urlset, cookie, hasher, e);
+	if (hashCallback != null) {
+	  hashCallback.hashingFinished(urlset, cookie, hasher, e);
 	}
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
       }
       // completed list for status only, don't hold on to caller's objects
       hasher = null;
-      callback = null;
+      hashCallback = null;
       cookie = null;
       urlsetHasher = null;
       synchronized (queueLock) {

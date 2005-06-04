@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.8 2005-05-02 19:26:57 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.9 2005-06-04 18:59:52 tlipkis Exp $
  */
 
 /*
@@ -266,8 +266,8 @@ public class BatchAuConfig extends LockssServlet {
     int actualRows = 0;
     boolean isAnySelectable = false;
     String greyAction =
-      configMgr.getParam(PARAM_GREY_TITLESET_ACTION,
-			 DEFAULT_GREY_TITLESET_ACTION);
+      ConfigManager.getParam(PARAM_GREY_TITLESET_ACTION,
+			     DEFAULT_GREY_TITLESET_ACTION);
     boolean doGrey = "All".equalsIgnoreCase(greyAction) ||
       (verb == VERB_ADD && "Add".equalsIgnoreCase(greyAction));
     for (Iterator iter = sets.iterator(); iter.hasNext(); ) {

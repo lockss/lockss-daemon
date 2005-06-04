@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.9 2005-02-02 09:42:48 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.10 2005-06-04 18:59:59 tlipkis Exp $
  */
 
 /*
@@ -454,8 +454,8 @@ public abstract class LockssApp {
 
     // temporary while debugging jvm DNS problem
     if (changedKeys.contains(PARAM_EXERCISE_DNS)) {
-      IPAddr.setExerciseDNS(config.getBooleanParam(PARAM_EXERCISE_DNS,
-						   DEFAULT_EXERCISE_DNS));
+      IPAddr.setExerciseDNS(config.getBoolean(PARAM_EXERCISE_DNS,
+					      DEFAULT_EXERCISE_DNS));
     }
 
     long life = config.getTimeInterval(PARAM_APP_EXIT_AFTER,

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.9 2005-03-22 06:53:47 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.10 2005-06-04 18:59:54 tlipkis Exp $
  */
 
 /*
@@ -392,11 +392,11 @@ public class LcapDatagramComm
     if (uniPort >= 0) {
       try {
 	log.debug("new LcapSocket.Unicast("+socketInQ+", "+uniPort);
-	LcapSocket.Unicast uSock =
+	LcapSocket.Unicast lsu =
 	  sockFact.newUnicastSocket(socketInQ, uniPort);
-	uSock.start();
-	this.uSock = uSock;
-	log.info("Unicast socket started: " + uSock);
+	lsu.start();
+	uSock = lsu;
+	log.info("Unicast socket started: " + lsu);
       } catch (IOException e) {
 	log.error("Can't create unicast socket", e);
       }

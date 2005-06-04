@@ -1,5 +1,5 @@
 /*
- * $Id: PeerMessage.java,v 1.1 2005-05-18 05:45:16 tlipkis Exp $
+ * $Id: PeerMessage.java,v 1.2 2005-06-04 18:59:54 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.daemon.*;
  * from a peer.  API for setting/getting data is in terms of streams only,
  * as concrete implementations may hold data either in memory or on disk
  */
-abstract class PeerMessage {
+public abstract class PeerMessage {
 
   public static final int PROTOCOL_LCAP_V3_R1 = 10;
   public static final int PROTOCOL_LCAP_V3 = PROTOCOL_LCAP_V3_R1;
@@ -75,7 +75,7 @@ abstract class PeerMessage {
   abstract boolean hasData();
 
   /** Return the size of the data
-   * @throw IllegalStateException if message data not stored yet
+   * @throws IllegalStateException if message data not stored yet
    */
   abstract public int getDataSize();
 

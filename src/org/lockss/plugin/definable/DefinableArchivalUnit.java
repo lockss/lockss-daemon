@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.32 2005-05-20 23:42:12 troberts Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.33 2005-06-04 18:59:55 tlipkis Exp $
  */
 
 /*
@@ -285,12 +285,12 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
   }
 
   protected UrlNormalizer makeUrlNormalizer() {
-    UrlNormalizer urlNormalizer = null;
+    UrlNormalizer normmalizer = null;
     String normalizerClass = definitionMap.getString(AU_URL_NORMALIZER_KEY, null);
     if (normalizerClass != null) {
-      urlNormalizer = (UrlNormalizer)loadClass(normalizerClass, UrlNormalizer.class);
+      normmalizer = (UrlNormalizer)loadClass(normalizerClass, UrlNormalizer.class);
     }
-    return urlNormalizer;
+    return normmalizer;
   }
 
   protected FilterRule constructFilterRule(String contentType) {

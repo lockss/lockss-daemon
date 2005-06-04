@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.31 2005-02-18 23:22:01 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.32 2005-06-04 18:59:53 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     PluginProxy pluginp = (PluginProxy)pluginProxies.get(pluginid);
     if (pluginp == null ||
 	pluginp.getPlugin() != getPluginFromId(pluginid)) {
-      String key = pluginMgr.pluginKeyFromId(pluginid);
+      String key = PluginManager.pluginKeyFromId(pluginid);
       pluginMgr.ensurePluginLoaded(key);
       try {
 	pluginp = new PluginProxy(pluginid, this);
@@ -337,7 +337,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
   }
 
   String pluginIdFromAuId(String auid) {
-    return pluginMgr.pluginNameFromAuId(auid);
+    return PluginManager.pluginNameFromAuId(auid);
   }
 
   public InputStream openCacheConfigFile(String cacheConfigFileName)
@@ -689,8 +689,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	stat.setExplanation("Plugin not found: " + plugName);
       } else {
 	try {
-	  String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
-					       tc.getConfig());
+	  String auid = PluginManager.generateAuId(pluginp.getPlugin(),
+						   tc.getConfig());
 	  stat =
 	    batchProcessOneAu(false, false, pluginp, auid, tc.getConfig());
 	  stat.setTitleConfig(tc);
@@ -735,8 +735,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	stat.setExplanation("Does not exist");
       } else {
 	try {
-	  String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
-					       tc.getConfig());
+	  String auid = PluginManager.generateAuId(pluginp.getPlugin(),
+						   tc.getConfig());
 	  stat.setAuid(auid);
 	  if (pluginMgr.getAuFromId(auid) == null) {
 	    stat.setStatus("DNE", STATUS_ORDER_LOW);
@@ -777,8 +777,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
       PluginProxy pluginp = findPluginProxy(plugName);
       if (pluginp != null) {
 	try {
-	  String auid = pluginMgr.generateAuId(pluginp.getPlugin(),
-					       tc.getConfig());
+	  String auid = PluginManager.generateAuId(pluginp.getPlugin(),
+						   tc.getConfig());
 	  if (inactiveAuids.contains(auid)) {
 	    BatchAuStatus.Entry stat =
 	      batchProcessOneAu(false, true, pluginp, auid, tc.getConfig());

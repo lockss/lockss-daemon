@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.198 2005-01-07 01:19:04 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.199 2005-06-04 18:59:50 tlipkis Exp $
  */
 
 /*
@@ -1783,8 +1783,8 @@ public class NodeManagerImpl
         // get lock
         NodeState node = getNodeState(cus);
         boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
-        int activity = (isNamePoll ? regulator.STANDARD_NAME_POLL
-            : regulator.REPAIR_CRAWL);
+        int activity = (isNamePoll ? ActivityRegulator.STANDARD_NAME_POLL
+            : ActivityRegulator.REPAIR_CRAWL);
         ActivityRegulator.CusLock cusLock =
             (ActivityRegulator.CusLock)regulator.changeAuLockToCusLock(
             auLock, cus, activity, Constants.HOUR);
@@ -1807,8 +1807,8 @@ public class NodeManagerImpl
               new RangeCachedUrlSetSpec(cusUrl));
           NodeState node = getNodeState(cus);
           boolean isNamePoll = (node.getState() == NodeState.WRONG_NAMES);
-          int activity = (isNamePoll ? regulator.STANDARD_NAME_POLL
-              : regulator.REPAIR_CRAWL);
+          int activity = (isNamePoll ? ActivityRegulator.STANDARD_NAME_POLL
+              : ActivityRegulator.REPAIR_CRAWL);
           cusReqList.add(new ActivityRegulator.CusLockRequest(cus,
               activity, Constants.HOUR));
         }
