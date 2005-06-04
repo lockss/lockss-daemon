@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.140 2005-04-19 18:28:56 tlipkis Exp $
+ $Id: build.xml,v 1.141 2005-06-04 08:28:21 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -84,7 +84,6 @@ Args:
 
   <!--  Options for jikes, have no effect otherwise -->
   <property name="build.compiler.emacs" value="true" />
-  <property name="build.compiler.warnings" value="false" />
 
   <property environment="env"/>
   <!--  Ignore system classpath, to ensure consistent builds -->
@@ -131,7 +130,6 @@ Args:
   <property name="tools.test"      value="${tools}/test"/>
   <property name="tools.test.src"  value="${tools.test}/src"/>
   <property name="tools.test.classes" value="${tools.test}/classes"/>
-  <property name="tools.test.results" value="${tools.test}/results"/>
 
   <property name="instrumented" value="${basedir}/instrumented"/>
 
@@ -212,7 +210,20 @@ Args:
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
-  <property name="javac.deprecation"       value="true" />
+  <condition property="javac.deprecation"  value="false">
+   <equals arg1="${build.compiler}" arg2="jikes" />
+  </condition>
+  <condition property="nowarn"  value="true">
+   <equals arg1="${build.compiler}" arg2="jikes" />
+  </condition>
+
+  <!-- jikes is too strict if deprecation warnings are turned on -->
+  <condition property="javac.deprecation"  value="true">
+   <not>
+    <equals arg1="${build.compiler}" arg2="jikes" />
+   </not>
+  </condition>
+
 
   <!--  Classpaths -->
   <path id="compile.classpath">
@@ -337,6 +348,62 @@ Args:
   </path>
 
   <!-- ==================================================================== -->
+  <!--  Macros -->
+  <!-- ==================================================================== -->
+  <!--  dojavac runs javac with standard params -->
+  <macrodef name="dojavac">
+   <attribute name="srcdir" />
+   <attribute name="destdir" />
+   <attribute name="cpid" />
+   <element name="javacelem" />
+   <sequential>
+    <javac srcdir="@{srcdir}"
+           destdir="@{destdir}"
+           debug="${javac.debug}"
+           optimize="${javac.optimize}"
+           deprecation="${javac.deprecation}"
+           fork="${forkc}"
+           listfiles="${listfiles}"
+           nowarn="${nowarn}"
+           >
+       <classpath refid="@{cpid}" />
+      <javacelem/>
+    </javac>
+   </sequential>
+  </macrodef>
+
+  <!--  dojunit runs junit with standard params -->
+  <macrodef name="dojunit">
+   <attribute name="cpid" />
+   <attribute name="usefile" default="true"/>
+   <attribute name="haltonerror" default="false"/>
+   <element name="junitelem" />
+   <sequential>
+     <if>
+      <istrue value="@{usefile}" />
+      <then>
+       <echo>
+Test results in ${test.results}
+       </echo>
+      </then>
+     </if>
+    <junit1 fork="no" printsummary="yes"
+         haltonfailure="${halt}" failureproperty="failed"
+         filtertrace="${filtertrace}" showoutput="${showoutput}">
+      <junitelem/>
+      <formatter type="plain" usefile="@{usefile}" />
+      <classpath refid="@{cpid}" />
+      <sysproperty key="java.library.path" value="${test.native}"/>
+      <sysproperty key="org.lockss.unitTesting" value="true"/>
+      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
+      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
+      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
+      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+    </junit1>
+   </sequential>
+  </macrodef>
+
+  <!-- ==================================================================== -->
   <!--  Setup tasks -->
   <!-- ==================================================================== -->
   <target name="prepare">
@@ -435,7 +502,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
-  <target name="clean" depends="clean-tempbuild,clean-tools"
+  <target name="clean" depends="clean-tempbuild,clean-tools,clean-results"
    description="Delete all generated files and dirs" >
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
@@ -443,7 +510,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete dir="${plugins.test.classes}" quiet="true"/>
     <delete dir="${ant.classes}" quiet="true"/>
     <delete dir="${depend.cache}" quiet="true"/>
-    <delete dir="${test.results}" quiet="true"/>
     <delete dir="${javadoc}" quiet="true"/>
     <delete dir="${test.javadoc}" quiet="true"/>
     <delete dir="${plugins.dir}" quiet="true"/>
@@ -481,6 +547,11 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete file="plugintool.tgz" quiet="true"/>
   </target>
 
+  <target name="clean-results"
+   description="Delete test results files" >
+    <delete dir="${test.results}" quiet="true"/>
+  </target>
+
   <!-- ==================================================================== -->
   <target name="depend-lockss" depends="prepare"
    description="Process Java dependencies in LOCKSS classes" >
@@ -496,17 +567,11 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <!-- ==================================================================== -->
   <target name="compile-lockss" depends="prepare"
    description="Compile the LOCKSS classes" >
-    <javac srcdir="${src}"
-           destdir="${classes}"
-           debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="compile.classpath" />
+    <dojavac srcdir="${src}" destdir="${classes}" cpid="compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
-    </javac>
+     </javacelem>
+    </dojavac>
     <copy todir="${classes}" >
        <fileset dir="${src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
@@ -521,18 +586,13 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <!-- ==================================================================== -->
   <target name="compile-tests" depends="jar-plugins,prepare.test"
    description="Compile the LOCKSS test classes" >
-    <javac srcdir="${test.src}"
-           destdir="${test.classes}"
-           debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="test.compile.classpath" />
+    <dojavac srcdir="${test.src}" destdir="${test.classes}"
+             cpid="test.compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
        <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
-    </javac>
+     </javacelem>
+    </dojavac>
     <copy todir="${test.classes}" >
        <fileset dir="${test.src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
@@ -546,17 +606,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <target name="compile-plugins" depends="jar-lockss"
    description="Compile the plugins" >
     <mkdir dir="${plugins.classes}" />
-    <javac srcdir="${plugins.src}"
-           destdir="${plugins.classes}"
-           debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="plugins.compile.classpath" />
+    <dojavac srcdir="${plugins.src}" destdir="${plugins.classes}"
+             cpid="plugins.compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
-    </javac>
+     </javacelem>
+    </dojavac>
     <copy todir="${plugins.classes}" >
        <fileset dir="${plugins.src}" >
           <include name="**/*.xml"/>   <!-- Definable plugins -->
@@ -567,34 +622,24 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <target name="compile-plugins-tests" depends="jar-plugins,jar-tests"
    description="Compile the LOCKSS test classes for plugins" >
     <mkdir dir="${plugins.test.classes}" />
-    <javac srcdir="${plugins.test.src}"
-           destdir="${plugins.test.classes}"
-	   debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="plugins.test.compile.classpath" />
+    <dojavac srcdir="${plugins.test.src}" destdir="${plugins.test.classes}"
+             cpid="plugins.test.compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
-   </javac>
+     </javacelem>
+    </dojavac>
   </target>
 
   <!-- ==================================================================== -->
   <target name="compile-ant" depends=""
    description="Compile the LOCKSS ant extensions" >
     <mkdir dir="${ant.classes}" />
-    <javac srcdir="${ant.src}"
-           destdir="${ant.classes}"
-           debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="ant.compile.classpath" />
+    <dojavac srcdir="${ant.src}" destdir="${ant.classes}"
+             cpid="ant.compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
-    </javac>
+     </javacelem>
+    </dojavac>
   </target>
 
   <!-- ==================================================================== -->
@@ -602,17 +647,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
           depends="jar-lockss,-check-if-1.4"
           description="Compile the LOCKSS tools">
     <mkdir dir="${tools.classes}" />
-    <javac srcdir="${tools.src}"
-           destdir="${tools.classes}"
-           debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="tools.compile.classpath" />
+    <dojavac srcdir="${tools.src}" destdir="${tools.classes}"
+             cpid="tools.compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
-    </javac>
+     </javacelem>
+    </dojavac>
     <copy todir="${tools.classes}" >
        <fileset dir="${tools.src}" >
           <include name="**/*.xml"/>   <!-- mapping files in various dirs -->
@@ -623,17 +663,12 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <target name="compile-tools-tests" depends="jar-tools,jar-tests"
    description="Compile the LOCKSS test classes for tools" >
     <mkdir dir="${tools.test.classes}" />
-    <javac srcdir="${tools.test.src}"
-           destdir="${tools.test.classes}"
-	   debug="${javac.debug}"
-           optimize="${javac.optimize}"
-           deprecation="${javac.deprecation}"
-           fork="${forkc}"
-           listfiles="${listfiles}"
-           >
-       <classpath refid="tools.test.compile.classpath" />
+    <dojavac srcdir="${tools.test.src}" destdir="${tools.test.classes}"
+             cpid="tools.test.compile.classpath" >
+     <javacelem>
        <include name="**/*.java"/>
-   </javac>
+     </javacelem>
+    </dojavac>
   </target>
 
   <!-- ==================================================================== -->
@@ -845,6 +880,42 @@ JAVA_COMMAND_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
       <map from="${basedir}/lib" to="$&#x07b;JAVA.LIB.PATH&#x07d;" />
     </pathconvert>
     <echo message="${tmp.packing.list}" file="${production.packinglist.file}"/>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="rpm" depends="jar-lockss,check.contrib"
+   description="Package up the daemon as an rpm" >
+
+    <mkdir dir="${temp.build}" />
+    <tempfile property="temp.rpm.dir" destdir="${temp.build}" prefix="rpm"/>
+    <mkdir dir="${temp.rpm.dir}" />
+
+    <property name="proto.top" value="${temp.rpm.dir}" />
+    <property name="rpm.top" value="${basedir}/rpms" />
+    <property name="rpm.build" value="${rpm.top}/BUILD" />
+    <property name="rpm.root" value="${rpm.build}/lockss-daemon-root" />
+    <property name="rpm.jardir" value="${rpm.root}/usr/share/lockss" />
+
+    <!-- copy prototype rpm tree to tmp dir -->
+    <copy todir="${rpm.top}" >
+      <fileset dir="${proto.top}"/>
+    </copy>
+
+    <!-- copy jars on run.classpath to jardir -->
+    <pathtofileset dir="" pathrefid="run.classpath"
+      name="rpm.jars.set" ignorenonrelative="true" />
+    <copy todir="${rpm.jardir}" flatten="true" >
+     <fileset refid="rpm.jars.set" />
+       <!-- filters go here -->
+    </copy>
+
+    <!-- write run.classpath to jardir/classpath -->
+    <pathconvert refid="run.classpath" property="rpm.clspth" targetos="unix" >
+     <map from="${lib}" to="/usr/share/lockss" />
+    </pathconvert>
+    <echo file="${rpm.jardir}/classpath">${rpm.clspth}
+</echo>
+  <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
   </target>
 
   <!-- ==================================================================== -->
@@ -1087,7 +1158,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   </target>
 
   <!-- ==================================================================== -->
-  <target name="index" depends="jar-tools"
+  <target name="index" depends="jar-lockss,jar-tests,jar-tools"
    description="Print an index for a .java file">
     <tempfile property="index.file" destdir="${java.io.tmpdir}"
        prefix="index"/>
@@ -1104,7 +1175,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 	<param name="-o" value="${index.file}" />
   	<param name="-dots" value="0" />
       </doclet>
-      <classpath refid="compile.classpath" />
+      <classpath refid="test.run.classpath" />
     </javadoc>
     <apply executable="a2ps" dir="${basedir}"
            parallel="true">
@@ -1118,8 +1189,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
       <arg value="--prologue=matrix"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg value="foo.ps"/> -->
-      <arg value="${index.file}"/>
-      <fileset dir="${basedir}" excludes="* **/*"/>
+      <filelist dir="/" files="${index.file}"/>
     </apply>
      <delete file="${index.file}" quiet="true"/>
   </target>
@@ -1137,10 +1207,8 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
       <arg value="-S Collate:true"/>
 <!--        <arg value="-o"/> -->
 <!--        <arg value="foo.ps"/> -->
-      <arg value="${file}"/>
-      <fileset dir="${basedir}" excludes="* **/*"/>
+      <filelist dir="${basedir}" files="${file}"/>
     </apply>
-<!--       <delete file="${index.file}" quiet="true"/> -->
   </target>
 
   <!-- ==================================================================== -->
@@ -1213,15 +1281,10 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   <target name="test-unit"
    depends="prepare.run.test,check.junit,jar-tests"
    description="Run all unit tests (test/src/**/Test*.class)" >
-    <echo>
-Test results in ${test.results}
-    </echo>
     <property name="include" value="**/Test*.java" />
-    <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="${filtertrace}" showoutput="${showoutput}">
-     <batchtest fork="${fork}" todir="${test.results}">
+    <dojunit cpid="test.run.classpath">
+     <junitelem>
+      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${include}" />
           <exclude name="${exclude}" />
@@ -1229,17 +1292,8 @@ Test results in ${test.results}
           <excludesfile name="${requires-1.4}" unless="is-java-1.4" />
         </fileset>
       </batchtest>
-      <formatter type="plain" usefile="true" />
-      <classpath>
-         <path refid="test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+     </junitelem>
+    </dojunit>
     <fail if="failed" message="Test(s) failed" />
   </target>
 
@@ -1247,30 +1301,16 @@ Test results in ${test.results}
   <target name="test-func"
    depends="prepare.run.test,check.junit,jar-tests"
    description="Run all functional tests (test/src/**/Func*.class)" >
-    <echo>
-Test results in ${test.results}
-    </echo>
-    <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="${filtertrace}" showoutput="${showoutput}">
+    <dojunit cpid="test.run.classpath">
+     <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/Func*.java" />
           <exclude name="${exclude}" />
         </fileset>
       </batchtest>
-      <formatter type="plain" usefile="true" />
-      <classpath>
-         <path refid="test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+     </junitelem>
+    </dojunit>
     <fail if="failed" message="Test(s) failed" />
   </target>
 
@@ -1278,31 +1318,17 @@ Test results in ${test.results}
   <target name="test-plugins"
    depends="prepare.run.test,check.junit,jar-plugins-tests"
    description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
-    <echo>
-Test results in ${test.results}
-    </echo>
     <property name="include" value="**/Test*.java" />
-    <delete file="${test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="${filtertrace}" showoutput="${showoutput}">
+    <dojunit cpid="plugins.test.run.classpath">
+     <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${plugins.test.src}">
           <include name="${include}" />
           <exclude name="${exclude}" />
         </fileset>
       </batchtest>
-      <formatter type="plain" usefile="true" />
-      <classpath>
-         <path refid="plugins.test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+     </junitelem>
+    </dojunit>
     <fail if="failed" message="Test(s) failed" />
   </target>
 
@@ -1314,7 +1340,6 @@ Test results in ${test.results}
     <echo>
 Test results in ${test.results}
     </echo>
-    <delete file="${test.results}/*" quiet="true" />
     <junit fork="yes" printsummary="yes" haltonerror="yes" haltonfailure="yes"
       jvm="jdb" >
       <batchtest fork="yes" todir="${test.results}">
@@ -1335,8 +1360,8 @@ Test results in ${test.results}
    depends="prepare.run.test,check.class.arg,check.junit,jar-tests,jar-ant,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
     <echo>Running tests for class ${class}</echo>
-    <junit1 fork="no" printsummary="yes" haltonerror="yes" haltonfailure="yes"
-        showoutput="${showoutput}">
+    <dojunit cpid="test.run.classpath" usefile="false">
+     <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="**/*.java" />
@@ -1349,17 +1374,8 @@ Test results in ${test.results}
 	  </custom>
         </fileset>
       </batchtest>
-      <formatter type="plain" usefile="false" />
-      <classpath>
-         <path refid="test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+     </junitelem>
+    </dojunit>
   </target>
   <!-- ==================================================================== -->
   <target name="test-one"
@@ -1368,23 +1384,13 @@ Test results in ${test.results}
     <if>
       <contains string="${class}" substring="." />
      <then>
-      <junit1 fork="no" printsummary="yes" haltonerror="yes"
-	   haltonfailure="yes" filtertrace="${filtertrace}"
-	   showoutput="${showoutput}">
-       <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
-       <test fork="${fork}" name="${class}" />
-       <formatter type="plain" usefile="false" />
-       <classpath>
-	  <path refid="one.test.run.classpath" />
-       </classpath>
-       <sysproperty key="java.library.path" value="${test.native}"/>
-       <sysproperty key="org.lockss.unitTesting" value="true"/>
-       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-      </junit1>
-     </then>
+      <dojunit cpid="one.test.run.classpath" usefile="false">
+       <junitelem>
+        <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
+        <test fork="${fork}" name="${class}" />
+       </junitelem>
+      </dojunit>
+      </then>
      <else>
       <fileset id="test.one.filesetid" dir="${test.src}">
 	 <include name="**/${class}.java" />
@@ -1399,24 +1405,14 @@ Test results in ${test.results}
 	<fail message="Pattern '${class}' does not match any classes" />
        </then>
       </if>
-      <junit1 fork="no" printsummary="yes"
-	   haltonfailure="yes"
-	   filtertrace="${filtertrace}" showoutput="${showoutput}">
+      <dojunit cpid="test.run.classpath" usefile="false">
+       <junitelem>
        <jvmarg value="-Xmx128m"/>  <!-- no effect unless both fork=yes -->
        <batchtest fork="${fork}">
 	 <fileset refid="test.one.filesetid"/>
        </batchtest>
-       <formatter type="plain" usefile="false" />
-       <classpath>
-	  <path refid="test.run.classpath" />
-       </classpath>
-       <sysproperty key="java.library.path" value="${test.native}"/>
-       <sysproperty key="org.lockss.unitTesting" value="true"/>
-       <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-      </junit1>
+       </junitelem>
+      </dojunit>
      </else>
     </if>
   </target>
@@ -1425,31 +1421,16 @@ Test results in ${test.results}
   <target name="test-tools"
    depends="-check-if-1.4,-using-junit1,jar-tools-tests"
    description="Run all tools tests" >
-    <echo>
-Test results in ${tools.test.results}
-    </echo>
-    <mkdir dir="${tools.test.results}"/>
-    <delete file="${tools.test.results}/*" quiet="true" />
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="${filtertrace}" showoutput="${showoutput}">
-      <batchtest fork="${fork}" todir="${tools.test.results}">
+    <dojunit cpid="tools.test.run.classpath">
+     <junitelem>
+      <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${tools.test.src}">
           <include name="**/Test*.java" />
 	  <include name="**/Func*.java"/>
        </fileset>
       </batchtest>
-      <formatter type="plain" usefile="true" />
-      <classpath>
-         <path refid="tools.test.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+     </junitelem>
+    </dojunit>
     <fail if="failed" message="Test(s) failed" />
   </target>
 
@@ -1703,27 +1684,20 @@ Test results in ${tools.test.results}
          <exclude name="${exclude}"/>
       </fileset>
     </instrument>
-    <junit1 fork="no" printsummary="yes"
-         haltonfailure="${halt}" failureproperty="failed"
-         filtertrace="${filtertrace}" showoutput="${showoutput}">
+    <path id="jcover.classpath">
+     <path location="${instrumented}"/>
+     <path refid="jcover.run.classpath" />
+    </path>
+    <dojunit cpid="jcover.classpath">
+     <junitelem>
       <batchtest fork="${fork}" todir="${test.results}">
         <fileset dir="${test.src}">
           <include name="${tests}"/>
           <exclude name="${exclude}"/>
         </fileset>
       </batchtest>
-      <formatter type="plain" usefile="true" />
-      <classpath>
-        <path location="${instrumented}"/>
-        <path refid="jcover.run.classpath" />
-      </classpath>
-      <sysproperty key="java.library.path" value="${test.native}"/>
-      <sysproperty key="org.lockss.unitTesting" value="true"/>
-      <sysproperty key="org.lockss.defaultLogLevel" value="${loglevel}"/>
-      <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
-      <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
-      <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
-    </junit1>
+     </junitelem>
+    </dojunit>
 
     <report format="html" destdir="${test.results}" srcdir="${src}">
        <classpath refid="jcover.run.classpath" />
@@ -1731,7 +1705,6 @@ Test results in ${tools.test.results}
     </report>
 <!--     <delete file="${jcoverage.ser}" quiet="true" /> -->
   </target>
-
 
   <!-- Additional targets for search -->
 
