@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmResponse.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+ * $Id: TestPsmResponse.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -49,10 +49,6 @@ public class TestPsmResponse extends LockssTestCase {
       fail("null event should throw");
     } catch (PsmException.IllegalStateMachine e) { }
     try {
-      new PsmResponse(null);
-      fail("null event should throw");
-    } catch (PsmException.IllegalStateMachine e) { }
-    try {
       new PsmResponse(PsmEvents.MsgEvent, (PsmAction)null);
       fail("null action should throw");
     } catch (PsmException.IllegalStateMachine e) { }
@@ -73,19 +69,17 @@ public class TestPsmResponse extends LockssTestCase {
     assertSame(action, resp.getAction());
     assertTrue(resp.isAction());
     assertFalse(resp.isTransition());
-    assertFalse(resp.isWait());
 
     resp = new PsmResponse(event, "state_next");
     assertSame(event, resp.getEvent());
     assertEquals("state_next", resp.getNewState());
     assertTrue(resp.isTransition());
     assertFalse(resp.isAction());
-    assertFalse(resp.isWait());
 
-    resp = new PsmResponse(event);
+    resp = new PsmResponse(event, PsmWait.FOREVER);
     assertSame(event, resp.getEvent());
     assertFalse(resp.isTransition());
-    assertFalse(resp.isAction());
-    assertTrue(resp.isWait());
+    assertTrue(resp.isAction());
+    assertTrue(resp.getAction().isWaitAction());
   }
 }

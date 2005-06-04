@@ -1,5 +1,5 @@
 /*
- * $Id: PollerTallyStateMachineFactory.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
+ * $Id: PollerTallyStateMachineFactory.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class PollerTallyStateMachineFactory {
 		   new PsmMethodAction(actionClass, "handleSendRepairRequest"),
 		   new PsmResponse(V3Events.evtOk, "WaitRepair"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
-      new PsmState("WaitRepair",
+      new PsmState("WaitRepair", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgRepair,
 				   new PsmMethodMsgAction(actionClass,
 							  "handleReceivedRepair")),

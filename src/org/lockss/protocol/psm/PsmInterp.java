@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.6 2005-05-20 07:28:43 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.7 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -106,7 +106,7 @@ public class PsmInterp {
 
   /** Arrange for a Timeout event to be raised in duration milliseconds if
    * no events have been processed before then. */
-  public synchronized void setCurrentStateTimeout(long duration) {
+  private void setCurrentStateTimeout(long duration) {
     if (timer != null) {
       timer.resetTo(duration);
     } else {
@@ -145,9 +145,7 @@ public class PsmInterp {
 					  " has no response matching " +
 					  event);
     }
-    if (resp.isWait()) {
-      handleWait(event);
-    } else if (resp.isTransition()) {
+    if (resp.isTransition()) {
       String newStateName = resp.getNewState();
       PsmState newState = machine.getState(newStateName);
       enterState(newState, event, eventCtr);
@@ -163,7 +161,7 @@ public class PsmInterp {
     eventMonitor(curState, triggerEvent, action, null);
     PsmEvent event;
     try {
-      // XXX Potential deadlock here because we are calling an in a
+      // XXX Potential deadlock here because we are calling an action in a
       // synchronized block.  If the action accesses some other
       // synchronized object while another thread, holding that object's
       // lock, calls handleEvent or other synchronized method of this
@@ -175,8 +173,11 @@ public class PsmInterp {
     }
     if (event == null) {
       throw new PsmException.NullEvent("Action: " + action + " returned null");
+    } else if (event instanceof PsmWaitEvent) {
+      handleWait((PsmWaitEvent)event);
+    } else {
+      handleEvent1(event, eventCtr);
     }
-    handleEvent1(event, eventCtr);
   }
 
   private void enterState(PsmState newState, PsmEvent triggerEvent,
@@ -185,16 +186,16 @@ public class PsmInterp {
     eventMonitor(curState, triggerEvent, null, newState);
     curState = newState;
     PsmAction entryAction = newState.getEntryAction();
-    if (entryAction != null) {
-      performAction(entryAction, null, eventCtr);
-    } else {
-      handleWait(null);
-    }
+    performAction(entryAction, triggerEvent, eventCtr);
   }
 
-  private void handleWait(PsmEvent triggerEvent) {
-    log.debug2("Wait");
-    eventMonitor(curState, triggerEvent, null, null);
+  /** If the wait event has a timeout value start a timer before waiting */
+  private void handleWait(PsmWaitEvent waitEvent) {
+    long timeout = waitEvent.getTimeout();
+    log.debug2("Wait " + timeout);
+    if (timeout > 0) {
+      setCurrentStateTimeout(timeout);
+    }
     isWaiting = true;
   }
 
@@ -215,10 +216,11 @@ public class PsmInterp {
     }
 
     private int getTimedEventNumber() {
-      if (PsmInterp.this.isWaiting()) {
-	return curEventNum;
-      }
-      return curEventNum + 1;
+      // Need this if allow actions to call setCurrentStateTimeout() directly
+//       if (!PsmInterp.this.isWaiting()) {
+// 	return curEventNum + 1;
+//       }
+      return curEventNum;
     }
 
     /** Start the timer running */
@@ -272,7 +274,7 @@ public class PsmInterp {
    * @param event the event signalled, if any.
    * @param action the action being performed, if any
    * @param newState the new state about to be entered if any.
- */
+   */
   protected void eventMonitor(PsmState curState, PsmEvent event,
 			      PsmAction action, PsmState newState) {
   }

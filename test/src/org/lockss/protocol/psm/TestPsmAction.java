@@ -1,10 +1,10 @@
 /*
-* $Id: PsmAction.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
+ * $Id: TestPsmAction.java,v 1.1 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,28 +29,23 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.protocol.psm;
 
 import java.util.*;
+import org.lockss.util.*;
+import org.lockss.test.*;
 
-/**
- * Base class for actions executed in response to event or state entry;
- * must complete quickly.
- */
-public abstract class PsmAction {
-  /** Perform the action, return the next event.
-   * @param event the event that caused this action to run.  On entry to a
-   * state, it's the event that caused the state transition.
-   * @param interp the state interpreter, from which the action can get the
-   * user object.
-   * @return the next event
-   */
-  protected abstract PsmEvent run(PsmEvent triggerEvent, PsmInterp interp);
+public class TestPsmAction extends LockssTestCase {
 
-  /** This is currently not reliable, as any action can return a
-   * PsmWaitEvent.
-   */
-  final boolean isWaitAction() {
-    return this instanceof PsmWait;
+  public void testConst() {
+    PsmAction w = new MyAction();
+    assertFalse(w.isWaitAction());
+  }
+
+  class MyAction extends PsmAction {
+    protected PsmEvent run(PsmEvent event, PsmInterp interp) {
+      return null;
+    }
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: PollerSolicitStateMachineFactory.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
+ * $Id: PollerSolicitStateMachineFactory.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class PollerSolicitStateMachineFactory {
 		   new PsmMethodAction(actionClass, "handleSendPoll"),
 		   new PsmResponse(V3Events.evtOk, "WaitPollAck"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
-      new PsmState("WaitPollAck",
+      new PsmState("WaitPollAck", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgPollAck,
 				   new PsmMethodMsgAction(actionClass,
 							  "handleReceivedPollAck")),
@@ -85,7 +85,7 @@ public class PollerSolicitStateMachineFactory {
 		   new PsmMethodAction(actionClass, "handleSendPollProof"),
 		   new PsmResponse(V3Events.evtOk, "WaitVote"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
-      new PsmState("WaitVote",
+      new PsmState("WaitVote", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgVote,
 				   new PsmMethodMsgAction(actionClass,
 							  "handleReceivedVote")),

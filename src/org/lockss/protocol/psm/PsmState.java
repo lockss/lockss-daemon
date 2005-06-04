@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+* $Id: PsmState.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -179,94 +179,7 @@ public class PsmState {
    * This action is not considered to have a causitive event.
    */
   public PsmState(String name) {
-    this(name, null, EMPTY_RESPONSE_ARRAY);
-  }
-
-  /** Create a state.
-   * @param name state name
-   * @param responses array of responses
-   */
-  public PsmState(String name, PsmResponse[] responses) {
-    this(name, null, responses);
-  }
-
-  /** Create a state with a single response.
-   * @param name state name
-   * @param response1 the single response
-   */
-  public PsmState(String name, PsmResponse response1) {
-    this(name, null, responseArray(ListUtil.list(response1)));
-  }
-
-  /** Create a state with two responses.
-   * @param name state name
-   * @param response1 the first response
-   * @param response2 the second response
-   */
-  public PsmState(String name, PsmResponse response1, PsmResponse response2) {
-    this(name, null, responseArray(ListUtil.list(response1, response2)));
-  }
-
-  /** Create a state with three responses.
-   * @param name state name
-   * @param response1 the first response
-   * @param response2 the second response
-   * @param response3 the third response
-   */
-  public PsmState(String name,
-		  PsmResponse response1, PsmResponse response2,
-		  PsmResponse response3) {
-    this(name, null, responseArray(ListUtil.list(response1, response2,
-						 response3)));
-  }
-
-  /** Create a state with four responses.
-   * @param name state name
-   * @param response1 the first response
-   * @param response2 the second response
-   * @param response3 the third response
-   * @param response4 the fourth response
-   */
-  public PsmState(String name,
-		  PsmResponse response1, PsmResponse response2,
-		  PsmResponse response3, PsmResponse response4) {
-    this(name, null, responseArray(ListUtil.list(response1, response2,
-						 response3, response4)));
-  }
-
-  /** Create a state with five responses.
-   * @param name state name
-   * @param response1 the first response
-   * @param response2 the second response
-   * @param response3 the third response
-   * @param response4 the fourth response
-   * @param response5 the fifth response
-   */
-  public PsmState(String name,
-		  PsmResponse response1, PsmResponse response2,
-		  PsmResponse response3, PsmResponse response4,
-		  PsmResponse response5) {
-    this(name, null, responseArray(ListUtil.list(response1, response2,
-						 response3, response4,
-						 response5)));
-  }
-
-  /** Create a state with siz responses.
-   * @param name state name
-   * @param response1 the first response
-   * @param response2 the second response
-   * @param response3 the third response
-   * @param response4 the fourth response
-   * @param response5 the fifth response
-   * @param response6 the sixth response
-   */
-  public PsmState(String name,
-		  PsmResponse response1, PsmResponse response2,
-		  PsmResponse response3, PsmResponse response4,
-		  PsmResponse response5, PsmResponse response6) {
-    this(name, null, responseArray(ListUtil.list(response1, response2,
-						 response3, response4,
-						 response5, response6)));
+    this(name, PsmWait.FOREVER, EMPTY_RESPONSE_ARRAY);
   }
 
   private void validate() {
@@ -278,13 +191,17 @@ public class PsmState {
 	throw new PsmException.IllegalStateMachine("Response array contains null(s)");
       }
       PsmEvent event = resp.getEvent();
+      if (event.isWaitEvent()) {
+	String msg = "Not allowed to respond to wait events: " + event;
+	throw new PsmException.IllegalStateMachine(msg);
+      }
       for (int iy = 0; iy < ix; iy++) {
 	if (event.isa(responses[iy].getEvent())) {
 	  String msg = "State " + getName() + ": Response " + ix + " (" +
 	    resp + ") subsumed by response " + iy + " (" + responses[iy] + ")";
 	  throw new PsmException.IllegalStateMachine(msg);
 	}
-      }      
+      }
     }
   }
 
@@ -322,7 +239,7 @@ public class PsmState {
 
   /** Makes this state a success state.  Returns this so can be chained. */
   public PsmState succeed() {
-    if (!isFinal()) 
+    if (!isFinal())
       throw new PsmException.IllegalStateMachine("Non-final success state");
     isSucceed = SUCCEED;
     return this;
@@ -330,7 +247,7 @@ public class PsmState {
 
   /** Makes this state a failure state.  Returns this so can be chained. */
   public PsmState fail() {
-    if (!isFinal()) 
+    if (!isFinal())
       throw new PsmException.IllegalStateMachine("Non-final failure state");
     isSucceed = FAIL;
     return this;

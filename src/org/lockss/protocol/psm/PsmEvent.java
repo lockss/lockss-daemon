@@ -1,5 +1,5 @@
 /*
-* $Id: PsmEvent.java,v 1.1 2005-02-23 02:19:05 tlipkis Exp $
+* $Id: PsmEvent.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -39,9 +39,12 @@ import org.lockss.protocol.*;
  * Top of hierarchy of state machine events.  Events are signalled by
  * incoming messages, timeouts, and (returned from) actions.  Each state
  * maps events to responses.  New events can be defined as subclesses;
- * currently <i>isA</i> is determined by class hierarchy.
+ * currently <i>isA</i> is determined by class hierarchy.  Events may also
+ * be used to communicate a small piece of data from one action (the event
+ * creator) to a response action.
  */
-public class PsmEvent {
+public class PsmEvent implements Cloneable {
+  private long userVal;
 
   /** Tests whether this event is a kind of the specified event.  Assumed
    * to be reflexive (<i>foo</i>.isa(<i>foo</i>) is always true.  Currently
@@ -56,6 +59,50 @@ public class PsmEvent {
 
   public String toString() {
     return StringUtil.shortName(getClass());
+  }
+
+  /** Return true if this is a wait event.
+   */
+  final boolean isWaitEvent() {
+    return this instanceof PsmWaitEvent;
+  }
+
+  /** An uninterpreted long value.  Intended to be used to communicate a
+   * timeout value from an action that initiates a long-running activity
+   * (and which therefore likely knows how long that activity should take)
+   * to a PsmWait.TIMEOUT_IN_TRIGGER action run in response (which is where
+   * the timeout value is needed). Not to be confused with {@link
+   * PsmWaitEvent#getTimeout()}, which actually causes the interpreter to
+   * start the timer.
+   */
+  public long getUserVal() {
+    return userVal;
+  }
+
+  /** This is the normal way to set the user value in an event: it returns
+   * a copy of the object with the user value set to the argument.  Is
+   * essentially a constructor, done this way because events are usually
+   * referred to by name as prototypical instances.  Also avoids each event
+   * class needing explicit constructors.
+   * @see #getUserVal()
+   */
+  public PsmEvent withUserVal(long val) {
+    PsmEvent res = copy();
+    res.setUserVal(val);
+    return res;
+  }
+
+  // not public so can't change existing event instances
+  private void setUserVal(long val) {
+    userVal = val;
+  }
+
+  public PsmEvent copy() {
+    try {
+      return (PsmEvent)super.clone();
+    } catch (CloneNotSupportedException e) {
+      throw new RuntimeException(e.toString());
+    }
   }
 
 }

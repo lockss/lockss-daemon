@@ -1,5 +1,5 @@
 /*
- * $Id: VoterStateMachineFactory.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
+ * $Id: VoterStateMachineFactory.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class VoterStateMachineFactory {
 		   new PsmMethodAction(actionClass, "handleSendPollAck"),
 		   new PsmResponse(V3Events.evtOk, "WaitPollProof"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
-      new PsmState("WaitPollProof",
+      new PsmState("WaitPollProof", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgPollProof,
 				   new PsmMethodMsgAction(actionClass,
 							  "handleReceivedPollProof")),
@@ -88,7 +88,7 @@ public class VoterStateMachineFactory {
 		   new PsmMethodAction(actionClass, "handleSendVote"),
 		   new PsmResponse(V3Events.evtOk, "WaitRepairRequestOrReceipt"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
-      new PsmState("WaitRepairRequestOrReceipt",
+      new PsmState("WaitRepairRequestOrReceipt", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgRepairRequest,
 				   new PsmMethodMsgAction(actionClass,
 							  "handleReceivedRepairRequest")),

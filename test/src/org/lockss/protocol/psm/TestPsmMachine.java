@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMachine.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+ * $Id: TestPsmMachine.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.test.*;
 public class TestPsmMachine extends LockssTestCase {
 
   PsmState[] states1 = {
-    new PsmState("Start",
+    new PsmState("Start", PsmWait.FOREVER,
 		 new PsmResponse(PsmEvents.Else, "Foo")),
     new PsmState("Foo"),
   };
@@ -79,11 +79,13 @@ public class TestPsmMachine extends LockssTestCase {
 
   public void testIllTrans() {
     PsmState[] statesOk = {
-      new PsmState("Start", new PsmResponse(PsmEvents.Else, "Foo")),
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(PsmEvents.Else, "Foo")),
       new PsmState("Foo"),
     };
     PsmState[] statesBad = {
-      new PsmState("Start", new PsmResponse(PsmEvents.Else, "Bar")),
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(PsmEvents.Else, "Bar")),
       new PsmState("Foo"),
     };
     new PsmMachine("Test1", statesOk, "Start");
@@ -107,7 +109,8 @@ public class TestPsmMachine extends LockssTestCase {
 
   public void testStateMap() {
     PsmState[] states = {
-      new PsmState("Start", new PsmResponse(PsmEvents.Else, "foo")),
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(PsmEvents.Else, "foo")),
       new PsmState("s1"),
       new PsmState("foo"),
     };
@@ -122,7 +125,8 @@ public class TestPsmMachine extends LockssTestCase {
 
   public void testDupState() {
     PsmState[] states = {
-      new PsmState("Start", new PsmResponse(PsmEvents.Else, "foo")),
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(PsmEvents.Else, "foo")),
       new PsmState("s1"),
       new PsmState("s2"),
       new PsmState("s1"),

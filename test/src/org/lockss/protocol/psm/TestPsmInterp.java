@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.6 2005-05-20 07:28:43 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.7 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class TestPsmInterp extends LockssTestCase {
 
   public void testNullConstructorArgs() {
     PsmState[] states = {
-      new PsmState("Start", new PsmResponse(Ok, "Start")),
+      new PsmState("Start", PsmWait.FOREVER, new PsmResponse(Ok, "Start")),
     };
     PsmMachine mach1 = new PsmMachine("Test1", states, "Start");
     try {
@@ -119,7 +119,8 @@ public class TestPsmInterp extends LockssTestCase {
   // Can't call handleEvent() before init()
   public void testNoInit() {
     PsmState[] states = {
-      new PsmState("Start", new PsmResponse(Ok)),
+      new PsmState("Start", PsmWait.FOREVER,
+		   new PsmResponse(Ok, PsmWait.FOREVER)),
     };
     PsmMachine mach = new PsmMachine("M1", states, "Start");
     MyInterp interp = new MyInterp(mach, null);
@@ -165,7 +166,7 @@ public class TestPsmInterp extends LockssTestCase {
   // Loop between two states, in handleEvent()
   public void testLoopHandle() {
     PsmState[] statesLoopTwo = {
-      new PsmState("Start",
+      new PsmState("Start", PsmWait.FOREVER,
 		   new PsmResponse(Sched, "one")),
       new PsmState("one", new MyAction(SendOk),
 		   new PsmResponse(SendOk, "two")),
@@ -218,7 +219,7 @@ public class TestPsmInterp extends LockssTestCase {
 
   public void testNullRespAction() {
     PsmState[] states = {
-      new PsmState("Start",
+      new PsmState("Start", PsmWait.FOREVER,
 		   new PsmResponse(Else, nullAction)),
     };
     PsmMachine mach = new PsmMachine("M1", states, "Start");
@@ -234,14 +235,14 @@ public class TestPsmInterp extends LockssTestCase {
   // Simple state machine for next few tests
   PsmState[] states1 = {
     new PsmState("Start", new MyAction(Sched),
-		 new PsmResponse(Sched),
+		 new PsmResponse(Sched, PsmWait.FOREVER),
 		 new PsmResponse(NotSched, "Error"),
 		 new PsmResponse(TaskComplete, "Send"),
 		 new PsmResponse(TaskError, "Error")),
     new PsmState("Send", new MyAction(SendOk),
 		 new PsmResponse(SendOk, "WaitVote"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("WaitVote",
+    new PsmState("WaitVote", PsmWait.FOREVER,
 		 new PsmResponse(RcvMsgA, "Done"),
 		 new PsmResponse(Else, "Error")),
     new PsmState("Error"),
@@ -259,7 +260,7 @@ public class TestPsmInterp extends LockssTestCase {
     assertFalse(interp.isFinalState());
     ER[] exp1 = {
       new ER(null, PsmEvents.Start, null, states1[0]),
-      new ER(states1[0], null, states1[0].getEntryAction(), null),
+      new ER(states1[0], PsmEvents.Start, states1[0].getEntryAction(), null),
       new ER(states1[0], Sched, null, null),
     };
     assertIsomorphic(exp1, interp.events);
@@ -267,7 +268,7 @@ public class TestPsmInterp extends LockssTestCase {
     interp.handleEvent(NotSched);
     ER[] exp2 = {
       new ER(states1[0], NotSched, null, states1[3]),
-      new ER(states1[3], null, null, null),
+      new ER(states1[3], NotSched, null, null),
     };
     assertIsomorphic(exp2, interp.events);
   }
@@ -278,7 +279,7 @@ public class TestPsmInterp extends LockssTestCase {
     interp.init();
     ER[] exp1 = {
       new ER(null, PsmEvents.Start, null, states1[0]),
-      new ER(states1[0], null, states1[0].getEntryAction(), null),
+      new ER(states1[0], PsmEvents.Start, states1[0].getEntryAction(), null),
       new ER(states1[0], Sched, null, null),
     };
     assertIsomorphic(exp1, interp.events);
@@ -292,9 +293,9 @@ public class TestPsmInterp extends LockssTestCase {
     ER[] exp3 = {
       new ER(states1[0], Sched, null, null),
       new ER(states1[0], TaskComplete, null, states1[1]),
-      new ER(states1[1], null, states1[1].getEntryAction(), null),
+      new ER(states1[1], TaskComplete, states1[1].getEntryAction(), null),
       new ER(states1[1], SendOk, null, states1[2]),
-      new ER(states1[2], null, null, null),
+      new ER(states1[2], SendOk, null, null),
     };
     assertIsomorphic(exp3, interp.events);
   }
@@ -303,7 +304,7 @@ public class TestPsmInterp extends LockssTestCase {
     new PsmState("Start", new MyAction(SendOk),
 		 new PsmResponse(SendOk, "WaitVote"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("WaitVote",
+    new PsmState("WaitVote", PsmWait.FOREVER,
 		 new PsmResponse(RcvMsgA, "WaitVote"),
 		 new PsmResponse(RcvMsgB, "Done"),
 		 new PsmResponse(Else, "Error")),
@@ -328,15 +329,15 @@ public class TestPsmInterp extends LockssTestCase {
     runEvents(interp, ListUtil.list(RcvMsgA, RcvMsgA, RcvMsgB));
     ER[] exp1 = {
       new ER(null, PsmEvents.Start, null, states2[0]),
-      new ER(states2[0], null, states2[0].getEntryAction(), null),
+      new ER(states2[0], PsmEvents.Start, states2[0].getEntryAction(), null),
       new ER(states2[0], SendOk, null, states2[1]),
-      new ER(states2[1], null, null, null),
+      new ER(states2[1], SendOk, null, null),
       new ER(states2[1], RcvMsgA, null, states2[1]),
-      new ER(states2[1], null, null, null),
+      new ER(states2[1], RcvMsgA, null, null),
       new ER(states2[1], RcvMsgA, null, states2[1]),
-      new ER(states2[1], null, null, null),
+      new ER(states2[1], RcvMsgA, null, null),
       new ER(states2[1], RcvMsgB, null, states2[2]),
-      new ER(states2[2], null, null, null),
+      new ER(states2[2], RcvMsgB, null, null),
     };
     assertIsomorphic(exp1, interp.events);
   }
@@ -347,15 +348,15 @@ public class TestPsmInterp extends LockssTestCase {
     runEvents(interp, ListUtil.list(RcvMsgA, RcvMsgA, RcvMsgC));
     ER[] exp1 = {
       new ER(null, PsmEvents.Start, null, states2[0]),
-      new ER(states2[0], null, states2[0].getEntryAction(), null),
+      new ER(states2[0], PsmEvents.Start, states2[0].getEntryAction(), null),
       new ER(states2[0], SendOk, null, states2[1]),
-      new ER(states2[1], null, null, null),
+      new ER(states2[1], SendOk, null, null),
       new ER(states2[1], RcvMsgA, null, states2[1]),
-      new ER(states2[1], null, null, null),
+      new ER(states2[1], RcvMsgA, null, null),
       new ER(states2[1], RcvMsgA, null, states2[1]),
-      new ER(states2[1], null, null, null),
+      new ER(states2[1], RcvMsgA, null, null),
       new ER(states2[1], RcvMsgC, null, states2[3]),
-      new ER(states2[3], null, null, null),
+      new ER(states2[3], RcvMsgC, null, null),
     };
     assertIsomorphic(exp1, interp.events);
   }
@@ -365,10 +366,10 @@ public class TestPsmInterp extends LockssTestCase {
     new PsmState("Start", new MyAction(SendOk),
 		 new PsmResponse(SendOk, "WaitVote"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("WaitVote",
+    new PsmState("WaitVote", PsmWait.FOREVER,
 		 new PsmResponse(RcvMsgA, new MyMsgAction(MsgOk)),
 		 new PsmResponse(RcvMsgB, new MyMsgAction(MsgDone)),
-		 new PsmResponse(MsgOk),
+		 new PsmResponse(MsgOk, PsmWait.FOREVER),
 		 new PsmResponse(MsgDone, "Done"),
 		 new PsmResponse(Else, "Error")),
     new PsmState("Done"),
@@ -384,6 +385,41 @@ public class TestPsmInterp extends LockssTestCase {
 	public void record(LcapMessage msg) { msgs.add(msg); }});
     runEvents(interp, ListUtil.list(RcvMsgA, RcvMsgA, RcvMsgB));
     assertEquals(ListUtil.list(lmA, lmA, lmB), msgs);
+  }
+
+  // State machine to test simple timeout
+  PsmState[] statesTime = {
+    new PsmState("Start", new PsmWait(100),
+		 new PsmResponse(Timeout, "Time"),
+		 new PsmResponse(Else, "Error")),
+    new PsmState("Time").succeed(),
+    new PsmState("Error").fail(),
+  };
+
+  public void testSimpleTimeout() {
+    PsmMachine mach = new PsmMachine("M1", statesTime, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    interp.init();
+    // This machine doesn't need any more outside events to finish, so just
+    // wait for it
+    Interrupter intr = null;
+    try {
+      intr = interruptMeIn(Math.max(TIMEOUT_SHOULDNT, 10 * Constants.SECOND),
+				    true);
+      while (!interp.isFinalState()) {
+	TimerUtil.sleep(10);
+      };
+      intr.cancel();
+      assertEquals("Time", interp.getFinalState().getName());
+      assertEquals(ListUtil.list("Start", "Time"), interp.states);
+      long delta = interp.getStateTime(1) - interp.getStateTime(0);
+      assertTrue("timeout occurred early in " + delta, delta >= 100);
+    } catch (InterruptedException e) {
+    } finally {
+      if (intr.did()) {
+	fail("testSimpleTimeout machine didn't reach final state");
+      }
+    }
   }
 
   // A more functional test.  Creates a user object in which actions track
@@ -419,10 +455,6 @@ public class TestPsmInterp extends LockssTestCase {
       public PsmEvent run(PsmEvent event, PsmInterp interp) {
 	TestObj obj = (TestObj)interp.getUserData();
 	// start a state timeout if requested
-	if (obj.timeout != 0) {
-	  obj.event("set timeout");
-	  interp.setCurrentStateTimeout(obj.timeout);
-	}
 	// schedule a computation if requested, else signal NotSched event
 	if (obj.computeTime != 0) {
 	  TimerQueue.schedule(Deadline.in(obj.computeTime), tcb4, interp);
@@ -432,7 +464,11 @@ public class TestPsmInterp extends LockssTestCase {
 	    TimerUtil.guaranteedSleep(obj.delay);
 	  }
 	  obj.event("sched");
-	  return Sched;
+	  if (obj.timeout != 0) {
+	    return Sched.withUserVal(obj.timeout);
+	  } else {
+	    return Sched;
+	  }
 	} else {
 	  obj.event("notsched");
 	  return NotSched;
@@ -452,7 +488,7 @@ public class TestPsmInterp extends LockssTestCase {
     new PsmState("Start", schedAction,
 		 new PsmResponse(Sched, "WaitCompute"),
 		 new PsmResponse(Else, "Error")),
-    new PsmState("WaitCompute",
+    new PsmState("WaitCompute", PsmWait.TIMEOUT_IN_TRIGGER,
 		 new PsmResponse(TaskComplete, "AlmostDone"),
 		 new PsmResponse(Timeout, "GiveUp"),
 		 new PsmResponse(Else, "Error")),
@@ -548,21 +584,19 @@ public class TestPsmInterp extends LockssTestCase {
     List timeoutStates = 
       ListUtil.list("Start", "WaitCompute", "GiveUp");
     List timeoutEvents =
-      ListUtil.list(ListUtil.list("set timeout", "sched"),
-		    ListUtil.list("set timeout", "sched", "taskcomplete"));
+      ListUtil.list(ListUtil.list(/*"set timeout", */"sched"),
+		    ListUtil.list(/*"set timeout", */"sched", "taskcomplete"));
     List noTimeoutStates = 
       ListUtil.list("Start", "WaitCompute", "AlmostDone", "Done");
     List noTimeoutEvents =
-      ListUtil.list(ListUtil.list("set timeout", "sched",
+      ListUtil.list(ListUtil.list(/*"set timeout", */"sched",
 				  "taskcomplete", "done"),
-		    ListUtil.list("set timeout", "taskcomplete",
+		    ListUtil.list(/*"set timeout", */"taskcomplete",
 				  "sched", "done"));
     // timeout occurs
     testTimeout(100, 5000, 0, timeoutEvents, timeoutStates);
     // timeout occurs before sched action returns
     testTimeout(1, 50, 10, timeoutEvents, timeoutStates);
-    // timeout occurs before sched action returns
-    testTimeout(1, 10, 200, timeoutEvents, timeoutStates);
     // timeout doesn't occur
     testTimeout(5000, 10, 0, noTimeoutEvents, noTimeoutStates);
     // timeout doesn't, occur, task completes before task sched completes
@@ -660,6 +694,7 @@ public class TestPsmInterp extends LockssTestCase {
   static class MyInterp extends PsmInterp {
     List events = new ArrayList();
     List states = new ArrayList();
+    List stateTimes = new ArrayList();
 
     public MyInterp(PsmMachine stateMachine, Object userData) {
       super(stateMachine, userData);
@@ -667,11 +702,23 @@ public class TestPsmInterp extends LockssTestCase {
 
     protected void eventMonitor(PsmState curState, PsmEvent event,
 				PsmAction action, PsmState newState) {
+      if (action != null && action.isWaitAction()) {
+	// report wait events as null action
+	action = null;
+      }
       events.add(new ER(curState, event, action, newState));
-      if (newState != null) states.add(newState.getName());
+      if (newState != null) {
+	states.add(newState.getName());
+	stateTimes.add(new Long(TimeBase.nowMs()));
+      }
     }
+
     public void clear() {
       events.clear();
+    }
+
+    long getStateTime(int ix) {
+      return ((Long)stateTimes.get(ix)).longValue();
     }
   }    
 

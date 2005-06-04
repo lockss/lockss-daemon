@@ -1,5 +1,5 @@
 /*
-* $Id: PsmResponse.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+* $Id: PsmResponse.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import org.lockss.util.*;
 public class PsmResponse {
   private PsmEvent event;
   private String newState;
-  private boolean isWait = false;
   private PsmAction action;
 
   /** Create a response that maps the event to the named new state.
@@ -75,24 +74,9 @@ public class PsmResponse {
     this.action = action;
   }
 
-  /** Create a wait response - causes the machine to wait for another event
-   * @param event the pattern event against which incoming events are matched
-   */
-  public PsmResponse(PsmEvent event) {
-    if (event == null)
-      throw new PsmException.IllegalStateMachine("event is null");
-    this.event = event;
-    isWait = true;
-  }
-
   /** Return the event against which incoming events are matched */
   public PsmEvent getEvent() {
     return event;
-  }
-
-  /** Return true if the reponse to the event is to wait */
-  public boolean isWait() {
-    return isWait;
   }
 
   /** Return true if the reponse to the event is to transition to a new
@@ -125,8 +109,6 @@ public class PsmResponse {
       sb.append(action);
     } else if (isTransition()) {
       sb.append(newState);
-    } else if (isWait()) {
-      sb.append("[Wait]");
     } else {
       sb.append("[???]");
     }

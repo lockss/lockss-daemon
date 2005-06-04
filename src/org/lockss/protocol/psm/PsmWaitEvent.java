@@ -1,5 +1,5 @@
 /*
-* $Id: PsmAction.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
+* $Id: PsmWaitEvent.java,v 1.1 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -32,25 +32,28 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol.psm;
 
 import java.util.*;
+import org.lockss.protocol.*;
 
 /**
- * Base class for actions executed in response to event or state entry;
- * must complete quickly.
+ * Special event that causes interpreter to wait in the current state,
+ * optionally setting a timeout.
  */
-public abstract class PsmAction {
-  /** Perform the action, return the next event.
-   * @param event the event that caused this action to run.  On entry to a
-   * state, it's the event that caused the state transition.
-   * @param interp the state interpreter, from which the action can get the
-   * user object.
-   * @return the next event
-   */
-  protected abstract PsmEvent run(PsmEvent triggerEvent, PsmInterp interp);
+public final class PsmWaitEvent extends PsmEvent {
+  public final static PsmWaitEvent FOREVER = new PsmWaitEvent();
 
-  /** This is currently not reliable, as any action can return a
-   * PsmWaitEvent.
-   */
-  final boolean isWaitAction() {
-    return this instanceof PsmWait;
+  private long timeout = 0;
+
+  public PsmWaitEvent() {
+    super();
+  }
+
+  /** Create a wait event that will timeout in the specified time */
+  public PsmWaitEvent(long timeout) {
+    super();
+    this.timeout = timeout;
+  }
+
+  public long getTimeout() {
+    return timeout;
   }
 }

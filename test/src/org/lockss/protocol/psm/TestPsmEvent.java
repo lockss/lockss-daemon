@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmEvent.java,v 1.1 2005-02-23 02:19:04 tlipkis Exp $
+ * $Id: TestPsmEvent.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -44,6 +44,15 @@ public class TestPsmEvent extends LockssTestCase {
   }
 
   class MsgEventVote extends PsmMsgEvent {
+  }
+
+  public void testUserVal() {
+    PsmEvent e = new PsmEvent();
+    assertEquals(0, e.getUserVal());
+    PsmEvent e2 = e.withUserVal(12345);
+    assertEquals(12345, e2.getUserVal());
+    assertNotSame(e, e2);
+    assertEquals(0, e.getUserVal());
   }
 
   public void testIsa() {

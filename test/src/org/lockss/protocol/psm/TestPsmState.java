@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmState.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+ * $Id: TestPsmState.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,16 @@ public class TestPsmState extends LockssTestCase {
     } catch (RuntimeException e) { }
   }
 
+  public void testIllResponse() {
+    PsmResponse rok = new PsmResponse(new PsmEvent(), "Start");
+    PsmResponse rerr = new PsmResponse(new PsmWaitEvent(), "Start");
+    new PsmState("start", action, rok);
+    try {
+      new PsmState("start", action, rerr);
+      fail("Response for wait event should be illegal");
+    } catch (PsmException.IllegalStateMachine e) { }
+  }
+
   public void testUnmatchableResponse() {
     String msg = "Impossible-to-match response should throw";
     assertTrue(r2.getEvent().isa(r1.getEvent()));
@@ -117,7 +127,7 @@ public class TestPsmState extends LockssTestCase {
     PsmState s2 = new PsmState("s1", action);
     PsmState s3 = new PsmState("s1", action,
 			       new PsmResponse(PsmEvents.Else, "s1"));
-    PsmState s4 = new PsmState("s1",
+    PsmState s4 = new PsmState("s1", PsmWait.FOREVER,
 			       new PsmResponse(PsmEvents.Else, "s1"));
     assertTrue(s1.isFinal());
     assertTrue(s2.isFinal());
@@ -179,27 +189,27 @@ public class TestPsmState extends LockssTestCase {
 
     s1 = new PsmState("s1");
     assertEquals("s1", s1.getName());
-    assertNull(s1.getEntryAction());
+    assertTrue(s1.getEntryAction().isWaitAction());
     assertEquals(0, s1.getResponses().length);
 
-    s1 = new PsmState("s1", r1);
+    s1 = new PsmState("s1", PsmWait.FOREVER, r1);
     assertEquals("s1", s1.getName());
-    assertNull(s1.getEntryAction());
+    assertTrue(s1.getEntryAction().isWaitAction());
     assertIsomorphic(ListUtil.list(r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r2, r1);
+    s1 = new PsmState("s1", PsmWait.FOREVER, r2, r1);
     assertIsomorphic(ListUtil.list(r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r2a, r2, r1);
+    s1 = new PsmState("s1", PsmWait.FOREVER, r2a, r2, r1);
     assertIsomorphic(ListUtil.list(r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r2aa, r2a, r2, r1);
+    s1 = new PsmState("s1", PsmWait.FOREVER, r2aa, r2a, r2, r1);
     assertIsomorphic(ListUtil.list(r2aa, r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r2b, r2aa, r2a, r2, r1);
+    s1 = new PsmState("s1", PsmWait.FOREVER, r2b, r2aa, r2a, r2, r1);
     assertIsomorphic(ListUtil.list(r2b, r2aa, r2a, r2, r1), s1.getResponses());
 
-    s1 = new PsmState("s1", r2c, r2b, r2aa, r2a, r2, r1);
+    s1 = new PsmState("s1", PsmWait.FOREVER, r2c, r2b, r2aa, r2a, r2, r1);
     assertIsomorphic(ListUtil.list(r2c, r2b, r2aa, r2a, r2, r1),
 		     s1.getResponses());
   }
