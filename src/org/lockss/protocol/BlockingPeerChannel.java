@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.5 2005-05-27 08:34:29 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.6 2005-06-04 21:08:35 tlipkis Exp $
  */
 
 /*
@@ -264,7 +264,7 @@ class BlockingPeerChannel implements PeerChannel {
 
   /** Start threads in response to incoming connection
    */
-  public void startIncoming() throws IOException {
+  public void startIncoming() {
     if (stateTrans(STATE_ACCEPTED, STATE_STARTING, "startIncoming")) {
       try {
 	startConnectedChannel();

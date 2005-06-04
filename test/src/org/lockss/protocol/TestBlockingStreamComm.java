@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.5 2005-05-27 08:35:47 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.6 2005-06-04 21:08:35 tlipkis Exp $
  */
 
 /*
@@ -94,7 +94,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   // buffers for manually sending to or receiving from an scomm under test
   private byte[] rcvHeader = new byte[HEADER_LEN];
-  private byte[] sndHeader = new byte[HEADER_LEN];
   private byte[] peerbuf = new byte[BlockingPeerChannel.MAX_PEERID_LEN];
 
   private MockLockssDaemon daemon;
@@ -371,6 +370,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEqualsButSender(expectedMsg, actualMsg);
   }
 
+  // Tests of BlockingPeerChannel
+
   public void testStateTrans() throws IOException {
     setupComm1();
     BlockingPeerChannel chan =
@@ -467,6 +468,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
     assertEquals(34, ByteArray.decodeInt(hdr, 6));
 
   }
+
+  // BlockingStreamComm functional tests
 
   public void testIllSend() throws IOException {
     setupComm1();
