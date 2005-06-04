@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.20 2005-01-31 23:14:45 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.21 2005-06-04 17:38:20 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,6 @@ import java.net.MalformedURLException;
  * Plugins may extend this to get some common CachedUrl functionality.
  */
 public class BaseCachedUrl implements CachedUrl {
-  protected CachedUrlSet cus;
   protected ArchivalUnit au;
   protected String url;
   protected static Logger logger = Logger.getLogger("CachedUrl");
