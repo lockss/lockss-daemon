@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRandom.java,v 1.3 2003-06-20 22:34:53 claire Exp $
+ * $Id: LockssRandom.java,v 1.4 2005-06-04 21:09:17 tlipkis Exp $
  */
 
 /*
@@ -36,11 +36,11 @@ package org.lockss.util;
 public class LockssRandom extends java.util.Random {
   /** Return the next pseudorandom number with <code>bits</code> random
    * bits. */
-  private long nextBits(int bits) {
+  public long nextBits(int bits) {
     if (bits <= 32) {
-      return next(bits);
+      return next(bits) & (long)0xffffffffL;
     }
-    return (next(bits - 32) << 32) | next(32);
+    return (((long)next(bits - 32)) << 32) | next(32) & (long)0xffffffffL;
   }
 
   /** Returns a pseudorandom, uniformly distributed int value between 0
