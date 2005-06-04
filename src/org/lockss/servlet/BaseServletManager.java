@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.7 2004-12-07 21:19:58 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.8 2005-06-04 09:35:04 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,8 @@ import org.mortbay.jetty.servlet.*;
  * not running (<i>e.g.</i>, for {@link org.lockss.servlet.TinyUi}), so it
  * must not rely on any non-static app services, nor any other managers.
  */
-public abstract class BaseServletManager extends JettyManager {
+public abstract class BaseServletManager
+  extends JettyManager implements ServletManager {
 
   public static final String UI_REALM = "LOCKSS Admin";
   public static final String PASSWORD_PROPERTY_FILE = "admin.props";
