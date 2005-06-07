@@ -9,6 +9,10 @@
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"Journal of Medical Internet Research %d", year</ElementValue>
 </MapElement>
 <MapElement>
+<ElementKey>text/html_filter</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue>
+</MapElement>
+<MapElement>
 <ElementKey>plugin_name</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Journal of Medical Internet Research</ElementValue>
 </MapElement>
@@ -50,6 +54,6 @@
 </MapElement>
   <MapElement>
     <ElementKey>plugin_version</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
   </MapElement>
 </Elements>
