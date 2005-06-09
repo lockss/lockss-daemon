@@ -10,7 +10,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>text/html_filter</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.highwire.HighWireFilterRule</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">org.lockss.plugin.jmir.JMIRFilterRule</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_name</ElementKey>
@@ -54,6 +54,6 @@
 </MapElement>
   <MapElement>
     <ElementKey>plugin_version</ElementKey>
-    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
+    <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4</ElementValue>
   </MapElement>
 </Elements>
