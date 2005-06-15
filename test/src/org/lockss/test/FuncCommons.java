@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.5 2005-01-04 03:06:47 tlipkis Exp $
+ * $Id: FuncCommons.java,v 1.6 2005-06-15 17:24:35 tlipkis Exp $
  */
 
 /*
@@ -81,6 +81,8 @@ public class FuncCommons extends LockssTestCase {
       if (map.size() < lastSize) {
 	// Map is smaller than last time.  Some entries have been removed.
 	drop--;
+      } else if ((ii % 100) == 0) {
+	System.gc();
       }
       lastSize = map.size();
     }
