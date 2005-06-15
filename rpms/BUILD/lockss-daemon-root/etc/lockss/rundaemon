@@ -1,0 +1,60 @@
+#!/bin/sh
+
+if [ "X$1" = Xwait ]; then
+    WAIT=Y
+fi
+
+DAEMON_PID_FILE="/var/run/lockss.pid"
+
+CFG_FILE=/etc/lockss/config.dat
+CFG_SCRIPT=/etc/lockss/hostconfig
+LOGFILE=/var/log/lockss/stdout
+
+if [ -f ${CFG_FILE} ]; then
+  . ${CFG_FILE}
+else
+  echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
+  exit 1
+fi
+
+CLASSPATH=@CLASSPATH@
+DAEMON_CLASS=org.lockss.app.LockssDaemon
+if [ "X${LOCKSS_JAVA_SWITCHES}" != "X" ]; then
+    LOCKSS_JAVA_SWITCHES="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
+fi
+
+LOCAL_TXT=~/local.txt
+DAEMON_ARGS="-p ${LOCKSS_PROPS_URL} -p ${LOCAL_TXT}"
+if [ "X${LOCKSS_TEST_GROUP}" != "X" ]; then
+    DAEMON_ARGS="-g ${LOCKSS_TEST_GROUP} ${DAEMON_ARGS}"
+else
+    DAEMON_ARGS="-g prod ${DAEMON_ARGS}"
+fi
+
+#LOCKSS_JAVA_SWITCHES="${LOCKSS_JAVA_SWITCHES} -Dorg.lockss.defaultLogLevel=DEBUG3"
+
+cat >${LOCAL_TXT} <<EOF
+org.lockss.platform.localIPAddress=${LOCKSS_IPADDR}
+org.lockss.platform.diskSpacePaths=${LOCKSS_DISK_PATHS}
+org.lockss.platform.version=@PLATFORM_VERSION@
+org.lockss.platform.sysadminemail=${LOCKSS_EMAIL}
+org.lockss.platform.accesssubnet=${LOCKSS_ACCESS_SUBNET}
+org.lockss.platform.smtphost=${LOCKSS_MAILHUB}
+org.lockss.platform.smtpport=25
+org.lockss.platform.logdirectory=/var/log/lockss
+org.lockss.platform.logfile=daemon
+org.lockss.log.targets=org.lockss.util.FileTarget
+org.lockss.platform.fqdn=${LOCKSS_HOSTNAME}
+org.lockss.platform.ui.username=${LOCKSS_ADMIN_USER}
+org.lockss.platform.ui.password=${LOCKSS_ADMIN_PASSWD}
+EOF
+
+echo "Starting daemon at `date`" >> ${LOGFILE}
+echo ${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> ${LOGFILE}
+${LOCKSS_JAVA_CMD} ${LOCKSS_JAVA_SWITCHES} -classpath ${CLASSPATH} ${DAEMON_CLASS} ${DAEMON_ARGS} >> "$LOGFILE" 2>&1 &
+echo $! >${DAEMON_PID_FILE}
+if [ X${WAIT} != X ]; then
+    wait `cat ${DAEMON_PID_FILE}`
+fi
+
+
