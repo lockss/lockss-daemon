@@ -114,27 +114,50 @@ init_cache_dirs() {
     IFS="${OLD_IFS}"
 }
 
+check_writable() {
+    local DIR="$1"
+    true&
+    local PROBE_FILE=${DIR}/probe_$!
+    if sudo -u ${LOCKSS_USER} touch ${PROBE_FILE} >/dev/null 2>&1; then
+	rm -f ${PROBE_FILE}
+	return 0
+    else
+	return 1
+    fi
+}
+
 init_one_dir() {
     local DIR="$1"
     if [ ! -d "${DIR}" ]; then
 	ask_for_input "${DIR} does not exist; shall I create it" Y
 	if is_yes "${ANS}"; then
 	    mkdir -p "${DIR}" && chown ${LOCKSS_USER} "${DIR}"
+	    if check_writable "${DIR}"; then
+		return 0
+	    else
+		echo "${DIR} not writable by user ${LOCKSS_USER}"
+		echo " Please make it so (check parent dir execute bits)"
+		echo " LOCKSS will not run properly without it."
+	    fi
 	else
 	    echo "Please create ${DIR} and make it writable by user ${LOCKSS_USER};"
 	    echo " LOCKSS will not run properly without it."
 	fi
 	return 0
     fi
-    true&
-    local PROBE_FILE=${DIR}/probe_$!
-    if sudo -u ${LOCKSS_USER} touch ${PROBE_FILE}; then
-	rm -f ${PROBE_FILE}
+    if check_writable "${DIR}"; then
 	echo "${DIR} exists and is writable by ${LOCKSS_USER}"
     else
 	ask_for_input "${DIR} is not writable; shall I chown it" Y
 	if is_yes "${ANS}"; then
 	    chown ${LOCKSS_USER} "${DIR}"
+	    if check_writable "${DIR}"; then
+		return 0
+	    else
+		echo "${DIR} still not writable by user ${LOCKSS_USER}"
+		echo " Please make it so (check parent dir execute bits)"
+		echo " LOCKSS will not run properly without it."
+	    fi
 	else
 	    echo "Please ensure that ${DIR} is writable by user ${LOCKSS_USER};"
 	    echo " LOCKSS will not run properly without it."
@@ -268,7 +291,8 @@ EOF
 	    exit 1
 	fi
 	echo Done
-	echo "Use  /etc/init.d/lockss {start|stop}  to start and stop LOCKSS"
+	echo "LOCKSS will start automatically at next reboot, or you may"
+	echo " start it now by running   /etc/init.d/lockss start"
 	CONFIG_OK=Y
     fi
 done
