@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.16 2005-06-02 16:39:17 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.17 2005-06-15 01:16:22 tlipkis Exp $
  */
 
 /*
@@ -78,7 +78,20 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_TITLE_DB = Configuration.PREFIX + "title";
 
   /** Common prefix of platform config params */
-  static final String PLATFORM = Configuration.PLATFORM;
+  public static final String PLATFORM = Configuration.PLATFORM;
+  public static final String DAEMON = Configuration.DAEMON;
+
+  /** Daemon version string (i.e., 1.4.3, 1.5.0-test). */
+  public static final String PARAM_DAEMON_VERSION = DAEMON + "version";
+  /** Platform version string as a 36-bit integer (i.e., 135a, 136, 137-test). */
+  public static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
+  /** Platform host name. */
+  public static final String PARAM_PLATFORM_HOSTNAME =
+    ConfigManager.PARAM_PLATFORM_FQDN;
+
+  /** Group name, for group= config file conditional */
+  public static final String PARAM_DAEMON_GROUP = DAEMON + "group";
+  public static final String DEFAULT_DAEMON_GROUP = "nogroup";
 
   /** Local (routable) IP address, for lcap identity */
   public static final String PARAM_PLATFORM_IP_ADDRESS =
@@ -93,7 +106,6 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_DISK_SPACE_LIST =
     PLATFORM + "diskSpacePaths";
 
-  static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
   public static final String PARAM_PLATFORM_ADMIN_EMAIL =
     PLATFORM + "sysadminemail";
   static final String PARAM_PLATFORM_LOG_DIR = PLATFORM + "logdirectory";
@@ -268,12 +280,50 @@ public class ConfigManager implements LockssManager {
     return config;
   }
 
+  /**
+   * Convenience methods for getting useful platform settings.
+   */
+  public static Version getDaemonVersion() {
+    DaemonVersion daemon = null;
+
+    String ver = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
+    // If BuildInfo doesn't give us a value, see if we already have it
+    // in the props.  Useful for testing.
+    if (ver == null) {
+      ver = getCurrentConfig().get(PARAM_DAEMON_VERSION);
+    }
+    return ver == null ? null : new DaemonVersion(ver);
+  }
+
   public static Configuration getPlatformConfig() {
     Configuration res = getCurrentConfig();
     if (res.isEmpty()) {
       res = platformConfig;
     }
     return res;
+  }
+
+  private static PlatformVersion platVer = null;
+
+  public static PlatformVersion getPlatformVersion() {
+    if (platVer == null) {
+      String ver = getPlatformConfig().get(PARAM_PLATFORM_VERSION);
+      if (ver != null) {
+	try {
+	  platVer = new PlatformVersion(ver);
+	} catch (RuntimeException e) {
+	}
+      }
+    }
+    return platVer;
+  }
+
+  public static String getPlatformGroup() {
+    return getPlatformConfig().get(PARAM_DAEMON_GROUP, DEFAULT_DAEMON_GROUP);
+  }
+
+  public static String getPlatformHostname() {
+    return getPlatformConfig().get(PARAM_PLATFORM_HOSTNAME);
   }
 
   /** Wait until the system is configured.  (<i>Ie</i>, until the first
@@ -343,7 +393,7 @@ public class ConfigManager implements LockssManager {
     // Add platform-like params before calling loadList() as they affect
     // conditional processing
     if (groupName != null) {
-      newConfig.put(Configuration.PARAM_DAEMON_GROUP, groupName);
+      newConfig.put(PARAM_DAEMON_GROUP, groupName);
     }
     try {
       boolean gotIt = loadList(newConfig, urlList);
@@ -380,7 +430,11 @@ public class ConfigManager implements LockssManager {
       if (StringUtil.endsWithIgnoreCase(url, "local.txt")) {
 	try {
 	  ConfigFile cf = configCache.get(url);
-	  config.load(cf);
+	  if (cf.isLoaded()) {
+	    config.load(cf);
+	  } else {
+	    throw new IOException(cf.getLoadErrorMessage());
+	  }
 	} catch (IOException e) {
 	  log.warning("Couldn't preload local.txt", e);
 	}
@@ -469,6 +523,9 @@ public class ConfigManager implements LockssManager {
 
     reloadInterval = getTimeIntervalParam(PARAM_RELOAD_INTERVAL,
 					  DEFAULT_RELOAD_INTERVAL);
+    if (changedKeys.contains(PARAM_PLATFORM_VERSION)) {
+      platVer = null;
+    }
   }
 
   private void logConfigLoaded(Configuration newConfig,
@@ -482,11 +539,11 @@ public class ConfigManager implements LockssManager {
       if (configUrlList != null) {
 	sb.append(StringUtil.separatedString(configUrlList, ", "));
       }
-      if (loadedCacheFiles != null) {
+      if (loadedCacheFiles != null && !loadedCacheFiles.isEmpty()) {
 	sb.append("; ");
 	sb.append(StringUtil.separatedString(loadedCacheFiles, ", "));
       }
-      if (loadedTitleDbFiles != null) {
+      if (loadedTitleDbFiles != null && !loadedTitleDbFiles.isEmpty()) {
 	sb.append("; ");
 	sb.append(StringUtil.separatedString(loadedTitleDbFiles, ", "));
       }

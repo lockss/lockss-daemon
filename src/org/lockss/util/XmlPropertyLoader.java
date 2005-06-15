@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.19 2005-05-27 01:29:35 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.20 2005-06-15 01:16:22 tlipkis Exp $
  */
 
 /*
@@ -88,19 +88,19 @@ public class XmlPropertyLoader {
   }
 
   public Version getDaemonVersion() {
-    return Configuration.getDaemonVersion();
+    return ConfigManager.getDaemonVersion();
   }
 
   public Version getPlatformVersion() {
-    return Configuration.getPlatformVersion();
+    return ConfigManager.getPlatformVersion();
   }
 
   public String getPlatformHostname() {
-    return Configuration.getPlatformHostname();
+    return ConfigManager.getPlatformHostname();
   }
 
   public String getPlatformGroup() {
-    return Configuration.getPlatformGroup();
+    return ConfigManager.getPlatformGroup();
   }
 
   /**

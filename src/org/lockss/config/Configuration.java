@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.10 2005-03-14 23:31:46 tlipkis Exp $
+ * $Id: Configuration.java,v 1.11 2005-06-15 01:16:22 tlipkis Exp $
  */
 
 /*
@@ -50,20 +50,9 @@ public abstract class Configuration {
   /** The common prefix string of all LOCKSS configuration parameters. */
   public static final String PREFIX = "org.lockss.";
 
+  /** Common prefix of platform config params */
   public static final String PLATFORM = PREFIX + "platform.";
   public static final String DAEMON = PREFIX + "daemon.";
-
-  /** Daemon version string (i.e., 1.4.3, 1.5.0-test). */
-  public static final String PARAM_DAEMON_VERSION = DAEMON + "version";
-  /** Platform version string as a 36-bit integer (i.e., 135a, 136, 137-test). */
-  public static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
-  /** Platform host name. */
-  public static final String PARAM_PLATFORM_HOSTNAME =
-    ConfigManager.PARAM_PLATFORM_FQDN;
-
-  /** Group name, for group= config file conditional */
-  public static final String PARAM_DAEMON_GROUP = DAEMON + "group";
-  public static final String DEFAULT_DAEMON_GROUP = "nogroup";
 
   // MUST pass in explicit log level to avoid recursive call back to
   // Configuration to get Config log level.  (Others should NOT do this.)
@@ -94,40 +83,27 @@ public abstract class Configuration {
     ConfigManager.getConfigManager().unregisterConfigurationCallback(c);
   }
 
-  /**
-   * Convenience methods for getting useful platform settings.
-   */
-  public static Version getDaemonVersion() {
-    DaemonVersion daemon = null;
-
-    String ver = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
-    // If BuildInfo doesn't give us a value, see if we already have it
-    // in the props.  Useful for testing.
-    if (ver == null) {
-      ver = ConfigManager.getCurrentConfig().get(PARAM_DAEMON_VERSION);
-    }
-    return ver == null ? null : new DaemonVersion(ver);
-  }
-
   /** A Configuration.Differences object representing a totally different
    * Configuration */
   public static final Differences DIFFERENCES_ALL = new DifferencesAll();
 
+  /**
+   * Convenience methods for getting useful platform settings.
+   */
   public static Configuration getPlatformConfig() {
     return ConfigManager.getPlatformConfig();
   }
 
-  public static Version getPlatformVersion() {
-    String ver = getPlatformConfig().get(PARAM_PLATFORM_VERSION);
-    return ver == null ? null : new PlatformVersion(ver);
+  public static PlatformVersion getPlatformVersion() {
+    return ConfigManager.getPlatformVersion();
   }
 
   public static String getPlatformGroup() {
-    return getPlatformConfig().get(PARAM_DAEMON_GROUP, DEFAULT_DAEMON_GROUP);
+    return ConfigManager.getPlatformGroup();
   }
 
   public static String getPlatformHostname() {
-    return getPlatformConfig().get(PARAM_PLATFORM_HOSTNAME);
+    return ConfigManager.getPlatformHostname();
   }
 
   /** Return a copy of the configuration with the specified prefix

@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.7 2005-01-20 04:25:42 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.8 2005-06-15 01:16:22 tlipkis Exp $
  */
 
 /*
@@ -195,6 +195,15 @@ public class TestConfigManager extends LockssTestCase {
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
     assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
 		 config.get(FileTarget.PARAM_FILE));
+  }
+
+  public void testGroup() throws Exception {
+    Properties props = new Properties();
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    assertEquals("nogroup", Configuration.getPlatformGroup());
+    props.put(ConfigManager.PARAM_DAEMON_GROUP, "foog");
+    ConfigurationUtil.setCurrentConfigFromProps(props);
+    assertEquals("foog", Configuration.getPlatformGroup());
   }
 
   // platform access not set, ui and proxy access not set
