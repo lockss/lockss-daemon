@@ -1,5 +1,5 @@
 /*
-* $Id: PsmException.java,v 1.3 2005-03-19 09:08:56 tlipkis Exp $
+* $Id: PsmException.java,v 1.4 2005-06-15 01:17:49 tlipkis Exp $
  */
 
 /*
@@ -125,6 +125,14 @@ public class PsmException extends RuntimeException {
    * if an action returns null, or if null is passed to handleEvent() */
   public static class NullEvent extends PsmException {
     public NullEvent(String msg) {
+      super(msg);
+    }
+  }
+
+  /** An illegal event was signalled.  <i>Eg</i>, a PsmWaitEvent was
+   * returned by a non-wait action */
+  public static class IllegalEvent extends PsmException {
+    public IllegalEvent(String msg) {
       super(msg);
     }
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.7 2005-06-04 21:37:12 tlipkis Exp $
+ * $Id: TestPsmInterp.java,v 1.8 2005-06-15 01:17:49 tlipkis Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class TestPsmInterp extends LockssTestCase {
 	return null;
       }};
 
-  // Actions are not allowed to return a null Event
+  // Actions are not allowed to return a null event
   public void testNullEntryAction() {
     PsmState[] states = {
       new PsmState("Start", nullAction),
@@ -229,6 +229,25 @@ public class TestPsmInterp extends LockssTestCase {
       interp.handleEvent(Ok);
       fail("Interp should threw if action returns null");
     } catch (PsmException.NullEvent e) {
+    }
+  }
+
+  PsmAction illWaitAction = new PsmAction() {
+      public PsmEvent run(PsmEvent event, PsmInterp interp) {
+	return new PsmWaitEvent();
+      }};
+
+  // Normal actions are not allowed to return a wait event
+  public void testIllWaitEvent() {
+    PsmState[] states = {
+      new PsmState("Start", illWaitAction),
+    };
+    PsmMachine mach = new PsmMachine("M1", states, "Start");
+    MyInterp interp = new MyInterp(mach, null);
+    try {
+      interp.init();
+      fail("Interp should threw if non-wait action returns wait event");
+    } catch (PsmException.IllegalEvent e) {
     }
   }
 

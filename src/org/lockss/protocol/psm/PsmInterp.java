@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.7 2005-06-04 21:37:12 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.8 2005-06-15 01:17:49 tlipkis Exp $
  */
 
 /*
@@ -174,6 +174,10 @@ public class PsmInterp {
     if (event == null) {
       throw new PsmException.NullEvent("Action: " + action + " returned null");
     } else if (event instanceof PsmWaitEvent) {
+      if (!action.isWaitAction()) {
+	throw new PsmException.IllegalEvent("Non-wait action: " + action +
+					    " returned wait event: " + event);
+      }
       handleWait((PsmWaitEvent)event);
     } else {
       handleEvent1(event, eventCtr);
