@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.137 2005-06-04 18:59:56 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.138 2005-06-15 01:17:11 tlipkis Exp $
  */
 
 /*
@@ -975,7 +975,7 @@ public class PluginManager
       return info;
     } else {
       // Error -- this plugin was not found.
-      log.error(pluginName + " could not be loaded.", new Throwable());
+      log.error(pluginName + " could not be loaded.");
       return null;
     }
   }
