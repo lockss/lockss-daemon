@@ -38,7 +38,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_crawlrules</ElementKey>
@@ -60,7 +60,7 @@
 </MapElement>
 <MapElement>
 <ElementKey>au_def_pause_time</ElementKey>
-<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">18000</ElementValue>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">90000</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>text/html_filter</ElementKey>
