@@ -17,6 +17,9 @@ args2=""
 
 while true ; do
   case "$1" in
+    "-1.4" )
+      jver="$1"
+      shift; continue;;
     "-1" )
       args1="$2"
       shift; shift; continue;;
@@ -36,8 +39,8 @@ TEMP_PREFIX=/tmp/props
 t1=`mktemp ${TEMP_PREFIX}.XXXXXX`
 t2=`mktemp ${TEMP_PREFIX}.XXXXXX`
 
-test/scripts/run-class ConfigDump $args1 -o $t1 "$f1"
-test/scripts/run-class ConfigDump $args2 -o $t2 "$f2"
+test/scripts/run-class $jver ConfigDump $args1 -o $t1 "$f1"
+test/scripts/run-class $jver ConfigDump $args2 -o $t2 "$f2"
 
 lbl1="$f1"
 [ -n "$args1" ] && lbl1="$lbl1 $args1"
