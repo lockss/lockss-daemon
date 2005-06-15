@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.141 2005-06-04 08:28:21 tlipkis Exp $
+ $Id: build.xml,v 1.142 2005-06-15 01:14:29 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,6 +36,7 @@ in this Software without prior written authorization from Stanford University.
 <description>
 Args:
   -Dargs="args ..."        Supply cmd line args to run-class
+  -Dbuild.compiler=jikes   Use jikes to compile.
   -Dclass=pack.age.Class   Specify class for test-one, test-class, run-class
   -Dcvstag=tag             Cvs tag to checkout for post-commit-test
   -Dexclude=path           Exclude matching tests.
@@ -54,18 +55,27 @@ Args:
   -Dloglevel=debug         Set default log level to debug for
                              test-all, test-one, test-class, run-class.
   -Dlogtarget=Class        Set default log target.
-  -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
+  -Dnowarn=true            Turn off compiler warnings.
   -Dshowoutput=yes         With test-one, show System.err output as it happens.
   -Dtimeout=msecs          Override the default test failure timeout.
+  -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
+
+ Release targets (jar-lockss, rpm))
+  -Dreleasename=string     Name of daemon release, if building a release.
+  -Drpmrelease=string      Name of RPM release, if building an RPM.
+
+ Javadoc targets (javadoc, javadoc-test)
   -Dauthor=true            Include author info in javadoc.
   -Dversion=true           Include version info in javadoc.
-  -Dmock=pack/age          Specify package for generate-null-mock, 
-                              generate-unsupported-mock
-  -Dtitledb=file           Title DB config file to bundle with a plugin JAR.
+  -Dscript=name            Script run by jdftp.  Default is lockss-jdftp.
+
+ Plugin targets (build-plugin, sign-plugin)
   -Dsign-keystore=path     Path to keystore to use when signing plugin JARs.
   -Dsign-alias=alias       Alias to use when signing loadable plugin JARs.
   -Dsign-keypass=pass      Keystore password to use when signing plugin JARs.
   -Dsign-storepass=pass    Private key password to use when signing plugin JARs.
+  -Dmock=pack/age          Specify package for generate-null-mock, 
+                              generate-unsupported-mock
 </description>
 
   <!-- Defaults -->
@@ -141,6 +151,10 @@ Args:
   <property name="test.javadoc"   value="${test}/javadoc"/>
   <property name="depend.cache"   value="${basedir}/.depend"/>
   <property name="temp.build"     value="${basedir}/tempbuild"/>
+
+  <!-- Prototype RPM tree -->
+  <property name="protorpm.top" value="${basedir}/rpms" />
+  <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
 
   <!-- Library jars -->
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
@@ -502,7 +516,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <!-- ==================================================================== -->
   <!--  Public tasks -->
   <!-- ==================================================================== -->
-  <target name="clean" depends="clean-tempbuild,clean-tools,clean-results"
+  <target name="clean"
+     depends="clean-tempbuild,clean-tools,clean-results,clean-rpm"
    description="Delete all generated files and dirs" >
     <delete dir="${classes}" quiet="true"/>
     <delete dir="${test.classes}" quiet="true"/>
@@ -550,6 +565,15 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   <target name="clean-results"
    description="Delete test results files" >
     <delete dir="${test.results}" quiet="true"/>
+  </target>
+
+  <target name="clean-rpm"
+   description="Delete built RPMs" >
+    <delete quiet="true" includeEmptyDirs="true">
+      <fileset dir="${protorpm.rpms}">
+       <include name="*/**"/>
+      </fileset>
+    </delete>
   </target>
 
   <!-- ==================================================================== -->
@@ -767,8 +791,8 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 
   <!-- ==================================================================== -->
   <target name="build-plugin" depends="compile-plugins,check.contrib"
-	  description="Generate and optionally sign a loadable plugin 
-	               JAR file for a single plugin">
+	  description="Generate and optionally sign a loadable plugin
+                                   JAR file for a single plugin">
     <!-- relies on the properties: plugin-jarfile, plugin-path,
 	 and plugin-file.  The property titledb is optional. -->
 
@@ -890,32 +914,45 @@ JAVA_COMMAND_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
     <tempfile property="temp.rpm.dir" destdir="${temp.build}" prefix="rpm"/>
     <mkdir dir="${temp.rpm.dir}" />
 
-    <property name="proto.top" value="${temp.rpm.dir}" />
-    <property name="rpm.top" value="${basedir}/rpms" />
+    <property name="rpmrelease" value="1" />
+
+    <property name="protorpm.top" value="${basedir}/rpms" />
+    <property name="rpm.top" value="${temp.rpm.dir}" />
     <property name="rpm.build" value="${rpm.top}/BUILD" />
     <property name="rpm.root" value="${rpm.build}/lockss-daemon-root" />
     <property name="rpm.jardir" value="${rpm.root}/usr/share/lockss" />
+    <property name="rpm.lockss.etc" value="${rpm.root}/etc/lockss" />
+    <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
+    <property name="rpm.rpms" value="${rpm.top}/RPMS" />
 
+    <!-- make classpath to substitute into start script -->
+    <pathconvert refid="prod.run.classpath" property="rpm.clspth"
+       targetos="unix">
+      <map from="${basedir}/lib" to="/usr/share/lockss" />
+    </pathconvert>
     <!-- copy prototype rpm tree to tmp dir -->
     <copy todir="${rpm.top}" >
-      <fileset dir="${proto.top}"/>
+      <fileset dir="${protorpm.top}">
+       <exclude name="RPMS/**/*"/>
+      </fileset>
+      <filterset>
+       <filter token="CLASSPATH" value="${rpm.clspth}"/>
+       <filter token="RELEASENAME" value="${releasename}"/>
+       <filter token="RPMRELEASE" value="${rpmrelease}"/>
+       <filter token="PLATFORM_VERSION" value="Linux RPM-${rpmrelease}"/>
+      </filterset>
     </copy>
 
     <!-- copy jars on run.classpath to jardir -->
-    <pathtofileset dir="" pathrefid="run.classpath"
+    <pathtofileset dir="" pathrefid="prod.run.classpath"
       name="rpm.jars.set" ignorenonrelative="true" />
     <copy todir="${rpm.jardir}" flatten="true" >
      <fileset refid="rpm.jars.set" />
-       <!-- filters go here -->
     </copy>
-
-    <!-- write run.classpath to jardir/classpath -->
-    <pathconvert refid="run.classpath" property="rpm.clspth" targetos="unix" >
-     <map from="${lib}" to="/usr/share/lockss" />
-    </pathconvert>
-    <echo file="${rpm.jardir}/classpath">${rpm.clspth}
-</echo>
-  <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
+    <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
+    <copy todir="${protorpm.rpms}" >
+     <fileset dir="${rpm.rpms}" />
+    </copy>
   </target>
 
   <!-- ==================================================================== -->
