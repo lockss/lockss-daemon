@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformVersion.java,v 1.2 2004-06-14 03:08:44 smorabito Exp $
+ * $Id: PlatformVersion.java,v 1.3 2005-06-15 01:18:05 tlipkis Exp $
  */
 
 /*
@@ -31,50 +31,113 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
+import org.apache.oro.text.regex.*;
+
 /**
- * Representation of a platform version.  Currently this is a string
- * in the format of an integer, i.e. "150".
+ * Representation of a platform name and version.  Version string can be
+ * name-ver, name-ver-suffix, or (for compatibility) ver or ver-suffix, in
+ * which case the name "OpenBSD CD" is implied.
  */
 public class PlatformVersion implements Version {
 
+  // This platform doesn't put its name in the version string
+  public final String DEFAULT_PLATFORM_NAME = "OpenBSD CD";
+
+  private final int BASE = 10;
+
+  // The platform name.
+  private String m_name;
+  // Platform version string.
+  private String m_ver;
+  // Optional suffix
+  private String m_suffix;
   // The platform version as an integer.
   private long m_versionInt;
+
+  private static Pattern oldPat =
+    RegexpUtil.uncheckedCompile("^([0-9]+)(?:-(.+))?$",
+				Perl5Compiler.READ_ONLY_MASK);
+
+  private static Pattern newPat =
+    RegexpUtil.uncheckedCompile("^([^-]+)-([0-9]+)(?:-(.+))?$",
+				Perl5Compiler.READ_ONLY_MASK);
+
 
   /**
    * Construct a Platform Version from a string.
    *
-   * Platform versions are one to twelve base 36 integers (chars a-z,
-   * A-Z, and 0-9: anything that will fit into a long), plus an
-   * optional dash followed by any string.  The dash and following
-   * characters are ignored.
+   * Platform versions consist of up to three parts, separated by hyphens:
+   * name-ver-suffix.  Ver is an integer, the others are strings.  If the
+   * suffix is omitted it's null; if the name is omitted it's OpenBSD.
    *
    * Examples:
    *   1
    *   135
    *   16013-test
-   *   135abc
-   *   123456abcdef-beta
-   *
+   *   Linux rpm-135
+   *   OpenBSD CD-456-beta
    */
   public PlatformVersion(String ver) {
+    Perl5Matcher matcher = RegexpUtil.getMatcher();
+    if (matcher.contains(ver, oldPat)) {
+      MatchResult matchResult = matcher.getMatch();
+      m_name = DEFAULT_PLATFORM_NAME;
+      m_ver = matchResult.group(1);
+      m_suffix = matchResult.group(2);
+    } else if (matcher.contains(ver, newPat)) {
+      MatchResult matchResult = matcher.getMatch();
+      m_name = matchResult.group(1);
+      m_ver = matchResult.group(2);
+      m_suffix = matchResult.group(3);
+    } else {
+      throw new IllegalArgumentException("Unparseable platform version: " +
+					 ver);
+    }
+    if (m_ver.length() > 11) {
+      throw new IllegalArgumentException("Version string too long.");
+    }
     try {
-      int dash = ver.indexOf('-');
-      if ((dash == -1 && ver.length() > 11) || dash > 11) {
-	throw new IllegalArgumentException("Version string too long.");
-      }
-      if (dash > -1) {
-	m_versionInt = Long.parseLong(ver.substring(0, dash), 36);
-      } else {
-	m_versionInt = Long.parseLong(ver, 36);
-      }
+      m_versionInt = Long.parseLong(m_ver, BASE);
     } catch (NumberFormatException ex) {
-      throw new IllegalArgumentException("Illegal format for Platform Version: " +
-	ver);
+      throw new IllegalArgumentException("Unparseable platform version: " +
+					 ver);
     }
   }
 
   public long toLong() {
     return m_versionInt;
+  }
+
+  /** Return the platform name */
+  public String getName() {
+    return m_name;
+  }
+
+  /** Return the optional suffix */
+  public String getSuffix() {
+    return m_suffix;
+  }
+
+  /** Return a parseable string */
+  public String toString() {
+    return toString("-");
+  }
+
+  /** Return a pretty string */
+  public String displayString() {
+    return toString(" ");
+  }
+
+  public String toString(String sep) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(m_name);
+    sb.append(sep);
+    sb.append(m_ver);
+    if (!StringUtil.isNullString(m_suffix)) {
+      sb.append("-");
+      sb.append(m_suffix);
+    }
+    return sb.toString();
   }
 
 }

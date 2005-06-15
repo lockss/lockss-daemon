@@ -1,5 +1,5 @@
 /*
- * $Id: LockssApp.java,v 1.10 2005-06-04 18:59:59 tlipkis Exp $
+ * $Id: LockssApp.java,v 1.11 2005-06-15 01:20:40 tlipkis Exp $
  */
 
 /*
@@ -184,9 +184,9 @@ public abstract class LockssApp {
   /** Return a string describing the version of the app and platform */
   public String getVersionInfo() {
     String vApp = BuildInfo.getBuildInfoString();
-    String vPlatform = Configuration.getParam(PARAM_PLATFORM_VERSION);
-    if (vPlatform != null) {
-      vApp = vApp + ", CD " + vPlatform;
+    PlatformVersion plat = Configuration.getPlatformVersion();
+    if (plat != null) {
+      vApp = vApp + ", " + plat.displayString();
     }
     return vApp;
   }

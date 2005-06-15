@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformVersion.java,v 1.1 2004-06-14 03:08:45 smorabito Exp $
+ * $Id: TestPlatformVersion.java,v 1.2 2005-06-15 01:18:05 tlipkis Exp $
  */
 
 /*
@@ -43,74 +43,83 @@ public class TestPlatformVersion extends LockssTestCase {
     org.lockss.util.PlatformVersion.class
   };
 
-  public void testMakeVersion() {
+  private static String OPENBSD = "OpenBSD CD";
+
+  public void testOld() throws Exception {
+    PlatformVersion a = new PlatformVersion("1");
+    assertEquals(1, a.toLong());
+    assertEquals(OPENBSD, a.getName());
+    assertEquals(OPENBSD + "-1", a.toString());
+    assertEquals(OPENBSD + " 1", a.displayString());
+    PlatformVersion b = new PlatformVersion("123");
+    assertEquals(123, b.toLong());
+    assertEquals(OPENBSD, b.getName());
+    PlatformVersion c = new PlatformVersion("321-foobar");
+    assertEquals(321, c.toLong());
+    assertEquals(OPENBSD, c.getName());
+    assertEquals(OPENBSD + "-321-foobar", c.toString());
+    new PlatformVersion("12345678901");
     try {
-      Version a = new PlatformVersion("1");
-      Version b = new PlatformVersion("123");
-      Version c = new PlatformVersion("123abc");
-      Version d = new PlatformVersion("123abc-test");
-      Version e = new PlatformVersion("123abc-beta");
-    } catch (Throwable t) {
-      fail("Should not have thrown.");
-    }
+      new PlatformVersion("123-");
+      fail("123- Should have thrown.");
+    } catch (IllegalArgumentException e) {}
+    try {
+      new PlatformVersion("123abc");
+      fail("123abc Should have thrown.");
+    } catch (IllegalArgumentException e) {}
+    try {
+      new PlatformVersion("123abc-test");
+      fail("123abc-test Should have thrown.");
+    } catch (IllegalArgumentException e) {}
+    try {
+      new PlatformVersion("123456789012");
+      fail("123456789012 Should have thrown.");
+    } catch (IllegalArgumentException e) {}
   }
 
-  public void testEquals() {
-    Version a = new PlatformVersion("150");
-    Version b = new PlatformVersion("150");
-    assertEquals(a.toLong(), b.toLong());
-
-    Version c = new PlatformVersion("150-test");
-    assertEquals(a.toLong(), c.toLong());
-
-    Version d = new PlatformVersion("150a");
-    assertNotEquals(a.toLong(), d.toLong());
-  }
-
-  public void testTooLong() {
+  public void testNew() throws Exception {
+    PlatformVersion a = new PlatformVersion("foo-1");
+    assertEquals(1, a.toLong());
+    assertEquals("foo", a.getName());
+    assertEquals("foo-1", a.toString());
+    PlatformVersion b = new PlatformVersion("now is the time-123");
+    assertEquals(123, b.toLong());
+    assertEquals("now is the time", b.getName());
+    PlatformVersion c = new PlatformVersion("plat-321-foobar");
+    assertEquals(321, c.toLong());
+    assertEquals("plat", c.getName());
+    assertEquals("plat-321-foobar", c.toString());
+    assertEquals("plat 321-foobar", c.displayString());
+    new PlatformVersion("12345678901");
     try {
-      Version a = new PlatformVersion("12345678901");
-    } catch (IllegalArgumentException ex) {
-      fail("Should not have thrown.");
-    }
-
+      new PlatformVersion("a-123-");
+      fail("a-123- Should have thrown.");
+    } catch (IllegalArgumentException e) {}
     try {
-      Version a = new PlatformVersion("123456789012");
-      fail("Should have thrown.");
-    } catch (IllegalArgumentException ex) {
-    }
+      new PlatformVersion("a-123abc");
+      fail("a-123abc Should have thrown.");
+    } catch (IllegalArgumentException e) {}
+    try {
+      new PlatformVersion("a-123abc-test");
+      fail("a-123abc-test Should have thrown.");
+    } catch (IllegalArgumentException e) {}
+    try {
+      new PlatformVersion("a-123456789012");
+      fail("a-123456789012 Should have thrown.");
+    } catch (IllegalArgumentException e) {}
   }
 
   public void testIllegalFormat() {
     try {
-      Version a = new PlatformVersion("!@#$");
-      fail("Should have thrown.");
+      new PlatformVersion("!@#$");
+      fail("!@#$Should have thrown.");
     } catch (IllegalArgumentException ex) {
     }
 
     try {
-      Version b = new PlatformVersion("150.5");
-      fail("Should have thrown.");
+      new PlatformVersion("150.5");
+      fail("150.5Should have thrown.");
     } catch (IllegalArgumentException ex) {
     }
   }
-
-  public void testGreaterOrLessThan() {
-    Version a = new PlatformVersion("235");
-    Version b = new PlatformVersion("236");
-    Version c = new PlatformVersion("240");
-    Version d = new PlatformVersion("320");
-    Version e = new PlatformVersion("235a");
-    Version f = new PlatformVersion("235z");
-    Version g = new PlatformVersion("235-test"); // should equal a
-
-    assertTrue(a.toLong() < b.toLong());
-    assertTrue(a.toLong() < c.toLong());
-    assertTrue(a.toLong() < d.toLong());
-    assertTrue(a.toLong() < e.toLong());
-    assertTrue(a.toLong() < f.toLong());
-    assertFalse(a.toLong() < g.toLong());
-    assertEquals(a.toLong(), g.toLong());
-  }
-
 }
