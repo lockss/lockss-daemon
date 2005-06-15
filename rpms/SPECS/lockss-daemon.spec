@@ -37,12 +37,11 @@ exit 0
 grep -q ^lockss: /etc/passwd || ( useradd -d /home/lockss -s /bin/false lockss ; echo "Created user 'lockss'" )
 
 %post
-chmod +x /etc/lockss/* /etc/init.d/lockss
 echo Please run /etc/lockss/hostconfig
 
 %files
 %defattr(-,root,root)
 /usr/share/lockss
-/etc/lockss
-/etc/init.d/lockss
+%attr(755,-,-) /etc/lockss
+%attr(755,-,-) /etc/init.d/lockss
 
