@@ -1,0 +1,27 @@
+#!/bin/sh
+
+DAEMON_PID_FILE=/var/run/lockss.pid
+LOGFILE=/var/log/lockss/stdout
+
+CFG_FILE=/etc/lockss/config.dat
+CFG_SCRIPT=/etc/lockss/hostconfig
+
+if [ -f ${CFG_FILE} ]; then
+  . ${CFG_FILE}
+else
+  echo "${CFG_FILE} missing; run ${CFG_SCRIPT}"
+  exit 1
+fi
+
+KEEP_GOING=~/KeepGoing
+touch ~/KeepGoing
+
+while [ -f ${KEEP_GOING} ]; do
+    /etc/lockss/rundaemon wait
+    EXIT_CODE=$?
+    echo stopped with status ${EXIT_CODE} at `date` >>${LOGFILE}
+    if [ -f ${KEEP_GOING} ]; then
+	sleep 30
+    fi
+done &
+exit 0
