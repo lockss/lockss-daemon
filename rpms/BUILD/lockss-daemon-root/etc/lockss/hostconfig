@@ -18,6 +18,19 @@ ask_for_input() {
     fi
 }
 
+ask_for_input_shadow() {
+    echo -n "$1: [$2] "
+    local STTY_ORIG=`stty -g`
+    stty -echo
+    read ANS
+    stty "$STTY_ORIG"
+    echo
+    if [ "X${ANS}" = "X" ]
+    then
+        ANS=$2
+    fi
+}
+
 is_yes() {
     local WORD="$1"
     if [ "X${WORD}" = Xy -o "X${WORD}" = XY ]; then
@@ -248,10 +261,10 @@ until is_yes ${CONFIG_OK}; do
     while [ "X${LOCKSS_ADMIN_PASSWD}" = X ]; do
 	P1=
 	while [ "X${P1}" = X ]; do
-	    ask_for_input "Password for web UI administration user ${LOCKSS_ADMIN_USER}" ""
+	    ask_for_input_shadow "Password for web UI administration user ${LOCKSS_ADMIN_USER}" ""
 	    P1="${ANS}"
 	done
-	ask_for_input "Password for web UI administration (again)" ""
+	ask_for_input_shadow "Password for web UI administration (again)" ""
 	if [ "X${ANS}" = "X${P1}" ]; then
 	    MD5=`echo -n "${P1}" | md5sum`
 	    MD5=`echo ${MD5} | sed 's/ .*$//'`
