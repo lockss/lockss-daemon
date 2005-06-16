@@ -1,0 +1,21 @@
+# LOCKSS daemon can't receive signals (Java) but it reopens its log file
+# every 10 minutes, so delaying the compression for a day is sufficient
+/var/log/lockss/daemon {
+    size 2M
+    rotate 5
+    compress
+    delaycompress
+    create
+    notifempty
+    missingok
+}
+# Scripts (rundaemon, runforever) hold log file open as long as they're
+# running, so must use copytruncate
+/var/log/lockss/stdout {
+    size 10k
+    rotate 5
+    compress
+    copytruncate
+    notifempty
+    missingok
+}

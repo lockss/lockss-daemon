@@ -44,4 +44,5 @@ echo Please run /etc/lockss/hostconfig
 /usr/share/lockss
 %attr(755,-,-) /etc/lockss
 %attr(755,-,-) /etc/init.d/lockss
+/etc/logrotate.d/lockss
 
