@@ -71,6 +71,8 @@
 	<value>org.lockss.plugin.bmc.BMCPlugin</value>
 	<value>org.lockss.plugin.jmir.JMIRPlugin</value>
 	<value>edu.harvard.plugin.jrs.JRSPlugin</value>
+	<value>edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin</value>
+	<value>edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</value>
 	<value>edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin</value>
 	<value>edu.indiana.lib.plugin.jcjpc.JcjpcPlugin</value>
 	<value>edu.princeton.plugin.bmcr.BMCRPlugin</value>
@@ -163,7 +165,9 @@
 	  or pluginName='edu.indiana.lib.plugin.jcjpc.JcjpcPlugin'
 	  or pluginName='edu.columbia.plugin.JiwsPlugin'
 	  or pluginName='edu.harvard.plugin.jrs.JRSPlugin'
-	  or pluginName='edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin'
+	  or pluginName='edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin'
+	  or pluginName='edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin'
+  	  or pluginName='edu.yale.library.lockss.plugin.mitejmes.MITEJMESPlugin'
 	  or pluginName='org.molvis.plugin.MolVisPlugin'
 	  or pluginName='org.lockss.plugin.othervoices.OtherVoicesPlugin'
 	  or pluginName='org.nypl.plugin.PoetryBayPlugin'
@@ -189,6 +193,120 @@
     <property name="title">
 
 
+
+      <property name="assa1">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 1" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No1" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+
+      <property name="assa2">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 2" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No2" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="2" />
+	</property>
+      </property>
+
+      <property name="assa3">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 3" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No3" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="3" />
+	</property>
+      </property>
+
+      <property name="assa4">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 4" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No4" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="4" />
+	</property>
+      </property>
+
+      <property name="WHR1">
+	<property name="title" value="World Haiku Review Volume 1" />
+	<property name="journalTitle" value="World Haiku Review" />
+	<property name="plugin" value="edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.worldhaikureview.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+
+      <property name="WHR2">
+	<property name="title" value="World Haiku Review Volume 2" />
+	<property name="journalTitle" value="World Haiku Review" />
+	<property name="plugin" value="edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.worldhaikureview.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+      </property>
+
+      <property name="WHR3">
+	<property name="title" value="World Haiku Review Volume 3" />
+	<property name="journalTitle" value="World Haiku Review" />
+	<property name="plugin" value="edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.worldhaikureview.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+      </property>
 
       <property name="LeedsICS2002">
 	<property name="title" value="Leeds International Classical Studies 2002" />
@@ -244,29 +362,6 @@
 	</property>
       </property>
 
-      <property name="ip20">
-	<property name="title" value="Inverse Problems Volume 20" />
-	<property name="journalTitle" value="Inverse Problems" />
-	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.iop.org/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="base_url2" />
-	  <property name="value" value="http://ej.iop.org/" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="journal_id" />
-	  <property name="value" value="0266-5611" />
-	</property>
-	<property name="param.4">
-	  <property name="key" value="volume" />
-	  <property name="value" value="20" />
-	</property>
-      </property>
-
-
       <property name="newjournalofphysics7">
 	<property name="title" value="New Journal of Physics Volume 7" />
 	<property name="journalTitle" value="New Journal of Physics" />
@@ -286,6 +381,28 @@
 	<property name="param.4">
 	  <property name="key" value="volume" />
 	  <property name="value" value="7" />
+	</property>
+      </property>
+
+      <property name="jopConf8">
+	<property name="title" value="Journal of Physics: Conference Series Volume 8" />
+	<property name="journalTitle" value="Journal of Physics: Conference Series" />
+	<property name="plugin" value="org.lockss.plugin.iop.IOPPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.iop.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="base_url2" />
+	  <property name="value" value="http://ej.iop.org/" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="1742-6596" />
+	</property>
+	<property name="param.4">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
 	</property>
       </property>
 
@@ -376,11 +493,25 @@
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-          <property name="value" value="http://hmg.oupjournals.org/" />
+	  <property name="value" value="http://hmg.oxfordjournals.org/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
 	  <property name="value" value="14" />
+	</property>
+      </property>
+
+      <property name="nejm352">
+	<property name="title" value="New England Journal of Medicine Volume 352" />
+	<property name="journalTitle" value="New England Journal of Medicine" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://content.nejm.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="352" />
 	</property>
       </property>
 
