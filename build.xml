@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.142 2005-06-15 01:14:29 tlipkis Exp $
+ $Id: build.xml,v 1.143 2005-06-17 01:24:51 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -950,8 +950,19 @@ JAVA_COMMAND_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
      <fileset refid="rpm.jars.set" />
     </copy>
     <rpm specFile="lockss-daemon.spec" topDir="${rpm.top}" />
+    <!-- rpmbuild failure doesn't necessarily cause rpm task to fail, so
+         check whether an rpms were built  -->
+    <fileset id="rpm.filesetid" dir="${rpm.rpms}" />
+    <pathconvert refid="rpm.filesetid" property="rpm.files"
+      targetos="${detected.os}" />
+    <if>
+     <equals arg1="${rpm.files}" arg2="" />
+     <then>
+      <fail message="rpmbuild did not produce any rpms" />
+     </then>
+    </if>
     <copy todir="${protorpm.rpms}" >
-     <fileset dir="${rpm.rpms}" />
+     <fileset refid="rpm.filesetid" />
     </copy>
   </target>
 
