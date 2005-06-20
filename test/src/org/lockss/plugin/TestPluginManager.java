@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.59 2005-05-26 08:31:28 tlipkis Exp $
+ * $Id: TestPluginManager.java,v 1.60 2005-06-20 04:02:32 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,8 @@ import org.lockss.state.HistoryRepositoryImpl;
 public class TestPluginManager extends LockssTestCase {
   private MyMockLockssDaemon theDaemon;
 
-  static String mockPlugKey = "org|lockss|test|MockPlugin";
+  static String mockPlugKey =
+    PluginManager.pluginKeyFromName(MyMockPlugin.class.getName());
   static Properties props1 = new Properties();
   static Properties props2 = new Properties();
   static {
@@ -94,7 +95,7 @@ public class TestPluginManager extends LockssTestCase {
 
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     theDaemon = new MyMockLockssDaemon();
-    mgr = new MyMockPluginManager();
+    mgr = new MyPluginManager();
     theDaemon.setPluginManager(mgr);
     theDaemon.setDaemonInited(true);
 
@@ -545,7 +546,7 @@ public class TestPluginManager extends LockssTestCase {
     }
   }
 
-  static class MyMockPluginManager extends PluginManager {
+  static class MyPluginManager extends PluginManager {
     protected String getConfigurablePluginName() {
       return MyMockConfigurablePlugin.class.getName();
     }
@@ -659,6 +660,8 @@ public class TestPluginManager extends LockssTestCase {
   public void testFindMostRecentCachedUrl() throws Exception {
     String prefix = "http://foo.bar/";
     String url1 = "http://foo.bar/baz";
+    String url1a = "http://foo.bar:80/baz";
+    String url1b = "http://FOO.BAR:80/baz";
     String url2 = "http://foo.bar/not";
     doConfig();
     MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
@@ -674,6 +677,12 @@ public class TestPluginManager extends LockssTestCase {
     CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
     assertNotNull(cu);
     assertEquals(url1, cu.getUrl());
+    cu = mgr.findMostRecentCachedUrl(url1a);
+    assertNotNull(cu);
+    assertEquals(url1, cu.getUrl());
+    cu = mgr.findMostRecentCachedUrl(url1b);
+    assertNotNull(cu);
+    assertEquals(url1, cu.getUrl());
     assertNull(mgr.findMostRecentCachedUrl(url2));
   }
 
@@ -682,10 +691,12 @@ public class TestPluginManager extends LockssTestCase {
     final String prefix = "http://foo.bar/"; // pseudo crawl rule prefix
     String url0 = "http://foo.bar/xxx/baz"; // normal form of test url
     String url1 = "http://foo.bar/SESSION/xxx/baz"; // should normalize to url0
+    String url1a = "http://foo.bar:80/SESSION/xxx/baz"; // same
+    String url1b = "http://FOO.BAR/SESSION/xxx/baz"; // same
     String url2 = "http://foo.bar/SESSION/not";	// should not
     // manually create necessary pieces, no config
     MockPlugin mpi = new MockPlugin();
-    MockArchivalUnit mau = new MockArchivalUnit() {
+    MockArchivalUnit mau = new MyMockArchivalUnit() {
 	// shouldBeCached() is true of anything starting with prefix
 	public boolean shouldBeCached(String url) {
 	  return StringUtil.startsWithIgnoreCase(url, prefix);
@@ -708,6 +719,12 @@ public class TestPluginManager extends LockssTestCase {
     mau.setAuCachedUrlSet(mcuss);
     // url1 should now be found, as url0
     CachedUrl cu = mgr.findMostRecentCachedUrl(url1);
+    assertNotNull(cu);
+    assertEquals(url0, cu.getUrl());
+    cu = mgr.findMostRecentCachedUrl(url1a);
+    assertNotNull(cu);
+    assertEquals(url0, cu.getUrl());
+    cu = mgr.findMostRecentCachedUrl(url1b);
     assertNotNull(cu);
     assertEquals(url0, cu.getUrl());
     // url2 still not found
@@ -852,6 +869,22 @@ public class TestPluginManager extends LockssTestCase {
 
     public CachedUrlSet getAuCachedUrlSet() {
       return cus;
+    }
+  }
+
+  private static class MyMockArchivalUnit extends MockArchivalUnit {
+    public Collection getUrlStems() {
+      return ListUtil.list("http://foo.bar/");
+    }
+  }
+
+  private static class MyMockPlugin extends MockPlugin {
+    public MyMockPlugin(){
+      super();
+    }
+
+    protected MockArchivalUnit newMockArchivalUnit() {
+      return new MyMockArchivalUnit();
     }
   }
 

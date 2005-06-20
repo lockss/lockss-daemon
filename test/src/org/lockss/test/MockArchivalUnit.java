@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.61 2005-05-13 17:43:17 troberts Exp $
+ * $Id: MockArchivalUnit.java,v 1.62 2005-06-20 04:02:28 tlipkis Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public Collection getUrlStems() {
-    throw new UnsupportedOperationException("Not implemented");
+    return null;
   }
 
   public CachedUrlSet getAuCachedUrlSet() {

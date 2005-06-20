@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.20 2005-01-04 03:07:29 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.21 2005-06-20 04:02:28 tlipkis Exp $
  */
 
 /*
@@ -134,13 +134,17 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
   public ArchivalUnit createAu(Configuration auConfig)
       throws ArchivalUnit.ConfigurationException {
     log.debug("createAu(" + auConfig + ")");
-    MockArchivalUnit au = new MockArchivalUnit();
+    MockArchivalUnit au = newMockArchivalUnit();
     au.setConfiguration(auConfig);
     au.setPlugin(this);
     return au;
   }
 
   // MockPlugin methods, not part of Plugin interface
+
+  protected MockArchivalUnit newMockArchivalUnit() {
+    return new MockArchivalUnit();
+  }
 
   public int getInitCtr() {
     return initCtr;

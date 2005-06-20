@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.138 2005-06-15 01:17:11 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.139 2005-06-20 04:02:32 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,8 @@ import java.util.jar.*;
 import java.io.*;
 import java.net.*;
 import java.security.KeyStore;
+import org.apache.commons.collections.MultiMap;
+import org.apache.commons.collections.MultiHashMap;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
@@ -168,13 +170,18 @@ public class PluginManager
 
   // maps plugin key(not id) to plugin
   private Map pluginMap = Collections.synchronizedMap(new HashMap());
+  // maps auid to AU
   private Map auMap = Collections.synchronizedMap(new HashMap());
-  private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
-  private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
-
   // A set of all aus sorted by title.  The UI relies on this behavior.
   private Set auSet = Collections.synchronizedSet(new TreeSet(auComparator));
+  // maps host to collections of AUs.  Used to quickly locate candidate AUs
+  // for incoming URLs
+  private MultiMap hostAus = new MultiHashMap();
 
+  private Set inactiveAuIds = Collections.synchronizedSet(new HashSet());
+
+  // Plugin registry processing
+  private Map cuNodeVersionMap = Collections.synchronizedMap(new HashMap());
   // Map of plugin key to PluginInfo
   private Map pluginfoMap = Collections.synchronizedMap(new HashMap());
 
@@ -634,6 +641,7 @@ public class PluginManager
     // RemoteAPI, etc.)
     auMap.remove(auid);
     auSet.remove(au);
+    delHostAus(au);
 
     theDaemon.getPollManager().cancelAuPolls(au);
     theDaemon.getCrawlManager().cancelAuCrawls(au);
@@ -654,6 +662,7 @@ public class PluginManager
     log.debug2("putAuMap(" + au.getAuId() +", " + au);
     auMap.put(au.getAuId(), au);
     auSet.add(au);
+    addHostAus(au);
   }
 
   public ArchivalUnit getAuFromId(String auId) {
@@ -661,6 +670,43 @@ public class PluginManager
     if (log.isDebug3()) log.debug3("getAu(" + auId + ") = " + au);
     return au;
   }
+
+  private void addHostAus(ArchivalUnit au) {
+    try {
+      Collection stems = au.getUrlStems();
+      if (stems != null) {
+	synchronized (hostAus) {
+	  for (Iterator iter = stems.iterator(); iter.hasNext();) {
+	    String stem = (String)iter.next();
+	    stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
+	    log.debug2("Adding stem: " + stem + ", " + au);
+	    hostAus.put(stem, au);
+	  }
+	}
+      }
+    } catch (Exception e) {
+      log.warning("addHostAus()", e);
+    }
+  }
+
+  private void delHostAus(ArchivalUnit au) {
+    try {
+      Collection stems = au.getUrlStems();
+      if (stems != null) {
+	synchronized (hostAus) {
+	  for (Iterator iter = stems.iterator(); iter.hasNext();) {
+	    String stem = (String)iter.next();
+	    stem = UrlUtil.getUrlPrefix(UrlUtil.normalizeUrl(stem));
+	    log.debug2("Removing stem: " + stem + ", " + au);
+	    hostAus.remove(stem, au);
+	  }
+	}
+      }
+    } catch (Exception e) {
+      log.warning("delHostAus()", e);
+    }
+  }
+
 
   // These don't belong here
   /**
@@ -1094,26 +1140,33 @@ public class PluginManager
     // XXX This is wrong, as plugin-specific normalization is normally done
     // first.
     String normUrl;
+    String normStem;
     try {
       normUrl = UrlUtil.normalizeUrl(url);
+      normStem = UrlUtil.getUrlPrefix(normUrl);
     } catch (MalformedURLException e) {
       log.warning("findMostRecentCachedUrl(" + url + ")", e);
       return null;
     }
     CachedUrl best = null;
-    for (Iterator iter = getAllAus().iterator(); iter.hasNext();) {
-      ArchivalUnit au = (ArchivalUnit)iter.next();
-      if (au.shouldBeCached(url)) {
-	try {
-	  String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
-	  CachedUrl cu = au.makeCachedUrl(siteUrl);
-	  if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
-	    best = cu;
+    synchronized (hostAus) {
+      Collection candidateAus = (Collection)hostAus.get(normStem);
+      if (candidateAus != null) {
+	for (Iterator iter = candidateAus.iterator(); iter.hasNext();) {
+	  ArchivalUnit au = (ArchivalUnit)iter.next();
+	  if (au.shouldBeCached(normUrl)) {
+	    try {
+	      String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
+	      CachedUrl cu = au.makeCachedUrl(siteUrl);
+	      if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
+		best = cu;
+	      }
+	    } catch (MalformedURLException ignore) {
+	      // ignored
+	    } catch (PluginBehaviorException ignore) {
+	      // ignored
+	    }
 	  }
-	} catch (MalformedURLException ignore) {
-	  // ignored
-	} catch (PluginBehaviorException ignore) {
-	  // ignored
 	}
       }
     }
@@ -1197,7 +1250,7 @@ public class PluginManager
   }
 
   Map buildTitleMap() {
-    Map map = new org.apache.commons.collections.MultiHashMap();
+    Map map = new MultiHashMap();
     synchronized (pluginMap) {
       for (Iterator iter = getRegisteredPlugins().iterator();
 	   iter.hasNext();) {
