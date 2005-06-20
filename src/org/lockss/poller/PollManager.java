@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.155 2005-05-18 05:47:47 tlipkis Exp $
+ * $Id: PollManager.java,v 1.156 2005-06-20 04:03:25 tlipkis Exp $
  */
 
 /*
@@ -403,7 +403,7 @@ public class PollManager
    * @throws ProtocolException if message opcode is unknown
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
-    theLog.debug("Got message: " + msg);
+    theLog.debug2("Got message: " + msg);
     BasePoll ret_poll = null;
     PollSpec spec = null;
 
@@ -439,7 +439,7 @@ public class PollManager
     CachedUrlSet cus = spec.getCachedUrlSet();
     // check for presence of item in the cache
     if (cus == null) {
-      theLog.debug("Ignoring poll request, don't have AU: " + spec.getAuId());
+      theLog.debug2("Ignoring poll request, don't have AU: " + spec.getAuId());
       return null;
     }
     ArchivalUnit au = cus.getArchivalUnit();
