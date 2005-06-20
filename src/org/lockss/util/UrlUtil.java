@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.30 2005-05-24 20:38:04 troberts Exp $
+ * $Id: UrlUtil.java,v 1.31 2005-06-20 04:03:57 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -149,15 +149,21 @@ public class UrlUtil {
       throw new MalformedURLException(url);
     }
     if (site != url) {
-      URL origUrl = new URL(url);
-      URL siteUrl = new URL(site);
-      if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
-	     origUrl.getHost().equals(siteUrl.getHost()) &&
-	     origUrl.getPort() == siteUrl.getPort())) {
-	throw new PluginBehaviorException("siteNormalizeUrl(" + url +
-					  ") altered non-alterable component: " +
-				   site);
-      }      
+      if (site.equals(url)) {
+	// ensure return arg if equal
+	site = url;
+      } else {
+	// illegal normalization if changed proto, host or port
+	URL origUrl = new URL(url);
+	URL siteUrl = new URL(site);
+	if (! (origUrl.getProtocol().equals(siteUrl.getProtocol()) &&
+	       origUrl.getHost().equals(siteUrl.getHost()) &&
+	       origUrl.getPort() == siteUrl.getPort())) {
+	  throw new PluginBehaviorException("siteNormalizeUrl(" + url +
+					    ") altered non-alterable component: " +
+					    site);
+	}      
+      }
     }
     return normalizeUrl(site);
   }
@@ -280,14 +286,17 @@ public class UrlUtil {
 
   /**
    * @param urlStr string representation of a url
-   * @return urlStr up to but not including the path
+   * @return Prefix of url including protocol and host (and port).  Ends
+   * with "/", because it's not completely well-formed without it.  Returns
+   * the original string if it's already the prefix
    * @throws MalformedURLException if urlStr is not a well formed URL
    */
   public static String getUrlPrefix(String urlStr)
       throws MalformedURLException{
     URL url = new URL(urlStr);
-    URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "");
-    return url2.toString();
+    URL url2 = new URL(url.getProtocol(), url.getHost(), url.getPort(), "/");
+    String ret = url2.toString();
+    return ret.equals(urlStr) ? urlStr : ret;
   }
 
   /**

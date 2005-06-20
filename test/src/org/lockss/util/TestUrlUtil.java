@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.20 2005-05-24 20:38:05 troberts Exp $
+ * $Id: TestUrlUtil.java,v 1.21 2005-06-20 04:03:57 tlipkis Exp $
  */
 
 /*
@@ -236,21 +236,28 @@ public class TestUrlUtil extends LockssTestCase {
   }
 
   public void testGetUrlPrefixRootHighWireUrl() throws MalformedURLException{
-    String root = "http://shadow8.stanford.edu";
-    String url = root + "/lockss-volume327.shtml";
+    String root = "http://shadow8.stanford.edu/";
+    String url = root + "lockss-volume327.shtml";
     assertEquals(root, UrlUtil.getUrlPrefix(url));
   }
 
   public void testGetUrlPrefixRootHighWireUrlWithOddPort()
       throws MalformedURLException{
-    String root = "http://shadow8.stanford.edu:8080";
-    String url = root + "/lockss-volume327.shtml";
+    String root = "http://shadow8.stanford.edu:8080/";
+    String url = root + "lockss-volume327.shtml";
     assertEquals(root, UrlUtil.getUrlPrefix(url));
   }
 
   public void testGetUrlPrefixPrefixUrl() throws MalformedURLException{
-    String root = "http://shadow8.stanford.edu";
+    String root0 = "http://shadow8.stanford.edu";
+    String root = root0 + "/";
     assertEquals(root, UrlUtil.getUrlPrefix(root));
+    assertEquals(root, UrlUtil.getUrlPrefix(root0));
+  }
+
+  public void testGetUrlPrefixSame() throws MalformedURLException{
+    String root = "http://shadow8.stanford.edu:8080/";
+    assertSame(root, UrlUtil.getUrlPrefix(root));
   }
 
   public void testGetHost() throws Exception {
