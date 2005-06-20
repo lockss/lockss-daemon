@@ -37,7 +37,7 @@ exit 0
 grep -q ^lockss: /etc/passwd || ( useradd -d /home/lockss -s /bin/false lockss ; echo "Created user 'lockss'" )
 
 %post
-echo Please run /etc/lockss/hostconfig
+echo Please run /etc/lockss/hostconfig .  See /etc/lockss/README for details.
 
 %files
 %defattr(-,root,root)
