@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
+ * $Id: V3Events.java,v 1.2 2005-06-21 02:54:05 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.util.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
 
@@ -44,28 +45,16 @@ public class V3Events {
   public static class RepairNotNeeded extends PsmEvent{}
 
   public static class PollProof extends PsmMsgEvent {
-    PollProof() { super(); }
-    PollProof(LcapMessage msg) { super(msg); }
   }
   public static class RepairRequest extends PsmMsgEvent {
-    RepairRequest() { super(); }
-    RepairRequest(LcapMessage msg) { super(msg); }
   }
   public static class Repair extends PsmMsgEvent {
-    Repair() { super(); }
-    Repair(LcapMessage msg) { super(msg); }
   }
   public static class Receipt extends PsmMsgEvent {
-    Receipt() { super(); }
-    Receipt(LcapMessage msg) { super(msg); }
   }
   public static class PollAck extends PsmMsgEvent {
-    PollAck() { super(); }
-    PollAck(LcapMessage msg) { super(msg); }
   }
   public static class Vote extends PsmMsgEvent {
-    Vote() { super(); }
-    Vote(LcapMessage msg) { super(msg); }
   }
 
   // Instances
@@ -83,4 +72,22 @@ public class V3Events {
   public static RepairRequest msgRepairRequest = new RepairRequest();
   public static Repair msgRepair = new Repair();
   public static Receipt msgReceipt = new Receipt();
+
+  // Mapping of message opcode to event class (prototype)
+  private static final Map msgEvents = new HashMap();
+  static {
+    msgEvents.put(new Integer(V3LcapMessage.MSG_POLL_ACK), msgPollAck);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_POLL_PROOF), msgPollProof);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_VOTE), msgVote);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_REPAIR_REQ), msgRepairRequest);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_REPAIR_REP), msgRepair);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_EVALUATION_RECEIPT), msgReceipt);
+  }
+
+  /** Return an opcode-specific message event, with the message as its
+   * payload */
+  public static PsmMsgEvent fromMessage(V3LcapMessage msg) {
+    return PsmMsgEvent.fromMessage(msg, msgEvents);
+  }
+
 }

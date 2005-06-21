@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.1 2005-05-04 19:04:09 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.2 2005-06-21 02:54:05 tlipkis Exp $
  */
 
 /*
@@ -71,27 +71,27 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     this.id = theIdMgr.stringToPeerIdentity("127.0.0.1");
 
     this.msgPollProof =
-      new V3Events.
-      PollProof(new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF, this.id,
-				  "http://www.test.com/",
-				  123456789, 987654321,
-				  ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF,
+					     this.id,
+					     "http://www.test.com/",
+					     123456789, 987654321,
+					     ByteArray.makeRandomBytes(20)));
 
     this.msgRepairRequest =
-      new V3Events.
-      RepairRequest(new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ, this.id,
-				      "http://www.test.com/",
-				      123456789, 987654321,
-				      ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ,
+					     this.id,
+					     "http://www.test.com/",
+					     123456789, 987654321,
+					     ByteArray.makeRandomBytes(20)));
 
     this.msgReceipt =
-      new V3Events.
-      Receipt(new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT, this.id,
-				"http://www.test.com/",
-				123456789, 987654321,
-				ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT,
+					     this.id,
+					     "http://www.test.com/",
+					     123456789, 987654321,
+					     ByteArray.makeRandomBytes(20)));
 
-    this.msgNoOp = new PsmMsgEvent(V3LcapMessage.makeNoOpMsg(this.id));
+    this.msgNoOp = V3Events.fromMessage(V3LcapMessage.makeNoOpMsg(this.id));
 
   }
 

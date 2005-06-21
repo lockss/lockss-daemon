@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollerSolicitStateMachineFactory.java,v 1.1 2005-05-04 19:04:09 smorabito Exp $
+ * $Id: TestPollerSolicitStateMachineFactory.java,v 1.2 2005-06-21 02:54:05 tlipkis Exp $
  */
 
 /*
@@ -71,15 +71,17 @@ public class TestPollerSolicitStateMachineFactory extends LockssTestCase {
     this.id = theIdMgr.stringToPeerIdentity("127.0.0.1");
 
     this.msgPollAck =
-      new V3Events.PollAck(new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK, this.id,
-							    "http://www.test.com/",
-							    123456789, 987654321,
-							    ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK,
+					     this.id,
+					     "http://www.test.com/",
+					     123456789, 987654321,
+					     ByteArray.makeRandomBytes(20)));
     this.msgVote =
-      new V3Events.Vote(new V3LcapMessage(V3LcapMessage.MSG_VOTE, this.id,
-							 "http://www.test.com/",
-							 123456789, 987654321,
-							 ByteArray.makeRandomBytes(20)));
+      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_VOTE,
+					     this.id,
+					     "http://www.test.com/",
+					     123456789, 987654321,
+					     ByteArray.makeRandomBytes(20)));
 
     this.msgNoOp =
       new PsmMsgEvent(V3LcapMessage.makeNoOpMsg(this.id));
