@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMsgEvent.java,v 1.2 2005-04-19 03:08:33 smorabito Exp $
+* $Id: PsmMsgEvent.java,v 1.3 2005-06-21 02:53:12 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,36 @@ public class PsmMsgEvent extends PsmEvent {
     return receivedMessage;
   }
 
-  void setMessage(LcapMessage receivedMessage) {
+  /** This is the normal way to create a message event holding an incoming
+   * message: it returns a copy of the object with the message set to
+   * the argument.  Is essentially a constructor, done this way because
+   * events are usually referred to by name as prototypical instances.
+   * Also avoids each event class needing explicit constructors.
+   */
+  public PsmMsgEvent withMessage(LcapMessage msg) {
+    PsmMsgEvent res = (PsmMsgEvent)copy();
+    res.setMessage(msg);
+    return res;
+  }
+
+  private void setMessage(LcapMessage receivedMessage) {
     this.receivedMessage = receivedMessage;
+  }
+
+  /** Look up the message opcode in the supplied map to find an prototype
+   * instance of (a subclass of) PsmMsgEvent, and return a new event of the
+   * same class, holding the supplied message.  If the opcode is not in the
+   * map, the returned event will be an instance of PsmMsgEvent itself.
+   * @param msg an incoming message
+   * @param opcodeMap Map from integer opcodes to prototype instance of
+   * appripriate PsmMsgEvent suclass.
+   */
+  public static PsmMsgEvent fromMessage(V3LcapMessage msg, Map opcodeMap) {
+    PsmMsgEvent inst =
+      (PsmMsgEvent)opcodeMap.get(new Integer(msg.getOpcode()));
+    if (inst == null) {
+      return new PsmMsgEvent(msg);
+    }
+    return inst.withMessage(msg);
   }
 }
