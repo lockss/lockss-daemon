@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.2 2005-06-21 02:54:05 tlipkis Exp $
+ * $Id: V3Events.java,v 1.3 2005-06-21 03:14:22 tlipkis Exp $
  */
 
 /*
@@ -44,18 +44,14 @@ public class V3Events {
   public static class RepairNeeded extends PsmEvent {}
   public static class RepairNotNeeded extends PsmEvent{}
 
-  public static class PollProof extends PsmMsgEvent {
-  }
-  public static class RepairRequest extends PsmMsgEvent {
-  }
-  public static class Repair extends PsmMsgEvent {
-  }
-  public static class Receipt extends PsmMsgEvent {
-  }
-  public static class PollAck extends PsmMsgEvent {
-  }
-  public static class Vote extends PsmMsgEvent {
-  }
+  // Each msg event here probably wants a corresponsing instance below, and
+  // an entry in msgEvents mapping opcode to instance
+  public static class PollProof extends PsmMsgEvent {}
+  public static class RepairRequest extends PsmMsgEvent {}
+  public static class Repair extends PsmMsgEvent {}
+  public static class Receipt extends PsmMsgEvent {}
+  public static class PollAck extends PsmMsgEvent {}
+  public static class Vote extends PsmMsgEvent {}
 
   // Instances
   public static PsmEvent evtElse = PsmEvents.Else;
