@@ -501,6 +501,34 @@
 	</property>
       </property>
 
+      <property name="brain128">
+	<property name="title" value="Brain Volume 128" />
+	<property name="journalTitle" value="Brain" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://brain.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="128" />
+	</property>
+      </property>
+
+      <property name="petrology46">
+	<property name="title" value="Journal of Petrology Volume 46" />
+	<property name="journalTitle" value="Journal of Petrology" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://petrology.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="46" />
+	</property>
+      </property>
+
       <property name="nejm352">
 	<property name="title" value="New England Journal of Medicine Volume 352" />
 	<property name="journalTitle" value="New England Journal of Medicine" />
