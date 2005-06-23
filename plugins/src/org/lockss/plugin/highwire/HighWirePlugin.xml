@@ -24,11 +24,15 @@
 </MapElement>
 <MapElement>
 <ElementKey>plugin_version</ElementKey>
-<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">3</ElementValue>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">4</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_name</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s, vol. %d", base_url_host, volume</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_new_content_crawl</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">259200000</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>plugin_name</ElementKey>
