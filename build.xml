@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.143 2005-06-17 01:24:51 tlipkis Exp $
+ $Id: build.xml,v 1.144 2005-06-23 05:25:57 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1042,7 +1042,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   </target>
 
   <!-- ==================================================================== -->
-  <target name="javadoc" depends="prepare-javadoc,jar-tests,-load-build-info,-param-docs-if-1.4"
+  <target name="javadoc" depends="prepare-javadoc,jar-tests,-load-build-info,-param-docs-if-1.4,dot"
    description="Build the LOCKSS javadoc">
     <property name="javadoc.header"
               value="Built ${build.timestamp} on ${build.host}" />
@@ -1077,7 +1077,6 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   <target name="param-docs" depends="prepare-javadoc,jar-tools"
    description="Generate an HTMl summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
-    <mkdir dir="${javadoc}"/>
     <javadoc sourcepath="${src}"
 	     packagenames="org.lockss.*"
 	     failonerror="true"
@@ -1087,6 +1086,38 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 	     classpathref="tools.run.classpath"
 	     access="private"/>
   </target> 
+
+  <target name="dot" depends="check.contrib,prepare-javadoc"
+   description="Generate drawings from Graphviz DOT files.">
+    <!-- failifexecutionfails=false doesn't work due to bug in Ant
+         (ExecuteOn.runExec()).  Don't want the build to fail if dot or
+         ps2pdf missing, so do it in try-catch -->
+   <trycatch property="dotfail">
+    <try>
+     <apply executable="dot" dir="${basedir}" dest="${javadoc}"
+           failifexecutionfails="no" >
+      <arg value="-Tpng"/> <arg value="-o"/> <targetfile/> <srcfile/>
+      <fileset dir="${src}" includes="**/*.dot"/>
+      <mapper type="glob" from="*.dot" to="*.png"/>
+     </apply>
+     <apply executable="dot" dir="${basedir}" dest="${javadoc}"
+           failifexecutionfails="no" >
+      <arg value="-Tps2"/> <arg value="-o"/> <targetfile/> <srcfile/>
+      <fileset dir="${src}" includes="**/*.dot"/>
+      <mapper type="glob" from="*.dot" to="*.ps"/>
+     </apply>
+     <apply executable="ps2pdf" dir="${javadoc}" dest="${javadoc}"
+           failifexecutionfails="no" >
+      <srcfile/> <targetfile/>
+      <fileset dir="${javadoc}" includes="**/*.ps"/>
+      <mapper type="glob" from="*.ps" to="*.pdf"/>
+     </apply>
+    </try>
+    <catch>
+     <echo message="dot or ps2pdf failed, continuing" />
+    </catch>
+   </trycatch>
+  </target>
 
   <!-- ==================================================================== -->
   <target name="param-docs-javadoc" depends="param-docs,javadoc"
@@ -1485,6 +1516,7 @@ Test results in ${test.results}
   <!-- ==================================================================== -->
   <target name="test-xml"
    description="Run xmllint on xml files" >
+    <echo message="Checking .xml files"/>
     <apply executable="xmllint" dir="${basedir}"
            failonerror="true"
            resultproperty="xmllint.result"
