@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpClient.java,v 1.5 2005-06-15 01:16:21 tlipkis Exp $
+ * $Id: TestSmtpClient.java,v 1.6 2005-06-23 05:27:20 tlipkis Exp $
  */
 
 /*
@@ -51,7 +51,7 @@ public class TestSmtpClient extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
-    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_HOSTNAME,
+    ConfigurationUtil.setFromArgs(ConfigManager.PARAM_PLATFORM_FQDN,
 				  "foohost");
     client = new MyMockSmtpClient("hostx");
     baos = new ByteArrayOutputStream(128);

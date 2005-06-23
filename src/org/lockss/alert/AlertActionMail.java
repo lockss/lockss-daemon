@@ -1,5 +1,5 @@
 /*
- * $Id: AlertActionMail.java,v 1.5 2004-09-27 22:39:16 smorabito Exp $
+ * $Id: AlertActionMail.java,v 1.6 2005-06-23 05:27:21 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,8 @@ public class AlertActionMail extends AbstractAlertAction {
   static final String PARAM_DEFAULT_EMAIL_SENDER =
     ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
   // Make default param name show up as default in param listing.
-  static final String DEFAULT_EMAIL_SENDER = PARAM_DEFAULT_EMAIL_SENDER;
+  static final String DEFAULT_EMAIL_SENDER =
+    "(value of " + PARAM_DEFAULT_EMAIL_SENDER + ")";
 
   /** printf string applied to cache-name, email-sender */
   static final String PARAM_EMAIL_FROM = PREFIX + "mail.from";
@@ -93,27 +94,7 @@ public class AlertActionMail extends AbstractAlertAction {
 
   /** Create and send a message */
   public void record(LockssDaemon daemon, Alert alert) {
-    Configuration config = Configuration.getCurrentConfig();
-    if (config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
-      MailService mailSvc = daemon.getMailService();
-      String sender = Configuration.getParam(PARAM_EMAIL_FROM);
-      MailMessage msg = new MailMessage();
-      msg.addHeader("From", getFrom(alert, config));
-      msg.addHeader("To", recipients);
-      msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
-      msg.addHeader("Subject", alert.getMailSubject());
-      msg.addHeader("X-Mailer", getXMailer());
-      msg.setText(alert.getMailBody());
-      mailSvc.sendMail(getSender(config), recipients, msg.getBody());
-    }
-  }
-
-  String getXMailer() {
-    String release = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
-    if (release != null) {
-      return "LOCKSS daemon " + release;
-    }
-    return "LOCKSS daemon";
+    send(daemon, alert, "", alert.getMailBody());
   }
 
   /** Create and send a single message for a list of alerts */
@@ -126,14 +107,6 @@ public class AlertActionMail extends AbstractAlertAction {
     Alert firstAlert = (Alert)alerts.get(0);
     Configuration config = Configuration.getCurrentConfig();
     if (config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
-      MailService mailSvc = daemon.getMailService();
-      String sender = Configuration.getParam(PARAM_EMAIL_FROM);
-      MailMessage msg = new MailMessage();
-      msg.addHeader("From", getFrom(firstAlert, config));
-      msg.addHeader("To", recipients);
-      msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
-      msg.addHeader("Subject", firstAlert.getMailSubject() + " (multiple)");
-      msg.addHeader("X-Mailer", getXMailer());
       StringBuffer sb = new StringBuffer();
       for (Iterator iter = alerts.iterator(); iter.hasNext(); ) {
 	Alert alert = (Alert)iter.next();
@@ -142,9 +115,32 @@ public class AlertActionMail extends AbstractAlertAction {
 	  sb.append("\n==========================================================================\n");
 	}
       }
-      msg.setText(sb.toString());
+      send(daemon, firstAlert, " (multiple)", sb.toString());
+    }
+  }
+
+  private void send(LockssDaemon daemon, Alert oneAlert,
+		    String subjSuff, String body) {
+    Configuration config = Configuration.getCurrentConfig();
+    if (config.getBoolean(PARAM_ENABLED, DEFAULT_ENABLED)) {
+      MailService mailSvc = daemon.getMailService();
+      MailMessage msg = new MailMessage();
+      msg.addHeader("From", getFrom(oneAlert, config));
+      msg.addHeader("To", recipients);
+      msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
+      msg.addHeader("Subject", oneAlert.getMailSubject() + subjSuff);
+      msg.addHeader("X-Mailer", getXMailer());
+      msg.setText(body);
       mailSvc.sendMail(getSender(config), recipients, msg.getBody());
     }
+  }
+
+  String getXMailer() {
+    String release = BuildInfo.getBuildProperty(BuildInfo.BUILD_RELEASENAME);
+    if (release != null) {
+      return "LOCKSS daemon " + release;
+    }
+    return "LOCKSS daemon";
   }
 
   public boolean isGroupable() {

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.17 2005-06-15 01:16:22 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.18 2005-06-23 05:27:20 tlipkis Exp $
  */
 
 /*
@@ -85,9 +85,8 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_DAEMON_VERSION = DAEMON + "version";
   /** Platform version string as a 36-bit integer (i.e., 135a, 136, 137-test). */
   public static final String PARAM_PLATFORM_VERSION = PLATFORM + "version";
-  /** Platform host name. */
-  public static final String PARAM_PLATFORM_HOSTNAME =
-    ConfigManager.PARAM_PLATFORM_FQDN;
+  /** Platform host name (fqdn). */
+  public static final String PARAM_PLATFORM_FQDN = PLATFORM + "fqdn";
 
   /** Group name, for group= config file conditional */
   public static final String PARAM_DAEMON_GROUP = DAEMON + "group";
@@ -97,7 +96,6 @@ public class ConfigManager implements LockssManager {
   public static final String PARAM_PLATFORM_IP_ADDRESS =
     PLATFORM + "localIPAddress";
 
-  public static final String PARAM_PLATFORM_FQDN = PLATFORM + "fqdn";
 
   /** Local subnet set during config */
   public static final String PARAM_PLATFORM_ACCESS_SUBNET =
@@ -323,7 +321,7 @@ public class ConfigManager implements LockssManager {
   }
 
   public static String getPlatformHostname() {
-    return getPlatformConfig().get(PARAM_PLATFORM_HOSTNAME);
+    return getPlatformConfig().get(PARAM_PLATFORM_FQDN);
   }
 
   /** Wait until the system is configured.  (<i>Ie</i>, until the first

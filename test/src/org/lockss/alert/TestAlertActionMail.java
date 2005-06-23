@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.4 2004-08-09 02:54:32 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.5 2005-06-23 05:27:20 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 import java.text.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 
@@ -91,6 +92,20 @@ public class TestAlertActionMail extends LockssTestCase {
     assertEquals("to@here", a.getRecipients());
 //     a = new AlertActionMail(ListUtil.list("to@here", "and@there"));
 //     assertEquals("to@here, and@there", a.getRecipients());
+  }
+
+  public void testSenderDefault() {
+    Properties p = new Properties();
+    p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "admin@there");
+    p.put("org.lockss.alert.action.mail.enabled", "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+    Alert a1 = new Alert("AName");
+    a1.setAttribute(Alert.ATTR_CACHE, "cachename");
+    a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_WARNING);
+    AlertActionMail act1 = new AlertActionMail("recipient");
+    act1.record(getMockLockssDaemon(), a1);
+    String[] msg = (String[])mgr.getMsgs().get(0);
+    assertEquals("admin@there", msg[0]);
   }
 
   public void testRecordOne() {
