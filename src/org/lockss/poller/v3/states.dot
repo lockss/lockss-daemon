@@ -1,6 +1,6 @@
 /* -*- Mode: C -*- */
 /*
- * $Id: states.dot,v 1.2 2005-06-24 08:26:24 smorabito Exp $
+ * $Id: states.dot,v 1.3 2005-06-24 18:42:46 tlipkis Exp $
  */
 /*
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -54,7 +54,7 @@ digraph StateMachine {
     VerifyPollAckEffort -> ProveRemainingEffort [label="evtOk",fontsize="10"];
     ProveRemainingEffort -> SendPollProof [label="evtOk",fontsize="10"];
     SendPollProof -> WaitNominate [label="evtOk",fontsize="10"];
-    WaitNominate -> SendVoteRequest [label="evtOk",fontsize="10"];
+    WaitNominate -> SendVoteRequest [label="msgNominate",fontsize="10"];
     WaitVote -> TallyVote [label="msgVote",fontsize="10"];
     TallyVote -> SendVoteRequest [label="incomplete",fontsize="10"];
     SendVoteRequest -> WaitVote [label="evtOk",fontsize="10"];
@@ -82,8 +82,8 @@ digraph StateMachine {
     WaitPollProof -> VerifyPollProof [label="msgPollProof",fontsize="10"];
     VerifyPollProof -> SendNominate [label="evtOk",fontsize="10"];
     SendNominate -> GenerateVote [label="evtOk",fontsize="10"];
-    GenerateVote -> WaitVoteRequest [label="msgVoteRequest",fontsize="10"];
-    WaitVoteRequest -> SendVote [label="evtOk",fontsize="10"];
+    GenerateVote -> WaitVoteRequest [label="evtOk",fontsize="10"];
+    WaitVoteRequest -> SendVote [label="msgVoteRequest",fontsize="10"];
     SendVote -> WaitReceipt [label="evtOk",fontsize="10"];
     WaitReceipt -> SendVote [label="msgVoteRequest",fontsize="10"];
     WaitReceipt -> SendRepair [label="msgRepairRequest",fontsize="10"];
