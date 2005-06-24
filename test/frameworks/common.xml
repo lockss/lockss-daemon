@@ -74,7 +74,9 @@
 	<value>edu.harvard.plugin.WorldHaikuReview.WorldHaikuReviewPlugin</value>
 	<value>edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin</value>
 	<value>edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin</value>
+	<value>edu.upenn.library.plugin.hnet.HNetPlugin</value>
 	<value>edu.indiana.lib.plugin.jcjpc.JcjpcPlugin</value>
+	<value>edu.indiana.lib.plugin.mto.MTOPlugin</value>
 	<value>edu.princeton.plugin.bmcr.BMCRPlugin</value>
 	<value>edu.fcla.plugin.arkivoc.ArkivocPlugin</value>
 	<value>edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin</value>
@@ -98,6 +100,8 @@
 	<value>edu.princeton.plugin.ncaw.19thCenturyArtWorldwidePlugin</value>
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
 	<value>edu.cornell.library.jbe.JBEPlugin</value>
+	<value>edu.cornell.library.epr.EPRPlugin2001</value>
+	<value>edu.cornell.library.epr.EPRPlugin2002On</value>
       </list>
     </property>
 
@@ -146,6 +150,7 @@
 	  value="[
 	  pluginName='org.lockss.plugin.absinthe.AbsinthePlugin'
 	  or pluginName='edu.upenn.library.plugin.annualofurdustudies.AnnualOfUrduStudiesPlugin'
+	  or pluginName='edu.upenn.library.plugin.hnet.HNetPlugin'
 	  or pluginName='edu.fcla.plugin.arkivoc.ArkivocPlugin'
 	  or pluginName='edu.wisc.library.plugin.BigBridgePlugin'
 	  or pluginName='edu.wisc.library.plugin.BigBridgeVol1Plugin'
@@ -163,6 +168,7 @@
 	  or pluginName='org.lockss.plugin.GendersPlugin'
 	  or pluginName='edu.yale.library.lockss.plugin.intermarium.IntermariumPlugin'
 	  or pluginName='edu.indiana.lib.plugin.jcjpc.JcjpcPlugin'
+	  or pluginName='edu.indiana.lib.plugin.mto.MTOPlugin'
 	  or pluginName='edu.columbia.plugin.JiwsPlugin'
 	  or pluginName='edu.harvard.plugin.jrs.JRSPlugin'
 	  or pluginName='edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin'
@@ -176,6 +182,8 @@
 	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
 	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
 	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
+	  or pluginName='edu.cornell.library.plugin.epr.EPRPlugin2001'
+	  or pluginName='edu.cornell.library.plugin.epr.EPRPlugin2002-on'
 	  or pluginName='org.lockss.plugin.jmir.JMIRPlugin'
 	  ]"
 	  />
@@ -193,6 +201,214 @@
     <property name="title">
 
 
+
+      <property name="mto1">
+	<property name="title" value="Music Theory Online Volume 1" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1995" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="1" />
+	</property>
+      </property>
+
+      <property name="mto2">
+	<property name="title" value="Music Theory Online Volume 2" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1996" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="2" />
+	</property>
+      </property>
+
+      <property name="mto3">
+	<property name="title" value="Music Theory Online Volume 3" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="3" />
+	</property>
+      </property>
+
+      <property name="mto4">
+	<property name="title" value="Music Theory Online Volume 4" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1998" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="4" />
+	</property>
+      </property>
+
+      <property name="mto5">
+	<property name="title" value="Music Theory Online Volume 5" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1999" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+      </property>
+
+      <property name="mto6">
+	<property name="title" value="Music Theory Online Volume 6" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2000" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+      </property>
+
+      <property name="mto7">
+	<property name="title" value="Music Theory Online Volume 7" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2001" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="7" />
+	</property>
+      </property>
+
+      <property name="mto8">
+	<property name="title" value="Music Theory Online Volume 8" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2002" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="8" />
+	</property>
+      </property>
+
+      <property name="mto9">
+	<property name="title" value="Music Theory Online Volume 9" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="9" />
+	</property>
+      </property>
+
+      <property name="mto10">
+	<property name="title" value="Music Theory Online Volume 10" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="10" />
+	</property>
+      </property>
+
+      <property name="mto11">
+	<property name="title" value="Music Theory Online Volume 11" />
+	<property name="journalTitle" value="Music Theory Online" />
+	<property name="plugin" value="edu.indiana.lib.plugin.mto.MTOPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.societymusictheory.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="volume" />
+	  <property name="value" value="11" />
+	</property>
+      </property>
+
+      <property name="epr2001">
+	<property name="title" value="Electronic Poetry Review 2001" />
+	<property name="journalTitle" value="Electronic Poetry Review" />
+	<property name="plugin" value="edu.cornell.library.plugin.epr.EPRPlugin2001" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.poetry.org/" />
+	</property>
+      </property>
 
       <property name="assa1">
 	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 1" />
@@ -263,6 +479,132 @@
 	<property name="param.3">
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="4" />
+	</property>
+      </property>
+
+      <property name="assa5">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 5" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No5" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="5" />
+	</property>
+      </property>
+
+      <property name="assa8">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 8" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No8" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="8" />
+	</property>
+      </property>
+
+      <property name="assa9">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 9" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No9" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="9" />
+	</property>
+      </property>
+
+      <property name="assa10">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 10" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No10" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="10" />
+	</property>
+      </property>
+
+      <property name="assa13">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 13" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No13" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="13" />
+	</property>
+      </property>
+
+      <property name="assa14">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 14" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No14" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="14" />
+	</property>
+      </property>
+
+      <property name="assa15">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 15" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="No15" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="15" />
 	</property>
       </property>
 
