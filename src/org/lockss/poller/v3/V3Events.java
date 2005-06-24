@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.3 2005-06-21 03:14:22 tlipkis Exp $
+ * $Id: V3Events.java,v 1.4 2005-06-24 07:59:16 smorabito Exp $
  */
 
 /*
@@ -39,10 +39,15 @@ import org.lockss.protocol.psm.*;
 public class V3Events {
   // Definitions
   public static class Ok extends PsmEvent {}
+  public static class VoteIncomplete extends PsmEvent {}
+  public static class VoteComplete extends PsmEvent {}
   public static class ReceiptOk extends PsmEvent {}
   public static class RepairOk extends PsmEvent {}
-  public static class RepairNeeded extends PsmEvent {}
-  public static class RepairNotNeeded extends PsmEvent{}
+  public static class NeedRepair extends PsmEvent {}
+  public static class RepairNotNeeded extends PsmEvent {}
+  public static class RepairRequestOk extends PsmEvent {}
+  public static class WaitTallyComplete extends PsmEvent {}
+  public static class VoteRequestOk extends PsmEvent {}
 
   // Each msg event here probably wants a corresponsing instance below, and
   // an entry in msgEvents mapping opcode to instance
@@ -51,18 +56,28 @@ public class V3Events {
   public static class Repair extends PsmMsgEvent {}
   public static class Receipt extends PsmMsgEvent {}
   public static class PollAck extends PsmMsgEvent {}
+  public static class VoteRequest extends PsmMsgEvent {}
   public static class Vote extends PsmMsgEvent {}
+  public static class Nominate extends PsmMsgEvent {}
 
+  
   // Instances
   public static PsmEvent evtElse = PsmEvents.Else;
   public static PsmEvent evtError = PsmEvents.Error;
   public static PsmEvent evtOk = new Ok();
+  public static PsmEvent evtVoteIncomplete = new VoteIncomplete();
+  public static PsmEvent evtVoteComplete = new VoteComplete();
   public static PsmEvent evtReceiptOk = new ReceiptOk();
   public static PsmEvent evtRepairOk = new RepairOk();
-  public static PsmEvent evtRepairNeeded = new RepairNeeded();
+  public static PsmEvent evtRepairRequestOk = new RepairRequestOk();
+  public static PsmEvent evtWaitTallyComplete = new WaitTallyComplete();
+  public static PsmEvent evtNeedRepair = new NeedRepair();
   public static PsmEvent evtRepairNotNeeded = new RepairNotNeeded();
-  
+  public static PsmEvent evtVoteRequestOk = new VoteRequestOk();
+
   public static PollAck msgPollAck = new PollAck();
+  public static Nominate msgNominate = new Nominate();
+  public static VoteRequest msgVoteRequest = new VoteRequest();
   public static Vote msgVote = new Vote();
   public static PollProof msgPollProof = new PollProof();
   public static RepairRequest msgRepairRequest = new RepairRequest();
@@ -74,6 +89,8 @@ public class V3Events {
   static {
     msgEvents.put(new Integer(V3LcapMessage.MSG_POLL_ACK), msgPollAck);
     msgEvents.put(new Integer(V3LcapMessage.MSG_POLL_PROOF), msgPollProof);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_NOMINATE), msgNominate);
+    msgEvents.put(new Integer(V3LcapMessage.MSG_VOTE_REQ), msgVoteRequest);
     msgEvents.put(new Integer(V3LcapMessage.MSG_VOTE), msgVote);
     msgEvents.put(new Integer(V3LcapMessage.MSG_REPAIR_REQ), msgRepairRequest);
     msgEvents.put(new Integer(V3LcapMessage.MSG_REPAIR_REP), msgRepair);

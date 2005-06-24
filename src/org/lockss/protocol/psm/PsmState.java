@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
+* $Id: PsmState.java,v 1.5 2005-06-24 07:59:15 smorabito Exp $
  */
 
 /*
@@ -152,7 +152,7 @@ public class PsmState {
 				     response5)));
   }
 
-  /** Create a state with siz responses.
+  /** Create a state with six responses.
    * @param name state name
    * @param entryAction action to be performed upon entry into the state.
    * This action is not considered to have a causitive event.
@@ -171,6 +171,30 @@ public class PsmState {
 	 responseArray(ListUtil.list(response1, response2,
 				     response3, response4,
 				     response5, response6)));
+  }
+
+  /** Create a state with seven responses.
+   * @param name state name
+   * @param entryAction action to be performed upon entry into the state.
+   * This action is not considered to have a causitive event.
+   * @param response1 the first response
+   * @param response2 the second response
+   * @param response3 the third response
+   * @param response4 the fourth response
+   * @param response5 the fifth response
+   * @param response6 the sixth response
+   * @param response7 the seventh response
+   */
+  public PsmState(String name, PsmAction entryAction,
+		  PsmResponse response1, PsmResponse response2,
+		  PsmResponse response3, PsmResponse response4,
+		  PsmResponse response5, PsmResponse response6,
+		  PsmResponse response7) {
+    this(name, entryAction,
+	 responseArray(ListUtil.list(response1, response2,
+				     response3, response4,
+				     response5, response6,
+				     response7)));
   }
 
   /** Create a state with no responses and no entry action.  This state is

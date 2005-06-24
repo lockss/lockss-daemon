@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
+ * $Id: VoterActions.java,v 1.2 2005-06-24 07:59:16 smorabito Exp $
  */
 
 /*
@@ -32,9 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.util.*;
 
 public class VoterActions {
+  private static final Logger log = Logger.getLogger("VoterActions");
+
   public static PsmEvent handleInitialize(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
@@ -55,7 +59,7 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceivedPollProof(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceivePollProof(PsmMsgEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
   }
@@ -65,9 +69,19 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
+  public static PsmEvent handleSendNominate(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement
+    return V3Events.evtOk;
+  }
+
   public static PsmEvent handleGenerateVote(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt, PsmInterp interp) {
+    // XXX: Implement
+    return V3Events.evtVoteRequestOk;
   }
 
   public static PsmEvent handleSendVote(PsmEvent evt, PsmInterp interp) {
@@ -75,9 +89,9 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceivedRepairRequest(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceiveRepairRequest(PsmMsgEvent evt, PsmInterp interp) {
     // XXX: Implement.
-    return V3Events.evtRepairOk;
+    return V3Events.evtRepairRequestOk;
   }
 
   public static PsmEvent handleSendRepair(PsmEvent evt, PsmInterp interp) {
@@ -85,7 +99,7 @@ public class VoterActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceivedReceipt(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceiveReceipt(PsmMsgEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtReceiptOk;
   }
@@ -98,5 +112,9 @@ public class VoterActions {
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
+  }
+
+  private static ParticipantState getVoterState(PsmInterp interp) {
+    return (ParticipantState)interp.getUserData();
   }
 }

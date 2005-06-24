@@ -1,5 +1,5 @@
 /*
- * $Id: PollerTallyActions.java,v 1.1 2005-05-04 19:04:11 smorabito Exp $
+ * $Id: PollerActions.java,v 1.1 2005-06-24 07:59:16 smorabito Exp $
  */
 
 /*
@@ -32,20 +32,68 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import org.lockss.protocol.psm.*;
+import java.util.*;
 
-public class PollerTallyActions {
+import org.lockss.protocol.psm.*;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
+
+public class PollerActions {
+
+  private static final Logger log = Logger.getLogger("PollerActions");
+
   public static PsmEvent handleInitialize(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleVerifyVoteEffort(PsmEvent evt, PsmInterp interp) {
+  public static PsmEvent handleProveIntroEffort(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleTally(PsmEvent evt, PsmInterp interp) {
+  public static PsmEvent handleSendPoll(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleReceivePollAck(PsmMsgEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleVerifyPollAckEffort(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleProveRemainingEffort(PsmEvent evt,
+						    PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleSendPollProof(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleReceiveNominate(PsmMsgEvent evt, PsmInterp interp) {
+    // XXX: Implement
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleSendVoteRequest(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleReceiveVote(PsmMsgEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleTallyVote(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
   }
@@ -60,9 +108,14 @@ public class PollerTallyActions {
     return V3Events.evtOk;
   }
 
-  public static PsmEvent handleReceivedRepair(PsmMsgEvent evt, PsmInterp interp) {
+  public static PsmEvent handleReceiveRepair(PsmMsgEvent evt, PsmInterp interp) {
     // XXX: Implement.
-    return V3Events.evtRepairOk;
+    return V3Events.evtOk;
+  }
+
+  public static PsmEvent handleProcessRepair(PsmEvent evt, PsmInterp interp) {
+    // XXX: Implement.
+    return V3Events.evtOk;
   }
 
   public static PsmEvent handleSendReceipt(PsmEvent evt, PsmInterp interp) {
@@ -73,5 +126,12 @@ public class PollerTallyActions {
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
+  }
+
+  /**
+   * Convenience method.
+   */
+  private static ParticipantState getVoterState(PsmInterp interp) {
+    return (ParticipantState)interp.getUserData();
   }
 }

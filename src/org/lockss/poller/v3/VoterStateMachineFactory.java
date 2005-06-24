@@ -1,5 +1,5 @@
 /*
- * $Id: VoterStateMachineFactory.java,v 1.2 2005-06-04 21:37:12 tlipkis Exp $
+ * $Id: VoterStateMachineFactory.java,v 1.3 2005-06-24 07:59:15 smorabito Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class VoterStateMachineFactory {
   public static PsmMachine getMachine(Class actionClass) {
     return new PsmMachine("Voter",
 			  makeStates(actionClass),
-			  "Initialize");
+			  "VerifyPollEffort");
   }
 
   /**
@@ -54,10 +54,6 @@ public class VoterStateMachineFactory {
    */
   private static PsmState[] makeStates(Class actionClass) {
     PsmState[] states = {
-      new PsmState("Initialize",
-		   new PsmMethodAction(actionClass, "handleInitialize"),
-		   new PsmResponse(V3Events.evtOk, "VerifyPollEffort"),
-		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("VerifyPollEffort",
 		   new PsmMethodAction(actionClass, "handleVerifyPollEffort"),
 		   new PsmResponse(V3Events.evtOk, "ProvePollAck"),
@@ -73,34 +69,48 @@ public class VoterStateMachineFactory {
       new PsmState("WaitPollProof", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgPollProof,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceivedPollProof")),
+							  "handleReceivePollProof")),
 		   new PsmResponse(V3Events.evtOk, "VerifyPollProof"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("VerifyPollProof",
 		   new PsmMethodAction(actionClass, "handleVerifyPollProof"),
+		   new PsmResponse(V3Events.evtOk, "SendNominate"),
+		   new PsmResponse(V3Events.evtElse, "Error")),
+      new PsmState("SendNominate",
+		   new PsmMethodAction(actionClass, "handleSendNominate"),
 		   new PsmResponse(V3Events.evtOk, "GenerateVote"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("GenerateVote",
 		   new PsmMethodAction(actionClass, "handleGenerateVote"),
-		   new PsmResponse(V3Events.evtOk, "SendVote"),
+		   new PsmResponse(V3Events.evtOk, "WaitVoteRequest"),
+		   new PsmResponse(V3Events.evtElse, "Error")),
+      new PsmState("WaitVoteRequest", PsmWait.FOREVER,
+		   new PsmResponse(V3Events.msgVoteRequest,
+				   new PsmMethodMsgAction(actionClass,
+							  "handleReceiveVoteRequest")),
+		   new PsmResponse(V3Events.evtVoteRequestOk, "SendVote"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("SendVote",
 		   new PsmMethodAction(actionClass, "handleSendVote"),
-		   new PsmResponse(V3Events.evtOk, "WaitRepairRequestOrReceipt"),
+		   new PsmResponse(V3Events.evtOk, "WaitReceipt"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
-      new PsmState("WaitRepairRequestOrReceipt", PsmWait.FOREVER,
+      new PsmState("WaitReceipt", PsmWait.FOREVER,
+		   new PsmResponse(V3Events.msgVoteRequest,
+				   new PsmMethodMsgAction(actionClass,
+							  "handleReceiveVoteRequest")),
 		   new PsmResponse(V3Events.msgRepairRequest,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceivedRepairRequest")),
+							  "handleReceiveRepairRequest")),
 		   new PsmResponse(V3Events.msgReceipt,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceivedReceipt")),
-		   new PsmResponse(V3Events.evtRepairOk, "SendRepair"),
+							  "handleReceiveReceipt")),
+		   new PsmResponse(V3Events.evtVoteRequestOk, "SendVote"),
+		   new PsmResponse(V3Events.evtRepairRequestOk, "SendRepair"),
 		   new PsmResponse(V3Events.evtReceiptOk, "ProcessReceipt"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("SendRepair",
 		   new PsmMethodAction(actionClass, "handleSendRepair"),
-		   new PsmResponse(V3Events.evtOk, "WaitRepairRequestOrReceipt"),
+		   new PsmResponse(V3Events.evtOk, "WaitReceipt"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("ProcessReceipt",
 		   new PsmMethodAction(actionClass, "handleProcessReceipt"),
