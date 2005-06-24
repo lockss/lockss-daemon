@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.5 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.6 2005-06-24 08:09:30 smorabito Exp $
  */
 
 /*
@@ -49,17 +49,19 @@ public class V3LcapMessage extends LcapMessage {
   public static final int MSG_POLL = 10;
   public static final int MSG_POLL_ACK = 11;
   public static final int MSG_POLL_PROOF = 12;
-  public static final int MSG_VOTE = 13;
-  public static final int MSG_REPAIR_REQ = 14;
-  public static final int MSG_REPAIR_REP = 15;
-  public static final int MSG_EVALUATION_RECEIPT = 16;
-  public static final int MSG_NO_OP = 17;
+  public static final int MSG_NOMINATE = 13;
+  public static final int MSG_VOTE_REQ = 14;
+  public static final int MSG_VOTE = 15;
+  public static final int MSG_REPAIR_REQ = 16;
+  public static final int MSG_REPAIR_REP = 17;
+  public static final int MSG_EVALUATION_RECEIPT = 18;
+  public static final int MSG_NO_OP = 19;
 
   // XXX: There should be a more general way to do this.
   public static final int POLL_MESSAGES_BASE = 10;
   public static final String[] POLL_MESSAGES = {
-    "Poll", "PollAck", "PollProof", "Vote", "RepairReq",
-    "RepairRep", "EvaluationReceipt", "NoOp"
+    "Poll", "PollAck", "PollProof", "Nominate", "Vote Request",
+    "Vote", "RepairReq", "RepairRep", "EvaluationReceipt", "NoOp"
   };
 
   public static final byte[] pollVersionByte = {'1'};
@@ -68,8 +70,10 @@ public class V3LcapMessage extends LcapMessage {
 
   // V3 Specific properties.
   private byte[] m_challenge;
+  private byte[] m_pollProof;
   
-  private ArrayList m_voteBlocks; // List<V3VoteBlock> of vote blocks.
+  private List m_voteBlocks; // List<V3VoteBlock> of vote blocks.
+  private List m_nominees;   // List of outer circle nominees.
 
   /*
     byte
@@ -183,7 +187,12 @@ public class V3LcapMessage extends LcapMessage {
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_challenge = m_props.getByteArray("challenge", EMPTY_BYTE_ARRAY);
+    m_pollProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
     m_pluginVersion = m_props.getProperty("plugVer");
+    String nomineesString = m_props.getProperty("nominees");
+    if (nomineesString != null) {
+      m_nominees = StringUtil.breakAt(nomineesString, ';');
+    }
 
     m_voteBlocks = new ArrayList();
 
@@ -278,6 +287,13 @@ public class V3LcapMessage extends LcapMessage {
     }
     m_props.setProperty("au", m_archivalID);
     m_props.putByteArray("challenge", m_challenge);
+    if(m_pollProof != null) {
+      m_props.putByteArray("effortproof", m_pollProof);
+    }
+    if (m_nominees != null) {
+      m_props.setProperty("nominees",
+			  StringUtil.separatedString(m_nominees, ";"));
+    }
 
     // XXX: These should eventually be refactored out of the encoded
     // property object.  The large size of some AUs will quickly lead
@@ -313,6 +329,14 @@ public class V3LcapMessage extends LcapMessage {
     return m_key;
   }
 
+  public byte[] getPollProof() {
+    return m_pollProof;
+  }
+
+  public void setPollProof(byte[] b) {
+    m_pollProof = b;
+  }
+
   public boolean isNoOp() {
     return m_opcode == MSG_NO_OP;
   }
@@ -331,6 +355,14 @@ public class V3LcapMessage extends LcapMessage {
 
   public void setChallenge(byte[] b) {
     m_challenge = b;
+  }
+
+  public List getNominees() {
+    return this.m_nominees;
+  }
+
+  public void setNominees(List nominees) {
+    this.m_nominees = nominees;
   }
 
   // Vote Block accessors and iterator

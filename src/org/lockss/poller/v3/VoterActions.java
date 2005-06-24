@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.2 2005-06-24 07:59:16 smorabito Exp $
+ * $Id: VoterActions.java,v 1.3 2005-06-24 08:09:31 smorabito Exp $
  */
 
 /*
@@ -112,9 +112,5 @@ public class VoterActions {
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
-  }
-
-  private static ParticipantState getVoterState(PsmInterp interp) {
-    return (ParticipantState)interp.getUserData();
   }
 }

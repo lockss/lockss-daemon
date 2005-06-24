@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.1 2005-06-24 07:59:16 smorabito Exp $
+ * $Id: PollerActions.java,v 1.2 2005-06-24 08:09:31 smorabito Exp $
  */
 
 /*
@@ -126,12 +126,5 @@ public class PollerActions {
   public static PsmEvent handleError(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement.
     return V3Events.evtOk;
-  }
-
-  /**
-   * Convenience method.
-   */
-  private static ParticipantState getVoterState(PsmInterp interp) {
-    return (ParticipantState)interp.getUserData();
   }
 }
