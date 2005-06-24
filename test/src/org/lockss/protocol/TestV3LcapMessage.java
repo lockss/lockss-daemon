@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.3 2005-05-18 05:51:14 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.4 2005-06-24 20:21:07 smorabito Exp $
  */
 
 /*
@@ -279,6 +279,9 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(a.getChallenge(), b.getChallenge());
     assertEquals(a.getPluginVersion(), b.getPluginVersion());
     assertEquals(a.getHashAlgorithm(), b.getHashAlgorithm());
+    assertEquals(a.isVoteComplete(), b.isVoteComplete());
+    assertEquals(a.getLastVoteBlockURL(), b.getLastVoteBlockURL());
+    assertIsomorphic(a.getNominees(), b.getNominees());
     List aVoteBlocks = ListUtil.fromIterator(a.getVoteBlockIterator());
     List bVoteBlocks = ListUtil.fromIterator(b.getVoteBlockIterator());
     assertTrue(aVoteBlocks.equals(bVoteBlocks));

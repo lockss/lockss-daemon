@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.6 2005-06-24 08:09:30 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.7 2005-06-24 20:21:08 smorabito Exp $
  */
 
 /*
@@ -70,10 +70,24 @@ public class V3LcapMessage extends LcapMessage {
 
   // V3 Specific properties.
   private byte[] m_challenge;
+
+  /** For PollProof messages:  The effort proof for this poll. */
   private byte[] m_pollProof;
   
+  /** In Vote messages:  A list of vote blocks for this vote. */
   private List m_voteBlocks; // List<V3VoteBlock> of vote blocks.
-  private List m_nominees;   // List of outer circle nominees.
+
+  /** In Nominate messages:  The list of outer circle nominees,
+      in the form of peer identity strings. */
+  private List m_nominees;
+
+  /** In Vote messages:  True if all vote blocks have been sent,
+      false otherwise. */
+  private boolean m_voteComplete = false;
+
+  /** In Vote Request messages: the URL of the last vote block 
+      received.  Null if this is the first (or only) request. */
+  private String m_lastVoteBlockURL;
 
   /*
     byte
@@ -189,10 +203,14 @@ public class V3LcapMessage extends LcapMessage {
     m_challenge = m_props.getByteArray("challenge", EMPTY_BYTE_ARRAY);
     m_pollProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
     m_pluginVersion = m_props.getProperty("plugVer");
+
+    // V3 specific message parameters
     String nomineesString = m_props.getProperty("nominees");
     if (nomineesString != null) {
       m_nominees = StringUtil.breakAt(nomineesString, ';');
     }
+    m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
+    m_voteComplete = m_props.getBoolean("votecomplete", false);
 
     m_voteBlocks = new ArrayList();
 
@@ -287,6 +305,9 @@ public class V3LcapMessage extends LcapMessage {
     }
     m_props.setProperty("au", m_archivalID);
     m_props.putByteArray("challenge", m_challenge);
+
+    // V3 specific message parameters.
+
     if(m_pollProof != null) {
       m_props.putByteArray("effortproof", m_pollProof);
     }
@@ -294,6 +315,10 @@ public class V3LcapMessage extends LcapMessage {
       m_props.setProperty("nominees",
 			  StringUtil.separatedString(m_nominees, ";"));
     }
+    if (m_lastVoteBlockURL != null) {
+      m_props.setProperty("lastvoteblockurl", m_lastVoteBlockURL);
+    }
+    m_props.putBoolean("votecomplete", m_voteComplete);
 
     // XXX: These should eventually be refactored out of the encoded
     // property object.  The large size of some AUs will quickly lead
@@ -322,6 +347,11 @@ public class V3LcapMessage extends LcapMessage {
     m_props.putEncodedPropertyList("voteblocks", encodedVoteBlocks);
   }
 
+  /**
+   * Return the unique identifying Poll Key for this poll.
+   *
+   * @return The unique poll identifier for this poll.
+   */
   public String getKey() {
     if (m_key == null) {
       m_key = String.valueOf(B64Code.encode(m_challenge));
@@ -329,6 +359,15 @@ public class V3LcapMessage extends LcapMessage {
     return m_key;
   }
 
+  public void setKey(String key) {
+    m_key = key;
+  }
+
+  /**
+   * For PollProof messages:  Return the poll effort proof.
+   *
+   * @return The poll effort proof for this poll.
+   */
   public byte[] getPollProof() {
     return m_pollProof;
   }
@@ -365,6 +404,28 @@ public class V3LcapMessage extends LcapMessage {
     this.m_nominees = nominees;
   }
 
+  /**
+   * In Vote messages, determine whether more vote blocks are
+   * available.
+   *
+   * @return True if the vote is complete, false if more votes
+   *         should be requested.
+   */
+  public boolean isVoteComplete() {
+    return m_voteComplete;
+  }
+
+  /**
+   * In Vote Request messages, return the URL of the last
+   * vote block received.  If this is the first vote request message,
+   * or the only one, this value will be null.
+   *
+   * @return The URL of the last vote block received.
+   */
+  public String getLastVoteBlockURL() {
+    return m_lastVoteBlockURL;
+  }
+
   // Vote Block accessors and iterator
   //
   // NOTE: For now, the list of vote blocks is implemented as an in-memory
@@ -382,6 +443,13 @@ public class V3LcapMessage extends LcapMessage {
 
   public void sortVoteBlocks(Comparator c) {
     Collections.sort(m_voteBlocks, c);
+  }
+
+  // XXX:  Stubbed out.  Must be implemented.
+  // Repair message functionality.  
+  // Obtain an input stream from which to read repair data for a given URL.
+  public InputStream getRepairInputStream(String url) {
+    return null;
   }
 
   //
