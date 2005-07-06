@@ -101,7 +101,7 @@
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
 	<value>edu.cornell.library.jbe.JBEPlugin</value>
 	<value>edu.cornell.library.epr.EPRPlugin2001</value>
-	<value>edu.cornell.library.epr.EPRPlugin2002On</value>
+	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
       </list>
     </property>
 
@@ -143,6 +143,15 @@
 	<property name="class" value="xpath" />
 	<property name="xpath" value="[pluginName='org.lockss.plugin.locksscard.LockssCardPlugin']" />
       </property>
+      <property name="gpo">
+	<property name="name" value="All GPO Pilot Titles" />
+	<property name="class" value="xpath" />
+	<property name="xpath"
+	  value="[
+	  pluginName='gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin'
+	  ]"
+	  />
+      </property>
       <property name="free">
 	<property name="name" value="All Free Titles" />
 	<property name="class" value="xpath" />
@@ -182,8 +191,7 @@
 	  or pluginName='edu.nyu.plugin.LeedsICSPlugin'
 	  or pluginName='edu.jhu.library.plugin.MedievalForumPlugin'
 	  or pluginName='edu.cornell.library.jbe.JBEPlugin'
-	  or pluginName='edu.cornell.library.plugin.epr.EPRPlugin2001'
-	  or pluginName='edu.cornell.library.plugin.epr.EPRPlugin2002-on'
+	  or pluginName='edu.cornell.library.epr.EPRPlugin2001'
 	  or pluginName='org.lockss.plugin.jmir.JMIRPlugin'
 	  ]"
 	  />
@@ -201,6 +209,20 @@
     <property name="title">
 
 
+
+      <property name="Treasury_Bulletin2005">
+	<property name="title" value="Treasury Bulletin 2005" />
+	<property name="journalTitle" value="Treasury Bulletin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Treasury_Bulletin/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
 
       <property name="mto1">
 	<property name="title" value="Music Theory Online Volume 1" />
@@ -500,6 +522,24 @@
 	</property>
       </property>
 
+      <property name="assa6to7">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 6-7" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="6-7" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="6-7" />
+	</property>
+      </property>
+
       <property name="assa8">
 	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 8" />
 	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
@@ -554,6 +594,24 @@
 	</property>
       </property>
 
+      <property name="assa11to12">
+	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 11-12" />
+	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
+	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="issue_dir" />
+	  <property name="value" value="11-12" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="issue_no." />
+	  <property name="value" value="11-12" />
+	</property>
+      </property>
+
       <property name="assa13">
 	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 13" />
 	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
@@ -587,24 +645,6 @@
 	<property name="param.3">
 	  <property name="key" value="issue_no." />
 	  <property name="value" value="14" />
-	</property>
-      </property>
-
-      <property name="assa15">
-	<property name="title" value="Applied Semiotics / Semiotique appliquee Volume 15" />
-	<property name="journalTitle" value="Applied Semiotics / Semiotique appliquee" />
-	<property name="plugin" value="edu.harvard.plugin.AppliedSemiotics.AppliedSemioticsPlugin" />
-	<property name="param.1">
-	  <property name="key" value="base_url" />
-	  <property name="value" value="http://www.chass.utoronto.ca/french/as-sa/" />
-	</property>
-	<property name="param.2">
-	  <property name="key" value="issue_dir" />
-	  <property name="value" value="No15" />
-	</property>
-	<property name="param.3">
-	  <property name="key" value="issue_no." />
-	  <property name="value" value="15" />
 	</property>
       </property>
 
