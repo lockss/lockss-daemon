@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.31 2005-06-04 19:21:34 tlipkis Exp $
+ * $Id: GoslingHtmlParser.java,v 1.32 2005-07-06 17:46:22 troberts Exp $
  */
 
 /*
@@ -311,6 +311,9 @@ public class GoslingHtmlParser implements ContentParser {
   }
 
 
+  /**
+   * Method overridden in some sub classes, so change with care
+   */
   protected String extractLinkFromTag(StringBuffer link) {
     String returnStr = null;
     switch (link.charAt(0)) {
