@@ -50,6 +50,8 @@ class Framework:
         self.configCount = 0 # used when writing daemon properties
         self.isRunning = False
 
+        self.portToClientMap = {} # A mapping of port number to client.
+
         if self.projectDir == None:
             # will raise LockssError if not found.
             self.projectDir = self.__findProjectDir()
@@ -81,6 +83,7 @@ class Framework:
             os.mkdir(daemonDir)
             # write the daemon-specific config file
             self.__writeLocalConfig(localConfigFile, daemonDir, port)
+                
             # Create daemon
             daemon = LockssDaemon(daemonDir, self.__makeClasspath(),
                                   (globalConfigFile, localConfigFile,
@@ -88,6 +91,7 @@ class Framework:
             # Add client and daemon to their lists
             self.clientList.append(client)
             self.daemonList.append(daemon)
+            self.portToClientMap[port] = client
 
     def start(self):
         " Start each daemon in the framework. "
@@ -112,6 +116,24 @@ class Framework:
     def clean(self):
         " Delete the current framework working directory. "
         shutil.rmtree(self.frameworkDir)
+
+    def getClientByPort(self, portNumber):
+        " Get the client for the specified port number. "
+        try:
+            return self.portToClientMap[portNumber]
+        except KeyError:
+            return None
+    
+    def appendLocalConfig(self, conf, uiPort):
+        """ Append the supplied configuration in the dictionary 'conf'
+        (name / value pairs) to the local config file for the daemon running
+        on UI port 'uiPort'. """
+        client = self.getClientByPort(uiPort)
+        localConf = path.join(client.daemonDir, 'local.txt')
+        f = open(localConf, "a");
+        for (key, value) in conf.items():
+            f.write("%s=%s\n" % (key, value))
+        f.close()
 
     def checkForDeadlock(self):
         """ Request that all the daemons in the framework dump their

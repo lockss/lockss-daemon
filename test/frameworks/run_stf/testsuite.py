@@ -24,6 +24,7 @@ deleteAfterSuccess = config.getBoolean('deleteAfterSuccess', True)
 ##
 ## Super class for all LOCKSS daemon test cases.
 ##
+
 class LockssTestCase(unittest.TestCase):
     """ Superclass for all STF test cases. """
     def __init__(self):
@@ -61,22 +62,10 @@ class LockssTestCase(unittest.TestCase):
         frameworkList.append(self.framework)
 
         ##
-        ## Start the framework.
-        ##
-        log.info("Starting framework in %s" % self.framework.frameworkDir)
-        self.framework.start()
-        assert self.framework.isRunning, 'Framework failed to start.'
-
-        ##
-        ## List of clients, one for each daemon in 'numDaemons'
+        ## List of clients, one for each daemon
         ##
         self.clients = self.framework.clientList
-
-        # Block return until all clients are ready to go.
-        log.info("Waiting for framework to come ready.")
-        for client in self.clients:
-            client.waitForDaemonReady()
-
+        
         unittest.TestCase.setUp(self)
 
 
@@ -99,18 +88,40 @@ class LockssTestCase(unittest.TestCase):
                     'Framework did not stop.')
 
         unittest.TestCase.tearDown(self)
+    
+class LockssAutoStartTestCase(LockssTestCase):
+    """ Extension of LockssTestCase that automatically starts the
+    framework in the setUp method.  Typically, you should extend this
+    class to create a new method unless you want to have more control
+    over when the framework starts up. """
+
+    def setUp(self):
+        LockssTestCase.setUp(self)
+
+        ##
+        ## Start the framework.
+        ##
+        log.info("Starting framework in %s" % self.framework.frameworkDir)
+        self.framework.start()
+        assert self.framework.isRunning, 'Framework failed to start.'
+
+        # Block return until all clients are ready to go.
+        log.info("Waiting for framework to come ready.")
+        for client in self.clients:
+            client.waitForDaemonReady()
+
 
 ##
 ## Sanity check self-test cases.  Please ignore these.
 ##
 
-class SucceedingTestTestCase(LockssTestCase):
+class SucceedingTestTestCase(LockssAutoStartTestCase):
     " Test case that succeeds immediately after daemons start. "
     def runTest(self):
         log.info("Succeeding immediately.")
         return
 
-class FailingTestTestCase(LockssTestCase):
+class FailingTestTestCase(LockssAutoStartTestCase):
     " Test case that fails immediately after daemons start. "    
     def runTest(self):
         log.info("Failing immediately.")
@@ -135,7 +146,7 @@ class ImmediateFailingTestTestCase(unittest.TestCase):
 ##
 ## Ensure caches can recover from simple file damage.
 ##
-class SimpleDamageTestCase(LockssTestCase):
+class SimpleDamageTestCase(LockssAutoStartTestCase):
     "Test recovery from random file damage."
     
     def runTest(self):
@@ -162,7 +173,7 @@ class SimpleDamageTestCase(LockssTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[0]
+        client = self.framework.getClientByPort(8081)
 
         node = client.randomDamageSingleNode(simAu)
         log.info("Damaged node %s on client %s" % (node.url, client))
@@ -212,7 +223,7 @@ class SimpleDamageTestCase(LockssTestCase):
 ## Ensure the cache can recover from a simple file deletion.
 ## (not resulting in a ranged name poll)
 ##
-class SimpleDeleteTestCase(LockssTestCase):
+class SimpleDeleteTestCase(LockssAutoStartTestCase):
     "Test recovery from a random file deletion."
     
     def runTest(self):
@@ -239,7 +250,7 @@ class SimpleDeleteTestCase(LockssTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[1]
+        client = framework.getClientByPort(8081)
 
         node = client.randomDelete(simAu)
         log.info("Deleted node %s on client %s" % (node.url, client))
@@ -276,7 +287,7 @@ class SimpleDeleteTestCase(LockssTestCase):
 ## Ensure that the cache can recover following an extra file created
 ## (not resulting in a ranged name poll)
 ##
-class SimpleExtraFileTestCase(LockssTestCase):
+class SimpleExtraFileTestCase(LockssAutoStartTestCase):
     "Test recovery from an extra node in our cache"
 
     def runTest(self):
@@ -303,7 +314,7 @@ class SimpleExtraFileTestCase(LockssTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[1]
+        client = self.framework.getClientByPort(8082)
 
         node = client.createNode(simAu, 'extrafile.txt')
         log.info("Created file %s on client %s" % (node.url, client))
@@ -345,7 +356,7 @@ class SimpleExtraFileTestCase(LockssTestCase):
 ## Ensure that the cache can recover following damage that results
 ## in a ranged name poll being called.
 ##
-class RangedNamePollDeleteTestCase(LockssTestCase):
+class RangedNamePollDeleteTestCase(LockssAutoStartTestCase):
     "Test recovery from a file deletion after a ranged name poll"
 
     def runTest(self):
@@ -373,7 +384,7 @@ class RangedNamePollDeleteTestCase(LockssTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[1]
+        client = self.framework.getClientByPort(8082)
 
         # get a file that will be in the second packet
         filename = '045abcdefghijklmnopqrstuvwxyz.txt'
@@ -448,7 +459,7 @@ class RangedNamePollDeleteTestCase(LockssTestCase):
 ## Ensure that the cache can recover following an extra file being
 ## added to an AU large enough to trigger a ranged name poll.
 ##
-class RangedNamePollExtraFileTestCase(LockssTestCase):
+class RangedNamePollExtraFileTestCase(LockssAutoStartTestCase):
     "Test recovery from an extra file that triggers a ranged name poll"
 
     def runTest(self):
@@ -476,7 +487,7 @@ class RangedNamePollExtraFileTestCase(LockssTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.clients[1]
+        client = self.framework.getClientByPort(8082)
 
         # Create a file that doesn't exist
         filename = '046extrafile.txt'
@@ -553,7 +564,7 @@ class RangedNamePollExtraFileTestCase(LockssTestCase):
 ## all damaged nodes to be repaired.
 ##
 
-class RandomizedDamageTestCase(LockssTestCase):
+class RandomizedDamageTestCase(LockssAutoStartTestCase):
     "Test recovery from random file damage in a randomly sized AU."
 
     def runTest(self):
@@ -644,7 +655,7 @@ class RandomizedDamageTestCase(LockssTestCase):
 ## for a successful repair
 ##
 
-class RandomizedDeleteTestCase(LockssTestCase):
+class RandomizedDeleteTestCase(LockssAutoStartTestCase):
     "Test recovery from random file deletion in a randomly sized AU."
 
     def runTest(self):
@@ -720,7 +731,7 @@ class RandomizedDeleteTestCase(LockssTestCase):
 ## and breadth of the tree structure), and add extra files.  Wait for
 ## all damaged nodes to be repaired.
 ##
-class RandomizedExtraFileTestCase(LockssTestCase):
+class RandomizedExtraFileTestCase(LockssAutoStartTestCase):
     """ Test recovery from random node creation in a randomly sized AU. """
 
     def runTest(self):    
@@ -791,6 +802,106 @@ class RandomizedExtraFileTestCase(LockssTestCase):
                "Au not repaired."
         log.info("AU repaired.")
 
+
+## Test repairs from a cache.  Create a small AU, damage it, and wait
+## for it to be repaird, just like in SimpleDamageTestCase.  Extends
+## 'LockssTestCase' instead of 'LockssAutoStartTestCase' so we can
+## control adding extra parameters forcing repair from caches to the
+## daemon to be damaged before starting up the test framework.
+        
+class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
+    """ Test repairing simple damage from another cache. """
+    def setUp(self):
+        LockssTestCase.setUp(self)
+
+        ##
+        ## Configure the daemon to be damaged (8082) to repair from
+        ## a cache instead of from the publisher.
+        ##
+
+        extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "1.0"}
+        self.framework.appendLocalConfig(extraConf, 8082)
+        
+        ##
+        ## Start the framework.
+        ##
+        log.info("Starting framework in %s" % self.framework.frameworkDir)
+        self.framework.start()
+        assert self.framework.isRunning, 'Framework failed to start.'
+
+        # Block return until all clients are ready to go.
+        log.info("Waiting for framework to come ready.")
+        for client in self.clients:
+            client.waitForDaemonReady()
+
+    def runTest(self):
+        # Tiny AU for simple testing.
+        simAu = SimulatedAu('localA', 0, 0, 3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        # Damage the client running on port 8082, the one that was set
+        # up with 'repair_from_cache_percent=1.0'
+        client = self.framework.getClientByPort(8082)
+
+        node = client.randomDamageSingleNode(simAu)
+        log.info("Damaged node %s on client %s" % (node.url, client))
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        # expect to see a top level content poll
+        log.info("Waiting for top level content poll.")
+        assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
+               "Never called top level content poll"
+        log.info("Called top level content poll.")
+
+        # expect to see the top level node marked repairing.
+        log.info("Waiting for lockssau to be marked 'damaged'.")
+        assert client.waitForTopLevelDamage(simAu, timeout=self.timeout),\
+               "Client never marked lockssau 'damaged'."
+        log.info("Marked lockssau 'damaged'.")
+
+        # expect to see top level name poll
+        log.info("Waiting for top level name poll.")
+        assert client.waitForTopLevelNamePoll(simAu, timeout=self.timeout),\
+               "Never called top level name poll"
+        log.info("Called top level name poll")
+
+        # expect to see the specific node marked 'damaged'
+        log.info("Waiting for node %s to be marked 'damaged'." % node.url)
+        assert client.waitForDamage(simAu, node, timeout=self.timeout),\
+               "Never marked node %s 'damaged'" % node.url
+        log.info("Marked node %s 'damaged'" % node.url)
+
+        # expect to see the node successfully repaired.
+        log.info("Waiting for successful repair of node %s." % node.url)
+        assert client.waitForContentRepair(simAu, node, timeout=self.timeout),\
+               "Node %s not repaired." % node.url
+        log.info("Node %s repaired." % node.url)
+
+        # expect to see the AU successfully repaired
+        log.info("Waiting for successful repair of AU.")
+        assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
+               "AU never repaired."
+        log.info("AU successfully repaired.")        
+
+
 ###########################################################################
 ### Functions that build and return test suites.  These can be
 ### called by name when running this test script.
@@ -830,6 +941,11 @@ def randomTests():
     suite.addTest(RandomizedDamageTestCase())
     suite.addTest(RandomizedDeleteTestCase())
     suite.addTest(RandomizedExtraFileTestCase())
+    return suite
+
+def repairFromCacheTests():
+    suite = unittest.TestSuite()
+    suite.addTest(SimpleDamageRepairFromCacheTestCase())
     return suite
 
 def succeedingTests():
