@@ -819,7 +819,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         ## a cache instead of from the publisher.
         ##
 
-        extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "1.0"}
+        extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100"}
         self.framework.appendLocalConfig(extraConf, 8082)
         
         ##
@@ -836,7 +836,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
 
     def runTest(self):
         # Tiny AU for simple testing.
-        simAu = SimulatedAu('localA', 0, 0, 3)
+        simAu = SimulatedAu('localA', 0, 0, 1)
 
         ##
         ## Create simulated AUs
@@ -858,6 +858,21 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         # up with 'repair_from_cache_percent=1.0'
         client = self.framework.getClientByPort(8082)
 
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        # expect to see a top level content poll called
+        log.info("Waiting for top level content poll.")
+        assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
+               "Never called top level content poll"
+        log.info("Called top level content poll.")
+
+	log.info("Waiting to win top level content poll.")
+	assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
+	       "Never won top level content poll"
+
+	# Damage a node.
         node = client.randomDamageSingleNode(simAu)
         log.info("Damaged node %s on client %s" % (node.url, client))
 
@@ -865,11 +880,11 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         log.info("Requesting tree walk.")
         client.requestTreeWalk(simAu)
 
-        # expect to see a top level content poll
+        # expect to see a top level content poll called
         log.info("Waiting for top level content poll.")
         assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
                "Never called top level content poll"
-        log.info("Called top level content poll.")
+        log.info("Called top level content poll.")	
 
         # expect to see the top level node marked repairing.
         log.info("Waiting for lockssau to be marked 'damaged'.")

@@ -502,7 +502,8 @@ class Client:
             if not row['PollType'] == 'C':
                 continue
             if row['URL'] == 'lockssau:':
-                return (row['Status'] == 'Active' or row['Status'] == 'Won')
+                ## return (row['Status'] == 'Active' or row['Status'] == 'Won')
+                return row['Status'] == 'Active'
         # Poll wasn't found
         return False
 
@@ -513,7 +514,8 @@ class Client:
             if not row['PollType'] == 'N':
                 continue
             if row['URL'] == 'lockssau:':
-                return (row['Status'] == 'Active' or row['Status'] == 'Won')
+                ## return (row['Status'] == 'Active' or row['Status'] == 'Won')
+                return row['Status'] == 'Active'
         # Poll wasn't found
         return False
 
