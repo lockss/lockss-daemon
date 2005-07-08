@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.38 2005-07-08 15:45:15 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.39 2005-07-08 20:34:36 tlipkis Exp $
  */
 
 /*
@@ -94,10 +94,18 @@ public class RepairCrawler extends CrawlerImpl {
     Configuration.PREFIX + "crawler.num_retries_from_caches";
   public static final int DEFAULT_NUM_RETRIES_FROM_CACHES = 5; //XXX subject to change
 
+  /**
+   * Force repair-from-cache to fetch from this address.  Used in testing
+   * when running multiple daemons on one machine.
+   */
+  public static final String PARAM_REPAIR_FROM_CACHE_ADDR =
+    Configuration.PREFIX + "crawler.repair_from_cache_addr";
+
   boolean fetchCache = DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY;
   boolean fetchPublisher = DEFAULT_FETCH_FROM_PUBLISHER_ONLY;
   int numCacheRetries = DEFAULT_NUM_RETRIES_FROM_CACHES;
 //   int numPubRetries = DEFAULT_NUM_RETRIES_FROM_PUBLISHER;
+  String repairFromCacheAddr = null;
 
   private float percentFetchFromCache = 0;
 
@@ -125,6 +133,7 @@ public class RepairCrawler extends CrawlerImpl {
 					DEFAULT_NUM_RETRIES_FROM_CACHES);
 //     numPubRetries = config.getInt(PARAM_NUM_RETRIES_FROM_PUBLISHER,
 // 				  DEFAULT_NUM_RETRIES_FROM_PUBLISHER);
+    repairFromCacheAddr = config.get(PARAM_REPAIR_FROM_CACHE_ADDR);
   }
 
   public int getType() {
@@ -339,10 +348,15 @@ public class RepairCrawler extends CrawlerImpl {
   protected void fetchFromCache(UrlCacher uc, PeerIdentity id)
       throws IOException {
     logger.debug2("Trying to fetch from "+id);
-    uc.setProxy(id.getIdString(), getProxyPort());
+    String addr = id.getIdString();
+    if (!StringUtil.isNullString(repairFromCacheAddr)) {
+      logger.debug2("But actually sending request to " + repairFromCacheAddr);
+      addr = repairFromCacheAddr;
+    }
+    uc.setProxy(addr, getProxyPort());
     uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
     try {
-      cache(uc, id.getIdString());
+      cache(uc, addr);
     } catch (IOException e) {
       logger.warning("Repair from cache failed", e);
       throw new LockssUrlConnection.CantProxyException(e.toString());
