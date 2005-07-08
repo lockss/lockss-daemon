@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.8 2005-06-04 09:35:04 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.9 2005-07-08 23:16:38 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
+import org.lockss.config.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
@@ -94,9 +95,6 @@ public abstract class BaseServletManager
   private boolean logForbidden;
   protected boolean doAuth;
   protected String logdir;
-  private String platUser;
-  private String platPass;
-
   List accessHandlers = new ArrayList();
 
   public BaseServletManager(String serverName) {
@@ -128,8 +126,6 @@ public abstract class BaseServletManager
     start = config.getBoolean(PARAM_START, DEFAULT_START);
     logdir = config.get(PARAM_LOGDIR);
     doAuth = config.getBoolean(PARAM_USER_AUTH, DEFAULT_USER_AUTH);
-    platUser = config.get(PARAM_PLATFORM_USERNAME);
-    platPass = config.get(PARAM_PLATFORM_PASSWORD);
 
     if (changedKeys.contains(PARAM_IP_INCLUDE) ||
 	changedKeys.contains(PARAM_IP_EXCLUDE) ||
@@ -166,6 +162,12 @@ public abstract class BaseServletManager
   // XXX Doesn't handle roles, will need to be integrated with daemon
   // password setting mechanism
   protected void setConfiguredPasswords(HashUserRealm realm) {
+    // Use platform config in case real config hasn't been loaded yet (when
+    // used from TinyUI)
+    Configuration platConfig = ConfigManager.getPlatformConfig();
+    String platUser = platConfig.get(PARAM_PLATFORM_USERNAME);
+    String platPass = platConfig.get(PARAM_PLATFORM_PASSWORD);
+
     if (!StringUtil.isNullString(platUser) &&
 	!StringUtil.isNullString(platPass)) {
       realm.put(platUser, platPass);
