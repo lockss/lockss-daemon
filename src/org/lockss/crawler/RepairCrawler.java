@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.37 2005-03-18 18:11:34 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.38 2005-07-08 15:45:15 troberts Exp $
  */
 
 /*
@@ -162,6 +162,14 @@ public class RepairCrawler extends CrawlerImpl {
 	windowClosed = true;
 	// break from while loop
 	break;
+      }
+      if (!spec.isIncluded(url)) {
+	if (url.charAt(url.length()-1) != '/') {
+	  String newUrl = url+'/';
+	  if (spec.isIncluded(newUrl)) {
+	    url = newUrl;
+	  }
+	}
       }
       if (spec.isIncluded(url)) {
 	String crawlRes = null;
