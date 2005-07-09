@@ -50,9 +50,9 @@ class LockssTestCase(unittest.TestCase):
     
     def setUp(self):
         ## Log start of test.
-        log.info("====================================================================")
+        log.info("==========================================================")
         log.info(self.__doc__)
-        log.info("--------------------------------------------------------------------")
+        log.info("----------------------------------------------------------")
         
         ##
         ## Create a framework for the test.
@@ -940,16 +940,72 @@ class TinyUiTests(LockssTestCase):
     def getDaemonCount(self):
         return 1
     
-class TinyUiMalformedUrlTestCase(TinyUiTests):
-    """ Test a malformed config URL gets the Tiny UI """
     def getConfigUrls(self):
-        return ["foobar:"]
+        return (self.getTestUrl(),)
 
     def runTest(self):
         tinyui = self.tinyUiClient.getAdminUi()
         html = tinyui.read()
-        p = re.compile('.*This LOCKSS cache has not started because it is unable to load configuration data.*', re.MULTILINE | re.DOTALL);
-        assert(p.match(html))
+        p = re.compile('This LOCKSS cache has not started because it is unable to load configuration data', re.MULTILINE | re.DOTALL);
+        self.assertMatch(p, html)
+        p = re.compile("Shouldn't happen", re.MULTILINE | re.DOTALL | re.I);
+        self.assertNoMatch(p, html)
+        exp = self.expectedPattern()
+        p = re.compile(exp, re.MULTILINE | re.DOTALL);
+        self.assertMatch(p, html)
+        log.info('Found "%s"' % p.pattern)
+
+    def assertMatch(self, pat, string):
+        msg = 'No match for "%s" in\n%s' % (pat.pattern, string)
+#        msg = 'No match for "%s"' % (pat.pattern)
+        assert pat.search(string), msg
+
+    def assertNoMatch(self, pat, string):
+#        msg = 'Unaxpected match for "%s" in\n%s' % (pat.pattern, string)
+        msg = 'Unexpected match for "%s"' % (pat.pattern)
+        assert not pat.search(string), msg
+
+
+class TinyUiUnknownHostTestCase(TinyUiTests):
+    """ Test that config URL with unknown host name gets Tiny UI """
+    def getTestUrl(self):
+        return "http://unknownhost.lockss.org/"
+
+    def expectedPattern(self):
+        return 'UnknownHostException.*unknownhost\.lockss\.org'
+        
+class TinyUiMalformedUrlTestCase(TinyUiTests):
+    """ Test that malformed config URL gets Tiny UI """
+    def getTestUrl(self):
+        return "http://x.y:12:13/"
+
+    def expectedPattern(self):
+        return 'MalformedURLException'
+        
+class TinyUiForbiddenTestCase(TinyUiTests):
+    """ Test that a forbidden config fetch gets Tiny UI """
+    def getTestUrl(self):
+        return "http://props.lockss.org:8001/forbidden/"
+
+    def expectedPattern(self):
+        return '403: Forbidden'
+        
+# XXX should find a guaranteed non-listening port (by binding?)
+class TinyUiRefusedTestCase(TinyUiTests):
+    """ Test that a refused config connect gets Tiny UI """
+    def getTestUrl(self):
+        return "http://127.0.0.1:65027/"
+
+    def expectedPattern(self):
+        return 'ConnectException:.*Connection refused'
+        
+class TinyUiFileNotFoundTestCase(TinyUiTests):
+    """ Test a config file not found gets Tiny UI """
+    def getTestUrl(self):
+        return "/no/such/file/or/directory"
+
+    def expectedPattern(self):
+        return 'FileNotFoundException'
         
 
     
@@ -1021,7 +1077,11 @@ def immediateFailingTests():
 
 def tinyUiTests():
     suite = unittest.TestSuite()
+    suite.addTest(TinyUiUnknownHostTestCase())
     suite.addTest(TinyUiMalformedUrlTestCase())
+    suite.addTest(TinyUiForbiddenTestCase())
+    suite.addTest(TinyUiRefusedTestCase())
+    suite.addTest(TinyUiFileNotFoundTestCase())
     return suite
 
 ###########################################################################

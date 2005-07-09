@@ -1098,6 +1098,7 @@ class Client:
             s.close()
             return True
         except Exception, e:
+            log.debug2("Connect error: %s" % (e))
             return False
         
     def __makePost(self, page, lockssAction=None):
