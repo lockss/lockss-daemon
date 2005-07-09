@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.139 2005-06-20 04:02:32 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.140 2005-07-09 21:56:37 tlipkis Exp $
  */
 
 /*
@@ -1130,11 +1130,23 @@ public class PluginManager
   }
 
   /**
-   * Searches all ArchivalUnits to find the most recent CachedUrl for the URL.
+   * Searches for an AU that contains the URL and returns the corresponding
+   * CachedUrl.
    * @param url The URL to search for.
    * @return a CachedUrl, or null if URL not present in any AU
    */
+  public CachedUrl findOneCachedUrl(String url) {
+    return findTheCachedUrl(url, false);
+  }
+
   public CachedUrl findMostRecentCachedUrl(String url) {
+    return findTheCachedUrl(url, true);
+  }
+
+  /** Find a CachedUrl for the URL.  If mostRecent, search for the most
+   * recently collected file, else return the first one we find.
+   */
+  private CachedUrl findTheCachedUrl(String url, boolean mostRecent) {
     // We don't know what AU it might be in, so can't do plugin-dependent
     // normalization yet.  But only need to do generic normalization once.
     // XXX This is wrong, as plugin-specific normalization is normally done
@@ -1158,8 +1170,16 @@ public class PluginManager
 	    try {
 	      String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
 	      CachedUrl cu = au.makeCachedUrl(siteUrl);
-	      if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
-		best = cu;
+	      if (cu != null && cu.hasContent()) {
+		if (!mostRecent) {
+		  return cu;
+		}
+		if (cuNewerThan(cu, best)) {
+		  AuUtil.safeRelease(best);
+		  best = cu;
+		} else {
+		  cu.release();
+		}
 	      }
 	    } catch (MalformedURLException ignore) {
 	      // ignored
@@ -1174,14 +1194,13 @@ public class PluginManager
   }
 
   // return true if cu1 is newer than cu2, or cu2 is null
-  // tk - no date available for comparison yet, return arbitrary order
+  // XXX - should compare last-modified times, or crawl times?
   private boolean cuNewerThan(CachedUrl cu1, CachedUrl cu2) {
     if (cu2 == null) return true;
-    CIProperties p1 = cu1.getProperties();
-    CIProperties p2 = cu2.getProperties();
-    // tk - this should use the crawl-date prop taht the crawler will add
+    return false;
+//     CIProperties p1 = cu1.getProperties();
+//     CIProperties p2 = cu2.getProperties();
     //     Long.parseLong(p1.getProperty(HttpFields.__LastModified, "-1"));
-    return true;
   }
 
   /**

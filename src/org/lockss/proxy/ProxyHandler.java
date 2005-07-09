@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.35 2005-03-22 06:23:00 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.36 2005-07-09 21:56:37 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.35 2005-03-22 06:23:00 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.36 2005-07-09 21:56:37 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -201,45 +201,50 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
 
     String urlString = uri.toString();
-    CachedUrl cu = pluginMgr.findMostRecentCachedUrl(urlString);
-    boolean isRepairRequest = proxyMgr.isRepairRequest(request);
-    boolean isInCache = cu != null && cu.hasContent();
+    CachedUrl cu = pluginMgr.findOneCachedUrl(urlString);
+    try {
+      boolean isRepairRequest = proxyMgr.isRepairRequest(request);
+      boolean isInCache = cu != null && cu.hasContent();
 
-    if (log.isDebug2()) {
-      log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
-    }
-    if (isRepairRequest || neverProxy ||
-	(isInCache && proxyMgr.isHostDown(uri.getHost()))) {
-      if (isInCache) {
-	if (isRepairRequest && log.isDebug()) {
-	  log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
+      if (log.isDebug2()) {
+	log.debug2("cu: " + (isRepairRequest ? "(repair) " : "") + cu);
+      }
+      if (isRepairRequest || neverProxy ||
+	  (isInCache && proxyMgr.isHostDown(uri.getHost()))) {
+	if (isInCache) {
+	  if (isRepairRequest && log.isDebug()) {
+	    log.debug("Serving repair to " + request.getRemoteAddr() + ", " + cu);
+	  }
+	  serveFromCache(pathInContext, pathParams, request,
+			 response, cu);
+	  return;
+	} else {
+	  // Don't forward request if it's a repair or we were told not to.
+	  response.sendError(HttpResponse.__404_Not_Found);
+	  request.setHandled(true);
+	  return; 
 	}
-	serveFromCache(pathInContext, pathParams, request,
-		       response, cu);
-	return;
-      } else {
-      // Don't forward request if it's a repair or we were told not to.
-	response.sendError(HttpResponse.__404_Not_Found);
-	request.setHandled(true);
-	return; 
       }
-    }
-    // not in cache
-    if ((proxyMgr.getHostDownAction() ==
-	 ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
-	&& proxyMgr.isHostDown(uri.getHost())) {
-      sendErrorPage(request, response, 504,
-		    "Unable to connect to", uri.getHost(),
-		    "Host not responding (cached status)");
-      return;
-    }
-    if (UrlUtil.isHttpUrl(urlString)) {
-      if (HttpRequest.__GET.equals(request.getMethod())) {
-	doLockss(pathInContext, pathParams, request, response, urlString, cu);
+      // not in cache
+      if ((proxyMgr.getHostDownAction() ==
+	   ProxyManager.HOST_DOWN_NO_CACHE_ACTION_504)
+	  && proxyMgr.isHostDown(uri.getHost())) {
+	sendErrorPage(request, response, 504,
+		      "Unable to connect to", uri.getHost(),
+		      "Host not responding (cached status)");
 	return;
       }
+      if (UrlUtil.isHttpUrl(urlString)) {
+	if (HttpRequest.__GET.equals(request.getMethod())) {
+	  doLockss(pathInContext, pathParams, request, response,
+		   urlString, cu);
+	  return;
+	}
+      }
+      doSun(pathInContext, pathParams, request, response);
+    } finally {
+      AuUtil.safeRelease(cu);
     }
-    doSun(pathInContext, pathParams, request, response);
   }
 
   /** Proxy a connection using Java's native URLConection */
@@ -559,7 +564,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	IO.copy(proxy_in,response.getOutputStream());
       }            
     } catch (Exception e) {
-      log.error("doLockss error:", e);
+      log.error("doLockss error", e);
       if (!response.isCommitted())
 	response.sendError(HttpResponse.__500_Internal_Server_Error);
     } finally {
