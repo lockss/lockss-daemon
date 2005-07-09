@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.3 2005-02-02 09:42:30 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.4 2005-07-09 21:55:58 tlipkis Exp $
  */
 
 /*
@@ -112,4 +112,10 @@ public class AuUtil {
     return true;
   }
 
+  /** Call release() on the CachedUrl, ignoring any errors */
+  public static void safeRelease(CachedUrl cu) {
+    try {
+      cu.release();
+    } catch (Exception e) {}
+  }
 }
