@@ -1,5 +1,5 @@
 /*
- * $Id: IOUtil.java,v 1.2 2005-05-18 05:48:48 tlipkis Exp $
+ * $Id: IOUtil.java,v 1.3 2005-07-09 21:58:26 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util;
 
 import java.io.*;
 import java.net.*;
+import org.lockss.util.urlconn.LockssUrlConnection;
 
 /**
  * IO utilities that don't belong elsewhere.  <p>The
@@ -102,6 +103,13 @@ public class IOUtil {
   public static void safeClose(ServerSocket s) {
     try {
       s.close();
+    } catch (Exception e) {}
+  }
+
+  /** Call release() on the LockssUrlConnection, ignoring any errors */
+  public static void safeRelease(LockssUrlConnection conn) {
+    try {
+      conn.release();
     } catch (Exception e) {}
   }
 }    
