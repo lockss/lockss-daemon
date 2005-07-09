@@ -10,6 +10,11 @@ Prerequisites:
 - Public (routable) IP address
 - Java 1.4 or higher
 
+Java:
+At present th daemon will only work with the Sun JDK or JRE.  It has been
+reported that Fedora's SELinux support must be disabled in order for this
+JVM to run.
+
 Configuration:
 After installing the RPM, run /etc/locks/hostconfig as root.  You will be
 asked for the following information.  Most values will default to reasonable
