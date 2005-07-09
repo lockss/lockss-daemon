@@ -1,5 +1,5 @@
 /*
- * $Id: JarConfigFile.java,v 1.2 2005-02-16 19:39:52 smorabito Exp $
+ * $Id: JarConfigFile.java,v 1.3 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -37,57 +37,51 @@ import java.net.*;
 import java.util.jar.*;
 
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 
 /**
- * A Configuration loaded from a JAR file.
+ * A ConfigFile loaded from an entry in a JAR file.
+ *
+ * JAR Urls should look something like:
+ *    jar:file:///path/to/jar!/some/resource
  */
-
 public class JarConfigFile extends ConfigFile {
+  private File m_jarFile;
+//   private String m_entryTime;
 
-  public JarConfigFile(String url) throws IOException {
+  public JarConfigFile(String url) {
     super(url);
   }
 
-  /**
-   * Reload the config file.  This is something of a special case
-   * where it doesn't (yet) make sense to check last-modified times,
-   * so this implementation only loads the config file once.
-   *
-   * JAR Urls should look something like:
-   *    jar:file:///path/to/jar!/some/resource
-   */
-  protected synchronized boolean reload() throws IOException {
-    if (m_lastModified == null) {
-      log.debug2("Loading JAR config file: " + m_fileUrl);
-      InputStream in = null;
-      JarEntry entry = null;
-      m_IOException = null;
-      m_lastAttempt = TimeBase.nowMs();
-      try {
-	URL jarUrl = new URL(m_fileUrl);
-	JarURLConnection con = (JarURLConnection)jarUrl.openConnection();
-	entry = con.getJarEntry();
-	in = con.getInputStream();
-      } catch (IOException ex) {
-	log.warning("Unexpected exception trying to load " +
-		    "config file (" + m_fileUrl + "): " + ex);
-	m_IOException = ex;
-	throw ex;
-      }
-      if (in != null && entry != null) {
-	try {
-	  setConfigFrom(in);
-	  m_lastModified = Long.toString(entry.getTime());
-	  m_loadError = null;
-	} catch (Exception ex) {
-	  log.error("Unable to load configuration. " + ex);
-	  m_loadError = ex.getMessage();
-	} finally {
-	  in.close();
-	}
-      }
+  protected InputStream openInputStream() throws IOException {
+    String lm = calcNewLastModified();
+
+    // Only reload the file if the last modified timestamp is different.
+    if (lm.equals(m_lastModified)) {
+      log.debug2("Jar has not changed on disk, not reloading: " + m_fileUrl);
+      return null;
     }
-    return m_IOException == null;
+    log.debug2("Loading JAR config file: " + m_fileUrl);
+    URL jarUrl = new URL(m_fileUrl);
+    JarURLConnection con = (JarURLConnection)jarUrl.openConnection();
+    JarEntry entry = con.getJarEntry();
+    if (m_jarFile == null) {
+      JarFile jf = con.getJarFile();
+      String name = jf.getName();
+      log.debug3("jf.name: " + name);
+      m_jarFile = new File(name);
+    }
+//     m_entryTime = Long.toString(entry.getTime());
+    return con.getInputStream();
+  }
+
+  protected String calcNewLastModified() {
+    if (m_jarFile != null) {
+      return Long.toString(m_jarFile.lastModified());
+    }
+    return "Never";
+  }
+
+  File getFile() {
+    return m_jarFile;
   }
 }

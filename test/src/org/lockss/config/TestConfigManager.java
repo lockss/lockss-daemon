@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.8 2005-06-15 01:16:22 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.9 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -479,7 +479,8 @@ public class TestConfigManager extends LockssTestCase {
   public void testLoadList() throws IOException {
     Configuration config = newConfiguration();
     mgr.loadList(config, ListUtil.list(FileTestUtil.urlOfString(c1),
-				       FileTestUtil.urlOfString(c1a)));
+				       FileTestUtil.urlOfString(c1a)),
+		 true, false);
     assertEquals("12", config.get("prop1"));
     assertEquals("xxx", config.get("prop2"));
     assertTrue(config.getBoolean("prop3", false));

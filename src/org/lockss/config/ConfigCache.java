@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.7 2005-03-18 09:09:13 smorabito Exp $
+ * $Id: ConfigCache.java,v 1.8 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -35,13 +35,10 @@ package org.lockss.config;
 import java.io.*;
 import java.util.*;
 
-import org.apache.commons.collections.map.LinkedMap;
 import org.lockss.util.*;
 
 /**
  * A memory cache of files used to populate our Configuration.
- * Maintains two lists of files; remote and local.  This allows all
- * the remote files to be parsed before any of the local files.
  */
 public class ConfigCache {
   // MUST pass in explicit log level to avoid recursive call back to
@@ -50,77 +47,43 @@ public class ConfigCache {
     Logger.getLoggerWithInitialLevel("ConfigCache",
 				     Logger.getInitialDefaultLevel());
 
-  private LinkedMap m_configMap = new LinkedMap();
-
-
-  /**
-   * Retrieve or create the ConfigFile for the url or file, loading or
-   * reloading it if necessary.
-   */
-  public ConfigFile get(String url) throws IOException {
-    ensureLoaded(url);
-    ConfigFile confFile = (ConfigFile)m_configMap.get(url);
-    return confFile;
-  }
+  private Map m_configMap = new HashMap();
 
   /**
-   * Return the ConfigFile for the url or file, without reloading it.
+   * Return the existing ConfigFile for the url or file, if any, else null
    * @return the ConfigFile or null if no such
    */
-  public ConfigFile justGet(String url) throws IOException {
+  public ConfigFile get(String url) {
     return (ConfigFile)m_configMap.get(url);
   }
 
   /**
-   * Ensure that a file exists in the cache with the most recent
-   * available version.
+   * Find or create a ConfigFile for the url
+   * @return an exisiting or new ConfigFile of the type appropriate for the
+   * URL
    */
-  public void ensureLoaded(String url) throws IOException {
-    ConfigFile cf = null;
-
-    if (m_configMap.containsKey(url)) {
-      // already exists, just reload
-      log.debug2("Reloading " + url);
-      ((ConfigFile)m_configMap.get(url)).reload();
-    } else {
-      // doesn't yet exist in the cache, attempt to add it.
+  public synchronized ConfigFile find(String url) {
+    ConfigFile cf = get(url);
+    if (cf == null) {
+      // doesn't yet exist in the cache, add it.
       log.debug2("Adding " + url);
-      try {
-	if (UrlUtil.isHttpUrl(url)) {
-	  cf = new HTTPConfigFile(url);
-	} else if (UrlUtil.isJarUrl(url)) {
-	  cf = new JarConfigFile(url);
-	} else {
-	  cf = new FileConfigFile(url);
-	} 
-	// ensure the file is loaded
-	if (!cf.reload()) {
-	  log.warning("Configuration file not loaded: " + url);
-	}
-	m_configMap.put(url, cf);
-      } catch (IOException ex) {
-	// If we catch any IO exception, remove the offending
-	// file from the cache.  The daemon will try to reload it
-	// at the next reload interval anyway.
-	log.debug2("Error loading, not caching " + url + ": " + ex);
-	remove(url);
-	throw ex;
-      }
+      if (UrlUtil.isHttpUrl(url)) {
+	cf = new HTTPConfigFile(url);
+      } else if (UrlUtil.isJarUrl(url)) {
+	cf = new JarConfigFile(url);
+      } else {
+	cf = new FileConfigFile(url);
+      } 
+      m_configMap.put(url, cf);
     }
+    return cf;
   }
 
-  public synchronized void remove(String url) {
-    m_configMap.remove(url);
-  }
+//   public synchronized void remove(String url) {
+//     m_configMap.remove(url);
+//   }
   
-  /**
-   * Return all config files.
-   */
-  public List getConfigFiles() {
-    return new ArrayList(m_configMap.values());
-  }
-
-  public int size() {
+  int size() {
     return m_configMap.size();
   }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.18 2005-06-23 05:27:20 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.19 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -394,7 +394,7 @@ public class ConfigManager implements LockssManager {
       newConfig.put(PARAM_DAEMON_GROUP, groupName);
     }
     try {
-      boolean gotIt = loadList(newConfig, urlList);
+      boolean gotIt = loadList(newConfig, urlList, true, false);
       if (gotIt) {
 	recentLoadError = null;
 	return newConfig;
@@ -410,31 +410,28 @@ public class ConfigManager implements LockssManager {
     }
   }
 
-  boolean loadList(Configuration config, List urls) {
-    return loadList(config, urls, false);
-  }
-
   /**
    * Try to load config from a list or urls
    * @return true iff properties were successfully loaded
    */
-  boolean loadList(Configuration config, List urls, boolean failOk) {
+  boolean loadList(Configuration config, List urls,
+		   boolean reload, boolean failOk) {
     // Complete kludge until platform support changed.  Load local.txt
     // first so can use values from it to control parsing of other files.
     // Also save it so we can get local config values later even if
     // rest of load fails
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
-      if (StringUtil.endsWithIgnoreCase(url, "local.txt")) {
+      ConfigFile cf = configCache.find(url);
+      if (reload) {
+	// set reload flag on all files
+	cf.setNeedsReload();
+      }
+      if (cf.isPlatformFile()) {
 	try {
-	  ConfigFile cf = configCache.get(url);
-	  if (cf.isLoaded()) {
-	    config.load(cf);
-	  } else {
-	    throw new IOException(cf.getLoadErrorMessage());
-	  }
+	  config.load(cf);
 	} catch (IOException e) {
-	  log.warning("Couldn't preload local.txt", e);
+	  log.warning("Couldn't preload platform file " + cf.getFileUrl(), e);
 	}
       }
     }
@@ -447,12 +444,8 @@ public class ConfigManager implements LockssManager {
     for (Iterator iter = urls.iterator(); iter.hasNext();) {
       String url = (String)iter.next();
       try {
-	ConfigFile cf = configCache.get(url);
-	if (cf.isLoaded()) {
-	  config.load(cf);
-	} else {
-	  throw new IOException(cf.getLoadErrorMessage());
-	}
+	ConfigFile cf = configCache.find(url);
+	config.load(cf);
       } catch (IOException e) {
 	if (e instanceof FileNotFoundException &&
 	    StringUtil.endsWithIgnoreCase(url, ".opt")) {
@@ -769,7 +762,8 @@ public class ConfigManager implements LockssManager {
     for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
       File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
       log.debug2("Loading cache config from " + cfile);
-      boolean gotIt = loadList(config, ListUtil.list(cfile.toString()), true);
+      boolean gotIt = loadList(config, ListUtil.list(cfile.toString()),
+			       true, true);
       if (gotIt) {
 	res.add(cfile.toString());
       }
@@ -798,13 +792,13 @@ public class ConfigManager implements LockssManager {
    */
   public Configuration readTitledbConfigFile(URL url) {
     log.debug2("Loading bundled titledb from URL: " + url);
+    ConfigFile cf = configCache.find(url.toString());
     try {
-      ConfigFile cf = configCache.get(url.toString());
-      if (cf != null) {
-	return cf.getConfiguration();
-      }
+      return cf.getConfiguration();
+    } catch (FileNotFoundException ex) {
+      // expected if no bundled title db
     } catch (IOException ex) {
-      log.warning("Unable to load bundled titledb: " + ex);
+      log.debug("Unexpected exception loading bundled titledb", ex);
     }
     return EMPTY_CONFIGURATION;
   }
@@ -825,7 +819,7 @@ public class ConfigManager implements LockssManager {
 
     String cfile = new File(cacheConfigDir, cacheConfigFileName).toString();
     log.debug2("Reading cache config file: " + cfile);
-    ConfigFile cf = configCache.get(cfile);
+    ConfigFile cf = configCache.find(cfile);
     Configuration res = cf.getConfiguration();
     return res;
   }
@@ -889,7 +883,7 @@ public class ConfigManager implements LockssManager {
 				 tempfile + " to: " + cfile);
     }
     log.debug2("Wrote cache config file: " + cfile);
-    ConfigFile cf = configCache.justGet(cfile.toString());
+    ConfigFile cf = configCache.get(cfile.toString());
     if (cf instanceof FileConfigFile) {
       ((FileConfigFile)cf).storedConfig(tmpConfig);
     } else {

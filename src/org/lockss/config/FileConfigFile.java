@@ -1,5 +1,5 @@
 /*
- * $Id: FileConfigFile.java,v 1.5 2005-06-15 01:16:22 tlipkis Exp $
+ * $Id: FileConfigFile.java,v 1.6 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -46,9 +46,9 @@ import org.lockss.util.urlconn.*;
 public class FileConfigFile extends ConfigFile {
   private File m_fileFile;
 
-  public FileConfigFile(String url) throws IOException {
+  public FileConfigFile(String url)  {
     super(url);
-    m_fileFile = makeFile(url);
+    m_fileFile = makeFile();
   }
 
   /**
@@ -58,8 +58,8 @@ public class FileConfigFile extends ConfigFile {
    * NB: Java 1.4 supports constructing File objects from a file: URI,
    * which will eliminate the need for this method.
    */
-  private File makeFile(String file)
-      throws IOException, MalformedURLException {
+  File makeFile() {
+    String file = getFileUrl();
     if (UrlUtil.isFileUrl(file)) {
       String fileLoc = file.substring("file:".length());
       return new File(fileLoc);
@@ -80,64 +80,29 @@ public class FileConfigFile extends ConfigFile {
     log.debug2("storedConfig at: " + m_lastModified);
   }
 
-  /**
-   * Load a config from a local file if it has changed on disk.
-   */
-  protected synchronized boolean reload() throws IOException {
-
-    // The semantics of this are a bit odd, because File.lastModified()
-    // returns a long, but we store it as a String.  We're not comparing,
-    // just checking equality, so this should be OK
-    String lm = Long.toString(m_fileFile.lastModified());
+   protected InputStream openInputStream() throws IOException {
+     // The semantics of this are a bit odd, because File.lastModified()
+     // returns a long, but we store it as a String.  We're not comparing,
+     // just checking equality, so this should be OK
+     String lm = calcNewLastModified();
 
     // Only reload the file if the last modified timestamp is different.
-    if (!lm.equals(m_lastModified)) {
-      if (log.isDebug2()) {
-	if (m_lastModified == null) {
-	  log.debug2("No previous file loaded, loading: " + m_fileUrl);
-	} else {
-	  log.debug2("File has new time (" + m_lastModified +
-		     "), reloading: " + m_fileUrl);
-	}
-      }
-      m_lastAttempt = TimeBase.nowMs();
-      InputStream in = null;
-      m_IOException = null;
-
-      // Open an output stream to write to our string
-      try {
-	in = new FileInputStream(m_fileFile);
-      } catch (FileNotFoundException ex) {
-	// Perfectly normal behavior for some local config files which
-	// may not exist.
-	m_IOException = ex;
-	m_loadError = ex.toString();
-	throw ex;
-      } catch (IOException ex) {
-	// Other, unexpected IO exception.
-	log.warning("Unexpected exception trying to load " +
-		    "config file (" + m_fileUrl + "): " + ex);
-	m_IOException = ex;
-	m_loadError = ex.toString();
-	throw ex;
-      }
-
-      if (in != null) {
-	try {
-	  setConfigFrom(in);
-	  m_lastModified = Long.toString(m_fileFile.lastModified());
-	  m_loadError = null;
-	} catch (Exception ex) {
-	  log.error("Unable to load configuration", ex);
-	  m_loadError = ex.getMessage();
-	} finally {
-	  in.close();
-	} 
-      }
-    } else {
+    if (lm.equals(m_lastModified)) {
       log.debug2("File has not changed on disk, not reloading: " + m_fileUrl);
+      return null;
     }
+    if (log.isDebug2()) {
+      if (m_lastModified == null) {
+	log.debug2("No previous file loaded, loading: " + m_fileUrl);
+      } else {
+	log.debug2("File has new time (" + lm +
+		   "), reloading: " + m_fileUrl);
+      }
+    }
+    return new FileInputStream(m_fileFile);
+   }
 
-    return m_IOException == null;
-  }
+   protected String calcNewLastModified() {
+     return Long.toString(m_fileFile.lastModified());
+   }
 }

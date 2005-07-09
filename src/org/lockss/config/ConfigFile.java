@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.7 2005-02-16 19:39:53 smorabito Exp $
+ * $Id: ConfigFile.java,v 1.8 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -33,18 +33,15 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.io.*;
-import java.net.*;
-import javax.xml.parsers.ParserConfigurationException;
-import org.xml.sax.SAXException;
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 
 /**
- * A simple wrapper class around the text representation of a
- * generic config (either plain text or XML)
+ * Common functionality for a config file loadable from a URL or filename,
+ * and parseable as either XML or props.
  */
-
 public abstract class ConfigFile {
+  protected static Logger log = Logger.getLogger("ConfigFile");
+
   public static final int XML_FILE = 0;
   public static final int PROPERTIES_FILE = 1;
 
@@ -55,30 +52,32 @@ public abstract class ConfigFile {
   protected String m_loadError = "Not yet loaded";
   protected IOException m_IOException;
   protected long m_lastAttempt;
+  protected boolean m_needsReload = true;
+  protected boolean m_isPlatformFile = false;
   protected ConfigurationPropTreeImpl m_config;
 
-  protected static Logger log = Logger.getLogger("ConfigFile");
-
   /**
-   * Read the contents of a file or the results of a URL fetch into
-   * memory.
-   *
-   * @throws IOException
+   * Create a ConfigFile for the URL
    */
-  public ConfigFile(String url)
-      throws IOException {
-
+  public ConfigFile(String url) {
     if (StringUtil.endsWithIgnoreCase(url, ".xml")) {
       m_fileType = ConfigFile.XML_FILE;
     } else {
       m_fileType = ConfigFile.PROPERTIES_FILE;
     }
-
     m_fileUrl = url;
+    m_isPlatformFile = StringUtil.endsWithIgnoreCase(m_fileUrl, "local.txt");
   }
 
   public String getFileUrl() {
     return m_fileUrl;
+  }
+
+  /** Return true if this file might contain platform values that are
+   * needed in order to properly parse other config files.
+   */
+  public boolean isPlatformFile() {
+    return m_isPlatformFile;
   }
 
   public int getFileType() {
@@ -101,32 +100,96 @@ public abstract class ConfigFile {
     return m_loadError == null;
   }
 
-  public Configuration getConfiguration() {
+  private void ensureLoaded() throws IOException {
+    if (m_needsReload || isCheckEachTime()) {
+      reload();
+    }
+  }
+
+  /** Return true if the file should be checked for modification each time
+   * getConfiguration() is called.  If false, the file will only be checked
+   * on the first call, and after calls to setNeedsReload().  Subclasses
+   * use this to modify the default behavior.
+   */
+  protected boolean isCheckEachTime() {
+    return true;
+  }
+
+  /**
+   * Instruct the ConfigFile to check for modifications the next time it's
+   * accessed
+   */
+  public void setNeedsReload() {
+    m_needsReload = true;
+  }
+
+  /** Return the Configuration object built from this file
+   */
+  public Configuration getConfiguration() throws IOException {
+    ensureLoaded();
     return m_config;
   }
 
   /**
-   * Subclasses must implement this method to load a Configuration
-   * object from the supplied URL (file or remote).
+   * Reload the contents if changed.
    */
-  protected abstract boolean reload()
-      throws IOException;
+  protected void reload() throws IOException {
+    m_lastAttempt = TimeBase.nowMs();
+    try {
+      InputStream in = openInputStream();
+      if (in != null) {
+	try {
+	  setConfigFrom(in);
+	} finally {
+	  IOUtil.safeClose(in);
+	}
+      }
+    } catch (IOException ex) {
+      log.warning("Unexpected exception trying to load " +
+		  "config file (" + m_fileUrl + "): " + ex);
+      m_IOException = ex;
+      m_loadError = ex.toString();
+      throw ex;
+    }
+  }
 
-  protected void setConfigFrom(InputStream in)
-      throws ParserConfigurationException, SAXException, IOException {
+  protected void setConfigFrom(InputStream in) throws IOException {
     ConfigurationPropTreeImpl newConfig = new ConfigurationPropTreeImpl();
     
-    // Load the configuration
-    if (m_fileType == XML_FILE) {
-      XmlPropertyLoader.load(newConfig.getPropertyTree(), in);
-    } else {
-      newConfig.getPropertyTree().load(in);
+    try {
+      // Load the configuration
+      if (m_fileType == XML_FILE) {
+	XmlPropertyLoader.load(newConfig.getPropertyTree(), in);
+      } else {
+	newConfig.getPropertyTree().load(in);
+      }
+      // update stored configuration atomically
+      newConfig.seal();
+      m_config = newConfig;
+      m_loadError = null;
+      m_IOException = null;
+      m_lastModified = calcNewLastModified();
+      m_needsReload = false;
+      log.debug2("Storing this config's last-modified as: " +
+		 m_lastModified);
+    } catch (IOException ex) {
+      throw ex;
+    } catch (Exception ex) {
+      log.debug("Unexpected non-IO error loading configuration", ex);
+      throw new IOException(ex.toString());
     }
-    
-    // update stored configuration atomically
-    newConfig.seal();
-    m_config = newConfig;
   }
+
+  /**
+   * Return an InputStream on the contents of the file, or null if the file
+   * hasn't changed.
+   */
+  protected abstract InputStream openInputStream() throws IOException;
+
+  /**
+   * Return the new las-modified time
+   */
+  protected abstract String calcNewLastModified();
 
   /**
    * Used for logging and testing and debugging.

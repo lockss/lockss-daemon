@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigCache.java,v 1.5 2005-02-16 19:39:48 smorabito Exp $
+ * $Id: TestConfigCache.java,v 1.6 2005-07-09 22:26:30 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,6 @@ import org.lockss.util.TestXmlPropertyLoader;
 public class TestConfigCache extends LockssTestCase {
   public static Class testedClasses[] = {
     org.lockss.config.ConfigCache.class,
-    org.lockss.config.ConfigFile.class
   };
 
   static Logger log = Logger.getLogger("TestConfigCache");
@@ -70,14 +69,6 @@ public class TestConfigCache extends LockssTestCase {
     "  <property name=\"prop.9\" value=\"baz\" />\n" +
     "</lockss-config>";
 
-  private static final String badConfig =
-    "<lockss-config>\n" +
-    "  <property name=\"prop.10\" value=\"foo\" />\n" +
-    "  <property name=\"prop.11\">\n" +
-    "    <value>bar</value>\n" +
-    "  <!-- missing closing property tag -->\n" +
-    "</lockss-config>";
-
   ConfigCache cache;
 
   public void setUp() throws Exception {
@@ -88,59 +79,31 @@ public class TestConfigCache extends LockssTestCase {
   /*
    * Test methods.
    */
-  public void testLoadConfigFile() throws IOException {
+  public void testFind() throws IOException {
     String url = null;
 
-    // Config should not get loaded into the cache if it can't be parsed.
-    try {
-      url = FileTestUtil.urlOfString(config1);
-      ConfigFile cf = cache.get(url);
-      assertNotNull("ConfigFile should not be null", cf);
-      assertNotNull("ConfigFile.getLastModified should not be null",
-		    cf.getLastModified());
-      assertNotNull("ConfigFile.getConfiguration() should not be null",
-		    cf.getConfiguration());
-      assertTrue("ConfigFile.isLoaded() should not be false",
-		 cf.isLoaded());
-      assertSame(cf, cache.justGet(url));
-    } catch (IOException ex) {
-      fail("Unable to load local config file " + url + " :" + ex);
-    }
-  }
-
-  /**
-   * Ensure that malformed XML files are not loaded into the cache,
-   * and that lastModified is not set.
-   */
-  public void testLoadMalformedXml() {
-    String url = null;
-    try {
-      url = FileTestUtil.urlOfString(badConfig, ".xml");
-      ConfigFile cf = cache.get(url);
-      assertFalse("ConfigFile.isLoaded() should be false: " + cf.isLoaded(), cf.isLoaded());
-      assertNull("ConfigFile.getConfiguration() should return null.", cf.getConfiguration());
-      assertNull("ConfigFile.getLastModified() should return null, but was: " +
-		 cf.getLastModified(), cf.getLastModified());
-    } catch (IOException ex) {
-      fail("Unable to load local config file " + url + " :" + ex);
-    }
+    url = FileTestUtil.urlOfString(config1);
+    ConfigFile cf = cache.find(url);
+    assertNotNull("ConfigFile should not be null", cf);
+    assertSame(cf, cache.find(url));
+    assertSame(cf, cache.get(url));
   }
 
   public void testSize() throws IOException {
-    assertEquals(0, (cache.getConfigFiles()).size());
+    assertEquals(0, cache.size());
 
     try {
       String url1 = FileTestUtil.urlOfString(config1);
       String url2 = FileTestUtil.urlOfString(config2);
       String url3 = FileTestUtil.urlOfString(config3, ".xml");
-      cache.ensureLoaded(url1);
-      cache.ensureLoaded(url2);
-      cache.ensureLoaded(url3);
+      cache.find(url1);
+      cache.find(url2);
+      cache.find(url3);
     } catch (IOException ex) {
       fail("Unable to load config file: " + ex);
     }
 
-    assertEquals(3, (cache.getConfigFiles()).size());
+    assertEquals(3, cache.size());
 
   }
 
