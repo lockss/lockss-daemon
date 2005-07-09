@@ -4,7 +4,7 @@ This test suite requires at minimum a top-level work directory to
 build frameworks in.  Optional parameters may also be set, if desired,
 to change the default behavior.  See the file for details.
 """
-import sys, time, unittest, os
+import sys, time, unittest, os, urllib2, re
 from lockss_util import *
 
 ##
@@ -42,6 +42,12 @@ class LockssTestCase(unittest.TestCase):
             raise LockssError("Work dir %s does not exist or is not writable." \
                               % self.workDir)
 
+    def getConfigUrls(self):
+        return None
+
+    def getDaemonCount(self):
+        return None
+    
     def setUp(self):
         ## Log start of test.
         log.info("====================================================================")
@@ -51,10 +57,7 @@ class LockssTestCase(unittest.TestCase):
         ##
         ## Create a framework for the test.
         ##
-        try:
-            self.framework = Framework()
-        except Exception, e:
-            self.fail("Unable to continue: %s" % e)
+        self.framework = Framework(self.getDaemonCount(), self.getConfigUrls())
 
         ## global ('static') reference to the current framework, so we
         ## can clean up after a user interruption
@@ -819,7 +822,8 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         ## a cache instead of from the publisher.
         ##
 
-        extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100"}
+        extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100",
+                     "org.lockss.crawler.repair.repair_from_cache_addr": "127.0.0.1"}
         self.framework.appendLocalConfig(extraConf, 8082)
         
         ##
@@ -916,7 +920,39 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
                "AU never repaired."
         log.info("AU successfully repaired.")        
 
+class TinyUiTests(LockssTestCase):
+    def setUp(self):
+        LockssTestCase.setUp(self)
 
+        ##
+        ## Start the framework.
+        ##
+        log.info("Starting framework in %s" % self.framework.frameworkDir)
+        self.framework.start()
+        assert self.framework.isRunning, 'Framework failed to start.'
+
+        # Block return until all clients are ready to go.
+        log.info("Waiting for framework to come ready.")
+        self.tinyUiClient = self.clients[0]
+        time.sleep(2)
+        self.tinyUiClient.waitForCanConnectToHost()
+            
+    def getDaemonCount(self):
+        return 1
+    
+class TinyUiMalformedUrlTestCase(TinyUiTests):
+    """ Test a malformed config URL gets the Tiny UI """
+    def getConfigUrls(self):
+        return ["foobar:"]
+
+    def runTest(self):
+        tinyui = self.tinyUiClient.getAdminUi()
+        html = tinyui.read()
+        p = re.compile('.*This LOCKSS cache has not started because it is unable to load configuration data.*', re.MULTILINE | re.DOTALL);
+        assert(p.match(html))
+        
+
+    
 ###########################################################################
 ### Functions that build and return test suites.  These can be
 ### called by name when running this test script.
@@ -981,6 +1017,11 @@ def immediateSucceedingTests():
 def immediateFailingTests():
     suite = unittest.TestSuite()
     suite.addTest(ImmediateFailingTestTestCase())
+    return suite
+
+def tinyUiTests():
+    suite = unittest.TestSuite()
+    suite.addTest(TinyUiMalformedUrlTestCase())
     return suite
 
 ###########################################################################

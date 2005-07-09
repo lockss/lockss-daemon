@@ -1,4 +1,4 @@
-import base64, glob, httplib, os, random, shutil, signal
+import base64, glob, httplib, os, random, shutil, signal, socket
 import sys, time, types, urllib, urllib2
 from os import path
 from xml.dom import minidom
@@ -34,11 +34,14 @@ class Framework:
     clients, one per daemon.  These clients are used to perform
     functional test interactions with the daemons.
     """
-    def __init__(self):
+    def __init__(self, daemonCount = None, urlList = None):
         wd = path.abspath(config.get('workDir', './'))
         self.frameworkDir = self.__makeTestDir(wd)
         self.projectDir = config.get('projectDir')
-        self.daemonCount = int(config.get('daemonCount', 4))
+        if not daemonCount:
+            self.daemonCount = int(config.get('daemonCount', 4))
+        else:
+            self.daemonCount = daemonCount
         self.startPort = int(config.get('startPort', 8081))
         self.username = config.get('username', 'testuser')
         self.password = config.get('password', 'testpass')
@@ -72,22 +75,23 @@ class Framework:
 
         # Set up a each daemon and create a work directory for it.
         for port in range(self.startPort, self.startPort + self.daemonCount):
-            url = 'http://' + self.hostname + ':' + str(port)
             daemonDir = path.abspath(path.join(self.frameworkDir,
                                                'daemon-' + str(port)))
             # create client
-            client = Client(daemonDir, url, self.username, self.password)
+            client = Client(daemonDir, self.hostname, port, self.username, self.password)
             # local config
             localConfigFile = path.join(daemonDir, 'local.txt')
             # Init the directory
             os.mkdir(daemonDir)
             # write the daemon-specific config file
             self.__writeLocalConfig(localConfigFile, daemonDir, port)
-                
             # Create daemon
+            if not urlList:
+                urlList = (globalConfigFile, localConfigFile, extraConfigFile)
+            else:
+                urlList = urlList + (localConfigFile,)
             daemon = LockssDaemon(daemonDir, self.__makeClasspath(),
-                                  (globalConfigFile, localConfigFile,
-                                   extraConfigFile))
+                                  urlList)
             # Add client and daemon to their lists
             self.clientList.append(client)
             self.daemonList.append(daemon)
@@ -241,10 +245,10 @@ class Framework:
 
 class Client:
     " Client interface to a test framework. "
-    def __init__(self, daemonDir, url, username, password):
-        if not url.endswith('/'):
-            url = url + '/'
-        self.url = url
+    def __init__(self, daemonDir, hostname, port, username, password):
+        self.hostname = hostname
+        self.port = port
+        self.url = 'http://' + self.hostname + ':' + str(port) + '/'
         self.daemonDir = daemonDir
         self.username = username
         self.password = password
@@ -494,6 +498,13 @@ class Client:
             ## On any other error, just return false.
             return False
 
+    def getAdminUi(self):
+        """ Fetch the contents of the top-level admin UI.  Useful for
+        testing the Tiny UI.  May throw urllib2.URLError or
+        urllib2.HTTPError """
+        get = Get(self.url, self.username, self.password)
+        return get.execute()
+            
     def hasTopLevelContentPoll(self, au):
         """ Return true if the client has an active or won top level
         content poll """
@@ -691,6 +702,12 @@ class Client:
     ###
     ### Methods that block while waiting for various events
     ###
+
+    def waitForCanConnectToHost(self, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        def waitFunc():
+            return self.__canConnectToHost()
+        return self.wait(waitFunc, timeout, sleep)
+
     def waitForCreateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Wait for the au to appear, or for the timeout to expire."""
         def waitFunc():
@@ -1074,6 +1091,15 @@ class Client:
             data.append(rowDict)
         return data
 
+    def __canConnectToHost(self):
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((self.hostname, self.port))
+            s.close()
+            return True
+        except Exception, e:
+            return False
+        
     def __makePost(self, page, lockssAction=None):
         postUrl = self.url + page
         post = Post(postUrl, self.username, self.password)
@@ -1269,6 +1295,20 @@ class Post:
         log.debug2("Sending POST: %s?%s" % (self.__request.get_full_url(), args))
         return opener.open(self.__request, args)
 
+class Get:
+    def __init__(self, url='', username=None, password=None):
+        self.__request = urllib2.Request(url)
+        if not username == None and not password == None:
+            # Attempt to set authentication
+            encoded = base64.encodestring('%s:%s' % (username, password))[:-1]
+            authheader = "Basic %s" % encoded
+            self.__request.add_header("Authorization", authheader)
+
+    def execute(self):
+        opener = urllib2.build_opener()
+        log.debug2("Sending GET: %s" % self.__request.get_full_url())
+        return opener.open(self.__request)
+        
 ###########################################################################
 ##
 ## Config file strings, used when creating default config files.
