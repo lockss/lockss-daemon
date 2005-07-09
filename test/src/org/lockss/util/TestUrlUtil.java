@@ -1,5 +1,5 @@
 /*
- * $Id: TestUrlUtil.java,v 1.21 2005-06-20 04:03:57 tlipkis Exp $
+ * $Id: TestUrlUtil.java,v 1.22 2005-07-09 21:58:57 tlipkis Exp $
  */
 
 /*
@@ -463,5 +463,31 @@ public class TestUrlUtil extends LockssTestCase {
     assertTrue(UrlUtil.isMalformedUrl("blah blah blah"));
     assertTrue(UrlUtil.isMalformedUrl("javascript:popup(blah)"));
   }
+
+  public void testIsFileUrl() {
+    assertTrue(UrlUtil.isFileUrl("file:foo.bar"));
+    assertTrue(UrlUtil.isFileUrl("file:///foo.bar"));
+    assertFalse(UrlUtil.isFileUrl("http://foo.bar/"));
+    assertFalse(UrlUtil.isFileUrl("jar:/foo.bar"));
+    assertFalse(UrlUtil.isFileUrl("jar:file:/foo.bar!x.y"));
+  }
+
+  public void testIsJarUrl() {
+    assertTrue(UrlUtil.isJarUrl("jar:foo.bar"));
+    assertTrue(UrlUtil.isJarUrl("jar:///foo.bar"));
+    assertFalse(UrlUtil.isJarUrl("http://foo.bar/"));
+    assertFalse(UrlUtil.isJarUrl("file:/foo.bar"));
+  }
+
+  public void testMakeJarFileUrl() {
+    assertEquals("jar:file:///dir/2!/file.txt",
+		 UrlUtil.makeJarFileUrl("/dir/2", "file.txt"));
+  }
+
+  public static String makeJarFileUrl(String jarPath, String entryName) {
+    return "jar:file://" + jarPath + "!" + entryName;
+  }
+
+
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.31 2005-06-20 04:03:57 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.32 2005-07-09 21:58:57 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -282,6 +282,11 @@ public class UrlUtil {
   /** Return true if a jar: url */
   public static boolean isJarUrl(String url) {
     return StringUtil.startsWithIgnoreCase(url, "jar:");
+  }
+
+  /** Return a jar file URL pointing to the entry in the jar */
+  public static String makeJarFileUrl(String jarPath, String entryName) {
+    return "jar:file://" + jarPath + "!/" + entryName;
   }
 
   /**
