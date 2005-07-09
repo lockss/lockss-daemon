@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.53 2005-06-04 18:54:27 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.54 2005-07-09 21:57:55 tlipkis Exp $
  */
 
 /*
@@ -500,10 +500,10 @@ public class BaseUrlCacher implements UrlCacher {
       }
       conn.execute();
     } catch (MalformedURLException ex) {
-      logger.warning("openConnection", ex);
+      logger.debug2("openConnection", ex);
       throw resultMap.getMalformedURLException(ex);
     } catch (IOException ex) {
-      logger.warning("openConnection", ex);
+      logger.debug2("openConnection", ex);
       throw resultMap.getHostException(ex);
     } catch (RuntimeException e) {
       logger.warning("openConnection: unexpected exception", e);
