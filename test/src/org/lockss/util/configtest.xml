@@ -48,7 +48,7 @@
 
   <!-- For testing conditionals, these are the expected values: -->
   <!--     Daemon Version: 1.2.8                                -->
-  <!--     Platform Version: 135                                -->
+  <!--     Platform Version: OpenBSD CD-135                     -->
   <!--     Hostname: testhost                                   -->
   <!--     Group: beta                                          -->
 
@@ -156,6 +156,27 @@
     </if>
     <if platformName="OpenBSD CD">
       <property name="test.platformName.openbsd" value="openbsd"/>
+    </if>
+
+    <!-- Test that unexpected / unknown conditionals eval to false -->
+    <if unknownConditional="foo">
+      <property name="test.unknown.a" value="foo"/>
+    </if>
+    <if>
+      <test unknownConditional="foo"/>
+      <then>
+	<property name="test.unknown.b" value="foo"/>
+      </then>
+      <else>
+	<property name="test.unknown.b" value="bar"/>
+      </else>
+    </if>
+    <!-- Combo of conditionals, unknown and known -->
+    <if unknownConditional="foo" hostname="testhost">
+      <property name="test.unknown.c" value="foo"/>
+    </if>
+    <if hostname="testhost" unknownConditional="foo">
+      <property name="test.unknown.d" value="foo"/>
     </if>
 
     <!-- Test then/else -->

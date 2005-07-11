@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.21 2005-07-11 18:41:52 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.22 2005-07-11 20:23:33 smorabito Exp $
  */
 
 /*
@@ -57,6 +57,13 @@ public class XmlPropertyLoader {
   private static final String TAG_OR           = "or";
   private static final String TAG_NOT          = "not";
   private static final String TAG_TEST         = "test";
+
+  private static final Set conditionals =
+    SetUtil.fromArray(new String[] {
+      "group", "hostname", "daemonVersion", "daemonVersionMin", 
+      "daemonVersionMax", "platformName", "platformVersion",
+      "platformVersionMin", "platformVersionMax"
+    });
 
   private static XmlPropertyLoader m_instance = null;
 
@@ -519,7 +526,7 @@ public class XmlPropertyLoader {
     private void setListProperty(List list) {
       setProperty(StringUtil.separatedString(list, ";"));
     }
-
+    
     /**
      * Evaluate the attributes of this test (whether an <if...> or a
      * <test...> tag) and return the boolean value.
@@ -527,6 +534,26 @@ public class XmlPropertyLoader {
     public boolean evaluateAttributes(Attributes attrs) {
       // Evaluate the attributes of the tag and set the
       // value "returnVal" appropriately.
+      
+      // If the test contains no conditionals, or if it contains
+      // any unexpected conditionals, return false.
+
+      // XXX: This could probably be more efficient!
+      int len = attrs.getLength();
+
+      if (len == 0) {
+	log.debug("No conditionals to check.");
+	return false;
+      }
+
+      for (int i = 0; i < len; i++) {
+	String attrName = attrs.getQName(i);
+	if (!conditionals.contains(attrName)) {
+	  log.debug2("Found unexpected conditional '" + attrName +
+		     "', returning false for test.");
+	  return false;
+	}
+      }
 
       // Get the XML element attributes
       String group = null;
@@ -573,15 +600,6 @@ public class XmlPropertyLoader {
 	}
 	platformMin = platformMax =
 	  new PlatformVersion(attrs.getValue("platformVersion"));
-      }
-
-      // Short-circuit.  If all values are null, there are no
-      // conditionals, just return false.
-
-      if (group == null && hostname == null && platformName == null &&
-	  daemonMin == null && daemonMax == null &&
-	  platformMin == null && platformMax == null) {
-	return false;
       }
 
       boolean returnVal = true;

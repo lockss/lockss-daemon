@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.13 2005-07-11 18:41:53 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.14 2005-07-11 20:23:38 smorabito Exp $
  */
 
 /*
@@ -298,6 +298,13 @@ public class TestXmlPropertyLoader extends LockssTestCase {
   public void testHostMembership() throws Exception {
     assertNull(m_props.get("org.lockss.test.platformName.linux"));
     assertEquals("openbsd", m_props.get("org.lockss.test.platformName.openbsd"));
+  }
+
+  public void testUnknownContionalsAreFalse() throws Exception {
+    assertNull(m_props.get("org.lockss.test.unknown.a"));
+    assertEquals("bar", m_props.get("org.lockss.test.unknown.b"));
+    assertNull(m_props.get("org.lockss.test.unknown.c"));
+    assertNull(m_props.get("org.lockss.test.unknown.d"));
   }
 
   public void testThenElse() {
