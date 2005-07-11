@@ -148,6 +148,14 @@
       <property name="test.t" value="foo"/>
     </if>
 
+    <!-- Test platform name -->
+    <if platformName="Linux rpm">
+      <property name="test.platformName.linux" value="linux"/>
+    </if>
+    <if platformName="OpenBSD CD">
+      <property name="test.platformName.openbsd" value="openbsd"/>
+    </if>
+
     <!-- Test then/else -->
     <if group="beta">
       <then>
@@ -163,6 +171,14 @@
       </then>
       <else>
 	<property name="test.v" value="bar"/>
+      </else>
+    </if>
+    <if platformName="Linux rpm">
+      <then>
+	<property name="test.ifelse.platformName" value="linux" />
+      </then>
+      <else>
+	<property name="test.ifelse.platformName" value="openbsd" />
       </else>
     </if>
 

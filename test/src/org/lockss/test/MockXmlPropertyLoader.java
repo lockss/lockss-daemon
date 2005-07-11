@@ -1,5 +1,5 @@
 /*
- * $Id: MockXmlPropertyLoader.java,v 1.2 2004-08-20 02:56:43 smorabito Exp $
+ * $Id: MockXmlPropertyLoader.java,v 1.3 2005-07-11 18:41:53 smorabito Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ public class MockXmlPropertyLoader extends XmlPropertyLoader {
   // Override getXXXVersion() methods to return known values for
   // unit testing.
   private Version m_daemonVersion;
-  private Version m_platformVersion;
+  private PlatformVersion m_platformVersion;
   private String m_hostname;
   private String m_group;
 
@@ -66,7 +66,7 @@ public class MockXmlPropertyLoader extends XmlPropertyLoader {
     return m_daemonVersion;
   }
 
-  public Version getPlatformVersion() {
+  public PlatformVersion getPlatformVersion() {
     return m_platformVersion;
   }
 

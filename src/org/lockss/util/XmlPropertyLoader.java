@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.20 2005-06-15 01:16:22 tlipkis Exp $
+ * $Id: XmlPropertyLoader.java,v 1.21 2005-07-11 18:41:52 smorabito Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class XmlPropertyLoader {
     return ConfigManager.getDaemonVersion();
   }
 
-  public Version getPlatformVersion() {
+  public PlatformVersion getPlatformVersion() {
     return ConfigManager.getPlatformVersion();
   }
 
@@ -145,21 +145,32 @@ public class XmlPropertyLoader {
     private StringBuffer m_charBuffer;
 
     // Save the current running daemon and platform version
-    private Version m_sysPlatformVer = getPlatformVersion();
-    private Version m_sysDaemonVer = getDaemonVersion();
-    private String m_sysGroup = getPlatformGroup();
-    private String m_sysHostname = getPlatformHostname();
+    private PlatformVersion m_sysPlatformVer;
+    private Version m_sysDaemonVer;
+    private String m_sysPlatformName;
+    private String m_sysGroup;
+    private String m_sysHostname;
 
     /**
      * Default constructor.
      */
     public LockssConfigHandler(PropertyTree props) {
       super();
+      // Conditionals
+      m_sysPlatformVer = getPlatformVersion();
+      m_sysDaemonVer = getDaemonVersion();
+      if (m_sysPlatformVer != null) {
+	m_sysPlatformName = m_sysPlatformVer.getName();
+      }
+      m_sysGroup = getPlatformGroup();
+      m_sysHostname = getPlatformHostname();
+
       m_props = props;
       log.debug2("Conditionals: {platformVer=" + m_sysPlatformVer + "}, " +
 		 "{daemonVer=" + m_sysDaemonVer + "}, " +
 		 "{group=" + m_sysGroup + "}, " +
-		 "{hostname=" + m_sysHostname + "}");
+		 "{hostname=" + m_sysHostname + "}, " +
+		 "{platformName=" + m_sysPlatformName + "}");
     }
 
     /**
@@ -514,14 +525,13 @@ public class XmlPropertyLoader {
      * <test...> tag) and return the boolean value.
      */
     public boolean evaluateAttributes(Attributes attrs) {
-      boolean returnVal = true;
-
       // Evaluate the attributes of the tag and set the
       // value "returnVal" appropriately.
 
       // Get the XML element attributes
       String group = null;
       String hostname = null;
+      String platformName = null;
       Version daemonMin = null;
       Version daemonMax = null;
       Version platformMin = null;
@@ -529,6 +539,7 @@ public class XmlPropertyLoader {
 
       group = attrs.getValue("group");
       hostname = attrs.getValue("hostname");
+      platformName = attrs.getValue("platformName");
 
       if (attrs.getValue("daemonVersionMin") != null) {
 	daemonMin = new DaemonVersion(attrs.getValue("daemonVersionMin"));
@@ -564,6 +575,17 @@ public class XmlPropertyLoader {
 	  new PlatformVersion(attrs.getValue("platformVersion"));
       }
 
+      // Short-circuit.  If all values are null, there are no
+      // conditionals, just return false.
+
+      if (group == null && hostname == null && platformName == null &&
+	  daemonMin == null && daemonMax == null &&
+	  platformMin == null && platformMax == null) {
+	return false;
+      }
+
+      boolean returnVal = true;
+
       /*
        * Group membership checking.
        */
@@ -590,6 +612,13 @@ public class XmlPropertyLoader {
        */
       if (platformMin != null || platformMax != null) {
 	returnVal &= compareVersion(m_sysPlatformVer, platformMin, platformMax);
+      }
+
+      /*
+       * Platform name checking.
+       */
+      if (platformName != null) {
+	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysPlatformName, platformName);
       }
       
       return returnVal;

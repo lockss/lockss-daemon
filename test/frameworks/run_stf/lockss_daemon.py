@@ -1,4 +1,4 @@
-import base64, glob, httplib, os, random, shutil, signal, socket
+import base64, os, random, shutil, signal, socket
 import sys, time, types, urllib, urllib2
 from os import path
 from xml.dom import minidom
@@ -127,12 +127,12 @@ class Framework:
             return self.portToClientMap[portNumber]
         except KeyError:
             return None
-    
-    def appendLocalConfig(self, conf, uiPort):
+
+    def appendLocalConfig(self, conf, client):
         """ Append the supplied configuration in the dictionary 'conf'
-        (name / value pairs) to the local config file for the daemon running
-        on UI port 'uiPort'. """
-        client = self.getClientByPort(uiPort)
+        (name / value pairs) to the local config file for the specified
+        client daemon 'client' """
+        client = self.getClientByPort(client.port)
         localConf = path.join(client.daemonDir, 'local.txt')
         f = open(localConf, "a");
         for (key, value) in conf.items():

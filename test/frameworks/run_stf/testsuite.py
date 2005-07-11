@@ -176,7 +176,7 @@ class SimpleDamageTestCase(LockssAutoStartTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.framework.getClientByPort(8081)
+        client = self.clients[0]
 
         node = client.randomDamageSingleNode(simAu)
         log.info("Damaged node %s on client %s" % (node.url, client))
@@ -253,7 +253,7 @@ class SimpleDeleteTestCase(LockssAutoStartTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = framework.getClientByPort(8081)
+        client = self.clients[0]
 
         node = client.randomDelete(simAu)
         log.info("Deleted node %s on client %s" % (node.url, client))
@@ -317,7 +317,7 @@ class SimpleExtraFileTestCase(LockssAutoStartTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.framework.getClientByPort(8082)
+        client = self.clients[1]
 
         node = client.createNode(simAu, 'extrafile.txt')
         log.info("Created file %s on client %s" % (node.url, client))
@@ -387,7 +387,7 @@ class RangedNamePollDeleteTestCase(LockssAutoStartTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.framework.getClientByPort(8082)
+        client = self.clients[1]
 
         # get a file that will be in the second packet
         filename = '045abcdefghijklmnopqrstuvwxyz.txt'
@@ -490,7 +490,7 @@ class RangedNamePollExtraFileTestCase(LockssAutoStartTestCase):
         # client = self.clients[random.randint(0, len(clients) - 1)]
 
         ## To use a specific client, uncomment this line.
-        client = self.framework.getClientByPort(8082)
+        client = self.clients[1]
 
         # Create a file that doesn't exist
         filename = '046extrafile.txt'
@@ -816,15 +816,15 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
     """ Test repairing simple damage from another cache. """
     def setUp(self):
         LockssTestCase.setUp(self)
+        self.damagedClient = self.clients[1]
 
-        ##
-        ## Configure the daemon to be damaged (8082) to repair from
-        ## a cache instead of from the publisher.
-        ##
+        ## Configure one daemon to repair from a cache instead of from
+        ##the publisher.  This is the daemon that will have damaged
+        ##content.
 
         extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100",
                      "org.lockss.crawler.repair.repair_from_cache_addr": "127.0.0.1"}
-        self.framework.appendLocalConfig(extraConf, 8082)
+        self.framework.appendLocalConfig(extraConf, self.damagedClient)
         
         ##
         ## Start the framework.
@@ -858,9 +858,9 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
                 self.fail("AUs never completed initial crawl.")
         log.info("AUs completed initial crawl.")
 
-        # Damage the client running on port 8082, the one that was set
-        # up with 'repair_from_cache_percent=1.0'
-        client = self.framework.getClientByPort(8082)
+        # Damage the appropriate client, the one that was set up with
+        # 'repair_from_cache_percent=1.0'
+        client = self.damagedClient
 
         # Request a tree walk (deactivate and reactivate AU)
         log.info("Requesting tree walk.")
@@ -914,6 +914,12 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
                "Node %s not repaired." % node.url
         log.info("Node %s repaired." % node.url)
 
+        ##
+        ## XXX: Important!  Need to add a method for the client to
+        ## accurately determine whether the repair was via proxy or
+        ## via publisher crawl.
+        ##
+        
         # expect to see the AU successfully repaired
         log.info("Waiting for successful repair of AU.")
         assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
