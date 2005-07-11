@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.136 2005-05-31 19:19:21 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.136.2.1 2005-07-11 23:12:57 tlipkis Exp $
  */
 
 /*
@@ -1102,15 +1102,14 @@ public class PluginManager
       log.warning("findMostRecentCachedUrl(" + url + ")", e);
       return null;
     }
-    CachedUrl best = null;
     for (Iterator iter = getAllAus().iterator(); iter.hasNext();) {
       ArchivalUnit au = (ArchivalUnit)iter.next();
       if (au.shouldBeCached(url)) {
 	try {
 	  String siteUrl = UrlUtil.normalizeUrl(normUrl, au);
 	  CachedUrl cu = au.makeCachedUrl(siteUrl);
-	  if (cu != null && cu.hasContent() && cuNewerThan(cu, best)) {
-	    best = cu;
+	  if (cu != null && cu.hasContent()) {
+	    return cu;
 	  }
 	} catch (MalformedURLException ignore) {
 	  // ignored
@@ -1119,15 +1118,15 @@ public class PluginManager
 	}
       }
     }
-    return best;
+    return null;
   }
 
   // return true if cu1 is newer than cu2, or cu2 is null
   // tk - no date available for comparison yet, return arbitrary order
   private boolean cuNewerThan(CachedUrl cu1, CachedUrl cu2) {
     if (cu2 == null) return true;
-    CIProperties p1 = cu1.getProperties();
-    CIProperties p2 = cu2.getProperties();
+//     CIProperties p1 = cu1.getProperties();
+//     CIProperties p2 = cu2.getProperties();
     // tk - this should use the crawl-date prop taht the crawler will add
     //     Long.parseLong(p1.getProperty(HttpFields.__LastModified, "-1"));
     return true;
