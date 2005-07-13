@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMethodAction.java,v 1.3 2005-05-06 17:24:58 smorabito Exp $
+ * $Id: PsmMethodAction.java,v 1.4 2005-07-13 07:53:05 smorabito Exp $
  */
 
 /*
@@ -52,13 +52,13 @@ public class PsmMethodAction extends PsmAction {
     // invoke methods on a class that is in another package and not
     // defined 'public'.
     if (!Modifier.isPublic(c.getModifiers())) {
-      throw new PsmMethodActionException("Action class must be public.");
+      throw new IllegalPsmMethodActionException("Action class must be public.");
     }
 
     try {
       method = c.getMethod(m, argArray);
     } catch (NoSuchMethodException ex) {
-      throw new PsmMethodActionException(ex.toString() + ": method " + m);
+      throw new IllegalPsmMethodActionException(ex.toString() + ": method " + m);
     }
 
     // Check each exception this method declares thrown.  If it declares
@@ -67,21 +67,21 @@ public class PsmMethodAction extends PsmAction {
     for (int i = 0; i < exceptionTypes.length; i++) {
       Class exceptionClass = exceptionTypes[i];
       if (!RuntimeException.class.isAssignableFrom(exceptionClass)) {
-	throw new PsmMethodActionException("Method must not declare non-Runtime "+
-					   "exceptions.");
+	throw new IllegalPsmMethodActionException("Method must not declare non-Runtime "+
+						  "exceptions.");
       }
     }
 
     // Ensure that the method returns PsmEvent
     if (PsmEvent.class != method.getReturnType()) {
-      throw new PsmMethodActionException("Method return type must be PsmEvent");
+      throw new IllegalPsmMethodActionException("Method return type must be PsmEvent");
     }
 
     // Ensure that both the method is both public and static.
     if (!Modifier.isStatic(method.getModifiers()) ||
 	!Modifier.isPublic(method.getModifiers())) {
-      throw new PsmMethodActionException("Method " + m +
-					 " must be static and public.");
+      throw new IllegalPsmMethodActionException("Method " + m +
+						" must be static and public.");
     }
   }
 
@@ -118,6 +118,21 @@ public class PsmMethodAction extends PsmAction {
     }
 
     public PsmMethodActionException(String s) {
+      super(s);
+    }
+  }
+
+  /**
+   * Runtime exception that will be thrown at construction time if the
+   * PsmMethodAction is illegal.
+   */
+  public static class IllegalPsmMethodActionException
+    extends PsmMethodActionException {
+    public IllegalPsmMethodActionException() {
+      super();
+    }
+
+    public IllegalPsmMethodActionException(String s) {
       super(s);
     }
   }

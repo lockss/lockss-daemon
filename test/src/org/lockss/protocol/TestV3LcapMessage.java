@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.4 2005-06-24 20:21:07 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.5 2005-07-13 07:52:50 smorabito Exp $
  */
 
 /*
@@ -144,36 +144,15 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(m_testBytes, msg.getChallenge());
   }
 
-  public void testReplyMessageCreation() throws Exception {
-    V3LcapMessage repMsg =
-      V3LcapMessage.makeReplyMsg(m_testMsg,
-				 V3LcapMessage.MSG_POLL_ACK,
-				 100000,
-				 m_testID);
-
-    assertTrue(m_testID == repMsg.getOriginatorId());
-    assertEquals(V3LcapMessage.MSG_POLL_ACK, repMsg.getOpcode());
-    assertEquals(m_testMsg.getTargetUrl(), repMsg.getTargetUrl());
-    assertEquals(m_testMsg.getArchivalId(), repMsg.getArchivalId());
-    assertEquals(m_testMsg.getHashAlgorithm(), repMsg.getHashAlgorithm());
-    assertEquals(m_testMsg.getPluginVersion(), repMsg.getPluginVersion());
-    assertEquals(m_testMsg.getChallenge(), repMsg.getChallenge());
-    List testMsgVoteBlocks = ListUtil.fromIterator(m_testMsg.getVoteBlockIterator());
-    List repMsgVoteBlocks = ListUtil.fromIterator(repMsg.getVoteBlockIterator());
-    assertTrue(testMsgVoteBlocks.equals(repMsgVoteBlocks));
-    // Ensure both are equal to m_testVoteBlocks.
-    assertTrue(m_testVoteBlocks.equals(repMsgVoteBlocks));
-  }
-
   public void testRequestMessageCreation() throws Exception {
     PollSpec spec =
       new MockPollSpec("ArchivalID_2", "http://foo.com/", null, null, "Plug42", -1);
-
+    Deadline deadline = Deadline.in(10000);
     V3LcapMessage reqMsg =
       V3LcapMessage.makeRequestMsg(spec,
 				   m_testBytes,
 				   V3LcapMessage.MSG_REPAIR_REQ,
-				   100000,
+				   deadline,
 				   m_testID);
 
     for (Iterator ix = m_testVoteBlocks.iterator(); ix.hasNext(); ) {

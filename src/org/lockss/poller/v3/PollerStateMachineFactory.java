@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.1 2005-06-24 07:59:16 smorabito Exp $
+ * $Id: PollerStateMachineFactory.java,v 1.2 2005-07-13 07:53:06 smorabito Exp $
  */
 
 /*
@@ -103,6 +103,8 @@ public class PollerStateMachineFactory {
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("TallyVote",
 		   new PsmMethodAction(actionClass, "handleTallyVote"),
+		   new PsmResponse(V3Events.evtWaitTallyComplete,
+				   PsmWait.FOREVER),
 		   new PsmResponse(V3Events.evtVoteIncomplete, "SendVoteRequest"),
 		   new PsmResponse(V3Events.evtVoteComplete, "SendReceipt"),
 		   new PsmResponse(V3Events.evtNeedRepair, "ProveRepairEffort"),

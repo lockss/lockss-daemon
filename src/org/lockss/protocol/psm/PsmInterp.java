@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.8 2005-06-15 01:17:49 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.9 2005-07-13 07:53:05 smorabito Exp $
  */
 
 /*
@@ -186,7 +186,7 @@ public class PsmInterp {
 
   private void enterState(PsmState newState, PsmEvent triggerEvent,
 			  int eventCtr) {
-    if (log.isDebug()) log.debug("Enter state: " + newState.getName());
+    if (log.isDebug2()) log.debug2("Enter state: " + newState.getName());
     eventMonitor(curState, triggerEvent, null, newState);
     curState = newState;
     PsmAction entryAction = newState.getEntryAction();

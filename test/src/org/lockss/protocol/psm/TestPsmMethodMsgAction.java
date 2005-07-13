@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodMsgAction.java,v 1.3 2005-05-06 17:24:57 smorabito Exp $
+ * $Id: TestPsmMethodMsgAction.java,v 1.4 2005-07-13 07:52:49 smorabito Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
   private static PsmEvent bazEvent = new PsmEvent();
 
   /**
-   * Ensure that valid PsmMethodActions can be constructed and run.
+   * Ensure that valid PsmMethodMsgActions can be constructed and run.
    */
   public void testValidMethodInvocation() {
     PsmMethodMsgAction fooAction =
@@ -66,8 +66,8 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
     PsmEvent fooReturn = fooAction.run(argEvent, null);
     PsmEvent barReturn = barAction.run(argEvent, null);
 
-    assertEquals(fooReturn, fooEvent);
-    assertEquals(barReturn, barEvent);
+    assertSame(fooReturn, fooEvent);
+    assertSame(barReturn, barEvent);
   }
 
   /**
@@ -79,7 +79,7 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
       PsmMethodMsgAction bazAction =
 	new PsmMethodMsgAction(MyActionHandlers.class, "handleBaz");
       fail("Should have thrown PsmMethodMsgActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
   }
@@ -92,8 +92,8 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
     try {
       PsmMethodMsgAction noSuchAction =
 	new PsmMethodMsgAction(MyActionHandlers.class, "noSuchMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
   }
@@ -104,10 +104,24 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
    */
   public void testWrongReturnTypeThrows() {
     try {
-      PsmMethodAction wrongReturnType =
-	new PsmMethodAction(MyActionHandlers.class, "wrongReturnType");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      PsmMethodMsgAction wrongReturnType =
+	new PsmMethodMsgAction(MyActionHandlers.class, "wrongReturnType");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
+      ;
+    }
+  }
+
+  /**
+   * Ensure that constructing with a method that has the
+   * wrong argument type throws.
+   */
+  public void testWrongArgTypeThrows() {
+    try {
+      PsmMethodMsgAction wrongArgumentType =
+	new PsmMethodMsgAction(MyActionHandlers.class, "wrongArgumentType");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ;
     }
   }
@@ -117,25 +131,25 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
    * RuntimeExceptions succeeds.
    */
   public void testRuntimeExceptionDeclarationSucceeds() {
-    PsmMethodAction action1 =
-      new PsmMethodAction(MyActionHandlers.class,
-			  "throwRuntimeException");
+    PsmMethodMsgAction action1 =
+      new PsmMethodMsgAction(MyActionHandlers.class,
+			     "throwRuntimeException");
 
-    PsmMethodAction action2 =
-      new PsmMethodAction(MyActionHandlers.class,
-			  "throwPsmMethodActionException");
+    PsmMethodMsgAction action2 =
+      new PsmMethodMsgAction(MyActionHandlers.class,
+			     "throwPsmMethodActionException");
   }
 
   /**
-   * Ensure that constructing with methods that declare 
+   * Ensure that constructing with methods that declare
    * non-RuntimeExceptions fails.
    */
   public void testNonRuntimeExceptionDeclarationThrows() {
     try {
-      PsmMethodAction action1 =
-	new PsmMethodAction(MyActionHandlers.class,
-			    "throwIoException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      PsmMethodMsgAction action1 =
+	new PsmMethodMsgAction(MyActionHandlers.class,
+			       "throwIoException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ;
     }
   }
@@ -145,49 +159,49 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
    * or methods throw appropriately.
    */
   public void testNonPublicClassConstructionThrows() {
-    PsmMethodAction action = null;
+    PsmMethodMsgAction action = null;
     // Methods
     try {
-      action = new PsmMethodAction(MyActionHandlers.class,
-				   "privateMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      action = new PsmMethodMsgAction(MyActionHandlers.class,
+				      "privateMethod");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected
     }
     try {
-      action = new PsmMethodAction(MyActionHandlers.class,
-				   "packageMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      action = new PsmMethodMsgAction(MyActionHandlers.class,
+				      "packageMethod");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected
     }
     try {
-      action = new PsmMethodAction(MyActionHandlers.class,
-				   "protectedMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      action = new PsmMethodMsgAction(MyActionHandlers.class,
+				      "protectedMethod");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected
     }
     // Classes
     try {
-      action = new PsmMethodAction(PrivateActionHandlers.class,
-				   "handleFoo");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      action = new PsmMethodMsgAction(PrivateActionHandlers.class,
+				      "handleFoo");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
     try {
-      action = new PsmMethodAction(PackageActionHandlers.class,
-				   "handleFoo");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      action = new PsmMethodMsgAction(PackageActionHandlers.class,
+				      "handleFoo");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
     try {
-      action = new PsmMethodAction(ProtectedActionHandlers.class,
-				   "handleFoo");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      action = new PsmMethodMsgAction(ProtectedActionHandlers.class,
+				      "handleFoo");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
   }
@@ -204,43 +218,49 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
       return barEvent;
     }
 
-    /** Non-static methods should cause PsmMethodActionExceptions. */
+    /** Non-static methods should cause PsmMethodMsgActionExceptions. */
     public PsmEvent handleBaz(PsmMsgEvent evt, PsmInterp interp) {
       return bazEvent;
     }
 
+    /** Incorrect argument types. */
+    public static Object wrongArgumentType(PsmEvent evt, PsmInterp interp) {
+      return null;
+    }
+
     /** Invalid return type. */
-    public static Object wrongReturnType(PsmEvent evt, PsmInterp interp) {
+    public static Object wrongReturnType(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
 
     /** Non-public methods. */
-    private static PsmEvent privateMethod(PsmEvent evt, PsmInterp interp) {
+    private static PsmEvent privateMethod(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
 
-    static PsmEvent packageMethod(PsmEvent evt, PsmInterp interp) {
+    static PsmEvent packageMethod(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
 
-    protected static PsmEvent protectedMethod(PsmEvent evt, PsmInterp interp) {
+    protected static PsmEvent protectedMethod(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
 
     /** Methods that declare exceptions. */
-    public static PsmEvent throwRuntimeException(PsmEvent evt, PsmInterp interp)
+    public static PsmEvent throwRuntimeException(PsmMsgEvent evt, PsmInterp interp)
 	throws RuntimeException {
       throw new RuntimeException();
     }
 
     // Subclasses of RuntimeException should be OK.
-    public static PsmEvent throwPsmMethodActionException(PsmEvent evt, PsmInterp interp)
+    public static PsmEvent throwPsmMethodActionException(PsmMsgEvent evt,
+							 PsmInterp interp)
 	throws PsmMethodAction.PsmMethodActionException {
       throw new PsmMethodAction.PsmMethodActionException();
     }
 
     // IOException should not be OK.
-    public static PsmEvent throwIoException(PsmEvent evt, PsmInterp interp)
+    public static PsmEvent throwIoException(PsmMsgEvent evt, PsmInterp interp)
 	throws IOException {
       throw new IOException();
     }
@@ -250,19 +270,19 @@ public class TestPsmMethodMsgAction extends LockssTestCase {
    * Classes used by testNonPublicClassConstructorsThrow()
    */
   private static class PrivateActionHandlers {
-    public PsmEvent handleFoo(PsmEvent evt, PsmInterp interp) {
+    public PsmEvent handleFoo(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
   }
 
   static class PackageActionHandlers {
-    public PsmEvent handleFoo(PsmEvent evt, PsmInterp interp) {
+    public PsmEvent handleFoo(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
   }
 
   protected class ProtectedActionHandlers {
-    public PsmEvent handleFoo(PsmEvent evt, PsmInterp interp) {
+    public PsmEvent handleFoo(PsmMsgEvent evt, PsmInterp interp) {
       return null;
     }
   }

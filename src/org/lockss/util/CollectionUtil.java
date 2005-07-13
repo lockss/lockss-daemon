@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.8 2003-11-13 19:52:43 troberts Exp $
+ * $Id: CollectionUtil.java,v 1.9 2005-07-13 07:53:05 smorabito Exp $
  */
 
 /*
@@ -126,4 +126,45 @@ public class CollectionUtil {
     return next;
   }
 
+   /**
+   * Randomly select <i>count</i> entries evenly distributed from
+   * collection <i>c</i>.
+   *
+   * @param c The collection from which to select entries.
+   * @param count The number of items to return.
+   * @return A collection of items selected randomly from the list.
+   * @throws IllegalArgumentException if count is non-positive or
+   *         greater than the size of the collection.
+   */
+  public static Collection randomSelection(Collection c, int count) {
+    if (count <= 0 || count > c.size()) {
+      throw new IllegalArgumentException("'count' must be non-negative "+
+					 "and smaller than or equal "+
+					 " to the size of the collection.");
+    }
+    LockssRandom random = new LockssRandom();
+    ArrayList l = new ArrayList(c);
+    ArrayList result = new ArrayList(count);
+    int lastIndex, idx;
+    while (--count >= 0) {
+      lastIndex = l.size() - 1;
+      idx = lastIndex == 0 ? 0 : random.nextInt(lastIndex);
+      result.add(l.get(idx));
+      l.set(idx, l.get(lastIndex)); // Swap item and last item.
+      l.remove(lastIndex);          // Delete last item.
+    }
+    return result;
+  }
+
+  /**
+   * Randomly select one item from a collection.
+   *
+   * @param c The collection from which to select an item.
+   * @return An item randomly selcted from the collection.
+   */
+  public static Object randomSelection(Collection c) {
+    LockssRandom random = new LockssRandom();
+    Object[] arr = c.toArray();
+    return arr[random.nextInt(arr.length - 1)];
+  } 
 }

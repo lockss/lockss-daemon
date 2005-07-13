@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.7 2005-06-24 20:21:08 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.8 2005-07-13 07:53:06 smorabito Exp $
  */
 
 /*
@@ -71,9 +71,9 @@ public class V3LcapMessage extends LcapMessage {
   // V3 Specific properties.
   private byte[] m_challenge;
 
-  /** For PollProof messages:  The effort proof for this poll. */
-  private byte[] m_pollProof;
-  
+  /** The effort proof for this message (if any). */
+  private byte[] m_effortProof;
+
   /** In Vote messages:  A list of vote blocks for this vote. */
   private List m_voteBlocks; // List<V3VoteBlock> of vote blocks.
 
@@ -85,7 +85,7 @@ public class V3LcapMessage extends LcapMessage {
       false otherwise. */
   private boolean m_voteComplete = false;
 
-  /** In Vote Request messages: the URL of the last vote block 
+  /** In Vote Request messages: the URL of the last vote block
       received.  Null if this is the first (or only) request. */
   private String m_lastVoteBlockURL;
 
@@ -107,8 +107,8 @@ public class V3LcapMessage extends LcapMessage {
 					      PollSpec.DEFAULT_USE_V3_POLL_VERSION);
   }
 
-  public V3LcapMessage(int opcode, PeerIdentity origin, String url, long start,
-		       long stop, byte[] challenge) {
+  public V3LcapMessage(int opcode, PeerIdentity origin, String url, 
+		       long start, long stop, byte[] challenge) {
     this();
     m_opcode = opcode;
     m_originatorID = origin;
@@ -201,7 +201,7 @@ public class V3LcapMessage extends LcapMessage {
     m_archivalID = m_props.getProperty("au", "UNKNOWN");
     m_targetUrl = m_props.getProperty("url");
     m_challenge = m_props.getByteArray("challenge", EMPTY_BYTE_ARRAY);
-    m_pollProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
+    m_effortProof = m_props.getByteArray("effortproof", EMPTY_BYTE_ARRAY);
     m_pluginVersion = m_props.getProperty("plugVer");
 
     // V3 specific message parameters
@@ -308,8 +308,8 @@ public class V3LcapMessage extends LcapMessage {
 
     // V3 specific message parameters.
 
-    if(m_pollProof != null) {
-      m_props.putByteArray("effortproof", m_pollProof);
+    if(m_effortProof != null) {
+      m_props.putByteArray("effortproof", m_effortProof);
     }
     if (m_nominees != null) {
       m_props.setProperty("nominees",
@@ -364,16 +364,24 @@ public class V3LcapMessage extends LcapMessage {
   }
 
   /**
-   * For PollProof messages:  Return the poll effort proof.
+   * Return an effort proof.
    *
-   * @return The poll effort proof for this poll.
+   * @return The effort proof for this message.
    */
-  public byte[] getPollProof() {
-    return m_pollProof;
+  public byte[] getEffortProof() {
+    return m_effortProof;
   }
 
-  public void setPollProof(byte[] b) {
-    m_pollProof = b;
+  public void setEffortProof(byte[] b) {
+    m_effortProof = b;
+  }
+
+  public String getTarget() {
+    return m_targetUrl;
+  }
+
+  public void setTarget(String url) {
+    m_targetUrl = url;
   }
 
   public boolean isNoOp() {
@@ -446,7 +454,7 @@ public class V3LcapMessage extends LcapMessage {
   }
 
   // XXX:  Stubbed out.  Must be implemented.
-  // Repair message functionality.  
+  // Repair message functionality.
   // Obtain an input stream from which to read repair data for a given URL.
   public InputStream getRepairInputStream(String url) {
     return null;
@@ -479,7 +487,7 @@ public class V3LcapMessage extends LcapMessage {
    * @param ps the pollspec specifying the url and bounds of interest
    * @param challenge the challange bytes
    * @param opcode the kind of poll being requested
-   * @param timeRemaining  the time remaining for this poll
+   * @param deadline the deadline for this poll
    * @param origin the identity of the requestor
    * @return message the new V3LcapMessage
    * @throws IOException if unable to create message
@@ -487,51 +495,18 @@ public class V3LcapMessage extends LcapMessage {
   static public V3LcapMessage makeRequestMsg(PollSpec ps,
 					     byte[] challenge,
 					     int opcode,
-					     long timeRemaining,
-					     PeerIdentity origin)
-      throws IOException {
-    long now = TimeBase.nowMs();
+					     Deadline deadline,
+					     PeerIdentity origin) {
+    long start = TimeBase.nowMs();
+    long stop = start + deadline.getRemainingTime();
     V3LcapMessage msg =
-      new V3LcapMessage(opcode, origin, ps.getUrl(), now,
-			now + timeRemaining, challenge);
+      new V3LcapMessage(opcode, origin, ps.getUrl(), start,
+			stop, challenge);
     msg.setArchivalId(ps.getAuId());
     msg.setPollVersion(ps.getPollVersion());
     msg.setPluginVersion(ps.getPluginVersion());
     return msg;
   }
-
-  /**
-   * static method to make a reply message
-   *
-   * @param trigger the message which trggered the reply
-   * @param opcode an opcode for this message
-   * @param timeRemaining the time remaining on the poll
-   * @param origin the identity of the requestor
-   * @return a new Message object
-   * @throws IOException if message construction failed
-   */
-  static public V3LcapMessage makeReplyMsg(V3LcapMessage trigger,
-					   int opcode, long timeRemaining,
-					   PeerIdentity origin)
-      throws IOException {
-    long now = TimeBase.nowMs();
-
-    V3LcapMessage msg =
-      new V3LcapMessage(opcode, origin,
-			trigger.getTargetUrl(),
-			now, now + timeRemaining,
-			trigger.getChallenge());
-    List voteBlocks = ListUtil.fromIterator(trigger.getVoteBlockIterator());
-    for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {
-      msg.addVoteBlock((VoteBlock)ix.next());
-    }
-    msg.setHashAlgorithm(trigger.getHashAlgorithm());
-    msg.setArchivalId(trigger.getArchivalId());
-    msg.setPollVersion(trigger.getPollVersion());
-    msg.setPluginVersion(trigger.getPluginVersion());
-    return msg;
-  }
-
 
   // XXX: The implementation of getting the count of vote blocks
   //      will have to change when the underlying structure is

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodAction.java,v 1.3 2005-05-06 17:24:58 smorabito Exp $
+ * $Id: TestPsmMethodAction.java,v 1.4 2005-07-13 07:52:50 smorabito Exp $
  */
 
 /*
@@ -61,8 +61,8 @@ public class TestPsmMethodAction extends LockssTestCase {
     PsmEvent fooReturn = fooAction.run(argEvent, null);
     PsmEvent barReturn = barAction.run(argEvent, null);
 
-    assertEquals(fooReturn, fooEvent);
-    assertEquals(barReturn, barEvent);
+    assertSame(fooReturn, fooEvent);
+    assertSame(barReturn, barEvent);
   }
 
   /**
@@ -73,8 +73,8 @@ public class TestPsmMethodAction extends LockssTestCase {
     try {
       PsmMethodAction bazAction =
 	new PsmMethodAction(MyActionHandlers.class, "handleBaz");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
   }
@@ -87,8 +87,8 @@ public class TestPsmMethodAction extends LockssTestCase {
     try {
       PsmMethodAction noSuchAction =
 	new PsmMethodAction(MyActionHandlers.class, "noSuchMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
   }
@@ -101,8 +101,22 @@ public class TestPsmMethodAction extends LockssTestCase {
     try {
       PsmMethodAction wrongReturnType =
 	new PsmMethodAction(MyActionHandlers.class, "wrongReturnType");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
+      ;
+    }
+  }
+
+  /**
+   * Ensure that constructing with a method that has the
+   * wrong argument type throws.
+   */
+  public void testWrongArgTypeThrows() {
+    try {
+      PsmMethodAction wrongArgumentType =
+	new PsmMethodAction(MyActionHandlers.class, "wrongArgumentType");
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ;
     }
   }
@@ -130,7 +144,7 @@ public class TestPsmMethodAction extends LockssTestCase {
       PsmMethodAction action1 =
 	new PsmMethodAction(MyActionHandlers.class,
 			    "throwIoException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ;
     }
   }
@@ -145,44 +159,44 @@ public class TestPsmMethodAction extends LockssTestCase {
     try {
       action = new PsmMethodAction(MyActionHandlers.class,
 				   "privateMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected
     }
     try {
       action = new PsmMethodAction(MyActionHandlers.class,
 				   "packageMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected
     }
     try {
       action = new PsmMethodAction(MyActionHandlers.class,
 				   "protectedMethod");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected
     }
     // Classes
     try {
       action = new PsmMethodAction(PrivateActionHandlers.class,
 				   "handleFoo");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
     try {
       action = new PsmMethodAction(PackageActionHandlers.class,
 				   "handleFoo");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
     try {
       action = new PsmMethodAction(ProtectedActionHandlers.class,
 				   "handleFoo");
-      fail("Should have thrown PsmMethodActionException");
-    } catch (PsmMethodAction.PsmMethodActionException ex) {
+      fail("Should have thrown IllegalPsmMethodActionException");
+    } catch (PsmMethodAction.IllegalPsmMethodActionException ex) {
       ; // This is expected.
     }
   }
@@ -200,9 +214,14 @@ public class TestPsmMethodAction extends LockssTestCase {
       return barEvent;
     }
 
-    /** Non-static methods should cause PsmMethodActionExceptions. */
+    /** Non-static methods should cause IllegalPsmMethodActionExceptions. */
     public PsmEvent handleBaz(PsmEvent evt, PsmInterp interp) {
       return bazEvent;
+    }
+
+    /** Incorrect argument types. */
+    public static Object wrongArgumentType(PsmMsgEvent evt, PsmInterp interp) {
+      return null;
     }
 
     /** Invalid return type. */
