@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.127 2005-05-12 00:22:23 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.128 2005-07-13 17:49:09 troberts Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -27,12 +27,14 @@ package org.lockss.state;
 import java.io.*;
 import java.net.*;
 import java.util.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
+import org.lockss.app.*;
 import org.lockss.util.*;
 
 public class TestNodeManagerImpl extends LockssTestCase {
@@ -47,7 +49,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Poll contentPoll = null;
   private Random random = new Random();
   private MockLockssDaemon theDaemon;
-  private MockIdentityManager idManager;
+  private MyMockIdentityManager idManager;
   static Logger log = Logger.getLogger("TestNodeManagerImpl");
 
   public void setUp() throws Exception {
@@ -73,7 +75,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.setPollManager(pollManager);
     pollManager.initService(theDaemon);
     log.debug("Starting the Identity Manager");
-    idManager = new MockIdentityManager();
+    idManager = new MyMockIdentityManager();
     theDaemon.setIdentityManager(idManager);
     idManager.initService(theDaemon);
     log.debug("Identity Manager started");
@@ -543,7 +545,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(NodeState.RANGED_WRONG_NAMES, state);
     reputationChangeTest(results);
   }
-
+  
   public void testHandleWrongNames() throws Exception {
     Vector masterV = new Vector();
     List localL = new ArrayList();
@@ -1120,5 +1122,93 @@ public class TestNodeManagerImpl extends LockssTestCase {
   public static void main(String[] argv) {
     String[] testCaseList = { TestNodeManagerImpl.class.getName() };
     junit.swingui.TestRunner.main(testCaseList);
+  }
+
+  private class  MyMockIdentityManager extends IdentityManager {
+    public HashMap repMap = new HashMap();
+    public HashMap idMap = null;
+
+    public Map agreeMap = new HashMap();
+
+    public MyMockIdentityManager() {
+      super();
+    }
+
+    public void initService(LockssDaemon daemon) throws LockssAppException {
+      this.log.debug("MyMockIdentityManager: initService");
+      super.initService(daemon);
+    }
+
+    protected String getLocalIpParam(Configuration config) {
+      String res = config.get(PARAM_LOCAL_IP);
+      if (res == null) {
+	res = "127.7.7.7";
+      }
+      return res;
+    }
+
+    public void startService() {
+      this.log.debug("MyMockIdentityManager: startService");
+      super.startService();
+      idMap = new HashMap();
+    }
+    public void stopService() {
+      this.log.debug("MyMockIdentityManager: stopService");
+      super.stopService();
+      idMap = null;
+    }
+
+    public void changeReputation(PeerIdentity id, int changeKind) {
+      idMap.put(id, new Integer(changeKind));
+    }
+
+    public int lastChange(PeerIdentity id) {
+      Integer change = (Integer)idMap.get(id);
+      if (change==null) {
+	return -1;
+      }
+      return change.intValue();
+    }
+
+    public void signalAgreed(PeerIdentity id, ArchivalUnit au) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public void signalDisagreed(PeerIdentity id, ArchivalUnit au) {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public Map getAgreed(ArchivalUnit au) {
+      return (Map)agreeMap.get(au);
+    }
+  
+  public int getReputation(PeerIdentity id) {
+    Integer rep = (Integer)repMap.get(id);
+    if (rep == null) {
+      return 0;
+    }
+    return rep.intValue();
+  }
+
+  public void setReputation(PeerIdentity id, int rep) {
+    repMap.put(id, new Integer(rep));
+  }
+//     /**
+//      * Change the the reputation of the peer
+//      * @param peer the PeerIdentity
+//      * @param reputation the new reputation
+//      */
+//     public void setReputation(PeerIdentity peer, int reputation) {
+//       try {
+// 	LcapIdentity lid = findLcapIdentity(peer, peer.getIdString());
+// 	lid.changeReputation(reputation - lid.getReputation());
+//       } catch (IdentityManager.MalformedIdentityKeyException e) {
+// 	throw new RuntimeException(e.toString());
+//       }
+//     }
+
+    public void setAgeedForAu(ArchivalUnit au, Map map) {
+      agreeMap.put(au, map);
+    }
   }
 }
