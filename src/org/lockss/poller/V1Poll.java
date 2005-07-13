@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.25 2005-04-19 03:08:32 smorabito Exp $
+ * $Id: V1Poll.java,v 1.26 2005-07-13 17:33:43 troberts Exp $
  */
 
 /*
@@ -271,10 +271,14 @@ public abstract class V1Poll extends BasePoll {
     PeerIdentity id = vote.getVoterIdentity();
     int maxRep = idMgr.getMaxReputation();
     int rep = idMgr.getReputation(id);
-    if (log.isDebug3()) log.debug3(id + "'s rep  is " + rep);
     double verify;
 
     double weight = ((double)rep) / maxRep;
+    if (log.isDebug3()) {
+      log.debug3("Max reputation is "+maxRep);
+      log.debug3(id + "'s rep  is " + rep);
+      log.debug3("Weight is " + weight);
+    }
 
     if (isAgreeVote) {
       verify = (1.0 - weight) * m_agreeVer;
