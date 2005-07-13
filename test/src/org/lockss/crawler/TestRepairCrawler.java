@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.24 2005-07-08 15:45:15 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.25 2005-07-13 17:48:18 troberts Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ public class TestRepairCrawler extends LockssTestCase {
   void setAgreeingPeers(int numPeers) throws MalformedIdentityKeyException {
     Map map = new HashMap();
     for (int ix = 0; ix < numPeers; ix++) {
-      PeerIdentity id = idm.stringToPeerIdentity("127.0.0."+ix);
+      MockPeerIdentity id = new MockPeerIdentity("127.0.0."+ix);
       map.put(id, new Long(10+ix));
     }
     idm.setAgeedForAu(mau, map);
