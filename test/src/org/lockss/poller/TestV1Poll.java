@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1Poll.java,v 1.2 2004-12-07 08:44:55 tlipkis Exp $
+ * $Id: TestV1Poll.java,v 1.3 2005-07-13 17:34:36 troberts Exp $
  */
 
 /*
@@ -101,6 +101,7 @@ public class TestV1Poll extends LockssTestCase {
 
     // if his reputation is 1000, never verify agreement,
     // verify disagreement 60% of time
+    idmgr.setMaxReputation(1000);
     idmgr.setReputation(peer1, 1000);
     assertEquals(0.0, poll.calcVerifyProb(vote, true), .01);
     assertEquals(.6, poll.calcVerifyProb(vote, false), .01);
