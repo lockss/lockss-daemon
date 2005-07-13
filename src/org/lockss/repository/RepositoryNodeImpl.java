@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.63 2005-02-02 09:42:25 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.63.6.1 2005-07-13 17:06:29 tlipkis Exp $
  */
 
 /*
@@ -1323,7 +1323,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     private RepositoryNodeContentsImpl() {
     }
 
-    public InputStream getInputStream() {
+    public synchronized InputStream getInputStream() {
       ensureInputStream();
       InputStream res = is;
       // stream can only be used once.
@@ -1331,14 +1331,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return res;
     }
 
-    public Properties getProperties() {
+    public synchronized Properties getProperties() {
       if (props == null) {
 	ensureInputStream();
       }
       return props;
     }
 
-    public void release() {
+    public synchronized void release() {
       if (is != null) {
 	if (Configuration.getBooleanParam(PARAM_ENABLE_RELEASE,
 					  DEFAULT_ENABLE_RELEASE)) {
@@ -1359,7 +1359,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
 
-    private synchronized void ensureInputStream() {
+    private void ensureInputStream() {
       if (is == null) {
 	assertContent();
 	try {
