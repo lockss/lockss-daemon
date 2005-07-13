@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.6 2005-07-11 17:39:15 troberts Exp $
+ * $Id: ProxyAccessHandler.java,v 1.7 2005-07-13 17:53:47 troberts Exp $
  */
 
 /*
@@ -83,8 +83,10 @@ public class ProxyAccessHandler extends IpAccessHandler {
       if (!isRepairRequest) {
 	// Not a repair request from a LOCKSS cache, let the parent
 	// IpAccessHandler handle it.
+	log.debug("Passing proxy request to parent class");
 	super.handle(pathInContext, pathParams, request, response);
       } else {
+	log.debug("Repair request from a LOCKSS cache");
 	// This is a repair request from a LOCKSS cache.  If we don't have
 	// the URL locally, return a 404.  If we have it, allow the request
 	// (passing it on to the ProxyHandler) iff the requestor previously
@@ -107,15 +109,16 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	ArchivalUnit au = cu.getArchivalUnit();
 	String ip = request.getRemoteAddr();
 	Map agreeMap = idMgr.getAgreed(au);
-// 	if (agreeMap != null
-// 	    && agreeMap.containsKey(ip)) {
- 	if (agreeMap != null
- 	    && agreeMap.containsKey(idMgr.stringToPeerIdentity(ip))) {
+	PeerIdentity pid = idMgr.stringToPeerIdentity(ip);
+	log.debug3("Got "+pid+" from identity manager for "+ip);
+ 	if (agreeMap != null && agreeMap.containsKey(pid)) {
 	  // Allow the request to be processed by the ProxyHandler.
 	  // Do not call cu.release(), as the input stream will likely be
 	  // used by ProxyHandler
+	  log.debug3("Found "+ip+" in agree map");
 	  return;
 	} else {
+	  log.debug3("Agree map: "+agreeMap);
 	  AuUtil.safeRelease(cu);
 	  if (isLogForbidden()) {
 	    log.info("Not serving repair of " + cu + " to " + ip +
