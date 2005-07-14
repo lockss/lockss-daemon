@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.3 2005-07-13 17:48:39 troberts Exp $
+* $Id: MockIdentityManager.java,v 1.4 2005-07-14 23:33:55 troberts Exp $
  */
 
 /*
@@ -42,6 +42,8 @@ import org.lockss.plugin.*;
  */
 
 public class MockIdentityManager extends IdentityManager {
+  private static Logger logger = Logger.getLogger("MockIdentityManager");
+
   public HashMap idMap = new HashMap();
 
   public HashMap piMap = new HashMap();
@@ -51,6 +53,8 @@ public class MockIdentityManager extends IdentityManager {
   public Map agreeMap = new HashMap();
 
   int maxRep = 5000;
+
+  PeerIdentity localId = new MockPeerIdentity("fake peer id");
 
   public MockIdentityManager() {
     super();
@@ -104,8 +108,13 @@ public class MockIdentityManager extends IdentityManager {
   }
 
   public boolean isLocalIdentity(PeerIdentity id) {
-     return false;
-//      throw new UnsupportedOperationException("not implemented");
+    log.debug3("Checking if "+id+" is the local identity "+localId);
+    return id == localId;
+  }
+
+  public void setLocalIdentity(PeerIdentity id) {
+    log.debug3("Setting local identity to "+id);
+    this.localId = id;
   }
 
   public boolean isLocalIdentity(String idStr) {
