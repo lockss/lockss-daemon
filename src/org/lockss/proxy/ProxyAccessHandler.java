@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.7 2005-07-13 17:53:47 troberts Exp $
+ * $Id: ProxyAccessHandler.java,v 1.8 2005-07-14 23:33:42 troberts Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	  if (isLogForbidden()) {
 	    log.info("Not serving repair of " + cu + " to " + ip +
 		     " because it never agreed with us.");
-	    log.info("agreeMap: "+agreeMap);
+	    log.debug3("agreeMap: "+agreeMap);
 	  }
 	  response.sendError(HttpResponse.__403_Forbidden);
 	  request.setHandled(true);
