@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.25 2005-07-13 17:48:18 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.26 2005-07-14 23:33:16 troberts Exp $
  */
 
 /*
@@ -257,7 +257,8 @@ public class TestRepairCrawler extends LockssTestCase {
     assertFalse(crawler.doCrawl());
   }
 
-  //these tests use MyRepairCrawler, which overrides fetchFromCache and fetchFromPublisher; these methods should be tested separately
+  //these tests use MyRepairCrawler, which overrides fetchFromCache
+  //and fetchFromPublisher; these methods should be tested separately
 
   void setAgreeingPeers(int numPeers) throws MalformedIdentityKeyException {
     Map map = new HashMap();
@@ -284,11 +285,85 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     assertTrue("doCrawl() returned false", crawler.doCrawl());
-    assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl) ,id, crawler.getContentSource(repairUrl));
+    assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl),
+		 id, crawler.getContentSource(repairUrl));
     assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
-	         crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 1);
-    assertTrue("Fail! fetch from publisher occurs", crawler.getFetchPubCnt() == 0);
-    
+	         crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
+    assertTrue("Fail! fetch from publisher occurs",
+	       crawler.getFetchPubCnt() == 0);
+  }
+
+  public void testFetchFromCacheIgnoresLocalHost()
+      throws MalformedIdentityKeyException {
+    PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
+    idm.setLocalIdentity(id);
+
+    Map map = new HashMap();
+    map.put(id, new Long(10));
+    idm.setAgeedForAu(mau, map);
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
+    assertEquals("Tried to fetch from a cache", 0, crawler.getFetchCacheCnt());
+    assertEquals("Fetch from publisher occured", 0, crawler.getFetchPubCnt());
+  }
+
+  public void testFetchFromCacheLocalHost()
+      throws MalformedIdentityKeyException {
+    Map map = new HashMap();
+    MockPeerIdentity id = null;
+    for (int ix = 0; ix < 3; ix++) {
+      id = new MockPeerIdentity("127.0.0."+ix);
+      map.put(id, new Long(10+ix));
+    }
+    idm.setLocalIdentity(id);
+    idm.setAgeedForAu(mau, map);
+
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(3);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
+    assertEquals("Tried to fetch from more than 2 caches",
+		 2, crawler.getFetchCacheCnt());
+    assertEquals("Fetch from publisher occured", 0, crawler.getFetchPubCnt());
+  }
+
+  public void testFetchFromCacheLocalHostOnlyOne()
+      throws MalformedIdentityKeyException {
+    Map map = new HashMap();
+    MockPeerIdentity id = new MockPeerIdentity("127.0.0.0");
+    map.put(id, new Long(10));
+    idm.setLocalIdentity(id);
+    idm.setAgeedForAu(mau, map);
+
+
+    String repairUrl = "http://example.com/blah.html";
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
+    crawler.setTimesToThrow(1);
+
+    Properties p = new Properties();
+    p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
+    assertFalse("doCrawl() returned true", crawler.doCrawl());
+    assertEquals("Tried to fetch from more than a cache",
+		 0, crawler.getFetchCacheCnt());
+    assertEquals("Fetch from publisher occured", 0, crawler.getFetchPubCnt());
   }
 
   public void testFetchFromOtherCachesOnlyWithoutRetryLimit()
@@ -313,7 +388,8 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 0);
   }
 
-  public void testFetchFromOtherCachesOnlyWithRetryLimit() throws MalformedIdentityKeyException {
+  public void testFetchFromOtherCachesOnlyWithRetryLimit()
+      throws MalformedIdentityKeyException {
     setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
@@ -403,7 +479,8 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
   }
 
-  public void testFetchFromOtherCachesThenPublisher() throws MalformedIdentityKeyException {
+  public void testFetchFromOtherCachesThenPublisher()
+      throws MalformedIdentityKeyException {
     setAgreeingPeers(3);
 
 
@@ -422,7 +499,8 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
     assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() < crawler.getPubLastCall() );
+    assertTrue("Fail: sequence in caching from",
+	       crawler.getCacheLastCall() < crawler.getPubLastCall() );
   }
 
   public void testFetchFromOtherCachesThenPublisherFailure()
@@ -445,10 +523,12 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
     assertTrue("Fail fetch from publisher count, fetchPubCnt = " +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
-    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() < crawler.getPubLastCall() );
+    assertTrue("Fail: sequence in caching from",
+	       crawler.getCacheLastCall() < crawler.getPubLastCall() );
   }
 
-  public void testFetchFromPublisherThenOtherCaches() throws MalformedIdentityKeyException {
+  public void testFetchFromPublisherThenOtherCaches()
+      throws MalformedIdentityKeyException {
     setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
@@ -467,7 +547,8 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
     assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() > crawler.getPubLastCall() );
+    assertTrue("Fail: sequence in caching from",
+	       crawler.getCacheLastCall() > crawler.getPubLastCall() );
   }
 
   public void testFetchFromPublisherThenOtherCachesFailure()
@@ -490,7 +571,8 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
     assertTrue("Fail fetch from other caches count, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fail: sequence in caching from", crawler.getCacheLastCall() > crawler.getPubLastCall() );
+    assertTrue("Fail: sequence in caching from",
+	       crawler.getCacheLastCall() > crawler.getPubLastCall() );
   }
 
   //Status tests
@@ -603,7 +685,8 @@ public class TestRepairCrawler extends LockssTestCase {
       return uc;
     }
 
-    protected void fetchFromCache(UrlCacher uc, PeerIdentity id) throws IOException {
+    protected void fetchFromCache(UrlCacher uc, PeerIdentity id)
+	throws IOException {
       fetchCacheCnt++;
       cacheLastCall = ++fetchSequence;
       contentMap.put(uc.getUrl(),id);
