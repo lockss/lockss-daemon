@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.53 2005-05-17 23:12:35 troberts Exp $
+ * $Id: TestStringUtil.java,v 1.54 2005-07-18 07:57:52 tlipkis Exp $
  */
 
 /*
@@ -292,6 +292,13 @@ public class TestStringUtil extends LockssTestCase {
   public void testFromInputStream() throws Exception {
     String s = "asdfjsfd";
     assertEquals(s, StringUtil.fromInputStream(new StringInputStream(s)));
+  }
+
+  public void testToOutputStream() throws Exception {
+    String s = "asdfjsfd";
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    StringUtil.toOutputStream(baos, s);
+    assertEquals(s, baos.toString());
   }
 
   public void testEqualStrings() {
