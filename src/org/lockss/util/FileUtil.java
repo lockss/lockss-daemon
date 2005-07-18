@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.4 2004-06-17 06:06:18 eaalto Exp $
+ * $Id: FileUtil.java,v 1.5 2005-07-18 08:01:16 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -32,6 +32,7 @@ package org.lockss.util;
 
 import java.io.*;
 import java.util.Arrays;
+import org.apache.oro.text.regex.*;
 
 /** Utilities for Files
  */
@@ -194,5 +195,110 @@ public class FileUtil {
     } catch (IOException ioe) {
       return false;
     }
+  }
+
+  static Pattern resourceErrorPat =
+    RegexpUtil.uncheckedCompile("Too many open files",
+				Perl5Compiler.READ_ONLY_MASK);
+
+  /** Return true if the exception was caused by a temporary resource
+   * problem (e.g., running out of file descriptors), not a problem with
+   * the file itself
+   */
+  public static boolean isTemporaryResourceException(IOException ex) {
+    if (!(ex instanceof FileNotFoundException)) {
+      return false;
+    }
+    return RegexpUtil.getMatcher().contains(ex.getMessage(), resourceErrorPat);
+  }
+
+
+  // Support for creating temporary files and directories
+
+  private static int tmpFileCnt = -1;
+  private static final Object tmpFileLock = new Object(); // tmpFileCnt lock
+
+  public static File createTempFile(String prefix, String suffix, File dir)
+      throws IOException {
+    if (dir == null) {
+      dir = new File(PlatformInfo.getSystemTempDir());
+    }
+    return File.createTempFile(prefix, suffix, dir);
+  }
+
+  public static File createTempFile(String prefix, String suffix)
+      throws IOException {
+    return createTempFile(prefix, suffix, null);
+  }
+
+  /** Create an empty directory.  Details are the same as
+   * File.createTempFile(), but the File object returned is a directory.
+   * @param directory the directory under which to create the new dir
+   * @param prefix dir name prefix
+   * @param suffix dir name suffix
+   * @return The newly created directory
+   */
+  public static File createTempDir(String prefix, String suffix,
+				   File directory)
+      throws IOException {
+    if (prefix == null) throw new NullPointerException();
+    if (prefix.length() < 3)
+      throw new IllegalArgumentException("Prefix string too short");
+    String s = (suffix == null) ? ".tmp" : suffix;
+    if (directory == null) {
+      directory = new File(PlatformInfo.getSystemTempDir());
+    }
+    synchronized (tmpFileLock) {
+      File f = null;
+      for (int ix = 0; ix < 1000; ix++) {
+	f = generateFile(prefix, s, directory);
+	if (f.mkdir()) {
+	  return f;
+	}
+      }
+      throw new IOException("Couldn't create temp dir " + f.getPath());
+    }
+  }
+
+  /** Create an empty directory in the default temporary-file directory.
+   * Details are the same as File.createTempFile(), but the File object
+   * returned is a directory.
+   * @return The newly created directory
+   */
+  public static File createTempDir(String prefix, String suffix)
+      throws IOException {
+    return createTempDir(prefix, suffix, null);
+  }
+
+  /** Delete the contents of a directory, leaving the empty directory.
+   * @return true iff successful */
+  public static boolean emptyDir(File dir) {
+    String files[] = dir.list();
+    boolean ret = true;
+    for (int i = 0; i < files.length; i++) {
+      File f = new File(dir, files[i]);
+      if (f.isDirectory()) {
+	ret = ret && emptyDir(f);
+      }
+      if (!f.delete()) {
+	ret = false;
+      }
+    }
+    return ret;
+  }
+
+  /** Delete a directory and its contents.
+   * @return true iff successful */
+  public static boolean delTree(File dir) {
+    return emptyDir(dir) && dir.delete();
+  }
+
+  private static File generateFile(String prefix, String suffix, File dir)
+      throws IOException {
+    if (tmpFileCnt == -1) {
+      tmpFileCnt = new LockssRandom().nextInt() & 0xffff;
+    }
+    tmpFileCnt++;
+    return new File(dir, prefix + Integer.toString(tmpFileCnt) + suffix);
   }
 }
