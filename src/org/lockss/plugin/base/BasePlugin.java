@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.29 2005-01-04 02:52:23 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.30 2005-07-18 08:12:02 tlipkis Exp $
  */
 
 /*
@@ -196,6 +196,19 @@ public abstract class BasePlugin
     this.titleConfigMap = titleConfigMap;
     pluginMgr.resetTitles();
   }
+
+  public List getAuConfigDescrs() {
+    List res = new ArrayList(getLocalAuConfigDescrs());
+    if (res.isEmpty()) {
+      // Don't add internal params if plugin has no params.  (testing)
+      return res;
+    }
+    res.add(ConfigParamDescr.AU_CLOSED);
+    res.add(ConfigParamDescr.PUB_DOWN);
+    return res;
+  }
+
+  abstract protected List getLocalAuConfigDescrs();
 
   /**
    * Find the ConfigParamDescr that this plugin uses for the specified key.

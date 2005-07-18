@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.8 2004-09-27 22:38:42 smorabito Exp $
+ * $Id: TestBasePlugin.java,v 1.9 2005-07-18 08:12:02 tlipkis Exp $
  */
 
 /*
@@ -141,7 +141,7 @@ public class TestBasePlugin extends LockssTestCase {
       return name;
     }
 
-    public List getAuConfigDescrs() {
+    public List getLocalAuConfigDescrs() {
       return configDescrs;
     }
   }
