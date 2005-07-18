@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.26 2005-07-14 23:33:16 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.27 2005-07-18 17:36:30 troberts Exp $
  */
 
 /*
@@ -78,6 +78,7 @@ public class TestRepairCrawler extends LockssTestCase {
     theDaemon.setIdentityManager(idm);
     idm.initService(theDaemon);
     mau = new MockArchivalUnit();
+    mau.setAuId("MyMockTestAu");
     cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     crawlRule = new MockCrawlRule();
 
@@ -270,6 +271,7 @@ public class TestRepairCrawler extends LockssTestCase {
   }
 
   public void testFetchFromACacheOnly() throws MalformedIdentityKeyException {
+    idm.addPeerIdentity("127.0.0.1", new MockPeerIdentity("127.0.0.1"));
     PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
 
     Map map = new HashMap();
@@ -277,6 +279,13 @@ public class TestRepairCrawler extends LockssTestCase {
     idm.setAgeedForAu(mau, map);
 
     String repairUrl = "http://example.com/blah.html";
+
+    mau.addUrl(repairUrl);
+    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
+    muc.setUncachedInputStream(new StringInputStream("blah"));
+    muc.setUncachedProperties(new CIProperties());
+    crawlRule.addUrlToCrawl(repairUrl);
+
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
 
@@ -291,6 +300,8 @@ public class TestRepairCrawler extends LockssTestCase {
 	         crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
     assertTrue("Fail! fetch from publisher occurs",
 	       crawler.getFetchPubCnt() == 0);
+    Crawler.Status status = crawler.getStatus();
+    assertEquals(SetUtil.set("127.0.0.1"), status.getSources());
   }
 
   public void testFetchFromCacheIgnoresLocalHost()
@@ -446,6 +457,9 @@ public class TestRepairCrawler extends LockssTestCase {
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
 
+    mau.addUrl(repairUrl);
+    crawlRule.addUrlToCrawl(repairUrl);
+
     Properties p = new Properties();
     //p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
@@ -456,11 +470,12 @@ public class TestRepairCrawler extends LockssTestCase {
 	        crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 0);
     assertTrue("Fetch from publisher" +
 	       crawler.getFetchPubCnt(), crawler.getFetchPubCnt() == 1);
+    Crawler.Status status = crawler.getStatus();
+    assertEquals(SetUtil.set("Publisher"), status.getSources());
   }
 
   public void testFetchFromPublisherOnlyFailure()
       throws MalformedIdentityKeyException {
-    System.err.println("STOP1");
     setAgreeingPeers(3);
 
     String repairUrl = "http://example.com/blah.html";
@@ -536,6 +551,12 @@ public class TestRepairCrawler extends LockssTestCase {
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
     crawler.setTimesToThrow(2); //first publisher, then first other cache
 
+    mau.addUrl(repairUrl);
+    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
+    muc.setUncachedInputStream(new StringInputStream("blah"));
+    muc.setUncachedProperties(new CIProperties());
+    crawlRule.addUrlToCrawl(repairUrl);
+
 
     Properties p = new Properties();
     //   p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
@@ -586,6 +607,18 @@ public class TestRepairCrawler extends LockssTestCase {
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus,
 			  ListUtil.list(repairUrl1, repairUrl2), 0);
+
+    mau.addUrl(repairUrl1);
+    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl1);
+    muc.setUncachedInputStream(new StringInputStream("blah"));
+    muc.setUncachedProperties(new CIProperties());
+    crawlRule.addUrlToCrawl(repairUrl1);
+
+    mau.addUrl(repairUrl2);
+    muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl2);
+    muc.setUncachedInputStream(new StringInputStream("blah"));
+    muc.setUncachedProperties(new CIProperties());
+    crawlRule.addUrlToCrawl(repairUrl2);
 
     Properties p = new Properties();
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_PUBLISHER_ONLY, "true");
@@ -678,13 +711,13 @@ public class TestRepairCrawler extends LockssTestCase {
 			   float percentFetchFromCache) {
       super(au, spec, aus, repairUrls, percentFetchFromCache);
     }
-
+    /*
     protected UrlCacher makeUrlCacher(CachedUrlSet cus, String url) {
       MockUrlCacher uc = new MyMockUrlCacher(url, (MockArchivalUnit)au);
       uc.setForceRefetch(true);
       return uc;
     }
-
+    */
     protected void fetchFromCache(UrlCacher uc, PeerIdentity id)
 	throws IOException {
       fetchCacheCnt++;
@@ -694,7 +727,7 @@ public class TestRepairCrawler extends LockssTestCase {
 	timesToThrow--;
 	throw new LockssUrlConnection.CantProxyException("Test");
       }
-//       super.fetchFromCache(uc, id);
+      super.fetchFromCache(uc, id);
     }
 
     /**
@@ -718,7 +751,7 @@ public class TestRepairCrawler extends LockssTestCase {
 	throw new CacheException("Test");
       }
 
-//       super.fetchFromPublisher(muc);
+      super.fetchFromPublisher(uc);
     }
 
     protected int getFetchPubCnt(){

@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.42 2005-07-18 08:10:26 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.43 2005-07-18 17:36:30 troberts Exp $
  */
 
 /*
@@ -360,6 +360,7 @@ public class RepairCrawler extends CrawlerImpl {
     uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
     try {
       cache(uc, addr);
+      crawlStatus.addSource(addr); 
     } catch (IOException e) {
       logger.warning("Repair from cache failed", e);
       throw new LockssUrlConnection.CantProxyException(e.toString());
@@ -395,6 +396,7 @@ public class RepairCrawler extends CrawlerImpl {
       uc.setProxy(proxyHost, proxyPort);
     }
     uc.cache();
+    crawlStatus.addSource("Publisher");
   }
 
   private IdentityManager getIdentityManager() {
