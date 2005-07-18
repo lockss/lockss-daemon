@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.24 2005-02-02 09:42:48 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.25 2005-07-18 17:35:32 troberts Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class CrawlManagerStatus implements StatusAccessor {
   private static final String NUM_URLS_NOT_MODIFIED = "num_urls_not_modified";
   private static final String START_URLS = "start_urls";
   private static final String CRAWL_STATUS = "crawl_status";
+  private static final String SOURCES = "sources";
 
   private List sortRules = null;
 
@@ -77,6 +78,8 @@ public class CrawlManagerStatus implements StatusAccessor {
 		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "Starting Url(s)",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(SOURCES, "Source(s)",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
@@ -193,6 +196,8 @@ public class CrawlManagerStatus implements StatusAccessor {
 		    "single_crawl_status", "parsed."+key));
     row.put(START_URLS,
 	    (StringUtil.separatedString(status.getStartUrls(), "\n")));
+    row.put(SOURCES,
+	    (StringUtil.separatedString(status.getSources(), "\n")));
     row.put(CRAWL_STATUS, status.getCrawlStatus());
     return row;
   }

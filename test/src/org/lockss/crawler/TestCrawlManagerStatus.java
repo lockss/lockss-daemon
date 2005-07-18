@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.18 2005-01-19 18:04:50 tlipkis Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.19 2005-07-18 17:35:32 troberts Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   private static final String CRAWL_STATUS = "crawl_status";
   private static final String NC_TYPE = "New Content";
   private static final String REPAIR_TYPE = "Repair";
+  private static final String SOURCES = "sources";
 
   private static final String STATUS_INCOMPLETE = "Active";
   private static final String STATUS_ERROR = "Error";
@@ -82,6 +83,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 		  new ColumnDescriptor(NUM_URLS_NOT_MODIFIED, "Not Modified ",
 				       ColumnDescriptor.TYPE_INT),
 		  new ColumnDescriptor(START_URLS, "Starting Url(s)",
+				       ColumnDescriptor.TYPE_STRING),
+		  new ColumnDescriptor(SOURCES, "Source(s)",
 				       ColumnDescriptor.TYPE_STRING)
 		  );
 
