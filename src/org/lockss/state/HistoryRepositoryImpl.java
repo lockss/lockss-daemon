@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.57 2005-02-21 03:06:41 tlipkis Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.58 2005-07-18 08:03:48 tlipkis Exp $
  */
 
 /*
@@ -208,6 +208,10 @@ public class HistoryRepositoryImpl
     }
   }
 
+  public File getIdentityAgreementFile() {
+    return new File(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
+  }    
+
   public void storeIdentityAgreements(List idList) {
     try {
       if (logger.isDebug3()) {
@@ -229,7 +233,7 @@ public class HistoryRepositoryImpl
         logger.debug3("Loading identity agreements for AU '" +
                       storedAu.getName() + "'");
       }
-      File idFile = new File(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
+      File idFile = getIdentityAgreementFile();
       IdentityAgreementList idList =
           (IdentityAgreementList)load(idFile, IdentityAgreementList.class);
       if (idList==null) {

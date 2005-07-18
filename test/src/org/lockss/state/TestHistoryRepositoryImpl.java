@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.48 2004-09-29 18:57:56 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.49 2005-07-18 08:03:48 tlipkis Exp $
  */
 
 /*
@@ -408,15 +408,13 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     List idList = repository.loadIdentityAgreements();
     assertEquals(2, idList.size());
     id1 = (IdentityManager.IdentityAgreement)idList.get(0);
-    assertTrue(id1 != null);
-    assertTrue("testID1 is " + testID1.toString() + " but got " +
-	       id1.getPeerIdentity().toString(),
-	       testID1 == id1.getPeerIdentity());
+    assertNotNull(id1);
+    assertSame(testID1, idmgr.stringToPeerIdentity(id1.getId()));
     assertEquals(123, id1.getLastAgree());
     assertEquals(321, id1.getLastDisagree());
 
     id2 = (IdentityManager.IdentityAgreement)idList.get(1);
-    assertTrue(testID2 == id2.getPeerIdentity());
+    assertSame(testID2, idmgr.stringToPeerIdentity(id2.getId()));
     assertEquals(456, id2.getLastAgree());
     assertEquals(654, id2.getLastDisagree());
   }
