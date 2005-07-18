@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.8 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.9 2005-07-18 08:11:39 tlipkis Exp $
  */
 
 /*
@@ -144,6 +144,12 @@ public abstract class ConfigFile {
 	  IOUtil.safeClose(in);
 	}
       }
+    } catch (FileNotFoundException ex) {
+      log.debug("Trying to load " +
+		  "config file (" + m_fileUrl + "): " + ex);
+      m_IOException = ex;
+      m_loadError = ex.toString();
+      throw ex;
     } catch (IOException ex) {
       log.warning("Unexpected exception trying to load " +
 		  "config file (" + m_fileUrl + "): " + ex);
