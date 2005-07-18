@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.8 2005-07-14 23:33:42 troberts Exp $
+ * $Id: ProxyAccessHandler.java,v 1.9 2005-07-18 08:07:12 tlipkis Exp $
  */
 
 /*
@@ -83,10 +83,10 @@ public class ProxyAccessHandler extends IpAccessHandler {
       if (!isRepairRequest) {
 	// Not a repair request from a LOCKSS cache, let the parent
 	// IpAccessHandler handle it.
-	log.debug("Passing proxy request to parent class");
+	log.debug2("Passing proxy request to parent class");
 	super.handle(pathInContext, pathParams, request, response);
       } else {
-	log.debug("Repair request from a LOCKSS cache");
+	log.debug2("Repair request from a LOCKSS cache");
 	// This is a repair request from a LOCKSS cache.  If we don't have
 	// the URL locally, return a 404.  If we have it, allow the request
 	// (passing it on to the ProxyHandler) iff the requestor previously
@@ -98,36 +98,43 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	// XXX this should check all AUs containing URL for *any* with
 	// legal access, then should pass cuurl to next handler
 	CachedUrl cu = pluginMgr.findOneCachedUrl(urlString);
-	if (log.isDebug2()) {
-	  log.debug2("cu: " + cu);
-	}
-	if (cu == null || !cu.hasContent()) {
-	  response.sendError(HttpResponse.__404_Not_Found);
-	  request.setHandled(true);
-	  return; 
-	}
-	ArchivalUnit au = cu.getArchivalUnit();
-	String ip = request.getRemoteAddr();
-	Map agreeMap = idMgr.getAgreed(au);
-	PeerIdentity pid = idMgr.stringToPeerIdentity(ip);
-	log.debug3("Got "+pid+" from identity manager for "+ip);
- 	if (agreeMap != null && agreeMap.containsKey(pid)) {
-	  // Allow the request to be processed by the ProxyHandler.
-	  // Do not call cu.release(), as the input stream will likely be
-	  // used by ProxyHandler
-	  log.debug3("Found "+ip+" in agree map");
-	  return;
-	} else {
-	  log.debug3("Agree map: "+agreeMap);
-	  AuUtil.safeRelease(cu);
-	  if (isLogForbidden()) {
-	    log.info("Not serving repair of " + cu + " to " + ip +
-		     " because it never agreed with us.");
-	    log.debug3("agreeMap: "+agreeMap);
+	try {
+	  if (log.isDebug2()) {
+	    log.debug2("cu: " + cu);
 	  }
-	  response.sendError(HttpResponse.__403_Forbidden);
-	  request.setHandled(true);
-	  return;
+	  if (cu == null || !cu.hasContent()) {
+	    response.sendError(HttpResponse.__404_Not_Found);
+	    request.setHandled(true);
+	    return; 
+	  }
+	  ArchivalUnit au = cu.getArchivalUnit();
+	  String ip = request.getRemoteAddr();
+	  if (IPAddr.isLoopbackAddress(ip)) {
+	    String id = request.getField(Constants.X_LOCKSS_REAL_ID);
+	    if (!StringUtil.isNullString(id)) {
+	      log.info("Repair req from loopback (" + ip + "), using id " +
+		       id);
+	      ip = id;
+	    }
+	  }
+	  if (idMgr.hasAgreed(ip, au)) {
+	    // Allow the request to be processed by the ProxyHandler.
+	    log.debug3("Found "+ip+" in agree map");
+	    return;
+	  } else {
+	    if (log.isDebug3()) {
+	      log.debug3("Agree map: "+idMgr.getAgreed(au));
+	    }
+	    if (isLogForbidden()) {
+	      log.info("Not serving repair of " + cu + " to " + ip +
+		       " because it never agreed with us.");
+	    }
+	    response.sendError(HttpResponse.__403_Forbidden);
+	    request.setHandled(true);
+	    return;
+	  }
+	} finally {
+	  AuUtil.safeRelease(cu);
 	}
       }
     } catch (Exception e) {
