@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.19 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.20 2005-07-18 08:11:25 tlipkis Exp $
  */
 
 /*
@@ -747,6 +747,16 @@ public class ConfigManager implements LockssManager {
       }
     }
     cacheConfigInited = true;
+  }
+
+  /** Return the list of cache config file names */
+  public List getCacheConfigFiles() {
+    List res = new ArrayList();
+    for (int ix = 0; ix < cacheConfigFiles.length; ix++) {
+      File cfile = new File(cacheConfigDir, cacheConfigFiles[ix]);
+      res.add(cfile);
+    }
+    return res;
   }
 
   /** Return a File for the named cache config file */
