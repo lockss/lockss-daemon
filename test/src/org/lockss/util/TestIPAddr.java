@@ -1,5 +1,5 @@
 /*
- * $Id: TestIPAddr.java,v 1.2 2004-01-20 19:22:59 tlipkis Exp $
+ * $Id: TestIPAddr.java,v 1.3 2005-07-18 07:59:51 tlipkis Exp $
  */
 
 /*
@@ -73,5 +73,17 @@ public class TestIPAddr extends LockssTestCase {
     IPAddr a[] = IPAddr.getAllByName("1.2.3.4");
     assertEquals(ListUtil.list(IPAddr.getByName("1.2.3.4")),
 		 ListUtil.fromArray(a));
+  }
+
+  public void testIsLoopbackAddress() throws Exception {
+    assertTrue(IPAddr.getByName("127.0.0.1").isLoopbackAddress());
+    assertTrue(IPAddr.getByName("127.0.0.255").isLoopbackAddress());
+    assertFalse(IPAddr.getByName("127.0.0.0").isLoopbackAddress());
+    assertFalse(IPAddr.getByName("1.2.3.4").isLoopbackAddress());
+
+    // static version
+    assertTrue(IPAddr.isLoopbackAddress("127.0.0.1"));
+    assertFalse(IPAddr.isLoopbackAddress("127.0.1.1"));
+    assertFalse(IPAddr.isLoopbackAddress("127.0.0.0.1"));
   }
 }
