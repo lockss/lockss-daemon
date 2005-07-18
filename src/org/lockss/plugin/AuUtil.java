@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.4 2005-07-09 21:55:58 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.5 2005-07-18 08:09:25 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.text.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
+import org.lockss.util.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
@@ -48,6 +49,7 @@ import org.lockss.repository.*;
  * writers, thus there's no need to muddy those interfaces.
  */
 public class AuUtil {
+  private static Logger log = Logger.getLogger("AuUtil");
 
   public static LockssDaemon getDaemon(ArchivalUnit au) {
     return au.getPlugin().getDaemon();
@@ -101,15 +103,63 @@ public class AuUtil {
       String val = config.get(key);
       if (val == null) {
 	if (descr.isDefinitional()) {
+	  log.debug(descr + " is definitional, absent from " + config);
 	  return false;
 	}
       } else {
 	if (!descr.isValidValueOfType(val)) {
+	  log.debug(val + " is not a valid value of type " + descr);
 	  return false;
 	}
       }
     }
     return true;
+  }
+
+  public static boolean isClosed(ArchivalUnit au) {
+    return getBoolAuParamOrTitleDefault(au, ConfigParamDescr.AU_CLOSED, false);
+  }
+
+  public static boolean isPubDown(ArchivalUnit au) {
+    return getBoolAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN, false);
+  }
+
+  public static boolean getBoolAuParamOrTitleDefault(ArchivalUnit au,
+						     ConfigParamDescr cpd,
+						     boolean dfault) {
+    Object val = getAuParamOrTitleDefault(au, cpd);
+    if (val instanceof Boolean) {
+      return ((Boolean)val).booleanValue();
+    }
+    return dfault;
+  }
+
+  public static Object getAuParamOrTitleDefault(ArchivalUnit au,
+						ConfigParamDescr cpd) {
+    String key = cpd.getKey();
+    String val = null;
+    Configuration auConfig = au.getConfiguration();
+    if (auConfig == null) {
+      return null;
+    }
+    val = auConfig.get(key);
+    if (StringUtil.isNullString(val)) {
+      TitleConfig tc = au.getTitleConfig();
+      if (tc != null) {
+	ConfigParamAssignment cpa = tc.findCpa(cpd);
+	if (cpa != null) {
+	  val = cpa.getValue();
+	}
+      }
+    }
+    if (val == null) {
+      return null;
+    }
+    try {
+      return cpd.getValueOfType(val);
+    } catch (ConfigParamDescr.InvalidFormatException e) {
+      return null;
+    }
   }
 
   /** Call release() on the CachedUrl, ignoring any errors */

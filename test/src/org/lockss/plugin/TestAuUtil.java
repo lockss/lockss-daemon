@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.1 2005-01-04 02:59:51 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.2 2005-07-18 08:09:25 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,42 @@ public class TestAuUtil extends LockssTestCase {
     super.tearDown();
   }
 
+  TitleConfig makeTitleConfig(ConfigParamDescr descr, String val) {
+    TitleConfig tc = new TitleConfig("foo", new MockPlugin());
+    tc.setParams(ListUtil.list(new ConfigParamAssignment(descr, val)));
+    return tc;
+  }
+
+  public void testIsClosed() throws Exception {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    assertFalse(AuUtil.isClosed(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.AU_CLOSED.getKey(), "true"));
+    assertTrue(AuUtil.isClosed(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.AU_CLOSED, "false"));
+    assertTrue(AuUtil.isClosed(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs("foo", "bar"));
+    assertFalse(AuUtil.isClosed(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.AU_CLOSED, "true"));
+    assertTrue(AuUtil.isClosed(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.AU_CLOSED, "false"));
+    assertFalse(AuUtil.isClosed(mau));
+  }
+
+  public void testIsPubDown() throws Exception {
+    LocalMockArchivalUnit mau = new LocalMockArchivalUnit();
+    assertFalse(AuUtil.isPubDown(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs(ConfigParamDescr.PUB_DOWN.getKey(), "true"));
+    assertTrue(AuUtil.isPubDown(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_DOWN, "false"));
+    assertTrue(AuUtil.isPubDown(mau));
+    mau.setConfiguration(ConfigurationUtil.fromArgs("foo", "bar"));
+    assertFalse(AuUtil.isPubDown(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_DOWN, "true"));
+    assertTrue(AuUtil.isPubDown(mau));
+    mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_DOWN, "false"));
+    assertFalse(AuUtil.isPubDown(mau));
+  }
+
   public void testIsConfigCompatibleWithPlugin() {
     String plugName = "org.lockss.plugin.base.TestAuUtil$MyMockBasePlugin";
     mbp.setConfigDescrs(ListUtil.list(PD_VOL, PD_YEAR, PD_OPT));
@@ -97,6 +133,16 @@ public class TestAuUtil extends LockssTestCase {
     assertFalse(AuUtil.isConfigCompatibleWithPlugin(auconf, mbp));
   }
 
+
+  private static class LocalMockArchivalUnit extends MockArchivalUnit {
+    TitleConfig tc = null;
+    public TitleConfig getTitleConfig() {
+      return tc;
+    }
+    public void setTitleConfig(TitleConfig tc) {
+      this.tc = tc;
+    }
+  }
 
   private static class LocalMockPlugin extends BasePlugin {
     String name;
@@ -134,7 +180,7 @@ public class TestAuUtil extends LockssTestCase {
       return name;
     }
 
-    public List getAuConfigDescrs() {
+    public List getLocalAuConfigDescrs() {
       return configDescrs;
     }
   }
