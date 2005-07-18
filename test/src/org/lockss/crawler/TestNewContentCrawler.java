@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.35 2005-05-25 20:21:07 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.36 2005-07-18 17:36:07 troberts Exp $
  */
 
 /*
@@ -405,6 +405,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     assertEquals(SetUtil.set(startUrl, url1, url2, url3, permissionPage),
 		 crawlStatus.getUrlsFetched());
     assertEquals(4, crawlStatus.getNumParsed());
+    assertEquals(SetUtil.set("Publisher"), crawlStatus.getSources());
   }
 
   public void testGetStatusCrawlDoneNotModified() {

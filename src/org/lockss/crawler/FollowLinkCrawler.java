@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.26 2005-05-25 20:21:07 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.27 2005-07-18 17:36:06 troberts Exp $
  */
 
 /*
@@ -133,6 +133,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     }
     logger.info("Beginning depth " + maxDepth + " crawl of " + au);
     crawlStatus.signalCrawlStarted();
+    crawlStatus.addSource("Publisher");
     cus = au.getAuCachedUrlSet();
     parsedPages = new HashSet();
 
