@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.7 2005-04-21 07:22:32 tlipkis Exp $
+ * $Id: TestPlatformInfo.java,v 1.8 2005-07-18 07:59:30 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,14 @@ public class TestPlatformInfo extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     info = PlatformInfo.getInstance();
+  }
+
+  public void testGetSystemTempDir() {
+    String javatmp = System.getProperty("java.io.tmpdir");
+    assertEquals(javatmp, PlatformInfo.getSystemTempDir());
+    String parmtmp = "/another/tmp/dir";
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_TMPDIR, parmtmp);
+    assertEquals(parmtmp, PlatformInfo.getSystemTempDir());
   }
 
   public void testGetUnfilteredTcpPorts() throws Exception {

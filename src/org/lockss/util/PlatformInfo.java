@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.10 2005-04-21 07:22:33 tlipkis Exp $
+ * $Id: PlatformInfo.java,v 1.11 2005-07-18 07:59:30 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,11 @@ public class PlatformInfo {
   public static final String PARAM_UNFILTERED_PORTS =
     Configuration.PLATFORM + "unfilteredTcpPorts";
 
+  /** Set to tmp dir appropriate for platform.  If not set, java.io.tmpdir
+   * system property is used
+   */
+  public static final String PARAM_TMPDIR = Configuration.PLATFORM + "tmpDir";
+
   static PlatformInfo instance;
 
   /** Return the singleton PlatformInfo instance */
@@ -69,6 +74,14 @@ public class PlatformInfo {
       }
     }
     return instance;
+  }
+
+  /** Return the system temp directory, from config parameter if specified
+   * else java.io.tmpdir System property
+   */
+  public static String getSystemTempDir() {
+    Configuration config = Configuration.getCurrentConfig();
+    return config.get(PARAM_TMPDIR, System.getProperty("java.io.tmpdir"));
   }
 
   public List getUnfilteredTcpPorts() {
