@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.6 2005-02-14 03:30:09 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.7 2005-07-18 08:10:09 tlipkis Exp $
  */
 
 /*
@@ -82,6 +82,19 @@ public class TestTitleConfig extends LockssTestCase {
     Configuration exp = ConfigManager.newConfiguration();
     exp.put("key1", "a");
     exp.put("key2", "foo");
+    assertEquals(exp, config);
+  }
+
+  public void testGetConfigExcludesDefaultOnlyParam() {
+    ConfigParamDescr d1 = new ConfigParamDescr("key1");
+    ConfigParamDescr d2 = new ConfigParamDescr("key2").setDefaultOnly(true);
+    ConfigParamAssignment a1 = new ConfigParamAssignment(d1, "a");
+    ConfigParamAssignment a2 = new ConfigParamAssignment(d2, "foo");
+    TitleConfig tc1 = new TitleConfig("a", "b");
+    tc1.setParams(ListUtil.list(a1, a2));
+    Configuration config = tc1.getConfig();
+    Configuration exp = ConfigManager.newConfiguration();
+    exp.put("key1", "a");
     assertEquals(exp, config);
   }
 

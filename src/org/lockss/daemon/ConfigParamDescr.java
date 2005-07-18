@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.21 2005-01-19 04:14:50 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.22 2005-07-18 08:10:09 tlipkis Exp $
  */
 
 /*
@@ -66,113 +66,119 @@ public class ConfigParamDescr implements Comparable {
       "String", "Integer", "URL", "Year", "Boolean", "Positive Integer",
       "Range", "Numeric Range", "Set"};
 
-  public static final ConfigParamDescr VOLUME_NUMBER = new ConfigParamDescr();
-  static {
-    VOLUME_NUMBER.setKey("volume");
-    VOLUME_NUMBER.setDisplayName("Volume No.");
-    VOLUME_NUMBER.setType(TYPE_POS_INT);
-    VOLUME_NUMBER.setSize(8);
-  }
+  public static final ConfigParamDescr VOLUME_NUMBER =
+    new ConfigParamDescr()
+    .setKey("volume")
+    .setDisplayName("Volume No.")
+    .setType(TYPE_POS_INT)
+    .setSize(8);
 
-  public static final ConfigParamDescr ISSUE_RANGE = new ConfigParamDescr();
-  static {
-    ISSUE_RANGE.setKey("issue_range");
-    ISSUE_RANGE.setDisplayName("Issue Range");
-    ISSUE_RANGE.setType(TYPE_RANGE);
-    ISSUE_RANGE.setSize(20);
-    ISSUE_RANGE.setDescription("A Range of issues in the form: aaa-zzz");
-  }
+  public static final ConfigParamDescr ISSUE_RANGE =
+    new ConfigParamDescr()
+    .setKey("issue_range")
+    .setDisplayName("Issue Range")
+    .setType(TYPE_RANGE)
+    .setSize(20)
+    .setDescription("A Range of issues in the form: aaa-zzz");
 
-  public static final ConfigParamDescr NUM_ISSUE_RANGE = new ConfigParamDescr();
-  static {
-    NUM_ISSUE_RANGE.setKey("num_issue_range");
-    NUM_ISSUE_RANGE.setDisplayName("Numeric Issue Range");
-    NUM_ISSUE_RANGE.setType(TYPE_RANGE);
-    NUM_ISSUE_RANGE.setSize(20);
-    NUM_ISSUE_RANGE.setDescription("A Range of issues in the form: min-max");
-  }
+  public static final ConfigParamDescr NUM_ISSUE_RANGE =
+    new ConfigParamDescr()
+    .setKey("num_issue_range")
+    .setDisplayName("Numeric Issue Range")
+    .setType(TYPE_RANGE)
+    .setSize(20)
+    .setDescription("A Range of issues in the form: min-max");
 
-  public static final ConfigParamDescr ISSUE_SET = new ConfigParamDescr();
-  static {
-    ISSUE_SET.setKey("issue_set");
-    ISSUE_SET.setDisplayName("Issue Set");
-    ISSUE_SET.setType(TYPE_SET);
-    ISSUE_SET.setSize(20);
-    ISSUE_SET.setDescription("A comma delimited list of issues. (eg issue1, issue2)");
-  }
+  public static final ConfigParamDescr ISSUE_SET =
+    new ConfigParamDescr()
+    .setKey("issue_set")
+    .setDisplayName("Issue Set")
+    .setType(TYPE_SET)
+    .setSize(20)
+    .setDescription("A comma delimited list of issues. (eg issue1, issue2)");
 
-  public static final ConfigParamDescr YEAR = new ConfigParamDescr();
-  static {
-    YEAR.setKey("year");
-    YEAR.setDisplayName("Year");
-    YEAR.setType(TYPE_YEAR);
-    YEAR.setSize(4);
-    YEAR.setDescription("Four digit year (e.g., 2004)");
-  }
+  public static final ConfigParamDescr YEAR =
+    new ConfigParamDescr()
+    .setKey("year")
+    .setDisplayName("Year")
+    .setType(TYPE_YEAR)
+    .setSize(4)
+    .setDescription("Four digit year (e.g., 2004)");
 
-  public static final ConfigParamDescr BASE_URL = new ConfigParamDescr();
-  static {
-    BASE_URL.setKey("base_url");
-    BASE_URL.setDisplayName("Base URL");
-    BASE_URL.setType(TYPE_URL);
-    BASE_URL.setSize(40);
-    BASE_URL.setDescription("Usually of the form http://<journal-name>.com/");
-  }
+  public static final ConfigParamDescr BASE_URL =
+    new ConfigParamDescr()
+    .setKey("base_url")
+    .setDisplayName("Base URL")
+    .setType(TYPE_URL)
+    .setSize(40)
+    .setDescription("Usually of the form http://<journal-name>.com/");
 
-  public static final ConfigParamDescr JOURNAL_DIR = new ConfigParamDescr();
-  static {
-    JOURNAL_DIR.setKey("journal_dir");
-    JOURNAL_DIR.setDisplayName("Journal Directory");
-    JOURNAL_DIR.setType(TYPE_STRING);
-    JOURNAL_DIR.setSize(40);
-    JOURNAL_DIR.setDescription("Directory name for journal content (i.e. 'american_imago').");
-  }
+  public static final ConfigParamDescr JOURNAL_DIR =
+    new ConfigParamDescr()
+    .setKey("journal_dir")
+    .setDisplayName("Journal Directory")
+    .setType(TYPE_STRING)
+    .setSize(40)
+    .setDescription("Directory name for journal content (i.e. 'american_imago').");
 
-  public static final ConfigParamDescr JOURNAL_ABBR = new ConfigParamDescr();
-  static {
-    JOURNAL_ABBR.setKey("journal_abbr");
-    JOURNAL_ABBR.setDisplayName("Journal Abbreviation");
-    JOURNAL_ABBR.setType(TYPE_STRING);
-    JOURNAL_ABBR.setSize(10);
-    JOURNAL_ABBR.setDescription("Abbreviation for journal (often used as part of file names).");
-  }
+  public static final ConfigParamDescr JOURNAL_ABBR =
+    new ConfigParamDescr()
+    .setKey("journal_abbr")
+    .setDisplayName("Journal Abbreviation")
+    .setType(TYPE_STRING)
+    .setSize(10)
+    .setDescription("Abbreviation for journal (often used as part of file names).");
 
-  public static final ConfigParamDescr JOURNAL_ID = new ConfigParamDescr();
-  static {
-    JOURNAL_ID.setKey("journal_id");
-    JOURNAL_ID.setDisplayName("Journal Identifier");
-    JOURNAL_ID.setType(TYPE_STRING);
-    JOURNAL_ID.setSize(40);
-    JOURNAL_ID.setDescription("Identifier for journal (often used as part of file names)");
-  }
+  public static final ConfigParamDescr JOURNAL_ID =
+    new ConfigParamDescr()
+    .setKey("journal_id")
+    .setDisplayName("Journal Identifier")
+    .setType(TYPE_STRING)
+    .setSize(40)
+    .setDescription("Identifier for journal (often used as part of file names)");
 
-  public static final ConfigParamDescr PUBLISHER_NAME = new ConfigParamDescr();
-  static {
-    PUBLISHER_NAME.setKey("publisher_name");
-    PUBLISHER_NAME.setDisplayName("Publisher Name");
-    PUBLISHER_NAME.setType(TYPE_STRING);
-    PUBLISHER_NAME.setSize(40);
-    PUBLISHER_NAME.setDescription("Publisher Name for Archival Unit");
+  public static final ConfigParamDescr PUBLISHER_NAME =
+    new ConfigParamDescr()
+    .setKey("publisher_name")
+    .setDisplayName("Publisher Name")
+    .setType(TYPE_STRING)
+    .setSize(40)
+    .setDescription("Publisher Name for Archival Unit");
 
-  }
+  public static final ConfigParamDescr OAI_REQUEST_URL =
+    new ConfigParamDescr()
+    .setKey("oai_request_url")
+    .setDisplayName("OAI Request URL")
+    .setType(TYPE_URL)
+    .setSize(40)
+    .setDescription("Usually of the form http://<journal-name>.com/");
 
-  public static final ConfigParamDescr OAI_REQUEST_URL = new ConfigParamDescr();
-  static {
-    OAI_REQUEST_URL.setKey("oai_request_url");
-    OAI_REQUEST_URL.setDisplayName("OAI Request URL");
-    OAI_REQUEST_URL.setType(TYPE_URL);
-    OAI_REQUEST_URL.setSize(40);
-    OAI_REQUEST_URL.setDescription("Usually of the form http://<journal-name>.com/");
-  }
+  public static final ConfigParamDescr OAI_SPEC =
+    new ConfigParamDescr()
+    .setKey("oai_spec")
+    .setDisplayName("OAI Journal Spec")
+    .setType(TYPE_STRING)
+    .setSize(40)
+    .setDescription("Spec for journal in the OAI crawl");
 
-  public static final ConfigParamDescr OAI_SPEC = new ConfigParamDescr();
-  static {
-    OAI_SPEC.setKey("oai_spec");
-    OAI_SPEC.setDisplayName("OAI Journal Spec");
-    OAI_SPEC.setType(TYPE_STRING);
-    OAI_SPEC.setSize(40);
-    OAI_SPEC.setDescription("Spec for journal in the OAI crawl");
-  }
+  // Internal use
+  public static final ConfigParamDescr AU_CLOSED =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setDefaultOnly(true)
+    .setKey("au_closed")
+    .setDisplayName("AU Closed")
+    .setType(TYPE_BOOLEAN)
+    .setDescription("If true, AU is complete, no more content will be added");
+
+  public static final ConfigParamDescr PUB_DOWN =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setDefaultOnly(true)
+    .setKey("pub_down")
+    .setDisplayName("Pub Down")
+    .setType(TYPE_BOOLEAN)
+    .setDescription("If true, AU is no longer available from the publisher");
 
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, YEAR, JOURNAL_ID,
@@ -189,6 +195,11 @@ public class ConfigParamDescr implements Comparable {
   // A parameter is definitional if its value is integral to the identity
   // of the AU.  (I.e., if changing it results in a different AU.)
   private boolean definitional = true;
+
+  // default-only parameters in a TitleConfig are not copied to the AU
+  // config; they are used only to provide a default value if the value is
+  // not explicitly set in the AU config
+  private boolean defaultOnly = false;
 
   public ConfigParamDescr() {
   }
@@ -208,9 +219,11 @@ public class ConfigParamDescr implements Comparable {
   /**
    * Set the parameter key
    * @param key the new key
+   * @return this
    */
-  public void setKey(String key) {
+  public ConfigParamDescr setKey(String key) {
     this.key = key;
+    return this;
   }
 
   /**
@@ -224,9 +237,11 @@ public class ConfigParamDescr implements Comparable {
   /**
    * Set the parameter display name
    * @param displayName the new display name
+   * @return this
    */
-  public void setDisplayName(String displayName) {
+  public ConfigParamDescr setDisplayName(String displayName) {
     this.displayName = displayName;
+    return this;
   }
 
   /**
@@ -240,9 +255,11 @@ public class ConfigParamDescr implements Comparable {
   /**
    * Set the parameter description
    * @param description the new description
+   * @return this
    */
-  public void setDescription(String description) {
+  public ConfigParamDescr setDescription(String description) {
     this.description = description;
+    return this;
   }
 
   /**
@@ -258,8 +275,9 @@ public class ConfigParamDescr implements Comparable {
    * called, and the type is one for which there is a reasonable default
    * size, this will also set the size to the reasonable default.
    * @param type the new type
+   * @return this
    */
-  public void setType(int type) {
+  public ConfigParamDescr setType(int type) {
     this.type = type;
     // if no size has been set, set a reasonable default for some types
     if (size == -1) {
@@ -271,6 +289,7 @@ public class ConfigParamDescr implements Comparable {
       default:
       }
     }
+    return this;
   }
 
   /**
@@ -284,13 +303,21 @@ public class ConfigParamDescr implements Comparable {
   /**
    * Set the suggested input field size
    * @param size the new size
+   * @return this
    */
-  public void setSize(int size) {
+  public ConfigParamDescr setSize(int size) {
     this.size = size;
+    return this;
   }
 
-  public void setDefinitional(boolean isDefinitional) {
+  /**
+   * Set the "definitional" flag.
+   * @param isDefinitional the new value
+   * @return this
+   */
+  public ConfigParamDescr setDefinitional(boolean isDefinitional) {
     definitional = isDefinitional;
+    return this;
   }
 
   /** A parameter is definitional if its value is integral to the identity
@@ -299,6 +326,25 @@ public class ConfigParamDescr implements Comparable {
    */
   public boolean isDefinitional() {
     return definitional;
+  }
+
+  /**
+   * Set the "defaultOnly" flag.
+   * @param isDefaultOnly the new value
+   * @return this
+   */
+  public ConfigParamDescr setDefaultOnly(boolean isDefaultOnly) {
+    defaultOnly = isDefaultOnly;
+    return this;
+  }
+
+  /** Default-only parameters in a TitleConfig are not copied to the AU
+   * config; they are used only to provide a default value if the value is
+   * not explicitly set in the AU config.
+   * @return true if the parameter is defaultOnly
+   */
+  public boolean isDefaultOnly() {
+    return defaultOnly;
   }
 
   public boolean isValidValueOfType(String val) {

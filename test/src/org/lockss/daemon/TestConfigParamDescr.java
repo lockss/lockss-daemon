@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigParamDescr.java,v 1.3 2005-01-19 04:14:49 tlipkis Exp $
+ * $Id: TestConfigParamDescr.java,v 1.4 2005-07-18 08:10:09 tlipkis Exp $
  */
 
 /*
@@ -52,18 +52,30 @@ public class TestConfigParamDescr extends LockssTestCase {
   public void testAccessors() {
     ConfigParamDescr d1 = new ConfigParamDescr("k1");
     assertEquals("k1", d1.getKey());
-    d1.setKey("k2");
+    assertSame(d1, d1.setKey("k2"));
     assertEquals("k2", d1.getKey());
+
     assertEquals("k2", d1.getDisplayName());
-    d1.setKey("foob");
+    assertSame(d1, d1.setKey("foob"));
     assertEquals("foob", d1.getDisplayName());
+
     assertNull(d1.getDescription());
-    d1.setDescription("ddd");
+    assertSame(d1, d1.setDescription("ddd"));
     assertEquals("ddd", d1.getDescription());
-    d1.setType(3);
-    d1.setSize(47);
+
+    assertSame(d1, d1.setType(3));
     assertEquals(3, d1.getType());
+
+    assertSame(d1, d1.setSize(47));
     assertEquals(47, d1.getSize());
+
+    assertTrue(d1.isDefinitional());
+    assertSame(d1, d1.setDefinitional(false));
+    assertFalse(d1.isDefinitional());
+
+    assertFalse(d1.isDefaultOnly());
+    assertSame(d1, d1.setDefaultOnly(true));
+    assertTrue(d1.isDefaultOnly());
   }
 
   public void testSizeDefault() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.8 2005-02-14 03:30:11 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.9 2005-07-18 08:10:09 tlipkis Exp $
  */
 
 /*
@@ -155,7 +155,9 @@ public class TitleConfig {
     for (Iterator iter = params.iterator(); iter.hasNext(); ) {
       ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
       ConfigParamDescr cpd = cpa.getParamDescr();
-      config.put(cpd.getKey(), cpa.getValue());
+      if (!cpd.isDefaultOnly()) {
+	config.put(cpd.getKey(), cpa.getValue());
+      }
     }
     return config;
   }
@@ -191,7 +193,8 @@ public class TitleConfig {
       ConfigParamDescr cpd = cpa.getParamDescr();
       if (cpd.isDefinitional()) {
 	if (cpa.isEditable() ||
-	    !StringUtil.equalStrings(cpa.getValue(), config.get(cpd.getKey()))) {
+	    !StringUtil.equalStrings(cpa.getValue(),
+				     config.get(cpd.getKey()))) {
 	  return false;
 	}
       }
@@ -211,7 +214,7 @@ public class TitleConfig {
 	 iter.hasNext(); ) {
       ConfigParamDescr reqd = (ConfigParamDescr)iter.next();
       if (reqd.isDefinitional()) {
-	if (!hasDescr(reqd)) {
+	if (!assignsDescr(reqd)) {
 	  return false;
 	}
       }
@@ -219,17 +222,25 @@ public class TitleConfig {
     return true;
   }
 
-  private boolean hasDescr(ConfigParamDescr descr) {
+  public ConfigParamAssignment findCpa(ConfigParamDescr descr) {
     for (Iterator iter = params.iterator(); iter.hasNext(); ) {
       ConfigParamAssignment cpa = (ConfigParamAssignment)iter.next();
       ConfigParamDescr cpd = cpa.getParamDescr();
-      if (!cpa.isEditable() && descr.equals(cpd)) {
-	return true;
+      if (descr.equals(cpd)) {
+	return cpa;
       }
+    }
+    return null;
+  }
+
+  private boolean assignsDescr(ConfigParamDescr descr) {
+    ConfigParamAssignment cpa = findCpa(descr);
+    if (cpa != null) {
+      ConfigParamDescr cpd = cpa.getParamDescr();
+      return !cpa.isEditable();
     }
     return false;
   }
-
 
   /** Generate Properties that will result in this TitleConfig when loaded
    * by BasePlugin */
