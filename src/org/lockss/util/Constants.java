@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.8 2004-09-23 03:36:40 tlipkis Exp $
+ * $Id: Constants.java,v 1.9 2005-07-18 08:03:07 tlipkis Exp $
  */
 
 /*
@@ -69,5 +69,9 @@ public interface Constants {
 
   /** X-LOCKSS value indicating this response comes from the cache */
   public static String X_LOCKSS_FROM_CACHE = "from-cache";
+
+  /** The real identity of a repairer sending a request to localhost, for
+   * testing */
+  public static String X_LOCKSS_REAL_ID = "X-Lockss-Id";
 
 }
