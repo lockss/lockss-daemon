@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.31 2005-06-04 18:59:52 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.32 2005-07-18 19:47:25 tlipkis Exp $
  */
 
 /*
@@ -109,6 +109,8 @@ public class ArchivalUnitStatus
   static class AuSummary implements StatusAccessor {
     static final String TABLE_TITLE = "Archival Units";
 
+    static final String FOOT_STATUS = "Flags may follow status: C means the AU is complete, D means that the AU is no longer available from the publisher";
+
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("AuName", "Volume", ColumnDescriptor.TYPE_STRING),
 //       new ColumnDescriptor("AuNodeCount", "Nodes", ColumnDescriptor.TYPE_INT),
@@ -120,7 +122,8 @@ public class ArchivalUnitStatus
       new ColumnDescriptor("AuPolls", "Polls",
                            ColumnDescriptor.TYPE_STRING),
       new ColumnDescriptor("Damaged", "Status",
-                           ColumnDescriptor.TYPE_STRING),
+                           ColumnDescriptor.TYPE_STRING,
+			   FOOT_STATUS),
       new ColumnDescriptor("AuLastPoll", "Last Poll",
                            ColumnDescriptor.TYPE_DATE),
       new ColumnDescriptor("AuLastCrawl", "Last Crawl",
@@ -195,8 +198,23 @@ public class ArchivalUnitStatus
 			      au));
       rowMap.put("AuLastPoll", new Long(auState.getLastTopLevelPollTime()));
       rowMap.put("AuLastTreeWalk", new Long(auState.getLastTreeWalkTime()));
-      rowMap.put("Damaged", (topNodeState.hasDamage()
-			     ? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK));
+      Object stat = topNodeState.hasDamage()
+	? DAMAGE_STATE_DAMAGED : DAMAGE_STATE_OK;
+      boolean isPubDown = AuUtil.isPubDown(au);
+      boolean isClosed = AuUtil.isClosed(au);
+
+      if (isPubDown || isClosed) {
+	List val = ListUtil.list(stat, " (");
+	if (isClosed) {
+	  val.add("C");
+	}
+	if (isPubDown) {
+	  val.add("D");
+	}
+	val.add(")");
+	stat = val;
+      }
+      rowMap.put("Damaged", stat);
       return rowMap;
     }
   }
@@ -498,6 +516,17 @@ public class ArchivalUnitStatus
 					ColumnDescriptor.TYPE_FLOAT,
                                         new Float(AuUtil.getAuContentSize(au) /
 						  (float)(1024 * 1024))),
+            new StatusTable.SummaryInfo("Status",
+                                        ColumnDescriptor.TYPE_STRING,
+                                        (topNode.hasDamage()
+					 ? DAMAGE_STATE_DAMAGED
+					 : DAMAGE_STATE_OK)),
+            new StatusTable.SummaryInfo("Available From Publisher",
+                                        ColumnDescriptor.TYPE_STRING,
+                                        (AuUtil.isPubDown(au) ? "No" : "Yes")),
+//             new StatusTable.SummaryInfo("Volume Complete",
+//                                         ColumnDescriptor.TYPE_STRING,
+//                                         (AuUtil.isClosed(au) ? "Yes" : "No")),
             new StatusTable.SummaryInfo("Last Crawl Time",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastCrawlTime())),
@@ -507,11 +536,6 @@ public class ArchivalUnitStatus
             new StatusTable.SummaryInfo("Last Treewalk",
                                         ColumnDescriptor.TYPE_DATE,
                                         new Long(state.getLastTreeWalkTime())),
-            new StatusTable.SummaryInfo("Status",
-                                        ColumnDescriptor.TYPE_STRING,
-                                        (topNode.hasDamage()
-					 ? DAMAGE_STATE_DAMAGED
-					 : DAMAGE_STATE_OK)),
             new StatusTable.SummaryInfo("Current Activity",
                                         ColumnDescriptor.TYPE_STRING,
                                         "-")
