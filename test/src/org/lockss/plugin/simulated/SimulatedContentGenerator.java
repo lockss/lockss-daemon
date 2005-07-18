@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.17 2005-02-28 18:15:29 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.18 2005-07-18 08:02:47 tlipkis Exp $
  */
 
 /*
@@ -324,7 +324,7 @@ public class SimulatedContentGenerator {
    * Deletes the generated content tree.
    */
   public void deleteContentTree() {
-    FileTestUtil.delTree(new File(contentRoot));
+    FileUtil.delTree(new File(contentRoot));
   }
 /**
  * Generates a content tree using the current parameters.  Depth of 0 is

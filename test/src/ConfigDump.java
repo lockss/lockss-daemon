@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigDump.java,v 1.10 2005-07-09 22:01:38 tlipkis Exp $
+ * $Id: ConfigDump.java,v 1.11 2005-07-18 08:02:48 tlipkis Exp $
  */
 
 /*
@@ -132,7 +132,7 @@ public class ConfigDump {
   static String createLocalConfig(String hostName) {
     String result = null;
     try {
-      File tmpdir = FileTestUtil.createTempDir("configdump", null);
+      File tmpdir = FileUtil.createTempDir("configdump", null);
       tmpdir.deleteOnExit();
       File localTxt = new File(tmpdir, "local.txt");
       localTxt.deleteOnExit();

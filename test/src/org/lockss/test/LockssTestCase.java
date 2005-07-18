@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.66 2005-05-20 07:29:00 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.67 2005-07-18 08:02:46 tlipkis Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class LockssTestCase extends TestCase {
    * @throws IOException
    */
   public File getTempDir() throws IOException {
-    File tmpdir = FileTestUtil.createTempDir("locksstest", null);
+    File tmpdir = FileUtil.createTempDir("locksstest", null);
     if (tmpdir != null) {
       if (tmpDirs == null) {
 	tmpDirs = new LinkedList();
@@ -143,7 +143,7 @@ public class LockssTestCase extends TestCase {
     if (tmpDirs != null && !isKeepTempFiles()) {
       for (ListIterator iter = tmpDirs.listIterator(); iter.hasNext(); ) {
 	File dir = (File)iter.next();
-	if (FileTestUtil.delTree(dir)) {
+	if (FileUtil.delTree(dir)) {
 	  log.debug2("deltree(" + dir + ") = true");
 	  iter.remove();
 	} else {
