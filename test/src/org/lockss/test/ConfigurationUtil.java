@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.10 2004-09-27 22:38:35 smorabito Exp $
+ * $Id: ConfigurationUtil.java,v 1.11 2005-07-18 07:57:21 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -81,6 +81,17 @@ public class ConfigurationUtil {
     }
   }
 
+  /** Return a Configuration that's the union of the two Configurations
+   */
+  public static Configuration merge(Configuration c1, Configuration c2) {
+    Configuration res = c1.copy();
+    for (Iterator iter = c2.keyIterator(); iter.hasNext(); ) {
+      String key = (String)iter.next();
+      res.put(key, c2.get(key));
+    }
+    return res;
+  }
+
   /** Create a Configuration from the contents of the URLs in the list
    */
   public static Configuration fromUrlList(List l) {
@@ -143,6 +154,21 @@ public class ConfigurationUtil {
   public static boolean setFromArgs(String prop1, String val1,
 				    String prop2, String val2) {
     return installConfig(fromArgs(prop1, val1, prop2, val2));
+  }
+
+  /** Add the value to the current config
+   */
+  public static boolean addFromArgs(String prop, String val) {
+    return installConfig(merge(Configuration.getCurrentConfig(),
+			       fromArgs(prop, val)));
+  }
+
+  /** Add two values to the current config
+   */
+  public static boolean addFromArgs(String prop1, String val1,
+				    String prop2, String val2) {
+    return installConfig(merge(Configuration.getCurrentConfig(),
+			       fromArgs(prop1, val1, prop2, val2)));
   }
 
   /** Install the supplied Configuration as the current configuration.
