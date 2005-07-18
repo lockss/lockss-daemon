@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.9 2005-05-27 08:36:17 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.10 2005-07-18 08:57:39 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class TestEditableDefinablePlugin
     edPlugin.addConfigParamDescr(descr2);
 
     List expected = ListUtil.list(descr1, descr2);
-    List actual = edPlugin.getAuConfigDescrs();
+    List actual = edPlugin.getLocalAuConfigDescrs();
     assertIsomorphic("ConfigParamDescrs", expected, actual);
 
     edPlugin.removeConfigParamDescr(descr1.getKey());
