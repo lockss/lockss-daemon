@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.11 2004-12-09 08:19:36 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.12 2005-07-18 07:59:07 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,13 @@ public class TestPropUtil extends LockssTestCase {
     assertTrue(PropUtil.equalProps(props, test1));
     Properties test2 = PropUtil.fromArgs("k1", "1", "k2", "two");
     assertTrue(test2.toString(), PropUtil.equalProps(p1, test2));
+  }
+
+  public void testFromFile() throws IOException {
+    File tmp = FileTestUtil.writeTempFile("test", "foo=bar\nx.y=z\n");
+    Properties exp = PropUtil.fromArgs("foo", "bar", "x.y", "z");
+    Properties props = PropUtil.fromFile(tmp);
+    assertEquals(exp, props);
   }
 
   public void testDifferentKeys() {

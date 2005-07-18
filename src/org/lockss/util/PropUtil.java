@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.12 2005-03-22 06:23:00 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.13 2005-07-18 07:59:07 tlipkis Exp $
  */
 /*
 
@@ -67,6 +67,18 @@ public class PropUtil {
     props.put(prop1, val1);
     props.put(prop2, val2);
     return props;
+  }
+
+  public static Properties fromFile(File file) throws IOException {
+    Properties res = new Properties();
+    InputStream in = null;
+    try {
+      in = new BufferedInputStream(new FileInputStream(file));
+      res.load(in);
+    } finally {
+      IOUtil.safeClose(in);
+    }
+    return res;
   }
 
   private static boolean isKeySame(String key, Properties p1, Properties p2) {
