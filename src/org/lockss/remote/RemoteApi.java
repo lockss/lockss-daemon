@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.32 2005-06-04 18:59:53 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.33 2005-07-18 08:05:56 tlipkis Exp $
  */
 
 /*
@@ -34,10 +34,12 @@ package org.lockss.remote;
 
 import java.io.*;
 import java.util.*;
+import java.util.zip.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.apache.commons.collections.map.ReferenceMap;
@@ -57,8 +59,21 @@ public class RemoteApi extends BaseLockssDaemonManager {
   static final String AU_PARAM_DISPLAY_NAME =
     PluginManager.AU_PARAM_DISPLAY_NAME;
 
+  static final String PARAM_BACKUP_FILE_VERSION =
+    Configuration.PREFIX + "";
+  static final String DEFAULT_BACKUP_FILE_VERSION = "V1";
+
+
+  static final String BACK_FILE_AU_PROPS = "auprops";
+  static final String BACK_FILE_AGREE_MAP = "idagreement";
+
+  static final String AU_BACK_PROP_AUID = "auid";
+  static final String AU_BACK_PROP_REPOSPEC = "repospec";
+  
+
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
+  private IdentityManager idMgr;
   private RepositoryManager repoMgr;
 
   // cache for proxy objects
@@ -73,6 +88,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     super.startService();
     pluginMgr = getDaemon().getPluginManager();
     configMgr = getDaemon().getConfigManager();
+    idMgr = getDaemon().getIdentityManager();
     repoMgr = getDaemon().getRepositoryManager();
   }
 
@@ -343,13 +359,28 @@ public class RemoteApi extends BaseLockssDaemonManager {
   public InputStream openCacheConfigFile(String cacheConfigFileName)
       throws FileNotFoundException {
     File cfile = configMgr.getCacheConfigFile(cacheConfigFileName);
-    return new FileInputStream(cfile);
+    InputStream res = new FileInputStream(cfile);
+    log.debug3("Opened " + cfile);
+    return res;
   }
 
   static final String AU_BACKUP_FILE_COMMENT = "# AU Configuration saved ";
 
-  /** Open an InputStream on the local AU config file, for backup purposes */
+  /** Open an InputStream on config/state backup file, of a version
+   * determined by config  */
   public InputStream getAuConfigBackupStream(String machineName)
+      throws IOException {
+    String filever = Configuration.getParam(PARAM_BACKUP_FILE_VERSION,
+					    DEFAULT_BACKUP_FILE_VERSION);
+    if ("V1".equalsIgnoreCase(filever)) {
+      return getAuConfigBackupStreamV1(machineName);
+    } else {
+      return getAuConfigBackupStreamV2(machineName);
+    }
+  }
+
+  /** Open an InputStream on the local AU config file, for backup purposes */
+  public InputStream getAuConfigBackupStreamV1(String machineName)
       throws FileNotFoundException {
     InputStream fileStream =
       openCacheConfigFile(ConfigManager.CONFIG_FILE_AU_CONFIG);
@@ -357,6 +388,121 @@ public class RemoteApi extends BaseLockssDaemonManager {
       AU_BACKUP_FILE_COMMENT + new Date() + " from " + machineName + "\n";
     return new SequenceInputStream(new ByteArrayInputStream(line1.getBytes()),
 				   fileStream);
+  }
+
+  /** Open an InputStream on config/state backup file */
+  public InputStream getAuConfigBackupStreamV2(String machineName)
+      throws IOException {
+    File file = createConfigBackupFile(machineName);
+    InputStream fileStream =
+      new BufferedInputStream(new FileInputStream(file));
+//     return fileStream;
+    return
+      new CloseCallbackInputStream(fileStream,
+				   new CloseCallbackInputStream.Callback() {
+				     public void streamClosed(Object file) {
+				       try {
+					 ((File)file).delete();
+				       } catch (Exception e) {}
+				     }},
+				   file);
+  }
+
+  File createConfigBackupFile(String machineName) throws IOException {
+    log.info("createConfigBackupFile()");
+    File file = FileUtil.createTempFile("cfgsave", ".zip");
+    ZipOutputStream zip = null;
+    try {
+      OutputStream out = new BufferedOutputStream(new FileOutputStream(file));
+      zip = new ZipOutputStream(out);
+      for (Iterator iter = configMgr.getCacheConfigFiles().iterator();
+	   iter.hasNext(); ) {
+	File cfgfile = (File)iter.next();
+	if (cfgfile.getName().equals(ConfigManager.CONFIG_FILE_AU_CONFIG)) {
+	  addCfgFileToZip(zip, getAuConfigBackupStreamV1(machineName),
+			  ConfigManager.CONFIG_FILE_AU_CONFIG);
+	} else {
+	  addCfgFileToZip(zip, cfgfile, null);
+	}
+      }
+      List aus = pluginMgr.getAllAus();
+      if (aus != null) {
+	addAusToZip(zip, aus);
+      }
+      zip.close();
+      return file;
+    } catch (IOException e) {
+      log.warning("createConfigBackupFile", e);
+      IOUtil.safeClose(zip);
+      file.delete();
+      throw e;
+    } catch (Exception e) {
+      log.warning("createConfigBackupFile", e);
+      IOUtil.safeClose(zip);
+      file.delete();
+      throw new IOException(e.toString());
+    }
+  }
+
+  void addAusToZip(ZipOutputStream zip, List aus) throws IOException {
+    int dirn = 1;
+    for (Iterator iter = aus.iterator(); iter.hasNext(); ) {
+      ArchivalUnit au = (ArchivalUnit)iter.next();
+      log.info("au: "+ au);
+      if (pluginMgr.isInternalAu(au)) {
+	log.info("internal: "+ au);
+	continue;
+      }
+      String dir = Integer.toString(dirn) + "/";
+      zip.putNextEntry(new ZipEntry(dir));
+      Configuration auConfig = au.getConfiguration();
+      Properties auprops = new Properties();
+      auprops.setProperty(AU_BACK_PROP_AUID, au.getAuId());
+      auprops.setProperty(AU_BACK_PROP_REPOSPEC,
+			  LockssRepositoryImpl.getRepositorySpec(au));
+
+//       auprops.setProperty("repodir", auConfig.get(PluginManager.AU_PARAM_REPOSITORY));
+      zip.putNextEntry(new ZipEntry(dir + BACK_FILE_AU_PROPS));
+      auprops.store(zip, "");
+      zip.closeEntry();
+      if (idMgr.hasAgreeMap(au)) {
+	zip.putNextEntry(new ZipEntry(dir + BACK_FILE_AGREE_MAP));
+	try {
+	  idMgr.writeIdentityAgreementTo(au, zip);
+	} catch (FileNotFoundException e) {}
+	zip.closeEntry();
+      }
+      dirn++;
+    }
+  }
+
+  void addCfgFileToZip(ZipOutputStream z, String fileName, String entName)
+      throws IOException {
+    addCfgFileToZip(z, new File(fileName), entName);
+  }
+
+  void addCfgFileToZip(ZipOutputStream z, File file, String entName)
+      throws IOException {
+    log.info("addCfgFileToZip: "+ file);
+    try {
+      InputStream in = new BufferedInputStream(new FileInputStream(file));
+      if (entName == null) {
+	entName = file.getName();
+      }
+      addCfgFileToZip(z, in, entName);
+    } catch (FileNotFoundException ignore) {}
+  }
+
+  void addCfgFileToZip(ZipOutputStream z, InputStream in, String entName)
+      throws IOException {
+    try {
+      z.putNextEntry(new ZipEntry(entName));
+      StreamUtil.copy(in, z);
+      log.info("added: "+ entName);
+    } finally {
+      IOUtil.safeClose(in);
+      z.closeEntry();
+    }
   }
 
   /** Batch create AUs from AU config backup file.
@@ -370,13 +516,52 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * an unknown format, unsupported version, or contains keys this
    * operation isn't allowed to modify.
    */
-  public BatchAuStatus batchAddAus(boolean doCreate,
-				   InputStream configBackupStream)
+  public BatchAuStatus processSavedConfig(InputStream configBackupStream)
       throws IOException, InvalidAuConfigBackupFile {
     BufferedInputStream bis = new BufferedInputStream(configBackupStream);
-    bis.mark(10000);
+    try {
+      if (ZipUtil.isZipFile(bis)) {
+	return processSavedConfigZip(bis);
+      } else {
+	return processSavedConfigProps(bis);
+      }
+    } finally {
+      IOUtil.safeClose(bis);
+    }
+  }
+
+  public BatchAuStatus processSavedConfigZip(InputStream configBackupStream)
+      throws IOException, InvalidAuConfigBackupFile {
+    File dir = FileUtil.createTempDir("locksscfg", "");
+    try {
+      ZipUtil.unzip(configBackupStream, dir);
+      File autxt = new File(dir, ConfigManager.CONFIG_FILE_AU_CONFIG);
+      if (!autxt.exists()) {
+	throw new InvalidAuConfigBackupFile("Uploaded file does not appear to be a saved AU configuration: no au.txt");
+      }
+      BufferedInputStream auin =
+	new BufferedInputStream(new FileInputStream(autxt));
+      try {
+	BatchAuStatus bas = processSavedConfigProps(auin);
+	bas.setBackupInfo(buildBackupInfo(dir));
+	return bas;
+      } finally {
+	IOUtil.safeClose(auin);
+      }
+    } catch (ZipException e) {
+      FileUtil.delTree(dir);
+      throw new InvalidAuConfigBackupFile("Uploaded file does not appear to be a saved AU configuration: " + e.toString());
+    } catch (IOException e) {
+      FileUtil.delTree(dir);
+      throw e;
+    }
+  }
+
+  public BatchAuStatus processSavedConfigProps(BufferedInputStream auTxtStream)
+      throws IOException, InvalidAuConfigBackupFile {
+    auTxtStream.mark(1000);
     BufferedReader rdr =
-      new BufferedReader(new InputStreamReader(bis,
+      new BufferedReader(new InputStreamReader(auTxtStream,
 					       Constants.DEFAULT_ENCODING));
     String line1 = rdr.readLine();
     if (line1 == null) {
@@ -386,10 +571,10 @@ public class RemoteApi extends BaseLockssDaemonManager {
       log.debug("line1: " + line1);
       throw new InvalidAuConfigBackupFile("Uploaded file does not appear to be a saved AU configuration");
     }
-    bis.reset();
+    auTxtStream.reset();
     Properties allAuProps = new Properties();
     try {
-      allAuProps.load(bis);
+      allAuProps.load(auTxtStream);
     } catch (Exception e) {
       log.warning("Loading AU config backup file", e);
       throw new InvalidAuConfigBackupFile("Uploaded file has illegal format: "
@@ -397,8 +582,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
     }
     Configuration allAuConfig =
       ConfigManager.fromPropertiesUnsealed(allAuProps);
-    int ver = checkLegalBackupFile(allAuConfig);
-    return batchAddAus(doCreate, false, allAuConfig);
+    int ver = checkLegalAuConfigTree(allAuConfig);
+    return batchProcessAus(false, false, allAuConfig, null);
   }
 
   /** Throw InvalidAuConfigBackupFile if the config is of an unknown
@@ -406,7 +591,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * backup, such as any keys outside the AU config subtree.
    * @return the file version number
    */
-  int checkLegalBackupFile(Configuration config)
+  int checkLegalAuConfigTree(Configuration config)
       throws InvalidAuConfigBackupFile {
     String verProp =
       ConfigManager.configVersionProp(ConfigManager.CONFIG_FILE_AU_CONFIG);
@@ -442,9 +627,17 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * an unknown format, unsupported version, or contains keys this
    * operation isn't allowed to modify.
    */
-  public BatchAuStatus batchAddAus(boolean doCreate,
-				   boolean isReactivate,
-				   Configuration allAuConfig) {
+  public BatchAuStatus batchAddAus(boolean isReactivate,
+				   Configuration allAuConfig,
+				   BackupInfo bi)
+      throws IOException {
+    return batchProcessAus(true, isReactivate, allAuConfig, bi);
+  }
+
+  public BatchAuStatus batchProcessAus(boolean doCreate,
+				       boolean isReactivate,
+				       Configuration allAuConfig,
+				       BackupInfo bi) {
     Configuration allPlugs = allAuConfig.getConfigTree(PARAM_AU_TREE);
     BatchAuStatus bas = new BatchAuStatus();
     for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
@@ -457,7 +650,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	Configuration auConf = pluginConf.getConfigTree(auKey);
 	String auid = PluginManager.generateAuId(pluginKey, auKey);
 	bas.add(batchProcessOneAu(doCreate, isReactivate,
-				  pluginp, auid, auConf));
+				  pluginp, auid, auConf, bi));
       }
     }
     return bas;
@@ -471,8 +664,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     BatchAuStatus bas = new BatchAuStatus();
     for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
       String auid = (String)iter.next();
-      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
-      stat.setAuid(auid);
+      BatchAuStatus.Entry stat = bas.newEntry(auid);
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au != null) {
 	stat.setName(au.getName());
@@ -501,8 +693,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
     BatchAuStatus bas = new BatchAuStatus();
     for (Iterator iter = auids.iterator(); iter.hasNext(); ) {
       String auid = (String)iter.next();
-      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
-      stat.setAuid(auid);
+      BatchAuStatus.Entry stat = bas.newEntry(auid);
       ArchivalUnit au = pluginMgr.getAuFromId(auid);
       if (au != null) {
 	stat.setName(au.getName());
@@ -550,9 +741,9 @@ public class RemoteApi extends BaseLockssDaemonManager {
 					boolean isReactivate,
 					PluginProxy pluginp,
 					String auid,
-					Configuration auConfig) {
+					Configuration auConfig,
+					BackupInfo bi) {
     BatchAuStatus.Entry stat = new BatchAuStatus.Entry(auid);
-    stat.setAuid(auid);
     stat.setRepoNames(repoMgr.findExistingRepositoriesFor(auid));
     Configuration oldConfig = pluginMgr.getStoredAuConfiguration(auid);
     String name = null;
@@ -642,6 +833,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	    AuProxy aup = createAndSaveAuConfiguration(pluginp, auConfig);
 	    stat.setStatus("Added", STATUS_ORDER_NORM);
 	    stat.setName(aup.getName());
+	    restoreAuStateFiles(aup, bi);
 	  } else {
 	    stat.setStatus(null, STATUS_ORDER_NORM);
 	  }
@@ -661,6 +853,26 @@ public class RemoteApi extends BaseLockssDaemonManager {
     }
     return stat;
   }
+
+  void restoreAuStateFiles(AuProxy aup, BackupInfo bi) throws IOException {
+    if (bi != null) {
+      File auBackDir = bi.getAuDir(aup.getAuId());
+      if (auBackDir != null) {
+	File agreefile = new File(auBackDir, BACK_FILE_AGREE_MAP);
+	if (agreefile.exists()) {
+	  InputStream in =
+	    new BufferedInputStream(new FileInputStream(agreefile));
+	  try {
+	    idMgr.readIdentityAgreementFrom(aup.getAu(), in);
+	  } finally {
+	    IOUtil.safeClose(in);
+	  }
+	}
+      }
+    }
+  }
+
+
 
   /** Find all AUs in the union of the sets and return a BatchAuStatus with
    * a BatchAuStatus.Entry for each AU indicating whether it could be created,
@@ -684,7 +896,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
       String plugName = tc.getPluginName();
       PluginProxy pluginp = findPluginProxy(plugName);
       if (pluginp == null) {
-	stat = new BatchAuStatus.Entry();
+	stat = bas.newEntry();
 	stat.setStatus("Error", STATUS_ORDER_ERROR);
 	stat.setExplanation("Plugin not found: " + plugName);
       } else {
@@ -692,7 +904,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 	  String auid = PluginManager.generateAuId(pluginp.getPlugin(),
 						   tc.getConfig());
 	  stat =
-	    batchProcessOneAu(false, false, pluginp, auid, tc.getConfig());
+	    batchProcessOneAu(false, false, pluginp,
+			      auid, tc.getConfig(), null);
 	  stat.setTitleConfig(tc);
 	  if ("Unknown".equalsIgnoreCase(stat.getName())) {
 	    stat.setName(tc.getDisplayName());
@@ -725,7 +938,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 					      Iterator iter) {
     while (iter.hasNext()) {
       TitleConfig tc = (TitleConfig)iter.next();
-      BatchAuStatus.Entry stat = new BatchAuStatus.Entry();
+      BatchAuStatus.Entry stat = bas.newEntry();
       String plugName = tc.getPluginName();
       stat.setTitleConfig(tc);
       stat.setName(tc.getDisplayName());
@@ -781,7 +994,8 @@ public class RemoteApi extends BaseLockssDaemonManager {
 						   tc.getConfig());
 	  if (inactiveAuids.contains(auid)) {
 	    BatchAuStatus.Entry stat =
-	      batchProcessOneAu(false, true, pluginp, auid, tc.getConfig());
+	      batchProcessOneAu(false, true, pluginp,
+				auid, tc.getConfig(), null);
 	    stat.setTitleConfig(tc);
 	    if ("Unknown".equalsIgnoreCase(stat.getName())) {
 	      stat.setName(tc.getDisplayName());
@@ -809,13 +1023,36 @@ public class RemoteApi extends BaseLockssDaemonManager {
     return res;
   }
 
+  static int STATUS_ORDER_ERROR = 1;
+  static int STATUS_ORDER_WARN = 2;
+  static int STATUS_ORDER_NORM = 3;
+  static int STATUS_ORDER_LOW = 4;
+
   /** Object describing the status of a batch AU config operation
    * (completed or potential).  Basically a list of {@link
    * RemoteApi.BatchAuStatus.Entry}, one for each AU */
+
+
   public static class BatchAuStatus {
     private List statusList = new ArrayList();
     private List sortedList;
     private int ok = 0;
+    private BackupInfo bi;
+
+    public Entry newEntry() {
+      return new BatchAuStatus.Entry();
+    }
+    public Entry newEntry(String auid) {
+      return new BatchAuStatus.Entry(auid);
+    }
+
+    public void setBackupInfo(BackupInfo bi) {
+      this.bi = bi;
+    }
+
+    public BackupInfo getBackupInfo() {
+      return bi;
+    }
 
     public List getStatusList() {
       if (sortedList == null) {
@@ -856,89 +1093,147 @@ public class RemoteApi extends BaseLockssDaemonManager {
       return false;
     }
 
-  /** Object describing result or possibility of restor(e/ing) a single
-   * AU from a saved or title configuration. */
-  public static class Entry implements Comparable {
-    private String auid;
-    private String name;
-    private String status;
-    private String explanation;
-    private TitleConfig tc;
-    private Configuration config;
-    private List repoNames;
-    private int order = 0;
+    public String toString() {
+      return "[bas: " + statusList + "]";
+    }
 
-    Entry() {
-    }
-    Entry(String auid) {
-      this.auid = auid;
-    }
-    public String getAuId() {
-      return auid;
-    }
-    public String getName() {
-      return name;
-    }
-    public String getStatus() {
-      return status;
-    }
-    public boolean isOk() {
-      return status == null;
-    }
-    public String getExplanation() {
-      return explanation;
-    }
-    public TitleConfig getTitleConfig() {
-      return tc;
-    }
-    public Configuration getConfig() {
-      if (config != null) {
-	return config;
+    /** Object describing result or possibility of restoring a single
+     * AU from a saved config or title db. */
+    public static class Entry implements Comparable {
+      private String auid;
+      private String name;
+      private String status;
+      private String explanation;
+      private TitleConfig tc;
+      private Configuration config;
+      private List repoNames;
+      private File stateFileDir;
+      private int order = 0;
+
+      Entry() {
       }
-      if (tc != null) {
-	return tc.getConfig();
+      Entry(String auid) {
+	this.auid = auid;
       }
-      return null;
-    }
-    public List getRepoNames() {
-      return repoNames;
-    }
-    public void setRepoNames(List lst) {
-      repoNames = lst;
-    }
-    void setStatus(String s, int order) {
-      this.status = s;
-      this.order = order;
-    }
-    void setName(String s) {
-      this.name = s;
-    }
-    void setAuid(String auid) {
-      this.auid = auid;
-    }
-    void setExplanation(String s) {
-      this.explanation = s;
-    }
-    void setTitleConfig(TitleConfig tc) {
-      this.tc = tc;
-    }
-    void setConfig(Configuration config) {
-      this.config = config;
-    }
-    public int compareTo(Object o) {
-      Entry ostat = (Entry)o;
-      int res = order - ostat.order;
-      if (res == 0) {
-	res = coc.compare(getName(), ostat.getName());
+      public String getAuId() {
+	return auid;
       }
-      return res;
+      public String getName() {
+	return name;
+      }
+      public String getStatus() {
+	return status;
+      }
+      public boolean isOk() {
+	return status == null;
+      }
+      public String getExplanation() {
+	return explanation;
+      }
+      public TitleConfig getTitleConfig() {
+	return tc;
+      }
+      public Configuration getConfig() {
+	if (config != null) {
+	  return config;
+	}
+	if (tc != null) {
+	  return tc.getConfig();
+	}
+	return null;
+      }
+      public List getRepoNames() {
+	return repoNames;
+      }
+      public void setRepoNames(List lst) {
+	repoNames = lst;
+      }
+      void setStatus(String s, int order) {
+	this.status = s;
+	this.order = order;
+      }
+      void setName(String s) {
+	this.name = s;
+      }
+      void setAuid(String auid) {
+	this.auid = auid;
+      }
+      void setExplanation(String s) {
+	this.explanation = s;
+      }
+      void setTitleConfig(TitleConfig tc) {
+	this.tc = tc;
+      }
+      void setConfig(Configuration config) {
+	this.config = config;
+      }
+      void setStateFileDir(File dir) {
+	this.stateFileDir = dir;
+      }
+      File getStateFileDir() {
+	return stateFileDir;
+      }
+      public int compareTo(Object o) {
+	Entry ostat = (Entry)o;
+	int res = order - ostat.order;
+	if (res == 0) {
+	  res = coc.compare(getName(), ostat.getName());
+	}
+	return res;
+      }
+      public String toString() {
+	return "[" + name + ", " + status + ", " + getConfig() +
+	  ", " + getExplanation() +"]";
+      }
     }
   }
+
+  public static class BackupInfo {
+    File dir;
+    Map auDirs = new HashMap();
+
+    void setAuDir(String auid, File dir) {
+      auDirs.put(auid, dir);
+    }
+
+    File getAuDir(String auid) {
+      return (File)auDirs.get(auid);
+    }
+
+    public String toString() {
+      return "[BI: " + dir + ", " + auDirs + "]";
+    }
   }
-  static int STATUS_ORDER_ERROR = 1;
-  static int STATUS_ORDER_WARN = 2;
-  static int STATUS_ORDER_NORM = 3;
-  static int STATUS_ORDER_LOW = 4;
+
+  BackupInfo buildBackupInfo(File dir) throws IOException {
+    BackupInfo bi = new BackupInfo();
+    String[] subdirs = dir.list();
+    for (int ix = 0; ix < subdirs.length; ix++) {
+      File onedir = new File(dir, subdirs[ix]);
+      if (onedir.isDirectory()) {
+	Properties auprops = new Properties();
+	try {
+	  File aupropsfile = new File(onedir, BACK_FILE_AU_PROPS);
+
+	  InputStream in =
+	    new BufferedInputStream(new FileInputStream(aupropsfile));
+	  try {
+	    auprops.load(in);
+	  } finally {
+	    IOUtil.safeClose(in);
+	  }
+	  String auid = auprops.getProperty("auid");
+	  log.debug("subdir: " + onedir + ", auid: " + auid);
+	  if (!StringUtil.isNullString(auid)) {
+	    bi.setAuDir(auid, onedir);
+	  }
+	} catch (IOException e) {
+	  log.warning("Building BackupInfo", e);
+	}
+      }
+    }
+    return bi;
+  }
 
   /** Exception thrown if the uploaded AU config backup file isn't valid */
   public static class InvalidAuConfigBackupFile extends Exception {

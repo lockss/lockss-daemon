@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.9 2005-06-04 18:59:52 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.10 2005-07-18 08:05:48 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public class BatchAuConfig extends LockssServlet {
 
   static final String SESSION_KEY_REPO_MAP = "RepoMap";
   static final String SESSION_KEY_AUID_MAP = "AuidMap";
-  static final String SESSION_KEY_STATUS_TABLE = "StatusTable";
+  static final String SESSION_KEY_BACKUP_INFO = "BackupInfo";
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -353,6 +353,7 @@ public class BatchAuConfig extends LockssServlet {
     }
     HttpSession session = req.getSession(true);
     setSessionTimeout(session);
+    session.setAttribute(SESSION_KEY_BACKUP_INFO, bas.getBackupInfo());
     Map auConfs = new HashMap();
     session.setAttribute(SESSION_KEY_AUID_MAP, auConfs);
     java.util.List repos = remoteApi.getRepositoryList();
@@ -616,6 +617,8 @@ public class BatchAuConfig extends LockssServlet {
       displayMenu();
       return;
     }
+    RemoteApi.BackupInfo bi =
+      (RemoteApi.BackupInfo)session.getAttribute(SESSION_KEY_BACKUP_INFO);
     LinkedMap repoMap = (LinkedMap)session.getAttribute(SESSION_KEY_REPO_MAP);
     String[] auids = req.getParameterValues(KEY_AUID);
     String defaultRepo = null;
@@ -665,9 +668,8 @@ public class BatchAuConfig extends LockssServlet {
     }
     if (log.isDebug2()) log.debug2("createConfig: " + createConfig);
 
-    RemoteApi.BatchAuStatus bas = remoteApi.batchAddAus(true,
-							isReactivate,
-							createConfig);
+    RemoteApi.BatchAuStatus bas =
+      remoteApi.batchAddAus(isReactivate, createConfig, bi);
     displayBatchAuStatus(bas);
   }
 
@@ -697,7 +699,7 @@ public class BatchAuConfig extends LockssServlet {
 
   /** Serve the contents of the local AU config file, as
    * application/binary */
-  private void doSaveAll() throws IOException {
+  private void doSaveAll0() throws IOException {
     try {
       InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
       Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
@@ -713,6 +715,48 @@ public class BatchAuConfig extends LockssServlet {
       throw e;
     }
   }
+
+  /** Serve the contents of the local AU config file, as
+   * application/binary */
+  private void doSaveAll() throws IOException {
+    try {
+      InputStream in = remoteApi.getAuConfigBackupStream(getMachineName());
+      try {
+	resp.setContentType("application/binary");
+	OutputStream out = resp.getOutputStream();
+	StreamUtil.copy(in, out);
+	out.close();
+      } finally {
+	IOUtil.safeClose(in);
+      }
+    } catch (FileNotFoundException e) {
+      errMsg = "No AUs have been configured - nothing to backup";
+      displayMenu();
+    } catch (IOException e) {
+      log.warning("doSaveAll()", e);
+      throw e;
+    }
+  }
+
+  // Character version - unused
+//   /** Serve the contents of the local AU config file, as
+//    * application/binary */
+//   private void doSaveAll0() throws IOException {
+//     try {
+//       InputStream is = remoteApi.getAuConfigBackupStream(getMachineName());
+//       Reader rdr = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
+//       PrintWriter wrtr = resp.getWriter();
+//       resp.setContentType("application/binary");
+//       StreamUtil.copy(rdr, wrtr);
+//       rdr.close();
+//     } catch (FileNotFoundException e) {
+//       errMsg = "No AUs have been configured - nothing to backup";
+//       displayMenu();
+//     } catch (IOException e) {
+//       log.warning("doSaveAll()", e);
+//       throw e;
+//     }
+//   }
 
   /** Display the Restore page */
   private void displayRestore() throws IOException {
@@ -746,7 +790,7 @@ public class BatchAuConfig extends LockssServlet {
       displayRestore();
     } else {
       try {
-	RemoteApi.BatchAuStatus bas = remoteApi.batchAddAus(false, ins);
+	RemoteApi.BatchAuStatus bas = remoteApi.processSavedConfig(ins);
 	if (bas.getStatusList().isEmpty()) {
 	  errMsg = "Backup file is empty";
 	  displayRestore();

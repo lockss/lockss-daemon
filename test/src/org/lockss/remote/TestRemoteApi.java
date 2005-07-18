@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.6 2005-01-04 03:01:24 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.7 2005-07-18 08:05:47 tlipkis Exp $
  */
 
 /*
@@ -34,11 +34,13 @@ package org.lockss.remote;
 
 import java.io.*;
 import java.util.*;
+import java.util.zip.*;
 import junit.framework.*;
 
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.protocol.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
@@ -54,6 +56,7 @@ public class TestRemoteApi extends LockssTestCase {
 
   MockLockssDaemon daemon;
   MyMockPluginManager mpm;
+  MyIdentityManager idMgr;
   RemoteApi rapi;
 
   public void setUp() throws Exception {
@@ -65,8 +68,11 @@ public class TestRemoteApi extends LockssTestCase {
     daemon.setPluginManager(mpm);
     rapi = new RemoteApi();
     daemon.setRemoteApi(rapi);
-    daemon.setDaemonInited(true);
     rapi.initService(daemon);
+    idMgr = new MyIdentityManager();
+    daemon.setIdentityManager(idMgr);
+    idMgr.initService(daemon);
+    daemon.setDaemonInited(true);
     rapi.startService();
   }
 
@@ -232,44 +238,283 @@ public class TestRemoteApi extends LockssTestCase {
     File cdir = new File(tmpdir, relConfigPath);
     File configFile = new File(cdir, cfileName);
     FileTestUtil.writeFile(configFile, s);
+    log.debug("Wrote: " + configFile);
   }
 
-  public void testGetAuConfigBackupStream () throws Exception {
-    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
-    InputStream is = rapi.getAuConfigBackupStream("machine_foo");
+  public void assertIsAuTxt(Properties expectedProps,
+			    File file) throws Exception {
+    InputStream in = new FileInputStream(file);
+    assertIsAuTxt(expectedProps, in);
+    in.close();
+  }
+
+  public void assertIsAuTxt(Properties expectedProps,
+			    InputStream in) throws Exception {
     String pat = "# AU Configuration saved .* from machine_foo\norg.lockss.au.FooPlugin.k~v.k=v";
-    assertMatchesRE(pat, StringUtil.fromInputStream(is));
+    BufferedInputStream bi = new BufferedInputStream(in);
+    bi.mark(10000);
+    assertMatchesRE(pat, StringUtil.fromInputStream(bi));
+    bi.reset();
+    Properties p = new Properties();
+    p.load(bi);
+    assertEquals(expectedProps, p);
   }
 
-  public void testCheckLegalBackupFile() throws Exception {
+  public void testGetAuConfigBackupStreamV1() throws Exception {
+    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
+    ConfigurationUtil.addFromArgs(RemoteApi.PARAM_BACKUP_FILE_VERSION, "v1");
+    InputStream is = rapi.getAuConfigBackupStream("machine_foo");
+    Properties exp = new Properties();
+    exp.put("org.lockss.au.FooPlugin.k~v.k", "v");
+    assertIsAuTxt(exp, is);
+  }
+
+  public void testGetAuConfigBackupStreamV2() throws Exception {
+    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
+    ConfigurationUtil.addFromArgs(RemoteApi.PARAM_BACKUP_FILE_VERSION, "v2");
+    MockArchivalUnit mau1 = new MockArchivalUnit();
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    MockArchivalUnit mau3 = new MockArchivalUnit();
+    mau1.setAuId("mau1id");
+    mau2.setAuId("mau2id");
+    mau3.setAuId("mau3id");
+    mpm.setAllAus(ListUtil.list(mau1, mau2, mau3));
+    idMgr.setAgreeMap(mau1, "agree map 1");
+    idMgr.setAgreeMap(mau3, "agree map 3");
+    InputStream in = rapi.getAuConfigBackupStream("machine_foo");
+    File zip = FileTestUtil.tempFile("foo", ".zip");
+    OutputStream out = new FileOutputStream(zip);
+    StreamUtil.copy(in, out);
+    in.close();
+    out.close();
+
+    assertTrue(ZipUtil.isZipFile(zip));
+    File tmpdir = getTempDir();
+    ZipUtil.unzip(zip, tmpdir);
+
+    Properties exp = new Properties();
+    exp.put("org.lockss.au.FooPlugin.k~v.k", "v");
+    assertIsAuTxt(exp, new File(tmpdir, ConfigManager.CONFIG_FILE_AU_CONFIG));
+
+    String[] dirfiles = tmpdir.list();
+    List audirs = new ArrayList();
+    Map auagreemap = new HashMap();
+    for (int ix = 0; ix < dirfiles.length; ix++) {
+      File audir = new File(tmpdir, dirfiles[ix]);
+      if (!audir.isDirectory()) {
+	continue;
+      }
+      audirs.add(audir);
+      Properties auprops =
+	PropUtil.fromFile(new File(audir, RemoteApi.BACK_FILE_AU_PROPS));
+      log.debug("props: " + auprops);
+      String auid = auprops.getProperty(RemoteApi.AU_BACK_PROP_AUID);
+      File agreefile = new File(audir, RemoteApi.BACK_FILE_AGREE_MAP);
+      if (agreefile.exists()) {
+	auagreemap.put(auid, agreefile);
+      }
+    }
+    assertEquals(3, audirs.size());
+    File agreefile;
+    assertNotNull(agreefile = (File)auagreemap.get("mau1id"));
+    assertEquals("agree map 1", StringUtil.fromFile(agreefile));
+    
+    assertNotNull(agreefile = (File)auagreemap.get("mau3id"));
+    assertEquals("agree map 3", StringUtil.fromFile(agreefile));
+    
+    assertEquals(2, auagreemap.size());
+  }
+
+  public void testCheckLegalAuConfigTree() throws Exception {
     Properties p = new Properties();
     p.setProperty("org.lockss.au.foobar", "17");
     p.setProperty("org.lockss.config.fileVersion.au", "1");
     assertEquals(1,
-		 rapi.checkLegalBackupFile(ConfigManager.fromProperties(p)));
+		 rapi.checkLegalAuConfigTree(ConfigManager.fromProperties(p)));
     p.setProperty("org.lockss.other.prop", "foo");
     try {
-      rapi.checkLegalBackupFile(ConfigManager.fromProperties(p));
-      fail("checkLegalBackupFile() allowed non-AU prop");
+      rapi.checkLegalAuConfigTree(ConfigManager.fromProperties(p));
+      fail("checkLegalAuConfigTree() allowed non-AU prop");
     } catch (RemoteApi.InvalidAuConfigBackupFile e) {
     }
     p.remove("org.lockss.other.prop");
-    rapi.checkLegalBackupFile(ConfigManager.fromProperties(p));
+    rapi.checkLegalAuConfigTree(ConfigManager.fromProperties(p));
     p.setProperty("org.lockss.au", "xx");
     try {
-      rapi.checkLegalBackupFile(ConfigManager.fromProperties(p));
-      fail("checkLegalBackupFile() allowed non-AU prop");
+      rapi.checkLegalAuConfigTree(ConfigManager.fromProperties(p));
+      fail("checkLegalAuConfigTree() allowed non-AU prop");
     } catch (RemoteApi.InvalidAuConfigBackupFile e) {
     }
     p.remove("org.lockss.au");
-    rapi.checkLegalBackupFile(ConfigManager.fromProperties(p));
+    rapi.checkLegalAuConfigTree(ConfigManager.fromProperties(p));
     p.setProperty("org.lockss.config.fileVersion.au", "0");
     try {
-      rapi.checkLegalBackupFile(ConfigManager.fromProperties(p));
-      fail("checkLegalBackupFile() allowed non-AU prop");
+      rapi.checkLegalAuConfigTree(ConfigManager.fromProperties(p));
+      fail("checkLegalAuConfigTree() allowed non-AU prop");
     } catch (RemoteApi.InvalidAuConfigBackupFile e) {
     }
   }
+
+  public File toFile(Properties props, File file) throws IOException {
+    return toFile(props, file, false);
+  }
+
+  public File toFile(Properties props, File file, boolean isAuTxt)
+      throws IOException {
+    return toFile(ConfigManager.fromPropertiesUnsealed(props), file, isAuTxt);
+  }
+
+  public File toFile(Configuration config, File file, boolean isAuTxt)
+      throws IOException {
+    OutputStream out = new FileOutputStream(file);
+    toStream(config, out, isAuTxt);
+    out.close();
+    return file;
+  }
+
+  public void toStream(Configuration config, OutputStream out, boolean isAuTxt)
+      throws IOException {
+    if (isAuTxt) {
+      StringUtil.toOutputStream(out, RemoteApi.AU_BACKUP_FILE_COMMENT + "\n");
+      config.put(ConfigManager.configVersionProp(ConfigManager.CONFIG_FILE_AU_CONFIG), "1");
+    }
+    config.store(out, "");
+  }
+
+  public File writeZipBackup(Configuration auTxt, Map auAgreeMap)
+      throws IOException {
+    File file = FileTestUtil.tempFile("restoretest", ".zip");
+    OutputStream out = new BufferedOutputStream(new FileOutputStream(file));
+    ZipOutputStream z = new ZipOutputStream(out);
+    z.putNextEntry(new ZipEntry(ConfigManager.CONFIG_FILE_AU_CONFIG));
+    toStream(auTxt, z, true);
+    z.closeEntry();
+
+    int ix = 1;
+    if (auAgreeMap != null) {
+      for (Iterator iter = auAgreeMap.keySet().iterator(); iter.hasNext(); ) {
+	String auid = (String)iter.next();
+	Properties auprops = PropUtil.fromArgs(RemoteApi.AU_BACK_PROP_AUID,
+					       auid);
+	String dir = Integer.toString(ix) + "/";
+	z.putNextEntry(new ZipEntry(dir));
+	z.putNextEntry(new ZipEntry(dir + RemoteApi.BACK_FILE_AU_PROPS));
+	auprops.store(z, "");
+	z.closeEntry();
+	z.putNextEntry(new ZipEntry(dir + RemoteApi.BACK_FILE_AGREE_MAP));
+	StringUtil.toOutputStream(z, (String)auAgreeMap.get(auid));
+	z.closeEntry();
+	ix++;
+      }
+    }
+    z.close();
+    return file;
+  }
+
+  Configuration addAuTree(Configuration toConfig, String auid,
+			  Properties auprops) {
+    if (toConfig == null) {
+      toConfig = ConfigManager.newConfiguration(); 
+    }
+    String prefix = PluginManager.PARAM_AU_TREE + "." +
+      PluginManager.configKeyFromAuId(auid);
+    toConfig.addAsSubTree(ConfigManager.fromPropertiesUnsealed(auprops),
+			  prefix);
+    return toConfig;
+  }
+
+  void assertEntry(Properties exp, RemoteApi.BatchAuStatus bas, String auid) {
+    RemoteApi.BatchAuStatus.Entry ent = findEntry(bas, auid);
+    assertNotNull("No entry for auid " + auid, ent);
+    assertEquals(ConfigManager.fromProperties(exp), ent.getConfig());
+  }
+
+  RemoteApi.BatchAuStatus.Entry findEntry(RemoteApi.BatchAuStatus bas,
+					  String auid) {
+    for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+      RemoteApi.BatchAuStatus.Entry ent =
+	(RemoteApi.BatchAuStatus.Entry)iter.next();
+      if (auid.equals(ent.getAuId())) {
+	return ent;
+      }
+    }
+    return null;
+  }
+
+  public void testProcessSavedConfigV1()  throws Exception {
+    Properties p1 = new Properties();
+    p1.put(ConfigParamDescr.BASE_URL.getKey(), "http://foo.bar/");
+    p1.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "7");
+    Properties p2 = new Properties();
+    p2.put(ConfigParamDescr.BASE_URL.getKey(), "http://example.com/");
+    p2.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    String auid1 = PluginManager.generateAuId(PID1, p1);
+    String auid2 = PluginManager.generateAuId(PID1, p2);
+    Configuration config = addAuTree(null, auid1, p1);
+    config = addAuTree(config, auid2, p2);
+
+    File file = toFile(config, FileTestUtil.tempFile("saved1"), true);
+    InputStream in = new FileInputStream(file);
+    RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
+    List statlist = bas.getStatusList();
+    assertEquals(2, statlist.size());
+    assertNull(bas.getBackupInfo());
+
+    assertEntry(p1, bas, auid1);
+    assertEntry(p2, bas, auid2);
+  }
+
+  public void testProcessSavedConfigV2()  throws Exception {
+    Properties p1 = new Properties();
+    p1.put(ConfigParamDescr.BASE_URL.getKey(), "http://foo.bar/");
+    p1.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "7");
+    Properties p2 = new Properties();
+    p2.put(ConfigParamDescr.BASE_URL.getKey(), "http://example.com/");
+    p2.put(ConfigParamDescr.VOLUME_NUMBER.getKey(), "42");
+    String auid1 = PluginManager.generateAuId(PID1, p1);
+    String auid2 = PluginManager.generateAuId(PID1, p2);
+    Configuration config = addAuTree(null, auid1, p1);
+    config = addAuTree(config, auid2, p2);
+
+    Map auagreemap = new HashMap();
+    auagreemap.put(auid1, "zippity agree map 1");
+    auagreemap.put(auid2, "doodah agree map 2");
+    
+    File file = writeZipBackup(config, auagreemap);
+    InputStream in = new FileInputStream(file);
+    RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
+    List statlist = bas.getStatusList();
+    assertEquals(2, statlist.size());
+
+    assertEntry(p1, bas, auid1);
+    assertEntry(p2, bas, auid2);
+
+    RemoteApi.BackupInfo bi = bas.getBackupInfo();
+    assertNotNull(bi);
+    assertNotNull(bi.getAuDir(auid1));
+    assertNotNull(bi.getAuDir(auid2));
+
+    Configuration addConfig = ConfigManager.newConfiguration(); 
+
+    for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+      RemoteApi.BatchAuStatus.Entry ent =
+	(RemoteApi.BatchAuStatus.Entry)iter.next();
+      String auid = ent.getAuId();
+      String prefix = PluginManager.PARAM_AU_TREE + "." +
+	PluginManager.configKeyFromAuId(auid);
+      addConfig.addAsSubTree(ent.getConfig(), prefix);
+    }
+    
+    idMgr.resetAgreeMap();
+    RemoteApi.BatchAuStatus addedbas = rapi.batchAddAus(false, addConfig, bi);
+    ArchivalUnit au1 = mpm.getAuFromId(auid1);
+    assertNotNull(au1);
+    assertEquals("zippity agree map 1", idMgr.getAgreeMap(au1));
+    ArchivalUnit au2 = mpm.getAuFromId(auid2);
+    assertNotNull(au2);
+    assertEquals("doodah agree map 2", idMgr.getAgreeMap(au2));
+  }
+
 
   class Pair {
     Object one, two;
@@ -315,15 +560,16 @@ public class TestRemoteApi extends LockssTestCase {
       this.inactiveAuIds = inactiveAuIds;
     }
 
-
     public ArchivalUnit createAndSaveAuConfiguration(Plugin plugin,
 						     Configuration auConf)
     throws ArchivalUnit.ConfigurationException {
       actions.add(new Pair(plugin, auConf));
       MockArchivalUnit mau = new MockArchivalUnit();
       mau.setPlugin(plugin);
-      mau.setAuId(PluginManager.generateAuId(plugin, auConf));
+      String auid =PluginManager.generateAuId(plugin, auConf);
+      mau.setAuId(auid);
       mau.setConfiguration(auConf);
+      putAuInMap(mau);
       return mau;
     }
 
@@ -361,5 +607,38 @@ public class TestRemoteApi extends LockssTestCase {
     public Collection getInactiveAuIds() {
       return inactiveAuIds;
     }
+  }
+  static class MyIdentityManager extends IdentityManager {
+    private Map agreeMapContents = new HashMap();
+
+    void setAgreeMap(ArchivalUnit au, String content) {
+      agreeMapContents.put(au, content);
+    }
+    String getAgreeMap(ArchivalUnit au) {
+      return (String)agreeMapContents.get(au);
+    }
+    void resetAgreeMap() {
+      agreeMapContents.clear();
+    }
+
+    protected void setupLocalIdentities() {
+      // do nothing
+    }
+    public boolean hasAgreeMap(ArchivalUnit au) {
+      return agreeMapContents.containsKey(au);
+    }
+    public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
+	throws IOException {
+      String s = getAgreeMap(au);
+      if (s != null) {
+	StringUtil.toOutputStream(out, s);
+      }
+    }
+    public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
+	throws IOException {
+      log.debug("Setting agreement for " + au.getName());
+      setAgreeMap(au, StringUtil.fromInputStream(in));
+    }
+
   }
 }

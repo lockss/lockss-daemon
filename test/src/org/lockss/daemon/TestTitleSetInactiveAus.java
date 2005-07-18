@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.3 2005-05-12 00:22:22 troberts Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.4 2005-07-18 08:05:48 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,7 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
 
   public void setUp() throws Exception {
     super.setUp();
+    getMockLockssDaemon().setIdentityManager(new org.lockss.protocol.MockIdentityManager());
     pluginMgr = getMockLockssDaemon().getPluginManager();
     pluginMgr.startService();
     getMockLockssDaemon().getRemoteApi().startService();
