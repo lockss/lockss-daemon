@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.29 2005-07-12 00:11:05 tlipkis Exp $
+ * $Id: Crawler.java,v 1.30 2005-07-18 17:36:50 troberts Exp $
  */
 
 /*
@@ -117,6 +117,8 @@ public interface Crawler {
     protected Set urlsNotModified = new ListOrderedSet();
     protected Set urlsParsed = new ListOrderedSet();
 
+    protected Set sources = new ListOrderedSet();
+
     public Status(ArchivalUnit au, Collection startUrls, int type) {
       this.au = au;
       this.startUrls = startUrls;
@@ -192,6 +194,14 @@ public interface Crawler {
       }
     }
 
+    public synchronized Collection getSources() {
+      if (isCrawlActive()) {
+	return new ArrayList(sources);
+      } else {
+	return sources;
+      }
+    }
+
     public synchronized long getNumUrlsWithErrors() {
       return urlsWithErrors.size();
     }
@@ -231,6 +241,11 @@ public interface Crawler {
      public synchronized void signalUrlParsed(String url) {
        urlsParsed.add(url);
      }
+
+    public synchronized void addSource(String source) {
+      sources.add(source);
+    }
+
     
     public Collection getStartUrls() {
       return startUrls;
