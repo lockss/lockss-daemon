@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.41 2005-07-14 23:33:15 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.42 2005-07-18 08:10:26 tlipkis Exp $
  */
 
 /*
@@ -310,36 +310,32 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   private boolean shouldFetchFromCache() {
-    return ProbabilisticChoice.choose(percentFetchFromCache);
+    return AuUtil.isPubDown(au) ||
+      ProbabilisticChoice.choose(percentFetchFromCache);
   }
 
   protected void fetchFromSomeCache(UrlCacher uc, int numCacheRetries)
       throws IOException {
     IdentityManager idm = getIdentityManager();
-    Map map = idm.getAgreed(au);
-    if (map == null) {
+    Collection repairers = idm.getCachesToRepairFrom(au);
+    if (repairers == null) {
       throw new LockssUrlConnection.CantProxyException("We don't have agree history with any caches");
     }
-    Set keySet = map.keySet();
-    if (keySet == null) {
-      logger.warning("Got a null keyset, this probably shouldn't happen");
-      throw new LockssUrlConnection.CantProxyException("Couldn't get a cache we agree with");
-    }
-    Iterator it = keySet.iterator();
     int iz = 0;
     boolean repaired = false;
-    while ((it.hasNext()) && (iz < numCacheRetries) && !repaired ){
-      PeerIdentity cacheId = null;
+    for (Iterator it = repairers.iterator();
+	 it.hasNext() && (iz < numCacheRetries); ) {
+      PeerIdentity cacheId = (PeerIdentity)it.next();;
+      logger.debug3("Trying repair "+iz+" of "+numCacheRetries
+		    +" from "+cacheId);
+      if (idm.isLocalIdentity(cacheId)) {
+	logger.debug("Got local peer identity, skipping");
+	continue;
+      }
       try {
-	cacheId = (PeerIdentity) it.next();
-	logger.debug3("Trying repair "+iz+" of "+numCacheRetries
-		      +" from "+cacheId);
-	if (idm.isLocalIdentity(cacheId)) {
-	  logger.debug("Got local peer identity, skipping");
-	  continue;
-	}
 	fetchFromCache(uc, cacheId);
 	repaired = true;
+	break;
       } catch (IOException e) {
 	logger.warning(uc.getUrl() + " cannot be fetched from "+ cacheId, e);
       }
@@ -358,6 +354,7 @@ public class RepairCrawler extends CrawlerImpl {
     if (!StringUtil.isNullString(repairFromCacheAddr)) {
       logger.debug2("But actually sending request to " + repairFromCacheAddr);
       addr = repairFromCacheAddr;
+      uc.setRequestProperty(Constants.X_LOCKSS_REAL_ID, id.getIdString());
     }
     uc.setProxy(addr, getProxyPort());
     uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
