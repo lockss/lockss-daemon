@@ -1,5 +1,5 @@
 /*
- * $Id: RegistryPlugin.java,v 1.3 2004-09-27 22:39:12 smorabito Exp $
+ * $Id: RegistryPlugin.java,v 1.4 2005-07-18 08:14:29 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class RegistryPlugin extends BasePlugin {
   /**
    * We only have one defining attribute, a base URL.
    */
-  public List getAuConfigDescrs() {
+  public List getLocalAuConfigDescrs() {
     return m_auConfigDescrs;
   }
 }

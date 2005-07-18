@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMusePlugin.java,v 1.1 2005-03-15 07:43:19 tlipkis Exp $
+ * $Id: TestProjectMusePlugin.java,v 1.2 2005-07-18 08:14:30 tlipkis Exp $
  */
 
 /*
@@ -122,6 +122,6 @@ public class TestProjectMusePlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.JOURNAL_DIR,
 			       ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAuConfigDescrs());
+		 plugin.getLocalAuConfigDescrs());
   }
 }

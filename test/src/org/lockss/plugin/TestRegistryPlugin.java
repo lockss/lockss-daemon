@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegistryPlugin.java,v 1.4 2005-05-25 07:36:36 tlipkis Exp $
+ * $Id: TestRegistryPlugin.java,v 1.5 2005-07-18 08:14:28 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestRegistryPlugin extends LockssTestCase {
   }
 
   public void testGetAuConfigDescrs() throws Exception {
-    List descrs = m_plugin.getAuConfigDescrs();
+    List descrs = m_plugin.getLocalAuConfigDescrs();
     assertEquals(1, descrs.size());
     assertEquals(ConfigParamDescr.BASE_URL, descrs.get(0));
   }

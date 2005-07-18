@@ -1,5 +1,5 @@
 /*
- * $Id: TestSamplePlugin.java,v 1.1 2005-03-15 07:43:18 tlipkis Exp $
+ * $Id: TestSamplePlugin.java,v 1.2 2005-07-18 08:14:30 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TestSamplePlugin extends LockssTestCase {
   public void testGetAUConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.VOLUME_NUMBER),
-		 plugin.getAuConfigDescrs());
+		 plugin.getLocalAuConfigDescrs());
   }
 
   public static void main(String[] argv) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCulturalLogicPlugin.java,v 1.1 2005-03-15 07:43:24 tlipkis Exp $
+ * $Id: TestCulturalLogicPlugin.java,v 1.2 2005-07-18 08:14:32 tlipkis Exp $
  */
 
 /*
@@ -102,6 +102,6 @@ public class TestCulturalLogicPlugin extends LockssTestCase {
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
 			       ConfigParamDescr.YEAR),
-		 plugin.getAuConfigDescrs());
+		 plugin.getLocalAuConfigDescrs());
   }
 }

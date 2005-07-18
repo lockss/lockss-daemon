@@ -1,5 +1,5 @@
 /*
- * $Id: MockPlugin.java,v 1.21 2005-06-20 04:02:28 tlipkis Exp $
+ * $Id: MockPlugin.java,v 1.22 2005-07-18 08:14:27 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class MockPlugin extends BasePlugin implements PluginTestable {
    * @return a List of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
-  public List getAuConfigDescrs() {
+  public List getLocalAuConfigDescrs() {
     return auConfigDescrs;
   }
 

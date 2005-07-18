@@ -1,5 +1,5 @@
 /*
- * $Id: DefinablePlugin.java,v 1.13 2005-05-25 23:47:37 smorabito Exp $
+ * $Id: DefinablePlugin.java,v 1.14 2005-07-18 08:14:29 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class DefinablePlugin extends BasePlugin {
     return definitionMap.getString(CM_NOTES_KEY, null);
   }
 
-  public List getAuConfigDescrs() throws InvalidDefinitionException {
+  public List getLocalAuConfigDescrs() throws InvalidDefinitionException {
     List auConfigDescrs =
       (List) definitionMap.getCollection(CM_CONFIG_PROPS_KEY, null);
     if (auConfigDescrs == null) {

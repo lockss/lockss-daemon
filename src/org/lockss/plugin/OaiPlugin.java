@@ -1,5 +1,5 @@
 /*
- * $Id: OaiPlugin.java,v 1.1 2005-01-20 01:35:15 dcfok Exp $
+ * $Id: OaiPlugin.java,v 1.2 2005-07-18 08:14:29 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class OaiPlugin extends BasePlugin {
   /**
    * We only have one defining attribute, a base URL.
    */
-  public List getAuConfigDescrs() {
+  public List getLocalAuConfigDescrs() {
     return m_auConfigDescrs;
   }
 }

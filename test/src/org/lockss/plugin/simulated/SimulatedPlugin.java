@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.21 2005-02-21 03:10:39 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.22 2005-07-18 08:14:28 tlipkis Exp $
  */
 
 /*
@@ -279,7 +279,7 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
    * @return a List of strings which are the names of the properties for
    * which values are needed in order to configure an AU
    */
-  public List getAuConfigDescrs() {
+  public List getLocalAuConfigDescrs() {
     return ListUtil.list(PD_ROOT, PD_DEPTH,
 			 PD_BRANCH, PD_NUM_FILES,
 			 PD_BIN_FILE_SIZE, PD_MAXFILE_NAME,

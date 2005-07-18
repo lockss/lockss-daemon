@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.27 2004-10-13 23:07:38 clairegriffin Exp $
+ * $Id: StaticContentPlugin.java,v 1.28 2005-07-18 08:14:27 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     throw new UnsupportedOperationException("Not implemented");
   }
 
-  public List getAuConfigDescrs() {
+  public List getLocalAuConfigDescrs() {
     return Collections.EMPTY_LIST;
     //    throw new UnsupportedOperationException("Not implemented");
   }

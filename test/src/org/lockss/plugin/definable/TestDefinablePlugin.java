@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinablePlugin.java,v 1.9 2004-10-23 01:01:04 clairegriffin Exp $
+ * $Id: TestDefinablePlugin.java,v 1.10 2005-07-18 08:14:28 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class TestDefinablePlugin extends LockssTestCase {
     map.putCollection(DefinablePlugin.CM_CONFIG_PROPS_KEY,
                       expectedReturn);
 
-    List actualReturn = definablePlugin.getAuConfigDescrs();
+    List actualReturn = definablePlugin.getLocalAuConfigDescrs();
     assertIsomorphic("return value", expectedReturn, actualReturn);
   }
 

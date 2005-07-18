@@ -1,5 +1,5 @@
 /*
- * $Id: TestEmlsPlugin.java,v 1.1 2005-03-15 07:43:24 tlipkis Exp $
+ * $Id: TestEmlsPlugin.java,v 1.2 2005-07-18 08:14:31 tlipkis Exp $
  */
 
 /*
@@ -101,6 +101,6 @@ public class TestEmlsPlugin extends LockssTestCase {
   public void testGetAuConfigProperties() {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                ConfigParamDescr.VOLUME_NUMBER),
-                 plugin.getAuConfigDescrs());
+                 plugin.getLocalAuConfigDescrs());
   }
 }

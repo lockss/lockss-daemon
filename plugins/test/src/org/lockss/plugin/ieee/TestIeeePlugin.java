@@ -1,5 +1,5 @@
 /*
- * $Id: TestIeeePlugin.java,v 1.1 2005-03-15 07:43:22 tlipkis Exp $
+ * $Id: TestIeeePlugin.java,v 1.2 2005-07-18 08:14:31 tlipkis Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class TestIeeePlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.BASE_URL,
                                PU_NUMBER,
 			       ConfigParamDescr.YEAR),
-		 plugin.getAuConfigDescrs());
+		 plugin.getLocalAuConfigDescrs());
   }
 
   public static void main(String[] argv) {

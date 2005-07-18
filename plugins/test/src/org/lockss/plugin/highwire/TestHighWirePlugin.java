@@ -1,5 +1,5 @@
 /*
- * $Id: TestHighWirePlugin.java,v 1.1 2005-03-15 07:43:23 tlipkis Exp $
+ * $Id: TestHighWirePlugin.java,v 1.2 2005-07-18 08:14:31 tlipkis Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class TestHighWirePlugin extends LockssTestCase {
     assertEquals(ListUtil.list(ConfigParamDescr.VOLUME_NUMBER,
 			       ConfigParamDescr.BASE_URL),
 //                                ConfigParamDescr.YEAR),
-		 plugin.getAuConfigDescrs());
+		 plugin.getLocalAuConfigDescrs());
   }
 
   public void testHandles404Result() throws Exception {
