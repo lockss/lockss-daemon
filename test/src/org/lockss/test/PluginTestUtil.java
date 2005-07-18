@@ -1,5 +1,5 @@
 /*
- * $Id: PluginTestUtil.java,v 1.1 2005-05-12 00:22:24 troberts Exp $
+ * $Id: PluginTestUtil.java,v 1.2 2005-07-18 07:56:54 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import java.lang.reflect.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.plugin.base.*;
@@ -67,6 +68,10 @@ public class PluginTestUtil {
     try {
       PrivilegedAccessor.invokeMethod(mgr, "putAuInMap",
 				      ListUtil.list(au).toArray());
+    } catch (InvocationTargetException e) {
+      log.error("Couldn't register AU", e);
+      log.error("Nested", e.getTargetException());
+      throw new RuntimeException(e.toString());
     } catch (Exception e) {
       log.error("Couldn't register AU", e);
       throw new RuntimeException(e.toString());
