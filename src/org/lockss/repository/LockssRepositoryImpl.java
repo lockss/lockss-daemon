@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryImpl.java,v 1.67 2005-02-02 09:42:25 tlipkis Exp $
+ * $Id: LockssRepositoryImpl.java,v 1.68 2005-07-18 08:04:48 tlipkis Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public class LockssRepositoryImpl
    * @param node the inconsistent node
    */
   void deactivateInconsistentNode(RepositoryNodeImpl node) {
-    logger.warning("Inconsistent node state found; node content deactivated.");
+    logger.warning("Deactivating inconsistent node.");
     if (!node.contentDir.exists()) {
       node.contentDir.mkdirs();
     }
@@ -372,17 +372,19 @@ public class LockssRepositoryImpl
     return repo;
   }
 
-  public static String getRepositoryRoot(ArchivalUnit au) {
-    String root = null;
+  public static String getRepositorySpec(ArchivalUnit au) {
     Configuration auConfig = au.getConfiguration();
     if (auConfig != null) {		// can be null in unit tests
       String repoSpec = auConfig.get(PluginManager.AU_PARAM_REPOSITORY);
-      root = getLocalRepositoryPath(repoSpec);
+      if (repoSpec != null && repoSpec.startsWith("local:")) {
+	return repoSpec;
+      }
     }
-    if (root == null) {
-      root = Configuration.getParam(PARAM_CACHE_LOCATION);
-    }
-    return root;
+    return "local:" + Configuration.getParam(PARAM_CACHE_LOCATION);
+  }
+
+  public static String getRepositoryRoot(ArchivalUnit au) {
+    return getLocalRepositoryPath(getRepositorySpec(au));
   }
 
   public static String getLocalRepositoryPath(String repoSpec) {
@@ -566,6 +568,10 @@ public class LockssRepositoryImpl
     }
     sb.insert(0, 'a');
     return sb.toString();
+  }
+
+  public static File getAuIdFile(String location) {
+    return new File(location + File.separator + AU_ID_FILE);
   }
 
   static Properties getAuIdProperties(String location) {

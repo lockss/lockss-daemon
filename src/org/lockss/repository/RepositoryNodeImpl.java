@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryNodeImpl.java,v 1.63 2005-02-02 09:42:25 tlipkis Exp $
+ * $Id: RepositoryNodeImpl.java,v 1.64 2005-07-18 08:04:48 tlipkis Exp $
  */
 
 /*
@@ -76,10 +76,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
   public static final boolean DEFAULT_MONITOR_INPUT_STREAMS = false;
 
   /** If true, the release method actually closes streams.  If false it
-   * does nothing.  This should go away after the 1.6 release. */
+   * does nothing. */
   public static final String PARAM_ENABLE_RELEASE =
     Configuration.PREFIX + "repository.enableRelease";
   public static final boolean DEFAULT_ENABLE_RELEASE = true;
+
+  /** Determines whether errors that occur when opening a node cause the
+   * node to be deactivated. */
+  public static final String PARAM_DEACTIVATE_NODE_ON_ERROR =
+    Configuration.PREFIX + "repository.deactivateNodeOnError";
+  public static final boolean DEFAULT_DEACTIVATE_NODE_ON_ERROR = true;
 
   // properties set in the content properties, such as 'current.props'
   static final String LOCKSS_VERSION_NUMBER = "org.lockss.version.number";
@@ -964,6 +970,16 @@ public class RepositoryNodeImpl implements RepositoryNode {
     }
   }
 
+  void maybeDeactivateInconsistentNode() {
+    if (Configuration.getBooleanParam(PARAM_DEACTIVATE_NODE_ON_ERROR,
+				      DEFAULT_DEACTIVATE_NODE_ON_ERROR)) {
+	    logger.debug3("Running consistency check on node '"+url+"'");
+      repository.deactivateInconsistentNode(this);
+    } else {
+      logger.debug("Not deactivating inconsistent node.");
+    }
+  }
+
   /**
    * Looks at the properties and files to determine if the version is active.
    * Sets the version and info correctly before returning.
@@ -1323,7 +1339,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
     private RepositoryNodeContentsImpl() {
     }
 
-    public InputStream getInputStream() {
+    public synchronized InputStream getInputStream() {
       ensureInputStream();
       InputStream res = is;
       // stream can only be used once.
@@ -1331,14 +1347,14 @@ public class RepositoryNodeImpl implements RepositoryNode {
       return res;
     }
 
-    public Properties getProperties() {
+    public synchronized Properties getProperties() {
       if (props == null) {
 	ensureInputStream();
       }
       return props;
     }
 
-    public void release() {
+    public synchronized void release() {
       if (is != null) {
 	if (Configuration.getBooleanParam(PARAM_ENABLE_RELEASE,
 					  DEFAULT_ENABLE_RELEASE)) {
@@ -1359,7 +1375,7 @@ public class RepositoryNodeImpl implements RepositoryNode {
       }
     }
 
-    private synchronized void ensureInputStream() {
+    private void ensureInputStream() {
       if (is == null) {
 	assertContent();
 	try {
@@ -1372,8 +1388,9 @@ public class RepositoryNodeImpl implements RepositoryNode {
 	} catch (IOException e) {
 	  logger.error("Couldn't get inputstream for '" +
 		       curInputFile.getPath() + "'");
-	  logger.debug3("Running consistency check on node '"+url+"'");
-	  repository.deactivateInconsistentNode(RepositoryNodeImpl.this);
+	  if (!FileUtil.isTemporaryResourceException(e)) {
+	    maybeDeactivateInconsistentNode();
+	  }
 	  throw new LockssRepository.RepositoryStateException ("Couldn't open InputStream: " + e.toString());
 	}
       }
