@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.33 2005-05-18 05:45:53 tlipkis Exp $
+ * $Id: TestIdentityManager.java,v 1.34 2005-07-18 08:08:04 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import java.net.UnknownHostException;
 import org.lockss.util.*;
 import org.lockss.daemon.status.*;
+import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
@@ -54,6 +55,7 @@ public class TestIdentityManager extends LockssTestCase {
   PeerIdentity peer1;
   PeerIdentity peer2;
   PeerIdentity peer3;
+  MockArchivalUnit mau;
 
   private static final String LOCAL_IP = "127.1.2.3";
   private static final String IP_2 = "127.6.5.4";
@@ -61,17 +63,10 @@ public class TestIdentityManager extends LockssTestCase {
 //   private static final String LOCAL_PORT = "3141";
   private static final String LOCAL_PORT = Integer.toString(LOCAL_PORT_NUM);
 
-  Properties commonConfig() {
-    Properties p = new Properties();
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
-    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
-    return p;
-  }
-
   public void setUp() throws Exception {
     super.setUp();
 
+    mau = new MockArchivalUnit();
     tempDirPath = getTempDir().getAbsolutePath() + File.separator;
     ConfigurationUtil.setCurrentConfigFromProps(commonConfig());
 
@@ -79,6 +74,7 @@ public class TestIdentityManager extends LockssTestCase {
     idmgr = new TestableIdentityManager();
     idmgr.initService(theDaemon);
     theDaemon.setIdentityManager(idmgr);
+    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     idmgr.startService();
   }
 
@@ -90,15 +86,29 @@ public class TestIdentityManager extends LockssTestCase {
     super.tearDown();
   }
 
+  Properties commonConfig() {
+    Properties p = new Properties();
+    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
+    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
+    p.setProperty(IdentityManager.PARAM_LOCAL_IP, LOCAL_IP);
+    return p;
+  }
+
+  void setupPeer123() throws IdentityManager.MalformedIdentityKeyException {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
+  }
+
   public void testSetupLocalIdentitiesV1Only()
       throws IdentityManager.MalformedIdentityKeyException {
     IdentityManager mgr = new IdentityManager();
     mgr.setupLocalIdentities();
     assertNull(mgr.localPeerIdentities[Poll.V3_POLL]);
-    peer1 = mgr.localPeerIdentities[Poll.V1_POLL];
-    peer2 = mgr.stringToPeerIdentity(LOCAL_IP);
-    assertSame(peer1, peer2);
-    PeerAddress pa = peer1.getPeerAddress();
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V1_POLL];
+    PeerIdentity pid2 = mgr.stringToPeerIdentity(LOCAL_IP);
+    assertSame(pid1, pid2);
+    PeerAddress pa = pid1.getPeerAddress();
     assertTrue(pa instanceof PeerAddress.Udp);
     assertEquals(LOCAL_IP, ((PeerAddress.Udp)pa).getIPAddr().getHostAddress());
   }
@@ -110,11 +120,11 @@ public class TestIdentityManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager mgr = new IdentityManager();
     mgr.setupLocalIdentities();
-    peer1 = mgr.localPeerIdentities[Poll.V3_POLL];
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
     String key = IdentityManager.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
-    peer2 = mgr.stringToPeerIdentity(key);
-    assertSame(peer1, peer2);
-    PeerAddress pa = peer1.getPeerAddress();
+    PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
+    assertSame(pid1, pid2);
+    PeerAddress pa = pid1.getPeerAddress();
     assertTrue(pa instanceof PeerAddress.Tcp);
     assertEquals(LOCAL_IP, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
     assertEquals(LOCAL_PORT_NUM, ((PeerAddress.Tcp)pa).getPort());
@@ -130,8 +140,8 @@ public class TestIdentityManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     IdentityManager mgr = new IdentityManager();
     mgr.setupLocalIdentities();
-    peer1 = mgr.localPeerIdentities[Poll.V3_POLL];
-    PeerAddress pa = peer1.getPeerAddress();
+    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
+    PeerAddress pa = pid1.getPeerAddress();
     assertTrue(pa instanceof PeerAddress.Tcp);
     assertEquals(IP_2, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
     assertEquals(LOCAL_PORT_NUM + 123, ((PeerAddress.Tcp)pa).getPort());
@@ -320,14 +330,12 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testStoreIdentities() throws Exception {
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
+    setupPeer123();
 
     idmgr.storeIdentities();
   }
 
-  public void testSetAgreedThrowsOnNullAu() throws Exception {
+  public void testSignalAgreedThrowsOnNullAu() throws Exception {
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
     try {
       idmgr.signalAgreed(peer1, null);
@@ -336,8 +344,7 @@ public class TestIdentityManager extends LockssTestCase {
     }
   }
 
-  public void testSetAgreedThrowsOnNullId() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
+  public void testSignalAgreedThrowsOnNullId() throws Exception {
     try {
       idmgr.signalAgreed(null, mau);
       fail("Should have thrown on a null au");
@@ -345,7 +352,7 @@ public class TestIdentityManager extends LockssTestCase {
     }
   }
 
-  public void testSetDisagreedThrowsOnNullAu() throws Exception {
+  public void testSignalDisagreedThrowsOnNullAu() throws Exception {
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
     try {
       idmgr.signalDisagreed(peer1, null);
@@ -354,8 +361,7 @@ public class TestIdentityManager extends LockssTestCase {
     }
   }
 
-  public void testSetDisagreedThrowsOnNullId() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
+  public void testSignalDisagreedThrowsOnNullId() throws Exception {
     try {
       idmgr.signalDisagreed(null, mau);
       fail("Should have thrown on a null au");
@@ -372,18 +378,28 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testGetAgreedNoneSet() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    assertNull(idmgr.getAgreed(mau));
+    assertEmpty(idmgr.getAgreed(mau));
+  }
+
+  public void testHasAgreed() throws Exception {
+    TimeBase.setSimulated(10);
+
+    setupPeer123();
+    assertFalse(idmgr.hasAgreed(peer1, mau));
+    assertFalse(idmgr.hasAgreed(peer2, mau));
+
+    idmgr.signalAgreed(peer1, mau);
+    assertTrue(idmgr.hasAgreed(peer1, mau));
+    assertFalse(idmgr.hasAgreed(peer2, mau));
+    TimeBase.step();
+    idmgr.signalAgreed(peer2, mau);
+    assertTrue(idmgr.hasAgreed(peer1, mau));
+    assertTrue(idmgr.hasAgreed(peer2, mau));
   }
 
   public void testGetAgreed() throws Exception {
     TimeBase.setSimulated(10);
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
+    setupPeer123();
 
     idmgr.signalAgreed(peer1, mau);
     TimeBase.step();
@@ -394,13 +410,38 @@ public class TestIdentityManager extends LockssTestCase {
     assertEquals(expected, idmgr.getAgreed(mau));
   }
 
+  public void testHasAgreeMap() throws Exception {
+    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
+
+    assertFalse(idmgr.hasAgreeMap(mau));
+    idmgr.signalAgreed(peer1, mau);
+    assertTrue(idmgr.hasAgreeMap(mau));
+  }
+
+  // ensure that deisctivating and reactivating an AU gets it's old data
+  // back (i.e., uses auid not au as key in maps
+  public void testAgreedUsesAuid() throws Exception {
+    TimeBase.setSimulated(10);
+    setupPeer123();
+
+    idmgr.signalAgreed(peer1, mau);
+    TimeBase.step();
+    idmgr.signalAgreed(peer2, mau);
+    Map expected = new HashMap();
+    expected.put(peer1, new Long(10));
+    expected.put(peer2, new Long(11));
+    assertEquals(expected, idmgr.getAgreed(mau));
+    MockArchivalUnit mau2 = new MockArchivalUnit();
+    // simulate desctivating and reactivating an AU, which creates a new AU
+    // instance with the same auid
+    mau2.setAuId(mau.getAuId());
+    assertEquals(expected, idmgr.getAgreed(mau2));
+  }
+
   public void testDisagreeDoesntRemove() throws Exception {
     TimeBase.setSimulated(10);
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    setupPeer123();
 
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     idmgr.signalAgreed(peer1, mau);
     idmgr.signalAgreed(peer2, mau);
 
@@ -423,33 +464,30 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testGetCachesToRepairFromNoneSet() throws Exception {
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    assertNull(idmgr.getCachesToRepairFrom(mau));
+    assertEmpty(idmgr.getCachesToRepairFrom(mau));
   }
 
   public void testCachesToRepairFrom() throws Exception {
     TimeBase.setSimulated(10);
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
+    setupPeer123();
 
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
     idmgr.signalAgreed(peer1, mau);
+    idmgr.signalDisagreed(peer2, mau);
     TimeBase.step();
+    idmgr.signalDisagreed(peer1, mau);
     idmgr.signalAgreed(peer2, mau);
-    Map expected = new HashMap();
-    expected.put(peer1, new Long(10));
-    expected.put(peer2, new Long(11));
-    assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
+    idmgr.signalAgreed(peer3, mau);
+    List toRepair = idmgr.getCachesToRepairFrom(mau);
+    assertSameElements(ListUtil.list(peer1, peer2, peer3), toRepair);
+    // peer2,3 can be in either order, but peer1 must be last because it
+    // has a disagreement
+    assertEquals(peer1, toRepair.get(2));
   }
 
   public void testAgreeUpdatesTime() throws Exception {
     TimeBase.setSimulated(10);
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
 
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
 
     idmgr.signalAgreed(peer1, mau);
     TimeBase.step(15);
@@ -458,50 +496,17 @@ public class TestIdentityManager extends LockssTestCase {
     Map expected = new HashMap();
     expected.put(peer1, new Long(25));
 
-    assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
-  }
-
-  public void testDisagreeNullsMap() throws Exception {
-    TimeBase.setSimulated(10);
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    idmgr.signalAgreed(peer1, mau);
-
-    idmgr.signalDisagreed(peer1, mau);
-
-    Map expected = new HashMap();
-
-    assertNull(idmgr.getCachesToRepairFrom(mau));
-  }
-
-  public void testDisagreeRemoves() throws Exception {
-    TimeBase.setSimulated(10);
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-
-    MockArchivalUnit mau = new MockArchivalUnit();
-    theDaemon.setHistoryRepository(new MockHistoryRepository(), mau);
-    idmgr.signalAgreed(peer1, mau);
-    idmgr.signalAgreed(peer2, mau);
-
-    idmgr.signalDisagreed(peer1, mau);
-
-    Map expected = new HashMap();
-    expected.put(peer2, new Long(10));
-
-    assertEquals(expected, idmgr.getCachesToRepairFrom(mau));
+    assertEquals(expected, idmgr.getAgreed(mau));
   }
 
   public void testMultipleAus() throws Exception {
     TimeBase.setSimulated(10);
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
+    setupPeer123();
 
     MockArchivalUnit mau1 = new MockArchivalUnit();
     MockArchivalUnit mau2 = new MockArchivalUnit();
+    log.info("auid1: " + mau1.getAuId());
+    log.info("auid2: " + mau2.getAuId());
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau1);
     theDaemon.setHistoryRepository(new MockHistoryRepository(), mau2);
 
@@ -513,11 +518,11 @@ public class TestIdentityManager extends LockssTestCase {
     Map expected = new HashMap();
     expected.put(peer2, new Long(10));
 
-    assertEquals(expected, idmgr.getCachesToRepairFrom(mau2));
+    assertEquals(expected, idmgr.getAgreed(mau2));
 
     expected = new HashMap();
     expected.put(peer1, new Long(10));
-    assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
+    assertEquals(expected, idmgr.getAgreed(mau1));
   }
 
   public void testIdentityAgreementEquals() {
@@ -555,21 +560,17 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public void testStoreIdentityAgreement() throws Exception {
-    MockArchivalUnit mau1 = new MockArchivalUnit();
     MockHistoryRepository hRep = new MockHistoryRepository();
-    theDaemon.setHistoryRepository(hRep, mau1);
+    theDaemon.setHistoryRepository(hRep, mau);
+    setupPeer123();
 
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalAgreed(peer2, mau);
 
-    idmgr.signalAgreed(peer1, mau1);
-    idmgr.signalAgreed(peer2, mau1);
+    idmgr.signalDisagreed(peer1, mau);
+    idmgr.signalDisagreed(peer3, mau);
 
-    idmgr.signalDisagreed(peer1, mau1);
-    idmgr.signalDisagreed(peer3, mau1);
-
-    Set expected = new HashSet(3);
+    List expected = new ArrayList();
 
     IdentityManager.IdentityAgreement ida =
         new IdentityManager.IdentityAgreement(peer1);
@@ -588,20 +589,16 @@ public class TestIdentityManager extends LockssTestCase {
     expected.add(ida);
     assertContains(hRep.getStoredIdentityAgreement(), ida);
 
-    //XXX figure out why this one doesn't work when the above do
-//     assertSameElements(expected, hRep.getStoredIdentityAgreement());
+    assertSameElements(expected, hRep.getStoredIdentityAgreement());
 
     assertEquals(3, hRep.getStoredIdentityAgreement().size());
   }
 
   public void testLoadIdentityAgreement() throws Exception {
-    MockArchivalUnit mau1 = new MockArchivalUnit();
     MockHistoryRepository hRep = new MockHistoryRepository();
-    theDaemon.setHistoryRepository(hRep, mau1);
+    theDaemon.setHistoryRepository(hRep, mau);
 
-    peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
-    peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-    peer3 = idmgr.stringToPeerIdentity("127.0.0.3");
+    setupPeer123();
 
     List loadList = new ArrayList(3);
 
@@ -620,18 +617,117 @@ public class TestIdentityManager extends LockssTestCase {
     loadList.add(ida);
 
     hRep.setLoadedIdentityAgreement(loadList);
+    idmgr.forceReloadMap(mau);
 
-    Map expected = new HashMap();
-    expected.put(peer2, new Long(10));
+    Map agree = new HashMap();
+    agree.put(peer1, new Long(10));
+    agree.put(peer2, new Long(10));
+    assertEquals(agree, idmgr.getAgreed(mau));
 
-    assertEquals(expected, idmgr.getCachesToRepairFrom(mau1));
-
-    expected = new HashMap();
-    expected.put(peer1, new Long(10));
-    expected.put(peer2, new Long(10));
-
-    assertEquals(expected, idmgr.getAgreed(mau1));
+    Map disagree = new HashMap();
+    disagree.put(peer1, new Long(10));
+    disagree.put(peer3, new Long(10));
+    assertEquals(disagree, idmgr.getDisagreed(mau));
   }
+
+  public void testLoadIdentityAgreementMerge() throws Exception {
+    ConfigurationUtil.setFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP, "true");
+
+    MockHistoryRepository hRep = new MockHistoryRepository();
+    theDaemon.setHistoryRepository(hRep, mau);
+
+    setupPeer123();
+
+    List loadList = new ArrayList(3);
+
+    IdentityManager.IdentityAgreement ida =
+        new IdentityManager.IdentityAgreement(peer1);
+    ida.setLastAgree(10);
+    ida.setLastDisagree(10);
+    loadList.add(ida);
+
+    ida = new IdentityManager.IdentityAgreement(peer2);
+    ida.setLastAgree(10);
+    loadList.add(ida);
+
+    ida = new IdentityManager.IdentityAgreement(peer3);
+    ida.setLastDisagree(10);
+    loadList.add(ida);
+
+    TimeBase.setSimulated(9);
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalDisagreed(peer2, mau);
+
+    TimeBase.step(2);
+    idmgr.signalAgreed(peer2, mau);
+    idmgr.signalDisagreed(peer2, mau);
+    idmgr.signalAgreed(peer3, mau);
+
+    hRep.setLoadedIdentityAgreement(loadList);
+    idmgr.forceReloadMap(mau);
+
+    Map agree = new HashMap();
+    agree.put(peer1, new Long(10));
+    agree.put(peer2, new Long(11));
+    agree.put(peer3, new Long(11));
+    assertEquals(agree, idmgr.getAgreed(mau));
+
+    Map disagree = new HashMap();
+    disagree.put(peer1, new Long(10));
+    disagree.put(peer2, new Long(11));
+    disagree.put(peer3, new Long(10));
+    assertEquals(disagree, idmgr.getDisagreed(mau));
+  }
+
+  public void testLoadIdentityAgreementNoMerge() throws Exception {
+    ConfigurationUtil.setFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP, "false");
+
+    MockHistoryRepository hRep = new MockHistoryRepository();
+    theDaemon.setHistoryRepository(hRep, mau);
+
+    setupPeer123();
+
+    List loadList = new ArrayList(3);
+
+    IdentityManager.IdentityAgreement ida =
+        new IdentityManager.IdentityAgreement(peer1);
+    ida.setLastAgree(10);
+    ida.setLastDisagree(10);
+    loadList.add(ida);
+
+    ida = new IdentityManager.IdentityAgreement(peer2);
+    ida.setLastAgree(10);
+    loadList.add(ida);
+
+    ida = new IdentityManager.IdentityAgreement(peer3);
+    ida.setLastDisagree(10);
+    loadList.add(ida);
+
+    TimeBase.setSimulated(9);
+    idmgr.signalAgreed(peer1, mau);
+    idmgr.signalDisagreed(peer2, mau);
+
+    TimeBase.step(2);
+    idmgr.signalAgreed(peer2, mau);
+    idmgr.signalDisagreed(peer2, mau);
+    idmgr.signalAgreed(peer3, mau);
+
+    hRep.setLoadedIdentityAgreement(loadList);
+    idmgr.forceReloadMap(mau);
+
+    Map agree = new HashMap();
+    agree.put(peer1, new Long(10));
+    agree.put(peer2, new Long(10));
+    assertEquals(agree, idmgr.getAgreed(mau));
+
+    Map disagree = new HashMap();
+    disagree.put(peer1, new Long(10));
+    disagree.put(peer3, new Long(10));
+    assertEquals(disagree, idmgr.getDisagreed(mau));
+  }
+
+
+
   /**
    * Tests that the IP address info fed to the IdentityManagerStatus object
    * looks like an IP address (x.x.x.x)
@@ -640,8 +736,6 @@ public class TestIdentityManager extends LockssTestCase {
   public void testStatusInterface() throws Exception {
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
     peer2 = idmgr.stringToPeerIdentity("127.0.0.2");
-
-    MockArchivalUnit mau = new MockArchivalUnit();
 
     idmgr.signalAgreed(peer1, mau);
     idmgr.signalAgreed(peer2, mau);
@@ -655,7 +749,8 @@ public class TestIdentityManager extends LockssTestCase {
     for (Iterator iter = idMap.values().iterator();
 	 iter.hasNext();) {
       LcapIdentity id = (LcapIdentity)iter.next();
-      assertTrue(expectedAddresses.contains(id.getPeerIdentity().getIdString()));
+      assertTrue(id.getPeerIdentity() + " not found in " + expectedAddresses,
+		 expectedAddresses.contains(id.getPeerIdentity().getIdString()));
     }
     
     assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
@@ -671,6 +766,13 @@ public class TestIdentityManager extends LockssTestCase {
     protected IdentityManagerStatus makeStatusAccessor(Map identities) {
       this.identities = identities;
       return new MockIdentityManagerStatus();
+    }
+
+    void forceReloadMap(ArchivalUnit au) {
+      Map map = findAuAgreeMap(au);
+      synchronized (map) {
+	map.put(AGREE_MAP_INIT_KEY, "true");	// ensure map is reread
+      }
     }
   }
 

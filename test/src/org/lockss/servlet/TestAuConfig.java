@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuConfig.java,v 1.6 2004-08-18 07:09:51 tlipkis Exp $
+ * $Id: TestAuConfig.java,v 1.7 2005-07-18 08:07:47 tlipkis Exp $
  */
 
 /*
@@ -57,6 +57,7 @@ public class TestAuConfig extends LockssServletTestCase {
     super.setUp();
     pluginMgr = new PluginManager();
     theDaemon.setPluginManager(pluginMgr);
+    getMockLockssDaemon().setIdentityManager(new org.lockss.protocol.MockIdentityManager());
     theDaemon.setDaemonInited(true);
     theDaemon.getRemoteApi().startService();
     pluginMgr.initService(theDaemon);

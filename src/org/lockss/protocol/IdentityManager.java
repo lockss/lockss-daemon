@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.59 2005-05-18 05:45:53 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.60 2005-07-18 08:08:05 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,13 @@ public class IdentityManager
    * over org.lockss.localV3Port */
   public static final String PARAM_LOCAL_V3_IDENTITY =
     Configuration.PREFIX + "localV3Identity";
+
+  /** If true, restored agreement maps will be merged with any
+   * alread-loaded map */
+  public static final String PARAM_MERGE_RESTORED_AGREE_MAP =
+    Configuration.PREFIX + "id.mergeAgreeMap";
+  public static final boolean DEFAULT_MERGE_RESTORED_AGREE_MAP = true;
+
 
   static final String PREFIX = Configuration.PREFIX + "id.";
   static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";
@@ -155,13 +162,10 @@ public class IdentityManager
 
   int[] reputationDeltas = new int[10];
 
-  private Map agreeMap = null;
-  private Map disagreeMap = null;
+  private boolean isMergeRestoredAgreemMap = DEFAULT_MERGE_RESTORED_AGREE_MAP;
 
-  //derivable from the above two; included for speed
-  private Map cachesToFetchFrom = null;
-
-  private Object identityMapLock = new Object();
+  // Maps au to its agreement map, which maps PeerIdentity -> IdentityAgreement
+  private Map agreeMaps = new HashMap();;
 
   private IdentityManagerStatus status;
 
@@ -175,7 +179,10 @@ public class IdentityManager
     setupLocalIdentities();
   }
 
-  void setupLocalIdentities() {
+  // This is protected only so it can be overridden in a mock subcless in
+  // another package (TestRemoteApi).  Won't be necessary when there's an
+  // interface for the mock class to implement instead
+  protected void setupLocalIdentities() {
     localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
     theIdentities = new HashMap();
     thePeerIdentities = new HashMap();
@@ -246,7 +253,6 @@ public class IdentityManager
 
     Vote.setIdentityManager(this);
     LcapMessage.setIdentityManager(this);
-    IdentityAgreement.setIdentityManager(this);
   }
 
   protected IdentityManagerStatus makeStatusAccessor(Map theIdentities) {
@@ -655,22 +661,13 @@ public class IdentityManager
     } else if (pid == null) {
       throw new IllegalArgumentException("Called with null pid");
     }
-    synchronized (identityMapLock) { //using as the lock for all 3 maps
-      ensureIdentityMapsLoaded(au);
-      Map map = (Map)agreeMap.get(au);
-      if (map == null) {
-	map = new HashMap();
-	agreeMap.put(au, map);
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
+      if (time > ida.getLastAgree()) {
+	ida.setLastAgree(time);
+	storeIdentityAgreement(au);
       }
-      map.put(pid, new Long(time));
-
-      map = (Map)cachesToFetchFrom.get(au);
-      if (map == null) {
-	map = new HashMap();
-	cachesToFetchFrom.put(au, map);
-      }
-      map.put(pid, new Long(time));
-      storeIdentityAgreement(au);
     }
   }
 
@@ -690,120 +687,228 @@ public class IdentityManager
     } else if (pid == null) {
       throw new IllegalArgumentException("Called with null pid");
     }
-    synchronized (identityMapLock) { //using as the lock for all 3 maps
-      ensureIdentityMapsLoaded(au);
-      Map map = (Map)disagreeMap.get(au);
-      if (map == null) {
-	map = new HashMap();
-	disagreeMap.put(au, map);
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
+      if (time > ida.getLastDisagree()) {
+	ida.setLastDisagree(time);
+	storeIdentityAgreement(au);
       }
-      map.put(pid, new Long(time));
-
-      map = (Map)cachesToFetchFrom.get(au);
-      if (map == null) {
-	return;
-      }
-      map.remove(pid);
-      if (map.size() == 0) {
-	cachesToFetchFrom.remove(au);
-      }
-      storeIdentityAgreement(au);
     }
   }
 
   /**
    * @param au ArchivalUnit to look up PeerIdentities for
-   * @return a map of PeerIdentity -> last agreed time.
+   * @return List of peers from which to try to fetch repairs for the AU.
+   * Peers with whom we have had any disagreement since the last toplevel
+   * agreement are placed at the end of the list.
    */
-  public Map getCachesToRepairFrom(ArchivalUnit au) {
+  public List getCachesToRepairFrom(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
-    synchronized (identityMapLock) { //using as the lock for all 3 maps
-      ensureIdentityMapsLoaded(au);
-      return (Map)cachesToFetchFrom.get(au);
+    Map map = findAuAgreeMap(au);
+    List res = new LinkedList();
+    synchronized (map) {
+      for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
+	Map.Entry ent = (Map.Entry)it.next();
+	IdentityAgreement ida = (IdentityAgreement)ent.getValue();
+	if (ida.hasAgreed()) {
+	  if (ida.getLastDisagree() > ida.getLastAgree()) {
+	    res.add(ent.getKey());
+	  } else {
+	    res.add(0, ent.getKey());
+	  }
+	}
+      }
+    }
+    return res;
+  }
+
+  public boolean hasAgreed(String ip, ArchivalUnit au)
+      throws MalformedIdentityKeyException {
+    return hasAgreed(stringToPeerIdentity(ip), au);
+  }
+
+  public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au) {
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      IdentityAgreement ida = (IdentityAgreement)map.get(pid);
+      return ida != null ? ida.hasAgreed() : false;
     }
   }
 
+  /** Return map peer -> last agree time.  Used for logging and debugging */
   public Map getAgreed(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     }
-    synchronized (identityMapLock) { //using as the lock for all 3 maps
-      ensureIdentityMapsLoaded(au);
-      return (Map)agreeMap.get(au);
+    Map map = findAuAgreeMap(au);
+    Map res = new HashMap();
+    synchronized (map) {
+      for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
+	Map.Entry ent = (Map.Entry)it.next();
+	IdentityAgreement ida = (IdentityAgreement)ent.getValue();
+	if (ida.hasAgreed()) {
+	  res.put(ent.getKey(), new Long(ida.getLastAgree()));
+	}
+      }
+    }
+    return res;
+  }
+
+  /** Return map peer -> last disagree time.  Used for logging and debugging */
+  public Map getDisagreed(ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    }
+    Map map = findAuAgreeMap(au);
+    Map res = new HashMap();
+    synchronized (map) {
+      for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
+	Map.Entry ent = (Map.Entry)it.next();
+	IdentityAgreement ida = (IdentityAgreement)ent.getValue();
+	if (ida.getLastDisagree() != 0) {
+	  res.put(ent.getKey(), new Long(ida.getLastDisagree()));
+	}
+      }
+    }
+    return res;
+  }
+
+  // called in synchronized block
+  private IdentityAgreement findPeerIdentityAgreement(Map map,
+						      PeerIdentity pid) {
+    IdentityAgreement ida = (IdentityAgreement)map.get(pid);
+    if (ida == null) {
+      ida = new IdentityAgreement(pid);
+      map.put(pid, ida);
+    }
+    return ida;
+  }
+
+  static String AGREE_MAP_INIT_KEY = "needs_init";
+
+  Map findAuAgreeMap(ArchivalUnit au) {
+    Map map;
+    synchronized (agreeMaps) {
+      map = (Map)agreeMaps.get(au.getAuId());
+      if (map == null) {
+	map = new HashMap();
+	map.put(AGREE_MAP_INIT_KEY, "true");
+	agreeMaps.put(au.getAuId(), map);
+      }
+    }
+    synchronized (map) {
+      if (map.containsKey(AGREE_MAP_INIT_KEY)) {
+	loadIdentityAgreement(map, au);
+	map.remove(AGREE_MAP_INIT_KEY);
+      }
+    }
+    return map;
+  }
+
+  public boolean hasAgreeMap(ArchivalUnit au) {
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      return !map.isEmpty();
     }
   }
 
-  private void ensureIdentityMapsLoaded(ArchivalUnit au) {
-    if (agreeMap == null || disagreeMap == null || cachesToFetchFrom == null) {
-      agreeMap = new HashMap();
-      disagreeMap = new HashMap();
-      cachesToFetchFrom = new HashMap();
-      loadIdentityAgreement(au);
-    }
-  }
-
-  private void loadIdentityAgreement(ArchivalUnit au) {
+  /** Copy the identity agreement file for the AU to the stream.
+   */
+  // XXX hokey way to have the acceess performed by the object that has the
+  // appropriate lock
+  public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
+      throws IOException {
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    List list = hRep.loadIdentityAgreements();
-    if (list != null) {
-      Iterator it = list.iterator();
-      while (it.hasNext()) {
-	IdentityAgreement ida = (IdentityAgreement)it.next();
-	if (ida.getLastAgree() > 0) {
-	  signalAgreed(ida.getPeerIdentity(), au, ida.getLastAgree());
-	}
-	if (ida.getLastDisagree() > 0) {
-	  signalDisagreed(ida.getPeerIdentity(), au, ida.getLastDisagree());
-	}
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      File file = hRep.getIdentityAgreementFile();
+      InputStream in = new BufferedInputStream(new FileInputStream(file));
+      try {
+	StreamUtil.copy(in, out);
+      } finally {
+	IOUtil.safeClose(in);
+      }
+    }
+  }
+
+  /** Install the contents of the stream as the identity agreement file for
+   * the AU
+   */
+  // XXX hokey way to have the acceess performed by the object that has the
+  // appropriate lock
+  public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
+      throws IOException {
+    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      File file = hRep.getIdentityAgreementFile();
+      OutputStream out = new FileOutputStream(file);
+      try {
+	StreamUtil.copy(in, out);
+      } finally {
+	IOUtil.safeClose(out);
+	map.put(AGREE_MAP_INIT_KEY, "true");	// ensure map is reread
       }
     }
   }
 
   //only called within a synchronized block, so we don't need to
+  private Map loadIdentityAgreement(Map map, ArchivalUnit au) { 
+   HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    List list = hRep.loadIdentityAgreements();
+    if (map == null) {
+      map = new HashMap();
+    }
+    if (list == null) {
+      if (!isMergeRestoredAgreemMap) {
+	map.clear();
+      }
+    } else {
+      Set prevOnlyPids = new HashSet(map.keySet());
+      for (Iterator it = list.iterator(); it.hasNext(); ) {
+	IdentityAgreement ida = (IdentityAgreement)it.next();
+	try {
+	  PeerIdentity pid = stringToPeerIdentity(ida.getId());
+	  if (isMergeRestoredAgreemMap) {
+	    ida = mergeIdAgreement((IdentityAgreement)map.get(pid), ida);
+	  } else {
+	    prevOnlyPids.remove(pid);
+	  }
+	  map.put(pid, ida);
+	} catch (MalformedIdentityKeyException e) {
+	  log.warning("Couldn't load agreement for key " + ida.getId(), e);
+	}
+      }
+      if (!isMergeRestoredAgreemMap) {
+	for (Iterator it = prevOnlyPids.iterator(); it.hasNext(); ) {
+	  Object pid = it.next();
+	  if (pid instanceof PeerIdentity) {
+	    map.remove(pid);
+	  }
+	}
+      }
+    }
+    return map;
+  }
+
   private void storeIdentityAgreement(ArchivalUnit au) {
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
-    hRep.storeIdentityAgreements(generateIdentityAgreementList(au));
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      hRep.storeIdentityAgreements(new ArrayList(map.values()));
+    }
   }
 
-
-  //only called within a synchronized block, so we don't need to
-  private List generateIdentityAgreementList(ArchivalUnit au) {
-    List list = new ArrayList();
-    Map map = new HashMap();
-
-    Map agreeMapForAu = (Map)agreeMap.get(au);
-    if (agreeMapForAu != null && agreeMapForAu.size() > 0) {
-      for (Iterator it = agreeMapForAu.entrySet().iterator(); it.hasNext(); ) {
-	Map.Entry entry = (Map.Entry)it.next();
-	PeerIdentity pid = (PeerIdentity)entry.getKey();
-	Long time = (Long)entry.getValue();
-	IdentityAgreement ida = new IdentityAgreement(pid);
-	ida.setLastAgree(time.longValue());
-
-	list.add(ida);
-	map.put(pid, ida);
-      }
+  private IdentityAgreement mergeIdAgreement(IdentityAgreement prev,
+					     IdentityAgreement ida) {
+    if (prev == null) {
+      return ida;
     }
-
-    Map disagreeMapForAu = (Map)disagreeMap.get(au);
-    if (disagreeMapForAu != null && disagreeMapForAu.size() > 0) {
-      for (Iterator it = disagreeMapForAu.entrySet().iterator();
-	   it.hasNext(); ) {
-	Map.Entry entry = (Map.Entry)it.next();
-	PeerIdentity pid = (PeerIdentity)entry.getKey();
-	Long time = (Long)entry.getValue();
-	IdentityAgreement ida = (IdentityAgreement)map.get(pid);
-	if (ida == null) { //wasn't set in the previous loop
-	  ida = new IdentityAgreement(pid);
-	  list.add(ida);
-	  map.put(pid, ida);
-	}
-	ida.setLastDisagree(time.longValue());
-      }
-    }
-    return list;
+    prev.mergeFrom(ida);
+    return prev;
   }
 
   public void setConfig(Configuration config, Configuration oldConfig,
@@ -828,6 +933,11 @@ public class IdentityManager
       config.getInt(PARAM_VOTE_VERIFIED, DEFAULT_VOTE_VERIFIED);
     reputationDeltas[VOTE_DISOWNED] =
       config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
+
+    isMergeRestoredAgreemMap =
+      config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
+			DEFAULT_MERGE_RESTORED_AGREE_MAP);
+
   }
 
 
@@ -835,7 +945,6 @@ public class IdentityManager
     private long lastAgree = 0;
     private long lastDisagree = 0;
     private String id = null;
-    private static IdentityManager idMgr = null;
 
     public IdentityAgreement(PeerIdentity pid) {
       this.id = pid.getIdString();
@@ -843,10 +952,6 @@ public class IdentityManager
 
     // needed for marshalling
     public IdentityAgreement() {}
-
-    private static void setIdentityManager(IdentityManager idm) {
-      idMgr = idm;
-    }
 
     public long getLastAgree() {
       return lastAgree;
@@ -868,18 +973,23 @@ public class IdentityManager
       return id;
     }
 
-    public PeerIdentity getPeerIdentity() {
-      PeerIdentity ret = null;
-      try {
-	ret = idMgr.stringToPeerIdentity(id);
-      } catch (IdentityManager.MalformedIdentityKeyException uhe) {
-	// No action intended
-      }
-      return ret;
+    public boolean hasAgreed() {
+      return lastAgree != 0;
     }
 
     public void setId(String id) {
       this.id = id;
+    }
+
+    public void mergeFrom(IdentityAgreement ida) {
+      long ag = ida.getLastAgree();
+      if (ag > getLastAgree()) {
+	setLastAgree(ag);
+      }
+      long dis = ida.getLastDisagree();
+      if (dis > getLastDisagree()) {
+	setLastDisagree(dis);
+      }
     }
 
     public String toString() {
@@ -911,24 +1021,6 @@ public class IdentityManager
       return 7 * id.hashCode() + 3 * (int)(getLastDisagree() + getLastAgree());
     }
   }
-
-  // for marshalling purposes, this class has to exist
-  public static class IdentityAgreementList {
-    private List idAgreeList;
-    public IdentityAgreementList() { }
-    public IdentityAgreementList(List list) {
-      idAgreeList = list;
-    }
-
-    public List getList() {
-      return idAgreeList;
-    }
-
-    public void setList(List list) {
-      idAgreeList = list;
-    }
-  }
-
 
   /** Exception thrown for illegal identity keys. */
   public static class MalformedIdentityKeyException extends IOException {

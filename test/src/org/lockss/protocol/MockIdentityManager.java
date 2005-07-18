@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.4 2005-07-14 23:33:55 troberts Exp $
+* $Id: MockIdentityManager.java,v 1.5 2005-07-18 08:08:04 tlipkis Exp $
  */
 
 /*
@@ -162,10 +162,6 @@ public class MockIdentityManager extends IdentityManager {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public Map getCachesToRepairFrom(ArchivalUnit au) {
-    throw new UnsupportedOperationException("not implemented");
-  }
-
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
     throw new UnsupportedOperationException("not implemented");
@@ -220,6 +216,23 @@ public class MockIdentityManager extends IdentityManager {
     return (Map)agreeMap.get(au);
   }
   
+  public List getCachesToRepairFrom(ArchivalUnit au) {
+    Map map = getAgreed(au);
+    if (map == null) return Collections.EMPTY_LIST;
+    return new ArrayList(map.keySet());
+  }
+
+  public boolean hasAgreed(String ip, ArchivalUnit au)
+      throws MalformedIdentityKeyException {
+    return hasAgreed(stringToPeerIdentity(ip), au);
+  }
+
+  public boolean hasAgreed(PeerIdentity pid, ArchivalUnit au) {
+    Map map = getAgreed(au);
+    if (map == null) return false;
+    return map.containsKey(pid);
+  }
+
    /**
     * Change the the reputation of the peer
     * @param peer the PeerIdentity
