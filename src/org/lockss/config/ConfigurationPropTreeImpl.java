@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.5 2005-03-22 06:23:01 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.6 2005-07-18 08:11:00 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class ConfigurationPropTreeImpl extends Configuration {
     return props;
   }
 
-  boolean store(OutputStream ostr, String header) throws IOException {
+  public boolean store(OutputStream ostr, String header) throws IOException {
     SortedProperties.fromProperties(props).store(ostr, header);
 //     props.store(ostr, header);
     return true;

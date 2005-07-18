@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.12 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: Configuration.java,v 1.13 2005-07-18 08:11:00 tlipkis Exp $
  */
 
 /*
@@ -189,7 +189,7 @@ public abstract class Configuration {
     return null;
   }
 
-  abstract boolean store(OutputStream ostr, String header)
+  public abstract boolean store(OutputStream ostr, String header)
       throws IOException;
 
   /** Return a Configuration.Differences representing the set of keys whose
