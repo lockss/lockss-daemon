@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.68 2005-03-18 18:07:51 troberts Exp $
+ * $Id: NullPlugin.java,v 1.69 2005-07-19 00:13:33 troberts Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public class NullPlugin {
       return false;
     }
 
-    public void setForceRefetch(boolean force) {
+    public void setFetchFlags(BitSet fetchFlags) {
     }
 
     public void setRequestProperty(String key, String value) {

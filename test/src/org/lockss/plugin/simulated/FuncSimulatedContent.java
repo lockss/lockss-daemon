@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.70 2005-02-28 18:15:29 tlipkis Exp $
+ * $Id: FuncSimulatedContent.java,v 1.71 2005-07-19 00:13:33 troberts Exp $
  */
 
 /*
@@ -355,7 +355,10 @@ public class FuncSimulatedContent extends LockssTestCase {
     /* Cache the file again; this time the damage should be gone */
     String file = SimulatedArchivalUnit.SIMULATED_URL_ROOT + DAMAGED_CACHED_URL;
     UrlCacher uc = sau.makeUrlCacher(file);
-    uc.setForceRefetch(true);
+//     uc.setForceRefetch(true);
+    BitSet fetchFlags = new BitSet();
+    fetchFlags.set(UrlCacher.REFETCH_FLAG);
+    uc.setFetchFlags(fetchFlags);
     uc.cache();
     checkUrlContent(DAMAGED_CACHED_URL, 2, 2, 2, false, false);
   }

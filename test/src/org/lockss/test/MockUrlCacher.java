@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.26 2005-06-04 19:21:31 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.27 2005-07-19 00:13:33 troberts Exp $
  */
 
 /*
@@ -59,7 +59,8 @@ public class MockUrlCacher implements UrlCacher {
   private RuntimeException cachingRuntimException = null;
   private int numTimesToThrow = 1;
   private int timesThrown = 0;
-  private boolean forceRefetch = false;
+//   private boolean forceRefetch = false;
+  private BitSet fetchFlags = new BitSet();
   private PermissionMapSource permissionMapSource;
 
   public MockUrlCacher(String url, MockArchivalUnit au){
@@ -102,8 +103,16 @@ public class MockUrlCacher implements UrlCacher {
   public void setProxy(String proxyHost, int proxyPort) {
   }
 
-  public void setForceRefetch(boolean force) {
-    this.forceRefetch = force;
+//   public void setForceRefetch(boolean force) {
+//     this.forceRefetch = force;
+//   }
+
+  public void setFetchFlags(BitSet fetchFlags) {
+    this.fetchFlags = fetchFlags;
+  }
+
+  public BitSet getFetchFlags() {
+    return this.fetchFlags;
   }
 
   public void setRequestProperty(String key, String value) {
@@ -138,7 +147,8 @@ public class MockUrlCacher implements UrlCacher {
     cachedIS = input;
     cachedProp = headers;
     if (cus != null) {
-      if (forceRefetch) {
+      if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
+//       if (forceRefetch) {
 	cus.addForceCachedUrl(url);
       } else {
 	cus.addCachedUrl(url);
@@ -174,7 +184,8 @@ public class MockUrlCacher implements UrlCacher {
       throw cachingRuntimException;
     }
     if (cus != null) {
-      if (forceRefetch) {
+      if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
+// 	  if (forceRefetch) {
 	cus.addForceCachedUrl(url);
       } else {
 	cus.addCachedUrl(url);
