@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.69 2005-07-19 00:13:33 troberts Exp $
+ * $Id: NullPlugin.java,v 1.70 2005-07-19 01:10:36 tlipkis Exp $
  */
 
 /*
@@ -64,6 +64,9 @@ public class NullPlugin {
     }
 
     public void stopPlugin() {
+    }
+
+    public void stopAu(org.lockss.plugin.ArchivalUnit au) {
     }
 
     public String getPluginId() {

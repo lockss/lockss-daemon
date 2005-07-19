@@ -1,5 +1,5 @@
 /*
- * $Id: Plugin.java,v 1.23 2004-10-06 23:52:55 clairegriffin Exp $
+ * $Id: Plugin.java,v 1.24 2005-07-19 01:10:37 tlipkis Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public interface Plugin {
    * any necessary tasks needed to cleanly halt
    */
   public void stopPlugin();
+
+  /**
+   * Stop an AU (because it has been deleted or deactivated)
+   */
+  public void stopAu(ArchivalUnit au);
 
   /**
    * Return a string that uniquely represents the identity of this plugin
