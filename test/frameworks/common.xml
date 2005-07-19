@@ -4576,6 +4576,21 @@
 	</property>
       </property>
 
+      <property name="locksscard2005unpublished">
+	<property name="title" value="LOCKSS Card 2005 Unpublished" />
+	<property name="estSize" value="4.5MB" />
+	<property name="journalTitle" value="LOCKSS Card" />
+	<property name="plugin" value="org.lockss.plugin.locksscard.LockssCardPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lockss.org/unpublished/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2005" />
+	</property>
+      </property>
+
       <property name="MedievalForum4">
 	<property name="title" value="Medieval Forum Volume 4" />
 	<property name="estSize" value="0.7MB" />
