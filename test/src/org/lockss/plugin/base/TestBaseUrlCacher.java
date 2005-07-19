@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.37 2005-05-20 23:42:39 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.38 2005-07-19 00:15:43 troberts Exp $
  */
 
 /*
@@ -53,6 +53,10 @@ import org.lockss.crawler.*;
  */
 public class TestBaseUrlCacher extends LockssTestCase {
 
+  private static final int REFETCH_FLAG = 0;
+  private static final int CLEAR_DAMAGE_FLAG = 1;
+  private static final int REFETCH_IF_DAMAGE_FLAG = 2;
+
   static DateFormat GMT_DATE_FORMAT = BaseUrlCacher.GMT_DATE_FORMAT;
 
   MyMockBaseUrlCacher cacher;
@@ -63,6 +67,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
   private MockLockssDaemon theDaemon;
   private LockssRepository repo;
   private int pauseBeforeFetchCounter;
+
+  private MockNodeManager nodeMgr = new MockNodeManager();
 
   private static final String TEST_URL =
     "http://www.example.com/testDir/leaf1";
@@ -89,6 +95,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
       (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
 					       mau);
     theDaemon.setLockssRepository(repo, mau);
+
+    theDaemon.setNodeManager(nodeMgr, mau);
 
     mcus = new MockCachedUrlSet(TEST_URL);
     mcus.setArchivalUnit(mau);
@@ -186,10 +194,51 @@ public class TestBaseUrlCacher extends LockssTestCase {
     cacher._input = new StringInputStream("test stream");
     cacher._headers = cachedProps;
     // should still cache
-    cacher.setForceRefetch(true);
+//     cacher.setForceRefetch(true);
+    BitSet bs = new BitSet();
+    bs.set(REFETCH_FLAG);
+    cacher.setFetchFlags(bs);
     cacher.cache();
     assertTrue(cacher.wasStored);
 
+    TimeBase.setReal();
+  }
+
+  public void testCacheClearsDamage() throws IOException {
+    MockDamagedNodeSet dnSet = new MockDamagedNodeSet();
+    dnSet.addToDamage(TEST_URL);
+    nodeMgr.setDamagedNodes(dnSet);
+
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    BitSet bs = new BitSet();
+    bs.set(CLEAR_DAMAGE_FLAG);
+    cacher.setFetchFlags(bs);
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertFalse(dnSet.hasDamage(TEST_URL));
+  }
+
+  public void testRefetchIfDamage() throws IOException {
+    MockDamagedNodeSet dnSet = new MockDamagedNodeSet();
+    dnSet.addToDamage(TEST_URL);
+    nodeMgr.setDamagedNodes(dnSet);
+
+    CIProperties cachedProps = new CIProperties();
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
+			    GMT_DATE_FORMAT.format(new Date(12345)));
+    mau.addUrl(TEST_URL, true, true, cachedProps);
+
+    TimeBase.setSimulated(10000);
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    BitSet bs = new BitSet();
+    bs.set(REFETCH_IF_DAMAGE_FLAG);
+    cacher.setFetchFlags(bs);
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
     TimeBase.setReal();
   }
 
@@ -390,7 +439,10 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = makeMucWithContent();
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
-    muc.setForceRefetch(true);
+//     muc.setForceRefetch(true);
+    BitSet bs = new BitSet();
+    bs.set(REFETCH_FLAG);
+    muc.setFetchFlags(bs);
     muc.cache();
     assertEquals(TEST_URL, mconn.getURL());
     assertNull(mconn.getRequestProperty("if-modified-since"));

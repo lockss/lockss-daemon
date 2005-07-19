@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.54 2005-07-09 21:57:55 tlipkis Exp $
+ * $Id: BaseUrlCacher.java,v 1.55 2005-07-19 00:15:43 troberts Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
 import java.text.*;
 
 import org.lockss.app.*;
+import org.lockss.state.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
@@ -83,10 +84,13 @@ public class BaseUrlCacher implements UrlCacher {
   private int proxyPort;
   private Properties reqProps;
 
+  private BitSet fetchFlags = new BitSet();
 
   private static final String SHOULD_REFETCH_ON_SET_COOKIE =
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
+
+  private NodeManager nodeMgr;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
     this.origUrl = url;
@@ -95,6 +99,8 @@ public class BaseUrlCacher implements UrlCacher {
     au = owner;
     Plugin plugin = au.getPlugin();
     repository = plugin.getDaemon().getLockssRepository(au);
+    nodeMgr = plugin.getDaemon().getNodeManager(au);
+    logger.debug3("Node manager "+nodeMgr);
     resultMap = ((BasePlugin)plugin).getCacheResultMap();
   }
 
@@ -165,6 +171,10 @@ public class BaseUrlCacher implements UrlCacher {
     this.forceRefetch = force;
   }
 
+  public void setFetchFlags(BitSet fetchFlags) {
+    this.fetchFlags = fetchFlags;
+  }
+
   public void setRequestProperty(String key, String value) {
     if (reqProps == null) {
       reqProps = new Properties();
@@ -176,9 +186,19 @@ public class BaseUrlCacher implements UrlCacher {
     this.redirectOptions = scheme.getOptions();
   }
 
+  private boolean isDamaged() {
+    DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
+    if (dnSet == null) {
+      return false;
+    }
+    return dnSet.hasDamage(origUrl);
+  }
+
   public int cache() throws IOException {
     String lastModified = null;
-    if (!forceRefetch) {
+    if (!fetchFlags.get(REFETCH_FLAG) &&
+	!(fetchFlags.get(REFETCH_IF_DAMAGE_FLAG) && isDamaged())) {
+//     if (!forceRefetch) {
       CachedUrl cachedVersion = getCachedUrl();
 
       // if it's been cached, get the last modified date and use that
@@ -220,6 +240,13 @@ public class BaseUrlCacher implements UrlCacher {
       }
       checkLoginPage(input, headers);
       storeContent(input, headers);
+      if (fetchFlags.get(CLEAR_DAMAGE_FLAG)) {
+	DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
+	if (dnSet != null) {
+	  logger.debug3("Removing "+fetchUrl+" from damaged set");
+	  dnSet.removeFromDamage(fetchUrl);
+	}
+      }
       return CACHE_RESULT_FETCHED;
     } finally {
       if (input != null) {
