@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.34 2005-07-19 01:11:21 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.35 2005-07-19 16:31:57 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,8 @@ import org.apache.commons.collections.map.ReferenceMap;
  * variety of daemon status and services using proxies object whose instance
  * identity is unimportant.
  */
-public class RemoteApi extends BaseLockssDaemonManager {
+public class RemoteApi
+  extends BaseLockssDaemonManager implements ConfigurableManager {
   private static Logger log = Logger.getLogger("RemoteApi");
 
   static CatalogueOrderComparator coc = CatalogueOrderComparator.SINGLETON;
@@ -59,22 +60,33 @@ public class RemoteApi extends BaseLockssDaemonManager {
   static final String AU_PARAM_DISPLAY_NAME =
     PluginManager.AU_PARAM_DISPLAY_NAME;
 
+  static final String PREFIX = Configuration.PREFIX + "remoteApi.";
+
+  /** Config backup file version: V1 is just AU config, V2 is zip including
+   * AU config and agreement history */
   static final String PARAM_BACKUP_FILE_VERSION =
-    Configuration.PREFIX + "";
+    PREFIX + "backupFileVersion";
   static final String DEFAULT_BACKUP_FILE_VERSION = "V2";
 
+  /** Config backup file version: V1 is just AU config, V2 is zip including
+   * AU config and agreement history */
+  static final String PARAM_BACKUP_STREAM_MARK_SIZE =
+    PREFIX + "backupStreamMarkSize";
+  static final int DEFAULT_BACKUP_STREAM_MARK_SIZE = 10000;
 
   static final String BACK_FILE_AU_PROPS = "auprops";
   static final String BACK_FILE_AGREE_MAP = "idagreement";
 
   static final String AU_BACK_PROP_AUID = "auid";
   static final String AU_BACK_PROP_REPOSPEC = "repospec";
-  
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
   private IdentityManager idMgr;
   private RepositoryManager repoMgr;
+
+  private String paramBackupFileVer = DEFAULT_BACKUP_FILE_VERSION;
+  private int paramBackupStreamMarkSize = DEFAULT_BACKUP_STREAM_MARK_SIZE;
 
   // cache for proxy objects
   private ReferenceMap auProxies = new ReferenceMap(ReferenceMap.WEAK,
@@ -90,6 +102,18 @@ public class RemoteApi extends BaseLockssDaemonManager {
     configMgr = getDaemon().getConfigManager();
     idMgr = getDaemon().getIdentityManager();
     repoMgr = getDaemon().getRepositoryManager();
+  }
+
+  public void setConfig(Configuration config,
+			Configuration oldConfig,
+			Configuration.Differences changedKeys) {
+    if (changedKeys.contains(PREFIX)) {
+      paramBackupFileVer = config.get(PARAM_BACKUP_FILE_VERSION,
+				      DEFAULT_BACKUP_FILE_VERSION);
+      paramBackupStreamMarkSize =
+	config.getInt(PARAM_BACKUP_STREAM_MARK_SIZE,
+		      DEFAULT_BACKUP_STREAM_MARK_SIZE);
+    }
   }
 
   /** Create or return an AuProxy for the AU corresponding to the auid.
@@ -370,9 +394,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
    * determined by config  */
   public InputStream getAuConfigBackupStream(String machineName)
       throws IOException {
-    String filever = Configuration.getParam(PARAM_BACKUP_FILE_VERSION,
-					    DEFAULT_BACKUP_FILE_VERSION);
-    if ("V1".equalsIgnoreCase(filever)) {
+    if ("V1".equalsIgnoreCase(paramBackupFileVer)) {
       return getAuConfigBackupStreamV1(machineName);
     } else {
       return getAuConfigBackupStreamV2(machineName);
@@ -559,19 +581,34 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   public BatchAuStatus processSavedConfigProps(BufferedInputStream auTxtStream)
       throws IOException, InvalidAuConfigBackupFile {
-    auTxtStream.mark(1000);
+    int commentLen = AU_BACKUP_FILE_COMMENT.length();
+    // There is apparently hidden buffering in the InputStreamReader's
+    // StreamDecoder which throws off our calcualation as to how much
+    // auTxtStream needs to buffer, so use a large number
+    auTxtStream.mark(paramBackupStreamMarkSize);
     BufferedReader rdr =
       new BufferedReader(new InputStreamReader(auTxtStream,
-					       Constants.DEFAULT_ENCODING));
-    String line1 = rdr.readLine();
-    if (line1 == null) {
+					       Constants.DEFAULT_ENCODING),
+			 commentLen * 2);
+    // We really want rdr.readLine(), but we need to limit amount it reads
+    // (in case it doesn't find newline)
+    char[] buf = new char[commentLen];
+    int chars = StreamUtil.readChars(rdr, buf, commentLen);
+    log.debug("chars: " + chars);
+    if (chars == 0) {
       throw new InvalidAuConfigBackupFile("Uploaded file is empty");
     }
-    if (!line1.startsWith(AU_BACKUP_FILE_COMMENT)) {
+    String line1 = new String(buf);
+    if (chars < commentLen ||
+	!line1.startsWith(AU_BACKUP_FILE_COMMENT)) {
       log.debug("line1: " + line1);
       throw new InvalidAuConfigBackupFile("Uploaded file does not appear to be a saved AU configuration");
     }
-    auTxtStream.reset();
+    try {
+      auTxtStream.reset();
+    } catch (IOException e) {
+      throw new IOException("Internal error: please report \"Insufficient buffering for restore\".");
+    }
     Properties allAuProps = new Properties();
     try {
       allAuProps.load(auTxtStream);
