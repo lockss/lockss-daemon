@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.27 2005-07-18 17:36:06 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.28 2005-07-19 00:16:18 troberts Exp $
  */
 
 /*
@@ -76,6 +76,14 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   //testing max. crawl Depth of a site, subject to be changed
   public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
+  public static final String PARAM_CLEAR_DAMAGE_ON_FETCH =
+    Configuration.PREFIX + "CrawlerImpl.clearDamageOnFetch";
+  public static final boolean DEFAULT_CLEAR_DAMAGE_ON_FETCH = true;
+
+  public static final String PARAM_REFETCH_IF_DAMAGED =
+    Configuration.PREFIX + "CrawlerImpl.refetchIfDamaged";
+  public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
+
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;
   private boolean usePersistantList = DEFAULT_PERSIST_CRAWL_LIST;
   protected int maxDepth = DEFAULT_MAX_CRAWL_DEPTH;
@@ -86,6 +94,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   protected Set extractedUrls;
   protected boolean cachingStartUrls = false; //added to report an error when
                                               //not able to cache a starting Url
+
+  protected BitSet fetchFlags = new BitSet();
+
 
   public FollowLinkCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
@@ -110,6 +121,16 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 					  DEFAULT_PERSIST_CRAWL_LIST);
     maxDepth = config.getInt(PARAM_MAX_CRAWL_DEPTH, DEFAULT_MAX_CRAWL_DEPTH);
     maxRetries = config.getInt(PARAM_RETRY_TIMES, DEFAULT_RETRY_TIMES);
+
+    fetchFlags = new BitSet();
+    if (config.getBoolean(PARAM_CLEAR_DAMAGE_ON_FETCH,
+ 			  DEFAULT_CLEAR_DAMAGE_ON_FETCH)) {
+      fetchFlags.set(UrlCacher.CLEAR_DAMAGE_FLAG);
+    }
+    if (config.getBoolean(PARAM_REFETCH_IF_DAMAGED,
+ 			  DEFAULT_REFETCH_IF_DAMAGED)) {
+      fetchFlags.set(UrlCacher.REFETCH_IF_DAMAGE_FLAG);
+    }
   }
 
   /**
@@ -268,6 +289,8 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }
+
+    uc.setFetchFlags(fetchFlags);
     return uc;
   }
 
