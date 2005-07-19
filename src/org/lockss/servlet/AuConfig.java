@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.39 2005-06-04 18:59:53 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.40 2005-07-19 16:32:33 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,10 @@ public class AuConfig extends LockssServlet {
   static final String PARAM_INCLUDE_PLUGIN_IN_TITLE_SELECT =
     Configuration.PREFIX + "auconfig.includePluginInTitleSelect";
   static final boolean DEFAULT_INCLUDE_PLUGIN_IN_TITLE_SELECT = false;
+
+  static final String PARAM_ALLOW_EDIT_DEFAULT_ONLY_PARAMS =
+    Configuration.PREFIX + "auconfig.allowEditDefaultOnlyParams";
+  static final boolean DEFAULT_ALLOW_EDIT_DEFAULT_ONLY_PARAMS = false;
 
   static final String FOOT_REPOSITORY =
     "Local disk on which AU will be stored";
@@ -958,11 +962,14 @@ public class AuConfig extends LockssServlet {
     // Collections.sort(auConfigParams);
     defKeys = new ArrayList();
     editKeys = new ArrayList();
+    boolean allowEditDefaultOnly =
+      ConfigManager.getBooleanParam(PARAM_ALLOW_EDIT_DEFAULT_ONLY_PARAMS,
+				    DEFAULT_ALLOW_EDIT_DEFAULT_ONLY_PARAMS);
     for (Iterator iter = auConfigParams.iterator(); iter.hasNext(); ) {
       ConfigParamDescr descr = (ConfigParamDescr)iter.next();
       if (descr.isDefinitional()) {
 	defKeys.add(descr.getKey());
-      } else {
+      } else if (allowEditDefaultOnly || !descr.isDefaultOnly()) {
 	editKeys.add(descr.getKey());
       }
     }
