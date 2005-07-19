@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.145 2005-06-24 18:32:36 tlipkis Exp $
+ $Id: build.xml,v 1.146 2005-07-19 16:33:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1078,7 +1078,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
   </target>
 
   <target name="param-docs" depends="prepare-javadoc,jar-tools"
-   description="Generate an HTMl summary of LOCKSS configuration parameters.">
+   description="Generate an HTML summary of LOCKSS configuration parameters.">
     <!-- Write the HTML param doc into the doc tree -->
     <javadoc sourcepath="${src}"
 	     packagenames="org.lockss.*"
