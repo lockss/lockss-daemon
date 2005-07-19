@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.16 2004-12-09 17:43:02 troberts Exp $
+ * $Id: DamagedNodeSet.java,v 1.17 2005-07-19 00:12:21 troberts Exp $
  */
 
 /*
@@ -71,9 +71,10 @@ public class DamagedNodeSet {
   }
 
   /**
-   * Clears both the damaged nodes and the CUSs to repair.
+   * Clears both the damaged nodes and the CUSs to repair.  Does not write this
+   * to disc.
    */
-  public void clear() {
+  protected void clear() {
     nodesWithDamage.clear();
     cusToRepair.clear();
   }
@@ -114,6 +115,17 @@ public class DamagedNodeSet {
     while (damagedIt.hasNext()) {
       String url = (String) damagedIt.next();
       if (cus.containsUrl(url)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  synchronized public boolean hasDamage(String nodeUrl) {
+    Iterator damagedIt = nodesWithDamage.iterator();
+    while (damagedIt.hasNext()) {
+      String url = (String) damagedIt.next();
+      if (url.equals(nodeUrl)) {
         return true;
       }
     }
@@ -181,6 +193,8 @@ public class DamagedNodeSet {
     cusToRepair.put(cus.getUrl(), urlArray);
     repository.storeDamagedNodeSet(this);
   }
+
+  
 
   /**
    * Remove the url from the damage list.
