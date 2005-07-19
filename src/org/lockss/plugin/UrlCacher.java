@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.18 2005-06-04 18:54:27 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.19 2005-07-19 00:12:57 troberts Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 import java.io.*;
-import java.util.Properties;
+import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.util.*;
@@ -84,6 +84,11 @@ public interface UrlCacher {
   /** fetched */
   public static final int CACHE_RESULT_FETCHED = 2;
 
+  public static final int REFETCH_FLAG = 0;
+  public static final int CLEAR_DAMAGE_FLAG = 1;
+  public static final int REFETCH_IF_DAMAGE_FLAG = 2;
+
+
   /**
    * Return the url being represented
    * @return the {@link String} url being represented.
@@ -124,7 +129,9 @@ public interface UrlCacher {
    * content currently on disk, if any).
    * @param force if true, fetches the URL unconditionally.
    */
-  public void setForceRefetch(boolean force);
+//   public void setForceRefetch(boolean force);
+
+  public void setFetchFlags(BitSet fetchFlags); 
 
   /** Set a request header, overwriting any previous value */
   public void setRequestProperty(String key, String value);
