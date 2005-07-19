@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManager.java,v 1.30 2004-08-21 06:52:51 tlipkis Exp $
+ * $Id: NodeManager.java,v 1.31 2005-07-19 00:14:10 troberts Exp $
  */
 
 /*
@@ -109,6 +109,11 @@ public interface NodeManager extends LockssAuManager {
    */
   public void scheduleRepairs(ActivityRegulator.Lock auLock);
 
+
+  /**
+   * Returns the set of damaged nodes for the given AU
+   */
+  public DamagedNodeSet getDamagedNodes();
 
   /**
    * Looks at the state of the node, and indicates if a poll needs to be called.

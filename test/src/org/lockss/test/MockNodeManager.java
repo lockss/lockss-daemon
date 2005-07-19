@@ -1,5 +1,5 @@
 /*
- * $Id: MockNodeManager.java,v 1.19 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: MockNodeManager.java,v 1.20 2005-07-19 00:14:11 troberts Exp $
  */
 
 /*
@@ -51,6 +51,8 @@ public class MockNodeManager implements NodeManager {
   private MockAuState aus = new MockAuState();
   private HashMap nodeMap = new HashMap();
   public HashMap hashCalls = new HashMap();
+
+  private DamagedNodeSet dnSet;
 
   public void initService(LockssApp app)
       throws LockssAppException {
@@ -156,4 +158,11 @@ public class MockNodeManager implements NodeManager {
     throw new UnsupportedOperationException("Not implemented");
   }
 
+  public DamagedNodeSet getDamagedNodes() {
+    return this.dnSet;
+  }
+
+  public void setDamagedNodes(DamagedNodeSet dnSet) {
+    this.dnSet = dnSet;
+  }
 }

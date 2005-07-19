@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.199 2005-06-04 18:59:50 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.200 2005-07-19 00:14:10 troberts Exp $
  */
 
 /*
@@ -119,6 +119,11 @@ public class NodeManagerImpl
 
   public void setAuConfig(Configuration auConfig) {
   }
+
+  public DamagedNodeSet getDamagedNodes() {
+    return damagedNodes;
+  }
+
 
   public synchronized NodeState getNodeState(CachedUrlSet cus) {
     String url = cus.getUrl();
