@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.33 2005-07-18 08:05:56 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.34 2005-07-19 01:11:21 tlipkis Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class RemoteApi extends BaseLockssDaemonManager {
 
   static final String PARAM_BACKUP_FILE_VERSION =
     Configuration.PREFIX + "";
-  static final String DEFAULT_BACKUP_FILE_VERSION = "V1";
+  static final String DEFAULT_BACKUP_FILE_VERSION = "V2";
 
 
   static final String BACK_FILE_AU_PROPS = "auprops";
