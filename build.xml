@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.146 2005-07-19 16:33:27 tlipkis Exp $
+ $Id: build.xml,v 1.147 2005-07-22 23:46:57 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -203,6 +203,7 @@ Args:
   <property name="lockss.ant.jar" value="${lib}/lockss-ant.jar"/>
   <property name="lockss.tools.jar" value="${lib}/lockss-tools.jar"/>
   <property name="lockss.tools.test.jar" value="${lib}/lockss-tools-test.jar"/>
+  <property name="lockss.platform.jar"   value="${lib}/lockss-platform.jar"/>
 
   <!--  Files -->
   <property name="test.classpath.file" value="${test}/test-classpath"/>
@@ -533,6 +534,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     <delete file="${lockss.plugins.jar}" quiet="true"/>
     <delete file="${lockss.plugins.test.jar}" quiet="true"/>
     <delete file="${lockss.ant.jar}" quiet="true"/>
+    <delete file="${lockss.platform.jar}" quiet="true"/>
     <delete file="${test.classpath.file}" quiet="true"/>
     <delete file="${production.classpath.file}" quiet="true"/>
     <delete file="${production.packinglist.file}" quiet="true"/>
@@ -988,6 +990,33 @@ JAVA_COMMAND_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
     <jar jarfile="${lockss.ant.jar}" basedir="${ant.classes}" >
        <include name="**/" />
     </jar>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="platform-java-tools" depends="compile-lockss,check.contrib"
+   description="Package up the tools needed by the platform into a small standalone jar" >
+    <jar jarfile="${lockss.platform.jar}" basedir="${classes}" >
+      <include name="org/lockss/util/Version.class" />
+      <include name="org/lockss/util/DaemonVersion.class" />
+      <include name="org/lockss/util/MaxDaemonVersion.class" />
+    </jar>
+    <!-- Test it to ensure that it doesn't rely on any other classes -->
+    <java classname="org.lockss.util.MaxDaemonVersion" fork="true"
+          failonerror="true" outputproperty="max.version" >
+      <classpath>
+        <pathelement path="${lockss.platform.jar}" />
+      </classpath>
+      <arg value="1.1.2" />
+      <arg value="1.10.2" />
+      <arg value="1.9-foo.17" />
+    </java>
+    <if>
+      <not> <equals arg1="${max.version}" arg2="1.10.2" /> </not>
+     <then>
+      <fail
+        message="MaxDaemonVersion returned ${max.version}, expected 1.10.2" />
+     </then>
+    </if>
   </target>
 
   <!-- ==================================================================== -->
