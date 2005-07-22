@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonVersion.java,v 1.1 2004-06-14 03:08:45 smorabito Exp $
+ * $Id: TestDaemonVersion.java,v 1.2 2005-07-22 23:46:32 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,6 @@ public class TestDaemonVersion extends LockssTestCase {
     try {
       Version a = new DaemonVersion("1.0.0");
       Version b = new DaemonVersion("2.3.5-test");
-      Version c = new DaemonVersion("2.3b.5a");
     } catch (Throwable t) {
       fail("Unparsable daemon version. " + t);
     }
@@ -61,8 +60,17 @@ public class TestDaemonVersion extends LockssTestCase {
     Version c = new DaemonVersion("2.3.5-test");
     assertEquals(a.toLong(), c.toLong());
 
-    Version d = new DaemonVersion("2.3.5b");
+    Version d = new DaemonVersion("2.3.6");
     assertNotEquals(a.toLong(), d.toLong());
+  }
+
+  public void testIllegalFormat() {
+    assertIllegalFormat("1.2.3.4");
+    assertIllegalFormat("1234.123.123");
+    assertIllegalFormat("1.2.3.4");
+    assertIllegalFormat("1.2.$");
+    assertIllegalFormat("2.3b.5");
+    assertIllegalFormat("2.b.5");
   }
 
   public void testTooLong() {
@@ -91,16 +99,10 @@ public class TestDaemonVersion extends LockssTestCase {
     }
   }
 
-  public void testIllegalFormat() {
+  void assertIllegalFormat(String s) {
     try {
-      Version a = new DaemonVersion("1.2.3.4");
-      fail("Should have thrown.");
-    } catch (IllegalArgumentException ex) {
-    }
-
-    try {
-      Version a = new DaemonVersion("1.2.$.4");
-      fail("Should have thrown.");
+      Version a = new DaemonVersion(s);
+      fail("Daemon version '" + s + "' should be illegal, but wasn't.");
     } catch (IllegalArgumentException ex) {
     }
   }
@@ -110,17 +112,15 @@ public class TestDaemonVersion extends LockssTestCase {
     Version b = new DaemonVersion("2.3.6");
     Version c = new DaemonVersion("2.4.0");
     Version d = new DaemonVersion("3.2.0");
-    Version e = new DaemonVersion("2.3.5a");
-    Version f = new DaemonVersion("2.3.5z");
-    Version g = new DaemonVersion("2.3.5-test"); // should equal a
+    Version e = new DaemonVersion("2.3.5-test"); // should equal a
 
     assertTrue(a.toLong() < b.toLong());
     assertTrue(a.toLong() < c.toLong());
     assertTrue(a.toLong() < d.toLong());
-    assertTrue(a.toLong() < e.toLong());
-    assertTrue(a.toLong() < f.toLong());
-    assertFalse(a.toLong() < g.toLong());
-    assertEquals(a.toLong(), g.toLong());
+    assertTrue(b.toLong() < c.toLong());
+    assertTrue(c.toLong() < d.toLong());
+    assertFalse(a.toLong() < e.toLong());
+    assertEquals(a.toLong(), e.toLong());
   }
 
 }
