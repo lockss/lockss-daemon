@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.147 2005-07-22 23:46:57 tlipkis Exp $
+ $Id: build.xml,v 1.148 2005-07-23 00:14:55 thib_gc Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -179,6 +179,8 @@ Args:
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
   <property name="htmlparser.jar"  value="${lib}/htmlparser.jar"/>
   <property name="rdf.jar" value="${lib}/rdf-api-2001-01-19.jar" /> <!-- W3C RDF Parser -->
+	<property name="xstream.jar" value="${lib}/xstream-1.1.2.jar" />
+	<property name="xmlunit.jar" value="${lib}/xmlunit1.0.jar" />
   <!-- Needed by OAI harvester -->
   <property name="oai-harvester.jar" value="${lib}/harvester2-mod.jar"/>
   <property name="xalan.jar" value="${lib}/xalan.jar"/>
@@ -258,6 +260,7 @@ Args:
     <pathelement path="${oro.jar}" />
     <pathelement path="${htmlparser.jar}" />
     <pathelement path="${rdf.jar}" />
+  	<pathelement path="${xstream.jar}" />
     <!-- jars need to run the Oai harvester -->
     <pathelement path="${oai-harvester.jar}" />
     <pathelement path="${xalan.jar}" />
@@ -276,6 +279,7 @@ Args:
     <pathelement path="${httpunit.jar}" />
     <pathelement path="${nekohtml.jar}" />
     <pathelement path="${js.jar}" />
+  	<pathelement path="${xmlunit.jar}" />
     <!-- plugin jar -->
     <pathelement path="${lockss.plugins.jar}" />
   </path>
