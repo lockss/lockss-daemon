@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonVersion.java,v 1.3 2004-06-15 21:40:38 smorabito Exp $
+ * $Id: DaemonVersion.java,v 1.3.20.1 2005-07-23 00:40:19 tlipkis Exp $
  */
 
 /*
@@ -47,21 +47,22 @@ public class DaemonVersion implements Version {
   /**
    * Construct a Daemon Version from a string.
    *
-   * Valid formats are three period (.) separated tokens that include the
-   * characters a-z, A-Z, 0-9, and a dash followed by any string.  Characters
-   * following the dash in each token are ignored.  Tokens must be three
-   * characters or less, not including dashes and characters following the
-   * dash.  For example:
+   * Valid formats are three period (.) separated tokens, each of which
+   * consists of a nuumber, optionally a dash followed by any string.  The
+   * dash and any following characters in each token are ignored.  Tokens
+   * must be three characters or less, not including dashes and characters
+   * following the dash.  For example:
    *
    *   1.2.3
-   *   1.2.3-testing
-   *   1a.2b.3c
-   *   1.2.3ab
+   *   1.2.3-testing  (sorts same as 1.2.3)
+   *   1.2-b.3  (sorts same as 1.2.3)
    *
    * Illegal formats:
-   *   1.2323.3b
    *   1.0
    *   1.0.0.0
+   *   1a.2b.3c
+   *   1.2.3ab
+   *   1.2323.3b
    */
   public DaemonVersion(String ver) {
     StringTokenizer st = new StringTokenizer(ver, ".");
@@ -88,7 +89,7 @@ public class DaemonVersion implements Version {
   }
 
   public long toLong() {
-    long base = 36 * 36 * 36;
+    long base = 10 * 10 * 10;
     long num = m_versionMajor;
     num = (num * base) + m_versionMinor;
     num = (num * base) + m_versionBuild;
@@ -96,19 +97,15 @@ public class DaemonVersion implements Version {
   }
 
   private static int parseToken(String token) {
+    String intPart = token;
     int dash = token.indexOf('-');
 
     if (dash > -1) {
-      String intValue = token.substring(0, dash);
-      if (intValue.length() > 3) {
-	throw new IllegalArgumentException("Token is too long: " + intValue);
-      }
-      return Integer.parseInt(intValue, 36);
-    } else {
-      if (token.length() > 3) {
-	throw new IllegalArgumentException("Token is too long: " + token);
-      }
-      return Integer.parseInt(token, 36);
+      intPart = token.substring(0, dash);
     }
+    if (intPart.length() > 3) {
+      throw new IllegalArgumentException("Token is too long: " + intPart);
+    }
+    return Integer.parseInt(intPart, 10);
   }
 }
