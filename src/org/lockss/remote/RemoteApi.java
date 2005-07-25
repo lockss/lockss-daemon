@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.35 2005-07-19 16:31:57 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.36 2005-07-25 01:20:11 tlipkis Exp $
  */
 
 /*
@@ -39,8 +39,10 @@ import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
+import org.lockss.servlet.ServletManager;
 import org.lockss.util.*;
 import org.apache.commons.collections.map.ReferenceMap;
 
@@ -74,11 +76,19 @@ public class RemoteApi
     PREFIX + "backupStreamMarkSize";
   static final int DEFAULT_BACKUP_STREAM_MARK_SIZE = 10000;
 
+  static final String BACK_FILE_PROPS = "cacheprops";
   static final String BACK_FILE_AU_PROPS = "auprops";
   static final String BACK_FILE_AGREE_MAP = "idagreement";
 
+  static final String BACK_PROP_LOCAL_ID_V1 =
+    Configuration.PREFIX + "localId.v1";
+  static final String BACK_PROP_LOCAL_ID_V3 =
+    Configuration.PREFIX + "localId.v3";
+  static final String BACK_PROP_VERSION = Configuration.PREFIX + "version";
+
   static final String AU_BACK_PROP_AUID = "auid";
   static final String AU_BACK_PROP_REPOSPEC = "repospec";
+  static final String AU_BACK_PROP_REPODIR = "repodir";
 
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
@@ -437,6 +447,31 @@ public class RemoteApi
     try {
       OutputStream out = new BufferedOutputStream(new FileOutputStream(file));
       zip = new ZipOutputStream(out);
+      // save platform config, plus version and local identities (not yet
+      // used for anything)
+      Configuration platConfig =
+	ConfigManager.getPlatformConfig().getConfigTree(Configuration.PLATFORM).addPrefix(Configuration.PLATFORM);
+      // remove password info
+      platConfig.remove(ServletManager.PARAM_PLATFORM_USERNAME);
+      platConfig.remove(ServletManager.PARAM_PLATFORM_PASSWORD);
+
+      platConfig.put(BACK_PROP_VERSION, "2");
+      platConfig.put(BACK_PROP_VERSION, "2");
+      try {
+	PeerIdentity p1 = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
+	platConfig.put(BACK_PROP_LOCAL_ID_V1, p1.getIdString());
+      } catch (Exception e) {
+      }
+      try {
+	PeerIdentity p3 = idMgr.getLocalPeerIdentity(Poll.V3_POLL);
+	platConfig.put(BACK_PROP_LOCAL_ID_V3, p3.getIdString());
+      } catch (Exception e) {
+      }
+      addPropsToZip(zip, platConfig, BACK_FILE_PROPS,
+		    "Configuration and repair info for LOCKSS cache " +
+		    machineName);
+
+      // add all the cache config files
       for (Iterator iter = configMgr.getCacheConfigFiles().iterator();
 	   iter.hasNext(); ) {
 	File cfgfile = (File)iter.next();
@@ -447,7 +482,14 @@ public class RemoteApi
 	  addCfgFileToZip(zip, cfgfile, null);
 	}
       }
+      // add identity db
+      zip.putNextEntry(new ZipEntry(IdentityManager.IDDB_FILENAME));
+      try {
+	idMgr.writeIdentityDbTo(zip);
+      } catch (FileNotFoundException e) {}
+      zip.closeEntry();
       List aus = pluginMgr.getAllAus();
+      // add a directory for each AU
       if (aus != null) {
 	addAusToZip(zip, aus);
       }
@@ -480,13 +522,13 @@ public class RemoteApi
       Configuration auConfig = au.getConfiguration();
       Properties auprops = new Properties();
       auprops.setProperty(AU_BACK_PROP_AUID, au.getAuId());
-      auprops.setProperty(AU_BACK_PROP_REPOSPEC,
-			  LockssRepositoryImpl.getRepositorySpec(au));
+      String repo = LockssRepositoryImpl.getRepositorySpec(au);
+      auprops.setProperty(AU_BACK_PROP_REPOSPEC, repo);
+      auprops.setProperty(AU_BACK_PROP_REPODIR,
+			  LockssRepositoryImpl.mapAuToFileLocation(LockssRepositoryImpl.getLocalRepositoryPath(repo), au));
 
-//       auprops.setProperty("repodir", auConfig.get(PluginManager.AU_PARAM_REPOSITORY));
-      zip.putNextEntry(new ZipEntry(dir + BACK_FILE_AU_PROPS));
-      auprops.store(zip, "");
-      zip.closeEntry();
+      addPropsToZip(zip, auprops, dir + BACK_FILE_AU_PROPS,
+		    "AU " + au.getName());
       if (idMgr.hasAgreeMap(au)) {
 	zip.putNextEntry(new ZipEntry(dir + BACK_FILE_AGREE_MAP));
 	try {
@@ -496,6 +538,22 @@ public class RemoteApi
       }
       dirn++;
     }
+  }
+
+  void addPropsToZip(ZipOutputStream zip, Properties props,
+		     String entName, String header)
+      throws IOException {
+    zip.putNextEntry(new ZipEntry(entName));
+    props.store(zip, header);
+    zip.closeEntry();
+  }
+
+  void addPropsToZip(ZipOutputStream zip, Configuration props,
+		     String entName, String header)
+      throws IOException {
+    zip.putNextEntry(new ZipEntry(entName));
+    props.store(zip, header);
+    zip.closeEntry();
   }
 
   void addCfgFileToZip(ZipOutputStream z, String fileName, String entName)
@@ -910,7 +968,6 @@ public class RemoteApi
   }
 
 
-
   /** Find all AUs in the union of the sets and return a BatchAuStatus with
    * a BatchAuStatus.Entry for each AU indicating whether it could be created,
    * already exists, conflicts, etc.
@@ -929,6 +986,11 @@ public class RemoteApi
   private BatchAuStatus findAusInSetsToAdd(BatchAuStatus bas, Iterator iter) {
     while (iter.hasNext()) {
       TitleConfig tc = (TitleConfig)iter.next();
+      if (AuUtil.isPubDown(tc)) {
+	// Don't offer to add titles that aren't available anymore.  (This
+	// does not affect restore or reactivate)
+	continue;
+      }
       BatchAuStatus.Entry stat;
       String plugName = tc.getPluginName();
       PluginProxy pluginp = findPluginProxy(plugName);
