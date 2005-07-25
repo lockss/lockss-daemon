@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.16 2005-03-24 00:55:33 troberts Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.16.6.1 2005-07-25 00:39:56 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -38,6 +38,7 @@ import org.lockss.daemon.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
 import org.apache.commons.httpclient.util.*;
+import org.apache.commons.httpclient.cookie.*;
 
 /** Encapsulates Jakarta HttpClient method as a LockssUrlConnection.
  * Mostly simple wrapper behavior, except cross-host redirects are handled
@@ -45,6 +46,29 @@ import org.apache.commons.httpclient.util.*;
  */
 public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   private static Logger log = Logger.getLogger("HttpClientUrlConnection");
+
+  /* If true, the InputStream returned from getResponseInputStream() will
+   * be wrapped in an EofMonitoringInputStream */
+  static final String PARAM_USE_WRAPPER_STREAM = PREFIX + "useWrapperStream";
+  static final boolean DEFAULT_USE_WRAPPER_STREAM = true;
+
+
+  /** Called by org.lockss.config.MiscConfig
+   */
+  public static void setConfig(Configuration config,
+			       Configuration oldConfig,
+			       Configuration.Differences diffs) {
+    if (diffs.contains(PARAM_COOKIE_POLICY)) {
+      String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
+      if ("rfc2109".equalsIgnoreCase(policy)) {
+	CookiePolicy.setDefaultPolicy(CookiePolicy.RFC2109);
+      } else if ("netscape".equalsIgnoreCase(policy)) {
+	CookiePolicy.setDefaultPolicy(CookiePolicy.NETSCAPE_DRAFT);
+      } else {		//  if ("compatibility".equalsIgnoreCase(policy)) {
+	CookiePolicy.setDefaultPolicy(CookiePolicy.COMPATIBILITY);
+      }
+    }
+  }
 
   /** Maximum number of redirects that will be followed */
   static final int MAX_REDIRECTS = 10;
@@ -290,22 +314,19 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return (header != null) ? header.getValue() : null;
   }
 
-  static final String PARAM_DISABLE_WRAPPER_STREAM =
-    Configuration.PREFIX + "urlconn.disableWrapperStream";
-  static final boolean DEFAULT_DISABLE_WRAPPER_STREAM = false;
-
   public InputStream getResponseInputStream() throws IOException {
     assertExecuted();
     InputStream in = method.getResponseBodyAsStream();
-    if (Configuration.getBooleanParam(PARAM_DISABLE_WRAPPER_STREAM,
-				      DEFAULT_DISABLE_WRAPPER_STREAM)) {
-      return in;
-    }
     if (in == null) {
-      log.warning("Returning null input stream");
+      // this is a normal occurrence (e.g., with 304 response)
+      log.debug2("Returning null input stream");
       return null;
     }
-    return new EofMonitoringInputStream(in);
+    if (Configuration.getBooleanParam(PARAM_USE_WRAPPER_STREAM,
+				      DEFAULT_USE_WRAPPER_STREAM)) {
+      return new EofMonitoringInputStream(in);
+    }
+    return in;
   }
 
   public void storeResponseHeaderInto(Properties props, String prefix) {
