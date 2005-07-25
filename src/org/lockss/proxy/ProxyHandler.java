@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.36 2005-07-09 21:56:37 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.37 2005-07-25 01:19:38 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.36 2005-07-09 21:56:37 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.37 2005-07-25 01:19:38 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -70,7 +70,8 @@ import org.apache.commons.httpclient.util.*;
 public class ProxyHandler extends AbstractHttpHandler {
   private static Logger log = Logger.getLogger("ProxyHandler");
 
-  static final String LOCKSS_PROXY_ID = "1.1 (LOCKSS/jetty)";
+  static final String LOCKSS_VIA_VERSION = "1.1";
+  static final String LOCKSS_VIA_COMMENT = "(LOCKSS/jetty)";
 
   /** Force the proxy to serve only locally cached content.  Mainly useful
    * in testing. */
@@ -83,6 +84,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   private ProxyManager proxyMgr = null;
   private LockssUrlConnectionPool connPool = null;
   private LockssUrlConnectionPool quickFailConnPool = null;
+  private String hostname;
   private boolean neverProxy = DEFAULT_NEVER_PROXY;
   private boolean isFailOver = false;
   private URI failOverTargetUri;
@@ -93,6 +95,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     proxyMgr = theDaemon.getProxyManager();
     neverProxy = Configuration.getBooleanParam(PARAM_NEVER_PROXY,
 					       DEFAULT_NEVER_PROXY);
+    hostname = Configuration.getPlatformHostname();
   }
 
   ProxyHandler(LockssDaemon daemon, LockssUrlConnectionPool pool) {
@@ -119,6 +122,27 @@ public class ProxyHandler extends AbstractHttpHandler {
   public void setProxiedTarget(String target) {
     failOverTargetUri = new URI(target);
     isFailOver = true;
+  }
+
+  /** Create a Via header value:
+   * 1.1 thishost:port (LOCKSS/Jetty)
+   */
+  String makeVia(HttpRequest req) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(LOCKSS_VIA_VERSION);
+    sb.append(" ");
+    sb.append(hostname);
+    try {
+      int port = req.getHttpConnection().getServerPort();
+      if (port != 0) {
+	sb.append(":");
+	sb.append(port);
+      }
+    } catch (Exception ignore) {
+    }
+    sb.append(" ");
+    sb.append(LOCKSS_VIA_COMMENT);
+    return sb.toString();
   }
 
   protected int _tunnelTimeoutMs=250;
@@ -314,7 +338,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       // Proxy headers
-      connection.setRequestProperty("Via", LOCKSS_PROXY_ID);
+      connection.setRequestProperty("Via", makeVia(request));
       if (!xForwardedFor) {
 	// XXX Should be addRequest... , but that doesn't exist in 1.3
 	// connection.addRequestProperty(HttpFields.__XForwardedFor,
@@ -384,7 +408,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	hdr=connection.getHeaderFieldKey(h);
 	val=connection.getHeaderField(h);
       }
-      response.setField("Via", LOCKSS_PROXY_ID);
+      response.addField("Via", makeVia(request));
 
       // Handled
       request.setHandled(true);
@@ -392,10 +416,11 @@ public class ProxyHandler extends AbstractHttpHandler {
 	IO.copy(proxy_in,response.getOutputStream());
             
     } catch (Exception e) {
-      Code.warning(e.toString());
+      log.warning("doSun error", e);
       Code.ignore(e);
       if (!response.isCommitted())
-	response.sendError(HttpResponse.__400_Bad_Request);
+	response.sendError(HttpResponse.__400_Bad_Request,
+			   e.getMessage());
     }
   }
 
@@ -416,14 +441,20 @@ public class ProxyHandler extends AbstractHttpHandler {
 	 (proxyMgr.isHostDown(request.getURI().getHost()) &&
 	  (proxyMgr.getHostDownAction() ==
 	   ProxyManager.HOST_DOWN_NO_CACHE_ACTION_QUICK)));
+      try {
+	conn =
+	  UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
+				 UrlUtil.minimallyEncodeUrl(urlString),
+				 (useQuick ? quickFailConnPool : connPool));
 
-      conn =
-	UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
-			       UrlUtil.minimallyEncodeUrl(urlString),
-			       (useQuick ? quickFailConnPool : connPool));
-
-      conn.setFollowRedirects(false);
-
+	conn.setFollowRedirects(false);
+      } catch (MalformedURLException e) {
+	// HttpClient is persnickety about URLs; if it complains try
+	// another way
+	log.info("Malformed URL, trying doSun(): " + urlString);
+	doSun(pathInContext, pathParams, request, response);
+	return;
+      }
       // check connection header
       String connectionHdr = request.getField(HttpFields.__Connection);
       if (connectionHdr!=null &&
@@ -493,7 +524,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
 
       // Proxy-specifix headers
-      conn.setRequestProperty("Via", LOCKSS_PROXY_ID);
+      conn.addRequestProperty("Via", makeVia(request));
       if (!xForwardedFor) {
 	conn.addRequestProperty(HttpFields.__XForwardedFor,
 				request.getRemoteAddr());
@@ -556,7 +587,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  response.addField(hdr,val);
 	}
       }
-      response.setField("Via", LOCKSS_PROXY_ID);
+      response.addField("Via", makeVia(request));
 
       // Handled
       request.setHandled(true);
@@ -566,7 +597,8 @@ public class ProxyHandler extends AbstractHttpHandler {
     } catch (Exception e) {
       log.error("doLockss error", e);
       if (!response.isCommitted())
-	response.sendError(HttpResponse.__500_Internal_Server_Error);
+	response.sendError(HttpResponse.__500_Internal_Server_Error,
+			   e.getMessage());
     } finally {
       safeReleaseConn(conn);
     }
@@ -647,7 +679,8 @@ public class ProxyHandler extends AbstractHttpHandler {
       }
     } catch (Exception e) {
       Code.ignore(e);
-      response.sendError(HttpResponse.__500_Internal_Server_Error);
+      response.sendError(HttpResponse.__500_Internal_Server_Error,
+			 e.getMessage());
     }
   }
     
