@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.6 2004-09-22 02:42:30 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.7 2005-07-25 01:21:06 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -32,12 +32,27 @@ package org.lockss.util.urlconn;
 
 import java.util.*;
 import java.io.*;
+import org.lockss.config.Configuration;
 
 /** Encapsulates and abstracts a URL connection, using either Sun's
  * URLConnection or Jakarta HttpClient.  Operations not supported by a
  * particular protocol hander throw UnsupportedOperationException
  */
 public interface LockssUrlConnection {
+  static final String PREFIX = Configuration.PREFIX + "urlconn.";
+
+  /** Cookie parsing policy.  One of the following strings:
+   *  <ul>
+   *   <li><tt>COMPATIBILITY</tt>: compatible with the common cookie management
+   *   practices (even if they are not 100% standards compliant)
+   *   <li><tt>NETSCAPE_DRAFT</tt>: Netscape cookie draft compliant
+   *   <li><tt>RFC2109</tt>: RFC2109 compliant (default)
+   *  </ul>
+   */
+  static final String PARAM_COOKIE_POLICY = PREFIX + "cookiePolicy";
+  static final String DEFAULT_COOKIE_POLICY = "COMPATIBILITY";
+
+
   /** Send GET */
   public static int METHOD_GET = 1;
   /** Send GET but don't mess with request headers */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.11 2004-09-21 21:25:03 dshr Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.12 2005-07-25 01:21:05 tlipkis Exp $
  */
 
 /*
@@ -223,7 +223,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   public void testResponseStreamNoWrapper() throws Exception {
     ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
-				  PARAM_DISABLE_WRAPPER_STREAM, "true");
+				  PARAM_USE_WRAPPER_STREAM, "false");
     client.setRes(200, 200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
