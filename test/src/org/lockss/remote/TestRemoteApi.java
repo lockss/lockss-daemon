@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.8 2005-07-19 16:31:57 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.8.2.1 2005-07-25 00:38:43 tlipkis Exp $
  */
 
 /*
@@ -241,6 +241,9 @@ public class TestRemoteApi extends LockssTestCase {
     log.debug("Wrote: " + configFile);
   }
 
+  /** assert that the file is an au.txt (au config) file with the expected
+   * property values
+   */
   public void assertIsAuTxt(Properties expectedProps,
 			    File file) throws Exception {
     InputStream in = new FileInputStream(file);
@@ -248,6 +251,9 @@ public class TestRemoteApi extends LockssTestCase {
     in.close();
   }
 
+  /** assert that the stream contains the contents of an au.txt (au config)
+   * file with the expected property values
+   */
   public void assertIsAuTxt(Properties expectedProps,
 			    InputStream in) throws Exception {
     String pat = "# AU Configuration saved .* from machine_foo\norg.lockss.au.FooPlugin.k~v.k=v";
