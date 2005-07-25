@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTest.java,v 1.1 2005-07-23 00:14:48 thib_gc Exp $
+ * $Id: ObjectSerializerTest.java,v 1.2 2005-07-25 18:34:07 thib_gc Exp $
  */
 
 /*
@@ -32,12 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Reader;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.*;
 import java.net.URL;
 
 import org.custommonkey.xmlunit.XMLTestCase;
@@ -118,6 +113,33 @@ public abstract class ObjectSerializerTest
       failClassCastException(
           "testRoundTrip_ExtMapBean", original.getClass());
     }
+  }
+  
+  /**
+   * <p>Checks that serializing with an OutputStream argument gives
+   * the same result as serializing with a Writer argument.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
+  public void testSameAsSerializeWriter_InputStream()
+      throws Exception {
+    // Set up needed objects
+    ObjectSerializer serializer1 = makeObjectSerializer_ExtMapBean();
+    ObjectSerializer serializer2 = makeObjectSerializer_ExtMapBean();
+    ExtMapBean original = makeSample_ExtMapBean();
+    File tempFile = File.createTempFile("test", ".xml");
+    StringWriter writer = new StringWriter();
+    FileOutputStream outStream = new FileOutputStream(tempFile);
+    
+    try {
+      // Serialize twice
+      serializer1.serialize(writer, original);
+      serializer2.serialize(outStream, original);
+      // Compare
+      performXmlAssertion(new StringReader(writer.toString()), tempFile);
+    }
+    finally {
+      tempFile.deleteOnExit(); // clean up
+    }    
   }
   
   /**
