@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.5 2005-07-18 08:09:25 tlipkis Exp $
+ * $Id: AuUtil.java,v 1.5.2.1 2005-07-25 00:37:03 tlipkis Exp $
  */
 
 /*
@@ -117,19 +117,25 @@ public class AuUtil {
   }
 
   public static boolean isClosed(ArchivalUnit au) {
-    return getBoolAuParamOrTitleDefault(au, ConfigParamDescr.AU_CLOSED, false);
+    return getBoolValue(getAuParamOrTitleDefault(au,
+						 ConfigParamDescr.AU_CLOSED),
+			false);
   }
 
   public static boolean isPubDown(ArchivalUnit au) {
-    return getBoolAuParamOrTitleDefault(au, ConfigParamDescr.PUB_DOWN, false);
+    return getBoolValue(getAuParamOrTitleDefault(au,
+						 ConfigParamDescr.PUB_DOWN),
+			false);
   }
 
-  public static boolean getBoolAuParamOrTitleDefault(ArchivalUnit au,
-						     ConfigParamDescr cpd,
-						     boolean dfault) {
-    Object val = getAuParamOrTitleDefault(au, cpd);
-    if (val instanceof Boolean) {
-      return ((Boolean)val).booleanValue();
+  public static boolean isPubDown(TitleConfig tc) {
+    return getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_DOWN),
+			false);
+  }
+
+  public static boolean getBoolValue(Object value, boolean dfault) {
+    if (value instanceof Boolean) {
+      return ((Boolean)value).booleanValue();
     }
     return dfault;
   }
@@ -143,23 +149,33 @@ public class AuUtil {
       return null;
     }
     val = auConfig.get(key);
-    if (StringUtil.isNullString(val)) {
-      TitleConfig tc = au.getTitleConfig();
-      if (tc != null) {
-	ConfigParamAssignment cpa = tc.findCpa(cpd);
-	if (cpa != null) {
-	  val = cpa.getValue();
-	}
-      }
+    if (!StringUtil.isNullString(val)) {
+      return getValueOfType(val, cpd);
     }
-    if (val == null) {
+    TitleConfig tc = au.getTitleConfig();
+    if (tc != null) {
+      return getTitleDefault(tc, cpd);
+    }
+    return null;
+  }
+
+  public static Object getValueOfType(String valstr, ConfigParamDescr cpd) {
+    if (valstr == null) {
       return null;
     }
     try {
-      return cpd.getValueOfType(val);
+      return cpd.getValueOfType(valstr);
     } catch (ConfigParamDescr.InvalidFormatException e) {
       return null;
     }
+  }
+
+  public static Object getTitleDefault(TitleConfig tc, ConfigParamDescr cpd) {
+    ConfigParamAssignment cpa = tc.findCpa(cpd);
+    if (cpa != null) {
+      return getValueOfType(cpa.getValue(), cpd);
+    }
+    return null;
   }
 
   /** Call release() on the CachedUrl, ignoring any errors */
