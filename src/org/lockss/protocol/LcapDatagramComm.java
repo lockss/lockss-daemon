@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.10 2005-06-04 18:59:54 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.10.2.1 2005-07-25 00:37:53 tlipkis Exp $
  */
 
 /*
@@ -65,9 +65,17 @@ public class LcapDatagramComm
   static final String PARAM_MULTI_VERIFY = PREFIX + "multicast.verify";
   static final boolean DEFAULT_MULTI_VERIFY = false;
 
+  /** If we receive no multicast packets (other than from ourself) for this
+   * long, stop sending multicast */
   static final String PARAM_MULTI_DISABLE_TIMEOUT = PREFIX +
     "multicast.disableAfterInactive";
   static final long DEFAULT_MULTI_DISABLE_TIMEOUT = 1 * Constants.HOUR;
+
+  /** If multicast has been disabled, explicitly loopback all
+   * normally-multicast packets */
+  static final String PARAM_LOOPBACK_IF_MUZZLED = PREFIX +
+    "loopbackIfMulticastMuzzled";
+  static final boolean DEFAULT_LOOPBACK_IF_MUZZLED = true;
 
   static final String PARAM_UNI_PORT = PREFIX + "unicast.port";
   static final String PARAM_UNI_PORT_SEND = PREFIX + "unicast.sendToPort";
@@ -90,6 +98,7 @@ public class LcapDatagramComm
   private boolean isMuzzleMulticast = false;
   private long lastMulticastTime;
   private long muzzleMulticastAfter = DEFAULT_MULTI_DISABLE_TIMEOUT;
+  private boolean loopbackIfMulticastMuzzled = DEFAULT_LOOPBACK_IF_MUZZLED;
 
   private IdentityManager idMgr;
   private OneShot configShot = new OneShot();
@@ -165,6 +174,10 @@ public class LcapDatagramComm
   public void setConfig(Configuration config,
 			Configuration prevConfig,
 			Configuration.Differences changedKeys) {
+    loopbackIfMulticastMuzzled =
+      config.getBoolean(PARAM_LOOPBACK_IF_MUZZLED,
+			DEFAULT_LOOPBACK_IF_MUZZLED);
+
     if (configShot.once()) {
       configure(config, prevConfig, changedKeys);
     }
@@ -248,6 +261,7 @@ public class LcapDatagramComm
   boolean checkMuzzleMulticast() {
     if (isMuzzleMulticast) return true;
     if (TimeBase.msSince(lastMulticastTime) >= muzzleMulticastAfter) {
+      log.info("No multicast connectivity; disabling multicast send");
       isMuzzleMulticast = true;
     }
     return isMuzzleMulticast;
@@ -288,6 +302,16 @@ public class LcapDatagramComm
     }
   }
 
+  private void sendToSelf(LockssDatagram ld, RateLimiter limiter)
+      throws IOException {
+    log.debug2("sendToSelf(" + ld + ")");
+    DatagramPacket pkt = ld.makeSendPacket(getLocalIdentityAddr(), uniPort);
+    LockssReceivedDatagram rdg = new LockssReceivedDatagram(pkt);
+    rdg.setReceiveSocket(uSock);
+    rdg.setMulticast(false);
+    socketInQ.put(rdg);
+  }    
+
   /** Multicast a message to all caches holding the ArchivalUnit.
    * @param ld the datagram to send
    * @param au archival unit for which this message is relevant.  Used to
@@ -303,6 +327,11 @@ public class LcapDatagramComm
       throw new IllegalStateException("Multicast group not configured");
     }
     if (checkMuzzleMulticast()) {
+      // We normally see our own packets via multicast; if that's muzzled,
+      // send the packet to ourself
+      if (loopbackIfMulticastMuzzled) {
+	sendToSelf(ld, limiter);
+      }
       return;
     }
     if (limiter == null || limiter.isEventOk()) {
