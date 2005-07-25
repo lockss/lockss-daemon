@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.6 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: OaiHandler.java,v 1.6.2.1 2005-07-25 18:53:19 troberts Exp $
  */
 
 /*
@@ -206,7 +206,7 @@ public class OaiHandler {
       logger.debug3("The content of listRecord : \n" + listRecords.toString() );
 
       //collect and store all the oai records
-      collectOaiRecords(listRecords); //XXX info collected is not being used now, 
+//       collectOaiRecords(listRecords); //XXX info collected is not being used now, 
                                       //can turn off to increase performance
 
       //parser urls by some implementation of oaiMetadataHander
@@ -230,20 +230,26 @@ public class OaiHandler {
 	if (resumptionToken == null || resumptionToken.length() == 0) {
 	  break; //break out of the while loop as there is no more new url
 	} else {
-	  //XXX TODO: Before including a resumptionToken in the URL of a subsequent request, 
+	  //XXX TODO: Before including a resumptionToken in the URL of a
+	  // subsequent request, 
 	  // we must encode any special characters in it.
-	  listRecords = new ListRecords(baseUrl, resumptionToken);
+ 	  listRecords = new ListRecords(baseUrl, resumptionToken);
 	} 
-      } catch (IOException ioe) {
-        logError("In getting ResumptionToken and requesting new ListRecords", ioe);
-      } catch (NoSuchFieldException nsfe) {
-	logError("In getting ResumptionToken and requesting new ListRecords", nsfe);
-      } catch (TransformerException tfe) {
-	logError("In getting ResumptionToken and requesting new ListRecords", tfe);
+       } catch (IOException ioe) {
+         logError("In getting ResumptionToken and requesting new ListRecords",
+		  ioe);
+       } catch (NoSuchFieldException nsfe) {
+ 	logError("In getting ResumptionToken and requesting new ListRecords",
+ 		 nsfe);
+       } catch (TransformerException tfe) {
+ 	logError("In getting ResumptionToken and requesting new ListRecords",
+ 		 tfe);
       } catch (SAXException saxe) {
-	logError("In getting ResumptionToken and requesting new ListRecords", saxe);
+	logError("In getting ResumptionToken and requesting new ListRecords",
+		 saxe);
       } catch (ParserConfigurationException pce) {
-	logError("In getting ResumptionToken and requesting new ListRecords", pce);
+	logError("In getting ResumptionToken and requesting new ListRecords",
+		 pce);
       }
 
     } //loop until there is no resumptionToken
@@ -257,8 +263,8 @@ public class OaiHandler {
    * @param fromDate date from when we want to query about
    * @param untilDate date until when we want to query about
    */
-  public ListRecords issueRequest(
-	    OaiRequestData oaiData, String fromDate, String untilDate){
+  public ListRecords issueRequest(OaiRequestData oaiData,
+				  String fromDate, String untilDate){
     
     // do not check if oaiData == null, it is taken care in OaiRequestData constructor
     if (fromDate == null) {
