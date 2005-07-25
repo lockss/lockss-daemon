@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.20 2005-07-18 08:11:25 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.20.2.1 2005-07-25 00:36:24 tlipkis Exp $
  */
 
 /*
@@ -178,6 +178,7 @@ public class ConfigManager implements LockssManager {
     this.titledbUrlList = new ArrayList();
     this.groupName = groupName;
     registerConfigurationCallback(Logger.getConfigCallback());
+    registerConfigurationCallback(MiscConfig.getConfigCallback());
   }
 
   public ConfigCache getConfigCache() {
