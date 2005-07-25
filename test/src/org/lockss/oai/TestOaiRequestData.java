@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiRequestData.java,v 1.1 2004-10-20 18:41:15 dcfok Exp $
+ * $Id: TestOaiRequestData.java,v 1.2 2005-07-25 19:01:33 troberts Exp $
  */
 
 /*
@@ -66,11 +66,11 @@ public class TestOaiRequestData extends LockssTestCase {
 	new OaiRequestData( handler, ns, (String) null, setSpec, prefix);
       fail("OaiRequestData with null url container tag name  should throw");
     } catch (IllegalArgumentException e) { }
-    try {
-      OaiRequestData od = 
-	new OaiRequestData( handler, ns, tag, (String) null, prefix);
-      fail("OaiRequestData with null AU SetSpec should throw");
-    } catch (IllegalArgumentException e) { }
+//     try {
+//       OaiRequestData od = 
+// 	new OaiRequestData( handler, ns, tag, (String) null, prefix);
+//       fail("OaiRequestData with null AU SetSpec should throw");
+//     } catch (IllegalArgumentException e) { }
     try {
       OaiRequestData od = 
 	new OaiRequestData( handler, ns, tag, setSpec, (String) null);
