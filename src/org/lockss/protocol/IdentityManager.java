@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.60 2005-07-18 08:08:05 tlipkis Exp $
+ * $Id: IdentityManager.java,v 1.60.2.1 2005-07-25 00:37:30 tlipkis Exp $
  */
 
 /*
@@ -107,7 +107,7 @@ public class IdentityManager
 
   public static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
-  static final String IDDB_FILENAME = "iddb.xml";
+  public static final String IDDB_FILENAME = "iddb.xml";
   // fully qualify for XmlMarshaller
   public static final String MAPPING_FILE_NAME =
     "/org/lockss/protocol/idmapping.xml";
@@ -159,6 +159,8 @@ public class IdentityManager
   private Map theIdentities;		// all known identities (keys are
 					// PeerIdentitys)
   private Map thePeerIdentities;   // all PeerIdentities (keys are strings)
+
+  File iddbFile = null;
 
   int[] reputationDeltas = new int[10];
 
@@ -556,32 +558,41 @@ public class IdentityManager
   }
 
 
+  File setupIddbFile() {
+    if (iddbFile == null) {
+      String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
+      if (iddbDir != null) {
+	iddbFile = new File(iddbDir, IDDB_FILENAME);
+      }
+    }
+    return iddbFile;
+  }
+
   /** Reload the peer data from the identity database.  This may overwrite
    * the LcapIdentity instance for local identity(s).  That may not be
    * appropriate if this is ever called other than at startup. */
   private void reloadIdentities() {
-    try {
-      String iddbDir = Configuration.getParam(PARAM_IDDB_DIR);
-      if (iddbDir==null) {
-	log.warning("No value found for config parameter '" +
-		    PARAM_IDDB_DIR+"'");
-	return;
+    if (setupIddbFile() == null) {
+      log.warning("Can't load identities; no value for '" +
+		  PARAM_IDDB_DIR+"'");
+      return;
+    }
+    synchronized (iddbFile) {
+      try {
+	// load the identity list via the marshaller
+	XmlMarshaller marshaller = new XmlMarshaller();
+	IdentityListBean idlb =
+	  (IdentityListBean)marshaller.load(iddbFile,
+					    IdentityListBean.class,
+					    MAPPING_FILE_NAME);
+	if (idlb==null) {
+	  log.warning("Unable to read Identity file:" + iddbFile);
+	} else {
+	  setIdentities(idlb.getIdBeans());
+	}
+      } catch (Exception e) {
+	log.warning("Couldn't load identity database: " + e.getMessage());
       }
-      String fn = iddbDir + File.separator + IDDB_FILENAME;
-
-      // load the identity list via the marshaller
-      XmlMarshaller marshaller = new XmlMarshaller();
-      IdentityListBean idlb =
-	(IdentityListBean)marshaller.load(fn,
-					  IdentityListBean.class,
-					  MAPPING_FILE_NAME);
-      if (idlb==null) {
-	log.warning("Unable to read Identity file:" + fn);
-      } else {
-	setIdentities(idlb.getIdBeans());
-      }
-    } catch (Exception e) {
-      log.warning("Couldn't load identity database: " + e.getMessage());
     }
   }
 
@@ -591,22 +602,49 @@ public class IdentityManager
    * tallying a poll.
    */
   public void storeIdentities() throws ProtocolException {
-    try {
-      String fn = Configuration.getParam(PARAM_IDDB_DIR);
-      if (fn==null) {
-	log.warning("No value found for config parameter '" +
-		    PARAM_IDDB_DIR+"'");
-	return;
+    if (setupIddbFile() == null) {
+      log.warning("Can't store identities; no value for '" +
+		  PARAM_IDDB_DIR+"'");
+      return;
+    }
+    synchronized (iddbFile) {
+      try {
+	// we used to call a different store() method in XmlMarshaller that
+	// creates the dir if necessary.  Just making sure I don't change the
+	// behavior.
+	File dir = iddbFile.getParentFile();
+	if (dir != null && !dir.exists()) {
+	  dir.mkdirs();
+	}
+	// store the identity list via the marshaller
+	XmlMarshaller marshaller = new XmlMarshaller();
+	marshaller.store(iddbFile, getIdentityListBean(),
+			 MAPPING_FILE_NAME);
+      } catch (Exception e) {
+	log.error("Couldn't store identity database: ", e);
+	throw new ProtocolException("Unable to store identity database.");
       }
+    }
+  }
 
-      // store the identity list via the marshaller
-      XmlMarshaller marshaller = new XmlMarshaller();
-      marshaller.store(fn, IDDB_FILENAME, getIdentityListBean(),
-		       MAPPING_FILE_NAME);
-
-    } catch (Exception e) {
-      log.error("Couldn't store identity database: ", e);
-      throw new ProtocolException("Unable to store identity database.");
+  /** Copy the identity db file to the stream.
+   */
+  // XXX hokey way to have the acceess performed by the object that has the
+  // appropriate lock
+  public void writeIdentityDbTo(OutputStream out) throws IOException {
+    if (setupIddbFile() == null) {
+      return;
+    }
+    if (iddbFile.exists()) {
+      synchronized (iddbFile) {
+	InputStream in =
+	  new BufferedInputStream(new FileInputStream(iddbFile));
+	try {
+	  StreamUtil.copy(in, out);
+	} finally {
+	  IOUtil.safeClose(in);
+	}
+      }
     }
   }
 
@@ -735,6 +773,18 @@ public class IdentityManager
     synchronized (map) {
       IdentityAgreement ida = (IdentityAgreement)map.get(pid);
       return ida != null ? ida.hasAgreed() : false;
+    }
+  }
+
+  /** Return collection of IdentityManager.IdentityAgreement for each peer
+   * that we have a record of agreeing or disagreeing with us */
+  public Collection getIdentityAgreements(ArchivalUnit au) {
+    if (au == null) {
+      throw new IllegalArgumentException("Called with null au");
+    }
+    Map map = findAuAgreeMap(au);
+    synchronized (map) {
+      return new ArrayList(map.values());
     }
   }
 
@@ -937,7 +987,6 @@ public class IdentityManager
     isMergeRestoredAgreemMap =
       config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
 			DEFAULT_MERGE_RESTORED_AGREE_MAP);
-
   }
 
 

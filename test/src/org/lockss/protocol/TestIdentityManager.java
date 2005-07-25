@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.34 2005-07-18 08:08:04 tlipkis Exp $
+ * $Id: TestIdentityManager.java,v 1.34.2.1 2005-07-25 00:37:30 tlipkis Exp $
  */
 
 /*
@@ -408,6 +408,25 @@ public class TestIdentityManager extends LockssTestCase {
     expected.put(peer1, new Long(10));
     expected.put(peer2, new Long(11));
     assertEquals(expected, idmgr.getAgreed(mau));
+  }
+
+  public void testGetIdentityAgreements() throws Exception {
+    TimeBase.setSimulated(10);
+    setupPeer123();
+
+    idmgr.signalAgreed(peer1, mau);
+    TimeBase.step();
+    idmgr.signalAgreed(peer2, mau);
+    idmgr.signalDisagreed(peer2, mau);
+    IdentityManager.IdentityAgreement ida1 =
+      new IdentityManager.IdentityAgreement(peer1);
+    ida1.setLastAgree(10);
+    IdentityManager.IdentityAgreement ida2 =
+      new IdentityManager.IdentityAgreement(peer2);
+    ida2.setLastAgree(11);
+    ida2.setLastDisagree(11);
+    assertEquals(SetUtil.set(ida1, ida2),
+		 SetUtil.theSet(idmgr.getIdentityAgreements(mau)));
   }
 
   public void testHasAgreeMap() throws Exception {
