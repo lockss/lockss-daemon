@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.32 2005-07-18 19:47:25 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.32.2.1 2005-07-25 00:38:59 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,8 @@ public class ArchivalUnitStatus
       "ArchivalUnitStatusTable";
   public static final String AUIDS_TABLE_NAME = "AuIds";
   public static final String AU_STATUS_TABLE_NAME = "ArchivalUnitTable";
-  public static final String PEERS_TABLE_NAME = "PeerAgreement";
+  public static final String PEERS_VOTE_TABLE_NAME = "PeerVoteSummary";
+  public static final String PEERS_REPAIR_TABLE_NAME = "PeerRepair";
 
   static final OrderedObject DASH = new OrderedObject("-", new Long(-1));
 
@@ -83,8 +84,10 @@ public class ArchivalUnitStatus
                                       new AuIds(theDaemon));
     statusServ.registerStatusAccessor(AU_STATUS_TABLE_NAME,
                                       new AuStatus(theDaemon));
-    statusServ.registerStatusAccessor(PEERS_TABLE_NAME,
-                                      new PeersAgreement(theDaemon));
+    statusServ.registerStatusAccessor(PEERS_VOTE_TABLE_NAME,
+                                      new PeerVoteSummary(theDaemon));
+    statusServ.registerStatusAccessor(PEERS_REPAIR_TABLE_NAME,
+                                      new PeerRepair(theDaemon));
     logger.debug2("Status accessors registered.");
   }
 
@@ -93,7 +96,8 @@ public class ArchivalUnitStatus
     StatusService statusServ = theDaemon.getStatusService();
     statusServ.unregisterStatusAccessor(SERVICE_STATUS_TABLE_NAME);
     statusServ.unregisterStatusAccessor(AU_STATUS_TABLE_NAME);
-    statusServ.unregisterStatusAccessor(PEERS_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(PEERS_VOTE_TABLE_NAME);
+    statusServ.unregisterStatusAccessor(PEERS_REPAIR_TABLE_NAME);
     logger.debug2("Status accessors unregistered.");
     super.stopService();
   }
@@ -191,7 +195,7 @@ public class ArchivalUnitStatus
       rowMap.put("AuSize", new Long(AuUtil.getAuContentSize(au)));
       rowMap.put("DiskUsage", new Double(((double)AuUtil.getAuDiskUsage(au)) / (1024*1024)));
       rowMap.put("AuLastCrawl", new Long(auState.getLastCrawlTime()));
-      rowMap.put("Peers", PeersAgreement.makeAuRef("peers", au.getAuId()));
+      rowMap.put("Peers", PeerRepair.makeAuRef("peers", au.getAuId()));
       rowMap.put("AuPolls",
 		 theDaemon.getStatusService().
 		 getReference(PollerStatus.MANAGER_STATUS_TABLE_NAME,
@@ -553,7 +557,50 @@ public class ArchivalUnitStatus
     }
   }
 
-  static class PeersAgreement extends PerAuTable {
+  abstract static class PeersAgreement extends PerAuTable {
+    protected static final List sortRules =
+      ListUtil.list(new StatusTable.SortRule("Cache", true));
+
+    PeersAgreement(LockssDaemon theDaemon) {
+      super(theDaemon);
+    }
+
+    protected Map makeRow(CacheStats stats) {
+      Map rowMap = new HashMap();
+
+      PeerIdentity peer = stats.peer;
+      Object id = peer.getIdString();
+      if (peer.isLocalIdentity()) {
+	StatusTable.DisplayedValue val =
+	  new StatusTable.DisplayedValue(id);
+	val.setBold(true);
+	id = val;
+      }
+      rowMap.put("Cache", id);
+      return rowMap;
+    }
+
+
+    static class CacheStats {
+      PeerIdentity peer;
+      int totalPolls = 0;
+      int agreePolls = 0;
+      Vote lastAgree;
+      long lastAgreeTime = 0;
+      Vote lastDisagree;
+      long lastDisagreeTime = 0;
+
+      CacheStats(PeerIdentity peer) {
+	this.peer = peer;
+      }
+      boolean isLastAgree() {
+	return (lastAgreeTime != 0  &&
+		(lastDisagreeTime == 0 || lastAgreeTime >= lastDisagreeTime));
+      }
+    }
+  }
+
+  static class PeerVoteSummary extends PeersAgreement {
     private static final List columnDescriptors = ListUtil.list(
       new ColumnDescriptor("Cache", "Cache",
                            ColumnDescriptor.TYPE_STRING),
@@ -569,14 +616,15 @@ public class ArchivalUnitStatus
                            ColumnDescriptor.TYPE_DATE)
       );
 
-    private static final List sortRules =
-      ListUtil.list(new StatusTable.SortRule("Cache", true));
-
-    PeersAgreement(LockssDaemon theDaemon) {
+    PeerVoteSummary(LockssDaemon theDaemon) {
       super(theDaemon);
     }
 
-    public void populateTable(StatusTable table, ArchivalUnit au)
+    protected String getTitle(ArchivalUnit au) {
+      return "All caches voting on AU: " + au.getName();
+    }
+
+    protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {
       NodeManager nodeMan = theDaemon.getNodeManager(au);
       table.setTitle(getTitle(au));
@@ -593,7 +641,7 @@ public class ArchivalUnitStatus
 	  CacheStats stats = (CacheStats)entry.getValue();
 	  if (! peer.isLocalIdentity()) {
 	    totalPeers++;
-	    if (stats.mostRecentVote.isAgreeVote()) {
+	    if (stats.isLastAgree()) {
 	      totalAgreement++;
 	    }
 	  }
@@ -620,11 +668,6 @@ public class ArchivalUnitStatus
 	    stats = new CacheStats(peer);
 	    statsMap.put(peer, stats);
 	  }
-	  if (stats.mostRecentVote == null ||
-	      histTime > stats.mostRecentVoteTime) {
-	    stats.mostRecentVote = vote;
-	    stats.mostRecentVoteTime = histTime;
-	  }
 	  stats.totalPolls++;
 	  if (vote.isAgreeVote()) {
 	    stats.agreePolls++;
@@ -645,37 +688,10 @@ public class ArchivalUnitStatus
       return statsMap;
     }
 
-    static class CacheStats {
-      PeerIdentity peer;
-      Vote mostRecentVote;
-      long mostRecentVoteTime = 0;
-      int totalPolls = 0;
-      int agreePolls = 0;
-      Vote lastAgree;
-      long lastAgreeTime = 0;
-      Vote lastDisagree;
-      long lastDisagreeTime = 0;
-
-      CacheStats(PeerIdentity peer) {
-	this.peer = peer;
-      }
-    }
-
-    private Map makeRow(CacheStats stats) {
-      HashMap rowMap = new HashMap();
-
-      PeerIdentity peer = stats.peer;
-      Object id = peer.getIdString();
-      if (peer.isLocalIdentity()) {
-	StatusTable.DisplayedValue val =
-	  new StatusTable.DisplayedValue(id);
-	val.setBold(true);
-	id = val;
-      }
-      rowMap.put("Cache", id);
-
+    protected Map makeRow(CacheStats stats) {
+      Map rowMap = super.makeRow(stats);
       rowMap.put("Last",
-		 stats.mostRecentVote.isAgreeVote() ? "Agree" : "Disagree");
+		 stats.isLastAgree() ? "Agree" : "Disagree");
       rowMap.put("Polls", new Long(stats.totalPolls));
       rowMap.put("Agree", new Long(stats.agreePolls));
       rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
@@ -683,14 +699,10 @@ public class ArchivalUnitStatus
       return rowMap;
     }
 
-    private String getTitle(ArchivalUnit au) {
-      return "All caches voting on AU: " + au.getName();
-    }
-
-    private List getSummaryInfo(ArchivalUnit au,
-				int totalPeers, int totalAgreement) {
+    protected List getSummaryInfo(ArchivalUnit au,
+				  int totalPeers, int totalAgreement) {
       List summaryList =  ListUtil.list(
-            new StatusTable.SummaryInfo("Peers holding AU",
+            new StatusTable.SummaryInfo("Peers voting on AU",
 					ColumnDescriptor.TYPE_INT,
                                         new Integer(totalPeers)),
             new StatusTable.SummaryInfo("Agreeing peers",
@@ -703,7 +715,110 @@ public class ArchivalUnitStatus
     // utility method for making a Reference
     public static StatusTable.Reference makeAuRef(Object value,
                                                   String key) {
-      return new StatusTable.Reference(value, PEERS_TABLE_NAME,
+      return new StatusTable.Reference(value, PEERS_VOTE_TABLE_NAME,
+                                       key);
+    }
+  }
+
+  static class PeerRepair extends PeersAgreement {
+    private static final List columnDescriptors = ListUtil.list(
+      new ColumnDescriptor("Cache", "Cache",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("Last", "Complete Consensus",
+                           ColumnDescriptor.TYPE_STRING),
+      new ColumnDescriptor("LastAgree",
+			   "Last Complete Consensus",
+                           ColumnDescriptor.TYPE_DATE),
+      new ColumnDescriptor("LastDisagree",
+			   "Last Partial Disagreement",
+                           ColumnDescriptor.TYPE_DATE)
+      );
+
+    PeerRepair(LockssDaemon theDaemon) {
+      super(theDaemon);
+    }
+
+    protected String getTitle(ArchivalUnit au) {
+      return "Repair candidates for AU: " + au.getName();
+    }
+    private static final String FOOT_TITLE =
+      "These caches have proven to us that they have (or had) a correct \n" +
+      "copy of this AU.  We will fetch repairs from them if necessary, \n" +
+      "and they may fetch repairs from us."; 
+
+    protected void populateTable(StatusTable table, ArchivalUnit au)
+        throws StatusService.NoSuchTableException {
+      IdentityManager idMgr = theDaemon.getIdentityManager();
+      table.setTitle(getTitle(au));
+      table.setTitleFootnote(FOOT_TITLE);
+      int totalPeers = 0;
+      if (!table.getOptions().get(StatusTable.OPTION_NO_ROWS)) {
+	table.setColumnDescriptors(columnDescriptors);
+	table.setDefaultSortRules(sortRules);
+	Map statsMap = buildCacheStats(au, idMgr);
+	List rowL = new ArrayList();
+	for (Iterator iter = statsMap.entrySet().iterator(); iter.hasNext();) {
+	  Map.Entry entry = (Map.Entry)iter.next();
+	  PeerIdentity peer = (PeerIdentity)entry.getKey();
+	  CacheStats stats = (CacheStats)entry.getValue();
+	  if (! peer.isLocalIdentity()) {
+	    totalPeers++;
+	  }
+	  Map row = makeRow(stats);
+	  rowL.add(row);
+	}
+	table.setRows(rowL);
+      }
+      table.setSummaryInfo(getSummaryInfo(au, totalPeers));
+    }
+
+    public Map buildCacheStats(ArchivalUnit au, IdentityManager idMgr) {
+      Map statsMap = new HashMap();
+      for (Iterator iter = idMgr.getIdentityAgreements(au).iterator();
+	   iter.hasNext(); ) {
+	IdentityManager.IdentityAgreement ida =
+	  (IdentityManager.IdentityAgreement)iter.next();
+	try {
+	  PeerIdentity pid = idMgr.stringToPeerIdentity(ida.getId());
+	  if (ida.getLastAgree() > 0) {	// only add those that have agreed
+	    CacheStats stats = new CacheStats(pid);
+	    statsMap.put(pid, stats);
+	    stats.lastAgreeTime = ida.getLastAgree();
+	    stats.lastDisagreeTime = ida.getLastDisagree();
+	  }
+	} catch (IdentityManager.MalformedIdentityKeyException e) {
+	  logger.warning("Malformed id key in IdentityAgreement", e);
+	  continue;
+	}
+      }
+      return statsMap;
+    }
+
+    protected Map makeRow(CacheStats stats) {
+      Map rowMap = super.makeRow(stats);
+      rowMap.put("Last", stats.isLastAgree() ? "Yes" : "No");
+      rowMap.put("LastAgree", new Long(stats.lastAgreeTime));
+      rowMap.put("LastDisagree", new Long(stats.lastDisagreeTime));
+      return rowMap;
+    }
+
+    protected List getSummaryInfo(ArchivalUnit au,
+				  int totalPeers) {
+      List summaryList =  ListUtil.list(
+            new StatusTable.SummaryInfo("Peers holding AU",
+					ColumnDescriptor.TYPE_INT,
+                                        new Integer(totalPeers)),
+            new StatusTable.SummaryInfo("Peers",
+					ColumnDescriptor.TYPE_STRING,
+                                        PeerVoteSummary.makeAuRef("Voting on AU", au.getAuId()))
+            );
+      return summaryList;
+    }
+
+    // utility method for making a Reference
+    public static StatusTable.Reference makeAuRef(Object value,
+                                                  String key) {
+      return new StatusTable.Reference(value, PEERS_REPAIR_TABLE_NAME,
                                        key);
     }
   }
