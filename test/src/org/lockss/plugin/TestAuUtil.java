@@ -1,5 +1,5 @@
 /*
- * $Id: TestAuUtil.java,v 1.2 2005-07-18 08:09:25 tlipkis Exp $
+ * $Id: TestAuUtil.java,v 1.3 2005-07-25 01:18:51 tlipkis Exp $
  */
 
 /*
@@ -104,6 +104,15 @@ public class TestAuUtil extends LockssTestCase {
     assertTrue(AuUtil.isPubDown(mau));
     mau.setTitleConfig(makeTitleConfig(ConfigParamDescr.PUB_DOWN, "false"));
     assertFalse(AuUtil.isPubDown(mau));
+  }
+
+  public void testIsPubDownTC() throws Exception {
+    assertTrue(AuUtil.isPubDown(makeTitleConfig(ConfigParamDescr.PUB_DOWN,
+						"true")));
+    assertFalse(AuUtil.isPubDown(makeTitleConfig(ConfigParamDescr.PUB_DOWN,
+						 "false")));
+    assertFalse(AuUtil.isPubDown(makeTitleConfig(ConfigParamDescr.BASE_URL,
+						 "http://foo.bar/")));
   }
 
   public void testIsConfigCompatibleWithPlugin() {
