@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.2 2005-07-25 18:34:06 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.3 2005-07-26 17:28:37 thib_gc Exp $
  */
 
 /*
@@ -370,7 +370,7 @@ public class XStreamSerializer extends ObjectSerializer {
       throw new IOException(streamE.getMessage());
     }
     catch (CannotResolveClassException crcE) {
-      throw new SerializationException(crcE.getMessage(), crcE);
+      throw new SerializationException(crcE);
     }
     catch (BaseException baseE) {
       /*
@@ -379,7 +379,7 @@ public class XStreamSerializer extends ObjectSerializer {
        * com.thoughtworks.xstream.converters.reflection.ObjectAccessException
        * com.thoughtworks.xstream.converters.reflection.ReflectionConverter.DuplicateFieldException
        */
-      throw new SerializationException(baseE.getMessage(), baseE);
+      throw new SerializationException(baseE);
     }
   }
   

@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.2 2005-07-25 18:34:06 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.3 2005-07-26 17:28:37 thib_gc Exp $
  */
 
 /*
@@ -61,17 +61,52 @@ public abstract class ObjectSerializer {
    * this class. This exception is intended for unrecoverable internal
    * error conditions that client code cannot easily have control over
    * but should still reasonably expect.</p>
-   * <p>This class only defines four constructors that match the
-   * standard messaging/chaining provided by {@link Exception}
-   * constructors.</p>
    * @author Thib Guicherd-Callin
    * @see Exception
    */
   public static class SerializationException extends Exception {
-    public SerializationException() { super(); }
-    public SerializationException(String message) { super(message); }
-    public SerializationException(String message, Throwable cause) { super(message, cause); }
-    public SerializationException(Throwable cause) { super(cause); }
+    
+    /*
+     * IMPLEMENTATION NOTES
+     * 
+     * I had to revert from a nice 1.4-like implementation with
+     * four constructors to the code below because 1.3 was still
+     * around on the platform at the time, and Java 1.3's Exception
+     * constructor only accepts nothing or a String. As soon as Java
+     * 1.3 is not around anymore, please retrofit this code to be
+     * four simple constructors with or without a String, with or
+     * without a Throwable, that invoke the corresponding
+     * superconstructor. (A previously checked-in version of this
+     * file is that way already.)
+     */
+    
+    public SerializationException() { this(null, null); }
+    public SerializationException(String message) { this(message, null); }
+    public SerializationException(Throwable cause) { this(null, cause); }
+    public SerializationException(String message, Throwable cause) {
+      super(format(message, cause));
+    }
+    
+    private static String format(String message, Throwable cause) {
+      StringBuffer buffer = new StringBuffer();
+      if (   message != null 
+          && message.length() > 0) {
+        buffer.append(message);
+      }
+      if (   message != null 
+          && message.length() > 0
+          && cause != null
+          && cause.getMessage() != null
+          && cause.getMessage().length() > 0) {
+        buffer.append(" Nested message: ");
+      }
+      if (cause != null
+          && cause.getMessage() != null
+          && cause.getMessage().length() > 0) {
+        buffer.append(cause.getMessage());
+      }
+      return buffer.toString();
+    }
   }
   
   /*
@@ -106,20 +141,20 @@ public abstract class ObjectSerializer {
    * @throws IOException            if input or output fails.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
-   * @see #deserialize(Reader)
+   * @see #deserialize(InputStream)
    */
   public Object deserialize(File inputFile)
       throws FileNotFoundException, IOException, SerializationException {
-    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-    try     { return deserialize(reader); }
-    finally { IOUtil.safeClose(reader); }
+    FileInputStream inStream = new FileInputStream(inputFile);
+    try     { return deserialize(inStream); }
+    finally { IOUtil.safeClose(inStream); }
   }
 
   /**
    * <p>Convenience method to unmarshal a Java object from an XML file
-   * that accepts a File instead of a Reader.</p>
-   * <p>The result of deserializing an object with a file must be the
-   * same as deserializing it with a {@link Reader} on the
+   * that accepts an InputStream instead of a Reader.</p>
+   * <p>The result of deserializing an object with a stream must be
+   * the same as deserializing it with a {@link Reader} on the
    * same file, in the sense of the {@link Object#equals} method.
    * @param inputStream An input stream instance from which the
    *                    serialized object is to be read.
@@ -133,7 +168,8 @@ public abstract class ObjectSerializer {
   public Object deserialize(InputStream inputStream)
       throws IOException, SerializationException {
     BufferedReader reader =
-      new BufferedReader(new InputStreamReader(inputStream));
+      new BufferedReader(
+          new InputStreamReader(inputStream, Constants.DEFAULT_ENCODING));
     return deserialize(reader);
   }
   
@@ -186,12 +222,13 @@ public abstract class ObjectSerializer {
    * @throws IOException            if input or output fails.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
-   * @see #serialize(Writer, Object)
+   * @see #serialize(OutputStream, Object)
    */
   public void serialize(OutputStream outputStream, Object obj)
       throws IOException, SerializationException {
     BufferedWriter writer =
-      new BufferedWriter(new OutputStreamWriter(outputStream));
+      new BufferedWriter(
+          new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
     serialize(writer, obj);
   }
   
@@ -212,9 +249,29 @@ public abstract class ObjectSerializer {
    */
   public void serialize(File outputFile, Object obj)
       throws FileNotFoundException, IOException, SerializationException {
-    BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-    try     { serialize(writer, obj); }
-    finally { IOUtil.safeClose(writer); }
+    File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
+    FileOutputStream outStream = new FileOutputStream(tempFile);
+    boolean success = false;
+
+    try {
+      serialize(outStream, obj);
+      success = true;
+    }
+    finally {
+      IOUtil.safeClose(outStream);
+      if (success) {
+        /* Serialization succeeded */
+        success = tempFile.renameTo(outputFile);
+        if (success) {
+          // File renaming succeeded
+          tempFile.deleteOnExit();
+        }
+        else {
+          // File renaming failed
+          throw new IOException("Could not create a final file from a temporary file.");
+        }
+      }
+    }
   }
 
   /**
