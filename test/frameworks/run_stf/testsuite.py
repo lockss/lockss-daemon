@@ -154,7 +154,7 @@ class SimpleDamageTestCase(LockssAutoStartTestCase):
     
     def runTest(self):
         # Tiny AU for simple testing.
-        simAu = SimulatedAu('localA', 0, 0, 3)
+        simAu = SimulatedAu('simContent', 0, 0, 3)
 
         ##
         ## Create simulated AUs
@@ -231,7 +231,7 @@ class SimpleDeleteTestCase(LockssAutoStartTestCase):
     
     def runTest(self):
         # Tiny AU for simple testing.
-        simAu = SimulatedAu('localA', 0, 0, 3)
+        simAu = SimulatedAu('simContent', 0, 0, 3)
 
         ##
         ## Create simulated AUs
@@ -295,7 +295,7 @@ class SimpleExtraFileTestCase(LockssAutoStartTestCase):
 
     def runTest(self):
         # Tiny AU for simple testing.
-        simAu = SimulatedAu('localA', 0, 0, 3)
+        simAu = SimulatedAu('simContent', 0, 0, 3)
 
         ##
         ## Create simulated AUs
@@ -364,7 +364,7 @@ class RangedNamePollDeleteTestCase(LockssAutoStartTestCase):
 
     def runTest(self):
         # Long names, shallow depth, wide range for testing ranged polls
-        simAu = SimulatedAu('localA', depth=0, branch=0,
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
                             numFiles=45, maxFileName=26)
 
         ##
@@ -467,7 +467,7 @@ class RangedNamePollExtraFileTestCase(LockssAutoStartTestCase):
 
     def runTest(self):
         # Long names, shallow depth, wide range for testing ranged polls
-        simAu = SimulatedAu('localA', depth=0, branch=0,
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
                             numFiles=45, maxFileName=26)
 
         ##
@@ -583,7 +583,7 @@ class RandomizedDamageTestCase(LockssAutoStartTestCase):
         ##
         ## Create simulated AUs
         ##
-        simAu = SimulatedAu(root='localA', depth=depth, branch=branch,
+        simAu = SimulatedAu(root='simContent', depth=depth, branch=branch,
                             numFiles=numFiles, maxFileName=maxFileName)
         for client in self.clients:
             client.createAu(simAu)
@@ -674,7 +674,7 @@ class RandomizedDeleteTestCase(LockssAutoStartTestCase):
         ##
         ## Create simulated AUs
         ##
-        simAu = SimulatedAu(root='localA', depth=depth, branch=branch,
+        simAu = SimulatedAu(root='simContent', depth=depth, branch=branch,
                             numFiles=numFiles, maxFileName=maxFileName)
         for client in self.clients:
             client.createAu(simAu)
@@ -750,7 +750,7 @@ class RandomizedExtraFileTestCase(LockssAutoStartTestCase):
         ##
         ## Create simulated AUs
         ##
-        simAu = SimulatedAu(root='localA', depth=depth, branch=branch,
+        simAu = SimulatedAu(root='simContent', depth=depth, branch=branch,
                             numFiles=numFiles, maxFileName=maxFileName)
         for client in self.clients:
             client.createAu(simAu)
@@ -806,6 +806,154 @@ class RandomizedExtraFileTestCase(LockssAutoStartTestCase):
         log.info("AU repaired.")
 
 
+class TotalLossRecoveryTestCase(LockssTestCase):
+    """ Test repairing a cache that has lost all its contents """
+    def setUp(self):
+        LockssTestCase.setUp(self)
+
+        self.damagedClient = self.clients[1]
+
+        ## Configure one daemon to repair from a cache instead of from
+        ## the publisher.  This is the daemon that will have damaged
+        ## content.
+#        extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100",
+#                     "org.lockss.crawler.repair_from_cache_addr": "127.0.0.1"}
+#        self.framework.appendLocalConfig(extraConf, self.damagedClient)
+
+        ## Allow default-only parameters to be set.  This is necessary to allow
+        ## creating 'publisher down' AUs
+        extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true"}
+        self.framework.appendLocalConfig(extraConf, self.damagedClient)
+
+        ## Start the framework.
+        log.info("Starting framework in %s" % self.framework.frameworkDir)
+        self.framework.start()
+        assert self.framework.isRunning, 'Framework failed to start.'
+
+        ## Block return until all clients are ready to go.
+        log.info("Waiting for framework to come ready.")
+        for client in self.clients:
+            client.waitForDaemonReady()
+            
+    def runTest(self):
+        # Two AUs: One for before the loss, one for after.
+        simAu = SimulatedAu('simContent', 0, 0, 0)
+
+        ## Create simulated AUs
+        log.info("Creating simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ## Assert that the AUs have been crawled.
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+        
+        # Select the appropriate client
+        client = self.damagedClient
+
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        # expect to see a top level content poll called
+        log.info("Waiting for top level content poll.")
+        assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
+               "Never called top level content poll"
+        log.info("Called top level content poll.")
+
+	log.info("Waiting to win top level content poll.")
+	assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
+	       "Never won top level content poll"
+        log.info("Won top level content poll.")
+
+        log.info("Backing up cache configuration...")
+        client.backupConfiguration()
+        log.info("Backed up successfully.")
+        
+        # All daemons should have recorded their agreeing peers at this
+        # point, so stop the client we're going to damage.
+        client.daemon.stop()
+        log.info("Stopped daemon running on UI port %s" % client.port)
+
+        client.simulateDiskFailure()
+        log.info("Deleted entire contents of cache on stopped daemon.")
+
+        #
+        # Write out a TitleDB entry for the simulated AU so it will be marked
+        # 'publisher down' when it is restored.
+        #
+        extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
+                     "org.lockss.plugin.registry": "org.lockss.plugin.simulated.SimulatedPlugin",
+                     "org.lockss.title.sim1.title": "Simulated Content: simContent",
+                     "org.lockss.title.sim1.journalTitle": "Simulated Content",
+                     "org.lockss.title.sim1.plugin": "org.lockss.plugin.simulated.SimulatedPlugin",
+                     "org.lockss.title.sim1.param.1.key": "root",
+                     "org.lockss.title.sim1.param.1.value": "simContent",
+                     "org.lockss.title.sim1.param.2.key": "depth",
+                     "org.lockss.title.sim1.param.2.value": "0",
+                     "org.lockss.title.sim1.param.3.key": "branch",
+                     "org.lockss.title.sim1.param.3.value": "0",
+                     "org.lockss.title.sim1.param.4.key": "numFiles",
+                     "org.lockss.title.sim1.param.4.value": "0",
+                     "org.lockss.title.sim1.param.5.key": "pub_down",
+                     "org.lockss.title.sim1.param.5.value": "true"}
+        
+        self.framework.appendLocalConfig(extraConf, client) 
+
+        time.sleep(3) # Give time for things to settle before starting again
+        
+        client.daemon.start()
+        
+        # Wait for the client to come up
+        assert client.waitForDaemonReady(), "Daemon never became ready"
+        log.info("Started daemon running on UI port %s" % client.port)
+
+        assert not client.hasAu(simAu)
+
+        # Now restore the backup file
+        log.info("Restoring cache configuration...")
+        client.restoreConfiguration(simAu)
+        log.info("Restored successfully.")
+        
+        # These should be equal AU IDs, so both should return true
+        assert client.hasAu(simAu)
+
+        # Request a tree walk.
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+        # expect to see a top level content poll called
+        log.info("Waiting for top level content poll.")
+        assert client.waitForTopLevelContentPoll(simAu, timeout=self.timeout),\
+               "Never called top level content poll"
+        log.info("Called top level content poll.")
+
+        # expect to see the top level node marked repairing.
+        log.info("Waiting for lockssau to be marked 'damaged'.")
+        assert client.waitForTopLevelDamage(simAu, timeout=self.timeout),\
+               "Client never marked lockssau 'damaged'."
+        log.info("Marked lockssau 'damaged'.")
+
+        # expect to see top level name poll
+        log.info("Waiting for top level name poll.")
+        assert client.waitForTopLevelNamePoll(simAu, timeout=self.timeout),\
+               "Never called top level name poll"
+        log.info("Called top level name poll")
+
+        # expect to see the AU successfully repaired
+        log.info("Waiting for successful repair of AU.")
+        assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
+               "AU never repaired."
+        log.info("AU successfully repaired.")
+
+        # Assert that the repair came from a cache, not from the publisher.
+        assert client.isContentRepairedFromCache(simAu)
+        
+        # End of test.
+
 ## Test repairs from a cache.  Create a small AU, damage it, and wait
 ## for it to be repaird, just like in SimpleDamageTestCase.  Extends
 ## 'LockssTestCase' instead of 'LockssAutoStartTestCase' so we can
@@ -823,7 +971,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         ##content.
 
         extraConf = {"org.lockss.crawler.repair.repair_from_cache_percent": "100",
-                     "org.lockss.crawler.repair.repair_from_cache_addr": "127.0.0.1"}
+                     "org.lockss.crawler.repair_from_cache_addr": "127.0.0.1"}
         self.framework.appendLocalConfig(extraConf, self.damagedClient)
         
         ##
@@ -840,7 +988,7 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
 
     def runTest(self):
         # Tiny AU for simple testing.
-        simAu = SimulatedAu('localA', 0, 0, 1)
+        simAu = SimulatedAu('simContent', 0, 0, 1)
 
         ##
         ## Create simulated AUs
@@ -912,19 +1060,10 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
         log.info("Waiting for successful repair of node %s." % node.url)
         assert client.waitForContentRepair(simAu, node, timeout=self.timeout),\
                "Node %s not repaired." % node.url
-        log.info("Node %s repaired." % node.url)
+        # Expect that the repair came from a cache, not from the publisher.
+        assert client.isContentRepairedFromCache(simAu, node)
 
-        ##
-        ## XXX: Important!  Need to add a method for the client to
-        ## accurately determine whether the repair was via proxy or
-        ## via publisher crawl.
-        ##
-        
-        # expect to see the AU successfully repaired
-        log.info("Waiting for successful repair of AU.")
-        assert client.waitForTopLevelRepair(simAu, timeout=self.timeout),\
-               "AU never repaired."
-        log.info("AU successfully repaired.")        
+        log.info("Node %s repaired." % node.url)
 
 class TinyUiTests(LockssTestCase):
     def setUp(self):
@@ -963,11 +1102,9 @@ class TinyUiTests(LockssTestCase):
 
     def assertMatch(self, pat, string):
         msg = 'No match for "%s" in\n%s' % (pat.pattern, string)
-#        msg = 'No match for "%s"' % (pat.pattern)
         assert pat.search(string), msg
 
     def assertNoMatch(self, pat, string):
-#        msg = 'Unaxpected match for "%s" in\n%s' % (pat.pattern, string)
         msg = 'Unexpected match for "%s"' % (pat.pattern)
         assert not pat.search(string), msg
 
@@ -1061,6 +1198,11 @@ def repairFromCacheTests():
     suite.addTest(SimpleDamageRepairFromCacheTestCase())
     return suite
 
+def totalLossRecoveryTests():
+    suite = unittest.TestSuite()
+    suite.addTest(TotalLossRecoveryTestCase())
+    return suite
+
 def succeedingTests():
     suite = unittest.TestSuite()
     suite.addTest(SucceedingTestTestCase())
@@ -1122,4 +1264,4 @@ if __name__ == "__main__":
         # Unhandled exception occured.
         log.error("%s" % e)
         sys.exit(1)
-        
+

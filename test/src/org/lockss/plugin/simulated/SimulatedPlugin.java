@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedPlugin.java,v 1.22 2005-07-18 08:14:28 tlipkis Exp $
+ * $Id: SimulatedPlugin.java,v 1.23 2005-07-27 18:23:22 smorabito Exp $
  */
 
 /*
@@ -261,16 +261,6 @@ public class SimulatedPlugin extends BasePlugin implements PluginTestable {
 
   public String getPluginName() {
     return "Simulated Content";
-  }
-
-  /**
-   * Return the list of names of the Archival Units and volranges supported by
-   * this plugin
-   * @return a List of Strings
-   */
-  public List getSupportedTitles() {
-    return ListUtil.list("SimulatedSupportedTitle",
-			 "odd </html>chars");
   }
 
   /**

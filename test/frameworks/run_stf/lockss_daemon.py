@@ -1,5 +1,5 @@
-import base64, os, random, shutil, signal, socket
-import sys, time, types, urllib, urllib2
+import base64, glob, os, httplib, random, re, shutil, signal, socket
+import mimetools, mimetypes, sys, time, types, urllib, urllib2, urlparse
 from os import path
 from xml.dom import minidom
 from lockss_util import *
@@ -35,9 +35,14 @@ class Framework:
     functional test interactions with the daemons.
     """
     def __init__(self, daemonCount = None, urlList = None):
-        wd = path.abspath(config.get('workDir', './'))
-        self.frameworkDir = self.__makeTestDir(wd)
+        self.workDir = path.abspath(config.get('workDir', './'))
+        self.frameworkDir = self.__makeTestDir()
         self.projectDir = config.get('projectDir')
+        if self.projectDir == None:
+            # will raise LockssError if not found.
+            self.projectDir = self.__findProjectDir()
+        self.projectLibDir = path.join(self.workDir, 'lib')
+        self.localLibDir = path.join(self.projectDir, 'lib')
         if not daemonCount:
             self.daemonCount = int(config.get('daemonCount', 4))
         else:
@@ -51,13 +56,8 @@ class Framework:
         self.clientList = [] # ordered list of clients.
         self.daemonList = [] # ordered list of daemons.
         self.configCount = 0 # used when writing daemon properties
+
         self.isRunning = False
-
-        self.portToClientMap = {} # A mapping of port number to client.
-
-        if self.projectDir == None:
-            # will raise LockssError if not found.
-            self.projectDir = self.__findProjectDir()
 
         # Assert that the project directory exists and that
         # the necessary libraries exist.
@@ -73,12 +73,13 @@ class Framework:
         extraConfigFile = path.join(self.frameworkDir, 'lockss.opt')
         self.__writeExtraConfig(extraConfigFile, config)
 
+        # Copy the LOCKSS libs to a local working dir
+        self.__setUpLibDir()
+        
         # Set up a each daemon and create a work directory for it.
         for port in range(self.startPort, self.startPort + self.daemonCount):
             daemonDir = path.abspath(path.join(self.frameworkDir,
                                                'daemon-' + str(port)))
-            # create client
-            client = Client(daemonDir, self.hostname, port, self.username, self.password)
             # local config
             localConfigFile = path.join(daemonDir, 'local.txt')
             # Init the directory
@@ -92,16 +93,16 @@ class Framework:
                 urlList = urlList + (localConfigFile,)
             daemon = LockssDaemon(daemonDir, self.__makeClasspath(),
                                   urlList)
-            # Add client and daemon to their lists
+            
+            # create client for this daemon
+            client = Client(daemon, self.hostname, port, self.username, self.password)
+
             self.clientList.append(client)
             self.daemonList.append(daemon)
-            self.portToClientMap[port] = client
 
     def start(self):
         " Start each daemon in the framework. "
-        if self.isRunning:
-            raise LockssError("Test framework is already started.")
-
+        # if 'client' is none, start all daemons.
         for daemon in self.daemonList:
             daemon.start()
 
@@ -109,11 +110,8 @@ class Framework:
 
     def stop(self):
         " Stop each daemon in the framework."
-        if not self.isRunning:
-            raise LockssError("Daemon is not running.")
-
         for daemon in self.daemonList:
-            daemon.kill()
+            daemon.stop()
 
         self.isRunning = False
 
@@ -121,18 +119,10 @@ class Framework:
         " Delete the current framework working directory. "
         shutil.rmtree(self.frameworkDir)
 
-    def getClientByPort(self, portNumber):
-        " Get the client for the specified port number. "
-        try:
-            return self.portToClientMap[portNumber]
-        except KeyError:
-            return None
-
     def appendLocalConfig(self, conf, client):
         """ Append the supplied configuration in the dictionary 'conf'
         (name / value pairs) to the local config file for the specified
         client daemon 'client' """
-        client = self.getClientByPort(client.port)
         localConf = path.join(client.daemonDir, 'local.txt')
         f = open(localConf, "a");
         for (key, value) in conf.items():
@@ -155,15 +145,34 @@ class Framework:
         """ Very naive implementation. """
         return (open(f, 'r').read()).find('FOUND A JAVA LEVEL DEADLOCK') > -1
 
-    def __makeClasspath(self):
-        cp = []
-        testCpFile = path.join(self.projectDir, 'test', 'test-classpath')
-        f = open(testCpFile)
-        for line in f.readlines():
-            cp.append(line)
-        f.close()
+    def __setUpLibDir(self):
+        """ Create the directory 'lib' if it does not already exist, then copy
+        lockss.jar, lockss-test.jar, and lockss-plugin.jar from self.projectDir/lib
+        to 'lib'. """
+        if not path.isdir(self.projectLibDir):
+            os.mkdir(self.projectLibDir)
 
-        return os.pathsep.join(cp)
+        lockssJar = path.join(self.localLibDir, 'lockss.jar')
+        lockssTestJar = path.join(self.localLibDir, 'lockss-test.jar')
+        lockssPluginJar = path.join(self.localLibDir, 'lockss-plugins.jar')
+
+        # Copy from buildLib to localLib
+
+        shutil.copy(lockssJar, self.projectLibDir)
+        shutil.copy(lockssTestJar, self.projectLibDir)
+        shutil.copy(lockssPluginJar, self.projectLibDir)
+
+    def __makeClasspath(self): 
+        """ Return a list of all *.jar and *.zip files under self.projectDir/lib,
+        plus all *.jar and *.zip files under self.projectLibDir. """
+
+        return ":".join(glob.glob(path.join(self.projectLibDir, "*.jar")) + 
+                        glob.glob(path.join(self.projectLibDir, "*.zip")) + 
+                        glob.glob(path.join(self.localLibDir, "*.jar")) + 
+                        glob.glob(path.join(self.localLibDir, "*.zip")))
+        
+    def makeClasspath(self):
+        return self.__makeClasspath()
 
     def __findProjectDir(self):
         """ Walk up the tree until 'build.xml' is found.  Assume this
@@ -194,14 +203,14 @@ class Framework:
 
         return True
 
-    def __makeTestDir(self, dir):
+    def __makeTestDir(self):
         """ Construct the name of a directory under the top-level work
         directory in which to create the framework.  This allows each
         functional test to work in its own directory, and for all the test
         results to be left for examination if deleteAfter is false. """
         global frameworkCount
         frameworkCount += 1
-        fwDir = path.join(dir, 'testcase-' + str(frameworkCount))
+        fwDir = path.join(self.workDir, 'testcase-' + str(frameworkCount))
         if path.isdir(fwDir):
             raise LockssError("Directory %s already exists." % fwDir)
         os.mkdir(fwDir)
@@ -245,11 +254,12 @@ class Framework:
 
 class Client:
     " Client interface to a test framework. "
-    def __init__(self, daemonDir, hostname, port, username, password):
+    def __init__(self, daemon, hostname, port, username, password):
         self.hostname = hostname
         self.port = port
         self.url = 'http://' + self.hostname + ':' + str(port) + '/'
-        self.daemonDir = daemonDir
+        self.daemon = daemon
+        self.daemonDir = daemon.daemonDir
         self.username = username
         self.password = password
 
@@ -269,6 +279,16 @@ class Client:
         if not self.waitForDeleteAu(au):
             raise LockssError("Timed out while waiting for "\
                               "AU %s to be deleted." % au)
+
+    def setPublisherDown(self, au):
+        """ Modify the configuration of the specified AU to set it's 'pub_down'
+        parameter """
+        post = self.__makeAuPost(au, 'Update')
+        post.add('lfp.pub_down', 'true') # Override setting in AU
+        post.execute()
+        if not self.waitForPublisherDown(au):
+            raise LockssError("Timed out waiting for AU %s to be marked "\
+                              "'Publisher Down'." % au)
 
     def requestTreeWalk(self, au):
         """
@@ -313,6 +333,62 @@ class Client:
                 raise LockssError("Timed out while waiting for "\
                                   "AU %s to be deactivated." % au)
 
+    ##
+    ## Back up the configuration
+    ##
+            
+    def backupConfiguration(self):
+        """ Very quick and dirty way to download the config backup. """
+
+        request = Get(self.url + "BatchAuConfig?lockssAction=Backup",
+                      self.username, self.password)
+        backupData = request.execute().read()
+
+        # Write the data into a file
+        f = file("configbackup.zip", "w")
+        f.write(backupData)
+        f.close()
+
+
+    def restoreConfiguration(self, au):
+
+        post = MultipartPost(self.url + "BatchAuConfig",
+                             self.username, self.password)
+        post.add("lockssAction", "SelectRestoreTitles")
+        post.add("Verb", "5")
+        post.addFile("AuConfigBackupContents", "configbackup.zip")
+                    
+        (result, cookie) = post.execute()
+
+        log.debug3("Got result from Batch AU Config servlet\n%s" % result)
+        
+        # Expect to see the strings 'Simulated Content: foo' and
+        # 'Restore Selected AUs' in the response.  FRAGILE, obviously
+        # this will break if the servlet UI is changed.
+
+        p = re.compile("%s.*Restore Selected AUs" % au.title, re.MULTILINE | re.DOTALL)
+        
+        if not p.search(result):
+            raise LockssError("Unexpected response from BatchAuConfig servlet")
+        
+        # Now confirm the restoration.
+
+        post = Post(self.url + "BatchAuConfig",
+                    self.username, self.password, cookie)
+
+        post.add("lockssAction", "DoAddAus")
+        post.add("Verb", "5")
+        post.add("auid", au.auId)
+
+        result = post.execute()
+
+        # If this was successful, delete the configbackup.zip file
+        os.unlink("configbackup.zip")
+
+    ##
+    ## General status accessors
+    ##
+    
     def getCrawlStatus(self, au=None):
         """
         Return the current crawl status of this cache.
@@ -321,13 +397,14 @@ class Client:
         if not au == None:
             key = au.auId
 
-        return self.__getStatusTable('crawl_status_table', key)
+        (summary, table) = self.__getStatusTable('crawl_status_table', key)
+        return table
 
     def getAuRepository(self, au):
         """ RepositoryStatus table does not accept key, so loop through it until
         the corresponding au is found. """
         auid = au.auId
-        table = self.__getStatusTable('RepositoryTable')
+        (summary, table) = self.__getStatusTable('RepositoryTable')
         for row in table:
             auRef = row['au']
             if auRef['key'] == auid:
@@ -348,7 +425,7 @@ class Client:
     def hasAu(self, au):
         """ Return true iff the status table lists the given au. """
         auid = au.auId
-        tab = self.__getStatusTable('AuIds')
+        (summary, tab) = self.__getStatusTable('AuIds')
         for row in tab:
             if row["AuId"] == auid:
                 return True
@@ -357,7 +434,7 @@ class Client:
 
     def isActiveAu(self, au):
         """ Return true iff the au is activated."""
-        tab = self.__getStatusTable('RepositoryTable')
+        (summary, tab) = self.__getStatusTable('RepositoryTable')
         for row in tab:
             status = row["status"]
             auRef = row["au"]
@@ -374,10 +451,11 @@ class Client:
         return False
 
     def isAuDamaged(self, au, node=None):
-        table = self.__getStatusTable('ArchivalUnitTable', au.auId)
-        if not node:
-            node = self.getAuNode(au, 'lockssau')
-        url = node.url
+        (summary, table) = self.__getStatusTable('ArchivalUnitTable', au.auId)
+        if node:
+            url = node.url
+        else:
+            url = 'lockssau'
         for row in table:
             rowUrl = row['NodeName']
             if not row.has_key('NodeStatus'):
@@ -386,6 +464,15 @@ class Client:
                 return row['NodeStatus'] == "Damaged"
         # au wasn't found.
         return False
+
+    def isPublisherDown(self, au):
+        """ Return true if the AU is marked 'publisher down' (i.e., if
+        the ArchivalUnitTable lists 'Available From Publisher' as 'No'
+        for this AU """
+        (summary, table) = self.__getStatusTable('ArchivalUnitTable', au.auId)
+        return (summary.has_key('Available From Publisher') and
+                summary['Available From Publisher'] == "No")
+        
 
     def isAuOK(self, au):
         """ Return true if the top level of the AU has been repaired. """
@@ -409,6 +496,30 @@ class Client:
             if row['URL'] == node.url:
                 return row['Status'] == 'Repaired'
         # Poll wasn't found
+        return False
+
+    def isContentRepairedFromCache(self, au, node=None):
+        """ Return true if the given content node has been repaired from
+        another cache via the proxy. """
+        if node:
+            url = node.url
+        else:
+            url = au.startUrl
+        tab = self.getCrawlStatus(au)
+        for row in tab:
+            if not row["start_urls"] == url or not row['crawl_type'] == "Repair":
+                continue
+            return not row['sources'] == "Publisher"
+        return False
+
+    def isContentRepairedFromPublisher(self, au, node):
+        """ Return true iff the given content node has been repaired by
+        crawling the publisher. """
+        tab = self.getCrawlStatus(au)
+        for row in tab:
+            if not row["start_urls"] == node.url or not row['crawl_type'] == "Repair":
+                continue
+            return not row['sources'] == "Publisher"
         return False
 
     def isNameRepaired(self, au, node=None):
@@ -454,15 +565,16 @@ class Client:
         key = 'AU~%s' % urllib.quote(au.auId) # requires a pre-quoted key
         if activeOnly:
             key = key + '&Status~Active'
-        return self.__getStatusTable('PollManagerTable', key)
+        (summary, table) = self.__getStatusTable('PollManagerTable', key)
+        return table
 
     def getAuNodesWithContent(self, au):
         """ Return a list of all nodes that have content. """
         # Hack!  Pass the table a very large number for numrows, and
         # pray we don't have more than that.
-        tab = self.__getStatusTable('ArchivalUnitTable',
-                                    key=au.auId,
-                                    numrows=100000)
+        (summary, tab) = self.__getStatusTable('ArchivalUnitTable',
+                                               key=au.auId,
+                                               numrows=100000)
         nodes = []
         for row in tab:
             url = row['NodeName']
@@ -473,9 +585,9 @@ class Client:
 
     def getAuNodesWithChildren(self, au):
         """ Return a list of all nodes that have children. """
-        tab = self.__getStatusTable('ArchivalUnitTable',
-                                    key=au.auId,
-                                    numrows=100000)
+        (summary, tab) = self.__getStatusTable('ArchivalUnitTable',
+                                               key=au.auId,
+                                               numrows=100000)
         nodes = []
         for row in tab:
             url = row['NodeName']
@@ -484,7 +596,7 @@ class Client:
                 nodes.append(self.getAuNode(au, url))
         return nodes
 
-    def isFrameworkReady(self):
+    def isDaemonReady(self):
         """ Simply try to get the AU status.  If it responds, return
         true.  If it raises any kind of error, return False.  Not the
         best implementation in the world, but such is life."""
@@ -721,6 +833,12 @@ class Client:
             return not self.hasAu(au)
         return self.wait(waitFunc, timeout, sleep)
 
+    def waitForPublisherDown(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
+        """ Wait for the specified AU to be marked 'publisher down' """
+        def waitFunc():
+            return self.isPublisherDown(au)
+        return self.wait(waitFunc, timeout, sleep)
+
     def waitForReactivateAu(self, au, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Wait for the au to be activated, or for the timeout to
         expire. """
@@ -889,8 +1007,13 @@ class Client:
     def waitForDaemonReady(self, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Block until the framework is ready for client communication """
         def waitFunc():
-            return self.isFrameworkReady()
-        return self.wait(waitFunc, timeout, sleep)
+            return self.isDaemonReady()
+        res = self.wait(waitFunc, timeout, sleep)
+        # Kludge.  Wait an additional 4 seconds after the daemon is ready.
+        # This seems to be enough time to wait for it to accept new AU
+        # creations.
+        time.sleep(4)
+        return res
 
     def wait(self, condFunc, timeout=DEF_TIMEOUT, sleep=DEF_SLEEP):
         """ Given a function to evaluate, loop until the function evals to
@@ -959,6 +1082,22 @@ class Client:
         else:
             raise LockssError("File does not exist: %s" % f)
 
+    def simulateDiskFailure(self):
+        """ Delete the entire contents of this client's cache.  Obviously,
+        very destructive. """
+        cacheDir = path.join(self.daemonDir, "cache")
+        configDir = path.join(self.daemonDir, "config")
+        iddbDir = path.join(self.daemonDir, "iddb")
+        pluginsDir = path.join(self.daemonDir, "plugins")
+        if path.isdir(cacheDir) and path.isdir(configDir) \
+               and path.isdir(iddbDir) and path.isdir(pluginsDir):
+            shutil.rmtree(cacheDir)
+            shutil.rmtree(configDir)
+            shutil.rmtree(iddbDir)
+            shutil.rmtree(pluginsDir)
+        else:
+            raise LockssError("Cache not in an expected state!")
+        
     def createFile(self, au, filespec):
         """ Create an extra file in the repository under the given AU and
         filespec.  The filespec should be relative to the AU's root, for example
@@ -1042,6 +1181,7 @@ class Client:
             else:
                 raise LockssError("Node does not exist: %s" % node.url)
 
+
     ###
     ### Internal methods
     ###
@@ -1060,11 +1200,18 @@ class Client:
         post.add('output', 'xml')
 
         xml = post.execute().read()
-        log.debug2("Received XML response: \n" + xml)
+        log.debug3("Received XML response: \n" + xml)
         doc = minidom.parseString(xml)
         doc.normalize() # required for python 2.2
-        rowList = doc.getElementsByTagName('st:row')
 
+        summaryList = doc.getElementsByTagName('st:summaryinfo')
+        summaryDict = {}
+        for summary in summaryList:
+            summaryTitle = summary.getElementsByTagName('st:title')[0].firstChild.data
+            summaryValue = summary.getElementsByTagName('st:value')[0].firstChild.data
+            summaryDict[summaryTitle] = summaryValue
+            
+        rowList = doc.getElementsByTagName('st:row')
         data = []
         for row in rowList:
             rowDict = {}
@@ -1081,15 +1228,15 @@ class Client:
                         key = ref.getElementsByTagName('st:key')[0].firstChild.data
                         value = ref.getElementsByTagName('st:value')[0].firstChild.data
                         rowDict[colName] = {'name': name,
-                                         'key': key,
-                                         'value': value}
+                                            'key': key,
+                                            'value': value}
                     else:
                         rowDict[colName] = colVal.firstChild.data
                 except IndexError:
                     # Unlikely to happen, but just in case...
                     continue
             data.append(rowDict)
-        return data
+        return (summaryDict, data)
 
     def __canConnectToHost(self):
         try:
@@ -1131,6 +1278,8 @@ class Client:
             post.add('lfp.badFileLoc', au.badFileLoc)
         if (not au.badFileNum == -1):
             post.add('lfp.badFileNum', au.badFileNum)
+        if (au.publisherDown):
+            post.add('lfp.pub_down', 'true')
         post.add('auid', au.auId)
 
         return post
@@ -1209,7 +1358,8 @@ class SimulatedAu:
     in the functional test framework. """
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
                  binFileSize=-1, maxFileName=-1, fileTypes=-1,
-                 oddBranchContent=-1, badFileLoc=None, badFileNum=-1):
+                 oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
+                 publisherDown=False):
         self.root = root
         self.depth = depth
         self.branch = branch
@@ -1220,13 +1370,16 @@ class SimulatedAu:
         self.oddBranchContent = oddBranchContent
         self.badFileLoc = badFileLoc
         self.badFileNum = badFileNum
+        self.publisherDown = publisherDown
         self.baseUrl = 'http://www.example.com'
         self.dirStruct = path.join('www.example.com', 'http')
         self.pluginId = 'org.lockss.plugin.simulated.SimulatedPlugin'
         self.auId = "%s&root~%s" % (self.pluginId.replace('.', '|'), self.root)
+        self.title = "Simulated Content: " + root
+        self.startUrl = self.baseUrl + '/index.html'
 
     def __str__(self):
-        return "Simulated Content: " + self.root
+        return self.title
 
     def getAuId(self):
         auIdKey = self.pluginId.replace('.', '|')
@@ -1247,68 +1400,146 @@ class LockssDaemon:
     """ Wrapper around a daemon instance.  Controls starting and stopping
     a LOCKSS Java daemon. """
     def __init__(self, dir, cp, configList):
-        self.dir = dir
+        self.daemonDir = dir
         self.cp = cp
         self.configList = configList
         if not os.environ.has_key('JAVA_HOME'):
             raise LockssError("JAVA_HOME must be set.")
         javaHome = os.environ['JAVA_HOME']
         self.javaBin = path.join(javaHome, 'bin', 'java')
-        self.logfile = path.join(self.dir, 'test.out')
+        self.logfile = path.join(self.daemonDir, 'test.out')
+        self.isRunning = False
 
     def start(self):
-        cmd = '%s -cp %s -Dorg.lockss.defaultLogLevel=debug '\
-              'org.lockss.app.LockssDaemon %s > %s 2>&1 & '\
-              'echo $! > %s/dpid'\
-              % (self.javaBin, self.cp, ' '.join(self.configList),
-                 self.logfile, self.dir)
-        os.system(cmd)
-        self.pid = int(open(path.join(self.dir, 'dpid'), 'r').readline())
+        if not self.isRunning:
+            cmd = '%s -cp %s -Dorg.lockss.defaultLogLevel=debug '\
+                  'org.lockss.app.LockssDaemon %s > %s 2>&1 & '\
+                  'echo $! > %s/dpid'\
+                  % (self.javaBin, self.cp, ' '.join(self.configList),
+                     self.logfile, self.daemonDir)
+            os.system(cmd)
+            self.pid = int(open(path.join(self.daemonDir, 'dpid'), 'r').readline())
+            self.isRunning = True
 
-    def kill(self):
-        os.kill(self.pid, signal.SIGTERM)
+    def stop(self):
+        if self.isRunning:
+            os.kill(self.pid, signal.SIGTERM)
+            self.isRunning = False
 
     def requestThreadDump(self):
-        os.kill(self.pid, signal.SIGQUIT)
-        # Horrible kludge.  Pause for one second so that the VM has
-        # time to comply and flush the daemon log file.
-        time.sleep(1)
+        if self.isRunning:
+            os.kill(self.pid, signal.SIGQUIT)
+            # Horrible kludge.  Pause for one second so that the VM has
+            # time to comply and flush the daemon log file.
+            time.sleep(1)
 
 class Post:
     """ A simple wrapper for HTTP post management. """
-    def __init__(self, url='', username=None, password=None):
-        self.__request = urllib2.Request(url)
+    def __init__(self, url='', username=None, password=None, cookie=None):
+        self.request = urllib2.Request(url)
+        if cookie:
+            self.request.add_header('Cookie', cookie)
         if not username == None and not password == None:
             # Attempt to set authentication
             encoded = base64.encodestring('%s:%s' % (username, password))[:-1]
             authheader = "Basic %s" % encoded
-            self.__request.add_header("Authorization", authheader)
-        self.__postData = {}
+            self.request.add_header("Authorization", authheader)
+        self.postData = []
 
-    def add(self, name, val):
-        self.__postData[name] = val
+    def add(self, key, val):
+        self.postData.append((key, val))
 
     def execute(self):
         """ Send a POST with the previously constructed form data,
         and return the contents of the file. """
-        args = urllib.urlencode(self.__postData)
+        args = urllib.urlencode(self.postData)
         opener = urllib2.build_opener()
-        log.debug2("Sending POST: %s?%s" % (self.__request.get_full_url(), args))
-        return opener.open(self.__request, args)
+        log.debug2("Sending POST: %s?%s" % (self.request.get_full_url(), args))
+        return opener.open(self.request, args)
+
+class MultipartPost:
+    def __init__(self, url='', username=None, password=None, cookie=None):
+        urlparts = urlparse.urlsplit(url)
+        self.host = urlparts[1]
+        self.selector = urlparts[2]
+        self.cookie = cookie
+        self.postData = []
+        self.fileData = []
+        self.authHeader = "Basic %s" % base64.encodestring('%s:%s' % (username, password))[:-1]
+
+    def add(self, key, val):
+        self.postData.append((key, val))
+        
+    def addFile(self, key, filename):
+        f = open(filename, "r")
+        self.fileData.append((key, filename, f.read()))
+
+    def execute(self):
+        """ Returns a tuple of (response body, cookie).  cookie is 'None' if no
+        SetCookie header was received. """
+
+        (contentType, body) = self.encodeMultipartFormdata(self.postData, self.fileData)
+        length = str(len(body));
+        h = httplib.HTTP(self.host)
+        h.putrequest('POST', self.selector)
+        h.putheader("Authorization", self.authHeader)
+        h.putheader("Content-Type", contentType)
+        h.putheader("Content-Length", length)
+        if self.cookie:
+            h.putheader("Cookie", cookie)
+        h.endheaders()
+        h.send(body)
+        errcode, errmsg, headers = h.getreply()
+        responseCookie = headers.getheader('Set-Cookie')
+        if responseCookie:
+            responseCookie = responseCookie.split(';')[0]
+        return (h.file.read(), responseCookie)
+        
+        
+    def encodeMultipartFormdata(self, fields, files):
+        """ fields is a sequence of (name, value) elements for regular
+        form fields.  files is a sequence of (name, filename, value)
+        elements for data to be uploaded as files Return (content_type,
+        body) ready for httplib.HTTP instance """
+        
+        boundary = mimetools.choose_boundary()
+
+        content_type = 'multipart/form-data; boundary=%s' % boundary
+
+        data = ''
+        for (key, value) in fields:
+            data += '--%s\r\n' % boundary
+            data += 'Content-Disposition: form-data; name="%s"\r\n' % key
+            data += '\r\n'
+            data += "%s\r\n" % value
+        for (key, filename, value) in files:
+            data += '--%s\r\n' % boundary
+            data += 'Content-Disposition: form-data; name="%s"; filename="%s"\r\n' % \
+                     (key, filename)
+            data += 'Content-Type: %s\r\n' % self.getContentType(filename)
+            data += '\r\n'
+            data += '%s\r\n' % value
+        data += '--%s--\r\n' % boundary
+        data += '\r\n'
+        
+        return (content_type, data)
+
+    def getContentType(self, filename):
+        return mimetypes.guess_type(filename)[0] or 'application/octet-stream'
 
 class Get:
     def __init__(self, url='', username=None, password=None):
-        self.__request = urllib2.Request(url)
+        self.request = urllib2.Request(url)
         if not username == None and not password == None:
             # Attempt to set authentication
             encoded = base64.encodestring('%s:%s' % (username, password))[:-1]
             authheader = "Basic %s" % encoded
-            self.__request.add_header("Authorization", authheader)
+            self.request.add_header("Authorization", authheader)
 
     def execute(self):
         opener = urllib2.build_opener()
-        log.debug2("Sending GET: %s" % self.__request.get_full_url())
-        return opener.open(self.__request)
+        log.debug2("Sending GET: %s" % self.request.get_full_url())
+        return opener.open(self.request)
         
 ###########################################################################
 ##
@@ -1323,7 +1554,7 @@ org.lockss.log.default.level=%s
 #lockss config stuff
 org.lockss.platform.diskSpacePaths=./
 
-org.lockss.config.reloadInterval=30m
+org.lockss.config.reloadInterval=2m
 
 #comm settings
 org.lockss.ui.start=yes
@@ -1347,19 +1578,19 @@ org.lockss.poll.voteMargin=51
 org.lockss.poll.trustedWeight=350
 org.lockss.poll.namepoll.deadline=5m
 
-org.lockss.poll.contentpoll.min=5m
-org.lockss.poll.contentpoll.max=15m
+org.lockss.poll.contentpoll.min=4m
+org.lockss.poll.contentpoll.max=6m
 
 org.lockss.treewalk.initial.estimate=20s
-org.lockss.treewalk.interval.min=5m
-org.lockss.treewalk.interval.max=10m
+org.lockss.treewalk.interval.min=3m
+org.lockss.treewalk.interval.max=5m
 org.lockss.treewalk.start.delay=20s
 org.lockss.comm.router.beacon.interval=1m
-org.lockss.baseau.toplevel.poll.interval.min=5m
-org.lockss.baseau.toplevel.poll.interval.max=10m
+org.lockss.baseau.toplevel.poll.interval.min=4m
+org.lockss.baseau.toplevel.poll.interval.max=6m
 org.lockss.baseau.toplevel.poll.prob.initial=1.0
 
-org.lockss.metrics.slowest.hashrate = 250
+org.lockss.metrics.slowest.hashrate=250
 org.lockss.state.recall.delay=5m
 
 # Turn down logging on areas that we normally

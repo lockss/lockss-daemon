@@ -5,7 +5,7 @@ Utility functions and classes used by testsuite and
 lockss_daemon.
 """
 
-loglevel = {"error": 0, "warn": 1, "info": 2, "debug": 3, "debug2": 4}
+loglevel = {"error": 0, "warn": 1, "info": 2, "debug": 3, "debug2": 4, "debug3": 5}
 
 def loadConfig(f):
     """ Load a Config object from a file. """
@@ -152,6 +152,10 @@ class Logger:
     def debug2(self, msg):
         if (self.logLevel >= loglevel["debug2"]):
             self.__writeLog("DEBUG2: %s" % msg)
+
+    def debug3(self, msg):
+        if (self.logLevel >= loglevel["debug3"]):
+            self.__writeLog("DEBUG3: %s" % msg)
 
     def __writeLog(self, msg):
         now = time.time()
