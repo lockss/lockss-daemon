@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedArchivalUnit.java,v 1.53 2005-02-21 03:10:40 tlipkis Exp $
+ * $Id: SimulatedArchivalUnit.java,v 1.54 2005-07-27 19:53:49 smorabito Exp $
  */
 
 /*
@@ -343,6 +343,8 @@ public class SimulatedArchivalUnit extends BaseArchivalUnit {
     paramMap.putString(AU_START_URL, startUrlString);
     auName = makeName();
     paramMap.putString(AU_TITLE, auName);
+
+    titleDbChanged();
   }
 
   boolean isUrlToBeDamaged(String url) {

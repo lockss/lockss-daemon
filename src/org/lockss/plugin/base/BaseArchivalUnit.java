@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.95 2005-07-19 01:11:06 tlipkis Exp $
+ * $Id: BaseArchivalUnit.java,v 1.96 2005-07-27 19:53:51 smorabito Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
   /** Set up titledb-related data */
-  void titleDbChanged() {
+  protected void titleDbChanged() {
     TitleConfig tc = findTitleConfig(auConfig);
     if (tc != null) {
       titleConfig = tc;
