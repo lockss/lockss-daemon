@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.146.2.1 2005-07-23 00:38:24 tlipkis Exp $
+ $Id: build.xml,v 1.146.2.2 2005-07-27 23:50:26 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -893,10 +893,10 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
     </pathconvert>
     <echo message="${tmp.run.clspth}" file="${production.classpath.file}"/>
     <!-- Write run-props -->
-    <echo file="${run.props}">ULIMIT_DATA=192000
-ULIMIT_MEMORY=128000
+    <echo file="${run.props}">ULIMIT_DATA=256000
+ULIMIT_MEMORY=unlimited
 ULIMIT_STACK=14000
-ULIMIT_FILES=256
+ULIMIT_FILES=512
 JAVA_COMMAND_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600 -showversion"
 </echo>
     <!-- Write packing list file-->
