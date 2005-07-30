@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.7 2005-07-30 04:30:29 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.8 2005-07-30 20:55:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -51,9 +51,8 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    * watchdog during unit tests.
    */
   public static final String PARAM_THREAD_WDOG_EXIT_IMM =
-    LockssThread.PARAM_THREAD_WDOG_EXIT_IMM;
-  static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM =
-    LockssThread.DEFAULT_THREAD_WDOG_EXIT_IMM;
+    PREFIX + "wdogExitJava";
+  static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM = true;
 
   static final String PARAM_THREAD_WDOG_HUNG_DUMP = PREFIX + "hungThreadDump";
   static final boolean DEFAULT_THREAD_WDOG_HUNG_DUMP = false;
@@ -238,16 +237,18 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   protected void exitDaemon(int exitCode, String msg) {
     boolean exitImm = true;
     try {
-      WatchdogService wdog = (WatchdogService)
-	LockssDaemon.getManager(LockssDaemon. WATCHDOG_SERVICE);
-      if (wdog != null) {
-	wdog.forceStop();
+      try {
+	WatchdogService wdog = (WatchdogService)
+	  LockssDaemon.getManager(LockssDaemon.WATCHDOG_SERVICE);
+	if (wdog != null) {
+	  wdog.forceStop();
+	}
+      } catch (IllegalArgumentException e) {
+	// can happen when stopping unit tests; don't let it prevent us
+	// from finding correct value for exitImm
       }
       log.error(msg + ": " + getName());
-      exitImm =
-	!Boolean.getBoolean("org.lockss.disableThreadWatchdog") &&
-	Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
-				      DEFAULT_THREAD_WDOG_EXIT_IMM);
+      exitImm = isExitImm();
       if (exitImm) {
 	log.error("Daemon exiting.");
       }
@@ -256,6 +257,19 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	System.exit(exitCode);
       }
     }
+  }
+
+  public static boolean isExitImm() {
+    String prop = System.getProperty(PARAM_THREAD_WDOG_EXIT_IMM);
+    boolean ret;
+    if (StringUtil.isNullString(prop)) {
+      ret = DEFAULT_THREAD_WDOG_EXIT_IMM;
+    } else {
+      ret = prop.equalsIgnoreCase("true");
+    }
+    return (ret &&
+	    Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
+					  DEFAULT_THREAD_WDOG_EXIT_IMM));
   }
 
   long getIntervalFromParam(String name, long defaultInterval) {

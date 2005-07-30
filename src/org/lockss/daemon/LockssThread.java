@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.15 2005-07-30 04:30:29 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.16 2005-07-30 20:55:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,16 +44,6 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   static final int EXIT_CODE_THREAD_EXIT = 2;
 
   static final String PREFIX = Configuration.PREFIX + "thread.";
-
-  /** Set false to prevent the watchdog from calling exit().  Checked both
-   * as a config parameter and a System property.  Thread watchdogs can
-   * cause problems during unit testing, esp. when switching between
-   * simulated and real time.  LockssTestCase uses this to disable the
-   * watchdog during unit tests.
-   */
-  public static final String PARAM_THREAD_WDOG_EXIT_IMM =
-    PREFIX + "wdogExitJava";
-  static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM = true;
 
   static final String PARAM_THREAD_WDOG_HUNG_DUMP = PREFIX + "hungThreadDump";
   static final boolean DEFAULT_THREAD_WDOG_HUNG_DUMP = false;
@@ -228,16 +218,18 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
   protected void exitDaemon(int exitCode, String msg) {
     boolean exitImm = true;
     try {
-      WatchdogService wdog = (WatchdogService)
-	LockssDaemon.getManager(LockssDaemon. WATCHDOG_SERVICE);
-      if (wdog != null) {
-	wdog.forceStop();
+      try {
+	WatchdogService wdog = (WatchdogService)
+	  LockssDaemon.getManager(LockssDaemon.WATCHDOG_SERVICE);
+	if (wdog != null) {
+	  wdog.forceStop();
+	}
+      } catch (IllegalArgumentException e) {
+	// can happen when stopping unit tests; don't let it prevent us
+	// from finding correct value for exitImm
       }
       log.error(msg + ": " + getName());
-      exitImm =
-	!Boolean.getBoolean("org.lockss.disableThreadWatchdog") &&
-	Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
-				      DEFAULT_THREAD_WDOG_EXIT_IMM);
+      exitImm = LockssRunnable.isExitImm();
       if (exitImm) {
 	log.error("Daemon exiting.");
       }
