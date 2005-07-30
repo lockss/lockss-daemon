@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.67.2.1 2005-07-30 04:24:15 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.67.2.2 2005-07-30 05:05:28 tlipkis Exp $
  */
 
 /*
@@ -165,11 +165,11 @@ public class LockssTestCase extends TestCase {
   }
 
   protected void disableThreadWatchdog() {
-    System.setProperty(LockssThread.PARAM_THREAD_WDOG_EXIT_IMM, "true");
+    System.setProperty(LockssRunnable.PARAM_THREAD_WDOG_EXIT_IMM, "false");
   }
 
   protected void enableThreadWatchdog() {
-    System.setProperty(LockssThread.PARAM_THREAD_WDOG_EXIT_IMM, "false");
+    System.setProperty(LockssRunnable.PARAM_THREAD_WDOG_EXIT_IMM, "true");
   }
 
   // variant harness
