@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.67 2005-07-18 08:02:46 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.68 2005-07-30 04:30:29 tlipkis Exp $
  */
 
 /*
@@ -156,7 +156,8 @@ public class LockssTestCase extends TestCase {
       DebugUtils.getInstance().threadDump();
       TimerUtil.guaranteedSleep(1000);
     }
-    enableThreadWatchdog();
+    // don't reenable the watchdog; some threads may not have exited yet
+//     enableThreadWatchdog();
   }
 
   public static boolean isKeepTempFiles() {
@@ -164,11 +165,11 @@ public class LockssTestCase extends TestCase {
   }
 
   protected void disableThreadWatchdog() {
-    LockssThread.disableWatchdog(true);
+    System.setProperty(LockssThread.PARAM_THREAD_WDOG_EXIT_IMM, "true");
   }
 
   protected void enableThreadWatchdog() {
-    LockssThread.disableWatchdog(false);
+    System.setProperty(LockssThread.PARAM_THREAD_WDOG_EXIT_IMM, "false");
   }
 
   // variant harness
