@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.6.4.2 2005-07-30 05:05:29 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.6.4.3 2005-07-30 20:54:02 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -237,10 +237,15 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   protected void exitDaemon(int exitCode, String msg) {
     boolean exitImm = true;
     try {
-      WatchdogService wdog = (WatchdogService)
-	LockssDaemon.getManager(LockssDaemon. WATCHDOG_SERVICE);
-      if (wdog != null) {
-	wdog.forceStop();
+      try {
+	WatchdogService wdog = (WatchdogService)
+	  LockssDaemon.getManager(LockssDaemon.WATCHDOG_SERVICE);
+	if (wdog != null) {
+	  wdog.forceStop();
+	}
+      } catch (IllegalArgumentException e) {
+	// can happen when stopping unit tests; don't let it prevent us
+	// from finding correct value for exitImm
       }
       log.error(msg + ": " + getName());
       exitImm = isExitImm();
