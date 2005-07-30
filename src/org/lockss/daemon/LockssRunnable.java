@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.6 2005-05-18 05:48:12 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.6.4.1 2005-07-30 04:24:20 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -44,8 +44,16 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 
   static final String PREFIX = Configuration.PREFIX + "thread.";
 
-  static final String PARAM_THREAD_WDOG_EXIT_IMM = PREFIX + "wdogExitJava";
-  static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM = true;
+  /** Set false to prevent the watchdog from calling exit().  Checked both
+   * as a config parameter and a System property.  Thread watchdogs can
+   * cause problems during unit testing, esp. when switching between
+   * simulated and real time.  LockssTestCase uses this to disable the
+   * watchdog during unit tests.
+   */
+  public static final String PARAM_THREAD_WDOG_EXIT_IMM =
+    LockssThread.PARAM_THREAD_WDOG_EXIT_IMM;
+  static final boolean DEFAULT_THREAD_WDOG_EXIT_IMM =
+    LockssThread.DEFAULT_THREAD_WDOG_EXIT_IMM;
 
   static final String PARAM_THREAD_WDOG_HUNG_DUMP = PREFIX + "hungThreadDump";
   static final boolean DEFAULT_THREAD_WDOG_HUNG_DUMP = false;
@@ -80,20 +88,6 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	return "Thread Watchdog: " + getName();
       }
     };
-
-  private static boolean watchdogDisabled = false;
-
-  /** Globally disable the watchdog.  Thread watchdogs can cause problems
-   * during unit testing, esp. when switching between simulated and real
-   * time.  LockssTestCase uses this to disable the watchdog during unit
-   * tests.
-   * @param disable disables watchdog if true, enables if false.
-   * @return the previous state of the disable flag. */
-  public static boolean disableWatchdog(boolean disable) {
-    boolean old = watchdogDisabled;
-    watchdogDisabled = disable;
-    return old;
-  }
 
   protected LockssRunnable(String name) {
     this.name = name;
@@ -162,9 +156,6 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    * @param interval milliseconds after which watchdog will go off.
    */
   public void startWDog(long interval) {
-    if (watchdogDisabled) {
-      return;
-    }
     stopWDog();
     if (interval != 0) {
       this.interval = interval;
@@ -212,9 +203,6 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    * false; threads that are supposed to be persistent and never exit
    * should set this true. */
   public void triggerWDogOnExit(boolean triggerOnExit) {
-    if (watchdogDisabled) {
-      return;
-    }
     if (this.triggerOnExit != triggerOnExit) {
       logEvent(triggerOnExit ?
 	       "Enabling thread exit" : "Disabling thread exit",
@@ -256,8 +244,10 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
 	wdog.forceStop();
       }
       log.error(msg + ": " + getName());
-      exitImm = Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
-					      DEFAULT_THREAD_WDOG_EXIT_IMM);
+      exitImm =
+	!Boolean.getBoolean("org.lockss.disableThreadWatchdog") &&
+	Configuration.getBooleanParam(PARAM_THREAD_WDOG_EXIT_IMM,
+				      DEFAULT_THREAD_WDOG_EXIT_IMM);
       if (exitImm) {
 	log.error("Daemon exiting.");
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.24 2005-02-21 03:07:31 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.24.8.1 2005-07-30 04:24:18 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -247,10 +247,12 @@ public class TimerQueue {
 	  log.error("Unexpected exception caught in TimerQueue thread", e);
 	}
       }
+      if (!goOn) {
+	triggerWDogOnExit(false);
+      }
     }
 
     private void stopTimer() {
-      triggerWDogOnExit(false);
       goOn = false;
       this.interrupt();
     }
