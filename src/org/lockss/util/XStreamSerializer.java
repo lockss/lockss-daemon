@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.4 2005-08-01 17:05:49 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.5 2005-08-01 21:53:06 thib_gc Exp $
  */
 
 /*
@@ -381,10 +381,8 @@ public class XStreamSerializer extends ObjectSerializer {
   }
   
   public void serialize(Writer writer, Object obj)
-      throws IOException, 
-             NullArgumentException,
-             SerializationException {
-    if (obj == null) { throw new NullArgumentException(); } 
+      throws IOException, SerializationException {
+    if (obj == null) { throw new NullPointerException(); } 
     try {
       init();
       xs.toXML(obj, writer); // lazy instantiation

@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.4 2005-08-01 17:05:49 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.5 2005-08-01 21:53:06 thib_gc Exp $
  */
 
 /*
@@ -48,35 +48,6 @@ public abstract class ObjectSerializer {
 
   /*
    * begin PUBLIC STATIC INNER CLASS
-   * ===============================
-   */
-  
-  /**
-   * <p>Used when attempting to marshal <code>null</code>.</p>
-   * @author Thib Guicherd-Callin
-   * @see SerializationException
-   */
-  public static class NullArgumentException
-      extends SerializationException {
-    
-    // JAVA13: Retrofit to 4 standard constructors that call superconstructors
-    
-    public NullArgumentException() { this(null, null); }
-    public NullArgumentException(String message) { this(message, null); }
-    public NullArgumentException(String message, Throwable cause) {
-      super(message, cause);
-    }
-    public NullArgumentException(Throwable cause) { this(null, cause); }
-    
-  }
-  
-  /*
-   * end PUBLIC STATIC INNER CLASS
-   * =============================
-   */
-
-  /*
-   * begin PUBLIC STATIC INNER CLASS
    * =============================
    */
 
@@ -93,8 +64,7 @@ public abstract class ObjectSerializer {
    * @author Thib Guicherd-Callin
    * @see Exception
    */
-  public static class SerializationException
-      extends Exception {
+  public static class SerializationException extends Exception {
     
     /*
      * IMPLEMENTATION NOTES
@@ -259,17 +229,14 @@ public abstract class ObjectSerializer {
    * @param obj    An object to be serialized.
    * @throws FileNotFoundException  if the given file is invalid.
    * @throws IOException            if input or output fails.
-   * @throws NullArgumentException  if obj is null.
+   * @throws NullPointerException  if obj is null.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
    * @see #serialize(Writer, Object)
    */
   public void serialize(File outputFile, Object obj)
-      throws FileNotFoundException,
-             IOException,
-             NullArgumentException,
-             SerializationException {
-    if (obj == null) { throw new NullArgumentException(); }
+      throws FileNotFoundException, IOException, SerializationException {
+    if (obj == null) { throw new NullPointerException(); }
     
     File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
     FileOutputStream outStream = new FileOutputStream(tempFile);
@@ -306,16 +273,14 @@ public abstract class ObjectSerializer {
    *                     object is being serialized.
    * @param obj          An object to be serialized.
    * @throws IOException            if input or output fails.
-   * @throws NullArgumentException  if obj is null.
+   * @throws NullPointerException  if obj is null.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
    * @see #serialize(OutputStream, Object)
    */
   public void serialize(OutputStream outputStream, Object obj)
-      throws IOException,
-             NullArgumentException,
-             SerializationException {
-    if (obj == null) { throw new NullArgumentException(); }
+      throws IOException, SerializationException {
+    if (obj == null) { throw new NullPointerException(); }
     BufferedWriter writer =
       new BufferedWriter(
           new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
@@ -333,17 +298,14 @@ public abstract class ObjectSerializer {
    * @param obj            An object to be serialized.
    * @throws FileNotFoundException  if the given file is invalid.
    * @throws IOException            if input or output fails.
-   * @throws NullArgumentException  if obj is null.
+   * @throws NullPointerException  if obj is null.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
    * @see #serialize(File, Object)
    */
   public void serialize(String outputFilename, Object obj)
-      throws FileNotFoundException, 
-             IOException,
-             NullArgumentException,
-             SerializationException {
-    if (obj == null) { throw new NullArgumentException(); }
+      throws FileNotFoundException, IOException, SerializationException {
+    if (obj == null) { throw new NullPointerException(); }
     File outputFile = new File(outputFilename);
     serialize(outputFile, obj);
   }
@@ -360,9 +322,7 @@ public abstract class ObjectSerializer {
    *                                occurs.
    */
   public abstract void serialize(Writer writer, Object obj)
-      throws IOException,
-             NullArgumentException,
-             SerializationException;
+      throws IOException, SerializationException;
 
   /**
    * <p>Retrieves the serialization context.</p>

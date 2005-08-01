@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.2 2005-08-01 17:05:48 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.3 2005-08-01 21:53:05 thib_gc Exp $
  */
 
 /*
@@ -228,10 +228,8 @@ public class CXSerializer extends ObjectSerializer {
   }
   
   public void serialize(Writer writer, Object obj)
-      throws IOException,
-             NullArgumentException,
-             SerializationException {
-    if (obj == null) { throw new NullArgumentException(); }
+      throws IOException, SerializationException {
+    if (obj == null) { throw new NullPointerException(); }
     ObjectSerializer serializer;
     if (getCurrentMode() == CASTOR_MODE) { serializer = castor; }
     else                                 { serializer = xstream; }
