@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.3 2005-07-26 17:28:37 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.4 2005-08-01 17:05:49 thib_gc Exp $
  */
 
 /*
@@ -52,6 +52,35 @@ public abstract class ObjectSerializer {
    */
   
   /**
+   * <p>Used when attempting to marshal <code>null</code>.</p>
+   * @author Thib Guicherd-Callin
+   * @see SerializationException
+   */
+  public static class NullArgumentException
+      extends SerializationException {
+    
+    // JAVA13: Retrofit to 4 standard constructors that call superconstructors
+    
+    public NullArgumentException() { this(null, null); }
+    public NullArgumentException(String message) { this(message, null); }
+    public NullArgumentException(String message, Throwable cause) {
+      super(message, cause);
+    }
+    public NullArgumentException(Throwable cause) { this(null, cause); }
+    
+  }
+  
+  /*
+   * end PUBLIC STATIC INNER CLASS
+   * =============================
+   */
+
+  /*
+   * begin PUBLIC STATIC INNER CLASS
+   * =============================
+   */
+
+  /**
    * <p>Denotes serious marshalling/unmarshalling error conditions
    * caused by failures of the underlying serialization
    * mechanism.</p>
@@ -64,7 +93,8 @@ public abstract class ObjectSerializer {
    * @author Thib Guicherd-Callin
    * @see Exception
    */
-  public static class SerializationException extends Exception {
+  public static class SerializationException
+      extends Exception {
     
     /*
      * IMPLEMENTATION NOTES
@@ -80,13 +110,21 @@ public abstract class ObjectSerializer {
      * file is that way already.)
      */
     
+    // JAVA13: Retrofit to 4 standard constructors that call superconstructors
+    
     public SerializationException() { this(null, null); }
     public SerializationException(String message) { this(message, null); }
-    public SerializationException(Throwable cause) { this(null, cause); }
     public SerializationException(String message, Throwable cause) {
       super(format(message, cause));
     }
+    public SerializationException(Throwable cause) { this(null, cause); }
     
+    /**
+     * <p>An exception message formatter.</p>
+     * @param message Exception message (may be null).
+     * @param cause   Cause of the exception (may be null).
+     * @return A formatted error string.
+     */
     private static String format(String message, Throwable cause) {
       StringBuffer buffer = new StringBuffer();
       if (   message != null 
@@ -98,7 +136,7 @@ public abstract class ObjectSerializer {
           && cause != null
           && cause.getMessage() != null
           && cause.getMessage().length() > 0) {
-        buffer.append(" Nested message: ");
+        buffer.append(" - Nested message: ");
       }
       if (cause != null
           && cause.getMessage() != null
@@ -216,39 +254,23 @@ public abstract class ObjectSerializer {
    * <p>The result of serializing an object with a file must be the
    * same as serializing it with a {@link java.io.Writer}</p> on the
    * same file, in the sense of deserialization.</p>
-   * @param outputStream An output stream instance into which the
-   *                     object is being serialized.
-   * @param obj          An object to be serialized.
-   * @throws IOException            if input or output fails.
-   * @throws SerializationException if an internal serialization error
-   *                                occurs.
-   * @see #serialize(OutputStream, Object)
-   */
-  public void serialize(OutputStream outputStream, Object obj)
-      throws IOException, SerializationException {
-    BufferedWriter writer =
-      new BufferedWriter(
-          new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
-    serialize(writer, obj);
-  }
-  
-  /**
-   * <p>Convenience method to marshal a Java object to an XML file
-   * that accepts a File instead of a Writer.</p>
-   * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
-   * same file, in the sense of deserialization.</p>
    * @param outputFile A File instance representing the file into
    *                   which the object is being serialized.
    * @param obj    An object to be serialized.
    * @throws FileNotFoundException  if the given file is invalid.
    * @throws IOException            if input or output fails.
+   * @throws NullArgumentException  if obj is null.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
    * @see #serialize(Writer, Object)
    */
   public void serialize(File outputFile, Object obj)
-      throws FileNotFoundException, IOException, SerializationException {
+      throws FileNotFoundException,
+             IOException,
+             NullArgumentException,
+             SerializationException {
+    if (obj == null) { throw new NullArgumentException(); }
+    
     File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
     FileOutputStream outStream = new FileOutputStream(tempFile);
     boolean success = false;
@@ -273,6 +295,32 @@ public abstract class ObjectSerializer {
       }
     }
   }
+  
+  /**
+   * <p>Convenience method to marshal a Java object to an XML file
+   * that accepts a File instead of a Writer.</p>
+   * <p>The result of serializing an object with a file must be the
+   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same file, in the sense of deserialization.</p>
+   * @param outputStream An output stream instance into which the
+   *                     object is being serialized.
+   * @param obj          An object to be serialized.
+   * @throws IOException            if input or output fails.
+   * @throws NullArgumentException  if obj is null.
+   * @throws SerializationException if an internal serialization error
+   *                                occurs.
+   * @see #serialize(OutputStream, Object)
+   */
+  public void serialize(OutputStream outputStream, Object obj)
+      throws IOException,
+             NullArgumentException,
+             SerializationException {
+    if (obj == null) { throw new NullArgumentException(); }
+    BufferedWriter writer =
+      new BufferedWriter(
+          new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
+    serialize(writer, obj);
+  }
 
   /**
    * <p>Convenience method to marshal a Java object to an XML file
@@ -285,12 +333,17 @@ public abstract class ObjectSerializer {
    * @param obj            An object to be serialized.
    * @throws FileNotFoundException  if the given file is invalid.
    * @throws IOException            if input or output fails.
+   * @throws NullArgumentException  if obj is null.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
    * @see #serialize(File, Object)
    */
   public void serialize(String outputFilename, Object obj)
-      throws FileNotFoundException, IOException, SerializationException {
+      throws FileNotFoundException, 
+             IOException,
+             NullArgumentException,
+             SerializationException {
+    if (obj == null) { throw new NullArgumentException(); }
     File outputFile = new File(outputFilename);
     serialize(outputFile, obj);
   }
@@ -302,11 +355,14 @@ public abstract class ObjectSerializer {
    *               into which the object is being serialized.
    * @param obj    An object to be serialized.
    * @throws IOException            if input or output fails.
+   * @throws NullArgumentException  if obj is null.
    * @throws SerializationException if an internal serialization error
    *                                occurs.
    */
   public abstract void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException;
+      throws IOException,
+             NullArgumentException,
+             SerializationException;
 
   /**
    * <p>Retrieves the serialization context.</p>

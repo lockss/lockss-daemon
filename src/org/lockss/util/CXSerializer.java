@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.1 2005-07-26 20:50:37 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.2 2005-08-01 17:05:48 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 
 import org.exolab.castor.mapping.Mapping;
 import org.lockss.app.LockssApp;
+import org.lockss.config.Configuration;
 
 /**
  * <p>An adapter class implementing
@@ -90,9 +91,9 @@ public class CXSerializer extends ObjectSerializer {
     super(lockssContext);
     this.castor = new CastorSerializer(lockssContext, targetMapping, targetClass);
     this.xstream = new XStreamSerializer(lockssContext);
-    setCurrentMode(getDefaultMode());
+    setCurrentMode(getModeFromConfiguration());
   }
-
+  
   /**
    * <p>Builds a new CXSerializer instance with the given reference
    * mapping and class, and with the given context.</p>
@@ -174,7 +175,7 @@ public class CXSerializer extends ObjectSerializer {
       }
     }
   }
-
+  
   public Object deserialize(Reader reader)
       throws IOException, SerializationException {
     return deserialize(reader, new MutableBoolean(false));
@@ -215,24 +216,28 @@ public class CXSerializer extends ObjectSerializer {
   public int getCurrentMode() {
     return currentMode;
   }
-  
+
   /**
    * <p>Returns the default mode for this class.</p>
    * @return The default mode constant (currently
    *         {@link #XSTREAM_MODE}).
    */
-  public int getDefaultMode() {
-    return XSTREAM_MODE;
+  public static int getModeFromConfiguration() {
+    return Configuration.getIntParam(PARAM_COMPATIBILITY_MODE,
+                                     DEFAULT_COMPATIBILITY_MODE);
   }
   
   public void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException {
+      throws IOException,
+             NullArgumentException,
+             SerializationException {
+    if (obj == null) { throw new NullArgumentException(); }
     ObjectSerializer serializer;
     if (getCurrentMode() == CASTOR_MODE) { serializer = castor; }
     else                                 { serializer = xstream; }
     serializer.serialize(writer, obj);
   }
-  
+
   /**
    * <p>Sets the current mode for this serializer.</p>
    * <p>Must be one of the three mode constants {@link #CASTOR_MODE},
@@ -247,20 +252,55 @@ public class CXSerializer extends ObjectSerializer {
     switch (mode) {
       case CASTOR_MODE: case XSTREAM_MODE: case XSTREAM_OVERWRITE_MODE:
         this.currentMode = mode; break;
-      default: break; // ignore
+      default: break; // ignore // TODO: log message
     }
   }
-
+  
   /**
    * <p>Serialization always in Castor format.</p>
    */
   public static final int CASTOR_MODE            = 1;
   
   /**
+   * <p>A configuration parameter that governs the mode of operation
+   * of instances of this class. Must be one of:
+   * <table>
+   * <thead>
+   * <tr>
+   * <td>Value</td>
+   * <td>Reference</td>
+   * <td>Description</td>
+   * </tr>
+   * </thead>
+   * <tbody>
+   * <tr>
+   * <td>1</td>
+   * <td>{@link #CASTOR_MODE}</td>
+   * <td>Always write output in Castor format.</td>
+   * </tr>
+   * <tr>
+   * <td>2</td>
+   * <td>{@link #XSTREAM_MODE}</td>
+   * <td>Always write output in XStream format.</td>
+   * </tr>
+   * <tr>
+   * <td>3</td>
+   * <td>{@link #XSTREAM_OVERWRITE_MODE}</td>
+   * <td>Always write output in XStream format, and overwrite any
+   * files read in Castor format by files in XStream format.</td>
+   * </tr>
+   * </tbody>
+   * </table>
+   * </p>
+   */
+  public static final String PARAM_COMPATIBILITY_MODE =
+    Configuration.PREFIX + "serialization." + "compatibilityMode";
+
+  /**
    * <p>Serialization always in XStream format.</p>
    */
   public static final int XSTREAM_MODE           = 2;
-
+  
   /**
    * <p>Serialization always in XStream format; additionally, any
    * deserialization performed on a {@link File} or {@link String}
@@ -272,5 +312,11 @@ public class CXSerializer extends ObjectSerializer {
    * @see ObjectSerializer#deserialize(String)
    */
   public static final int XSTREAM_OVERWRITE_MODE = 3;
+
+  /**
+   * <p>The default value of {@link #PARAM_COMPATIBILITY_MODE}
+   * (currently {@link #XSTREAM_MODE})</p>
+   */
+  static final int DEFAULT_COMPATIBILITY_MODE = XSTREAM_MODE;
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTest.java,v 1.2 2005-07-25 18:34:07 thib_gc Exp $
+ * $Id: ObjectSerializerTest.java,v 1.3 2005-08-01 17:05:59 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.URL;
 
 import org.custommonkey.xmlunit.XMLTestCase;
 import org.custommonkey.xmlunit.XMLUnit;
+import org.lockss.util.ObjectSerializer.NullArgumentException;
 
 /**
  * <p>Tests the {@link org.lockss.util.ObjectSerializer} abstract
@@ -71,19 +72,15 @@ public abstract class ObjectSerializerTest
     ExtMapBean clone1;
     ExtMapBean clone2;
     File tempFile = File.createTempFile("test", ".xml");
+    tempFile.deleteOnExit();
     
-    try {
-      // Serialize
-      serializer.serialize(tempFile, original);
-      // Deserialize twice
-      clone1 = (ExtMapBean)deserializer1.deserialize(tempFile);
-      clone2 = (ExtMapBean)deserializer2.deserialize(tempFile);
-      // Test
-      assertEquals(clone1.getMap(), clone2.getMap());
-    }
-    finally {
-      tempFile.deleteOnExit(); // clean up
-    }
+    // Serialize
+    serializer.serialize(tempFile, original);
+    // Deserialize twice
+    clone1 = (ExtMapBean)deserializer1.deserialize(tempFile);
+    clone2 = (ExtMapBean)deserializer2.deserialize(tempFile);
+    // Test
+    assertEquals(clone1.getMap(), clone2.getMap());
   }
 
   /**
@@ -127,19 +124,15 @@ public abstract class ObjectSerializerTest
     ObjectSerializer serializer2 = makeObjectSerializer_ExtMapBean();
     ExtMapBean original = makeSample_ExtMapBean();
     File tempFile = File.createTempFile("test", ".xml");
+    tempFile.deleteOnExit();
     StringWriter writer = new StringWriter();
     FileOutputStream outStream = new FileOutputStream(tempFile);
     
-    try {
-      // Serialize twice
-      serializer1.serialize(writer, original);
-      serializer2.serialize(outStream, original);
-      // Compare
-      performXmlAssertion(new StringReader(writer.toString()), tempFile);
-    }
-    finally {
-      tempFile.deleteOnExit(); // clean up
-    }    
+    // Serialize twice
+    serializer1.serialize(writer, original);
+    serializer2.serialize(outStream, original);
+    // Compare
+    performXmlAssertion(new StringReader(writer.toString()), tempFile);
   }
   
   /**
@@ -154,18 +147,14 @@ public abstract class ObjectSerializerTest
     ObjectSerializer serializer2 = makeObjectSerializer_ExtMapBean();
     ExtMapBean original = makeSample_ExtMapBean();
     File tempFile = File.createTempFile("test", ".xml");
+    tempFile.deleteOnExit();
     StringWriter writer = new StringWriter(); 
     
-    try {
-      // Serialize twice
-      serializer1.serialize(writer, original);
-      serializer2.serialize(tempFile /* a File */, original);
-      // Compare
-      performXmlAssertion(new StringReader(writer.toString()), tempFile);
-    }
-    finally {
-      tempFile.deleteOnExit(); // clean up
-    }
+    // Serialize twice
+    serializer1.serialize(writer, original);
+    serializer2.serialize(tempFile /* a File */, original);
+    // Compare
+    performXmlAssertion(new StringReader(writer.toString()), tempFile);
   }
   
   /**
@@ -180,18 +169,14 @@ public abstract class ObjectSerializerTest
     ObjectSerializer serializer2 = makeObjectSerializer_ExtMapBean();
     ExtMapBean original = makeSample_ExtMapBean();
     File tempFile = File.createTempFile("test", ".xml");
+    tempFile.deleteOnExit();
     StringWriter writer = new StringWriter(); 
 
-    try {
-      // Serialize twice
-      serializer1.serialize(writer, original);
-      serializer2.serialize(tempFile.getPath() /* a String */, original);
-      // Compare
-      performXmlAssertion(new StringReader(writer.toString()), tempFile);
-    }
-    finally {
-      tempFile.deleteOnExit(); // clean up
-    }
+    // Serialize twice
+    serializer1.serialize(writer, original);
+    serializer2.serialize(tempFile.getPath() /* a String */, original);
+    // Compare
+    performXmlAssertion(new StringReader(writer.toString()), tempFile);
   }
 
   /**
@@ -200,7 +185,7 @@ public abstract class ObjectSerializerTest
    * from a file that does not exist.</p>
    * @throws Exception if an unexpected or unhandled problem arises.
    */
-  public void testThrowsFileNotFoundException_Read()
+  public void testThrowsFileNotFoundException()
       throws Exception {
     // Set up needed objects
     ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
@@ -208,19 +193,33 @@ public abstract class ObjectSerializerTest
     ExtMapBean original = makeSample_ExtMapBean();
     ExtMapBean clone;
     File tempFile = File.createTempFile("test", ".xml");
+    tempFile.deleteOnExit();
     
     try {
       serializer.serialize(tempFile, original);
       tempFile.delete();
       clone = (ExtMapBean)deserializer.deserialize(tempFile);
-      failGeneric("testThrowsFileNotFoundException_Read",
+      failGeneric("testThrowsFileNotFoundException",
                   "FileNotFoundException not thrown on read.");
     }
     catch (FileNotFoundException e) {
       // succeed
     }
-    finally {
-      tempFile.deleteOnExit(); // clean up
+  }
+  
+  public void testThrowsNullArgumentException()
+      throws Exception {
+    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
+    File tempFile = File.createTempFile("test", ".xml");
+    tempFile.deleteOnExit();
+    
+    try {
+      serializer.serialize(tempFile, null);
+      failGeneric("testThrowsNullArgumentException",
+                  "NullArgumentException not thrown when marshalling null.");
+    }
+    catch (NullArgumentException e) {
+      // succeed
     }
   }
   

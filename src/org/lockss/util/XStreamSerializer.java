@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.3 2005-07-26 17:28:37 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.4 2005-08-01 17:05:49 thib_gc Exp $
  */
 
 /*
@@ -46,10 +46,7 @@ import com.thoughtworks.xstream.alias.ClassMapper;
 import com.thoughtworks.xstream.converters.ConversionException;
 import com.thoughtworks.xstream.converters.ConverterLookup;
 import com.thoughtworks.xstream.converters.DataHolder;
-import com.thoughtworks.xstream.core.BaseException;
-import com.thoughtworks.xstream.core.DefaultConverterLookup;
-import com.thoughtworks.xstream.core.ReferenceByXPathMarshallingStrategy;
-import com.thoughtworks.xstream.core.ReferenceByXPathUnmarshaller;
+import com.thoughtworks.xstream.core.*;
 import com.thoughtworks.xstream.io.HierarchicalStreamReader;
 import com.thoughtworks.xstream.io.StreamException;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -384,7 +381,10 @@ public class XStreamSerializer extends ObjectSerializer {
   }
   
   public void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException {
+      throws IOException, 
+             NullArgumentException,
+             SerializationException {
+    if (obj == null) { throw new NullArgumentException(); } 
     try {
       init();
       xs.toXML(obj, writer); // lazy instantiation
@@ -409,7 +409,7 @@ public class XStreamSerializer extends ObjectSerializer {
   /**
    * <p>Performs tasks to resolve the lazy instantiation.</p>
    */
-  private void init() {
+  private synchronized void init() {
     if (!initialized) {
       initialized = true;
       xs = new XStream(new DomDriver());
