@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.27 2005-07-19 00:13:33 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.27.2.1 2005-08-02 22:23:39 troberts Exp $
  */
 
 /*
@@ -45,6 +45,8 @@ import org.lockss.crawler.PermissionMap;
  */
 
 public class MockUrlCacher implements UrlCacher {
+  private static Logger logger = Logger.getLogger("MockUrlCacher");
+
   private MockArchivalUnit au = null;
   private MockCachedUrlSet cus = null;
   private MockCachedUrl cu;
@@ -121,7 +123,7 @@ public class MockUrlCacher implements UrlCacher {
   public void setRedirectScheme(RedirectScheme scheme) {
   }
 
-  public void setupCachedUrl(String contents) {
+  public void setupCachedUrl(String contents) throws IOException {
     MockCachedUrl cu = new MockCachedUrl(url);
     cu.setProperties(getUncachedProperties());
     if (contents != null) {
@@ -165,16 +167,13 @@ public class MockUrlCacher implements UrlCacher {
     this.cachingRuntimException = e;
   }
 
-  public int cache() throws IOException {
-    int resultCode;
-
-    if(cus == null) System.out.println("Warning cache() called with null cus");
-    if (cus != null) {
-      cus.signalCacheAttempt(url);
-    }
+  private void throwExceptionIfSet() throws IOException {
+    logger.debug3("Deciding whether to throw an exception");
     if (cachingException != null && timesThrown < numTimesToThrow) {
       timesThrown++;
       throw cachingException;
+    } else {
+      logger.debug3("No cachingException set");
     }
     if (cachingRuntimException != null) {
       // Get a stack trace from here, not from the test case where the
@@ -182,7 +181,21 @@ public class MockUrlCacher implements UrlCacher {
       cachingRuntimException.fillInStackTrace();
       timesThrown++;
       throw cachingRuntimException;
+    } else {
+      logger.debug3("No cachingRuntimeException set");
     }
+  }
+
+  public int cache() throws IOException {
+    int resultCode;
+
+    if(cus == null) System.out.println("Warning cache() called with null cus");
+    if (cus != null) {
+      cus.signalCacheAttempt(url);
+    }
+
+    throwExceptionIfSet();
+
     if (cus != null) {
       if (fetchFlags.get(UrlCacher.REFETCH_FLAG)) {
 // 	  if (forceRefetch) {
@@ -209,10 +222,12 @@ public class MockUrlCacher implements UrlCacher {
   }
 
   public InputStream getUncachedInputStream() throws IOException {
+    throwExceptionIfSet();
     return uncachedIS;
   }
 
-  public CIProperties getUncachedProperties(){
+  public CIProperties getUncachedProperties() throws IOException {
+    throwExceptionIfSet();
     return uncachedProp;
   }
 
