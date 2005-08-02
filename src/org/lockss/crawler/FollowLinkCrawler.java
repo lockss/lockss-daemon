@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.28 2005-07-19 00:16:18 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.29 2005-08-02 22:54:21 troberts Exp $
  */
 
 /*
@@ -480,9 +480,11 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
    * @param permissionFailedRetry true to refetch permission page if last fetch failed
    * @return if the url have permission to be crawled
    */
-  protected boolean checkHostPermission(String url ,boolean permissionFailedRetry) {
+  protected boolean checkHostPermission(String url,
+					boolean permissionFailedRetry) {
     int urlPermissionStatus = -1;
     String urlPermissionUrl = null;
+    logger.debug3("Checking permission for "+url);
     try {
       urlPermissionStatus = permissionMap.getStatus(url);
       urlPermissionUrl = permissionMap.getPermissionUrl(url);
@@ -537,6 +539,9 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	    crawlStatus.setCrawlError("Cannot fetch permission page on the second attempt :" + urlPermissionUrl);
 	    //abort crawl or skip all the url with this host?
 	    //currently we just ignore urls with this host.
+  	    crawlStatus.signalErrorForUrl(urlPermissionUrl,
+  					  "Cannot fetch permission page " +
+  					  "on the second attempt");
 	    return false;
 	  }
 	default :

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.37 2005-07-19 00:16:36 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.38 2005-08-02 22:54:21 troberts Exp $
  */
 
 /*
@@ -543,8 +543,36 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
 
     crawler.doCrawl();
+    Crawler.Status crawlStatus = crawler.getStatus();
+
     assertEquals(Crawler.STATUS_ERROR,
-		 crawler.getStatus().getCrawlStatus());
+		 crawlStatus.getCrawlStatus());
+    assertEquals(1, crawlStatus.getNumUrlsWithErrors());
+  }
+
+  public void testGetStatusErrorStartUrl() {
+    mau = new MyMockArchivalUnit();
+    mau.setPlugin(new MockPlugin());
+    mau.setAuId("MyMockTestAu");
+    mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    spec = new SpiderCrawlSpec(ListUtil.list(permissionPage),
+			       ListUtil.list(permissionPage), crawlRule, 1);
+    crawler = new MyNewContentCrawler(mau, spec, aus);
+
+    mau.addUrl(permissionPage,
+	       new CacheException.ExpectedNoRetryException("Test exception"),
+ 	       DEFAULT_RETRY_TIMES);
+    
+    crawler.doCrawl();
+    Crawler.Status crawlStatus = crawler.getStatus();
+
+    assertEquals("Cannot fetch permission page on the second attempt :"
+		 +permissionPage,
+		 crawlStatus.getCrawlStatus());
+    Map expectedErrors = MapUtil.map(permissionPage,
+				     "Cannot fetch permission page on the second attempt");
+    assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
+    assertEquals(1, crawlStatus.getNumUrlsWithErrors());
   }
 
   public void testOverwritesSingleStartingUrlsOneLevel() {
@@ -830,9 +858,9 @@ public class TestNewContentCrawler extends LockssTestCase {
       super(url, au);
     }
 
-    public InputStream getUncachedInputStream() {
+    public InputStream getUncachedInputStream() throws IOException {
       checkAbort();
-      return new StringInputStream("");
+      return super.getUncachedInputStream();
     }
     public int cache() throws IOException {
       checkAbort();
