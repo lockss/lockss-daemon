@@ -1,10 +1,10 @@
 /*
- * $Id: IdentityManager.java,v 1.62 2005-08-03 22:38:28 thib_gc Exp $
+ * $Id: IdentityManager.java,v 1.63 2005-08-03 22:57:25 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,26 +29,19 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-
 package org.lockss.protocol;
 
 import java.io.*;
-import java.net.UnknownHostException;
+import java.net.*;
 import java.util.*;
-
-import org.lockss.app.BaseLockssDaemonManager;
-import org.lockss.app.ConfigurableManager;
-import org.lockss.app.LockssAppException;
-import org.lockss.app.LockssDaemon;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.plugin.ArchivalUnit;
-import org.lockss.poller.Poll;
-import org.lockss.poller.Vote;
-import org.lockss.state.HistoryRepository;
+import org.lockss.plugin.*;
+import org.lockss.state.*;
+import org.lockss.config.*;
+import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
 import org.lockss.util.*;
-
-import sun.security.action.GetIntegerAction;
+import org.lockss.app.*;
+import org.lockss.poller.*;
 
 /**
  * Abstraction for identity of a LOCKSS cache.  Currently wraps an IP address.
@@ -579,72 +572,61 @@ public class IdentityManager
    * the LcapIdentity instance for local identity(s).  That may not be
    * appropriate if this is ever called other than at startup. */
   private void reloadIdentities() {
-    reloadIdentities(makeIdentityListSerializer());
-  }
-  
-  private void reloadIdentities(ObjectSerializer deserializer) {
     if (setupIddbFile() == null) {
-      log.warning("Cannot load identities; no value for '"
-          + PARAM_IDDB_DIR + "'.");
+      log.warning("Can't load identities; no value for '" +
+		  PARAM_IDDB_DIR+"'");
       return;
     }
-
     synchronized (iddbFile) {
       try {
-        // CASTOR: Remove unwrap() call; add cast to HashMap
-        HashMap map = unwrap(deserializer.deserialize(iddbFile));
-        synchronized (theIdentities) {
-          theIdentities.putAll(map);
-        }
-      }
-      catch (Exception e) {
-        log.warning("Could not load identity database: " + e.getMessage());
+	// load the identity list via the marshaller
+	XmlMarshaller marshaller = new XmlMarshaller();
+	IdentityListBean idlb =
+	  (IdentityListBean)marshaller.load(iddbFile,
+					    IdentityListBean.class,
+					    MAPPING_FILE_NAME);
+	if (idlb==null) {
+	  log.warning("Unable to read Identity file:" + iddbFile);
+	} else {
+	  setIdentities(idlb.getIdBeans());
+	}
+      } catch (Exception e) {
+	log.warning("Couldn't load identity database: " + e.getMessage());
       }
     }
   }
+
 
   /**
    * storeIdentities is used by the PollManager to record the result of
    * tallying a poll.
    */
-  public void storeIdentities()
-      throws ProtocolException {
-    storeIdentities(makeIdentityListSerializer());
-  }
-
-  /**
-   * storeIdentities is used by the PollManager to record the result of
-   * tallying a poll.
-   */
-  public void storeIdentities(ObjectSerializer serializer)
-      throws ProtocolException {
+  public void storeIdentities() throws ProtocolException {
     if (setupIddbFile() == null) {
-      log.warning("Cannot store identities; no value for '"
-          + PARAM_IDDB_DIR + "'.");
+      log.warning("Can't store identities; no value for '" +
+		  PARAM_IDDB_DIR+"'");
       return;
     }
-    
     synchronized (iddbFile) {
       try {
-        File dir = iddbFile.getParentFile();
-        if (dir != null && !dir.exists()) { dir.mkdirs(); }
-        serializer.serialize(iddbFile, wrap(theIdentities));
-      }
-      catch (Exception e) {
-        log.error("Could not store identity database", e);
-        throw new ProtocolException("Unable to store identity database.");
+	// we used to call a different store() method in XmlMarshaller that
+	// creates the dir if necessary.  Just making sure I don't change the
+	// behavior.
+	File dir = iddbFile.getParentFile();
+	if (dir != null && !dir.exists()) {
+	  dir.mkdirs();
+	}
+	// store the identity list via the marshaller
+	XmlMarshaller marshaller = new XmlMarshaller();
+	marshaller.store(iddbFile, getIdentityListBean(),
+			 MAPPING_FILE_NAME);
+      } catch (Exception e) {
+	log.error("Couldn't store identity database: ", e);
+	throw new ProtocolException("Unable to store identity database.");
       }
     }
   }
 
-  private static ObjectSerializer makeIdentityListSerializer() {
-    // CASTOR: Change to returning an XStreamSerializer
-    CXSerializer serializer =
-      new CXSerializer(MAPPING_FILE_NAME, IdentityListBean.class);
-    serializer.setCurrentMode(getSerializationMode());
-    return serializer;
-  }
-  
   /** Copy the identity db file to the stream.
    */
   // XXX hokey way to have the acceess performed by the object that has the
@@ -666,62 +648,40 @@ public class IdentityManager
     }
   }
 
-  /**
-   * <p>Retrieves the current serialization mode.</p>
-   * @return A mode constant from {@link CXSerializer}.
-   */
-  private static int getSerializationMode() {
-    return CXSerializer.getModeFromConfiguration();
-  }
-  
+
   public IdentityListBean getIdentityListBean() {
-    // CASTOR: This method should disappear with Castor
     synchronized(theIdentities) {
       List beanList = new ArrayList(theIdentities.size());
       Iterator mapIter = theIdentities.values().iterator();
       while(mapIter.hasNext()) {
-        LcapIdentity id = (LcapIdentity) mapIter.next();
-        IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
-        beanList.add(bean);
+	LcapIdentity id = (LcapIdentity) mapIter.next();
+	IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
+	beanList.add(bean);
       }
       IdentityListBean listBean = new IdentityListBean(beanList);
       return listBean;
     }
   }
-  
-  private Object wrap(Map theIdentities) {
-    // CASTOR: This method disappears with Castor
-    if (getSerializationMode() == CXSerializer.CASTOR_MODE) {
-      return getIdentityListBean();
-    }
-    else {
-      return theIdentities;
-    }
-  }
-  
-  private HashMap unwrap(Object obj) {
-    if (obj instanceof IdentityListBean) {
-      HashMap map = new HashMap();
-      // JAVA5: Use foreach
-      Iterator beanIter = ((IdentityListBean)obj).getIdBeans().iterator();
+
+  private void setIdentities(Collection idList) {
+    Iterator beanIter = idList.iterator();
+    synchronized(theIdentities) {
       while (beanIter.hasNext()) {
-        IdentityBean bean = (IdentityBean)beanIter.next();
-        String idKey = bean.getKey();
-        try {
-          PeerIdentity pid = findPeerIdentity(idKey);
-          LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
-          map.put(pid, id);
-        }
-        catch (MalformedIdentityKeyException ex) {
-          log.warning("Error reloading identity - Unknown host: " + idKey);
-        }
+	IdentityBean bean = (IdentityBean)beanIter.next();
+	String idKey = bean.getKey();
+	try {
+	  PeerIdentity pid = findPeerIdentity(idKey);
+	  LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
+	  theIdentities.put(pid, id);
+	}
+	catch (IdentityManager.MalformedIdentityKeyException ex) {
+	  log.warning("Error reloading identity-Unknown Host: " + idKey);
+	}
       }
-      return map;
-    }
-    else {
-      return (HashMap)obj;
     }
   }
+
+
 
   /**
    * Signals that we've agreed with id on a top level poll on au.
