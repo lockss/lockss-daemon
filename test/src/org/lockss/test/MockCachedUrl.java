@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.28 2005-05-12 00:25:41 troberts Exp $
+ * $Id: MockCachedUrl.java,v 1.28.4.1 2005-08-03 00:04:18 troberts Exp $
  */
 
 /*
@@ -50,6 +50,8 @@ public class MockCachedUrl implements CachedUrl {
   private String url;
   private InputStream cachedIS;
   private CIProperties cachedProp;
+
+  private boolean isLeaf = true;
 
   private boolean doesExist = false;
   private String content = null;
@@ -104,7 +106,11 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public boolean isLeaf() {
-    return true;
+    return isLeaf;
+  }
+
+  public void setIsLeaf(boolean isLeaf) {
+    this.isLeaf = isLeaf;
   }
 
   public int getType() {
