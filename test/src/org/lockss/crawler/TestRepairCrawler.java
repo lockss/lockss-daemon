@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.27 2005-07-18 17:36:30 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.28 2005-08-03 23:55:43 troberts Exp $
  */
 
 /*
@@ -302,6 +302,39 @@ public class TestRepairCrawler extends LockssTestCase {
 	       crawler.getFetchPubCnt() == 0);
     Crawler.Status status = crawler.getStatus();
     assertEquals(SetUtil.set("127.0.0.1"), status.getSources());
+    assertEquals("Successful", status.getCrawlStatus());
+  }
+
+  public void testFetchFromACacheOnlyPercent()
+      throws MalformedIdentityKeyException {
+    idm.addPeerIdentity("127.0.0.1", new MockPeerIdentity("127.0.0.1"));
+    PeerIdentity id = idm.stringToPeerIdentity("127.0.0.1");
+
+    Map map = new HashMap();
+    map.put(id, new Long(10));
+    idm.setAgeedForAu(mau, map);
+
+    String repairUrl = "http://example.com/blah.html";
+
+    mau.addUrl(repairUrl);
+    MockUrlCacher muc = (MockUrlCacher)mau.makeUrlCacher(repairUrl);
+    muc.setUncachedInputStream(new StringInputStream("blah"));
+    muc.setUncachedProperties(new CIProperties());
+    crawlRule.addUrlToCrawl(repairUrl);
+
+    MyRepairCrawler crawler =
+      new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl), 100);
+
+    assertTrue("doCrawl() returned false", crawler.doCrawl());
+    assertEquals("Fail! fetch from "+ crawler.getContentSource(repairUrl),
+		 id, crawler.getContentSource(repairUrl));
+    assertTrue("Fail! fetch from caches occur, fetchCacheCnt = " +
+	         crawler.getFetchCacheCnt(), crawler.getFetchCacheCnt() == 1);
+    assertTrue("Fail! fetch from publisher occurs",
+	       crawler.getFetchPubCnt() == 0);
+    Crawler.Status status = crawler.getStatus();
+    assertEquals(SetUtil.set("127.0.0.1"), status.getSources());
+    assertEquals("Successful", status.getCrawlStatus());
   }
 
   public void testFetchFromCacheIgnoresLocalHost()
@@ -673,7 +706,7 @@ public class TestRepairCrawler extends LockssTestCase {
     assertEquals(Crawler.STATUS_FETCH_ERROR, (String)errorUrls.get(repairUrl));
     assertEquals(SetUtil.set(), crawlStatus.getUrlsFetched());
   }
-
+  /*
   public void testGetPermissionMap() throws MalformedURLException {
     Set cachedUrls = cus.getCachedUrls();
     assertSameElements(ListUtil.list(), cachedUrls);
@@ -687,7 +720,7 @@ public class TestRepairCrawler extends LockssTestCase {
     cachedUrls = cus.getCachedUrls();
     assertSameElements(ListUtil.list(permissionPage), cachedUrls);
   }
-
+  */
   private class MyMockCrawlWindow implements CrawlWindow {
     public boolean canCrawl() {
       return false;

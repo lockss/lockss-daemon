@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.44 2005-07-19 00:13:32 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.45 2005-08-03 23:55:43 troberts Exp $
  */
 
 /*
@@ -313,6 +313,8 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   private boolean shouldFetchFromCache() {
+    logger.debug3("Checking if we should fetch from a cache, probability "
+		  + percentFetchFromCache);
     return AuUtil.isPubDown(au) ||
       ProbabilisticChoice.choose(percentFetchFromCache);
   }
@@ -412,7 +414,7 @@ public class RepairCrawler extends CrawlerImpl {
 
   public PermissionMap getPermissionMap() {
     if (permissionMap == null) {
-      populatePermissionMap();
+      permissionMap = new PermissionMap();
     }
     return permissionMap;
   }
