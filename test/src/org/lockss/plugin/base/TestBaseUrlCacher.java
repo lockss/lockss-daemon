@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.38 2005-07-19 00:15:43 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.38.2.1 2005-08-03 00:03:44 troberts Exp $
  */
 
 /*
@@ -205,6 +205,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCacheClearsDamage() throws IOException {
+    mau.addUrl(TEST_URL, true, true, new CIProperties());
     MockDamagedNodeSet dnSet = new MockDamagedNodeSet();
     dnSet.addToDamage(TEST_URL);
     nodeMgr.setDamagedNodes(dnSet);
@@ -218,6 +219,25 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
     assertTrue(cacher.wasStored);
     assertFalse(dnSet.hasDamage(TEST_URL));
+  }
+
+  public void testCacheDoesNotClearDamageForNonLeaf() throws IOException {
+    mau.addUrl(TEST_URL, true, true, new CIProperties());
+    MockCachedUrl mcu = (MockCachedUrl)mau.makeCachedUrl(TEST_URL);
+    mcu.setIsLeaf(false);
+    MockDamagedNodeSet dnSet = new MockDamagedNodeSet();
+    dnSet.addToDamage(TEST_URL);
+    nodeMgr.setDamagedNodes(dnSet);
+
+    cacher._input = new StringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    BitSet bs = new BitSet();
+    bs.set(CLEAR_DAMAGE_FLAG);
+    cacher.setFetchFlags(bs);
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+    assertTrue(cacher.wasStored);
+    assertTrue(dnSet.hasDamage(TEST_URL));
   }
 
   public void testRefetchIfDamage() throws IOException {

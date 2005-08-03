@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.55 2005-07-19 00:15:43 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.55.2.1 2005-08-03 00:03:44 troberts Exp $
  */
 
 /*
@@ -243,8 +243,14 @@ public class BaseUrlCacher implements UrlCacher {
       if (fetchFlags.get(CLEAR_DAMAGE_FLAG)) {
 	DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
 	if (dnSet != null) {
-	  logger.debug3("Removing "+fetchUrl+" from damaged set");
-	  dnSet.removeFromDamage(fetchUrl);
+	  CachedUrl cu = getCachedUrl();
+	  if (cu.isLeaf()) {
+	    logger.debug3("Removing "+fetchUrl+" from damaged set");
+	    dnSet.removeFromDamage(fetchUrl);
+	  } else {
+	    logger.debug3(fetchUrl + " isn't a leaf, so not removing it " +
+			  "from damaged set");
+	  }
 	}
       }
       return CACHE_RESULT_FETCHED;
