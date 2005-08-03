@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.37 2005-07-25 01:19:38 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.38 2005-08-03 18:20:47 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.37 2005-07-25 01:19:38 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.38 2005-08-03 18:20:47 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -544,6 +544,8 @@ public class ProxyHandler extends AbstractHttpHandler {
       try {
 	conn.execute();
       } catch (IOException e) {
+	if (log.isDebug3()) log.debug3("conn.execute", e);
+
 	// If connection timed out, remember host is down for a little while.
 	// Remember this only for hosts whose content we hold.
 	if (e instanceof LockssUrlConnection.ConnectionTimeoutException) {
