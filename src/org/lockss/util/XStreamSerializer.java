@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.5 2005-08-01 21:53:06 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.6 2005-08-05 02:23:00 thib_gc Exp $
  */
 
 /*
@@ -367,7 +367,7 @@ public class XStreamSerializer extends ObjectSerializer {
       throw new IOException(streamE.getMessage());
     }
     catch (CannotResolveClassException crcE) {
-      throw new SerializationException(crcE);
+      throw failDeserialize(crcE);
     }
     catch (BaseException baseE) {
       /*
@@ -376,13 +376,13 @@ public class XStreamSerializer extends ObjectSerializer {
        * com.thoughtworks.xstream.converters.reflection.ObjectAccessException
        * com.thoughtworks.xstream.converters.reflection.ReflectionConverter.DuplicateFieldException
        */
-      throw new SerializationException(baseE);
+      throw failDeserialize(baseE);
     }
   }
   
   public void serialize(Writer writer, Object obj)
       throws IOException, SerializationException {
-    if (obj == null) { throw new NullPointerException(); } 
+    throwIfNull(obj); 
     try {
       init();
       xs.toXML(obj, writer); // lazy instantiation
@@ -391,7 +391,7 @@ public class XStreamSerializer extends ObjectSerializer {
       throw new IOException(streamE.getMessage());
     }
     catch (CannotResolveClassException crcE) {
-      throw new SerializationException(crcE.getMessage(), crcE);
+      throw failSerialize(crcE, obj);
     }
     catch (BaseException baseE) {
       /*
@@ -400,7 +400,7 @@ public class XStreamSerializer extends ObjectSerializer {
        * com.thoughtworks.xstream.converters.reflection.ObjectAccessException
        * com.thoughtworks.xstream.converters.reflection.ReflectionConverter.DuplicateFieldException
        */
-      throw new SerializationException(baseE.getMessage(), baseE);
+      throw failSerialize(baseE, obj);
     }
   }
 

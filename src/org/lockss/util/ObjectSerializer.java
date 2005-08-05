@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.5 2005-08-01 21:53:06 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.6 2005-08-05 02:23:00 thib_gc Exp $
  */
 
 /*
@@ -96,6 +96,7 @@ public abstract class ObjectSerializer {
      * @return A formatted error string.
      */
     private static String format(String message, Throwable cause) {
+      // JAVA13: Let properly-nested exceptions handle the formatting
       StringBuffer buffer = new StringBuffer();
       if (   message != null 
           && message.length() > 0) {
@@ -154,8 +155,15 @@ public abstract class ObjectSerializer {
   public Object deserialize(File inputFile)
       throws FileNotFoundException, IOException, SerializationException {
     FileInputStream inStream = new FileInputStream(inputFile);
-    try     { return deserialize(inStream); }
-    finally { IOUtil.safeClose(inStream); }
+    try {
+      return deserialize(inStream); 
+    }
+    catch (SerializationException se) {
+      throw failDeserialize(se, inputFile);
+    }
+    finally {
+      IOUtil.safeClose(inStream); 
+    }
   }
 
   /**
@@ -236,8 +244,6 @@ public abstract class ObjectSerializer {
    */
   public void serialize(File outputFile, Object obj)
       throws FileNotFoundException, IOException, SerializationException {
-    if (obj == null) { throw new NullPointerException(); }
-    
     File tempFile = File.createTempFile("tmp", ".xml", outputFile.getParentFile());
     FileOutputStream outStream = new FileOutputStream(tempFile);
     boolean success = false;
@@ -280,7 +286,6 @@ public abstract class ObjectSerializer {
    */
   public void serialize(OutputStream outputStream, Object obj)
       throws IOException, SerializationException {
-    if (obj == null) { throw new NullPointerException(); }
     BufferedWriter writer =
       new BufferedWriter(
           new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
@@ -305,11 +310,10 @@ public abstract class ObjectSerializer {
    */
   public void serialize(String outputFilename, Object obj)
       throws FileNotFoundException, IOException, SerializationException {
-    if (obj == null) { throw new NullPointerException(); }
     File outputFile = new File(outputFilename);
     serialize(outputFile, obj);
   }
-  
+
   /**
    * <p>Marshals a Java object to an XML file through the given
    * Writer argument.</p>
@@ -323,13 +327,90 @@ public abstract class ObjectSerializer {
    */
   public abstract void serialize(Writer writer, Object obj)
       throws IOException, SerializationException;
-
+  
   /**
    * <p>Retrieves the serialization context.</p>
    * @return The {@link org.lockss.app.LockssApp} context.
    */
   protected LockssApp getLockssContext() {
     return lockssContext;
+  }
+
+  /**
+   * <p>A logger for use by this class and subclasses.</p>
+   */
+  protected static Logger logger = Logger.getLogger("ObjectSerializer");
+  
+  /**
+   * <p>An exception message formatter used when deserialization
+   * fails.</p>
+   * @param exc The exception thrown.
+   * @return A new SerializationException.
+   */
+  protected static SerializationException failDeserialize(Exception exc) {
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("Failed to deserialize an object. Nested message: ");
+    buffer.append(exc.getMessage());
+    String str = buffer.toString();
+    if (logger.isDebug2()) {
+      logger.debug2(str);
+    }
+    return new SerializationException(str);
+  }
+
+  /**
+   * <p>An exception message formatter used when deserialization
+   * fails and the original file is known.</p>
+   * @param exc  The exception thrown.
+   * @param file The file that was being read.
+   * @return A new SerializationException.
+   */
+  protected static SerializationException failDeserialize(Exception exc, File file) {
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("Failed to deserialize an object from ");
+    buffer.append(file.getAbsolutePath());
+    buffer.append(". Nested message: ");
+    buffer.append(exc.getMessage());
+    String str = buffer.toString();
+    if (logger.isDebug2()) {
+      logger.debug2(str);
+    }
+    return new SerializationException(str);
+  }
+
+  /**
+   * <p>An exception message formatter used when serialization
+   * fails.</p>
+   * @param exc The exception thrown.
+   * @param obj The object being serialized.
+   * @return A new SerializationException.
+   */
+  protected static SerializationException failSerialize(Exception exc, Object obj) {
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("Failed to serialize ");
+    buffer.append(obj.toString());
+    buffer.append(". Nested message: ");
+    buffer.append(exc.getMessage());
+    String str = buffer.toString();
+    if (logger.isDebug2()) {
+      logger.debug2(str);
+    }
+    return new SerializationException(str);
+  }
+
+  /**
+   * <p>Throws a {@link NullPointerException} if the argument is
+   * null.</p>
+   * @param obj Any object reference.
+   * @throws NullPointerException if obj is null.
+   */
+  protected static void throwIfNull(Object obj) {
+    if (obj == null) {
+      if (logger.isDebug2()) {
+        logger.debug2("Attempting to marshal null."); 
+      }
+      throw new NullPointerException(); 
+    }
   }
   
 }

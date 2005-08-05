@@ -1,5 +1,5 @@
 /*
- * $Id: CastorSerializer.java,v 1.3 2005-08-01 21:53:06 thib_gc Exp $
+ * $Id: CastorSerializer.java,v 1.4 2005-08-05 02:23:00 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 import java.net.URL;
 import java.util.*;
 
@@ -183,13 +181,13 @@ public class CastorSerializer extends ObjectSerializer {
       return unmarshaller.unmarshal(reader);
     }
     catch (MappingException mappingE) {
-      throw new SerializationException(mappingE);
+      throw failDeserialize(mappingE);
     }
     catch (MarshalException marshalE) {
-      throw new SerializationException(marshalE);
+      throw failDeserialize(marshalE);
     }
     catch (ValidationException validationE) {
-      throw new SerializationException(validationE);
+      throw failDeserialize(validationE);
     }
   }
 
@@ -211,33 +209,34 @@ public class CastorSerializer extends ObjectSerializer {
 
   public void serialize(Writer writer, Object obj)
       throws IOException, SerializationException {
-    if (obj == null) { throw new NullPointerException(); }
+    throwIfNull(obj);
     Marshaller marshaller = new Marshaller(writer);
     try {
       marshaller.setMapping(targetMapping);
       marshaller.marshal(obj);
     }
     catch (MappingException mappingE) {
-      throw new SerializationException(mappingE.getMessage());
+      throw failSerialize(mappingE, obj);
     }
     catch (MarshalException marshalE) {
-      throw new SerializationException(marshalE.getMessage());
+      throw failSerialize(marshalE, obj);
     }
     catch (ValidationException validationE) {
-      throw new SerializationException(validationE.getMessage());
+      throw failSerialize(validationE, obj);
     }
   }
   
   /**
    * <p>A cache for previously requested mappings.</p>
    */
-  private static HashMap mappingCache = new HashMap(); // JAVA5: HashMap<Set<String>,Mapping>
+  private static HashMap mappingCache = new HashMap();
+  // JAVA5: HashMap<Set<String>,Mapping>
   
   /**
    * <p>Convenience method to obtain a Mapping instance corresponding
-   * to the given filename.</p>
-   * @param filename A filename where a mapping is stored.
-   * @return A Mapping instance corresponding to the filename.
+   * to the given file name.</p>
+   * @param filename A file name where a mapping is stored.
+   * @return A Mapping instance corresponding to the file name.
    */
   public static Mapping getMapping(String filename) {
     // JAVA5: collapse this method and getMapping(String[])
@@ -249,9 +248,9 @@ public class CastorSerializer extends ObjectSerializer {
   
   /**
    * <p>Convenience method to obtain a Mapping instance corresponding
-   * to all the given filenames.</p>
-   * @param filename An array of filenames where mappings are stored.
-   * @return A Mapping instance corresponding to all the filenames.
+   * to all the given file names.</p>
+   * @param filename An array of file names where mappings are stored.
+   * @return A Mapping instance corresponding to all the file names.
    */
   public static Mapping getMapping(String[] filenames) {
     // JAVA5: collapse this method and getMapping(String)
@@ -274,13 +273,13 @@ public class CastorSerializer extends ObjectSerializer {
     buffer.append(filename);
     return new LockssAppException(buffer.toString());
   }
-  
+
   /**
    * <p>Retrieves a Mapping instance that encapsulates all the 
    * filenames contained in the argument set.</p>
    * @param filenames A set of filenames where the mappings are
    *                  stored.
-   * @return
+   * @return A new Mapping instance.
    */
   private static Mapping getMapping(Set filenames) {
     // JAVA5: Set<String>

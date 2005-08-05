@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.3 2005-08-01 21:53:05 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.4 2005-08-05 02:23:00 thib_gc Exp $
  */
 
 /*
@@ -164,6 +164,9 @@ public class CXSerializer extends ObjectSerializer {
       ret = deserialize(reader, wasCastor);
       success = true;
       return ret;
+    }
+    catch (SerializationException se) {
+      throw failDeserialize(se, inputFile);
     }
     finally {
       IOUtil.safeClose(reader);
