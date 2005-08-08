@@ -1,10 +1,10 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.13 2005-05-25 23:47:37 smorabito Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.14 2005-08-08 23:28:30 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -95,8 +95,7 @@ public class EditableDefinablePlugin
   // for reading map files
   public void loadMap(String location, String name) throws Exception {
     log.info("loading definition map: " + location + "/" + name);
-    String mapFile = ExternalizableMap.MAPPING_FILE_NAME;
-    definitionMap.loadMap(location, name, mapFile);
+    definitionMap.loadMap(location, name);
     String err = definitionMap.getLoadErr();
     if(err != null) {
       log.error(err);
@@ -113,7 +112,7 @@ public class EditableDefinablePlugin
     }
     // store the configuration map
     log.info("storing definition map: " + location + "/" + name);
-    definitionMap.storeMap(location, name, ExternalizableMap.MAPPING_FILE_NAME);
+    definitionMap.storeMap(location, name);
     String err = definitionMap.getLoadErr();
     if(err != null) {
       log.error(err);

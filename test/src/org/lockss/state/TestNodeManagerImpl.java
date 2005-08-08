@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.128 2005-07-13 17:49:09 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.129 2005-08-08 23:28:29 thib_gc Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -160,7 +160,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     historyRepo.storeNodeState(node);
     // should keep poll active
     node = (NodeStateImpl) nodeManager.getNodeState(cus);
-    assertEquals(1, node.polls.size()); // XXX failing - its 0
+    assertEquals(1, node.polls.size());
     assertFalse(node.getPollHistories().hasNext());
     cus = getCus(mau, TEST_URL + "/branch4");
     // add to lockss repository

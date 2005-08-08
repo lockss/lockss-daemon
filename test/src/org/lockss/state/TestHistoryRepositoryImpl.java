@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.49 2005-07-18 08:03:48 tlipkis Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.50 2005-08-08 23:28:29 thib_gc Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.Vote;
 import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
@@ -86,7 +87,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
         new MockCachedUrlSetSpec("http://www.example.com", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     String location = repository.getNodeLocation(mcus);
-    String expected = tempDirPath + repository.HISTORY_ROOT_NAME;
+    String expected = tempDirPath + HistoryRepositoryImpl.HISTORY_ROOT_NAME;
     expected = LockssRepositoryImpl.mapAuToFileLocation(expected, mau);
     expected = LockssRepositoryImpl.mapUrlToFileLocation(expected,
         "http://www.example.com");
@@ -102,7 +103,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
         "http://www.example.com/branch/test/../test2", null);
     MockCachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     String location = repository.getNodeLocation(mcus);
-    String expectedStart = tempDirPath + repository.HISTORY_ROOT_NAME;
+    String expectedStart = tempDirPath + HistoryRepositoryImpl.HISTORY_ROOT_NAME;
     expectedStart = LockssRepositoryImpl.mapAuToFileLocation(expectedStart,
         mau);
     String expected = LockssRepositoryImpl.mapUrlToFileLocation(
@@ -145,7 +146,17 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     List histories = ListUtil.list(createPollHistoryBean(3), createPollHistoryBean(3),
                                    createPollHistoryBean(3), createPollHistoryBean(3),
                                    createPollHistoryBean(3));
-    nodeState.setPollHistoryBeanList(histories);
+
+    /*
+     * CASTOR: [summary] Rewrite test in non-Castor way
+     * This is obviously not an appropriate way of writing this test,
+     * Right now it creates sample data in Castor format, from legacy
+     * code back when Castor was the built-in serialization engine.
+     * TODO: Rewrite test in non-Castor way
+     */
+    //nodeState.setPollHistoryBeanList(histories);
+    nodeState.setPollHistoryList(NodeHistoryBean.fromBeanListToList(histories));
+
     repository.storePollHistories(nodeState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
         HistoryRepositoryImpl.HISTORY_ROOT_NAME, mau);
@@ -154,28 +165,42 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
 
-    nodeState.setPollHistoryBeanList(new ArrayList());
+    nodeState.setPollHistoryList(new ArrayList());
     repository.loadPollHistories(nodeState);
-    List loadedHistory = nodeState.getPollHistoryBeanList();
+    List loadedHistory = nodeState.getPollHistoryList();
     assertEquals(histories.size(), loadedHistory.size());
-    PollHistoryBean expect1 = (PollHistoryBean)histories.get(0);
-    PollHistoryBean elem1 = (PollHistoryBean)loadedHistory.get(0);
+    // CASTOR: some Castor-tailored stuff here
+    // PollHistoryBean expect1 = (PollHistoryBean)histories.get(0);
+    // PollHistoryBean elem1 = (PollHistoryBean)loadedHistory.get(0);
+    PollHistory expect1 = (PollHistory)histories.get(0);
+    PollHistory elem1 = (PollHistory)loadedHistory.get(0);
     assertEquals(expect1.type, elem1.type);
     assertEquals(expect1.lwrBound, elem1.lwrBound);
     assertEquals(expect1.uprBound, elem1.uprBound);
     assertEquals(expect1.status, elem1.status);
     assertEquals(expect1.startTime, elem1.startTime);
     assertEquals(expect1.duration, elem1.duration);
-    List expectBeans = (List)expect1.getVoteBeans();
-    List elemBeans = (List)elem1.getVoteBeans();
-    assertEquals(expectBeans.size(), elemBeans.size());
-    VoteBean expectVote = (VoteBean)expectBeans.get(0);
-    VoteBean elemVote = (VoteBean)elemBeans.get(0);
-    assertEquals(expectVote.idStr, elemVote.idStr);
-    assertEquals(expectVote.getAgreeState(), elemVote.getAgreeState());
-    assertEquals(expectVote.challengeStr, elemVote.challengeStr);
-    assertEquals(expectVote.verifierStr, elemVote.verifierStr);
-    assertEquals(expectVote.hashStr, elemVote.hashStr);
+    // CASTOR: some Castor-tailored stuff here
+    // List expectBeans = (List)expect1.getVoteBeans();
+    // List elemBeans = (List)elem1.getVoteBeans();
+    Iterator expectIter = (Iterator)expect1.getVotes();
+    Iterator elemIter = (Iterator)elem1.getVotes();
+    while (expectIter.hasNext() && elemIter.hasNext()) {
+      Vote expectVote = (Vote)expectIter.next();
+      Vote elemVote = (Vote)elemIter.next();
+      assertEquals(expectVote.getVoterIdentity().getIdString(),
+                   elemVote.getVoterIdentity().getIdString());
+      assertEquals(expectVote.isAgreeVote(),
+                   elemVote.isAgreeVote());
+      assertEquals(expectVote.getChallengeString(),
+                   elemVote.getChallengeString());
+      assertEquals(expectVote.getVerifierString(),
+                   elemVote.getVerifierString());
+      assertEquals(expectVote.getHashString(),
+                   elemVote.getHashString());
+    }
+    assertFalse(expectIter.hasNext());
+    assertFalse(expectIter.hasNext());
     TimeBase.setReal();
   }
 
@@ -185,7 +210,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     CachedUrlSet mcus = new MockCachedUrlSet(mau, mspec);
     NodeStateImpl nodeState = new NodeStateImpl(mcus, -1, null, null,
                                                 repository);
-    nodeState.setPollHistoryBeanList(new ArrayList());
+    nodeState.setPollHistoryList(new ArrayList());
     //storing empty vector
     repository.storePollHistories(nodeState);
     String filePath = LockssRepositoryImpl.mapAuToFileLocation(tempDirPath +
@@ -195,7 +220,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     File xmlFile = new File(filePath);
     assertTrue(xmlFile.exists());
 
-    nodeState.setPollHistoryBeanList(new ArrayList());
+    nodeState.setPollHistoryList(new ArrayList());
     repository.loadPollHistories(nodeState);
     assertEquals(0, nodeState.pollHistories.size());
 
@@ -216,7 +241,7 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     os.close();
     assertTrue(xmlFile.exists());
 
-    nodeState.setPollHistoryBeanList(new ArrayList());
+    nodeState.setPollHistoryList(new ArrayList());
     repository.loadPollHistories(nodeState);
     assertEquals(0, nodeState.pollHistories.size());
     assertFalse(xmlFile.exists());
@@ -359,7 +384,6 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
     assertSame(mcus, nodeState.getCachedUrlSet());
 
     assertEquals(123321, nodeState.getAverageHashDuration());
-
     assertEquals(1, nodeState.getCrawlState().getType());
     assertEquals(2, nodeState.getCrawlState().getStatus());
     assertEquals(123, nodeState.getCrawlState().getStartTime());

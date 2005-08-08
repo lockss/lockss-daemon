@@ -1,5 +1,5 @@
 /*
- * $Id: NodeHistoryBean.java,v 1.3 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: NodeHistoryBean.java,v 1.4 2005-08-08 23:28:29 thib_gc Exp $
  */
 
 /*
@@ -32,13 +32,13 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.util.Collection;
+import java.util.*;
 
 /**
  * NodeHistoryBean allows the marshalling of a group of PollHistoryBeans.
  */
 public class NodeHistoryBean {
-  public Collection historyBeans;
+  public List historyBeans;
 
   /**
    * Empty constructor for bean creation during unmarshalling.
@@ -50,7 +50,7 @@ public class NodeHistoryBean {
    * Gets the collection of PollHistoryBeans.
    * @return a Collection of PollHistoryBeans
    */
-  public Collection getHistoryBeans() {
+  public List getHistoryBeans() {
     return historyBeans;
   }
 
@@ -58,8 +58,37 @@ public class NodeHistoryBean {
    * Sets the collection of PollHistoryBeans
    * @param historyBeans a Collection of PollHistoryBeans
    */
-  public void setHistoryBeans(Collection historyBeans) {
+  public void setHistoryBeans(List historyBeans) {
     this.historyBeans = historyBeans;
   }
 
+  public static List fromListToBeanList(List thePollHistories) {
+    if (thePollHistories==null) {
+      return Collections.EMPTY_LIST;
+    }
+    else {
+      List histBeans = new ArrayList(thePollHistories.size());
+      Iterator histIter = thePollHistories.iterator();
+      while (histIter.hasNext()) {
+        PollHistory history = (PollHistory)histIter.next();
+        histBeans.add(new PollHistoryBean(history)); // convert to a bean
+      }
+      return histBeans;
+    }
+  }
+
+  public static List fromBeanListToList(List thePollHistoryBeans) {
+    // create new list
+    if (thePollHistoryBeans == null) {
+      thePollHistoryBeans = new ArrayList();
+    }
+    List pollHistories = new ArrayList(thePollHistoryBeans.size());
+    Iterator beanIter = thePollHistoryBeans.iterator();
+    while (beanIter.hasNext()) {
+      PollHistoryBean bean = (PollHistoryBean)beanIter.next();
+      pollHistories.add(bean.getPollHistory()); // get PollHistory from bean
+    }
+    return pollHistories;
+  }
+  
 }

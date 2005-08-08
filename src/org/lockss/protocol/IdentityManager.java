@@ -1,10 +1,10 @@
 /*
- * $Id: IdentityManager.java,v 1.63 2005-08-03 22:57:25 thib_gc Exp $
+ * $Id: IdentityManager.java,v 1.64 2005-08-08 23:28:28 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,107 +29,265 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.protocol;
 
 import java.io.*;
-import java.net.*;
+import java.net.UnknownHostException;
 import java.util.*;
-import org.lockss.plugin.*;
-import org.lockss.state.*;
-import org.lockss.config.*;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.lockss.util.*;
+
 import org.lockss.app.*;
-import org.lockss.poller.*;
+import org.lockss.config.ConfigManager;
+import org.lockss.config.Configuration;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.poller.Poll;
+import org.lockss.poller.Vote;
+import org.lockss.state.HistoryRepository;
+import org.lockss.util.*;
 
 /**
- * Abstraction for identity of a LOCKSS cache.  Currently wraps an IP address.
+ * <p>Abstraction for identity of a LOCKSS cache. Currently wraps an
+ * IP address.<p>
  * @author Claire Griffin
  * @version 1.0
  */
 public class IdentityManager
-  extends BaseLockssDaemonManager implements ConfigurableManager {
+  extends BaseLockssDaemonManager
+  implements ConfigurableManager {
 
+  /**
+   * <p>A logger for this class.</p>
+   */
   protected static Logger log = Logger.getLogger("IdentityManager");
 
+  /**
+   * <p>The LOCAL_IP parameter.</p>
+   */
   public static final String PARAM_LOCAL_IP =
     Configuration.PREFIX + "localIPAddress";
 
-  /** The tcp port for the local V3 identity (at
-   * org.lockss.localIPAddress).  Can be overridden by
-   * org.lockss.localV3Identity */
+  /**
+   * <p>The TCP port for the local V3 identity 
+   * (at org.lockss.localIPAddress). Can be overridden by 
+   * org.lockss.localV3Identity.</p>
+   */
   public static final String PARAM_LOCAL_V3_PORT =
     Configuration.PREFIX + "localV3Port";
 
-  /** Local V3 identity string.  If this is set it will take precedence
-   * over org.lockss.localV3Port */
+  /**
+   * <p>Local V3 identity string. If this is set it will take
+   * precedence over org.lockss.localV3Port.</p> */
   public static final String PARAM_LOCAL_V3_IDENTITY =
     Configuration.PREFIX + "localV3Identity";
 
-  /** If true, restored agreement maps will be merged with any
-   * alread-loaded map */
+  /**
+   * <p>If true, restored agreement maps will be merged with any 
+   * already-loaded map 
+   */
   public static final String PARAM_MERGE_RESTORED_AGREE_MAP =
     Configuration.PREFIX + "id.mergeAgreeMap";
+  
+  /**
+   * <p>The default value for the MERGE_RESTORED_AGREE_MAP
+   * parameter.</p>
+   */
   public static final boolean DEFAULT_MERGE_RESTORED_AGREE_MAP = true;
 
-
+  /**
+   * <p>A prefix common to all parameters defined by this class.</p>
+   */
   static final String PREFIX = Configuration.PREFIX + "id.";
+
+  /**
+   * <p>The MAX_DELTA parameter.</p>
+   */
   static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";
+  
+  /**
+   * <p>The default value for the MAX_DELTA parameter.</p>
+   */
   static final int DEFAULT_MAX_DELTA = 100;
 
+  /**
+   * <p>The AGREE_DELTA parameter.</p>
+   */
   static final String PARAM_AGREE_DELTA = PREFIX + "agreeDelta";
+  
+  /**
+   * <p>The default value for the AGREE_DELTA parameter.</p>
+   */
   static final int DEFAULT_AGREE_DELTA = 100;
 
+  /**
+   * <p>The DISAGREE_DELTA parameter.</p>
+   */
   static final String PARAM_DISAGREE_DELTA = PREFIX + "disagreeDelta";
+
+  /**
+   * <p>The default value for the DISAGREE_DELTA parameter.</p>
+   */
   static final int DEFAULT_DISAGREE_DELTA = -150;
 
+  /**
+   * <p>The CALL_INTERNAL parameter.</p>
+   */
   static final String PARAM_CALL_INTERNAL = PREFIX + "callInternalDelta";
+  
+  /**
+   * <p>The default value for the CALL_INTERNAL parameter.</p>
+   */
   static final int DEFAULT_CALL_INTERNAL = 100;
 
+  /**
+   * <p>The SPOOF_DETECTED parameter.</p>
+   */
   static final String PARAM_SPOOF_DETECTED = PREFIX + "spoofDetected"; //no
+
+  /**
+   * <p>The default value for the SPOOF_DETECTED parameter.</p>
+   */
   static final int DEFAULT_SPOOF_DETECTED = -30;
 
+  /**
+   * <p>The REPLAY_DETECTED parameter.</p>
+   */
   static final String PARAM_REPLAY_DETECTED = PREFIX + "replayDetected";
+
+  /**
+   * <p>The default value for the REPLAY_DETECTED parameter.</p>
+   */
   static final int DEFAULT_REPLAY_DETECTED = -20;
 
+  /**
+   * <p>The ATTACK_DETECTED parameter.</p>
+   */
   static final String PARAM_ATTACK_DETECTED = PREFIX + "attackDetected"; //no
+
+  /**
+   * <p>The default value for the ATTACK_DETECTED parameter.</p>
+   */
   static final int DEFAULT_ATTACK_DETECTED = -500;
 
+  /**
+   * <p>The VOTE_NOTVERIFIED parameter.</p>
+   */
   static final String PARAM_VOTE_NOTVERIFIED = PREFIX + "voteNotVerified ";
+
+  /**
+   * <p>The default value for the VOTE_NOTVERIFIED parameter.</p>
+   */
   static final int DEFAULT_VOTE_NOTVERIFIED = -30;
 
+  /**
+   * <p>The VOTE_VERIFIED parameter.</p>
+   */
   static final String PARAM_VOTE_VERIFIED = PREFIX + "voteVerified";
+
+  /**
+   * <p>The default value for the VOTE_VERIFIED parameter.</p>
+   */
   static final int DEFAULT_VOTE_VERIFIED = 40;
 
+  /**
+   * <p>The VOTE_DISOWNED parameter.</p>
+   */
   static final String PARAM_VOTE_DISOWNED = PREFIX + "voteDisowned";
+
+  /**
+   * <p>The default value for the VOTE_DISOWNED parameter.</p>
+   */
   static final int DEFAULT_VOTE_DISOWNED = -400;
 
+  /**
+   * <p>The IDDB_DIR parameter.</p>
+   */
   public static final String PARAM_IDDB_DIR = PREFIX + "database.dir";
 
+  /**
+   * <p>The name of the IDDB file.</p>
+   */
   public static final String IDDB_FILENAME = "iddb.xml";
-  // fully qualify for XmlMarshaller
+
+  /**
+   * <p>The mapping file for this class.</p>
+   */
   public static final String MAPPING_FILE_NAME =
     "/org/lockss/protocol/idmapping.xml";
+  // CASTOR: Remove the field above when Castor is phased out.
 
+  /**
+   * <p>The ID separator string in V3.</p>
+   */
   static final String V3_ID_SEPARATOR = ";";
+
+  /**
+   * <p>The ID separator character in V3.</p>
+   */
   static final char V3_ID_SEPARATOR_CHAR = ';';
 
-  /* Reputation constants */
+  /**
+   * <p>The MAX_DELTA reputation constant.</p>
+   */
   public static final int MAX_DELTA = 0;
+
+  /**
+   * <p>The MAX_DELTA reputation constant.</p>
+   */
   public static final int AGREE_VOTE = 1;
+  
+  /**
+   * <p>The DISAGREE_VOTE reputation constant.</p>
+   */
   public static final int DISAGREE_VOTE = 2;
+  
+  /**
+   * <p>The CALL_INTERNAL reputation constant.</p>
+   */
   public static final int CALL_INTERNAL = 3;
+  
+  /**
+   * <p>The SPOOF_DETECTED reputation constant.</p>
+   */
   public static final int SPOOF_DETECTED = 4;
+  
+  /**
+   * <p>The REPLAY_DETECTED reputation constant.</p>
+   */
   public static final int REPLAY_DETECTED = 5;
+  
+  /**
+   * <p>The ATTACK_DETECTED reputation constant.</p>
+   */
   public static final int ATTACK_DETECTED = 6;
+  
+  /**
+   * <p>The VOTE_NOTVERIFIED reputation constant.</p>
+   */
   public static final int VOTE_NOTVERIFIED = 7;
+  
+  /**
+   * <p>The VOTE_VERIFIED reputation constant.</p>
+   */
   public static final int VOTE_VERIFIED = 8;
+
+  /**
+   * <p>The VOTE_DISOWNED reputation constant.</p>
+   */
   public static final int VOTE_DISOWNED = 9;
 
+  /**
+   * <p>The initial reputation value.</p>
+   */
   static final int INITIAL_REPUTATION = 500;
+  
+  /**
+   * <p>The initial reputation numerator.</p>
+   */
   static final int REPUTATION_NUMERATOR = 1000;
 
+  /**
+   * <p>An instance of {@link LockssRandom} for use by this class.</p>
+   */
   static LockssRandom theRandom = new LockssRandom();
 
   /*
@@ -147,32 +305,50 @@ public class IdentityManager
    * XXX currently using LcapIdentity instead of PeerData
    */
 
-  // IP address of our identity (not necessarily this machine's IP if
-  // behind NAT).  (All current identities are IP-based; future ones may
-  // not be.)
+  /**
+   * <p>IP address of our identity (not necessarily this machine's IP 
+   * if behind NAT).<p>
+   * <p>All current identities are IP-based; future ones may not 
+   * be.</p>
+   */
   protected IPAddr theLocalIPAddr = null;
-  // Array of PeerIdentity for each of our local identities, (potentially)
-  // one per protocol version.
+  
+  /**
+   * <p>Array of PeerIdentity for each of our local identities,
+   * (potentially) one per protocol version.
+   */
   protected PeerIdentity localPeerIdentities[];
 
-  // both maps keyed by identity key string
-  private Map theIdentities;		// all known identities (keys are
-					// PeerIdentitys)
-  private Map thePeerIdentities;   // all PeerIdentities (keys are strings)
+  /**
+   * <p>All known identities (keys are PeerIdentity).</p>
+   */
+  private Map theIdentities;
 
+  /**
+   * <p>All PeerIdentities (keys are strings).</p>
+   */
+  private Map thePeerIdentities;
+
+  /**
+   * <p>The IDDB file.</p>
+   */
   File iddbFile = null;
 
   int[] reputationDeltas = new int[10];
 
   private boolean isMergeRestoredAgreemMap = DEFAULT_MERGE_RESTORED_AGREE_MAP;
 
-  // Maps au to its agreement map, which maps PeerIdentity -> IdentityAgreement
+  /**
+   * <p>Maps AU to its agreement map, which maps PeerIDentity to
+   * IdentityAgreement.</p>
+   */
   private Map agreeMaps = new HashMap();;
 
   private IdentityManagerStatus status;
 
-
-
+  /**
+   * <p>Builds a new IdentityManager instance.</p>
+   */
   public IdentityManager() { }
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
@@ -181,14 +357,18 @@ public class IdentityManager
     setupLocalIdentities();
   }
 
-  // This is protected only so it can be overridden in a mock subcless in
-  // another package (TestRemoteApi).  Won't be necessary when there's an
-  // interface for the mock class to implement instead
+  /**
+   * <p>Sets up the local identities.</p>
+   * <p>This is protected only so it can be overridden in a mock 
+   * subcless in another package (TestRemoteApi), which won't be 
+   * necessary when there's an interface for the mock class to 
+   * implement instead.</p>
+   */
   protected void setupLocalIdentities() {
     localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
     theIdentities = new HashMap();
     thePeerIdentities = new HashMap();
-
+    
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
     // Find local IP addr and create V1 identity
@@ -207,39 +387,39 @@ public class IdentityManager
     }
     try {
       localPeerIdentities[Poll.V1_POLL] =
-	findLocalPeerIdentity(localV1IdentityStr);
+        findLocalPeerIdentity(localV1IdentityStr);
     } catch (MalformedIdentityKeyException e) {
       String msg = "Cannot start: Can't create local identity:" +
-	localV1IdentityStr;
+      localV1IdentityStr;
       log.critical(msg, e);
       throw new LockssAppException("IdentityManager: " + msg);
     }
     // Create V3 identity if configured
     String v3idstr = config.get(PARAM_LOCAL_V3_IDENTITY);
     if (StringUtil.isNullString(v3idstr) &&
-	config.containsKey(PARAM_LOCAL_V3_PORT)) {
+        config.containsKey(PARAM_LOCAL_V3_PORT)) {
       int localV3Port = config.getInt(PARAM_LOCAL_V3_PORT, -1);
       if (localV3Port > 0) {
-	v3idstr = ipAddrToKey(localV1IdentityStr, localV3Port);
+        v3idstr = ipAddrToKey(localV1IdentityStr, localV3Port);
       }
     }
     if (v3idstr != null) {
       try {
-	localPeerIdentities[Poll.V3_POLL] = findLocalPeerIdentity(v3idstr);
+        localPeerIdentities[Poll.V3_POLL] = findLocalPeerIdentity(v3idstr);
       } catch (MalformedIdentityKeyException e) {
-	String msg = "Cannot start: Can't create local V3 identity: " +
-	  v3idstr;
-	log.critical(msg, e);
-	throw new LockssAppException("IdentityManager: " + msg);
+        String msg = "Cannot start: Cannot create local V3 identity: " +
+        v3idstr;
+        log.critical(msg, e);
+        throw new LockssAppException("IdentityManager: " + msg);
       }
-//     } else {
-//       log.debug("No V3 identity created");
+//    } else {
+//    log.debug("No V3 identity created");
     }
   }
 
   /**
-   * start the identity manager.
-   * @see org.lockss.app.LockssManager#startService()
+   * <p>Starts the identity manager.</p>
+   * @see LockssManager#startService()
    */
   public void startService() {
     super.startService();
@@ -262,30 +442,32 @@ public class IdentityManager
   }
 
   /**
-   * stop the identity manager
-   * @see org.lockss.app.LockssManager#stopService()
+   * <p>Stops the identity manager.</p>
+   * @see LockssManager#stopService()
    */
   public void stopService() {
     try {
       storeIdentities();
     }
-    catch (ProtocolException ex) {
-    }
+    catch (ProtocolException ex) {}
     super.stopService();
     Vote.setIdentityManager(null);
     LcapMessage.setIdentityManager(null);
   }
 
-  /** Find or create unique instances of both PeerIdentity and LcapIdentity.
-      (Eventually, LcapIdentity won't always be created here.) */
+  /** 
+   * <p>Finds or creates unique instances of both PeerIdentity and
+   * LcapIdentity.</p>
+   * <p>Eventually, LcapIdentity won't always be created here.</p>
+   */
   private PeerIdentity findLocalPeerIdentity(String key)
       throws MalformedIdentityKeyException {
     PeerIdentity pid;
     synchronized (thePeerIdentities) {
       pid = (PeerIdentity)thePeerIdentities.get(key);
       if (pid == null) {
-	pid = new PeerIdentity.LocalIdentity(key);
-	thePeerIdentities.put(key, pid);
+        pid = new PeerIdentity.LocalIdentity(key);
+        thePeerIdentities.put(key, pid);
       }
     }
     // for now always make sure LcapIdentity instance exists
@@ -293,20 +475,25 @@ public class IdentityManager
     return pid;
   }
 
-  /** Find or create unique instance of PeerIdentity */
+  /**
+   * <p>Finds or creates unique instances of PeerIdentity.</p>
+   */
   public PeerIdentity findPeerIdentity(String key) {
     synchronized (thePeerIdentities) {
       PeerIdentity pid = (PeerIdentity)thePeerIdentities.get(key);
       if (pid == null) {
-	pid = new PeerIdentity(key);
-	thePeerIdentities.put(key, pid);
+        pid = new PeerIdentity(key);
+        thePeerIdentities.put(key, pid);
       }
       return pid;
     }
   }
 
-  /** Find or create unique instances of both PeerIdentity and LcapIdentity.
-      (Eventually, LcapIdentity won't always be created here.) */
+  /**
+   * <p>Finds or creates unique instances of both PeerIdentity and
+   * LcapIdentity.</p>
+   * <p>Eventually, LcapIdentity won't always be created here.
+   */
   private PeerIdentity findPeerIdentityAndData(String key)
       throws MalformedIdentityKeyException {
     PeerIdentity pid = findPeerIdentity(key);
@@ -315,8 +502,11 @@ public class IdentityManager
     return pid;
   }
 
-  /** Find or create unique instances of both PeerIdentity and LcapIdentity.
-      (Eventually, LcapIdentity won't always be created here.) */
+  /**
+   * <p>Finds or creates unique instances of both PeerIdentity and
+   * LcapIdentity.</p>
+   * <p>Eventually, LcapIdentity won't always be created here.</p>
+   */
   private PeerIdentity findPeerIdentityAndData(IPAddr addr, int port) {
     String key = ipAddrToKey(addr, port);
     PeerIdentity pid = findPeerIdentity(key);
@@ -325,25 +515,30 @@ public class IdentityManager
     return pid;
   }
 
-  /** Find or create unique instance of LcapIdentity. */
+  /**
+   * <p>Finds or creates unique instances of LcapIdentity.</p>
+   */
   protected LcapIdentity findLcapIdentity(PeerIdentity pid, String key)
       throws MalformedIdentityKeyException {
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
       if (lid == null) {
-	theIdentities.put(pid, new LcapIdentity(pid, key));
+        theIdentities.put(pid, new LcapIdentity(pid, key));
       }
       return lid;
     }
   }
 
-  /** Find or create unique instance of LcapIdentity. */
+  /**
+   * <p>Finds or creates unique instances of LcapIdentity.</p>
+   */
   protected LcapIdentity findLcapIdentity(PeerIdentity pid,
-					  IPAddr addr, int port) {
+                                          IPAddr addr,
+                                          int port) {
     synchronized (theIdentities) {
       LcapIdentity lid = (LcapIdentity)theIdentities.get(pid);
       if (lid == null) {
-	theIdentities.put(pid, new LcapIdentity(pid, addr, port));
+        theIdentities.put(pid, new LcapIdentity(pid, addr, port));
       }
       return lid;
     }
@@ -360,12 +555,13 @@ public class IdentityManager
   }
 
   /**
-   * ipAddrToPeerIdentity returns the peer identity matching the
-   * IP address and port.  An instance is created if necesary.
-   * Used only by LcapDatagramRouter (and soon by its stream analog).
-   * @param addr the IPAddr of the peer, null for the local peer
-   * @param port the port of the peer
-   * @return the PeerIdentity representing the peer
+   * <p>Returns the peer identity matching the IP address and port;
+   * An instance is created if necesary.</p>
+   * <p>Used only by LcapDatagramRouter (and soon by its stream 
+   * analog).</p>
+   * @param addr The IPAddr of the peer, null for the local peer.
+   * @param port The port of the peer.
+   * @return The PeerIdentity representing the peer.
    */
   public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port) {
     if (addr == null) {
@@ -373,7 +569,8 @@ public class IdentityManager
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
       return localPeerIdentities[Poll.V1_POLL];
-    } else {
+    }
+    else {
       return findPeerIdentityAndData(addr, port);
     }
   }
@@ -383,11 +580,12 @@ public class IdentityManager
   }
 
   /**
-   * stringToPeerIdentity returns the peer identity matching the
-   * String ip address and port.  An instance is created if necesary.
-   * Used only by LcapMessage (and soon by its stream analog).
-   * @param idKey the ip addr and port of the peer, null for the local peer
-   * @return the PeerIdentity representing the peer
+   * <p>Returns the peer identity matching the String IP address and
+   * port. An instance is created if necesary. Used only by 
+   * LcapMessage (and soon by its stream analog).
+   * @param idKey the ip addr and port of the peer, null for the local
+   *              peer.
+   * @return The PeerIdentity representing the peer.
    */
   public PeerIdentity stringToPeerIdentity(String idKey)
       throws IdentityManager.MalformedIdentityKeyException {
@@ -396,7 +594,8 @@ public class IdentityManager
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
       return localPeerIdentities[Poll.V1_POLL];
-    } else {
+    }
+    else {
       return findPeerIdentityAndData(idKey);
     }
   }
@@ -414,11 +613,12 @@ public class IdentityManager
   }
 
   /**
-   * getLocalPeerIdentity returns the local peer identity
-   * @param pollVersion the poll protocol version
-   * @return the local peer identity associated with the poll version
-   * @throws IllegalArgumentException if the pollVersion is not configured
-   * or is outside the legal range
+   * <p>Rturns the local peer identity.</p>
+   * @param pollVersion The poll protocol version.
+   * @return The local peer identity associated with the poll version.
+   * @throws IllegalArgumentException if the pollVersion is not 
+   *                                  configured or is outside the 
+   *                                  legal range.
    */
   public PeerIdentity getLocalPeerIdentity(int pollVersion) {
     PeerIdentity pid = null;
@@ -435,26 +635,29 @@ public class IdentityManager
   }
 
   /**
-   * getLocalIPAddr returns the IPAddr of the local peer
-   * @return the IPAddr of the local peer
+   * <p>Returns the IPAddr of the local peer.</p>
+   * @return The IPAddr of the local peer.
    */
   public IPAddr getLocalIPAddr() {
     return theLocalIPAddr;
   }
 
   /**
-   * return true if this PeerIdentity is the same as the local host
-   * @param id the PeerIdentity
-   * @return boolean true if is the local identity, false otherwise
+   * <p>Determines if this PeerIdentity is the same as the local 
+   * host.</p>
+   * @param id The PeerIdentity.
+   * @return true if is the local identity, false otherwise.
    */
   public boolean isLocalIdentity(PeerIdentity id) {
     return id.isLocalIdentity();
   }
 
   /**
-   * return true if this PeerIdentity is the same as the local host
-   * @param idStr the string representation of the voter's PeerIdentity
-   * @return boolean true if is the local identity, false otherwise
+   * <p>Determines if this PeerIdentity is the same as the local 
+   * host.</p>
+   * @param idStr The string representation of the voter's 
+   *        PeerIdentity.
+   * @return true if is the local identity, false otherwise.
    */
   public boolean isLocalIdentity(String idStr) {
     try {
@@ -465,10 +668,10 @@ public class IdentityManager
   }
 
   /**
-   * rememberEvent associates the event with the peer identity
-   * @param id the PeerIdentity
-   * @param event the event code
-   * @param msg the LcapMessage involved
+   * <p>Associates the event with the peer identity.</p>
+   * @param id    The PeerIdentity.
+   * @param event The event code.
+   * @param msg   The LcapMessage involved.
    */
   public void rememberEvent(PeerIdentity id, int event, LcapMessage msg) {
     LcapIdentity lid = (LcapIdentity)theIdentities.get(id);
@@ -476,18 +679,19 @@ public class IdentityManager
       lid.rememberEvent(event, msg);
     }
   }
+  
   /**
-   * return the max value of an Identity's reputation
-   * @return the int value of max reputation
+   * <p>Returns the max value of an Identity's reputation.</p>
+   * @return The int value of max reputation.
    */
   public int getMaxReputation() {
     return REPUTATION_NUMERATOR;
   }
 
   /**
-   * getReputation returns the reputation of the peer
-   * @param id the PeerIdentity
-   * @return the reputation
+   * <p>Returns the reputation of the peer.</p>
+   * @param id The PeerIdentity.
+   * @return The peer's reputation.
    */
   public int getReputation(PeerIdentity id) {
     int ret = 0;
@@ -501,10 +705,10 @@ public class IdentityManager
   }
 
   /**
-   * getReputationDelta returns the amount of reputation change that
-   * reflects the specified kind of event.
-   * @param changeKind the type of event
-   * @return the delta that would be applied to a peer's reputation
+   * <p>Returns the amount of reputation change that reflects the
+   * specified kind of event.</p>
+   * @param changeKind The type of event.
+   * @return The delta that would be applied to a peer's reputation.
    */
   protected int getReputationDelta(int changeKind) {
     int ret = -1;
@@ -514,10 +718,10 @@ public class IdentityManager
   }
 
   /**
-   * changeReputation makes the change to the reputation of the peer "id"
-   * matching the event "changeKind"
-   * @param id the PeerIdentity of the peer to affect
-   * @param changeKind the type of event that is being reflected
+   * <p>Makes the change to the reputation of the peer "id" matching 
+   * the event "changeKind".
+   * @param id         The PeerIdentity of the peer to affect.
+   * @param changeKind The type of event that is being reflected.
    */
   public void changeReputation(PeerIdentity id, int changeKind) {
     int delta = getReputationDelta(changeKind);
@@ -528,35 +732,34 @@ public class IdentityManager
       return;
     }
     int reputation = lid.getReputation();
-
+    
     if (id.isLocalIdentity()) {
       log.debug(id.toString() + " ignoring reputation delta " + delta);
       return;
     }
-
+    
     delta = (int) (((float) delta) * theRandom.nextFloat());
-
+    
     if (delta > 0) {
       if (delta > max_delta) {
-	delta = max_delta;
+        delta = max_delta;
       }
       if (delta > (REPUTATION_NUMERATOR - reputation)) {
-	delta = (REPUTATION_NUMERATOR - reputation);
+        delta = (REPUTATION_NUMERATOR - reputation);
       }
     } else if (delta < 0) {
       if (delta < (-max_delta)) {
-	delta = -max_delta;
+        delta = -max_delta;
       }
       if ((reputation + delta) < 0) {
-	delta = -reputation;
+        delta = -reputation;
       }
     }
     if (delta != 0)
       log.debug(id.toString() +" change reputation from " + reputation +
-		" to " + (reputation + delta));
+          " to " + (reputation + delta));
     lid.changeReputation(delta);
   }
-
 
   File setupIddbFile() {
     if (iddbFile == null) {
@@ -568,126 +771,196 @@ public class IdentityManager
     return iddbFile;
   }
 
-  /** Reload the peer data from the identity database.  This may overwrite
-   * the LcapIdentity instance for local identity(s).  That may not be
-   * appropriate if this is ever called other than at startup. */
+  /**
+   * <p>Reloads the peer data from the identity database.</p>
+   * <p>This may overwrite the LcapIdentity instance for local
+   * identity(s). That may not be appropriate if this is ever called
+   * other than at startup.</p>
+   * @see #reloadIdentities(ObjectSerializer)
+   */
   private void reloadIdentities() {
+    reloadIdentities(makeIdentityListSerializer());
+  }
+  
+  /**
+   * <p>Reloads the peer data from the identity database using the
+   * given deserializer.</p>
+   * @param deserializer An ObjectSerializer instance.
+   * @see #reloadIdentities()
+   */
+  private void reloadIdentities(ObjectSerializer deserializer) {
     if (setupIddbFile() == null) {
-      log.warning("Can't load identities; no value for '" +
-		  PARAM_IDDB_DIR+"'");
+      log.warning("Cannot load identities; no value for '"
+          + PARAM_IDDB_DIR + "'.");
       return;
     }
+
     synchronized (iddbFile) {
       try {
-	// load the identity list via the marshaller
-	XmlMarshaller marshaller = new XmlMarshaller();
-	IdentityListBean idlb =
-	  (IdentityListBean)marshaller.load(iddbFile,
-					    IdentityListBean.class,
-					    MAPPING_FILE_NAME);
-	if (idlb==null) {
-	  log.warning("Unable to read Identity file:" + iddbFile);
-	} else {
-	  setIdentities(idlb.getIdBeans());
-	}
-      } catch (Exception e) {
-	log.warning("Couldn't load identity database: " + e.getMessage());
+        // CASTOR: Remove unwrap() call; add cast to HashMap
+        HashMap map = unwrap(deserializer.deserialize(iddbFile));
+        synchronized (theIdentities) {
+          theIdentities.putAll(map);
+        }
+      }
+      catch (Exception e) {
+        log.warning("Could not load identity database: " + e.getMessage());
       }
     }
   }
-
 
   /**
-   * storeIdentities is used by the PollManager to record the result of
-   * tallying a poll.
+   * <p>Used by the PollManager to record the result of tallying a 
+   * poll.</p>
+   * @see #storeIdentities(ObjectSerializer)
    */
-  public void storeIdentities() throws ProtocolException {
+  public void storeIdentities()
+      throws ProtocolException {
+    storeIdentities(makeIdentityListSerializer());
+  }
+
+  /**
+   * <p>Records the result of tallying a poll using the given
+   * serializer.</p>
+   */
+  public void storeIdentities(ObjectSerializer serializer)
+      throws ProtocolException {
     if (setupIddbFile() == null) {
-      log.warning("Can't store identities; no value for '" +
-		  PARAM_IDDB_DIR+"'");
+      log.warning("Cannot store identities; no value for '"
+          + PARAM_IDDB_DIR + "'.");
       return;
     }
+    
     synchronized (iddbFile) {
       try {
-	// we used to call a different store() method in XmlMarshaller that
-	// creates the dir if necessary.  Just making sure I don't change the
-	// behavior.
-	File dir = iddbFile.getParentFile();
-	if (dir != null && !dir.exists()) {
-	  dir.mkdirs();
-	}
-	// store the identity list via the marshaller
-	XmlMarshaller marshaller = new XmlMarshaller();
-	marshaller.store(iddbFile, getIdentityListBean(),
-			 MAPPING_FILE_NAME);
-      } catch (Exception e) {
-	log.error("Couldn't store identity database: ", e);
-	throw new ProtocolException("Unable to store identity database.");
+        File dir = iddbFile.getParentFile();
+        if (dir != null && !dir.exists()) { dir.mkdirs(); }
+        serializer.serialize(iddbFile, wrap(theIdentities));
+      }
+      catch (Exception e) {
+        log.error("Could not store identity database", e);
+        throw new ProtocolException("Unable to store identity database.");
       }
     }
   }
 
-  /** Copy the identity db file to the stream.
+  /**
+   * <p>Builds an ObjectSerializer suitable for storing identity
+   * maps.</p>
+   * @return An initialized ObjectSerializer instance.
    */
-  // XXX hokey way to have the acceess performed by the object that has the
-  // appropriate lock
+  private static ObjectSerializer makeIdentityListSerializer() {
+    // CASTOR: Change to returning an XStreamSerializer
+    CXSerializer serializer =
+      new CXSerializer(MAPPING_FILE_NAME, IdentityListBean.class);
+    serializer.setCurrentMode(getSerializationMode());
+    return serializer;
+  }
+  
+  /**
+   * <p>Copies the identity database file to the stream.</p>
+   * @param An OutputStream instance.
+   */
   public void writeIdentityDbTo(OutputStream out) throws IOException {
+    // XXX hokey way to have the acceess performed by the object that has the
+    // appropriate lock
     if (setupIddbFile() == null) {
       return;
     }
     if (iddbFile.exists()) {
       synchronized (iddbFile) {
-	InputStream in =
-	  new BufferedInputStream(new FileInputStream(iddbFile));
-	try {
-	  StreamUtil.copy(in, out);
-	} finally {
-	  IOUtil.safeClose(in);
-	}
+        InputStream in =
+          new BufferedInputStream(new FileInputStream(iddbFile));
+        try {
+          StreamUtil.copy(in, out);
+        } finally {
+          IOUtil.safeClose(in);
+        }
       }
     }
   }
 
-
+  /**
+   * <p>Retrieves the current serialization mode.</p>
+   * @return A mode constant from {@link CXSerializer}.
+   */
+  private static int getSerializationMode() {
+    return CXSerializer.getModeFromConfiguration();
+  }
+  
+  /**
+   * <p>A Castor helper method to convert an identity map into a
+   * serializable bean.</p>
+   * @return An IdentityListBean corresponding to the identity map.
+   * @see #theIdentities
+   */
   public IdentityListBean getIdentityListBean() {
+    // CASTOR: This method should disappear with Castor
     synchronized(theIdentities) {
       List beanList = new ArrayList(theIdentities.size());
       Iterator mapIter = theIdentities.values().iterator();
       while(mapIter.hasNext()) {
-	LcapIdentity id = (LcapIdentity) mapIter.next();
-	IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
-	beanList.add(bean);
+        LcapIdentity id = (LcapIdentity) mapIter.next();
+        IdentityBean bean = new IdentityBean(id.getIdKey(),id.getReputation());
+        beanList.add(bean);
       }
       IdentityListBean listBean = new IdentityListBean(beanList);
       return listBean;
     }
   }
 
-  private void setIdentities(Collection idList) {
-    Iterator beanIter = idList.iterator();
-    synchronized(theIdentities) {
+  /**
+   * <p>Castor+XStream transition helper method, that wraps the
+   * identity map into the object expected by serialization code.</p>
+   * @param theIdentities The {@link #theIdentities} map.
+   * @return An object suitable for serialization. 
+   */
+  private Object wrap(Map theIdentities) {
+    // CASTOR: This method disappears with Castor
+    if (getSerializationMode() == CXSerializer.CASTOR_MODE) {
+      return getIdentityListBean();
+    }
+    else {
+      return theIdentities;
+    }
+  }
+  
+  /**
+   * <p>Castor+XStream transition helper method, that unwraps the
+   * identity map when it returns from serialized state.</p>
+   * @param obj The object returned by deserialization code.
+   * @return An unwrapped identity map.
+   */
+  private HashMap unwrap(Object obj) {
+    if (obj instanceof IdentityListBean) {
+      HashMap map = new HashMap();
+      // JAVA5: Use foreach
+      Iterator beanIter = ((IdentityListBean)obj).getIdBeans().iterator();
       while (beanIter.hasNext()) {
-	IdentityBean bean = (IdentityBean)beanIter.next();
-	String idKey = bean.getKey();
-	try {
-	  PeerIdentity pid = findPeerIdentity(idKey);
-	  LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
-	  theIdentities.put(pid, id);
-	}
-	catch (IdentityManager.MalformedIdentityKeyException ex) {
-	  log.warning("Error reloading identity-Unknown Host: " + idKey);
-	}
+        IdentityBean bean = (IdentityBean)beanIter.next();
+        String idKey = bean.getKey();
+        try {
+          PeerIdentity pid = findPeerIdentity(idKey);
+          LcapIdentity id = new LcapIdentity(pid, idKey, bean.getReputation());
+          map.put(pid, id);
+        }
+        catch (MalformedIdentityKeyException ex) {
+          log.warning("Error reloading identity - Unknown host: " + idKey);
+        }
       }
+      return map;
+    }
+    else {
+      return (HashMap)obj;
     }
   }
 
-
-
   /**
-   * Signals that we've agreed with id on a top level poll on au.
-   * Only called if we're both on the winning side
-   * @param pid the PeerIdentity of the agreeing peer
-   * @param au the {@link ArchivalUnit}
+   * <p>Signals that we've agreed with pid on a top level poll on
+   * au.</p>
+   * <p>Only called if we're both on the winning side.</p>
+   * @param pid The PeerIdentity of the agreeing peer.
+   * @param au  The {@link ArchivalUnit}.
    */
   public void signalAgreed(PeerIdentity pid, ArchivalUnit au) {
     signalAgreed(pid, au, TimeBase.nowMs());
@@ -710,10 +983,11 @@ public class IdentityManager
   }
 
   /**
-   * Signals that we've disagreed with id on any level poll on au.
-   * Only called if we're on the winning side
-   * @param pid the PeerIdentity of the disagreeing peer
-   * @param au the {@link ArchivalUnit}
+   * <p>Signals that we've disagreed with pid on any level poll on 
+   * au.</p>
+   * <p>Only called if we're on the winning side.</p>
+   * @param pid The PeerIdentity of the disagreeing peer.
+   * @param au  The {@link ArchivalUnit}.
    */
   public void signalDisagreed(PeerIdentity pid, ArchivalUnit au) {
     signalDisagreed(pid, au, TimeBase.nowMs());
@@ -729,17 +1003,18 @@ public class IdentityManager
     synchronized (map) {
       IdentityAgreement ida = findPeerIdentityAgreement(map, pid);
       if (time > ida.getLastDisagree()) {
-	ida.setLastDisagree(time);
-	storeIdentityAgreement(au);
+        ida.setLastDisagree(time);
+        storeIdentityAgreement(au);
       }
     }
   }
 
   /**
-   * @param au ArchivalUnit to look up PeerIdentities for
-   * @return List of peers from which to try to fetch repairs for the AU.
-   * Peers with whom we have had any disagreement since the last toplevel
-   * agreement are placed at the end of the list.
+   * <p>Peers with whom we have had any disagreement since the last 
+   * toplevel agreement are placed at the end of the list.</p>
+   * @param au ArchivalUnit to look up PeerIdentities for.
+   * @return List of peers from which to try to fetch repairs for the 
+   *         AU.
    */
   public List getCachesToRepairFrom(ArchivalUnit au) {
     if (au == null) {
@@ -749,15 +1024,15 @@ public class IdentityManager
     List res = new LinkedList();
     synchronized (map) {
       for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
-	Map.Entry ent = (Map.Entry)it.next();
-	IdentityAgreement ida = (IdentityAgreement)ent.getValue();
-	if (ida.hasAgreed()) {
-	  if (ida.getLastDisagree() > ida.getLastAgree()) {
-	    res.add(ent.getKey());
-	  } else {
-	    res.add(0, ent.getKey());
-	  }
-	}
+        Map.Entry ent = (Map.Entry)it.next();
+        IdentityAgreement ida = (IdentityAgreement)ent.getValue();
+        if (ida.hasAgreed()) {
+          if (ida.getLastDisagree() > ida.getLastAgree()) {
+            res.add(ent.getKey());
+          } else {
+            res.add(0, ent.getKey());
+          }
+        }
       }
     }
     return res;
@@ -776,8 +1051,11 @@ public class IdentityManager
     }
   }
 
-  /** Return collection of IdentityManager.IdentityAgreement for each peer
-   * that we have a record of agreeing or disagreeing with us */
+  /**
+   * <p>Returns a collection of IdentityManager.IdentityAgreement for
+   * each peer that we have a record of agreeing or disagreeing with
+   * us.
+   */
   public Collection getIdentityAgreements(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
@@ -788,7 +1066,10 @@ public class IdentityManager
     }
   }
 
-  /** Return map peer -> last agree time.  Used for logging and debugging */
+  /**
+   * <p>Return map peer -> last agree time. Used for logging and 
+   * debugging.</p>
+   */
   public Map getAgreed(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
@@ -807,7 +1088,10 @@ public class IdentityManager
     return res;
   }
 
-  /** Return map peer -> last disagree time.  Used for logging and debugging */
+  /**
+   * <p>Returns map peer -> last disagree time. Used for logging and
+   * debugging</p>.
+   */
   public Map getDisagreed(ArchivalUnit au) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
@@ -816,19 +1100,20 @@ public class IdentityManager
     Map res = new HashMap();
     synchronized (map) {
       for (Iterator it = map.entrySet().iterator(); it.hasNext(); ) {
-	Map.Entry ent = (Map.Entry)it.next();
-	IdentityAgreement ida = (IdentityAgreement)ent.getValue();
-	if (ida.getLastDisagree() != 0) {
-	  res.put(ent.getKey(), new Long(ida.getLastDisagree()));
-	}
+        Map.Entry ent = (Map.Entry)it.next();
+        IdentityAgreement ida = (IdentityAgreement)ent.getValue();
+        if (ida.getLastDisagree() != 0) {
+          res.put(ent.getKey(), new Long(ida.getLastDisagree()));
+        }
       }
     }
     return res;
   }
 
-  // called in synchronized block
   private IdentityAgreement findPeerIdentityAgreement(Map map,
-						      PeerIdentity pid) {
+                                                      PeerIdentity pid) {
+    // called in synchronized block
+    
     IdentityAgreement ida = (IdentityAgreement)map.get(pid);
     if (ida == null) {
       ida = new IdentityAgreement(pid);
@@ -844,15 +1129,15 @@ public class IdentityManager
     synchronized (agreeMaps) {
       map = (Map)agreeMaps.get(au.getAuId());
       if (map == null) {
-	map = new HashMap();
-	map.put(AGREE_MAP_INIT_KEY, "true");
-	agreeMaps.put(au.getAuId(), map);
+        map = new HashMap();
+        map.put(AGREE_MAP_INIT_KEY, "true");
+        agreeMaps.put(au.getAuId(), map);
       }
     }
     synchronized (map) {
       if (map.containsKey(AGREE_MAP_INIT_KEY)) {
-	loadIdentityAgreement(map, au);
-	map.remove(AGREE_MAP_INIT_KEY);
+        loadIdentityAgreement(map, au);
+        map.remove(AGREE_MAP_INIT_KEY);
       }
     }
     return map;
@@ -865,80 +1150,88 @@ public class IdentityManager
     }
   }
 
-  /** Copy the identity agreement file for the AU to the stream.
+  /**
+   * <p>Copies the identity agreement file for the AU to the given
+   * stream.</p>
+   * @param au  An archival unit.
+   * @param out An output stream.
+   * @throws IOException if input or output fails.
    */
-  // XXX hokey way to have the acceess performed by the object that has the
-  // appropriate lock
   public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
       throws IOException {
+    // XXX hokey way to have the acceess performed by the object that has the
+    // appropriate lock
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
     Map map = findAuAgreeMap(au);
     synchronized (map) {
       File file = hRep.getIdentityAgreementFile();
       InputStream in = new BufferedInputStream(new FileInputStream(file));
       try {
-	StreamUtil.copy(in, out);
+        StreamUtil.copy(in, out);
       } finally {
-	IOUtil.safeClose(in);
+        IOUtil.safeClose(in);
       }
     }
   }
 
-  /** Install the contents of the stream as the identity agreement file for
-   * the AU
+  /**
+   * <p>Installs the contents of the stream as the identity agreement 
+   * file for the AU.</p>
+   * @param au An archival unit.
+   * @param in An input stream to read from.
    */
-  // XXX hokey way to have the acceess performed by the object that has the
-  // appropriate lock
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException {
+    // XXX hokey way to have the acceess performed by the object that has the
+    // appropriate lock
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
     Map map = findAuAgreeMap(au);
     synchronized (map) {
       File file = hRep.getIdentityAgreementFile();
       OutputStream out = new FileOutputStream(file);
       try {
-	StreamUtil.copy(in, out);
+        StreamUtil.copy(in, out);
       } finally {
-	IOUtil.safeClose(out);
-	map.put(AGREE_MAP_INIT_KEY, "true");	// ensure map is reread
+        IOUtil.safeClose(out);
+        map.put(AGREE_MAP_INIT_KEY, "true");	// ensure map is reread
       }
     }
   }
 
-  //only called within a synchronized block, so we don't need to
   private Map loadIdentityAgreement(Map map, ArchivalUnit au) { 
-   HistoryRepository hRep = getDaemon().getHistoryRepository(au);
+    //only called within a synchronized block, so we don't need to
+    HistoryRepository hRep = getDaemon().getHistoryRepository(au);
     List list = hRep.loadIdentityAgreements();
     if (map == null) {
       map = new HashMap();
     }
     if (list == null) {
       if (!isMergeRestoredAgreemMap) {
-	map.clear();
+        map.clear();
       }
     } else {
       Set prevOnlyPids = new HashSet(map.keySet());
       for (Iterator it = list.iterator(); it.hasNext(); ) {
-	IdentityAgreement ida = (IdentityAgreement)it.next();
-	try {
-	  PeerIdentity pid = stringToPeerIdentity(ida.getId());
-	  if (isMergeRestoredAgreemMap) {
-	    ida = mergeIdAgreement((IdentityAgreement)map.get(pid), ida);
-	  } else {
-	    prevOnlyPids.remove(pid);
-	  }
-	  map.put(pid, ida);
-	} catch (MalformedIdentityKeyException e) {
-	  log.warning("Couldn't load agreement for key " + ida.getId(), e);
-	}
+        IdentityAgreement ida = (IdentityAgreement)it.next();
+        try {
+          PeerIdentity pid = stringToPeerIdentity(ida.getId());
+          if (isMergeRestoredAgreemMap) {
+            ida = mergeIdAgreement((IdentityAgreement)map.get(pid), ida);
+          } else {
+            prevOnlyPids.remove(pid);
+          }
+          map.put(pid, ida);
+        } catch (MalformedIdentityKeyException e) {
+          log.warning("Couldn't load agreement for key " + ida.getId(), e);
+        }
       }
       if (!isMergeRestoredAgreemMap) {
-	for (Iterator it = prevOnlyPids.iterator(); it.hasNext(); ) {
-	  Object pid = it.next();
-	  if (pid instanceof PeerIdentity) {
-	    map.remove(pid);
-	  }
-	}
+        for (Iterator it = prevOnlyPids.iterator(); it.hasNext(); ) {
+          Object pid = it.next();
+          if (pid instanceof PeerIdentity) {
+            map.remove(pid);
+          }
+        }
       }
     }
     return map;
@@ -989,7 +1282,6 @@ public class IdentityManager
 			DEFAULT_MERGE_RESTORED_AGREE_MAP);
   }
 
-
   public static class IdentityAgreement {
     private long lastAgree = 0;
     private long lastDisagree = 0;
@@ -1033,11 +1325,11 @@ public class IdentityManager
     public void mergeFrom(IdentityAgreement ida) {
       long ag = ida.getLastAgree();
       if (ag > getLastAgree()) {
-	setLastAgree(ag);
+        setLastAgree(ag);
       }
       long dis = ida.getLastDisagree();
       if (dis > getLastDisagree()) {
-	setLastDisagree(dis);
+        setLastDisagree(dis);
       }
     }
 
@@ -1058,10 +1350,10 @@ public class IdentityManager
 
     public boolean equals(Object obj) {
       if (obj instanceof IdentityAgreement) {
-	IdentityAgreement ida = (IdentityAgreement)obj;
-	return (id.equals(ida.getId())
-		&& ida.getLastDisagree() == lastDisagree
-		&& ida.getLastAgree() == lastAgree);
+        IdentityAgreement ida = (IdentityAgreement)obj;
+        return (id.equals(ida.getId())
+            && ida.getLastDisagree() == lastDisagree
+            && ida.getLastAgree() == lastAgree);
       }
       return false;
     }
@@ -1071,15 +1363,17 @@ public class IdentityManager
     }
   }
 
-  /** Exception thrown for illegal identity keys. */
+  /**
+   * <p>Exception thrown for illegal identity keys.</p>
+   */
   public static class MalformedIdentityKeyException extends IOException {
     public MalformedIdentityKeyException(String message) {
       super(message);
     }
   }
 
-  /** overridable for testing */
   protected String getLocalIpParam(Configuration config) {
+    // overridable for testing
     return config.get(PARAM_LOCAL_IP);
   }
 }

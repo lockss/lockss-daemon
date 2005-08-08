@@ -1,10 +1,10 @@
 /*
- * $Id: ExternalizableMap.java,v 1.15 2005-03-19 09:08:39 tlipkis Exp $
+ * $Id: ExternalizableMap.java,v 1.16 2005-08-08 23:28:29 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,113 +29,263 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.util;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import org.exolab.castor.mapping.Mapping;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
- * ExternalizableMap: A class which allows a map to be loaded in or written as
- * an external xml file.
- * @version 1.0
+ * <p>A {@link TypedEntryMap} that does not allow keys of type
+ * {@link Map} and that can be serialized to an XML file.</p>
  */
 public class ExternalizableMap extends TypedEntryMap {
+  
+  /*
+   * IMPLEMENTATION NOTES
+   * 
+   * Historically, this class exists to help Castor serialize
+   * TypedEntryMap instances to XML, which involves preventing nested
+   * maps and providing default constructors. Hopefully this class will
+   * become deprecated when Castor is phased out and the supertype
+   * TypedEntryMap can be used instead.
+   */
+  
+  // CASTOR: Phase out this class; use superclass TypedEntryMap
+  
   /**
-   * The exception to throw should a user attempt to store a map
-   * This should be removed when map storage is allowed.
+   * <p>The last message resulting from a failure to load a file.</p>
+   */
+  private String loadErr = "";
+
+  /**
+   * <p>Retrieves the last message resulting from a failure to load a
+   * file.</p>
+   * @return An error message dating back to the last load operation;
+   *         may be null if no error occurred.
+   */
+  public String getLoadErr() {
+    return loadErr;
+  }
+  
+  /**
+   * <p>Throws an {@link IllegalArgumentException}.</p>
+   * @param key {@inheritDoc}
+   * @param def {@inheritDoc}
+   * @return {@inheritDoc}
+   */
+  public Map getMap(String key, Map def) {
+    throw new IllegalArgumentException(MAP_WARNING);
+  }
+
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null.</p>
+   * @param mapLocation The path of the file where the map is stored.
+   * @param mapName     The name of the file where the map is stored.
+   */
+  public void loadMap(String mapLocation,
+                      String mapName) {
+    loadMap(makeHashMapSerializer(), mapLocation, mapName);
+  }
+
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null,
+   * using the given deserializer.</p>
+   * @param deserializer The object serializer to use.
+   * @param mapLocation  The path of the file where the map is stored.
+   * @param mapName      The name of the file where the map is stored.
+   */
+  public void loadMap(ObjectSerializer deserializer,
+                      String mapLocation,
+                      String mapName) {
+    loadErr = null;
+    File mapFile = new File(mapLocation, mapName);
+    
+    try {
+      // CASTOR: remove unwrap() call
+      HashMap map = unwrap(deserializer.deserialize(mapFile));
+      m_map = map;
+    }
+    catch (Exception e) {
+      loadErr = "Exception loading XML file: " + e.toString();
+      logger.error(loadErr);
+    }
+  }
+  
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null,
+   * by reading from a resource obtained from the class loader.</p>
+   * @param mapLocation The location of the serialized map.
+   * @param loader      The class loader.
+   * @throws FileNotFoundException if the resource is not found by the
+   *                               class loader.
+   */
+  public void loadMapFromResource(String mapLocation,
+                                  ClassLoader loader)
+      throws FileNotFoundException {
+    loadMapFromResource(makeHashMapSerializer(), mapLocation, loader);
+  }
+
+  /**
+   * <p>Loads the contents of a serialized map into this object,
+   * replacing its contents if the deserialized map is non-null,
+   * by reading from a resource obtained from the class loader
+   * using the given deserializer.</p>
+   * @param deserializer The object serializer to use.
+   * @param mapLocation  The location of the serialized map.
+   * @param loader       The class loader.
+   * @throws FileNotFoundException if the resource is not found by the
+   *                               class loader.
+   */
+  public void loadMapFromResource(ObjectSerializer deserializer,
+                                  String mapLocation,
+                                  ClassLoader loader)
+      throws FileNotFoundException {
+    loadErr = null;
+    InputStream mapStream = loader.getResourceAsStream(mapLocation);
+    if (mapStream == null) {
+      loadErr = "Unable to load: " + mapLocation;
+      throw new FileNotFoundException(loadErr);
+    }
+    
+    try {
+      // CASTOR: Remove unwrap() call
+      HashMap map = unwrap(deserializer.deserialize(mapStream));
+      m_map = map;
+    }
+    catch (Exception e) {
+      logger.warning("Could not load: " + mapLocation, e);
+      loadErr = "Exception loading XML file: " + e.toString();
+      throw new FileNotFoundException(loadErr);
+    }    
+  }
+  
+  /**
+   * <p>Throws an {@link IllegalArgumentException}.</p>
+   * @param key {@inheritDoc}
+   * @param value {@inheritDoc}
+   */
+  public void putMap(String key, Map value) {
+    throw new IllegalArgumentException(MAP_WARNING);
+  }
+
+  /**
+   * <p>Stores the contents of this object into an XML file.</p>
+   * @param mapLocation The path of the file to serialize into.
+   * @param mapName     The name of the file to serialize into.
+   */
+  public void storeMap(String mapLocation,
+                       String mapName) {
+    storeMap(makeHashMapSerializer(), mapLocation, mapName);
+  }
+
+  /**
+   * <p>Stores the contents of this object into an XML file
+   * using the given serializer.</p>
+   * @param serializer  The object serializer to use.
+   * @param mapLocation The path of the file to serialize into.
+   * @param mapName     The name of the file to serialize into.
+   */
+  public void storeMap(ObjectSerializer serializer,
+                       String mapLocation,
+                       String mapName) {
+    loadErr = null;
+    File mapDir = new File(mapLocation);
+    if (!mapDir.exists()) { mapDir.mkdirs(); }
+    File mapFile = new File(mapDir, mapName);
+    
+    try {
+      // CASTOR: Remove wrap() call
+      serializer.serialize(mapFile, wrap(m_map));
+    }
+    catch (Exception e) {
+      loadErr = "Exception storing map: " + e.toString();
+      logger.error(loadErr);
+    }    
+  }
+
+  /**
+   * <p>The mapping file for the map bean, {@link ExtMapBean} (which
+   * is the type of object actually serialized under the current
+   * implementation).</p>
+   */
+  public static final String MAPPING_FILE_NAME =
+      "/org/lockss/util/externalmap.xml";
+
+  /**
+   * <p>A logger for events associated with this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("ExternalizableMap");
+  
+  /**
+   * <p>The exception message to use when a user attempts to store a
+   * map.</p>
    */
   private static String MAP_WARNING =
     "Entry of type Map not allowed in Externalizable Maps";
 
   /**
-   * The mapping file for the map bean.
+   * <p>Retrieves the current serialization mode.</p>
+   * @return A mode constant from {@link CXSerializer}.
    */
-  public static final String MAPPING_FILE_NAME =
-      "/org/lockss/util/externalmap.xml";
-  private static Logger logger = Logger.getLogger("ExternalizableMap");
-  XmlMarshaller marshaller = new XmlMarshaller();
-  private String loadErr = "";
-
-  public String getLoadErr() {
-    return loadErr;
+  private static int getSerializationMode() {
+    return CXSerializer.getModeFromConfiguration();
   }
 
-  public void loadMapFromResource(String mapLocation, ClassLoader loader)
-      throws FileNotFoundException {
-    loadErr = null;
-    InputStream mapStream = loader.getResourceAsStream(mapLocation);
-    if (mapStream == null) {
-      loadErr = "Unable to load:" + mapLocation;
-      throw new FileNotFoundException(loadErr);
+  /**
+   * <p>A generic way to obtain an object serializer instance 
+   * appropriate for objects of this class.</p>
+   * @return An instance of {@link ObjectSerializer} ready to process
+   *         instance of this class.
+   */
+  private static ObjectSerializer makeHashMapSerializer() {
+    // CASTOR: Change to returning an XStreamSerializer
+    CXSerializer serializer =
+      new CXSerializer(MAPPING_FILE_NAME, ExtMapBean.class);
+    serializer.setCurrentMode(getSerializationMode());
+    return serializer;
+  }
+  
+  /**
+   * <p>Unwraps whatever comes out of the deserializer so that the
+   * final result is a HashMap (as expected by client code).</p>
+   * @param obj The object unmarshalled by the deserializer.
+   * @return The HashMap client code thinks it has deserialized.
+   */
+  private static HashMap unwrap(Object obj) {
+    // CASTOR: This goes away with Castor
+    if (obj == null) {
+      return null;
     }
-    try {
-      Reader reader = new BufferedReader(new InputStreamReader(mapStream));
-      ExtMapBean em = (ExtMapBean) marshaller.loadFromReader(reader,
-          ExtMapBean.class, marshaller.getMapping(MAPPING_FILE_NAME));
-      if (em != null) {
-        m_map = em.getMap();
-        //storeMap("src", mapLocation);
-      }
+    else if (obj instanceof ExtMapBean) {
+      return ((ExtMapBean)obj).getMap();
     }
-    catch (XmlMarshaller.MarshallingException me) {
-      // we have a damaged file
-      loadErr = "Exception parsing XML file: " + me.toString();
-      throw new FileNotFoundException(loadErr);
-    }
-    catch (Exception e) {
-      // some other error occured
-      logger.warning("Couldn't load: " + mapLocation, e);
-      loadErr = "Exception Loading XML file: " + e.toString();
-      throw new FileNotFoundException(loadErr);
+    else {
+      return (HashMap)obj;
     }
   }
-
-  public void loadMap(String mapLocation, String mapName, String mapFileName) {
-    loadErr = null;
-    String mapFile = mapLocation + File.separator + mapName;
-    try {
-      ExtMapBean em;
-      mapFileName = mapFileName == null ? MAPPING_FILE_NAME: mapFileName;
-        em = (ExtMapBean) marshaller.load(mapFile, ExtMapBean.class,
-                                          mapFileName);
-      if (em==null) {
-        return;
-      }
-      m_map = em.getMap();
-   } catch (XmlMarshaller.MarshallingException me) {
-      // we have a damaged file
-      loadErr = "Exception parsing XML file: " + me.toString();
-      logger.error(loadErr);
-    } catch (Exception e) {
-      // some other error occured
-      loadErr = "Exception Loading XML file: " + e.toString();
-      logger.error(loadErr);
+  
+  /**
+   * <p>Wraps a HashMap that client code is trying to serialize, so
+   * that the serializer receives an object of a type it expects
+   * (which may not be HashMap).</p>
+   * @param map A HashMap intended for marshalling.
+   * @return The object that will actually be serialized.
+   */
+  private static Object wrap(HashMap map) {
+    // CASTOR: This goes away with Castor   
+    if (getSerializationMode() == CXSerializer.CASTOR_MODE) {
+      return new ExtMapBean(map);
     }
-  }
-
-  public void storeMap(String mapLocation, String mapName, String mapFileName) {
-    loadErr = null;
-    try {
-      mapFileName = mapFileName == null ? MAPPING_FILE_NAME : mapFileName;
-      ExtMapBean em = new ExtMapBean(m_map);
-      marshaller.store(mapLocation, mapName, em, MAPPING_FILE_NAME);
-
+    else {
+      return map;
     }
-    catch (Exception e) {
-      loadErr = "Exception storing map : " + e.toString();
-      logger.error(loadErr);
-    }
-  }
-
-  public Map getMap(String key, Map def) {
-    throw new IllegalArgumentException(MAP_WARNING);
-  }
-
-  public void putMap(String key, Map value) {
-    throw new IllegalArgumentException(MAP_WARNING);
   }
 
 }
-

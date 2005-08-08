@@ -1,10 +1,10 @@
 /*
- * $Id: TestPollMapping.java,v 1.2 2004-12-18 00:36:07 troberts Exp $
+ * $Id: TestPollMapping.java,v 1.3 2005-08-08 23:28:30 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,11 +39,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import java.io.*;
-import org.exolab.castor.xml.*;
-import org.exolab.castor.mapping.*;
-
-import org.lockss.test.*;
 
 public class TestPollMapping extends TestCastor {
 
@@ -120,7 +115,7 @@ public class TestPollMapping extends TestCastor {
   private NodeHistoryBean makeNodeHistoryBean(int num) {
     NodeHistoryBean nhb = new NodeHistoryBean();
 
-    Collection phbColl = new ArrayList();
+    List phbColl = new ArrayList();
     for (int ix=10; ix<(11+num); ix++) {
       PollHistoryBean phb = makePollHistoryBean(ix);
       phbColl.add(phb);

@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.17 2003-11-13 19:53:41 troberts Exp $
+ * $Id: AuState.java,v 1.18 2005-08-08 23:28:29 thib_gc Exp $
  */
 
 /*
@@ -41,11 +41,11 @@ import org.lockss.util.TimeBase;
  * AuState contains the state information for an au.
  */
 public class AuState {
-  protected ArchivalUnit au;
+  protected transient ArchivalUnit au;
   protected long lastCrawlTime;
   protected long lastTopLevelPoll;
   protected long lastTreeWalk;
-  private HistoryRepository historyRepo;
+  private transient HistoryRepository historyRepo;
   protected HashSet crawlUrls;
 
   int urlUpdateCntr = 0;

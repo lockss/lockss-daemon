@@ -1,10 +1,10 @@
 /*
- * $Id: TestExternalizableMap.java,v 1.7 2005-05-20 07:29:22 tlipkis Exp $
+ * $Id: TestExternalizableMap.java,v 1.8 2005-08-08 23:28:30 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -94,13 +94,13 @@ public class TestExternalizableMap extends LockssTestCase {
     String fileLoc = tempDirPath + "testMap";
     String fileName = "testMap";
     try {
-      map.storeMap(fileLoc, null, null);
-      assertTrue("should throw - no file", true);
+      map.storeMap(fileLoc, null);
+      fail("Should have thrown (null file) but did not.");
     }
     catch(Exception ex) {
-
+      // Exception successfully thrown
     }
-    map.storeMap(fileLoc, fileName, null);
+    map.storeMap(fileLoc, fileName);
 
     // new map
     map = new ExternalizableMap();
@@ -118,14 +118,14 @@ public class TestExternalizableMap extends LockssTestCase {
 
     // unmarshal
     try {
-      map.loadMap(fileLoc, null, null);
-      assertTrue("should throw - no file", true);
+      map.loadMap(fileLoc, null);
+      fail("Should have thrown (null file) but did not.");
     }
     catch(Exception ex) {
-
+      // Exception successfully thrown
     }
 
-    map.loadMap(fileLoc, fileName, null);
+    map.loadMap(fileLoc, fileName);
     assertFalse(map.getBoolean("test-b", true));
     assertIsomorphic(testCol,
                      map.getCollection("test-c", new ArrayList()));
