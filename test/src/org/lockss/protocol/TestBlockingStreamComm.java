@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.7 2005-08-08 23:11:59 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.8 2005-08-09 00:10:14 tlipkis Exp $
  */
 
 /*
@@ -917,16 +917,21 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
     // Must ensure we don't step time until after channel has calculated
     // the send wait time.  Set up a post-calcSendWaitTime semaphore, send
-    // another message, wait on sem, them step time.
+    // another message, wait on sem until calcSendWaitTime has been called
+    // 3 times (before each of 2 messages pulled from queue, plus final
+    // wait for (nonexistent) 3rd message).
     MyBlockingPeerChannel chan =
       (MyBlockingPeerChannel)comm1.channels.get(pid2);
     assertNotNull(chan);
     
-    assertNotNull(sem);
     chan.setCalcSendWaitSem(sem);
     comm1.sendTo(msg1, pid2, null);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
     assertTrue(sem.take(TIMEOUT_SHOULDNT));
+    if (chan.calcSendWaitCtr < 3) {
+      assertTrue(sem.take(TIMEOUT_SHOULDNT));
+    }
+    assertEquals(3, chan.calcSendWaitCtr);
 
     TimeBase.step(4000);
     assertEquals(1, comm1.channels.size());
@@ -1074,6 +1079,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
   static class MyBlockingPeerChannel extends BlockingPeerChannel {
     volatile SimpleBinarySemaphore stopSem;
     volatile SimpleBinarySemaphore calcSendWaitSem;
+    volatile int calcSendWaitCtr = 0;
 
     MyBlockingPeerChannel(BlockingStreamComm scomm, PeerIdentity peer) {
       super(scomm, peer);
@@ -1095,6 +1101,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
     long calcSendWaitTime() {
       long res = super.calcSendWaitTime();
+      calcSendWaitCtr++;
       if (calcSendWaitSem != null) {
 	calcSendWaitSem.give();
       }
