@@ -101,7 +101,8 @@
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
 	<value>edu.cornell.library.jbe.JBEPlugin</value>
 	<value>edu.cornell.library.epr.EPRPlugin2001</value>
-	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.TreasuryBulletinPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
       </list>
     </property>
@@ -149,7 +150,8 @@
 	<property name="class" value="xpath" />
 	<property name="xpath"
 	  value="[
-	  pluginName='gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin'
+	  pluginName='gov.gpo.access.permanent.plugin.TreasuryBulletinPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin'
 	  ]"
 	  />
       </property>
@@ -349,7 +351,7 @@
       <property name="Treasury_Bulletin2005">
 	<property name="title" value="Treasury Bulletin 2005" />
 	<property name="journalTitle" value="Treasury Bulletin" />
-	<property name="plugin" value="gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.TreasuryBulletinPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Treasury_Bulletin/" />
@@ -357,6 +359,20 @@
 	<property name="param.2">
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
+	</property>
+      </property>
+
+      <property name="SocialSecurity_Bulletin65">
+	<property name="title" value="Social Security Bulletin Volume 65" />
+	<property name="journalTitle" value="Social Security Bulletin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Social_Security_Bulletin/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="volume65" />
 	</property>
       </property>
 
@@ -1044,6 +1060,90 @@
 	<property name="param.2">
 	  <property name="key" value="volume" />
 	  <property name="value" value="46" />
+	</property>
+      </property>
+
+      <property name="americanliteraryhistory17">
+	<property name="title" value="American Literary History Volume 17" />
+	<property name="journalTitle" value="American Literary History" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://alh.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="17" />
+	</property>
+      </property>
+
+      <property name="bioinformatics21">
+	<property name="title" value="Bioinformatics Volume 21" />
+	<property name="journalTitle" value="Bioinformatics" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://bioinformatics.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="21" />
+	</property>
+      </property>
+
+      <property name="biostatistics">
+	<property name="title" value="Biostatistics Volume " />
+	<property name="journalTitle" value="Biostatistics" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://biostatistics.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="6" />
+	</property>
+      </property>
+
+      <property name="brieftreatmentandcrisisintervention5">
+	<property name="title" value="Brief Treatment and Crisis Intervention Volume 5" />
+	<property name="journalTitle" value="Brief Treatment and Crisis Intervention" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://brief-treatment.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="5" />
+	</property>
+      </property>
+
+      <property name="Carcinogenesis">
+	<property name="title" value="Carcinogenesis Volume 26" />
+	<property name="journalTitle" value="Carcinogenesis" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://carcin.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="26" />
+	</property>
+      </property>
+
+      <property name="CerebralCortex15">
+	<property name="title" value="Cerebral Cortex Volume 15" />
+	<property name="journalTitle" value="Cerebral Cortex" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://cercor.oxfordjournals.org/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="15" />
 	</property>
       </property>
 
