@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.2 2005-07-26 17:28:36 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.3 2005-08-10 16:30:51 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.app.LockssApp;
  */
 public class TestXStreamSerializer
     extends ObjectSerializerTest {
-  
+
   /**
    * <p>Tests if post-deserialization works with one object containing
    * a map.</p>
@@ -88,6 +88,89 @@ public class TestXStreamSerializer
         + "the secret postdeserialization value.",
         "postdeserialization.value",
         clone.getMap().get("postdeserialization.key"));
+  }
+  
+  /**
+   * <p>Gives the post-deserialization mechanism a thorough test.</p>
+   * <p>This test consists of a cyclic graph of objects of type D.
+   * Type D inherits from type C which inherits from type B which
+   * inherits from type A. Types C and A define post-deserialization
+   * processing (but not D and B). The class hierarchy is such that
+   * the test will fail unless all post-deserialization methods at all
+   * levels get called.</p>
+   * @throws Exception if an unexpected or unhandled problem arises.
+   */
+  public void testPostDeserialization_TortureTest()
+      throws Exception {
+
+    /* Local class */
+    class A {
+      private boolean explode = true;
+      public void detonate() {
+        if (explode) {
+          fail("Failed post-deserialization torture test in class A.");
+        }
+      }
+      protected void postUnmarshal(LockssApp lockssContext) {
+        explode = false; // defuse bomb
+      }
+    }
+    
+    /* Local class */
+    class B extends A {
+      // Separate A and C's post-deserialization methods by a level
+    }
+    
+    /* Local class */
+    class C extends B {
+      private boolean explode = true;
+      public void detonate() {
+        super.detonate();
+        if (explode) {
+          fail("Failed post-deserialization torture test in class C.");
+        }
+      }
+      protected void postUnmarshal(LockssApp lockssContext) {
+        super.postUnmarshal(lockssContext);
+        explode = false; // defuse bomb
+      }
+    }
+    
+    /* Local class */
+    class D extends C {
+      private D first;
+      private D second;
+    }
+    
+    // Set up object graph
+    D d1 = new D(); 
+    D d2 = new D();
+    D d3 = new D();
+    D d4 = new D();
+    D d5 = new D();
+    d1.first = d2; d1.second = d4;
+    d2.first = d3; d2.second = d5;
+    d3.first = d1; d3.second = d2;
+    d4.first = d2; d4.second = d5;
+    d5.first = d2; d5.second = d3;
+    
+    // Set up needed objects
+    ObjectSerializer serializer = new XStreamSerializer(null);
+    ObjectSerializer deserializer = new XStreamSerializer(null);
+    StringWriter writer = new StringWriter();
+    StringReader reader;
+    
+    // Round trip
+    serializer.serialize(writer, d1);
+    reader = new StringReader(writer.toString());
+    D d = (D)deserializer.deserialize(reader);
+    
+    // Tests
+    d.detonate(); // aka d1
+    d.first.detonate(); // aka d2
+    d.first.first.detonate(); // aka d3
+    d.second.detonate(); // aka d4
+    d.second.second.detonate(); // aka d5
   }
 
   protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
