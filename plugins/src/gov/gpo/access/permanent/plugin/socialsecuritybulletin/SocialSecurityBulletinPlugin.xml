@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Elements>
+<MapElement>
+<ElementKey>plugin_identifier</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_def_pause_time</ElementKey>
+<ElementValue xsi:type="java:java.lang.Long" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2000</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s %s", base_url, journal_id</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_name</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Social Security Bulletin</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_crawlrules</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%s%s/index.html", base_url, journal_id</string>
+<string xsi:type="java:java.lang.String">1,"^%s%s/.*", base_url, journal_id</string>
+</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_start_url</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">"%s%s/index.html", base_url, journal_id</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>plugin_config_props</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ConfigParamDescr>
+<Key>base_url</Key>
+<DisplayName>Base URL</DisplayName>
+<Description>Usually of the form http://&lt;journal-name&gt;.com/</Description>
+<Type>3</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+<ConfigParamDescr>
+<Key>journal_id</Key>
+<DisplayName>Journal Identifier</DisplayName>
+<Description>Identifier for journal (often used as part of file names)</Description>
+<Type>1</Type>
+<Size>40</Size>
+<Definitional>true</Definitional>
+</ConfigParamDescr>
+</ElementValue>
+</MapElement>
+</Elements>
