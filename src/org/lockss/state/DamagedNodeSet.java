@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.19 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: DamagedNodeSet.java,v 1.20 2005-08-11 15:30:13 troberts Exp $
  */
 
 /*
@@ -48,8 +48,8 @@ public class DamagedNodeSet {
   // while it is logical to use a Set instead of an ArrayList, it is not
   // possible due to Castor's inability to marshall groups of Sets correctly.
   HashMap cusToRepair = new HashMap();
-  transient HistoryRepository repository;
-  transient ArchivalUnit theAu;
+  HistoryRepository repository;
+  ArchivalUnit theAu;
 
   /**
    * Simple constructor to allow bean creation during unmarshalling.
@@ -158,8 +158,9 @@ public class DamagedNodeSet {
    * @param nodeUrl the damaged url
    */
   synchronized public void addToDamage(String nodeUrl) {
-    nodesWithDamage.add(nodeUrl);
-    repository.storeDamagedNodeSet(this);
+    if (nodesWithDamage.add(nodeUrl)) {
+      repository.storeDamagedNodeSet(this);
+    }
   }
 
   /**
@@ -194,8 +195,9 @@ public class DamagedNodeSet {
    * @param nodeUrl url to remove
    */
   synchronized public void removeFromDamage(String nodeUrl) {
-    nodesWithDamage.remove(nodeUrl);
-    repository.storeDamagedNodeSet(this);
+    if(nodesWithDamage.remove(nodeUrl)) {
+      repository.storeDamagedNodeSet(this);
+    }
   }
 
   /**
