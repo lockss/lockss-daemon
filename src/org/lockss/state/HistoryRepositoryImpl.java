@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.60 2005-08-10 16:30:51 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.61 2005-08-11 17:04:37 thib_gc Exp $
  */
 
 /*
@@ -174,12 +174,12 @@ public class HistoryRepositoryImpl
     }
     catch (SerializationException se) {
       logger.error("Marshalling exception for AU state '"
-          + storedAu.getName() + "'.", se);
+          + storedAu.getName() + "'", se);
       // drop down to return default
     }
     catch (Exception e) {
       logger.error("Could not load AU state '"
-          + storedAu.getName() + "'.", e);
+          + storedAu.getName() + "'", e);
       throw new RepositoryStateException("Could not load AU state.");
     }
     
@@ -231,11 +231,11 @@ public class HistoryRepositoryImpl
     }
     catch (SerializationException se) {
       logger.error("Marshalling exception for damaged nodes for '"
-          + storedAu.getName() + "'.", se);
+          + storedAu.getName() + "'", se);
       // drop down to return empty set
     }
     catch (Exception e) {
-      logger.error("Could not load damaged nodes.", e);
+      logger.error("Could not load damaged nodes", e);
       throw new RepositoryStateException("Could not load damaged nodes.");
     }
     
@@ -278,7 +278,7 @@ public class HistoryRepositoryImpl
       // drop down to return empty list
     }
     catch (SerializationException se) {
-      logger.error("Marshalling exception for identity agreements.", se);
+      logger.error("Marshalling exception for identity agreements", se);
       // drop down to return empty list
     }
     catch (Exception e) {

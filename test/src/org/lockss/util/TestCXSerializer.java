@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.1 2005-07-26 20:50:37 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.2 2005-08-11 17:04:37 thib_gc Exp $
  */
 
 /*
@@ -158,7 +158,7 @@ public class TestCXSerializer extends ObjectSerializerTest {
     }
     catch (SerializationException se) {
       StringBuffer buffer = new StringBuffer();
-      buffer.append("Serializationexception thrown while in correct mode. ");
+      buffer.append("SerializationException thrown while in correct mode. ");
       buffer.append("Nested message: ");
       buffer.append(se.getMessage());
       fail(buffer.toString());

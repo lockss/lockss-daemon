@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.6 2005-08-05 02:23:00 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.7 2005-08-11 17:04:37 thib_gc Exp $
  */
 
 /*
@@ -66,56 +66,13 @@ public abstract class ObjectSerializer {
    */
   public static class SerializationException extends Exception {
     
-    /*
-     * IMPLEMENTATION NOTES
-     * 
-     * I had to revert from a nice 1.4-like implementation with
-     * four constructors to the code below because 1.3 was still
-     * around on the platform at the time, and Java 1.3's Exception
-     * constructor only accepts nothing or a String. As soon as Java
-     * 1.3 is not around anymore, please retrofit this code to be
-     * four simple constructors with or without a String, with or
-     * without a Throwable, that invoke the corresponding
-     * superconstructor. (A previously checked-in version of this
-     * file is that way already.)
-     */
-    
-    // JAVA13: Retrofit to 4 standard constructors that call superconstructors
-    
-    public SerializationException() { this(null, null); }
-    public SerializationException(String message) { this(message, null); }
+    public SerializationException() { super(); }
+    public SerializationException(String message) { super(message); }
     public SerializationException(String message, Throwable cause) {
-      super(format(message, cause));
+      super(message, cause);
     }
-    public SerializationException(Throwable cause) { this(null, cause); }
+    public SerializationException(Throwable cause) { super(cause); }
     
-    /**
-     * <p>An exception message formatter.</p>
-     * @param message Exception message (may be null).
-     * @param cause   Cause of the exception (may be null).
-     * @return A formatted error string.
-     */
-    private static String format(String message, Throwable cause) {
-      // JAVA13: Let properly-nested exceptions handle the formatting
-      StringBuffer buffer = new StringBuffer();
-      if (   message != null 
-          && message.length() > 0) {
-        buffer.append(message);
-      }
-      if (   message != null 
-          && message.length() > 0
-          && cause != null
-          && cause.getMessage() != null
-          && cause.getMessage().length() > 0) {
-        buffer.append(" - Nested message: ");
-      }
-      if (cause != null
-          && cause.getMessage() != null
-          && cause.getMessage().length() > 0) {
-        buffer.append(cause.getMessage());
-      }
-      return buffer.toString();
-    }
   }
   
   /*
@@ -349,13 +306,14 @@ public abstract class ObjectSerializer {
    */
   protected static SerializationException failDeserialize(Exception exc) {
     StringBuffer buffer = new StringBuffer();
-    buffer.append("Failed to deserialize an object. Nested message: ");
-    buffer.append(exc.getMessage());
+    buffer.append("Failed to deserialize an object (");
+    buffer.append(exc.getClass().getName());
+    buffer.append(").");
     String str = buffer.toString();
     if (logger.isDebug2()) {
-      logger.debug2(str);
+      logger.debug2(str, exc);
     }
-    return new SerializationException(str);
+    return new SerializationException(str, exc);
   }
 
   /**
@@ -369,13 +327,14 @@ public abstract class ObjectSerializer {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to deserialize an object from ");
     buffer.append(file.getAbsolutePath());
-    buffer.append(". Nested message: ");
-    buffer.append(exc.getMessage());
+    buffer.append(" (");
+    buffer.append(exc.getClass().getName());
+    buffer.append(").");
     String str = buffer.toString();
     if (logger.isDebug2()) {
-      logger.debug2(str);
+      logger.debug2(str, exc);
     }
-    return new SerializationException(str);
+    return new SerializationException(str, exc);
   }
 
   /**
@@ -389,13 +348,14 @@ public abstract class ObjectSerializer {
     StringBuffer buffer = new StringBuffer();
     buffer.append("Failed to serialize ");
     buffer.append(obj.toString());
-    buffer.append(". Nested message: ");
-    buffer.append(exc.getMessage());
+    buffer.append(" (");
+    buffer.append(exc.getClass().getName());
+    buffer.append(").");
     String str = buffer.toString();
     if (logger.isDebug2()) {
-      logger.debug2(str);
+      logger.debug2(str, exc);
     }
-    return new SerializationException(str);
+    return new SerializationException(str, exc);
   }
 
   /**
