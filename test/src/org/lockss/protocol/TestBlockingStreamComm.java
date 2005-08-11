@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.8 2005-08-09 00:10:14 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.9 2005-08-11 06:28:41 tlipkis Exp $
  */
 
 /*
@@ -1099,8 +1099,8 @@ public class TestBlockingStreamComm extends LockssTestCase {
       stopSem = sem;
     }
 
-    long calcSendWaitTime() {
-      long res = super.calcSendWaitTime();
+    Deadline calcSendWaitDeadline() {
+      Deadline res = super.calcSendWaitDeadline();
       calcSendWaitCtr++;
       if (calcSendWaitSem != null) {
 	calcSendWaitSem.give();

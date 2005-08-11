@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.6 2005-06-04 21:08:35 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.7 2005-08-11 06:28:41 tlipkis Exp $
  */
 
 /*
@@ -644,13 +644,13 @@ class BlockingPeerChannel implements PeerChannel {
   /** Wake up when channel has been idle long enough to close, or sooner to
    * poke watchdog
    */
-  long calcSendWaitTime() {
+  Deadline calcSendWaitDeadline() {
     long i = scomm.getSendWakeupTime();
     long j = (lastActiveTime == 0) ? scomm.getChannelIdleTime()
       : TimeBase.msUntil(lastActiveTime + scomm.getChannelIdleTime());
     if (j < 0) j = 0;
     if (log.isDebug3()) log.debug3("Send queue wait: " + (i < j ? i : j));
-    return i < j ? i : j;
+    return Deadline.in(i < j ? i : j);
   }
 
   /** Process the output side of a newly opened socket.  Send peerid msg
@@ -663,7 +663,7 @@ class BlockingPeerChannel implements PeerChannel {
       while (runner.goOn()) {
 	// don't remove msg from sendQueue until sent.  isEmpty() implies
 	// nothing to send
-	while (null != (msg = (PeerMessage)sendQueue.peekWait(Deadline.in(calcSendWaitTime())))) {
+	while (null != (msg = (PeerMessage)sendQueue.peekWait(calcSendWaitDeadline()))) {
 	  lastSendTime = lastActiveTime = TimeBase.nowMs();
 	  writeDataMsg(msg);
 	  stats.msgsSent++;
