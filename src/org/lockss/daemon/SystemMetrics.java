@@ -1,5 +1,5 @@
 /*
- * $Id: SystemMetrics.java,v 1.28 2005-03-18 09:09:14 smorabito Exp $
+ * $Id: SystemMetrics.java,v 1.29 2005-08-11 06:37:12 tlipkis Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class SystemMetrics
   private static Logger logger = Logger.getLogger("SystemMetrics");
 
   Hashtable estimateTable = new Hashtable();
-  MessageDigest defaultDigest = LcapMessage.getDefaultHasher();
+  MessageDigest defaultDigest = LcapMessage.getDefaultMessageDigest();
   HashService hashService;
   private PluginManager pluginMgr;
   int defaultSpeed;

@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.20 2005-06-04 18:59:52 tlipkis Exp $
+ * $Id: HashCUS.java,v 1.21 2005-08-11 06:37:11 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class HashCUS extends LockssServlet {
   int nbytes = 1000;
   long elapsedTime;
 
-  MessageDigest hasher;
+  MessageDigest digest;
   byte[] hashResult;
   int bytesHashed;
   boolean showResult;
@@ -142,7 +142,7 @@ public class HashCUS extends LockssServlet {
     nbytes = 1000;
 
     bytesHashed = 0;
-    hasher = null;
+    digest = null;
     hashResult = null;
     showResult = false;
     errMsg = null;
@@ -420,28 +420,28 @@ public class HashCUS extends LockssServlet {
   private void doit() {
     try {
       if (isHash) {
-	hasher = LcapMessage.getDefaultHasher();
-	if (hasher == null) {
-	  errMsg = "Can't get default hasher";
+	digest = LcapMessage.getDefaultMessageDigest();
+	if (digest == null) {
+	  errMsg = "Can't get default MessageDigest";
 	  return;
 	}
 	if (isRecord) {
 	  recordFile = File.createTempFile("HashCUS", ".tmp");
-	  hasher = new RecordingMessageDigest(hasher, recordFile, MAX_RECORD);
+	  digest = new RecordingMessageDigest(digest, recordFile, MAX_RECORD);
 	  //	  recordFile.deleteOnExit();
 	}
 	cush = null;
 	if (isContent || isSncuss) {
-	  cush = cus.getContentHasher(hasher);
+	  cush = cus.getContentHasher(digest);
 	} else if (isName) {
-	  cush = cus.getNameHasher(hasher);
+	  cush = cus.getNameHasher(digest);
 	}
 
 	if (challenge != null) {
-	  hasher.update(challenge, 0, challenge.length);
+	  digest.update(challenge, 0, challenge.length);
 	}
 	if (verifier != null) {
-	  hasher.update(verifier, 0, verifier.length);
+	  digest.update(verifier, 0, verifier.length);
 	}
 
 	doHash();
@@ -468,7 +468,7 @@ public class HashCUS extends LockssServlet {
 
     log.debug("Bytes hashed: " + bytesHashed);
     showResult = true;
-    hashResult = hasher.digest();
+    hashResult = digest.digest();
   }
 
   /** Create message and error message block */

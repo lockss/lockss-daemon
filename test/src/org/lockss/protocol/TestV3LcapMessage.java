@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.5 2005-07-13 07:52:50 smorabito Exp $
+ * $Id: TestV3LcapMessage.java,v 1.6 2005-08-11 06:37:11 tlipkis Exp $
  */
 
 /*
@@ -307,9 +307,9 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   private byte[] computeHash(String s) {
     try {
-      MessageDigest hasher = MessageDigest.getInstance("SHA");
-      hasher.update(s.getBytes());
-      byte[] hashed = hasher.digest();
+      MessageDigest digest = MessageDigest.getInstance("SHA");
+      digest.update(s.getBytes());
+      byte[] hashed = digest.digest();
       return hashed;
     } catch (java.security.NoSuchAlgorithmException e) {
       return new byte[0];

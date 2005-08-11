@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.49 2004-10-13 23:07:38 clairegriffin Exp $
+ * $Id: MockCachedUrlSet.java,v 1.50 2005-08-11 06:37:11 tlipkis Exp $
  */
 
 /*
@@ -111,18 +111,14 @@ public class MockCachedUrlSet implements CachedUrlSet {
   }
 
   public boolean hasContent() {
-    CachedUrl cu = null;
     if (hasContentIsSet) {
       return this.hasContent;
     }
-    if(au != null) {
-      cu = au.makeCachedUrl(getUrl());
+    if (au != null) {
+      CachedUrl cu = au.makeCachedUrl(getUrl());
+      return cu != null && cu.hasContent();
     }
-    if (cu != null) {
-      return cu.hasContent();
-    } else {
-      return false;
-    }
+    return false;
   }
 
   public void setHasContent(boolean hasContent) {
@@ -202,16 +198,16 @@ public class MockCachedUrlSet implements CachedUrlSet {
     namesToBeHashed = names;
   }
 
-  public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
+  public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
     if (contentToBeHashed != null) {
-      hasher.update(contentToBeHashed);
+      digest.update(contentToBeHashed);
     }
     return contentHasher;
   }
 
-  public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
+  public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
     if (namesToBeHashed != null) {
-      hasher.update(namesToBeHashed);
+      digest.update(namesToBeHashed);
     }
     return nameHasher;
   }

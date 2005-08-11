@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.29 2005-03-18 09:09:22 smorabito Exp $
+ * $Id: HashSpeedTest.java,v 1.30 2005-08-11 06:37:11 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class HashSpeedTest extends LockssTestCase {
   }
 
   private void hashContent() throws Exception {
-    MessageDigest digest = V1LcapMessage.getDefaultHasher();
+    MessageDigest digest = V1LcapMessage.getDefaultMessageDigest();
     System.out.println("Hashing-");
     System.out.println("  Algorithm: "+digest.getAlgorithm());
     System.out.println("  Duration: "+duration+"ms");

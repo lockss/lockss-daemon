@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.156 2005-06-20 04:03:25 tlipkis Exp $
+ * $Id: PollManager.java,v 1.157 2005-08-11 06:37:12 tlipkis Exp $
  */
 
 /*
@@ -662,13 +662,13 @@ public class PollManager
 
 
   /**
-   * return a MessageDigest hasher for needed to hash this message
-   * @param msg the LcapMessage which needs to be hashed or null to used
-   * the default hasher
-   * @return MessageDigest the hasher
+   * return a MessageDigest needed to hash this message
+   * @param msg the LcapMessage which needs to be hashed or null to use
+   * the default digest algorithm
+   * @return the MessageDigest
    */
-  MessageDigest getHasher(LcapMessage msg) {
-    MessageDigest hasher = null;
+  MessageDigest getMessageDigest(LcapMessage msg) {
+    MessageDigest digest = null;
     String algorithm;
     if(msg == null) {
       algorithm = LcapMessage.getDefaultHashAlgorithm();
@@ -677,12 +677,12 @@ public class PollManager
       algorithm = msg.getHashAlgorithm();
     }
     try {
-      hasher = MessageDigest.getInstance(algorithm);
+      digest = MessageDigest.getInstance(algorithm);
     } catch (NoSuchAlgorithmException ex) {
-      theLog.error("Unable to run - no hasher");
+      theLog.error("Unable to run - no MessageDigest");
     }
 
-    return hasher;
+    return digest;
   }
 
 
@@ -721,9 +721,9 @@ public class PollManager
    */
   byte[] generateVerifier(byte[] secret) {
     byte[] verifier = null;
-    MessageDigest hasher = getHasher(null);
-    hasher.update(secret, 0, secret.length);
-    verifier = hasher.digest();
+    MessageDigest digest = getMessageDigest(null);
+    digest.update(secret, 0, secret.length);
+    verifier = digest.digest();
 
     return verifier;
   }

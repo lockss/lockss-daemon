@@ -1,5 +1,5 @@
 /*
- * $Id: V1VerifyPoll.java,v 1.13 2005-04-19 03:08:32 smorabito Exp $
+ * $Id: V1VerifyPoll.java,v 1.14 2005-08-11 06:37:12 tlipkis Exp $
  */
 
 /*
@@ -88,14 +88,14 @@ class V1VerifyPoll extends V1Poll {
 
   /**
    * schedule the hash for this poll - this is a no-op provided for completeness.
-   * @param hasher the MessageDigest used to hash the content
+   * @param digest the MessageDigest used to hash the content
    * @param timer the Deadline by which we must complete
    * @param key the Object which will be returned from the hasher. Always the
    * message which triggered the hash
    * @param callback the hashing callback to use on return
    * @return true we never do anything here
    */
-  boolean scheduleHash(MessageDigest hasher, Deadline timer,
+  boolean scheduleHash(MessageDigest digest, Deadline timer,
 		       Object key, HashService.Callback callback) {
     return true;
   }
@@ -146,13 +146,13 @@ class V1VerifyPoll extends V1Poll {
     int weight = idMgr.getReputation(id);
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
-    MessageDigest hasher = m_pollmanager.getHasher(msg);
+    MessageDigest digest = m_pollmanager.getMessageDigest(msg);
     // check that vote verification hashed in the message should
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
 
-    hasher.update(hashed, 0, hashed.length);
-    byte[] HofHashed = hasher.digest();
+    digest.update(hashed, 0, hashed.length);
+    byte[] HofHashed = digest.digest();
     boolean agree = Arrays.equals(challenge, HofHashed);
     if(isMyPoll())
       updateReputation(agree);

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSet.java,v 1.8 2004-03-27 02:34:51 eaalto Exp $
+ * $Id: CachedUrlSet.java,v 1.9 2005-08-11 06:37:12 tlipkis Exp $
  */
 
 /*
@@ -73,19 +73,19 @@ public interface CachedUrlSet extends CachedUrlSetNode {
 
   // Methods used by the poller
 
-  public CachedUrlSetHasher getContentHasher(MessageDigest hasher);
+  public CachedUrlSetHasher getContentHasher(MessageDigest digest);
 
   /**
    * Return an object that can be used to hash the names of cached urls
    * that match the list of {@link CachedUrlSetSpec}
    * entries.
-   * @param hasher a {@link MessageDigest} object to which the
+   * @param digest a {@link MessageDigest} object to which the
    *               names will be supplied.
    * @return a {@link CachedUrlSetHasher} object that will
    *         hash the names of cached urls matching this
    *         <code>CachedUrlSet</code>.
    */
-  public CachedUrlSetHasher getNameHasher(MessageDigest hasher);
+  public CachedUrlSetHasher getNameHasher(MessageDigest digest);
 
   /**
    * Return an {@link Iterator} of {@link CachedUrlSetNode}

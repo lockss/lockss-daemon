@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessageTestUtil.java,v 1.1 2005-05-18 05:50:26 tlipkis Exp $
+ * $Id: LcapMessageTestUtil.java,v 1.2 2005-08-11 06:37:11 tlipkis Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -89,9 +89,9 @@ public class LcapMessageTestUtil {
 
   public static byte[] computeHash(String s) {
     try {
-      MessageDigest hasher = MessageDigest.getInstance("SHA");
-      hasher.update(s.getBytes());
-      byte[] hashed = hasher.digest();
+      MessageDigest digest = MessageDigest.getInstance("SHA");
+      digest.update(s.getBytes());
+      byte[] hashed = digest.digest();
       return hashed;
     } catch (java.security.NoSuchAlgorithmException e) {
       return new byte[0];

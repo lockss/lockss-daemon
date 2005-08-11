@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.78 2005-05-18 05:47:46 tlipkis Exp $
+ * $Id: TestPollManager.java,v 1.79 2005-08-11 06:37:11 tlipkis Exp $
  */
 
 /*
@@ -439,9 +439,9 @@ public class TestPollManager extends LockssTestCase {
   }
 
 
-  /** test for method getHasher(..) */
-  public void testGetHasher() {
-    MessageDigest md = pollmanager.getHasher(null);
+  /** test for method getMessageDigest(..) */
+  public void testGetMessageDigest() {
+    MessageDigest md = pollmanager.getMessageDigest(null);
     assertNotNull(md);
   }
 
@@ -456,7 +456,7 @@ public class TestPollManager extends LockssTestCase {
     assertNotNull("unable to retrieve secret for verifier", secret);
 
     // confirm that the verifier is the hash of the secret
-    MessageDigest md = pollmanager.getHasher(null);
+    MessageDigest md = pollmanager.getMessageDigest(null);
     md.update(secret, 0, secret.length);
     byte[] verifier_check = md.digest();
     assertTrue("secret does not match verifier",
