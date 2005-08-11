@@ -1,5 +1,5 @@
 /*
- * $Id: PTestPlugin.java,v 1.20 2005-01-31 23:14:42 tlipkis Exp $
+ * $Id: PTestPlugin.java,v 1.21 2005-08-11 06:35:10 tlipkis Exp $
  */
 
 /*
@@ -99,9 +99,8 @@ public class PTestPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public byte[] getUnfilteredContentSize() {
-      return (new BigInteger(
-          Integer.toString(contents.length()))).toByteArray();
+    public long getContentSize() {
+      return contents.length();
     }
 
     public CIProperties getProperties() {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrl.java,v 1.29 2005-08-03 00:06:02 troberts Exp $
+ * $Id: MockCachedUrl.java,v 1.30 2005-08-11 06:35:09 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class MockCachedUrl implements CachedUrl {
   }
 
   public boolean hasContent() {
-    return doesExist;
+    return doesExist || content != null;
   }
 
   public boolean isLeaf() {
@@ -146,16 +146,9 @@ public class MockCachedUrl implements CachedUrl {
     return getUnfilteredInputStream();
   }
 
-  public byte[] getUnfilteredContentSize() {
-    String content;
-    if (this.content == null) {
-      content = "";
-    } else {
-      content = this.content;
-    }
-    return (new BigInteger(Integer.toString(content.length()))).toByteArray();
+  public long getContentSize() {
+    return content == null ? 0 : content.length();
   }
-
 
   public CIProperties getProperties(){
     return cachedProp;

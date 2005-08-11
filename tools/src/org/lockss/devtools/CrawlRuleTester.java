@@ -341,11 +341,11 @@ public class CrawlRuleTester extends Thread {
     }
 
     /**
-     * getUnfilteredContentSize
+     * getContentSize
      *
-     * @return byte[]
+     * @return long
      */
-    public byte[] getUnfilteredContentSize() {
+    public long getContentSize() {
       throw new UnsupportedOperationException("Not implemented");
     }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.3 2005-06-04 18:59:52 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.4 2005-08-11 06:35:10 tlipkis Exp $
  */
 
 /*
@@ -119,8 +119,7 @@ public class ViewContent extends LockssServlet {
       displayError("URL " + url + " not found in AU: " + au.getName());
       return;
     }
-    byte[] sizeBytes = cu.getUnfilteredContentSize();
-    clen = ByteArray.decodeLong(sizeBytes);
+    clen = cu.getContentSize();
     try {
       props = cu.getProperties();
       ctype = props.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);

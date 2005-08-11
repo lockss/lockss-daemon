@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.21 2005-06-04 17:38:20 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.22 2005-08-11 06:35:10 tlipkis Exp $
  */
 
 /*
@@ -143,9 +143,9 @@ public class BaseCachedUrl implements CachedUrl {
     return CIProperties.fromProperties(rnc.getProperties());
   }
 
-  public byte[] getUnfilteredContentSize() {
+  public long getContentSize() {
     ensureLeafLoaded();
-    return ByteArray.encodeLong(leaf.getContentSize());
+    return leaf.getContentSize();
   }
 
   public void release() {

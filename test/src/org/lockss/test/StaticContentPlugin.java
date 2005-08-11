@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.28 2005-07-18 08:14:27 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.29 2005-08-11 06:35:09 tlipkis Exp $
  */
 
 /*
@@ -241,9 +241,8 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public byte[] getUnfilteredContentSize() {
-      BigInteger bigInt = new BigInteger(Integer.toString(contents.length()));
-      return bigInt.toByteArray();
+    public long getContentSize() {
+      return contents == null ? 0 : contents.length();
     }
 
     public CIProperties getProperties() {
@@ -272,11 +271,11 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
+    public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
+    public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
       throw new UnsupportedOperationException("Not implemented");
     }
 
