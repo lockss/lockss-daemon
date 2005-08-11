@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Elements>
 <MapElement>
+<ElementKey>plugin_version</ElementKey>
+<ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</ElementValue>
+</MapElement>
+<MapElement>
 <ElementKey>plugin_crawl_type</ElementKey>
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OAI</ElementValue>
+</MapElement>
+<MapElement>
+<ElementKey>au_manifest</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">"%slockss/lockss_permission.html", base_url</string>
+</ElementValue>
 </MapElement>
 <MapElement>
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%sETD-db/NDLTD-OAI/oai.pl", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%sETD-db/theses/available/etd-.*%02d-.*", base_url, au_short_year</string>
+<string xsi:type="java:java.lang.String">1,"%slockss/lockss_permission.html", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%sETD-db/available/etd-.*%d-.*", base_url, year</string>
 </ElementValue>
 </MapElement>
 <MapElement>
