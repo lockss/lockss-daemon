@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.62 2005-06-20 04:02:28 tlipkis Exp $
+ * $Id: MockArchivalUnit.java,v 1.63 2005-08-11 06:29:00 tlipkis Exp $
  */
 
 /*
@@ -191,9 +191,9 @@ public class MockArchivalUnit implements ArchivalUnit {
    * @param shouldCache whether this url should say to cache it or not
    * @param props CIProperties to be associated with this url
    */
-  public void addUrl(String url, boolean exists, boolean shouldCache,
-                     CIProperties props) {
-    addUrl(url, exists, shouldCache, props, null, 0);
+  public MockCachedUrl addUrl(String url, boolean exists,
+			      boolean shouldCache, CIProperties props) {
+    return addUrl(url, exists, shouldCache, props, null, 0);
   }
   /**
    * To be used when you want to set up a url that will throw an exception
@@ -201,32 +201,45 @@ public class MockArchivalUnit implements ArchivalUnit {
    * @param cacheException the IOException to throw
    * @param timesToThrow number of times to throw the exception
    */
-  public void addUrl(String url,
-                     Exception cacheException, int timesToThrow) {
-    addUrl(url, false, true, new CIProperties(), cacheException, timesToThrow);
+  public MockCachedUrl addUrl(String url,
+			      Exception cacheException, int timesToThrow) {
+    return addUrl(url, false, true, new CIProperties(),
+		  cacheException, timesToThrow);
   }
 
   /**
-   * Same as above, but with exists defaulting to false, shouldCache to false
+   * Same as above, but with exists defaulting to false, shouldCache to true
    * and props to "content-type=text/html"
    * @param url the url
    */
-  public void addUrl(String url) {
-    addUrl(url, false, true);
+  public MockCachedUrl addUrl(String url) {
+    return addUrl(url, false, true);
   }
 
-  public void addUrl(String url, boolean exists, boolean shouldCache) {
+  /**
+   * Set up a CachedUrl with content
+   * @param url the url
+   * @param content the content
+   */
+  public MockCachedUrl addUrl(String url, String content) {
+    MockCachedUrl cu = addUrl(url, true, true);
+    cu.setContent(content);
+    return cu;
+  }
+
+  public MockCachedUrl addUrl(String url,
+			      boolean exists, boolean shouldCache) {
     CIProperties props = new CIProperties();
     props.setProperty(CachedUrl.PROPERTY_CONTENT_TYPE, "text/html");
-    addUrl(url, exists, shouldCache, props);
+    return addUrl(url, exists, shouldCache, props);
   }
 
 
-  private void addUrl(String url, boolean exists, boolean shouldCache,
-                      CIProperties props, Exception cacheException,
-                      int timesToThrow) {
+  private MockCachedUrl addUrl(String url,
+			       boolean exists, boolean shouldCache,
+			       CIProperties props,
+			       Exception cacheException, int timesToThrow) {
     MockCachedUrl cu = new MockCachedUrl(url, this);
-//     cu.setContent(source);
     cu.setProperties(props);
     cu.setExists(exists);
 
@@ -243,10 +256,11 @@ public class MockArchivalUnit implements ArchivalUnit {
         uc.setCachingException((RuntimeException)cacheException, timesToThrow);
       }
     }
-    logger.info(this + "Adding "+url+" to cuHash and ucHash");
+    logger.debug2(this + "Adding "+url+" to cuHash and ucHash");
 
     cuHash.put(url, cu);
     ucHash.put(url, uc);
+    return cu;
   }
 
   public void addUrlToBeCached(String url) {
@@ -258,18 +272,18 @@ public class MockArchivalUnit implements ArchivalUnit {
   }
 
   public String siteNormalizeUrl(String url) {
-    log.info("siteNormalizeUrl(), urlNormalizeString = " + urlNormalizeString);
+    log.debug("siteNormalizeUrl(), urlNormalizeString = " + urlNormalizeString);
     if (urlNormalizeString == null) {
       return url;
     } else {
       String res = StringUtil.replaceString(url, urlNormalizeString, "");
-      log.info("siteNormalizeUrl(" + url + ") = " + res);
+      log.debug("siteNormalizeUrl(" + url + ") = " + res);
       return res;
     }
   }
 
   public void setUrlNormalizeString(String removeString) {
-    log.info("setUrlNormalizeString(" + removeString + ")");
+    log.debug("setUrlNormalizeString(" + removeString + ")");
     urlNormalizeString = removeString;
   }
 
