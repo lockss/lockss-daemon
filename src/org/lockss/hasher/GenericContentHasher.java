@@ -1,5 +1,5 @@
 /*
- * $Id: GenericContentHasher.java,v 1.22 2004-10-13 23:07:17 clairegriffin Exp $
+ * $Id: GenericContentHasher.java,v 1.23 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -54,35 +54,29 @@ public class GenericContentHasher extends GenericHasher {
   private int nameIdx = -1;
 
 
-  private ArchivalUnit au = null;
-  private CachedUrl cu = null;
   private InputStream is = null;
   private long hashedContentSize = 0;
 
 
   public GenericContentHasher(CachedUrlSet cus, MessageDigest digest) {
     super(cus, digest);
-    au = cus.getArchivalUnit();
-    iterator = cus.contentHashIterator();
-    if (iterator == null) {
-      throw new IllegalArgumentException("Called with a CachedUrlSet that "+
-					 "gave me a null contentHashIterator");
-    }
   }
 
-  protected int hashElementUpToNumBytes(int numBytes)
+  public String typeString() {
+    return "C";
+  }
+
+  public void storeActualHashDuration(long elapsed, Exception err) {
+    cus.storeActualHashDuration(elapsed, err);
+  }
+
+  protected Iterator getIterator(CachedUrlSet cus) {
+    return cus.contentHashIterator();
+  }
+
+  protected int hashNodeUpToNumBytes(int numBytes)
       throws IOException {
-    if (cu == null) {
-      switch (curElement.getType()) {
-      case CachedUrlSetNode.TYPE_CACHED_URL_SET:
-        CachedUrlSet cus = (CachedUrlSet)curElement;
-        cu = au.makeCachedUrl(cus.getUrl());
-        break;
-      case CachedUrlSetNode.TYPE_CACHED_URL:
-        cu = (CachedUrl)curElement;
-        break;
-      }
-    }
+    getCurrentCu();
     int totalHashed = 0;
     if (hashState == HASHING_NAME) {
       totalHashed += hashName(numBytes);
@@ -100,23 +94,10 @@ public class GenericContentHasher extends GenericHasher {
     int totalHashed = 0;
     if (isTrace) log.debug3("Hashing name");
     if (nameBytes == null) {
-      String nameStr = cu.getUrl();
+      String nameStr = curCu.getUrl();
       nameBytes = nameStr.getBytes();
       nameIdx = 0;
       if (isTrace) log.debug3("got new name to hash: "+nameStr);
-
-//       if (cu.hasContent()) {
-// 	byte[] sizeBytes = cu.getUnfilteredContentSize();
-// 	if (isTrace) {
-// 	  log.debug3("sizeBytes has length of "+sizeBytes.length);
-// 	}
-// //  	digest.update((byte)sizeBytes.length);
-// //  	digest.update(sizeBytes);
-// //  	totalHashed += (sizeBytes.length+1);
-//       } else {
-// 	digest.update(NO_CONTENT);
-// 	totalHashed++;
-//       }
     }
 
     int bytesRemaining = nameBytes.length - nameIdx;
@@ -126,7 +107,7 @@ public class GenericContentHasher extends GenericHasher {
     digest.update(nameBytes, nameIdx, len);
     nameIdx += len;
     if (nameIdx >= nameBytes.length) {
-      if (isTrace) log.debug3("done hashing name: "+cu);
+      if (isTrace) log.debug3("done hashing name: "+curCu);
       hashState = HASHING_CONTENT;
       nameBytes = null;
     }
@@ -139,17 +120,16 @@ public class GenericContentHasher extends GenericHasher {
     int totalHashed = 0;
     if (isTrace) log.debug3("hashing content");
     if (is == null) {
-      if (cu.hasContent()) {
-	if (isTrace) log.debug3("opening "+cu+" for hashing");
-	is = cu.openForHashing();
+      if (curCu.hasContent()) {
+	if (isTrace) log.debug3("opening "+curCu+" for hashing");
+	is = curCu.openForHashing();
       } else {
-	if (isTrace) log.debug3(cu+" has no content, not hashing");
+	if (isTrace) log.debug3(curCu+" has no content, not hashing");
 	digest.update(NO_CONTENT);
 	totalHashed++;
 
 	hashState = HASHING_NAME;
-	curElement = null;
-	cu = null;
+	endOfNode();
 	return totalHashed;
       }
     }
@@ -165,8 +145,7 @@ public class GenericContentHasher extends GenericHasher {
       totalHashed += bytesHashed;
       hashedContentSize += bytesHashed;
     } else {
-//     if (bytesHashed != 0 && bytesHashed < bytesLeftToHash) {
-      if (isTrace) log.debug3("done hashing content: "+cu);
+      if (isTrace) log.debug3("done hashing content: "+curCu);
       byte[] sizeBytes =
 	(new BigInteger(Long.toString(hashedContentSize)).toByteArray());
       digest.update((byte)sizeBytes.length);
@@ -175,8 +154,7 @@ public class GenericContentHasher extends GenericHasher {
 
       hashedContentSize = 0;
       hashState = HASHING_NAME;
-      curElement = null;
-      cu = null;
+      endOfNode();
       is.close();
       is = null;
     }

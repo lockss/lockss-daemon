@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericNameHasher.java,v 1.11 2003-09-26 23:49:02 eaalto Exp $
+ * $Id: TestGenericNameHasher.java,v 1.12 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public class TestGenericNameHasher extends LockssTestCase {
       CachedUrlSetHasher hasher = new GenericNameHasher(null, dig);
       fail("Creating a GenericNameHasher with a null cus should throw "+
 	   "an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
+    } catch (NullPointerException iae) {
     }
   }
 
@@ -78,6 +78,25 @@ public class TestGenericNameHasher extends LockssTestCase {
  	   "throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
+  }
+
+  public void testAccessors() throws IOException {
+    MockCachedUrlSet cus = new MockCachedUrlSet();
+    cus.setHashIterator(null);
+    cus.setFlatIterator(CollectionUtil.EMPTY_ITERATOR);
+    cus.setEstimatedHashDuration(54321);
+    cus.storeActualHashDuration(22222, null);
+    MessageDigest dig = new MockMessageDigest();
+    CachedUrlSetHasher hasher = new GenericNameHasher(cus, dig);
+    assertSame(cus, hasher.getCachedUrlSet());
+    assertEquals(1000, hasher.getEstimatedHashDuration());
+    assertEquals("N", hasher.typeString());
+    // name hasher shouldn't store hash time in cus
+    hasher.storeActualHashDuration(12345, null);
+    assertEquals(22222, cus.getActualHashDuration());
+    MessageDigest[] digs = hasher.getDigests();
+    assertEquals(1, digs.length);
+    assertEquals(dig, digs[0]);
   }
 
   public void testUnfinishedHasherNotFinished() {

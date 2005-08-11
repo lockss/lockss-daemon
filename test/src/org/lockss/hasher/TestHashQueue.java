@@ -1,5 +1,5 @@
 /*
- * $Id: TestHashQueue.java,v 1.17 2003-06-20 22:34:54 claire Exp $
+ * $Id: TestHashQueue.java,v 1.18 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -68,6 +68,7 @@ public class TestHashQueue extends LockssTestCase {
       dig = MessageDigest.getInstance(hashAlgorithm);
     }
     cus = new MockCachedUrlSet(null, null);
+    cus.setHashItSource(Collections.EMPTY_LIST);
     TimeBase.setSimulated();
   }
 
@@ -76,18 +77,11 @@ public class TestHashQueue extends LockssTestCase {
     super.tearDown();
   }
 
-//  	HashQueue.Request(CachedUrlSet urlset,
-//  			  MessageDigest hasher,
-//  			  Deadline deadline,
-//  			  HashService.Callback callback,
-//  			  Object cookie,
-//  			  CachedUrlSetHasher urlsetHasher,
-//  			  long estimatedDuration);
-
   HashQueue.Request simpleReq(long deadlineIn, int duration) {
-    return new HashQueue.Request(cus, dig, Deadline.in(deadlineIn),
-				 null, null, null, duration,
-				 HashService.CONTENT_HASH);
+    return new HashQueue.Request(cus, Deadline.in(deadlineIn),
+				 null, null,
+				 new GenericContentHasher(cus, dig),
+				 duration);
   }
 
   HashQueue.Request req(long deadlineIn,
@@ -109,10 +103,10 @@ public class TestHashQueue extends LockssTestCase {
     cus.setContentHasher(hasher);
 //      cus.setHashDuration(duration, bytes);
     HashQueue.Request req =
-      new HashQueue.Request(cus, dig, Deadline.in(deadlineIn),
+      new HashQueue.Request(cus, Deadline.in(deadlineIn),
 			    callback, cookie,
-			    cus.getContentHasher(dig),
-			    duration, HashService.CONTENT_HASH);
+			    hasher,
+			    duration);
     return req;
   }
 
@@ -196,7 +190,7 @@ public class TestHashQueue extends LockssTestCase {
     HashService.Callback cb = new HashService.Callback() {
 	public void hashingFinished(CachedUrlSet urlset,
 				    Object cookie,
-				    MessageDigest hasher,
+				    CachedUrlSetHasher hasher,
 				    Exception e) {
 	  cookieList.add(cookie);
 	  eList.add(e);
@@ -245,7 +239,7 @@ public class TestHashQueue extends LockssTestCase {
     HashService.Callback cb = new HashService.Callback() {
 	public void hashingFinished(CachedUrlSet urlset,
 				    Object cookie,
-				    MessageDigest hasher,
+				    CachedUrlSetHasher hasher,
 				    Exception e) {
 	  cookieList.add(cookie);
 	}

@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.1 2005-07-13 07:53:05 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.2 2005-08-11 06:33:18 tlipkis Exp $
  */
 
 /*
@@ -267,7 +267,7 @@ public class TestV3Poller extends LockssTestCase {
     }
 
     protected void scheduleHash() {
-      hashService.hashContent(new HashingCompleteCallback());
+      hashService.scheduleHash(new HashingCompleteCallback());
     }
 
     public V3LcapMessage getSentMessage(PeerIdentity voter) {
@@ -332,23 +332,23 @@ public class TestV3Poller extends LockssTestCase {
  * with a proper mock HashService implementation when possible
  */
 class MyMockHashService {
-  MessageDigest hasher;
+  MessageDigest digest;
   
   MyMockHashService() throws NoSuchAlgorithmException {
-    hasher = MessageDigest.getInstance("SHA-1");
+    digest = MessageDigest.getInstance("SHA-1");
   }
 
-  public boolean hashContent(final V3Poller.HashingCompleteCallback callback) {
+  public boolean scheduleHash(final V3Poller.HashingCompleteCallback callback) {
       Runnable r = new Runnable() {
 	  public void run() {
 	    try {
 	      // Simulate spending some time on something, but not much.
-	      hasher.update("this is some text to hash.".getBytes());
+	      digest.update("this is some text to hash.".getBytes());
 	      Thread.sleep(100);
 	      // Block 1 completed
-	      callback.blockFinished(null, "testfile1", hasher, null);
+	      callback.blockFinished(null, "testfile1", digest, null);
 	      // Block 2 completed
-	      callback.blockFinished(null, "testfile2", hasher, null);
+	      callback.blockFinished(null, "testfile2", digest, null);
 	      // Full hash completed
 	      callback.hashingFinished(null, null, null, null);
 	    } catch (InterruptedException ignore) {;}

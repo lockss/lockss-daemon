@@ -1,5 +1,5 @@
 /*
- * $Id: HashQueue.java,v 1.46 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: HashQueue.java,v 1.47 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -132,10 +132,7 @@ class HashQueue {
       log.debug(msg + ((req.e != null) ? (req.e + ": ") : "") + req);
     }
     iter.remove();
-    if (req.type == HashService.CONTENT_HASH) {
-      // tk - need to change interface to tell CUS what type of hash finished
-      req.urlset.storeActualHashDuration(req.timeUsed, req.e);
-    }
+    req.urlsetHasher.storeActualHashDuration(req.timeUsed, req.e);
     done.add(req);
     synchronized (completed) {
       completed.add(req);
@@ -150,13 +147,12 @@ class HashQueue {
       try {
 	if (req.callback != null) {
 	  req.callback.hashingFinished(req.urlset, req.cookie,
-				       req.hasher, req.e);
+				       req.urlsetHasher, req.e);
 	}
       } catch (Exception e) {
 	log.error("Hash callback threw", e);
       }
       // completed list for status only, don't hold on to caller's objects
-      req.hasher = null;
       req.callback = null;
       req.cookie = null;
       req.urlsetHasher = null;
@@ -316,12 +312,10 @@ class HashQueue {
   // Request - hash queue element.
   static class Request implements Comparable {
     CachedUrlSet urlset;
-    MessageDigest hasher;
     Deadline deadline;
     HashService.Callback callback;
     Object cookie;
     CachedUrlSetHasher urlsetHasher;
-    int type;
     int sched;
     int finish;
     long origEst;
@@ -329,23 +323,27 @@ class HashQueue {
     long bytesHashed = 0;
     Exception e;
     boolean firstOverrun;
+    String typeString;
 
     Request(CachedUrlSet urlset,
-	    MessageDigest hasher,
 	    Deadline deadline,
 	    HashService.Callback callback,
 	    Object cookie,
 	    CachedUrlSetHasher urlsetHasher,
-	    long estimatedDuration,
-	    int type) {
+	    long estimatedDuration) {
       this.urlset = urlset;
-      this.hasher = hasher;
       this.deadline = deadline;
       this.callback = callback;
       this.cookie = cookie;
       this.urlsetHasher = urlsetHasher;
       this.origEst = estimatedDuration;
-      this.type = type;
+      this.typeString = urlsetHasher.typeString();
+    }
+
+    public String typeString() {
+      // this must not reference the urlsetHasher, as it might have been
+      // reset to null
+      return typeString;
     }
 
     long curEst() {
@@ -617,7 +615,7 @@ class HashQueue {
       row.put("state", getState(req, done));
       row.put("au", req.urlset.getArchivalUnit().getName());
       row.put("cus", req.urlset.getSpec());
-      row.put("type", getType(req));
+      row.put("type", req.typeString());
       row.put("deadline", req.deadline.getExpiration());
       row.put("estimate", new Long(req.origEst));
       Object used = new Long(req.timeUsed);
@@ -629,14 +627,6 @@ class HashQueue {
       row.put("timeused", used);
       row.put("bytesHashed", new Long(req.bytesHashed));
       return row;
-    }
-
-    private String getType(Request req) {
-      switch (req.type) {
-      case HashService.CONTENT_HASH: return "C";
-      case HashService.NAME_HASH: return "N";
-      default: return "?";
-      }
     }
 
     private Object getState(Request req, boolean done) {

@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.26 2005-07-13 17:33:43 troberts Exp $
+ * $Id: V1Poll.java,v 1.27 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -163,14 +163,14 @@ public abstract class V1Poll extends BasePoll {
 
   /**
    * schedule the hash for this poll.
-   * @param hasher the MessageDigest used to hash the content
+   * @param digest the MessageDigest used to hash the content
    * @param timer the Deadline by which we must complete
    * @param key the Object which will be returned from the hasher. Always the
    * message which triggered the hash
    * @param callback the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  abstract boolean scheduleHash(MessageDigest hasher, Deadline timer,
+  abstract boolean scheduleHash(MessageDigest digest, Deadline timer,
 				Object key,
 				HashService.Callback callback);
   /**
@@ -334,7 +334,7 @@ public abstract class V1Poll extends BasePoll {
    * @return boolean true if we successfully schedule hash; false otherwise.
    */
   boolean scheduleOurHash() {
-    MessageDigest hasher = getInitedHasher(m_challenge, m_verifier);
+    MessageDigest digest = getInitedDigest(m_challenge, m_verifier);
 
     boolean scheduled = false;
     long now = TimeBase.nowMs();
@@ -347,7 +347,7 @@ public abstract class V1Poll extends BasePoll {
       m_voteTime = Deadline.atRandomRange(minTime, maxTime);
       long curTime = m_voteTime.getExpirationTime();
       log.debug3("Trying to schedule our hash at " + m_voteTime);
-      scheduled = scheduleHash(hasher, m_voteTime, m_msg, new PollHashCallback());
+      scheduled = scheduleHash(digest, m_voteTime, m_msg, new PollHashCallback());
       if (!scheduled) {
 	if (curTime < lastHashTime) {
 	  maxTime += curTime - minTime;
@@ -466,18 +466,18 @@ public abstract class V1Poll extends BasePoll {
   }
 
   /**
-   * Return a hasher preinited with the challenge and verifier
+   * Return a digest preinited with the challenge and verifier
    * @param challenge the challenge bytes
    * @param verifier the verifier bytes
    * @return a MessageDigest
    */
-  MessageDigest getInitedHasher(byte[] challenge, byte[] verifier) {
-    MessageDigest hasher = m_pollmanager.getHasher(m_msg);
-    hasher.update(challenge, 0, challenge.length);
-    hasher.update(verifier, 0, verifier.length);
+  MessageDigest getInitedDigest(byte[] challenge, byte[] verifier) {
+    MessageDigest digest = m_pollmanager.getMessageDigest(m_msg);
+    digest.update(challenge, 0, challenge.length);
+    digest.update(verifier, 0, verifier.length);
     log.debug3("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
 	       +"V[" + String.valueOf(B64Code.encode(verifier)) + "]");
-    return hasher;
+    return digest;
   }
 
   public byte[] getChallenge() {
@@ -496,22 +496,23 @@ public abstract class V1Poll extends BasePoll {
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
      * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
+     * @param hasher  the <code>CachedUrlSetHasher</code> that was performing
+     *                the hash.
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
 				Object cookie,
-				MessageDigest hasher,
+				CachedUrlSetHasher hasher,
 				Exception e) {
       if(m_pollstate != PS_WAIT_HASH) {
 	log.debug("hasher returned with pollstate: " + m_pollstate);
 	return;
       }
-      boolean hash_completed = e == null ? true : false;
+      boolean hash_completed = e == null;
 
       if(hash_completed)  {
-	m_hash  = hasher.digest();
+	MessageDigest digest = hasher.getDigests()[0];
+	m_hash  = digest.digest();
 	log.debug2("Hash on " + urlset + " complete: "+
 		   String.valueOf(B64Code.encode(m_hash)));
 	m_pollstate = PS_WAIT_VOTE;
@@ -533,18 +534,19 @@ public abstract class V1Poll extends BasePoll {
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
      * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
+     * @param hasher  the <code>CachedUrlSetHasher</code> that was performing
+     *                the hash.
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
 				Object cookie,
-				MessageDigest hasher,
+				CachedUrlSetHasher hasher,
 				Exception e) {
-      boolean hash_completed = e == null ? true : false;
+      boolean hash_completed = e == null;
 
       if(hash_completed)  {
-	byte[] out_hash = hasher.digest();
+	MessageDigest digest = hasher.getDigests()[0];
+	byte[] out_hash = digest.digest();
 	Vote vote = (Vote)cookie;
 	checkVote(out_hash, vote);
 	stopVoteCheck();

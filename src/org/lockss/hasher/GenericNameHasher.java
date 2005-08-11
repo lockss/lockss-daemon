@@ -1,5 +1,5 @@
 /*
- * $Id: GenericNameHasher.java,v 1.12 2004-04-05 07:58:02 tlipkis Exp $
+ * $Id: GenericNameHasher.java,v 1.13 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -49,24 +49,35 @@ public class GenericNameHasher extends GenericHasher {
 
   public GenericNameHasher(CachedUrlSet cus, MessageDigest dig) {
     super(cus, dig);
-    iterator = cus.flatSetIterator();
-    if (iterator == null) {
-      throw new IllegalArgumentException("Called with a CachedUrlSet that "+
-					 "gave me a null flatSetIterator");
-    }
   }
 
-  protected int hashElementUpToNumBytes(int numBytes) {
+  public String typeString() {
+    return "N";
+  }
+
+  public long getEstimatedHashDuration() {
+    return 1000;
+  }
+
+  public void storeActualHashDuration(long elapsed, Exception err) {
+    // don't store name poll duration
+  }
+
+  protected Iterator getIterator(CachedUrlSet cus) {
+    return cus.flatSetIterator();
+  }
+
+  protected int hashNodeUpToNumBytes(int numBytes) {
     int totalHashed = 0;
     if (nameBytes == null) {
-      String nameStr = curElement.getUrl();
+      String nameStr = curNode.getUrl();
       if (isTrace) {
 	log.debug3("Getting new name: "+nameStr);
       }
       nameBytes = nameStr.getBytes();
       nameIdx = 0;
 
-      if (curElement.hasContent()) {
+      if (curNode.hasContent()) {
  	digest.update(CONTENT);
       } else {
 	digest.update(NO_CONTENT);
@@ -84,7 +95,7 @@ public class GenericNameHasher extends GenericHasher {
     nameIdx += len;
     totalHashed += len;
     if (nameIdx >= nameBytes.length) {
-      curElement = null;
+      endOfNode();
       nameBytes = null;
     }
     if (isTrace) {

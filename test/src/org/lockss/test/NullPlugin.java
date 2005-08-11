@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.70 2005-07-19 01:10:36 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.71 2005-08-11 06:33:18 tlipkis Exp $
  */
 
 /*
@@ -159,8 +159,8 @@ public class NullPlugin {
       throw new UnsupportedOperationException("Not implemented");
     }
 
-    public byte[] getUnfilteredContentSize() {
-      return new byte[0];
+    public long getContentSize() {
+      return 0;
     }
 
     public CIProperties getProperties() {
@@ -284,12 +284,12 @@ public class NullPlugin {
     }
 
     public org.lockss.daemon.CachedUrlSetHasher
-      getContentHasher(MessageDigest hasher) {
+      getContentHasher(MessageDigest digest) {
       return new CachedUrlSetHasher();
     }
 
     public org.lockss.daemon.CachedUrlSetHasher
-      getNameHasher(MessageDigest hasher) {
+      getNameHasher(MessageDigest digest) {
       return new CachedUrlSetHasher();
     }
 
@@ -423,6 +423,25 @@ public class NullPlugin {
    */
   public static class CachedUrlSetHasher
     implements org.lockss.daemon.CachedUrlSetHasher {
+
+    public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
+      return null;
+    }
+
+    public long getEstimatedHashDuration() {
+      return 0;
+    }
+
+    public void storeActualHashDuration(long elapsed, Exception err) {
+    }
+
+    public String typeString() {
+      return null;
+    }
+
+    public MessageDigest[] getDigests() {
+      return null;
+    }
 
     public boolean finished() {
       return false;

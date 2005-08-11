@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.23 2004-09-28 08:53:18 tlipkis Exp $
+ * $Id: HashService.java,v 1.24 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -79,14 +79,13 @@ public interface HashService extends LockssManager {
   public static final int NAME_HASH = 2;
 
   /**
-   * Ask for the content of the <code>CachedUrlSet</code> object to be
-   * hashed by the <code>hasher</code> before the expiration of
+   * Ask for the <code>CachedUrlSetHasher</code> to be
+   * executed by the <code>hasher</code> before the expiration of
    * <code>deadline</code>, and the result provided to the
    * <code>callback</code>.
-   * @param urlset   a <code>CachedUrlSet</code> object representing
-   *                 the content to be hashed.
-   * @param hasher   a <code>MessageDigest</code> object to which
-   *                 the content will be provided.
+   * @param hasher   an instance of a <code>CachedUrlSetHasher</code>
+   *                 representing a specific <code>CachedUrlSet</code>
+   *                 and hash type
    * @param deadline the time by which the callbeack must have been
    *                 called.
    * @param callback the object whose <code>hashComplete()</code>
@@ -97,36 +96,10 @@ public interface HashService extends LockssManager {
    *         <code>false</code> if the resources to do it are not
    *         available.
    */
-  public boolean hashContent(CachedUrlSet urlset,
-			     MessageDigest hasher,
-			     Deadline deadline,
-			     Callback callback,
-			     Object cookie);
-
-  /**
-   * Ask for the names in the <code>CachedUrlSet</code> object to be
-   * hashed by the <code>hasher</code> before the expiration of
-   * <code>deadline</code>, and the result provided to the
-   * <code>callback</code>.
-   * @param urlset   a <code>CachedUrlSet</code> object representing
-   *                 the content to be hashed.
-   * @param hasher   a <code>MessageDigest</code> object to which
-   *                 the content will be provided.
-   * @param deadline the time by which the callbeack must have been
-   *                 called.
-   * @param callback the object whose <code>hashComplete()</code>
-   *                 method will be called when hashing succeeds
-   *                 or fails.
-   * @param cookie   used to disambiguate callbacks
-   * @return <code>true</code> if the request has been queued,
-   *         <code>false</code> if the resources to do it are not
-   *         available.
-   */
-  public boolean hashNames(CachedUrlSet urlset,
-			   MessageDigest hasher,
-			   Deadline deadline,
-			   Callback callback,
-			   Object cookie);
+  public boolean scheduleHash(CachedUrlSetHasher hasher,
+			      Deadline deadline,
+			      Callback callback,
+			      Object cookie);
 
   /** Return the average hash speed, or -1 if not known.
    * @param digest the hashing algorithm
@@ -166,13 +139,13 @@ public interface HashService extends LockssManager {
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
      * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
+     * @param digest  the <code>MessageDigest</code> object that
      *                contains the hash.
      * @param e       the exception that caused the hash to fail.
      */
     public void hashingFinished(CachedUrlSet urlset,
 				Object cookie,
-				MessageDigest hasher,
+				CachedUrlSetHasher hasher,
 				Exception e);
   }
 

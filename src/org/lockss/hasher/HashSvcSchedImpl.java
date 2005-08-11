@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.18 2005-06-04 18:59:57 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.19 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -108,14 +108,13 @@ public class HashSvcSchedImpl
   }
 
   /**
-   * Ask for the content of the <code>CachedUrlSet</code> object to be
-   * hashed by the <code>hasher</code> before the expiration of
+   * Ask for the <code>CachedUrlSetHasher</code> to be
+   * executed by the <code>hasher</code> before the expiration of
    * <code>deadline</code>, and the result provided to the
    * <code>callback</code>.
-   * @param urlset   a <code>CachedUrlSet</code> object representing
-   *                 the content to be hashed.
-   * @param hasher   a <code>MessageDigest</code> object to which
-   *                 the content will be provided.
+   * @param hasher   an instance of a <code>CachedUrlSetHasher</code>
+   *                 representing a specific <code>CachedUrlSet</code>
+   *                 and hash type
    * @param deadline the time by which the callbeack must have been
    *                 called.
    * @param callback the object whose <code>hashComplete()</code>
@@ -126,49 +125,14 @@ public class HashSvcSchedImpl
    *         <code>false</code> if the resources to do it are not
    *         available.
    */
-  public boolean hashContent(CachedUrlSet urlset,
-			     MessageDigest hasher,
-			     Deadline deadline,
-			     Callback callback,
-			     Object cookie) {
-    HashTask task =
-      new HashTask(urlset, hasher, deadline, callback, cookie,
-		   urlset.getContentHasher(hasher),
-		   urlset.estimatedHashDuration(),
-		   CONTENT_HASH);
+  public boolean scheduleHash(CachedUrlSetHasher hasher,
+			      Deadline deadline,
+			      Callback callback,
+			      Object cookie) {
+    HashTask task = new HashTask(hasher, deadline, callback, cookie);
     return scheduleTask(task);
   }
 
-  /**
-   * Ask for the names in the <code>CachedUrlSet</code> object to be
-   * hashed by the <code>hasher</code> before the expiration of
-   * <code>deadline</code>, and the result provided to the
-   * <code>callback</code>.
-   * @param urlset   a <code>CachedUrlSet</code> object representing
-   *                 the content to be hashed.
-   * @param hasher   a <code>MessageDigest</code> object to which
-   *                 the content will be provided.
-   * @param deadline the time by which the callbeack must have been
-   *                 called.
-   * @param callback the object whose <code>hashComplete()</code>
-   *                 method will be called when hashing succeeds
-   *                 or fails.
-   * @param cookie   used to disambiguate callbacks
-   * @return <code>true</code> if the request has been queued,
-   *         <code>false</code> if the resources to do it are not
-   *         available.
-   */
-  public boolean hashNames(CachedUrlSet urlset,
-			   MessageDigest hasher,
-			   Deadline deadline,
-			   Callback callback,
-			   Object cookie) {
-    HashTask task =
-      new HashTask(urlset, hasher, deadline, callback, cookie,
-			    // tk - get better duration estimate
-		   urlset.getNameHasher(hasher), nameHashEstimate, NAME_HASH);
-    return scheduleTask(task);
-  }
 
   /** Cancel all hashes on the specified AU.  Temporary until a better
    * cancel mechanism is implemented.
@@ -257,24 +221,21 @@ public class HashSvcSchedImpl
   // HashTask
   class HashTask extends StepTask {
     CachedUrlSet urlset;
-    MessageDigest hasher;
     HashService.Callback hashCallback;
     CachedUrlSetHasher urlsetHasher;
     int hashReqSeq = -1;
-    int type;
     boolean finished = false;
     long bytesHashed = 0;
     long unaccountedBytesHashed = 0;
+    String typeString;
 
     HashTask(CachedUrlSet urlset,
-	     MessageDigest hasher,
 	     Deadline deadline,
 	     HashService.Callback hashCallback,
 	     Object cookie,
 	     CachedUrlSetHasher urlsetHasher,
-	     long estimatedDuration,
-	     int type) {
-      //      super(Deadline.in(0), deadline, estimatedDuration, getCB(), cookie);
+	     long estimatedDuration) {
+
       super(Deadline.in(0), deadline, estimatedDuration,
 	    new TaskCallback() {
 	      public void taskEvent(SchedulableTask task,
@@ -287,10 +248,37 @@ public class HashSvcSchedImpl
 	    },
 	    cookie);
       this.urlset = urlset;
-      this.hasher = hasher;
       this.hashCallback = hashCallback;
       this.urlsetHasher = urlsetHasher;
-      this.type = type;
+      typeString = urlsetHasher.typeString();
+    }
+
+    HashTask(CachedUrlSetHasher urlsetHasher,
+	     Deadline deadline,
+	     HashService.Callback hashCallback,
+	     Object cookie) {
+
+      super(Deadline.in(0), deadline, urlsetHasher.getEstimatedHashDuration(),
+	    new TaskCallback() {
+	      public void taskEvent(SchedulableTask task,
+				    Schedule.EventType event) {
+		if (log.isDebug2()) log.debug2("taskEvent: " + event);
+		if (event == Schedule.EventType.FINISH) {
+		  ((HashTask)task).doFinished();
+		}
+	      }
+	    },
+	    cookie);
+      this.urlset = urlsetHasher.getCachedUrlSet();;
+      this.hashCallback = hashCallback;
+      this.urlsetHasher = urlsetHasher;
+      typeString = urlsetHasher.typeString();
+    }
+
+    public String typeString() {
+      // this must not reference the urlsetHasher, as it might have been
+      // reset to null
+      return typeString;
     }
 
     public int step(int n) {
@@ -320,18 +308,18 @@ public class HashSvcSchedImpl
     private void doFinished() {
       finished = true;
       try {
-	if (type == HashService.CONTENT_HASH) {
-	  // tk - change interface to tell CUS what type of hash finished
-	  urlset.storeActualHashDuration(getTimeUsed(), getExcption());
-	}
-	if (hashCallback != null) {
-	  hashCallback.hashingFinished(urlset, cookie, hasher, e);
-	}
+	urlsetHasher.storeActualHashDuration(getTimeUsed(), getExcption());
       } catch (Exception e) {
-	log.error("Hash callback threw", e);
+	log.error("Hasher threw", e);
+      }
+      if (hashCallback != null) {
+	try {
+	  hashCallback.hashingFinished(urlset, cookie, urlsetHasher, e);
+	} catch (Exception e) {
+	  log.error("Hash callback threw", e);
+	}
       }
       // completed list for status only, don't hold on to caller's objects
-      hasher = null;
       hashCallback = null;
       cookie = null;
       urlsetHasher = null;
@@ -467,7 +455,7 @@ public class HashSvcSchedImpl
       row.put("state", getState(task, done));
       row.put("au", task.urlset.getArchivalUnit().getName());
       row.put("cus", task.urlset.getSpec());
-      row.put("type", getType(task));
+      row.put("type", task.typeString());
       row.put("deadline", task.getLatestFinish());
       row.put("estimate", new Long(task.getOrigEst()));
       Object used = new Long(task.getTimeUsed());
@@ -479,14 +467,6 @@ public class HashSvcSchedImpl
       row.put("timeused", used);
       row.put("bytesHashed", new Long(task.bytesHashed));
       return row;
-    }
-
-    private String getType(HashTask task) {
-      switch (task.type) {
-      case HashService.CONTENT_HASH: return "C";
-      case HashService.NAME_HASH: return "N";
-      default: return "?";
-      }
     }
 
     private Object getState(HashTask task, boolean done) {

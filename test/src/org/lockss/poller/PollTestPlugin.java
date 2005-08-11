@@ -1,5 +1,5 @@
 /*
- * $Id: PollTestPlugin.java,v 1.13 2004-10-20 18:41:13 dcfok Exp $
+ * $Id: PollTestPlugin.java,v 1.14 2005-08-11 06:33:18 tlipkis Exp $
  */
 
 /*
@@ -70,6 +70,10 @@ public class PollTestPlugin {
       return al.iterator();
     }
 
+    public Iterator contentHashIterator() {
+      return CollectionUtil.EMPTY_ITERATOR;
+    }
+
     /** Set the actual hash duration and size.
      * @param duration the number of milliseconds the hash will take
      * @param bytes the number of bytes that must be hashed
@@ -79,11 +83,11 @@ public class PollTestPlugin {
       this.bytes = bytes;
     }
 
-    public CachedUrlSetHasher getContentHasher(MessageDigest hasher) {
+    public CachedUrlSetHasher getContentHasher(MessageDigest digest) {
       return new CusHasher(duration, bytes);
     }
 
-    public CachedUrlSetHasher getNameHasher(MessageDigest hasher) {
+    public CachedUrlSetHasher getNameHasher(MessageDigest digest) {
       return new CusHasher(duration, bytes);
     }
   }
@@ -100,6 +104,10 @@ public class PollTestPlugin {
     public CusHasher(long duration, int bytes) {
       this.duration = duration;
       this.bytes = bytes;
+    }
+
+    public long getEstimatedHashDuration() {
+      return 1000;
     }
 
     public boolean finished() {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSetHasher.java,v 1.5 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockCachedUrlSetHasher.java,v 1.6 2005-08-11 06:33:18 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,26 @@ public class MockCachedUrlSetHasher implements CachedUrlSetHasher {
   }
 
   public MockCachedUrlSetHasher() {
+  }
+
+  public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public long getEstimatedHashDuration() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public void storeActualHashDuration(long elapsed, Exception err) {
+//     throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public String typeString() {
+    return "M";
+  }
+
+  public MessageDigest[] getDigests() {
+    throw new UnsupportedOperationException("Not implemented");
   }
 
   public boolean finished() {

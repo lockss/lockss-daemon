@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.17 2005-04-19 03:08:32 smorabito Exp $
+ * $Id: V1NamePoll.java,v 1.18 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -112,7 +112,7 @@ public class V1NamePoll extends V1Poll {
   /**
    * schedule the hash for this poll.
    *
-   * @param hasher
+   * @param digest
    *          the MessageDigest used to hash the content
    * @param timer
    *          the Deadline by which we must complete
@@ -123,11 +123,12 @@ public class V1NamePoll extends V1Poll {
    *          the hashing callback to use on return
    * @return true if hash successfully completed.
    */
-  boolean scheduleHash(MessageDigest hasher, Deadline timer, Object key,
+  boolean scheduleHash(MessageDigest digest, Deadline timer, Object key,
 		       HashService.Callback callback) {
 
     HashService hs = m_pollmanager.getHashService();
-    return hs.hashNames(m_cus, hasher, timer, callback, key);
+    return hs.scheduleHash(m_cus.getNameHasher(digest),
+			   timer, callback, key);
   }
 
   /**
@@ -143,10 +144,10 @@ public class V1NamePoll extends V1Poll {
       Vote vote = new NameVote(msg, false);
       log.debug3("created a new NameVote instead of a Vote");
 
-      MessageDigest hasher = getInitedHasher(msg.getChallenge(), msg
-					     .getVerifier());
+      MessageDigest digest =
+	getInitedDigest(msg.getChallenge(), msg.getVerifier());
 
-      if (!scheduleHash(hasher, m_hashDeadline, vote, new VoteHashCallback())) {
+      if (!scheduleHash(digest, m_hashDeadline, vote, new VoteHashCallback())) {
 	log.info(m_key + " no time to hash vote by " + m_hashDeadline);
 	stopVoteCheck();
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.1 2005-07-13 07:53:06 smorabito Exp $
+ * $Id: V3Poller.java,v 1.2 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.poller.v3;
 import java.io.*;
 import java.util.*;
 import java.security.*;
+import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -371,7 +372,7 @@ public class V3Poller {
     }
   }
 
-  private MessageDigest getInitedHasher() {
+  private MessageDigest getInitedDigest() {
     MessageDigest digest = null;
     try {
       digest = MessageDigest.getInstance(m_pollerState.getHashAlgorithm());
@@ -397,7 +398,7 @@ public class V3Poller {
      */
     public void hashingFinished(CachedUrlSet cus,
 				Object cookie,
-				MessageDigest hasher,
+				CachedUrlSetHasher hasher,
 				Exception e) {
       if (e == null) {
 	hashComplete();
@@ -412,10 +413,10 @@ public class V3Poller {
      */
     public void blockFinished(CachedUrlSet cus,
 			      Object cookie,
-			      MessageDigest hasher,
+			      MessageDigest digest,
 			      Exception e) {
       if (e == null) {
-	blockHashComplete((String)cookie, hasher.digest());
+	blockHashComplete((String)cookie, digest.digest());
       } else {
 	log.warning("Poll hash failed : " + e.getMessage());
 	stopPoll();

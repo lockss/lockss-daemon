@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.9 2005-05-18 05:50:03 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.10 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -90,14 +90,15 @@ public class FuncHashService extends LockssTestCase {
 
   boolean hashContent(String cookie, int duration, int eachStepTime,
 		      long deadInOrAt, HashService.Callback cb) {
-    MyMockCUSH hasher = new MyMockCUSH(duration, eachStepTime, cookie);
+    MyMockCUSH hasher = new MyMockCUSH(cus, duration, eachStepTime, cookie);
     //    hasher.setNumBytes(bytes);
     cus.setContentHasher(hasher);
     cus.setEstimatedHashDuration(duration);
     Deadline deadline =
       (TimeBase.isSimulated()
        ? Deadline.at(deadInOrAt) : Deadline.in(deadInOrAt));
-    return svc.hashContent(cus, dig, deadline, cb, null);
+    return svc.scheduleHash(cus.getContentHasher(dig),
+			    deadline, cb, null);
   }
 
   void waitUntilDone() throws Exception {
@@ -120,7 +121,7 @@ public class FuncHashService extends LockssTestCase {
     return new HashService.Callback() {
 	public void hashingFinished(CachedUrlSet urlset,
 				    Object cookie,
-				    MessageDigest hasher,
+				    CachedUrlSetHasher hasher,
 				    Exception e) {
 	  log.debug("Hashing finished: " + cookie);
 	  //	  cookieList.add(cookie);
@@ -223,6 +224,7 @@ public class FuncHashService extends LockssTestCase {
   }
 
   public class MyMockCUSH implements CachedUrlSetHasher {
+    CachedUrlSet cus;
     int eachStepTime;
     int eachStepBytes = 1000;
     String cookie;
@@ -234,10 +236,32 @@ public class FuncHashService extends LockssTestCase {
      * each step taking eachStepTime ms.  If eachStepTime is positive, it
      * waits that long; if negative, it advances simulated time by that
      * amount. */
-    public MyMockCUSH(int duration, int eachStepTime, String cookie) {
+    public MyMockCUSH(CachedUrlSet cus, int duration,
+		      int eachStepTime, String cookie) {
+      this.cus = cus;
       this.finishedAt = Deadline.in(duration);
       this.eachStepTime = eachStepTime;
       this.cookie = cookie;
+    }
+
+    public CachedUrlSet getCachedUrlSet() {
+      return cus;
+    }
+
+    public long getEstimatedHashDuration() {
+      return cus.estimatedHashDuration();
+    }
+
+    public String typeString() {
+      return "M";
+    }
+
+    public MessageDigest[] getDigests() {
+      return null;
+    }
+
+    public void storeActualHashDuration(long elapsed, Exception err) {
+      cus.storeActualHashDuration(elapsed, err);
     }
 
     public boolean finished() {

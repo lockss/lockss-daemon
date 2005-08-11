@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.16 2004-04-05 07:58:02 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.17 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -45,20 +45,74 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   protected static Logger log = Logger.getLogger("GenericHasher");
 
   protected CachedUrlSet cus = null;
+  protected ArchivalUnit au = null;
   protected MessageDigest digest = null;
-  protected CachedUrlSetNode curElement = null;
+  protected CachedUrlSetNode curNode = null;
+  protected CachedUrl curCu = null;
+
   protected Iterator iterator = null;
   protected boolean isFinished = false;
   protected boolean isTrace = log.isDebug3();
 
-  protected GenericHasher(CachedUrlSet cus, MessageDigest digest) {
-    if (digest == null) {
-      throw new IllegalArgumentException("Called with a null MessageDigest");
-    } else if (cus == null) {
-      throw new IllegalArgumentException("Called with a null CachedUrlSet");
+  protected GenericHasher(CachedUrlSet cus) {
+    if (cus == null) {
+      throw new NullPointerException("Called with a null CachedUrlSet");
     }
     this.cus = cus;
+    au = cus.getArchivalUnit();
+    iterator = getIterator(cus);
+    if (iterator == null) {
+      throw new IllegalArgumentException(cus + " returned null iterator");
+    }
+  }
+
+  protected GenericHasher(CachedUrlSet cus, MessageDigest digest) {
+    this(cus);
+    if (digest == null) {
+      throw new IllegalArgumentException("Called with a null MessageDigest");
+    }
     this.digest = digest;
+  }
+
+  /** Subclass must override to return a short string describing the type
+   * of hash, to be used in a status table
+   */
+  public abstract String typeString();
+
+  /** Subclass must override to return the CUS iterator appropriate for the
+   * hash
+   */
+  protected abstract Iterator getIterator(CachedUrlSet cus);
+  
+  /* Subclass should override this to hash the specified element
+   */
+  protected abstract int hashNodeUpToNumBytes(int numBytes)
+      throws IOException;
+
+  /** Subclass should override if it wants to exclude from the hash some
+   * nodes that are returned by the iterator */
+  protected boolean isIncluded(CachedUrlSetNode node) {
+    return true;
+  }
+
+  /** Subclass should override to return proper array of digest */
+  public MessageDigest[] getDigests() {
+    MessageDigest[] res = new MessageDigest[] { digest };
+    return res;
+  }
+
+  /** Subclass should override to record the actual hash time, if
+   * appropriate for the hash type
+   */
+  public abstract void storeActualHashDuration(long elapsed, Exception err);
+
+
+  public CachedUrlSet getCachedUrlSet() {
+    return cus;
+  }
+
+  public long getEstimatedHashDuration() {
+    return cus.estimatedHashDuration();
   }
 
   /**
@@ -67,6 +121,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
   public boolean finished() {
     return isFinished;
   }  
+
   /**
    * @param numBytes maximum number of bytes to hash (counting delimiters)
    * @return number of bytes actually hashed.  This will only be less than
@@ -84,9 +139,9 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 
     int totalBytesHashed = 0;
     while (bytesLeftToHash > 0) {
-      if (curElement == null) {
-	curElement = getNextElement();
-	if (curElement != null) {
+      if (curNode == null) {
+	curNode = getNextNode();
+	if (curNode != null) {
 	  if (isTrace) log.debug3("Getting next element to hash");
 	}
 	else {
@@ -96,24 +151,41 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
 	}
       }
       int numBytesHashed =
-	hashElementUpToNumBytes(bytesLeftToHash);
+	hashNodeUpToNumBytes(bytesLeftToHash);
       bytesLeftToHash -= numBytesHashed;
       totalBytesHashed += numBytesHashed;
     }
     return totalBytesHashed;
   }
 
-  /*
-   * Subclasses should override this to correctly hash the specified element
-   */
-  protected abstract int hashElementUpToNumBytes(int numBytes)
-      throws IOException;
-
-  protected CachedUrlSetNode getNextElement() {
-    if (iterator.hasNext()) {
-      return (CachedUrlSetNode)iterator.next();
+  protected CachedUrlSetNode getNextNode() {
+    while (iterator.hasNext()) {
+      CachedUrlSetNode node = (CachedUrlSetNode)iterator.next();
+      if (isIncluded(node)) {
+	return node;
+      }
     }
     return null;
+  }
+
+  protected CachedUrl getCurrentCu() {
+    if (curCu == null) {
+      switch (curNode.getType()) {
+      case CachedUrlSetNode.TYPE_CACHED_URL_SET:
+        CachedUrlSet cus = (CachedUrlSet)curNode;
+        curCu = au.makeCachedUrl(cus.getUrl());
+        break;
+      case CachedUrlSetNode.TYPE_CACHED_URL:
+        curCu = (CachedUrl)curNode;
+        break;
+      }
+    }
+    return curCu;
+  }
+
+  protected void endOfNode() {
+    curNode = null;
+    curCu = null;
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: CachedUrlSetHasher.java,v 1.5 2003-06-20 22:34:50 claire Exp $
+ * $Id: CachedUrlSetHasher.java,v 1.6 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -32,24 +32,58 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.daemon;
 import java.io.IOException;
+import java.security.MessageDigest;
+import org.lockss.plugin.*;
 
 /**
- * An object encapsulating a hash in progress on a <code>CachedUrlSet</code>.
- *
- * @author  David S. H. Rosenthal
- * @version 0.0
+ * CachedUrlSetHasher describes a hash to be performed on a CachedUrlSet,
+ * and encapsulates the state of the hash in progress
  */
 public interface CachedUrlSetHasher {
-    /**
-     * Hash the next <code>numBytes</code> bytes
-     * @param numBytes the number of bytes to hash
-     * @return         the number of bytes hashed
-     * @exception java.io.IOException on many kinds of I/O problem
-     */
-    public int hashStep(int numBytes) throws IOException;
-    /**
-     * True if there is nothing left to hash.
-     * @return <code>true</code> if there is nothing left to hash.
-     */
-    public boolean finished();
+  /**
+   * @return the CachedUrlSet to be/being hashed by this hasher
+   */
+  public CachedUrlSet getCachedUrlSet();
+
+  /**
+   * @return the estimated time needed for this type of hash over the
+   * CachedUrlSet.
+   */
+  public long getEstimatedHashDuration();
+
+  /**
+   * Inform the CachedUrlSet of the time actually needed to do the hash, if
+   * appropriate for this type of hash.
+   * @param elapsed the measured duration of a hash attempt.
+   * @param err the exception that terminated the hash, or null if it
+   * succeeded
+   */
+  public void storeActualHashDuration(long elapsed, Exception err);
+
+  /**
+   * @return a short string designating the type of has, suitable for use
+   * in status displays
+   */
+  public String typeString();
+
+  /**
+   * @return the array of digests in this hasher.  This is for
+   * compatibility with the old content and name hashers (where it returns
+   * a single element array containing the single digest), so that the hash
+   * done callback can get at the digest.
+   */
+  public MessageDigest[] getDigests();
+
+  /**
+   * Hash the next <code>numBytes</code> bytes
+   * @param numBytes the number of bytes to hash
+   * @return         the number of bytes hashed
+   * @exception java.io.IOException on many kinds of I/O problem
+   */
+  public int hashStep(int numBytes) throws IOException;
+  /**
+   * True if there is nothing left to hash.
+   * @return <code>true</code> if there is nothing left to hash.
+   */
+  public boolean finished();
 }

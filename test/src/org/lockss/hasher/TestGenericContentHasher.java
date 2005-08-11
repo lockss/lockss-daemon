@@ -1,5 +1,5 @@
 /*
- * $Id: TestGenericContentHasher.java,v 1.24 2004-10-13 23:07:19 clairegriffin Exp $
+ * $Id: TestGenericContentHasher.java,v 1.25 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.security.*;
 import junit.framework.TestCase;
 import org.lockss.test.*;
 import org.lockss.daemon.*;
-import org.lockss.util.TimeBase;
+import org.lockss.util.*;
 import org.lockss.plugin.*;
 
 public class TestGenericContentHasher extends LockssTestCase {
@@ -77,7 +77,7 @@ public class TestGenericContentHasher extends LockssTestCase {
       CachedUrlSetHasher hasher = new GenericContentHasher(null, dig);
       fail("Creating a GenericContentHasher with a null cus should throw "+
 	   "an IllegalArgumentException");
-    } catch (IllegalArgumentException iae) {
+    } catch (NullPointerException iae) {
     }
   }
 
@@ -91,6 +91,23 @@ public class TestGenericContentHasher extends LockssTestCase {
 	   "throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
+  }
+
+  public void testAccessors() throws IOException {
+    MockCachedUrlSet cus = new MockCachedUrlSet();
+    cus.setHashIterator(CollectionUtil.EMPTY_ITERATOR);
+    cus.setFlatIterator(null);
+    cus.setEstimatedHashDuration(54321);
+    MessageDigest dig = new MockMessageDigest();
+    CachedUrlSetHasher hasher = new GenericContentHasher(cus, dig);
+    assertSame(cus, hasher.getCachedUrlSet());
+    assertEquals(54321, hasher.getEstimatedHashDuration());
+    assertEquals("C", hasher.typeString());
+    hasher.storeActualHashDuration(12345, null);
+    assertEquals(12345, cus.getActualHashDuration());
+    MessageDigest[] digs = hasher.getDigests();
+    assertEquals(1, digs.length);
+    assertEquals(dig, digs[0]);
   }
 
   public void testHashNoChildren() throws IOException, FileNotFoundException {
@@ -216,7 +233,7 @@ public class TestGenericContentHasher extends LockssTestCase {
     MockArchivalUnit mau = newMockArchivalUnit(TEST_URL_BASE);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(TEST_URL_BASE, false, true);
-    mau.addContent(TEST_URL_BASE,  "");
+//     mau.addContent(TEST_URL_BASE,  "");
     ArrayList list = new ArrayList(1);
     list.add(mau.makeCachedUrl(TEST_URL_BASE));
     cus.setHashItSource(list);
@@ -502,8 +519,8 @@ public class TestGenericContentHasher extends LockssTestCase {
       this.size = size;
     }
 
-    public byte[] getUnfilteredContentSize() {
-      return (new BigInteger(Integer.toString(size)).toByteArray());
+    public long getContentSize() {
+      return size;
     }
   }
   public static void main(String[] argv) {

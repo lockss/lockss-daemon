@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.18 2004-12-07 05:17:52 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.19 2005-08-11 06:33:19 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.poller;
 import java.security.*;
 import java.util.*;
 
+import org.lockss.daemon.*;
 import org.lockss.alert.*;
 import org.lockss.config.*;
 import org.lockss.hasher.*;
@@ -391,10 +392,10 @@ public class V1PollTally extends PollTally {
  */
 
 void replayVoteCheck(Vote vote, Deadline deadline) {
-  MessageDigest hasher = poll.getInitedHasher(vote.getChallenge(),
+  MessageDigest digest = poll.getInitedDigest(vote.getChallenge(),
                                               vote.getVerifier());
 
-  if (!poll.scheduleHash(hasher, deadline, poll.copyVote(vote, vote.agree),
+  if (!poll.scheduleHash(digest, deadline, poll.copyVote(vote, vote.agree),
                          new ReplayVoteCallback())) {
     poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
     log.debug("couldn't schedule hash - stopping replay poll");
@@ -440,13 +441,13 @@ class ReplayVoteCallback implements HashService.Callback {
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
      * @param cookie  used to disambiguate callbacks.
-     * @param hasher  the <code>MessageDigest</code> object that
-     *                contains the hash.
+     * @param hasher  the <code>CachedUrlSetHasher</code> that was performing
+     *                the hash.
      * @param e       the exception that caused the hash to fail.
      */
   public void hashingFinished(CachedUrlSet urlset,
 			      Object cookie,
-			      MessageDigest hasher,
+			      CachedUrlSetHasher hasher,
 			      Exception e) {
     boolean hash_completed = e == null ? true : false;
 
@@ -458,7 +459,8 @@ class ReplayVoteCallback implements HashService.Callback {
 	v = poll.copyVote(v,true);
       }
       else {
-	v.setAgreeWithHash(hasher.digest());
+	MessageDigest digest = hasher.getDigests()[0];
+	v.setAgreeWithHash(digest.digest());
       }
       addVote(v, id, isLocalVote);
       replayNextVote();
