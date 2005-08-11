@@ -1,5 +1,5 @@
 /*
- * $Id: TestDamagedNodeSet.java,v 1.1 2005-07-19 00:12:22 troberts Exp $
+ * $Id: TestDamagedNodeSet.java,v 1.1.2.1 2005-08-11 15:27:36 troberts Exp $
  */
 
 /*
@@ -54,6 +54,24 @@ public class TestDamagedNodeSet extends LockssTestCase {
 					    new MockHistoryRepository());
     dns.addToDamage("http://www.example.com/");
     assertTrue(dns.hasDamage("http://www.example.com/"));
+  }
+
+  public void testDoesnotWriteDamageIfNoChange() {
+    MockHistoryRepository histRep = new MockHistoryRepository();
+    DamagedNodeSet dns = new DamagedNodeSet(new MockArchivalUnit(), histRep);
+    assertEquals(0, histRep.timesStoreDamagedNodeSetCalled());
+    dns.addToDamage("http://www.example.com/");
+    assertEquals(1, histRep.timesStoreDamagedNodeSetCalled());
+    dns.addToDamage("http://www.example.com/");
+    assertEquals(1, histRep.timesStoreDamagedNodeSetCalled());
+    assertTrue(dns.hasDamage("http://www.example.com/"));
+
+    dns.removeFromDamage("http://www.example.com/");
+    assertEquals(2, histRep.timesStoreDamagedNodeSetCalled());
+    dns.removeFromDamage("http://www.example.com/");
+    assertEquals(2, histRep.timesStoreDamagedNodeSetCalled());
+
+    assertFalse(dns.hasDamage("http://www.example.com/"));
   }
 
 }

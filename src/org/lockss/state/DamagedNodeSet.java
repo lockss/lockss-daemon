@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.18 2005-07-19 16:49:08 troberts Exp $
+ * $Id: DamagedNodeSet.java,v 1.18.2.1 2005-08-11 15:27:36 troberts Exp $
  */
 
 /*
@@ -158,8 +158,9 @@ public class DamagedNodeSet {
    * @param nodeUrl the damaged url
    */
   synchronized public void addToDamage(String nodeUrl) {
-    nodesWithDamage.add(nodeUrl);
-    repository.storeDamagedNodeSet(this);
+    if (nodesWithDamage.add(nodeUrl)) {
+      repository.storeDamagedNodeSet(this);
+    }
   }
 
   /**
@@ -194,8 +195,9 @@ public class DamagedNodeSet {
    * @param nodeUrl url to remove
    */
   synchronized public void removeFromDamage(String nodeUrl) {
-    nodesWithDamage.remove(nodeUrl);
-    repository.storeDamagedNodeSet(this);
+    if(nodesWithDamage.remove(nodeUrl)) {
+      repository.storeDamagedNodeSet(this);
+    }
   }
 
   /**
