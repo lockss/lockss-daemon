@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.20 2005-08-11 15:30:13 troberts Exp $
+ * $Id: DamagedNodeSet.java,v 1.21 2005-08-11 17:26:57 troberts Exp $
  */
 
 /*
@@ -48,8 +48,8 @@ public class DamagedNodeSet {
   // while it is logical to use a Set instead of an ArrayList, it is not
   // possible due to Castor's inability to marshall groups of Sets correctly.
   HashMap cusToRepair = new HashMap();
-  HistoryRepository repository;
-  ArchivalUnit theAu;
+  transient HistoryRepository repository;
+  transient ArchivalUnit theAu;
 
   /**
    * Simple constructor to allow bean creation during unmarshalling.
