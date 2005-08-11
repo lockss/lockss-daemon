@@ -1034,6 +1034,13 @@ def postTagTests():
     suite.addTest(SimpleExtraFileTestCase())
     suite.addTest(RangedNamePollDeleteTestCase())
     suite.addTest(RangedNamePollExtraFileTestCase())
+    suite.addTest(TinyUiUnknownHostTestCase())
+    suite.addTest(TinyUiMalformedUrlTestCase())
+    suite.addTest(TinyUiForbiddenTestCase())
+    suite.addTest(TinyUiRefusedTestCase())
+    suite.addTest(TinyUiFileNotFoundTestCase())
+    suite.addTest(TotalLossRecoveryTestCase())
+    suite.addTest(SimpleDamageRepairFromCacheTestCase())
     return suite
 
 def simpleTests():
