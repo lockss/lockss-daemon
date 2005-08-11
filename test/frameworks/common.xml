@@ -101,9 +101,10 @@
 	<value>org.lockss.plugin.msr.MSRPlugin</value>
 	<value>edu.cornell.library.jbe.JBEPlugin</value>
 	<value>edu.cornell.library.epr.EPRPlugin2001</value>
-	<value>gov.gpo.access.permanent.plugin.TreasuryBulletinPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
+	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
       </list>
     </property>
 
@@ -150,7 +151,7 @@
 	<property name="class" value="xpath" />
 	<property name="xpath"
 	  value="[
-	  pluginName='gov.gpo.access.permanent.plugin.TreasuryBulletinPlugin'
+	  pluginName='gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin'
 	  ]"
 	  />
@@ -161,6 +162,7 @@
 	<property name="xpath"
 	  value="[
 	  pluginName='org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'
 	  ]"
 	  />
       </property>
@@ -221,6 +223,24 @@
     <property name="title">
 
 
+
+      <property name="VirginiaTechETD2004">
+	<property name="title" value="Virginia Tech ETD 2004" />
+	<property name="journalTitle" value="Virginia Tech ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://scholar.lib.vt.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+	</property>
+      </property>
 
       <property name="vanderbiltetd1999">
 	<property name="title" value="Vanderbilt ETD 1999" />
@@ -351,7 +371,7 @@
       <property name="Treasury_Bulletin2005">
 	<property name="title" value="Treasury Bulletin 2005" />
 	<property name="journalTitle" value="Treasury Bulletin" />
-	<property name="plugin" value="gov.gpo.access.permanent.plugin.TreasuryBulletinPlugin" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
 	  <property name="value" value="http://permanent.access.gpo.gov/lockss/Treasury_Bulletin/" />
