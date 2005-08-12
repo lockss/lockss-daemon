@@ -1,8 +1,8 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.10 2004-09-28 08:53:20 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.11 2005-08-12 18:26:37 thib_gc Exp $
  *
 
- Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+ Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,22 +29,29 @@
 */
 
 package org.lockss.alert;
-import java.io.*;
-import java.net.*;
+
+import java.io.File;
 import java.util.*;
-import org.lockss.app.*;
-import org.lockss.util.*;
+
+import org.lockss.app.BaseLockssDaemonManager;
+import org.lockss.app.ConfigurableManager;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
+import org.lockss.util.*;
+import org.lockss.util.ObjectSerializer.SerializationException;
 
 /**
- * AlertManagerImpl matches alerts against configured filters and invokes
- * the actions associated with matching patterns.  Multiple groupable
- * alerts may be deferred and reported together.
+ * <p>Matches alerts against configured filters and invokes the
+ * actions associated with matching patterns; multiple groupable
+ * alerts may be deferred and reported together.</p>
  */
-public class AlertManagerImpl extends BaseLockssDaemonManager
-  implements AlertManager, ConfigurableManager {
+public class AlertManagerImpl
+    extends BaseLockssDaemonManager
+    implements AlertManager, ConfigurableManager {
+
+  /**
+   * <p>A logger for use by instances of this class.</p> 
+   */
   protected static Logger log = Logger.getLogger("AlertMgr");
 
   static final String PARAM_ALERTS_ENABLED = PREFIX + "enabled";
@@ -61,7 +68,6 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   static final String PARAM_DELAY_MAX = DELAY_PREFIX + "max";
   static final long DEFAULT_DELAY_MAX = 2 * Constants.HOUR;
 
-
   static final String PARAM_ALERT_ALL_EMAIL = PREFIX + "allEmail";
 
   public static final String CONFIG_FILE_ALERT_CONFIG = "alertconfig.xml";
@@ -76,7 +82,7 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
-//     loadConfig();
+//  loadConfig();
   }
 
   void tmpConfig(String address) {
@@ -85,8 +91,8 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
     } else {
       AlertAction action = new AlertActionMail(address);
       AlertConfig conf =
-	new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
-						      action)));
+        new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+            action)));
       alertConfig = conf;
     }
   }
@@ -96,16 +102,16 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   //   }
 
   public synchronized void setConfig(Configuration config,
-				     Configuration prevConfig,
-				     Configuration.Differences changedKeys) {
+      Configuration prevConfig,
+      Configuration.Differences changedKeys) {
     alertsEnabled = config.getBoolean(PARAM_ALERTS_ENABLED,
-				      DEFAULT_ALERTS_ENABLED);
+        DEFAULT_ALERTS_ENABLED);
     initialDelay = config.getTimeInterval(PARAM_DELAY_INITIAL,
-				      DEFAULT_DELAY_INITIAL);
+        DEFAULT_DELAY_INITIAL);
     incrDelay = config.getTimeInterval(PARAM_DELAY_INCR,
-				      DEFAULT_DELAY_INCR);
+        DEFAULT_DELAY_INCR);
     maxDelay = config.getTimeInterval(PARAM_DELAY_MAX,
-				      DEFAULT_DELAY_MAX);
+        DEFAULT_DELAY_MAX);
     if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)) {
       tmpConfig(config.get(PARAM_ALERT_ALL_EMAIL));
     }
@@ -131,7 +137,7 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
       //       store(file, new AlertConfigBean(alertConfig));
       store(file, alertConfig);
     } catch (Exception e) {
-      log.error("Couldn't store alert config: ", e);
+      log.error("Could not store alert config: ", e);
       throw e;
     }
   }
@@ -139,59 +145,51 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
   AlertConfig loadAlertConfig(File file) {
     try {
       log.debug3("Loading alert config");
-      AlertConfig acb = (AlertConfig)load(file, AlertConfig.class);
-      if (acb == null) {
-	log.debug2("No alert config");
-	// none found, so use default
-	return new AlertConfig();
-      }
-      return acb;
-    } catch (XmlMarshaller.MarshallingException me) {
-      log.error("Marshalling exception for alert config '"+
-		"': " + me.getMessage());
-      // continue with default AlertConfig
-      return new AlertConfig();
+      AlertConfig ac = (AlertConfig)load(file);
+      return ac;
+    } catch (SerializationException se) {
+      log.error(
+          "Marshalling exception for alert config '" + "'", se);
+      // drop down to default value
     } catch (Exception e) {
-      log.error("Couldn't load alert config", e);
-      throw
-	new RuntimeException("Couldn't load alert config: " + e.getMessage());
+      log.error("Could not load alert config", e);
+      throw new RuntimeException(
+          "Could not load alert config: " + e.getMessage());
     }
+    
+    // Default value
+    return new AlertConfig();
   }
 
-  static final String MAPPING_FILE_NAME = "/org/lockss/alert/alertmapping.xml";
-
-
-  static final String[] MAPPING_FILES = {
-    MAPPING_FILE_NAME,
-  };
-
-
   /**
-   * Utility function to marshall classes.
-   * @param root the root dir
-   * @param fileName the file name
-   * @param storeObj the Object to marshall
-   * @throws Exception
+   * <p>Stores the object in the given file.</p>
+   * @param file The destination file.
+   * @param obj  An object to serialize.
+   * @throws Exception if an error condition arises.
    */
   void store(File file, Object obj) throws Exception {
-    XmlMarshaller marshaller = new XmlMarshaller();
-    marshaller.store(file, obj, marshaller.getMapping(MAPPING_FILES));
+    ObjectSerializer serializer = makeObjectSerializer();
+    serializer.serialize(file, obj);
   }
 
   /**
-   * Utility function to unmarshall classes.
-   * @param file the file
-   * @param loadClass the Class type
-   * @return Object the unmarshalled Object
-   * @throws Exception
+   * <p>Retrieves an object from the given file.</p>
+   * @param file A file containing a serialized object.
+   * @return An unmarshalled object.
+   * @throws Exception if an error condition arises.
    */
-  Object load(File file, Class loadClass) throws Exception {
-    XmlMarshaller marshaller = new XmlMarshaller();
-    return marshaller.load(file, loadClass,
-			   marshaller.getMapping(MAPPING_FILES));
+  Object load(File file) throws Exception {
+    ObjectSerializer deserializer = makeObjectSerializer();
+    return deserializer.deserialize(file);
   }
 
-  /** Raise an Alert */
+  private static ObjectSerializer makeObjectSerializer() {
+    return new XStreamSerializer();
+  }
+
+  /**
+   * <p>Raises an alert.</p>
+   */
   public void raiseAlert(Alert alert) {
     if (!alertsEnabled || alertConfig == null) {
       log.debug3("alerts disabled");
@@ -205,13 +203,15 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  /** Return the actions whose pattern matches the alert. */
+  /**
+   * <p>Returns the actions whose pattern matches the alert.
+   */ 
   Set findMatchingActions(Alert alert, List filters) {
     Set res = new HashSet();
     for (Iterator iter = filters.iterator(); iter.hasNext(); ) {
       AlertFilter filt = (AlertFilter)iter.next();
       if (filt.getPattern().isMatch(alert)) {
-	res.add(filt.getAction());
+        res.add(filt.getAction());
       }
     }
     return res;
@@ -246,75 +246,77 @@ public class AlertManagerImpl extends BaseLockssDaemonManager
     pend.addAlert(alert);
   }
 
-  /** Makes decisions about delaying notification of alerts in order to
-   * report them in groups */
+  /**
+   * <p>Makes decisions about delaying notification of alerts in order
+   * to report them in groups.</p>
+   */
   class PendingActions {
     AlertAction action;
     List alerts;
     Deadline trigger;
     long latestTrigger;
     boolean isProcessed = false;
-
+    
     PendingActions(AlertAction action) {
       this.action = action;
     }
-
+    
     synchronized void addAlert(Alert alert) {
       if (alert.getBool(Alert.ATTR_IS_TIME_CRITICAL) ||
-	  action.getMaxPendTime() == 0) {
-	action.record(getDaemon(), alert);
-	return;
+          action.getMaxPendTime() == 0) {
+        action.record(getDaemon(), alert);
+        return;
       }	
       if (alerts == null || isProcessed) {
-	if (log.isDebug3()) log.debug3("Recording first: " + alert);
-	// record this one, start list for successive, start timer
-	alerts = new ArrayList();
-	alerts.add(alert);
-	isProcessed = false;
-	latestTrigger = now() + min(maxDelay, action.getMaxPendTime());
-	trigger = Deadline.at(min(now() + initialDelay, latestTrigger));
-	scheduleTimer();
+        if (log.isDebug3()) log.debug3("Recording first: " + alert);
+        // record this one, start list for successive, start timer
+        alerts = new ArrayList();
+        alerts.add(alert);
+        isProcessed = false;
+        latestTrigger = now() + min(maxDelay, action.getMaxPendTime());
+        trigger = Deadline.at(min(now() + initialDelay, latestTrigger));
+        scheduleTimer();
       } else {
-	if (log.isDebug3()) log.debug3("Adding: " + alert);
-	alerts.add(alert);
-	trigger.expireAt(min(now() + incrDelay, latestTrigger));
-	if (log.isDebug3()) log.debug3(" and resetting timer to " + trigger);
-	if (isTime()) {
-	  execute();
-	}
+        if (log.isDebug3()) log.debug3("Adding: " + alert);
+        alerts.add(alert);
+        trigger.expireAt(min(now() + incrDelay, latestTrigger));
+        if (log.isDebug3()) log.debug3(" and resetting timer to " + trigger);
+        if (isTime()) {
+          execute();
+        }
       }
     }
-
+    
     long now() {
       return TimeBase.nowMs();
     }
-
+    
     long min(long a, long b) {
       return a <= b ? a : b;
     }
-
+    
     boolean isTime() {
       return false;
     }
-
+    
     void scheduleTimer() {
       if (log.isDebug3()) log.debug3("Action timer " + trigger);
       TimerQueue.schedule(trigger,
-			  new TimerQueue.Callback() {
-			    public void timerExpired(Object cookie) {
-			      execute();
-			    }},
-			  null);
+          new TimerQueue.Callback() {
+        public void timerExpired(Object cookie) {
+          execute();
+        }},
+        null);
     }
-
+    
     synchronized void execute() {
       if (!isProcessed && (alerts != null) && !alerts.isEmpty()) {
-	if (alerts.size() == 1) {
-	  action.record(getDaemon(), (Alert)alerts.get(0));
-	} else {
-	  action.record(getDaemon(), alerts);
-	}
-	alerts = null;
+        if (alerts.size() == 1) {
+          action.record(getDaemon(), (Alert)alerts.get(0));
+        } else {
+          action.record(getDaemon(), alerts);
+        }
+        alerts = null;
       }
       isProcessed = true;
     }

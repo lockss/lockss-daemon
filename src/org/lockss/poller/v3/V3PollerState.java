@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerState.java,v 1.1 2005-07-13 07:53:06 smorabito Exp $
+ * $Id: V3PollerState.java,v 1.2 2005-08-12 18:26:37 thib_gc Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import java.io.*;
 
 import org.lockss.util.*;
-import org.lockss.util.XmlMarshaller.MarshallingException;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;

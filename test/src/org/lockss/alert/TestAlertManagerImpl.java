@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.5 2004-09-29 18:58:18 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.6 2005-08-12 18:26:37 thib_gc Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     File file = FileTestUtil.tempFile("foo");
     mgr.storeAlertConfig(file, config);
     assertTrue(file.exists());
-    AlertConfig c2 = (AlertConfig)mgr.load(file, AlertConfig.class);
+    AlertConfig c2 = (AlertConfig)mgr.load(file);
 //     assertEquals(config, c2);
   }
 
