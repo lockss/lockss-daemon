@@ -1157,29 +1157,6 @@ class TinyUiFileNotFoundTestCase(TinyUiTests):
 ### called by name when running this test script.
 ###########################################################################
 
-def all():
-    suite = unittest.TestSuite()
-    suite.addTest(simpleTests())
-    suite.addTest(rangedTests())
-    suite.addTest(randomTests())
-    return suite
-
-def postTagTests():
-    suite = unittest.TestSuite()
-    suite.addTest(SimpleDamageTestCase())
-    suite.addTest(SimpleDeleteTestCase())
-    suite.addTest(SimpleExtraFileTestCase())
-    suite.addTest(RangedNamePollDeleteTestCase())
-    suite.addTest(RangedNamePollExtraFileTestCase())
-    suite.addTest(TinyUiUnknownHostTestCase())
-    suite.addTest(TinyUiMalformedUrlTestCase())
-    suite.addTest(TinyUiForbiddenTestCase())
-    suite.addTest(TinyUiRefusedTestCase())
-    suite.addTest(TinyUiFileNotFoundTestCase())
-    suite.addTest(TotalLossRecoveryTestCase())
-    suite.addTest(SimpleDamageRepairFromCacheTestCase())
-    return suite
-
 def simpleTests():
     suite = unittest.TestSuite()
     suite.addTest(SimpleDamageTestCase())
@@ -1210,6 +1187,19 @@ def totalLossRecoveryTests():
     suite.addTest(TotalLossRecoveryTestCase())
     return suite
 
+def tinyUiTests():
+    suite = unittest.TestSuite()
+    suite.addTest(TinyUiUnknownHostTestCase())
+    suite.addTest(TinyUiMalformedUrlTestCase())
+    suite.addTest(TinyUiForbiddenTestCase())
+    suite.addTest(TinyUiRefusedTestCase())
+    suite.addTest(TinyUiFileNotFoundTestCase())
+    return suite
+
+##
+## Ignore these... mainly used for testing this framework.
+##
+
 def succeedingTests():
     suite = unittest.TestSuite()
     suite.addTest(SucceedingTestTestCase())
@@ -1230,15 +1220,20 @@ def immediateFailingTests():
     suite.addTest(ImmediateFailingTestTestCase())
     return suite
 
-def tinyUiTests():
+##
+## Tests to be run after tagging.
+##
+def postTagTests():
     suite = unittest.TestSuite()
-    suite.addTest(TinyUiUnknownHostTestCase())
-    suite.addTest(TinyUiMalformedUrlTestCase())
-    suite.addTest(TinyUiForbiddenTestCase())
-    suite.addTest(TinyUiRefusedTestCase())
-    suite.addTest(TinyUiFileNotFoundTestCase())
+    suite.addTest(simpleTests())
+    suite.addTest(rangedTests())
+    suite.addTest(randomTests())
+    suite.addTest(tinyUiTests())
+    suite.addTest(repairFromCacheTests())
+    suite.addTest(totalLossRecoveryTests())
     return suite
 
+ 
 ###########################################################################
 ### Main entry point for this test suite.
 ###########################################################################
