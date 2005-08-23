@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.11 2005-07-18 07:57:21 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.12 2005-08-23 22:05:44 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -37,7 +37,6 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.util.*;
-import org.mortbay.tools.*;
 
 /** Utilities for Configuration and ConfigManager
  */

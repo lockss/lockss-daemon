@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.40 2005-07-19 16:32:33 tlipkis Exp $
+ * $Id: AuConfig.java,v 1.41 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.*;
 import java.net.*;
 import java.text.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.util.*;
 import org.lockss.plugin.*;

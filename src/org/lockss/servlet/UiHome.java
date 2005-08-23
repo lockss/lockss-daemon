@@ -1,5 +1,5 @@
 // ========================================================================
-// $Id: UiHome.java,v 1.4 2005-05-02 19:26:56 tlipkis Exp $
+// $Id: UiHome.java,v 1.5 2005-08-23 22:05:44 tlipkis Exp $
 // ========================================================================
 
 /*
@@ -41,7 +41,6 @@ import java.text.*;
 //  import com.mortbay.servlet.*;
 //  import org.mortbay.util.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;

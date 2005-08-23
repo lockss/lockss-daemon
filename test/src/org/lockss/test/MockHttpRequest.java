@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpRequest.java,v 1.1 2005-07-13 17:47:33 troberts Exp $
+ * $Id: MockHttpRequest.java,v 1.2 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.test;
 
 import java.util.*;
+import java.security.Principal;
 import org.mortbay.http.*;
 import javax.servlet.http.*;
 import org.mortbay.util.*;
@@ -43,9 +44,9 @@ public class MockHttpRequest extends HttpRequest {
   URI uri;
 
 
-  public UserPrincipal	basicAuthenticated(UserRealm realm) {
-  throw new UnsupportedOperationException("not implemented");
-  }
+//   public UserPrincipal	basicAuthenticated(UserRealm realm) {
+//   throw new UnsupportedOperationException("not implemented");
+//   }
 
  public void destroy() {
     throw new UnsupportedOperationException("not implemented");
@@ -151,7 +152,7 @@ public class MockHttpRequest extends HttpRequest {
     this.uri = uri;
   }
 
-  public UserPrincipal getUserPrincipal() {
+  public Principal getUserPrincipal() {
     throw new UnsupportedOperationException("not implemented");
   }
 
@@ -171,7 +172,7 @@ public class MockHttpRequest extends HttpRequest {
     this.wasHandled = handled;
   }
 
-  public void setUserPrincipal(UserPrincipal principal) {
+  public void setUserPrincipal(Principal principal) {
     throw new UnsupportedOperationException("not implemented");
   }
 

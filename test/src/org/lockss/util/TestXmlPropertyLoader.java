@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.14 2005-07-11 20:23:38 smorabito Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.15 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import java.io.*;
 import java.net.URL;
 import javax.xml.parsers.*;
-import org.mortbay.tools.PropertyTree;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
 import org.lockss.test.*;

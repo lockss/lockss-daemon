@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.56 2005-05-31 19:20:18 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.57 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,6 @@ import java.text.*;
 //  import com.mortbay.servlet.*;
 //  import org.mortbay.util.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.util.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: JettyManager.java,v 1.18 2005-01-26 01:08:30 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.19 2005-08-23 22:05:45 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.mortbay.http.*;
-import org.mortbay.util.Code;
 
 /**
  * Abstract base class for LOCKSS managers that use/start Jetty services.
@@ -50,15 +49,6 @@ public abstract class JettyManager
   extends BaseLockssManager implements ConfigurableManager {
   static final String PREFIX = Configuration.PREFIX + "jetty.";
   static final String DEBUG_PREFIX = Configuration.PREFIX + "jetty.debug";
-
-  static final String PARAM_JETTY_DEBUG = DEBUG_PREFIX;
-  static final boolean DEFAULT_JETTY_DEBUG = false;
-
-  static final String PARAM_JETTY_DEBUG_PATTERNS = DEBUG_PREFIX + ".patterns";
-
-  static final String PARAM_JETTY_DEBUG_VERBOSE = DEBUG_PREFIX + ".verbose";
-  static final int DEFAULT_JETTY_DEBUG_VERBOSE = 0;
-//   static final String PARAM_JETTY_DEBUG_OPTIONS = DEBUG_PREFIX + ".options";
 
   public static final String PARAM_NAMED_SERVER_PRIORITY =
     PREFIX + "<name>.priority";
@@ -100,9 +90,7 @@ public abstract class JettyManager
 
   // synchronized on class
   private static synchronized void oneTimeJettySetup() {
-    // install Jetty logger once only
     if (!isJettyInited) {
-      org.mortbay.util.Log.instance().add(new LoggerLogSink());
       // Tell Jetty to allow symbolic links in file resources
       System.setProperty("org.mortbay.util.FileResource.checkAliases",
 			 "false");
@@ -110,28 +98,8 @@ public abstract class JettyManager
     }
   }
 
-  // Set Jetty debug properties from config params
   public void setConfig(Configuration config, Configuration prevConfig,
 			Configuration.Differences changedKeys) {
-    if (isJettyInited) {
-      if (changedKeys.contains(PARAM_JETTY_DEBUG)) {
-	boolean deb = config.getBoolean(PARAM_JETTY_DEBUG, 
-					DEFAULT_JETTY_DEBUG);
-	log.info("Turning Jetty DEBUG " + (deb ? "on." : "off."));
-	Code.setDebug(deb);
-      }
-      if (changedKeys.contains(PARAM_JETTY_DEBUG_PATTERNS)) {
-	String pat = config.get(PARAM_JETTY_DEBUG_PATTERNS);
-	log.info("Setting Jetty debug patterns to: " + pat);
-	Code.setDebugPatterns(pat);
-      }
-      if (changedKeys.contains(PARAM_JETTY_DEBUG_VERBOSE)) {
-	int ver = config.getInt(PARAM_JETTY_DEBUG_VERBOSE, 
-				DEFAULT_JETTY_DEBUG_VERBOSE);
-	log.info("Setting Jetty verbosity to: " + ver);
-	Code.setVerbose(ver);
-      }
-    }
     if (runningServer != null && changedKeys.contains(prioParam)) {
       setListenerParams(runningServer);
     }
@@ -160,9 +128,11 @@ public abstract class JettyManager
 	} catch (org.mortbay.util.MultiException e) {
 	  log.debug("multi", e);
 	  log.debug2("first", e.getException(0));
-	  log.warning("Addr in use, sleeping " +
-		      StringUtil.timeIntervalToString(delayTime[ix]));
-	  Deadline.in(delayTime[ix]).sleep();
+	  if (delayTime[ix] > 0) {
+	    log.warning("Addr in use, sleeping " +
+			StringUtil.timeIntervalToString(delayTime[ix]));
+	    Deadline.in(delayTime[ix]).sleep();
+	  }
 	}
       }
     } catch (Exception e) {
@@ -192,7 +162,7 @@ public abstract class JettyManager
 	// ThreadPool.setName(), as setPoolName() affects more stuff, but
 	// this is what's necessary in Jetty 4.2.17.
 	if (!tpool.isStarted()) {	// can't change name after started
-	  tpool.setPoolName(name);
+	  tpool.setName(name);
 	}
       }
     }

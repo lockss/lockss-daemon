@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.9 2005-07-08 23:16:38 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.10 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -42,6 +42,7 @@ import org.lockss.util.*;
 import org.lockss.config.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
+import org.mortbay.http.BasicAuthenticator;
 import org.mortbay.http.handler.*;
 import org.mortbay.jetty.servlet.*;
 

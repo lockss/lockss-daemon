@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.3 2005-06-04 18:59:52 tlipkis Exp $
+ * $Id: RaiseAlert.java,v 1.4 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import java.net.*;
 import java.text.*;
 import java.security.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.util.B64Code;
 import org.lockss.app.*;
 import org.lockss.util.*;

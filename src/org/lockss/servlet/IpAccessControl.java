@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.21 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.22 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.*;
 import java.net.*;
 import java.text.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;

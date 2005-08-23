@@ -1,5 +1,5 @@
 /*
- * $Id: PropUtil.java,v 1.13 2005-07-18 07:59:07 tlipkis Exp $
+ * $Id: PropUtil.java,v 1.14 2005-08-23 22:05:44 tlipkis Exp $
  */
 /*
 
@@ -34,7 +34,6 @@ package org.lockss.util;
 import java.util.*;
 import java.io.*;
 import java.net.URLEncoder;
-import org.mortbay.tools.*;
 
 
 /** Utilities for Properties

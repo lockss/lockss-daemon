@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.12 2005-07-18 07:59:07 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.13 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,6 @@ import java.util.*;
 import java.io.*;
 import java.net.*;
 import junit.framework.TestCase;
-import org.mortbay.tools.*;
 import org.lockss.test.*;
 
 /**

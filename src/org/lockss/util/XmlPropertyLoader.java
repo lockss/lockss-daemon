@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.22 2005-07-11 20:23:33 smorabito Exp $
+ * $Id: XmlPropertyLoader.java,v 1.23 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.util.*;
 import javax.xml.parsers.*;
 
 import org.lockss.config.*;
-import org.mortbay.tools.*;
 import org.xml.sax.*;
 import org.xml.sax.helpers.*;
 

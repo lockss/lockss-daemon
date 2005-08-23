@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.4 2005-08-11 06:35:10 tlipkis Exp $
+ * $Id: ViewContent.java,v 1.5 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import java.net.*;
 import java.text.*;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.util.*;

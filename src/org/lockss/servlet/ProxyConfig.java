@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.9 2005-05-02 19:26:56 tlipkis Exp $
+ * $Id: ProxyConfig.java,v 1.10 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,6 @@ import java.net.*;
 import java.text.*;
 import org.mortbay.http.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.util.*;
 import org.lockss.daemon.*;

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.10 2005-02-02 09:42:45 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.11 2005-08-23 22:05:45 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.10 2005-02-02 09:42:45 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.11 2005-08-23 22:05:45 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -41,6 +41,9 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.util.*;
+
+import org.apache.commons.logging.Log;
+import org.mortbay.log.LogFactory;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
@@ -58,6 +61,8 @@ import com.sun.jimi.core.raster.*;
  * Resource.  Mostly copied here because some things in ResourceHandler
  * aren't public or protected. */
 public class LockssResourceHandler extends AbstractHttpHandler {
+    private static Log log = LogFactory.getLog(ResourceHandler.class);
+
     /* ----------------------------------------------------------------- */
     private LockssDaemon theDaemon = null;
     private ProxyManager proxyMgr = null;
@@ -242,7 +247,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         // Is the method allowed?
         if (!isMethodAllowed(request.getMethod()))
         {
-            Code.debug("Method not allowed: ",request.getMethod());
+            if(log.isDebugEnabled())log.debug("Method not allowed: "+request.getMethod());
             if (resource.exists())
             {
                 setAllowHeader(response);
@@ -254,8 +259,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         // Handle the request
         try
         {
-            Code.debug("PATH=",pathInContext,
-                       " RESOURCE=",resource);
+            if(log.isDebugEnabled())log.debug("PATH="+pathInContext+" RESOURCE="+resource);
             
             // check filename
             String method=request.getMethod();
@@ -275,18 +279,18 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                 handleTrace(request, response);
             else
             {
-                Code.debug("Unknown action:"+method);
+                if(log.isDebugEnabled())log.debug("Unknown action:"+method);
                 // anything else...
                 try{
                     if (resource.exists())
                         response.sendError(HttpResponse.__501_Not_Implemented);
                 }
-                catch(Exception e) {Code.ignore(e);}
+                catch(Exception e) {LogSupport.ignore(log,e);}
             }
         }
         catch(IllegalArgumentException e)
         {
-            Code.ignore(e);
+            LogSupport.ignore(log,e);
         }
         finally
         {
@@ -303,7 +307,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                           Resource resource)
         throws IOException
     {
-        Code.debug("Looking for ",resource);
+        if(log.isDebugEnabled())log.debug("Looking for "+resource);
         
         if (resource!=null && resource.exists())
         {            
@@ -312,7 +316,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             {
                 if (!pathInContext.endsWith("/") && !pathInContext.equals("/"))
                 {
-                    Code.debug("Redirect to directory/");
+                    log.debug("Redirect to directory/");
                     
                     String q=request.getQuery();
                     StringBuffer buf=request.getRequestURL();
@@ -328,7 +332,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                 }
   
 		if (_redirectRootTo != null && pathInContext.equals("/")) {
-		  Code.debug("Redirect root to " + _redirectRootTo);
+		  log.debug("Redirect root to " + _redirectRootTo);
                     
 		  String q=request.getQuery();
 		  StringBuffer buf=request.getRequestURL();
@@ -387,7 +391,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             }
             else
                 // don't know what it is
-                Code.warning("Unknown file type");
+                log.warn("Unknown file type");
         }
     }
 
@@ -457,8 +461,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             // If we have meta data for the file
             // Try a direct match for most common requests. Avoids
             // parsing the date.
-            HttpContext.ResourceMetaData metaData =
-                (HttpContext.ResourceMetaData)resource.getAssociate();
+            ResourceCache.ResourceMetaData metaData =
+                (ResourceCache.ResourceMetaData)resource.getAssociate();
             if (metaData!=null)
             {
                 String ifms=request.getField(HttpFields.__IfModifiedSince);
@@ -507,7 +511,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                    Resource resource)
         throws IOException
     {
-        Code.debug("PUT ",pathInContext," in ",resource);
+        if(log.isDebugEnabled())log.debug("PUT "+pathInContext+" in "+resource);
 
         boolean exists=resource!=null && resource.exists();
         if (exists &&
@@ -554,7 +558,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             }
             catch (Exception ex)
             {
-                Code.warning(ex);
+                log.warn(LogSupport.EXCEPTION,ex);
                 response.sendError(HttpResponse.__403_Forbidden,
                                    ex.getMessage());
             }
@@ -568,7 +572,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                       Resource resource)
         throws IOException
     {
-        Code.debug("DELETE ",pathInContext," from ",resource);  
+        if(log.isDebugEnabled())log.debug("DELETE "+pathInContext+" from "+resource);  
  
         if (!resource.exists() ||
             !passConditionalHeaders(request,response,resource))
@@ -587,7 +591,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         }
         catch (SecurityException sex)
         {
-            Code.warning(sex);
+            log.warn(LogSupport.EXCEPTION,sex);
             response.sendError(HttpResponse.__403_Forbidden, sex.getMessage());
         }
     }
@@ -630,7 +634,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                 newInfo=newInfo.substring(contextPath.length());
             Resource newFile = getHttpContext().getBaseResource().addPath(newInfo);
      
-            Code.debug("Moving "+resource+" to "+newFile);
+            if(log.isDebugEnabled())log.debug("Moving "+resource+" to "+newFile);
             resource.renameTo(newFile);
     
             response.setStatus(HttpResponse.__204_No_Content);
@@ -638,7 +642,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         }
         catch (Exception ex)
         {
-            Code.warning(ex);
+            log.warn(LogSupport.EXCEPTION,ex);
             setAllowHeader(response);
             response.sendError(HttpResponse.__405_Method_Not_Allowed,
                                "Error:"+ex);
@@ -666,8 +670,8 @@ public class LockssResourceHandler extends AbstractHttpHandler {
     public void writeHeaders(HttpResponse response,Resource resource, long count)
         throws IOException
     {
-        HttpContext.ResourceMetaData metaData =
-            (HttpContext.ResourceMetaData)resource.getAssociate();
+        ResourceCache.ResourceMetaData metaData =
+            (ResourceCache.ResourceMetaData)resource.getAssociate();
 
 	String ctype = null;
 
@@ -677,7 +681,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
 	  ctype = cur.getProperty(CachedUrl.PROPERTY_CONTENT_TYPE);
 	}
 	if (ctype == null) {
-	  ctype = metaData.getEncoding();
+	  ctype = metaData.getMimeType();
 	}
         response.setContentType(ctype);
         if (count != -1)
@@ -723,7 +727,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
                     Resource gz = getHttpContext().getResource(pathInContext+".gz");
                     if (gz.exists() && accept.indexOf("gzip")>=0)
                     {
-                        Code.debug("gzip=",gz);
+                        if(log.isDebugEnabled())log.debug("gzip="+gz);
                         response.setField(HttpFields.__ContentEncoding,"gzip");
                         data=gz;
                         resLength=data.length();
@@ -785,13 +789,12 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             
         // Parse the satisfiable ranges
         List ranges =InclusiveByteRange.satisfiableRanges(reqRanges,resLength);
-        if (Code.debug())
-            Code.debug("ranges: " + reqRanges + " == " + ranges);
+        if(log.isDebugEnabled())log.debug("ranges: " + reqRanges + " == " + ranges);
         
         //  if there are no satisfiable ranges, send 416 response
         if (ranges==null || ranges.size()==0)
         {
-            Code.debug("no satisfiable ranges");
+            log.debug("no satisfiable ranges");
             writeHeaders(response, resource, resLength);
             response.setStatus(HttpResponse.__416_Requested_Range_Not_Satisfiable);
             response.setReason((String)HttpResponse.__statusMsg
@@ -813,7 +816,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         {
             InclusiveByteRange singleSatisfiableRange =
                 (InclusiveByteRange)ranges.get(0);
-            Code.debug("single satisfiable range: " + singleSatisfiableRange);
+            if(log.isDebugEnabled())log.debug("single satisfiable range: " + singleSatisfiableRange);
             long singleLength = singleSatisfiableRange.getSize(resLength);
             writeHeaders(response,resource,singleLength);
             response.setStatus(HttpResponse.__206_Partial_Content);
@@ -834,9 +837,9 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         //  216 response which does not require an overall 
         //  content-length header
         //
-        HttpContext.ResourceMetaData metaData =
-            (HttpContext.ResourceMetaData)resource.getAssociate();
-        String encoding = metaData.getEncoding();
+        ResourceCache.ResourceMetaData metaData =
+            (ResourceCache.ResourceMetaData)resource.getAssociate();
+        String encoding = metaData.getMimeType();
         MultiPartResponse multi = new MultiPartResponse(response);
         response.setStatus(HttpResponse.__206_Partial_Content);
         response.setReason((String)HttpResponse.__statusMsg
@@ -862,7 +865,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
             InclusiveByteRange ibr = (InclusiveByteRange) ranges.get(i);
             String header=HttpFields.__ContentRange+": "+
                 ibr.toHeaderRangeString(resLength);
-            Code.debug("multi range: ",encoding," ",header);
+            if(log.isDebugEnabled())log.debug("multi range: "+encoding+" "+header);
             multi.startPart(encoding,new String[]{header});
 
             long start=ibr.getFirst(resLength);
@@ -913,7 +916,7 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         
         request.setHandled(true);
         
-        Code.debug("sendDirectory: "+resource);
+        if(log.isDebugEnabled())log.debug("sendDirectory: "+resource);
         byte[] data=null;
         if (resource instanceof CachedResource)
             data=((CachedResource)resource).getCachedData();

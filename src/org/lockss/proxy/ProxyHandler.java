@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.38 2005-08-03 18:20:47 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.39 2005-08-23 22:05:45 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.38 2005-08-03 18:20:47 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.39 2005-08-23 22:05:45 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -49,6 +49,9 @@ import java.util.Set;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
 import org.mortbay.util.*;
+import org.mortbay.log.LogFactory;
+import org.apache.commons.logging.Log;
+
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.app.*;
@@ -69,6 +72,8 @@ import org.apache.commons.httpclient.util.*;
  */
 public class ProxyHandler extends AbstractHttpHandler {
   private static Logger log = Logger.getLogger("ProxyHandler");
+  private static Log jlog = LogFactory.getLog(ProxyHandler.class);
+
 
   static final String LOCKSS_VIA_VERSION = "1.1";
   static final String LOCKSS_VIA_COMMENT = "(LOCKSS/jetty)";
@@ -286,7 +291,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	return;
       }
             
-      Code.debug("PROXY URL=",url);
+      if(jlog.isDebugEnabled())jlog.debug("PROXY URL="+url);
 
       URLConnection connection = url.openConnection();
       connection.setAllowUserInteraction(false);
@@ -370,7 +375,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	// Connect
 	connection.connect();    
       } catch (Exception e) {
-	Code.ignore(e);
+	LogSupport.ignore(jlog,e);
       }
             
       InputStream proxy_in = null;
@@ -388,7 +393,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       if (proxy_in==null) {
 	try {proxy_in=connection.getInputStream();}
 	catch (Exception e) {
-	  Code.ignore(e);
+	  LogSupport.ignore(jlog,e);
 	  proxy_in = http.getErrorStream();
 	}
       }
@@ -417,7 +422,6 @@ public class ProxyHandler extends AbstractHttpHandler {
             
     } catch (Exception e) {
       log.warning("doSun error", e);
-      Code.ignore(e);
       if (!response.isCommitted())
 	response.sendError(HttpResponse.__400_Bad_Request,
 			   e.getMessage());
@@ -649,7 +653,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     URI uri = request.getURI();
         
     try {
-      Code.debug("CONNECT: ",uri);
+      if(jlog.isDebugEnabled())jlog.debug("CONNECT: "+uri);
       InetAddrPort addrPort=new InetAddrPort(uri.toString());
 
       if (isForbidden(HttpMessage.__SSL_SCHEME, false)) {
@@ -668,7 +672,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	    timeoutMs=s.getSoTimeout();
 	    s.setSoTimeout(_tunnelTimeoutMs);
 	  } catch (Exception e) {
-	    Code.ignore(e);
+	    LogSupport.ignore(jlog,e);
 	  }
 	}
                 
@@ -680,7 +684,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	request.setHandled(true);
       }
     } catch (Exception e) {
-      Code.ignore(e);
+      LogSupport.ignore(jlog,e);
       response.sendError(HttpResponse.__500_Internal_Server_Error,
 			 e.getMessage());
     }

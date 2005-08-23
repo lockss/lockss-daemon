@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.10 2005-07-18 08:05:48 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.11 2005-08-23 22:05:44 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.*;
 import java.net.*;
 import java.text.*;
 import org.mortbay.html.*;
-import org.mortbay.tools.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
