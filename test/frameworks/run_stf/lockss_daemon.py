@@ -166,7 +166,7 @@ class Framework:
         """ Return a list of all *.jar and *.zip files under self.projectDir/lib,
         plus all *.jar and *.zip files under self.localLibDir. """
 
-        fd = open(path.join(self.projectDir, 'test/test-classpath'), 'r')
+        fd = open(path.join(self.projectDir, 'test', 'test-classpath'), 'r')
         line = fd.readline()
         fd.close()
 
