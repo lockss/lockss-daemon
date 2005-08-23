@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationPropTreeImpl.java,v 1.6 2005-07-18 08:11:00 tlipkis Exp $
+ * $Id: ConfigurationPropTreeImpl.java,v 1.7 2005-08-23 22:03:50 tlipkis Exp $
  */
 
 /*
@@ -36,10 +36,9 @@ import java.io.*;
 import java.util.*;
 
 import org.lockss.util.*;
-import org.mortbay.tools.*;
 
 /** <code>ConfigurationPropTreeImpl</code> represents the config parameters
- * as a <code>PropertyTree</code>
+ * as a {@link org.lockss.util.PropertyTree}
  */
 public class ConfigurationPropTreeImpl extends Configuration {
   private PropertyTree props;
