@@ -41,8 +41,8 @@ class Framework:
         if self.projectDir == None:
             # will raise LockssError if not found.
             self.projectDir = self.__findProjectDir()
-        self.projectLibDir = path.join(self.workDir, 'lib')
-        self.localLibDir = path.join(self.projectDir, 'lib')
+        self.localLibDir = path.join(self.workDir, 'lib')
+        self.projectLibDir = path.join(self.projectDir, 'lib')
         if not daemonCount:
             self.daemonCount = int(config.get('daemonCount', 4))
         else:
@@ -149,27 +149,29 @@ class Framework:
         """ Create the directory 'lib' if it does not already exist, then copy
         lockss.jar, lockss-test.jar, and lockss-plugin.jar from self.projectDir/lib
         to 'lib'. """
-        if not path.isdir(self.projectLibDir):
-            os.mkdir(self.projectLibDir)
+        if not path.isdir(self.localLibDir):
+            os.mkdir(self.localLibDir)
 
-        lockssJar = path.join(self.localLibDir, 'lockss.jar')
-        lockssTestJar = path.join(self.localLibDir, 'lockss-test.jar')
-        lockssPluginJar = path.join(self.localLibDir, 'lockss-plugins.jar')
+        lockssJar = path.join(self.projectLibDir, 'lockss.jar')
+        lockssTestJar = path.join(self.projectLibDir, 'lockss-test.jar')
+        lockssPluginJar = path.join(self.projectLibDir, 'lockss-plugins.jar')
 
         # Copy from buildLib to localLib
 
-        shutil.copy(lockssJar, self.projectLibDir)
-        shutil.copy(lockssTestJar, self.projectLibDir)
-        shutil.copy(lockssPluginJar, self.projectLibDir)
+        shutil.copy(lockssJar, self.localLibDir)
+        shutil.copy(lockssTestJar, self.localLibDir)
+        shutil.copy(lockssPluginJar, self.localLibDir)
 
     def __makeClasspath(self): 
         """ Return a list of all *.jar and *.zip files under self.projectDir/lib,
-        plus all *.jar and *.zip files under self.projectLibDir. """
+        plus all *.jar and *.zip files under self.localLibDir. """
 
-        return ":".join(glob.glob(path.join(self.projectLibDir, "*.jar")) + 
-                        glob.glob(path.join(self.projectLibDir, "*.zip")) + 
-                        glob.glob(path.join(self.localLibDir, "*.jar")) + 
-                        glob.glob(path.join(self.localLibDir, "*.zip")))
+        fd = open(path.join(self.projectDir, 'test/test-classpath'), 'r')
+        line = fd.readline()
+        fd.close()
+
+        return (":".join(glob.glob(path.join(self.localLibDir, "*.jar"))) +
+                 ":" + line)
         
     def makeClasspath(self):
         return self.__makeClasspath()
