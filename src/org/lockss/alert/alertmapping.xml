@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Object Mapping DTD Version 1.0//EN"
-                         "http://www.castor.org/mapping.dtd">
+                         "http://castor.exolab.org/mapping.dtd">
 <mapping xmlns="http://castor.exolab.org/">
     <description>Castor generated mapping file</description>
     <class name="org.lockss.alert.AlertActionMail">
