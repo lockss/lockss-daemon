@@ -1,5 +1,5 @@
 /*
- * $Id: CommonsLoggingLogger.java,v 1.2 2004-08-09 02:59:09 tlipkis Exp $
+ * $Id: CommonsLoggingLogger.java,v 1.3 2005-08-23 22:01:35 tlipkis Exp $
  */
 
 /*
@@ -56,6 +56,10 @@ public class CommonsLoggingLogger implements org.apache.commons.logging.Log {
     String s = System.getProperty(PARAM_DEFAULT_COMMONS_LOG_LEVEL);
     if (StringUtil.isNullString(s)) {
       s = DEFAULT_DEFAULT_COMMONS_LOG_LEVEL;
+    }
+    int pos = name.lastIndexOf('.');
+    if (pos > 0) {
+      name = name.substring(pos + 1);
     }
     log = Logger.getLoggerWithDefaultLevel(name, s,
 					   PARAM_DEFAULT_COMMONS_LOG_LEVEL);
