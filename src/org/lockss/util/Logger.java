@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.42 2005-06-04 18:59:49 tlipkis Exp $
+ * $Id: Logger.java,v 1.43 2005-08-23 22:01:16 tlipkis Exp $
  */
 
 /*
@@ -246,6 +246,7 @@ public class Logger {
       }
       l = new Logger(defaultLevel, name, defaultLevelParam);
       if (myLog != null) myLog.debug2("Creating logger: " + name);
+      l.setLevel(l.getConfiguredLevel());
       logs.put(name, l);
     }
     return l;
