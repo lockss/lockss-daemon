@@ -5,11 +5,18 @@
 <ElementValue xsi:type="java:java.lang.String" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">OAI</ElementValue>
 </MapElement>
 <MapElement>
+<ElementKey>au_manifest</ElementKey>
+<ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<string xsi:type="java:java.lang.String">"%slockss_permission.html", base_url</string>
+</ElementValue>
+</MapElement>
+<MapElement>
 <ElementKey>au_crawlrules</ElementKey>
 <ElementValue xsi:type="java:java.util.ArrayList" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%slockss_permission.html", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%stheses/OAI2/", base_url</string>
-<string xsi:type="java:java.lang.String">1,"%stheses/.*", base_url</string>
+<string xsi:type="java:java.lang.String">1,"%stheses/.*/etd-[0-9]*/.*", base_url</string>
 </ElementValue>
 </MapElement>
 <MapElement>
