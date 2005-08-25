@@ -1,5 +1,5 @@
 /*
- * $Id: TestMDCredential.java,v 1.1 2005-08-25 19:35:58 tlipkis Exp $
+ * $Id: TestMDCredential.java,v 1.2 2005-08-25 23:29:03 tlipkis Exp $
  */
 
 /*
@@ -95,16 +95,16 @@ public class TestMDCredential extends LockssTestCase {
     testIt("SHA-1");
   }
 
-  public void testSHA256() throws Exception {
-    testIt("SHA-256");
-  }
+//   public void testSHA256() throws Exception {
+//     testIt("SHA-256");
+//   }
 
-  public void testSHA384() throws Exception {
-    testIt("SHA-384");
-  }
+//   public void testSHA384() throws Exception {
+//     testIt("SHA-384");
+//   }
 
-  public void testSHA512() throws Exception {
-    testIt("SHA-512");
-  }
+//   public void testSHA512() throws Exception {
+//     testIt("SHA-512");
+//   }
 
 }
