@@ -105,6 +105,7 @@
 	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
+	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
       </list>
     </property>
 
@@ -163,6 +164,7 @@
 	  value="[
 	  pluginName='org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin'
 	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin'
 	  ]"
 	  />
       </property>
@@ -223,6 +225,24 @@
     <property name="title">
 
 
+
+      <property name="VirginiaTechETDLegacy">
+	<property name="title" value="Virginia Tech ETD Legacy" />
+	<property name="journalTitle" value="Virginia Tech ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://scholar.lib.vt.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2004" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
+	</property>
+      </property>
 
       <property name="VirginiaTechETD2004">
 	<property name="title" value="Virginia Tech ETD 2004" />
