@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.72 2005-05-18 05:46:51 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.73 2005-08-25 20:12:37 thib_gc Exp $
  */
 
 /*
@@ -116,6 +116,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String AU_TREEWALK_MANAGER = "AuTreeWalkManager";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
   public static final String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
+  public static final String ICP_MANAGER = "IcpManager";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -159,6 +160,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 		    "org.lockss.state.ArchivalUnitStatus"),
     new ManagerDesc(REPOSITORY_STATUS,
 		    "org.lockss.repository.LockssRepositoryStatus"),
+    new ManagerDesc(ICP_MANAGER,
+        "org.lockss.proxy.icp.IcpManager"),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
