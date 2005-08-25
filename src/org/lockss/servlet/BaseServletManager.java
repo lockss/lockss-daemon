@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.10 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.11 2005-08-25 19:36:53 tlipkis Exp $
  */
 
 /*
@@ -162,7 +162,7 @@ public abstract class BaseServletManager
   // Manually install password set by platform config.
   // XXX Doesn't handle roles, will need to be integrated with daemon
   // password setting mechanism
-  protected void setConfiguredPasswords(HashUserRealm realm) {
+  protected void setConfiguredPasswords(MDHashUserRealm realm) {
     // Use platform config in case real config hasn't been loaded yet (when
     // used from TinyUI)
     Configuration platConfig = ConfigManager.getPlatformConfig();

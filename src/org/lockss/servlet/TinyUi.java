@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.7 2004-10-18 03:38:12 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.8 2005-08-25 19:36:53 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TinyUi extends BaseServletManager {
   public static final String SERVER_NAME = "TinyUi";
   private static Logger log = Logger.getLogger("TinyUi");
 
-  private HashUserRealm realm;
+  private MDHashUserRealm realm;
   private String[] tinyData;
 
   public TinyUi() {
@@ -103,13 +103,13 @@ public class TinyUi extends BaseServletManager {
 	  URL propsUrl = this.getClass().getResource(PASSWORD_PROPERTY_FILE);
 	  if (propsUrl != null) {
 	    log.debug("passwd props file: " + propsUrl);
-	    realm = new HashUserRealm(UI_REALM, propsUrl.toString());
+	    realm = new MDHashUserRealm(UI_REALM, propsUrl.toString());
 	  }
 	} catch (IOException e) {
 	  log.warning("Error loading admin.props", e);
 	}
 	if (realm == null) {
-	  realm = new HashUserRealm(UI_REALM);
+	  realm = new MDHashUserRealm(UI_REALM);
 	}
 	setConfiguredPasswords(realm);
 	if (realm.isEmpty()) {
