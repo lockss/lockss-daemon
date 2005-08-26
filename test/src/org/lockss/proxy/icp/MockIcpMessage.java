@@ -1,5 +1,5 @@
 /*
- * $Id: MockIcpMessage.java,v 1.1 2005-08-25 20:12:38 thib_gc Exp $
+ * $Id: MockIcpMessage.java,v 1.2 2005-08-26 01:32:58 thib_gc Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ public abstract class MockIcpMessage implements IcpMessage {
     public short getLength() { return (short)(4 + super.getLength()); }
     public byte getOpcode() { return ICP_OP_QUERY; }
     public InetAddress getRequester() { return getStandardRequester(); }
+    public boolean isQuery() { return true; }
   }
   /*
    * end static inner class
@@ -61,6 +62,7 @@ public abstract class MockIcpMessage implements IcpMessage {
     public int getOptionData() { return getStandardSrcRttResponse(); }
     public int getOptions() { return ICP_FLAG_SRC_RTT; }
     public short getSrcRttResponse() { return getStandardSrcRttResponse(); }
+    public boolean isResponse() { return true; }
   }
   /*
    * end static inner class
@@ -148,6 +150,14 @@ public abstract class MockIcpMessage implements IcpMessage {
     return getStandardUdpPort();
   }
 
+  public boolean isQuery() {
+    return false;
+  }
+
+  public boolean isResponse() {
+    return false;
+  }
+
   public byte getVersion() {
     return (byte)2; // version 2
   }
@@ -225,18 +235,21 @@ public abstract class MockIcpMessage implements IcpMessage {
           queryRequestSrcRttRequestHitObj(),
           new MockIcpMessage() {
             public byte getOpcode() { return ICP_OP_HIT; }
+            public boolean isResponse() { return true; }
           },
           new MockIcpResponseMessage() {
             public byte getOpcode() { return ICP_OP_HIT; }
           },
           new MockIcpMessage() {
             public byte getOpcode() { return ICP_OP_MISS; }
+            public boolean isResponse() { return true; }
           },
           new MockIcpResponseMessage() {
             public byte getOpcode() { return ICP_OP_MISS; }
           },
           new MockIcpMessage() {
             public byte getOpcode() { return ICP_OP_MISS_NOFETCH; }
+            public boolean isResponse() { return true; }
           },
           new MockIcpResponseMessage() {
             public byte getOpcode() { return ICP_OP_MISS_NOFETCH; }
@@ -246,7 +259,7 @@ public abstract class MockIcpMessage implements IcpMessage {
             public byte getOpcode() { return ICP_OP_HIT_OBJ; }
             public byte[] getPayloadObject() { return getStandardPayloadData(); }
             public short getPayloadObjectLength() { return (short)getPayloadObject().length; }
-            
+            public boolean isResponse() { return true; }            
           },
           new MockIcpResponseMessage() {
             public short getLength() { return (short)(2 + getPayloadObjectLength() + super.getLength()); }

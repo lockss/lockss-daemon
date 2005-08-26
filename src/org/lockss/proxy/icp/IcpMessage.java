@@ -1,5 +1,5 @@
 /*
- * $Id: IcpMessage.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpMessage.java,v 1.2 2005-08-26 01:32:58 thib_gc Exp $
  */
 
 /*
@@ -46,14 +46,11 @@ import java.net.*;
 public interface IcpMessage {
 
   /**
-   * <p>Determines if this message contains a source return trip time
-   * response.</p>
+   * <p>If this message is an ICP response, determines if this message
+   * contains a source return trip time response.</p>
    * @return True if and only if this message is an ICP response and
    * has the source return trip time bit set.
-   * @see #ICP_OP_HIT
-   * @see #ICP_OP_HIT_OBJ
-   * @see #ICP_OP_MISS
-   * @see #ICP_OP_MISS_NOFETCH
+   * @see #isResponse
    * @see #ICP_FLAG_SRC_RTT
    */
   public boolean containsSrcRttResponse();
@@ -68,89 +65,282 @@ public interface IcpMessage {
 
   /**
    * <p>Retrieves this message's opcode.</p>
-   * @return a byte representing the opcode of this message.
+   * @return A byte representing the opcode of this message.
    * @see #ICP_OP_DECHO
-   *
-  public static final byte ICP_OP_DENIED = 22;
-
-  public static final byte ICP_OP_ERR = 4;
-
-  public static final byte ICP_OP_HIT = 2;
-
-  public static final byte ICP_OP_HIT_OBJ = 23;
-
-  public static final byte ICP_OP_INVALID = 0;
-
-  public static final byte ICP_OP_MISS = 3;
-
-  public static final byte ICP_OP_MISS_NOFETCH = 21;
-
-  public static final byte ICP_OP_QUERY = 1;
-
-  public static final byte ICP_OP_SECHO = 10;
+   * @see #ICP_OP_DENIED
+   * @see #ICP_OP_ERR
+   * @see #ICP_OP_HIT
+   * @see #ICP_OP_HIT_OBJ
+   * @see #ICP_OP_INVALID
+   * @see #ICP_OP_MISS
+   * @see #ICP_OP_MISS_NOFETCH
+   * @see #ICP_OP_QUERY
+   * @see #ICP_OP_SECHO
    */
   public byte getOpcode();
 
+  /**
+   * <p>Retrieves the raw integer of option data.</p>
+   * @return The option data field.
+   * @see #getOptions()
+   * @see #getSrcRttResponse()
+   */
   public int getOptionData();
 
+  /**
+   * <p>Retrieves the options bit field.</p>
+   * @return The options bit field.
+   * @see #containsSrcRttResponse
+   * @see #getOptionData
+   * @see #requestsHitObj
+   * @see #requestsSrcRtt
+   * @see #ICP_FLAG_HIT_OBJ
+   * @see #ICP_FLAG_SRC_RTT
+   */
   public int getOptions();
 
+  /**
+   * <p>If this message has a hit-object opcode, retrieves this
+   * message's hit object as an array of bytes.</p>
+   * @return An array of bytes representing the object that piggy-
+   *         backed in the ICP packet if this message has a hit-object
+   *         opcode, null otherwise.
+   * @see #getOpcode
+   * @see #getPayloadObjectLength
+   */
   public byte[] getPayloadObject();
   
+  /**
+   * <p>If this message has a hit-object opcode, retrieves this
+   * message's hit object length field.</p>
+   * <p>The return value should, but may not, be the same as the value
+   * of <code>getPayloadObject().length</code>.</p>
+   * @return The self-reported payload object length field if this
+   *         message has a hit-object opcode, 0 otheriwse.
+   * @see #getOpcode
+   * @see #getPayloadObject
+   */
   public short getPayloadObjectLength();
 
+  /**
+   * <p>Retrieves the URL contained in this message.</p>
+   * @return This message's URL.
+   */
   public URL getPayloadUrl();
 
+  /**
+   * <p>If this message is an ICP query, retrieves the address of the
+   * initial requester.</p>
+   * <p>The requester is the originator of the request. It may not be
+   * the same as the IP from which this ICP message originated.</p>
+   * @return The IP of the original requester of the URL if this
+   *         message is a query, null otherwise.
+   * @see #getSender
+   * @see #getUdpAddress
+   * @see #getUdpPort
+   * @see #isQuery
+   */
   public InetAddress getRequester();
 
+  /**
+   * <p>Retrieves the opaque request number.</p>
+   * @return The identifying number of this message.
+   */
   public int getRequestNumber();
 
+  /**
+   * <p>Retrieves the ICP sender field.</p>
+   * <p>The ICP specification instructs implementors to trust the
+   * sender information reported by the UDP packet. It is likely that
+   * the address returned by this method is <code>0.0.0.0</code> or
+   * some other meaningless value.</p>
+   * @return The sender's IP address.
+   */
   public InetAddress getSender();
 
+  /**
+   * <p>If this message is an ICP response and contains a source
+   * return trip time response, retrieves the latter from this
+   * message.</p>
+   * @return The source return trip time response if this message
+   *         contains one, 0 otherwise.
+   * @see #containsSrcRttResponse
+   * @see #isResponse
+   */
   public short getSrcRttResponse();
 
+  /**
+   * <p>Retrieves the IP address from which the UDP packet carrying
+   * this message was received.</p>
+   * <p>If this message was not actually received from a UDP packet,
+   * the return value will be meaningless, and shold be null.</p>
+   * @return The sender's IP address as reported by the UDP packet;
+   *         null if not applicable.
+   * @see #getSender
+   * @see #getRequester
+   * @see #getUdpPort
+   */
   public InetAddress getUdpAddress();
   
+  /**
+   * <p>Retrieves the port from which this message's sender sent the
+   * UDP packet.</p>
+   * <p>If this message was not actually received from a UDP packet,
+   * the return value will be meaningless, and shold be zero.</p>
+   * @return The origin's port number as reported by the UDP packet;
+   *         zero if not applicable.
+   * @see #getSender
+   * @see #getRequester
+   * @see #getUdpAddress
+   */
   public int getUdpPort();
-  
+
+  /**
+   * <p>Returns this message's ICP version field.</p>
+   * @return The ICP version field of this message.
+   * @see #ICP_VERSION
+   */
   public byte getVersion();
 
+  /**
+   * <p>If this message is a query, determines if this message
+   * has the hit object bit set.</p>
+   * @return True if and only if this message is a query and has the
+   *         hit object bit set.
+   * @see #isQuery
+   * @see #ICP_FLAG_HIT_OBJ
+   */
   public boolean requestsHitObj();
   
+  /**
+   * <p>If this message is a query, determines if this message
+   * has the source return time trip bit set.</p>
+   * @return True if and only if this message is a query and has the
+   *         source return trip time bit set.
+   * @see #isQuery
+   * @see #ICP_FLAG_SRC_RTT
+   */
   public boolean requestsSrcRtt();
   
-  public void setUdpPort(int port);
-  
+  /**
+   * <p>Sets this message's self-reported UDP sender address.</p>
+   * <p>This method should only be called when UDP packets are
+   * received and translated into IcpMessage instances.</p>
+   * @param udpAddress An IP address.
+   */
   public void setUdpAddress(InetAddress udpAddress);
   
-  public static final int ICP_FLAG_HIT_OBJ = 0x80000000;
+  /**
+   * <p>Sets this message's self-reported UDP port number.</p>
+   * <p>This method should only be called when UDP packets are
+   * received and translated into IcpMessage instances.</p>
+   * @param port A port number.
+   * @see #getUdpPort
+   */
+  public void setUdpPort(int port);
+
+  /**
+   * <p>Determines if this message is an ICP query.</p>
+   * <p>An ICP message is an ICP query if and only if its opcode is
+   * {@link #ICP_OP_QUERY}.</p>
+   * @return True if and only if this message's opcode is the
+   *         query opcode.
+   * @see #getOpcode
+   * @see #ICP_OP_QUERY
+   */
+  boolean isQuery();
   
-  public static final int ICP_FLAG_SRC_RTT = 0x40000000;
+  /**
+   * <p>Determines if this message is an ICP response.</p>
+   * <p>An ICP message is an ICP response if and only if its opcode is
+   * one of {@link #ICP_OP_HIT}, {@link #ICP_OP_HIT_OBJ},
+   * {@link #ICP_OP_MISS} or {@link #ICP_OP_MISS_NOFETCH}.</p>
+   * @return True if and only if this message's opcode is the hit,
+   * hit-object, miss or miss-no-fetch opcode.
+   * @see #getOpcode
+   * @see #ICP_OP_HIT
+   * @see #ICP_OP_HIT_OBJ
+   * @see #ICP_OP_MISS
+   * @see #ICP_OP_MISS_NOFETCH
+   */
+  boolean isResponse();
 
-  public static final byte ICP_OP_DECHO = 11;
+  /**
+   * <p>The hit object flag.</p>
+   */
+  static final int ICP_FLAG_HIT_OBJ = 0x80000000;
 
-  public static final byte ICP_OP_DENIED = 22;
+  /**
+   * <p>The source return trip time flag.</p>
+   */
+  static final int ICP_FLAG_SRC_RTT = 0x40000000;
 
-  public static final byte ICP_OP_ERR = 4;
+  /**
+   * <p>The discovery echo opcode.</p>
+   */
+  static final byte ICP_OP_DECHO = 11;
 
-  public static final byte ICP_OP_HIT = 2;
+  /**
+   * <p>The denied opcode.</p>
+   */
+  static final byte ICP_OP_DENIED = 22;
 
-  public static final byte ICP_OP_HIT_OBJ = 23;
+  /**
+   * <p>The error opcode.</p>
+   */
+  static final byte ICP_OP_ERR = 4;
 
-  public static final byte ICP_OP_INVALID = 0;
+  /**
+   * <p>The hit opcode.</p>
+   */
+  static final byte ICP_OP_HIT = 2;
 
-  public static final byte ICP_OP_MISS = 3;
+  /**
+   * <p>The hit-object opcode.</p>
+   */
+  static final byte ICP_OP_HIT_OBJ = 23;
 
-  public static final byte ICP_OP_MISS_NOFETCH = 21;
+  /**
+   * <p>The opcode whose value is zero.</p>
+   * <p>The ICP specification stipulates that any opcode other than
+   * the pre-defined opcodes is an invalid opcode, but specifies the
+   * zero opcode as being ICP_OP_INVALID.</p>
+   */
+  static final byte ICP_OP_INVALID = 0;
 
-  public static final byte ICP_OP_QUERY = 1;
+  /**
+   * <p>The miss opcode.</p>
+   */
+  static final byte ICP_OP_MISS = 3;
 
-  public static final byte ICP_OP_SECHO = 10;
+  /**
+   * <p>The miss-no-fetch opcode.</p>
+   */
+  static final byte ICP_OP_MISS_NOFETCH = 21;
 
-  public static final int ICP_PORT = 3130;
+  /**
+   * <p>The query opcode.</p>
+   */
+  static final byte ICP_OP_QUERY = 1;
   
-  public static final byte ICP_VERSION = 2;
+  /**
+   * <p>The source echo opcode.</p>
+   */
+  static final byte ICP_OP_SECHO = 10;
 
-  public static final int MAX_LENGTH = 1450;
+  /**
+   * <p>The standard UDP port for ICP.</p>
+   */
+  static final int ICP_PORT = 3130;
 
+  /**
+   * <p>The version of ICP reflected by this interface.</p>
+   */
+  static final byte ICP_VERSION = 2;
+  
+  /**
+   * <p>The maximum length of an ICP packet.</p>
+   */
+  static final int MAX_LENGTH = 1450;
+  
 }

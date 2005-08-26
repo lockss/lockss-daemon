@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.2 2005-08-26 01:32:58 thib_gc Exp $
  */
 
 /*
@@ -36,16 +36,27 @@ import java.io.*;
 import java.net.*;
 
 public class IcpFactoryImpl implements IcpFactory {
-
+  
+  /*
+   * begin static inner class
+   * ========================
+   */
   private static class IcpBuilderImpl implements IcpBuilder {
 
     public IcpMessage makeDenied(IcpMessage query)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) { 
-        throw new IcpProtocolException("ICP_OP_DENIED is a response to ICP_OP_QUERY.");
+      if (!query.isQuery()) { 
+        throw new IcpProtocolException(
+            "ICP_OP_DENIED is a response to ICP_OP_QUERY");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_DENIED, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), 0, 0, ZERO_ADDRESS, query.getPayloadUrl());
+      return new IcpMessageImpl(IcpMessage.ICP_OP_DENIED,
+                                IcpMessage.ICP_VERSION,
+                                query.getLength(),
+                                query.getRequestNumber(),
+                                0,
+                                0,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
     
     public IcpMessage makeDiscoveryEcho(URL query) {
@@ -54,109 +65,173 @@ public class IcpFactoryImpl implements IcpFactory {
     
     public IcpMessage makeError(IcpMessage query)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) { 
-        throw new IcpProtocolException("ICP_OP_ERR is a response to ICP_OP_QUERY.");
+      if (!query.isQuery()) { 
+        throw new IcpProtocolException(
+            "ICP_OP_ERR is a response to ICP_OP_QUERY");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_ERR, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), 0, 0, ZERO_ADDRESS, query.getPayloadUrl());
+      return new IcpMessageImpl(IcpMessage.ICP_OP_ERR,
+                                IcpMessage.ICP_VERSION,
+                                query.getLength(),
+                                query.getRequestNumber(),
+                                0,
+                                0,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
     public IcpMessage makeHit(IcpMessage query)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_HIT is a response to ICP_OP_QUERY.");
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_HIT is a response to ICP_OP_QUERY");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_HIT, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), 0, 0, ZERO_ADDRESS, query.getPayloadUrl());
+      return new IcpMessageImpl(IcpMessage.ICP_OP_HIT,
+                                IcpMessage.ICP_VERSION,
+                                (short)(query.getLength() - 4),
+                                query.getRequestNumber(),
+                                0,
+                                0,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
     public IcpMessage makeHit(IcpMessage query,
                               short srcRttResponse)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_HIT is a response to ICP_OP_QUERY.");
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_HIT is a response to ICP_OP_QUERY");
       }
       if (!query.requestsSrcRtt()) {
-        throw new IcpProtocolException("Query does not request source return trip time.");
+        throw new IcpProtocolException(
+            "Query does not request source return trip time");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_HIT, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), IcpMessage.ICP_FLAG_SRC_RTT, (int)srcRttResponse,
-          ZERO_ADDRESS, query.getPayloadUrl());
+      return new IcpMessageImpl(IcpMessage.ICP_OP_HIT,
+                                IcpMessage.ICP_VERSION,
+                                (short)(query.getLength() - 4),
+                                query.getRequestNumber(),
+                                IcpMessage.ICP_FLAG_SRC_RTT,
+                                (int)srcRttResponse,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
     public IcpMessage makeHitObj(IcpMessage query,
                                  byte[] payloadObject)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_HIT_OBJ is a response to ICP_OP_QUERY.");
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_HIT_OBJ is a response to ICP_OP_QUERY");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_HIT_OBJ, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), IcpMessage.ICP_FLAG_HIT_OBJ, 0, ZERO_ADDRESS,
-          query.getPayloadUrl(), payloadObject);
+      return new IcpMessageImpl(
+          IcpMessage.ICP_OP_HIT_OBJ,
+          IcpMessage.ICP_VERSION,
+          (short)(query.getLength() - 2 + payloadObject.length),
+          query.getRequestNumber(),
+          IcpMessage.ICP_FLAG_HIT_OBJ,
+          0,
+          ZERO_ADDRESS,
+          query.getPayloadUrl(),
+          payloadObject,
+          (short)payloadObject.length
+      );
     }
 
     public IcpMessage makeHitObj(IcpMessage query,
                                  short srcRttResponse,
                                  byte[] payloadObject)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_HIT_OBJ is a response to ICP_OP_QUERY.");
+      if (!query.isQuery()) {
+        throw new IcpProtocolException("ICP_OP_HIT_OBJ is a response to ICP_OP_QUERY");
       }
       if (!query.requestsSrcRtt()) {
-        throw new IcpProtocolException("Query does not request source return trip time.");
+        throw new IcpProtocolException("Query does not request source return trip time");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_HIT_OBJ,
-          IcpMessage.ICP_VERSION, query.getRequestNumber(),
+      return new IcpMessageImpl(
+          IcpMessage.ICP_OP_HIT_OBJ,
+          IcpMessage.ICP_VERSION,
+          (short)(query.getLength() - 2 + payloadObject.length),
+          query.getRequestNumber(),
           IcpMessage.ICP_FLAG_HIT_OBJ | IcpMessage.ICP_FLAG_SRC_RTT,
-          (int)srcRttResponse, ZERO_ADDRESS, query.getPayloadUrl(),
-          payloadObject);
+          (int)srcRttResponse, ZERO_ADDRESS,
+          query.getPayloadUrl(),
+          payloadObject,
+          (short)payloadObject.length
+      );
     }
 
     public IcpMessage makeMiss(IcpMessage query)
         throws IcpProtocolException { 
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_MISS is a response to ICP_OP_QUERY."); 
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_MISS is a response to ICP_OP_QUERY"); 
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_MISS, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), 0, 0, ZERO_ADDRESS, query.getPayloadUrl());
+      return new IcpMessageImpl(IcpMessage.ICP_OP_MISS,
+                                IcpMessage.ICP_VERSION,
+                                (short)(query.getLength() - 4),
+                                query.getRequestNumber(),
+                                0,
+                                0,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
     public IcpMessage makeMiss(IcpMessage query,
                                short srcRttResponse)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_MISS is a response to ICP_OP_QUERY."); 
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_MISS is a response to ICP_OP_QUERY"); 
       }
       if (!query.requestsSrcRtt()) {
-        throw new IcpProtocolException("Query does not request source return trip time.");
+        throw new IcpProtocolException(
+            "Query does not request source return trip time");
       }
-      return new IcpMessageImpl(IcpMessage.ICP_OP_MISS, IcpMessage.ICP_VERSION,
-          query.getRequestNumber(), IcpMessage.ICP_FLAG_SRC_RTT,
-          (int)srcRttResponse, ZERO_ADDRESS, query.getPayloadUrl());
+      return new IcpMessageImpl(IcpMessage.ICP_OP_MISS,
+                                IcpMessage.ICP_VERSION,
+                                (short)(query.getLength() - 4),
+                                query.getRequestNumber(),
+                                IcpMessage.ICP_FLAG_SRC_RTT,
+                                (int)srcRttResponse, 
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
-    public IcpMessage makeMissNoFetch(IcpMessage query) throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY."); 
+    public IcpMessage makeMissNoFetch(IcpMessage query)
+        throws IcpProtocolException {
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY"); 
       }
       return new IcpMessageImpl(IcpMessage.ICP_OP_MISS_NOFETCH,
-          IcpMessage.ICP_VERSION, query.getRequestNumber(), 0, 0,
-          ZERO_ADDRESS, query.getPayloadUrl());
+                                IcpMessage.ICP_VERSION,
+                                (short)(query.getLength() - 4),
+                                query.getRequestNumber(),
+                                0,
+                                0,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
     public IcpMessage makeMissNoFetch(IcpMessage query,
                                       short srcRttResponse)
         throws IcpProtocolException {
-      if (query.getOpcode() != IcpMessage.ICP_OP_QUERY) {
-        throw new IcpProtocolException("ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY."); 
+      if (!query.isQuery()) {
+        throw new IcpProtocolException(
+            "ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY"); 
       }
       if (!query.requestsSrcRtt()) {
-        throw new IcpProtocolException("Query does not request source return trip time.");
+        throw new IcpProtocolException(
+            "Query does not request source return trip time");
       }
       return new IcpMessageImpl(IcpMessage.ICP_OP_MISS_NOFETCH,
-          IcpMessage.ICP_VERSION, query.getRequestNumber(),
-          IcpMessage.ICP_FLAG_SRC_RTT, srcRttResponse, ZERO_ADDRESS,
-          query.getPayloadUrl());
+                                IcpMessage.ICP_VERSION,
+                                (short)(query.getLength() - 4),
+                                query.getRequestNumber(),
+                                IcpMessage.ICP_FLAG_SRC_RTT,
+                                srcRttResponse,
+                                ZERO_ADDRESS,
+                                query.getPayloadUrl());
     }
 
     public IcpMessage makeQuery(InetAddress requesterAddress,
@@ -168,16 +243,23 @@ public class IcpFactoryImpl implements IcpFactory {
                                 URL query,
                                 boolean requestSrcRtt,
                                 boolean requestHitObj) {
-      return new IcpMessageImpl(
-          IcpMessage.ICP_OP_QUERY,
-          IcpMessage.ICP_VERSION,
-          getNewRequestNumber(),
-            (requestSrcRtt ? IcpMessage.ICP_FLAG_SRC_RTT : 0)
-          | (requestHitObj ? IcpMessage.ICP_FLAG_HIT_OBJ : 0),
-          0,
-          ZERO_ADDRESS,
-          requesterAddress,
-          query);
+      try {
+        return new IcpMessageImpl(
+            IcpMessage.ICP_OP_QUERY,
+            IcpMessage.ICP_VERSION,
+            (short)(21 + query.toString().getBytes("US-ASCII").length),
+            getNewRequestNumber(),
+              (requestSrcRtt ? IcpMessage.ICP_FLAG_SRC_RTT : 0)
+            | (requestHitObj ? IcpMessage.ICP_FLAG_HIT_OBJ : 0),
+            0,
+            ZERO_ADDRESS,
+            requesterAddress,
+            query);
+      }
+      catch (UnsupportedEncodingException uee) {
+        throw new RuntimeException(
+            "Could not create byte array from String", uee);
+      }
     }
 
     public IcpMessage makeSourceEcho(URL query) {
@@ -203,7 +285,15 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     
   }
+  /*
+   * end static inner class
+   * ======================
+   */
   
+  /*
+   * begin static inner class
+   * ========================
+   */
   private static class IcpDecoderImpl implements IcpDecoder {
   
     public IcpMessage parseIcp(DatagramPacket packet) 
@@ -233,21 +323,42 @@ public class IcpFactoryImpl implements IcpFactory {
           case IcpMessage.ICP_OP_QUERY:
             requester = getIpFromStream(inData);
             payloadUrl = getUrlFromStream(inData);
-            ret = new IcpMessageImpl(opcode, version, requestNumber,
-                options, optionData, sender, requester, payloadUrl);
+            ret = new IcpMessageImpl(opcode,
+                                     version,
+                                     length,
+                                     requestNumber,
+                                     options,
+                                     optionData,
+                                     sender,
+                                     requester,
+                                     payloadUrl);
             break;
           case IcpMessage.ICP_OP_HIT_OBJ:
             payloadUrl = getUrlFromStream(inData);
             payloadLength = inData.readShort();
             payloadObject = new byte[payloadLength];
             inData.read(payloadObject, 0, payloadObject.length);
-            ret = new IcpMessageImpl(opcode, version, requestNumber,
-                options, optionData, sender, payloadUrl, payloadObject);
+            ret = new IcpMessageImpl(opcode,
+                                     version,
+                                     length,
+                                     requestNumber,
+                                     options,
+                                     optionData,
+                                     sender,
+                                     payloadUrl,
+                                     payloadObject,
+                                     payloadLength);
             break;
           default:
             payloadUrl = getUrlFromStream(inData);
-            ret = new IcpMessageImpl(opcode, version, requestNumber,
-                options, optionData, sender, payloadUrl);
+            ret = new IcpMessageImpl(opcode,
+                                     version,
+                                     length,
+                                     requestNumber,
+                                     options,
+                                     optionData,
+                                     sender,
+                                     payloadUrl);
             break;
         }
         
@@ -295,7 +406,15 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     
   }
+  /*
+   * end static inner class
+   * ======================
+   */
   
+  /*
+   * begin static inner class
+   * ========================
+   */
   private static class IcpEncoderImpl implements IcpEncoder {
     
     public DatagramPacket encode(IcpMessage message,
@@ -349,7 +468,15 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     
   }
-
+  /*
+   * end static inner class
+   * ======================
+   */
+  
+  /*
+   * begin static inner class
+   * ========================
+   */
   private static class IcpMessageImpl implements IcpMessage {
 
     private short length;
@@ -361,6 +488,8 @@ public class IcpFactoryImpl implements IcpFactory {
     private int options;
 
     private byte[] payloadObject;
+    
+    private short payloadObjectLength;
 
     private URL payloadUrl;
 
@@ -378,22 +507,29 @@ public class IcpFactoryImpl implements IcpFactory {
 
     protected IcpMessageImpl(byte opcode,
                              byte version,
+                             short length,
                              int requestNumber,
                              int options,
                              int optionData,
                              InetAddress sender,
                              InetAddress requester,
                              URL payloadUrl) {
-      this(opcode, version, requestNumber, options,
-          optionData, sender, payloadUrl);
+      this(opcode,
+           version,
+           length,
+           requestNumber,
+           options,
+           optionData,
+           sender,
+           payloadUrl);
       if (getOpcode() == ICP_OP_QUERY) {
         this.requester = requester;
-        this.length += 4; // size of requester field
       }
     }
 
     protected IcpMessageImpl(byte opcode,
                              byte version,
+                             short length,
                              int requestNumber,
                              int options,
                              int optionData,
@@ -406,106 +542,73 @@ public class IcpFactoryImpl implements IcpFactory {
       this.optionData = optionData;
       this.sender = sender;
       this.payloadUrl = payloadUrl;
-      this.length = (short)(21 + payloadUrl.toString().length());
-      // 21 = size of header (20) + null-terminated URL (1)
+      this.length = length;
     }
 
     protected IcpMessageImpl(byte opcode,
                              byte version,
+                             short length,
                              int requestNumber,
                              int options,
                              int optionData,
                              InetAddress sender,
                              URL payloadUrl,
-                             byte[] payloadObject) {
-      this(opcode, version, requestNumber, options,
-          optionData, sender, payloadUrl);
+                             byte[] payloadObject,
+                             short payloadObjectLength) {
+      this(opcode,
+           version,
+           length,
+           requestNumber,
+           options,
+           optionData,
+           sender,
+           payloadUrl);
       if (getOpcode() == ICP_OP_HIT_OBJ) {
         this.payloadObject = payloadObject;
-        this.length += payloadObject.length; // size of payload
-        this.length += 2; // size of payload length field
+        this.payloadObjectLength = payloadObjectLength;
       }
     }
     
     public boolean containsSrcRttResponse() {
-      byte opcode = getOpcode();
-      return (opcode == ICP_OP_HIT || opcode == ICP_OP_MISS
-          || opcode == ICP_OP_MISS_NOFETCH || opcode == ICP_OP_HIT_OBJ)
-          && (getOptions() & ICP_FLAG_SRC_RTT) != 0;
+      return isResponse() && ((getOptions() & ICP_FLAG_SRC_RTT) != 0);
     }
     
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getLength()
-     */
     public short getLength() {
       return length;
     }
     
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getOpcode()
-     */
     public byte getOpcode() {
       return opcode;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getOptionData()
-     */
     public int getOptionData() {
       return optionData;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getOptions()
-     */
     public int getOptions() {
       return options;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getPayloadObject()
-     */
     public byte[] getPayloadObject() {
-      return payloadObject;
+      return (getOpcode() == ICP_OP_HIT_OBJ) ? payloadObject : null;
     }
     
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getPayloadObject()
-     */
     public short getPayloadObjectLength() {
-      byte[] payload = getPayloadObject();
-      if (opcode == ICP_OP_HIT_OBJ && payload != null) {
-        return (short)payload.length;
-      }
-      else {
-        return (short)0;
-      }
+      return (getOpcode() == ICP_OP_HIT_OBJ) ? payloadObjectLength : (short)0;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getPayloadUrl()
-     */
     public URL getPayloadUrl() {
       return payloadUrl;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getRequester()
-     */
     public InetAddress getRequester() {
-      return requester;
+      return isQuery() ? requester : null;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getRequestNumber()
-     */
     public int getRequestNumber() {
       return requestNumber;
     }
     
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getSender()
-     */
     public InetAddress getSender() {
       return sender;
     }
@@ -519,9 +622,6 @@ public class IcpFactoryImpl implements IcpFactory {
       }
     }
     
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getUdpAddress()
-     */
     public InetAddress getUdpAddress() {
       return udpAddress;
     }
@@ -530,28 +630,34 @@ public class IcpFactoryImpl implements IcpFactory {
       return udpPort;
     }
 
-    /**
-     * @see org.thib.lockss.playground.icp.IcpMessage#getVersion()
-     */
     public byte getVersion() {
       return version;
     }
 
-    public boolean requestsHitObj() {
-      return    getOpcode() == ICP_OP_QUERY
-             && (getOptions() & ICP_FLAG_HIT_OBJ) != 0;
+    public boolean isQuery() {
+      return getOpcode() == ICP_OP_QUERY;
     }
 
-    public boolean requestsSrcRtt() {
-      return    getOpcode() == ICP_OP_QUERY
-             && (getOptions() & ICP_FLAG_SRC_RTT) != 0;
-
+    public boolean isResponse() {
+      byte opcode = getOpcode();
+      return    opcode == ICP_OP_HIT
+             || opcode == ICP_OP_HIT_OBJ
+             || opcode == ICP_OP_MISS
+             || opcode == ICP_OP_MISS_NOFETCH;
     }
     
+    public boolean requestsHitObj() {
+      return isQuery() && (getOptions() & ICP_FLAG_HIT_OBJ) != 0;
+    }
+    
+    public boolean requestsSrcRtt() {
+      return isQuery() && (getOptions() & ICP_FLAG_SRC_RTT) != 0;
+    }
+
     public void setUdpAddress(InetAddress udpAddress) {
       this.udpAddress = udpAddress;
     }
-    
+
     public void setUdpPort(int port) {
       this.udpPort = port;
     }
@@ -566,6 +672,8 @@ public class IcpFactoryImpl implements IcpFactory {
       buffer.append(Integer.toHexString(getVersion()));
       buffer.append(";length=");
       buffer.append(Integer.toHexString(getLength()));
+      buffer.append(";requestNumber=");
+      buffer.append(Integer.toHexString(getRequestNumber()));
       buffer.append(";options=");
       buffer.append(Integer.toHexString(getOptions()));
       buffer.append(";requestsSrcRtt=");
@@ -599,7 +707,11 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     
   }
-
+  /*
+   * end static inner class
+   * ======================
+   */
+  
   private IcpFactoryImpl() {}
   
   public synchronized IcpBuilder makeIcpBuilder() {
