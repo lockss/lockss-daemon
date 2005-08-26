@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.151 2005-08-23 22:06:52 tlipkis Exp $
+ $Id: build.xml,v 1.152 2005-08-26 02:33:58 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -43,6 +43,7 @@ Args:
   -Dfile=path/to/file      Specify file for print or index.
                               File is relative to project base dir
   -Dfiltertrace=no         Don't filter junit frames from backtrace.
+  -Dforce=true             Override prerequisite checks (e.g., java version)
   -Dfork=true              Run each test in a separate jvm.  (Default is true,
                               setting to false will cause some tests to fail.)
   -Dforkc=true             Run compiler in a separate jvm.
@@ -166,6 +167,8 @@ Args:
   <property name="jaxp.jar"       value="${lib}/javax.xml.jaxp.jar"/>
 <!--    <property name="xml.jar"  value="${lib}/org.apache.crimson.jar"/> -->
   <property name="log4j.jar" value="${lib}/log4j-1.2.8.jar"/>
+  <property name="commons.lang.jar"
+  				  value="${lib}/commons-lang-2.1.jar"/>
   <property name="commons.collections.jar"
   				  value="${lib}/commons-collections-3.1.jar"/>
   <property name="commons.logging.jar"
@@ -242,6 +245,7 @@ Args:
 
   <!--  Classpaths -->
   <path id="compile.classpath">
+    <pathelement path="${commons.lang.jar}" />
     <pathelement path="${commons.collections.jar}" />
     <pathelement path="${commons.logging.jar}" />
     <pathelement path="${commons.httpclient.jar}" />
@@ -429,8 +433,22 @@ Test results in ${test.results}
      <or>
       <equals arg1="1.4" arg2="${ant.java.version}"/>
       <equals arg1="1.5" arg2="${ant.java.version}"/>
+      <equals arg1="1.6" arg2="${ant.java.version}"/>
      </or>
     </condition>
+
+    <!-- Require at least Java 1.4, but allow builds if force is set -->
+    <condition property="is-sufficient-java-version">
+     <or>
+      <istrue value="${is-java-1.4}" />
+      <istrue value="${force}" />
+     </or>
+    </condition>
+
+    <fail unless="is-sufficient-java-version">
+Java ${ant.java.version} found, 1.4 required
+    </fail>
+
     <condition property="detected.os" value="unix">
       <os family="unix"/>
     </condition>

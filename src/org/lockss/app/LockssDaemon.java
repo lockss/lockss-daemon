@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.73 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: LockssDaemon.java,v 1.74 2005-08-26 02:33:58 tlipkis Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.app;
 
 import java.util.*;
+import org.apache.commons.lang.SystemUtils;
 import org.lockss.util.*;
 import org.lockss.mail.*;
 import org.lockss.alert.*;
@@ -58,6 +59,8 @@ public class LockssDaemon extends LockssApp {
   private static Logger log = Logger.getLogger("LockssDaemon");
 
   private static String PREFIX = Configuration.PREFIX + "daemon.";
+
+  public static float MIN_JAVA_VERSION = 1.4f;
 
 /**
  * LOCKSS is a trademark of Stanford University.  Stanford hereby grants you
@@ -768,6 +771,13 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
    */
   public static void main(String[] args) {
     LockssDaemon daemon;
+    if (!SystemUtils.isJavaVersionAtLeast(MIN_JAVA_VERSION)) {
+      System.err.println("LOCKSS requires at least Java " + MIN_JAVA_VERSION +
+			 ", this is " + SystemUtils.JAVA_VERSION +
+			 ", exiting.");
+      System.exit(3);
+    }
+
     StartupOptions opts = getStartupOptions(args);
 
     try {
