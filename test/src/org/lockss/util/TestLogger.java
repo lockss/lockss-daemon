@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.23 2005-08-23 22:01:16 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.24 2005-08-26 02:37:38 tlipkis Exp $
  */
 
 /*
@@ -329,10 +329,6 @@ public class TestLogger extends LockssTestCase {
     public void setDoRecurse(boolean val) {
       doRecurse = val;
     }
-  }
-
-  public void testFoo() {
-    System.out.println(System.getProperties().toString());
   }
 }
 
