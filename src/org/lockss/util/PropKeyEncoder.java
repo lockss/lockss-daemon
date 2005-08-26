@@ -1,5 +1,5 @@
 /*
- * $Id: PropKeyEncoder.java,v 1.4 2004-10-08 06:58:40 tlipkis Exp $
+ * $Id: PropKeyEncoder.java,v 1.5 2005-08-26 02:37:21 tlipkis Exp $
  */
 
 /*
@@ -126,6 +126,6 @@ public class PropKeyEncoder {
   public static String decode(String s) {
     // we encode in the same format as URLEncoder, so can use URLDecoder to
     // decode.
-    return java.net.URLDecoder.decode(s);
+    return UrlUtil.decodeUrl(s);
   }
 }

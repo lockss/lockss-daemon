@@ -1,5 +1,5 @@
 /*
-* $Id: AuUrl.java,v 1.6 2003-09-26 23:52:17 eaalto Exp $
+* $Id: AuUrl.java,v 1.7 2005-08-26 02:37:21 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.plugin;
 import java.io.*;
 import java.net.*;
 import org.lockss.daemon.*;
+import org.lockss.util.*;
 
 /** An AU URL is a URL with a special protocol (LOCKSSAU:), used in
  * top-level poll messages to identify the entire contents of an AU.
@@ -69,7 +70,7 @@ public class AuUrl {
    */
   public static URL fromAuId(String auId)
       throws MalformedURLException {
-    return new URL(PROTOCOL, "", URLEncoder.encode(auId));
+    return new URL(PROTOCOL, "", UrlUtil.encodeUrl(auId));
   }
 
   /** Extract the AU Id from an AuUrl.
@@ -78,6 +79,6 @@ public class AuUrl {
    * #fromAuId(String)}
    */
   public static String getAuId(URL auUrl) {
-    return URLDecoder.decode(auUrl.getFile());
+    return UrlUtil.decodeUrl(auUrl.getFile());
   }
 }

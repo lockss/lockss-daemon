@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.57 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.58 2005-08-26 02:37:21 tlipkis Exp $
  */
 
 /*
@@ -670,7 +670,7 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected String urlEncode(String param) {
-    return URLEncoder.encode(param);
+    return UrlUtil.encodeUrl(param);
   }
 
 

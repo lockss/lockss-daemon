@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.32 2005-07-09 21:58:57 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.33 2005-08-26 02:37:21 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -366,11 +366,36 @@ public class UrlUtil {
     return sb.toString();
   }
 
+  /** Performs the bare minimum URL encoding */
   public static String minimallyEncodeUrl(String url) {
     url = StringUtil.replaceString(url, " ", "%20");
     url = StringUtil.replaceString(url, "\"", "%22");
     url = StringUtil.replaceString(url, "|", "%7c");
     return url;
+  }
+
+  /** URLencode a string */
+  public static String encodeUrl(String url) {
+    try {
+      return URLEncoder.encode(url, Constants.DEFAULT_ENCODING);
+    } catch (UnsupportedEncodingException e) {
+      // The system should always have the platform default
+      throw new RuntimeException("Default encoding (" +
+				 Constants.DEFAULT_ENCODING + ") unsupported",
+				 e);
+    }
+  }
+
+  /** URLdecode a string */
+  public static String decodeUrl(String url) {
+    try {
+      return URLDecoder.decode(url, Constants.DEFAULT_ENCODING);
+    } catch (UnsupportedEncodingException e) {
+      // The system should always have the platform default
+      throw new RuntimeException("Default encoding (" +
+				 Constants.DEFAULT_ENCODING + ") unsupported",
+				 e);
+    }
   }
 
   /** Resolve possiblyRelativeUrl relative to baseUrl.
