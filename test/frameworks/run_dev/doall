@@ -9,7 +9,7 @@ if [ "$1" == "start" ] ; then
         echo daemon already running
     else
         shift
-        ./rundaemon "$@" &
+        ( ./rundaemon "$@" ; rm -f dpid ) &
         echo daemon started
     fi
 elif [ "$1" == "clean" ] ; then

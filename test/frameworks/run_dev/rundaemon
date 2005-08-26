@@ -15,6 +15,12 @@ while true ; do
     "-debug" )
       args="$args -Dorg.lockss.defaultLogLevel=DEBUG"
       shift; continue;;
+    "-debug2" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG2"
+      shift; continue;;
+    "-debug3" )
+      args="$args -Dorg.lockss.defaultLogLevel=DEBUG3"
+      shift; continue;;
     "-g" )
       group="$2"
       echo "group=$group"
@@ -52,6 +58,7 @@ if [ -z "$args" ]; then
   args=-Dorg.lockss.defaultLogLevel=DEBUG
 fi
 
+#PROP_URL_LIST="-p http://cepe/03042003_dev/lockss.txt -p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
 PROP_URL_LIST="-p http://props.lockss.org:8001/daemon/lockss.xml -p local.txt"
 
 # local copy of lockss jars allows recompile while we're running
@@ -67,5 +74,5 @@ JVM_ARGS="-Xmx120m -Dsun.net.inetaddr.ttl=3600"
 echo running at `date`
 java $args org.lockss.app.LockssDaemon -g $group ${PROP_URL_LIST} >>test.out 2>&1 &
 echo $! >dpid
-wait
+wait `cat dpid`
 echo stopped with status $? at `date`
