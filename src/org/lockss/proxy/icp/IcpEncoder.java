@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoder.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpEncoder.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
  */
 
 /*
@@ -39,12 +39,32 @@ import java.net.InetAddress;
  * <p>Defines a simple abstraction for classes that are able to
  * encode an {@link IcpMessage} into a {@link DatagramPacket}.</p>
  * @author Thib Guicherd-Callin
+ * @see IcpEncoderFactory
+ * @see IcpMessage
  */
 public interface IcpEncoder {
 
+  /**
+   * <p>Equivalent to calling
+   * {@link #encode(IcpMessage, InetAddress, int)} with the port
+   * argument equal to {@link IcpMessage#ICP_PORT}.</p>
+   * @param message
+   * @param recipient
+   * @return
+   */
   DatagramPacket encode(IcpMessage message,
                         InetAddress recipient);
   
+  /**
+   * <p>Constructs a UDP packet to the given address and port, from
+   * the given ICP message argument.</p>
+   * @param message   An ICP message to translate into a packet.
+   * @param recipient The destination IP.
+   * @param port      The destination port.
+   * @return A UDP packet <code>p</code> representing the message,
+   *         such that <code>p.getAddress() == recipient</code> and
+   *         <code>p.getPort() == port</code>.
+   */
   DatagramPacket encode(IcpMessage message,
                         InetAddress recipient,
                         int port);

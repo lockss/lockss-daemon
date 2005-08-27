@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.2 2005-08-26 01:32:58 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.3 2005-08-27 00:26:03 thib_gc Exp $
  */
 
 /*
@@ -119,6 +119,10 @@ public class IcpFactoryImpl implements IcpFactory {
     public IcpMessage makeHitObj(IcpMessage query,
                                  byte[] payloadObject)
         throws IcpProtocolException {
+      if (payloadObject == null) {
+        throw new NullPointerException(
+            "The payload object cannot be null");
+      }
       if (!query.isQuery()) {
         throw new IcpProtocolException(
             "ICP_OP_HIT_OBJ is a response to ICP_OP_QUERY");
@@ -141,6 +145,10 @@ public class IcpFactoryImpl implements IcpFactory {
                                  short srcRttResponse,
                                  byte[] payloadObject)
         throws IcpProtocolException {
+      if (payloadObject == null) {
+        throw new NullPointerException(
+            "The payload object cannot be null");
+      }
       if (!query.isQuery()) {
         throw new IcpProtocolException("ICP_OP_HIT_OBJ is a response to ICP_OP_QUERY");
       }

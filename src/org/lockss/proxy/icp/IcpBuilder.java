@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilder.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpBuilder.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
  */
 
 /*
@@ -35,54 +35,183 @@ package org.lockss.proxy.icp;
 import java.net.InetAddress;
 import java.net.URL;
 
+/**
+ * <p>Specifies an interface for classes that are able to produce
+ * ICP queries, ICP responses and other ICP messages.</p>
+ * @author Thib Guicherd-Callin
+ * @see IcpBuilderFactory
+ * @see IcpMessage
+ */
 public interface IcpBuilder {
 
+  /**
+   * <p>Produces a denied message in response to a query.</p>
+   * @param query The ICP query.
+   * @return A denied message in response to the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query.
+   * @see IcpMessage#isQuery
+   */
   IcpMessage makeDenied(IcpMessage query)
       throws IcpProtocolException;
   
+  /**
+   * <p>Produces an ICP source-echo message.</p>
+   * @param query A URL query.
+   * @return A source-echo message.
+   */
   IcpMessage makeDiscoveryEcho(URL query);
-  
+
+  /**
+   * <p>Produces an error message in response to a query.</p>
+   * @param query The ICP query.
+   * @return An error message in response to the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query.
+   * @see IcpMessage#isQuery
+   */
   IcpMessage makeError(IcpMessage query)
       throws IcpProtocolException;
-  
+
+  /**
+   * <p>Produces a hit response to a query.</p>
+   * @param query The ICP query.
+   * @return A hit response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query.
+   */
   IcpMessage makeHit(IcpMessage query)
       throws IcpProtocolException;
   
+  /**
+   * <p>Produces a hit response to a query, with the given source
+   * return trip time.</p>
+   * @param query          The ICP query.
+   * @param srcRttResponse A source return trip time.
+   * @return A hit response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query, or if the query did not
+   *                              request a source return trip time
+   *                              response.
+   */
   IcpMessage makeHit(IcpMessage query,
                      short srcRttResponse)
       throws IcpProtocolException;
   
+  /**
+   * <p>Produces a hit-object response to a query using the given
+   * array of bytes.</p>
+   * @param query         The ICP query.
+   * @param payloadObject A payload as an array of bytes.
+   * @return A hit-object response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query.
+   * @throws NullPointerException if payloadObject is null. 
+   */
   IcpMessage makeHitObj(IcpMessage query,
                         byte[] payloadObject)
       throws IcpProtocolException;
 
+  /**
+   * <p>Produces a hit-object response to a query using the given
+   * array of bytes, with the given source return trip time.</p>
+   * @param query          The ICP query.
+   * @param srcRttResponse A source return trip time.
+   * @param payloadObject A payload as an array of bytes.
+   * @return A hit response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query, or if the query did not
+   *                              request a source return trip time
+   *                              response.
+   * @throws NullPointerException if payloadObject is null. 
+   */
   IcpMessage makeHitObj(IcpMessage query,
                         short srcRttResponse,
                         byte[] payloadObject)
       throws IcpProtocolException;
 
+  /**
+   * <p>Produces a miss response to a query.</p>
+   * @param query The ICP query.
+   * @return A miss response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query.
+   */
   IcpMessage makeMiss(IcpMessage query)
       throws IcpProtocolException;
   
+  /**
+   * <p>Produces a miss response to a query, with the given source
+   * return trip time.</p>
+   * @param query          The ICP query.
+   * @param srcRttResponse A source return trip time.
+   * @return A miss response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query, or if the query did not
+   *                              request a source return trip time
+   *                              response.
+   */
   IcpMessage makeMiss(IcpMessage query,
                       short srcRttResponse)
       throws IcpProtocolException;
   
+  /**
+   * <p>Produces a miss-no-fectch response to a query.</p>
+   * @param query The ICP query.
+   * @return A miss-no-fetch response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query.
+   */
   IcpMessage makeMissNoFetch(IcpMessage query)
       throws IcpProtocolException;
 
+  /**
+   * <p>Produces a miss-no-fetch response to a query, with the given
+   * source return trip time.</p>
+   * @param query          The ICP query.
+   * @param srcRttResponse A source return trip time.
+   * @return A miss response based on the query.
+   * @throws IcpProtocolException if the argument message is not a
+   *                              query, or if the query did not
+   *                              request a source return trip time
+   *                              response.
+   */
   IcpMessage makeMissNoFetch(IcpMessage query,
                              short srcRttResponse)
       throws IcpProtocolException;
-  
+
+  /**
+   * <p>Equivalent to calling
+   * {@link #makeQuery(InetAddress, URL, boolean, boolean)} with the
+   * two boolean arguments being false.</p>
+   * @param requesterAddress
+   * @param query
+   * @return A query message.
+   * @see #makeQuery(InetAddress, URL, boolean, boolean)
+   */
   IcpMessage makeQuery(InetAddress requesterAddress,
                        URL query);
   
+  /**
+   * <p>Produces an ICP query using the given URL, with optional
+   * parameters.</p>
+   * @param requesterAddress The address of the original requester.
+   * @param query            A URL query.
+   * @param requestSrcRtt    Request a source return time trip.
+   * @param requestHitObj    Request a hit object.
+   * @return A query message.
+   * @see IcpMessage#getRequester
+   */
   IcpMessage makeQuery(InetAddress requesterAddress,
                        URL query,
                        boolean requestSrcRtt,
                        boolean requestHitObj);
   
+  /**
+   * <p>Produces an ICP source-echo message.</p>
+   * @param query A URL query.
+   * @return A source-echo message.
+   */
   IcpMessage makeSourceEcho(URL query);
   
 }

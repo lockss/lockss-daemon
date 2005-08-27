@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoder.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpDecoder.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
  */
 
 /*
@@ -38,9 +38,26 @@ import java.net.DatagramPacket;
  * <p>Defines a simple abstraction for classes that are able to
  * parse a {@link DatagramPacket} into an {@link IcpMessage}.</p>
  * @author Thib Guicherd-Callin
+ * @see IcpDecoderFactory
+ * @see IcpMessage
  */
 public interface IcpDecoder {
 
+  /**
+   * <p>Translates the given UDP packet into an {@link IcpMessage}
+   * instance.</p>
+   * @param packet A UDP packet.
+   * @return An ICP message <code>m</code> representing the data in
+   *         the packet, such that
+   *         <code>m.getUdpAddress() == packet.getAddress()</code>
+   *         and
+   *         <code>m.getUdpPort() == packet.getPort()</code>.
+   * @throws IcpProtocolException if the packet is malformed.
+   * @see IcpMessage#getUdpAddress
+   * @see IcpMessage#getUdpPort
+   * @see IcpMessage#setUdpAddress
+   * @see IcpMessage#setUdpPort
+   */
   IcpMessage parseIcp(DatagramPacket packet) throws IcpProtocolException;
 
 }
