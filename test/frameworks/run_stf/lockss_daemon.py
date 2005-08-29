@@ -1,4 +1,4 @@
-import base64, glob, os, httplib, random, re, shutil, signal, socket
+import base64, glob, os, httplib, random, re, sha, shutil, signal, socket
 import mimetools, mimetypes, sys, time, types, urllib, urllib2, urlparse
 from os import path
 from xml.dom import minidom
@@ -49,6 +49,7 @@ class Framework:
             self.daemonCount = daemonCount
         self.startPort = int(config.get('startPort', 8081))
         self.username = config.get('username', 'testuser')
+#        self.password = self.__encPasswd(config.get('password', 'testpass'))
         self.password = config.get('password', 'testpass')
         self.logLevel = config.get('daemonLogLevel', 'debug3')
         self.hostname = config.get('hostname', 'localhost')
@@ -172,10 +173,16 @@ class Framework:
 
         return (":".join(glob.glob(path.join(self.localLibDir, "*.jar"))) +
                  ":" + line)
-        
+
     def makeClasspath(self):
         return self.__makeClasspath()
 
+    def __encPasswd(self, passwd):
+        """ Return a SHA1 encoded version of the specified password """
+        digest = sha.new()
+        digest.update(passwd)
+        return digest.hexdigest()
+        
     def __findProjectDir(self):
         """ Walk up the tree until 'build.xml' is found.  Assume this
         is the root of the project. """
@@ -237,13 +244,15 @@ class Framework:
             proxyStart = 'no'
         ipAddr = tr + '.' + tr + '.' + tr + '.' + tr
         unicastPort = '900%d' % self.configCount
+        icpPort = '303%d' % self.configCount
         unicastSendToPort = '9000'
         f.write(localConfigTemplate % {"username": self.username,
-                                       "password": self.password,
+                                       "password": "SHA1:%s" % self.__encPasswd(self.password),
                                        "dir": dir, "proxyStart": proxyStart,
                                        "uiPort": uiPort, "ipAddr": ipAddr,
                                        "unicastPort": unicastPort,
-                                       "unicastSendToPort": unicastSendToPort})
+                                       "unicastSendToPort": unicastSendToPort,
+                                       "icpPort": icpPort})
         f.close()
         self.configCount += 1 # no ++ in python, oops.
 
@@ -1488,7 +1497,7 @@ class MultipartPost:
         h.putheader("Content-Type", contentType)
         h.putheader("Content-Length", length)
         if self.cookie:
-            h.putheader("Cookie", cookie)
+            h.putheader("Cookie", self.cookie)
         h.endheaders()
         h.send(body)
         errcode, errmsg, headers = h.getreply()
@@ -1616,4 +1625,5 @@ org.lockss.localIPAddress=%(ipAddr)s
 org.lockss.comm.unicast.port=%(unicastPort)s
 org.lockss.comm.unicast.sendToPort=%(unicastSendToPort)s
 org.lockss.comm.unicast.sendToAddr=127.0.0.1
+org.lockss.proxy.icp.port=%(icpPort)s
 """
