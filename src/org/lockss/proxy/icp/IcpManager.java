@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.3 2005-08-29 17:31:17 thib_gc Exp $
  */
 
 /*
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import java.io.IOException;
-import java.net.*;
+import java.net.DatagramSocket;
+import java.net.SocketException;
 
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.LockssAppException;

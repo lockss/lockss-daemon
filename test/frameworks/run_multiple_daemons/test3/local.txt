@@ -15,3 +15,6 @@ org.lockss.test.pollspec.auId=org|lockss|plugin|simulated|SimulatedPlugin&root~l
 org.lockss.test.pollspec.url=lockssau:
 #org.lockss.test.pollspec.lwrBound=
 #org.lockss.test.pollspec.uprBound=
+
+org.lockss.proxy.icp.port=3033
+
