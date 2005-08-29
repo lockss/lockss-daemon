@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorTableModel.java,v 1.7 2005-05-25 23:47:37 smorabito Exp $
+ * $Id: EDPInspectorTableModel.java,v 1.8 2005-08-29 17:13:47 rebeccai Exp $
  */
 
 /*
@@ -49,6 +49,7 @@ public class EDPInspectorTableModel extends AbstractTableModel
 
   static final String[] cols = {
     "Plugin Field", "Assigned Value"};
+
   static final class InspectorEntry {
     String m_pluginKey;
     String m_title;
@@ -76,14 +77,14 @@ public class EDPInspectorTableModel extends AbstractTableModel
 		       inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_RULES, "Crawl Rules",
 		       inspectorCellEditor),
+    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
+		       "Crawl Window", inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_PAUSE_TIME,
 		       "Pause Time Between Fetches", inspectorCellEditor),
     new InspectorEntry( EditableDefinablePlugin.AU_NEWCONTENT_CRAWL,
 			"New Content Crawl Interval", inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_DEPTH,
 		       "Default Crawl Depth", null),
-    new InspectorEntry(EditableDefinablePlugin.AU_CRAWL_WINDOW,
-		       "Crawl Window Class", null),
     new InspectorEntry(EditableDefinablePlugin.AU_FILTER_SUFFIX,
 		       "Filter Class", inspectorCellEditor),
     new InspectorEntry(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,

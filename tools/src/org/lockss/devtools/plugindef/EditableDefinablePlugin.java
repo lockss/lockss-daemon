@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.14 2005-08-08 23:28:30 thib_gc Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.15 2005-08-29 17:13:29 rebeccai Exp $
  */
 
 /*
@@ -212,7 +212,7 @@ public class EditableDefinablePlugin
     }
 
   }
-
+    /*
   public void setAuCrawlWindow(String crawlWindow) {
 
     try {
@@ -232,6 +232,29 @@ public class EditableDefinablePlugin
   public void removeAuCrawlWindow() {
     definitionMap.removeMapElement(AU_CRAWL_WINDOW);
   }
+*/
+  public void setAuCrawlWindow(CrawlWindow crawlWindow){
+      try {
+	  definitionMap.setMapElement(AU_CRAWL_WINDOW, crawlWindow);
+      }
+      catch (Exception ex) {
+	  throw new DefinablePlugin.InvalidDefinitionException(
+           "Unable to create crawl window class: " + crawlWindow, ex);
+      }
+
+  }
+
+  public CrawlWindow getAuCrawlWindow() {  
+
+      return (CrawlWindow) (definitionMap.getMapElement(AU_CRAWL_WINDOW));  
+
+  }
+
+  public void removeAuCrawlWindow() {   
+
+      definitionMap.removeMapElement(AU_CRAWL_WINDOW);
+
+  } 
 
   public void setAuFilter(String mimetype, List rules) {
     if (rules.size() > 0) {
