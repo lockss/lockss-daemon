@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.10 2005-07-18 08:57:39 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.11 2005-08-29 17:16:54 rebeccai Exp $
  */
 
 /*
@@ -273,32 +273,31 @@ public class TestEditableDefinablePlugin
   }
 
   public void testSetAndRemoveAuCrawlWindow() {
-    String defWindow = null;
-    String expWindow = "org.lockss.test.MockCrawlWindow";
-    String actWindow = null;
+   
+    CrawlWindow defWindow = null;
+    CrawlWindow actWindow = null;
+    Calendar start = Calendar.getInstance();
+    start.set(Calendar.HOUR_OF_DAY,1);
+    start.set(Calendar.MINUTE,13);
+    Calendar end   = Calendar.getInstance();
+    start.set(Calendar.HOUR_OF_DAY,22);
+    start.set(Calendar.MINUTE,52);
+    TimeZone timezone = TimeZone.getTimeZone("America/Los_Angeles");
+    CrawlWindow expWindow = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
 
     // test default
-    actWindow = edPlugin.getMap().getString(edPlugin.AU_CRAWL_WINDOW, defWindow);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(edPlugin.AU_CRAWL_WINDOW);
     assertEquals("default window", defWindow, actWindow);
-
-    // test bad class name throws
-    try {
-      edPlugin.setAuCrawlWindow("foobar");
-      assertTrue("bad crawl window", false);
-    }
-    catch (DefinablePlugin.InvalidDefinitionException ex) {
-    }
 
     // test good class name is ok
     edPlugin.setAuCrawlWindow(expWindow);
-    actWindow = edPlugin.getMap().getString(edPlugin.AU_CRAWL_WINDOW, defWindow);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(edPlugin.AU_CRAWL_WINDOW);
     assertEquals("set window", expWindow, actWindow);
 
     // test remove
     edPlugin.removeAuCrawlWindow();
-    actWindow = edPlugin.getMap().getString(edPlugin.AU_CRAWL_WINDOW, defWindow);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(edPlugin.AU_CRAWL_WINDOW);
     assertEquals("default window", defWindow, actWindow);
-
   }
 
   public void testSetAndRemoveAuExpectedBasePath() {
