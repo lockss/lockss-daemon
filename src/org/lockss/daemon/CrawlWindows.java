@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindows.java,v 1.7 2003-12-12 02:39:48 eaalto Exp $
+ * $Id: CrawlWindows.java,v 1.8 2005-08-29 17:52:38 rebeccai Exp $
  */
 
 /*
@@ -157,6 +157,18 @@ public class CrawlWindows {
       this.start = start;
       this.end = end;
       this.fieldMask = fieldMask;
+    }
+
+    public Calendar getStartCalendar(){
+	return start;
+    }
+
+    public Calendar getEndCalendar(){
+	return end;
+    }
+
+    public TimeZone getTimeZone(){
+	return timeZone;
     }
 
     public boolean isMatch(Calendar cal) {
@@ -377,6 +389,10 @@ public class CrawlWindows {
         throw new NullPointerException("CrawlWindows.Not with null window");
       }
       this.window = window;
+    }
+
+    public CrawlWindow getCrawlWindow(){
+	return window;
     }
 
     public boolean canCrawl() {
