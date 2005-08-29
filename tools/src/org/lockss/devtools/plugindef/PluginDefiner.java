@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.9 2004-10-05 00:31:58 clairegriffin Exp $
+ * $Id: PluginDefiner.java,v 1.10 2005-08-29 17:12:12 rebeccai Exp $
  */
 
 /*
@@ -80,6 +80,7 @@ public class PluginDefiner extends JFrame {
   JMenuItem jMenuItem2 = new JMenuItem();
   JCheckBoxMenuItem expertModeMenuItem = new JCheckBoxMenuItem();
   JMenuItem filtersTestMenuItem = new JMenuItem();
+  JMenuItem validatePluginMenuItem = new JMenuItem();
   JScrollPane jScrollPane1 = new JScrollPane();
   BorderLayout borderLayout1 = new BorderLayout();
 
@@ -173,13 +174,16 @@ public class PluginDefiner extends JFrame {
     rulesTestMenuItem.setMnemonic('C');
     rulesTestMenuItem.setText("Test CrawlRules...");
     rulesTestMenuItem.addActionListener(new Configurator_rulesTestMenuItem_actionAdapter(this));
-    filtersTestMenuItem.setText("Test Filters...");
+    //filtersTestMenuItem.setText("Test Filters...");
     expertModeMenuItem.setMnemonic('X');
     expertModeMenuItem.setText("ExpertMode");
     expertModeMenuItem.addActionListener(new Configurator_expertModeMenuItem_actionAdapter(this));
     filtersTestMenuItem.setMnemonic('F');
-    filtersTestMenuItem.setText("Test Filters");
+    filtersTestMenuItem.setText("Test Filters...");
     filtersTestMenuItem.addActionListener(new Configurator_filtersTestMenuItem_actionAdapter(this));
+    validatePluginMenuItem.setMnemonic('V');
+    validatePluginMenuItem.setText("Validate Plugin...");
+    validatePluginMenuItem.addActionListener(new Configurator_validatePluginMenuItem_actionAdapter(this));
     jMenuFile.add(jMenuFileNew);
     jMenuFile.add(jMenuFileOpen);
     jMenuFile.add(jMenuFileSave);
@@ -200,8 +204,9 @@ public class PluginDefiner extends JFrame {
     jMenuPlugin.add(expertModeMenuItem);
     jMenuPlugin.addSeparator();
     jMenuPlugin.add(rulesTestMenuItem);
+    // jMenuPlugin.add(filtersTestMenuItem);
     jMenuPlugin.add(filtersTestMenuItem);
-    jMenuPlugin.add(filtersTestMenuItem);
+    jMenuPlugin.add(validatePluginMenuItem);
     this.setJMenuBar(jMenuBar1);
     edp = new EditableDefinablePlugin();
     CellEditorJTable cejTable = (CellEditorJTable)jTable1;
@@ -340,6 +345,17 @@ public class PluginDefiner extends JFrame {
     dialog.show();
   }
 
+  void validatePluginMenuItem_actionPerformed(ActionEvent e) {
+    JDialog dialog = new ValidatePluginDialog(this, edp);
+    Dimension dlgSize = dialog.getPreferredSize();
+    Dimension frmSize = getSize();
+    Point loc = getLocation();
+    dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
+                       (frmSize.height - dlgSize.height) / 2 + loc.y);
+    dialog.show();
+  }
+
+   
 }
 
 class Configurator_jMenuFileExit_ActionAdapter implements ActionListener {
@@ -428,5 +444,17 @@ class Configurator_filtersTestMenuItem_actionAdapter implements java.awt.event.A
   public void actionPerformed(ActionEvent e) {
     adaptee.filtersTestMenuItem_actionPerformed(e);
   }
+}
+
+class Configurator_validatePluginMenuItem_actionAdapter implements java.awt.event.ActionListener {
+  PluginDefiner adaptee;
+
+  Configurator_validatePluginMenuItem_actionAdapter(PluginDefiner adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.validatePluginMenuItem_actionPerformed(e);
+  }
+
 }
 
