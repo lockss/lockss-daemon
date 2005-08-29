@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.3 2005-08-29 17:31:17 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.4 2005-08-29 22:50:25 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.SocketException;
 
@@ -98,19 +99,26 @@ public class IcpManager
         String urlString = message.getPayloadUrl().toString();
         CachedUrl cu = pluginManager.findOneCachedUrl(urlString);
         IcpMessage response;
-        if (cu == null) {
-          response = icpBuilder.makeMissNoFetch(message);
+        try {
+          if (cu != null && cu.hasContent()) {
+            response = icpBuilder.makeHit(message);
+          }
+          else {
+            response = icpBuilder.makeMissNoFetch(message);
+          }
         }
-        else if (!cu.hasContent()) {
-          response = icpBuilder.makeMiss(message);
-        }
-        else {
-          response = icpBuilder.makeHit(message);
+        catch (IcpProtocolException ipe) {
+          try {
+            response = icpBuilder.makeError(message); // Bad query 
+          }
+          catch (IcpProtocolException ipe2) {
+            throw new IOException(); // bail out
+          }
         }
         icpSocket.send(response, message.getUdpAddress(), message.getUdpPort());
       }
-      catch (Exception exc) {
-        logger.warning("Exception in icpReceived", exc);
+      catch (IOException ioe) {
+        logger.debug2("Cannot process ICP message: " + message.toString(), ioe);
       }
     }
   }

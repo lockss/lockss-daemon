@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilder.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
+ * $Id: IcpBuilder.java,v 1.3 2005-08-29 22:50:25 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.InetAddress;
-import java.net.URL;
 
 /**
  * <p>Specifies an interface for classes that are able to produce
@@ -60,7 +59,7 @@ public interface IcpBuilder {
    * @param query A URL query.
    * @return A source-echo message.
    */
-  IcpMessage makeDiscoveryEcho(URL query);
+  IcpMessage makeDiscoveryEcho(String query);
 
   /**
    * <p>Produces an error message in response to a query.</p>
@@ -182,15 +181,15 @@ public interface IcpBuilder {
 
   /**
    * <p>Equivalent to calling
-   * {@link #makeQuery(InetAddress, URL, boolean, boolean)} with the
+   * {@link #makeQuery(InetAddress, String, boolean, boolean)} with the
    * two boolean arguments being false.</p>
    * @param requesterAddress
    * @param query
    * @return A query message.
-   * @see #makeQuery(InetAddress, URL, boolean, boolean)
+   * @see #makeQuery(InetAddress, String, boolean, boolean)
    */
   IcpMessage makeQuery(InetAddress requesterAddress,
-                       URL query);
+                       String query);
   
   /**
    * <p>Produces an ICP query using the given URL, with optional
@@ -203,7 +202,7 @@ public interface IcpBuilder {
    * @see IcpMessage#getRequester
    */
   IcpMessage makeQuery(InetAddress requesterAddress,
-                       URL query,
+                       String query,
                        boolean requestSrcRtt,
                        boolean requestHitObj);
   
@@ -212,6 +211,6 @@ public interface IcpBuilder {
    * @param query A URL query.
    * @return A source-echo message.
    */
-  IcpMessage makeSourceEcho(URL query);
+  IcpMessage makeSourceEcho(String query);
   
 }

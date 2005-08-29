@@ -1,5 +1,5 @@
 /*
- * $Id: IcpMessage.java,v 1.2 2005-08-26 01:32:58 thib_gc Exp $
+ * $Id: IcpMessage.java,v 1.3 2005-08-29 22:50:25 thib_gc Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public interface IcpMessage {
    * <p>Retrieves the URL contained in this message.</p>
    * @return This message's URL.
    */
-  public URL getPayloadUrl();
+  public String getPayloadUrl();
 
   /**
    * <p>If this message is an ICP query, retrieves the address of the

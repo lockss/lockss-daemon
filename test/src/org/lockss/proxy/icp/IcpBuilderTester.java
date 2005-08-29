@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.1 2005-08-25 20:12:38 thib_gc Exp $
+ * $Id: IcpBuilderTester.java,v 1.2 2005-08-29 22:50:25 thib_gc Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ public abstract class IcpBuilderTester extends TestCase {
                              byte expectedVersion,
                              int expectedRequestNumber,
                              InetAddress expectedSender,
-                             URL expectedPayloadUrl) {
+                             String expectedPayloadUrl) {
     assertEquals(expectedOpcode, message.getOpcode());
     assertEquals(expectedVersion, message.getVersion());
     assertEquals(expectedRequestNumber, message.getRequestNumber());

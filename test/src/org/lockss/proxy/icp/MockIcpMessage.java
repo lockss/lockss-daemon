@@ -1,5 +1,5 @@
 /*
- * $Id: MockIcpMessage.java,v 1.2 2005-08-26 01:32:58 thib_gc Exp $
+ * $Id: MockIcpMessage.java,v 1.3 2005-08-29 22:50:25 thib_gc Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public abstract class MockIcpMessage implements IcpMessage {
       return (short)0;
     }
   }
-  public URL getPayloadUrl() {
+  public String getPayloadUrl() {
     return getStandardQueryUrl();
   }
   public InetAddress getRequester() {
@@ -182,7 +182,7 @@ public abstract class MockIcpMessage implements IcpMessage {
 
   private static final byte[] standardPayloadData;
 
-  private static URL standardQueryUrl;
+  private static String standardQueryUrl;
 
   private static InetAddress standardRequester;
 
@@ -204,7 +204,7 @@ public abstract class MockIcpMessage implements IcpMessage {
       standardUdpAddress = makeAddress(4, 3, 2, 1);
       standardRequester = makeAddress(11, 12, 13, 14);
       standardDestination = makeAddress(111, 112, 113, 114);
-      standardQueryUrl = makeUrl("http://www.stanford.edu/");
+      standardQueryUrl = "http://www.stanford.edu/";
       standardPayloadData = 
         "<html><head><title>Sample</title></head><body><p>Test</p></body></html>"
         .getBytes("US-ASCII");
@@ -306,7 +306,7 @@ public abstract class MockIcpMessage implements IcpMessage {
     return standardPayloadData;
   }
 
-  public static URL getStandardQueryUrl() {
+  public static String getStandardQueryUrl() {
     return standardQueryUrl;
   }
   
@@ -437,19 +437,6 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
     
     return ret;
-  }
-  
-  private static URL makeUrl(String url) {
-    try {
-      return new URL(url);
-    }
-    catch (MalformedURLException mue) {
-      StringBuffer buffer = new StringBuffer();
-      buffer.append("Could not create mock URL [");
-      buffer.append(url);
-      buffer.append("]");
-      throw new RuntimeException(buffer.toString(), mue);
-    }
   }
 
 }

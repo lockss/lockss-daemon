@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.3 2005-08-27 00:26:03 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.4 2005-08-29 22:50:25 thib_gc Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class IcpFactoryImpl implements IcpFactory {
                                 query.getPayloadUrl());
     }
     
-    public IcpMessage makeDiscoveryEcho(URL query) {
+    public IcpMessage makeDiscoveryEcho(String query) {
       return null; // Unimplemented
     }
     
@@ -243,12 +243,12 @@ public class IcpFactoryImpl implements IcpFactory {
     }
 
     public IcpMessage makeQuery(InetAddress requesterAddress,
-                                URL query) {
+                                String query) {
       return makeQuery(requesterAddress, query, false, false);
     }
 
     public IcpMessage makeQuery(InetAddress requesterAddress,
-                                URL query,
+                                String query,
                                 boolean requestSrcRtt,
                                 boolean requestHitObj) {
       try {
@@ -270,7 +270,7 @@ public class IcpFactoryImpl implements IcpFactory {
       }
     }
 
-    public IcpMessage makeSourceEcho(URL query) {
+    public IcpMessage makeSourceEcho(String query) {
       return null; // Unimplemented
     }
 
@@ -324,7 +324,7 @@ public class IcpFactoryImpl implements IcpFactory {
         
         // Conditional processing
         InetAddress requester;
-        URL payloadUrl;
+        String payloadUrl;
         short payloadLength;
         byte[] payloadObject;
         switch (opcode) {
@@ -397,7 +397,7 @@ public class IcpFactoryImpl implements IcpFactory {
       }
     }
     
-    private URL getUrlFromStream(DataInputStream inData)
+    private String getUrlFromStream(DataInputStream inData)
         throws IcpProtocolException {
       try {
         StringBuffer buffer = new StringBuffer();
@@ -405,7 +405,7 @@ public class IcpFactoryImpl implements IcpFactory {
         while ( (inputBytes[0] = inData.readByte()) != (byte)0) {
           buffer.append(new String(inputBytes, "US-ASCII"));
         }
-        return new URL(buffer.toString());
+        return buffer.toString();
       }
       catch (Exception e) {
         throw new IcpProtocolException(
@@ -499,7 +499,7 @@ public class IcpFactoryImpl implements IcpFactory {
     
     private short payloadObjectLength;
 
-    private URL payloadUrl;
+    private String payloadUrl;
 
     private InetAddress requester;
 
@@ -521,7 +521,7 @@ public class IcpFactoryImpl implements IcpFactory {
                              int optionData,
                              InetAddress sender,
                              InetAddress requester,
-                             URL payloadUrl) {
+                             String payloadUrl) {
       this(opcode,
            version,
            length,
@@ -542,7 +542,7 @@ public class IcpFactoryImpl implements IcpFactory {
                              int options,
                              int optionData,
                              InetAddress sender,
-                             URL payloadUrl) {
+                             String payloadUrl) {
       this.opcode = opcode;
       this.version = version;
       this.requestNumber = requestNumber;
@@ -560,7 +560,7 @@ public class IcpFactoryImpl implements IcpFactory {
                              int options,
                              int optionData,
                              InetAddress sender,
-                             URL payloadUrl,
+                             String payloadUrl,
                              byte[] payloadObject,
                              short payloadObjectLength) {
       this(opcode,
@@ -605,7 +605,7 @@ public class IcpFactoryImpl implements IcpFactory {
       return (getOpcode() == ICP_OP_HIT_OBJ) ? payloadObjectLength : (short)0;
     }
 
-    public URL getPayloadUrl() {
+    public String getPayloadUrl() {
       return payloadUrl;
     }
 
