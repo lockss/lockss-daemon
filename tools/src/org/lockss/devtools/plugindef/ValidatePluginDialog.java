@@ -55,7 +55,7 @@ public class ValidatePluginDialog extends JDialog {
    * @param editableDefinablePlugin EditableDefinablePlugin
    */
   ValidatePluginDialog(Frame parent, EditableDefinablePlugin plugin) {
-    this(parent,"Configure Crawl Rule Test", false);
+    this(parent,"Validate Plugin Parameters", false);
     m_plugin = plugin;
     addConfigParamFields();
     Dimension dim = new Dimension();
@@ -70,7 +70,7 @@ public class ValidatePluginDialog extends JDialog {
     parameterBorder = new TitledBorder("");
     infoBorder = new TitledBorder("");
     panel1.setLayout(borderLayout1);
-    okButton.setText("Check AU");
+    okButton.setText("Validate");
     okButton.addActionListener(new ValidatePluginDialog_okButton_actionAdapter(this));
     cancelButton.setText("Cancel");
     cancelButton.addActionListener(new
@@ -81,7 +81,7 @@ public class ValidatePluginDialog extends JDialog {
     parameterPanel.setBorder(parameterBorder);
     parameterPanel.setLayout(gridBagLayout2);
     parameterBorder.setTitleFont(new java.awt.Font("DialogInput", 0, 12));
-    parameterBorder.setTitle("Archival Unit Configuration");
+    parameterBorder.setTitle("Plugin Configuration");
     infoBorder.setTitleFont(new java.awt.Font("DialogInput", 0, 12));
     infoBorder.setTitle("Test Configuration");
     getContentPane().add(panel1);
@@ -149,9 +149,12 @@ public class ValidatePluginDialog extends JDialog {
       au = m_plugin.createAu(config);
     }
     catch (Exception ex) {
-      JOptionPane.showMessageDialog(this,"Unable to create an Archival Unit.\n"
-                                    +"Invalid Parameter",
-                                    "CrawlRule Test Error",
+      JOptionPane.showMessageDialog(this,"Unable to test plugin.\n"
+                                    +"Invalid Parameter\n" 
+				    +"Error Description: \n  " 
+				    + (ex.toString()).substring(
+				        (ex.toString()).indexOf('$')+1),
+                                    "Vaildation Error",
                                     JOptionPane.ERROR_MESSAGE);
     }
     return au;
