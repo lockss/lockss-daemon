@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.33 2005-02-02 00:15:40 tlipkis Exp $
+ * $Id: ProxyManager.java,v 1.34 2005-08-30 18:22:20 tlipkis Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.jetty.*;
+import org.lockss.servlet.*;
 import org.mortbay.util.*;
 import org.mortbay.http.*;
 import org.mortbay.http.handler.*;
@@ -60,7 +61,8 @@ public class ProxyManager extends BaseProxyManager {
   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
-  public static final String PARAM_IP_ISSET = IP_ACCESS_PREFIX + "isSet";
+  public static final String PARAM_IP_PLATFORM_SUBNET =
+    IP_ACCESS_PREFIX + IpAccessControl.SUFFIX_PLATFORM_ACCESS;
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;
@@ -86,12 +88,6 @@ public class ProxyManager extends BaseProxyManager {
   static final String PARAM_HOST_DOWN_ACTION = PREFIX + "hostDownAction";
   static final int DEFAULT_HOST_DOWN_ACTION =
     HOST_DOWN_NO_CACHE_ACTION_DEFAULT;
-
-  /** Accept the old way of identifying repair requests by the user-agent.
-   * Default is true until all caches are converted to the new way. */
-  static final String PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR =
-    PREFIX + "lockssUserAgentImpliesRepair";
-  static final boolean DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR = true;
 
   public static final String PARAM_PROXY_MAX_TOTAL_CONN =
     PREFIX + "connectionPool.max";
@@ -126,9 +122,6 @@ public class ProxyManager extends BaseProxyManager {
   public static final boolean DEFAULT_REWRITE_GIF_PNG =
     false;
 
-  private boolean lockssUserAgentImpliesRepair =
-    DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR;
-
   protected String getServerName() {
     return SERVER_NAME;
   }
@@ -150,9 +143,6 @@ public class ProxyManager extends BaseProxyManager {
 	excludeIps = config.get(PARAM_IP_EXCLUDE, "");
 	logForbidden = config.getBoolean(PARAM_LOG_FORBIDDEN,
 					 DEFAULT_LOG_FORBIDDEN);
-	lockssUserAgentImpliesRepair =
-	  config.getBoolean(PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR,
-			    DEFAULT_LOCKSS_USER_AGENT_IMPLIES_REPAIR);
 	log.debug("Installing new ip filter: incl: " + includeIps +
 		  ", excl: " + excludeIps);
 	setIpFilter();
@@ -214,22 +204,10 @@ public class ProxyManager extends BaseProxyManager {
   }
 
   /** Determine whether the request is from another LOCKSS cache asking for
-   * a repair.  Using the user-agent for this makes it impossible for a
-   * LOCKSS cache to use another cache as a proxy, because *all* requests
-   * are treated as repair requests.  The new mechanism is to include the
-   * string "Repair" in the value of the X-Lockss: header.  Until all
-   * caches are running the new code this still accepts the old way, but
-   * that's disablable for testing. */
+   * a repair.  This is indicated by the including the string "Repair" as
+   * (one of) the value(s) of the X-Lockss: header.
+   */
   public boolean isRepairRequest(HttpRequest request) {
-    String userAgent = request.getField("user-agent");
-    if (log.isDebug3()) {
-      log.debug3("user-agent: " + userAgent);
-    }
-    if (lockssUserAgentImpliesRepair &&
-	org.lockss.util.StringUtil.equalStrings(userAgent,
-						LockssDaemon.getUserAgent())) {
-      return true;
-    }
     Enumeration lockssFlagsEnum = request.getFieldValues(Constants.X_LOCKSS);
     if (lockssFlagsEnum != null) {
       while (lockssFlagsEnum.hasMoreElements()) {

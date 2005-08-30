@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyAccessHandler.java,v 1.1 2005-07-13 17:46:47 troberts Exp $
+ * $Id: TestProxyAccessHandler.java,v 1.2 2005-08-30 18:22:20 tlipkis Exp $
  */
 
 /*
@@ -35,6 +35,7 @@ package org.lockss.proxy;
 import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.StringUtil;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.mortbay.http.*;
@@ -46,6 +47,7 @@ public class TestProxyAccessHandler extends LockssTestCase {
   private MockIdentityManager idMgr = new MockIdentityManager();
   private MyMockPluginManager pluginMgr = new MyMockPluginManager();
 
+  ProxyAccessHandler handler;
   MockArchivalUnit mau;
 
   public void setUp() throws Exception {
@@ -57,13 +59,31 @@ public class TestProxyAccessHandler extends LockssTestCase {
 
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
+
+    handler = new ProxyAccessHandler(theDaemon, "test");
+    handler.setAllowLocal(true);
   }
 
-  public void testHandle() throws Exception {
-     ProxyAccessHandler handler = new ProxyAccessHandler(theDaemon, "test");
+  void setRepair(HttpRequest req) {
+    req.setField(Constants.X_LOCKSS, "foo,repair");
+  }
+
+  public void testLocalOk() throws Exception {
      MockHttpRequest req = new MockHttpRequest();
 
      req.setRemoteAddr("127.0.0.1");
+
+     MockHttpResponse res = new MockHttpResponse();
+     handler.handle("/blah/blah.html", "", req, res);
+     // handler should just return, not having handled request
+     assertEquals(-1, res.getError());
+     assertFalse(req.isHandled());
+  }
+
+  public void testNoAccess() throws Exception {
+     MockHttpRequest req = new MockHttpRequest();
+
+     req.setRemoteAddr("44.0.0.1");
 
      MockHttpResponse res = new MockHttpResponse();
      handler.handle("/blah/blah.html", "", req, res);
@@ -71,31 +91,10 @@ public class TestProxyAccessHandler extends LockssTestCase {
      assertTrue(req.isHandled());
   }
 
-  public void testHandleUserAgent() throws Exception {
-     ProxyAccessHandler handler = new ProxyAccessHandler(theDaemon, "test");
+  public void testRepairNoContent() throws Exception {
      MockHttpRequest req = new MockHttpRequest();
-     req.setField("user-agent", "LOCKSS cache");
-
-     req.setRemoteAddr("127.0.0.1");
-     req.setURI(new URI("http://www.example.com/blah/blah.html"));
-
-     MockCachedUrl mcu =
-       new MockCachedUrl("http://www.example.com/blah/blah.html", mau);
-     mcu.setExists(true);
-     pluginMgr.setCachedUrl(mcu);
-
-     MockHttpResponse res = new MockHttpResponse();
-     handler.handle("http://www.example.com/blah/blah.html", "", req, res);
-     assertEquals(HttpResponse.__403_Forbidden, res.getError());
-     assertTrue(req.isHandled());
-  }
-
-  public void testHandleNoContent() throws Exception {
-     ProxyAccessHandler handler = new ProxyAccessHandler(theDaemon, "test");
-     MockHttpRequest req = new MockHttpRequest();
-     req.setField("user-agent", "LOCKSS cache");
-
-     req.setRemoteAddr("127.0.0.1");
+     setRepair(req);
+     req.setRemoteAddr("55.0.0.1");
      req.setURI(new URI("http://www.example.com/blah/blah.html"));
 
      MockCachedUrl mcu =
@@ -109,27 +108,40 @@ public class TestProxyAccessHandler extends LockssTestCase {
      assertTrue(req.isHandled());
   }
 
-  public void testHandleServesRepairToAgreedCache() throws Exception {
-     ProxyAccessHandler handler = new ProxyAccessHandler(theDaemon, "test");
+  public void testRepairNoAccess() throws Exception {
      MockHttpRequest req = new MockHttpRequest();
-     req.setField("user-agent", "LOCKSS cache");
-     req.setRemoteAddr("127.0.0.1");
+     setRepair(req);
+     req.setRemoteAddr("55.0.0.1");
      req.setURI(new URI("http://www.example.com/blah/blah.html"));
 
      MockCachedUrl mcu =
        new MockCachedUrl("http://www.example.com/blah/blah.html", mau);
      mcu.setExists(true);
+     pluginMgr.setCachedUrl(mcu);
+
+     MockHttpResponse res = new MockHttpResponse();
+     handler.handle("http://www.example.com/blah/blah.html", "", req, res);
+     assertEquals(HttpResponse.__403_Forbidden, res.getError());
+     assertTrue(req.isHandled());
+  }
+
+  public void testHandleServesRepairToAgreedCache() throws Exception {
+     MockHttpRequest req = new MockHttpRequest();
+     setRepair(req);
+     req.setRemoteAddr("55.0.0.1");
+     req.setURI(new URI("http://www.example.com/blah/blah.html"));
+
+     MockCachedUrl mcu =
+       new MockCachedUrl("http://www.example.com/blah/blah.html", mau);
+     mcu.setExists(true);
+     pluginMgr.setCachedUrl(mcu);
 
      Map agreedMap = new HashMap();
-     MockPeerIdentity mockPid = new MockPeerIdentity("127.0.0.1");
+     MockPeerIdentity mockPid = new MockPeerIdentity("55.0.0.1");
      agreedMap.put(mockPid, "1010101010"); 
 
      idMgr.setAgeedForAu(mau, agreedMap);
-     idMgr.addPeerIdentity("127.0.0.1", mockPid);
-     pluginMgr.setCachedUrl(mcu);
-
-     req.setRemoteAddr("127.0.0.1");
-
+     idMgr.addPeerIdentity("55.0.0.1", mockPid);
 
      MockHttpResponse res = new MockHttpResponse();
      handler.handle("http://www.example.com/blah/blah.html", "", req, res);

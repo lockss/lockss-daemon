@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyManager.java,v 1.1 2005-02-02 00:15:39 tlipkis Exp $
+ * $Id: TestProxyManager.java,v 1.2 2005-08-30 18:22:20 tlipkis Exp $
  */
 
 /*
@@ -69,12 +69,6 @@ public class TestProxyManager extends LockssTestCase {
     assertTrue(mgr.isRepairRequest(req));
     req.setField(Constants.X_LOCKSS, ListUtil.list("foo"));
     assertFalse(mgr.isRepairRequest(req));
-
-    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR, "false");
-    req.setField("user-agent", "LOCKSS cache");
-    assertFalse(mgr.isRepairRequest(req));
-    ConfigurationUtil.setFromArgs(ProxyManager.PARAM_LOCKSS_USER_AGENT_IMPLIES_REPAIR, "true");
-    assertTrue(mgr.isRepairRequest(req));
   }
 
   public void testHostDownT() throws Exception {
