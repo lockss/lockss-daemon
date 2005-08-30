@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.57 2005-08-30 17:24:49 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.58 2005-08-30 23:42:49 troberts Exp $
  */
 
 /*
@@ -238,7 +238,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  headers = getHeaders();
 	}
       }
-      checkLoginPage(input, headers);
+      input = checkLoginPage(input, headers);
       storeContent(input, headers);
       if (fetchFlags.get(CLEAR_DAMAGE_FLAG)) {
 	DamagedNodeSet dnSet = nodeMgr.getDamagedNodes();
@@ -271,12 +271,13 @@ public class BaseUrlCacher implements UrlCacher {
       is.reset();
     } catch (IOException e) {
       logger.debug("Couldn't reset input stream, so getting new one", e);
+      is.close();
       is = new BufferedInputStream(getUncachedInputStream());
     }
     return is;
   }
 
-  private void checkLoginPage(InputStream input, Properties headers)
+  private InputStream checkLoginPage(InputStream input, Properties headers)
       throws IOException {
     LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
     if (checker != null) {
@@ -285,11 +286,12 @@ public class BaseUrlCacher implements UrlCacher {
       if (checker.isLoginPage(headers, reader)) {
 	throw new CacheException.PermissionException("Found a login page");
       } else {
-	resetInputStream(input, fetchUrl);
+	input = resetInputStream(input, fetchUrl);
       }
     } else {
       logger.debug3("Didn't find a login page checker"); 
     }
+    return input;
   }
 
   private boolean shouldRefetchOnCookies() {

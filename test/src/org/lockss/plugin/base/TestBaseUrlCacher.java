@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.40 2005-08-30 17:24:50 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.41 2005-08-30 23:42:49 troberts Exp $
  */
 
 /*
@@ -52,6 +52,8 @@ import org.lockss.crawler.*;
  * @version 0.0
  */
 public class TestBaseUrlCacher extends LockssTestCase {
+
+  protected static Logger logger = Logger.getLogger("TestBaseUrlCacher");
 
   private static final int REFETCH_FLAG = 0;
   private static final int CLEAR_DAMAGE_FLAG = 1;
@@ -905,14 +907,24 @@ public class TestBaseUrlCacher extends LockssTestCase {
 					 null, 99,
 					 new ArrayList(), loginPageChecker));
     
-    cacher._input = new MyStringInputStream("test stream",
-					    new IOException("Test exception"));
+    MyStringInputStream strIs =
+      new MyStringInputStream("test stream",
+			      new IOException("Test exception"));
+    MyStringInputStream strIs2 =
+      new MyStringInputStream("test stream2");
+
+    cacher = new MyMockBaseUrlCacher(mau, TEST_URL,
+				     ListUtil.list(strIs, strIs2));
+
     cacher._headers = new CIProperties();
     // should cache
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
 
     assertTrue(loginPageChecker.wasCalled());
-    assertTrue(((MyStringInputStream)cacher._input).resetWasCalled());
+    assertTrue(strIs.resetWasCalled());
+    assertTrue(strIs.closeWasCalled());
+    assertFalse(strIs2.resetWasCalled());
+    assertTrue(strIs2.closeWasCalled());
     assertEquals(2, cacher.getUncachedInputStreamCount);
   }
 
@@ -1017,8 +1029,16 @@ public class TestBaseUrlCacher extends LockssTestCase {
     int getUncachedInputStreamCount = 0;
     BaseArchivalUnit.ParamHandlerMap pMap;
 
+    List inputList;
+
     public MyMockBaseUrlCacher(ArchivalUnit owner, String url) {
       super(owner, url);
+    }
+
+    public MyMockBaseUrlCacher(ArchivalUnit owner, String url,
+			       List inputList) {
+      super(owner, url);
+      this.inputList = inputList;
     }
 
     protected BaseArchivalUnit.ParamHandlerMap getParamMap() {
@@ -1033,18 +1053,28 @@ public class TestBaseUrlCacher extends LockssTestCase {
       // simple version which returns null if shouldn't fetch
 //       if (lastCached < TimeBase.nowMs()) {
       getUncachedInputStreamCount++;
-      long last = -1;
-      if (lastModified != null) {
-	try {
-	  last = BaseUrlCacher.GMT_DATE_FORMAT.parse(lastModified).getTime();
-	} catch (ParseException e) {
+      
+      if (inputList == null) {
+	logger.debug3("Using old method for getUncachedInputStream");
+	//this is way too much smarts for mock code, but is left here for
+	//legacy support.  It should be cleaned up
+	long last = -1;
+	if (lastModified != null) {
+	  try {
+	    last = BaseUrlCacher.GMT_DATE_FORMAT.parse(lastModified).getTime();
+	  } catch (ParseException e) {
+	  }
+	}
+	if (last < TimeBase.nowMs()) {
+	  return _input;
+	} else {
+	  return null;
 	}
       }
-      if (last < TimeBase.nowMs()) {
-	return _input;
-      } else {
-	return null;
-      }
+      logger.debug3("Using new method for getUncachedInputStream");
+      InputStream is = (InputStream)inputList.remove(0); 
+      logger.debug3("Returning "+is); 
+      return is;
     }
 
     public CIProperties getUncachedProperties() {
@@ -1105,6 +1135,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   class MyStringInputStream extends StringInputStream {
     private boolean resetWasCalled = false;
+    private boolean closeWasCalled = false;
     private IOException resetEx;
 
     public MyStringInputStream(String str) {
@@ -1135,6 +1166,17 @@ public class TestBaseUrlCacher extends LockssTestCase {
       return resetWasCalled;
     }
 
+    public void close() throws IOException {
+      Exception ex = new Exception("Blah");
+      logger.debug3("Close called on "+this, ex);
+      closeWasCalled = true;
+      super.close();
+    }
+
+    public boolean closeWasCalled() {
+      return closeWasCalled;
+    }
+    
   }
 
   public static void main(String[] argv) {
