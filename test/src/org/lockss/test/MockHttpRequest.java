@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpRequest.java,v 1.2 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: MockHttpRequest.java,v 1.3 2005-08-30 18:21:40 tlipkis Exp $
  */
 
 /*
@@ -257,7 +257,12 @@ public class MockHttpRequest extends HttpRequest {
   }
 
   public java.util.Enumeration getFieldValues(java.lang.String name) {
-    return null;
+    String val = getField(name);
+    if (val == null) {
+      return null;
+    }
+    Vector lst = org.lockss.util.StringUtil.breakAt(val, ',');
+    return lst.elements();
   }
 
   public java.util.Enumeration getFieldValues(java.lang.String name, java.lang.String separators) {
