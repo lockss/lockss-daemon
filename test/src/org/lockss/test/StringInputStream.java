@@ -1,5 +1,5 @@
 /*
- * $Id: StringInputStream.java,v 1.5 2005-08-30 17:24:31 troberts Exp $
+ * $Id: StringInputStream.java,v 1.6 2005-08-30 23:42:32 troberts Exp $
  */
 
 /*
@@ -61,7 +61,11 @@ public class StringInputStream extends InputStream {
    * @return the source String
    */
   public String toString() {
-    return theString;
+    StringBuffer sb = new StringBuffer();
+    sb.append("[StringInputStream: ");
+    sb.append(theString);
+    sb.append("]");
+    return sb.toString();
   }
 
   public boolean markSupported() {

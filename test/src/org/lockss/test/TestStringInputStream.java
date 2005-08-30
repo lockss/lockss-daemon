@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringInputStream.java,v 1.6 2005-08-30 17:24:31 troberts Exp $
+ * $Id: TestStringInputStream.java,v 1.7 2005-08-30 23:42:32 troberts Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestStringInputStream extends LockssTestCase {
 
   public void testToString() {
     StringInputStream sis = new StringInputStream("test");
-    assertEquals("test", sis.toString());
+    assertEquals("[StringInputStream: test]", sis.toString());
   }
 
   public void testMarkSupported() {
