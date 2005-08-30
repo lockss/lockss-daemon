@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.39 2005-08-03 00:06:36 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.40 2005-08-30 17:24:50 troberts Exp $
  */
 
 /*
@@ -879,6 +879,43 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertTrue(loginPageChecker.wasCalled());
   }
 
+  public void testCacheLPCResetCalled() throws IOException {
+    MyMockLoginPageChecker loginPageChecker =
+      new MyMockLoginPageChecker(false);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+					 ListUtil.list("http://example.com"),
+					 null, 99,
+					 new ArrayList(), loginPageChecker));
+    
+    cacher._input = new MyStringInputStream("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+
+    assertTrue(loginPageChecker.wasCalled());
+    assertTrue(((MyStringInputStream)cacher._input).resetWasCalled());
+    assertEquals(1, cacher.getUncachedInputStreamCount);
+  }
+
+  public void testCacheLPCResetFails() throws IOException {
+    MyMockLoginPageChecker loginPageChecker =
+      new MyMockLoginPageChecker(false);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+					 ListUtil.list("http://example.com"),
+					 null, 99,
+					 new ArrayList(), loginPageChecker));
+    
+    cacher._input = new MyStringInputStream("test stream",
+					    new IOException("Test exception"));
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+
+    assertTrue(loginPageChecker.wasCalled());
+    assertTrue(((MyStringInputStream)cacher._input).resetWasCalled());
+    assertEquals(2, cacher.getUncachedInputStreamCount);
+  }
+
   public void testCacheLPCLoginPage() throws IOException {
     MyMockLoginPageChecker loginPageChecker =
       new MyMockLoginPageChecker(true);
@@ -1064,6 +1101,40 @@ public class TestBaseUrlCacher extends LockssTestCase {
     public void execute() throws IOException {
       throw ex;
     }
+  }
+
+  class MyStringInputStream extends StringInputStream {
+    private boolean resetWasCalled = false;
+    private IOException resetEx;
+
+    public MyStringInputStream(String str) {
+      super(str);
+    }
+
+    /**
+     * @param str String to read from
+     * @param resetEx IOException to throw when reset is called
+     * 
+     * Same as one arg constructor, but can provide an exception that is
+     * thrown when reset is called
+     */
+    public MyStringInputStream(String str, IOException resetEx) {
+      super(str);
+      this.resetEx = resetEx;
+    }
+
+    public void reset() throws IOException {
+      resetWasCalled = true;
+      if (resetEx != null) {
+	throw resetEx;
+      }
+      super.reset();
+    }
+    
+    public boolean resetWasCalled() {
+      return resetWasCalled;
+    }
+
   }
 
   public static void main(String[] argv) {

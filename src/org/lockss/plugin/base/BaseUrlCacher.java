@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.56 2005-08-03 00:06:36 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.57 2005-08-30 17:24:49 troberts Exp $
  */
 
 /*
@@ -260,6 +260,21 @@ public class BaseUrlCacher implements UrlCacher {
       }
     }
   }
+  
+  /**
+   * Try to reset the provided input stream, if we can't then return 
+   * new input stream for the given url
+   */
+  private InputStream resetInputStream(InputStream is, String url)
+      throws IOException {
+    try {
+      is.reset();
+    } catch (IOException e) {
+      logger.debug("Couldn't reset input stream, so getting new one", e);
+      is = new BufferedInputStream(getUncachedInputStream());
+    }
+    return is;
+  }
 
   private void checkLoginPage(InputStream input, Properties headers)
       throws IOException {
@@ -269,6 +284,8 @@ public class BaseUrlCacher implements UrlCacher {
       Reader reader = new InputStreamReader(input, Constants.DEFAULT_ENCODING);
       if (checker.isLoginPage(headers, reader)) {
 	throw new CacheException.PermissionException("Found a login page");
+      } else {
+	resetInputStream(input, fetchUrl);
       }
     } else {
       logger.debug3("Didn't find a login page checker"); 
