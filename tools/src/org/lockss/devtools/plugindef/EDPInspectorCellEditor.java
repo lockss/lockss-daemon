@@ -1,5 +1,5 @@
 /*
- * $Id: EDPInspectorCellEditor.java,v 1.6 2005-08-29 17:16:42 rebeccai Exp $
+ * $Id: EDPInspectorCellEditor.java,v 1.7 2005-08-30 18:18:30 rebeccai Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class EDPInspectorCellEditor extends AbstractCellEditor
     editorEntries[PLUGIN_CRAWLRULES] =
       new CellEditorEntry(CRAWLRULE, new CrawlRuleEditor(parentFrame),
 			  makeButton(CRAWLRULE));
-    // craw window
+    // crawl window
     editorEntries[PLUGIN_CRAWLWINDOW]=
 	new CellEditorEntry(CRAWLWINDOW, new CrawlWindowEditor(parentFrame),
 			    makeButton(CRAWLWINDOW));
