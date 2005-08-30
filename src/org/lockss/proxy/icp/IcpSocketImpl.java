@@ -59,8 +59,6 @@ public class IcpSocketImpl
     this.inLogger = Logger.getLogger("IcpScoketImpl-in");
     this.outLogger = Logger.getLogger("IcpSocketImpl-out");
     
-    triggerWDogOnExit(true);
-    
     // Log
     if (this.logger.isDebug2()) {
       this.logger.debug2("constructor in IcpManager.IcpSocketImpl: end");

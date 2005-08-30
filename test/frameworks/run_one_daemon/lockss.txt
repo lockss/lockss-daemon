@@ -56,3 +56,7 @@ org.lockss.poll.contentpoll.max=300000
 
 org.lockss.daemon.exit=false
 #org.lockss.shouldRegisterSimSA=true
+
+org.lockss.proxy.icp.enabled=true
+org.lockss.proxy.icp.port=3131
+

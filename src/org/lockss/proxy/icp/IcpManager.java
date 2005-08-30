@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.4 2005-08-29 22:50:25 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.5 2005-08-30 19:03:15 thib_gc Exp $
  */
 
 /*
@@ -37,62 +37,28 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 
 import org.lockss.app.BaseLockssDaemonManager;
+import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssAppException;
 import org.lockss.config.Configuration;
+import org.lockss.config.Configuration.Differences;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginManager;
 import org.lockss.util.Logger;
 
 public class IcpManager
     extends BaseLockssDaemonManager
-    implements IcpHandler {
+    implements ConfigurableManager, IcpHandler {
 
-  private IcpSocketImpl icpSocket;
-  
-  private DatagramSocket udpSocket;
-  
-  private PluginManager pluginManager;
+  private IcpBuilder icpBuilder;
   
   private IcpFactory icpFactory;
   
-  private IcpBuilder icpBuilder;
+  private IcpSocketImpl icpSocket;
   
-  public void startService() {
-    super.startService();
-    
-    icpFactory = IcpFactoryImpl.makeIcpFactory();
-    icpBuilder = icpFactory.makeIcpBuilder(); 
-    
-    try {
-      int port = Configuration.getIntParam(PARAM_ICP_PORT,
-                                           DEFAULT_ICP_PORT);
-      udpSocket = new DatagramSocket(port);
-      icpSocket = new IcpSocketImpl("IcpSocketImpl",
-                                    udpSocket,
-                                    icpFactory.makeIcpEncoder(),
-                                    icpFactory.makeIcpDecoder());
-    }
-    catch (SocketException se) {
-      throw new LockssAppException("Could not open UDP socket for ICP");
-    }
-    
-    pluginManager = getDaemon().getPluginManager();
-    icpSocket.addIcpHandler(this);
-    new Thread(icpSocket).start();
-  }
-
-  public void stopService() {
-    icpSocket.requestStop();
-    super.stopService();
-  }
-
-  private static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
+  private PluginManager pluginManager;
   
-  private static Logger logger = Logger.getLogger("IcpManager");
+  private DatagramSocket udpSocket;
   
-  private static final String PARAM_ICP_PORT =
-    "org.lockss.proxy.icp.port";
-
   public void icpReceived(IcpReceiver source, IcpMessage message) {
     if (message.getOpcode() == IcpMessage.ICP_OP_QUERY) {
       try {
@@ -122,5 +88,82 @@ public class IcpManager
       }
     }
   }
+
+  public void setConfig(Configuration newConfig,
+                        Configuration prevConfig,
+                        Differences changedKeys) {
+    if (   changedKeys.contains(PARAM_ICP_ENABLED)
+        || changedKeys.contains(PARAM_ICP_PORT)) {
+      boolean enable = newConfig.getBoolean(PARAM_ICP_ENABLED,
+                                            DEFAULT_ICP_ENABLED);
+      stopSocket();
+      if (enable) {
+        startSocket();
+      }
+    }
+  }
+
+  public void startService() {
+    super.startService();
+    boolean start = Configuration.getBooleanParam(PARAM_ICP_ENABLED,
+                                                  DEFAULT_ICP_ENABLED);
+    if (start) {
+      startSocket();
+    }
+  }
   
+  public void stopService() {
+    icpSocket.requestStop();
+    super.stopService();
+  }
+  
+  private void forget() {
+    icpSocket = null;
+    icpFactory = null;
+    icpBuilder = null; 
+    pluginManager = null;
+  }
+  
+  private void startSocket() {
+    if (isAppInited()) {
+      try {
+        icpFactory = IcpFactoryImpl.makeIcpFactory();
+        icpBuilder = icpFactory.makeIcpBuilder(); 
+        int port = Configuration.getIntParam(PARAM_ICP_PORT,
+                                             DEFAULT_ICP_PORT);
+        udpSocket = new DatagramSocket(port);
+        icpSocket = new IcpSocketImpl("IcpSocketImpl",
+                                      udpSocket,
+                                      icpFactory.makeIcpEncoder(),
+                                      icpFactory.makeIcpDecoder());
+        pluginManager = getDaemon().getPluginManager();
+        icpSocket.addIcpHandler(this);
+        new Thread(icpSocket).start();
+      }
+      catch (SocketException se) {
+        forget(); // revert instantions
+        throw new LockssAppException("Could not open UDP socket for ICP");
+      }
+    }
+  }
+  
+  private void stopSocket() {
+    if (icpSocket != null) {
+      icpSocket.requestStop();
+      forget(); // minimize footprint
+    }
+  }
+
+  public static final boolean DEFAULT_ICP_ENABLED = false;
+
+  public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
+  
+  public static final String PARAM_ICP_ENABLED =
+    "org.lockss.proxy.icp.enabled";
+  
+  public static final String PARAM_ICP_PORT =
+    "org.lockss.proxy.icp.port";
+  
+  private static Logger logger = Logger.getLogger("IcpManager");
+
 }

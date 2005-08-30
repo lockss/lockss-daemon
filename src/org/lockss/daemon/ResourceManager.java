@@ -1,8 +1,8 @@
 /*
- * $Id: ResourceManager.java,v 1.3 2005-04-21 07:22:33 tlipkis Exp $
+ * $Id: ResourceManager.java,v 1.4 2005-08-30 19:03:15 thib_gc Exp $
  *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,17 +29,29 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
-import java.util.*;
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.util.*;
 
-/** ResourceManager arbitrates ownership of resources such as tcp listen
- * ports.
+import java.util.*;
+
+import org.lockss.app.BaseLockssManager;
+import org.lockss.util.Logger;
+import org.lockss.util.PlatformInfo;
+
+/**
+ * <p>Arbitrates ownership of resources such as TCP listen ports and
+ * UDP ports.</p>
+ * @author Tom Lipkis
  */
 public class ResourceManager extends BaseLockssManager  {
+
+  /**
+   * <p>A logger for use by this class.</p>
+   */
   protected static Logger log = Logger.getLogger("ResourceManager");
 
+  /**
+   * <p>A map keyed by resource identifiers; the values are ownership
+   * tokens.</p>
+   */
   private Map inUse;
 
   public void startService() {
@@ -51,14 +63,30 @@ public class ResourceManager extends BaseLockssManager  {
     super.stopService();
   }
 
-  // assumes synchronized
+  /**
+   * <p>Determines if a resource is available.</p>
+   * @param resource A resource identifier.
+   * @param token    An ownership token.
+   * @return True if and only if the resource is not in use or
+   *         the ownership token matches the resource's.
+   */
   private boolean isAvailable(String resource, Object token) {
+    // assumes synchronized
     Object curTok = inUse.get(resource);
     return curTok == null || curTok.equals(token);
   }
 
-  // assumes synchronized
+  /**
+   * <p>Reserves a resource if it is available.</p>
+   * @param resource A resource identifier.
+   * @param token    An ownership token.
+   * @return True if and only if the resource was available (and as a
+   *         side effect was taken using the given token), or if it
+   *         was in use and the ownership token matches the
+   *         resource's.
+   */
   private boolean reserve(String resource, Object token) {
+    // assumes synchronized
     Object curTok = inUse.get(resource);
     if (curTok == null) {
       inUse.put(resource, token);
@@ -70,8 +98,17 @@ public class ResourceManager extends BaseLockssManager  {
     }
   }
 
-  // assumes synchronized
+  /**
+   * <p>Releases a resource.</p>
+   * @param resource A resource identifier.
+   * @param token    An ownership token.
+   * @return True if and only if the resource was not in use, or the
+   *         resource was in use and the ownership token matches the
+   *         resource's (and as a side effect the resource was
+   *         released).
+   */
   private boolean release(String resource, Object token) {
+    // assumes synchronized
     Object curTok = inUse.get(resource);
     if (curTok == null) {
       return true;
@@ -83,24 +120,72 @@ public class ResourceManager extends BaseLockssManager  {
     }
   }
 
-  /** Return true if the tcp port is available, or already assigned to the
-   * token */
+  /**
+   * <p>Determines if a TCP port is available or already assigned to
+   * the token.</p>
+   * @param port  A TCP port number.
+   * @param token An ownership token.
+   * @return True if and only if the TCP port is available or if it is
+   *         in use by the given token.
+   */
   public synchronized boolean isTcpPortAvailable(int port, String token) {
-    return isAvailable("tcp:" + port, token);
+    return isAvailable(TCP_PREFIX + port, token);
   }
 
-  /** Assign the tcp port to the token iff not already assigned, and return
-   * true if the port is now assigned to the token */
+  /**
+   * <p>Assigns a TCP port to the token if it is available.</p>
+   * @param port  A TCP port number.
+   * @param token An ownership token.
+   * @return True if and only if the port is now assigned to the
+   *         token.
+   */
   public synchronized boolean reserveTcpPort(int port, Object token) {
-    return reserve("tcp:" + port, token);
+    return reserve(TCP_PREFIX + port, token);
   }
 
-  /** Release the port if it is assigned to the token, return true if it is
-   * now available */
+  /**
+   * <p>Releases a TCP port if it is assigned to the token.</p>
+   * @param port  A TCP port number.
+   * @param token An ownership token.
+   * @return True if and only if the port is now available.
+   **/
   public synchronized boolean releaseTcpPort(int port, Object token) {
-    return release("tcp:" + port, token);
+    return release(TCP_PREFIX + port, token);
   }
 
+  /**
+   * <p>Determines if a UDP port is available or already assigned to
+   * the token.</p>
+   * @param port  A UDP port number.
+   * @param token An ownership token.
+   * @return True if and only if the TCP port is available or if it is
+   *         in use by the given token.
+   */
+  public synchronized boolean isUdpPortAvailable(int port, Object token) {
+    return isAvailable(UDP_PREFIX + port, token);
+  }
+ 
+  /**
+   * <p>Assigns a UDP port to the token if it is available.</p>
+   * @param port  A UDP port number.
+   * @param token An ownership token.
+   * @return True if and only if the port is now assigned to the
+   *         token.
+   */
+  public synchronized boolean reserveUdpPort(int port, Object token) {
+    return reserve(UDP_PREFIX + port, token);
+  }
+  
+  /**
+   * <p>Releases a UDP port if it is assigned to the token.</p>
+   * @param port  A UDP port number.
+   * @param token An ownership token.
+   * @return True if and only if the port is now available.
+   **/
+  public synchronized boolean releaseUdpPort(int port, Object token) {
+    return release(UDP_PREFIX + port, token);
+  }
+  
   /** Return list of unfiltered tcp ports not already assigned to another
    * server */
   public List getUsableTcpPorts(String serverName) {
@@ -112,16 +197,26 @@ public class ResourceManager extends BaseLockssManager  {
     for (Iterator iter = unfilteredPorts.iterator(); iter.hasNext(); ) {
       String str = (String)iter.next();
       try {
-	int port = Integer.parseInt(str);
-	if (isTcpPortAvailable(port, serverName)){
-	  res.add(str);
-	}
+        int port = Integer.parseInt(str);
+        if (isTcpPortAvailable(port, serverName)){
+          res.add(str);
+        }
       } catch (NumberFormatException e) {
-	// allow port number ranges, not checked for availability
-	res.add(str);
+        // allow port number ranges, not checked for availability
+        res.add(str);
       }
     }
     return res;
   }
 
+  /**
+   * <p>An internal prefix to build TCP port identifiers.</p>
+   */
+  private static final String TCP_PREFIX = "tcp:";
+
+  /**
+   * <p>An internal prefix to build UDP port identifiers.</p>
+   */
+  private static final String UDP_PREFIX = "udp:";
+  
 }
