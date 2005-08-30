@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlSpec.java,v 1.14 2005-05-20 23:44:57 troberts Exp $
+ * $Id: CrawlSpec.java,v 1.15 2005-08-30 18:16:03 rebeccai Exp $
  */
 
 /*
@@ -62,6 +62,11 @@ public interface CrawlSpec {
    */
   public List getPermissionPages();
 
+  /**
+   * Returns whether the rule is null
+   * @author Rebecca Illowsky
+   */
+    public boolean isRuleNull();
 
   /**
    * Determine whether a url is part of this CrawlSpec.
