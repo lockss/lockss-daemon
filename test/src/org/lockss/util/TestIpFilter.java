@@ -1,5 +1,5 @@
 /*
- * $Id: TestIpFilter.java,v 1.5 2004-09-28 08:53:13 tlipkis Exp $
+ * $Id: TestIpFilter.java,v 1.6 2005-08-30 18:23:39 tlipkis Exp $
  */
 
 /*
@@ -160,7 +160,7 @@ public class TestIpFilter extends LockssTestCase {
   }
 
   public void testFilter() throws Exception {
-    filt.setFilters("172.16.25.*;10.0.4.1", "172.16.25.128/25", ';');
+    filt.setFilters("172.16.25.*;10.0.4.1", "172.16.25.128/25");
     assertNotAllowed("10.0.4.13");
     assertAllowed("10.0.4.1");
     assertAllowed("172.16.25.1");
@@ -169,7 +169,7 @@ public class TestIpFilter extends LockssTestCase {
 
   // this will generate a log error message
   public void testMalformedIncludeFilter() throws Exception {
-    filt.setFilters("x;172.16.25.*;10.0.4.1", "172.16.25.128/25", ';');
+    filt.setFilters("x;172.16.25.*;10.0.4.1", "172.16.25.128/25");
     assertNotAllowed("10.0.4.13");
     assertAllowed("10.0.4.1");
     assertAllowed("172.16.25.1");
@@ -178,7 +178,7 @@ public class TestIpFilter extends LockssTestCase {
 
   public void testMalformedExcludeFilter() throws Exception {
     try {
-      filt.setFilters("172.16.25.*;10.0.4.1", "xx;172.16.25.128/25", ';');
+      filt.setFilters("172.16.25.*;10.0.4.1", "xx;172.16.25.128/25");
       fail("Malformed entry in exclude list didn't throw");
     } catch (IpFilter.MalformedException e) {
     }
@@ -187,5 +187,20 @@ public class TestIpFilter extends LockssTestCase {
   public void testDefault() throws Exception {
     // default is to match nothing
     assertNotAllowed("1.1.1.1");
+  }
+
+  public void testAddToFilterList() throws Exception {
+    try {
+      IpFilter.addToFilterList(null, null);
+      fail("addToFilterList(x, null) should throw");
+    } catch (NullPointerException e) {
+    }
+    assertEquals("", IpFilter.addToFilterList(null, ""));
+    assertEquals("1.2.3.4", IpFilter.addToFilterList(null, "1.2.3.4"));
+    assertEquals("1.2.3.4;2.2.2.2/2",
+		 IpFilter.addToFilterList("2.2.2.2/2", "1.2.3.4"));
+    assertEquals("44.33.22.11/55;2.2.2.2/2;5.4.3.2",
+		 IpFilter.addToFilterList("2.2.2.2/2;5.4.3.2",
+					  "44.33.22.11/55"));
   }
 }

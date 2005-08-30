@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.11 2005-08-25 19:36:53 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.12 2005-08-30 18:23:39 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public abstract class BaseServletManager
   void setIpFilter(IpAccessHandler ah) {
     try {
       IpFilter filter = new IpFilter();
-      filter.setFilters(includeIps, excludeIps, ';');
+      filter.setFilters(includeIps, excludeIps);
       ah.setFilter(filter);
     } catch (IpFilter.MalformedException e) {
       log.warning("Malformed IP filter, filters not changed", e);

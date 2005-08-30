@@ -1,5 +1,5 @@
 /*
- * $Id: IpFilter.java,v 1.7 2004-09-28 08:53:14 tlipkis Exp $
+ * $Id: IpFilter.java,v 1.8 2005-08-30 18:23:39 tlipkis Exp $
  */
 
 /*
@@ -46,15 +46,30 @@ import org.lockss.app.*;
 public class IpFilter {
   private static Logger log = Logger.getLogger("IpFilter");
 
+  public static char LIST_DELIM = ';';
+
   private Mask[] inclFilters;
   private Mask[] exclFilters;
 
-  /** Set include and exclude access lists from delim-separated strings.
+  public static String addToFilterList(String filterList, String filter) {
+    filter = filter.trim();
+    List lst = StringUtil.breakAt(filterList, LIST_DELIM, 0, true, true);
+    if (lst.isEmpty()) {
+      return filter;
+    }
+    if (lst.contains(filter)) {
+      return filterList;
+    }
+    return filter + LIST_DELIM + filterList;
+  }
+
+
+  /** Set include and exclude access lists from LIST_DELIM-separated strings.
    */
-  public void setFilters(String includeList, String excludeList, char delim)
+  public void setFilters(String includeList, String excludeList)
       throws MalformedException {
-    setFilters(StringUtil.breakAt(includeList, delim),
-	       StringUtil.breakAt(excludeList, delim));
+    setFilters(StringUtil.breakAt(includeList, LIST_DELIM),
+	       StringUtil.breakAt(excludeList, LIST_DELIM));
   }
 
   /** Set include and exclude access lists from vectors of Mask strings.

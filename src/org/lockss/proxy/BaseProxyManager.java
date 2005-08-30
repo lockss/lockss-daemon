@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.10 2004-11-10 20:07:27 smorabito Exp $
+ * $Id: BaseProxyManager.java,v 1.11 2005-08-30 18:23:39 tlipkis Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public abstract class BaseProxyManager extends JettyManager {
     if (accessHandler != null) {
       try {
 	IpFilter filter = new IpFilter();
-	filter.setFilters(includeIps, excludeIps, ';');
+	filter.setFilters(includeIps, excludeIps);
 	accessHandler.setFilter(filter);
       } catch (IpFilter.MalformedException e) {
 	log.warning("Malformed IP filter, filters not changed", e);
