@@ -1,5 +1,5 @@
 /*
- * $Id: ServletManager.java,v 1.34 2005-01-20 04:25:42 tlipkis Exp $
+ * $Id: ServletManager.java,v 1.35 2005-08-30 18:24:31 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,9 @@ public interface ServletManager extends LockssManager {
   public static final String IP_ACCESS_PREFIX = PREFIX + "access.ip.";
   public static final String PARAM_IP_INCLUDE = IP_ACCESS_PREFIX + "include";
   public static final String PARAM_IP_EXCLUDE = IP_ACCESS_PREFIX + "exclude";
-  public static final String PARAM_IP_ISSET = IP_ACCESS_PREFIX + "isSet";
+  public static final String PARAM_IP_PLATFORM_SUBNET =
+    IP_ACCESS_PREFIX + IpAccessControl.SUFFIX_PLATFORM_ACCESS;
+
   public static final String PARAM_LOG_FORBIDDEN =
     IP_ACCESS_PREFIX + "logForbidden";
   public static final boolean DEFAULT_LOG_FORBIDDEN = true;

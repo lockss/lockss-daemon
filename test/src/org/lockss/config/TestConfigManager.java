@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.9 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.10 2005-08-30 18:24:31 tlipkis Exp $
  */
 
 /*
@@ -256,14 +256,14 @@ public class TestConfigManager extends LockssTestCase {
     Properties props = new Properties();
     props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
     props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
-    props.put("org.lockss.ui.access.ip.isSet", "true");
+    props.put("org.lockss.ui.access.ip.platformAccess", "1.2.3.*");
     props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
-    props.put("org.lockss.proxy.access.ip.isSet", "true");
+    props.put("org.lockss.proxy.access.ip.platformAccess", "3.2.1.0/22");
     ConfigurationUtil.setCurrentConfigFromProps(props);
     Configuration config = mgr.getCurrentConfig();
     assertEquals("1.2.3.0/22",
 		 config.get("org.lockss.ui.access.ip.include"));
-    assertEquals("1.2.3.0/21",
+    assertEquals("1.2.3.*;1.2.3.0/21",
 		 config.get("org.lockss.proxy.access.ip.include"));
   }
 

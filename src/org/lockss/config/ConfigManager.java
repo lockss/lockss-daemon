@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.21 2005-07-25 01:18:31 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.22 2005-08-30 18:24:32 tlipkis Exp $
  */
 
 /*
@@ -574,17 +574,17 @@ public class ConfigManager implements LockssManager {
     conditionalPlatformOverride(config, PARAM_PLATFORM_SMTP_HOST,
 				SmtpMailService.PARAM_SMTPHOST);
 
-    // Add platform access subnet to access lists iff they are not set
-    // locally (i.e., they came from global config).
+    // Add platform access subnet to access lists if it hasn't already been
+    // accounted for
     String platformSubnet = config.get(PARAM_PLATFORM_ACCESS_SUBNET);
-    if (!config.getBoolean(ServletManager.PARAM_IP_ISSET, false)) {
-      appendPlatformAccess(config, ServletManager.PARAM_IP_INCLUDE,
-			   platformSubnet);
-    }
-    if (!config.getBoolean(ProxyManager.PARAM_IP_ISSET, false)) {
-      appendPlatformAccess(config, ProxyManager.PARAM_IP_INCLUDE,
-			   platformSubnet);
-    }
+    appendPlatformAccess(config,
+			 ServletManager.PARAM_IP_INCLUDE,
+			 ServletManager.PARAM_IP_PLATFORM_SUBNET,
+			 platformSubnet);
+    appendPlatformAccess(config,
+			 ProxyManager.PARAM_IP_INCLUDE,
+			 ProxyManager.PARAM_IP_PLATFORM_SUBNET,
+			 platformSubnet);
 
     String space = config.get(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (!StringUtil.isNullString(space)) {
@@ -630,17 +630,19 @@ public class ConfigManager implements LockssManager {
     }
   }
 
+  // If the current platform access (subnet) value is different from the
+  // value it had the last time the local config file was written, add it
+  // to the access list.
   private void appendPlatformAccess(Configuration config, String accessParam,
+				    String oldPlatformAccessParam,
 				    String platformAccess) {
-    if (StringUtil.isNullString(platformAccess)) {
+    String oldPlatformAccess = config.get(oldPlatformAccessParam);
+    if (StringUtil.isNullString(platformAccess) ||
+	platformAccess.equals(oldPlatformAccess)) {
       return;
     }
     String includeIps = config.get(accessParam);
-    if (StringUtil.isNullString(includeIps)) {
-      includeIps = platformAccess;
-    } else {
-      includeIps = platformAccess + ";" + includeIps;
-    }
+    includeIps = IpFilter.addToFilterList(includeIps, platformAccess);
     config.put(accessParam, includeIps);
   }
 

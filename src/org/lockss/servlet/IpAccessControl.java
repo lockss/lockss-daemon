@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.22 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.23 2005-08-30 18:24:31 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.lockss.jetty.*;
+import org.lockss.servlet.*;
 
 /** Display and update IP access control lists.
  */
@@ -52,7 +53,7 @@ public abstract class IpAccessControl extends LockssServlet {
 
   public static final String SUFFIX_IP_INCLUDE = "include";
   public static final String SUFFIX_IP_EXCLUDE = "exclude";
-  public static final String SUFFIX_ISSET = "isSet";
+  public static final String SUFFIX_PLATFORM_ACCESS = "platformAccess";
 
   private static final String footIP =
     "List individual IP addresses (<code>172.16.31.14</code>), " +
@@ -315,7 +316,11 @@ public abstract class IpAccessControl extends LockssServlet {
 
     props.put(getIncludeParam(), incStr);
     props.put(getExcludeParam(), excStr);
-    props.put(prefix + SUFFIX_ISSET, "true");
+    String plat =
+      Configuration.getParam(ConfigManager.PARAM_PLATFORM_ACCESS_SUBNET);
+    if (!StringUtil.isNullString(plat)) {
+      props.put(prefix + SUFFIX_PLATFORM_ACCESS, plat);
+    }
   }
 
   protected abstract String getExplanation();
