@@ -1080,7 +1080,7 @@ class TinyUiTests(LockssTestCase):
         log.info("Waiting for framework to come ready.")
         self.tinyUiClient = self.clients[0]
         time.sleep(2)
-        self.tinyUiClient.waitForCanConnectToHost()
+        self.tinyUiClient.waitForCanConnectToHost(sleep=2)
             
     def getDaemonCount(self):
         return 1
