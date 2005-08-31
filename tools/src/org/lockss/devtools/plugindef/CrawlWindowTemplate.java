@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindowTemplate.java,v 1.1 2005-08-29 17:14:10 rebeccai Exp $
+ * $Id: CrawlWindowTemplate.java,v 1.2 2005-08-31 18:34:33 rebeccai Exp $
  */
 
 /*
@@ -35,14 +35,16 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 import java.util.TimeZone;
 
+/***********************************************************
+ *  class CrawlWindowTemplate holds the possible values
+ *  for the fields in CrawlWindowEditor
+ *
+ *  Author: Rebecca Illowsky
+ *  Verion: 0.7
+ *  LOCKSS
+ ***********************************************************/
+
 public class CrawlWindowTemplate extends PrintfTemplate {
-  int m_windowKind = 0;
-
-
-  static final String[] WINDOW_KIND_STRINGS         = {
-      "Unknown", "Include", "Exclude", "Include No Match", "Exclude No Match",
-      "Include Match, Else Exclude", "Exclude Match, Else Include"
-  };
 
   static final String[] WINDOW_ACTION_STRINGS       = {
       "Crawl","Don't Crawl"
@@ -69,56 +71,11 @@ public class CrawlWindowTemplate extends PrintfTemplate {
   static final String[] WINDOW_TIMEZONE_STRINGS     = TimeZone.getAvailableIDs();
 
   public CrawlWindowTemplate() {
-    m_windowKind = 1;
   }
 
   public CrawlWindowTemplate(String templateString) {
-    super(templateString);
-    String val_str = templateString.substring(0, templateString.indexOf(","));
-    m_windowKind = Integer.valueOf(val_str).intValue();
+     super(templateString);
   }
 
-    //RI
-    public CrawlWindowTemplate(CrawlWindows window){
-
-    }
-
-  int getWindowKind() {
-    return m_windowKind;
-  }
-
-  void setWindowKind(int kind) {
-    m_windowKind = kind;
-  }
-
-  void setWindowKind(String kindString) {
-    m_windowKind = 0;
-    for (int i=0; i< WINDOW_KIND_STRINGS.length; i++) {
-      if(WINDOW_KIND_STRINGS[i].equals(kindString)) {
-        m_windowKind = i;
-        break;
-      }
-    }
-
-  }
-
-  public String getCrawlWindowString() {
-    StringBuffer sb = new StringBuffer();
-    sb.append(m_windowKind);
-    String template = getTemplateString();
-    if(!StringUtil.isNullString(template)) {
-      sb.append(",");
-      sb.append(template);
-      return sb.toString();
-    }
-    return null;
-  }
-
-  String getKindString() {
-    if(m_windowKind < 1 || m_windowKind > WINDOW_KIND_STRINGS.length) {
-      return WINDOW_KIND_STRINGS[0];
-    }
-    return WINDOW_KIND_STRINGS[m_windowKind];
-  }
 
 }

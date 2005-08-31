@@ -9,14 +9,16 @@ import org.lockss.util.*;
 import java.awt.event.*;
 import java.beans.*;
 
-/**
- * <p>Title: </p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2005</p>
- * <p>Company: SUL-LOCKSS</p>
- * @author Rebecca Illowsky
- * @version 2.0
- */
+
+/**********************************************************************
+ *  class ValidatePluginResultsDialog creates a Dialog that conducts
+ *  the validation tests and displays the output.
+ *
+ *  <p>ValidatePluginResultsDialog: </p>
+ *  <p>@author Rebecca Illowsky</p>
+ *  <p>@version 0.7</p>
+ *  LOCKSS
+ **********************************************************************/
 
 public class ValidatePluginResultsDialog extends JDialog {
   static SimpleAttributeSet BOLD_BLACK = new SimpleAttributeSet();
@@ -52,15 +54,15 @@ public class ValidatePluginResultsDialog extends JDialog {
   };
 
   JPanel panel1 = new JPanel();
-  BorderLayout borderLayout1 = new BorderLayout();
+  BorderLayout borderLayout1   = new BorderLayout();
   GridBagLayout gridBagLayout1 = new GridBagLayout();
   JScrollPane outputScrollPane = new JScrollPane();
-  JTextPane outputTextPane = new JTextPane();
+  JTextPane outputTextPane     = new JTextPane();
 
   private ArchivalUnit m_au;
 
-  JPanel btnPanel = new JPanel();
-  JButton checkButton = new JButton();
+  JPanel  btnPanel     = new JPanel();
+  JButton checkButton  = new JButton();
   JButton cancelButton = new JButton();
 
   public ValidatePluginResultsDialog(Frame frame, String title, boolean modal) {
@@ -81,8 +83,9 @@ public class ValidatePluginResultsDialog extends JDialog {
   public ValidatePluginResultsDialog(ArchivalUnit au) {
       this();  
       m_au = au;
-      //Runs all of the tests to validate the plugin
-      //Outputs the text to outputTextPane
+
+      //Runs all of the tests to validate the plugin.
+      //Outputs the results to outputTextPane
       validatePlugin();
   }
 
@@ -116,7 +119,7 @@ public class ValidatePluginResultsDialog extends JDialog {
 
   /*!
    *@abstract Conducts all of the validation tests
-   *and returns the concationation of their strings
+   *and outputs whether or not the plugin in valid
    */
   public void validatePlugin(){
       String output = "";

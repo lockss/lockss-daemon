@@ -14,11 +14,19 @@ import org.lockss.plugin.*;
 import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.util.*;
 
-/**
- * <p>ValidatePluginDialog: </p>
- * <p>@author Rebecca Illowsky</p>
- * <p>@version 2.0</p>
- */
+
+/**********************************************************************
+ *  class ValidatePluginDialog creates a Dialog that accepts user input
+ *  on the user-specified configuration parameters, and creates an 
+ *  instance of ValidatePluginResultsDialog to conduct the validation
+ *  tests and display output.
+ *
+ *  <p>ValidatePluginDialog: </p>
+ *  <p>@author Rebecca Illowsky</p>
+ *  <p>@version 0.7</p>
+ *  LOCKSS
+ **********************************************************************/
+
 public class ValidatePluginDialog extends JDialog {
   public static final String DIRTY_BIT_VALIDATE_KEY = "validatebit";
 

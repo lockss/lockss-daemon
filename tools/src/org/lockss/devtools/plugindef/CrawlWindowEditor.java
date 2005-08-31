@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindowEditor.java,v 1.1 2005-08-29 17:13:57 rebeccai Exp $
+ * $Id: CrawlWindowEditor.java,v 1.2 2005-08-31 18:34:22 rebeccai Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import javax.swing.table.*;
 /**
  * <p>Title: </p>
  * <p>@author Rebecca Illowsky</p>
- * <p>@version 2.0</p>
+ * <p>@version 0.7</p>
  * <p> </p>
  *  not attributable
  *
