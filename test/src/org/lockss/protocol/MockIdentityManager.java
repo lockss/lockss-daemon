@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.5 2005-07-18 08:08:04 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.6 2005-08-31 23:19:18 troberts Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 import java.util.*;
+import java.io.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.*;
@@ -41,8 +42,8 @@ import org.lockss.plugin.*;
  * Mock override of IdentityManager.
  */
 
-public class MockIdentityManager extends IdentityManager {
-  private static Logger logger = Logger.getLogger("MockIdentityManager");
+public class MockIdentityManager implements IdentityManager {
+  protected static Logger log = Logger.getLogger("MockIdentityManager");
 
   public HashMap idMap = new HashMap();
 
@@ -60,7 +61,7 @@ public class MockIdentityManager extends IdentityManager {
     super();
   }
 
-  public void initService(LockssDaemon daemon) throws LockssAppException {
+  public void initService(LockssApp daemon) throws LockssAppException {
 //     throw new UnsupportedOperationException("not implemented");
   }
 
@@ -69,12 +70,12 @@ public class MockIdentityManager extends IdentityManager {
   }
 
   public void stopService() {
-    throw new UnsupportedOperationException("not implemented");
+//     throw new UnsupportedOperationException("not implemented");
   }
 
 
   public PeerIdentity findPeerIdentity(String key) {
-    throw new UnsupportedOperationException("not implemented");
+    return (PeerIdentity)piMap.get(key);
   }
 
   public PeerIdentity ipAddrToPeerIdentity(IPAddr addr, int port) {
@@ -145,10 +146,6 @@ public class MockIdentityManager extends IdentityManager {
     repMap.put(id, new Integer(rep));
   }
 
-//   public void storeIdentities() throws ProtocolException {
-//     throw new UnsupportedOperationException("not implemented");
-//   }
-
 
   public IdentityListBean getIdentityListBean() {
     throw new UnsupportedOperationException("not implemented");
@@ -191,19 +188,32 @@ public class MockIdentityManager extends IdentityManager {
 //     idMap = null;
 //   }
 
-//    public void changeReputation(PeerIdentity id, int changeKind) {
-//      throw new UnsupportedOperationException("not implemented");
-// //      idMap.put(id, new Integer(changeKind));
-//    }
+  public void changeReputation(PeerIdentity id, int changeKind) {
+    throw new UnsupportedOperationException("not implemented");
+    //      idMap.put(id, new Integer(changeKind));
+  }
+  
+  public void storeIdentities() throws ProtocolException {
+    throw new UnsupportedOperationException("not implemented");
+  }
+  
+  public void storeIdentities(ObjectSerializer serializer) {
+    throw new UnsupportedOperationException("not implemented");
+  }
 
-   public int lastChange(PeerIdentity id) {
-     Integer change = (Integer)idMap.get(id);
-     if (change == null) {
-       return -1;
-     }
-     return change.intValue();
-   }
+  public LockssApp getApp() {
+    throw new UnsupportedOperationException("not implemented");
+  }
 
+
+  public int lastChange(PeerIdentity id) {
+    Integer change = (Integer)idMap.get(id);
+    if (change == null) {
+      return -1;
+    }
+    return change.intValue();
+  }
+  
 //   public void signalAgreed(PeerIdentity id, ArchivalUnit au) {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
@@ -216,6 +226,10 @@ public class MockIdentityManager extends IdentityManager {
     return (Map)agreeMap.get(au);
   }
   
+  public Map getDisagreed(ArchivalUnit au) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
   public List getCachesToRepairFrom(ArchivalUnit au) {
     Map map = getAgreed(au);
     if (map == null) return Collections.EMPTY_LIST;
@@ -223,7 +237,7 @@ public class MockIdentityManager extends IdentityManager {
   }
 
   public boolean hasAgreed(String ip, ArchivalUnit au)
-      throws MalformedIdentityKeyException {
+      throws IdentityManager.MalformedIdentityKeyException {
     return hasAgreed(stringToPeerIdentity(ip), au);
   }
 
@@ -231,6 +245,28 @@ public class MockIdentityManager extends IdentityManager {
     Map map = getAgreed(au);
     if (map == null) return false;
     return map.containsKey(pid);
+  }
+
+  public boolean hasAgreeMap(ArchivalUnit au) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public Collection getIdentityAgreements(ArchivalUnit au) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
+      throws IOException {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void writeIdentityAgreementTo(ArchivalUnit au, OutputStream out)
+      throws IOException {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public void writeIdentityDbTo(OutputStream out) throws IOException {
+//     throw new UnsupportedOperationException("not implemented");
   }
 
    /**
