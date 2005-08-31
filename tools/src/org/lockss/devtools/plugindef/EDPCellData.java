@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.6 2005-08-29 17:16:23 rebeccai Exp $
+ * $Id: EDPCellData.java,v 1.7 2005-08-31 00:09:14 rebeccai Exp $
  */
 
 /*
@@ -234,4 +234,9 @@ public class EDPCellData {
 
     notifyListenersOfChange();
   }
+
+  public void updateOtherData(String data) { 
+    notifyListenersOfChange();
+  }
+ 
 }
