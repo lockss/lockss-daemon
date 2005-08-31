@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.10 2005-08-29 17:12:12 rebeccai Exp $
+ * $Id: PluginDefiner.java,v 1.11 2005-08-31 00:09:56 rebeccai Exp $
  */
 
 /*
@@ -39,6 +39,8 @@ import javax.swing.border.*;
 import org.lockss.util.*;
 
 public class PluginDefiner extends JFrame {
+  public static final String DIRTY_BIT_SAVE_KEY = "savebit";
+
   JPanel contentPane;
 
   ImageIcon newIcon = new ImageIcon(PluginDefiner.class.getResource("images/New16.gif"));
@@ -72,6 +74,7 @@ public class PluginDefiner extends JFrame {
   JTable jTable1 = new CellEditorJTable();
   TitledBorder titledBorder1;
   EditableDefinablePlugin edp = null;
+
   String location = null;
   String name = null;
   EDPInspectorTableModel inspectorModel = new EDPInspectorTableModel(this);
@@ -276,6 +279,7 @@ public class PluginDefiner extends JFrame {
     // write the file
     try {
       edp.writeMap(location, name);
+      edp.setPluginState(PersistentPluginState.DIRTY_BIT,DIRTY_BIT_SAVE_KEY,"off");
     }
     catch (Exception ex) {
       JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
@@ -293,7 +297,8 @@ public class PluginDefiner extends JFrame {
   }
 
   void checkSaveFile() {
-    if(edp != null) {
+    boolean doCheckSave = checkValidatePlugin();
+    if(doCheckSave && edp != null && edp.getPluginState().getDirtyBit(DIRTY_BIT_SAVE_KEY).equals("on")) {
       int option =
           JOptionPane.showConfirmDialog(this,
                                         "Save current plugin?",
@@ -321,6 +326,17 @@ public class PluginDefiner extends JFrame {
       }
     }
   }
+  
+  boolean checkValidatePlugin(){
+      if(edp.getPluginState().getDirtyBit(ValidatePluginDialog.DIRTY_BIT_VALIDATE_KEY).equals("off"))
+	  return true;
+
+      //else bring up dialog that asks if user wants to validate plugin
+      //if yes, validate action performed and return false
+      //if no, return true
+      return true;
+  }
+
   void expertModeMenuItem_actionPerformed(ActionEvent e) {
     inspectorModel.setExpertMode(expertModeMenuItem.getState());
   }
