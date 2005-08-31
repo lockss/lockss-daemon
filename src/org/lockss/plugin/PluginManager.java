@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.141 2005-07-19 01:10:36 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.142 2005-08-31 23:18:36 troberts Exp $
  */
 
 /*
@@ -1067,13 +1067,14 @@ public class PluginManager
     String pluginName = "";
     try {
       pluginName = pluginNameFromKey(pluginKey);
+      log.debug3("Trying to retrieve "+pluginKey);
       info = retrievePlugin(pluginKey, loader);
       if (info != null) {
 	setPlugin(pluginKey, info.getPlugin());
 	pluginfoMap.put(pluginKey, info);
 	return true;
-      }
-      else {
+      } else {
+	log.debug("Couldn't retrieve "+pluginKey);
 	return false;
       }
     } catch (Exception e) {
