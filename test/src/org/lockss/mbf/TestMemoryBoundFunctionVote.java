@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.16 2004-09-29 18:58:03 tlipkis Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.17 2005-08-31 23:19:02 troberts Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
   protected void setUp() throws Exception {
     super.setUp();
     log = Logger.getLogger("TestMemoryBoundFunction");
-    LockssDaemon theDaemon = getMockLockssDaemon();
+    MockLockssDaemon theDaemon = getMockLockssDaemon();
     String tempDirPath = null;
     try {
       tempDirPath = getTempDir().getAbsolutePath() + File.separator;
@@ -106,6 +106,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
     p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
     ConfigurationUtil.setCurrentConfigFromProps(p);
+    theDaemon.setIdentityManager(new MockIdentityManager());
     idmgr = theDaemon.getIdentityManager();
     if (false)
       rand = new Random(100);
@@ -154,11 +155,12 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     }
     pollID = new byte[20];
     rand.nextBytes(pollID);
-    try {
-      voterID = idmgr.stringToPeerIdentity("127.0.0.1");
-    } catch (IdentityManager.MalformedIdentityKeyException ex) {
-      fail("PeerIdentity throws: " + ex.toString());
-    }
+//     try {
+      voterID = new MockPeerIdentity("127.0.0.1");
+//       voterID = idmgr.stringToPeerIdentity("127.0.0.1");
+//     } catch (IdentityManager.MalformedIdentityKeyException ex) {
+//       fail("PeerIdentity throws: " + ex.toString());
+//     }
   }
 
   /** tearDown method for test case
