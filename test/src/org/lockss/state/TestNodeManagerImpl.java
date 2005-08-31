@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.129 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.130 2005-08-31 23:20:28 troberts Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -49,7 +49,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
   private Poll contentPoll = null;
   private Random random = new Random();
   private MockLockssDaemon theDaemon;
-  private MyMockIdentityManager idManager;
+  private MyIdentityManager idManager;
   static Logger log = Logger.getLogger("TestNodeManagerImpl");
 
   public void setUp() throws Exception {
@@ -75,7 +75,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     theDaemon.setPollManager(pollManager);
     pollManager.initService(theDaemon);
     log.debug("Starting the Identity Manager");
-    idManager = new MyMockIdentityManager();
+    idManager = new MyIdentityManager();
     theDaemon.setIdentityManager(idManager);
     idManager.initService(theDaemon);
     log.debug("Identity Manager started");
@@ -1124,18 +1124,25 @@ public class TestNodeManagerImpl extends LockssTestCase {
     junit.swingui.TestRunner.main(testCaseList);
   }
 
-  private class  MyMockIdentityManager extends IdentityManager {
+  /**
+   * This should not extend IdentityManagerImpl, but rather MockIdentityManager
+   * However a) this is not an easy task, as the two are quite entangled
+   * and b) NodeManagerImpl is going to go away or get much simpler w/ V3
+   * so, I'm leaving this for now.
+   * TSR
+   */
+  private class  MyIdentityManager extends IdentityManagerImpl {
     public HashMap repMap = new HashMap();
     public HashMap idMap = null;
 
     public Map agreeMap = new HashMap();
 
-    public MyMockIdentityManager() {
+    public MyIdentityManager() {
       super();
     }
 
     public void initService(LockssDaemon daemon) throws LockssAppException {
-      this.log.debug("MyMockIdentityManager: initService");
+      this.log.debug("MyIdentityManager: initService");
       super.initService(daemon);
     }
 
@@ -1148,12 +1155,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
 
     public void startService() {
-      this.log.debug("MyMockIdentityManager: startService");
+      this.log.debug("MyIdentityManager: startService");
       super.startService();
       idMap = new HashMap();
     }
     public void stopService() {
-      this.log.debug("MyMockIdentityManager: stopService");
+      this.log.debug("MyIdentityManager: stopService");
       super.stopService();
       idMap = null;
     }
