@@ -174,6 +174,12 @@ public class ValidatePluginDialog extends JDialog {
   private void testAu(ArchivalUnit au) {
     ValidatePluginResultsDialog test_dlg =
         new ValidatePluginResultsDialog(au);
+
+    //Runs all of the tests to validate the plugin.
+    //Outputs the results to outputTextPane in the
+    //results dialog
+    test_dlg.validatePlugin();
+
     //Dimension dlgSize = test_dlg.getPreferredSize();
     Point pos = this.getLocationOnScreen();
     test_dlg.setLocation(pos.x, pos.y);
