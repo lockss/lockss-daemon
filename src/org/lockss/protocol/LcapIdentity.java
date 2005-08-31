@@ -1,5 +1,5 @@
 /*
- * $Id: LcapIdentity.java,v 1.28 2005-05-18 05:46:05 tlipkis Exp $
+ * $Id: LcapIdentity.java,v 1.29 2005-08-31 23:18:51 troberts Exp $
  */
 
 /*
@@ -299,7 +299,7 @@ public class LcapIdentity {
   }
 
   static String makeIdKey(IPAddr addr, int port) {
-    return IdentityManager.ipAddrToKey(addr, port);
+    return IDUtil.ipAddrToKey(addr, port);
   }
 
 }
