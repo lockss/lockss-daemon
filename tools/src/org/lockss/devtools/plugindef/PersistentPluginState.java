@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPluginState.java,v 1.2 2005-08-31 18:35:38 rebeccai Exp $
+ * $Id: PersistentPluginState.java,v 1.3 2005-08-31 22:52:53 rebeccai Exp $
  */
 
 /*
@@ -62,62 +62,60 @@ public class PersistentPluginState{
     public static final int SAVE_FILE          = 3;
        public static final int LOCATION  = 0;
        public static final int NAME      = 1;
-
-    /* pluginState Keys */
-    //total number of fields above
-    private static final int NUM_FIELDS        = 4;
-
     public static final int ALL_DIRTY_BITS_ON  = 10;
 
-    private Object[] pluginState = new Object[NUM_FIELDS];
+    private Properties dirtyBits;
+    private Properties configParameters;
+    private Properties filters;
+    private String[] saveFile;
 
     public PersistentPluginState(){
-	pluginState[DIRTY_BIT]                  = new Properties();
-	pluginState[CONFIG_PARAMETERS]          = new Properties();
-	pluginState[FILTERS]                    = new Properties();
-	pluginState[SAVE_FILE]                  = new String[2];
-	((String[]) pluginState[SAVE_FILE])[LOCATION]  = new String("");
-	((String[]) pluginState[SAVE_FILE])[NAME]      = new String("");
+	dirtyBits           = new Properties();
+	configParameters    = new Properties();
+	filters             = new Properties();
+	saveFile            = new String[2];
+	saveFile[LOCATION]  = new String("");
+	saveFile[NAME]      = new String("");
     }
 
     public String getDirtyBit(String key){
-	return (String) ((Properties) pluginState[DIRTY_BIT]).getProperty(key,"on");
+	return dirtyBits.getProperty(key,"on");
     }
 
     public String getConfigParameterValue(String key){
-	return (String) ((Properties) pluginState[CONFIG_PARAMETERS]).getProperty(key,"");
+	return configParameters.getProperty(key,"");
     }
 
     public String getFilterFieldValue(String key){
-       	return (String) ((Properties) pluginState[FILTERS]).getProperty(key,"");
+       	return filters.getProperty(key,"");
     }
 
     public String[] getSaveFileName(){
-	return (String[]) pluginState[SAVE_FILE];
+	return saveFile;
     }
 
     public void setDirtyBit(String key,String value){
-	((Properties) pluginState[DIRTY_BIT]).setProperty(key,value);
+	dirtyBits.setProperty(key,value);
     }
 
     public void setAllDirtyBitsOn(){
 	//Clears all of the dirty bit properties so that
 	//all requests for dirty bits return the default
 	//value of "on"
-        ((Properties) pluginState[DIRTY_BIT]).clear();
+        dirtyBits.clear();
     }
 
     public void setConfigParameterValue(String key,String value){
-	((Properties) pluginState[CONFIG_PARAMETERS]).setProperty(key,value);
+	configParameters.setProperty(key,value);
     }
 
     public void setFilterFieldValue(String key,String value){
-	((Properties) pluginState[FILTERS]).setProperty(key,value);
+	filters.setProperty(key,value);
     }
 
     public void setSaveFileName(String location,String filename){
-	((String[]) pluginState[SAVE_FILE])[LOCATION] = location;
-	((String[]) pluginState[SAVE_FILE])[NAME]     = filename;
+	saveFile[LOCATION] = location;
+	saveFile[NAME]     = filename;
     }
 
     public void setPluginState(int field,String key,String value){
