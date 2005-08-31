@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManager.java,v 1.35 2005-07-25 01:19:16 tlipkis Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.1 2005-08-31 23:19:57 troberts Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.test.*;
 /** Test cases for org.lockss.protocol.IdentityManager that assume the
  * IdentityManager has been initialized.  See TestIdentityManagerInit for
  * more IdentityManager tests. */
-public class TestIdentityManager extends LockssTestCase {
+public class TestIdentityManagerImpl extends LockssTestCase {
   Object testIdKey;
 
   private MockLockssDaemon theDaemon;
@@ -102,7 +102,7 @@ public class TestIdentityManager extends LockssTestCase {
 
   public void testSetupLocalIdentitiesV1Only()
       throws IdentityManager.MalformedIdentityKeyException {
-    IdentityManager mgr = new IdentityManager();
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
     assertNull(mgr.localPeerIdentities[Poll.V3_POLL]);
     PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V1_POLL];
@@ -118,10 +118,10 @@ public class TestIdentityManager extends LockssTestCase {
     Properties p = commonConfig();
     p.setProperty(IdentityManager.PARAM_LOCAL_V3_PORT, LOCAL_PORT);
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    IdentityManager mgr = new IdentityManager();
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
     PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
-    String key = IdentityManager.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
+    String key = IDUtil.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
     PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
     assertSame(pid1, pid2);
     PeerAddress pa = pid1.getPeerAddress();
@@ -138,7 +138,7 @@ public class TestIdentityManager extends LockssTestCase {
 		  IP_2 + IdentityManager.V3_ID_SEPARATOR +
 		  (LOCAL_PORT_NUM + 123));
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    IdentityManager mgr = new IdentityManager();
+    IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
     PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
     PeerAddress pa = pid1.getPeerAddress();
@@ -425,8 +425,24 @@ public class TestIdentityManager extends LockssTestCase {
       new IdentityManager.IdentityAgreement(peer2);
     ida2.setLastAgree(11);
     ida2.setLastDisagree(11);
+//     Set set1 = SetUtil.set(ida1, ida2);
+//     Set set2 = SetUtil.theSet(idmgr.getIdentityAgreements(mau));
+//     Iterator it1 = set1.iterator();
+//     Iterator it2 = set2.iterator();
+//     while (it1.hasNext()) {
+//       Object obj1 = it1.next();
+//       Object obj2 = it2.next();
+//       System.err.println(obj1.getClass().getName());
+//       System.err.println(obj2.getClass().getName());
+//       assertEquals(obj1, obj2);
+//     }
+    //     assertEquals(set1.size(), set2.size());
+//     assertTrue(set2.containsAll(set1));
+//     assertTrue(set1.containsAll(set2));
+//     assertTrue(set1.equals(set2));
+//     assertTrue(SetUtil.set(ida1, ida2).equals(SetUtil.theSet(idmgr.getIdentityAgreements(mau))));
     assertEquals(SetUtil.set(ida1, ida2),
-		 SetUtil.theSet(idmgr.getIdentityAgreements(mau)));
+  		 SetUtil.theSet(idmgr.getIdentityAgreements(mau)));
   }
 
   public void testHasAgreeMap() throws Exception {
@@ -775,7 +791,7 @@ public class TestIdentityManager extends LockssTestCase {
     assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
   }
 
-  private class TestableIdentityManager extends IdentityManager {
+  private class TestableIdentityManager extends IdentityManagerImpl {
     Map identities = null;
 
     public Map getIdentityMap() {
@@ -814,7 +830,7 @@ public class TestIdentityManager extends LockssTestCase {
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = {TestIdentityManager.class.getName()};
+    String[] testCaseList = {TestIdentityManagerImpl.class.getName()};
     junit.swingui.TestRunner.main(testCaseList);
   }
 }
