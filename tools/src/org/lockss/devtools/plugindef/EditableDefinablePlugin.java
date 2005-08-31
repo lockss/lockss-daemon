@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.15 2005-08-29 17:13:29 rebeccai Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.16 2005-08-31 00:07:53 rebeccai Exp $
  */
 
 /*
@@ -89,9 +89,12 @@ public class EditableDefinablePlugin
   static public Map DEFAULT_CONFIG_PARAM_DESCRS = getDefaultConfigParamDescrs();
   static Logger log = Logger.getLogger(PluginDefinerApp.LOG_ROOT +
 				       ".editableDefinablePlugin");
+  protected PersistentPluginState pluginState;
 
   public EditableDefinablePlugin() {
+      pluginState = new PersistentPluginState();
   }
+
   // for reading map files
   public void loadMap(String location, String name) throws Exception {
     log.info("loading definition map: " + location + "/" + name);
@@ -131,6 +134,14 @@ public class EditableDefinablePlugin
     else {
       mapName = name + MAP_SUFFIX;
     }
+  }
+
+  public void setPluginState(int field,String key,String value){
+      pluginState.setPluginState(field,key,value);
+  }
+
+  public PersistentPluginState getPluginState(){
+      return pluginState;
   }
 
   public void setCrawlType(String crawlType) {
