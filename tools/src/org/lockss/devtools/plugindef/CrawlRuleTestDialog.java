@@ -98,7 +98,7 @@ public class CrawlRuleTestDialog extends JDialog {
     for (Iterator it = descrs.iterator(); it.hasNext(); p_count++) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       JLabel label = new JLabel(cpd.getDisplayName(), JLabel.RIGHT);
-      JTextField field = new JTextField("");
+      JTextField field = new JTextField(m_plugin.getPluginState().getConfigParameterValue(cpd.getKey()));
 
       label.setLabelFor(field);
       Dimension dim = new Dimension(cpd.getSize() * field.getFont().getSize(),
@@ -141,6 +141,7 @@ public class CrawlRuleTestDialog extends JDialog {
       String value = ( (JTextField) m_descrMap.get(key)).getText();
       if(!StringUtil.isNullString(value)) {
         props.put(key, value);
+	m_plugin.setPluginState(PersistentPluginState.CONFIG_PARAMETERS,key,value);
       }
     }
     Configuration config = ConfigManager.fromProperties(props);

@@ -1,5 +1,5 @@
 /*
- * $Id: FilterTestDialog.java,v 1.2 2004-07-08 22:51:35 clairegriffin Exp $
+ * $Id: FilterTestDialog.java,v 1.3 2005-08-31 00:08:24 rebeccai Exp $
  */
 
 /*
@@ -50,6 +50,10 @@ import org.lockss.plugin.*;
  */
 
 public class FilterTestDialog extends JDialog {
+  private static final String FILTER_NAME_KEY    = "filtername";
+  private static final String FILTER_SOURCE_KEY  = "filtersource";
+  private static final String FILTER_DEST_KEY    = "filterdest";
+
   JFileChooser m_fileChooser = new JFileChooser();
   File m_srcFile;
   File m_destFile;
@@ -86,6 +90,10 @@ public class FilterTestDialog extends JDialog {
   public FilterTestDialog(Frame frame, EditableDefinablePlugin plugin) {
     this(frame, "Fiter Runner", false);
     m_plugin = plugin;
+    filterTextField.setText(m_plugin.getPluginState().getFilterFieldValue(FILTER_NAME_KEY));
+    sourceTextField.setText(m_plugin.getPluginState().getFilterFieldValue(FILTER_SOURCE_KEY));
+    destTextField.setText(m_plugin.getPluginState().getFilterFieldValue(FILTER_DEST_KEY));
+
   }
 
   public FilterTestDialog() {
@@ -113,9 +121,7 @@ public class FilterTestDialog extends JDialog {
     filterLabel.setText("Filter:");
     filterTextField.setPreferredSize(new Dimension(280, 22));
     filterTextField.setToolTipText("Enter name of filter class to use.");
-    filterTextField.setText("");
     sourceLabel.setText("Source:");
-    sourceTextField.setText("");
     sourceTextField.setToolTipText("Enter name of source file or directory.");
     sourceTextField.setPreferredSize(new Dimension(280, 22));
     srcButton.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -130,7 +136,6 @@ public class FilterTestDialog extends JDialog {
     destLabel.setText("Dest:");
     destTextField.setPreferredSize(new Dimension(280, 22));
     destTextField.setToolTipText("Enter name of destination file or directory.");
-    destTextField.setText("");
     destButton.setText("...");
     destButton.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -165,7 +170,9 @@ public class FilterTestDialog extends JDialog {
   }
 
   void filterButton_actionPerformed(ActionEvent e) {
-    String filter_str = filterTextField.getText();
+    String filter_str         = filterTextField.getText();
+    String filter_source_str  = sourceTextField.getText();
+    String filter_dest_str    = destTextField.getText();
 
     FilterRule filter = null;
     try {
@@ -176,6 +183,17 @@ public class FilterTestDialog extends JDialog {
       else {
         FilterRunner.filterSingleFile(filter, m_srcFile, m_destFile);
       }
+      //saves the text field input in order to display 
+      //the next time the filters are openned.  (Not tested)
+      m_plugin.setPluginState(PersistentPluginState.FILTERS,
+			      FILTER_NAME_KEY,
+			      filter_str);
+      m_plugin.setPluginState(PersistentPluginState.FILTERS,
+			      FILTER_SOURCE_KEY,
+			      filter_source_str);
+      m_plugin.setPluginState(PersistentPluginState.FILTERS,
+			      FILTER_DEST_KEY,
+			      filter_dest_str);
       setVisible(false);
     }
     catch (Exception ex1) {

@@ -20,6 +20,8 @@ import org.lockss.util.*;
  * <p>@version 2.0</p>
  */
 public class ValidatePluginDialog extends JDialog {
+  public static final String DIRTY_BIT_VALIDATE_KEY = "validatebit";
+
   EditableDefinablePlugin m_plugin;
   HashMap m_descrMap;
 
@@ -98,8 +100,7 @@ public class ValidatePluginDialog extends JDialog {
     for (Iterator it = descrs.iterator(); it.hasNext(); p_count++) {
       ConfigParamDescr cpd = (ConfigParamDescr) it.next();
       JLabel label = new JLabel(cpd.getDisplayName(), JLabel.RIGHT);
-      JTextField field = new JTextField("");
-
+      JTextField field = new JTextField(m_plugin.getPluginState().getConfigParameterValue(cpd.getKey()));
       label.setLabelFor(field);
       Dimension dim = new Dimension(cpd.getSize() * field.getFont().getSize(),
                               19);
@@ -141,12 +142,14 @@ public class ValidatePluginDialog extends JDialog {
       String value = ( (JTextField) m_descrMap.get(key)).getText();
       if(!StringUtil.isNullString(value)) {
         props.put(key, value);
+	m_plugin.setPluginState(PersistentPluginState.CONFIG_PARAMETERS,key,value);
       }
     }
     Configuration config = ConfigManager.fromProperties(props);
     ArchivalUnit au = null;
     try {
       au = m_plugin.createAu(config);
+      m_plugin.setPluginState(PersistentPluginState.DIRTY_BIT,DIRTY_BIT_VALIDATE_KEY,"off");
     }
     catch (Exception ex) {
       JOptionPane.showMessageDialog(this,"Unable to test plugin.\n"
