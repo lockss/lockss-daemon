@@ -82,11 +82,7 @@ public class ValidatePluginResultsDialog extends JDialog {
 
   public ValidatePluginResultsDialog(ArchivalUnit au) {
       this();  
-      m_au = au;
-
-      //Runs all of the tests to validate the plugin.
-      //Outputs the results to outputTextPane
-      validatePlugin();
+      m_au = au;  
   }
 
   private void jbInit() throws Exception {
