@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.11 2005-08-31 00:09:56 rebeccai Exp $
+ * $Id: PluginDefiner.java,v 1.12 2005-08-31 18:35:46 rebeccai Exp $
  */
 
 /*
@@ -219,9 +219,12 @@ public class PluginDefiner extends JFrame {
 
   //File | Exit action performed
   public void jMenuFileExit_actionPerformed(ActionEvent e) {
-    checkSaveFile();
-    log.info("Exiting...");
-    System.exit(0);
+    boolean doExit = checkValidatePlugin();
+    if(doExit){
+	checkSaveFile();
+	log.info("Exiting...");
+	System.exit(0);
+    }
   }
 
   //Help | About action performed
@@ -264,27 +267,34 @@ public class PluginDefiner extends JFrame {
   }
 
   void jMenuFileSave_actionPerformed(ActionEvent e) {
-    if(e.getActionCommand().equals("SaveAs") ||
-       edp == null || edp.getMapName() == null) {
-      int option = jFileChooser1.showSaveDialog(this);
-      if(option != jFileChooser1.APPROVE_OPTION ||
-         jFileChooser1.getSelectedFile() == null)
-        return;
-      name = jFileChooser1.getSelectedFile().getName();
-      location = jFileChooser1.getSelectedFile().getParent();
-      if(!StringUtil.endsWithIgnoreCase(name,".xml")) {
-        name = name + ".xml";
+      if(e.getActionCommand().equals("SaveAs") ||
+       edp == null || 
+       edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME].equals("")) {
+	  int option = jFileChooser1.showSaveDialog(this);
+	  if(option != jFileChooser1.APPROVE_OPTION ||
+	     jFileChooser1.getSelectedFile() == null)
+	      return;
+	  name = jFileChooser1.getSelectedFile().getName();
+	  location = jFileChooser1.getSelectedFile().getParent();
+	  if(!StringUtil.endsWithIgnoreCase(name,".xml")) {
+	      name = name + ".xml";
+	  }
+	  edp.setPluginState(PersistentPluginState.SAVE_FILE,location,name);
       }
-    }
-    // write the file
-    try {
-      edp.writeMap(location, name);
-      edp.setPluginState(PersistentPluginState.DIRTY_BIT,DIRTY_BIT_SAVE_KEY,"off");
-    }
-    catch (Exception ex) {
-      JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
+      else{
+	  name     = edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME];
+	  location = edp.getPluginState().getSaveFileName()[PersistentPluginState.LOCATION];
+      }
+
+      // write the file
+      try {
+	  edp.writeMap(location, name);
+	  edp.setPluginState(PersistentPluginState.DIRTY_BIT,DIRTY_BIT_SAVE_KEY,"off");
+      }
+      catch (Exception ex) {
+	JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
                                     JOptionPane.ERROR_MESSAGE);
-    }
+      }
   }
 
   void jMenuFileNew_actionPerformed(ActionEvent e) {
@@ -297,15 +307,14 @@ public class PluginDefiner extends JFrame {
   }
 
   void checkSaveFile() {
-    boolean doCheckSave = checkValidatePlugin();
-    if(doCheckSave && edp != null && edp.getPluginState().getDirtyBit(DIRTY_BIT_SAVE_KEY).equals("on")) {
+    if(edp != null && edp.getPluginState().getDirtyBit(DIRTY_BIT_SAVE_KEY).equals("on")) {
       int option =
           JOptionPane.showConfirmDialog(this,
                                         "Save current plugin?",
                                         "Close Plugin ",
                                         JOptionPane.YES_NO_OPTION);
       if(option == JOptionPane.YES_OPTION) {
-        if (edp.getMapName() == null) {
+        if(edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME].equals("")){
           option = jFileChooser1.showSaveDialog(this);
           if (option != jFileChooser1.APPROVE_OPTION ||
               jFileChooser1.getSelectedFile() == null)
@@ -315,14 +324,20 @@ public class PluginDefiner extends JFrame {
           if (!StringUtil.endsWithIgnoreCase(name, ".xml")) {
             name = name + ".xml";
           }
-        }
-        try {
-          edp.writeMap(location, name);
-        }
-        catch (Exception ex) {
-          JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
+	}
+
+	else{
+	    name     = edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME];
+	    location = edp.getPluginState().getSaveFileName()[PersistentPluginState.LOCATION];
+	}
+
+	try {
+	    edp.writeMap(location, name);
+	}
+	catch (Exception ex) {
+	   JOptionPane.showMessageDialog(this,ex.toString(),"Write File Error",
                                         JOptionPane.ERROR_MESSAGE);
-        }
+	}
       }
     }
   }
@@ -331,10 +346,19 @@ public class PluginDefiner extends JFrame {
       if(edp.getPluginState().getDirtyBit(ValidatePluginDialog.DIRTY_BIT_VALIDATE_KEY).equals("off"))
 	  return true;
 
-      //else bring up dialog that asks if user wants to validate plugin
-      //if yes, validate action performed and return false
-      //if no, return true
+      int option =
+          JOptionPane.showConfirmDialog(this,
+                                        "Validate current plugin?",
+                                        "Close Plugin ",
+                                        JOptionPane.YES_NO_OPTION);
+
+      if(option == JOptionPane.YES_OPTION) {
+	  validatePluginMenuItem_actionPerformed(null);
+	  return false;
+      }
+
       return true;
+
   }
 
   void expertModeMenuItem_actionPerformed(ActionEvent e) {
