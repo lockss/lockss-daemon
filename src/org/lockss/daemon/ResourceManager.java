@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.4 2005-08-30 19:03:15 thib_gc Exp $
+ * $Id: ResourceManager.java,v 1.5 2005-09-01 01:45:59 thib_gc Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -128,7 +128,7 @@ public class ResourceManager extends BaseLockssManager  {
    * @return True if and only if the TCP port is available or if it is
    *         in use by the given token.
    */
-  public synchronized boolean isTcpPortAvailable(int port, String token) {
+  public synchronized boolean isTcpPortAvailable(int port, Object token) {
     return isAvailable(TCP_PREFIX + port, token);
   }
 
@@ -188,7 +188,7 @@ public class ResourceManager extends BaseLockssManager  {
   
   /** Return list of unfiltered tcp ports not already assigned to another
    * server */
-  public List getUsableTcpPorts(String serverName) {
+  public List getUsableTcpPorts(Object serverToken) {
     List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredTcpPorts();
     if (unfilteredPorts == null || unfilteredPorts.isEmpty()) {
       return null;
@@ -198,7 +198,28 @@ public class ResourceManager extends BaseLockssManager  {
       String str = (String)iter.next();
       try {
         int port = Integer.parseInt(str);
-        if (isTcpPortAvailable(port, serverName)){
+        if (isTcpPortAvailable(port, serverToken)){
+          res.add(str);
+        }
+      } catch (NumberFormatException e) {
+        // allow port number ranges, not checked for availability
+        res.add(str);
+      }
+    }
+    return res;
+  }
+  
+  public List getUsableUdpPorts(Object serverToken) {
+    List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredUdpPorts();
+    if (unfilteredPorts == null || unfilteredPorts.isEmpty()) {
+      return null;
+    }
+    List res = new ArrayList();
+    for (Iterator iter = unfilteredPorts.iterator(); iter.hasNext(); ) {
+      String str = (String)iter.next();
+      try {
+        int port = Integer.parseInt(str);
+        if (isUdpPortAvailable(port, serverToken)){
           res.add(str);
         }
       } catch (NumberFormatException e) {

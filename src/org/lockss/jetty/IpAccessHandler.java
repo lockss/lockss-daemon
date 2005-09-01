@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.4 2004-10-18 03:36:32 tlipkis Exp $
+ * $Id: IpAccessHandler.java,v 1.5 2005-09-01 01:45:59 thib_gc Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.4 2004-10-18 03:36:32 tlipkis Exp $
+// $Id: IpAccessHandler.java,v 1.5 2005-09-01 01:45:59 thib_gc Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -82,7 +82,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
     this.allowLocal = allowLocal;
   }
 
-  boolean isIpAuthorized(String ip) throws IpFilter.MalformedException {
+  public boolean isIpAuthorized(String ip) throws IpFilter.MalformedException {
     return (filter.isIpAllowed(ip) || (allowLocal && localIps.contains(ip)));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.5 2005-08-30 19:03:15 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.6 2005-09-01 01:45:59 thib_gc Exp $
  */
 
 /*
@@ -41,9 +41,12 @@ import org.lockss.app.ConfigurableManager;
 import org.lockss.app.LockssAppException;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
+import org.lockss.daemon.ResourceManager;
 import org.lockss.plugin.CachedUrl;
 import org.lockss.plugin.PluginManager;
+import org.lockss.proxy.ProxyManager;
 import org.lockss.util.Logger;
+import org.lockss.util.RateLimiter;
 
 public class IcpManager
     extends BaseLockssDaemonManager
@@ -55,43 +58,89 @@ public class IcpManager
   
   private IcpSocketImpl icpSocket;
   
+  private RateLimiter limiter;
+  
   private PluginManager pluginManager;
   
-  private DatagramSocket udpSocket;
+  private int port;
   
+  private ProxyManager proxyManager;
+  
+  private ResourceManager resourceManager;
+  
+  private DatagramSocket udpSocket;
+
+  public RateLimiter getLimiter() {
+    return limiter;
+  }
+
   public void icpReceived(IcpReceiver source, IcpMessage message) {
     if (message.getOpcode() == IcpMessage.ICP_OP_QUERY) {
-      try {
-        String urlString = message.getPayloadUrl().toString();
-        CachedUrl cu = pluginManager.findOneCachedUrl(urlString);
         IcpMessage response;
         try {
-          if (cu != null && cu.hasContent()) {
-            response = icpBuilder.makeHit(message);
+          // Prepare response
+          if (!proxyManager.isIpAuthorized(message.getUdpAddress().getHostAddress())) {
+            logger.debug2("Response: DENIED");
+            response = icpBuilder.makeDenied(message);          
           }
           else {
-            response = icpBuilder.makeMissNoFetch(message);
+            String urlString = message.getPayloadUrl();
+            CachedUrl cu = pluginManager.findOneCachedUrl(urlString);
+            if (cu != null && cu.hasContent()) {
+              logger.debug2("Response: HIT");
+              response = icpBuilder.makeHit(message);
+            }
+            else {
+              logger.debug2("Response: MISS_NOFETCH");
+              response = icpBuilder.makeMissNoFetch(message);
+            }
           }
         }
         catch (IcpProtocolException ipe) {
+          logger.debug2("Encountered an IcpProtocolException", ipe);
+          logger.debug2("Response: ERR");
           try {
-            response = icpBuilder.makeError(message); // Bad query 
+            // Last attempt to make something out of it
+            response = icpBuilder.makeError(message);
           }
           catch (IcpProtocolException ipe2) {
-            throw new IOException(); // bail out
+            logger.warning(
+                "Two consecutive IcpProtocolExceptions thrown; aborting", ipe2);
+            return;
           }
         }
-        icpSocket.send(response, message.getUdpAddress(), message.getUdpPort());
-      }
-      catch (IOException ioe) {
-        logger.debug2("Cannot process ICP message: " + message.toString(), ioe);
+        
+        // Send response
+        try {
+          icpSocket.send(response, message.getUdpAddress(), message.getUdpPort());
+        }
+        catch (IOException ioe) {
+          logger.warning("IOException while sending ICP response", ioe);
+        }
+    }
+    else {
+      if (logger.isDebug3()) {
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("Received a non-query ICP message from ");
+        buffer.append(message.getUdpAddress());
+        buffer.append(": ");
+        buffer.append(message.toString());
+        logger.debug3(buffer.toString());
       }
     }
   }
-
+  
   public void setConfig(Configuration newConfig,
                         Configuration prevConfig,
                         Differences changedKeys) {
+    
+    // ICP rate limiter
+    if (changedKeys.contains(PARAM_ICP_INCOMING_RATE)) {
+      limiter = RateLimiter.getConfiguredRateLimiter(newConfig,
+          limiter, PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
+    }
+    
+    // ICP enabled/disabled and ICP port
     if (   changedKeys.contains(PARAM_ICP_ENABLED)
         || changedKeys.contains(PARAM_ICP_PORT)) {
       boolean enable = newConfig.getBoolean(PARAM_ICP_ENABLED,
@@ -105,65 +154,87 @@ public class IcpManager
 
   public void startService() {
     super.startService();
+    pluginManager = getDaemon().getPluginManager();
+    proxyManager = getDaemon().getProxyManager();
+    limiter = RateLimiter.getConfiguredRateLimiter(
+        Configuration.getCurrentConfig(), limiter,
+        PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
     boolean start = Configuration.getBooleanParam(PARAM_ICP_ENABLED,
                                                   DEFAULT_ICP_ENABLED);
     if (start) {
       startSocket();
     }
   }
-  
+
   public void stopService() {
     icpSocket.requestStop();
     super.stopService();
   }
   
   private void forget() {
-    icpSocket = null;
-    icpFactory = null;
     icpBuilder = null; 
-    pluginManager = null;
+    icpFactory = null;
+    icpSocket = null;
+    resourceManager = null;
+    limiter = null;
+    port = -1;
   }
   
   private void startSocket() {
     if (isAppInited()) {
       try {
+        logger.debug2("startSocket in IcpManager: action");
+        port = Configuration.getIntParam(PARAM_ICP_PORT,
+                                         DEFAULT_ICP_PORT);
+        resourceManager = getDaemon().getResourceManager();
+        if (!resourceManager.reserveUdpPort(port, getClass())) {
+          logger.error("Could not reserve UDP port " + port);
+          throw new SocketException();
+        }
+        
+        udpSocket = new DatagramSocket(port);
         icpFactory = IcpFactoryImpl.makeIcpFactory();
         icpBuilder = icpFactory.makeIcpBuilder(); 
-        int port = Configuration.getIntParam(PARAM_ICP_PORT,
-                                             DEFAULT_ICP_PORT);
-        udpSocket = new DatagramSocket(port);
         icpSocket = new IcpSocketImpl("IcpSocketImpl",
                                       udpSocket,
                                       icpFactory.makeIcpEncoder(),
-                                      icpFactory.makeIcpDecoder());
-        pluginManager = getDaemon().getPluginManager();
+                                      icpFactory.makeIcpDecoder(),
+                                      this);
         icpSocket.addIcpHandler(this);
         new Thread(icpSocket).start();
       }
       catch (SocketException se) {
         forget(); // revert instantions
-        throw new LockssAppException("Could not open UDP socket for ICP");
+        logger.error("Could not start ICP socket", se);
       }
     }
   }
   
   private void stopSocket() {
     if (icpSocket != null) {
+      logger.debug2("stopSocket in IcpManager: action");
       icpSocket.requestStop();
+      resourceManager.releaseUdpPort(port, getClass());
       forget(); // minimize footprint
     }
   }
-
-  public static final boolean DEFAULT_ICP_ENABLED = false;
-
-  public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
   
+  public static final boolean DEFAULT_ICP_ENABLED = false;
+  
+  public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
+
   public static final String PARAM_ICP_ENABLED =
     "org.lockss.proxy.icp.enabled";
-  
+
   public static final String PARAM_ICP_PORT =
     "org.lockss.proxy.icp.port";
   
+  private static final String DEFAULT_ICP_INCOMING_RATE =
+    "50/1s";
+  
   private static Logger logger = Logger.getLogger("IcpManager");
+  
+  private static final String PARAM_ICP_INCOMING_RATE =
+  "org.lockss.proxy.icp.incomingRequestsPerSecond";
 
 }

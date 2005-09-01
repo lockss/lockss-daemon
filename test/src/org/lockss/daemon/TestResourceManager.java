@@ -1,10 +1,10 @@
 /*
- * $Id: TestResourceManager.java,v 1.2 2005-04-21 07:22:33 tlipkis Exp $
+ * $Id: TestResourceManager.java,v 1.3 2005-09-01 01:45:59 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,7 +36,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 /**
- * Test class for org.lockss.daemon.ResourceManager
+ * <p>Test class for {@link ResourceManager).</p>
  */
 public class TestResourceManager extends LockssTestCase {
   private ResourceManager rmgr;
@@ -53,35 +53,78 @@ public class TestResourceManager extends LockssTestCase {
     super.tearDown();
   }
 
+  /**
+   * <p>Tests {@link ResourceManager#isTcpPortAvailable},
+   * {@link ResourceManager#reserveTcpPort} and
+   * {@link ResourceManager#releaseTcpPort}.</p>
+   */
   public void testTcpPort() {
+    final int testPort = 5432;
+    final String fooToken = "foo";
+    final String barToken = "bar";
+
     // initially available
-    assertTrue(rmgr.isTcpPortAvailable(5432, "foo"));
+    assertTrue(rmgr.isTcpPortAvailable(testPort, fooToken));
     // reserve for bar
-    assertTrue(rmgr.reserveTcpPort(5432, "bar"));
+    assertTrue(rmgr.reserveTcpPort(testPort, barToken));
     // still available to bar
-    assertTrue(rmgr.isTcpPortAvailable(5432, "bar"));
+    assertTrue(rmgr.isTcpPortAvailable(testPort, barToken));
     // but not to foo
-    assertFalse(rmgr.isTcpPortAvailable(5432, "foo"));
+    assertFalse(rmgr.isTcpPortAvailable(testPort, fooToken));
     // still can be reserved by bar
-    assertTrue(rmgr.reserveTcpPort(5432, "bar"));
+    assertTrue(rmgr.reserveTcpPort(testPort, barToken));
     // but not by foo
-    assertFalse(rmgr.reserveTcpPort(5432, "foo"));
+    assertFalse(rmgr.reserveTcpPort(testPort, fooToken));
     // attempt by foo to release fails
-    assertFalse(rmgr.releaseTcpPort(5432, "foo"));
+    assertFalse(rmgr.releaseTcpPort(testPort, fooToken));
     // leaving it unchanged
-    assertFalse(rmgr.isTcpPortAvailable(5432, "foo"));
-    assertTrue(rmgr.reserveTcpPort(5432, "bar"));
+    assertFalse(rmgr.isTcpPortAvailable(testPort, fooToken));
+    assertTrue(rmgr.reserveTcpPort(testPort, barToken));
     // bar can release it, now available
-    assertTrue(rmgr.releaseTcpPort(5432, "bar"));
+    assertTrue(rmgr.releaseTcpPort(testPort, barToken));
     // available to anyone after released
-    assertTrue(rmgr.releaseTcpPort(5432, "bar"));
-    assertTrue(rmgr.releaseTcpPort(5432, "foo"));
+    assertTrue(rmgr.releaseTcpPort(testPort, barToken));
+    assertTrue(rmgr.releaseTcpPort(testPort, fooToken));
   }
 
+  /**
+   * <p>Tests {@link ResourceManager#isUdpPortAvailable},
+   * {@link ResourceManager#reserveUdpPort} and
+   * {@link ResourceManager#releaseUdpPort}.</p>
+   */
+  public void testUdpPort() {
+    final int testPort = 5432;
+    final String fooToken = "foo";
+    final String barToken = "bar";
+
+    // initially available
+    assertTrue(rmgr.isUdpPortAvailable(testPort, fooToken));
+    // reserve for bar
+    assertTrue(rmgr.reserveUdpPort(testPort, barToken));
+    // still available to bar
+    assertTrue(rmgr.isUdpPortAvailable(testPort, barToken));
+    // but not to foo
+    assertFalse(rmgr.isUdpPortAvailable(testPort, fooToken));
+    // still can be reserved by bar
+    assertTrue(rmgr.reserveUdpPort(testPort, barToken));
+    // but not by foo
+    assertFalse(rmgr.reserveUdpPort(testPort, fooToken));
+    // attempt by foo to release fails
+    assertFalse(rmgr.releaseUdpPort(testPort, fooToken));
+    // leaving it unchanged
+    assertFalse(rmgr.isUdpPortAvailable(testPort, fooToken));
+    assertTrue(rmgr.reserveUdpPort(testPort, barToken));
+    // bar can release it, now available
+    assertTrue(rmgr.releaseUdpPort(testPort, barToken));
+    // available to anyone after released
+    assertTrue(rmgr.releaseUdpPort(testPort, barToken));
+    assertTrue(rmgr.releaseUdpPort(testPort, fooToken));
+  }
+  
   public void testGetUsableTcpPorts() {
     String srvr = "server";
     assertNull(rmgr.getUsableTcpPorts(srvr));
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234;1235");
     assertEquals(ListUtil.list("9900", "1234", "1235"),
 		 rmgr.getUsableTcpPorts(srvr));
@@ -90,9 +133,28 @@ public class TestResourceManager extends LockssTestCase {
 		 rmgr.getUsableTcpPorts(srvr));
     assertTrue(rmgr.reserveTcpPort(1235, "another service"));
     assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableTcpPorts(srvr));
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234;1235;333-444");
     assertEquals(ListUtil.list("9900", "1234", "333-444"),
 		 rmgr.getUsableTcpPorts(srvr));
   }
+  
+  public void testGetUsableUdpPorts() {
+    String srvr = "server";
+    assertNull(rmgr.getUsableUdpPorts(srvr));
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_UDP_PORTS,
+                                  "9900;1234;1235");
+    assertEquals(ListUtil.list("9900", "1234", "1235"),
+                 rmgr.getUsableUdpPorts(srvr));
+    assertTrue(rmgr.reserveUdpPort(1234, srvr));
+    assertEquals(ListUtil.list("9900", "1234", "1235"),
+                 rmgr.getUsableUdpPorts(srvr));
+    assertTrue(rmgr.reserveUdpPort(1235, "another service"));
+    assertEquals(ListUtil.list("9900", "1234"), rmgr.getUsableUdpPorts(srvr));
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_UDP_PORTS,
+                                  "9900;1234;1235;333-444");
+    assertEquals(ListUtil.list("9900", "1234", "333-444"),
+                 rmgr.getUsableUdpPorts(srvr));
+  }
+  
 }

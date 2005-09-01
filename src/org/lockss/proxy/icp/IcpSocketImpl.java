@@ -1,6 +1,35 @@
-/**
- * 
+/*
+ * $Id: IcpSocketImpl.java,v 1.4 2005-09-01 01:45:59 thib_gc Exp $
  */
+
+/*
+
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
+
 package org.lockss.proxy.icp;
 
 import java.io.IOException;
@@ -12,7 +41,6 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
-import org.lockss.util.RateLimiter;
 
 public class IcpSocketImpl
     extends LockssRunnable
@@ -26,20 +54,17 @@ public class IcpSocketImpl
   
   private ArrayList handlers;
   
-  private Logger inLogger;
+  private IcpManager icpManager;
   
   private Logger logger;
   
-  private Logger outLogger;
-  
   private DatagramSocket socket;
-  
-  private RateLimiter limiter;
   
   public IcpSocketImpl(String name,
                        DatagramSocket socket,
                        IcpEncoder encoder,
-                       IcpDecoder decoder) {
+                       IcpDecoder decoder,
+                       IcpManager icpManager) {
     // Super constructor
     super(name);
     
@@ -48,21 +73,13 @@ public class IcpSocketImpl
     this.encoder = encoder;
     this.decoder = decoder;
     this.handlers = new ArrayList();
-    this.limiter = new RateLimiter(
-        Configuration.getIntParam(PARAM_ICP_INCOMING_PER_SECOND,
-                                  DEFAULT_ICP_INCOMING_PER_SECOND),
-        Constants.SECOND
-    );
-
+    this.icpManager = icpManager;
+    
     // Loggers
     this.logger = Logger.getLogger("IcpSocketImpl-default");
-    this.inLogger = Logger.getLogger("IcpScoketImpl-in");
-    this.outLogger = Logger.getLogger("IcpSocketImpl-out");
     
     // Log
-    if (this.logger.isDebug2()) {
-      this.logger.debug2("constructor in IcpManager.IcpSocketImpl: end");
-    }
+    this.logger.debug2("constructor in IcpSocketImpl: end");
   }
 
   public void addIcpHandler(IcpHandler handler) {
@@ -78,21 +95,22 @@ public class IcpSocketImpl
   }
 
   public void icpReceived(IcpReceiver source, IcpMessage message) {
-    if (inLogger.isDebug3()) {
-      inLogger.debug3(message.toString());
+    if (logger.isDebug3()) {
+      logger.debug3(message.toString());
     }
   }
   
   public void removeIcpHandler(IcpHandler handler) {
     synchronized (handlers) {
-      if (handlers.contains(handler)) {
-        handlers.remove(handler);
-      }
+      handlers.remove(handler);
     }
   }
 
   public void requestStop() {
     goOn = false;
+    if (socket != null && !socket.isClosed()) {
+      socket.close();
+    }
   }
 
   public void send(IcpMessage message,
@@ -106,73 +124,95 @@ public class IcpSocketImpl
                    int port)
       throws IOException {
     DatagramPacket packet = encoder.encode(message, recipient, port);
-    if (outLogger.isDebug3()) {
-      outLogger.debug3(message.toString());
+    if (logger.isDebug3()) {
+      logger.debug3(message.toString());
     }
     socket.send(packet);
   }
 
   protected void lockssRun() {
+    logger.debug2("lockssRun in IcpSocketImpl: begin");
     long interval =
       Configuration.getLongParam(PARAM_ICP_WDOG_INTERVAL,
                                  DEFAULT_ICP_WDOG_INTERVAL);
-    
-    if (logger.isDebug2()) {
-      logger.debug2("lockssRun in IcpManager.IcpSocketImpl: begin");
-    }
-    
-    try {
-      socket.setSoTimeout((int)interval / 2);
-    }
-    catch (SocketException se) {
-      logger.warning("Could not set socket timeout", se);
-      return;
-    }
-
     byte[] buffer = new byte[IcpMessage.MAX_LENGTH];
     goOn = true;
     DatagramPacket packet = null;
     IcpMessage message = null;
-    addIcpHandler(this);
-    nowRunning();
-    startWDog("icp", interval);
     setPriority("icp",
-                Configuration.getIntParam(PARAM_ICP_THREAD_PRIORITY,
-                                          DEFAULT_ICP_THREAD_PRIORITY));
+        Configuration.getIntParam(PARAM_ICP_THREAD_PRIORITY,
+                                  DEFAULT_ICP_THREAD_PRIORITY));
+    nowRunning();
     
-    while (goOn) {
-      try {
-        if (logger.isDebug2()) {
-          logger.debug2("lockssRun in IcpManager.IcpSocketImpl: listening");
+    try {
+      // Set up socket timeout
+      socket.setSoTimeout((int)interval / 2); // may throw
+      addIcpHandler(this);
+      startWDog("icp", interval);
+
+      // Main loop
+      boolean somethingBadHappened = false;
+      while (goOn && !somethingBadHappened) {
+        try {
+          logger.debug2("lockssRun in IcpSocketImpl: listening");
+          packet = new DatagramPacket(buffer, buffer.length);
+          socket.receive(packet);
+          if (icpManager.getLimiter().isEventOk()) {
+            icpManager.getLimiter().event();
+            message = decoder.parseIcp(packet);
+            notifyHandlers(message);
+          }
         }
-        packet = new DatagramPacket(buffer, buffer.length);
-        socket.receive(packet);
-        if (limiter.isEventOk()) {
-          limiter.event();
-          message = decoder.parseIcp(packet);
-          notifyHandlers(message);
+        catch (SocketTimeoutException ste) {
+          // drop down to finally
+        }
+        catch (IcpProtocolException ipe) {
+          if (logger.isDebug3()) {
+            StringBuffer sb = new StringBuffer();
+            sb.append("Bad ICP packet from ");
+            sb.append(message.getUdpAddress());
+            sb.append(": ");
+            sb.append(message.toString());
+            logger.debug3(sb.toString(), ipe);
+          }
+        }
+        catch (IOException ioe) {
+          logger.warning("lockssRun in IcpSocketImpl: IOException", ioe);
+          somethingBadHappened = goOn && socket.isClosed();
+        }
+        finally {
+          pokeWDog();
         }
       }
-      catch (SocketTimeoutException ste) {
-        // drop down to finally
-      }
-      catch (IcpProtocolException ipe) {
-        if (inLogger.isDebug3()) {
-          inLogger.debug3("Bad ICP packet from " + packet.getAddress(), ipe);
-        }
-      }
-      catch (IOException ioe) {
-        logger.warning("lockssRun in IcpManager.IcpSocketImpl: IOException", ioe);
-        goOn = !socket.isClosed();
-      }
-      finally {
-        pokeWDog();
-      }
+      
+      triggerWDogOnExit(somethingBadHappened);
     }
-  
-    stopWDog();
-    if (logger.isDebug2()) {
-      logger.warning("lockssRun in IcpManager.IcpSocketImpl: end");
+    catch (SocketException se) {
+      logger.warning("Could not set socket timeout", se);
+    }
+    finally {
+      removeIcpHandler(this);
+      stopWDog();
+      logger.debug2("lockssRun in IcpSocketImpl: end");
+    }
+  }
+
+  protected void threadExited() {
+    StringBuffer buffer = new StringBuffer();
+    buffer.append("The thread exited unexpectedly. Typically this is ");
+    buffer.append("caused by the socket being closed at an unexpected ");
+    buffer.append("time, for example as a result of an IOException ");
+    buffer.append("or because the socket was closed before a call to ");
+    buffer.append("requestStop. The IcpManager will now be asked to ");
+    buffer.append("stop, then start.");
+    logger.error(buffer.toString());
+    try {
+      // FIXME: creates too many threads?
+      icpManager.stopService();
+      icpManager.startService();
+    }
+    catch (Exception exc) {
+      logger.error("Could not restart the ICP manager", exc);
     }
   }
 
@@ -193,20 +233,15 @@ public class IcpSocketImpl
     }
   }
   
-  private static final int DEFAULT_ICP_INCOMING_PER_SECOND = 50;
-
+  private static final int DEFAULT_ICP_THREAD_PRIORITY =
+    Thread.NORM_PRIORITY + 1;
+  
   private static final long DEFAULT_ICP_WDOG_INTERVAL = Constants.HOUR;
-  
-  private static final String PARAM_ICP_INCOMING_PER_SECOND =
-    "org.lockss.proxy.icp.incomingRequestsPerSecond";
-  
-  private static final String PARAM_ICP_WDOG_INTERVAL =
-    "org.lockss.thread.icp.watchdog.interval";
   
   private static final String PARAM_ICP_THREAD_PRIORITY =
     "org.lockss.thread.icp.priority";
   
-  private static final int DEFAULT_ICP_THREAD_PRIORITY =
-    Thread.NORM_PRIORITY + 1;
+  private static final String PARAM_ICP_WDOG_INTERVAL =
+    "org.lockss.thread.icp.watchdog.interval";
   
 }

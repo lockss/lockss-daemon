@@ -1,5 +1,5 @@
 /*
- * $Id: BaseProxyManager.java,v 1.11 2005-08-30 18:23:39 tlipkis Exp $
+ * $Id: BaseProxyManager.java,v 1.12 2005-09-01 01:45:59 thib_gc Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public abstract class BaseProxyManager extends JettyManager {
   protected String includeIps;
   protected String excludeIps;
   protected boolean logForbidden;
-  private IpAccessHandler accessHandler;
+  protected IpAccessHandler accessHandler;
 
   /* ------- LockssManager implementation ------------------ */
   /**

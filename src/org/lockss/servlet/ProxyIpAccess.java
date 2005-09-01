@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.11 2005-08-30 19:03:15 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.12 2005-09-01 01:45:59 thib_gc Exp $
  */
 
 /*
@@ -151,17 +151,15 @@ public class ProxyIpAccess extends IpAccessControl {
 
 
   private boolean isLegalAuditPort(int port) {
-    return
-       port >= 1024
-    && resourceMgr.isTcpPortAvailable(port,
-					                            AuditProxyManager.SERVER_NAME);
+    return port >= 1024 &&
+           resourceMgr.isTcpPortAvailable(
+               port, AuditProxyManager.SERVER_NAME);
   }
 
   private boolean isLegalIcpPort(int port) {
-    return
-       port >= 1024
-    && resourceMgr.isUdpPortAvailable(port,
-                                      IcpManager.class);
+    return port >= 1024 &&
+           resourceMgr.isUdpPortAvailable(
+               port, IcpManager.class);
   }
   
   private boolean getDefaultAuditEnable() {
@@ -169,7 +167,7 @@ public class ProxyIpAccess extends IpAccessControl {
       return formAuditEnable;
     }
     return Configuration.getBooleanParam(PARAM_AUDIT_ENABLE,
-					                               DEFAULT_AUDIT_ENABLE);
+                                         DEFAULT_AUDIT_ENABLE);
   }
 
   private String getDefaultAuditPort() {
@@ -184,10 +182,8 @@ public class ProxyIpAccess extends IpAccessControl {
     if (isForm) {
       return formIcpEnable;
     }
-    return Configuration.getBooleanParam(
-        IcpManager.PARAM_ICP_ENABLED,
-        IcpManager.DEFAULT_ICP_ENABLED
-    );
+    return Configuration.getBooleanParam(IcpManager.PARAM_ICP_ENABLED,
+                                         IcpManager.DEFAULT_ICP_ENABLED);
   }
   
   private String getDefaultIcpPort() {
@@ -209,6 +205,9 @@ public class ProxyIpAccess extends IpAccessControl {
     "Other ports can be configured but may not be reachable due to " +
     "packet filters.";
   
+  /**
+   * <p>A footnote explaining the role of the ICP server.</p>
+   */
   private static final String ICP_FOOT =
     "The ICP server responds to queries sent by other proxies and caches " +
     "to let them know if this cache has the content they are looking for. " +

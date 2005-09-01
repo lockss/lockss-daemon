@@ -1,5 +1,5 @@
 /*
- * $Id: TestPlatformInfo.java,v 1.8 2005-07-18 07:59:30 tlipkis Exp $
+ * $Id: TestPlatformInfo.java,v 1.9 2005-09-01 01:45:59 thib_gc Exp $
  */
 
 /*
@@ -60,9 +60,9 @@ public class TestPlatformInfo extends LockssTestCase {
 
   public void testGetUnfilteredTcpPorts() throws Exception {
     assertEmpty(info.getUnfilteredTcpPorts());
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_PORTS, "9909");
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS, "9909");
     assertEquals(ListUtil.list("9909"), info.getUnfilteredTcpPorts());
-    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_PORTS,
+    ConfigurationUtil.setFromArgs(PlatformInfo.PARAM_UNFILTERED_TCP_PORTS,
 				  "9900;1234");
     assertEquals(ListUtil.list("9900", "1234"), info.getUnfilteredTcpPorts());
   }

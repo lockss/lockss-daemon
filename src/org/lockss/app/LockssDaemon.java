@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.75 2005-08-31 23:18:24 troberts Exp $
+ * $Id: LockssDaemon.java,v 1.76 2005-09-01 01:45:58 thib_gc Exp $
  */
 
 /*
@@ -46,6 +46,7 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.proxy.*;
+import org.lockss.proxy.icp.IcpManager;
 import org.lockss.servlet.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
@@ -374,6 +375,15 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     return (IdentityManager) getManager(IDENTITY_MANAGER);
   }
 
+  /**
+   * <p>Retrieves the ICP manager.</p>
+   * @return The ICP manager instance.
+   * @throws IllegalArgumentException if the manager is not available.
+   */
+  public IcpManager getIcpManager() {
+    return (IcpManager)getManager(ICP_MANAGER);
+  }
+  
   /**
    * return the RemoteApi instance.
    * @return RemoteApi instance.
