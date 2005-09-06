@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.38 2005-08-02 22:54:21 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.39 2005-09-06 23:00:27 troberts Exp $
  */
 
 /*
@@ -571,6 +571,46 @@ public class TestNewContentCrawler extends LockssTestCase {
 		 crawlStatus.getCrawlStatus());
     Map expectedErrors = MapUtil.map(permissionPage,
 				     "Cannot fetch permission page on the second attempt");
+    assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
+    assertEquals(1, crawlStatus.getNumUrlsWithErrors());
+  }
+
+  public void testGetStatusRepoErrorStartUrl() {
+    mau = new MyMockArchivalUnit();
+    mau.setPlugin(new MockPlugin());
+    mau.setAuId("MyMockTestAu");
+    mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    spec = new SpiderCrawlSpec(ListUtil.list(permissionPage),
+			       ListUtil.list(permissionPage), crawlRule, 1);
+    crawler = new MyNewContentCrawler(mau, spec, aus);
+
+    mau.addUrl(permissionPage,
+	       new CacheException.RepositoryException("Test exception"),
+ 	       DEFAULT_RETRY_TIMES);
+    
+    crawler.doCrawl();
+    Crawler.Status crawlStatus = crawler.getStatus();
+
+    assertEquals("Repository error", crawlStatus.getCrawlStatus());
+    Map expectedErrors = MapUtil.map(permissionPage, "Repository error");
+    assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
+    assertEquals(1, crawlStatus.getNumUrlsWithErrors());
+  }
+
+  public void testGetStatusRepoErrorNotStartUrl() {
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(startUrl, false, true);
+    parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
+    mau.addUrl(url1,
+ 	       new CacheException.RepositoryException("Test exception"),
+  	       DEFAULT_RETRY_TIMES);
+    crawlRule.addUrlToCrawl(url1);
+    assertFalse(crawler.doCrawl());
+    Crawler.Status crawlStatus = crawler.getStatus();
+    
+    assertEquals("Error", crawlStatus.getCrawlStatus());
+    Map expectedErrors = MapUtil.map(url1, "Repository error");
     assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
     assertEquals(1, crawlStatus.getNumUrlsWithErrors());
   }
