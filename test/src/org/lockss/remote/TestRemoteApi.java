@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.10 2005-08-31 23:20:11 troberts Exp $
+ * $Id: TestRemoteApi.java,v 1.11 2005-09-06 19:57:52 tlipkis Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.test.*;
 import org.lockss.repository.*;
+import org.lockss.mail.*;
 
 /**
  * Test class for org.lockss.remote.RemoteApi
@@ -669,4 +670,65 @@ public class TestRemoteApi extends LockssTestCase {
     }
 
   }
+
+  public void testBackupEmail() throws Exception {
+    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
+    Properties p = new Properties();
+    p.put("org.lockss.backupEmail.enabled", "true");
+    p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
+    p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
+    ConfigurationUtil.addFromProps(p);
+    MockMailService mgr = new MockMailService();
+    getMockLockssDaemon().setMailService(mgr);
+    rapi.sendMailBackup();
+    MockMailService.Rec rec = mgr.getRec(0);
+    MimeMessage msg = (MimeMessage)rec.getMsg();
+    assertNotNull(msg);
+    assertEquals("LOCKSS cache lockss42.example.com <foo@bar>",
+		 msg.getHeader("From"));
+    assertEquals("foo@bar", msg.getHeader("To"));
+    assertEquals("Backup file for LOCKSS cache lockss42.example.com",
+		 msg.getHeader("Subject"));
+
+    javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
+    assertEquals(2, parts.length);
+    assertMatchesRE("attached file is a backup",
+		    (String)parts[0].getContent());
+    assertMatchesRE("LOCKSS_Backup_.*\\.zip", parts[1].getFileName());
+    // zip file should start with "PK"
+    assertMatchesRE("^PK",
+		    StringUtil.fromInputStream(parts[1].getInputStream()));
+  }
+
+  public void testBackupEmailOverride() throws Exception {
+    writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
+    Properties p = new Properties();
+    p.put("org.lockss.backupEmail.enabled", "true");
+    p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
+    p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
+    p.put(RemoteApi.PARAM_BACKUP_EMAIL_RECIPIENT, "rrr@ccc");
+    p.put(RemoteApi.PARAM_BACKUP_EMAIL_FROM, "fff@ccc");
+    p.put(RemoteApi.PARAM_BACKUP_EMAIL_SENDER, "xxx@ccc");
+    ConfigurationUtil.addFromProps(p);
+    MockMailService mgr = new MockMailService();
+    getMockLockssDaemon().setMailService(mgr);
+    rapi.sendMailBackup();
+    MockMailService.Rec rec = mgr.getRec(0);
+    MimeMessage msg = (MimeMessage)rec.getMsg();
+    assertNotNull(msg);
+    assertEquals("fff@ccc", msg.getHeader("From"));
+    assertEquals("rrr@ccc", msg.getHeader("To"));
+    assertEquals("Backup file for LOCKSS cache lockss42.example.com",
+		 msg.getHeader("Subject"));
+
+    javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
+    assertEquals(2, parts.length);
+    assertMatchesRE("attached file is a backup",
+		    (String)parts[0].getContent());
+    assertMatchesRE("LOCKSS_Backup_.*\\.zip", parts[1].getFileName());
+    // zip file should start with "PK"
+    assertMatchesRE("^PK",
+		    StringUtil.fromInputStream(parts[1].getInputStream()));
+  }
+
 }

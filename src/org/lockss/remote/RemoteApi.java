@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.36 2005-07-25 01:20:11 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.37 2005-09-06 19:57:52 tlipkis Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.remote;
 
 import java.io.*;
+import java.text.*;
 import java.util.*;
 import java.util.zip.*;
 import org.lockss.app.*;
@@ -44,6 +45,7 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.servlet.ServletManager;
 import org.lockss.util.*;
+import org.lockss.mail.*;
 import org.apache.commons.collections.map.ReferenceMap;
 
 /**
@@ -440,7 +442,7 @@ public class RemoteApi
 				   file);
   }
 
-  File createConfigBackupFile(String machineName) throws IOException {
+  public File createConfigBackupFile(String machineName) throws IOException {
     log.info("createConfigBackupFile()");
     File file = FileUtil.createTempFile("cfgsave", ".zip");
     ZipOutputStream zip = null;
@@ -1355,4 +1357,135 @@ public class RemoteApi
     }
   }
 
+
+  // Support for mailing backup file
+  // XXX Need to find a place for this.  o.l.daemon.admin?
+
+  static final String BACKUP_PREFIX = Configuration.PREFIX + "backupEmail.";
+
+  /** Enable periodic mailing of backup file */
+  static final String PARAM_BACKUP_EMAIL_ENABLED = BACKUP_PREFIX + "enabled";
+  static final boolean DEFAULT_BACKUP_EMAIL_ENABLED = false;
+
+  /** If sepcified, the recipient of backup emails.    If not specified,
+   * uses the admin email adress */
+  static final String PARAM_BACKUP_EMAIL_RECIPIENT = BACKUP_PREFIX + "sendTo";
+  static final String PARAM_DEFAULT_BACKUP_EMAIL_RECIPIENT =
+    ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
+  // Make default param name show up as default in param listing.
+  static final String DEFAULT_BACKUP_EMAIL_RECIPIENT =
+    "(value of " + PARAM_DEFAULT_BACKUP_EMAIL_RECIPIENT + ")";
+
+  /** If sepcified, the sender address on backup emails.  If not specified,
+   * uses the admin email adress */
+  static final String PARAM_BACKUP_EMAIL_SENDER = BACKUP_PREFIX + "sender";
+  static final String PARAM_DEFAULT_BACKUP_EMAIL_SENDER =
+    ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL;
+  // Make default param name show up as default in param listing.
+  static final String DEFAULT_BACKUP_EMAIL_SENDER =
+    "(value of " + PARAM_DEFAULT_BACKUP_EMAIL_SENDER + ")";
+
+  /** printf string applied to cache-name, email-sender */
+  static final String PARAM_BACKUP_EMAIL_FROM = BACKUP_PREFIX + "from";
+  static final String DEFAULT_BACKUP_EMAIL_FROM = "LOCKSS cache %s <%s>";
+
+  /** URL for more info about backup file */
+  static final String PARAM_BACKUP_EMAIL_INFO_URL = BACKUP_PREFIX + "infoUrl";
+  static final String DEFAULT_BACKUP_EMAIL_INFO_URL = null;
+
+
+
+  DateFormat headerDf = new SimpleDateFormat("EEE dd MMM yyyy HH:mm:ss zzz"
+					     /*, Locale.US */);
+//   headerDf.setTimeZone(TimeZone.getTimeZone("GMT"));
+
+  static final String BACK_MAIL_TEXT =
+    "The attached file is a backup of configuration and state information\n" +
+    "from LOCKSS cache %s (%s).\n" +
+    "This file will be needed if the cache ever suffers a disk crash or\n" +
+    "other serious loss of content.\n";
+
+  static final String BACK_MAIL_MORE_INFO =
+    "\nFor more information see %s\n";
+
+
+  public void sendMailBackup() throws IOException {
+    sendMailBackup(null);
+  }
+
+  public void sendMailBackup(String to) throws IOException {
+    Configuration config = ConfigManager.getCurrentConfig();
+    if (!config.getBoolean(PARAM_BACKUP_EMAIL_ENABLED,
+			   DEFAULT_BACKUP_EMAIL_ENABLED)) {
+      return;
+    }
+    String machineName = ConfigManager.getPlatformHostname();
+    if (StringUtil.isNullString(machineName)) {
+      machineName = "Unknown";
+    }
+    String moreInfoUrl = config.get(PARAM_BACKUP_EMAIL_INFO_URL,
+				    DEFAULT_BACKUP_EMAIL_INFO_URL);
+    String from = config.get(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL);
+    if (StringUtil.isNullString(to)) {
+      to = getBackEmailRecipient(config);
+    }
+    MailService mailSvc = getDaemon().getMailService();
+    File bfile = null;
+    try {
+      bfile = createConfigBackupFile(machineName);
+      MimeMessage msg = new MimeMessage();
+      
+      PeerIdentity pid = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
+      String id = pid == null ? "unknown" : pid.getIdString();
+      String text = sprintf(BACK_MAIL_TEXT,
+			    new Object[] {machineName, id});
+      if (!StringUtil.isNullString(moreInfoUrl)) {
+	text += sprintf(BACK_MAIL_MORE_INFO,
+			new Object[] {moreInfoUrl});
+      }
+      msg.addTextPart(text);
+      msg.addTmpFile(bfile, "LOCKSS_Backup_" + machineName + ".zip");
+      msg.addHeader("From", getBackEmailFrom(config, machineName));
+      msg.addHeader("To", to);
+      msg.addHeader("Date", headerDf.format(TimeBase.nowDate()));
+      msg.addHeader("Subject",
+		    "Backup file for LOCKSS cache " + machineName);
+      //     msg.addHeader("X-Mailer", getXMailer());
+      mailSvc.sendMail(getBackEmailSender(config), to, msg);
+      log.info("sent");
+    } finally {
+      try {
+	if (false && bfile != null) bfile.delete();
+      } catch (Exception e) {}
+    }
+  }
+
+  private String getBackEmailSender(Configuration config) {
+    String defaultSender = config.get(PARAM_DEFAULT_BACKUP_EMAIL_SENDER);
+    String res = config.get(PARAM_BACKUP_EMAIL_SENDER, defaultSender);
+    return StringUtil.isNullString(res) ? "Unknown" : res;
+  }
+
+  private String getBackEmailRecipient(Configuration config) {
+    String defaultRecipient = config.get(PARAM_DEFAULT_BACKUP_EMAIL_RECIPIENT);
+    String res = config.get(PARAM_BACKUP_EMAIL_RECIPIENT, defaultRecipient);
+    return StringUtil.isNullString(res) ? "Unknown" : res;
+  }
+
+  private String getBackEmailFrom(Configuration config, String machineName) {
+    try {
+      String fmt = config.get(PARAM_BACKUP_EMAIL_FROM,
+			      DEFAULT_BACKUP_EMAIL_FROM);
+      String[] args = { machineName, getBackEmailSender(config) };
+      return sprintf(fmt, args);
+    } catch (Exception e) {
+      log.warning("getBackEmailFrom()", e);
+      return "LOCKSS cache";
+    }
+  }
+
+  String sprintf(String fmt, Object[] args) {
+    PrintfFormat pf = new PrintfFormat(fmt);
+    return pf.sprintf(args);
+  }
 }
