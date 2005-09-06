@@ -1,5 +1,5 @@
 /*
- * $Id: WatchdogService.java,v 1.12 2004-09-27 22:39:14 smorabito Exp $
+ * $Id: WatchdogService.java,v 1.13 2005-09-06 19:57:14 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -113,9 +113,6 @@ public class WatchdogService
 
   public synchronized void stopService() {
     disable();
-    if (req != null) {
-      TimerQueue.cancel(req);
-    }
     super.stopService();
   }
 
@@ -160,7 +157,11 @@ public class WatchdogService
     new TimerQueue.Callback() {
       public void timerExpired(Object cookie) {
 	woof();
-      }};
+      }
+      public String toString() {
+	return "Java watchdog keepalive";
+      }
+    };
 
   // Touch the watchdog file, schedule a timer event for the next one.  If
   // can't update time on file, try to delete it so platform will know
