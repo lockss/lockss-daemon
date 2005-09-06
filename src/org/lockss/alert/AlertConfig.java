@@ -1,10 +1,10 @@
 /*
- * $Id: AlertConfig.java,v 1.3 2004-12-08 00:45:16 troberts Exp $
+ * $Id: AlertConfig.java,v 1.4 2005-09-06 23:24:52 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,14 +30,14 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.alert;
 
 import java.util.*;
-import org.lockss.util.*;
+
+import org.lockss.util.LockssSerializable;
 
 /** AlertConfig stores the state of the alert notification config */
-public class AlertConfig {
+public class AlertConfig implements LockssSerializable {
   protected List filters;
 
   /**

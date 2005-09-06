@@ -1,10 +1,10 @@
 /*
- * $Id: NodeStateBean.java,v 1.6 2004-04-01 02:44:32 eaalto Exp $
+ * $Id: NodeStateBean.java,v 1.7 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,15 +30,16 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-
 package org.lockss.state;
 
 import java.util.*;
 
+import org.lockss.util.LockssSerializable;
+
 /**
  * NodeStateBean is a settable version of the NodeState, to allow marshalling.
  */
-public class NodeStateBean {
+public class NodeStateBean implements LockssSerializable {
   CrawlStateBean crawlBean;
   List pollBeans = new ArrayList();
   int curState;

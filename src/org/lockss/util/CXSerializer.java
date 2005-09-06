@@ -1,10 +1,10 @@
 /*
- * $Id: CXSerializer.java,v 1.5 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.6 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2002-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -52,7 +52,12 @@ import org.lockss.config.Configuration;
  * possible to re-use the same instance for multiple marshalling
  * or for multiple unmarshalling operations based on the same
  * mapping.</p>
+ * <p>In some modes of operation, this class may not be able to enforce
+ * that object graphs are serializable when carrying out serialization
+ * tasks.</p>
  * @author Thib Guicherd-Callin
+ * @see CastorSerializer
+ * @see XStreamSerializer
  */
 public class CXSerializer extends ObjectSerializer {
 
@@ -179,11 +184,13 @@ public class CXSerializer extends ObjectSerializer {
     }
   }
   
+  /* Inherit documentation */
   public Object deserialize(Reader reader)
       throws IOException, SerializationException {
     return deserialize(reader, new MutableBoolean(false));
   }
   
+  /* Inherit documentation */
   public Object deserialize(Reader reader, MutableBoolean wasCastor)
       throws IOException, SerializationException {
     // Constants
@@ -221,16 +228,16 @@ public class CXSerializer extends ObjectSerializer {
   }
 
   /**
-   * <p>Returns the default mode for this class.</p>
-   * @return The default mode constant (currently
-   *         {@link #XSTREAM_MODE}).
+   * <p>Returns the mode for this class from the configuration.</p>
+   * @return The mode constant currently in the configuration.
+   * @see #PARAM_COMPATIBILITY_MODE
    */
   public static int getModeFromConfiguration() {
     return Configuration.getIntParam(PARAM_COMPATIBILITY_MODE,
                                      DEFAULT_COMPATIBILITY_MODE);
   }
   
-  public void serialize(Writer writer, Object obj)
+  protected void serialize(Writer writer, Object obj)
       throws IOException, SerializationException {
     throwIfNull(obj);
     ObjectSerializer serializer;
@@ -252,15 +259,18 @@ public class CXSerializer extends ObjectSerializer {
   public void setCurrentMode(int mode) {
     switch (mode) {
       case CASTOR_MODE: case XSTREAM_MODE: case XSTREAM_OVERWRITE_MODE:
-        this.currentMode = mode; break;
-      default: break; // ignore // TODO: log message
+        this.currentMode = mode;
+        break;
+      default:
+        logger.error("Attempt to set CXSerializer mode to " + mode);
+        break; // ignore
     }
   }
   
   /**
    * <p>Serialization always in Castor format.</p>
    */
-  public static final int CASTOR_MODE            = 1;
+  public static final int CASTOR_MODE = 1;
   
   /**
    * <p>A configuration parameter that governs the mode of operation
@@ -295,12 +305,12 @@ public class CXSerializer extends ObjectSerializer {
    * </p>
    */
   public static final String PARAM_COMPATIBILITY_MODE =
-    Configuration.PREFIX + "serialization." + "compatibilityMode";
+    "org.lockss.serialization.compatibilityMode";
 
   /**
    * <p>Serialization always in XStream format.</p>
    */
-  public static final int XSTREAM_MODE           = 2;
+  public static final int XSTREAM_MODE = 2;
   
   /**
    * <p>Serialization always in XStream format; additionally, any
@@ -316,8 +326,8 @@ public class CXSerializer extends ObjectSerializer {
 
   /**
    * <p>The default value of {@link #PARAM_COMPATIBILITY_MODE}
-   * (currently {@link #XSTREAM_MODE})</p>
+   * (currently {@link #CASTOR_MODE})</p>
    */
-  static final int DEFAULT_COMPATIBILITY_MODE = XSTREAM_MODE;
+  static final int DEFAULT_COMPATIBILITY_MODE = CASTOR_MODE;
 
 }

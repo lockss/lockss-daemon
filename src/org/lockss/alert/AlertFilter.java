@@ -1,5 +1,5 @@
 /*
- * $Id: AlertFilter.java,v 1.1 2004-07-12 06:09:41 tlipkis Exp $
+ * $Id: AlertFilter.java,v 1.2 2005-09-06 23:24:52 thib_gc Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.plugin.*;
 
 /** AlertFilter specifies a pattern and an action to be taken for all
  * alerts that match the pattern */
-public class AlertFilter {
+public class AlertFilter implements LockssSerializable {
   private AlertPattern pattern;
   private AlertAction action;
 

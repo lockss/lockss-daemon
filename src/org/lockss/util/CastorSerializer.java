@@ -1,10 +1,10 @@
 /*
- * $Id: CastorSerializer.java,v 1.4 2005-08-05 02:23:00 thib_gc Exp $
+ * $Id: CastorSerializer.java,v 1.5 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2002-2005 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -66,6 +66,8 @@ import org.lockss.app.LockssAppException;
  * possible to re-use the same instance for multiple marshalling
  * or for multiple unmarshalling operations based on the same
  * mapping.</p>
+ * <p>This class is not able to enforce that an object graph is
+ * serializable while carrying out a serialization task.</p>
  * @author Thib Guicherd-Callin
  * @see XStreamSerializer
  */
@@ -83,14 +85,14 @@ public class CastorSerializer extends ObjectSerializer {
    * XStream.
    * 
    * Marshalling with Castor requires mapping files, but I do not
-   * know how the ones that are (were) already in the codebase
-   * were originally produced.
+   * know how the ones that were already in the codebase were
+   * originally produced.
    * 
    * If you are trying to figure out from digging back in CVS
    * history how XmlMarshaller worked, the summary is:
-   *  * The basic functionality comes from storeToWriter and
+   *  * The basic functionality came from storeToWriter and
    *    loadFromReader.
-   *  * All store() methods end up calling
+   *  * All store() methods ended up calling
    *    store(File, Object, Mapping) and all load() methods end up
    *    calling load(File, Class, Mapping).
    */
@@ -173,6 +175,7 @@ public class CastorSerializer extends ObjectSerializer {
     this(null, mappingFilename, targetClass);
   }
   
+  /* Inherit documentation */
   public Object deserialize(Reader reader)
       throws IOException, SerializationException {
     Unmarshaller unmarshaller = new Unmarshaller(targetClass);
@@ -180,14 +183,14 @@ public class CastorSerializer extends ObjectSerializer {
       unmarshaller.setMapping(targetMapping);
       return unmarshaller.unmarshal(reader);
     }
-    catch (MappingException mappingE) {
-      throw failDeserialize(mappingE);
+    catch (MappingException mappingEx) {
+      throw failDeserialize(mappingEx);
     }
-    catch (MarshalException marshalE) {
-      throw failDeserialize(marshalE);
+    catch (MarshalException marshalEx) {
+      throw failDeserialize(marshalEx);
     }
-    catch (ValidationException validationE) {
-      throw failDeserialize(validationE);
+    catch (ValidationException ve) {
+      throw failDeserialize(ve);
     }
   }
 
@@ -207,7 +210,8 @@ public class CastorSerializer extends ObjectSerializer {
     return targetMapping;
   }
 
-  public void serialize(Writer writer, Object obj)
+  /* Inherit documentation */
+  protected void serialize(Writer writer, Object obj)
       throws IOException, SerializationException {
     throwIfNull(obj);
     Marshaller marshaller = new Marshaller(writer);
@@ -230,7 +234,7 @@ public class CastorSerializer extends ObjectSerializer {
    * <p>A cache for previously requested mappings.</p>
    */
   private static HashMap mappingCache = new HashMap();
-  // JAVA5: HashMap<Set<String>,Mapping>
+  // JAVA5: HashMap<Set<String>,Mapping> or similar
   
   /**
    * <p>Convenience method to obtain a Mapping instance corresponding
@@ -281,7 +285,7 @@ public class CastorSerializer extends ObjectSerializer {
    *                  stored.
    * @return A new Mapping instance.
    */
-  private static Mapping getMapping(Set filenames) {
+  private static synchronized Mapping getMapping(Set filenames) {
     // JAVA5: Set<String>
     
     Mapping mapping = (Mapping)mappingCache.get(filenames);

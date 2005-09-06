@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.1 2005-08-31 23:17:40 troberts Exp $
+ * $Id: IdentityManagerImpl.java,v 1.2 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -239,7 +239,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>Sets up the local identities.</p>
    * <p>This is protected only so it can be overridden in a mock 
-   * subcless in another package (TestRemoteApi), which won't be 
+   * subclass in another package (TestRemoteApi), which won't be 
    * necessary when there's an interface for the mock class to 
    * implement instead.</p>
    */
@@ -704,6 +704,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       try {
         File dir = iddbFile.getParentFile();
         if (dir != null && !dir.exists()) { dir.mkdirs(); }
+        // CASTOR: Remove call to wrap()
         serializer.serialize(iddbFile, wrap(theIdentities));
       }
       catch (Exception e) {
@@ -784,13 +785,13 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * @param theIdentities The {@link #theIdentities} map.
    * @return An object suitable for serialization. 
    */
-  private Object wrap(Map theIdentities) {
+  private Serializable wrap(Map theIdentities) {
     // CASTOR: This method disappears with Castor
     if (getSerializationMode() == CXSerializer.CASTOR_MODE) {
-      return getIdentityListBean();
+      return (Serializable)getIdentityListBean();
     }
     else {
-      return theIdentities;
+      return (Serializable)theIdentities;
     }
   }
   

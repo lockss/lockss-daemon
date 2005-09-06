@@ -1,5 +1,5 @@
 /*
- * $Id: AuState.java,v 1.18 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: AuState.java,v 1.19 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -35,12 +35,13 @@ package org.lockss.state;
 
 import java.util.*;
 import org.lockss.plugin.ArchivalUnit;
+import org.lockss.util.LockssSerializable;
 import org.lockss.util.TimeBase;
 
 /**
  * AuState contains the state information for an au.
  */
-public class AuState {
+public class AuState implements LockssSerializable {
   protected transient ArchivalUnit au;
   protected long lastCrawlTime;
   protected long lastTopLevelPoll;

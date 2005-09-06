@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.65 2005-08-31 23:17:39 troberts Exp $
+ * $Id: IdentityManager.java,v 1.66 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -369,7 +369,7 @@ public interface IdentityManager extends LockssManager {
   public void readIdentityAgreementFrom(ArchivalUnit au, InputStream in)
       throws IOException;
 
-  public static class IdentityAgreement {
+  public static class IdentityAgreement implements LockssSerializable {
     private long lastAgree = 0;
     private long lastDisagree = 0;
     private String id = null;

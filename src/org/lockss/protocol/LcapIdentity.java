@@ -1,10 +1,10 @@
 /*
- * $Id: LcapIdentity.java,v 1.29 2005-08-31 23:18:51 troberts Exp $
+ * $Id: LcapIdentity.java,v 1.30 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,22 +29,19 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.protocol;
 
-import java.io.*;
-import java.net.*;
 import java.util.HashMap;
-import java.util.Random;
 import org.mortbay.util.B64Code;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
 
 /**
  * quick and dirty wrapper class for a network identity.
  * @author Claire Griffin
  * @version 1.0
  */
-public class LcapIdentity {
+public class LcapIdentity implements LockssSerializable {
 
   public static final int EVENT_ORIG = 0;
   public static final int EVENT_ORIG_OP = 1;

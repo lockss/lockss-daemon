@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.2 2005-08-11 17:04:37 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.3 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.io.StringWriter;
 
 import org.lockss.util.ObjectSerializer.SerializationException;
 
-public class TestCXSerializer extends ObjectSerializerTest {
+public class TestCXSerializer extends ObjectSerializerTester {
 
   /**
    * <p>Tests whether a CXSerializer in Castor mode successfully

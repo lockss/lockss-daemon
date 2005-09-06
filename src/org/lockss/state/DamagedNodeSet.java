@@ -1,10 +1,10 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.21 2005-08-11 17:26:57 troberts Exp $
+ * $Id: DamagedNodeSet.java,v 1.22 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,13 +36,14 @@ package org.lockss.state;
 import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.util.ExtMapBean;
+import org.lockss.util.LockssSerializable;
 
 /**
  * DamagedNodeMap is a write-through persistent wrapper for a hashmap and a set.
  * It stores a Set of nodes with damage and a map of CachedUrlSets which need
  * repair.
  */
-public class DamagedNodeSet {
+public class DamagedNodeSet implements LockssSerializable {
   HashSet nodesWithDamage = new HashSet();
   // the form of this map is key: url String, value: ArrayList url Strings
   // while it is logical to use a Set instead of an ArrayList, it is not

@@ -1,10 +1,10 @@
 /*
- * $Id: PollHistoryBean.java,v 1.11 2004-09-13 04:02:23 dshr Exp $
+ * $Id: PollHistoryBean.java,v 1.12 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,8 +34,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.state;
 
 import java.util.*;
-import java.net.*;
 import org.lockss.poller.Vote;
+import org.lockss.util.LockssSerializable;
 import org.lockss.util.Logger;
 
 /**
@@ -43,7 +43,9 @@ import org.lockss.util.Logger;
  * marshalling purposes.  It also handles conversion of Votes to and from
  * VoteBeans.
  */
-public class PollHistoryBean extends PollHistory {
+public class PollHistoryBean
+    extends PollHistory
+    implements LockssSerializable {
   public Collection voteBeans;
   static Logger log=Logger.getLogger("PollHistoryBean");
 

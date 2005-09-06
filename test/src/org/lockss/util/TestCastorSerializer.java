@@ -1,5 +1,5 @@
 /*
- * $Id: TestCastorSerializer.java,v 1.1 2005-07-26 20:50:37 thib_gc Exp $
+ * $Id: TestCastorSerializer.java,v 1.2 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-public class TestCastorSerializer extends ObjectSerializerTest {
+public class TestCastorSerializer extends ObjectSerializerTester {
 
   protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
     return new CastorSerializer(

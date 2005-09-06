@@ -1,10 +1,10 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.6 2005-08-12 18:26:37 thib_gc Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.7 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -198,7 +198,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     assertEquals(cnt+2, l1.size());
   }
 
-  class MyMockAlertPattern implements AlertPattern {
+  class MyMockAlertPattern implements AlertPattern, LockssSerializable {
     boolean match;			// determines result
     Alert alert;		   // records the alert we were called with
     MyMockAlertPattern(boolean match) {
@@ -212,7 +212,8 @@ public class TestAlertManagerImpl extends LockssTestCase {
       return alert;
     }
   }
-  class MyMockAlertAction implements AlertAction {
+  class MyMockAlertAction
+      implements AlertAction, LockssSerializable {
     boolean isGroupable;
     List list = new ArrayList();
     long maxPend = Constants.WEEK;

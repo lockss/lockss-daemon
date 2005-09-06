@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityListBean.java,v 1.4 2003-06-20 22:34:51 claire Exp $
+ * $Id: IdentityListBean.java,v 1.5 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -31,9 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.protocol;
 
+import java.io.Serializable;
 import java.util.Collection;
 
-public class IdentityListBean {
+public class IdentityListBean implements Serializable {
   Collection idBeans;
 
   public IdentityListBean() {

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.11 2005-08-12 18:26:37 thib_gc Exp $
+ * $Id: AlertManagerImpl.java,v 1.12 2005-09-06 23:24:52 thib_gc Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -132,7 +132,8 @@ public class AlertManagerImpl
     storeAlertConfig(file, config);
   }
 
-  void storeAlertConfig(File file, AlertConfig alertConfig) throws Exception {
+  void storeAlertConfig(File file, AlertConfig alertConfig)
+      throws Exception {
     try {
       //       store(file, new AlertConfigBean(alertConfig));
       store(file, alertConfig);
@@ -167,7 +168,7 @@ public class AlertManagerImpl
    * @param obj  An object to serialize.
    * @throws Exception if an error condition arises.
    */
-  void store(File file, Object obj) throws Exception {
+  void store(File file, LockssSerializable obj) throws Exception {
     ObjectSerializer serializer = makeObjectSerializer();
     serializer.serialize(file, obj);
   }

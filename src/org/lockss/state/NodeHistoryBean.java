@@ -1,10 +1,10 @@
 /*
- * $Id: NodeHistoryBean.java,v 1.4 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: NodeHistoryBean.java,v 1.5 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,10 +34,12 @@ package org.lockss.state;
 
 import java.util.*;
 
+import org.lockss.util.LockssSerializable;
+
 /**
  * NodeHistoryBean allows the marshalling of a group of PollHistoryBeans.
  */
-public class NodeHistoryBean {
+public class NodeHistoryBean implements LockssSerializable {
   public List historyBeans;
 
   /**

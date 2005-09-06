@@ -1,10 +1,10 @@
 /*
- * $Id: PeerIdentity.java,v 1.5 2005-05-20 07:28:24 tlipkis Exp $
+ * $Id: PeerIdentity.java,v 1.6 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,9 +29,9 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
+
 package org.lockss.protocol;
 
-import java.util.*;
 import org.lockss.util.*;
 
 /**
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * @author David Rosenthal
  * @version 1.0
  */
-public class PeerIdentity {
+public class PeerIdentity implements LockssSerializable {
   static Logger theLog=Logger.getLogger("PeerIdentity");
   private String key;
   private transient PeerAddress pAddr;

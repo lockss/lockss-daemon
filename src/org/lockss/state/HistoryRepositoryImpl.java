@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.61 2005-08-11 17:04:37 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.62 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.state;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -514,9 +512,9 @@ public class HistoryRepositoryImpl
       // CASTOR: NO CHANGE when Castor is phased out
       serializer.serialize(file, nodeSet);
     } 
-    catch (Exception e) {
-      logger.error("Could not store damaged nodes.", e);
-      throw new RepositoryStateException("Could not store damaged nodes.");
+    catch (Exception exc) {
+      logger.error("Could not store damaged nodes", exc);
+      throw new RepositoryStateException("Could not store damaged nodes");
     }
   }
 
@@ -549,9 +547,9 @@ public class HistoryRepositoryImpl
       // CASTOR: remove wrap() when Castor is phased out
       serializer.serialize(file, wrap(idList));
     }
-    catch (Exception e) {
-      logger.error("Could not identity agreements.", e);
-      throw new RepositoryStateException("Could not store identity agreements.");
+    catch (Exception exc) {
+      logger.error("Could not store identity agreements", exc);
+      throw new RepositoryStateException("Could not store identity agreements");
     }    
   }
   
@@ -584,7 +582,7 @@ public class HistoryRepositoryImpl
       File file = prepareFile(getNodeLocation(cus), NODE_FILE_NAME);
 
       // CASTOR: remove wrap() when Castor is phased out
-      serializer.serialize(file, wrap(nodeState, false));
+      serializer.serialize(file, wrap(nodeState));
     }
     catch (Exception e) {
       logger.error("Could not store node state", e);
@@ -619,10 +617,20 @@ public class HistoryRepositoryImpl
     try {
       // Can throw MalformedURLException
       File file = prepareFile(getNodeLocation(cus), HISTORY_FILE_NAME);
-      
-      // CASTOR: remove wrap() when Castor is phased out
-      // CASTOR: then, replace nodeState by ((NodeStateImpl)nodeState).getPollHistoryList()
-      serializer.serialize(file, wrap(nodeState, true));
+
+      // CASTOR: only the else part stays
+      if (isCastorMode()) {
+        NodeHistoryBean nhb = new NodeHistoryBean();
+        List histories = ((NodeStateImpl)nodeState).getPollHistoryList();
+        nhb.historyBeans = NodeHistoryBean.fromListToBeanList(histories);
+        serializer.serialize(file, nhb); // nhb is LockssSerializable
+      }
+      else {
+        serializer.serialize(
+            file,
+            (Serializable)((NodeStateImpl)nodeState).getPollHistoryList()
+        );
+      }
     }
     catch (Exception e) {
       logger.error("Could not store poll history", e);
@@ -933,7 +941,7 @@ public class HistoryRepositoryImpl
    * @param auState An AuState instance.
    * @return An object suitable for serialization.
    */
-  private static Object wrap(AuState auState) {
+  private static LockssSerializable wrap(AuState auState) {
     // CASTOR: Phase out with Castor
     if (isCastorMode()) { return new AuStateBean(auState); }
     else                { return auState; }
@@ -944,45 +952,24 @@ public class HistoryRepositoryImpl
    * @param idList An identity agreement list.
    * @return An object suitable for serialization.
    */
-  private static Object wrap(List idList) {
+  private static Serializable wrap(List idList) {
     // CASTOR: Phase out with Castor
     if (isCastorMode()) { return new IdentityAgreementList(idList); }
-    else                { return idList; }  
+    else                { return (Serializable)idList; }  
   }
   
   /**
-   * <p>Might wrap a NodeState into either a NodeHistoryBean or a
-   * NodeStateBean.</p>
+   * <p>Might wrap a NodeState into either a NodeHistoryBean.</p>
    * @param nodeState A NodeState instance.
-   * @param history If true, the method acts on behalf of
-   *                {@link #storePollHistories}; otherwise it acts on
-   *                behalf of {@link #storeNodeState}.
    * @return An object suitable for serialization.
    */
-  private static Object wrap(NodeState nodeState, boolean history) {
+  private static LockssSerializable wrap(NodeState nodeState) {
     // CASTOR: Phase out with Castor
     if (isCastorMode()) {
-      if (history) {
-        // for storePollHistories
-        NodeHistoryBean nhb = new NodeHistoryBean();
-        List histories = ((NodeStateImpl)nodeState).getPollHistoryList();
-        nhb.historyBeans = NodeHistoryBean.fromListToBeanList(histories); 
-        return nhb;
-      }
-      else {
-        // for storeNodeState
-        return new NodeStateBean(nodeState);
-      }
+      return new NodeStateBean(nodeState);
     }
     else {
-      if (history) {
-        // for storePollHistories
-        return ((NodeStateImpl)nodeState).getPollHistoryList();
-      }
-      else {
-        // for storeNodeState
-        return nodeState;
-      }
+      return (NodeStateImpl)nodeState;
     }
   }
   

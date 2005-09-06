@@ -1,10 +1,10 @@
 /*
- * $Id: AlertPatterns.java,v 1.2 2004-07-12 21:09:44 clairegriffin Exp $
+ * $Id: AlertPatterns.java,v 1.3 2005-09-06 23:24:53 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -115,19 +115,19 @@ public class AlertPatterns {
     return new Predicate(attribute, Predicate.LE, value);
   }
 
-  public static class True implements AlertPattern {
+  public static class True implements AlertPattern, LockssSerializable {
     public boolean isMatch(Alert alert) {
       return true;
     }
   }
 
-  public static class False implements AlertPattern {
+  public static class False implements AlertPattern, LockssSerializable {
     public boolean isMatch(Alert alert) {
       return false;
     }
   }
 
-  public static class And implements AlertPattern {
+  public static class And implements AlertPattern, LockssSerializable {
     private List patterns;
 
     public And(List patterns) {
@@ -156,7 +156,7 @@ public class AlertPatterns {
       return "[AlertPatterns.And: " + patterns + "]";
     }
   }
-  public static class Or implements AlertPattern {
+  public static class Or implements AlertPattern, LockssSerializable {
     private List patterns;
 
     public Or(List patterns) {
@@ -186,7 +186,7 @@ public class AlertPatterns {
     }
   }
 
-  public static class Not implements AlertPattern {
+  public static class Not implements AlertPattern, LockssSerializable {
     AlertPattern pattern;
 
     public Not(AlertPattern pattern) {
@@ -210,7 +210,7 @@ public class AlertPatterns {
     }
   }
 
-  public static class Predicate implements AlertPattern {
+  public static class Predicate implements AlertPattern, LockssSerializable {
     public static final int EQ = 1;
     public static final int NE = 2;
     public static final int GT = 3;
