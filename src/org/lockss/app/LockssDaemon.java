@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.76 2005-09-01 01:45:58 thib_gc Exp $
+ * $Id: LockssDaemon.java,v 1.77 2005-09-06 19:55:46 tlipkis Exp $
  */
 
 /*
@@ -121,6 +121,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public static final String REPOSITORY_STATUS = "RepositoryStatus";
   public static final String ARCHIVAL_UNIT_STATUS = "ArchivalUnitStatus";
   public static final String ICP_MANAGER = "IcpManager";
+  public static final String CRON = "Cron";
 
   // Manager descriptors.  The order of this table determines the order in
   // which managers are initialized and started.
@@ -149,7 +150,8 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
     new ManagerDesc(AUDIT_PROXY_MANAGER, "org.lockss.proxy.AuditProxyManager"),
     new ManagerDesc(FAIL_OVER_PROXY_MANAGER ,
 		    "org.lockss.proxy.FailOverProxyManager"),
-    // comm layer at end so don't process messages until other services ready
+    // comm after other major services so don't process messages until
+    // they're ready
     new ManagerDesc(DATAGRAM_COMM_MANAGER,
 		    "org.lockss.protocol.LcapDatagramComm"),
     new ManagerDesc(STREAM_COMM_MANAGER,
@@ -158,14 +160,16 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
 		    "org.lockss.protocol.LcapDatagramRouter"),
     new ManagerDesc(ROUTER_MANAGER,
 		    "org.lockss.protocol.LcapRouter"),
-    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
     new ManagerDesc(NODE_MANAGER_MANAGER, "org.lockss.state.NodeManagerManager"),
+    new ManagerDesc(ICP_MANAGER,
+		    "org.lockss.proxy.icp.IcpManager"),
     new ManagerDesc(ARCHIVAL_UNIT_STATUS,
 		    "org.lockss.state.ArchivalUnitStatus"),
     new ManagerDesc(REPOSITORY_STATUS,
 		    "org.lockss.repository.LockssRepositoryStatus"),
-    new ManagerDesc(ICP_MANAGER,
-        "org.lockss.proxy.icp.IcpManager"),
+    new ManagerDesc(CRON, "org.lockss.daemon.Cron"),
+    // watchdog last
+    new ManagerDesc(WATCHDOG_SERVICE, DEFAULT_WATCHDOG_SERVICE),
   };
 
   // AU-specific manager descriptors.  As each AU is created its managers
