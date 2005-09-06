@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.29 2005-08-02 22:54:21 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.30 2005-09-06 22:59:50 troberts Exp $
  */
 
 /*
@@ -326,6 +326,12 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
 	  cacheWithRetries(uc, maxRetries);
 	}
+      } catch (CacheException.RepositoryException ex) {
+	// Failed.  Don't try this one again during this crawl.
+	failedUrls.add(uc.getUrl());
+	logger.error("Repository error with "+uc, ex);
+	crawlStatus.signalErrorForUrl(uc.getUrl(), "Repository error");
+ 	error = Crawler.STATUS_REPO_ERR;
       } catch (CacheException ex) {
 	// Failed.  Don't try this one again during this crawl.
 	failedUrls.add(uc.getUrl());
@@ -496,27 +502,27 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
     }
     boolean printFailedWarning = true;
     switch (urlPermissionStatus) {
-        case PermissionMap.PERMISSION_MISSING:
+        case PermissionRecord.PERMISSION_MISSING:
 	  logger.warning("No permission page record on host: "+ url);
 	  crawlStatus.setCrawlError("No crawl permission page for host of " +
 				    url );
 	  // abort crawl here
 	  return false;
-        case PermissionMap.PERMISSION_OK:
+        case PermissionRecord.PERMISSION_OK:
 	  return true;
-	case PermissionMap.PERMISSION_NOT_OK:
+	case PermissionRecord.PERMISSION_NOT_OK:
 	  logger.error("No permission statement is found at: " +
 		       urlPermissionUrl);
 	  crawlStatus.setCrawlError("No permission statement at: " + urlPermissionUrl);
 	  //abort crawl or skip all the url with this host ?
 	  //currently we just ignore urls with this host.
 	  return false;
-	case PermissionMap.PERMISSION_UNCHECKED:
+	case PermissionRecord.PERMISSION_UNCHECKED:
 	  //should not be in this state as each permissionPage should be checked in the first iteration
 	  logger.warning("permission unchecked on host : "+ urlPermissionUrl);
 	  printFailedWarning = false;
           // fall through, re-fetch permission like FETCH_PERMISSION_FAILED
-	case PermissionMap.FETCH_PERMISSION_FAILED:
+	case PermissionRecord.FETCH_PERMISSION_FAILED:
 	  if (printFailedWarning) {
 	    logger.warning("Failed to fetch permission page on host :" +
 			   urlPermissionUrl);
@@ -544,6 +550,12 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
   					  "on the second attempt");
 	    return false;
 	  }
+	case PermissionRecord.REPOSITORY_ERROR:
+	  logger.error("Repository error trying to store : "
+		       + urlPermissionUrl);
+	  crawlStatus.setCrawlError("Repository error");
+	  crawlStatus.signalErrorForUrl(urlPermissionUrl, "Repository error");
+	  return false;
 	default :
 	  logger.error("Unknown Permission Status! Something is going wrong!");
 	  return false;
