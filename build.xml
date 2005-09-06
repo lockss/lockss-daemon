@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.152 2005-08-26 02:33:58 tlipkis Exp $
+ $Id: build.xml,v 1.153 2005-09-06 19:54:58 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -158,6 +158,9 @@ Args:
   <property name="protorpm.rpms" value="${protorpm.top}/RPMS" />
 
   <!-- Library jars -->
+
+  <property name="mailapi.jar"    value="${lib}/javamail-mailapi-1.3.2.jar"/>
+  <property name="activation.jar" value="${lib}/activation-1.0.2.jar"/>
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
   <property name="xerces.jar"     value="${lib}/xercesImpl.jar"/>
   <property name="xmlparser.jar"  value="${lib}/xmlParserAPIs.jar"/>
@@ -254,6 +257,8 @@ Args:
     <pathelement path="${concurrent.jar}" />
     <pathelement path="${jetty.jar}" />
     <pathelement path="${servlet.jar}" />
+    <pathelement path="${mailapi.jar}" />
+    <pathelement path="${activation.jar}" />
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xmlparser.jar}" />
