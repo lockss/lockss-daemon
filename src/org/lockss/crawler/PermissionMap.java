@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.3 2004-09-27 23:33:57 dcfok Exp $
+ * $Id: PermissionMap.java,v 1.4 2005-09-06 22:59:15 troberts Exp $
  */
 
 /*
@@ -40,13 +40,7 @@ import java.net.MalformedURLException;
  * @author Chun D. Fok
  * @version 0.0
  */
-public class PermissionMap{
-  public static final int PERMISSION_MISSING = PermissionRecord.PERMISSION_MISSING;
-  public static final int PERMISSION_UNCHECKED = PermissionRecord.PERMISSION_UNCHECKED;
-  public static final int PERMISSION_OK = PermissionRecord.PERMISSION_OK;
-  public static final int PERMISSION_NOT_OK = PermissionRecord.PERMISSION_NOT_OK;
-  public static final int FETCH_PERMISSION_FAILED = PermissionRecord.FETCH_PERMISSION_FAILED;
-
+public class PermissionMap {
   private HashMap hMap;
 
   public PermissionMap(){
@@ -97,7 +91,7 @@ public class PermissionMap{
   public int getStatus(String url) throws MalformedURLException{
     PermissionRecord pr = get(url);
     if (pr == null) {
-      return PERMISSION_MISSING;
+      return PermissionRecord.PERMISSION_MISSING;
     }
     return pr.getPermissionStatus();
   }

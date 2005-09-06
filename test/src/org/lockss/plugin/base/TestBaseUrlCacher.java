@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.41 2005-08-30 23:42:49 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.42 2005-09-06 22:59:15 troberts Exp $
  */
 
 /*
@@ -532,8 +532,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc =
         new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     PermissionMap map = new PermissionMap();
-    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo, PermissionMap.PERMISSION_OK);
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
@@ -575,9 +575,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc =
         new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     PermissionMap map = new PermissionMap();
-    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo, PermissionMap.PERMISSION_OK);
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
@@ -696,8 +696,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc =
         new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     PermissionMap map = new PermissionMap();
-    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo, PermissionMap.PERMISSION_OK);
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
@@ -729,8 +729,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc =
         new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     PermissionMap map = new PermissionMap();
-    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));
@@ -771,8 +771,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc =
         new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
     PermissionMap map = new PermissionMap();
-    map.putStatus(TEST_URL, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(302, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(303, "Moved to Spain", redTo2));
@@ -835,8 +835,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo2 = "http://somewhere.else/foo/";
     MockConnectionMockBaseUrlCacher muc =
       new MockConnectionMockBaseUrlCacher(mau, url);
-    map.putStatus(url, PermissionMap.PERMISSION_OK);
-    map.putStatus(redTo1, PermissionMap.PERMISSION_OK);
+    map.putStatus(url, PermissionRecord.PERMISSION_OK);
+    map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo1));
     muc.addConnection(makeConn(301, "Moved to Spain", redTo2));

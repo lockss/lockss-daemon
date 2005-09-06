@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.1 2004-07-28 22:49:27 dcfok Exp $
+ * $Id: TestPermissionMap.java,v 1.2 2005-09-06 22:59:15 troberts Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ public class TestPermissionMap extends LockssTestCase {
   public void setUp() throws Exception {
     super.setUp();
     pMap = new PermissionMap();
-    pMap.putStatus(permissionUrl1, PermissionMap.PERMISSION_OK);
+    pMap.putStatus(permissionUrl1, PermissionRecord.PERMISSION_OK);
   }
   
   public void testGetPermissionUrl() throws Exception {
@@ -49,23 +49,23 @@ public class TestPermissionMap extends LockssTestCase {
   }
 
   public void testGetStatus()throws Exception {
-    assertEquals(PermissionMap.PERMISSION_OK, pMap.getStatus(url1));
+    assertEquals(PermissionRecord.PERMISSION_OK, pMap.getStatus(url1));
   }
 
   public void testPutMoreStatus()throws Exception {
     String permissionUrl2 = "http://www.foo.com/index.html";
     String url2 = "http://www.foo.com/link2.html";
 
-    pMap.putStatus(permissionUrl2, PermissionMap.PERMISSION_NOT_OK);
+    pMap.putStatus(permissionUrl2, PermissionRecord.PERMISSION_NOT_OK);
     assertEquals(permissionUrl2, pMap.getPermissionUrl(url2));
-    assertEquals(PermissionMap.PERMISSION_NOT_OK, pMap.getStatus(url2));
+    assertEquals(PermissionRecord.PERMISSION_NOT_OK, pMap.getStatus(url2));
     
     assertEquals(permissionUrl1, pMap.getPermissionUrl(url1));
-    assertEquals(PermissionMap.PERMISSION_OK, pMap.getStatus(url1));
+    assertEquals(PermissionRecord.PERMISSION_OK, pMap.getStatus(url1));
   }
 
   public void testPutStatusOverwrite() throws Exception {
-    pMap.putStatus(permissionUrl1, PermissionMap.FETCH_PERMISSION_FAILED);
-    assertEquals(PermissionMap.FETCH_PERMISSION_FAILED, pMap.getStatus(url1));
+    pMap.putStatus(permissionUrl1, PermissionRecord.FETCH_PERMISSION_FAILED);
+    assertEquals(PermissionRecord.FETCH_PERMISSION_FAILED, pMap.getStatus(url1));
   }
 }

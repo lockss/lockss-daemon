@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.46 2005-07-12 00:11:06 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.47 2005-09-06 22:59:15 troberts Exp $
  */
 
 /*
@@ -233,7 +233,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
 
   int crawlPermission(String permissionPage) {
 
-    int crawl_ok = PermissionMap.PERMISSION_UNCHECKED;
+    int crawl_ok = PermissionRecord.PERMISSION_UNCHECKED;
     String err = Crawler.STATUS_PUB_PERMISSION;
     logger.debug("Checking for permissions on " + permissionPage);
     try {
@@ -253,16 +253,14 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
       else {
 	// go off to fetch the url and check for the permission statement
         if(checkPermission(permissionPage)) {
-          crawl_ok = PermissionMap.PERMISSION_OK;
+          crawl_ok = PermissionRecord.PERMISSION_OK;
            if (crawlStatus.getCrawlError() == err) {
              crawlStatus.setCrawlError(null);
            }
-        }
-        else {
+        } else {
           logger.error("No crawl permission on " + permissionPage);
-          crawl_ok = PermissionMap.PERMISSION_NOT_OK;
-          alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION,
-                                            au).
+          crawl_ok = PermissionRecord.PERMISSION_NOT_OK;
+          alertMgr.raiseAlert(Alert.auAlert(Alert.NO_CRAWL_PERMISSION, au).
                               setAttribute(Alert.ATTR_TEXT,
                                            "The page at " + permissionPage +
                                            "\ndoes not contain the " +
@@ -274,7 +272,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     } catch (CacheException.RepositoryException ex) {
       logger.error("RepositoryException storing permission page", ex);
       // XXX should be an alert here
-      crawl_ok = PermissionMap.FETCH_PERMISSION_FAILED;
+      crawl_ok = PermissionRecord.REPOSITORY_ERROR;
       err = Crawler.STATUS_REPO_ERR;
     } catch (Exception ex) {
       logger.error("Exception reading permission page", ex);
@@ -285,10 +283,10 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
                                        "\ncould not be fetched. " +
                                        "The error was:\n" +
                                        ex.getMessage() + "\n"));
-      crawl_ok = PermissionMap.FETCH_PERMISSION_FAILED;
+      crawl_ok = PermissionRecord.FETCH_PERMISSION_FAILED;
     }
 
-    if (crawl_ok != PermissionMap.PERMISSION_OK) {
+    if (crawl_ok != PermissionRecord.PERMISSION_OK) {
       crawlStatus.setCrawlError(err);
     }
     return crawl_ok;
@@ -405,17 +403,17 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
       // it is the real thing that do the checking of permission, crawlPermission dwell in CrawlerImpl.java
       int permissionStatus = crawlPermission(permissionPage);
       // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
-       if (permissionStatus != PermissionMap.PERMISSION_OK &&
-	  abortWhilePermissionOtherThanOk) {
+       if (permissionStatus != PermissionRecord.PERMISSION_OK &&
+	   abortWhilePermissionOtherThanOk) {
 	logger.info("One or more host(s) of AU do not grant crawling permission - aborting crawl!");
 	return false;
       }
       try {
-	if (permissionStatus == PermissionMap.PERMISSION_OK) {
+	if (permissionStatus == PermissionRecord.PERMISSION_OK) {
 	  logger.debug3("Permission granted on host: " + UrlUtil.getHost(permissionPage));
 	}
 	// set permissionMap
-	permissionMap.putStatus(permissionPage,permissionStatus);
+	permissionMap.putStatus(permissionPage, permissionStatus);
       } catch (MalformedURLException e){
 	//XXX should catch this inside the permissionMap ?
 	logger.error("The permissionPage's URL is Malformed : "+ permissionPage);

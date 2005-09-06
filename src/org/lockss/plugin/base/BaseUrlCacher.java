@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.58 2005-08-30 23:42:49 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.59 2005-09-06 22:59:15 troberts Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.repository.*;
 import org.lockss.util.*;
 import org.lockss.util.urlconn.*;
 import org.lockss.daemon.*;
-import org.lockss.crawler.PermissionMap;
+import org.lockss.crawler.*;
 
 /**
  * Basic, fully functional UrlCacher.  Utilizes the LockssRepository for
@@ -614,7 +614,7 @@ public class BaseUrlCacher implements UrlCacher {
 			 " from: " + origUrl);
 	  return false;
 	} else if(permissionMap == null ||
-		  permissionMap.getStatus(newUrlString) != PermissionMap.PERMISSION_OK) {
+		  permissionMap.getStatus(newUrlString) != PermissionRecord.PERMISSION_OK) {
           logger.warning("No permission for redirect to different host: "
                          + newUrlString + " from: " + origUrl);
           return false;
