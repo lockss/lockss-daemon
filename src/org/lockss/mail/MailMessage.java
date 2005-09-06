@@ -1,5 +1,5 @@
 /*
- * $Id: MailMessage.java,v 1.1 2004-07-12 06:11:23 tlipkis Exp $
+ * $Id: MailMessage.java,v 1.2 2005-09-06 20:06:31 tlipkis Exp $
  */
 
 /*
@@ -38,39 +38,19 @@ import org.lockss.util.*;
 import org.lockss.daemon.*;
 
 /**
- * Simple mail message
+ * Interface for messages handled by {@link MailService}
  */
-public class MailMessage  {
-  protected static Logger log = Logger.getLogger("MailMessage");
+public interface MailMessage  {
+  /** Add a header to the message */
+  public MailMessage addHeader(String name, String val);
 
-  private StringBuffer headers = new StringBuffer();
-  private String text;
+  /** Send the body, ensuring proper network end-of-line, quoting any
+   * leading dots, and terminating with <nl>,<nl>
+   */
+  void sendBody(PrintStream ostrm) throws IOException;
 
-  public MailMessage() {
-  }
-
-  public MailMessage addHeader(String name, String val) {
-    headers.append(name);
-    headers.append(": ");
-    headers.append(val);
-    headers.append("\n");
-    return this;
-  }
-
-  public MailMessage setText(String text) {
-    this.text = text;
-    return this;
-  }
-
-  public String getBody() {
-    if (text == null) {
-      return headers + "\n";
-    }
-    StringBuffer body =
-      new StringBuffer(text.length() + headers.length() + 10);
-    body.append(headers);
-    body.append("\n");
-    body.append(text);
-    return body.toString();
-  }
+  /** Called just before message is discarded, to give message a chance to
+   * deleted any temporary files, etc.
+   */
+  void delete(boolean sentOk);
 }

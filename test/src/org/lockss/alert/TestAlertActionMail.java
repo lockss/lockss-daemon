@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.5 2005-06-23 05:27:20 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.6 2005-09-06 20:06:31 tlipkis Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.net.*;
 import java.text.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.mail.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
@@ -48,11 +49,11 @@ import org.lockss.plugin.*;
 public class TestAlertActionMail extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestAlertActionMail");
 
-  MyMockMailService mgr;
+  MockMailService mgr;
 
   public void setUp() throws Exception {
     super.setUp();
-    mgr = new MyMockMailService();
+    mgr = new MockMailService();
     getMockLockssDaemon().setMailService(mgr);
   }
 
@@ -104,8 +105,8 @@ public class TestAlertActionMail extends LockssTestCase {
     a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_WARNING);
     AlertActionMail act1 = new AlertActionMail("recipient");
     act1.record(getMockLockssDaemon(), a1);
-    String[] msg = (String[])mgr.getMsgs().get(0);
-    assertEquals("admin@there", msg[0]);
+    MockMailService.Rec rec = mgr.getRec(0);
+    assertEquals("admin@there", rec.getSender());
   }
 
   public void testRecordOne() {
@@ -118,11 +119,12 @@ public class TestAlertActionMail extends LockssTestCase {
     a1.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_WARNING);
     AlertActionMail act1 = new AlertActionMail("recipient");
     act1.record(getMockLockssDaemon(), a1);
-    String[] msg = (String[])mgr.getMsgs().get(0);
-    assertEquals("sender", msg[0]);
-    assertEquals("recipient", msg[1]);
+    MockMailService.Rec rec = mgr.getRec(0);
+    assertEquals("sender", rec.getSender());
+    assertEquals("recipient", rec.getRecipient());
     String[] body =
-      (String[])StringUtil.breakAt(msg[2], '\n').toArray(new String[0]);
+      (String[])StringUtil.breakAt(toString(rec.getMsg()),
+				   "\r\n").toArray(new String[0]);
     int line = 0;
     assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
     assertEquals("To: recipient", body[line++]);
@@ -146,11 +148,12 @@ public class TestAlertActionMail extends LockssTestCase {
     a2.setAttribute(Alert.ATTR_SEVERITY, Alert.SEVERITY_ERROR);
     AlertActionMail act1 = new AlertActionMail("recipient");
     act1.record(getMockLockssDaemon(), ListUtil.list(a1, a2));
-    String[] msg = (String[])mgr.getMsgs().get(0);
-    assertEquals("sender", msg[0]);
-    assertEquals("recipient", msg[1]);
+    MockMailService.Rec rec = mgr.getRec(0);
+    assertEquals("sender", rec.getSender());
+    assertEquals("recipient", rec.getRecipient());
     String[] body =
-      (String[])StringUtil.breakAt(msg[2], '\n').toArray(new String[0]);
+      (String[])StringUtil.breakAt(toString(rec.getMsg()),
+				   "\r\n").toArray(new String[0]);
     int line = 0;
     assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
     assertEquals("To: recipient", body[line++]);
@@ -170,17 +173,13 @@ public class TestAlertActionMail extends LockssTestCase {
     return "LOCKSS daemon";
   }
 
-  static class MyMockMailService extends MockMailService {
-    List msgs = new ArrayList();
-
-    public boolean sendMail(String sender, String recipient, String body) {
-      String[] msg = {sender, recipient, body};
-      msgs.add(msg);
-      return true;
-    }
-
-    List getMsgs() {
-      return msgs;
+  String toString(MailMessage msg) {
+    try {
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      msg.sendBody(new PrintStream(baos));
+      return baos.toString();
+    } catch (IOException e) {
+      throw new RuntimeException("Error converting MimeMessage to string", e);
     }
   }
 

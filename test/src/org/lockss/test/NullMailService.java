@@ -1,5 +1,5 @@
 /*
- * $Id: NullMailService.java,v 1.3 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: NullMailService.java,v 1.4 2005-09-06 20:06:31 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class NullMailService extends BaseLockssManager
 			   Configuration.Differences changedKeys) {
   }
 
-  public boolean sendMail(String sender, String recipient, String body) {
+  public boolean sendMail(String sender, String recipient, MailMessage msg) {
     return true;
   }
 }

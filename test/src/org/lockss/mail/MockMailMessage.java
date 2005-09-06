@@ -1,5 +1,5 @@
 /*
- * $Id: MockMailService.java,v 1.5 2005-09-06 20:06:31 tlipkis Exp $
+ * $Id: MockMailMessage.java,v 1.1 2005-09-06 20:06:31 tlipkis Exp $
  */
 
 /*
@@ -30,61 +30,41 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-package org.lockss.test;
+package org.lockss.mail;
 
+import java.io.*;
 import java.util.*;
-
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.mail.*;
+import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.app.*;
 
-/**
- * Mock MailService.
- */
-public class MockMailService extends BaseLockssManager
-  implements MailService {
+public class MockMailMessage implements MailMessage {
+  private String text;
+  private boolean isDeleted = false;
+  private boolean wasSentOk;
 
-  List recs = new ArrayList();
-
-  protected void setConfig(Configuration config, Configuration oldConfig,
-			   Configuration.Differences changedKeys) {
+  MockMailMessage(String text) {
+    this.text = text;
   }
 
-  public boolean sendMail(String sender, String recipient, MailMessage msg) {
-    Rec rec = new Rec();
-    rec.sender = sender;
-    rec.recipient = recipient;
-    rec.msg = msg;
-    recs.add(rec);
-    return true;
+  public MailMessage addHeader(String name, String val) {
+    throw new UnsupportedOperationException();
   }
 
-  public List getRecs() {
-    return recs;
+  public void sendBody(PrintStream ostrm) throws IOException {
+    ostrm.print(text);
   }
 
-  public Rec getRec(int idx) {
-    return (Rec)recs.get(idx);
+  public void delete(boolean sentOk) {
+    isDeleted = true;
+    wasSentOk = sentOk;
   }
 
-  public static class Rec {
-    String sender;
-    String recipient;
-    MailMessage msg;
+  public boolean isDeleted() {
+    return isDeleted;
+  }
 
-    public String getSender() {
-      return sender;
-    }
-
-    public String getRecipient() {
-      return recipient;
-    }
-
-    public MailMessage getMsg() {
-      return msg;
-    }
-
+  public boolean wasSentOk() {
+    return wasSentOk;
   }
 }
+

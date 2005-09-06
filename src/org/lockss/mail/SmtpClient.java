@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.4 2004-10-08 06:58:41 tlipkis Exp $
+ * $Id: SmtpClient.java,v 1.5 2005-09-06 20:06:31 tlipkis Exp $
  */
 
 /*
@@ -137,10 +137,10 @@ public class SmtpClient extends TransferProtocolClient  {
    * Send a single message.
    * @param sender the smtp sender
    * @param recipient the smtp recipient
-   * @param body smtp message body
+   * @param msg MailMessage with headers and body filled in
    * @return a RESULT_XXX code
    */
-  public int sendMsg(String sender, String recipient, String body) {
+  public int sendMsg(String sender, String recipient, MailMessage msg) {
     int result = -1;
 
     if (recipient == null) {
@@ -165,7 +165,9 @@ public class SmtpClient extends TransferProtocolClient  {
       resp = sendResp("DATA");
       if (resp != RESP_START_MAIL_INPUT) return getErrResult(resp);
 
-      sendBody(serverOutput, body);
+      msg.sendBody(serverOutput);
+      // final .<crlf>
+      send(".");
       resp = resp();
       if (resp != RESP_ACTION_OK) return getErrResult(resp);
       result = RESULT_OK;
@@ -223,32 +225,5 @@ public class SmtpClient extends TransferProtocolClient  {
   private int sendResp(String msg) throws IOException {
     send(msg);
     return resp();
-  }
-
-  /** Send the body, ensuring proper network end-of-line, quoting any
-   * leading dots, and terminating with <nl>,<nl> */
-  void sendBody(PrintStream ostrm, String body)
-      throws IOException {
-    char prev = 0;
-    for (int ix = 0, len = body.length(); ix < len; ix++) {
-      char c = (char)body.charAt(ix);
-      // double leading dots
-      if (prev == '\n' && c == '.') {
-	ostrm.write('.');
-      }
-      // convert newline to crlf
-      if (c == '\n' && prev != '\r') {
-	ostrm.write('\r');
-      }
-      ostrm.write(c);
-      prev = c;
-    }
-    // ensure ending crlf
-    if (prev != '\n') {
-      ostrm.print("\r\n");
-    }
-    // final .<crlf>
-    ostrm.print(".\r\n");
-    log.debug3("Body sent");
   }
 }

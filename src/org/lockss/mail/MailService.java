@@ -1,5 +1,5 @@
 /*
- * $Id: MailService.java,v 1.2 2004-09-27 22:39:13 smorabito Exp $
+ * $Id: MailService.java,v 1.3 2005-09-06 20:06:31 tlipkis Exp $
  *
 
 Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
@@ -45,5 +45,5 @@ public interface MailService extends LockssManager {
   static final String PARAM_ENABLED = PREFIX + "enabled";
   static final boolean DEFAULT_ENABLED = false;
 
-  public boolean sendMail(String sender, String recipient, String body);
+  public boolean sendMail(String sender, String recipient, MailMessage msg);
 }

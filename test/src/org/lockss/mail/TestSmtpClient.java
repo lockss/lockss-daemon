@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpClient.java,v 1.6 2005-06-23 05:27:20 tlipkis Exp $
+ * $Id: TestSmtpClient.java,v 1.7 2005-09-06 20:06:31 tlipkis Exp $
  */
 
 /*
@@ -85,20 +85,10 @@ public class TestSmtpClient extends LockssTestCase {
     assertEquals(12 * Constants.MINUTE, sock.soTimeout);
   }
 
-  public void testSendBodyDot() throws IOException {
-    client.sendBody(pstrm, "foo.\r\n.foo\r\n");
-    assertEquals("foo.\r\n..foo\r\n.\r\n", baos.toString());
-  }
-
-  public void testSendBodyNL() throws IOException {
-    client.sendBody(pstrm, "foo\nbar\rbaz\r\nzot.\n.\n.foo");
-    assertEquals("foo\r\nbar\rbaz\r\nzot.\r\n..\r\n..foo\r\n.\r\n",
-		 baos.toString());
-  }
-
   public void testSendOk() throws Exception {
     client.setResponses("220\n250\n250\n250\n354\n250\n");
-    int res = client.sendMsg("source@s.com", "target@t.com", "test message");
+    int res = client.sendMsg("source@s.com", "target@t.com",
+			     new MockMailMessage("test message\r\n"));
     assertEquals(SmtpClient.RESULT_OK, res);
     String expectedMessage = "HELO foohost\r\n" +
                              "MAIL FROM: <source@s.com>\r\n" +
@@ -112,7 +102,8 @@ public class TestSmtpClient extends LockssTestCase {
 
   public void testSendRetry() throws Exception {
     client.setResponses("220\n250\n250\n450\n354\n250\n");
-    int res = client.sendMsg("source@s.com", "target@t.com", "test message");
+    int res = client.sendMsg("source@s.com", "target@t.com",
+			     new MockMailMessage("test message"));
     assertEquals(SmtpClient.RESULT_RETRY, res);
     String expectedMessage = "HELO foohost\r\n" +
                              "MAIL FROM: <source@s.com>\r\n" +
@@ -123,7 +114,8 @@ public class TestSmtpClient extends LockssTestCase {
 
   public void testSendNoRetry() throws Exception {
     client.setResponses("220\n250\n250\n550\n354\n250\n");
-    int res = client.sendMsg("source@s.com", "target@t.com", "test message");
+    int res = client.sendMsg("source@s.com", "target@t.com",
+			     new MockMailMessage("test message"));
     assertEquals(SmtpClient.RESULT_FAIL, res);
     String expectedMessage = "HELO foohost\r\n" +
                              "MAIL FROM: <source@s.com>\r\n" +
@@ -135,7 +127,8 @@ public class TestSmtpClient extends LockssTestCase {
   public void testTimeout() throws Exception {
     client.setResponses("220\n250\n250\n250\n354\n250\n");
     client.setNThrow(3);
-    int res = client.sendMsg("source@s.com", "target@t.com", "test message");
+    int res = client.sendMsg("source@s.com", "target@t.com",
+			     new MockMailMessage("test message"));
     assertEquals(SmtpClient.RESULT_RETRY, res);
     String expectedMessage = "HELO foohost\r\n" +
                              "MAIL FROM: <source@s.com>\r\n" +
