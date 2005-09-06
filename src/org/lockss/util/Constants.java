@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.9 2005-07-18 08:03:07 tlipkis Exp $
+ * $Id: Constants.java,v 1.10 2005-09-06 19:58:44 tlipkis Exp $
  */
 
 /*
@@ -48,6 +48,9 @@ public interface Constants {
   public static final long DAY = 24 * HOUR;
   /** The number of milliseconds in a week */
   public static final long WEEK = 7 * DAY;
+
+  /** The default timezone, GMT */
+  public static final TimeZone DEFAULT_TIMEZONE = TimeZone.getTimeZone("GMT");
 
   /** The line separator string on this system */
   public static String EOL = System.getProperty("line.separator");
