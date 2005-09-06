@@ -1,5 +1,5 @@
 /*
- * $Id: MDCredential.java,v 1.1 2005-08-25 19:35:58 tlipkis Exp $
+ * $Id: MDCredential.java,v 1.2 2005-09-06 20:00:07 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,6 @@ public class MDCredential extends Credential {
     log.debug3("check(" + credentials + ")");
     try {
       byte[] digest=null;
-                
       if (credentials instanceof Password ||
 	  credentials instanceof String) {
 	digest = calculateDigest(credentials.toString());
