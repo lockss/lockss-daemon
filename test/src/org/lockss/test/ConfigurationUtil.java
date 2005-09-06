@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.12 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.13 2005-09-06 19:59:33 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -153,6 +153,13 @@ public class ConfigurationUtil {
   public static boolean setFromArgs(String prop1, String val1,
 				    String prop2, String val2) {
     return installConfig(fromArgs(prop1, val1, prop2, val2));
+  }
+
+  /** Add the values to the current config
+   */
+  public static boolean addFromProps(Properties props) {
+    return installConfig(merge(Configuration.getCurrentConfig(),
+			       fromProps(props)));
   }
 
   /** Add the value to the current config
