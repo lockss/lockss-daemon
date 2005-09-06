@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.54 2005-07-18 07:57:52 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.55 2005-09-06 19:59:15 tlipkis Exp $
  */
 
 /*
@@ -233,6 +233,8 @@ public class TestStringUtil extends LockssTestCase {
 		     StringUtil.breakAt(" foo", ' '));
     assertIsomorphic(ListUtil.list("foo", "bar"),
 		     StringUtil.breakAt("foo bar ddd", ' ', 2));
+    assertIsomorphic(ListUtil.list("foo", "bar"),
+		     StringUtil.breakAt("foo bar ddd eee fff", ' ', 2));
 
     assertIsomorphic(ListUtil.list("", ""),
 		     StringUtil.breakAt("+", '+', -1, false));
@@ -254,6 +256,52 @@ public class TestStringUtil extends LockssTestCase {
 		     StringUtil.breakAt("foo + ", '+', -1, true, true));
     assertIsomorphic(ListUtil.list("foo ", " "),
 		     StringUtil.breakAt("foo + ", '+', -1, true, false));
+
+  }
+
+  public void testBreakAtString() {
+    Vector v = new Vector();
+    assertEquals(v, StringUtil.breakAt(null, " "));
+    assertEquals(v, StringUtil.breakAt(null, "   "));
+    assertEquals(v, StringUtil.breakAt("", " "));
+    assertEquals(v, StringUtil.breakAt("", "   "));
+    assertIsomorphic(ListUtil.list("foo"), StringUtil.breakAt("foo", " "));
+    assertIsomorphic(ListUtil.list("foo"), StringUtil.breakAt("foo", "  "));
+    assertIsomorphic(ListUtil.list("foo", "bar"),
+		     StringUtil.breakAt("foo bar", " "));
+    assertIsomorphic(ListUtil.list("foo", "bar"),
+		     StringUtil.breakAt("fooXYbar", "XY"));
+    assertIsomorphic(ListUtil.list("foo", "", "bar"),
+		     StringUtil.breakAt("fooXYXYbar", "XY"));
+    assertIsomorphic(ListUtil.list("foo", ""),
+		     StringUtil.breakAt("foo  ", "  "));
+    assertIsomorphic(ListUtil.list("", "foo"),
+		     StringUtil.breakAt(" foo", " "));
+    assertIsomorphic(ListUtil.list("", "foo"),
+		     StringUtil.breakAt("  foo", "  "));
+    assertIsomorphic(ListUtil.list("foo", "bar"),
+		     StringUtil.breakAt("fooZZbarZZddd", "ZZ", 2));
+
+    assertIsomorphic(ListUtil.list("", ""),
+		     StringUtil.breakAt("XX", "XX", -1, false));
+    assertIsomorphic(ListUtil.list(),
+		     StringUtil.breakAt("+", "+", -1, true));
+    assertIsomorphic(ListUtil.list("", "foo"),
+		     StringUtil.breakAt("+foo", "+", -1, false));
+    assertIsomorphic(ListUtil.list("foo"),
+		     StringUtil.breakAt("+foo", "+", -1, true));
+    assertIsomorphic(ListUtil.list("foo", ""),
+		     StringUtil.breakAt("foo+", "+", -1, false));
+    assertIsomorphic(ListUtil.list("foo"),
+		     StringUtil.breakAt("foo+", "+", -1, true));
+    assertIsomorphic(ListUtil.list("foo "),
+		     StringUtil.breakAt("foo +", "+", -1, true, false));
+    assertIsomorphic(ListUtil.list("foo"),
+		     StringUtil.breakAt("foo +", "+", -1, true, true));
+    assertIsomorphic(ListUtil.list("foo"),
+		     StringUtil.breakAt("foo + ", "+", -1, true, true));
+    assertIsomorphic(ListUtil.list("foo ", " "),
+		     StringUtil.breakAt("foo + ", "+", -1, true, false));
 
   }
 
