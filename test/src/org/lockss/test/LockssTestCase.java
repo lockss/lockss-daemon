@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.69 2005-07-30 20:55:49 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.70 2005-09-06 19:59:50 tlipkis Exp $
  */
 
 /*
@@ -1218,7 +1218,27 @@ public class LockssTestCase extends TestCase {
   public static void assertMatchesRE(String msg,
 				     String regexp, String string) {
     if (msg == null) {
-      msg = "String \"" + string + "\" does not match RE: " + regexp;
+      msg = "No match for " + regexp + " in \"" + string + "\"";
+    }
+    assertTrue(msg, isMatchRe(string, regexp));
+  }
+
+  /**
+   * Asserts that a string matches a regular expression.  The match is
+   * unanchored; use "^...$" to ensure that the entire string is matched.
+   */
+  public static void assertMatchesRE(Pattern regexp, String string) {
+    assertMatchesRE(null, regexp, string);
+  }
+
+  /**
+   * Asserts that a string matches a regular expression.  The match is
+   * unanchored; use "^...$" to ensure that the entire string is matched.
+   */
+  public static void assertMatchesRE(String msg,
+				     Pattern regexp, String string) {
+    if (msg == null) {
+      msg = "No match for " + regexp.getPattern() + " in \"" + string + "\"";
     }
     assertTrue(msg, isMatchRe(string, regexp));
   }
@@ -1237,6 +1257,25 @@ public class LockssTestCase extends TestCase {
 					String regexp, String string) {
     if (msg == null) {
       msg = "String \"" + string + "\" should not match RE: " + regexp;
+    }
+    assertFalse(msg, isMatchRe(string, regexp));
+  }
+
+  /**
+   * Asserts that a string does not match a regular expression
+   */
+  public static void assertNotMatchesRE(Pattern regexp, String string) {
+    assertNotMatchesRE(null, regexp, string);
+  }
+
+  /**
+   * Asserts that a string does not match a regular expression
+   */
+  public static void assertNotMatchesRE(String msg,
+					Pattern regexp, String string) {
+    if (msg == null) {
+      msg = "String \"" + string + "\" should not match RE: " +
+	regexp.getPattern();
     }
     assertFalse(msg, isMatchRe(string, regexp));
   }
