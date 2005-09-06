@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionRecord.java,v 1.3 2004-07-28 22:49:28 dcfok Exp $
+ * $Id: PermissionRecord.java,v 1.4 2005-09-06 23:00:11 troberts Exp $
  */
 
 /*
@@ -38,12 +38,13 @@ package org.lockss.crawler;
  * @author Chun D. Fok
  * @version 0.0
  */
-public class PermissionRecord{
+public class PermissionRecord {
   public static final int PERMISSION_UNCHECKED = 0;
   public static final int PERMISSION_OK = 1;
   public static final int PERMISSION_NOT_OK = 2;
   public static final int FETCH_PERMISSION_FAILED = 3;
   public static final int PERMISSION_MISSING = 4;
+  public static final int REPOSITORY_ERROR = 5;
 
   private String permissionUrl="";
   private int permissionStatus=PERMISSION_UNCHECKED;
