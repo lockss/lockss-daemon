@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.11 2005-08-25 19:36:53 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.12 2005-09-06 19:58:32 tlipkis Exp $
  */
 
 /*
@@ -207,6 +207,8 @@ public class LocalServletManager extends BaseServletManager {
 		       "org.lockss.servlet.HashCUS");
     handler.addServlet("Raise Alert", "/RaiseAlert",
 		       "org.lockss.servlet.RaiseAlert");
+    handler.addServlet("Debug Panel", "/DebugPanel",
+		       "org.lockss.servlet.DebugPanel");
     handler.addServlet("ThreadDump", "/ThreadDump",
 		       "org.lockss.servlet.ThreadDump");
     addServletIfAvailable(handler, "Api", "/Api",
