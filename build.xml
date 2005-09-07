@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.153 2005-09-06 19:54:58 tlipkis Exp $
+ $Id: build.xml,v 1.154 2005-09-07 17:37:14 troberts Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -187,7 +187,6 @@ Args:
 	<property name="xmlunit.jar" value="${lib}/xmlunit1.0.jar" />
   <!-- Needed by OAI harvester -->
   <property name="oai-harvester.jar" value="${lib}/harvester2-mod.jar"/>
-  <property name="xalan.jar" value="${lib}/xalan.jar"/>
 
   <property name="junit.jar"      value="${test.lib}/junit.jar"/>
   <property name="junit.addons.jar" value="${test.lib}/junit-addons-1.4.jar"/>
@@ -269,7 +268,6 @@ Args:
   	<pathelement path="${xstream.jar}" />
     <!-- jars need to run the Oai harvester -->
     <pathelement path="${oai-harvester.jar}" />
-    <pathelement path="${xalan.jar}" />
   </path>
 
   <path id="run.classpath">
