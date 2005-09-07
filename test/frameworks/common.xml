@@ -103,6 +103,7 @@
 	<value>edu.cornell.library.epr.EPRPlugin2001</value>
 	<value>gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin</value>
 	<value>gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin</value>
+	<value>gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin</value>
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
@@ -154,6 +155,7 @@
 	  value="[
 	  pluginName='gov.gpo.access.permanent.plugin.treasurybulletin.TreasuryBulletinPlugin'
 	  or pluginName='gov.gpo.access.permanent.plugin.socialsecuritybulletin.SocialSecurityBulletinPlugin'
+	  or pluginName='gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin'
 	  ]"
 	  />
       </property>
@@ -413,6 +415,20 @@
 	<property name="param.2">
 	  <property name="key" value="journal_id" />
 	  <property name="value" value="volume65" />
+	</property>
+      </property>
+
+      <property name="nist110">
+	<property name="title" value="NIST Journal of Research Volume 110" />
+	<property name="journalTitle" value="NIST Journal of Research" />
+	<property name="plugin" value="gov.gpo.access.permanent.plugin.nistjournalofresearch.NISTJournalOfResearchPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://permanent.access.gpo.gov/lockss/NIST_Journal_of_Research/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="journal_id" />
+	  <property name="value" value="volume110" />
 	</property>
       </property>
 
