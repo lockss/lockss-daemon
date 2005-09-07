@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.4 2005-08-29 22:50:25 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.4.2.1 2005-09-07 18:17:11 thib_gc Exp $
  */
 
 /*
@@ -759,7 +759,7 @@ public class IcpFactoryImpl implements IcpFactory {
     return makeSingleton();
   }
   
-  public static IcpEncoderFactory makeEncoderFactory() {
+  public static IcpEncoder.Factory makeEncoderFactory() {
     return makeSingleton();
   }
   

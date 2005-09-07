@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoderTester.java,v 1.1 2005-08-25 20:12:38 thib_gc Exp $
+ * $Id: IcpEncoderTester.java,v 1.1.2.1 2005-09-07 18:18:21 thib_gc Exp $
  */
 
 /*
@@ -35,13 +35,15 @@ package org.lockss.proxy.icp;
 import java.net.DatagramPacket;
 import java.util.Arrays;
 
+import org.lockss.proxy.icp.IcpEncoder.Factory;
+
 import junit.framework.TestCase;
 
 public abstract class IcpEncoderTester extends TestCase {
 
-  protected abstract IcpEncoderFactory makeFactory();
+  protected abstract Factory makeFactory();
   
-  private IcpEncoderFactory factory;
+  private Factory factory;
   
   public void setUp() {
     this.factory = makeFactory();
