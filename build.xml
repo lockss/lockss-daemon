@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.154 2005-09-07 17:37:14 troberts Exp $
+ $Id: build.xml,v 1.155 2005-09-07 23:03:27 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -906,7 +906,23 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   </target>
 
   <!-- ==================================================================== -->
-  <target name="package" depends="jar-lockss"
+  <target name="check-libs" depends="check.contrib"
+   description="Check that all the jars on the production classpath exist" >
+    <for param="file">
+     <path refid="run.classpath" />
+     <sequential>
+      <if>
+       <available file="@{file}" />
+       <else>
+	<fail message="@{file} not found" />
+       </else>
+      </if>
+     </sequential>
+    </for>
+  </target>
+
+  <!-- ==================================================================== -->
+  <target name="package" depends="jar-lockss,check-libs"
    description="Produce all files for a production package" >
     <!-- Write run classpath file -->
     <pathconvert refid="prod.run.classpath" property="tmp.run.clspth"
