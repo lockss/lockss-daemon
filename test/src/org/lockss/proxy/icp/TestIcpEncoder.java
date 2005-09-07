@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpEncoder.java,v 1.1 2005-08-25 20:12:38 thib_gc Exp $
+ * $Id: TestIcpEncoder.java,v 1.2 2005-09-07 18:47:07 thib_gc Exp $
  */
 
 /*
@@ -32,9 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+import org.lockss.proxy.icp.IcpEncoder.Factory;
+
 public class TestIcpEncoder extends IcpEncoderTester {
 
-  protected IcpEncoderFactory makeFactory() {
+  protected Factory makeFactory() {
     return IcpFactoryImpl.makeEncoderFactory();
   }
 
