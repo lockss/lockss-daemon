@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.156 2005-09-07 23:20:13 troberts Exp $
+ $Id: build.xml,v 1.157 2005-09-07 23:37:58 troberts Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -164,7 +164,6 @@ Args:
   <property name="castor.jar"     value="${lib}/castor-0.9.4.1-xml.jar"/>
   <property name="xerces.jar"     value="${lib}/xercesImpl-2.7.1.jar"/>
   <property name="xml-apis.jar"     value="${lib}/xml-apis.jar"/>
-  <property name="xmlparser.jar"  value="${lib}/xmlParserAPIs.jar"/>
   <property name="jimi.jar"       value="${lib}/JimiProClasses.jar"/>
   <property name="jetty.jar"      value="${lib}/jetty-5.1.5.jar"/>
   <property name="servlet.jar"    value="${lib}/javax.servlet.jar"/>
@@ -262,7 +261,6 @@ Args:
     <pathelement path="${castor.jar}" />
     <pathelement path="${xerces.jar}" />
     <pathelement path="${xml-apis.jar}" />
-    <pathelement path="${xmlparser.jar}" />
     <pathelement path="${jimi.jar}" />
     <pathelement path="${oro.jar}" />
     <pathelement path="${htmlparser.jar}" />
