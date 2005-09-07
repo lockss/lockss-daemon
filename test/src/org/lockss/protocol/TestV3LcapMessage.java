@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3LcapMessage.java,v 1.6 2005-08-11 06:37:11 tlipkis Exp $
+ * $Id: TestV3LcapMessage.java,v 1.7 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -50,10 +50,7 @@ import org.mortbay.util.B64Code;
 public class TestV3LcapMessage extends LockssTestCase {
 
   private String m_url = "http://www.example.com";
-  private byte[] m_testBytes = {
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-  };
+
   private String m_archivalID = "TestAU_1.0";
   private PeerIdentity m_testID;
   private V3LcapMessage m_testMsg;
@@ -61,7 +58,10 @@ public class TestV3LcapMessage extends LockssTestCase {
   private Comparator m_comparator;
 
   private LockssDaemon theDaemon;
-
+  
+  private byte[] m_testBytes = 
+    new byte[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 0,
+      1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 
   public void setUp() throws Exception {
     super.setUp();
@@ -75,7 +75,7 @@ public class TestV3LcapMessage extends LockssTestCase {
     }
 
     m_comparator = new VoteBlockComparator();
-
+    
     Properties p = new Properties();
     p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
     p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
@@ -96,12 +96,14 @@ public class TestV3LcapMessage extends LockssTestCase {
   }
 
   public void testNoOpMessageCreation() throws Exception {
-    V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes);
+    V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes,
+                                                      m_testBytes);
 
     // now check the fields we expect to be valid
     assertEquals(V3LcapMessage.MSG_NO_OP, noopMsg.getOpcode());
     assertTrue(m_testID == noopMsg.getOriginatorId());
-    assertEquals(m_testBytes, noopMsg.getChallenge());
+    assertEquals(m_testBytes, noopMsg.getPollerNonce());
+    assertEquals(m_testBytes, noopMsg.getVoterNonce());
     assertEmpty(ListUtil.fromIterator(noopMsg.getVoteBlockIterator()));
   }
 
@@ -114,13 +116,16 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(V3LcapMessage.MSG_NO_OP, noopMsg2.getOpcode());
     assertTrue(noopMsg1.getOriginatorId() == m_testID);
     assertTrue(noopMsg1.getOriginatorId() == noopMsg2.getOriginatorId());
-    assertFalse(noopMsg1.getChallenge() == noopMsg2.getChallenge());
+    assertFalse(noopMsg1.getPollerNonce() == noopMsg2.getPollerNonce());
+    assertFalse(noopMsg1.getVoterNonce() == noopMsg2.getVoterNonce());
     assertEmpty(ListUtil.fromIterator(noopMsg1.getVoteBlockIterator()));
     assertEmpty(ListUtil.fromIterator(noopMsg2.getVoteBlockIterator()));
   }
 
   public void testNoOpMessageToString() throws IOException {
-    V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes);
+    V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID,
+                                                      m_testBytes,
+                                                      m_testBytes);
     String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
       ", NoOp]";
     assertEquals(expectedResult, noopMsg.toString());
@@ -129,30 +134,38 @@ public class TestV3LcapMessage extends LockssTestCase {
   public void testTestMessageToString() throws IOException {
     String expectedResult = "[V3LcapMessage: from " + m_testID.toString() +
       ", http://www.example.com Vote " +
-      "C:AAECAwQFBgcICQoLDA0ODxAREhMU B:10 ver 1]";
+      "PN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
+      "VN:AQIDBAUGBwgJAAECAwQFBgcICQA= " +
+      "B:10 ver 1]";
+    log.debug("GOT THIS STRING: {" + m_testMsg.toString() + "}");
     assertEquals(expectedResult, m_testMsg.toString());
   }
 
   public void testNoOpEncoding() throws Exception {
-    V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID, m_testBytes);
+    V3LcapMessage noopMsg = V3LcapMessage.makeNoOpMsg(m_testID,
+                                                      m_testBytes,
+                                                      m_testBytes);
     byte[] encodedBytes = noopMsg.encodeMsg();
 
     V3LcapMessage msg = new V3LcapMessage(encodedBytes);
     // now test to see if we got back what we started with
     assertTrue(m_testID == msg.getOriginatorId());
     assertEquals(V3LcapMessage.MSG_NO_OP, msg.getOpcode());
-    assertEquals(m_testBytes, msg.getChallenge());
+    assertEquals(m_testBytes, msg.getPollerNonce());
+    assertEquals(m_testBytes, msg.getVoterNonce());
   }
 
   public void testRequestMessageCreation() throws Exception {
     PollSpec spec =
-      new MockPollSpec("ArchivalID_2", "http://foo.com/", null, null, "Plug42", -1);
+      new MockPollSpec("ArchivalID_2", "http://foo.com/", null, null,
+                       "Plug42", -1);
     Deadline deadline = Deadline.in(10000);
     V3LcapMessage reqMsg =
       V3LcapMessage.makeRequestMsg(spec,
 				   m_testBytes,
+                                   m_testBytes,
 				   V3LcapMessage.MSG_REPAIR_REQ,
-				   deadline,
+				   deadline.getExpirationTime(),
 				   m_testID);
 
     for (Iterator ix = m_testVoteBlocks.iterator(); ix.hasNext(); ) {
@@ -166,7 +179,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(V3LcapMessage.MSG_REPAIR_REQ, reqMsg.getOpcode());
     assertEquals("ArchivalID_2", reqMsg.getArchivalId());
     assertEquals("http://foo.com/", reqMsg.getTargetUrl());
-    assertEquals(m_testBytes, reqMsg.getChallenge());
+    assertEquals(m_testBytes, reqMsg.getPollerNonce());
+    assertEquals(m_testBytes, reqMsg.getVoterNonce());
     List testMsgVoteBlocks = ListUtil.fromIterator(m_testMsg.getVoteBlockIterator());
     List reqMsgVoteBlocks = ListUtil.fromIterator(reqMsg.getVoteBlockIterator());
     assertTrue(testMsgVoteBlocks.equals(reqMsgVoteBlocks));
@@ -244,9 +258,7 @@ public class TestV3LcapMessage extends LockssTestCase {
 				      int uLength, int uOffset,
 				      int fLength, int fOffset) {
     return new VoteBlock(fName, uLength, uOffset, fLength, fOffset,
-			 computeHash(fName + "a"),
-			 computeHash(fName + "b"),
-			 computeHash(fName + "c"));
+			 computeHash(fName), VoteBlock.CONTENT_VOTE);
   }
 
   private void assertEqualMessages(V3LcapMessage a, V3LcapMessage b) {
@@ -255,7 +267,8 @@ public class TestV3LcapMessage extends LockssTestCase {
     assertEquals(a.getTargetUrl(), b.getTargetUrl());
     assertEquals(a.getArchivalId(), b.getArchivalId());
     assertEquals(a.getPollVersion(), b.getPollVersion());
-    assertEquals(a.getChallenge(), b.getChallenge());
+    assertEquals(a.getPollerNonce(), b.getPollerNonce());
+    assertEquals(a.getVoterNonce(), b.getVoterNonce());
     assertEquals(a.getPluginVersion(), b.getPluginVersion());
     assertEquals(a.getHashAlgorithm(), b.getHashAlgorithm());
     assertEquals(a.isVoteComplete(), b.isVoteComplete());
@@ -269,13 +282,10 @@ public class TestV3LcapMessage extends LockssTestCase {
 
   }
 
-  private V3LcapMessage makeTestVoteMessage() {
-    return makeTestVoteMessage(null);
-  }
-
   private V3LcapMessage makeTestVoteMessage(Collection voteBlocks) {
-    V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, m_testID, m_url,
-					  123456789, 987654321, m_testBytes);
+    V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, m_testID,
+                                          m_url, 123456789, 987654321,
+                                          m_testBytes, m_testBytes);
 
     // Set msg vote blocks.
     for (Iterator ix = voteBlocks.iterator(); ix.hasNext(); ) {
@@ -291,12 +301,10 @@ public class TestV3LcapMessage extends LockssTestCase {
     ArrayList vbList = new ArrayList();
     for (int ix = 0; ix < size; ix++) {
       String fileName = "/test-" + ix + ".html";
-      byte[] plHash = computeHash(fileName + "a");
-      byte[] chHash = computeHash(fileName + "b");
-      byte[] proof = computeHash(fileName + "c");
+      byte[] hash = computeHash(fileName);
       VoteBlock vb =
 	new VoteBlock("/test-" + ix + ".html", 1024, 0,
-		      1024, 0, plHash, chHash, proof);
+		      1024, 0, hash, VoteBlock.CONTENT_VOTE);
       if (log.isDebug2()) {
 	log.debug2("Creating voteblock: " + vb);
       }

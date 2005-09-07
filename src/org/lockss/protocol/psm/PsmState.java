@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.5 2005-06-24 07:59:15 smorabito Exp $
+* $Id: PsmState.java,v 1.6 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -45,6 +45,7 @@ public class PsmState {
   private String name;
   private PsmAction entryAction;
   private PsmResponse[] responses;
+  private boolean restorable = false;
   private int isSucceed = NEITHER;
   private static final int NEITHER = 0;
   private static final int SUCCEED = 1;
@@ -289,6 +290,15 @@ public class PsmState {
 
   public String toString() {
     return "[State: " + getName() + "]";
+  }
+  
+  public boolean isRestorable() {
+    return restorable;
+  }
+  
+  public PsmState setRestorable(boolean flag) {
+    this.restorable = flag;
+    return this;
   }
 
   // prototype for List.toArray() calls

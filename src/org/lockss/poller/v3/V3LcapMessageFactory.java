@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.1 2005-07-13 07:53:06 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -32,11 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import org.lockss.util.*;
-import org.lockss.poller.*;
 import org.lockss.protocol.*;
-import org.lockss.protocol.psm.*;
-import org.mortbay.util.B64Code;
 
 /**
  * Factory methods used by the V3 Polling system to create instances of
@@ -44,71 +40,122 @@ import org.mortbay.util.B64Code;
  */
 public class V3LcapMessageFactory {
 
-  /**
-   * Make a Poll message.
-   */
-  public static V3LcapMessage makePollMsg(V3VoterState vs) {
+  public static V3LcapMessage makePollMsg(PollerUserData ud) {
     V3LcapMessage msg =
-      V3LcapMessage.makeRequestMsg(vs.getPollSpec(),
-				   vs.getChallenge(),
-				   V3LcapMessage.MSG_POLL,
-				   vs.getDeadline(),
-				   vs.getPollerId());
-    msg.setEffortProof(vs.getIntroEffortProof());
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
+                                   V3LcapMessage.MSG_POLL,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
+    msg.setPollerNonce(ud.getPollerNonce());
+    msg.setEffortProof(ud.getIntroEffortProof());
     return msg;
   }
 
-  /**
-   * Make a Poll Proof message.
-   */
-  public static V3LcapMessage makePollProofMsg(V3VoterState vs) {
+  public static V3LcapMessage makePollProofMsg(PollerUserData ud) {
     V3LcapMessage msg =
-      V3LcapMessage.makeRequestMsg(vs.getPollSpec(),
-				   vs.getChallenge(),
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+				   ud.getPollVersion(),
+				   ud.getPluginVersion(),
+				   ud.getUrl(),
+				   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
 				   V3LcapMessage.MSG_POLL_PROOF,
-				   vs.getDeadline(),
-				   vs.getPollerId());
-    msg.setEffortProof(vs.getRemainingEffortProof());
+				   ud.getDeadline(),
+				   ud.getPollerId());
+    msg.setEffortProof(ud.getRemainingEffortProof());
     return msg;
   }
 
-  /**
-   * Make a Vote Request message.
-   */
-  public static V3LcapMessage makeVoteRequestMsg(V3VoterState vs) {
-    return V3LcapMessage.makeRequestMsg(vs.getPollSpec(),
-					vs.getChallenge(),
+  public static V3LcapMessage makeVoteRequestMsg(PollerUserData ud) {
+    return V3LcapMessage.makeRequestMsg(ud.getAuId(),
+					ud.getPollVersion(),
+					ud.getPluginVersion(),
+					ud.getUrl(),
+                                        ud.getPollerNonce(),
+					ud.getVoterNonce(),
 					V3LcapMessage.MSG_VOTE_REQ,
-					vs.getDeadline(),
-					vs.getPollerId());
+					ud.getDeadline(),
+					ud.getPollerId());
   }
 
-  /**
-   * Make a Repair Request message.
-   */
-  public static V3LcapMessage makeRepairRequestMsg(V3VoterState vs) {
+  public static V3LcapMessage makeRepairRequestMsg(PollerUserData ud) {
     V3LcapMessage msg =
-      V3LcapMessage.makeRequestMsg(vs.getPollSpec(),
-				   vs.getChallenge(),
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+				   ud.getPollVersion(),
+				   ud.getPluginVersion(),
+				   ud.getUrl(),
+				   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
 				   V3LcapMessage.MSG_REPAIR_REQ,
-				   vs.getDeadline(),
-				   vs.getPollerId());
-    msg.setTarget(vs.getTarget());
-    msg.setEffortProof(vs.getRepairEffortProof());
+				   ud.getDeadline(),
+				   ud.getPollerId());
+    msg.setTarget(ud.getTarget());
+    msg.setEffortProof(ud.getRepairEffortProof());
     return msg;
   }
 
-  /**
-   * Make an Evaluation Receipt message.
-   */
-  public static V3LcapMessage makeEvaluationReceiptMsg(V3VoterState vs) {
+  public static V3LcapMessage makeEvaluationReceiptMsg(PollerUserData ud) {
     V3LcapMessage msg =
-      V3LcapMessage.makeRequestMsg(vs.getPollSpec(),
-				   vs.getChallenge(),
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+				   ud.getPollVersion(),
+				   ud.getPluginVersion(),
+				   ud.getUrl(),
+				   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
 				   V3LcapMessage.MSG_EVALUATION_RECEIPT,
-				   vs.getDeadline(),
-				   vs.getPollerId());
-    msg.setEffortProof(vs.getReceiptEffortProof());
+				   ud.getDeadline(),
+				   ud.getPollerId());
+    msg.setEffortProof(ud.getReceiptEffortProof());
+    return msg;
+  }
+
+  public static V3LcapMessage makePollAckMsg(VoterUserData ud) {
+    V3LcapMessage msg =
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
+                                   V3LcapMessage.MSG_POLL_ACK,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
+    msg.setEffortProof(ud.getPollAckEffortProof());
+    return msg;
+  }
+
+  public static V3LcapMessage makeNominateMessage(VoterUserData ud) {
+    V3LcapMessage msg =
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
+                                   V3LcapMessage.MSG_NOMINATE,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
+    msg.setNominees(ud.getNominees());
+    return msg;
+  }
+  
+  public static V3LcapMessage makeVoteMessage(VoterUserData ud) {
+    V3LcapMessage msg =
+      V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollVersion(),
+                                   ud.getPluginVersion(),
+                                   ud.getUrl(),
+                                   ud.getPollerNonce(),
+                                   ud.getVoterNonce(),
+                                   V3LcapMessage.MSG_VOTE,
+                                   ud.getDeadline(),
+                                   ud.getPollerId());
+    msg.setVoteBlocks(ud.getVoteBlocks());
     return msg;
   }
 

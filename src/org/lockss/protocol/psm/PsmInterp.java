@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.9 2005-07-13 07:53:05 smorabito Exp $
+* $Id: PsmInterp.java,v 1.10 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -44,10 +44,11 @@ public class PsmInterp {
   private Object userData;
   private PsmState curState;
   private int maxChainedEvents = 10;
-  private int curEventNum;
   private StateTimer timer;
-  private boolean isWaiting = false;
-
+  private boolean isWaiting;
+  private int curEventNum;
+  private PsmInterpStateBean stateBean;
+  
   /** Create a state machine interpreter that will run the specified state
    * machine
    * @param stateMachine the state machine
@@ -55,12 +56,36 @@ public class PsmInterp {
    * actions
    */
   public PsmInterp(PsmMachine stateMachine, Object userData) {
+    this(stateMachine, userData, null);
+  }
+  
+  /** 
+   * <p>Create a state machine interpreter that will run the specified
+   * state machine, optionally restoring its state from a
+   * PsmInterpStateBean.</p>
+   * 
+   * @param stateMachine the state machine
+   * @param userData arbitrary user object for use by state machine's actions
+   * @param stateBean state bean, or null to create a new state bean and start
+   *                  in the stateMachines initial state.
+   */
+  public PsmInterp(PsmMachine stateMachine, Object userData,
+                   PsmInterpStateBean stateBean) {
     if (stateMachine == null)
       throw new RuntimeException("stateMachine is null");
+    if (stateBean == null) {
+      stateBean = new PsmInterpStateBean();
+      stateBean.setLastRestorableStateName(stateMachine.getInitialState().getName());
+    }
+    if (stateBean.getLastRestorableStateName() == null) {
+      throw new IllegalArgumentException("state bean does not have a " +
+                "restorable state!");
+    }
+    this.stateBean = stateBean;
     this.machine = stateMachine;
     this.userData = userData;
   }
-
+  
   /** Return the user object associated with the running state machine */
   public Object getUserData() {
     return userData;
@@ -74,7 +99,9 @@ public class PsmInterp {
       throw new IllegalStateException("already inited");
     }
     isWaiting = false;
-    enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
+    // enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
+    enterState(machine.getState(stateBean.getLastRestorableStateName()),
+               PsmEvents.Start, maxChainedEvents);
   }
 
   /** Process an event generated from outside the state machine (such as
@@ -98,6 +125,14 @@ public class PsmInterp {
   public PsmState getCurrentState() {
     return curState;
   }
+  
+  public PsmInterpStateBean getStateBean() {
+    return stateBean;
+  }
+
+  public void setStateBean(PsmInterpStateBean stateBean) {
+    this.stateBean = stateBean;
+  }
 
   /** Return true if the machine is waiting for an event. */
   public boolean isWaiting() {
@@ -106,7 +141,7 @@ public class PsmInterp {
 
   /** Arrange for a Timeout event to be raised in duration milliseconds if
    * no events have been processed before then. */
-  private void setCurrentStateTimeout(long duration) {
+  void setCurrentStateTimeout(long duration) {
     if (timer != null) {
       timer.resetTo(duration);
     } else {
@@ -187,6 +222,10 @@ public class PsmInterp {
   private void enterState(PsmState newState, PsmEvent triggerEvent,
 			  int eventCtr) {
     if (log.isDebug2()) log.debug2("Enter state: " + newState.getName());
+    if (newState.isRestorable()) {
+      stateBean.setLastRestorableStateName(newState.getName());
+      store();
+    }
     eventMonitor(curState, triggerEvent, null, newState);
     curState = newState;
     PsmAction entryAction = newState.getEntryAction();
@@ -202,7 +241,7 @@ public class PsmInterp {
     }
     isWaiting = true;
   }
-
+  
   /** State timeout logic.  Refers to several members of PsmInterp. */
   private class StateTimer {
     private int timingEvent;
@@ -281,6 +320,12 @@ public class PsmInterp {
    */
   protected void eventMonitor(PsmState curState, PsmEvent event,
 			      PsmAction action, PsmState newState) {
+  }
+  
+  /** Hook for subclasses to override if they want to store the state of the
+   * interpreter.  This implementation does nothing.
+   */
+  protected void store() {
   }
 
 }

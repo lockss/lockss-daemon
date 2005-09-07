@@ -1,38 +1,37 @@
 /*
- * $Id: V3Poller.java,v 1.2 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.3 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+ Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.poller.v3;
 
-import java.io.*;
 import java.util.*;
 import java.security.*;
 import org.lockss.daemon.*;
@@ -52,118 +51,101 @@ import org.mortbay.util.B64Code;
 
 public class V3Poller {
 
-  private static String PREFIX =
-    Configuration.PREFIX + "poll.v3.";
+  private static String PREFIX = Configuration.PREFIX + "poll.v3.";
 
   /** Minimum number of participants for a V3 poll. */
-  public static String PARAM_MIN_POLL_SIZE =
-    PREFIX + "minPollSize";
+  public static String PARAM_MIN_POLL_SIZE = PREFIX + "minPollSize";
   public static int DEFAULT_MIN_POLL_SIZE = 4;
 
   /** Maximum number of participants for a V3 poll. */
-  public static String PARAM_MAX_POLL_SIZE =
-    PREFIX + "maxPollSize";
+  public static String PARAM_MAX_POLL_SIZE = PREFIX + "maxPollSize";
   public static int DEFAULT_MAX_POLL_SIZE = 10;
 
-
-  // Persistent state for this poll
-  private V3PollerState m_pollerState;
-
-  private LockssDaemon m_theDaemon;
-
-  // True iff this is a continuation of a previously called poll.
-  private boolean m_continuedPoll = false;
-
-  // Deadline for this poll.
-  private Deadline m_deadline;
-
-  // A mapping of PeerIdentity to state machine interpreters.
-  protected HashMap m_stateMachines;
-
-  private int m_pollsize;
+  private PollerStateBean pollerState;
+  protected Map innerCircle;
+  protected Map outerCircle;
+  private LockssDaemon theDaemon;
+  private boolean continuedPoll = false;
+  private V3PollerSerializer serializer;
+  private int pollSize;
 
   private static Logger log = Logger.getLogger("V3Poller");
+  private static LockssRandom theRandom = new LockssRandom();
 
-  // Callback used by PollerActions
-  private ActionHandler m_voterHandler = new ActionHandler() {
-      /**
-       * Called when a nomination message has been received.
-       */
-      public void handleNominate(PeerIdentity id, List nominees) {
-	nominatePeers(id, nominees);
-      }
-
-      /**
-       * Called when a vote has been received.
-       */
-      public void handleTally(PeerIdentity id) {
-	tallyVoter(id);
-      }
-
-      /**
-       * Called when a repair message has been received.
-       */
-      public void handleRepair(PeerIdentity id) {
-	// XXX:  To be done.
-      }
-    };
-
-  protected V3Poller() {
-    m_stateMachines = new HashMap();
-    // Determine the number of participants for this poll.
-    int minParticipants = Configuration.getIntParam(PARAM_MIN_POLL_SIZE,
-						    DEFAULT_MIN_POLL_SIZE);
-    int maxParticipants = Configuration.getIntParam(PARAM_MAX_POLL_SIZE,
-						    DEFAULT_MAX_POLL_SIZE);
-    if (maxParticipants < minParticipants) {
-      throw new IllegalArgumentException("Impossible poll size range: " +
-					 (maxParticipants - minParticipants));
-    } else if (maxParticipants == minParticipants) {
-      log.debug("Max poll size and min poll size are identical");
-      m_pollsize = minParticipants;
-    } else {
-      // Pick a random number of participants for this poll between
-      // minParticipants and maxParticipants
-      LockssRandom rand = new LockssRandom();
-      int randCount = rand.nextInt(maxParticipants - minParticipants);
-      m_pollsize = minParticipants + randCount;
-    }
-    log.debug("Creating a new poll with a requested poll size of " + m_pollsize);
+  /**
+   * Common constructor.
+   * 
+   * @param key
+   */
+  protected V3Poller() throws V3Serializer.PollSerializerException {
+    innerCircle = new LinkedHashMap();
+    outerCircle = new LinkedHashMap();
+    serializer = new V3PollerSerializer();
   }
 
   /**
    * Create a new V3 Poll.
    */
   public V3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
-		  byte[] challenge, String key, long duration, String hashAlg) {
+                  String key, long duration, String hashAlg)
+      throws V3Serializer.PollSerializerException {
     this();
-    this.m_pollerState = new V3PollerState(spec, orig, challenge, this,
-					   key, duration, hashAlg);
-    this.m_theDaemon = daemon;
+    // Determine the number of participants for this poll.
+    int minParticipants = Configuration.getIntParam(PARAM_MIN_POLL_SIZE,
+                                                    DEFAULT_MIN_POLL_SIZE);
+    int maxParticipants = Configuration.getIntParam(PARAM_MAX_POLL_SIZE,
+                                                    DEFAULT_MAX_POLL_SIZE);
+    if (maxParticipants < minParticipants) {
+      throw new IllegalArgumentException("Impossible poll size range: "
+          + (maxParticipants - minParticipants));
+    } else if (maxParticipants == minParticipants) {
+      log.debug("Max poll size and min poll size are identical");
+      pollSize = minParticipants;
+    } else {
+      // Pick a random number of participants for this poll between
+      // minParticipants and maxParticipants
+      LockssRandom rand = new LockssRandom();
+      int randCount = rand.nextInt(maxParticipants - minParticipants);
+      pollSize = minParticipants + randCount;
+    }
+    this.pollerState = new PollerStateBean(spec, orig, key, duration,
+                                           pollSize, hashAlg,
+                                           serializer);
+    this.theDaemon = daemon;
+    log.debug("Creating a new poll with a requested poll size of "
+              + pollSize);
   }
 
   /**
    * Restore a V3 Poll from a serialized state.
    */
-  public V3Poller(LockssDaemon daemon, String serializedState) {
+  public V3Poller(LockssDaemon daemon, String pollDir)
+      throws V3Serializer.PollSerializerException {
     this();
-    this.m_theDaemon = daemon;
-    this.m_continuedPoll = true;
-    // XXX: TBD.
+    this.theDaemon = daemon;
+    this.serializer = new V3PollerSerializer(pollDir);
+    this.pollerState = serializer.loadPollerState();
+    // Restore transient CUS and PollSerializer in poll state
+    PluginManager plugMgr = theDaemon.getPluginManager();
+    CachedUrlSet cus = plugMgr.findCachedUrlSet(pollerState.getAuId());
+    if (cus == null) {
+      throw new NullPointerException("CUS for AU " + pollerState.getAuId() +
+                                     " is null!");
+    }
+    this.pollerState.setCachedUrlSet(cus);
+    this.continuedPoll = true;
+    log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
 
   public void startPoll() {
     // Schedule the poll.
-    log.debug("Scheduling V3 poll " +
-	      m_pollerState.getPollKey() +
-	      " to complete by " +
-	      m_pollerState.getDeadline());
+    log.debug("Scheduling V3 poll " + pollerState.getPollKey() +
+              " to complete by " + pollerState.getDeadline());
 
-    TimerQueue.schedule(m_pollerState.getDeadline(),
-			new PollTimerCallback(),
-			this);
+    TimerQueue.schedule(Deadline.at(pollerState.getDeadline()),
+                        new PollTimerCallback(), this);
 
-    if (m_continuedPoll) {
+    if (continuedPoll) {
       restoreInnerCircle();
     } else {
       constructInnerCircle();
@@ -172,105 +154,201 @@ public class V3Poller {
     pollInnerCircle();
   }
 
-  // XXX: Not clear what should be done here, yet.  TBD.
+  // XXX: Not clear what needs be done here, yet. TBD.
   public void stopPoll() {
-    log.debug("Stopping poll " + m_pollerState.getPollKey());
+    log.debug("Stopping poll " + pollerState.getPollKey());
+  }
+
+  /**
+   * Called when the poll should be closed. This method cleans up resources used
+   * by the poll.
+   */
+  public void closePoll() {
+    // Clean up after the serializer.
+    this.serializer.closePoll();
   }
 
   /**
    * Construct the inner circle of voters.
    */
-  private void constructInnerCircle() {
-      Collection refList = getReferenceList();
+  void constructInnerCircle() {
+    Collection refList = getReferenceList();
+    Collection selectedVoters = CollectionUtil
+        .randomSelection(refList, ((pollSize > refList.size()) ? refList
+            .size() : pollSize));
+    log.debug2("Selected " + selectedVoters.size()
+        + " participants for poll ID " + pollerState.getPollKey());
 
-      Collection selectedVoters =
-	CollectionUtil.randomSelection(refList,
-				       (m_pollsize > refList.size() ?
-					refList.size() : m_pollsize));
-      log.debug("Selected " + selectedVoters.size() + " participants for poll ID " +
-		m_pollerState.getPollKey());
+    for (Iterator it = selectedVoters.iterator(); it.hasNext();) {
+      PeerIdentity id = (PeerIdentity) it.next();
+      PollerUserData ud = 
+        new PollerUserData(id, this, serializer);
+      ud.setPollerNonce(makePollerNonce());
+      PsmMachine machine = PollerStateMachineFactory
+          .getMachine(getPollerActionsClass());
+      V3PollerInterp interp = new V3PollerInterp(machine, ud, serializer);
+      innerCircle.put(id, interp);
+    }
+  }
 
-      for (Iterator it = selectedVoters.iterator(); it.hasNext(); ) {
-	PeerIdentity voterId = (PeerIdentity)it.next();
-	V3VoterState voterState = new V3VoterState(voterId, m_pollerState, m_voterHandler);
-	m_pollerState.addVoterState(voterId, voterState);
-
-	PsmMachine machine = PollerStateMachineFactory.
-	  getMachine(getPollerActionsClass());
-	PsmInterp interp = new PsmInterp(machine, voterState);
-	m_stateMachines.put(voterId, interp);
-      }
+  /**
+   * Generate a random nonce for the poller.
+   * 
+   * @return A random array of 20 bytes.
+   */
+  private byte[] makePollerNonce() {
+    byte[] secret = new byte[20];
+    theRandom.nextBytes(secret);
+    return secret;
   }
 
   /**
    * Reconstruct the inner circle list for a restored poll.
    */
-  private void restoreInnerCircle() {
-    // XXX: TBD
-  }
-
-  private void pollInnerCircle() {
-    // XXX:
-    // Poll the inner circle.
-    //    - For every V3VoterState listed in the V3PollerState,
-    //      init its state machine.
-    for (Iterator it = m_stateMachines.values().iterator(); it.hasNext(); ) {
-      PsmInterp interp = (PsmInterp)it.next();
-      interp.init();
+  void restoreInnerCircle() {
+    try {
+      List innerCircleStates = serializer.loadInnerCircleStates();
+      for (Iterator iter = innerCircleStates.iterator(); iter.hasNext();) {
+        PollerUserData voterState = (PollerUserData) iter.next();
+        PsmMachine machine = PollerStateMachineFactory.getMachine(getPollerActionsClass());
+        V3PollerInterp interp =
+          new V3PollerInterp(machine, voterState, 
+                             serializer.loadPollerInterpState(voterState.getVoterId()), 
+                             serializer);
+        innerCircle.put(voterState.getVoterId(), interp);
+      }
+    } catch (V3Serializer.PollSerializerException ex) {
+      log.error("Unable to restore poll state!");
+      stopPoll();
     }
   }
 
-  private void restoreOuterCircle() {
-    // XXX: TBD
+  /**
+   * <p>
+   * Begin (or resume) polling the inner circle of voters.
+   * </p>
+   */
+  private void pollInnerCircle() {
+    for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
+      V3PollerInterp interp = (V3PollerInterp) it.next();
+      interp.init();
+    }
   }
 
   private void constructOuterCircle() {
     // XXX: TBD
   }
 
-  private void pollOuterCircle() {
+  private void restoreOuterCircle() {
     // XXX: TBD
+  }
+
+  private void pollOuterCircle() {
+    for (Iterator it = outerCircle.values().iterator(); it.hasNext();) {
+      V3PollerInterp interp = (V3PollerInterp) it.next();
+      interp.init();
+    }
   }
 
   void nominatePeers(PeerIdentity id, List nominatedPeers) {
     // XXX: When enough nominations have been received, create
-    // and poll the outer circle.
-
-    log.debug("Received nominations from peer: " + id +
-	      "; Nominations = " + nominatedPeers);
+    // and poll the outer circle. TBD.
+    log.debug("Received nominations from peer: " + id + "; Nominations = "
+        + nominatedPeers);
   }
 
   /**
-   * Called by the ActionHandler callback when a vote message
-   * has been received from the specified participant ID.
+   * Callback method called by each PollerStateMachine when entering the
+   * TallyVoter state.
    */
-  private void tallyVoter(PeerIdentity id) {
-    m_pollerState.voterTallied(id);
-    if (m_pollerState.allVotersTallied()) {
-      log.debug("All voters are tallied!");
-      scheduleHash();
+  boolean tallyIfReady(PeerIdentity id) {
+    pollerState.readyToHash(true);
+    if (pollerState.readyToHash()) {
+      log.debug2("Ready to schedule hash.");
+      try {
+        if (!scheduleHash()) {
+          // XXX: Better error handling / retrying
+          log.error("No time available to schedule our hash for poll "
+              + pollerState.getPollKey());
+          stopPoll();
+          return false;
+        }
+      } catch (NoSuchAlgorithmException ex) {
+        log.error("Hash algorithm not available while scheduling hash: " + ex);
+        stopPoll();
+        return false;
+      }
     } else {
-      log.debug("Not all voters are tallied yet. Waiting.");
+      log.debug2("Not all voters are ready to hash.");
     }
+    return true;
   }
 
   /**
-   * Schedule hashing of the AU.  When hashing is complete for each
-   * block, call blockHashComplete().  When ALL hashing is done, call
-   * hashComplete().
+   * Schedule hashing of the AU.
+   * 
+   * @throws NoSuchAlgorithmException if the hasher attempts to use a hash
+   *           algorithm that is not available.
    */
-  protected void scheduleHash() {
-    // XXX: Implement hashing.  For now, override for testing
-    //
-    // Must be able to (1) Start hashing, and (2) Resume hashing
-    // after a repair.
-    log.debug("Scheduling hashing.");
+  protected boolean scheduleHash() throws NoSuchAlgorithmException {
+    log.debug("Scheduling our hash for poll " + pollerState.getPollKey());
+
+    Deadline deadline = Deadline.at(pollerState.getDeadline());
+    BlockHasher hasher = new BlockHasher(pollerState.getCachedUrlSet(),
+                                         initHasherDigests(),
+                                         initHasherByteArrays(),
+                                         new BlockCompleteHandler());
+
+    HashService hashService = theDaemon.getHashService();
+    return hashService.scheduleHash(hasher, deadline,
+                                    new HashingCompleteCallback(), null);
   }
 
   /**
-   * Signal the hash service to resume its hash, starting with the vote
-   * block specifed.
-   *
+   * Create an array of byte arrays containing hasher initializer bytes, one for
+   * each participant in the poll. The initializer bytes are constructed by
+   * concatenating the participant's poller nonce and the voter nonce.
+   * 
+   * @return Block hasher initialization bytes.
+   */
+  byte[][] initHasherByteArrays() {
+    int len = innerCircle.size();
+    byte[][] initBytes = new byte[len][];
+    int ix = 0;
+    for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
+      V3PollerInterp interp = (V3PollerInterp) it.next();
+      PollerUserData ud = (PollerUserData)interp.getUserData();
+      initBytes[ix++] = ByteArray.concat(ud.getPollerNonce(), ud
+          .getVoterNonce());
+    }
+    return initBytes;
+  }
+
+  /**
+   * Create an array of message digests, one for each participant in the poll.
+   * This array is guaranteed to be in the same order as the inner circle
+   * iterator and the array of byte arrays returned by
+   * {@link #initHasherByteArrays()}
+   * 
+   * @return An array of MessageDigest objects to be used by the BlockHasher.
+   */
+  MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
+    String hashAlg = pollerState.getHashAlgorithm();
+    if (hashAlg == null) {
+      hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
+    }
+    int len = innerCircle.size();
+    MessageDigest[] digests = new MessageDigest[len];
+    for (int ix = 0; ix < len; ix++) {
+      digests[ix] = MessageDigest.getInstance(hashAlg);
+    }
+    return digests;
+  }
+
+  /**
+   * Signal the hash service to resume its hash, starting with the vote block
+   * specifed.
+   * 
    * XXX: TBD.
    */
   protected void resumeHash(String target) {
@@ -278,164 +356,173 @@ public class V3Poller {
   }
 
   /**
-   * Called by the HashService callback when ganged hashing is complete
+   * Called by the BlockHasher's event handler callback when hashing is complete
    * for one block.
-   *
-   * For each block in the hash, we compare our hash against all
-   * participant hashes and build up a tally.  The tally is then
-   * examined to determine what to do next.
-   *
-   * 1. If there's a landslide win for this block, call resumeHash() and
-   *    return.
-   *
-   * 3. If there is a landslide loss for this block, pick one or more
-   *    peers to request repairs from, take them out of the "Tallied"
-   *    state, and send their state machines V3Events.evtRepairNeeded.
    * 
-   * 4. If there is no quorum or if the vote is too close, warn and/or
-   *    send an alert, then stop the poll.
-   *
-   * XXX: Multiple vote message mechanism TBD.
+   * For each block in the hash, we compare our hash against all participant
+   * hashes and build up a tally. The tally is then examined to determine what
+   * to do next.
+   * 
+   * XXX: Multiple vote message mechanism TBD!
+   * 
    */
-  private void blockHashComplete(String targetUrl, byte[] hashResult) {
-    log.debug("Ganged hashing for block " + targetUrl + 
-	      " complete.  Hash results:" +
-	      String.valueOf(B64Code.encode(hashResult)));
+  private void blockHashComplete(HashBlock block) {
+    log.debug("Hashing for block " + block.getUrl()
+        + " complete, now tallying.");
+    String targetUrl = block.getUrl();
 
     // Store the most recent block targetUrl in the state bean
-    m_pollerState.setLastHashedBlock(targetUrl);
+    pollerState.setLastHashedBlock(targetUrl);
 
     // Compare with each participant's hash for this vote block,
     // then tally that participant's ID as either agree or disagree.
-    BlockTally tally = compareHash(targetUrl, hashResult);
+
+    BlockTally tally = tallyBlock(block);
     int result = tally.getResult();
 
     if (result == BlockTally.RESULT_WON) {
-      // Great, we won!  Signal the HashService to resume hashing
+      // Great, we won! Signal the HashService to resume hashing
       // the next block. (TBD)
-      log.debug("Won poll for block " + targetUrl);
+      log.debug2("Won poll for block " + targetUrl);
       resumeHash(targetUrl);
     } else if (result == BlockTally.RESULT_LOST) {
       // Pick one or more random disagreeing voters from whom to request
-      // a repair.  Add those voters to the list of participants NOT in
+      // a repair. Add those voters to the list of participants NOT in
       // Tallying state.
-      PeerIdentity disagreeingVoter =
-	(PeerIdentity)CollectionUtil.randomSelection(tally.getDisagreeVotes());
-      m_pollerState.voterNotTallied(disagreeingVoter);
-      log.debug("Requesting a repair from voter: " + disagreeingVoter);
-      // XXX: Repair mechanism TBD
+      PeerIdentity disagreeingVoter = (PeerIdentity) CollectionUtil
+          .randomSelection(tally.getDisagreeVotes());
+      // Decrement the 'ready for hash' counter
+      pollerState.readyToHash(false);
 
+      log.debug2("Requesting a repair from voter: " + disagreeingVoter);
+      // XXX: Suspend hash.  Repair mechanism TBD
       // Repair mechanism must signal Hash Service to resume hashing
       // the next block.
     } else if (result == BlockTally.RESULT_TOO_CLOSE) {
-      log.warning("Tally was inconclusive.  Stopping poll " + m_pollerState.getPollKey());
-      // XXX: Alerts
+      log.warning("Tally was inconclusive.  Stopping poll "
+          + pollerState.getPollKey());
+      // XXX: Alerts?
       stopPoll();
     } else if (result == BlockTally.RESULT_NOQUORUM) {
-      log.warning("No quorum.  Stopping poll " + m_pollerState.getPollKey());
-      // XXX: Alerts
+      log.warning("No quorum.  Stopping poll " + pollerState.getPollKey());
+      // XXX: Alerts?
       stopPoll();
     } else {
-      log.warning("Unexpected results from tallying block " + targetUrl + ": " +
-		  tally.getResultString());
+      log.warning("Unexpected results from tallying block " + targetUrl + ": "
+          + tally.getResultString());
       stopPoll();
     }
   }
 
-  protected BlockTally compareHash(String targetUrl, byte[] hashResult) {
-    // XXX: Implement comparison of our hash (hashResult) with the
-    // hash in the appropriate block of the participant's vote message.
+  /**
+   * Given a HashBlock result from the hasher, compare its hash (generated by
+   * us) with the hash in the VoteBlock from each participant (generated by the
+   * voters).
+   * 
+   * @param block The hashblock being compared.
+   * @return A tally for the block.
+   */
+  protected BlockTally tallyBlock(HashBlock block) {
     BlockTally tally = new BlockTally();
-    Map innerCircle = m_pollerState.getInnerCircle();
-    for (Iterator iter = innerCircle.keySet().iterator(); iter.hasNext(); ) {
-      PeerIdentity voter = (PeerIdentity)iter.next();
-      log.debug("Comparing hashes for participant " + voter);
-      V3VoterState voterState = (V3VoterState)innerCircle.get(voter);
-      // XXX... For development testing, just agree.
-      tally.addAgreeVote(voter);
+    String blockUrl = block.getUrl();
+    log.debug2("Tallying block: " + blockUrl);
+    MessageDigest[] digests = block.getDigests();
+    int ix = 0;
+    for (Iterator iter = innerCircle.values().iterator(); iter.hasNext();) {
+      // XXX:  This needs to change for daemon 1.12.
+      //       What if a given voter has fewer blocks than the poller does?
+      //       The logic here needs to be more complex.  If we run out of
+      //       blocks for a voter, we need to:
+      //
+      //       1) break out of the tally for this block.
+      //       2) call pollerState.readyForHash(false)
+      //          and
+      //       3) send another VoteRequest to that voter.
+      //       
+      //       For now, assume everyone has sent us all the vote blocks they
+      //       have for this CUS.
+
+      PollerUserData voterState = (PollerUserData)((V3PollerInterp)iter.next()).getUserData();
+      PeerIdentity voter = voterState.getVoterId();
+      VoteBlock vb = voterState.getVoteBlocks().getVoteBlock(ix);
+      byte[] voterResults = vb == null ? null : vb.getHash();
+      byte[] hasherResults = digests[ix].digest();
+      ix++;
+      if (log.isDebug3()) {
+        log.debug3("Comparing hashes for participant " + voter);
+        log.debug3("Hasher results: "
+            + String.valueOf(B64Code.encode(hasherResults)));
+        log.debug3("Voter results: "
+            + (voterResults == null ? "null" : String.valueOf(B64Code
+                .encode(voterResults))));
+      }
+      if (voterResults == null) {
+        log.debug2("Results disagree:  Voter does not have block " + blockUrl);
+        tally.addDisagreeVote(voter);
+      } else if (Arrays.equals(voterResults, hasherResults)) {
+        log.debug2("Results agree: Poller and Voter have the same hash");
+        tally.addAgreeVote(voter);
+      } else {
+        log.debug2("Results disagree: Voter has a different hash "
+            + "than the poller");
+        tally.addDisagreeVote(voter);
+      }
     }
     tally.tallyVotes();
     return tally;
   }
-      
+
   /**
    * Called by the HashService callback when all hashing is complete.
    */
   private void hashComplete() {
-    Collection innerCircle = m_pollerState.getInnerCircle().keySet();
-    
-    for (Iterator iter = innerCircle.iterator(); iter.hasNext(); ) {
-      PeerIdentity voter = (PeerIdentity)iter.next();
-      PsmInterp interp = (PsmInterp)m_stateMachines.get(voter);
+    log.debug("Hashing is complete for this CUS.");
+    for (Iterator iter = innerCircle.values().iterator(); iter
+        .hasNext();) {
+      V3PollerInterp interp = (V3PollerInterp) iter.next();
       interp.handleEvent(V3Events.evtVoteComplete);
-      log.debug2("Gave peer " + voter + " the Vote Complete event.");
+      if (log.isDebug2()) {
+        PollerUserData ud = (PollerUserData)interp.getUserData();
+        log.debug2("Gave peer " + ud.getVoterId()
+                   + " the Vote Complete event.");
+      }
     }
   }
 
-  private MessageDigest getInitedDigest() {
-    MessageDigest digest = null;
-    try {
-      digest = MessageDigest.getInstance(m_pollerState.getHashAlgorithm());
-    } catch (NoSuchAlgorithmException ex) {
-      log.error("Unable to run - no hasher");
-      return null;
-    }
-    byte[] challenge = m_pollerState.getChallenge();
-    digest.update(challenge, 0, challenge.length);
-    log.debug("hashing: C[" + String.valueOf(B64Code.encode(challenge)) + "]");
-    return digest;
-  }
-
-  // XXX: Implement!  Override for testing.
+  // XXX: Implement! Override for testing.
   public void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
-    //
   }
 
   class HashingCompleteCallback implements HashService.Callback {
     /**
-     * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
+     * Called when the timer expires or hashing is complete.
+     * 
+     * @param cookie data supplied by caller to schedule()
      */
-    public void hashingFinished(CachedUrlSet cus,
-				Object cookie,
-				CachedUrlSetHasher hasher,
-				Exception e) {
+    public void hashingFinished(CachedUrlSet cus, Object cookie,
+                                CachedUrlSetHasher hasher, Exception e) {
       if (e == null) {
-	hashComplete();
+        hashComplete();
       } else {
-	log.warning("Poll hash failed : " + e.getMessage());
-	stopPoll();
-      }
-    }
-
-    /**
-     * Called when an individual block is finished
-     */
-    public void blockFinished(CachedUrlSet cus,
-			      Object cookie,
-			      MessageDigest digest,
-			      Exception e) {
-      if (e == null) {
-	blockHashComplete((String)cookie, digest.digest());
-      } else {
-	log.warning("Poll hash failed : " + e.getMessage());
-	stopPoll();
+        log.warning("Poll hash failed : " + e.getMessage());
+        stopPoll();
       }
     }
   }
 
+  class BlockCompleteHandler implements BlockHasher.EventHandler {
+    public void blockDone(HashBlock block) {
+      blockHashComplete(block);
+    }
+  }
+
   /**
-   * Handle an incoming V3LcapMessage.  Needs to:
-   *
-   * - Determine what peer this came from, so it can
-   *   look up the correct state machine interpreter.
-   * - Create the right type of PsmMsgEvent.
-   * - Call handleEvent().
-   *
+   * Handle an incoming V3LcapMessage.
+   * 
    */
   public void handleMessage(V3LcapMessage msg) {
     PeerIdentity sender = msg.getOriginatorId();
-    PsmInterp interp = (PsmInterp)m_stateMachines.get(sender);
+    V3PollerInterp interp = (V3PollerInterp) innerCircle.get(sender);
     if (interp != null) {
       PsmMsgEvent evt = V3Events.fromMessage(msg);
       interp.handleEvent(evt);
@@ -444,8 +531,14 @@ public class V3Poller {
     }
   }
 
-  /* ------------------ Utilities ----------------------------------- */
-
+  public String getPollKey() {
+    return pollerState.getPollKey();
+  }
+  
+  public PollerStateBean getPollerStateBean() {
+    return pollerState;
+  }
+  
   Collection getReferenceList() {
     // XXX: Override for testing, TBD.
     return new ArrayList();
@@ -458,17 +551,11 @@ public class V3Poller {
   class PollTimerCallback implements TimerQueue.Callback {
     /**
      * Called when the timer expires.
-     * @param cookie  data supplied by caller to schedule()
+     * 
+     * @param cookie data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
       stopPoll();
     }
-  }
-
-  /** Callback interface */
-  public interface ActionHandler {
-    public void handleNominate(PeerIdentity id, List nominees);
-    public void handleTally(PeerIdentity id);
-    public void handleRepair(PeerIdentity id);
   }
 }

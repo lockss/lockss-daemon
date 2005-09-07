@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.4 2005-06-24 07:59:16 smorabito Exp $
+ * $Id: V3Events.java,v 1.5 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -47,7 +47,9 @@ public class V3Events {
   public static class RepairNotNeeded extends PsmEvent {}
   public static class RepairRequestOk extends PsmEvent {}
   public static class WaitTallyComplete extends PsmEvent {}
-  public static class VoteRequestOk extends PsmEvent {}
+  public static class ReadyToVote extends PsmEvent {}
+  public static class WaitHashingDone extends PsmEvent {}
+  public static class WaitVoteRequest extends PsmEvent {}
 
   // Each msg event here probably wants a corresponsing instance below, and
   // an entry in msgEvents mapping opcode to instance
@@ -60,7 +62,7 @@ public class V3Events {
   public static class Vote extends PsmMsgEvent {}
   public static class Nominate extends PsmMsgEvent {}
 
-  
+
   // Instances
   public static PsmEvent evtElse = PsmEvents.Else;
   public static PsmEvent evtError = PsmEvents.Error;
@@ -70,10 +72,12 @@ public class V3Events {
   public static PsmEvent evtReceiptOk = new ReceiptOk();
   public static PsmEvent evtRepairOk = new RepairOk();
   public static PsmEvent evtRepairRequestOk = new RepairRequestOk();
-  public static PsmEvent evtWaitTallyComplete = new WaitTallyComplete();
+  public static PsmEvent evtWaitBlockComplete = new WaitTallyComplete();
   public static PsmEvent evtNeedRepair = new NeedRepair();
   public static PsmEvent evtRepairNotNeeded = new RepairNotNeeded();
-  public static PsmEvent evtVoteRequestOk = new VoteRequestOk();
+  public static PsmEvent evtReadyToVote = new ReadyToVote();
+  public static PsmEvent evtWaitHashingDone = new WaitHashingDone();
+  public static PsmEvent evtWaitVoteRequest = new WaitVoteRequest();
 
   public static PollAck msgPollAck = new PollAck();
   public static Nominate msgNominate = new Nominate();

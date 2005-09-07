@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.3 2005-06-24 07:59:15 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.4 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -76,25 +76,29 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20)));
+					     ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20)));
     this.msgVoteRequest =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_VOTE_REQ,
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20)));
+					     ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20)));
     this.msgRepairRequest =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ,
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20)));
+					     ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20)));
     this.msgReceipt =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT,
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
-					     ByteArray.makeRandomBytes(20)));
+					     ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20)));
 
     this.msgNoOp = V3Events.fromMessage(V3LcapMessage.makeNoOpMsg(this.id));
 
@@ -524,7 +528,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 
     public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt, PsmInterp interp) {
       ((List)interp.getUserData()).add("receiveVoteRequest");
-      return V3Events.evtVoteRequestOk;
+      return V3Events.evtReadyToVote;
     }
 
     public static PsmEvent handleSendVote(PsmEvent evt, PsmInterp interp) {

@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessageTestUtil.java,v 1.2 2005-08-11 06:37:11 tlipkis Exp $
+ * $Id: LcapMessageTestUtil.java,v 1.3 2005-09-07 03:06:29 smorabito Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -55,7 +55,8 @@ public class LcapMessageTestUtil {
   public static V3LcapMessage makeTestVoteMessage(PeerIdentity peer,
 						  Collection voteBlocks) {
     V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, peer, m_url,
-					  123456789, 987654321, m_testBytes);
+					  123456789, 987654321,
+                                          m_testBytes, m_testBytes);
 
     // Set msg vote blocks.
     if (voteBlocks != null) {
@@ -73,12 +74,10 @@ public class LcapMessageTestUtil {
     ArrayList vbList = new ArrayList();
     for (int ix = 0; ix < size; ix++) {
       String fileName = "/test-" + ix + ".html";
-      byte[] plHash = computeHash(fileName + "a");
-      byte[] chHash = computeHash(fileName + "b");
-      byte[] proof = computeHash(fileName + "c");
+      byte[] hash = computeHash(fileName);
       VoteBlock vb =
 	new VoteBlock("/test-" + ix + ".html", 1024, 0,
-		      1024, 0, plHash, chHash, proof);
+		      1024, 0, hash, VoteBlock.CONTENT_VOTE);
       if (log.isDebug2()) {
 	log.debug2("Creating voteblock: " + vb);
       }

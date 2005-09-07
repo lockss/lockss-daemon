@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.142 2005-08-31 23:18:36 troberts Exp $
+ * $Id: PluginManager.java,v 1.143 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -61,9 +61,6 @@ public class PluginManager
   extends BaseLockssDaemonManager implements ConfigurableManager {
 
   public static final String PARAM_AU_TREE = Configuration.PREFIX + "au";
-
-  static final String PARAM_PLATFORM_DISK_SPACE_LIST =
-    Configuration.PLATFORM + "diskSpacePaths";
 
   /** The location on the platform to store downloaded plugins once they have
       been verified for loading. */
@@ -1130,6 +1127,18 @@ public class PluginManager
     if (log.isDebug3()) log.debug3("ret cus: " + cus);
     return cus;
   }
+  
+  /**
+   * Find an AU's top level CachedUrlSet.
+   * 
+   * @param auId
+   * @return
+   */
+  public CachedUrlSet findCachedUrlSet(String auId) {
+    ArchivalUnit au = getAuFromId(auId);
+    if (au == null) return null;
+    return au.getAuCachedUrlSet();
+  }
 
   /**
    * Searches for an AU that contains the URL and returns the corresponding
@@ -1468,13 +1477,13 @@ public class PluginManager
     }
 
     List dSpaceList =
-      ConfigManager.getCurrentConfig().getList(PARAM_PLATFORM_DISK_SPACE_LIST);
+      ConfigManager.getCurrentConfig().getList(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST);
     String relPluginPath =
       ConfigManager.getCurrentConfig().get(PARAM_PLUGIN_LOCATION,
 					   DEFAULT_PLUGIN_LOCATION);
 
     if (dSpaceList == null || dSpaceList.size() == 0) {
-      log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
+      log.error(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST +
 		" not specified, not configuring plugin dir");
       return;
     }

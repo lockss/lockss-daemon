@@ -1,5 +1,5 @@
 /*
- * $Id: HashBlock.java,v 1.1 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: HashBlock.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -31,13 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.hasher;
-import java.io.*;
-import java.util.*;
-import java.math.*;
 import java.security.*;
-import org.lockss.daemon.*;
+
 import org.lockss.plugin.*;
-import org.lockss.util.CollectionUtil;
 
 /** Result of a single-block V3 hash, passed to the ContentHasher's
  * HashBlockCallback */

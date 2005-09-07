@@ -1,9 +1,8 @@
 /*
- * $Id: TestV3Events.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3VoterInterp.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
-
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -27,34 +26,41 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
-
 */
 
 package org.lockss.poller.v3;
 
-import java.util.*;
-import org.lockss.test.*;
-import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.util.*;
 
-
-public class TestV3Events extends LockssTestCase {
-
-  V3LcapMessage makeMsg(int opcode) {
-    return new V3LcapMessage(opcode, null, null, 0, 0, null, null);
+/**
+ * Implementation of PsmInterp that knows how to save its state in a V3Poll.
+ */
+public class V3VoterInterp extends PsmInterp {
+  private V3VoterSerializer pollSerializer;
+  private static final Logger log = Logger.getLogger("V3PollInterp");
+  
+  
+  public V3VoterInterp(PsmMachine stateMachine, VoterUserData userData,
+                       PsmInterpStateBean stateBean,
+                       V3VoterSerializer serializer) {
+    super(stateMachine, userData, stateBean);
   }
 
-  void assertMsgClass(int opcode, PsmMsgEvent prototypeEvent) {
-    PsmMsgEvent e = V3Events.fromMessage(makeMsg(opcode));
-    assertEquals(prototypeEvent.getClass(), e.getClass());
+  public V3VoterInterp(PsmMachine stateMachine, VoterUserData userData,
+                       V3VoterSerializer serializer) {
+    super(stateMachine, userData);
+    this.pollSerializer = serializer;
   }
 
-  public void testFromMessage() {
-    assertMsgClass(V3LcapMessage.MSG_POLL_ACK, V3Events.msgPollAck);
-    assertMsgClass(V3LcapMessage.MSG_POLL_PROOF, V3Events.msgPollProof);
-    assertMsgClass(V3LcapMessage.MSG_VOTE, V3Events.msgVote);
-    assertMsgClass(V3LcapMessage.MSG_REPAIR_REQ, V3Events.msgRepairRequest);
-    assertMsgClass(V3LcapMessage.MSG_REPAIR_REP, V3Events.msgRepair);
-    assertMsgClass(V3LcapMessage.MSG_EVALUATION_RECEIPT, V3Events.msgReceipt);
+  /** Called by parent class when it is appropriate to store the 
+   * interpreter's state
+   */
+  protected void store() {
+    try {
+      pollSerializer.saveVoterInterpState(this.getStateBean());
+    } catch (V3Serializer.PollSerializerException ex) {
+      log.error("Unable to save PsmInterp state");
+    }
   }
 }

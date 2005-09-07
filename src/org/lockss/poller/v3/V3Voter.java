@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.1 2005-07-13 07:53:06 smorabito Exp $
+ * $Id: V3Voter.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.security.*;
+
+import org.lockss.app.*;
+import org.lockss.daemon.*;
+import org.lockss.hasher.*;
+import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
@@ -45,51 +51,92 @@ import org.lockss.util.*;
  */
 public class V3Voter {
 
-  private PsmInterp m_stateMachine;
-
-  private String m_pollKey;
-  private String m_hashAlg;
-  private String m_auId;
-  private PeerIdentity m_pollerId;
+  private V3VoterInterp stateMachine;
+  private VoterUserData voterUserData;
+  private LockssDaemon theDaemon;
+  private V3VoterSerializer pollSerializer;
+  private PollManager pollManager;
+  private boolean continuedPoll = false;
+  
+  private static final LockssRandom theRandom = new LockssRandom();
 
   private static final Logger log = Logger.getLogger("V3Voter");
 
-  public V3Voter(PollSpec spec, PeerIdentity orig, String key, String hashAlg) {
-    m_pollerId = orig;
-    m_pollKey = key;
-    m_hashAlg = hashAlg;
-    m_auId = spec.getAuId();
+  /**
+   * Create a new V3Voter.
+   */
+  public V3Voter(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
+                 String key, byte[] introEffortProof, byte[] pollerNonce,
+                 long duration, String hashAlg)
+      throws V3Serializer.PollSerializerException {
+    pollSerializer = new V3VoterSerializer();
+    this.voterUserData = new VoterUserData(spec, this, orig, key,
+                                           duration, hashAlg,
+                                           pollerNonce,
+                                           makeVoterNonce(),
+                                           introEffortProof,
+                                           pollSerializer);
+    this.theDaemon = daemon;
+    this.pollManager = daemon.getPollManager();
+  }
+  
+  /**
+   * Restore a V3Voter from a previously saved poll.
+   */
+  public V3Voter(LockssDaemon daemon, String pollDir)
+      throws V3Serializer.PollSerializerException {
+    pollSerializer = new V3VoterSerializer(pollDir);
+    this.voterUserData = pollSerializer.loadVoterUserData();
+    this.theDaemon = daemon;
+    this.pollManager = daemon.getPollManager();
+    this.continuedPoll = true;
+    // Restore transient state.
+    PluginManager plugMgr = theDaemon.getPluginManager();
+    CachedUrlSet cus = plugMgr.findCachedUrlSet(voterUserData.getAuId());
+    if (cus == null) {
+      throw new NullPointerException("CUS for AU " + voterUserData.getAuId() +
+                                     " is null!");
+    }
+    voterUserData.setCachedUrlSet(cus);
+    voterUserData.setSerializer(pollSerializer);
+    voterUserData.setVoter(this);
   }
 
   public void startPoll() {
+    log.debug("Starting poll " + voterUserData.getPollKey());
     PsmMachine machine = VoterStateMachineFactory.
       getMachine(getVoterActionsClass());
-    PsmInterp interp = new PsmInterp(machine, this);
-    m_stateMachine = interp;
-    interp.init();
+    if (continuedPoll) {
+      try {
+        stateMachine = new V3VoterInterp(machine, voterUserData,
+                                         pollSerializer.loadVoterInterpState(),
+                                         pollSerializer);
+      } catch (V3Serializer.PollSerializerException ex) {
+        log.error("Unable to restore poll state!");
+        stopPoll();
+        return;
+      }
+    } else {
+      stateMachine = new V3VoterInterp(machine, voterUserData, pollSerializer);
+    }
+    stateMachine.init();
   }
 
   public void stopPoll() {
-    // XXX
+    log.debug("Stopping poll " + voterUserData.getPollKey());
+    // XXX: Notify state machine to stop.
   }
 
   
-  // XXX: Called by callback when a vote has been successfully sent.
-  private void voteCast() {
-    log.debug("Our vote has been cast.");
-//     PsmMachine machine = VoterRepairStateMachineFactory.
-//       getMachine(getVoterRepairActionsClass());
-//     PsmInterp interp = new PsmInterp(machine, m_voterState);
-//     m_stateMachine = interp;
-//     interp.init();
-  }
-
   /**
-   * Called by the Error callback in the event that an
-   * unrecoverable error occurs.
+   * Generate a random nonce.
+   * 
+   * @return A random array of 20 bytes.
    */
-  private void error(Throwable t) {
-    // XXX: Implement
+  private byte[] makeVoterNonce() {
+    byte[] secret = new byte[20];
+    theRandom.nextBytes(secret);
+    return secret;
   }
 
   Class getVoterActionsClass() {
@@ -97,15 +144,126 @@ public class V3Voter {
   }
 
   /**
+   * Send a message to the poller.
+   */
+  public void sendMessage(V3LcapMessage msg) {
+    // XXX:  Implement.  Override in testing for now.
+  }
+  
+  /**
    * Handle an incoming V3LcapMessage.
    */
   public void handleMessage(V3LcapMessage msg) {
-    PeerIdentity sender = msg.getOriginatorId();
     PsmMsgEvent evt = V3Events.fromMessage(msg);
-    m_stateMachine.handleEvent(evt);
+    stateMachine.handleEvent(evt);
+  }
+  
+  /**
+   * Generate a list of outer circle nominees.
+   */
+  public void nominatePeers() {
+    // XXX: Implement.  Override in testing for now.
+  }
+  
+  /**
+   * Create an array of byte arrays containing hasher initializer bytes for
+   * this voter.  The initializer bytes are constructed by concatenating the 
+   * voter's poller nonce and voter nonce.
+    * 
+   * @return Block hasher initialization bytes.
+   */
+  byte[][] initHasherByteArrays() {
+    return new byte[][] {ByteArray.concat(voterUserData.getPollerNonce(),
+                                          voterUserData.getVoterNonce())};
   }
 
-  public interface VoterHandler {
-    
+  /**
+   * Create the message digester for this voter's hasher.
+   * 
+   * @return An array of MessageDigest objects to be used by the BlockHasher.
+   */
+  MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
+    String hashAlg = voterUserData.getHashAlgorithm();
+    if (hashAlg == null) {
+      hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
+    }
+    return new MessageDigest[] { MessageDigest.getInstance(hashAlg) };
   }
+  
+  /**
+   * Schedule a hash.
+   */
+  public boolean generateVote() throws NoSuchAlgorithmException {
+    log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
+    CachedUrlSetHasher hasher = new BlockHasher(voterUserData.getCachedUrlSet(),
+                                                initHasherDigests(),
+                                                initHasherByteArrays(),
+                                                new BlockCompleteHandler());  
+    HashService hashService = theDaemon.getHashService();
+    return hashService.scheduleHash(hasher,
+                                    Deadline.at(voterUserData.getDeadline()),
+                                    new HashingCompleteCallback(), null);
+  }
+  
+  /**
+   * Called by the HashService callback when hashing for this CU is
+   * complete.
+   * 
+   * XXX:  Multi-message voting TBD.
+   */
+  public void hashComplete() {
+    log.debug("Hashing complete for poll " + voterUserData.getPollKey());
+    // If we've received a vote request, send our vote right away.  Otherwise,
+    // wait for a vote request.
+    voterUserData.hashingDone(true);
+    if (voterUserData.voteRequested()) {
+      stateMachine.handleEvent(V3Events.evtReadyToVote);
+    } else {
+      stateMachine.handleEvent(V3Events.evtWaitVoteRequest);
+    }
+  }
+  
+  /*
+   * Append the results of the block hasher to the VoteBlocks for this
+   * voter.
+   * 
+   * Called by the BlockHasher's event handler callback when hashing is complete
+   * for one block.
+   */
+  public void blockHashComplete(HashBlock block) {
+    VoteBlocks blocks = voterUserData.getVoteBlocks();
+    MessageDigest digest = block.getDigests()[0];
+    VoteBlock vb = new VoteBlock(block.getUrl(),
+                                 block.getFilteredLength(),
+                                 block.getFilteredOffset(),
+                                 block.getUnfilteredLength(),
+                                 block.getUnfilteredOffset(),
+                                 digest.digest(),
+                                 VoteBlock.CONTENT_VOTE);
+    blocks.addVoteBlock(vb);
+  }
+  
+  class HashingCompleteCallback implements HashService.Callback {
+    /**
+     * Called when the timer expires or hashing is complete.
+     * 
+     * @param cookie data supplied by caller to schedule()
+     */
+    public void hashingFinished(CachedUrlSet cus, Object cookie,
+                                CachedUrlSetHasher hasher, Exception e) {
+      if (e == null) {
+        hashComplete();
+      } else {
+        log.warning("Hash failed : " + e.getMessage(), e);
+        stopPoll();
+      }
+    }
+  }
+
+  class BlockCompleteHandler implements BlockHasher.EventHandler {
+    public void blockDone(HashBlock block) {
+      blockHashComplete(block);
+    }
+  }
+  
 }

@@ -1,74 +1,74 @@
 /*
- * $Id: TestV3Poller.java,v 1.3 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: FuncV3Poller.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
 
- Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
 
- */
+*/
 
 package org.lockss.poller.v3;
 
 import java.io.*;
 import java.util.*;
-import java.security.*;
+
+import org.mortbay.util.*;
+
 import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.daemon.*;
+import org.lockss.config.*;
+import org.lockss.hasher.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.*;
+import org.lockss.poller.v3.V3Serializer.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
-import org.lockss.util.*;
-import org.lockss.poller.*;
-import org.lockss.poller.v3.FuncV3Poller.MyV3Poller;
-import org.lockss.poller.v3.V3Serializer.*;
+import org.lockss.repository.*;
 import org.lockss.test.*;
-import org.lockss.hasher.*;
-import org.lockss.hasher.HashService;
-import org.lockss.repository.LockssRepositoryImpl;
-import org.mortbay.util.B64Code;
+import org.lockss.util.*;
 
-public class TestV3Poller extends LockssTestCase {
+/**
+ * Functional tests for the V3Poller.
+ */
+public class FuncV3Poller extends LockssTestCase {
 
   private IdentityManager idmgr;
   private MockLockssDaemon theDaemon;
+  private HashService hashService;
 
   private PeerIdentity pollerId;
 
   private String tempDirPath;
   private ArchivalUnit testau;
   private PollManager pollmanager;
-  private HashService hashService;
 
   private PeerIdentity[] voters;
   private V3LcapMessage[] pollAcks;
   private V3LcapMessage[] nominates;
   private V3LcapMessage[] votes;
   private V3LcapMessage[] repairs;
-
   private byte[][] pollerNonces;
   private byte[][] voterNonces;
 
@@ -80,27 +80,21 @@ public class TestV3Poller extends LockssTestCase {
     BASE_URL + "index.html",
     BASE_URL + "file1.html",
     BASE_URL + "file2.html",
-    BASE_URL + "branch1/",
-    BASE_URL + "branch1/index.html",
-    BASE_URL + "branch1/file1.html",
-    BASE_URL + "branch1/file2.html",
-    BASE_URL + "branch2/",
-    BASE_URL + "branch2/index.html",
-    BASE_URL + "branch2/file1.html",
-    BASE_URL + "branch2/file2.html",
+    BASE_URL + "file3.html",
+    BASE_URL + "file4.html"
   };
-  
+
   private static List voteBlocks;
   static {
     voteBlocks = new ArrayList();
-    for (int ix = 0; ix < urls.length; ix++) {
+    for (int ix = 2; ix < urls.length; ix++) {
       VoteBlock vb = new VoteBlock(urls[ix], 1024, 0, 1024, 0,
                                    ByteArray.makeRandomBytes(20),
                                    VoteBlock.CONTENT_VOTE);
       voteBlocks.add(vb);
     }
   }
-  
+
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated();
@@ -123,7 +117,7 @@ public class TestV3Poller extends LockssTestCase {
     mau.setPlugin(plug);
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     List files = new ArrayList();
-    for (int ix = 0; ix < urls.length; ix++) {
+    for (int ix = 2; ix < urls.length; ix++) {
       MockCachedUrl cu = (MockCachedUrl)mau.addUrl(urls[ix], false, true);
       // Add mock file content.
       cu.setContent("This is content for CUS file " + ix);
@@ -153,10 +147,11 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makePollAckMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      msgs[i] = new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK, voters[i],
-                                  "http://www.test.org",
-                                  123456789, 987654321,
-                                  pollerNonces[i],
+      msgs[i] = new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK,
+                                  voters[i],
+				  "lockssau:",
+				  123456789, 987654321,
+				  pollerNonces[i],
                                   voterNonces[i]);
     }
     return msgs;
@@ -165,15 +160,16 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeNominateMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_NOMINATE, voters[i],
-                                            "http://www.test.org",
-                                            123456789, 987654321,
-                                            pollerNonces[i],
+      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_NOMINATE,
+                                            voters[i],
+					    "lockssau:",
+					    123456789, 987654321,
+					    pollerNonces[i],
                                             voterNonces[i]);
       msg.setNominees(ListUtil.list("10.0." + i + ".1",
-                                    "10.0." + i + ".2",
-                                    "10.0." + i + ".3",
-                                    "10.0." + i + ".4"));
+				    "10.0." + i + ".2",
+				    "10.0." + i + ".3",
+				    "10.0." + i + ".4"));
       msgs[i] = msg;
     }
     return msgs;
@@ -182,13 +178,14 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeVoteMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, voters[i],
-                                            "http://www.test.org",
-                                            123456789, 987654321,
-                                            pollerNonces[i],
+      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE,
+                                            voters[i],
+					    "lockssau:",
+					    123456789, 987654321,
+					    pollerNonces[i],
                                             voterNonces[i]);
       for (Iterator it = voteBlocks.iterator(); it.hasNext(); ) {
-        msg.addVoteBlock((VoteBlock)it.next());
+	msg.addVoteBlock((VoteBlock)it.next());
       }
       msgs[i] = msg;
     }
@@ -200,9 +197,9 @@ public class TestV3Poller extends LockssTestCase {
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REP,
                                             voters[i],
-                                            "http://www.test.org",
-                                            123456789, 987654321,
-                                            pollerNonces[i],
+					    "lockssau:",
+					    123456789, 987654321,
+					    pollerNonces[i],
                                             voterNonces[i]);
       msgs[i] = msg;
     }
@@ -218,66 +215,55 @@ public class TestV3Poller extends LockssTestCase {
     TimeBase.setReal();
     super.tearDown();
   }
-  
-  public void testInitHasherByteArrays() throws Exception {
-    V3Poller v3Poller = makeInittedV3Poller("foo");
-    LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(v3Poller, "innerCircle");
-    assertEquals(innerCircle.size(), voters.length);
-    byte[][] initBytes = (byte[][]) PrivilegedAccessor
-        .invokeMethod(v3Poller, "initHasherByteArrays");
-    assertEquals(initBytes.length, innerCircle.size());
-    byte[][] compareBytes = new byte[innerCircle.size()][];
-    int ix = 0;
-    for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
-      PsmInterp interp = (PsmInterp) it.next();
-      PollerUserData proxy = (PollerUserData) interp.getUserData();
+
+  public void testNonRepairPoll() throws Exception {
+    PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
+                               Poll.CONTENT_POLL);
+    byte[] key = ByteArray.makeRandomBytes(20);
+
+    final MyV3Poller v3Poller =
+      new MyV3Poller(ps, theDaemon, pollerId,
+		     String.valueOf(B64Code.encode(key)),
+		     100000, "SHA-1");
+    v3Poller.startPoll();
+
+    // In this scripted test, we play the part of a voter in a poll,
+    // sending messages to the poller.
+    
+    for (int i = 0; i < voters.length; i++ ) {
+      V3LcapMessage poll = v3Poller.getSentMessage(voters[i]);
+      assertNotNull(poll);
+      assertEquals(poll.getOpcode(), V3LcapMessage.MSG_POLL);
       
-      compareBytes[ix++] = ByteArray.concat(proxy.getPollerNonce(), proxy
-          .getVoterNonce());
+      v3Poller.handleMessage(pollAcks[i]);
+      
+      V3LcapMessage pollProof = v3Poller.getSentMessage(voters[i]);
+      assertNotNull(pollProof);
+      assertEquals(pollProof.getOpcode(), V3LcapMessage.MSG_POLL_PROOF);
+      
+      v3Poller.handleMessage(nominates[i]);
+      
+      V3LcapMessage voteRequest = v3Poller.getSentMessage(voters[i]);
+      assertNotNull(voteRequest);
+      assertEquals(voteRequest.getOpcode(), V3LcapMessage.MSG_VOTE_REQ);
+      
+      v3Poller.handleMessage(votes[i]);
     }
-    for (int i = 0; i < initBytes.length; i++) {
-      assertTrue(Arrays.equals(initBytes[i], compareBytes[i]));
+    // Repair mechanism simply agrees with everything for this test.
+    for (int i = 0; i < voters.length; i++) {
+      V3LcapMessage rcpt = v3Poller.getSentMessage(voters[i]);
+      assertNotNull(rcpt);
+      assertEquals(rcpt.getOpcode(), V3LcapMessage.MSG_EVALUATION_RECEIPT);
     }
   }
 
-  public void testInitMessageDigests() throws Exception {
-    V3Poller v3Poller = makeInittedV3Poller("foo");
-    LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(v3Poller, "innerCircle");
-    assertEquals(innerCircle.size(), voters.length);
-    MessageDigest[] digests = (MessageDigest[]) PrivilegedAccessor
-        .invokeMethod(v3Poller, "initHasherDigests");
-    assertEquals(digests.length, innerCircle.size());    
-    for (int i = 0; i < digests.length; i++) {
-      assertEquals("SHA-1", digests[i].getAlgorithm());
-    }
-  }
-
-  private MyMockV3Poller makeInittedV3Poller(String key) throws Exception {
-    PollSpec ps = new MockPollSpec(testau, "http://www.test.org", null, null,
-                                   Poll.CONTENT_POLL);
-    MyMockV3Poller p = new MyMockV3Poller(ps, theDaemon, pollerId, key, 20000,
-                                          "SHA-1");
-    p.constructInnerCircle();
-    LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(p, "innerCircle");
-    for (int ix = 0; ix < voters.length; ix++) {
-      PeerIdentity pid = voters[ix];
-      PsmInterp interp = (PsmInterp) innerCircle.get(pid);
-      PollerUserData proxy = (PollerUserData) interp.getUserData();
-      proxy.setVoterNonce(voterNonces[ix]);
-    }
-    return p;
-  }
-  
-  private class MyMockV3Poller extends V3Poller {
+  public class MyV3Poller extends V3Poller {
     // For testing:  Hashmap of voter IDs to V3LcapMessages.
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
 
-    MyMockV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-               String pollkey, long duration, String hashAlg) 
+    MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
+	       String pollkey, long duration, String hashAlg) 
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
     }
@@ -290,8 +276,8 @@ public class TestV3Poller extends LockssTestCase {
       sentMsgs.put(to, msg);
       SimpleBinarySemaphore sem = (SimpleBinarySemaphore)semaphores.get(to);
       if (sem == null) {
-        sem = new SimpleBinarySemaphore();
-        semaphores.put(to, sem);
+	sem = new SimpleBinarySemaphore();
+	semaphores.put(to, sem);
       }
       sem.give();
     }
@@ -308,7 +294,7 @@ public class TestV3Poller extends LockssTestCase {
     /**
      * Overridden to just agree.
      */
-    protected BlockTally XXXtallyBlock(HashBlock block) {
+    protected BlockTally tallyBlock(HashBlock block) {
       BlockTally tally = new BlockTally();
       for (Iterator iter = innerCircle.values().iterator(); iter.hasNext();) {
         PsmInterp interp = (PsmInterp)iter.next();

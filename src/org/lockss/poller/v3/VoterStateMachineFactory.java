@@ -1,5 +1,5 @@
 /*
- * $Id: VoterStateMachineFactory.java,v 1.3 2005-06-24 07:59:15 smorabito Exp $
+ * $Id: VoterStateMachineFactory.java,v 1.4 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -83,12 +83,14 @@ public class VoterStateMachineFactory {
       new PsmState("GenerateVote",
 		   new PsmMethodAction(actionClass, "handleGenerateVote"),
 		   new PsmResponse(V3Events.evtOk, "WaitVoteRequest"),
-		   new PsmResponse(V3Events.evtElse, "Error")),
+                   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("WaitVoteRequest", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgVoteRequest,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceiveVoteRequest")),
-		   new PsmResponse(V3Events.evtVoteRequestOk, "SendVote"),
+						          "handleReceiveVoteRequest")),
+		   new PsmResponse(V3Events.evtWaitVoteRequest, PsmWait.FOREVER),
+                   new PsmResponse(V3Events.evtWaitHashingDone, PsmWait.FOREVER),
+		   new PsmResponse(V3Events.evtReadyToVote, "SendVote"),
 		   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("SendVote",
 		   new PsmMethodAction(actionClass, "handleSendVote"),
@@ -97,14 +99,14 @@ public class VoterStateMachineFactory {
       new PsmState("WaitReceipt", PsmWait.FOREVER,
 		   new PsmResponse(V3Events.msgVoteRequest,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceiveVoteRequest")),
+				                         "handleReceiveVoteRequest")),
 		   new PsmResponse(V3Events.msgRepairRequest,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceiveRepairRequest")),
+				                         "handleReceiveRepairRequest")),
 		   new PsmResponse(V3Events.msgReceipt,
 				   new PsmMethodMsgAction(actionClass,
-							  "handleReceiveReceipt")),
-		   new PsmResponse(V3Events.evtVoteRequestOk, "SendVote"),
+				                         "handleReceiveReceipt")),
+		   new PsmResponse(V3Events.evtReadyToVote, "SendVote"),
 		   new PsmResponse(V3Events.evtRepairRequestOk, "SendRepair"),
 		   new PsmResponse(V3Events.evtReceiptOk, "ProcessReceipt"),
 		   new PsmResponse(V3Events.evtElse, "Error")),

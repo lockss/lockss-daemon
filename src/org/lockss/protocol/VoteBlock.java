@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.1 2005-03-23 07:01:09 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
  */
 
 /*
@@ -26,38 +26,43 @@
 
 package org.lockss.protocol;
 
-import java.util.Arrays;
-import org.mortbay.util.B64Code;
+import java.util.*;
+
+import org.mortbay.util.*;
 
 /**
  * A simple bean representing a V3 vote block -- a file, or part of a file.
  */
 public class VoteBlock {
+  
+  /** Vote type enum.  Is this a vote on content, headers, or metadata? */
+  public static final int CONTENT_VOTE = 0;
+  public static final int HEADER_VOTE = 1;
+  public static final int METADATA_VOTE = 3;
+  private static final String[] voteTypeStrings = {
+    "Content", "Header", "Metadata"
+  };
+  
+  private int m_pollType;
   private String m_fileName;
-  private int m_filteredLength = 0;
-  private int m_filteredOffset = 0;
-  private int m_unfilteredLength = 0;
-  private int m_unfilteredOffset = 0;
-  private byte[] m_plainHash;
-  private byte[] m_challengeHash;
-  private byte[] m_proof;
+  private long m_filteredLength = 0;
+  private long m_filteredOffset = 0;
+  private long m_unfilteredLength = 0;
+  private long m_unfilteredOffset = 0;
+  private byte[] m_contentHash;
 
   public VoteBlock() { }
 
-  // Convenience constructor for testing.
-  public VoteBlock(String fileName, int fLength, int fOffset,
-		   int uLength, int uOffset, byte[] plHash,
-		   byte[] chHash, byte[] proof) {
+  public VoteBlock(String fileName, long fLength, long fOffset,
+		   long uLength, long uOffset, byte[] hash, int pollType) {
     m_fileName = fileName;
     m_filteredLength = fLength;
     m_filteredOffset = fOffset;
     m_unfilteredLength = uLength;
     m_unfilteredOffset = uOffset;
-    m_plainHash = plHash;
-    m_challengeHash = chHash;
-    m_proof = proof;
+    m_contentHash = hash;
+    m_pollType = pollType;
   }
-
 
   public String getFileName() {
     return m_fileName;
@@ -67,78 +72,73 @@ public class VoteBlock {
     m_fileName = s;
   }
 
-  public int getFilteredLength() {
+  public long getFilteredLength() {
     return m_filteredLength;
   }
 
-  public void setFilteredLength(int i) {
-    m_filteredLength = i;
+  public void setFilteredLength(long l) {
+    m_filteredLength = l;
   }
 
-  public int getFilteredOffset() {
+  public long getFilteredOffset() {
     return m_filteredOffset;
   }
 
-  public void setFilteredOffset(int i) {
-    m_filteredOffset = i;
+  public void setFilteredOffset(long l) {
+    m_filteredOffset = l;
   }
 
-  public int getUnfilteredLength() {
+  public long getUnfilteredLength() {
     return m_unfilteredLength;
   }
 
-  public void setUnfilteredLength(int i) {
-    m_unfilteredLength = i;
+  public void setUnfilteredLength(long l) {
+    m_unfilteredLength = l;
   }
 
-  public int getUnfilteredOffset() {
+  public long getUnfilteredOffset() {
     return m_unfilteredOffset;
   }
 
-  public void setUnfilteredOffset(int i) {
-    m_unfilteredOffset = i;
+  public void setUnfilteredOffset(long l) {
+    m_unfilteredOffset = l;
   }
 
-  public byte[] getPlainHash() {
-    return m_plainHash;
+  public byte[] getHash() {
+    return m_contentHash;
   }
 
-  public void setPlainHash(byte[] b) {
-    m_plainHash = b;
+  public void setHash(byte[] b) {
+    m_contentHash = b;
   }
-
-  public byte[] getChallengeHash() {
-    return m_challengeHash;
+  
+  public void setVoteType(int type) {
+    m_pollType = type;
   }
-
-  public void setChallengeHash(byte[] b) {
-    m_challengeHash = b;
+  
+  public int getVoteType() {
+    return m_pollType;
   }
-
-  public byte[] getProof() {
-    return m_proof;
-  }
-
-  public void setProof(byte[] b) {
-    m_proof = b;
+  
+  public String getVoteTypeString() {
+    if (m_pollType >= 0 && m_pollType < voteTypeStrings.length) {
+      return voteTypeStrings[m_pollType];
+    } else {
+      return "Unknown";
+    }
   }
 
   public String toString() {
     StringBuffer sb = new StringBuffer("[VoteBlock: ");
+    sb.append("vt = " + getVoteTypeString() + ", ");
     sb.append("fn = " + m_fileName + ", ");
     sb.append("fl = " + m_filteredLength + ", ");
     sb.append("fo = " + m_filteredOffset + ", ");
     sb.append("ul = " + m_unfilteredLength + ", ");
     sb.append("uo = " + m_unfilteredOffset + ", ");
-    sb.append("ph = " +
-	      m_plainHash == null ? "null" : new String(B64Code.encode(m_plainHash))
-	      + ", ");
     sb.append("ch = " +
-	      m_challengeHash == null ? "null" : new String(B64Code.encode(m_challengeHash))
+	      m_contentHash == null ? "null" : new String(B64Code.encode(m_contentHash))
 	      + ", ");
-    sb.append("pr = " +
-	      m_proof == null ? "null" : new String(B64Code.encode(m_proof))
-	      + " ]");
     return sb.toString();
   }
 
@@ -153,30 +153,24 @@ public class VoteBlock {
 
     VoteBlock vb = (VoteBlock)o;
     return vb.m_fileName.equals(m_fileName) &&
+      vb.m_pollType == m_pollType &&
       vb.m_filteredLength == m_filteredLength &&
       vb.m_filteredOffset == m_filteredOffset &&
       vb.m_unfilteredLength == m_unfilteredLength &&
       vb.m_unfilteredOffset == m_unfilteredOffset &&
-      Arrays.equals(vb.m_plainHash, m_plainHash) &&
-      Arrays.equals(vb.m_challengeHash, m_challengeHash) &&
-      Arrays.equals(vb.m_proof, m_proof);
+      Arrays.equals(vb.m_contentHash, m_contentHash);
   }
 
   public int hashCode() {
     int result = 17;
     result = 37 * result + m_fileName.hashCode();
-    result = 37 * result + m_filteredLength;
-    result = 37 * result + m_filteredOffset;
-    result = 37 * result + m_unfilteredLength;
-    result = 37 * result + m_unfilteredOffset;
-    for (int i = 0; i < m_plainHash.length; i++) {
-      result = 37 * result + m_plainHash[i];
-    }
-    for (int i = 0; i < m_challengeHash.length; i++) {
-      result = 37 * result + m_challengeHash[i];
-    }
-    for (int i = 0; i < m_proof.length; i++) {
-      result = 37 * result + m_proof[i];
+    result = 37 * result + m_pollType;
+    result = (int)(37 * result + m_filteredLength);
+    result = (int)(37 * result + m_filteredOffset);
+    result = (int)(37 * result + m_unfilteredLength);
+    result = (int)(37 * result + m_unfilteredOffset);
+    for (int i = 0; i < m_contentHash.length; i++) {
+      result = 37 * result + m_contentHash[i];
     }
     return result;
   }
