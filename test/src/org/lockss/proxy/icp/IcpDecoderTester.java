@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderTester.java,v 1.1 2005-08-25 20:12:38 thib_gc Exp $
+ * $Id: IcpDecoderTester.java,v 1.1.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -35,18 +35,31 @@ package org.lockss.proxy.icp;
 import java.net.DatagramPacket;
 import java.util.Arrays;
 
+import org.lockss.proxy.icp.IcpDecoder;
+import org.lockss.proxy.icp.IcpDecoder.Factory;
+
 import junit.framework.TestCase;
 
+/**
+ * <p>Tests classes that implement {@link IcpDecoder}.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class IcpDecoderTester extends TestCase {
 
-  private IcpDecoderFactory factory;
-  
-  protected abstract IcpDecoderFactory makeFactory();
-  
+  /**
+   * <p>An ICP decoder factory.</p>
+   */
+  private Factory factory;
+
+  /* Inherit documentation */
   public void setUp() {
     this.factory = makeFactory();
   }
   
+  /**
+   * <p>Tests decoding.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testDecoding() throws Exception {
     IcpDecoder decoder = factory.makeIcpDecoder();
     
@@ -58,6 +71,19 @@ public abstract class IcpDecoderTester extends TestCase {
     }
   }
   
+  /**
+   * <p>Produces an ICP decoder factory that produces ICP decoders of
+   * the class under consideration.</p>
+   * @return An ICP decoder factory.
+   */
+  protected abstract Factory makeFactory();
+  
+  /**
+   * <p>Asserts that the argument message has desired properties with
+   * respect to the expected message.</p>
+   * @param expected An expected message.
+   * @param packet   An actual message.
+   */
   private static void expect(IcpMessage expected, IcpMessage message) {
     assertEquals(expected.getOpcode(), message.getOpcode());
     assertEquals(expected.getVersion(), message.getVersion());

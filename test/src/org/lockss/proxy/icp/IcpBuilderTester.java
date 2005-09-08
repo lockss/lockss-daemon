@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.2 2005-08-29 22:50:25 thib_gc Exp $
+ * $Id: IcpBuilderTester.java,v 1.2.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -33,29 +33,84 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.InetAddress;
-import java.net.URL;
 import java.util.Arrays;
+
+import org.lockss.proxy.icp.IcpBuilder;
+import org.lockss.proxy.icp.IcpBuilder.Factory;
 
 import junit.framework.TestCase;
 
+/**
+ * <p>Tests classes that implement {@link IcpBuilder}.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class IcpBuilderTester extends TestCase {
 
+  /*
+   * begin NESTED INTERFACE
+   * ======================
+   */
+  /**
+   * <p>Encapsulates a test on an ICP response.</p>
+   * @author Thib Guicherd-Callin
+   */
   private interface ResponseTester {
+
+    /**
+     * <p>Make a response to the given query.</p>
+     * @param query An ICP query.
+     * @return An ICP message.
+     * @throws IcpProtocolException if an ICP error occurs.
+     */
     IcpMessage makeResponse(IcpMessage query)
         throws IcpProtocolException;
+    
   }
+  /*
+   * end NESTED INTERFACE
+   * ====================
+   */
   
+  /*
+   * begin NESTED INTERFACE
+   * ======================
+   */
+  /**
+   * <p>Encapsulates a test on an ICP response made from a query
+   * requesting a source return time trip.</p>
+   * @author Thib Guicherd-Callin
+   */
   private interface SrcRttResponseTester extends ResponseTester {
+
+    /**
+     * <p>Make a response to the given query.</p>
+     * @param query An ICP query.
+     * @return An ICP message.
+     * @throws IcpProtocolException if an ICP error occurs.
+     */
     IcpMessage makeSrcRttResponse(IcpMessage query)
         throws IcpProtocolException;
+    
   }
+  /*
+   * end NESTED INTERFACE
+   * ====================
+   */
 
+  /**
+   * <p>An ICP builder.</p>
+   */
   private IcpBuilder builder;
 
+  /* Inherit documentation */
   public void setUp() throws Exception {
     this.builder = makeFactory().makeIcpBuilder();
   }
 
+  /**
+   * <p>Tests {@link IcpBuilder#makeDenied}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeDenied() throws Exception {
     ResponseTester tester = new ResponseTester() {
       public IcpMessage makeResponse(IcpMessage query)
@@ -68,10 +123,18 @@ public abstract class IcpBuilderTester extends TestCase {
                         MockIcpMessage.getStandardSender());
   }
 
+  /**
+   * <p>Tests {@link IcpBuilder#makeDiscoveryEcho}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeDiscoveryEcho() {
     // Unimplemented
   }
   
+  /**
+   * <p>Tests {@link IcpBuilder#makeError}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeError() throws Exception {
     ResponseTester tester = new ResponseTester() {
       public IcpMessage makeResponse(IcpMessage query)
@@ -84,6 +147,10 @@ public abstract class IcpBuilderTester extends TestCase {
                         MockIcpMessage.getStandardSender());
   }
   
+  /**
+   * <p>Tests {@link IcpBuilder#makeHit}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeHit() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
       public IcpMessage makeResponse(IcpMessage query)
@@ -101,6 +168,10 @@ public abstract class IcpBuilderTester extends TestCase {
                         MockIcpMessage.getStandardSender());
   }
 
+  /**
+   * <p>Tests {@link IcpBuilder#makeHitObj}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeHitObj() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
       public IcpMessage makeResponse(IcpMessage query)
@@ -132,6 +203,10 @@ public abstract class IcpBuilderTester extends TestCase {
                              response.getPayloadObject()));
   }
 
+  /**
+   * <p>Tests {@link IcpBuilder#makeMiss}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeMiss() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
       public IcpMessage makeResponse(IcpMessage query)
@@ -149,6 +224,10 @@ public abstract class IcpBuilderTester extends TestCase {
                         MockIcpMessage.getStandardSender());
   }
   
+  /**
+   * <p>Tests {@link IcpBuilder#makeMissNoFetch}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeMissNoFetch() throws Exception {
     SrcRttResponseTester tester = new SrcRttResponseTester() {
       public IcpMessage makeResponse(IcpMessage query)
@@ -166,8 +245,11 @@ public abstract class IcpBuilderTester extends TestCase {
                         MockIcpMessage.getStandardSender());
   }
 
+  /**
+   * <p>Tests {@link IcpBuilder#makeQuery}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeQuery() throws Exception {
-    final URL sampleUrl = new URL("http://www.stanford.edu/");
     IcpMessage query;
     
     query = builder.makeQuery(MockIcpMessage.getStandardRequester(),
@@ -179,12 +261,28 @@ public abstract class IcpBuilderTester extends TestCase {
     assertEquals(MockIcpMessage.getStandardQueryUrl(), query.getPayloadUrl());
   }
 
+  /**
+   * <p>Tests {@link IcpBuilder#makeSourceEcho}.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testMakeSourceEcho() {
     // Unimplemented
   }
 
-  protected abstract IcpBuilderFactory makeFactory();
+  /**
+   * <p>Produces an ICP builder factory that produces ICP builders of
+   * the class under consideration.</p>
+   * @return An ICP builder factory.
+   */
+  protected abstract Factory makeFactory();
 
+  /**
+   * <p>Performs a response test with the given response tester.</p>
+   * @param tester         A response tester.
+   * @param expectedOpcode The expected opcode.
+   * @param expectedSender The expected sender.
+   * @throws Exception if an error occurs.
+   */
   private void performResponseTest(ResponseTester tester,
                                    byte expectedOpcode,
                                    InetAddress expectedSender)
@@ -215,7 +313,14 @@ public abstract class IcpBuilderTester extends TestCase {
     assertFalse("Should not have contained a source return trip time: "
         + response.toString(), response.containsSrcRttResponse());
   }
-  
+
+  /**
+   * <p>Performs a response test with the given response tester.</p>
+   * @param tester         A response tester.
+   * @param expectedOpcode The expected opcode.
+   * @param expectedSender The expected sender.
+   * @throws Exception if an error occurs.
+   */
   private void performResponseTest(SrcRttResponseTester tester,
                                    byte expectedOpcode,
                                    InetAddress expectedSender)
@@ -246,7 +351,16 @@ public abstract class IcpBuilderTester extends TestCase {
                         expectedOpcode,
                         expectedSender);
   }
-  
+
+  /**
+   * <p>Asserts that the argument message has given properties.</p>
+   * @param message               An ICP message.
+   * @param expectedOpcode        The expected opcode.
+   * @param expectedVersion       The expected version number.
+   * @param expectedRequestNumber The expected request number.
+   * @param expectedSender        The expected sender address.
+   * @param expectedPayloadUrl    The expected payload URL.
+   */
   private static void expect(IcpMessage message,
                              byte expectedOpcode,
                              byte expectedVersion,

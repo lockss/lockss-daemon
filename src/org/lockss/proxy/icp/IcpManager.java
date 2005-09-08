@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.6 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.6.2.1 2005-09-08 01:03:17 thib_gc Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import java.net.SocketException;
 
 import org.lockss.app.BaseLockssDaemonManager;
 import org.lockss.app.ConfigurableManager;
-import org.lockss.app.LockssAppException;
 import org.lockss.config.Configuration;
 import org.lockss.config.Configuration.Differences;
 import org.lockss.daemon.ResourceManager;
@@ -48,32 +47,70 @@ import org.lockss.proxy.ProxyManager;
 import org.lockss.util.Logger;
 import org.lockss.util.RateLimiter;
 
+/**
+ * <p>A daemon manager that handles the ICP server.</p>
+ * @author Thib Guicherd-Callin
+ * @see IcpSocketImpl
+ */
 public class IcpManager
     extends BaseLockssDaemonManager
     implements ConfigurableManager, IcpHandler {
 
+  /**
+   * <p>An ICP builder.</p>
+   */
   private IcpBuilder icpBuilder;
   
+  /**
+   * <p>An ICP factory.</p>
+   */
   private IcpFactory icpFactory;
   
+  /**
+   * <p>An ICP socket.</p>
+   */
   private IcpSocketImpl icpSocket;
   
+  /**
+   * <p>A rate limiter for use by the ICP socket.</p>
+   */
   private RateLimiter limiter;
-  
+
+  /**
+   * <p>A reference to the plugin manager.</p>
+   */
   private PluginManager pluginManager;
   
+  /**
+   * <p>A reference port number.</p>
+   */
   private int port;
-  
+
+  /**
+   * <p>A reference to the proxy manager.</p>
+   */
   private ProxyManager proxyManager;
   
+  /**
+   * <p>A reference to the resource manager.</p>
+   */
   private ResourceManager resourceManager;
   
+  /**
+   * <p>A UDP socket for use by the ICP socket.</p>
+   */
   private DatagramSocket udpSocket;
 
+  /**
+   * <p>Returns a rate limiter governing the acceptable reception rate
+   * of ICP messages.</p>
+   * @return This manager's rate limiter.
+   */
   public RateLimiter getLimiter() {
     return limiter;
   }
 
+  /* Inherit documentation */
   public void icpReceived(IcpReceiver source, IcpMessage message) {
     if (message.getOpcode() == IcpMessage.ICP_OP_QUERY) {
         IcpMessage response;
@@ -130,6 +167,7 @@ public class IcpManager
     }
   }
   
+  /* Inherit documentation */
   public void setConfig(Configuration newConfig,
                         Configuration prevConfig,
                         Differences changedKeys) {
@@ -152,6 +190,7 @@ public class IcpManager
     }
   }
 
+  /* Inherit documentation */
   public void startService() {
     super.startService();
     pluginManager = getDaemon().getPluginManager();
@@ -166,11 +205,15 @@ public class IcpManager
     }
   }
 
+  /* Inherit documentation */
   public void stopService() {
     icpSocket.requestStop();
     super.stopService();
   }
   
+  /**
+   * <p>Sets several internals to null.</p>
+   */
   private void forget() {
     icpBuilder = null; 
     icpFactory = null;
@@ -179,7 +222,10 @@ public class IcpManager
     limiter = null;
     port = -1;
   }
-  
+
+  /**
+   * <p>Starts the ICP socket.</p>
+   */
   private void startSocket() {
     if (isAppInited()) {
       try {
@@ -209,7 +255,10 @@ public class IcpManager
       }
     }
   }
-  
+
+  /**
+   * <p>Stops the ICP socket.</p>
+   */
   private void stopSocket() {
     if (icpSocket != null) {
       logger.debug2("stopSocket in IcpManager: action");
@@ -218,22 +267,43 @@ public class IcpManager
       forget(); // minimize footprint
     }
   }
-  
+
+  /**
+   * <p>The default ICP enabled flag.</p>
+   */
   public static final boolean DEFAULT_ICP_ENABLED = false;
   
+  /**
+   * <p>The default ICP port.</p>
+   */
   public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
 
+  /**
+   * <p>The ICP enabled flag parameter.</p>
+   */
   public static final String PARAM_ICP_ENABLED =
     "org.lockss.proxy.icp.enabled";
 
+  /**
+   * <p>The ICP port parameter.</p>
+   */
   public static final String PARAM_ICP_PORT =
     "org.lockss.proxy.icp.port";
   
+  /**
+   * <p>The default ICP rate-limiting string.</p>
+   */
   private static final String DEFAULT_ICP_INCOMING_RATE =
     "50/1s";
   
+  /**
+   * <p>A logger for use by instances of this class.</p>
+   */
   private static Logger logger = Logger.getLogger("IcpManager");
   
+  /**
+   * <p>The ICP rate-limiting string parameter.</p>
+   */
   private static final String PARAM_ICP_INCOMING_RATE =
   "org.lockss.proxy.icp.incomingRequestsPerSecond";
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSender.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpSender.java,v 1.1.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -35,12 +35,33 @@ package org.lockss.proxy.icp;
 import java.io.IOException;
 import java.net.InetAddress;
 
+/**
+ * <p>An abstraction for classes that are able to send ICP messages
+ * to recipients.</p>
+ * @author Thib Guicherd-Callin
+ */
 public interface IcpSender {
 
+  /**
+   * <p>Sends the given message to the recipient, on the default ICP 
+   * port.</p>
+   * @param message   An ICP message.
+   * @param recipient A recipient address.
+   * @throws IOException if an input/output error occurs.
+   * @see IcpMessage#ICP_PORT
+   * @see #send(IcpMessage, InetAddress, int)
+   */
   void send(IcpMessage message,
             InetAddress recipient)
       throws IOException;
   
+  /**
+   * <p>Sned the given message to the recipient.</p>
+   * @param message   An ICP message.
+   * @param recipient A recipient address.
+   * @param port      A remote port number.
+   * @throws IOException if an input/output error occurs.
+   */
   void send(IcpMessage message,
             InetAddress recipient,
             int port)

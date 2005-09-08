@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderFactory.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
+ * $Id: TestIcpEncoderImpl.java,v 1.1.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -32,16 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+import org.lockss.proxy.icp.IcpEncoder.Factory;
+
 /**
- * <p>An abstraction for classes that need to obtain ICP decoders.</p>
+ * <p>Tests the {@link IcpFactoryImpl.IcpEncoderImpl} class.</p>
  * @author Thib Guicherd-Callin
  */
-public interface IcpDecoderFactory {
+public class TestIcpEncoderImpl extends IcpEncoderTester {
 
-  /**
-   * <p>Builds a new ICP decoder.</p>
-   * @return An object conforming to {@link IcpDecoder}.
-   */
-  IcpDecoder makeIcpDecoder();
-  
+  /* Inherit documentation */
+  protected Factory makeFactory() {
+    return IcpFactoryImpl.makeEncoderFactory();
+  }
+
 }

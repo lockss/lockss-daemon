@@ -1,5 +1,5 @@
 /*
- * $Id: MockIcpMessage.java,v 1.3 2005-08-29 22:50:25 thib_gc Exp $
+ * $Id: MockIcpMessage.java,v 1.3.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -36,11 +36,20 @@ import java.io.UnsupportedEncodingException;
 import java.net.*;
 import java.util.ArrayList;
 
+/**
+ * <p>Provides general facilities to generate lightweight mock ICP
+ * messages and their binary array counterparts.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class MockIcpMessage implements IcpMessage {
 
   /*
-   * begin static inner class
-   * ========================
+   * begin STATIC NESTED CLASS
+   * =========================
+   */
+  /**
+   * <p>A mock ICP query without a hit object.</p>
+   * @author Thib Guicherd-Callin
    */
   private static class MockIcpQueryMessage extends MockIcpMessage {
     public short getLength() { return (short)(4 + super.getLength()); }
@@ -49,13 +58,18 @@ public abstract class MockIcpMessage implements IcpMessage {
     public boolean isQuery() { return true; }
   }
   /*
-   * end static inner class
-   * ======================
+   * end STATIC NESTED CLASS
+   * =======================
    */
   
   /*
-   * begin static inner class
-   * ========================
+   * begin STATIC NESTED CLASS
+   * =========================
+   */
+  /**
+   * <p>A mock ICP response message with a source return time trip
+   * reponse.</p>
+   * @author Thib Guicherd-Callin
    */
   private static abstract class MockIcpResponseMessage extends MockIcpMessage {
     public boolean containsSrcRttResponse() { return true; }
@@ -65,13 +79,17 @@ public abstract class MockIcpMessage implements IcpMessage {
     public boolean isResponse() { return true; }
   }
   /*
-   * end static inner class
-   * ======================
+   * end STATIC NESTED CLASS
+   * =======================
    */
   
   /*
-   * begin static inner class
-   * ========================
+   * begin STATIC NESTED CLASS
+   * =========================
+   */
+  /**
+   * <p>A simple struct associating an ICP message and an equivalent
+   * UDP packet representation.</p>
    */
   private static class TestPair {
     private IcpMessage message;
@@ -82,14 +100,16 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
   }
   /*
-   * end static inner class
-   * ======================
+   * end STATIC NESTED CLASS
+   * =======================
    */
-  
+
+  /* Inherit documentation */
   public boolean containsSrcRttResponse() {
     return false;
   }
   
+  /* Inherit documentation */
   public short getLength() {
     try {
       return (short)(  20  // for the header
@@ -102,18 +122,22 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
   }
 
+  /* Inherit documentation */
   public int getOptionData() {
     return 0;
   }
 
+  /* Inherit documentation */
   public int getOptions() {
     return 0;
   }
 
+  /* Inherit documentation */
   public byte[] getPayloadObject() {
     return null;
   }
   
+  /* Inherit documentation */
   public short getPayloadObjectLength() {
     byte[] payload = getPayloadObject();
     if (getOpcode() == ICP_OP_HIT_OBJ && payload != null) {
@@ -123,82 +147,123 @@ public abstract class MockIcpMessage implements IcpMessage {
       return (short)0;
     }
   }
+
+  /* Inherit documentation */
   public String getPayloadUrl() {
     return getStandardQueryUrl();
   }
+  
+  /* Inherit documentation */
   public InetAddress getRequester() {
     return null;
   }
   
+  /* Inherit documentation */
   public int getRequestNumber() {
     return 0xdeadbeef;
   }
   
+  /* Inherit documentation */
   public InetAddress getSender() {
     return getStandardSender();
   }
 
+  /* Inherit documentation */
   public short getSrcRttResponse() {
     return 0;
   }
 
+  /* Inherit documentation */
   public InetAddress getUdpAddress() {
     return getStandardUdpAddress();
   }
 
+  /* Inherit documentation */
   public int getUdpPort() {
     return getStandardUdpPort();
   }
 
+  /* Inherit documentation */
   public boolean isQuery() {
     return false;
   }
 
+  /* Inherit documentation */
   public boolean isResponse() {
     return false;
   }
 
+  /* Inherit documentation */
   public byte getVersion() {
     return (byte)2; // version 2
   }
 
+  /* Inherit documentation */
   public boolean requestsHitObj() {
     return false;
   }
   
+  /* Inherit documentation */
   public boolean requestsSrcRtt() {
     return false;
   }
 
+  /* Inherit documentation */
   public void setUdpAddress(InetAddress udpAddress) {
     // nothing
   }
 
+  /* Inherit documentation */
   public void setUdpPort(int port) {
     // nothing
   }
 
+  /**
+   * <p>The usual destination address.</p>
+   */
   private static InetAddress standardDestination;
 
+  /**
+   * <p>The usual payload bytes.</p>
+   */
   private static final byte[] standardPayloadData;
 
+  /**
+   * <p>The usual query URL string.</p>
+   */
   private static String standardQueryUrl;
 
+  /**
+   * <p>The usual requester address.</p>
+   */
   private static InetAddress standardRequester;
 
+  /**
+   * <p>The usual sender address.</p>
+   */
   private static InetAddress standardSender;
 
+  /**
+   * <p>The usual UDP address.</p>
+   */
   private static InetAddress standardUdpAddress;
 
+  /**
+   * <p>The usual UDP port.</p>
+   */
   private static final int standardUdpPort = 3128;
 
+  /**
+   * <p>A list of predefined test pairs.</p>
+   */
   private static ArrayList testPairs;
   
   /*
-   * begin static block
-   * ==================
+   * begin STATIC INITIALIZER
+   * ========================
    */
   static {
+    /* Initialize the usual values */
     try {
       standardSender = makeAddress(1, 2, 3, 4);
       standardUdpAddress = makeAddress(4, 3, 2, 1);
@@ -215,15 +280,16 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
   }
   /*
-   * end static block
-   * ================
+   * end STATIC INITIALIZER
+   * ======================
    */
   
   /*
-   * begin static block
-   * ==================
+   * begin STATIC INITIALIZER
+   * ========================
    */
   static {
+    /* Initialize the predefined test pairs */
     try {
       testPairs = new ArrayList();
       DatagramPacket packet;
@@ -289,65 +355,128 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
   }
   /*
-   * end static block
-   * ================
+   * end STATIC INITIALIZER
+   * ======================
    */
 
+  /**
+   * <p>Returns the number of predefined test pairs.</p>
+   * @return The number of predefined test pairs.
+   * @see #getTestMessage
+   * @see #getTestPacket
+   */
   public static int countTestPairs() {
-    // TODO Auto-generated method stub
     return testPairs.size();
   }
-  
+
+  /**
+   * <p>Gets the usual destination address.</p>
+   * @return A standard address used as the destination.
+   */
   public static InetAddress getStandardDestination() {
     return standardDestination;
   }
   
+  /**
+   * <p>Gets the usual payload bytes.</p>
+   * @return A standard array of bytes used as payload data.
+   */
   public static byte[] getStandardPayloadData() {
     return standardPayloadData;
   }
 
+  /**
+   * <p>Gets the usual query URL string.</p>
+   * @return A standard URL string used as a payload URL.
+   */
   public static String getStandardQueryUrl() {
     return standardQueryUrl;
   }
   
+  /**
+   * <p>Gets the usual requester address.</p>
+   * @return A standard address used as a requester address.
+   */
   public static InetAddress getStandardRequester() {
     return standardRequester;
   }
   
+  /**
+   * <p>Gets the usual sender address.</p> 
+   * @return A standard address used as a sender address.
+   */
   public static InetAddress getStandardSender() {
     return standardSender;
   }
 
+  /**
+   * <p>Get the usual source return trip time response.</p>
+   * @return A standard value used as a source return trip time
+   * response.
+   */
   public static short getStandardSrcRttResponse() {
     return (short)12345;
   }
 
+  /**
+   * <p>Gets the usual UDP address.</p>
+   * @return A standard address used as the UDP address.
+   */
   public static InetAddress getStandardUdpAddress() {
     return standardUdpAddress;
   }
 
+  /**
+   * <p>Gets the usual UDP port.</p>
+   * @return A standard value used as the UDP port number.
+   */
   public static int getStandardUdpPort() {
     return standardUdpPort;
   }
 
+  /**
+   * <p>Retrieves the <code>n</code>-th predefined ICP message.</p>
+   * @param nth The index of the predefined message, between zero and
+   *            ({@link #countTestPairs}()-1).
+   * @return The predefined ICP message indexed by <code>nth</code>.
+   */
   public static IcpMessage getTestMessage(int nth) {
     return ((TestPair)testPairs.get(nth)).message;
   }
   
+  /**
+   * <p>Retrieves the <code>n</code>-th predefined UDP packet.</p>
+   * @param nth The index of the predefined packet, between zero and
+   *            ({@link #countTestPairs}()-1).
+   * @return The predefined UDP packet indexed by <code>nth</code>.
+   */
   public static DatagramPacket getTestPacket(int nth) {
     return ((TestPair)testPairs.get(nth)).packet;
   }
 
+  /**
+   * <p>builds an invalid ICP message.</p>
+   * @return A new ICP message.
+   */
   public static IcpMessage invalid() {
     return new MockIcpMessage() {
       public byte getOpcode() { return ICP_OP_INVALID; }
     };
   }
-  
+
+  /**
+   * <p>Builds a query message.</p>
+   * @return A new ICP message.
+   * @see MockIcpQueryMessage
+   */
   public static IcpMessage query() {
     return new MockIcpQueryMessage();
   }
   
+  /**
+   * <p>Builds a query message requesting a hit object.</p>
+   * @return A new ICP MEssage.
+   */
   public static IcpMessage queryRequestHitObj() {
     return new MockIcpQueryMessage() {
       public int getOptions() { return ICP_FLAG_HIT_OBJ; }
@@ -355,6 +484,11 @@ public abstract class MockIcpMessage implements IcpMessage {
     };    
   }
   
+  /**
+   * <p>Builds a query message requesting a source return trip
+   * time.</p>
+   * @return A new ICP message.
+   */
   public static IcpMessage queryRequestSrcRtt() {
     return new MockIcpQueryMessage() {
       public int getOptions() { return ICP_FLAG_SRC_RTT; }
@@ -362,6 +496,11 @@ public abstract class MockIcpMessage implements IcpMessage {
     };
   }
   
+  /**
+   * <p>Builds a query message requesting both a hit object and a
+   * source return trip time.</p>
+   * @return A new ICP message.
+   */
   public static IcpMessage queryRequestSrcRttRequestHitObj() {
     return new MockIcpQueryMessage() {
       public int getOptions() { return ICP_FLAG_HIT_OBJ | ICP_FLAG_SRC_RTT; }
@@ -370,6 +509,14 @@ public abstract class MockIcpMessage implements IcpMessage {
     };    
   }
 
+  /**
+   * <p>Makes an IP address from four integers.</p>
+   * @param i1 The first byte of the address.
+   * @param i2 The second byte of the address.
+   * @param i3 The third byte of the address.
+   * @param i4 The fourth byte of the address.
+   * @return The resulting address.
+   */
   private static InetAddress makeAddress(int i1, int i2, int i3, int i4) {
     try {
       return InetAddress.getByAddress(
@@ -390,7 +537,13 @@ public abstract class MockIcpMessage implements IcpMessage {
       throw new RuntimeException(buffer.toString(), uhe);
     }
   }
-  
+
+  /**
+   * <p>Packs an ICP message into an equivalent array of bytes.</p>
+   * @param message An original ICP message.
+   * @return An array of bytes representing the message.
+   * @throws Exception if an unexpected problem arises.
+   */
   private static byte[] makePacketBytes(IcpMessage message)
       throws Exception {
     byte[] ret = new byte[message.getLength()];    

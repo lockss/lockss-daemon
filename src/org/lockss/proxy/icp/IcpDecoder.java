@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoder.java,v 1.2 2005-08-27 00:26:03 thib_gc Exp $
+ * $Id: IcpDecoder.java,v 1.2.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -38,11 +38,34 @@ import java.net.DatagramPacket;
  * <p>Defines a simple abstraction for classes that are able to
  * parse a {@link DatagramPacket} into an {@link IcpMessage}.</p>
  * @author Thib Guicherd-Callin
- * @see IcpDecoderFactory
+ * @see Factory
  * @see IcpMessage
  */
 public interface IcpDecoder {
 
+  /*
+   * begin NESTED INTERFACE
+   * ======================
+   */
+  /**
+   * <p>An abstraction for classes that need to obtain ICP decoders.</p>
+   * @author Thib Guicherd-Callin
+   * @see IcpDecoder
+   */
+  public interface Factory {
+
+    /**
+     * <p>Builds a new ICP decoder.</p>
+     * @return An object conforming to {@link IcpDecoder}.
+     */
+    IcpDecoder makeIcpDecoder();
+    
+  }
+  /*
+   * end NESTED INTERFACE
+   * ====================
+   */
+  
   /**
    * <p>Translates the given UDP packet into an {@link IcpMessage}
    * instance.</p>

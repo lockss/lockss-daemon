@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSocket.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpSocket.java,v 1.1.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-public interface IcpSocket extends IcpReceiver, IcpSender {
+/**
+ * <p>Denotes a class that is both an ICP receiver and an ICP
+ * sender.</p>
+ * @author Thib Guicherd-Callin
+ */
+public interface IcpSocket
+    extends IcpReceiver,
+            IcpSender {
 
+  // no new methods
+  
 }

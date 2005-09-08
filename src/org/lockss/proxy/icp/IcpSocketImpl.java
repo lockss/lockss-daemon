@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSocketImpl.java,v 1.4 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: IcpSocketImpl.java,v 1.4.2.1 2005-09-08 01:03:18 thib_gc Exp $
  */
 
 /*
@@ -42,24 +42,54 @@ import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Constants;
 import org.lockss.util.Logger;
 
-public class IcpSocketImpl
-    extends LockssRunnable
-    implements IcpSocket, IcpHandler {
+/**
+ * <p>An implementation of the {@link IcpSocket} interface, that is
+ * customized to work closely with the ICP manager
+ * ({@link IcpManager}).</p>
+ * @author Thib Guicherd-Callin
+ */
+public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
 
+  /**
+   * <p>An ICP decoder.</p>
+   */
   private IcpDecoder decoder;
   
+  /**
+   * <p>An ICP encoder.</p>
+   */
   private IcpEncoder encoder;
   
+  /**
+   * <p>A flag indicating that externally, the thread should go
+   * on.</p>
+   */
   private boolean goOn;
   
+  /**
+   * <p>A list of ICP handlers.</p>
+   */
   private ArrayList handlers;
   
+  /**
+   * <p>A back reference to the ICP manager.</p>
+   */
   private IcpManager icpManager;
-  
-  private Logger logger;
-  
+
+  /**
+   * <p>A UDP socket for use by this ICP thread.</p>
+   */
   private DatagramSocket socket;
   
+  /**
+   * <p>Builds a new ICP socket with the given arguments.</p>
+   * @param name       A name for the {@link LockssRunnable} thread.
+   * @param socket     A UDP socket ready for a call to
+   *                   {@link DatagramSocket#receive(DatagramPacket)}.
+   * @param encoder    An ICP encoder.
+   * @param decoder    An ICP decoder.
+   * @param icpManager A back reference to the ICP manager.
+   */
   public IcpSocketImpl(String name,
                        DatagramSocket socket,
                        IcpEncoder encoder,
@@ -74,14 +104,12 @@ public class IcpSocketImpl
     this.decoder = decoder;
     this.handlers = new ArrayList();
     this.icpManager = icpManager;
-    
-    // Loggers
-    this.logger = Logger.getLogger("IcpSocketImpl-default");
-    
+
     // Log
-    this.logger.debug2("constructor in IcpSocketImpl: end");
+    logger.debug2("constructor in IcpSocketImpl: end");
   }
 
+  /* Inherit documentation */
   public void addIcpHandler(IcpHandler handler) {
     synchronized (handlers) {
       if (!handlers.contains(handler)) {
@@ -90,22 +118,22 @@ public class IcpSocketImpl
     }
   }
 
+  /* Inherit documentation */
   public int countIcpHandlers() {
     return handlers.size();
   }
 
-  public void icpReceived(IcpReceiver source, IcpMessage message) {
-    if (logger.isDebug3()) {
-      logger.debug3(message.toString());
-    }
-  }
-  
+  /* Inherit documentation */
   public void removeIcpHandler(IcpHandler handler) {
     synchronized (handlers) {
       handlers.remove(handler);
     }
   }
-
+  
+  /**
+   * <p>Asks this thread to stop listening for incoming ICP messages
+   * and to exit cleanly <em>after closing the socket</em>.</p>
+   */
   public void requestStop() {
     goOn = false;
     if (socket != null && !socket.isClosed()) {
@@ -113,12 +141,14 @@ public class IcpSocketImpl
     }
   }
 
+  /* Inherit documentation */
   public void send(IcpMessage message,
                    InetAddress recipient)
       throws IOException {
     send(message, recipient, IcpMessage.ICP_PORT);
   }
-  
+
+  /* Inherit documentation */
   public void send(IcpMessage message,
                    InetAddress recipient,
                    int port)
@@ -129,8 +159,10 @@ public class IcpSocketImpl
     }
     socket.send(packet);
   }
-
+  
+  /* Inherit documentation */
   protected void lockssRun() {
+    // Set up
     logger.debug2("lockssRun in IcpSocketImpl: begin");
     long interval =
       Configuration.getLongParam(PARAM_ICP_WDOG_INTERVAL,
@@ -147,7 +179,7 @@ public class IcpSocketImpl
     try {
       // Set up socket timeout
       socket.setSoTimeout((int)interval / 2); // may throw
-      addIcpHandler(this);
+      addInternalIcpHandlers();
       startWDog("icp", interval);
 
       // Main loop
@@ -191,12 +223,14 @@ public class IcpSocketImpl
       logger.warning("Could not set socket timeout", se);
     }
     finally {
-      removeIcpHandler(this);
+      // Clean up
+      removeInternalIcpHandlers();
       stopWDog();
       logger.debug2("lockssRun in IcpSocketImpl: end");
     }
   }
 
+  /* Inherit documentation */
   protected void threadExited() {
     StringBuffer buffer = new StringBuffer();
     buffer.append("The thread exited unexpectedly. Typically this is ");
@@ -216,6 +250,26 @@ public class IcpSocketImpl
     }
   }
 
+  /**
+   * <p>Registers any internal ICP handlers.</p>
+   */
+  private void addInternalIcpHandlers() {
+    addIcpHandler(
+        new IcpHandler() {
+          public void icpReceived(IcpReceiver source, IcpMessage message) {
+            if (logger.isDebug3()) {
+              logger.debug3(message.toString());
+            }
+          }          
+        }
+    );    
+  }
+
+  /**
+   * <p>Notifies all the handlers of the arrival of a new icoming
+   * ICP message.</p>
+   * @param message The decoded ICP message.
+   */
   private void notifyHandlers(IcpMessage message) {
     synchronized (handlers) {
       for (Iterator iter = handlers.iterator() ; iter.hasNext() ; ) {
@@ -232,15 +286,41 @@ public class IcpSocketImpl
       }
     }
   }
-  
+
+  /**
+   * <p>Unregisters any internal handlers.</p>
+   */
+  private synchronized void removeInternalIcpHandlers() {
+    while (handlers.contains(this)) {
+      handlers.remove(this);
+    }
+  }
+
+  /**
+   * <p>The default ICP thread priority.</p>
+   */
   private static final int DEFAULT_ICP_THREAD_PRIORITY =
     Thread.NORM_PRIORITY + 1;
   
+  /**
+   * <p>The default ICP watchdog interval.</p>
+   */
   private static final long DEFAULT_ICP_WDOG_INTERVAL = Constants.HOUR;
   
+  /**
+   * <p>A logger for use by instances of this class.</p>
+   */
+  private static Logger logger = Logger.getLogger("IcpSocketImpl");
+  
+  /**
+   * <p>The ICP thread priority parameter.</p>
+   */
   private static final String PARAM_ICP_THREAD_PRIORITY =
     "org.lockss.thread.icp.priority";
   
+  /**
+   * <p>The ICP watchdog interval parameter.</p>
+   */
   private static final String PARAM_ICP_WDOG_INTERVAL =
     "org.lockss.thread.icp.watchdog.interval";
   
