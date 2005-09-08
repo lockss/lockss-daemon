@@ -1742,44 +1742,44 @@
 
 <!-- Begin SAGE titles -->
       <property name="JournalofCasesinEducationalLeadership">
-	<property name="title" value="Journal of Cases in Educational Leadership Volume " />
+	<property name="title" value="Journal of Cases in Educational Leadership Volume 8" />
 	<property name="journalTitle" value="Journal of Cases in Educational Leadership" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="" />
+	  <property name="value" value="http://jel.sagepub.com/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
-	  <property name="value" value="" />
+	  <property name="value" value="8" />
 	</property>
       </property>
 
       <property name="JournalofHospitalityAndTourismResearch">
-	<property name="title" value="Journal of Hospitality &amp; Tourism Research Volume " />
+	<property name="title" value="Journal of Hospitality &amp; Tourism Research Volume 29" />
 	<property name="journalTitle" value="Journal of Hospitality &amp; Tourism Research" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="" />
+	  <property name="value" value="http://jht.sagepub.com/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
-	  <property name="value" value="" />
+	  <property name="value" value="29" />
 	</property>
       </property>
 
       <property name="JournalofPsychoeducationalAssessment">
-	<property name="title" value="Journal of Psychoeducational Assessment Volume " />
+	<property name="title" value="Journal of Psychoeducational Assessment Volume 23" />
 	<property name="journalTitle" value="Journal of Psychoeducational Assessment" />
 	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
 	<property name="param.1">
 	  <property name="key" value="base_url" />
-	  <property name="value" value="" />
+	  <property name="value" value="http://jpa.sagepub.com/" />
 	</property>
 	<property name="param.2">
 	  <property name="key" value="volume" />
-	  <property name="value" value="" />
+	  <property name="value" value="23" />
 	</property>
       </property>
 <!-- End SAGE titles -->
