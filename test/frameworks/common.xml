@@ -1076,6 +1076,7 @@
 	</property>
       </property>
 
+<!-- Begin OUP titles -->
       <property name="hmg14">
 	<property name="title" value="Human Molecular Genetics Volume 14" />
 	<property name="estSize" value="241MB" />
@@ -1737,6 +1738,51 @@
 	  <property name="value" value="58" />
 	</property>
       </property>
+<!-- End OUP titles -->
+
+<!-- Begin SAGE titles -->
+      <property name="JournalofCasesinEducationalLeadership">
+	<property name="title" value="Journal of Cases in Educational Leadership Volume " />
+	<property name="journalTitle" value="Journal of Cases in Educational Leadership" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="" />
+	</property>
+      </property>
+
+      <property name="JournalofHospitalityAndTourismResearch">
+	<property name="title" value="Journal of Hospitality &amp; Tourism Research Volume " />
+	<property name="journalTitle" value="Journal of Hospitality &amp; Tourism Research" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="" />
+	</property>
+      </property>
+
+      <property name="JournalofPsychoeducationalAssessment">
+	<property name="title" value="Journal of Psychoeducational Assessment Volume " />
+	<property name="journalTitle" value="Journal of Psychoeducational Assessment" />
+	<property name="plugin" value="org.lockss.plugin.highwire.HighWirePlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="volume" />
+	  <property name="value" value="" />
+	</property>
+      </property>
+<!-- End SAGE titles -->
 
 
       <property name="nejm352">
