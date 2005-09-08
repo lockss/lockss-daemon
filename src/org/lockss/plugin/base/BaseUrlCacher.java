@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.59 2005-09-06 22:59:15 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.59.2.1 2005-09-08 21:54:10 troberts Exp $
  */
 
 /*
@@ -272,6 +272,7 @@ public class BaseUrlCacher implements UrlCacher {
     } catch (IOException e) {
       logger.debug("Couldn't reset input stream, so getting new one", e);
       is.close();
+      releaseConnection();
       is = new BufferedInputStream(getUncachedInputStream());
     }
     return is;
