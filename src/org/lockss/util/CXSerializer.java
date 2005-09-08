@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.6 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.7 2005-09-08 01:35:44 thib_gc Exp $
  */
 
 /*
@@ -228,25 +228,6 @@ public class CXSerializer extends ObjectSerializer {
   }
 
   /**
-   * <p>Returns the mode for this class from the configuration.</p>
-   * @return The mode constant currently in the configuration.
-   * @see #PARAM_COMPATIBILITY_MODE
-   */
-  public static int getModeFromConfiguration() {
-    return Configuration.getIntParam(PARAM_COMPATIBILITY_MODE,
-                                     DEFAULT_COMPATIBILITY_MODE);
-  }
-  
-  protected void serialize(Writer writer, Object obj)
-      throws IOException, SerializationException {
-    throwIfNull(obj);
-    ObjectSerializer serializer;
-    if (getCurrentMode() == CASTOR_MODE) { serializer = castor; }
-    else                                 { serializer = xstream; }
-    serializer.serialize(writer, obj);
-  }
-
-  /**
    * <p>Sets the current mode for this serializer.</p>
    * <p>Must be one of the three mode constants {@link #CASTOR_MODE},
    * {@link #XSTREAM_MODE} or {@link #XSTREAM_OVERWRITE_MODE}.
@@ -267,6 +248,15 @@ public class CXSerializer extends ObjectSerializer {
     }
   }
   
+  protected void serialize(Writer writer, Object obj)
+      throws IOException, SerializationException {
+    throwIfNull(obj);
+    ObjectSerializer serializer;
+    if (getCurrentMode() == CASTOR_MODE) { serializer = castor; }
+    else                                 { serializer = xstream; }
+    serializer.serialize(writer, obj);
+  }
+
   /**
    * <p>Serialization always in Castor format.</p>
    */
@@ -306,12 +296,12 @@ public class CXSerializer extends ObjectSerializer {
    */
   public static final String PARAM_COMPATIBILITY_MODE =
     "org.lockss.serialization.compatibilityMode";
-
+  
   /**
    * <p>Serialization always in XStream format.</p>
    */
   public static final int XSTREAM_MODE = 2;
-  
+
   /**
    * <p>Serialization always in XStream format; additionally, any
    * deserialization performed on a {@link File} or {@link String}
@@ -323,11 +313,21 @@ public class CXSerializer extends ObjectSerializer {
    * @see ObjectSerializer#deserialize(String)
    */
   public static final int XSTREAM_OVERWRITE_MODE = 3;
-
+  
   /**
    * <p>The default value of {@link #PARAM_COMPATIBILITY_MODE}
-   * (currently {@link #CASTOR_MODE})</p>
+   * (currently {@link #XSTREAM_MODE}).</p>
    */
-  static final int DEFAULT_COMPATIBILITY_MODE = CASTOR_MODE;
+  private static final int DEFAULT_COMPATIBILITY_MODE = XSTREAM_MODE;
+
+  /**
+   * <p>Returns the mode for this class from the configuration.</p>
+   * @return The mode constant currently in the configuration.
+   * @see #PARAM_COMPATIBILITY_MODE
+   */
+  public static int getModeFromConfiguration() {
+    return Configuration.getIntParam(PARAM_COMPATIBILITY_MODE,
+                                     DEFAULT_COMPATIBILITY_MODE);
+  }
 
 }
