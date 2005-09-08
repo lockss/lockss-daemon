@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoderTester.java,v 1.2 2005-09-07 18:47:07 thib_gc Exp $
+ * $Id: IcpEncoderTester.java,v 1.3 2005-09-08 01:24:41 thib_gc Exp $
  */
 
 /*
@@ -35,20 +35,31 @@ package org.lockss.proxy.icp;
 import java.net.DatagramPacket;
 import java.util.Arrays;
 
+import org.lockss.proxy.icp.IcpEncoder;
 import org.lockss.proxy.icp.IcpEncoder.Factory;
 
 import junit.framework.TestCase;
 
+/**
+ * <p>Tests classes that implement {@link IcpEncoder}.</p>
+ * @author Thib Guicherd-Callin
+ */
 public abstract class IcpEncoderTester extends TestCase {
 
-  protected abstract Factory makeFactory();
-  
+  /**
+   * <p>An ICP encoder factory.</p>
+   */
   private Factory factory;
   
+  /* Inherit documentation */
   public void setUp() {
     this.factory = makeFactory();
   }
   
+  /**
+   * <p>Tests encoding.</p>
+   * @throws Exception if an error occurs.
+   */
   public void testEncoding() throws Exception {
     IcpEncoder encoder = factory.makeIcpEncoder();
     
@@ -61,6 +72,19 @@ public abstract class IcpEncoderTester extends TestCase {
     }
   }
   
+  /**
+   * <p>Produces an ICP encoder factory that produces ICP encoders of
+   * the class under consideration.</p>
+   * @return An ICP encoder factory.
+   */
+  protected abstract Factory makeFactory();
+
+  /**
+   * <p>Asserts that the argument packet has desired properties with
+   * respect to the expected packet.</p>
+   * @param expected An expected packet.
+   * @param packet   An actual packet.
+   */
   private static void expect(DatagramPacket expected, DatagramPacket packet) {
     assertEquals(expected.getAddress(), packet.getAddress());
     assertEquals(expected.getPort(), packet.getPort());

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpHandler.java,v 1.1 2005-08-25 20:12:37 thib_gc Exp $
+ * $Id: IcpHandler.java,v 1.2 2005-09-08 01:24:41 thib_gc Exp $
  */
 
 /*
@@ -32,8 +32,19 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+/**
+ * <p>An abstraction for classes that want to be observers of incoming
+ * ICP messages.</p>
+ * @author Thib Guicherd-Callin
+ */
 public interface IcpHandler {
 
+  /**
+   * <p>Lets an ICP receiver notify this class that an incoming ICP
+   * message has arrived.</p>
+   * @param source  The originating ICP listener.
+   * @param message The decoded ICP message.
+   */
   void icpReceived(IcpReceiver source, IcpMessage message);
   
 }

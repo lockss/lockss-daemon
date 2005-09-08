@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpBuilder.java,v 1.1 2005-08-25 20:12:38 thib_gc Exp $
+ * $Id: TestIcpDecoderImpl.java,v 1.2 2005-09-08 01:24:41 thib_gc Exp $
  */
 
 /*
@@ -32,10 +32,17 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-public class TestIcpBuilder extends IcpBuilderTester {
+import org.lockss.proxy.icp.IcpDecoder.Factory;
 
-  protected IcpBuilderFactory makeFactory() {
-    return IcpFactoryImpl.makeBuilderFactory();
+/**
+ * <p>Tests the {@link IcpFactoryImpl.IcpDecoderImpl} class.</p>
+ * @author Thib Guicherd-Callin
+ */
+public class TestIcpDecoderImpl extends IcpDecoderTester {
+
+  /* Inherit documentation */
+  protected Factory makeFactory() {
+    return IcpFactoryImpl.makeDecoderFactory();
   }
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilder.java,v 1.3 2005-08-29 22:50:25 thib_gc Exp $
+ * $Id: IcpBuilder.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
  */
 
 /*
@@ -38,11 +38,34 @@ import java.net.InetAddress;
  * <p>Specifies an interface for classes that are able to produce
  * ICP queries, ICP responses and other ICP messages.</p>
  * @author Thib Guicherd-Callin
- * @see IcpBuilderFactory
+ * @see Factory
  * @see IcpMessage
  */
 public interface IcpBuilder {
 
+  /*
+   * begin NESTED INTERFACE
+   * ======================
+   */
+  /**
+   * <p>An abstraction for classes that need to obtain ICP builders.</p>
+   * @author Thib Guicherd-Callin
+   * @see IcpBuilder
+   */
+  public interface Factory {
+
+    /**
+     * <p>Builds a new ICP builder.</p>
+     * @return An object conforming to {@link IcpBuilder}.
+     */
+    IcpBuilder makeIcpBuilder();
+    
+  }
+  /*
+   * end NESTED INTERFACE
+   * ====================
+   */
+  
   /**
    * <p>Produces a denied message in response to a query.</p>
    * @param query The ICP query.

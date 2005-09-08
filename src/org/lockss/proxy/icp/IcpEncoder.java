@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoder.java,v 1.3 2005-09-07 18:47:07 thib_gc Exp $
+ * $Id: IcpEncoder.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
  */
 
 /*
@@ -54,6 +54,7 @@ public interface IcpEncoder {
     /**
      * <p>Builds a new ICP encoder.</p>
      * @return An object conforming to {@link IcpEncoder}.
+     * @see IcpEncoder
      */
     IcpEncoder makeIcpEncoder();
     

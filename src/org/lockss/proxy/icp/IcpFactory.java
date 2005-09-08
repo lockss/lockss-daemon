@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactory.java,v 1.3 2005-09-07 18:47:07 thib_gc Exp $
+ * $Id: IcpFactory.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
  */
 
 /*
@@ -38,9 +38,9 @@ package org.lockss.proxy.icp;
  * @author Thib Guicherd-Callin
  */
 public interface IcpFactory
-    extends IcpBuilderFactory,
-            IcpEncoder.Factory,
-            IcpDecoderFactory {
+    extends IcpBuilder.Factory,
+            IcpDecoder.Factory,
+            IcpEncoder.Factory {
 
   // no new methods
   
