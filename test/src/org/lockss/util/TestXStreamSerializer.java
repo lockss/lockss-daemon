@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.5 2005-09-07 16:51:08 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.6 2005-09-09 23:42:10 thib_gc Exp $
  */
 
 /*
@@ -158,19 +158,19 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     
     // Tests
     assertFalse("Original map contains the secret postdeserialization key.",
-        original.getMap().containsKey("postdeserialization.key"));
+        original.getMap().containsKey(PostDeserializationMap.KEY));
     assertFalse("Original map contains the secret postdeserialization value.",
-        original.getMap().containsValue("postdeserialization.value"));
+        original.getMap().containsValue(PostDeserializationMap.VALUE));
     assertFalse("Original map and clone are equal.",
         original.getMap().equals(clone.getMap()));
     assertTrue("Clone map does not contain the secret postdeserialization key.",
-        clone.getMap().containsKey("postdeserialization.key"));
+        clone.getMap().containsKey(PostDeserializationMap.KEY));
     assertTrue("Clone map does not contain the secret postdeserialization value.",
-        clone.getMap().containsValue("postdeserialization.value"));
+        clone.getMap().containsValue(PostDeserializationMap.VALUE));
     assertEquals("Clone map does not map the secret postdeserialization key to "
         + "the secret postdeserialization value.",
-        "postdeserialization.value",
-        clone.getMap().get("postdeserialization.key"));
+        PostDeserializationMap.VALUE,
+        clone.getMap().get(PostDeserializationMap.KEY));
   }
   
   /**

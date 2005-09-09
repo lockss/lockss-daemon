@@ -1,10 +1,10 @@
 /*
- * $Id: LockssTestCase.java,v 1.70 2005-09-06 19:59:50 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.71 2005-09-09 23:42:09 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -1285,7 +1285,7 @@ public class LockssTestCase extends TestCase {
    * method, throw UnsupportedOperationException: add(), addAll(), clear(),
    * remove(), removeAll(), retainAll() */
 
-  public void assertUnmodifiable(Collection coll) {
+  public static void assertUnmodifiable(Collection coll) {
     List list = ListUtil.list("bar");
     try {
       coll.add("foo");

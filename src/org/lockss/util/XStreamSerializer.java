@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.7 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.8 2005-09-09 23:42:09 thib_gc Exp $
  */
 
 /*
@@ -105,10 +105,40 @@ public class XStreamSerializer extends ObjectSerializer {
      * 
      * With this class, it's possible to throw an exception that is
      * specifically recognizable as being internal to the custom
-     * marshalling/unmarshallin strategies defined in this file,
-     * without changing the signature of the methods involved in the
+     * marshalling/unmarshalling strategies defined in this file,
+     * without changing the signatures of the methods involved in the
      * XStream API.
      */
+    
+    /**
+     * <p>Builds a new exception.</p>
+     * @param rootClassName    Name of the class of the root of the
+     *                         object graph that caused the exception.
+     * @param currentClassName Name of the class that actually caused
+     *                         the exception.
+     */
+    public LockssNotSerializableException(String rootClassName,
+                                          String currentClassName) {
+      super(makeMessage(rootClassName, currentClassName));
+    }
+    
+    /**
+     * <p>Formats the error message.</p>
+     * @param rootClassName    Name of the class of the root of the
+     *                         object graph that caused the exception.
+     * @param currentClassName Name of the class that actually caused
+     *                         the exception.
+     * @return A formatted error string.
+     */
+    private static String makeMessage(String rootClassName,
+                                      String currentClassName) {
+      StringBuffer buffer = new StringBuffer();
+      buffer.append("Could not serialize an object of type ");
+      buffer.append(currentClassName);
+      buffer.append(" while serializing a root object of type ");
+      buffer.append(rootClassName);
+      return buffer.toString();
+    }
     
   }
   /*
@@ -129,6 +159,8 @@ public class XStreamSerializer extends ObjectSerializer {
   private static class LockssReferenceByXPathMarshaller
       extends ReferenceByXPathMarshaller {
 
+    private String rootClassName;
+    
     /**
      * <p>Builds a new marshaller.</p>
      * @param writer
@@ -137,8 +169,10 @@ public class XStreamSerializer extends ObjectSerializer {
      */
     public LockssReferenceByXPathMarshaller(HierarchicalStreamWriter writer,
                                             DefaultConverterLookup converterLookup,
-                                            ClassMapper classMapper) {
+                                            ClassMapper classMapper,
+                                            String rootClassName) {
       super(writer, converterLookup, classMapper);
+      this.rootClassName = rootClassName;
     }
 
     /**
@@ -156,9 +190,12 @@ public class XStreamSerializer extends ObjectSerializer {
     public void convertAnother(Object parent) {
       if ( !( parent instanceof Serializable ||
               parent instanceof LockssSerializable) ) {
-        logger.debug2("Could not serialize an object of type "
-            + parent.getClass().getName());
-        throw new LockssNotSerializableException();
+        LockssNotSerializableException exc =
+          new LockssNotSerializableException(
+              rootClassName,
+              parent.getClass().getName());
+        logger.debug2(exc.getMessage());
+        throw exc;
       }
       super.convertAnother(parent);
     }
@@ -213,8 +250,11 @@ public class XStreamSerializer extends ObjectSerializer {
                         ClassMapper classMapper,
                         DataHolder dataHolder) {
       new LockssReferenceByXPathMarshaller(
-          writer, converterLookup, classMapper).start(
-              root, dataHolder);
+          writer,
+          converterLookup,
+          classMapper,
+          root.getClass().getName()
+      ).start(root, dataHolder);
     }
 
     /**
