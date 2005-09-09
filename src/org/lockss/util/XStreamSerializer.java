@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.8 2005-09-09 23:42:09 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.9 2005-09-09 23:52:52 thib_gc Exp $
  */
 
 /*
@@ -530,8 +530,8 @@ public class XStreamSerializer extends ObjectSerializer {
       init();
       xs.toXML(obj, writer); // lazy instantiation
     }
-    catch (LockssNotSerializableException inse) {
-      throw new NotSerializableException();
+    catch (LockssNotSerializableException lnse) {
+      throw new NotSerializableException(lnse.getMessage());
     }
     catch (StreamException se) {
       throw new IOException(se.getMessage());
