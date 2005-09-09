@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.2.2.1 2005-09-08 01:03:18 thib_gc Exp $
+ * $Id: IcpBuilderTester.java,v 1.2.2.2 2005-09-09 23:29:10 thib_gc Exp $
  */
 
 /*
@@ -33,18 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.InetAddress;
-import java.util.Arrays;
 
 import org.lockss.proxy.icp.IcpBuilder;
 import org.lockss.proxy.icp.IcpBuilder.Factory;
-
-import junit.framework.TestCase;
+import org.lockss.test.LockssTestCase;
 
 /**
  * <p>Tests classes that implement {@link IcpBuilder}.</p>
  * @author Thib Guicherd-Callin
  */
-public abstract class IcpBuilderTester extends TestCase {
+public abstract class IcpBuilderTester extends LockssTestCase {
 
   /*
    * begin NESTED INTERFACE
@@ -195,12 +193,12 @@ public abstract class IcpBuilderTester extends TestCase {
     IcpMessage response;
     query = MockIcpMessage.queryRequestHitObj();
     response = tester.makeResponse(query);
-    assertTrue(Arrays.equals(MockIcpMessage.getStandardPayloadData(),
-                             response.getPayloadObject()));
+    assertEquals(MockIcpMessage.getStandardPayloadData(),
+                 response.getPayloadObject());
     query = MockIcpMessage.queryRequestSrcRttRequestHitObj();
     response = tester.makeSrcRttResponse(query);
-    assertTrue(Arrays.equals(MockIcpMessage.getStandardPayloadData(),
-                             response.getPayloadObject()));
+    assertEquals(MockIcpMessage.getStandardPayloadData(),
+                 response.getPayloadObject());
   }
 
   /**

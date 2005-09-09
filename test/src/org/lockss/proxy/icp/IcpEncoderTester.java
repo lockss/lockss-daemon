@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoderTester.java,v 1.1.2.2 2005-09-08 01:03:18 thib_gc Exp $
+ * $Id: IcpEncoderTester.java,v 1.1.2.3 2005-09-09 23:29:10 thib_gc Exp $
  */
 
 /*
@@ -33,18 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.DatagramPacket;
-import java.util.Arrays;
 
 import org.lockss.proxy.icp.IcpEncoder;
 import org.lockss.proxy.icp.IcpEncoder.Factory;
-
-import junit.framework.TestCase;
+import org.lockss.test.LockssTestCase;
 
 /**
  * <p>Tests classes that implement {@link IcpEncoder}.</p>
  * @author Thib Guicherd-Callin
  */
-public abstract class IcpEncoderTester extends TestCase {
+public abstract class IcpEncoderTester extends LockssTestCase {
 
   /**
    * <p>An ICP encoder factory.</p>
@@ -88,7 +86,7 @@ public abstract class IcpEncoderTester extends TestCase {
   private static void expect(DatagramPacket expected, DatagramPacket packet) {
     assertEquals(expected.getAddress(), packet.getAddress());
     assertEquals(expected.getPort(), packet.getPort());
-    assertTrue(Arrays.equals(expected.getData(), packet.getData()));
+    assertEquals(expected.getData(), packet.getData());
   }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderTester.java,v 1.1.2.1 2005-09-08 01:03:18 thib_gc Exp $
+ * $Id: IcpDecoderTester.java,v 1.1.2.2 2005-09-09 23:29:10 thib_gc Exp $
  */
 
 /*
@@ -33,18 +33,16 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.DatagramPacket;
-import java.util.Arrays;
 
 import org.lockss.proxy.icp.IcpDecoder;
 import org.lockss.proxy.icp.IcpDecoder.Factory;
-
-import junit.framework.TestCase;
+import org.lockss.test.LockssTestCase;
 
 /**
  * <p>Tests classes that implement {@link IcpDecoder}.</p>
  * @author Thib Guicherd-Callin
  */
-public abstract class IcpDecoderTester extends TestCase {
+public abstract class IcpDecoderTester extends LockssTestCase {
 
   /**
    * <p>An ICP decoder factory.</p>
@@ -100,8 +98,8 @@ public abstract class IcpDecoderTester extends TestCase {
       case IcpMessage.ICP_OP_HIT_OBJ:
         assertEquals(expected.getPayloadObjectLength(),
                      message.getPayloadObjectLength());
-        assertTrue(Arrays.equals(expected.getPayloadObject(),
-                                 message.getPayloadObject()));
+        assertEquals(expected.getPayloadObject(),
+                     message.getPayloadObject());
         break;
     }
 
