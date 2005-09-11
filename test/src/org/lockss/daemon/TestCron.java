@@ -1,12 +1,12 @@
 /*
- * $Id: TestCron.java,v 1.2 2005-09-11 07:02:29 tlipkis Exp $
+ * $Id: TestCron.java,v 1.3 2005-09-11 07:24:27 tlipkis Exp $
  */
 
 /*
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
-n
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
