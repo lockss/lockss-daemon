@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.157 2005-09-07 23:37:58 troberts Exp $
+ $Id: build.xml,v 1.158 2005-09-11 07:15:40 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -271,19 +271,19 @@ Args:
   </path>
 
   <path id="run.classpath">
-    <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <path refid="compile.classpath" />
   </path>
 
   <path id="test.compile.classpath">
-    <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <path refid="compile.classpath" />
     <pathelement path="${junit.jar}" />
     <pathelement path="${junit.addons.jar}" />
     <pathelement path="${httpunit.jar}" />
     <pathelement path="${nekohtml.jar}" />
     <pathelement path="${js.jar}" />
-  	<pathelement path="${xmlunit.jar}" />
+    <pathelement path="${xmlunit.jar}" />
     <!-- plugin jar -->
     <pathelement path="${lockss.plugins.jar}" />
   </path>
@@ -308,8 +308,8 @@ Args:
   </path> 
 
   <path id="plugins.compile.classpath">
-    <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <path refid="compile.classpath" />
   </path>
 
   <path id="plugins.test.compile.classpath">
@@ -323,8 +323,8 @@ Args:
   </path>
 
   <path id="tools.compile.classpath">
-    <path refid="compile.classpath" />
     <pathelement path="${lockss.jar}" />
+    <path refid="compile.classpath" />
     <pathelement path="${jdk.tools.jar}" />
   </path>
 
@@ -422,6 +422,8 @@ Test results in ${test.results}
       <sysproperty key="org.lockss.defaultLogTarget" value="${logtarget}"/>
       <sysproperty key="org.lockss.keepTempFiles" value="${keeptempfiles}"/>
       <sysproperty key="org.lockss.test.timeout.shouldnt" value="${timeout}"/>
+<!--       <sysproperty key="jaxp.debug" value="1"/> -->
+
     </junit1>
    </sequential>
   </macrodef>
@@ -795,6 +797,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
    description="Jar the LOCKSS classes" >
     <jar jarfile="${lockss.jar}" basedir="${classes}" >
       <include name="**/" />
+      <metainf dir="${src}/META-INF" includes="**" />
     </jar>
   </target>
 
