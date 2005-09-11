@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.8 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: ObjectSerializer.java,v 1.9 2005-09-11 07:20:35 tlipkis Exp $
  */
 
 /*
@@ -184,7 +184,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a File instead of a Writer.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same as serializing it with a {@link java.io.Writer} on the
    * same file, in the sense of deserialization.</p>
    * @param outputFile A File instance representing the file into
    *                   which the object is being serialized.
@@ -207,7 +207,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a File instead of a Writer.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same as serializing it with a {@link java.io.Writer} on the
    * same file, in the sense of deserialization.</p>
    * @param outputFile A File instance representing the file into
    *                   which the object is being serialized.
@@ -230,7 +230,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts an OutputStream instead of a Writer.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same as serializing it with a {@link java.io.Writer} on the
    * same file, in the sense of deserialization.</p>
    * @param outputStream An output stream instance into which the
    *                     object is being serialized.
@@ -252,7 +252,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts an OutputStream instead of a Writer.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same as serializing it with a {@link java.io.Writer} on the
    * same file, in the sense of deserialization.</p>
    * @param outputStream An output stream instance into which the
    *                     object is being serialized.
@@ -274,7 +274,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a file name instead of a Writer.</p>
    * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link java.io.Writer}</p> on
+   * the same as serializing it with a {@link java.io.Writer} on
    * the same filename, in the sense of deserialization.</p>
    * @param outputFilename A file name representing the file into which
    *                       the object is being serialized.
@@ -297,7 +297,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a file name instead of a Writer.</p>
    * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link java.io.Writer}</p> on
+   * the same as serializing it with a {@link java.io.Writer} on
    * the same filename, in the sense of deserialization.</p>
    * @param outputFilename A file name representing the file into which
    *                       the object is being serialized.
@@ -366,7 +366,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a File instead of a Writer.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same as serializing it with a {@link java.io.Writer} on the
    * same file, in the sense of deserialization.</p>
    * @param outputFile A File instance representing the file into
    *                   which the object is being serialized.
@@ -418,7 +418,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts an OutputStream instead of a Writer.</p>
    * <p>The result of serializing an object with a file must be the
-   * same as serializing it with a {@link java.io.Writer}</p> on the
+   * same as serializing it with a {@link java.io.Writer} on the
    * same file, in the sense of deserialization.</p>
    * @param outputStream An output stream instance into which the
    *                     object is being serialized.
@@ -443,7 +443,7 @@ public abstract class ObjectSerializer {
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a file name instead of a Writer.</p>
    * <p>The result of serializing an object with a filename must be
-   * the same as serializing it with a {@link java.io.Writer}</p> on
+   * the same as serializing it with a {@link java.io.Writer} on
    * the same filename, in the sense of deserialization.</p>
    * @param outputFilename A file name representing the file into which
    *                       the object is being serialized.
