@@ -1,8 +1,8 @@
 /*
- * $Id: Cron.java,v 1.1 2005-09-06 19:56:55 tlipkis Exp $
+ * $Id: Cron.java,v 1.2 2005-09-11 07:02:29 tlipkis Exp $
  *
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,8 +120,12 @@ public class Cron
   void loadState(File file) {
     try {
       state = (Cron.State)makeObjectSerializer().deserialize(file);
+    } catch (FileNotFoundException e) {
+      log.info("No cron state to load, creating a new one");
+      // Default value
+      state = new Cron.State();
     } catch (Exception e) {
-      log.warning("Couldn't load cron state, creating a new one");
+      log.warning("Error loading cron state, creating a new one", e);
       // Default value
       state = new Cron.State();
     }
@@ -133,6 +137,7 @@ public class Cron
     } catch (Exception e) {
       log.error("Couldn't store cron state, disabling cron: ", e);
       disable();
+      // XXX alert
     }
   }
 
@@ -188,7 +193,7 @@ public class Cron
       for (Iterator iter = tasks.iterator(); iter.hasNext(); ) {
 	Cron.Task task = (Cron.Task)iter.next();
 	if (task.nextTime(state.getLastTime(task.getId())) <= now) {
-	  task.execute();
+	  executeTask(task);
 	  state.setLastTime(task.getId(), now);
 	  needStore = true;
 	}
@@ -199,6 +204,19 @@ public class Cron
     }
     if (enabled) {
       schedNext();
+    }
+  }
+
+  private void executeTask(Task task) {
+    try {
+      task.execute();
+    } catch (Exception e) {
+      try {
+	log.error("Error executing task " + task, e);
+      } catch (Exception e2) {
+	// in case task.toString() throws
+	log.error("Error executing task", e);
+      }
     }
   }
 
@@ -241,6 +259,33 @@ public class Cron
     }
 
     public long nextTime(long lastTime) {
+      String freq =
+	Configuration.getParam(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+			       RemoteApi.DEFAULT_BACKUP_EMAIL_FREQ);
+      if ("weekly".equalsIgnoreCase(freq)) {
+	return nextWeek(lastTime);
+      } else {
+	return nextMonth(lastTime);
+      }
+    }
+
+    // return the first day of the next week
+    public long nextWeek(long lastTime) {
+      int day = Calendar.MONDAY;
+      Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE);
+      cal.setTimeInMillis(lastTime);
+      if (cal.get(Calendar.DAY_OF_WEEK) >= day) {
+	cal.add(Calendar.WEEK_OF_MONTH, 1);
+      }
+      cal.set(Calendar.DAY_OF_WEEK, day);
+      cal.set(Calendar.HOUR, 0);
+      cal.set(Calendar.MINUTE, 0);
+      cal.set(Calendar.SECOND, 0);
+      return cal.getTimeInMillis();
+    }
+
+    // return the first day of the next month
+    public long nextMonth(long lastTime) {
       int day = 1;
       Calendar cal = Calendar.getInstance(Constants.DEFAULT_TIMEZONE);
       cal.setTimeInMillis(lastTime);

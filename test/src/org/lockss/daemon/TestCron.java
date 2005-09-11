@@ -1,5 +1,5 @@
 /*
- * $Id: TestCron.java,v 1.1 2005-09-06 19:56:55 tlipkis Exp $
+ * $Id: TestCron.java,v 1.2 2005-09-11 07:02:29 tlipkis Exp $
  */
 
 /*
@@ -91,9 +91,12 @@ public class TestCron extends LockssTestCase {
     assertEquals(777, cron.getState().getLastTime("bar"));
   }
 
-  static DateFormat df = new SimpleDateFormat("MM/dd/yyyy hh:mm");
+  static DateFormat idf = new SimpleDateFormat("MM/dd/yyyy hh:mm");
+  static DateFormat odf =
+    DateFormat.getDateTimeInstance(DateFormat.FULL, DateFormat.FULL);
   static {
-    df.setTimeZone(Constants.DEFAULT_TIMEZONE);
+    idf.setTimeZone(Constants.DEFAULT_TIMEZONE);
+    odf.setTimeZone(Constants.DEFAULT_TIMEZONE);
   }
 
   public void testCron() throws IOException {
@@ -120,18 +123,48 @@ public class TestCron extends LockssTestCase {
 		 task.getTrace());
   }
 
-  public void testMailBackupFileNext() throws Exception {
+  void assertIsDate(String date, long time) throws ParseException {
+    assertIsDate(idf.parse(date), time);
+  }
+
+  void assertIsDate(Date date, long time) {
+    if (date.getTime() != time) {
+      fail("expected:<" + odf.format(date) + "> but was:<" +
+	   odf.format(new Date(time)) + ">");
+    }
+  }
+
+  long timeOf(String date) throws ParseException {
+    return idf.parse(date).getTime();
+  }
+
+  public void testMailBackupFileNextMonth() throws Exception {
+    ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+				  "monthly");
     Cron.MailBackupFile task = new Cron.MailBackupFile(daemon);
     // time 0 is midnight Jan 1, result s.b. Feb 1
+    assertIsDate("2/1/1970 0:00", task.nextTime(0));
     assertEquals(31*Constants.DAY, task.nextTime(0));
-    assertEquals(df.parse("2/1/2005 0:00").getTime(),
-		 task.nextTime(df.parse("1/3/2005 1:00").getTime()));
-    assertEquals(df.parse("12/1/2007 0:00").getTime(),
-		 task.nextTime(df.parse("11/30/2007 4:00").getTime()));
-    assertEquals(df.parse("2/1/2008 0:00").getTime(),
-		 task.nextTime(df.parse("1/7/2008 4:00").getTime()));
-    assertEquals(df.parse("1/1/2008 0:00").getTime(),
-		 task.nextTime(df.parse("12/7/2007 4:00").getTime()));
+    assertIsDate("2/1/2005 0:00", task.nextTime(timeOf("1/1/2005 0:00")));
+    assertIsDate("2/1/2005 0:00", task.nextTime(timeOf("1/3/2005 1:00")));
+    assertIsDate("2/1/2005 0:00", task.nextTime(timeOf("1/31/2005 1:00")));
+    assertIsDate("12/1/2007 0:00", task.nextTime(timeOf("11/30/2007 4:00")));
+    assertIsDate("2/1/2008 0:00", task.nextTime(timeOf("1/7/2008 4:00")));
+    assertIsDate("1/1/2008 0:00", task.nextTime(timeOf("12/7/2007 4:00")));
+  }
+
+  public void testMailBackupFileNextWeek() throws Exception {
+    ConfigurationUtil.setFromArgs(RemoteApi.PARAM_BACKUP_EMAIL_FREQ,
+				  "weekly");
+    Cron.MailBackupFile task = new Cron.MailBackupFile(daemon);
+    // time 0 is midnight Jan 1, result s.b. Feb 1
+    assertEquals(4*Constants.DAY, task.nextTime(0));
+    assertIsDate("1/5/1970 0:00", task.nextTime(timeOf("1/1/1970 0:00")));
+    // sunday
+    assertIsDate("1/3/2005 0:00", task.nextTime(timeOf("1/2/2005 1:00")));
+    // monday
+    assertIsDate("1/10/2005 0:00", task.nextTime(timeOf("1/3/2005 1:00")));
+    assertIsDate("1/10/2005 0:00", task.nextTime(timeOf("1/4/2005 1:00")));
   }
 
   public void testMailBackupFileMail() {
