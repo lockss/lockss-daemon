@@ -1,5 +1,5 @@
 /*
- * $Id: MimeMessage.java,v 1.1 2005-09-06 20:06:31 tlipkis Exp $
+ * $Id: MimeMessage.java,v 1.2 2005-09-12 04:36:56 tlipkis Exp $
  */
 
 /*
@@ -97,13 +97,12 @@ public class MimeMessage implements MailMessage {
   public MimeMessage addFile(File file, String name)
       throws FileNotFoundException {
     try {
-      MimeBodyPart filePart = new MimeBodyPart();
       if (!file.exists() || !file.canRead()) {
 	throw new FileNotFoundException(file.getAbsolutePath()
 					+ " does not exist or is not readable.");
       }
+      MimeBodyPart filePart = new MimeBodyPart();
       FileDataSource fileData = new FileDataSource(file);
-
       DataHandler fileDataHandler = new DataHandler(fileData);
 
       //     filePart.addHeader("Content-Transfer-Encoding","base64");
@@ -137,20 +136,20 @@ public class MimeMessage implements MailMessage {
     }
   }
 
-  /** Send the body, ensuring proper network end-of-line, quoting any
-   * leading dots, and terminating with <nl>,<nl> */
-  public void sendBody(PrintStream ostrm) throws IOException {
+  /** Write the message content (RFC822 data) to the stream. */
+  public void writeData(OutputStream ostrm) throws IOException {
     try {
       if (msg.getLineCount() <= 0) {
 	finish();
       }
       msg.writeTo(ostrm);
     } catch (MessagingException e) {
-      throw new RuntimeException("sendBody", e);
+      throw new RuntimeException("writeData", e);
     } catch (IOException e) {
-      throw new RuntimeException("sendBody", e);
+      throw new RuntimeException("writeData", e);
     }
   }
+
 
   /** Return an array of all the parts; mostly for testing */
   public MimeBodyPart[] getParts() {

@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpClient.java,v 1.5 2005-09-06 20:06:31 tlipkis Exp $
+ * $Id: SmtpClient.java,v 1.6 2005-09-12 04:36:56 tlipkis Exp $
  */
 
 /*
@@ -165,9 +165,7 @@ public class SmtpClient extends TransferProtocolClient  {
       resp = sendResp("DATA");
       if (resp != RESP_START_MAIL_INPUT) return getErrResult(resp);
 
-      msg.sendBody(serverOutput);
-      // final .<crlf>
-      send(".");
+      sendData(msg);
       resp = resp();
       if (resp != RESP_ACTION_OK) return getErrResult(resp);
       result = RESULT_OK;
@@ -226,4 +224,12 @@ public class SmtpClient extends TransferProtocolClient  {
     send(msg);
     return resp();
   }
+
+  private void sendData(MailMessage msg) throws IOException {
+    SmtpOutputStream sout = new SmtpOutputStream(serverOutput);
+    msg.writeData(sout);
+    sout.flushSmtpData();
+    serverOutput.flush();
+  }
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertActionMail.java,v 1.6 2005-09-06 20:06:31 tlipkis Exp $
+ * $Id: TestAlertActionMail.java,v 1.7 2005-09-12 04:36:56 tlipkis Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class TestAlertActionMail extends LockssTestCase {
     assertEquals("recipient", rec.getRecipient());
     String[] body =
       (String[])StringUtil.breakAt(toString(rec.getMsg()),
-				   "\r\n").toArray(new String[0]);
+				   "\n").toArray(new String[0]);
     int line = 0;
     assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
     assertEquals("To: recipient", body[line++]);
@@ -153,7 +153,7 @@ public class TestAlertActionMail extends LockssTestCase {
     assertEquals("recipient", rec.getRecipient());
     String[] body =
       (String[])StringUtil.breakAt(toString(rec.getMsg()),
-				   "\r\n").toArray(new String[0]);
+				   "\n").toArray(new String[0]);
     int line = 0;
     assertEquals("From: LOCKSS cache cachename <sender>", body[line++]);
     assertEquals("To: recipient", body[line++]);
@@ -176,7 +176,7 @@ public class TestAlertActionMail extends LockssTestCase {
   String toString(MailMessage msg) {
     try {
       ByteArrayOutputStream baos = new ByteArrayOutputStream();
-      msg.sendBody(new PrintStream(baos));
+      msg.writeData(baos);
       return baos.toString();
     } catch (IOException e) {
       throw new RuntimeException("Error converting MimeMessage to string", e);
