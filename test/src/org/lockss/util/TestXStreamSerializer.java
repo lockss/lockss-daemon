@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.6 2005-09-09 23:42:10 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.7 2005-09-13 00:45:29 thib_gc Exp $
  */
 
 /*
@@ -44,54 +44,36 @@ import org.lockss.app.LockssApp;
 public class TestXStreamSerializer extends ObjectSerializerTester {
 
   /**
-   * <p>This class adds post-deserialization processing to
-   * {@link ExtMapBean} for the purposes of testing it.</p>
-   * @author Thib Guicherd-Callin
-   */
-  private static class PostDeserializationMap
-      extends ExtMapBean
-      implements LockssSerializable {
-    
-    /**
-     * <p>Leaves a post-deserialization trace by adding a key and a
-     * value to this instance's map.</p>
-     * <p>The key is {@link #KEY} and the value is {@link #VALUE}.</p>
-     * @param lockssContext
-     */
-    protected void postUnmarshal(LockssApp lockssContext) {
-      getMap().put(KEY, VALUE);
-    }
-    
-    /**
-     * <p>A secret post-deserialization key.</p>
-     */
-    private static final String KEY = "postdeserialization.key";
-    
-    /**
-     * <p>A secret post-deserialization value associated with the key
-     * {@link #KEY}.</p>
-     */
-    private static final String VALUE = "postdeserialization.value";
-    
-  }
-  
-  /**
    * <p>Used in
    * {@link TestXStreamSerializer#testPostDeserialization_TortureTest()}.</p>
    * @author Thib Guicherd-Callin
    */
   private static class ClassA implements LockssSerializable {
-    private boolean explode = true;
+    
+    private boolean explode1 = true;
+    
+    private boolean explode2 = true;
+    
     public void detonate() {
-      if (explode) {
-        fail("Failed post-deserialization torture test in class A.");
+      if (explode1) {
+        fail("Failed torture test: ClassA::explode1");
+      }
+      else if (explode2) {
+        fail("Failed torture test: ClassA::explode2");
       }
     }
+    
     protected void postUnmarshal(LockssApp lockssContext) {
-      explode = false; // defuse bomb
+      explode1 = false; // defuse bomb
     }
-  }
+    
+    protected Object postUnmarshalResolve() {
+      explode2 = false; // defuse bomb
+      return this;
+    }
 
+  }
+  
   /**
    * <p>Used in
    * {@link TestXStreamSerializer#testPostDeserialization_TortureTest()}.</p>
@@ -101,24 +83,38 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     // Separate ClassA and ClassC's post-deserialization
     // methods by a level
   }
-
+  
   /**
    * <p>Used in
    * {@link TestXStreamSerializer#testPostDeserialization_TortureTest()}.</p>
    * @author Thib Guicherd-Callin
    */
   private static class ClassC extends ClassB {
-    private boolean explode = true;
+    
+    private boolean explode1 = true;
+    
+    private boolean explode2 = true;
+    
     public void detonate() {
-      super.detonate();
-      if (explode) {
-        fail("Failed post-deserialization torture test in class C.");
+      if (explode1) {
+        fail("Failed torture test: ClassC::explode1");
+      }
+      else if (explode2) {
+        fail("Failed torture test: ClassC::explode2");
       }
     }
+    
     protected void postUnmarshal(LockssApp lockssContext) {
       super.postUnmarshal(lockssContext);
-      explode = false; // defuse bomb
+      explode1 = false; // defuse bomb
     }
+    
+    protected Object postUnmarshalResolve() {
+      super.postUnmarshalResolve();
+      explode2 = false; // defuse bomb
+      return this;
+    }
+
   }
 
   /**
@@ -127,50 +123,47 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
    * @author Thib Guicherd-Callin
    */
   private static class ClassD extends ClassC {
+    
     private ClassD first;
+    
     private ClassD second;
+  
   }
 
-  /**
-   * <p>Tests if post-deserialization works with one object containing
-   * a map.</p>
-   * <p>A much tougher test can be found in
-   * {@link TestXStreamSerializer14#testPostDeserialization_TortureTest()}.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
-   * @see TestXStreamSerializer14#testPostDeserialization_TortureTest()
-   */
-  public void testPostDeserialization()
-      throws Exception {
+  private static class PostUnmarshalExtMapBean
+      extends ExtMapBean
+      implements LockssSerializable {
     
-    // Set up needed objects
-    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
-    ObjectSerializer deserializer = makeObjectSerializer_ExtMapBean();
-    ExtMapBean original = new PostDeserializationMap();
-    original.setMap(makeSample_TypedEntryMap().m_map);
-    ExtMapBean clone;
-    StringWriter writer = new StringWriter();
-    StringReader reader;
+    private boolean invoked;
     
-    // Round trip
-    serializer.serialize(writer, original);
-    reader = new StringReader(writer.toString());
-    clone = (ExtMapBean)deserializer.deserialize(reader);
+    public PostUnmarshalExtMapBean() {
+      this.invoked = false;
+    }
     
-    // Tests
-    assertFalse("Original map contains the secret postdeserialization key.",
-        original.getMap().containsKey(PostDeserializationMap.KEY));
-    assertFalse("Original map contains the secret postdeserialization value.",
-        original.getMap().containsValue(PostDeserializationMap.VALUE));
-    assertFalse("Original map and clone are equal.",
-        original.getMap().equals(clone.getMap()));
-    assertTrue("Clone map does not contain the secret postdeserialization key.",
-        clone.getMap().containsKey(PostDeserializationMap.KEY));
-    assertTrue("Clone map does not contain the secret postdeserialization value.",
-        clone.getMap().containsValue(PostDeserializationMap.VALUE));
-    assertEquals("Clone map does not map the secret postdeserialization key to "
-        + "the secret postdeserialization value.",
-        PostDeserializationMap.VALUE,
-        clone.getMap().get(PostDeserializationMap.KEY));
+    protected void postUnmarshal(LockssApp lockssContext) {
+      this.invoked = true;
+    }
+    
+  }
+  
+  private static class PostUnmarshalResolveExtMapBean
+      extends ExtMapBean
+      implements LockssSerializable {
+    
+    private boolean invoked;
+    
+    public PostUnmarshalResolveExtMapBean() {
+      this.invoked = false;
+    }
+    
+    protected Object postUnmarshalResolve() {
+      singleton.invoked = true;
+      return singleton;
+    }
+    
+    public static final PostUnmarshalResolveExtMapBean singleton =
+      new PostUnmarshalResolveExtMapBean();
+    
   }
   
   /**
@@ -217,8 +210,52 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     d.second.second.detonate(); // aka d5
   }
 
+  public void testPostUnmarshal() throws Exception {
+    // Set up needed objects
+    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
+    ObjectSerializer deserializer = makeObjectSerializer_ExtMapBean();
+    PostUnmarshalExtMapBean original = new PostUnmarshalExtMapBean();
+    original.setMap(makeSample_TypedEntryMap().m_map);
+    PostUnmarshalExtMapBean clone;
+    StringWriter writer = new StringWriter();
+    StringReader reader;
+    
+    // Round trip
+    serializer.serialize(writer, (LockssSerializable)original);
+    reader = new StringReader(writer.toString());
+    clone = (PostUnmarshalExtMapBean)deserializer.deserialize(reader);
+    
+    // Tests
+    assertEquals(original.getMap(), clone.getMap());
+    assertTrue("postUnmarshal was not invoked", clone.invoked);
+  }
+
+  public void testPostUnmarshalResolve() throws Exception {
+    // Set up needed objects
+    ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
+    ObjectSerializer deserializer = makeObjectSerializer_ExtMapBean();
+    PostUnmarshalResolveExtMapBean original = new PostUnmarshalResolveExtMapBean();
+    original.setMap(makeSample_TypedEntryMap().m_map);
+    PostUnmarshalResolveExtMapBean clone;
+    StringWriter writer = new StringWriter();
+    StringReader reader;
+    
+    // Round trip
+    serializer.serialize(writer, (LockssSerializable)original);
+    reader = new StringReader(writer.toString());
+    clone = (PostUnmarshalResolveExtMapBean)deserializer.deserialize(reader);
+    
+    // Tests
+    assertTrue("postUnmarshalResolve was not invoked", clone.invoked);
+    assertSame(
+        "The object substitution was not performed by postUnmarshalResolve",
+        PostUnmarshalResolveExtMapBean.singleton,
+        clone
+    );
+  }
+  
   protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
     return new XStreamSerializer();
   }
-  
+
 }

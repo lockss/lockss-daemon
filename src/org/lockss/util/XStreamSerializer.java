@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.9 2005-09-09 23:52:52 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.10 2005-09-13 00:45:29 thib_gc Exp $
  */
 
 /*
@@ -325,20 +325,32 @@ public class XStreamSerializer extends ObjectSerializer {
      */
     public Object convertAnother(Object parent, Class type) {
       Object ret = super.convertAnother(parent, type);
-      invokePostDeserializationMethod(ret);
+      if (ret instanceof LockssSerializable) {
+        invokeMethod(
+            ret,
+            POST_UNMARSHAL_METHOD,
+            POST_UNMARSHAL_PARAMETERS,
+            postUnmarshalCache,
+            new Object[] { lockssContext }
+        );
+        Object surrogate = invokeMethod(
+            ret,
+            POST_UNMARSHAL_RESOLVE_METHOD,
+            POST_UNMARSHAL_RESOLVE_PARAMETERS,
+            postUnmarshalResolveCache,
+            null
+        );
+        if (surrogate != null) {
+          ret = surrogate;
+        }
+      }
       return ret;
     }
-    
-    /**
-     * <p>Looks up the hidden post-deserialization method in an
-     * object and caches it if found.</p>
-     * @param obj The object being considered.
-     * @return A {@link Method} object reflecting the hidden
-     *         post-deserialization method in the object's class (or
-     *         one of its superclasses), or null if there is no such
-     *         method in the object's inheritance hierarchy.
-     */
-    private Method cachePostDeserializationMethod(Object obj) {
+
+    private Method cacheMethod(Object obj,
+                               String methodName,
+                               Class[] methodParameters,
+                               HashMap methodCache) {
       Class objClass = obj.getClass();
       Method objMethod = null;
       
@@ -346,8 +358,8 @@ public class XStreamSerializer extends ObjectSerializer {
       while (objClass != Object.class) {
         try {
           objMethod =
-            objClass.getDeclaredMethod(POST_DESERIALIZATION_METHOD,
-                                       POST_DESERIALIZATION_PARAMETERS);
+            objClass.getDeclaredMethod(methodName,
+                                       methodParameters);
           objClass = Object.class; // executed only if call succeeds
         }
         catch (NoSuchMethodException nsmE) {
@@ -380,55 +392,56 @@ public class XStreamSerializer extends ObjectSerializer {
       return new ConversionException(buffer.toString(), exc);
     }
 
-    /**
-     * <p>Performs post-deserialization by invoking the hidden method
-     * (if it exists).</p>
-     * @param obj The freshly deserialized object.
-     */
-    private void invokePostDeserializationMethod(Object obj) {
-      if (!(obj instanceof LockssSerializable)) {
-        return; // only process LockssSerializable objects
-      }
-      
-      Method met = lookupPostDeserializationMethod(obj);
+    private Object invokeMethod(Object obj,
+                              String methodName,
+                              Class[] methodParameters,
+                              HashMap methodCache,
+                              Object[] methodArguments) {
+      Method met = lookupMethod(obj,
+                                methodName,
+                                methodParameters,
+                                methodCache);
+      Object ret = null;
       if (met != null) {
         try {
-          met.setAccessible(true); // monstrous, monstrous
-          met.invoke(obj, new Object[] { lockssContext });
+          ret = met.invoke(obj, methodArguments);
         }
-        catch (Exception exc) { throw failDeserialize(exc); }
+        catch (Exception exc) {
+          throw failDeserialize(exc);
+        }
       }
+
+      return ret;
     }
     
-    /**
-     * <p>Looks up the hidden post-deserialization method in an
-     * object.</p>
-     * @param obj The object being considered.
-     * @return A {@link Method} object reflecting the hidden
-     *         post-deserialization method in the object's class (or
-     *         one of its superclasses), or null if there is no such
-     *         method in the object's inheritance hierarchy.
-     */
-    private Method lookupPostDeserializationMethod(Object obj) {
+    private Method lookupMethod(Object obj,
+                                String methodName,
+                                Class[] methodParameters,
+                                HashMap methodCache) {
       Class objClass = obj.getClass();
       Object objMethod = methodCache.get(objClass);
       
       if (objMethod == null) { 
-        return cachePostDeserializationMethod(obj); 
+        return cacheMethod(obj,
+                           methodName,
+                           methodParameters,
+                           methodCache); 
       }
       else if (objMethod == NONE) {
         return null; 
       }
       else {
         return (Method)objMethod; 
-      }
+      }      
     }
     
     /**
      * <p>A map to cache post-deserialization {@link Method}s by
      * class.</p>
      */
-    private static final HashMap methodCache = new HashMap();
+    private static final HashMap postUnmarshalCache = new HashMap();
+    
+    private static final HashMap postUnmarshalResolveCache = new HashMap();
     
     /**
      * <p>A special unique value used in maps to denote that the
@@ -439,19 +452,25 @@ public class XStreamSerializer extends ObjectSerializer {
     /**
      * <p>The String name of the method automagically called during
      * post-deserialization of {@link LockssSerializable} objects.</p>
-     * @see #POST_DESERIALIZATION_PARAMETERS
+     * @see #POST_UNMARSHAL_PARAMETERS
      */
-    private static final String POST_DESERIALIZATION_METHOD =
+    private static final String POST_UNMARSHAL_METHOD =
       "postUnmarshal";
     
     /**
      * <p>The list of parameter types of the method automagically
      * called during post-deserialization of
      * {@link LockssSerializable} objects.</p>
-     * @see #POST_DESERIALIZATION_METHOD
+     * @see #POST_UNMARSHAL_METHOD
      */
-    private static final Class[] POST_DESERIALIZATION_PARAMETERS =
+    private static final Class[] POST_UNMARSHAL_PARAMETERS =
       new Class[] { LockssApp.class };
+    
+    private static final String POST_UNMARSHAL_RESOLVE_METHOD =
+      "postUnmarshalResolve";
+    
+    private static final Class[] POST_UNMARSHAL_RESOLVE_PARAMETERS =
+      new Class[0];
     
   }
   /*

@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.3 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.4 2005-09-13 00:45:29 thib_gc Exp $
  */
 
 /*
@@ -32,97 +32,139 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-import java.io.File;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.*;
 
+import junit.framework.Test;
+
+import org.lockss.test.LockssTestCase;
 import org.lockss.util.ObjectSerializer.SerializationException;
 
-public class TestCXSerializer extends ObjectSerializerTester {
+/**
+ * <p>Tests the Castor/XStream hybrid serializer.</p>
+ * @author Thib Guicherd-Callin
+ */
+public abstract class TestCXSerializer extends ObjectSerializerTester {
 
   /**
-   * <p>Tests whether a CXSerializer in Castor mode successfully
-   * writes output in Castor format.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
+   * <p>A version of {@link TestCXSerializer} that uses
+   * {@link CXSerializer#CASTOR_MODE}.</p>
+   * @author Thib Guicherd-Callin
    */
-  public void testCastorMode()
-      throws Exception {
-    CXSerializer serializer = makeExtMapBeanSerializer();
-    CastorSerializer deserializer =
-      new CastorSerializer(null, ExternalizableMap.MAPPING_FILE_NAME, ExtMapBean.class);
-    serializer.setCurrentMode(CXSerializer.CASTOR_MODE);
-    performRoundTrip(serializer, deserializer);
+  public static class CastorMode extends TestCXSerializer {
+    
+    /* Inherit documentation */
+    protected int getMode() {
+      return CXSerializer.CASTOR_MODE;
+    }
+    
+    /* Inherit documentation */
+    protected ObjectSerializer getStrictDeserializer() {
+      return new CastorSerializer(
+          null,
+          ExternalizableMap.MAPPING_FILE_NAME,
+          ExtMapBean.class
+      );
+    }
+
   }
-
+  
   /**
-   * <p>Tests whether a CXSerializer successfully reads input in
-   * Castor format.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
+   * <p>A version of {@link TestCXSerializer} that uses
+   * {@link CXSerializer#XSTREAM_MODE}.</p>
+   * @author Thib Guicherd-Callin
    */
-  public void testReadingCastor()
-      throws Exception {
-    CastorSerializer serializer =
-      new CastorSerializer(null, ExternalizableMap.MAPPING_FILE_NAME, ExtMapBean.class);
+  public static class XStreamMode extends TestCXSerializer {
+    
+    /* Inherit documentation */
+    protected int getMode() {
+      return CXSerializer.XSTREAM_MODE;
+    }
+    
+    /* Inherit documentation */
+    protected ObjectSerializer getStrictDeserializer() {
+      return new XStreamSerializer();
+    }
+    
+  }
+  
+  /**
+   * <p>A version of {@link TestCXSerializer} that uses
+   * {@link CXSerializer#XSTREAM_OVERWRITE_MODE}.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class XStreamOverwriteMode extends TestCXSerializer {
+    
+    /* Inherit documentation */
+    protected int getMode() {
+      return CXSerializer.XSTREAM_OVERWRITE_MODE;
+    }
+    
+    /* Inherit documentation */
+    protected ObjectSerializer getStrictDeserializer() {
+      return new XStreamSerializer();
+    }
+    
+  }
+  
+  /**
+   * <p>Checks that the deserializer can read input in Castor
+   * format.</p>
+   * @throws Exception if an error condition arises.
+   */
+  public void testReadCastorInput() throws Exception {
+    CastorSerializer serializer = new CastorSerializer(
+        null,
+        ExternalizableMap.MAPPING_FILE_NAME,
+        ExtMapBean.class
+    );
     CXSerializer deserializer = makeExtMapBeanSerializer();
     performRoundTrip(serializer, deserializer);
   }
-
+  
   /**
-   * <p>Tests whether a CXSerializer successfully reads input in
-   * XStream format.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
+   * <p>Checks that the serializer writes output in a format that is
+   * appropriate for its mode, by re-reading it through a
+   * corresponding single-mode deserializer.</p>
+   * @throws Exception if an error condition arises.
+   * @see #getMode
+   * @see #getStrictDeserializer
    */
-  public void testReadingXStream()
-      throws Exception {
+  public void testOutputFormat() throws Exception {
+    CXSerializer serializer = makeExtMapBeanSerializer();
+    ObjectSerializer deserializer = getStrictDeserializer();
+    performRoundTrip(serializer, deserializer);
+  }
+  
+  /**
+   * <p>Checks that the deserializer can read input in XStream
+   * format.</p>
+   * @throws Exception if an error condition arises.
+   */
+  public void testReadXStreamInput() throws Exception {
     XStreamSerializer serializer = new XStreamSerializer(null);
     CXSerializer deserializer = makeExtMapBeanSerializer();
     performRoundTrip(serializer, deserializer);
   }
   
   /**
-   * <p>Tests whether a CXSerializer in XStream mode successfully
-   * writes output in XStream format.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
+   * <p>Returns the CXSerializer mode currently being tested.</p>
+   * @return A CXSerializer compatibility mode number.
    */
-  public void testXStreamMode()
-      throws Exception {
-    CXSerializer serializer = makeExtMapBeanSerializer();
-    XStreamSerializer deserializer = new XStreamSerializer(null);
-    serializer.setCurrentMode(CXSerializer.XSTREAM_MODE);
-    performRoundTrip(serializer, deserializer);
-  }
-  
+  protected abstract int getMode();
+
   /**
-   * <p>Tests whether a CXSerializer in XStream Overwrite mode
-   * replaces a file read in Castor format by a file in XStream
-   * format.</p>
-   * @throws Exception if an unexpected or unhandled problem arises.
+   * <p>Builds a deserializer of the type returned by {@link #getMode}
+   * (of type {@link CastorSerializer} or
+   * {@link XStreamSerializer}).</p>
+   * @return A single-mode deserializer instance.
    */
-  public void testXStreamOverwriteMode()
-      throws Exception {
-    // Set up needed objects
-    CastorSerializer serializer =
-      new CastorSerializer(null, ExternalizableMap.MAPPING_FILE_NAME, ExtMapBean.class);
-    CXSerializer deserializer1 = makeExtMapBeanSerializer();
-    deserializer1.setCurrentMode(CXSerializer.XSTREAM_OVERWRITE_MODE);
-    XStreamSerializer deserializer2 = new XStreamSerializer();
-    File tempFile = File.createTempFile("test", ".xml");
-    tempFile.deleteOnExit();
-    ExtMapBean original = makeSample_ExtMapBean();
-    ExtMapBean clone1;
-    ExtMapBean clone2;
-    
-    // Test
-    serializer.serialize(tempFile, original);
-    clone1 = (ExtMapBean)deserializer1.deserialize(tempFile);
-    clone2 = (ExtMapBean)deserializer2.deserialize(tempFile);
-    assertEquals(clone1.getMap(), clone2.getMap());
-  }
-  
+  protected abstract ObjectSerializer getStrictDeserializer();
+
+  /* Inherit documentation */
   protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
     return makeExtMapBeanSerializer();
   }
-  
+
   /**
    * <p>Produces an instance based on objects of type
    * {@link ExtMapBean}.</p>
@@ -131,11 +173,16 @@ public class TestCXSerializer extends ObjectSerializerTester {
    *         {@link ExtMapBean}.
    */
   private CXSerializer makeExtMapBeanSerializer() {
-    return new CXSerializer(
-        null, ExternalizableMap.MAPPING_FILE_NAME, ExtMapBean.class);
+    CXSerializer cxs = new CXSerializer(
+        null,
+        ExternalizableMap.MAPPING_FILE_NAME,
+        ExtMapBean.class
+    );
+    cxs.setCurrentMode(getMode());
+    return cxs;
   }
-  
- /**
+
+  /**
    * <p>Performs a quick round trip into the serializer and back from
    * the deserializer, expecting the operation to succeed.</p>
    * @param serializer   Any ObjectSerializer.
@@ -148,13 +195,13 @@ public class TestCXSerializer extends ObjectSerializerTester {
     // Set up needed objects
     ExtMapBean original = makeSample_ExtMapBean();
     ExtMapBean clone;
-    StringWriter writer = new StringWriter();
-    StringReader reader;
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    ByteArrayInputStream in;
     
     try {
-      serializer.serialize(writer, original);
-      reader = new StringReader(writer.toString());
-      clone = (ExtMapBean)deserializer.deserialize(reader);
+      serializer.serialize(out, original);
+      in = new ByteArrayInputStream(out.toByteArray());
+      clone = (ExtMapBean)deserializer.deserialize(in);
     }
     catch (SerializationException se) {
       StringBuffer buffer = new StringBuffer();
@@ -163,6 +210,19 @@ public class TestCXSerializer extends ObjectSerializerTester {
       buffer.append(se.getMessage());
       fail(buffer.toString());
     }
+  }
+  
+  /**
+   * <p>Produces a test suite encompassing all three modes of
+   * operation of {@link CXSerializer}.</p>
+   * @return {@inheritDoc}
+   */
+  public static Test suite() {
+    return LockssTestCase.variantSuites(new Class[] {
+        CastorMode.class,
+        XStreamMode.class,
+        XStreamOverwriteMode.class
+    });
   }
   
 }
