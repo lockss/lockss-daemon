@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3VoterSerializer.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import org.lockss.protocol.psm.*;
 
 public class V3VoterSerializer extends V3Serializer {
 
+  private static final String VOTER_USER_DATA_FILE = "voter_user_data.xml";
+  private static final String VOTER_STATE_TABLE_FILE = "voter_state_table.xml";
+  
   private File voterUserDataFile;
   private File voterStateTableFile;
   

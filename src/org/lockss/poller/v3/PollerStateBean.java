@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class PollerStateBean implements Serializable {
    * block to hash. When the poller checks to see if it can start hashing the
    * next block, it will consult this counter and only proceed if it is '0'.
    */
-  private int m_hashReadyCounter;
+  private int hashReadyCounter;
 
   /**
    * The target URL of the most recently hashed block. Updated after each block
@@ -72,13 +72,20 @@ public class PollerStateBean implements Serializable {
    */
   private String lastHashedBlock;
 
+  /**
+   * Package-level constructor used for testing.
+   */
+  PollerStateBean(V3PollerSerializer serializer) {
+    this.serializer = serializer;
+  }
+  
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
-                          long duration, int pollSize, String hashAlg,
-                          V3PollerSerializer serializer) {
+                         long duration, int pollSize, String hashAlg,
+                         V3PollerSerializer serializer) {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.deadline = Deadline.in(duration).getExpirationTime();
-    this.m_hashReadyCounter = pollSize;
+    this.hashReadyCounter = pollSize;
     this.auId = spec.getAuId();
     this.pollVersion = spec.getPollVersion();
     this.pluginVersion = spec.getPluginVersion();
@@ -186,14 +193,14 @@ public class PollerStateBean implements Serializable {
 
   public void readyToHash(boolean flag) {
     if (flag)
-      m_hashReadyCounter--;
+      hashReadyCounter--;
     else
-      m_hashReadyCounter++;
+      hashReadyCounter++;
     saveState();
   }
 
   public boolean readyToHash() {
-    return m_hashReadyCounter == 0;
+    return hashReadyCounter == 0;
   }
 
   public String toString() {

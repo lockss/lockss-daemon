@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.3 2005-09-14 23:57:48 smorabito Exp $
  */
 
 /*
@@ -94,7 +94,7 @@ public class V3LcapMessageFactory {
 				   V3LcapMessage.MSG_REPAIR_REQ,
 				   ud.getDeadline(),
 				   ud.getPollerId());
-    msg.setTarget(ud.getTarget());
+    msg.setTarget(ud.getRepairTarget());
     msg.setEffortProof(ud.getRepairEffortProof());
     return msg;
   }

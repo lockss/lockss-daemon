@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.3 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3Poller.java,v 1.4 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -224,9 +224,7 @@ public class V3Poller {
   }
 
   /**
-   * <p>
    * Begin (or resume) polling the inner circle of voters.
-   * </p>
    */
   private void pollInnerCircle() {
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {

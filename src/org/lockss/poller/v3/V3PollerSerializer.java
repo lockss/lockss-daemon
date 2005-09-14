@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -30,32 +30,49 @@
 
 package org.lockss.poller.v3;
 
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
-import org.lockss.config.*;
-import org.lockss.util.*;
 import org.lockss.protocol.*;
 import org.lockss.protocol.psm.*;
+import org.lockss.util.*;
+import org.lockss.util.ObjectSerializer.*;
 
 public class V3PollerSerializer extends V3Serializer {
+  private static final String POLLER_STATE_BEAN = "poller_state_bean.xml";
+  private static final String POLLER_USER_DATA_PREFIX = "poller_user_data_";
+  private static final String POLLER_USER_DATA_SUFFIX = ".xml";
+  private static final String POLLER_STATE_TABLE_PREFIX = "poller_state_table_";
+  private static final String POLLER_STATE_TABLE_SUFFIX = ".xml";
+  private static final String PEER_MAPPING_FILE = "peer_mapping.xml";
 
   private File pollerStateBeanFile;
-  private Map pollerUserDataFiles;
-  private Map pollerStateTableFiles;
-  
-  private int pollerUserDataFileNum = 0;
-  private int pollerStateTableFileNum = 0;
+  private File peerMappingFile;
+  private LinkedHashMap peerMapping;
 
   public V3PollerSerializer() throws PollSerializerException {
-    this(null);
+    super(null);
+    this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
+    this.peerMappingFile = new File(pollDir, PEER_MAPPING_FILE);
+    this.peerMapping = new LinkedHashMap();
   }
 
   public V3PollerSerializer(String dir) throws PollSerializerException {
     super(dir);
-    this.pollerUserDataFiles = new HashMap();
-    this.pollerStateTableFiles = new HashMap();
     this.pollerStateBeanFile = new File(pollDir, POLLER_STATE_BEAN);
+    this.peerMappingFile = new File(pollDir, PEER_MAPPING_FILE);
+    if (peerMappingFile.exists()) {
+      log.debug2("Loading peer mapping from file " + peerMappingFile);
+      try {
+        this.peerMapping = this.loadPeerMapping();
+      } catch (Exception ex) {
+        throw new PollSerializerException("Exception while loading peer mapping",
+                                          ex);
+      }
+    } else {
+      log.debug2("Mapping file " + peerMappingFile + " does not exist.");
+      this.peerMapping = new LinkedHashMap();
+    }
   }
 
   /**
@@ -84,10 +101,10 @@ public class V3PollerSerializer extends V3Serializer {
     }
     log.debug2("Restoring state for poll");
     try {
-      PollerStateBean bean =
-        (PollerStateBean) xstr.deserialize(new FileReader(pollerStateBeanFile));
+      PollerStateBean bean = (PollerStateBean) xstr
+          .deserialize(new FileReader(pollerStateBeanFile));
       bean.setSerializer(this);
-      return bean; 
+      return bean;
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore poll state", ex);
     }
@@ -102,17 +119,9 @@ public class V3PollerSerializer extends V3Serializer {
       throws PollSerializerException {
     PeerIdentity peerId = state.getVoterId();
     log.debug2("Saving voter state for participant " + state.getVoterId());
-    File out = null;
-    synchronized(pollerUserDataFiles) {
-      out = (File) pollerUserDataFiles.get(peerId);
-      if (out == null) {
-        out = new File(pollDir, POLLER_USER_DATA_PREFIX + (pollerUserDataFileNum++)
-                       + POLLER_USER_DATA_SUFFIX);
-        pollerUserDataFiles.put(peerId, out);
-      }
-    }
     try {
-      xstr.serialize(out, state);
+      File outFile = getPollerUserDataFile(peerId);
+      xstr.serialize(outFile, state);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to save voter state", ex);
     }
@@ -123,40 +132,33 @@ public class V3PollerSerializer extends V3Serializer {
    * 
    * @throws PollSerializerException if the PollerUserData cannot be loaded.
    */
-  public PollerUserData loadPollerUserData(String peerId)
+  public PollerUserData loadPollerUserData(PeerIdentity peerId)
       throws PollSerializerException {
-    File in = null;  
-    synchronized(pollerUserDataFiles) {
-      in = (File) pollerUserDataFiles.get(peerId);
-    }
-    if (in == null)
-      throw new PollSerializerException("No serialized state for voter "
-          + peerId);
     try {
-      return (PollerUserData) xstr.deserialize(new FileReader(in));
+      PeerMapping mapping = getPeerMapping(peerId.getIdString());
+      File in = null;
+      if (mapping == null || (in = mapping.getUserDataFile()) == null) {
+        throw new PollSerializerException("No serialized state for voter " +
+                                          peerId);
+      }
+      return (PollerUserData) xstr.deserialize(in);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore VoterUserData", ex);
     }
   }
-  
+
   /**
    * Save a PsmInterpStateBean
    */
   public void savePollerInterpState(PeerIdentity id, PsmInterpStateBean bean)
       throws PollSerializerException {
-    File out = null;
-    synchronized(pollerStateTableFiles) {
-      out = (File) pollerStateTableFiles.get(id);
-      if (out == null) {
-        out = new File(pollDir, POLLER_STATE_TABLE_PREFIX + (pollerStateTableFileNum++)
-                       + POLLER_STATE_TABLE_SUFFIX);
-        pollerStateTableFiles.put(id, out);
-      }
-    }
+    log.debug2("Saving PsmInterp state for peer " + id);
     try {
+      File out = getInterpStateFile(id.getIdString());
       xstr.serialize(out, bean);
     } catch (Exception ex) {
-      throw new PollSerializerException("Unable to save PsmInterpStateBean", ex);
+      throw new PollSerializerException("Unable to save PsmInterpStateBean",
+                                        ex);
     }
   }
 
@@ -165,44 +167,43 @@ public class V3PollerSerializer extends V3Serializer {
    * 
    * @return The saved state bean for a poll.
    */
-  public PsmInterpStateBean loadPollerInterpState(PeerIdentity id) 
+  public PsmInterpStateBean loadPollerInterpState(PeerIdentity peerId)
       throws PollSerializerException {
-    File in = null;
-    synchronized(pollerStateTableFiles) {
-      in = (File) pollerStateTableFiles.get(id);
-    }
-    if (in == null) {
-      throw new PollSerializerException("No serialized state for voter "
-                                        + id);
-    }
     try {
+      PeerMapping mapping = getPeerMapping(peerId.getIdString());
+      File in = null;
+      if (mapping == null || (in = mapping.getInterpStateFile()) == null) {
+        throw new PollSerializerException("No serialized state for voter " +
+                                          peerId);
+      }
       return (PsmInterpStateBean) xstr.deserialize(in);
     } catch (Exception ex) {
       throw new PollSerializerException("Unable to restore PsmInterpStateBean",
                                         ex);
     }
   }
-  
 
   /**
-   * <p>
-   * Return a list of all VoverStateBeans for this poll.
-   * </p>
+   * Return a list of all VoterStateBeans for this poll.
    */
-  // XXX: This MUST be able to load voters in the same order that they were
-  // saved. This will require vigorous unit tests!
-  // (i.e., probably cannot rely on order from listFiles()!)
   public List loadInnerCircleStates() throws PollSerializerException {
-    File[] files = pollDir.listFiles(voterFilter);
-    List innerCircleStates = new ArrayList(files.length);
+    List innerCircleStates = new ArrayList(peerMapping.size());
     try {
-      for (int i = 0; i < files.length; i++) {
-        PollerUserData voterState = (PollerUserData) xstr
-            .deserialize(new FileReader(files[i]));
+      for (Iterator iter = peerMapping.values().iterator(); iter.hasNext(); ) {
+        PeerMapping mapping = (PeerMapping)iter.next();
+        File mappingFile = mapping.getUserDataFile();
+        if (mappingFile == null) {
+          // This should never be null.
+          throw new PollSerializerException("Peer has null UserData file.");
+        }
+        PollerUserData voterState = 
+          (PollerUserData) xstr.deserialize(mappingFile);
         innerCircleStates.add(voterState);
       }
-    } catch (Exception ex) {
-      throw new PollSerializerException("Unable to restore inner circle", ex);
+    } catch (IOException ex) {
+      throw new PollSerializerException("Cannot load inner circle states", ex);
+    } catch (ObjectSerializer.SerializationException ex) {
+      throw new PollSerializerException("Cannot load inner circle states", ex);
     }
     return innerCircleStates;
   }
@@ -212,4 +213,109 @@ public class V3PollerSerializer extends V3Serializer {
       return pathName.getName().startsWith(POLLER_USER_DATA_PREFIX);
     }
   };
+
+  /**
+   * Obtain a peer mapping, creating it if necessary.
+   */
+  
+  public synchronized PeerMapping getPeerMapping(String id) {
+    PeerMapping map = (PeerMapping)peerMapping.get(id);
+    if (map == null) {
+      map = new PeerMapping();
+      peerMapping.put(id, map);
+    }
+    return map;
+  }
+  
+  /**
+   * Obtain a file for the InterpStateBean.
+   */
+  private synchronized File getInterpStateFile(String id)
+      throws IOException, SerializationException {
+    PeerMapping map = getPeerMapping(id);
+    File f = map.getInterpStateFile();
+    if (f == null) {
+      f = FileUtil.createTempFile(POLLER_STATE_TABLE_PREFIX,
+                                  POLLER_STATE_TABLE_SUFFIX, pollDir);
+      map.setInterpStateFile(f);
+      savePeerMapping();
+    }
+    return f;
+  }
+  
+  /**
+   * Obtain a file for the PollerUserData.
+   */
+  private synchronized File getPollerUserDataFile(PeerIdentity id)
+      throws IOException, SerializationException {
+    PeerMapping mapping = getPeerMapping(id.getIdString());
+    File f = mapping.getUserDataFile();
+    if (f == null) {
+      f = FileUtil.createTempFile(POLLER_USER_DATA_PREFIX,
+                                  POLLER_USER_DATA_SUFFIX, pollDir);
+      mapping.setUserDataFile(f);
+      savePeerMapping();
+    }
+    return f;
+  }
+  
+  /**
+   * Store the mapping of peer IDs to files.
+   * @throws IOException 
+   * @throws SerializationException 
+   */
+  private synchronized void savePeerMapping()
+      throws IOException, SerializationException {
+    xstr.serialize(peerMappingFile, peerMapping);
+  }
+  
+  private synchronized LinkedHashMap loadPeerMapping() 
+      throws IOException, SerializationException {
+    return (LinkedHashMap)xstr.deserialize(peerMappingFile);
+  }
+  
+  /**
+   * Maintain a mapping of peer IDs to poller state files. 
+   * 
+   * Note:  IDs are stored as strings because the daemon depends
+   * on instance equality for PeerIdentities.  After deserialization,
+   * a stored PeerIdentity would by definition be a different instance. 
+   */
+  private static class PeerMapping implements Serializable {
+    private File interpStateFile;
+    private File userDataFile;
+    
+    public PeerMapping() {
+    }
+    
+    public PeerMapping(File interpStateFile, File userDataFile) {
+      this.interpStateFile = interpStateFile;
+      this.userDataFile = userDataFile;
+    }
+
+
+    public File getInterpStateFile() {
+      return interpStateFile;
+    }
+
+    public void setInterpStateFile(File interpStateFile) {
+      this.interpStateFile = interpStateFile;
+    }
+
+    public File getUserDataFile() {
+      return userDataFile;
+    }
+
+    public void setUserDataFile(File userDataFile) {
+      this.userDataFile = userDataFile;
+    }
+    
+    public String toString() {
+      StringBuffer buf = new StringBuffer("[PeerMapping: ");
+      buf.append("interp=" + (interpStateFile == null ? "null" : interpStateFile.toString()));
+      buf.append(", ud=" + (userDataFile == null ? "null" : userDataFile.toString()));
+      buf.append("]");
+      return buf.toString();
+    }
+  }
 }

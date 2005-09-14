@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -70,6 +70,11 @@ public class VoterUserData implements Serializable {
   private transient V3Voter voter;
   
   private static Logger log = Logger.getLogger("VoterUserData");
+  
+  /** Package-level constructor used in tests. */
+  VoterUserData(V3VoterSerializer serializer) { 
+    this.serializer = serializer;
+  }
   
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,

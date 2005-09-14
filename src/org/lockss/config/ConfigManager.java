@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.22 2005-08-30 18:24:32 tlipkis Exp $
+ * $Id: ConfigManager.java,v 1.23 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -752,6 +752,29 @@ public class ConfigManager implements LockssManager {
     cacheConfigInited = true;
   }
 
+  /**
+   * <p>Return a directory under the platform disk space list.  Does
+   * not create the directory, client code is expected to handle that.</p>
+   * 
+   * <p>This currently only returns directories on the first available
+   * platform disk.</p>
+   * 
+   * @param relDir The relative pathname of the directory to request.
+   * @return A File object representing the requested directory, or null
+   *         if the directory could not be created.
+   */
+  public File getPlatformDir(String relDir) {
+    List dspacePaths = 
+      ConfigManager.getCurrentConfig().getList(PARAM_PLATFORM_DISK_SPACE_LIST);
+    if (dspacePaths.size() == 0) {
+      log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
+                " not specified, unable to create platform directory.");
+      return null;
+    }
+    File dir = new File((String)dspacePaths.get(0), relDir);
+    return dir;
+  }
+  
   /** Return the list of cache config file names */
   public List getCacheConfigFiles() {
     List res = new ArrayList();

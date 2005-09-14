@@ -1,5 +1,5 @@
 /*
- * $Id: PollerUserData.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: PollerUserData.java,v 1.2 2005-09-14 23:57:48 smorabito Exp $
  */
 
 /*
@@ -46,25 +46,33 @@ public class PollerUserData implements Serializable {
   private PeerIdentity voterId;
   private String hashAlgorithm;
   private VoteBlocks voteBlocks;
-  private String targetUrl;
   private List nominees;
+  private String target;
   private byte[] pollerNonce;
   private byte[] voterNonce;
+  // XXX: Effort proofs will not be byte arrays.
   private byte[] introEffortProof;
   private byte[] pollAckEffortProof;
   private byte[] remainingEffortProof;
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
   
-  private static Logger log = Logger.getLogger("PollerUserData");
-  
   /** Transient non-serialized fields */
   private transient V3Poller poller;
   private transient V3PollerSerializer serializer;
   private transient PollerStateBean pollState;
-
+  
+  private static Logger log = Logger.getLogger("PollerUserData");
+  
   /**
-   * Constructor used by the V3Poller.
+   * Package-level constructor used for testing.
+   */
+  PollerUserData(V3PollerSerializer serializer) {
+    this.serializer = serializer;
+  }
+  
+  /**
+   * Construct a new PollerUserData object.
    * 
    * @param id
    * @param poller
@@ -78,11 +86,6 @@ public class PollerUserData implements Serializable {
     this.serializer = serializer;
   }
   
-  PollerUserData(PeerIdentity voterId) {
-    this.voterId = voterId;
-    saveState();
-  }
-
   public void setVoterId(PeerIdentity id) {
     this.voterId = id;
     saveState();
@@ -90,15 +93,6 @@ public class PollerUserData implements Serializable {
 
   public PeerIdentity getVoterId() {
     return voterId;
-  }
-
-  public void setTarget(String url) {
-    this.targetUrl = url;
-    saveState();
-  }
-
-  public String getTarget() {
-    return targetUrl;
   }
 
   public void setNominees(List l) {
@@ -109,7 +103,15 @@ public class PollerUserData implements Serializable {
   public List getNominees() {
     return nominees;
   }
+
+  public void setRepairTarget(String target) {
+    this.target = target;
+  }
   
+  public String getRepairTarget() {
+    return target;
+  }
+
   public void setHashAlgorithm(String s) {
     this.hashAlgorithm = s;
     saveState();

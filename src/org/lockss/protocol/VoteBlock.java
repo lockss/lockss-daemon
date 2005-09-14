@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.3 2005-09-14 23:57:49 smorabito Exp $
  */
 
 /*
@@ -26,6 +26,7 @@
 
 package org.lockss.protocol;
 
+import java.io.*;
 import java.util.*;
 
 import org.mortbay.util.*;
@@ -33,7 +34,7 @@ import org.mortbay.util.*;
 /**
  * A simple bean representing a V3 vote block -- a file, or part of a file.
  */
-public class VoteBlock {
+public class VoteBlock implements Serializable {
   
   /** Vote type enum.  Is this a vote on content, headers, or metadata? */
   public static final int CONTENT_VOTE = 0;
@@ -51,8 +52,8 @@ public class VoteBlock {
   private long m_unfilteredOffset = 0;
   private byte[] m_contentHash;
 
-  public VoteBlock() { }
-
+  public VoteBlock() {}
+  
   public VoteBlock(String fileName, long fLength, long fOffset,
 		   long uLength, long uOffset, byte[] hash, int pollType) {
     m_fileName = fileName;
