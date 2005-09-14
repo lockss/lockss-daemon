@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.12 2005-09-06 23:24:52 thib_gc Exp $
+ * $Id: AlertManagerImpl.java,v 1.13 2005-09-14 00:33:40 thib_gc Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -132,56 +132,78 @@ public class AlertManagerImpl
     storeAlertConfig(file, config);
   }
 
-  void storeAlertConfig(File file, AlertConfig alertConfig)
+  /**
+   * <p>Serializes an AlertConfig into a file, using a default
+   * serializer.</p>
+   * @param file        A destination file.
+   * @param alertConfig An AlertConfig instance.
+   * @throws Exception if any error condition arises.
+   * @see #storeAlertConfig(File, AlertConfig, ObjectSerializer)
+   */
+  void storeAlertConfig(File file,
+                        AlertConfig alertConfig)
+      throws Exception {
+    storeAlertConfig(file, alertConfig, makeObjectSerializer());
+  }
+
+  /**
+   * <p>Serializes an AlertConfig object into a file, using the given
+   * serializer.</p>
+   * @param file        A destination file.
+   * @param alertConfig An AlertConfig instance.
+   * @param serializer  A serializer instance.
+   * @throws Exception if any error condition arises.
+   */
+  void storeAlertConfig(File file,
+                        AlertConfig alertConfig,
+                        ObjectSerializer serializer)
       throws Exception {
     try {
-      //       store(file, new AlertConfigBean(alertConfig));
-      store(file, alertConfig);
+      serializer.serialize(file, alertConfig);
     } catch (Exception e) {
-      log.error("Could not store alert config: ", e);
+      log.error("Could not store alert config", e);
       throw e;
     }
   }
-
+  
+  /**
+   * <p>Load an AlertConfig object from a file, using a default
+   * deserializer.</p>
+   * @param file A source file.
+   * @return An AlertConfig instance loaded from file (or a default
+   *         value).
+   * @see #loadAlertConfig(File, ObjectSerializer)
+   */
   AlertConfig loadAlertConfig(File file) {
+    return loadAlertConfig(file, makeObjectSerializer());
+  }
+  
+  /**
+   * <p>Load an AlertConfig object from a file, using the given
+   * deserializer.</p>
+   * @param file         A source file.
+   * @param deserializer A deserializer instance.
+   * @return An AlertConfig instance loaded from file (or a default
+   *         value).
+   */
+  AlertConfig loadAlertConfig(File file,
+                              ObjectSerializer deserializer) {
     try {
       log.debug3("Loading alert config");
-      AlertConfig ac = (AlertConfig)load(file);
+      AlertConfig ac = (AlertConfig)deserializer.deserialize(file);
       return ac;
     } catch (SerializationException se) {
       log.error(
-          "Marshalling exception for alert config '" + "'", se);
+          "Marshalling exception for alert config", se);
       // drop down to default value
     } catch (Exception e) {
       log.error("Could not load alert config", e);
       throw new RuntimeException(
-          "Could not load alert config: " + e.getMessage());
+          "Could not load alert config", e);
     }
     
     // Default value
-    return new AlertConfig();
-  }
-
-  /**
-   * <p>Stores the object in the given file.</p>
-   * @param file The destination file.
-   * @param obj  An object to serialize.
-   * @throws Exception if an error condition arises.
-   */
-  void store(File file, LockssSerializable obj) throws Exception {
-    ObjectSerializer serializer = makeObjectSerializer();
-    serializer.serialize(file, obj);
-  }
-
-  /**
-   * <p>Retrieves an object from the given file.</p>
-   * @param file A file containing a serialized object.
-   * @return An unmarshalled object.
-   * @throws Exception if an error condition arises.
-   */
-  Object load(File file) throws Exception {
-    ObjectSerializer deserializer = makeObjectSerializer();
-    return deserializer.deserialize(file);
+    return new AlertConfig();    
   }
 
   private static ObjectSerializer makeObjectSerializer() {

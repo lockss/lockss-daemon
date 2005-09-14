@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.6 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.7 2005-09-14 00:33:40 thib_gc Exp $
  */
 
 /*
@@ -351,26 +351,44 @@ public class IcpFactoryImpl implements IcpFactory {
     public IcpMessage parseIcp(DatagramPacket packet) 
         throws IcpProtocolException {
       try {
+        // *** Local variables ***
+        byte version;
+        short length;
+        int requestNumber;
+        int options;
+        int optionData;
+        InetAddress sender = null;
+        InetAddress requester = null;
+        String payloadUrl = null;
+        short payloadLength;
+        byte[] payloadObject = null;
         IcpMessage ret = null;
         ByteArrayInputStream inBytes =
           new ByteArrayInputStream(packet.getData());
-        DataInputStream inData =
+        DataInputStream inData = 
           new DataInputStream(inBytes);
   
-        // Unconditional processing
-        byte opcode = inData.readByte();
-        byte version = inData.readByte();
-        short length = inData.readShort();
-        int requestNumber = inData.readInt();
-        int options = inData.readInt();
-        int optionData = inData.readInt();
-        InetAddress sender = getIpFromStream(inData);
+        // *** Unconditional processing ***
+        byte opcode;
+        try {
+          opcode = inData.readByte();
+          if (!IcpUtil.isValidOpcode(opcode)) {
+            throw new IcpProtocolException(
+                "Invalid opcode: " + opcode);
+          }
+          version = inData.readByte();
+          length = inData.readShort();
+          requestNumber = inData.readInt();
+          options = inData.readInt();
+          optionData = inData.readInt();
+          sender = getIpFromStream(inData);
+        }
+        catch (EOFException eofe) {
+          throw new IcpProtocolException(
+              END_OF_STREAM, eofe);
+        }
         
-        // Conditional processing
-        InetAddress requester;
-        String payloadUrl;
-        short payloadLength;
-        byte[] payloadObject;
+        // *** Conditional processing ***
         switch (opcode) {
           case IcpMessage.ICP_OP_QUERY:
             requester = getIpFromStream(inData);
@@ -414,6 +432,7 @@ public class IcpFactoryImpl implements IcpFactory {
             break;
         }
         
+        // *** Set UDP info ***
         ret.setUdpAddress(packet.getAddress());
         ret.setUdpPort(packet.getPort());
         return ret;
@@ -442,6 +461,10 @@ public class IcpFactoryImpl implements IcpFactory {
             (byte)(rawIpInt & 0x000000ff)
         });
       }
+      catch (EOFException eofe) {
+        throw new IcpProtocolException(
+            END_OF_STREAM, eofe);
+      }
       catch (Exception exc) {
         throw new IcpProtocolException(
             "Error while parsing IP from stream", exc);
@@ -462,15 +485,25 @@ public class IcpFactoryImpl implements IcpFactory {
         StringBuffer buffer = new StringBuffer();
         byte[] inputBytes = new byte[1];
         while ( (inputBytes[0] = inData.readByte()) != (byte)0) {
-          buffer.append(new String(inputBytes, "US-ASCII"));
+          buffer.append((char)inputBytes[0]);
         }
         return buffer.toString();
+      }
+      catch (EOFException eofe) {
+        throw new IcpProtocolException(
+            END_OF_STREAM, eofe);
       }
       catch (Exception exc) {
         throw new IcpProtocolException(
             "Error while parsing URL from stream", exc);
       }
     }
+
+    /**
+     * <p>An error string used multiple times.</p>
+     */
+    private static final String END_OF_STREAM =
+      "Unexpected end of data stream";
     
   }
   /*

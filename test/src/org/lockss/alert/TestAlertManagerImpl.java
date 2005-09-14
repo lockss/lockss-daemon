@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.7 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.8 2005-09-14 00:33:40 thib_gc Exp $
  */
 
 /*
@@ -34,17 +34,13 @@ package org.lockss.alert;
 
 import java.util.*;
 import java.io.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.test.*;
 
-
 /**
  * This is the test class for org.lockss.alert.AlertManager
  */
-
 public class TestAlertManagerImpl extends LockssTestCase {
   static Logger log = Logger.getLogger("TestAlertManager");
 
@@ -91,10 +87,12 @@ public class TestAlertManagerImpl extends LockssTestCase {
 
   public void testMarshallConfig(AlertConfig config) throws Exception {
     File file = FileTestUtil.tempFile("foo");
-    mgr.storeAlertConfig(file, config);
+    ObjectSerializer serializer = makeObjectSerializer();
+    ObjectSerializer deserializer = makeObjectSerializer();
+    mgr.storeAlertConfig(file, config, serializer);
     assertTrue(file.exists());
-    AlertConfig c2 = (AlertConfig)mgr.load(file);
-//     assertEquals(config, c2);
+    AlertConfig c2 = (AlertConfig)mgr.loadAlertConfig(file, deserializer);
+    // assertEquals(config, c2); // fails
   }
 
   public void config(boolean enable) {
@@ -198,6 +196,24 @@ public class TestAlertManagerImpl extends LockssTestCase {
     assertEquals(cnt+2, l1.size());
   }
 
+  /**
+   * <p>Makes a new serializer.</p>
+   * @return An object serializer instance.
+   */
+  private ObjectSerializer makeObjectSerializer() {
+    /*
+     * IMPLEMENTATION NOTES
+     * 
+     * It is intended that the type of serializer returned will be as
+     * unforgiving as possible. If multiple serializer types need to
+     * be tested against, consider making this method abstract,
+     * returning various serializers in subclasses of this class, and
+     * using variantSuites() in LockssTestCase to test against all of
+     * them.
+     */
+    return new XStreamSerializer();
+  }
+  
   class MyMockAlertPattern implements AlertPattern, LockssSerializable {
     boolean match;			// determines result
     Alert alert;		   // records the alert we were called with
