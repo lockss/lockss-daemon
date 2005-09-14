@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.2 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.3 2005-09-14 22:47:07 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,9 @@ package org.lockss.protocol;
 
 import java.io.File;
 import java.util.*;
+
+import junit.framework.Test;
+
 import org.lockss.util.*;
 import org.lockss.daemon.status.*;
 import org.lockss.plugin.*;
@@ -45,6 +48,30 @@ import org.lockss.test.*;
  * IdentityManager has been initialized.  See TestIdentityManagerInit for
  * more IdentityManager tests. */
 public class TestIdentityManagerImpl extends LockssTestCase {
+
+  /**
+   * <p>A version of {@link TestIdentityManagerImpl} that forces the
+   * serialization compatibility mode to
+   * {@link CXSerializer#XSTREAM_MODE}.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class WithXStream extends TestIdentityManagerImpl {
+    public void setUp() throws Exception {
+      super.setUp();
+      ConfigurationUtil.addFromArgs(
+          CXSerializer.PARAM_COMPATIBILITY_MODE,
+          Integer.toString(CXSerializer.XSTREAM_MODE)
+      );
+    }
+  }
+  
+  public static Test suite() {
+    return variantSuites(new Class[] {
+        TestIdentityManagerImpl.class,
+        WithXStream.class
+    });
+  }
+  
   Object testIdKey;
 
   private MockLockssDaemon theDaemon;
@@ -284,7 +311,7 @@ public class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   /** test for method replayDected(..) */
-  public void testReplayDected() throws Exception {
+  public void testReplayDetected() throws Exception {
     peer1 = idmgr.stringToPeerIdentity("127.0.0.1");
     int rep = idmgr.getReputation(peer1);
     idmgr.changeReputation(peer1,IdentityManager.REPLAY_DETECTED);
@@ -330,7 +357,6 @@ public class TestIdentityManagerImpl extends LockssTestCase {
 
   public void testStoreIdentities() throws Exception {
     setupPeer123();
-
     idmgr.storeIdentities();
   }
 
@@ -789,7 +815,7 @@ public class TestIdentityManagerImpl extends LockssTestCase {
     
     assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
   }
-
+  
   private class TestableIdentityManager extends IdentityManagerImpl {
     Map identities = null;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.2 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: IdentityManagerImpl.java,v 1.3 2005-09-14 22:47:07 thib_gc Exp $
  */
 
 /*
@@ -673,7 +673,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
         }
       }
       catch (Exception e) {
-        log.warning("Could not load identity database: " + e.getMessage());
+        log.warning("Could not load identity database", e);
       }
     }
   }

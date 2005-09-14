@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.62 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.63 2005-09-14 22:47:07 thib_gc Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class HistoryRepositoryImpl
    *                                  exception nor a serialization
    *                                  exception.
    */
-  public AuState loadAuState(ObjectSerializer deserializer) {
+  AuState loadAuState(ObjectSerializer deserializer) {
     if (logger.isDebug3()) {
       logger.debug3("Loading state for AU '"
           + storedAu.getName() + "'.");
@@ -205,7 +205,7 @@ public class HistoryRepositoryImpl
    *                                  exception nor a serialization
    *                                  exception.
    */
-  public DamagedNodeSet loadDamagedNodeSet(ObjectSerializer deserializer) {
+  DamagedNodeSet loadDamagedNodeSet(ObjectSerializer deserializer) {
     if (logger.isDebug3()) {
       logger.debug3("Loading damaged nodes for AU '"
           + storedAu.getName() + "'.");
@@ -259,7 +259,7 @@ public class HistoryRepositoryImpl
    *                                  exception nor a serialization
    *                                  exception.
    */
-  public List loadIdentityAgreements(ObjectSerializer deserializer) {
+  List loadIdentityAgreements(ObjectSerializer deserializer) {
     if (logger.isDebug3()) {
       logger.debug3("Loading identity agreements for AU '"
           + storedAu.getName() + "'.");
@@ -310,8 +310,8 @@ public class HistoryRepositoryImpl
    *                                  exception nor a serialization
    *                                  exception.
    */
-  public NodeState loadNodeState(ObjectSerializer deserializer,
-                                 CachedUrlSet cus) {
+  NodeState loadNodeState(ObjectSerializer deserializer,
+                          CachedUrlSet cus) {
     if (logger.isDebug3()) {
       logger.debug3("Loading state for CUS '" + cus.getUrl() + "'.");
     }
@@ -373,8 +373,8 @@ public class HistoryRepositoryImpl
    *                                  exception nor a serialization
    *                                  exception.
    */
-  public void loadPollHistories(ObjectSerializer deserializer,
-                                NodeState nodeState) {
+  void loadPollHistories(ObjectSerializer deserializer,
+                         NodeState nodeState) {
     /*
      * IMPLEMENTATION NOTES
      * 
@@ -466,8 +466,8 @@ public class HistoryRepositoryImpl
    * @param auState    A AU state instance.
    * @throws RepositoryStateException if an error condition arises.
    */
-  public void storeAuState(ObjectSerializer serializer,
-                           AuState auState) {
+  void storeAuState(ObjectSerializer serializer,
+                    AuState auState) {
     if (logger.isDebug3()) {
       logger.debug3("Storing state for AU '"
           + auState.getArchivalUnit().getName() + "'.");
@@ -500,8 +500,8 @@ public class HistoryRepositoryImpl
    * @param nodeSet    A damaged node set.
    * @throws RepositoryStateException if an error condition arises.
    */
-  public void storeDamagedNodeSet(ObjectSerializer serializer,
-                                  DamagedNodeSet nodeSet) {
+  void storeDamagedNodeSet(ObjectSerializer serializer,
+                           DamagedNodeSet nodeSet) {
     if (logger.isDebug3()) {
       logger.debug3("Storing damaged nodes for AU '" +
                     nodeSet.theAu.getName() + "'.");
@@ -535,8 +535,8 @@ public class HistoryRepositoryImpl
    * @param idList     A list of identity agreements.
    * @throws RepositoryStateException if an error condition arises.
    */
-  public void storeIdentityAgreements(ObjectSerializer serializer,
-                                      List idList) {
+  void storeIdentityAgreements(ObjectSerializer serializer,
+                               List idList) {
     if (logger.isDebug3()) {
       logger.debug3("Storing identity agreements for AU '"
           + storedAu.getName() + "'.");
@@ -569,8 +569,8 @@ public class HistoryRepositoryImpl
    * @param nodeState  A node state instance.
    * @throws RepositoryStateException if an error condition arises.
    */
-  public void storeNodeState(ObjectSerializer serializer,
-                             NodeState nodeState) {
+  void storeNodeState(ObjectSerializer serializer,
+                      NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     if (logger.isDebug3()) {
       logger.debug3("Storing state for CUS '"
@@ -607,8 +607,8 @@ public class HistoryRepositoryImpl
    * @param nodeState  A node state instance.
    * @throws RepositoryStateException if an error condition arises.
    */
-  public void storePollHistories(ObjectSerializer serializer,
-                                 NodeState nodeState) {
+  void storePollHistories(ObjectSerializer serializer,
+                          NodeState nodeState) {
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     if (logger.isDebug3()) {
       logger.debug3("Storing histories for CUS '" + cus.getUrl() + "'.");

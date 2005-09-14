@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.50 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.51 2005-09-14 22:47:08 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,8 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 
+import junit.framework.Test;
+
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.Vote;
@@ -46,6 +48,30 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 
 public class TestHistoryRepositoryImpl extends LockssTestCase {
+
+  /**
+   * <p>A version of {@link TestHistoryRepositoryImpl} that forces the
+   * serialization compatibility mode to
+   * {@link CXSerializer#XSTREAM_MODE}.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class WithXStream extends TestHistoryRepositoryImpl {
+    public void setUp() throws Exception {
+      super.setUp();
+      ConfigurationUtil.addFromArgs(
+          CXSerializer.PARAM_COMPATIBILITY_MODE,
+          Integer.toString(CXSerializer.XSTREAM_MODE)
+      );
+    }
+  }
+
+  public static Test suite() {
+    return variantSuites(new Class[] {
+        TestHistoryRepositoryImpl.class,
+        WithXStream.class
+    });
+  }
+  
   private String tempDirPath;
   private HistoryRepositoryImpl repository;
   private MockLockssDaemon theDaemon;
