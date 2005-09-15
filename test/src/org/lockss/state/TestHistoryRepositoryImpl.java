@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.51 2005-09-14 22:47:08 thib_gc Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.52 2005-09-15 17:07:56 thib_gc Exp $
  */
 
 /*
@@ -47,7 +47,21 @@ import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
-public class TestHistoryRepositoryImpl extends LockssTestCase {
+public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
+
+  /**
+   * <p>A version of {@link TestHistoryRepositoryImpl} that forces the
+   * serialization compatibility mode to
+   * {@link CXSerializer#CASTOR_MODE}.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class WithCastor extends TestHistoryRepositoryImpl {
+    public void setUp() throws Exception {
+      super.setUp();
+      ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
+                                    Integer.toString(CXSerializer.CASTOR_MODE));
+    }
+  }
 
   /**
    * <p>A version of {@link TestHistoryRepositoryImpl} that forces the
@@ -58,16 +72,14 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
   public static class WithXStream extends TestHistoryRepositoryImpl {
     public void setUp() throws Exception {
       super.setUp();
-      ConfigurationUtil.addFromArgs(
-          CXSerializer.PARAM_COMPATIBILITY_MODE,
-          Integer.toString(CXSerializer.XSTREAM_MODE)
-      );
+      ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
+                                    Integer.toString(CXSerializer.XSTREAM_MODE));
     }
   }
 
   public static Test suite() {
     return variantSuites(new Class[] {
-        TestHistoryRepositoryImpl.class,
+        WithCastor.class,
         WithXStream.class
     });
   }
@@ -486,11 +498,12 @@ public class TestHistoryRepositoryImpl extends LockssTestCase {
 
   public static void configHistoryParams(String rootLocation)
     throws IOException {
-    Properties p = new Properties();
-    p.setProperty(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION, rootLocation);
-    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, rootLocation);
-    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.7");
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(HistoryRepositoryImpl.PARAM_HISTORY_LOCATION,
+                                  rootLocation,
+                                  LockssRepositoryImpl.PARAM_CACHE_LOCATION,
+                                  rootLocation,
+                                  IdentityManager.PARAM_LOCAL_IP,
+                                  "127.0.0.7");
   }
 
   public static void main(String[] argv) {

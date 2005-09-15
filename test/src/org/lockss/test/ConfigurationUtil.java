@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.13 2005-09-06 19:59:33 tlipkis Exp $
+ * $Id: ConfigurationUtil.java,v 1.14 2005-09-15 17:07:57 thib_gc Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -117,7 +117,20 @@ public class ConfigurationUtil {
     return fromProps(props);
   }
 
-
+  /** Create a Configuration with three params set to the specified
+   * values.
+   */
+  public static Configuration fromArgs(String prop1, String val1,
+                                       String prop2, String val2,
+                                       String prop3, String val3) {
+    // JAVA5: merge fromArgs variants into fromArgs(String...) ?
+    Properties props = new Properties();
+    props.put(prop1, val1);
+    props.put(prop2, val2);
+    props.put(prop3, val3);
+    return fromProps(props);
+  }
+  
   /** Create a Configuration from the supplied property list and install
    * it as the current configuration.
    */
@@ -177,6 +190,16 @@ public class ConfigurationUtil {
 			       fromArgs(prop1, val1, prop2, val2)));
   }
 
+  /** Add three values to the current config
+   */
+  public static boolean addFromArgs(String prop1, String val1,
+                                    String prop2, String val2,
+                                    String prop3, String val3) {
+    // JAVA5: merge addFromArgs variants into addFromArgs(String...) ?
+    return installConfig(merge(Configuration.getCurrentConfig(),
+                               fromArgs(prop1, val1, prop2, val2, prop3, val3)));
+  }
+  
   /** Install the supplied Configuration as the current configuration.
    */
   public static boolean installConfig(Configuration config) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.3 2005-09-14 22:47:07 thib_gc Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.4 2005-09-15 17:07:56 thib_gc Exp $
  */
 
 /*
@@ -47,8 +47,22 @@ import org.lockss.test.*;
 /** Test cases for org.lockss.protocol.IdentityManager that assume the
  * IdentityManager has been initialized.  See TestIdentityManagerInit for
  * more IdentityManager tests. */
-public class TestIdentityManagerImpl extends LockssTestCase {
+public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
+  /**
+   * <p>A version of {@link TestIdentityManagerImpl} that forces the
+   * serialization compatibility mode to
+   * {@link CXSerializer#CASTOR_MODE}.</p>
+   * @author Thib Guicherd-Callin
+   */
+  public static class WithCastor extends TestIdentityManagerImpl {
+    public void setUp() throws Exception {
+      super.setUp();
+      ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
+                                    Integer.toString(CXSerializer.CASTOR_MODE));
+    }
+  }
+  
   /**
    * <p>A version of {@link TestIdentityManagerImpl} that forces the
    * serialization compatibility mode to
@@ -58,16 +72,14 @@ public class TestIdentityManagerImpl extends LockssTestCase {
   public static class WithXStream extends TestIdentityManagerImpl {
     public void setUp() throws Exception {
       super.setUp();
-      ConfigurationUtil.addFromArgs(
-          CXSerializer.PARAM_COMPATIBILITY_MODE,
-          Integer.toString(CXSerializer.XSTREAM_MODE)
-      );
+      ConfigurationUtil.addFromArgs(CXSerializer.PARAM_COMPATIBILITY_MODE,
+                                    Integer.toString(CXSerializer.XSTREAM_MODE));
     }
   }
-  
+
   public static Test suite() {
     return variantSuites(new Class[] {
-        TestIdentityManagerImpl.class,
+        WithCastor.class,
         WithXStream.class
     });
   }
@@ -141,9 +153,8 @@ public class TestIdentityManagerImpl extends LockssTestCase {
 
   public void testSetupLocalIdentitiesV3Normal()
       throws IdentityManager.MalformedIdentityKeyException {
-    Properties p = commonConfig();
-    p.setProperty(IdentityManager.PARAM_LOCAL_V3_PORT, LOCAL_PORT);
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
+                                  LOCAL_PORT);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
     PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
@@ -158,12 +169,11 @@ public class TestIdentityManagerImpl extends LockssTestCase {
 
   public void testSetupLocalIdentitiesV3Override()
       throws IdentityManager.MalformedIdentityKeyException {
-    Properties p = commonConfig();
-    p.setProperty(IdentityManager.PARAM_LOCAL_V3_PORT, LOCAL_PORT);
-    p.setProperty(IdentityManager.PARAM_LOCAL_V3_IDENTITY,
-		  IP_2 + IdentityManager.V3_ID_SEPARATOR +
-		  (LOCAL_PORT_NUM + 123));
-    ConfigurationUtil.setCurrentConfigFromProps(p);
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_LOCAL_V3_PORT,
+                                  LOCAL_PORT,
+                                  IdentityManager.PARAM_LOCAL_V3_IDENTITY,
+                                  IP_2 + IdentityManager.V3_ID_SEPARATOR
+                                  + (LOCAL_PORT_NUM + 123));
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
     PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
@@ -691,8 +701,10 @@ public class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testLoadIdentityAgreementMerge() throws Exception {
-    ConfigurationUtil.setFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP, "true");
-
+//    ConfigurationUtil.setFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP, "true");
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
+                                  "true");
+    
     MockHistoryRepository hRep = new MockHistoryRepository();
     theDaemon.setHistoryRepository(hRep, mau);
 
@@ -740,7 +752,8 @@ public class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testLoadIdentityAgreementNoMerge() throws Exception {
-    ConfigurationUtil.setFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP, "false");
+    ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
+                                  "false");
 
     MockHistoryRepository hRep = new MockHistoryRepository();
     theDaemon.setHistoryRepository(hRep, mau);
