@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.23 2005-09-14 23:57:49 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.24 2005-09-15 20:59:14 smorabito Exp $
  */
 
 /*
@@ -760,16 +760,13 @@ public class ConfigManager implements LockssManager {
    * platform disk.</p>
    * 
    * @param relDir The relative pathname of the directory to request.
-   * @return A File object representing the requested directory, or null
-   *         if the directory could not be created.
+   * @return A File object representing the requested directory.
    */
   public File getPlatformDir(String relDir) {
     List dspacePaths = 
       ConfigManager.getCurrentConfig().getList(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (dspacePaths.size() == 0) {
-      log.error(PARAM_PLATFORM_DISK_SPACE_LIST +
-                " not specified, unable to create platform directory.");
-      return null;
+      throw new RuntimeException("No platform dir available");
     }
     File dir = new File((String)dspacePaths.get(0), relDir);
     return dir;

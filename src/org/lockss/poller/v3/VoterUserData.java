@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.util.*;
 /**
  * Persistent user data state object used by V3Voter state machine.
  */
-public class VoterUserData implements Serializable {
+public class VoterUserData implements LockssSerializable {
   
   private PeerIdentity pollerId;
   private String auId;

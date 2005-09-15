@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.util.*;
 /**
  * Persistant state object for the V3Poller.
  */
-public class PollerStateBean implements Serializable {
+public class PollerStateBean implements LockssSerializable {
 
   private String pollKey;
   private long deadline;

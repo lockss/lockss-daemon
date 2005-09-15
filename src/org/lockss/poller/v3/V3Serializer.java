@@ -1,5 +1,5 @@
 /*
- * $Id: V3Serializer.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
+ * $Id: V3Serializer.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public abstract class V3Serializer {
                                     DEFAULT_V3_STATE_LOCATION);
     File stateDir = 
       ConfigManager.getConfigManager().getPlatformDir(relStateDir);
-    if (stateDir == null || (!stateDir.exists() && !stateDir.mkdirs())) {
+    if (!stateDir.exists() && !stateDir.mkdirs()) {
       throw new PollSerializerException("Could not create state directory "
                                         + stateDir);
     }

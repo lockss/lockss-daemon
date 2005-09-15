@@ -1,5 +1,5 @@
 /*
- * $Id: PollerUserData.java,v 1.2 2005-09-14 23:57:48 smorabito Exp $
+ * $Id: PollerUserData.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import java.util.*;
 /**
  * Persistent user data state object used by V3Poller state machine.
  */
-public class PollerUserData implements Serializable {
+public class PollerUserData implements LockssSerializable {
 
   private PeerIdentity voterId;
   private String hashAlgorithm;
