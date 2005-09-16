@@ -108,6 +108,7 @@
 	<value>org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
+	<value>org.lockss.plugin.etd.fsuplugin.FSUETDPlugin</value>
       </list>
     </property>
 
@@ -230,6 +231,7 @@
 	  pluginName='org.lockss.plugin.etd.vanderbiltetdplugin.VanderbiltETDPlugin'
 	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'
 	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin'
+	  or pluginName='org.lockss.plugin.etd.fsuplugin.FSUETDPlugin'
 	  ]"
 	  />
       </property>
@@ -291,6 +293,24 @@
     <property name="title">
 
 
+
+      <property name="FSUETD">
+	<property name="title" value="Florida State University ETD Collection 2003" />
+	<property name="journalTitle" value="Florida State University ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.fsuplugin.FSUETDPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://etd.lib.fsu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="2003" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://etd.lib.fsu.edu/ETD-db/ETD-oai/oai.pl" />
+	</property>
+      </property>
 
       <property name="VirginiaTechETDLegacy">
 	<property name="title" value="Virginia Tech ETD Legacy" />
