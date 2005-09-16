@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.2 2005-09-16 00:48:33 dshr Exp $
+ * $Id: TreeReadTest.java,v 1.1 2005-09-16 00:48:33 dshr Exp $
  */
 
 /*
@@ -32,58 +32,60 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.devtools;
 import java.io.*;
-import java.security.MessageDigest;
 
 /**
  */
-public class HashSpeedTest {
+public class TreeReadTest {
 
-  public static long hashSingleFile(File src, MessageDigest hasher)
+  public static void readFiles(File srcDir)
+      throws FileNotFoundException, IOException {
+    if (srcDir == null) {
+      throw new IllegalArgumentException("Called with null source dir");
+    } else if (!srcDir.isDirectory()) {
+      throw new IllegalArgumentException("Called with src that isn't a directory: "+srcDir);
+    }
+
+    File children[] = srcDir.listFiles();
+    for (int ix=0; ix<children.length; ix++) {
+      if (children[ix].isFile()) {
+	readFile(children[ix]);
+      } else if (children[ix].isDirectory()) {
+	readFiles(children[ix]);
+      }
+    }
+  }
+
+  public static long readFile(File src)
       throws FileNotFoundException, IOException {
     if (src == null) {
       throw new IllegalArgumentException("Called with null source file");
-    } else if (hasher == null) {
-      throw new IllegalArgumentException("Called with null hasher");
     } else if (!src.isFile()) {
       throw new IllegalArgumentException("Called with src that isn't a file");
     }
-    long ret = 0;
-    // Hash the content of src
+    Reader reader = new FileReader(src);
     FileInputStream fis = new FileInputStream(src);
+    long ret = 0;
     byte buffer[] = new byte[1024*1024];
     for (int l; (l = fis.read(buffer)) > 0; ) {
-      hasher.update(buffer, 0, l);
       ret += l;
     }
     return ret;
+
   }
 
   public static void main(String args[]) {
     String src = args[0];
-    String hashAlgorithm = (args.length > 1 ? args[1] : "SHA1");
 
     try {
-      MessageDigest hasher = MessageDigest.getInstance(hashAlgorithm);
       // Start timing
       long start = System.currentTimeMillis();
-      // Hash the file
-      long bytes = hashSingleFile(new File(src), hasher);
+      // Read the tree
+      readFiles(new File(src));
       // Stop timing
       long stop = System.currentTimeMillis();
-      System.out.println(hashAlgorithm + " speed " + (bytes / (stop - start)) +
-			 " byte/ms");
+      System.out.println((stop - start) + "ms");
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
-  /*
-   * Results on "blackbox" 1GHz Via, 512MB ram, file pre-read:
-   * OpenBSD = 4713 bytes/ms vs. 23872 bytes/ms
-   * Ubuntu = 
-   * Freesbie =
-   *
-   * Results on narses2:
-   * Fedora Core 2 = 26111 bytes/ms vs. 61901 bytes/ms
-   */
 }
-
