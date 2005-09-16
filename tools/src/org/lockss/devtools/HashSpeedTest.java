@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.2 2005-09-16 00:48:33 dshr Exp $
+ * $Id: HashSpeedTest.java,v 1.3 2005-09-16 02:02:16 dshr Exp $
  */
 
 /*
@@ -42,8 +42,6 @@ public class HashSpeedTest {
       throws FileNotFoundException, IOException {
     if (src == null) {
       throw new IllegalArgumentException("Called with null source file");
-    } else if (hasher == null) {
-      throw new IllegalArgumentException("Called with null hasher");
     } else if (!src.isFile()) {
       throw new IllegalArgumentException("Called with src that isn't a file");
     }
@@ -52,7 +50,8 @@ public class HashSpeedTest {
     FileInputStream fis = new FileInputStream(src);
     byte buffer[] = new byte[1024*1024];
     for (int l; (l = fis.read(buffer)) > 0; ) {
-      hasher.update(buffer, 0, l);
+      if (hasher != null)
+	hasher.update(buffer, 0, l);
       ret += l;
     }
     return ret;
@@ -67,11 +66,19 @@ public class HashSpeedTest {
       // Start timing
       long start = System.currentTimeMillis();
       // Hash the file
-      long bytes = hashSingleFile(new File(src), hasher);
+      long bytes = hashSingleFile(new File(src), null);
       // Stop timing
       long stop = System.currentTimeMillis();
-      System.out.println(hashAlgorithm + " speed " + (bytes / (stop - start)) +
-			 " byte/ms");
+      long delta1 = (stop - start);
+      start = System.currentTimeMillis();
+      // Hash the file
+      bytes = hashSingleFile(new File(src), hasher);
+      // Stop timing
+      stop = System.currentTimeMillis();
+      long delta2 = (stop - start);
+      System.out.println(hashAlgorithm + " speed " +
+			 (bytes / (delta2 - delta1)) + " byte/ms" +
+			 " input speed " + (bytes / delta1) + " byte/ms");
     } catch (Exception e) {
       e.printStackTrace();
     }

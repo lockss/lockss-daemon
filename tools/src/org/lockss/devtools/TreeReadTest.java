@@ -1,5 +1,5 @@
 /*
- * $Id: TreeReadTest.java,v 1.1 2005-09-16 00:48:33 dshr Exp $
+ * $Id: TreeReadTest.java,v 1.2 2005-09-16 02:02:16 dshr Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TreeReadTest {
       } else if (children[ix].isDirectory()) {
 	readFiles(children[ix]);
       }
+      children[ix] = null;
     }
   }
 
@@ -64,11 +65,13 @@ public class TreeReadTest {
     }
     Reader reader = new FileReader(src);
     FileInputStream fis = new FileInputStream(src);
+    BufferedInputStream bis = new BufferedInputStream(fis);
     long ret = 0;
     byte buffer[] = new byte[1024*1024];
-    for (int l; (l = fis.read(buffer)) > 0; ) {
+    for (int l; (l = bis.read(buffer)) > 0; ) {
       ret += l;
     }
+    fis.close();
     return ret;
 
   }
@@ -88,4 +91,9 @@ public class TreeReadTest {
       e.printStackTrace();
     }
   }
+  /*
+   * Results on "blackbox":
+   * Results on "narses2":
+   * 59152 ms vs 130 ms
+   */
 }
