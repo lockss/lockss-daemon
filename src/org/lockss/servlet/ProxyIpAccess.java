@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.12 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.13 2005-09-16 00:28:46 thib_gc Exp $
  */
 
 /*
@@ -218,92 +218,73 @@ public class ProxyIpAccess extends IpAccessControl {
     // Start table
     Table tbl = new Table(0, "align=center cellpadding=10");
     
-    buildAuditRow(tbl);
-    buildIcpRow(tbl);
+    buildPortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
+        "audit proxy", AUDIT_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
+        resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
+    buildPortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
+        "ICP server", ICP_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+        resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
     
     return tbl;
   }
 
   /**
    * <p>Subpart of {@link #getAdditionalFormElement()} in charge of
-   * building the row with an Audit PRoxy checkbox, port number text
-   * field and port list.</p>
-   * @param tbl The Table instance being populated.
+   * building a row with a checkbox to enable some feature and a text
+   * field to choose a port for it, as well as a list of available
+   * ports.</p>
+   * @param table The Table instance being populated.
    * @see #getAdditionalFormElement
    */
-  private void buildAuditRow(Table tbl) {
-    // Start "audit" row
-    tbl.newRow();
+  private void buildPortRow(Table table,
+                            String enableFieldName,
+                            boolean defaultEnable,
+                            String enableDescription,
+                            String enableFootnote,
+                            String portFieldName,
+                            String defaultPort,
+                            List usablePorts) {
+    // Start row
+    table.newRow();
     
-    // Start "audit" first line
-    tbl.newCell("align=center");
-    Input auditEnaElem = new Input(Input.Checkbox, AUDIT_ENABLE_NAME, "1");
-    if (getDefaultAuditEnable()) {
-      auditEnaElem.check();
+    // Start line
+    table.newCell("align=center");
+
+    // "enable" element
+    Input enaElem = new Input(Input.Checkbox, enableFieldName, "1");
+    if (defaultEnable) {
+      enaElem.check();
     }
-    setTabOrder(auditEnaElem);
-    tbl.add(auditEnaElem);
-    tbl.add("Enable audit proxy");
-    tbl.add(addFootnote(AUDIT_FOOT));
-    tbl.add(" on port&nbsp;");
+    setTabOrder(enaElem);
+    table.add(enaElem);
+    table.add("Enable " + enableDescription);
+    table.add(addFootnote(enableFootnote));
+    table.add(" on port&nbsp;");
     
-    Input auditPortElem =
-      new Input(Input.Text, AUDIT_PORT_NAME, getDefaultAuditPort());
-    auditPortElem.setSize(6);
-    setTabOrder(auditPortElem);
-    tbl.add(auditPortElem);
+    // "port" element
+    Input portElem =
+      new Input(Input.Text, portFieldName, defaultPort);
+    portElem.setSize(6);
+    setTabOrder(portElem);
+    table.add(portElem);
     
-    // Start "audit" second line
-    // avoid breaking anything with this patch
+    // List of usable ports
     try {
-      List usablePorts =
-        resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME);
       if (usablePorts != null) {
-        tbl.add("<br>");
+        table.add("<br>");
         if (usablePorts.isEmpty()) {
-          tbl.add("(No available ports)");
-          tbl.add(addFootnote(AUDIT_FOOT));
+          table.add("(No available ports)");
+          table.add(addFootnote(enableFootnote));
         } else {
-          tbl.add("Available ports");
-          tbl.add(addFootnote(FILTER_FOOT));
-          tbl.add(": ");
-          tbl.add(StringUtil.separatedString(usablePorts, ", "));
+          table.add("Available ports");
+          table.add(addFootnote(FILTER_FOOT));
+          table.add(": ");
+          table.add(StringUtil.separatedString(usablePorts, ", "));
         }
       }
     } catch (Exception ignore) {}
   }
   
-  /**
-   * <p>Subpart of {@link #getAdditionalFormElement()} in charge of
-   * building the row with an ICP checkbox and port number text
-   * field.</p>
-   * @param tbl The Table instance being populated.
-   * @see #getAdditionalFormElement
-   */
-  private void buildIcpRow(Table tbl) {
-    // Start "ICP" row
-    tbl.newRow();
-    
-    // Start "ICP" line
-    tbl.newCell("align=center");
-    
-    Input icpEnaElem = new Input(Input.Checkbox, ICP_ENABLE_NAME, "1");
-    if (getDefaultIcpEnable()) {
-      icpEnaElem.check();
-    }
-    setTabOrder(icpEnaElem);
-    tbl.add(icpEnaElem);
-    tbl.add("Enable ICP server");
-    tbl.add(addFootnote(ICP_FOOT));
-    tbl.add(" on port&nbsp;");
-    
-    Input icpPortElem =
-      new Input(Input.Text, ICP_PORT_NAME, getDefaultIcpPort());
-    icpPortElem.setSize(6);
-    setTabOrder(icpPortElem);
-    tbl.add(icpPortElem);    
-  }
-
   protected void addConfigProps(Properties props) {
     super.addConfigProps(props);
     
