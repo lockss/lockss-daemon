@@ -1,5 +1,5 @@
 /*
- * $Id: HashSpeedTest.java,v 1.3 2005-09-16 02:02:16 dshr Exp $
+ * $Id: HashSpeedTest.java,v 1.4 2005-09-16 20:52:44 dshr Exp $
  */
 
 /*
@@ -86,8 +86,8 @@ public class HashSpeedTest {
   /*
    * Results on "blackbox" 1GHz Via, 512MB ram, file pre-read:
    * OpenBSD = 4713 bytes/ms vs. 23872 bytes/ms
-   * Ubuntu = 
-   * Freesbie =
+   * Fedora Core 3 = 5904 bytes/ms vs. 22393 bytes/ms
+   * Freesbie = 
    *
    * Results on narses2:
    * Fedora Core 2 = 26111 bytes/ms vs. 61901 bytes/ms
