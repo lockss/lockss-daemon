@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.158 2005-09-11 07:15:40 tlipkis Exp $
+ $Id: build.xml,v 1.159 2005-09-19 19:21:23 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -464,7 +464,7 @@ Java ${ant.java.version} found, 1.4 required
 
   <!-- ==================================================================== -->
   <target name="prepare.test"
-      depends="prepare,-set.junit.task.available,-set.junit.available,jar-ant,check.contrib">
+      depends="prepare,check.junit,jar-ant,check.contrib">
     <mkdir dir="${test.classes}" />
     <mkdir dir="${test.results}" />
     <condition property="class.arg.specified">
@@ -495,7 +495,7 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
   </target>
 
   <target name="prepare.run.test"
-       depends="prepare.test,-set.junit.logger.task.available">
+       depends="prepare.test,-load.junit.logger.task">
   </target>
 
   <target name="prepare.contrib">
@@ -504,39 +504,6 @@ The target you have selected requires compiling under JDK 1.4.  Use the rant -1.
 	 <classpath refid="ant-contrib.classpath" />
     </available>
   </target>
-
-  <target name="-set.junit.task.available" unless="junit.task.available">
-    <available property="junit.task.available"
-         classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
-  </target>
-
-  <target name="-set.junit.logger.task.available" depends="jar-ant"
-        unless="junit.logger.task.available">
-    <available property="junit.logger.task.available"
-         classname="org.lockss.ant.LoggingJUnitTask" />
-    <taskdef name="junit1" classname="org.lockss.ant.LoggingJUnitTask" >
-      <classpath>
-         <path refid="test.run.classpath" />
-      </classpath>
-    </taskdef>
-  </target>
-
-  <target name="-set.wrap.task.available" unless="wrap.task.available">
-     <available property="wrap.task.available" classname="org.lockss.ant.WrapTask"/>
-     <taskdef name="wrap" classname="org.lockss.ant.WrapTask">
-       <classpath>
-         <path refid="test.run.classpath" />
-      </classpath>
-    </taskdef>
-  </target>
-
-  <target name="-set.junit.available" unless="junit.available">
-    <available property="junit.available"
-               classname="junit.framework.Test" />
-  </target>
-
-  <target name="-using-junit1"
-          depends="-set.junit.available,-set.junit.task.available,-set.junit.logger.task.available"/>
 
   <!-- ==================================================================== -->
   <!--  Public tasks -->
@@ -1432,7 +1399,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 
   <!-- ==================================================================== -->
   <target name="test-unit"
-   depends="prepare.run.test,check.junit,jar-tests"
+   depends="prepare.run.test,jar-tests"
    description="Run all unit tests (test/src/**/Test*.class)" >
     <property name="include" value="**/Test*.java" />
     <dojunit cpid="test.run.classpath">
@@ -1452,7 +1419,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 
   <!-- ==================================================================== -->
   <target name="test-func"
-   depends="prepare.run.test,check.junit,jar-tests"
+   depends="prepare.run.test,jar-tests"
    description="Run all functional tests (test/src/**/Func*.class)" >
     <dojunit cpid="test.run.classpath">
      <junitelem>
@@ -1469,7 +1436,7 @@ java -classpath &quot;${tmp.ptool.clspth.unix}&quot; org.lockss.devtools.plugind
 
   <!-- ==================================================================== -->
   <target name="test-plugins"
-   depends="prepare.run.test,check.junit,jar-plugins-tests"
+   depends="prepare.run.test,jar-plugins-tests"
    description="Run all plugin unit tests (plugins/test/src/**/Test*.class)" >
     <property name="include" value="**/Test*.java" />
     <dojunit cpid="plugins.test.run.classpath">
@@ -1510,7 +1477,7 @@ Test results in ${test.results}
 -->
   <!-- ==================================================================== -->
   <target name="test-class"
-   depends="prepare.run.test,check.class.arg,check.junit,jar-tests,jar-ant,jar-tests"
+   depends="prepare.run.test,check.class.arg,jar-tests"
    description="Run all tests for a single class, named by the 'class' property" >
     <echo>Running tests for class ${class}</echo>
     <dojunit cpid="test.run.classpath" usefile="false">
@@ -1532,7 +1499,7 @@ Test results in ${test.results}
   </target>
   <!-- ==================================================================== -->
   <target name="test-one"
-   depends="prepare.run.test,check.class.arg,check.junit,jar-tests,jar-plugins-tests"
+   depends="prepare.run.test,check.class.arg,jar-tests,jar-plugins-tests"
    description="Run a single test class, named by the 'class' property" >
     <if>
       <contains string="${class}" substring="." />
@@ -1572,7 +1539,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="test-tools"
-   depends="-check-if-1.4,-using-junit1,jar-tools-tests"
+   depends="prepare.run.test,jar-tools-tests"
    description="Run all tools tests" >
     <dojunit cpid="tools.test.run.classpath">
      <junitelem>
@@ -1755,21 +1722,51 @@ Test results in ${test.results}
   </target>
 
   <target name="check.junit"
-   depends="check.junit.task,check.junit.jar">
+   depends="-set.junit.available,check.junit.jar,-set.junit.task.available,check.junit.task">
+  </target>
+
+  <target name="-set.junit.task.available" unless="junit.task.available">
+    <available property="junit.task.available"
+         classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" />
+  </target>
+
+  <target name="-load.junit.logger.task" depends="check.junit,jar-ant"
+        unless="junit.logger.task.available">
+    <available property="junit.logger.task.available"
+         classname="org.lockss.ant.LoggingJUnitTask" />
+    <taskdef name="junit1" classname="org.lockss.ant.LoggingJUnitTask" >
+      <classpath>
+         <path refid="test.run.classpath" />
+      </classpath>
+    </taskdef>
+  </target>
+
+  <target name="-set.wrap.task.available" unless="wrap.task.available">
+     <available property="wrap.task.available" classname="org.lockss.ant.WrapTask"/>
+     <taskdef name="wrap" classname="org.lockss.ant.WrapTask">
+       <classpath>
+         <path refid="test.run.classpath" />
+      </classpath>
+    </taskdef>
+  </target>
+
+  <target name="-set.junit.available" unless="junit.available">
+    <available property="junit.available"
+               classname="junit.framework.Test" />
   </target>
 
   <target name="check.junit.task" unless="junit.task.available" >
     <fail message="
- The &lt;junit&gt; task is not available.
- You need to install the Ant optional tasks .jar in the [ant]/lib directory.
+ The &lt;junit&gt; task cannot be found.
+ Your Ant installation may be incomplete.
  Please see Ant's JUnit task doc for more information"   />
   </target>
 
   <target name="check.junit.jar" unless="junit.available" >
     <fail message="
-  The junit .jar is not in the Ant class path.
-  You need to place a copy of junit.jar on the classpath.
-  Please see Ant's JUnit task doc for more information"
+  The junit jar is not in Ant's classpath.
+  Put a copy of junit.jar in Ant's lib/ directory, or
+  see Ant's JUnit task doc for more information"
     />
   </target>
 
@@ -1825,7 +1822,7 @@ Test results in ${test.results}
 
   <!-- ==================================================================== -->
   <target name="jcover"
-   depends="prepare.run.test,check.junit,jar-tests"
+   depends="prepare.run.test,jar-tests"
    description="Run a set of test classes through jcoverage, named by the 'include' property." >
     <property name="tests" value="${include}/Test*" />
     <taskdef classpath="${jcoverage.jar}" resource="tasks.properties"/>
