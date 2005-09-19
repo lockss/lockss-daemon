@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTiming.java,v 1.3 2004-04-19 02:44:55 tlipkis Exp $
+ * $Id: LockssTiming.java,v 1.4 2005-09-19 19:22:11 tlipkis Exp $
  */
 
 /*
@@ -43,12 +43,12 @@ import junit.framework.TestResult;
 
 // timing utilities
 public class LockssTiming extends LockssTestCase {
-  static final long DEFAULT_DURATION = 5 * Constants.SECOND;
-  static final int DEFAULT_BUFSIZE = 4096;
+  public static final long DEFAULT_DURATION = 5 * Constants.SECOND;
+  public static final int DEFAULT_BUFSIZE = 4096;
 
   int bufsize = DEFAULT_BUFSIZE;
   long duration = DEFAULT_DURATION;
-  long bytes;
+  protected FileTimingReporter fileReporter;
   byte[] buf;
   char[] cbuf;
   String outLabel = "b";
@@ -56,7 +56,6 @@ public class LockssTiming extends LockssTestCase {
   public void setUp() throws Exception {
     buf = new byte[bufsize];
     cbuf = new char[bufsize];
-    bytes = 0;
   }
 
   /** Call before setUp() */
@@ -79,6 +78,11 @@ public class LockssTiming extends LockssTestCase {
   }
 
   public void time(File file, String msg, Computation c) throws Exception {
+    fileReporter = new FileTimingReporter(file, msg, outLabel);
+    time(fileReporter, c);
+  }
+
+  public void time(TimingReporter reporter, Computation c) throws Exception {
     long start = System.currentTimeMillis();
     int cnt = 0;
     long delta;
@@ -90,29 +94,50 @@ public class LockssTiming extends LockssTestCase {
 	break;
       }
     }
-    StringBuffer sb = new StringBuffer();
-    sb.append(msg);
-    sb.append(":  ");
-    sb.append(Long.toString(delta/cnt));
-    sb.append(" ms");
-    if (file != null) {
-      sb.append(",  ");
-      sb.append(rateString(file.length() * cnt, delta));
-      sb.append(" b/ms(in)");
+    reporter.report(delta, cnt);
+  }
+
+  interface TimingReporter {
+    void report(long totalTime, int rpt);
+  }
+
+  static class FileTimingReporter implements TimingReporter {
+    private File file;
+    private String msg;
+    private String outLabel;
+    private long bytesProcessed = 0;
+
+    FileTimingReporter(File file, String msg, String outLabel) {
+      this.file = file;
+      this.msg = msg;
+      this.outLabel = outLabel;
     }
-    if (bytes > 0) {
-      sb.append(",  ");
-      sb.append(rateString(bytes, delta));
-      sb.append(" ");
-      sb.append(outLabel);
-      sb.append("/ms(out)");
+    public void report(long totalTime, int rpt) {
+      StringBuffer sb = new StringBuffer();
+      sb.append(msg);
+      sb.append(":  ");
+      sb.append(Long.toString(totalTime/rpt));
+      sb.append(" ms");
+      if (file != null) {
+	sb.append(",  ");
+	sb.append(rateString(file.length() * rpt, totalTime));
+	sb.append(" b/ms(in)");
+      }
+      if (bytesProcessed > 0) {
+	sb.append(",  ");
+	sb.append(rateString(bytesProcessed, totalTime));
+	sb.append(" ");
+	sb.append(outLabel);
+	sb.append("/ms(out)");
+      }
+      System.out.println(sb.toString());
     }
-    System.out.println(sb.toString());
+
   }
 
   static final NumberFormat rateFormat = new DecimalFormat("0.00");
 
-  public String rateString(long dividend, long divisor) {
+  public static String rateString(long dividend, long divisor) {
     long b = dividend / divisor;
     if (b >= 100) {
       return Long.toString(b);
@@ -122,8 +147,8 @@ public class LockssTiming extends LockssTestCase {
     }
   }
 
-  public void incrBytes(long n) {
-    bytes += n;
+  public void incrBytesProcessed(long n) {
+    fileReporter.bytesProcessed += n;
   }
 
   public int readAll(Reader rdr, boolean efficiently) throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: TimeStringFilter.java,v 1.1 2004-04-05 08:05:16 tlipkis Exp $
+ * $Id: TimeStringFilter.java,v 1.2 2005-09-19 19:22:11 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TimeStringFilter extends LockssTiming {
 	     InputStream is =
 	       new BufferedInputStream(new FileInputStream(file));
 	     Reader rdr = new InputStreamReader(is);
-	     incrBytes(readAll(rdr, true));
+	     incrBytesProcessed(readAll(rdr, true));
 	     rdr.close();
 	   }});
   }
@@ -78,7 +78,7 @@ public class TimeStringFilter extends LockssTiming {
 	       new BufferedInputStream(new FileInputStream(file));
 	     Reader rdr = new InputStreamReader(is);
 	     StringFilter sf = new StringFilter(rdr, "foo");
-	     incrBytes(readAll(sf, true));
+	     incrBytesProcessed(readAll(sf, true));
 	     rdr.close();
 	   }});
   }
@@ -92,7 +92,7 @@ public class TimeStringFilter extends LockssTiming {
 	     Reader rdr = new InputStreamReader(is);
 	     StringFilter sf = new StringFilter(rdr, "foo");
 	     sf.setIgnoreCase(true);
-	     incrBytes(readAll(sf, true));
+	     incrBytesProcessed(readAll(sf, true));
 	     rdr.close();
 	   }});
   }
@@ -106,7 +106,7 @@ public class TimeStringFilter extends LockssTiming {
 	     Reader rdr = new InputStreamReader(is);
 	     StringFilter sf = new StringFilter(rdr, "<foo");
 	     sf.setIgnoreCase(true);
-	     incrBytes(readAll(sf, true));
+	     incrBytesProcessed(readAll(sf, true));
 	     rdr.close();
 	   }});
   }
@@ -119,7 +119,7 @@ public class TimeStringFilter extends LockssTiming {
 	       new BufferedInputStream(new FileInputStream(file));
 	     Reader rdr = new InputStreamReader(is);
 	     StringFilter sf = new StringFilter(rdr, "bird");
-	     incrBytes(readAll(sf, true));
+	     incrBytesProcessed(readAll(sf, true));
 	     rdr.close();
 	   }});
   }
