@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.59 2005-09-06 19:58:32 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.60 2005-09-19 17:13:05 thib_gc Exp $
  */
 
 /*
@@ -38,14 +38,12 @@ import java.io.*;
 import java.util.*;
 import java.net.*;
 import java.text.*;
-//  import com.mortbay.servlet.*;
-//  import org.mortbay.util.*;
+
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 
 /** Abstract base class for LOCKSS servlets
  */
@@ -119,93 +117,6 @@ public abstract class LockssServlet extends HttpServlet
 
   // number submit buttons sequentially so unit tests can find them
   private int submitButtonNumber = 0;
-
-  /** Marker for servlets whose class can't be found */
-  static class UnavailableServletMarker {
-  }
-  static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
-
-
-  // Servlet descriptor.
-  // also used for non-servlet links.  should be refactored.
-  public static class ServletDescr {
-    public Class cls;
-    public String heading;	// display name
-    public String name;		// url path component to invoke servlet
-    public String expl;
-    public int flags = 0;
-    // flags
-    public static final int ON_CLIENT = 1; // runs on client (else on admin)
-    public static final int PER_CLIENT = 2; // per client (takes client arg)
-    public static final int NOT_IN_NAV = 4; // no link in nav table
-    public static final int LARGE_LOGO = 8; // use large LOCKSS logo
-    public static final int DEBUG_ONLY = 0x10; // debug user only
-    public static final int NAME_IS_URL = 0x20; // debug user only
-    public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
-
-    public ServletDescr(Class cls, String heading, String name, int flags) {
-      this.cls = cls;
-      this.heading = heading;
-      this.name = name;
-      this.flags = flags;
-    }
-    public ServletDescr(Class cls, String heading, int flags) {
-      this(cls, heading,
-	   cls.getName().substring(cls.getName().lastIndexOf('.') + 1),
-	   flags);
-    }
-
-    public ServletDescr(Class cls, String heading) {
-      this(cls, heading, 0);
-    }
-
-    public ServletDescr(String className, String heading, String name) {
-      this(classForName(className), heading, name, 0);
-    }
-
-    public ServletDescr(String className, String heading, int flags) {
-      this(classForName(className), heading, flags);
-    }
-
-    static Class classForName(String className) {
-      try {
-	return Class.forName(className);
-      } catch (ClassNotFoundException e) {
-	return UNAVAILABLE_SERVLET_MARKER;
-      }	
-    }
-
-    public String getName() {
-      return name;
-    }
-
-    String getExplanation() {
-      return expl;
-    }
-
-    void setExplanation(String s) {
-      expl = s;
-    }
-
-    boolean isPerClient() {
-      return (flags & PER_CLIENT) != 0;
-    }
-    boolean runsOnClient() {
-      return (flags & ON_CLIENT) != 0;
-    }
-    boolean isInNavTable() {
-      return (flags & NOT_IN_NAV) == 0;
-    }
-    boolean isDebugOnly() {
-      return (flags & DEBUG_ONLY) != 0;
-    }
-    boolean isLargeLogo() {
-      return (flags & LARGE_LOGO) != 0;
-    }
-    boolean isNameIsUrl() {
-      return (flags & NAME_IS_URL) != 0;
-    }
-  }
 
   // Descriptors for all servlets.
   protected static final ServletDescr SERVLET_HOME =
@@ -295,7 +206,7 @@ public abstract class LockssServlet extends HttpServlet
   static {
     for (int i = 0; i < servletDescrs.length; i++) {
       ServletDescr d = servletDescrs[i];
-      if (d.cls != null && d.cls != UNAVAILABLE_SERVLET_MARKER) {
+      if (d.cls != null && d.cls != ServletDescr.UNAVAILABLE_SERVLET_MARKER) {
 	servletToDescr.put(d.cls, d);
       }
     }
@@ -680,7 +591,7 @@ public abstract class LockssServlet extends HttpServlet
 
   protected boolean isServletInNav(ServletDescr d) {
     if (!isDebugUser() && d.isDebugOnly()) return false;
-    if (d.cls == UNAVAILABLE_SERVLET_MARKER) return false;
+    if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
     return d.isInNavTable() && (!d.isPerClient() || isPerClient());
   }
 
@@ -1169,4 +1080,5 @@ public abstract class LockssServlet extends HttpServlet
       super(message);
     }
   }
+  
 }

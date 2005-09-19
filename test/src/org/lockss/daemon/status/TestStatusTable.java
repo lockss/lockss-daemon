@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.9 2005-05-24 07:20:58 tlipkis Exp $
+ * $Id: TestStatusTable.java,v 1.10 2005-09-19 17:13:05 thib_gc Exp $
  */
 
 /*
@@ -34,8 +34,8 @@ import org.lockss.servlet.*;
 public class TestStatusTable extends LockssTestCase {
   StatusTable table;
 
-  static LockssServlet.ServletDescr srvDescr =
-    new LockssServlet.ServletDescr(LockssServlet.class, "name");
+  static ServletDescr srvDescr =
+    new ServletDescr(LockssServlet.class, "name");
   static Properties args = new Properties();
   static {
     args.setProperty("foo", "bar");
@@ -335,7 +335,7 @@ public class TestStatusTable extends LockssTestCase {
     assertTrue(lnk.equals(new StatusTable.SrvLink("C", srvDescr, args)));
     assertFalse(lnk.equals(new StatusTable.SrvLink("D", srvDescr, args)));
     assertFalse(lnk.equals(new StatusTable.SrvLink("C", srvDescr, null)));
-    assertFalse(lnk.equals(new StatusTable.SrvLink("C", new LockssServlet.ServletDescr(LockssServlet.class, "bar"), args)));
+    assertFalse(lnk.equals(new StatusTable.SrvLink("C", new ServletDescr(LockssServlet.class, "bar"), args)));
     assertFalse(lnk.equals(new StatusTable.SrvLink("C", srvDescr,
 						   new Properties())));
   }

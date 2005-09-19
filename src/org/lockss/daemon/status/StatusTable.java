@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.42 2005-06-04 19:21:33 tlipkis Exp $
+ * $Id: StatusTable.java,v 1.43 2005-09-19 17:13:05 thib_gc Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon.status;
 import java.util.*;
 import java.net.*;
 import org.lockss.util.*;
-import org.lockss.servlet.LockssServlet.ServletDescr;
+import org.lockss.servlet.ServletDescr;
 
 /**
  * Returned by {@link StatusService#getTable(String, String)} 
