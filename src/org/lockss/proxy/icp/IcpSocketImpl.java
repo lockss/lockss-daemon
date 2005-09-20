@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSocketImpl.java,v 1.5 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpSocketImpl.java,v 1.6 2005-09-20 23:02:39 thib_gc Exp $
  */
 
 /*
@@ -104,7 +104,8 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
     this.decoder = decoder;
     this.handlers = new ArrayList();
     this.icpManager = icpManager;
-
+    this.goOn = false;
+    
     // Log
     logger.debug2("constructor in IcpSocketImpl: end");
   }
@@ -123,13 +124,21 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
     return handlers.size();
   }
 
+  /**
+   * <p>Determines if this socket is running.</p>
+   * @return True if and only if this socket is running.
+   */
+  public boolean isRunning() {
+    return goOn;
+  }
+  
   /* Inherit documentation */
   public void removeIcpHandler(IcpHandler handler) {
     synchronized (handlers) {
       handlers.remove(handler);
     }
   }
-  
+
   /**
    * <p>Asks this thread to stop listening for incoming ICP messages
    * and to exit cleanly <em>after closing the socket</em>.</p>
@@ -147,7 +156,7 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
       throws IOException {
     send(message, recipient, IcpMessage.ICP_PORT);
   }
-
+  
   /* Inherit documentation */
   public void send(IcpMessage message,
                    InetAddress recipient,
@@ -159,7 +168,7 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
     }
     socket.send(packet);
   }
-  
+
   /* Inherit documentation */
   protected void lockssRun() {
     // Set up
@@ -174,16 +183,16 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
     setPriority("icp",
         Configuration.getIntParam(PARAM_ICP_THREAD_PRIORITY,
                                   DEFAULT_ICP_THREAD_PRIORITY));
-    nowRunning();
+    boolean somethingBadHappened = false;
     
     try {
       // Set up socket timeout
       socket.setSoTimeout((int)interval / 2); // may throw
       addInternalIcpHandlers();
       startWDog("icp", interval);
+      nowRunning();
 
       // Main loop
-      boolean somethingBadHappened = false;
       while (goOn && !somethingBadHappened) {
         try {
           logger.debug2("lockssRun in IcpSocketImpl: listening");
@@ -209,7 +218,9 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
           }
         }
         catch (IOException ioe) {
-          logger.warning("lockssRun in IcpSocketImpl: IOException", ioe);
+          if (goOn) {
+            logger.warning("lockssRun in IcpSocketImpl: IOException", ioe);
+          }
           somethingBadHappened = goOn && socket.isClosed();
         }
         finally {
@@ -226,6 +237,9 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
       // Clean up
       removeInternalIcpHandlers();
       stopWDog();
+      if (somethingBadHappened) {
+        logger.warning("somethingBadHappened is true");
+      }
       logger.debug2("lockssRun in IcpSocketImpl: end");
     }
   }
@@ -295,7 +309,7 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
       handlers.remove(this);
     }
   }
-
+  
   /**
    * <p>The default ICP thread priority.</p>
    */
@@ -317,7 +331,7 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
    */
   private static final String PARAM_ICP_THREAD_PRIORITY =
     "org.lockss.thread.icp.priority";
-  
+
   /**
    * <p>The ICP watchdog interval parameter.</p>
    */

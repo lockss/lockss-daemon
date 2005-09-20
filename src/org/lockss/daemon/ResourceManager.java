@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.5 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: ResourceManager.java,v 1.6 2005-09-20 23:02:39 thib_gc Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -33,6 +33,8 @@ package org.lockss.daemon;
 import java.util.*;
 
 import org.lockss.app.BaseLockssManager;
+import org.lockss.app.LockssApp;
+import org.lockss.app.LockssAppException;
 import org.lockss.util.Logger;
 import org.lockss.util.PlatformInfo;
 
@@ -54,13 +56,9 @@ public class ResourceManager extends BaseLockssManager  {
    */
   private Map inUse;
 
-  public void startService() {
-    super.startService();
+  public void initService(LockssApp app) throws LockssAppException {
+    super.initService(app);
     inUse = new HashMap();
-  }
-
-  public void stopService() {
-    super.stopService();
   }
 
   /**

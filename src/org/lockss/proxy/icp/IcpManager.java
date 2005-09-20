@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.8 2005-09-20 17:01:54 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.9 2005-09-20 23:02:39 thib_gc Exp $
  */
 
 /*
@@ -57,6 +57,11 @@ public class IcpManager
     implements ConfigurableManager, IcpHandler {
 
   /**
+   * <p>An ICP socket.</p>
+   */
+  protected IcpSocketImpl icpSocket;
+  
+  /**
    * <p>An ICP builder.</p>
    */
   private IcpBuilder icpBuilder;
@@ -65,11 +70,6 @@ public class IcpManager
    * <p>An ICP factory.</p>
    */
   private IcpFactory icpFactory;
-  
-  /**
-   * <p>An ICP socket.</p>
-   */
-  private IcpSocketImpl icpSocket;
   
   /**
    * <p>A rate limiter for use by the ICP socket.</p>
@@ -101,6 +101,16 @@ public class IcpManager
    */
   private DatagramSocket udpSocket;
 
+  /**
+   * <p>Determines the port on which the ICP server is currently
+   * running.</p>
+   * @return A port number if the ICP server is running, a negative
+   *         number otherwise.
+   */
+  public int getCurrentPort() {
+    return isIcpServerRunning() ? port : -1;
+  }
+  
   /**
    * <p>Returns a rate limiter governing the acceptable reception rate
    * of ICP messages.</p>
@@ -166,6 +176,14 @@ public class IcpManager
       }
     }
   }
+
+  /**
+   * <p>Determines if the ICP server is currently running.</p>
+   * @return True if and only if the ICP server is running.
+   */
+  public boolean isIcpServerRunning() {
+    return icpSocket != null && icpSocket.isRunning();
+  }
   
   /* Inherit documentation */
   public void setConfig(Configuration newConfig,
@@ -204,10 +222,57 @@ public class IcpManager
 
   /* Inherit documentation */
   public void stopService() {
-    icpSocket.requestStop();
+    stopSocket();
     super.stopService();
   }
+
+  /**
+   * <p>Starts the ICP socket.</p>
+   */
+  protected void startSocket() {
+    try {
+      logger.debug("startSocket in IcpManager: begin");
+      port = Configuration.getIntParam(PARAM_ICP_PORT,
+                                       DEFAULT_ICP_PORT);
+      resourceManager = getDaemon().getResourceManager();
+      if (!resourceManager.reserveUdpPort(port, getClass())) {
+        logger.error("Could not reserve UDP port " + port);
+        throw new SocketException();
+      }
+        
+      udpSocket = new DatagramSocket(port);
+      icpFactory = IcpFactoryImpl.makeIcpFactory();
+      icpBuilder = icpFactory.makeIcpBuilder(); 
+      icpSocket = new IcpSocketImpl("IcpSocketImpl",
+                                    udpSocket,
+                                    icpFactory.makeIcpEncoder(),
+                                    icpFactory.makeIcpDecoder(),
+                                    this);
+      icpSocket.addIcpHandler(this);
+      limiter = RateLimiter.getConfiguredRateLimiter(
+          Configuration.getCurrentConfig(), limiter,
+          PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
+      new Thread(icpSocket).start();
+      logger.debug("startSocket in IcpManager: end");
+    }
+    catch (SocketException se) {
+      forget(); // revert instantions
+      logger.error("Could not start ICP socket", se);
+    }
+  }
   
+  /**
+   * <p>Stops the ICP socket.</p>
+   */
+  protected void stopSocket() {
+    if (icpSocket != null) {
+      logger.debug2("stopSocket in IcpManager: action");
+      icpSocket.requestStop();
+      resourceManager.releaseUdpPort(port, getClass());
+      forget(); // minimize footprint
+    }
+  }
+
   /**
    * <p>Sets several internals to null.</p>
    */
@@ -221,54 +286,6 @@ public class IcpManager
   }
 
   /**
-   * <p>Starts the ICP socket.</p>
-   */
-  private void startSocket() {
-    if (isAppInited()) {
-      try {
-        logger.debug2("startSocket in IcpManager: action");
-        port = Configuration.getIntParam(PARAM_ICP_PORT,
-                                         DEFAULT_ICP_PORT);
-        resourceManager = getDaemon().getResourceManager();
-        if (!resourceManager.reserveUdpPort(port, getClass())) {
-          logger.error("Could not reserve UDP port " + port);
-          throw new SocketException();
-        }
-        
-        udpSocket = new DatagramSocket(port);
-        icpFactory = IcpFactoryImpl.makeIcpFactory();
-        icpBuilder = icpFactory.makeIcpBuilder(); 
-        icpSocket = new IcpSocketImpl("IcpSocketImpl",
-                                      udpSocket,
-                                      icpFactory.makeIcpEncoder(),
-                                      icpFactory.makeIcpDecoder(),
-                                      this);
-        icpSocket.addIcpHandler(this);
-        limiter = RateLimiter.getConfiguredRateLimiter(
-            Configuration.getCurrentConfig(), limiter,
-            PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
-        new Thread(icpSocket).start();
-      }
-      catch (SocketException se) {
-        forget(); // revert instantions
-        logger.error("Could not start ICP socket", se);
-      }
-    }
-  }
-
-  /**
-   * <p>Stops the ICP socket.</p>
-   */
-  private void stopSocket() {
-    if (icpSocket != null) {
-      logger.debug2("stopSocket in IcpManager: action");
-      icpSocket.requestStop();
-      resourceManager.releaseUdpPort(port, getClass());
-      forget(); // minimize footprint
-    }
-  }
-
-  /**
    * <p>The default ICP enabled flag.</p>
    */
   public static final boolean DEFAULT_ICP_ENABLED = false;
@@ -277,19 +294,24 @@ public class IcpManager
    * <p>The default ICP port.</p>
    */
   public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
-
+  
   /**
    * <p>The ICP enabled flag parameter.</p>
    */
   public static final String PARAM_ICP_ENABLED =
     "org.lockss.proxy.icp.enabled";
-
+  
   /**
    * <p>The ICP port parameter.</p>
    */
   public static final String PARAM_ICP_PORT =
     "org.lockss.proxy.icp.port";
-  
+
+  /**
+   * <p>A logger for use by instances of this class.</p>
+   */
+  protected static Logger logger = Logger.getLogger("IcpManager");
+
   /**
    * <p>The default ICP rate-limiting string.</p>
    */
@@ -297,14 +319,9 @@ public class IcpManager
     "50/1s";
   
   /**
-   * <p>A logger for use by instances of this class.</p>
-   */
-  private static Logger logger = Logger.getLogger("IcpManager");
-  
-  /**
    * <p>The ICP rate-limiting string parameter.</p>
    */
   private static final String PARAM_ICP_INCOMING_RATE =
   "org.lockss.proxy.icp.incomingRequestsPerSecond";
-
+  
 }

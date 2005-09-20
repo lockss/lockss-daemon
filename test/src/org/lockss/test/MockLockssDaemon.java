@@ -1,10 +1,10 @@
 /*
- * $Id: MockLockssDaemon.java,v 1.50 2005-06-04 19:21:31 tlipkis Exp $
+ * $Id: MockLockssDaemon.java,v 1.51 2005-09-20 23:02:38 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -43,6 +43,7 @@ import org.lockss.poller.*;
 import org.lockss.state.*;
 import org.lockss.repository.*;
 import org.lockss.proxy.*;
+import org.lockss.proxy.icp.IcpManager;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.plugin.*;
@@ -76,6 +77,7 @@ public class MockLockssDaemon extends LockssDaemon {
   IdentityManager identityManager = null;
   StatusService statusService = null;
   RemoteApi remoteApi = null;
+  IcpManager icpManager = null;
 
   public MockLockssDaemon() {
     this(null);
@@ -103,6 +105,7 @@ public class MockLockssDaemon extends LockssDaemon {
     pluginManager = null;
     identityManager = null;
     statusService = null;
+    icpManager = null;
 
     //super.stopDaemon();
   }
@@ -373,7 +376,6 @@ public class MockLockssDaemon extends LockssDaemon {
    * return the Identity Manager
    * @return IdentityManager
    */
-
   public IdentityManager getIdentityManager() {
     if (identityManager == null) {
       identityManager =
@@ -382,7 +384,7 @@ public class MockLockssDaemon extends LockssDaemon {
     }
     return identityManager;
   }
-
+  
   public StatusService getStatusService() {
     if (statusService == null) {
       statusService = (StatusService)newManager(LockssDaemon.STATUS_SERVICE);
@@ -688,7 +690,14 @@ public class MockLockssDaemon extends LockssDaemon {
     setAuManager(HISTORY_REPOSITORY, au, histRepo);
   }
 
-
+  /**
+   * <p>Forcibly sets the ICP manager to a new value.</p>
+   * @param icpManager A new ICP manager to use.
+   */
+  public void setIcpManager(IcpManager icpManager) {
+    this.icpManager = icpManager;
+    managerMap.put(LockssDaemon.ICP_MANAGER, icpManager);
+  }
 
   private boolean daemonInited = false;
   private boolean daemonRunning = false;
