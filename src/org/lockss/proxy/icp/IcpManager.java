@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.7 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.8 2005-09-20 17:01:54 thib_gc Exp $
  */
 
 /*
@@ -195,9 +195,6 @@ public class IcpManager
     super.startService();
     pluginManager = getDaemon().getPluginManager();
     proxyManager = getDaemon().getProxyManager();
-    limiter = RateLimiter.getConfiguredRateLimiter(
-        Configuration.getCurrentConfig(), limiter,
-        PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
     boolean start = Configuration.getBooleanParam(PARAM_ICP_ENABLED,
                                                   DEFAULT_ICP_ENABLED);
     if (start) {
@@ -247,6 +244,9 @@ public class IcpManager
                                       icpFactory.makeIcpDecoder(),
                                       this);
         icpSocket.addIcpHandler(this);
+        limiter = RateLimiter.getConfiguredRateLimiter(
+            Configuration.getCurrentConfig(), limiter,
+            PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
         new Thread(icpSocket).start();
       }
       catch (SocketException se) {
