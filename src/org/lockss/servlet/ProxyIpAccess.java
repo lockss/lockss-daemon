@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.12 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.12.2.1 2005-09-20 17:24:18 thib_gc Exp $
  */
 
 /*
@@ -219,7 +219,8 @@ public class ProxyIpAccess extends IpAccessControl {
     Table tbl = new Table(0, "align=center cellpadding=10");
     
     buildAuditRow(tbl);
-    buildIcpRow(tbl);
+    /* buildIcpRow(tbl); */
+    // FIXME: disabled; see Issue 1478
     
     return tbl;
   }
