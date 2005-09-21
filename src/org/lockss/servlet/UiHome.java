@@ -1,10 +1,10 @@
-// ========================================================================
-// $Id: UiHome.java,v 1.5 2005-08-23 22:05:44 tlipkis Exp $
-// ========================================================================
+/*
+ * $Id: UiHome.java,v 1.6 2005-09-21 15:59:46 thib_gc Exp $
+ */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,18 +32,9 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
-import java.util.*;
-import java.net.*;
-import java.text.*;
-//  import com.mortbay.servlet.*;
-//  import org.mortbay.util.*;
 import org.mortbay.html.*;
-import org.lockss.util.*;
-import org.lockss.config.*;
-import org.lockss.daemon.*;
 
 /** UiHome servlet
  */
@@ -73,7 +64,7 @@ public class UiHome extends LockssServlet {
     tab.add("</b>.");
     tab.newRow();
     tab.newCell("align=center");
-    tab.add("&nbsp");
+    tab.add("&nbsp;");
     return tab;
   }
 

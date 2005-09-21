@@ -1,10 +1,10 @@
 /*
- * $Id: TinyUi.java,v 1.8 2005-08-25 19:36:53 tlipkis Exp $
+ * $Id: TinyUi.java,v 1.9 2005-09-21 15:59:46 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,11 +34,8 @@ package org.lockss.servlet;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
-import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
@@ -51,7 +48,7 @@ import org.mortbay.html.*;
 /**
  * Starts a tiny context running a tiny servlet that says the cache isn't
  * up, and displays an error mesage from the context.  This is run before
- * the application is running, so must not reply on any services.
+ * the application is running, so must not rely on any services.
  */
 public class TinyUi extends BaseServletManager {
   public static final String SERVER_NAME = "TinyUi";
