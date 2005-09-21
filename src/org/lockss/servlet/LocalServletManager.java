@@ -1,10 +1,10 @@
 /*
- * $Id: LocalServletManager.java,v 1.12 2005-09-06 19:58:32 tlipkis Exp $
+ * $Id: LocalServletManager.java,v 1.13 2005-09-21 17:24:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,9 +35,7 @@ package org.lockss.servlet;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import org.lockss.app.*;
 import org.lockss.config.*;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 import org.lockss.jetty.*;
 import org.mortbay.http.*;
@@ -203,6 +201,8 @@ public class LocalServletManager extends BaseServletManager {
 		       "org.lockss.servlet.AdminIpAccess");
     handler.addServlet("ProxyIpAccess", "/ProxyIpAccess",
 		       "org.lockss.servlet.ProxyIpAccess");
+    handler.addServlet("AccessControl", "/AccessControl",
+                       "org.lockss.servlet.AccessControl");
     handler.addServlet("Hash CUS", "/HashCUS",
 		       "org.lockss.servlet.HashCUS");
     handler.addServlet("Raise Alert", "/RaiseAlert",

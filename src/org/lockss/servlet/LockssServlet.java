@@ -1,10 +1,10 @@
 /*
- * $Id: LockssServlet.java,v 1.60 2005-09-19 17:13:05 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.61 2005-09-21 17:24:19 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -120,44 +120,80 @@ public abstract class LockssServlet extends HttpServlet
 
   // Descriptors for all servlets.
   protected static final ServletDescr SERVLET_HOME =
-    new ServletDescr(UiHome.class, "Cache Administration",
-		     ServletDescr.NOT_IN_NAV + ServletDescr.LARGE_LOGO);
-  protected static final ServletDescr SERVLET_AU_CONFIG =
-    new ServletDescr(AuConfig.class, "Manual Journal Configuration",
-		     ServletDescr.NOT_IN_NAV);
+    new ServletDescr(UiHome.class,
+                     "Cache Administration",
+		     ServletDescr.NOT_IN_NAV | ServletDescr.LARGE_LOGO);
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
-    new ServletDescr(BatchAuConfig.class, "Journal Configuration");
-  protected static final ServletDescr SERVLET_DAEMON_STATUS =
-    new ServletDescr(DaemonStatus.class, "Daemon Status");
-  public static final ServletDescr SERVLET_DISPLAY_CONTENT =
-    new ServletDescr(ViewContent.class, "View Content",
-		     ServletDescr.DEBUG_ONLY + ServletDescr.NOT_IN_NAV);
-  protected static final ServletDescr SERVLET_PROXY_INFO =
-    new ServletDescr(ProxyConfig.class, "Proxy Info", "info/ProxyInfo", 0);
-  protected static final ServletDescr SERVLET_THREAD_DUMP =
-    new ServletDescr("org.lockss.servlet.ThreadDump", "Thread Dump",
-		     ServletDescr.DEBUG_ONLY);
-  protected static final ServletDescr LINK_LOGS =
-    new ServletDescr(null, "Logs", "log", ServletDescr.DEBUG_ONLY);
+    new ServletDescr(BatchAuConfig.class,
+                     "Journal Configuration",
+                     "Add or remove titles from this cache");
+  protected static final ServletDescr SERVLET_AU_CONFIG =
+    new ServletDescr(AuConfig.class,
+                     "Manual Journal Configuration",
+		     ServletDescr.NOT_IN_NAV,
+                     "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
-    new ServletDescr(AdminIpAccess.class, "Admin Access Control");
+    new ServletDescr(AdminIpAccess.class,
+                     "Admin Access Control",
+                     "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
-    new ServletDescr(ProxyIpAccess.class, "Proxy Access Control");
+    new ServletDescr(ProxyIpAccess.class,
+                     "Proxy Access Control",
+                     "Control access to the preserved content");
+  protected static final ServletDescr SERVLET_ACCESS_CONTROL =
+    new ServletDescr(AccessControl.class,
+                     "Access Control",
+                     ServletDescr.NOT_IN_NAV /* ,
+                     "Control access to the cache's preserved"
+                     + "<br>"
+                     + "content and administrative UI" */);
+  protected static final ServletDescr SERVLET_PROXY_INFO =
+    new ServletDescr(ProxyConfig.class,
+                     "Proxy Info",
+                     "info/ProxyInfo",
+                     0,
+                     "Info for configuring browsers and proxies"
+                     + "<br>"
+                     + "to access preserved content on this cache");
+  protected static final ServletDescr SERVLET_DAEMON_STATUS =
+    new ServletDescr(DaemonStatus.class,
+                     "Daemon Status",
+                     "Status of cache contents and operation");
+  public static final ServletDescr SERVLET_DISPLAY_CONTENT =
+    new ServletDescr(ViewContent.class,
+                     "View Content",
+		     ServletDescr.DEBUG_ONLY | ServletDescr.NOT_IN_NAV);
   protected static final ServletDescr SERVLET_HASH_CUS =
-    new ServletDescr(HashCUS.class, "Hash CUS", ServletDescr.DEBUG_ONLY);
+    new ServletDescr(HashCUS.class,
+                     "Hash CUS",
+                     ServletDescr.DEBUG_ONLY);
+  protected static final ServletDescr LINK_LOGS =
+    new ServletDescr(null,
+                     "Logs",
+                     "log",
+                     ServletDescr.DEBUG_ONLY);
+  protected static final ServletDescr SERVLET_THREAD_DUMP =
+    new ServletDescr("org.lockss.servlet.ThreadDump",
+                     "Thread Dump",
+		     ServletDescr.DEBUG_ONLY);
   protected static final ServletDescr SERVLET_RAISE_ALERT =
-    new ServletDescr(RaiseAlert.class, "Raise Alert",
+    new ServletDescr(RaiseAlert.class,
+                     "Raise Alert",
 		     ServletDescr.NOT_IN_NAV);
   protected static final ServletDescr SERVLET_DEBUG_PANEL =
-    new ServletDescr(DebugPanel.class, "Debug Panel",
+    new ServletDescr(DebugPanel.class,
+                     "Debug Panel",
 		     ServletDescr.NOT_IN_NAV);
-  protected static final ServletDescr LINK_HELP =
-    new ServletDescr(null, "Help", LocalServletManager.DEFAULT_HELP_URL,
-		     ServletDescr.NAME_IS_URL);
   protected static final ServletDescr LINK_CONTACT =
-    new ServletDescr(null, "Contact Us",
+    new ServletDescr(null,
+                     "Contact Us",
 		     mailtoUrl(LocalServletManager.DEFAULT_CONTACT_ADDR),
 		     ServletDescr.NAME_IS_URL);
+  protected static final ServletDescr LINK_HELP =
+    new ServletDescr(null,
+                     "Help", LocalServletManager.DEFAULT_HELP_URL,
+                     ServletDescr.NAME_IS_URL,
+                     "Online help, FAQs, credits");
 
   static void setHelpUrl(String url) {
     LINK_HELP.name = url;
@@ -171,16 +207,6 @@ public abstract class LockssServlet extends HttpServlet
     return "mailto:" + addr;
   }
 
-  static {
-    SERVLET_BATCH_AU_CONFIG.setExplanation("Add or remove titles from this cache");
-    SERVLET_AU_CONFIG.setExplanation("Manually edit single AU configuration");
-    SERVLET_ADMIN_ACCESS_CONTROL.setExplanation("Control access to the administrative UI");
-    SERVLET_PROXY_ACCESS_CONTROL.setExplanation("Control access to the preserved content");
-    SERVLET_PROXY_INFO.setExplanation("Info for configuring browsers and proxies<br>to access preserved content on this cache");
-    SERVLET_DAEMON_STATUS.setExplanation("Status of cache contents and operation");
-    LINK_HELP.setExplanation("Online help, FAQs, credits");
-  }
-
   // All servlets must be listed here (even if not in nav table).
   // Order of descrs determines order in nav table.
   static ServletDescr servletDescrs[] = {
@@ -189,6 +215,7 @@ public abstract class LockssServlet extends HttpServlet
      SERVLET_AU_CONFIG,
      SERVLET_ADMIN_ACCESS_CONTROL,
      SERVLET_PROXY_ACCESS_CONTROL,
+     SERVLET_ACCESS_CONTROL,
      SERVLET_PROXY_INFO,
      SERVLET_DAEMON_STATUS,
      SERVLET_DISPLAY_CONTENT,

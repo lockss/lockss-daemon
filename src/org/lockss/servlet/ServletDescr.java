@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.1 2005-09-19 17:13:05 thib_gc Exp $
+ * $Id: ServletDescr.java,v 1.2 2005-09-21 17:24:19 thib_gc Exp $
  */
 
 /*
@@ -58,31 +58,82 @@ public class ServletDescr {
   public static final int NAME_IS_URL = 0x20; // debug user only
   public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
-  public ServletDescr(Class cls, String heading, String name, int flags) {
+  public ServletDescr(Class cls,
+                      String heading,
+                      String name,
+                      int flags) {
     this.cls = cls;
     this.heading = heading;
     this.name = name;
     this.flags = flags;
   }
+
+  public ServletDescr(Class cls,
+                      String heading,
+                      String name,
+                      int flags,
+                      String expl) {
+    this(cls,
+         heading,
+         name,
+         flags);
+    setExplanation(expl);
+}
   
-  public ServletDescr(Class cls, String heading, int flags) {
-    this(cls, heading,
+  public ServletDescr(Class cls,
+                      String heading,
+                      int flags) {
+    this(cls,
+         heading,
          cls.getName().substring(cls.getName().lastIndexOf('.') + 1),
          flags);
   }
 
-  public ServletDescr(Class cls, String heading) {
-    this(cls, heading, 0);
+  public ServletDescr(Class cls,
+                      String heading,
+                      int flags,
+                      String expl) {
+    this(cls,
+         heading,
+         flags);
+    setExplanation(expl);
+}
+
+  
+  public ServletDescr(String className,
+                      String heading,
+                      int flags) {
+    this(classForName(className),
+         heading,
+         flags);
+  }
+  
+  public ServletDescr(String className,
+                      String heading,
+                      int flags,
+                      String expl) {
+    this(className,
+         heading,
+         flags);
+    setExplanation(expl);
+}
+
+  public ServletDescr(Class cls,
+                      String heading) {
+    this(cls,
+         heading,
+         0);
   }
 
-  public ServletDescr(String className, String heading, String name) {
-    this(classForName(className), heading, name, 0);
-  }
+  public ServletDescr(Class cls,
+                      String heading,
+                      String expl) {
+    this(cls,
+         heading);
+    setExplanation(expl);
+}
 
-  public ServletDescr(String className, String heading, int flags) {
-    this(classForName(className), heading, flags);
-  }
-
+  
   static Class classForName(String className) {
     try {
       return Class.forName(className);
