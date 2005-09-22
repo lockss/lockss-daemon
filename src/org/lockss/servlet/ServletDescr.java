@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.2 2005-09-21 17:24:19 thib_gc Exp $
+ * $Id: ServletDescr.java,v 1.3 2005-09-22 22:14:45 thib_gc Exp $
  */
 
 /*
@@ -78,7 +78,7 @@ public class ServletDescr {
          name,
          flags);
     setExplanation(expl);
-}
+  }
   
   public ServletDescr(Class cls,
                       String heading,
@@ -97,7 +97,7 @@ public class ServletDescr {
          heading,
          flags);
     setExplanation(expl);
-}
+  }
 
   
   public ServletDescr(String className,
@@ -116,7 +116,7 @@ public class ServletDescr {
          heading,
          flags);
     setExplanation(expl);
-}
+  }
 
   public ServletDescr(Class cls,
                       String heading) {
@@ -131,7 +131,7 @@ public class ServletDescr {
     this(cls,
          heading);
     setExplanation(expl);
-}
+  }
 
   
   static Class classForName(String className) {

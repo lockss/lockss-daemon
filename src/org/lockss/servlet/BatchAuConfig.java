@@ -1,10 +1,10 @@
 /*
- * $Id: BatchAuConfig.java,v 1.11 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.12 2005-09-22 22:14:45 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -36,10 +36,8 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-import java.net.*;
-import java.text.*;
+
 import org.mortbay.html.*;
-import org.mortbay.servlet.MultiPartRequest;
 import org.apache.commons.collections.*;
 import org.apache.commons.collections.map.*;
 import org.lockss.util.*;
@@ -48,7 +46,6 @@ import org.lockss.remote.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 
 /** Create and update AU configuration.
  */

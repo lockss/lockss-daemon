@@ -1,5 +1,5 @@
 /*
- * $Id: AccessControl.java,v 1.2 2005-09-22 22:14:45 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.1 2005-09-22 22:14:45 thib_gc Exp $
  */
 
 /*
@@ -32,45 +32,45 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import java.io.IOException;
-
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletException;
-
-import org.lockss.util.StringUtil;
+import org.lockss.util.Logger;
 import org.mortbay.html.Page;
+import org.mortbay.html.Table;
 
-public class AccessControl extends LockssServlet {
+public class ServletUtil {
 
-  private String action;
+  static final Logger logger = Logger.getLogger("ServletUtil");
   
-  public void init(ServletConfig config) throws ServletException {
-    super.init(config);
-  }
-  
-  protected void displayMenu() throws IOException {
-    Page page = new Page();
-    resp.setContentType("text/html");
-    ServletUtil.layoutMenu(this, page, getDescriptors());
-    page.add(getFooter());
-    page.write(resp.getWriter());
-  }
+  private static final String MENU_ATTRIBUTES =
+    "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
 
-  protected void lockssHandleRequest() throws ServletException, IOException {
-    action = req.getParameter(ACTION_TAG);
-    
-    if (StringUtil.isNullString(action)) displayMenu();
-  }
+  private static final int MENU_BORDER = 0;
+
+  private static final String MENU_ITEM_AFTER =
+    "</font>";
+
+  private static final String MENU_ITEM_BEFORE =
+    "<font size=\"+1\">";
   
-  private static ServletDescr[] accessMenu;
-  
-  protected static ServletDescr[] getDescriptors() {
-    if (accessMenu == null) {
-      accessMenu = new ServletDescr[] {
-          SERVLET_ADMIN_ACCESS_CONTROL,
-      };
+  private static final String MENU_ROW_ATTRIBUTES =
+    "valign=\"top\"";
+
+  public static void layoutMenu(LockssServlet servlet,
+                                Page page,
+                                ServletDescr[] sd) {
+    Table table = new Table(MENU_BORDER, MENU_ATTRIBUTES);
+    for (int ii = 0; ii < sd.length; ii++) {
+      if (sd[ii] != null) {
+        ServletDescr desc = sd[ii];
+        table.newRow(MENU_ROW_ATTRIBUTES);
+        table.newCell();
+        table.add(MENU_ITEM_BEFORE);
+        table.add(servlet.srvLink(desc, desc.heading));
+        table.add(MENU_ITEM_AFTER);
+        table.newCell();
+        table.add(desc.getExplanation());
+      }
     }
-    return accessMenu;
+    page.add(table);
   }
   
 }
