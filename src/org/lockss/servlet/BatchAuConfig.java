@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.12 2005-09-22 22:14:45 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.13 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -855,7 +855,7 @@ public class BatchAuConfig extends LockssServlet {
       page.add(srvLink(myServletDescr(), "Back to Journal Configuration"));
       page.add("</center>");
     }
-    page.add(getFooter());
+    ServletUtil.layoutFooter(this, page);
     page.write(resp.getWriter());
   }
 

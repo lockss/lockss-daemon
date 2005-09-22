@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.51 2005-05-27 08:34:45 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.52 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -197,7 +197,7 @@ public class DaemonStatus extends LockssServlet {
 
   private void doHtmlStatusTable() throws IOException {
     Page page = doHtmlStatusTable0();
-    page.add(getFooter());
+    ServletUtil.layoutFooter(this, page);
     page.write(resp.getWriter());
   }
 
@@ -458,13 +458,13 @@ public class DaemonStatus extends LockssServlet {
     }
   }
 
-  static final Image UPARROW1 = image("uparrow1blue.gif", 16, 16, 0,
+  static final Image UPARROW1 = ServletUtil.makeImage("uparrow1blue.gif", 16, 16, 0,
 				      "Primary sort column, ascending");
-  static final Image UPARROW2 = image("uparrow2blue.gif", 16, 16, 0,
+  static final Image UPARROW2 = ServletUtil.makeImage("uparrow2blue.gif", 16, 16, 0,
 				      "Secondary sort column, ascending");
-  static final Image DOWNARROW1 = image("downarrow1blue.gif", 16, 16, 0,
+  static final Image DOWNARROW1 = ServletUtil.makeImage("downarrow1blue.gif", 16, 16, 0,
 					"Primary sort column, descending");
-  static final Image DOWNARROW2 = image("downarrow2blue.gif", 16, 16, 0,
+  static final Image DOWNARROW2 = ServletUtil.makeImage("downarrow2blue.gif", 16, 16, 0,
 					"Secondary sort column, descending");
 
   /** Create a column heading element:<ul>

@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.1 2005-09-22 22:14:45 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.2 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -32,28 +32,57 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import org.lockss.util.Logger;
-import org.mortbay.html.Page;
-import org.mortbay.html.Table;
+import org.mortbay.html.*;
 
 public class ServletUtil {
 
-  static final Logger logger = Logger.getLogger("ServletUtil");
-  
+  /* private */static final Image IMAGE_TM =
+    makeImage("tm.gif", 16, 16, 0);
+
+  private static final Image IMAGE_LOCKSS_RED =
+    makeImage("lockss-type-red.gif", 595, 31, 0);
+
+  private static final String FOOTER_ATTRIBUTES =
+    "cellspacing=\"0\" cellpadding=\"0\" align=\"center\"";
+
+  private static final int FOOTER_BORDER = 0;
+
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
 
   private static final int MENU_BORDER = 0;
-
+  
   private static final String MENU_ITEM_AFTER =
     "</font>";
 
   private static final String MENU_ITEM_BEFORE =
     "<font size=\"+1\">";
-  
+
   private static final String MENU_ROW_ATTRIBUTES =
     "valign=\"top\"";
 
+  // Common page footer
+  public static void layoutFooter(LockssServlet servlet,
+                                  Page page) {
+    Composite comp = new Composite();
+    String vDaemon = servlet.theApp.getVersionInfo();
+
+    servlet.addNotes(comp);
+    comp.add("<p>");
+
+    Table table = new Table(FOOTER_BORDER, FOOTER_ATTRIBUTES);
+    table.newRow("valign=\"top\"");
+    table.newCell();
+    table.add(IMAGE_LOCKSS_RED);
+    table.newCell();
+    table.add(IMAGE_TM);
+    table.newRow();
+    table.newCell("colspan=\"2\"");
+    table.add("<center><font size=\"-1\">" + vDaemon + "</font></center>");
+    comp.add(table);
+    page.add(comp);
+  }
+  
   public static void layoutMenu(LockssServlet servlet,
                                 Page page,
                                 ServletDescr[] sd) {
@@ -71,6 +100,25 @@ public class ServletUtil {
       }
     }
     page.add(table);
+  }
+
+  public static Image makeImage(String file,
+                                int width,
+                                int height,
+                                int border) {
+    return new Image("/images/" + file, width, height, border);
+  }
+  
+  /** create an image that will display the tooltip on mouse hover */
+  public static Image makeImage(String file,
+                                int width,
+                                int height,
+                                int border,
+                                String tooltip) {
+    Image img = makeImage(file, width, height, border);
+    img.alt(tooltip);			// some browsers (IE) use alt tag
+    img.attribute("title", tooltip);	// some (Mozilla) use title tag
+    return img;
   }
   
 }

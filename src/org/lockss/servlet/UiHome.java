@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.7 2005-09-22 22:14:45 thib_gc Exp $
+ * $Id: UiHome.java,v 1.8 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class UiHome extends LockssServlet {
     resp.setContentType("text/html");
     page.add(getHomeHeader());
     ServletUtil.layoutMenu(this, page, getDescriptors());
-    page.add(getFooter());
+    ServletUtil.layoutFooter(this, page);
     page.write(resp.getWriter());
   }
 

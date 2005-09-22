@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.9 2005-09-21 15:59:46 thib_gc Exp $
+ * $Id: TinyUi.java,v 1.10 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -208,7 +208,7 @@ public class TinyUi extends BaseServletManager {
       table.newCell("valign=top align=center");
       table.add(new Link(Constants.LOCKSS_HOME_URL,
 			 LockssServlet.IMAGE_LOGO_LARGE));
-      table.add(LockssServlet.IMAGE_TM);
+      table.add(ServletUtil.IMAGE_TM);
 
       Composite b = new Font(1, true);
       b.add("<br>This LOCKSS cache");

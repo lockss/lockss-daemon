@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.1 2005-09-06 19:58:32 tlipkis Exp $
+ * $Id: DebugPanel.java,v 1.2 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class DebugPanel extends LockssServlet {
     page.add(getExplanationBlock("Debug Actions"));
     page.add(makeForm());
     page.add("<br>");
-    page.add(getFooter());
+    ServletUtil.layoutFooter(this, page);
     page.write(resp.getWriter());
   }
 

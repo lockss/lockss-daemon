@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.61 2005-09-21 17:24:19 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.62 2005-09-22 23:30:51 thib_gc Exp $
  */
 
 /*
@@ -78,14 +78,10 @@ public abstract class LockssServlet extends HttpServlet
     new SimpleDateFormat("HH:mm:ss MM/dd/yy");
 
   static final String BACKGROUND_COLOR = "#FFFFFF";
-  static final Image IMAGE_LOGO_LARGE = image("lockss-logo-large.gif",
+  static final Image IMAGE_LOGO_LARGE = ServletUtil.makeImage("lockss-logo-large.gif",
 					      160, 160, 0);
-  static final Image IMAGE_LOGO_SMALL = image("lockss-logo-small.gif",
+  static final Image IMAGE_LOGO_SMALL = ServletUtil.makeImage("lockss-logo-small.gif",
 					      80, 81, 0);
-  static final Image IMAGE_TM = image("tm.gif", 16, 16, 0);
-  static final Image IMAGE_LOCKSS_RED = image("lockss-type-red.gif",
-					      595, 31, 0);
-
   protected static final String footAccessDenied =
     "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS cache, or your workstation is allowed access by the publisher.";
 
@@ -93,7 +89,7 @@ public abstract class LockssServlet extends HttpServlet
 
   protected ServletContext context;
 
-  private LockssApp theApp = null;
+  protected LockssApp theApp = null;
 
   // Request-local storage.  Convenient, but requires servlet instances
   // to be single threaded, and must ensure reset them to avoid carrying
@@ -745,7 +741,7 @@ public abstract class LockssServlet extends HttpServlet
 // 		  (logo.width() + IMAGE_TM.width() + 20));
 
     table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
-    table.add(IMAGE_TM);
+    table.add(ServletUtil.IMAGE_TM);
 //     table.newCell("valign=center align=center width=\"60%\"");
     table.newCell("valign=top align=center width=\"60%\"");
     table.add("<br>");
@@ -776,42 +772,6 @@ public abstract class LockssServlet extends HttpServlet
 //     //       comp.add("<center>Running since " + headerDf.format(startDate) + "</center>");
     comp.add("<br>");
     return comp;
-  }
-
-  // Common page footer
-  public Element getFooter() {
-    Composite comp = new Composite();
-    String vDaemon = theApp.getVersionInfo();
-
-    addNotes(comp);
-    comp.add("<p>");
-
-    Table table = new Table(0, " CELLSPACING=0 CELLPADDING=0 ALIGN=CENTER");
-    table.newRow("VALIGN=TOP");
-    table.newCell();
-    table.add(IMAGE_LOCKSS_RED);
-    table.newCell();
-    table.add(IMAGE_TM);
-    table.newRow();
-    table.newCell("COLSPAN=2");
-    table.add("<center><font size=-1>" + vDaemon + "</font></center>");
-    comp.add(table);
-
-//     comp.add("<center><font size=-1>" + vDaemon + "</font></center>");
-    return comp;
-  }
-
-  // create an image that will display the tooltip on mouse hover
-  static Image image(String file, int w, int h, int border, String tooltip) {
-    Image img = image(file, w, h, border);
-    img.alt(tooltip);			// some browsers (IE) use alt tag
-    img.attribute("title", tooltip);	// some (Mozilla) use title tag
-    return img;
-  }
-
-  // eventually this should calculate w & h
-  static Image image(String file, int w, int h, int border) {
-    return new Image("/images/" + file, w, h, border);
   }
 
   /** Return a button that invokes the javascript submit routine with the
@@ -952,17 +912,22 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Add accumulated footnotes to Composite. */
   protected void addNotes(Composite elem) {
+    final String NOTES_BEGIN = "<p><b>Notes:</b>";
+    final String NOTES_LIST_BEFORE = "<ol><font size=\"-1\">";
+    final String NOTES_LIST_AFTER = "</font></ol>";
+
     if (footnotes == null || footNumber == 0) {
       return;
     }
-    elem.add("<p><b>Notes:</b>");
-    elem.add("<ol><font size=-1>");
+    
+    elem.add(NOTES_BEGIN);
+    elem.add(NOTES_LIST_BEFORE);
     for (int n = 0; n < footNumber; n++) {
-      elem.add("<li value=" + (n+1) + "><a name=foottag" + (n+1) + ">" + 
-	       footnotes.elementAt(n) + "</a>");
+      elem.add("<li value=" + (n+1) + "><a name=\"foottag" + (n+1)
+               + "\">" + footnotes.elementAt(n) + "</a>");
     }
+    elem.add(NOTES_LIST_AFTER);
     footnotes.removeAllElements();
-    elem.add("</font></ol>");
   }
 
   /** Add javascript to page.  Normally adds a link to the script file, but
@@ -1016,7 +981,7 @@ public abstract class LockssServlet extends HttpServlet
     warning.add(" in a moment.");
     warning.add("</font></center><br>");
     page.add(warning);
-    page.add(getFooter());
+    ServletUtil.layoutFooter(this, page);
     page.write(resp.getWriter());
   }
 
