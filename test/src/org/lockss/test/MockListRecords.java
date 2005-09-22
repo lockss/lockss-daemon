@@ -1,5 +1,5 @@
 /*
- * $Id: MockListRecords.java,v 1.2 2005-01-12 02:21:39 dcfok Exp $
+ * $Id: MockListRecords.java,v 1.3 2005-09-22 23:38:11 troberts Exp $
  */
 
 /*
@@ -203,6 +203,10 @@ public class MockListRecords extends ListRecords{
     }
   
     return null;
+  }
+
+  public String toString() {
+    return "[MockListRecords: ]";
   }
   
 }
