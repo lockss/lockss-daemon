@@ -20,6 +20,7 @@
 <string xsi:type="java:java.lang.String">4,"^%s", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%sETD-db/ETD-oai/oai.pl", base_url</string>
 <string xsi:type="java:java.lang.String">1,"%slockss/permission.html", base_url</string>
+<string xsi:type="java:java.lang.String">4,"%stheses/available/etd-.*%d-.*/restricted/.*", base_url, year</string>
 <string xsi:type="java:java.lang.String">1,"%stheses/available/etd-.*%d-.*/", base_url, year</string>
 </ElementValue>
 </MapElement>
