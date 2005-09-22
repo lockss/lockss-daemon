@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.2 2005-09-22 23:30:51 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.3 2005-09-22 23:49:46 thib_gc Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class ServletUtil {
   public static void layoutFooter(LockssServlet servlet,
                                   Page page) {
     Composite comp = new Composite();
-    String vDaemon = servlet.theApp.getVersionInfo();
+    String vDaemon = servlet.getLockssApp().getVersionInfo();
 
     servlet.addNotes(comp);
     comp.add("<p>");
