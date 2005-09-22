@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.7 2005-09-08 01:35:44 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.8 2005-09-22 18:36:13 thib_gc Exp $
  */
 
 /*
@@ -305,7 +305,7 @@ public class CXSerializer extends ObjectSerializer {
   /**
    * <p>Serialization always in XStream format; additionally, any
    * deserialization performed on a {@link File} or {@link String}
-   * (i.e. filename) also results in the corresponding file being
+   * (ie filename) also results in the corresponding file being
    * overwritten by one in XStream format if it is in Castor
    * format. (Does not work for other
    * {@link ObjectSerializer#deserialize} calls.)</p>

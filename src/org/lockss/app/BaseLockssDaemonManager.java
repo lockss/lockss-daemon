@@ -1,10 +1,10 @@
 /*
- * $Id: BaseLockssDaemonManager.java,v 1.1 2004-08-02 03:03:18 tlipkis Exp $
+ * $Id: BaseLockssDaemonManager.java,v 1.2 2005-09-22 18:36:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,11 +29,8 @@ be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
 
 */
-package org.lockss.app;
 
-import org.lockss.daemon.*;
-import java.util.*;
-import org.lockss.util.*;
+package org.lockss.app;
 
 /**
  * Base implementation of LockssDaemonManager

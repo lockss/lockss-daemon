@@ -1,10 +1,10 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.32 2005-07-06 17:46:22 troberts Exp $
+ * $Id: GoslingHtmlParser.java,v 1.33 2005-09-22 18:36:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -73,11 +73,10 @@ package org.lockss.crawler;
 import java.util.*;
 import java.net.*;
 import java.io.*;
+
 import org.htmlparser.util.*;
-import org.lockss.plugin.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 
 
 public class GoslingHtmlParser implements ContentParser {

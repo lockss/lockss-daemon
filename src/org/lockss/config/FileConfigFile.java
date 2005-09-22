@@ -1,10 +1,10 @@
 /*
- * $Id: FileConfigFile.java,v 1.6 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: FileConfigFile.java,v 1.7 2005-09-22 18:36:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2001-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,10 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.config;
 
 import java.io.*;
-import java.net.*;
 
 import org.lockss.util.*;
-import org.lockss.util.urlconn.*;
 
 /**
  * A simple wrapper class around the representation of a

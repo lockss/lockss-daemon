@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.77 2005-09-06 19:55:46 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.78 2005-09-22 18:36:13 thib_gc Exp $
  */
 
 /*
@@ -34,10 +34,8 @@ package org.lockss.app;
 import java.util.*;
 import org.apache.commons.lang.SystemUtils;
 import org.lockss.util.*;
-import org.lockss.mail.*;
 import org.lockss.alert.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 import org.lockss.hasher.*;
 import org.lockss.scheduler.*;
 import org.lockss.plugin.*;
@@ -47,7 +45,6 @@ import org.lockss.repository.*;
 import org.lockss.state.*;
 import org.lockss.proxy.*;
 import org.lockss.proxy.icp.IcpManager;
-import org.lockss.servlet.*;
 import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.remote.*;
