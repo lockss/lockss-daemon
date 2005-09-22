@@ -109,6 +109,7 @@
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDPlugin</value>
 	<value>org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin</value>
 	<value>org.lockss.plugin.etd.fsuplugin.FSUETDPlugin</value>
+	<value>org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin</value>
       </list>
     </property>
 
@@ -232,6 +233,7 @@
 	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDPlugin'
 	  or pluginName='org.lockss.plugin.etd.vtetdplugin.VTETDLegacyPlugin'
 	  or pluginName='org.lockss.plugin.etd.fsuplugin.FSUETDPlugin'
+	  or pluginName='org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin'
 	  ]"
 	  />
       </property>
@@ -294,7 +296,25 @@
 
 
 
-      <property name="FSUETD">
+      <property name="NCSU1997">
+	<property name="title" value="North Carolina State University ETD Collection 1997" />
+	<property name="journalTitle" value="North Carolina State University ETD" />
+	<property name="plugin" value="org.lockss.plugin.etd.ncstateplugin.NCStateETDLegacyPlugin" />
+	<property name="param.1">
+	  <property name="key" value="base_url" />
+	  <property name="value" value="http://www.lib.ncsu.edu/" />
+	</property>
+	<property name="param.2">
+	  <property name="key" value="year" />
+	  <property name="value" value="1997" />
+	</property>
+	<property name="param.3">
+	  <property name="key" value="oai_request_url" />
+	  <property name="value" value="http://www.lib.ncsu.edu/ETD-db/oai/oai.pl" />
+	</property>
+      </property>
+
+      <property name="FSUETD2003">
 	<property name="title" value="Florida State University ETD Collection 2003" />
 	<property name="journalTitle" value="Florida State University ETD" />
 	<property name="plugin" value="org.lockss.plugin.etd.fsuplugin.FSUETDPlugin" />
