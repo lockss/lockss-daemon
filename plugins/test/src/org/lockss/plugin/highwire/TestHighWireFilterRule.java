@@ -1,5 +1,5 @@
 /*
- * $Id: HighWireFilterRule.java,v 1.2 2005-09-23 18:12:56 troberts Exp $
+ * $Id: TestHighWireFilterRule.java,v 1.1 2005-09-23 18:12:56 troberts Exp $
  */
 
 /*
@@ -33,35 +33,26 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin.highwire;
 
 import java.io.*;
-import java.util.List;
 import org.lockss.util.*;
-import org.lockss.filter.*;
-import org.lockss.plugin.FilterRule;
+import org.lockss.test.LockssTestCase;
 
-public class HighWireFilterRule implements FilterRule {
-  public static final String CITATION_STRING =
-      "This article has been cited by other articles:";
-  public static final String MEDLINE_STRING = "[Medline]";
+public class TestHighWireFilterRule extends LockssTestCase {
+  private HighWireFilterRule rule;
 
-  public Reader createFilteredReader(Reader reader) {
-    /*
-     * Needs to be better (TSR 9-2-03):
-     * 1)Filtering out everything in a table is pretty good, but over filters
-     * 2) May want to filter comments in the future
-     */
+  public void setUp() throws Exception {
+    super.setUp();
+    rule = new HighWireFilterRule();
+  }
+
+  private static final String inst1 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	<NOBR><STRONG>Institution: Periodicals Department/Lane Library</STRONG></NOBR>\n	<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as Personal Subscriber</A></NOBR>";
+
+  private static final String inst2 = "<FONT SIZE=\"-2\" FACE=\"verdana,arial,helvetica\">\n	<NOBR><STRONG>Institution: Stanford University Libraries</STRONG></NOBR>\n	<NOBR><A TARGET=\"_top\" HREF=\"/cgi/login?uri=%2Fcgi%2Fcontent%2Ffull%2F4%2F1%2F121\">Sign In as Personal Subscriber</A></NOBR>";
 
 
-    List tagList = ListUtil.list(
-//        new HtmlTagFilter.TagPair("<!--", "-->", true),
-        new HtmlTagFilter.TagPair("Institution:",
-				  "Sign In as Personal Subscriber", true),
-        new HtmlTagFilter.TagPair("<script", "</script>", true),
-        new HtmlTagFilter.TagPair("<table", "</table>", true),
-        new HtmlTagFilter.TagPair("<", ">")
-        );
-    Reader tagFilter = HtmlTagFilter.makeNestedFilter(reader, tagList);
-    Reader medFilter = new StringFilter(tagFilter, MEDLINE_STRING);
-    Reader citeFilter = new StringFilter(medFilter, CITATION_STRING);
-    return new WhiteSpaceFilter(citeFilter);
+  public void testFiltering() throws IOException {
+    Reader reader1 = rule.createFilteredReader(new StringReader(inst1));
+    Reader reader2 = rule.createFilteredReader(new StringReader(inst2));
+    assertEquals(StringUtil.fromReader(reader1),
+		 StringUtil.fromReader(reader2));
   }
 }
