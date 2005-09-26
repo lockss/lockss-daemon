@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.3 2005-09-22 23:49:46 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.4 2005-09-26 17:27:15 thib_gc Exp $
  */
 
 /*
@@ -32,20 +32,31 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.util.Iterator;
+
 import org.mortbay.html.*;
 
 public class ServletUtil {
 
+  private static final String NOTES_BEGIN =
+    "<p><b>Notes:</b>";
+  
+  private static final String NOTES_LIST_BEFORE =
+    "<ol><font size=\"-1\">";
+  
+  private static final String NOTES_LIST_AFTER =
+    "</font></ol>";
+  
   /* private */static final Image IMAGE_TM =
     makeImage("tm.gif", 16, 16, 0);
-
-  private static final Image IMAGE_LOCKSS_RED =
-    makeImage("lockss-type-red.gif", 595, 31, 0);
 
   private static final String FOOTER_ATTRIBUTES =
     "cellspacing=\"0\" cellpadding=\"0\" align=\"center\"";
 
   private static final int FOOTER_BORDER = 0;
+
+  private static final Image IMAGE_LOCKSS_RED =
+    makeImage("lockss-type-red.gif", 595, 31, 0);
 
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
@@ -62,12 +73,18 @@ public class ServletUtil {
     "valign=\"top\"";
 
   // Common page footer
-  public static void layoutFooter(LockssServlet servlet,
-                                  Page page) {
+  public static void layoutFooter(Page page,
+                                  Iterator notesIterator,
+                                  String versionInfo) {
     Composite comp = new Composite();
-    String vDaemon = servlet.getLockssApp().getVersionInfo();
 
-    servlet.addNotes(comp);
+    comp.add(NOTES_BEGIN);
+    comp.add(NOTES_LIST_BEFORE);
+    for (int nth = 1 ; notesIterator.hasNext() ; nth++) {
+      layoutFootnote(comp, (String)notesIterator.next(), nth);
+    }
+    comp.add(NOTES_LIST_AFTER);
+
     comp.add("<p>");
 
     Table table = new Table(FOOTER_BORDER, FOOTER_ATTRIBUTES);
@@ -78,9 +95,18 @@ public class ServletUtil {
     table.add(IMAGE_TM);
     table.newRow();
     table.newCell("colspan=\"2\"");
-    table.add("<center><font size=\"-1\">" + vDaemon + "</font></center>");
+    table.add("<center><font size=\"-1\">" + versionInfo + "</font></center>");
     comp.add(table);
     page.add(comp);
+  }
+  
+  private static void layoutFootnote(Composite comp,
+                                     String footnote,
+                                     int nth) {
+    comp.add("<li value=\"" + nth + "\">");
+    comp.add("<a name=\"foottag" + nth + "\">");
+    comp.add(footnote);
+    comp.add("</a>");
   }
   
   public static void layoutMenu(LockssServlet servlet,

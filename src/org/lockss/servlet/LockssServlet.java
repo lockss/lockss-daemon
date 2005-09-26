@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.63 2005-09-22 23:49:46 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.64 2005-09-26 17:27:15 thib_gc Exp $
  */
 
 /*
@@ -910,26 +910,6 @@ public abstract class LockssServlet extends HttpServlet
       (n+1) + "</a></font></sup>";
   }
 
-  /** Add accumulated footnotes to Composite. */
-  protected void addNotes(Composite elem) {
-    final String NOTES_BEGIN = "<p><b>Notes:</b>";
-    final String NOTES_LIST_BEFORE = "<ol><font size=\"-1\">";
-    final String NOTES_LIST_AFTER = "</font></ol>";
-
-    if (footnotes == null || footNumber == 0) {
-      return;
-    }
-    
-    elem.add(NOTES_BEGIN);
-    elem.add(NOTES_LIST_BEFORE);
-    for (int n = 0; n < footNumber; n++) {
-      elem.add("<li value=" + (n+1) + "><a name=\"foottag" + (n+1)
-               + "\">" + footnotes.elementAt(n) + "</a>");
-    }
-    elem.add(NOTES_LIST_AFTER);
-    footnotes.removeAllElements();
-  }
-
   /** Add javascript to page.  Normally adds a link to the script file, but
    * can be told to include the script directly in the page, to accomodate
    * unit testing of individual servlets, when other fetches won't work. */
@@ -981,7 +961,7 @@ public abstract class LockssServlet extends HttpServlet
     warning.add(" in a moment.");
     warning.add("</font></center><br>");
     page.add(warning);
-    ServletUtil.layoutFooter(this, page);
+    doLayoutFooter(page);
     page.write(resp.getWriter());
   }
 
@@ -1022,6 +1002,16 @@ public abstract class LockssServlet extends HttpServlet
     return val;
   }
 
+  protected void doLayoutFooter(Page page) {
+    if (footnotes == null || footNumber == 0) {
+      return;
+    }
+    ServletUtil.layoutFooter(page,
+                             footnotes.iterator(),
+                             getLockssApp().getVersionInfo());
+    footnotes.removeAllElements();
+  }
+  
   /** Return the app instance.
    */
   protected LockssApp getLockssApp() {
@@ -1072,5 +1062,5 @@ public abstract class LockssServlet extends HttpServlet
       super(message);
     }
   }
-  
+
 }

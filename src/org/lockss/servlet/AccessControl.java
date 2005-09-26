@@ -1,5 +1,5 @@
 /*
- * $Id: AccessControl.java,v 1.3 2005-09-22 23:30:50 thib_gc Exp $
+ * $Id: AccessControl.java,v 1.4 2005-09-26 17:27:15 thib_gc Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class AccessControl extends LockssServlet {
     Page page = new Page();
     resp.setContentType("text/html");
     ServletUtil.layoutMenu(this, page, getDescriptors());
-    ServletUtil.layoutFooter(this, page);
+    doLayoutFooter(page);
     page.write(resp.getWriter());
   }
 

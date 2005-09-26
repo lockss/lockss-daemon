@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.6 2005-09-22 23:30:51 thib_gc Exp $
+ * $Id: ViewContent.java,v 1.7 2005-09-26 17:27:15 thib_gc Exp $
  */
 
 /*
@@ -271,7 +271,7 @@ public class ViewContent extends LockssServlet {
     comp.add(error);
     comp.add("</font></center><br>");
     page.add(comp);
-    ServletUtil.layoutFooter(this, page);
+    doLayoutFooter(page);
     page.write(resp.getWriter());
   }
 
