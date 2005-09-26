@@ -1,5 +1,5 @@
 /*
- * $Id: CommandTable.java,v 1.1 2005-03-02 20:49:44 ssmail Exp $
+ * $Id: CommandTable.java,v 1.2 2005-09-26 18:36:54 ssmail Exp $
  */
 
 /*
@@ -153,17 +153,17 @@ public class CommandTable implements ApiParameters, ClusterControlParameters {
                      INTERNAL), 
     
     new CommandTable(CCP_COMMAND_ACLMENU,
-                     UI  + ".Noop",  
+                     UI  + ".UiNoop",  
                      UI  + ".html4.AclMenuPage", 
                      INTERNAL), 
  
     new CommandTable(CCP_COMMAND_ACLEDIT,
-                     UI  + ".Noop",  
+                     UI  + ".UiNoop",  
                      UI  + ".html4.AclEditPage", 
                      INTERNAL), 
  
     new CommandTable(CCP_COMMAND_ALERTS,
-                     UI  + ".Noop",  
+                     UI  + ".UiNoop",  
                      UI  + ".html4.AlertPage", 
                      INTERNAL), 
    
@@ -171,7 +171,7 @@ public class CommandTable implements ApiParameters, ClusterControlParameters {
      * Cluster Empty (internal, invoked by ClusterControl)
      */
     new CommandTable(CCP_COMMAND_NOMEMBERS,
-                     UI  + ".Noop",  
+                     UI  + ".UiNoop",  
                      UI  + ".html4.EmptyClusterErrorPage", 
                      INTERNAL), 
     
