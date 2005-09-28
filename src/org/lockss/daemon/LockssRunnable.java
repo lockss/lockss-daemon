@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.8 2005-07-30 20:55:49 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.9 2005-09-28 07:26:53 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -68,6 +68,7 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   private Thread thread;
   private String name;
   private OneShotSemaphore runningSem = new OneShotSemaphore();
+  private OneShotSemaphore exitedSem = new OneShotSemaphore();
   private Map wdogParamNameMap = new HashMap();
   private Map prioParamNameMap = new HashMap();
   private volatile boolean triggerOnExit = false;
@@ -92,7 +93,9 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     this.name = name;
   }
 
-  private String getName() {
+  /** Return the name of the thread the LockssRunnable is running in, if
+   * any, else the name the LockssRunnable was created with */
+  public String getName() {
     if (thread != null) {
       return thread.getName();
     } else {
@@ -103,6 +106,11 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
   /** Declare that the thread is running and initialized. */
   protected void nowRunning() {
     runningSem.fill();
+  }
+
+  /** Declare that the thread is just about to exit. */
+  private void nowExited() {
+    exitedSem.fill();
   }
 
   /** Wait until the thread is running and initialized.  Useful to ensure
@@ -133,6 +141,35 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    */
   public boolean waitRunning() {
     return waitRunning(Deadline.MAX);
+  }
+
+  /** Wait until the thread has exited (more precisely, until just before
+   * it exits).  Useful to wait for socket activity, etc. to terminate
+   * before proceding.  It's likely a bad idea to call this from a block
+   * that's synchronized with code that runs in the thread.
+   * @param timeout Deadline that limits how long to wait for the thread to
+   * exit.
+   * @return true iff the thread has exited, false if timeout or
+   * interrupted.
+   */
+  public boolean waitExited(Deadline timeout) {
+    try {
+      if (log.isDebug3()) log.debug3("Waiting for " + getName() + " to exit");
+      return exitedSem.waitFull(timeout);
+    } catch (InterruptedException e) {
+    }
+    return exitedSem.isFull();
+  }
+
+  /** Wait until the thread has exited (more precisely, until just before
+   * it exits).  Useful to wait for socket activity, etc. to terminate
+   * before proceding.  It's likely a bad idea to call this from a block
+   * that's synchronized with code that runs in the thread.
+   * @return true iff the thread has exited, false if timeout or
+   * interrupted.
+   */
+  public boolean waitExited() {
+    return waitExited(Deadline.MAX);
   }
 
   /** Set the priority of the thread from a parameter value
@@ -324,12 +361,16 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
     } catch (Throwable e) {
       log.warning("Thread threw Throwable", e);
     } finally {
-      if (triggerOnExit) {
-	threadExited();
-      } else {
-	stopWDog();
+      try {
+	if (triggerOnExit) {
+	  threadExited();
+	} else {
+	  stopWDog();
+	}
+      } finally {
+	thread = null;
+	nowExited();
       }
-      thread = null;
     }
   }
 

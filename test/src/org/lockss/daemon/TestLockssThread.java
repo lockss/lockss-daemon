@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssThread.java,v 1.6 2004-09-29 18:58:17 tlipkis Exp $
+ * $Id: TestLockssThread.java,v 1.7 2005-09-28 07:26:53 tlipkis Exp $
  */
 
 /*
@@ -111,6 +111,19 @@ public class TestLockssThread extends LockssTestCase {
     assertTrue(thr.waitRunning(Deadline.in(TIMEOUT_SHOULDNT)));
   }
 
+  public void testWaitExited() throws Exception {
+    TimeBase.setReal();
+    TestThread thr = new TestThread("Test");
+    assertFalse(thr.waitRunning(Deadline.EXPIRED));
+    thr.start();
+    runSem = new SimpleBinarySemaphore();
+    assertTrue(thr.waitRunning(Deadline.in(TIMEOUT_SHOULDNT)));
+    assertTrue(thr.isAlive());
+    assertFalse(thr.waitExited(Deadline.EXPIRED));
+    runSem.give();
+    assertTrue(thr.waitExited(Deadline.in(TIMEOUT_SHOULDNT)));
+  }
+
   // Thread updates watchdog frequently enough
   public void testDogNoHang() throws Exception {
     TestThread thr = new TestThread("Test");
@@ -210,6 +223,7 @@ public class TestLockssThread extends LockssTestCase {
 
   SimpleBinarySemaphore startSem;
   SimpleBinarySemaphore stopSem;
+  SimpleBinarySemaphore runSem;
   volatile boolean goOn;
   volatile long dogInterval;
   volatile long stepTime;
@@ -239,6 +253,9 @@ public class TestLockssThread extends LockssTestCase {
       }
       nowRunning();
       startSem.give();
+      if (runSem != null) {
+	runSem.take();
+      }
       if (dogInterval != 0) {
 	for (int ix = 0; ix < 10; ix++) {
 	  if (stepTime != 0) {
