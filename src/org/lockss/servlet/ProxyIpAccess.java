@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.12.2.1 2005-09-20 17:24:18 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.12.2.2 2005-09-28 16:17:32 thib_gc Exp $
  */
 
 /*
@@ -219,8 +219,9 @@ public class ProxyIpAccess extends IpAccessControl {
     Table tbl = new Table(0, "align=center cellpadding=10");
     
     buildAuditRow(tbl);
-    /* buildIcpRow(tbl); */
-    // FIXME: disabled; see Issue 1478
+    if (Configuration.getBooleanParam(PARAM_ICP_VISIBLE, DEFAULT_ICP_VISIBLE)) {
+      buildIcpRow(tbl);
+    }
     
     return tbl;
   }
@@ -321,4 +322,16 @@ public class ProxyIpAccess extends IpAccessControl {
   private static final String AUDIT_PORT_NAME = "audit_port";
   private static final String ICP_ENABLE_NAME = "icp_ena";
   private static final String ICP_PORT_NAME = "icp_port";
+  
+  /**
+   * <p>The default ICP "visible" flag value.</p>
+   */
+  public static final boolean DEFAULT_ICP_VISIBLE = false;
+
+  /**
+   * <p>The ICP "visible" flag parameter.</p>
+   */
+  public static final String PARAM_ICP_VISIBLE =
+    "org.lockss.proxy.icp.visible";
+  
 }
