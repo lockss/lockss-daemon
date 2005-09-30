@@ -1,10 +1,10 @@
 /*
- * $Id: WrapTask.java,v 1.3 2004-06-22 23:13:17 tlipkis Exp $
+ * $Id: WrapTask.java,v 1.4 2005-09-30 22:25:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,6 @@ import java.lang.reflect.*;
 import org.apache.tools.ant.*;
 import org.apache.tools.ant.types.*;
 import org.apache.tools.ant.taskdefs.Javadoc;
-import org.apache.tools.ant.util.JAXPUtils;
 import org.xml.sax.*;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;

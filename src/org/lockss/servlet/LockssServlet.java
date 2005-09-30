@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.64 2005-09-26 17:27:15 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.65 2005-09-30 22:25:01 thib_gc Exp $
  */
 
 /*
@@ -73,15 +73,7 @@ public abstract class LockssServlet extends HttpServlet
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
 
-  /** Format to display date/time in headers */
-  public static final DateFormat headerDf =
-    new SimpleDateFormat("HH:mm:ss MM/dd/yy");
-
   static final String BACKGROUND_COLOR = "#FFFFFF";
-  static final Image IMAGE_LOGO_LARGE = ServletUtil.makeImage("lockss-logo-large.gif",
-					      160, 160, 0);
-  static final Image IMAGE_LOGO_SMALL = ServletUtil.makeImage("lockss-logo-small.gif",
-					      80, 81, 0);
   protected static final String footAccessDenied =
     "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS cache, or your workstation is allowed access by the publisher.";
 
@@ -734,7 +726,7 @@ public abstract class LockssServlet extends HttpServlet
     String machineName = getMachineName();
 
     table.newRow();
-    Image logo = isLargeLogo() ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
+    Image logo = isLargeLogo() ? ServletUtil.IMAGE_LOGO_LARGE : ServletUtil.IMAGE_LOGO_SMALL;
     table.newCell("valign=top align=center width=\"20%\"");
 //     table.newCell("valign=top width=\"25%\"");
 //     table.newCell("valign=top align=center width=" +
@@ -754,7 +746,7 @@ public abstract class LockssServlet extends HttpServlet
     String since =
       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
     table.add(getMachineName() + " at " +
-	      headerDf.format(new Date()) + ", up " + since);
+	      ServletUtil.headerDf.format(new Date()) + ", up " + since);
 
 //     table.newCell("valign=center align=right width=\"25%\"");
     table.newCell("valign=center align=center width=\"20%\"");

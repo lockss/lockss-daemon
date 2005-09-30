@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.10 2005-09-22 23:30:51 thib_gc Exp $
+ * $Id: TinyUi.java,v 1.11 2005-09-30 22:25:01 thib_gc Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class TinyUi extends BaseServletManager {
       table.newRow();
       table.newCell("valign=top align=center");
       table.add(new Link(Constants.LOCKSS_HOME_URL,
-			 LockssServlet.IMAGE_LOGO_LARGE));
+			 ServletUtil.IMAGE_LOGO_LARGE));
       table.add(ServletUtil.IMAGE_TM);
 
       Composite b = new Font(1, true);

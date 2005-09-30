@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.4 2005-09-26 17:27:15 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.5 2005-09-30 22:25:01 thib_gc Exp $
  */
 
 /*
@@ -32,21 +32,28 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
 
+import org.lockss.util.Constants;
+import org.lockss.util.StringUtil;
+import org.lockss.util.TimeBase;
 import org.mortbay.html.*;
 
 public class ServletUtil {
 
-  private static final String NOTES_BEGIN =
-    "<p><b>Notes:</b>";
-  
-  private static final String NOTES_LIST_BEFORE =
-    "<ol><font size=\"-1\">";
-  
-  private static final String NOTES_LIST_AFTER =
-    "</font></ol>";
-  
+  /** Format to display date/time in headers */
+  public static final DateFormat headerDf =
+    new SimpleDateFormat("HH:mm:ss MM/dd/yy");
+
+  static final Image IMAGE_LOGO_LARGE =
+    makeImage("lockss-logo-large.gif", 160, 160, 0);
+
+  static final Image IMAGE_LOGO_SMALL =
+    makeImage("lockss-logo-small.gif", 80, 81, 0);
+
   /* private */static final Image IMAGE_TM =
     makeImage("tm.gif", 16, 16, 0);
 
@@ -55,6 +62,19 @@ public class ServletUtil {
 
   private static final int FOOTER_BORDER = 0;
 
+  private static final String HEADER_ATTRIBUTES =
+    "cellspacing=\"2\" cellpadding=\"0\" width=\"100%\"";
+
+  private static final int HEADER_BORDER = 0;
+
+  private static final String HEADER_HEADING_AFTER =
+    "</b></font>";
+  
+  private static final String HEADER_HEADING_BEFORE = 
+    "<font size=\"+2\"><b>";
+  
+  private static final String HEADING_NULL = "Cache Administration";
+  
   private static final Image IMAGE_LOCKSS_RED =
     makeImage("lockss-type-red.gif", 595, 31, 0);
 
@@ -62,7 +82,7 @@ public class ServletUtil {
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
 
   private static final int MENU_BORDER = 0;
-  
+
   private static final String MENU_ITEM_AFTER =
     "</font>";
 
@@ -71,6 +91,15 @@ public class ServletUtil {
 
   private static final String MENU_ROW_ATTRIBUTES =
     "valign=\"top\"";
+  
+  private static final String NOTES_BEGIN =
+    "<p><b>Notes:</b>";
+
+  private static final String NOTES_LIST_AFTER =
+    "</font></ol>";
+
+  private static final String NOTES_LIST_BEFORE =
+    "<ol><font size=\"-1\">";
 
   // Common page footer
   public static void layoutFooter(Page page,
@@ -100,13 +129,40 @@ public class ServletUtil {
     page.add(comp);
   }
   
-  private static void layoutFootnote(Composite comp,
-                                     String footnote,
-                                     int nth) {
-    comp.add("<li value=\"" + nth + "\">");
-    comp.add("<a name=\"foottag" + nth + "\">");
-    comp.add(footnote);
-    comp.add("</a>");
+  public static void layoutHeader(Page page,
+                                  String heading,
+                                  boolean isLargeLogo,
+                                  String machineName,
+                                  Date startDate) {
+    if (heading == null) {
+      heading = HEADING_NULL;
+    }
+
+    Composite comp = new Composite();
+    Table table = new Table(HEADER_BORDER, HEADER_ATTRIBUTES);
+    Image logo = isLargeLogo ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
+
+    table.newRow();
+    table.newCell("valign=\"top\" align=\"center\" width=\"20%\"");
+    table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
+    table.add(IMAGE_TM);
+
+    table.newCell("valign=\"top\" align=\"center\" width=\"60%\"");
+    table.add("<br>");
+    table.add(HEADER_HEADING_BEFORE);
+    table.add(heading);
+    table.add(HEADER_HEADING_AFTER);
+    table.add("<br>");
+    // Date startDate = getLockssApp().getStartDate();
+    String since =
+      StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
+    table.add(machineName + " at " + headerDf.format(new Date()) + ", up " + since);
+
+    table.newCell("valign=\"center\" align=\"center\" width=\"20%\"");
+    //table.add(getNavTable());
+    comp.add(table);
+    comp.add("<br>");
+    page.add(comp);
   }
   
   public static void layoutMenu(LockssServlet servlet,
@@ -145,6 +201,15 @@ public class ServletUtil {
     img.alt(tooltip);			// some browsers (IE) use alt tag
     img.attribute("title", tooltip);	// some (Mozilla) use title tag
     return img;
+  }
+  
+  private static void layoutFootnote(Composite comp,
+                                     String footnote,
+                                     int nth) {
+    comp.add("<li value=\"" + nth + "\">");
+    comp.add("<a name=\"foottag" + nth + "\">");
+    comp.add(footnote);
+    comp.add("</a>");
   }
   
 }

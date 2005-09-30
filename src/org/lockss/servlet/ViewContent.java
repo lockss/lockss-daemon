@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.7 2005-09-26 17:27:15 thib_gc Exp $
+ * $Id: ViewContent.java,v 1.8 2005-09-30 22:25:01 thib_gc Exp $
  */
 
 /*
@@ -199,7 +199,7 @@ public class ViewContent extends LockssServlet {
     try {
       long sdate =
 	Long.parseLong(props.getProperty(CachedUrl.PROPERTY_FETCH_TIME));
-      addPropRow(tbl, "Collected at", headerDf.format(new Date(sdate)));
+      addPropRow(tbl, "Collected at", ServletUtil.headerDf.format(new Date(sdate)));
     } catch (NumberFormatException ignore) {
     }
     page.add(tbl);

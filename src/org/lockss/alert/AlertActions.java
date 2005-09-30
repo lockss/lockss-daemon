@@ -1,10 +1,10 @@
 /*
- * $Id: AlertActions.java,v 1.2 2004-08-09 02:54:59 tlipkis Exp $
+ * $Id: AlertActions.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,13 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.alert;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.protocol.IdentityManager;
-import org.lockss.plugin.*;
 
 /** AlertActions is a group of  {@link AlertAction} factories */
 public class AlertActions {
