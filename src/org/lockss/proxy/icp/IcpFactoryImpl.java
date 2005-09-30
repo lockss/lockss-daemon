@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.7 2005-09-14 00:33:40 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.8 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,12 @@ package org.lockss.proxy.icp;
 
 import java.io.*;
 import java.net.*;
+import java.nio.ByteBuffer;
+import java.util.Arrays;
+
+import org.lockss.util.ByteArray;
+import org.lockss.util.Constants;
+import org.lockss.util.IPAddr;
 
 /**
  * <p>An implementation of the {@link IcpFactory} interface, which
@@ -264,13 +270,13 @@ public class IcpFactoryImpl implements IcpFactory {
     }
 
     /* Inherit documentation */
-    public IcpMessage makeQuery(InetAddress requesterAddress,
+    public IcpMessage makeQuery(IPAddr requesterAddress,
                                 String query) {
       return makeQuery(requesterAddress, query, false, false);
     }
 
     /* Inherit documentation */
-    public IcpMessage makeQuery(InetAddress requesterAddress,
+    public IcpMessage makeQuery(IPAddr requesterAddress,
                                 String query,
                                 boolean requestSrcRtt,
                                 boolean requestHitObj) {
@@ -278,7 +284,7 @@ public class IcpFactoryImpl implements IcpFactory {
         return new IcpMessageImpl(
             IcpMessage.ICP_OP_QUERY,
             IcpMessage.ICP_VERSION,
-            (short)(21 + query.toString().getBytes("US-ASCII").length),
+            (short)(21 + query.toString().getBytes(Constants.URL_ENCODING).length),
             getNewRequestNumber(),
               (requestSrcRtt ? IcpMessage.ICP_FLAG_SRC_RTT : 0)
             | (requestHitObj ? IcpMessage.ICP_FLAG_HIT_OBJ : 0),
@@ -306,7 +312,7 @@ public class IcpFactoryImpl implements IcpFactory {
     /**
      * <p>The 0.0.0.0 IP address.</p>
      */
-    private static final InetAddress ZERO_ADDRESS;
+    private static final IPAddr ZERO_ADDRESS;
 
     /*
      * begin STATIC INITIALIZER
@@ -315,7 +321,7 @@ public class IcpFactoryImpl implements IcpFactory {
     static {
       try {
         byte[] zero = new byte[] {0, 0, 0, 0};
-        ZERO_ADDRESS = InetAddress.getByAddress(zero);
+        ZERO_ADDRESS = IPAddr.getByAddress(zero);
       }
       catch (UnknownHostException e) {
         throw new RuntimeException("Could not create the zero address constant");
@@ -347,127 +353,134 @@ public class IcpFactoryImpl implements IcpFactory {
    */
   private static class IcpDecoderImpl implements IcpDecoder {
   
-    /* Inherit documentation */
-    public IcpMessage parseIcp(DatagramPacket packet) 
+    private static final int OFFSET_PAYLOAD_QUERY = 24;
+    private static final int OFFSET_PAYLOAD_NONQUERY = 20;
+    private static final int OFFSET_INT_REQUESTER = 20;
+    private static final int OFFSET_INT_SENDER = 16;
+    private static final int OFFSET_INT_OPTIONSDATA = 12;
+    private static final int OFFSET_INT_OPTIONS = 8;
+    private static final int OFFSET_INT_REQUESTNUMBER = 4;
+    private static final int OFFSET_SHORT_LENGTH = 2;
+    private static final int OFFSET_BYTE_VERSION = 1;
+    private static final int OFFSET_BYTE_OPCODE = 0;
+
+    public IcpMessage parseIcp(DatagramPacket packet)
         throws IcpProtocolException {
-      try {
-        // *** Local variables ***
-        byte version;
-        short length;
-        int requestNumber;
-        int options;
-        int optionData;
-        InetAddress sender = null;
-        InetAddress requester = null;
-        String payloadUrl = null;
-        short payloadLength;
-        byte[] payloadObject = null;
-        IcpMessage ret = null;
-        ByteArrayInputStream inBytes =
-          new ByteArrayInputStream(packet.getData());
-        DataInputStream inData = 
-          new DataInputStream(inBytes);
-  
-        // *** Unconditional processing ***
-        byte opcode;
-        try {
-          opcode = inData.readByte();
-          if (!IcpUtil.isValidOpcode(opcode)) {
+
+      // Local variables
+      byte opcode;
+      byte version;
+      short length;
+      int requestNumber;
+      int options;
+      int optionData;
+      IPAddr sender = null;
+      IPAddr requester = null;
+      String payloadUrl = null;
+      short payloadLength;
+      byte[] payloadObject = null;
+      IcpMessage ret = null;
+      ByteBuffer in = ByteBuffer.wrap(packet.getData());
+      
+      // Unconditional processing
+      opcode = in.get(OFFSET_BYTE_OPCODE);
+      if (!IcpUtil.isValidOpcode(opcode)) {
+        throw new IcpProtocolException("Invalid opcode: " + opcode);
+      }
+      version = in.get(OFFSET_BYTE_VERSION);
+      if (version != IcpMessage.ICP_VERSION) {
+        throw new IcpProtocolException("Unknown version: " + version);
+      }
+      length = in.getShort(OFFSET_SHORT_LENGTH);
+      requestNumber = in.getInt(OFFSET_INT_REQUESTNUMBER);
+      options = in.getInt(OFFSET_INT_OPTIONS);
+      optionData = in.getInt(OFFSET_INT_OPTIONSDATA);
+      sender = getIpFromStream(in, OFFSET_INT_SENDER);
+      
+      switch (opcode) {
+        // ... QUERY
+        case IcpMessage.ICP_OP_QUERY:
+          requester = getIpFromStream(in, OFFSET_INT_REQUESTER);
+          payloadUrl = getUrlFromStream(in, OFFSET_PAYLOAD_QUERY);
+          ret = new IcpMessageImpl(opcode,
+                                   version,
+                                   length,
+                                   requestNumber,
+                                   options,
+                                   optionData,
+                                   sender,
+                                   requester,
+                                   payloadUrl);
+          break;
+        // ... HIT_OBJECT
+        case IcpMessage.ICP_OP_HIT_OBJ:
+          payloadUrl = getUrlFromStream(in, OFFSET_PAYLOAD_NONQUERY);
+          final int OFFSET_SHORT_PAYLOADLENGTH =
+            OFFSET_PAYLOAD_NONQUERY + IcpUtil.stringLength(payloadUrl) + 1;
+          payloadLength = in.getShort(OFFSET_SHORT_PAYLOADLENGTH);
+          final int OFFSET_PAYLOADOBJECT =
+            OFFSET_SHORT_PAYLOADLENGTH + 2;
+          payloadObject = new byte[payloadLength];
+          byte[] packetData = packet.getData();
+          if (packetData.length - OFFSET_PAYLOADOBJECT != payloadLength) {
             throw new IcpProtocolException(
-                "Invalid opcode: " + opcode);
+                "Error while extracting payload object");
           }
-          version = inData.readByte();
-          length = inData.readShort();
-          requestNumber = inData.readInt();
-          options = inData.readInt();
-          optionData = inData.readInt();
-          sender = getIpFromStream(inData);
-        }
-        catch (EOFException eofe) {
-          throw new IcpProtocolException(
-              END_OF_STREAM, eofe);
-        }
-        
-        // *** Conditional processing ***
-        switch (opcode) {
-          case IcpMessage.ICP_OP_QUERY:
-            requester = getIpFromStream(inData);
-            payloadUrl = getUrlFromStream(inData);
-            ret = new IcpMessageImpl(opcode,
-                                     version,
-                                     length,
-                                     requestNumber,
-                                     options,
-                                     optionData,
-                                     sender,
-                                     requester,
-                                     payloadUrl);
-            break;
-          case IcpMessage.ICP_OP_HIT_OBJ:
-            payloadUrl = getUrlFromStream(inData);
-            payloadLength = inData.readShort();
-            payloadObject = new byte[payloadLength];
-            inData.read(payloadObject, 0, payloadObject.length);
-            ret = new IcpMessageImpl(opcode,
-                                     version,
-                                     length,
-                                     requestNumber,
-                                     options,
-                                     optionData,
-                                     sender,
-                                     payloadUrl,
-                                     payloadObject,
-                                     payloadLength);
-            break;
-          default:
-            payloadUrl = getUrlFromStream(inData);
-            ret = new IcpMessageImpl(opcode,
-                                     version,
-                                     length,
-                                     requestNumber,
-                                     options,
-                                     optionData,
-                                     sender,
-                                     payloadUrl);
-            break;
-        }
-        
-        // *** Set UDP info ***
-        ret.setUdpAddress(packet.getAddress());
-        ret.setUdpPort(packet.getPort());
-        return ret;
+          System.arraycopy(packetData, OFFSET_PAYLOADOBJECT,
+              payloadObject, 0, payloadLength);
+          ret = new IcpMessageImpl(opcode,
+                                   version,
+                                   length,
+                                   requestNumber,
+                                   options,
+                                   optionData,
+                                   sender,
+                                   payloadUrl,
+                                   payloadObject,
+                                   payloadLength);
+          break;
+        // ... OTHER
+        default:
+          payloadUrl = getUrlFromStream(in, OFFSET_PAYLOAD_NONQUERY);
+          ret = new IcpMessageImpl(opcode,
+                                   version,
+                                   length,
+                                   requestNumber,
+                                   options,
+                                   optionData,
+                                   sender,
+                                   payloadUrl);
+          break;
       }
-      catch (Exception exc) {
-        throw new IcpProtocolException(
-            "Error while parsing datagram", exc);
-      }
+      
+      // *** Set UDP info ***
+      ret.setUdpAddress(new IPAddr(packet.getAddress()));
+      ret.setUdpPort(packet.getPort());
+      return ret;
     }
     
     /**
      * <p>Reads an IP address from the given stream.</p>
-     * @param inData A data input stream.
+     * @param in A data input stream.
+     * @param offset TODO
      * @return The IP address obtained from the next 4 bytes of the
      *         argument stream.
      * @throws IcpProtocolException if any exception arises.
      */
-    private InetAddress getIpFromStream(DataInputStream inData)
+    private IPAddr getIpFromStream(ByteBuffer in, int offset)
         throws IcpProtocolException {
       try {
-        int rawIpInt = inData.readInt();
-        return InetAddress.getByAddress(new byte[] {
-            (byte)((rawIpInt & 0xff000000) >>> 24),
-            (byte)((rawIpInt & 0x00ff0000) >>> 16),
-            (byte)((rawIpInt & 0x0000ff00) >>> 8),
-            (byte)(rawIpInt & 0x000000ff)
-        });
-      }
-      catch (EOFException eofe) {
-        throw new IcpProtocolException(
-            END_OF_STREAM, eofe);
+        byte[] ipBytes = new byte[4];
+        int rawIpInt = in.getInt(offset);
+        for (int ii = ipBytes.length-1 ; ii >= 0 ; ii--) {
+          ipBytes[ii] = (byte)(rawIpInt & 0x000000ff);
+          rawIpInt >>>= 8;
+        }
+        return IPAddr.getByAddress(ipBytes);
       }
       catch (Exception exc) {
         throw new IcpProtocolException(
-            "Error while parsing IP from stream", exc);
+            "Error while parsing IP from byte buffer", exc);
       }
     }
     
@@ -479,32 +492,23 @@ public class IcpFactoryImpl implements IcpFactory {
      *         stream.
      * @throws IcpProtocolException if any exception arises.
      */
-    private String getUrlFromStream(DataInputStream inData)
+    private String getUrlFromStream(ByteBuffer in, int offset)
         throws IcpProtocolException {
       try {
         StringBuffer buffer = new StringBuffer();
-        byte[] inputBytes = new byte[1];
-        while ( (inputBytes[0] = inData.readByte()) != (byte)0) {
-          buffer.append((char)inputBytes[0]);
+        byte one;
+        while ( (one = in.get(offset)) != (byte)0) {
+          buffer.append((char)one);
+          offset++;
         }
         return buffer.toString();
       }
-      catch (EOFException eofe) {
-        throw new IcpProtocolException(
-            END_OF_STREAM, eofe);
-      }
       catch (Exception exc) {
         throw new IcpProtocolException(
-            "Error while parsing URL from stream", exc);
+            "Error while parsing URL from byte buffer", exc);
       }
     }
 
-    /**
-     * <p>An error string used multiple times.</p>
-     */
-    private static final String END_OF_STREAM =
-      "Unexpected end of data stream";
-    
   }
   /*
    * end STATIC NESTED CLASS
@@ -523,13 +527,13 @@ public class IcpFactoryImpl implements IcpFactory {
     
     /* Inherit documentation */
     public DatagramPacket encode(IcpMessage message,
-                                 InetAddress recipient) {
+                                 IPAddr recipient) {
       return encode(message, recipient, IcpMessage.ICP_PORT);
     }
     
     /* Inherit documentation */
     public DatagramPacket encode(IcpMessage message,
-                                 InetAddress recipient,
+                                 IPAddr recipient,
                                  int port) {
       try {
         ByteArrayOutputStream outBytes =
@@ -558,7 +562,7 @@ public class IcpFactoryImpl implements IcpFactory {
         // Make datagram
         byte[] rawBytes = outBytes.toByteArray();
         return new DatagramPacket(rawBytes, 0, rawBytes.length,
-            recipient, port);
+            recipient.getInetAddr(), port);
       }
       catch (IOException ioe) {
         return null;
@@ -620,7 +624,7 @@ public class IcpFactoryImpl implements IcpFactory {
     /**
      * <p>A requester field.</p>
      */
-    private InetAddress requester;
+    private IPAddr requester;
 
     /**
      * <p>A request number field.</p>
@@ -630,12 +634,12 @@ public class IcpFactoryImpl implements IcpFactory {
     /**
      * <p>A sender field.</p>
      */
-    private InetAddress sender;
+    private IPAddr sender;
 
     /**
      * <p>A UDP sender field.</p>
      */
-    private InetAddress udpAddress;
+    private IPAddr udpAddress;
     
     /**
      * <p>A UDP port field.</p>
@@ -649,7 +653,7 @@ public class IcpFactoryImpl implements IcpFactory {
 
     /**
      * <p>Builds an ICP query message by invoking
-     * {@link #IcpMessageImpl(byte, byte, short, int, int, int, InetAddress, String)}
+     * {@link #IcpMessageImpl(byte, byte, short, int, int, int, IPAddr, String)}
      * and initializing the requester field with the given
      * argument.</p>
      * @param opcode        An ICP opcode.
@@ -668,8 +672,8 @@ public class IcpFactoryImpl implements IcpFactory {
                              int requestNumber,
                              int options,
                              int optionData,
-                             InetAddress sender,
-                             InetAddress requester,
+                             IPAddr sender,
+                             IPAddr requester,
                              String payloadUrl) {
       this(opcode,
            version,
@@ -703,7 +707,7 @@ public class IcpFactoryImpl implements IcpFactory {
                              int requestNumber,
                              int options,
                              int optionData,
-                             InetAddress sender,
+                             IPAddr sender,
                              String payloadUrl) {
       this.opcode = opcode;
       this.version = version;
@@ -717,7 +721,7 @@ public class IcpFactoryImpl implements IcpFactory {
 
     /**
      * <p>Builds an ICP hit-object message by invoking
-     * {@link #IcpMessageImpl(byte, byte, short, int, int, int, InetAddress, String)}
+     * {@link #IcpMessageImpl(byte, byte, short, int, int, int, IPAddr, String)}
      * and by initializing the payload object and payload object
      * length fields with the given arguments.</p>
      * @param opcode              An ICP opcode.
@@ -737,7 +741,7 @@ public class IcpFactoryImpl implements IcpFactory {
                              int requestNumber,
                              int options,
                              int optionData,
-                             InetAddress sender,
+                             IPAddr sender,
                              String payloadUrl,
                              byte[] payloadObject,
                              short payloadObjectLength) {
@@ -796,7 +800,7 @@ public class IcpFactoryImpl implements IcpFactory {
     }
 
     /* Inherit documentation */
-    public InetAddress getRequester() {
+    public IPAddr getRequester() {
       return isQuery() ? requester : null;
     }
 
@@ -806,7 +810,7 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     
     /* Inherit documentation */
-    public InetAddress getSender() {
+    public IPAddr getSender() {
       return sender;
     }
 
@@ -821,7 +825,7 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     
     /* Inherit documentation */
-    public InetAddress getUdpAddress() {
+    public IPAddr getUdpAddress() {
       return udpAddress;
     }
     
@@ -860,7 +864,7 @@ public class IcpFactoryImpl implements IcpFactory {
     }
 
     /* Inherit documentation */
-    public void setUdpAddress(InetAddress udpAddress) {
+    public void setUdpAddress(IPAddr udpAddress) {
       this.udpAddress = udpAddress;
     }
 

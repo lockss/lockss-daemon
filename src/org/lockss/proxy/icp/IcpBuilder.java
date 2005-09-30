@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilder.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpBuilder.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -32,7 +32,8 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import java.net.InetAddress;
+
+import org.lockss.util.IPAddr;
 
 /**
  * <p>Specifies an interface for classes that are able to produce
@@ -204,14 +205,14 @@ public interface IcpBuilder {
 
   /**
    * <p>Equivalent to calling
-   * {@link #makeQuery(InetAddress, String, boolean, boolean)} with the
+   * {@link #makeQuery(IPAddr, String, boolean, boolean)} with the
    * two boolean arguments being false.</p>
    * @param requesterAddress
    * @param query
    * @return A query message.
-   * @see #makeQuery(InetAddress, String, boolean, boolean)
+   * @see #makeQuery(IPAddr, String, boolean, boolean)
    */
-  IcpMessage makeQuery(InetAddress requesterAddress,
+  IcpMessage makeQuery(IPAddr requesterAddress,
                        String query);
   
   /**
@@ -224,7 +225,7 @@ public interface IcpBuilder {
    * @return A query message.
    * @see IcpMessage#getRequester
    */
-  IcpMessage makeQuery(InetAddress requesterAddress,
+  IcpMessage makeQuery(IPAddr requesterAddress,
                        String query,
                        boolean requestSrcRtt,
                        boolean requestHitObj);

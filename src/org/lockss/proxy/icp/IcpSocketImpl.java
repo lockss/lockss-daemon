@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSocketImpl.java,v 1.6 2005-09-20 23:02:39 thib_gc Exp $
+ * $Id: IcpSocketImpl.java,v 1.7 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -40,6 +40,7 @@ import java.util.Iterator;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.LockssRunnable;
 import org.lockss.util.Constants;
+import org.lockss.util.IPAddr;
 import org.lockss.util.Logger;
 
 /**
@@ -152,20 +153,28 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
 
   /* Inherit documentation */
   public void send(IcpMessage message,
-                   InetAddress recipient)
+                   IPAddr recipient)
       throws IOException {
     send(message, recipient, IcpMessage.ICP_PORT);
   }
   
   /* Inherit documentation */
   public void send(IcpMessage message,
-                   InetAddress recipient,
+                   IPAddr recipient,
                    int port)
       throws IOException {
     DatagramPacket packet = encoder.encode(message, recipient, port);
     if (logger.isDebug3()) {
-      logger.debug3(message.toString());
+      StringBuffer buffer = new StringBuffer();
+      buffer.append("Sending the following message to ");
+      buffer.append(recipient.toString());
+      buffer.append(':');
+      buffer.append(port);
+      buffer.append(": ");
+      buffer.append(message.toString());
+      logger.debug3(buffer.toString());
     }
+    
     socket.send(packet);
   }
 
@@ -188,7 +197,6 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
     try {
       // Set up socket timeout
       socket.setSoTimeout((int)interval / 2); // may throw
-      addInternalIcpHandlers();
       startWDog("icp", interval);
       nowRunning();
 
@@ -198,10 +206,28 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
           logger.debug2("lockssRun in IcpSocketImpl: listening");
           packet = new DatagramPacket(buffer, buffer.length);
           socket.receive(packet);
+          logger.debug3("lockssRun in IcpSocketImpl: receive returned");
           if (icpManager.getLimiter().isEventOk()) {
             icpManager.getLimiter().event();
             message = decoder.parseIcp(packet);
+            if (logger.isDebug3()) {
+              StringBuffer sb = new StringBuffer();
+              sb.append("Received the following message: ");
+              sb.append(message.toString());
+              logger.debug3(sb.toString());
+            }
+            else if (logger.isDebug2()) {
+              StringBuffer sb = new StringBuffer();
+              sb.append("Received from ");
+              sb.append(message.getUdpAddress());
+              sb.append(':');
+              sb.append(message.getUdpPort());
+              logger.debug2(sb.toString());
+            }
             notifyHandlers(message);
+          }
+          else {
+            logger.debug3("lockssRun in IcpSocketImpl: rate limiter");
           }
         }
         catch (SocketTimeoutException ste) {
@@ -235,7 +261,6 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
     }
     finally {
       // Clean up
-      removeInternalIcpHandlers();
       stopWDog();
       if (somethingBadHappened) {
         logger.warning("somethingBadHappened is true");
@@ -265,21 +290,6 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
   }
 
   /**
-   * <p>Registers any internal ICP handlers.</p>
-   */
-  private void addInternalIcpHandlers() {
-    addIcpHandler(
-        new IcpHandler() {
-          public void icpReceived(IcpReceiver source, IcpMessage message) {
-            if (logger.isDebug3()) {
-              logger.debug3(message.toString());
-            }
-          }          
-        }
-    );    
-  }
-
-  /**
    * <p>Notifies all the handlers of the arrival of a new icoming
    * ICP message.</p>
    * @param message The decoded ICP message.
@@ -298,15 +308,6 @@ public class IcpSocketImpl extends LockssRunnable implements IcpSocket {
           }
         }
       }
-    }
-  }
-
-  /**
-   * <p>Unregisters any internal handlers.</p>
-   */
-  private synchronized void removeInternalIcpHandlers() {
-    while (handlers.contains(this)) {
-      handlers.remove(this);
     }
   }
   

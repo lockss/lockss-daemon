@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoderTester.java,v 1.4 2005-09-09 23:42:09 thib_gc Exp $
+ * $Id: IcpEncoderTester.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.DatagramPacket;
 import org.lockss.proxy.icp.IcpEncoder;
 import org.lockss.proxy.icp.IcpEncoder.Factory;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.Logger;
 
 /**
  * <p>Tests classes that implement {@link IcpEncoder}.</p>
@@ -62,11 +63,15 @@ public abstract class IcpEncoderTester extends LockssTestCase {
     IcpEncoder encoder = factory.makeIcpEncoder();
     
     for (int test = 0 ; test < MockIcpMessage.countTestPairs(); test++) {
+      logger.info("testEncoding: begin test #" + test);
       IcpMessage message = MockIcpMessage.getTestMessage(test);
       DatagramPacket packet =
         encoder.encode(message,
-                       MockIcpMessage.getStandardDestination());
+                       MockIcpMessage.getStandardDestination(),
+                       MockIcpMessage.getStandardUdpPort());
       expect(MockIcpMessage.getTestPacket(test), packet);
+      logger.info("testEncoding: end test #" + test);
+
     }
   }
   
@@ -76,6 +81,11 @@ public abstract class IcpEncoderTester extends LockssTestCase {
    * @return An ICP encoder factory.
    */
   protected abstract Factory makeFactory();
+  
+  /**
+   * <p>A logger for use by these tests.</p>
+   */
+  private static final Logger logger = Logger.getLogger("IcpEncoderTester");
 
   /**
    * <p>Asserts that the argument packet has desired properties with

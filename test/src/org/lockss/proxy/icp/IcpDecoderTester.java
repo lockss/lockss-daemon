@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderTester.java,v 1.3 2005-09-09 23:42:09 thib_gc Exp $
+ * $Id: IcpDecoderTester.java,v 1.4 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.net.DatagramPacket;
 import org.lockss.proxy.icp.IcpDecoder;
 import org.lockss.proxy.icp.IcpDecoder.Factory;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.Logger;
 
 /**
  * <p>Tests classes that implement {@link IcpDecoder}.</p>
@@ -48,12 +49,12 @@ public abstract class IcpDecoderTester extends LockssTestCase {
    * <p>An ICP decoder factory.</p>
    */
   private Factory factory;
-
+  
   /* Inherit documentation */
   public void setUp() {
     this.factory = makeFactory();
   }
-  
+
   /**
    * <p>Tests decoding.</p>
    * @throws Exception if an error occurs.
@@ -62,10 +63,12 @@ public abstract class IcpDecoderTester extends LockssTestCase {
     IcpDecoder decoder = factory.makeIcpDecoder();
     
     for (int test = 0 ; test < MockIcpMessage.countTestPairs(); test++) {
+      logger.info("testDecoding: begin test #" + test);
       DatagramPacket packet = MockIcpMessage.getTestPacket(test);
-      packet.setAddress(MockIcpMessage.getStandardUdpAddress());
+      // ???
       IcpMessage message = decoder.parseIcp(packet);      
       expect(MockIcpMessage.getTestMessage(test), message);
+      logger.info("testDecoding: end test #" + test);
     }
   }
   
@@ -75,6 +78,11 @@ public abstract class IcpDecoderTester extends LockssTestCase {
    * @return An ICP decoder factory.
    */
   protected abstract Factory makeFactory();
+  
+  /**
+   * <p>A logger for use by these tests.</p>
+   */
+  private static final Logger logger = Logger.getLogger("IcpDecoderTester");
   
   /**
    * <p>Asserts that the argument message has desired properties with
@@ -104,6 +112,7 @@ public abstract class IcpDecoderTester extends LockssTestCase {
     }
 
     assertEquals(expected.getUdpAddress(), message.getUdpAddress());
+    assertEquals(expected.getUdpPort(), message.getUdpPort());
     return;
   }
   

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.4 2005-09-09 23:42:09 thib_gc Exp $
+ * $Id: IcpBuilderTester.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -32,11 +32,11 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import java.net.InetAddress;
 
 import org.lockss.proxy.icp.IcpBuilder;
 import org.lockss.proxy.icp.IcpBuilder.Factory;
 import org.lockss.test.LockssTestCase;
+import org.lockss.util.IPAddr;
 
 /**
  * <p>Tests classes that implement {@link IcpBuilder}.</p>
@@ -283,7 +283,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
    */
   private void performResponseTest(ResponseTester tester,
                                    byte expectedOpcode,
-                                   InetAddress expectedSender)
+                                   IPAddr expectedSender)
       throws Exception {
     
     // Test null query
@@ -321,7 +321,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
    */
   private void performResponseTest(SrcRttResponseTester tester,
                                    byte expectedOpcode,
-                                   InetAddress expectedSender)
+                                   IPAddr expectedSender)
       throws Exception {
 
     // Test invalid source return trip response
@@ -363,7 +363,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
                              byte expectedOpcode,
                              byte expectedVersion,
                              int expectedRequestNumber,
-                             InetAddress expectedSender,
+                             IPAddr expectedSender,
                              String expectedPayloadUrl) {
     assertEquals(expectedOpcode, message.getOpcode());
     assertEquals(expectedVersion, message.getVersion());

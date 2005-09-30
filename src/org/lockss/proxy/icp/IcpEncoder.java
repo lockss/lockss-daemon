@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoder.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpEncoder.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.proxy.icp;
 
 import java.net.DatagramPacket;
-import java.net.InetAddress;
+
+import org.lockss.util.IPAddr;
 
 /**
  * <p>Defines a simple abstraction for classes that are able to
@@ -62,14 +63,14 @@ public interface IcpEncoder {
   
   /**
    * <p>Equivalent to calling
-   * {@link #encode(IcpMessage, InetAddress, int)} with the port
+   * {@link #encode(IcpMessage, IPAddr, int)} with the port
    * argument equal to {@link IcpMessage#ICP_PORT}.</p>
    * @param message
    * @param recipient
    * @return
    */
   DatagramPacket encode(IcpMessage message,
-                        InetAddress recipient);
+                        IPAddr recipient);
   
   /**
    * <p>Constructs a UDP packet to the given address and port, from
@@ -82,7 +83,7 @@ public interface IcpEncoder {
    *         <code>p.getPort() == port</code>.
    */
   DatagramPacket encode(IcpMessage message,
-                        InetAddress recipient,
+                        IPAddr recipient,
                         int port);
   
 }

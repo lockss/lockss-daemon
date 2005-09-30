@@ -1,5 +1,5 @@
 /*
- * $Id: MockIcpMessage.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: MockIcpMessage.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -36,6 +36,9 @@ import java.io.UnsupportedEncodingException;
 import java.net.*;
 import java.util.ArrayList;
 
+import org.lockss.util.Constants;
+import org.lockss.util.IPAddr;
+
 /**
  * <p>Provides general facilities to generate lightweight mock ICP
  * messages and their binary array counterparts.</p>
@@ -54,7 +57,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   private static class MockIcpQueryMessage extends MockIcpMessage {
     public short getLength() { return (short)(4 + super.getLength()); }
     public byte getOpcode() { return ICP_OP_QUERY; }
-    public InetAddress getRequester() { return getStandardRequester(); }
+    public IPAddr getRequester() { return getStandardRequester(); }
     public boolean isQuery() { return true; }
   }
   /*
@@ -113,7 +116,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   public short getLength() {
     try {
       return (short)(  20  // for the header
-                     + getStandardQueryUrl().toString().getBytes("US-ASCII").length
+                     + getStandardQueryUrl().getBytes(Constants.URL_ENCODING).length
                      + 1); // for the null terminator
     }
     catch (UnsupportedEncodingException uee) {
@@ -154,7 +157,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   }
   
   /* Inherit documentation */
-  public InetAddress getRequester() {
+  public IPAddr getRequester() {
     return null;
   }
   
@@ -164,7 +167,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   }
   
   /* Inherit documentation */
-  public InetAddress getSender() {
+  public IPAddr getSender() {
     return getStandardSender();
   }
 
@@ -174,8 +177,8 @@ public abstract class MockIcpMessage implements IcpMessage {
   }
 
   /* Inherit documentation */
-  public InetAddress getUdpAddress() {
-    return getStandardUdpAddress();
+  public IPAddr getUdpAddress() {
+    return getStandardDestination();
   }
 
   /* Inherit documentation */
@@ -209,7 +212,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   }
 
   /* Inherit documentation */
-  public void setUdpAddress(InetAddress udpAddress) {
+  public void setUdpAddress(IPAddr udpAddress) {
     // nothing
   }
 
@@ -221,7 +224,7 @@ public abstract class MockIcpMessage implements IcpMessage {
   /**
    * <p>The usual destination address.</p>
    */
-  private static InetAddress standardDestination;
+  private static IPAddr standardDestination;
 
   /**
    * <p>The usual payload bytes.</p>
@@ -236,22 +239,17 @@ public abstract class MockIcpMessage implements IcpMessage {
   /**
    * <p>The usual requester address.</p>
    */
-  private static InetAddress standardRequester;
+  private static IPAddr standardRequester;
 
   /**
    * <p>The usual sender address.</p>
    */
-  private static InetAddress standardSender;
-
-  /**
-   * <p>The usual UDP address.</p>
-   */
-  private static InetAddress standardUdpAddress;
+  private static IPAddr standardSender;
 
   /**
    * <p>The usual UDP port.</p>
    */
-  private static final int standardUdpPort = 3128;
+  private static final int standardUdpPort = 65432;
 
   /**
    * <p>A list of predefined test pairs.</p>
@@ -266,13 +264,12 @@ public abstract class MockIcpMessage implements IcpMessage {
     /* Initialize the usual values */
     try {
       standardSender = makeAddress(1, 2, 3, 4);
-      standardUdpAddress = makeAddress(4, 3, 2, 1);
       standardRequester = makeAddress(11, 12, 13, 14);
       standardDestination = makeAddress(111, 112, 113, 114);
       standardQueryUrl = "http://www.stanford.edu/";
       standardPayloadData = 
         "<html><head><title>Sample</title></head><body><p>Test</p></body></html>"
-        .getBytes("US-ASCII");
+        .getBytes(Constants.US_ASCII_ENCODING);
     }
     catch (Exception exc) {
       throw new RuntimeException("Runtime exception while initializing "
@@ -343,8 +340,8 @@ public abstract class MockIcpMessage implements IcpMessage {
       for (int ii = 0 ; ii < messages.length ; ii++) {
         packet = new DatagramPacket(makePacketBytes(messages[ii]),
                                     messages[ii].getLength(),
-                                    getStandardDestination(),
-                                    ICP_PORT);
+                                    getStandardDestination().getInetAddr(),
+                                    getStandardUdpPort());
         testPairs.add(new TestPair(messages[ii], packet));
       }
       
@@ -373,7 +370,7 @@ public abstract class MockIcpMessage implements IcpMessage {
    * <p>Gets the usual destination address.</p>
    * @return A standard address used as the destination.
    */
-  public static InetAddress getStandardDestination() {
+  public static IPAddr getStandardDestination() {
     return standardDestination;
   }
   
@@ -397,7 +394,7 @@ public abstract class MockIcpMessage implements IcpMessage {
    * <p>Gets the usual requester address.</p>
    * @return A standard address used as a requester address.
    */
-  public static InetAddress getStandardRequester() {
+  public static IPAddr getStandardRequester() {
     return standardRequester;
   }
   
@@ -405,7 +402,7 @@ public abstract class MockIcpMessage implements IcpMessage {
    * <p>Gets the usual sender address.</p> 
    * @return A standard address used as a sender address.
    */
-  public static InetAddress getStandardSender() {
+  public static IPAddr getStandardSender() {
     return standardSender;
   }
 
@@ -416,14 +413,6 @@ public abstract class MockIcpMessage implements IcpMessage {
    */
   public static short getStandardSrcRttResponse() {
     return (short)12345;
-  }
-
-  /**
-   * <p>Gets the usual UDP address.</p>
-   * @return A standard address used as the UDP address.
-   */
-  public static InetAddress getStandardUdpAddress() {
-    return standardUdpAddress;
   }
 
   /**
@@ -517,10 +506,10 @@ public abstract class MockIcpMessage implements IcpMessage {
    * @param i4 The fourth byte of the address.
    * @return The resulting address.
    */
-  private static InetAddress makeAddress(int i1, int i2, int i3, int i4) {
+  private static IPAddr makeAddress(int i1, int i2, int i3, int i4) {
     try {
-      return InetAddress.getByAddress(
-          new byte[] { (byte)i1, (byte)i2, (byte)i3, (byte)i4});
+      return IPAddr.getByAddress(
+          new int[] { i1, i2, i3, i4} );
     }
     catch (UnknownHostException uhe) {
       final String dot = ".";
@@ -574,7 +563,7 @@ public abstract class MockIcpMessage implements IcpMessage {
     }
     
     // Payload URL
-    byte[] urlBytes = message.getPayloadUrl().toString().getBytes("US-ASCII");
+    byte[] urlBytes = message.getPayloadUrl().getBytes(Constants.URL_ENCODING);
     System.arraycopy(urlBytes, 0, ret, ii, urlBytes.length);
     ii += urlBytes.length;
     ret[ii++] = (byte)0;

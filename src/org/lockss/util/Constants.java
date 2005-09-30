@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.10 2005-09-06 19:58:44 tlipkis Exp $
+ * $Id: Constants.java,v 1.11 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -38,6 +38,7 @@ import java.util.*;
  * Constants of general use
  */
 public interface Constants {
+  
   /** The number of milliseconds in a second */
   public static final long SECOND = 1000;
   /** The number of milliseconds in a minute */
@@ -61,6 +62,16 @@ public interface Constants {
   /** The default encoding used when none is detected */
   public static String DEFAULT_ENCODING = "ISO-8859-1";
 
+  /**
+   * <p>The US ASCII encoding.</p> 
+   */
+  public static final String US_ASCII_ENCODING = "US-ASCII";
+  
+  /**
+   * <p>The encoding of URLs.</p>
+   */
+  public static final String URL_ENCODING = US_ASCII_ENCODING;
+  
   /** LOCKSS home page */
   public static String LOCKSS_HOME_URL = "http://www.lockss.org/";
 

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpUtil.java,v 1.1 2005-09-14 00:33:40 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.2 2005-09-30 22:04:28 thib_gc Exp $
  */
 
 /*
@@ -32,6 +32,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
+import java.io.UnsupportedEncodingException;
+
+import org.lockss.util.Constants;
+
 /**
  * <p>Provides utility methods to deal with ICP.</p>
  * @author Thib Guicherd-Callin
@@ -39,27 +43,11 @@ package org.lockss.proxy.icp;
 public class IcpUtil {
 
   /**
-   * <p>Determines if an opcode is meaningful.</p>
-   * @param opcode A potential opcode.
-   * @return False if the opcode is unused in the ICP specification,
-   *         version 2 (RFC2186); true otherwise.
-   * @see #validOpcode
-   */
-  public static boolean isValidOpcode(int opcode) {
-    try {
-      return validOpcode[opcode];
-    }
-    catch (IndexOutOfBoundsException ioobe) {
-      return false;
-    }
-  }
-  
-  /**
    * <p>An array of valid RFC2186 opcode, for fast lookup.</p>
    * @see #isValidOpcode
    */
   private static final boolean[] validOpcode = {
-    false, // 00: ICP_OP_INVALID
+    false, // 00: ICP_OP_INVALID (named by RFC but not valid, obviously)
     true,  // 01: ICP_OP_QUERY
     true,  // 02: ICP_OP_HIT
     true,  // 03: ICP_OP_MISS
@@ -84,5 +72,52 @@ public class IcpUtil {
     true,  // 22: ICP_OP_DENIED
     true   // 23: ICP_OP_HIT_OBJ 
   };
+  
+  /**
+   * <p>Computes the number of bytes corresponding to a given ICP
+   * message.</p>
+   * @param message An ICP message.
+   * @return The number of bytes the ICP message represents.
+   */
+  public static short computeLength(IcpMessage message) {
+    try {
+      int result =
+        21 // 20-byte header + null terminator
+        + message.getPayloadUrl().getBytes(Constants.URL_ENCODING).length; // URL
+      if (message.isQuery()) {
+        result += 4; // requester field
+      }
+      if (message.getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
+        byte[] obj = message.getPayloadObject();
+        if (obj != null) {
+          result += obj.length;
+        }
+      }
+      return (short)result;
+    }
+    catch (UnsupportedEncodingException exc) {
+      return -1; // should never happen; US-ASCII guaranteed
+    }
+  }
+  
+  /**
+   * <p>Determines if an opcode is meaningful.</p>
+   * @param opcode A potential opcode.
+   * @return False if the opcode is unused in the ICP specification,
+   *         version 2 (RFC2186); true otherwise.
+   * @see #validOpcode
+   */
+  public static boolean isValidOpcode(int opcode) {
+    try {
+      return validOpcode[opcode];
+    }
+    catch (IndexOutOfBoundsException ioobe) {
+      return false;
+    }
+  }
+  
+  public static int stringLength(String str) {
+    return str.toCharArray().length;
+  }
   
 }
