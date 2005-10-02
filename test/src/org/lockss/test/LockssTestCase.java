@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.71 2005-09-09 23:42:09 thib_gc Exp $
+ * $Id: LockssTestCase.java,v 1.72 2005-10-02 23:13:02 tlipkis Exp $
  */
 
 /*
@@ -1492,6 +1492,72 @@ public class LockssTestCase extends TestCase {
     }
     i.start();
     return i;
+  }
+
+  /**
+   * Close the socket after a timeout
+   * @param ms interval to wait before interrupting
+   * @param sock the Socket to close
+   * @return a SockAbort
+   */
+  public SockAbort abortIn(long inMs, Socket sock) {
+    SockAbort sa = new SockAbort(inMs, sock);
+    if (Boolean.getBoolean("org.lockss.test.threadDump")) {
+      sa.setThreadDump();
+    }
+    sa.start();
+    return sa;
+  }
+
+  /**
+   * Close the socket after a timeout
+   * @param ms interval to wait before interrupting
+   * @param sock the ServerSocket to close
+   * @return a SockAbort
+   */
+  public SockAbort abortIn(long inMs, ServerSocket sock) {
+    SockAbort sa = new SockAbort(inMs, sock);
+    if (Boolean.getBoolean("org.lockss.test.threadDump")) {
+      sa.setThreadDump();
+    }
+    sa.start();
+    return sa;
+  }
+
+  /** SockAbort aborts a socket by closing it
+   */
+  public class SockAbort extends DoLater {
+    Socket sock;
+    ServerSocket servsock;
+
+    SockAbort(long waitMs, Socket sock) {
+      super(waitMs);
+      this.sock = sock;
+    }
+
+    SockAbort(long waitMs, ServerSocket servsock) {
+      super(waitMs);
+      this.servsock = servsock;
+    }
+
+    protected void doit() {
+      try {
+	if (sock != null) {
+	  log.debug("Closing sock");
+	  sock.close();
+	}
+      } catch (IOException e) {
+	log.warning("sock", e);
+      }
+      try {
+	if (servsock != null) {
+	  log.debug("Closing servsock");
+	  servsock.close();
+	}
+      } catch (IOException e) {
+	log.warning("servsock", e);
+      }
+    }
   }
 
 }
