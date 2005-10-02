@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.8 2005-09-08 04:08:12 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.9 2005-10-02 23:12:12 tlipkis Exp $
  */
 
 /*
@@ -72,12 +72,19 @@ class BlockingPeerChannel implements PeerChannel {
   private Queue sendQueue;
   private InputStream ins;
   private OutputStream outs;
+
   volatile private long lastSendTime = 0;
   volatile private long lastRcvTime = 0;
   volatile private long lastActiveTime = 0;
+
   volatile private ChannelRunner reader;
   volatile private ChannelRunner writer;
   volatile private ChannelRunner connecter;
+  // above get nulled in synchronized block; we must call waitExited()
+  // unsynchronized, so copies are put here
+  private ChannelRunner wtReader;
+  private ChannelRunner wtWriter;
+  private ChannelRunner wtConnecter;
 
   private byte[] rcvHeader = new byte[HEADER_LEN];
   private byte[] sndHeader = new byte[HEADER_LEN];
@@ -248,7 +255,7 @@ class BlockingPeerChannel implements PeerChannel {
       runner.setTimeout(scomm.getConnectTimeout());
       try {
 	scomm.execute(runner);
-	connecter = runner;
+	wtConnecter = connecter = runner;
       } catch (InterruptedException e) {
       // Can happen if we get aborted while starting pool thread
 	log.warning("startOriginate()", e);
@@ -346,9 +353,20 @@ class BlockingPeerChannel implements PeerChannel {
 
   private ChannelRunner stopThread(ChannelRunner runner) {
     if (runner != null) {
+      if (log.isDebug3()) log.debug3("Stopping " + runner.getName());
       runner.stopRunner();
     }
     return null;
+  }
+
+  /** Wait until all threads we started have exited.  Used by
+   * BlockingStreamComm.stopService() */
+  void waitThreadsExited() {
+    if (wtConnecter != null) {
+      wtConnecter.waitExited();
+    }
+    wtReader.waitExited();
+    wtWriter.waitExited();
   }
 
   /** Called periodically by parent stream comm to check for hung sender
@@ -399,7 +417,7 @@ class BlockingPeerChannel implements PeerChannel {
     log.debug3("Starting reader");
     ChannelReader runner = new ChannelReader();
     try {
-      reader = runner;
+      wtReader = reader = runner;
       scomm.execute(runner);
     } catch (InterruptedException e) {
       // Can happen if we get aborted while starting pool thread
@@ -418,7 +436,7 @@ class BlockingPeerChannel implements PeerChannel {
     ChannelWriter runner = new ChannelWriter();
     try {
       scomm.execute(runner);
-      writer = runner;
+      wtWriter = writer = runner;
     } catch (InterruptedException e) {
       // Can happen if we get aborted while starting pool thread
       log.warning("startWriter()", e);

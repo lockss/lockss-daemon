@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.5 2005-05-27 08:34:29 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.6 2005-10-02 23:12:12 tlipkis Exp $
  */
 
 /*
@@ -128,6 +128,11 @@ public class BlockingStreamComm
   public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNodelay";
   static final boolean DEFAULT_TCP_NODELAY = true;
 
+  /** If true, BlockingStreamComm.stopService() waits until worker threads
+   * have exited. */
+  public static final String PARAM_WAIT_EXIT = PREFIX + "waitExit";
+  static final boolean DEFAULT_WAIT_EXIT = true;
+
   static final String WDOG_PARAM_SCOMM = "SComm";
   static final long WDOG_DEFAULT_SCOMM = 1 * Constants.HOUR;
 
@@ -158,6 +163,7 @@ public class BlockingStreamComm
   private long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
   private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
   private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
+  private boolean paramIsWaitExit = DEFAULT_WAIT_EXIT;
   private long lastHungCheckTime = 0;
   private PooledExecutor pool;
 
@@ -238,6 +244,8 @@ public class BlockingStreamComm
 					      DEFAULT_IS_BUFFERED_SEND);
       paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
 					      DEFAULT_TCP_NODELAY);
+      paramIsWaitExit = config.getBoolean(PARAM_WAIT_EXIT, DEFAULT_WAIT_EXIT);
+
       if (changedKeys.contains(PARAM_DATA_DIR)) {
 	String paramDataDir = config.get(PARAM_DATA_DIR, DEFAULT_DATA_DIR);
 	File dir = new File(paramDataDir);
@@ -534,14 +542,22 @@ public class BlockingStreamComm
   void stop() {
     running = false;
     synchronized (threadLock) {
-      if (listenThread != null) {
+      ListenThread lth = listenThread;
+      if (lth != null) {
 	log.info("Stopping listen thread");
-	listenThread.stopListenThread();
+	lth.stopListenThread();
+	if (paramIsWaitExit) {
+	  lth.waitExited();
+	}
 	listenThread = null;
       }
-      if (rcvThread != null) {
+      ReceiveThread rth = rcvThread;
+      if (rth != null) {
 	log.info("Stopping receive thread");
-	rcvThread.stopRcvThread();
+	rth.stopRcvThread();
+	if (paramIsWaitExit) {
+	  rth.waitExited();
+	}
 	rcvThread = null;
       }
     }
@@ -564,6 +580,19 @@ public class BlockingStreamComm
     for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
       BlockingPeerChannel chan = (BlockingPeerChannel)iter.next();
       chan.abortChannel();
+    }
+    // Wait until the threads have exited before proceeding.  Useful in
+    // testing to keep debug output straight.
+
+    // Any channels that had already dissociated themselves are not waited
+    // for.  It would take extra bookkeeping to handle those and they don't
+    // seem to cause nearly as much trouble.
+
+    if (paramIsWaitExit) {
+      for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
+	BlockingPeerChannel chan = (BlockingPeerChannel)iter.next();
+	chan.waitThreadsExited();
+      }
     }
   }
 
@@ -739,10 +768,7 @@ public class BlockingStreamComm
 	} finally {
 	}
       }
-      // prevent rcvThread changing during ensureQRunner() or stop()
-      synchronized (threadLock) {
-	rcvThread = null;
-      }
+      rcvThread = null;
     }
 
     private void stopRcvThread() {
@@ -783,10 +809,7 @@ public class BlockingStreamComm
 	  log.warning("Listener", e);
 	}
       }
-      // prevent listenThread changing during ensureListener() or stop()
-      synchronized (threadLock) {
-	listenThread = null;
-      }
+      listenThread = null;
     }
 
     private void stopListenThread() {

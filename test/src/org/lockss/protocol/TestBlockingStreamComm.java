@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.10 2005-08-31 23:19:32 troberts Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.11 2005-10-02 23:12:12 tlipkis Exp $
  */
 
 /*
@@ -173,7 +173,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
    */
   void setupRealPid(int ix) throws IOException {
     if (pids[ix] == null) {
-      testports[ix] = findUnboundTcpPort();
+      testports[ix] = TcpTestUtil.findUnboundTcpPort();
       pids[ix] = findPeerId("127.0.0.1", testports[ix]);
       pads[ix] = (PeerAddress.Tcp)pids[ix].getPeerAddress();
       peerhack(ix);
@@ -250,22 +250,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   void setupComm2() throws IOException {
     setupComm(2);
-  }
-
-  int nextPort = 2000;
-  
-  int findUnboundTcpPort() {
-    for (int p = nextPort; p < 65535; p++) {
-      try {
-	ServerSocket sock = new ServerSocket(p);
-	sock.close();
-	nextPort = p + 1;
-	return p;
-      } catch (IOException e) {
-      }
-    }
-    log.error("Couldn't find unused TCP port");
-    return -1;
   }
 
   void setupMessages() throws IOException {
@@ -957,7 +941,12 @@ public class TestBlockingStreamComm extends LockssTestCase {
     comm1.setAssocQueue(assocQ);
     comm1.sendTo(msg1, pid2, null);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);
-    assertEqualsMessageFrom(msg1, pid1, msgIn);
+    // Timeout might happen before channel reads 1st message (or even
+    // before it reads the peerid).  If this happens no message will be
+    // read and the queue get() will timeout and return null
+    if (msgIn != null) {
+      assertEqualsMessageFrom(msg1, pid1, msgIn);
+    }
     List event;
     assertNotNull("Channel didn't close automatically after timeout",
 		  (event = (List)assocQ.get(TIMEOUT_SHOULDNT)));
@@ -1143,60 +1132,6 @@ public class TestBlockingStreamComm extends LockssTestCase {
     boolean isDeleted = false;
     public void delete() {
       isDeleted = true;
-    }
-  }
-
-  SockAbort abortIn(long inMs, Socket sock) {
-    SockAbort sa = new SockAbort(inMs, sock);
-    if (Boolean.getBoolean("org.lockss.test.threadDump")) {
-      sa.setThreadDump();
-    }
-    sa.start();
-    return sa;
-  }
-
-  SockAbort abortIn(long inMs, ServerSocket sock) {
-    SockAbort sa = new SockAbort(inMs, sock);
-    if (Boolean.getBoolean("org.lockss.test.threadDump")) {
-      sa.setThreadDump();
-    }
-    sa.start();
-    return sa;
-  }
-
-  /** SockAbort aborts a socket by closing it
-   */
-  class SockAbort extends DoLater {
-    Socket sock;
-    ServerSocket servsock;
-
-    SockAbort(long waitMs, Socket sock) {
-      super(waitMs);
-      this.sock = sock;
-    }
-
-    SockAbort(long waitMs, ServerSocket servsock) {
-      super(waitMs);
-      this.servsock = servsock;
-    }
-
-    protected void doit() {
-      try {
-	if (sock != null) {
-	  log.debug("Closing sock");
-	  sock.close();
-	}
-      } catch (IOException e) {
-	log.warning("sock", e);
-      }
-      try {
-	if (servsock != null) {
-	  log.debug("Closing servsock");
-	  servsock.close();
-	}
-      } catch (IOException e) {
-	log.warning("servsock", e);
-      }
     }
   }
 
