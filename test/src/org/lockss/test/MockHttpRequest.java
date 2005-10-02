@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpRequest.java,v 1.3 2005-08-30 18:21:40 tlipkis Exp $
+ * $Id: MockHttpRequest.java,v 1.4 2005-10-02 00:05:52 tlipkis Exp $
  */
 
 /*
@@ -128,6 +128,9 @@ public class MockHttpRequest extends HttpRequest {
     throw new UnsupportedOperationException("not implemented");
   }
 
+  /**
+   * @deprecated
+   */
   public HttpResponse getResponse() {
     throw new UnsupportedOperationException("not implemented");
   }

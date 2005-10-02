@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.1 2005-08-23 22:03:50 tlipkis Exp $
+ * $Id: PropertyTree.java,v 1.2 2005-10-02 00:05:52 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.1 2005-08-23 22:03:50 tlipkis Exp $
+// $Id: PropertyTree.java,v 1.2 2005-10-02 00:05:52 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.util;
@@ -197,7 +197,9 @@ public class PropertyTree extends Properties
   }   
     
   /* ------------------------------------------------------------ */
-  /** From Properties */
+  /** From Properties
+   * @deprecated
+   */
   public synchronized void save(OutputStream out,String header)
   {
     PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
