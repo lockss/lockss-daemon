@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.17 2005-07-25 01:21:06 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.18 2005-10-02 00:06:14 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -216,6 +216,9 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     }
     if (msg.startsWith("java.net.ConnectException")) {
       return new java.net.ConnectException(newMsg);
+    }
+    if (msg.startsWith("java.net.SocketTimeoutException")) {
+      return new java.net.SocketTimeoutException(newMsg);
     }
     if (msg.startsWith("java.net.NoRouteToHostException")) {
       return new java.net.NoRouteToHostException(newMsg);
@@ -567,10 +570,15 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 			       int executionCount,
 			       boolean requestSent) {
 
-      // Check if it's a data (socket) timeout
       String msg = recoverableException.getMessage();
+      if (log.isDebug3()) {
+	log.debug3("retry " +executionCount + "/" + retryCount +
+		   (requestSent ? "S" : ""),
+		   recoverableException);
+      }
+      // Check if it's a data (socket) timeout
       if (msg != null &&
-	  msg.startsWith("java.io.InterruptedIOException")) {
+	  msg.startsWith("java.net.SocketTimeoutException")) {
 	// These take a long time to happen, so retrying is probably not a
 	// good idea.  Retrying may also result in a different error;
 	// better to tell the user about this one.  (Wouldn't it be nice if
@@ -595,34 +603,18 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
    * HttpClient-specific HttpConnection.ConnectionTimeoutException. */
   public class ConnectionTimeoutException
     extends LockssUrlConnection.ConnectionTimeoutException {
-    private Exception nestedException;
 
     public ConnectionTimeoutException(String msg) {
       super(msg);
     }
-    public ConnectionTimeoutException
-      (HttpConnection.ConnectionTimeoutException e) {
-      super(e.getMessage());
-      nestedException = e;
+    public ConnectionTimeoutException(String msg, Throwable t) {
+      super(msg, t);
     }
-
-    /** Stack trace of nestedException is more interesting and correct than
-     * ours */
-    public void printStackTrace() {
-      if (nestedException == null) super.printStackTrace();
-      else nestedException.printStackTrace();
-    }
-
-    public void printStackTrace(java.io.PrintStream s) {
-      if (nestedException == null) super.printStackTrace(s);
-      else nestedException.printStackTrace(s);
-    }
-
-    public void printStackTrace(java.io.PrintWriter s) {
-      if (nestedException == null) super.printStackTrace(s);
-      else nestedException.printStackTrace(s);
+    public ConnectionTimeoutException(Throwable t) {
+      super(t.getMessage(), t);
     }
   }
+
   /** Stream wrapper that doesn't call the underlying stream after it has
    * signalled EOF.  HttpClient sometimes automatically closes the input
    * stream when it reaches EOF, and if a BufferedInputStream is used to

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnection.java,v 1.7 2005-07-25 01:21:06 tlipkis Exp $
+ * $Id: LockssUrlConnection.java,v 1.8 2005-10-02 00:06:14 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -181,6 +181,14 @@ public interface LockssUrlConnection {
   public class ConnectionTimeoutException extends IOException {
     public ConnectionTimeoutException(String msg) {
       super(msg);
+    }
+    public ConnectionTimeoutException(String msg, Throwable t) {
+      super(msg);
+      initCause(t);
+    }
+    public ConnectionTimeoutException(Throwable t) {
+      super();
+      initCause(t);
     }
   }
 }
