@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.66 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.67 2005-10-03 17:52:34 thib_gc Exp $
  */
 
 /*
@@ -943,13 +943,12 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected void layoutFooter(Page page) {
-    if (footnotes == null || footNumber == 0) {
-      return;
-    }
     ServletUtil.layoutFooter(page,
-                             footnotes.iterator(),
+                             (footnotes == null ? null : footnotes.iterator()),
                              getLockssApp().getVersionInfo());
-    footnotes.removeAllElements();
+    if (footnotes != null) {
+      footnotes.removeAllElements();
+    }
   }
   
   /** Return the app instance.
