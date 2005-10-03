@@ -1,5 +1,5 @@
 /*
- * $Id: UrlUtil.java,v 1.33 2005-08-26 02:37:21 tlipkis Exp $
+ * $Id: UrlUtil.java,v 1.34 2005-10-03 06:03:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -505,7 +505,7 @@ public class UrlUtil {
     if (url != null) {
       try {
 	org.apache.commons.httpclient.URI resultURI =
-	  new org.apache.commons.httpclient.URI(url.toCharArray());
+	  new org.apache.commons.httpclient.URI(url, true);
 	return resultURI.isAbsoluteURI();
       } catch (URIException e) {
       }
@@ -561,7 +561,7 @@ public class UrlUtil {
     if (url != null) {
       try {
 	org.apache.commons.httpclient.URI uri =
-	  new org.apache.commons.httpclient.URI(url.toCharArray());
+	  new org.apache.commons.httpclient.URI(url, true);
 	if (uri.isAbsoluteURI()) {
 	  StringBuffer sb = new StringBuffer();
 	  sb.append(uri.getScheme());
@@ -613,32 +613,15 @@ public class UrlUtil {
 
     // Execute the method.
     int statusCode = -1;
-    // retry up to 2 times.
-    int attempt = 1;
-    while (true) {
-      log.debug3("try " + attempt);
-      try {
-	// execute the method.
-	method.addRequestHeader(new Header("user-agent", "lockss"));
-	statusCode = client.executeMethod(method);
-	if (statusCode == 200) {
-	  InputStream ins = method.getResponseBodyAsStream();
-	  return ins;
-	} else {
-	  throw new IOException("Server returned HTTP response code: " +
-				statusCode + " for URL: " + urlString);
-	}
-      } catch (HttpRecoverableException e) {
-	if (attempt++ < 2) {
-	  log.warning("Recoverable error: " + e.getMessage());
-	} else {
-	  log.warning("Too many recoverable errors, giving up: " +
-		      e.getMessage());
-	  throw e;
-	}
-      } catch (IOException e) {
-	throw e;
-      }
+    // execute the method.
+    method.addRequestHeader(new Header("user-agent", "lockss"));
+    statusCode = client.executeMethod(method);
+    if (statusCode == 200) {
+      InputStream ins = method.getResponseBodyAsStream();
+      return ins;
+    } else {
+      throw new IOException("Server returned HTTP response code: " +
+			    statusCode + " for URL: " + urlString);
     }
   }
 

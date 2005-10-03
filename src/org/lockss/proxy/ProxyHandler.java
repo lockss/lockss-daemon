@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.39 2005-08-23 22:05:45 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.40 2005-10-03 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.39 2005-08-23 22:05:45 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.40 2005-10-03 06:03:49 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -622,8 +622,8 @@ public class ProxyHandler extends AbstractHttpHandler {
       throws DateParseException {
     // common case, no conversion necessary
     if (datestr1.equalsIgnoreCase(datestr2)) return false;
-    long d1 = DateParser.parseDate(datestr1).getTime();
-    long d2 = DateParser.parseDate(datestr2).getTime();
+    long d1 = DateUtil.parseDate(datestr1).getTime();
+    long d2 = DateUtil.parseDate(datestr2).getTime();
     return d1 < d2;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.12 2005-07-25 01:21:05 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.13 2005-10-03 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ package org.lockss.util.urlconn;
 
 import java.io.*;
 import java.net.*;
+import java.net.ProtocolException;
 import java.util.*;
 import java.text.*;
 import org.lockss.daemon.*;
@@ -81,34 +82,6 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       newConn("http://foo.bar/a<");
       fail("Failed to throw MalformedURLException");
     } catch (java.net.MalformedURLException e) {}
-  }
-
-  void assertProperException(Class cls, String msg, Exception origE) {
-    HttpRecoverableException re =
-      new HttpRecoverableException(origE.toString());
-    IOException e = conn.exceptionFromRecoverableException(re);
-    assertTrue("'" + e + "' is not an instance of " + cls.getName(),
-	       cls.isInstance(e));
-    assertEquals(msg, e.getMessage());
-  }
-
-  public void testExceptionFromRecoverableException() {
-    assertProperException(BindException.class, "foo msg",
-			  new BindException("foo msg"));
-    assertProperException(InterruptedIOException.class, "bar",
-			  new InterruptedIOException("bar"));
-    assertProperException(ConnectException.class, "bar",
-			  new ConnectException("bar"));
-    assertProperException(NoRouteToHostException.class, "bar",
-			  new NoRouteToHostException("bar"));
-    assertProperException(ProtocolException.class, "bar",
-			  new ProtocolException("bar"));
-    assertProperException(UnknownHostException.class, "bar",
-			  new UnknownHostException("bar"));
-    // This one should stay an HttpRecoverableException
-    assertProperException(HttpRecoverableException.class,
-			  "java.io.IOException: bar",
-			  new IOException("bar"));
   }
 
   public void testReqProps() {
@@ -182,7 +155,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   }
 
   public void testExecute() throws Exception {
-    client.setRes(201, 202);
+    client.setRes(201);
     conn.execute();
     assertTrue(conn.isExecuted());
     assertEquals(201, conn.getResponseCode());
@@ -195,7 +168,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   }
 
   public void testResponseStream() throws Exception {
-    client.setRes(200, 200);
+    client.setRes(200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
     method.setResponseStream(sis);
@@ -213,7 +186,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   }
 
   public void testResponseStreamNull() throws Exception {
-    client.setRes(200, 200);
+    client.setRes(200);
     method.setResponseStream(null);
     conn.execute();
     assertTrue(conn.isExecuted());
@@ -224,7 +197,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   public void testResponseStreamNoWrapper() throws Exception {
     ConfigurationUtil.setFromArgs(HttpClientUrlConnection.
 				  PARAM_USE_WRAPPER_STREAM, "false");
-    client.setRes(200, 200);
+    client.setRes(200);
     String test = "foo123";
     StringInputStream sis = new StringInputStream(test);
     method.setResponseStream(sis);
@@ -237,7 +210,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
   }
 
   public void testExecuteProxy() throws Exception {
-    client.setRes(201, 202);
+    client.setRes(202);
     conn.setProxy("phost", 9009);
     conn.execute();
     assertTrue(conn.isExecuted());
@@ -254,7 +227,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
 
   public void testResponse() throws Exception {
     String datestr = "Mon, 23 Feb 2004 00:28:11 GMT";
-    client.setRes(201, 202);
+    client.setRes(201);
     method.setResponseHeader("Date", datestr);
     method.setResponseHeader("Content-Encoding", "text/html");
     method.setResponseHeader("Content-type", "type1");
@@ -278,94 +251,9 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     assertEquals(eprops, props);
   }
 
-  public void testRedirect() throws Exception {
-    String redir = "http://redirected.com/foo.bar";
-
-    client.setRes(301, 301);
-    method.setResponseHeader("location", redir);
-
-    MyMockGetMethod meth2 = new MyMockGetMethod(null);
-    meth2.setRes(200);
-    conn.addMethod(meth2);
-
-    conn.execute();
-    assertEquals(200, conn.getResponseCode());
-    assertEquals(redir, conn.getActualUrl());
-    MyMockGetMethod cmeth = conn.getMockMethod();
-    assertSame(meth2, cmeth);
-    assertEquals(redir, cmeth.getUrl());
-  }
-
-  public void testRedirectWithQuery() throws Exception {
-    String redir = "http://redirected.com/foo.bar?p=v";
-
-    client.setRes(301, 301);
-    method.setResponseHeader("location", redir);
-
-    MyMockGetMethod meth2 = new MyMockGetMethod(null);
-    meth2.setRes(200);
-    conn.addMethod(meth2);
-
-    conn.execute();
-    assertEquals(200, conn.getResponseCode());
-    assertEquals(redir, conn.getActualUrl());
-    MyMockGetMethod cmeth = conn.getMockMethod();
-    assertSame(meth2, cmeth);
-    assertEquals(redir, cmeth.getUrl());
-  }
-
-  public void testMaxRedirect() throws Exception {
-    String redir = "http://redirected.com/foo.bar";
-
-    client.setRes(301, 301);
-    method.setResponseHeader("location", redir);
-
-    for (int ix=0; ix < ( 1 + HttpClientUrlConnection.MAX_REDIRECTS); ix++) {
-      MyMockGetMethod meth2 = new MyMockGetMethod(null);
-      meth2.setRes(301);
-      meth2.setResponseHeader("location", redir);
-      conn.addMethod(meth2);
-    }
-    MyMockGetMethod meth2 = new MyMockGetMethod(null);
-    meth2.setRes(200);
-    conn.addMethod(meth2);
-
-    conn.execute();
-    assertEquals(301, conn.getResponseCode());
-  }
-
-  public void xtestConnTimeout() throws Exception {
-    String url0 = "http://10.222.111.99:43215/";
-    String url = "http://sul-lockss28.stanford.edu:43215/";
-    LockssUrlConnectionPool pool = new LockssUrlConnectionPool();
-    pool.setConnectTimeout(600000);
-    pool.setDataTimeout(30000);
-
-    LockssUrlConnection conn;
-    HttpClient client = pool.getHttpClient();
-//     HttpClient client = new HttpClient();
-    conn = new HttpClientUrlConnection(LockssUrlConnection.METHOD_GET,
-				       url, client);
-    conn.execute();
-    log.debug("resp: " + conn.getResponseCode());
-    log.debug("respMsg: " + conn.getResponseMessage());
-    assertEquals(200, conn.getResponseCode());
-  }
-
-  public void xtestLegalUrl() throws Exception {
-    String url = "http://sul-lockss28.stanford.edu/fo|o.bar";
-    org.apache.commons.httpclient.URI u =
-      new org.apache.commons.httpclient.URI(url.toCharArray());
-    LockssUrlConnection conn;
-    HttpClient client = new HttpClient();
-    conn = new HttpClientUrlConnection(LockssUrlConnection.METHOD_GET,
-				       url, client);
-  }
-
   class MyMockHttpClient extends HttpClient {
     int res1 = -1;
-    int res2 = -2;
-    HostConfiguration hc = null;
+    HostConfiguration hc = new HostConfiguration();
 
     public int executeMethod(HttpMethod method)
 	throws IOException, HttpException  {
@@ -379,17 +267,11 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     public int executeMethod(HostConfiguration hostConfiguration,
 			     HttpMethod method)
 	throws IOException, HttpException {
-      hc = hostConfiguration;
-      int mres = -1;
-      if (method instanceof MyMockGetMethod) {
-	mres = ((MyMockGetMethod)method).getRes();
-      }
-      return (mres < 0) ? res2 : mres;
+      throw new UnsupportedOperationException();
     }
 
-    void setRes(int res1, int res2) {
+    void setRes(int res1) {
       this.res1 = res1;
-      this.res2 = res2;
     }
 
     public HostConfiguration getHostConfiguration() {
@@ -435,7 +317,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     public String getPath() {
       try {
 	org.apache.commons.httpclient.URI uri =
-	  new org.apache.commons.httpclient.URI(url);
+	  new org.apache.commons.httpclient.URI(url, false);
 	return uri.getPath();
       } catch(URIException e) {
 	throw new RuntimeException("getPath couldn't create URI: " + e);
@@ -445,7 +327,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     public String getQueryString() {
       try {
 	org.apache.commons.httpclient.URI uri =
-	  new org.apache.commons.httpclient.URI(url);
+	  new org.apache.commons.httpclient.URI(url, false);
 	return uri.getQuery();
       } catch(URIException e) {
 	throw new RuntimeException("getQueryString couldn't create URI: " + e);
@@ -515,7 +397,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
       return hdrs;
     }
 
-    public int getResponseContentLength() {
+    public long getResponseContentLength() {
       return contentLength;
     }
     void setResponseContentLength(int l) {

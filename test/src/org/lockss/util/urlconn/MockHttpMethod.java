@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpMethod.java,v 1.2 2004-03-07 08:43:46 tlipkis Exp $
+ * $Id: MockHttpMethod.java,v 1.3 2005-10-03 06:03:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,6 +36,8 @@ import java.util.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.*;
+import org.apache.commons.httpclient.params.*;
+import org.apache.commons.httpclient.auth.*;
 import org.apache.commons.httpclient.util.*;
 
 /**
@@ -63,10 +65,21 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
+  public void setURI(URI uri) {
+    throw new UnsupportedOperationException();
+  }
+
+  /**
+   * @deprecated
+   */
   public void setStrictMode(boolean strictMode) {
     throw new UnsupportedOperationException();
   }
 
+
+  /**
+   * @deprecated
+   */
   public boolean isStrictMode() {
     throw new UnsupportedOperationException();
   }
@@ -95,6 +108,10 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
+  public void removeRequestHeader(Header header) {
+    throw new UnsupportedOperationException();
+  }
+
   public boolean getFollowRedirects() {
     throw new UnsupportedOperationException();
   }
@@ -119,6 +136,10 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
+  public Header[] getRequestHeaders(String headerName) { 
+    throw new UnsupportedOperationException();
+  }
+
   public boolean validate() {
     throw new UnsupportedOperationException();
   }
@@ -136,6 +157,10 @@ public class MockHttpMethod implements HttpMethod {
   }
 
   public Header getResponseHeader(String headerName) {
+    throw new UnsupportedOperationException();
+  }
+
+  public Header[] getResponseHeaders(String headerName) {
     throw new UnsupportedOperationException();
   }
 
@@ -172,6 +197,10 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
+  public void abort() {
+    throw new UnsupportedOperationException();
+  }
+
   public void releaseConnection() {
     throw new UnsupportedOperationException();
   }
@@ -191,4 +220,25 @@ public class MockHttpMethod implements HttpMethod {
   public void setDoAuthentication(boolean doAuthentication) {
     throw new UnsupportedOperationException();
   }
+
+  public HttpMethodParams getParams() {
+    throw new UnsupportedOperationException();
+  }
+
+  public void setParams(final HttpMethodParams params) {
+    throw new UnsupportedOperationException();
+  }
+
+  public AuthState getHostAuthState() {
+    throw new UnsupportedOperationException();
+  }
+
+  public AuthState getProxyAuthState() {
+    throw new UnsupportedOperationException();
+  }
+
+  public boolean isRequestSent() {
+    throw new UnsupportedOperationException();
+  }
+
 }

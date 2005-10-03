@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssUrlConnectionPool.java,v 1.3 2004-09-21 21:25:03 dshr Exp $
+ * $Id: TestLockssUrlConnectionPool.java,v 1.4 2005-10-03 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import java.util.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.params.*;
 
 /**
  * Test class for org.lockss.util.urlconn.LockssUrlConnectionPool
@@ -65,11 +66,13 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
   }
 
   private int getConnectionTimeout(HttpClient client) {
-    return ((MyMockHttpClient)client).getConnectionTimeout();
+    HttpParams params = client.getHttpConnectionManager().getParams();
+    return params.getIntParameter(HttpConnectionParams.CONNECTION_TIMEOUT, -1);
   }
 
   private int getTimeout(HttpClient client) {
-    return ((MyMockHttpClient)client).getTimeout();
+    HttpParams params = client.getHttpConnectionManager().getParams();
+    return params.getIntParameter(HttpConnectionParams.SO_TIMEOUT, -1);
   }
 
   public void testTimeoutsAfter() {
@@ -102,6 +105,10 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     assertEquals(666, getTimeout(client));
   }
 
+  public void testStaleCheckedEnbled() {
+    assertTrue(pool.getConnectionManagerParams().isStaleCheckingEnabled());
+  }
+
   public void testMultiThreaded() {
     pool.setMultiThreaded(8, 3);
     HttpClient client = pool.getHttpClient();
@@ -109,17 +116,19 @@ public class TestLockssUrlConnectionPool extends LockssTestCase {
     assertTrue(mgr instanceof MultiThreadedHttpConnectionManager);
     MultiThreadedHttpConnectionManager mtm = 
       (MultiThreadedHttpConnectionManager)mgr;
-    assertEquals(8, mtm.getMaxTotalConnections());
-    assertEquals(3, mtm.getMaxConnectionsPerHost());
+    assertEquals(8, mtm.getParams().getMaxTotalConnections());
+    assertEquals(3, mtm.getParams().getDefaultMaxConnectionsPerHost());
   }
 
   class MyMockHttpClient extends HttpClient {
     int cto = -1;
     int dto = -1;
 
+    /** @deprecated */
     public void setConnectionTimeout(int n) {
       cto = n;
     }
+    /** @deprecated */
     public void setTimeout(int n) {
       dto = n;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: JavaUrlConnection.java,v 1.4 2004-03-09 23:41:34 tlipkis Exp $
+ * $Id: JavaUrlConnection.java,v 1.5 2005-10-03 06:03:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -112,7 +112,7 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
    * Returns the value of the <code>content-length</code> header field.
    * @return  the content length, or -1 if not known.
    */
-  public int getResponseContentLength() {
+  public long getResponseContentLength() {
     assertExecuted();
     return urlConn.getContentLength();
   }
@@ -177,4 +177,11 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
    */
   public void release() {
   }
+
+  /**
+   * Abort the request.
+   */
+  public void abort() {
+  }
+
 }

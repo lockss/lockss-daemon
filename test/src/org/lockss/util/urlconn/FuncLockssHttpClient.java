@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.1 2005-10-02 00:07:18 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.2 2005-10-03 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -36,6 +36,7 @@ import java.io.*;
 import java.net.*;
 import java.net.ProtocolException;
 import java.util.*;
+import org.apache.oro.text.regex.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
 
@@ -54,16 +55,25 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
   LockssUrlConnectionPool connectionPool;
   LockssUrlConnection conn;
+  ConnAbort aborter;
 
   public void setUp() throws Exception {
     super.setUp();
     connectionPool = new LockssUrlConnectionPool();
+    connectionPool.setConnectTimeout(10000);
+    aborter = null;
+
   }
 
   public void tearDown() throws Exception {
+    if (aborter != null) {
+      aborter.cancel();
+      aborter = null;
+    }
     super.tearDown();
   }
 
+  /** Return "http://127.0.0.1:port" */
   String localurl(int port) {
     return "http://127.0.0.1:" + port + "/";
   }
@@ -101,94 +111,173 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
   public void testConnectTimeout() throws Exception {
     connectionPool.setConnectTimeout(1);
-    connectionPool.setDataTimeout(10000);
     try {
       conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				    URL_CONN_TIMEOUT, connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
       fail("Connect timeout should throw");
     } catch (HttpClientUrlConnection.ConnectionTimeoutException e) {
     }
   }
 
+  // Server opens connection, reads header, doesn't send response
   public void testOpenNoResponse() throws Exception {
-    connectionPool.setConnectTimeout(10000);
     connectionPool.setDataTimeout(100);
     int port = TcpTestUtil.findUnboundTcpPort();
-    final ServerSocket server = new ServerSocket(port);
-//     SockAbort intr = abortIn(TIMEOUT_SHOULDNT, server);
+    ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
     th.start();
     try {
       conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				    localurl(port), connectionPool);
+      aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
-      fail("Connect timeout should throw");
+      fail("Socket timeout should throw");
     } catch (java.net.SocketTimeoutException e) {
       assertTrue(th.getNumConnects() + " connects", th.getNumConnects() < 3);
     }
-
-    server.close();
+    th.stopServer();
   }
 
-  static String RESP_200_EMPTY = "HTTP/1.1 200 OK\r\n" +
+  // canned responses for next tests
+
+  static String RESP_200 =
+    "HTTP/1.1 200 OK\r\n" +
     "Content-Length: 0\r\n" +
     "Keep-Alive: timeout=15, max=100\r\n" +
     "Connection: Keep-Alive\r\n" +
-    "Content-Type: text/html\r\n" +
-    "\r\n";
+    "Content-Type: text/html\r\n";
 
   static String RESP_304 = 
     "HTTP/1.1 304 Not Modified\r\n" +
     "Connection: Keep-Alive\r\n" +
-    "Keep-Alive: timeout=15, max=98\r\n" +
-    "\r\n";
+    "Keep-Alive: timeout=15, max=98\r\n";
 
+  // turn the string into a complete http header by appending crlf to it
+  String resp(String hdr) {
+    return resp(hdr, null);
+  }
+
+  // turn the header and content into a complete http response by
+  // separating them with crlf
+  String resp(String hdr, String cont) {
+    StringBuffer sb = new StringBuffer();
+    sb.append(hdr);
+    sb.append("\r\n");
+    if (cont != null) {
+      sb.append(cont);
+    }
+    return sb.toString();
+  }
+
+  // Generate a Set-Cookie: header for each of the cookies
+  String setCookies(List cookies) {
+    StringBuffer sb = new StringBuffer();
+    for (Iterator iter = cookies.iterator(); iter.hasNext(); ) {
+      sb.append(SET_COOKIE);
+      sb.append((String)iter.next());
+      sb.append("\r\n");
+    }
+    return sb.toString();
+  }
+
+  static String SET_COOKIE = "Set-Cookie: ";
+  static String cookie1 = "monster=42;path=/";
+  static String cookie2 = "jar=full;path=/foo/";
+  static String cookie3 = "cutter=leaf;path=/";
+
+
+  /** Assert that the pattern exists in the string, interpreting the string
+   * as multiple lines */
+  void assertHeaderLine(String expPat, String hdr) {
+    Pattern pat = RegexpUtil.uncheckedCompile(expPat,
+					      Perl5Compiler.MULTILINE_MASK);
+    assertMatchesRE(pat, hdr);
+  }
+
+  /** Assert that the pattern does not exist in the string, interpreting
+   * the string as multiple lines */
+  void assertNoHeaderLine(String expPat, String hdr) {
+    Pattern pat = RegexpUtil.uncheckedCompile(expPat,
+					      Perl5Compiler.MULTILINE_MASK);
+    assertNotMatchesRE(pat, hdr);
+  }
+
+  // Do one complete GET operation
   public void testOneGet() throws Exception {
-//     connectionPool.setConnectTimeout(10000);
-//     connectionPool.setDataTimeout(10000);
     int port = TcpTestUtil.findUnboundTcpPort();
-    final ServerSocket server = new ServerSocket(port);
+    ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
-    th.setResponses(ListUtil.list(RESP_200_EMPTY));
+    th.setResponses(resp(RESP_200));
     th.setMaxReads(10);
     th.start();
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port), connectionPool);
-    ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-    abort.cancel();
-    assertMatchesRE("^GET / HTTP/", th.getRequest(0));
+    aborter.cancel();
+    String req = th.getRequest(0);
+    assertMatchesRE("^GET / HTTP/", req);
+    // check for the standard default request headers
+    assertHeaderLine("^Accept:", req);
+    assertHeaderLine("^Connection:", req);
+    assertHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+
     assertEquals(200, conn.getResponseCode());
     conn.release();
-    server.close();
+    th.stopServer();
+    assertEquals(1, th.getNumConnects());
+  }
+
+  // Test that the proxy method doesn't automatically add any request headers
+  public void testProxy() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_PROXY,
+				  localurl(port), connectionPool);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    String req = th.getRequest(0);
+    assertMatchesRE("^GET / HTTP/", req);
+    assertNoHeaderLine("^Accept:", req);
+    assertNoHeaderLine("^Connection:", req);
+    assertNoHeaderLine("^User-Agent: Jakarta Commons-HttpClient", req);
+
+    assertEquals(200, conn.getResponseCode());
+    conn.release();
+    th.stopServer();
     assertEquals(1, th.getNumConnects());
   }
 
   public void test200_304_200() throws Exception {
-//     connectionPool.setConnectTimeout(10000);
-//     connectionPool.setDataTimeout(10000);
     int port = TcpTestUtil.findUnboundTcpPort();
-    final ServerSocket server = new ServerSocket(port);
+    ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
-    th.setResponses(ListUtil.list(RESP_200_EMPTY, RESP_304, RESP_200_EMPTY));
+    th.setResponses(resp(RESP_200), resp(RESP_304), resp(RESP_200));
     th.setMaxReads(10);
     th.start();
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "foo",
 				  connectionPool);
-    ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-    abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /foo HTTP/", th.getRequest(0));
     assertEquals(200, conn.getResponseCode());
     conn.release();
+
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
-//     ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-//     abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(1));
     assertEquals(304, conn.getResponseCode());
     conn.release();
@@ -196,40 +285,120 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
-//     ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-//     abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(2));
     assertEquals(200, conn.getResponseCode());
     conn.release();
-    server.close();
+    th.stopServer();
     assertEquals(1, th.getNumConnects());
   }
 
-  public void testRetryAfterClose() throws Exception {
-//     connectionPool.setConnectTimeout(10000);
-//     connectionPool.setDataTimeout(10000);
+  public void testCookieRFC2109() throws Exception {
+    testCookie("RFC2109", false);
+  }
+
+  public void testCookieRFC2109A() throws Exception {
+    testCookie("RFC2109", true);
+  }
+
+  public void testCookieCompatibility() throws Exception {
+    testCookie("COMPATIBILITY", false);
+  }
+
+  public void testCookieCompatibilityA() throws Exception {
+    testCookie("COMPATIBILITY", true);
+  }
+
+  public void testCookieNetscape() throws Exception {
+    testCookie("NETSCAPE", false);
+  }
+
+  public void testCookieNetscapeA() throws Exception {
+    testCookie("NETSCAPE", true);
+  }
+
+  public void testCookieDefault() throws Exception {
+    testCookie("default", true);
+  }
+
+  public void testCookie(String policy, boolean singleHeader)
+      throws Exception {
+    Properties p = new Properties();
+    if ("default".equals(policy)) {
+      policy = "rfc2109";
+      singleHeader = true;
+    } else {
+      p.put(LockssUrlConnection.PARAM_COOKIE_POLICY, policy);
+      p.put(LockssUrlConnection.PARAM_SINGLE_COOKIE_HEADER,
+	    singleHeader ? "true" : "false");
+    }
+    ConfigurationUtil.setCurrentConfigFromProps(p);
+
     int port = TcpTestUtil.findUnboundTcpPort();
-    final ServerSocket server = new ServerSocket(port);
+    ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
-    th.setResponses(ListUtil.list(RESP_200_EMPTY, RESP_304, RESP_200_EMPTY));
+    String c = setCookies(ListUtil.list(cookie1, cookie2, cookie3));
+    th.setResponses(resp(RESP_200 + c), resp(RESP_200));
+    th.setMaxReads(10);
+    th.start();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port), connectionPool);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    assertMatchesRE("^GET / HTTP/", th.getRequest(0));
+    assertEquals(200, conn.getResponseCode());
+    conn.release();
+    conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
+				  localurl(port) + "bar",
+				  connectionPool);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
+    conn.execute();
+    aborter.cancel();
+    assertMatchesRE("^GET /bar HTTP/", th.getRequest(1));
+    String c1 = null, c2 = null, ver = "";
+    if (policy.equalsIgnoreCase("rfc2109")) {
+      c1 = "monster=42; \\$Path=/";
+      c2 = "cutter=leaf; \\$Path=/";
+      ver = "\\$Version=0; ";
+    } else {
+      c1 = "monster=42";
+      c2 = "cutter=leaf";
+    }
+    if (singleHeader) {
+      assertHeaderLine("^Cookie: " + ver + c1 + "; " + c2, th.getRequest(1));
+    } else {
+      assertHeaderLine("^Cookie: " + ver + c1, th.getRequest(1));
+      assertHeaderLine("^Cookie: " + ver + c2, th.getRequest(1));
+    }
+    th.stopServer();
+    conn.release();
+  }
+
+  public void testRetryAfterClose() throws Exception {
+    int port = TcpTestUtil.findUnboundTcpPort();
+    ServerSocket server = new ServerSocket(port);
+    ServerThread th = new ServerThread(server);
+    th.setResponses(resp(RESP_200), resp(RESP_304), resp(RESP_200));
     th.setMaxReads(2);
     th.start();
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "foo",
 				  connectionPool);
-    ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-    abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /foo HTTP/", th.getRequest(0));
     assertEquals(200, conn.getResponseCode());
     conn.release();
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
-//     ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-//     abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(1));
     assertEquals(304, conn.getResponseCode());
     conn.release();
@@ -237,41 +406,39 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
-//     ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-//     abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(2));
     assertEquals(200, conn.getResponseCode());
     conn.release();
-    server.close();
     assertEquals(2, th.getNumConnects());
+    th.stopServer();
   }
 
   public void testRetryAfterClose2() throws Exception {
-//     connectionPool.setConnectTimeout(10000);
-//     connectionPool.setDataTimeout(10000);
     int port = TcpTestUtil.findUnboundTcpPort();
-    final ServerSocket server = new ServerSocket(port);
+    ServerSocket server = new ServerSocket(port);
     ServerThread th = new ServerThread(server);
-    th.setResponses(ListUtil.list(RESP_200_EMPTY, RESP_304, RESP_200_EMPTY));
+    th.setResponses(resp(RESP_200), resp(RESP_304), resp(RESP_200));
     th.setMaxReads(2);
     th.setDelayClose(true);
     th.start();
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "foo",
 				  connectionPool);
-    ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-    abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /foo HTTP/", th.getRequest(0));
     assertEquals(200, conn.getResponseCode());
     conn.release();
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
-//     ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-//     abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(1));
     assertEquals(304, conn.getResponseCode());
     conn.release();
@@ -279,14 +446,14 @@ public class FuncLockssHttpClient extends LockssTestCase {
     conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				  localurl(port) + "bar",
 				  connectionPool);
-//     ConnAbort abort = abortIn(TIMEOUT_SHOULDNT, conn);
+    aborter = abortIn(TIMEOUT_SHOULDNT, conn);
     conn.execute();
-//     abort.cancel();
+    aborter.cancel();
     assertMatchesRE("^GET /bar HTTP/", th.getRequest(2));
     assertEquals(200, conn.getResponseCode());
     conn.release();
-    server.close();
     assertEquals(2, th.getNumConnects());
+    th.stopServer();
   }
 
   public static String readUntil(Reader rdr, String end) {
@@ -303,6 +470,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
   static class ServerThread extends Thread {
     ServerSocket srvSock;
+    Socket sock = null;
     int nconnects = 0;
     int maxaccepts = 1000;
     int maxreads = 10;
@@ -314,10 +482,11 @@ public class FuncLockssHttpClient extends LockssTestCase {
       this.srvSock = srvSock;
     }
 
+
     public void run() {
       try {
 	for (int ix = 0; ix < maxaccepts; ix++) {
-	  Socket sock = srvSock.accept();
+	  sock = srvSock.accept();
 	  log.debug3("accepted");
 	  nconnects++;
 	  try {
@@ -345,6 +514,12 @@ public class FuncLockssHttpClient extends LockssTestCase {
       }
     }
 
+    void stopServer() {
+      this.interrupt();
+      IOUtil.safeClose(srvSock);
+      IOUtil.safeClose(sock);
+    }
+
     void setMaxAccepts(int n) {
       maxaccepts = n;
     }
@@ -355,6 +530,18 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
     void setResponses(List l) {
       responses = l;
+    }
+
+    void setResponses(String r1) {
+      responses = ListUtil.list(r1);
+    }
+
+    void setResponses(String r1, String r2) {
+      responses = ListUtil.list(r1, r2);
+    }
+
+    void setResponses(String r1, String r2, String r3) {
+      responses = ListUtil.list(r1, r2, r3);
     }
 
     void setDelayClose(boolean val) {
@@ -375,10 +562,10 @@ public class FuncLockssHttpClient extends LockssTestCase {
   }
 
   /**
-   * Close the socket after a timeout
-   * @param ms interval to wait before interrupting
-   * @param sock the Socket to close
-   * @return a SockAbort
+   * Abort the connection after a timeout
+   * @param ms interval to wait before aborting
+   * @param conn the LockssUrlConnection to abort
+   * @return a ConnAbort
    */
   public ConnAbort abortIn(long inMs, LockssUrlConnection conn) {
     ConnAbort sa = new ConnAbort(inMs, conn);
@@ -389,7 +576,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
     return sa;
   }
 
-  /** ConnAbort aborts a connection by closing it
+  /** ConnAbort calls abort() on a connection after a timeout
    */
   public class ConnAbort extends DoLater {
     LockssUrlConnection conn;
@@ -400,15 +587,8 @@ public class FuncLockssHttpClient extends LockssTestCase {
     }
 
     protected void doit() {
-//       try {
-	if (conn != null) {
-	  log.debug("Closing conn");
-	  conn.release();
-	}
-//       } catch (IOException e) {
-// 	log.warning("conn", e);
-//       }
+      log.debug("Aborting conn");
+      conn.abort();
     }
   }
-
 }

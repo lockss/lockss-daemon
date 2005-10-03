@@ -1,5 +1,5 @@
 /*
- * $Id: HttpClientUrlConnection.java,v 1.18 2005-10-02 00:06:14 tlipkis Exp $
+ * $Id: HttpClientUrlConnection.java,v 1.19 2005-10-03 06:03:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -36,8 +36,9 @@ import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.apache.commons.httpclient.*;
-import org.apache.commons.httpclient.methods.*;
 import org.apache.commons.httpclient.util.*;
+import org.apache.commons.httpclient.methods.*;
+import org.apache.commons.httpclient.params.*;
 import org.apache.commons.httpclient.cookie.*;
 
 /** Encapsulates Jakarta HttpClient method as a LockssUrlConnection.
@@ -58,22 +59,32 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
   public static void setConfig(Configuration config,
 			       Configuration oldConfig,
 			       Configuration.Differences diffs) {
-    if (diffs.contains(PARAM_COOKIE_POLICY)) {
-      String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
-      if ("rfc2109".equalsIgnoreCase(policy)) {
-	CookiePolicy.setDefaultPolicy(CookiePolicy.RFC2109);
-      } else if ("netscape".equalsIgnoreCase(policy)) {
-	CookiePolicy.setDefaultPolicy(CookiePolicy.NETSCAPE_DRAFT);
-      } else {		//  if ("compatibility".equalsIgnoreCase(policy)) {
-	CookiePolicy.setDefaultPolicy(CookiePolicy.COMPATIBILITY);
+    if (diffs.contains(PARAM_COOKIE_POLICY) ||
+	diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
+      HttpParams params = DefaultHttpParams.getDefaultParams();
+      if (diffs.contains(PARAM_COOKIE_POLICY)) {
+	String policy = config.get(PARAM_COOKIE_POLICY, DEFAULT_COOKIE_POLICY);
+	if ("rfc2109".equalsIgnoreCase(policy)) {
+	  setDefaultCookiePolicy(params, CookiePolicy.RFC_2109);
+	} else if ("netscape".equalsIgnoreCase(policy)) {
+	  setDefaultCookiePolicy(params, CookiePolicy.NETSCAPE);
+	} else {	//  if ("compatibility".equalsIgnoreCase(policy)) {
+	  setDefaultCookiePolicy(params, CookiePolicy.BROWSER_COMPATIBILITY);
+	}
+      }
+      if (diffs.contains(PARAM_SINGLE_COOKIE_HEADER)) {
+	boolean val = config.getBoolean(PARAM_SINGLE_COOKIE_HEADER,
+					DEFAULT_SINGLE_COOKIE_HEADER);
+	params.setBooleanParameter(HttpMethodParams.SINGLE_COOKIE_HEADER,
+				   val);
       }
     }
   }
 
-  /** Maximum number of redirects that will be followed */
-  static final int MAX_REDIRECTS = 10;
+  static void setDefaultCookiePolicy(HttpParams params, String policy) {
+    params.setParameter(HttpMethodParams.COOKIE_POLICY, policy);
+  }    
 
-  private static MethodRetryHandler retryHandler = null;
 
   private HttpClient client;
   private HttpMethod method;
@@ -133,38 +144,24 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return true;
   }
 
-  /** Execute the request.  HttpClient doesn't handle cross-host redirects,
-      so handle them here. */
+  /** Execute the request. */
   public void execute() throws IOException {
     assertNotExecuted();
-    mimicSunRequestHeaders();
-    HostConfiguration hostConfig = null;
+    if (methodCode != LockssUrlConnection.METHOD_PROXY) {
+      mimicSunRequestHeaders();
+    }
     if (proxyHost != null) {
-      hostConfig = method.getHostConfiguration();
+      HostConfiguration hostConfig = client.getHostConfiguration();
       hostConfig.setProxy(proxyHost, proxyPort);
     }
     isExecuted = true;
-    for (int retry = 1; retry < MAX_REDIRECTS; retry++) {
-      responseCode = executeOnce(hostConfig, method);
-      if (!isRetryNeeded(responseCode)) {
-	break;
-      }
-    }
+    responseCode = executeOnce(method);
   }
 
-  private int executeOnce(HostConfiguration hostConfig, HttpMethod method)
-      throws IOException {
+  private int executeOnce(HttpMethod method) throws IOException {
     try {
-      if (hostConfig != null) {
-	return client.executeMethod(hostConfig, method);
-      } else {
-	return client.executeMethod(method);
-      }
-    } catch (HttpRecoverableException e) {
-      // Information-losing wrapper for lots of different exceptions within
-      // HttpClient methods.  Try to turn it back into the real exception.
-      throw exceptionFromRecoverableException(e);
-    } catch (HttpConnection.ConnectionTimeoutException e) {
+      return client.executeMethod(method);
+    } catch (ConnectTimeoutException e) {
       // Thrown by HttpClient if the connect timeout elapses before
       // socket.connect() returns.
       // Turn this into a non HttpClient-specific exception
@@ -180,56 +177,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       // java-level connect timeouts that are shorter than the underlying
       // socket connect timeout.
     }
-  }
-
-  IOException exceptionFromRecoverableException(HttpRecoverableException re) {
-    String msg = re.getMessage();
-    if (msg == null) {
-      return re;
-    }
-    IOException e = getExceptionFromMsg(msg);
-    if (e != null) {
-      return e;
-    }
-    return re;
-  }
-
-  /** Create an instance of the exception named in the message.  The new
-   * exception's stack trace will be from here, which is misleading, but
-   * the original exception's stack trace has already been lost anyway,
-   * when the HttpRecoverableException was thrown. */
-  IOException getExceptionFromMsg(String msg) {
-    // Pretty cheesy to do it this way, but a general mechanism would
-    // require reflection to call one-arg constructor, and hopefully the
-    // need for this will go away in a future release of HttpClient
-
-    String newMsg = null;
-    int pos = msg.indexOf(": ");
-    if (pos >= 0 && (pos + 2) < msg.length()) {
-      newMsg = msg.substring(pos + 2, msg.length());
-    }
-    if (msg.startsWith("java.io.InterruptedIOException")) {
-      return new java.io.InterruptedIOException(newMsg);
-    }
-    if (msg.startsWith("java.net.BindException")) {
-      return new java.net.BindException(newMsg);
-    }
-    if (msg.startsWith("java.net.ConnectException")) {
-      return new java.net.ConnectException(newMsg);
-    }
-    if (msg.startsWith("java.net.SocketTimeoutException")) {
-      return new java.net.SocketTimeoutException(newMsg);
-    }
-    if (msg.startsWith("java.net.NoRouteToHostException")) {
-      return new java.net.NoRouteToHostException(newMsg);
-    }
-    if (msg.startsWith("java.net.ProtocolException")) {
-      return new java.net.ProtocolException(newMsg);
-    }
-    if (msg.startsWith("java.net.UnknownHostException")) {
-      return new java.net.UnknownHostException(newMsg);
-    }
-    return null;
   }
 
   public boolean canProxy() {
@@ -287,20 +234,20 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       return -1;
     }
     try {
-      return DateParser.parseDate(datestr).getTime();
+      return DateUtil.parseDate(datestr).getTime();
     } catch (DateParseException e) {
       log.error("Error parsing response Date: header: " + datestr, e);
       return -1;
     }
   }
 
-  public int getResponseContentLength() {
+  public long getResponseContentLength() {
     assertExecuted();
     if (method instanceof LockssGetMethod) {
       LockssGetMethod getmeth = (LockssGetMethod)method;
       return getmeth.getResponseContentLength();
     }
-    throw new UnsupportedOperationException();
+    throw new UnsupportedOperationException(method.getClass().toString());
   }
 
   public String getResponseContentType() {
@@ -358,7 +305,7 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
       if (!StringUtil.isNullString(query)) {
 	path = path + "?" + query;
       }
-      URI uri = new URI(new URI(urlString), new URI(path));
+      URI uri = new URI(new URI(urlString, false), path, true);
       return uri.toString();
     } catch(URIException e) {
       log.warning("getActualUrl(): ", e);
@@ -384,111 +331,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     return (hdr == null) ? false : !StringUtil.isNullString(hdr.getValue());
   }
 
-  // Handle cross host redirections, which HttpClient doesn't.
-  // Code adapted from HttpMethodBase.
-  private boolean isRetryNeeded(int statusCode) {
-    switch (statusCode) {
-    case HttpStatus.SC_MOVED_TEMPORARILY:
-    case HttpStatus.SC_MOVED_PERMANENTLY:
-    case HttpStatus.SC_SEE_OTHER:
-    case HttpStatus.SC_TEMPORARY_REDIRECT:
-      return processRedirectResponse();
-    default:
-      return false;
-    }
-  }
-
-  private boolean processRedirectResponse() {
-    if (!method.getFollowRedirects()) {
-      log.debug3("Redirect requested but followRedirects is disabled");
-      return false;
-    }
-    //get the location header to find out where to redirect to
-    String location = getResponseHeaderValue("location");
-    if (location == null) {
-      // got a redirect response, but no location header
-      log.error("Received redirect response " + responseCode
-		+ " but no location header");
-      return false;
-    }
-    if (log.isDebug2()) {
-      log.debug2("Redirect requested to location '" + location + "'");
-    }
-    //rfc2616 demands the location value be a complete URI
-    //Location       = "Location" ":" absoluteURI
-    URI redirectUri = null;
-    URI currentUri = null;
-
-    try {
-      currentUri = new URI(urlString);
-      redirectUri = new URI(location.toCharArray());
-      if (redirectUri.isRelativeURI()) {
-	if (method.isStrictMode()) {
-	  log.warning("Redirected location '" + location 
-		      + "' is not acceptable in strict mode");
-	  return false;
-	} else { 
-	  //location is incomplete, use current values for defaults
-	  log.debug("Redirect URI is not absolute - parsing as relative");
-	  redirectUri = new URI(currentUri, redirectUri);
-	}
-      }
-    } catch (URIException e) {
-      log.warning("Redirected location '" + location + "' is malformed", e);
-      return false;
-    }
-
-    //check for redirect to a different protocol, host or port
-    try {
-      checkValidRedirect(currentUri, redirectUri);
-    } catch (HttpException ex) {
-      //LOG the error and let the client handle the redirect
-      log.warning(ex.getMessage());
-      return false;
-    }
-
-    //update the current location with the redirect location.
-
-    String newUrlString = redirectUri.getEscapedURI();
-    HttpMethod newMeth;
-    try {
-      newMeth = createMethod(methodCode, newUrlString);
-    } catch (IOException e) {
-      log.warning("Redirected location '" + location + "' is malformed", e);
-      return false;
-    }
-
-    Header[] rhdrs = method.getRequestHeaders();
-    for (int ix = 0; ix < rhdrs.length; ix++) {
-      Header hdr = rhdrs[ix];
-      if (!"host".equalsIgnoreCase(hdr.getName())) {
-	newMeth.setRequestHeader(hdr);
-      }
-    }
-    method.releaseConnection();
-
-    urlString = newUrlString;
-    method = newMeth;
-//    setQueryString(redirectUri.getEscapedQuery());
-
-    if (log.isDebug3()) {
-      log.debug3("Redirecting from '" + currentUri.getEscapedURI()
-                + "' to '" + redirectUri.getEscapedURI() + "'");
-    }
-    
-    return true;
-  }
-
-  private static void checkValidRedirect(URI currentUri, URI redirectUri)
-      throws HttpException {
-    String oldProtocol = currentUri.getScheme();
-    String newProtocol = redirectUri.getScheme();
-    if (!oldProtocol.equals(newProtocol)) {
-      throw new HttpException("Redirect from protocol " + oldProtocol
-			      + " to " + newProtocol + " is not supported");
-    }
-  }
-
   /**
    * Release resources associated with this request.
    */
@@ -497,49 +339,32 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
     method.releaseConnection();
   }
 
-  /** Return a MethodRetryHandler that says to retry even if the request
-   * has been set.  (Default behavior is not to.)  This is necessary
-   * because, if we try to reuse a connection that the server has closed,
-   * the error won't occur until flushRequestOutputStream() is called.
-   * This safe because we only handle GET requests.  (Wouldn't be safe For
-   * PUT, POST, etc. because server *might* have received request.  How to
-   * tell that's not what really happened?) */
-
-  // retryHandler is static because we only need one.  No locking needed,
-  // as no harm if two threads create one, but be careful to put it in the
-  // right state before updating the variable.
-  private static MethodRetryHandler getRetryHandler() {
-    if (retryHandler == null) {
-      LockssMethodRetryHandler h = new LockssMethodRetryHandler();
-      h.setRequestSentRetryEnabled(true);
-      retryHandler = h;
-    }
-    return retryHandler;
+  /**
+   * Abort the request.
+   */
+  public void abort() {
+    method.abort();
   }
 
-  /** Subinterface adding missing method(s) to HttpMethod */
+  /** Common interface for our methods makes testing more convenient */
   interface LockssGetMethod extends HttpMethod {
-    int getResponseContentLength();
+    long getResponseContentLength();
   }
 
-  /** Subclass used to access useful protected members of GetMethod (which
-   * all seems like they should be public) */
+  /** Same as GET method
+   */
   static class LockssGetMethodImpl
       extends GetMethod implements LockssGetMethod {
 
     public LockssGetMethodImpl(String url) {
       super(url);
       // Establish our retry handler
-      setMethodRetryHandler(getRetryHandler());
-    }
-
-    public int getResponseContentLength() {
-      return super.getResponseContentLength();
+//       setMethodRetryHandler(getRetryHandler());
     }
   }
 
-  /** Subclass used to access useful protected members of GetMethod (which
-   * all seems like they should be public) */
+  /** Extends GET method to not add any default request headers
+   */
   static class LockssProxyGetMethodImpl extends LockssGetMethodImpl {
 
     public LockssProxyGetMethodImpl(String url) {
@@ -550,52 +375,6 @@ public class HttpClientUrlConnection extends BaseLockssUrlConnection {
 	throws IOException, HttpException {
       // Suppress this - don't want any automatic header processing when
       // acting as a proxy.
-    }
-  }
-
-  /** Derived from DefaultMethodRetryHandler, but suppresses retries for
-   * certain exceptions */
-  static class LockssMethodRetryHandler implements MethodRetryHandler {
-    private int retryCount;
-    private boolean requestSentRetryEnabled;
-    
-    public LockssMethodRetryHandler() {
-      this.retryCount = 3;
-      this.requestSentRetryEnabled = false;
-    }
-    
-    public boolean retryMethod(HttpMethod method,
-			       HttpConnection connection,
-			       HttpRecoverableException recoverableException,
-			       int executionCount,
-			       boolean requestSent) {
-
-      String msg = recoverableException.getMessage();
-      if (log.isDebug3()) {
-	log.debug3("retry " +executionCount + "/" + retryCount +
-		   (requestSent ? "S" : ""),
-		   recoverableException);
-      }
-      // Check if it's a data (socket) timeout
-      if (msg != null &&
-	  msg.startsWith("java.net.SocketTimeoutException")) {
-	// These take a long time to happen, so retrying is probably not a
-	// good idea.  Retrying may also result in a different error;
-	// better to tell the user about this one.  (Wouldn't it be nice if
-	// HttpClient passed the actual exception along, instead of just
-	// its message?)
-	return false;
-      }
-      return ((!requestSent || requestSentRetryEnabled) &&
-	      (executionCount <= retryCount));
-    }
-
-    public void setRequestSentRetryEnabled(boolean requestSentRetryEnabled) {
-      this.requestSentRetryEnabled = requestSentRetryEnabled;
-    }
-
-    public void setRetryCount(int retryCount) {
-      this.retryCount = retryCount;
     }
   }
 

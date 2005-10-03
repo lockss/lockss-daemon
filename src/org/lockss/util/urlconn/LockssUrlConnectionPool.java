@@ -1,5 +1,5 @@
 /*
- * $Id: LockssUrlConnectionPool.java,v 1.2 2004-02-27 00:24:47 tlipkis Exp $
+ * $Id: LockssUrlConnectionPool.java,v 1.3 2005-10-03 06:03:49 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -34,6 +34,7 @@ import java.io.*;
 import java.util.*;
 import org.lockss.util.*;
 import org.apache.commons.httpclient.*;
+import org.apache.commons.httpclient.params.*;
 
 /** Encapsulates connection sharing object(s) used by implementations of
  * LockssUrlConnection.  Clients wishing to reuse connections should create
@@ -48,12 +49,14 @@ public class LockssUrlConnectionPool {
   private HttpClient httpClient;
   private int connectTimeout = -1;
   private int dataTimeout = -1;
-  private HttpConnectionManager hcConnManager;
+  private HttpConnectionManager hcConnManager =
+    new SimpleHttpConnectionManager();
+
 
   /** Return (creating if necessary) an HttpClient */
   public HttpClient getHttpClient() {
     if (httpClient == null) {
-      setupNewHttpClient();
+      httpClient = setupNewHttpClient();
     }
     return httpClient;
   }
@@ -61,8 +64,10 @@ public class LockssUrlConnectionPool {
   public void setMultiThreaded(int maxConn, int maxPerHost) {
     MultiThreadedHttpConnectionManager cm =
       new MultiThreadedHttpConnectionManager();
-    cm.setMaxTotalConnections(maxConn);
-    cm.setMaxConnectionsPerHost(maxPerHost);
+    HttpConnectionManagerParams params = cm.getParams();
+    params.setMaxTotalConnections(maxConn);
+    params.setDefaultMaxConnectionsPerHost(maxPerHost);
+    setTimeouts(params);
     hcConnManager = cm;
     if (httpClient != null) {
       httpClient.setHttpConnectionManager(cm);
@@ -70,9 +75,11 @@ public class LockssUrlConnectionPool {
   }
 
   public void setSingleThreaded() {
-    hcConnManager = new SimpleHttpConnectionManager();
+    HttpConnectionManager cm = new SimpleHttpConnectionManager();
+    setTimeouts(cm);
+    hcConnManager = cm;
     if (httpClient != null) {
-      httpClient.setHttpConnectionManager(hcConnManager);
+      httpClient.setHttpConnectionManager(cm);
     }
   }
 
@@ -80,30 +87,38 @@ public class LockssUrlConnectionPool {
    * open. */
   public void setConnectTimeout(long connectTimeout) {
     this.connectTimeout = shortenToInt(connectTimeout);
-    if (httpClient != null) {
-      httpClient.setConnectionTimeout(this.connectTimeout);
-    }
+    hcConnManager.getParams().setConnectionTimeout(this.connectTimeout);
   }
 
   /** Set the maximum time to wait for data to be returned by the server. */
   public void setDataTimeout(long dataTimeout) {
     this.dataTimeout = shortenToInt(dataTimeout);
-    if (httpClient != null) {
-      httpClient.setTimeout(this.dataTimeout);
+    hcConnManager.getParams().setSoTimeout(this.dataTimeout);
+  }
+
+  private HttpClient setupNewHttpClient() {
+    HttpClient client = newHttpClient();
+    client.setHttpConnectionManager(hcConnManager);
+    setTimeouts(hcConnManager);
+    return client;
+  }
+
+  private void setTimeouts(HttpConnectionManager cm) {
+    setTimeouts(cm.getParams());
+  }
+
+  private void setTimeouts(HttpConnectionManagerParams params) {
+    if (connectTimeout != -1) {
+      params.setConnectionTimeout(connectTimeout);
+    }
+    if (dataTimeout != -1) {
+      params.setSoTimeout(dataTimeout);
     }
   }
 
-  private void setupNewHttpClient() {
-    httpClient = newHttpClient();
-    if (connectTimeout != -1) {
-      httpClient.setConnectionTimeout(connectTimeout);
-    }
-    if (dataTimeout != -1) {
-      httpClient.setTimeout(dataTimeout);
-    }
-    if (hcConnManager != null) {
-      httpClient.setHttpConnectionManager(hcConnManager);
-    }
+  /** For testing only */
+  HttpConnectionManagerParams getConnectionManagerParams() {
+    return hcConnManager.getParams();
   }
 
   protected HttpClient newHttpClient() {

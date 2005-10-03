@@ -1,5 +1,5 @@
 /*
- * $Id: MockLockssUrlConnection.java,v 1.5 2005-02-21 03:05:42 tlipkis Exp $
+ * $Id: MockLockssUrlConnection.java,v 1.6 2005-10-03 06:03:49 tlipkis Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
     throw new UnsupportedOperationException();
   }
 
-  public int getResponseContentLength() {
+  public long getResponseContentLength() {
     throw new UnsupportedOperationException();
   }
 
@@ -175,6 +175,8 @@ public class MockLockssUrlConnection extends BaseLockssUrlConnection {
   boolean released = false;
   public void release() {
     released = true;
+  }
+  public void abort() {
   }
 
 }
