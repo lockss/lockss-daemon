@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.43 2005-09-26 17:27:15 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.44 2005-10-03 17:36:38 thib_gc Exp $
  */
 
 /*
@@ -936,7 +936,7 @@ public class AuConfig extends LockssServlet {
       page.add(srvLink(myServletDescr(), "Back to Journal Configuration"));
       page.add("</center>");
     }
-    doLayoutFooter(page);
+    layoutFooter(page);
     page.write(resp.getWriter());
   }
 

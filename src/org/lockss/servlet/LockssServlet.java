@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.65 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.66 2005-10-03 17:36:38 thib_gc Exp $
  */
 
 /*
@@ -73,7 +73,6 @@ public abstract class LockssServlet extends HttpServlet
   public static final String JAVASCRIPT_RESOURCE =
     "org/lockss/htdocs/admin.js";
 
-  static final String BACKGROUND_COLOR = "#FFFFFF";
   protected static final String footAccessDenied =
     "Clicking on this link will result in an access denied error, unless your browser is configured to proxy through a LOCKSS cache, or your workstation is allowed access by the publisher.";
 
@@ -669,20 +668,22 @@ public abstract class LockssServlet extends HttpServlet
 
   /** Common page setup. */
   protected Page newPage() {
-    Page page = addBarePageHeading(new Page());
-    
-    page.addHeader("<style type=\"text/css\"><!--\n" +
-		   "sup {font-weight: normal; vertical-align: super}\n" +
-		   "A.colhead, A.colhead:link, A.colhead:visited { text-decoration: none ; font-weight: bold ; color: blue }\n" +
-		   "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
-		   "--> </STYLE>");
-    if (isFramed()) {
-      page.addHeader("<base target=\"_top\">");
+    // Compute heading
+    String heading = getHeading();
+    if (heading == null) {
+      heading = "Cache Administration";
     }
-    page.title(getPageTitle());
-
-    page.attribute("BGCOLOR", BACKGROUND_COLOR);
-    page.add(getHeader());
+    
+    // Create page and layout header
+    Page page = ServletUtil.newPage(getPageTitle(),
+                                    isFramed());
+    ServletUtil.layoutHeader(this,
+                             page,
+                             heading,
+                             isLargeLogo(),
+                             getMachineName(),
+                             getMachineName(clientAddr),
+                             getLockssApp().getStartDate(), new ArrayIterator(servletDescrs));
     return page;
   }
 
@@ -711,59 +712,6 @@ public abstract class LockssServlet extends HttpServlet
     } else {
       return "LOCKSS";
     }
-  }
-
-  // Common page header
-  protected Composite getHeader() {
-    String heading = getHeading();
-    if (heading == null) {
-      heading = "Cache Administration";
-    }
-
-    Composite comp = new Composite();
-    Table table = new Table(0, " cellspacing=2 cellpadding=0 width=\"100%\"");
-    comp.add(table);
-    String machineName = getMachineName();
-
-    table.newRow();
-    Image logo = isLargeLogo() ? ServletUtil.IMAGE_LOGO_LARGE : ServletUtil.IMAGE_LOGO_SMALL;
-    table.newCell("valign=top align=center width=\"20%\"");
-//     table.newCell("valign=top width=\"25%\"");
-//     table.newCell("valign=top align=center width=" +
-// 		  (logo.width() + IMAGE_TM.width() + 20));
-
-    table.add(new Link(Constants.LOCKSS_HOME_URL, logo));
-    table.add(ServletUtil.IMAGE_TM);
-//     table.newCell("valign=center align=center width=\"60%\"");
-    table.newCell("valign=top align=center width=\"60%\"");
-    table.add("<br>");
-    table.add("<font size=+2><b>");
-    table.add(heading);
-    table.add("</b></font>");
-
-    table.add("<br>");
-    Date startDate = getLockssApp().getStartDate();
-    String since =
-      StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
-    table.add(getMachineName() + " at " +
-	      ServletUtil.headerDf.format(new Date()) + ", up " + since);
-
-//     table.newCell("valign=center align=right width=\"25%\"");
-    table.newCell("valign=center align=center width=\"20%\"");
-    table.add(getNavTable());
-
-//     comp.add("<br><center><font size=+2><b>Cache Administration</b></font></center>");
-//     comp.add("<center><b>" + machineName + "</b></center>");
-//     comp.add("<br><center><font size=+1><b>"+heading+"</b></font></center>");
-
-//     Date startDate = getLockssApp().getStartDate();
-//     String since =
-//       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
-//     comp.add("<center>" + getMachineName() + " at " +
-// 	     headerDf.format(new Date()) + ", up " + since + "</center>");
-//     //       comp.add("<center>Running since " + headerDf.format(startDate) + "</center>");
-    comp.add("<br>");
-    return comp;
   }
 
   /** Return a button that invokes the javascript submit routine with the
@@ -953,7 +901,7 @@ public abstract class LockssServlet extends HttpServlet
     warning.add(" in a moment.");
     warning.add("</font></center><br>");
     page.add(warning);
-    doLayoutFooter(page);
+    layoutFooter(page);
     page.write(resp.getWriter());
   }
 
@@ -994,7 +942,7 @@ public abstract class LockssServlet extends HttpServlet
     return val;
   }
 
-  protected void doLayoutFooter(Page page) {
+  protected void layoutFooter(Page page) {
     if (footnotes == null || footNumber == 0) {
       return;
     }

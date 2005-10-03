@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.5 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.6 2005-10-03 17:36:38 thib_gc Exp $
  */
 
 /*
@@ -57,6 +57,8 @@ public class ServletUtil {
   /* private */static final Image IMAGE_TM =
     makeImage("tm.gif", 16, 16, 0);
 
+  static final String PAGE_BGCOLOR = "#FFFFFF";
+
   private static final String FOOTER_ATTRIBUTES =
     "cellspacing=\"0\" cellpadding=\"0\" align=\"center\"";
 
@@ -69,18 +71,16 @@ public class ServletUtil {
 
   private static final String HEADER_HEADING_AFTER =
     "</b></font>";
-  
+
   private static final String HEADER_HEADING_BEFORE = 
     "<font size=\"+2\"><b>";
-  
-  private static final String HEADING_NULL = "Cache Administration";
-  
+
   private static final Image IMAGE_LOCKSS_RED =
     makeImage("lockss-type-red.gif", 595, 31, 0);
-
+  
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
-
+  
   private static final int MENU_BORDER = 0;
 
   private static final String MENU_ITEM_AFTER =
@@ -91,6 +91,11 @@ public class ServletUtil {
 
   private static final String MENU_ROW_ATTRIBUTES =
     "valign=\"top\"";
+
+  private static final String NAVTABLE_ATTRIBUTES =
+    "cellspacing=\"2\" cellpadding=\"0\"";
+
+  private static final int NAVTABLE_BORDER = 0;
   
   private static final String NOTES_BEGIN =
     "<p><b>Notes:</b>";
@@ -129,15 +134,13 @@ public class ServletUtil {
     page.add(comp);
   }
   
-  public static void layoutHeader(Page page,
+  public static void layoutHeader(LockssServlet servlet,
+                                  Page page,
                                   String heading,
                                   boolean isLargeLogo,
                                   String machineName,
-                                  Date startDate) {
-    if (heading == null) {
-      heading = HEADING_NULL;
-    }
-
+                                  String machineNameClientAddr,
+                                  Date startDate, Iterator servletDescrIterator) {
     Composite comp = new Composite();
     Table table = new Table(HEADER_BORDER, HEADER_ATTRIBUTES);
     Image logo = isLargeLogo ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
@@ -153,13 +156,13 @@ public class ServletUtil {
     table.add(heading);
     table.add(HEADER_HEADING_AFTER);
     table.add("<br>");
-    // Date startDate = getLockssApp().getStartDate();
+
     String since =
       StringUtil.timeIntervalToString(TimeBase.msSince(startDate.getTime()));
     table.add(machineName + " at " + headerDf.format(new Date()) + ", up " + since);
 
     table.newCell("valign=\"center\" align=\"center\" width=\"20%\"");
-    //table.add(getNavTable());
+    layoutNavTable(servlet, table, servletDescrIterator, machineNameClientAddr);
     comp.add(table);
     comp.add("<br>");
     page.add(comp);
@@ -203,6 +206,20 @@ public class ServletUtil {
     return img;
   }
   
+  public static Page newPage(String pageTitle,
+                             boolean isFramed) {
+    Page page = new Page();
+    layoutPageHeaders(page);
+    
+    if (isFramed) {
+      page.addHeader("<base target=\"_top\">");
+    }
+    page.title(pageTitle);
+
+    page.attribute("bgcolor", PAGE_BGCOLOR);
+    return page;
+  }
+  
   private static void layoutFootnote(Composite comp,
                                      String footnote,
                                      int nth) {
@@ -210,6 +227,60 @@ public class ServletUtil {
     comp.add("<a name=\"foottag" + nth + "\">");
     comp.add(footnote);
     comp.add("</a>");
+  }
+  
+  // Build servlet navigation table
+  private static void layoutNavTable(LockssServlet servlet,
+                                     Table outerTable,
+                                     Iterator servletDescrIterator,
+                                     String machineNameClientAddr) {
+    final String NAVTABLE_CELL_WIDTH = "width=\"15\"";
+    
+    Table navTable = new Table(NAVTABLE_BORDER, NAVTABLE_ATTRIBUTES);
+    boolean clientTitle = false;
+
+    while (servletDescrIterator.hasNext()) {
+      ServletDescr d = (ServletDescr)servletDescrIterator.next();
+      if (servlet.isServletInNav(d)) {
+        navTable.newRow();
+        if (d.isPerClient()) {
+          if (!clientTitle) {
+            // Insert client name before first per-client servlet
+            navTable.newCell(NAVTABLE_CELL_WIDTH);
+            navTable.newCell("colspan=\"2\"");
+            navTable.add("<b>" + machineNameClientAddr + "</b>");
+            navTable.newRow();
+            clientTitle = true;
+          }
+          navTable.newCell(NAVTABLE_CELL_WIDTH);
+          navTable.newCell(NAVTABLE_CELL_WIDTH);
+          navTable.newCell();
+        } else {
+          navTable.newCell("colspan=\"3\"");
+        }
+        if (false /*isThisServlet(d)*/) {
+          navTable.add("<font size=\"-1\" color=\"green\">");
+        } else {
+          navTable.add("<font size=\"-1\">");
+        }
+        navTable.add(servlet.conditionalSrvLink(d, d.heading, servlet.isServletLinkInNav(d)));
+        navTable.add("</font>");
+      }
+    }
+    navTable.add("</font>");
+    outerTable.add(navTable);
+  }
+  
+  private static void layoutPageHeaders(Page page) {
+    page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
+    page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
+    page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
+    page.addHeader("<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />");
+    page.addHeader("<style type=\"text/css\"><!--\n" +
+        "sup {font-weight: normal; vertical-align: super}\n" +
+        "A.colhead, A.colhead:link, A.colhead:visited { text-decoration: none ; font-weight: bold ; color: blue }\n" +
+        "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
+        "--> </style>");
   }
   
 }

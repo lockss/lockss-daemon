@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.12 2005-09-26 17:27:15 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.13 2005-10-03 17:36:38 thib_gc Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public class ProxyConfig extends LockssServlet {
 
     addFmtElement(frm, "Combined PAC file", "pacform", urlform);
     page.add(frm);
-    doLayoutFooter(page);
+    layoutFooter(page);
     page.write(resp.getWriter());
   }
 
@@ -351,7 +351,7 @@ public class ProxyConfig extends LockssServlet {
 
     frm.add(tbl);
     page.add(frm);
-    doLayoutFooter(page);
+    layoutFooter(page);
     page.write(resp.getWriter());
   }
 
