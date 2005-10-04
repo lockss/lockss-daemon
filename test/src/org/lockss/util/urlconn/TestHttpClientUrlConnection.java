@@ -1,5 +1,5 @@
 /*
- * $Id: TestHttpClientUrlConnection.java,v 1.13 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: TestHttpClientUrlConnection.java,v 1.14 2005-10-04 22:58:06 tlipkis Exp $
  */
 
 /*
@@ -403,6 +403,7 @@ public class TestHttpClientUrlConnection extends LockssTestCase {
     void setResponseContentLength(int l) {
       contentLength = l;
     }
+    /** @deprecated */
     public HostConfiguration getHostConfiguration() {
       return new HostConfiguration();
     }

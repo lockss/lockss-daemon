@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.28 2005-08-02 22:54:06 troberts Exp $
+ * $Id: MockUrlCacher.java,v 1.29 2005-10-04 22:58:06 tlipkis Exp $
  */
 
 /*
@@ -75,6 +75,7 @@ public class MockUrlCacher implements UrlCacher {
     return url;
   }
 
+  /** @deprecated */
   public CachedUrlSet getCachedUrlSet() {
     return cus;
   }

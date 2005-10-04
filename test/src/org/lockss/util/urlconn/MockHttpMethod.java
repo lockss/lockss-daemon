@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpMethod.java,v 1.3 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: MockHttpMethod.java,v 1.4 2005-10-04 22:58:06 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -49,6 +49,7 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
+  /** @deprecated */
   public HostConfiguration getHostConfiguration() {
     throw new UnsupportedOperationException();
   }
@@ -193,6 +194,7 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
+  /** @deprecated */
   public void recycle() {
     throw new UnsupportedOperationException();
   }

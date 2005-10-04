@@ -1,5 +1,5 @@
 /*
- * $Id: NullPlugin.java,v 1.71 2005-08-11 06:33:18 tlipkis Exp $
+ * $Id: NullPlugin.java,v 1.72 2005-10-04 22:58:06 tlipkis Exp $
  */
 
 /*
@@ -187,6 +187,7 @@ public class NullPlugin {
       return null;
     }
 
+    /** @deprecated */
     public org.lockss.plugin.CachedUrlSet getCachedUrlSet() {
       return null;
     }
