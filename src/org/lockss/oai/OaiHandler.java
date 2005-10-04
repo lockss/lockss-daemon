@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.7 2005-07-25 19:00:43 troberts Exp $
+ * $Id: OaiHandler.java,v 1.8 2005-10-04 22:55:48 tlipkis Exp $
  */
 
 /*
@@ -43,9 +43,6 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Element;
-
-import org.apache.xpath.XPathAPI;
-import org.apache.xpath.objects.XObject;
 
 import javax.xml.transform.TransformerException;
 import javax.xml.parsers.ParserConfigurationException;
