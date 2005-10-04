@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.72 2005-10-02 23:13:02 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.73 2005-10-04 05:11:09 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,13 @@ public class LockssTestCase extends TestCase {
     if (timeout != null) {
       TIMEOUT_SHOULDNT = timeout.intValue();
     }
+  }
+
+  /**
+   * Return true if should skip tests that rely on a working network
+   */
+  public boolean isSkipNetworkTests() {
+    return Boolean.getBoolean("org.lockss.test.skipNetworkTests");
   }
 
   /**
