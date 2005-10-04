@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.2 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.3 2005-10-04 05:10:45 tlipkis Exp $
  */
 
 /*
@@ -48,8 +48,11 @@ public class FuncLockssHttpClient extends LockssTestCase {
   static Logger log = Logger.getLogger("FuncLockssHttpClient");
 
   static String URL_BAD_PROTOCOL = "noproto://foo.bar/";
-  static String URL_NO_DOMAIN = "http://no.such.domain/";
-  static String URL_CONN_TIMEOUT = "http://documents.lockss.org:1234/";
+  static String URL_NO_DOMAIN = "http://no.such.domain.lockss.org/";
+  // This url must be one that results in no response from the host.  If
+  // there is any response (e.g.,"host not found", "no route to host",
+  // "connection refused") the test may fail
+  static String URL_CONN_TIMEOUT = "http://dev1.lockss.org:1234/";
 
   static String EOH = "\r\n\r\n";
 
@@ -62,7 +65,6 @@ public class FuncLockssHttpClient extends LockssTestCase {
     connectionPool = new LockssUrlConnectionPool();
     connectionPool.setConnectTimeout(10000);
     aborter = null;
-
   }
 
   public void tearDown() throws Exception {
@@ -88,6 +90,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
   }
 
   public void testDnsFail() throws Exception {
+    if (isSkipNetworkTests()) return;
     try {
       conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				    URL_NO_DOMAIN, connectionPool);
@@ -110,14 +113,23 @@ public class FuncLockssHttpClient extends LockssTestCase {
   }
 
   public void testConnectTimeout() throws Exception {
+    if (isSkipNetworkTests()) return;
     connectionPool.setConnectTimeout(1);
     try {
       conn = UrlUtil.openConnection(LockssUrlConnection.METHOD_GET,
 				    URL_CONN_TIMEOUT, connectionPool);
       aborter = abortIn(TIMEOUT_SHOULDNT, conn);
       conn.execute();
-      fail("Connect timeout should throw");
+      fail("Expected connect to " + URL_CONN_TIMEOUT +
+	   " to timeout, but got: " + conn.getResponseCode() + ": " +
+	   conn.getResponseMessage());
     } catch (HttpClientUrlConnection.ConnectionTimeoutException e) {
+      // expected
+    } catch (Exception e) {
+      log.debug2("Unexpected Connect exception", e);
+      fail("Expected connect to " + URL_CONN_TIMEOUT +
+	   " to timeout, but got: " + e);
+      throw e;
     }
   }
 
