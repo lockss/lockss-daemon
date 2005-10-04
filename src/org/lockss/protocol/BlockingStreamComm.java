@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.6 2005-10-02 23:12:12 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.7 2005-10-04 05:10:26 tlipkis Exp $
  */
 
 /*
@@ -128,10 +128,10 @@ public class BlockingStreamComm
   public static final String PARAM_TCP_NODELAY = PREFIX + "tcpNodelay";
   static final boolean DEFAULT_TCP_NODELAY = true;
 
-  /** If true, BlockingStreamComm.stopService() waits until worker threads
-   * have exited. */
+  /** Amount of time BlockingStreamComm.stopService() should wait for
+   * worker threads to exit.  Zero disables wait.  */
   public static final String PARAM_WAIT_EXIT = PREFIX + "waitExit";
-  static final boolean DEFAULT_WAIT_EXIT = true;
+  static final long DEFAULT_WAIT_EXIT = 2 * Constants.SECOND;
 
   static final String WDOG_PARAM_SCOMM = "SComm";
   static final long WDOG_DEFAULT_SCOMM = 1 * Constants.HOUR;
@@ -163,7 +163,7 @@ public class BlockingStreamComm
   private long paramChannelIdleTime = DEFAULT_CHANNEL_IDLE_TIME;
   private boolean paramIsBufferedSend = DEFAULT_IS_BUFFERED_SEND;
   private boolean paramIsTcpNodelay = DEFAULT_TCP_NODELAY;
-  private boolean paramIsWaitExit = DEFAULT_WAIT_EXIT;
+  private long paramWaitExit = DEFAULT_WAIT_EXIT;
   private long lastHungCheckTime = 0;
   private PooledExecutor pool;
 
@@ -243,8 +243,9 @@ public class BlockingStreamComm
       paramIsBufferedSend = config.getBoolean(PARAM_IS_BUFFERED_SEND,
 					      DEFAULT_IS_BUFFERED_SEND);
       paramIsTcpNodelay = config.getBoolean(PARAM_TCP_NODELAY,
-					      DEFAULT_TCP_NODELAY);
-      paramIsWaitExit = config.getBoolean(PARAM_WAIT_EXIT, DEFAULT_WAIT_EXIT);
+					    DEFAULT_TCP_NODELAY);
+      paramWaitExit = config.getTimeInterval(PARAM_WAIT_EXIT,
+					     DEFAULT_WAIT_EXIT);
 
       if (changedKeys.contains(PARAM_DATA_DIR)) {
 	String paramDataDir = config.get(PARAM_DATA_DIR, DEFAULT_DATA_DIR);
@@ -541,13 +542,17 @@ public class BlockingStreamComm
   // stop all threads and channels
   void stop() {
     running = false;
+    Deadline timeout = null;
     synchronized (threadLock) {
+      if (paramWaitExit > 0) {
+	timeout = Deadline.in(paramWaitExit);
+      }
       ListenThread lth = listenThread;
       if (lth != null) {
 	log.info("Stopping listen thread");
 	lth.stopListenThread();
-	if (paramIsWaitExit) {
-	  lth.waitExited();
+	if (timeout != null) {
+	  lth.waitExited(timeout);
 	}
 	listenThread = null;
       }
@@ -555,14 +560,14 @@ public class BlockingStreamComm
       if (rth != null) {
 	log.info("Stopping receive thread");
 	rth.stopRcvThread();
-	if (paramIsWaitExit) {
-	  rth.waitExited();
+	if (timeout != null) {
+	  rth.waitExited(timeout);
 	}
 	rcvThread = null;
       }
     }
-    stopChannels(channels);
-    stopChannels(rcvChannels);
+    stopChannels(channels, timeout);
+    stopChannels(rcvChannels, timeout);
     log.debug2("shutting down pool");
     if (pool != null) {
       pool.shutdownNow();
@@ -571,7 +576,7 @@ public class BlockingStreamComm
   }
 
   // stop all channels in channel map
-  void stopChannels(Map map) {
+  void stopChannels(Map map, Deadline timeout) {
     List lst;
     synchronized (channels) {
       // make copy while map is locked
@@ -588,10 +593,10 @@ public class BlockingStreamComm
     // for.  It would take extra bookkeeping to handle those and they don't
     // seem to cause nearly as much trouble.
 
-    if (paramIsWaitExit) {
+    if (timeout != null) {
       for (Iterator iter = lst.iterator(); iter.hasNext(); ) {
 	BlockingPeerChannel chan = (BlockingPeerChannel)iter.next();
-	chan.waitThreadsExited();
+	chan.waitThreadsExited(timeout);
       }
     }
   }

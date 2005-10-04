@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.9 2005-10-02 23:12:12 tlipkis Exp $
+ * $Id: BlockingPeerChannel.java,v 1.10 2005-10-04 05:10:26 tlipkis Exp $
  */
 
 /*
@@ -361,12 +361,12 @@ class BlockingPeerChannel implements PeerChannel {
 
   /** Wait until all threads we started have exited.  Used by
    * BlockingStreamComm.stopService() */
-  void waitThreadsExited() {
+  void waitThreadsExited(Deadline timeout) {
     if (wtConnecter != null) {
-      wtConnecter.waitExited();
+      wtConnecter.waitExited(timeout);
     }
-    wtReader.waitExited();
-    wtWriter.waitExited();
+    wtReader.waitExited(timeout);
+    wtWriter.waitExited(timeout);
   }
 
   /** Called periodically by parent stream comm to check for hung sender

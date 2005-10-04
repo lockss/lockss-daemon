@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.11 2005-10-02 23:12:12 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.12 2005-10-04 05:10:26 tlipkis Exp $
  */
 
 /*
@@ -139,15 +139,26 @@ public class TestBlockingStreamComm extends LockssTestCase {
   }
 
   public void tearDown() throws Exception {
+    TimeBase.setReal();
     for (int comm = 0; comm < MAX_COMMS; comm++) {
-      stopComm(comm);
+      Interrupter intr = null;
+      try {
+	intr = interruptMeIn(Math.max(BlockingStreamComm.DEFAULT_WAIT_EXIT + 2,
+				      TIMEOUT_SHOULDNT));
+	stopComm(comm);
+	Thread.interrupted();		// clear interrupt flag
+	if (intr.did()) {
+	  log.warning("Timeout waiting for comm " + comm + " to exit");
+	}
+      } finally {
+	if (intr != null) intr.cancel();
+      }
     }
     if (idmgr != null) {
       idmgr.stopService();
       idmgr = null;
     }
     super.tearDown();
-    TimeBase.setReal();
   }
 
   void stopComm(int ix) {
