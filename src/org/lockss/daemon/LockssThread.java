@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.17 2005-09-28 07:26:53 tlipkis Exp $
+ * $Id: LockssThread.java,v 1.18 2005-10-04 05:09:32 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -132,10 +132,12 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
    * interrupted.
    */
   public boolean waitExited(Deadline timeout) {
+    if (isInterrupted()) return false;
     try {
       if (log.isDebug3()) log.debug3("Waiting for " + getName() + " to exit");
       return exitedSem.waitFull(timeout);
     } catch (InterruptedException e) {
+      interrupt();			// maintain interrupted status
     }
     return exitedSem.isFull();
   }

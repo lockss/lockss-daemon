@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRunnable.java,v 1.9 2005-09-28 07:26:53 tlipkis Exp $
+ * $Id: LockssRunnable.java,v 1.10 2005-10-04 05:09:32 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -153,10 +153,12 @@ public abstract class LockssRunnable  implements LockssWatchdog, Runnable {
    * interrupted.
    */
   public boolean waitExited(Deadline timeout) {
+    if (Thread.currentThread().isInterrupted()) return false;
     try {
       if (log.isDebug3()) log.debug3("Waiting for " + getName() + " to exit");
       return exitedSem.waitFull(timeout);
     } catch (InterruptedException e) {
+      Thread.currentThread().interrupt(); // maintain interrupted status
     }
     return exitedSem.isFull();
   }
