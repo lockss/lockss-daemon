@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseOaiMetadataHandler.java,v 1.5 2005-01-26 01:09:50 tlipkis Exp $
+ * $Id: TestBaseOaiMetadataHandler.java,v 1.6 2005-10-04 22:57:17 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,6 @@ import org.lockss.test.*;
 import org.lockss.util.*;
 import org.lockss.util.XmlDomBuilder.XmlDomException;
 import org.w3c.dom.*;
-import org.apache.xpath.NodeSet;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.DOMImplementation;
 import javax.xml.parsers.DocumentBuilder;
@@ -125,7 +124,7 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	}
 
 
-	NodeSet nodeSet = new NodeSet();
+	MockNodeList nodes = new MockNodeList();
 	// create something like
 	/*
 	  <metadata>
@@ -160,7 +159,7 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 
 	    try {
 		Document tempDoc = builder.parse(new StringInputStream(xmlText));
-		nodeSet.addNode(tempDoc.getDocumentElement());
+		nodes.addNode(tempDoc.getDocumentElement());
 		logger.debug3(OaiHandler.displayXML(tempDoc.getDocumentElement()));
 	    } catch (SAXException saxe) {
 		logger.error("", saxe);
@@ -168,7 +167,7 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 		logger.error("", ioe);
 	    } 
 	}
-	return (NodeList) nodeSet;
+	return nodes;
     }
     
     public static void main(String[] argv) {
