@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.2 2005-10-04 22:57:36 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.protocol.*;
 import org.lockss.repository.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 
 public class FuncV3Voter extends LockssTestCase {
 
