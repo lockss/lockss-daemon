@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.200 2005-07-19 00:14:10 troberts Exp $
+ * $Id: NodeManagerImpl.java,v 1.201 2005-10-05 17:41:22 tlipkis Exp $
  */
 
 /*
@@ -719,10 +719,10 @@ public class NodeManagerImpl
         logger.debug2("lost repair content poll, state = unrepairable");
         // if repair poll, can't be repaired and we leave it our damaged table
         pollState.status = PollState.UNREPAIRABLE;
-        alertMgr.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
-                            .setAttribute(Alert.ATTR_TEXT,"Repair of " +
-                                          results.getCachedUrlSet().getUrl()
-                                          + " fails to resolve poll."));
+//         alertMgr.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
+//                             .setAttribute(Alert.ATTR_TEXT,"Repair of " +
+//                                           results.getCachedUrlSet().getUrl()
+//                                           + " fails to resolve poll."));
         updateReputations(results);
       } else {
         // otherwise, schedule repair (if SNCUS) or name poll
