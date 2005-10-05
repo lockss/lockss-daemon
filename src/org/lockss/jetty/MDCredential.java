@@ -1,5 +1,5 @@
 /*
- * $Id: MDCredential.java,v 1.2 2005-09-06 20:00:07 tlipkis Exp $
+ * $Id: MDCredential.java,v 1.3 2005-10-05 07:29:54 tlipkis Exp $
  */
 
 /*
@@ -73,6 +73,7 @@ public class MDCredential extends Credential {
    */
   private static MessageDigest getMessageDigest(String type)
       throws NoSuchAlgorithmException {
+    if (type == null) throw new NoSuchAlgorithmException("null algorithm");
     synchronized (mdMap) {
       MessageDigest md = (MessageDigest)mdMap.get(type);
       if (md == null) {
