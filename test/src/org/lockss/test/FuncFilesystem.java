@@ -1,5 +1,5 @@
 /*
- * $Id: FuncFilesystem.java,v 1.1 2005-07-18 07:54:23 tlipkis Exp $
+ * $Id: FuncFilesystem.java,v 1.2 2005-10-05 18:48:39 troberts Exp $
  */
 
 /*
@@ -66,10 +66,7 @@ public class FuncFilesystem extends LockssTestCase {
 	    assertMatchesRE("Too many open files", e.getMessage());
 	    closeStreams(lst);
 	    return;
-	  } catch (IOException e) {
-	    fail("Unexpected IOException on iteration " + iter);
-	    closeStreams(lst);
-	  }
+	  } 
 	}
     }
     fail("opened " + (nfiles * nstreams) + " streams without error");
