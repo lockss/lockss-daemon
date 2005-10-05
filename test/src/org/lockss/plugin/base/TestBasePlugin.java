@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.10 2005-10-05 06:05:26 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.11 2005-10-05 07:12:16 tlipkis Exp $
  */
 
 /*
@@ -111,8 +111,6 @@ public class TestBasePlugin extends LockssTestCase {
     assertNull(tc.getAttributes());
 
     tc = mbp.getTitleConfig(new String("Howl"));
-    log.info("tc: " + tc);
-    log.info("tc.getAttributes: " + tc.getAttributes());
     assertEquals("av111", tc.getAttributes().get("attr1"));
     assertEquals("av222", tc.getAttributes().get("attr2"));
   }
