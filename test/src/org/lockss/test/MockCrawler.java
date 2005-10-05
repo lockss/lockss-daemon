@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawler.java,v 1.10 2004-10-19 06:22:38 tlipkis Exp $
+ * $Id: MockCrawler.java,v 1.11 2005-10-05 18:37:27 troberts Exp $
  */
 
 /*
@@ -70,7 +70,6 @@ public class MockCrawler extends NullCrawler {
 
   public boolean doCrawl() {
     doCrawlCalled = true;
-    this.deadline = deadline;
     return crawlSuccessful;
   }
 
