@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.32 2005-02-02 09:42:23 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.33 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ class TaskRunner {
   // config params
   private int maxDrop = DEFAULT_DROP_TASK_MAX;
   private long minCleanupInterval = DEFAULT_MIN_CLEANUP_INTERVAL;
-  private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;;
+  private long statsUpdateInterval = DEFAULT_STATS_UPDATE_INTERVAL;
   private int sortScheme = DEFAULT_SORT_SCHEME;
 
   private FifoQueue notifyQueue = new FifoQueue();

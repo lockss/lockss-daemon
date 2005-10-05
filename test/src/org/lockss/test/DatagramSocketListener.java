@@ -1,5 +1,5 @@
 /*
- * $Id: DatagramSocketListener.java,v 1.9 2003-06-20 22:34:55 claire Exp $
+ * $Id: DatagramSocketListener.java,v 1.10 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import java.util.*;
 public class DatagramSocketListener implements Runnable{
   private static final int BEGINNING_PORT=12000;
   private int port;
-  private static final String host = "127.0.0.1";;
+  private static final String host = "127.0.0.1";
   private DatagramSocket socket = null;
   private DatagramPacket packet = null;
   private Vector packets;

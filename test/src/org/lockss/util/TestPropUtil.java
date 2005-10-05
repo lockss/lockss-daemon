@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropUtil.java,v 1.13 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: TestPropUtil.java,v 1.14 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestPropUtil extends LockssTestCase {
   static {
     p1.put("k1", "1");
     p1.put("k2", "two");
-  };
+  }
 
   private static Properties p2 = (Properties)p1.clone(); // p2 same as p1
   static {

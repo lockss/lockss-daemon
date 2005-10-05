@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.67 2005-10-03 17:52:34 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.68 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -224,7 +224,7 @@ public abstract class LockssServlet extends HttpServlet
 	servletToDescr.put(d.cls, d);
       }
     }
-  };
+  }
 
   private ServletDescr findServletDescr(Object o) {
     ServletDescr d = (ServletDescr)servletToDescr.get(o.getClass());

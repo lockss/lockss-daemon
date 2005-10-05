@@ -1,5 +1,5 @@
 /*
- * $Id: TestSortScheduler.java,v 1.6 2004-10-06 04:46:47 tlipkis Exp $
+ * $Id: TestSortScheduler.java,v 1.7 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -373,7 +373,7 @@ public class TestSortScheduler extends LockssTestCase {
       chunk.setTaskEnd();
     }
     return chunk;
-  };
+  }
 
   Schedule.BackgroundEvent bevent(BackgroundTask task, int start,
 				  Schedule.EventType event) {

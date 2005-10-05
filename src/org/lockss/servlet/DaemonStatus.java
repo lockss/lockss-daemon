@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.54 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: DaemonStatus.java,v 1.55 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -728,7 +728,7 @@ public class DaemonStatus extends LockssServlet {
 //     if (bigIntFmt instanceof DecimalFormat) {
 //       ((DecimalFormat)bigIntFmt).setDecimalSeparatorAlwaysShown(true);
 //     }
-  };
+  }
 
   // turn a value into a display string
   public static String convertDisplayString(Object val, int type) {

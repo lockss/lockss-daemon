@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetXpath.java,v 1.5 2005-06-04 18:59:57 tlipkis Exp $
+ * $Id: TitleSetXpath.java,v 1.6 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class TitleSetXpath extends BaseTitleSet {
   static {
     sharedContext.setFunctions(new ClassFunctions(RegexpUtil.XpathUtil.class,
 						  "RE"));
-  };
+  }
 
   private String xpath;
   private CompiledExpression expr;

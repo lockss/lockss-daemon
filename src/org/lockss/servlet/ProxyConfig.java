@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyConfig.java,v 1.13 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: ProxyConfig.java,v 1.14 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -239,7 +239,7 @@ public class ProxyConfig extends LockssServlet {
   }
 
   void generateHelpPage(String error) throws IOException {
-    Page page = newPage();;
+    Page page = newPage();
     resp.setContentType("text/html");
     //    table = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
     Form frm = new Form(srvURL(myServletDescr()));
@@ -300,7 +300,7 @@ public class ProxyConfig extends LockssServlet {
   }
 
   void generateEncapForm(String error) throws IOException {
-    Page page = newPage();;
+    Page page = newPage();
     resp.setContentType("text/html");
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");

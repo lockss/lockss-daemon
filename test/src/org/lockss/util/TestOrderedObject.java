@@ -1,5 +1,5 @@
 /*
- * $Id: TestOrderedObject.java,v 1.3 2005-10-05 18:35:53 troberts Exp $
+ * $Id: TestOrderedObject.java,v 1.4 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestOrderedObject extends LockssTestCase {
   public void testGets() {
     OrderedObject o1 = new OrderedObject("foo", 3);
     OrderedObject o2 = new OrderedObject(new Integer(123), 5);
-    OrderedObject o3 = new OrderedObject("a", new Integer(33));;
+    OrderedObject o3 = new OrderedObject("a", new Integer(33));
     assertEquals("foo", o1.getValue());
     assertEquals("foo", o1.toString());
     assertEquals(new Integer(3), o1.getOrder());
@@ -73,7 +73,7 @@ public class TestOrderedObject extends LockssTestCase {
   public void testSort() {
     OrderedObject o1 = new OrderedObject("foo", 3);
     OrderedObject o2 = new OrderedObject("bar", 5);
-    OrderedObject o3 = new OrderedObject("a", new Integer(33));;
+    OrderedObject o3 = new OrderedObject("a", new Integer(33));
     List exp = ListUtil.list(o1, o2, o3);
     List test = ListUtil.list(o3, o2, o1);
     Collections.sort(test);

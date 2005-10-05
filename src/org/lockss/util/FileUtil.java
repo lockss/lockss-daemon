@@ -1,5 +1,5 @@
 /*
- * $Id: FileUtil.java,v 1.5 2005-07-18 08:01:16 tlipkis Exp $
+ * $Id: FileUtil.java,v 1.6 2005-10-05 23:12:40 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -108,7 +108,7 @@ public class FileUtil {
       }
       index = path.indexOf("/", index+1);
       if (index < 0) break;
-    };
+    }
     return true;
   }
 

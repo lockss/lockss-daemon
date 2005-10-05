@@ -1,5 +1,5 @@
 /*
- * $Id: Logger.java,v 1.43 2005-08-23 22:01:16 tlipkis Exp $
+ * $Id: Logger.java,v 1.44 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public class Logger {
   // Use weak map so dead threads can get GCed
   private static int threadCtr = 0;
   private static Map threadIds = new ReferenceMap(ReferenceMap.WEAK,
-						  ReferenceMap.HARD);;
+						  ReferenceMap.HARD);
 
 
   int level;			// this log's level

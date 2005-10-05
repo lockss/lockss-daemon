@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.10 2004-10-01 09:27:19 tlipkis Exp $
+ * $Id: TestTaskRunner.java,v 1.11 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -786,7 +786,7 @@ public class TestTaskRunner extends LockssTestCase {
     }
 
     public Scheduler createScheduler() {
-      scheduler = new MyMockScheduler(results);;
+      scheduler = new MyMockScheduler(results);
       return scheduler;
     }
 

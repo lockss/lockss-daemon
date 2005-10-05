@@ -1,5 +1,5 @@
 /*
- * $Id: FuncClock.java,v 1.4 2005-10-05 18:37:12 troberts Exp $
+ * $Id: FuncClock.java,v 1.5 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class FuncClock extends LockssTestCase {
     long min = Long.MAX_VALUE;
     long next;
     while (true) {
-      while (now == (next = System.currentTimeMillis())) {;}
+      while (now == (next = System.currentTimeMillis())) {}
       long delta = next - now;
       if (delta < min) {
 	min = delta;

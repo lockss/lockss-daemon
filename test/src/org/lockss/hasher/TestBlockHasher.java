@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.1 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: TestBlockHasher.java,v 1.2 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -428,6 +428,6 @@ public class TestBlockHasher extends LockssTestCase {
     public List getEvents() {
       return events;
     }
-  };
+  }
 
 }

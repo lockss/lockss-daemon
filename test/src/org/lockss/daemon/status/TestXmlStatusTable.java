@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.7 2005-09-19 17:13:05 thib_gc Exp $
+ * $Id: TestXmlStatusTable.java,v 1.8 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestXmlStatusTable extends LockssTestCase {
     assertNotNull(file + " missing.", url);
     Reader rdr = new InputStreamReader(UrlUtil.openInputStream(url.toString()),
 				       Constants.DEFAULT_ENCODING);
-    String exp = StringUtil.fromReader(rdr);;
+    String exp = StringUtil.fromReader(rdr);
     assertEquals(exp, wrtr.toString());
 
   }

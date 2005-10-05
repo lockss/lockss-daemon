@@ -1,5 +1,5 @@
 /*
- * $Id: StaticContentPlugin.java,v 1.29 2005-08-11 06:35:09 tlipkis Exp $
+ * $Id: StaticContentPlugin.java,v 1.30 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class StaticContentPlugin extends BasePlugin implements PluginTestable {
     }
 
     public CachedUrl makeCachedUrl(String url) {
-      CachedUrl res = (CachedUrl)cuMap.get(url);;
+      CachedUrl res = (CachedUrl)cuMap.get(url);
       log.debug("makeCachedUrl(" + url + ") = " + res);
       return (CachedUrl)cuMap.get(url);
     }

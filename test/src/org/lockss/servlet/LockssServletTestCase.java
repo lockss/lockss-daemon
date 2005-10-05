@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServletTestCase.java,v 1.4 2005-01-19 04:18:39 tlipkis Exp $
+ * $Id: LockssServletTestCase.java,v 1.5 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class LockssServletTestCase extends LockssTestCase {
   /** Holds the ServletRunner after a call to initServletRunner() */
   protected LockssServletRunner sRunner;
   /** Holds the ServletUnitClient after a call to initServletRunner() */
-  protected ServletUnitClient sClient;;
+  protected ServletUnitClient sClient;
 
   protected MockLockssDaemon theDaemon;
 

@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDaemon.java,v 1.8 2004-09-27 22:39:02 smorabito Exp $
+ * $Id: TestLockssDaemon.java,v 1.9 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -227,7 +227,7 @@ public class TestLockssDaemon extends LockssTestCase {
       this.caller = caller;
       this.event = event;
       this.arg = arg;
-    };
+    }
     Event(Object caller, String event) {
       this(caller, event, null);
     }

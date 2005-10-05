@@ -1,5 +1,5 @@
 /*
- * $Id: MockLcapDatagramComm.java,v 1.5 2005-03-22 06:53:44 tlipkis Exp $
+ * $Id: MockLcapDatagramComm.java,v 1.6 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -363,9 +363,10 @@ public class MockLcapDatagramComm extends LcapDatagramComm {
    * @param handler MessageHandler to remove
    */
   public void unregisterMessageHandler(int protocol, MessageHandler handler) {
-    if (protocol < messageHandlers.size());
+    if (protocol < messageHandlers.size()) {
     messageHandlers.set(protocol, null);
 //      messageHandlers.remove(handler);
+    }
   }
 
 

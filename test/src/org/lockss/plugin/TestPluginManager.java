@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.61 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.62 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -568,7 +568,7 @@ public class TestPluginManager extends LockssTestCase {
 
   static class ThrowingMockPlugin extends MockPlugin {
     RuntimeException rtEx;
-    ArchivalUnit.ConfigurationException cfgEx;;
+    ArchivalUnit.ConfigurationException cfgEx;
 
     public void setRtEx(RuntimeException rtEx) {
       this.rtEx = rtEx;

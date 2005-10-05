@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssApp.java,v 1.2 2004-09-21 21:24:56 dshr Exp $
+ * $Id: TestLockssApp.java,v 1.3 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -132,7 +132,7 @@ public class TestLockssApp extends LockssTestCase {
       this.caller = caller;
       this.event = event;
       this.arg = arg;
-    };
+    }
     Event(Object caller, String event) {
       this(caller, event, null);
     }

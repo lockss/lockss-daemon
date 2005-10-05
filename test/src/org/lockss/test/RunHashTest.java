@@ -1,5 +1,5 @@
 /*
- * $Id: RunHashTest.java,v 1.4 2003-10-28 23:44:26 eaalto Exp $
+ * $Id: RunHashTest.java,v 1.5 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class RunHashTest {
   private void readContent(CachedUrl cu, byte bytes[]) {
     try {
       InputStream is = cu.openForHashing();
-      while (is.read(bytes) != -1) {;}
+      while (is.read(bytes) != -1) {}
     } catch (IOException e) {
       e.printStackTrace();
     }

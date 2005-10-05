@@ -1,5 +1,5 @@
 /*
-* $Id: PsmMachine.java,v 1.3 2005-03-01 03:50:48 tlipkis Exp $
+* $Id: PsmMachine.java,v 1.4 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class PsmMachine {
 
   private synchronized void buildStateMap() {
     if (stateMap == null) {
-      Map newmap = new HashMap();;
+      Map newmap = new HashMap();
       for (int ix = 0; ix < states.length; ix++) {
 	PsmState state = states[ix];
 	if (newmap.put(state.getName(), state) != null) {

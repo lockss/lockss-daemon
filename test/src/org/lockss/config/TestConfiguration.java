@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.6 2005-06-15 01:16:21 tlipkis Exp $
+ * $Id: TestConfiguration.java,v 1.7 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -280,14 +280,14 @@ public class TestConfiguration extends LockssTestCase {
     m2.put("prop.p3.a", "true");
     m2.put("prop.p3.b", "false");
     m2.put("otherprop.p3.b", "foo");
-  };
+  }
   private static HashMap m2a = new HashMap();
   static {
     m2a.put("p1", "12");
     m2a.put("p2", "foobar");
     m2a.put("p3.a", "true");
     m2a.put("p3.b", "false");
-  };
+  }
 
   private Map mapFromIter(Iterator iter, Configuration config) {
     Map map = new HashMap();

@@ -108,7 +108,7 @@ public class TestV3Serializer extends LockssTestCase {
       pollerSerializer.loadPollerUserData(id2);
       fail("Should have thrown");
     } catch (V3Serializer.PollSerializerException ex) {
-      ; // expected.
+      // expected.
     }
   }
   

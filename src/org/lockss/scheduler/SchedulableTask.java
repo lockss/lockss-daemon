@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.9 2004-10-01 09:27:19 tlipkis Exp $
+ * $Id: SchedulableTask.java,v 1.10 2005-10-05 23:12:41 troberts Exp $
  */
 
 /*
@@ -171,7 +171,7 @@ public class SchedulableTask {
   }
 
   void setNotified() {
-    hasBeenNotified = true;;
+    hasBeenNotified = true;
   }
 
   public boolean hasStarted() {
@@ -179,7 +179,7 @@ public class SchedulableTask {
   }
 
   void setStarted() {
-    hasStarted = true;;
+    hasStarted = true;
   }
 
   void setTaskRunner(TaskRunner runner) {

@@ -1,5 +1,5 @@
 /*
- * $Id: ViewContent.java,v 1.9 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: ViewContent.java,v 1.10 2005-10-05 23:12:40 troberts Exp $
  */
 
 /*
@@ -168,7 +168,7 @@ public class ViewContent extends LockssServlet {
 
   void displaySummary(boolean contentInOtherFrame) throws IOException {
     LockssRepository repo = getLockssDaemon().getLockssRepository(au);
-    Page page = newPage();;
+    Page page = newPage();
     resp.setContentType("text/html");
     Table tbl = new Table(0, "ALIGN=CENTER CELLSPACING=2 CELLPADDING=0");
     tbl.newRow();
@@ -265,7 +265,7 @@ public class ViewContent extends LockssServlet {
   }
 
   void displayError(String error) throws IOException {
-    Page page = newPage();;
+    Page page = newPage();
     Composite comp = new Composite();
     comp.add("<center><font color=red size=+1>");
     comp.add(error);
