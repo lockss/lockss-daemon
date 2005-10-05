@@ -126,6 +126,11 @@
       <property name="inactiveaus">
 	<property name="class" value="inactiveaus" />
       </property>
+      <property name="attrtitleset">
+	<property name="name" value="Cool or Red Titles " />
+	<property name="class" value="xpath" />
+	<property name="xpath" value="[attributes/color='red' or attributes/temp='cool']" />
+      </property>
       <property name="projmuse">
 	<property name="name" value="All Project Muse Titles" />
 	<property name="class" value="xpath" />
@@ -348,6 +353,8 @@
 	  <property name="key" value="oai_request_url" />
 	  <property name="value" value="http://scholar.lib.vt.edu/theses/OAI2/" />
 	</property>
+        <property name="attributes.color" value="red" />
+        <property name="attributes.temp" value="hot" />
       </property>
 
       <property name="VirginiaTechETD2004">
@@ -383,6 +390,7 @@
 	<property name="param.3">
 	  <property name="key" value="oai_request_url" />
 	  <property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
+        <property name="attributes.color" value="green" />
 	</property>
       </property>
 
@@ -402,6 +410,7 @@
 	  <property name="key" value="oai_request_url" />
 	  <property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
 	</property>
+        <property name="attributes.color" value="green" />
       </property>
 
       <property name="vanderbiltetd2001">
@@ -420,6 +429,7 @@
 	  <property name="key" value="oai_request_url" />
 	  <property name="value" value="http://etd.library.vanderbilt.edu/ETD-db/NDLTD-OAI/oai.pl" />
 	</property>
+        <property name="attributes.color" value="green" />
       </property>
 
       <property name="vanderbiltetd2002">
@@ -506,6 +516,7 @@
 	  <property name="key" value="year" />
 	  <property name="value" value="2005" />
 	</property>
+        <property name="attributes.temp" value="cool" />
       </property>
 
       <property name="SocialSecurity_Bulletin65">
@@ -520,6 +531,7 @@
 	  <property name="key" value="journal_id" />
 	  <property name="value" value="volume65" />
 	</property>
+        <property name="attributes.temp" value="cool" />
       </property>
 
       <property name="nist110">
@@ -534,6 +546,7 @@
 	  <property name="key" value="journal_id" />
 	  <property name="value" value="volume110" />
 	</property>
+        <property name="attributes.temp" value="warm" />
       </property>
 
       <property name="mto1">
@@ -552,6 +565,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="1" />
 	</property>
+        <property name="attributes.temp" value="barely at a simmer" />
       </property>
 
       <property name="mto2">
@@ -570,6 +584,7 @@
 	  <property name="key" value="volume" />
 	  <property name="value" value="2" />
 	</property>
+        <property name="attributes.color" value="red" />
       </property>
 
       <property name="mto3">
