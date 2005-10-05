@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.162 2005-10-04 05:09:15 tlipkis Exp $
+ $Id: build.xml,v 1.163 2005-10-05 06:02:22 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1685,6 +1685,7 @@ Test results in ${test.results}
 	   target="test-all"
 	   inheritAll="false">
        <property name="ant-contrib.loaded" value="${ant-contrib.loaded}" />
+       <property name="halt" value="${halt}" />
      </ant>
      <echo>Build was successful, deleting "${temp.build.dir}"</echo>
      <delete dir="${temp.build.dir}" quiet="true"/>
