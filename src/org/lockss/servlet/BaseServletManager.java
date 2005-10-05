@@ -1,5 +1,5 @@
 /*
- * $Id: BaseServletManager.java,v 1.12 2005-08-30 18:23:39 tlipkis Exp $
+ * $Id: BaseServletManager.java,v 1.13 2005-10-05 07:30:13 tlipkis Exp $
  */
 
 /*
@@ -74,14 +74,13 @@ public abstract class BaseServletManager
   public static final String PARAM_LOGDIR =
     Configuration.PREFIX +  "platform.logdirectory";
 
+  public static final String PARAM_USERS = PREFIX + "users";
+  public static final String USER_PARAM_USER = "user";
+  public static final String USER_PARAM_PWD = "password";
+  public static final String USER_PARAM_ROLES = "roles";
+
   public static final boolean DEFAULT_START = true;
   public static final int DEFAULT_PORT = 8081;
-
-  public static final String PARAM_PLATFORM_USERNAME =
-    Configuration.PLATFORM + "ui.username";
-  public static final String PARAM_PLATFORM_PASSWORD =
-    Configuration.PLATFORM + "ui.password";
-
 
   private static Logger log = Logger.getLogger("ServletMgr");
 
@@ -172,6 +171,27 @@ public abstract class BaseServletManager
     if (!StringUtil.isNullString(platUser) &&
 	!StringUtil.isNullString(platPass)) {
       realm.put(platUser, platPass);
+    }
+
+    // Install globally configured users
+    // XXX disallow this on the platform
+    Configuration users =
+      ConfigManager.getCurrentConfig().getConfigTree(PARAM_USERS);
+    for (Iterator iter = users.nodeIterator(); iter.hasNext(); ) {
+      Configuration oneUser = users.getConfigTree((String)iter.next());
+      String user = oneUser.get(USER_PARAM_USER);
+      String pwd = oneUser.get(USER_PARAM_PWD);
+      String roles = oneUser.get(USER_PARAM_ROLES);
+      if (!StringUtil.isNullString(user) &&
+	  !StringUtil.isNullString(pwd)) {
+	realm.put(user, pwd);
+	if (!StringUtil.isNullString(roles)) {
+	  StringTokenizer tok = new StringTokenizer(roles,", ");
+	  while (tok.hasMoreTokens()) {
+	    realm.addUserToRole(user,tok.nextToken());
+	  }
+	}
+      }
     }
   }
 
