@@ -1,5 +1,5 @@
 /*
- * $Id: TestOrderedObject.java,v 1.2 2004-05-26 22:57:38 tlipkis Exp $
+ * $Id: TestOrderedObject.java,v 1.3 2005-10-05 18:35:53 troberts Exp $
  */
 
 /*
@@ -86,7 +86,7 @@ public class TestOrderedObject extends LockssTestCase {
   public void testIll() {
     OrderedObject o1 = new OrderedObject("foo", 3);
     OrderedObject o2 = new OrderedObject("bar", 5);
-    OrderedObject o3 = new OrderedObject("a", "nonint");;
+    OrderedObject o3 = new OrderedObject("a", "nonint");
     List test = ListUtil.list(o3, o2, o1);
     try {
       Collections.sort(test);

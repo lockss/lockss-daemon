@@ -1,5 +1,5 @@
 /*
- * $Id: HashSvcSchedImpl.java,v 1.19 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: HashSvcSchedImpl.java,v 1.20 2005-10-05 18:35:52 troberts Exp $
  */
 
 /*
@@ -269,7 +269,7 @@ public class HashSvcSchedImpl
 	      }
 	    },
 	    cookie);
-      this.urlset = urlsetHasher.getCachedUrlSet();;
+      this.urlset = urlsetHasher.getCachedUrlSet();
       this.hashCallback = hashCallback;
       this.urlsetHasher = urlsetHasher;
       typeString = urlsetHasher.typeString();

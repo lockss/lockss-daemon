@@ -1,5 +1,5 @@
 /*
- * $Id: TestAcsArchivalUnit.java,v 1.2 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: TestAcsArchivalUnit.java,v 1.3 2005-10-05 18:35:52 troberts Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class TestAcsArchivalUnit
     URL a_url = new URL(ARTICLE_ROOT);
     URL base = new URL(ROOT_URL);
     try {
-      makeAu(base, a_url, null, VOL_ID, VOL_YEAR); ;
+      makeAu(base, a_url, null, VOL_ID, VOL_YEAR);
       fail("Should have thrown ArchivalUnit.ConfigurationException");
     }
     catch (ArchivalUnit.ConfigurationException e) {}

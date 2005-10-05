@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.143 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: PluginManager.java,v 1.144 2005-10-05 18:35:52 troberts Exp $
  */
 
 /*
@@ -1902,7 +1902,7 @@ public class PluginManager
     private ClassLoader classLoader;
     private String cuUrl;
     private String jarUrl;
-    private boolean isOnLoadablePath = false;;
+    private boolean isOnLoadablePath = false;
 
     public PluginInfo(Plugin plugin, ClassLoader classLoader, String jarUrl) {
       this.plugin = plugin;

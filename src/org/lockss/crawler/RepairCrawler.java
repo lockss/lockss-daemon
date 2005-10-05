@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.45 2005-08-03 23:55:43 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.46 2005-10-05 18:35:52 troberts Exp $
  */
 
 /*
@@ -330,7 +330,7 @@ public class RepairCrawler extends CrawlerImpl {
     boolean repaired = false;
     for (Iterator it = repairers.iterator();
 	 it.hasNext() && (iz < numCacheRetries); ) {
-      PeerIdentity cacheId = (PeerIdentity)it.next();;
+      PeerIdentity cacheId = (PeerIdentity)it.next();
       logger.debug3("Trying repair "+iz+" of "+numCacheRetries
 		    +" from "+cacheId);
       if (idm.isLocalIdentity(cacheId)) {
