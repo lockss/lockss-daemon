@@ -1,5 +1,5 @@
 /*
- * $Id: IcpUtil.java,v 1.2 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.3 2005-10-05 19:42:01 thib_gc Exp $
  */
 
 /*
@@ -32,16 +32,66 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.proxy.icp;
 
-import java.io.UnsupportedEncodingException;
-
-import org.lockss.util.Constants;
-
 /**
  * <p>Provides utility methods to deal with ICP.</p>
  * @author Thib Guicherd-Callin
  */
 public class IcpUtil {
 
+  /**
+   * <p>The byte offset of the opcode field.</p>
+   */
+  public static final int OFFSET_BYTE_OPCODE = 0;
+
+  /**
+   * <p>The byte offset of the version field.</p>
+   */
+  public static final int OFFSET_BYTE_VERSION = 1;
+  
+  /**
+   * <p>The byte offset of the options field.</p>
+   */
+  public static final int OFFSET_INT_OPTIONS = 8;
+  
+  /**
+   * <p>The byte offset of the option data field.</p>
+   */
+  public static final int OFFSET_INT_OPTIONDATA = 12;
+
+  /**
+   * <p>The byte offset of the requester field.</p>
+   * <p>The requester field only makes sense if the ICP message is a
+   * query.</p>
+   */
+  public static final int OFFSET_INT_REQUESTER = 20;
+
+  /**
+   * <p>The byte offset of the request number field.</p>
+   */
+  public static final int OFFSET_INT_REQUESTNUMBER = 4;
+  
+  /**
+   * <p>The byte offset of the sender field.</p>
+   */
+  public static final int OFFSET_INT_SENDER = 16;
+  
+  /**
+   * <p>The byte offset of the payload field, when the ICP message is
+   * not a query.</p>
+   */
+  public static final int OFFSET_PAYLOAD_NONQUERY = 20;
+  
+  /**
+   * <p>The byte offset of the payload field, when the ICP message is
+   * a query.</p>
+   */
+  public static final int OFFSET_PAYLOAD_QUERY = 24;
+  
+  /**
+   * <p>The byte offset of the length field.</p>
+   */
+  public static final int OFFSET_SHORT_LENGTH = 2;
+  
   /**
    * <p>An array of valid RFC2186 opcode, for fast lookup.</p>
    * @see #isValidOpcode
@@ -80,24 +130,17 @@ public class IcpUtil {
    * @return The number of bytes the ICP message represents.
    */
   public static short computeLength(IcpMessage message) {
-    try {
-      int result =
-        21 // 20-byte header + null terminator
-        + message.getPayloadUrl().getBytes(Constants.URL_ENCODING).length; // URL
-      if (message.isQuery()) {
-        result += 4; // requester field
-      }
-      if (message.getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
-        byte[] obj = message.getPayloadObject();
-        if (obj != null) {
-          result += obj.length;
-        }
-      }
-      return (short)result;
+    int result =
+      21 // 20-byte header + null terminator
+      + stringLength(message.getPayloadUrl()); // URL
+    if (message.isQuery()) {
+      result += 4; // requester field
     }
-    catch (UnsupportedEncodingException exc) {
-      return -1; // should never happen; US-ASCII guaranteed
+    if (message.getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
+      byte[] obj = message.getPayloadObject();
+      result += (obj.length + 2);
     }
+    return (short)result;
   }
   
   /**

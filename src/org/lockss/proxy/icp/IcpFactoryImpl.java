@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.8 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.9 2005-10-05 19:42:01 thib_gc Exp $
  */
 
 /*
@@ -35,11 +35,8 @@ package org.lockss.proxy.icp;
 import java.io.*;
 import java.net.*;
 import java.nio.ByteBuffer;
-import java.util.Arrays;
 
-import org.lockss.util.ByteArray;
-import org.lockss.util.Constants;
-import org.lockss.util.IPAddr;
+import org.lockss.util.*;
 
 /**
  * <p>An implementation of the {@link IcpFactory} interface, which
@@ -353,17 +350,6 @@ public class IcpFactoryImpl implements IcpFactory {
    */
   private static class IcpDecoderImpl implements IcpDecoder {
   
-    private static final int OFFSET_PAYLOAD_QUERY = 24;
-    private static final int OFFSET_PAYLOAD_NONQUERY = 20;
-    private static final int OFFSET_INT_REQUESTER = 20;
-    private static final int OFFSET_INT_SENDER = 16;
-    private static final int OFFSET_INT_OPTIONSDATA = 12;
-    private static final int OFFSET_INT_OPTIONS = 8;
-    private static final int OFFSET_INT_REQUESTNUMBER = 4;
-    private static final int OFFSET_SHORT_LENGTH = 2;
-    private static final int OFFSET_BYTE_VERSION = 1;
-    private static final int OFFSET_BYTE_OPCODE = 0;
-
     public IcpMessage parseIcp(DatagramPacket packet)
         throws IcpProtocolException {
 
@@ -382,81 +368,90 @@ public class IcpFactoryImpl implements IcpFactory {
       IcpMessage ret = null;
       ByteBuffer in = ByteBuffer.wrap(packet.getData());
       
-      // Unconditional processing
-      opcode = in.get(OFFSET_BYTE_OPCODE);
-      if (!IcpUtil.isValidOpcode(opcode)) {
-        throw new IcpProtocolException("Invalid opcode: " + opcode);
+      try {
+        // Unconditional processing
+        opcode = in.get(IcpUtil.OFFSET_BYTE_OPCODE);
+        if (!IcpUtil.isValidOpcode(opcode)) {
+          throw new IcpProtocolException("Invalid opcode: " + opcode);
+        }
+        version = in.get(IcpUtil.OFFSET_BYTE_VERSION);
+        if (version != IcpMessage.ICP_VERSION) {
+          throw new IcpProtocolException("Unknown version: " + version);
+        }
+        length = in.getShort(IcpUtil.OFFSET_SHORT_LENGTH);
+        requestNumber = in.getInt(IcpUtil.OFFSET_INT_REQUESTNUMBER);
+        options = in.getInt(IcpUtil.OFFSET_INT_OPTIONS);
+        optionData = in.getInt(IcpUtil.OFFSET_INT_OPTIONDATA);
+        sender = getIpFromStream(in, IcpUtil.OFFSET_INT_SENDER);
+        
+        switch (opcode) {
+          // ... QUERY
+          case IcpMessage.ICP_OP_QUERY:
+            requester = getIpFromStream(in, IcpUtil.OFFSET_INT_REQUESTER);
+            payloadUrl = getUrlFromStream(in, IcpUtil.OFFSET_PAYLOAD_QUERY);
+            ret = new IcpMessageImpl(opcode,
+                                     version,
+                                     length,
+                                     requestNumber,
+                                     options,
+                                     optionData,
+                                     sender,
+                                     requester,
+                                     payloadUrl);
+            break;
+          // ... HIT_OBJECT
+          case IcpMessage.ICP_OP_HIT_OBJ:
+            payloadUrl = getUrlFromStream(in, IcpUtil.OFFSET_PAYLOAD_NONQUERY);
+            final int OFFSET_SHORT_PAYLOADLENGTH =
+              IcpUtil.OFFSET_PAYLOAD_NONQUERY + IcpUtil.stringLength(payloadUrl) + 1;
+            payloadLength = in.getShort(OFFSET_SHORT_PAYLOADLENGTH);
+            final int OFFSET_PAYLOADOBJECT =
+              OFFSET_SHORT_PAYLOADLENGTH + 2;
+            payloadObject = new byte[payloadLength];
+            byte[] packetData = packet.getData();
+            if (packetData.length - OFFSET_PAYLOADOBJECT != payloadLength) {
+              throw new IcpProtocolException(
+                  "Error while extracting payload object");
+            }
+            System.arraycopy(packetData, OFFSET_PAYLOADOBJECT,
+                payloadObject, 0, payloadLength);
+            ret = new IcpMessageImpl(opcode,
+                                     version,
+                                     length,
+                                     requestNumber,
+                                     options,
+                                     optionData,
+                                     sender,
+                                     payloadUrl,
+                                     payloadObject,
+                                     payloadLength);
+            break;
+          // ... OTHER
+          default:
+            payloadUrl = getUrlFromStream(in, IcpUtil.OFFSET_PAYLOAD_NONQUERY);
+            ret = new IcpMessageImpl(opcode,
+                                     version,
+                                     length,
+                                     requestNumber,
+                                     options,
+                                     optionData,
+                                     sender,
+                                     payloadUrl);
+            break;
+        }
+        
+        // Set UDP info
+        ret.setUdpAddress(new IPAddr(packet.getAddress()));
+        ret.setUdpPort(packet.getPort());
+        return ret;
       }
-      version = in.get(OFFSET_BYTE_VERSION);
-      if (version != IcpMessage.ICP_VERSION) {
-        throw new IcpProtocolException("Unknown version: " + version);
+      catch (IcpProtocolException ipe) {
+        throw ipe; // rethrow
       }
-      length = in.getShort(OFFSET_SHORT_LENGTH);
-      requestNumber = in.getInt(OFFSET_INT_REQUESTNUMBER);
-      options = in.getInt(OFFSET_INT_OPTIONS);
-      optionData = in.getInt(OFFSET_INT_OPTIONSDATA);
-      sender = getIpFromStream(in, OFFSET_INT_SENDER);
-      
-      switch (opcode) {
-        // ... QUERY
-        case IcpMessage.ICP_OP_QUERY:
-          requester = getIpFromStream(in, OFFSET_INT_REQUESTER);
-          payloadUrl = getUrlFromStream(in, OFFSET_PAYLOAD_QUERY);
-          ret = new IcpMessageImpl(opcode,
-                                   version,
-                                   length,
-                                   requestNumber,
-                                   options,
-                                   optionData,
-                                   sender,
-                                   requester,
-                                   payloadUrl);
-          break;
-        // ... HIT_OBJECT
-        case IcpMessage.ICP_OP_HIT_OBJ:
-          payloadUrl = getUrlFromStream(in, OFFSET_PAYLOAD_NONQUERY);
-          final int OFFSET_SHORT_PAYLOADLENGTH =
-            OFFSET_PAYLOAD_NONQUERY + IcpUtil.stringLength(payloadUrl) + 1;
-          payloadLength = in.getShort(OFFSET_SHORT_PAYLOADLENGTH);
-          final int OFFSET_PAYLOADOBJECT =
-            OFFSET_SHORT_PAYLOADLENGTH + 2;
-          payloadObject = new byte[payloadLength];
-          byte[] packetData = packet.getData();
-          if (packetData.length - OFFSET_PAYLOADOBJECT != payloadLength) {
-            throw new IcpProtocolException(
-                "Error while extracting payload object");
-          }
-          System.arraycopy(packetData, OFFSET_PAYLOADOBJECT,
-              payloadObject, 0, payloadLength);
-          ret = new IcpMessageImpl(opcode,
-                                   version,
-                                   length,
-                                   requestNumber,
-                                   options,
-                                   optionData,
-                                   sender,
-                                   payloadUrl,
-                                   payloadObject,
-                                   payloadLength);
-          break;
-        // ... OTHER
-        default:
-          payloadUrl = getUrlFromStream(in, OFFSET_PAYLOAD_NONQUERY);
-          ret = new IcpMessageImpl(opcode,
-                                   version,
-                                   length,
-                                   requestNumber,
-                                   options,
-                                   optionData,
-                                   sender,
-                                   payloadUrl);
-          break;
+      catch (Exception exc) {
+        throw new IcpProtocolException(
+            "Error while decoding ICP packet", exc);
       }
-      
-      // *** Set UDP info ***
-      ret.setUdpAddress(new IPAddr(packet.getAddress()));
-      ret.setUdpPort(packet.getPort());
-      return ret;
     }
     
     /**
@@ -535,32 +530,56 @@ public class IcpFactoryImpl implements IcpFactory {
     public DatagramPacket encode(IcpMessage message,
                                  IPAddr recipient,
                                  int port) {
+      byte[] rawBytes;
+      
       try {
-        ByteArrayOutputStream outBytes =
-          new ByteArrayOutputStream(message.getLength());
-        DataOutputStream outData =
-          new DataOutputStream(outBytes);
+        int length = IcpUtil.computeLength(message);
+        ByteBuffer out =
+          ByteBuffer.allocate(length); 
         
-        // Write out data
-        outData.writeByte(message.getOpcode());
-        outData.writeByte(message.getVersion());
-        outData.writeShort(message.getLength());
-        outData.writeInt(message.getRequestNumber());
-        outData.writeInt(message.getOptions());
-        outData.writeInt(message.getOptionData());
-        outData.write(message.getSender().getAddress());
-        if (message.isQuery()) {
-          outData.write(message.getRequester().getAddress());
+        // Write out header
+        out.put(IcpUtil.OFFSET_BYTE_OPCODE, message.getOpcode());
+        out.put(IcpUtil.OFFSET_BYTE_VERSION, message.getVersion());
+        out.putShort(IcpUtil.OFFSET_SHORT_LENGTH, (short)length);
+        out.putInt(IcpUtil.OFFSET_INT_REQUESTNUMBER, message.getRequestNumber());
+        out.putInt(IcpUtil.OFFSET_INT_OPTIONS, message.getOptions());
+        out.putInt(IcpUtil.OFFSET_INT_OPTIONDATA, message.getOptionData());
+        rawBytes = message.getSender().getAddress();
+        for (int off = 0 ; off < 4 ; ++off) {
+          out.put(IcpUtil.OFFSET_INT_SENDER + off, rawBytes[off]);
         }
-        outData.writeBytes(message.getPayloadUrl().toString());
-        outData.write(0); // payload URL must be null-terminated
+        
+        // Write out payload
+        final int OFFSET_PAYLOAD;
+        if (message.isQuery()) {
+          rawBytes = message.getRequester().getAddress();
+          for (int off = 0 ; off < 4 ; ++off) {
+            out.put(IcpUtil.OFFSET_INT_REQUESTER + off, rawBytes[off]);
+          }
+          OFFSET_PAYLOAD = IcpUtil.OFFSET_PAYLOAD_QUERY;
+        }
+        else {
+          OFFSET_PAYLOAD = IcpUtil.OFFSET_PAYLOAD_NONQUERY;
+        }
+        rawBytes = message.getPayloadUrl().getBytes(Constants.URL_ENCODING);
+        for (int off = 0 ; off < rawBytes.length ; ++off) {
+          out.put(OFFSET_PAYLOAD + off, rawBytes[off]);
+        }
+        out.put(OFFSET_PAYLOAD + rawBytes.length, (byte)0); // null terminator
         if (message.getOpcode() == IcpMessage.ICP_OP_HIT_OBJ) {
-          outData.writeShort(message.getPayloadObjectLength());
-          outData.write(message.getPayloadObject());
+          final int OFFSET_SHORT_PAYLOADLENGTH =
+            IcpUtil.OFFSET_PAYLOAD_NONQUERY + rawBytes.length + 1;
+          final int OFFSET_PAYLOADOBJECT =
+            OFFSET_SHORT_PAYLOADLENGTH + 2;
+          rawBytes = message.getPayloadObject();
+          out.putShort(OFFSET_SHORT_PAYLOADLENGTH, (short)rawBytes.length);
+          for (int off = 0 ; off < rawBytes.length ; ++off) {
+            out.put(OFFSET_PAYLOADOBJECT + off, rawBytes[off]);
+          }            
         }
         
         // Make datagram
-        byte[] rawBytes = outBytes.toByteArray();
+        rawBytes = out.array();
         return new DatagramPacket(rawBytes, 0, rawBytes.length,
             recipient.getInetAddr(), port);
       }
@@ -911,14 +930,7 @@ public class IcpFactoryImpl implements IcpFactory {
       buffer.append(";payloadUrl=");
       buffer.append(getPayloadUrl());
       if (getPayloadObject() != null) {
-        buffer.append(";payloadObject=");
-        byte[] payload = getPayloadObject();
-        for (int ii = 0 ; ii < payload.length ; ii++) {
-          buffer.append(Integer.toHexString(payload[ii]));
-          if ((ii % 8) == 7) {
-            buffer.append(" ");
-          }
-        }
+        buffer.append(ByteArray.toHexString(getPayloadObject()));
       }
       buffer.append("]");
       return buffer.toString();
