@@ -1,5 +1,5 @@
 /*
- * $Id: TestBasePlugin.java,v 1.9 2005-07-18 08:12:02 tlipkis Exp $
+ * $Id: TestBasePlugin.java,v 1.10 2005-10-05 06:05:26 tlipkis Exp $
  */
 
 /*
@@ -90,8 +90,15 @@ public class TestBasePlugin extends LockssTestCase {
     p.put("org.lockss.title.1.param.2.key", AUPARAM_YEAR);
     p.put("org.lockss.title.1.param.2.value", "year_1");
     p.put("org.lockss.title.1.param.2.editable", "true");
+    p.put("org.lockss.title.2.title", "Howl");
+    p.put("org.lockss.title.2.journalTitle", "hj");
+    p.put("org.lockss.title.2.plugin", plugName);
+    p.put("org.lockss.title.2.pluginVersion", "4");
+    p.put("org.lockss.title.2.attributes.attr1", "av111");
+    p.put("org.lockss.title.2.attributes.attr2", "av222");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    assertEquals(ListUtil.list("It's"), mbp.getSupportedTitles());
+    assertSameElements(ListUtil.list("It's", "Howl"),
+		       mbp.getSupportedTitles());
     TitleConfig tc = mbp.getTitleConfig(new String("It's"));
     assertEquals("It's", tc.getDisplayName());
     assertEquals("jtitle", tc.getJournalTitle());
@@ -101,6 +108,13 @@ public class TestBasePlugin extends LockssTestCase {
     epa1.setEditable(true);
     assertEquals(SetUtil.set(epa1, new ConfigParamAssignment(PD_VOL, "vol_1")),
 		 SetUtil.theSet(tc.getParams()));
+    assertNull(tc.getAttributes());
+
+    tc = mbp.getTitleConfig(new String("Howl"));
+    log.info("tc: " + tc);
+    log.info("tc.getAttributes: " + tc.getAttributes());
+    assertEquals("av111", tc.getAttributes().get("attr1"));
+    assertEquals("av222", tc.getAttributes().get("attr2"));
   }
 
   private static class MyMockBasePlugin extends BasePlugin {

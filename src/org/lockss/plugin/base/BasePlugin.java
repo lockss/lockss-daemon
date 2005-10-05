@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.31 2005-07-19 01:11:05 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.32 2005-10-05 06:05:26 tlipkis Exp $
  */
 
 /*
@@ -51,6 +51,7 @@ public abstract class BasePlugin
   static final String TITLE_PARAM_PLUGIN = "plugin";
   static final String TITLE_PARAM_PLUGIN_VERSION = "pluginVersion";
   static final String TITLE_PARAM_EST_SIZE = "estSize";
+  static final String TITLE_PARAM_ATTRIBUTES = "attributes";
   static final String TITLE_PARAM_PARAM = "param";
   // Below org.lockss.title.xxx.param.n.
   static final String TITLE_PARAM_PARAM_KEY = "key";
@@ -172,6 +173,18 @@ public abstract class BasePlugin
     tc.setJournalTitle(titleConfig.get(TITLE_PARAM_JOURNAL));
     if (titleConfig.containsKey(TITLE_PARAM_EST_SIZE)) {
       tc.setEstimatedSize(titleConfig.getSize(TITLE_PARAM_EST_SIZE, 0));
+    }
+
+    Configuration attrs = titleConfig.getConfigTree(TITLE_PARAM_ATTRIBUTES);
+    if (!attrs.isEmpty()) {
+      Map attrMap = new HashMap();
+      for (Iterator iter = attrs.nodeIterator(); iter.hasNext(); ) {
+	String attr = (String)iter.next();
+	String val = attrs.get(attr);
+	log.info("attr: " +  attr + ", val: " + val);
+	attrMap.put(attr, val);
+      }
+      tc.setAttributes(attrMap);
     }
     List params = new ArrayList();
     Configuration allParams = titleConfig.getConfigTree(TITLE_PARAM_PARAM);

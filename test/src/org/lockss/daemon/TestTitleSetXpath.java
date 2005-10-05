@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetXpath.java,v 1.3 2005-02-09 19:09:41 tlipkis Exp $
+ * $Id: TestTitleSetXpath.java,v 1.4 2005-10-05 06:05:26 tlipkis Exp $
  */
 
 /*
@@ -71,6 +71,13 @@ public class TestTitleSetXpath extends LockssTestCase {
     tc5.setJournalTitle("Dog Journal");
     tc6 = new TitleConfig("LOCKSS Journal of Dog Toys 2002", pid2);
     tc6.setJournalTitle("Dog Journal");
+
+    ConfigParamDescr d1 =new ConfigParamDescr("key1");
+    ConfigParamDescr d2 =new ConfigParamDescr("key2");
+
+    tc5.setAttributes(MapUtil.map("key1", "val1", "k0", "1"));
+    tc6.setAttributes(MapUtil.map("key1", "val2", "k0", "1"));
+
     titles = ListUtil.list(tc1, tc2, tc3, tc4, tc5, tc6);
   }
 
@@ -125,6 +132,19 @@ public class TestTitleSetXpath extends LockssTestCase {
     assertEquals(SetUtil.set(tc5, tc6),
 		 SetUtil.theSet(ts.filterTitles(titles)));
     assertEquals("Name1", ts.getName());
+  }
+
+  public void testComplexPat() {
+    TitleSetXpath ts = newSet("[attributes/key1='val1']");
+    assertEquals(SetUtil.set(tc5),
+		 SetUtil.theSet(ts.filterTitles(titles)));
+    assertEquals("Name1", ts.getName());
+    ts = newSet("[attributes/k0='1']");
+    assertEquals(SetUtil.set(tc5, tc6),
+		 SetUtil.theSet(ts.filterTitles(titles)));
+    ts = newSet("[journalTitle='Dog Journal' and attributes/key1='val1']");
+    assertEquals(SetUtil.set(tc5),
+		 SetUtil.theSet(ts.filterTitles(titles)));
   }
 
   // Ensure that TitleConfig bean accessor names are as we expect.  Because

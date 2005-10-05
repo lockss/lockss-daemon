@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.9 2005-07-18 08:10:09 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.10 2005-10-05 06:05:26 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,7 @@ public class TitleConfig {
   private String pluginVersion = null;
   private long estSize = 0;
   private List params = null;
+  private Map attrs = null;
 
   /**
    * Create a TitleConfig associating a title with a plugin.
@@ -100,6 +101,20 @@ public class TitleConfig {
    */
   public List getParams() {
     return params;
+  }
+
+  /**
+   * Set the attributes
+   */
+  public void setAttributes(Map attrs) {
+    this.attrs = attrs;
+  }
+
+  /**
+   * @return the attributes
+   */
+  public Map getAttributes() {
+    return attrs;
   }
 
   /**
@@ -311,6 +326,10 @@ public class TitleConfig {
     sb.append(pluginName);
     sb.append(", params: ");
     sb.append(params);
+    if (attrs != null) {
+      sb.append(", attrs: ");
+      sb.append(attrs);
+    }
     sb.append("]");
     return sb.toString();
   }
