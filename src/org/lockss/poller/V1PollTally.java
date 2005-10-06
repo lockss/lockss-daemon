@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.20 2005-10-05 17:41:22 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.21 2005-10-06 08:18:15 tlipkis Exp $
  */
 
 /*
@@ -299,9 +299,9 @@ public class V1PollTally extends PollTally {
           " Required vote margin is " +
           req_margin + ". This poll's margin is " + act_margin;
       log.warning(err);
-//       poll.m_pollmanager.raiseAlert(Alert.auAlert(Alert.INCONCLUSIVE_POLL,
-//                                                   poll.m_cus.getArchivalUnit()).
-//                                     setAttribute(Alert.ATTR_TEXT, err));
+      poll.m_pollmanager.raiseAlert(Alert.auAlert(Alert.INCONCLUSIVE_POLL,
+                                                  poll.m_cus.getArchivalUnit()).
+                                    setAttribute(Alert.ATTR_TEXT, err));
       return false;
     }
     return true;

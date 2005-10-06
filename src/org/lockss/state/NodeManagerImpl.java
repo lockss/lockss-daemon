@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.201 2005-10-05 17:41:22 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.202 2005-10-06 08:18:15 tlipkis Exp $
  */
 
 /*
@@ -636,7 +636,6 @@ public class NodeManagerImpl
    */
   private CachedUrlSet getChildCus(String url, NodeState nodeState) {
     ArchivalUnit au = nodeState.getCachedUrlSet().getArchivalUnit();
-    Plugin plugin = au.getPlugin();
     String baseUrl = nodeState.getCachedUrlSet().getUrl();
     String childUrl;
     if (AuUrl.isAuUrl(baseUrl)) {
@@ -719,10 +718,10 @@ public class NodeManagerImpl
         logger.debug2("lost repair content poll, state = unrepairable");
         // if repair poll, can't be repaired and we leave it our damaged table
         pollState.status = PollState.UNREPAIRABLE;
-//         alertMgr.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
-//                             .setAttribute(Alert.ATTR_TEXT,"Repair of " +
-//                                           results.getCachedUrlSet().getUrl()
-//                                           + " fails to resolve poll."));
+        alertMgr.raiseAlert(Alert.auAlert(Alert.PERSISTENT_DAMAGE,managedAu)
+                            .setAttribute(Alert.ATTR_TEXT,"Repair of " +
+                                          results.getCachedUrlSet().getUrl()
+                                          + " fails to resolve poll."));
         updateReputations(results);
       } else {
         // otherwise, schedule repair (if SNCUS) or name poll
@@ -1645,7 +1644,6 @@ public class NodeManagerImpl
    * @param spec PollSpec
    */
   private void callPoll(PollSpec spec) {
-    String type = Poll.PollName[spec.getPollType()];
     if (logger.isDebug2()) {
       logger.debug2("Calling a poll on " + spec);
     }
