@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.60 2005-09-08 22:06:29 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.61 2005-10-06 21:45:05 troberts Exp $
  */
 
 /*
@@ -90,6 +90,11 @@ public class BaseUrlCacher implements UrlCacher {
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
 
+  // Max amount we'll buffer up to avoid refetching a page when we check if it's 
+  // a login page
+  static final int LOGIN_BUFFER_MAX = 16 * 1024;
+
+  
   private NodeManager nodeMgr;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
@@ -238,6 +243,7 @@ public class BaseUrlCacher implements UrlCacher {
 	  headers = getHeaders();
 	}
       }
+//      input = checkLoginPage(new BufferedInputStream(input), headers);
       input = checkLoginPage(input, headers);
       storeContent(input, headers);
       if (fetchFlags.get(CLEAR_DAMAGE_FLAG)) {
@@ -283,6 +289,10 @@ public class BaseUrlCacher implements UrlCacher {
     LoginPageChecker checker = au.getCrawlSpec().getLoginPageChecker();
     if (checker != null) {
       logger.debug3("Found a login page checker");
+      if (!input.markSupported()) {
+        input = new BufferedInputStream(input);
+      }
+      input.mark(LOGIN_BUFFER_MAX);
       Reader reader = new InputStreamReader(input, Constants.DEFAULT_ENCODING);
       if (checker.isLoginPage(headers, reader)) {
 	throw new CacheException.PermissionException("Found a login page");
@@ -378,8 +388,7 @@ public class BaseUrlCacher implements UrlCacher {
       headers.setProperty(CachedUrl.PROPERTY_NODE_URL, url);
       leaf.setNewProperties(headers);
       leaf.sealNewVersion();
-    }
-    catch (Exception ex) {
+    } catch (Exception ex) {
       logger.debug("storeContentIn", ex);
       if (leaf != null) {
 	try {

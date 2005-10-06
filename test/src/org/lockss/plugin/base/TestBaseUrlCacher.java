@@ -1,34 +1,34 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.42 2005-09-06 22:59:15 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.43 2005-10-06 21:45:04 troberts Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
-all rights reserved.
+ Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+ all rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
-STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+ STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Except as contained in this notice, the name of Stanford University shall not
-be used in advertising or otherwise to promote the sale, use or other dealings
-in this Software without prior written authorization from Stanford University.
+ Except as contained in this notice, the name of Stanford University shall not
+ be used in advertising or otherwise to promote the sale, use or other dealings
+ in this Software without prior written authorization from Stanford University.
 
-*/
+ */
 
 package org.lockss.plugin.base;
 
@@ -47,8 +47,8 @@ import org.lockss.crawler.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
- *
- * @author  Emil Aalto
+ * 
+ * @author Emil Aalto
  * @version 0.0
  */
 public class TestBaseUrlCacher extends LockssTestCase {
@@ -72,8 +72,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   private MockNodeManager nodeMgr = new MockNodeManager();
 
-  private static final String TEST_URL =
-    "http://www.example.com/testDir/leaf1";
+  private static final String TEST_URL = "http://www.example.com/testDir/leaf1";
   private boolean saveDefaultSuppressStackTrace;
 
   public void setUp() throws Exception {
@@ -93,9 +92,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     plugin.initPlugin(theDaemon);
     mau.setPlugin(plugin);
 
-    repo =
-      (LockssRepository)theDaemon.newAuManager(LockssDaemon.LOCKSS_REPOSITORY,
-					       mau);
+    repo = (LockssRepository) theDaemon
+        .newAuManager(LockssDaemon.LOCKSS_REPOSITORY, mau);
     theDaemon.setLockssRepository(repo, mau);
 
     theDaemon.setNodeManager(nodeMgr, mau);
@@ -104,8 +102,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mcus.setArchivalUnit(mau);
     mau.setAuCachedUrlSet(mcus);
     cacher = new MyMockBaseUrlCacher(mau, TEST_URL);
-    saveDefaultSuppressStackTrace =
-      CacheException.setDefaultSuppressStackTrace(false);
+    saveDefaultSuppressStackTrace = CacheException
+        .setDefaultSuppressStackTrace(false);
   }
 
   public void tearDown() throws Exception {
@@ -141,8 +139,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testReCacheWCookieOverride() throws IOException {
-    BaseArchivalUnit.ParamHandlerMap pMap =
-      new BaseArchivalUnit.ParamHandlerMap();
+    BaseArchivalUnit.ParamHandlerMap pMap = new BaseArchivalUnit.ParamHandlerMap();
     pMap.putBoolean("refetch_on_set_cookie", false);
     cacher.setParamMap(pMap);
     pauseBeforeFetchCounter = 0;
@@ -162,10 +159,10 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testLastModifiedCache() throws IOException {
     // add the 'cached' version
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
-			    GMT_DATE_FORMAT.format(new Date(12345)));
-//     mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
-     mau.addUrl(TEST_URL, true, true, cachedProps);
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
+        .format(new Date(12345)));
+    // mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
+    mau.addUrl(TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
     cacher._input = new StringInputStream("test stream");
@@ -187,16 +184,16 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testForceCache() throws IOException {
     // add the 'cached' version
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
-			    GMT_DATE_FORMAT.format(new Date(12345)));
-//     mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
+        .format(new Date(12345)));
+    // mcus.addUrl("test stream", TEST_URL, true, true, cachedProps);
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
     cacher._input = new StringInputStream("test stream");
     cacher._headers = cachedProps;
     // should still cache
-//     cacher.setForceRefetch(true);
+    // cacher.setForceRefetch(true);
     BitSet bs = new BitSet();
     bs.set(REFETCH_FLAG);
     cacher.setFetchFlags(bs);
@@ -225,7 +222,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testCacheDoesNotClearDamageForNonLeaf() throws IOException {
     mau.addUrl(TEST_URL, true, true, new CIProperties());
-    MockCachedUrl mcu = (MockCachedUrl)mau.makeCachedUrl(TEST_URL);
+    MockCachedUrl mcu = (MockCachedUrl) mau.makeCachedUrl(TEST_URL);
     mcu.setIsLeaf(false);
     MockDamagedNodeSet dnSet = new MockDamagedNodeSet();
     dnSet.addToDamage(TEST_URL);
@@ -248,8 +245,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     nodeMgr.setDamagedNodes(dnSet);
 
     CIProperties cachedProps = new CIProperties();
-    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
-			    GMT_DATE_FORMAT.format(new Date(12345)));
+    cachedProps.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
+        .format(new Date(12345)));
     mau.addUrl(TEST_URL, true, true, cachedProps);
 
     TimeBase.setSimulated(10000);
@@ -270,7 +267,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     try {
       cacher.cache();
       fail("Should have thrown NullPointerException.");
-    } catch (NullPointerException npe) { }
+    } catch (NullPointerException npe) {
+    }
     assertFalse(cacher.wasStored);
 
     // no exceptions from null inputstream
@@ -302,13 +300,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCheckConnection() {
-    MockLockssUrlConnection  conn = new MockLockssUrlConnection();
+    MockLockssUrlConnection conn = new MockLockssUrlConnection();
     conn.setResponseCode(200);
     conn.setResponseMessage("OK");
     try {
       cacher.checkConnectException(conn);
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
       assertTrue("Unexpected exception", ex == null);
     }
 
@@ -316,24 +313,23 @@ public class TestBaseUrlCacher extends LockssTestCase {
     conn.setResponseMessage("Unauthorized");
     try {
       cacher.checkConnectException(conn);
-    }
-    catch (IOException ex) {
+    } catch (IOException ex) {
       assertTrue("Expected exception", ex != null);
     }
 
   }
 
   // The following tests do not use MyMockBaseUrlCacher, so test more of
-  // BaseUrlCacher.  Mostly they test its behavior wrt the connection.
+  // BaseUrlCacher. Mostly they test its behavior wrt the connection.
   // MockConnectionMockBaseUrlCacher is used to create a mock connection.
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
-				     String redirectTo) {
+                                     String redirectTo) {
     return makeConn(respCode, respMessage, redirectTo, null);
   }
 
   MyMockLockssUrlConnection makeConn(int respCode, String respMessage,
-				     String redirectTo, String inputStream) {
+                                     String redirectTo, String inputStream) {
     MyMockLockssUrlConnection mconn = new MyMockLockssUrlConnection();
     mconn.setResponseCode(respCode);
     mconn.setResponseMessage(respMessage);
@@ -351,8 +347,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testGetUncachedProperties() throws IOException {
     TimeBase.setSimulated(555666);
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
     muc.getUncachedInputStream();
@@ -363,8 +360,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   public void testGetUncachedPropertiesNull() throws IOException {
     TimeBase.setSimulated(555666);
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     mconn.setResponseContentType(null);
     muc.addConnection(mconn);
@@ -375,10 +373,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testMalformedUrlException() throws IOException {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
-    ThrowingMockLockssUrlConnection mconn =
-      new ThrowingMockLockssUrlConnection(new MalformedURLException());
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
+    ThrowingMockLockssUrlConnection mconn = new ThrowingMockLockssUrlConnection(
+                                                                                new MalformedURLException());
     muc.addConnection(mconn);
     try {
       muc.cache();
@@ -388,8 +387,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testNoProxy() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
     muc.cache();
@@ -398,8 +398,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testProxy() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
     muc.setProxy("phost", 126);
@@ -410,8 +411,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testSetReqProp() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MyMockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
     muc.setRequestProperty("foo-bar", "47");
@@ -422,8 +424,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   // Shouldn't generate if-modified-since header because no existing content
   public void testIfModifiedConnectionNoContent() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
     muc.setForceRefetch(false);
@@ -433,12 +436,13 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   MockConnectionMockBaseUrlCacher makeMucWithContent() {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     CIProperties cuprops = new CIProperties();
 
-    cuprops.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED,
-			GMT_DATE_FORMAT.format(new Date(12345000)));
+    cuprops.setProperty(CachedUrl.PROPERTY_LAST_MODIFIED, GMT_DATE_FORMAT
+        .format(new Date(12345000)));
 
     mau.addUrl(TEST_URL, true, true, cuprops);
     return muc;
@@ -452,8 +456,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.setForceRefetch(false);
     muc.cache();
     assertEquals(TEST_URL, mconn.getURL());
-    assertEquals("Thu, 01 Jan 1970 03:25:45 GMT",
-		 mconn.getRequestProperty("if-modified-since"));
+    assertEquals("Thu, 01 Jan 1970 03:25:45 GMT", mconn
+        .getRequestProperty("if-modified-since"));
   }
 
   // Shouldn't generate if-modified-since header because forceRefetch true
@@ -461,7 +465,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     MockConnectionMockBaseUrlCacher muc = makeMucWithContent();
     MockLockssUrlConnection mconn = makeConn(200, "", null, "foo");
     muc.addConnection(mconn);
-//     muc.setForceRefetch(true);
+    // muc.setForceRefetch(true);
     BitSet bs = new BitSet();
     bs.set(REFETCH_FLAG);
     muc.setFetchFlags(bs);
@@ -476,8 +480,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
   // Should throw exception derived from response code
   public void testConnectionError() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
     muc.addConnection(mconn);
     try {
@@ -488,10 +493,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
-  //the url connection may throw a MalformedUrlException
+  // the url connection may throw a MalformedUrlException
   public void testMalformedUrlError() throws Exception {
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     MockLockssUrlConnection mconn = makeConn(404, "Not fond", null);
     muc.addConnection(mconn);
     try {
@@ -505,11 +511,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Shouldn't follow redirect because told not to.
   public void testNoRedirect() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(301, "Moved to tears",
-			       "http://elsewhere.org/foo"));
+                               "http://elsewhere.org/foo"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_DONT_FOLLOW);
     try {
       InputStream is = muc.getUncachedInputStream();
@@ -529,8 +536,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should follow redirection to URL in crawl spec
   public void testRedirectInSpec() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-        new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
@@ -552,8 +560,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should not follow redirection to URL not in crawl spec
   public void testRedirectNotInSpec() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Fresno", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -572,8 +581,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo1 = "http://2.2/a";
     String redTo2 = "http://2.2/b";
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-        new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
@@ -598,9 +608,10 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should throw because of max redirections
   public void testRedirectChainMax() throws Exception {
     String redTo = "http://foo.bar/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
-    for (int ix = 0; ix < (1+BaseUrlCacher.MAX_REDIRECTS); ix++) {
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
+    for (int ix = 0; ix < (1 + BaseUrlCacher.MAX_REDIRECTS); ix++) {
       muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     }
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
@@ -619,8 +630,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should follow redirection to URL on same host
   public void testRedirectInSpecOnHost() throws Exception {
     String redTo = "http://www.example.com/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST);
@@ -638,8 +650,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should not follow redirection to URL on different host
   public void testRedirectInSpecNotOnHost() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_IN_SPEC_ON_HOST);
@@ -657,8 +670,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should follow redirection to URL on same host
   public void testRedirectOnHost() throws Exception {
     String redTo = "http://www.example.com/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
@@ -675,8 +689,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   // Should not follow redirection to URL on different host
   public void testRedirectNotOnHost() throws Exception {
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, "bar"));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_FOLLOW_ON_HOST);
@@ -693,8 +708,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
   public void testRedirectWritesBoth() throws Exception {
     mau.returnRealCachedUrl = true;
     String redTo = "http://somewhere.else/foo";
-    MockConnectionMockBaseUrlCacher muc =
-        new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo, PermissionRecord.PERMISSION_OK);
@@ -726,8 +742,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo1 = "http://somewhere.else/foo";
     String redTo2 = "http://somewhere.else/bar/x.html";
     String redTo3 = "http://somewhere.else/bar/y.html";
-    MockConnectionMockBaseUrlCacher muc =
-        new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
@@ -768,8 +785,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String redTo1 = "http://somewhere.else/foo";
     String redTo2 = "http://somewhere.else/bar/x.html";
     String redTo3 = "http://somewhere.else/bar/y.html";
-    MockConnectionMockBaseUrlCacher muc =
-        new MockConnectionMockBaseUrlCacher(mau, TEST_URL);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              TEST_URL);
     PermissionMap map = new PermissionMap();
     map.putStatus(TEST_URL, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
@@ -785,7 +803,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     muc.cache();
     CIProperties p = muc.getUncachedProperties();
     assertNull(p.getProperty("location"));
-    //XXX now we're not tracking the interveaning URLs
+    // XXX now we're not tracking the interveaning URLs
     assertEquals(redTo3, p.getProperty(CachedUrl.PROPERTY_REDIRECTED_TO));
 
     // verify all have the correct contents, and all but the last have a
@@ -805,8 +823,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     mau.returnRealCachedUrl = true;
     String url = "http://a.b/bar";
     String redTo = url + "/";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, url);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              url);
     muc.addConnection(makeConn(301, "Moved to Spain", redTo));
     muc.addConnection(makeConn(200, "Ok", null, content));
     muc.setRedirectScheme(UrlCacher.REDIRECT_SCHEME_STORE_ALL_IN_SPEC);
@@ -833,8 +852,9 @@ public class TestBaseUrlCacher extends LockssTestCase {
     String url = "http://a.b/bar";
     String redTo1 = "http://somewhere.else/foo";
     String redTo2 = "http://somewhere.else/foo/";
-    MockConnectionMockBaseUrlCacher muc =
-      new MockConnectionMockBaseUrlCacher(mau, url);
+    MockConnectionMockBaseUrlCacher muc = new MockConnectionMockBaseUrlCacher(
+                                                                              mau,
+                                                                              url);
     map.putStatus(url, PermissionRecord.PERMISSION_OK);
     map.putStatus(redTo1, PermissionRecord.PERMISSION_OK);
     muc.setPermissionMapSource(new MockPermissionMapSource(map));
@@ -864,15 +884,13 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertCuProperty(redTo2, redTo2, CachedUrl.PROPERTY_CONTENT_URL);
   }
 
-
   public void testCacheLPC() throws IOException {
-    MyMockLoginPageChecker loginPageChecker =
-      new MyMockLoginPageChecker(false);
+    MyMockLoginPageChecker loginPageChecker = new MyMockLoginPageChecker(false);
     mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
-					 ListUtil.list("http://example.com"),
-					 null, 99,
-					 new ArrayList(), loginPageChecker));
-    
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, new ArrayList(),
+                                         loginPageChecker));
+
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
     // should cache
@@ -881,40 +899,41 @@ public class TestBaseUrlCacher extends LockssTestCase {
     assertTrue(loginPageChecker.wasCalled());
   }
 
-  public void testCacheLPCResetCalled() throws IOException {
-    MyMockLoginPageChecker loginPageChecker =
-      new MyMockLoginPageChecker(false);
+  public void testCacheLPCResetAndMarkCalled() throws IOException {
+    MyMockLoginPageChecker loginPageChecker = new MyMockLoginPageChecker(false);
     mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
-					 ListUtil.list("http://example.com"),
-					 null, 99,
-					 new ArrayList(), loginPageChecker));
-    
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, new ArrayList(),
+                                         loginPageChecker));
+
     cacher._input = new MyStringInputStream("test stream");
     cacher._headers = new CIProperties();
     // should cache
     assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
 
     assertTrue(loginPageChecker.wasCalled());
-    assertTrue(((MyStringInputStream)cacher._input).resetWasCalled());
+    assertTrue(((MyStringInputStream) cacher._input).markWasCalled());
+    assertEquals(16 * 1024, ((MyStringInputStream) cacher._input)
+        .getMarkBufferSize());
+    assertTrue(((MyStringInputStream) cacher._input).resetWasCalled());
     assertEquals(1, cacher.getUncachedInputStreamCount);
   }
 
   public void testCacheLPCResetFails() throws IOException {
-    MyMockLoginPageChecker loginPageChecker =
-      new MyMockLoginPageChecker(false);
+    MyMockLoginPageChecker loginPageChecker = new MyMockLoginPageChecker(false);
     mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
-					 ListUtil.list("http://example.com"),
-					 null, 99,
-					 new ArrayList(), loginPageChecker));
-    
-    MyStringInputStream strIs =
-      new MyStringInputStream("test stream",
-			      new IOException("Test exception"));
-    MyStringInputStream strIs2 =
-      new MyStringInputStream("test stream2");
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, new ArrayList(),
+                                         loginPageChecker));
 
-    cacher = new MyMockBaseUrlCacher(mau, TEST_URL,
-				     ListUtil.list(strIs, strIs2));
+    MyStringInputStream strIs = new MyStringInputStream(
+                                                        "test stream",
+                                                        new IOException(
+                                                                        "Test exception"));
+    MyStringInputStream strIs2 = new MyStringInputStream("test stream2");
+
+    cacher = new MyMockBaseUrlCacher(mau, TEST_URL, ListUtil
+        .list(strIs, strIs2));
 
     cacher._headers = new CIProperties();
     // should cache
@@ -929,13 +948,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
   }
 
   public void testCacheLPCLoginPage() throws IOException {
-    MyMockLoginPageChecker loginPageChecker =
-      new MyMockLoginPageChecker(true);
+    MyMockLoginPageChecker loginPageChecker = new MyMockLoginPageChecker(true);
     mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
-					 ListUtil.list("http://example.com"),
-					 null, 99,
-					 new ArrayList(), loginPageChecker));
-    
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, new ArrayList(),
+                                         loginPageChecker));
+
     cacher._input = new StringInputStream("test stream");
     cacher._headers = new CIProperties();
     // should cache
@@ -944,6 +962,30 @@ public class TestBaseUrlCacher extends LockssTestCase {
       fail("Should have thrown a CacheException.UnretryableException");
     } catch (CacheException.PermissionException ex) {
     }
+  }
+
+  /**
+   * Tests that we wrap input streams that don't support marks in a
+   * BufferedInputStream
+   * 
+   * @throws IOException
+   */
+  public void testMarkNotSupported() throws IOException {
+    MyMockLoginPageChecker loginPageChecker = new MyMockLoginPageChecker(false);
+    mau.setCrawlSpec(new SpiderCrawlSpec(ListUtil.list("http://example.com"),
+                                         ListUtil.list("http://example.com"),
+                                         null, 99, new ArrayList(),
+                                         loginPageChecker));
+
+    cacher._input = new MyStringInputStreamMarkNotSupported("test stream");
+    cacher._headers = new CIProperties();
+    // should cache
+    assertEquals(UrlCacher.CACHE_RESULT_FETCHED, cacher.cache());
+
+    assertTrue(loginPageChecker.wasCalled());
+    assertFalse(((MyStringInputStream) cacher._input).resetWasCalled());
+    assertFalse(((MyStringInputStream) cacher._input).markWasCalled());
+    assertEquals(1, cacher.getUncachedInputStreamCount);
   }
 
   class MyMockLoginPageChecker implements LoginPageChecker {
@@ -964,12 +1006,12 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
-
   void assertCuContents(String url, String contents) throws IOException {
     CachedUrl cu = new BaseCachedUrl(mau, url);
     InputStream is = cu.getUnfilteredInputStream();
     assertReaderMatchesString(contents, new InputStreamReader(is));
   }
+
   /**
    * Assert that this url has no content
    */
@@ -1006,15 +1048,15 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
 
     protected LockssUrlConnection makeConnection(String url,
-						 LockssUrlConnectionPool pool)
-	throws IOException {
+                                                 LockssUrlConnectionPool pool)
+        throws IOException {
       if (connections != null && !connections.isEmpty()) {
-	MockLockssUrlConnection mconn =
-	  (MockLockssUrlConnection)connections.remove(0);
-	mconn.setURL(url);
-	return mconn;
+        MockLockssUrlConnection mconn = (MockLockssUrlConnection) connections
+            .remove(0);
+        mconn.setURL(url);
+        return mconn;
       } else {
-	return new MockLockssUrlConnection();
+        return new MockLockssUrlConnection();
       }
     }
 
@@ -1035,8 +1077,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
       super(owner, url);
     }
 
-    public MyMockBaseUrlCacher(ArchivalUnit owner, String url,
-			       List inputList) {
+    public MyMockBaseUrlCacher(ArchivalUnit owner, String url, List inputList) {
       super(owner, url);
       this.inputList = inputList;
     }
@@ -1051,29 +1092,29 @@ public class TestBaseUrlCacher extends LockssTestCase {
 
     public InputStream getUncachedInputStream(String lastModified) {
       // simple version which returns null if shouldn't fetch
-//       if (lastCached < TimeBase.nowMs()) {
+      // if (lastCached < TimeBase.nowMs()) {
       getUncachedInputStreamCount++;
-      
+
       if (inputList == null) {
-	logger.debug3("Using old method for getUncachedInputStream");
-	//this is way too much smarts for mock code, but is left here for
-	//legacy support.  It should be cleaned up
-	long last = -1;
-	if (lastModified != null) {
-	  try {
-	    last = BaseUrlCacher.GMT_DATE_FORMAT.parse(lastModified).getTime();
-	  } catch (ParseException e) {
-	  }
-	}
-	if (last < TimeBase.nowMs()) {
-	  return _input;
-	} else {
-	  return null;
-	}
+        logger.debug3("Using old method for getUncachedInputStream");
+        // this is way too much smarts for mock code, but is left here for
+        // legacy support. It should be cleaned up
+        long last = -1;
+        if (lastModified != null) {
+          try {
+            last = BaseUrlCacher.GMT_DATE_FORMAT.parse(lastModified).getTime();
+          } catch (ParseException e) {
+          }
+        }
+        if (last < TimeBase.nowMs()) {
+          return _input;
+        } else {
+          return null;
+        }
       }
       logger.debug3("Using new method for getUncachedInputStream");
-      InputStream is = (InputStream)inputList.remove(0); 
-      logger.debug3("Returning "+is); 
+      InputStream is = (InputStream) inputList.remove(0);
+      logger.debug3("Returning " + is);
       return is;
     }
 
@@ -1083,7 +1124,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
 
     public void storeContent(InputStream input, CIProperties headers)
-	throws IOException {
+        throws IOException {
       super.storeContent(input, headers);
       wasStored = true;
     }
@@ -1120,8 +1161,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
-  private class ThrowingMockLockssUrlConnection
-    extends MockLockssUrlConnection {
+  private class ThrowingMockLockssUrlConnection extends MockLockssUrlConnection {
     IOException ex;
 
     public ThrowingMockLockssUrlConnection(IOException ex) {
@@ -1133,10 +1173,23 @@ public class TestBaseUrlCacher extends LockssTestCase {
     }
   }
 
+  class MyStringInputStreamMarkNotSupported extends MyStringInputStream {
+    public MyStringInputStreamMarkNotSupported(String str) {
+      super(str);
+    }
+
+    public boolean markSupported() {
+      return false;
+    }
+  }
+
   class MyStringInputStream extends StringInputStream {
     private boolean resetWasCalled = false;
+    private boolean markWasCalled = false;
     private boolean closeWasCalled = false;
     private IOException resetEx;
+
+    private int buffSize = -1;
 
     public MyStringInputStream(String str) {
       super(str);
@@ -1146,8 +1199,8 @@ public class TestBaseUrlCacher extends LockssTestCase {
      * @param str String to read from
      * @param resetEx IOException to throw when reset is called
      * 
-     * Same as one arg constructor, but can provide an exception that is
-     * thrown when reset is called
+     * Same as one arg constructor, but can provide an exception that is thrown
+     * when reset is called
      */
     public MyStringInputStream(String str, IOException resetEx) {
       super(str);
@@ -1157,18 +1210,32 @@ public class TestBaseUrlCacher extends LockssTestCase {
     public void reset() throws IOException {
       resetWasCalled = true;
       if (resetEx != null) {
-	throw resetEx;
+        throw resetEx;
       }
       super.reset();
     }
-    
+
     public boolean resetWasCalled() {
       return resetWasCalled;
     }
 
+    public void mark(int buffSize) {
+      markWasCalled = true;
+      this.buffSize = buffSize;
+      super.mark(buffSize);
+    }
+
+    public boolean markWasCalled() {
+      return markWasCalled;
+    }
+
+    public int getMarkBufferSize() {
+      return this.buffSize;
+    }
+
     public void close() throws IOException {
       Exception ex = new Exception("Blah");
-      logger.debug3("Close called on "+this, ex);
+      logger.debug3("Close called on " + this, ex);
       closeWasCalled = true;
       super.close();
     }
@@ -1176,11 +1243,11 @@ public class TestBaseUrlCacher extends LockssTestCase {
     public boolean closeWasCalled() {
       return closeWasCalled;
     }
-    
+
   }
 
   public static void main(String[] argv) {
-    String[] testCaseList = { TestBaseUrlCacher.class.getName()};
+    String[] testCaseList = { TestBaseUrlCacher.class.getName() };
     junit.swingui.TestRunner.main(testCaseList);
   }
 
