@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.9 2005-09-14 22:47:07 thib_gc Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.10 2005-10-06 08:17:09 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,6 @@ public class TestAlertManagerImpl extends LockssTestCase {
   }
 
   public void testRaiseSingleAlerts() throws Exception {
-    log.debug("testRaiseAlert()");
     config(true);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
@@ -129,9 +128,32 @@ public class TestAlertManagerImpl extends LockssTestCase {
     assertEquals(ListUtil.list(a1, a1), recs);
   }
 
+  public void testRaiseIgnoredAlert() throws Exception {
+    config(true);
+    ConfigurationUtil.addFromArgs(AlertManagerImpl.PARAM_IGNORED_ALERTS,
+				  "InconclusivePoll;CacheDown");
+    Alert a1 = Alert.cacheAlert(Alert.CACHE_DOWN);
+    a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
+    MyMockAlertAction action = new MyMockAlertAction();
+    action.setGroupable(true);
+    AlertConfig conf =
+      new AlertConfig(ListUtil.list(new AlertFilter(AlertPatterns.True(),
+						    action)));
+    mgr.suppressStore(true);
+    mgr.updateConfig(conf);
+    mgr.raiseAlert(a1);
+    List recs = action.getAlerts();
+    assertEmpty(recs);
+
+    ConfigurationUtil.addFromArgs(AlertManagerImpl.PARAM_IGNORED_ALERTS,
+				  "InconclusivePoll;NotCacheNotDownNot");
+    mgr.raiseAlert(a1);
+    recs = action.getAlerts();
+    assertEquals(ListUtil.list(a1), recs);
+  }
+
   public void testRaiseDelayedAlerts1() throws Exception {
     TimeBase.setSimulated(1000);
-    log.debug("testRaiseAlert()");
     config(true, 20, 200, 500);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);
@@ -161,7 +183,6 @@ public class TestAlertManagerImpl extends LockssTestCase {
 
   public void testRaiseDelayedAlerts2() throws Exception {
     TimeBase.setSimulated(1000);
-    log.debug("testRaiseAlert()");
     config(true, 10, 200, 500);
     Alert a1 = new Alert("foo");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, false);

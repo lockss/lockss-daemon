@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.13 2005-09-14 00:33:40 thib_gc Exp $
+ * $Id: AlertManagerImpl.java,v 1.14 2005-10-06 08:17:09 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -57,6 +57,9 @@ public class AlertManagerImpl
   static final String PARAM_ALERTS_ENABLED = PREFIX + "enabled";
   static final boolean DEFAULT_ALERTS_ENABLED = false;
 
+  /** List of names of alerts that should be ignored if raised */
+  static final String PARAM_IGNORED_ALERTS = PREFIX + "ignoredAlerts";
+
   static final String DELAY_PREFIX = PREFIX + "notify.delay";
 
   static final String PARAM_DELAY_INITIAL = DELAY_PREFIX + "initial";
@@ -75,6 +78,8 @@ public class AlertManagerImpl
   private ConfigManager configMgr;
   private AlertConfig alertConfig;
   private boolean alertsEnabled = DEFAULT_ALERTS_ENABLED;
+  private Set ignoredAlerts;
+
   private long initialDelay;
   private long incrDelay;
   private long maxDelay;
@@ -114,6 +119,9 @@ public class AlertManagerImpl
         DEFAULT_DELAY_MAX);
     if (changedKeys.contains(PARAM_ALERT_ALL_EMAIL)) {
       tmpConfig(config.get(PARAM_ALERT_ALL_EMAIL));
+    }
+    if (changedKeys.contains(PARAM_IGNORED_ALERTS)) {
+      ignoredAlerts = SetUtil.theSet(config.getList(PARAM_IGNORED_ALERTS));
     }
   }
 
@@ -218,11 +226,15 @@ public class AlertManagerImpl
       log.debug3("alerts disabled");
       return;
     }
-    if (log.isDebug3()) log.debug3(alert.toString());
-    Set actions = findMatchingActions(alert, alertConfig.getFilters());
-    for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
-      AlertAction action = (AlertAction)iter.next();
-      recordOrDefer(alert, action);
+    if (ignoredAlerts != null && ignoredAlerts.contains(alert.getName())) {
+      if (log.isDebug3()) log.debug3("Raised but ignored: " + alert);
+    } else {
+      if (log.isDebug3()) log.debug3("Raised " + alert);
+      Set actions = findMatchingActions(alert, alertConfig.getFilters());
+      for (Iterator iter = actions.iterator(); iter.hasNext(); ) {
+	AlertAction action = (AlertAction)iter.next();
+	recordOrDefer(alert, action);
+      }
     }
   }
 
