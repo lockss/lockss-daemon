@@ -1,5 +1,5 @@
 /*
- * $Id: TinyUi.java,v 1.11 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: TinyUi.java,v 1.12 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -91,8 +91,7 @@ public class TinyUi extends BaseServletManager {
       HttpServer server = new HttpServer();
 
       // Create a port listener
-      HttpListener listener =
-	server.addListener(new org.mortbay.util.InetAddrPort(port));
+      server.addListener(new org.mortbay.util.InetAddrPort(port));
 
       // create auth realm
       if (doAuth) {
@@ -212,7 +211,6 @@ public class TinyUi extends BaseServletManager {
 
       Composite b = new Font(1, true);
       b.add("<br>This LOCKSS cache");
-      Configuration pc = Configuration.getPlatformConfig();
       String name = Configuration.getPlatformHostname();
       if (name != null) {
 	b.add(" (");

@@ -1,5 +1,5 @@
 /*
- * $Id: WhiteSpaceFilter.java,v 1.7 2005-02-21 03:03:23 tlipkis Exp $
+ * $Id: WhiteSpaceFilter.java,v 1.8 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,6 @@ public class WhiteSpaceFilter extends Reader {
   boolean inWhiteSpace = false;
   boolean hitEOF = false;
   boolean isClosed = false;
-  char[] charbuf;
 
 
   // Create filtered stream, initialize state.

@@ -1,5 +1,5 @@
 /*
- * $Id: TestSmtpOutputStream.java,v 1.1 2005-09-12 04:35:20 tlipkis Exp $
+ * $Id: TestSmtpOutputStream.java,v 1.2 2005-10-06 08:21:55 tlipkis Exp $
  */
 
 /*
@@ -33,12 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.mail;
 
 import java.io.*;
-import java.util.*;
-import java.net.*;
 import org.lockss.test.*;
 import org.lockss.util.*;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
 
 /**
  * This is the test class for org.lockss.mail.SmtpOutputStream

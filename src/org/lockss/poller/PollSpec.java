@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.29 2005-03-23 07:01:01 smorabito Exp $
+ * $Id: PollSpec.java,v 1.30 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,6 @@ public class PollSpec {
   static final String DEFAULT_PLUGIN_VERSION = "1";
 
   private static Logger theLog=Logger.getLogger("PollSpec");
-  private static LockssRandom theRandom = new LockssRandom();
   private String auId;
   private String pluginVersion;
   private String url;

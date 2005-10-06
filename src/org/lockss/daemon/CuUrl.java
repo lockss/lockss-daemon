@@ -1,5 +1,5 @@
 /*
-* $Id: CuUrl.java,v 1.15 2005-08-26 02:37:21 tlipkis Exp $
+* $Id: CuUrl.java,v 1.16 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,6 @@ public class CuUrl {
 	if (!au.shouldBeCached(cachedUrlString)) {
 	  throw new FileNotFoundException(urlString);
 	}
-	Plugin plugin = au.getPlugin();
 	cu = au.makeCachedUrl(cachedUrlString);
 	if (cu == null || !cu.hasContent()) {
 	  throw new FileNotFoundException(urlString);

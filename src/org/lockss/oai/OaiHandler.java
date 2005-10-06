@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.8 2005-10-04 22:55:48 tlipkis Exp $
+ * $Id: OaiHandler.java,v 1.9 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class OaiHandler {
   protected ListRecords listRecords;
   private String baseUrl;
   private int retries;
-  private int maxRetries;
+//   private int maxRetries;
   private OaiRequestData oaiData;
   private String fromDate;
   private String untilDate;

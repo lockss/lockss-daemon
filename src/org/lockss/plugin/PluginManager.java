@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.144 2005-10-05 18:35:52 troberts Exp $
+ * $Id: PluginManager.java,v 1.145 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -154,7 +154,6 @@ public class PluginManager
   private static Logger log = Logger.getLogger("PluginMgr");
 
   private ConfigManager configMgr;
-  private StatusService statusSvc;
 
   private File pluginDir = null;
   private AuOrderComparator auComparator = new AuOrderComparator();
@@ -209,7 +208,6 @@ public class PluginManager
   public void startService() {
     super.startService();
     configMgr = getDaemon().getConfigManager();
-    statusSvc = getDaemon().getStatusService();
     // Initialize the plugin directory.
     initPluginDir();
     PluginStatus.register(getDaemon(), this);

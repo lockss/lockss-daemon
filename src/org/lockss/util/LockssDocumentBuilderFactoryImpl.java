@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.2 2005-10-04 22:56:01 tlipkis Exp $
+ * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.3 2005-10-06 08:21:55 tlipkis Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class LockssDocumentBuilderFactoryImpl extends DocumentBuilderFactory {
 
 
   // This error handler uses a Logger to log error messages
-  class MyErrorHandler implements ErrorHandler {
+  static class MyErrorHandler implements ErrorHandler {
     private Logger log = Logger.getLogger(ERROR_LOGGER_NAME);
 
     //  This method is called in the event of a recoverable error

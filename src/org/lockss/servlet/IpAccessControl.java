@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.26 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.27 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -270,6 +270,7 @@ public abstract class IpAccessControl extends LockssServlet {
 	String ipStr = (String)iter.next();
 	IpFilter.Mask ip;
 	try {
+	  // value not used, constructor called to check if malformed
 	  ip = new IpFilter.Mask(ipStr, true);
 	} catch (IpFilter.MalformedException e) {
 	  errorIPs.addElement(ipStr + ":  " + e.getMessage());

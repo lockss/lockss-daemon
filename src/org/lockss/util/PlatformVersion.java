@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformVersion.java,v 1.3 2005-06-15 01:18:05 tlipkis Exp $
+ * $Id: PlatformVersion.java,v 1.4 2005-10-06 08:21:55 tlipkis Exp $
  */
 
 /*
@@ -41,9 +41,9 @@ import org.apache.oro.text.regex.*;
 public class PlatformVersion implements Version {
 
   // This platform doesn't put its name in the version string
-  public final String DEFAULT_PLATFORM_NAME = "OpenBSD CD";
+  public static final String DEFAULT_PLATFORM_NAME = "OpenBSD CD";
 
-  private final int BASE = 10;
+  private static final int BASE = 10;
 
   // The platform name.
   private String m_name;

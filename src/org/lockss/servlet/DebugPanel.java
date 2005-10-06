@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.4 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: DebugPanel.java,v 1.5 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -126,8 +126,6 @@ public class DebugPanel extends LockssServlet {
 
   private Element makeForm() {
     Composite comp = new Composite();
-    Block centeredBlock = new Block(Block.Center);
-
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
 

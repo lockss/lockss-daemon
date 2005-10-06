@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.38 2005-09-11 07:02:29 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.39 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -1290,7 +1290,6 @@ public class RemoteApi
   }
 
   public static class BackupInfo {
-    File dir;
     Map auDirs = new HashMap();
 
     void setAuDir(String auid, File dir) {
@@ -1302,7 +1301,7 @@ public class RemoteApi
     }
 
     public String toString() {
-      return "[BI: " + dir + ", " + auDirs + "]";
+      return "[BI: " + auDirs + "]";
     }
   }
 
@@ -1431,7 +1430,6 @@ public class RemoteApi
     }
     String moreInfoUrl = config.get(PARAM_BACKUP_EMAIL_INFO_URL,
 				    DEFAULT_BACKUP_EMAIL_INFO_URL);
-    String from = config.get(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL);
     if (StringUtil.isNullString(to)) {
       to = getBackEmailRecipient(config);
     }

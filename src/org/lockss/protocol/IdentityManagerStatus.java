@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerStatus.java,v 1.1 2004-12-02 14:48:26 troberts Exp $
+ * $Id: IdentityManagerStatus.java,v 1.2 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,6 @@ public class IdentityManagerStatus implements StatusAccessor {
 
   private Map makeRow(LcapIdentity id) {
     Map row = new HashMap();
-    String idKey = id.getIdKey();
     PeerIdentity pid = id.getPeerIdentity();
     if (pid.isLocalIdentity()) {
       StatusTable.DisplayedValue val =

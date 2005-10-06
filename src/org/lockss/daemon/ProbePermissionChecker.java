@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.6 2005-07-07 20:25:46 troberts Exp $
+ * $Id: ProbePermissionChecker.java,v 1.7 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class ProbePermissionChecker implements PermissionChecker {
   }
 
 
-  private class CustomHtmlParser extends GoslingHtmlParser {
+  private static class CustomHtmlParser extends GoslingHtmlParser {
     private static final String LOCKSSPROBE = "lockss-probe";
 
     protected String extractLinkFromTag(StringBuffer link) {

@@ -1,5 +1,5 @@
 /*
- * $Id: LocalServletManager.java,v 1.13 2005-09-21 17:24:19 thib_gc Exp $
+ * $Id: LocalServletManager.java,v 1.14 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -121,8 +121,7 @@ public class LocalServletManager extends BaseServletManager {
       HttpServer server = new HttpServer();
 
       // Create a port listener
-      HttpListener listener =
-	server.addListener(new org.mortbay.util.InetAddrPort(port));
+      server.addListener(new org.mortbay.util.InetAddrPort(port));
 
       // create auth realm
       if (doAuth) {

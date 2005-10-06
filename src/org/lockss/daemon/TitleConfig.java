@@ -1,5 +1,5 @@
 /*
- * $Id: TitleConfig.java,v 1.10 2005-10-05 06:05:26 tlipkis Exp $
+ * $Id: TitleConfig.java,v 1.11 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -251,7 +251,6 @@ public class TitleConfig {
   private boolean assignsDescr(ConfigParamDescr descr) {
     ConfigParamAssignment cpa = findCpa(descr);
     if (cpa != null) {
-      ConfigParamDescr cpd = cpa.getParamDescr();
       return !cpa.isEditable();
     }
     return false;

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.9 2005-10-05 19:42:01 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.10 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -281,7 +281,7 @@ public class IcpFactoryImpl implements IcpFactory {
         return new IcpMessageImpl(
             IcpMessage.ICP_OP_QUERY,
             IcpMessage.ICP_VERSION,
-            (short)(21 + query.toString().getBytes(Constants.URL_ENCODING).length),
+            (short)(21 + query.getBytes(Constants.URL_ENCODING).length),
             getNewRequestNumber(),
               (requestSrcRtt ? IcpMessage.ICP_FLAG_SRC_RTT : 0)
             | (requestHitObj ? IcpMessage.ICP_FLAG_HIT_OBJ : 0),

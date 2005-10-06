@@ -1,5 +1,5 @@
 /*
- * $Id: MDHashUserRealm.java,v 1.1 2005-08-25 19:36:31 tlipkis Exp $
+ * $Id: MDHashUserRealm.java,v 1.2 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ in this Software without prior written authorization from Stanford University.
 // are private
 
 // ========================================================================
-// $Id: MDHashUserRealm.java,v 1.1 2005-08-25 19:36:31 tlipkis Exp $
+// $Id: MDHashUserRealm.java,v 1.2 2005-10-06 08:21:57 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -362,7 +362,6 @@ public class MDHashUserRealm extends HashMap
   /* ------------------------------------------------------------ */
   private class User implements Principal
   {
-    List roles=null;
 
     /* ------------------------------------------------------------ */
     private UserRealm getUserRealm()

@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.40 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.41 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.40 2005-10-03 06:03:49 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.41 2005-10-06 08:21:56 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -742,8 +742,8 @@ public class ProxyHandler extends AbstractHttpHandler {
    */
   protected boolean isForbidden(URI uri) {
     String scheme=uri.getScheme();
-    String host=uri.getHost();
-    int port = uri.getPort();
+//     String host=uri.getHost();
+//     int port = uri.getPort();
     return isForbidden(scheme,true);
   }
     

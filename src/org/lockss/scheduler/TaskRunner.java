@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.33 2005-10-05 23:12:41 troberts Exp $
+ * $Id: TaskRunner.java,v 1.34 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -854,8 +854,8 @@ class TaskRunner {
     Deadline until = runningDeadline;
     boolean overOk = task.isOverrunAllowed();
     long timeDelta = 0;
-    long statsUpdateTime = TimeBase.nowMs() + statsUpdateInterval;
     long statsStartTime = TimeBase.nowMs();
+    long statsUpdateTime = statsStartTime + statsUpdateInterval;
 
     task.setStarted();
     task.setStepping(true);

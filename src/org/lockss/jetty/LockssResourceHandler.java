@@ -1,5 +1,5 @@
 /*
- * $Id: LockssResourceHandler.java,v 1.11 2005-08-23 22:05:45 tlipkis Exp $
+ * $Id: LockssResourceHandler.java,v 1.12 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Portions of this code are:
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: LockssResourceHandler.java,v 1.11 2005-08-23 22:05:45 tlipkis Exp $
+// $Id: LockssResourceHandler.java,v 1.12 2005-10-06 08:21:57 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -238,9 +238,6 @@ public class LockssResourceHandler extends AbstractHttpHandler {
         throws HttpException, IOException
     {
         Resource resource = getResource(request, pathInContext);
-        if (resource==null)
-            return;
-
         if (resource==null)
             return;
 

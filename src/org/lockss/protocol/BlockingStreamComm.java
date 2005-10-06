@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.7 2005-10-04 05:10:26 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.8 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -622,14 +622,14 @@ public class BlockingStreamComm
    */
   void execute(Runnable run) throws InterruptedException {
     if (run == null)
-      log.warning("Executing " + run, new Throwable());
+      log.warning("Executing null", new Throwable());
     pool.execute(run);
   }
 
   void XXXexecute(Runnable run) {
     try {
       if (run == null)
-	log.warning("Executing " + run, new Throwable());
+	log.warning("Executing null", new Throwable());
       pool.execute(run);
     } catch (InterruptedException e) {
       // Shouldn't happen in abortWhenBlocked mode

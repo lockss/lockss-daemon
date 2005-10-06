@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRepositoryStatus.java,v 1.19 2005-06-04 18:59:53 tlipkis Exp $
+ * $Id: LockssRepositoryStatus.java,v 1.20 2005-10-06 08:21:56 tlipkis Exp $
  */
 
 /*
@@ -257,7 +257,6 @@ public class LockssRepositoryStatus extends BaseLockssDaemonManager {
 	PluginManager.pluginKeyFromId(PluginManager.pluginIdFromAuId(auid));
       Plugin plugin = pluginMgr.getPlugin(pluginKey);
       if (plugin == null) return true;
-      List descrs = plugin.getAuConfigDescrs();
       if (auidProps == null) {
 	return true;
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: BasePlugin.java,v 1.32 2005-10-05 06:05:26 tlipkis Exp $
+ * $Id: BasePlugin.java,v 1.33 2005-10-06 08:21:57 tlipkis Exp $
  */
 
 /*
@@ -166,7 +166,6 @@ public abstract class BasePlugin
   }
 
   TitleConfig initOneTitle(Configuration titleConfig) {
-    String pluginName = titleConfig.get(TITLE_PARAM_PLUGIN);
     String title = titleConfig.get(TITLE_PARAM_TITLE);
     TitleConfig tc = new TitleConfig(title, this);
     tc.setPluginVersion(titleConfig.get(TITLE_PARAM_PLUGIN_VERSION));
