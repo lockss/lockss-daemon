@@ -1,5 +1,5 @@
 /*
- * $Id: AddAu.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: AddAu.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -84,7 +84,7 @@ public class AddAu extends AuActivityBase {
     validClassName = false;
     if ((className = getParameter(AP_E_CLASSNAME)) != null) { 
       
-      if (pluginLoaded(getRemoteApi().pluginKeyFromId(className))) {
+      if (pluginLoaded(RemoteApi.pluginKeyFromId(className))) {
         validClassName = true;
       }
     }
@@ -136,8 +136,8 @@ public class AddAu extends AuActivityBase {
     
     iterator = titleSet.iterator();
     while (iterator.hasNext()) {
-      getXmlUtils().addText(getXmlUtils().createElement(root, AP_E_PUBLICATION),
-                           (String) iterator.next());
+      XmlUtils.addText(getXmlUtils().createElement(root, AP_E_PUBLICATION),
+                       (String) iterator.next());
     }
   }
 
@@ -178,10 +178,10 @@ public class AddAu extends AuActivityBase {
       pluginRoot  = getXmlUtils().createElement(root, AP_E_PLUGIN);
       
       element = getXmlUtils().createElement(pluginRoot, AP_E_NAME);
-			getXmlUtils().addText(element, pluginName);
+      XmlUtils.addText(element, pluginName);
 
       element = getXmlUtils().createElement(pluginRoot, AP_E_ID);
-			getXmlUtils().addText(element, pluginId);
+      XmlUtils.addText(element, pluginId);
 
     }
   }
@@ -195,7 +195,7 @@ public class AddAu extends AuActivityBase {
     Element element = getXmlUtils().createElement(root, AP_E_CLASSNAME);
 
     if (valid) {
-      getXmlUtils().addText(element, getParameter(AP_E_CLASSNAME));
+      XmlUtils.addText(element, getParameter(AP_E_CLASSNAME));
     }
   }
 }

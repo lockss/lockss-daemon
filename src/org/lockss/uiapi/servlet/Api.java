@@ -1,5 +1,5 @@
 /*
- * $Id: Api.java,v 1.1 2005-03-02 20:49:44 ssmail Exp $
+ * $Id: Api.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class Api extends ServletBase
        * command activity (either command setup or the command itself) and 
        * return the response document
        */
-      document = xmlUtils.parseXmlString(xml);
+      document = XmlUtils.parseXmlString(xml);
       
       responder.initialize(servletInterface, 
                            interfaceName,

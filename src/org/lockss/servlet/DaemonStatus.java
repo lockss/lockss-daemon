@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.55 2005-10-05 23:12:40 troberts Exp $
+ * $Id: DaemonStatus.java,v 1.56 2005-10-06 23:42:46 troberts Exp $
  */
 
 /*
@@ -242,17 +242,17 @@ public class DaemonStatus extends LockssServlet {
       StatusTable statTable = makeTable();
       XmlStatusTable xmlTable = new XmlStatusTable(statTable);
       Document xmlTableDoc = xmlTable.getTableDocument();
-      xmlTable.getXmlDomBuilder().serialize(xmlTableDoc, wrtr);
+      XmlDomBuilder.serialize(xmlTableDoc, wrtr);
     } catch (Exception e) {
       XmlDomBuilder xmlBuilder =
           new XmlDomBuilder(XmlStatusConstants.NS_PREFIX,
                             XmlStatusConstants.NS_URI,
                             "1.0");
-      Document errorDoc = xmlBuilder.createDocument();
+      Document errorDoc = XmlDomBuilder.createDocument();
       org.w3c.dom.Element rootElem = xmlBuilder.createRoot(errorDoc,
           XmlStatusConstants.ERROR);
       if (e instanceof StatusService.NoSuchTableException) {
-        xmlBuilder.addText(rootElem, "No such table: " + e.toString());
+        XmlDomBuilder.addText(rootElem, "No such table: " + e.toString());
       } else {
         String emsg = e.toString();
         StringBuffer buffer = new StringBuffer("Error getting table: ");
@@ -260,9 +260,9 @@ public class DaemonStatus extends LockssServlet {
         buffer.append("\n");
         buffer.append(StringUtil.trimStackTrace(emsg,
                                                 StringUtil.stackTraceString(e)));
-        xmlBuilder.addText(rootElem, buffer.toString());
+        XmlDomBuilder.addText(rootElem, buffer.toString());
       }
-      xmlBuilder.serialize(errorDoc, wrtr);
+      XmlDomBuilder.serialize(errorDoc, wrtr);
       return;
     }
   }

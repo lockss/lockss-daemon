@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.46 2005-10-05 18:35:52 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.47 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -414,7 +414,8 @@ public class RepairCrawler extends CrawlerImpl {
 
   public PermissionMap getPermissionMap() {
     if (permissionMap == null) {
-      permissionMap = new PermissionMap();
+      populatePermissionMap();
+//      permissionMap = new PermissionMap();
     }
     return permissionMap;
   }

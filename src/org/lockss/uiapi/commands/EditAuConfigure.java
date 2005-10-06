@@ -1,5 +1,5 @@
 /*
- * $Id: EditAuConfigure.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: EditAuConfigure.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -184,7 +184,7 @@ public class EditAuConfigure extends AuActivityBase {
     auId = getAndVerifyParameter(AP_E_AUID); 
     setPlugin(getAnyAuProxy(auId));
 
-    key = pluginManager.pluginKeyFromId(getPlugin().getPluginId());
+    key = PluginManager.pluginKeyFromId(getPlugin().getPluginId());
     if (!pluginLoaded(key)) {
       return error("Plugin is not loaded: " + key);
     }

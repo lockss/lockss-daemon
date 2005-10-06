@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.7 2005-08-31 00:09:14 rebeccai Exp $
+ * $Id: EDPCellData.java,v 1.8 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -56,54 +56,54 @@ public class EDPCellData {
   EDPCellData(EditableDefinablePlugin edp, String key){
     this(edp, key, null, null);
 
-    if(key.equals(edp.PLUGIN_NAME)) {
+    if(key.equals(EditableDefinablePlugin.PLUGIN_NAME)) {
       m_data = edp.getPluginName();
     }
-    else if(key.equals(edp.PLUGIN_IDENTIFIER)) {
+    else if(key.equals(EditableDefinablePlugin.PLUGIN_IDENTIFIER)) {
       m_data = edp.getPluginIdentifier();
     }
-    else if(key.equals(edp.PLUGIN_VERSION)) {
+    else if(key.equals(EditableDefinablePlugin.PLUGIN_VERSION)) {
       m_data = edp.getPluginVersion();
     }
-    else if(key.equals(edp.PLUGIN_NOTES)) {
+    else if(key.equals(EditableDefinablePlugin.PLUGIN_NOTES)) {
       m_data = edp.getPluginNotes();
     }
-    else if(key.equals(edp.PLUGIN_PROPS)) {
+    else if(key.equals(EditableDefinablePlugin.PLUGIN_PROPS)) {
       m_data = edp.getConfigParamDescrs();
     }
-    else if(key.equals(edp.AU_RULES)) {
+    else if(key.equals(EditableDefinablePlugin.AU_RULES)) {
       m_data = edp.getAuCrawlRules();
     }
-    else if(key.equals(edp.AU_START_URL)) {
+    else if(key.equals(EditableDefinablePlugin.AU_START_URL)) {
       m_data = new PrintfTemplate(edp.getAuStartUrl());
     }
-    else if(key.equals(edp.AU_NAME)) {
+    else if(key.equals(EditableDefinablePlugin.AU_NAME)) {
       m_data = new PrintfTemplate(edp.getAuName());
     }
-    else if(key.equals(edp.AU_CRAWL_DEPTH)) {
+    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_DEPTH)) {
       m_data = new Integer(edp.getAuCrawlDepth());
     }
-    else if(key.equals(edp.AU_CRAWL_WINDOW)) {
+    else if(key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW)) {
       m_data = edp.getAuCrawlWindow();
     }
-    else if(key.equals(edp.AU_FILTER_SUFFIX)) {
+    else if(key.equals(EditableDefinablePlugin.AU_FILTER_SUFFIX)) {
       m_data = edp.getAuFilters();
     }
-    else if(key.equals(edp.AU_PAUSE_TIME)) {
+    else if(key.equals(EditableDefinablePlugin.AU_PAUSE_TIME)) {
       m_data = new Long(edp.getAuPauseTime());
       m_displayString = TimeEditor.millisToString(edp.getAuPauseTime());
     }
-    else if(key.equals(edp.AU_NEWCONTENT_CRAWL)) {
+    else if(key.equals(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL)) {
       m_data = new Long(edp.getNewContentCrawlIntv());
       m_displayString = TimeEditor.millisToString(edp.getNewContentCrawlIntv());
     }
-    else if(key.equals(edp.PLUGIN_EXCEPTION_HANDLER)) {
+    else if(key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
       m_data = edp.getPluginExceptionHandler();
     }
-    else if(key.equals(edp.CM_EXCEPTION_LIST_KEY)) {
+    else if(key.equals(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY)) {
       m_data = edp.getSingleExceptionHandlers();
     }
-    else if(key.equals(edp.CM_CRAWL_TYPE)) {
+    else if(key.equals(EditableDefinablePlugin.CM_CRAWL_TYPE)) {
       m_data = edp.getCrawlType();
     }
   }
@@ -157,7 +157,7 @@ public class EDPCellData {
 	m_displayString = ELLIPSIS;
       }
       else if (m_data == null) {
-	  if(m_key.equals(m_plugin.AU_CRAWL_WINDOW))
+	  if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_WINDOW))
 	      m_displayString = ELLIPSIS;
 	  else
 	      m_displayString = "NONE";
@@ -173,10 +173,10 @@ public class EDPCellData {
     if (m_plugin == null || m_key == null)return;
     m_data = template;
     m_displayString = template.getViewableTemplate();
-    if (m_key.equals(m_plugin.AU_NAME)) {
+    if (m_key.equals(EditableDefinablePlugin.AU_NAME)) {
       m_plugin.setAuName(template.getViewableTemplate());
     }
-    else if (m_key.equals(m_plugin.AU_START_URL)) {
+    else if (m_key.equals(EditableDefinablePlugin.AU_START_URL)) {
       m_plugin.setAuStartURL(template.getViewableTemplate());
     }
 
@@ -185,24 +185,24 @@ public class EDPCellData {
 
   public void updateStringData(String data) {
     if(m_plugin == null || m_key == null || data == null) return;
-    if(m_key.equals(m_plugin.PLUGIN_NAME)) {
+    if(m_key.equals(EditableDefinablePlugin.PLUGIN_NAME)) {
       m_data = data;
       m_plugin.setPluginName((String)m_data);
     }
-    else if(m_key.equals(m_plugin.PLUGIN_IDENTIFIER)) {
+    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_IDENTIFIER)) {
       m_data = data;
       m_plugin.setPluginIdentifier((String)m_data);
     }
-    else if(m_key.equals(m_plugin.PLUGIN_VERSION)) {
+    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_VERSION)) {
       m_data = data;
       m_plugin.setPluginVersion((String)m_data);
     }
-    else if(m_key.equals(m_plugin.PLUGIN_NOTES)) {
+    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_NOTES)) {
       m_data = data;
       m_plugin.setPluginNotes((String)m_data);
       m_displayString = data;
     }
-    else if(m_key.equals(m_plugin.AU_CRAWL_DEPTH)) {
+    else if(m_key.equals(EditableDefinablePlugin.AU_CRAWL_DEPTH)) {
       m_data = new Integer(data);
       m_plugin.setAuCrawlDepth(((Integer)m_data).intValue());
     }
@@ -213,21 +213,21 @@ public class EDPCellData {
       m_plugin.setAuCrawlWindow((String)m_data);
     }
     */
-    else if(m_key.equals(m_plugin.AU_PAUSE_TIME)) {
+    else if(m_key.equals(EditableDefinablePlugin.AU_PAUSE_TIME)) {
       m_data = new Long(data);
       m_plugin.setAuPauseTime(((Long)m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
-    else if(m_key.equals(m_plugin.AU_NEWCONTENT_CRAWL)) {
+    else if(m_key.equals(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL)) {
       m_data = new Long(data);
       m_plugin.setNewContentCrawlIntv(((Long) m_data).longValue());
       m_displayString = TimeEditor.millisToString(((Long)m_data).longValue());
     }
-    else if(m_key.equals(m_plugin.PLUGIN_EXCEPTION_HANDLER)) {
+    else if(m_key.equals(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER)) {
       m_data = data;
       m_plugin.setPluginExceptionHandler((String)m_data);
     }
-    else if(m_key.equals(m_plugin.CM_CRAWL_TYPE)) {
+    else if(m_key.equals(EditableDefinablePlugin.CM_CRAWL_TYPE)) {
       m_data = data;
       m_plugin.setCrawlType((String)m_data);
     }

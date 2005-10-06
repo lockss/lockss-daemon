@@ -1,5 +1,5 @@
 /*
- * $Id: AuActivityBase.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: AuActivityBase.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -446,28 +446,28 @@ public class AuActivityBase extends StatusActivityBase {
       auKeyElement = xmlUtils.createElement(keyRoot, AP_E_KEY);
       
       element = xmlUtils.createElement(auKeyElement, AP_E_INTERNAL);
-      xmlUtils.addText(element, descriptor.getKey());
+      XmlUtils.addText(element, descriptor.getKey());
  
       element = xmlUtils.createElement(auKeyElement, AP_E_NAME);
-      xmlUtils.addText(element, descriptor.getDisplayName());
+      XmlUtils.addText(element, descriptor.getDisplayName());
  
       element = xmlUtils.createElement(auKeyElement, AP_E_DESCRIPTION);
-      xmlUtils.addText(element, descriptor.getDescription());
+      XmlUtils.addText(element, descriptor.getDescription());
       
       value = (config == null) ? "" : config.get(descriptor.getKey());
 
       element = xmlUtils.createElement(auKeyElement, AP_E_VALUE);
-      xmlUtils.addText(element, value);
+      XmlUtils.addText(element, value);
 
       edit = false;
       if (noEditKeys != null) {
         edit = !noEditKeys.contains(descriptor.getKey());
       }
       element = xmlUtils.createElement(auKeyElement, AP_E_EDIT);
-      xmlUtils.addText(element, edit ? COM_TRUE : COM_FALSE);
+      XmlUtils.addText(element, edit ? COM_TRUE : COM_FALSE);
       
       element = xmlUtils.createElement(auKeyElement, AP_E_SIZE);
-      xmlUtils.addText(element, ("" + descriptor.getSize()));
+      XmlUtils.addText(element, ("" + descriptor.getSize()));
     }
   }
 
@@ -483,17 +483,17 @@ public class AuActivityBase extends StatusActivityBase {
     Element   element;
        
     element = xmlUtils.createElement(pluginRoot, AP_E_ID);
-    xmlUtils.addText(element, _pluginProxy.getPluginId());
+    XmlUtils.addText(element, _pluginProxy.getPluginId());
  
     element = xmlUtils.createElement(pluginRoot, AP_E_NAME);
-    xmlUtils.addText(element, _pluginProxy.getPluginName());
+    XmlUtils.addText(element, _pluginProxy.getPluginName());
 
     element = xmlUtils.createElement(pluginRoot, AP_E_VERSION);
-    xmlUtils.addText(element, _pluginProxy.getVersion());
+    XmlUtils.addText(element, _pluginProxy.getVersion());
     
     element = xmlUtils.createElement(pluginRoot, AP_E_TITLE);
     if (_titleConfig != null) {
-      xmlUtils.addText(element, _titleConfig.getJournalTitle());
+      XmlUtils.addText(element, _titleConfig.getJournalTitle());
     }
   }
 

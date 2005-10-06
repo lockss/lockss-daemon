@@ -1,5 +1,5 @@
 /*
- * $Id: FilterTestDialog.java,v 1.3 2005-08-31 00:08:24 rebeccai Exp $
+ * $Id: FilterTestDialog.java,v 1.4 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -209,7 +209,7 @@ public class FilterTestDialog extends JDialog {
 
   void destButton_actionPerformed(ActionEvent e) {
     int option = m_fileChooser.showSaveDialog(this);
-    if(option == m_fileChooser.APPROVE_OPTION ||
+    if(option == JFileChooser.APPROVE_OPTION ||
        m_fileChooser.getSelectedFile() == null)
       return;
     m_destFile = m_fileChooser.getSelectedFile();
@@ -219,7 +219,7 @@ public class FilterTestDialog extends JDialog {
   void srcButton_actionPerformed(ActionEvent e) {
 
     int option = m_fileChooser.showOpenDialog(this);
-    if(option == m_fileChooser.APPROVE_OPTION ||
+    if(option == JFileChooser.APPROVE_OPTION ||
        m_fileChooser.getSelectedFile() == null)
       return;
     m_srcFile = m_fileChooser.getSelectedFile();

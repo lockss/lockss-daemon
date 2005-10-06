@@ -1,5 +1,5 @@
 /*
- * $Id: Echo.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: Echo.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -60,12 +60,12 @@ public class Echo extends ApiActivityBase {
      * Get sender's comment
      */
     Element element = xmlUtils.getElement(getRequestRoot(), AP_E_COMMENT);
-    String  comment = xmlUtils.getText(element);
+    String  comment = XmlUtils.getText(element);
     /*
      * Return it as a comment in the response document
      */
     element = xmlUtils.createElement(getResponseRoot(), AP_E_COMMENT);
-    xmlUtils.addText(element, comment);
+    XmlUtils.addText(element, comment);
   
     return true;
   }

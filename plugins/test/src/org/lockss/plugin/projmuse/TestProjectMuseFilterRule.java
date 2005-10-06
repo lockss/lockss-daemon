@@ -1,5 +1,5 @@
 /*
- * $Id: TestProjectMuseFilterRule.java,v 1.1 2005-03-15 07:43:19 tlipkis Exp $
+ * $Id: TestProjectMuseFilterRule.java,v 1.2 2005-10-06 23:42:46 troberts Exp $
  */
 
 /*
@@ -58,8 +58,8 @@ public class TestProjectMuseFilterRule extends LockssTestCase {
     content = "This <a href=remove>content";
     reader = rule.createFilteredReader(new StringReader(content));
     assertEquals(expectedContent, StringUtil.fromReader(reader));
-    content = "This " + rule.MENU_START + " remove all this " +
-        rule.MENU_END + "content";
+    content = "This " + ProjectMuseFilterRule.MENU_START + " remove all this " +
+        ProjectMuseFilterRule.MENU_END + "content";
     reader = rule.createFilteredReader(new StringReader(content));
     assertEquals(expectedContent, StringUtil.fromReader(reader));
   }

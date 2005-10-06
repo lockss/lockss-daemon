@@ -1,5 +1,5 @@
 /*
- * $Id: AddAuConfigure.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: AddAuConfigure.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -226,10 +226,10 @@ public class AddAuConfigure extends AuActivityBase {
        *     AddAuWithCompleteFunctionalityPage.java for full support.
        */
       if ((value = getParameter(AP_E_PLUGIN)) != null) { 
-        key = getRemoteApi().pluginKeyFromId(value);
+        key = RemoteApi.pluginKeyFromId(value);
     
       } else if ((value = getParameter(AP_E_CLASSNAME)) != null) { 
-        key = getRemoteApi().pluginKeyFromId(value);
+        key = RemoteApi.pluginKeyFromId(value);
       
       } else {
         return error("Supply a Publication, Plugin, or Class name");
@@ -277,10 +277,10 @@ public class AddAuConfigure extends AuActivityBase {
      * Successful creation - add the AU name and ID to the response document
      */
     element = getXmlUtils().createElement(getResponseRoot(), AP_E_AU);
-    getXmlUtils().addText(element, au.getName());
+    XmlUtils.addText(element, au.getName());
  
     element = getXmlUtils().createElement(getResponseRoot(), AP_E_AUID);
-    getXmlUtils().addText(element, au.getAuId());
+    XmlUtils.addText(element, au.getAuId());
     
     return true;
   }    

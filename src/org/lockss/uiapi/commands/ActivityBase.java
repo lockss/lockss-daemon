@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityBase.java,v 1.1 2005-03-02 20:55:57 ssmail Exp $
+ * $Id: ActivityBase.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public abstract class ActivityBase implements ApiParameters,
     /*
      * Create a standard response Document
      */
-    _responseDoc = _xmlUtils.createDocument();
+    _responseDoc = XmlUtils.createDocument();
     responseRoot = _xmlUtils.createRoot(_responseDoc, AP_RESPONSEROOT);
     
     _xmlUtils.setAttribute(responseRoot, AP_A_TYPE, AP_TYPE_STANDARD); 
@@ -315,7 +315,7 @@ public abstract class ActivityBase implements ApiParameters,
     textElement = _xmlUtils.createElement(element, AP_E_MESSAGE);
     
     if (text != null) {
-      _xmlUtils.addText(textElement, text.trim());
+      XmlUtils.addText(textElement, text.trim());
     }
 
     /*
@@ -340,7 +340,7 @@ public abstract class ActivityBase implements ApiParameters,
     textElement = _xmlUtils.createElement(element, AP_E_MESSAGE);
     
     if (_responseDetail != null) { 
-      _xmlUtils.addText(textElement, _responseDetail.trim());
+      XmlUtils.addText(textElement, _responseDetail.trim());
     }
     
     try { 
@@ -410,7 +410,7 @@ public abstract class ActivityBase implements ApiParameters,
    */
   public void sendResponse(Writer writer) throws IOException, XmlException {
 
-    _xmlUtils.serialize(_responseDoc, writer);
+    XmlUtils.serialize(_responseDoc, writer);
     writer.flush();
   }
   

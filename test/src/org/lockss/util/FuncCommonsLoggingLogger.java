@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommonsLoggingLogger.java,v 1.3 2004-12-09 08:23:21 tlipkis Exp $
+ * $Id: FuncCommonsLoggingLogger.java,v 1.4 2005-10-06 23:42:46 troberts Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class FuncCommonsLoggingLogger extends LockssTestCase {
     MockLogTarget target = new MockLogTarget();
     Log log = LogFactory.getLog(logName);
     Logger lockssLog = Logger.getLogger(logName);
-    lockssLog.setTarget(target);
+    Logger.setTarget(target);
     // disable thread id, makes message order dependent on debug level
     lockssLog.setIdThread(false);
     assertEmpty(target.getMessages());

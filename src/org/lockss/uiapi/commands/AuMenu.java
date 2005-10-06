@@ -1,5 +1,5 @@
 /*
- * $Id: AuMenu.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: AuMenu.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -158,10 +158,10 @@ public class AuMenu extends AuActivityBase {
       auElement     = xmlUtils.createElement(actionElement, AP_E_AU);
 
       nameElement = xmlUtils.createElement(auElement, AP_E_NAME);
-      xmlUtils.addText(nameElement, au.getName());
+      XmlUtils.addText(nameElement, au.getName());
         
       idElement = xmlUtils.createElement(auElement, AP_E_ID);
-      xmlUtils.addText(idElement, au.getAuId());
+      XmlUtils.addText(idElement, au.getAuId());
     }
   }
 }

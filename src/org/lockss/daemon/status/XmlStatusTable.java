@@ -1,5 +1,5 @@
 /*
- * $Id: XmlStatusTable.java,v 1.10 2005-05-25 07:34:01 tlipkis Exp $
+ * $Id: XmlStatusTable.java,v 1.11 2005-10-06 23:42:45 troberts Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class XmlStatusTable {
    * @throws XmlDomBuilder.XmlDomException
    */
   Document createDocument() throws XmlDomBuilder.XmlDomException {
-    Document doc = xmlBuilder.createDocument();
+    Document doc = XmlDomBuilder.createDocument();
 
     Element rootElem = null;
     Element element = null;
@@ -212,7 +212,7 @@ public class XmlStatusTable {
   Element addTextElement(Element parent, String type, String value) {
     Element element = xmlBuilder.createElement(parent, type);
     if (value != null) {
-      xmlBuilder.addText(element, value);
+      XmlDomBuilder.addText(element, value);
     }
     return element;
   }
@@ -287,7 +287,7 @@ public class XmlStatusTable {
       }
       value = dv.getValue();
     }
-    xmlBuilder.addText(element, formatByType(value, type));
+    XmlDomBuilder.addText(element, formatByType(value, type));
     return element;
   }
 
