@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.163 2005-10-05 06:02:22 tlipkis Exp $
+ $Id: build.xml,v 1.164 2005-10-06 08:16:44 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -234,14 +234,14 @@ Args:
   <!--  Compiler options -->
   <property name="javac.debug"             value="on" />
   <property name="javac.optimize"          value="off" />
-  <condition property="javac.deprecation"  value="false">
-   <equals arg1="${build.compiler}" arg2="jikes" />
-  </condition>
+
+  <!-- jikes is too strict if deprecations and warnings are turned on -->
   <condition property="nowarn"  value="true">
    <equals arg1="${build.compiler}" arg2="jikes" />
   </condition>
-
-  <!-- jikes is too strict if deprecation warnings are turned on -->
+  <condition property="javac.deprecation"  value="false">
+   <equals arg1="${build.compiler}" arg2="jikes" />
+  </condition>
   <condition property="javac.deprecation"  value="true">
    <not>
     <equals arg1="${build.compiler}" arg2="jikes" />
@@ -446,6 +446,15 @@ Test results in ${test.results}
       <equals arg1="1.4" arg2="${ant.java.version}"/>
       <equals arg1="1.5" arg2="${ant.java.version}"/>
       <equals arg1="1.6" arg2="${ant.java.version}"/>
+      <equals arg1="1.7" arg2="${ant.java.version}"/>
+     </or>
+    </condition>
+
+    <condition property="is-java-1.5">
+     <or>
+      <equals arg1="1.5" arg2="${ant.java.version}"/>
+      <equals arg1="1.6" arg2="${ant.java.version}"/>
+      <equals arg1="1.7" arg2="${ant.java.version}"/>
      </or>
     </condition>
 
@@ -1811,7 +1820,7 @@ Test results in ${test.results}
     <findbugs home="${findbugs.home}"
               output="emacs"
               excludeFilter="test/scripts/findbugsexclude.xml" >
-      <auxClasspath refid="run.classpath" />
+      <auxClasspath refid="test.compile.classpath" />
       <sourcePath path="${src}" />
       <class location="${lockss.jar}" />
     </findbugs>
