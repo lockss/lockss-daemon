@@ -1,5 +1,5 @@
 /*
- * $Id: LcapRouter.java,v 1.44 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: LcapRouter.java,v 1.45 2005-10-07 23:46:47 smorabito Exp $
  */
 
 /*
@@ -176,7 +176,7 @@ public class LcapRouter
       LcapMessage lmsg = makeV3LcapMessage(pmsg);
       runHandlers(lmsg);
     } catch (Exception e) {
-      log.warning("Processing incoming " + pmsg);
+      log.warning("Exception while processing incoming " + pmsg, e);
     } finally {
       pmsg.delete();
     }

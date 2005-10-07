@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.13 2005-07-18 08:11:00 tlipkis Exp $
+ * $Id: Configuration.java,v 1.14 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -307,6 +307,14 @@ public abstract class Configuration {
    * Return a list of values for the specified key.
    */
   public abstract List getList(String key);
+  
+  public List getList(String key, List dfault) {
+    List retVal = getList(key);
+    if (retVal == null) {
+      return dfault;
+    }
+    return retVal;
+  }
 
   /** Return the config value as a long.
    * @throws Configuration.InvalidParam if the value is missing or

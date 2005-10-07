@@ -1,5 +1,5 @@
 /*
- * $Id: V3Events.java,v 1.5 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3Events.java,v 1.6 2005-10-07 23:46:49 smorabito Exp $
  */
 
 /*
@@ -53,6 +53,7 @@ public class V3Events {
 
   // Each msg event here probably wants a corresponsing instance below, and
   // an entry in msgEvents mapping opcode to instance
+  public static class Poll extends PsmMsgEvent {}
   public static class PollProof extends PsmMsgEvent {}
   public static class RepairRequest extends PsmMsgEvent {}
   public static class Repair extends PsmMsgEvent {}
@@ -79,6 +80,7 @@ public class V3Events {
   public static PsmEvent evtWaitHashingDone = new WaitHashingDone();
   public static PsmEvent evtWaitVoteRequest = new WaitVoteRequest();
 
+  public static Poll msgPoll = new Poll();
   public static PollAck msgPollAck = new PollAck();
   public static Nominate msgNominate = new Nominate();
   public static VoteRequest msgVoteRequest = new VoteRequest();
@@ -91,6 +93,7 @@ public class V3Events {
   // Mapping of message opcode to event class (prototype)
   private static final Map msgEvents = new HashMap();
   static {
+    msgEvents.put(new Integer(V3LcapMessage.MSG_POLL), msgPoll);
     msgEvents.put(new Integer(V3LcapMessage.MSG_POLL_ACK), msgPollAck);
     msgEvents.put(new Integer(V3LcapMessage.MSG_POLL_PROOF), msgPollProof);
     msgEvents.put(new Integer(V3LcapMessage.MSG_NOMINATE), msgNominate);

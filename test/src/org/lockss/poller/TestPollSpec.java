@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollSpec.java,v 1.18 2005-03-18 09:09:20 smorabito Exp $
+ * $Id: TestPollSpec.java,v 1.19 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestPollSpec extends LockssTestCase {
 
     CachedUrlSet cus =
       new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
-    PollSpec ps = new PollSpec(cus, Poll.CONTENT_POLL);
+    PollSpec ps = new PollSpec(cus, Poll.V1_CONTENT_POLL);
     assertEquals(auid, ps.getAuId());
     assertEquals(url, ps.getUrl());
     assertEquals(lower, ps.getLwrBound());
@@ -102,7 +102,7 @@ public class TestPollSpec extends LockssTestCase {
     au.setPlugin(plug);
     CachedUrlSet cus =
       new MockCachedUrlSet(au, new RangeCachedUrlSetSpec(url, lower, upper));
-    PollSpec ps = new PollSpec(cus, Poll.CONTENT_POLL);
+    PollSpec ps = new PollSpec(cus, Poll.V1_CONTENT_POLL);
     PeerIdentity id = null;
     try {
       id = theDaemon.getIdentityManager().stringToPeerIdentity("127.0.0.1");

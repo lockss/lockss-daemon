@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.9 2005-07-13 07:53:05 smorabito Exp $
+ * $Id: CollectionUtil.java,v 1.10 2005-10-07 23:46:46 smorabito Exp $
  */
 
 /*
@@ -126,7 +126,7 @@ public class CollectionUtil {
     return next;
   }
 
-   /**
+  /**
    * Randomly select <i>count</i> entries evenly distributed from
    * collection <i>c</i>.
    *
@@ -139,8 +139,8 @@ public class CollectionUtil {
   public static Collection randomSelection(Collection c, int count) {
     if (count <= 0 || count > c.size()) {
       throw new IllegalArgumentException("'count' must be non-negative "+
-					 "and smaller than or equal "+
-					 " to the size of the collection.");
+                                         "and smaller than or equal "+
+                                         " to the size of the collection.");
     }
     LockssRandom random = new LockssRandom();
     ArrayList l = new ArrayList(c);
@@ -155,7 +155,7 @@ public class CollectionUtil {
     }
     return result;
   }
-
+  
   /**
    * Randomly select one item from a collection.
    *

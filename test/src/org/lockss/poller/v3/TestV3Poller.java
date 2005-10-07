@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.3 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -153,7 +153,7 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makePollAckMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      msgs[i] = new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK, voters[i],
+      msgs[i] = new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK, "key", voters[i],
                                   "http://www.test.org",
                                   123456789, 987654321,
                                   pollerNonces[i],
@@ -165,7 +165,8 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeNominateMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_NOMINATE, voters[i],
+      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_NOMINATE, "key",
+                                            voters[i],
                                             "http://www.test.org",
                                             123456789, 987654321,
                                             pollerNonces[i],
@@ -182,7 +183,8 @@ public class TestV3Poller extends LockssTestCase {
   private V3LcapMessage[] makeVoteMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
-      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, voters[i],
+      V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, "key",
+                                            voters[i],
                                             "http://www.test.org",
                                             123456789, 987654321,
                                             pollerNonces[i],
@@ -199,6 +201,7 @@ public class TestV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REP,
+                                            "key",
                                             voters[i],
                                             "http://www.test.org",
                                             123456789, 987654321,
@@ -222,7 +225,7 @@ public class TestV3Poller extends LockssTestCase {
   public void testInitHasherByteArrays() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
     LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(v3Poller, "innerCircle");
+        .getValue(v3Poller, "theVoters");
     assertEquals(innerCircle.size(), voters.length);
     byte[][] initBytes = (byte[][]) PrivilegedAccessor
         .invokeMethod(v3Poller, "initHasherByteArrays");
@@ -244,7 +247,7 @@ public class TestV3Poller extends LockssTestCase {
   public void testInitMessageDigests() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
     LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(v3Poller, "innerCircle");
+        .getValue(v3Poller, "theVoters");
     assertEquals(innerCircle.size(), voters.length);
     MessageDigest[] digests = (MessageDigest[]) PrivilegedAccessor
         .invokeMethod(v3Poller, "initHasherDigests");
@@ -256,12 +259,12 @@ public class TestV3Poller extends LockssTestCase {
 
   private MyMockV3Poller makeInittedV3Poller(String key) throws Exception {
     PollSpec ps = new MockPollSpec(testau, "http://www.test.org", null, null,
-                                   Poll.CONTENT_POLL);
+                                   Poll.V1_CONTENT_POLL);
     MyMockV3Poller p = new MyMockV3Poller(ps, theDaemon, pollerId, key, 20000,
                                           "SHA-1");
-    p.constructInnerCircle();
+    PrivilegedAccessor.invokeMethod(p, "constructInnerCircle");
     LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
-        .getValue(p, "innerCircle");
+        .getValue(p, "theVoters");
     for (int ix = 0; ix < voters.length; ix++) {
       PeerIdentity pid = voters[ix];
       PsmInterp interp = (PsmInterp) innerCircle.get(pid);
@@ -304,21 +307,6 @@ public class TestV3Poller extends LockssTestCase {
       sem.take(5000); // Really shouldn't take this long
       return (V3LcapMessage)sentMsgs.get(voter);
     }
-    
-    /**
-     * Overridden to just agree.
-     */
-    protected BlockTally XXXtallyBlock(HashBlock block) {
-      BlockTally tally = new BlockTally();
-      for (Iterator iter = innerCircle.values().iterator(); iter.hasNext();) {
-        PsmInterp interp = (PsmInterp)iter.next();
-        PeerIdentity voter = ((PollerUserData)interp.getUserData()).getVoterId();
-        log.debug2("Agreeing with voter " + voter);
-        tally.addAgreeVote(voter);
-      }
-      tally.tallyVotes();
-      return tally;
-    }
   }
   
   private void initRequiredServices() {
@@ -343,7 +331,7 @@ public class TestV3Poller extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
     p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
-    p.setProperty(BlockTally.PARAM_QUORUM, "3");
+    p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();

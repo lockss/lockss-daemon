@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: VoterUserData.java,v 1.5 2005-10-07 23:46:48 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
@@ -45,6 +46,8 @@ import org.lockss.util.*;
  */
 public class VoterUserData implements LockssSerializable {
   
+  // XXX: May not be serializable after repair is implemented!
+  private LcapMessage pollMessage;
   private PeerIdentity pollerId;
   private String auId;
   private String pollKey;
@@ -64,10 +67,12 @@ public class VoterUserData implements LockssSerializable {
   private byte[] receiptEffortProof;
   private boolean hashingDone = false;
   private boolean voteRequested = false;
+  private long createTime;
   
   /** Transient non-serialized fields */
-  private transient V3VoterSerializer serializer;
+  private transient PollSpec spec;
   private transient CachedUrlSet cus;
+  private transient V3VoterSerializer serializer;
   private transient V3Voter voter;
   
   private static Logger log = Logger.getLogger("VoterUserData");
@@ -82,6 +87,9 @@ public class VoterUserData implements LockssSerializable {
                        byte[] pollerNonce, byte[] voterNonce,
                        byte[] introEffortProof, V3VoterSerializer serializer) 
       throws V3Serializer.PollSerializerException {
+    log.debug3("Creating V3 Voter User Data for poll " + pollKey);
+    this.spec = spec;
+    this.auId = spec.getAuId();
     this.url = spec.getUrl();
     this.cus = spec.getCachedUrlSet();
     this.pollVersion = spec.getPollVersion();
@@ -96,7 +104,20 @@ public class VoterUserData implements LockssSerializable {
     this.introEffortProof = introEffortProof;
     this.serializer = serializer;
     this.voteBlocks = new MemoryVoteBlocks();
+    this.createTime = TimeBase.nowMs();
     saveState();
+  }
+  
+  public void setPollMessage(LcapMessage msg) {
+    this.pollMessage = msg;
+  }
+  
+  public LcapMessage getPollMessage() {
+    return pollMessage;
+  }
+  
+  public long getCreateTime() {
+    return createTime;
   }
   
   public String getAuId() {
@@ -116,7 +137,16 @@ public class VoterUserData implements LockssSerializable {
     this.cus = cus;
     // Transient - no need to save state.
   }
-
+  
+  public void setPollSpec(PollSpec spec) {
+    this.spec = spec;
+    // Transient - no need to save state.
+  }
+  
+  public PollSpec getPollSpec() {
+    return spec;
+  }
+  
   public long getDeadline() {
     return deadline;
   }
@@ -299,8 +329,9 @@ public class VoterUserData implements LockssSerializable {
 
   /* Delegate methods for V3Voter */
   
-  public void sendMessage(V3LcapMessage msg) {
-    voter.sendMessage(msg);
+  public void sendMessageTo(V3LcapMessage msg, PeerIdentity id)
+      throws IOException {
+    voter.sendMessageTo(msg, id);
   }
   
   public void nominatePeers() {

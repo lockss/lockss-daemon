@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.32 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: PollTally.java,v 1.33 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -44,34 +44,34 @@ import org.lockss.util.*;
  * votes within a poll.
  */
 public abstract class PollTally implements Tallier {
-  PollSpec pollSpec;
-  String key;
-  int type;
-  long startTime;
-  long duration;
-  int numAgree;     // The # of votes that agree with us
-  int numDisagree;  // The # of votes that disagree with us
-  int wtAgree;      // The weight of the votes that agree with us
-  int wtDisagree;   // The weight of the votes that disagree with us
-  int quorum;       // The # of votes needed to have a quorum
-  int result;
-  ArrayList pollVotes;
-  String hashAlgorithm; // the algorithm used to hash this poll
-  long m_createTime;       // poll creation time
+  protected PollSpec pollSpec;
+  protected String key;
+  protected int type;
+  protected long startTime;
+  protected long duration;
+  protected int numAgree;     // The # of votes that agree with us
+  protected int numDisagree;  // The # of votes that disagree with us
+  protected int wtAgree;      // The weight of the votes that agree with us
+  protected int wtDisagree;   // The weight of the votes that disagree with us
+  protected int quorum;       // The # of votes needed to have a quorum
+  protected int result;
+  protected ArrayList pollVotes;
+  protected String hashAlgorithm; // the algorithm used to hash this poll
+  protected long createTime;       // poll creation time
 
-  List localEntries = null;  // the local entries less the remaining RegExp
-  List votedEntries = null;  // entries which match the won votes in a poll
+  protected List localEntries = null;  // the local entries less the remaining RegExp
+  protected List votedEntries = null;  // entries which match the won votes in a poll
   protected Deadline replayDeadline = null;
   protected Iterator replayIter = null;
   protected ArrayList originalVotes = null;
   protected IdentityManager idManager = null;
   protected ActivityRegulator.Lock activityLock;
 
-  static Logger log=Logger.getLogger("PollTally");
+  static Logger log = Logger.getLogger("PollTally");
 
-  PollTally(int type, long startTime, long duration, int numAgree,
-            int numDisagree, int wtAgree, int wtDisagree, int quorum,
-            String hashAlgorithm) {
+  public PollTally(int type, long startTime, long duration, int numAgree,
+                   int numDisagree, int wtAgree, int wtDisagree, int quorum,
+                   String hashAlgorithm) {
     this.type = type;
     this.startTime = startTime;
     this.duration = duration;
@@ -80,9 +80,12 @@ public abstract class PollTally implements Tallier {
     this.wtAgree = wtAgree;
     this.wtDisagree = wtDisagree;
     this.quorum = quorum;
-    pollVotes = new ArrayList(quorum * 2);
+    this.pollVotes = new ArrayList(quorum * 2);
     this.hashAlgorithm = hashAlgorithm;
-    log.debug3("Constructor type " + type + " " + this.toString());
+  }
+
+  public int getType() {
+    return type;
   }
 
   public String getPollKey() {
@@ -98,20 +101,11 @@ public abstract class PollTally implements Tallier {
   }
 
   public CachedUrlSet getCachedUrlSet() {
-    return getPoll().m_cus;
+    return getPoll().getCachedUrlSet();
   }
 
   public ArchivalUnit getArchivalUnit()  {
     return getCachedUrlSet().getArchivalUnit();
-  }
-
-  /**
-   * Returns poll type constant - one of Poll.NamePoll, Poll.ContentPoll,
-   * Poll.VerifyPoll
-   * @return integer constant for this poll
-   */
-  public int getType() {
-    return type;
   }
 
   public long getStartTime() {
@@ -126,6 +120,7 @@ public abstract class PollTally implements Tallier {
     return Collections.unmodifiableList(pollVotes);
   }
 
+  
   public Iterator getCorrectEntries() {
     return votedEntries == null ? CollectionUtil.EMPTY_ITERATOR :
         votedEntries.iterator();
@@ -136,11 +131,11 @@ public abstract class PollTally implements Tallier {
         localEntries.iterator();
   }
 
-  ActivityRegulator.Lock getActivityLock() {
+  public ActivityRegulator.Lock getActivityLock() {
     return activityLock;
   }
 
-  void setActivityLock(ActivityRegulator.Lock newLock) {
+  public void setActivityLock(ActivityRegulator.Lock newLock) {
     activityLock = newLock;
   }
 
@@ -152,35 +147,35 @@ public abstract class PollTally implements Tallier {
    * return the poll for which we are acting as a tally
    * @return the Poll.
    */
-  abstract BasePoll getPoll();
+  abstract public BasePoll getPoll();
 
   /**
    * tally the votes for this poll
    */
-  abstract void tallyVotes();
+  abstract public void tallyVotes();
 
   /**
    * True if the poll is active
    * @return true if the poll is active
    */
-  abstract boolean stateIsActive();
+  abstract public boolean stateIsActive();
 
   /**
    * True if the poll has finshed
    * @return true if the poll has finished
    */
-  abstract boolean stateIsFinished();
+  abstract public boolean stateIsFinished();
 
   /**
    * True if the poll is suspended
    * @return true if the poll is suspended
    */
-  abstract boolean stateIsSuspended();
+  abstract public boolean stateIsSuspended();
 
   /**
    * Set the poll state to suspended
    */
-  abstract void setStateSuspended();
+  abstract public void setStateSuspended();
 
   /**
    * Determine if the voter with a given ID has voted
@@ -237,14 +232,14 @@ public abstract class PollTally implements Tallier {
    * @param vote the vote to recheck
    * @param deadline the deadline by which the check must complete
    */
-  abstract void replayVoteCheck(Vote vote, Deadline deadline);
+  public abstract void replayVoteCheck(Vote vote, Deadline deadline);
 
   /**
    * adjust the reputation of a user after running a verify poll.
    * @param voterID the PeerIdentity of the voter to adjust
    * @param repDelta the amount by which to adjust the reputation.
    */
-  abstract void adjustReputation(PeerIdentity voterID, int repDelta);
+  public abstract void adjustReputation(PeerIdentity voterID, int repDelta);
 
   /**
    * Description: a class for the entries returned in a Name poll

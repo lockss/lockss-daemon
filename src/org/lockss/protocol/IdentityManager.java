@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.67 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: IdentityManager.java,v 1.68 2005-10-07 23:46:48 smorabito Exp $
  */
 
 /*
@@ -292,6 +292,16 @@ public interface IdentityManager extends LockssManager {
    */
   public IdentityListBean getIdentityListBean();
 
+  /**
+   * Return a list of all known UDP (suitable for V1) peer identities.
+   */
+  public Collection getUdpPeerIdentities();
+  
+  /**
+   * Return a list of all known TCP (suitable for V1 or V3), peer identities.
+   */
+  public Collection getTcpPeerIdentities();
+  
   /**
    * <p>Signals that we've agreed with pid on a top level poll on
    * au.</p>

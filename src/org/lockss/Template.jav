@@ -1,10 +1,10 @@
 /*
- * $Id: Template.jav,v 1.1 2002-11-05 21:15:32 tal Exp $
+ * $Id: Template.jav,v 1.2 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

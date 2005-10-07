@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.14 2005-10-07 16:19:56 thib_gc Exp $
+* $Id: BasePoll.java,v 1.15 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -32,9 +32,7 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import org.lockss.plugin.*;
 import org.lockss.protocol.*;
-import org.lockss.util.*;
 
 /**
  * <p>Abstract base class for all poll objects.</p>
@@ -44,130 +42,32 @@ import org.lockss.util.*;
 
 public abstract class BasePoll implements Poll {
 
-  static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
-      "Hashing Error", "IO Error"
-  };
-
-  static final int PS_INITING = 0;
-  static final int PS_WAIT_HASH = 1;
-  static final int PS_WAIT_VOTE = 2;
-  static final int PS_WAIT_TALLY = 3;
-  static final int PS_COMPLETE = 4;
-
-  static Logger log = Logger.getLogger("Poll");
-
-  LcapMessage m_msg;      // The message which triggered the poll
-  CachedUrlSet m_cus;     // the cached url set from the archival unit
-  PollSpec m_pollspec;
-  PeerIdentity m_callerID; // identity of the peer that called poll
-  PollManager m_pollmanager; // the pollmanager for this poll.
-  IdentityManager idMgr;
-  long m_createTime;        // poll creation time
-
-  String m_key;             // the string we used to id this poll
-  int m_pollstate;          // one of state constants above
-  Deadline m_deadline;      // when election is over
-
-  /**
-   * create a new poll from a message
-   *
-   * @param pollspec the PollSpec on which this poll will operate
-   * @param pm the pollmanager
-   * @param orig the identity of the caller
-   * @param key the string key used to locate the poll
-   * @param duration the duration of the poll
-   */
-  protected BasePoll(PollSpec pollspec, PollManager pm, PeerIdentity orig, String key,
-		     long duration) {
-    m_pollmanager = pm;
-    idMgr = pm.getIdentityManager();
-    m_callerID = orig;
-    m_msg = null;
-    m_pollspec = pollspec;
-    m_cus = pollspec.getCachedUrlSet();
-    m_createTime = TimeBase.nowMs();
-    m_key = key;
-    m_deadline = Deadline.in(duration);
-    m_pollstate = PS_INITING;
-    
+  protected BasePoll() {
   }
 
   public boolean isSubpollRunning() {
     return false;
   }
 
-  public void setMessage(LcapMessage msg) {
-    if (m_msg == null) {
-      m_msg = msg;
-      log.debug("Setting message for " + this + " from " + msg);
-    }
-  }
-
   /**
-   * Returns true if the poll belongs to this Identity
-   * @return true if  we called the poll
+   * Set the message that triggered this poll.
+   * 
+   * @param msg
    */
-  public boolean isMyPoll() {
-    boolean ret = idMgr.isLocalIdentity(m_callerID);
-    if (log.isDebug2()) {
-      log.debug2("isMyPoll(" + m_callerID.toString() + ") = " + ret);
-    }
-    return ret;
-  }
-
+  public abstract void setMessage(LcapMessage msg);
+  
   /**
-   * Returns the ID key for the peer that called the poll
-   * @return the ID key for the peer that called the poll
+   * Return the time that this poll was created.
    */
-  public PeerIdentity getCallerID() {
-    return m_callerID;
-  }
-
+  abstract public long getCreateTime();
+  
   /**
-   * Return the poll spec used by this poll
-   * @return the PollSpec
+   * Return the identity of the caller of this poll.
+   * 
+   * @return
    */
-  public PollSpec getPollSpec() {
-    return m_pollspec;
-  }
-
-  /** Return the poll version of this poll
-   * @return the poll version
-   */
-  public int getVersion() {
-    return m_pollspec.getPollVersion();
-  }
-
-  /**
-   * get the message used to define this Poll
-   * @return <code>Message</code>
-   */
-  public LcapMessage getMessage() {
-    return m_msg;
-  }
-
-  /**
-   * get the poll identifier key
-   * @return the key as a String
-   */
-  public String getKey() {
-    return m_key;
-  }
-
-  /**
-   * Return the poll's deadline
-   * @return the Deadline object for this poll.
-   */
-  public Deadline getDeadline() {
-    return m_deadline;
-  }
-
-  /**
-   * get the PollTally for this Poll
-   * @return VoteTally for this poll
-   */
-  abstract public PollTally getVoteTally();
-
+  abstract public PeerIdentity getCallerID();
+  
   /**
    * Recieve and incoming message from the PollManager
    * @param msg the incoming msg containing a vote for this poll
@@ -179,25 +79,14 @@ public abstract class BasePoll implements Poll {
    */
   abstract protected void startPoll();
 
-
-  /**
-   * Is our poll currently in an error state
-   * @return true if the poll state is an error value
-   */
-  abstract protected boolean isErrorState();
-
   /**
    * Stop the poll when our deadline expired or our poll has ended in error.
    */
   abstract protected void stopPoll();
 
   /**
-   * Make a copy of the values in a vote changing only whether we agree or
-   * disagree when replaying a vote in a replay poll.
-   * @param vote the vote to copy
-   * @param agree the Boolean representing the value to set our vote to.
-   * @return the newly created Vote
+   * Is our poll currently in an error state
+   * @return true if the poll state is an error value
    */
-  abstract protected Vote copyVote(Vote vote, boolean agree);
-
+  abstract protected boolean isErrorState();
 }

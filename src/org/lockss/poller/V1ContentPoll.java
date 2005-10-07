@@ -1,5 +1,5 @@
 /*
- * $Id: V1ContentPoll.java,v 1.12 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: V1ContentPoll.java,v 1.13 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ public class V1ContentPoll extends V1Poll {
     super(pollspec, pm, orig, challenge, duration);
     m_replyOpcode = V1LcapMessage.CONTENT_POLL_REP;
     m_tally = new V1PollTally(this,
-			      CONTENT_POLL,
+			      V1_CONTENT_POLL,
 			      m_createTime,
 			      duration,
 			      V1PollFactory.getQuorum(),
@@ -101,22 +101,19 @@ public class V1ContentPoll extends V1Poll {
    * @param msg the V1LcapMessage containing the vote we're going to check
    */
   void startVoteCheck(LcapMessage msg) {
-    // XXX: Stubbed for V3.
-    if (msg instanceof V1LcapMessage) {
-      super.startVoteCheck();
+    super.startVoteCheck();
 
-      if (shouldCheckVote(msg)) {
-	Vote vote = new Vote(msg, false);
+    if (shouldCheckVote(msg)) {
+      Vote vote = new Vote(msg, false);
 
-	MessageDigest digest =
-	  getInitedDigest(((V1LcapMessage)msg).getChallenge(),
-			  ((V1LcapMessage)msg).getVerifier());
+      MessageDigest digest =
+        getInitedDigest(((V1LcapMessage)msg).getChallenge(),
+                        ((V1LcapMessage)msg).getVerifier());
 
-	if (!scheduleHash(digest, m_hashDeadline, vote,
-			  new VoteHashCallback())) {
-	  log.info(m_key + " no time to hash vote by " + m_hashDeadline);
-	  stopVoteCheck();
-	}
+      if (!scheduleHash(digest, m_hashDeadline, vote,
+                        new VoteHashCallback())) {
+        log.info(m_key + " no time to hash vote by " + m_hashDeadline);
+        stopVoteCheck();
       }
     }
   }

@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.19 2005-02-18 23:21:38 tlipkis Exp $
+* $Id: PollerStatus.java,v 1.20 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -37,6 +37,7 @@ import org.lockss.daemon.status.*;
 import org.lockss.util.*;
 import org.lockss.app.*;
 import org.lockss.plugin.*;
+import org.lockss.poller.v3.*;
 import org.lockss.protocol.*;
 
 /**
@@ -143,12 +144,14 @@ public class PollerStatus {
 
     private String getTypeCharString(int pollType) {
       switch(pollType) {
-        case Poll.NAME_POLL:
+        case Poll.V1_NAME_POLL:
           return "N";
-        case Poll.CONTENT_POLL:
+        case Poll.V1_CONTENT_POLL:
           return "C";
-        case Poll.VERIFY_POLL:
+        case Poll.V1_VERIFY_POLL:
           return "V";
+        case Poll.V3_POLL:
+          return "V3";
         default:
           return "Unknown";
       }
@@ -430,7 +433,7 @@ public class PollerStatus {
       list.add(s1);
       list.add(new StatusTable.SummaryInfo("Start Time",
 					   ColumnDescriptor.TYPE_DATE,
-					   new Long(poll.m_createTime)));
+					   new Long(poll.getCreateTime())));
       list.add(new StatusTable.SummaryInfo("Duration",
 					   ColumnDescriptor.TYPE_TIME_INTERVAL,
 					   new Long(tally.duration)));
@@ -452,7 +455,14 @@ public class PollerStatus {
     }
 
     private String getPollType(BasePoll poll) {
-      return Poll.PollName[poll.getVoteTally().getType()];
+      if (poll instanceof V1Poll) {
+        V1PollTally tally = (V1PollTally)poll.getVoteTally();
+        return V1Poll.PollName[tally.getType()];
+      } else if (poll instanceof V3Poller) {
+        return "V3 Poll";
+      }
+      theLog.error("Not a V1Poll or V3Poll.");
+      return "Unknown poll type";
     }
 
     private String getPollSpecString(BasePoll poll) {

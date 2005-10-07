@@ -49,7 +49,6 @@ class Framework:
             self.daemonCount = daemonCount
         self.startPort = int(config.get('startPort', 8081))
         self.username = config.get('username', 'testuser')
-#        self.password = self.__encPasswd(config.get('password', 'testpass'))
         self.password = config.get('password', 'testpass')
         self.logLevel = config.get('daemonLogLevel', 'debug3')
         self.hostname = config.get('hostname', 'localhost')
@@ -57,7 +56,7 @@ class Framework:
         self.clientList = [] # ordered list of clients.
         self.daemonList = [] # ordered list of daemons.
         self.configCount = 0 # used when writing daemon properties
-
+        
         self.isRunning = False
 
         # Assert that the project directory exists and that
@@ -89,11 +88,11 @@ class Framework:
             self.__writeLocalConfig(localConfigFile, daemonDir, port)
             # Create daemon
             if not urlList:
-                urlList = (globalConfigFile, localConfigFile, extraConfigFile)
+                daemonConfUrls = (globalConfigFile, localConfigFile, extraConfigFile)
             else:
-                urlList = urlList + (localConfigFile,)
+                daemonConfUrls = urlList + (localConfigFile,)
             daemon = LockssDaemon(daemonDir, self.__makeClasspath(),
-                                  urlList)
+                                  daemonConfUrls)
             
             # create client for this daemon
             client = Client(daemon, self.hostname, port, self.username, self.password)
@@ -228,7 +227,7 @@ class Framework:
     def __writeLockssConfig(self, file, logLevel):
         f = open(file, 'w')
         # defined at the end of this file
-        f.write(globalConfigTemplate % (logLevel))
+        f.write(globalConfigTemplate % {"logLevel": logLevel})
         f.close()
 
     def __writeLocalConfig(self, file, dir, uiPort):
@@ -252,7 +251,7 @@ class Framework:
                                        "uiPort": uiPort, "ipAddr": ipAddr,
                                        "unicastPort": unicastPort,
                                        "unicastSendToPort": unicastSendToPort,
-                                       "icpPort": icpPort})
+                                       "icpPort": icpPort});
         f.close()
         self.configCount += 1 # no ++ in python, oops.
 
@@ -1243,7 +1242,7 @@ class Client:
                                             'value': value}
                     else:
                         rowDict[colName] = colVal.firstChild.data
-                except IndexError:
+                except (IndexError, AttributeError):
                     # Unlikely to happen, but just in case...
                     continue
             data.append(rowDict)
@@ -1291,6 +1290,8 @@ class Client:
             post.add('lfp.badFileNum', au.badFileNum)
         if (au.publisherDown):
             post.add('lfp.pub_down', 'true')
+        if (au.pollingVersion > 0):
+            post.add('lfp.poll_version', au.pollingVersion)
         post.add('auid', au.auId)
 
         return post
@@ -1370,7 +1371,7 @@ class SimulatedAu:
     def __init__(self, root, depth=-1, branch=-1, numFiles=-1,
                  binFileSize=-1, maxFileName=-1, fileTypes=-1,
                  oddBranchContent=-1, badFileLoc=None, badFileNum=-1,
-                 publisherDown=False):
+                 publisherDown=False, pollingVersion=-1):
         self.root = root
         self.depth = depth
         self.branch = branch
@@ -1382,6 +1383,7 @@ class SimulatedAu:
         self.badFileLoc = badFileLoc
         self.badFileNum = badFileNum
         self.publisherDown = publisherDown
+        self.pollingVersion = pollingVersion
         self.baseUrl = 'http://www.example.com'
         self.dirStruct = path.join('www.example.com', 'http')
         self.pluginId = 'org.lockss.plugin.simulated.SimulatedPlugin'
@@ -1560,7 +1562,7 @@ class Get:
 
 globalConfigTemplate = """\
 # LOCKSS & LCAP tuning parameters
-org.lockss.log.default.level=%s
+org.lockss.log.default.level=%(logLevel)s
 
 #lockss config stuff
 org.lockss.platform.diskSpacePaths=./
@@ -1599,7 +1601,7 @@ org.lockss.treewalk.start.delay=20s
 org.lockss.comm.router.beacon.interval=1m
 org.lockss.baseau.toplevel.poll.interval.min=4m
 org.lockss.baseau.toplevel.poll.interval.max=6m
-org.lockss.baseau.toplevel.poll.prob.initial=1.0
+org.lockss.baseau.toplevel.poll.prob.initial=100
 
 org.lockss.metrics.slowest.hashrate=250
 org.lockss.state.recall.delay=5m

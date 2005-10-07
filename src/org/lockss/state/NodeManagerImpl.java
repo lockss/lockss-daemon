@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.202 2005-10-06 08:18:15 tlipkis Exp $
+ * $Id: NodeManagerImpl.java,v 1.203 2005-10-07 23:46:46 smorabito Exp $
  */
 
 /*
@@ -281,7 +281,7 @@ public class NodeManagerImpl
           if (cus.getSpec().isSingleNode()) {
             nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
           } else {
-            nodeState.setState((tally.getType() == Poll.CONTENT_POLL) ?
+            nodeState.setState((tally.getType() == Poll.V1_CONTENT_POLL) ?
                                NodeState.CONTENT_RUNNING :
                                NodeState.NAME_RUNNING);
           }
@@ -323,7 +323,7 @@ public class NodeManagerImpl
           status = PollState.RUNNING;
           if (cus.getSpec().isSingleNode()) {
             nodeState.setState(NodeState.SNCUSS_POLL_RUNNING);
-          } else if (tally.getType() == Poll.CONTENT_POLL) {
+          } else if (tally.getType() == Poll.V1_CONTENT_POLL) {
             nodeState.setState(NodeState.CONTENT_RUNNING);
           } else {
             nodeState.setState(NodeState.NAME_RUNNING);
@@ -453,9 +453,9 @@ public class NodeManagerImpl
         case Tallier.RESULT_WON:
         case Tallier.RESULT_LOST:
           // update depending on poll type if successful
-          if (results.getType() == Poll.CONTENT_POLL) {
+          if (results.getType() == Poll.V1_CONTENT_POLL) {
             stateToUse = handleContentPoll(pollState, results, nodeState);
-          } else if (results.getType() == Poll.NAME_POLL) {
+          } else if (results.getType() == Poll.V1_NAME_POLL) {
             stateToUse = handleNamePoll(pollState, results, nodeState);
           } else {
             String err = "Request to update state for unknown type: " +
@@ -910,11 +910,62 @@ public class NodeManagerImpl
                             Tallier results, NodeState nodeState,
                             int stateToUse, boolean reportOnly)
       throws IOException {
+    
+    // XXX: Kludge until a better V3 refactor.
+    int protocolVersion = AuUtil.getProtocolVersion(managedAu);
+
     // only log when in treewalk (once) or updating results
     if ((reportOnly) || (results!=null)) {
       logger.debug3("Checking node: " + nodeState.getCachedUrlSet().getUrl());
       logger.debug3("State: " + nodeState.getStateString());
     }
+    
+    switch(protocolVersion) {
+    case PollSpec.V3_PROTOCOL:
+      return v3CheckCurrentState(lastOrCurrentPoll, results, nodeState,
+                                 stateToUse, reportOnly);
+    case PollSpec.V1_PROTOCOL:
+    default:
+      return v1CheckCurrentState(lastOrCurrentPoll, results, nodeState,
+                                 stateToUse, reportOnly);
+    }
+  }
+  
+  boolean v3CheckCurrentState(PollState lastOrCurrentPoll,
+                              Tallier results, NodeState nodeState,
+                              int stateToUse, boolean reportOnly)
+      throws IOException {
+    switch (stateToUse) {
+    case NodeState.INITIAL:
+    case NodeState.OK:
+      // check if toplevel poll needed when AU node
+      if (nodeState.getCachedUrlSet().getSpec().isAu()) {
+        // query the AU if a top level poll should be started.
+        // this changes the state regardless of the 'reportOnly' setting so
+        // as to avoid having to call 'shouldCallTopLevelPoll()' twice
+        if (managedAu.shouldCallTopLevelPoll(auState)) {
+          // switch to NEEDS_POLL if necessary to call toplevel poll
+          nodeState.setState(NodeState.NEEDS_POLL);
+          logger.debug("set state to call top level poll...");
+          return true;
+        }
+      }
+      return false;
+    default:
+      // call content poll
+      if (!reportOnly) {
+        callV3ContentPoll();
+        return true;
+      }
+    return false;
+    }
+  }
+  
+  boolean v1CheckCurrentState(PollState lastOrCurrentPoll,
+                              Tallier results, NodeState nodeState,
+                              int stateToUse, boolean reportOnly)
+      throws IOException {
+
     switch (stateToUse) {
       case NodeState.NEEDS_POLL:
       case NodeState.NEEDS_REPLAY_POLL:
@@ -926,7 +977,7 @@ public class NodeManagerImpl
           } else {
             logger.debug2("calling content poll");
             callContentPoll(new PollSpec(nodeState.getCachedUrlSet(),
-					 Poll.CONTENT_POLL));
+					 Poll.V1_CONTENT_POLL));
           }
         }
         return true;
@@ -944,7 +995,7 @@ public class NodeManagerImpl
             logger.debug2(
                 "lost content poll, state = lost, calling name poll.");
             callNamePoll(new PollSpec(nodeState.getCachedUrlSet(),
-				      Poll.NAME_POLL));
+				      Poll.V1_NAME_POLL));
           }
         }
         return true;
@@ -953,7 +1004,7 @@ public class NodeManagerImpl
         if (!reportOnly) {
           logger.debug2("calling name poll");
           callNamePoll(new PollSpec(nodeState.getCachedUrlSet(),
-				    Poll.NAME_POLL));
+				    Poll.V1_NAME_POLL));
         }
         return true;
       case NodeState.CONTENT_RUNNING:
@@ -1052,7 +1103,7 @@ public class NodeManagerImpl
           } else {
             logger.debug2("no results found, so recalling name poll");
             callNamePoll(new PollSpec(nodeState.getCachedUrlSet(),
-				      Poll.NAME_POLL));
+				      Poll.V1_NAME_POLL));
           }
         }
         return true;
@@ -1064,7 +1115,7 @@ public class NodeManagerImpl
           // sub-dividing yet (and not an AU url, since they never have content)
           // (bug fix here to ignore any name polls which manage to get range
           // information)
-          if (((lastOrCurrentPoll.getType() == Poll.NAME_POLL) ||
+          if (((lastOrCurrentPoll.getType() == Poll.V1_NAME_POLL) ||
                (lastOrCurrentPoll.getLwrBound() == null)) &&
               nodeState.getCachedUrlSet().hasContent()) {
             // only call SNCP if has content, since presence of content was
@@ -1204,8 +1255,8 @@ public class NodeManagerImpl
    */
   boolean checkValidStatesForResults(PollState poll, NodeState node,
                                      CachedUrlSetSpec spec) {
-    boolean isContent = poll.getType()==Poll.CONTENT_POLL;
-    boolean isName = poll.getType()==Poll.NAME_POLL;
+    boolean isContent = poll.getType()==Poll.V1_CONTENT_POLL;
+    boolean isName = poll.getType()==Poll.V1_NAME_POLL;
     boolean isSNCUSS = spec.isSingleNode();
     // these have to be fairly open-ended to permit error states
     boolean notRunning = poll.getStatus() != PollState.RUNNING;
@@ -1412,11 +1463,27 @@ public class NodeManagerImpl
   }
 
   /**
+   * Convenience method to call a top-level V3 content poll.
+   */
+  void callV3ContentPoll() {
+    PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(),
+                                 Poll.V3_POLL,
+                                 PollSpec.V3_PROTOCOL);
+    logger.debug2("Calling a V3 Content Poll on " + spec);
+    if (pollManager.callPoll(spec) == null) {
+      if (logger.isDebug2()) {
+        logger.debug2("Failed to call a top level poll on " + spec);
+      }
+    }
+  }
+  
+  /**
    * Convenience method to call a top-level poll.
    */
   void callTopLevelPoll() {
     PollSpec spec = new PollSpec(managedAu.getAuCachedUrlSet(),
-				 Poll.CONTENT_POLL);
+				 Poll.V1_CONTENT_POLL,
+                                 PollSpec.V1_PROTOCOL);
     if (logger.isDebug2()) {
       logger.debug2("Calling a top level poll on " + spec);
     }
@@ -1601,7 +1668,7 @@ public class NodeManagerImpl
     ArchivalUnit au = cus.getArchivalUnit();
     CachedUrlSet newCus =
       au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
-    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.CONTENT_POLL);
+    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.V1_CONTENT_POLL);
     callPoll(spec);
   }
 
@@ -1614,7 +1681,7 @@ public class NodeManagerImpl
     ArchivalUnit au = cus.getArchivalUnit();
     CachedUrlSet newCus =
       au.makeCachedUrlSet(new SingleNodeCachedUrlSetSpec(cus.getUrl()));
-    PollSpec spec = new PollSpec(newCus, Poll.CONTENT_POLL);
+    PollSpec spec = new PollSpec(newCus, Poll.V1_CONTENT_POLL);
     callPoll(spec);
   }
 
@@ -1659,7 +1726,7 @@ public class NodeManagerImpl
    * @param spec PollSpec
    */
   private void callNamePoll(PollSpec spec) {
-    if (spec.getPollType() != Poll.NAME_POLL) {
+    if (spec.getPollType() != Poll.V1_NAME_POLL) {
       logger.error("callNamePoll on spec for " +
 		   Poll.PollName[spec.getPollType()]);
     }
@@ -1671,7 +1738,7 @@ public class NodeManagerImpl
    * @param spec PollSpec
    */
   private void callContentPoll(PollSpec spec) {
-    if (spec.getPollType() != Poll.CONTENT_POLL) {
+    if (spec.getPollType() != Poll.V1_CONTENT_POLL) {
       logger.error("Calling a content poll on spec for " +
 		   Poll.PollName[spec.getPollType()]);
     }
@@ -1763,7 +1830,7 @@ public class NodeManagerImpl
    * @return boolean true iff content on AU spec
    */
   boolean isTopLevelPollFinished(CachedUrlSetSpec spec, int type) {
-    return (spec.isAu() && (type == Poll.CONTENT_POLL));
+    return (spec.isAu() && (type == Poll.V1_CONTENT_POLL));
   }
 
   public boolean repairsNeeded() {
@@ -1881,7 +1948,7 @@ public class NodeManagerImpl
         if (pollCookie.isNamePoll) {
           logger.debug("Calling new name poll...");
           state.setState(NodeState.WRONG_NAMES);
-          callNamePoll(new PollSpec(cus, Poll.NAME_POLL));
+          callNamePoll(new PollSpec(cus, Poll.V1_NAME_POLL));
         } else {
           logger.debug("Calling new SNCUSS poll...");
           state.setState(NodeState.POSSIBLE_DAMAGE_HERE);

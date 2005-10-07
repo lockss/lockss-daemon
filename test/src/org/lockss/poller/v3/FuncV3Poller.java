@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: FuncV3Poller.java,v 1.2 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -148,6 +148,7 @@ public class FuncV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       msgs[i] = new V3LcapMessage(V3LcapMessage.MSG_POLL_ACK,
+                                  "key",
                                   voters[i],
 				  "lockssau:",
 				  123456789, 987654321,
@@ -161,6 +162,7 @@ public class FuncV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_NOMINATE,
+                                            "key",
                                             voters[i],
 					    "lockssau:",
 					    123456789, 987654321,
@@ -179,6 +181,7 @@ public class FuncV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE,
+                                            "key",
                                             voters[i],
 					    "lockssau:",
 					    123456789, 987654321,
@@ -196,6 +199,7 @@ public class FuncV3Poller extends LockssTestCase {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
       V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REP,
+                                            "key",
                                             voters[i],
 					    "lockssau:",
 					    123456789, 987654321,
@@ -218,7 +222,7 @@ public class FuncV3Poller extends LockssTestCase {
 
   public void testNonRepairPoll() throws Exception {
     PollSpec ps = new PollSpec(testau.getAuCachedUrlSet(), null, null,
-                               Poll.CONTENT_POLL);
+                               Poll.V1_CONTENT_POLL);
     byte[] key = ByteArray.makeRandomBytes(20);
 
     final MyV3Poller v3Poller =
@@ -235,19 +239,19 @@ public class FuncV3Poller extends LockssTestCase {
       assertNotNull(poll);
       assertEquals(poll.getOpcode(), V3LcapMessage.MSG_POLL);
       
-      v3Poller.handleMessage(pollAcks[i]);
+      v3Poller.receiveMessage(pollAcks[i]);
       
       V3LcapMessage pollProof = v3Poller.getSentMessage(voters[i]);
       assertNotNull(pollProof);
       assertEquals(pollProof.getOpcode(), V3LcapMessage.MSG_POLL_PROOF);
       
-      v3Poller.handleMessage(nominates[i]);
+      v3Poller.receiveMessage(nominates[i]);
       
       V3LcapMessage voteRequest = v3Poller.getSentMessage(voters[i]);
       assertNotNull(voteRequest);
       assertEquals(voteRequest.getOpcode(), V3LcapMessage.MSG_VOTE_REQ);
       
-      v3Poller.handleMessage(votes[i]);
+      v3Poller.receiveMessage(votes[i]);
     }
     // Repair mechanism simply agrees with everything for this test.
     for (int i = 0; i < voters.length; i++) {
@@ -272,6 +276,10 @@ public class FuncV3Poller extends LockssTestCase {
       return ListUtil.fromArray(voters);
     }
 
+    public void nominatePeers(PeerIdentity voter, List nominees) {
+      // do nothing.
+    }
+    
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
       sentMsgs.put(to, msg);
       SimpleBinarySemaphore sem = (SimpleBinarySemaphore)semaphores.get(to);
@@ -294,16 +302,23 @@ public class FuncV3Poller extends LockssTestCase {
     /**
      * Overridden to just agree.
      */
-    protected BlockTally tallyBlock(HashBlock block) {
-      BlockTally tally = new BlockTally();
-      for (Iterator iter = innerCircle.values().iterator(); iter.hasNext();) {
+    protected void tallyBlock(HashBlock block, int blockIndex) {
+      BlockTally tally = null;
+      try {
+        tally = (BlockTally)PrivilegedAccessor.getValue(this, "tally");
+      } catch (Exception ex) {
+        throw new RuntimeException(ex);
+      }
+      List agreeVoters = new ArrayList();
+      for (Iterator iter = theVoters.values().iterator(); iter.hasNext();) {
         PsmInterp interp = (PsmInterp)iter.next();
         PeerIdentity voter = ((PollerUserData)interp.getUserData()).getVoterId();
         log.debug2("Agreeing with voter " + voter);
-        tally.addAgreeVote(voter);
+        agreeVoters.add(voter);
       }
+      tally.setAgreeVoters(agreeVoters);
+      tally.setDisagreeVoters(new ArrayList());
       tally.tallyVotes();
-      return tally;
     }
   }
   
@@ -329,7 +344,7 @@ public class FuncV3Poller extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_NEW_SCHEDULER, "true");
     p.setProperty(V3Poller.PARAM_MIN_POLL_SIZE, "4");
     p.setProperty(V3Poller.PARAM_MAX_POLL_SIZE, "4");
-    p.setProperty(BlockTally.PARAM_QUORUM, "3");
+    p.setProperty(V3Poller.PARAM_QUORUM, "3");
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
     idmgr = theDaemon.getIdentityManager();

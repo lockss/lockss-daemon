@@ -1,5 +1,5 @@
 /*
- * $Id: VoterStateMachineFactory.java,v 1.4 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: VoterStateMachineFactory.java,v 1.5 2005-10-07 23:46:48 smorabito Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class VoterStateMachineFactory {
   public static PsmMachine getMachine(Class actionClass) {
     return new PsmMachine("Voter",
 			  makeStates(actionClass),
-			  "VerifyPollEffort");
+			  "Initialize");
   }
 
   /**
@@ -54,6 +54,14 @@ public class VoterStateMachineFactory {
    */
   private static PsmState[] makeStates(Class actionClass) {
     PsmState[] states = {
+      // PollManager will supply the Poll message event after
+      // creating the voter.
+      new PsmState("Initialize", PsmWait.FOREVER,
+                   new PsmResponse(V3Events.msgPoll,
+                                   new PsmMethodMsgAction(actionClass,
+                                                          "handleReceivePoll")),
+                   new PsmResponse(V3Events.evtOk, "VerifyPollEffort"),
+                   new PsmResponse(V3Events.evtElse, "Error")),
       new PsmState("VerifyPollEffort",
 		   new PsmMethodAction(actionClass, "handleVerifyPollEffort"),
 		   new PsmResponse(V3Events.evtOk, "ProvePollAck"),

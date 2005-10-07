@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Events.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: TestV3Events.java,v 1.3 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.protocol.psm.*;
 public class TestV3Events extends LockssTestCase {
 
   V3LcapMessage makeMsg(int opcode) {
-    return new V3LcapMessage(opcode, null, null, 0, 0, null, null);
+    return new V3LcapMessage(opcode, "key", null, null, 0, 0, null, null);
   }
 
   void assertMsgClass(int opcode, PsmMsgEvent prototypeEvent) {

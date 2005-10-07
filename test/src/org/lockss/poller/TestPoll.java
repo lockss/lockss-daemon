@@ -1,5 +1,5 @@
 /*
- * $Id: TestPoll.java,v 1.92 2005-05-18 05:47:47 tlipkis Exp $
+ * $Id: TestPoll.java,v 1.93 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -117,8 +117,8 @@ public class TestPoll extends LockssTestCase {
     V1LcapMessage msg = null;
     log.debug3("starting testCheeckVote");
     msg = V1LcapMessage.makeReplyMsg(testV1polls[0].getMessage(),
-				     pollmanager.generateRandomBytes(),
-				     pollmanager.generateRandomBytes(),
+				     ByteArray.makeRandomBytes(20),
+				     ByteArray.makeRandomBytes(20),
 				     null,
 				     V1LcapMessage.NAME_POLL_REP,
 				     testduration,
@@ -144,7 +144,7 @@ public class TestPoll extends LockssTestCase {
     rep = p.m_tally.wtDisagree + idmgr.getReputation(id);
 
     // bad vote check
-    p.checkVote(pollmanager.generateRandomBytes(), new Vote(msg, false));
+    p.checkVote(ByteArray.makeRandomBytes(20), new Vote(msg, false));
     assertEquals(9, p.m_tally.numAgree);
     assertEquals(3, p.m_tally.numDisagree);
     assertEquals(rep, p.m_tally.wtDisagree);
@@ -205,14 +205,14 @@ public class TestPoll extends LockssTestCase {
   /** test for method vote(..) */
   public void testVote() {
     V1Poll p = testV1polls[1];
-    p.m_hash = pollmanager.generateRandomBytes();
+    p.m_hash = ByteArray.makeRandomBytes(20);
     try {
       p.castOurVote();
     }
     catch (IllegalStateException e) {
       // the socket isn't inited and should squack
     }
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    p.m_pollstate = V1Poll.PS_COMPLETE;
   }
 
   /** test for method voteInPoll(..) */
@@ -223,7 +223,7 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.numDisagree = 2;
     p.m_tally.wtAgree = 2000;
     p.m_tally.wtDisagree = 200;
-    p.m_hash = pollmanager.generateRandomBytes();
+    p.m_hash = ByteArray.makeRandomBytes(20);
     try {
       p.voteInPoll();
     }
@@ -238,19 +238,19 @@ public class TestPoll extends LockssTestCase {
     catch (NullPointerException npe) {
       // the socket isn't inited and should squack
     }
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    p.m_pollstate = V1Poll.PS_COMPLETE;
   }
 
   public void testStartPoll() {
     V1Poll p = testV1polls[0];
     p.startPoll();
-    assertEquals(BasePoll.PS_WAIT_HASH, p.m_pollstate);
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    assertEquals(V1Poll.PS_WAIT_HASH, p.m_pollstate);
+    p.m_pollstate = V1Poll.PS_COMPLETE;
   }
 
   public void testScheduleOurHash() {
     V1Poll p = testV1polls[0];
-    p.m_pollstate = BasePoll.PS_WAIT_HASH;
+    p.m_pollstate = V1Poll.PS_WAIT_HASH;
     // no time has elapsed - so we should be able to schedule our hash
     assertTrue(p.scheduleOurHash());
     // half the time has elapsed so we should be able to schedule our hash
@@ -260,7 +260,7 @@ public class TestPoll extends LockssTestCase {
     // all of the time has elapsed we should not be able to schedule our hash
     TimeBase.step(p.m_deadline.getRemainingTime()- 1000);
     assertFalse(p.scheduleOurHash());
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    p.m_pollstate = V1Poll.PS_COMPLETE;
 
   }
 
@@ -270,11 +270,11 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.quorum = 10;
     p.m_tally.numAgree = 7;
     p.m_tally.numDisagree = 3;
-    p.m_pollstate = BasePoll.PS_WAIT_TALLY;
+    p.m_pollstate = V1Poll.PS_WAIT_TALLY;
     p.stopPoll();
-    assertTrue(p.m_pollstate == BasePoll.PS_COMPLETE);
+    assertTrue(p.m_pollstate == V1Poll.PS_COMPLETE);
     p.startPoll();
-    assertTrue(p.m_pollstate == BasePoll.PS_COMPLETE);
+    assertTrue(p.m_pollstate == V1Poll.PS_COMPLETE);
   }
 
   /** test for method startVoteCheck(..) */
@@ -283,7 +283,7 @@ public class TestPoll extends LockssTestCase {
     p.m_pendingVotes = 3;
     p.startVoteCheck();
     assertEquals(4, p.m_pendingVotes);
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    p.m_pollstate = V1Poll.PS_COMPLETE;
   }
 
   /** test for method stopVote(..) */
@@ -292,7 +292,7 @@ public class TestPoll extends LockssTestCase {
     p.m_pendingVotes = 3;
     p.stopVoteCheck();
     assertEquals(2, p.m_pendingVotes);
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    p.m_pollstate = V1Poll.PS_COMPLETE;
   }
 
   private V1NamePoll makeCompletedNamePoll(int numAgree,
@@ -307,13 +307,13 @@ public class TestPoll extends LockssTestCase {
     Plugin plugin = testau.getPlugin();
     PollSpec spec =
       new MockPollSpec(testau,
-		       rootV1urls[0],null,null, Poll.NAME_POLL);
+		       rootV1urls[0],null,null, Poll.V1_NAME_POLL);
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     V1LcapMessage poll_msg =
       V1LcapMessage.makeRequestMsg(spec,
 				   null,
-				   pollmanager.generateRandomBytes(),
-				   pollmanager.generateRandomBytes(),
+				   ByteArray.makeRandomBytes(20),
+				   ByteArray.makeRandomBytes(20),
 				   V1LcapMessage.NAME_POLL_REQ,
 				   testduration,
 				   testID);
@@ -329,7 +329,7 @@ public class TestPoll extends LockssTestCase {
 
     // generate agree vote msg
     agree_msg = V1LcapMessage.makeReplyMsg(poll_msg,
-					   pollmanager.generateRandomBytes(),
+					   ByteArray.makeRandomBytes(20),
 					   poll_msg.getVerifier(),
 					   agree_entries,
 					   V1LcapMessage.NAME_POLL_REP,
@@ -337,15 +337,15 @@ public class TestPoll extends LockssTestCase {
 
     // generate a disagree vote msg
     disagree_msg1 = V1LcapMessage.makeReplyMsg(poll_msg,
-					       pollmanager.generateRandomBytes(),
-					       pollmanager.generateRandomBytes(),
+					       ByteArray.makeRandomBytes(20),
+					       ByteArray.makeRandomBytes(20),
 					       disagree_entries,
 					       V1LcapMessage.NAME_POLL_REP,
 					       testduration, testID1);
     // generate a losing disagree vote msg
     disagree_msg2 = V1LcapMessage.makeReplyMsg(poll_msg,
-					       pollmanager.generateRandomBytes(),
-					       pollmanager.generateRandomBytes(),
+					       ByteArray.makeRandomBytes(20),
+					       ByteArray.makeRandomBytes(20),
 					       dissenting_entries,
 					       V1LcapMessage.NAME_POLL_REP,
 					       testduration, testID1);
@@ -373,7 +373,7 @@ public class TestPoll extends LockssTestCase {
     for(int i = 0; i < numDissenting; i++) {
       np.m_tally.addVote(np.makeNameVote(disagree_msg2, false), id, false);
     }
-    np.m_pollstate = BasePoll.PS_COMPLETE;
+    np.m_pollstate = V1Poll.PS_COMPLETE;
     np.m_tally.tallyVotes();
     return np;
   }
@@ -398,7 +398,7 @@ public class TestPoll extends LockssTestCase {
 					  testmsg.getUprBound());
     }
     CachedUrlSet cus = au.makeCachedUrlSet(cusSpec);
-    PollSpec spec = new PollSpec(cus, Poll.CONTENT_POLL);
+    PollSpec spec = new PollSpec(cus, Poll.V1_CONTENT_POLL);
     ((MockCachedUrlSet)spec.getCachedUrlSet()).setHasContent(false);
     V1Poll p = null;
     if (testmsg.isContentPoll()) {
@@ -434,7 +434,7 @@ public class TestPoll extends LockssTestCase {
     p.m_tally.localEntries = makeEntries(1,3);
     p.m_tally.votedEntries = makeEntries(1,5);
     p.m_tally.votedEntries.remove(1);
-    p.m_pollstate = BasePoll.PS_COMPLETE;
+    p.m_pollstate = V1Poll.PS_COMPLETE;
     p.m_callerID = testmsg.getOriginatorId();
     log.debug3("poll " + p.toString());
     p.m_tally.tallyVotes();
@@ -505,9 +505,9 @@ public class TestPoll extends LockssTestCase {
   private void initTestMsg() throws Exception {
     testV1msg = new V1LcapMessage[3];
     int[] pollType = {
-      Poll.NAME_POLL,
-      Poll.CONTENT_POLL,
-      Poll.VERIFY_POLL,
+      Poll.V1_NAME_POLL,
+      Poll.V1_CONTENT_POLL,
+      Poll.V1_VERIFY_POLL,
     };
     PollFactory ppf = pollmanager.getPollFactory(1);
     assertNotNull("PollFactory should not be null", ppf);
@@ -541,8 +541,8 @@ public class TestPoll extends LockssTestCase {
       testV1msg[i] =
 	V1LcapMessage.makeRequestMsg(spec,
 				     agree_entries,
-				     pollmanager.makeVerifier(100000),
-				     pollmanager.makeVerifier(100000),
+				     pf.makeVerifier(100000),
+				     pf.makeVerifier(100000),
 				     opcode,
 				     duration,
 				     testID);

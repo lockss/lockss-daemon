@@ -177,10 +177,10 @@ public class TestV3Serializer extends LockssTestCase {
     for (Iterator iter = uds1.iterator(); iter.hasNext(); ) {
       pollerSerializer.savePollerUserData((PollerUserData)iter.next());
     }
-    List uds2 = pollerSerializer.loadInnerCircleStates();
+    List uds2 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds2);
     pollerSerializer = new V3PollerSerializer(pollDir.getName());
-    List uds3 = pollerSerializer.loadInnerCircleStates();
+    List uds3 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds3);
   }
   
@@ -272,7 +272,7 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(b1.getDeadline(), b2.getDeadline());
     assertEquals(b1.getPollerId().getIdString(),
                  b2.getPollerId().getIdString());
-    assertEquals(b1.readyToHash(), b2.readyToHash());
+    assertEquals(b1.allVotersReadyToTally(), b2.allVotersReadyToTally());
   }
   
   private void assertEqualPollerUserData(PollerUserData d1,

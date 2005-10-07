@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.147 2005-10-07 23:42:53 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.148 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -32,24 +32,22 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.plugin;
 
-import java.util.*;
-import java.util.jar.*;
 import java.io.*;
 import java.net.*;
-import java.security.KeyStore;
+import java.security.*;
+import java.util.*;
+import java.util.jar.*;
 
-import org.apache.commons.collections.MultiMap;
-import org.apache.commons.collections.MultiHashMap;
+import org.apache.commons.collections.*;
+
 import org.lockss.app.*;
+import org.lockss.config.*;
+import org.lockss.crawler.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.definable.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;
-import org.lockss.app.BaseLockssDaemonManager;
-import org.lockss.plugin.definable.DefinablePlugin;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
-import org.lockss.crawler.CrawlManager;
 
 /**
  * Plugin global functionality

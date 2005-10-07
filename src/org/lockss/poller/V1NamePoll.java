@@ -1,5 +1,5 @@
 /*
- * $Id: V1NamePoll.java,v 1.18 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: V1NamePoll.java,v 1.19 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class V1NamePoll extends V1Poll {
 		    byte[] challenge, long duration, String hashAlg) {
     super(pollspec, pm, orig, challenge, duration);
     m_replyOpcode = V1LcapMessage.NAME_POLL_REP;
-    m_tally = new V1PollTally(this, NAME_POLL, m_createTime, duration,
+    m_tally = new V1PollTally(this, V1_NAME_POLL, m_createTime, duration,
 			      V1PollFactory.getQuorum(), // XXX AU-specific
 			      hashAlg);
   }
@@ -74,7 +74,7 @@ public class V1NamePoll extends V1Poll {
       return;
     }
     V1LcapMessage msg;
-    PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
     long remainingTime = m_deadline.getRemainingTime();
     log.debug("castOurVote: " + local_id);
     try {
@@ -279,7 +279,7 @@ public class V1NamePoll extends V1Poll {
     String base = cus.getUrl();
     ArchivalUnit au = cus.getArchivalUnit();
     CachedUrlSet newCus = au.makeCachedUrlSet(new RangeCachedUrlSetSpec(base, lwr, upr));
-    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.NAME_POLL, Poll.V1_POLL);
+    PollSpec spec = new PollSpec(newCus, lwr, upr, Poll.V1_NAME_POLL, PollSpec.V1_PROTOCOL);
     log.debug3("calling new name poll on: " + spec);
     Poll subPoll = m_pollmanager.callPoll(spec);
     if (subPoll != null) {

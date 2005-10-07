@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.89 2004-12-07 05:17:52 tlipkis Exp $
+* $Id: Poll.java,v 1.90 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -31,22 +31,22 @@ in this Software without prior written authorization from Stanford University.
 */
 package org.lockss.poller;
 
+import org.lockss.plugin.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 
 public interface Poll {
-  // Poll protocol versions
-  public static final int V1_POLL = 1;
-  public static final int V2_POLL = 2;
+  // Poll type names
+  public static final String[] PollName = {
+    "V1 Name", "V1 Content", "V1 Verify",
+    "V3 Content", "V3 Header", "V3 Metadata"
+  };
+
+  // Poll type enum
+  public static final int V1_NAME_POLL = 0;
+  public static final int V1_CONTENT_POLL = 1;
+  public static final int V1_VERIFY_POLL = 2;
   public static final int V3_POLL = 3;
-  public static final int MAX_POLL_VERSION = 3;
-
-  // V1-specific poll types, should be moved to V1Poll
-  public static final String[] PollName = { "Name", "Content", "Verify"};
-
-  public static final int NAME_POLL = 0;
-  public static final int CONTENT_POLL = 1;
-  public static final int VERIFY_POLL = 2;
 
   /**
    * Error was return by hasher while attempting schedule hash - this
@@ -72,6 +72,13 @@ public interface Poll {
    * @return the PollSpec
    */
   public PollSpec getPollSpec();
+  
+  /**
+   * Return the CachedUrlSet for this poll.
+   * 
+   * @return The CachedUrlSet.
+   */
+  public CachedUrlSet getCachedUrlSet();
 
   /* Return the version of the protocol in use
    * @return the protocol version

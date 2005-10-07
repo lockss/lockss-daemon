@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.2 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3Voter.java,v 1.3 2005-10-07 23:46:49 smorabito Exp $
  */
 
 /*
@@ -32,9 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.io.IOException;
 import java.security.*;
+import java.util.*;
 
 import org.lockss.app.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.hasher.*;
 import org.lockss.plugin.*;
@@ -49,14 +52,30 @@ import org.lockss.util.*;
  * State is maintained in a V3VoterState object.  On the voter's side
  * of a poll, this object is transient.
  */
-public class V3Voter {
+public class V3Voter extends BasePoll {
 
+  static String PREFIX = Configuration.PREFIX + "poll.v3.";
+  
+  /** The minimum number of peers to select for a nomination message.
+   * If there are fewer than this number of peers available to nominate,
+   * an empty nomination message will be sent. */
+  public static String PARAM_MIN_NOMINATION_SIZE = PREFIX + "minNominationSize";
+  public static int DEFAULT_MIN_NOMINATION_SIZE = 0;
+
+  /** The minimum number of peers to select for a nomination message. */
+  public static String PARAM_MAX_NOMINATION_SIZE = PREFIX + "maxNominationSize";
+  public static int DEFAULT_MAX_NOMINATION_SIZE = 5;
+  
   private V3VoterInterp stateMachine;
   private VoterUserData voterUserData;
   private LockssDaemon theDaemon;
   private V3VoterSerializer pollSerializer;
   private PollManager pollManager;
+  private IdentityManager idManager;
   private boolean continuedPoll = false;
+  private int nomineeCount;
+  
+  private PollTally tally; // XXX: Refactor
   
   private static final LockssRandom theRandom = new LockssRandom();
 
@@ -69,6 +88,7 @@ public class V3Voter {
                  String key, byte[] introEffortProof, byte[] pollerNonce,
                  long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
+    log.debug3("Creating V3 Voter for poll: " + key);
     pollSerializer = new V3VoterSerializer();
     this.voterUserData = new VoterUserData(spec, this, orig, key,
                                            duration, hashAlg,
@@ -77,7 +97,28 @@ public class V3Voter {
                                            introEffortProof,
                                            pollSerializer);
     this.theDaemon = daemon;
+    this.idManager = theDaemon.getIdentityManager();
     this.pollManager = daemon.getPollManager();
+    this.tally = new MockTally(Poll.V3_POLL, TimeBase.nowMs(), duration,
+                               0, 0, 0, 0, 0, hashAlg, this);
+    
+    int min = Configuration.getIntParam(PARAM_MIN_NOMINATION_SIZE,
+                                        DEFAULT_MIN_NOMINATION_SIZE);
+    int max = Configuration.getIntParam(PARAM_MAX_NOMINATION_SIZE,
+                                        DEFAULT_MAX_NOMINATION_SIZE);
+    if (min > max) {
+      throw new IllegalArgumentException("Impossible nomination size range: "
+      + (max - min));
+    } else if (min == max) {
+      log.debug2("Minimum nominee size is same as maximum nominee size: " +
+                 min);
+      nomineeCount = min;
+    } else {
+      int r = theRandom.nextInt(max - min);
+      nomineeCount = min + r;
+    }
+    log.debug2("Will choose " + nomineeCount +
+               " outer circle nominees to send to poller");
   }
   
   /**
@@ -125,6 +166,7 @@ public class V3Voter {
   public void stopPoll() {
     log.debug("Stopping poll " + voterUserData.getPollKey());
     // XXX: Notify state machine to stop.
+    pollSerializer.closePoll();
   }
 
   
@@ -139,30 +181,63 @@ public class V3Voter {
     return secret;
   }
 
-  Class getVoterActionsClass() {
+  private Class getVoterActionsClass() {
     return VoterActions.class;
   }
 
   /**
    * Send a message to the poller.
    */
-  public void sendMessage(V3LcapMessage msg) {
-    // XXX:  Implement.  Override in testing for now.
+  void sendMessageTo(V3LcapMessage msg, PeerIdentity id)
+      throws IOException {
+    pollManager.sendMessageTo(msg, id);
   }
   
   /**
    * Handle an incoming V3LcapMessage.
    */
-  public void handleMessage(V3LcapMessage msg) {
-    PsmMsgEvent evt = V3Events.fromMessage(msg);
-    stateMachine.handleEvent(evt);
+  public void receiveMessage(LcapMessage message) {
+    V3LcapMessage msg = (V3LcapMessage)message;
+    int opcode = msg.getOpcode();
+    switch(opcode) {
+    case V3LcapMessage.MSG_POLL: // we won't actually see these, but for completeness...
+    case V3LcapMessage.MSG_POLL_PROOF:
+    case V3LcapMessage.MSG_VOTE_REQ:
+    case V3LcapMessage.MSG_REPAIR_REQ:
+    case V3LcapMessage.MSG_EVALUATION_RECEIPT:
+      PsmMsgEvent evt = V3Events.fromMessage(msg);
+      stateMachine.handleEvent(evt);
+      return;
+    default:
+      log.debug2("Ignoring message: " + msg);
+      return;
+    }
   }
   
   /**
    * Generate a list of outer circle nominees.
    */
   public void nominatePeers() {
-    // XXX: Implement.  Override in testing for now.
+    // XXX:  'allPeers' must contain only peers that have agreed with
+    //       us in the past for this au!  Change this signature to:
+    //       getTcpPeerIdentities(ArchivalUnit au);
+    Collection allPeers = idManager.getTcpPeerIdentities();
+    allPeers.remove(voterUserData.getPollerId()); // Never nominate the poller
+    if (nomineeCount <= allPeers.size()) {
+      Collection nominees =
+        CollectionUtil.randomSelection(allPeers, nomineeCount);
+      // VoterUserData expects the collection to be KEYS, not PeerIdentities.
+      ArrayList nomineeStrings = new ArrayList();
+      for (Iterator iter = nominees.iterator(); iter.hasNext(); ) {
+        PeerIdentity id = (PeerIdentity)iter.next();
+        nomineeStrings.add(id.getIdString());
+      }
+      voterUserData.setNominees(nomineeStrings);
+      log.debug2("Nominating the following peers: " + nomineeStrings);
+    } else {
+      log.warning("Not enough peers to nominate.  Need " + nomineeCount +
+                  ", only know about " + allPeers.size());
+    }
   }
   
   /**
@@ -172,7 +247,7 @@ public class V3Voter {
     * 
    * @return Block hasher initialization bytes.
    */
-  byte[][] initHasherByteArrays() {
+  private byte[][] initHasherByteArrays() {
     return new byte[][] {ByteArray.concat(voterUserData.getPollerNonce(),
                                           voterUserData.getVoterNonce())};
   }
@@ -182,7 +257,7 @@ public class V3Voter {
    * 
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
-  MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
+  private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
     String hashAlg = voterUserData.getHashAlgorithm();
     if (hashAlg == null) {
       hashAlg = LcapMessage.DEFAULT_HASH_ALGORITHM;
@@ -193,7 +268,7 @@ public class V3Voter {
   /**
    * Schedule a hash.
    */
-  public boolean generateVote() throws NoSuchAlgorithmException {
+  boolean generateVote() throws NoSuchAlgorithmException {
     log.debug("Scheduling vote hash for poll " + voterUserData.getPollKey());
     CachedUrlSetHasher hasher = new BlockHasher(voterUserData.getCachedUrlSet(),
                                                 initHasherDigests(),
@@ -242,8 +317,60 @@ public class V3Voter {
                                  VoteBlock.CONTENT_VOTE);
     blocks.addVoteBlock(vb);
   }
+
+  public void setMessage(LcapMessage msg) {
+    voterUserData.setPollMessage(msg);
+  }
+
+  public long getCreateTime() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  public PeerIdentity getCallerID() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  protected boolean isErrorState() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  public boolean isMyPoll() {
+    // Always return false
+    return false;
+  }
+
+  public PollSpec getPollSpec() {
+    return voterUserData.getPollSpec(); 
+  }
+
+  public CachedUrlSet getCachedUrlSet() {
+    return voterUserData.getCachedUrlSet();
+  }
+
+  public int getVersion() {
+    return voterUserData.getPollVersion();
+  }
+
+  public LcapMessage getMessage() {
+    return voterUserData.getPollMessage();
+  }
+
+  public String getKey() {
+    return voterUserData.getPollKey();
+  }
+
+  public Deadline getDeadline() {
+    return Deadline.at(voterUserData.getDeadline());
+  }
+
+  public PollTally getVoteTally() {
+    return tally;
+  }
   
-  class HashingCompleteCallback implements HashService.Callback {
+  private class HashingCompleteCallback implements HashService.Callback {
     /**
      * Called when the timer expires or hashing is complete.
      * 
@@ -260,10 +387,78 @@ public class V3Voter {
     }
   }
 
-  class BlockCompleteHandler implements BlockHasher.EventHandler {
+  private class BlockCompleteHandler implements BlockHasher.EventHandler {
     public void blockDone(HashBlock block) {
       blockHashComplete(block);
     }
+  }
+  
+  // XXX - only used as a stepping stone to get V3Voter working properly with
+  // the poll manager.  This should be refactored away in daemon 1.13.
+  private static class MockTally extends PollTally {
+
+    private BasePoll poll;
+
+    public MockTally(int type, long startTime, long duration,
+                     int numAgree, int numDisagree, int wtAgree, int wtDisagree,
+                     int quorum, String hashAlgorithm, V3Voter poll) {
+      super(type, startTime, duration, numAgree, numDisagree,
+            wtAgree, wtDisagree, quorum, hashAlgorithm);
+      this.poll = poll;
+    }
+
+    public int getErr() {
+      return 0;
+    }
+
+    public String getErrString() {
+      return "N/A";
+    }
+
+    public String getStatusString() {
+      return "N/A";
+    }
+
+    public BasePoll getPoll() {
+      return poll;
+    }
+    
+    public PollSpec getPollSpec() {
+      return poll.getPollSpec();
+    }
+
+    public void tallyVotes() {
+      ; // do nothing
+    }
+
+    public boolean stateIsActive() {
+      return false;
+    }
+
+    public boolean stateIsFinished() {
+      return false;
+    }
+
+    public boolean stateIsSuspended() {
+      return false;
+    }
+
+    public void setStateSuspended() {
+      ; // do nothing
+    }
+
+    public void replayVoteCheck(Vote vote, Deadline deadline) {
+      ; // do nothing
+    }
+
+    public void adjustReputation(PeerIdentity voterID, int repDelta) {
+      ; // do nothing
+    }
+
+    public int getTallyResult() {
+      return 0;
+    }
+    
   }
   
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.4 2005-09-15 17:07:56 thib_gc Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.5 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -142,8 +142,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       throws IdentityManager.MalformedIdentityKeyException {
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
-    assertNull(mgr.localPeerIdentities[Poll.V3_POLL]);
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V1_POLL];
+    assertNull(mgr.localPeerIdentities[PollSpec.V3_PROTOCOL]);
+    PeerIdentity pid1 = mgr.localPeerIdentities[PollSpec.V1_PROTOCOL];
     PeerIdentity pid2 = mgr.stringToPeerIdentity(LOCAL_IP);
     assertSame(pid1, pid2);
     PeerAddress pa = pid1.getPeerAddress();
@@ -157,7 +157,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   LOCAL_PORT);
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
+    PeerIdentity pid1 = mgr.localPeerIdentities[PollSpec.V3_PROTOCOL];
     String key = IDUtil.ipAddrToKey(LOCAL_IP, LOCAL_PORT_NUM);
     PeerIdentity pid2 = mgr.stringToPeerIdentity(key);
     assertSame(pid1, pid2);
@@ -176,7 +176,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                   + (LOCAL_PORT_NUM + 123));
     IdentityManagerImpl mgr = new IdentityManagerImpl();
     mgr.setupLocalIdentities();
-    PeerIdentity pid1 = mgr.localPeerIdentities[Poll.V3_POLL];
+    PeerIdentity pid1 = mgr.localPeerIdentities[PollSpec.V3_PROTOCOL];
     PeerAddress pa = pid1.getPeerAddress();
     assertTrue(pa instanceof PeerAddress.Tcp);
     assertEquals(IP_2, ((PeerAddress.Tcp)pa).getIPAddr().getHostAddress());
@@ -203,7 +203,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   public void testStringToPeerIdentityNull() throws Exception {
     peer1 = idmgr.stringToPeerIdentity(null);
     assertTrue(peer1.isLocalIdentity());
-    assertSame(peer1, idmgr.getLocalPeerIdentity(Poll.V1_POLL));
+    assertSame(peer1, idmgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
   }
 
   /** test for method ipAddrToPeerIdentity **/
@@ -233,7 +233,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   public void testIPAddrToPeerIdentityNull() throws Exception {
     peer1 = idmgr.ipAddrToPeerIdentity(null);
     assertTrue(peer1.isLocalIdentity());
-    assertSame(peer1, idmgr.getLocalPeerIdentity(Poll.V1_POLL));
+    assertSame(peer1, idmgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
   }
 
   public void testIdentityToIPAddr() throws Exception {
@@ -258,7 +258,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
   }
 
   public void testGetLocalIdentity() {
-    peer1 = idmgr.getLocalPeerIdentity(Poll.V1_POLL);
+    peer1 = idmgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
     assertTrue(peer1.isLocalIdentity());
     assertTrue(idmgr.isLocalIdentity(peer1));
     String key = peer1.getIdString();
@@ -267,8 +267,8 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
   public void testGetLocalIdentityIll() {
     try {
-      peer1 = idmgr.getLocalPeerIdentity(Poll.MAX_POLL_VERSION + 32);
-      fail("getLocalPeerIdentity(" + (Poll.MAX_POLL_VERSION + 32) +
+      peer1 = idmgr.getLocalPeerIdentity(PollSpec.MAX_POLL_PROTOCOL + 32);
+      fail("getLocalPeerIdentity(" + (PollSpec.MAX_POLL_PROTOCOL + 32) +
 	   ") should throw");
     } catch (IllegalArgumentException e) {
     }
@@ -827,6 +827,45 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     }
     
     assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
+  }
+  
+  public void testGetUdpPeerIdentities() throws Exception {
+    Collection udpPeers = idmgr.getUdpPeerIdentities();
+    assertNotNull(udpPeers);
+    idmgr.findPeerIdentity("127.0.0.1;8001");
+    idmgr.findPeerIdentity("127.0.0.1;8002");
+    idmgr.findPeerIdentity("127.0.0.1;8003");
+    idmgr.findPeerIdentity("127.0.0.1;8004");
+    PeerIdentity id1 = idmgr.findPeerIdentity("127.0.0.2");
+    PeerIdentity id2 = idmgr.findPeerIdentity("127.0.0.3");
+    PeerIdentity id3 = idmgr.findPeerIdentity("127.0.0.4");
+    udpPeers = idmgr.getUdpPeerIdentities();
+    log.info("udp peers: " + udpPeers);
+    assertEquals(3, udpPeers.size());
+    Collection expectedPeers =
+      ListUtil.list(id1, id2, id3);
+    assertTrue(udpPeers.containsAll(expectedPeers));
+    assertTrue(expectedPeers.containsAll(udpPeers));
+  }
+  
+  public void testGetTcpPeerIdentities() throws Exception {
+    Collection tcpPeers = idmgr.getTcpPeerIdentities();
+    assertNotNull(tcpPeers);
+    assertEquals(0, tcpPeers.size());
+    PeerIdentity id1 = idmgr.findPeerIdentity("127.0.0.1;8001");
+    PeerIdentity id2 = idmgr.findPeerIdentity("127.0.0.1;8002");
+    PeerIdentity id3 = idmgr.findPeerIdentity("127.0.0.1;8003");
+    PeerIdentity id4 = idmgr.findPeerIdentity("127.0.0.1;8004");
+    idmgr.findPeerIdentity("127.0.0.2");
+    idmgr.findPeerIdentity("127.0.0.3");
+    idmgr.findPeerIdentity("127.0.0.4");
+    tcpPeers = idmgr.getTcpPeerIdentities();
+    log.info("udp peers: " + tcpPeers);
+    assertEquals(4, tcpPeers.size());
+    Collection expectedPeers =
+      ListUtil.list(id1, id2, id3, id4);
+    assertTrue(tcpPeers.containsAll(expectedPeers));
+    assertTrue(expectedPeers.containsAll(tcpPeers));
   }
   
   private class TestableIdentityManager extends IdentityManagerImpl {

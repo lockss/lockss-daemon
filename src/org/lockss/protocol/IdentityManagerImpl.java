@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.4 2005-10-05 23:12:41 troberts Exp $
+ * $Id: IdentityManagerImpl.java,v 1.5 2005-10-07 23:46:47 smorabito Exp $
  */
 
 /*
@@ -40,8 +40,8 @@ import org.lockss.app.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.poller.Poll;
-import org.lockss.poller.Vote;
+import org.lockss.poller.*;
+import org.lockss.protocol.IdentityManager.*;
 import org.lockss.state.HistoryRepository;
 import org.lockss.util.*;
 
@@ -165,6 +165,13 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   static final int REPUTATION_NUMERATOR = 1000;
 
   /**
+   * <p>The initial list of V3 peers for this cache.</p>
+   */
+  public static String PARAM_INITIAL_PEERS = PREFIX + "initialV3PeerList";
+  
+  public static String DEFAULT_INITIAL_PEERS = "";
+  
+  /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
    */
   static LockssRandom theRandom = new LockssRandom();
@@ -228,7 +235,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>Builds a new IdentityManager instance.</p>
    */
-  public IdentityManagerImpl() { }
+  public IdentityManagerImpl() {
+    theIdentities = new HashMap();
+    thePeerIdentities = new HashMap();
+  }
 
   public void initService(LockssDaemon daemon) throws LockssAppException {
     super.initService(daemon);
@@ -244,9 +254,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * implement instead.</p>
    */
   protected void setupLocalIdentities() {
-    localPeerIdentities = new PeerIdentity[Poll.MAX_POLL_VERSION+1];
-    theIdentities = new HashMap();
-    thePeerIdentities = new HashMap();
+    localPeerIdentities = new PeerIdentity[PollSpec.MAX_POLL_PROTOCOL+1];
     
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
@@ -265,7 +273,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       throw new LockssAppException("IdentityManager: " + msg);
     }
     try {
-      localPeerIdentities[Poll.V1_POLL] =
+      localPeerIdentities[PollSpec.V1_PROTOCOL] =
         findLocalPeerIdentity(localV1IdentityStr);
     } catch (MalformedIdentityKeyException e) {
       String msg = "Cannot start: Can't create local identity:" +
@@ -284,7 +292,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     if (v3idstr != null) {
       try {
-        localPeerIdentities[Poll.V3_POLL] = findLocalPeerIdentity(v3idstr);
+        localPeerIdentities[PollSpec.V3_PROTOCOL] = findLocalPeerIdentity(v3idstr);
       } catch (MalformedIdentityKeyException e) {
         String msg = "Cannot start: Cannot create local V3 identity: " +
         v3idstr;
@@ -304,9 +312,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     super.startService();
     reloadIdentities();
 
-    log.info("Local V1 identity: " + getLocalPeerIdentity(Poll.V1_POLL));
-    if (localPeerIdentities[Poll.V3_POLL] != null) {
-      log.info("Local V3 identity: " + getLocalPeerIdentity(Poll.V3_POLL));
+    log.info("Local V1 identity: " + getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
+    if (localPeerIdentities[PollSpec.V3_PROTOCOL] != null) {
+      log.info("Local V3 identity: " + getLocalPeerIdentity(PollSpec.V3_PROTOCOL));
     }
     status = makeStatusAccessor(theIdentities);
     getDaemon().getStatusService().registerStatusAccessor("Identities",
@@ -437,7 +445,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       log.warning("ipAddrToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
-      return localPeerIdentities[Poll.V1_POLL];
+      return localPeerIdentities[PollSpec.V1_PROTOCOL];
     }
     else {
       return findPeerIdentityAndData(addr, port);
@@ -462,7 +470,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       log.warning("stringToPeerIdentity(null) is deprecated.");
       log.warning("  Use getLocalPeerIdentity() to get a local identity");
       // XXX return V1 identity until all callers fixed
-      return localPeerIdentities[Poll.V1_POLL];
+      return localPeerIdentities[PollSpec.V1_PROTOCOL];
     }
     else {
       return findPeerIdentityAndData(idKey);
@@ -779,6 +787,34 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
   }
 
+  public Collection getUdpPeerIdentities() {
+    Collection retVal = new ArrayList();
+    for (Iterator it = thePeerIdentities.values().iterator(); it.hasNext(); ) {
+      PeerIdentity id = (PeerIdentity)it.next();
+      try {
+        if (id.getPeerAddress() instanceof PeerAddress.Udp && !id.isLocalIdentity())
+          retVal.add(id);
+      } catch (MalformedIdentityKeyException e) {
+        log.warning("Malformed identity key: " + id);
+      }
+    }
+    return retVal;
+  }
+  
+  public Collection getTcpPeerIdentities() {
+    Collection retVal = new ArrayList();
+    for (Iterator it = thePeerIdentities.values().iterator(); it.hasNext(); ) {
+      PeerIdentity id = (PeerIdentity)it.next();
+      try {
+        if (id.getPeerAddress() instanceof PeerAddress.Tcp && !id.isLocalIdentity())
+          retVal.add(id);
+      } catch (MalformedIdentityKeyException e) {
+        log.warning("Malformed identity key: " + id);
+      }
+    }
+    return retVal;    
+  }
+  
   /**
    * <p>Castor+XStream transition helper method, that wraps the
    * identity map into the object expected by serialization code.</p>
@@ -1126,30 +1162,48 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   public void setConfig(Configuration config, Configuration oldConfig,
 			Configuration.Differences changedKeys) {
-    reputationDeltas[MAX_DELTA] =
-      config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
-    reputationDeltas[AGREE_VOTE] =
-      config.getInt(PARAM_AGREE_DELTA, DEFAULT_AGREE_DELTA);
-    reputationDeltas[DISAGREE_VOTE] =
+    if (changedKeys.contains(PREFIX)) {
+      reputationDeltas[MAX_DELTA] =
+        config.getInt(PARAM_MAX_DELTA, DEFAULT_MAX_DELTA);
+      reputationDeltas[AGREE_VOTE] =
+        config.getInt(PARAM_AGREE_DELTA, DEFAULT_AGREE_DELTA);
+      reputationDeltas[DISAGREE_VOTE] =
       config.getInt(PARAM_DISAGREE_DELTA, DEFAULT_DISAGREE_DELTA);
-    reputationDeltas[CALL_INTERNAL] =
-      config.getInt(PARAM_CALL_INTERNAL, DEFAULT_CALL_INTERNAL);
-    reputationDeltas[SPOOF_DETECTED] =
-      config.getInt(PARAM_SPOOF_DETECTED, DEFAULT_SPOOF_DETECTED);
-    reputationDeltas[REPLAY_DETECTED] =
-      config.getInt(PARAM_REPLAY_DETECTED, DEFAULT_REPLAY_DETECTED);
-    reputationDeltas[ATTACK_DETECTED] =
-      config.getInt(PARAM_ATTACK_DETECTED, DEFAULT_ATTACK_DETECTED);
-    reputationDeltas[VOTE_NOTVERIFIED] =
-      config.getInt(PARAM_VOTE_NOTVERIFIED, DEFAULT_VOTE_NOTVERIFIED);
-    reputationDeltas[VOTE_VERIFIED] =
-      config.getInt(PARAM_VOTE_VERIFIED, DEFAULT_VOTE_VERIFIED);
-    reputationDeltas[VOTE_DISOWNED] =
-      config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
+      reputationDeltas[CALL_INTERNAL] =
+        config.getInt(PARAM_CALL_INTERNAL, DEFAULT_CALL_INTERNAL);
+      reputationDeltas[SPOOF_DETECTED] =
+        config.getInt(PARAM_SPOOF_DETECTED, DEFAULT_SPOOF_DETECTED);
+      reputationDeltas[REPLAY_DETECTED] =
+        config.getInt(PARAM_REPLAY_DETECTED, DEFAULT_REPLAY_DETECTED);
+      reputationDeltas[ATTACK_DETECTED] =
+        config.getInt(PARAM_ATTACK_DETECTED, DEFAULT_ATTACK_DETECTED);
+      reputationDeltas[VOTE_NOTVERIFIED] =
+        config.getInt(PARAM_VOTE_NOTVERIFIED, DEFAULT_VOTE_NOTVERIFIED);
+      reputationDeltas[VOTE_VERIFIED] =
+        config.getInt(PARAM_VOTE_VERIFIED, DEFAULT_VOTE_VERIFIED);
+      reputationDeltas[VOTE_DISOWNED] =
+        config.getInt(PARAM_VOTE_DISOWNED, DEFAULT_VOTE_DISOWNED);
 
-    isMergeRestoredAgreemMap =
-      config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
-			DEFAULT_MERGE_RESTORED_AGREE_MAP);
+      isMergeRestoredAgreemMap =
+        config.getBoolean(PARAM_MERGE_RESTORED_AGREE_MAP,
+                          DEFAULT_MERGE_RESTORED_AGREE_MAP);
+      configV3Identities();
+    }
+  }
+  
+  /**
+   * XXX: V3 refactor.
+   */
+  private void configV3Identities() {
+    String refString = Configuration.getParam(PARAM_INITIAL_PEERS,
+                                              DEFAULT_INITIAL_PEERS);
+    if (refString != null) {
+      List l = StringUtil.breakAt(refString, ',');
+      for (Iterator iter = l.iterator(); iter.hasNext(); ) {
+        // Just ensure the peer is in the ID map.
+        findPeerIdentity((String)iter.next());
+      }
+    }
   }
 
   protected String getLocalIpParam(Configuration config) {

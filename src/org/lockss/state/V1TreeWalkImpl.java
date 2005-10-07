@@ -1,5 +1,5 @@
 /*
- * $Id: V1TreeWalkImpl.java,v 1.5 2005-01-07 01:19:05 troberts Exp $
+ * $Id: V1TreeWalkImpl.java,v 1.6 2005-10-07 23:46:46 smorabito Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.app.LockssDaemon;
  * scheduling or threading mechanisms.
  */
 public class V1TreeWalkImpl implements TreeWalker {
-  private static Logger log = Logger.getLogger("TreeWalkImpl");
+  private static Logger log = Logger.getLogger("V1TreeWalkImpl");
 
   // Managers, AU.  (All but the PluginManager are required for testing.)
   TreeWalkManager twm;

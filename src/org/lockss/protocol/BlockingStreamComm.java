@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.9 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: BlockingStreamComm.java,v 1.10 2005-10-07 23:46:48 smorabito Exp $
  */
 
 /*
@@ -39,7 +39,6 @@ import java.util.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
 
 import org.lockss.util.*;
-import org.lockss.util.Queue;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.app.*;
@@ -308,7 +307,7 @@ public class BlockingStreamComm
 
   // overridable for testing
   protected PeerIdentity getLocalPeerIdentity() {
-    return idMgr.getLocalPeerIdentity(Poll.V3_POLL);
+    return idMgr.getLocalPeerIdentity(PollSpec.V3_PROTOCOL);
   }
 
   PeerIdentity findPeerIdentity(String idkey) {

@@ -1,5 +1,5 @@
 /*
-* $Id: MockPoll.java,v 1.3 2004-12-07 05:17:50 tlipkis Exp $
+* $Id: MockPoll.java,v 1.4 2005-10-07 23:46:44 smorabito Exp $
  */
 
 /*
@@ -88,6 +88,13 @@ public class MockPoll implements Poll {
    */
   public void setPollSpec(PollSpec pollspec) {
     m_pollspec = pollspec;
+  }
+  
+  /**
+   * Return the cached url set.
+   */
+  public CachedUrlSet getCachedUrlSet() {
+    return m_pollspec.getCachedUrlSet();
   }
 
   /* Return the version of the protocol in use

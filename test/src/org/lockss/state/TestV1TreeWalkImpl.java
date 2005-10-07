@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1TreeWalkImpl.java,v 1.5 2005-05-12 00:22:23 troberts Exp $
+ * $Id: TestV1TreeWalkImpl.java,v 1.6 2005-10-07 23:46:44 smorabito Exp $
  */
 
 /*
@@ -192,7 +192,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
 	TestNodeManagerImpl.getCus(mau, TEST_URL));
 
     // should ignore if active poll
-    PollState pollState = new PollState(Poll.NAME_POLL, "", "",
+    PollState pollState = new PollState(Poll.V1_NAME_POLL, "", "",
 					PollState.RUNNING, 1,
 					Deadline.MAX, true);
     node.addPollState(pollState);
@@ -250,7 +250,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
     NodeStateImpl subNode = (NodeStateImpl)nodeManager.getNodeState(subCus);
 
     // set parent node to be running a poll
-    PollHistory pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+    PollHistory pollHist = new PollHistory(Poll.V1_NAME_POLL, "", "",
 					   PollState.RUNNING, 123, 1,
 					   null, true);
     node.closeActivePoll(pollHist);
@@ -273,7 +273,7 @@ public class TestV1TreeWalkImpl extends LockssTestCase {
 	ActivityRegulator.TREEWALK, 123321);
 
     // set both nodes to be running a poll
-    pollHist = new PollHistory(Poll.NAME_POLL, "", "",
+    pollHist = new PollHistory(Poll.V1_NAME_POLL, "", "",
 			       PollState.RUNNING, 456, 1,
 			       null, true);
     node.closeActivePoll(pollHist);

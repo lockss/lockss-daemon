@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.4 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.5 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -52,6 +52,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
   private LockssDaemon theDaemon;
   private PeerIdentity id;
 
+  private PsmMsgEvent msgPoll;
   private PsmMsgEvent msgPollProof;
   private PsmMsgEvent msgVoteRequest;
   private PsmMsgEvent msgRepairRequest;
@@ -70,9 +71,17 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     this.theIdMgr = theDaemon.getIdentityManager();
 
     this.id = theIdMgr.stringToPeerIdentity("127.0.0.1");
-
+    this.msgPoll =
+      V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL,
+                                             "key",
+                                             this.id,
+                                             "http://www.test.com/",
+                                             123456789, 987654321,
+                                             ByteArray.makeRandomBytes(20),
+                                             ByteArray.makeRandomBytes(20)));
     this.msgPollProof =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF,
+                                             "key",
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
@@ -80,6 +89,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
                                              ByteArray.makeRandomBytes(20)));
     this.msgVoteRequest =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_VOTE_REQ,
+                                             "key",
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
@@ -87,6 +97,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
                                              ByteArray.makeRandomBytes(20)));
     this.msgRepairRequest =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_REPAIR_REQ,
+                                             "key",
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
@@ -94,6 +105,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
                                              ByteArray.makeRandomBytes(20)));
     this.msgReceipt =
       V3Events.fromMessage(new V3LcapMessage(V3LcapMessage.MSG_EVALUATION_RECEIPT,
+                                             "key",
 					     this.id,
 					     "http://www.test.com/",
 					     123456789, 987654321,
@@ -114,33 +126,30 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 
     interp.init();
 
+    // Verify that the poller is waiting in "Initialize"
+    assertWaiting(interp, "Initialize");
+    // Send a Poll
+    interp.handleEvent(msgPoll);
     // Verify that the poller is waiting in "WaitPollAck"
     assertWaiting(interp, "WaitPollProof");
-
     // Cause the next event to be handled.
     interp.handleEvent(msgPollProof);
-
     // Verify that the interpreter is waiting in "WaitVoteRequest"
     assertWaiting(interp, "WaitVoteRequest");
-
     // Send a Vote Request
     interp.handleEvent(msgVoteRequest);
-
     // Verify that the interpreter is waiting in "WaitReceipt"
     assertWaiting(interp, "WaitReceipt");
-
     // Send a Repair Request message.
     interp.handleEvent(msgRepairRequest);
-
     // Verify that the interpreter is back in "WaitReceipt"
     assertWaiting(interp, "WaitReceipt");
-
     // Send a Receipt message
     interp.handleEvent(msgReceipt);
 
     // Verify that the interpreterr is in its final state.
     assertTrue(interp.isFinalState());
-    String[] expectedResults = {"verifyPollEffort",
+    String[] expectedResults = {"initialize", "verifyPollEffort",
 				"provePollAck", "sendPollAck",
 				"receivePollProof", "verifyPollProof",
 				"sendNominate", "generateVote",
@@ -160,38 +169,33 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
 
     interp.init();
-
+    // Verify that the poller is waiting in "Initialize"
+    assertWaiting(interp, "Initialize");
+    // Send a Poll
+    interp.handleEvent(msgPoll);
     // Verify that the poller is waiting in "WaitPollAck"
     assertWaiting(interp, "WaitPollProof");
-
     // Send a Poll Proof message
     interp.handleEvent(msgPollProof);
-
     // Verify that the interpreter is waiting in "WaitVoteRequest"
     assertWaiting(interp, "WaitVoteRequest");
-
     // Send a Vote Request
     interp.handleEvent(msgVoteRequest);
-
     // Verify that the interpreter is waiting in "WaitReceipt"
     assertWaiting(interp, "WaitReceipt");
-
     // Loop through five times, each time sending a repair request
     // message.
     for (int i = 0; i < 5; i++) {
       // Send a Repair Request message.
       interp.handleEvent(msgRepairRequest);
-
       // Verify that the interpreter is back in "WaitReceipt"
       assertWaiting(interp, "WaitReceipt");
     }
-
     // Cause the next event to be handled.
     interp.handleEvent(msgReceipt);
-
     // Verify that the interpreter is in its final state
     assertTrue(interp.isFinalState());
-    String[] expectedResults = {"verifyPollEffort",
+    String[] expectedResults = {"initialize", "verifyPollEffort",
 				"provePollAck", "sendPollAck",
 				"receivePollProof", "verifyPollProof",
 				"sendNominate", "generateVote",
@@ -211,33 +215,28 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
    * been requested.
    */
   public void testNoRepairMachineOrder() throws Exception {
-
     PsmMachine mach = VoterStateMachineFactory.getMachine(TestActions.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-
     interp.init();
-
+    // Verify that the poller is waiting in "Initialize"
+    assertWaiting(interp, "Initialize");
+    // Send a Poll
+    interp.handleEvent(msgPoll);
     // Verify that the poller is waiting in "WaitPollAck"
     assertWaiting(interp, "WaitPollProof");
-
     // Cause the next event to be handled.
     interp.handleEvent(msgPollProof);
-
     // Verify that the interpreter is waiting in "WaitVoteRequest"
     assertWaiting(interp, "WaitVoteRequest");
-
     // Send a Vote Request
     interp.handleEvent(msgVoteRequest);
-
     // Verify that the interpreter is waiting in "WaitReceipt"
     assertWaiting(interp, "WaitReceipt");
-
     // Send a Receipt message
     interp.handleEvent(msgReceipt);
-
     // Verify that the interpreterr is in its final state.
     assertTrue(interp.isFinalState());
-    String[] expectedResults = {"verifyPollEffort",
+    String[] expectedResults = {"initialize", "verifyPollEffort",
 				"provePollAck", "sendPollAck",
 				"receivePollProof", "verifyPollProof",
 				"sendNominate", "generateVote",
@@ -251,13 +250,26 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
    * Ensure that each state properly handles errors.
    */
 
+  /** Error in Initialize */
+  public void testInitializeError() throws Exception {
+    PsmMachine mach = VoterStateMachineFactory.getMachine(Errors1.class);
+    PsmInterp interp = new PsmInterp(mach, new ArrayList());
+    interp.init();
+    interp.handleEvent(msgPoll);
+    assertTrue(interp.isFinalState());
+    String[] expectedResults = new String[] {"error"};
+    assertIsomorphic(ListUtil.fromArray(expectedResults),
+                     (List)interp.getUserData());
+  }
+  
   /**  Error in VerifyPollEffort */
   public void testVerifyPollEffortError() throws Exception {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors2.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"error"};
+    String[] expectedResults = new String[] {"initialize", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
   }
@@ -267,8 +279,10 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors3.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort", "error"};
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
+                                             "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
   }
@@ -278,8 +292,9 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors4.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
@@ -290,11 +305,12 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors5.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send poll proof message
     interp.handleEvent(msgPollProof);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
@@ -306,11 +322,12 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors6.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send poll proof message
     interp.handleEvent(msgPollProof);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
@@ -323,11 +340,12 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors7.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send poll proof message
     interp.handleEvent(msgPollProof);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
@@ -339,11 +357,12 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors8.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send poll proof message
     interp.handleEvent(msgPollProof);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
@@ -355,13 +374,14 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors9.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send poll proof message
     interp.handleEvent(msgPollProof);
     assertWaiting(interp, "WaitVoteRequest");
     interp.handleEvent(msgVoteRequest);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate", 
 					     "generateVote", "error"};
@@ -374,13 +394,14 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors10.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send poll proof message
     interp.handleEvent(msgPollProof);
     assertWaiting(interp, "WaitVoteRequest");
     interp.handleEvent(msgVoteRequest);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate",
 					     "generateVote", "receiveVoteRequest", "error"};
@@ -393,6 +414,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors11.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send a poll proof message
     interp.handleEvent(msgPollProof);
@@ -401,7 +423,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     assertWaiting(interp, "WaitReceipt");
     interp.handleEvent(msgRepairRequest);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate",
 					     "generateVote", "receiveVoteRequest",
@@ -415,6 +437,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors12.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     // Send a poll proof message
     interp.handleEvent(msgPollProof);
     assertWaiting(interp, "WaitVoteRequest");
@@ -423,7 +446,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     interp.handleEvent(msgRepairRequest);
     // Should error out trying to send repair
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate",
 					     "generateVote", "receiveVoteRequest",
@@ -438,6 +461,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors13.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send a poll proof message
     interp.handleEvent(msgPollProof);
@@ -448,7 +472,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     assertWaiting(interp, "WaitReceipt");
     interp.handleEvent(msgReceipt);
     assertTrue(interp.isFinalState());
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate",
 					     "generateVote", "receiveVoteRequest",
@@ -463,6 +487,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors14.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
     interp.init();
+    interp.handleEvent(msgPoll);
     assertFalse(interp.isFinalState());
     // Send a poll proof message
     interp.handleEvent(msgPollProof);
@@ -474,7 +499,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     interp.handleEvent(msgReceipt);
     assertTrue(interp.isFinalState());
     // Should error out trying to process the receipt
-    String[] expectedResults = new String[] {"verifyPollEffort",
+    String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
 					     "verifyPollProof", "sendNominate",
 					     "generateVote", "receiveVoteRequest",
@@ -491,6 +516,11 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
    * implementations for testing.
    */
   public static class TestActions extends VoterActions {
+    public static PsmEvent handleReceivePoll(PsmMsgEvent evt, PsmInterp interp) {
+      ((List)interp.getUserData()).add("initialize");
+      return V3Events.evtOk;
+    }
+
     public static PsmEvent handleVerifyPollEffort(PsmEvent evt, PsmInterp interp) {
       ((List)interp.getUserData()).add("verifyPollEffort");
       return V3Events.evtOk;
@@ -569,7 +599,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 
   // Error in Initialize
   public static class Errors1 extends TestActions {
-    public static PsmEvent handleInitialize(PsmEvent evt, PsmInterp interp) {
+    public static PsmEvent handleReceivePoll(PsmMsgEvent evt, PsmInterp interp) {
       return V3Events.evtError;
     }
   }

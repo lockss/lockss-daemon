@@ -1,5 +1,5 @@
 /*
- * $Id: MockPollSpec.java,v 1.5 2005-02-02 09:42:20 tlipkis Exp $
+ * $Id: MockPollSpec.java,v 1.6 2005-10-07 23:46:44 smorabito Exp $
  */
 
 /*
@@ -85,6 +85,14 @@ public class MockPollSpec extends PollSpec {
     super(ps, pollType);
   }
 
+  public MockPollSpec(CachedUrlSet cus, int pollType) {
+    super(cus, pollType);
+  }
+  
+  public MockPollSpec(CachedUrlSet cus, int pollType, int pollVersion) {
+    super(cus, pollType, pollVersion);
+  }
+  
   public String getPluginVersion() {
     return (overridePluginVersion != null)
       ? overridePluginVersion : super.getPluginVersion();

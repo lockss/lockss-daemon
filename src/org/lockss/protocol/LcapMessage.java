@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessage.java,v 1.57 2005-08-11 06:37:12 tlipkis Exp $
+ * $Id: LcapMessage.java,v 1.58 2005-10-07 23:46:47 smorabito Exp $
  */
 
 /*
@@ -58,6 +58,7 @@ public abstract class LcapMessage {
   public static final int SHA_LENGTH = 20;
   public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
   public static final byte[] signature = { 'l', 'p', 'm' };
+  public static final byte[] pollVersionByte = { '1', '2', '3' };
 
   /* items that are not in the property list */
   protected int m_pollVersion; // poll version number
@@ -123,8 +124,6 @@ public abstract class LcapMessage {
   abstract public String getOpcodeString();
 
   abstract public String getKey();
-
-  abstract public boolean isPollVersionSupported(int vers);
 
   abstract public boolean isNoOp();
 
@@ -288,6 +287,10 @@ public abstract class LcapMessage {
     } catch (java.security.NoSuchAlgorithmException e) {
       return new byte[0];
     }
+  }
+
+  public boolean isPollVersionSupported(int vers) {
+    return (vers > 0 && vers <= pollVersionByte.length);
   }
 
 }

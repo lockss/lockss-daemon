@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1LcapMessage.java,v 1.3 2005-03-23 07:01:12 smorabito Exp $
+ * $Id: TestV1LcapMessage.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class TestV1LcapMessage extends LockssTestCase {
     V1LcapMessage req_msg = null;
     PollSpec spec =
       new MockPollSpec(archivalID, urlstr, lwrbnd, uprbnd, "Plug42",
-		       Poll.CONTENT_POLL);
+		       Poll.V1_CONTENT_POLL);
     req_msg = V1LcapMessage.makeRequestMsg(spec,
 					   testentries,
 					   testbytes,

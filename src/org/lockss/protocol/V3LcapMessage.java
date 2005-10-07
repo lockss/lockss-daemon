@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.9 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3LcapMessage.java,v 1.10 2005-10-07 23:46:47 smorabito Exp $
  */
 
 /*
@@ -31,7 +31,6 @@ import java.util.*;
 
 import org.mortbay.util.*;
 
-import org.lockss.config.*;
 import org.lockss.poller.*;
 import org.lockss.util.*;
 import org.lockss.util.StringUtil;
@@ -44,7 +43,7 @@ import org.lockss.util.StringUtil;
  * required to fit in one UDP packet. They do not have Lower and Upper bounds or
  * remainders like V1 LCAP Messages.
  */
-public class V3LcapMessage extends LcapMessage {
+public class V3LcapMessage extends LcapMessage implements LockssSerializable {
   public static final int MSG_POLL = 10;
   public static final int MSG_POLL_ACK = 11;
   public static final int MSG_POLL_PROOF = 12;
@@ -60,8 +59,6 @@ public class V3LcapMessage extends LcapMessage {
   public static final String[] POLL_MESSAGES = { "Poll", "PollAck", "PollProof",
     "Nominate", "VoteRequest", "Vote", "RepairReq", "RepairRep",
     "EvaluationReceipt", "NoOp" };
-  public static final byte[] pollVersionByte = { '1' };
-
   private static Logger log = Logger.getLogger("V3LcapMessage");
 
   // V3 Specific properties.
@@ -106,14 +103,14 @@ public class V3LcapMessage extends LcapMessage {
   public V3LcapMessage() {
     m_props = new EncodedProperty();
     m_voteBlocks = new MemoryVoteBlocks();
-    m_pollVersion =
-      Configuration.getIntParam(PollSpec.PARAM_USE_V3_POLL_VERSION,
-                                PollSpec.DEFAULT_USE_V3_POLL_VERSION);
+    m_pollVersion = PollSpec.V3_PROTOCOL;
   }
 
-  public V3LcapMessage(int opcode, PeerIdentity origin, String url, long start,
-                       long stop, byte[] pollerNonce, byte[] voterNonce) {
+  public V3LcapMessage(int opcode, String key, PeerIdentity origin,
+                       String url, long start, long stop, byte[] pollerNonce,
+                       byte[] voterNonce) {
     this();
+    m_key = key;
     m_opcode = opcode;
     m_originatorID = origin;
     m_targetUrl = url;
@@ -157,17 +154,14 @@ public class V3LcapMessage extends LcapMessage {
   public void decodeMsg(InputStream is) throws IOException {
     long duration;
     long elapsed;
-    int port;
     // the mutable stuff
     DataInputStream dis = new DataInputStream(is);
-
     // read in the three header bytes
     for (int i = 0; i < signature.length; i++) {
       if (signature[i] != dis.readByte()) {
         throw new ProtocolException("Invalid Signature");
       }
     }
-
     // read in the poll version byte and decode
     m_pollVersion = -1;
     byte ver = dis.readByte();
@@ -175,25 +169,21 @@ public class V3LcapMessage extends LcapMessage {
       if (pollVersionByte[i] == ver)
         m_pollVersion = i + 1;
     }
-
     if (m_pollVersion <= 0) {
       throw new ProtocolException("Unsupported inbound poll version: " + ver);
     }
-
-    int prop_len = dis.readShort();
+    int prop_len = dis.readInt();
     byte[] hash_bytes = new byte[SHA_LENGTH];
     byte[] prop_bytes = new byte[prop_len];
     dis.read(hash_bytes);
     dis.read(prop_bytes);
-
     if (!verifyHash(hash_bytes, prop_bytes)) {
       throw new ProtocolException("Hash verification failed.");
     }
-
     // decode the properties
     m_props.decode(prop_bytes);
-
     // the immutable stuff
+    m_key = m_props.getProperty("key");
     String addr_str = m_props.getProperty("origId");
     m_originatorID = m_idManager.stringToPeerIdentity(addr_str);
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
@@ -210,7 +200,7 @@ public class V3LcapMessage extends LcapMessage {
     // V3 specific message parameters
     String nomineesString = m_props.getProperty("nominees");
     if (nomineesString != null) {
-      m_nominees = StringUtil.breakAt(nomineesString, ';');
+      m_nominees = StringUtil.breakAt(nomineesString, ',');
     }
     m_lastVoteBlockURL = m_props.getProperty("lastvoteblockurl");
     m_voteComplete = m_props.getBoolean("votecomplete", false);
@@ -267,7 +257,7 @@ public class V3LcapMessage extends LcapMessage {
     DataOutputStream dos = new DataOutputStream(baos);
     dos.write(signature);
     dos.write(pollVersionByte[m_pollVersion - 1]);
-    dos.writeShort(prop_bytes.length);
+    dos.writeInt(prop_bytes.length);
     dos.write(hash_bytes);
     dos.write(prop_bytes);
     return baos.toByteArray();
@@ -293,13 +283,18 @@ public class V3LcapMessage extends LcapMessage {
     }
     if (m_opcode == MSG_NO_OP) {
       m_props.putInt("opcode", m_opcode);
-      m_props.putByteArray("pollerNonce", m_pollerNonce);
-      m_props.putByteArray("voterNonce", m_voterNonce);
+      if (m_pollerNonce != null) {
+        m_props.putByteArray("pollerNonce", m_pollerNonce);
+      }
+      if (m_voterNonce != null) {
+        m_props.putByteArray("voterNonce", m_voterNonce);
+      }
       return;
     }
     m_props.setProperty("hashAlgorithm", getHashAlgorithm());
     m_props.putInt("duration", (int) (getDuration() / 1000));
     m_props.putInt("elapsed", (int) (getElapsed() / 1000));
+    m_props.setProperty("key", m_key);
     m_props.putInt("opcode", m_opcode);
     m_props.setProperty("url", m_targetUrl);
     if (m_pluginVersion != null) {
@@ -309,8 +304,12 @@ public class V3LcapMessage extends LcapMessage {
       throw new ProtocolException("Null AU ID not allowed.");
     }
     m_props.setProperty("au", m_archivalID);
-    m_props.putByteArray("pollerNonce", m_pollerNonce);
-    m_props.putByteArray("voterNonce", m_voterNonce);
+    if (m_pollerNonce != null) {
+      m_props.putByteArray("pollerNonce", m_pollerNonce);
+    }
+    if (m_voterNonce != null) {
+      m_props.putByteArray("voterNonce", m_voterNonce);
+    }
 
     // V3 specific message parameters.
 
@@ -319,7 +318,7 @@ public class V3LcapMessage extends LcapMessage {
     }
     if (m_nominees != null) {
       m_props.setProperty("nominees", 
-                          StringUtil.separatedString(m_nominees, ";"));
+                          StringUtil.separatedString(m_nominees, ","));
     }
     if (m_lastVoteBlockURL != null) {
       m_props.setProperty("lastvoteblockurl", m_lastVoteBlockURL);
@@ -385,10 +384,6 @@ public class V3LcapMessage extends LcapMessage {
 
   public boolean isNoOp() {
     return m_opcode == MSG_NO_OP;
-  }
-
-  public boolean isPollVersionSupported(int vers) {
-    return (vers > 0 && vers <= pollVersionByte.length);
   }
 
   public String getOpcodeString() {
@@ -485,8 +480,7 @@ public class V3LcapMessage extends LcapMessage {
     msg.m_opcode = MSG_NO_OP;
     msg.m_pollerNonce = pollerNonce;
     msg.m_voterNonce = voterNonce;
-    msg.m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V3_POLL_VERSION,
-                                                  PollSpec.DEFAULT_USE_V3_POLL_VERSION);
+    msg.m_pollVersion = PollSpec.V1_PROTOCOL;
     return msg;
   }
 
@@ -511,17 +505,20 @@ public class V3LcapMessage extends LcapMessage {
    * @return message the new V3LcapMessage
    * @throws IOException if unable to create message
    */
-  static public V3LcapMessage makeRequestMsg(PollSpec ps, byte[] pollerNonce,
+  static public V3LcapMessage makeRequestMsg(PollSpec ps, String key,
+                                             byte[] pollerNonce,
                                              byte[] voterNonce, int opcode,
                                              long deadline,
                                              PeerIdentity origin) {
-    return V3LcapMessage.makeRequestMsg(ps.getAuId(), ps.getPollVersion(),
+    return V3LcapMessage.makeRequestMsg(ps.getAuId(), key,
+                                        ps.getPollVersion(),
                                         ps.getPluginVersion(), ps.getUrl(),
                                         pollerNonce, voterNonce, opcode,
                                         deadline, origin);
   }
 
-  static public V3LcapMessage makeRequestMsg(String auId, int pollVersion,
+  static public V3LcapMessage makeRequestMsg(String auId, String key,
+                                             int pollVersion,
                                              String pluginVersion, String url,
                                              byte[] pollerNonce, 
                                              byte[] voterNonce,
@@ -529,8 +526,9 @@ public class V3LcapMessage extends LcapMessage {
                                              PeerIdentity origin) {
     long start = TimeBase.nowMs();
     long stop = deadline;
-    V3LcapMessage msg = new V3LcapMessage(opcode, origin, url, start, stop,
+    V3LcapMessage msg = new V3LcapMessage(opcode, key, origin, url, start, stop,
                                           pollerNonce, voterNonce);
+    msg.setKey(key);
     msg.setArchivalId(auId);
     msg.setPollVersion(pollVersion);
     msg.setPluginVersion(pluginVersion);
@@ -553,6 +551,8 @@ public class V3LcapMessage extends LcapMessage {
       sb.append(m_targetUrl);
       sb.append(" ");
       sb.append(getOpcodeString());
+      sb.append(" Key:");
+      sb.append(m_key);
       sb.append(" PN:");
       sb.append(String.valueOf(B64Code.encode(m_pollerNonce)));
       sb.append(" VN:");

@@ -1,5 +1,5 @@
 /*
- * $Id: PollSpec.java,v 1.31 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: PollSpec.java,v 1.32 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -32,12 +32,12 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller;
 
-import org.lockss.util.*;
-import org.lockss.config.Configuration;
+import org.lockss.app.*;
+import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
-import org.lockss.app.*;
+import org.lockss.util.*;
 
 /**
  * Class implementing the concept of the set of URLs covered by a poll.
@@ -46,26 +46,26 @@ import org.lockss.app.*;
  */
 
 public class PollSpec {
+  // Poll protocol versions
+  public static final int V1_PROTOCOL = 1;
+  public static final int V2_PROTOCOL = 2;
+  public static final int V3_PROTOCOL = 3;
+  public static final int MAX_POLL_PROTOCOL = 3;  
+
   /**
    * A lower bound value which indicates the poll should use a
    * {@link SingleNodeCachedUrlSetSpec} instead of a
    * {@link RangeCachedUrlSetSpec}.
    */
   public static final String SINGLE_NODE_LWRBOUND = ".";
-
-  // XXX:  public static final String PARAM_USE_V1_POLL_VERSION =
-  //    Configuration.PREFIX + "protocol.useV1PollVersion";
-  public static final String PARAM_USE_V1_POLL_VERSION =
+  public static final String DEFAULT_PLUGIN_VERSION = "1";
+  
+  public static final String PARAM_USE_POLL_VERSION =
     Configuration.PREFIX + "protocol.usePollVersion";
-  public static final String PARAM_USE_V3_POLL_VERSION =
-    Configuration.PREFIX + "protocol.useV3PollVersion";
-
-  public static final int DEFAULT_USE_V1_POLL_VERSION = 1;
-  public static final int DEFAULT_USE_V3_POLL_VERSION = 1;
-
-  static final String DEFAULT_PLUGIN_VERSION = "1";
+  public static final int DEFAULT_USE_POLL_VERSION = V1_PROTOCOL;
 
   private static Logger theLog=Logger.getLogger("PollSpec");
+
   private String auId;
   private String pluginVersion;
   private String url;
@@ -108,7 +108,7 @@ public class PollSpec {
   }
 
   /**
-   * Construct a PollSpec from a CachedUrlSet
+   * Construct a PollSpec from a CachedUrlSet.
    * @param cus the CachedUrlSpec which defines the range of interest
    * @param pollType one of the types defined by Poll
    */
@@ -121,6 +121,25 @@ public class PollSpec {
       commonSetup(cus, SINGLE_NODE_LWRBOUND, null, pollType);
     } else {
       commonSetup(cus, null, null, pollType);
+    }
+  }
+  
+  /**
+   * Construct a PollSpec from a CachedUrlSet, a poll type, and a poll
+   * version.
+   * @param cus the CachedUrlSpec which defines the range of interest
+   * @param pollType one of the types defined by Poll
+   * @param pollVersion The version of the polling protocol to use
+   */
+  public PollSpec(CachedUrlSet cus, int pollType, int pollVersion) {
+    CachedUrlSetSpec cuss = cus.getSpec();
+    if (cuss instanceof RangeCachedUrlSetSpec) {
+      RangeCachedUrlSetSpec rcuss = (RangeCachedUrlSetSpec)cuss;
+      commonSetup(cus, rcuss.getLowerBound(), rcuss.getUpperBound(), pollType, pollVersion);
+    } else if (cuss.isSingleNode()) {
+      commonSetup(cus, SINGLE_NODE_LWRBOUND, null, pollType, pollVersion);
+    } else {
+      commonSetup(cus, null, null, pollType, pollVersion);
     }
   }
 
@@ -136,11 +155,11 @@ public class PollSpec {
     lwrBound = msg.getLwrBound();
     pollVersion = msg.getPollVersion();
     if (msg.isContentPoll()) {
-      pollType = Poll.CONTENT_POLL;
+      pollType = Poll.V1_CONTENT_POLL;
     } else if (msg.isNamePoll()) {
-      pollType = Poll.NAME_POLL;
+      pollType = Poll.V1_NAME_POLL;
     } else if (msg.isVerifyPoll()) {
-      pollType = Poll.VERIFY_POLL;
+      pollType = Poll.V1_VERIFY_POLL;
     } else {
       pollType = -1;
     }
@@ -152,8 +171,8 @@ public class PollSpec {
     pluginVersion = msg.getPluginVersion();
     url = msg.getTargetUrl();
     pollVersion = msg.getPollVersion();
-    pollType = -1; // Not used by V3 Polls
-    cus = getPluginManager().findCachedUrlSet(this);    
+    pollType = Poll.V3_POLL;
+    cus = getPluginManager().findCachedUrlSet(this);
   }
 
   /**
@@ -217,8 +236,8 @@ public class PollSpec {
   }
 
   protected int getDefaultPollVersion() {
-    return Configuration.getIntParam(PARAM_USE_V1_POLL_VERSION,
-				     DEFAULT_USE_V1_POLL_VERSION);
+    return Configuration.getIntParam(PARAM_USE_POLL_VERSION,
+                                     DEFAULT_USE_POLL_VERSION);
   }
 
   public CachedUrlSet getCachedUrlSet() {

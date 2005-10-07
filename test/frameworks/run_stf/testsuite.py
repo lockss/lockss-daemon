@@ -1020,9 +1020,9 @@ class SimpleDamageRepairFromCacheTestCase(LockssTestCase):
                "Never called top level content poll"
         log.info("Called top level content poll.")
 
-	log.info("Waiting to win top level content poll.")
-	assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
-	       "Never won top level content poll"
+        log.info("Waiting to win top level content poll.")
+        assert client.waitForWonTopLevelContentPoll(simAu, timeout=self.timeout),\
+               "Never won top level content poll"
 
 	# Damage a node.
         node = client.randomDamageSingleNode(simAu)
@@ -1150,6 +1150,91 @@ class TinyUiFileNotFoundTestCase(TinyUiTests):
     def expectedPattern(self):
         return 'FileNotFoundException'
         
+class SimpleV3PollTestCase(LockssTestCase):
+    """ Test a basic V3 Poll. """
+    def getDaemonCount(self):
+        return 5
+
+    def setUp(self):
+        LockssTestCase.setUp(self)
+
+        for i in range(0, len(self.clients)):
+
+            # Generate an initial list of peers, minus ourselves
+            # (For now, V3 peers can't participate in polls that they
+            # call.  This must be fixed before release.
+
+            peerIds = []
+            for port in range(1, len(self.clients) + 1):
+                if (port == (i + 1)):
+                    continue
+                peerIds.append("127.0.0.1;880%d" % port)
+
+            extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
+                         "org.lockss.scomm.enabled": "true",
+                         "org.lockss.scomm.maxMessageSize": "1048576", # 1MB
+                         "org.lockss.poll.v3.quorum": "1",
+                         "org.lockss.poll.v3.minPollSize": "2",
+                         "org.lockss.poll.v3.maxPollSize": "2",
+                         "org.lockss.poll.v3.minNominationSize": "3",
+                         "org.lockss.poll.v3.maxNominationSize": "3",
+                         "org.lockss.poll.v3.minPollDuration": "5m",
+                         "org.lockss.poll.v3.maxPollDuration": "6m",
+                         "org.lockss.localV3Identity": "127.0.0.1;880%d" % (i+1),
+                         "org.lockss.comm.unicast.sendToAddr": "127.0.0.1",
+                         "org.lockss.id.initialV3PeerList": (",".join(peerIds))}
+
+            self.framework.appendLocalConfig(extraConf, self.clients[i])
+        
+        ##
+        ## Start the framework.
+        ##
+        log.info("Starting framework in %s" % self.framework.frameworkDir)
+        self.framework.start()
+        assert self.framework.isRunning, 'Framework failed to start.'
+
+        # Block return until all clients are ready to go.
+        log.info("Waiting for framework to come ready.")
+        for client in self.clients:
+            client.waitForDaemonReady()
+
+    def runTest(self):
+        # Reasonably complex AU for testing
+        simAu = SimulatedAu('simContent', depth=0, branch=0,
+                            numFiles=15, fileTypes=17,
+                            binFileSize=1048576, pollingVersion=3)
+
+        ##
+        ## Create simulated AUs
+        ##
+        log.info("Creating V3 simulated AUs.")
+        for client in self.clients:
+            client.createAu(simAu)
+
+        ##
+        ## Assert that the AUs have been crawled.
+        ##
+        log.info("Waiting for simulated AUs to crawl.")
+        for client in self.clients:
+            if not (client.waitForSuccessfulCrawl(simAu)):
+                self.fail("AUs never completed initial crawl.")
+        log.info("AUs completed initial crawl.")
+
+        client = self.clients[2]
+        
+        # Request a tree walk (deactivate and reactivate AU)
+        log.info("Requesting tree walk.")
+        client.requestTreeWalk(simAu)
+
+## Currently, no status table to allow us to know that a poll has been
+## crawled.  Just wait for 20 minutes, or until the user cancels.  When
+## an XML status table for V3 polls is available, more comprehensive
+## test suites will follow
+
+        log.info("Apoll should be running momentarily.")
+        log.info("Pausing for 20 minutes.  ^C to quit the test.")
+        time.sleep(20 * 60)
+        
 
     
 ###########################################################################
@@ -1194,6 +1279,11 @@ def tinyUiTests():
     suite.addTest(TinyUiForbiddenTestCase())
     suite.addTest(TinyUiRefusedTestCase())
     suite.addTest(TinyUiFileNotFoundTestCase())
+    return suite
+
+def v3Tests():
+    suite = unittest.TestSuite()
+    suite.addTest(SimpleV3PollTestCase())
     return suite
 
 ##

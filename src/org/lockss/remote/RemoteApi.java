@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.40 2005-10-07 23:43:32 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.41 2005-10-07 23:46:46 smorabito Exp $
  */
 
 /*
@@ -477,12 +477,12 @@ public class RemoteApi
       platConfig.put(BACK_PROP_VERSION, "2");
       platConfig.put(BACK_PROP_VERSION, "2");
       try {
-	PeerIdentity p1 = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
+	PeerIdentity p1 = idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
 	platConfig.put(BACK_PROP_LOCAL_ID_V1, p1.getIdString());
       } catch (Exception e) {
       }
       try {
-	PeerIdentity p3 = idMgr.getLocalPeerIdentity(Poll.V3_POLL);
+	PeerIdentity p3 = idMgr.getLocalPeerIdentity(PollSpec.V3_PROTOCOL);
 	platConfig.put(BACK_PROP_LOCAL_ID_V3, p3.getIdString());
       } catch (Exception e) {
       }
@@ -1456,7 +1456,7 @@ public class RemoteApi
       bfile = createConfigBackupFile(machineName);
       MimeMessage msg = new MimeMessage();
       
-      PeerIdentity pid = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
+      PeerIdentity pid = idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
       String id = pid == null ? "unknown" : pid.getIdString();
       String text = sprintf(BACK_MAIL_TEXT,
 			    new Object[] {machineName, id});

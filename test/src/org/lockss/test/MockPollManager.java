@@ -1,5 +1,5 @@
 /*
-* $Id: MockPollManager.java,v 1.15 2004-12-07 05:17:50 tlipkis Exp $
+* $Id: MockPollManager.java,v 1.16 2005-10-07 23:46:44 smorabito Exp $
  */
 
 /*
@@ -95,11 +95,11 @@ public class MockPollManager extends PollManager {
     // note: uses a different key than the other two, since we're not
     // creating an actual challenge and verifier to key off of.
     int opcode = ps.getPollType();
-    if (opcode == Poll.CONTENT_POLL) {
+    if (opcode == Poll.V1_CONTENT_POLL) {
       theLog.debug("MockPollManager: send V1 content poll request");
       thePolls.put(ps.getUrl(), CONTENT_REQUESTED);
     }
-    else if (opcode == Poll.NAME_POLL) { 
+    else if (opcode == Poll.V1_NAME_POLL) { 
       theLog.debug("MockPollManager: send V1 name poll request");
      thePolls.put(ps.getUrl(), NAME_REQUESTED);
     } else {

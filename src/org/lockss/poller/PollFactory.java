@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.6 2005-10-07 16:19:56 thib_gc Exp $
+* $Id: PollFactory.java,v 1.7 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -33,7 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import org.lockss.protocol.*;
-import org.lockss.config.Configuration;
+import org.lockss.app.*;
+import org.lockss.config.*;
 
 /**
  * PollFactory instances create Poll objects of the appropriate version.
@@ -55,8 +56,7 @@ public interface PollFactory {
    * @return true if the poll was successfuly called.
    */
   boolean callPoll(Poll poll,
-		   PollManager pm,
-		   IdentityManager im);
+		   LockssDaemon daemon);
 
 
   /**
@@ -74,30 +74,11 @@ public interface PollFactory {
    * @return a Poll object describing the new poll.
    */
   BasePoll createPoll(PollSpec pollspec,
-		      PollManager pm,
-		      IdentityManager im,
-		      PeerIdentity orig,
-		      byte[] challenge,
-		      byte[] verifier,
-		      long duration,
-		      String hashAlg) throws ProtocolException;
-
-  /**
-   * shouldPollBeCreated is invoked to check for conflicts or other
-   * version-specific reasons why the poll should not be created at
-   * this time.
-   * @param pollspec the PollSpec for the poll.
-   * @param pm the PollManager that called this method.
-   * @param im the IdentityManager
-   * @param challenge the poll challenge
-   * @param orig the PeerIdentity that called the poll
-   * @return true if it is OK to call the poll
-   */
-   boolean shouldPollBeCreated(PollSpec pollspec,
-			       PollManager pm,
-			       IdentityManager im,
-			       byte[] challenge,
-			       PeerIdentity orig);
+                      LockssDaemon daemon,
+                      PeerIdentity orig,
+                      long duration,
+                      String hashAlg,
+                      LcapMessage msg) throws ProtocolException;
 
   /**
    * getPollActivity returns the type of activity defined by ActivityRegulator
@@ -124,4 +105,6 @@ public interface PollFactory {
   public long getMinPollDuration(int pollType);
 
   public long calcDuration(PollSpec ps, PollManager pm);
+  
+  public boolean isDuplicateMessage(LcapMessage msg, PollManager pm);
 }

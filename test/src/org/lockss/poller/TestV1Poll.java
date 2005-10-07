@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1Poll.java,v 1.3 2005-07-13 17:34:36 troberts Exp $
+ * $Id: TestV1Poll.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -91,9 +91,9 @@ public class TestV1Poll extends LockssTestCase {
   }
 
   public void testShouldVerify() {
-    Vote vote = new Vote(pollmanager.generateRandomBytes(),
-			 pollmanager.generateRandomBytes(),
-			 pollmanager.generateRandomBytes(),
+    Vote vote = new Vote(ByteArray.makeRandomBytes(20),
+			 ByteArray.makeRandomBytes(20),
+			 ByteArray.makeRandomBytes(20),
 			 peer1, true /*boolean agree*/);
     // verify agreement 40$, disagreement 60%, weighted by reputation
     setVerifyParams(40, 60);
@@ -143,12 +143,12 @@ public class TestV1Poll extends LockssTestCase {
 
   private V1ContentPoll makeV1ContentPoll() {
     PollSpec spec =
-      new MockPollSpec(testau, testurl, null, null, Poll.CONTENT_POLL);
+      new MockPollSpec(testau, testurl, null, null, Poll.V1_CONTENT_POLL);
 
     V1ContentPoll poll = new V1ContentPoll(spec,
 					   pollmanager,
 					   peer1,
-					   pollmanager.generateRandomBytes(),
+					   ByteArray.makeRandomBytes(20),
 					   1000,
 					   null);
     return poll;

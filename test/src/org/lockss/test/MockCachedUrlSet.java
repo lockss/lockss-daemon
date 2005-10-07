@@ -1,5 +1,5 @@
 /*
- * $Id: MockCachedUrlSet.java,v 1.50 2005-08-11 06:37:11 tlipkis Exp $
+ * $Id: MockCachedUrlSet.java,v 1.51 2005-10-07 23:46:44 smorabito Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class MockCachedUrlSet implements CachedUrlSet {
   private static final Logger logger = Logger.getLogger("MockCachedUrlSet");
 
   public MockCachedUrlSet() {
-    this(new MockArchivalUnit(), (CachedUrlSetSpec)null);
+    this(new MockArchivalUnit(), (MockCachedUrlSetSpec)null);
   }
 
   public MockCachedUrlSet(MockArchivalUnit owner, CachedUrlSetSpec spec) {

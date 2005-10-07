@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.3 2005-10-07 23:46:49 smorabito Exp $
  */
 
 /*
@@ -186,8 +186,8 @@ public class V3PollerSerializer extends V3Serializer {
   /**
    * Return a list of all VoterStateBeans for this poll.
    */
-  public List loadInnerCircleStates() throws PollSerializerException {
-    List innerCircleStates = new ArrayList(peerMapping.size());
+  public List loadVoterStates() throws PollSerializerException {
+    List voterStates = new ArrayList(peerMapping.size());
     try {
       for (Iterator iter = peerMapping.values().iterator(); iter.hasNext(); ) {
         PeerMapping mapping = (PeerMapping)iter.next();
@@ -198,21 +198,15 @@ public class V3PollerSerializer extends V3Serializer {
         }
         PollerUserData voterState = 
           (PollerUserData) xstr.deserialize(mappingFile);
-        innerCircleStates.add(voterState);
+        voterStates.add(voterState);
       }
     } catch (IOException ex) {
-      throw new PollSerializerException("Cannot load inner circle states", ex);
+      throw new PollSerializerException("Cannot load voter states", ex);
     } catch (ObjectSerializer.SerializationException ex) {
-      throw new PollSerializerException("Cannot load inner circle states", ex);
+      throw new PollSerializerException("Cannot load voter states", ex);
     }
-    return innerCircleStates;
+    return voterStates;
   }
-
-  private static final FileFilter voterFilter = new FileFilter() {
-    public boolean accept(File pathName) {
-      return pathName.getName().startsWith(POLLER_USER_DATA_PREFIX);
-    }
-  };
 
   /**
    * Obtain a peer mapping, creating it if necessary.
@@ -241,6 +235,21 @@ public class V3PollerSerializer extends V3Serializer {
       savePeerMapping();
     }
     return f;
+  }
+  
+  /**
+   * Clean up and remove a peer from the serialized state.  Called by
+   * V3Poller when dropping a voter from a poll.
+   * 
+   * @param id
+   */
+  public void removePollerUserData(PeerIdentity id)
+      throws IOException, SerializationException {
+    peerMapping.remove(id);
+    savePeerMapping();
+    File f = getPollerUserDataFile(id);
+    if (!f.delete())
+      throw new SerializationException("Could not remove poller user data file " + f);
   }
   
   /**
@@ -281,7 +290,7 @@ public class V3PollerSerializer extends V3Serializer {
    * on instance equality for PeerIdentities.  After deserialization,
    * a stored PeerIdentity would by definition be a different instance. 
    */
-  private static class PeerMapping implements Serializable {
+  private static class PeerMapping implements LockssSerializable {
     private File interpStateFile;
     private File userDataFile;
     

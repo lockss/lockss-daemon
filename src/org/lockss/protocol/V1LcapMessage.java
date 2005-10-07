@@ -1,5 +1,5 @@
 /*
- * $Id: V1LcapMessage.java,v 1.4 2005-06-04 18:59:54 tlipkis Exp $
+ * $Id: V1LcapMessage.java,v 1.5 2005-10-07 23:46:47 smorabito Exp $
  */
 
 /*
@@ -26,16 +26,14 @@
 
 package org.lockss.protocol;
 
-import java.security.MessageDigest;
 import java.io.*;
-import java.security.*;
 import java.util.*;
 
-import org.lockss.util.*;
-import org.lockss.config.Configuration;
-import org.lockss.poller.*;
+import org.mortbay.util.*;
 
-import org.mortbay.util.B64Code;
+import org.lockss.config.*;
+import org.lockss.poller.*;
+import org.lockss.util.*;
 
 /**
  * <p>Encapsulation of a V1 protocol message which has been received or
@@ -56,8 +54,6 @@ public class V1LcapMessage extends LcapMessage {
 
   public static final int MAX_HOP_COUNT_LIMIT = 16;
   public static final int DEFAULT_MAX_PKT_SIZE = 1422;
-  public static final byte[] pollVersionByte = { '1', '2' };
-
   public static final String[] POLL_OPCODES =  {"NameReq", "NameRep",
 						"ContentReq", "ContentRep",
 						"VerifyReq", "VerifyRep",
@@ -92,8 +88,7 @@ public class V1LcapMessage extends LcapMessage {
 
   protected V1LcapMessage() throws IOException {
     m_props = new EncodedProperty();
-    m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V1_POLL_VERSION,
-					      PollSpec.DEFAULT_USE_V1_POLL_VERSION);
+    m_pollVersion = PollSpec.V1_PROTOCOL;
     m_maxSize = Configuration.getIntParam(PARAM_MAX_PKT_SIZE,
 					  DEFAULT_MAX_PKT_SIZE);
   }
@@ -172,8 +167,6 @@ public class V1LcapMessage extends LcapMessage {
   public void decodeMsg(InputStream is) throws IOException {
     long duration;
     long elapsed;
-    String addr;
-    int port;
     // the mutable stuff
     DataInputStream dis = new DataInputStream(is);
     // read in the three header bytes
@@ -208,7 +201,6 @@ public class V1LcapMessage extends LcapMessage {
     // decode the properties
     m_props.decode(prop_bytes);
     // the immutable stuff
-    port = m_props.getInt("origPort", -1);
     String addr_str = m_props.getProperty("origIP");
     m_originatorID = m_idManager.stringToPeerIdentity(addr_str);
     m_hashAlgorithm = m_props.getProperty("hashAlgorithm");
@@ -362,10 +354,6 @@ public class V1LcapMessage extends LcapMessage {
     return m_opcode == NO_OP;
   }
 
-  public boolean isPollVersionSupported(int vers) {
-    return (vers > 0 && vers <= pollVersionByte.length);
-  }
-
   public String getOpcodeString() {
     return POLL_OPCODES[m_opcode];
   }
@@ -463,8 +451,6 @@ public class V1LcapMessage extends LcapMessage {
     }
     StringTokenizer tokenizer = new StringTokenizer(estr, "\n\r", true);
     ArrayList entries = new ArrayList();
-    int i = 0;
-
     while (tokenizer.hasMoreTokens()) {
       String name = tokenizer.nextToken();
       String mark = tokenizer.nextToken();
@@ -529,8 +515,7 @@ public class V1LcapMessage extends LcapMessage {
       msg.m_opcode = NO_OP;
       msg.m_hopCount = 0;
       msg.m_verifier = verifier;
-      msg.m_pollVersion = Configuration.getIntParam(PollSpec.PARAM_USE_V1_POLL_VERSION,
-						    PollSpec.DEFAULT_USE_V1_POLL_VERSION);
+      msg.m_pollVersion = PollSpec.V1_PROTOCOL;
     }
     msg.storeProps();
     return msg;

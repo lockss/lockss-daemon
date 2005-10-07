@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.23 2005-09-11 00:09:04 tlipkis Exp $
+ * $Id: ConfigParamDescr.java,v 1.24 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -179,6 +179,16 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setDisplayName("Pub Down")
     .setType(TYPE_BOOLEAN)
     .setDescription("If true, AU is no longer available from the publisher");
+  
+  public static final ConfigParamDescr POLL_VERSION =
+    new ConfigParamDescr()
+    .setDefinitional(false)
+    .setDefaultOnly(true)
+    .setKey("poll_version")
+    .setDisplayName("Polling Version")
+    .setType(TYPE_POS_INT)
+    .setDescription("The polling version for the AU to use ('1' " +
+                "for V1 polling, or '3' for V3 polling)");
 
   public static final ConfigParamDescr[] DEFAULT_DESCR_ARRAY = {
       BASE_URL, VOLUME_NUMBER, YEAR, JOURNAL_ID,

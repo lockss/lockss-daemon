@@ -30,8 +30,12 @@ public class MemoryVoteBlocks implements VoteBlocks {
     voteBlocks.add(b);
   }
 
-  public VoteBlock getVoteBlock(int i) {
-    return (VoteBlock) voteBlocks.get(i);
+  public VoteBlock getVoteBlock(int i) throws NoSuchBlockException {
+    if (voteBlocks.size() > i) {
+      return (VoteBlock) voteBlocks.get(i);
+    } else {
+      throw new NoSuchBlockException("No block at index " + i);
+    }
   }
 
   public Iterator iterator() {

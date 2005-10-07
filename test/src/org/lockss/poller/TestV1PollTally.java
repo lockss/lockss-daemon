@@ -1,5 +1,5 @@
 /*
- * $Id: TestV1PollTally.java,v 1.2 2004-12-07 05:17:51 tlipkis Exp $
+ * $Id: TestV1PollTally.java,v 1.3 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class TestV1PollTally extends LockssTestCase {
 
   class MockV1PollTally extends V1PollTally {
     MockV1PollTally() {
-      super(Poll.NAME_POLL, 0, 4, 0, 0, 0, 0, 3, null);
+      super(Poll.V1_NAME_POLL, 0, 4, 0, 0, 0, 0, 3, null);
     }
   }
 

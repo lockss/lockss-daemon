@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.16 2005-03-18 09:09:16 smorabito Exp $
+ * $Id: V1PollFactory.java,v 1.17 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -33,13 +33,14 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
+import java.security.*;
 import java.util.*;
 
+import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.protocol.*;
-import org.lockss.protocol.ProtocolException;
 import org.lockss.util.*;
 import org.lockss.hasher.HashService;
 import org.mortbay.util.B64Code;
@@ -50,19 +51,23 @@ import org.mortbay.util.B64Code;
  * @version 1.0
  */
 
-public class V1PollFactory implements PollFactory {
-  static final String PARAM_NAMEPOLL_DEADLINE = Configuration.PREFIX +
-    "poll.namepoll.deadline";
-  static final String PARAM_CONTENTPOLL_MIN = Configuration.PREFIX +
-    "poll.contentpoll.min";
-  static final String PARAM_CONTENTPOLL_MAX = Configuration.PREFIX +
-    "poll.contentpoll.max";
+public class V1PollFactory extends BasePollFactory {
+  static final String PREFIX = Configuration.PREFIX + "poll.";
+  
+  static final String PARAM_NAMEPOLL_DEADLINE = PREFIX +
+    "namepoll.deadline";
+  static final String PARAM_CONTENTPOLL_MIN = PREFIX +
+    "contentpoll.min";
+  static final String PARAM_CONTENTPOLL_MAX = PREFIX +
+    "contentpoll.max";
 
-  static final String PARAM_QUORUM = Configuration.PREFIX + "poll.quorum";
-  static final String PARAM_DURATION_MULTIPLIER_MIN = Configuration.PREFIX +
-    "poll.duration.multiplier.min";
-  static final String PARAM_DURATION_MULTIPLIER_MAX = Configuration.PREFIX +
-    "poll.duration.multiplier.max";
+  static final String PARAM_QUORUM = PREFIX + "quorum";
+  static final String PARAM_DURATION_MULTIPLIER_MIN = PREFIX +
+    "duration.multiplier.min";
+  static final String PARAM_DURATION_MULTIPLIER_MAX = PREFIX +
+    "duration.multiplier.max";
+
+  static final String PARAM_VERIFY_EXPIRATION = PREFIX + "expireVerifier";
 
   // tk - temporary until real name hash estimates
   static final String PARAM_NAME_HASH_ESTIMATE =
@@ -76,6 +81,8 @@ public class V1PollFactory implements PollFactory {
   static final int DEFAULT_QUORUM = 5;
   static final int DEFAULT_DURATION_MULTIPLIER_MIN = 3;
   static final int DEFAULT_DURATION_MULTIPLIER_MAX = 7;
+  static final long DEFAULT_VERIFY_EXPIRATION = 6 * Constants.HOUR;
+
 
   protected long m_minContentPollDuration;
   protected long m_maxContentPollDuration;
@@ -85,6 +92,10 @@ public class V1PollFactory implements PollFactory {
   protected static int m_quorum;
   protected int m_minDurationMultiplier;
   protected int m_maxDurationMultiplier;
+  protected long m_verifierExpireTime = DEFAULT_VERIFY_EXPIRATION;
+
+  
+  private static VariableTimedMap theVerifiers = new VariableTimedMap();
 
   protected static Logger theLog = Logger.getLogger("V1PollFactory");
   private static LockssRandom theRandom = new LockssRandom();
@@ -100,11 +111,12 @@ public class V1PollFactory implements PollFactory {
    * @return true if the poll was successfuly called.
    */
   public boolean callPoll(Poll poll,
-			  PollManager pm,
-			  IdentityManager im) {
+			  LockssDaemon daemon) {
     boolean ret = false;
     try {
-      sendV1PollRequest(poll, pm, im);
+      sendPollRequest(poll,
+                      daemon.getPollManager(),
+                      daemon.getIdentityManager());
       ret = true;
     } catch (IOException ioe) {
       theLog.warning("Exception sending V1 poll request for " + poll, ioe);
@@ -119,21 +131,21 @@ public class V1PollFactory implements PollFactory {
    * @param pm       the PollManager that called this method
    * @throws IOException thrown if <code>LcapMessage</code> construction fails.
    */
-  private void sendV1PollRequest(Poll poll,
-				 PollManager pm,
-				 IdentityManager im)
+  private void sendPollRequest(Poll poll,
+                               PollManager pm,
+                               IdentityManager im)
       throws IOException {
     PollSpec pollspec = poll.getPollSpec();
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     int opcode = -1;
     switch (pollspec.getPollType()) {
-    case Poll.NAME_POLL:
+    case Poll.V1_NAME_POLL:
       opcode = V1LcapMessage.NAME_POLL_REQ;
       break;
-    case Poll.CONTENT_POLL:
+    case Poll.V1_CONTENT_POLL:
       opcode = V1LcapMessage.CONTENT_POLL_REQ;
       break;
-    case Poll.VERIFY_POLL:
+    case Poll.V1_VERIFY_POLL:
       opcode = V1LcapMessage.VERIFY_POLL_REQ;
       break;
     }
@@ -145,7 +157,7 @@ public class V1PollFactory implements PollFactory {
       return;
     }
     byte[] challenge = ((V1Poll)poll).getChallenge();
-    byte[] verifier = pm.makeVerifier(duration);
+    byte[] verifier = makeVerifier(duration);
     V1LcapMessage msg =
       V1LcapMessage.makeRequestMsg(pollspec,
 				   null,
@@ -153,7 +165,7 @@ public class V1PollFactory implements PollFactory {
 				   verifier,
 				   opcode,
 				   duration,
-				   im.getLocalPeerIdentity(Poll.V1_POLL));
+				   im.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
     // before we actually send the message make sure that another poll
     // isn't going to conflict with this and create a split poll
     if(checkForConflicts(cus, pm, ((BasePoll)poll)) == null) {
@@ -180,14 +192,32 @@ public class V1PollFactory implements PollFactory {
    * @return a Poll object describing the new poll.
    */
   public BasePoll createPoll(PollSpec pollspec,
-			     PollManager pm,
-			     IdentityManager im,
+			     LockssDaemon daemon,
 			     PeerIdentity orig,
-			     byte[] challenge,
-			     byte[] verifier,
 			     long duration,
-			     String hashAlg) throws ProtocolException {
+			     String hashAlg,
+                             LcapMessage msg) throws ProtocolException {
     BasePoll ret_poll = null;
+    PollManager pm = daemon.getPollManager();
+    IdentityManager im = daemon.getIdentityManager();
+    byte[] challenge;
+    byte[] verifier;
+    
+    if (msg == null) {
+      challenge = makeVerifier(duration);
+      verifier = makeVerifier(duration);
+    } else {
+      V1LcapMessage m = (V1LcapMessage)msg;
+      challenge = m.getChallenge();
+      verifier = m.getVerifier();
+    }
+    
+    // check for conflicts
+    if (!shouldPollBeCreated(pollspec, pm, im,
+                             challenge, orig)) {
+      theLog.debug("Poll request ignored");
+      return null;
+    }
 
     if (pollspec.getPollVersion() != 1) {
       throw new ProtocolException("V1PollFactory: bad version " +
@@ -197,19 +227,19 @@ public class V1PollFactory implements PollFactory {
       throw new ProtocolException("V1Pollfactory: bad duration " + duration);
     }
     switch (pollspec.getPollType()) {
-    case Poll.CONTENT_POLL:
+    case Poll.V1_CONTENT_POLL:
       theLog.debug2("Creating content poll for " + pollspec);
       ret_poll = new V1ContentPoll(pollspec, pm, orig,
 				   challenge, duration,
 				   hashAlg);
       break;
-    case Poll.NAME_POLL:
+    case Poll.V1_NAME_POLL:
       theLog.debug2("Creating name poll for " + pollspec);
       ret_poll = new V1NamePoll(pollspec, pm, orig,
 				challenge, duration,
 				hashAlg);
       break;
-    case Poll.VERIFY_POLL:
+    case Poll.V1_VERIFY_POLL:
       theLog.debug2("Creating verify poll for " + pollspec);
       ret_poll = new V1VerifyPoll(pollspec, pm, orig,
 				  challenge, duration,
@@ -222,27 +252,14 @@ public class V1PollFactory implements PollFactory {
     return ret_poll;
   }
 
-
-
-  /**
-   * shouldPollBeCreated is invoked to check for conflicts or other
-   * version-specific reasons why the poll should not be created at
-   * this time.
-   * @param pollspec the PollSpec for the poll.
-   * @param pm the PollManager that called this method.
-   * @param im the IdentityManager
-   * @param challenge the poll challenge
-   * @param orig the PeerIdentity that called the poll
-   * @return true if it is OK to call the poll
-   */
-  public boolean shouldPollBeCreated(PollSpec pollspec,
-				     PollManager pm,
-				     IdentityManager im,
-				     byte[] challenge,
-				     PeerIdentity orig) {
-    if (pollspec.getPollType() == Poll.VERIFY_POLL) {
+  boolean shouldPollBeCreated(PollSpec pollspec,
+                              PollManager pm,
+                              IdentityManager im,
+                              byte[] challenge,
+                              PeerIdentity orig) {
+    if (pollspec.getPollType() == Poll.V1_VERIFY_POLL) {
       // if we didn't call the poll and we don't have the verifier ignore this
-      if ((pm.getSecret(challenge)== null) &&
+      if ((getSecret(challenge) == null) &&
 	  !im.isLocalIdentity(orig)) {
 	String ver = String.valueOf(B64Code.encode(challenge));
 	theLog.debug("ignoring verify request from " + orig
@@ -272,13 +289,13 @@ public class V1PollFactory implements PollFactory {
 			     PollManager pm) {
     int activity = ActivityRegulator.NO_ACTIVITY;
     int pollType = pollspec.getPollType();
-    if (pollType == Poll.CONTENT_POLL) {
+    if (pollType == Poll.V1_CONTENT_POLL) {
       if (pollspec.getCachedUrlSet().getSpec().isSingleNode()) {
 	activity = ActivityRegulator.SINGLE_NODE_CONTENT_POLL;
       } else {
 	activity = ActivityRegulator.STANDARD_CONTENT_POLL;
       }
-    } else if (pollType == Poll.NAME_POLL) {
+    } else if (pollType == Poll.V1_NAME_POLL) {
       activity = ActivityRegulator.STANDARD_NAME_POLL;
     }
     return activity;
@@ -311,7 +328,7 @@ public class V1PollFactory implements PollFactory {
       if (theLog.isDebug3()) {
 	theLog.debug3("compare " + cus + " with " + ps.getCachedUrlSet());
       }
-      if (ps.getPollType() != Poll.VERIFY_POLL) {
+      if (ps.getPollType() != Poll.V1_VERIFY_POLL) {
 	CachedUrlSet pcus = ps.getCachedUrlSet();
 	int rel_pos = cus.cusCompare(pcus);
 	if (rel_pos != CachedUrlSet.SAME_LEVEL_NO_OVERLAP &&
@@ -340,7 +357,7 @@ public class V1PollFactory implements PollFactory {
     CachedUrlSet cus = pollspec.getCachedUrlSet();
     int quorum = m_quorum;
     switch (pollspec.getPollType()) {
-    case Poll.NAME_POLL: {
+    case Poll.V1_NAME_POLL: {
       long minPoll = (m_minNamePollDuration +
 		      theRandom.nextLong(m_maxNamePollDuration -
 					 m_minNamePollDuration));
@@ -349,7 +366,7 @@ public class V1PollFactory implements PollFactory {
 				     minPoll, m_maxNamePollDuration,
 				     m_nameHashEstimate, pm);
     }
-    case Poll.CONTENT_POLL: {
+    case Poll.V1_CONTENT_POLL: {
       long hashEst = cus.estimatedHashDuration();
       theLog.debug3("CUS estimated hash duration: " + hashEst);
 
@@ -369,87 +386,6 @@ public class V1PollFactory implements PollFactory {
     }
   }
 
-  // try poll durations between min and max at increments of incr.
-  // return duration in which all hashing can be scheduled, or -1 if not.
-
-  // tk - multiplicative padding factor to avoid poll durations that nearly
-  // completely fill the schedule.
-
-  private long findSchedulableDuration(long hashTime,
-				       long min, long max, long incr,
-				       PollManager pm) {
-    // loop goes maybe one more because we don't want to stop before
-    // reaching max
-    for (long dur = min; dur <= (max + incr - 1); dur += incr) {
-      if (dur > max) {
-	dur = max;
-      }
-      theLog.debug3("Trying to schedule poll of duration: " + dur);
-      if (canPollBeScheduled(dur, hashTime, pm)) {
-	theLog.debug2("Poll duration: " +
-		      StringUtil.timeIntervalToString(dur));
-	return dur;
-      }
-      if (dur >= max) {
-	// Complete paranoia here.  This shouldn't be necessary, because if
-	// we've reset dur to max, the loop will exit on the next iteration
-	// because (max + incr) > (max + incr - 1).  But because we might
-	// reduce dur in the loop the possibility of an infinite loop has
-	// been raised; this is insurance against that.
-	break;
-      }
-    }
-    theLog.info("Can't schedule poll within " +
-		StringUtil.timeIntervalToString(max));
-    return -1;
-  }
-
-  public boolean canPollBeScheduled(long pollTime, long hashTime,
-				    PollManager pm) {
-    theLog.debug("Try to schedule " + pollTime + " poll " + hashTime + " poll");
-    if (hashTime > pollTime) {
-      theLog.warning("Total hash time " +
-		     StringUtil.timeIntervalToString(hashTime) +
-		     " greater than max poll time " +
-		     StringUtil.timeIntervalToString(pollTime));
-      return false;
-    }
-    Deadline when = Deadline.in(pollTime);
-    return canHashBeScheduledBefore(hashTime, when, pm);
-  }
-
-  boolean canHashBeScheduledBefore(long duration, Deadline when,
-				   PollManager pm) {
-    boolean ret = pm.getHashService().canHashBeScheduledBefore(duration, when);
-    theLog.debug("canHashBeScheduledBefore(" + duration + "," + when + ")" +
-		 " returns " + ret);
-    return ret;
-  }
-
-  private long getAdjustedEstimate(long estTime, PollManager pm) {
-    long my_estimate = estTime;
-    long my_rate;
-    long slow_rate = pm.getSlowestHashSpeed();
-    try {
-      my_rate = pm.getBytesPerMsHashEstimate();
-    }
-    catch (SystemMetrics.NoHashEstimateAvailableException e) {
-      // if can't get my rate, use slowest rate to prevent adjustment
-      theLog.warning("No hash estimate available, " +
-		     "not adjusting poll for slow machines");
-      my_rate = slow_rate;
-    }
-    theLog.debug3("My hash speed is " + my_rate
-		  + ". Slow speed is " + slow_rate);
-
-
-    if (my_rate > slow_rate) {
-      my_estimate = estTime * my_rate / slow_rate;
-      theLog.debug3("I've corrected the hash estimate to " + my_estimate);
-    }
-    return my_estimate;
-  }
-
   /**
    * setConfig updates the poll factory's configuration
    * @param newConfig the new gonfiguration of the daemon
@@ -464,11 +400,6 @@ public class V1PollFactory implements PollFactory {
     m_minNamePollDuration = aveDuration - aveDuration / 4;
     m_maxNamePollDuration = aveDuration + aveDuration / 4;
 
-    // tk - temporary until real name hash estimates
-    m_nameHashEstimate = newConfig.getTimeInterval(PARAM_NAME_HASH_ESTIMATE,
-						   DEFAULT_NAME_HASH_ESTIMATE);
-
-
     m_minContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MIN,
 							 DEFAULT_CONTENTPOLL_MIN);
     m_maxContentPollDuration = newConfig.getTimeInterval(PARAM_CONTENTPOLL_MAX,
@@ -482,12 +413,18 @@ public class V1PollFactory implements PollFactory {
     m_maxDurationMultiplier =
       Configuration.getIntParam(PARAM_DURATION_MULTIPLIER_MAX,
 				DEFAULT_DURATION_MULTIPLIER_MAX);
+    m_verifierExpireTime =
+      newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
+                                DEFAULT_VERIFY_EXPIRATION);
+    // tk - temporary until real name hash estimates
+    m_nameHashEstimate = newConfig.getTimeInterval(PARAM_NAME_HASH_ESTIMATE,
+                                                   DEFAULT_NAME_HASH_ESTIMATE);
   }
 
   public long getMaxPollDuration(int pollType) {
     switch (pollType) {
-    case Poll.CONTENT_POLL: return m_maxContentPollDuration;
-    case Poll.NAME_POLL: return m_maxNamePollDuration;
+    case Poll.V1_CONTENT_POLL: return m_maxContentPollDuration;
+    case Poll.V1_NAME_POLL: return m_maxNamePollDuration;
     default:
       theLog.warning("getMaxPollDuration(" + pollType + ")");
       return 0;
@@ -496,14 +433,120 @@ public class V1PollFactory implements PollFactory {
 
   public long getMinPollDuration(int pollType) {
     switch (pollType) {
-    case Poll.CONTENT_POLL: return m_minContentPollDuration;
-    case Poll.NAME_POLL: return m_minNamePollDuration;
+    case Poll.V1_CONTENT_POLL: return m_minContentPollDuration;
+    case Poll.V1_NAME_POLL: return m_minNamePollDuration;
     default:
       theLog.warning("getMinPollDuration(" + pollType + ")");
       return 0;
     }
   }
+  
+  public boolean isDuplicateMessage(LcapMessage msg, PollManager pm) {
+    byte[] verifier = ((V1LcapMessage)msg).getVerifier();
+    String ver = String.valueOf(B64Code.encode(verifier));
+    // lock paranoia - access (synchronized) thePolls outside theVerifiers lock
+    
+    boolean havePoll = pm.hasPoll(msg.getKey());
+    
+    synchronized (theVerifiers) {
+      String secret = (String)theVerifiers.get(ver);
+      // if we have a secret and we don't have a poll
+      // we made the original message but haven't made a poll yet
+      if(!StringUtil.isNullString(secret) && !havePoll) {
+        return false;
+      }
+      else if(secret == null) { // we didn't make the verifier-we don't have a secret
+        rememberVerifier(verifier, null, msg.getDuration());
+      }
+      return secret != null;   // we made the verifier-we should have a secret
+    }
+  }
+  
+  private void rememberVerifier(byte[] verifier,
+                                byte[] secret,
+                                long duration) {
+    String ver = String.valueOf(B64Code.encode(verifier));
+    String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
+    Deadline d = Deadline.in(m_verifierExpireTime + duration);
+    synchronized (theVerifiers) {
+      theVerifiers.put(ver, sec, d);
+    }
+  }
+  
+  /* Non-interface methods */
+  
+  /**
+   * Called by verify polls to get the array of bytes that represents the
+   * secret used to generate the verifier bytes.
+   * @param verifier the array of bytes that is a hash of the secret.
+   * @return the array of bytes representing the secret or if no matching
+   * verifier is found, null.
+   */
+  byte[] getSecret(byte[] verifier) {
+    String ver = String.valueOf(B64Code.encode(verifier));
+    String sec;
+    synchronized (theVerifiers) {
+      sec = (String)theVerifiers.get(ver);
+    }
+    if (sec != null && sec.length() > 0) {
+      return (B64Code.decode(sec.toCharArray()));
+    }
+    return null;
+  }
 
+  /**
+   * make a verifier by generating a secret and hashing it. Then store the
+   * verifier/secret pair in the verifiers table.
+   * @param duration time the item we're verifying is expected to take.
+   * @return the array of bytes representing the verifier
+   */
+  byte[] makeVerifier(long duration) {
+    byte[] s_bytes = ByteArray.makeRandomBytes(20);
+    byte[] v_bytes = generateVerifier(s_bytes);
+    if(v_bytes != null) {
+      rememberVerifier(v_bytes, s_bytes, duration);
+    }
+    return v_bytes;
+  }
+
+  /**
+   * generate a verifier from a array of bytes representing a secret
+   * @param secret the bytes representing a secret to be hashed
+   * @return an array of bytes representing a verifier
+   */
+  public byte[] generateVerifier(byte[] secret) {
+    byte[] verifier = null;
+    MessageDigest digest = getMessageDigest(null);
+    digest.update(secret, 0, secret.length);
+    verifier = digest.digest();
+
+    return verifier;
+  }
+  
+  /**
+   * return a MessageDigest needed to hash this message
+   * @param msg the LcapMessage which needs to be hashed or null to use
+   * the default digest algorithm
+   * @return the MessageDigest
+   */
+  public MessageDigest getMessageDigest(LcapMessage msg) {
+    MessageDigest digest = null;
+    String algorithm;
+    if(msg == null) {
+      algorithm = LcapMessage.getDefaultHashAlgorithm();
+    }
+    else {
+      algorithm = msg.getHashAlgorithm();
+    }
+    try {
+      digest = MessageDigest.getInstance(algorithm);
+    } catch (NoSuchAlgorithmException ex) {
+      theLog.error("Unable to run - no MessageDigest");
+    }
+
+    return digest;
+  }
+  
   protected static int getQuorum() {
     return m_quorum;
   }

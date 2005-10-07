@@ -1,5 +1,5 @@
 /*
- * $Id: V1VerifyPoll.java,v 1.14 2005-08-11 06:37:12 tlipkis Exp $
+ * $Id: V1VerifyPoll.java,v 1.15 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ class V1VerifyPoll extends V1Poll {
     super(pollspec, pm, orig, challenge, duration);
     m_replyOpcode = V1LcapMessage.VERIFY_POLL_REP;
     m_tally = new V1PollTally(this,
-			      VERIFY_POLL,
+			      V1_VERIFY_POLL,
 			      m_createTime,
 			      duration,
 			      1,
@@ -146,7 +146,8 @@ class V1VerifyPoll extends V1Poll {
     int weight = idMgr.getReputation(id);
     byte[] challenge = msg.getChallenge();
     byte[] hashed = msg.getHashed();
-    MessageDigest digest = m_pollmanager.getMessageDigest(msg);
+    V1PollFactory pf = (V1PollFactory)m_pollmanager.getPollFactory(msg);
+    MessageDigest digest = pf.getMessageDigest(msg);
     // check that vote verification hashed in the message should
     // hash to the challenge, which is the verifier of the poll
     // thats being verified
@@ -192,23 +193,23 @@ class V1VerifyPoll extends V1Poll {
   }
 
   private void sendVerifyReply(V1LcapMessage msg) throws IOException  {
-    String url = msg.getTargetUrl();
     ArchivalUnit au;
+    V1PollFactory pf = (V1PollFactory)m_pollmanager.getPollFactory(msg);
     String chal = String.valueOf(B64Code.encode(msg.getChallenge()));
-    byte[] secret = m_pollmanager.getSecret(msg.getChallenge());
+    byte[] secret = pf.getSecret(msg.getChallenge());
     if(secret == null) {
       log.error("Verify poll reply failed.  Unable to find secret for: "
 		+ chal);
       return;
     }
-    byte[] verifier = m_pollmanager.makeVerifier(msg.getDuration());
+    byte[] verifier = pf.makeVerifier(msg.getDuration());
     V1LcapMessage repmsg = V1LcapMessage.makeReplyMsg(msg,
 						      secret,
 						      verifier,
 						      null,
 						      V1LcapMessage.VERIFY_POLL_REP,
 						      msg.getDuration(),
-						      idMgr.getLocalPeerIdentity(Poll.V1_POLL));
+						      idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
 
     PeerIdentity originator = msg.getOriginatorId();
     log.debug("sending our verification reply to " + originator.toString());

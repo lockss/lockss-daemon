@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.4 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: VoterActions.java,v 1.5 2005-10-07 23:46:48 smorabito Exp $
  */
 
 /*
@@ -32,6 +32,7 @@
 
 package org.lockss.poller.v3;
 
+import java.io.IOException;
 import java.security.*;
 
 import org.lockss.protocol.*;
@@ -41,6 +42,11 @@ import org.lockss.util.*;
 public class VoterActions {
   private static final Logger log = Logger.getLogger("VoterActions");
 
+  // Start participating in a V3 poll when a POLL message is received
+  public static PsmEvent handleReceivePoll(PsmMsgEvent evt, PsmInterp interp) {
+    return V3Events.evtOk;
+  }
+  
   public static PsmEvent handleVerifyPollEffort(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement effort service
     return V3Events.evtOk;
@@ -58,11 +64,18 @@ public class VoterActions {
     V3LcapMessage msg = V3LcapMessageFactory.makePollAckMsg(ud);
     msg.setEffortProof(ud.getPollAckEffortProof());
     msg.setVoterNonce(ud.getVoterNonce());
-    ud.sendMessage(msg);
+    try {
+      ud.sendMessageTo(msg, ud.getPollerId());
+      log.debug2("Sent PollAck message to");
+    } catch (IOException ex) {
+      log.error("Unable to send message: ", ex);
+      return V3Events.evtError;
+    }
     return V3Events.evtOk;
   }
 
   public static PsmEvent handleReceivePollProof(PsmMsgEvent evt, PsmInterp interp) {
+    log.debug2("Received PollProof message");
     VoterUserData ud = getUserData(interp);
     V3LcapMessage msg = (V3LcapMessage)evt.getMessage();
     ud.setRemainingEffortProof(msg.getEffortProof());
@@ -72,13 +85,20 @@ public class VoterActions {
   public static PsmEvent handleVerifyPollProof(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     // XXX: Implement effort service
+    // After effort has been proven, prepare to nominate some peers.
+    ud.nominatePeers();
     return V3Events.evtOk;
   }
 
   public static PsmEvent handleSendNominate(PsmEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     V3LcapMessage msg = V3LcapMessageFactory.makeNominateMessage(ud);
-    ud.sendMessage(msg);
+    try {
+      ud.sendMessageTo(msg, ud.getPollerId());
+    } catch (IOException ex) {
+      log.error("Unable to send message: ", ex);
+      return V3Events.evtError;
+    }
     return V3Events.evtOk;
   }
 
@@ -112,7 +132,12 @@ public class VoterActions {
     VoterUserData ud = getUserData(interp);
     // Actually cast our vote.
     V3LcapMessage msg = V3LcapMessageFactory.makeVoteMessage(ud);
-    ud.sendMessage(msg);
+    try {
+      ud.sendMessageTo(msg, ud.getPollerId());
+    } catch (IOException ex) {
+      log.error("Unable to send message: ", ex);
+      return V3Events.evtError;
+    }
     ud.hashingDone(false);
     return V3Events.evtOk;
   }

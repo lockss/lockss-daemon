@@ -1,5 +1,5 @@
 /*
- * $Id: PollerUserData.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: PollerUserData.java,v 1.5 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -34,6 +34,7 @@ import org.lockss.plugin.CachedUrlSet;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 
+import java.io.*;
 import java.util.*;
 
 /**
@@ -54,6 +55,7 @@ public class PollerUserData implements LockssSerializable {
   private byte[] remainingEffortProof;
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
+  private String errorMsg;
   
   /** Transient non-serialized fields */
   private transient V3Poller poller;
@@ -187,14 +189,28 @@ public class PollerUserData implements LockssSerializable {
   public VoteBlocks getVoteBlocks() {
     return voteBlocks;
   }
+  
+  public VoteBlock getVoteBlock(int index)
+      throws VoteBlocks.NoSuchBlockException {
+    return voteBlocks.getVoteBlock(index);
+  }
 
+  public void setErrorMessage(String s) {
+    this.errorMsg = s;
+    saveState();
+  }
+  
+  public String getErrorMessage() {
+    return errorMsg;
+  }
+  
   public String toString() {
-    return "[V3VoterState: voterId=" +
+    return "[PollerUserData: voterId=" +
       voterId + "]";
   }
   
-  public String getPollKey() {
-    return poller.getPollKey();
+  public String getKey() {
+    return poller.getKey();
   }
   
   public V3Poller getPoller() {
@@ -239,7 +255,7 @@ public class PollerUserData implements LockssSerializable {
   }
 
   /** Poller delegate methods */
-  void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
+  void sendMessageTo(V3LcapMessage msg, PeerIdentity to) throws IOException {
     poller.sendMessageTo(msg, to);
   }
 
@@ -247,13 +263,18 @@ public class PollerUserData implements LockssSerializable {
    * Callbacks methods.
    */
   void nominatePeers(List peers) {
+    this.nominees = peers;
     poller.nominatePeers(getVoterId(), peers);
   }
 
-  void tallyIfReady() {
-    poller.tallyIfReady(getVoterId());
+  void tallyVoter() {
+    poller.tallyVoter(getVoterId());
   }
 
+  public void handleError() {
+    poller.handleError(getVoterId(), getErrorMessage());
+  }
+  
   void handleRepair() {
     // XXX: TBD
   }

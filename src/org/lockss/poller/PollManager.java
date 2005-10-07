@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.157 2005-08-11 06:37:12 tlipkis Exp $
+ * $Id: PollManager.java,v 1.158 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -33,22 +33,19 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.poller;
 
 import java.io.*;
-import java.security.*;
 import java.util.*;
 
-import org.lockss.app.*;
-import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.protocol.*;
-import org.lockss.protocol.ProtocolException;
-import org.lockss.util.*;
-import org.lockss.hasher.HashService;
-import org.lockss.daemon.status.*;
-import org.lockss.state.*;
-import org.mortbay.util.B64Code;
-import org.lockss.alert.AlertManager;
 import org.lockss.alert.*;
+import org.lockss.app.*;
+import org.lockss.config.*;
+import org.lockss.daemon.*;
+import org.lockss.daemon.status.*;
+import org.lockss.hasher.*;
+import org.lockss.plugin.*;
+import org.lockss.poller.v3.*;
+import org.lockss.protocol.*;
+import org.lockss.state.*;
+import org.lockss.util.*;
 
 /**
  * <p>Class that manages the polling process.</p>
@@ -63,10 +60,8 @@ public class PollManager
 
   static final String PREFIX = Configuration.PREFIX + "poll.";
   static final String PARAM_RECENT_EXPIRATION = PREFIX + "expireRecent";
-  static final String PARAM_VERIFY_EXPIRATION = PREFIX + "expireVerifier";
 
   static final long DEFAULT_RECENT_EXPIRATION = Constants.DAY;
-  static final long DEFAULT_VERIFY_EXPIRATION = 6 * Constants.HOUR;
 
   // Items are moved between thePolls and theRecentPolls, so it's simplest
   // to synchronize all accesses on a single object.  That object is
@@ -80,11 +75,6 @@ public class PollManager
 
   private static Object pollMapLock = thePolls;
 
-  private static VariableTimedMap theVerifiers = new VariableTimedMap();
-
-
-  private static LockssRandom theRandom = new LockssRandom();
-
   private static PollManager theManager = null;
   private static LcapRouter.MessageHandler m_msgHandler;
   private static IdentityManager theIDManager;
@@ -95,14 +85,13 @@ public class PollManager
 
   // our configuration variables
   protected long m_recentPollExpireTime = DEFAULT_RECENT_EXPIRATION;
-  protected long m_verifierExpireTime = DEFAULT_VERIFY_EXPIRATION;
 
   // The PollFactory instances
   PollFactory [] pf = {
     null,
     new V1PollFactory(),
     null, // new V2PollFactory(),
-    null, // new V3PollFactory(),
+    new V3PollFactory(),
   };
 
   public PollManager() {
@@ -171,7 +160,7 @@ public class PollManager
     synchronized (pollMapLock) {
       for (Iterator it = thePolls.values().iterator(); it.hasNext(); ) {
 	PollManagerEntry pme = (PollManagerEntry) it.next();
-	ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
+	ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
 	if (pau == au && !pme.isPollCompleted()) {
 	  toCancel.add(pme);
 	}
@@ -180,7 +169,7 @@ public class PollManager
     // then actually cancel them while not holding lock
     for (Iterator it = toCancel.iterator(); it.hasNext(); ) {
       PollManagerEntry pme = (PollManagerEntry) it.next();
-      ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
+      ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
       theHashService.cancelAuHashes(pau);
       pme.poll.stopPoll();
     }
@@ -203,14 +192,13 @@ public class PollManager
 	theLog.debug("Duration for " + pollspec + " too short " + duration);
 	return null;
       }
-      byte[] challenge = makeVerifier(duration);
-      byte[] verifier = makeVerifier(duration);
       try {
-	thePoll = makePoll(pollspec, duration, challenge, verifier,
+	thePoll = makePoll(pollspec, duration,
 			   theIDManager.getLocalPeerIdentity(pollspec.getPollVersion()),
-			   LcapMessage.getDefaultHashAlgorithm());
+			   LcapMessage.getDefaultHashAlgorithm(),
+                           null);
 	if (thePoll != null) {
-	  if (pollFact.callPoll(thePoll, this, theIDManager)) {
+	  if (pollFact.callPoll(thePoll, theDaemon)) {
 	    return thePoll;
 	  } else {
 	    theLog.debug("pollFact.callPoll() returned false");
@@ -320,7 +308,7 @@ public class PollManager
       // should be equivalent to this.  is it?
       //       PollFactory pollFact = getPollFactory(pme.spec);
       if (pollFact != null) {
-	expiration = pollFact.getMaxPollDuration(Poll.CONTENT_POLL);
+	expiration = pollFact.getMaxPollDuration(Poll.V1_CONTENT_POLL);
       } else {
 	expiration = 0; // XXX
       }
@@ -343,7 +331,8 @@ public class PollManager
    */
   void handleIncomingMessage(LcapMessage msg) throws IOException {
     if (theLog.isDebug2()) theLog.debug2("Got a message: " + msg);
-    if(isDuplicateMessage(msg)) {
+    PollFactory fact = getPollFactory(msg);
+    if(fact.isDuplicateMessage(msg, this)) {
       theLog.debug3("Dropping duplicate message:" + msg);
       return;
     }
@@ -376,19 +365,19 @@ public class PollManager
     BasePoll ret = null;
 
     PollManagerEntry pme = (PollManagerEntry)thePolls.get(key);
-    if(pme == null) {
-      theLog.debug3("Making new poll: " + key);
+    if (pme == null) {
+      theLog.debug3("findPoll: Making new poll: " + key);
       ret = makePoll(msg);
       if (theLog.isDebug3()) {
 	if (ret != null) {
-	  theLog.debug3("Made new poll: " + key);
+	  theLog.debug3("findPoll: Made new poll: " + key);
 	} else {
-	  theLog.debug3("Did not make new poll: " + key);
+	  theLog.debug3("findPoll: Did not make new poll: " + key);
 	}
       }
     }
     else {
-      theLog.debug3("Returning existing poll: " + key);
+      theLog.debug3("findPoll: Returning existing poll: " + key);
       ret = pme.poll;
     }
     return ret;
@@ -403,38 +392,37 @@ public class PollManager
    * @throws ProtocolException if message opcode is unknown
    */
   BasePoll makePoll(LcapMessage msg) throws ProtocolException {
-    theLog.debug2("Got message: " + msg);
-    BasePoll ret_poll = null;
+    theLog.debug2("makePoll: From message: " + msg);
+    BasePoll poll = null;
     PollSpec spec = null;
 
+    // XXX: V3 Refactor - this could be cleaned up
     if (msg instanceof V1LcapMessage) {
       V1LcapMessage v1msg = (V1LcapMessage)msg;
       spec = new PollSpec(v1msg);
-      long duration = v1msg.getDuration();
-      byte[] challenge = v1msg.getChallenge();
-      byte[] verifier = v1msg.getVerifier();
-      PeerIdentity orig = v1msg.getOriginatorId();
-      String hashAlg = v1msg.getHashAlgorithm();
-
-      ret_poll = makePoll(spec, duration, challenge, verifier, orig, hashAlg);
-      if (ret_poll != null) {
-	ret_poll.setMessage(v1msg);
-      }
     } else if (msg instanceof V3LcapMessage) {
-      // XXX: Implement.
+      V3LcapMessage v3msg = (V3LcapMessage)msg;
+      spec = new PollSpec(v3msg);
     } else {
       throw new ProtocolException("Unexpected LCAP Message type.");
     }
-
-    return ret_poll;
+    
+    long duration = msg.getDuration();
+    PeerIdentity orig = msg.getOriginatorId();
+    String hashAlg = msg.getHashAlgorithm();
+    poll = makePoll(spec, duration, orig, hashAlg, msg);
+    if (poll != null) {
+      poll.setMessage(msg);
+    }
+    return poll;
   }
 
   BasePoll makePoll(PollSpec spec,
 		    long duration,
-		    byte[] challenge,
-		    byte[] verifier,
 		    PeerIdentity orig,
-		    String hashAlg) throws ProtocolException {
+		    String hashAlg,
+                    LcapMessage msg) throws ProtocolException {
+    theLog.debug3("makePoll: From pollSpec " + spec);
     BasePoll ret_poll = null;
     CachedUrlSet cus = spec.getCachedUrlSet();
     // check for presence of item in the cache
@@ -457,14 +445,8 @@ public class PollManager
       return null;
     }
 
-    // check for conflicts
-    if (!pollFact.shouldPollBeCreated(spec, this, theIDManager,
-				      challenge, orig)) {
-      theLog.debug("Poll request ignored");
-      return null;
-    }
     // check with regulator if not verify poll
-    else if (spec.getPollType() != Poll.VERIFY_POLL) {
+    else if (spec.getPollType() != Poll.V1_VERIFY_POLL) {
       // get expiration time for the lock
       long expiration = 2 * duration;
       if (AuUrl.isAuUrl(cus.getUrl())) {
@@ -496,9 +478,8 @@ public class PollManager
 
     // create the appropriate poll for the message type
     try {
-      ret_poll = pollFact.createPoll(spec, this, theIDManager,
-				     orig, challenge, verifier,
-				     duration, hashAlg);
+      ret_poll = pollFact.createPoll(spec, theDaemon,
+				     orig, duration, hashAlg, msg);
     }
     catch (Exception ex) {
       if(ex instanceof ProtocolException) {
@@ -516,26 +497,26 @@ public class PollManager
 
     if (ret_poll != null) {
       NodeManager nm = theDaemon.getNodeManager(cus.getArchivalUnit());
-      if (spec.getPollType() != Poll.VERIFY_POLL) {
-	if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
-	  theLog.debug("NodeManager said not to start poll: "+ret_poll);
+      if (spec.getPollType() != Poll.V1_VERIFY_POLL) {
+        if (!nm.shouldStartPoll(cus, ret_poll.getVoteTally())) {
+	  theLog.debug("NodeManager said not to start poll: " + ret_poll);
 	  // clear the lock
 	  lock.expire();
 	  return null;
 	}
       }
 
-      thePolls.put(ret_poll.m_key, new PollManagerEntry(ret_poll));
-      if (spec.getPollType() != Poll.VERIFY_POLL &&
-	  !(spec.getPollType() == Poll.NAME_POLL &&
-	    spec.getLwrBound() != null)) {
+      thePolls.put(ret_poll.getKey(), new PollManagerEntry(ret_poll));
+      if (spec.getPollType() != Poll.V1_VERIFY_POLL &&
+          !(spec.getPollType() == Poll.V1_NAME_POLL &&
+              spec.getLwrBound() != null)) {
 	// set the activity lock in the tally
 	ret_poll.getVoteTally().setActivityLock(lock);
 	nm.startPoll(cus, ret_poll.getVoteTally(), false);
       }
 
       ret_poll.startPoll();
-      theLog.debug2("Started new poll: " + ret_poll.m_key);
+      theLog.debug2("Started new poll: " + ret_poll.getKey());
       return ret_poll;
     } else {
       theLog.error("Got a null ret_poll from createPoll");
@@ -567,10 +548,10 @@ public class PollManager
     // Don't tell the node manager about verify polls
     // If closing a name poll that started ranged subpolls, don't tell
     // the node manager about it until all ranged subpolls have finished
-    if (tally.getType() != Poll.VERIFY_POLL && !pme.poll.isSubpollRunning()) {
+    if (tally.getType() != Poll.V1_VERIFY_POLL && !pme.poll.isSubpollRunning()) {
       // if closing last name poll, concatenate all the name lists into the
       // first tally and pass that to node manager
-      if (tally.getType() == Poll.NAME_POLL && tally instanceof V1PollTally) {
+      if (tally.getType() == Poll.V1_NAME_POLL && tally instanceof V1PollTally) {
 	V1PollTally lastTally = (V1PollTally)tally;
 	tally = lastTally.concatenateNameSubPollLists();
       }
@@ -601,7 +582,7 @@ public class PollManager
     synchronized (pollMapLock) {
       for (Iterator iter = thePolls.values().iterator(); iter.hasNext(); ) {
 	PollManagerEntry pme = (PollManagerEntry)iter.next();
-	ArchivalUnit pau = pme.poll.m_cus.getArchivalUnit();
+	ArchivalUnit pau = pme.poll.getCachedUrlSet().getArchivalUnit();
 	if (pau == au &&
 	    pme.poll != dontIncludePoll &&
 	    !pme.isPollCompleted()) {
@@ -639,93 +620,16 @@ public class PollManager
       throws IOException {
     theRouter.sendTo(msg, au, id);
   }
-
+  
   /**
-   * Called by verify polls to get the array of bytes that represents the
-   * secret used to generate the verifier bytes.
-   * @param verifier the array of bytes that is a hash of the secret.
-   * @return the array of bytes representing the secret or if no matching
-   * verifier is found, null.
-   */
-  byte[] getSecret(byte[] verifier) {
-    String ver = String.valueOf(B64Code.encode(verifier));
-    String sec;
-    synchronized (theVerifiers) {
-      sec = (String)theVerifiers.get(ver);
-    }
-    if (sec != null && sec.length() > 0) {
-      return (B64Code.decode(sec.toCharArray()));
-    }
-    return null;
-  }
-
-
-
-  /**
-   * return a MessageDigest needed to hash this message
-   * @param msg the LcapMessage which needs to be hashed or null to use
-   * the default digest algorithm
-   * @return the MessageDigest
-   */
-  MessageDigest getMessageDigest(LcapMessage msg) {
-    MessageDigest digest = null;
-    String algorithm;
-    if(msg == null) {
-      algorithm = LcapMessage.getDefaultHashAlgorithm();
-    }
-    else {
-      algorithm = msg.getHashAlgorithm();
-    }
-    try {
-      digest = MessageDigest.getInstance(algorithm);
-    } catch (NoSuchAlgorithmException ex) {
-      theLog.error("Unable to run - no MessageDigest");
-    }
-
-    return digest;
-  }
-
-
-  /**
-   * make a verifier by generating a secret and hashing it. Then store the
-   * verifier/secret pair in the verifiers table.
-   * @param duration time the item we're verifying is expected to take.
-   * @return the array of bytes representing the verifier
-   */
-  byte[] makeVerifier(long duration) {
-    byte[] s_bytes = generateRandomBytes();
-    byte[] v_bytes = generateVerifier(s_bytes);
-    if(v_bytes != null) {
-      rememberVerifier(v_bytes, s_bytes, duration);
-    }
-    return v_bytes;
-  }
-
-
-
-  /**
-   * generate a random array of 20 bytes
-   * @return the array of bytes
-   */
-  public byte[] generateRandomBytes() {
-    byte[] secret = new byte[20];
-    theRandom.nextBytes(secret);
-    return secret;
-  }
-
-
-  /**
-   * generate a verifier from a array of bytes representing a secret
-   * @param secret the bytes representing a secret to be hashed
-   * @return an array of bytes representing a verifier
-   */
-  byte[] generateVerifier(byte[] secret) {
-    byte[] verifier = null;
-    MessageDigest digest = getMessageDigest(null);
-    digest.update(secret, 0, secret.length);
-    verifier = digest.digest();
-
-    return verifier;
+   * send a message to the unicast address given by an identity
+   * @param msg the LcapMessage to send
+   * @param id the PeerIdentity of the identity to send to
+   * @throws IOException
+   */ 
+  public void sendMessageTo(V3LcapMessage msg, PeerIdentity id) 
+      throws IOException {
+    theRouter.sendTo(msg, id);
   }
 
   IdentityManager getIdentityManager() {
@@ -736,45 +640,6 @@ public class PollManager
     return theHashService;
   }
 
-  private void rememberVerifier(byte[] verifier,
-				byte[] secret,
-				long duration) {
-    String ver = String.valueOf(B64Code.encode(verifier));
-    String sec = secret == null ? "" : String.valueOf(B64Code.encode(secret));
-    Deadline d = Deadline.in(m_verifierExpireTime + duration);
-    synchronized (theVerifiers) {
-      theVerifiers.put(ver, sec, d);
-    }
-  }
-
-  private boolean isDuplicateMessage(LcapMessage msg) {
-    if (msg instanceof V1LcapMessage) {
-      byte[] verifier = ((V1LcapMessage)msg).getVerifier();
-      String ver = String.valueOf(B64Code.encode(verifier));
-      // lock paranoia - access (synchronized) thePolls outside theVerifiers lock
-      boolean havePoll = thePolls.contains(msg.getKey());
-      
-      synchronized (theVerifiers) {
-	String secret = (String)theVerifiers.get(ver);
-	// if we have a secret and we don't have a poll
-	// we made the original message but haven't made a poll yet
-	if(!StringUtil.isNullString(secret) && !havePoll) {
-	  return false;
-	}
-	else if(secret == null) { // we didn't make the verifier-we don't have a secret
-	  rememberVerifier(verifier, null, msg.getDuration());
-	}
-	return secret != null;   // we made the verifier-we should have a secret
-      }
-    } else if (msg instanceof V3LcapMessage) {
-      // XXX: Implement - Stubbed for V3
-      return false;
-    } else {
-      return false;
-    }
-  }
-
-
   public void setConfig(Configuration newConfig,
 			Configuration oldConfig,
 			Configuration.Differences changedKeys) {
@@ -783,9 +648,6 @@ public class PollManager
 	newConfig.getTimeInterval(PARAM_RECENT_EXPIRATION,
 				  DEFAULT_RECENT_EXPIRATION);
       theRecentPolls.setInterval(m_recentPollExpireTime);
-      m_verifierExpireTime =
-	newConfig.getTimeInterval(PARAM_VERIFY_EXPIRATION,
-				  DEFAULT_VERIFY_EXPIRATION);
     }
     for (int i = 0; i < pf.length; i++) {
       if (pf[i] != null) {
@@ -795,12 +657,11 @@ public class PollManager
   }
 
   public PollFactory getPollFactory(PollSpec spec) {
-    int version = spec.getPollVersion();
-    if (version > 0 || version <= pf.length) {
-      return pf[version];
-    }
-    theLog.error("Unknown poll version: " + spec);
-    return null;
+    return getPollFactory(spec.getPollVersion());
+  }
+  
+  public PollFactory getPollFactory(LcapMessage msg) {
+    return getPollFactory(msg.getPollVersion());
   }
 
   public PollFactory getPollFactory(int version) {
@@ -843,7 +704,7 @@ public class PollManager
   }
 
   void addPoll(BasePoll p) {
-    thePolls.put(p.m_key, new PollManagerEntry(p));
+    thePolls.put(p.getKey(), new PollManagerEntry(p));
   }
 
   boolean isPollActive(String key) {
@@ -880,6 +741,10 @@ public class PollManager
     return theSystemMetrics.getBytesPerMsHashEstimate();
   }
 
+  public boolean hasPoll(String key) {
+    return thePolls.contains(key);
+  }
+  
   // ----------------  Callbacks -----------------------------------
 
   class RouterMessageHandler implements LcapRouter.MessageHandler {
@@ -912,7 +777,7 @@ public class PollManager
     PollManagerEntry(BasePoll p) {
       poll = p;
       spec = p.getPollSpec();
-      type = p.getVoteTally().getType();
+      type = p.getPollSpec().getPollType();
       key = p.getKey();
       pollDeadline = p.getDeadline();
       deadline = null;

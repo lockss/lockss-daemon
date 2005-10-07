@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.6 2005-08-31 23:19:18 troberts Exp $
+* $Id: MockIdentityManager.java,v 1.7 2005-10-07 23:46:45 smorabito Exp $
  */
 
 /*
@@ -301,6 +301,14 @@ public class MockIdentityManager implements IdentityManager {
     throw new UnsupportedOperationException("not implemented");
   }
   protected int getReputationDelta(int changeKind) {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public Collection getUdpPeerIdentities() {
+    throw new UnsupportedOperationException("not implemented");
+  }
+
+  public Collection getTcpPeerIdentities() {
     throw new UnsupportedOperationException("not implemented");
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.3 2005-09-14 23:57:48 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.4 2005-10-07 23:46:49 smorabito Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makePollMsg(PollerUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
                                    ud.getUrl(),
@@ -59,6 +60,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makePollProofMsg(PollerUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getKey(),
 				   ud.getPollVersion(),
 				   ud.getPluginVersion(),
 				   ud.getUrl(),
@@ -73,6 +75,7 @@ public class V3LcapMessageFactory {
 
   public static V3LcapMessage makeVoteRequestMsg(PollerUserData ud) {
     return V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                        ud.getKey(),
 					ud.getPollVersion(),
 					ud.getPluginVersion(),
 					ud.getUrl(),
@@ -86,6 +89,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makeRepairRequestMsg(PollerUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getKey(),
 				   ud.getPollVersion(),
 				   ud.getPluginVersion(),
 				   ud.getUrl(),
@@ -102,6 +106,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makeEvaluationReceiptMsg(PollerUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getKey(),
 				   ud.getPollVersion(),
 				   ud.getPluginVersion(),
 				   ud.getUrl(),
@@ -117,6 +122,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makePollAckMsg(VoterUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
                                    ud.getUrl(),
@@ -132,6 +138,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makeNominateMessage(VoterUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
                                    ud.getUrl(),
@@ -147,6 +154,7 @@ public class V3LcapMessageFactory {
   public static V3LcapMessage makeVoteMessage(VoterUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),
+                                   ud.getPollKey(),
                                    ud.getPollVersion(),
                                    ud.getPluginVersion(),
                                    ud.getUrl(),

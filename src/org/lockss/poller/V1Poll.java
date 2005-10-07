@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.27 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: V1Poll.java,v 1.28 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -60,16 +60,40 @@ public abstract class V1Poll extends BasePoll {
     "poll.voteMargin";
   static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
     "poll.trustedWeight";
-
+  
   static final int DEFAULT_VOTE_MARGIN = 75;
   static final int DEFAULT_TRUSTED_WEIGHT = 350;
   static final int DEFAULT_AGREE_VERIFY = 10;
   static final int DEFAULT_DISAGREE_VERIFY = 80;
+  
+  static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
+    "Hashing Error", "IO Error"};
+  
+  static final int PS_INITING = 0;
+  static final int PS_WAIT_HASH = 1;
+  static final int PS_WAIT_VOTE = 2;
+  static final int PS_WAIT_TALLY = 3;
+  static final int PS_COMPLETE = 4;
+  
+  static final Logger log = Logger.getLogger("V1Poll");
+  
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
   byte[] m_challenge;     // The caller's challenge string
   byte[] m_verifier;      // Our verifier string - hash of secret
   byte[] m_hash;          // Our hash of challenge, verifier and content(S)
+  
+  LcapMessage m_msg;      // The message which triggered the poll
+  CachedUrlSet m_cus;     // the cached url set from the archival unit
+  PollSpec m_pollspec;
+  PeerIdentity m_callerID; // identity of the peer that called poll
+  PollManager m_pollmanager; // the pollmanager for this poll.
+  IdentityManager idMgr;
+  long m_createTime;        // poll creation time
+
+  String m_key;             // the string we used to id this poll
+  int m_pollstate;          // one of state constants above
+  Deadline m_deadline;      // when election is over
 
   Deadline m_voteTime;    // when to vote
   Deadline m_hashDeadline; // when our hashes must finish by
@@ -94,17 +118,26 @@ public abstract class V1Poll extends BasePoll {
 	 PeerIdentity orig,
 	 byte[] challenge,
 	 long duration) {
-    super(pollspec, pm, orig, challengeToKey(challenge), duration);
-
+    m_pollmanager = pm;
+    idMgr = pm.getIdentityManager();
+    m_callerID = orig;
+    m_msg = null;
+    m_pollspec = pollspec;
+    m_cus = pollspec.getCachedUrlSet();
+    m_createTime = TimeBase.nowMs();
+    m_key = challengeToKey(challenge);
+    m_deadline = Deadline.in(duration);
+    m_pollstate = PS_INITING;
+    
     // now copy the msg elements we need
     m_hashTime = m_cus.estimatedHashDuration();
-    if(pollspec.getPollType() != Poll.VERIFY_POLL) {
+    if(pollspec.getPollType() != V1_VERIFY_POLL) {
       m_hashDeadline =
 	Deadline.at(m_deadline.getExpirationTime() - Constants.MINUTE);
     }
 
     m_challenge = challenge;
-    m_verifier = pm.makeVerifier(duration);
+    m_verifier = getPollFactory().makeVerifier(duration);
 
     log.debug("I think poll "+ challengeToKey(m_challenge)
 	      +" will take me this long to hash "+
@@ -123,6 +156,10 @@ public abstract class V1Poll extends BasePoll {
    */
   public PollTally getVoteTally() {
     return m_tally;
+  }
+  
+  public long getCreateTime() {
+    return m_createTime;
   }
 
   /**
@@ -230,9 +267,9 @@ public abstract class V1Poll extends BasePoll {
 	long maxTime = now + (remainingTime/2) + (remainingTime/4);
 	long duration = Deadline.atRandomRange(minTime, maxTime).getRemainingTime();
 	log.debug("Calling a verify poll...");
-	byte[] challenge = vote.getVerifier(); // challenge is the old verifier
-	byte[] verifier = m_pollmanager.makeVerifier(duration);
-	PollSpec pollspec = new PollSpec(m_pollspec, Poll.VERIFY_POLL);
+        byte[] challenge = vote.getVerifier(); // challenge is the old verifier
+	byte[] verifier = getPollFactory().makeVerifier(duration);
+	PollSpec pollspec = new PollSpec(m_pollspec, V1_VERIFY_POLL);
 	V1LcapMessage reqmsg =
 	  V1LcapMessage.makeRequestMsg(pollspec,
 				       null,
@@ -240,7 +277,7 @@ public abstract class V1Poll extends BasePoll {
 				       verifier,
 				       V1LcapMessage.VERIFY_POLL_REQ,
 				       duration,
-				       idMgr.getLocalPeerIdentity(Poll.V1_POLL));
+				       idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL));
 
 	PeerIdentity originatorID = vote.getVoterIdentity();
 	log.debug2("sending our verification request to " +
@@ -298,7 +335,7 @@ public abstract class V1Poll extends BasePoll {
       return;
     }
     V1LcapMessage msg;
-    PeerIdentity local_id = idMgr.getLocalPeerIdentity(Poll.V1_POLL);
+    PeerIdentity local_id = idMgr.getLocalPeerIdentity(PollSpec.V1_PROTOCOL);
     long remainingTime = m_deadline.getRemainingTime();
     try {
       msg = V1LcapMessage.makeReplyMsg(m_msg, m_hash, m_verifier, null,
@@ -374,6 +411,16 @@ public abstract class V1Poll extends BasePoll {
   }
 
 
+  /**
+   * Set the message that created this poll.
+   */
+  public void setMessage(LcapMessage msg) {
+    if (m_msg == null) {
+      this.m_msg = msg;
+      log.debug("Setting message for " + this + " from " + msg);
+    }
+  }
+  
   /**
    * is our poll currently in an error condition
    * @return true if the poll state is an error value
@@ -472,7 +519,7 @@ public abstract class V1Poll extends BasePoll {
    * @return a MessageDigest
    */
   MessageDigest getInitedDigest(byte[] challenge, byte[] verifier) {
-    MessageDigest digest = m_pollmanager.getMessageDigest(m_msg);
+    MessageDigest digest = getPollFactory().getMessageDigest(m_msg);
     digest.update(challenge, 0, challenge.length);
     digest.update(verifier, 0, verifier.length);
     log.debug3("hashing: C[" +String.valueOf(B64Code.encode(challenge)) + "] "
@@ -488,6 +535,76 @@ public abstract class V1Poll extends BasePoll {
     return m_verifier;
   }
 
+  /**
+   * Returns true if the poll belongs to this Identity
+   * @return true if  we called the poll
+   */
+  public boolean isMyPoll() {
+    boolean ret = idMgr.isLocalIdentity(m_callerID);
+    if (log.isDebug2()) {
+      log.debug2("isMyPoll(" + m_callerID.toString() + ") = " + ret);
+    }
+    return ret;
+  }
+
+  /**
+   * Returns the ID key for the peer that called the poll
+   * @return the ID key for the peer that called the poll
+   */
+  public PeerIdentity getCallerID() {
+    return m_callerID;
+  }
+
+  /**
+   * Return the poll spec used by this poll
+   * @return the PollSpec
+   */
+  public PollSpec getPollSpec() {
+    return m_pollspec;
+  }
+
+  /** Return the poll version of this poll
+   * @return the poll version
+   */
+  public int getVersion() {
+    return m_pollspec.getPollVersion();
+  }
+  
+  /**
+   * Return the PollFactory for this poll version.
+   */
+  public V1PollFactory getPollFactory() {
+    return (V1PollFactory)m_pollmanager.getPollFactory(m_pollspec);
+  }
+
+  /**
+   * get the message used to define this Poll
+   * @return <code>Message</code>
+   */
+  public LcapMessage getMessage() {
+    return m_msg;
+  }
+
+  /**
+   * get the poll identifier key
+   * @return the key as a String
+   */
+  public String getKey() {
+    return m_key;
+  }
+
+  /**
+   * Return the poll's deadline
+   * @return the Deadline object for this poll.
+   */
+  public Deadline getDeadline() {
+    return m_deadline;
+  }
+  
+  public CachedUrlSet getCachedUrlSet() {
+    return m_cus;
+  }
+  
   class PollHashCallback implements HashService.Callback {
 
     /**

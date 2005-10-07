@@ -1,5 +1,5 @@
 /*
- * $Id: LcapMessageTestUtil.java,v 1.3 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: LcapMessageTestUtil.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -54,7 +54,8 @@ public class LcapMessageTestUtil {
 
   public static V3LcapMessage makeTestVoteMessage(PeerIdentity peer,
 						  Collection voteBlocks) {
-    V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, peer, m_url,
+    V3LcapMessage msg = new V3LcapMessage(V3LcapMessage.MSG_VOTE, "key",
+                                          peer, m_url,
 					  123456789, 987654321,
                                           m_testBytes, m_testBytes);
 

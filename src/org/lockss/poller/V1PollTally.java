@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.21 2005-10-06 08:18:15 tlipkis Exp $
+ * $Id: V1PollTally.java,v 1.22 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -51,17 +51,17 @@ public class V1PollTally extends PollTally {
   private static final int STATE_SUSPENDED = 10;
   private static final int STATE_TALLIED = 11;
 
-  double voteMargin = 0;    // the margin by which we must win or lose
-  double trustedWeight = 0;// the min ave. weight of the winners, when we lose.
-  V1Poll poll;
+  private double voteMargin = 0;    // the margin by which we must win or lose
+  private double trustedWeight = 0;// the min ave. weight of the winners, when we lose.
+  private V1Poll poll;
   private V1PollTally prevTally = null;	// tally of preceding name poll, if
 					// ranged name poll tally
 
   static Logger log=Logger.getLogger("V1PollTally");
 
   V1PollTally(int type, long startTime, long duration, int numAgree,
-            int numDisagree, int wtAgree, int wtDisagree, int quorum,
-            String hashAlgorithm) {
+              int numDisagree, int wtAgree, int wtDisagree, int quorum,
+              String hashAlgorithm) {
     super(type, startTime, duration, numAgree, numDisagree, wtAgree,
 	  wtDisagree, quorum, hashAlgorithm);
     log.debug3("First V1PollTally constructor type " + type + " - " +
@@ -69,17 +69,19 @@ public class V1PollTally extends PollTally {
   }
 
   V1PollTally(V1Poll owner, int type, long startTime,
-		      long duration, int quorum, String hashAlgorithm) {
+              long duration, int quorum, String hashAlgorithm) {
     this(type, startTime, duration, 0, 0, 0, 0, quorum, hashAlgorithm);
-    poll = owner;
+    this.poll = owner;
     log.debug3("Second V1PollTally constructor type " + type + " - " + toString());
-    pollSpec = poll.getPollSpec();
-    idManager = poll.idMgr;
-    key = poll.getKey();
-    trustedWeight = (double)Configuration.getIntParam(V1Poll.PARAM_TRUSTED_WEIGHT,
-        V1Poll.DEFAULT_TRUSTED_WEIGHT);
-    voteMargin = ((double)Configuration.getIntParam(V1Poll.PARAM_VOTE_MARGIN,
-        V1Poll.DEFAULT_VOTE_MARGIN)) / 100;
+    this.pollSpec = poll.getPollSpec();
+    this.idManager = poll.idMgr;
+    this.key = poll.getKey();
+    this.trustedWeight =
+      (double)Configuration.getIntParam(V1Poll.PARAM_TRUSTED_WEIGHT,
+                                        V1Poll.DEFAULT_TRUSTED_WEIGHT);
+    this.voteMargin =
+      ((double)Configuration.getIntParam(V1Poll.PARAM_VOTE_MARGIN,
+                                         V1Poll.DEFAULT_VOTE_MARGIN)) / 100;
   }
 
   public void setPreviousNamePollTally(V1PollTally prevTally) {
@@ -137,7 +139,7 @@ public class V1PollTally extends PollTally {
   public int getTallyResult() {
     return result;
   }
-
+  
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
@@ -191,7 +193,7 @@ public class V1PollTally extends PollTally {
     }
   }
 
-  BasePoll getPoll() {
+  public BasePoll getPoll() {
     return poll;
   }
 
@@ -201,8 +203,8 @@ public class V1PollTally extends PollTally {
             (wtDisagree/numDisagree >= trustedWeight));
   }
 
-  void tallyVotes() {
-    if(type == Poll.VERIFY_POLL) {
+  public void tallyVotes() {
+    if (type == V1Poll.V1_VERIFY_POLL) {
       verifyTally();
       return;
     }
@@ -229,7 +231,7 @@ public class V1PollTally extends PollTally {
     log.debug3("V1PollTally.tallyVotes() " + poll.toString());
     log.debug3("agree " + numAgree + " disagree " + numDisagree +
 		" status " + result);
-    if((type == Poll.NAME_POLL) && (result != RESULT_WON)) {
+    if ((type == V1Poll.V1_NAME_POLL) && (result != RESULT_WON)) {
       log.debug2("lost a name poll, building poll list");
       ((V1NamePoll)poll).clearEntryList();
       ((V1NamePoll)poll).buildPollLists(pollVotes.iterator());
@@ -310,7 +312,7 @@ public class V1PollTally extends PollTally {
 
 
 
-  void adjustReputation(PeerIdentity voterID, int repDelta) {
+  public void adjustReputation(PeerIdentity voterID, int repDelta) {
     synchronized (this) {
       Iterator it = pollVotes.iterator();
       while (it.hasNext()) {
@@ -328,7 +330,7 @@ public class V1PollTally extends PollTally {
     }
   }
 
-  void addVote(Vote vote, PeerIdentity id, boolean isLocal) {
+  public void addVote(Vote vote, PeerIdentity id, boolean isLocal) {
     int weight = idManager.getReputation(id);
 
     synchronized (this) {
@@ -384,23 +386,23 @@ public class V1PollTally extends PollTally {
     }
   }
 
-
-/**
- * replay a previously checked vote
- * @param vote the vote to recheck
- * @param deadline the deadline by which the check must complete
- */
-
-void replayVoteCheck(Vote vote, Deadline deadline) {
-  MessageDigest digest = poll.getInitedDigest(vote.getChallenge(),
-                                              vote.getVerifier());
-
-  if (!poll.scheduleHash(digest, deadline, poll.copyVote(vote, vote.agree),
-                         new ReplayVoteCallback())) {
-    poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
-    log.debug("couldn't schedule hash - stopping replay poll");
+  
+  /**
+   * replay a previously checked vote
+   * @param vote the vote to recheck
+   * @param deadline the deadline by which the check must complete
+   */
+  
+  public void replayVoteCheck(Vote vote, Deadline deadline) {
+    MessageDigest digest = poll.getInitedDigest(vote.getChallenge(),
+                                                vote.getVerifier());
+    
+    if (!poll.scheduleHash(digest, deadline, poll.copyVote(vote, vote.agree),
+                           new ReplayVoteCallback())) {
+      poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
+      log.debug("couldn't schedule hash - stopping replay poll");
+    }
   }
-}
 
   /**
    * True if the poll is active

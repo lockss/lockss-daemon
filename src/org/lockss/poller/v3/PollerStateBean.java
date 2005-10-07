@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: PollerStateBean.java,v 1.5 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -30,8 +30,10 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
+import java.util.*;
+
 import org.lockss.plugin.*;
-import org.lockss.poller.PollSpec;
+import org.lockss.poller.*;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
 
@@ -39,7 +41,8 @@ import org.lockss.util.*;
  * Persistant state object for the V3Poller.
  */
 public class PollerStateBean implements LockssSerializable {
-
+  
+  private LcapMessage pollMessage;
   private String pollKey;
   private long deadline;
   private String auId;
@@ -48,8 +51,14 @@ public class PollerStateBean implements LockssSerializable {
   private String url;
   private PeerIdentity pollerId;
   private String hashAlgorithm;
+  private long createTime;
+  private int quorum;
+  private int currentDigestIndex;
+  private int maxNomineeCount;
+  private HashSet outerCircleVoters;
 
   /* Non-serializable transient fields */
+  private transient PollSpec spec;
   private transient CachedUrlSet cus;
   private transient V3PollerSerializer serializer; 
 
@@ -60,7 +69,12 @@ public class PollerStateBean implements LockssSerializable {
    * block to hash. When the poller checks to see if it can start hashing the
    * next block, it will consult this counter and only proceed if it is '0'.
    */
-  private int hashReadyCounter;
+  private volatile int hashReadyCounter;
+  
+  /**
+   * Counter of participants who have not yet nominated any peers.
+   */
+  private volatile int nomineeCounter;
 
   /**
    * The target URL of the most recently hashed block. Updated after each block
@@ -78,22 +92,42 @@ public class PollerStateBean implements LockssSerializable {
   }
   
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
-                         long duration, int pollSize, String hashAlg,
-                         V3PollerSerializer serializer) {
+                         long duration, int pollSize, int maxNomineeCount,
+                         int quorum, String hashAlg, V3PollerSerializer serializer) {
     this.pollerId = orig;
     this.pollKey = pollKey;
     this.deadline = Deadline.in(duration).getExpirationTime();
     this.hashReadyCounter = pollSize;
+    log.debug3("hashReadyCounter: " + hashReadyCounter);
+    this.nomineeCounter = pollSize;
+    this.maxNomineeCount = maxNomineeCount;
     this.auId = spec.getAuId();
     this.pollVersion = spec.getPollVersion();
     this.pluginVersion = spec.getPluginVersion();
     this.url = spec.getUrl();
     this.cus = spec.getCachedUrlSet();
+    this.spec = spec;
     this.hashAlgorithm = hashAlg;
     this.serializer = serializer;
+    this.createTime = TimeBase.nowMs();
+    this.quorum = quorum;
+    this.currentDigestIndex = 0;
+    this.outerCircleVoters = new HashSet();
     saveState();
   }
 
+  public void setPollMessage(LcapMessage msg) {
+    this.pollMessage = msg;
+  }
+  
+  public LcapMessage getPollMessage() {
+    return pollMessage;
+  }
+  
+  public long getCreateTime() {
+    return createTime;
+  }
+  
   public void setPollKey(String id) {
     this.pollKey = id;
     saveState();
@@ -165,6 +199,15 @@ public class PollerStateBean implements LockssSerializable {
   public CachedUrlSet getCachedUrlSet() {
     return cus;
   }
+   
+  public void setPollSpec(PollSpec spec) {
+    this.spec = spec;
+    // Transient - no need to save state.
+  }
+  
+  public PollSpec getPollSpec() {
+    return spec;
+  }
 
   public void setHashAlgorithm(String hashAlgorithm) {
     this.hashAlgorithm = hashAlgorithm;
@@ -188,17 +231,88 @@ public class PollerStateBean implements LockssSerializable {
   public long getDeadline() {
     return deadline;
   }
+  
+  public int getQuorum() {
+    return quorum;
+  }
+  
+  public void setQuorum(int quorum) {
+    this.quorum = quorum;
+  }
+  
+  public int getMaxNomineeCount() {
+    return maxNomineeCount;
+  }
 
-  public void readyToHash(boolean flag) {
-    if (flag)
-      hashReadyCounter--;
-    else
-      hashReadyCounter++;
+  public void setMaxNomineeCount(int maxNomineeCount) {
+    this.maxNomineeCount = maxNomineeCount;
+  }
+
+  public int getNextVoteBlockIndex() {
+    int idx = currentDigestIndex++;
+    saveState();
+    return idx;
+  }
+  
+  public synchronized void addOuterCircle(PeerIdentity id) {
+    if (outerCircleVoters.add(id)) {
+      signalVoterAdded(id);
+    }
+  }
+  
+  public synchronized void removeOuterCircle(PeerIdentity id) {
+    if (outerCircleVoters.remove(id)) {
+      signalVoterRemoved(id);
+    }
+  }
+  
+  public void signalVoterNominated(PeerIdentity id) {
+    nomineeCounter--;
+    log.debug3("signalVoterNominated: nomineeCounter=" + nomineeCounter);
+    saveState();
+  }
+  
+  public boolean allVotersNominated() {
+    return nomineeCounter == 0;
+  }
+  
+  public void signalVoterRemoved(PeerIdentity id) {
+    log.debug("signalVoterRemoved being called.", new Throwable("stacktrace"));
+    if (!isInOuterCircle(id)) {
+      nomineeCounter--; // No longer expect any nominees from this peer.
+    }
+    hashReadyCounter--; // No longer expect this peer to take part in hashing.
+    log.debug3("signalVoterRemoved: hashReadyCounter=" + hashReadyCounter);
+    saveState();
+  }
+  
+  public void signalVoterAdded(PeerIdentity id) {
+    hashReadyCounter++;
+    log.debug3("signalVoterAdded: hashReadyCounter=" + hashReadyCounter);
+  }
+  
+  public void signalVoterReadyToTally(PeerIdentity id) {
+    hashReadyCounter--;
+    log.debug3("signalVoterReadyToTally: hashReadyCounter=" + hashReadyCounter);
+    saveState();
+  }
+  
+  public void signalVoterNotReadyToTally(PeerIdentity id) {
+    hashReadyCounter++;
+    log.debug3("signalVoterNotReadyToTally: hashReadyCounter=" + hashReadyCounter);
     saveState();
   }
 
-  public boolean readyToHash() {
+  public boolean allVotersReadyToTally() {
     return hashReadyCounter == 0;
+  }
+  
+  public synchronized boolean isInOuterCircle(PeerIdentity id) {
+    return outerCircleVoters.contains(id);
+  }
+  
+  public synchronized Iterator getOuterCircleIterator() {
+    return outerCircleVoters.iterator();
   }
 
   public String toString() {

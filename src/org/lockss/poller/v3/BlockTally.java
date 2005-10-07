@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.2 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: BlockTally.java,v 1.3 2005-10-07 23:46:50 smorabito Exp $
  */
 
 /*
@@ -32,131 +32,160 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.poller.v3;
 
-import org.lockss.protocol.*;
-import org.lockss.config.*;
-
 import java.util.*;
+
+import org.lockss.poller.*;
+import org.lockss.protocol.*;
+import org.lockss.util.*;
 
 /**
  * Representation of the tally for an individual vote block.
  */
-public class BlockTally {
+public class BlockTally extends PollTally {
+  public static final int RESULT_NEED_MORE_BLOCKS = 10;
 
-  // XXX: These may want to becom different than the V1 config
-  // parameters.  Otherwise, just put those somewhere common and use them.
-  static final String PARAM_VOTE_MARGIN = Configuration.PREFIX +
-    "poll.voteMargin";
-  static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
-    "poll.trustedWeight";
-  static final String PARAM_QUORUM = Configuration.PREFIX +
-    "poll.quorum";
-  static final int DEFAULT_VOTE_MARGIN = 75;
-  static final int DEFAULT_TRUSTED_WEIGHT = 350;
-  static final int DEFAULT_QUORUM = 5;
+  private List agreeVoters;
+  private List disagreeVoters;
+  private List needBlocksFrom;
+  
+  private V3Poller poll;
+  
+  public BlockTally(V3Poller owner, long startTime, long duration,
+                    int wtAgree, int wtDisagree, int quorum, 
+                    String hashAlgorithm) {
+    super(Poll.V3_POLL, startTime, duration, 0, 0, wtAgree, wtDisagree,
+          quorum, hashAlgorithm);
+    this.poll = owner;
+    this.pollSpec = owner.getPollSpec();
+    this.needBlocksFrom = new ArrayList();
+  }
 
-  // List of agreeing voter PeerIdentities.
-  List m_disagreeVotes;
-  // List of disagreeing voter PeerIdentities.
-  List m_agreeVotes;
-  // Number of participants required for quorum
-  int m_quorum;
+  // XXX: Refactor Tally into Status and Tally objects.
+  public int getErr() {
+    return 0;
+  }
 
-  public static final int RESULT_POLLING = 0;
-  public static final int RESULT_ERROR = 1;
-  public static final int RESULT_NOQUORUM = 2;
-  public static final int RESULT_TOO_CLOSE = 3;
-  public static final int RESULT_UNTRUSTED = 4;
-  public static final int RESULT_WON = 5;
-  public static final int RESULT_LOST = 6;
+  // XXX: Refactor Tally into Status and Tally objects.
+  public String getErrString() {
+    return "N/A";
+  }
 
-  private int m_result;
+  public String getStatusString() {
+    // TODO Refactor
+    switch (result) {
+    case RESULT_ERROR:
+      return getErrString();
+    case RESULT_NOQUORUM:
+      return "No Quorum";
+    case RESULT_UNTRUSTED:
+      return "Untrusted Peers";
+    case RESULT_TOO_CLOSE:
+      return "Too Close";
+    case RESULT_WON:
+      if(replayDeadline != null) {
+        return "Repaired";
+      }
+      return "Won";
+    case RESULT_LOST:
+      return "Lost";
+    case RESULT_UNVERIFIED:
+      return "Unverified";
+    case RESULT_VERIFIED:
+      return "Verified";
+    case RESULT_DISOWNED:
+      return "Disowned";
+    case RESULT_NEED_MORE_BLOCKS:
+      return "Need More Blocks";
+    default:
+      return "Active";
+    }
+  }
 
-  private static final String[] m_resultStrings =
-  { "Polling", "Error", "No Quorum", "Too Close",
-    "Untrusted", "Won", "Lost" };
+  public BasePoll getPoll() {
+    return poll;
+  }
 
-  // The margin by which we must win or lose
-  double m_voteMargin = 0;
-  // The min avg. weight of the winners, when we lose.
-  double m_trustedWeight = 0;
+  public void addNeedBlocksFromPeer(PeerIdentity id) {
+    this.needBlocksFrom.add(id);
+  }
 
-  BlockTally() {
-    this.m_disagreeVotes = new ArrayList();
-    this.m_agreeVotes = new ArrayList();
-    this.m_quorum = Configuration.getIntParam(PARAM_QUORUM, DEFAULT_QUORUM);
-    this.m_voteMargin = 
-      ((double)Configuration.getIntParam(PARAM_VOTE_MARGIN,
-					 DEFAULT_VOTE_MARGIN)) / 100;
-    this.m_trustedWeight = 
-      (double)Configuration.getIntParam(PARAM_TRUSTED_WEIGHT,
-					DEFAULT_TRUSTED_WEIGHT);
-    this.m_result = RESULT_POLLING;
+  // XXX: Margins!
+  public void tallyVotes() {
+    int agree = agreeVoters.size();
+    int disagree = disagreeVoters.size();
+    
+    if (needBlocksFrom.size() > 0) {
+      result = RESULT_NEED_MORE_BLOCKS;
+      return;
+    }
+    
+    if (agree + disagree < quorum) {
+      result = RESULT_NOQUORUM;
+    }
+    else if (agree > disagree) {
+      result = RESULT_WON;
+    }
+    else if (agree < disagree) {
+      result = RESULT_LOST;
+    }
+  }
+
+  public boolean stateIsActive() {
+    return (result == RESULT_POLLING);
+  }
+
+  public boolean stateIsFinished() {
+    return (result != RESULT_POLLING);
+  }
+
+  public boolean stateIsSuspended() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  public void setStateSuspended() {
+    // TODO Auto-generated method stub
+  }
+
+  public void replayVoteCheck(Vote vote, Deadline deadline) {
+    // TODO Auto-generated method stub
+  }
+
+  public void adjustReputation(PeerIdentity voterID, int repDelta) {
+    // TODO Auto-generated method stub
+  }
+
+  public int getTallyResult() {
+    return result;
   }
   
-  public void addAgreeVote(PeerIdentity id) {
-    m_agreeVotes.add(id);
+  // V3 Specific Methods.
+  
+  public void reset() {
+    result = RESULT_POLLING;
+    disagreeVoters = null;
+    agreeVoters = null;
+    needBlocksFrom.clear();
   }
-
-  public void addDisagreeVote(PeerIdentity id) {
-    m_disagreeVotes.add(id);
+  
+  public List getNeedBlocksFrom() {
+    return needBlocksFrom;
   }
-
-  public int getResult() {
-    return m_result;
+  
+  public void setDisagreeVoters(List disagreeVoters) {
+    this.disagreeVoters = disagreeVoters;
   }
-
-  public String getResultString() {
-    return m_resultStrings[m_result];
+  
+  public List getDisagreeVoters() {
+    return disagreeVoters;
   }
-
-  void tallyVotes() {
-    if (!haveQuorum()) {
-      m_result = RESULT_NOQUORUM;
-    }
-    else if (!isWithinMargin()) {
-      m_result = RESULT_TOO_CLOSE;
-    }
-    else {
-      boolean won = m_agreeVotes.size() > m_disagreeVotes.size();
-      if (!won && !isTrustedResult()) {
-	m_result = RESULT_UNTRUSTED;
-      } else {
-	m_result = won ? RESULT_WON : RESULT_LOST;
-      }
-    }
-  } 
-
-  boolean haveQuorum() {
-    return m_agreeVotes.size() + m_disagreeVotes.size() >= m_quorum;
+  
+  public void setAgreeVoters(List agreeVoters) {
+    this.agreeVoters = agreeVoters;
   }
-
-  boolean isWithinMargin() {
-    double numVotes = m_agreeVotes.size() + m_disagreeVotes.size();
-    if (numVotes == 0) {
-      return true;
-    }
-    double agreeVotes = (double)m_agreeVotes.size();
-    double disagreeVotes = (double)m_disagreeVotes.size();
-    double margin;
-    if (agreeVotes > disagreeVotes) {
-      margin = agreeVotes / numVotes;
-    } else {
-      margin = disagreeVotes / numVotes;
-    }
-    return margin > m_voteMargin;
-  } 
-
-  // XXX: Reputation system TBD
-  boolean isTrustedResult() {
-    return true;
+  
+  public List getAgreeVoters() {
+    return agreeVoters;
   }
-
-  public List getDisagreeVotes() {
-    return m_disagreeVotes;
-  }
-
-  public List getAgreeVotes() {
-    return m_agreeVotes;
-  }
-
+  
 }
