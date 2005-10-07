@@ -1,5 +1,5 @@
 /*
- * $Id: Alert.java,v 1.6 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: Alert.java,v 1.7 2005-10-07 23:41:46 tlipkis Exp $
  */
 
 /*
@@ -87,6 +87,10 @@ public class Alert {
     cAlert("NoCrawlPermission").
     setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
 
+  public static final Alert CRAWL_FAILED =
+    cAlert("CrawlFailed").
+    setAttribute(ATTR_SEVERITY, SEVERITY_WARNING);
+
   public static final Alert NEW_CONTENT =
     cAlert("NewContent").
     setAttribute(ATTR_SEVERITY, SEVERITY_INFO);
@@ -147,6 +151,11 @@ public class Alert {
 
   public static final Alert INTERNAL_ERROR =
     new Alert("InternalError").
+    setAttribute(ATTR_SEVERITY, SEVERITY_ERROR).
+    setAttribute(ATTR_IS_TIME_CRITICAL, true);
+
+  public static final Alert CONFIGURATION_ERROR =
+    new Alert("ConfigurationError").
     setAttribute(ATTR_SEVERITY, SEVERITY_ERROR).
     setAttribute(ATTR_IS_TIME_CRITICAL, true);
 
