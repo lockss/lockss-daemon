@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.3 2005-09-22 22:14:45 thib_gc Exp $
+ * $Id: ServletDescr.java,v 1.4 2005-10-07 18:00:32 thib_gc Exp $
  */
 
 /*
@@ -58,6 +58,11 @@ public class ServletDescr {
   public static final int NAME_IS_URL = 0x20; // debug user only
   public static final int STATUS = ON_CLIENT | PER_CLIENT; // shorthand
 
+  public static final int IN_NAV = 0x1000;
+  public static final int IN_UIHOME = 0x2000;
+  public static final int IN_ACCESSCONTROL = 0x4000;
+  
+  
   public ServletDescr(Class cls,
                       String heading,
                       String name,
@@ -176,6 +181,26 @@ public class ServletDescr {
   
   boolean isNameIsUrl() {
     return (flags & NAME_IS_URL) != 0;
+  }
+  
+  public boolean isInNav() {
+    return isFlagSet(IN_NAV);
+  }
+  
+  public boolean isInUiHome() {
+    return isFlagSet(IN_UIHOME);
+  }
+  
+  public boolean isInAccessControl() {
+    return isFlagSet(IN_ACCESSCONTROL);
+  }
+
+  private boolean isFlagSet(int flag) {
+    return (flags & flag) != 0;
+  }
+  
+  private boolean isFlagClear(int flag) {
+    return (flags & flag) == 0;
   }
   
 }

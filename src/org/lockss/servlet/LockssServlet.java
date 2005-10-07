@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.68 2005-10-05 23:12:40 troberts Exp $
+ * $Id: LockssServlet.java,v 1.69 2005-10-07 18:00:32 thib_gc Exp $
  */
 
 /*
@@ -41,6 +41,9 @@ import java.text.*;
 
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
+import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.iterators.FilterIterator;
+import org.apache.commons.collections.iterators.ObjectArrayIterator;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
@@ -113,19 +116,22 @@ public abstract class LockssServlet extends HttpServlet
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr(BatchAuConfig.class,
                      "Journal Configuration",
+                     ServletDescr.IN_UIHOME,
                      "Add or remove titles from this cache");
   protected static final ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr(AuConfig.class,
                      "Manual Journal Configuration",
-		     ServletDescr.NOT_IN_NAV,
+		     ServletDescr.NOT_IN_NAV | ServletDescr.IN_UIHOME,
                      "Manually edit single AU configuration");
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr(AdminIpAccess.class,
                      "Admin Access Control",
+                     ServletDescr.IN_UIHOME | ServletDescr.IN_ACCESSCONTROL,
                      "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class,
                      "Proxy Access Control",
+                     ServletDescr.IN_UIHOME,
                      "Control access to the preserved content");
   protected static final ServletDescr SERVLET_ACCESS_CONTROL =
     new ServletDescr(AccessControl.class,
@@ -138,13 +144,14 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(ProxyConfig.class,
                      "Proxy Info",
                      "info/ProxyInfo",
-                     0,
+                     ServletDescr.IN_UIHOME,
                      "Info for configuring browsers and proxies"
                      + "<br>"
                      + "to access preserved content on this cache");
   protected static final ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class,
                      "Daemon Status",
+                     ServletDescr.IN_UIHOME,
                      "Status of cache contents and operation");
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
     new ServletDescr(ViewContent.class,
@@ -179,7 +186,7 @@ public abstract class LockssServlet extends HttpServlet
   protected static final ServletDescr LINK_HELP =
     new ServletDescr(null,
                      "Help", LocalServletManager.DEFAULT_HELP_URL,
-                     ServletDescr.NAME_IS_URL,
+                     ServletDescr.NAME_IS_URL | ServletDescr.IN_UIHOME,
                      "Online help, FAQs, credits");
 
   static void setHelpUrl(String url) {
@@ -677,13 +684,21 @@ public abstract class LockssServlet extends HttpServlet
     // Create page and layout header
     Page page = ServletUtil.newPage(getPageTitle(),
                                     isFramed());
+    FilterIterator inNavIterator = new FilterIterator(
+        new ObjectArrayIterator(servletDescrs),
+        new Predicate() {
+          public boolean evaluate(Object obj) {
+            return ((ServletDescr)obj).isInNav();
+          }
+        });
     ServletUtil.layoutHeader(this,
                              page,
                              heading,
                              isLargeLogo(),
                              getMachineName(),
                              getMachineName(clientAddr),
-                             getLockssApp().getStartDate(), new ArrayIterator(servletDescrs));
+                             getLockssApp().getStartDate(),
+                             inNavIterator);
     return page;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.7 2005-10-03 17:52:34 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.8 2005-10-07 18:00:32 thib_gc Exp $
  */
 
 /*
@@ -143,7 +143,8 @@ public class ServletUtil {
                                   boolean isLargeLogo,
                                   String machineName,
                                   String machineNameClientAddr,
-                                  Date startDate, Iterator servletDescrIterator) {
+                                  Date startDate,
+                                  Iterator descrIterator) {
     Composite comp = new Composite();
     Table table = new Table(HEADER_BORDER, HEADER_ATTRIBUTES);
     Image logo = isLargeLogo ? IMAGE_LOGO_LARGE : IMAGE_LOGO_SMALL;
@@ -165,7 +166,7 @@ public class ServletUtil {
     table.add(machineName + " at " + headerDf.format(new Date()) + ", up " + since);
 
     table.newCell("valign=\"center\" align=\"center\" width=\"20%\"");
-    layoutNavTable(servlet, table, servletDescrIterator, machineNameClientAddr);
+    layoutNavTable(servlet, table, descrIterator, machineNameClientAddr);
     comp.add(table);
     comp.add("<br>");
     page.add(comp);
@@ -173,19 +174,17 @@ public class ServletUtil {
   
   public static void layoutMenu(LockssServlet servlet,
                                 Page page,
-                                ServletDescr[] sd) {
+                                Iterator descrIterator) {
     Table table = new Table(MENU_BORDER, MENU_ATTRIBUTES);
-    for (int ii = 0; ii < sd.length; ii++) {
-      if (sd[ii] != null) {
-        ServletDescr desc = sd[ii];
-        table.newRow(MENU_ROW_ATTRIBUTES);
-        table.newCell();
-        table.add(MENU_ITEM_BEFORE);
-        table.add(servlet.srvLink(desc, desc.heading));
-        table.add(MENU_ITEM_AFTER);
-        table.newCell();
-        table.add(desc.getExplanation());
-      }
+    while (descrIterator.hasNext()) {
+      ServletDescr descr = (ServletDescr)descrIterator.next();
+      table.newRow(MENU_ROW_ATTRIBUTES);
+      table.newCell();
+      table.add(MENU_ITEM_BEFORE);
+      table.add(servlet.srvLink(descr, descr.heading));
+      table.add(MENU_ITEM_AFTER);
+      table.newCell();
+      table.add(descr.getExplanation());
     }
     page.add(table);
   }
@@ -235,40 +234,38 @@ public class ServletUtil {
   // Build servlet navigation table
   private static void layoutNavTable(LockssServlet servlet,
                                      Table outerTable,
-                                     Iterator servletDescrIterator,
+                                     Iterator descrIterator,
                                      String machineNameClientAddr) {
     final String NAVTABLE_CELL_WIDTH = "width=\"15\"";
     
     Table navTable = new Table(NAVTABLE_BORDER, NAVTABLE_ATTRIBUTES);
     boolean clientTitle = false;
 
-    while (servletDescrIterator.hasNext()) {
-      ServletDescr d = (ServletDescr)servletDescrIterator.next();
-      if (servlet.isServletInNav(d)) {
-        navTable.newRow();
-        if (d.isPerClient()) {
-          if (!clientTitle) {
-            // Insert client name before first per-client servlet
-            navTable.newCell(NAVTABLE_CELL_WIDTH);
-            navTable.newCell("colspan=\"2\"");
-            navTable.add("<b>" + machineNameClientAddr + "</b>");
-            navTable.newRow();
-            clientTitle = true;
-          }
+    while (descrIterator.hasNext()) {
+      ServletDescr d = (ServletDescr)descrIterator.next();
+      navTable.newRow();
+      if (d.isPerClient()) {
+        if (!clientTitle) {
+          // Insert client name before first per-client servlet
           navTable.newCell(NAVTABLE_CELL_WIDTH);
-          navTable.newCell(NAVTABLE_CELL_WIDTH);
-          navTable.newCell();
-        } else {
-          navTable.newCell("colspan=\"3\"");
+          navTable.newCell("colspan=\"2\"");
+          navTable.add("<b>" + machineNameClientAddr + "</b>");
+          navTable.newRow();
+          clientTitle = true;
         }
-        if (false /*isThisServlet(d)*/) {
-          navTable.add("<font size=\"-1\" color=\"green\">");
-        } else {
-          navTable.add("<font size=\"-1\">");
-        }
-        navTable.add(servlet.conditionalSrvLink(d, d.heading, servlet.isServletLinkInNav(d)));
-        navTable.add("</font>");
+        navTable.newCell(NAVTABLE_CELL_WIDTH);
+        navTable.newCell(NAVTABLE_CELL_WIDTH);
+        navTable.newCell();
+      } else {
+        navTable.newCell("colspan=\"3\"");
       }
+      if (false /*isThisServlet(d)*/) {
+        navTable.add("<font size=\"-1\" color=\"green\">");
+      } else {
+        navTable.add("<font size=\"-1\">");
+      }
+      navTable.add(servlet.conditionalSrvLink(d, d.heading, servlet.isServletLinkInNav(d)));
+      navTable.add("</font>");
     }
     navTable.add("</font>");
     outerTable.add(navTable);

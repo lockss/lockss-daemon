@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.10 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: UiHome.java,v 1.11 2005-10-07 18:00:32 thib_gc Exp $
  */
 
 /*
@@ -34,6 +34,11 @@ package org.lockss.servlet;
 
 import javax.servlet.*;
 import java.io.*;
+import java.util.Iterator;
+
+import org.apache.commons.collections.Predicate;
+import org.apache.commons.collections.iterators.FilterIterator;
+import org.apache.commons.collections.iterators.ObjectArrayIterator;
 import org.mortbay.html.*;
 
 /** UiHome servlet
@@ -49,7 +54,9 @@ public class UiHome extends LockssServlet {
     Page page = newPage();
     resp.setContentType("text/html");
     page.add(getHomeHeader());
-    ServletUtil.layoutMenu(this, page, getDescriptors());
+    ServletUtil.layoutMenu(this,
+                           page,
+                           getDescriptors());
     layoutFooter(page);
     page.write(resp.getWriter());
   }
@@ -67,22 +74,14 @@ public class UiHome extends LockssServlet {
     return tab;
   }
 
-  private static ServletDescr[] homeMenu;
-  
-  protected static ServletDescr[] getDescriptors() {
-    if (homeMenu == null) {
-      homeMenu = new ServletDescr[] {
-          SERVLET_BATCH_AU_CONFIG,
-          SERVLET_AU_CONFIG,
-          SERVLET_ADMIN_ACCESS_CONTROL,
-          SERVLET_PROXY_ACCESS_CONTROL,
-          SERVLET_DAEMON_STATUS,
-          SERVLET_PROXY_INFO,
-          SERVLET_DAEMON_STATUS,
-          LINK_HELP,
-      };
-    }
-    return homeMenu;
+  protected static Iterator getDescriptors() {
+    return new FilterIterator(
+        new ObjectArrayIterator(servletDescrs),
+        new Predicate() {
+          public boolean evaluate(Object obj) {
+            return ((ServletDescr)obj).isInUiHome();
+          }
+        });
   }
   
 }
