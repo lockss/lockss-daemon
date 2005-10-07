@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.12 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: LcapDatagramComm.java,v 1.13 2005-10-07 23:43:06 tlipkis Exp $
  */
 
 /*
@@ -43,6 +43,7 @@ import org.lockss.daemon.*;
 import org.lockss.daemon.status.*;
 import org.apache.commons.collections.map.LRUMap;
 import org.lockss.app.*;
+import org.lockss.alert.*;
 import org.lockss.plugin.*;
 
 /**
@@ -208,6 +209,8 @@ public class LcapDatagramComm
 					  DEFAULT_MULTI_VERIFY);
     } catch (Configuration.InvalidParam e) {
       log.critical("Config error, not started: " + e);
+      noCommAlert("Bad config: " + e.getMessage());
+      return;
     }
     muzzleMulticastAfter =
       config.getTimeInterval(PARAM_MULTI_DISABLE_TIMEOUT,
@@ -218,17 +221,20 @@ public class LcapDatagramComm
       }
       if (group == null) {
 	log.critical("null group addr");
+	noCommAlert("Unknown group addr: " + groupName);
 	return;
       }
     } catch (UnknownHostException e) {
       log.critical("Can't get group addr, not started: " + e);
+      noCommAlert("Unknown group addr: " + groupName);
+      return;
     }
     try {
       if (uniSendToName != null) {
 	uniSendToAddr = IPAddr.getByName(uniSendToName);
       }
     } catch (UnknownHostException e) {
-      log.critical("Can't get unicast send-to addr, not started: " + e);
+      log.error("Unknown unicast send-to addr: " + e);
     }
     // make list of IPAddrs of local interfaces
     if (localInterfaces == null || changedKeys.contains(PARAM_LOCAL_IPS)) {
@@ -255,6 +261,16 @@ public class LcapDatagramComm
       log.debug("uniPort = " + uniPort);
       log.debug("uniSendToPort = " + uniSendToPort);
       log.debug("verifyMulticast = " + verifyMulticast);
+    }
+  }
+
+  void noCommAlert(String text) {
+    try {
+      AlertManager alertMgr = theDaemon.getAlertManager();
+      alertMgr.raiseAlert(Alert.cacheAlert(Alert.CONFIGURATION_ERROR),
+			  "V1 LCAP comm not started.  " + text);
+    } catch (Exception e) {
+      // ignored, expected during testing
     }
   }
 
@@ -428,6 +444,7 @@ public class LcapDatagramComm
 	log.info("Unicast socket started: " + lsu);
       } catch (IOException e) {
 	log.error("Can't create unicast socket", e);
+	noCommAlert("Can't create unicast socket: " + e.getMessage());
       }
     } else {
       log.error("Unicast port not configured, not starting unicast receive");
