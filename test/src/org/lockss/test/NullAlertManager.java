@@ -1,5 +1,5 @@
 /*
- * $Id: NullAlertManager.java,v 1.4 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: NullAlertManager.java,v 1.5 2005-10-07 23:42:27 tlipkis Exp $
  */
 
 /*
@@ -50,6 +50,9 @@ public class NullAlertManager extends BaseLockssDaemonManager
 
   protected void setConfig(Configuration config, Configuration oldConfig,
 			   Configuration.Differences changedKeys) {
+  }
+
+  public void raiseAlert(Alert alert, String text) {
   }
 
   public void raiseAlert(Alert alert) {

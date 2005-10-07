@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManager.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: AlertManager.java,v 1.4 2005-10-07 23:42:28 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -40,7 +40,18 @@ public interface AlertManager extends LockssManager {
 
   static final String PREFIX = Configuration.PREFIX + "alert.";
 
+  /**
+   * Raise an alert
+   * @param alert the alert to raise
+   */
   public void raiseAlert(Alert alert);
+
+  /**
+   * Convenience method to set the text of an alert and raise() it
+   * @param alert the alert to raise
+   * @param text text to be stored in text attribute of alert
+   */
+  public void raiseAlert(Alert alert, String text);
 
   public AlertConfig getConfig();
 

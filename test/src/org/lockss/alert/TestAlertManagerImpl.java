@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.10 2005-10-06 08:17:09 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.11 2005-10-07 23:42:27 tlipkis Exp $
  */
 
 /*
@@ -111,7 +111,9 @@ public class TestAlertManagerImpl extends LockssTestCase {
   public void testRaiseSingleAlerts() throws Exception {
     config(true);
     Alert a1 = new Alert("foo");
+    Alert a2 = new Alert("bar");
     a1.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
+    a2.setAttribute(Alert.ATTR_IS_TIME_CRITICAL, true);
     MyMockAlertAction action = new MyMockAlertAction();
     action.setGroupable(true);
     AlertConfig conf =
@@ -123,9 +125,10 @@ public class TestAlertManagerImpl extends LockssTestCase {
     List recs = action.getAlerts();
     assertEquals(ListUtil.list(a1), recs);
 
-    mgr.raiseAlert(a1);
+    mgr.raiseAlert(a2, "other text");
     recs = action.getAlerts();
-    assertEquals(ListUtil.list(a1, a1), recs);
+    assertEquals(ListUtil.list(a1, a2), recs);
+    assertEquals("other text", a2.getAttribute(Alert.ATTR_TEXT));
   }
 
   public void testRaiseIgnoredAlert() throws Exception {

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.14 2005-10-06 08:17:09 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.15 2005-10-07 23:42:28 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -219,7 +219,18 @@ public class AlertManagerImpl
   }
 
   /**
+   * <p>Convenience method to set the text of an alert and raise() it
+   * @param alert the alert to raise
+   * @param text text to be stored in text attribute of alert
+   */
+  public void raiseAlert(Alert alert, String text) {
+    alert.setAttribute(Alert.ATTR_TEXT, text);
+    raiseAlert(alert);
+  }
+
+  /**
    * <p>Raises an alert.</p>
+   * @param alert the alert to raise
    */
   public void raiseAlert(Alert alert) {
     if (!alertsEnabled || alertConfig == null) {
