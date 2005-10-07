@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.8 2005-10-07 18:00:32 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.9 2005-10-07 23:35:54 thib_gc Exp $
  */
 
 /*
@@ -34,9 +34,10 @@ package org.lockss.servlet;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Iterator;
+import java.util.*;
+import java.util.List;
 
+import org.lockss.jetty.MyTextArea;
 import org.lockss.util.Constants;
 import org.lockss.util.StringUtil;
 import org.lockss.util.TimeBase;
@@ -57,7 +58,34 @@ public class ServletUtil {
   /* private */static final Image IMAGE_TM =
     makeImage("tm.gif", 16, 16, 0);
 
-  static final String PAGE_BGCOLOR = "#FFFFFF";
+  static final String PAGE_BGCOLOR =
+    "#ffffff";
+
+  private static final int ALLOWDENY_BORDER = 1;
+
+  private static final String ALLOWDENY_CELL_ATTRIBUTES =
+    "align=\"center\"";
+
+  private static final int ALLOWDENY_COLUMNS = 30;
+
+  private static final String ALLOWDENY_ERROR_AFTER =
+    "</font></center><br>";
+
+  private static final String ALLOWDENY_ERROR_BEFORE =
+    "<center><font color=\"red\" size=\"+1\">";
+
+  private static final int ALLOWDENY_LINES = 15;
+
+  private static final String ALLOWDENY_ROW_ATTRIBUTES =
+    "bgcolor=\"#cccccc\"";
+
+  private static final String ALLOWDENY_TABLE_ATTRIBUTES =
+    "align=\"center\" cellpadding=\"0\"";
+
+  private static final String ALLOWDENYERRORS_AFTER =
+    "</font><br>";
+
+  private static final String ALLOWDENYERRORS_BEFORE = "<font color=\"red\">";
 
   private static final String FOOTER_ATTRIBUTES =
     "cellspacing=\"0\" cellpadding=\"0\" align=\"center\"";
@@ -77,12 +105,12 @@ public class ServletUtil {
 
   private static final Image IMAGE_LOCKSS_RED =
     makeImage("lockss-type-red.gif", 595, 31, 0);
-  
+
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
   
   private static final int MENU_BORDER = 0;
-
+  
   private static final String MENU_ITEM_AFTER =
     "</font>";
 
@@ -96,16 +124,68 @@ public class ServletUtil {
     "cellspacing=\"2\" cellpadding=\"0\"";
 
   private static final int NAVTABLE_BORDER = 0;
-  
+
   private static final String NOTES_BEGIN =
     "<p><b>Notes:</b>";
-
+  
   private static final String NOTES_LIST_AFTER =
     "</font></ol>";
 
   private static final String NOTES_LIST_BEFORE =
     "<ol><font size=\"-1\">";
 
+  private static final String PORT_ATTRIBUTES =
+    ALLOWDENY_CELL_ATTRIBUTES;
+
+  public static void layoutEnablePortRow(LockssServlet servlet,
+                                         Table table,
+                                         String enableFieldName,
+                                         boolean defaultEnable,
+                                         String enableDescription,
+                                         String enableFootnote,
+                                         String filterFootnote,
+                                         String portFieldName,
+                                         String defaultPort,
+                                         List usablePorts) {
+    // Start row
+    table.newRow();
+    
+    // Start line
+    table.newCell(PORT_ATTRIBUTES);
+
+    // "enable" element
+    Input enaElem = new Input(Input.Checkbox, enableFieldName, "1");
+    if (defaultEnable) {
+      enaElem.check();
+    }
+    servlet.setTabOrder(enaElem);
+    table.add(enaElem);
+    table.add("Enable " + enableDescription);
+    table.add(servlet.addFootnote(enableFootnote));
+    table.add(" on port&nbsp;");
+    
+    // "port" element
+    Input portElem = new Input(Input.Text, portFieldName, defaultPort);
+    portElem.setSize(6);
+    servlet.setTabOrder(portElem);
+    table.add(portElem);
+    
+    // List of usable ports
+    if (usablePorts != null) {
+      table.add("<br>");
+      if (usablePorts.isEmpty()) {
+        table.add("(No available ports)");
+        table.add(servlet.addFootnote(enableFootnote));
+      }
+      else {
+        table.add("Available ports");
+        table.add(servlet.addFootnote(filterFootnote));
+        table.add(": ");
+        table.add(StringUtil.separatedString(usablePorts, ", "));
+      }
+    }
+  }
+  
   // Common page footer
   public static void layoutFooter(Page page,
                                   Iterator notesIterator,
@@ -171,6 +251,86 @@ public class ServletUtil {
     comp.add("<br>");
     page.add(comp);
   }
+
+  public static void layoutIpAllowDeny(LockssServlet servlet,
+                                       Page page,
+                                       Vector allow,
+                                       Vector deny,
+                                       String ipFootnote,
+                                       String errMsg,
+                                       Vector allowErrs,
+                                       Vector denyErrs,
+                                       String allowName,
+                                       String denyName,
+                                       Composite additional) {
+    String allowStr = null;
+    String denyStr = null;
+
+    Composite comp = new Composite();
+    Form form = new Form(servlet.srvURL(servlet.myServletDescr()));
+    form.method("POST");
+
+    if (errMsg != null) {
+      Composite errcmp = new Composite();
+      errcmp.add(ALLOWDENY_ERROR_BEFORE);
+      errcmp.add(errMsg);
+      errcmp.add(ALLOWDENY_ERROR_AFTER);
+      form.add(errcmp);
+    }
+    
+    Table table = new Table(ALLOWDENY_BORDER, ALLOWDENY_TABLE_ATTRIBUTES);
+
+    table.newRow(ALLOWDENY_ROW_ATTRIBUTES);
+    table.newCell(ALLOWDENY_CELL_ATTRIBUTES);
+    table.add("<font size=\"+1\">Allow Access"
+              + servlet.addFootnote(ipFootnote)
+              + "&nbsp;</font>");
+
+    table.newCell(ALLOWDENY_CELL_ATTRIBUTES);
+    table.add("<font size=\"+1\">Deny Access"
+              + servlet.addFootnote(ipFootnote)
+              + "&nbsp;</font>");
+
+    if ((allowErrs != null && allowErrs.size() > 0) ||
+        (denyErrs != null && denyErrs.size() > 0)) {
+      table.newRow();
+      table.newCell();
+      layoutIpAllowDenyErrors(table, allowErrs);
+      table.newCell();
+      layoutIpAllowDenyErrors(table, denyErrs);
+    }
+
+    allowStr = StringUtil.terminatedSeparatedString(allow, "\n", "\n");
+    denyStr = StringUtil.terminatedSeparatedString(allow, "\n", "\n");
+
+    TextArea incArea = new MyTextArea(allowName);
+    incArea.setSize(ALLOWDENY_COLUMNS, ALLOWDENY_LINES);
+    incArea.add(allowStr);
+
+    TextArea excArea = new MyTextArea(denyName);
+    excArea.setSize(ALLOWDENY_COLUMNS, ALLOWDENY_LINES);
+    excArea.add(denyStr);
+
+    table.newRow();
+    table.newCell(ALLOWDENY_CELL_ATTRIBUTES);
+    servlet.setTabOrder(incArea);
+    table.add(incArea);
+    table.newCell(ALLOWDENY_CELL_ATTRIBUTES);
+    servlet.setTabOrder(excArea);
+    table.add(excArea);
+    form.add(table);
+
+    if (additional != null) {
+      form.add(additional);
+    }
+    
+    Input submit = new Input(Input.Submit, "action", "Update");
+    servlet.setTabOrder(submit);
+    
+    form.add("<br><center>" + submit + "</center>");
+    comp.add(form);
+    page.add(comp);
+  }
   
   public static void layoutMenu(LockssServlet servlet,
                                 Page page,
@@ -188,7 +348,7 @@ public class ServletUtil {
     }
     page.add(table);
   }
-
+  
   public static Image makeImage(String file,
                                 int width,
                                 int height,
@@ -229,6 +389,25 @@ public class ServletUtil {
     comp.add("<a name=\"foottag" + nth + "\">");
     comp.add(footnote);
     comp.add("</a>");
+  }
+  
+  private static void layoutIpAllowDenyErrors(Table table,
+                                              Vector errs) {
+    int size;
+    if (errs != null && (size = errs.size()) > 0) {
+      table.add(ALLOWDENYERRORS_BEFORE);
+      table.add(Integer.toString(size));
+      table.add(size == 1 ? " entry has" : " entries have");
+      table.add(" errors:");
+      table.add(ALLOWDENYERRORS_AFTER);
+      for (Iterator iter = errs.iterator() ; iter.hasNext() ; ) {
+        table.add((String)iter.next());
+        table.add("<br>");
+      }
+    }
+    else {
+      table.add("&nbsp");
+    }
   }
   
   // Build servlet navigation table

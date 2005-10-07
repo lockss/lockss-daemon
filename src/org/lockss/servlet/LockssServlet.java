@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.69 2005-10-07 18:00:32 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.70 2005-10-07 23:35:54 thib_gc Exp $
  */
 
 /*
@@ -36,8 +36,8 @@ import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
+import java.util.List;
 import java.net.*;
-import java.text.*;
 
 import org.mortbay.html.*;
 import org.mortbay.servlet.MultiPartRequest;
@@ -116,7 +116,7 @@ public abstract class LockssServlet extends HttpServlet
   protected static final ServletDescr SERVLET_BATCH_AU_CONFIG =
     new ServletDescr(BatchAuConfig.class,
                      "Journal Configuration",
-                     ServletDescr.IN_UIHOME,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Add or remove titles from this cache");
   protected static final ServletDescr SERVLET_AU_CONFIG =
     new ServletDescr(AuConfig.class,
@@ -126,12 +126,12 @@ public abstract class LockssServlet extends HttpServlet
   protected static final ServletDescr SERVLET_ADMIN_ACCESS_CONTROL =
     new ServletDescr(AdminIpAccess.class,
                      "Admin Access Control",
-                     ServletDescr.IN_UIHOME | ServletDescr.IN_ACCESSCONTROL,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME | ServletDescr.IN_ACCESSCONTROL,
                      "Control access to the administrative UI");
   protected static final ServletDescr SERVLET_PROXY_ACCESS_CONTROL =
     new ServletDescr(ProxyIpAccess.class,
                      "Proxy Access Control",
-                     ServletDescr.IN_UIHOME,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Control access to the preserved content");
   protected static final ServletDescr SERVLET_ACCESS_CONTROL =
     new ServletDescr(AccessControl.class,
@@ -144,32 +144,32 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(ProxyConfig.class,
                      "Proxy Info",
                      "info/ProxyInfo",
-                     ServletDescr.IN_UIHOME,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Info for configuring browsers and proxies"
                      + "<br>"
                      + "to access preserved content on this cache");
   protected static final ServletDescr SERVLET_DAEMON_STATUS =
     new ServletDescr(DaemonStatus.class,
                      "Daemon Status",
-                     ServletDescr.IN_UIHOME,
+                     ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Status of cache contents and operation");
   public static final ServletDescr SERVLET_DISPLAY_CONTENT =
     new ServletDescr(ViewContent.class,
                      "View Content",
-		     ServletDescr.DEBUG_ONLY | ServletDescr.NOT_IN_NAV);
+                     ServletDescr.DEBUG_ONLY | ServletDescr.NOT_IN_NAV);
   protected static final ServletDescr SERVLET_HASH_CUS =
     new ServletDescr(HashCUS.class,
                      "Hash CUS",
-                     ServletDescr.DEBUG_ONLY);
+                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
   protected static final ServletDescr LINK_LOGS =
     new ServletDescr(null,
                      "Logs",
                      "log",
-                     ServletDescr.DEBUG_ONLY);
+                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
   protected static final ServletDescr SERVLET_THREAD_DUMP =
     new ServletDescr("org.lockss.servlet.ThreadDump",
                      "Thread Dump",
-		     ServletDescr.DEBUG_ONLY);
+                     ServletDescr.IN_NAV | ServletDescr.DEBUG_ONLY);
   protected static final ServletDescr SERVLET_RAISE_ALERT =
     new ServletDescr(RaiseAlert.class,
                      "Raise Alert",
@@ -182,11 +182,11 @@ public abstract class LockssServlet extends HttpServlet
     new ServletDescr(null,
                      "Contact Us",
 		     mailtoUrl(LocalServletManager.DEFAULT_CONTACT_ADDR),
-		     ServletDescr.NAME_IS_URL);
+                     ServletDescr.IN_NAV | ServletDescr.NAME_IS_URL);
   protected static final ServletDescr LINK_HELP =
     new ServletDescr(null,
                      "Help", LocalServletManager.DEFAULT_HELP_URL,
-                     ServletDescr.NAME_IS_URL | ServletDescr.IN_UIHOME,
+                     ServletDescr.NAME_IS_URL | ServletDescr.IN_NAV | ServletDescr.IN_UIHOME,
                      "Online help, FAQs, credits");
 
   static void setHelpUrl(String url) {
@@ -613,48 +613,7 @@ public abstract class LockssServlet extends HttpServlet
   protected boolean isServletInNav(ServletDescr d) {
     if (!isDebugUser() && d.isDebugOnly()) return false;
     if (d.cls == ServletDescr.UNAVAILABLE_SERVLET_MARKER) return false;
-    return d.isInNavTable() && (!d.isPerClient() || isPerClient());
-  }
-
-  // Build servlet navigation table
-  protected Table getNavTable() {
-    Table navTable = new Table(0, " CELLSPACING=2 CELLPADDING=0 ");
-    boolean clientTitle = false;
-
-    for (int i = 0; i < servletDescrs.length; i++) {
-      ServletDescr d = servletDescrs[i];
-      if (isServletInNav(d)) {
-	navTable.newRow();
-	navTable.newCell();
-	if (d.isPerClient()) {
-	  if (!clientTitle) {
-	    // Insert client name before first per-client servlet
-	    navTable.cell().attribute("WIDTH=\"15\"");
-	    navTable.newCell();
-	    navTable.cell().attribute("COLSPAN=\"2\"");
-	    navTable.add("<b>" + getMachineName(clientAddr) + "</b>");
-	    navTable.newRow();
-	    navTable.newCell();
-	    clientTitle = true;
-	  }
-	  navTable.cell().attribute("WIDTH=\"15\"");
-	  navTable.newCell();
-	  navTable.cell().attribute("WIDTH=\"15\"");
-	  navTable.newCell();
-	} else {
-	  navTable.cell().attribute("COLSPAN=\"3\"");
-	}
-	if (false /*isThisServlet(d)*/) {
-	  navTable.add("<font size=-1 color=green>");
-	} else {
-	  navTable.add("<font size=-1>");
-	}
-	navTable.add(conditionalSrvLink(d, d.heading, isServletLinkInNav(d)));
-	navTable.add("</font>");
-      }
-    }
-    navTable.add("</font>");
-    return navTable;
+    return d.isInNav() && (!d.isPerClient() || isPerClient());
   }
 
   protected Table getExplanationBlock(Object text) {
@@ -688,7 +647,7 @@ public abstract class LockssServlet extends HttpServlet
         new ObjectArrayIterator(servletDescrs),
         new Predicate() {
           public boolean evaluate(Object obj) {
-            return ((ServletDescr)obj).isInNav();
+            return isServletInNav((ServletDescr)obj);
           }
         });
     ServletUtil.layoutHeader(this,
@@ -957,13 +916,42 @@ public abstract class LockssServlet extends HttpServlet
     return val;
   }
 
+  protected void layoutEnablePortRow(Table table,
+      String enableFieldName, boolean defaultEnable,
+      String enableDescription, String enableFootnote,
+      String filterFootnote, String portFieldName, String defaultPort,
+      List usablePorts) {
+    ServletUtil.layoutEnablePortRow(this,
+                                    table,
+                                    enableFieldName,
+                                    defaultEnable,
+                                    enableDescription,
+                                    enableFootnote,
+                                    filterFootnote,
+                                    portFieldName,
+                                    defaultPort,
+                                    usablePorts);
+  }
+  
   protected void layoutFooter(Page page) {
-    ServletUtil.layoutFooter(page,
+    ServletUtil.layoutFooter(page, 
                              (footnotes == null ? null : footnotes.iterator()),
                              getLockssApp().getVersionInfo());
     if (footnotes != null) {
       footnotes.removeAllElements();
     }
+  }
+  
+  protected void layoutIpAllowDeny(Page page, Vector allow,
+      Vector deny, String ipFootnote, String errMsg, Vector allowErrs,
+      Vector denyErrs, String allowName, String denyName,
+      Composite additional) {
+    ServletUtil.layoutIpAllowDeny(this, page, allow, deny, ipFootnote,
+        errMsg, allowErrs, denyErrs, allowName, denyName, additional);
+  }
+  
+  protected void layoutMenu(Page page, Iterator descrIterator) {
+    ServletUtil.layoutMenu(this, page, descrIterator);
   }
   
   /** Return the app instance.

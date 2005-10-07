@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.13 2005-09-16 00:28:46 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.14 2005-10-07 23:35:54 thib_gc Exp $
  */
 
 /*
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Properties;
 
 import javax.servlet.ServletConfig;
@@ -47,7 +46,6 @@ import org.lockss.proxy.ProxyManager;
 import org.lockss.proxy.icp.IcpManager;
 import org.lockss.util.StringUtil;
 import org.mortbay.html.Composite;
-import org.mortbay.html.Input;
 import org.mortbay.html.Table;
 
 /** Display and update proxy IP access control lists.
@@ -215,76 +213,19 @@ public class ProxyIpAccess extends IpAccessControl {
     "network structure with other proxies and caches that support ICP.";
 
   protected Composite getAdditionalFormElement() {
-    // Start table
-    Table tbl = new Table(0, "align=center cellpadding=10");
+    final int BORDER = 0;
+    final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
     
-    buildPortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(),
-        "audit proxy", AUDIT_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
+    Table tbl = new Table(BORDER, ATTRIBUTES);
+    layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
+        AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
         resourceMgr.getUsableTcpPorts(AuditProxyManager.SERVER_NAME));
-    buildPortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(),
-        "ICP server", ICP_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
+    layoutEnablePortRow(tbl, ICP_ENABLE_NAME, getDefaultIcpEnable(), "ICP server",
+        ICP_FOOT, FILTER_FOOT, ICP_PORT_NAME, getDefaultIcpPort(),
         resourceMgr.getUsableUdpPorts(AuditProxyManager.SERVER_NAME));
-    
     return tbl;
   }
 
-  /**
-   * <p>Subpart of {@link #getAdditionalFormElement()} in charge of
-   * building a row with a checkbox to enable some feature and a text
-   * field to choose a port for it, as well as a list of available
-   * ports.</p>
-   * @param table The Table instance being populated.
-   * @see #getAdditionalFormElement
-   */
-  private void buildPortRow(Table table,
-                            String enableFieldName,
-                            boolean defaultEnable,
-                            String enableDescription,
-                            String enableFootnote,
-                            String portFieldName,
-                            String defaultPort,
-                            List usablePorts) {
-    // Start row
-    table.newRow();
-    
-    // Start line
-    table.newCell("align=center");
-
-    // "enable" element
-    Input enaElem = new Input(Input.Checkbox, enableFieldName, "1");
-    if (defaultEnable) {
-      enaElem.check();
-    }
-    setTabOrder(enaElem);
-    table.add(enaElem);
-    table.add("Enable " + enableDescription);
-    table.add(addFootnote(enableFootnote));
-    table.add(" on port&nbsp;");
-    
-    // "port" element
-    Input portElem =
-      new Input(Input.Text, portFieldName, defaultPort);
-    portElem.setSize(6);
-    setTabOrder(portElem);
-    table.add(portElem);
-    
-    // List of usable ports
-    try {
-      if (usablePorts != null) {
-        table.add("<br>");
-        if (usablePorts.isEmpty()) {
-          table.add("(No available ports)");
-          table.add(addFootnote(enableFootnote));
-        } else {
-          table.add("Available ports");
-          table.add(addFootnote(FILTER_FOOT));
-          table.add(": ");
-          table.add(StringUtil.separatedString(usablePorts, ", "));
-        }
-      }
-    } catch (Exception ignore) {}
-  }
-  
   protected void addConfigProps(Properties props) {
     super.addConfigProps(props);
     

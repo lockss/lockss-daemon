@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.27 2005-10-06 08:21:56 tlipkis Exp $
+ * $Id: IpAccessControl.java,v 1.28 2005-10-07 23:35:54 thib_gc Exp $
  */
 
 /*
@@ -32,25 +32,22 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.servlet;
 
-import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.*;
 import java.util.*;
-import java.net.*;
-import java.text.*;
+
 import org.mortbay.html.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 import org.lockss.jetty.*;
-import org.lockss.servlet.*;
 
 /** Display and update IP access control lists.
  */
 public abstract class IpAccessControl extends LockssServlet {
 
+  private static final String DENY_IPS_NAME = "exc_ips";
+  private static final String ALLOW_IPS_NAME = "inc_ips";
   public static final String SUFFIX_IP_INCLUDE = "include";
   public static final String SUFFIX_IP_EXCLUDE = "exclude";
   public static final String SUFFIX_PLATFORM_ACCESS = "platformAccess";
@@ -104,8 +101,8 @@ public abstract class IpAccessControl extends LockssServlet {
   }
 
   protected void readForm() {
-    formIncl = ipStrToVector(req.getParameter("inc_ips"));
-    formExcl = ipStrToVector(req.getParameter("exc_ips"));
+    formIncl = ipStrToVector(req.getParameter(ALLOW_IPS_NAME));
+    formExcl = ipStrToVector(req.getParameter(DENY_IPS_NAME));
     inclErrs = findInvalidIps(formIncl);
     exclErrs = findInvalidIps(formExcl);
   }
@@ -157,104 +154,14 @@ public abstract class IpAccessControl extends LockssServlet {
     Page page = newPage();
     page.add(getExplanationBlock(getExplanation()));
     page.add("<br>");
-    page.add(getIncludeExcludeElement(incl, excl));
+    layoutIpAllowDeny(page, incl, excl, footIP, errMsg, inclErrs, exclErrs,
+        ALLOW_IPS_NAME, DENY_IPS_NAME, getAdditionalFormElement());
     layoutFooter(page);
     page.write(resp.getWriter());
   }
 
-  /**
-   * Generate the block of the page that has the included/excluded
-   * ip address table.
-   * @param incl vector of included ip addresses
-   * @param excl vector of excluded ip addresses
-   * @return an html element representing the include/exclude ip address form
-   */
-  private Element getIncludeExcludeElement(Vector incl, Vector excl) {
-    boolean isError = false;
-    String incString = null;
-    String excString = null;
-
-    Composite comp = new Composite();
-    Form frm = new Form(srvURL(myServletDescr()));
-    frm.method("POST");
-
-    if (errMsg != null) {
-      Composite errcmp = new Composite();
-      errcmp.add("<center><font color=red size=+1>");
-      errcmp.add(errMsg);
-      errcmp.add("</font></center><br>");
-      frm.add(errcmp);
-    }
-    
-    Table table = new Table(1, "align=center cellpadding=0");
-    //table.center();
-    table.newRow("bgcolor=\"#CCCCCC\"");
-    table.newCell("align=center");
-    table.add("<font size=+1>Allow Access" + addFootnote(footIP) +
-	      "&nbsp;</font>");
-
-    table.newCell("align=center");
-    table.add("<font size=+1>Deny Access" + addFootnote(footIP) +
-	      "&nbsp;</font>");
-
-    if ((inclErrs != null && inclErrs.size() > 0) ||
-	(exclErrs != null && exclErrs.size() > 0)) {
-      table.newRow();
-      table.newCell();
-      addIPErrors(table, inclErrs);
-      table.newCell();
-      addIPErrors(table, exclErrs);
-    }
-
-    incString = getIPString(incl);
-    excString = getIPString(excl);
-
-    TextArea incArea = new MyTextArea("inc_ips");
-    incArea.setSize(30, 15);
-    incArea.add(incString);
-
-    TextArea excArea = new MyTextArea("exc_ips");
-    excArea.setSize(30, 15);
-    excArea.add(excString);
-
-    table.newRow();
-    table.newCell("align=center");
-    setTabOrder(incArea);
-    table.add(incArea);
-    table.newCell("align=center");
-    setTabOrder(excArea);
-    table.add(excArea);
-    frm.add(table);
-
-    Composite addtl = getAdditionalFormElement();
-    if (addtl != null) {
-      frm.add(addtl);
-    }
-    Input submit = new Input(Input.Submit, "action", "Update");
-    setTabOrder(submit);
-    frm.add("<br><center>"+submit+"</center>");
-    comp.add(frm);
-    return comp;
-  }
-
   protected Composite getAdditionalFormElement() {
     return null;
-  }
-
-  private void addIPErrors(Composite comp, Vector errs) {
-    int size;
-    if (errs != null && (size = errs.size()) > 0) {
-      comp.add("<font color=red>");
-      comp.add(Integer.toString(size));
-      comp.add(size == 1 ? " entry has" : " entries have");
-      comp.add(" errors:</font><br>");
-      for (Iterator iter = errs.iterator(); iter.hasNext(); ) {
-	comp.add((String)iter.next());
-	comp.add("<br>");
-      }
-    } else {
-      comp.add("&nbsp");
-      }
   }
 
   /**
@@ -292,14 +199,6 @@ public abstract class IpAccessControl extends LockssServlet {
   }
 
   /**
-   * Convert a vector of strings representing ip addresses
-   * to a single string with the addresses seperated by a newline
-   */
-  private String getIPString(Vector ipList) {
-    return StringUtil.terminatedSeparatedString(ipList, "\n", "\n");
-  }
-
-  /**
    * Save the include and exclude lists to the access control file
    */
   protected void saveChanges() throws IOException {
@@ -333,8 +232,6 @@ public abstract class IpAccessControl extends LockssServlet {
   protected String getExcludeParam() {
     return getParamPrefix() + SUFFIX_IP_EXCLUDE;
   }
-
-
 
   protected abstract String getParamPrefix();
 

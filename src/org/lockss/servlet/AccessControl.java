@@ -1,5 +1,5 @@
 /*
- * $Id: AccessControl.java,v 1.6 2005-10-07 18:00:32 thib_gc Exp $
+ * $Id: AccessControl.java,v 1.7 2005-10-07 23:35:54 thib_gc Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class AccessControl extends LockssServlet {
   protected void displayMenu() throws IOException {
     Page page = newPage();
     resp.setContentType("text/html");
-    ServletUtil.layoutMenu(this, page, getDescriptors());
+    layoutMenu(page, getDescriptors());
     layoutFooter(page);
     page.write(resp.getWriter());
   }
