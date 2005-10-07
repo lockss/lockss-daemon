@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.11 2005-09-06 19:57:52 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.12 2005-10-07 23:43:32 tlipkis Exp $
  */
 
 /*
@@ -671,9 +671,12 @@ public class TestRemoteApi extends LockssTestCase {
 
   }
 
-  public void testBackupEmail() throws Exception {
+  public void testBackupEmail(String extParam, String exp) throws Exception {
     writeAuConfigFile("org.lockss.au.FooPlugin.k~v.k=v\n");
     Properties p = new Properties();
+    if (extParam != null) {
+      p.put(RemoteApi.PARAM_BACKUP_FILE_EXTENSION, extParam);
+    }
     p.put("org.lockss.backupEmail.enabled", "true");
     p.put(ConfigManager.PARAM_PLATFORM_ADMIN_EMAIL, "foo@bar");
     p.put(ConfigManager.PARAM_PLATFORM_FQDN, "lockss42.example.com");
@@ -694,10 +697,18 @@ public class TestRemoteApi extends LockssTestCase {
     assertEquals(2, parts.length);
     assertMatchesRE("attached file is a backup",
 		    (String)parts[0].getContent());
-    assertMatchesRE("LOCKSS_Backup_.*\\.zip", parts[1].getFileName());
+    assertMatchesRE("LOCKSS_Backup_.*\\." + exp, parts[1].getFileName());
     // zip file should start with "PK"
     assertMatchesRE("^PK",
 		    StringUtil.fromInputStream(parts[1].getInputStream()));
+  }
+
+  public void testBackupEmailDefault() throws Exception {
+    testBackupEmail(null, "zip");
+  }
+
+  public void testBackupEmailSet() throws Exception {
+    testBackupEmail("bak", "bak");
   }
 
   public void testBackupEmailOverride() throws Exception {
