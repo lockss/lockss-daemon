@@ -1,5 +1,5 @@
 /*
- * $Id: AlertPatterns.java,v 1.3 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: AlertPatterns.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
  */
 
 /*
@@ -261,7 +261,7 @@ public class AlertPatterns {
 	case EQ: return equalObjects(attr, value);
 	case NE: return !equalObjects(attr, value);
 	default:
-	  int cmp = ((Comparable)attr).compareTo((Comparable)value);
+	  int cmp = ((Comparable)attr).compareTo(value);
 	  switch (relation) {
 	  case GT: return cmp > 0;
 	  case GE: return cmp >= 0;

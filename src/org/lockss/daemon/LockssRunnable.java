@@ -1,8 +1,10 @@
 /*
- * $Id: LockssRunnable.java,v 1.10 2005-10-04 05:09:32 tlipkis Exp $
- *
+ * $Id: LockssRunnable.java,v 1.11 2005-10-07 16:19:55 thib_gc Exp $
+ */
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+/*
+
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,8 +31,9 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon;
-import java.io.*;
+
 import java.util.*;
+
 import org.lockss.app.*;
 import org.lockss.config.Configuration;
 import org.lockss.util.*;

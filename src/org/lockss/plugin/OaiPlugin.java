@@ -1,10 +1,10 @@
 /*
- * $Id: OaiPlugin.java,v 1.2 2005-07-18 08:14:29 tlipkis Exp $
+ * $Id: OaiPlugin.java,v 1.3 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,15 +32,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.plugin;
 
 import java.util.*;
+
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 import org.lockss.plugin.base.BasePlugin;
 import org.lockss.plugin.ArchivalUnit;
 import org.lockss.util.ListUtil;
-import org.lockss.util.Logger;
-import org.lockss.util.StringUtil;
-import org.lockss.app.LockssDaemon;
-import org.lockss.crawler.FollowLinkCrawler;
 
 /**
  * <p>OaiPlugin: A plugin that archives other plugins.</p>

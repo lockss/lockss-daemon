@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.11 2005-07-25 01:19:26 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.12 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
@@ -274,7 +274,7 @@ public class LcapDatagramComm
       return sender.equals(getLocalIdentityAddr());
     } else {
       for (Iterator iter = localInterfaces.iterator(); iter.hasNext(); ) {
-	if (sender.equals((IPAddr)iter.next())) {
+	if (sender.equals(iter.next())) {
 	  return true;
 	}
       }

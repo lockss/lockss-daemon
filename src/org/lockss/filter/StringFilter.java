@@ -1,10 +1,10 @@
 /*
- * $Id: StringFilter.java,v 1.8 2005-05-12 20:08:21 tlipkis Exp $
+ * $Id: StringFilter.java,v 1.9 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,11 +31,11 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.filter;
+
 import java.io.*;
 import java.util.*;
 
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 import org.lockss.util.*;
 
 public class StringFilter extends Reader {

@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.24 2005-09-15 20:59:14 smorabito Exp $
+ * $Id: ConfigManager.java,v 1.25 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
@@ -658,7 +658,7 @@ public class ConfigManager implements LockssManager {
 	  (!key.startsWith(PARAM_TITLE_DB) &&
 	   !key.startsWith(PluginManager.PARAM_AU_TREE))) {
 	if (config.containsKey(key)) {
-	  log.debug(key + " = " + (String)config.get(key));
+	  log.debug(key + " = " + config.get(key));
 	} else if (oldConfig.containsKey(key)) {
 	  log.debug(key + " (removed)");
 	}

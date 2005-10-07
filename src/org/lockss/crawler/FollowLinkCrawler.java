@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.30 2005-09-06 22:59:50 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.31 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
@@ -190,7 +190,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 
       while (!urlsToCrawl.isEmpty() && !crawlAborted) {
 	//XXX Could we have a SetUtil.removeElement() instead ?
-	String nextUrl = (String)CollectionUtil.removeElement((Collection) urlsToCrawl);
+	String nextUrl = (String)CollectionUtil.removeElement(urlsToCrawl);
 
 	logger.debug3("Trying to process " + nextUrl);
 

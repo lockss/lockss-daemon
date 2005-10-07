@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
  */
 
 /*
@@ -29,8 +29,6 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.poller.v3;
-
-import java.io.*;
 
 import org.lockss.plugin.*;
 import org.lockss.poller.PollSpec;

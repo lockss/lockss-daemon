@@ -1,10 +1,10 @@
 /*
- * $Id: GenericNameHasher.java,v 1.13 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: GenericNameHasher.java,v 1.14 2005-10-07 16:19:56 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,9 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.hasher;
+
 import java.security.*;
 import java.util.*;
-import org.lockss.daemon.*;
+
 import org.lockss.util.*;
 import org.lockss.plugin.*;
 

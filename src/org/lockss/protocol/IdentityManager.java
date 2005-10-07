@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.66 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: IdentityManager.java,v 1.67 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
@@ -33,16 +33,11 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol;
 
 import java.io.*;
-import java.net.UnknownHostException;
 import java.util.*;
 
 import org.lockss.app.*;
-import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
 import org.lockss.plugin.ArchivalUnit;
-import org.lockss.poller.Poll;
-import org.lockss.poller.Vote;
-import org.lockss.state.HistoryRepository;
 import org.lockss.util.*;
 
 /**

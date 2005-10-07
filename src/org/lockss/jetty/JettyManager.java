@@ -1,10 +1,10 @@
 /*
- * $Id: JettyManager.java,v 1.19 2005-08-23 22:05:45 tlipkis Exp $
+ * $Id: JettyManager.java,v 1.20 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,7 +32,6 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.jetty;
 
-import java.util.*;
 import org.lockss.app.*;
 import org.lockss.util.*;
 import org.lockss.config.Configuration;

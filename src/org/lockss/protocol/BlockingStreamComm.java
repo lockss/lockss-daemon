@@ -1,10 +1,10 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.8 2005-10-06 08:21:56 tlipkis Exp $
+ * $Id: BlockingStreamComm.java,v 1.9 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,18 +35,15 @@ package org.lockss.protocol;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import java.text.*;
+
 import EDU.oswego.cs.dl.util.concurrent.*;
 
 import org.lockss.util.*;
 import org.lockss.util.Queue;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
-import org.apache.commons.collections.map.LRUMap;
 import org.lockss.app.*;
 import org.lockss.poller.*;
-import org.lockss.plugin.*;
 
 /**
  * BlockingStreamComm implements the streaming mesaage protocol using

@@ -1,8 +1,9 @@
 /*
- * $Id: VoterUserData.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
  */
 
 /*
+
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
@@ -26,11 +27,11 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 Except as contained in this notice, the name of Stanford University shall not
 be used in advertising or otherwise to promote the sale, use or other dealings
 in this Software without prior written authorization from Stanford University.
+
 */
 
 package org.lockss.poller.v3;
 
-import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 

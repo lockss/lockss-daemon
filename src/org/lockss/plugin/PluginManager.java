@@ -1,10 +1,10 @@
 /*
- * $Id: PluginManager.java,v 1.145 2005-10-06 08:21:57 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.146 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -37,11 +37,11 @@ import java.util.jar.*;
 import java.io.*;
 import java.net.*;
 import java.security.KeyStore;
+
 import org.apache.commons.collections.MultiMap;
 import org.apache.commons.collections.MultiHashMap;
 import org.lockss.app.*;
 import org.lockss.daemon.*;
-import org.lockss.daemon.status.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
 import org.lockss.util.*;

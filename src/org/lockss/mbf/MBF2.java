@@ -1,5 +1,5 @@
 /*
- * $Id: MBF2.java,v 1.15 2004-04-28 02:09:19 dshr Exp $
+ * $Id: MBF2.java,v 1.16 2005-10-07 16:19:56 thib_gc Exp $
  */
 
 /*
@@ -31,11 +31,10 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.mbf;
+
 import java.math.*;
-import java.io.*;
 import java.util.*;
 import java.security.*;
-import org.lockss.util.*;
 
 /**
  * @author David S. H. Rosenthal

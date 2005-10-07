@@ -1,28 +1,34 @@
 /*
- * $Id: TestIeeeArchivalUnit.java,v 1.1 2005-03-15 07:43:22 tlipkis Exp $
+ * $Id: TestIeeeArchivalUnit.java,v 1.2 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
- Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
- all rights reserved.
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in
- all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
- STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
- IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- Except as contained in this notice, the name of Stanford University shall not
- be used in advertising or otherwise to promote the sale, use or other dealings
- in this Software without prior written authorization from Stanford University.
- */
+
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
+all rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL
+STANFORD UNIVERSITY BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Except as contained in this notice, the name of Stanford University shall not
+be used in advertising or otherwise to promote the sale, use or other dealings
+in this Software without prior written authorization from Stanford University.
+
+*/
 
 package org.lockss.plugin.ieee;
 
@@ -39,7 +45,6 @@ import org.lockss.state.AuState;
 import org.lockss.plugin.base.BaseCachedUrlSet;
 import org.lockss.repository.LockssRepositoryImpl;
 import org.lockss.plugin.definable.*;
-import java.util.*;
 
 public class TestIeeeArchivalUnit
     extends LockssTestCase {
@@ -173,7 +178,7 @@ public class TestIeeeArchivalUnit
         "xpl/RecentIssue.jsp?puNumber=" + PUB_NUMBER + "&year=" + VOL_YEAR;
     URL base = new URL(ROOT_URL);
     DefinableArchivalUnit ieeeAu = makeAu(base, PUB_NUMBER, VOL_YEAR);
-    assertEquals(expected, (String)ieeeAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
+    assertEquals(expected, ieeeAu.getProperties().getString(ArchivalUnit.AU_START_URL, null));
   }
 
   public void testGetUrlStems() throws Exception {

@@ -1,10 +1,10 @@
 /*
- * $Id: BaseCachedUrl.java,v 1.22 2005-08-11 06:35:10 tlipkis Exp $
+ * $Id: BaseCachedUrl.java,v 1.23 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,13 +31,14 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.plugin.base;
+
 import java.io.*;
+import java.net.MalformedURLException;
+
 import org.lockss.util.*;
 import org.lockss.config.Configuration;
-import org.lockss.daemon.*;
 import org.lockss.plugin.*;
 import org.lockss.repository.*;
-import java.net.MalformedURLException;
 
 /** Base class for CachedUrls.  Expects the LockssRepository for storage.
  * Plugins may extend this to get some common CachedUrl functionality.

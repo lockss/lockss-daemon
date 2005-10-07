@@ -1,5 +1,5 @@
 /*
- * $Id: PollerUserData.java,v 1.3 2005-09-15 20:59:14 smorabito Exp $
+ * $Id: PollerUserData.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
  */
 
 /*
@@ -33,9 +33,7 @@ package org.lockss.poller.v3;
 import org.lockss.plugin.CachedUrlSet;
 import org.lockss.protocol.*;
 import org.lockss.util.*;
-import org.lockss.protocol.psm.*;
 
-import java.io.*;
 import java.util.*;
 
 /**

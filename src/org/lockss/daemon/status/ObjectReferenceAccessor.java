@@ -1,10 +1,10 @@
 /*
- * $Id: ObjectReferenceAccessor.java,v 1.2 2003-06-20 22:34:50 claire Exp $
+ * $Id: ObjectReferenceAccessor.java,v 1.3 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -31,7 +31,6 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.daemon.status;
-import java.util.*;
 
 /**
  * Objects wishing to provide references to tables should implement this

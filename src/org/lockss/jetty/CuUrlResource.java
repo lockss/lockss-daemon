@@ -1,10 +1,10 @@
 /*
- * $Id: CuUrlResource.java,v 1.4 2004-02-27 00:20:56 tlipkis Exp $
+ * $Id: CuUrlResource.java,v 1.5 2005-10-07 16:19:55 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.jetty;
 
 import java.io.*;
 import java.net.*;
-import java.security.Permission;
+
 import org.mortbay.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;

@@ -1,10 +1,10 @@
 /*
- * $Id: OaiHandler.java,v 1.9 2005-10-06 08:21:57 tlipkis Exp $
+ * $Id: OaiHandler.java,v 1.10 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2002 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,9 +33,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.oai;
 
 import java.util.*;
-import org.lockss.util.*;
 
-import org.lockss.config.Configuration;
+import org.lockss.util.*;
 
 import ORG.oclc.oai.harvester2.verb.ListRecords;
 import org.w3c.dom.Node;
@@ -319,7 +318,7 @@ public class OaiHandler {
    * XXX need to be rewritten to reflect errors in crawlStatus
    */
   public List getErrors() {
-    return (List) errList;
+    return errList;
   }
 
   /**

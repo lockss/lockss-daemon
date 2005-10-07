@@ -1,10 +1,10 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.96 2005-07-27 19:53:51 smorabito Exp $
+ * $Id: BaseArchivalUnit.java,v 1.97 2005-10-07 16:19:57 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,6 @@ import org.lockss.config.Configuration;
 import org.lockss.crawler.*;
 import org.lockss.daemon.*;
 import org.lockss.plugin.*;
-import org.lockss.plugin.ArchivalUnit.*;
 import org.lockss.state.*;
 import org.lockss.util.*;
 
