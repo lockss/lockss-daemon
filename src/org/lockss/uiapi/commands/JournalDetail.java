@@ -1,5 +1,5 @@
 /*
- * $Id: JournalDetail.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: JournalDetail.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class JournalDetail extends StatusActivityBase {
        * status document for the desired components (size and damage)
        */
       responseRoot    = apiUtils.createElement(getResponseRoot(), AP_E_AU);
-      apiUtils.addText(apiUtils.createElement(responseRoot, AP_E_AUID), auId);
+      XmlUtils.addText(apiUtils.createElement(responseRoot, AP_E_AUID), auId);
       
       statusRoot = xmlStatusTable.getTableDocument().getDocumentElement();
       nodeList   = statusUtils.getElementList(statusRoot, 
@@ -239,13 +239,13 @@ public class JournalDetail extends StatusActivityBase {
         if ("Content Size".equals(title)) {
           Element element = apiUtils.createElement(responseRoot, AP_E_SIZE);
           
-          apiUtils.addText(element, value);
+          XmlUtils.addText(element, value);
           if (++found == 2) break;
           
         } else if ("Status".equals(title)) {
           Element element = apiUtils.createElement(responseRoot, AP_E_DETAIL);
           
-          apiUtils.addText(element, value.toLowerCase());
+          XmlUtils.addText(element, value.toLowerCase());
           if (++found == 2) break;
         }
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: ParseUtils.java,v 1.2 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: ParseUtils.java,v 1.3 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
     element = xmlUtils.getElement(element, subType);
     if (element != null) {
-      message = xmlUtils.getText(element);
+      message = XmlUtils.getText(element);
     }
     return message;
   }
@@ -329,7 +329,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
     Element element   = xmlUtils.getElement(root, name);
     
     if (element != null) {
-      message = xmlUtils.getText(element);
+      message = XmlUtils.getText(element);
     }
     return message;
   }
@@ -365,7 +365,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
 
     for (int i = 0; i < nameList.getLength(); i++) {
-      String name   = xmlUtils.getText(nameList.item(i));
+      String name   = XmlUtils.getText(nameList.item(i));
       String value  = ParseUtils.getText(xmlUtils, root, name);
 
       keyedList.put(name, value);
@@ -422,7 +422,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
      */
     nodeList = xmlUtils.getList(root, textElementName);
     for (int i = 0; i < nodeList.getLength(); i++) {
-      textList.add(xmlUtils.getText((Element) nodeList.item(i)));
+      textList.add(XmlUtils.getText((Element) nodeList.item(i)));
     }
     
     return textList;

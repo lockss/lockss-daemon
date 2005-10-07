@@ -1,5 +1,5 @@
 /*
- * $Id: JournalDefinition.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: JournalDefinition.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class JournalDefinition extends ApiActivityBase {
     iterator = titleSet.iterator();
     while (iterator.hasNext()) {
       title = (String) iterator.next();
-      xmlUtils.addText(xmlUtils.createElement(root, AP_E_TITLE), title);
+      XmlUtils.addText(xmlUtils.createElement(root, AP_E_TITLE), title);
     }
     return true;
   }

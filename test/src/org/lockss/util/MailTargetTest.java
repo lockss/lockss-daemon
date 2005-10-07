@@ -1,5 +1,5 @@
 /*
- * $Id: MailTargetTest.java,v 1.6 2004-09-27 22:38:34 smorabito Exp $
+ * $Id: MailTargetTest.java,v 1.7 2005-10-07 17:46:20 troberts Exp $
  */
 
 /*
@@ -61,9 +61,9 @@ public class MailTargetTest extends LockssTestCase {
   }
 
   public void testEmailLogging() throws Exception {
-    target.handleMessage(null, Logger.LEVEL_INFO, "Email test 1");
+    target.handleMessage(Logger.LEVEL_INFO, "Email test 1");
     target.emailEnabled = false;
-    target.handleMessage(null, Logger.LEVEL_INFO,
+    target.handleMessage(Logger.LEVEL_INFO,
                          "Email test 2: should not be received");
   }
 }

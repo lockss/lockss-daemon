@@ -1,5 +1,5 @@
 /*
- * $Id: StatusActivityBase.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: StatusActivityBase.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -86,19 +86,19 @@ public class StatusActivityBase extends ApiActivityBase
     Element element;  
       
     element = getXmlUtils().createElement(buildElement, AP_E_TIME);
-    getXmlUtils().addText(element, getBuildProperty(BuildInfo.BUILD_TIME));
+    XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_TIME));
       
     element = getXmlUtils().createElement(buildElement, AP_E_DATE);
-    getXmlUtils().addText(element, getBuildProperty(BuildInfo.BUILD_DATE));
+    XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_DATE));
       
     element = getXmlUtils().createElement(buildElement, AP_E_TIMESTAMP);
-    getXmlUtils().addText(element, getBuildProperty(BuildInfo.BUILD_TIMESTAMP));
+    XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_TIMESTAMP));
       
     element = getXmlUtils().createElement(buildElement, AP_E_HOST);
-    getXmlUtils().addText(element, getBuildProperty(BuildInfo.BUILD_HOST));
+    XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_HOST));
       
     element = getXmlUtils().createElement(buildElement, AP_E_USER);
-    getXmlUtils().addText(element, getBuildProperty(BuildInfo.BUILD_USER_NAME));
+    XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_USER_NAME));
   }
 
   /**
@@ -117,7 +117,7 @@ public class StatusActivityBase extends ApiActivityBase
     value = currentConfig.get(PARAM_PLATFORM_VERSION, AP_VALUE_UNKNOWN);
     
     element = getXmlUtils().createElement(rootElement, AP_E_PLATFORMVER);
-    getXmlUtils().addText(element, value);
+    XmlUtils.addText(element, value);
   }
     
   /**
@@ -157,16 +157,16 @@ public class StatusActivityBase extends ApiActivityBase
     upElement = getXmlUtils().createElement(rootElement, AP_E_UPTIME);
     
     element = getXmlUtils().createElement(upElement, AP_E_DAYS);
-    getXmlUtils().addText(element, String.valueOf(days));
+    XmlUtils.addText(element, String.valueOf(days));
     
     element = getXmlUtils().createElement(upElement, AP_E_HOURS);
-    getXmlUtils().addText(element, String.valueOf(hours));
+    XmlUtils.addText(element, String.valueOf(hours));
  
     element = getXmlUtils().createElement(upElement, AP_E_MINUTES);
-    getXmlUtils().addText(element, String.valueOf(minutes));
+    XmlUtils.addText(element, String.valueOf(minutes));
  
     element = getXmlUtils().createElement(upElement, AP_E_SECONDS);
-    getXmlUtils().addText(element, String.valueOf(seconds));
+    XmlUtils.addText(element, String.valueOf(seconds));
   }
 
   /**
@@ -213,7 +213,7 @@ public class StatusActivityBase extends ApiActivityBase
     Element element;
     
     element = getXmlUtils().createElement(root, elementName);
-    getXmlUtils().addText(element, text);
+    XmlUtils.addText(element, text);
   }
   
   /**
@@ -288,10 +288,10 @@ public class StatusActivityBase extends ApiActivityBase
                                                   : activeElement, AP_E_AU);
 
       element = xmlUtils.createElement(auElement, AP_E_NAME);
-      xmlUtils.addText(element, au.getName());
+      XmlUtils.addText(element, au.getName());
         
       element = xmlUtils.createElement(auElement, AP_E_ID);
-      xmlUtils.addText(element, au.getAuId());
+      XmlUtils.addText(element, au.getAuId());
     }
   }
   

@@ -1,5 +1,5 @@
 /*
- * $Id: Noop.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: Noop.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -61,7 +61,7 @@ public class Noop extends ApiActivityBase {
      * Add a comment in the response document
      */
     element = xmlUtils.createElement(getResponseRoot(), AP_E_COMMENT);
-    xmlUtils.addText(element, DateFormatter.now());
+    XmlUtils.addText(element, DateFormatter.now());
 
     return true;
   }

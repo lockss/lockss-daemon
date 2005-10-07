@@ -1,5 +1,5 @@
 /*
- * $Id: ProvideTitle.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: ProvideTitle.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -90,13 +90,13 @@ public class ProvideTitle extends ApiActivityBase {
    */
   private void doStatisticsXml(Element root) {
       
-    getXmlUtils().addText(getXmlUtils().createElement(root, AP_E_FIELD1),
+    XmlUtils.addText(getXmlUtils().createElement(root, AP_E_FIELD1),
                           String.valueOf(_titleCount));
     
-    getXmlUtils().addText(getXmlUtils().createElement(root, AP_E_FIELD2),
+    XmlUtils.addText(getXmlUtils().createElement(root, AP_E_FIELD2),
                           String.valueOf(_missingCount));
     
-    getXmlUtils().addText(getXmlUtils().createElement(root, AP_E_TOTAL),
+    XmlUtils.addText(getXmlUtils().createElement(root, AP_E_TOTAL),
                           String.valueOf(_totalCount));
   }
 
@@ -128,7 +128,7 @@ public class ProvideTitle extends ApiActivityBase {
 
     iterator = titleSet.iterator();
     while (iterator.hasNext()) {
-      getXmlUtils().addText(getXmlUtils().createElement(root, AP_E_PUBLICATION),
+      XmlUtils.addText(getXmlUtils().createElement(root, AP_E_PUBLICATION),
                            (String) iterator.next());
     }
   }
@@ -220,7 +220,7 @@ public class ProvideTitle extends ApiActivityBase {
 
         titleElement  = getXmlUtils().createElement(root, AP_E_TITLE);
         nameElement   = getXmlUtils().createElement(titleElement, AP_E_COMMENT);
-        getXmlUtils().addText(nameElement, title);
+        XmlUtils.addText(nameElement, title);
         
         lastTitle = title;
       }
@@ -295,9 +295,9 @@ public class ProvideTitle extends ApiActivityBase {
   private void renderAuXml(Element root, String auTitle, String auId) {
     Element auElement = getXmlUtils().createElement(root, AP_E_AU);
         
-    getXmlUtils().addText(getXmlUtils().createElement(auElement, AP_E_NAME),
+    XmlUtils.addText(getXmlUtils().createElement(auElement, AP_E_NAME),
                           auTitle == null ? "" : auTitle);
-    getXmlUtils().addText(getXmlUtils().createElement(auElement, AP_E_AUID),
+    XmlUtils.addText(getXmlUtils().createElement(auElement, AP_E_AUID),
                           auId);
   }
 }

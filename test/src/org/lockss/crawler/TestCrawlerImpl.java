@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.31 2005-09-06 22:59:15 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.32 2005-10-07 17:46:21 troberts Exp $
  */
 
 /*
@@ -137,11 +137,11 @@ public class TestCrawlerImpl extends LockssTestCase {
   }
 
   public void testIsSupportedUrlProtocol() {
-    assertTrue(crawler.isSupportedUrlProtocol("http://www.example.com"));
-    assertTrue(crawler.isSupportedUrlProtocol("HTTP://www.example.com"));
-    assertFalse(crawler.isSupportedUrlProtocol("ftp://www.example.com"));
-    assertFalse(crawler.isSupportedUrlProtocol("gopher://www.example.com"));
-    assertFalse(crawler.isSupportedUrlProtocol("https://www.example.com"));
+    assertTrue(CrawlerImpl.isSupportedUrlProtocol("http://www.example.com"));
+    assertTrue(CrawlerImpl.isSupportedUrlProtocol("HTTP://www.example.com"));
+    assertFalse(CrawlerImpl.isSupportedUrlProtocol("ftp://www.example.com"));
+    assertFalse(CrawlerImpl.isSupportedUrlProtocol("gopher://www.example.com"));
+    assertFalse(CrawlerImpl.isSupportedUrlProtocol("https://www.example.com"));
   }
 
   public void testGetAu() {
