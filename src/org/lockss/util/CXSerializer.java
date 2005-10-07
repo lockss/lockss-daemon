@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.9 2005-10-06 15:53:05 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.10 2005-10-07 16:50:21 thib_gc Exp $
  */
 
 /*
@@ -154,8 +154,8 @@ public class CXSerializer extends ObjectSerializer {
    * <p>See {@link ObjectSerializer#deserialize(File)} for a
    * description of this method's specification.</p>
    * @param inputFile {@inheritDoc}
-   * @throws FileNotFoundexception {@inheritDoc}
-   * @throws IOException {@inheritDoc}
+   * @throws FileNotFoundexception  {@inheritDoc}
+   * @throws IOException            {@inheritDoc}
    * @throws SerializationException {@inheritDoc}
    */
   public Object deserialize(File inputFile)
@@ -190,7 +190,19 @@ public class CXSerializer extends ObjectSerializer {
     return deserialize(reader, new MutableBoolean(false));
   }
   
-  /* Inherit documentation */ // FIXME: This doesn't inherit from anywhere!
+  /**
+   * <p>Deserializes an object from a reader, determining on the fly
+   * if the incoming object is in Castor or XStream format.</p>
+   * @param reader    A reader instance.
+   * @param wasCastor A mutable boolean. After the method executes,
+   *                  its value will be true if the input was in
+   *                  Castor format, false otherwise.
+   * @return An Object reference whose field were populated from the
+   *         data found in the XML file.
+   * @throws IOException            if input or output fails.
+   * @throws SerializationException if an internal serialization error
+   *                                occurs.
+   */
   public Object deserialize(Reader reader, MutableBoolean wasCastor)
       throws IOException, SerializationException {
     // Constants
@@ -203,7 +215,10 @@ public class CXSerializer extends ObjectSerializer {
     // Peek at beginning of input
     char[] buffer = new char[recognizeCastor.length()];
     bufReader.mark(recognizeCastor.length() + 1);
-    bufReader.read(buffer, 0, buffer.length); // FIXME: Check return value
+    if (bufReader.read(buffer, 0, buffer.length) != buffer.length) {
+      throw new IOException("Could not peek aty first "
+          + buffer.length + " bytes");
+    }
     bufReader.reset();
 
     // Guess format and deserialize
