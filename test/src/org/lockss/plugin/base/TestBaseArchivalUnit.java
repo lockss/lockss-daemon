@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.27 2005-07-18 08:08:51 tlipkis Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.28 2005-10-07 21:48:47 troberts Exp $
  */
 
 /*
@@ -352,8 +352,8 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
     Properties props = new Properties();
-    props.setProperty(mbau.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "1s");
-    props.setProperty(mbau.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "2s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MIN, "1s");
+    props.setProperty(BaseArchivalUnit.PARAM_TOPLEVEL_POLL_INTERVAL_MAX, "2s");
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
     mbau.checkNextPollInterval();

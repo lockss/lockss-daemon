@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.130 2005-08-31 23:20:28 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.131 2005-10-07 21:48:47 troberts Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -1142,7 +1142,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
 
     public void initService(LockssDaemon daemon) throws LockssAppException {
-      this.log.debug("MyIdentityManager: initService");
+      log.debug("MyIdentityManager: initService");
       super.initService(daemon);
     }
 
@@ -1155,12 +1155,12 @@ public class TestNodeManagerImpl extends LockssTestCase {
     }
 
     public void startService() {
-      this.log.debug("MyIdentityManager: startService");
+      log.debug("MyIdentityManager: startService");
       super.startService();
       idMap = new HashMap();
     }
     public void stopService() {
-      this.log.debug("MyIdentityManager: stopService");
+      log.debug("MyIdentityManager: stopService");
       super.stopService();
       idMap = null;
     }

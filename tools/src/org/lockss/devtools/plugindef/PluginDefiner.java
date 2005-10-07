@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.12 2005-08-31 18:35:46 rebeccai Exp $
+ * $Id: PluginDefiner.java,v 1.13 2005-10-07 21:48:47 troberts Exp $
  */
 
 /*
@@ -249,7 +249,7 @@ public class PluginDefiner extends JFrame {
 
   void jMenuFileOpen_actionPerformed(ActionEvent e) {
     int option = jFileChooser1.showOpenDialog(this);
-    if(option == jFileChooser1.APPROVE_OPTION
+    if(option == JFileChooser.APPROVE_OPTION
        || jFileChooser1.getSelectedFile() != null) {
       name = jFileChooser1.getSelectedFile().getName();
       location = jFileChooser1.getSelectedFile().getParent();
@@ -271,7 +271,7 @@ public class PluginDefiner extends JFrame {
        edp == null || 
        edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME].equals("")) {
 	  int option = jFileChooser1.showSaveDialog(this);
-	  if(option != jFileChooser1.APPROVE_OPTION ||
+	  if(option != JFileChooser.APPROVE_OPTION ||
 	     jFileChooser1.getSelectedFile() == null)
 	      return;
 	  name = jFileChooser1.getSelectedFile().getName();
@@ -316,7 +316,7 @@ public class PluginDefiner extends JFrame {
       if(option == JOptionPane.YES_OPTION) {
         if(edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME].equals("")){
           option = jFileChooser1.showSaveDialog(this);
-          if (option != jFileChooser1.APPROVE_OPTION ||
+          if (option != JFileChooser.APPROVE_OPTION ||
               jFileChooser1.getSelectedFile() == null)
             return;
           name = jFileChooser1.getSelectedFile().getName();

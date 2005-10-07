@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.44 2004-10-18 03:41:12 tlipkis Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.45 2005-10-07 21:48:47 troberts Exp $
  */
 
 /*
@@ -743,13 +743,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(leaf.hasContent());
     assertFalse(leaf.isContentInactive());
     assertEquals(1, leaf.getCurrentVersion());
-    assertNull(leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY));
 
     leaf.deactivateContent();
     assertFalse(leaf.hasContent());
     assertTrue(leaf.isContentInactive());
     assertEquals(RepositoryNodeImpl.INACTIVE_VERSION, leaf.getCurrentVersion());
-    assertEquals("true", leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
+    assertEquals("true", leaf.nodeProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY));
   }
 
   public void testDelete() throws Exception {
@@ -759,13 +759,13 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(leaf.hasContent());
     assertFalse(leaf.isDeleted());
     assertEquals(1, leaf.getCurrentVersion());
-    assertNull(leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(RepositoryNodeImpl.DELETION_PROPERTY));
 
     leaf.markAsDeleted();
     assertFalse(leaf.hasContent());
     assertTrue(leaf.isDeleted());
     assertEquals(RepositoryNodeImpl.DELETED_VERSION, leaf.getCurrentVersion());
-    assertEquals("true", leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+    assertEquals("true", leaf.nodeProps.getProperty(RepositoryNodeImpl.DELETION_PROPERTY));
   }
 
   public void testUnDelete() throws Exception {
@@ -781,7 +781,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertFalse(leaf.isDeleted());
     assertEquals(1, leaf.getCurrentVersion());
     // make to null, not 'false'
-    assertNull(leaf.nodeProps.getProperty(leaf.DELETION_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(RepositoryNodeImpl.DELETION_PROPERTY));
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
   }
@@ -1028,7 +1028,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.getChildCount();
     assertTrue(leaf.nodePropsFile.exists());
     File renameFile = new File(leaf.nodePropsFile.getAbsolutePath()+
-        leaf.FAULTY_FILE_EXTENSION);
+                               RepositoryNodeImpl.FAULTY_FILE_EXTENSION);
     assertFalse(renameFile.exists());
     leaf.failPropsLoad = true;
     assertTrue(leaf.checkNodeRootConsistency());
@@ -1174,18 +1174,18 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
         (RepositoryNodeImpl)repo.getNode("http://www.example.com/testDir");
     assertEquals(2, dirEntry.getChildCount());
     assertEquals("2",
-        dirEntry.nodeProps.getProperty(dirEntry.CHILD_COUNT_PROPERTY));
+        dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
 
     // check that no change to valid count cache
     dirEntry.checkChildCountCacheAccuracy();
     assertEquals("2",
-        dirEntry.nodeProps.getProperty(dirEntry.CHILD_COUNT_PROPERTY));
+        dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
 
     // check that invalid cache removed
-    dirEntry.nodeProps.setProperty(dirEntry.CHILD_COUNT_PROPERTY, "3");
+    dirEntry.nodeProps.setProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY, "3");
     dirEntry.checkChildCountCacheAccuracy();
-    assertEquals(dirEntry.INVALID,
-        dirEntry.nodeProps.getProperty(dirEntry.CHILD_COUNT_PROPERTY));
+    assertEquals(RepositoryNodeImpl.INVALID,
+                 dirEntry.nodeProps.getProperty(RepositoryNodeImpl.CHILD_COUNT_PROPERTY));
   }
 
   private RepositoryNode createLeaf(String url, String content,

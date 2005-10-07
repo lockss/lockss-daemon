@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.11 2005-08-29 17:16:54 rebeccai Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.12 2005-10-07 21:48:47 troberts Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class TestEditableDefinablePlugin
     edPlugin.addCrawlRule(rule1);
     edPlugin.addCrawlRule(rule2);
     List expected = ListUtil.list(rule1, rule2);
-    List actual = (List) edPlugin.getMap().getCollection(edPlugin.AU_RULES, null);
+    List actual = (List) edPlugin.getMap().getCollection(EditableDefinablePlugin.AU_RULES, null);
     assertIsomorphic("CrawlRules", expected, actual);
 
     edPlugin.removeCrawlRule(rule2);
@@ -118,7 +118,7 @@ public class TestEditableDefinablePlugin
     edPlugin.addSingleExceptionHandler(resultCode1, exceptionClass);
     Collection expList = ListUtil.list(resultCode1 + "=" + exceptionClass);
     Collection actList =
-        edPlugin.getMap().getCollection(edPlugin.CM_EXCEPTION_LIST_KEY, null);
+        edPlugin.getMap().getCollection(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY, null);
     assertIsomorphic("remapped 404", expList, actList);
 
     // test removing a remapping from multi-entry list
@@ -126,13 +126,13 @@ public class TestEditableDefinablePlugin
     edPlugin.addSingleExceptionHandler(resultCode2, exceptionClass);
     edPlugin.removeSingleExceptionHandler(resultCode1);
     expList = ListUtil.list(resultCode2 + "=" + exceptionClass);
-    actList = edPlugin.getMap().getCollection(edPlugin.CM_EXCEPTION_LIST_KEY,
+    actList = edPlugin.getMap().getCollection(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
                                               null);
     assertIsomorphic("removed 404", expList, actList);
 
     // test removing a remapping from a single entry list
     edPlugin.removeSingleExceptionHandler(resultCode2);
-    actList = edPlugin.getMap().getCollection(edPlugin.CM_EXCEPTION_LIST_KEY,
+    actList = edPlugin.getMap().getCollection(EditableDefinablePlugin.CM_EXCEPTION_LIST_KEY,
                                               null);
     assertNull(actList);
   }
@@ -239,15 +239,15 @@ public class TestEditableDefinablePlugin
   public void testSetAndRemoveAuCrawlDepth() {
     int defDepth = 1;
     int expected = 4;
-    int actual = edPlugin.getMap().getInt(edPlugin.AU_CRAWL_DEPTH, defDepth);
+    int actual = edPlugin.getMap().getInt(EditableDefinablePlugin.AU_CRAWL_DEPTH, defDepth);
     assertEquals("default depth", defDepth, actual);
 
     edPlugin.setAuCrawlDepth(expected);
-    actual = edPlugin.getMap().getInt(edPlugin.AU_CRAWL_DEPTH, defDepth);
+    actual = edPlugin.getMap().getInt(EditableDefinablePlugin.AU_CRAWL_DEPTH, defDepth);
     assertEquals("crawl depth", expected, actual);
 
     edPlugin.removeAuCrawlDepth();
-    actual = edPlugin.getMap().getInt(edPlugin.AU_CRAWL_DEPTH, defDepth);
+    actual = edPlugin.getMap().getInt(EditableDefinablePlugin.AU_CRAWL_DEPTH, defDepth);
     assertEquals("default depth", defDepth, actual);
 
   }
@@ -257,17 +257,17 @@ public class TestEditableDefinablePlugin
     Collection expRules = ListUtil.list("rule1", "rule2");
     Collection actRules;
     // default assigned
-    actRules = edPlugin.getMap().getCollection(edPlugin.AU_RULES, defRules);
+    actRules = edPlugin.getMap().getCollection(EditableDefinablePlugin.AU_RULES, defRules);
     assertIsomorphic("default rules", defRules, actRules);
 
     // assign a list
     edPlugin.setAuCrawlRules(expRules);
-    actRules = edPlugin.getMap().getCollection(edPlugin.AU_RULES, defRules);
+    actRules = edPlugin.getMap().getCollection(EditableDefinablePlugin.AU_RULES, defRules);
     assertIsomorphic("default rules", expRules, actRules);
 
     // remove an restore default
     edPlugin.removeAuCrawlRules();
-    actRules = edPlugin.getMap().getCollection(edPlugin.AU_RULES, defRules);
+    actRules = edPlugin.getMap().getCollection(EditableDefinablePlugin.AU_RULES, defRules);
     assertIsomorphic("default rules", defRules, actRules);
 
   }
@@ -286,17 +286,17 @@ public class TestEditableDefinablePlugin
     CrawlWindow expWindow = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
 
     // test default
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(edPlugin.AU_CRAWL_WINDOW);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
     assertEquals("default window", defWindow, actWindow);
 
     // test good class name is ok
     edPlugin.setAuCrawlWindow(expWindow);
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(edPlugin.AU_CRAWL_WINDOW);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
     assertEquals("set window", expWindow, actWindow);
 
     // test remove
     edPlugin.removeAuCrawlWindow();
-    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(edPlugin.AU_CRAWL_WINDOW);
+    actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
     assertEquals("default window", defWindow, actWindow);
   }
 
@@ -306,17 +306,17 @@ public class TestEditableDefinablePlugin
     String actPath = null;
 
     // test default
-    actPath = edPlugin.getMap().getString(edPlugin.AU_EXPECTED_PATH, defPath);
+    actPath = edPlugin.getMap().getString(EditableDefinablePlugin.AU_EXPECTED_PATH, defPath);
     assertEquals("default path", defPath, actPath);
 
     // test setting
     edPlugin.setAuExpectedBasePath(expPath);
-    actPath = edPlugin.getMap().getString(edPlugin.AU_EXPECTED_PATH, defPath);
+    actPath = edPlugin.getMap().getString(EditableDefinablePlugin.AU_EXPECTED_PATH, defPath);
     assertEquals("expected path", expPath, actPath);
 
     // test remove
     edPlugin.removeAuExpectedBasePath();
-    actPath = edPlugin.getMap().getString(edPlugin.AU_EXPECTED_PATH, defPath);
+    actPath = edPlugin.getMap().getString(EditableDefinablePlugin.AU_EXPECTED_PATH, defPath);
     assertEquals("default path", defPath, actPath);
 
   }
@@ -326,15 +326,15 @@ public class TestEditableDefinablePlugin
     long expDelay = 1000L;
     long actDelay = 0L;
 
-    actDelay = edPlugin.getMap().getLong(edPlugin.AU_NEWCONTENT_CRAWL, defDelay);
+    actDelay = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL, defDelay);
     assertEquals("default delay", defDelay, actDelay);
 
     edPlugin.setNewContentCrawlIntv(expDelay);
-    actDelay = edPlugin.getMap().getLong(edPlugin.AU_NEWCONTENT_CRAWL, defDelay);
+    actDelay = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL, defDelay);
     assertEquals("fetch delay", expDelay, actDelay);
 
     edPlugin.removeNewContentCrawlIntv();
-    actDelay = edPlugin.getMap().getLong(edPlugin.AU_NEWCONTENT_CRAWL, defDelay);
+    actDelay = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_NEWCONTENT_CRAWL, defDelay);
     assertEquals("default delay", defDelay, actDelay);
 
   }
@@ -346,19 +346,19 @@ public class TestEditableDefinablePlugin
     String actFilter = null;
 
     actFilter = edPlugin.getMap().getString(mimetype +
-                                            edPlugin.AU_FILTER_SUFFIX,
+                                            EditableDefinablePlugin.AU_FILTER_SUFFIX,
                                             defFilter);
     assertEquals("default filter", defFilter, actFilter);
 
     edPlugin.setAuFilter(mimetype, expFilter);
     actFilter = edPlugin.getMap().getString(mimetype +
-                                            edPlugin.AU_FILTER_SUFFIX,
+                                            EditableDefinablePlugin.AU_FILTER_SUFFIX,
                                             defFilter);
     assertEquals("Au filter", expFilter, actFilter);
 
     edPlugin.removeAuFilter(mimetype);
     actFilter = edPlugin.getMap().getString(mimetype +
-                                            edPlugin.AU_FILTER_SUFFIX,
+                                            EditableDefinablePlugin.AU_FILTER_SUFFIX,
                                             defFilter);
     assertEquals("default filter", defFilter, actFilter);
 
@@ -369,17 +369,17 @@ public class TestEditableDefinablePlugin
     String expManifest = "http://www.example.com/manifest.html";
     String actManifest = null;
 
-    actManifest = edPlugin.getMap().getString(edPlugin.AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(EditableDefinablePlugin.AU_MANIFEST,
                                               defManifest);
     assertEquals("default manifest", defManifest, actManifest);
 
     edPlugin.setAuManifestPage(expManifest);
-    actManifest = edPlugin.getMap().getString(edPlugin.AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(EditableDefinablePlugin.AU_MANIFEST,
                                               defManifest);
     assertEquals("manifest", expManifest, actManifest);
 
     edPlugin.removeAuManifestPage();
-    actManifest = edPlugin.getMap().getString(edPlugin.AU_MANIFEST,
+    actManifest = edPlugin.getMap().getString(EditableDefinablePlugin.AU_MANIFEST,
                                               defManifest);
     assertEquals("default manifest", defManifest, actManifest);
 
@@ -390,15 +390,15 @@ public class TestEditableDefinablePlugin
     String expName = "au name";
     String actName = null;
 
-    actName = edPlugin.getMap().getString(edPlugin.AU_NAME, defName);
+    actName = edPlugin.getMap().getString(EditableDefinablePlugin.AU_NAME, defName);
     assertEquals("default name", defName, actName);
 
     edPlugin.setAuName(expName);
-    actName = edPlugin.getMap().getString(edPlugin.AU_NAME, defName);
+    actName = edPlugin.getMap().getString(EditableDefinablePlugin.AU_NAME, defName);
     assertEquals("au name", expName, actName);
 
     edPlugin.removeAuName();
-    actName = edPlugin.getMap().getString(edPlugin.AU_NAME, defName);
+    actName = edPlugin.getMap().getString(EditableDefinablePlugin.AU_NAME, defName);
     assertEquals("default name", defName, actName);
 
   }
@@ -408,15 +408,15 @@ public class TestEditableDefinablePlugin
     long expPause = 1000L;
     long actPause = 0L;
 
-    actPause = edPlugin.getMap().getLong(edPlugin.AU_PAUSE_TIME, defPause);
+    actPause = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_PAUSE_TIME, defPause);
     assertEquals("default pause time", defPause, actPause);
 
     edPlugin.setAuPauseTime(expPause);
-    actPause = edPlugin.getMap().getLong(edPlugin.AU_PAUSE_TIME, defPause);
+    actPause = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_PAUSE_TIME, defPause);
     assertEquals("set pause time", expPause, actPause);
 
     edPlugin.removeAuPauseTime();
-    actPause = edPlugin.getMap().getLong(edPlugin.AU_PAUSE_TIME, defPause);
+    actPause = edPlugin.getMap().getLong(EditableDefinablePlugin.AU_PAUSE_TIME, defPause);
     assertEquals("default pause time", defPause, actPause);
 
   }
@@ -426,15 +426,15 @@ public class TestEditableDefinablePlugin
     String expUrl = "http://www.example.com/index.html";
     String actUrl = null;
 
-    actUrl = edPlugin.getMap().getString(edPlugin.AU_START_URL, defUrl);
+    actUrl = edPlugin.getMap().getString(EditableDefinablePlugin.AU_START_URL, defUrl);
     assertEquals("default startUrl", defUrl, actUrl);
 
     edPlugin.setAuStartURL(expUrl);
-    actUrl = edPlugin.getMap().getString(edPlugin.AU_START_URL, defUrl);
+    actUrl = edPlugin.getMap().getString(EditableDefinablePlugin.AU_START_URL, defUrl);
     assertEquals("startUrl", expUrl, actUrl);
 
     edPlugin.removeAuStartURL();
-    actUrl = edPlugin.getMap().getString(edPlugin.AU_START_URL, defUrl);
+    actUrl = edPlugin.getMap().getString(EditableDefinablePlugin.AU_START_URL, defUrl);
     assertEquals("default startUrl", defUrl, actUrl);
 
   }
@@ -443,7 +443,7 @@ public class TestEditableDefinablePlugin
     Collection defDescrs = null;
     Collection actDescrs = null;
 
-    actDescrs = edPlugin.getMap().getCollection(edPlugin.PLUGIN_PROPS,
+    actDescrs = edPlugin.getMap().getCollection(EditableDefinablePlugin.PLUGIN_PROPS,
                                                 defDescrs);
     assertEquals("def descrs", defDescrs, actDescrs);
 
@@ -453,12 +453,12 @@ public class TestEditableDefinablePlugin
     edPlugin.setPluginConfigDescrs(descrs);
 
     Collection expDescrs = ListUtil.fromArray(descrs.toArray());
-    actDescrs = edPlugin.getMap().getCollection(edPlugin.PLUGIN_PROPS,
+    actDescrs = edPlugin.getMap().getCollection(EditableDefinablePlugin.PLUGIN_PROPS,
                                                 defDescrs);
     assertEquals("config descrs", expDescrs, actDescrs);
 
     edPlugin.removePluginConfigDescrs();
-    actDescrs = edPlugin.getMap().getCollection(edPlugin.PLUGIN_PROPS,
+    actDescrs = edPlugin.getMap().getCollection(EditableDefinablePlugin.PLUGIN_PROPS,
                                                 defDescrs);
     assertEquals("def descrs", defDescrs, actDescrs);
 
@@ -466,17 +466,17 @@ public class TestEditableDefinablePlugin
 
   public void testSetAndRemovePluginExceptionHandler() {
     String actHandler = null;
-    actHandler = edPlugin.getMap().getString(edPlugin.PLUGIN_EXCEPTION_HANDLER,
+    actHandler = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
                                              null);
     assertNull(actHandler);
     String expHandler = new MockHttpResultHandler().getClass().getName();
     edPlugin.setPluginExceptionHandler(expHandler);
-    actHandler = edPlugin.getMap().getString(edPlugin.PLUGIN_EXCEPTION_HANDLER,
+    actHandler = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
                                              null);
     assertEquals("resultHandler", expHandler, actHandler);
 
     edPlugin.removePluginExceptionHandler();
-    actHandler = edPlugin.getMap().getString(edPlugin.PLUGIN_EXCEPTION_HANDLER,
+    actHandler = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_EXCEPTION_HANDLER,
                                              null);
     assertNull(actHandler);
 
@@ -487,15 +487,15 @@ public class TestEditableDefinablePlugin
     String actName = null;
     String expName = "My Plugin";
 
-    actName = edPlugin.getMap().getString(edPlugin.PLUGIN_NAME, defName);
+    actName = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_NAME, defName);
     assertEquals("default name", defName, actName);
 
     edPlugin.setPluginName(expName);
-    actName = edPlugin.getMap().getString(edPlugin.PLUGIN_NAME, defName);
+    actName = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_NAME, defName);
     assertEquals("default name", expName, actName);
 
     edPlugin.removePluginName();
-    actName = edPlugin.getMap().getString(edPlugin.PLUGIN_NAME, defName);
+    actName = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_NAME, defName);
     assertEquals("default name", defName, actName);
 
   }
@@ -505,17 +505,17 @@ public class TestEditableDefinablePlugin
     String expVersion = "2.0";
     String actVersion = null;
 
-    actVersion = edPlugin.getMap().getString(edPlugin.PLUGIN_VERSION,
+    actVersion = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_VERSION,
                                              defVersion);
     assertEquals("default version", defVersion, actVersion);
 
     edPlugin.setPluginVersion(expVersion);
-    actVersion = edPlugin.getMap().getString(edPlugin.PLUGIN_VERSION,
+    actVersion = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_VERSION,
                                              defVersion);
     assertEquals("default version", expVersion, actVersion);
 
     edPlugin.removePluginVersion();
-    actVersion = edPlugin.getMap().getString(edPlugin.PLUGIN_VERSION,
+    actVersion = edPlugin.getMap().getString(EditableDefinablePlugin.PLUGIN_VERSION,
                                              defVersion);
     assertEquals("default version", defVersion, actVersion);
 
@@ -526,7 +526,7 @@ public class TestEditableDefinablePlugin
     String name = "foo";
     assertNull(edPlugin.getMapName());
     edPlugin.setMapName(name);
-    assertEquals(name + edPlugin.MAP_SUFFIX, edPlugin.getMapName());
+    assertEquals(name + DefinablePlugin.MAP_SUFFIX, edPlugin.getMapName());
 
     // with extension
     name = "bar.xml";

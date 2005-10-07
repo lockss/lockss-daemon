@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.25 2005-10-07 17:46:21 troberts Exp $
+ * $Id: TestActivityRegulator.java,v 1.26 2005-10-07 21:48:48 troberts Exp $
  */
 
 /*
@@ -89,7 +89,7 @@ public class TestActivityRegulator extends LockssTestCase {
 
     regulator.setCusActivity(mcus2, ActivityRegulator.BACKGROUND_CRAWL, 123);
     assertEquals(ActivityRegulator.BACKGROUND_CRAWL, regulator.getCusActivity(mcus2));
-    assertEquals(regulator.REPAIR_CRAWL, regulator.getCusActivity(mcus));
+    assertEquals(ActivityRegulator.REPAIR_CRAWL, regulator.getCusActivity(mcus));
   }
 
   public void testStopService() {
