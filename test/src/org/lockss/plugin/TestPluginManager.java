@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.62 2005-10-05 23:12:41 troberts Exp $
+ * $Id: TestPluginManager.java,v 1.63 2005-10-07 23:42:53 tlipkis Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import junit.framework.*;
 import org.lockss.app.*;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
+import org.lockss.plugin.base.*;
 import org.lockss.plugin.definable.*;
 import org.lockss.poller.*;
 import org.lockss.repository.*;
@@ -57,25 +58,30 @@ public class TestPluginManager extends LockssTestCase {
     PluginManager.pluginKeyFromName(MyMockPlugin.class.getName());
   static Properties props1 = new Properties();
   static Properties props2 = new Properties();
+  static Properties props3 = new Properties();
   static {
     props1.setProperty(MockPlugin.CONFIG_PROP_1, "val1");
     props1.setProperty(MockPlugin.CONFIG_PROP_2, "val2");
     props2.setProperty(MockPlugin.CONFIG_PROP_1, "val1");
     props2.setProperty(MockPlugin.CONFIG_PROP_2, "va.l3");//auid contains a dot
+    props3.setProperty(BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "3d");
   }
 
   static String mauauidKey1 = PropUtil.propsToCanonicalEncodedString(props1);
   static String mauauid1 = mockPlugKey+"&"+ mauauidKey1;
-  //  static String m
 
   static String mauauidKey2 = PropUtil.propsToCanonicalEncodedString(props2);
   static String mauauid2 = mockPlugKey+"&"+mauauidKey2;
+
+  static String mauauidKey3 = PropUtil.propsToCanonicalEncodedString(props3);
+  static String mauauid3 = mockPlugKey+"&"+mauauidKey3;
 
   static String p1param =
     PluginManager.PARAM_AU_TREE + "." + mockPlugKey + ".";
 
   static String p1a1param = p1param + mauauidKey1 + ".";
   static String p1a2param = p1param + mauauidKey2 + ".";
+  static String p1a3param = p1param + mauauidKey3 + ".";
 
   private String pluginJar;
   private String signAlias = "goodguy";
@@ -118,8 +124,11 @@ public class TestPluginManager extends LockssTestCase {
   }
 
   private void doConfig() throws Exception {
+    doConfig(new Properties());
+  }
+
+  private void doConfig(Properties p) throws Exception {
     // String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
-    Properties p = new Properties();
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_1, "val1");
     p.setProperty(p1a1param+MockPlugin.CONFIG_PROP_2, "val2");
     p.setProperty(p1a2param+MockPlugin.CONFIG_PROP_1, "val1");
@@ -267,6 +276,43 @@ public class TestPluginManager extends LockssTestCase {
     // get the two archival units
     ArchivalUnit au1 = mgr.getAuFromId(mauauid1);
     ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
+
+    // verify the plugin's set of all AUs is {au1, au2}
+    assertEquals(SetUtil.set(au1, au2), new HashSet(mgr.getAllAus()));
+
+    // verify au1's configuration
+    assertEquals(mauauid1, au1.getAuId());
+    MockArchivalUnit mau1 = (MockArchivalUnit)au1;
+    Configuration c1 = mau1.getConfiguration();
+    assertEquals("val1", c1.get(MockPlugin.CONFIG_PROP_1));
+    assertEquals("val2", c1.get(MockPlugin.CONFIG_PROP_2));
+
+    // verify au1's configuration
+    assertEquals(mauauid2, au2.getAuId());
+    MockArchivalUnit mau2 = (MockArchivalUnit)au2;
+    Configuration c2 = mau2.getConfiguration();
+    assertEquals("val1", c2.get(MockPlugin.CONFIG_PROP_1));
+    assertEquals("va.l3", c2.get(MockPlugin.CONFIG_PROP_2));
+
+    assertEquals(au1, mgr.getAuFromId(mauauid1));
+  }
+
+  public void testAuConfigWithGlobalEntryForNonExistentAU() throws Exception {
+    Properties p = new Properties();
+    p.setProperty(p1a3param+BaseArchivalUnit.NEW_CONTENT_CRAWL_KEY, "2d");
+    doConfig(p);
+    MockPlugin mpi = (MockPlugin)mgr.getPlugin(mockPlugKey);
+    // plugin should be registered
+    assertNotNull(mpi);
+    // should have been inited once
+    assertEquals(1, mpi.getInitCtr());
+
+    // get the two archival units
+    ArchivalUnit au1 = mgr.getAuFromId(mauauid1);
+    ArchivalUnit au2 = mgr.getAuFromId(mauauid2);
+
+    assertNotNull("AU1 didn't get created", au1);
+    assertNotNull("AU2 didn't get created", au2);
 
     // verify the plugin's set of all AUs is {au1, au2}
     assertEquals(SetUtil.set(au1, au2), new HashSet(mgr.getAllAus()));
