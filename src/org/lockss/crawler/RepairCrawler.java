@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.48 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: RepairCrawler.java,v 1.49 2005-10-08 02:07:17 troberts Exp $
  */
 
 /*
@@ -163,6 +163,10 @@ public class RepairCrawler extends CrawlerImpl {
 //     crawlStatus.signalCrawlStarted();
     CachedUrlSet cus = au.getAuCachedUrlSet();
 
+    if (!populatePermissionMap()) {
+      return aborted();
+    }
+    
     Iterator it = getStartingUrls();
 
     while (it.hasNext() && !crawlAborted) {
@@ -398,6 +402,12 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   protected void fetchFromPublisher(UrlCacher uc) throws IOException {
+    if (!checkHostPermission(uc.getUrl(), true)) {
+      if (crawlStatus.getCrawlError() == null) {
+        crawlStatus.setCrawlError("No permission to collect " + uc.getUrl());
+      }
+      return;
+    }
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
     }
@@ -413,12 +423,12 @@ public class RepairCrawler extends CrawlerImpl {
     return idMgr;
   }
 
-  public PermissionMap getPermissionMap() {
-    if (permissionMap == null) {
-      populatePermissionMap();
-//      permissionMap = new PermissionMap();
-    }
-    return permissionMap;
-  }
+//  public PermissionMap getPermissionMap() {
+//    if (permissionMap == null) {
+//      populatePermissionMap();
+////      permissionMap = new PermissionMap();
+//    }
+//    return permissionMap;
+//  }
 
 }
