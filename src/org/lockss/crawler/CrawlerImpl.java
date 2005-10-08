@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.47 2005-09-06 22:59:15 troberts Exp $
+ * $Id: CrawlerImpl.java,v 1.48 2005-10-08 02:06:32 troberts Exp $
  */
 
 /*
@@ -208,16 +208,14 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
       // get the permission list from crawl spec
     permissionMap = new PermissionMap();
     List permissionList = spec.getPermissionPages();
-    if (permissionList == null || permissionList.size() == 0){
+    if (permissionList == null || permissionList.size() == 0) {
       logger.error("spec.getPermissionPages() return null list or nothing in the list!");
       crawlStatus.setCrawlError("Nothing in permission list");
       return false;
     }
-
     if (!checkPermissionList(permissionList)){
       return false;
     }
-
     return true;
   }
 
@@ -243,7 +241,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
 // 			    setAttribute(ATTR_TEXT, "Permission page " +
 // 					 permissionPage +
 // 					 " is not within the crawl spec"));
-        logger.warning("Permission page not within CrawlSpec");
+        logger.warning("Permission page not within CrawlSpec: "+permissionPage);
       }
       else if ( (au.getCrawlSpec() != null)
 		&& !au.getCrawlSpec().inCrawlWindow()) {
@@ -365,6 +363,91 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     return true;
   }
 
+  /**
+   * Check the permission map to see if we have permission to crawl the given url.
+   *
+   * @param url the url that we are checking upon.
+   * @param permissionFailedRetry true to refetch permission page if last fetch failed
+   * @return if the url have permission to be crawled
+   */
+  protected boolean checkHostPermission(String url,
+                                        boolean permissionFailedRetry) {
+    int urlPermissionStatus = -1;
+    String urlPermissionUrl = null;
+    logger.debug3("Checking permission for "+url);
+    try {
+      urlPermissionStatus = permissionMap.getStatus(url);
+      urlPermissionUrl = permissionMap.getPermissionUrl(url);
+    } catch (MalformedURLException e) {
+      logger.error("The url is malformed :" + url, e);
+      crawlStatus.setCrawlError("Malformed Url: " + url);
+      //there is no point go to the switch statement with MalformedURLException
+      return false;
+    }
+    boolean printFailedWarning = true;
+    switch (urlPermissionStatus) {
+      case PermissionRecord.PERMISSION_MISSING:
+        logger.warning("No permission page record on host: "+ url);
+        crawlStatus.setCrawlError("No crawl permission page for host of " +
+                                  url );
+        // abort crawl here
+        return false;
+      case PermissionRecord.PERMISSION_OK:
+        return true;
+      case PermissionRecord.PERMISSION_NOT_OK:
+        logger.error("No permission statement is found at: " +
+                     urlPermissionUrl);
+        crawlStatus.setCrawlError("No permission statement at: " + urlPermissionUrl);
+        //abort crawl or skip all the url with this host ?
+        //currently we just ignore urls with this host.
+        return false;
+      case PermissionRecord.PERMISSION_UNCHECKED:
+        //should not be in this state as each permissionPage should be checked in the first iteration
+        logger.warning("permission unchecked on host : "+ urlPermissionUrl);
+        printFailedWarning = false;
+        // fall through, re-fetch permission like FETCH_PERMISSION_FAILED
+      case PermissionRecord.FETCH_PERMISSION_FAILED:
+        if (printFailedWarning) {
+          logger.warning("Failed to fetch permission page on host :" +
+                         urlPermissionUrl);
+        }
+      if (permissionFailedRetry) {
+        //refetch permission page
+        logger.info("refetching permission page: " + urlPermissionUrl);
+        try {
+          permissionMap.putStatus(urlPermissionUrl,
+                                  crawlPermission(urlPermissionUrl));
+        } catch (MalformedURLException e){
+          //XXX can we handle this better by centralizing the check of MalformedURL ?
+          logger.error("Malformed urlPermissionUrl :" + urlPermissionUrl, e);
+          crawlStatus.setCrawlError("MalFormedUrl :" + urlPermissionUrl);
+          return false;
+        }
+        return checkHostPermission(url,false);
+      } else {
+        logger.error("Cannot fetch permission page on the second attempt : " + urlPermissionUrl);
+        crawlStatus.setCrawlError("Cannot fetch permission page on the second attempt :" + urlPermissionUrl);
+        //abort crawl or skip all the url with this host?
+        //currently we just ignore urls with this host.
+        crawlStatus.signalErrorForUrl(urlPermissionUrl,
+                                      "Cannot fetch permission page " +
+        "on the second attempt");
+        return false;
+      }
+    case PermissionRecord.REPOSITORY_ERROR:
+      logger.error("Repository error trying to store : "
+                   + urlPermissionUrl);
+      crawlStatus.setCrawlError("Repository error");
+      crawlStatus.signalErrorForUrl(urlPermissionUrl, "Repository error");
+      return false;
+    default :
+      logger.error("Unknown Permission Status! Something is going wrong!");
+    return false;
+    }
+  }
+  
+
+  
   /**
    * Try to reset the provided input stream, if we can't then return 
    * new input stream for the given url
@@ -504,6 +587,14 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
       populatePermissionMap();
     }
     return permissionMap;
+  }
+  
+  protected boolean aborted() {
+    logger.info("Crawl aborted: "+au);
+    if (crawlStatus.getCrawlError() == null) {
+      crawlStatus.setCrawlError(Crawler.STATUS_INCOMPLETE);
+    }
+    return false;
   }
 
 }
