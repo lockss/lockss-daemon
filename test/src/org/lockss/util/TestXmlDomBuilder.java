@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlDomBuilder.java,v 1.1 2004-02-20 05:27:21 eaalto Exp $
+ * $Id: TestXmlDomBuilder.java,v 1.2 2005-10-08 02:12:10 troberts Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class TestXmlDomBuilder extends LockssTestCase {
 
   public void testGetFormatter() {
     OutputFormat formatter = builder.getFormatter();
-    assertEquals(builder.ENCODING, formatter.getEncoding());
+    assertEquals(XmlDomBuilder.ENCODING, formatter.getEncoding());
     assertEquals(Method.XML, formatter.getMethod());
   }
 

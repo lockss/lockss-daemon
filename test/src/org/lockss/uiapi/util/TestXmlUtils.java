@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlUtils.java,v 1.1 2005-03-02 21:07:28 ssmail Exp $
+ * $Id: TestXmlUtils.java,v 1.2 2005-10-08 02:12:10 troberts Exp $
  */
 
 /*
@@ -200,7 +200,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     assertEquals(nodeList.getLength(), 3);
 
     element = (Element) nodeList.item(2);
-    xmlUtils.addEncodedText(element, PLAIN_TEXT);
+    XmlUtils.addEncodedText(element, PLAIN_TEXT);
 
     text = element.getFirstChild().getNodeValue();
     assertEquals(ENCODED_TEXT, text);
