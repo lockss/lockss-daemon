@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.7 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: TitleSetActiveAus.java,v 1.8 2005-10-08 02:07:58 troberts Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TitleSetActiveAus extends BaseTitleSet {
 
   /** Return a TitleConfig for the AU.  Returns matching entry from the
    * title db if found, else creates one.
-   * @param the AU
+   * @param au the AU
    * @return an existing or synthesized TitleConfig describing the AU */
   TitleConfig titleConfigFromAu(ArchivalUnit au) {
     TitleConfig tc = au.getTitleConfig();

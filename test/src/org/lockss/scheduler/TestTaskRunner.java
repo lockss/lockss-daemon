@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.11 2005-10-05 23:12:40 troberts Exp $
+ * $Id: TestTaskRunner.java,v 1.12 2005-10-08 02:07:58 troberts Exp $
  */
 
 /*
@@ -835,7 +835,7 @@ public class TestTaskRunner extends LockssTestCase {
      * @param nSteps number of steps to execute before isFinished returns
      * true.
      * @param eachStepTime if >0, ms to sleep on each step.  if <0, step
-     * @return some measure of amount of work done.
+     * @returns some measure of amount of work done.
      * simulated time by abs(eachStepTime) on each step.
      */
     MyMockStepper(int nSteps, int eachStepTime) {

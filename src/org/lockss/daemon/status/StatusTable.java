@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.44 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: StatusTable.java,v 1.45 2005-10-08 02:07:58 troberts Exp $
  */
 
 /*
@@ -656,7 +656,7 @@ public class StatusTable {
     
     /**
      * Lookup the column type in the columnDescriptors, store in self
-     * @param columnDescriptors
+     * @param columnDescriptorMap columnDescriptors
      */
     void inferColumnType(Map columnDescriptorMap){
       ColumnDescriptor col =

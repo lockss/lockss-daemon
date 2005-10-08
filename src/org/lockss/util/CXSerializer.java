@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.10 2005-10-07 16:50:21 thib_gc Exp $
+ * $Id: CXSerializer.java,v 1.11 2005-10-08 02:07:58 troberts Exp $
  */
 
 /*
@@ -154,7 +154,7 @@ public class CXSerializer extends ObjectSerializer {
    * <p>See {@link ObjectSerializer#deserialize(File)} for a
    * description of this method's specification.</p>
    * @param inputFile {@inheritDoc}
-   * @throws FileNotFoundexception  {@inheritDoc}
+   * @throws FileNotFoundException  {@inheritDoc}
    * @throws IOException            {@inheritDoc}
    * @throws SerializationException {@inheritDoc}
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusActivityBase.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
+ * $Id: StatusActivityBase.java,v 1.3 2005-10-08 02:07:58 troberts Exp $
  */
 
 /*
@@ -123,7 +123,7 @@ public class StatusActivityBase extends ApiActivityBase
   /**
    * Get daemon uptime
    * @param rootElement Parent element for disk space detail
-   * @return Formatted time since daemon start
+   * @returns Formatted time since daemon start
    */
   protected void renderUptimeXml(Element rootElement) {
     
@@ -258,8 +258,8 @@ public class StatusActivityBase extends ApiActivityBase
   /**
    * Generate a list of Archival Units
    * @param iterator AuProxy list iterator
-   * @param rootElement Parent element for this list
-   * @param name The name for this list (created here)
+   * @param activeElement 
+   * @param inactiveElement
    */
   private void generateAuXml(Iterator iterator, 
                              Element  activeElement, Element inactiveElement) {
