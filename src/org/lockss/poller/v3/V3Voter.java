@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.4 2005-10-10 16:57:22 troberts Exp $
+ * $Id: V3Voter.java,v 1.5 2005-10-10 22:19:48 smorabito Exp $
  */
 
 /*
@@ -55,17 +55,17 @@ import org.lockss.util.*;
 public class V3Voter extends BasePoll {
 
   static String PREFIX = Configuration.PREFIX + "poll.v3.";
-  
+
   /** The minimum number of peers to select for a nomination message.
    * If there are fewer than this number of peers available to nominate,
    * an empty nomination message will be sent. */
   public static String PARAM_MIN_NOMINATION_SIZE = PREFIX + "minNominationSize";
-  public static int DEFAULT_MIN_NOMINATION_SIZE = 0;
+  public static int DEFAULT_MIN_NOMINATION_SIZE = 1;
 
   /** The minimum number of peers to select for a nomination message. */
   public static String PARAM_MAX_NOMINATION_SIZE = PREFIX + "maxNominationSize";
   public static int DEFAULT_MAX_NOMINATION_SIZE = 5;
-  
+
   private V3VoterInterp stateMachine;
   private VoterUserData voterUserData;
   private LockssDaemon theDaemon;
@@ -74,9 +74,9 @@ public class V3Voter extends BasePoll {
   private IdentityManager idManager;
   private boolean continuedPoll = false;
   private int nomineeCount;
-  
+
   private PollTally tally; // XXX: Refactor
-  
+
   private static final LockssRandom theRandom = new LockssRandom();
 
   private static final Logger log = Logger.getLogger("V3Voter");
@@ -101,7 +101,7 @@ public class V3Voter extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.tally = new MockTally(Poll.V3_POLL, TimeBase.nowMs(), duration,
                                0, 0, 0, 0, 0, hashAlg, this);
-    
+
     int min = Configuration.getIntParam(PARAM_MIN_NOMINATION_SIZE,
                                         DEFAULT_MIN_NOMINATION_SIZE);
     int max = Configuration.getIntParam(PARAM_MAX_NOMINATION_SIZE,
@@ -120,7 +120,7 @@ public class V3Voter extends BasePoll {
     log.debug2("Will choose " + nomineeCount +
                " outer circle nominees to send to poller");
   }
-  
+
   /**
    * Restore a V3Voter from a previously saved poll.
    */
@@ -169,10 +169,10 @@ public class V3Voter extends BasePoll {
     pollSerializer.closePoll();
   }
 
-  
+
   /**
    * Generate a random nonce.
-   * 
+   *
    * @return A random array of 20 bytes.
    */
   private byte[] makeVoterNonce() {
@@ -192,7 +192,7 @@ public class V3Voter extends BasePoll {
       throws IOException {
     pollManager.sendMessageTo(msg, id);
   }
-  
+
   /**
    * Handle an incoming V3LcapMessage.
    */
@@ -213,7 +213,7 @@ public class V3Voter extends BasePoll {
       return;
     }
   }
-  
+
   /**
    * Generate a list of outer circle nominees.
    */
@@ -239,12 +239,12 @@ public class V3Voter extends BasePoll {
                   ", only know about " + allPeers.size());
     }
   }
-  
+
   /**
    * Create an array of byte arrays containing hasher initializer bytes for
-   * this voter.  The initializer bytes are constructed by concatenating the 
+   * this voter.  The initializer bytes are constructed by concatenating the
    * voter's poller nonce and voter nonce.
-    * 
+    *
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
@@ -254,7 +254,7 @@ public class V3Voter extends BasePoll {
 
   /**
    * Create the message digester for this voter's hasher.
-   * 
+   *
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
@@ -264,7 +264,7 @@ public class V3Voter extends BasePoll {
     }
     return new MessageDigest[] { MessageDigest.getInstance(hashAlg) };
   }
-  
+
   /**
    * Schedule a hash.
    */
@@ -273,17 +273,17 @@ public class V3Voter extends BasePoll {
     CachedUrlSetHasher hasher = new BlockHasher(voterUserData.getCachedUrlSet(),
                                                 initHasherDigests(),
                                                 initHasherByteArrays(),
-                                                new BlockCompleteHandler());  
+                                                new BlockCompleteHandler());
     HashService hashService = theDaemon.getHashService();
     return hashService.scheduleHash(hasher,
                                     Deadline.at(voterUserData.getDeadline()),
                                     new HashingCompleteCallback(), null);
   }
-  
+
   /**
    * Called by the HashService callback when hashing for this CU is
    * complete.
-   * 
+   *
    * XXX:  Multi-message voting TBD.
    */
   public void hashComplete() {
@@ -297,11 +297,11 @@ public class V3Voter extends BasePoll {
       stateMachine.handleEvent(V3Events.evtWaitVoteRequest);
     }
   }
-  
+
   /*
    * Append the results of the block hasher to the VoteBlocks for this
    * voter.
-   * 
+   *
    * Called by the BlockHasher's event handler callback when hashing is complete
    * for one block.
    */
@@ -343,7 +343,7 @@ public class V3Voter extends BasePoll {
   }
 
   public PollSpec getPollSpec() {
-    return voterUserData.getPollSpec(); 
+    return voterUserData.getPollSpec();
   }
 
   public CachedUrlSet getCachedUrlSet() {
@@ -369,11 +369,11 @@ public class V3Voter extends BasePoll {
   public PollTally getVoteTally() {
     return tally;
   }
-  
+
   private class HashingCompleteCallback implements HashService.Callback {
     /**
      * Called when the timer expires or hashing is complete.
-     * 
+     *
      * @param cookie data supplied by caller to schedule()
      */
     public void hashingFinished(CachedUrlSet cus, Object cookie,
@@ -392,7 +392,7 @@ public class V3Voter extends BasePoll {
       blockHashComplete(block);
     }
   }
-  
+
   // XXX - only used as a stepping stone to get V3Voter working properly with
   // the poll manager.  This should be refactored away in daemon 1.13.
   private static class MockTally extends PollTally {
@@ -422,7 +422,7 @@ public class V3Voter extends BasePoll {
     public BasePoll getPoll() {
       return poll;
     }
-    
+
     public PollSpec getPollSpec() {
       return poll.getPollSpec();
     }
@@ -458,7 +458,7 @@ public class V3Voter extends BasePoll {
     public int getTallyResult() {
       return 0;
     }
-    
+
   }
-  
+
 }

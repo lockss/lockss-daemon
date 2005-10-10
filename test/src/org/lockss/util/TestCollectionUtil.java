@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.8 2003-11-13 19:52:43 troberts Exp $
+ * $Id: TestCollectionUtil.java,v 1.9 2005-10-10 22:19:48 smorabito Exp $
  */
 
 /*
@@ -150,4 +150,39 @@ public class TestCollectionUtil extends LockssTestCase {
     assertDoesNotContain(set, element);
   }
 
+  public void testRandomSelection() throws Exception {
+    Collection all = ListUtil.list("a", "b", "c");
+    // Legal calls.
+    Collection c1 = CollectionUtil.randomSelection(all, 1);
+    assertEquals(1, c1.size());
+    assertTrue(all.containsAll(c1));
+    Collection c2 = CollectionUtil.randomSelection(all, 2);
+    assertEquals(2, c2.size());
+    assertTrue(all.containsAll(c2));
+    Collection c3 = CollectionUtil.randomSelection(all, 3);
+    assertEquals(3, c3.size());
+    assertTrue(all.containsAll(c3));
+    // Illegal calls.
+    try {
+      // Too many!
+      Collection c4 = CollectionUtil.randomSelection(all, 4);
+      fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      ; // expected
+    }
+    try {
+      // Too few!
+      Collection c5 = CollectionUtil.randomSelection(all, 0);
+      fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      ; // expected
+    }
+    try {
+      // Even more too few!
+      Collection c6 = CollectionUtil.randomSelection(all, -1);
+      fail("Expected IllegalArgumentException");
+    } catch (IllegalArgumentException ex) {
+      ; // expected
+    }
+  }
 }

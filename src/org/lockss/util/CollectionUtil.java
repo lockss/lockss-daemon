@@ -1,5 +1,5 @@
 /*
- * $Id: CollectionUtil.java,v 1.10 2005-10-07 23:46:46 smorabito Exp $
+ * $Id: CollectionUtil.java,v 1.11 2005-10-10 22:19:48 smorabito Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class CollectionUtil {
       throw new IllegalArgumentException("Called with null collection");
     } else if (coll.size() == 0) {
       return null;
-    } 
+    }
     Iterator it = coll.iterator();
     Object next = it.next();
     coll.remove(next);
@@ -138,7 +138,7 @@ public class CollectionUtil {
    */
   public static Collection randomSelection(Collection c, int count) {
     if (count <= 0 || count > c.size()) {
-      throw new IllegalArgumentException("'count' must be non-negative "+
+      throw new IllegalArgumentException("'count' must be greater than 0 "+
                                          "and smaller than or equal "+
                                          " to the size of the collection.");
     }
@@ -155,7 +155,7 @@ public class CollectionUtil {
     }
     return result;
   }
-  
+
   /**
    * Randomly select one item from a collection.
    *
@@ -166,5 +166,5 @@ public class CollectionUtil {
     LockssRandom random = new LockssRandom();
     Object[] arr = c.toArray();
     return arr[random.nextInt(arr.length - 1)];
-  } 
+  }
 }
