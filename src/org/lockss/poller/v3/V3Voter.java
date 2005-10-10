@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.3 2005-10-07 23:46:49 smorabito Exp $
+ * $Id: V3Voter.java,v 1.4 2005-10-10 16:57:22 troberts Exp $
  */
 
 /*
@@ -428,7 +428,7 @@ public class V3Voter extends BasePoll {
     }
 
     public void tallyVotes() {
-      ; // do nothing
+      // do nothing
     }
 
     public boolean stateIsActive() {
@@ -444,15 +444,15 @@ public class V3Voter extends BasePoll {
     }
 
     public void setStateSuspended() {
-      ; // do nothing
+      // do nothing
     }
 
     public void replayVoteCheck(Vote vote, Deadline deadline) {
-      ; // do nothing
+      // do nothing
     }
 
     public void adjustReputation(PeerIdentity voterID, int repDelta) {
-      ; // do nothing
+      // do nothing
     }
 
     public int getTallyResult() {
