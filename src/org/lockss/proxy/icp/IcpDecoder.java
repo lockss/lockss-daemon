@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoder.java,v 1.3 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpDecoder.java,v 1.4 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -59,13 +59,13 @@ public interface IcpDecoder {
      * @return An object conforming to {@link IcpDecoder}.
      */
     IcpDecoder makeIcpDecoder();
-    
+
   }
   /*
    * end NESTED INTERFACE
    * ====================
    */
-  
+
   /**
    * <p>Translates the given UDP packet into an {@link IcpMessage}
    * instance.</p>

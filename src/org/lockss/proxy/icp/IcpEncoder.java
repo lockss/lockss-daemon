@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoder.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpEncoder.java,v 1.6 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -58,9 +58,9 @@ public interface IcpEncoder {
      * @see IcpEncoder
      */
     IcpEncoder makeIcpEncoder();
-    
+
   }
-  
+
   /**
    * <p>Equivalent to calling
    * {@link #encode(IcpMessage, IPAddr, int)} with the port
@@ -71,7 +71,7 @@ public interface IcpEncoder {
    */
   DatagramPacket encode(IcpMessage message,
                         IPAddr recipient);
-  
+
   /**
    * <p>Constructs a UDP packet to the given address and port, from
    * the given ICP message argument.</p>
@@ -85,5 +85,5 @@ public interface IcpEncoder {
   DatagramPacket encode(IcpMessage message,
                         IPAddr recipient,
                         int port);
-  
+
 }

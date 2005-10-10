@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactoryImpl.java,v 1.11 2005-10-07 16:50:21 thib_gc Exp $
+ * $Id: IcpFactoryImpl.java,v 1.12 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * @author Thib Guicherd-Callin
  */
 public class IcpFactoryImpl implements IcpFactory {
-  
+
   /*
    * begin STATIC NESTED CLASS
    * =========================
@@ -59,7 +59,7 @@ public class IcpFactoryImpl implements IcpFactory {
     /* Inherit documentation */
     public IcpMessage makeDenied(IcpMessage query)
         throws IcpProtocolException {
-      if (!query.isQuery()) { 
+      if (!query.isQuery()) {
         throw new IcpProtocolException(
             "ICP_OP_DENIED is a response to ICP_OP_QUERY");
       }
@@ -72,16 +72,16 @@ public class IcpFactoryImpl implements IcpFactory {
                                 ZERO_ADDRESS,
                                 query.getPayloadUrl());
     }
-    
+
     /* Inherit documentation */
     public IcpMessage makeDiscoveryEcho(String query) {
       return null; // Unimplemented
     }
-    
+
     /* Inherit documentation */
     public IcpMessage makeError(IcpMessage query)
         throws IcpProtocolException {
-      if (!query.isQuery()) { 
+      if (!query.isQuery()) {
         throw new IcpProtocolException(
             "ICP_OP_ERR is a response to ICP_OP_QUERY");
       }
@@ -190,10 +190,10 @@ public class IcpFactoryImpl implements IcpFactory {
 
     /* Inherit documentation */
     public IcpMessage makeMiss(IcpMessage query)
-        throws IcpProtocolException { 
+        throws IcpProtocolException {
       if (!query.isQuery()) {
         throw new IcpProtocolException(
-            "ICP_OP_MISS is a response to ICP_OP_QUERY"); 
+            "ICP_OP_MISS is a response to ICP_OP_QUERY");
       }
       return new IcpMessageImpl(IcpMessage.ICP_OP_MISS,
                                 IcpMessage.ICP_VERSION,
@@ -211,7 +211,7 @@ public class IcpFactoryImpl implements IcpFactory {
         throws IcpProtocolException {
       if (!query.isQuery()) {
         throw new IcpProtocolException(
-            "ICP_OP_MISS is a response to ICP_OP_QUERY"); 
+            "ICP_OP_MISS is a response to ICP_OP_QUERY");
       }
       if (!query.requestsSrcRtt()) {
         throw new IcpProtocolException(
@@ -222,7 +222,7 @@ public class IcpFactoryImpl implements IcpFactory {
                                 (short)(query.getLength() - 4),
                                 query.getRequestNumber(),
                                 IcpMessage.ICP_FLAG_SRC_RTT,
-                                (int)srcRttResponse, 
+                                (int)srcRttResponse,
                                 ZERO_ADDRESS,
                                 query.getPayloadUrl());
     }
@@ -232,7 +232,7 @@ public class IcpFactoryImpl implements IcpFactory {
         throws IcpProtocolException {
       if (!query.isQuery()) {
         throw new IcpProtocolException(
-            "ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY"); 
+            "ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY");
       }
       return new IcpMessageImpl(IcpMessage.ICP_OP_MISS_NOFETCH,
                                 IcpMessage.ICP_VERSION,
@@ -250,7 +250,7 @@ public class IcpFactoryImpl implements IcpFactory {
         throws IcpProtocolException {
       if (!query.isQuery()) {
         throw new IcpProtocolException(
-            "ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY"); 
+            "ICP_OP_MISS_NOFETCH is a response to ICP_OP_QUERY");
       }
       if (!query.requestsSrcRtt()) {
         throw new IcpProtocolException(
@@ -333,13 +333,13 @@ public class IcpFactoryImpl implements IcpFactory {
     private static int getNewRequestNumber() {
       return requestNumberCounter++;
     }
-    
+
   }
   /*
    * end STATIC NESTED CLASS
    * =======================
    */
-  
+
   /*
    * begin STATIC NESTED CLASS
    * =========================
@@ -349,7 +349,7 @@ public class IcpFactoryImpl implements IcpFactory {
    * @author Thib Guicherd-Callin
    */
   private static class IcpDecoderImpl implements IcpDecoder {
-  
+
     public IcpMessage parseIcp(DatagramPacket packet)
         throws IcpProtocolException {
 
@@ -367,7 +367,7 @@ public class IcpFactoryImpl implements IcpFactory {
       byte[] payloadObject = null;
       IcpMessage ret = null;
       ByteBuffer in = ByteBuffer.wrap(packet.getData());
-      
+
       try {
         // Unconditional processing
         opcode = in.get(IcpUtil.OFFSET_BYTE_OPCODE);
@@ -383,7 +383,7 @@ public class IcpFactoryImpl implements IcpFactory {
         options = in.getInt(IcpUtil.OFFSET_INT_OPTIONS);
         optionData = in.getInt(IcpUtil.OFFSET_INT_OPTIONDATA);
         sender = getIpFromStream(in, IcpUtil.OFFSET_INT_SENDER);
-        
+
         switch (opcode) {
           // ... QUERY
           case IcpMessage.ICP_OP_QUERY:
@@ -439,7 +439,7 @@ public class IcpFactoryImpl implements IcpFactory {
                                      payloadUrl);
             break;
         }
-        
+
         // Set UDP info
         ret.setUdpAddress(new IPAddr(packet.getAddress()));
         ret.setUdpPort(packet.getPort());
@@ -453,7 +453,7 @@ public class IcpFactoryImpl implements IcpFactory {
             "Error while decoding ICP packet", exc);
       }
     }
-    
+
     /**
      * <p>Reads an IP address from the given stream.</p>
      * @param in     A byte buffer.
@@ -478,7 +478,7 @@ public class IcpFactoryImpl implements IcpFactory {
             "Error while parsing IP from byte buffer", exc);
       }
     }
-    
+
     /**
      * <p>Reads a null-terminated URL from the given stream (and
      * consumes the null byte).</p>
@@ -510,7 +510,7 @@ public class IcpFactoryImpl implements IcpFactory {
    * end STATIC NESTED CLASS
    * =======================
    */
-  
+
   /*
    * begin STATIC NESTED CLASS
    * =========================
@@ -520,24 +520,24 @@ public class IcpFactoryImpl implements IcpFactory {
    * @author Thib Guicherd-Callin
    */
   private static class IcpEncoderImpl implements IcpEncoder {
-    
+
     /* Inherit documentation */
     public DatagramPacket encode(IcpMessage message,
                                  IPAddr recipient) {
       return encode(message, recipient, IcpMessage.ICP_PORT);
     }
-    
+
     /* Inherit documentation */
     public DatagramPacket encode(IcpMessage message,
                                  IPAddr recipient,
                                  int port) {
       byte[] rawBytes;
-      
+
       try {
         int length = IcpUtil.computeLength(message);
         ByteBuffer out =
-          ByteBuffer.allocate(length); 
-        
+          ByteBuffer.allocate(length);
+
         // Write out header
         out.put(IcpUtil.OFFSET_BYTE_OPCODE, message.getOpcode());
         out.put(IcpUtil.OFFSET_BYTE_VERSION, message.getVersion());
@@ -549,7 +549,7 @@ public class IcpFactoryImpl implements IcpFactory {
         for (int off = 0 ; off < 4 ; ++off) {
           out.put(IcpUtil.OFFSET_INT_SENDER + off, rawBytes[off]);
         }
-        
+
         // Write out payload
         final int OFFSET_PAYLOAD;
         if (message.isQuery()) {
@@ -576,9 +576,9 @@ public class IcpFactoryImpl implements IcpFactory {
           out.putShort(OFFSET_SHORT_PAYLOADLENGTH, (short)rawBytes.length);
           for (int off = 0 ; off < rawBytes.length ; ++off) {
             out.put(OFFSET_PAYLOADOBJECT + off, rawBytes[off]);
-          }            
+          }
         }
-        
+
         // Make datagram
         rawBytes = out.array();
         return new DatagramPacket(rawBytes, 0, rawBytes.length,
@@ -588,13 +588,13 @@ public class IcpFactoryImpl implements IcpFactory {
         return null;
       }
     }
-    
+
   }
   /*
    * end STATIC NESTED CLASS
    * =======================
    */
-  
+
   /*
    * begin STATIC NESTED CLASS
    * =========================
@@ -629,7 +629,7 @@ public class IcpFactoryImpl implements IcpFactory {
      * <p>A payload object field.</p>
      */
     private byte[] payloadObject;
-    
+
     /**
      * <p>A payload length field, which may be different from
      * <code>payloadObject.length</code>.</p>
@@ -660,7 +660,7 @@ public class IcpFactoryImpl implements IcpFactory {
      * <p>A UDP sender field.</p>
      */
     private IPAddr udpAddress;
-    
+
     /**
      * <p>A UDP port field.</p>
      */
@@ -783,12 +783,12 @@ public class IcpFactoryImpl implements IcpFactory {
     public boolean containsSrcRttResponse() {
       return isResponse() && ((getOptions() & ICP_FLAG_SRC_RTT) != 0);
     }
-    
+
     /* Inherit documentation */
     public short getLength() {
       return length;
     }
-    
+
     /* Inherit documentation */
     public byte getOpcode() {
       return opcode;
@@ -808,7 +808,7 @@ public class IcpFactoryImpl implements IcpFactory {
     public byte[] getPayloadObject() {
       return (getOpcode() == ICP_OP_HIT_OBJ) ? payloadObject : null;
     }
-    
+
     /* Inherit documentation */
     public short getPayloadObjectLength() {
       return (getOpcode() == ICP_OP_HIT_OBJ) ? payloadObjectLength : (short)0;
@@ -828,7 +828,7 @@ public class IcpFactoryImpl implements IcpFactory {
     public int getRequestNumber() {
       return requestNumber;
     }
-    
+
     /* Inherit documentation */
     public IPAddr getSender() {
       return sender;
@@ -840,15 +840,15 @@ public class IcpFactoryImpl implements IcpFactory {
         return (short)(getOptionData() & 0x0000ffff);
       }
       else {
-        return (short)0;        
+        return (short)0;
       }
     }
-    
+
     /* Inherit documentation */
     public IPAddr getUdpAddress() {
       return udpAddress;
     }
-    
+
     /* Inherit documentation */
     public int getUdpPort() {
       return udpPort;
@@ -872,7 +872,7 @@ public class IcpFactoryImpl implements IcpFactory {
              || opcode == ICP_OP_MISS
              || opcode == ICP_OP_MISS_NOFETCH;
     }
-    
+
     /* Inherit documentation */
     public boolean requestsHitObj() {
       return isQuery() && (getOptions() & ICP_FLAG_HIT_OBJ) != 0;
@@ -917,7 +917,7 @@ public class IcpFactoryImpl implements IcpFactory {
       buffer.append(";requestsHitObj=");
       buffer.append(Boolean.toString(requestsHitObj()));
       buffer.append(";containsSrcRttResponse=");
-      buffer.append(Boolean.toString(containsSrcRttResponse()));    
+      buffer.append(Boolean.toString(containsSrcRttResponse()));
       buffer.append(";optionData=");
       buffer.append(Integer.toHexString(getOptionData()));
       buffer.append(";srcRttResponse=");
@@ -936,13 +936,13 @@ public class IcpFactoryImpl implements IcpFactory {
       buffer.append("]");
       return buffer.toString();
     }
-    
+
   }
   /*
    * end STATIC NESTED CLASS
    * =======================
    */
-  
+
   /**
    * <p>Cannot instantiate instances of this class; use static methods
    * instead to obtain service.</p>
@@ -952,7 +952,7 @@ public class IcpFactoryImpl implements IcpFactory {
    * @see #makeIcpFactory
    */
   private IcpFactoryImpl() {}
-  
+
   /* Inherit documentation */
   public synchronized IcpBuilder makeIcpBuilder() {
     if (singletonBuilder == null) {
@@ -968,7 +968,7 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     return singletonDecoder;
   }
-  
+
   /* Inherit documentation */
   public synchronized IcpEncoder makeIcpEncoder() {
     if (singletonEncoder == null) {
@@ -981,12 +981,12 @@ public class IcpFactoryImpl implements IcpFactory {
    * <p>A singleton instance of {@link IcpFactoryImpl}.</p>
    */
   private static IcpFactory singleton;
-  
+
   /**
    * <p>A singleton instance of {@link IcpBuilderImpl}.</p>
    */
   private static IcpBuilder singletonBuilder;
-  
+
   /**
    * <p>A singleton instance of {@link IcpDecoderImpl}.</p>
    */
@@ -1004,7 +1004,7 @@ public class IcpFactoryImpl implements IcpFactory {
   public static IcpBuilder.Factory makeBuilderFactory() {
     return makeSingleton();
   }
-  
+
   /**
    * <p>Gets an instance of type {@link IcpDecoder.Factory}.</p>
    * @return An ICP decoder factory.
@@ -1012,7 +1012,7 @@ public class IcpFactoryImpl implements IcpFactory {
   public static IcpDecoder.Factory makeDecoderFactory() {
     return makeSingleton();
   }
-  
+
   /**
    * <p>Gets an instance of type {@link IcpEncoder}.</p>
    * @return An ICP encoder factory.
@@ -1020,7 +1020,7 @@ public class IcpFactoryImpl implements IcpFactory {
   public static IcpEncoder.Factory makeEncoderFactory() {
     return makeSingleton();
   }
-  
+
   /**
    * <p>Gets an instance of type {@link IcpFactory}.</p>
    * @return An ICP factory.
@@ -1039,5 +1039,5 @@ public class IcpFactoryImpl implements IcpFactory {
     }
     return singleton;
   }
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpProtocolException.java,v 1.2 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpProtocolException.java,v 1.3 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -54,10 +54,10 @@ public class IcpProtocolException extends ProtocolException {
     super(message);
     initCause(cause);
   }
-  
+
   public IcpProtocolException(Throwable cause) {
     super();
     initCause(cause);
-  } 
-  
+  }
+
 }

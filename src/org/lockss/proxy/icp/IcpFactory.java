@@ -1,5 +1,5 @@
 /*
- * $Id: IcpFactory.java,v 1.4 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpFactory.java,v 1.5 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -43,5 +43,5 @@ public interface IcpFactory
             IcpEncoder.Factory {
 
   // no new methods
-  
+
 }

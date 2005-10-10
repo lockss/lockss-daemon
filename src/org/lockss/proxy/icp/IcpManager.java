@@ -1,5 +1,5 @@
 /*
- * $Id: IcpManager.java,v 1.9 2005-09-20 23:02:39 thib_gc Exp $
+ * $Id: IcpManager.java,v 1.10 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -60,17 +60,17 @@ public class IcpManager
    * <p>An ICP socket.</p>
    */
   protected IcpSocketImpl icpSocket;
-  
+
   /**
    * <p>An ICP builder.</p>
    */
   private IcpBuilder icpBuilder;
-  
+
   /**
    * <p>An ICP factory.</p>
    */
   private IcpFactory icpFactory;
-  
+
   /**
    * <p>A rate limiter for use by the ICP socket.</p>
    */
@@ -80,7 +80,7 @@ public class IcpManager
    * <p>A reference to the plugin manager.</p>
    */
   private PluginManager pluginManager;
-  
+
   /**
    * <p>A reference port number.</p>
    */
@@ -90,12 +90,12 @@ public class IcpManager
    * <p>A reference to the proxy manager.</p>
    */
   private ProxyManager proxyManager;
-  
+
   /**
    * <p>A reference to the resource manager.</p>
    */
   private ResourceManager resourceManager;
-  
+
   /**
    * <p>A UDP socket for use by the ICP socket.</p>
    */
@@ -110,7 +110,7 @@ public class IcpManager
   public int getCurrentPort() {
     return isIcpServerRunning() ? port : -1;
   }
-  
+
   /**
    * <p>Returns a rate limiter governing the acceptable reception rate
    * of ICP messages.</p>
@@ -128,7 +128,7 @@ public class IcpManager
           // Prepare response
           if (!proxyManager.isIpAuthorized(message.getUdpAddress().getHostAddress())) {
             logger.debug2("Response: DENIED");
-            response = icpBuilder.makeDenied(message);          
+            response = icpBuilder.makeDenied(message);
           }
           else {
             String urlString = message.getPayloadUrl();
@@ -156,7 +156,7 @@ public class IcpManager
             return;
           }
         }
-        
+
         // Send response
         try {
           icpSocket.send(response, message.getUdpAddress(), message.getUdpPort());
@@ -184,18 +184,18 @@ public class IcpManager
   public boolean isIcpServerRunning() {
     return icpSocket != null && icpSocket.isRunning();
   }
-  
+
   /* Inherit documentation */
   public void setConfig(Configuration newConfig,
                         Configuration prevConfig,
                         Differences changedKeys) {
-    
+
     // ICP rate limiter
     if (changedKeys.contains(PARAM_ICP_INCOMING_RATE)) {
       limiter = RateLimiter.getConfiguredRateLimiter(newConfig,
           limiter, PARAM_ICP_INCOMING_RATE, DEFAULT_ICP_INCOMING_RATE);
     }
-    
+
     // ICP enabled/disabled and ICP port
     if (   changedKeys.contains(PARAM_ICP_ENABLED)
         || changedKeys.contains(PARAM_ICP_PORT)) {
@@ -239,10 +239,10 @@ public class IcpManager
         logger.error("Could not reserve UDP port " + port);
         throw new SocketException();
       }
-        
+
       udpSocket = new DatagramSocket(port);
       icpFactory = IcpFactoryImpl.makeIcpFactory();
-      icpBuilder = icpFactory.makeIcpBuilder(); 
+      icpBuilder = icpFactory.makeIcpBuilder();
       icpSocket = new IcpSocketImpl("IcpSocketImpl",
                                     udpSocket,
                                     icpFactory.makeIcpEncoder(),
@@ -260,7 +260,7 @@ public class IcpManager
       logger.error("Could not start ICP socket", se);
     }
   }
-  
+
   /**
    * <p>Stops the ICP socket.</p>
    */
@@ -277,7 +277,7 @@ public class IcpManager
    * <p>Sets several internals to null.</p>
    */
   private void forget() {
-    icpBuilder = null; 
+    icpBuilder = null;
     icpFactory = null;
     icpSocket = null;
     resourceManager = null;
@@ -289,18 +289,18 @@ public class IcpManager
    * <p>The default ICP enabled flag.</p>
    */
   public static final boolean DEFAULT_ICP_ENABLED = false;
-  
+
   /**
    * <p>The default ICP port.</p>
    */
   public static final int DEFAULT_ICP_PORT = IcpMessage.ICP_PORT;
-  
+
   /**
    * <p>The ICP enabled flag parameter.</p>
    */
   public static final String PARAM_ICP_ENABLED =
     "org.lockss.proxy.icp.enabled";
-  
+
   /**
    * <p>The ICP port parameter.</p>
    */
@@ -317,11 +317,11 @@ public class IcpManager
    */
   private static final String DEFAULT_ICP_INCOMING_RATE =
     "50/1s";
-  
+
   /**
    * <p>The ICP rate-limiting string parameter.</p>
    */
   private static final String PARAM_ICP_INCOMING_RATE =
   "org.lockss.proxy.icp.incomingRequestsPerSecond";
-  
+
 }

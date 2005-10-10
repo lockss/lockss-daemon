@@ -1,5 +1,5 @@
 /*
- * $Id: IcpMessage.java,v 1.4 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpMessage.java,v 1.5 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -111,7 +111,7 @@ public interface IcpMessage {
    * @see #getPayloadObjectLength
    */
   public byte[] getPayloadObject();
-  
+
   /**
    * <p>If this message has a hit-object opcode, retrieves this
    * message's hit object length field.</p>
@@ -183,7 +183,7 @@ public interface IcpMessage {
    * @see #getUdpPort
    */
   public IPAddr getUdpAddress();
-  
+
   /**
    * <p>Retrieves the port from which this message's sender sent the
    * UDP packet.</p>
@@ -213,7 +213,7 @@ public interface IcpMessage {
    * @see #ICP_FLAG_HIT_OBJ
    */
   public boolean requestsHitObj();
-  
+
   /**
    * <p>If this message is a query, determines if this message
    * has the source return time trip bit set.</p>
@@ -223,7 +223,7 @@ public interface IcpMessage {
    * @see #ICP_FLAG_SRC_RTT
    */
   public boolean requestsSrcRtt();
-  
+
   /**
    * <p>Sets this message's self-reported UDP sender address.</p>
    * <p>This method should only be called when UDP packets are
@@ -231,7 +231,7 @@ public interface IcpMessage {
    * @param udpAddress An IP address.
    */
   public void setUdpAddress(IPAddr udpAddress);
-  
+
   /**
    * <p>Sets this message's self-reported UDP port number.</p>
    * <p>This method should only be called when UDP packets are
@@ -251,7 +251,7 @@ public interface IcpMessage {
    * @see #ICP_OP_QUERY
    */
   boolean isQuery();
-  
+
   /**
    * <p>Determines if this message is an ICP response.</p>
    * <p>An ICP message is an ICP response if and only if its opcode is
@@ -324,7 +324,7 @@ public interface IcpMessage {
    * <p>The query opcode.</p>
    */
   static final byte ICP_OP_QUERY = 1;
-  
+
   /**
    * <p>The source echo opcode.</p>
    */
@@ -339,10 +339,10 @@ public interface IcpMessage {
    * <p>The version of ICP reflected by this interface.</p>
    */
   static final byte ICP_VERSION = 2;
-  
+
   /**
    * <p>The maximum length of an ICP packet.</p>
    */
   static final int MAX_LENGTH = 1450;
-  
+
 }

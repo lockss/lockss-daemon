@@ -1,5 +1,5 @@
 /*
- * $Id: IcpSender.java,v 1.3 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpSender.java,v 1.4 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.util.IPAddr;
 public interface IcpSender {
 
   /**
-   * <p>Sends the given message to the recipient, on the default ICP 
+   * <p>Sends the given message to the recipient, on the default ICP
    * port.</p>
    * @param message   An ICP message.
    * @param recipient A recipient address.
@@ -55,7 +55,7 @@ public interface IcpSender {
   void send(IcpMessage message,
             IPAddr recipient)
       throws IOException;
-  
+
   /**
    * <p>Sned the given message to the recipient.</p>
    * @param message   An ICP message.
@@ -67,5 +67,5 @@ public interface IcpSender {
             IPAddr recipient,
             int port)
       throws IOException;
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpReceiver.java,v 1.2 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: IcpReceiver.java,v 1.3 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -44,17 +44,17 @@ public interface IcpReceiver {
    * @param handler An ICP handler.
    */
   void addIcpHandler(IcpHandler handler);
-  
+
   /**
    * <p>Unregisters an ICP handler if it is registered.</p>
    * @param handler An ICP handler.
    */
   void removeIcpHandler(IcpHandler handler);
-  
+
   /**
    * <p>Determines the number of currently registered handlers.</p>
    * @return The number of ICP handlers registered with this class.
    */
   int countIcpHandlers();
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilder.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpBuilder.java,v 1.6 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -60,13 +60,13 @@ public interface IcpBuilder {
      * @return An object conforming to {@link IcpBuilder}.
      */
     IcpBuilder makeIcpBuilder();
-    
+
   }
   /*
    * end NESTED INTERFACE
    * ====================
    */
-  
+
   /**
    * <p>Produces a denied message in response to a query.</p>
    * @param query The ICP query.
@@ -77,7 +77,7 @@ public interface IcpBuilder {
    */
   IcpMessage makeDenied(IcpMessage query)
       throws IcpProtocolException;
-  
+
   /**
    * <p>Produces an ICP source-echo message.</p>
    * @param query A URL query.
@@ -105,7 +105,7 @@ public interface IcpBuilder {
    */
   IcpMessage makeHit(IcpMessage query)
       throws IcpProtocolException;
-  
+
   /**
    * <p>Produces a hit response to a query, with the given source
    * return trip time.</p>
@@ -120,7 +120,7 @@ public interface IcpBuilder {
   IcpMessage makeHit(IcpMessage query,
                      short srcRttResponse)
       throws IcpProtocolException;
-  
+
   /**
    * <p>Produces a hit-object response to a query using the given
    * array of bytes.</p>
@@ -129,7 +129,7 @@ public interface IcpBuilder {
    * @return A hit-object response based on the query.
    * @throws IcpProtocolException if the argument message is not a
    *                              query.
-   * @throws NullPointerException if payloadObject is null. 
+   * @throws NullPointerException if payloadObject is null.
    */
   IcpMessage makeHitObj(IcpMessage query,
                         byte[] payloadObject)
@@ -146,7 +146,7 @@ public interface IcpBuilder {
    *                              query, or if the query did not
    *                              request a source return trip time
    *                              response.
-   * @throws NullPointerException if payloadObject is null. 
+   * @throws NullPointerException if payloadObject is null.
    */
   IcpMessage makeHitObj(IcpMessage query,
                         short srcRttResponse,
@@ -162,7 +162,7 @@ public interface IcpBuilder {
    */
   IcpMessage makeMiss(IcpMessage query)
       throws IcpProtocolException;
-  
+
   /**
    * <p>Produces a miss response to a query, with the given source
    * return trip time.</p>
@@ -177,7 +177,7 @@ public interface IcpBuilder {
   IcpMessage makeMiss(IcpMessage query,
                       short srcRttResponse)
       throws IcpProtocolException;
-  
+
   /**
    * <p>Produces a miss-no-fectch response to a query.</p>
    * @param query The ICP query.
@@ -214,7 +214,7 @@ public interface IcpBuilder {
    */
   IcpMessage makeQuery(IPAddr requesterAddress,
                        String query);
-  
+
   /**
    * <p>Produces an ICP query using the given URL, with optional
    * parameters.</p>
@@ -229,12 +229,12 @@ public interface IcpBuilder {
                        String query,
                        boolean requestSrcRtt,
                        boolean requestHitObj);
-  
+
   /**
    * <p>Produces an ICP source-echo message.</p>
    * @param query A URL query.
    * @return A source-echo message.
    */
   IcpMessage makeSourceEcho(String query);
-  
+
 }

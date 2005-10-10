@@ -1,5 +1,5 @@
 /*
- * $Id: IcpUtil.java,v 1.3 2005-10-05 19:42:01 thib_gc Exp $
+ * $Id: IcpUtil.java,v 1.4 2005-10-10 16:34:39 thib_gc Exp $
  */
 
 /*
@@ -47,12 +47,12 @@ public class IcpUtil {
    * <p>The byte offset of the version field.</p>
    */
   public static final int OFFSET_BYTE_VERSION = 1;
-  
+
   /**
    * <p>The byte offset of the options field.</p>
    */
   public static final int OFFSET_INT_OPTIONS = 8;
-  
+
   /**
    * <p>The byte offset of the option data field.</p>
    */
@@ -69,29 +69,29 @@ public class IcpUtil {
    * <p>The byte offset of the request number field.</p>
    */
   public static final int OFFSET_INT_REQUESTNUMBER = 4;
-  
+
   /**
    * <p>The byte offset of the sender field.</p>
    */
   public static final int OFFSET_INT_SENDER = 16;
-  
+
   /**
    * <p>The byte offset of the payload field, when the ICP message is
    * not a query.</p>
    */
   public static final int OFFSET_PAYLOAD_NONQUERY = 20;
-  
+
   /**
    * <p>The byte offset of the payload field, when the ICP message is
    * a query.</p>
    */
   public static final int OFFSET_PAYLOAD_QUERY = 24;
-  
+
   /**
    * <p>The byte offset of the length field.</p>
    */
   public static final int OFFSET_SHORT_LENGTH = 2;
-  
+
   /**
    * <p>An array of valid RFC2186 opcode, for fast lookup.</p>
    * @see #isValidOpcode
@@ -120,9 +120,9 @@ public class IcpUtil {
     false,
     true,  // 21: ICP_OP_MISS_NOFETCH
     true,  // 22: ICP_OP_DENIED
-    true   // 23: ICP_OP_HIT_OBJ 
+    true   // 23: ICP_OP_HIT_OBJ
   };
-  
+
   /**
    * <p>Computes the number of bytes corresponding to a given ICP
    * message.</p>
@@ -142,7 +142,7 @@ public class IcpUtil {
     }
     return (short)result;
   }
-  
+
   /**
    * <p>Determines if an opcode is meaningful.</p>
    * @param opcode A potential opcode.
@@ -158,9 +158,9 @@ public class IcpUtil {
       return false;
     }
   }
-  
+
   public static int stringLength(String str) {
     return str.toCharArray().length;
   }
-  
+
 }
