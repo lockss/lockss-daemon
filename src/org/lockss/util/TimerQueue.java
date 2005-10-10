@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.25 2005-07-30 04:30:29 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.26 2005-10-10 23:24:17 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -157,7 +157,7 @@ public class TimerQueue {
 
   public void stop() {
     if (timerThread != null) {
-      log.info("Stopping thread");
+      log.debug("Stopping thread");
       timerThread.stopTimer();
       timerThread = null;
     }
@@ -166,7 +166,7 @@ public class TimerQueue {
   // tk add watchdog
   synchronized void startOrKickThread() {
     if (timerThread == null) {
-      log.info("Starting thread");
+      log.debug("Starting thread");
       timerThread = new TimerThread("TimerQ");
       timerThread.start();
       timerThread.waitRunning();
