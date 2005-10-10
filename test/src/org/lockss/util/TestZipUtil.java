@@ -1,5 +1,5 @@
 /*
- * $Id: TestZipUtil.java,v 1.1 2005-07-18 07:55:30 tlipkis Exp $
+ * $Id: TestZipUtil.java,v 1.2 2005-10-10 23:25:26 tlipkis Exp $
  */
 
 /*
@@ -122,7 +122,7 @@ public class TestZipUtil extends LockssTestCase {
     map.put("a/b/foo", "xxx");
     map.put("a/b/bar", "yyy");
     File zip = makeZip(map);
-    File dir = FileUtil.createTempDir("foo", "");
+    File dir = getTempDir();
     ZipUtil.unzip(zip, dir);
     assertSameElements(ListUtil.list("foo", "a"),
 		       ListUtil.fromArray(dir.list()));
@@ -140,7 +140,7 @@ public class TestZipUtil extends LockssTestCase {
     Map map = new HashMap();
     map.put("/foo", "bar");
     File zip = makeZip(map);
-    File dir = FileUtil.createTempDir("foo", "");
+    File dir = getTempDir();
     try {
       ZipUtil.unzip(zip, dir);
       fail("unzip() with absolute path should throw");
@@ -153,7 +153,7 @@ public class TestZipUtil extends LockssTestCase {
     Map map = new HashMap();
     map.put("foo/../../x", "bar");
     File zip = makeZip(map);
-    File dir = FileUtil.createTempDir("foo", "");
+    File dir = getTempDir();
     try {
       ZipUtil.unzip(zip, dir);
       fail("unzip() with dir traversal attack should throw");

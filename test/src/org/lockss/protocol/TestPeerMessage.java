@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerMessage.java,v 1.3 2005-05-26 08:33:13 tlipkis Exp $
+ * $Id: TestPeerMessage.java,v 1.4 2005-10-10 23:25:26 tlipkis Exp $
  */
 
 /*
@@ -234,6 +234,8 @@ public class TestPeerMessage extends LockssTestCase {
   }
 
   public static class FileMsg extends TestPeerMessage {
+    private List msgs = new ArrayList();
+
     public FileMsg(String name) {
       super(name);
     }
@@ -241,12 +243,21 @@ public class TestPeerMessage extends LockssTestCase {
       final File tmpdir = getTempDir();
       setUp(new PeerMessage.Factory() {
 	  public PeerMessage newPeerMessage() {
-	    return new FilePeerMessage(tmpdir);
+	    FilePeerMessage msg = new FilePeerMessage(tmpdir);
+	    msgs.add(msg);
+	    return msg;
 	  }
 	  public PeerMessage newPeerMessage(int size) {
-	    return new FilePeerMessage(tmpdir);
+	    return newPeerMessage();
 	  }});
     }
+    public void tearDown() throws Exception {
+      for (Iterator iter = msgs.iterator(); iter.hasNext(); ) {
+	((FilePeerMessage)iter.next()).delete();
+      }
+      super.tearDown();
+    }
+
     public void testDeleteFile() throws Exception {
       String s1 = "01\0003456789abcdefghijklmnopq";
       FilePeerMessage pm1 = (FilePeerMessage)makePeerMessage(1, s1);

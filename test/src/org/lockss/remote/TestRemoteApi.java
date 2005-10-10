@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.12 2005-10-07 23:43:32 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.13 2005-10-10 23:25:26 tlipkis Exp $
  */
 
 /*
@@ -497,29 +497,33 @@ public class TestRemoteApi extends LockssTestCase {
     assertEntry(p2, bas, auid2);
 
     RemoteApi.BackupInfo bi = bas.getBackupInfo();
-    assertNotNull(bi);
-    assertNotNull(bi.getAuDir(auid1));
-    assertNotNull(bi.getAuDir(auid2));
+    try {
+      assertNotNull(bi);
+      assertNotNull(bi.getAuDir(auid1));
+      assertNotNull(bi.getAuDir(auid2));
 
-    Configuration addConfig = ConfigManager.newConfiguration(); 
+      Configuration addConfig = ConfigManager.newConfiguration(); 
 
-    for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
-      RemoteApi.BatchAuStatus.Entry ent =
-	(RemoteApi.BatchAuStatus.Entry)iter.next();
-      String auid = ent.getAuId();
-      String prefix = PluginManager.PARAM_AU_TREE + "." +
-	PluginManager.configKeyFromAuId(auid);
-      addConfig.addAsSubTree(ent.getConfig(), prefix);
-    }
+      for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
+	RemoteApi.BatchAuStatus.Entry ent =
+	  (RemoteApi.BatchAuStatus.Entry)iter.next();
+	String auid = ent.getAuId();
+	String prefix = PluginManager.PARAM_AU_TREE + "." +
+	  PluginManager.configKeyFromAuId(auid);
+	addConfig.addAsSubTree(ent.getConfig(), prefix);
+      }
     
-    idMgr.resetAgreeMap();
-    RemoteApi.BatchAuStatus addedbas = rapi.batchAddAus(false, addConfig, bi);
-    ArchivalUnit au1 = mpm.getAuFromId(auid1);
-    assertNotNull(au1);
-    assertEquals("zippity agree map 1", idMgr.getAgreeMap(au1));
-    ArchivalUnit au2 = mpm.getAuFromId(auid2);
-    assertNotNull(au2);
-    assertEquals("doodah agree map 2", idMgr.getAgreeMap(au2));
+      idMgr.resetAgreeMap();
+      RemoteApi.BatchAuStatus addedbas = rapi.batchAddAus(false, addConfig, bi);
+      ArchivalUnit au1 = mpm.getAuFromId(auid1);
+      assertNotNull(au1);
+      assertEquals("zippity agree map 1", idMgr.getAgreeMap(au1));
+      ArchivalUnit au2 = mpm.getAuFromId(auid2);
+      assertNotNull(au2);
+      assertEquals("doodah agree map 2", idMgr.getAgreeMap(au2));
+    } finally {
+      bi.delete();
+    }
   }
 
   // ensure that we buffer up enough to reset the stream after checking the
@@ -686,21 +690,25 @@ public class TestRemoteApi extends LockssTestCase {
     rapi.sendMailBackup();
     MockMailService.Rec rec = mgr.getRec(0);
     MimeMessage msg = (MimeMessage)rec.getMsg();
-    assertNotNull(msg);
-    assertEquals("LOCKSS cache lockss42.example.com <foo@bar>",
-		 msg.getHeader("From"));
-    assertEquals("foo@bar", msg.getHeader("To"));
-    assertEquals("Backup file for LOCKSS cache lockss42.example.com",
-		 msg.getHeader("Subject"));
+    try {
+      assertNotNull(msg);
+      assertEquals("LOCKSS cache lockss42.example.com <foo@bar>",
+		   msg.getHeader("From"));
+      assertEquals("foo@bar", msg.getHeader("To"));
+      assertEquals("Backup file for LOCKSS cache lockss42.example.com",
+		   msg.getHeader("Subject"));
 
-    javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
-    assertEquals(2, parts.length);
-    assertMatchesRE("attached file is a backup",
-		    (String)parts[0].getContent());
-    assertMatchesRE("LOCKSS_Backup_.*\\." + exp, parts[1].getFileName());
-    // zip file should start with "PK"
-    assertMatchesRE("^PK",
-		    StringUtil.fromInputStream(parts[1].getInputStream()));
+      javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
+      assertEquals(2, parts.length);
+      assertMatchesRE("attached file is a backup",
+		      (String)parts[0].getContent());
+      assertMatchesRE("LOCKSS_Backup_.*\\." + exp, parts[1].getFileName());
+      // zip file should start with "PK"
+      assertMatchesRE("^PK",
+		      StringUtil.fromInputStream(parts[1].getInputStream()));
+    } finally {
+      msg.delete(true);
+    }
   }
 
   public void testBackupEmailDefault() throws Exception {
@@ -726,20 +734,24 @@ public class TestRemoteApi extends LockssTestCase {
     rapi.sendMailBackup();
     MockMailService.Rec rec = mgr.getRec(0);
     MimeMessage msg = (MimeMessage)rec.getMsg();
-    assertNotNull(msg);
-    assertEquals("fff@ccc", msg.getHeader("From"));
-    assertEquals("rrr@ccc", msg.getHeader("To"));
-    assertEquals("Backup file for LOCKSS cache lockss42.example.com",
-		 msg.getHeader("Subject"));
+    try {
+      assertNotNull(msg);
+      assertEquals("fff@ccc", msg.getHeader("From"));
+      assertEquals("rrr@ccc", msg.getHeader("To"));
+      assertEquals("Backup file for LOCKSS cache lockss42.example.com",
+		   msg.getHeader("Subject"));
 
-    javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
-    assertEquals(2, parts.length);
-    assertMatchesRE("attached file is a backup",
-		    (String)parts[0].getContent());
-    assertMatchesRE("LOCKSS_Backup_.*\\.zip", parts[1].getFileName());
-    // zip file should start with "PK"
-    assertMatchesRE("^PK",
-		    StringUtil.fromInputStream(parts[1].getInputStream()));
+      javax.mail.internet.MimeBodyPart[] parts = msg.getParts();
+      assertEquals(2, parts.length);
+      assertMatchesRE("attached file is a backup",
+		      (String)parts[0].getContent());
+      assertMatchesRE("LOCKSS_Backup_.*\\.zip", parts[1].getFileName());
+      // zip file should start with "PK"
+      assertMatchesRE("^PK",
+		      StringUtil.fromInputStream(parts[1].getInputStream()));
+    } finally {
+      msg.delete(true);
+    }
   }
 
 }

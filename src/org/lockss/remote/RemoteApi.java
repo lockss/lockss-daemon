@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.41 2005-10-07 23:46:46 smorabito Exp $
+ * $Id: RemoteApi.java,v 1.42 2005-10-10 23:25:27 tlipkis Exp $
  */
 
 /*
@@ -631,6 +631,10 @@ public class RemoteApi
 
   public BatchAuStatus processSavedConfigZip(InputStream configBackupStream)
       throws IOException, InvalidAuConfigBackupFile {
+    // XXX This temp dir doesn't get deleted.  It needs to stay around
+    // through the entire multi-step restore interaction, so it's not clear
+    // where to delete it.  Not a big problem because it's only created if
+    // the user does a restore..
     File dir = FileUtil.createTempDir("locksscfg", "");
     try {
       ZipUtil.unzip(configBackupStream, dir);
@@ -1307,6 +1311,7 @@ public class RemoteApi
   }
 
   public static class BackupInfo {
+    File topdir;
     Map auDirs = new HashMap();
 
     void setAuDir(String auid, File dir) {
@@ -1317,6 +1322,16 @@ public class RemoteApi
       return (File)auDirs.get(auid);
     }
 
+    void setTopDir(File topdir) {
+      this.topdir = topdir;
+    }
+
+    public void delete() {
+      if (topdir != null) {
+	FileUtil.delTree(topdir);
+      }
+    }
+
     public String toString() {
       return "[BI: " + auDirs + "]";
     }
@@ -1324,6 +1339,7 @@ public class RemoteApi
 
   BackupInfo buildBackupInfo(File dir) throws IOException {
     BackupInfo bi = new BackupInfo();
+    bi.setTopDir(dir);
     String[] subdirs = dir.list();
     for (int ix = 0; ix < subdirs.length; ix++) {
       File onedir = new File(dir, subdirs[ix]);
