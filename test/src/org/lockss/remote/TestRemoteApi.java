@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.13 2005-10-10 23:25:26 tlipkis Exp $
+ * $Id: TestRemoteApi.java,v 1.14 2005-10-10 23:48:34 troberts Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class TestRemoteApi extends LockssTestCase {
     assertNotNull(pp1);
     assertSame(mp1, pp1.getPlugin());
     assertSame(pp1, rapi.findPluginProxy(mp1));
-    Plugin mp2 = mpm.getPlugin(mpm.pluginKeyFromId(PID1));
+    Plugin mp2 = mpm.getPlugin(PluginManager.pluginKeyFromId(PID1));
     assertNotNull(mp2);
     PluginProxy pp2b = rapi.findPluginProxy(mp2);
     PluginProxy pp2a = rapi.findPluginProxy(PID1);
@@ -124,7 +124,7 @@ public class TestRemoteApi extends LockssTestCase {
 
   public void testMapPlugins() {
     MockPlugin mp1 = new MockPlugin();
-    Plugin mp2 = mpm.getPlugin(mpm.pluginKeyFromId(PID1));
+    Plugin mp2 = mpm.getPlugin(PluginManager.pluginKeyFromId(PID1));
     List mapped = rapi.mapPluginsToProxies(ListUtil.list(mp1, mp2));
     assertEquals(2, mapped.size());
     assertNotNull(mapped.get(0));
