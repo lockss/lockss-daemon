@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.9 2005-10-07 23:35:54 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.10 2005-10-10 17:09:14 thib_gc Exp $
  */
 
 /*
@@ -100,7 +100,7 @@ public class ServletUtil {
   private static final String HEADER_HEADING_AFTER =
     "</b></font>";
 
-  private static final String HEADER_HEADING_BEFORE = 
+  private static final String HEADER_HEADING_BEFORE =
     "<font size=\"+2\"><b>";
 
   private static final Image IMAGE_LOCKSS_RED =
@@ -108,9 +108,9 @@ public class ServletUtil {
 
   private static final String MENU_ATTRIBUTES =
     "cellspacing=\"2\" cellpadding=\"4\" align=\"center\"";
-  
+
   private static final int MENU_BORDER = 0;
-  
+
   private static final String MENU_ITEM_AFTER =
     "</font>";
 
@@ -127,7 +127,7 @@ public class ServletUtil {
 
   private static final String NOTES_BEGIN =
     "<p><b>Notes:</b>";
-  
+
   private static final String NOTES_LIST_AFTER =
     "</font></ol>";
 
@@ -149,7 +149,7 @@ public class ServletUtil {
                                          List usablePorts) {
     // Start row
     table.newRow();
-    
+
     // Start line
     table.newCell(PORT_ATTRIBUTES);
 
@@ -163,13 +163,13 @@ public class ServletUtil {
     table.add("Enable " + enableDescription);
     table.add(servlet.addFootnote(enableFootnote));
     table.add(" on port&nbsp;");
-    
+
     // "port" element
     Input portElem = new Input(Input.Text, portFieldName, defaultPort);
     portElem.setSize(6);
     servlet.setTabOrder(portElem);
     table.add(portElem);
-    
+
     // List of usable ports
     if (usablePorts != null) {
       table.add("<br>");
@@ -185,7 +185,7 @@ public class ServletUtil {
       }
     }
   }
-  
+
   // Common page footer
   public static void layoutFooter(Page page,
                                   Iterator notesIterator,
@@ -216,7 +216,7 @@ public class ServletUtil {
     comp.add(table);
     page.add(comp);
   }
-  
+
   public static void layoutHeader(LockssServlet servlet,
                                   Page page,
                                   String heading,
@@ -277,7 +277,7 @@ public class ServletUtil {
       errcmp.add(ALLOWDENY_ERROR_AFTER);
       form.add(errcmp);
     }
-    
+
     Table table = new Table(ALLOWDENY_BORDER, ALLOWDENY_TABLE_ATTRIBUTES);
 
     table.newRow(ALLOWDENY_ROW_ATTRIBUTES);
@@ -301,7 +301,7 @@ public class ServletUtil {
     }
 
     allowStr = StringUtil.terminatedSeparatedString(allow, "\n", "\n");
-    denyStr = StringUtil.terminatedSeparatedString(allow, "\n", "\n");
+    denyStr = StringUtil.terminatedSeparatedString(deny, "\n", "\n");
 
     TextArea incArea = new MyTextArea(allowName);
     incArea.setSize(ALLOWDENY_COLUMNS, ALLOWDENY_LINES);
@@ -323,15 +323,15 @@ public class ServletUtil {
     if (additional != null) {
       form.add(additional);
     }
-    
+
     Input submit = new Input(Input.Submit, "action", "Update");
     servlet.setTabOrder(submit);
-    
+
     form.add("<br><center>" + submit + "</center>");
     comp.add(form);
     page.add(comp);
   }
-  
+
   public static void layoutMenu(LockssServlet servlet,
                                 Page page,
                                 Iterator descrIterator) {
@@ -348,14 +348,14 @@ public class ServletUtil {
     }
     page.add(table);
   }
-  
+
   public static Image makeImage(String file,
                                 int width,
                                 int height,
                                 int border) {
     return new Image("/images/" + file, width, height, border);
   }
-  
+
   /** create an image that will display the tooltip on mouse hover */
   public static Image makeImage(String file,
                                 int width,
@@ -367,12 +367,12 @@ public class ServletUtil {
     img.attribute("title", tooltip);	// some (Mozilla) use title tag
     return img;
   }
-  
+
   public static Page newPage(String pageTitle,
                              boolean isFramed) {
     Page page = new Page();
     layoutPageHeaders(page);
-    
+
     if (isFramed) {
       page.addHeader("<base target=\"_top\">");
     }
@@ -381,7 +381,7 @@ public class ServletUtil {
     page.attribute("bgcolor", PAGE_BGCOLOR);
     return page;
   }
-  
+
   private static void layoutFootnote(Composite comp,
                                      String footnote,
                                      int nth) {
@@ -390,7 +390,7 @@ public class ServletUtil {
     comp.add(footnote);
     comp.add("</a>");
   }
-  
+
   private static void layoutIpAllowDenyErrors(Table table,
                                               Vector errs) {
     int size;
@@ -409,14 +409,14 @@ public class ServletUtil {
       table.add("&nbsp");
     }
   }
-  
+
   // Build servlet navigation table
   private static void layoutNavTable(LockssServlet servlet,
                                      Table outerTable,
                                      Iterator descrIterator,
                                      String machineNameClientAddr) {
     final String NAVTABLE_CELL_WIDTH = "width=\"15\"";
-    
+
     Table navTable = new Table(NAVTABLE_BORDER, NAVTABLE_ATTRIBUTES);
     boolean clientTitle = false;
 
@@ -449,7 +449,7 @@ public class ServletUtil {
     navTable.add("</font>");
     outerTable.add(navTable);
   }
-  
+
   private static void layoutPageHeaders(Page page) {
     page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
@@ -461,5 +461,5 @@ public class ServletUtil {
         "TD.colhead { font-weight: bold; background : #e0e0e0 }\n" +
         "--> </style>");
   }
-  
+
 }
