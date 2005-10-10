@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.7 2005-05-20 23:43:04 troberts Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.8 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -967,7 +967,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       super(au, spec, aus);
       crawlStatus = new Crawler.Status(au, 
 		    ((SpiderCrawlSpec)spec).getStartingUrls(),
-		    -1);
+		    null);
     }
 
     protected boolean shouldFollowLink(){
@@ -996,6 +996,14 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     
     public int getType() {
       throw new UnsupportedOperationException("not implemented");
+    }
+
+    public String getTypeString() {
+      return "Follow Link";
+    }
+
+    public boolean isWholeAU() {
+      return false;
     }
 
   }

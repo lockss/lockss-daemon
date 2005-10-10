@@ -1,5 +1,5 @@
 /*
- * $Id: NullCrawler.java,v 1.7 2004-03-03 00:38:44 troberts Exp $
+ * $Id: NullCrawler.java,v 1.8 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -66,6 +66,10 @@ public class NullCrawler implements Crawler {
   }
 
   public int getType() {
+    throw new UnsupportedOperationException("Not implemented");
+  }
+
+  public boolean isWholeAU() {
     throw new UnsupportedOperationException("Not implemented");
   }
 

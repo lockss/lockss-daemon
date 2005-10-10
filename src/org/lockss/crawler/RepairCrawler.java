@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.49 2005-10-08 02:07:17 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.50 2005-10-10 23:27:29 tlipkis Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class RepairCrawler extends CrawlerImpl {
     this.repairUrls = repairUrls;
     this.percentFetchFromCache = percentFetchFromCache;
 
-    crawlStatus = new Crawler.Status(au, repairUrls, getType());
+    crawlStatus = new Crawler.Status(au, repairUrls, getTypeString());
   }
 
   protected void setCrawlConfig(Configuration config) {
@@ -139,6 +139,14 @@ public class RepairCrawler extends CrawlerImpl {
 
   public int getType() {
     return Crawler.REPAIR;
+  }
+
+  public String getTypeString() {
+    return "Repair";
+  }
+
+  public boolean isWholeAU() {
+    return false;
   }
 
   protected Iterator getStartingUrls() {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.40 2005-10-08 02:06:54 troberts Exp $
+ * $Id: TestNewContentCrawler.java,v 1.41 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -126,6 +126,11 @@ public class TestNewContentCrawler extends LockssTestCase {
 
   public void testReturnsProperType() {
     assertEquals(Crawler.NEW_CONTENT, crawler.getType());
+    assertEquals("New Content", crawler.getTypeString());
+  }
+
+  public void testIsWholeAU() {
+    assertTrue(crawler.isWholeAU());
   }
 
   public void testShouldFollowLink() {

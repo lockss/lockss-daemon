@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.32 2005-10-07 17:46:21 troberts Exp $
+ * $Id: TestCrawlerImpl.java,v 1.33 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -585,6 +585,14 @@ public class TestCrawlerImpl extends LockssTestCase {
     }
 
     public int getType() {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public String getTypeString() {
+      throw new UnsupportedOperationException("not implemented");
+    }
+
+    public boolean isWholeAU() {
       throw new UnsupportedOperationException("not implemented");
     }
 

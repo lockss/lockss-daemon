@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.4 2005-05-03 00:02:44 troberts Exp $
+ * $Id: TestOaiCrawler.java,v 1.5 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -110,6 +110,11 @@ public class TestOaiCrawler extends LockssTestCase {
 
   public void testReturnsProperType() {
     assertEquals(Crawler.OAI, crawler.getType());
+    assertEquals("OAI", crawler.getTypeString());
+  }
+
+  public void testIsWholeAU() {
+    assertTrue(crawler.isWholeAU());
   }
 
   public void testGetFromTime() {

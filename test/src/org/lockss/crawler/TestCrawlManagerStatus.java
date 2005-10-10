@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerStatus.java,v 1.19 2005-07-18 17:35:32 troberts Exp $
+ * $Id: TestCrawlManagerStatus.java,v 1.20 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -262,8 +262,8 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   public void testCrawlType() {
     StatusTable table = new StatusTable("test");
 
-    MockCrawlStatus status = makeStatus(Crawler.NEW_CONTENT, "Unknown");
-    MockCrawlStatus status2 = makeStatus(Crawler.REPAIR, "Unknown");
+    MockCrawlStatus status = makeStatus(NC_TYPE, "Unknown");
+    MockCrawlStatus status2 = makeStatus(REPAIR_TYPE, "Unknown");
 
     statusSource.setCrawlStatusList(ListUtil.list(status, status2));
 
@@ -283,13 +283,13 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   public void testCrawlStatus() {
     StatusTable table = new StatusTable("test");
 
-    MockCrawlStatus status = makeStatus(Crawler.NEW_CONTENT,
+    MockCrawlStatus status = makeStatus(NC_TYPE,
 					Crawler.STATUS_INCOMPLETE);
 
-    MockCrawlStatus status2 = makeStatus(Crawler.REPAIR,
+    MockCrawlStatus status2 = makeStatus(REPAIR_TYPE,
 					Crawler.STATUS_SUCCESSFUL);
 
-    MockCrawlStatus status3 = makeStatus(Crawler.REPAIR,
+    MockCrawlStatus status3 = makeStatus(REPAIR_TYPE,
 					Crawler.STATUS_ERROR);
 
     statusSource.setCrawlStatusList(ListUtil.list(status, status2, status3));
@@ -314,11 +314,11 @@ public class TestCrawlManagerStatus extends LockssTestCase {
   public void testSortOrder() {
     StatusTable table = new StatusTable("test");
 
-    MockCrawlStatus status = makeStatus(Crawler.NEW_CONTENT, 1, 2);
+    MockCrawlStatus status = makeStatus(NC_TYPE, 1, 2);
 
-    MockCrawlStatus status2 = makeStatus(Crawler.REPAIR, 2, 2);
+    MockCrawlStatus status2 = makeStatus(REPAIR_TYPE, 2, 2);
 
-    MockCrawlStatus status3 = makeStatus(Crawler.REPAIR, 2, 4);
+    MockCrawlStatus status3 = makeStatus(REPAIR_TYPE, 2, 4);
 
     statusSource.setCrawlStatusList(ListUtil.list(status, status2, status3));
 
@@ -343,14 +343,15 @@ public class TestCrawlManagerStatus extends LockssTestCase {
 
 
 
-  private static MockCrawlStatus makeStatus(int type, long start, long end) {
+  /** @deprecated */
+  private static MockCrawlStatus makeStatus(String type, long start, long end) {
     MockCrawlStatus status = makeStatus(type, "Unknown");
     status.setStartTime(start);
     status.setEndTime(end);
     return status;
   }
 
-  private static MockCrawlStatus makeStatus(int type, String crawlStatus) {
+  private static MockCrawlStatus makeStatus(String type, String crawlStatus) {
     MockCrawlStatus status = new MockCrawlStatus();
     status.setType(type);
     status.setAu(new MockArchivalUnit());

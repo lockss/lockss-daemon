@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.82 2005-06-04 18:59:58 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.83 2005-10-10 23:27:29 tlipkis Exp $
  */
 
 /*
@@ -484,7 +484,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
 
 	  crawlSuccessful = crawler.doCrawl();
 
-	  if (crawler.getType() == Crawler.NEW_CONTENT) {
+	  if (crawler.isWholeAU()) {
 	    if (crawlSuccessful) {
 	      NodeManager nodeManager =
 		theDaemon.getNodeManager(crawler.getAu());

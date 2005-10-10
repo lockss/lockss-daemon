@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.26 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: CrawlManagerStatus.java,v 1.27 2005-10-10 23:27:29 tlipkis Exp $
  */
 
 /*
@@ -84,9 +84,6 @@ public class CrawlManagerStatus implements StatusAccessor {
 		  );
 
 
-  private static final String NC_TYPE = "New Content";
-  private static final String REPAIR_TYPE = "Repair";
-  private static final String OAI_TYPE = "Oai";
   private CrawlManager.StatusSource statusSource;
   private PluginManager pluginMgr;
 
@@ -157,27 +154,14 @@ public class CrawlManagerStatus implements StatusAccessor {
 
 
 
-  private String getTypeString(int type) {
-    switch(type) {
-      case Crawler.NEW_CONTENT:
-	return NC_TYPE;
-      case Crawler.REPAIR:
-	return REPAIR_TYPE;
-      case Crawler.OAI:
-	return OAI_TYPE;
-    }
-    return "Unknown";
-  }
-
   private Map makeRow(Crawler.Status status) {
     String key = status.getKey();
     statusMap.put(key, status);
 
-    String type = getTypeString(status.getType());
     Map row = new HashMap();
     ArchivalUnit au = status.getAu();
     row.put(AU_COL_NAME, au.getName());
-    row.put(CRAWL_TYPE, type);
+    row.put(CRAWL_TYPE, status.getType());
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
     row.put(NUM_URLS_FETCHED, 

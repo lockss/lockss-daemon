@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlManagerImpl.java,v 1.55 2005-01-11 01:55:14 troberts Exp $
+ * $Id: TestCrawlManagerImpl.java,v 1.56 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -670,6 +670,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       mockCrawler.setUrls(cs.getStartingUrls());
       mockCrawler.setFollowLinks(true);
       mockCrawler.setType(CrawlerImpl.NEW_CONTENT);
+      mockCrawler.setIsWholeAU(true);
       return mockCrawler;
     }
 
@@ -680,6 +681,7 @@ public class TestCrawlManagerImpl extends LockssTestCase {
       mockCrawler.setUrls(repairUrls);
       mockCrawler.setFollowLinks(false);
       mockCrawler.setType(CrawlerImpl.REPAIR);
+      mockCrawler.setIsWholeAU(false);
       return mockCrawler;
     }
 

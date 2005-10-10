@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.30 2005-10-08 02:07:17 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.31 2005-10-10 23:27:27 tlipkis Exp $
  */
 
 /*
@@ -139,6 +139,11 @@ public class TestRepairCrawler extends LockssTestCase {
 
   public void testGetType() {
     assertEquals(Crawler.REPAIR, crawler.getType());
+    assertEquals("Repair", crawler.getTypeString());
+  }
+
+  public void testIsWholeAU() {
+    assertFalse(crawler.isWholeAU());
   }
 
   public void testRepairCrawlCallsForceCache() {
