@@ -1,5 +1,5 @@
 /*
- * $Id: TestCollectionUtil.java,v 1.9 2005-10-10 22:19:48 smorabito Exp $
+ * $Id: TestCollectionUtil.java,v 1.10 2005-10-10 23:48:03 troberts Exp $
  */
 
 /*
@@ -168,21 +168,21 @@ public class TestCollectionUtil extends LockssTestCase {
       Collection c4 = CollectionUtil.randomSelection(all, 4);
       fail("Expected IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
-      ; // expected
+      // expected
     }
     try {
       // Too few!
       Collection c5 = CollectionUtil.randomSelection(all, 0);
       fail("Expected IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
-      ; // expected
+      // expected
     }
     try {
       // Even more too few!
       Collection c6 = CollectionUtil.randomSelection(all, -1);
       fail("Expected IllegalArgumentException");
     } catch (IllegalArgumentException ex) {
-      ; // expected
+      // expected
     }
   }
 }
