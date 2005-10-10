@@ -1,5 +1,5 @@
 /*
- * $Id: CloseCallbackInputStream.java,v 1.1 2005-07-18 07:56:21 tlipkis Exp $
+ * $Id: CloseCallbackInputStream.java,v 1.2 2005-10-10 23:24:02 tlipkis Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class CloseCallbackInputStream extends InputStream {
       try {
 	cb.streamClosed(cookie);
       } catch (Exception e ) {
-	log.warning("foo", e);
+	log.warning("Error in streamClosed callback", e);
       }
     }
   }
