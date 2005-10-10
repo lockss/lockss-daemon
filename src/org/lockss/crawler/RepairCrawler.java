@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.50 2005-10-10 23:27:29 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.51 2005-10-10 23:47:33 troberts Exp $
  */
 
 /*
@@ -102,8 +102,17 @@ public class RepairCrawler extends CrawlerImpl {
   public static final String PARAM_REPAIR_FROM_CACHE_ADDR =
     Configuration.PREFIX + "crawler.repair_from_cache_addr";
 
+  /**
+   * Sets this to true will cause repairs to require permission
+   */
+  public static final String PARAM_REPAIR_NEEDS_PERMISSION =
+    Configuration.PREFIX + "crawler.repair_needs_permission";
+  public static final boolean DEFAULT_REPAIR_NEEDS_PERMISSION = false;
+
+  
   boolean fetchCache = DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY;
   boolean fetchPublisher = DEFAULT_FETCH_FROM_PUBLISHER_ONLY;
+  boolean repairNeedsPermission;
   int numCacheRetries = DEFAULT_NUM_RETRIES_FROM_CACHES;
 //   int numPubRetries = DEFAULT_NUM_RETRIES_FROM_PUBLISHER;
   String repairFromCacheAddr = null;
@@ -120,7 +129,7 @@ public class RepairCrawler extends CrawlerImpl {
     this.repairUrls = repairUrls;
     this.percentFetchFromCache = percentFetchFromCache;
 
-    crawlStatus = new Crawler.Status(au, repairUrls, getTypeString());
+    crawlStatus = new Crawler.Status(au, repairUrls, getType());
   }
 
   protected void setCrawlConfig(Configuration config) {
@@ -135,18 +144,12 @@ public class RepairCrawler extends CrawlerImpl {
 //     numPubRetries = config.getInt(PARAM_NUM_RETRIES_FROM_PUBLISHER,
 // 				  DEFAULT_NUM_RETRIES_FROM_PUBLISHER);
     repairFromCacheAddr = config.get(PARAM_REPAIR_FROM_CACHE_ADDR);
+    repairNeedsPermission = config.getBoolean(PARAM_REPAIR_NEEDS_PERMISSION,
+                                              DEFAULT_REPAIR_NEEDS_PERMISSION);
   }
 
   public int getType() {
     return Crawler.REPAIR;
-  }
-
-  public String getTypeString() {
-    return "Repair";
-  }
-
-  public boolean isWholeAU() {
-    return false;
   }
 
   protected Iterator getStartingUrls() {
@@ -410,11 +413,13 @@ public class RepairCrawler extends CrawlerImpl {
   }
 
   protected void fetchFromPublisher(UrlCacher uc) throws IOException {
-    if (!checkHostPermission(uc.getUrl(), true)) {
-      if (crawlStatus.getCrawlError() == null) {
-        crawlStatus.setCrawlError("No permission to collect " + uc.getUrl());
+    if (repairNeedsPermission) {
+      if (!checkHostPermission(uc.getUrl(), true)) {
+        if (crawlStatus.getCrawlError() == null) {
+          crawlStatus.setCrawlError("No permission to collect " + uc.getUrl());
+        }
+        return;
       }
-      return;
     }
     if (proxyHost != null) {
       uc.setProxy(proxyHost, proxyPort);
@@ -431,6 +436,18 @@ public class RepairCrawler extends CrawlerImpl {
     return idMgr;
   }
 
+  /**
+   * If we're configured to need permission to repair, populate the permission
+   * map, otherwise just return true
+   */
+  public boolean populatePermissionMap() {
+    if (Configuration.getBooleanParam(PARAM_REPAIR_NEEDS_PERMISSION,
+                                      DEFAULT_REPAIR_NEEDS_PERMISSION)) {
+      return super.populatePermissionMap();
+    }
+    return true;
+  }
+  
 //  public PermissionMap getPermissionMap() {
 //    if (permissionMap == null) {
 //      populatePermissionMap();
