@@ -1,5 +1,5 @@
 /*
- * $Id: JarValidator.java,v 1.5 2005-05-16 21:36:08 tlipkis Exp $
+ * $Id: JarValidator.java,v 1.6 2005-10-10 20:25:49 smorabito Exp $
  */
 
 /*
@@ -33,6 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 import java.io.*;
+import java.lang.reflect.*;
 import java.util.*;
 import org.lockss.util.*;
 import org.lockss.daemon.*;
@@ -40,10 +41,7 @@ import org.lockss.plugin.*;
 import java.util.jar.*;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
-import java.security.cert.CertificateExpiredException;
-import java.security.cert.CertificateNotYetValidException;
-import java.security.cert.Certificate;
-import java.security.cert.X509Certificate;
+import java.security.cert.*;
 
 /**
  * Verify a signed JAR stored in the repository.
@@ -186,7 +184,7 @@ public class JarValidator {
       throw new JarValidationException("Jar entry " + je.getName() + " is tainted.");
     }
 
-    Certificate[] certs = je.getCertificates();
+    Certificate[] certs = getCertificates(je);
 
     if (certs == null) {
       throw new JarValidationException("Jar entry " + je.getName() + " is not signed. " +
@@ -263,6 +261,50 @@ public class JarValidator {
 					 je.getName());
       }
     }
+  }
+
+  /**
+   * JAVA1.5
+   *
+   * Method made necessary by changes in Java 1.5.  Return all the certificates
+   * for a specified JarEntry.
+   *
+   * @param entry
+   */
+  private Certificate[] getCertificates(JarEntry entry) {
+    Certificate[] certs = entry.getCertificates();
+
+    // Try it the 1.5 way.
+    if (certs == null) {
+      try {
+        // JAVA1.5
+        // CodeSigner[] codeSigners = entry.getCodeSigners()
+        Method getCodeSigners =
+          entry.getClass().getMethod("getCodeSigners", new Class[0]);
+        // This call will fail in 1.4, let the catch handle it.
+        Object[] codeSigners =
+          (Object[])getCodeSigners.invoke(entry, new Object[0]);
+        if (codeSigners != null && codeSigners.length > 0) {
+          // JAVA1.5
+          // List<Certificate> list = codeSigner.getSignerCertPath().getCertificates();
+          Class codeSigner = Class.forName("java.security.CodeSigner");
+          Method getSignerCertPath =
+            codeSigner.getMethod("getSignerCertPath", new Class[0]);
+          CertPath certPath =
+            (CertPath)getSignerCertPath.invoke(Array.get(codeSigners, 0),
+                                               new Object[0]);
+          List list = certPath.getCertificates();
+          certs = (Certificate[])list.toArray(new Certificate[list.size()]);
+        }
+      } catch (NoSuchMethodException ex) {
+        // Silently fall-through, Java version < 1.5.
+      } catch (Exception ex) {
+        log.error("Unexpected exception getting certificates for JarEntry "
+                  + entry, ex);
+      }
+    }
+
+    return certs;
   }
 
   /**

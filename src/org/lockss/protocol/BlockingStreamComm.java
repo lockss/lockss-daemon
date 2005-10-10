@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingStreamComm.java,v 1.10 2005-10-07 23:46:48 smorabito Exp $
+ * $Id: BlockingStreamComm.java,v 1.11 2005-10-10 20:25:49 smorabito Exp $
  */
 
 /*
@@ -39,6 +39,7 @@ import java.util.*;
 import EDU.oswego.cs.dl.util.concurrent.*;
 
 import org.lockss.util.*;
+import org.lockss.util.Queue;
 import org.lockss.config.*;
 import org.lockss.daemon.*;
 import org.lockss.app.*;
@@ -254,7 +255,7 @@ public class BlockingStreamComm
 	  dataDir = null;
 	}
       }
-      
+
       paramMaxChannels = config.getInt(PARAM_MAX_CHANNELS,
 				       DEFAULT_MAX_CHANNELS);
       paramConnectTimeout = config.getTimeInterval(PARAM_CONNECT_TIMEOUT,
@@ -313,7 +314,7 @@ public class BlockingStreamComm
   PeerIdentity findPeerIdentity(String idkey) {
     return idMgr.findPeerIdentity(idkey);
   }
-  
+
   PeerIdentity getMyPeerId() {
     return myPeerId;
   }
@@ -481,7 +482,7 @@ public class BlockingStreamComm
       if (!chan.wasOpen()) {
 	log.warning("Couldn't start channel");
 	return;
-      }	
+      }
 
       last = chan;
     }
@@ -711,7 +712,7 @@ public class BlockingStreamComm
 
   public PeerMessage newPeerMessage() {
     return new MemoryPeerMessage();
-  }    
+  }
 
   public PeerMessage newPeerMessage(int estSize) {
     if (estSize < 0) {
@@ -723,14 +724,14 @@ public class BlockingStreamComm
     } else {
     return new MemoryPeerMessage();
     }
-  }    
+  }
 
 
   // Receive thread
   private class ReceiveThread extends LockssThread {
     private volatile boolean goOn = true;
     private Deadline timeout = Deadline.in(getChannelHungTime());
-    
+
     ReceiveThread(String name) {
       super(name);
     }
@@ -763,7 +764,7 @@ public class BlockingStreamComm
 	      getChannelHungTime()) {
 	    checkHungChannels();
 	    lastHungCheckTime = TimeBase.nowMs();
-	  }	    
+	  }
 	} catch (InterruptedException e) {
 	  // just wake up and check for exit
 	} finally {
