@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlDomBuilder.java,v 1.2 2005-10-08 02:12:10 troberts Exp $
+ * $Id: TestXmlDomBuilder.java,v 1.3 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ public class TestXmlDomBuilder extends LockssTestCase {
     super.setUp();
 
     builder = new XmlDomBuilder();
-    document = builder.createDocument();
+    document = XmlDomBuilder.createDocument();
     rootElem = builder.createRoot(document, "testroot");
   }
 
   public void testGetDocumentBuilder() throws Exception {
-    DocumentBuilder domBuilder = builder.getDocumentBuilder();
+    DocumentBuilder domBuilder = XmlDomBuilder.getDocumentBuilder();
     assertNotNull(domBuilder);
   }
 
@@ -71,22 +71,22 @@ public class TestXmlDomBuilder extends LockssTestCase {
   }
 
   public void testAddText() {
-    builder.addText(rootElem, "test text string");
+    XmlDomBuilder.addText(rootElem, "test text string");
     Node childNode = rootElem.getFirstChild();
     assertEquals(Element.TEXT_NODE, childNode.getNodeType());
     assertEquals("test text string", childNode.getNodeValue());
   }
 
   public void testGetText() {
-    builder.addText(rootElem, "test text string");
-    assertEquals("test text string", builder.getText(rootElem));
+    XmlDomBuilder.addText(rootElem, "test text string");
+    assertEquals("test text string", XmlDomBuilder.getText(rootElem));
   }
 
   public void testCopyDocument() throws Exception {
-    Document doc2 = builder.createDocument();
+    Document doc2 = XmlDomBuilder.createDocument();
     Element root2 = builder.createRoot(doc2, "root2");
     assertNull(root2.getFirstChild());
-    builder.copyDocument(document, doc2);
+    XmlDomBuilder.copyDocument(document, doc2);
     assertEquals(rootElem.getNodeName(), root2.getFirstChild().getNodeName());
   }
 
@@ -115,17 +115,17 @@ public class TestXmlDomBuilder extends LockssTestCase {
   }
 
   public void testGetFormatter() {
-    OutputFormat formatter = builder.getFormatter();
+    OutputFormat formatter = XmlDomBuilder.getFormatter();
     assertEquals(XmlDomBuilder.ENCODING, formatter.getEncoding());
     assertEquals(Method.XML, formatter.getMethod());
   }
 
   public void testSerializeStream() throws Exception {
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
-    builder.serialize(document, baos);
+    XmlDomBuilder.serialize(document, baos);
 
     ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
-    Document doc2 = builder.parseXmlStream(bais);
+    Document doc2 = XmlDomBuilder.parseXmlStream(bais);
     assertEquals(rootElem.getNodeName(),
                  doc2.getDocumentElement().getNodeName());
   }
@@ -133,28 +133,28 @@ public class TestXmlDomBuilder extends LockssTestCase {
   public void testSerializeWriter() throws Exception {
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
     Writer writer = new OutputStreamWriter(baos);
-    builder.serialize(document, writer);
+    XmlDomBuilder.serialize(document, writer);
 
     ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
     Reader reader = new InputStreamReader(bais);
-    Document doc2 = builder.parseXmlStream(reader);
+    Document doc2 = XmlDomBuilder.parseXmlStream(reader);
     assertEquals(rootElem.getNodeName(),
                  doc2.getDocumentElement().getNodeName());
   }
 
   public void testSerializeFile() throws Exception {
     String tempDirFile = getTempDir() + File.separator + "serfile";
-    builder.serialize(document, tempDirFile);
+    XmlDomBuilder.serialize(document, tempDirFile);
 
-    Document doc2 = builder.parseXmlFile(tempDirFile);
+    Document doc2 = XmlDomBuilder.parseXmlFile(tempDirFile);
     assertEquals(rootElem.getNodeName(),
                  doc2.getDocumentElement().getNodeName());
   }
 
   public void testSerializeString() throws Exception {
-    String serStr = builder.serialize(document);
+    String serStr = XmlDomBuilder.serialize(document);
 
-    Document doc2 = builder.parseXmlString(serStr);
+    Document doc2 = XmlDomBuilder.parseXmlString(serStr);
     assertEquals(rootElem.getNodeName(),
                  doc2.getDocumentElement().getNodeName());
   }

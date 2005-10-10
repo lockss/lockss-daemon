@@ -1,5 +1,5 @@
 /*
- * $Id: TestPluginManager.java,v 1.64 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestPluginManager.java,v 1.65 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -211,10 +211,10 @@ public class TestPluginManager extends LockssTestCase {
     Properties p = new Properties();
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    Plugin p1 = mgr.getPlugin(mgr.pluginKeyFromName(n1));
+    Plugin p1 = mgr.getPlugin(PluginManager.pluginKeyFromName(n1));
     assertNotNull(p1);
     assertTrue(p1.toString(), p1 instanceof MockPlugin);
-    Plugin p2 = mgr.getPlugin(mgr.pluginKeyFromName(n2));
+    Plugin p2 = mgr.getPlugin(PluginManager.pluginKeyFromName(n2));
     assertNotNull(p2);
     assertTrue(p2.toString(), p2 instanceof ThrowingMockPlugin);
     assertEquals(SetUtil.set(p1, p2),
@@ -232,12 +232,12 @@ public class TestPluginManager extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
     assertEquals(SetUtil.set(p1),
 		 SetUtil.theSet(mgr.getRegisteredPlugins()));
-    assertNull(mgr.getPlugin(mgr.pluginKeyFromName(n2)));
-    assertSame(p1, mgr.getPlugin(mgr.pluginKeyFromName(n1)));
+    assertNull(mgr.getPlugin(PluginManager.pluginKeyFromName(n2)));
+    assertSame(p1, mgr.getPlugin(PluginManager.pluginKeyFromName(n1)));
     p.setProperty(PluginManager.PARAM_PLUGIN_REGISTRY, n1 + ";" + n2);
     p.setProperty(PluginManager.PARAM_PLUGIN_RETRACT, "");
     ConfigurationUtil.setCurrentConfigFromProps(p);
-    p2 = mgr.getPlugin(mgr.pluginKeyFromName(n2));
+    p2 = mgr.getPlugin(PluginManager.pluginKeyFromName(n2));
     assertNotNull(p2);
     assertTrue(p2.toString(), p2 instanceof ThrowingMockPlugin);
   }

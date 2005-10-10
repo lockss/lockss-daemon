@@ -1,5 +1,5 @@
 /*
- * $Id: AuActivityBase.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id: AuActivityBase.java,v 1.3 2005-10-10 23:48:56 troberts Exp $
  */
 
 /*
@@ -190,7 +190,7 @@ public class AuActivityBase extends StatusActivityBase {
     getAuPropertiesFromForm(properties, AP_MD_AUDEFINING);
     getAuPropertiesFromForm(properties, AP_MD_AUEDIT);
   
-    return getLockssDaemon().getConfigManager().fromPropertiesUnsealed(properties);
+    return ConfigManager.fromPropertiesUnsealed(properties);
   }
 
   /**
@@ -205,7 +205,7 @@ public class AuActivityBase extends StatusActivityBase {
     getAuProperties(auConfig, properties);
     getAuPropertiesFromForm(properties, AP_MD_AUEDIT);
   
-    return getLockssDaemon().getConfigManager().fromProperties(properties);
+    return ConfigManager.fromProperties(properties);
   }
 
   /** 

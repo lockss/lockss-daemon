@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.24 2005-08-26 02:37:38 tlipkis Exp $
+ * $Id: TestLogger.java,v 1.25 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -125,9 +125,9 @@ public class TestLogger extends LockssTestCase {
     Logger l = Logger.getLogger("test-log");
     MockLogTarget target = new MockLogTarget();
     assertEquals(0, target.initCount());
-    l.addTarget(target);
+    Logger.addTarget(target);
     assertEquals(1, target.initCount());
-    l.addTarget(target);
+    Logger.addTarget(target);
     assertEquals(1, target.initCount());
   }
 
@@ -173,7 +173,7 @@ public class TestLogger extends LockssTestCase {
   public void testLevelFilter() {
     Logger l = Logger.getLogger("test-log");
     MockLogTarget target = new MockLogTarget();
-    l.setTarget(target);
+    Logger.setTarget(target);
     l.setLevel(Logger.LEVEL_WARNING);
     target.resetMessages();
     assertEquals(0, target.messageCount());
@@ -196,7 +196,7 @@ public class TestLogger extends LockssTestCase {
   public void testOutput() {
     Logger l = Logger.getLogger("test-log");
     MockLogTarget target = new MockLogTarget();
-    l.setTarget(target);
+    Logger.setTarget(target);
     l.setLevel(Logger.LEVEL_WARNING);
     target.resetMessages();
     l.info("msg1 info");
@@ -247,7 +247,7 @@ public class TestLogger extends LockssTestCase {
     String lName = "test-log1";
     Logger l = Logger.getLogger(lName);
     MockLogTarget target = new MockLogTarget();
-    l.setTarget(target);
+    Logger.setTarget(target);
     configLogLevel(lName, Logger.LEVEL_WARNING);
     target.resetMessages();
     l.info("msg1 info");
@@ -283,7 +283,7 @@ public class TestLogger extends LockssTestCase {
   public void testNoRecurse() {
     Logger l = Logger.getLogger("recurse");
     LocalMockLogTarget target = new LocalMockLogTarget();
-    l.setTarget(target);
+    Logger.setTarget(target);
     l.setLevel(Logger.LEVEL_DEBUG);
     target.setDoRecurse(true);
     l.debug("debug message, shouldn't cause recursion");
@@ -297,7 +297,7 @@ public class TestLogger extends LockssTestCase {
     int mapsize = 0;
     final Logger tlog = Logger.getLogger("jack");
     MockLogTarget target = new MockLogTarget();
-    tlog.setTarget(target);
+    Logger.setTarget(target);
     for (int ix = 0; ix < rpt; ix++) {
       Thread th = new Thread("iter " + ix) {
 	  public void run() {

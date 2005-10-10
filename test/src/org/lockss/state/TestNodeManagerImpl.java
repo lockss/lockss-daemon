@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.132 2005-10-07 23:46:44 smorabito Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.133 2005-10-10 23:48:56 troberts Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -187,14 +187,14 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testMapErrorCodes() {
-    assertEquals(PollState.ERR_HASHING, nodeManager
-        .mapResultsErrorToPollError(Poll.ERR_HASHING));
-    assertEquals(PollState.ERR_IO, nodeManager
-        .mapResultsErrorToPollError(Poll.ERR_IO));
-    assertEquals(PollState.ERR_SCHEDULE_HASH, nodeManager
-        .mapResultsErrorToPollError(Poll.ERR_SCHEDULE_HASH));
-    assertEquals(PollState.ERR_UNDEFINED, nodeManager
-        .mapResultsErrorToPollError(1));
+    assertEquals(PollState.ERR_HASHING, 
+                 NodeManagerImpl.mapResultsErrorToPollError(Poll.ERR_HASHING));
+    assertEquals(PollState.ERR_IO, 
+                 NodeManagerImpl.mapResultsErrorToPollError(Poll.ERR_IO));
+    assertEquals(PollState.ERR_SCHEDULE_HASH, 
+                 NodeManagerImpl.mapResultsErrorToPollError(Poll.ERR_SCHEDULE_HASH));
+    assertEquals(PollState.ERR_UNDEFINED, 
+                 NodeManagerImpl.mapResultsErrorToPollError(1));
   }
 
   public void testShouldStartPoll() throws Exception {

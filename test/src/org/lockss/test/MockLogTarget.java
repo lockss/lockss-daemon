@@ -1,5 +1,5 @@
 /*
- * $Id: MockLogTarget.java,v 1.10 2004-12-09 08:23:21 tlipkis Exp $
+ * $Id: MockLogTarget.java,v 1.11 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class MockLogTarget implements LogTarget{
    */
   public void handleMessage(Logger log, int msgLevel, String message) {
     StringBuffer sb = new StringBuffer();
-    sb.append(log.nameOf(msgLevel));
+    sb.append(Logger.nameOf(msgLevel));
     sb.append(": ");
     sb.append(message);
     String str = sb.toString();

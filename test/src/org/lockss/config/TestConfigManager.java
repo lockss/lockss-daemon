@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfigManager.java,v 1.10 2005-08-30 18:24:31 tlipkis Exp $
+ * $Id: TestConfigManager.java,v 1.11 2005-10-10 23:48:56 troberts Exp $
  */
 
 /*
@@ -79,7 +79,7 @@ public class TestConfigManager extends LockssTestCase {
   }
 
   public void testParam() throws IOException, Configuration.InvalidParam {
-    Configuration config = mgr.newConfiguration();
+    Configuration config = ConfigManager.newConfiguration();
     config.load(loadFCF(FileTestUtil.urlOfString(c2)));
     mgr.setCurrentConfig(config);
     assertEquals("12", ConfigManager.getParam("prop.p1"));
@@ -154,7 +154,7 @@ public class TestConfigManager extends LockssTestCase {
   public void testCallback() throws IOException {
     setCurrentConfigFromUrlList(ListUtil.list(FileTestUtil.urlOfString(c1),
 					      FileTestUtil.urlOfString(c1a)));
-    log.debug(mgr.getCurrentConfig().toString());
+    log.debug(ConfigManager.getCurrentConfig().toString());
     mgr.registerConfigurationCallback(new Configuration.Callback() {
 	public void configurationChanged(Configuration newConfig,
 					 Configuration oldConfig,
@@ -169,19 +169,19 @@ public class TestConfigManager extends LockssTestCase {
     assertTrue(cbDiffs.contains("prop2"));
     assertFalse(cbDiffs.contains("prop4"));
     assertEquals(SetUtil.set("prop2"), cbDiffs.getDifferenceSet());
-    log.debug(mgr.getCurrentConfig().toString());
+    log.debug(ConfigManager.getCurrentConfig().toString());
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1))));
     assertTrue(cbDiffs.contains("prop4"));
     assertFalse(cbDiffs.contains("prop2"));
     assertEquals(SetUtil.set("prop4"), cbDiffs.getDifferenceSet());
-    log.debug(mgr.getCurrentConfig().toString());
+    log.debug(ConfigManager.getCurrentConfig().toString());
     assertTrue(setCurrentConfigFromUrlList(ListUtil.
 					   list(FileTestUtil.urlOfString(c1),
 						FileTestUtil.urlOfString(c1a))));
     assertEquals(SetUtil.set("prop4", "prop2"), cbDiffs.getDifferenceSet());
-    log.debug(mgr.getCurrentConfig().toString());
+    log.debug(ConfigManager.getCurrentConfig().toString());
 
   }
 
@@ -191,7 +191,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.platform.logdirectory", "/var/log/foo");
     props.put("org.lockss.platform.logfile", "bar");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("1.2.3.4", config.get("org.lockss.localIPAddress"));
     assertEquals(FileUtil.sysDepPath("/var/log/foo/bar"),
 		 config.get(FileTarget.PARAM_FILE));
@@ -210,7 +210,7 @@ public class TestConfigManager extends LockssTestCase {
   public void testPlatformAccess0() throws Exception {
     Properties props = new Properties();
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertFalse(config.containsKey("org.lockss.ui.access.ip.include"));
     assertFalse(config.containsKey("org.lockss.proxy.access.ip.include"));
   }
@@ -221,7 +221,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
     props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("1.2.3.0/22", config.get("org.lockss.ui.access.ip.include"));
     assertEquals("1.2.3.0/21",
 		 config.get("org.lockss.proxy.access.ip.include"));
@@ -232,7 +232,7 @@ public class TestConfigManager extends LockssTestCase {
     Properties props = new Properties();
     props.put("org.lockss.platform.accesssubnet", "1.2.3.*");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("1.2.3.*", config.get("org.lockss.ui.access.ip.include"));
     assertEquals("1.2.3.*", config.get("org.lockss.proxy.access.ip.include"));
   }
@@ -244,7 +244,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.ui.access.ip.include", "1.2.3.0/22");
     props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("1.2.3.*;1.2.3.0/22",
 		 config.get("org.lockss.ui.access.ip.include"));
     assertEquals("1.2.3.*;1.2.3.0/21",
@@ -260,7 +260,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.proxy.access.ip.include", "1.2.3.0/21");
     props.put("org.lockss.proxy.access.ip.platformAccess", "3.2.1.0/22");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("1.2.3.0/22",
 		 config.get("org.lockss.ui.access.ip.include"));
     assertEquals("1.2.3.*;1.2.3.0/21",
@@ -271,7 +271,7 @@ public class TestConfigManager extends LockssTestCase {
     Properties props = new Properties();
     props.put("org.lockss.platform.diskSpacePaths", "/foo/bar");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("/foo/bar", config.get("org.lockss.cache.location"));
     assertEquals("/foo/bar", config.get("org.lockss.history.location"));
   }
@@ -280,7 +280,7 @@ public class TestConfigManager extends LockssTestCase {
     Properties props = new Properties();
     props.put("org.lockss.platform.diskSpacePaths", "/a/b;/foo/bar");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("/a/b", config.get("org.lockss.cache.location"));
     assertEquals("/a/b", config.get("org.lockss.history.location"));
     assertEquals(FileUtil.sysDepPath("/a/b/iddb"),
@@ -292,7 +292,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.platform.smtphost", "smtp.example.com");
     props.put("org.lockss.platform.smtpport", "25");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("smtp.example.com",
 		 config.get("org.lockss.mail.smtphost"));
     assertEquals("25",
@@ -305,7 +305,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.foo", "44");
     props.put("123.org.lockss.foo", "55");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("55", config.get("org.lockss.foo"));
   }
 
@@ -315,7 +315,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.foo", "22");
     props.put("123.org.lockss.foo", "55");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("22", config.get("org.lockss.foo"));
   }
 
@@ -324,7 +324,7 @@ public class TestConfigManager extends LockssTestCase {
     props.put("org.lockss.foo", "11");
     props.put("123.org.lockss.foo", "55");
     ConfigurationUtil.setCurrentConfigFromProps(props);
-    Configuration config = mgr.getCurrentConfig();
+    Configuration config = ConfigManager.getCurrentConfig();
     assertEquals("11", config.get("org.lockss.foo"));
   }
 
@@ -491,7 +491,7 @@ public class TestConfigManager extends LockssTestCase {
     Properties props = new Properties();
     props.put("foo", "23");
     props.put("bar", "false");
-    Configuration config = mgr.fromProperties(props);
+    Configuration config = ConfigManager.fromProperties(props);
     assertEquals(2, config.keySet().size());
     assertEquals("23", config.get("foo"));
     assertEquals("false", config.get("bar"));

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.45 2005-10-07 21:48:47 troberts Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.46 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -668,9 +668,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     branch.nodeProps.setProperty(TREE_SIZE_PROPERTY, "789");
     branch.invalidateCachedValues(true);
     // should now be explicitly marked invalid
-    assertEquals(branch.INVALID,
+    assertEquals(RepositoryNodeImpl.INVALID,
 		 branch.nodeProps.getProperty(TREE_SIZE_PROPERTY));
-    assertEquals(branch.INVALID,
+    assertEquals(RepositoryNodeImpl.INVALID,
 		 branch.nodeProps.getProperty(CHILD_COUNT_PROPERTY));
     // fake prop set at root to check invalidation stops properly
     root.nodeProps.setProperty(TREE_SIZE_PROPERTY, "789");
@@ -822,7 +822,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertFalse(leaf.isContentInactive());
     assertEquals(1, leaf.getCurrentVersion());
     // back to null, not 'false'
-    assertNull(leaf.nodeProps.getProperty(leaf.INACTIVE_CONTENT_PROPERTY));
+    assertNull(leaf.nodeProps.getProperty(RepositoryNodeImpl.INACTIVE_CONTENT_PROPERTY));
     String resultStr = getLeafContent(leaf);
     assertEquals("test stream", resultStr);
   }
@@ -853,7 +853,8 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     props.load(is);
     is.close();
     // make sure the 'was inactive' property hasn't been lost
-    assertEquals("true", props.getProperty(leaf.NODE_WAS_INACTIVE_PROPERTY));
+    assertEquals("true", 
+                 props.getProperty(RepositoryNodeImpl.NODE_WAS_INACTIVE_PROPERTY));
   }
 
   public void testAbandonReactivateViaNewVersion() throws Exception {
@@ -1043,9 +1044,9 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     leaf.ensureCurrentInfoLoaded();
 
     // should return false if content dir fails
-    leaf.failEnsureDirExists = true;
+    MyMockRepositoryNode.failEnsureDirExists = true;
     assertFalse(leaf.checkContentConsistency());
-    leaf.failEnsureDirExists = false;
+    MyMockRepositoryNode.failEnsureDirExists = false;
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if content file absent
@@ -1063,7 +1064,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     assertTrue(leaf.checkContentConsistency());
 
     // should return false if inactive and files missing
-    leaf.currentVersion = leaf.INACTIVE_VERSION;
+    leaf.currentVersion = RepositoryNodeImpl.INACTIVE_VERSION;
     assertFalse(leaf.checkContentConsistency());
     leaf.currentPropsFile.renameTo(leaf.getInactivePropsFile());
     assertFalse(leaf.checkContentConsistency());

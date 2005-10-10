@@ -1,5 +1,5 @@
 /*
- * $Id: TestDaemonStatus.java,v 1.5 2004-02-21 02:10:04 eaalto Exp $
+ * $Id: TestDaemonStatus.java,v 1.6 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -247,7 +247,8 @@ public class TestDaemonStatus extends LockssServletTestCase {
   public void testTextNonStringKey() throws Exception {
     MockStatusAccessor statusAccessor = new MockStatusAccessor();
     List cols = ListUtil.list("foo", StatusTable.ROW_SEPARATOR);
-    statusAccessor.setRows(statusAccessor.makeRowsFrom(cols, rowArray1), null);
+    statusAccessor.setRows(MockStatusAccessor.makeRowsFrom(cols, rowArray1), 
+                           null);
     statusAccessor.setColumnDescriptors(MockStatusAccessor.makeColumnDescriptorsFrom(colArray1), null);
 
     statSvc.registerStatusAccessor("testtbl", statusAccessor);

@@ -1,5 +1,5 @@
 /*
- * $Id: JavaHttpUrlConnection.java,v 1.1 2004-02-23 09:25:49 tlipkis Exp $
+ * $Id: JavaHttpUrlConnection.java,v 1.2 2005-10-10 23:48:55 troberts Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -33,6 +33,7 @@ package org.lockss.util.urlconn;
 import java.util.*;
 import java.io.*;
 import java.net.*;
+
 import org.lockss.util.*;
 
 /** Encapsulates Java's HttpURLConnection impelementation as a
@@ -73,7 +74,7 @@ public class JavaHttpUrlConnection extends JavaUrlConnection {
   }
 
   public void setFollowRedirects(boolean followRedirects) {
-    hurlConn.setFollowRedirects(followRedirects);
+    HttpURLConnection.setFollowRedirects(followRedirects);
   }
 
   public int getResponseCode() {

@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailer.java,v 1.3 2003-06-20 22:34:53 claire Exp $
+ * $Id: SmtpMailer.java,v 1.4 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class SmtpMailer {
    * @throws IOException
    */
   boolean doSMTP(String to, String from, String subject, String message,
-                         String smtpHost, int smtpPort, String localHostName)
+                 String smtpHost, int smtpPort, String localHostName)
       throws IOException {
     if (smtpHost == null) {
       return err("No smtp host specified; can't send email");
@@ -78,7 +78,7 @@ public class SmtpMailer {
       return err("No local host specified; can't send email");
     }
 
-    this.smtpHost = smtpHost;
+    SmtpMailer.smtpHost = smtpHost;
 
     if (!useTestStreams) {
       try {

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.22 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: V1PollTally.java,v 1.23 2005-10-10 23:48:56 troberts Exp $
  */
 
 /*
@@ -399,7 +399,7 @@ public class V1PollTally extends PollTally {
     
     if (!poll.scheduleHash(digest, deadline, poll.copyVote(vote, vote.agree),
                            new ReplayVoteCallback())) {
-      poll.m_pollstate = poll.ERR_SCHEDULE_HASH;
+      poll.m_pollstate = Poll.ERR_SCHEDULE_HASH;
       log.debug("couldn't schedule hash - stopping replay poll");
     }
   }

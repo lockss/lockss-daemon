@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlUtils.java,v 1.2 2005-10-08 02:12:10 troberts Exp $
+ * $Id: TestXmlUtils.java,v 1.3 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -110,7 +110,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     Element root;
     String  version;
     
-    root = xmlUtils.createRoot(xmlUtils.createDocument(), "myroot");
+    root = xmlUtils.createRoot(XmlUtils.createDocument(), "myroot");
     
     assertTrue(root.getNamespaceURI().equals(AP_NS_URI));
     assertEquals(root.getTagName(), tag("myroot"));
@@ -128,7 +128,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     Document doc;
     Element  root;
     
-    doc  = xmlUtils.parseXmlString(xml);
+    doc  = XmlUtils.parseXmlString(xml);
     root = doc.getDocumentElement();
     
     assertTrue(root.getNamespaceURI().equals(AP_NS_URI));
@@ -145,7 +145,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     Document doc;
     Element  root;
     
-    doc  = xmlUtils.parseXmlStream(new ByteArrayInputStream(xml.getBytes()));
+    doc  = XmlUtils.parseXmlStream(new ByteArrayInputStream(xml.getBytes()));
     root = doc.getDocumentElement();
     
     assertTrue(root.getNamespaceURI().equals(AP_NS_URI));
@@ -163,7 +163,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     Document doc;
     Element  root;
     
-    doc = xmlUtils.parseXmlStream(new StringReader(xml));
+    doc = XmlUtils.parseXmlStream(new StringReader(xml));
     root = doc.getDocumentElement();
     
     assertTrue(root.getNamespaceURI().equals(AP_NS_URI));
@@ -182,7 +182,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     assertEquals(nodeList.getLength(), 3);
 
     element = (Element) nodeList.item(2);
-    xmlUtils.addText(element, PLAIN_TEXT);
+    XmlUtils.addText(element, PLAIN_TEXT);
 
     text = element.getFirstChild().getNodeValue();
     assertEquals(PLAIN_TEXT, text);
@@ -210,7 +210,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
    * getText()
    */
   public void testGetText() throws Exception {
-    String text = xmlUtils.getText(document.getDocumentElement());
+    String text = XmlUtils.getText(document.getDocumentElement());
     
     assertEquals(ENCODED_TEXT, text);
   }
@@ -219,7 +219,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
    * getEncodedText()
    */
   public void testGetEncodedText() throws Exception {
-    String text = xmlUtils.getEncodedText(document.getDocumentElement());
+    String text = XmlUtils.getEncodedText(document.getDocumentElement());
     
     assertEquals(PLAIN_TEXT, text);
   }
@@ -299,7 +299,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     Element root;
     
     stream = new ByteArrayOutputStream();
-    xmlUtils.serialize(document, stream);
+    XmlUtils.serialize(document, stream);
 
     newDoc = parse(new String(stream.toByteArray()));
     root   = newDoc.getDocumentElement();
@@ -322,7 +322,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     
    
     writer = new StringWriter();
-    xmlUtils.serialize(document, writer);
+    XmlUtils.serialize(document, writer);
 
     newDoc = parse(writer.toString());
     root   = newDoc.getDocumentElement();
@@ -342,7 +342,7 @@ public class TestXmlUtils extends LockssTestCase implements ApiParameters {
     Document newDoc;
     Element  root;
     
-    newDoc = parse(xmlUtils.serialize(document)); System.out.println("doc: " + newDoc);
+    newDoc = parse(XmlUtils.serialize(document)); System.out.println("doc: " + newDoc);
     root   = newDoc.getDocumentElement();
     
     assertTrue(root.getNamespaceURI().equals(AP_NS_URI));

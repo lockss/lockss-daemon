@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssRepositoryImpl.java,v 1.58 2005-08-26 02:37:21 tlipkis Exp $
+ * $Id: TestLockssRepositoryImpl.java,v 1.59 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class TestLockssRepositoryImpl extends LockssTestCase {
   }
 
   String getCacheLocation() {
-    return repo.getCacheLocation();
+    return LockssRepositoryImpl.getCacheLocation();
   }
 
   public void testGetLocalRepository() throws Exception {

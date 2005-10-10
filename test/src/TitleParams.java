@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.4 2004-09-27 22:39:02 smorabito Exp $
+ * $Id: TitleParams.java,v 1.5 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -113,7 +113,7 @@ public class TitleParams {
 		cout.println((ix+1) + ": " + p.getPluginName());
 	      }
 	    } else {
-	      String key = pluginMgr.pluginKeyFromName(line);
+	      String key = PluginManager.pluginKeyFromName(line);
 	      pluginMgr.ensurePluginLoaded(key);
 	      plugin = pluginMgr.getPlugin(key);
 	      if (plugin == null) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSetInactiveAus.java,v 1.4 2005-07-18 08:05:48 tlipkis Exp $
+ * $Id: TestTitleSetInactiveAus.java,v 1.5 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestTitleSetInactiveAus extends LockssTestCase {
     props.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDir);
     ConfigurationUtil.setCurrentConfigFromProps(props);
 
-    String key = pluginMgr.pluginKeyFromName(MockPlugin.class.getName());
+    String key = PluginManager.pluginKeyFromName(MockPlugin.class.getName());
     pluginMgr.ensurePluginLoaded(key);
     mp = (MockPlugin)pluginMgr.getPlugin(key);
 

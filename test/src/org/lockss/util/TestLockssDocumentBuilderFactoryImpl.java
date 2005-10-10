@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssDocumentBuilderFactoryImpl.java,v 1.2 2005-10-04 22:56:00 tlipkis Exp $
+ * $Id: TestLockssDocumentBuilderFactoryImpl.java,v 1.3 2005-10-10 23:48:55 troberts Exp $
  */
 
 /*
@@ -108,7 +108,7 @@ public class TestLockssDocumentBuilderFactoryImpl extends LockssTestCase {
     Logger l =
       Logger.getLogger(LockssDocumentBuilderFactoryImpl.ERROR_LOGGER_NAME);
     MockLogTarget target = new MockLogTarget();
-    l.setTarget(target);
+    Logger.setTarget(target);
 
     DocumentBuilderFactory fact = DocumentBuilderFactory.newInstance();
     DocumentBuilder builder = fact.newDocumentBuilder();

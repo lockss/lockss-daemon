@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescrPicker.java,v 1.8 2004-07-16 19:42:49 clairegriffin Exp $
+ * $Id: ConfigParamDescrPicker.java,v 1.9 2005-10-10 23:48:56 troberts Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class ConfigParamDescrPicker
   void initLists() {
     Collection knownList = plugin.getKnownConfigParamDescrs();
     Collection pluginList = plugin.getConfigParamDescrs();
-    defaultDescrs = plugin.getDefaultConfigParamDescrs();
+    defaultDescrs = EditableDefinablePlugin.getDefaultConfigParamDescrs();
     PickerCellRenderer renderer = new PickerCellRenderer();
     Iterator it;
     // add current plugin parameters
