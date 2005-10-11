@@ -1,5 +1,5 @@
 /*
- * $Id: Configuration.java,v 1.14 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: Configuration.java,v 1.15 2005-10-11 05:43:31 tlipkis Exp $
  */
 
 /*
@@ -307,7 +307,7 @@ public abstract class Configuration {
    * Return a list of values for the specified key.
    */
   public abstract List getList(String key);
-  
+
   public List getList(String key, List dfault) {
     List retVal = getList(key);
     if (retVal == null) {
@@ -488,7 +488,7 @@ public abstract class Configuration {
     remove(rootKey);
   }
 
-  /** 
+  /**
    * Copy the contents of another configuration relative to the
    * specified "root" key.
    *

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRecordingMessageDigest.java,v 1.1 2004-03-29 09:16:00 tlipkis Exp $
+ * $Id: TestRecordingMessageDigest.java,v 1.2 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestRecordingMessageDigest extends LockssTestCase {
     dig.update(bytes);
     rmd.update(bytes);
     assertEquals(dig.digest(), rmd.digest());
-  }    
+  }
 
   public void testEquiv0() {
     assertSameDigest("");

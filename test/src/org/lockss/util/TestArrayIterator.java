@@ -1,5 +1,5 @@
 /*
- * $Id: TestArrayIterator.java,v 1.3 2004-12-09 08:19:36 tlipkis Exp $
+ * $Id: TestArrayIterator.java,v 1.4 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestArrayIterator extends LockssTestCase {
   public void testNullIter() {
     try {
       Iterator iter = new ArrayIterator(null);
-      fail("Should raise NullPointerException"); 
+      fail("Should raise NullPointerException");
     } catch (NullPointerException e) {
     }
   }

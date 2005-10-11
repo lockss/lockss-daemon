@@ -1,5 +1,5 @@
 /*
- * $Id: ServletInterface.java,v 1.1 2005-03-02 20:49:44 ssmail Exp $
+ * $Id: ServletInterface.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -41,14 +41,14 @@ public interface ServletInterface {
    * @param target Destination URL
    */
   void redirect(String target) throws IOException;
-  
+
   /**
    * Set a session context name=value pair
    * @param name Attribute name
    * @param value Attribute value
    */
   void set(String name, Object value);
-  
+
   /**
    * Delete a session context name=value pair
    * @param name Attribute name
@@ -84,7 +84,7 @@ public interface ServletInterface {
    * @param type Content type text ("text/html", etc)
    */
   public void setContentType(String type);
- 
+
   /**
    * Get the request URL
    * @return URI Target (plus query text)

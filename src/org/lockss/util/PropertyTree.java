@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.2 2005-10-02 00:05:52 tlipkis Exp $
+ * $Id: PropertyTree.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.2 2005-10-02 00:05:52 tlipkis Exp $
+// $Id: PropertyTree.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.util;
@@ -55,7 +55,7 @@ import java.util.*;
  * over nested keys.
  *
  * Wildcard nodes can be defined with "*" so that keys such as
- * "aa.*.cc", will match gets such as "aa.bb.cc", "aa.X.cc", etc. 
+ * "aa.*.cc", will match gets such as "aa.bb.cc", "aa.X.cc", etc.
  *
  * Values can contain tokens such as %name%, which are expanded
  * as with the results of a call to System.getProperty("name");
@@ -66,7 +66,7 @@ import java.util.*;
  * recursively.
  */
 public class PropertyTree extends Properties
-{    
+{
   /* ------------------------------------------------------------ */
   class Node extends Hashtable
   {
@@ -77,32 +77,32 @@ public class PropertyTree extends Properties
       return  "["+key+":"+super.toString()+"]";
     }
   }
-    
+
   /* ------------------------------------------------------------ */
   private Node rootNode=new Node();
   private String prefix=null;
   private PropertyTree parent=null;
   private boolean trim=true;
-    
+
   /* ------------------------------------------------------------ */
   /** Constructor.
    * Equivalent to PropertyTree(true);
    */
   public PropertyTree()
   {}
-    
+
   /* ------------------------------------------------------------ */
-  /** Constructor. 
+  /** Constructor.
    * @param trimLoadValues If true, all values are trimmed during loads.
    */
   public PropertyTree(boolean trimLoadValues)
   {
     trim=trimLoadValues;
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Construct from Properties
-   * @param properties 
+   * @param properties
    */
   public PropertyTree(Properties properties)
   {
@@ -127,10 +127,10 @@ public class PropertyTree extends Properties
 	Object k=e.nextElement();
 	String v=(String)properties.get(k);
 	v=expandMacros(v);
-	put(k,trim?v.trim():v);    
+	put(k,trim?v.trim():v);
       }
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Override Hashtable.get() */
   public synchronized Object get(Object key)
@@ -143,7 +143,7 @@ public class PropertyTree extends Properties
 	if (realKey!=null)
 	  value=super.get(realKey);
       }
-        
+
     return value;
   }
 
@@ -153,7 +153,7 @@ public class PropertyTree extends Properties
   {
     return (String)get(key);
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Override Hashtable.put() */
   public synchronized Object put(Object key, Object value)
@@ -163,7 +163,7 @@ public class PropertyTree extends Properties
     Object v=null;
     if (parent!=null)
       v=parent.put(parentKey((String)key),value);
-        
+
     return super.put(key,value);
   }
 
@@ -172,14 +172,14 @@ public class PropertyTree extends Properties
   {
     return (String)put(key,value);
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Override Hashtable.remove() */
   public synchronized Object remove(Object key)
   {
     if (parent!=null)
       parent.remove(parentKey((String)key));
-        
+
     Object value=super.get(key);
     if (value!=null)
       {
@@ -194,8 +194,8 @@ public class PropertyTree extends Properties
 	return super.remove(realKey);
       }
     return null;
-  }   
-    
+  }
+
   /* ------------------------------------------------------------ */
   /** From Properties
    * @deprecated
@@ -207,7 +207,7 @@ public class PropertyTree extends Properties
     writer.println(header);
     list(writer);
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Return a sub tree of the PropertyTree.
    * Changes made in the sub tree are reflected in the original tree,
@@ -221,7 +221,7 @@ public class PropertyTree extends Properties
       return this;
     return new PropertyTree(this,key);
   }
-    
+
   /* ------------------------------------------------------------ */
   public Enumeration propertyNames()
   {
@@ -242,8 +242,8 @@ public class PropertyTree extends Properties
 	}
       };
   }
-    
-    
+
+
   /* ------------------------------------------------------------ */
   /** Enumerate top level tree node names.
    * @return Enumeration of tree node names.
@@ -252,7 +252,7 @@ public class PropertyTree extends Properties
   {
     return getNodes("");
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Enumerate tree node names below given node.
    * @param key Key of the node.
@@ -273,8 +273,8 @@ public class PropertyTree extends Properties
       }
     return node.keys();
   }
-    
-    
+
+
   /* ------------------------------------------------------------ */
   /** Enumerate non wild tree node names below given node.
    * @param wild If false, only non-wild nodes are returned.
@@ -284,7 +284,7 @@ public class PropertyTree extends Properties
   {
     return getRealNodes("");
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Enumerate non wild tree node names below given node.
    * @param key Key of the node.
@@ -295,7 +295,7 @@ public class PropertyTree extends Properties
   {
     if (!key.endsWith(".") && key.length()>0)
       key+=".";
-            
+
     // find the root tree.
     PropertyTree tree=this;
     while (tree.parent!=null)
@@ -303,7 +303,7 @@ public class PropertyTree extends Properties
 	key=tree.prefix+key;
 	tree=tree.parent;
       }
-        
+
     // find not wild keys
     Hashtable keySet=new Hashtable(tree.size()*2);
     Enumeration e= tree.keys();
@@ -318,10 +318,10 @@ public class PropertyTree extends Properties
 	  s=s.substring(0,d);
 	keySet.put(s,s);
       }
-        
+
     return keySet.keys();
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Get Vector of values.
    * @param key the Value(s) to get.
@@ -359,7 +359,7 @@ public class PropertyTree extends Properties
       l.add(tok.nextToken());
     return l;
   }
-    
+
   /* ------------------------------------------------------------ */
   public boolean getBoolean(String key)
   {
@@ -369,7 +369,7 @@ public class PropertyTree extends Properties
 
     return "1tTyYoO".indexOf(value.charAt(0))>=0;
   }
-    
+
   /* ------------------------------------------------------------ */
   public boolean getBoolean(String key, boolean inDefault)
   {
@@ -392,7 +392,7 @@ public class PropertyTree extends Properties
       }
     return pt;
   }
-    
+
   /* ------------------------------------------------------------ */
   private void putTokenKey(String key,String tokenKey)
   {
@@ -411,7 +411,7 @@ public class PropertyTree extends Properties
 	index++;
       }
     node.key=tokenKey;
-  }    
+  }
 
   /* ------------------------------------------------------------ */
   private String getTokenKey(String key)
@@ -420,7 +420,7 @@ public class PropertyTree extends Properties
     String tokenKey=getTokenKey(rootNode,tokens,0);
     return tokenKey;
   }
-    
+
   /* ------------------------------------------------------------ */
   private String getTokenKey(Node node, Vector tokens, int index)
   {
@@ -439,19 +439,19 @@ public class PropertyTree extends Properties
 	  {
 	    subNode=(Node)node.get("*");
 	    if (subNode!=null)
-	      key=getTokenKey(subNode,tokens,index+1);    
+	      key=getTokenKey(subNode,tokens,index+1);
 	  }
-            
+
       }
     return key;
   }
-   
+
   /* ------------------------------------------------------------ */
   private String parentKey(String key)
   {
-    return prefix+key;    
-  } 
-    
+    return prefix+key;
+  }
+
   /* ------------------------------------------------------------ */
   /** Turn the key into a list of tokens */
   private static Vector getTokens(String key)
@@ -482,7 +482,7 @@ public class PropertyTree extends Properties
       }
     this.parent=parent;
   }
-    
+
   /* ------------------------------------------------------------ */
   private void findKeys(Hashtable keyMap,
 			Node node,
@@ -502,7 +502,7 @@ public class PropertyTree extends Properties
 		   (key==null)
 		   ?((String)tokens.elementAt(index))
 		   :(key+"."+tokens.elementAt(index)) );
-            
+
 	// expand wild cards
 	subNode=(Node)node.get("*");
 	if (subNode!=null)
@@ -527,7 +527,7 @@ public class PropertyTree extends Properties
 	expandNode(keyMap,n,keyLength);
       }
   }
-    
+
   /* ------------------------------------------------------------ */
   static private String expandMacros(String v)
   {
@@ -539,7 +539,7 @@ public class PropertyTree extends Properties
 	int i2 = v.indexOf('%',i1+1);
 	if (i2 < 0) break;
 	i = i2 + 1;
-            
+
 	String sk = v.substring(i1+1,i2);
 	String sv = sk.length()==0?"%":System.getProperty(sk);
 	if (null == sv) continue;
@@ -548,9 +548,9 @@ public class PropertyTree extends Properties
 	if (0 < i1)
 	  b.append(v.substring(0,i1));
 	b.append(sv);
-	if ((i2+1) < v.length()) 
+	if ((i2+1) < v.length())
 	  b.append(v.substring(i2+1));
-            
+
 	v = b.toString();
       }
     return v;

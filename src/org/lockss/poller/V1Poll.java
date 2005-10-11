@@ -1,5 +1,5 @@
 /*
- * $Id: V1Poll.java,v 1.28 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: V1Poll.java,v 1.29 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -60,29 +60,29 @@ public abstract class V1Poll extends BasePoll {
     "poll.voteMargin";
   static final String PARAM_TRUSTED_WEIGHT = Configuration.PREFIX +
     "poll.trustedWeight";
-  
+
   static final int DEFAULT_VOTE_MARGIN = 75;
   static final int DEFAULT_TRUSTED_WEIGHT = 350;
   static final int DEFAULT_AGREE_VERIFY = 10;
   static final int DEFAULT_DISAGREE_VERIFY = 80;
-  
+
   static final String[] ERROR_STRINGS = {"Poll Complete","Hasher Busy",
     "Hashing Error", "IO Error"};
-  
+
   static final int PS_INITING = 0;
   static final int PS_WAIT_HASH = 1;
   static final int PS_WAIT_VOTE = 2;
   static final int PS_WAIT_TALLY = 3;
   static final int PS_COMPLETE = 4;
-  
+
   static final Logger log = Logger.getLogger("V1Poll");
-  
+
   double m_agreeVer = 0;     // the max percentage of time we will verify
   double m_disagreeVer = 0;  // the max percentage of time we will verify
   byte[] m_challenge;     // The caller's challenge string
   byte[] m_verifier;      // Our verifier string - hash of secret
   byte[] m_hash;          // Our hash of challenge, verifier and content(S)
-  
+
   LcapMessage m_msg;      // The message which triggered the poll
   CachedUrlSet m_cus;     // the cached url set from the archival unit
   PollSpec m_pollspec;
@@ -128,7 +128,7 @@ public abstract class V1Poll extends BasePoll {
     m_key = challengeToKey(challenge);
     m_deadline = Deadline.in(duration);
     m_pollstate = PS_INITING;
-    
+
     // now copy the msg elements we need
     m_hashTime = m_cus.estimatedHashDuration();
     if(pollspec.getPollType() != V1_VERIFY_POLL) {
@@ -157,7 +157,7 @@ public abstract class V1Poll extends BasePoll {
   public PollTally getVoteTally() {
     return m_tally;
   }
-  
+
   public long getCreateTime() {
     return m_createTime;
   }
@@ -420,7 +420,7 @@ public abstract class V1Poll extends BasePoll {
       log.debug("Setting message for " + this + " from " + msg);
     }
   }
-  
+
   /**
    * is our poll currently in an error condition
    * @return true if the poll state is an error value
@@ -569,7 +569,7 @@ public abstract class V1Poll extends BasePoll {
   public int getVersion() {
     return m_pollspec.getPollVersion();
   }
-  
+
   /**
    * Return the PollFactory for this poll version.
    */
@@ -600,11 +600,11 @@ public abstract class V1Poll extends BasePoll {
   public Deadline getDeadline() {
     return m_deadline;
   }
-  
+
   public CachedUrlSet getCachedUrlSet() {
     return m_cus;
   }
-  
+
   class PollHashCallback implements HashService.Callback {
 
     /**

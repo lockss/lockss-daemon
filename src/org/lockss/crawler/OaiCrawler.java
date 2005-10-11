@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.9 2005-10-10 23:27:29 tlipkis Exp $
+ * $Id: OaiCrawler.java,v 1.10 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class OaiCrawler extends FollowLinkCrawler {
 
   protected void setCrawlConfig(Configuration config) {
     super.setCrawlConfig(config);
-    maxOaiRetries = 
+    maxOaiRetries =
       config.getInt(PARAM_OAI_REQUEST_RETRY_TIMES, DEFAULT_OAI_REQUEST_RETRY_TIMES);
   }
 
@@ -85,9 +85,9 @@ public class OaiCrawler extends FollowLinkCrawler {
 
   /**
    * Oai crawler can crawl in 2 mode, the follow link mode and not follow link mode.
-   * The "follow link" mode will crawl everything from the URLs we got from OAI response 
+   * The "follow link" mode will crawl everything from the URLs we got from OAI response
    * following links on each page within crawl spec.
-   * The "not follow link" mode will crawl just the URLs we got from OAI repsonse, it will 
+   * The "not follow link" mode will crawl just the URLs we got from OAI repsonse, it will
    * follow the link from the content of the URLs.
    */
   protected boolean doCrawl0(){
@@ -108,11 +108,11 @@ public class OaiCrawler extends FollowLinkCrawler {
    protected Set getUrlsToFollow() {
      Set extractedUrls = new HashSet();
      OaiRequestData oaiRequestData = spec.getOaiRequestData();
-     
+
      OaiHandler oaiHandler = new OaiHandler();
      oaiHandler.issueRequest(oaiRequestData, getFromTime(), getUntilTime());
      oaiHandler.processResponse(maxOaiRetries);
-     
+
      List errList = oaiHandler.getErrors();
      if ( !errList.isEmpty() ){
        crawlStatus.setCrawlError("Error in processing Oai Records");
@@ -129,24 +129,24 @@ public class OaiCrawler extends FollowLinkCrawler {
      if ( updatedUrls.isEmpty() ) {
        logger.warning("No url found in the OAI reponse ! ");
      } else {
-       
+
        Iterator it = updatedUrls.iterator();
        while (it.hasNext()){
 	 String url = (String) it.next();
-	 
+
 	 logger.debug2("Trying to process " +url);
-	 
+
 	 // check crawl window during crawl
 	 if (!withinCrawlWindow()) {
 	   crawlStatus.setCrawlError(Crawler.STATUS_WINDOW_CLOSED);
 	   abortCrawl();
 	  //return null;
 	 }
-	 
+
 	 if (parsedPages.contains(url)) {
 	   continue;
 	 }
-	 
+
 	 //catch and warn if there's a url in the start urls
 	 //that we shouldn't cache
 	 if (spec.isIncluded(url)) {
@@ -159,10 +159,10 @@ public class OaiCrawler extends FollowLinkCrawler {
 	   logger.warning("Called with a starting url we aren't suppose to "+
 			  "cache: "+url);
 	 }
-	 
+
        }
      }
-     
+
      lvlCnt = 1;
 
      if (shouldFollowLink()){
@@ -179,11 +179,11 @@ public class OaiCrawler extends FollowLinkCrawler {
 
   /**
    * getting the last crawl time from AuState of the current AU
-   * 
+   *
    * //XXX noted: OAI protocol just enforce day granularity, we still need
-   * to check if-modified-since. we need to implement a better getTime 
+   * to check if-modified-since. we need to implement a better getTime
    * method in aus to make it oai crawler work correctly.
-   */  
+   */
   protected String getFromTime(){
     Date lastCrawlDate = new Date(aus.getLastCrawlTime());
     String lastCrawlDateString = iso8601DateFormatter.format(lastCrawlDate);
@@ -193,10 +193,10 @@ public class OaiCrawler extends FollowLinkCrawler {
   }
 
   /**
-   * getting the time until when we want all the changed page's 
+   * getting the time until when we want all the changed page's
    * url from the publisher/repository
-   * 
-   * //XXX is this the policy we want ? 
+   *
+   * //XXX is this the policy we want ?
    * Now it will return the time when this method is called
    */
   protected String getUntilTime(){

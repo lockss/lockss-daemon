@@ -1,5 +1,5 @@
 /*
- * $Id: StatusAccessor.java,v 1.16 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: StatusAccessor.java,v 1.17 2005-10-11 05:44:14 tlipkis Exp $
  */
 
 /*
@@ -43,15 +43,15 @@ public interface StatusAccessor {
 
   /**
    * Fills in the {@link ColumnDescriptor}s and rows for the given table (and
-   * optionally the default {@link StatusTable.SortRule}s, 
+   * optionally the default {@link StatusTable.SortRule}s,
    * {@link StatusTable.SummaryInfo}, and Title.
    *
    * @param table @{link StatusTable} which specifies a name and optionally
-   * a key.  This table will be populatred with {@link ColumnDescriptor} and 
-   * rows, as well as optionally the default {@link StatusTable.SortRule}s, 
+   * a key.  This table will be populatred with {@link ColumnDescriptor} and
+   * rows, as well as optionally the default {@link StatusTable.SortRule}s,
    * {@link StatusTable.SummaryInfo}, and Title.
    */
-  public void populateTable(StatusTable table) 
+  public void populateTable(StatusTable table)
       throws StatusService.NoSuchTableException;
 
   /**

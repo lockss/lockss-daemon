@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpBuilderTester.java,v 1.6 2005-10-11 05:51:04 tlipkis Exp $
  */
 
 /*
@@ -62,13 +62,13 @@ public abstract class IcpBuilderTester extends LockssTestCase {
      */
     IcpMessage makeResponse(IcpMessage query)
         throws IcpProtocolException;
-    
+
   }
   /*
    * end NESTED INTERFACE
    * ====================
    */
-  
+
   /*
    * begin NESTED INTERFACE
    * ======================
@@ -88,7 +88,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
      */
     IcpMessage makeSrcRttResponse(IcpMessage query)
         throws IcpProtocolException;
-    
+
   }
   /*
    * end NESTED INTERFACE
@@ -128,7 +128,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
   public void testMakeDiscoveryEcho() {
     // Unimplemented
   }
-  
+
   /**
    * <p>Tests {@link IcpBuilder#makeError}.</p>
    * @throws Exception if an error occurs.
@@ -144,7 +144,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
                         IcpMessage.ICP_OP_ERR,
                         MockIcpMessage.getStandardSender());
   }
-  
+
   /**
    * <p>Tests {@link IcpBuilder#makeHit}.</p>
    * @throws Exception if an error occurs.
@@ -159,7 +159,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
           throws IcpProtocolException {
         return builder.makeHit(query,
                                MockIcpMessage.getStandardSrcRttResponse());
-      }  
+      }
     };
     performResponseTest(tester,
                         IcpMessage.ICP_OP_HIT,
@@ -182,12 +182,12 @@ public abstract class IcpBuilderTester extends LockssTestCase {
         return builder.makeHitObj(query,
                                   MockIcpMessage.getStandardSrcRttResponse(),
                                   MockIcpMessage.getStandardPayloadData());
-      }  
+      }
     };
     performResponseTest(tester,
                         IcpMessage.ICP_OP_HIT_OBJ,
                         MockIcpMessage.getStandardSender());
-    
+
     // Additional tests
     IcpMessage query;
     IcpMessage response;
@@ -212,7 +212,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
         return builder.makeMiss(query);
       }
       public IcpMessage makeSrcRttResponse(IcpMessage query)
-          throws IcpProtocolException { 
+          throws IcpProtocolException {
         return builder.makeMiss(query,
                                 MockIcpMessage.getStandardSrcRttResponse());
       }
@@ -221,7 +221,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
                         IcpMessage.ICP_OP_MISS,
                         MockIcpMessage.getStandardSender());
   }
-  
+
   /**
    * <p>Tests {@link IcpBuilder#makeMissNoFetch}.</p>
    * @throws Exception if an error occurs.
@@ -233,7 +233,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
         return builder.makeMissNoFetch(query);
       }
       public IcpMessage makeSrcRttResponse(IcpMessage query)
-          throws IcpProtocolException { 
+          throws IcpProtocolException {
         return builder.makeMissNoFetch(query,
                                        MockIcpMessage.getStandardSrcRttResponse());
       }
@@ -249,7 +249,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
    */
   public void testMakeQuery() throws Exception {
     IcpMessage query;
-    
+
     query = builder.makeQuery(MockIcpMessage.getStandardRequester(),
                               MockIcpMessage.getStandardQueryUrl());
     assertEquals(IcpMessage.ICP_OP_QUERY, query.getOpcode());
@@ -285,7 +285,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
                                    byte expectedOpcode,
                                    IPAddr expectedSender)
       throws Exception {
-    
+
     // Test null query
     try {
       IcpMessage response = tester.makeResponse(null);
@@ -302,7 +302,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
           + response.toString());
     }
     catch (IcpProtocolException ipe) { /* succeed */ }
-    
+
     IcpMessage query = MockIcpMessage.query();
     IcpMessage response = tester.makeResponse(query);
     expect(response, expectedOpcode, query.getVersion(),
@@ -332,7 +332,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
           + response.toString());
     }
     catch (IcpProtocolException ipe) { /* succeed */ }
-    
+
     // Test valid source return trip response
     IcpMessage query = MockIcpMessage.queryRequestSrcRtt();
     IcpMessage response = tester.makeSrcRttResponse(query);
@@ -343,7 +343,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
         + response.toString(), response.containsSrcRttResponse());
     assertEquals(MockIcpMessage.getStandardSrcRttResponse(),
                  response.getSrcRttResponse());
-    
+
     // Perform other response tests
     performResponseTest((ResponseTester)tester,
                         expectedOpcode,
@@ -368,7 +368,7 @@ public abstract class IcpBuilderTester extends LockssTestCase {
     assertEquals(expectedOpcode, message.getOpcode());
     assertEquals(expectedVersion, message.getVersion());
     assertEquals(expectedRequestNumber, message.getRequestNumber());
-    assertEquals(expectedPayloadUrl, message.getPayloadUrl());    
+    assertEquals(expectedPayloadUrl, message.getPayloadUrl());
   }
 
 }

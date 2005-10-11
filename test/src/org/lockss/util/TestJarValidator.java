@@ -1,5 +1,5 @@
 /*
- * $Id: TestJarValidator.java,v 1.8 2005-10-05 23:12:40 troberts Exp $
+ * $Id: TestJarValidator.java,v 1.9 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.lockss.daemon.*;
  * Test class for <code>org.lockss.util.JarValidator</code>.
  */
 public class TestJarValidator extends LockssTestCase {
-  
+
   public static Class testedClasses[] = {
     org.lockss.util.JarValidator.class
   };
@@ -64,7 +64,7 @@ public class TestJarValidator extends LockssTestCase {
   private String pubKeystoreName = "org/lockss/test/public.keystore";
   private KeyStore pubKeystore;
 
-  private KeyStore getKeystoreResource(String name, String pass) 
+  private KeyStore getKeystoreResource(String name, String pass)
       throws Exception {
     KeyStore ks = KeyStore.getInstance("JKS", "SUN");
     ks.load(ClassLoader.getSystemClassLoader().
@@ -163,7 +163,7 @@ public class TestJarValidator extends LockssTestCase {
     }
     assertNull(f);
   }
-  
+
 
   public void testUnsignedJar() throws Exception {
     // Don't sign the test jar.

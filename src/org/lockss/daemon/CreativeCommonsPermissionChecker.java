@@ -1,5 +1,5 @@
 /*
- * $Id: CreativeCommonsPermissionChecker.java,v 1.5 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: CreativeCommonsPermissionChecker.java,v 1.6 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public class CreativeCommonsPermissionChecker
     if (reader == null) {
       throw new NullPointerException("Called with null reader");
     } else if (permissionUrl == null) {
-      throw new NullPointerException("Called with null permissionUrl"); 
+      throw new NullPointerException("Called with null permissionUrl");
     }
 
     String rdfString;

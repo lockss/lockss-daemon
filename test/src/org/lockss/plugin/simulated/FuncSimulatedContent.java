@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSimulatedContent.java,v 1.71 2005-07-19 00:13:33 troberts Exp $
+ * $Id: FuncSimulatedContent.java,v 1.72 2005-10-11 05:50:15 tlipkis Exp $
  */
 
 /*
@@ -203,7 +203,7 @@ public class FuncSimulatedContent extends LockssTestCase {
     log.debug("checkFilter()");
     CachedUrl cu = sau.makeCachedUrl(SimulatedArchivalUnit.SIMULATED_URL_ROOT
 				     + "/001file.html");
-    
+
     enableFilter(true);
     InputStream is = cu.openForHashing();
     String expected =

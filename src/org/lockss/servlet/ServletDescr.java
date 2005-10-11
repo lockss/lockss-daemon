@@ -1,5 +1,5 @@
 /*
- * $Id: ServletDescr.java,v 1.4 2005-10-07 18:00:32 thib_gc Exp $
+ * $Id: ServletDescr.java,v 1.5 2005-10-11 05:46:57 tlipkis Exp $
  */
 
 /*
@@ -33,22 +33,22 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 public class ServletDescr {
-  
+
   /** Marker for servlets whose class can't be found */
   static class UnavailableServletMarker {}
 
   public Class cls;
-  
+
   public String heading;	// display name
-  
+
   public String name;		// url path component to invoke servlet
-  
+
   public String expl;
-  
+
   public int flags = 0;
 
   static Class UNAVAILABLE_SERVLET_MARKER = UnavailableServletMarker.class;
-  
+
   // flags
   public static final int ON_CLIENT = 0x01; // runs on client (else on admin)
   public static final int PER_CLIENT = 0x02; // per client (takes client arg)
@@ -61,8 +61,8 @@ public class ServletDescr {
   public static final int IN_NAV = 0x1000;
   public static final int IN_UIHOME = 0x2000;
   public static final int IN_ACCESSCONTROL = 0x4000;
-  
-  
+
+
   public ServletDescr(Class cls,
                       String heading,
                       String name,
@@ -84,7 +84,7 @@ public class ServletDescr {
          flags);
     setExplanation(expl);
   }
-  
+
   public ServletDescr(Class cls,
                       String heading,
                       int flags) {
@@ -104,7 +104,7 @@ public class ServletDescr {
     setExplanation(expl);
   }
 
-  
+
   public ServletDescr(String className,
                       String heading,
                       int flags) {
@@ -112,7 +112,7 @@ public class ServletDescr {
          heading,
          flags);
   }
-  
+
   public ServletDescr(String className,
                       String heading,
                       int flags,
@@ -138,13 +138,13 @@ public class ServletDescr {
     setExplanation(expl);
   }
 
-  
+
   static Class classForName(String className) {
     try {
       return Class.forName(className);
     } catch (ClassNotFoundException e) {
       return ServletDescr.UNAVAILABLE_SERVLET_MARKER;
-    }	
+    }
   }
 
   public String getName() {
@@ -162,35 +162,35 @@ public class ServletDescr {
   boolean isPerClient() {
     return (flags & PER_CLIENT) != 0;
   }
-  
+
   boolean runsOnClient() {
     return (flags & ON_CLIENT) != 0;
   }
-  
+
   boolean isInNavTable() {
     return (flags & NOT_IN_NAV) == 0;
   }
-  
+
   boolean isDebugOnly() {
     return (flags & DEBUG_ONLY) != 0;
   }
-  
+
   boolean isLargeLogo() {
     return (flags & LARGE_LOGO) != 0;
   }
-  
+
   boolean isNameIsUrl() {
     return (flags & NAME_IS_URL) != 0;
   }
-  
+
   public boolean isInNav() {
     return isFlagSet(IN_NAV);
   }
-  
+
   public boolean isInUiHome() {
     return isFlagSet(IN_UIHOME);
   }
-  
+
   public boolean isInAccessControl() {
     return isFlagSet(IN_ACCESSCONTROL);
   }
@@ -198,9 +198,9 @@ public class ServletDescr {
   private boolean isFlagSet(int flag) {
     return (flags & flag) != 0;
   }
-  
+
   private boolean isFlagClear(int flag) {
     return (flags & flag) == 0;
   }
-  
+
 }

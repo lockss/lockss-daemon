@@ -1,5 +1,5 @@
 /*
- * $Id: TreeReadTest.java,v 1.3 2005-09-16 20:52:44 dshr Exp $
+ * $Id: TreeReadTest.java,v 1.4 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -95,7 +95,7 @@ public class TreeReadTest {
    * Results on "blackbox":
    * OpenBSD: 255137 ms vs. 1240 ms
    * Fedora Core 3: 191936 ms vs 347 ms
-   * Freesbie: 
+   * Freesbie:
    * Results on "narses2":
    * Fedora Core 2: 59152 ms vs 130 ms
    */

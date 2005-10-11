@@ -1,5 +1,5 @@
 /*
- * $Id: MockMulticastSocket.java,v 1.4 2005-02-21 03:07:31 tlipkis Exp $
+ * $Id: MockMulticastSocket.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class MockMulticastSocket
   }
 
   /**
-   * @param port this is ignored and only here to override the 
+   * @param port this is ignored and only here to override the
    * DatagramSocket contructor
    */
   public MockMulticastSocket(int port) throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: ExternalizableMap.java,v 1.16 2005-08-08 23:28:29 thib_gc Exp $
+ * $Id: ExternalizableMap.java,v 1.17 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -43,19 +43,19 @@ import java.util.Map;
  * {@link Map} and that can be serialized to an XML file.</p>
  */
 public class ExternalizableMap extends TypedEntryMap {
-  
+
   /*
    * IMPLEMENTATION NOTES
-   * 
+   *
    * Historically, this class exists to help Castor serialize
    * TypedEntryMap instances to XML, which involves preventing nested
    * maps and providing default constructors. Hopefully this class will
    * become deprecated when Castor is phased out and the supertype
    * TypedEntryMap can be used instead.
    */
-  
+
   // CASTOR: Phase out this class; use superclass TypedEntryMap
-  
+
   /**
    * <p>The last message resulting from a failure to load a file.</p>
    */
@@ -70,7 +70,7 @@ public class ExternalizableMap extends TypedEntryMap {
   public String getLoadErr() {
     return loadErr;
   }
-  
+
   /**
    * <p>Throws an {@link IllegalArgumentException}.</p>
    * @param key {@inheritDoc}
@@ -105,7 +105,7 @@ public class ExternalizableMap extends TypedEntryMap {
                       String mapName) {
     loadErr = null;
     File mapFile = new File(mapLocation, mapName);
-    
+
     try {
       // CASTOR: remove unwrap() call
       HashMap map = unwrap(deserializer.deserialize(mapFile));
@@ -116,7 +116,7 @@ public class ExternalizableMap extends TypedEntryMap {
       logger.error(loadErr);
     }
   }
-  
+
   /**
    * <p>Loads the contents of a serialized map into this object,
    * replacing its contents if the deserialized map is non-null,
@@ -153,7 +153,7 @@ public class ExternalizableMap extends TypedEntryMap {
       loadErr = "Unable to load: " + mapLocation;
       throw new FileNotFoundException(loadErr);
     }
-    
+
     try {
       // CASTOR: Remove unwrap() call
       HashMap map = unwrap(deserializer.deserialize(mapStream));
@@ -163,9 +163,9 @@ public class ExternalizableMap extends TypedEntryMap {
       logger.warning("Could not load: " + mapLocation, e);
       loadErr = "Exception loading XML file: " + e.toString();
       throw new FileNotFoundException(loadErr);
-    }    
+    }
   }
-  
+
   /**
    * <p>Throws an {@link IllegalArgumentException}.</p>
    * @param key {@inheritDoc}
@@ -199,7 +199,7 @@ public class ExternalizableMap extends TypedEntryMap {
     File mapDir = new File(mapLocation);
     if (!mapDir.exists()) { mapDir.mkdirs(); }
     File mapFile = new File(mapDir, mapName);
-    
+
     try {
       // CASTOR: Remove wrap() call
       serializer.serialize(mapFile, wrap(m_map));
@@ -207,7 +207,7 @@ public class ExternalizableMap extends TypedEntryMap {
     catch (Exception e) {
       loadErr = "Exception storing map: " + e.toString();
       logger.error(loadErr);
-    }    
+    }
   }
 
   /**
@@ -222,7 +222,7 @@ public class ExternalizableMap extends TypedEntryMap {
    * <p>A logger for events associated with this class.</p>
    */
   private static Logger logger = Logger.getLogger("ExternalizableMap");
-  
+
   /**
    * <p>The exception message to use when a user attempts to store a
    * map.</p>
@@ -239,7 +239,7 @@ public class ExternalizableMap extends TypedEntryMap {
   }
 
   /**
-   * <p>A generic way to obtain an object serializer instance 
+   * <p>A generic way to obtain an object serializer instance
    * appropriate for objects of this class.</p>
    * @return An instance of {@link ObjectSerializer} ready to process
    *         instance of this class.
@@ -251,7 +251,7 @@ public class ExternalizableMap extends TypedEntryMap {
     serializer.setCurrentMode(getSerializationMode());
     return serializer;
   }
-  
+
   /**
    * <p>Unwraps whatever comes out of the deserializer so that the
    * final result is a HashMap (as expected by client code).</p>
@@ -270,7 +270,7 @@ public class ExternalizableMap extends TypedEntryMap {
       return (HashMap)obj;
     }
   }
-  
+
   /**
    * <p>Wraps a HashMap that client code is trying to serialize, so
    * that the serializer receives an object of a type it expects
@@ -279,7 +279,7 @@ public class ExternalizableMap extends TypedEntryMap {
    * @return The object that will actually be serialized.
    */
   private static Object wrap(HashMap map) {
-    // CASTOR: This goes away with Castor   
+    // CASTOR: This goes away with Castor
     if (getSerializationMode() == CXSerializer.CASTOR_MODE) {
       return new ExtMapBean(map);
     }

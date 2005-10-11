@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileUtil.java,v 1.7 2005-10-10 23:25:26 tlipkis Exp $
+ * $Id: TestFileUtil.java,v 1.8 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -164,7 +164,7 @@ public class TestFileUtil extends LockssTestCase {
     assertTrue(subDir.exists());
     assertTrue(subDir.isDirectory());
     FileUtil.delTree(parentDir);
-    
+
   }
 
   public void testDelTree() throws IOException {

@@ -1,5 +1,5 @@
 /*
- * $Id: IcpDecoderTester.java,v 1.4 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpDecoderTester.java,v 1.5 2005-10-11 05:51:04 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public abstract class IcpDecoderTester extends LockssTestCase {
    * <p>An ICP decoder factory.</p>
    */
   private Factory factory;
-  
+
   /* Inherit documentation */
   public void setUp() {
     this.factory = makeFactory();
@@ -61,29 +61,29 @@ public abstract class IcpDecoderTester extends LockssTestCase {
    */
   public void testDecoding() throws Exception {
     IcpDecoder decoder = factory.makeIcpDecoder();
-    
+
     for (int test = 0 ; test < MockIcpMessage.countTestPairs(); test++) {
       logger.info("testDecoding: begin test #" + test);
       DatagramPacket packet = MockIcpMessage.getTestPacket(test);
       // ???
-      IcpMessage message = decoder.parseIcp(packet);      
+      IcpMessage message = decoder.parseIcp(packet);
       expect(MockIcpMessage.getTestMessage(test), message);
       logger.info("testDecoding: end test #" + test);
     }
   }
-  
+
   /**
    * <p>Produces an ICP decoder factory that produces ICP decoders of
    * the class under consideration.</p>
    * @return An ICP decoder factory.
    */
   protected abstract Factory makeFactory();
-  
+
   /**
    * <p>A logger for use by these tests.</p>
    */
   private static final Logger logger = Logger.getLogger("IcpDecoderTester");
-  
+
   /**
    * <p>Asserts that the argument message has desired properties with
    * respect to the expected message.</p>
@@ -115,5 +115,5 @@ public abstract class IcpDecoderTester extends LockssTestCase {
     assertEquals(expected.getUdpPort(), message.getUdpPort());
     return;
   }
-  
+
 }

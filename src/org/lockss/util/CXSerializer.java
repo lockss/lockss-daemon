@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.11 2005-10-08 02:07:58 troberts Exp $
+ * $Id: CXSerializer.java,v 1.12 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class CXSerializer extends ObjectSerializer {
    * <p>A {@link CastorSerializer} adaptee.</p>
    */
   private CastorSerializer castor;
-  
+
   /**
    * <p>This serializer's current mode.</p>
    * <p>Must be one of the three mode constants {@link #CASTOR_MODE},
@@ -75,12 +75,12 @@ public class CXSerializer extends ObjectSerializer {
    * @see #XSTREAM_OVERWRITE_MODE
    */
   private int currentMode;
-  
+
   /**
    * <p>An {@link XStreamSerializer} adaptee.</p>
    */
   private XStreamSerializer xstream;
-  
+
   /**
    * <p>Builds a new CXSerializer instance with the given reference
    * mapping and class, and with the given context.</p>
@@ -98,12 +98,12 @@ public class CXSerializer extends ObjectSerializer {
     this.xstream = new XStreamSerializer(lockssContext);
     setCurrentMode(getModeFromConfiguration());
   }
-  
+
   /**
    * <p>Builds a new CXSerializer instance with the given reference
    * mapping and class, and with the given context.</p>
    * @param lockssContext   A serialization context object.
-   * @param mappingFilename A filename where the mapping file for                      
+   * @param mappingFilename A filename where the mapping file for
    *                        objects intended for processing by this
    *                        serializer can be located.
    * @param targetClass     The Class of objects intended for
@@ -115,7 +115,7 @@ public class CXSerializer extends ObjectSerializer {
                       Class targetClass) {
     this(lockssContext, CastorSerializer.getMapping(mappingFilename), targetClass);
   }
-  
+
   /**
    * <p>Builds a new CXSerializer instance with the given reference
    * mapping and class, and with a null context.</p>
@@ -131,11 +131,11 @@ public class CXSerializer extends ObjectSerializer {
                       Class targetClass) {
     this(null, targetMapping, targetClass);
   }
-  
+
   /**
    * <p>Builds a new CXSerializer instance with the given reference
    * mapping and class, and with a null context.</p>
-   * @param mappingFilename A filename where the mapping file for                      
+   * @param mappingFilename A filename where the mapping file for
    *                        objects intended for processing by this
    *                        serializer can be located.
    * @param targetClass     The Class of objects intended for
@@ -164,7 +164,7 @@ public class CXSerializer extends ObjectSerializer {
     MutableBoolean wasCastor = new MutableBoolean(false);
     boolean success = false;
     Object ret = null;
-    
+
     try {
       ret = deserialize(reader, wasCastor);
       success = true;
@@ -183,13 +183,13 @@ public class CXSerializer extends ObjectSerializer {
       }
     }
   }
-  
+
   /* Inherit documentation */
   public Object deserialize(Reader reader)
       throws IOException, SerializationException {
     return deserialize(reader, new MutableBoolean(false));
   }
-  
+
   /**
    * <p>Deserializes an object from a reader, determining on the fly
    * if the incoming object is in Castor or XStream format.</p>
@@ -207,11 +207,11 @@ public class CXSerializer extends ObjectSerializer {
       throws IOException, SerializationException {
     // Constants
     final String recognizeCastor = "<?xml";
-    
+
     // Make rewinding possible
     BufferedReader bufReader =
       new BufferedReader(reader);
-    
+
     // Peek at beginning of input
     char[] buffer = new char[recognizeCastor.length()];
     bufReader.mark(recognizeCastor.length() + 1);
@@ -262,7 +262,7 @@ public class CXSerializer extends ObjectSerializer {
         break; // ignore
     }
   }
-  
+
   protected void serialize(Writer writer, Object obj)
       throws IOException, SerializationException {
     throwIfNull(obj);
@@ -276,7 +276,7 @@ public class CXSerializer extends ObjectSerializer {
    * <p>Serialization always in Castor format.</p>
    */
   public static final int CASTOR_MODE = 1;
-  
+
   /**
    * <p>A configuration parameter that governs the mode of operation
    * of instances of this class. Must be one of:
@@ -311,7 +311,7 @@ public class CXSerializer extends ObjectSerializer {
    */
   public static final String PARAM_COMPATIBILITY_MODE =
     "org.lockss.serialization.compatibilityMode";
-  
+
   /**
    * <p>Serialization always in XStream format.</p>
    */
@@ -328,7 +328,7 @@ public class CXSerializer extends ObjectSerializer {
    * @see ObjectSerializer#deserialize(String)
    */
   public static final int XSTREAM_OVERWRITE_MODE = 3;
-  
+
   /**
    * <p>The default value of {@link #PARAM_COMPATIBILITY_MODE}
    * (currently {@link #XSTREAM_MODE}).</p>

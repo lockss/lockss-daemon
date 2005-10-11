@@ -1,5 +1,5 @@
 /*
- * $Id: TestSingleCrawlStatus.java,v 1.4 2005-01-19 18:08:12 tlipkis Exp $
+ * $Id: TestSingleCrawlStatus.java,v 1.5 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.daemon.status.*;
 public class TestSingleCrawlStatus extends LockssTestCase {
   MockCrawlManagerStatus cmStatus;
   SingleCrawlStatus cStatus;
-  
+
 
   private static final String URL = "url";
   private static final String CRAWL_ERROR = "crawl_error";
@@ -117,7 +117,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     status.setUrlsFetched(ListUtil.list());
     status.setNumParsed(4);
     status.setAu(new MockArchivalUnit());
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -137,7 +137,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     status.setNumFetched(3);
     status.setUrlsParsed(ListUtil.list());
     status.setAu(new MockArchivalUnit());
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -157,7 +157,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     status.setUrlsWithErrors(new HashMap());
     status.setNumParsed(4);
     status.setAu(new MockArchivalUnit());
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -177,7 +177,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     status.setUrlsNotModified(new HashSet());
     status.setNumParsed(4);
     status.setAu(new MockArchivalUnit());
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -191,7 +191,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusFetchedUrls() throws Exception {
     MockCrawlManagerStatus cmStatus = new MockCrawlManagerStatus();
-    
+
     MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
@@ -202,7 +202,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 					"http://www.example.com/blah.html"));
     status.setNumParsed(4);
     status.setAu(au);
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -232,7 +232,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusParsedUrls() throws Exception {
     MockCrawlManagerStatus cmStatus = new MockCrawlManagerStatus();
-    
+
     MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
@@ -243,7 +243,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 				       "http://www.example.com/blah.html"));
 //     status.setNumParsed(4);
     status.setAu(au);
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -264,7 +264,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusNotModifiedUrls() throws Exception {
     MockCrawlManagerStatus cmStatus = new MockCrawlManagerStatus();
-    
+
     MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
@@ -275,7 +275,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 					    "http://www.example.com/blah.html"));
     status.setNumParsed(4);
     status.setAu(au);
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);
@@ -296,11 +296,11 @@ public class TestSingleCrawlStatus extends LockssTestCase {
 
   public void testCrawlStatusErrorUrls() throws Exception {
     MockCrawlManagerStatus cmStatus = new MockCrawlManagerStatus();
-    
+
     MockCrawlStatus status = new MockCrawlStatus();
     MockArchivalUnit au = new MockArchivalUnit();
     au.setName("Mock name");
-    
+
     Map errors = new LinkedMap();
     errors.put("http://www.example.com", "Generic error");
     errors.put("http://www.example.com/blah.html", "Generic error2");
@@ -310,7 +310,7 @@ public class TestSingleCrawlStatus extends LockssTestCase {
     status.setUrlsWithErrors(errors);
     status.setNumParsed(4);
     status.setAu(au);
-    
+
     cmStatus.addStatusObject(status);
 
     SingleCrawlStatus cStatus = new SingleCrawlStatus(cmStatus);

@@ -17,7 +17,7 @@ import org.lockss.util.*;
 
 /**********************************************************************
  *  class ValidatePluginDialog creates a Dialog that accepts user input
- *  on the user-specified configuration parameters, and creates an 
+ *  on the user-specified configuration parameters, and creates an
  *  instance of ValidatePluginResultsDialog to conduct the validation
  *  tests and display output.
  *
@@ -161,8 +161,8 @@ public class ValidatePluginDialog extends JDialog {
     }
     catch (Exception ex) {
       JOptionPane.showMessageDialog(this,"Unable to test plugin.\n"
-                                    +"Invalid Parameter\n" 
-				    +"Error Description: \n  " 
+                                    +"Invalid Parameter\n"
+				    +"Error Description: \n  "
 				    + (ex.toString()).substring(
 				        (ex.toString()).indexOf('$')+1),
                                     "Vaildation Error",

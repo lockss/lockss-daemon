@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerAddress.java,v 1.2 2005-05-20 07:28:24 tlipkis Exp $
+ * $Id: TestPeerAddress.java,v 1.3 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -119,7 +119,7 @@ public class TestPeerAddress extends LockssTestCase {
       fail("Should be legal PeerAddress: " + key);
     }
   }
-  
+
   public void lll(String key) throws Exception {
     log.info(key + ": " + PeerAddress.makePeerAddress(key));
   }

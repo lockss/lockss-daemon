@@ -1,5 +1,5 @@
 /*
- * $Id: TimeBase.java,v 1.10 2003-12-08 06:58:02 tlipkis Exp $
+ * $Id: TimeBase.java,v 1.11 2005-10-11 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -33,7 +33,7 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 import java.util.*;
 
-/** 
+/**
  * TimeBase allows use of a simulated time base for testing.
 
  * Instead of calling <code>System.currentTimeMillis()</code> or <code>new

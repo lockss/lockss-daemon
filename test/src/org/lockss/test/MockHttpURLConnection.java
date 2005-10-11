@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpURLConnection.java,v 1.4 2003-06-20 22:34:55 claire Exp $
+ * $Id: MockHttpURLConnection.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -74,7 +74,7 @@ public class MockHttpURLConnection extends HttpURLConnection{
     public String getRequestMethod() {
       throw new UnsupportedOperationException("Not Implemented");
     }
-    
+
     public int getResponseCode() throws IOException {
 	return this.responseCode;
     }

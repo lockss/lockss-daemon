@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunction.java,v 1.12 2003-10-14 17:47:00 dshr Exp $
+ * $Id: TestMemoryBoundFunction.java,v 1.13 2005-10-11 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
     log = Logger.getLogger("TestMemoryBoundFunction");
     if (false)
       rand = new Random(100);
-    else 
+    else
       rand = new Random(System.currentTimeMillis());
     if (basisT == null) {
       basisT = new byte[/* 16 * */1024*1024];
@@ -390,7 +390,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
 	assertTrue(newFactor > oldFactor);
       }
     }
-  }    
+  }
 
   public void VerifyRandom(int index) throws IOException {
     byte[] nonce = new byte[24];
@@ -489,7 +489,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
       } catch (Exception ex) {
 	fail(names[index] + " threw " + ex.toString());
       }
-    }      
+    }
     return (ret);
   }
 
@@ -501,7 +501,7 @@ public class TestMemoryBoundFunction extends LockssTestCase {
    * Functional test of generate/verify pair
    */
   private void onePair(int index, int e, int l, int n,
-		       boolean nonceOK, 
+		       boolean nonceOK,
 		       boolean proofOK) throws IOException {
     // Make sure its configured
     long startTime = System.currentTimeMillis();

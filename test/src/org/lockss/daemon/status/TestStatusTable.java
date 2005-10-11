@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusTable.java,v 1.10 2005-09-19 17:13:05 thib_gc Exp $
+ * $Id: TestStatusTable.java,v 1.11 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -109,16 +109,16 @@ public class TestStatusTable extends LockssTestCase {
     map.put(key, val);
     return map;
   }
-    
+
   Map testMap(Object k1, Object v1, Object k2, Object v2) {
     Map map = testMap(k1, v1);
     map.put(k2, v2);
     return map;
   }
-    
+
   public void testSortRule() throws Exception {
     MyComparator cmpr = new MyComparator();
-    List cols = 
+    List cols =
       ListUtil.list(new ColumnDescriptor("a", "Column 1 Title",
 					 ColumnDescriptor.TYPE_INT)
 		    .setComparator(cmpr),

@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleQueue.java,v 1.4 2003-06-20 22:34:56 claire Exp $
+ * $Id: SimpleQueue.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public abstract class SimpleQueue {
    * Add to the queue. */
   public abstract Object put(Object obj);
 
-  /** 
+  /**
    * Remove first element from the queue. Does not return until
    * an object appears in the queue.
    * @return The element formerly at the head of the queue, or null if
@@ -51,7 +51,7 @@ public abstract class SimpleQueue {
    */
   public abstract Object get();
 
-  /** 
+  /**
    * Remove first element from the queue. Does not return until
    * an object appears in the queue or the timer expires.
    * @return The element formerly at the head of the queue, or null if
@@ -59,13 +59,13 @@ public abstract class SimpleQueue {
    */
   public abstract Object get(long timeout);
 
-  /** 
+  /**
    * Return first element on queue, without removing it.
    * @return The element at the head of the queue, or null if queue is empty
    */
   public abstract Object peek();
 
-  /** 
+  /**
    * Test if the queue is empty
    * @return true if the queue is empty
    */
@@ -77,8 +77,8 @@ public abstract class SimpleQueue {
   public static class Fifo extends SimpleQueue {
     private Vector queue = new Vector();
 
-    /** 
-     * Create a new FIFO queue. 
+    /**
+     * Create a new FIFO queue.
      */
     public Fifo() {
     }
@@ -95,7 +95,7 @@ public abstract class SimpleQueue {
       return obj;
     }
 
-    /** 
+    /**
      * Remove from the beginning of the queue. Does not return until
      * an object appears in the queue and becomes available to this thread
      * @return The element formerly at the head of the queue, or null if
@@ -120,7 +120,7 @@ public abstract class SimpleQueue {
       }
     }
 
-    /** 
+    /**
      * Remove from the beginning of the queue. Does not return until
      * an object appears in the queue and becomes available to this thread
      * or the timer expires.
@@ -151,7 +151,7 @@ public abstract class SimpleQueue {
       }
     }
 
-    /** 
+    /**
      * Test if the queue is empty
      * @return true if the queue is empty
      */
@@ -159,7 +159,7 @@ public abstract class SimpleQueue {
       return queue.isEmpty();
     }
 
-    /** 
+    /**
      * Return first element on queue, without removing it.
      * @return The element at the head of the queue, or null if queue is empty
      */

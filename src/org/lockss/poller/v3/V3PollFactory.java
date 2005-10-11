@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollFactory.java,v 1.1 2005-10-07 23:46:49 smorabito Exp $
+ * $Id: V3PollFactory.java,v 1.2 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.*;
 public class V3PollFactory extends BasePollFactory {
 
   private static final String PREFIX = Configuration.PREFIX + "poll.v3.";
-  
+
   /** The minimum duration multiplier for a V3 poll */
   public static final String PARAM_DURATION_MULTIPLIER_MIN =
     PREFIX + "minMultiplier";
@@ -66,15 +66,15 @@ public class V3PollFactory extends BasePollFactory {
   private int maxDurationMultiplier = DEFAULT_DURATION_MULTIPLIER_MAX;
   private long minPollDuration = DEFAULT_POLL_DURATION_MIN;
   private long maxPollDuration = DEFAULT_POLL_DURATION_MAX;
-  
+
   public static Logger log = Logger.getLogger("V3PollFactory");
-  
+
   public boolean callPoll(Poll poll, LockssDaemon daemon) {
     // V3Poller handles all the dirty details of calling a poll,
     // so this method need not do anything.
     return true;
   }
-  
+
   public BasePoll createPoll(PollSpec pollspec, LockssDaemon daemon,
                              PeerIdentity orig, long duration, String hashAlg,
                              LcapMessage msg)
@@ -96,7 +96,7 @@ public class V3PollFactory extends BasePollFactory {
       if (msg == null) {
         log.debug("Creating V3Poller to call a new poll...");
         // XXX: Better keys?
-        String key = 
+        String key =
           String.valueOf(B64Code.encode(ByteArray.makeRandomBytes(20)));
         retPoll = new V3Poller(pollspec, daemon, orig, key, duration, hashAlg);
       } else {
@@ -127,7 +127,7 @@ public class V3PollFactory extends BasePollFactory {
       maxDurationMultiplier =
         newConfig.getInt(PARAM_DURATION_MULTIPLIER_MAX,
                          DEFAULT_DURATION_MULTIPLIER_MAX);
-      minPollDuration = 
+      minPollDuration =
         newConfig.getTimeInterval(PARAM_POLL_DURATION_MIN,
                                   DEFAULT_POLL_DURATION_MIN);
       maxPollDuration =
@@ -151,7 +151,7 @@ public class V3PollFactory extends BasePollFactory {
 
     long hashEst = cus.estimatedHashDuration();
     log.debug3("CUS estimated hash duration: " + hashEst);
-    
+
     hashEst = getAdjustedEstimate(hashEst, pm);
     log.debug3("My adjusted hash duration: " + hashEst);
 
@@ -162,7 +162,7 @@ public class V3PollFactory extends BasePollFactory {
                                      minPollDuration);
     return findSchedulableDuration(hashEst, minPoll, maxPoll, hashEst, pm);
   }
-  
+
   // XXX: It is very unlikely that a V3 poll would cause duplicate messages,
   // but there should still be a way to determine if this ever happens, and
   // log some sort of error.

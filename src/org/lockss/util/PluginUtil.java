@@ -1,5 +1,5 @@
 /*
- * $Id: PluginUtil.java,v 1.1 2005-05-12 00:23:07 troberts Exp $
+ * $Id: PluginUtil.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class PluginUtil {
   public static String getBaseUrl(CachedUrl cu) {
     CIProperties props = cu.getProperties();
     if (props != null) {
-      String redir = props.getProperty(CachedUrl.PROPERTY_CONTENT_URL); 
+      String redir = props.getProperty(CachedUrl.PROPERTY_CONTENT_URL);
       if (redir != null) {
 	return redir;
       }

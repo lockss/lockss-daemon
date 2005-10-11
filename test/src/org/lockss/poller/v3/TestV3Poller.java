@@ -1,5 +1,5 @@
 /*
- * $Id: TestV3Poller.java,v 1.4 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestV3Poller.java,v 1.5 2005-10-11 05:50:29 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class TestV3Poller extends LockssTestCase {
   private byte[][] voterNonces;
 
   private static final String BASE_URL = "http://www.test.org/";
-  
+
   private static String[] urls = {
     "lockssau:",
     BASE_URL,
@@ -89,7 +89,7 @@ public class TestV3Poller extends LockssTestCase {
     BASE_URL + "branch2/file1.html",
     BASE_URL + "branch2/file2.html",
   };
-  
+
   private static List voteBlocks;
   static {
     voteBlocks = new ArrayList();
@@ -100,7 +100,7 @@ public class TestV3Poller extends LockssTestCase {
       voteBlocks.add(vb);
     }
   }
-  
+
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated();
@@ -133,7 +133,7 @@ public class TestV3Poller extends LockssTestCase {
     cus.setFlatItSource(files);
     return mau;
   }
-  
+
   private PeerIdentity[] makeVoters(int count) throws Exception {
     PeerIdentity[] ids = new PeerIdentity[count];
     for (int i = 0; i < count; i++) {
@@ -141,7 +141,7 @@ public class TestV3Poller extends LockssTestCase {
     }
     return ids;
   }
-  
+
   private byte[][] makeNonces() {
     byte[][] nonces = new byte[voters.length][];
     for (int ix = 0; ix < voters.length; ix++) {
@@ -149,7 +149,7 @@ public class TestV3Poller extends LockssTestCase {
     }
     return nonces;
   }
-  
+
   private V3LcapMessage[] makePollAckMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
@@ -221,7 +221,7 @@ public class TestV3Poller extends LockssTestCase {
     TimeBase.setReal();
     super.tearDown();
   }
-  
+
   public void testInitHasherByteArrays() throws Exception {
     V3Poller v3Poller = makeInittedV3Poller("foo");
     LinkedHashMap innerCircle = (LinkedHashMap) PrivilegedAccessor
@@ -235,7 +235,7 @@ public class TestV3Poller extends LockssTestCase {
     for (Iterator it = innerCircle.values().iterator(); it.hasNext();) {
       PsmInterp interp = (PsmInterp) it.next();
       PollerUserData proxy = (PollerUserData) interp.getUserData();
-      
+
       compareBytes[ix++] = ByteArray.concat(proxy.getPollerNonce(), proxy
           .getVoterNonce());
     }
@@ -251,7 +251,7 @@ public class TestV3Poller extends LockssTestCase {
     assertEquals(innerCircle.size(), voters.length);
     MessageDigest[] digests = (MessageDigest[]) PrivilegedAccessor
         .invokeMethod(v3Poller, "initHasherDigests");
-    assertEquals(digests.length, innerCircle.size());    
+    assertEquals(digests.length, innerCircle.size());
     for (int i = 0; i < digests.length; i++) {
       assertEquals("SHA-1", digests[i].getAlgorithm());
     }
@@ -273,18 +273,18 @@ public class TestV3Poller extends LockssTestCase {
     }
     return p;
   }
-  
+
   private class MyMockV3Poller extends V3Poller {
     // For testing:  Hashmap of voter IDs to V3LcapMessages.
     private Map sentMsgs = Collections.synchronizedMap(new HashMap());
     private Map semaphores = new HashMap();
 
     MyMockV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-               String pollkey, long duration, String hashAlg) 
+               String pollkey, long duration, String hashAlg)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
     }
-    
+
     Collection getReferenceList() {
       return ListUtil.fromArray(voters);
     }
@@ -308,12 +308,12 @@ public class TestV3Poller extends LockssTestCase {
       return (V3LcapMessage)sentMsgs.get(voter);
     }
   }
-  
+
   private void initRequiredServices() {
     theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
-    
+
     theDaemon.getPluginManager();
 
     tempDirPath = null;

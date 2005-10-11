@@ -1,5 +1,5 @@
 /*
- * $Id: OneShot.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: OneShot.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -35,7 +35,7 @@ import java.util.*;
  * it is called and false thereafter. */
 public class OneShot {
   private boolean state = true;
-    
+
   /** Return true the first time called, thereafter false.  Not
    * synchronized.  */
   public boolean once() {

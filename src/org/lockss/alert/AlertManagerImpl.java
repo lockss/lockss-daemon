@@ -1,5 +1,5 @@
 /*
- * $Id: AlertManagerImpl.java,v 1.15 2005-10-07 23:42:28 tlipkis Exp $
+ * $Id: AlertManagerImpl.java,v 1.16 2005-10-11 05:41:07 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -50,7 +50,7 @@ public class AlertManagerImpl
     implements AlertManager, ConfigurableManager {
 
   /**
-   * <p>A logger for use by instances of this class.</p> 
+   * <p>A logger for use by instances of this class.</p>
    */
   protected static Logger log = Logger.getLogger("AlertMgr");
 
@@ -173,7 +173,7 @@ public class AlertManagerImpl
       throw e;
     }
   }
-  
+
   /**
    * <p>Load an AlertConfig object from a file, using a default
    * deserializer.</p>
@@ -185,7 +185,7 @@ public class AlertManagerImpl
   AlertConfig loadAlertConfig(File file) {
     return loadAlertConfig(file, makeObjectSerializer());
   }
-  
+
   /**
    * <p>Load an AlertConfig object from a file, using the given
    * deserializer.</p>
@@ -209,9 +209,9 @@ public class AlertManagerImpl
       throw new RuntimeException(
           "Could not load alert config", e);
     }
-    
+
     // Default value
-    return new AlertConfig();    
+    return new AlertConfig();
   }
 
   private static ObjectSerializer makeObjectSerializer() {
@@ -251,7 +251,7 @@ public class AlertManagerImpl
 
   /**
    * <p>Returns the actions whose pattern matches the alert.
-   */ 
+   */
   Set findMatchingActions(Alert alert, List filters) {
     Set res = new HashSet();
     for (Iterator iter = filters.iterator(); iter.hasNext(); ) {
@@ -302,17 +302,17 @@ public class AlertManagerImpl
     Deadline trigger;
     long latestTrigger;
     boolean isProcessed = false;
-    
+
     PendingActions(AlertAction action) {
       this.action = action;
     }
-    
+
     synchronized void addAlert(Alert alert) {
       if (alert.getBool(Alert.ATTR_IS_TIME_CRITICAL) ||
           action.getMaxPendTime() == 0) {
         action.record(getDaemon(), alert);
         return;
-      }	
+      }
       if (alerts == null || isProcessed) {
         if (log.isDebug3()) log.debug3("Recording first: " + alert);
         // record this one, start list for successive, start timer
@@ -332,19 +332,19 @@ public class AlertManagerImpl
         }
       }
     }
-    
+
     long now() {
       return TimeBase.nowMs();
     }
-    
+
     long min(long a, long b) {
       return a <= b ? a : b;
     }
-    
+
     boolean isTime() {
       return false;
     }
-    
+
     void scheduleTimer() {
       if (log.isDebug3()) log.debug3("Action timer " + trigger);
       TimerQueue.schedule(trigger,
@@ -354,7 +354,7 @@ public class AlertManagerImpl
         }},
         null);
     }
-    
+
     synchronized void execute() {
       if (!isProcessed && (alerts != null) && !alerts.isEmpty()) {
         if (alerts.size() == 1) {

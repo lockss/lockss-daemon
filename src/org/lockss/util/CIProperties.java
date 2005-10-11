@@ -1,5 +1,5 @@
 /*
- * $Id: CIProperties.java,v 1.1 2004-03-09 22:58:42 tlipkis Exp $
+ * $Id: CIProperties.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -47,11 +47,11 @@ import java.io.Externalizable;
  * by lowercasing them.
 */
 public class CIProperties extends Properties {
-  /** Create a case-independent Properties. 
+  /** Create a case-independent Properties.
    */
   public CIProperties() {
   }
-    
+
   /** Factory to create from a Properties */
   public static CIProperties fromProperties(Properties props) {
     CIProperties res = new CIProperties();
@@ -73,19 +73,19 @@ public class CIProperties extends Properties {
   public Object put(Object key, Object value) {
     return super.put(keyObj(key), value);
   }
-        
+
   public Object put(String key, Object value) {
     return super.put(keyObj(key), value);
   }
-    
+
   public Object get(Object key) {
     return super.get(keyObj(key));
   }
-    
+
   public Object get(String key) {
     return super.get(keyObj(key));
   }
-    
+
   public String getProperty(String key) {
     return super.getProperty(keyObj(key));
   }
@@ -93,7 +93,7 @@ public class CIProperties extends Properties {
   public Object remove(Object key) {
     return super.remove(keyObj(key));
   }
-    
+
   public Object remove(String key) {
     return super.remove(keyObj(key));
   }
@@ -101,5 +101,5 @@ public class CIProperties extends Properties {
   public boolean containsKey(String key) {
     return super.containsKey(keyObj(key));
   }
-    
+
 }

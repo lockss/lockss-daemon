@@ -1,5 +1,5 @@
 /*
- * $Id: IOUtil.java,v 1.3 2005-07-09 21:58:26 tlipkis Exp $
+ * $Id: IOUtil.java,v 1.4 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -70,28 +70,28 @@ public class IOUtil {
       s.close();
     } catch (Exception e) {}
   }
-    
+
   /** Call close() on the stream, ignoring any errors */
   public static void safeClose(OutputStream s) {
     try {
       s.close();
     } catch (Exception e) {}
   }
-    
+
   /** Call close() on the Reader, ignoring any errors */
   public static void safeClose(Reader s) {
     try {
       s.close();
     } catch (Exception e) {}
   }
-    
+
   /** Call close() on the Writer, ignoring any errors */
   public static void safeClose(Writer s) {
     try {
       s.close();
     } catch (Exception e) {}
   }
-    
+
   /** Call close() on the Socket, ignoring any errors */
   public static void safeClose(Socket s) {
     try {
@@ -112,4 +112,4 @@ public class IOUtil {
       conn.release();
     } catch (Exception e) {}
   }
-}    
+}

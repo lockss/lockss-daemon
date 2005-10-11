@@ -1,5 +1,5 @@
 /*
- * * $Id: ApiParameters.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * * $Id: ApiParameters.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -37,14 +37,14 @@ package org.lockss.uiapi.util;
  */
 public interface ApiParameters extends CommonParameters {
   /*
-   * Version information 
+   * Version information
    *
    * API software version
    */
   final static String   AP_VERSION          = "0.1";
 
   /* Identifies this variant of our XML document format
-   * 
+   *
    */
   final static String   AP_XML_VERSION10    = "1.0";
   final static String   AP_XML_VERSION      = AP_XML_VERSION10;
@@ -89,7 +89,7 @@ public interface ApiParameters extends CommonParameters {
 
   final static String   AP_E_ALLOWMEMBER    = "allow_member";
   final static String   AP_E_DENYMEMBER     = "deny_member";
-  
+
   final static String   AP_E_TITLE          = "title";
   final static String   AP_E_ISSN           = "issn";
   final static String   AP_E_LOCALID        = "localid";
@@ -99,9 +99,9 @@ public interface ApiParameters extends CommonParameters {
   final static String   AP_E_PLUGIN         = "plugin";
   final static String   AP_E_PLUGINNAME     = "pluginname";
   final static String   AP_E_CLASSNAME      = "classname";
- 
+
   final static String   AP_E_AU             = "archivalunit";
-  
+
   final static String   AP_E_EDIT           = "edit";
   final static String   AP_E_REMOVE         = "remove";
   final static String   AP_E_RESTORE        = "restore";
@@ -112,14 +112,14 @@ public interface ApiParameters extends CommonParameters {
   final static String   AP_E_RESULT         = "result";
 
   final static String   AP_E_SETUP          = "setup";
- 
+
   final static String   AP_E_AUDEFINING     = "defining";
   final static String   AP_E_AUEDIT         = "editable";
   final static String   AP_E_AUID           = "auid";
-  
+
   final static String   AP_E_ACTIVE         = "active";
   final static String   AP_E_INACTIVE       = "inactive";
-  
+
   final static String   AP_E_SEARCH1        = "search1";
   final static String   AP_E_SEARCH2        = "search2";
   final static String   AP_E_FIELD1         = "field1";
@@ -127,24 +127,24 @@ public interface ApiParameters extends CommonParameters {
   final static String   AP_E_SEARCHOPERATOR = "operator";
 
   final static String   AP_E_TOTAL          = "total";
-  
+
   final static String   AP_E_UPTIME         = "uptime";
   final static String   AP_E_DAYS           = "days";
   final static String   AP_E_HOURS          = "hours";
   final static String   AP_E_MINUTES        = "minutes";
   final static String   AP_E_SECONDS        = "seconds";
-  
+
   final static String   AP_E_DISKSPACE      = "diskspace";
   final static String   AP_E_FREE           = "free";
   final static String   AP_E_INUSE          = "inuse";
-  
+
   final static String   AP_E_NUMROWS        = "numrows";
   final static String   AP_E_SKIPROWS       = "skiprows";
-  
+
   final static String   AP_E_ALERT          = "alert";
-  
+
   final static String   AP_E_DEBUG          = "debug";
-  
+
   /*
    * Metadata names for HTML form elements
    */
@@ -178,16 +178,16 @@ public interface ApiParameters extends CommonParameters {
    * External (API) command names
    */
   final static String   AP_COMMAND_NOOP     = "noop";
-  
+
   final static String   AP_COMMAND_AUMENU   = "aumenu";
   final static String   AP_COMMAND_ADDAU    = "addau";
-  final static String   AP_COMMAND_ADDAUCONFIGURE 
-                                            = "addauconfigure"; 
-  final static String   AP_COMMAND_REMOVEAU = "auremove"; 
-  final static String   AP_COMMAND_EDITAU   = "editau"; 
+  final static String   AP_COMMAND_ADDAUCONFIGURE
+                                            = "addauconfigure";
+  final static String   AP_COMMAND_REMOVEAU = "auremove";
+  final static String   AP_COMMAND_EDITAU   = "editau";
   final static String   AP_COMMAND_RESTOREAU
-                                            = "restoreau"; 
- 
+                                            = "restoreau";
+
   final static String   AP_COMMAND_CLUSTERSTATUS
                                             = "clusterstatus";
   final static String   AP_COMMAND_MACHINEDETAIL
@@ -202,7 +202,7 @@ public interface ApiParameters extends CommonParameters {
                                             = "journaldefinition";
   final static String   AP_COMMAND_PROVIDETITLE
                                             = "providetitle";
-  
+
   /*
    * Option values
    */
@@ -213,11 +213,11 @@ public interface ApiParameters extends CommonParameters {
   final static String   AP_VALUE_UNKNOWN    = COM_VALUE_UNKNOWN;
 
   final static String   AP_TRUE             = COM_TRUE;
-  final static String   AP_FALSE            = COM_FALSE; 
+  final static String   AP_FALSE            = COM_FALSE;
   /*
    * Response types: message or standard command response (used with AP_A_TYPE)
    */
-  final static String   AP_TYPE_MESSAGE     = "messageblock"; 
-  final static String   AP_TYPE_SETUP       = "setup"; 
-  final static String   AP_TYPE_STANDARD    = "standard"; 
+  final static String   AP_TYPE_MESSAGE     = "messageblock";
+  final static String   AP_TYPE_SETUP       = "setup";
+  final static String   AP_TYPE_STANDARD    = "standard";
 }

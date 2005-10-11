@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyHandler.java,v 1.41 2005-10-06 08:21:56 tlipkis Exp $
+ * $Id: ProxyHandler.java,v 1.42 2005-10-11 05:46:28 tlipkis Exp $
  */
 
 /*
@@ -32,7 +32,7 @@ in this Software without prior written authorization from Stanford University.
 // Some portions of this code are:
 // ========================================================================
 // Copyright (c) 2003 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: ProxyHandler.java,v 1.41 2005-10-06 08:21:56 tlipkis Exp $
+// $Id: ProxyHandler.java,v 1.42 2005-10-11 05:46:28 tlipkis Exp $
 // ========================================================================
 
 package org.lockss.proxy;
@@ -66,7 +66,7 @@ import org.apache.commons.httpclient.util.*;
  * LockssUrlConnection to make proxy requests.  Serves content out of cache
  * if not available from publisher.
  * <P>The HttpTunnel mechanism is also used to implement the CONNECT method.
- * 
+ *
  * @author Greg Wilkins (gregw)
  * @author tal
  */
@@ -151,7 +151,7 @@ public class ProxyHandler extends AbstractHttpHandler {
   }
 
   protected int _tunnelTimeoutMs=250;
-    
+
   /* ------------------------------------------------------------ */
   /** Map of leg by leg headers (not end to end).
    * Should be a set, but more efficient string map is used instead.
@@ -170,7 +170,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     _DontProxyHeaders.put(HttpFields.__ProxyAuthenticate,o);
     _DontProxyHeaders.put(HttpFields.__Upgrade,o);
   }
-    
+
   /* ------------------------------------------------------------ */
   /**  Map of allows schemes to proxy
    * Should be a set, but more efficient string map is used instead.
@@ -183,12 +183,12 @@ public class ProxyHandler extends AbstractHttpHandler {
     _ProxySchemes.put(HttpMessage.__SSL_SCHEME,o);
     _ProxySchemes.put("ftp",o);
   }
-    
+
   /* ------------------------------------------------------------ */
   public int getTunnelTimeoutMs() {
     return _tunnelTimeoutMs;
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Tunnel timeout.
    * IE on win2000 has connections issues with normal timeout handling.
@@ -198,7 +198,7 @@ public class ProxyHandler extends AbstractHttpHandler {
    public void setTunnelTimeoutMs(int ms) {
    _tunnelTimeoutMs = ms;
    }
-    
+
    /* ------------------------------------------------------------ */
   public void handle(String pathInContext,
 		     String pathParams,
@@ -206,14 +206,14 @@ public class ProxyHandler extends AbstractHttpHandler {
 		     HttpResponse response)
       throws HttpException, IOException {
     URI uri = request.getURI();
-        
+
     // Is this a CONNECT request?
     if (HttpRequest.__CONNECT.equals(request.getMethod())) {
       response.setField(HttpFields.__Connection,"close"); // XXX Needed for IE????
       handleConnect(pathInContext,pathParams,request,response);
       return;
     }
-        
+
     if (log.isDebug3()) {
       log.debug3("pathInContext="+pathInContext);
       log.debug3("URI="+uri);
@@ -251,7 +251,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  // Don't forward request if it's a repair or we were told not to.
 	  response.sendError(HttpResponse.__404_Not_Found);
 	  request.setHandled(true);
-	  return; 
+	  return;
 	}
       }
       // not in cache
@@ -290,12 +290,12 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  sendForbid(request,response,uri);
 	return;
       }
-            
+
       if(jlog.isDebugEnabled())jlog.debug("PROXY URL="+url);
 
       URLConnection connection = url.openConnection();
       connection.setAllowUserInteraction(false);
-            
+
       // Set method
       HttpURLConnection http = null;
       if (connection instanceof HttpURLConnection) {
@@ -361,35 +361,35 @@ public class ProxyHandler extends AbstractHttpHandler {
 
       // customize Connection
       customizeConnection(pathInContext,pathParams,request,connection);
-            
-      try {    
+
+      try {
 	connection.setDoInput(true);
-                
+
 	// do input thang!
 	InputStream in=request.getInputStream();
 	if (hasContent) {
 	  connection.setDoOutput(true);
 	  IO.copy(in,connection.getOutputStream());
 	}
-                
+
 	// Connect
-	connection.connect();    
+	connection.connect();
       } catch (Exception e) {
 	LogSupport.ignore(jlog,e);
       }
-            
+
       InputStream proxy_in = null;
 
       // handler status codes etc.
       int code=HttpResponse.__500_Internal_Server_Error;
       if (http!=null) {
 	proxy_in = http.getErrorStream();
-                
+
 	code=http.getResponseCode();
 	response.setStatus(code);
 	response.setReason(http.getResponseMessage());
       }
-            
+
       if (proxy_in==null) {
 	try {proxy_in=connection.getInputStream();}
 	catch (Exception e) {
@@ -397,11 +397,11 @@ public class ProxyHandler extends AbstractHttpHandler {
 	  proxy_in = http.getErrorStream();
 	}
       }
-            
+
       // clear response defaults.
       response.removeField(HttpFields.__Date);
       response.removeField(HttpFields.__Server);
-            
+
       // set response headers
       int h=0;
       String hdr=connection.getHeaderFieldKey(h);
@@ -419,7 +419,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       request.setHandled(true);
       if (proxy_in!=null)
 	IO.copy(proxy_in,response.getOutputStream());
-            
+
     } catch (Exception e) {
       log.warning("doSun error", e);
       if (!response.isCommitted())
@@ -542,7 +542,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       //   EntityEnclosingMethod emethod = (EntityEnclosingMethod) method;
       //   emethod.setRequestBody(conn.getInputStream());
       // }
-                
+
       // Send the request
 
       try {
@@ -569,18 +569,18 @@ public class ProxyHandler extends AbstractHttpHandler {
 	serveFromCache(pathInContext, pathParams, request,
 		       response, cu);
 	return;
-      }	
+      }
 
       // return response from server
       response.setStatus(conn.getResponseCode());
       response.setReason(conn.getResponseMessage());
 
       InputStream proxy_in = conn.getResponseInputStream();
-            
+
       // clear response defaults.
       response.removeField(HttpFields.__Date);
       response.removeField(HttpFields.__Server);
-            
+
       // copy response headers
       for (int ix = 0; ; ix ++) {
 	String hdr = conn.getResponseHeaderFieldKey(ix);
@@ -599,7 +599,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       request.setHandled(true);
       if (proxy_in!=null) {
 	IO.copy(proxy_in,response.getOutputStream());
-      }            
+      }
     } catch (Exception e) {
       log.error("doLockss error", e);
       if (!response.isCommitted())
@@ -617,7 +617,7 @@ public class ProxyHandler extends AbstractHttpHandler {
       } catch (Exception e) {}
     }
   }
-    
+
   boolean isEarlier(String datestr1, String datestr2)
       throws DateParseException {
     // common case, no conversion necessary
@@ -643,7 +643,7 @@ public class ProxyHandler extends AbstractHttpHandler {
     }
     return true;
   }
-    
+
   /* ------------------------------------------------------------ */
   public void handleConnect(String pathInContext,
 			    String pathParams,
@@ -651,7 +651,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 			    HttpResponse response)
       throws HttpException, IOException {
     URI uri = request.getURI();
-        
+
     try {
       if(jlog.isDebugEnabled())jlog.debug("CONNECT: "+uri);
       InetAddrPort addrPort=new InetAddrPort(uri.toString());
@@ -675,7 +675,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 	    LogSupport.ignore(jlog,e);
 	  }
 	}
-                
+
 	customizeConnection(pathInContext,pathParams,request,socket);
 	request.getHttpConnection().setHttpTunnel(new HttpTunnel(socket,
 								 timeoutMs));
@@ -689,7 +689,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 			 e.getMessage());
     }
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Customize proxy Socket connection for CONNECT.
    * Method to allow derived handlers to customize the tunnel sockets.
@@ -701,8 +701,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 				     Socket socket)
       throws IOException {
   }
-    
-        
+
+
   /* ------------------------------------------------------------ */
   /** Customize proxy URL connection.
    * Method to allow derived handlers to customize the connection.
@@ -713,8 +713,8 @@ public class ProxyHandler extends AbstractHttpHandler {
 				     URLConnection connection)
       throws IOException {
   }
-    
-    
+
+
   /* ------------------------------------------------------------ */
   /** Is URL Proxied.  Method to allow derived handlers to select which
    * URIs are proxied and to where.
@@ -728,15 +728,15 @@ public class ProxyHandler extends AbstractHttpHandler {
     // Is this a proxy request?
     if (isForbidden(uri))
       return null;
-        
+
     // OK return URI as untransformed URL.
     return new URL(uri.toString());
   }
-    
+
 
   /* ------------------------------------------------------------ */
   /** Is URL Forbidden.
-   * 
+   *
    * @return True if the URL is not forbidden. Calls
    * isForbidden(scheme,true);
    */
@@ -746,7 +746,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 //     int port = uri.getPort();
     return isForbidden(scheme,true);
   }
-    
+
 
   /* ------------------------------------------------------------ */
   /** Is scheme,host & port Forbidden.
@@ -762,7 +762,7 @@ public class ProxyHandler extends AbstractHttpHandler {
 
     return false;
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Send Forbidden.
    * Method called to send forbidden response. Default implementation calls

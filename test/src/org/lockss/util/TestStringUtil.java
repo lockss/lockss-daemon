@@ -1,5 +1,5 @@
 /*
- * $Id: TestStringUtil.java,v 1.55 2005-09-06 19:59:15 tlipkis Exp $
+ * $Id: TestStringUtil.java,v 1.56 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -530,7 +530,7 @@ System.out.println("s: "+s);
     assertEquals("3.7GB", StringUtil.sizeKBToString((long)(3.7 * 1024*1024)));
     assertEquals("432GB", StringUtil.sizeKBToString(432 * 1024*1024));
     assertEquals("3.7TB", StringUtil.sizeKBToString((long)(3.7 * 1024*1024*1024)));
-  }  
+  }
 
   public void testTrimStackTrace() {
     String s1 = "Exception string: Nested error: java.io.FileNotFoundException: /tmp/iddb/idmapping.xml (No such file or directory)";
@@ -668,7 +668,7 @@ System.out.println("s: "+s);
 	       StringUtil.containsString(new StringReader(readerStr),
 					 stringToFind));
   }
-  
+
   public void testFindStringEnd() throws IOException {
     String stringToFind = "special string";
     String readerStr = "Blah blah blah "+stringToFind;
@@ -676,7 +676,7 @@ System.out.println("s: "+s);
 	       StringUtil.containsString(new StringReader(readerStr),
 					 stringToFind));
   }
-  
+
   //To make sure searching for an empty string throws
   public void testFindStringBlankString() throws IOException {
     try {
@@ -741,7 +741,7 @@ System.out.println("s: "+s);
     assertTrue("Didn't find string when it should",
 	       StringUtil.containsString(new StringReader(testStr),
 					 searchStr, 10));
-    
+
   }
 
 
@@ -762,7 +762,7 @@ System.out.println("s: "+s);
   }
 
 
-  //network streams can underfill buffers; this test make sure we 
+  //network streams can underfill buffers; this test make sure we
   //handle a situation when the reader will return a series of small chars
   public void testFindStringUnderfullsBuffer() throws IOException {
     String stringToFind = "abcdefgh";

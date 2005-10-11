@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterSerializer.java,v 1.2 2005-09-14 23:57:49 smorabito Exp $
+ * $Id: V3VoterSerializer.java,v 1.3 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -38,10 +38,10 @@ public class V3VoterSerializer extends V3Serializer {
 
   private static final String VOTER_USER_DATA_FILE = "voter_user_data.xml";
   private static final String VOTER_STATE_TABLE_FILE = "voter_state_table.xml";
-  
+
   private File voterUserDataFile;
   private File voterStateTableFile;
-  
+
   public V3VoterSerializer() throws PollSerializerException {
     this(null);
   }
@@ -60,8 +60,8 @@ public class V3VoterSerializer extends V3Serializer {
       throw new PollSerializerException("Unable to save VoterUserData", ex);
     }
   }
-  
-  public VoterUserData loadVoterUserData() 
+
+  public VoterUserData loadVoterUserData()
       throws PollSerializerException {
     try {
       return (VoterUserData) xstr.deserialize(voterUserDataFile);
@@ -81,7 +81,7 @@ public class V3VoterSerializer extends V3Serializer {
       throw new PollSerializerException("Unable to save PsmInterpStateBean", ex);
     }
   }
-  
+
   /**
    * Restore a PsmInterpStateBean for a V3Voter.
    */

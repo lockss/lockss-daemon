@@ -1,5 +1,5 @@
 /*
- * $Id: EditableDefinablePlugin.java,v 1.16 2005-08-31 00:07:53 rebeccai Exp $
+ * $Id: EditableDefinablePlugin.java,v 1.17 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -255,17 +255,17 @@ public class EditableDefinablePlugin
 
   }
 
-  public CrawlWindow getAuCrawlWindow() {  
+  public CrawlWindow getAuCrawlWindow() {
 
-      return (CrawlWindow) (definitionMap.getMapElement(AU_CRAWL_WINDOW));  
+      return (CrawlWindow) (definitionMap.getMapElement(AU_CRAWL_WINDOW));
 
   }
 
-  public void removeAuCrawlWindow() {   
+  public void removeAuCrawlWindow() {
 
       definitionMap.removeMapElement(AU_CRAWL_WINDOW);
 
-  } 
+  }
 
   public void setAuFilter(String mimetype, List rules) {
     if (rules.size() > 0) {

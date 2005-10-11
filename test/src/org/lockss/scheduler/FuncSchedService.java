@@ -1,5 +1,5 @@
 /*
- * $Id: FuncSchedService.java,v 1.6 2004-10-26 18:50:25 tlipkis Exp $
+ * $Id: FuncSchedService.java,v 1.7 2005-10-11 05:51:20 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class FuncSchedService extends LockssTestCase {
 	fail("Hasher timed out");
       }
     }
-  }    
+  }
 
   BackgroundTask btask(long start, long end, double loadFactor,
 		      TaskCallback cb) {

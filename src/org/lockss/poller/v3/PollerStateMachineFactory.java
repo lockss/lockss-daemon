@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateMachineFactory.java,v 1.4 2005-09-14 23:57:48 smorabito Exp $
+ * $Id: PollerStateMachineFactory.java,v 1.5 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ public class PollerStateMachineFactory {
 
   /**
    * Obtain a PsmMachine for the Poller state table.
-   * 
+   *
    * @return A PsmMachine representing the Poller state table.
    * @param actionClass A class containing static handler methods for the state
    *          machine to call.

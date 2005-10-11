@@ -1,5 +1,5 @@
 /*
- * $Id: ProvideTitle.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
+ * $Id: ProvideTitle.java,v 1.3 2005-10-11 05:47:40 tlipkis Exp $
  */
 
 /*
@@ -60,27 +60,27 @@ public class ProvideTitle extends ApiActivityBase {
   private int   _missingCount;
   private int   _titleCount;
   private int   _totalCount;
-  
+
   /**
    * Populate response with Lockss build and version information
    * @return true
    */
   public boolean doCommand() {
     Element element;
-    
+
     _missingCount = 0;
     _titleCount   = 0;
     _totalCount   = 0;
-    
+
     doTitleListXml(getResponseRoot());
-    
+
     element = getXmlUtils().createElement(getResponseRoot(), AP_E_ACTIVE);
     doAuListXml(element);
-   
+
     doStatisticsXml(getResponseRoot());
     return true;
   }
-  
+
   /*
    * Utilities
    */
@@ -89,20 +89,20 @@ public class ProvideTitle extends ApiActivityBase {
    * Render varous statistics
    */
   private void doStatisticsXml(Element root) {
-      
+
     XmlUtils.addText(getXmlUtils().createElement(root, AP_E_FIELD1),
                           String.valueOf(_titleCount));
-    
+
     XmlUtils.addText(getXmlUtils().createElement(root, AP_E_FIELD2),
                           String.valueOf(_missingCount));
-    
+
     XmlUtils.addText(getXmlUtils().createElement(root, AP_E_TOTAL),
                           String.valueOf(_totalCount));
   }
 
   /**
    * Lookup all configurable titles
-   * @param root Title details appended to this element 
+   * @param root Title details appended to this element
    */
   private void doTitleListXml(Element root) {
     SortedSet   titleSet;
@@ -138,7 +138,7 @@ public class ProvideTitle extends ApiActivityBase {
    */
   private Collection getJournalTitles(Collection auList) {
     TreeSet journalTitles = new TreeSet();
-    
+
     for (Iterator iterator = auList.iterator(); iterator.hasNext(); ) {
       AuProxy     auProxy     = (AuProxy) iterator.next();
       TitleConfig titleConfig = auProxy.getTitleConfig();
@@ -154,18 +154,18 @@ public class ProvideTitle extends ApiActivityBase {
     }
     return journalTitles;
   }
-      
-  
-  /** 
-   * Generate XML to detail  
-   * 
+
+
+  /**
+   * Generate XML to detail
+   *
    */
   private void doAuListXml(Element root) {
     Collection    auList;
     Collection    journalTitles;
     Element       titleElement;
     String        lastTitle;
-    
+
     /*
      * Fetch all available AUs and all of the "per-AU" titles
      */
@@ -192,11 +192,11 @@ public class ProvideTitle extends ApiActivityBase {
         if (titleConfig != null) {
           auTitle = titleConfig.getDisplayName();
         }
-        
+
 				if (auTitle == null) {
           auTitle = auProxy.getName();
         }
-        
+
 				renderAuXml(titleElement, auTitle, auProxy.getAuId());
         _missingCount++;
         _totalCount++;
@@ -206,7 +206,7 @@ public class ProvideTitle extends ApiActivityBase {
     /*
      * The normal case: some title DB information available
      */
-    lastTitle     = null; 
+    lastTitle     = null;
     titleElement  = null;
 
     for (Iterator iterator = journalTitles.iterator(); iterator.hasNext(); ) {
@@ -221,7 +221,7 @@ public class ProvideTitle extends ApiActivityBase {
         titleElement  = getXmlUtils().createElement(root, AP_E_TITLE);
         nameElement   = getXmlUtils().createElement(titleElement, AP_E_COMMENT);
         XmlUtils.addText(nameElement, title);
-        
+
         lastTitle = title;
       }
       renderAuTitleXml(titleElement, title, auList);
@@ -232,25 +232,25 @@ public class ProvideTitle extends ApiActivityBase {
   /**
    * Render AUs and associated title configuration data
    * @param root All generated XML is appended here
-   * @param auTitle AU title 
+   * @param auTitle AU title
    * @param auList All available AUs
    */
-  private void renderAuTitleXml(Element root, 
+  private void renderAuTitleXml(Element root,
                                 String journalTitle, Collection auList) {
     for (Iterator iterator = auList.iterator(); iterator.hasNext(); ) {
-    
+
       AuProxy     auProxy     = (AuProxy) iterator.next();
       TitleConfig titleConfig = auProxy.getTitleConfig();
       String      auTitle;
 
       if (titleConfig != null) {
         if (journalTitle.equalsIgnoreCase(titleConfig.getJournalTitle())) {
-          
+
           auTitle = titleConfig.getDisplayName();
           if (auTitle == null) {
             auTitle = auProxy.getName();
           }
-         
+
           renderAuXml(root, auTitle, auProxy.getAuId());
           _titleCount++;
           _totalCount++;
@@ -266,18 +266,18 @@ public class ProvideTitle extends ApiActivityBase {
    */
   private void renderAuMinusTitleXml(Element root, Collection auList) {
     for (Iterator iterator = auList.iterator(); iterator.hasNext(); ) {
-    
+
       AuProxy     auProxy     = (AuProxy) iterator.next();
       TitleConfig titleConfig = auProxy.getTitleConfig();
       String      auTitle;
 
       if ((titleConfig == null) || (titleConfig.getJournalTitle() == null)) {
         Element titleElement;
-        
+
         titleElement = getXmlUtils().createElement(root, AP_E_TITLE);
         getXmlUtils().createElement(titleElement, AP_E_COMMENT);
-         
-        auTitle = (titleConfig == null) ? auProxy.getName() 
+
+        auTitle = (titleConfig == null) ? auProxy.getName()
                                         : titleConfig.getDisplayName();
         renderAuXml(titleElement, auTitle, auProxy.getAuId());
         _missingCount++;
@@ -294,7 +294,7 @@ public class ProvideTitle extends ApiActivityBase {
    */
   private void renderAuXml(Element root, String auTitle, String auId) {
     Element auElement = getXmlUtils().createElement(root, AP_E_AU);
-        
+
     XmlUtils.addText(getXmlUtils().createElement(auElement, AP_E_NAME),
                           auTitle == null ? "" : auTitle);
     XmlUtils.addText(getXmlUtils().createElement(auElement, AP_E_AUID),

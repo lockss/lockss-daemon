@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlStatusTable.java,v 1.9 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestXmlStatusTable.java,v 1.10 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -82,7 +82,7 @@ public class TestXmlStatusTable extends LockssTestCase {
        ListUtil.list("cc", new StatusTable.Reference("x1", "tt", "k42"))},
     };
 
-      
+
     List rowList = MockStatusAccessor.makeRowsFrom(colList, rowObj);
     Map row97 = (Map)rowList.get(2);
     row97.put(StatusTable.ROW_SEPARATOR, "1");

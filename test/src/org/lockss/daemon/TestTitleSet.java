@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleSet.java,v 1.2 2005-02-09 19:09:41 tlipkis Exp $
+ * $Id: TestTitleSet.java,v 1.3 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.*;
 public class TestTitleSet extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestTitleSet");
   private MockLockssDaemon daemon;
-  
+
   public void setUp() throws Exception {
     super.setUp();
     daemon = getMockLockssDaemon();

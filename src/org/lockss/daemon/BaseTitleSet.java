@@ -1,5 +1,5 @@
 /*
- * $Id: BaseTitleSet.java,v 1.6 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: BaseTitleSet.java,v 1.7 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public abstract class BaseTitleSet implements TitleSet {
   public String getName() {
     return name;
   }
-  
+
   /** Return the titles in the set.
    * @return a collection of TitleConfig */
   public Collection getTitles() {

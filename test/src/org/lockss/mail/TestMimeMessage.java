@@ -1,5 +1,5 @@
 /*
- * $Id: TestMimeMessage.java,v 1.3 2005-09-12 04:36:56 tlipkis Exp $
+ * $Id: TestMimeMessage.java,v 1.4 2005-10-11 05:49:44 tlipkis Exp $
  */
 
 /*
@@ -136,7 +136,7 @@ public class TestMimeMessage extends LockssTestCase {
     if (expTo != null) {
       assertHeaderLine(PAT_TO + expTo, hdr);
     }
-  }    
+  }
 
   /** assert that the array of lines is a MIME text-part with the expected
    * text */

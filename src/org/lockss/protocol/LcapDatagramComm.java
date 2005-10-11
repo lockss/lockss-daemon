@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramComm.java,v 1.13 2005-10-07 23:43:06 tlipkis Exp $
+ * $Id: LcapDatagramComm.java,v 1.14 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -205,7 +205,7 @@ public class LcapDatagramComm
       uniPort = config.getInt(PARAM_UNI_PORT); //
       uniSendToPort = config.getInt(PARAM_UNI_PORT_SEND, uniPort);
       uniSendToName = config.get(PARAM_UNI_ADDR_SEND);
-      verifyMulticast = config.getBoolean(PARAM_MULTI_VERIFY, 
+      verifyMulticast = config.getBoolean(PARAM_MULTI_VERIFY,
 					  DEFAULT_MULTI_VERIFY);
     } catch (Configuration.InvalidParam e) {
       log.critical("Config error, not started: " + e);
@@ -281,7 +281,7 @@ public class LcapDatagramComm
       isMuzzleMulticast = true;
     }
     return isMuzzleMulticast;
-  }       
+  }
 
   /** Return true if the packet's source address is one of my interfaces. */
   boolean didISend(LockssReceivedDatagram dg) {
@@ -326,7 +326,7 @@ public class LcapDatagramComm
     rdg.setReceiveSocket(uSock);
     rdg.setMulticast(false);
     socketInQ.put(rdg);
-  }    
+  }
 
   /** Multicast a message to all caches holding the ArchivalUnit.
    * @param ld the datagram to send
@@ -519,7 +519,7 @@ public class LcapDatagramComm
       try {
 	updateInStats(ld);
 	if (ld.isMulticast() && !didISend(ld)) {
-	  isMuzzleMulticast = false;	  
+	  isMuzzleMulticast = false;
 	  lastMulticastTime = TimeBase.nowMs();
 	}
 	runHandlers(ld);

@@ -1,5 +1,5 @@
 /*
- * $Id: MockDamagedNodeSet.java,v 1.1 2005-07-19 00:11:46 troberts Exp $
+ * $Id: MockDamagedNodeSet.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class MockDamagedNodeSet extends DamagedNodeSet {
     throw new UnsupportedOperationException("not implemented");
   }
 
-  public String toString() { 
+  public String toString() {
     throw new UnsupportedOperationException("not implemented");
 //     StringBuffer sb = new StringBuffer();
 //     sb.append("[MockDamagedNodeSet: ");

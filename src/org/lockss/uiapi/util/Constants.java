@@ -1,5 +1,5 @@
 /*
- * $Id: Constants.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: Constants.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import java.util.*;
 import org.lockss.util.*;
 
 /**
- * Constants 
+ * Constants
  */
 public interface Constants extends org.lockss.util.Constants {
 

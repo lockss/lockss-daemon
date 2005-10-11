@@ -1,5 +1,5 @@
 /*
- * $Id: OneShotSemaphore.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: OneShotSemaphore.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -38,7 +38,7 @@ import java.util.*;
  * full, then returns.  Once full, it remains full. */
 public class OneShotSemaphore {
   private boolean state = false;
-    
+
   /** Wait until the semaphore is full or the timer expires.
    * If the semaphore is already full, return immediately.
    * Use {@link Deadline#expire()} to make this return early.

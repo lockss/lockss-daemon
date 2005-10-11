@@ -1,5 +1,5 @@
 /*
-* $Id: PollerStatus.java,v 1.20 2005-10-07 23:46:50 smorabito Exp $
+* $Id: PollerStatus.java,v 1.21 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -252,7 +252,7 @@ public class PollerStatus {
     public String getTitle(Properties props) {
       if (props.isEmpty()) {
 	return "All Recent Polls";
-      } 
+      }
       // generate string: {type}, {status} Polls {for AU}, {on URL}
       List prefix = new ArrayList();
       List suffix = new ArrayList();

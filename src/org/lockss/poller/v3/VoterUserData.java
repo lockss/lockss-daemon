@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.5 2005-10-07 23:46:48 smorabito Exp $
+ * $Id: VoterUserData.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -45,7 +45,7 @@ import org.lockss.util.*;
  * Persistent user data state object used by V3Voter state machine.
  */
 public class VoterUserData implements LockssSerializable {
-  
+
   // XXX: May not be serializable after repair is implemented!
   private LcapMessage pollMessage;
   private PeerIdentity pollerId;
@@ -68,24 +68,24 @@ public class VoterUserData implements LockssSerializable {
   private boolean hashingDone = false;
   private boolean voteRequested = false;
   private long createTime;
-  
+
   /** Transient non-serialized fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
   private transient V3VoterSerializer serializer;
   private transient V3Voter voter;
-  
+
   private static Logger log = Logger.getLogger("VoterUserData");
-  
+
   /** Package-level constructor used in tests. */
-  VoterUserData(V3VoterSerializer serializer) { 
+  VoterUserData(V3VoterSerializer serializer) {
     this.serializer = serializer;
   }
-  
+
   public VoterUserData(PollSpec spec, V3Voter voter, PeerIdentity pollerId,
                        String pollKey, long duration, String hashAlgorithm,
                        byte[] pollerNonce, byte[] voterNonce,
-                       byte[] introEffortProof, V3VoterSerializer serializer) 
+                       byte[] introEffortProof, V3VoterSerializer serializer)
       throws V3Serializer.PollSerializerException {
     log.debug3("Creating V3 Voter User Data for poll " + pollKey);
     this.spec = spec;
@@ -107,19 +107,19 @@ public class VoterUserData implements LockssSerializable {
     this.createTime = TimeBase.nowMs();
     saveState();
   }
-  
+
   public void setPollMessage(LcapMessage msg) {
     this.pollMessage = msg;
   }
-  
+
   public LcapMessage getPollMessage() {
     return pollMessage;
   }
-  
+
   public long getCreateTime() {
     return createTime;
   }
-  
+
   public String getAuId() {
     return auId;
   }
@@ -137,16 +137,16 @@ public class VoterUserData implements LockssSerializable {
     this.cus = cus;
     // Transient - no need to save state.
   }
-  
+
   public void setPollSpec(PollSpec spec) {
     this.spec = spec;
     // Transient - no need to save state.
   }
-  
+
   public PollSpec getPollSpec() {
     return spec;
   }
-  
+
   public long getDeadline() {
     return deadline;
   }
@@ -191,7 +191,7 @@ public class VoterUserData implements LockssSerializable {
     this.pollAckEffortProof = pollAckEffortProof;
     saveState();
   }
-  
+
   public byte[] getReceiptEffortProof() {
     return receiptEffortProof;
   }
@@ -308,42 +308,42 @@ public class VoterUserData implements LockssSerializable {
     this.voterNonce = voterNonce;
     saveState();
   }
-  
+
   public synchronized void hashingDone(boolean hashingDone) {
     this.hashingDone = hashingDone;
     saveState();
   }
-  
+
   public synchronized boolean hashingDone() {
     return hashingDone;
   }
-  
+
   public synchronized void voteRequested(boolean voteRequested) {
     this.voteRequested = voteRequested;
     saveState();
   }
-  
+
   public synchronized boolean voteRequested() {
     return voteRequested;
   }
 
   /* Delegate methods for V3Voter */
-  
+
   public void sendMessageTo(V3LcapMessage msg, PeerIdentity id)
       throws IOException {
     voter.sendMessageTo(msg, id);
   }
-  
+
   public void nominatePeers() {
     voter.nominatePeers();
   }
-  
+
   public boolean generateVote() throws NoSuchAlgorithmException {
     return voter.generateVote();
   }
-  
+
   /* Utility methods */
-  
+
   private void saveState() {
     try {
       serializer.saveVoterUserData(this);
@@ -352,5 +352,5 @@ public class VoterUserData implements LockssSerializable {
     }
   }
 
-  
+
 }

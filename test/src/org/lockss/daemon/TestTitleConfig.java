@@ -1,5 +1,5 @@
 /*
- * $Id: TestTitleConfig.java,v 1.8 2005-10-05 06:05:26 tlipkis Exp $
+ * $Id: TestTitleConfig.java,v 1.9 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class TestTitleConfig extends LockssTestCase {
     tc1.setAttributes(map);
     assertSame(map, tc1.getAttributes());
   }
-  
+
   public void testGetConfig() {
     ConfigParamDescr d1 = new ConfigParamDescr("key1");
     ConfigParamDescr d2 = new ConfigParamDescr("key2");

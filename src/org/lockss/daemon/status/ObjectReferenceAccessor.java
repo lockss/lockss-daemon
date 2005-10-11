@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectReferenceAccessor.java,v 1.3 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: ObjectReferenceAccessor.java,v 1.4 2005-10-11 05:44:14 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon.status;
 /**
  * Objects wishing to provide references to tables should implement this
  *
- * Used by {@link StatusService} to generate {@link StatusTable.Reference}s.  
+ * Used by {@link StatusService} to generate {@link StatusTable.Reference}s.
  */
 
 public interface ObjectReferenceAccessor {

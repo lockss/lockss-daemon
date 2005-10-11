@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryList.java,v 1.2 2003-06-20 22:34:53 claire Exp $
+ * $Id: HistoryList.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -42,8 +42,8 @@ public class HistoryList extends AbstractCollection {
   private int max;
   private List list;
 
-  /** 
-   * Create a new HistoryList with room for n elements. 
+  /**
+   * Create a new HistoryList with room for n elements.
    * @param max maximum number of elements to keep on the list.
    */
   public HistoryList(int max) {

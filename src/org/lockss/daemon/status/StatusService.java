@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.11 2004-10-19 10:17:15 tlipkis Exp $
+ * $Id: StatusService.java,v 1.12 2005-10-11 05:44:14 tlipkis Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ package org.lockss.daemon.status;
 import java.util.*;
 
 /**
- * This object sits between the daemon and the UI code to function as a 
+ * This object sits between the daemon and the UI code to function as a
  * centralized place to query for status information on the system.
  */
 public interface StatusService {
@@ -46,15 +46,15 @@ public interface StatusService {
   public static final String ALL_TABLES_TABLE = "table_of_all_tables";
 
   /**
-   * Returns the StatusService.Table object identified by the tableName 
+   * Returns the StatusService.Table object identified by the tableName
    * and key specified.
    * @param tableName name of the table to get
    * @param key object which further specifies the needed table
    * @return Populated StatusTable
-   * @throws  StatusService.NoSuchTableException if there is no status table 
+   * @throws  StatusService.NoSuchTableException if there is no status table
    * with that name-key combination
    */
-  public StatusTable getTable(String tableName, String key) 
+  public StatusTable getTable(String tableName, String key)
       throws StatusService.NoSuchTableException;
 
   /**
@@ -64,10 +64,10 @@ public interface StatusService {
    * @param key object which further specifies the needed table
    * @param options BitSet of StatusTable.OPTION_<iXXX</i>
    * @return Populated StatusTable
-   * @throws  StatusService.NoSuchTableException if there is no status table 
+   * @throws  StatusService.NoSuchTableException if there is no status table
    * with that name-key combination
    */
-  public StatusTable getTable(String tableName, String key, BitSet options) 
+  public StatusTable getTable(String tableName, String key, BitSet options)
       throws StatusService.NoSuchTableException;
 
   /**
@@ -80,22 +80,22 @@ public interface StatusService {
    * Register a StatusAccessor that knows how to get a table for a certain name
    * @param tableName name of the table that statusAccessor can provide
    * @param statusAccessor StatusAccessor that can provide the specified table
-   * @throws StatusService.MultpleRegistrationException if multiple 
+   * @throws StatusService.MultpleRegistrationException if multiple
    * StatusAccessors are registered to the same tableName
    * @throws StatusService.InvalidTableNameException if you attempt to register
-   * a StatusAccessor for a table name that has anything other than 
+   * a StatusAccessor for a table name that has anything other than
    * <i>[a-zA-Z0-9]</i>, <i>-</i>, and <i>_</i>  in it
    */
-  public void registerStatusAccessor(String tableName, 
+  public void registerStatusAccessor(String tableName,
 				     StatusAccessor statusAccessor);
-  
+
   /**
-   * Unregister a previously registered StatusAccessor 
+   * Unregister a previously registered StatusAccessor
    * @param tableName name of the table to unregister
    */
   public void unregisterStatusAccessor(String tableName);
 
-  
+
   /**
    * Get a reference to the named table for the given object.
    * virtue of its class) and ask each one to create a reference to their
@@ -133,15 +133,15 @@ public interface StatusService {
    * @throws StatusService.MultpleRegistrationException if multiple
    * ObjectReferenceAccessor are registered for the same table
    * @throws StatusService.InvalidTableNameException if you attempt to register
-   * a StatusAccessor for a table name that has anything other than 
+   * a StatusAccessor for a table name that has anything other than
    * <i>[a-zA-Z0-9]</i>, <i>-</i>, and <i>_</i>  in it
    */
   public void
     registerObjectReferenceAccessor(String tableName, Class cls,
 				    ObjectReferenceAccessor objRefAccessor);
-  
+
   /**
-   * Unregister a previously registered ObjectReferenceAccessor 
+   * Unregister a previously registered ObjectReferenceAccessor
    * @param tableName name of the table for which the previously supplied
    * @param cls the class of objects for which the previously supplied
    * ObjectReferenceAccessor is no longer willing to create references.
@@ -149,10 +149,10 @@ public interface StatusService {
    */
   public void unregisterObjectReferenceAccessor(String tableName, Class cls);
 
-  
+
   /**
    * Thrown for various errors related to status queries
-   */  
+   */
   public class NoSuchTableException extends Exception {
     public NoSuchTableException(String msg) {
       super(msg);
@@ -160,9 +160,9 @@ public interface StatusService {
   }
 
   /**
-   * Thrown if someone tries to register a status accessor for an 
+   * Thrown if someone tries to register a status accessor for an
    * invalid table name
-   */  
+   */
   public class InvalidTableNameException extends RuntimeException {
     public InvalidTableNameException(String msg) {
       super(msg);
@@ -170,7 +170,7 @@ public interface StatusService {
   }
 
   /**
-   * Thrown when multiple StatusAccessors are registered for the same 
+   * Thrown when multiple StatusAccessors are registered for the same
    * table name
    */
   public class MultipleRegistrationException extends RuntimeException {

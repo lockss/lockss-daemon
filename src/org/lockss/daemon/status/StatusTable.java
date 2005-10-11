@@ -1,5 +1,5 @@
 /*
- * $Id: StatusTable.java,v 1.45 2005-10-08 02:07:58 troberts Exp $
+ * $Id: StatusTable.java,v 1.46 2005-10-11 05:44:14 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import org.lockss.util.*;
 import org.lockss.servlet.ServletDescr;
 
 /**
- * Returned by {@link StatusService#getTable(String, String)} 
+ * Returned by {@link StatusService#getTable(String, String)}
  */
 public class StatusTable {
   /** Adding this key to a row, with a non-null value, requests a separator
@@ -164,7 +164,7 @@ public class StatusTable {
   public Properties getProperties() {
     return props;
   }
-    
+
   /**
    * Returns a List of {@link SummaryInfo} objects for this table
    * @return List of {@link SummaryInfo} objects for this table
@@ -181,11 +181,11 @@ public class StatusTable {
     this.summaryInfo = summaryInfo;
   }
 
-  
+
   /**
-   * Gets a list of {@link ColumnDescriptor}s representing the 
+   * Gets a list of {@link ColumnDescriptor}s representing the
    * columns in this table in their preferred display order.
-   * @return list of {@link ColumnDescriptor}s the columns in 
+   * @return list of {@link ColumnDescriptor}s the columns in
    * the table in the preferred display order
    */
   public List getColumnDescriptors() {
@@ -207,9 +207,9 @@ public class StatusTable {
   }
 
   /**
-   * Sets a list of {@link ColumnDescriptor}s in their perferred display 
+   * Sets a list of {@link ColumnDescriptor}s in their perferred display
    * order for this table
-   * @param columnDescriptors List of {@link ColumnDescriptor}s in their 
+   * @param columnDescriptors List of {@link ColumnDescriptor}s in their
    * perferred display order for this table
    */
   public void setColumnDescriptors(List columnDescriptors) {
@@ -218,10 +218,10 @@ public class StatusTable {
   }
 
   /**
-   * Gets a list of {@link java.util.Map} objects for all the rows in the 
+   * Gets a list of {@link java.util.Map} objects for all the rows in the
    * table in their default sort order.
-   * @return list of {@link java.util.Map}s representing rows in the table 
-   * in their default sort order 
+   * @return list of {@link java.util.Map}s representing rows in the table
+   * in their default sort order
    */
   public List getSortedRows() {
     if (rows == null) {
@@ -231,12 +231,12 @@ public class StatusTable {
   }
 
   /**
-   * Same as getSortedRows(), but will sort according to the rules 
+   * Same as getSortedRows(), but will sort according to the rules
    * specified in sortRules
    * @param sortRules list of {@link StatusTable.SortRule} objects describing
    *  how to sort  the rows
-   * @return list of {@link java.util.Map}s representing rows in the table 
-   * in the sort order specified by sortRules 
+   * @return list of {@link java.util.Map}s representing rows in the table
+   * in the sort order specified by sortRules
    */
   public List getSortedRows(List sortRules) {
     Collections.sort(rows, new SortRuleComparator(sortRules,
@@ -267,7 +267,7 @@ public class StatusTable {
 
   /**
    * Sets the default {@link StatusTable.SortRule}s for this table
-   * @param defaultSortRules List of default {@link StatusTable.SortRule}s 
+   * @param defaultSortRules List of default {@link StatusTable.SortRule}s
    * for this table
    */
   public void setDefaultSortRules(List defaultSortRules) {
@@ -280,7 +280,7 @@ public class StatusTable {
   public List getDefaultSortRules() {
     if (defaultSortRules == null) {
       defaultSortRules = makeDefaultSortRules();
-    }      
+    }
     return defaultSortRules;
   }
 
@@ -381,7 +381,7 @@ public class StatusTable {
      * Create a Reference object with an embedded value.
      * @param value value to be displayed.  Any value is
      * legal except another LinkValue
-     * @param tableName name of the {@link StatusTable} that this 
+     * @param tableName name of the {@link StatusTable} that this
      * links to
      * @param key object further specifying the table this links to
      */
@@ -404,11 +404,11 @@ public class StatusTable {
     public Properties getProperties() {
       return props;
     }
-    
+
     public Object getValue() {
       return value;
     }
-    
+
     public String getTableName() {
       return tableName;
     }
@@ -477,7 +477,7 @@ public class StatusTable {
     public Object getValue() {
       return value;
     }
-    
+
     public ServletDescr getServletDescr() {
       return srvDescr;
     }
@@ -525,7 +525,7 @@ public class StatusTable {
      * @param title title for this SummaryInfo
      * @param type int representing the type of value
      * @param value value object associated with this SummaryInfo
-     */    
+     */
     public SummaryInfo(String title, int type, Object value) {
       this.title = title;
       this.type = type;
@@ -592,7 +592,7 @@ public class StatusTable {
       }
       return returnVal;
     }
-    
+
   }
 
   /**
@@ -603,7 +603,7 @@ public class StatusTable {
     boolean sortAscending;
     Comparator comparator = null;
     int columnType = -1;
-    
+
     public SortRule(String columnName, boolean sortAscending) {
       this.columnName = columnName;
       this.sortAscending = sortAscending;
@@ -631,14 +631,14 @@ public class StatusTable {
     public String getColumnName(){
       return columnName;
     }
-    
+
     /**
      * @return the value type for the column
      */
     public int getColumnType(){
       return columnType;
     }
-    
+
     /**
      * @return true if this column should be sorted in ascending order,
      * false if it should be sorted in descending order
@@ -653,7 +653,7 @@ public class StatusTable {
     public Comparator getComparator(){
       return comparator;
     }
-    
+
     /**
      * Lookup the column type in the columnDescriptors, store in self
      * @param columnDescriptorMap columnDescriptors

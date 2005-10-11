@@ -1,5 +1,5 @@
 /*
- * $Id: RepositoryUtils.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: RepositoryUtils.java,v 1.2 2005-10-11 05:47:55 tlipkis Exp $
  */
 
 /*
@@ -48,17 +48,17 @@ import org.lockss.util.*;
 
 public class RepositoryUtils {
   private static Logger log = Logger.getLogger("RepositoryUtils");
-  
+
   /*
    * Constructors
    */
-  private RepositoryUtils() { 
+  private RepositoryUtils() {
   }
 
   /**
    * Get repository details
    */
-  public static List getRepositoryDetail(StatusService statusService) 
+  public static List getRepositoryDetail(StatusService statusService)
                                          throws StatusService.NoSuchTableException,
                                                 XmlDomBuilder.XmlDomException {
     XmlUtils        statusUtils;
@@ -66,28 +66,28 @@ public class RepositoryUtils {
     StatusTable     statusTable;
     XmlStatusTable  xmlStatusTable;
     NodeList        rowList;
-    ArrayList       resultList;                                            
-    
-    
+    ArrayList       resultList;
+
+
     resultList  = new ArrayList();
     statusUtils = ParseUtils.getStatusXmlUtils();
-     
+
     /*
      * Get information for each repository on the system
      */
     statusTable     = statusService.getTable("RepositorySpace", null);
     xmlStatusTable  = new XmlStatusTable(statusTable);
     statusRoot      = xmlStatusTable.getTableDocument().getDocumentElement();
-    rowList         = statusUtils.getElementList(statusRoot, 
+    rowList         = statusUtils.getElementList(statusRoot,
                                                  XmlStatusConstants.ROW);
-      
+
     for (int i = 0; i < rowList.getLength(); i++) {
       String    name, size, free, inUse;
       NodeList  cellList;
-        
-      cellList = statusUtils.getElementList(statusRoot, 
+
+      cellList = statusUtils.getElementList(statusRoot,
                                             XmlStatusConstants.CELL);
-        
+
       /*
        * Get (and save) the repository name, total size, used and free space
        */
@@ -95,7 +95,7 @@ public class RepositoryUtils {
       size  = getCellItem(statusUtils, cellList, "size");
       inUse = getCellItem(statusUtils, cellList, "used");
       free  = getCellItem(statusUtils, cellList, "free");
-  
+
       resultList.add(new Detail(name, size, inUse, free));
     }
     return resultList;
@@ -110,15 +110,15 @@ public class RepositoryUtils {
    */
   private static String getCellItem(XmlUtils statusUtils,
                                     NodeList cellList, String itemName) {
-    
+
     for (int i = 0; i < cellList.getLength(); i++) {
-      String cellName = ParseUtils.getText(statusUtils, 
-                                           (Element) cellList.item(i), 
+      String cellName = ParseUtils.getText(statusUtils,
+                                           (Element) cellList.item(i),
                                            XmlStatusConstants.COLUMN_NAME);
 
       if (itemName.equalsIgnoreCase(cellName)) {
-        return ParseUtils.getText(statusUtils, 
-                                  (Element) cellList.item(i), 
+        return ParseUtils.getText(statusUtils,
+                                  (Element) cellList.item(i),
                                   XmlStatusConstants.VALUE);
       }
     }
@@ -143,7 +143,7 @@ public class RepositoryUtils {
       this.inUse  = inUse;
       this.free   = free;
     }
-    
+
     /**
      * Get repository name
      * @return the name of this repository
@@ -161,15 +161,15 @@ public class RepositoryUtils {
     }
 
     /**
-     * Get the space used by this repository 
+     * Get the space used by this repository
      * @return Repository space in use
      */
     public String getSpaceInUse() {
       return inUse;
     }
-    
+
     /**
-     * Get space available to this repository 
+     * Get space available to this repository
      * @return Repository free space
      */
     public String getAvailableSpace() {

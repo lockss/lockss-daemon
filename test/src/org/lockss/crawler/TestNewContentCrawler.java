@@ -1,5 +1,5 @@
 /*
- * $Id: TestNewContentCrawler.java,v 1.41 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: TestNewContentCrawler.java,v 1.42 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -85,10 +85,10 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     crawlRule.addUrlToCrawl(permissionPage);
     mau.addUrl(permissionPage);
-    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage), 
+    spec = new SpiderCrawlSpec(startUrls, ListUtil.list(permissionPage),
                                crawlRule, 1);
     crawler = new MyNewContentCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = 
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(1));
 
     mau.setParser(parser);
@@ -345,7 +345,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     mau.addUrl(startUrl, new IOException("Test exception"), DEFAULT_RETRY_TIMES);
 
-    assertFalse(crawler.doCrawl0());    
+    assertFalse(crawler.doCrawl0());
     Set expected = SetUtil.set(permissionPage);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -359,7 +359,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(url1, false, true);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
     crawlRule.addUrlToCrawl(url1);
-    
+
     assertTrue(crawler.doCrawl0());
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
@@ -413,12 +413,12 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(startUrl,
 	       new MyMockRetryableCacheException("Test exception"),
 	       retryNum-1);
-    
+
     String url1="http://www.example.com/blah.html";
     mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    
+
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(permissionPage, startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
@@ -569,7 +569,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(permissionPage,
 	       new CacheException.ExpectedNoRetryException("Test exception"),
  	       DEFAULT_RETRY_TIMES);
-    
+
     crawler.doCrawl();
     Crawler.Status crawlStatus = crawler.getStatus();
 
@@ -594,7 +594,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(permissionPage,
 	       new CacheException.RepositoryException("Test exception"),
  	       DEFAULT_RETRY_TIMES);
-    
+
     crawler.doCrawl();
     Crawler.Status crawlStatus = crawler.getStatus();
 
@@ -615,7 +615,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(url1);
     assertFalse(crawler.doCrawl());
     Crawler.Status crawlStatus = crawler.getStatus();
-    
+
     assertEquals("Error", crawlStatus.getCrawlStatus());
     Map expectedErrors = MapUtil.map(url1, "Repository error");
     assertEquals(expectedErrors, crawlStatus.getUrlsWithErrors());
@@ -683,7 +683,7 @@ public class TestNewContentCrawler extends LockssTestCase {
     Set expected = SetUtil.set(startUrl, permissionPage, url1, url2, url3);
     assertEquals(expected, cus.getCachedUrls());
   }
-  
+
   public void testOverwritesMultipleStartingUrlsMultipleLevel() {
     String startUrl2 = "http://www.foo.com/default.html";
     String permissionPage2 = "http://www.foo.com/default.html";
@@ -704,12 +704,12 @@ public class TestNewContentCrawler extends LockssTestCase {
     String url4= "http://www.foo.com/dir/link4.html";
     String url5= "http://www.foo.com/dir/link5.html";
     String url6= "http://www.foo.com/dir/link6.html";
-    
+
     //    mau.setParser(parser);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1, url2, url3));
     parser.addUrlSetToReturn(startUrl2, SetUtil.set(url4, url5));
     parser.addUrlSetToReturn(url4, SetUtil.set(url6));
-    
+
     mau.addUrl(startUrl, true, true);
     mau.addUrl(startUrl2, true, true);
     mau.addUrl(url1, true, true);
@@ -780,11 +780,11 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(url1);
     assertFalse(crawler.doCrawl());
   }
-  
+
   public void testDoesCollectHttpsOnStartingUrls() {
-    //we will collect ftp, gopher https eventually, 
-    //it is not yet implemented though and this test 
-    //is to make sure urls in this protocols will not 
+    //we will collect ftp, gopher https eventually,
+    //it is not yet implemented though and this test
+    //is to make sure urls in this protocols will not
     //break the whole system
 
     String startUrl = "https://www.example.com/index.html";
@@ -810,9 +810,9 @@ public class TestNewContentCrawler extends LockssTestCase {
     mau.addUrl(startUrl, false, true);
     crawlRule.addUrlToCrawl(startUrl);
     parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
-    mau.addUrl(url1, false, true);    
+    mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
-    
+
     mau.setParser(parser);
     if (httpsUrlThrows) {
       assertFalse("Crawler shouldn't succeed when trying system can't construct a https URL", crawler.doCrawl());
@@ -820,13 +820,13 @@ public class TestNewContentCrawler extends LockssTestCase {
       assertTrue("Crawler should succeed when system can construct a https URL",
 		crawler.doCrawl());
     }
-    
+
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     Set expectedSet = SetUtil.set(permissionPage);
-    
+
     if (!httpsUrlThrows) {
       expectedSet.add(startUrl);
-    }    
+    }
     assertEquals(expectedSet, cus.getCachedUrls());
   }
 

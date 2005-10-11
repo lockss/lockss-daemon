@@ -1,5 +1,5 @@
 /*
- * $Id: OaiPlugin.java,v 1.3 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: OaiPlugin.java,v 1.4 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class OaiPlugin extends BasePlugin {
       throws ArchivalUnit.ConfigurationException {
     // create a new archival unit
     ArchivalUnit au = new OaiArchivalUnit(this);
-    
+
     //XXX add max crawl depth = 1 for testing in config
     //auConfig.put(FollowLinkCrawler.PARAM_MAX_CRAWL_DEPTH, ""+1);
 

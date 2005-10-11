@@ -1,5 +1,5 @@
 /*
- * $Id: NodeHistoryBean.java,v 1.5 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: NodeHistoryBean.java,v 1.6 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -92,5 +92,5 @@ public class NodeHistoryBean implements LockssSerializable {
     }
     return pollHistories;
   }
-  
+
 }

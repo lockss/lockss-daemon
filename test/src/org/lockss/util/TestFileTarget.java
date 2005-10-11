@@ -1,5 +1,5 @@
 /*
- * $Id: TestFileTarget.java,v 1.4 2004-12-09 08:21:44 tlipkis Exp $
+ * $Id: TestFileTarget.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -64,5 +64,5 @@ public class TestFileTarget extends LockssTestCase {
  	       " Should be <time>: <error-level>: <error message>",
 		isMatchRe(debugString, re));
   }
-  
+
 }

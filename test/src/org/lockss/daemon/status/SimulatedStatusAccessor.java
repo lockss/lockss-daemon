@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedStatusAccessor.java,v 1.13 2004-01-20 18:22:50 tlipkis Exp $
+ * $Id: SimulatedStatusAccessor.java,v 1.14 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class SimulatedStatusAccessor {
       List columns = new ArrayList(ncols);
       for (int ix = 1; ix <= ncols; ix++) {
 	columns.add(new ColumnDescriptor(coltag(ix),
-					 "Column " + ix, 
+					 "Column " + ix,
 					 coltype(ix-1),
 					 "Footnote for colemn " + ix));
       }
@@ -151,7 +151,7 @@ public class SimulatedStatusAccessor {
       table.setRows(rows);
     }
   }
-  
+
   private static class SimAccessor1 extends SimAccessor {
     SimAccessor1() {
       super("Table 1", 9, 2);

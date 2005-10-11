@@ -1,5 +1,5 @@
 /*
- * $Id: LcapDatagramRouter.java,v 1.15 2005-10-07 23:46:47 smorabito Exp $
+ * $Id: LcapDatagramRouter.java,v 1.16 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -306,7 +306,7 @@ public class LcapDatagramRouter
       return false;
     } else {
       return false;
-    } 
+    }
   }
 
   // if a long time since any message received from id not on partner list,

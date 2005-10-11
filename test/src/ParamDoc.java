@@ -1,5 +1,5 @@
 /*
- * $Id: ParamDoc.java,v 1.9 2005-03-22 06:23:00 tlipkis Exp $
+ * $Id: ParamDoc.java,v 1.10 2005-10-11 05:48:47 tlipkis Exp $
  */
 
 /*
@@ -39,10 +39,10 @@ import org.lockss.util.*;
 
 public class ParamDoc {
   static final String blanks = "                                                                                ";
-  static final String WDOG_PATTERN = 
+  static final String WDOG_PATTERN =
     org.lockss.daemon.LockssThread.PARAM_NAMED_WDOG_INTERVAL;
 
-  static final String PRIORITY_PATTERN = 
+  static final String PRIORITY_PATTERN =
     org.lockss.daemon.LockssThread.PARAM_NAMED_THREAD_PRIORITY;
 
   private static Logger log = Logger.getLogger("ParamDoc");
@@ -157,7 +157,7 @@ public class ParamDoc {
       pout.print(nblanks(COL - len));
       pout.print(defaultVal);
       if (defaultVal instanceof Long) {
-	String timeStr = 
+	String timeStr =
 	  StringUtil.timeIntervalToString(((Long)defaultVal).longValue());
 	pout.println(" ("+timeStr+")");
       } else {
@@ -206,15 +206,15 @@ public class ParamDoc {
 // 	putIfNotDifferent(defaultMap, paramName, defaultVal,
 // 			  "Conflicting defaults");
 //       }
-      putIfNotDifferent(defaultMap, paramName, 
-			defaultVal != null ? defaultVal : "(none)", 
+      putIfNotDifferent(defaultMap, paramName,
+			defaultVal != null ? defaultVal : "(none)",
 			"Conflicting defaults");
     }
   }
 
   static void doField(Class cls, Field fld, Map paramToSymbol) {
     String fname = fld.getName();
-    
+
     if (Modifier.isStatic(fld.getModifiers()) &&
 	String.class == fld.getType()) {
       String paramName = null;
@@ -247,16 +247,16 @@ public class ParamDoc {
       if (paramName != null) {
 	addParam(paramMap, paramName, cls.getName());
 	addParam(classMap, cls.getName(), paramName);
-	putIfNotDifferent(paramToSymbol, paramName, fname, 
+	putIfNotDifferent(paramToSymbol, paramName, fname,
 			  "Multiple symbols used to define parameter name ");
       }
     }
   }
 
-  static void doFieldDefault(Class enclosingClass, Field fld, 
+  static void doFieldDefault(Class enclosingClass, Field fld,
 			     Map defaultSymToDefVal) {
     String fname = fld.getName();
-    
+
     if (Modifier.isStatic(fld.getModifiers())) {
       if (fname.startsWith("DEFAULT_") ||
 	  fname.startsWith("WDOG_DEFAULT") ||
@@ -298,7 +298,7 @@ public class ParamDoc {
     }
     return paramName;
   }
-    
+
   static void putIfNotDifferent(Map map, Object key, Object val, String msg) {
     Object existingVal = map.get(key);
     if (existingVal != null && !existingVal.equals(val)) {
@@ -334,7 +334,7 @@ public class ParamDoc {
 
   /**
    * Find a plain file or a directory in default classpath.
-   * 
+   *
    * @see #find_file(File[], String)
    */
   public static File find_file(String name) {
@@ -345,7 +345,7 @@ public class ParamDoc {
     return find_jar(CLASSPATH_DIRS, name);
   }
 
-  /** 
+  /**
    * Find a plain file or a directory.
    *
    * @param dirs search paths
@@ -359,7 +359,7 @@ public class ParamDoc {
     }
     return null;
   }
-  /** 
+  /**
    * Find a plain file or a directory.
    *
    * @param dirs search paths

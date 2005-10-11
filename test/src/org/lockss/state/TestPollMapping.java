@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollMapping.java,v 1.3 2005-08-08 23:28:30 thib_gc Exp $
+ * $Id: TestPollMapping.java,v 1.4 2005-10-11 05:51:35 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class TestPollMapping extends TestCastor {
   public void testVoteBean() throws Exception {
     for (int ix=0; ix<5; ix++) {
       VoteBean vb1 = makeVoteBean(ix);
-      
+
       VoteBean vb2 = (VoteBean)marshalAndUnmarshal(vb1, mapFile);
       assertNotSame(vb1, vb2);
       assertEquals(vb1, vb2);
@@ -64,7 +64,7 @@ public class TestPollMapping extends TestCastor {
     vb.setHashString("This is a hash"+num);
     return vb;
   }
-  
+
   private PollStateBean makePollStateBean(int num) {
     PollStateBean psb = new PollStateBean();
     psb.setType(7+num);
@@ -127,7 +127,7 @@ public class TestPollMapping extends TestCastor {
   public void testPollHistoryBean() throws Exception {
     for (int ix=0; ix<5; ix++) {
       PollHistoryBean phb1 = makePollHistoryBean(ix);
-      
+
       PollHistoryBean phb2 =
 	(PollHistoryBean)marshalAndUnmarshal(phb1, mapFile);
       assertNotSame(phb1, phb2);
@@ -138,7 +138,7 @@ public class TestPollMapping extends TestCastor {
   public void testPollStateBean() throws Exception {
     for (int ix=0; ix<5; ix++) {
       PollStateBean psb1 = makePollStateBean(ix);
-      
+
       PollStateBean psb2 =
 	(PollStateBean)marshalAndUnmarshal(psb1, mapFile);
       assertNotSame(psb1, psb2);
@@ -149,7 +149,7 @@ public class TestPollMapping extends TestCastor {
   public void testNodeStateBean() throws Exception {
     for (int ix=0; ix<5; ix++) {
       NodeStateBean nsb1 = makeNodeStateBean(ix);
-      
+
       NodeStateBean nsb2 =
 	(NodeStateBean)marshalAndUnmarshal(nsb1, mapFile);
       assertNotSame(nsb1, nsb2);
@@ -160,7 +160,7 @@ public class TestPollMapping extends TestCastor {
   public void testNodeHistoryBean() throws Exception {
     for (int ix=0; ix<5; ix++) {
       NodeHistoryBean nhb1 = makeNodeHistoryBean(ix);
-      
+
       NodeHistoryBean nhb2 =
 	(NodeHistoryBean)marshalAndUnmarshal(nhb1, mapFile);
       assertNotSame(nhb1, nhb2);
@@ -206,7 +206,7 @@ public class TestPollMapping extends TestCastor {
   //VoteBean, PollHistoryBean, NodeHistoryBean don't have equals() methods
 
   private void assertEquals(AuStateBean ausb1, AuStateBean ausb2) {
-    String errStr = 
+    String errStr =
       "AuStateBean not equal:\n" +
       "\tausb1: "+ausb1+"\n"+
       "\tausb2: "+ausb2+"\n";
@@ -214,7 +214,7 @@ public class TestPollMapping extends TestCastor {
     assertEquals(errStr, ausb1.getLastTopLevelPollTime(),
 		 ausb2.getLastTopLevelPollTime());
     assertEquals(errStr, ausb1.getCrawlUrls(), ausb2.getCrawlUrls());
-  } 
+  }
 
   private void assertEquals(CrawlStateBean bean1, CrawlStateBean bean2) {
     assertEquals(null, bean1, bean2);
@@ -229,7 +229,7 @@ public class TestPollMapping extends TestCastor {
     assertEquals(errStr, bean1.getStatus(), bean2.getStatus());
     assertEquals(errStr, bean1.getType(), bean2.getType());
     assertEquals(errStr, bean1.getStartTime(), bean2.getStartTime());
-  } 
+  }
 
   private void assertEquals(VoteBean vb1, VoteBean vb2) {
     String errStr =

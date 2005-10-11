@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Voter.java,v 1.3 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: FuncV3Voter.java,v 1.4 2005-10-11 05:50:29 tlipkis Exp $
  */
 
 /*
@@ -63,9 +63,9 @@ public class FuncV3Voter extends LockssTestCase {
   private V3LcapMessage msgVoteRequest;
   private V3LcapMessage msgRepairRequest;
   private V3LcapMessage msgReceipt;
-  
+
   private static final String BASE_URL = "http://www.test.org/";
-  
+
   private static String[] urls = {
     "lockssau:",
     BASE_URL,
@@ -91,7 +91,7 @@ public class FuncV3Voter extends LockssTestCase {
     this.msgRepairRequest = makeRepairReqMsg();
     this.msgReceipt = makeReceiptMsg();
   }
-  
+
   private MockArchivalUnit setupAu() {
     MockArchivalUnit mau = new MockArchivalUnit();
     mau.setAuId("mock");
@@ -109,7 +109,7 @@ public class FuncV3Voter extends LockssTestCase {
     cus.setFlatItSource(files);
     return mau;
   }
-  
+
   public V3LcapMessage makePollMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_POLL,
@@ -122,7 +122,7 @@ public class FuncV3Voter extends LockssTestCase {
     msg.setEffortProof(ByteArray.makeRandomBytes(20));
     return msg;
   }
-  
+
   public V3LcapMessage makePollProofMsg() {
     V3LcapMessage msg =
       new V3LcapMessage(V3LcapMessage.MSG_POLL_PROOF,
@@ -187,28 +187,28 @@ public class FuncV3Voter extends LockssTestCase {
                                Poll.V1_CONTENT_POLL);
     byte[] introEffortProof = ByteArray.makeRandomBytes(20);
     MyMockV3Voter voter =
-      new MyMockV3Voter(ps, theDaemon, pollerId, 
+      new MyMockV3Voter(ps, theDaemon, pollerId,
                         "this_is_my_pollkey",
                         introEffortProof,
                         ByteArray.makeRandomBytes(20),
                         100000, "SHA-1");
 
     voter.startPoll();
-    
+
     voter.receiveMessage(msgPoll);
-    
+
     V3LcapMessage pollAck = voter.getSentMessage();
     assertNotNull(pollAck);
     assertEquals(pollAck.getOpcode(), V3LcapMessage.MSG_POLL_ACK);
-    
+
     voter.receiveMessage(msgPollProof);
-    
+
     V3LcapMessage nominate = voter.getSentMessage();
     assertNotNull(nominate);
     assertEquals(nominate.getOpcode(), V3LcapMessage.MSG_NOMINATE);
-    
+
     voter.receiveMessage(msgVoteRequest);
-    
+
     V3LcapMessage vote = voter.getSentMessage();
     assertNotNull(vote);
     assertEquals(vote.getOpcode(), V3LcapMessage.MSG_VOTE);
@@ -221,10 +221,10 @@ public class FuncV3Voter extends LockssTestCase {
 
     voter.receiveMessage(msgReceipt);
   }
-  
+
   private class MyMockV3Voter extends V3Voter {
     private Queue sentMessages = new FifoQueue();
-    
+
     public MyMockV3Voter(PollSpec spec, LockssDaemon daemon, PeerIdentity orig,
                          String key, byte[] introEffortProof,
                          byte[] pollerNonce, long duration, String hashAlg)
@@ -236,7 +236,7 @@ public class FuncV3Voter extends LockssTestCase {
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity id) {
       this.sentMessages.put(msg);
     }
-    
+
     public V3LcapMessage getSentMessage() throws InterruptedException {
       log.debug2("Waiting for next message...");
       V3LcapMessage msg = (V3LcapMessage)sentMessages.get(Deadline.in(200));
@@ -244,12 +244,12 @@ public class FuncV3Voter extends LockssTestCase {
       return msg;
     }
   }
-  
+
   private void initRequiredServices() {
     theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
-    
+
     theDaemon.getPluginManager();
 
     tempDirPath = null;

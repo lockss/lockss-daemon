@@ -1,5 +1,5 @@
 /*
- * $Id: TestDamagedNodeSet.java,v 1.2 2005-08-11 15:30:13 troberts Exp $
+ * $Id: TestDamagedNodeSet.java,v 1.3 2005-10-11 05:51:35 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.ExtMapBean;
 public class TestDamagedNodeSet extends LockssTestCase {
 
 //   public void setUp() {
-    
+
 //   }
 
   public void testHasDamage() {

@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.10 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.11 2005-10-11 05:49:44 tlipkis Exp $
  */
 
 /*
@@ -114,9 +114,9 @@ public class FuncHashService extends LockssTestCase {
 	fail("Hasher timed out");
       }
     }
-  }    
+  }
 
-  
+
   HashService.Callback hashCB() {
     return new HashService.Callback() {
 	public void hashingFinished(CachedUrlSet urlset,

@@ -1,5 +1,5 @@
 /*
- * $Id: ContentParser.java,v 1.4 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: ContentParser.java,v 1.5 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ public interface ContentParser {
   public void parseForUrls(Reader reader, String srcUrl,
 			   ContentParser.FoundUrlCallback cb)
       throws IOException;
-  
+
   /**
    * Callback for a ContentParser to call each time it finds a url
    */

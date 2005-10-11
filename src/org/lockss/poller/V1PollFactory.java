@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollFactory.java,v 1.17 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: V1PollFactory.java,v 1.18 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ import org.mortbay.util.B64Code;
 
 public class V1PollFactory extends BasePollFactory {
   static final String PREFIX = Configuration.PREFIX + "poll.";
-  
+
   static final String PARAM_NAMEPOLL_DEADLINE = PREFIX +
     "namepoll.deadline";
   static final String PARAM_CONTENTPOLL_MIN = PREFIX +
@@ -94,7 +94,7 @@ public class V1PollFactory extends BasePollFactory {
   protected int m_maxDurationMultiplier;
   protected long m_verifierExpireTime = DEFAULT_VERIFY_EXPIRATION;
 
-  
+
   private static VariableTimedMap theVerifiers = new VariableTimedMap();
 
   protected static Logger theLog = Logger.getLogger("V1PollFactory");
@@ -202,7 +202,7 @@ public class V1PollFactory extends BasePollFactory {
     IdentityManager im = daemon.getIdentityManager();
     byte[] challenge;
     byte[] verifier;
-    
+
     if (msg == null) {
       challenge = makeVerifier(duration);
       verifier = makeVerifier(duration);
@@ -211,7 +211,7 @@ public class V1PollFactory extends BasePollFactory {
       challenge = m.getChallenge();
       verifier = m.getVerifier();
     }
-    
+
     // check for conflicts
     if (!shouldPollBeCreated(pollspec, pm, im,
                              challenge, orig)) {
@@ -440,14 +440,14 @@ public class V1PollFactory extends BasePollFactory {
       return 0;
     }
   }
-  
+
   public boolean isDuplicateMessage(LcapMessage msg, PollManager pm) {
     byte[] verifier = ((V1LcapMessage)msg).getVerifier();
     String ver = String.valueOf(B64Code.encode(verifier));
     // lock paranoia - access (synchronized) thePolls outside theVerifiers lock
-    
+
     boolean havePoll = pm.hasPoll(msg.getKey());
-    
+
     synchronized (theVerifiers) {
       String secret = (String)theVerifiers.get(ver);
       // if we have a secret and we don't have a poll
@@ -461,7 +461,7 @@ public class V1PollFactory extends BasePollFactory {
       return secret != null;   // we made the verifier-we should have a secret
     }
   }
-  
+
   private void rememberVerifier(byte[] verifier,
                                 byte[] secret,
                                 long duration) {
@@ -472,9 +472,9 @@ public class V1PollFactory extends BasePollFactory {
       theVerifiers.put(ver, sec, d);
     }
   }
-  
+
   /* Non-interface methods */
-  
+
   /**
    * Called by verify polls to get the array of bytes that represents the
    * secret used to generate the verifier bytes.
@@ -522,7 +522,7 @@ public class V1PollFactory extends BasePollFactory {
 
     return verifier;
   }
-  
+
   /**
    * return a MessageDigest needed to hash this message
    * @param msg the LcapMessage which needs to be hashed or null to use
@@ -546,7 +546,7 @@ public class V1PollFactory extends BasePollFactory {
 
     return digest;
   }
-  
+
   protected static int getQuorum() {
     return m_quorum;
   }

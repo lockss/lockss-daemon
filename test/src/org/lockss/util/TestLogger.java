@@ -1,5 +1,5 @@
 /*
- * $Id: TestLogger.java,v 1.25 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestLogger.java,v 1.26 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -211,8 +211,8 @@ public class TestLogger extends LockssTestCase {
     assertIsomorphic(testOutputOutput, target.getMessages());
   }
 
-  private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n"; 
-  private static final String c1a = "prop2=xxx\nprop4=yyy\n"; 
+  private static final String c1 = "prop1=12\nprop2=foobar\nprop3=true\n";
+  private static final String c1a = "prop2=xxx\nprop4=yyy\n";
 
   // Load a config with desired log level.
   // Set default to critical to suppress Config log, which would change
@@ -304,7 +304,7 @@ public class TestLogger extends LockssTestCase {
 	    tlog.info(getName());
 	  }};
       th.start();
-      th.join();    
+      th.join();
       int s = tlog.getThreadMapSize();
       if (s < ix) {
 	System.err.println("Map went from " + mapsize + " to " + s +

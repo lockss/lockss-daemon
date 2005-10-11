@@ -1,5 +1,5 @@
 /*
- * $Id: LockssRegexpException.java,v 1.1 2004-07-23 16:40:45 tlipkis Exp $
+ * $Id: LockssRegexpException.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -36,11 +36,11 @@ package org.lockss.util;
  * compiler/matcher, so clients of those classes don't need to know which
  * regexp implementation they use. */
 public class LockssRegexpException extends Exception {
-  public LockssRegexpException() { 
-    super(); 
+  public LockssRegexpException() {
+    super();
   }
 
-  public LockssRegexpException(String msg) { 
-    super(msg); 
+  public LockssRegexpException(String msg) {
+    super(msg);
   }
 }

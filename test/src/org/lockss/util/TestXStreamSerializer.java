@@ -1,5 +1,5 @@
 /*
- * $Id: TestXStreamSerializer.java,v 1.7 2005-09-13 00:45:29 thib_gc Exp $
+ * $Id: TestXStreamSerializer.java,v 1.8 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -49,11 +49,11 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
    * @author Thib Guicherd-Callin
    */
   private static class ClassA implements LockssSerializable {
-    
+
     private boolean explode1 = true;
-    
+
     private boolean explode2 = true;
-    
+
     public void detonate() {
       if (explode1) {
         fail("Failed torture test: ClassA::explode1");
@@ -62,18 +62,18 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
         fail("Failed torture test: ClassA::explode2");
       }
     }
-    
+
     protected void postUnmarshal(LockssApp lockssContext) {
       explode1 = false; // defuse bomb
     }
-    
+
     protected Object postUnmarshalResolve() {
       explode2 = false; // defuse bomb
       return this;
     }
 
   }
-  
+
   /**
    * <p>Used in
    * {@link TestXStreamSerializer#testPostDeserialization_TortureTest()}.</p>
@@ -83,18 +83,18 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     // Separate ClassA and ClassC's post-deserialization
     // methods by a level
   }
-  
+
   /**
    * <p>Used in
    * {@link TestXStreamSerializer#testPostDeserialization_TortureTest()}.</p>
    * @author Thib Guicherd-Callin
    */
   private static class ClassC extends ClassB {
-    
+
     private boolean explode1 = true;
-    
+
     private boolean explode2 = true;
-    
+
     public void detonate() {
       if (explode1) {
         fail("Failed torture test: ClassC::explode1");
@@ -103,12 +103,12 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
         fail("Failed torture test: ClassC::explode2");
       }
     }
-    
+
     protected void postUnmarshal(LockssApp lockssContext) {
       super.postUnmarshal(lockssContext);
       explode1 = false; // defuse bomb
     }
-    
+
     protected Object postUnmarshalResolve() {
       super.postUnmarshalResolve();
       explode2 = false; // defuse bomb
@@ -123,49 +123,49 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
    * @author Thib Guicherd-Callin
    */
   private static class ClassD extends ClassC {
-    
+
     private ClassD first;
-    
+
     private ClassD second;
-  
+
   }
 
   private static class PostUnmarshalExtMapBean
       extends ExtMapBean
       implements LockssSerializable {
-    
+
     private boolean invoked;
-    
+
     public PostUnmarshalExtMapBean() {
       this.invoked = false;
     }
-    
+
     protected void postUnmarshal(LockssApp lockssContext) {
       this.invoked = true;
     }
-    
+
   }
-  
+
   private static class PostUnmarshalResolveExtMapBean
       extends ExtMapBean
       implements LockssSerializable {
-    
+
     private boolean invoked;
-    
+
     public PostUnmarshalResolveExtMapBean() {
       this.invoked = false;
     }
-    
+
     protected Object postUnmarshalResolve() {
       singleton.invoked = true;
       return singleton;
     }
-    
+
     public static final PostUnmarshalResolveExtMapBean singleton =
       new PostUnmarshalResolveExtMapBean();
-    
+
   }
-  
+
   /**
    * <p>Gives the post-deserialization mechanism a thorough test.</p>
    * <p>This test consists of a cyclic graph of objects of type D.
@@ -180,7 +180,7 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
       throws Exception {
 
     // Set up object graph
-    ClassD d1 = new ClassD(); 
+    ClassD d1 = new ClassD();
     ClassD d2 = new ClassD();
     ClassD d3 = new ClassD();
     ClassD d4 = new ClassD();
@@ -190,18 +190,18 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     d3.first = d1; d3.second = d2;
     d4.first = d2; d4.second = d5;
     d5.first = d2; d5.second = d3;
-    
+
     // Set up needed objects
     ObjectSerializer serializer = new XStreamSerializer(null);
     ObjectSerializer deserializer = new XStreamSerializer(null);
     StringWriter writer = new StringWriter();
     StringReader reader;
-    
+
     // Round trip
     serializer.serialize(writer, d1);
     reader = new StringReader(writer.toString());
     ClassD d = (ClassD)deserializer.deserialize(reader);
-    
+
     // Tests
     d.detonate(); // aka d1
     d.first.detonate(); // aka d2
@@ -219,12 +219,12 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     PostUnmarshalExtMapBean clone;
     StringWriter writer = new StringWriter();
     StringReader reader;
-    
+
     // Round trip
     serializer.serialize(writer, (LockssSerializable)original);
     reader = new StringReader(writer.toString());
     clone = (PostUnmarshalExtMapBean)deserializer.deserialize(reader);
-    
+
     // Tests
     assertEquals(original.getMap(), clone.getMap());
     assertTrue("postUnmarshal was not invoked", clone.invoked);
@@ -239,12 +239,12 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
     PostUnmarshalResolveExtMapBean clone;
     StringWriter writer = new StringWriter();
     StringReader reader;
-    
+
     // Round trip
     serializer.serialize(writer, (LockssSerializable)original);
     reader = new StringReader(writer.toString());
     clone = (PostUnmarshalResolveExtMapBean)deserializer.deserialize(reader);
-    
+
     // Tests
     assertTrue("postUnmarshalResolve was not invoked", clone.invoked);
     assertSame(
@@ -253,7 +253,7 @@ public class TestXStreamSerializer extends ObjectSerializerTester {
         clone
     );
   }
-  
+
   protected ObjectSerializer makeObjectSerializer_ExtMapBean() {
     return new XStreamSerializer();
   }

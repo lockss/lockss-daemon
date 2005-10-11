@@ -1,5 +1,5 @@
 /*
- * $Id: DateFormatter.java,v 1.2 2005-06-04 19:21:32 tlipkis Exp $
+ * $Id: DateFormatter.java,v 1.3 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ import java.text.*;
   public static String currentTime() {
     return Time.format(new Date());
   }
-  
+
   /**
    * Format a "short" date
    * @param date Date object
@@ -77,7 +77,7 @@ import java.text.*;
   public static String shortFormat(Date date) {
     return Short.format(date);
   }
-  
+
   /**
    * Format a "long" date
    * @param date Date object

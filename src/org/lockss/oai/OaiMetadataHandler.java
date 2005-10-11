@@ -1,5 +1,5 @@
 /*
- * $Id: OaiMetadataHandler.java,v 1.2 2005-01-13 00:51:15 dcfok Exp $
+ * $Id: OaiMetadataHandler.java,v 1.3 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -36,31 +36,31 @@ import java.util.Set;
 import org.w3c.dom.NodeList;
 
 /**
- *  Interface for different Oai Metadata Handler. 
+ *  Interface for different Oai Metadata Handler.
  *
  */
 public interface OaiMetadataHandler
 {
-  
+
   /**
-   * Setup the metadataHandler by getting  a list of <metadata>...</metadata> 
-   * xml nodes. Then, process them in according to different implementation 
-   * of OaiMetadataHandler. 
-   * The least amount of implementation, it should collect urls from the 
+   * Setup the metadataHandler by getting  a list of <metadata>...</metadata>
+   * xml nodes. Then, process them in according to different implementation
+   * of OaiMetadataHandler.
+   * The least amount of implementation, it should collect urls from the
    * given nodeList
-   * 
-   * @param metadataNodeList a nodelist with a bunch of <metadata>..</metadata> tag 
+   *
+   * @param metadataNodeList a nodelist with a bunch of <metadata>..</metadata> tag
    *
    */
   public void setupAndExecute(NodeList metadataNodeList);
-  
+
   /**
    * Return the set of urls collected in the oai response
    *
-   * @return the set of urls 
+   * @return the set of urls
    */
   public Set getArticleUrls();
-  
+
   /**
    * Returns the metadata format prefix that the crawl is interested.
    *
@@ -69,7 +69,7 @@ public interface OaiMetadataHandler
    * @return metadata format prefix the crawl is interested.
    */
   public String getMetadataPrefix();
-  
+
   /**
    * return the Metadata Namespace url
    *
@@ -78,12 +78,12 @@ public interface OaiMetadataHandler
    * @return the metadata namespace url
    */
   public String getMetadataNamespaceUrl();
- 
+
   /**
-   * Returns the XML tag name that contains Urls need to be crawled 
+   * Returns the XML tag name that contains Urls need to be crawled
    * in the metadata. It is needed to execute xpath
    *
-   * e.g. "identifier" in Dublin Core case, 
+   * e.g. "identifier" in Dublin Core case,
    * <oai_dc:identifier>http://example.com</
    * @return the XML tag name contains Url to be crawled
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpMethod.java,v 1.4 2005-10-04 22:58:06 tlipkis Exp $
+ * $Id: MockHttpMethod.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -133,11 +133,11 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
-  public Header[] getRequestHeaders() { 
+  public Header[] getRequestHeaders() {
     throw new UnsupportedOperationException();
   }
 
-  public Header[] getRequestHeaders(String headerName) { 
+  public Header[] getRequestHeaders(String headerName) {
     throw new UnsupportedOperationException();
   }
 
@@ -189,7 +189,7 @@ public class MockHttpMethod implements HttpMethod {
     throw new UnsupportedOperationException();
   }
 
-  public int execute(HttpState state, HttpConnection connection) 
+  public int execute(HttpState state, HttpConnection connection)
       throws HttpException, IOException {
     throw new UnsupportedOperationException();
   }

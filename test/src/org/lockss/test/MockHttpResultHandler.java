@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpResultHandler.java,v 1.1 2004-09-22 00:15:50 troberts Exp $
+ * $Id: MockHttpResultHandler.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -43,11 +43,11 @@ import org.lockss.util.urlconn.*;
 public class MockHttpResultHandler implements CacheResultHandler {
   public MockHttpResultHandler() {
   }
-  
+
   public void init(CacheResultMap crmap) {
     ((HttpResultMap)crmap).storeMapEntry(200, this.getClass());
   }
-  
+
   public CacheException handleResult(int code,
 				     LockssUrlConnection connection) {
     return null;

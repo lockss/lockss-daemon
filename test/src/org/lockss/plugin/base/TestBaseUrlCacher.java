@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseUrlCacher.java,v 1.43 2005-10-06 21:45:04 troberts Exp $
+ * $Id: TestBaseUrlCacher.java,v 1.44 2005-10-11 05:50:16 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.crawler.*;
 
 /**
  * This is the test class for org.lockss.plugin.simulated.GenericFileUrlCacher
- * 
+ *
  * @author Emil Aalto
  * @version 0.0
  */
@@ -967,7 +967,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
   /**
    * Tests that we wrap input streams that don't support marks in a
    * BufferedInputStream
-   * 
+   *
    * @throws IOException
    */
   public void testMarkNotSupported() throws IOException {
@@ -1198,7 +1198,7 @@ public class TestBaseUrlCacher extends LockssTestCase {
     /**
      * @param str String to read from
      * @param resetEx IOException to throw when reset is called
-     * 
+     *
      * Same as one arg constructor, but can provide an exception that is thrown
      * when reset is called
      */

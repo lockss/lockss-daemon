@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryPeerMessage.java,v 1.1 2005-05-18 05:45:16 tlipkis Exp $
+ * $Id: MemoryPeerMessage.java,v 1.2 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -99,5 +99,5 @@ class MemoryPeerMessage extends PeerMessage {
 	isOutputOpen = false;
       }
     }
-  }    
+  }
 }

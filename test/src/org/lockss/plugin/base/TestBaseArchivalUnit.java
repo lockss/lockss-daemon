@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseArchivalUnit.java,v 1.28 2005-10-07 21:48:47 troberts Exp $
+ * $Id: TestBaseArchivalUnit.java,v 1.29 2005-10-11 05:50:16 tlipkis Exp $
  */
 
 /*
@@ -620,7 +620,7 @@ public class TestBaseArchivalUnit extends LockssTestCase {
     }
 
   }
-  
+
   static class MyMockBaseArchivalUnit extends BaseArchivalUnit {
     private String auId = null;
     private String m_name = "MockBaseArchivalUnit";

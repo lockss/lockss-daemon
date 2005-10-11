@@ -1,5 +1,5 @@
 /*
- * $Id: PollTally.java,v 1.33 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: PollTally.java,v 1.34 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -120,7 +120,7 @@ public abstract class PollTally implements Tallier {
     return Collections.unmodifiableList(pollVotes);
   }
 
-  
+
   public Iterator getCorrectEntries() {
     return votedEntries == null ? CollectionUtil.EMPTY_ITERATOR :
         votedEntries.iterator();

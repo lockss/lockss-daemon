@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBean.java,v 1.8 2004-09-20 14:20:39 dshr Exp $
+ * $Id: VoteBean.java,v 1.9 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ public class VoteBean extends Vote {
 
   /**
    * Constructor for converting from a Vote object.  Called by
-   * PollHistoryBean.convertVotesToVoteBeans().  
+   * PollHistoryBean.convertVotesToVoteBeans().
    * @param vote the Vote
    */
   VoteBean(Vote vote) {

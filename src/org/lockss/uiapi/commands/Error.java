@@ -1,5 +1,5 @@
 /*
- * $Id: Error.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: Error.java,v 1.2 2005-10-11 05:47:41 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ package org.lockss.uiapi.commands;
  *  A dummy responder used to present error text
  */
 public class Error extends ActivityBase {
-   
+
   public boolean doCommand() {
     return true;
   }

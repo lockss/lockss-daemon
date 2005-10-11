@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigFile.java,v 1.9 2005-07-18 08:11:39 tlipkis Exp $
+ * $Id: ConfigFile.java,v 1.10 2005-10-11 05:43:31 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public abstract class ConfigFile {
 
   protected void setConfigFrom(InputStream in) throws IOException {
     ConfigurationPropTreeImpl newConfig = new ConfigurationPropTreeImpl();
-    
+
     try {
       // Load the configuration
       if (m_fileType == XML_FILE) {

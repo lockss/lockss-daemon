@@ -1,5 +1,5 @@
 /*
- * $Id: AuDetail.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: AuDetail.java,v 1.2 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -56,17 +56,17 @@ import org.lockss.uiapi.util.*;
 
 /**
  * Fetch Archival Unit detailed information.
- * 
+ *
  * We simply extend the generic status accessor <code>GetTable</code> class.
  */
 public class AuDetail extends GetTable {
- 
+
   private static String NAME  = "AuDetail";
   private static Logger log   = Logger.getLogger(NAME);
 
   public AuDetail() {
     super();
-  }  
+  }
 
   /**
    * Request AU details (summary information or file list)
@@ -80,7 +80,7 @@ public class AuDetail extends GetTable {
     if (!StringUtil.isNullString(skipCount)) {
       setRequestOption(AP_E_SKIPROWS, skipCount); // Where to start
       setRequestOption(AP_E_NUMROWS, "100");      // Files to display
-    }  
+    }
     return super.doCommand();
   }
 }

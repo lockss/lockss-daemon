@@ -1,5 +1,5 @@
 /*
- * $Id: LogTarget.java,v 1.5 2003-06-20 22:34:53 claire Exp $
+ * $Id: LogTarget.java,v 1.6 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -32,15 +32,15 @@ in this Software without prior written authorization from Stanford University.
 
 package org.lockss.util;
 
-/** 
- * Interface to represent any thing that can take a log message and output it 
+/**
+ * Interface to represent any thing that can take a log message and output it
  * to a destination (could be stderr, email, syslogd, etc.)
  */
 public interface LogTarget{
 
   /**
    * Output a message to a log target.  Implementations may prepend
-   * the date and/or message level to the message, if appropriate, 
+   * the date and/or message level to the message, if appropriate,
    *
    * @param log the <code>Logger</code> instance making the call.
    * @param msglevel severity level of log call.

@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDaemon.java,v 1.79 2005-10-06 08:21:57 tlipkis Exp $
+ * $Id: LockssDaemon.java,v 1.80 2005-10-11 05:43:18 tlipkis Exp $
  */
 
 /*
@@ -384,7 +384,7 @@ private final static String LOCKSS_USER_AGENT = "LOCKSS cache";
   public IcpManager getIcpManager() {
     return (IcpManager)getManager(ICP_MANAGER);
   }
-  
+
   /**
    * return the RemoteApi instance.
    * @return RemoteApi instance.

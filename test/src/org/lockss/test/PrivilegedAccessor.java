@@ -1,5 +1,5 @@
 /*
- * $Id: PrivilegedAccessor.java,v 1.11 2004-09-01 17:55:59 tlipkis Exp $
+ * $Id: PrivilegedAccessor.java,v 1.12 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -56,7 +56,7 @@ import org.lockss.util.*;
 public class PrivilegedAccessor {
 //   static Logger log =
 //     Logger.getLoggerWithInitialLevel("PrivAcc", Logger.LEVEL_DEBUG);
-  
+
   // no instances
   private PrivilegedAccessor() {
   }
@@ -86,7 +86,7 @@ public class PrivilegedAccessor {
     }
     return val;
   }
-  
+
   /**
    * Calls a method on the given object instance, with no arguments.
    * @param instance the object instance
@@ -100,7 +100,7 @@ public class PrivilegedAccessor {
     Object[] args = {};
     return invokeMethod(instance, methodName, args);
   }
-  
+
   /**
    * Calls a method on the given object instance with the given argument.
    * @param instance the object instance
@@ -117,7 +117,7 @@ public class PrivilegedAccessor {
     args[0] = arg;
     return invokeMethod(instance, methodName, args);
   }
-  
+
   /**
    * Calls a method on the given object instance with the given arguments.
    * @param instance the object instance
@@ -147,7 +147,7 @@ public class PrivilegedAccessor {
     }
     return val;
   }
-  
+
   /**
    * Invokes the no-argument constructor for the named class
    * @param className the class name
@@ -160,7 +160,7 @@ public class PrivilegedAccessor {
 	     InstantiationException {
     return invokeConstructor(Class.forName(className));
   }
-  
+
   /**
    * Invokes a one-argument constructor for the named class
    * @param className the class name
@@ -174,7 +174,7 @@ public class PrivilegedAccessor {
 	     InstantiationException {
     return invokeConstructor(Class.forName(className), arg);
   }
-  
+
   /**
    * Invokes a constructor for the named class
    * @param className the class name
@@ -188,7 +188,7 @@ public class PrivilegedAccessor {
 	     InstantiationException {
     return invokeConstructor(Class.forName(className), args);
   }
-  
+
   /**
    * Invokes the no-arg constructor for the specified class
    * @param cls the class
@@ -201,7 +201,7 @@ public class PrivilegedAccessor {
     Object[] args = {};
     return invokeConstructor(cls, args);
   }
-  
+
   /**
    * Invokes a one-argument constructor for the specified class
    * @param cls the class
@@ -216,7 +216,7 @@ public class PrivilegedAccessor {
     args[0] = arg;
     return invokeConstructor(cls, args);
   }
-  
+
   /**
    * Invokes a constructor for the specified class
    * @param cls the class
@@ -244,9 +244,9 @@ public class PrivilegedAccessor {
     }
     return val;
   }
-  
+
   // Return the named field from the given class.
-  private static Field getField(Class thisClass, String fieldName) 
+  private static Field getField(Class thisClass, String fieldName)
       throws NoSuchFieldException {
     if (thisClass == null) {
       throw new NoSuchFieldException("Invalid field: " + fieldName);
@@ -257,7 +257,7 @@ public class PrivilegedAccessor {
       return getField(thisClass.getSuperclass(), fieldName);
     }
   }
-  
+
   // Find the most specific named method applicable to the object
   // and args.  Throw NoSuchMethodException if none applicable, throw
   // AmbiguousMethodException if more than one applicable and none is
@@ -471,7 +471,7 @@ public class PrivilegedAccessor {
 
     private Instance() {
     }
-    
+
     /**
      * Create an object that, when passed to the accessors in
      * <code>PrivilegedAccessor</code>, acts like an expression of type
@@ -487,7 +487,7 @@ public class PrivilegedAccessor {
       this.cls = cls;
       this.value = value;
     }
-    
+
     Class getInstanceClass() {
       return cls;
     }

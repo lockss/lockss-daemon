@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManager.java,v 1.69 2005-10-08 02:07:58 troberts Exp $
+ * $Id: IdentityManager.java,v 1.70 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -59,8 +59,8 @@ public interface IdentityManager extends LockssManager {
     Configuration.PREFIX + "localIPAddress";
 
   /**
-   * <p>The TCP port for the local V3 identity 
-   * (at org.lockss.localIPAddress). Can be overridden by 
+   * <p>The TCP port for the local V3 identity
+   * (at org.lockss.localIPAddress). Can be overridden by
    * org.lockss.localV3Identity.</p>
    */
   public static final String PARAM_LOCAL_V3_PORT =
@@ -73,12 +73,12 @@ public interface IdentityManager extends LockssManager {
     Configuration.PREFIX + "localV3Identity";
 
   /**
-   * <p>If true, restored agreement maps will be merged with any 
-   * already-loaded map 
+   * <p>If true, restored agreement maps will be merged with any
+   * already-loaded map
    */
   public static final String PARAM_MERGE_RESTORED_AGREE_MAP =
     Configuration.PREFIX + "id.mergeAgreeMap";
-  
+
   /**
    * <p>The default value for the MERGE_RESTORED_AGREE_MAP
    * parameter.</p>
@@ -111,37 +111,37 @@ public interface IdentityManager extends LockssManager {
    * <p>The MAX_DELTA reputation constant.</p>
    */
   public static final int AGREE_VOTE = 1;
-  
+
   /**
    * <p>The DISAGREE_VOTE reputation constant.</p>
    */
   public static final int DISAGREE_VOTE = 2;
-  
+
   /**
    * <p>The CALL_INTERNAL reputation constant.</p>
    */
   public static final int CALL_INTERNAL = 3;
-  
+
   /**
    * <p>The SPOOF_DETECTED reputation constant.</p>
    */
   public static final int SPOOF_DETECTED = 4;
-  
+
   /**
    * <p>The REPLAY_DETECTED reputation constant.</p>
    */
   public static final int REPLAY_DETECTED = 5;
-  
+
   /**
    * <p>The ATTACK_DETECTED reputation constant.</p>
    */
   public static final int ATTACK_DETECTED = 6;
-  
+
   /**
    * <p>The VOTE_NOTVERIFIED reputation constant.</p>
    */
   public static final int VOTE_NOTVERIFIED = 7;
-  
+
   /**
    * <p>The VOTE_VERIFIED reputation constant.</p>
    */
@@ -166,7 +166,7 @@ public interface IdentityManager extends LockssManager {
    * <p>The initial reputation value.</p>
    */
   public static final int INITIAL_REPUTATION = 500;
-  
+
 
 
 
@@ -178,7 +178,7 @@ public interface IdentityManager extends LockssManager {
   /**
    * <p>Returns the peer identity matching the IP address and port;
    * An instance is created if necesary.</p>
-   * <p>Used only by LcapDatagramRouter (and soon by its stream 
+   * <p>Used only by LcapDatagramRouter (and soon by its stream
    * analog).</p>
    * @param addr The IPAddr of the peer, null for the local peer.
    * @param port The port of the peer.
@@ -191,7 +191,7 @@ public interface IdentityManager extends LockssManager {
 
   /**
    * <p>Returns the peer identity matching the String IP address and
-   * port. An instance is created if necesary. Used only by 
+   * port. An instance is created if necesary. Used only by
    * LcapMessage (and soon by its stream analog).
    * @param idKey the ip addr and port of the peer, null for the local
    *              peer.
@@ -206,8 +206,8 @@ public interface IdentityManager extends LockssManager {
    * <p>Rturns the local peer identity.</p>
    * @param pollVersion The poll protocol version.
    * @return The local peer identity associated with the poll version.
-   * @throws IllegalArgumentException if the pollVersion is not 
-   *                                  configured or is outside the 
+   * @throws IllegalArgumentException if the pollVersion is not
+   *                                  configured or is outside the
    *                                  legal range.
    */
   public PeerIdentity getLocalPeerIdentity(int pollVersion);
@@ -219,7 +219,7 @@ public interface IdentityManager extends LockssManager {
   public IPAddr getLocalIPAddr();
 
   /**
-   * <p>Determines if this PeerIdentity is the same as the local 
+   * <p>Determines if this PeerIdentity is the same as the local
    * host.</p>
    * @param id The PeerIdentity.
    * @return true if is the local identity, false otherwise.
@@ -227,9 +227,9 @@ public interface IdentityManager extends LockssManager {
   public boolean isLocalIdentity(PeerIdentity id);
 
   /**
-   * <p>Determines if this PeerIdentity is the same as the local 
+   * <p>Determines if this PeerIdentity is the same as the local
    * host.</p>
-   * @param idStr The string representation of the voter's 
+   * @param idStr The string representation of the voter's
    *        PeerIdentity.
    * @return true if is the local identity, false otherwise.
    */
@@ -242,7 +242,7 @@ public interface IdentityManager extends LockssManager {
    * @param msg   The LcapMessage involved.
    */
   public void rememberEvent(PeerIdentity id, int event, LcapMessage msg);
-  
+
   /**
    * <p>Returns the max value of an Identity's reputation.</p>
    * @return The int value of max reputation.
@@ -257,7 +257,7 @@ public interface IdentityManager extends LockssManager {
   public int getReputation(PeerIdentity id);
 
   /**
-   * <p>Makes the change to the reputation of the peer "id" matching 
+   * <p>Makes the change to the reputation of the peer "id" matching
    * the event "changeKind".
    * @param id         The PeerIdentity of the peer to affect.
    * @param changeKind The type of event that is being reflected.
@@ -265,7 +265,7 @@ public interface IdentityManager extends LockssManager {
   public void changeReputation(PeerIdentity id, int changeKind);
 
   /**
-   * <p>Used by the PollManager to record the result of tallying a 
+   * <p>Used by the PollManager to record the result of tallying a
    * poll.</p>
    * @see #storeIdentities(ObjectSerializer)
    */
@@ -277,13 +277,13 @@ public interface IdentityManager extends LockssManager {
    */
   public void storeIdentities(ObjectSerializer serializer)
       throws ProtocolException;
-  
+
   /**
    * <p>Copies the identity database file to the stream.</p>
    * @param out An OutputStream instance.
    */
   public void writeIdentityDbTo(OutputStream out) throws IOException;
-  
+
   /**
    * <p>A Castor helper method to convert an identity map into a
    * serializable bean.</p>
@@ -295,12 +295,12 @@ public interface IdentityManager extends LockssManager {
    * Return a list of all known UDP (suitable for V1) peer identities.
    */
   public Collection getUdpPeerIdentities();
-  
+
   /**
    * Return a list of all known TCP (suitable for V1 or V3), peer identities.
    */
   public Collection getTcpPeerIdentities();
-  
+
   /**
    * <p>Signals that we've agreed with pid on a top level poll on
    * au.</p>
@@ -311,7 +311,7 @@ public interface IdentityManager extends LockssManager {
   public void signalAgreed(PeerIdentity pid, ArchivalUnit au);
 
   /**
-   * <p>Signals that we've disagreed with pid on any level poll on 
+   * <p>Signals that we've disagreed with pid on any level poll on
    * au.</p>
    * <p>Only called if we're on the winning side.</p>
    * @param pid The PeerIdentity of the disagreeing peer.
@@ -320,10 +320,10 @@ public interface IdentityManager extends LockssManager {
   public void signalDisagreed(PeerIdentity pid, ArchivalUnit au);
 
   /**
-   * <p>Peers with whom we have had any disagreement since the last 
+   * <p>Peers with whom we have had any disagreement since the last
    * toplevel agreement are placed at the end of the list.</p>
    * @param au ArchivalUnit to look up PeerIdentities for.
-   * @return List of peers from which to try to fetch repairs for the 
+   * @return List of peers from which to try to fetch repairs for the
    *         AU.
    */
   public List getCachesToRepairFrom(ArchivalUnit au);
@@ -341,7 +341,7 @@ public interface IdentityManager extends LockssManager {
   public Collection getIdentityAgreements(ArchivalUnit au);
 
   /**
-   * <p>Return map peer -> last agree time. Used for logging and 
+   * <p>Return map peer -> last agree time. Used for logging and
    * debugging.</p>
    */
   public Map getAgreed(ArchivalUnit au);
@@ -365,7 +365,7 @@ public interface IdentityManager extends LockssManager {
       throws IOException;
 
   /**
-   * <p>Installs the contents of the stream as the identity agreement 
+   * <p>Installs the contents of the stream as the identity agreement
    * file for the AU.</p>
    * @param au An archival unit.
    * @param in An input stream to read from.

@@ -1,5 +1,5 @@
 /*
- * $Id: MDHashUserRealm.java,v 1.2 2005-10-06 08:21:57 tlipkis Exp $
+ * $Id: MDHashUserRealm.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ in this Software without prior written authorization from Stanford University.
 // are private
 
 // ========================================================================
-// $Id: MDHashUserRealm.java,v 1.2 2005-10-06 08:21:57 tlipkis Exp $
+// $Id: MDHashUserRealm.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
 // Copyright 1996-2004 Mort Bay Consulting Pty. Ltd.
 // ------------------------------------------------------------------------
 
@@ -65,25 +65,25 @@ public class MDHashUserRealm extends HashMap
   private String _config;
   protected HashMap _roles=new HashMap(7);
   private SSORealm _ssoRealm;
-    
+
 
   /* ------------------------------------------------------------ */
-  /** Constructor. 
+  /** Constructor.
    */
   public MDHashUserRealm()
   {}
-    
+
   /* ------------------------------------------------------------ */
-  /** Constructor. 
+  /** Constructor.
    * @param name Realm Name
    */
   public MDHashUserRealm(String name)
   {
     _realmName=name;
   }
-    
+
   /* ------------------------------------------------------------ */
-  /** Constructor. 
+  /** Constructor.
    * @param name Realm name
    * @param config Filename or url of user properties file.
    */
@@ -93,7 +93,7 @@ public class MDHashUserRealm extends HashMap
     _realmName=name;
     load(config);
   }
-    
+
   /* ------------------------------------------------------------ */
   public void writeExternal(java.io.ObjectOutput out)
       throws java.io.IOException
@@ -101,7 +101,7 @@ public class MDHashUserRealm extends HashMap
     out.writeObject(_realmName);
     out.writeObject(_config);
   }
-    
+
   /* ------------------------------------------------------------ */
   public void readExternal(java.io.ObjectInput in)
       throws java.io.IOException, ClassNotFoundException
@@ -111,7 +111,7 @@ public class MDHashUserRealm extends HashMap
     if (_config!=null)
       load(_config);
   }
-    
+
 
   /* ------------------------------------------------------------ */
   /** Load realm users from properties file.
@@ -119,7 +119,7 @@ public class MDHashUserRealm extends HashMap
    * an optional comma separated list of role names.
    *
    * @param config Filename or url of user properties file.
-   * @exception IOException 
+   * @exception IOException
    */
   public void load(String config)
       throws IOException
@@ -158,19 +158,19 @@ public class MDHashUserRealm extends HashMap
 	  }
       }
   }
-    
+
   /* ------------------------------------------------------------ */
-  /** 
-   * @param name The realm name 
+  /**
+   * @param name The realm name
    */
   public void setName(String name)
   {
     _realmName=name;
   }
-    
+
   /* ------------------------------------------------------------ */
-  /** 
-   * @return The realm name. 
+  /**
+   * @return The realm name.
    */
   public String getName()
   {
@@ -182,7 +182,7 @@ public class MDHashUserRealm extends HashMap
   {
     return (Principal)super.get(username);
   }
-    
+
   /* ------------------------------------------------------------ */
   public Principal authenticate(String username,
 				Object credentials,
@@ -198,21 +198,21 @@ public class MDHashUserRealm extends HashMap
 
     if (user.authenticate(credentials))
       return user;
-        
+
     return null;
   }
-    
+
   /* ------------------------------------------------------------ */
   public void disassociate(Principal user)
   {
   }
-    
+
   /* ------------------------------------------------------------ */
   public Principal pushRole(Principal user, String role)
   {
     if (user==null)
       user=new User();
-        
+
     return new WrappedUser(user,role);
   }
 
@@ -222,7 +222,7 @@ public class MDHashUserRealm extends HashMap
     WrappedUser wu = (WrappedUser)user;
     return wu.getUserPrincipal();
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Put user into realm.  If the credential cannot be created
    * (<i>eg</i>, no such algorithm), the user is removed from the realm.
@@ -230,7 +230,7 @@ public class MDHashUserRealm extends HashMap
    * credential the safest thing is to make this user always fail.)
    * @param name User name
    * @param credentials String type:digest, or UserPrinciple
-   *                    instance. 
+   *                    instance.
    * @return Old UserPrinciple value or null
    */
   public synchronized Object put(Object name, Object credentials)
@@ -238,7 +238,7 @@ public class MDHashUserRealm extends HashMap
     if (credentials instanceof Principal)
       return super.put(name.toString(),
 		       credentials);
-        
+
     if (credentials != null) {
       try {
 	Credential cred =
@@ -255,8 +255,8 @@ public class MDHashUserRealm extends HashMap
 
   /* ------------------------------------------------------------ */
   /** Add a user to a role.
-   * @param userName 
-   * @param roleName 
+   * @param userName
+   * @param roleName
    */
   public synchronized void addUserToRole(String userName, String roleName)
   {
@@ -268,27 +268,27 @@ public class MDHashUserRealm extends HashMap
       }
     userSet.add(userName);
   }
-    
+
   /* -------------------------------------------------------- */
   public boolean reauthenticate(Principal user)
   {
     return ((User)user).isAuthenticated();
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Check if a user is in a role.
-   * @param user The user, which must be from this realm 
-   * @param roleName 
+   * @param user The user, which must be from this realm
+   * @param roleName
    * @return True if the user can act in the role.
    */
   public synchronized boolean isUserInRole(Principal user, String roleName)
   {
     if (user instanceof WrappedUser)
       return ((WrappedUser)user).isUserInRole(roleName);
-         
+
     if (user==null || ((User)user).getUserRealm()!=this)
       return false;
-        
+
     HashSet userSet = (HashSet)_roles.get(roleName);
     return userSet!=null && userSet.contains(user.getName());
   }
@@ -296,13 +296,13 @@ public class MDHashUserRealm extends HashMap
   /* ------------------------------------------------------------ */
   public void logout(Principal user)
   {}
-    
+
   /* ------------------------------------------------------------ */
   public String toString()
   {
     return "Realm["+_realmName+"]";
   }
-    
+
   /* ------------------------------------------------------------ */
   public void dump(PrintStream out)
   {
@@ -310,16 +310,16 @@ public class MDHashUserRealm extends HashMap
     out.println(super.toString());
     out.println(_roles);
   }
-    
+
   /* ------------------------------------------------------------ */
-  /** 
+  /**
    * @return The SSORealm to delegate single sign on requests to.
    */
   public SSORealm getSSORealm()
   {
     return _ssoRealm;
   }
-    
+
   /* ------------------------------------------------------------ */
   /** Set the SSORealm.
    * A SSORealm implementation may be set to enable support for SSO.
@@ -329,7 +329,7 @@ public class MDHashUserRealm extends HashMap
   {
     _ssoRealm = ssoRealm;
   }
-    
+
   /* ------------------------------------------------------------ */
   public Credential getSingleSignOn(HttpRequest request,
 				    HttpResponse response)
@@ -338,8 +338,8 @@ public class MDHashUserRealm extends HashMap
       return _ssoRealm.getSingleSignOn(request,response);
     return null;
   }
-    
-    
+
+
   /* ------------------------------------------------------------ */
   public void setSingleSignOn(HttpRequest request,
 			      HttpResponse response,
@@ -349,14 +349,14 @@ public class MDHashUserRealm extends HashMap
     if (_ssoRealm!=null)
       _ssoRealm.setSingleSignOn(request,response,principal,credential);
   }
-    
+
   /* ------------------------------------------------------------ */
   public void clearSingleSignOn(String username)
   {
     if (_ssoRealm!=null)
       _ssoRealm.clearSingleSignOn(username);
   }
-    
+
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
@@ -368,23 +368,23 @@ public class MDHashUserRealm extends HashMap
     {
       return MDHashUserRealm.this;
     }
-        
+
     public String getName()
     {
       return "Anonymous";
     }
-                
+
     public boolean isAuthenticated()
     {
       return false;
     }
-        
+
     public String toString()
     {
       return getName();
-    }        
+    }
   }
-    
+
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
@@ -392,26 +392,26 @@ public class MDHashUserRealm extends HashMap
   {
     private String _userName;
     private Credential _cred;
-        
+
     /* -------------------------------------------------------- */
     KnownUser(String name,Credential credential)
     {
       _userName=name;
       _cred=credential;
     }
-        
+
     /* -------------------------------------------------------- */
     boolean authenticate(Object credentials)
     {
       return _cred!=null && _cred.check(credentials);
     }
-        
+
     /* ------------------------------------------------------------ */
     public String getName()
     {
       return _userName;
     }
-        
+
     /* -------------------------------------------------------- */
     public boolean isAuthenticated()
     {
@@ -423,7 +423,7 @@ public class MDHashUserRealm extends HashMap
   /* ------------------------------------------------------------ */
   /* ------------------------------------------------------------ */
   private class WrappedUser extends User
-  {   
+  {
     private Principal user;
     private String role;
 
@@ -435,19 +435,19 @@ public class MDHashUserRealm extends HashMap
 
     Principal getUserPrincipal()
     {
-      return user;    
+      return user;
     }
 
     public String getName()
     {
       return "role:"+role;
     }
-                
+
     public boolean isAuthenticated()
     {
       return true;
     }
-        
+
     public boolean isUserInRole(String role)
     {
       return this.role.equals(role);

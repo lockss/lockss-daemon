@@ -1,5 +1,5 @@
 /*
- * $Id: TestActivityRegulator.java,v 1.26 2005-10-07 21:48:48 troberts Exp $
+ * $Id: TestActivityRegulator.java,v 1.27 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -332,30 +332,30 @@ public class TestActivityRegulator extends LockssTestCase {
     // don't specifically handle it
 
     // nothing allowed on these
-    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NO_ACTIVITY, 
+    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NO_ACTIVITY,
                                                 ActivityRegulator.NEW_CONTENT_CRAWL));
-    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NO_ACTIVITY, 
+    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NO_ACTIVITY,
                                                 ActivityRegulator.TREEWALK));
 
     // only other polls are allowed, but not standard name polls
-    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NO_ACTIVITY, 
+    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NO_ACTIVITY,
                                                 ActivityRegulator.TOP_LEVEL_POLL));
-    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.STANDARD_NAME_POLL, 
+    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.STANDARD_NAME_POLL,
                                                 ActivityRegulator.TOP_LEVEL_POLL));
-    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.TOP_LEVEL_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.TOP_LEVEL_POLL,
                                                ActivityRegulator.TOP_LEVEL_POLL));
-    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.STANDARD_CONTENT_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.STANDARD_CONTENT_POLL,
                                                ActivityRegulator.TOP_LEVEL_POLL));
 
 
     // only CUS activity allowed on CUS_ACTIVITY
-    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.BACKGROUND_CRAWL, 
+    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.BACKGROUND_CRAWL,
                                                ActivityRegulator.CUS_ACTIVITY));
-    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.REPAIR_CRAWL, 
+    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.REPAIR_CRAWL,
                                                ActivityRegulator.CUS_ACTIVITY));
-    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.STANDARD_CONTENT_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnAu(ActivityRegulator.STANDARD_CONTENT_POLL,
                                                ActivityRegulator.CUS_ACTIVITY));
-    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NEW_CONTENT_CRAWL, 
+    assertFalse(ActivityRegulator.isAllowedOnAu(ActivityRegulator.NEW_CONTENT_CRAWL,
                                                 ActivityRegulator.CUS_ACTIVITY));
   }
 
@@ -379,34 +379,34 @@ public class TestActivityRegulator extends LockssTestCase {
     assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_NAME_POLL, ActivityRegulator.STANDARD_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
 //    assertTrue(ActivityRegulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.STANDARD_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
     //   allow only content polls and repairs on sub-nodes if parent with name poll
-    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.NO_ACTIVITY, 
+    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.NO_ACTIVITY,
                                                  ActivityRegulator.STANDARD_CONTENT_POLL, CachedUrlSet.ABOVE));
-    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_CONTENT_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_CONTENT_POLL,
                                                 ActivityRegulator.STANDARD_NAME_POLL, CachedUrlSet.ABOVE));
-    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.REPAIR_CRAWL, 
+    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.REPAIR_CRAWL,
                                                 ActivityRegulator.STANDARD_NAME_POLL, CachedUrlSet.ABOVE));
     //   allow only crawls and single node polls if child
-    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.NO_ACTIVITY, 
+    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.NO_ACTIVITY,
                                                  ActivityRegulator.STANDARD_CONTENT_POLL, CachedUrlSet.BELOW));
-    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.REPAIR_CRAWL, 
+    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.REPAIR_CRAWL,
                                                 ActivityRegulator.STANDARD_CONTENT_POLL, CachedUrlSet.BELOW));
-    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.SINGLE_NODE_CONTENT_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.SINGLE_NODE_CONTENT_POLL,
                                                 ActivityRegulator.STANDARD_CONTENT_POLL, CachedUrlSet.BELOW));
     //   for single node polls, allow only repair crawl if same
-    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_NAME_POLL, 
-                                                 ActivityRegulator.SINGLE_NODE_CONTENT_POLL, 
+    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_NAME_POLL,
+                                                 ActivityRegulator.SINGLE_NODE_CONTENT_POLL,
                                                  CachedUrlSet.SAME_LEVEL_OVERLAP));
 //  assertTrue(ActivityRegulator.isAllowedOnCus(regulator.REPAIR_CRAWL, regulator.SINGLE_NODE_CONTENT_POLL, CachedUrlSet.SAME_LEVEL_OVERLAP));
     //   allow anything if parent
-    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.NO_ACTIVITY, 
-                                                ActivityRegulator.SINGLE_NODE_CONTENT_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.NO_ACTIVITY,
+                                                ActivityRegulator.SINGLE_NODE_CONTENT_POLL,
                                                 CachedUrlSet.ABOVE));
     //   allow only crawls if child
-    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_NAME_POLL, 
-                                                 ActivityRegulator.SINGLE_NODE_CONTENT_POLL, 
+    assertFalse(ActivityRegulator.isAllowedOnCus(ActivityRegulator.STANDARD_NAME_POLL,
+                                                 ActivityRegulator.SINGLE_NODE_CONTENT_POLL,
                                                  CachedUrlSet.BELOW));
-    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.REPAIR_CRAWL, 
-                                                ActivityRegulator.SINGLE_NODE_CONTENT_POLL, 
+    assertTrue(ActivityRegulator.isAllowedOnCus(ActivityRegulator.REPAIR_CRAWL,
+                                                ActivityRegulator.SINGLE_NODE_CONTENT_POLL,
                                                 CachedUrlSet.BELOW));
   }
 

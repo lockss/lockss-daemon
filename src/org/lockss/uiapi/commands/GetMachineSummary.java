@@ -1,5 +1,5 @@
 /*
- * $Id: GetMachineSummary.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: GetMachineSummary.java,v 1.2 2005-10-11 05:47:41 tlipkis Exp $
  */
 
 /*
@@ -54,16 +54,16 @@ import org.lockss.uiapi.util.*;
  */
 public class GetMachineSummary extends StatusActivityBase {
   private static Logger log = Logger.getLogger("GetMachineSummary");
-  
+
   /**
    * Populate response with cache and daemon details
    * @return true
    */
   public boolean doCommand() throws XmlException {
     Element infoElement;
-    
+
     infoElement = getXmlUtils().createElement(getResponseRoot(), AP_E_INFO);
- 
+
     /*
      * Render daemon version, uptime, disk space, and build details
      */
@@ -71,7 +71,7 @@ public class GetMachineSummary extends StatusActivityBase {
     renderUptimeXml(infoElement);
     renderDiskXml(infoElement);
     renderBuildXml(infoElement);
-   
+
     return true;
   }
 }

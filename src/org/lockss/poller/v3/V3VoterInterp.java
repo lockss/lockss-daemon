@@ -1,5 +1,5 @@
 /*
- * $Id: V3VoterInterp.java,v 1.1 2005-09-07 03:06:29 smorabito Exp $
+ * $Id: V3VoterInterp.java,v 1.2 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -39,8 +39,8 @@ import org.lockss.util.*;
 public class V3VoterInterp extends PsmInterp {
   private V3VoterSerializer pollSerializer;
   private static final Logger log = Logger.getLogger("V3PollInterp");
-  
-  
+
+
   public V3VoterInterp(PsmMachine stateMachine, VoterUserData userData,
                        PsmInterpStateBean stateBean,
                        V3VoterSerializer serializer) {
@@ -53,7 +53,7 @@ public class V3VoterInterp extends PsmInterp {
     this.pollSerializer = serializer;
   }
 
-  /** Called by parent class when it is appropriate to store the 
+  /** Called by parent class when it is appropriate to store the
    * interpreter's state
    */
   protected void store() {

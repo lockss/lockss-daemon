@@ -1,5 +1,5 @@
 /*
- * $Id: AddAuConfigure.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id: AddAuConfigure.java,v 1.3 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -60,21 +60,21 @@ import org.lockss.uiapi.util.*;
  * Implements the "get status table" command
  */
 public class AddAuConfigure extends AuActivityBase {
- 
+
   private static String NAME  = "AddAuConfigure";
   private static Logger log   = Logger.getLogger(NAME);
 
 
   public AddAuConfigure() {
     super();
-  }  
+  }
 
   /**
    * Populate the response body
    * @return true on success
    */
   public boolean doRemoteSetupAndVerification() throws IOException {
-    
+
     /*
      * Stop if any required parameters are missing (error)
      */
@@ -86,20 +86,20 @@ public class AddAuConfigure extends AuActivityBase {
      */
     return commandSetup();
   }
-  
+
   /**
    * Populate the response body
    * @return true on success
    */
   public boolean doCommand() throws IOException {
     Element infoElement;
-    
+
     /*
      * Return disk space
      */
     infoElement = getXmlUtils().createElement(getResponseRoot(), AP_E_INFO);
     renderDiskXml(infoElement);
-   
+
     /*
      * No further action if this isn't a create command (success)
      */
@@ -110,7 +110,7 @@ public class AddAuConfigure extends AuActivityBase {
      * Stop if any required parameters are missing (error)
      */
     if (!verifyTarget() ||
-        !verifyMinimumParameters()  || 
+        !verifyMinimumParameters()  ||
         !verifyDefiningParameters()) {
       throw new ResponseException("Missing required parameters");
     }
@@ -137,7 +137,7 @@ public class AddAuConfigure extends AuActivityBase {
     if (!StringUtil.isNullString(getParameter(AP_E_PUBLICATION))) count++;
     if (!StringUtil.isNullString(getParameter(AP_E_CLASSNAME)))   count++;
     if (!StringUtil.isNullString(getParameter(AP_E_PLUGIN)))      count++;
- 
+
     return (count > 0);
   }
 
@@ -160,16 +160,16 @@ public class AddAuConfigure extends AuActivityBase {
   private boolean verifyDefiningParameters() {
     KeyedList parameters;
     int       size;
-   
+
     if (!isCreateCommand()) {
       return true;
     }
-    
-    parameters = ParseUtils.getDynamicFields(getXmlUtils(), 
-                                             getRequestDocument(), 
+
+    parameters = ParseUtils.getDynamicFields(getXmlUtils(),
+                                             getRequestDocument(),
                                              AP_MD_AUDEFINING);
     size = parameters.size();
-    
+
     for (int i = 0; i < size; i++) {
       if (StringUtil.isNullString((String) parameters.getValue(i))) {
         return false;
@@ -177,7 +177,7 @@ public class AddAuConfigure extends AuActivityBase {
     }
     return true;
   }
-  
+
   /**
    * "Create" command?
    * @return true If so...
@@ -185,23 +185,23 @@ public class AddAuConfigure extends AuActivityBase {
   private boolean isCreateCommand() {
     return "create".equalsIgnoreCase(getParameter(AP_E_ACTION));
   }
- 
+
   /**
    * Query the daemon for information required to set up this command
    */
   private boolean commandSetup() {
-    
+
     Configuration configuration = null;
     Collection    noEditKeys    = null;
     String        key;
     String        value;
-    
+
     /*
      * Configure a well known publication?
      */
     if ((value = getParameter(AP_E_PUBLICATION)) != null) {
       PluginProxy plugin = getTitlePlugin(value);
-      
+
       /*
        * Set plugin and Title configuration information
        */
@@ -211,30 +211,30 @@ public class AddAuConfigure extends AuActivityBase {
         log.warning(message);
         return error(message);
       }
-      
+
       setPlugin(plugin);
       setTitleConfig(plugin.getTitleConfig(value));
-      
+
       configuration = getTitleConfig().getConfig();
       noEditKeys    = getNoEditKeys();
-    
+
     } else {
       /*
        * Lookup by Plugin or Class name - set the plugin
        *
-       * NB: As of 23-Feb-04, this is not supported from AddAuPage.java.  See 
+       * NB: As of 23-Feb-04, this is not supported from AddAuPage.java.  See
        *     AddAuWithCompleteFunctionalityPage.java for full support.
        */
-      if ((value = getParameter(AP_E_PLUGIN)) != null) { 
+      if ((value = getParameter(AP_E_PLUGIN)) != null) {
         key = RemoteApi.pluginKeyFromId(value);
-    
-      } else if ((value = getParameter(AP_E_CLASSNAME)) != null) { 
+
+      } else if ((value = getParameter(AP_E_CLASSNAME)) != null) {
         key = RemoteApi.pluginKeyFromId(value);
-      
+
       } else {
         return error("Supply a Publication, Plugin, or Class name");
       }
-  		
+
       if (StringUtil.isNullString(key)) {
         return error("Supply a valid Publication, Plugin, or Class name");
       }
@@ -245,7 +245,7 @@ public class AddAuConfigure extends AuActivityBase {
 
       setPlugin(getPluginProxy(key));
     }
-    
+
     /*
      * Finally, return an XML rendition of the Plugin and AU key set up
      */
@@ -263,13 +263,13 @@ public class AddAuConfigure extends AuActivityBase {
 
     AuProxy   au;
     Element   element;
-    
+
     try {
       au = getRemoteApi().createAndSaveAuConfiguration(getPlugin(), config);
-      
+
     } catch (ArchivalUnit.ConfigurationException exception) {
       return error("Configuration failed: " + exception.getMessage());
-      
+
     } catch (IOException exception) {
       return error("Unable to save configuration: " + exception.getMessage());
     }
@@ -278,10 +278,10 @@ public class AddAuConfigure extends AuActivityBase {
      */
     element = getXmlUtils().createElement(getResponseRoot(), AP_E_AU);
     XmlUtils.addText(element, au.getName());
- 
+
     element = getXmlUtils().createElement(getResponseRoot(), AP_E_AUID);
     XmlUtils.addText(element, au.getAuId());
-    
+
     return true;
-  }    
+  }
 }

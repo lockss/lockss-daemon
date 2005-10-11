@@ -1,5 +1,5 @@
 /*
- * $Id: TestConfiguration.java,v 1.7 2005-10-05 23:12:41 troberts Exp $
+ * $Id: TestConfiguration.java,v 1.8 2005-10-11 05:48:56 tlipkis Exp $
  */
 
 /*
@@ -237,7 +237,7 @@ public class TestConfiguration extends LockssTestCase {
 
   private static final String c3 =
     "prop.p1=a;b;c;d;e;f;g";
-  
+
   public void testGetList() throws IOException {
     Configuration config = newConfiguration();
     config.load(loadFCF(FileTestUtil.urlOfString(c3)));

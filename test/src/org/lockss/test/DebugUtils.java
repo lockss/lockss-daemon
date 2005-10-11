@@ -1,5 +1,5 @@
 /*
- * $Id: DebugUtils.java,v 1.9 2004-06-20 00:03:51 tlipkis Exp $
+ * $Id: DebugUtils.java,v 1.10 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -185,7 +185,7 @@ public class DebugUtils {
 	throw new UnsupportedException("Can't open " + filename, e);
       } catch (IOException e) {
 	throw new UnsupportedException("Error reading " + filename, e);
-      }      
+      }
     }
 
     /** Get vector of stat vectors for all processes from /proc/<n>/stat .
@@ -267,7 +267,7 @@ public class DebugUtils {
 	throw new UnsupportedException("Can't open " + filename, e);
       } catch (IOException e) {
 	throw new UnsupportedException("Error reading " + filename, e);
-      }      
+      }
     }
   }
 

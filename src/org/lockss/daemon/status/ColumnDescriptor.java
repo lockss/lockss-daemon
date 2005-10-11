@@ -1,5 +1,5 @@
 /*
- * $Id: ColumnDescriptor.java,v 1.9 2005-01-07 09:20:40 tlipkis Exp $
+ * $Id: ColumnDescriptor.java,v 1.10 2005-10-11 05:44:14 tlipkis Exp $
  */
 
 /*
@@ -34,7 +34,7 @@ package org.lockss.daemon.status;
 import java.util.*;
 
 /**
- * Encapsulation of the info needed to describe a single column (name, 
+ * Encapsulation of the info needed to describe a single column (name,
  * display title, and type).
  *
  * Type information is used for formatting the values in that column.  Specific
@@ -52,7 +52,7 @@ public class ColumnDescriptor {
   public static final int TYPE_FLOAT=1;
 
   /**
-   * Instanceof floating point number (Float, Double, etc.) and floatValue() 
+   * Instanceof floating point number (Float, Double, etc.) and floatValue()
    * must return between 0 and 1, inclusive
    */
   public static final int TYPE_PERCENT=2;
@@ -65,8 +65,8 @@ public class ColumnDescriptor {
   /**
    * Objects of this type must have meaningful toString() method
    */
-  public static final int TYPE_STRING=4;  
-  
+  public static final int TYPE_STRING=4;
+
   /**
    * Instanceof IPAddr
    */
@@ -91,7 +91,7 @@ public class ColumnDescriptor {
     this.type = type;
   }
 
-  public ColumnDescriptor(String columnName, String title, 
+  public ColumnDescriptor(String columnName, String title,
 			  int type, String footNote) {
     this(columnName,title, type);
     this.footNote = footNote;

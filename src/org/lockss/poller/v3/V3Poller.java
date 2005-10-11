@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.6 2005-10-07 23:46:49 smorabito Exp $
+ * $Id: V3Poller.java,v 1.7 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -53,11 +53,11 @@ import org.lockss.util.*;
 public class V3Poller extends BasePoll {
 
   private static String PREFIX = Configuration.PREFIX + "poll.v3.";
-  
+
   /** Quorum for V3 polls. */
   static final String PARAM_QUORUM = PREFIX + "quorum";
   static final int DEFAULT_QUORUM = 5;
-  
+
   /** Minimum number of participants for a V3 poll. */
   public static String PARAM_MIN_POLL_SIZE = PREFIX + "minPollSize";
   public static int DEFAULT_MIN_POLL_SIZE = 5;
@@ -65,9 +65,9 @@ public class V3Poller extends BasePoll {
   /** Maximum number of participants for a V3 poll. */
   public static String PARAM_MAX_POLL_SIZE = PREFIX + "maxPollSize";
   public static int DEFAULT_MAX_POLL_SIZE = 10;
-  
+
   /** Maximum number of peers to nominate from each inner circle member. */
-  public static String PARAM_MAX_NOMINATION_SIZE = 
+  public static String PARAM_MAX_NOMINATION_SIZE =
     V3Voter.PARAM_MAX_NOMINATION_SIZE;
   public static int DEFAULT_MAX_NOMINATION_SIZE =
     V3Voter.DEFAULT_MAX_NOMINATION_SIZE;
@@ -82,13 +82,13 @@ public class V3Poller extends BasePoll {
   private V3PollerSerializer serializer;
   private int pollSize;
   private BlockTally tally;
-  
+
   private static Logger log = Logger.getLogger("V3Poller");
   private static LockssRandom theRandom = new LockssRandom();
 
   /**
    * Common setup.
-   * 
+   *
    * @param key
    */
   private void commonSetUp() throws V3Serializer.PollSerializerException {
@@ -103,7 +103,7 @@ public class V3Poller extends BasePoll {
                   String key, long duration, String hashAlg)
       throws V3Serializer.PollSerializerException {
     commonSetUp();
-    
+
     // Determine the number of peers to invite into this poll.
     int minParticipants = Configuration.getIntParam(PARAM_MIN_POLL_SIZE,
                                                     DEFAULT_MIN_POLL_SIZE);
@@ -135,9 +135,9 @@ public class V3Poller extends BasePoll {
     this.theDaemon = daemon;
     this.pollManager = daemon.getPollManager();
     this.idManager = daemon.getIdentityManager();
-    this.tally = 
+    this.tally =
       new BlockTally(this, pollerState.getCreateTime(),
-                     pollerState.getDeadline(), 0, 0, pollerState.getQuorum(), 
+                     pollerState.getDeadline(), 0, 0, pollerState.getQuorum(),
                      pollerState.getHashAlgorithm());
     log.debug("Creating a new poll with a requested poll size of "
               + pollSize);
@@ -154,7 +154,7 @@ public class V3Poller extends BasePoll {
     this.pollManager = daemon.getPollManager();
     this.idManager = daemon.getIdentityManager();
     this.tally =
-      new BlockTally(this, pollerState.getCreateTime(), 
+      new BlockTally(this, pollerState.getCreateTime(),
                      pollerState.getDeadline(), 0, 0, pollerState.getQuorum(),
                      pollerState.getHashAlgorithm());
     // Restore transient cus, pollspec and serializer in poll state
@@ -168,7 +168,7 @@ public class V3Poller extends BasePoll {
     this.continuedPoll = true;
     log.debug2("Restored serialized poll " + pollerState.getPollKey());
   }
-  
+
   public void startPoll() {
     // Schedule the poll.
     log.debug("Scheduling V3 poll " + pollerState.getPollKey() +
@@ -201,7 +201,7 @@ public class V3Poller extends BasePoll {
   private void constructInnerCircle() {
     Collection refList = getReferenceList();
     int innerCount = pollSize > refList.size() ? refList.size() : pollSize;
-    Collection innerCircleVoters = 
+    Collection innerCircleVoters =
       CollectionUtil.randomSelection(refList, innerCount);
     log.debug2("Selected " + innerCircleVoters.size()
         + " participants for poll ID " + pollerState.getPollKey());
@@ -228,7 +228,7 @@ public class V3Poller extends BasePoll {
       stopPoll();
     }
   }
-  
+
   /**
    * Begin (or resume) polling the inner circle of voters.
    */
@@ -262,7 +262,7 @@ public class V3Poller extends BasePoll {
             minCount = nominees.size();
         }
       }
-    
+
       // Second pass: Randomly select 'minCount' peers from each voter's
       // nominee list.
       for (Iterator it = theVoters.values().iterator(); it.hasNext(); ) {
@@ -275,7 +275,7 @@ public class V3Poller extends BasePoll {
           outerCircle.addAll(CollectionUtil.randomSelection(nominees, minCount));
         }
       }
-      
+
       // Now start polling the outer circle.
       for (Iterator it = outerCircle.iterator(); it.hasNext(); ) {
         String idStr = (String) it.next();
@@ -290,10 +290,10 @@ public class V3Poller extends BasePoll {
       }
     }
   }
-  
+
   /**
    * Add a voter to the inner circle of the poll.
-   * 
+   *
    * @param id
    * @return
    */
@@ -302,10 +302,10 @@ public class V3Poller extends BasePoll {
     theVoters.put(id, interp);
     return interp;
   }
-  
+
   /**
    * Add a voter to the outer circle of the poll.
-   * 
+   *
    * @param id
    * @param nominatedPeers
    */
@@ -315,21 +315,21 @@ public class V3Poller extends BasePoll {
     pollerState.addOuterCircle(id);
     return interp;
   }
-  
+
   /**
    * Create a PsmInterp for the specified peer.
-   * 
+   *
    * @param id
    * @return
    */
   private PsmInterp makeInterp(PeerIdentity id) {
     return makeInterp(id, null);
   }
-  
+
   /**
    * Create a PsmInterp for the specified peer, giving it the supplied
    * PsmInterpStateBean.
-   * 
+   *
    * @param id
    * @param psmState
    * @return
@@ -347,11 +347,11 @@ public class V3Poller extends BasePoll {
     }
     return interp;
   }
-  
+
   /**
    * Called by a participant's state machine when it receives a set of nominees
    * from a voter.
-   * 
+   *
    * @param id
    * @param nominatedPeers
    */
@@ -406,7 +406,7 @@ public class V3Poller extends BasePoll {
 
   /**
    * Schedule hashing of the AU.
-   * 
+   *
    * @throws NoSuchAlgorithmException if the hasher attempts to use a hash
    *           algorithm that is not available.
    */
@@ -428,7 +428,7 @@ public class V3Poller extends BasePoll {
    * Create an array of byte arrays containing hasher initializer bytes, one for
    * each participant in the poll. The initializer bytes are constructed by
    * concatenating the participant's poller nonce and the voter nonce.
-   * 
+   *
    * @return Block hasher initialization bytes.
    */
   private byte[][] initHasherByteArrays() {
@@ -454,7 +454,7 @@ public class V3Poller extends BasePoll {
    * This array is guaranteed to be in the same order as the inner circle
    * iterator and the array of byte arrays returned by
    * {@link #initHasherByteArrays()}
-   * 
+   *
    * @return An array of MessageDigest objects to be used by the BlockHasher.
    */
   private MessageDigest[] initHasherDigests() throws NoSuchAlgorithmException {
@@ -473,7 +473,7 @@ public class V3Poller extends BasePoll {
   /**
    * Signal the hash service to resume its hash, starting with the vote block
    * specifed.
-   * 
+   *
    * XXX: TBD.
    */
   private void resumeHash(String target) {
@@ -499,7 +499,7 @@ public class V3Poller extends BasePoll {
     // Compare with each participant's hash for this vote block,
     // then tally that participant's ID as either agree or disagree.
     tallyBlock(block, pollerState.getNextVoteBlockIndex());
-    
+
     int result = tally.getTallyResult();
 
     switch(result) {
@@ -549,7 +549,7 @@ public class V3Poller extends BasePoll {
    * Given a HashBlock result from the hasher, compare its hash (generated by
    * us) with the hash in the VoteBlock from each participant (generated by the
    * voters).
-   * 
+   *
    * @param block The hashblock being tallied.
    * @param blockIndex The index of the voter's vote block to examine.
    * @return A tally for the block.
@@ -559,11 +559,11 @@ public class V3Poller extends BasePoll {
 
     List agreeVoters = new ArrayList();
     List disagreeVoters = new ArrayList();
-    
+
     String blockUrl = block.getUrl();
     log.debug2("Tallying block: " + blockUrl);
     MessageDigest[] blockDigests = block.getDigests();
-    
+
     int digestIndex = 0;
     for (Iterator iter = theVoters.values().iterator(); iter.hasNext(); ) {
       V3PollerInterp interp = (V3PollerInterp)iter.next();
@@ -597,7 +597,7 @@ public class V3Poller extends BasePoll {
                          ByteArray.toHexString(voterResults)));
           }
           if (Arrays.equals(voterResults, hasherResults)) {
-            log.debug2("I agree with " + voter + " on block " + vb.getFileName()); 
+            log.debug2("I agree with " + voter + " on block " + vb.getFileName());
             agreeVoters.add(voter);
           } else {
             log.debug2("I disagree with " + voter + " on block " + vb.getFileName());
@@ -607,7 +607,7 @@ public class V3Poller extends BasePoll {
       }
       digestIndex++;
     }
-    
+
     // XXX: Weights, etc.
     tally.setAgreeVoters(agreeVoters);
     tally.setDisagreeVoters(disagreeVoters);
@@ -636,7 +636,7 @@ public class V3Poller extends BasePoll {
 
   /**
    * Called by participant state machines if an error occurs.
-   * 
+   *
    * @param msg
    * @param to
    * @throws IOException
@@ -648,10 +648,10 @@ public class V3Poller extends BasePoll {
     // Drop the voter from the poll.
     removeVoter(id);
   }
-  
+
   /**
    * Drop a voter from the poll.
-   * 
+   *
    * @param id
    */
   private void removeVoter(PeerIdentity id) {
@@ -669,11 +669,11 @@ public class V3Poller extends BasePoll {
       }
     }
   }
-  
+
   /**
    * Used by the participant state machines to send messages to the appropriate
    * voter.
-   * 
+   *
    * @param msg
    * @param to
    * @throws IOException
@@ -685,11 +685,11 @@ public class V3Poller extends BasePoll {
 
   /**
    * Handle an incoming V3LcapMessage.
-   * 
+   *
    */
   public void receiveMessage(LcapMessage message) {
     V3LcapMessage msg = (V3LcapMessage)message;
-    
+
     PeerIdentity sender = msg.getOriginatorId();
     V3PollerInterp interp = (V3PollerInterp) theVoters.get(sender);
     if (interp != null) {
@@ -700,11 +700,11 @@ public class V3Poller extends BasePoll {
                 "been removed from poll: " + msg.getOriginatorId());
     }
   }
-  
+
   public PollerStateBean getPollerStateBean() {
     return pollerState;
   }
-  
+
   Collection getReferenceList() {
     Collection refList = idManager.getTcpPeerIdentities();
     log.debug2("Initial reference list for poll: " + refList);
@@ -718,7 +718,7 @@ public class V3Poller extends BasePoll {
   private class PollTimerCallback implements TimerQueue.Callback {
     /**
      * Called when the timer expires.
-     * 
+     *
      * @param cookie data supplied by caller to schedule()
      */
     public void timerExpired(Object cookie) {
@@ -729,7 +729,7 @@ public class V3Poller extends BasePoll {
   private class HashingCompleteCallback implements HashService.Callback {
     /**
      * Called when the timer expires or hashing is complete.
-     * 
+     *
      * @param cookie data supplied by caller to schedule()
      */
     public void hashingFinished(CachedUrlSet cus, Object cookie,
@@ -748,11 +748,11 @@ public class V3Poller extends BasePoll {
       blockHashComplete(block);
     }
   }
-  
+
   /*
    * BasePoll implementations.
    */
-  
+
   /**
    * Set the message that created this poll.
    */
@@ -835,7 +835,7 @@ public class V3Poller extends BasePoll {
 
   /**
    * Generate a random nonce for the poller.
-   * 
+   *
    * @return A random array of 20 bytes.
    */
   private byte[] makePollerNonce() {

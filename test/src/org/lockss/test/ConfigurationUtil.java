@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigurationUtil.java,v 1.14 2005-09-15 17:07:57 thib_gc Exp $
+ * $Id: ConfigurationUtil.java,v 1.15 2005-10-11 05:52:05 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -130,7 +130,7 @@ public class ConfigurationUtil {
     props.put(prop3, val3);
     return fromProps(props);
   }
-  
+
   /** Create a Configuration from the supplied property list and install
    * it as the current configuration.
    */
@@ -199,7 +199,7 @@ public class ConfigurationUtil {
     return installConfig(merge(Configuration.getCurrentConfig(),
                                fromArgs(prop1, val1, prop2, val2, prop3, val3)));
   }
-  
+
   /** Install the supplied Configuration as the current configuration.
    */
   public static boolean installConfig(Configuration config) {

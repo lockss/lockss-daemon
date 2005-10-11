@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionRecord.java,v 1.2 2004-07-16 22:49:29 dcfok Exp $
+ * $Id: TestPermissionRecord.java,v 1.3 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -36,16 +36,16 @@ import java.io.*;
 import org.lockss.test.*;
 
 public class TestPermissionRecord extends LockssTestCase {
- 
+
   private String permissionUrl = "http://www.example.com/index.html";
   private PermissionRecord record;
 
   public void setUp() throws Exception {
     super.setUp();
-    record 
+    record
       = new PermissionRecord(permissionUrl, PermissionRecord.PERMISSION_OK);
   }
-  
+
   public void testPrThrowsForNullUrl() {
     try{
       record = new PermissionRecord(null, PermissionRecord.PERMISSION_OK);

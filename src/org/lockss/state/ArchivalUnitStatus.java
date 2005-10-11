@@ -1,5 +1,5 @@
 /*
- * $Id: ArchivalUnitStatus.java,v 1.33 2005-07-25 01:20:30 tlipkis Exp $
+ * $Id: ArchivalUnitStatus.java,v 1.34 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -744,7 +744,7 @@ public class ArchivalUnitStatus
     private static final String FOOT_TITLE =
       "These caches have proven to us that they have (or had) a correct \n" +
       "copy of this AU.  We will fetch repairs from them if necessary, \n" +
-      "and they may fetch repairs from us."; 
+      "and they may fetch repairs from us.";
 
     protected void populateTable(StatusTable table, ArchivalUnit au)
         throws StatusService.NoSuchTableException {

@@ -1,5 +1,5 @@
 /*
- * $Id: NodeStateImpl.java,v 1.29 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: NodeStateImpl.java,v 1.30 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -262,7 +262,7 @@ public class NodeStateImpl
   protected List getPollHistoryList() {
     return (pollHistories == null) ? new ArrayList() : pollHistories;
   }
-  
+
   /**
    * Trims histories which exceed maximum count or age.
    * Sorts the list if not sorted.
@@ -329,7 +329,7 @@ public class NodeStateImpl
       }
     }
   }
-  
+
   public void setCachedUrlSet(CachedUrlSet cus) {
     this.cus = cus;
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: StatusServiceImpl.java,v 1.28 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: StatusServiceImpl.java,v 1.29 2005-10-11 05:44:14 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
 /**
  * Main implementation of {@link StatusService}
  */
-public class StatusServiceImpl 
+public class StatusServiceImpl
   extends BaseLockssManager implements StatusService {
   private static Logger logger = Logger.getLogger("StatusServiceImpl");
   private Map statusAccessors = new HashMap();
@@ -52,15 +52,15 @@ public class StatusServiceImpl
     registerStatusAccessor(ALL_TABLES_TABLE, new AllTableStatusAccessor());
   }
 
-  public StatusTable getTable(String tableName, String key) 
+  public StatusTable getTable(String tableName, String key)
       throws StatusService.NoSuchTableException {
     return getTable(tableName, key, null);
   }
 
-  public StatusTable getTable(String tableName, String key, BitSet options) 
+  public StatusTable getTable(String tableName, String key, BitSet options)
       throws StatusService.NoSuchTableException {
     if (tableName == null) {
-      throw new 
+      throw new
 	StatusService.NoSuchTableException("Called with null tableName");
     }
 
@@ -83,7 +83,7 @@ public class StatusServiceImpl
     if (statusAccessor == null) {
       throw new StatusService.NoSuchTableException("Table not found: "
 						   +tableName+" "+key);
-    } 
+    }
     if (statusAccessor.requiresKey() && table.getKey() == null) {
       throw new StatusService.NoSuchTableException(tableName +
 						   " requires a key value");
@@ -106,7 +106,7 @@ public class StatusServiceImpl
     return RegexpUtil.getMatcher().contains(tableName, badTablePat);
   }
 
-  public void registerStatusAccessor(String tableName, 
+  public void registerStatusAccessor(String tableName,
 				     StatusAccessor statusAccessor) {
     if (isBadTableName(tableName)) {
       throw new InvalidTableNameException("Invalid table name: "+tableName);
@@ -115,7 +115,7 @@ public class StatusServiceImpl
     synchronized(statusAccessors) {
       Object oldAccessor = statusAccessors.get(tableName);
       if (oldAccessor != null) {
-	throw new 
+	throw new
 	  StatusService.MultipleRegistrationException(oldAccessor
 						      +" already registered "
 						      +"for "+tableName);
@@ -156,7 +156,7 @@ public class StatusServiceImpl
       Object oldEntry = objRefAccessors.get(tableName);
       if (oldEntry != null) {
 	ObjRefAccessorSpec oldSpec = (ObjRefAccessorSpec)oldEntry;
-	throw new 
+	throw new
 	  StatusService.MultipleRegistrationException(oldSpec.accessor
 						      +" already registered "
 						      +"for "+tableName);
@@ -198,12 +198,12 @@ public class StatusServiceImpl
     private static final String ALL_TABLE_TITLE = "Cache Overview";
 
     public AllTableStatusAccessor() {
-      ColumnDescriptor col = 
-	new ColumnDescriptor(COL_NAME, COL_TITLE, 
+      ColumnDescriptor col =
+	new ColumnDescriptor(COL_NAME, COL_TITLE,
 			     ColumnDescriptor.TYPE_STRING);
       columns = ListUtil.list(col);
 
-      StatusTable.SortRule sortRule = 
+      StatusTable.SortRule sortRule =
 	new StatusTable.SortRule(COL_NAME, true);
 
       sortRules = ListUtil.list(sortRule);
@@ -220,7 +220,7 @@ public class StatusServiceImpl
 	List rows = new ArrayList(tables.size());
 	while (it.hasNext()) {
 	  String tableName = (String) it.next();
-	  StatusAccessor statusAccessor = 
+	  StatusAccessor statusAccessor =
 	    (StatusAccessor)statusAccessors.get(tableName);
 	  if (!ALL_TABLES_TABLE.equals(tableName) &&
 	      !statusAccessor.requiresKey()) {
@@ -235,7 +235,7 @@ public class StatusServiceImpl
 	    if (title == null) {
 	      title = tableName;
 	    }
-	    row.put(COL_NAME, 
+	    row.put(COL_NAME,
 		    new StatusTable.Reference(title, tableName, null));
 	    rows.add(row);
 	  }
@@ -253,7 +253,7 @@ public class StatusServiceImpl
     }
 
     /**
-     * Populate the {@link StatusTable} with entries for each table that 
+     * Populate the {@link StatusTable} with entries for each table that
      * doesn't require a key
      * @param table {@link StatusTable} to populate as the table of all tables
      * that don't require a key

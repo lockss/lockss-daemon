@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.49 2005-10-10 23:27:29 tlipkis Exp $
+ * $Id: CrawlerImpl.java,v 1.50 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -153,7 +153,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     //At least one of these checkers must satisfied for us to crawl a site
     daemonPermissionCheckers = new LockssPermission().getCheckers();
 
-    //Specified by the plug-in, this can be a null set.  We must satisfy 
+    //Specified by the plug-in, this can be a null set.  We must satisfy
     //all of these to crawl a site.
     pluginPermissionCheckers.addAll(spec.getPermissionCheckers());
 
@@ -463,11 +463,11 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     return false;
     }
   }
-  
 
-  
+
+
   /**
-   * Try to reset the provided input stream, if we can't then return 
+   * Try to reset the provided input stream, if we can't then return
    * new input stream for the given url
    */
   private InputStream resetInputStream(InputStream is, String url)
@@ -606,7 +606,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     }
     return permissionMap;
   }
-  
+
   protected boolean aborted() {
     logger.info("Crawl aborted: "+au);
     if (crawlStatus.getCrawlError() == null) {

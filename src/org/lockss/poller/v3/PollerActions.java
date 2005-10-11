@@ -1,5 +1,5 @@
 /*
- * $Id: PollerActions.java,v 1.5 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: PollerActions.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class PollerActions {
     PollerUserData ud = getUserData(interp);
     log.debug("Sending poll to participant " + ud.getVoterId() + " in poll "
               + ud.getKey());
-    try {    
+    try {
       ud.sendMessageTo(V3LcapMessageFactory.makePollMsg(ud), ud.getVoterId());
     } catch (IOException ex) {
       log.error("Unable to send message: ", ex);
@@ -126,7 +126,7 @@ public class PollerActions {
     ud.nominatePeers(nominees);
     return V3Events.evtOk;
   }
-  
+
   public static PsmEvent handleReceiveVoterReadyToVote(PsmMsgEvent evt,
                                                        PsmInterp interp) {
     PollerUserData ud = getUserData(interp);
@@ -235,7 +235,7 @@ public class PollerActions {
     ud.handleError();
     return V3Events.evtOk;
   }
-  
+
   /* Convenience method to save typing the cast */
   private static PollerUserData getUserData(PsmInterp interp) {
     return (PollerUserData)interp.getUserData();

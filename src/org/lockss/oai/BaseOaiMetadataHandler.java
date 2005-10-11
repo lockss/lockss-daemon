@@ -1,5 +1,5 @@
 /*
- * $Id: BaseOaiMetadataHandler.java,v 1.5 2005-02-02 09:42:44 tlipkis Exp $
+ * $Id: BaseOaiMetadataHandler.java,v 1.6 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -48,25 +48,25 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
   protected String urlContainerTagName;
   protected NodeList metadataNodeList;
   protected Set extractedUrls;
-  
+
 //   /**
 //    * Constructor with no arguments
 //    */
 //   public BaseOaiMetadataHandler() {
 //     metadataNodeList = null;
 //   }
-  
+
   /**
    * Constructor with some arguments, which is useful if we want
-   * to support plugin definable OaiMetadataHandler. 
+   * to support plugin definable OaiMetadataHandler.
    *
    * @param metadataPrefix the metadata prefix string
    * @param metadataNamespaceUrl the url that describe the metadata namespace
    * @param urlContainerTagName the tag name where a url can be found
    */
-  public BaseOaiMetadataHandler(String metadataPrefix, 
-				String metadataNamespaceUrl, 
-				String urlContainerTagName) 
+  public BaseOaiMetadataHandler(String metadataPrefix,
+				String metadataNamespaceUrl,
+				String urlContainerTagName)
     throws NullPointerException {
       if (metadataPrefix == null){
 	  throw new NullPointerException("metadataPrefix is null");
@@ -77,7 +77,7 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
       if (urlContainerTagName == null){
 	  throw new NullPointerException("urlContainerTagName is null");
       }
-      
+
       metadataNodeList = null;
       this.metadataPrefix = metadataPrefix;
       this.metadataNamespaceUrl = metadataNamespaceUrl;
@@ -86,17 +86,17 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
 
   /**
    * Extracted urls from the given  list of  <metadata>...</metadata> xml nodes.
-   * Different metadata implementation can override this method by adding 
+   * Different metadata implementation can override this method by adding
    * more behaviors w.r.t. different metadata.
-   * 
-   * @param metadataNodeList a nodelist with a bunch of <metadata>..</metadata> tag 
+   *
+   * @param metadataNodeList a nodelist with a bunch of <metadata>..</metadata> tag
    */
   public void setupAndExecute(NodeList metadataNodeList) {
     this.metadataNodeList = metadataNodeList;
     extractedUrls = collectArticleUrls();
   }
-  
-  /** 
+
+  /**
    * Collect Urls within a specific xml tag name under a particular
    * metadata namespace from node list
    */
@@ -107,31 +107,31 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
 	Node node = metadataNodeList.item(i);
 	if(node != null) {
    	  //logger.debug3("metadataNodeList ("+i+") = " + OaiHandler.displayXML(node) );
-	  NodeList list = 
+	  NodeList list =
 	    ((Element)node).getElementsByTagNameNS(metadataNamespaceUrl, urlContainerTagName);
 	  if (list.getLength() > 0) {
 	    String str = list.item(0).getFirstChild().getNodeValue();
 	    articleUrls.add(str);
 	    logger.debug3("node (" + i + ") value = " + str);
 	  } else {
-	    logger.error("No XML elements with the tag name : "+urlContainerTagName+ 
+	    logger.error("No XML elements with the tag name : "+urlContainerTagName+
 			 " in the namespace : "+metadataNamespaceUrl);
 	  }
 	}
     }
-    
+
     return articleUrls;
   }
-  
+
   /**
    * Return the set of urls collected in the oai response
    *
-   * @return the set of urls 
+   * @return the set of urls
    */
   public Set getArticleUrls() {
     return extractedUrls;
   }
-  
+
   /**
    * Returns the metadata format prefix that the crawl is interested.
    *
@@ -142,7 +142,7 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
   public String getMetadataPrefix() {
         return metadataPrefix;
   }
-  
+
   /**
    * return the Metadata Namespace url
    *
@@ -153,12 +153,12 @@ public class BaseOaiMetadataHandler implements OaiMetadataHandler{
   public String getMetadataNamespaceUrl() {
         return metadataNamespaceUrl;
   }
-  
+
   /**
-   * Returns the XML tag name that contains Urls need to be crawled 
+   * Returns the XML tag name that contains Urls need to be crawled
    * in the metadata. It is needed to execute xpath
    *
-   * e.g. "identifier" in Dublin Core case, 
+   * e.g. "identifier" in Dublin Core case,
    * <oai_dc:identifier>http://example.com</
    * @return the XML tag name contains Url to be crawled
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: TestRamParser.java,v 1.3 2004-03-11 01:19:31 troberts Exp $
+ * $Id: TestRamParser.java,v 1.4 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class TestRamParser extends LockssTestCase {
     } catch (IllegalArgumentException iae) {
     }
   }
-  
+
   private Set parseSourceForUrls(String source) throws IOException {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com/blah.ram");
     mcu.setContent(source);
@@ -108,7 +108,7 @@ public class TestRamParser extends LockssTestCase {
 
   public void testIgnoresComments() throws IOException {
     Set expected = SetUtil.set("http://www.example.com/blah.rm",
-			       "http://www.example.com/blah3.rm"); 
+			       "http://www.example.com/blah3.rm");
     Set actual = parseSourceForUrls("http://www.example.com/blah.rm\n"+
 				    "#http://www.example.com/blah2.rm\n\n"+
 				    "http://www.example.com/blah3.rm\n");
@@ -117,7 +117,7 @@ public class TestRamParser extends LockssTestCase {
 
   public void testStripsParams() throws IOException {
     Set expected = SetUtil.set("http://www.example.com/blah.rm",
-			       "http://www.example.com/blah3.rm"); 
+			       "http://www.example.com/blah3.rm");
     Set actual =
       parseSourceForUrls("http://www.example.com/blah.rm?blah=blah\n"+
 			 "http://www.example.com/blah3.rm?blah2=blah2&blah3=asdf\n");
@@ -127,7 +127,7 @@ public class TestRamParser extends LockssTestCase {
   public void testMultipleLinks() throws IOException {
     Set expected = SetUtil.set("http://www.example.com/blah.rm",
 			       "http://www.example.com/blah2.rm",
-			       "http://www.example.com/blah3.rm"); 
+			       "http://www.example.com/blah3.rm");
     Set actual = parseSourceForUrls("http://www.example.com/blah.rm\n"+
 				    "http://www.example.com/blah2.rm\n\n"+
 				    "http://www.example.com/blah3.rm\n");
@@ -138,10 +138,10 @@ public class TestRamParser extends LockssTestCase {
     parser =
       RamParser.makeTranslatingRamParser("rtsp://www.example.com/",
 					 "http://www.example.com/media/");
-    
+
     Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
 			       "http://www.example.com/blah2.rm",
-			       "http://www.example.com/media/blah3.rm"); 
+			       "http://www.example.com/media/blah3.rm");
     Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
 				    "http://www.example.com/blah2.rm\n\n"+
 				    "rtsp://www.example.com/blah3.rm\n");
@@ -152,10 +152,10 @@ public class TestRamParser extends LockssTestCase {
     parser =
       RamParser.makeTranslatingRamParser("rtsp://www.example.com/",
 					 "http://www.example.com/media/");
-    
+
     Set expected = SetUtil.set("http://www.example.com/media/blah.rm",
 			       "http://www.example.com/media/blah2.rm",
-			       "http://www.example.com/media/blah3.rm"); 
+			       "http://www.example.com/media/blah3.rm");
     Set actual = parseSourceForUrls("rtsp://www.example.com/blah.rm\n"+
 				    "rtsp://www.EXAMPLE.com/blah2.rm\n\n"+
 				    "RTSP://www.example.com/blah3.rm\n");

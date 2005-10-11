@@ -1,5 +1,5 @@
 /*
- * $Id: AuActivityBase.java,v 1.3 2005-10-10 23:48:56 troberts Exp $
+ * $Id: AuActivityBase.java,v 1.4 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ import org.lockss.uiapi.util.*;
  * Common code for Archival Unit management (create/update/remove/restore)
  */
 public class AuActivityBase extends StatusActivityBase {
- 
+
   private static String NAME  = "AuActivityBase";
   private static Logger log   = Logger.getLogger(NAME);
 
@@ -70,10 +70,10 @@ public class AuActivityBase extends StatusActivityBase {
   private Collection    _noEditKeys;
   private List          _editKeys;
 
-  
+
   public AuActivityBase() {
     super();
-  }  
+  }
 
   /*
    * Required by ApiActivityBase
@@ -85,11 +85,11 @@ public class AuActivityBase extends StatusActivityBase {
   }
 
   /*
-   * Utilities 
-   * 
+   * Utilities
+   *
    * Several of these are taken in spirit or verbatim from AuConfig.java
    */
-  
+
   /**
    * Get the active Plugin
    * @return Active Plugin
@@ -100,7 +100,7 @@ public class AuActivityBase extends StatusActivityBase {
 
   /**
    * Set the Plugin for this command
-   * @param plugin The Plugin 
+   * @param plugin The Plugin
    */
   protected void setPlugin(PluginProxy plugin) {
     _pluginProxy = plugin;
@@ -108,12 +108,12 @@ public class AuActivityBase extends StatusActivityBase {
 
   /**
    * Set the Plugin for this command
-   * @param au The active Archival Unit 
+   * @param au The active Archival Unit
    */
   protected void setPlugin(AuProxy au) {
     _pluginProxy = au.getPlugin();
   }
-  
+
   /**
    * Set the Plugin TitleConfig object for this command
    * @param titleConfig The TitleConfig
@@ -141,11 +141,11 @@ public class AuActivityBase extends StatusActivityBase {
    * @param auConfig AU Configuration
    * @param properties The Properties object to populate
    */
-  protected void getAuProperties(Configuration auConfig, 
+  protected void getAuProperties(Configuration auConfig,
                                  Properties properties) {
-    
+
     Iterator  iterator  = getDefiningKeys().iterator();
-    
+
     while (iterator.hasNext()) {
       String key = (String) iterator.next();
 
@@ -154,7 +154,7 @@ public class AuActivityBase extends StatusActivityBase {
       }
     }
   }
- 
+
   /**
    * Get Archival Unit property values from the request document
    * @param properties Properties object (values established here)
@@ -166,14 +166,14 @@ public class AuActivityBase extends StatusActivityBase {
     KeyedList metadata;
     int       size;
 
-    metadata = ParseUtils.getDynamicFields(getXmlUtils(), 
+    metadata = ParseUtils.getDynamicFields(getXmlUtils(),
                                            getRequestDocument(),
                                            metadataName);
     size = metadata.size();
-    
+
     for (int i = 0; i < size; i++) {
       String value = (String) metadata.getValue(i);
-      
+
       if (value != null) {
         properties.put(metadata.getKey(i), value);
       }
@@ -186,54 +186,54 @@ public class AuActivityBase extends StatusActivityBase {
    */
   protected Configuration getAuConfigFromForm() {
     Properties  properties = new Properties();
-    
+
     getAuPropertiesFromForm(properties, AP_MD_AUDEFINING);
     getAuPropertiesFromForm(properties, AP_MD_AUEDIT);
-  
+
     return ConfigManager.fromPropertiesUnsealed(properties);
   }
 
   /**
-   * Get the AU Configuration - return defining keys from the current AU 
+   * Get the AU Configuration - return defining keys from the current AU
    * Configuration, "edit" keys from the request document
    * @param auConfig Current AU Configuration
    * @return AU Configuration
    */
   protected Configuration getAuConfigFromForm(Configuration auConfig) {
     Properties  properties    = new Properties();
-    
+
     getAuProperties(auConfig, properties);
     getAuPropertiesFromForm(properties, AP_MD_AUEDIT);
-  
+
     return ConfigManager.fromProperties(properties);
   }
 
-  /** 
-   * True if both values are null, empty strings, or equal strings 
+  /**
+   * True if both values are null, empty strings, or equal strings
    */
   private boolean isEqual(String newVal, String oldVal) {
-    
+
     return (StringUtil.isNullString(newVal))  ? StringUtil.isNullString(oldVal)
                                               : newVal.equals(oldVal);
   }
-    
-  /** 
-   * Return true if newConfig is different from oldConfig 
+
+  /**
+   * Return true if newConfig is different from oldConfig
    */
-  protected boolean isChanged(Configuration oldConfig, 
+  protected boolean isChanged(Configuration oldConfig,
                               Configuration newConfig) {
-    
+
     Collection dk   = oldConfig.differentKeys(newConfig);
     boolean changed = false;
-   
+
     for (Iterator iter = dk.iterator(); iter.hasNext(); ) {
       String key    = (String) iter.next();
       String oldVal = oldConfig.get(key);
       String newVal = newConfig.get(key);
-      
+
       if (!isEqual(oldVal, newVal)) {
 	      changed = true;
-	      
+
         log.debug("Key " + key + " changed from \"" +
                   oldVal + "\" to \"" + newVal + "\"");
       }
@@ -245,14 +245,14 @@ public class AuActivityBase extends StatusActivityBase {
    * Establish (look up) the defining and editable keys for this AU
    */
   private void prepareConfigParams() {
-    
+
     _auConfigParams = new ArrayList(_pluginProxy.getAuConfigDescrs());
     _definingKeys   = new ArrayList();
     _editKeys       = new ArrayList();
-    
+
     for (Iterator iterator = _auConfigParams.iterator(); iterator.hasNext();) {
       ConfigParamDescr descr = (ConfigParamDescr) iterator.next();
-     
+
       if (descr.isDefinitional()) {
         _definingKeys.add(descr.getKey());
       } else {
@@ -260,7 +260,7 @@ public class AuActivityBase extends StatusActivityBase {
       }
     }
   }
-  
+
   /**
    * Get defining keys
    * @return Defining key Collection
@@ -282,8 +282,8 @@ public class AuActivityBase extends StatusActivityBase {
     }
     return _editKeys;
   }
-  
-  /** 
+
+  /**
    * Get the list of defining keys that cannot be edited
    */
   protected Collection getNoEditKeys() {
@@ -292,14 +292,14 @@ public class AuActivityBase extends StatusActivityBase {
       Collection no = getTitleConfig().getUnEditableKeys();
 
       _noEditKeys = new ArrayList();
-      
-      for (Iterator iterator = no.iterator(); iterator.hasNext(); ) {      
+
+      for (Iterator iterator = no.iterator(); iterator.hasNext(); ) {
         _noEditKeys.add(iterator.next());
       }
     }
     return _noEditKeys;
   }
-  
+
   /**
    * Get the AU Configuration
    * @return AU Configuration
@@ -358,7 +358,7 @@ public class AuActivityBase extends StatusActivityBase {
    */
   protected AuProxy getAnyAuProxy(String auid) {
     AuProxy auProxy;
-    
+
     if ((auProxy = getAuProxy(auid)) == null) {
       auProxy = getInactiveAuProxy(auid);
     }
@@ -394,9 +394,9 @@ public class AuActivityBase extends StatusActivityBase {
    * @param keys Collection of keys (defining or editable) to examine
    * @param configuration Plugin configuration
    */
-  protected void addKeys(Element root, 
+  protected void addKeys(Element root,
                          String keyRootName,
-                         Collection keys, 
+                         Collection keys,
                          Configuration config) {
     addKeys(root, keyRootName, keys, null, config);
   }
@@ -420,40 +420,40 @@ public class AuActivityBase extends StatusActivityBase {
    * </key>
    * </code>
    */
-  protected void addKeys(Element root, 
+  protected void addKeys(Element root,
                          String keyRootName,
-                         Collection keys, 
+                         Collection keys,
                          Collection noEditKeys,
                          Configuration config) {
-      
+
     XmlUtils      xmlUtils  = getXmlUtils();
     Element       keyRoot   = xmlUtils.createElement(root, keyRootName);
     Iterator      iterator  = getAuConfigParams().iterator();
-    
+
     while (iterator.hasNext()) {
-        
+
       ConfigParamDescr descriptor = (ConfigParamDescr) iterator.next();
-    
+
       Element auKeyElement;
       Element element;
       String  value;
       boolean edit;
-      
+
       if (!keys.contains(descriptor.getKey())) {
 	      continue;
       }
-     
+
       auKeyElement = xmlUtils.createElement(keyRoot, AP_E_KEY);
-      
+
       element = xmlUtils.createElement(auKeyElement, AP_E_INTERNAL);
       XmlUtils.addText(element, descriptor.getKey());
- 
+
       element = xmlUtils.createElement(auKeyElement, AP_E_NAME);
       XmlUtils.addText(element, descriptor.getDisplayName());
- 
+
       element = xmlUtils.createElement(auKeyElement, AP_E_DESCRIPTION);
       XmlUtils.addText(element, descriptor.getDescription());
-      
+
       value = (config == null) ? "" : config.get(descriptor.getKey());
 
       element = xmlUtils.createElement(auKeyElement, AP_E_VALUE);
@@ -465,7 +465,7 @@ public class AuActivityBase extends StatusActivityBase {
       }
       element = xmlUtils.createElement(auKeyElement, AP_E_EDIT);
       XmlUtils.addText(element, edit ? COM_TRUE : COM_FALSE);
-      
+
       element = xmlUtils.createElement(auKeyElement, AP_E_SIZE);
       XmlUtils.addText(element, ("" + descriptor.getSize()));
     }
@@ -477,20 +477,20 @@ public class AuActivityBase extends StatusActivityBase {
    * @param pluginRootName Name for plugin data block
    */
   protected void addPlugin(Element root, String pluginRootName) {
-      
+
     XmlUtils  xmlUtils    = getXmlUtils();
     Element   pluginRoot  = xmlUtils.createElement(root, pluginRootName);
     Element   element;
-       
+
     element = xmlUtils.createElement(pluginRoot, AP_E_ID);
     XmlUtils.addText(element, _pluginProxy.getPluginId());
- 
+
     element = xmlUtils.createElement(pluginRoot, AP_E_NAME);
     XmlUtils.addText(element, _pluginProxy.getPluginName());
 
     element = xmlUtils.createElement(pluginRoot, AP_E_VERSION);
     XmlUtils.addText(element, _pluginProxy.getVersion());
-    
+
     element = xmlUtils.createElement(pluginRoot, AP_E_TITLE);
     if (_titleConfig != null) {
       XmlUtils.addText(element, _titleConfig.getJournalTitle());
@@ -504,22 +504,22 @@ public class AuActivityBase extends StatusActivityBase {
   protected void generateSetupXml(Configuration configuration) {
     generateSetupXml(configuration, null);
   }
-  
+
   /**
    * Generate response XML for command setup data (Plugin, AU keys)
    * @param configuration AU Configuration block
    * @param noEditKeys A list of defining keys that should no be modified
    */
-  protected void generateSetupXml(Configuration configuration, 
+  protected void generateSetupXml(Configuration configuration,
                                   Collection noEditKeys) {
     Element   element;
-    
+
     element = getXmlUtils().createElement(getResponseRoot(), AP_E_INFO);
     addPlugin(element, AP_E_PLUGIN);
-    
-    addKeys(element, AP_E_AUDEFINING, 
+
+    addKeys(element, AP_E_AUDEFINING,
                      getDefiningKeys(), noEditKeys, configuration);
-    addKeys(element, AP_E_AUEDIT, 
+    addKeys(element, AP_E_AUEDIT,
                      getEditKeys(), Collections.EMPTY_SET, configuration);
 
     try {

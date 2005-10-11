@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyIpAccess.java,v 1.14 2005-10-07 23:35:54 thib_gc Exp $
+ * $Id: ProxyIpAccess.java,v 1.15 2005-10-11 05:46:57 tlipkis Exp $
  */
 
 /*
@@ -68,7 +68,7 @@ public class ProxyIpAccess extends IpAccessControl {
   private String formIcpPort;
   private int auditPort;
   private int icpPort;
-  
+
   protected void resetLocals() {
     super.resetLocals();
     formAuditEnable = false;
@@ -124,14 +124,14 @@ public class ProxyIpAccess extends IpAccessControl {
       displayPage();
       return;
     }
-    
+
     icpPort = -1;
     try {
       icpPort = Integer.parseInt(formIcpPort);
     }
     catch (NumberFormatException nfe) {
       if (formIcpEnable) {
-        // bad number is an error only if enabling        
+        // bad number is an error only if enabling
         errMsg = "ICP port must be a number: " + formIcpPort;
         displayPage();
         return;
@@ -143,7 +143,7 @@ public class ProxyIpAccess extends IpAccessControl {
       displayPage();
       return;
     }
-    
+
     super.doUpdate();
   }
 
@@ -159,7 +159,7 @@ public class ProxyIpAccess extends IpAccessControl {
            resourceMgr.isUdpPortAvailable(
                port, IcpManager.class);
   }
-  
+
   private boolean getDefaultAuditEnable() {
     if (isForm) {
       return formAuditEnable;
@@ -183,7 +183,7 @@ public class ProxyIpAccess extends IpAccessControl {
     return Configuration.getBooleanParam(IcpManager.PARAM_ICP_ENABLED,
                                          IcpManager.DEFAULT_ICP_ENABLED);
   }
-  
+
   private String getDefaultIcpPort() {
     String port = formIcpPort;
     if (StringUtil.isNullString(port)) {
@@ -191,7 +191,7 @@ public class ProxyIpAccess extends IpAccessControl {
     }
     return port;
   }
-  
+
   private static final String AUDIT_FOOT =
     "The audit proxy serves <b>only</b> cached content, and never " +
     "forwards requests to the publisher or any other site.  " +
@@ -202,7 +202,7 @@ public class ProxyIpAccess extends IpAccessControl {
   private static final String FILTER_FOOT =
     "Other ports can be configured but may not be reachable due to " +
     "packet filters.";
-  
+
   /**
    * <p>A footnote explaining the role of the ICP server.</p>
    */
@@ -215,7 +215,7 @@ public class ProxyIpAccess extends IpAccessControl {
   protected Composite getAdditionalFormElement() {
     final int BORDER = 0;
     final String ATTRIBUTES = "align=\"center\" cellpadding=\"10\"";
-    
+
     Table tbl = new Table(BORDER, ATTRIBUTES);
     layoutEnablePortRow(tbl, AUDIT_ENABLE_NAME, getDefaultAuditEnable(), "audit proxy",
         AUDIT_FOOT, FILTER_FOOT, AUDIT_PORT_NAME, getDefaultAuditPort(),
@@ -228,16 +228,16 @@ public class ProxyIpAccess extends IpAccessControl {
 
   protected void addConfigProps(Properties props) {
     super.addConfigProps(props);
-    
+
     final String TRUE = "true";
     final String FALSE = "false";
-    
+
     props.setProperty(PARAM_AUDIT_ENABLE,  formAuditEnable ? TRUE : FALSE);
     props.put(PARAM_AUDIT_PORT, Integer.toString(auditPort));
     props.setProperty(IcpManager.PARAM_ICP_ENABLED, formIcpEnable ? TRUE : FALSE);
     props.put(IcpManager.PARAM_ICP_PORT, Integer.toString(icpPort));
   }
-  
+
   private static final String AUDIT_ENABLE_NAME = "audit_ena";
   private static final String AUDIT_PORT_NAME = "audit_port";
   private static final String ICP_ENABLE_NAME = "icp_ena";

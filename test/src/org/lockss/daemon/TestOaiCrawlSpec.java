@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawlSpec.java,v 1.2 2005-05-20 23:44:57 troberts Exp $
+ * $Id: TestOaiCrawlSpec.java,v 1.3 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestOaiCrawlSpec extends LockssTestCase {
       fail("OaiCrawlSpec with null oaiRequestData should throw");
     } catch (IllegalArgumentException e) { }
   }
-  
+
   public void testSimpleContruction() {
     boolean follow = true;
     OaiRequestData oaiData = new OaiRequestData("handler","ns","tag","setSpec","prefix");

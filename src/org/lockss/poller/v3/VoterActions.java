@@ -1,5 +1,5 @@
 /*
- * $Id: VoterActions.java,v 1.5 2005-10-07 23:46:48 smorabito Exp $
+ * $Id: VoterActions.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class VoterActions {
   public static PsmEvent handleReceivePoll(PsmMsgEvent evt, PsmInterp interp) {
     return V3Events.evtOk;
   }
-  
+
   public static PsmEvent handleVerifyPollEffort(PsmEvent evt, PsmInterp interp) {
     // XXX: Implement effort service
     return V3Events.evtOk;
@@ -115,7 +115,7 @@ public class VoterActions {
       return V3Events.evtError;
     }
   }
-  
+
   public static PsmEvent handleReceiveVoteRequest(PsmMsgEvent evt, PsmInterp interp) {
     VoterUserData ud = getUserData(interp);
     // If we're ready to cast our vote right away, do so.  Otherwise, wait
@@ -166,7 +166,7 @@ public class VoterActions {
     // XXX: Implement.
     return V3Events.evtOk;
   }
-  
+
   private static VoterUserData getUserData(PsmInterp interp) {
     return (VoterUserData)interp.getUserData();
   }

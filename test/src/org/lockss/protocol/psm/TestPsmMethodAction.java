@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMethodAction.java,v 1.5 2005-10-05 23:12:40 troberts Exp $
+ * $Id: TestPsmMethodAction.java,v 1.6 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class TestPsmMethodAction extends LockssTestCase {
   private static PsmEvent fooEvent = new PsmEvent();
   private static PsmEvent barEvent = new PsmEvent();
   private static PsmEvent bazEvent = new PsmEvent();
-  
+
   /**
    * Ensure that valid PsmMethodActions can be constructed and run.
    */
@@ -136,7 +136,7 @@ public class TestPsmMethodAction extends LockssTestCase {
   }
 
   /**
-   * Ensure that constructing with methods that declare 
+   * Ensure that constructing with methods that declare
    * non-RuntimeExceptions fails.
    */
   public void testNonRuntimeExceptionDeclarationThrows() {
@@ -148,7 +148,7 @@ public class TestPsmMethodAction extends LockssTestCase {
       //expected
     }
   }
-  
+
   /**
    * Ensure that constructing with non-public Actions handler classes
    * or methods throw appropriately.

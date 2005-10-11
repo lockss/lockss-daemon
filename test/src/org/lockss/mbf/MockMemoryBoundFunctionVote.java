@@ -1,5 +1,5 @@
 /*
- * $Id: MockMemoryBoundFunctionVote.java,v 1.5 2004-09-20 14:20:39 dshr Exp $
+ * $Id: MockMemoryBoundFunctionVote.java,v 1.6 2005-10-11 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
   private int[][] mockProofs;
   private boolean[] mockVerifies;
   private int stepLimit;
-  
+
   /**
    * No-argument constructor for use with Class.newInstance().
    */
@@ -81,7 +81,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
 				 int eVal,
 				 CachedUrlSet cusVal,
 				 byte[] pollID,
-				 PeerIdentity voterID) 
+				 PeerIdentity voterID)
     throws MemoryBoundFunctionException {
     super.setupGeneration(fact, nVal, eVal, cusVal, pollID, voterID);
     setup(nVal, eVal, cusVal);
@@ -99,7 +99,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    * @param hashes the hashes of each block
    * @param pollID the byte array ID for the poll
    * @param voterID the PeerIdentity of the voter
-   * 
+   *
    */
   public void setupVerification(MemoryBoundFunctionFactory fact,
 				byte[] nVal,
@@ -124,7 +124,7 @@ public class MockMemoryBoundFunctionVote extends MemoryBoundFunctionVote {
    * Do "n" steps of the underlying hash or effort proof generation
    * @param n number of steps to move.
    * @return true if there is more work to do
-   * 
+   *
    */
   public boolean computeSteps(int n) throws MemoryBoundFunctionException {
     stepLimit -= n;

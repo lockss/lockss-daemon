@@ -1,5 +1,5 @@
 /*
- * $Id: TestCatalogueOrderComparator.java,v 1.4 2004-05-18 00:00:25 dcfok Exp $
+ * $Id: TestCatalogueOrderComparator.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
   public void testOrder() {
     // titles in sorted order
     String[] titles = {
-      "The Aardvark of the Baskervilles", 
+      "The Aardvark of the Baskervilles",
       "An Apple and its Eve",
       "a boy and his bog",
       "A Boy and his Dog",
@@ -118,11 +118,11 @@ public class TestCatalogueOrderComparator extends LockssTestCase {
   public void testCache() {
     CountingCOC ccoc = new CountingCOC();
 
-    List lst = ListUtil.list("1", 
-			     "2", 
-			     "the 3", 
-			     "a 4", 
-			     "an 5", 
+    List lst = ListUtil.list("1",
+			     "2",
+			     "the 3",
+			     "a 4",
+			     "an 5",
 			     "6 I B M Journal",
 			     " 7 Gar\u00e7on Magazine");
 

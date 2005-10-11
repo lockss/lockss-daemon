@@ -1,5 +1,5 @@
 /*
- * $Id: TestAlertManagerImpl.java,v 1.11 2005-10-07 23:42:27 tlipkis Exp $
+ * $Id: TestAlertManagerImpl.java,v 1.12 2005-10-11 05:48:47 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ import org.lockss.test.*;
  * This is the test class for org.lockss.alert.AlertManager
  */
 public class TestAlertManagerImpl extends LockssTestCase {
-  
+
   static Logger log = Logger.getLogger("TestAlertManager");
 
   MockLockssDaemon daemon;
@@ -219,7 +219,7 @@ public class TestAlertManagerImpl extends LockssTestCase {
     List l1 = (List)o1;
     assertEquals(cnt+2, l1.size());
   }
-  
+
   class MyMockAlertPattern implements AlertPattern, LockssSerializable {
     boolean match;			// determines result
     Alert alert;		   // records the alert we were called with

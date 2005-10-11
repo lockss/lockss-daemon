@@ -1,5 +1,5 @@
 /*
- * $Id: TestCXSerializer.java,v 1.4 2005-09-13 00:45:29 thib_gc Exp $
+ * $Id: TestCXSerializer.java,v 1.5 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -51,12 +51,12 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
    * @author Thib Guicherd-Callin
    */
   public static class CastorMode extends TestCXSerializer {
-    
+
     /* Inherit documentation */
     protected int getMode() {
       return CXSerializer.CASTOR_MODE;
     }
-    
+
     /* Inherit documentation */
     protected ObjectSerializer getStrictDeserializer() {
       return new CastorSerializer(
@@ -67,45 +67,45 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
     }
 
   }
-  
+
   /**
    * <p>A version of {@link TestCXSerializer} that uses
    * {@link CXSerializer#XSTREAM_MODE}.</p>
    * @author Thib Guicherd-Callin
    */
   public static class XStreamMode extends TestCXSerializer {
-    
+
     /* Inherit documentation */
     protected int getMode() {
       return CXSerializer.XSTREAM_MODE;
     }
-    
+
     /* Inherit documentation */
     protected ObjectSerializer getStrictDeserializer() {
       return new XStreamSerializer();
     }
-    
+
   }
-  
+
   /**
    * <p>A version of {@link TestCXSerializer} that uses
    * {@link CXSerializer#XSTREAM_OVERWRITE_MODE}.</p>
    * @author Thib Guicherd-Callin
    */
   public static class XStreamOverwriteMode extends TestCXSerializer {
-    
+
     /* Inherit documentation */
     protected int getMode() {
       return CXSerializer.XSTREAM_OVERWRITE_MODE;
     }
-    
+
     /* Inherit documentation */
     protected ObjectSerializer getStrictDeserializer() {
       return new XStreamSerializer();
     }
-    
+
   }
-  
+
   /**
    * <p>Checks that the deserializer can read input in Castor
    * format.</p>
@@ -120,7 +120,7 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
     CXSerializer deserializer = makeExtMapBeanSerializer();
     performRoundTrip(serializer, deserializer);
   }
-  
+
   /**
    * <p>Checks that the serializer writes output in a format that is
    * appropriate for its mode, by re-reading it through a
@@ -134,7 +134,7 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
     ObjectSerializer deserializer = getStrictDeserializer();
     performRoundTrip(serializer, deserializer);
   }
-  
+
   /**
    * <p>Checks that the deserializer can read input in XStream
    * format.</p>
@@ -145,7 +145,7 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
     CXSerializer deserializer = makeExtMapBeanSerializer();
     performRoundTrip(serializer, deserializer);
   }
-  
+
   /**
    * <p>Returns the CXSerializer mode currently being tested.</p>
    * @return A CXSerializer compatibility mode number.
@@ -197,7 +197,7 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
     ExtMapBean clone;
     ByteArrayOutputStream out = new ByteArrayOutputStream();
     ByteArrayInputStream in;
-    
+
     try {
       serializer.serialize(out, original);
       in = new ByteArrayInputStream(out.toByteArray());
@@ -211,7 +211,7 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
       fail(buffer.toString());
     }
   }
-  
+
   /**
    * <p>Produces a test suite encompassing all three modes of
    * operation of {@link CXSerializer}.</p>
@@ -224,5 +224,5 @@ public abstract class TestCXSerializer extends ObjectSerializerTester {
         XStreamOverwriteMode.class
     });
   }
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestKeyedList.java,v 1.1 2005-03-02 21:07:28 ssmail Exp $
+ * $Id: TestKeyedList.java,v 1.2 2005-10-11 05:52:20 tlipkis Exp $
  */
 
 /*
@@ -46,40 +46,40 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
   private final static String     N1        = "name1";
   private final static String     N2        = "name2";
   private final static String     N3        = "name3";
-  
+
   private final static String     V1        = "value1";
   private final static String     V2        = "value2";
   private final static String     V3        = "value3";
-  
+
   private final static String[]   _names    = {N1, N2, N3};
   private final static String[]   _values   = {V1, V2, V3};
-  
+
   private KeyedList  _keyedList;
- 
+
 
   public void setUp() throws Exception {
 
     super.setUp();
-  
+
     _keyedList = new KeyedList();
   }
 
   private int populateList() {
     int length = _names.length;
-    
+
     for (int i = 0; i < length; i++) {
       _keyedList.put(_names[i], _values[i]);
     }
 
     return length;
   }
-  
+
   /*
    * Verify basic state - can we populate the list?
    */
   public void testPopulate() throws Exception {
     int length;
-    
+
     assertEquals(0, _keyedList.size());
     length = populateList();
     assertEquals(length, _keyedList.size());
@@ -90,7 +90,7 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
    */
   public void testListOrder() throws Exception {
     int length = populateList();
-    
+
     for (int i = 0; i < length; i++) {
       assertEquals(_names[i],  (String) _keyedList.getKey(i));
       assertEquals(_values[i], (String) _keyedList.getValue(i));
@@ -110,7 +110,7 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
 
     value = (String) _keyedList.get(N3);
     assertEquals(V3, value);
-    
+
     value = (String) _keyedList.get("no_such_value");
     assertNull(value);
   }
@@ -120,9 +120,9 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
    */
   public void testPutMultiple() throws Exception {
     int length;
-    
+
     /*
-     * Add multiple ocurances to the list 
+     * Add multiple ocurances to the list
      *
      * Duplicate names should not be overwritted
      */
@@ -146,7 +146,7 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
 
     assertEquals("X",   (String) _keyedList.getKey(length));
     assertEquals("abc", (String) _keyedList.getValue(length));
-    
+
     assertEquals("X",   (String) _keyedList.getKey(length + 2));
     assertEquals("ghi", (String) _keyedList.getValue(length + 2));
     /*
@@ -154,7 +154,7 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
      */
     assertEquals("abc", (String) _keyedList.get("X"));
   }
-  
+
   /*
    * Does put() guard against null names and values?
    */
@@ -171,7 +171,7 @@ public class TestKeyedList extends LockssTestCase implements ApiParameters {
       fail("put(null, value) should have thrown InvalidArgumentException");
     }
   }
-  
+
   public static void main(String[] args) {
     String[] testCaseList = { TestKeyedList.class.getName() };
 

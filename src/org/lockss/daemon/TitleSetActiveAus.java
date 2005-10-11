@@ -1,5 +1,5 @@
 /*
- * $Id: TitleSetActiveAus.java,v 1.8 2005-10-08 02:07:58 troberts Exp $
+ * $Id: TitleSetActiveAus.java,v 1.9 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -90,7 +90,7 @@ public class TitleSetActiveAus extends BaseTitleSet {
 	}
       }
       tc.setParams(params);
-    }      
+    }
     return tc;
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: NewContentCrawler.java,v 1.48 2005-10-10 23:27:29 tlipkis Exp $
+ * $Id: NewContentCrawler.java,v 1.49 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ import org.lockss.state.*;
 public class NewContentCrawler extends FollowLinkCrawler {
 
   private static Logger logger = Logger.getLogger("NewContentCrawler");
-  
+
   private SpiderCrawlSpec spec;
 
   public NewContentCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
@@ -65,9 +65,9 @@ public class NewContentCrawler extends FollowLinkCrawler {
   }
 
   /**
-   * Keeps crawling from the baseUrl til it hits the refetchDepth 
+   * Keeps crawling from the baseUrl til it hits the refetchDepth
    * to extract url for newly added pages since last crawl.
-   * 
+   *
    * @return a set of urls that contains updated content.
    */
   protected Set getUrlsToFollow(){
@@ -90,7 +90,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
       //return null;
     }
 
-    Iterator it = spec.getStartingUrls().iterator(); 
+    Iterator it = spec.getStartingUrls().iterator();
     cachingStartUrls = true; //added to report error when fail to fetch startUrl
     logger.debug3("refetchDepth: "+refetchDepth);
     for (int ix=0; ix<refetchDepth && it.hasNext(); ix++) {
@@ -116,7 +116,7 @@ public class NewContentCrawler extends FollowLinkCrawler {
 	if (parsedPages.contains(url)) {
 	  continue;
 	}
-	
+
 	//catch and warn if there's a url in the start urls
 	//that we shouldn't cache
  	if (spec.isIncluded(url)) {

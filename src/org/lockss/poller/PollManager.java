@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.158 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: PollManager.java,v 1.159 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -406,7 +406,7 @@ public class PollManager
     } else {
       throw new ProtocolException("Unexpected LCAP Message type.");
     }
-    
+
     long duration = msg.getDuration();
     PeerIdentity orig = msg.getOriginatorId();
     String hashAlg = msg.getHashAlgorithm();
@@ -620,14 +620,14 @@ public class PollManager
       throws IOException {
     theRouter.sendTo(msg, au, id);
   }
-  
+
   /**
    * send a message to the unicast address given by an identity
    * @param msg the LcapMessage to send
    * @param id the PeerIdentity of the identity to send to
    * @throws IOException
-   */ 
-  public void sendMessageTo(V3LcapMessage msg, PeerIdentity id) 
+   */
+  public void sendMessageTo(V3LcapMessage msg, PeerIdentity id)
       throws IOException {
     theRouter.sendTo(msg, id);
   }
@@ -659,7 +659,7 @@ public class PollManager
   public PollFactory getPollFactory(PollSpec spec) {
     return getPollFactory(spec.getPollVersion());
   }
-  
+
   public PollFactory getPollFactory(LcapMessage msg) {
     return getPollFactory(msg.getPollVersion());
   }
@@ -744,7 +744,7 @@ public class PollManager
   public boolean hasPoll(String key) {
     return thePolls.contains(key);
   }
-  
+
   // ----------------  Callbacks -----------------------------------
 
   class RouterMessageHandler implements LcapRouter.MessageHandler {

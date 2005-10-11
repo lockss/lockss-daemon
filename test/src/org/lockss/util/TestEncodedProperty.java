@@ -1,11 +1,11 @@
 /*
- * $Id: TestEncodedProperty.java,v 1.5 2005-03-23 07:01:13 smorabito Exp $
+ * $Id: TestEncodedProperty.java,v 1.6 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
   Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
   all rights reserved.
-  
+
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
@@ -132,7 +132,7 @@ public class TestEncodedProperty extends LockssTestCase {
     assertEquals(1.0f, p1.getFloat("foo", 1.0f), 0.0);
     assertEquals(0.0, p1.getDouble("foo", 0.0), 0.0);
     assertEquals(1.0, p1.getDouble("foo", 1.0), 0.0);
-    assertEquals(EncodedProperty.EMPTY_BYTE_ARRAY, 
+    assertEquals(EncodedProperty.EMPTY_BYTE_ARRAY,
 		 p1.getByteArray("foo", EncodedProperty.EMPTY_BYTE_ARRAY));
     assertNull(p1.getProperty("foo"));
     assertNull(p1.getEncodedProperty("foo"));

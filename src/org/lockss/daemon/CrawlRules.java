@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRules.java,v 1.7 2004-12-09 09:45:34 tlipkis Exp $
+ * $Id: CrawlRules.java,v 1.8 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -198,7 +198,7 @@ public class CrawlRules {
 
     Comparable minComp;
     Comparable maxComp;
-    
+
     /** Create an integer range matcher.
      * @param reString regular expression string
      * @param action one of the constants above.

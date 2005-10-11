@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyManager.java,v 1.35 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: ProxyManager.java,v 1.36 2005-10-11 05:46:28 tlipkis Exp $
  */
 
 /*
@@ -237,7 +237,7 @@ public class ProxyManager extends BaseProxyManager {
       hostsEverDown.add(host);
     }
   }
-  
+
   public boolean isIpAuthorized(String ip) {
     try {
       return accessHandler.isIpAuthorized(ip);

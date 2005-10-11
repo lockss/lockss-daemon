@@ -1,5 +1,5 @@
 /*
- * $Id: BasePollFactory.java,v 1.1 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: BasePollFactory.java,v 1.2 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.mortbay.util.B64Code;
  */
 
 public abstract class BasePollFactory implements PollFactory {
-  
+
   protected static final Logger log = Logger.getLogger("BasePollFactory");
 
   protected long getAdjustedEstimate(long estTime, PollManager pm) {
@@ -78,7 +78,7 @@ public abstract class BasePollFactory implements PollFactory {
     }
     return my_estimate;
   }
-  
+
   // try poll durations between min and max at increments of incr.
   // return duration in which all hashing can be scheduled, or -1 if not.
 
@@ -135,5 +135,5 @@ public abstract class BasePollFactory implements PollFactory {
               " returns " + ret);
     return ret;
   }
-  
+
 }

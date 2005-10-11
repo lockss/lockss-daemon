@@ -1,5 +1,5 @@
 /*
- * $Id: TestRegexpUtil.java,v 1.3 2005-01-13 08:11:19 tlipkis Exp $
+ * $Id: TestRegexpUtil.java,v 1.4 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -70,7 +70,7 @@ public class TestRegexpUtil extends LockssTestCase {
 	  tmatch = RegexpUtil.getMatcher();
 	}};
     th.start();
-    th.join();    
+    th.join();
     assertTrue(tcomp instanceof Perl5Compiler);
     assertTrue(tmatch instanceof Perl5Matcher);
     assertNotSame(c1, tcomp);

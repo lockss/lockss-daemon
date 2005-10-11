@@ -1,5 +1,5 @@
 /*
- * $Id: TimeStringFilter.java,v 1.2 2005-09-19 19:22:11 tlipkis Exp $
+ * $Id: TimeStringFilter.java,v 1.3 2005-10-11 05:49:45 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class TimeStringFilter extends LockssTiming {
     }
     ps.close();
   }
-    
+
   public void testNoFilter() throws Exception {
     time(file, "Nofilter",
 	 new Computation() {

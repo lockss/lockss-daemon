@@ -1,5 +1,5 @@
 /*
- * $Id: Cron.java,v 1.2 2005-09-11 07:02:29 tlipkis Exp $
+ * $Id: Cron.java,v 1.3 2005-10-11 05:44:15 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -238,11 +238,11 @@ public class Cron
 	return 0;
       }
       return l.longValue();
-    }      
+    }
 
     void setLastTime(String id, long time) {
       times.put(id, new Long(time));
-    }      
+    }
   }
 
   /** Cron.Task to periodically mail back file to cache admin.  Doesn't
@@ -304,7 +304,7 @@ public class Cron
       try {
 	rmtApi.sendMailBackup();
       } catch (IOException e) {
-	log.warning("Failed to mail backup file", e); 
+	log.warning("Failed to mail backup file", e);
       }
     }
   }

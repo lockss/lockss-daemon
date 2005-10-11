@@ -1,5 +1,5 @@
 /*
-* $Id: Poll.java,v 1.90 2005-10-07 23:46:50 smorabito Exp $
+* $Id: Poll.java,v 1.91 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -72,10 +72,10 @@ public interface Poll {
    * @return the PollSpec
    */
   public PollSpec getPollSpec();
-  
+
   /**
    * Return the CachedUrlSet for this poll.
-   * 
+   *
    * @return The CachedUrlSet.
    */
   public CachedUrlSet getCachedUrlSet();

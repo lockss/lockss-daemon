@@ -1,5 +1,5 @@
 /*
- * $Id: EDPCellData.java,v 1.8 2005-10-06 23:42:45 troberts Exp $
+ * $Id: EDPCellData.java,v 1.9 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -151,8 +151,8 @@ public class EDPCellData {
 
   public String toString() {
     if(m_displayString == null) {
-      if (m_data instanceof Collection || m_data instanceof Map || 
-	  m_data instanceof CrawlWindows.Interval || 
+      if (m_data instanceof Collection || m_data instanceof Map ||
+	  m_data instanceof CrawlWindows.Interval ||
 	  m_data instanceof CrawlWindows.Not) {
 	m_displayString = ELLIPSIS;
       }
@@ -235,8 +235,8 @@ public class EDPCellData {
     notifyListenersOfChange();
   }
 
-  public void updateOtherData(String data) { 
+  public void updateOtherData(String data) {
     notifyListenersOfChange();
   }
- 
+
 }

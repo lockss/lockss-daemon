@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollManager.java,v 1.80 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestPollManager.java,v 1.81 2005-10-11 05:50:30 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class TestPollManager extends LockssTestCase {
     assertNotNull(pf3);
     assertTrue(pf3 instanceof V3PollFactory);
   }
-  
+
   public void testGetPollFactoryByPollSpec() throws Exception {
     Plugin plugin = new MockPlugin();
     CachedUrlSet cus =
@@ -117,7 +117,7 @@ public class TestPollManager extends LockssTestCase {
     PollSpec v3 = new MockPollSpec(cus, Poll.V3_POLL, PollSpec.V3_PROTOCOL);
     PollFactory pfV1 = pollmanager.getPollFactory(v1);
     PollFactory pfV3 = pollmanager.getPollFactory(v3);
-    
+
     try {
       PollFactory pfBad1 = pollmanager.getPollFactory(bad1);
       fail("Should have thrown");
@@ -135,7 +135,7 @@ public class TestPollManager extends LockssTestCase {
     assertNotNull(pfV3);
     assertTrue(pfV3 instanceof V3PollFactory);
   }
-  
+
   // Tests for the V1 PollFactory implementation
 
   // Start by testing the local mock poll factory
@@ -202,7 +202,7 @@ public class TestPollManager extends LockssTestCase {
       }
     }
   }
-  
+
   /** test for V1 method PollFactory.pollShouldBeCalled(..) */
   public void testV1PollShouldBeCalled() throws Exception {
     // lets try to run two V1 content polls in the same location
@@ -386,7 +386,7 @@ public class TestPollManager extends LockssTestCase {
 
     BasePoll p1 = pollmanager.makePoll(msg1);
     assertNull("Shouldn't create poll with plugin version mismatch", p1);
-    
+
     // make a content poll witha bogus plugin version
     V1LcapMessage msg2 =
       V1LcapMessage.makeRequestMsg(spec,
@@ -446,7 +446,7 @@ public class TestPollManager extends LockssTestCase {
   public void testCloseThePoll() throws Exception {
     BasePoll p1 = pollmanager.makePoll(testmsg[0]);
     String key = p1.getKey();
-    
+
     // we should now be active
     assertTrue(pollmanager.isPollActive(key));
     // we should not be closed

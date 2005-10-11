@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlRule.java,v 1.2 2003-06-20 22:34:50 claire Exp $
+ * $Id: CrawlRule.java,v 1.3 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public interface CrawlRule {
   public static final int EXCLUDE = 2;
   /** The URL does not match this rule */
   public static final int IGNORE = 0;
-  
+
   /**
    * Match a URL against the rule.
    * @param url String to check against this rule

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlWindowEditor.java,v 1.2 2005-08-31 18:34:22 rebeccai Exp $
+ * $Id: CrawlWindowEditor.java,v 1.3 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -201,9 +201,9 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
     col = windowsTable.getColumnModel().getColumn(TIMEZONE);
     col.setCellEditor(new DefaultCellEditor(m_timezoneBox));
   }
-  
+
   class CrawlWindowModel extends AbstractTableModel {
-    String[] m_columns = {"Action", 
+    String[] m_columns = {"Action",
 			  "From",
 			  "",
 			  "AM/PM",
@@ -225,13 +225,13 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
       m_window = data.getPlugin().getAuCrawlWindow();
       m_tableData.clear();
       Object[] entry;
-      entry = new Object[m_columns.length];  
-   
+      entry = new Object[m_columns.length];
+
       if(m_window!=null){
 	  if(m_window instanceof CrawlWindows.Interval){
 	      entry[ACTION] = CrawlWindowTemplate.WINDOW_ACTION_STRINGS[0];
 	  }
-	  
+
 	  else if(m_window instanceof CrawlWindows.Not){
 	      entry[ACTION] = CrawlWindowTemplate.WINDOW_ACTION_STRINGS[1];
 	      m_window = ((CrawlWindows.Not)m_window).getCrawlWindow();
@@ -239,7 +239,7 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 	  else{
 	      entry[ACTION] = CrawlWindowTemplate.WINDOW_ACTION_STRINGS[0];
 	  }
-	  
+
 	  Calendar start= ((CrawlWindows.Interval)m_window).getStartCalendar();
 	  Calendar end  = ((CrawlWindows.Interval)m_window).getEndCalendar();
 	  TimeZone timezone = ((CrawlWindows.Interval)m_window).getTimeZone();
@@ -251,11 +251,11 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 		  startHour = 12;
 	      entry[FROM_AMPM] = CrawlWindowTemplate.WINDOW_AMPM_STRINGS[1];
 	  }
-	  
+
 	  else{
 	      entry[FROM_AMPM] = CrawlWindowTemplate.WINDOW_AMPM_STRINGS[0];
 	  }
-	  
+
 	  entry[FROM_HOUR] = startHour + "";
 	  entry[FROM_MINUTE] = CrawlWindowTemplate.WINDOW_MINUTE_STRINGS[start.get(Calendar.MINUTE)];
 
@@ -266,18 +266,18 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 		  endHour = 12;
 	      entry[TO_AMPM] = CrawlWindowTemplate.WINDOW_AMPM_STRINGS[1];
 	  }
-	  
+
 	  else{
 	      entry[TO_AMPM] = CrawlWindowTemplate.WINDOW_AMPM_STRINGS[0];
 	  }
-	  
+
 	  entry[TO_HOUR] = endHour + "";
 	  entry[TO_MINUTE] = CrawlWindowTemplate.WINDOW_MINUTE_STRINGS[end.get(Calendar.MINUTE)];
 
 
 	  entry[TIMEZONE] = timezone.getID();
       }
-   
+
       else{
 	  entry[ACTION]      = CrawlWindowTemplate.WINDOW_ACTION_STRINGS[0];
 	  entry[FROM_HOUR]   = CrawlWindowTemplate.WINDOW_HOUR_STRINGS[0];
@@ -300,13 +300,13 @@ public class CrawlWindowEditor extends JDialog implements EDPEditor{
 	Object[] entry = (Object[])m_tableData.elementAt(0);
 
 	boolean crawl = (entry[ACTION].toString() == "Crawl");
-	
+
 	int startHour = Integer.parseInt(entry[FROM_HOUR].toString());
 	if(entry[FROM_AMPM].toString() == "PM")
 	    startHour += 12;
 	start.set(Calendar.HOUR_OF_DAY,startHour);
 	start.set(Calendar.MINUTE,Integer.parseInt(entry[FROM_MINUTE].toString().substring(1)));
-       
+
 	int endHour = Integer.parseInt(entry[TO_HOUR].toString());
 	if(entry[TO_AMPM].toString() == "PM")
 	    endHour += 12;

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.20 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: UrlCacher.java,v 1.21 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -131,7 +131,7 @@ public interface UrlCacher {
    */
 //   public void setForceRefetch(boolean force);
 
-  public void setFetchFlags(BitSet fetchFlags); 
+  public void setFetchFlags(BitSet fetchFlags);
 
   /** Set a request header, overwriting any previous value */
   public void setRequestProperty(String key, String value);

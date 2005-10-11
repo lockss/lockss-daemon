@@ -1,5 +1,5 @@
 /*
- * $Id: V3PollerSerializer.java,v 1.3 2005-10-07 23:46:49 smorabito Exp $
+ * $Id: V3PollerSerializer.java,v 1.4 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -77,7 +77,7 @@ public class V3PollerSerializer extends V3Serializer {
 
   /**
    * Store a PollerStateBean.
-   * 
+   *
    * @throws PollSerializerException if the poller state cannot be saved.
    */
   public void savePollerState(PollerStateBean state)
@@ -92,7 +92,7 @@ public class V3PollerSerializer extends V3Serializer {
 
   /**
    * Load a PollerStateBean.
-   * 
+   *
    * @throws PollSerializerException if the poller state cannot be loaded.
    */
   public PollerStateBean loadPollerState() throws PollSerializerException {
@@ -112,7 +112,7 @@ public class V3PollerSerializer extends V3Serializer {
 
   /**
    * Store a PollerUserData.
-   * 
+   *
    * @throws PollSerializerException if the user data cannot be saved.
    */
   public void savePollerUserData(PollerUserData state)
@@ -129,7 +129,7 @@ public class V3PollerSerializer extends V3Serializer {
 
   /**
    * Restore a PollerUserData.
-   * 
+   *
    * @throws PollSerializerException if the PollerUserData cannot be loaded.
    */
   public PollerUserData loadPollerUserData(PeerIdentity peerId)
@@ -164,7 +164,7 @@ public class V3PollerSerializer extends V3Serializer {
 
   /**
    * Restore a PsmInterpStateBean for a V3Poller's participant.
-   * 
+   *
    * @return The saved state bean for a poll.
    */
   public PsmInterpStateBean loadPollerInterpState(PeerIdentity peerId)
@@ -196,7 +196,7 @@ public class V3PollerSerializer extends V3Serializer {
           // This should never be null.
           throw new PollSerializerException("Peer has null UserData file.");
         }
-        PollerUserData voterState = 
+        PollerUserData voterState =
           (PollerUserData) xstr.deserialize(mappingFile);
         voterStates.add(voterState);
       }
@@ -211,7 +211,7 @@ public class V3PollerSerializer extends V3Serializer {
   /**
    * Obtain a peer mapping, creating it if necessary.
    */
-  
+
   public synchronized PeerMapping getPeerMapping(String id) {
     PeerMapping map = (PeerMapping)peerMapping.get(id);
     if (map == null) {
@@ -220,7 +220,7 @@ public class V3PollerSerializer extends V3Serializer {
     }
     return map;
   }
-  
+
   /**
    * Obtain a file for the InterpStateBean.
    */
@@ -236,11 +236,11 @@ public class V3PollerSerializer extends V3Serializer {
     }
     return f;
   }
-  
+
   /**
    * Clean up and remove a peer from the serialized state.  Called by
    * V3Poller when dropping a voter from a poll.
-   * 
+   *
    * @param id
    */
   public void removePollerUserData(PeerIdentity id)
@@ -251,7 +251,7 @@ public class V3PollerSerializer extends V3Serializer {
     if (!f.delete())
       throw new SerializationException("Could not remove poller user data file " + f);
   }
-  
+
   /**
    * Obtain a file for the PollerUserData.
    */
@@ -267,36 +267,36 @@ public class V3PollerSerializer extends V3Serializer {
     }
     return f;
   }
-  
+
   /**
    * Store the mapping of peer IDs to files.
-   * @throws IOException 
-   * @throws SerializationException 
+   * @throws IOException
+   * @throws SerializationException
    */
   private synchronized void savePeerMapping()
       throws IOException, SerializationException {
     xstr.serialize(peerMappingFile, peerMapping);
   }
-  
-  private synchronized LinkedHashMap loadPeerMapping() 
+
+  private synchronized LinkedHashMap loadPeerMapping()
       throws IOException, SerializationException {
     return (LinkedHashMap)xstr.deserialize(peerMappingFile);
   }
-  
+
   /**
-   * Maintain a mapping of peer IDs to poller state files. 
-   * 
+   * Maintain a mapping of peer IDs to poller state files.
+   *
    * Note:  IDs are stored as strings because the daemon depends
    * on instance equality for PeerIdentities.  After deserialization,
-   * a stored PeerIdentity would by definition be a different instance. 
+   * a stored PeerIdentity would by definition be a different instance.
    */
   private static class PeerMapping implements LockssSerializable {
     private File interpStateFile;
     private File userDataFile;
-    
+
     public PeerMapping() {
     }
-    
+
     public PeerMapping(File interpStateFile, File userDataFile) {
       this.interpStateFile = interpStateFile;
       this.userDataFile = userDataFile;
@@ -318,7 +318,7 @@ public class V3PollerSerializer extends V3Serializer {
     public void setUserDataFile(File userDataFile) {
       this.userDataFile = userDataFile;
     }
-    
+
     public String toString() {
       StringBuffer buf = new StringBuffer("[PeerMapping: ");
       buf.append("interp=" + (interpStateFile == null ? "null" : interpStateFile.toString()));

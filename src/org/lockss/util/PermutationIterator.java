@@ -1,5 +1,5 @@
 /*
- * $Id: PermutationIterator.java,v 1.2 2004-07-23 16:44:10 tlipkis Exp $
+ * $Id: PermutationIterator.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -91,7 +91,7 @@ public class PermutationIterator implements Iterator {
 
   void nextPerm() {
     int i = n - 1;
-      
+
     while (indices[i-1] >= indices[i]) {
       i--;
     }
@@ -100,10 +100,10 @@ public class PermutationIterator implements Iterator {
       j--;
     }
     swap(i-1, j-1);
-      
-    i++; 
+
+    i++;
     j = n;
-      
+
     while (i < j) {
       swap(i-1, j-1);
       i++;
@@ -116,7 +116,7 @@ public class PermutationIterator implements Iterator {
     indices[a] = indices[b];
     indices[b] = tmp;
   }
-   
+
   static int factorial(int n) {
     int fact = 1;
     if (n > 1) {

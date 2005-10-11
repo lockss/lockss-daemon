@@ -1,5 +1,5 @@
 /*
- * $Id: SpiderCrawlSpec.java,v 1.2 2005-05-20 23:44:57 troberts Exp $
+ * $Id: SpiderCrawlSpec.java,v 1.3 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -56,9 +56,9 @@ public final class SpiderCrawlSpec extends BaseCrawlSpec {
    * @throws NullPointerException if any elements of startUrls is null.
    * @throws ClassCastException if any elements of startUrls is not a String.
    */
-  public SpiderCrawlSpec(List startUrls, 
+  public SpiderCrawlSpec(List startUrls,
 		       List permissionUrls,
-		       CrawlRule rule, 
+		       CrawlRule rule,
 		       int refetchDepth)
       throws ClassCastException {
     this(startUrls, permissionUrls, rule, refetchDepth,

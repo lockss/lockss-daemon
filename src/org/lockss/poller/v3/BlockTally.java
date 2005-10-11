@@ -1,5 +1,5 @@
 /*
- * $Id: BlockTally.java,v 1.3 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: BlockTally.java,v 1.4 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -47,11 +47,11 @@ public class BlockTally extends PollTally {
   private List agreeVoters;
   private List disagreeVoters;
   private List needBlocksFrom;
-  
+
   private V3Poller poll;
-  
+
   public BlockTally(V3Poller owner, long startTime, long duration,
-                    int wtAgree, int wtDisagree, int quorum, 
+                    int wtAgree, int wtDisagree, int quorum,
                     String hashAlgorithm) {
     super(Poll.V3_POLL, startTime, duration, 0, 0, wtAgree, wtDisagree,
           quorum, hashAlgorithm);
@@ -113,12 +113,12 @@ public class BlockTally extends PollTally {
   public void tallyVotes() {
     int agree = agreeVoters.size();
     int disagree = disagreeVoters.size();
-    
+
     if (needBlocksFrom.size() > 0) {
       result = RESULT_NEED_MORE_BLOCKS;
       return;
     }
-    
+
     if (agree + disagree < quorum) {
       result = RESULT_NOQUORUM;
     }
@@ -158,34 +158,34 @@ public class BlockTally extends PollTally {
   public int getTallyResult() {
     return result;
   }
-  
+
   // V3 Specific Methods.
-  
+
   public void reset() {
     result = RESULT_POLLING;
     disagreeVoters = null;
     agreeVoters = null;
     needBlocksFrom.clear();
   }
-  
+
   public List getNeedBlocksFrom() {
     return needBlocksFrom;
   }
-  
+
   public void setDisagreeVoters(List disagreeVoters) {
     this.disagreeVoters = disagreeVoters;
   }
-  
+
   public List getDisagreeVoters() {
     return disagreeVoters;
   }
-  
+
   public void setAgreeVoters(List agreeVoters) {
     this.agreeVoters = agreeVoters;
   }
-  
+
   public List getAgreeVoters() {
     return agreeVoters;
   }
-  
+
 }

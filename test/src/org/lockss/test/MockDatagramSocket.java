@@ -1,5 +1,5 @@
 /*
- * $Id: MockDatagramSocket.java,v 1.9 2003-12-17 02:09:44 tlipkis Exp $
+ * $Id: MockDatagramSocket.java,v 1.10 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -38,7 +38,7 @@ import java.util.*;
 public class MockDatagramSocket
   extends DatagramSocket implements MockDatagramSocketExtras {
   /**
-   * This class is a mock implementation of DatagramSocket to be used for 
+   * This class is a mock implementation of DatagramSocket to be used for
    * unit testing
    */
 
@@ -56,7 +56,7 @@ public class MockDatagramSocket
   }
 
   /**
-   * @param port this is ignored and only here to override the 
+   * @param port this is ignored and only here to override the
    * DatagramSocket contructor
    */
   public MockDatagramSocket(int port) throws SocketException{
@@ -64,7 +64,7 @@ public class MockDatagramSocket
   }
 
   /**
-   * @param port this is ignored and only here to override the 
+   * @param port this is ignored and only here to override the
    * DatagramSocket contructor
    * @param laddr ditto.
    */
@@ -113,7 +113,7 @@ public class MockDatagramSocket
     return localPort;
   }
 
-  
+
   public void setLocalPort(int localPort) {
     this.localPort=localPort;
   }

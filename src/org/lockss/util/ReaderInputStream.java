@@ -1,5 +1,5 @@
 /*
- * $Id: ReaderInputStream.java,v 1.9 2005-02-13 04:01:35 tlipkis Exp $
+ * $Id: ReaderInputStream.java,v 1.10 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class ReaderInputStream extends InputStream {
 
   public void close() throws IOException {
     reader.close();
-  }  
+  }
 
   private byte charToByte(char kar) {
     return charToByte2(kar);

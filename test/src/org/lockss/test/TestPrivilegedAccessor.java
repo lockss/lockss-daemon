@@ -1,5 +1,5 @@
 /*
- * $Id: TestPrivilegedAccessor.java,v 1.8 2004-12-09 08:19:36 tlipkis Exp $
+ * $Id: TestPrivilegedAccessor.java,v 1.9 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ public class TestPrivilegedAccessor extends LockssTestCase {
   public TestPrivilegedAccessor(String name) {
     super(name);
   }
-  
+
   public void testParent() throws Exception {
     MyMockParent parent = new MyMockParent("Charlie");
     assertEquals("Charlie", PrivilegedAccessor.getValue(parent, "m_name"));
@@ -111,8 +111,8 @@ public class TestPrivilegedAccessor extends LockssTestCase {
     }
     MyMockParent parent = new MyMockParent();
     Object nullString = new PrivilegedAccessor.Instance(String.class, null);
-    Boolean bool = 
-      (Boolean)PrivilegedAccessor.invokeMethod(parent, "isNullString", 
+    Boolean bool =
+      (Boolean)PrivilegedAccessor.invokeMethod(parent, "isNullString",
 					       nullString);
     assertTrue(bool.booleanValue());
   }
@@ -156,9 +156,9 @@ public class TestPrivilegedAccessor extends LockssTestCase {
     assertEquals("child.number",
 		 PrivilegedAccessor.invokeMethod(child, "over",
 						 new PrivilegedAccessor.
-						   Instance(Number.class, 
+						   Instance(Number.class,
 							    new Float(1.2))));
-		 
+
     assertEquals("child.number.float",
 		 PrivilegedAccessor.invokeMethod(child, "over", args1));
     assertEquals("child.float.number",

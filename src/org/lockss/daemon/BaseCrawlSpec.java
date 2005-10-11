@@ -1,5 +1,5 @@
 /*
- * $Id: BaseCrawlSpec.java,v 1.4 2005-08-30 18:14:05 rebeccai Exp $
+ * $Id: BaseCrawlSpec.java,v 1.5 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.util.*;
  * Specification for a crawl: a list of starting URLs and a rule
  * that determines whether a candidate URL should be included in the crawl.
  */
-public abstract class BaseCrawlSpec implements CrawlSpec { 
+public abstract class BaseCrawlSpec implements CrawlSpec {
 
   protected List permissionList;
   protected List permissionCheckers = Collections.EMPTY_LIST;
@@ -48,7 +48,7 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
   protected CrawlWindow window;
 
   /**
-   * Create a BaseCrawlSpec with the specified permission list, permission 
+   * Create a BaseCrawlSpec with the specified permission list, permission
    * checker list and rule.
    * @param permissionUrls a list of urls from which permission can be obtained.
    * @param rule filter to determine which URLs encountered in the crawl
@@ -57,7 +57,7 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
    * @throws IllegalArgumentException if the url list is empty.
    */
   protected BaseCrawlSpec(List permissionUrls,
-			  CrawlRule rule, 
+			  CrawlRule rule,
 			  List permissionCheckers,
 			  LoginPageChecker loginPageChecker)
       throws ClassCastException {
@@ -72,7 +72,7 @@ public abstract class BaseCrawlSpec implements CrawlSpec {
 //     }
     this.rule = rule;
     permissionList = ListUtil.immutableListOfType(permissionUrls, String.class);
-    //XXX empty permissionChecker list as it is plugin specific, 
+    //XXX empty permissionChecker list as it is plugin specific,
     // so no isEmpty() check
     this.permissionCheckers = permissionCheckers;
 

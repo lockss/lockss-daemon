@@ -1,5 +1,5 @@
 /*
- * $Id: TestPeerMessage.java,v 1.4 2005-10-10 23:25:26 tlipkis Exp $
+ * $Id: TestPeerMessage.java,v 1.5 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -207,7 +207,7 @@ public class TestPeerMessage extends LockssTestCase {
     } catch (IllegalStateException e) {
     }
   }
-      
+
 
   class MyPeerIdentity extends PeerIdentity {
     MyPeerIdentity() {

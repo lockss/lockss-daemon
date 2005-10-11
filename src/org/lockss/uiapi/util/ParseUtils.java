@@ -1,5 +1,5 @@
 /*
- * $Id: ParseUtils.java,v 1.3 2005-10-07 17:46:21 troberts Exp $
+ * $Id: ParseUtils.java,v 1.4 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ import org.lockss.util.*;
 
 public class ParseUtils implements ApiParameters, ClusterControlParameters {
   private static Logger log = Logger.getLogger("ParseUtils");
- 
+
   /**
    * Get a new XML utility object in the API name space
    * @return XmlUtils object configured for the API name space
@@ -55,7 +55,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   public static XmlUtils getApiXmlUtils() {
     return new XmlUtils(AP_NS_PREFIX, AP_NS_URI, AP_XML_VERSION);
   }
-  
+
   /**
    * Get a new XML utility object in the Cluster name space
    * @return XmlUtils object configured for the Cluster Control name space
@@ -63,7 +63,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   public static XmlUtils getClusterXmlUtils() {
     return new XmlUtils(CCP_NS_PREFIX, CCP_NS_URI, CCP_XML_VERSION);
   }
-  
+
   /**
    * Get a new XML utility object in the (daemon) Status name space
    * @return XmlUtils object configured for the Cluster Control name space
@@ -74,45 +74,45 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
                         XmlDomBuilder.XML_VERSIONNAME);
   }
 
-  /**  
-   * Get the API version 
+  /**
+   * Get the API version
    * @param xmlUtils XML utilities object
    * @param document Document to examine
-   * @return Version text (empty string if none) 
+   * @return Version text (empty string if none)
    */
   public static String getXmlVersion(XmlUtils xmlUtils, Document document) {
-    return xmlUtils.getAttribute(document.getDocumentElement(), 
+    return xmlUtils.getAttribute(document.getDocumentElement(),
                                  COM_XML_VERSIONNAME);
   }
-  
-  /**  
-   * Get the status of the last transaction 
+
+  /**
+   * Get the status of the last transaction
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
    * @return True if transaction successful
    */
   public static boolean getStatus(XmlUtils xmlUtils, Element root) {
-    
+
     Element element;
     boolean status;
 
     element = xmlUtils.getElement(root, COM_E_STATUS);
     verifyMandatoryElement(element, COM_E_STATUS);
-    
-    status = xmlUtils.getAttribute 
+
+    status = xmlUtils.getAttribute
                     (element, COM_A_SUCCESS).equalsIgnoreCase(AP_TRUE);
     return status;
   }
-  
+
   /**
    * Get a message (status or detail)
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
-   * @param type The "base" element for this message (for example, AP_E_STATUS) 
+   * @param type The "base" element for this message (for example, AP_E_STATUS)
    * @param subType The name of the child element that has the actual text
    * @return Message text (null if none)
    */
-  private static String getMessage(XmlUtils xmlUtils, Element root, 
+  private static String getMessage(XmlUtils xmlUtils, Element root,
 	                                 String type, String subType)
                         throws XmlException {
 
@@ -157,11 +157,11 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * Get option value (status or detail block)
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
-   * @param type The "base" element for options (for example, AP_E_STATUS) 
+   * @param type The "base" element for options (for example, AP_E_STATUS)
    * @return Option value (null if none)
    */
-  private static String getOption(XmlUtils xmlUtils, Element root, 
-                                  String type, String name) 
+  private static String getOption(XmlUtils xmlUtils, Element root,
+                                  String type, String name)
                                   throws XmlException {
     NodeList  nodeList;
     int       listLength;
@@ -172,17 +172,17 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
     nodeList    = xmlUtils.getList(element, AP_E_OPTION);
     listLength  = nodeList.getLength();
-   
+
     for (int i = 0; i < listLength; i++) {
       element = (Element) nodeList.item(i);
-          
+
       if (name.equals(xmlUtils.getAttribute(element, AP_A_NAME))) {
         return xmlUtils.getAttribute(element, AP_A_VALUE);
       }
     }
     return null;
   }
-  
+
   /**
    * Get a specified detail option
    * @param xmlUtils XML utilities object
@@ -192,7 +192,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   public static String getDetailOption(XmlUtils xmlUtils, Element root,
                                        String name)
                                        throws XmlException {
-                                       
+
     return getOption(xmlUtils, root, COM_E_DETAIL, name);
   }
 
@@ -213,10 +213,10 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * Get a HashMap of options associated with this command (status or detail)
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
-   * @param type The "base" element for options (for example, AP_E_STATUS) 
+   * @param type The "base" element for options (for example, AP_E_STATUS)
    * @return HashMap of options (name=value pairs, null if none)
    */
-  private static HashMap getOptions(XmlUtils xmlUtils, Element root, 
+  private static HashMap getOptions(XmlUtils xmlUtils, Element root,
 	                                  String type) throws XmlException {
 
     HashMap   hashMap;
@@ -229,15 +229,15 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
     nodeList    = xmlUtils.getList(element, AP_E_OPTION);
     listLength  = nodeList.getLength();
-   
+
     hashMap = null;
 
     if (listLength != 0) {
       hashMap = new HashMap(listLength);
-      
+
       for (int i = 0; i < listLength; i++) {
         element = (Element) nodeList.item(i);
-          
+
         hashMap.put(xmlUtils.getAttribute(element, AP_A_NAME),
                     xmlUtils.getAttribute(element, AP_A_VALUE));
       }
@@ -270,29 +270,29 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   }
 
   /**
-   * Get server host name 
+   * Get server host name
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
    * @return Server host name ("unknown" if none available)
    */
-  public static String getServerName(XmlUtils xmlUtils, Element root) 
+  public static String getServerName(XmlUtils xmlUtils, Element root)
                 throws XmlException {
 
     return getDetailAttribute(xmlUtils, root, COM_A_SYSTEM);
   }
 
   /**
-   * Get command name 
+   * Get command name
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
    * @return Server host name ("unknown" if none available)
    */
-  public static String getCommandName(XmlUtils xmlUtils, Element root) 
+  public static String getCommandName(XmlUtils xmlUtils, Element root)
                 throws XmlException {
 
     return getDetailAttribute(xmlUtils, root, COM_A_COMMAND);
   }
-  
+
   /**
    * Get an attribute from the command response detail block
    * @param xmlUtils XML utilities object
@@ -300,12 +300,12 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * @return Attribute value ("unknown" if none available)
    */
   public static String getDetailAttribute(XmlUtils xmlUtils, Element root,
-                                          String attribute) 
+                                          String attribute)
                 throws XmlException {
 
     Element element;
     String  value;
-    
+
     element = xmlUtils.getElement(root, COM_E_DETAIL);
     verifyMandatoryElement(element, COM_E_DETAIL);
 
@@ -317,7 +317,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   }
 
   /**
-   * Get any text associated with the named element 
+   * Get any text associated with the named element
    * @param xmlUtils XML utilities object
    * @param root Root element for the search (typically the document root)
    * @param name Element where text is found
@@ -327,7 +327,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
     String  message   = null;
     Element element   = xmlUtils.getElement(root, name);
-    
+
     if (element != null) {
       message = XmlUtils.getText(element);
     }
@@ -337,18 +337,18 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   /**
    * Build up a <code>KeyedList</code> of "dynamic page input field data"
    * <p>
-   * The XML is composed of "metadata elements" - each of these is coupled with 
-   * a unique "parameter" element.  This provides a mechanism for handling 
-   * dynamic data associated with some daemon structures - archival unit 
+   * The XML is composed of "metadata elements" - each of these is coupled with
+   * a unique "parameter" element.  This provides a mechanism for handling
+   * dynamic data associated with some daemon structures - archival unit
    * editable key fields are an example.  The XML looks something like:
-   * 
+   *
    * <code>
    *    <metadata>dynamic_element_name_1</metadata>
    *    <dynamic_element_name_1>value_1</dynamic_element_name_1>
-   *    
+   *
    *    <metadata>dynamic_element_name_2</metadata>
    *    <dynamic_element_name_2>value_2</dynamic_element_name_2>
-   * <code>   
+   * <code>
    *
    * @param xmlUtils XML utilities object
    * @param document The request document
@@ -356,9 +356,9 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * @return Map containing actual field name/value pairs
    */
   public static KeyedList getDynamicFields(XmlUtils xmlUtils,
-                                           Document document, 
+                                           Document document,
                                            String   metadataName) {
-    
+
     Element   root        = document.getDocumentElement();
     NodeList  nameList    = xmlUtils.getList(root, metadataName);
     KeyedList keyedList   = new KeyedList();
@@ -370,7 +370,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
       keyedList.put(name, value);
     }
-    return keyedList;      
+    return keyedList;
   }
 
   /**
@@ -383,10 +383,10 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
   public static ArrayList getElementTextList(XmlUtils xmlUtils,
                                              Document document,
                                              String   textElementName) {
-   
+
     return getElementTextList(xmlUtils, document, textElementName, null);
   }
-  
+
   /**
    * Get an ArrayList of all occurances of named text in the requested scope
    * @param xmlUtils XML utilities object
@@ -396,7 +396,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * document
    * @return List of all associated text messages
    */
-  public static ArrayList getElementTextList(XmlUtils xmlUtils, 
+  public static ArrayList getElementTextList(XmlUtils xmlUtils,
                                              Document document,
                                              String textElementName,
                                              String rootElementName) {
@@ -405,9 +405,9 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
 
     ArrayList textList;
     String    text;
-     
+
     textList = new ArrayList();
-    
+
     /*
      * Set search root (top of document or specified element)
      */
@@ -424,7 +424,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
     for (int i = 0; i < nodeList.getLength(); i++) {
       textList.add(XmlUtils.getText((Element) nodeList.item(i)));
     }
-    
+
     return textList;
   }
 
@@ -436,7 +436,7 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
    * @return Client command name (null if none)
    */
    public static String getClientCommand(XmlUtils xmlUtils, Document document) {
-    
+
     Element root    = document.getDocumentElement();
     Node    child   = root.getFirstChild();
     String  name    = null;
@@ -446,66 +446,66 @@ public class ParseUtils implements ApiParameters, ClusterControlParameters {
     }
     return name;
   }
-  
+
   /**
    * Add a setup request flag to the client request
    * @param xmlUtils XML utilities object
    * @param document Client request Document
    * @param command Command (element) name
    */
-  public static Element addSetupRequest(XmlUtils xmlUtils, 
+  public static Element addSetupRequest(XmlUtils xmlUtils,
                                         Document document, String command) {
     Element root;
-    
+
     root = xmlUtils.getElement(document.getDocumentElement(), command);
     verifyMandatoryElement(root, command);
-  
+
     return xmlUtils.createElement(root, AP_E_SETUP);
   }
- 
+
   /**
    * Is this a setup request (is the flag present in the client request)?
    * @param xmlUtils XML utilities object
    * @param document Client request Document
    * @param command Command (element) name
    */
-  public static boolean isSetupRequest(XmlUtils xmlUtils, 
+  public static boolean isSetupRequest(XmlUtils xmlUtils,
                                        Document document, String command) {
     Element root;
-    
+
     root = xmlUtils.getElement(document.getDocumentElement(), command);
     verifyMandatoryElement(root, command);
-  
+
     return (xmlUtils.getElement(root, AP_E_SETUP) != null);
   }
- 
+
   /**
    * Does this status table cell contain a reference value?
    * @param xmlUtils XML utilities object
    * @param cellElement The cell
    * @return true if a reference is present
    */
-  public static boolean isReferenceValue(XmlUtils xmlUtils, 
+  public static boolean isReferenceValue(XmlUtils xmlUtils,
                                          Element cellElement) {
 
     Element element = xmlUtils.getElement(cellElement,
                                           XmlStatusConstants.VALUE);
     if (element != null) {
-      element = xmlUtils.getElement(element, 
-                                    XmlStatusConstants.REFERENCE_ELEM);  
+      element = xmlUtils.getElement(element,
+                                    XmlStatusConstants.REFERENCE_ELEM);
     }
     return (element != null);
   }
-  
+
   /**
    * Verify required element is present
    */
   public static void verifyMandatoryElement(Element element, String name) {
-    
+
     if (element == null) {
       String message  = "\"" + name + "\" element missing in document";
-      
+
       throw new IllegalStateException(message);
     }
   }
-} 
+}

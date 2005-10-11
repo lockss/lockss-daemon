@@ -1,5 +1,5 @@
 /*
- * $Id: VoteBlock.java,v 1.4 2005-09-15 20:59:14 smorabito Exp $
+ * $Id: VoteBlock.java,v 1.5 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.util.StringUtil;
  * A simple bean representing a V3 vote block -- a file, or part of a file.
  */
 public class VoteBlock implements LockssSerializable {
-  
+
   /** Vote type enum.  Is this a vote on content, headers, or metadata? */
   public static final int CONTENT_VOTE = 0;
   public static final int HEADER_VOTE = 1;
@@ -45,7 +45,7 @@ public class VoteBlock implements LockssSerializable {
   private static final String[] voteTypeStrings = {
     "Content", "Header", "Metadata"
   };
-  
+
   private int pollType;
   private String fileName;
   private long filteredLength = 0;
@@ -55,7 +55,7 @@ public class VoteBlock implements LockssSerializable {
   private byte[] contentHash;
 
   public VoteBlock() {}
-  
+
   public VoteBlock(String fileName, long fLength, long fOffset,
 		   long uLength, long uOffset, byte[] hash, int pollType) {
     this.fileName = fileName;
@@ -114,15 +114,15 @@ public class VoteBlock implements LockssSerializable {
   public void setHash(byte[] b) {
     this.contentHash = b;
   }
-  
+
   public void setVoteType(int type) {
     this.pollType = type;
   }
-  
+
   public int getVoteType() {
     return pollType;
   }
-  
+
   public String getVoteTypeString() {
     if (pollType >= 0 && pollType < voteTypeStrings.length) {
       return voteTypeStrings[pollType];

@@ -1,5 +1,5 @@
 /*
- * $Id: MockListRecords.java,v 1.4 2005-10-04 22:57:17 tlipkis Exp $
+ * $Id: MockListRecords.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -53,19 +53,19 @@ import org.w3c.dom.Element;
  */
 public class MockListRecords extends ListRecords{
   private static Logger logger = Logger.getLogger("MockListRecords");
-  
+
   private Exception listRecordsException;
   private int numListRecordsExceptionThrown=0;
-  
+
   private TransformerException getErrorException;
   private int numGetErrorExceptionThrown=0;
-  
+
   private TransformerException getNodeListException;
   private int numGetNodeListExceptionThrown=0;
-  
+
   private Exception getResumptionTokenException;
   private int numGetResumptionTokenExceptionThrown=0;
-  
+
   //  private Document doc = null;
   private Element errElm = null;
 
@@ -78,7 +78,7 @@ public class MockListRecords extends ListRecords{
   public MockListRecords(){
   }
 
-  public MockListRecords(String baseUrl, String fromDate, String untilDate, 
+  public MockListRecords(String baseUrl, String fromDate, String untilDate,
 			   String setSpec, String metadataPrefix)
 	throws IOException, ParserConfigurationException, SAXException, TransformerException{
     this();
@@ -87,7 +87,7 @@ public class MockListRecords extends ListRecords{
     this.untilDate = untilDate;
     this.setSpec = setSpec;
     this.metadataPrefix = metadataPrefix;
-    
+
     while (numListRecordsExceptionThrown > 0) {
       if ( listRecordsException instanceof IOException){
 	throw (IOException) listRecordsException;
@@ -108,7 +108,7 @@ public class MockListRecords extends ListRecords{
 //     }
 
   }
-    
+
   public void setListRecordsException(Exception ex, int num){
     if ( ex instanceof IOException ||
 	 ex instanceof ParserConfigurationException ||
@@ -125,12 +125,12 @@ public class MockListRecords extends ListRecords{
     getErrorException = ex;
     numGetErrorExceptionThrown = num;
   }
-  
+
   public void setGetNodeListException(TransformerException ex, int num){
     getNodeListException = ex;
     numGetNodeListExceptionThrown = num;
   }
-  
+
   public void setGetResumptionToken(Exception ex, int num){
     if ( ex instanceof NoSuchFieldException ||
 	 ex instanceof TransformerException) {
@@ -140,14 +140,14 @@ public class MockListRecords extends ListRecords{
       logger.error("Exception set never be thrown in real ListRecords() call");
     }
   }
- 
+
   /**
    * set errors in oai response format
    *
    * e.g.
-   * To construct: 
+   * To construct:
    * <error code="badArgument">This is an error statement</error>
-   * 
+   *
    * The code is:
    * // create a document to create an element
    * Document doc;
@@ -156,7 +156,7 @@ public class MockListRecords extends ListRecords{
    * } catch (XmlDomException xde) {
    *   logger.error("", xde);
    * }
-   * Element elm = (Element) doc.createElement("error"); 
+   * Element elm = (Element) doc.createElement("error");
    * elm.setAttribute("code", "badArgument");
    * elm.appendChild( doc.createTextNode("This is an error statement") );
    *
@@ -171,14 +171,14 @@ public class MockListRecords extends ListRecords{
     while (numGetErrorExceptionThrown > 0) {
       throw getErrorException;
     }
-    return new MockNodeList().addNode(errElm);  
+    return new MockNodeList().addNode(errElm);
   }
 
   /**
    * set a node list in a particular format
    *
    * e.g.
-   * Element elm = (Element) doc.createElement("error"); 
+   * Element elm = (Element) doc.createElement("error");
    * elm.setAttribute("code", "InGetErrorsInMyMockListRecords");
    * elm.appendChild( doc.createTextNode("This is an error statement") );
    */
@@ -187,12 +187,12 @@ public class MockListRecords extends ListRecords{
   }
 
   public NodeList getNodeList(String xpath){
-    
+
     return null;
   }
-  
+
   public String getResumptionToken() throws NoSuchFieldException, TransformerException{
-      
+
     while (numGetResumptionTokenExceptionThrown > 0) {
       if ( getResumptionTokenException instanceof NoSuchFieldException){
 	throw (NoSuchFieldException) getResumptionTokenException;
@@ -200,12 +200,12 @@ public class MockListRecords extends ListRecords{
 	throw (TransformerException) getResumptionTokenException;
       }
     }
-  
+
     return null;
   }
 
   public String toString() {
     return "[MockListRecords: ]";
   }
-  
+
 }

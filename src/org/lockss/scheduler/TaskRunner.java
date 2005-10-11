@@ -1,5 +1,5 @@
 /*
- * $Id: TaskRunner.java,v 1.34 2005-10-06 08:21:56 tlipkis Exp $
+ * $Id: TaskRunner.java,v 1.35 2005-10-11 05:46:42 tlipkis Exp $
  */
 
 /*
@@ -138,7 +138,7 @@ class TaskRunner {
 
   void stopService() {
     stopStepThread();
-  }    
+  }
 
   private void registerConfigCallback() {
     Configuration.registerConfigurationCallback(new Configuration.Callback() {
@@ -324,7 +324,7 @@ class TaskRunner {
       SchedulableTask task = (SchedulableTask)iter.next();
       if (task.isExpired()) {
 	if (task.isBackgroundTask()) {
-	  Schedule.BackgroundEvent event = 
+	  Schedule.BackgroundEvent event =
 	    new Schedule.BackgroundEvent((BackgroundTask)task, Deadline.in(0),
 					 Schedule.EventType.FINISH);
 	  extraBackgroundEvents.add(event);
@@ -403,7 +403,7 @@ class TaskRunner {
       return;
     }
     if (log.isDebug2()) log.debug2("Background task finished early: " + task);
-    Schedule.BackgroundEvent event = 
+    Schedule.BackgroundEvent event =
       new Schedule.BackgroundEvent(task, Deadline.in(0),
 				   Schedule.EventType.FINISH);
     if (true) {
@@ -428,7 +428,7 @@ class TaskRunner {
     // prevent any pending events from taking action
     task.setFinished();
     task.setNotified();
-    // remove all traces of task    
+    // remove all traces of task
     boolean res = acceptedTasks.remove(task);
     if (task.isBackgroundTask()) {
       removeFromBackgroundTasks((BackgroundTask)task);
@@ -720,7 +720,7 @@ class TaskRunner {
       }
     }
   }
-      
+
   boolean addToBackgroundTasks(BackgroundTask task) {
     if (backgroundTasks.add(task)) {
       backgroundLoadFactor += task.getLoadFactor();

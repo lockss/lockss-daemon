@@ -1,5 +1,5 @@
 /*
- * $Id: GoslingHtmlParser.java,v 1.33 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: GoslingHtmlParser.java,v 1.34 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -319,7 +319,7 @@ public class GoslingHtmlParser implements ContentParser {
       case 'a': //<a href=http://www.yahoo.com>
       case 'A':
 	//optimization, since we just have to check a single char
-	if (Character.isWhitespace(link.charAt(1))) { 
+	if (Character.isWhitespace(link.charAt(1))) {
           returnStr = getAttributeValue(HREF, link);
         } else {
 	  if (beginsWithTag(link, APPLETTAG)) {
@@ -453,7 +453,7 @@ public class GoslingHtmlParser implements ContentParser {
   protected String resolveUri(URL base, String relative)
       throws MalformedURLException {
     if(base != null && "javascript".equalsIgnoreCase(base.getProtocol())
-       || 
+       ||
        relative != null && StringUtil.startsWithIgnoreCase(relative,
 							   "javascript:")) {
       return resolveJavascriptUrl(base, relative);
@@ -530,7 +530,7 @@ public class GoslingHtmlParser implements ContentParser {
     }
     return sb.toString();
   }
-  
+
   private String getTokensUntilWhite(StringTokenizer st, StringBuffer sb) {
     if (sb == null) {
       sb = new StringBuffer(EST_URL_LENGTH);
@@ -544,7 +544,7 @@ public class GoslingHtmlParser implements ContentParser {
     }
     return sb.toString();
   }
-  
+
 
   boolean isWhitespace(String token) {
     if (Character.isWhitespace(token.charAt(0))) {

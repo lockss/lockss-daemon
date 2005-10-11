@@ -1,5 +1,5 @@
 /*
- * $Id: PersistentPluginState.java,v 1.3 2005-08-31 22:52:53 rebeccai Exp $
+ * $Id: PersistentPluginState.java,v 1.4 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ import org.lockss.util.urlconn.*;
  *  the crawl rules or validating the plugin.
  *
  *  PersistentPluginState is currently instantiated once as a member
- *  of an EditableDefinablePlugin object.  
+ *  of an EditableDefinablePlugin object.
  *
  *  Author:  Rebecca Illowsky
  *  Created: 8/31/05

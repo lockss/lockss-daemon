@@ -1,5 +1,5 @@
 /*
- * $Id: CommonParameters.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: CommonParameters.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.daemon.status.XmlStatusConstants;
 public interface CommonParameters {
   /*
    * Common parameters
-   * 
+   *
    * Agent name and version (used as HTTP User-Agent)
    */
   final static String   COM_USER_AGENT      = "UIAGENT/1.0";
@@ -48,7 +48,7 @@ public interface CommonParameters {
    */
   final static String   COM_UI_VERSION      = "0.1";
   /*
-   * XML version attribute name 
+   * XML version attribute name
    */
   final static String   COM_XML_VERSIONNAME = XmlDomBuilder.XML_VERSIONNAME;
   /*
@@ -57,12 +57,12 @@ public interface CommonParameters {
   final static String   COM_E_STATUS        = "status";
   final static String   COM_E_MESSAGE       = "message";
   final static String   COM_E_DETAIL        = "detail";
-  
+
   final static String   COM_A_SUCCESS       = "success";
   final static String   COM_A_COMMAND       = "command";
   final static String   COM_A_DATE          = "date";
   final static String   COM_A_SYSTEM        = "system";
-  
+
   /*
    * Some common values
    */
@@ -71,8 +71,8 @@ public interface CommonParameters {
                                             = "**";
 
   final static String   COM_TRUE            = "true";
-  final static String   COM_FALSE           = "false"; 
+  final static String   COM_FALSE           = "false";
 
   final static String   COM_CR              = "\r";
   final static String   COM_LF              = "\n";
-} 
+}

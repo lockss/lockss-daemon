@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpUtil.java,v 1.1 2005-09-14 00:33:40 thib_gc Exp $
+ * $Id: TestIcpUtil.java,v 1.2 2005-10-11 05:51:04 tlipkis Exp $
  */
 
 /*
@@ -60,5 +60,5 @@ public class TestIcpUtil extends TestCase {
       op++;
     } while (op > Byte.MIN_VALUE);
   }
-  
+
 }

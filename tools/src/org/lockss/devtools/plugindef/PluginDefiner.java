@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.13 2005-10-07 21:48:47 troberts Exp $
+ * $Id: PluginDefiner.java,v 1.14 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -268,7 +268,7 @@ public class PluginDefiner extends JFrame {
 
   void jMenuFileSave_actionPerformed(ActionEvent e) {
       if(e.getActionCommand().equals("SaveAs") ||
-       edp == null || 
+       edp == null ||
        edp.getPluginState().getSaveFileName()[PersistentPluginState.NAME].equals("")) {
 	  int option = jFileChooser1.showSaveDialog(this);
 	  if(option != JFileChooser.APPROVE_OPTION ||
@@ -341,7 +341,7 @@ public class PluginDefiner extends JFrame {
       }
     }
   }
-  
+
   boolean checkValidatePlugin(){
       if(edp.getPluginState().getDirtyBit(ValidatePluginDialog.DIRTY_BIT_VALIDATE_KEY).equals("off"))
 	  return true;
@@ -395,7 +395,7 @@ public class PluginDefiner extends JFrame {
     dialog.show();
   }
 
-   
+
 }
 
 class Configurator_jMenuFileExit_ActionAdapter implements ActionListener {

@@ -1,5 +1,5 @@
 /*
- * $Id: MockUrlCacher.java,v 1.29 2005-10-04 22:58:06 tlipkis Exp $
+ * $Id: MockUrlCacher.java,v 1.30 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -212,8 +212,8 @@ public class MockUrlCacher implements UrlCacher {
 //     if (!forceRefetch && cu.hasContent()) {
     if (cu.hasContent()) {
       return CACHE_RESULT_NOT_MODIFIED;
-    } 
-    
+    }
+
     //otherwise, mark that there is content and send a fetched response
 
     if (cu != null) {

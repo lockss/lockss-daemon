@@ -1,5 +1,5 @@
 /*
- * $Id: TestXmlPropertyLoader.java,v 1.15 2005-08-23 22:05:44 tlipkis Exp $
+ * $Id: TestXmlPropertyLoader.java,v 1.16 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -370,7 +370,7 @@ public class TestXmlPropertyLoader extends LockssTestCase {
 
   public void testNullGroup() throws Exception {
     setVersions(null, null, null, null);
-    parseXmlProperties();    
+    parseXmlProperties();
     assertNull(m_props.get("org.lockss.test.q"));
     assertNull(m_props.get("org.lockss.test.r"));
     assertNull(m_props.get("org.lockss.nulltest.c"));

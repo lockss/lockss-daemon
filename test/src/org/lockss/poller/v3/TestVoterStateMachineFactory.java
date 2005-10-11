@@ -1,5 +1,5 @@
 /*
- * $Id: TestVoterStateMachineFactory.java,v 1.5 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestVoterStateMachineFactory.java,v 1.6 2005-10-11 05:50:29 tlipkis Exp $
  */
 
 /*
@@ -261,7 +261,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     assertIsomorphic(ListUtil.fromArray(expectedResults),
                      (List)interp.getUserData());
   }
-  
+
   /**  Error in VerifyPollEffort */
   public void testVerifyPollEffortError() throws Exception {
     PsmMachine mach = VoterStateMachineFactory.getMachine(Errors2.class);
@@ -383,10 +383,10 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
     assertTrue(interp.isFinalState());
     String[] expectedResults = new String[] {"initialize", "verifyPollEffort",
 					     "provePollAck", "sendPollAck", "receivePollProof",
-					     "verifyPollProof", "sendNominate", 
+					     "verifyPollProof", "sendNominate",
 					     "generateVote", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
-		     (List)interp.getUserData());    
+		     (List)interp.getUserData());
   }
 
   /**  Error in SendVote */
@@ -480,7 +480,7 @@ public class TestVoterStateMachineFactory extends LockssTestCase {
 					     "sendRepair", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
-  } 
+  }
 
   /**  Error in ProcessingReceipt */
   public void testProcessReceiptError() throws Exception {

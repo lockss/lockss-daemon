@@ -1,5 +1,5 @@
 /*
- * $Id: MockSocket.java,v 1.1 2004-08-09 02:57:24 tlipkis Exp $
+ * $Id: MockSocket.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ public class MockSocket extends Socket {
   public void shutdownInput() throws IOException {
     throw new UnsupportedOperationException("Not implemented");
   }
-    
+
   public void shutdownOutput() throws IOException {
     throw new UnsupportedOperationException("Not implemented");
   }

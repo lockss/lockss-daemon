@@ -1,5 +1,5 @@
 /*
- * $Id: TestMemoryBoundFunctionVote.java,v 1.17 2005-08-31 23:19:02 troberts Exp $
+ * $Id: TestMemoryBoundFunctionVote.java,v 1.18 2005-10-11 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
    * Set up the test case by creating the two basis arrays and a good
    * and a bad content array (if necessary),  and creating the necessary
    * factory instances, poll ID and voter ID.
-   * 
+   *
    * @throws Exception should not happen
    */
   protected void setUp() throws Exception {
@@ -110,7 +110,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     idmgr = theDaemon.getIdentityManager();
     if (false)
       rand = new Random(100);
-    else 
+    else
       rand = new Random(System.currentTimeMillis());
     if (basisT == null) {
       basisT = new byte[/* 16* */ 1024*1024];
@@ -280,7 +280,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
       for (int i = 0; i < MBFfactory.length; i++)
 	invalidNonce(i, j);
   }
-    
+
   /*
    * Test verifying a vote which should agree.
    */
@@ -339,9 +339,9 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     int fail = 0;
     onePair(i, j, cus1, cus2, nonce1, nonce2, true, false, 1000000);
   }
-  
+
   private void onePair(int i, int j,
-		       CachedUrlSet cus1, 
+		       CachedUrlSet cus1,
 		       CachedUrlSet cus2,
 		       byte[] nonce1,
 		       byte[] nonce2,
@@ -575,7 +575,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     byte[] content = new byte[bytes];
     for (int i = 0; i < content.length; i++)
       content[i] = badContent[ i % badContent.length];
-    ret.setContentToBeHashed(content); 
+    ret.setContentToBeHashed(content);
     ret.setArchivalUnit(au);
     ret.setContentHasher(hash);
     return (ret);
@@ -589,7 +589,7 @@ public class TestMemoryBoundFunctionVote extends LockssTestCase {
     byte[] nonce = new byte[bytes/2];
     for (int i = 0; i < nonce.length; i++)
       nonce[i] = goodContent[i % goodContent.length];
-    ret.setContentToBeHashed(nonce); 
+    ret.setContentToBeHashed(nonce);
     ret.setArchivalUnit(au);
     ret.setContentHasher(hash);
     return (ret);

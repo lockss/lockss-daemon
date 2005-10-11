@@ -1,5 +1,5 @@
 /*
- * $Id: TestFilterCharRing.java,v 1.1 2003-09-10 22:59:33 troberts Exp $
+ * $Id: TestFilterCharRing.java,v 1.2 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -124,7 +124,7 @@ public class TestFilterCharRing extends LockssTestCase {
     } catch (IllegalArgumentException e) {
     }
   }
-  
+
   public void testRefillEmptyBuffer() throws IOException {
     FilterCharRing ring = new FilterCharRing(10);
     assertFalse(ring.refillBuffer(new StringReader("1234567890")));

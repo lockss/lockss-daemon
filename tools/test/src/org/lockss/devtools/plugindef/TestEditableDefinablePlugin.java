@@ -1,5 +1,5 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.12 2005-10-07 21:48:47 troberts Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.13 2005-10-11 05:53:19 tlipkis Exp $
  */
 
 /*
@@ -273,7 +273,7 @@ public class TestEditableDefinablePlugin
   }
 
   public void testSetAndRemoveAuCrawlWindow() {
-   
+
     CrawlWindow defWindow = null;
     CrawlWindow actWindow = null;
     Calendar start = Calendar.getInstance();

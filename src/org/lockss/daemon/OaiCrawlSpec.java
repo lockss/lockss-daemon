@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawlSpec.java,v 1.6 2005-05-20 23:44:57 troberts Exp $
+ * $Id: OaiCrawlSpec.java,v 1.7 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 
   //XXXOAI for testing purposes ------------------------
   public OaiCrawlSpec(String oaiRequestHandlerUrl, CrawlRule rule) {
-    this(new OaiRequestData(oaiRequestHandlerUrl, "", new Oai_dcHandler()), 
+    this(new OaiRequestData(oaiRequestHandlerUrl, "", new Oai_dcHandler()),
 	 ListUtil.list("http://171.66.236.27:8181/html/permission.html"),
 	 Collections.EMPTY_LIST,
  	 rule,
@@ -59,7 +59,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 // 			 "http://purl.org/dc/elements/1.1/",
 // 			 "identifier",
 // 			 "",
-// 			 "oai_dc"), 
+// 			 "oai_dc"),
 // 	 ListUtil.list("http://171.66.236.27:8181/html/permission.html"),
 // 	 Collections.EMPTY_LIST,
 //  	 rule,
@@ -71,7 +71,7 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
 			    "http://purl.org/dc/elements/1.1/",
 			    "identifier",
 			    "",
-			    "oai_dc"), 
+			    "oai_dc"),
 	 permissionList,
 	 Collections.EMPTY_LIST,
  	 rule,
@@ -80,11 +80,11 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
   }
 
   //----------------------------------------------------
-		      
+
   /**
    * Construct an OaiCrawlSpec with an OaiRequestData object, permission urls,
    * permission checkers, crawl rule and a follow link flag
-   * 
+   *
    * @param oaiRequestData the object contain all the information for issuing
    * and Oai request and do the proper parsing in the response.
    * @param permissionUrls a list of urls from which permission can be obtained.
@@ -108,14 +108,14 @@ public class OaiCrawlSpec extends BaseCrawlSpec {
     this.followLink = followLink;
   }
 
-  /** 
+  /**
    * Gets the oaiRequestData object and return it.
    * @return the oaiRequestData object
    */
   public OaiRequestData getOaiRequestData(){
     return oaiRequestData;
   }
-  
+
   /**
    * Check if the crawler need to follow the link it parsed.
    * @return true iff the crawl is a follow link crawl

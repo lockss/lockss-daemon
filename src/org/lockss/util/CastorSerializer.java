@@ -1,5 +1,5 @@
 /*
- * $Id: CastorSerializer.java,v 1.5 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: CastorSerializer.java,v 1.6 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -75,7 +75,7 @@ public class CastorSerializer extends ObjectSerializer {
 
   /*
    * IMPLEMENTATION NOTES
-   * 
+   *
    * This class was created in the process of refactoring all XML
    * marshalling code previously in org.lockss.util.XmlMarshaller
    * (which may no longer be around when someone next reads this).
@@ -83,11 +83,11 @@ public class CastorSerializer extends ObjectSerializer {
    * that had no business knowing about Castor and data binding
    * frameworks, and to enable phasing out Castor and phasing in
    * XStream.
-   * 
+   *
    * Marshalling with Castor requires mapping files, but I do not
    * know how the ones that were already in the codebase were
    * originally produced.
-   * 
+   *
    * If you are trying to figure out from digging back in CVS
    * history how XmlMarshaller worked, the summary is:
    *  * The basic functionality came from storeToWriter and
@@ -102,14 +102,14 @@ public class CastorSerializer extends ObjectSerializer {
    * being processed by this instance.</p>
    */
   private Class targetClass;
-  
+
   /**
    * <p>The {@link org.exolab.castor.mapping.Mapping} object
    * governing the processing of objects of the class represented by
    * {@link #targetClass}.</p>
    */
   private Mapping targetMapping;
-  
+
   /**
    * <p>Builds a new CastorSerializer instance.</p>
    * @param lockssContext A serialization context object.
@@ -131,7 +131,7 @@ public class CastorSerializer extends ObjectSerializer {
   /**
    * <p>Builds a new CastorSerializer instance.</p>
    * @param lockssContext   A serialization context object.
-   * @param mappingFilename A filename where the mapping file for                      
+   * @param mappingFilename A filename where the mapping file for
    *                        objects intended for processing by this
    *                        serializer can be located.
    * @param targetClass     The Class of objects intended for
@@ -163,7 +163,7 @@ public class CastorSerializer extends ObjectSerializer {
   /**
    * <p>Builds a new CastorSerializer instance.</p>
    * <p>Uses a null context.</p>
-   * @param mappingFilename A filename where the mapping file for                      
+   * @param mappingFilename A filename where the mapping file for
    *                        objects intended for processing by this
    *                        serializer can be located.
    * @param targetClass     The Class of objects intended for
@@ -174,7 +174,7 @@ public class CastorSerializer extends ObjectSerializer {
                           Class targetClass) {
     this(null, mappingFilename, targetClass);
   }
-  
+
   /* Inherit documentation */
   public Object deserialize(Reader reader)
       throws IOException, SerializationException {
@@ -229,13 +229,13 @@ public class CastorSerializer extends ObjectSerializer {
       throw failSerialize(validationE, obj);
     }
   }
-  
+
   /**
    * <p>A cache for previously requested mappings.</p>
    */
   private static HashMap mappingCache = new HashMap();
   // JAVA5: HashMap<Set<String>,Mapping> or similar
-  
+
   /**
    * <p>Convenience method to obtain a Mapping instance corresponding
    * to the given file name.</p>
@@ -249,7 +249,7 @@ public class CastorSerializer extends ObjectSerializer {
     set.add(filename);
     return getMapping(set);
   }
-  
+
   /**
    * <p>Convenience method to obtain a Mapping instance corresponding
    * to all the given file names.</p>
@@ -263,7 +263,7 @@ public class CastorSerializer extends ObjectSerializer {
     set.addAll(Arrays.asList(filenames));
     return getMapping(set);
   }
-  
+
   /**
    * <p>An exception message formatter used when loading a mapping
    * file fails.</p>
@@ -279,7 +279,7 @@ public class CastorSerializer extends ObjectSerializer {
   }
 
   /**
-   * <p>Retrieves a Mapping instance that encapsulates all the 
+   * <p>Retrieves a Mapping instance that encapsulates all the
    * filenames contained in the argument set.</p>
    * @param filenames A set of filenames where the mappings are
    *                  stored.
@@ -287,9 +287,9 @@ public class CastorSerializer extends ObjectSerializer {
    */
   private static synchronized Mapping getMapping(Set filenames) {
     // JAVA5: Set<String>
-    
+
     Mapping mapping = (Mapping)mappingCache.get(filenames);
-    
+
     if (mapping == null) {
       // This request is not cached yet
       mapping = new Mapping();
@@ -297,14 +297,14 @@ public class CastorSerializer extends ObjectSerializer {
       while (iterator.hasNext()) {
         loadMapping((String)iterator.next(), mapping);
       }
-      
+
       // Cache result
       mappingCache.put(filenames, mapping);
     }
-    
+
     return mapping;
   }
-  
+
   /**
    * <p>Loads a mapping from the given filename into the argument of
    * type {@link Mapping}.</p>
@@ -324,5 +324,5 @@ public class CastorSerializer extends ObjectSerializer {
       throw failLoadMapping(fromFilename);
     }
   }
-  
+
 }

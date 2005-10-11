@@ -1,5 +1,5 @@
 /*
- * $Id: FuncClock.java,v 1.6 2005-10-10 23:48:55 troberts Exp $
+ * $Id: FuncClock.java,v 1.7 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
 
 public class FuncClock extends LockssTestCase {
   private static Logger log = Logger.getLogger("TestClock");
-  
+
   public void testClockResolution() throws Exception {
     long start = System.currentTimeMillis();
     long now = start;
@@ -95,7 +95,7 @@ public class FuncClock extends LockssTestCase {
 	if (slept < sleep) return;
       }
     }
-    
+
     fail("sleep() was not interrupted");
   }
 }

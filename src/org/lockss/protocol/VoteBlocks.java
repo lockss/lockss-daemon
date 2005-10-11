@@ -18,7 +18,7 @@ public interface VoteBlocks extends LockssSerializable {
   public Iterator iterator();
 
   public int size();
-  
+
   public static class NoSuchBlockException extends Exception {
     NoSuchBlockException() { super(); }
     NoSuchBlockException(String msg) { super(msg); }

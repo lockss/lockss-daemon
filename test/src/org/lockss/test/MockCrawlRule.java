@@ -1,5 +1,5 @@
 /*
- * $Id: MockCrawlRule.java,v 1.2 2004-06-10 22:03:55 tyronen Exp $
+ * $Id: MockCrawlRule.java,v 1.3 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ public class MockCrawlRule implements CrawlRule {
   public void addUrlToCrawl(String url) {
     urlsToCrawl.add(url);
   }
-  
+
   public int match(String url) {
     return urlsToCrawl.contains(url) ? CrawlRule.INCLUDE : CrawlRule.IGNORE;
   }

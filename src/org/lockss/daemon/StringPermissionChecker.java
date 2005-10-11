@@ -1,5 +1,5 @@
 /*
- * $Id: StringPermissionChecker.java,v 1.5 2005-05-13 17:42:56 troberts Exp $
+ * $Id: StringPermissionChecker.java,v 1.6 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class StringPermissionChecker implements PermissionChecker {
     } catch (IOException ex) {
       m_logger.warning("Exception occured while checking for permission: "
                        + ex.toString());
-    } 
+    }
 
     return false;
   }

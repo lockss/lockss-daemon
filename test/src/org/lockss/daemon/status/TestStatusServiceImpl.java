@@ -1,5 +1,5 @@
 /*
- * $Id: TestStatusServiceImpl.java,v 1.17 2004-05-04 22:18:01 tlipkis Exp $
+ * $Id: TestStatusServiceImpl.java,v 1.18 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -50,7 +50,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"DD", "4"}
   };
 
-  private static final List sortRules1 = 
+  private static final List sortRules1 =
     ListUtil.list(new StatusTable.SortRule("name", true));
 
   private static final Object[][] colArray2 = {
@@ -67,14 +67,14 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"Cache G"}
   };
 
-  private static final List sortRules2 = 
+  private static final List sortRules2 =
     ListUtil.list(new StatusTable.SortRule("cache", true));
 
   private static final Object[][] colArray3 = {
     {"name", "Name", new Integer(ColumnDescriptor.TYPE_STRING)},
     {"rank", "Rank", new Integer(ColumnDescriptor.TYPE_INT)},
   };
-  
+
   private static final Object[][] rowArray3 = {
     {"Cache B", new Integer(1)},
     {"Cache A", new Integer(2)},
@@ -86,7 +86,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"rank", "Rank", new Integer(ColumnDescriptor.TYPE_INT)},
     {"secondRank", "SecondRank", new Integer(ColumnDescriptor.TYPE_INT)},
   };
-  
+
   private static final Object[][] rowArray4 = {
     {"AName", new Integer(0), new Integer(400)},
     {"BName", new Integer(2), new Integer(450)},
@@ -101,9 +101,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
     super.setUp();
     statusService = new StatusServiceImpl();
   }
-    
 
-  public void testGetTableWithNullTableNameThrows() 
+
+  public void testGetTableWithNullTableNameThrows()
       throws StatusService.NoSuchTableException {
     try {
       statusService.getTable(null, "blah");
@@ -132,17 +132,17 @@ public class TestStatusServiceImpl extends LockssTestCase {
   public void testRegisteringAllTableThrows() {
     try {
       statusService.startService(); //registers table of all tables
-      statusService.registerStatusAccessor(StatusService.ALL_TABLES_TABLE, 
+      statusService.registerStatusAccessor(StatusService.ALL_TABLES_TABLE,
 					   new MockStatusAccessor());
       fail("Should have thrown after trying to register StatusAccessor for "+
 	   "all tables");
     } catch (StatusService.MultipleRegistrationException re) {
     }
-  }    
+  }
 
   public void testRegisteringInvalidTableNameThrows() {
     try {
-      statusService.registerStatusAccessor("!Table", 
+      statusService.registerStatusAccessor("!Table",
 					   new MockStatusAccessor());
       fail("Should have thrown after trying to register StatusAccessor "+
 	   "with bad table name");
@@ -150,13 +150,13 @@ public class TestStatusServiceImpl extends LockssTestCase {
     }
 
     try {
-      statusService.registerStatusAccessor("name with spaces", 
+      statusService.registerStatusAccessor("name with spaces",
 					   new MockStatusAccessor());
       fail("Should have thrown after trying to register StatusAccessor "+
 	   "with bad table name");
     } catch (StatusService.InvalidTableNameException re) {
     }
-  }    
+  }
 
   public void testUnregisteringBadDoesntThrow() {
     statusService.unregisterStatusAccessor("table1");
@@ -177,7 +177,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
   public void testGetTableHasName()
       throws StatusService.NoSuchTableException {
     MockStatusAccessor statusAccessor =
-      MockStatusAccessor.generateStatusAccessor(colArray1, 
+      MockStatusAccessor.generateStatusAccessor(colArray1,
 						rowArray1);
     statusAccessor.setDefaultSortRules(sortRules1, null);
     statusService.registerStatusAccessor("table1", statusAccessor);
@@ -187,10 +187,10 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertNull(table.getKey());
   }
 
-  public void testGetTableHasKey() 
+  public void testGetTableHasKey()
       throws StatusService.NoSuchTableException {
     String key = "theKey";
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
     statusService.registerStatusAccessor("table1", statusAccessor);
@@ -198,11 +198,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertEquals(key, table.getKey());
   }
 
-  public void testGetTableTitle() 
+  public void testGetTableTitle()
       throws StatusService.NoSuchTableException {
     String key = "theKey";
     String tableTitle = "Table title";
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
     statusAccessor.setTitle(tableTitle, key);
@@ -217,15 +217,15 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"SummaryInfo3", new Integer(ColumnDescriptor.TYPE_STRING), "SummaryInfo value 3"}
   };
 
-  public void testGetTableSummaryInfo() 
+  public void testGetTableSummaryInfo()
       throws StatusService.NoSuchTableException {
     String key = "theKey";
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1,
 						key, summaryInfo);
 
     statusAccessor.setDefaultSortRules(sortRules1, key);
-    statusService.registerStatusAccessor("table1", statusAccessor); 
+    statusService.registerStatusAccessor("table1", statusAccessor);
 
     StatusTable table = statusService.getTable("table1", key);
     List expectedSummaryInfo =
@@ -239,9 +239,9 @@ public class TestStatusServiceImpl extends LockssTestCase {
     Iterator expectedIt = expected.iterator();
     Iterator actualIt = actual.iterator();
     while(expectedIt.hasNext()) {
-      StatusTable.SummaryInfo expectedSInfo = 
+      StatusTable.SummaryInfo expectedSInfo =
 	(StatusTable.SummaryInfo)expectedIt.next();
-      StatusTable.SummaryInfo actualSInfo = 
+      StatusTable.SummaryInfo actualSInfo =
 	(StatusTable.SummaryInfo)actualIt.next();
       assertEquals(expectedSInfo.getTitle(), actualSInfo.getTitle());
       assertEquals(expectedSInfo.getType(), actualSInfo.getType());
@@ -249,8 +249,8 @@ public class TestStatusServiceImpl extends LockssTestCase {
     }
     assertFalse(actualIt.hasNext());
   }
-  
-  public void testGetTableWithKey() 
+
+  public void testGetTableWithKey()
       throws StatusService.NoSuchTableException {
     String key = "key1";
     MockStatusAccessor statusAccessor =
@@ -258,12 +258,12 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusAccessor.setDefaultSortRules(sortRules1, key);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
-    
+
     StatusTable table = statusService.getTable("table1", key);
 
     List expectedColumns =
       MockStatusAccessor.makeColumnDescriptorsFrom(colArray1);
-    assertColumnDescriptorsEqual(expectedColumns, 
+    assertColumnDescriptorsEqual(expectedColumns,
 				 table.getColumnDescriptors());
 
     List expectedRows =
@@ -272,11 +272,11 @@ public class TestStatusServiceImpl extends LockssTestCase {
   }
 
 
-  public void testGetTablesWithDifferentKeys() 
+  public void testGetTablesWithDifferentKeys()
       throws StatusService.NoSuchTableException {
     String key1 = "key1";
     String key2 = "key2";
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray1, rowArray1, key1);
     statusAccessor.setDefaultSortRules(sortRules1, key1);
 
@@ -285,13 +285,13 @@ public class TestStatusServiceImpl extends LockssTestCase {
     statusAccessor.setDefaultSortRules(sortRules2, key2);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
-    
+
     StatusTable table = statusService.getTable("table1", key1);
     assertNotNull(table);
 
     List expectedColumns =
       MockStatusAccessor.makeColumnDescriptorsFrom(colArray1);
-    assertColumnDescriptorsEqual(expectedColumns, 
+    assertColumnDescriptorsEqual(expectedColumns,
 				 table.getColumnDescriptors());
 
     List expectedRows =
@@ -302,14 +302,14 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertNotNull(table);
 
     expectedColumns = MockStatusAccessor.makeColumnDescriptorsFrom(colArray2);
-    assertColumnDescriptorsEqual(expectedColumns, 
+    assertColumnDescriptorsEqual(expectedColumns,
 				 table.getColumnDescriptors());
 
     expectedRows = MockStatusAccessor.makeRowsFrom(expectedColumns, rowArray2);
     assertRowsEqual(expectedRows, table.getSortedRows());
   }
-  
-  public void testSortsByAscStrings() 
+
+  public void testSortsByAscStrings()
       throws StatusService.NoSuchTableException {
     StatusTable.SortRule rule = new StatusTable.SortRule("name", true);
     List sortRules = ListUtil.list(rule);
@@ -318,21 +318,21 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[0] = rowArray3[1];
     expectedRowsArray[1] = rowArray3[0];
     expectedRowsArray[2] = rowArray3[2];
-    
+
     MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
-    List expectedRows = 
+    List expectedRows =
       MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3),
 				      expectedRowsArray);
     List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
-  
-  public void testGetTableSortsDescStrings() 
+
+  public void testGetTableSortsDescStrings()
       throws StatusService.NoSuchTableException {
     StatusTable.SortRule rule = new StatusTable.SortRule("name", false);
     List sortRules = ListUtil.list(rule);
@@ -348,14 +348,14 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
-    List expectedRows = 
-      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3),
 				      expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
 
-  public void testGetTableSortsNumsAsc() 
+  public void testGetTableSortsNumsAsc()
       throws StatusService.NoSuchTableException {
     StatusTable.SortRule rule = new StatusTable.SortRule("rank", true);
     List sortRules = ListUtil.list(rule);
@@ -365,46 +365,46 @@ public class TestStatusServiceImpl extends LockssTestCase {
     expectedRowsArray[1] = rowArray3[0];
     expectedRowsArray[2] = rowArray3[1];
 
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusAccessor.setDefaultSortRules(sortRules, null);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
-    List expectedRows = 
-      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3),
 				      expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
 
-  public void testGetTableSortsMultiCols() 
+  public void testGetTableSortsMultiCols()
       throws StatusService.NoSuchTableException {
-    List sortRules = 
+    List sortRules =
       ListUtil.list(new StatusTable.SortRule("name", false),
 		    new StatusTable.SortRule("rank", true),
 		    new StatusTable.SortRule("secondRank", false));
-    
+
     Object[][] expectedRowsArray = new Object[5][];
     expectedRowsArray[0] = rowArray4[4];
     expectedRowsArray[1] = rowArray4[1];
     expectedRowsArray[2] = rowArray4[3];
     expectedRowsArray[3] = rowArray4[2];
     expectedRowsArray[4] = rowArray4[0];
-    
+
     MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray4, rowArray4);
     statusAccessor.setDefaultSortRules(sortRules, null);
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
-    List expectedRows = 
+    List expectedRows =
       MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray4),
 				      expectedRowsArray);
     List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
-  
-  public void testSortsByNonDefaultRules() 
+
+  public void testSortsByNonDefaultRules()
       throws StatusService.NoSuchTableException {
     List sortRules = ListUtil.list(new StatusTable.SortRule("name", false));
 
@@ -419,14 +419,14 @@ public class TestStatusServiceImpl extends LockssTestCase {
 
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
-    List expectedRows = 
-      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3),
 				      expectedRowsArray);
     List actualRows = table.getSortedRows(sortRules);
     assertRowsEqual(expectedRows, actualRows);
   }
 
-  public void testSortsByDefaultDefaultRules() 
+  public void testSortsByDefaultDefaultRules()
       throws StatusService.NoSuchTableException {
     Object[][] expectedRowsArray = new Object[3][];
     expectedRowsArray[0] = rowArray3[1];
@@ -437,20 +437,20 @@ public class TestStatusServiceImpl extends LockssTestCase {
       MockStatusAccessor.generateStatusAccessor(colArray3, rowArray3);
     statusService.registerStatusAccessor("table1", statusAccessor);
     StatusTable table = statusService.getTable("table1", null);
-    List expectedRows = 
-      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3), 
+    List expectedRows =
+      MockStatusAccessor.makeRowsFrom(MockStatusAccessor.makeColumnDescriptorsFrom(colArray3),
 				      expectedRowsArray);
     List actualRows = table.getSortedRows();
     assertRowsEqual(expectedRows, actualRows);
   }
 
-  static Object[][] allTablesExpectedColArray = 
+  static Object[][] allTablesExpectedColArray =
   {
     {"table_name", "Available Tables",
      new Integer(ColumnDescriptor.TYPE_STRING)}
   };
 
-  static Object[][] allTablesExpectedRowArray = 
+  static Object[][] allTablesExpectedRowArray =
   {
     {new StatusTable.Reference("MockStatusAccessor", "A_table", null)},
     {new StatusTable.Reference("MockStatusAccessor", "B_table", null)},
@@ -458,7 +458,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {new StatusTable.Reference("MockStatusAccessor", "Z_table", null)},
   };
 
-  public void testGetTableOfAllTables() 
+  public void testGetTableOfAllTables()
       throws StatusService.NoSuchTableException {
     statusService.startService(); //registers table of all tables
     statusService.registerStatusAccessor("A_table",
@@ -469,28 +469,28 @@ public class TestStatusServiceImpl extends LockssTestCase {
 					 makeMockStatusAccessor("F_table"));
     statusService.registerStatusAccessor("Z_table",
 					 makeMockStatusAccessor("Z_table"));
-    
-    StatusTable table = 
+
+    StatusTable table =
       statusService.getTable(StatusService.ALL_TABLES_TABLE, null);
 
     assertNotNull(table);
-    List expectedCols = 
+    List expectedCols =
       MockStatusAccessor.makeColumnDescriptorsFrom(allTablesExpectedColArray);
-    assertColumnDescriptorsEqual(expectedCols, 
+    assertColumnDescriptorsEqual(expectedCols,
 				 table.getColumnDescriptors());
 
     List expectedRows = MockStatusAccessor.makeRowsFrom(expectedCols,
 					  allTablesExpectedRowArray);
     assertRowsEqualNoOrder(expectedRows, table.getSortedRows());
   }
-  
+
   MockStatusAccessor makeMockStatusAccessor(String title) {
     MockStatusAccessor sa = new MockStatusAccessor();
     sa.setTitle(title, null);
     return sa;
   }
 
-  public void testGetTableOfAllTablesFiltersTablesThatRequireKeys() 
+  public void testGetTableOfAllTablesFiltersTablesThatRequireKeys()
       throws StatusService.NoSuchTableException {
     statusService.startService(); //registers table of all tables
     statusService.registerStatusAccessor("A_table",
@@ -505,22 +505,22 @@ public class TestStatusServiceImpl extends LockssTestCase {
     MockStatusAccessor statusAccessor = new MockStatusAccessor();
     statusAccessor.setRequiresKey(true);
     statusService.registerStatusAccessor("excluded_table", statusAccessor);
-    
-    StatusTable table = 
+
+    StatusTable table =
       statusService.getTable(StatusService.ALL_TABLES_TABLE, null);
 
     assertNotNull(table);
-    List expectedCols = 
+    List expectedCols =
       MockStatusAccessor.makeColumnDescriptorsFrom(allTablesExpectedColArray);
-    assertColumnDescriptorsEqual(expectedCols, 
+    assertColumnDescriptorsEqual(expectedCols,
 				 table.getColumnDescriptors());
 
     List expectedRows = MockStatusAccessor.makeRowsFrom(expectedCols,
 					  allTablesExpectedRowArray);
     assertRowsEqualNoOrder(expectedRows, table.getSortedRows());
   }
-  
-  
+
+
   private static final Object[][] rowArrayWithNulls = {
     {"AA", "1"},
     {"BB", "2"},
@@ -528,21 +528,21 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"DD", "4"}
   };
 
-  public void testNullRowValues() 
+  public void testNullRowValues()
       throws StatusService.NoSuchTableException {
     String key = "key1";
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(colArray1, rowArrayWithNulls,
 						key);
     statusAccessor.setDefaultSortRules(sortRules1, key);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
-    
+
     StatusTable table = statusService.getTable("table1", key);
 
     List expectedColumns =
       MockStatusAccessor.makeColumnDescriptorsFrom(colArray1);
-    assertColumnDescriptorsEqual(expectedColumns, 
+    assertColumnDescriptorsEqual(expectedColumns,
 				 table.getColumnDescriptors());
 
     Object[][] expectedRowsArray = new Object[4][];
@@ -560,24 +560,24 @@ public class TestStatusServiceImpl extends LockssTestCase {
     {"address", "Address", new Integer(ColumnDescriptor.TYPE_IP_ADDRESS)},
     {"name", "Name", new Integer(ColumnDescriptor.TYPE_STRING)}
   };
- 
-  public void testSortsIPAddres() 
+
+  public void testSortsIPAddres()
       throws UnknownHostException, StatusService.NoSuchTableException {
     Object[][] inetAddrRowArray = {
       {IPAddr.getByName("127.0.0.2"), "A"},
       {IPAddr.getByName("127.0.0.1"), "B"},
       {IPAddr.getByName("127.0.0.4"), "C"},
       {IPAddr.getByName("127.0.0.3"), "D"}
-    };    
+    };
     String key = "key1";
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       MockStatusAccessor.generateStatusAccessor(inetAddrColArray,
 						inetAddrRowArray, key);
     List rules = ListUtil.list(new StatusTable.SortRule("address", true));
     statusAccessor.setDefaultSortRules(rules, key);
 
     statusService.registerStatusAccessor("table1", statusAccessor);
-    
+
     StatusTable table = statusService.getTable("table1", key);
 
     List expectedColumns =
@@ -617,7 +617,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
       assertTrue("missing: " + expectedMap, actual.contains(expectedMap));
     }
   }
-  
+
   private void assertColumnDescriptorsEqual(List expected, List actual) {
     assertEquals("Lists had different sizes", expected.size(), actual.size());
     Iterator expectedIt = expected.iterator();
@@ -664,7 +664,7 @@ public class TestStatusServiceImpl extends LockssTestCase {
     assertEquals("table1", ref.getTableName());
   }
 
-  public void testSAThrowsAreTrapped() throws 
+  public void testSAThrowsAreTrapped() throws
     StatusService.NoSuchTableException {
     StatusAccessor statusAccessor = new StatusAccessor() {
 	public String getDisplayName() {

@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpMailService.java,v 1.10 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: SmtpMailService.java,v 1.11 2005-10-11 05:44:51 tlipkis Exp $
  *
 
  Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -125,7 +125,7 @@ public class SmtpMailService
 	}
 	if (!queue.isEmpty()) {
 	  ensureThreadRunning();
-	} 
+	}
 	enabled = doEnable;
       }
     }
@@ -152,7 +152,7 @@ public class SmtpMailService
     queue.put(new Req(sender, recipient, msg));
     ensureThreadRunning();
     return true;
-  }    
+  }
 
   void processReq(Req req) {
     boolean ok = true;

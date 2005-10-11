@@ -1,5 +1,5 @@
 /*
- * $Id: SortScheduler.java,v 1.10 2005-06-04 18:59:53 tlipkis Exp $
+ * $Id: SortScheduler.java,v 1.11 2005-10-11 05:46:42 tlipkis Exp $
  */
 
 /*
@@ -223,7 +223,7 @@ public class SortScheduler implements Scheduler {
 	  log.debug2("initIntrTskList: loadFactor < 0: " + intrvl);
 	return false;
       }
-      
+
       if (ubt.endingTasks != null) {
 	for (Iterator iter = ubt.endingTasks.iterator(); iter.hasNext(); ) {
 	  TaskData etd = (TaskData)iter.next();

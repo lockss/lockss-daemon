@@ -1,5 +1,5 @@
 /*
- * $Id: PollerStateBean.java,v 1.5 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: PollerStateBean.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -41,7 +41,7 @@ import org.lockss.util.*;
  * Persistant state object for the V3Poller.
  */
 public class PollerStateBean implements LockssSerializable {
-  
+
   private LcapMessage pollMessage;
   private String pollKey;
   private long deadline;
@@ -60,7 +60,7 @@ public class PollerStateBean implements LockssSerializable {
   /* Non-serializable transient fields */
   private transient PollSpec spec;
   private transient CachedUrlSet cus;
-  private transient V3PollerSerializer serializer; 
+  private transient V3PollerSerializer serializer;
 
   private static Logger log = Logger.getLogger("PollerStateBean");
 
@@ -70,7 +70,7 @@ public class PollerStateBean implements LockssSerializable {
    * next block, it will consult this counter and only proceed if it is '0'.
    */
   private volatile int hashReadyCounter;
-  
+
   /**
    * Counter of participants who have not yet nominated any peers.
    */
@@ -90,7 +90,7 @@ public class PollerStateBean implements LockssSerializable {
   PollerStateBean(V3PollerSerializer serializer) {
     this.serializer = serializer;
   }
-  
+
   public PollerStateBean(PollSpec spec, PeerIdentity orig, String pollKey,
                          long duration, int pollSize, int maxNomineeCount,
                          int quorum, String hashAlg, V3PollerSerializer serializer) {
@@ -119,15 +119,15 @@ public class PollerStateBean implements LockssSerializable {
   public void setPollMessage(LcapMessage msg) {
     this.pollMessage = msg;
   }
-  
+
   public LcapMessage getPollMessage() {
     return pollMessage;
   }
-  
+
   public long getCreateTime() {
     return createTime;
   }
-  
+
   public void setPollKey(String id) {
     this.pollKey = id;
     saveState();
@@ -141,7 +141,7 @@ public class PollerStateBean implements LockssSerializable {
     this.pollerId = pollerId;
     saveState();
   }
-  
+
   public PeerIdentity getPollerId() {
     return pollerId;
   }
@@ -159,7 +159,7 @@ public class PollerStateBean implements LockssSerializable {
     this.auId = auId;
     saveState();
   }
-  
+
   public String getAuId() {
     return auId;
   }
@@ -168,7 +168,7 @@ public class PollerStateBean implements LockssSerializable {
     this.pollVersion = pollVersion;
     saveState();
   }
-  
+
   public int getPollVersion() {
     return pollVersion;
   }
@@ -177,7 +177,7 @@ public class PollerStateBean implements LockssSerializable {
     this.pluginVersion = pluginVersion;
     saveState();
   }
-  
+
   public String getPluginVersion() {
     return pluginVersion;
   }
@@ -186,7 +186,7 @@ public class PollerStateBean implements LockssSerializable {
     this.url = url;
     saveState();
   }
-  
+
   public String getUrl() {
     return url;
   }
@@ -199,12 +199,12 @@ public class PollerStateBean implements LockssSerializable {
   public CachedUrlSet getCachedUrlSet() {
     return cus;
   }
-   
+
   public void setPollSpec(PollSpec spec) {
     this.spec = spec;
     // Transient - no need to save state.
   }
-  
+
   public PollSpec getPollSpec() {
     return spec;
   }
@@ -217,7 +217,7 @@ public class PollerStateBean implements LockssSerializable {
   public String getHashAlgorithm() {
     return hashAlgorithm;
   }
-  
+
   public void setSerializer(V3PollerSerializer serializer) {
     this.serializer = serializer;
     // Transient - no need to save state
@@ -231,15 +231,15 @@ public class PollerStateBean implements LockssSerializable {
   public long getDeadline() {
     return deadline;
   }
-  
+
   public int getQuorum() {
     return quorum;
   }
-  
+
   public void setQuorum(int quorum) {
     this.quorum = quorum;
   }
-  
+
   public int getMaxNomineeCount() {
     return maxNomineeCount;
   }
@@ -253,29 +253,29 @@ public class PollerStateBean implements LockssSerializable {
     saveState();
     return idx;
   }
-  
+
   public synchronized void addOuterCircle(PeerIdentity id) {
     if (outerCircleVoters.add(id)) {
       signalVoterAdded(id);
     }
   }
-  
+
   public synchronized void removeOuterCircle(PeerIdentity id) {
     if (outerCircleVoters.remove(id)) {
       signalVoterRemoved(id);
     }
   }
-  
+
   public void signalVoterNominated(PeerIdentity id) {
     nomineeCounter--;
     log.debug3("signalVoterNominated: nomineeCounter=" + nomineeCounter);
     saveState();
   }
-  
+
   public boolean allVotersNominated() {
     return nomineeCounter == 0;
   }
-  
+
   public void signalVoterRemoved(PeerIdentity id) {
     log.debug("signalVoterRemoved being called.", new Throwable("stacktrace"));
     if (!isInOuterCircle(id)) {
@@ -285,18 +285,18 @@ public class PollerStateBean implements LockssSerializable {
     log.debug3("signalVoterRemoved: hashReadyCounter=" + hashReadyCounter);
     saveState();
   }
-  
+
   public void signalVoterAdded(PeerIdentity id) {
     hashReadyCounter++;
     log.debug3("signalVoterAdded: hashReadyCounter=" + hashReadyCounter);
   }
-  
+
   public void signalVoterReadyToTally(PeerIdentity id) {
     hashReadyCounter--;
     log.debug3("signalVoterReadyToTally: hashReadyCounter=" + hashReadyCounter);
     saveState();
   }
-  
+
   public void signalVoterNotReadyToTally(PeerIdentity id) {
     hashReadyCounter++;
     log.debug3("signalVoterNotReadyToTally: hashReadyCounter=" + hashReadyCounter);
@@ -306,11 +306,11 @@ public class PollerStateBean implements LockssSerializable {
   public boolean allVotersReadyToTally() {
     return hashReadyCounter == 0;
   }
-  
+
   public synchronized boolean isInOuterCircle(PeerIdentity id) {
     return outerCircleVoters.contains(id);
   }
-  
+
   public synchronized Iterator getOuterCircleIterator() {
     return outerCircleVoters.iterator();
   }

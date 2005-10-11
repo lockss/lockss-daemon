@@ -1,5 +1,5 @@
 /*
- * $Id: MockURLConnection.java,v 1.6 2003-07-23 23:37:21 troberts Exp $
+ * $Id: MockURLConnection.java,v 1.7 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -47,7 +47,7 @@ public class MockURLConnection extends URLConnection {
     super(url);
   }
 
-    
+
   public static synchronized FileNameMap getFileNameMap() {
     throw new UnsupportedOperationException("Not Implemented");
   }
@@ -185,7 +185,7 @@ public class MockURLConnection extends URLConnection {
   public boolean getUseCaches() {
     throw new UnsupportedOperationException("Not Implemented");
   }
-	
+
   public void setIfModifiedSince(long ifmodifiedsince) {
     throw new UnsupportedOperationException("Not Implemented");
   }
@@ -210,12 +210,12 @@ public class MockURLConnection extends URLConnection {
     throw new UnsupportedOperationException("Not Implemented");
   }
 
-  public static 
+  public static
     synchronized void setContentHandlerFactory(ContentHandlerFactory fac) {
       throw new UnsupportedOperationException("Not Implemented");
     }
 
-  static public String guessContentTypeFromStream(InputStream is) 
+  static public String guessContentTypeFromStream(InputStream is)
       throws IOException {
     throw new UnsupportedOperationException("Not Implemented");
   }

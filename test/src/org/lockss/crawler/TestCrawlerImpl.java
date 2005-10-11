@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.33 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: TestCrawlerImpl.java,v 1.34 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -191,7 +191,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
     PermissionMap pMap = crawler.getPermissionMap();
     assertNotNull(pMap);
-    assertEquals(PermissionRecord.PERMISSION_OK, 
+    assertEquals(PermissionRecord.PERMISSION_OK,
 		 pMap.getStatus("http://example.com/blah.html"));
 
     //verify that it fetched the permission page

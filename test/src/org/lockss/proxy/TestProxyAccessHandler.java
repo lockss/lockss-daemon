@@ -1,5 +1,5 @@
 /*
- * $Id: TestProxyAccessHandler.java,v 1.2 2005-08-30 18:22:20 tlipkis Exp $
+ * $Id: TestProxyAccessHandler.java,v 1.3 2005-10-11 05:51:04 tlipkis Exp $
  */
 
 /*
@@ -138,7 +138,7 @@ public class TestProxyAccessHandler extends LockssTestCase {
 
      Map agreedMap = new HashMap();
      MockPeerIdentity mockPid = new MockPeerIdentity("55.0.0.1");
-     agreedMap.put(mockPid, "1010101010"); 
+     agreedMap.put(mockPid, "1010101010");
 
      idMgr.setAgeedForAu(mau, agreedMap);
      idMgr.addPeerIdentity("55.0.0.1", mockPid);

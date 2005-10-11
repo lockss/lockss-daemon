@@ -1,5 +1,5 @@
 /*
- * $Id: EditAuConfigure.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id: EditAuConfigure.java,v 1.3 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ import org.lockss.uiapi.util.*;
  * Implements the "get status table" command
  */
 public class EditAuConfigure extends AuActivityBase {
- 
+
   private static String NAME  = "EditAuConfigure";
   private static Logger log   = Logger.getLogger(NAME);
   /**
@@ -69,14 +69,14 @@ public class EditAuConfigure extends AuActivityBase {
 
   public EditAuConfigure() {
     super();
-  }  
+  }
 
   /**
    * Command setup
    * @return true on success
    */
   public boolean doRemoteSetupAndVerification() {
-    
+
     /*
      * Verify arguments
      */
@@ -92,21 +92,21 @@ public class EditAuConfigure extends AuActivityBase {
     generateSetupXml();
     return true;
   }
-  
+
   /**
    * Act on the requested command (restore, update, delete)
    * @return true on success
    */
   public boolean doCommand() throws IOException {
-   
+
     /*
      * Stop now if we can't proceed (no action, missing arguments)
      */
-    if (!isRestoreAction() && !isUpdateAction()       && 
+    if (!isRestoreAction() && !isUpdateAction()       &&
         !isRemoveAction()  && !isDeactivateAction())  {
       return true;
     }
-    
+
     if (!verifyMinimumParameters()) {
       return false;
     }
@@ -123,7 +123,7 @@ public class EditAuConfigure extends AuActivityBase {
       return removeOrDeactivateAu("Delete");
     }
     /*
-     * Deactivate? 
+     * Deactivate?
      */
     if (isDeactivateAction()) {
       return removeOrDeactivateAu("Deactivate");
@@ -147,7 +147,7 @@ public class EditAuConfigure extends AuActivityBase {
    */
   protected String getAndVerifyParameter(String name) {
     String value = getParameter(name);
-    
+
     if (StringUtil.isNullString(value)) {
       throw new ResponseException("Missing mandatory parameter: " + name);
     }
@@ -164,10 +164,10 @@ public class EditAuConfigure extends AuActivityBase {
     if (!StringUtil.isNullString(getParameter(AP_E_AUID)))      count++;
     if (!StringUtil.isNullString(getParameter(AP_E_PARAMETER))) count++;
     if (!StringUtil.isNullString(getParameter(AP_E_TARGET)))    count++;
- 
+
     return (count == 3);
   }
- 
+
   /**
    * Set up the environment for this command
    * <p>
@@ -179,16 +179,16 @@ public class EditAuConfigure extends AuActivityBase {
     String        auId;
     AuProxy       auProxy;
     String        key;
-    
 
-    auId = getAndVerifyParameter(AP_E_AUID); 
+
+    auId = getAndVerifyParameter(AP_E_AUID);
     setPlugin(getAnyAuProxy(auId));
 
     key = PluginManager.pluginKeyFromId(getPlugin().getPluginId());
     if (!pluginLoaded(key)) {
       return error("Plugin is not loaded: " + key);
     }
-    return true;  
+    return true;
   }
 
   /*
@@ -204,7 +204,7 @@ public class EditAuConfigure extends AuActivityBase {
     generateSetupXml(config);
   }
 
-  /** 
+  /**
    * Delete/deactivate an AU
    * @param action What to do (delete or deactivate?)
    * @return true On success
@@ -215,27 +215,27 @@ public class EditAuConfigure extends AuActivityBase {
     if ((auProxy = getAuProxy(getParameter(AP_E_AUID))) == null) {
       return error("Invalid Archival Unit ID");
     }
-     
+
     try {
       if ("delete".equalsIgnoreCase(action)) {
         getRemoteApi().deleteAu(auProxy);
-      
+
       } else if ("deactivate".equalsIgnoreCase(action)) {
         getRemoteApi().deactivateAu(auProxy);
-      
+
       } else {
         throw new ResponseException("Unknown activity: " + action);
       }
     } catch (ArchivalUnit.ConfigurationException exception) {
       return error(action + " failed: " + exception.getMessage());
-    
+
     } catch (IOException exception) {
       return error("Failed to save configuraton: " + exception.getMessage());
     }
     return true;
   }
 
-  /** 
+  /**
    * Update AU configuration data
    * @return true On success
    */
@@ -244,18 +244,18 @@ public class EditAuConfigure extends AuActivityBase {
     AuProxy       auProxy;
     Configuration formConfig;
     Configuration auConfig;
-    
+
     if ((auProxy = getAnyAuProxy(getParameter(AP_E_AUID))) == null) {
       return error("Invalid Archival Unit ID");
     }
-  
+
     try {
       /*
        * Inactive AU?
        */
       if (!auProxy.isActiveAu()) {
         formConfig = getAuConfigFromForm();
-        auProxy = getRemoteApi().createAndSaveAuConfiguration(getPlugin(), 
+        auProxy = getRemoteApi().createAndSaveAuConfiguration(getPlugin(),
                                                               formConfig);
         return true;
       }
@@ -264,22 +264,22 @@ public class EditAuConfigure extends AuActivityBase {
        */
       auConfig   = auProxy.getConfiguration();
       formConfig = getAuConfigFromForm(auConfig);
-          
+
       if (isChanged(auConfig, formConfig) ||
-          isChanged(getRemoteApi().getStoredAuConfiguration(auProxy), 
+          isChanged(getRemoteApi().getStoredAuConfiguration(auProxy),
                     formConfig)) {
         getRemoteApi().setAndSaveAuConfiguration(auProxy, formConfig);
       }
-      
+
     } catch (ArchivalUnit.ConfigurationException exception) {
       return error("Reconfiguration failed: " + exception.getMessage());
-      
+
     } catch (IOException exception) {
       return error("Unable to save configuraton: " + exception.getMessage());
     }
     return true;
   }
-    
+
   /**
    * "Remove" command?
    * @return true If so
@@ -287,7 +287,7 @@ public class EditAuConfigure extends AuActivityBase {
   private boolean isRemoveAction() {
     return "delete".equalsIgnoreCase(getParameter(AP_E_ACTION));
   }
- 
+
   /**
    * "Deactivate" command?
    * @return true If so
@@ -295,7 +295,7 @@ public class EditAuConfigure extends AuActivityBase {
   private boolean isDeactivateAction() {
     return "deactivate".equalsIgnoreCase(getParameter(AP_E_ACTION));
   }
- 
+
   /**
    * "Update" command?
    * @return true If so
@@ -303,7 +303,7 @@ public class EditAuConfigure extends AuActivityBase {
   private boolean isUpdateAction() {
     return "update".equalsIgnoreCase(getParameter(AP_E_ACTION));
   }
- 
+
   /**
    * "Restore" command?
    * @return true If so

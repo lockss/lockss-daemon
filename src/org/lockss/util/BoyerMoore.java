@@ -1,5 +1,5 @@
 /*
- * $Id: BoyerMoore.java,v 1.1 2005-05-17 23:11:44 troberts Exp $
+ * $Id: BoyerMoore.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -30,13 +30,13 @@ in this Software without prior written authorization from Stanford University.
 
 */
 
-// Original code is 
+// Original code is
 
 // Copyright by Michael Lecuyer 1998.
 // This program may be used in any way you choose.
 // Please acknowledge my copyright where you use this in your program.
 // No need for a public copyright notice.
-    
+
 // Modified by Theodore Hong.
 // The original version of this code can be found at:
 //      http://www.theorem.com/java/BM.java
@@ -79,7 +79,7 @@ public class BoyerMoore {
    * <BR>
    * BoyerMoore bm = new BoyerMoore();
    * bm.compile(pattern);
-   * 
+   *
    * int bcount;
    * int search;
    * while ((bcount = f.read(b)) >= 0)
@@ -113,7 +113,7 @@ public class BoyerMoore {
     this();
     this.ignoreCase = ignoreCase;
   }
-  
+
   /**
    * Shortcut constructor
    */
@@ -140,7 +140,7 @@ public class BoyerMoore {
   public void compile(String pattern) {
     compile(pattern.toCharArray());
   }
-    
+
 
   /**
    * Compiles the text pattern for searching.
@@ -210,7 +210,7 @@ public class BoyerMoore {
   public Vector searchAll(char text[], int start, int end) {
     Vector results = new Vector();
     int pos = start;
-	
+
     while ((pos = search(text, pos, end)) >= 0) {
       if (pos >= 0) {
 	results.addElement(new Integer(pos));

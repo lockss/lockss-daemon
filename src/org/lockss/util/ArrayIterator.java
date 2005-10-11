@@ -1,5 +1,5 @@
 /*
- * $Id: ArrayIterator.java,v 1.2 2003-06-20 22:34:52 claire Exp $
+ * $Id: ArrayIterator.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import java.util.*;
 public class ArrayIterator implements Iterator {
   final Object[] a;
   int i = 0;
- 
+
   /** Creates an <code>ArrayIterator</code> that iterates over the
    *  elements of the array <code>a</code>.
    */

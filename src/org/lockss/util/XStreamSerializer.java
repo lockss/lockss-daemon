@@ -1,5 +1,5 @@
 /*
- * $Id: XStreamSerializer.java,v 1.10 2005-09-13 00:45:29 thib_gc Exp $
+ * $Id: XStreamSerializer.java,v 1.11 2005-10-11 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class XStreamSerializer extends ObjectSerializer {
 
   /*
    * IMPLEMENTATION NOTES
-   * 
+   *
    * This class is essentially just a wrapper around the XStream
    * class. Because XStream can marshal/unmarshal nearly arbitrary
    * objects (at least as far as the complexity of the LOCKSS codebase
@@ -87,7 +87,7 @@ public class XStreamSerializer extends ObjectSerializer {
    * there was Castor-aware code in several data structures that just
    * had no business knowing about XML mappings.)
    */
-  
+
   /*
    * begin PRIVATE STATIC INNER CLASS
    * ================================
@@ -99,17 +99,17 @@ public class XStreamSerializer extends ObjectSerializer {
    */
   private static class LockssNotSerializableException
       extends RuntimeException {
-    
+
     /*
      * IMPLEMENTATION NOTES
-     * 
+     *
      * With this class, it's possible to throw an exception that is
      * specifically recognizable as being internal to the custom
      * marshalling/unmarshalling strategies defined in this file,
      * without changing the signatures of the methods involved in the
      * XStream API.
      */
-    
+
     /**
      * <p>Builds a new exception.</p>
      * @param rootClassName    Name of the class of the root of the
@@ -121,7 +121,7 @@ public class XStreamSerializer extends ObjectSerializer {
                                           String currentClassName) {
       super(makeMessage(rootClassName, currentClassName));
     }
-    
+
     /**
      * <p>Formats the error message.</p>
      * @param rootClassName    Name of the class of the root of the
@@ -139,13 +139,13 @@ public class XStreamSerializer extends ObjectSerializer {
       buffer.append(rootClassName);
       return buffer.toString();
     }
-    
+
   }
   /*
    * end PRIVATE STATIC INNER CLASS
    * ==============================
    */
-  
+
   /*
    * begin PRIVATE STATIC INNER CLASS
    * ================================
@@ -160,7 +160,7 @@ public class XStreamSerializer extends ObjectSerializer {
       extends ReferenceByXPathMarshaller {
 
     private String rootClassName;
-    
+
     /**
      * <p>Builds a new marshaller.</p>
      * @param writer
@@ -199,13 +199,13 @@ public class XStreamSerializer extends ObjectSerializer {
       }
       super.convertAnother(parent);
     }
-    
+
   }
   /*
    * end PRIVATE STATIC INNER CLASS
    * ==============================
    */
-  
+
   /*
    * begin PRIVATE STATIC INNER CLASS
    * ================================
@@ -229,7 +229,7 @@ public class XStreamSerializer extends ObjectSerializer {
      * <p>Reference to the context object.</p>
      */
     private LockssApp lockssContext;
-    
+
     /**
      * <p>Builds a new instance.</p>
      * @param lockssContext The context object (needed by the
@@ -238,7 +238,7 @@ public class XStreamSerializer extends ObjectSerializer {
     public LockssReferenceByXPathMarshallingStrategy(LockssApp lockssContext) {
       this.lockssContext = lockssContext;
     }
-    
+
     /**
      * <p>Performs unmarshalling with a
      * {@link LockssReferenceByXPathMarshaller} instance.</p>
@@ -290,12 +290,12 @@ public class XStreamSerializer extends ObjectSerializer {
    */
   private static class LockssReferenceByXPathUnmarshaller
       extends ReferenceByXPathUnmarshaller {
-  
+
     /**
      * <p>A reference to the context object.</p>
      */
     private LockssApp lockssContext;
-    
+
     /**
      * <p>Builds a new instance by invoking the superclass constructor
      * with the same argument list except for the first parameter
@@ -314,7 +314,7 @@ public class XStreamSerializer extends ObjectSerializer {
       super(root, reader, converterLookup, classMapper);
       this.lockssContext = lockssContext;
     }
-    
+
     /**
      * <p>Converts an object using the superclass mechanism, then
      * invokes the protected post-deserialization method
@@ -353,7 +353,7 @@ public class XStreamSerializer extends ObjectSerializer {
                                HashMap methodCache) {
       Class objClass = obj.getClass();
       Method objMethod = null;
-      
+
       // Look up inheritance hierarchy
       while (objClass != Object.class) {
         try {
@@ -366,7 +366,7 @@ public class XStreamSerializer extends ObjectSerializer {
           objClass = objClass.getSuperclass();
         }
       }
-      
+
       // Cache result
       if (objMethod == null) {
         methodCache.put(obj.getClass(), NONE);
@@ -377,7 +377,7 @@ public class XStreamSerializer extends ObjectSerializer {
       }
       return objMethod;
     }
-    
+
     /**
      * <p>An exception message formatter used when an exception is
      * thrown by the post-deserialization mechanism.</p>
@@ -413,42 +413,42 @@ public class XStreamSerializer extends ObjectSerializer {
 
       return ret;
     }
-    
+
     private Method lookupMethod(Object obj,
                                 String methodName,
                                 Class[] methodParameters,
                                 HashMap methodCache) {
       Class objClass = obj.getClass();
       Object objMethod = methodCache.get(objClass);
-      
-      if (objMethod == null) { 
+
+      if (objMethod == null) {
         return cacheMethod(obj,
                            methodName,
                            methodParameters,
-                           methodCache); 
+                           methodCache);
       }
       else if (objMethod == NONE) {
-        return null; 
+        return null;
       }
       else {
-        return (Method)objMethod; 
-      }      
+        return (Method)objMethod;
+      }
     }
-    
+
     /**
      * <p>A map to cache post-deserialization {@link Method}s by
      * class.</p>
      */
     private static final HashMap postUnmarshalCache = new HashMap();
-    
+
     private static final HashMap postUnmarshalResolveCache = new HashMap();
-    
+
     /**
      * <p>A special unique value used in maps to denote that the
      * key exists but that it has no value.</p>
      */
     private static final Object NONE = new Object();
-    
+
     /**
      * <p>The String name of the method automagically called during
      * post-deserialization of {@link LockssSerializable} objects.</p>
@@ -456,7 +456,7 @@ public class XStreamSerializer extends ObjectSerializer {
      */
     private static final String POST_UNMARSHAL_METHOD =
       "postUnmarshal";
-    
+
     /**
      * <p>The list of parameter types of the method automagically
      * called during post-deserialization of
@@ -465,29 +465,29 @@ public class XStreamSerializer extends ObjectSerializer {
      */
     private static final Class[] POST_UNMARSHAL_PARAMETERS =
       new Class[] { LockssApp.class };
-    
+
     private static final String POST_UNMARSHAL_RESOLVE_METHOD =
       "postUnmarshalResolve";
-    
+
     private static final Class[] POST_UNMARSHAL_RESOLVE_PARAMETERS =
       new Class[0];
-    
+
   }
   /*
    * end PRIVATE STATIC INNER CLASS
    * ==============================
    */
-  
+
   /**
    * <p>A lazy instantiation flag.</p>
    */
   private boolean initialized;
-  
+
   /**
    * <p>A saved reference to the serialization context object.</p>
    */
   private LockssApp lockssContext;
-  
+
   /**
    * <p>An instance of the {@link com.thoughtworks.xstream.XStream}
    * facade class.</p>
@@ -544,7 +544,7 @@ public class XStreamSerializer extends ObjectSerializer {
   /* Inherit documentation */
   protected void serialize(Writer writer, Object obj)
       throws IOException, SerializationException {
-    throwIfNull(obj); 
+    throwIfNull(obj);
     try {
       init();
       xs.toXML(obj, writer); // lazy instantiation
@@ -568,7 +568,7 @@ public class XStreamSerializer extends ObjectSerializer {
       throw failSerialize(be, obj);
     }
   }
-  
+
   /**
    * <p>Performs tasks to resolve the lazy instantiation.</p>
    */
@@ -580,5 +580,5 @@ public class XStreamSerializer extends ObjectSerializer {
           new LockssReferenceByXPathMarshallingStrategy(lockssContext));
     }
   }
-  
+
 }

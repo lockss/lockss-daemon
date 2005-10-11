@@ -1,5 +1,5 @@
 /*
- * $Id: TimerQueue.java,v 1.26 2005-10-10 23:24:17 tlipkis Exp $
+ * $Id: TimerQueue.java,v 1.27 2005-10-11 05:48:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -153,7 +153,7 @@ public class TimerQueue {
       }
     }
     queue.remove(req);
-  }    
+  }
 
   public void stop() {
     if (timerThread != null) {
@@ -191,7 +191,7 @@ public class TimerQueue {
   private void resort() {
     needResort = false;
     queue.sort();
-  }      
+  }
 
   // Timer thread.
 
@@ -366,7 +366,7 @@ public class TimerQueue {
       getDaemon().getStatusService().
 	registerStatusAccessor("TimerQ", new Status(singleton));
     }
-    
+
     public void stopService() {
       getDaemon().getStatusService().unregisterStatusAccessor("TimerQ");
       super.stopService();

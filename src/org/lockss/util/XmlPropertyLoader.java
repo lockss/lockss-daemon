@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.24 2005-10-05 23:12:40 troberts Exp $
+ * $Id: XmlPropertyLoader.java,v 1.25 2005-10-11 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class XmlPropertyLoader {
 
   private static final Set conditionals =
     SetUtil.fromArray(new String[] {
-      "group", "hostname", "daemonVersion", "daemonVersionMin", 
+      "group", "hostname", "daemonVersion", "daemonVersionMin",
       "daemonVersionMax", "platformName", "platformVersion",
       "platformVersionMin", "platformVersionMax"
     });
@@ -82,14 +82,14 @@ public class XmlPropertyLoader {
    */
   void loadProperties(PropertyTree props, InputStream istr)
       throws ParserConfigurationException, SAXException, IOException {
-    
+
     SAXParserFactory factory = SAXParserFactory.newInstance();
-    
+
     factory.setValidating(true);
     factory.setNamespaceAware(false);
-    
+
     SAXParser parser = factory.newSAXParser();
-    
+
     parser.parse(istr, new LockssConfigHandler(props));
   }
 
@@ -502,7 +502,7 @@ public class XmlPropertyLoader {
 	m_evalIf |= m_testEval;
       } else if (cond == TAG_NOT) {
 	m_evalIf &= !m_testEval;
-      }      
+      }
     }
 
     /**
@@ -525,7 +525,7 @@ public class XmlPropertyLoader {
     private void setListProperty(List list) {
       setProperty(StringUtil.separatedString(list, ";"));
     }
-    
+
     /**
      * Evaluate the attributes of this test (whether an <if...> or a
      * <test...> tag) and return the boolean value.
@@ -533,7 +533,7 @@ public class XmlPropertyLoader {
     public boolean evaluateAttributes(Attributes attrs) {
       // Evaluate the attributes of the tag and set the
       // value "returnVal" appropriately.
-      
+
       // If the test contains no conditionals, or if it contains
       // any unexpected conditionals, return false.
 
@@ -623,7 +623,7 @@ public class XmlPropertyLoader {
       if (daemonMin != null || daemonMax != null) {
 	returnVal &= compareVersion(m_sysDaemonVer, daemonMin, daemonMax);
       }
-      
+
       /*
        * Platform version checking.
        */
@@ -637,7 +637,7 @@ public class XmlPropertyLoader {
       if (platformName != null) {
 	returnVal &= StringUtil.equalStringsIgnoreCase(m_sysPlatformName, platformName);
       }
-      
+
       return returnVal;
     }
 

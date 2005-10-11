@@ -1,5 +1,5 @@
 /*
- * $Id: MockArchivalUnit.java,v 1.64 2005-10-07 23:46:44 smorabito Exp $
+ * $Id: MockArchivalUnit.java,v 1.65 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -76,7 +76,7 @@ public class MockArchivalUnit implements ArchivalUnit {
   public MockArchivalUnit(Plugin plugin) {
     this.plugin = plugin;
   }
-  
+
   public MockArchivalUnit(CrawlSpec spec) {
     this.spec = spec;
   }

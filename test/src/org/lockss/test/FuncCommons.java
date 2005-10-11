@@ -1,5 +1,5 @@
 /*
- * $Id: FuncCommons.java,v 1.6 2005-06-15 17:24:35 tlipkis Exp $
+ * $Id: FuncCommons.java,v 1.7 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class FuncCommons extends LockssTestCase {
 	Integer key = new Integer(ii*loop+jj); // make a unique key
 	Integer val = new Integer(jj);
 	map.put(key, val);
-	
+
 	if (key.intValue() == 143) {	// hold on to key 143
 	  aKey = key;
 	}

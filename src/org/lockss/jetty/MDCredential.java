@@ -1,5 +1,5 @@
 /*
- * $Id: MDCredential.java,v 1.4 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: MDCredential.java,v 1.5 2005-10-11 05:44:38 tlipkis Exp $
  */
 
 /*
@@ -87,7 +87,7 @@ public class MDCredential extends Credential {
 
   private byte[] _digest;
   private String _type;
-        
+
   /** Create a credential from a ALG:DIGEST string */
   MDCredential(String digest) throws NoSuchAlgorithmException {
     this(null, digest);
@@ -113,17 +113,17 @@ public class MDCredential extends Credential {
     _digest=TypeUtil.parseBytes(digest,16);
     _type = type;
   }
-        
+
   /** Return the stored digest */
   public byte[] getDigest() {
     return _digest;
   }
-        
+
   /** Return the digest type (algorithm) */
   public String getType() {
     return _type;
   }
-        
+
   byte[] calculateDigest(String message) throws UnsupportedEncodingException {
     try {
       MessageDigest md = getMessageDigest(_type);

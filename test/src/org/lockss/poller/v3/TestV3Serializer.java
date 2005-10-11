@@ -45,7 +45,7 @@ import org.lockss.protocol.psm.*;
  */
 
 public class TestV3Serializer extends LockssTestCase {
-  
+
   String tempDirPath;
 
   public void setUp() throws Exception {
@@ -55,20 +55,20 @@ public class TestV3Serializer extends LockssTestCase {
     p.setProperty(ConfigManager.PARAM_PLATFORM_DISK_SPACE_LIST, tempDirPath);
     ConfigurationUtil.setCurrentConfigFromProps(p);
   }
-  
+
   public void tearDown() throws Exception {
     super.tearDown();
   }
-  
+
   public void testClosePoll() throws Exception {
     // Ensure poll dir is deleted.
     V3PollerSerializer pollerSerializer = new V3PollerSerializer();
-    File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer, 
+    File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                      "pollDir");
     assertTrue(pollDir.exists());
     pollerSerializer.closePoll();
     assertFalse(pollDir.exists());
-    
+
     V3VoterSerializer voterSerializer = new V3VoterSerializer();
     pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
                                                 "pollDir");
@@ -76,7 +76,7 @@ public class TestV3Serializer extends LockssTestCase {
     voterSerializer.closePoll();
     assertFalse(pollDir.exists());
   }
-  
+
   public void testSaveAndLoadPollerState() throws Exception {
     V3PollerSerializer pollerSerializer = new V3PollerSerializer();
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
@@ -89,8 +89,8 @@ public class TestV3Serializer extends LockssTestCase {
     PollerStateBean vsb3 = pollerSerializer.loadPollerState();
     assertEqualPollerStateBeans(vsb1, vsb3);
   }
-  
-  
+
+
   public void testSaveAndLoadPollerUserData() throws Exception {
     V3PollerSerializer pollerSerializer = new V3PollerSerializer();
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
@@ -111,7 +111,7 @@ public class TestV3Serializer extends LockssTestCase {
       // expected.
     }
   }
-  
+
   public void testSaveAndLoadPollerInterpState() throws Exception {
     V3PollerSerializer pollerSerializer = new V3PollerSerializer();
     File pollDir  = (File)PrivilegedAccessor.getValue(pollerSerializer,
@@ -128,7 +128,7 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(ub1.getLastRestorableStateName(),
                  ub3.getLastRestorableStateName());
   }
-  
+
   public void testSaveAndLoadVoterUserData() throws Exception {
     V3VoterSerializer voterSerializer = new V3VoterSerializer();
     File pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
@@ -141,7 +141,7 @@ public class TestV3Serializer extends LockssTestCase {
     VoterUserData ud3 = voterSerializer.loadVoterUserData();
     assertEqualVoterUserData(ud1, ud3);
   }
-  
+
   public void testSaveAndLoadVoterInterpState() throws Exception {
     V3VoterSerializer voterSerializer = new V3VoterSerializer();
     File pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
@@ -157,7 +157,7 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(ub1.getLastRestorableStateName(),
                  ub3.getLastRestorableStateName());
   }
-  
+
   public void testLoadInnerCircleStates() throws Exception {
     V3PollerSerializer pollerSerializer = new V3PollerSerializer();
     File pollDir = (File)PrivilegedAccessor.getValue(pollerSerializer,
@@ -173,7 +173,7 @@ public class TestV3Serializer extends LockssTestCase {
                                                   pollerSerializer),
                                makePollerUserData(new MockPeerIdentity("10.1.1.5:8000"),
                                                   pollerSerializer));
-    
+
     for (Iterator iter = uds1.iterator(); iter.hasNext(); ) {
       pollerSerializer.savePollerUserData((PollerUserData)iter.next());
     }
@@ -183,8 +183,8 @@ public class TestV3Serializer extends LockssTestCase {
     List uds3 = pollerSerializer.loadVoterStates();
     assertEqualInnerCircles(uds1, uds3);
   }
-  
-  
+
+
   private PollerStateBean makePollerStateBean(V3PollerSerializer serializer) {
     PollerStateBean vsb = new PollerStateBean(serializer);
     vsb.setAuId("testAu");
@@ -198,12 +198,12 @@ public class TestV3Serializer extends LockssTestCase {
     vsb.setPollVersion(1);
     return vsb;
   }
-  
+
   private PollerUserData makePollerUserData(V3PollerSerializer serializer) {
     return makePollerUserData(new MockPeerIdentity("127.0.0.1:8080"),
                               serializer);
   }
-  
+
   private PollerUserData makePollerUserData(PeerIdentity voterId,
                                             V3PollerSerializer serializer) {
     PollerUserData ud = new PollerUserData(serializer);
@@ -230,7 +230,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
     return ud;
   }
-  
+
   private VoterUserData makeVoterUserData(V3VoterSerializer serializer) {
     VoterUserData ud = new VoterUserData(serializer);
     ud.setAuId("mockAu");
@@ -261,7 +261,7 @@ public class TestV3Serializer extends LockssTestCase {
     ud.setVoterNonce(ByteArray.makeRandomBytes(20));
     return ud;
   }
-  
+
   private void assertEqualPollerStateBeans(PollerStateBean b1,
                                            PollerStateBean b2) {
     assertEquals(b1.getAuId(), b2.getAuId());
@@ -274,7 +274,7 @@ public class TestV3Serializer extends LockssTestCase {
                  b2.getPollerId().getIdString());
     assertEquals(b1.allVotersReadyToTally(), b2.allVotersReadyToTally());
   }
-  
+
   private void assertEqualPollerUserData(PollerUserData d1,
                                          PollerUserData d2) {
     assertEquals(d1.getVoterId().getIdString(),
@@ -293,7 +293,7 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(d1.getRemainingEffortProof(), d2.getRemainingEffortProof());
     assertEquals(d1.getRepairEffortProof(), d2.getRepairEffortProof());
   }
-  
+
   private void assertEqualVoterUserData(VoterUserData d1,
                                         VoterUserData d2) {
     assertEquals(d1.getAuId(), d2.getAuId());
@@ -315,7 +315,7 @@ public class TestV3Serializer extends LockssTestCase {
     assertEquals(d1.getPollVersion(), d2.getPollVersion());
     assertEquals(d1.getVoteBlocks().size(), d2.getVoteBlocks().size());
   }
-  
+
   private void assertEqualInnerCircles(List a, List b) {
     if (a == null) {
       assertTrue(b == null);

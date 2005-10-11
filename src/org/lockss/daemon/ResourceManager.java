@@ -1,5 +1,5 @@
 /*
- * $Id: ResourceManager.java,v 1.6 2005-09-20 23:02:39 thib_gc Exp $
+ * $Id: ResourceManager.java,v 1.7 2005-10-11 05:44:15 tlipkis Exp $
  *
 
 Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
@@ -162,7 +162,7 @@ public class ResourceManager extends BaseLockssManager  {
   public synchronized boolean isUdpPortAvailable(int port, Object token) {
     return isAvailable(UDP_PREFIX + port, token);
   }
- 
+
   /**
    * <p>Assigns a UDP port to the token if it is available.</p>
    * @param port  A UDP port number.
@@ -173,7 +173,7 @@ public class ResourceManager extends BaseLockssManager  {
   public synchronized boolean reserveUdpPort(int port, Object token) {
     return reserve(UDP_PREFIX + port, token);
   }
-  
+
   /**
    * <p>Releases a UDP port if it is assigned to the token.</p>
    * @param port  A UDP port number.
@@ -183,7 +183,7 @@ public class ResourceManager extends BaseLockssManager  {
   public synchronized boolean releaseUdpPort(int port, Object token) {
     return release(UDP_PREFIX + port, token);
   }
-  
+
   /** Return list of unfiltered tcp ports not already assigned to another
    * server */
   public List getUsableTcpPorts(Object serverToken) {
@@ -206,7 +206,7 @@ public class ResourceManager extends BaseLockssManager  {
     }
     return res;
   }
-  
+
   public List getUsableUdpPorts(Object serverToken) {
     List unfilteredPorts = PlatformInfo.getInstance().getUnfilteredUdpPorts();
     if (unfilteredPorts == null || unfilteredPorts.isEmpty()) {
@@ -237,5 +237,5 @@ public class ResourceManager extends BaseLockssManager  {
    * <p>An internal prefix to build UDP port identifiers.</p>
    */
   private static final String UDP_PREFIX = "udp:";
-  
+
 }

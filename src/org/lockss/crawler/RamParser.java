@@ -1,5 +1,5 @@
 /*
- * $Id: RamParser.java,v 1.5 2005-05-12 00:23:49 troberts Exp $
+ * $Id: RamParser.java,v 1.6 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class RamParser implements ContentParser {
       }
     }
   }
-  
+
   //presumes line starts with source (ignoring case)
   private static String translateString(String line, String source,
 					String dest) {

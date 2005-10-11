@@ -1,5 +1,5 @@
 /*
- * $Id: TimeReaderStream.java,v 1.2 2004-04-06 07:32:57 tlipkis Exp $
+ * $Id: TimeReaderStream.java,v 1.3 2005-10-11 05:49:45 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public class TimeReaderStream extends LockssTiming {
     }
     ps.close();
   }
-    
+
   public void testStream() throws Exception {
     time(file, "InputStream",
 	 new Computation() {

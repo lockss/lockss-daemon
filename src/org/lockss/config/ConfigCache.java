@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigCache.java,v 1.9 2005-09-22 18:36:13 thib_gc Exp $
+ * $Id: ConfigCache.java,v 1.10 2005-10-11 05:43:31 tlipkis Exp $
  */
 
 /*
@@ -72,7 +72,7 @@ public class ConfigCache {
 	cf = new JarConfigFile(url);
       } else {
 	cf = new FileConfigFile(url);
-      } 
+      }
       m_configMap.put(url, cf);
     }
     return cf;
@@ -81,7 +81,7 @@ public class ConfigCache {
 //   public synchronized void remove(String url) {
 //     m_configMap.remove(url);
 //   }
-  
+
   int size() {
     return m_configMap.size();
   }

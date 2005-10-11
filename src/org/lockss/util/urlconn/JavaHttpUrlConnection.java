@@ -1,5 +1,5 @@
 /*
- * $Id: JavaHttpUrlConnection.java,v 1.2 2005-10-10 23:48:55 troberts Exp $
+ * $Id: JavaHttpUrlConnection.java,v 1.3 2005-10-11 05:48:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -59,7 +59,7 @@ public class JavaHttpUrlConnection extends JavaUrlConnection {
   public boolean isHttp() {
     return true;
   }
-  
+
   public void execute() throws IOException {
     assertNotExecuted();
     isExecuted = true;

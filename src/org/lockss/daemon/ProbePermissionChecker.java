@@ -1,5 +1,5 @@
 /*
- * $Id: ProbePermissionChecker.java,v 1.8 2005-10-07 16:19:55 thib_gc Exp $
+ * $Id: ProbePermissionChecker.java,v 1.9 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.util.*;
 import org.lockss.crawler.*;
 
 /**
- * This Permission checker looks for a probe (a URL) which is identified by 
+ * This Permission checker looks for a probe (a URL) which is identified by
  * being in a link tag with a specific attribute.  It will then pass that URL
  * to another specified permission checker
  */
@@ -49,7 +49,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 //   static final int PERM_BUFFER_MAX = 16 * 1024;
 
 
-  String probeUrl = null; 
+  String probeUrl = null;
   LoginPageChecker checker;
 
   private static Logger logger = Logger.getLogger("ProbePermissionChecker");
@@ -87,7 +87,7 @@ public class ProbePermissionChecker implements PermissionChecker {
 //         is.mark(PERM_BUFFER_MAX);
 
 	Reader reader = new InputStreamReader(is, Constants.DEFAULT_ENCODING);
-	
+
 	boolean isLoginPage = checker.isLoginPage(props, reader);
 	logger.debug3(isLoginPage ? "Found a login page" : "Not a login page");
 	return !isLoginPage;
@@ -126,7 +126,7 @@ public class ProbePermissionChecker implements PermissionChecker {
       return returnStr;
     }
   }
-  
+
   private class MyFoundUrlCallback implements ContentParser.FoundUrlCallback {
     public MyFoundUrlCallback() {
     }

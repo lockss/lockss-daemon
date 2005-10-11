@@ -1,5 +1,5 @@
 /*
- * $Id: TestNodeManagerImpl.java,v 1.133 2005-10-10 23:48:56 troberts Exp $
+ * $Id: TestNodeManagerImpl.java,v 1.134 2005-10-11 05:51:35 tlipkis Exp $
  */
 /*
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -187,13 +187,13 @@ public class TestNodeManagerImpl extends LockssTestCase {
   }
 
   public void testMapErrorCodes() {
-    assertEquals(PollState.ERR_HASHING, 
+    assertEquals(PollState.ERR_HASHING,
                  NodeManagerImpl.mapResultsErrorToPollError(Poll.ERR_HASHING));
-    assertEquals(PollState.ERR_IO, 
+    assertEquals(PollState.ERR_IO,
                  NodeManagerImpl.mapResultsErrorToPollError(Poll.ERR_IO));
-    assertEquals(PollState.ERR_SCHEDULE_HASH, 
+    assertEquals(PollState.ERR_SCHEDULE_HASH,
                  NodeManagerImpl.mapResultsErrorToPollError(Poll.ERR_SCHEDULE_HASH));
-    assertEquals(PollState.ERR_UNDEFINED, 
+    assertEquals(PollState.ERR_UNDEFINED,
                  NodeManagerImpl.mapResultsErrorToPollError(1));
   }
 
@@ -545,7 +545,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     assertEquals(NodeState.RANGED_WRONG_NAMES, state);
     reputationChangeTest(results);
   }
-  
+
   public void testHandleWrongNames() throws Exception {
     Vector masterV = new Vector();
     List localL = new ArrayList();
@@ -1188,7 +1188,7 @@ public class TestNodeManagerImpl extends LockssTestCase {
     public Map getAgreed(ArchivalUnit au) {
       return (Map)agreeMap.get(au);
     }
-  
+
   public int getReputation(PeerIdentity id) {
     Integer rep = (Integer)repMap.get(id);
     if (rep == null) {

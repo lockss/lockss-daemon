@@ -1,5 +1,5 @@
 /*
- * $Id: BlockingPeerChannel.java,v 1.11 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: BlockingPeerChannel.java,v 1.12 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -294,7 +294,7 @@ class BlockingPeerChannel implements PeerChannel {
 	sendQueue.put(msg);
 	return true;
       }
-    }    
+    }
   }
 
   /** Initialize streams, start reader and writer threads
@@ -335,7 +335,7 @@ class BlockingPeerChannel implements PeerChannel {
   }
 
   static int[] stopIgnStates = {STATE_INIT, STATE_CLOSED, STATE_CLOSING};
-  
+
   void stopChannel(boolean abort) {
     if (notStateTrans(stopIgnStates, STATE_CLOSING)) {
       if (abort && peer != null) log.warning("Aborting " + peer.getIdString());
@@ -409,7 +409,7 @@ class BlockingPeerChannel implements PeerChannel {
       throw new IllegalArgumentException("Unknown PeerAddress: " + pad);
     }
   }
-    
+
   /** Start the reader thread
    */
   void startReader() {

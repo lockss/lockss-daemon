@@ -1,5 +1,5 @@
 /*
- * $Id: HistoryRepositoryImpl.java,v 1.63 2005-09-14 22:47:07 thib_gc Exp $
+ * $Id: HistoryRepositoryImpl.java,v 1.64 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -61,44 +61,44 @@ public class HistoryRepositoryImpl
   // CASTOR: Top-level Castor documentation; read below
   /*
    * IMPLEMENTATION NOTES
-   * 
+   *
    * This class definition is really huge but there is a lot of code
    * duplication. A clever refactoring may be possible in the future.
-   * 
+   *
    * Castor is going away soon (hopefully) and while refactoring the
    * marshalling/unmarshalling has led to a sizeable increase in code
    * length, it is not very difficult to filter out the Castor-related
    * snippets. Use grep or similar to find the string
    *    CASTOR:
    * in this file for immediate pointers to Castor-related passages.
-   * 
+   *
    * The load/store methods would have no Castor-aware functionality
    * if it was not for the fact that in Castor mode, we do not often
    * store data in the form of the type it came from. Instead, in
    * Castor, we often need to wrap the object being marshalled into
    * some sort of bean class or helper class, and that bean needs to
    * be unwrapped when it comes back from serialization. To avoid too
-   * much Castor-aware code and if/else branches in the load/store 
+   * much Castor-aware code and if/else branches in the load/store
    * methods themselves, the compromise was to introduce a wrap/unwrap
    * call just before the object goes out to serialized form and right
    * after it comes back from it.
-   * 
+   *
    * The wrap methods just pass the object through unless we are in
    * Castor mode (in which case the object is wrapped in a bean/helper
    * class). The unwrap methods also pass objects right through unless
    * they are recognized as Castor-related bean/helper classes, which
    * causes them to be unwrapped.
-   * 
+   *
    * When Castor goes away, all the wrap/unwrap call will be removed
    * from load/store methods; all the wrap/unwrap methods will go
    * away; all the makeXXXSerializer methods will go away and be
    * replaced by makeObjectSerializer (which will be the only one to
    * stay).
-   * 
+   *
    * Thus there is a lot of added bloat; but in the end (meaning, with
    * the long-term objective of the phasing out of Castor), the load/
    * store methods are written in a way that is already marshaller-
-   * agnostic, so that the only thing to remove is the wrap/unwrap 
+   * agnostic, so that the only thing to remove is the wrap/unwrap
    * calls.
    */
 
@@ -180,7 +180,7 @@ public class HistoryRepositoryImpl
           + storedAu.getName() + "'", e);
       throw new RepositoryStateException("Could not load AU state.");
     }
-    
+
     // Default: return default
     return new AuState(storedAu, -1, -1, -1, null, this);
   }
@@ -211,7 +211,7 @@ public class HistoryRepositoryImpl
           + storedAu.getName() + "'.");
     }
     File damFile = new File(rootLocation, DAMAGED_NODES_FILE_NAME);
-    
+
     try {
       // CASTOR: NO CHANGE after Castor is phased out
       DamagedNodeSet damNodes = (DamagedNodeSet)deserializer.deserialize(damFile);
@@ -222,7 +222,7 @@ public class HistoryRepositoryImpl
     }
     catch (FileNotFoundException fnfe) {
       if (logger.isDebug2()) {
-        logger.debug2("No damaged node file for AU '" 
+        logger.debug2("No damaged node file for AU '"
             + storedAu.getName() + "'.");
       }
       // drop down to return empty set
@@ -236,7 +236,7 @@ public class HistoryRepositoryImpl
       logger.error("Could not load damaged nodes", e);
       throw new RepositoryStateException("Could not load damaged nodes.");
     }
-    
+
     // Default: return empty set
     return new DamagedNodeSet(storedAu, this);
   }
@@ -250,7 +250,7 @@ public class HistoryRepositoryImpl
     return loadIdentityAgreements(makeIdentityAgreementListSerializer());
   }
   /**
-   * <p>Loads an identity agreement list using the given 
+   * <p>Loads an identity agreement list using the given
    * deserializer.</p>
    * @param deserializer A deserializer instance.
    * @return A list of identity agreements.
@@ -265,7 +265,7 @@ public class HistoryRepositoryImpl
           + storedAu.getName() + "'.");
     }
     File idFile = getIdentityAgreementFile();
-    
+
     try {
       // CASTOR: remove unwrap() when Castor is phased out
       return (List)unwrap(deserializer.deserialize(idFile));
@@ -283,7 +283,7 @@ public class HistoryRepositoryImpl
       logger.error("Could not load identity agreements", e);
       throw new RepositoryStateException("Could not load identity agreements.");
     }
-    
+
     // Default: return empty list
     return new ArrayList();
   }
@@ -315,11 +315,11 @@ public class HistoryRepositoryImpl
     if (logger.isDebug3()) {
       logger.debug3("Loading state for CUS '" + cus.getUrl() + "'.");
     }
-    
+
     try {
       // Can throw MalformedURLException
       File file = new File(getNodeLocation(cus), NODE_FILE_NAME);
-      
+
       // CASTOR: remove unwrap() when Castor is phased out
       NodeStateImpl nodeState = (NodeStateImpl)unwrap(deserializer.deserialize(file),
                                                       cus,
@@ -332,7 +332,7 @@ public class HistoryRepositoryImpl
     }
     catch (FileNotFoundException fnfe) {
       logger.debug3("No node state file for node '" + cus.getUrl() + "'.");
-      // drop down to return default value      
+      // drop down to return default value
     }
     catch (SerializationException se) {
       logger.error("Marshalling exception on node state for '"
@@ -351,7 +351,7 @@ public class HistoryRepositoryImpl
                              new ArrayList(),
                              this);
   }
-  
+
   /**
    * <p>Loads the poll histories associated with the node state.</p>
    * @param nodeState A node state instance.
@@ -377,27 +377,27 @@ public class HistoryRepositoryImpl
                          NodeState nodeState) {
     /*
      * IMPLEMENTATION NOTES
-     * 
+     *
      * Note that this method casts the nodeState input parameter to
      * NodeStateImpl to gain access to the underlying methods which
      * is bad! Bad bad bad.
-     * 
+     *
      * This would have to change if the entire structure was not going
      * to disappear relatively soon with V3 polls.
      */
-    
+
     CachedUrlSet cus = nodeState.getCachedUrlSet();
     if (logger.isDebug3()) {
-      logger.debug3("Loading histories for CUS '" 
+      logger.debug3("Loading histories for CUS '"
           + cus.getUrl() + "'.");
     }
     File nodeFile = null;
     NodeStateImpl impl = (NodeStateImpl)nodeState; // eww
-    
+
     try {
       // Can throw MalformedURLException
       nodeFile = new File(getNodeLocation(cus), HISTORY_FILE_NAME);
-      
+
       // CASTOR: remove unwrap() when Castor is phased out
       List hist = (List)unwrap(deserializer.deserialize(nodeFile));
       if (hist.size() == 0) {
@@ -429,13 +429,13 @@ public class HistoryRepositoryImpl
       logger.error("Could not load poll history", e);
       throw new RepositoryStateException("Could not load history.");
     }
-    
+
     // Default setter
     impl.setPollHistoryList(new ArrayList());
   }
-  
+
   public void setAuConfig(Configuration auConfig) {
-  
+
   }
 
   public void startService() {
@@ -444,12 +444,12 @@ public class HistoryRepositoryImpl
     // Disabled 10/5/04, may be needed again
     //    checkFileChange();
   }
-  
+
   public void stopService() {
     // we want to checkpoint here
     super.stopService();
   }
-  
+
   /**
    * <p>Stores the state of an AU.</p>
    * @param auState    A AU state instance.
@@ -459,7 +459,7 @@ public class HistoryRepositoryImpl
     // CASTOR: replace by makeObjectSerializer()
     storeAuState(makeAuStateSerializer(), auState);
   }
-  
+
   /**
    * <p>Stores the state of an AU using the given serializer.</p>
    * @param serializer A serializer instance.
@@ -473,7 +473,7 @@ public class HistoryRepositoryImpl
           + auState.getArchivalUnit().getName() + "'.");
     }
     File file = prepareFile(rootLocation, AU_FILE_NAME);
-    
+
     try {
       // CASTOR: remove wrap() when Castor is phased out
       serializer.serialize(file, wrap(auState));
@@ -481,9 +481,9 @@ public class HistoryRepositoryImpl
     catch (Exception e) {
       logger.error("Could not store AU state", e);
       throw new RepositoryStateException("Could not store AU state.");
-    }    
+    }
   }
-  
+
   /**
    * <p>Stores a damaged node set.</p>
    * @param nodeSet    A damaged node set.
@@ -493,7 +493,7 @@ public class HistoryRepositoryImpl
     // CASTOR: change to makeObjectSerializer() when Castor is phased out
     storeDamagedNodeSet(makeDamagedNodeSetSerializer(), nodeSet);
   }
-  
+
   /**
    * <p>Stores a damaged node set using the given serializer.</p>
    * @param serializer A serializer instance.
@@ -511,7 +511,7 @@ public class HistoryRepositoryImpl
     try {
       // CASTOR: NO CHANGE when Castor is phased out
       serializer.serialize(file, nodeSet);
-    } 
+    }
     catch (Exception exc) {
       logger.error("Could not store damaged nodes", exc);
       throw new RepositoryStateException("Could not store damaged nodes");
@@ -527,7 +527,7 @@ public class HistoryRepositoryImpl
     // CASTOR: change to makeObjectSerializer() when Castor is phased out
     storeIdentityAgreements(makeIdentityAgreementListSerializer(), idList);
   }
-  
+
   /**
    * <p>Stores an identity agreement list using the given serializer
    * instance.</p>
@@ -542,7 +542,7 @@ public class HistoryRepositoryImpl
           + storedAu.getName() + "'.");
     }
     File file = prepareFile(rootLocation, IDENTITY_AGREEMENT_FILE_NAME);
-    
+
     try {
       // CASTOR: remove wrap() when Castor is phased out
       serializer.serialize(file, wrap(idList));
@@ -550,9 +550,9 @@ public class HistoryRepositoryImpl
     catch (Exception exc) {
       logger.error("Could not store identity agreements", exc);
       throw new RepositoryStateException("Could not store identity agreements");
-    }    
+    }
   }
-  
+
   /**
    * <p>Stores the node state.</p>
    * @param nodeState A node state instance.
@@ -576,7 +576,7 @@ public class HistoryRepositoryImpl
       logger.debug3("Storing state for CUS '"
           + cus.getUrl() + "'.");
     }
-    
+
     try {
       // Can throw MalformedURLException
       File file = prepareFile(getNodeLocation(cus), NODE_FILE_NAME);
@@ -589,7 +589,7 @@ public class HistoryRepositoryImpl
       throw new RepositoryStateException("Could not store node state.");
     }
   }
-  
+
   /**
    * <p>Stores the poll histories associated with the node state.</p>
    * @param nodeState  A node state instance.
@@ -599,7 +599,7 @@ public class HistoryRepositoryImpl
     // CASTOR: change to makeObjectSerializer() when Castor is phased out
     storePollHistories(makePollHistoriesSerializer(), nodeState);
   }
-  
+
   /**
    * <p>Stores the poll histories associated with the node state
    * using the given serializer.</p>
@@ -613,7 +613,7 @@ public class HistoryRepositoryImpl
     if (logger.isDebug3()) {
       logger.debug3("Storing histories for CUS '" + cus.getUrl() + "'.");
     }
-    
+
     try {
       // Can throw MalformedURLException
       File file = prepareFile(getNodeLocation(cus), HISTORY_FILE_NAME);
@@ -637,9 +637,9 @@ public class HistoryRepositoryImpl
       throw new RepositoryStateException("Could not store poll history.");
     }
   }
-  
+
   /**
-   * <p>Computes the node location from a CUS URL. Uses 
+   * <p>Computes the node location from a CUS URL. Uses
    * LockssRepositoryImpl static functions.</p>
    * @param cus A CachedUrlSet instance.
    * @return The CUS' file system location.
@@ -656,7 +656,7 @@ public class HistoryRepositoryImpl
     }
   }
 
-  
+
   /**
    * Checks the file system to see if name updates are necessary.  Currently
    * converts from 'au_state.xml' to '#au_state.xml', and similarly with
@@ -721,12 +721,12 @@ public class HistoryRepositoryImpl
       oldHistoryFile.renameTo(new File(nodeDir, HISTORY_FILE_NAME));
     }
   }
-  
+
   /**
    * <p>Name of top directory in which the histories are stored.</p>
    */
   public static final String HISTORY_ROOT_NAME = "cache";
-  
+
   /**
    * <p>Configuration parameter name for Lockss history location.</p>
    */
@@ -741,12 +741,12 @@ public class HistoryRepositoryImpl
    * <p>The damaged nodes file name.</p>
    */
   static final String DAMAGED_NODES_FILE_NAME = "#damaged_nodes.xml";
-  
+
   /**
    * <p>The history file name.</p>
    */
   static final String HISTORY_FILE_NAME = "#history.xml";
-  
+
   /**
    * <p>The identity agreement list file name.</p>
    */
@@ -784,7 +784,7 @@ public class HistoryRepositoryImpl
    */
   public static HistoryRepository createNewHistoryRepository(ArchivalUnit au) {
     String root = LockssRepositoryImpl.getRepositoryRoot(au);
-    return 
+    return
       new HistoryRepositoryImpl(au,
                                 LockssRepositoryImpl.mapAuToFileLocation(root,
                                                                          au));
@@ -798,18 +798,18 @@ public class HistoryRepositoryImpl
     // CASTOR: Phase out with Castor
     return CXSerializer.getModeFromConfiguration();
   }
-  
+
   /**
    * <p>Determines if the CXSerializer-based daemon is running in
    * Castor mode.</p>
-   * @return true if and only if the underlying CXSerializer is 
+   * @return true if and only if the underlying CXSerializer is
    *         configured to run in Castor mode.
    * @see CXSerializer#CASTOR_MODE
    */
   private static boolean isCastorMode() {
     return getSerializationMode() == CXSerializer.CASTOR_MODE;
   }
-  
+
   /**
    * <p>Builds a new serializer for AU state.</p>
    * @return A serializer for AU state.
@@ -836,7 +836,7 @@ public class HistoryRepositoryImpl
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(IdentityAgreementList.class);
   }
-  
+
   /**
    * <p>Builds a new serializer for poll histories.</p>
    * @return A serializer for poll histories.
@@ -845,7 +845,7 @@ public class HistoryRepositoryImpl
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(NodeStateBean.class);
   }
-  
+
   /**
    * <p>Builds a new object serializer, suitable for the given class,
    * using the various mapping files referenced by
@@ -870,7 +870,7 @@ public class HistoryRepositoryImpl
     // CASTOR: Phase out with Castor
     return makeObjectSerializer(NodeHistoryBean.class);
   }
-  
+
   /**
    * <p>Instantiates a {@link File} instance with the given prefix and
    * suffix, creating the path of directories denoted by the prefix if
@@ -893,7 +893,7 @@ public class HistoryRepositoryImpl
    * @param obj The object returning from serialized form.
    * @return An unwrapped object.
    */
-  private static Object unwrap(Object obj) {  
+  private static Object unwrap(Object obj) {
     // CASTOR: Phase out with Castor
     if (obj == null) {
       return null;
@@ -903,13 +903,13 @@ public class HistoryRepositoryImpl
     }
     else if (obj instanceof NodeHistoryBean) {
       List histBeans = ((NodeHistoryBean)obj).getHistoryBeans();
-      return NodeHistoryBean.fromBeanListToList(histBeans);      
+      return NodeHistoryBean.fromBeanListToList(histBeans);
     }
     else {
       return obj;
     }
   }
-  
+
   /**
    * <p>Might unwrap an object returning from serialization so that
    * it comes back in a form that is expected by
@@ -946,7 +946,7 @@ public class HistoryRepositoryImpl
     if (isCastorMode()) { return new AuStateBean(auState); }
     else                { return auState; }
   }
-  
+
   /**
    * <p>Might wrap a List into an IdentityAgreementList.</p>
    * @param idList An identity agreement list.
@@ -955,9 +955,9 @@ public class HistoryRepositoryImpl
   private static Serializable wrap(List idList) {
     // CASTOR: Phase out with Castor
     if (isCastorMode()) { return new IdentityAgreementList(idList); }
-    else                { return (Serializable)idList; }  
+    else                { return (Serializable)idList; }
   }
-  
+
   /**
    * <p>Might wrap a NodeState into either a NodeHistoryBean.</p>
    * @param nodeState A NodeState instance.
@@ -972,5 +972,5 @@ public class HistoryRepositoryImpl
       return (NodeStateImpl)nodeState;
     }
   }
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: GetTable.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id: GetTable.java,v 1.3 2005-10-11 05:47:41 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.uiapi.util.*;
  * Implements the "get status table" command
  */
 public class GetTable extends ApiActivityBase {
-  
+
   private static Logger log = Logger.getLogger("GetTable");
 
   /*
@@ -62,12 +62,12 @@ public class GetTable extends ApiActivityBase {
    */
   private StatusTable statusTable;
   private HashMap     requestOptions;
-  
+
 
   public GetTable() {
     super();
     requestOptions = new HashMap();
-  }  
+  }
 
 
   /**
@@ -83,7 +83,7 @@ public class GetTable extends ApiActivityBase {
     }
     requestOptions.put(name, value);
   }
-  
+
   /**
    * Get a named status table option
    * @param name Option name
@@ -92,7 +92,7 @@ public class GetTable extends ApiActivityBase {
   protected String getRequestOption(String name) {
     return (String) requestOptions.get(name);
   }
-  
+
   /**
    * Get an interator to all status table request options
    * @return Option table EntrySet Iterator
@@ -100,7 +100,7 @@ public class GetTable extends ApiActivityBase {
   protected Iterator getRequestOptionEntrySetIterator() {
     return requestOptions.entrySet().iterator();
   }
-  
+
   /**
    * Populate the response body with information from the requested table
    * @return true on success
@@ -123,10 +123,10 @@ public class GetTable extends ApiActivityBase {
       element = getXmlUtils().getElement(getRequestRoot(), AP_E_NAME);
       ParseUtils.verifyMandatoryElement(element, AP_E_NAME);
       name    = XmlUtils.getText(element);
-      
+
       element = getXmlUtils().getElement(getRequestRoot(), AP_E_KEY);
       key     = XmlUtils.getText(element);
-      
+
       element = getXmlUtils().getElement(getRequestRoot(), AP_E_OPTION);
       option  = XmlUtils.getText(element);
       /*
@@ -134,7 +134,7 @@ public class GetTable extends ApiActivityBase {
        */
       statusTable   = new StatusTable(name, key);
       statusOptions = new BitSet();
-      
+
       if ("norows".equalsIgnoreCase(option)) {
         statusOptions.set(StatusTable.OPTION_NO_ROWS);
       }
@@ -145,7 +145,7 @@ public class GetTable extends ApiActivityBase {
       iterator = getRequestOptionEntrySetIterator();
       while (iterator.hasNext()) {
         Map.Entry entry = (Map.Entry) iterator.next();
-        
+
 	      statusTable.setProperty((String) entry.getKey(),
                                 (String) entry.getValue());
       }

@@ -1,5 +1,5 @@
 /*
- * $Id: V1PollTally.java,v 1.23 2005-10-10 23:48:56 troberts Exp $
+ * $Id: V1PollTally.java,v 1.24 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -139,7 +139,7 @@ public class V1PollTally extends PollTally {
   public int getTallyResult() {
     return result;
   }
-  
+
   /**
    * get the error state for this poll
    * @return 0 == NOERR or one of the poll err conditions
@@ -386,17 +386,17 @@ public class V1PollTally extends PollTally {
     }
   }
 
-  
+
   /**
    * replay a previously checked vote
    * @param vote the vote to recheck
    * @param deadline the deadline by which the check must complete
    */
-  
+
   public void replayVoteCheck(Vote vote, Deadline deadline) {
     MessageDigest digest = poll.getInitedDigest(vote.getChallenge(),
                                                 vote.getVerifier());
-    
+
     if (!poll.scheduleHash(digest, deadline, poll.copyVote(vote, vote.agree),
                            new ReplayVoteCallback())) {
       poll.m_pollstate = Poll.ERR_SCHEDULE_HASH;

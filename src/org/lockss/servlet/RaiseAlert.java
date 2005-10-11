@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.7 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: RaiseAlert.java,v 1.8 2005-10-11 05:46:57 tlipkis Exp $
  */
 
 /*
@@ -114,7 +114,7 @@ public class RaiseAlert extends LockssServlet {
       name = getParameter(KEY_NAME_TYPE);
     }
     text = getParameter(KEY_TEXT);
-    
+
     Alert alert;
     Alert proto = findProtoAlert(name);
     if (proto == null) {

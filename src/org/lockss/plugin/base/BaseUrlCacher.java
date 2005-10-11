@@ -1,5 +1,5 @@
 /*
- * $Id: BaseUrlCacher.java,v 1.61 2005-10-06 21:45:05 troberts Exp $
+ * $Id: BaseUrlCacher.java,v 1.62 2005-10-11 05:45:12 tlipkis Exp $
  */
 
 /*
@@ -90,11 +90,11 @@ public class BaseUrlCacher implements UrlCacher {
     "refetch_on_set_cookie";
   private static final boolean DEFAULT_SHOULD_REFETCH_ON_SET_COOKIE = true;
 
-  // Max amount we'll buffer up to avoid refetching a page when we check if it's 
+  // Max amount we'll buffer up to avoid refetching a page when we check if it's
   // a login page
   static final int LOGIN_BUFFER_MAX = 16 * 1024;
 
-  
+
   private NodeManager nodeMgr;
 
   public BaseUrlCacher(ArchivalUnit owner, String url) {
@@ -266,9 +266,9 @@ public class BaseUrlCacher implements UrlCacher {
       }
     }
   }
-  
+
   /**
-   * Try to reset the provided input stream, if we can't then return 
+   * Try to reset the provided input stream, if we can't then return
    * new input stream for the given url
    */
   private InputStream resetInputStream(InputStream is, String url)
@@ -300,7 +300,7 @@ public class BaseUrlCacher implements UrlCacher {
 	input = resetInputStream(input, fetchUrl);
       }
     } else {
-      logger.debug3("Didn't find a login page checker"); 
+      logger.debug3("Didn't find a login page checker");
     }
     return input;
   }

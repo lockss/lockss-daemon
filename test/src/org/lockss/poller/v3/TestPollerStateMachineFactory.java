@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollerStateMachineFactory.java,v 1.3 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestPollerStateMachineFactory.java,v 1.4 2005-10-11 05:50:29 tlipkis Exp $
  */
 
 /*
@@ -169,7 +169,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   /**
    * Ensure that each state properly handles errors.
    */
-  
+
   /**  Error in ProveIntroEffort */
   public void testProveIntroEffortError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors2.class);
@@ -179,9 +179,9 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
     String[] expectedResults = new String[] {"error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
-    
+
   }
-  
+
   /**  Error in SendPoll */
   public void testSendPollError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors3.class);
@@ -192,8 +192,8 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
   }
-  
-  
+
+
   /**  Error in WaitPollAck */
   public void testWaitPollAckError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors4.class);
@@ -207,7 +207,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
   }
-  
+
   /**  Error in VerifyPollAckEffort */
   public void testVerifyPollAckEffortError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors5.class);
@@ -277,7 +277,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
 		     (List)interp.getUserData());
 
   }
-  
+
   /**  Error in SendVoteRequest */
   public void testSendVoteRequestError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors9.class);
@@ -388,7 +388,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
 				    "verifyPollAckEffort",
 				    "proveRemainingEffort", "sendPollProof",
 				    "receiveNominate", "sendVoteRequest",
-				    "receiveVote", "tallyVote", 
+				    "receiveVote", "tallyVote",
 				    "proveRepairEffort", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
@@ -416,14 +416,14 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
 				    "verifyPollAckEffort",
 				    "proveRemainingEffort", "sendPollProof",
 				    "receiveNominate", "sendVoteRequest",
-				    "receiveVote", "tallyVote", 
+				    "receiveVote", "tallyVote",
 				    "proveRepairEffort", "sendRepairRequest",
 				    "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
 		     (List)interp.getUserData());
 
   }
-   
+
 
   /**  Error in ProcessRepair */
   public void testProcessRepairError() throws Exception {
@@ -444,7 +444,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
 				    "verifyPollAckEffort",
 				    "proveRemainingEffort", "sendPollProof",
 				    "receiveNominate", "sendVoteRequest",
-				    "receiveVote", "tallyVote", 
+				    "receiveVote", "tallyVote",
 				    "proveRepairEffort", "sendRepairRequest",
 				    "receiveRepair", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
@@ -472,7 +472,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
 				    "verifyPollAckEffort",
 				    "proveRemainingEffort", "sendPollProof",
 				    "receiveNominate", "sendVoteRequest",
-				    "receiveVote", "tallyVote", 
+				    "receiveVote", "tallyVote",
 				    "proveRepairEffort", "sendRepairRequest",
 				    "receiveRepair", "processRepair",
 				    "tallyVote", "error"};
@@ -519,7 +519,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
       ((List)interp.getUserData()).add("receiveNominate");
       return V3Events.evtOk;
     }
-    
+
     public static PsmEvent handleSendVoteRequest(PsmEvent evt, PsmInterp interp) {
       ((List)interp.getUserData()).add("sendVoteRequest");
       return V3Events.evtOk;
@@ -571,7 +571,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   // needs repairs.  Subsequent calls will return 'evtVoteComplete'.
   public static class RepairTestActions extends NoRepairTestActions {
     static int callCount = 0;
-    
+
     public static PsmEvent handleTallyVote(PsmEvent evt, PsmInterp interp) {
       ((List)interp.getUserData()).add("tallyVote");
       if (callCount++ == 0) {
@@ -635,7 +635,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
       return V3Events.evtError;
     }
   }
-  
+
   // Error in SendVoteRequest
   public static class Errors9 extends RepairTestActions {
     public static PsmEvent handleSendVoteRequest(PsmEvent evt, PsmInterp interp) {

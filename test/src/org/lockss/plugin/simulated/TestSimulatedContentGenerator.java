@@ -1,5 +1,5 @@
 /*
- * $Id: TestSimulatedContentGenerator.java,v 1.24 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestSimulatedContentGenerator.java,v 1.25 2005-10-11 05:50:15 tlipkis Exp $
  */
 
 /*
@@ -165,7 +165,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     assertEquals(expectedStr, SimulatedContentGenerator.getDirectoryName(15));
 
     // Test with maxFilenameLength set.
-    
+
   }
 
   public void testFileLocation() throws IOException {
@@ -260,7 +260,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     File child = new File(childName);
     assertTrue("File not found.", child.exists() && !child.isDirectory());
     String content = getFileContent(child);
-    String expectedContent = 
+    String expectedContent =
       SimulatedContentGenerator.getHtmlFileContent(scgen.getFileName(1,
         SimulatedContentGenerator.FILE_TYPE_HTML), 1, 0, 0, false);
     assertEquals("content incorrect.", expectedContent, content);
@@ -356,7 +356,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     ByteArrayOutputStream baos = new ByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
-    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(1), 
+    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(1),
                                                             1, false),
                  baos.toString());
 
@@ -374,7 +374,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     baos = new ByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
-    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(2), 
+    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(2),
                                                             2, true),
                  baos.toString());
 
@@ -387,7 +387,7 @@ public class TestSimulatedContentGenerator extends LockssTestCase {
     baos = new ByteArrayOutputStream(30);
     StreamUtil.copy(fis, baos);
     fis.close();
-    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(1), 
+    assertEquals(SimulatedContentGenerator.getBranchContent(SimulatedContentGenerator.getDirectoryName(1),
                                                             2, false),
                  baos.toString());
   }

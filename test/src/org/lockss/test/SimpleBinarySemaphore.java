@@ -1,5 +1,5 @@
 /*
- * $Id: SimpleBinarySemaphore.java,v 1.4 2004-12-07 08:46:28 tlipkis Exp $
+ * $Id: SimpleBinarySemaphore.java,v 1.5 2005-10-11 05:52:05 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,7 +39,7 @@ import java.util.*;
  */
 public class SimpleBinarySemaphore {
   private volatile boolean state = false;
-    
+
   /** Wait until the semaphore is full.
    * If the semaphore is already full, return immediately.
    * Always leaves the semaphore empty.
@@ -95,7 +95,7 @@ public class SimpleBinarySemaphore {
   /** Fill the semaphore.  If another thread is waiting for the
    * semaphore to be full, it will proceed.  If multiple threads are waiting,
    * one of them will proceed.
-   */     
+   */
   synchronized public void give() {
     state = true;
     this.notifyAll();

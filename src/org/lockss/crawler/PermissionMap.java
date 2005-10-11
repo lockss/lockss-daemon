@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionMap.java,v 1.4 2005-09-06 22:59:15 troberts Exp $
+ * $Id: PermissionMap.java,v 1.5 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -46,18 +46,18 @@ public class PermissionMap {
   public PermissionMap(){
     hMap = new HashMap();
   }
-  
+
   /**
    * Put a object to a hashmap using the lowercased host name of permissionUrl as the key.
-   * The object contains the host's permission url and permission status. 
+   * The object contains the host's permission url and permission status.
    *
    * @param permissionUrl the host's permission url
-   * @param status the host's permission status  
+   * @param status the host's permission status
    */
   public void putStatus(String permissionUrl, int status) throws MalformedURLException {
     hMap.put(UrlUtil.getHost(permissionUrl).toLowerCase(), new PermissionRecord(permissionUrl,status));
   }
-  
+
   /**
    * Get a PermissionRecord from host name's url as the key
    *
@@ -71,7 +71,7 @@ public class PermissionMap {
   /**
    * Get the host's permission url from a url
    *
-   * @param url a url 
+   * @param url a url
    * @return the host's permission url of the given url
    */
   public String getPermissionUrl(String url) throws MalformedURLException{

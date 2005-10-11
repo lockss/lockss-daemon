@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.5 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.6 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -55,11 +55,11 @@ public class TestOaiCrawler extends LockssTestCase {
      private MockCrawlRule crawlRule = null;
      private String handlerUrl = "http://www.example.com/handler.html";
      private String permissionUrl = "http://www.example.com/permission.html";
-     private List permissionList = ListUtil.list(permissionUrl);  
+     private List permissionList = ListUtil.list(permissionUrl);
      private CrawlerImpl crawler = null;
 
      SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
-  
+
   public void setUp() throws Exception {
     super.setUp();
     TimeBase.setSimulated(10);
@@ -124,9 +124,9 @@ public class TestOaiCrawler extends LockssTestCase {
     long lastCrawlTime = lastCrawlDate.getTime();
     aus.setLastCrawlTime(lastCrawlTime);
 
-    //System.out.println("last Crawl time = " + lastCrawlTime); 
+    //System.out.println("last Crawl time = " + lastCrawlTime);
     String expected = iso8601DateFormatter.format(lastCrawlDate);
-    
+
     spec = new OaiCrawlSpec(handlerUrl, crawlRule);
     crawler = new OaiCrawler(mau, spec, aus);
     assertEquals(expected, ((OaiCrawler)crawler).getFromTime());
@@ -141,14 +141,14 @@ public class TestOaiCrawler extends LockssTestCase {
   }
 
   //XXX test need to be implement
-  // 1. need to add test for different kind of exception throw in parsering 
+  // 1. need to add test for different kind of exception throw in parsering
   //    the XML from OAI repository
   // 2. test the followLink ability of the crawler, not just the boolean
   // 3. test oai crawl with different permission scenarios
   //
   // Tests below are subject to change after re-implement the Oai Crawler
 
-  public void testShouldFollowLinkReturnTrue(){ 
+  public void testShouldFollowLinkReturnTrue(){
     // this need to made into a real functional test
     spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, true);
     crawler = new OaiCrawler(mau, spec, aus);
@@ -215,7 +215,7 @@ public class TestOaiCrawler extends LockssTestCase {
     public MyOaiCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus){
       super(au, crawlSpec, aus);
     }
-    
+
     protected Set getUrlsToFollow(){
       return updatedUrls;
     }

@@ -1,5 +1,5 @@
 /*
- * $Id: ApiActivityBase.java,v 1.1 2005-03-02 20:55:58 ssmail Exp $
+ * $Id: ApiActivityBase.java,v 1.2 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.uiapi.servlet.*;
 import org.lockss.uiapi.util.*;
 
 /**
- * Base class for external command handlers (commands executed on each 
+ * Base class for external command handlers (commands executed on each
  * individual LOCKSS cache via the <code>Api</code> servlet)
  */
 
@@ -77,20 +77,20 @@ public abstract class ApiActivityBase extends ActivityBase {
   /*
    * Abstract methods
    */
-  
+
   /**
    * Perform a command, populate the response body based on command results
-   * @return True if command execution and response generation 
+   * @return True if command execution and response generation
    * complete successfully
    */
   public abstract boolean doCommand() throws Exception;
- 
+
   /*
    * Base methods
    */
-  
+
   /**
-   * Do remote setup 
+   * Do remote setup
    * @return true (success) or false (failure)
    * <p>
    * <code>doRemoteSetupAndVerification()</code> is executed on each cache
@@ -100,17 +100,17 @@ public abstract class ApiActivityBase extends ActivityBase {
    * <li> Every cluster member has been tried
    * </ul>
    * The status of the remote setup operation is passed back to the command
-   * component that requested it - that command has to decide how to react 
+   * component that requested it - that command has to decide how to react
    * to a failure.
    */
   public boolean doRemoteSetupAndVerification() throws Exception {
     return true;
   }
-  
+
   /*
    * Helpers
    */
-  
+
   /**
    * Save the LOCKSS Daemon
    * @param lockssDaemon LockssDaemon Object
@@ -120,7 +120,7 @@ public abstract class ApiActivityBase extends ActivityBase {
   public void setLockssDaemon(LockssDaemon lockssDaemon) {
     _lockssDaemon = lockssDaemon;
   }
-  
+
   /**
    * Get the LOCKSS daemon
    * @return LockssDaemon object
@@ -144,7 +144,7 @@ public abstract class ApiActivityBase extends ActivityBase {
   protected RemoteApi getRemoteApi() {
     return getLockssDaemon().getRemoteApi();
   }
-  
+
   /**
    * Look up a plugin for an AU title
    * @param title Title we need a plugin for
@@ -157,26 +157,26 @@ public abstract class ApiActivityBase extends ActivityBase {
     }
     return (PluginProxy)c.iterator().next();
   }
-  
-  /** 
+
+  /**
    * Lookup the "well known" journal title for this AU
-   * @param auTitle The AU specific title 
+   * @param auTitle The AU specific title
    * @return The generic journal title (null if none)
    */
   protected String getJournalTitle(String auTitle) {
     PluginProxy   pluginProxy;
     TitleConfig   titleConfig;
-    
+
     if (auTitle == null) {
       return null;
     }
-    
+
     pluginProxy = getTitlePlugin(auTitle);
     if (pluginProxy == null) {
       log.warning("Unknown AU title:" + auTitle);
       return null;
     }
-     
+
     titleConfig = pluginProxy.getTitleConfig(auTitle);
     if (titleConfig == null) {
       log.warning("No title configuration for AU title:" + auTitle);
@@ -187,7 +187,7 @@ public abstract class ApiActivityBase extends ActivityBase {
   }
 
   /**
-   * Convert an <code>ActivityBase</code> object to an 
+   * Convert an <code>ActivityBase</code> object to an
    * <code>ApiActivityBase</code> reference
    * @param activity The original ActivityBase object
    * @return An ApiActivityBase reference
@@ -195,7 +195,7 @@ public abstract class ApiActivityBase extends ActivityBase {
   public static ApiActivityBase getApiActivity(Object activity) {
 
     if (!(activity instanceof ApiActivityBase)) {
-      
+
       throw new ResponseException("Not an ApiActivityBase object: "
                                 + activity.toString());
     }

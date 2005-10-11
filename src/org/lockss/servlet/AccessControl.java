@@ -1,5 +1,5 @@
 /*
- * $Id: AccessControl.java,v 1.7 2005-10-07 23:35:54 thib_gc Exp $
+ * $Id: AccessControl.java,v 1.8 2005-10-11 05:46:58 tlipkis Exp $
  */
 
 /*
@@ -47,11 +47,11 @@ import org.mortbay.html.Page;
 public class AccessControl extends LockssServlet {
 
   private String action;
-  
+
   public void init(ServletConfig config) throws ServletException {
     super.init(config);
   }
-  
+
   protected void displayMenu() throws IOException {
     Page page = newPage();
     resp.setContentType("text/html");
@@ -62,10 +62,10 @@ public class AccessControl extends LockssServlet {
 
   protected void lockssHandleRequest() throws ServletException, IOException {
     action = req.getParameter(ACTION_TAG);
-    
+
     if (StringUtil.isNullString(action)) displayMenu();
   }
-  
+
   protected static Iterator getDescriptors() {
     return new FilterIterator(
         new ObjectArrayIterator(servletDescrs),
@@ -75,5 +75,5 @@ public class AccessControl extends LockssServlet {
           }
         });
   }
-  
+
 }

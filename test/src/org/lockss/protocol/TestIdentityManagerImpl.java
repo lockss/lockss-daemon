@@ -1,5 +1,5 @@
 /*
- * $Id: TestIdentityManagerImpl.java,v 1.5 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestIdentityManagerImpl.java,v 1.6 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -62,7 +62,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
                                     Integer.toString(CXSerializer.CASTOR_MODE));
     }
   }
-  
+
   /**
    * <p>A version of {@link TestIdentityManagerImpl} that forces the
    * serialization compatibility mode to
@@ -83,7 +83,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
         WithXStream.class
     });
   }
-  
+
   Object testIdKey;
 
   private MockLockssDaemon theDaemon;
@@ -609,7 +609,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertNotEquals(a1, a2);
     a2.setLastDisagree(12);
     assertEquals(a1, a2);
-  }    
+  }
 
   public void testIdentityAgreementHash() {
     IdentityManager.IdentityAgreement a1 = new MyIdentityAgreement("id1");
@@ -620,7 +620,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     a1.setLastDisagree(12);
     a2.setLastDisagree(12);
     assertEquals(a1.hashCode(), a2.hashCode());
-  }    
+  }
 
   static class MyIdentityAgreement extends IdentityManager.IdentityAgreement {
     MyIdentityAgreement(String id) {
@@ -704,7 +704,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 //    ConfigurationUtil.setFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP, "true");
     ConfigurationUtil.addFromArgs(IdentityManager.PARAM_MERGE_RESTORED_AGREE_MAP,
                                   "true");
-    
+
     MockHistoryRepository hRep = new MockHistoryRepository();
     theDaemon.setHistoryRepository(hRep, mau);
 
@@ -812,7 +812,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
 
     idmgr.signalAgreed(peer1, mau);
     idmgr.signalAgreed(peer2, mau);
-    
+
     Map idMap = idmgr.getIdentityMap();
     Set expectedAddresses = new HashSet();
     expectedAddresses.add("127.0.0.1");
@@ -825,10 +825,10 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
       assertTrue(id.getPeerIdentity() + " not found in " + expectedAddresses,
 		 expectedAddresses.contains(id.getPeerIdentity().getIdString()));
     }
-    
+
     assertEquals(expectedAddresses.size(), idMap.size()); //2 above,plus me
   }
-  
+
   public void testGetUdpPeerIdentities() throws Exception {
     Collection udpPeers = idmgr.getUdpPeerIdentities();
     assertNotNull(udpPeers);
@@ -847,7 +847,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertTrue(udpPeers.containsAll(expectedPeers));
     assertTrue(expectedPeers.containsAll(udpPeers));
   }
-  
+
   public void testGetTcpPeerIdentities() throws Exception {
     Collection tcpPeers = idmgr.getTcpPeerIdentities();
     assertNotNull(tcpPeers);
@@ -867,7 +867,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     assertTrue(tcpPeers.containsAll(expectedPeers));
     assertTrue(expectedPeers.containsAll(tcpPeers));
   }
-  
+
   private class TestableIdentityManager extends IdentityManagerImpl {
     Map identities = null;
 
@@ -896,7 +896,7 @@ public abstract class TestIdentityManagerImpl extends LockssTestCase {
     public String getDisplayName() {
       throw new UnsupportedOperationException();
     }
-    
+
     public void populateTable(StatusTable table) {
       throw new UnsupportedOperationException();
     }

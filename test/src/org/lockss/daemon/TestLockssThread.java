@@ -1,5 +1,5 @@
 /*
- * $Id: TestLockssThread.java,v 1.8 2005-10-07 19:45:06 tlipkis Exp $
+ * $Id: TestLockssThread.java,v 1.9 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -273,7 +273,7 @@ public class TestLockssThread extends LockssTestCase {
     protected void exitDaemon(int exitCode, String msg) {
       daemonExitCode = exitCode;
     }
-      
+
     protected void threadHung() {
       threadHung = true;
       super.threadHung();

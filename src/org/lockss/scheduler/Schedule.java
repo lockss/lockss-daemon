@@ -1,5 +1,5 @@
 /*
- * $Id: Schedule.java,v 1.6 2004-09-28 08:53:15 tlipkis Exp $
+ * $Id: Schedule.java,v 1.7 2005-10-11 05:46:42 tlipkis Exp $
  */
 
 /*
@@ -93,7 +93,7 @@ public class Schedule {
       return true;
     }
     return false;
-  }    
+  }
 
   /** Remove an event from the schedule.
    * @param event the event to remove.
@@ -101,7 +101,7 @@ public class Schedule {
    */
   public synchronized boolean removeEvent(Event event) {
     return events.remove(event);
-  }    
+  }
 
   /** Return the list of overrun tasks */
   public Collection getOverrunTasks() {
@@ -147,7 +147,7 @@ public class Schedule {
     public Exception getError() {
       return error;
     }
-  }      
+  }
 
   public static class BackgroundEvent extends Event {
     private BackgroundTask task;

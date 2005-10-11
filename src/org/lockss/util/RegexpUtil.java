@@ -1,5 +1,5 @@
 /*
- * $Id: RegexpUtil.java,v 1.5 2005-01-13 08:11:20 tlipkis Exp $
+ * $Id: RegexpUtil.java,v 1.6 2005-10-11 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -101,7 +101,7 @@ public class RegexpUtil {
     private Perl5Compiler compiler = new Perl5Compiler();
     private Perl5Matcher matcher = new Perl5Matcher();
   }
-    
+
   /** Static utilities intended for use with JXPath.
    * JXPathContext.setFunctions() makes all the static methods in a class
    * available to xpath expressions, so a separate class is used to expose

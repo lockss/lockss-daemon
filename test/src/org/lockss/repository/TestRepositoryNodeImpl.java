@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepositoryNodeImpl.java,v 1.46 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TestRepositoryNodeImpl.java,v 1.47 2005-10-11 05:51:20 tlipkis Exp $
  */
 
 /*
@@ -853,7 +853,7 @@ public class TestRepositoryNodeImpl extends LockssTestCase {
     props.load(is);
     is.close();
     // make sure the 'was inactive' property hasn't been lost
-    assertEquals("true", 
+    assertEquals("true",
                  props.getProperty(RepositoryNodeImpl.NODE_WAS_INACTIVE_PROPERTY));
   }
 

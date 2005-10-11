@@ -1,5 +1,5 @@
 /*
- * $Id: PlatformInfo.java,v 1.12 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: PlatformInfo.java,v 1.13 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -49,7 +49,7 @@ public class PlatformInfo {
    * dependent packet filters */
   public static final String PARAM_UNFILTERED_TCP_PORTS =
     Configuration.PLATFORM + "unfilteredTcpPorts";
-  
+
   public static final String PARAM_UNFILTERED_UDP_PORTS =
     Configuration.PLATFORM + "unfilteredUdpPorts";
 
@@ -91,10 +91,10 @@ public class PlatformInfo {
     Configuration config = Configuration.getCurrentConfig();
     return config.getList(PARAM_UNFILTERED_TCP_PORTS);
   }
-  
+
   public List getUnfilteredUdpPorts() {
     Configuration config = Configuration.getCurrentConfig();
-    return config.getList(PARAM_UNFILTERED_UDP_PORTS);    
+    return config.getList(PARAM_UNFILTERED_UDP_PORTS);
   }
 
   /** Return the PID of the executing process, if possible.
@@ -323,7 +323,7 @@ public class PlatformInfo {
 	throw new UnsupportedException("Can't open " + filename, e);
       } catch (IOException e) {
 	throw new UnsupportedException("Error reading " + filename, e);
-      }      
+      }
     }
 
     /** Get vector of stat vectors for all processes from /proc/<n>/stat .
@@ -405,7 +405,7 @@ public class PlatformInfo {
 	throw new UnsupportedException("Can't open " + filename, e);
       } catch (IOException e) {
 	throw new UnsupportedException("Error reading " + filename, e);
-      }      
+      }
     }
   }
 

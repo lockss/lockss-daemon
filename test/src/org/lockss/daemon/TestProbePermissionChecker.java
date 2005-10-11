@@ -1,5 +1,5 @@
 /*
- * $Id: TestProbePermissionChecker.java,v 1.5 2005-07-07 20:26:02 troberts Exp $
+ * $Id: TestProbePermissionChecker.java,v 1.6 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     "      <ul>\n"+
     "    </body>\n"+
     "</html>\n";
-    
+
   private static String htmlSourceWOProbe =
     "<html>\n"+
     "  <head>\n"+
@@ -79,12 +79,12 @@ public class TestProbePermissionChecker extends LockssTestCase {
     "      <ul>\n"+
     "    </body>\n"+
     "</html>\n";
-		
-	
 
-	
-		
-		
+
+
+
+
+
 
   public void testConstructorNullChecker() {
     try {
@@ -139,7 +139,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
 
 //     MockLoginPageChecker mockLPC = new MockLoginPageChecker(false);
 
-//     pc = new ProbePermissionChecker(mockLPC, mau); 
+//     pc = new ProbePermissionChecker(mockLPC, mau);
     pc = makeProbePC(new MockLoginPageChecker(false));
     assertTrue("Didn't give permission when there was a probe",
 		pc.checkPermission(new StringReader(htmlSourceWProbe),
@@ -157,12 +157,12 @@ public class TestProbePermissionChecker extends LockssTestCase {
 
 //     MockLoginPageChecker mockLPC = new MockLoginPageChecker(true);
 
-//     pc = new ProbePermissionChecker(mockLPC, mau); 
+//     pc = new ProbePermissionChecker(mockLPC, mau);
     pc = makeProbePC(new MockLoginPageChecker(true));
     assertFalse("Gave permission when the nested checker denied it",
 	       pc.checkPermission(new StringReader(htmlSourceWProbe),
 				  "http://www.example.com"));
-    
+
   }
 
   private ProbePermissionChecker makeProbePC(LoginPageChecker lpc) {
@@ -174,7 +174,7 @@ public class TestProbePermissionChecker extends LockssTestCase {
     mau.addContent(url, htmlSourceWProbe);
     mau.addUrl(probeUrl, true, true);
 
-    return new ProbePermissionChecker(lpc, mau); 
+    return new ProbePermissionChecker(lpc, mau);
   }
 
   private static class MockLoginPageChecker implements LoginPageChecker {

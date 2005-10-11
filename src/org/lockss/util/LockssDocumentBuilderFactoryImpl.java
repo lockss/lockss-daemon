@@ -1,5 +1,5 @@
 /*
- * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.3 2005-10-06 08:21:55 tlipkis Exp $
+ * $Id: LockssDocumentBuilderFactoryImpl.java,v 1.4 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -186,17 +186,17 @@ public class LockssDocumentBuilderFactoryImpl extends DocumentBuilderFactory {
     public void error(SAXParseException e) {
       log(Logger.LEVEL_WARNING, e);
     }
-    
+
     //  This method is called in the event of a non-recoverable error
     public void fatalError(SAXParseException e) {
       log(Logger.LEVEL_ERROR, e);
     }
-    
+
     //  This method is called in the event of a warning
     public void warning(SAXParseException e) {
       log(Logger.LEVEL_WARNING, e);
     }
-    
+
     // Log the error
     private void log(int level, SAXParseException e) {
       int line = e.getLineNumber();

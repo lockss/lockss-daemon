@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.18 2005-07-18 08:02:47 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.19 2005-10-11 05:50:15 tlipkis Exp $
  */
 
 /*
@@ -660,7 +660,7 @@ public class SimulatedContentGenerator {
     } else {
       fileName.append(FILE_PREFIX);
     }
-    
+
     switch (fileType) {
       case FILE_TYPE_TXT:
         fileName.append(".txt");

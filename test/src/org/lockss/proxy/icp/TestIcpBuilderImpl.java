@@ -1,5 +1,5 @@
 /*
- * $Id: TestIcpBuilderImpl.java,v 1.2 2005-09-08 01:24:41 thib_gc Exp $
+ * $Id: TestIcpBuilderImpl.java,v 1.3 2005-10-11 05:51:04 tlipkis Exp $
  */
 
 /*
@@ -44,5 +44,5 @@ public class TestIcpBuilderImpl extends IcpBuilderTester {
   protected Factory makeFactory() {
     return IcpFactoryImpl.makeBuilderFactory();
   }
-  
+
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessHandler.java,v 1.5 2005-09-01 01:45:59 thib_gc Exp $
+ * $Id: IpAccessHandler.java,v 1.6 2005-10-11 05:44:38 tlipkis Exp $
  */
 
 /*
@@ -31,7 +31,7 @@ in this Software without prior written authorization from Stanford University.
 */
 // ===========================================================================
 // Copyright (c) 1996-2002 Mort Bay Consulting Pty. Ltd. All rights reserved.
-// $Id: IpAccessHandler.java,v 1.5 2005-09-01 01:45:59 thib_gc Exp $
+// $Id: IpAccessHandler.java,v 1.6 2005-10-11 05:44:38 tlipkis Exp $
 // ---------------------------------------------------------------------------
 
 package org.lockss.jetty;
@@ -89,8 +89,8 @@ public class IpAccessHandler extends AbstractHttpHandler {
   /**
    * Handles the incoming request
    *
-   * @param pathInContext	
-   * @param pathParams	
+   * @param pathInContext
+   * @param pathParams
    * @param request	The incoming HTTP-request
    * @param response	The outgoing HTTP-response
    */
@@ -103,7 +103,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
     try	{
       String ip = request.getRemoteAddr();
       boolean authorized = isIpAuthorized(ip);
-		
+
       if (!authorized) {
 	// The IP is NOT allowed
 	if (logForbidden) {
@@ -111,7 +111,7 @@ public class IpAccessHandler extends AbstractHttpHandler {
 	}
 	response.sendError(HttpResponse.__403_Forbidden);
 	request.setHandled(true);
-	return; 
+	return;
       } else {
 	// The IP is allowed
 	return;

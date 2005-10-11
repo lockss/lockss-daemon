@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoderTester.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IcpEncoderTester.java,v 1.6 2005-10-11 05:51:04 tlipkis Exp $
  */
 
 /*
@@ -49,19 +49,19 @@ public abstract class IcpEncoderTester extends LockssTestCase {
    * <p>An ICP encoder factory.</p>
    */
   private Factory factory;
-  
+
   /* Inherit documentation */
   public void setUp() {
     this.factory = makeFactory();
   }
-  
+
   /**
    * <p>Tests encoding.</p>
    * @throws Exception if an error occurs.
    */
   public void testEncoding() throws Exception {
     IcpEncoder encoder = factory.makeIcpEncoder();
-    
+
     for (int test = 0 ; test < MockIcpMessage.countTestPairs(); test++) {
       logger.info("testEncoding: begin test #" + test);
       IcpMessage message = MockIcpMessage.getTestMessage(test);
@@ -74,14 +74,14 @@ public abstract class IcpEncoderTester extends LockssTestCase {
 
     }
   }
-  
+
   /**
    * <p>Produces an ICP encoder factory that produces ICP encoders of
    * the class under consideration.</p>
    * @return An ICP encoder factory.
    */
   protected abstract Factory makeFactory();
-  
+
   /**
    * <p>A logger for use by these tests.</p>
    */
@@ -98,5 +98,5 @@ public abstract class IcpEncoderTester extends LockssTestCase {
     assertEquals(expected.getPort(), packet.getPort());
     assertEquals(expected.getData(), packet.getData());
   }
-  
+
 }

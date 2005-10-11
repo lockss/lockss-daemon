@@ -1,5 +1,5 @@
 /*
- * $Id: HeaderUtil.java,v 1.1 2005-01-29 19:58:44 troberts Exp $
+ * $Id: HeaderUtil.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -32,12 +32,12 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.util;
 
 public class HeaderUtil {
-  
+
   public static String getMimeTypeFromContentType(String contentType) {
     if (contentType == null) {
       return null;
     }
-    
+
     int idx = contentType.indexOf(";");
     if (idx < 0) {
       return contentType.trim();

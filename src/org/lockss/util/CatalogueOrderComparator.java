@@ -1,5 +1,5 @@
 /*
- * $Id: CatalogueOrderComparator.java,v 1.4 2004-05-17 20:19:58 dcfok Exp $
+ * $Id: CatalogueOrderComparator.java,v 1.5 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -73,8 +73,8 @@ public class CatalogueOrderComparator implements Comparator {
       keyMap.put(s, key);
     }
     return key;
-  }    
- 
+  }
+
   String xlate(String s) {
     s = s.trim();
     s = deleteAll(s, PUNCTUATION);
@@ -105,7 +105,7 @@ public class CatalogueOrderComparator implements Comparator {
     StringTokenizer st = new StringTokenizer(s," ");
     while (st.hasMoreTokens()) {
 	String token = st.nextToken();
-        //check the token is a single uppercase character 
+        //check the token is a single uppercase character
 	if (token.length() == 1 &&
             Character.isUpperCase(token.charAt(0))) {
 	    if (deleteStart) {
@@ -116,12 +116,12 @@ public class CatalogueOrderComparator implements Comparator {
 	      deleteStart = true;
 	    }
 	}
-	else { 
+	else {
 	  sTmp = sTmp.append(" ").append(token);
 	  deleteStart = false;
 	}
     }
-    return sTmp.toString().trim(); 
+    return sTmp.toString().trim();
   }
 
   String deleteAll(String s, String chars) {
@@ -138,10 +138,10 @@ public class CatalogueOrderComparator implements Comparator {
       {"\u00c1","A"}, // Á, A with acute
       {"\u00c2","A"}, // Â, A with circumflex
       {"\u00c3","A"}, // Â, A with tilde
-      {"\u00c4","A"}, // Ä, A with diaeresis 
+      {"\u00c4","A"}, // Ä, A with diaeresis
       {"\u00c5","A"}, // Å, A with ring above
       {"\u00c6","AE"}, // Æ, AE
-      {"\u00c7","C"}, // Ç, C with cedilla 
+      {"\u00c7","C"}, // Ç, C with cedilla
       {"\u00c8","E"}, // È, E with grave
       {"\u00c9","E"}, // É, E with acute
       {"\u00ca","E"}, // Ê, E with circumflex
@@ -166,7 +166,7 @@ public class CatalogueOrderComparator implements Comparator {
       {"\u00e1","a"}, // á, a with acute
       {"\u00e2","a"}, // â, a with circumflex
       {"\u00e3","a"}, // ã, a with tilde
-      {"\u00e4","a"}, // ä, a with diaeresis 
+      {"\u00e4","a"}, // ä, a with diaeresis
       {"\u00e5","a"}, // å, a with ring above
       {"\u00e6","ae"}, // æ, ae
       {"\u00e7","c"}, // ç, c with cedilla
@@ -187,7 +187,7 @@ public class CatalogueOrderComparator implements Comparator {
       {"\u00f8","o"}, // ø, o with stroke
       {"\u00f9","u"}, // ù, u with grave
       {"\u00fa","u"}, // ú, u with acute
-      {"\u00fb","u"}, // û, u with circumflex 
+      {"\u00fb","u"}, // û, u with circumflex
       {"\u00fc","u"}, // ü, u with diaeresis
       {"\u00fd","y"}, // ý, y with acute
       {"\u00ff","y"}, // ÿ, y with diaeresis

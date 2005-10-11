@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigManager.java,v 1.25 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: ConfigManager.java,v 1.26 2005-10-11 05:43:31 tlipkis Exp $
  */
 
 /*
@@ -755,15 +755,15 @@ public class ConfigManager implements LockssManager {
   /**
    * <p>Return a directory under the platform disk space list.  Does
    * not create the directory, client code is expected to handle that.</p>
-   * 
+   *
    * <p>This currently only returns directories on the first available
    * platform disk.</p>
-   * 
+   *
    * @param relDir The relative pathname of the directory to request.
    * @return A File object representing the requested directory.
    */
   public File getPlatformDir(String relDir) {
-    List dspacePaths = 
+    List dspacePaths =
       ConfigManager.getCurrentConfig().getList(PARAM_PLATFORM_DISK_SPACE_LIST);
     if (dspacePaths.size() == 0) {
       throw new RuntimeException("No platform dir available");
@@ -771,7 +771,7 @@ public class ConfigManager implements LockssManager {
     File dir = new File((String)dspacePaths.get(0), relDir);
     return dir;
   }
-  
+
   /** Return the list of cache config file names */
   public List getCacheConfigFiles() {
     List res = new ArrayList();
@@ -857,7 +857,7 @@ public class ConfigManager implements LockssManager {
     return res;
   }
 
-  /** 
+  /**
    * Return the contents of the local AU config file.
    * @return the Configuration from the AU config file, or an empty config
    * if no config file found

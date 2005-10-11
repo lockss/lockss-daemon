@@ -1,5 +1,5 @@
 /*
-* $Id: PsmState.java,v 1.6 2005-09-07 03:06:29 smorabito Exp $
+* $Id: PsmState.java,v 1.7 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -291,11 +291,11 @@ public class PsmState {
   public String toString() {
     return "[State: " + getName() + "]";
   }
-  
+
   public boolean isRestorable() {
     return restorable;
   }
-  
+
   public PsmState setRestorable(boolean flag) {
     this.restorable = flag;
     return this;

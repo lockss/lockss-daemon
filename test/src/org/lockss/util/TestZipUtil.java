@@ -1,5 +1,5 @@
 /*
- * $Id: TestZipUtil.java,v 1.2 2005-10-10 23:25:26 tlipkis Exp $
+ * $Id: TestZipUtil.java,v 1.3 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -134,7 +134,7 @@ public class TestZipUtil extends LockssTestCase {
 		       ListUtil.fromArray(new File(dir, "a/b").list()));
     assertFileMatchesString("xxx", new File(dir, "a/b/foo"));
     assertFileMatchesString("yyy", new File(dir, "a/b/bar"));
-  }    
+  }
 
   public void testExtractIllPath1() throws IOException {
     Map map = new HashMap();
@@ -147,7 +147,7 @@ public class TestZipUtil extends LockssTestCase {
     } catch (IOException e) {
       assertMatchesRE("Absolute path.*not allowed", e.getMessage());
     }
-  }    
+  }
 
   public void testExtractIllPath2() throws IOException {
     Map map = new HashMap();
@@ -160,7 +160,7 @@ public class TestZipUtil extends LockssTestCase {
     } catch (IOException e) {
       assertMatchesRE("path traversal", e.getMessage());
     }
-  }    
+  }
 
 
   class MyBufferedInputStream extends BufferedInputStream {

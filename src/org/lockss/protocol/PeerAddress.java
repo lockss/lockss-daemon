@@ -1,5 +1,5 @@
 /*
- * $Id: PeerAddress.java,v 1.2 2005-05-20 07:28:24 tlipkis Exp $
+ * $Id: PeerAddress.java,v 1.3 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public abstract class PeerAddress {
     this.key = key;
   }
 
-  protected static PeerAddress makePeerAddress(PeerIdentity pid) 
+  protected static PeerAddress makePeerAddress(PeerIdentity pid)
       throws IdentityManager.MalformedIdentityKeyException {
     return makePeerAddress(pid.getIdString());
   }

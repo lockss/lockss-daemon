@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockTally.java,v 1.2 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestBlockTally.java,v 1.3 2005-10-11 05:50:29 tlipkis Exp $
  */
 
 /*
@@ -45,12 +45,12 @@ import java.io.*;
 public class TestBlockTally extends LockssTestCase {
   private IdentityManager idmgr;
   private LockssDaemon theDaemon;
-  
+
 //  public void setUp() throws Exception {
 //    super.setUp();
 //    String tempDirPath = getTempDir().getAbsolutePath() + File.separator;
 //    theDaemon = getMockLockssDaemon();
-//    Properties p = new Properties();    
+//    Properties p = new Properties();
 //    p.setProperty(IdentityManager.PARAM_IDDB_DIR, tempDirPath + "iddb");
 //    p.setProperty(LockssRepositoryImpl.PARAM_CACHE_LOCATION, tempDirPath);
 //    p.setProperty(IdentityManager.PARAM_LOCAL_IP, "127.0.0.1");
@@ -60,7 +60,7 @@ public class TestBlockTally extends LockssTestCase {
 //    ConfigurationUtil.setCurrentConfigFromProps(p);
 //    idmgr = theDaemon.getIdentityManager();
 //    idmgr.startService();
-//  } 
+//  }
 //
 //  public void tearDown() throws Exception {
 //    idmgr.stopService();
@@ -73,7 +73,7 @@ public class TestBlockTally extends LockssTestCase {
 //    assertTrue(300.0 == tally.m_trustedWeight);
 //    assertEquals(5, tally.m_quorum);
 //    assertEquals(BlockTally.RESULT_POLLING, tally.getResult());
-//  }  
+//  }
 //
 //  public void testWonPoll() throws Exception {
 //    BlockTally tally = new BlockTally();
@@ -85,7 +85,7 @@ public class TestBlockTally extends LockssTestCase {
 //    tally.tallyVotes();
 //    assertEquals(BlockTally.RESULT_WON, tally.getResult());
 //  }
-//  
+//
 //  public void testLostPoll() throws Exception {
 //    BlockTally tally = new BlockTally();
 //    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
@@ -108,7 +108,7 @@ public class TestBlockTally extends LockssTestCase {
 //    tally.tallyVotes();
 //    assertEquals(BlockTally.RESULT_TOO_CLOSE, tally.getResult());
 //  }
-//  
+//
 //  public void testResultTooCloseOver() throws Exception {
 //    BlockTally tally = new BlockTally();
 //    tally.addAgreeVote(idmgr.stringToPeerIdentity("192.168.0.1"));
@@ -142,7 +142,7 @@ public class TestBlockTally extends LockssTestCase {
 //    tally.tallyVotes();
 //    assertEquals(BlockTally.RESULT_NOQUORUM, tally.getResult());
 //  }
- 
+
   public void testFoo() throws Exception {
     //
   }

@@ -1,5 +1,5 @@
 /*
- * $Id: DamagedNodeSet.java,v 1.22 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: DamagedNodeSet.java,v 1.23 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -189,7 +189,7 @@ public class DamagedNodeSet implements LockssSerializable {
     repository.storeDamagedNodeSet(this);
   }
 
-  
+
 
   /**
    * Remove the url from the damage list.
@@ -273,7 +273,7 @@ public class DamagedNodeSet implements LockssSerializable {
     cusToRepair = mapBean.getMap();
   }
 
-  public String toString() { 
+  public String toString() {
     StringBuffer sb = new StringBuffer();
     sb.append("[DamagedNodeSet: ");
     sb.append("nodesWithDamage="+cusToRepair);

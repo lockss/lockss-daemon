@@ -1,5 +1,5 @@
 /*
- * $Id: BaseArchivalUnit.java,v 1.97 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: BaseArchivalUnit.java,v 1.98 2005-10-11 05:45:12 tlipkis Exp $
  */
 
 /*
@@ -255,16 +255,16 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
     paramMap.putString(AU_START_URL, startUrlString);
 
     // get crawl window setting
-    boolean useCrawlWindow = 
+    boolean useCrawlWindow =
       (config.containsKey(USE_CRAWL_WINDOW)
        ? config.getBoolean(USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW)
-       : 
+       :
        paramMap.getBoolean(AU_USE_CRAWL_WINDOW, DEFAULT_USE_CRAWL_WINDOW));
     paramMap.putBoolean(AU_USE_CRAWL_WINDOW, useCrawlWindow);
 
     // make our crawl spec
     try {
-      crawlSpec = makeCrawlSpec();      
+      crawlSpec = makeCrawlSpec();
       if (useCrawlWindow) {
         CrawlWindow window = makeCrawlWindow();
 	//XXX need to get rid of setCrawlWindow and set that in constructor
@@ -460,7 +460,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   /**
    * Use the starting url and the crawl rules to make the crawl spec needed
    * to crawl this au.
-   * 
+   *
    * By default, it is assumed we are doing a new content crawl, thus this method
    * will return SpiderCrawlSpec which implements CrawlSpec.
    * If people are using the plugin tools and configurate it to do an Oai Crawl
@@ -592,7 +592,7 @@ public abstract class BaseArchivalUnit implements ArchivalUnit {
   }
 
 
-  
+
 
   /**
    * Returns a filter rule from the cache if found, otherwise calls

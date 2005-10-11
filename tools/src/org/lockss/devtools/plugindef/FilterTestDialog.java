@@ -1,5 +1,5 @@
 /*
- * $Id: FilterTestDialog.java,v 1.4 2005-10-06 23:42:45 troberts Exp $
+ * $Id: FilterTestDialog.java,v 1.5 2005-10-11 05:53:07 tlipkis Exp $
  */
 
 /*
@@ -183,7 +183,7 @@ public class FilterTestDialog extends JDialog {
       else {
         FilterRunner.filterSingleFile(filter, m_srcFile, m_destFile);
       }
-      //saves the text field input in order to display 
+      //saves the text field input in order to display
       //the next time the filters are openned.  (Not tested)
       m_plugin.setPluginState(PersistentPluginState.FILTERS,
 			      FILTER_NAME_KEY,

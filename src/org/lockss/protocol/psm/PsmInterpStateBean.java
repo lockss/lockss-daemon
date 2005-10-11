@@ -9,11 +9,11 @@ import org.lockss.util.*;
  */
 public class PsmInterpStateBean implements LockssSerializable {
   private String lastRestorableStateName;
-  
+
   public String getLastRestorableStateName() {
     return lastRestorableStateName;
   }
-  
+
   public void setLastRestorableStateName(String lastRestorableStateName) {
     this.lastRestorableStateName = lastRestorableStateName;
   }

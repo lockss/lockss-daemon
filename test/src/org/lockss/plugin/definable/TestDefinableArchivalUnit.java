@@ -1,5 +1,5 @@
 /*
- * $Id: TestDefinableArchivalUnit.java,v 1.19 2005-05-20 23:42:12 troberts Exp $
+ * $Id: TestDefinableArchivalUnit.java,v 1.20 2005-10-11 05:50:15 tlipkis Exp $
  */
 
 /*
@@ -268,7 +268,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
     ContentParser parser = null;
     parser = cau.getContentParser("text/ram ; random-content-type");
     assertTrue(parser instanceof org.lockss.test.MockContentParser);
- 
+
     parser = cau.getContentParser(" text/ram ");
     assertTrue(parser instanceof org.lockss.test.MockContentParser);
   }
@@ -301,7 +301,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
       return new NegativeCrawlRule();
     }
   }
-  
+
   public void testGetCrawlRuleThrowsOnBadClass() throws LockssRegexpException {
     defMap.putString(DefinableArchivalUnit.AU_RULES_KEY,
 		  "org.lockss.bogus.FakeClass");
@@ -338,7 +338,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   private static class MockPermissionChecker implements PermissionChecker {
     public boolean checkPermission(Reader inputReader, String url) {
       throw new UnsupportedOperationException("not implemented");
-    } 
+    }
   }
 
   public void testMakeLoginPageCheckers() {
@@ -348,7 +348,7 @@ public class TestDefinableArchivalUnit extends LockssTestCase {
   public void testMakeLoginPageChecker() {
     defMap.putString(DefinableArchivalUnit.AU_LOGIN_PAGE_CHECKER,
  		  "org.lockss.plugin.definable.TestDefinableArchivalUnit$MyLoginPageChecker");
-    assertNotNull(cau.makeLoginPageChecker()); 
+    assertNotNull(cau.makeLoginPageChecker());
   }
 
   public static class MyLoginPageChecker implements LoginPageChecker {

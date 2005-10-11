@@ -1,5 +1,5 @@
 /*
- * $Id: Crawler.java,v 1.32 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: Crawler.java,v 1.33 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -250,7 +250,7 @@ public interface Crawler {
       sources.add(source);
     }
 
-    
+
     public Collection getStartUrls() {
       return startUrls;
     }

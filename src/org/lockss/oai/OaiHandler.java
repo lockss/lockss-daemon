@@ -1,5 +1,5 @@
 /*
- * $Id: OaiHandler.java,v 1.10 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: OaiHandler.java,v 1.11 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -49,12 +49,12 @@ import java.lang.NoSuchFieldException;
 import java.io.IOException;
 import org.xml.sax.SAXException;
 
-/**   
+/**
  * there are 4 parts in the OaiHandler
  * 1. constructing and issuing an OAI request
  * 2. retriving the response and check for error
  * 3. parse the response for urls
- * 4. if there is any resumptionToken, go back to (1) 
+ * 4. if there is any resumptionToken, go back to (1)
  *    with resumptionToken in OAI request
  *
  */
@@ -73,7 +73,7 @@ public class OaiHandler {
 
   // the latest error is at the beginning of the list
   private LinkedList errList = new LinkedList();
-  
+
   // the root node of all the oai records retrieved in this request
   private Set oaiRecords = new HashSet();
 
@@ -84,9 +84,9 @@ public class OaiHandler {
 //    * @param untilDate create date of records the Oai request want until
 //    * @param maxRetries retry limit of oai request when retriable error is encountered
 //    */
-//   public OaiHandler(OaiRequestData oaiData, 
-// 		    String fromDate, 
-// 		    String untilDate, 
+//   public OaiHandler(OaiRequestData oaiData,
+// 		    String fromDate,
+// 		    String untilDate,
 // 		    int maxRetries) {
 
 //     if (fromDate == null) {
@@ -94,7 +94,7 @@ public class OaiHandler {
 //     } else if (untilDate == null) {
 //       throw new NullPointerException("Called with null untilDate");
 //     }
-    
+
 //     this.oaiData = oaiData;
 //     this.fromDate = fromDate;
 //     this.untilDate = untilDate;
@@ -105,12 +105,12 @@ public class OaiHandler {
 //     // make it to sth like
 //     // constructor (with the oai requset setup)
 //     // issueRequest (really make a request to the repository)
-//     // processResult 
+//     // processResult
 
 //     ListRecords lr = issueOaiRequest(oaiData, fromDate, untilDate);
 //     processListRecords(lr);
 //   }
-  
+
   public OaiHandler(){
     retries = 0;
     oaiData = null;
@@ -125,7 +125,7 @@ public class OaiHandler {
    * 1. check for error in creating ListRecords
    * 2. get all the information we need from the ListRecords
    * 3. create another ListRecords if there is a resumptionToken
-   * 
+   *
    * @param maxRetries number of times to retry the request if it fails due
    * to badResumptionToken
    */
@@ -133,14 +133,14 @@ public class OaiHandler {
     if (listRecords == null){
       logger.error("Make sure OaiHandler.issueRequest() is executed");
       return;
-    } 
+    }
     if (maxRetries < 0){
       logger.warning("maxRetries is a negative number");
     }
 
     nextListRecords:
     while (listRecords != null) {
-      
+
       //check if we have error
       NodeList errors = null;
       try {
@@ -152,15 +152,15 @@ public class OaiHandler {
 	int length = errors.getLength();
 	for (int i=0; i<length; ++i) {
 	  Node item = errors.item(i);
-	  
+
 	  //sample error code:
 	  //<error code="badResumptionToken">More info about the error</error>
 	  String errCode = ((Element)item).getAttribute("code");
 	  String errMsg = errCode +  " : " +  item.getFirstChild().getNodeValue();
-	  
+
 	  //create an error for logError
-	  OaiResponseErrorException oaiErrEx = new OaiResponseErrorException(errMsg);	  
-	  
+	  OaiResponseErrorException oaiErrEx = new OaiResponseErrorException(errMsg);
+
 	  if (errCode == "noRecordsMatch"){ // this could be normal if there is no update
 	                                    // from the repository.
 	    logger.warning("The combination of the values of the from, until, set "
@@ -173,7 +173,7 @@ public class OaiHandler {
 	      continue nextListRecords;
 	    } else {
 	      logger.warning("Exceeded maximum Oai Request retry times");
-	      logError("badResumptionToken in Oai Response", oaiErrEx); 
+	      logError("badResumptionToken in Oai Response", oaiErrEx);
 	    }
 	  } else if (errCode == "badArgument"){
 	    logError("badArgument in Oai Response, check the oai query string: "
@@ -184,40 +184,40 @@ public class OaiHandler {
 	  } else if (errCode == "noSetHierarchy") {
 	    logError("The repository does not support sets.", oaiErrEx);
 	  } else {
-	    logError("Unexpected Error.", oaiErrEx); 
+	    logError("Unexpected Error.", oaiErrEx);
 	  }
-	  
+
 	  //testing to see what is inside that error item
 	  //	    logger.debug3("nodeToString");
 	  //      logger.debug3(nodeToString(item));
 	}
-	
+
 	logger.warning("Error record: " + listRecords.toString() );
 
 	break; //apart from badResumptionToken, we cannot do much of other error case, thus just break
       }
-      
-      
+
+
       //see what is inside the lisRecord
       logger.debug3("The content of listRecord : \n" + listRecords.toString() );
 
       //collect and store all the oai records
-//       collectOaiRecords(listRecords); //XXX info collected is not being used now, 
+//       collectOaiRecords(listRecords); //XXX info collected is not being used now,
                                       //can turn off to increase performance
 
       //parser urls by some implementation of oaiMetadataHander
-      NodeList metadataNodeList = 
+      NodeList metadataNodeList =
 	listRecords.getDocument().getElementsByTagName("metadata");
-      
+
       OaiMetadataHandler metadataHandler = oaiData.getMetadataHandler();
-      
-      //apart from collecting urls, more actions might be done in the 
+
+      //apart from collecting urls, more actions might be done in the
       //metadata handler w.r.t. different metadata
       metadataHandler.setupAndExecute(metadataNodeList);
-      
+
       //put all the collected urls to updatedUrls
       updatedUrls.addAll(metadataHandler.getArticleUrls());
-      
+
       //see if all the records are include in the response by checking the presence of
       //resumptionToken. If there is more records, request them by resumptionToken
       try {
@@ -227,10 +227,10 @@ public class OaiHandler {
 	  break; //break out of the while loop as there is no more new url
 	} else {
 	  //XXX TODO: Before including a resumptionToken in the URL of a
-	  // subsequent request, 
+	  // subsequent request,
 	  // we must encode any special characters in it.
  	  listRecords = new ListRecords(baseUrl, resumptionToken);
-	} 
+	}
        } catch (IOException ioe) {
          logError("In getting ResumptionToken and requesting new ListRecords",
 		  ioe);
@@ -252,38 +252,38 @@ public class OaiHandler {
   }
 
   /**
-   * By create a ListRecords, an Oai request is issued and the response is also 
+   * By create a ListRecords, an Oai request is issued and the response is also
    * store in the ListRecords object.
-   * 
+   *
    * @param oaiData oaiRequestData object that stores oai related information from OaiCrawlSpec
    * @param fromDate date from when we want to query about
    * @param untilDate date until when we want to query about
    */
   public ListRecords issueRequest(OaiRequestData oaiData,
 				  String fromDate, String untilDate){
-    
+
     // do not check if oaiData == null, it is taken care in OaiRequestData constructor
     if (fromDate == null) {
       throw new NullPointerException("Called with null fromDate");
     } else if (untilDate == null) {
       throw new NullPointerException("Called with null untilDate");
     }
-    
+
     this.oaiData = oaiData;
     this.fromDate = fromDate;
     this.untilDate = untilDate;
 
     baseUrl = oaiData.getOaiRequestHandlerUrl();
     String setSpec = oaiData.getAuSetSpec();
-    String metadataPrefix = oaiData.getMetadataPrefix();  
+    String metadataPrefix = oaiData.getMetadataPrefix();
     //    ListRecords listRecords = null;
-    
+
     // the query string that send to OAI repository
     queryString = baseUrl + "?verb=ListRecords&from=" + fromDate + "&until=" +
       untilDate + "&metadataPrefix=" + metadataPrefix + "&set=" + setSpec;
 
     try {
-      listRecords = new ListRecords(baseUrl, fromDate, untilDate, setSpec, 
+      listRecords = new ListRecords(baseUrl, fromDate, untilDate, setSpec,
 				    metadataPrefix);
     } catch (IOException ioe) {
       logError("In issueOaiRequest calling new ListRecords", ioe);
@@ -294,7 +294,7 @@ public class OaiHandler {
     } catch (TransformerException tfe) {
       logError("In issueOaiRequest calling new ListRecords", tfe);
     }
-    
+
     return listRecords;
   }
 
@@ -309,11 +309,11 @@ public class OaiHandler {
   }
 
   /**
-   * Method to check if there is any error occurs in construct request, 
+   * Method to check if there is any error occurs in construct request,
    * issue request, and parse response.
    * Note: the latest error is at the beginning of the list, like a stack
    *
-   * @return the error list 
+   * @return the error list
    *
    * XXX need to be rewritten to reflect errors in crawlStatus
    */
@@ -323,7 +323,7 @@ public class OaiHandler {
 
   /**
    * Get a list of Urls extracted from the OAI response
-   * 
+   *
    * @return the list of Urls extracted from Oai response
    */
   public Set getUpdatedUrls(){
@@ -333,9 +333,9 @@ public class OaiHandler {
   /**
    * Stores <record>.......</record> element in the oai response in a list.
    * Information collected maybe useful to our future developement.
-   * 
+   *
    * //XXX do we want to have a place in the file system to store it ?
-   * should it be output as an xml ? Methods to output the OaiRecords as 
+   * should it be output as an xml ? Methods to output the OaiRecords as
    * a file needed to be implemented.
    */
   private void collectOaiRecords(ListRecords listRecords){
@@ -360,8 +360,8 @@ public class OaiHandler {
   }
 
   /**
-   * Print out the OAI query string for error tracing 
-   */   
+   * Print out the OAI query string for error tracing
+   */
   public String getOaiQueryString(){
     return queryString;
   }
@@ -388,14 +388,14 @@ public class OaiHandler {
       "DocFragment",
       "Notation",
     };
-    
+
     String s = typeName[domNode.getNodeType()];
     String nodeName = domNode.getNodeName();
     if (! nodeName.startsWith("#")) {
       s += ": " + nodeName;
     }
     if (domNode.getNodeValue() != null) {
-      if (s.startsWith("ProcInstr")) 
+      if (s.startsWith("ProcInstr"))
 	s += ", ";
       else
 	s += ": ";
@@ -426,17 +426,17 @@ public class OaiHandler {
 
   //walk the DOM tree and print as u go
   static String displayXML(Node node){
-    
+
     StringBuffer tmpStr = new StringBuffer();
-        
+
         int type = node.getNodeType();
         switch(type)
         {
             case Node.DOCUMENT_NODE:
             {
               tmpStr.append("<?xml version=\"1.0\" encoding=\""+
-                                "UTF-8" + "\"?>");  
-              break;                  
+                                "UTF-8" + "\"?>");
+              break;
             }//end of document
             case Node.ELEMENT_NODE:
             {
@@ -449,7 +449,7 @@ public class OaiHandler {
                     for ( int i = 0; i < len; i++ )
                     {
                         attr = (Attr)nnm.item(i);
-                        tmpStr.append(' ' 
+                        tmpStr.append(' '
                              + attr.getNodeName()
                              + "=\""
                              + attr.getNodeValue()
@@ -457,24 +457,24 @@ public class OaiHandler {
                     }
                 }
                 tmpStr.append('>');
-                
+
                 break;
-                
+
             }//end of element
             case Node.ENTITY_REFERENCE_NODE:
             {
-               
+
                tmpStr.append('&' + node.getNodeName() + ';' );
                break;
-                
+
             }//end of entity
             case Node.CDATA_SECTION_NODE:
             {
-                    tmpStr.append( "<![CDATA[" 
+                    tmpStr.append( "<![CDATA["
                             + node.getNodeValue()
                             + "]]>" );
-                     break;       
-                
+                     break;
+
             }
             case Node.TEXT_NODE:
             {
@@ -483,7 +483,7 @@ public class OaiHandler {
             }
             case Node.PROCESSING_INSTRUCTION_NODE:
             {
-                tmpStr.append("<?" 
+                tmpStr.append("<?"
                     + node.getNodeName() ) ;
                 String data = node.getNodeValue();
                 if ( data != null && data.length() > 0 ) {
@@ -495,28 +495,28 @@ public class OaiHandler {
 
              }
         }//end of switch
-        
-              
+
+
         //recurse
         for(Node child = node.getFirstChild(); child != null; child = child.getNextSibling())
         {
             tmpStr.append(displayXML(child));
         }
-        
+
         //without this the ending tags will miss
         if ( type == Node.ELEMENT_NODE )
         {
             tmpStr.append("</" + node.getNodeName() + ">");
         }
-        
+
 	return tmpStr.toString();
-        
+
     }//end of displayXML
 
   /**
    * OaiResponseErrorException will only be thrown when there is
    * error in the Oai Response.
-   */ 
+   */
   public static class OaiResponseErrorException extends Exception {
 
     /**

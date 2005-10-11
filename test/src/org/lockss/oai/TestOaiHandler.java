@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiHandler.java,v 1.3 2005-02-19 01:18:08 dcfok Exp $
+ * $Id: TestOaiHandler.java,v 1.4 2005-10-11 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class TestOaiHandler extends LockssTestCase {
   private int retries = 3;
 
   private OaiHandler oaiHandler;
-  
+
   public void setUp() throws Exception {
     super.setUp();
     oaiData = new OaiRequestData( handler, ns, tag, setSpec, prefix );
@@ -87,8 +87,8 @@ public class TestOaiHandler extends LockssTestCase {
 //     try {
 //       oaiHandler = new OaiHandler( oaiData , fromDate , (String) null, retries);
 //       fail("OaiHandler with null untilDate should throw");
-//     } catch (NullPointerException e) { }    
-  
+//     } catch (NullPointerException e) { }
+
 //   }
 
   /** XXX things particular need to test in OaiHandler
@@ -105,15 +105,15 @@ public class TestOaiHandler extends LockssTestCase {
     oaiHandler =  new MyMockOaiHandler();
     //build an element contain the error information
     try {
-      Document doc = XmlDomBuilder.createDocument();    
+      Document doc = XmlDomBuilder.createDocument();
       Element elm = (Element) doc.createElement("error");
       elm.setAttribute("code", "badArgument");
       elm.appendChild( doc.createTextNode("This is an error statement") );
       ((MyMockOaiHandler)oaiHandler).setErrors(elm);
     } catch (XmlDomException xde) {
       logger.error("error when creating a Document", xde);
-    } 
-    
+    }
+
     oaiHandler.issueRequest(oaiData, fromDate, untilDate);
     oaiHandler.processResponse(retries);
 
@@ -123,22 +123,22 @@ public class TestOaiHandler extends LockssTestCase {
     assertEquals(expectedErrMsg, errMsg);
   }
 
-  
+
 
   /**
    * there are 4 parts in the OaiHandler
    * 1. constructing and issuing an OAI request
    * 2. retriving the response and check for error
    * 3. parse the response for urls
-   * 4. if there is any resumptionToken, go back to (1) 
+   * 4. if there is any resumptionToken, go back to (1)
    *    with resumptionToken in OAI request
    *
    * we need to check for the 4 part's error condition.
    * by comparing the hasError() and getUrlIterator()
-   * 
+   *
    * we need to make a MockListRecords, which will return a
    * nodeList of url (String), and can throw TransformerException
-   * 
+   *
    */
 
 
@@ -154,21 +154,21 @@ public class TestOaiHandler extends LockssTestCase {
     public void setErrors(Element elm) {
       errElm = elm;
     }
-    
+
     public ListRecords issueRequest(
       OaiRequestData oaiData, String fromDate, String untilDate) {
-      
+
       // do not check if oaiData == null, it is taken care in OaiRequestData constructor
       if (fromDate == null) {
 	throw new NullPointerException("Called with null fromDate");
       } else if (untilDate == null) {
 	throw new NullPointerException("Called with null untilDate");
       }
-    
+
       String baseUrl = oaiData.getOaiRequestHandlerUrl();
       String setSpec = oaiData.getAuSetSpec();
-      String metadataPrefix = oaiData.getMetadataPrefix();  
-      
+      String metadataPrefix = oaiData.getMetadataPrefix();
+
       // the query string that send to OAI repository
       queryString = baseUrl + "?verb=ListRecords&from=" + fromDate + "&until=" +
 	untilDate + "&metadataPrefix=" + metadataPrefix + "&set=" + setSpec;
@@ -196,7 +196,7 @@ public class TestOaiHandler extends LockssTestCase {
       } catch (TransformerException tfe) {
 	logError("In createListRecords calling new ListRecords", tfe);
       }
-      
+
       return listRecords;
     }
 

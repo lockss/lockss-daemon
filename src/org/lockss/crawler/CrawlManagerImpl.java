@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerImpl.java,v 1.83 2005-10-10 23:27:29 tlipkis Exp $
+ * $Id: CrawlManagerImpl.java,v 1.84 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -65,7 +65,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
   public static final String PARAM_REPAIR_FROM_CACHE_PERCENT =
       Configuration.PREFIX + "crawler.repair.repair_from_cache_percent";
 
-  /** Set false to prevent all crawl activity */ 
+  /** Set false to prevent all crawl activity */
   public static final String PARAM_CRAWLER_ENABLED =
     Configuration.PREFIX + "crawler.enabled";
   static final boolean DEFAULT_CRAWLER_ENABLED = true;
@@ -231,7 +231,7 @@ public class CrawlManagerImpl extends BaseLockssDaemonManager
     }
     return limiter;
   }
-      
+
   /** Reset the parameters of all the rate limiters in the map. */
   private void resetRateLimiters(Configuration config,
 				 Map rateLimiterMap,

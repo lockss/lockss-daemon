@@ -1,5 +1,5 @@
 /*
- * $Id: TestTaskRunner.java,v 1.12 2005-10-08 02:07:58 troberts Exp $
+ * $Id: TestTaskRunner.java,v 1.13 2005-10-11 05:51:20 tlipkis Exp $
  */
 
 /*
@@ -418,7 +418,7 @@ public class TestTaskRunner extends LockssTestCase {
     assertEmpty(tr.getAcceptedTasks());
   }
 
-  // remove overrunnable task-ending chunk, before deadline, 
+  // remove overrunnable task-ending chunk, before deadline,
   public void testRemoveChunkTaskEndOver() {
     final List finished = new ArrayList();
     StepTask t1 = task(100, 200, 100, new TaskCallback() {

@@ -1,5 +1,5 @@
 /*
- * $Id: AlertLog.java,v 1.3 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: AlertLog.java,v 1.4 2005-10-11 05:41:07 tlipkis Exp $
  */
 
 /*
@@ -41,15 +41,15 @@ public class  AlertLog {
   private int max;
   private List list;
 
-  /** 
-   * Create a new AlertLog with room for 100 elements. 
+  /**
+   * Create a new AlertLog with room for 100 elements.
    */
   public AlertLog(String name) {
     this(name, 100);
   }
 
-  /** 
-   * Create a new AlertLog with room for n elements. 
+  /**
+   * Create a new AlertLog with room for n elements.
    * @param capacity maximum number of elements to keep on the list.
    */
   public AlertLog(String name, int capacity) {

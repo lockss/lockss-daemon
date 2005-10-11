@@ -1,5 +1,5 @@
 /*
- * $Id: TestPropertyTree.java,v 1.1 2005-08-23 22:03:50 tlipkis Exp $
+ * $Id: TestPropertyTree.java,v 1.2 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -60,7 +60,7 @@ public class TestPropertyTree extends LockssTestCase {
     props.load(istr);
 
     log.debug("tree="+props);
-            
+
     assertEquals( "1", props.get("a"));
     assertEquals( "2", props.get("a.b"));
     assertEquals( "3", props.get("a.B"));
@@ -78,21 +78,21 @@ public class TestPropertyTree extends LockssTestCase {
     assertEquals("13", props.get("x.y.Z"));
     assertEquals("14", props.get("x.y.z"));
     assertEquals("15", props.get("X.Y"));
-            
+
     assertEquals( "21", props.get("A.b.C.d.E"));
     assertEquals( "24", props.get("A.B.C.D.E"));
 
     PropertyTree sub = props.getTree("a.b");
     log.debug("getTree(a.b)="+sub);
-            
+
     assertEquals( "4", sub.get("c"));
     assertEquals( "5", sub.get("C"));
     assertEquals( null, sub.get("*.C"));
-            
-            
+
+
     sub = props.getTree("a");
     log.debug("getTree(a)="+sub);
-            
+
     assertEquals( "2", sub.get("b"));
     assertEquals( "3", sub.get("B"));
     assertEquals( "4", sub.get("b.c"));
@@ -105,11 +105,11 @@ public class TestPropertyTree extends LockssTestCase {
     assertEquals(null, sub.get("y.Z"));
     assertEquals("11", sub.get("y.z"));
     assertEquals("15", sub.get("Y"));
-            
+
     assertEquals( null, sub.get("b.C.d.E"));
     assertEquals( "22", sub.get("B.C.D.E"));
 
-            
+
     props=new PropertyTree();
     String[] init =
       {//  0   1       2       3       4       5     6     7     8       9       10
@@ -119,19 +119,19 @@ public class TestPropertyTree extends LockssTestCase {
       props.put(init[i],new Integer(i));
 
     sub=props.getTree("a.b");
-            
+
     log.debug("getTree(a.b)="+sub);
     assertEquals("{b=9, *=3, c=8, B=10}".length(), sub.toString().length());
     checkContains(sub.toString(),"b=9","SubTree get");
     checkContains(sub.toString(),"*=3","SubTree get");
     checkContains(sub.toString(),"c=8","SubTree get");
     checkContains(sub.toString(),"B=10","SubTree get");
-        
+
     sub=props.getTree("a");
-        
+
     assertEquals(new Integer(9), sub.get("*.b"));
-        
-    sub=sub.getTree("b");       
+
+    sub=sub.getTree("b");
     assertEquals("{b=9, *=3, c=8, B=10}".length(), sub.toString().length());
     checkContains(sub.toString(),"b=9","SubTree");
     checkContains(sub.toString(),"*=3","SubTree");
@@ -144,15 +144,15 @@ public class TestPropertyTree extends LockssTestCase {
     check(e.hasMoreElements(),"getRealNodes");
     assertEquals("c", e.nextElement());
     check(!e.hasMoreElements(),"getRealNodes");
-        
-        
+
+
     Properties clone = (Properties)sub.clone();
     assertEquals("{b=9, *=3, c=8, B=10}".length(), sub.toString().length());
     checkContains(sub.toString(),"b=9","Clone");
     checkContains(sub.toString(),"*=3","Clone");
     checkContains(sub.toString(),"c=8","Clone");
     checkContains(sub.toString(),"B=10","Clone");
-        
+
     sub.put("C","C");
     checkContains(props.toString(),"a.b.C=C","Subtree changed");
     clone.put("C","X");
@@ -169,23 +169,23 @@ public class TestPropertyTree extends LockssTestCase {
 	checkContains(v,ev,"Elements");
 	v=v.substring(0,v.indexOf(ev))+v.substring(v.indexOf(ev)+ev.length());
       }
-        
+
     Vector nodes;
     nodes=enum2vector(props.getNodes(""));
     assertEquals(2, nodes.size());
     check(nodes.contains("a"),"Get root node");
     check(nodes.contains("*"),"Get root node");
-        
+
     nodes=enum2vector(props.getNodes("a"));
     assertEquals(2, nodes.size());
     check(nodes.contains("b"),"Get a node");
     check(nodes.contains("*"),"Get a node");
-        
+
     nodes=enum2vector(props.getNodes("*"));
     assertEquals(2, nodes.size());
     check(nodes.contains("b"),"Get wild node");
     check(nodes.contains("B"),"Get wild node");
-        
+
     nodes=enum2vector(props.getNodes("a.*"));
     assertEquals(3, nodes.size());
     check(nodes.contains("b"),"Get node");
@@ -203,10 +203,10 @@ public class TestPropertyTree extends LockssTestCase {
     sub=props.getTree("a.*");
     String subs=sub.toString();
     log.debug(subs);
-        
+
     checkContains(subs,"A=3","wild tree A=3");
     checkContains(subs,"B=4","wild tree B=4");
-        
+
     sub.put("*.C",new Integer(7));
     sub.put("*",new Integer(8));
     checkContains(sub.toString(),"*.C=7","mod wild tree *.C=7");
@@ -218,9 +218,9 @@ public class TestPropertyTree extends LockssTestCase {
     checkContains(propss,"a.*.*.C=7","mod wild tree a.*.C=7");
     checkContains(propss,"*=0","mod wild tree *=0");
     checkContains(propss,"a.*.*=8","mod wild tree a.*=8");
-        
+
   }
-    
+
   public void testPropertyTreeWithPercents() {
     Properties props = new Properties();
     Enumeration propsEnum = System.getProperties().propertyNames();

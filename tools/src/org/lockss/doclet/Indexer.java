@@ -1,5 +1,5 @@
 /*
- * $Id: Indexer.java,v 1.1 2003-09-04 23:11:18 tyronen Exp $
+ * $Id: Indexer.java,v 1.2 2005-10-11 05:53:19 tlipkis Exp $
  */
 
 /*
@@ -42,7 +42,7 @@ public class Indexer {
   static boolean noDots = false;
   static int col2 = 45;
 
-  public static boolean start(RootDoc root){ 
+  public static boolean start(RootDoc root){
     if (!processOptions(root)) {
       return false;
     }
@@ -158,7 +158,7 @@ public class Indexer {
     return 0;
   }
 
-//    public static boolean validOptions(String options[][], 
+//    public static boolean validOptions(String options[][],
 //  				     DocErrorReporter reporter) {
 //      boolean foundTagOption = false;
 //      for (int i = 0; i < options.length; i++) {
@@ -167,10 +167,10 @@ public class Indexer {
 //  	if (foundTagOption) {
 //  	  reporter.printError("Only one -tag option allowed.");
 //  	  return false;
-//  	} else { 
+//  	} else {
 //  	  foundTagOption = true;
 //  	}
-//        } 
+//        }
 //      }
 //      if (!foundTagOption) {
 //        reporter.printError("Usage: javadoc -tag mytag -doclet ListTags ...");

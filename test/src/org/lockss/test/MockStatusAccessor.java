@@ -1,5 +1,5 @@
 /*
- * $Id: MockStatusAccessor.java,v 1.14 2004-05-14 08:42:03 tlipkis Exp $
+ * $Id: MockStatusAccessor.java,v 1.15 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -81,7 +81,7 @@ public class MockStatusAccessor implements StatusAccessor {
     this.summaryInfo.put(key, summaryInfo);
   }
 
-  public void populateTable(StatusTable table) 
+  public void populateTable(StatusTable table)
       throws StatusService.NoSuchTableException {
     String key = table.getKey();
     table.setTitle((String)titles.get(key));
@@ -100,8 +100,8 @@ public class MockStatusAccessor implements StatusAccessor {
   public static List makeSummaryInfoFrom(Object[][] summaryInfoArray) {
     List list = new ArrayList(summaryInfoArray.length);
     for (int ix = 0; ix < summaryInfoArray.length; ix++) {
-      StatusTable.SummaryInfo summaryInfo = 
-	new StatusTable.SummaryInfo((String)summaryInfoArray[ix][0], 
+      StatusTable.SummaryInfo summaryInfo =
+	new StatusTable.SummaryInfo((String)summaryInfoArray[ix][0],
 			       ((Integer)summaryInfoArray[ix][1]).intValue(),
 			       summaryInfoArray[ix][2]);
       if (summaryInfoArray[ix].length >= 4) {
@@ -112,12 +112,12 @@ public class MockStatusAccessor implements StatusAccessor {
     return list;
   }
 
-  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray,
 							  Object[][]rowArray) {
     return generateStatusAccessor(colArray, rowArray, null);
   }
 
-  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray,
 							  Object[][]rowArray,
 							  String key) {
     MockStatusAccessor statusAccessor = new MockStatusAccessor();
@@ -130,11 +130,11 @@ public class MockStatusAccessor implements StatusAccessor {
     return statusAccessor;
   }
 
-  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray, 
+  public static MockStatusAccessor generateStatusAccessor(Object[][]colArray,
 							  Object[][]rowArray,
 							  String key,
 							  Object[][]summaryInfos) {
-    MockStatusAccessor statusAccessor = 
+    MockStatusAccessor statusAccessor =
       generateStatusAccessor(colArray, rowArray, key);
     statusAccessor.
       setSummaryInfo(key,
@@ -143,7 +143,7 @@ public class MockStatusAccessor implements StatusAccessor {
   }
 
   public static void addToStatusAccessor(MockStatusAccessor statusAccessor,
-					 Object[][]colArray, 
+					 Object[][]colArray,
 					 Object[][]rowArray, String key) {
     List columns = MockStatusAccessor.makeColumnDescriptorsFrom(colArray);
     List rows = MockStatusAccessor.makeRowsFrom(columns, rowArray);
@@ -158,7 +158,7 @@ public class MockStatusAccessor implements StatusAccessor {
       if (cols[ix].length == 4) {
  	footNote = (String) cols[ix][3];
       }
-      ColumnDescriptor col = 
+      ColumnDescriptor col =
 	new ColumnDescriptor((String)cols[ix][0], (String)cols[ix][1],
 			     ((Integer)cols[ix][2]).intValue(), footNote);
       list.add(col);

@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessageFactory.java,v 1.4 2005-10-07 23:46:49 smorabito Exp $
+ * $Id: V3LcapMessageFactory.java,v 1.5 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -150,7 +150,7 @@ public class V3LcapMessageFactory {
     msg.setNominees(ud.getNominees());
     return msg;
   }
-  
+
   public static V3LcapMessage makeVoteMessage(VoterUserData ud) {
     V3LcapMessage msg =
       V3LcapMessage.makeRequestMsg(ud.getAuId(),

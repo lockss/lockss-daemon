@@ -1,5 +1,5 @@
 /*
- * $Id: TcpTestUtil.java,v 1.1 2005-10-02 00:06:46 tlipkis Exp $
+ * $Id: TcpTestUtil.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class TcpTestUtil {
   static Logger log = Logger.getLogger("TcpTestUtil");
 
   static int nextPort = 2000;
-  
+
   public static int findUnboundTcpPort() {
     for (int p = nextPort; p < 65535; p++) {
       try {

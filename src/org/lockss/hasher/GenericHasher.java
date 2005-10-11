@@ -1,5 +1,5 @@
 /*
- * $Id: GenericHasher.java,v 1.17 2005-08-11 06:33:19 tlipkis Exp $
+ * $Id: GenericHasher.java,v 1.18 2005-10-11 05:44:24 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
    * hash
    */
   protected abstract Iterator getIterator(CachedUrlSet cus);
-  
+
   /* Subclass should override this to hash the specified element
    */
   protected abstract int hashNodeUpToNumBytes(int numBytes)
@@ -120,7 +120,7 @@ public abstract class GenericHasher implements CachedUrlSetHasher {
    */
   public boolean finished() {
     return isFinished;
-  }  
+  }
 
   /**
    * @param numBytes maximum number of bytes to hash (counting delimiters)

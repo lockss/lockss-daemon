@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiRequestData.java,v 1.2 2005-07-25 19:01:33 troberts Exp $
+ * $Id: TestOaiRequestData.java,v 1.3 2005-10-11 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -39,7 +39,7 @@ import org.lockss.test.*;
  */
 
 public class TestOaiRequestData extends LockssTestCase {
-  
+
   private String handler = "handler";
   private String ns = "ns";
   private String tag = "tag";
@@ -49,35 +49,35 @@ public class TestOaiRequestData extends LockssTestCase {
   public TestOaiRequestData(String msg){
     super(msg);
   }
-  
+
   public void testNullParameter(){
     try {
-      OaiRequestData od = 
+      OaiRequestData od =
 	new OaiRequestData( (String) null, ns, tag, setSpec, prefix);
       fail("OaiRequestData with null Oai request handler url should throw");
     } catch (IllegalArgumentException e) { }
     try {
-      OaiRequestData od = 
+      OaiRequestData od =
 	new OaiRequestData( handler, (String) null, tag, setSpec, prefix);
       fail("OaiRequestData with null metadata namespace url should throw");
     } catch (IllegalArgumentException e) { }
     try {
-      OaiRequestData od = 
+      OaiRequestData od =
 	new OaiRequestData( handler, ns, (String) null, setSpec, prefix);
       fail("OaiRequestData with null url container tag name  should throw");
     } catch (IllegalArgumentException e) { }
 //     try {
-//       OaiRequestData od = 
+//       OaiRequestData od =
 // 	new OaiRequestData( handler, ns, tag, (String) null, prefix);
 //       fail("OaiRequestData with null AU SetSpec should throw");
 //     } catch (IllegalArgumentException e) { }
     try {
-      OaiRequestData od = 
+      OaiRequestData od =
 	new OaiRequestData( handler, ns, tag, setSpec, (String) null);
       fail("OaiRequestData with null metadata prefix should throw");
     } catch (IllegalArgumentException e) { }
   }
-  
+
   public void testSimpleContruction() {
     OaiRequestData oaiData = new OaiRequestData(handler,ns,tag,setSpec,prefix);
     assertEquals(handler, oaiData.getOaiRequestHandlerUrl());

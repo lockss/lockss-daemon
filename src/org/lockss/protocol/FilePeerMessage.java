@@ -1,5 +1,5 @@
 /*
- * $Id: FilePeerMessage.java,v 1.2 2005-10-07 16:19:57 thib_gc Exp $
+ * $Id: FilePeerMessage.java,v 1.3 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -127,5 +127,5 @@ class FilePeerMessage extends PeerMessage {
 	outStream = null;
       }
     }
-  }    
+  }
 }

@@ -1,5 +1,5 @@
 /*
- * $Id: ZipUtil.java,v 1.1 2005-07-18 07:55:30 tlipkis Exp $
+ * $Id: ZipUtil.java,v 1.2 2005-10-11 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -57,7 +57,7 @@ public class ZipUtil {
       return isZipFile(in);
     } finally {
       IOUtil.safeClose(in);
-    }      
+    }
   }
 
   /**
@@ -91,7 +91,7 @@ public class ZipUtil {
       unzip(in, toDir);
     } finally {
       IOUtil.safeClose(in);
-    }      
+    }
   }
 
   /**

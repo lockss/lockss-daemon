@@ -1,5 +1,5 @@
 /*
- * $Id: CacheException.java,v 1.8 2005-05-20 23:43:28 troberts Exp $
+ * $Id: CacheException.java,v 1.9 2005-10-11 05:48:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -395,12 +395,12 @@ public class CacheException extends IOException {
     public UnexpectedNoRetryNoFailException(String message) {
       super(message);
     }
-    
+
     protected void setAtrributes() {
       attributeBits.clear(ATTRIBUTE_FAIL);
     }
   }
-  
+
   public static class NoRetryHostException
       extends UnretryableException {
     public NoRetryHostException() {

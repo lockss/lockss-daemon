@@ -1,5 +1,5 @@
 /*
- * $Id: TestHistoryRepositoryImpl.java,v 1.52 2005-09-15 17:07:56 thib_gc Exp $
+ * $Id: TestHistoryRepositoryImpl.java,v 1.53 2005-10-11 05:51:35 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public abstract class TestHistoryRepositoryImpl extends LockssTestCase {
         WithXStream.class
     });
   }
-  
+
   private String tempDirPath;
   private HistoryRepositoryImpl repository;
   private MockLockssDaemon theDaemon;

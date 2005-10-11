@@ -35,7 +35,7 @@ import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
 
 public class SyslogTarget implements LogTarget{
-  
+
   static final String PREFIX = Logger.PREFIX+"syslog.";
   static final String PARAM_PORT = PREFIX + "port";
   static final String PARAM_HOST = PREFIX + "host";
@@ -88,7 +88,7 @@ public class SyslogTarget implements LogTarget{
     }
     return host;
   }
-   
+
   public void handleMessage(Logger logger, int level, String message) {
     if (socket != null) {
       handleMessage(socket, level, message);

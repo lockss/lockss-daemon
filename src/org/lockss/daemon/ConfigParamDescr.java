@@ -1,5 +1,5 @@
 /*
- * $Id: ConfigParamDescr.java,v 1.24 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: ConfigParamDescr.java,v 1.25 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -179,7 +179,7 @@ public class ConfigParamDescr implements Comparable, LockssSerializable {
     .setDisplayName("Pub Down")
     .setType(TYPE_BOOLEAN)
     .setDescription("If true, AU is no longer available from the publisher");
-  
+
   public static final ConfigParamDescr POLL_VERSION =
     new ConfigParamDescr()
     .setDefinitional(false)

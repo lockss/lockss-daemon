@@ -1,5 +1,5 @@
 /*
- * $Id: MyTextArea.java,v 1.2 2005-01-19 23:41:17 tlipkis Exp $
+ * $Id: MyTextArea.java,v 1.3 2005-10-11 05:44:38 tlipkis Exp $
  */
 
 /*
@@ -65,12 +65,12 @@ public class MyTextArea extends TextArea {
     // this loop is Composite.write(Writer)
     for (int i=0; i <elements.size() ; i++) {
       Object element = elements.get(i);
-          
+
       if (element instanceof Element)
 	((Element)element).write(out);
       else if (element==null)
 	out.write("null");
-      else 
+      else
 	out.write(element.toString());
     }
     out.write("</"+mytag+">");

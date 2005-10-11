@@ -1,5 +1,5 @@
 /*
- * $Id: TestRemoteApi.java,v 1.14 2005-10-10 23:48:34 troberts Exp $
+ * $Id: TestRemoteApi.java,v 1.15 2005-10-11 05:51:20 tlipkis Exp $
  */
 
 /*
@@ -325,10 +325,10 @@ public class TestRemoteApi extends LockssTestCase {
     File agreefile;
     assertNotNull(agreefile = (File)auagreemap.get("mau1id"));
     assertEquals("agree map 1", StringUtil.fromFile(agreefile));
-    
+
     assertNotNull(agreefile = (File)auagreemap.get("mau3id"));
     assertEquals("agree map 3", StringUtil.fromFile(agreefile));
-    
+
     assertEquals(2, auagreemap.size());
   }
 
@@ -421,7 +421,7 @@ public class TestRemoteApi extends LockssTestCase {
   Configuration addAuTree(Configuration toConfig, String auid,
 			  Properties auprops) {
     if (toConfig == null) {
-      toConfig = ConfigManager.newConfiguration(); 
+      toConfig = ConfigManager.newConfiguration();
     }
     String prefix = PluginManager.PARAM_AU_TREE + "." +
       PluginManager.configKeyFromAuId(auid);
@@ -486,7 +486,7 @@ public class TestRemoteApi extends LockssTestCase {
     Map auagreemap = new HashMap();
     auagreemap.put(auid1, "zippity agree map 1");
     auagreemap.put(auid2, "doodah agree map 2");
-    
+
     File file = writeZipBackup(config, auagreemap);
     InputStream in = new FileInputStream(file);
     RemoteApi.BatchAuStatus bas = rapi.processSavedConfig(in);
@@ -502,7 +502,7 @@ public class TestRemoteApi extends LockssTestCase {
       assertNotNull(bi.getAuDir(auid1));
       assertNotNull(bi.getAuDir(auid2));
 
-      Configuration addConfig = ConfigManager.newConfiguration(); 
+      Configuration addConfig = ConfigManager.newConfiguration();
 
       for (Iterator iter = bas.getStatusList().iterator(); iter.hasNext(); ) {
 	RemoteApi.BatchAuStatus.Entry ent =
@@ -512,7 +512,7 @@ public class TestRemoteApi extends LockssTestCase {
 	  PluginManager.configKeyFromAuId(auid);
 	addConfig.addAsSubTree(ent.getConfig(), prefix);
       }
-    
+
       idMgr.resetAgreeMap();
       RemoteApi.BatchAuStatus addedbas = rapi.batchAddAus(false, addConfig, bi);
       ArchivalUnit au1 = mpm.getAuFromId(auid1);

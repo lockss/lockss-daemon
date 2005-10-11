@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.3 2005-10-04 05:10:45 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.4 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -161,7 +161,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
     "Connection: Keep-Alive\r\n" +
     "Content-Type: text/html\r\n";
 
-  static String RESP_304 = 
+  static String RESP_304 =
     "HTTP/1.1 304 Not Modified\r\n" +
     "Connection: Keep-Alive\r\n" +
     "Keep-Alive: timeout=15, max=98\r\n";

@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializerTester.java,v 1.1 2005-09-06 23:24:53 thib_gc Exp $
+ * $Id: ObjectSerializerTester.java,v 1.2 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ import org.custommonkey.xmlunit.XMLUnit;
  */
 public abstract class ObjectSerializerTester
     extends XMLTestCase {
-  
+
   /**
    * <p>Tests whether the same input data deserialized into two new
    * Object instances produces a consistent result. </p>
@@ -72,7 +72,7 @@ public abstract class ObjectSerializerTester
     ExtMapBean clone2;
     File tempFile = File.createTempFile("test", ".xml");
     tempFile.deleteOnExit();
-    
+
     // Serialize
     serializer.serialize(tempFile, original);
     // Deserialize twice
@@ -110,7 +110,7 @@ public abstract class ObjectSerializerTester
           "testRoundTrip_ExtMapBean", original.getClass());
     }
   }
-  
+
   /**
    * <p>Checks that serializing with an OutputStream argument gives
    * the same result as serializing with a Writer argument.</p>
@@ -126,14 +126,14 @@ public abstract class ObjectSerializerTester
     tempFile.deleteOnExit();
     StringWriter writer = new StringWriter();
     FileOutputStream outStream = new FileOutputStream(tempFile);
-    
+
     // Serialize twice
     serializer1.serialize(writer, original);
     serializer2.serialize(outStream, original);
     // Compare
     performXmlAssertion(new StringReader(writer.toString()), tempFile);
   }
-  
+
   /**
    * <p>Checks that serializing with a File argument gives the same
    * result as serializing with a Writer argument.</p>
@@ -147,15 +147,15 @@ public abstract class ObjectSerializerTester
     ExtMapBean original = makeSample_ExtMapBean();
     File tempFile = File.createTempFile("test", ".xml");
     tempFile.deleteOnExit();
-    StringWriter writer = new StringWriter(); 
-    
+    StringWriter writer = new StringWriter();
+
     // Serialize twice
     serializer1.serialize(writer, original);
     serializer2.serialize(tempFile /* a File */, original);
     // Compare
     performXmlAssertion(new StringReader(writer.toString()), tempFile);
   }
-  
+
   /**
    * <p>Checks that serializing with a String argument gives the same
    * result as serializing with a Writer argument.</p>
@@ -169,7 +169,7 @@ public abstract class ObjectSerializerTester
     ExtMapBean original = makeSample_ExtMapBean();
     File tempFile = File.createTempFile("test", ".xml");
     tempFile.deleteOnExit();
-    StringWriter writer = new StringWriter(); 
+    StringWriter writer = new StringWriter();
 
     // Serialize twice
     serializer1.serialize(writer, original);
@@ -193,7 +193,7 @@ public abstract class ObjectSerializerTester
     ExtMapBean clone;
     File tempFile = File.createTempFile("test", ".xml");
     tempFile.deleteOnExit();
-    
+
     try {
       serializer.serialize(tempFile, original);
       tempFile.delete();
@@ -205,13 +205,13 @@ public abstract class ObjectSerializerTester
       // succeed
     }
   }
-  
+
   public void testThrowsNullPointerException()
       throws Exception {
     ObjectSerializer serializer = makeObjectSerializer_ExtMapBean();
     File tempFile = File.createTempFile("test", ".xml");
     tempFile.deleteOnExit();
-    
+
     try {
       serializer.serialize(tempFile, (Serializable)null);
       failGeneric("testThrowsNullArgumentException",
@@ -220,7 +220,7 @@ public abstract class ObjectSerializerTester
     catch (NullPointerException npe) {
       // succeed
     }
-    
+
     try {
       serializer.serialize(tempFile, (LockssSerializable)null);
       failGeneric("testThrowsNullArgumentException",
@@ -230,7 +230,7 @@ public abstract class ObjectSerializerTester
       // succeed
     }
   }
-  
+
   /**
    * <p>Produces an ObjectSerializer instance to conduct tests based
    * on objects of type {@link org.lockss.util.ExtMapBean}.</p>
@@ -248,7 +248,7 @@ public abstract class ObjectSerializerTester
    * difficulty of the test.</p>
    * @return A newly allocated
    *         {@link org.lockss.util.ExtMapBean} filled with
-   *         many interesting keys and values. 
+   *         many interesting keys and values.
    */
   protected ExtMapBean makeSample_ExtMapBean()
       throws Exception {
@@ -263,7 +263,7 @@ public abstract class ObjectSerializerTester
    * difficulty of the test.</p>
    * @return A newly allocated
    *         {@link org.lockss.util.TypedEntryMap} filled with
-   *         many interesting keys and values. 
+   *         many interesting keys and values.
    */
   protected TypedEntryMap makeSample_TypedEntryMap()
       throws Exception {
@@ -289,7 +289,7 @@ public abstract class ObjectSerializerTester
     tmap.putUrl(
         "url.\"http://www.stanford.edu/\"",
         new URL("http://www.stanford.edu/"));
-    
+
     /* Collections */
     tmap.putCollection(
         "collection.list.homogeneous",
@@ -315,7 +315,7 @@ public abstract class ObjectSerializerTester
     XMLUnit.setIgnoreWhitespace(true);
     assertXMLEqual(referenceReader, testReader);
   }
-  
+
   /**
    * <p>A general-purpose failure message formatter for
    * {@link java.lang.ClassCastException}s.</p>
@@ -331,7 +331,7 @@ public abstract class ObjectSerializerTester
     buffer.append(".");
     failGeneric(methodName, buffer.toString());
   }
-  
+
   /**
    * <p>A general-purpose failure message formatter.</p>
    * <p>This method calls
@@ -350,5 +350,5 @@ public abstract class ObjectSerializerTester
     buffer.append(message);
     fail(buffer.toString());
   }
-  
+
 }

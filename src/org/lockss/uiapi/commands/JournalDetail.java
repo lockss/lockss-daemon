@@ -1,5 +1,5 @@
 /*
- * $Id: JournalDetail.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
+ * $Id: JournalDetail.java,v 1.3 2005-10-11 05:47:40 tlipkis Exp $
  */
 
 /*
@@ -67,7 +67,7 @@ public class JournalDetail extends StatusActivityBase {
     ArrayList   auIdList;
 
     /*
-     * Fetch information for all AUs associated with specified LOCKSS 
+     * Fetch information for all AUs associated with specified LOCKSS
      * title (parameter name = AP_E_TITLE)
      */
     auIdList = getAuIdList();
@@ -77,12 +77,12 @@ public class JournalDetail extends StatusActivityBase {
     generateXml(auIdList);
     return true;
   }
-  
+
   /*
    * Helpers
    */
 
-  /** 
+  /**
    * Lookup the all AU IDs associated with a "well known" title
    * @return A populated <code>ArrayList</code> of AU IDs (empty if none)
    */
@@ -90,25 +90,25 @@ public class JournalDetail extends StatusActivityBase {
     Collection    auList;
     Collection    auTitles;
     ArrayList     auIdList;
-    
+
     /*
-     * Establish the AU ID list, fetch all available AUs and all of the 
+     * Establish the AU ID list, fetch all available AUs and all of the
      * "per-AU" titles
      */
     auIdList = new ArrayList();
     auList   = getRemoteApi().getAllAus();
-    
+
     auTitles = getRemoteApi().findAllTitles();
     if (auTitles.isEmpty()) {
       return auIdList;
     }
     /*
-     * Examine each AU title - is it associated with the requested 
+     * Examine each AU title - is it associated with the requested
      * "LOCKSS title"?  If so, we're finished.
      */
     for (Iterator iterator = auTitles.iterator(); iterator.hasNext(); ) {
       String auTitle = (String) iterator.next();
-      
+
       if (getAuIds(auTitle, auList, auIdList)) break;
     }
     return auIdList;
@@ -116,13 +116,13 @@ public class JournalDetail extends StatusActivityBase {
 
   /**
    * Find all AUs for the requested "LOCKSS title"
-   * @param auTitle AU title 
+   * @param auTitle AU title
    * @param auList All available AUs
    * @param auIdList List of matching AU IDs
    * @return true If at least one match was found
    */
-  private boolean getAuIds(String auTitle, 
-                           Collection auList, 
+  private boolean getAuIds(String auTitle,
+                           Collection auList,
                            ArrayList auIdList) {
     PluginProxy   pluginProxy;
     TitleConfig   titleConfig;
@@ -171,7 +171,7 @@ public class JournalDetail extends StatusActivityBase {
     }
     return foundAu;
   }
-  
+
   /**
    * Generate the XML list of AU IDs.
    * @param auIdList ArrayList if AU IDs
@@ -185,7 +185,7 @@ public class JournalDetail extends StatusActivityBase {
    * </archivalunit>
    *</code>
    */
-  private void generateXml(ArrayList auIdList) 
+  private void generateXml(ArrayList auIdList)
                                     throws StatusService.NoSuchTableException,
                                            XmlDomBuilder.XmlDomException {
     XmlUtils    apiUtils, statusUtils;
@@ -197,20 +197,20 @@ public class JournalDetail extends StatusActivityBase {
 
     statusOptions = new BitSet();
     statusOptions.set(StatusTable.OPTION_NO_ROWS);
-    
+
     for (Iterator iterator = auIdList.iterator(); iterator.hasNext(); ) {
-      
+
       StatusTable     statusTable;
       XmlStatusTable  xmlStatusTable;
       NodeList        nodeList;
       String          auId;
       int             found;
-     
+
       /*
        * Get the ArchivalUnitTable for this AU ID
        */
       auId            = (String) iterator.next();
-      statusTable     = getStatusService().getTable("ArchivalUnitTable", 
+      statusTable     = getStatusService().getTable("ArchivalUnitTable",
                                                     auId,
                                                     statusOptions);
       xmlStatusTable  = new XmlStatusTable(statusTable);
@@ -220,31 +220,31 @@ public class JournalDetail extends StatusActivityBase {
        */
       responseRoot    = apiUtils.createElement(getResponseRoot(), AP_E_AU);
       XmlUtils.addText(apiUtils.createElement(responseRoot, AP_E_AUID), auId);
-      
+
       statusRoot = xmlStatusTable.getTableDocument().getDocumentElement();
-      nodeList   = statusUtils.getElementList(statusRoot, 
+      nodeList   = statusUtils.getElementList(statusRoot,
                                               XmlStatusConstants.SUMMARYINFO);
-      found = 0; 
+      found = 0;
       for (int i = 0; i < nodeList.getLength(); i++) {
-        
-        String title  = ParseUtils.getText(statusUtils, 
+
+        String title  = ParseUtils.getText(statusUtils,
                                            (Element) nodeList.item(i),
                                            XmlStatusConstants.TITLE);
 
-        String value  = ParseUtils.getText(statusUtils, 
+        String value  = ParseUtils.getText(statusUtils,
                                            (Element) nodeList.item(i),
                                            XmlStatusConstants.VALUE);
         if (value == null) value = "";
-        
+
         if ("Content Size".equals(title)) {
           Element element = apiUtils.createElement(responseRoot, AP_E_SIZE);
-          
+
           XmlUtils.addText(element, value);
           if (++found == 2) break;
-          
+
         } else if ("Status".equals(title)) {
           Element element = apiUtils.createElement(responseRoot, AP_E_DETAIL);
-          
+
           XmlUtils.addText(element, value.toLowerCase());
           if (++found == 2) break;
         }

@@ -1,5 +1,5 @@
 /*
- * $Id: TestBaseOaiMetadataHandler.java,v 1.6 2005-10-04 22:57:17 tlipkis Exp $
+ * $Id: TestBaseOaiMetadataHandler.java,v 1.7 2005-10-11 05:49:58 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ import org.xml.sax.SAXException;
  * Test cases for OaiHandler.java
  */
 public class TestBaseOaiMetadataHandler extends LockssTestCase {
- 
+
     protected static Logger logger = Logger.getLogger("TestBaseOaiMetadataHandler");
 
     private BaseOaiMetadataHandler baseOaiMetadataHandler;
@@ -74,9 +74,9 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	try {
 	    baseOaiMetadataHandler = new BaseOaiMetadataHandler( metadataPrefix, metadataNamespaceUrl, (String) null);
 	    fail("BaseOaiMetadataHandler with null url container tag name should throw");
-	} catch (NullPointerException e) { }   
+	} catch (NullPointerException e) { }
     }
-    
+
     public void testGetMetadataPrefix(){
 	assertEquals(metadataPrefix, baseOaiMetadataHandler.getMetadataPrefix());
     }
@@ -111,7 +111,7 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
     }
 
     private NodeList createMockMetadataNodeList(Set urls, String prefix, String namespaceUrl, String tagName){
-      
+
         DocumentBuilder builder = null;
 
 	/* Load DOM Document */
@@ -128,11 +128,11 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 	// create something like
 	/*
 	  <metadata>
-	  <oai_dc:dc 
-          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
-          xmlns:dc="http://purl.org/dc/elements/1.1/" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+	  <oai_dc:dc
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+          xmlns:dc="http://purl.org/dc/elements/1.1/"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
           http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
 	  <dc:identifier>http://www.perseus.tufts.edu/cgi-bin/ptext?
           doc=Perseus:text:1999.02.0084</dc:identifier>
@@ -165,11 +165,11 @@ public class TestBaseOaiMetadataHandler extends LockssTestCase {
 		logger.error("", saxe);
 	    } catch (IOException ioe) {
 		logger.error("", ioe);
-	    } 
+	    }
 	}
 	return nodes;
     }
-    
+
     public static void main(String[] argv) {
 	String[] testCaseList = {TestBaseOaiMetadataHandler.class.getName()};
 	junit.textui.TestRunner.main(testCaseList);

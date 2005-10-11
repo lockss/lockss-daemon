@@ -1,5 +1,5 @@
 /*
- * $Id: JavaUrlConnection.java,v 1.5 2005-10-03 06:03:49 tlipkis Exp $
+ * $Id: JavaUrlConnection.java,v 1.6 2005-10-11 05:48:29 tlipkis Exp $
  *
 
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -58,7 +58,7 @@ public class JavaUrlConnection extends BaseLockssUrlConnection {
   public boolean isHttp() {
     return false;
   }
-  
+
   public void execute() throws IOException {
     assertNotExecuted();
     isExecuted = true;

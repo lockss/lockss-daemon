@@ -1,5 +1,5 @@
 /*
- * $Id: PermissionRecord.java,v 1.4 2005-09-06 23:00:11 troberts Exp $
+ * $Id: PermissionRecord.java,v 1.5 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -32,8 +32,8 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.crawler;
 
 /**
- * This sturcture keep the perission page's URL of a host 
- * and the permission status for crawling that host 
+ * This sturcture keep the perission page's URL of a host
+ * and the permission status for crawling that host
  *
  * @author Chun D. Fok
  * @version 0.0
@@ -48,20 +48,20 @@ public class PermissionRecord {
 
   private String permissionUrl="";
   private int permissionStatus=PERMISSION_UNCHECKED;
-  
+
   public PermissionRecord(String permissionUrl,int permissionStatus){
     if (permissionUrl == null) {
       throw new IllegalArgumentException("Called with null permissionUrl");
     }
-     
+
     setPermissionUrl(permissionUrl);
     setPermissionStatus(permissionStatus);
   }
-  
+
   public String getPermissionUrl(){
     return permissionUrl;
   }
-  
+
   public void setPermissionUrl(String permissionUrl){
     this.permissionUrl=permissionUrl;
   }
@@ -69,7 +69,7 @@ public class PermissionRecord {
   public int getPermissionStatus(){
     return permissionStatus;
   }
-  
+
   public void setPermissionStatus(int permissionStatus){
     this.permissionStatus=permissionStatus;
   }

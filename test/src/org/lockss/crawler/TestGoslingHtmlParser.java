@@ -1,5 +1,5 @@
 /*
- * $Id: TestGoslingHtmlParser.java,v 1.21 2005-05-24 20:38:26 troberts Exp $
+ * $Id: TestGoslingHtmlParser.java,v 1.22 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -550,13 +550,13 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
   public void testKeepsDoubleQuoteInUrl() throws IOException {
     String url= "http://www.example.com/link%22with%22quotes.html";
-    
+
     String source =
       "<html><head><title>Test</title></head><body>"+
       "<a href='http://www.example.com/link\"with\"quotes.html'>Link</a>";
     assertEquals(SetUtil.set(url), parseSingleSource(source));
   }
-  
+
   public void testKeepsSingleQuoteInUrl() throws IOException {
     String url= "http://www.example.com/link'with'quotes.html";
 
@@ -599,7 +599,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
 
   public void testHttpEquiv() throws IOException {
     String url1= "http://example.com/blah.html";
-    String source = 
+    String source =
       "<html><head>"
       +"<meta http-equiv=\"refresh\" "
       +"content=\"0; url=http://example.com/blah.html\">"
@@ -612,7 +612,7 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   // http-equiv header is "refresh"
   public void testHttpEquiv2() throws IOException {
     String url1= "http://example.com/blah.html";
-    String source = 
+    String source =
       "<html><head>"+
       "<meta http-equiv=\"blah\" "
       +"content=\"0; url=http://example.com/blah.html\">"+
@@ -624,11 +624,11 @@ public class TestGoslingHtmlParser extends LockssTestCase {
   private Set parseSingleSource(String source) throws IOException {
     MockCachedUrl mcu = new MockCachedUrl("http://www.example.com");
     mcu.setContent(source);
-    
+
 //     parser.parseForUrls(mcu, cb);
     parser.parseForUrls(new StringReader(source),
 			"http://www.example.com", cb);
-    
+
     return cb.getFoundUrls();
   }
 

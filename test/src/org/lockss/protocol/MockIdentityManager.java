@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.7 2005-10-07 23:46:45 smorabito Exp $
+* $Id: MockIdentityManager.java,v 1.8 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -192,11 +192,11 @@ public class MockIdentityManager implements IdentityManager {
     throw new UnsupportedOperationException("not implemented");
     //      idMap.put(id, new Integer(changeKind));
   }
-  
+
   public void storeIdentities() throws ProtocolException {
     throw new UnsupportedOperationException("not implemented");
   }
-  
+
   public void storeIdentities(ObjectSerializer serializer) {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -213,7 +213,7 @@ public class MockIdentityManager implements IdentityManager {
     }
     return change.intValue();
   }
-  
+
 //   public void signalAgreed(PeerIdentity id, ArchivalUnit au) {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
@@ -225,7 +225,7 @@ public class MockIdentityManager implements IdentityManager {
   public Map getAgreed(ArchivalUnit au) {
     return (Map)agreeMap.get(au);
   }
-  
+
   public Map getDisagreed(ArchivalUnit au) {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -315,6 +315,6 @@ public class MockIdentityManager implements IdentityManager {
 //   protected String getLocalIpParam(Configuration config) {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
-  
+
 
 }

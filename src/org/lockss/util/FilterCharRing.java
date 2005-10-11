@@ -1,5 +1,5 @@
 /*
- * $Id: FilterCharRing.java,v 1.3 2004-10-08 06:58:40 tlipkis Exp $
+ * $Id: FilterCharRing.java,v 1.4 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -83,7 +83,7 @@ public class FilterCharRing extends CharRing {
     if (logger.isDebug3()) {
       logger.debug3("checking if \""+this+"\" has \"" +tag+"\" at index "+idx);
     }
-    //less common case than first char not match, but we have to check for 
+    //less common case than first char not match, but we have to check for
     //size before that anyway
     if (ringsize < taglen + idx) {
       return false;
@@ -95,7 +95,7 @@ public class FilterCharRing extends CharRing {
 	if (!charEqualsIgnoreCase(curChar, tag.charAt(ix))) {
 	  logger.debug3("It doesn't");
 	  return false;
-	} 
+	}
       } else {
 	if (curChar != tag.charAt(ix)) {
 	  logger.debug3("It doesn't");
@@ -113,7 +113,7 @@ public class FilterCharRing extends CharRing {
    * @return true if we've read through the reader, false otherwise
    * @throws IllegalArgumentException if called with a null reader
    */
-  public boolean refillBuffer(Reader reader) 
+  public boolean refillBuffer(Reader reader)
       throws IOException {
     if (reader == null) {
       throw new IllegalArgumentException("Called with null reader");

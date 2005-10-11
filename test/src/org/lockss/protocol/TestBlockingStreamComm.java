@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockingStreamComm.java,v 1.13 2005-10-10 23:25:26 tlipkis Exp $
+ * $Id: TestBlockingStreamComm.java,v 1.14 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -509,7 +509,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
 
   public void testIncomingRcvPeerId(String peerid, boolean isGoodId)
       throws IOException {
-    log.debug("Incoming rcv pid " + peerid); 
+    log.debug("Incoming rcv pid " + peerid);
     setupComm1();
     Interrupter intr1 = interruptMeIn(TIMEOUT_SHOULDNT);
     Socket sock = new Socket(pad1.getIPAddr().getInetAddr(), pad1.getPort());
@@ -922,7 +922,7 @@ public class TestBlockingStreamComm extends LockssTestCase {
     MyBlockingPeerChannel chan =
       (MyBlockingPeerChannel)comm1.channels.get(pid2);
     assertNotNull(chan);
-    
+
     chan.setCalcSendWaitSem(sem);
     comm1.sendTo(msg1, pid2, null);
     msgIn = (PeerMessage)rcvdMsgs2.get(TIMEOUT_SHOULDNT);

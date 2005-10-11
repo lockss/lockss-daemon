@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.8 2005-10-10 23:27:27 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.9 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -270,7 +270,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1="http://www.example.com/blah.html";
     mau.addUrl(startUrl, false, true);
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-   
+
     // parser.addUrlSetToReturn(startUrl, SetUtil.set(url1));
     MyMockUnretryableCacheException exception =
       new MyMockUnretryableCacheException("Test exception");
@@ -444,9 +444,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(100));
 
     //    mau.setParser(parser);
-    
+
     crawler.doCrawl();
-    // only gets 2 urls because start url 's canCrawl check is 
+    // only gets 2 urls because start url 's canCrawl check is
     Set expected = SetUtil.set(startUrl, url1);
     assertEquals(expected, cus.getCachedUrls());
   }
@@ -457,7 +457,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1= "http://www.example.com/link1.html";
     spec.setCrawlWindow(new MyMockCrawlWindow(0));
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    mau.addUrl(startUrl, false, true);    
+    mau.addUrl(startUrl, false, true);
     mau.addUrl(url1);
     assertFalse(crawler.doCrawl());
   }
@@ -508,7 +508,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testDoesCollectHttps() {
-    //we will collect https eventually, it is not yet implemented though and 
+    //we will collect https eventually, it is not yet implemented though and
     //this test is to make sure an https url will not break the whole system
 
     String url1= "http://www.example.com/link1.html";
@@ -522,7 +522,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   public void testDoesCollectFtpAndGopher() {
-    //we will collect ftp and gopher eventually, it is not yet implemented 
+    //we will collect ftp and gopher eventually, it is not yet implemented
     //though and this test is to make sure ftp gopher urls will not break
     //the whole system
 
@@ -577,7 +577,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
-    
+
     spec.setCrawlWindow(new MyMockCrawlWindow(1));
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2, url3));
@@ -605,7 +605,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "http://www.example.com/link3.html";
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3)); 
+        SetUtil.set(url1, url2, url3));
     crawlUrls(SetUtil.set(url1, url2, url3));
     aus.assertUpdatedCrawlListCalled(3); //not called for startUrl
   }
@@ -615,7 +615,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url1= "http://www.example.com/link1.html";
     String url2= "http://www.example.com/link2.html";
     String url3= "http://www.example.com/link3.html";
-    
+
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2, url3));
     crawlUrls(SetUtil.set(url1, url2, url3));
@@ -654,7 +654,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     String url3= "http://www.example.com/link3.html";
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3)); 
+        SetUtil.set(url1, url2, url3));
 
     MockLockssWatchdog wdog = new MockLockssWatchdog();
     crawler.setWatchdog(wdog);
@@ -713,9 +713,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus =
       permissionPageTestSetup(permissionList,2,urls, new MyMockArchivalUnit());
-    
+
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3, url4)); 
+        SetUtil.set(url1, url2, url3, url4));
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.fromList(urls);
     assertEquals(expected, cus.getCachedUrls());
@@ -735,9 +735,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     MockCachedUrlSet cus =
       permissionPageTestSetup(permissionList,1,urls, new MyMockArchivalUnit());
-    
+
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2, url3, url4)); 
+        SetUtil.set(url1, url2, url3, url4));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1, url2);
     assertEquals(expected, cus.getCachedUrls());
@@ -756,9 +756,9 @@ public class TestFollowLinkCrawler extends LockssTestCase {
         new MyMockArchivalUnit());
 
     setProperty(TestableFollowLinkCrawler.PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK,""+true);
-    
+
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url3)); 
+        SetUtil.set(url1, url3));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1);
     assertEquals(expected, cus.getCachedUrls());
@@ -799,12 +799,12 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     mau.addUrl(permissionUrl1, new ExpectedIOException(), 1);
 
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
-						   urls, mau); 
+						   urls, mau);
 
     setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url2)); 
+        SetUtil.set(url1, url2));
 
     assertTrue(crawler.doCrawl());
     Set expected = SetUtil.set(url1,url2,permissionUrl1);
@@ -824,7 +824,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 				new MyMockArchivalUnit());
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
-        SetUtil.set(url1, url3)); 
+        SetUtil.set(url1, url3));
     assertFalse(crawler.doCrawl());
     Set expected = SetUtil.set(permissionUrl1, url1);
     assertEquals(expected, cus.getCachedUrls());
@@ -849,11 +849,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
   private class MyMockCrawlWindow implements CrawlWindow {
     int numTimesToReturnTrue = 0;
-    
+
     /**
      * Construct a MockCrawlWindow that can set number of time
      * to return true when canCrawl is called.
-     * 
+     *
      * @param numTimesToReturnTrue the number of time to return true
      * excluding fetching of permission pages and starting urls.
      *
@@ -958,14 +958,14 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   }
 
   private static class TestableFollowLinkCrawler extends FollowLinkCrawler {
-    
+
     Set urlsToFollow = new HashSet();
     //    MockCrawlStatus crawlStatus;
 
-    protected TestableFollowLinkCrawler(ArchivalUnit au, 
+    protected TestableFollowLinkCrawler(ArchivalUnit au,
 					CrawlSpec spec, AuState aus){
       super(au, spec, aus);
-      crawlStatus = new Crawler.Status(au, 
+      crawlStatus = new Crawler.Status(au,
 		    ((SpiderCrawlSpec)spec).getStartingUrls(),
 		    null);
     }
@@ -974,13 +974,13 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       //always return true here
       return true;
     }
-    
+
     /** suppress these actions */
     protected void doCrawlEndActions() {
     }
 
     /**
-     * setUrlsToFollow set the urls set that will return when calling 
+     * setUrlsToFollow set the urls set that will return when calling
      * getUrlsToFollow
      */
     protected void setUrlsToFollow(Set urls) {
@@ -993,7 +993,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
       // called inside the getUrlsToFollow method.
       return urlsToFollow;
     }
-    
+
     public int getType() {
       throw new UnsupportedOperationException("not implemented");
     }

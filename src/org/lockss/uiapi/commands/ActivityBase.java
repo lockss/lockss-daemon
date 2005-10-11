@@ -1,5 +1,5 @@
 /*
- * $Id: ActivityBase.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id: ActivityBase.java,v 1.3 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ import org.lockss.uiapi.util.*;
  */
 public abstract class ActivityBase implements ApiParameters,
                                               ClusterControlParameters {
-  
+
   private static Logger log = Logger.getLogger("Activity");
 
   /*
@@ -88,7 +88,7 @@ public abstract class ActivityBase implements ApiParameters,
    * Invoked from subclass
    */
   protected ActivityBase() {
-    _xmlUtils = ParseUtils.getApiXmlUtils();   
+    _xmlUtils = ParseUtils.getApiXmlUtils();
   }
 
   /**
@@ -99,8 +99,8 @@ public abstract class ActivityBase implements ApiParameters,
    * @param document The "command details" document
    */
   public void initialize(ServletInterface servletInterface,
-                         String   server, 
-                         String   command, 
+                         String   server,
+                         String   command,
                          Document document) throws XmlException {
     Element responseRoot;
     Element detail;
@@ -109,8 +109,8 @@ public abstract class ActivityBase implements ApiParameters,
      * Save servlet services, request parameters
      */
     _servletInterface = servletInterface;
- 
-    _serverName = server; 
+
+    _serverName = server;
     _requestCmd = command;
     _requestDoc = document;
 
@@ -119,19 +119,19 @@ public abstract class ActivityBase implements ApiParameters,
      */
     _responseDoc = XmlUtils.createDocument();
     responseRoot = _xmlUtils.createRoot(_responseDoc, AP_RESPONSEROOT);
-    
-    _xmlUtils.setAttribute(responseRoot, AP_A_TYPE, AP_TYPE_STANDARD); 
+
+    _xmlUtils.setAttribute(responseRoot, AP_A_TYPE, AP_TYPE_STANDARD);
 
     /*
      * Add the "detail block"
      */
-    detail = _xmlUtils.createElement(responseRoot, AP_E_DETAIL); 
-    
+    detail = _xmlUtils.createElement(responseRoot, AP_E_DETAIL);
+
     _xmlUtils.setAttribute(detail, AP_A_SYSTEM, _serverName);
     _xmlUtils.setAttribute(detail, AP_A_COMMAND, _requestCmd);
     _xmlUtils.setAttribute(detail, AP_A_DATE, DateFormatter.now());
   }
-  
+
   /**
    * Return the servlet services
    * @return ServletInterface object
@@ -146,7 +146,7 @@ public abstract class ActivityBase implements ApiParameters,
   protected XmlUtils getXmlUtils() {
     return _xmlUtils;
   }
-  
+
 	/**
    * Get the command name
    */
@@ -169,7 +169,7 @@ public abstract class ActivityBase implements ApiParameters,
   protected Element getRequestRoot() {
     return (_requestDoc == null) ? null : _requestDoc.getDocumentElement();
   }
-  
+
   /**
    * Get the version of the XML syntax employed by this request document
    * @return Syntax version (empty String if none is present)
@@ -177,10 +177,10 @@ public abstract class ActivityBase implements ApiParameters,
   protected String getRequestVersion() {
     Element root = _requestDoc.getDocumentElement();
 
-    return (root == null) ? "" 
+    return (root == null) ? ""
                           : _xmlUtils.getAttribute(root, COM_XML_VERSIONNAME);
   }
-  
+
   /**
    * Get the response document (DOM rendition)
    * @return Response document
@@ -191,15 +191,15 @@ public abstract class ActivityBase implements ApiParameters,
   public Document getResponseDocument() {
     return _responseDoc;
   }
-  
+
   /**
    * Get the root element of the response document
-   * @return Response root element 
+   * @return Response root element
    */
   protected Element getResponseRoot() {
     return (_responseDoc == null) ? null : _responseDoc.getDocumentElement();
   }
-  
+
   /**
    * Get response specific error text
    * @return Error text
@@ -217,7 +217,7 @@ public abstract class ActivityBase implements ApiParameters,
   }
 
   /**
-   * Add a response specific status option 
+   * Add a response specific status option
    * @param text Response information
    */
   protected void addResponseStatusOption(String name, String value) {
@@ -236,7 +236,7 @@ public abstract class ActivityBase implements ApiParameters,
   }
 
   /**
-   * Set response specific detail information 
+   * Set response specific detail information
    * @param text Response information
    */
   protected void setResponseDetailMessage(String text) {
@@ -250,10 +250,10 @@ public abstract class ActivityBase implements ApiParameters,
   protected String getResponseVersion() {
     Element root = _responseDoc.getDocumentElement();
 
-    return (root == null) ? "" 
+    return (root == null) ? ""
                           : _xmlUtils.getAttribute(root, COM_XML_VERSIONNAME);
   }
-  
+
   /**
    * Get text associated with a named element in the client request document
    * @param name Element name
@@ -283,10 +283,10 @@ public abstract class ActivityBase implements ApiParameters,
   /*
    * Error handling
    */
- 
+
   /**
    * Add a final status block to the response document
-   * 
+   *
    * @param success true = success, false = error
    */
   public void setStatus(boolean success) {
@@ -304,16 +304,16 @@ public abstract class ActivityBase implements ApiParameters,
 
     Element element;
     Element textElement;
-   
+
     /*
      * Command status and error text
      */
     element = _xmlUtils.createElement(getResponseRoot(), AP_E_STATUS);
-    _xmlUtils.setAttribute(element, AP_A_SUCCESS, 
+    _xmlUtils.setAttribute(element, AP_A_SUCCESS,
                                    success ? AP_TRUE: AP_FALSE);
-    
+
     textElement = _xmlUtils.createElement(element, AP_E_MESSAGE);
-    
+
     if (text != null) {
       XmlUtils.addText(textElement, text.trim());
     }
@@ -332,19 +332,19 @@ public abstract class ActivityBase implements ApiParameters,
         _xmlUtils.setAttribute(entryElement, AP_E_VALUE, (String) entry.getValue());
       }
     }
-    
+
     /*
      * Informational text
      */
     element     = _xmlUtils.getElement(getResponseRoot(), AP_E_DETAIL);
     textElement = _xmlUtils.createElement(element, AP_E_MESSAGE);
-    
-    if (_responseDetail != null) { 
+
+    if (_responseDetail != null) {
       XmlUtils.addText(textElement, _responseDetail.trim());
     }
-    
-    try { 
-      log.debug2("OPTIONS: " + XmlUtils.serialize(_responseDoc)); 
+
+    try {
+      log.debug2("OPTIONS: " + XmlUtils.serialize(_responseDoc));
     } catch (Exception ignore) { }
   }
 
@@ -355,11 +355,11 @@ public abstract class ActivityBase implements ApiParameters,
    * @param message Text describing the error
    * @return document The error response
    */
-  public static Document errorDocument(String server, String command, 
+  public static Document errorDocument(String server, String command,
                                        String message) {
    return handleError(null, server, command, message, false);
   }
-  
+
   /**
    * Create and send an error response document
    * @param writer Target for error block
@@ -367,8 +367,8 @@ public abstract class ActivityBase implements ApiParameters,
    * @param command Command active when the error occured
    * @param message Text describing the error
    */
-  public static void sendError(Writer writer, 
-                               String server, String command, 
+  public static void sendError(Writer writer,
+                               String server, String command,
                                String message) {
     handleError(writer, server, command, message, true);
   }
@@ -381,13 +381,13 @@ public abstract class ActivityBase implements ApiParameters,
    * @param message Text describing the error
    * @param writeToClient Send the error block back to the client?
    */
-  private static Document handleError(Writer writer, 
-                                      String server, String command, 
+  private static Document handleError(Writer writer,
+                                      String server, String command,
                                       String message,
                                       boolean writeToClient) {
     try {
       ActivityBase error = new Error();
-      
+
       error.initialize(null, server, command, null);
       error.setStatus(false, message);
 
@@ -396,14 +396,14 @@ public abstract class ActivityBase implements ApiParameters,
       }
       return error.getResponseDocument();
 
-    } catch (Throwable exception) { 
+    } catch (Throwable exception) {
       log.error("Failed to handle error response for command \""
               + command
               + "\"");
       throw new ResponseException(exception.toString());
     }
   }
-  
+
   /**
    * Send a text rendition of the response document to the client
    * @param writer Client writer
@@ -413,7 +413,7 @@ public abstract class ActivityBase implements ApiParameters,
     XmlUtils.serialize(_responseDoc, writer);
     writer.flush();
   }
-  
+
   /**
    * ResponseException
    * <p>

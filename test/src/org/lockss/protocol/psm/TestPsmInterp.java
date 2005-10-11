@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmInterp.java,v 1.10 2005-10-05 23:12:40 troberts Exp $
+ * $Id: TestPsmInterp.java,v 1.11 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -451,7 +451,7 @@ public class TestPsmInterp extends LockssTestCase {
     void event(String event) {
       userEvents.add(event);
     }
-  }    
+  }
 
   // Timer callback records user event, generates TaskComplete event
   TimerQueue.Callback tcb4 = new TimerQueue.Callback() {
@@ -461,7 +461,7 @@ public class TestPsmInterp extends LockssTestCase {
 	obj.event("taskcomplete");
 	interp.handleEvent(TaskComplete);
       }};
-      
+
   // Action schedules "computation", returns success (Sched event)
   PsmAction schedAction = new PsmAction() {
       public PsmEvent run(PsmEvent event, PsmInterp interp) {
@@ -593,12 +593,12 @@ public class TestPsmInterp extends LockssTestCase {
   }
 
   public void testTimeout() {
-    List timeoutStates = 
+    List timeoutStates =
       ListUtil.list("Start", "WaitCompute", "GiveUp");
     List timeoutEvents =
       ListUtil.list(ListUtil.list(/*"set timeout", */"sched"),
 		    ListUtil.list(/*"set timeout", */"sched", "taskcomplete"));
-    List noTimeoutStates = 
+    List noTimeoutStates =
       ListUtil.list("Start", "WaitCompute", "AlmostDone", "Done");
     List noTimeoutEvents =
       ListUtil.list(ListUtil.list(/*"set timeout", */"sched",
@@ -732,7 +732,7 @@ public class TestPsmInterp extends LockssTestCase {
     long getStateTime(int ix) {
       return ((Long)stateTimes.get(ix)).longValue();
     }
-  }    
+  }
 
   // Hack to make a simple LcapMessage, don't care about contents
   static MyLcapMessage makeMsg(String name) {

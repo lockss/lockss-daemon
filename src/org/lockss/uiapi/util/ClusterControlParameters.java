@@ -1,5 +1,5 @@
 /*
- * $Id: ClusterControlParameters.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: ClusterControlParameters.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ package org.lockss.uiapi.util;
  */
 public interface ClusterControlParameters extends CommonParameters {
   /*
-   * Version information 
+   * Version information
    *
    * Software version
    */
@@ -51,7 +51,7 @@ public interface ClusterControlParameters extends CommonParameters {
   /*
    * Cluster Control namespace information (URI and prefix)
    */
-  final static String   CCP_NS_URI          = 
+  final static String   CCP_NS_URI          =
                                   "http://lockss.org/clustercontrol";
   final static String   CCP_NS_PREFIX       = "ui";
   /*
@@ -75,15 +75,15 @@ public interface ClusterControlParameters extends CommonParameters {
   final static String   CCP_COMMAND_CLUSTERSTATUS
                                                 = "clusterstatus";
   /*
-   * Journal 
+   * Journal
    */
   final static String   CCP_COMMAND_JOURNALUPDATE
-                                                = "journalupdate"; 
+                                                = "journalupdate";
   final static String   CCP_COMMAND_FIELDNAMES  = "fieldnames";
   /*
    * Archival Unit
    */
-  final static String   CCP_COMMAND_AUMENU      = "aumenu"; 
+  final static String   CCP_COMMAND_AUMENU      = "aumenu";
   /*
    * IP Access Group definition and application
    */
@@ -93,9 +93,9 @@ public interface ClusterControlParameters extends CommonParameters {
                                                 = "ipaccessgroupupdate";
   final static String   CCP_COMMAND_ACLMENU     = "aclmenu";
   final static String   CCP_COMMAND_ACLEDIT     = "acledit";
-  
+
   final static String   CCP_COMMAND_ALERTS      = "alerts";
-  
+
   /*
    * The "not implemented" page:
    *
@@ -127,7 +127,7 @@ public interface ClusterControlParameters extends CommonParameters {
    * Cluster Control servlet specification used to build HTML HREFs.
    */
   final static String   CCP_CONTROLLER_NAME     = "ClusterControl";
-  
+
   final static String   CCP_HREF                = CCP_CONTROLLER_NAME
                                                 + "?"
                                                 + CCP_PARAM_COMMAND

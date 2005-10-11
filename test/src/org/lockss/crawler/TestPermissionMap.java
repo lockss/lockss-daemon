@@ -1,5 +1,5 @@
 /*
- * $Id: TestPermissionMap.java,v 1.2 2005-09-06 22:59:15 troberts Exp $
+ * $Id: TestPermissionMap.java,v 1.3 2005-10-11 05:49:13 tlipkis Exp $
  */
 
 /*
@@ -43,7 +43,7 @@ public class TestPermissionMap extends LockssTestCase {
     pMap = new PermissionMap();
     pMap.putStatus(permissionUrl1, PermissionRecord.PERMISSION_OK);
   }
-  
+
   public void testGetPermissionUrl() throws Exception {
     assertEquals(permissionUrl1, pMap.getPermissionUrl(url1));
   }
@@ -59,7 +59,7 @@ public class TestPermissionMap extends LockssTestCase {
     pMap.putStatus(permissionUrl2, PermissionRecord.PERMISSION_NOT_OK);
     assertEquals(permissionUrl2, pMap.getPermissionUrl(url2));
     assertEquals(PermissionRecord.PERMISSION_NOT_OK, pMap.getStatus(url2));
-    
+
     assertEquals(permissionUrl1, pMap.getPermissionUrl(url1));
     assertEquals(PermissionRecord.PERMISSION_OK, pMap.getStatus(url1));
   }

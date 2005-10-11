@@ -1,5 +1,5 @@
 /*
- * $Id: OaiRequestData.java,v 1.7 2005-07-25 19:01:33 troberts Exp $
+ * $Id: OaiRequestData.java,v 1.8 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -37,13 +37,13 @@ package org.lockss.oai;
  * issue an Oai Request
  */
 public class OaiRequestData {
-  
+
   private String oaiRequestHandlerUrl;
   private String metadataNamespaceUrl;
   private String urlContainerTagName;
   private String auSetSpec;
   private String metadataPrefix;
-  
+
   private OaiMetadataHandler metadataHandler= null;
 
   /**
@@ -60,7 +60,7 @@ public class OaiRequestData {
 			String tagName,
 			String setSpec,
 			String prefix
-			) { 
+			) {
     if (oaiRequestHandlerUrl == null) {
       throw new IllegalArgumentException("Called with null Oai request handler Url");
     } else if (namespaceUrl == null) {
@@ -92,7 +92,7 @@ public class OaiRequestData {
    */
   public OaiRequestData(String oaiRequestHandlerUrl,
 			String setSpec,
-			OaiMetadataHandler metadataHandler) { 
+			OaiMetadataHandler metadataHandler) {
     if (oaiRequestHandlerUrl == null) {
       throw new IllegalArgumentException("Called with null Oai request handler Url");
     } else if (setSpec == null) {
@@ -112,7 +112,7 @@ public class OaiRequestData {
     return metadataHandler;
   }
 
-  /** 
+  /**
    * Gets the OaiRequestHandlerUrl
    *
    * @return oai request handler url of the oai repository
@@ -120,7 +120,7 @@ public class OaiRequestData {
   public String getOaiRequestHandlerUrl(){
     return oaiRequestHandlerUrl;
   }
-  
+
   /**
    * Gets the Metadata Namespace's Url from plugin tools. It is needed
    * to execute xpath
@@ -135,7 +135,7 @@ public class OaiRequestData {
   }
 
   /**
-   * Gets the XML tag name that contains Urls need to be crawled 
+   * Gets the XML tag name that contains Urls need to be crawled
    * in the metadata. It is needed to execute xpath
    *
    * e.g. "identifier" in Dublin Core case
@@ -144,24 +144,24 @@ public class OaiRequestData {
   public String getUrlContainerTagName(){
     return urlContainerTagName;
   }
-  
+
   /**
    * Gets the SetSpec of the urls belong to. It is needed to issue
    * an Oai request.
-   * In LOCKSS, SetSpec equals to AU name. We should enforce publisher to 
+   * In LOCKSS, SetSpec equals to AU name. We should enforce publisher to
    * have articles (urls) that belongs to the same AU have the same SetSpec
-   * 
+   *
    * e.g. "journal:dec04"
    * @return the SetSpec (AU) the crawl is on
    */
   public String getAuSetSpec(){
     return auSetSpec;
   }
-  
+
   /**
    * Gets the metadata format prefix that the crawl is interested.It
    * is needed to issue an Oai request.
-   * 
+   *
    * e.g. "oai_dc", this is the one that MUST be implements in a
    * Oai repository
    * @return metadata format prefix the crawl is interested.

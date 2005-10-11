@@ -1,5 +1,5 @@
 /*
- * $Id: LockssThread.java,v 1.19 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: LockssThread.java,v 1.20 2005-10-11 05:44:15 tlipkis Exp $
  */
 
 /*
@@ -325,7 +325,7 @@ public abstract class LockssThread extends Thread implements LockssWatchdog {
 	log.warning(msg);
       } else {
 	log.debug2(msg);
-      }	
+      }
     } catch (Exception e) {
       log.warning("Thread threw", e);
     } catch (Throwable e) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestStreamUtil.java,v 1.9 2005-05-17 23:12:12 troberts Exp $
+ * $Id: TestStreamUtil.java,v 1.10 2005-10-11 05:52:45 tlipkis Exp $
  */
 
 /*
@@ -130,7 +130,7 @@ public class TestStreamUtil extends LockssTestCase {
     th.start();
     outs.write(snd1);
     outs.close();
-    th.join();    
+    th.join();
 
     assertEquals(snd1.length, res[0]);
     assertEquals(null, ex[0]);
@@ -159,7 +159,7 @@ public class TestStreamUtil extends LockssTestCase {
     TimerUtil.guaranteedSleep(100);
     outs.write(snd2);
     outs.flush();
-    th.join();    
+    th.join();
 
     assertEquals(exp, buf);
     assertEquals(len, res[0]);
@@ -176,7 +176,7 @@ public class TestStreamUtil extends LockssTestCase {
     assertEquals(exp, buf);
   }
 
-  
+
   public void testReadCharShortRead() throws Exception {
     char[] snd1 = {'0', '1', 0, '3'};
     final int len = 12;
@@ -197,12 +197,12 @@ public class TestStreamUtil extends LockssTestCase {
     th.start();
     outs.write(snd1);
     outs.close();
-    th.join();    
+    th.join();
 
     assertEquals(snd1.length, res[0]);
     assertEquals(null, ex[0]);
   }
-  
+
   public void testReadCharMultipleRead() throws Exception {
     char[] snd1 = {'0', '1', 0, '3'};
     char[] snd2 = {'4', '5', '6', '7', '8', '9', 'a', 'b'};
@@ -226,14 +226,14 @@ public class TestStreamUtil extends LockssTestCase {
     TimerUtil.guaranteedSleep(100);
     outs.write(snd2);
     outs.flush();
-    th.join();    
+    th.join();
 
     assertEquals(exp, buf);
     assertEquals(len, res[0]);
     assertNull(ex[0]);
     outs.close();
   }
-  
+
   public void testCompareStreams() throws IOException {
     String s1 = "01\0003456789abcdefghijklmnopq";
     assertTrue(StreamUtil.compare(new StringInputStream(""),

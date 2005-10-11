@@ -1,5 +1,5 @@
 /*
- * $Id: IPAddr.java,v 1.5 2005-09-30 22:04:28 thib_gc Exp $
+ * $Id: IPAddr.java,v 1.6 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -117,12 +117,12 @@ public class IPAddr implements java.io.Serializable {
         (byte)ipBytes[0], (byte)ipBytes[1], (byte)ipBytes[2], (byte)ipBytes[3]
     });
   }
-  
+
   public static IPAddr getByAddress(byte[] ipBytes)
       throws UnknownHostException {
     return new IPAddr(InetAddress.getByAddress(ipBytes));
   }
-  
+
   public static IPAddr getByName(String host) throws UnknownHostException {
     return new IPAddr(InetAddress.getByName(host));
   }

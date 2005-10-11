@@ -1,5 +1,5 @@
 /*
- * $Id: JournalDefinition.java,v 1.2 2005-10-07 17:46:21 troberts Exp $
+ * $Id: JournalDefinition.java,v 1.3 2005-10-11 05:47:40 tlipkis Exp $
  */
 
 /*
@@ -53,11 +53,11 @@ import org.lockss.uiapi.servlet.*;
 import org.lockss.uiapi.util.*;
 
 /**
- * New journal definition 
+ * New journal definition
  */
 public class JournalDefinition extends ApiActivityBase {
-  
-  private static Logger log = Logger.getLogger("JournalDefinition"); 
+
+  private static Logger log = Logger.getLogger("JournalDefinition");
 
   /**
    * Default "data saved" message text
@@ -68,19 +68,19 @@ public class JournalDefinition extends ApiActivityBase {
    */
   public final static String  ACTIVE      = "active";
   public final static String  INACTIVE    = "inactive";
- 
+
   /**
    * Remote setup - lookup all available journal titles
    */
   public boolean doRemoteSetupAndVerification() {
     Iterator    iterator;
-    Collection  auTitles; 
+    Collection  auTitles;
     TreeSet     titleSet;
     String      title;
     XmlUtils    xmlUtils;
     Element     root;
 
-   
+
     /*
      * Get the "per-AU" titles (volumes?)
      */
@@ -93,7 +93,7 @@ public class JournalDefinition extends ApiActivityBase {
      */
     titleSet = new TreeSet();
     iterator = auTitles.iterator();
-    
+
     while (iterator.hasNext()) {
       title = getJournalTitle((String) iterator.next());
       if (title != null) {
@@ -111,7 +111,7 @@ public class JournalDefinition extends ApiActivityBase {
      */
     xmlUtils  = ParseUtils.getApiXmlUtils();
     root      = xmlUtils.createElement(getResponseRoot(), AP_E_INFO);
-    
+
     iterator = titleSet.iterator();
     while (iterator.hasNext()) {
       title = (String) iterator.next();
@@ -119,9 +119,9 @@ public class JournalDefinition extends ApiActivityBase {
     }
     return true;
   }
-  
+
   /**
-   * Nothing to do (never invoked, due to doLocalSetupAndVerification()) 
+   * Nothing to do (never invoked, due to doLocalSetupAndVerification())
    * @return true
    */
   public boolean doCommand() throws Exception {

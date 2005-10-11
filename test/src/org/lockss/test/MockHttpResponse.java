@@ -1,5 +1,5 @@
 /*
- * $Id: MockHttpResponse.java,v 1.2 2005-10-02 00:05:52 tlipkis Exp $
+ * $Id: MockHttpResponse.java,v 1.3 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -92,7 +92,7 @@ public class MockHttpResponse extends HttpResponse {
 //   public void readHeader(ChunkableInputStream in) {
 //     throw new UnsupportedOperationException("not implemented");
 //   }
-  
+
   public void reset() {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -174,11 +174,11 @@ public class MockHttpResponse extends HttpResponse {
   public int getContentLength(){
     throw new UnsupportedOperationException("not implemented");
   }
-           
+
   public java.lang.String getContentType() {
     throw new UnsupportedOperationException("not implemented");
   }
-           
+
   public long getDateField(java.lang.String name) {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -214,7 +214,7 @@ public class MockHttpResponse extends HttpResponse {
   public HttpConnection getHttpConnection() {
     throw new UnsupportedOperationException("not implemented");
   }
-  
+
   HttpMessage getHttpMessage() {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -222,7 +222,7 @@ public class MockHttpResponse extends HttpResponse {
   public java.io.InputStream getInputStream() {
     throw new UnsupportedOperationException("not implemented");
   }
-  
+
   public int getIntField(java.lang.String name) {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -235,7 +235,7 @@ public class MockHttpResponse extends HttpResponse {
     throw new UnsupportedOperationException("not implemented");
   }
 
-           
+
   public int getState() {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -252,7 +252,7 @@ public class MockHttpResponse extends HttpResponse {
     throw new UnsupportedOperationException("not implemented");
   }
 
-           
+
   public void removeAttribute(java.lang.String name) {
     throw new UnsupportedOperationException("not implemented");
   }
@@ -277,12 +277,12 @@ public class MockHttpResponse extends HttpResponse {
     throw new UnsupportedOperationException("not implemented");
   }
 
-           
+
   public void setContentType(java.lang.String contentType) {
     throw new UnsupportedOperationException("not implemented");
   }
 
-           
+
   public void setDateField(java.lang.String name, java.util.Date date) {
     throw new UnsupportedOperationException("not implemented");
   }

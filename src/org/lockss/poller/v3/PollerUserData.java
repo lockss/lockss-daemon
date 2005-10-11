@@ -1,5 +1,5 @@
 /*
- * $Id: PollerUserData.java,v 1.5 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: PollerUserData.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -56,24 +56,24 @@ public class PollerUserData implements LockssSerializable {
   private byte[] repairEffortProof;
   private byte[] receiptEffortProof;
   private String errorMsg;
-  
+
   /** Transient non-serialized fields */
   private transient V3Poller poller;
   private transient V3PollerSerializer serializer;
   private transient PollerStateBean pollState;
-  
+
   private static Logger log = Logger.getLogger("PollerUserData");
-  
+
   /**
    * Package-level constructor used for testing.
    */
   PollerUserData(V3PollerSerializer serializer) {
     this.serializer = serializer;
   }
-  
+
   /**
    * Construct a new PollerUserData object.
-   * 
+   *
    * @param id
    * @param poller
    * @param serializer
@@ -85,7 +85,7 @@ public class PollerUserData implements LockssSerializable {
     this.pollState = poller.getPollerStateBean();
     this.serializer = serializer;
   }
-  
+
   public void setVoterId(PeerIdentity id) {
     this.voterId = id;
     saveState();
@@ -107,7 +107,7 @@ public class PollerUserData implements LockssSerializable {
   public void setRepairTarget(String target) {
     this.target = target;
   }
-  
+
   public String getRepairTarget() {
     return target;
   }
@@ -189,7 +189,7 @@ public class PollerUserData implements LockssSerializable {
   public VoteBlocks getVoteBlocks() {
     return voteBlocks;
   }
-  
+
   public VoteBlock getVoteBlock(int index)
       throws VoteBlocks.NoSuchBlockException {
     return voteBlocks.getVoteBlock(index);
@@ -199,24 +199,24 @@ public class PollerUserData implements LockssSerializable {
     this.errorMsg = s;
     saveState();
   }
-  
+
   public String getErrorMessage() {
     return errorMsg;
   }
-  
+
   public String toString() {
     return "[PollerUserData: voterId=" +
       voterId + "]";
   }
-  
+
   public String getKey() {
     return poller.getKey();
   }
-  
+
   public V3Poller getPoller() {
     return poller;
   }
-  
+
   /** Poller State delegate methods */
   public String getAuId() {
     return pollState.getAuId();
@@ -274,7 +274,7 @@ public class PollerUserData implements LockssSerializable {
   public void handleError() {
     poller.handleError(getVoterId(), getErrorMessage());
   }
-  
+
   void handleRepair() {
     // XXX: TBD
   }

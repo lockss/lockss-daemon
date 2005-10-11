@@ -1,5 +1,5 @@
 /*
- * $Id: DefinableArchivalUnit.java,v 1.37 2005-10-07 17:51:03 thib_gc Exp $
+ * $Id: DefinableArchivalUnit.java,v 1.38 2005-10-11 05:45:12 tlipkis Exp $
  */
 
 /*
@@ -219,7 +219,7 @@ public class DefinableArchivalUnit extends BaseArchivalUnit {
     String oaiRequestUrlStr = oai_request_url.toString();
     String oai_au_spec = null;
 //         paramMap.getString(ConfigParamDescr.OAI_SPEC.getKey());
-    log.debug3("Creating OaiRequestData with oaiRequestUrlStr" + 
+    log.debug3("Creating OaiRequestData with oaiRequestUrlStr" +
 	       oaiRequestUrlStr + " and oai_au_spec " + oai_au_spec);
     return new OaiRequestData(oaiRequestUrlStr,
                       "http://purl.org/dc/elements/1.1/",

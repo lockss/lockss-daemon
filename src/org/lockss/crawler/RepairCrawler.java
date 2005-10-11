@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.52 2005-10-10 23:59:04 troberts Exp $
+ * $Id: RepairCrawler.java,v 1.53 2005-10-11 05:43:53 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class RepairCrawler extends CrawlerImpl {
     Configuration.PREFIX + "crawler.repair_needs_permission";
   public static final boolean DEFAULT_REPAIR_NEEDS_PERMISSION = false;
 
-  
+
   boolean fetchCache = DEFAULT_FETCH_FROM_OTHER_CACHES_ONLY;
   boolean fetchPublisher = DEFAULT_FETCH_FROM_PUBLISHER_ONLY;
   boolean repairNeedsPermission;
@@ -151,11 +151,11 @@ public class RepairCrawler extends CrawlerImpl {
   public String getTypeString() {
     return "Repair";
   }
-  
+
   public boolean isWholeAU() {
     return false;
   }
-    
+
   public int getType() {
     return Crawler.REPAIR;
   }
@@ -185,7 +185,7 @@ public class RepairCrawler extends CrawlerImpl {
     if (!populatePermissionMap()) {
       return aborted();
     }
-    
+
     Iterator it = getStartingUrls();
 
     while (it.hasNext() && !crawlAborted) {
@@ -389,7 +389,7 @@ public class RepairCrawler extends CrawlerImpl {
     uc.setRequestProperty(Constants.X_LOCKSS, Constants.X_LOCKSS_REPAIR);
     try {
       cache(uc, addr);
-      crawlStatus.addSource(addr); 
+      crawlStatus.addSource(addr);
     } catch (IOException e) {
       logger.warning("Repair from cache failed", e);
       throw new LockssUrlConnection.CantProxyException(e.toString());
@@ -455,7 +455,7 @@ public class RepairCrawler extends CrawlerImpl {
     }
     return true;
   }
-  
+
 //  public PermissionMap getPermissionMap() {
 //    if (permissionMap == null) {
 //      populatePermissionMap();

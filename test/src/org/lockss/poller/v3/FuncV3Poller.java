@@ -1,5 +1,5 @@
 /*
- * $Id: FuncV3Poller.java,v 1.2 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: FuncV3Poller.java,v 1.3 2005-10-11 05:50:29 tlipkis Exp $
  */
 
 /*
@@ -73,7 +73,7 @@ public class FuncV3Poller extends LockssTestCase {
   private byte[][] voterNonces;
 
   private static final String BASE_URL = "http://www.test.org/";
-  
+
   private static String[] urls = {
     "lockssau:",
     BASE_URL,
@@ -127,7 +127,7 @@ public class FuncV3Poller extends LockssTestCase {
     cus.setFlatItSource(files);
     return mau;
   }
-  
+
   private PeerIdentity[] makeVoters(int count) throws Exception {
     PeerIdentity[] ids = new PeerIdentity[count];
     for (int i = 0; i < count; i++) {
@@ -135,7 +135,7 @@ public class FuncV3Poller extends LockssTestCase {
     }
     return ids;
   }
-  
+
   private byte[][] makeNonces() {
     byte[][] nonces = new byte[voters.length][];
     for (int ix = 0; ix < voters.length; ix++) {
@@ -143,7 +143,7 @@ public class FuncV3Poller extends LockssTestCase {
     }
     return nonces;
   }
-  
+
   private V3LcapMessage[] makePollAckMessages() {
     V3LcapMessage[] msgs = new V3LcapMessage[voters.length];
     for (int i = 0; i < voters.length; i++) {
@@ -233,24 +233,24 @@ public class FuncV3Poller extends LockssTestCase {
 
     // In this scripted test, we play the part of a voter in a poll,
     // sending messages to the poller.
-    
+
     for (int i = 0; i < voters.length; i++ ) {
       V3LcapMessage poll = v3Poller.getSentMessage(voters[i]);
       assertNotNull(poll);
       assertEquals(poll.getOpcode(), V3LcapMessage.MSG_POLL);
-      
+
       v3Poller.receiveMessage(pollAcks[i]);
-      
+
       V3LcapMessage pollProof = v3Poller.getSentMessage(voters[i]);
       assertNotNull(pollProof);
       assertEquals(pollProof.getOpcode(), V3LcapMessage.MSG_POLL_PROOF);
-      
+
       v3Poller.receiveMessage(nominates[i]);
-      
+
       V3LcapMessage voteRequest = v3Poller.getSentMessage(voters[i]);
       assertNotNull(voteRequest);
       assertEquals(voteRequest.getOpcode(), V3LcapMessage.MSG_VOTE_REQ);
-      
+
       v3Poller.receiveMessage(votes[i]);
     }
     // Repair mechanism simply agrees with everything for this test.
@@ -267,11 +267,11 @@ public class FuncV3Poller extends LockssTestCase {
     private Map semaphores = new HashMap();
 
     MyV3Poller(PollSpec spec, LockssDaemon daemon, PeerIdentity id,
-	       String pollkey, long duration, String hashAlg) 
+	       String pollkey, long duration, String hashAlg)
         throws PollSerializerException {
       super(spec, daemon, id, pollkey, duration, hashAlg);
     }
-    
+
     Collection getReferenceList() {
       return ListUtil.fromArray(voters);
     }
@@ -279,7 +279,7 @@ public class FuncV3Poller extends LockssTestCase {
     public void nominatePeers(PeerIdentity voter, List nominees) {
       // do nothing.
     }
-    
+
     public void sendMessageTo(V3LcapMessage msg, PeerIdentity to) {
       sentMsgs.put(to, msg);
       SimpleBinarySemaphore sem = (SimpleBinarySemaphore)semaphores.get(to);
@@ -298,7 +298,7 @@ public class FuncV3Poller extends LockssTestCase {
       sem.take(5000); // Really shouldn't take this long
       return (V3LcapMessage)sentMsgs.get(voter);
     }
-    
+
     /**
      * Overridden to just agree.
      */
@@ -321,12 +321,12 @@ public class FuncV3Poller extends LockssTestCase {
       tally.tallyVotes();
     }
   }
-  
+
   private void initRequiredServices() {
     theDaemon = getMockLockssDaemon();
     pollmanager = theDaemon.getPollManager();
     hashService = theDaemon.getHashService();
-    
+
     theDaemon.getPluginManager();
 
     tempDirPath = null;

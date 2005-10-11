@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlManagerStatus.java,v 1.27 2005-10-10 23:27:29 tlipkis Exp $
+ * $Id: CrawlManagerStatus.java,v 1.28 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -109,7 +109,7 @@ public class CrawlManagerStatus implements StatusAccessor {
     List allCrawls = statusSource.getCrawlStatusList();
     List rows = new ArrayList();
     if (allCrawls != null) {
-      
+
       for (Iterator it = allCrawls.iterator(); it.hasNext();) {
 	Crawler.Status crawlStat = (Crawler.Status)it.next();
 	if (!includeInternalAus &&
@@ -164,18 +164,18 @@ public class CrawlManagerStatus implements StatusAccessor {
     row.put(CRAWL_TYPE, status.getType());
     row.put(START_TIME_COL_NAME, new Long(status.getStartTime()));
     row.put(END_TIME_COL_NAME, new Long(status.getEndTime()));
-    row.put(NUM_URLS_FETCHED, 
+    row.put(NUM_URLS_FETCHED,
 	    makeRef(status.getNumFetched(),
 		    "single_crawl_status", "fetched."+key));
 
-    row.put(NUM_URLS_WITH_ERRORS, 
+    row.put(NUM_URLS_WITH_ERRORS,
 	    makeRef(status.getNumUrlsWithErrors(),
 		    "single_crawl_status", "error."+key));
 
-    row.put(NUM_URLS_NOT_MODIFIED, 
+    row.put(NUM_URLS_NOT_MODIFIED,
 	    makeRef(status.getNumNotModified(),
 		    "single_crawl_status", "not-modified."+key));
-    row.put(NUM_URLS_PARSED, 
+    row.put(NUM_URLS_PARSED,
 	    makeRef(status.getNumParsed(),
 		    "single_crawl_status", "parsed."+key));
     row.put(START_URLS,

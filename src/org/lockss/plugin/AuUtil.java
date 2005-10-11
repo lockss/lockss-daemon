@@ -1,5 +1,5 @@
 /*
- * $Id: AuUtil.java,v 1.9 2005-10-07 23:46:50 smorabito Exp $
+ * $Id: AuUtil.java,v 1.10 2005-10-11 05:45:13 tlipkis Exp $
  */
 
 /*
@@ -131,20 +131,20 @@ public class AuUtil {
     return getBoolValue(getTitleDefault(tc, ConfigParamDescr.PUB_DOWN),
 			false);
   }
-  
+
   public static int getProtocolVersion(ArchivalUnit au) {
     return getIntValue(getAuParamOrTitleDefault(au,
                                                 ConfigParamDescr.POLL_VERSION),
                        PollSpec.V1_PROTOCOL);
   }
-  
+
   public static boolean getBoolValue(Object value, boolean dfault) {
     if (value instanceof Boolean) {
       return ((Boolean)value).booleanValue();
     }
     return dfault;
   }
-  
+
   public static int getIntValue(Object value, int dfault) {
     if (value instanceof Integer) {
       return ((Integer)value).intValue();

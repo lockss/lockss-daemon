@@ -1,5 +1,5 @@
 /*
- * $Id: WrapTask.java,v 1.4 2005-09-30 22:25:01 thib_gc Exp $
+ * $Id: WrapTask.java,v 1.5 2005-10-11 05:40:57 tlipkis Exp $
  */
 
 /*
@@ -135,7 +135,7 @@ public class WrapTask extends Task {
   /** Main running method called by Ant */
   public void execute() throws BuildException {
     int filecount=0;
-    
+
     javadoc.setProject(getProject());
 
     checkJavadocAttributes();
@@ -154,7 +154,7 @@ public class WrapTask extends Task {
 
     // Determine which files in the srcDir should be excluded
     for (int i=0; i<Array.getLength(filelist); i++) {
-      if (!filelist[i].endsWith(".java") || toBeHidden.contains(filelist[i]) 
+      if (!filelist[i].endsWith(".java") || toBeHidden.contains(filelist[i])
           || !outOfDate(filelist[i])) {
         fs.setExcludes(filelist[i]);
         logIfVerbose("File " + filelist[i] + " up to date or hidden.");

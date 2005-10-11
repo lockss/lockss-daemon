@@ -1,5 +1,5 @@
 /*
- * $Id: AntTaskTarget.java,v 1.4 2005-06-04 18:59:49 tlipkis Exp $
+ * $Id: AntTaskTarget.java,v 1.5 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -55,7 +55,7 @@ public class AntTaskTarget implements LogTarget {
   //   protected AntHelper helper;
   protected Object helper;
   protected Method writeLogMethod;
-  
+
   /** Create a log target that outputs to an AntTargetHelper */
   AntTaskTarget() {
     try {
@@ -97,5 +97,5 @@ public class AntTaskTarget implements LogTarget {
       System.err.println(msg);
     }
   }
-    
+
 }

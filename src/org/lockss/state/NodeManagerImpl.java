@@ -1,5 +1,5 @@
 /*
- * $Id: NodeManagerImpl.java,v 1.203 2005-10-07 23:46:46 smorabito Exp $
+ * $Id: NodeManagerImpl.java,v 1.204 2005-10-11 05:47:22 tlipkis Exp $
  */
 
 /*
@@ -910,7 +910,7 @@ public class NodeManagerImpl
                             Tallier results, NodeState nodeState,
                             int stateToUse, boolean reportOnly)
       throws IOException {
-    
+
     // XXX: Kludge until a better V3 refactor.
     int protocolVersion = AuUtil.getProtocolVersion(managedAu);
 
@@ -919,7 +919,7 @@ public class NodeManagerImpl
       logger.debug3("Checking node: " + nodeState.getCachedUrlSet().getUrl());
       logger.debug3("State: " + nodeState.getStateString());
     }
-    
+
     switch(protocolVersion) {
     case PollSpec.V3_PROTOCOL:
       return v3CheckCurrentState(lastOrCurrentPoll, results, nodeState,
@@ -930,7 +930,7 @@ public class NodeManagerImpl
                                  stateToUse, reportOnly);
     }
   }
-  
+
   boolean v3CheckCurrentState(PollState lastOrCurrentPoll,
                               Tallier results, NodeState nodeState,
                               int stateToUse, boolean reportOnly)
@@ -960,7 +960,7 @@ public class NodeManagerImpl
     return false;
     }
   }
-  
+
   boolean v1CheckCurrentState(PollState lastOrCurrentPoll,
                               Tallier results, NodeState nodeState,
                               int stateToUse, boolean reportOnly)
@@ -1476,7 +1476,7 @@ public class NodeManagerImpl
       }
     }
   }
-  
+
   /**
    * Convenience method to call a top-level poll.
    */

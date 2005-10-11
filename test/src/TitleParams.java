@@ -1,5 +1,5 @@
 /*
- * $Id: TitleParams.java,v 1.5 2005-10-10 23:48:55 troberts Exp $
+ * $Id: TitleParams.java,v 1.6 2005-10-11 05:48:47 tlipkis Exp $
  */
 
 /*
@@ -162,9 +162,9 @@ public class TitleParams {
       }
       Properties p = tc.toProperties(propId);
       p.store(pout, "Title: " + title + " (" + plugin.getPluginName() + ")");
-      
+
       cout.println();
-    }      
+    }
   }
 
   private static void doall(PrintStream pout, PrintStream cout,

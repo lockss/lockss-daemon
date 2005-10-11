@@ -1,5 +1,5 @@
 /*
- * $Id: MemoryBoundFunction.java,v 1.15 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: MemoryBoundFunction.java,v 1.16 2005-10-11 05:44:50 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public abstract class MemoryBoundFunction {
    * Generating an empty proof returns null,  validating null returns null
    * for invalid.
    * @return array of int containing the proof,  null if invalid
-   * 
+   *
    */
   public int[] result() throws MemoryBoundFunctionException {
     if (!finished)
@@ -132,7 +132,7 @@ public abstract class MemoryBoundFunction {
    * basis array for each path included in the proof (for a non-empty
    * proof) or for each path searched (for an empty proof).
    * @return array of int containing the signature,  null if none available.
-   * 
+   *
    */
   public int[] signatureArray() throws MemoryBoundFunctionException {
     if (!finished)
@@ -146,7 +146,7 @@ public abstract class MemoryBoundFunction {
    * Set finished if appropriate.
    * @param n number of steps to move.
    * @return true if more work to do
-   * 
+   *
    */
   public abstract boolean computeSteps(int n)
     throws MemoryBoundFunctionException;

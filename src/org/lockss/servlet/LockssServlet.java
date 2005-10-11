@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.70 2005-10-07 23:35:54 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.71 2005-10-11 05:46:57 tlipkis Exp $
  */
 
 /*
@@ -639,7 +639,7 @@ public abstract class LockssServlet extends HttpServlet
     if (heading == null) {
       heading = "Cache Administration";
     }
-    
+
     // Create page and layout header
     Page page = ServletUtil.newPage(getPageTitle(),
                                     isFramed());
@@ -932,16 +932,16 @@ public abstract class LockssServlet extends HttpServlet
                                     defaultPort,
                                     usablePorts);
   }
-  
+
   protected void layoutFooter(Page page) {
-    ServletUtil.layoutFooter(page, 
+    ServletUtil.layoutFooter(page,
                              (footnotes == null ? null : footnotes.iterator()),
                              getLockssApp().getVersionInfo());
     if (footnotes != null) {
       footnotes.removeAllElements();
     }
   }
-  
+
   protected void layoutIpAllowDeny(Page page, Vector allow,
       Vector deny, String ipFootnote, String errMsg, Vector allowErrs,
       Vector denyErrs, String allowName, String denyName,
@@ -949,11 +949,11 @@ public abstract class LockssServlet extends HttpServlet
     ServletUtil.layoutIpAllowDeny(this, page, allow, deny, ipFootnote,
         errMsg, allowErrs, denyErrs, allowName, denyName, additional);
   }
-  
+
   protected void layoutMenu(Page page, Iterator descrIterator) {
     ServletUtil.layoutMenu(this, page, descrIterator);
   }
-  
+
   /** Return the app instance.
    */
   protected LockssApp getLockssApp() {

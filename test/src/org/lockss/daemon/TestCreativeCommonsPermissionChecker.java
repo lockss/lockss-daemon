@@ -1,5 +1,5 @@
 /*
- * $Id: TestCreativeCommonsPermissionChecker.java,v 1.3 2005-05-03 00:00:34 troberts Exp $
+ * $Id: TestCreativeCommonsPermissionChecker.java,v 1.4 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import org.lockss.test.*;
 import java.io.StringReader;
 
 public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
-  private static final String grantedRDF = 
+  private static final String grantedRDF =
     "<rdf:RDF xmlns=\"http://web.resource.org/cc/\"\n" +
     "    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
     "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n" +
@@ -53,7 +53,7 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     "</License>\n\n"+
     "</rdf:RDF>";
 
-  private static final String grantedRDFWithURI = 
+  private static final String grantedRDFWithURI =
     "<rdf:RDF xmlns=\"http://web.resource.org/cc/\"\n" +
     "    xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n" +
     "    xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\">\n" +
@@ -117,7 +117,7 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     "</rdf:RDF>";
 
 
-  private static final String jmirRDF = 
+  private static final String jmirRDF =
     "<!--\n"+
     "\n"+
     "<rdf:RDF xmlns=\"http://web.resource.org/cc/\"\n"+
@@ -148,7 +148,7 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
   private CreativeCommonsPermissionChecker cc =
     new CreativeCommonsPermissionChecker();
   private StringReader reader;
-    
+
   public void testNullReader() {
     try {
       cc.checkPermission(null, "http://www.example.com/");
@@ -171,13 +171,13 @@ public class TestCreativeCommonsPermissionChecker extends LockssTestCase {
     assertTrue(cc.checkPermission(reader, pageURI));
     reader.close();
   }
-  
+
   public void testCheckGrantedPermissionRDFOnlyWithURI() throws Exception {
     reader = new StringReader(grantedRDFWithURI);
     assertTrue(cc.checkPermission(reader, pageURI));
     reader.close();
   }
-  
+
   public void testCheckDeniedPermissionRDFOnlyWithURI() throws Exception {
     CreativeCommonsPermissionChecker cc1 =
       new CreativeCommonsPermissionChecker();

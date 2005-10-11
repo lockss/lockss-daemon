@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.5 2005-10-07 23:46:47 smorabito Exp $
+ * $Id: IdentityManagerImpl.java,v 1.6 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -63,7 +63,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>The MAX_DELTA parameter.</p>
    */
   static final String PARAM_MAX_DELTA = PREFIX + "maxReputationDelta";
-  
+
   /**
    * <p>The default value for the MAX_DELTA parameter.</p>
    */
@@ -73,7 +73,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>The AGREE_DELTA parameter.</p>
    */
   static final String PARAM_AGREE_DELTA = PREFIX + "agreeDelta";
-  
+
   /**
    * <p>The default value for the AGREE_DELTA parameter.</p>
    */
@@ -93,7 +93,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>The CALL_INTERNAL parameter.</p>
    */
   static final String PARAM_CALL_INTERNAL = PREFIX + "callInternalDelta";
-  
+
   /**
    * <p>The default value for the CALL_INTERNAL parameter.</p>
    */
@@ -168,9 +168,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>The initial list of V3 peers for this cache.</p>
    */
   public static String PARAM_INITIAL_PEERS = PREFIX + "initialV3PeerList";
-  
+
   public static String DEFAULT_INITIAL_PEERS = "";
-  
+
   /**
    * <p>An instance of {@link LockssRandom} for use by this class.</p>
    */
@@ -192,13 +192,13 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    */
 
   /**
-   * <p>IP address of our identity (not necessarily this machine's IP 
+   * <p>IP address of our identity (not necessarily this machine's IP
    * if behind NAT).<p>
-   * <p>All current identities are IP-based; future ones may not 
+   * <p>All current identities are IP-based; future ones may not
    * be.</p>
    */
   protected IPAddr theLocalIPAddr = null;
-  
+
   /**
    * <p>Array of PeerIdentity for each of our local identities,
    * (potentially) one per protocol version.
@@ -248,14 +248,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   /**
    * <p>Sets up the local identities.</p>
-   * <p>This is protected only so it can be overridden in a mock 
-   * subclass in another package (TestRemoteApi), which won't be 
-   * necessary when there's an interface for the mock class to 
+   * <p>This is protected only so it can be overridden in a mock
+   * subclass in another package (TestRemoteApi), which won't be
+   * necessary when there's an interface for the mock class to
    * implement instead.</p>
    */
   protected void setupLocalIdentities() {
     localPeerIdentities = new PeerIdentity[PollSpec.MAX_POLL_PROTOCOL+1];
-    
+
     // Create local PeerIdentity and LcapIdentity instances
     Configuration config = ConfigManager.getCurrentConfig();
     // Find local IP addr and create V1 identity
@@ -342,7 +342,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     LcapMessage.setIdentityManager(null);
   }
 
-  /** 
+  /**
    * <p>Finds or creates unique instances of both PeerIdentity and
    * LcapIdentity.</p>
    * <p>Eventually, LcapIdentity won't always be created here.</p>
@@ -434,7 +434,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   /**
    * <p>Returns the peer identity matching the IP address and port;
    * An instance is created if necesary.</p>
-   * <p>Used only by LcapDatagramRouter (and soon by its stream 
+   * <p>Used only by LcapDatagramRouter (and soon by its stream
    * analog).</p>
    * @param addr The IPAddr of the peer, null for the local peer.
    * @param port The port of the peer.
@@ -458,7 +458,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   /**
    * <p>Returns the peer identity matching the String IP address and
-   * port. An instance is created if necesary. Used only by 
+   * port. An instance is created if necesary. Used only by
    * LcapMessage (and soon by its stream analog).
    * @param idKey the ip addr and port of the peer, null for the local
    *              peer.
@@ -493,8 +493,8 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
    * <p>Rturns the local peer identity.</p>
    * @param pollVersion The poll protocol version.
    * @return The local peer identity associated with the poll version.
-   * @throws IllegalArgumentException if the pollVersion is not 
-   *                                  configured or is outside the 
+   * @throws IllegalArgumentException if the pollVersion is not
+   *                                  configured or is outside the
    *                                  legal range.
    */
   public PeerIdentity getLocalPeerIdentity(int pollVersion) {
@@ -520,7 +520,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Determines if this PeerIdentity is the same as the local 
+   * <p>Determines if this PeerIdentity is the same as the local
    * host.</p>
    * @param id The PeerIdentity.
    * @return true if is the local identity, false otherwise.
@@ -530,9 +530,9 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Determines if this PeerIdentity is the same as the local 
+   * <p>Determines if this PeerIdentity is the same as the local
    * host.</p>
-   * @param idStr The string representation of the voter's 
+   * @param idStr The string representation of the voter's
    *        PeerIdentity.
    * @return true if is the local identity, false otherwise.
    */
@@ -556,7 +556,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       lid.rememberEvent(event, msg);
     }
   }
-  
+
   /**
    * <p>Returns the max value of an Identity's reputation.</p>
    * @return The int value of max reputation.
@@ -595,7 +595,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Makes the change to the reputation of the peer "id" matching 
+   * <p>Makes the change to the reputation of the peer "id" matching
    * the event "changeKind".
    * @param id         The PeerIdentity of the peer to affect.
    * @param changeKind The type of event that is being reflected.
@@ -609,14 +609,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       return;
     }
     int reputation = lid.getReputation();
-    
+
     if (id.isLocalIdentity()) {
       log.debug(id.toString() + " ignoring reputation delta " + delta);
       return;
     }
-    
+
     delta = (int) (((float) delta) * theRandom.nextFloat());
-    
+
     if (delta > 0) {
       if (delta > max_delta) {
         delta = max_delta;
@@ -658,7 +658,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private void reloadIdentities() {
     reloadIdentities(makeIdentityListSerializer());
   }
-  
+
   /**
    * <p>Reloads the peer data from the identity database using the
    * given deserializer.</p>
@@ -687,7 +687,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Used by the PollManager to record the result of tallying a 
+   * <p>Used by the PollManager to record the result of tallying a
    * poll.</p>
    * @see #storeIdentities(ObjectSerializer)
    */
@@ -707,7 +707,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
           + PARAM_IDDB_DIR + "'.");
       return;
     }
-    
+
     synchronized (iddbFile) {
       try {
         File dir = iddbFile.getParentFile();
@@ -734,7 +734,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     serializer.setCurrentMode(getSerializationMode());
     return serializer;
   }
-  
+
   /**
    * <p>Copies the identity database file to the stream.</p>
    * @param An OutputStream instance.
@@ -765,7 +765,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private static int getSerializationMode() {
     return CXSerializer.getModeFromConfiguration();
   }
-  
+
   /**
    * <p>A Castor helper method to convert an identity map into a
    * serializable bean.</p>
@@ -800,7 +800,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
     return retVal;
   }
-  
+
   public Collection getTcpPeerIdentities() {
     Collection retVal = new ArrayList();
     for (Iterator it = thePeerIdentities.values().iterator(); it.hasNext(); ) {
@@ -812,14 +812,14 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
         log.warning("Malformed identity key: " + id);
       }
     }
-    return retVal;    
+    return retVal;
   }
-  
+
   /**
    * <p>Castor+XStream transition helper method, that wraps the
    * identity map into the object expected by serialization code.</p>
    * @param theIdentities The {@link #theIdentities} map.
-   * @return An object suitable for serialization. 
+   * @return An object suitable for serialization.
    */
   private Serializable wrap(Map theIdentities) {
     // CASTOR: This method disappears with Castor
@@ -830,7 +830,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       return (Serializable)theIdentities;
     }
   }
-  
+
   /**
    * <p>Castor+XStream transition helper method, that unwraps the
    * identity map when it returns from serialized state.</p>
@@ -889,7 +889,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Signals that we've disagreed with pid on any level poll on 
+   * <p>Signals that we've disagreed with pid on any level poll on
    * au.</p>
    * <p>Only called if we're on the winning side.</p>
    * @param pid The PeerIdentity of the disagreeing peer.
@@ -916,10 +916,10 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Peers with whom we have had any disagreement since the last 
+   * <p>Peers with whom we have had any disagreement since the last
    * toplevel agreement are placed at the end of the list.</p>
    * @param au ArchivalUnit to look up PeerIdentities for.
-   * @return List of peers from which to try to fetch repairs for the 
+   * @return List of peers from which to try to fetch repairs for the
    *         AU.
    */
   public List getCachesToRepairFrom(ArchivalUnit au) {
@@ -973,7 +973,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Return map peer -> last agree time. Used for logging and 
+   * <p>Return map peer -> last agree time. Used for logging and
    * debugging.</p>
    */
   public Map getAgreed(ArchivalUnit au) {
@@ -1019,7 +1019,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   private IdentityAgreement findPeerIdentityAgreement(Map map,
                                                       PeerIdentity pid) {
     // called in synchronized block
-    
+
     IdentityAgreement ida = (IdentityAgreement)map.get(pid);
     if (ida == null) {
       ida = new IdentityAgreement(pid);
@@ -1081,7 +1081,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
   }
 
   /**
-   * <p>Installs the contents of the stream as the identity agreement 
+   * <p>Installs the contents of the stream as the identity agreement
    * file for the AU.</p>
    * @param au An archival unit.
    * @param in An input stream to read from.
@@ -1104,7 +1104,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
     }
   }
 
-  private Map loadIdentityAgreement(Map map, ArchivalUnit au) { 
+  private Map loadIdentityAgreement(Map map, ArchivalUnit au) {
     //only called within a synchronized block, so we don't need to
     HistoryRepository hRep = getDaemon().getHistoryRepository(au);
     List list = hRep.loadIdentityAgreements();
@@ -1190,7 +1190,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
       configV3Identities();
     }
   }
-  
+
   /**
    * XXX: V3 refactor.
    */

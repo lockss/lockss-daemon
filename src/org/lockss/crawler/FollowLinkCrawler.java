@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.32 2005-10-08 02:06:32 troberts Exp $
+ * $Id: FollowLinkCrawler.java,v 1.33 2005-10-11 05:43:54 tlipkis Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
    * One can update the Max. Crawl Depth before calling doCrawl10().
    * Currently used only for "Not Follow Link" mode in OaiCrawler
    *
-   * XXX  This method should go away after serious testing of the new 
+   * XXX  This method should go away after serious testing of the new
    * implemenated getUrlsTOFollow() in OaiCrawler
    *
    * @param newMax the new max. crawl depth
@@ -213,7 +213,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 				   parsedPages, false, alwaysReparse);
 	} catch (RuntimeException e) {
 	  logger.warning("Unexpected exception in crawl", e);
-	} 
+	}
 	if  (!crawlRes) {
 	  if (crawlStatus.getCrawlError() == null) {
 	    crawlStatus.setCrawlError(Crawler.STATUS_ERROR);
@@ -398,7 +398,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 // 	//skip if it's already failed
 // 	logger.debug3("Already failed to cache "+uc+". Not retrying.");
 //       } else {
-	
+
 // 	// checking the crawl permission of the url's host
 // 	if (!checkHostPermission(uc.getUrl(),true)){
 // 	  if (crawlStatus.getCrawlError() == null) {
@@ -424,7 +424,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 // 	error = Crawler.STATUS_FETCH_ERROR;
 //     }
 //     return true;
-//   } 
+//   }
 
   private void cacheWithRetries(UrlCacher uc, int maxTries)
       throws IOException {
@@ -526,7 +526,7 @@ public abstract class FollowLinkCrawler extends CrawlerImpl {
 	  if (parsedPages.contains(normUrl)) {
 	    logger.debug3(normUrl+" already parsed");
 	  }
-	} 
+	}
       } catch (MalformedURLException e) {
 	//XXX what exactly does this log want to tell?
 	logger.warning("Normalizing", e);

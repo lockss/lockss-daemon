@@ -1,5 +1,5 @@
 /*
- * $Id: TestSpiderCrawlSpec.java,v 1.1 2004-10-20 18:41:16 dcfok Exp $
+ * $Id: TestSpiderCrawlSpec.java,v 1.2 2005-10-11 05:49:28 tlipkis Exp $
  */
 
 /*
@@ -44,7 +44,7 @@ import org.lockss.util.*;
 public class TestSpiderCrawlSpec extends LockssTestCase {
 
   private CrawlRule rule = new MockCrawlRule();
-  
+
   public TestSpiderCrawlSpec(String msg){
     super(msg);
   }

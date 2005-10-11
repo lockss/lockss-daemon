@@ -1,5 +1,5 @@
 /*
-* $Id: PollFactory.java,v 1.7 2005-10-07 23:46:50 smorabito Exp $
+* $Id: PollFactory.java,v 1.8 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -105,6 +105,6 @@ public interface PollFactory {
   public long getMinPollDuration(int pollType);
 
   public long calcDuration(PollSpec ps, PollManager pm);
-  
+
   public boolean isDuplicateMessage(LcapMessage msg, PollManager pm);
 }

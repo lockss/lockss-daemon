@@ -1,5 +1,5 @@
 /*
- * $Id: CharRing.java,v 1.8 2004-04-19 02:19:19 tlipkis Exp $
+ * $Id: CharRing.java,v 1.9 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -101,13 +101,13 @@ public class CharRing {
   /**
    * add all chars in newChars to this ring
    * @param newChars array of chars to add to this ring
-   * @throws RingFullException if the chars in newChars will exceed 
+   * @throws RingFullException if the chars in newChars will exceed
    * the ring's capacity
    */
   public void add(char newChars[]) throws RingFullException {
     add(newChars, 0, newChars.length);
   }
-  
+
   /**
    * add all chars in newChars to this ring
    * @param newChars array of chars to add to this ring
@@ -165,7 +165,7 @@ public class CharRing {
    * remove the next returnChars.length chars from the ring
    * @param returnChars array to write the removed chars from
    * @return number of chars removed from the ring
-   */ 
+   */
   public int remove(char returnChars[]) {
     return remove(returnChars, 0, returnChars.length);
   }
@@ -176,14 +176,14 @@ public class CharRing {
    * @param pos position to begin writing into returnChars
    * @param len max number of chars to remove
    * @return number of chars removed from the ring
-   */ 
+   */
   public int remove(char returnChars[], int pos, int len) {
 
     int numToReturn = len < size ? len : size;
     if (numToReturn == 0) {
       return 0;
     }
-    
+
     //number of chars to remove from end of array
     int chunk1 =
       numToReturn < (capacity - head) ? numToReturn : (capacity - head);
@@ -206,7 +206,7 @@ public class CharRing {
    * remove the next len chars from the ring into a StringBuffer.
    * @param sb StringBuffer to append to
    * @return number of chars removed from the ring
-   */ 
+   */
   public int remove(StringBuffer sb, int len) {
     int numToReturn = len < size ? len : size;
     if (numToReturn == 0) {
@@ -307,7 +307,7 @@ public class CharRing {
    * @param lastIdx last index at which to search for string
    * @param ignoreCase
    * @return index of string if found, else -1
-   */   
+   */
   public int indexOf(String str, int lastIdx, boolean ignoreCase) {
     int strlen = str.length();
     int lastPossible = size - strlen;
@@ -399,7 +399,7 @@ public class CharRing {
     StringBuffer sb = new StringBuffer(size);
     for (int ix=0; ix<size; ix++) {
       sb.append(chars[(head + ix) % capacity]);
-    } 
+    }
     return sb.toString();
   }
 

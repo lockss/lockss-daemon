@@ -1,5 +1,5 @@
 /*
- * $Id: KeyedList.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: KeyedList.java,v 1.2 2005-10-11 05:47:56 tlipkis Exp $
  */
 
 /*
@@ -39,11 +39,11 @@ import java.util.*;
  * An ArrayList wrapper that supports named entries and preserves list order
  */
 public class KeyedList {
-  
+
   private ArrayList keys;
   private ArrayList values;
 
-    
+
   /**
    * Constructor
    */
@@ -51,7 +51,7 @@ public class KeyedList {
     this.keys   = new ArrayList();
     this.values = new ArrayList();
   }
-   
+
   /**
    * Put a named parameter into the list - names and values cannot be null
    * @param name Parameter name
@@ -111,7 +111,7 @@ public class KeyedList {
    * Verify list lengths are in synch
    */
   private void verifySize() {
-      
+
     if (keys.size() != values.size()) {
       throw new IllegalStateException("Key list size ("
                                     + keys.size()
@@ -131,4 +131,4 @@ public class KeyedList {
       throw new IllegalArgumentException("Key name cannot be null");
      }
   }
-}   
+}

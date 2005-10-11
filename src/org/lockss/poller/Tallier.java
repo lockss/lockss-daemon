@@ -1,5 +1,5 @@
 /*
-* $Id: Tallier.java,v 1.8 2005-10-07 23:46:50 smorabito Exp $
+* $Id: Tallier.java,v 1.9 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -53,7 +53,7 @@ public interface Tallier {
    * @return a String representing the key
    */
   public String getPollKey();
-  
+
   /**
    * Returns true if the poll belongs to this Identity
    * @return true if this Identity owns the poll

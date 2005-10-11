@@ -1,5 +1,5 @@
 /*
- * $Id: ProxyAccessHandler.java,v 1.9 2005-07-18 08:07:12 tlipkis Exp $
+ * $Id: ProxyAccessHandler.java,v 1.10 2005-10-11 05:46:28 tlipkis Exp $
  */
 
 /*
@@ -65,8 +65,8 @@ public class ProxyAccessHandler extends IpAccessHandler {
   /**
    * Handles the incoming request
    *
-   * @param pathInContext	
-   * @param pathParams	
+   * @param pathInContext
+   * @param pathParams
    * @param request	The incoming HTTP-request
    * @param response	The outgoing HTTP-response
    */
@@ -105,7 +105,7 @@ public class ProxyAccessHandler extends IpAccessHandler {
 	  if (cu == null || !cu.hasContent()) {
 	    response.sendError(HttpResponse.__404_Not_Found);
 	    request.setHandled(true);
-	    return; 
+	    return;
 	  }
 	  ArchivalUnit au = cu.getArchivalUnit();
 	  String ip = request.getRemoteAddr();

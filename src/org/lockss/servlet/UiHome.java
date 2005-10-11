@@ -1,5 +1,5 @@
 /*
- * $Id: UiHome.java,v 1.12 2005-10-07 23:35:54 thib_gc Exp $
+ * $Id: UiHome.java,v 1.13 2005-10-11 05:46:57 tlipkis Exp $
  */
 
 /*
@@ -81,5 +81,5 @@ public class UiHome extends LockssServlet {
           }
         });
   }
-  
+
 }

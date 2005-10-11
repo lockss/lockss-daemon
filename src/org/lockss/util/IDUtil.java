@@ -1,5 +1,5 @@
 /*
- * $Id: IDUtil.java,v 1.1 2005-08-31 23:17:41 troberts Exp $
+ * $Id: IDUtil.java,v 1.2 2005-10-11 05:48:30 tlipkis Exp $
  *
 
  Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -39,7 +39,7 @@ public class IDUtil {
 	    ? addr
 	    : addr + IdentityManager.V3_ID_SEPARATOR + String.valueOf(port));
   }
-  
+
   public static String ipAddrToKey(IPAddr addr, int port) {
     return ipAddrToKey(addr.getHostAddress(), port);
   }

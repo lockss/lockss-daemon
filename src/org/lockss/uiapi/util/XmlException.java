@@ -1,5 +1,5 @@
 /*
- * $Id: XmlException.java,v 1.1 2005-03-02 20:53:28 ssmail Exp $
+ * $Id: XmlException.java,v 1.2 2005-10-11 05:47:54 tlipkis Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import org.lockss.util.XmlDomBuilder;
 
 
 public class XmlException extends XmlDomBuilder.XmlDomException {
-      
+
   /**
    * Thrown to indicate an XML processing issue
    * @param text Explainatory text

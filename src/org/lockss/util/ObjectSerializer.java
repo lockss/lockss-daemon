@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.10 2005-10-10 23:28:34 tlipkis Exp $
+ * $Id: ObjectSerializer.java,v 1.11 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -70,25 +70,25 @@ public abstract class ObjectSerializer {
    * @see Exception
    */
   public static class SerializationException extends Exception {
-    
+
     public SerializationException() { super(); }
     public SerializationException(String message) { super(message); }
     public SerializationException(String message, Throwable cause) {
       super(message, cause);
     }
     public SerializationException(Throwable cause) { super(cause); }
-    
+
   }
   /*
    * end PUBLIC STATIC INNER CLASS
    * =============================
    */
-  
+
   /**
    * <p>Saved reference to a serialization context object.</p>
    */
   private LockssApp lockssContext;
-  
+
   /**
    * <p>Builds a new ObjectSerializer instance.</p>
    * @param lockssContext A serialization context object.
@@ -96,7 +96,7 @@ public abstract class ObjectSerializer {
   public ObjectSerializer(LockssApp lockssContext) {
     this.lockssContext = lockssContext;
   }
-  
+
   /**
    * <p>Convenience method to unmarshal a Java object from an XML file
    * that accepts a File instead of a Reader.</p>
@@ -117,13 +117,13 @@ public abstract class ObjectSerializer {
       throws FileNotFoundException, IOException, SerializationException {
     FileInputStream inStream = new FileInputStream(inputFile);
     try {
-      return deserialize(inStream); 
+      return deserialize(inStream);
     }
     catch (SerializationException se) {
       throw failDeserialize(se, inputFile);
     }
     finally {
-      IOUtil.safeClose(inStream); 
+      IOUtil.safeClose(inStream);
     }
   }
 
@@ -149,7 +149,7 @@ public abstract class ObjectSerializer {
           new InputStreamReader(inputStream, Constants.DEFAULT_ENCODING));
     return deserialize(reader);
   }
-  
+
   /**
    * <p>Unmarshals a Java object from an XML file through the given
    * Reader argument.</p>
@@ -184,7 +184,7 @@ public abstract class ObjectSerializer {
   public Object deserialize(String inputFilename)
       throws IOException, SerializationException {
     File inputFile = new File(inputFilename);
-    return deserialize(inputFile);   
+    return deserialize(inputFile);
   }
 
   /**
@@ -209,7 +209,7 @@ public abstract class ObjectSerializer {
       throws FileNotFoundException, IOException, SerializationException {
     serialize(outputFile, (Object)obj);
   }
-  
+
   /**
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a File instead of a Writer.</p>
@@ -276,7 +276,7 @@ public abstract class ObjectSerializer {
       throws IOException, SerializationException {
     serialize(outputStream, (Object)obj);
   }
-  
+
   /**
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a file name instead of a Writer.</p>
@@ -320,9 +320,9 @@ public abstract class ObjectSerializer {
    */
   public void serialize(String outputFilename, Serializable obj)
       throws FileNotFoundException, IOException, SerializationException {
-    serialize(outputFilename, (Object)obj);    
+    serialize(outputFilename, (Object)obj);
   }
-  
+
   /**
    * <p>Marshals a Java object to an XML file through the given
    * Writer argument.</p>
@@ -419,7 +419,7 @@ public abstract class ObjectSerializer {
       }
     }
   }
-  
+
   void maybeDelTempFile(File file) {
     if (!Configuration.getBooleanParam(PARAM_SAVE_FAILED_TEMPFILES,
 				       DEFAULT_SAVE_FAILED_TEMPFILES)) {
@@ -452,7 +452,7 @@ public abstract class ObjectSerializer {
           new OutputStreamWriter(outputStream, Constants.DEFAULT_ENCODING));
     serialize(writer, obj);
   }
-  
+
   /**
    * <p>Convenience method to marshal a Java object to an XML file
    * that accepts a file name instead of a Writer.</p>
@@ -565,9 +565,9 @@ public abstract class ObjectSerializer {
    */
   protected static void throwIfNull(Object obj) {
     if (obj == null) {
-      logger.debug1("Attempting to marshal null"); 
-      throw new NullPointerException(); 
+      logger.debug1("Attempting to marshal null");
+      throw new NullPointerException();
     }
   }
-  
+
 }

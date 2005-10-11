@@ -1,5 +1,5 @@
 /*
- * $Id: AddAu.java,v 1.2 2005-10-06 23:42:45 troberts Exp $
+ * $Id: AddAu.java,v 1.3 2005-10-11 05:47:42 tlipkis Exp $
  */
 
 /*
@@ -58,14 +58,14 @@ import org.lockss.uiapi.util.*;
  * Implements the "get status table" command
  */
 public class AddAu extends AuActivityBase {
- 
+
   private static String NAME  = "AddAu";
   private static Logger log   = Logger.getLogger(NAME);
 
 
   public AddAu() {
     super();
-  }  
+  }
 
 
   /**
@@ -82,17 +82,17 @@ public class AddAu extends AuActivityBase {
      * If we have a class name, make sure it's valid
      */
     validClassName = false;
-    if ((className = getParameter(AP_E_CLASSNAME)) != null) { 
-      
+    if ((className = getParameter(AP_E_CLASSNAME)) != null) {
+
       if (pluginLoaded(RemoteApi.pluginKeyFromId(className))) {
         validClassName = true;
       }
     }
     /*
-     * Set up the response "root", format title and plugin lists 
+     * Set up the response "root", format title and plugin lists
      */
     infoElement = getXmlUtils().createElement(getResponseRoot(), AP_E_INFO);
-    
+
     doTitles(infoElement);
     doPlugins(infoElement);
     doClassName(infoElement, validClassName);
@@ -111,7 +111,7 @@ public class AddAu extends AuActivityBase {
   /*
    * Utility methods
    */
-  
+
   /**
    * Lookup all configurable titles
    * @param root The parent element for elements generated here
@@ -120,20 +120,20 @@ public class AddAu extends AuActivityBase {
     SortedSet   titleSet;
     Collection  titles;
     Iterator    iterator;
-    
+
 
     titles = getRemoteApi().findAllTitles();
     if (titles.isEmpty()) {
       return;
     }
-    
+
     titleSet = new TreeSet();
-    
+
     iterator = titles.iterator();
     while (iterator.hasNext()) {
       titleSet.add((String) iterator.next());
     }
-    
+
     iterator = titleSet.iterator();
     while (iterator.hasNext()) {
       XmlUtils.addText(getXmlUtils().createElement(root, AP_E_PUBLICATION),
@@ -149,7 +149,7 @@ public class AddAu extends AuActivityBase {
     SortedMap pluginMap;
     Element   pluginRoot;
     Iterator  iterator;
-	                                                                                        
+
     pluginMap = new TreeMap();
     iterator  = getRemoteApi().getRegisteredPlugins().iterator();
 
@@ -162,21 +162,21 @@ public class AddAu extends AuActivityBase {
     if (pluginMap.isEmpty()) {
       return;
     }
-	
+
     iterator = pluginMap.keySet().iterator();
-    
+
     while (iterator.hasNext()) {
       String  pluginName  = (String) iterator.next();
-      String  pluginId    = ((PluginProxy) 
+      String  pluginId    = ((PluginProxy)
                                     pluginMap.get(pluginName)).getPluginId();
       Element element;
-      
+
       /*
        * NAME is the publication name (HighWire)
        * ID   is the class name (org.lockss.plugins.highwire.HighWirePlugin)
-       */  
+       */
       pluginRoot  = getXmlUtils().createElement(root, AP_E_PLUGIN);
-      
+
       element = getXmlUtils().createElement(pluginRoot, AP_E_NAME);
       XmlUtils.addText(element, pluginName);
 
@@ -191,7 +191,7 @@ public class AddAu extends AuActivityBase {
    * @param root Root for any elements generated here
    */
   private void doClassName(Element root, boolean valid) {
-      
+
     Element element = getXmlUtils().createElement(root, AP_E_CLASSNAME);
 
     if (valid) {

@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmMsgEvent.java,v 1.3 2005-10-07 23:46:45 smorabito Exp $
+ * $Id: TestPsmMsgEvent.java,v 1.4 2005-10-11 05:50:53 tlipkis Exp $
  */
 
 /*
@@ -58,7 +58,7 @@ public class TestPsmMsgEvent extends LockssTestCase {
     assertNotSame(e, e2);
     assertEquals(null, e.getMessage());
   }
-  
+
   V3LcapMessage makeMsg(int opcode) {
     return new V3LcapMessage(opcode, "key", null, null, 0, 0, null, null);
   }

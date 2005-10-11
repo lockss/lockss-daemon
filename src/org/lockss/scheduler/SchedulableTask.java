@@ -1,5 +1,5 @@
 /*
- * $Id: SchedulableTask.java,v 1.10 2005-10-05 23:12:41 troberts Exp $
+ * $Id: SchedulableTask.java,v 1.11 2005-10-11 05:46:42 tlipkis Exp $
  */
 
 /*
@@ -211,7 +211,7 @@ public class SchedulableTask {
   }
 
   /** Comparator for ordering tasks by ending deadline */
-  private static final Comparator _latestFinishComparator = 
+  private static final Comparator _latestFinishComparator =
     new Comparator() {
       public int compare(Object o1, Object o2) {
 	SchedulableTask t1 = (SchedulableTask)o1;

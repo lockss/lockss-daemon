@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.15 2005-10-03 17:36:38 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.16 2005-10-11 05:46:57 tlipkis Exp $
  */
 
 /*
@@ -235,12 +235,12 @@ public class BatchAuConfig extends LockssServlet {
 
   void addMenuItem(Table tbl, String linkText, String action, String expl,
 		   boolean enabled) {
-    addMenuItem(tbl, linkText, expl, myServletDescr(), 
+    addMenuItem(tbl, linkText, expl, myServletDescr(),
 		ACTION_TAG + "=" + action + "", enabled);
   }
 
   void addMenuItem(Table tbl, String linkText, String action, String expl) {
-    addMenuItem(tbl, linkText, expl, myServletDescr(), 
+    addMenuItem(tbl, linkText, expl, myServletDescr(),
 		ACTION_TAG + "=" + action + "", true);
   }
 
@@ -368,7 +368,7 @@ public class BatchAuConfig extends LockssServlet {
     } else {
       expl = "Select the AUs you wish to " + verb.word +
 	". Then click " + buttonText + ".";
-    }      
+    }
     Element exp = getExplanationBlock(expl);
     page.add(exp);
     Form frm = new Form(srvURL(myServletDescr()));
@@ -414,7 +414,7 @@ public class BatchAuConfig extends LockssServlet {
       return bas.getStatusList().size() >= min;
     }
   }
-			  
+
   Element getSelectActionButton(String buttonText) {
     Table btnTbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     btnTbl.newRow();
@@ -444,10 +444,10 @@ public class BatchAuConfig extends LockssServlet {
     tbl.addHeading(verb.cap + "?", "align=right rowSpan=2");
     boolean repoFlg = verb.isAdd && repos.size() > 1;
     int reposSize = repoFlg ? repos.size() : 0;
-    Block repoFootElement = null; 
+    Block repoFootElement = null;
     if (repoFlg) {
       tbl.addHeading("Disk", "align=center colspan=" + reposSize);
-      repoFootElement = tbl.cell(); 
+      repoFootElement = tbl.cell();
     }
     tbl.addHeading("Archival Unit", "align=center rowSpan=2");
     boolean isAdd = verb.isAdd;
@@ -605,7 +605,7 @@ public class BatchAuConfig extends LockssServlet {
     }
     return res;
   }
-      
+
   private void doAddAus(boolean isReactivate) throws IOException {
     HttpSession session = req.getSession(false);
     if (session == null) {
@@ -634,7 +634,7 @@ public class BatchAuConfig extends LockssServlet {
       displayMenu();
       return;
     }
-    Configuration createConfig = ConfigManager.newConfiguration(); 
+    Configuration createConfig = ConfigManager.newConfiguration();
     Map auConfs = (Map)session.getAttribute(SESSION_KEY_AUID_MAP);
     for (int ix = 0; ix < auids.length; ix++) {
       String auid = auids[ix];

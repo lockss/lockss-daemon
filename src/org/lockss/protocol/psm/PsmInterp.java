@@ -1,5 +1,5 @@
 /*
-* $Id: PsmInterp.java,v 1.10 2005-09-07 03:06:29 smorabito Exp $
+* $Id: PsmInterp.java,v 1.11 2005-10-11 05:46:14 tlipkis Exp $
  */
 
 /*
@@ -48,7 +48,7 @@ public class PsmInterp {
   private boolean isWaiting;
   private int curEventNum;
   private PsmInterpStateBean stateBean;
-  
+
   /** Create a state machine interpreter that will run the specified state
    * machine
    * @param stateMachine the state machine
@@ -58,12 +58,12 @@ public class PsmInterp {
   public PsmInterp(PsmMachine stateMachine, Object userData) {
     this(stateMachine, userData, null);
   }
-  
-  /** 
+
+  /**
    * <p>Create a state machine interpreter that will run the specified
    * state machine, optionally restoring its state from a
    * PsmInterpStateBean.</p>
-   * 
+   *
    * @param stateMachine the state machine
    * @param userData arbitrary user object for use by state machine's actions
    * @param stateBean state bean, or null to create a new state bean and start
@@ -85,7 +85,7 @@ public class PsmInterp {
     this.machine = stateMachine;
     this.userData = userData;
   }
-  
+
   /** Return the user object associated with the running state machine */
   public Object getUserData() {
     return userData;
@@ -125,7 +125,7 @@ public class PsmInterp {
   public PsmState getCurrentState() {
     return curState;
   }
-  
+
   public PsmInterpStateBean getStateBean() {
     return stateBean;
   }
@@ -241,7 +241,7 @@ public class PsmInterp {
     }
     isWaiting = true;
   }
-  
+
   /** State timeout logic.  Refers to several members of PsmInterp. */
   private class StateTimer {
     private int timingEvent;
@@ -321,7 +321,7 @@ public class PsmInterp {
   protected void eventMonitor(PsmState curState, PsmEvent event,
 			      PsmAction action, PsmState newState) {
   }
-  
+
   /** Hook for subclasses to override if they want to store the state of the
    * interpreter.  This implementation does nothing.
    */

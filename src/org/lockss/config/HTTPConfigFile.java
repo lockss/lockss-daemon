@@ -1,5 +1,5 @@
 /*
- * $Id: HTTPConfigFile.java,v 1.5 2005-07-09 22:26:30 tlipkis Exp $
+ * $Id: HTTPConfigFile.java,v 1.6 2005-10-11 05:43:31 tlipkis Exp $
  */
 
 /*
@@ -69,7 +69,7 @@ public class HTTPConfigFile extends ConfigFile {
   private InputStream getUrlInputStream(String url)
       throws IOException, MalformedURLException {
     InputStream in = null;
-    
+
     LockssUrlConnection conn = openUrlConnection(url);
 
     if (m_config != null && m_lastModified != null) {
@@ -102,7 +102,7 @@ public class HTTPConfigFile extends ConfigFile {
       m_loadError = resp + ": " + respMsg;
       throw new IOException(m_loadError);
     }
-    
+
     return in;
   }
 
@@ -138,9 +138,9 @@ public class HTTPConfigFile extends ConfigFile {
 	log.debug2("Second pass: That didn't work, trying to " +
 		   "load original URL: " + m_fileUrl);
 	in = getUrlInputStream(m_fileUrl);
-      }	
+      }
     } else {
-      in = getUrlInputStream(m_fileUrl);	
+      in = getUrlInputStream(m_fileUrl);
     }
     return in;
   }

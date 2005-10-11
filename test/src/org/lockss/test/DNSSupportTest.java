@@ -1,5 +1,5 @@
 /*
- * $Id: DNSSupportTest.java,v 1.2 2004-02-03 21:31:40 troberts Exp $
+ * $Id: DNSSupportTest.java,v 1.3 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -98,7 +98,7 @@ public class DNSSupportTest extends LockssTestCase {
       // No action intended
     }
   }
-  
+
   static final int RANDOM_CHOICE = 0;
   static final int GET_ALL_BY_NAME = 1;
   static final int GET_BY_NAME = 2;

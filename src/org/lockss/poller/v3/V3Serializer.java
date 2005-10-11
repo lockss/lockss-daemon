@@ -1,5 +1,5 @@
 /*
- * $Id: V3Serializer.java,v 1.4 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: V3Serializer.java,v 1.5 2005-10-11 05:45:39 tlipkis Exp $
  */
 
 /*
@@ -40,7 +40,7 @@ import org.lockss.util.*;
 public abstract class V3Serializer {
 
   private static String PREFIX = Configuration.PREFIX + "poll.v3.";
-  
+
   /** Location of the V3 state directory.  Should be an absolute path. */
   public static String PARAM_V3_STATE_LOCATION = PREFIX + "stateDir";
   public static String DEFAULT_V3_STATE_LOCATION = "v3state";
@@ -64,9 +64,9 @@ public abstract class V3Serializer {
    */
   public V3Serializer(String dir) throws PollSerializerException {
     Configuration config = Configuration.getCurrentConfig();
-    String relStateDir = config.get(PARAM_V3_STATE_LOCATION, 
+    String relStateDir = config.get(PARAM_V3_STATE_LOCATION,
                                     DEFAULT_V3_STATE_LOCATION);
-    File stateDir = 
+    File stateDir =
       ConfigManager.getConfigManager().getPlatformDir(relStateDir);
     if (!stateDir.exists() && !stateDir.mkdirs()) {
       throw new PollSerializerException("Could not create state directory "

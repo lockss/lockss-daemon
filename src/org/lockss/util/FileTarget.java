@@ -1,5 +1,5 @@
 /*
- * $Id: FileTarget.java,v 1.6 2004-09-27 22:39:04 smorabito Exp $
+ * $Id: FileTarget.java,v 1.7 2005-10-11 05:48:30 tlipkis Exp $
  */
 
 /*
@@ -105,7 +105,7 @@ public class FileTarget extends PrintStreamTarget {
 	if (logfile.length() < maxSize) {
 	  maxSize = 0;
 	  emitTimestamp(log);
-	}	
+	}
       } catch (IOException e) {
 	log.error("Can't open " + filename);
         System.err.println("Can't open " + filename);

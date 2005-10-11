@@ -1,5 +1,5 @@
 /*
- * $Id: MockHistoryRepository.java,v 1.14 2005-08-11 15:30:36 troberts Exp $
+ * $Id: MockHistoryRepository.java,v 1.15 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -115,7 +115,7 @@ public class MockHistoryRepository implements HistoryRepository {
 
   public File getIdentityAgreementFile() {
     throw new UnsupportedOperationException();
-  }    
+  }
 
   public void storeIdentityAgreements(List list) {
     this.storedIdentityAgreement = list;

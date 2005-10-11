@@ -41,7 +41,7 @@ public class MemoryVoteBlocks implements VoteBlocks {
   public Iterator iterator() {
     return voteBlocks.iterator();
   }
-  
+
   public int size() {
     return voteBlocks.size();
   }

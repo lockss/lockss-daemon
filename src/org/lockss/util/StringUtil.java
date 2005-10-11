@@ -1,5 +1,5 @@
 /*
- * $Id: StringUtil.java,v 1.63 2005-09-06 19:59:15 tlipkis Exp $
+ * $Id: StringUtil.java,v 1.64 2005-10-11 05:48:29 tlipkis Exp $
  */
 
 /*
@@ -869,7 +869,7 @@ public class StringUtil {
   public static String sizeKBToString(long size) {
     double base = 1024.0;
     double x = (double)size;
-    
+
     int len = byteSuffixes.length;
     for (int ix = 0; ix < len; ix++) {
       if (x < base || ix == len-1) {
@@ -928,11 +928,11 @@ public class StringUtil {
     public FileTooLargeException() {
       super();
     }
-    
+
     public FileTooLargeException(String message) {
       super(message);
     }
-  }    
+  }
 
   /**
    * Returns the index of the nth occurrence of searchStr in sourceStr or -1
@@ -945,12 +945,12 @@ public class StringUtil {
 
     int idx = -1;
     do {
-      idx = sourceStr.indexOf(searchStr, idx+1); 
+      idx = sourceStr.indexOf(searchStr, idx+1);
     } while (--n > 0 && idx >= 0);
 
     return idx;
   }
-  
+
 
   /**
    * Scans through the reader looking for the String str; case sensitive
@@ -1002,11 +1002,11 @@ public class StringUtil {
     char[] buff = new char[buffSize];
     BoyerMoore bm = new BoyerMoore(ignoreCase);
     bm.compile(str);
-    
+
     int bcount;
 
     int numPartialMatch = 0;
-    
+
     while ((bcount = StreamUtil.readChars(reader, buff, buff.length)) > 0) {
       if (numPartialMatch > 0 && bcount > (str.length() - numPartialMatch)) {
 	//we previously matched this many chars at the end of the last buff

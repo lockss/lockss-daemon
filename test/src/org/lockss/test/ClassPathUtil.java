@@ -1,5 +1,5 @@
 /*
- * $Id: ClassPathUtil.java,v 1.1 2005-09-11 07:19:57 tlipkis Exp $
+ * $Id: ClassPathUtil.java,v 1.2 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -45,13 +45,13 @@ import org.lockss.util.*;
  */
 public class ClassPathUtil {
   static Logger log = Logger.getLogger("ClassPathUtil");
-	
+
   private static List m_classpath;
 
   /** Search for a resourse with the given name */
   public static void whichResource(String resourceName, String msg) {
     URL resUrl = findResource(resourceName);
-		
+
     if (resUrl == null) {
       System.out.println(msg + " not found.");
     } else {
@@ -136,7 +136,7 @@ public class ClassPathUtil {
    * Validate the class path and report any non-existent
    * or invalid class path entries.
    * <p>
-   * Valid class path entries include directories, <code>.zip</code> 
+   * Valid class path entries include directories, <code>.zip</code>
    * files, and <code>.jar</code> files.
    */
   public static void validate() {
@@ -147,7 +147,7 @@ public class ClassPathUtil {
       if (!f.exists()) {
 	System.out.println("Classpath element " + element +
 			   " does not exist.");
-      } else if ( (!f.isDirectory()) && 
+      } else if ( (!f.isDirectory()) &&
 		  (!StringUtil.endsWithIgnoreCase(element, ".jar")) &&
 		  (!StringUtil.endsWithIgnoreCase(element, ".zip")) ) {
 	System.out.println("Classpath element " + element +
@@ -160,7 +160,7 @@ public class ClassPathUtil {
     System.out.println("Classpath:");
     for (Iterator iter = getClasspath().iterator(); iter.hasNext(); ) {
       System.out.println((String)iter.next());
-    }	
+    }
   }
 
   public static void setClasspath(String classpath) {
@@ -177,7 +177,7 @@ public class ClassPathUtil {
     }
     return m_classpath;
   }
-		
+
   private static void usage() {
     System.out.println("java ClassPathUtil [ actions ... ]");
     System.out.println("  Actions are executed sequentially:");

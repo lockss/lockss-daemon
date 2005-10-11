@@ -1,5 +1,5 @@
 /*
- * $Id: DatagramSocketListener.java,v 1.10 2005-10-05 23:12:41 troberts Exp $
+ * $Id: DatagramSocketListener.java,v 1.11 2005-10-11 05:52:05 tlipkis Exp $
  */
 
 /*
@@ -37,7 +37,7 @@ import java.util.*;
 
 /**
  * This class is quick and dirty creation to set up a datagram server which will
- * grab the first packet that comes in and then exit.  It's used to test 
+ * grab the first packet that comes in and then exit.  It's used to test
  * org.lockss.util.SyslogTarget
  */
 
@@ -72,7 +72,7 @@ public class DatagramSocketListener implements Runnable{
    * Starts up a separate thread listening to the specified port for datagram
    * packets.  It will then sleep for an interval and check that the object
    * is actually listening.
-   * @throws DatagramSocketListenerException if the listener is not ready after 
+   * @throws DatagramSocketListenerException if the listener is not ready after
    * a certain interval.
    */
   public void beginListening()
@@ -106,7 +106,7 @@ public class DatagramSocketListener implements Runnable{
       ioe.printStackTrace();
     }
   }
-  
+
   /**
    * @return the last packet send to this listener, or null if none have been
    * @throws DatagramSocketListenerException if called before all expected
@@ -129,10 +129,10 @@ public class DatagramSocketListener implements Runnable{
 
   /**
    * @param numPackets number of packets you want the listener to expect
-   * @return a new <code>DatagramSocketListener</code> object bound to 
+   * @return a new <code>DatagramSocketListener</code> object bound to
    * an open port.
    */
-  public static DatagramSocketListener createOnOpenPort(int numPackets) 
+  public static DatagramSocketListener createOnOpenPort(int numPackets)
       throws DatagramSocketListenerException {
     boolean done = false;
     DatagramSocketListener dsl = null;
@@ -151,7 +151,7 @@ public class DatagramSocketListener implements Runnable{
   }
 
   /**
-   * @return the port that this object is bound to or will bind to when 
+   * @return the port that this object is bound to or will bind to when
    * <code>beginListening()</code> is called
    * @see #beginListening()
    */

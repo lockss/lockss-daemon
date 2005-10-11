@@ -81,8 +81,8 @@ public class ValidatePluginResultsDialog extends JDialog {
   }
 
   public ValidatePluginResultsDialog(ArchivalUnit au) {
-      this();  
-      m_au = au;  
+      this();
+      m_au = au;
   }
 
   private void jbInit() throws Exception {
@@ -127,11 +127,11 @@ public class ValidatePluginResultsDialog extends JDialog {
 
       //Test 1:  Checks that the starting url is in the Crawl Rules
       validated &= testStartingUrl();
-  
+
 
       //Additional Tests...
 
-      
+
       if(validated){
 	  output += "Validation Succeeded!\n\n\n";
 	  output_color = GREEN_TEXT;
@@ -149,15 +149,15 @@ public class ValidatePluginResultsDialog extends JDialog {
       String startingUrl = (String)m_au.getNewContentCrawlUrls().get(0);
       boolean succeeded = true;
       int output_color;
-      
+
       output += "Validating Starting Url (" + startingUrl + ")...\n";
-      
+
       //Checks if the Crawl Rules have been set
       if(m_au.getCrawlSpec().isRuleNull()){
 	  succeeded = false;
 	  output += "  Validation Error:      Crawl Rules have not been set for plugin\n";
       }
-      
+
       //Checks if the Starting Url has been set
       if(startingUrl == null || startingUrl.trim().equals("")){
 	  succeeded = false;
@@ -175,7 +175,7 @@ public class ValidatePluginResultsDialog extends JDialog {
 	  succeeded = false;
 	  output += "  Validation Error:      Starting Url is not included in Crawl Rules\n";
       }
-      
+
       if(succeeded){
 	  output += "...Succeeded";
 	  output_color = GREEN_TEXT;
@@ -191,7 +191,7 @@ public class ValidatePluginResultsDialog extends JDialog {
 
       return succeeded;
   }
-    
+
   public void outputMessage(String message, int messageType) {
       try {
 	  outputTextPane.getDocument().insertString(

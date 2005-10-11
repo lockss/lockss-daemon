@@ -1,5 +1,5 @@
 /*
- * $Id: StatusActivityBase.java,v 1.3 2005-10-08 02:07:58 troberts Exp $
+ * $Id: StatusActivityBase.java,v 1.4 2005-10-11 05:47:40 tlipkis Exp $
  */
 
 /*
@@ -54,7 +54,7 @@ import org.lockss.uiapi.util.*;
 /**
  * Fetch summary details for a LOCKSS machine
  */
-public class StatusActivityBase extends ApiActivityBase 
+public class StatusActivityBase extends ApiActivityBase
                                 implements org.lockss.uiapi.util.Constants {
   private static Logger log = Logger.getLogger("StatusActivityBase");
 
@@ -81,22 +81,22 @@ public class StatusActivityBase extends ApiActivityBase
    * @param rootElement Parent element for disk space detail
    */
   protected void renderBuildXml(Element rootElement) {
-    
+
     Element buildElement = getXmlUtils().createElement(rootElement, AP_E_BUILD);
-    Element element;  
-      
+    Element element;
+
     element = getXmlUtils().createElement(buildElement, AP_E_TIME);
     XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_TIME));
-      
+
     element = getXmlUtils().createElement(buildElement, AP_E_DATE);
     XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_DATE));
-      
+
     element = getXmlUtils().createElement(buildElement, AP_E_TIMESTAMP);
     XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_TIMESTAMP));
-      
+
     element = getXmlUtils().createElement(buildElement, AP_E_HOST);
     XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_HOST));
-      
+
     element = getXmlUtils().createElement(buildElement, AP_E_USER);
     XmlUtils.addText(element, getBuildProperty(BuildInfo.BUILD_USER_NAME));
   }
@@ -109,32 +109,32 @@ public class StatusActivityBase extends ApiActivityBase
     Configuration currentConfig;
     String        value;
     Element       element;
-    
+
     /*
      * Version
      */
     currentConfig = getCurrentConfiguration();
     value = currentConfig.get(PARAM_PLATFORM_VERSION, AP_VALUE_UNKNOWN);
-    
+
     element = getXmlUtils().createElement(rootElement, AP_E_PLATFORMVER);
     XmlUtils.addText(element, value);
   }
-    
+
   /**
    * Get daemon uptime
    * @param rootElement Parent element for disk space detail
    * @returns Formatted time since daemon start
    */
   protected void renderUptimeXml(Element rootElement) {
-    
+
     Element upElement;
     Element element;
 
     Date    start;
     long    millis;
-    
+
     long    days, hours, minutes, seconds;
-   
+
     /*
      * Set time values
      */
@@ -155,16 +155,16 @@ public class StatusActivityBase extends ApiActivityBase
      * Render as XML
      */
     upElement = getXmlUtils().createElement(rootElement, AP_E_UPTIME);
-    
+
     element = getXmlUtils().createElement(upElement, AP_E_DAYS);
     XmlUtils.addText(element, String.valueOf(days));
-    
+
     element = getXmlUtils().createElement(upElement, AP_E_HOURS);
     XmlUtils.addText(element, String.valueOf(hours));
- 
+
     element = getXmlUtils().createElement(upElement, AP_E_MINUTES);
     XmlUtils.addText(element, String.valueOf(minutes));
- 
+
     element = getXmlUtils().createElement(upElement, AP_E_SECONDS);
     XmlUtils.addText(element, String.valueOf(seconds));
   }
@@ -175,9 +175,9 @@ public class StatusActivityBase extends ApiActivityBase
    */
   protected void renderDiskXml(Element rootElement) {
     List resultList;
-    
+
     Element diskElement;
-    
+
     diskElement = getXmlUtils().createElement(rootElement, AP_E_DISKSPACE);
 
     try {
@@ -185,16 +185,16 @@ public class StatusActivityBase extends ApiActivityBase
 
     } catch (Exception exception) {
       log.error("Failed to get repository information", exception);
-      
+
       addDiskInfo(diskElement, AP_E_FREE,  AP_VALUE_UNKNOWN);
       addDiskInfo(diskElement, AP_E_INUSE, AP_VALUE_UNKNOWN);
       return;
     }
-    
+
     for (Iterator iterator = resultList.iterator(); iterator.hasNext(); ) {
       RepositoryUtils.Detail detail;
       Element element;
-      
+
       detail = (RepositoryUtils.Detail) iterator.next();
 
       addDiskInfo(diskElement, AP_E_NAME,  detail.getName());
@@ -202,7 +202,7 @@ public class StatusActivityBase extends ApiActivityBase
       addDiskInfo(diskElement, AP_E_INUSE, detail.getSpaceInUse());
     }
   }
- 
+
   /**
    * Add disk information text to a named element
    * @param root Parent element
@@ -211,11 +211,11 @@ public class StatusActivityBase extends ApiActivityBase
    */
   private void addDiskInfo(Element root, String elementName, String text) {
     Element element;
-    
+
     element = getXmlUtils().createElement(root, elementName);
     XmlUtils.addText(element, text);
   }
-  
+
   /**
    * Render a list of active AUs
    * @param rootElement Parent element
@@ -225,18 +225,18 @@ public class StatusActivityBase extends ApiActivityBase
     Element       inactive;
     RemoteApi     remoteApi;
     Collection    allAus;
- 
+
     /*
      * Establish list root elements (active, inactive)
      */
     active    = getXmlUtils().createElement(rootElement, AP_E_ACTIVE);
     inactive  = getXmlUtils().createElement(rootElement, AP_E_INACTIVE);
-   
+
     /*
      * Active AUs?
      */
     remoteApi = getRemoteApi();
-    
+
     allAus = remoteApi.getAllAus();
     if (!allAus.isEmpty()) {
       generateAuXml(allAus.iterator(), active, inactive);
@@ -254,47 +254,47 @@ public class StatusActivityBase extends ApiActivityBase
   /*
    * Utilities
    */
-  
+
   /**
    * Generate a list of Archival Units
    * @param iterator AuProxy list iterator
-   * @param activeElement 
+   * @param activeElement
    * @param inactiveElement
    */
-  private void generateAuXml(Iterator iterator, 
+  private void generateAuXml(Iterator iterator,
                              Element  activeElement, Element inactiveElement) {
-    
+
     XmlUtils  xmlUtils    = getXmlUtils();
     RemoteApi remoteApi   = getRemoteApi();
-    
+
     Element   element;
     Element   auElement;
     Element   nameElement;
 
     boolean   deleted;
-    
+
     /*
      * Attach all AUs
      */
     while (iterator.hasNext()) {
-      
+
       AuProxy       au      = (AuProxy) iterator.next();
       Configuration config  = remoteApi.getStoredAuConfiguration(au);
-      
-      deleted = config.isEmpty() || 
+
+      deleted = config.isEmpty() ||
                 config.getBoolean(PluginManager.AU_PARAM_DISABLED, false);
-    
-      auElement = xmlUtils.createElement(deleted  ? inactiveElement 
+
+      auElement = xmlUtils.createElement(deleted  ? inactiveElement
                                                   : activeElement, AP_E_AU);
 
       element = xmlUtils.createElement(auElement, AP_E_NAME);
       XmlUtils.addText(element, au.getName());
-        
+
       element = xmlUtils.createElement(auElement, AP_E_ID);
       XmlUtils.addText(element, au.getAuId());
     }
   }
-  
+
   /**
    * Fetch a named BuildInfo property
    * @param name Property name

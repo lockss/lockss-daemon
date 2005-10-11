@@ -1,5 +1,5 @@
 /*
- * $Id: SmtpOutputStream.java,v 1.2 2005-10-06 08:21:57 tlipkis Exp $
+ * $Id: SmtpOutputStream.java,v 1.3 2005-10-11 05:44:51 tlipkis Exp $
  */
 
 /*
@@ -97,7 +97,7 @@ class SmtpOutputStream extends FilterOutputStream {
 	}
       }
       prev = b;
-    }	
+    }
     if (end - seg > 0) {
       out.write(buf, seg, end - seg);
     }
