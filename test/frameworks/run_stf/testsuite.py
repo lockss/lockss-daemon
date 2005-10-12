@@ -1157,6 +1157,7 @@ class SimpleV3PollTestCase(LockssTestCase):
 
     def setUp(self):
         LockssTestCase.setUp(self)
+        baseV3Port = 8801
 
         for i in range(0, len(self.clients)):
 
@@ -1165,10 +1166,10 @@ class SimpleV3PollTestCase(LockssTestCase):
             # call.  This must be fixed before release.
 
             peerIds = []
-            for port in range(1, len(self.clients) + 1):
-                if (port == (i + 1)):
+            for port in range(0, len(self.clients)):
+                if (port == (i)):
                     continue
-                peerIds.append("127.0.0.1;880%d" % port)
+                peerIds.append("127.0.0.1;%d" % (baseV3Port + port))
 
             extraConf = {"org.lockss.auconfig.allowEditDefaultOnlyParams": "true",
                          "org.lockss.scomm.enabled": "true",
@@ -1180,7 +1181,7 @@ class SimpleV3PollTestCase(LockssTestCase):
                          "org.lockss.poll.v3.maxNominationSize": "3",
                          "org.lockss.poll.v3.minPollDuration": "5m",
                          "org.lockss.poll.v3.maxPollDuration": "6m",
-                         "org.lockss.localV3Identity": "127.0.0.1;880%d" % (i+1),
+                         "org.lockss.localV3Identity": "127.0.0.1;%d" % (baseV3Port + i),
                          "org.lockss.comm.unicast.sendToAddr": "127.0.0.1",
                          "org.lockss.id.initialV3PeerList": (",".join(peerIds))}
 

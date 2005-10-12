@@ -27,7 +27,7 @@ class Framework:
     lockss-dev.jar can be found), and a work directory in which the
     daemons will be run.  Optionally, host name and port numbers for
     each daemon can be passed in.  If not supplied, these default to
-    'localhost' and ports 8081 through 8081+n, where 'n' is the number
+    'localhost' and ports 8041 through 8041+n, where 'n' is the number
     of daemons that have been created.
 
     When the framework is created, it returns a tuple of associated
@@ -47,7 +47,7 @@ class Framework:
             self.daemonCount = int(config.get('daemonCount', 4))
         else:
             self.daemonCount = daemonCount
-        self.startPort = int(config.get('startPort', 8081))
+        self.startPort = int(config.get('startPort', 8041))
         self.username = config.get('username', 'testuser')
         self.password = config.get('password', 'testpass')
         self.logLevel = config.get('daemonLogLevel', 'debug3')
@@ -233,6 +233,8 @@ class Framework:
     def __writeLocalConfig(self, file, dir, uiPort):
         """ Write local config file for a daemon.  Daemon num is
         assumed to start at 0 and go up to n, for n-1 daemons """
+        baseUnicastPort = 9000
+        baseIcpPort = 3031
         f = open(file, 'w')
         tr = str(self.configCount + 1)
         # Kluge for proper handling of multiple daemons.  If this is
@@ -242,16 +244,16 @@ class Framework:
         else:
             proxyStart = 'no'
         ipAddr = tr + '.' + tr + '.' + tr + '.' + tr
-        unicastPort = '900%d' % self.configCount
-        icpPort = '303%d' % self.configCount
-        unicastSendToPort = '9000'
+        unicastPort = str(baseUnicastPort + self.configCount)
+        icpPort = str(baseIcpPort + self.configCount)
+        unicastSendToPort = str(baseUnicastPort)
         f.write(localConfigTemplate % {"username": self.username,
                                        "password": "SHA1:%s" % self.__encPasswd(self.password),
                                        "dir": dir, "proxyStart": proxyStart,
                                        "uiPort": uiPort, "ipAddr": ipAddr,
                                        "unicastPort": unicastPort,
                                        "unicastSendToPort": unicastSendToPort,
-                                       "icpPort": icpPort});
+                                       "icpPort": icpPort})
         f.close()
         self.configCount += 1 # no ++ in python, oops.
 
