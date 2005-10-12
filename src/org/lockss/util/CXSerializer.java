@@ -1,5 +1,5 @@
 /*
- * $Id: CXSerializer.java,v 1.12 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: CXSerializer.java,v 1.12.2.1 2005-10-12 16:52:17 thib_gc Exp $
  */
 
 /*
@@ -215,8 +215,8 @@ public class CXSerializer extends ObjectSerializer {
     // Peek at beginning of input
     char[] buffer = new char[recognizeCastor.length()];
     bufReader.mark(recognizeCastor.length() + 1);
-    if (bufReader.read(buffer, 0, buffer.length) != buffer.length) {
-      throw new IOException("Could not peek aty first "
+    if (StreamUtil.readChars(reader, buffer, buffer.length) != buffer.length) {
+      throw new SerializationException("Could not peek at first "
           + buffer.length + " bytes");
     }
     bufReader.reset();
