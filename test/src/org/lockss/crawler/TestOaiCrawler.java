@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.6 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestOaiCrawler.java,v 1.7 2005-10-13 20:42:26 troberts Exp $
  */
 
 /*
@@ -48,17 +48,17 @@ import ORG.oclc.oai.harvester2.verb.ListRecords;
 
 public class TestOaiCrawler extends LockssTestCase {
 
-     private MockArchivalUnit mau = null;
-//   private MockCachedUrlSet mcus = null;
-     private CrawlSpec spec = null;
-     private MockAuState aus = new MockAuState();
-     private MockCrawlRule crawlRule = null;
-     private String handlerUrl = "http://www.example.com/handler.html";
-     private String permissionUrl = "http://www.example.com/permission.html";
-     private List permissionList = ListUtil.list(permissionUrl);
-     private CrawlerImpl crawler = null;
+  private MockArchivalUnit mau = null;
+//private MockCachedUrlSet mcus = null;
+  private CrawlSpec spec = null;
+  private MockAuState aus = new MockAuState();
+  private MockCrawlRule crawlRule = null;
+  private String handlerUrl = "http://www.example.com/handler.html";
+  private String permissionUrl = "http://www.example.com/permission.html";
+  private List permissionList = ListUtil.list(permissionUrl);
+  private CrawlerImpl crawler = null;
 
-     SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
+  SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
 
   public void setUp() throws Exception {
     super.setUp();
@@ -69,7 +69,7 @@ public class TestOaiCrawler extends LockssTestCase {
     mau = new MockArchivalUnit();
     mau.setPlugin(new MockPlugin());
     mau.setAuId("MyMockTestAu");
-//     mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+//  mcus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
 
     crawlRule = new MockCrawlRule();
     crawlRule.addUrlToCrawl(handlerUrl);
@@ -77,15 +77,15 @@ public class TestOaiCrawler extends LockssTestCase {
     mau.addUrl(permissionUrl);
     spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, false);
     crawler = new OaiCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(1));
-
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(1));
   }
 
   public void testMocThrowsForNullAu() {
     try {
       crawler = new OaiCrawler(null, spec, new MockAuState());
       fail("Constructing an OaiCrawler with a null ArchivalUnit"
-	   +" should throw an IllegalArgumentException");
+           +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
   }
@@ -94,7 +94,7 @@ public class TestOaiCrawler extends LockssTestCase {
     try {
       crawler = new OaiCrawler(mau, null, new MockAuState());
       fail("Constructing an OaiCrawler with a null CrawlSpec"
-	   +" should throw an IllegalArgumentException");
+           +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
   }
@@ -103,7 +103,7 @@ public class TestOaiCrawler extends LockssTestCase {
     try {
       crawler = new OaiCrawler(mau, spec, null);
       fail("Constructing an OaiCrawler with a null AuState"
-	   +" should throw an IllegalArgumentException");
+           +" should throw an IllegalArgumentException");
     } catch (IllegalArgumentException iae) {
     }
   }
@@ -172,7 +172,8 @@ public class TestOaiCrawler extends LockssTestCase {
     //set the crawler
     crawler = new MyOaiCrawler(mau, spec, aus);
     ((MyOaiCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    ((MyOaiCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(1));
+    ((MyOaiCrawler)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(1));
 
     //do the crawl
     assertTrue(crawler.doCrawl());
@@ -192,18 +193,18 @@ public class TestOaiCrawler extends LockssTestCase {
       numPermissionGranted = num;
     }
 
-   /**
+    /**
      * checkPermission
      *
      * @param reader Reader
      * @return boolean
      */
     public boolean checkPermission(Reader reader, String permissionUrl) {
-        if (numPermissionGranted-- > 0) {
-          return true;
-        } else {
-          return false;
-        }
+      if (numPermissionGranted-- > 0) {
+        return true;
+      } else {
+        return false;
+      }
 
     }
   }
