@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.11 2005-10-13 20:42:26 troberts Exp $
+ * $Id: OaiCrawler.java,v 1.12 2005-10-13 22:45:13 troberts Exp $
  */
 
 /*
@@ -35,12 +35,12 @@ package org.lockss.crawler;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import org.lockss.util.*;
 import org.lockss.config.Configuration;
 import org.lockss.daemon.*;
-import org.lockss.plugin.*;
-import org.lockss.state.*;
 import org.lockss.oai.*;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.state.AuState;
+import org.lockss.util.*;
 
 public class OaiCrawler extends FollowLinkCrawler {
 
@@ -58,7 +58,7 @@ public class OaiCrawler extends FollowLinkCrawler {
   private static SimpleDateFormat iso8601DateFormatter =
     new SimpleDateFormat ("yyyy-MM-dd");
 
-  public OaiCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus){
+  public OaiCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus) {
     super(au, crawlSpec, aus);
     spec = (OaiCrawlSpec) crawlSpec;
     String oaiHandlerUrl = spec.getOaiRequestData().getOaiRequestHandlerUrl();
@@ -86,19 +86,26 @@ public class OaiCrawler extends FollowLinkCrawler {
   }
 
   /**
-   * Oai crawler can crawl in 2 mode, the follow link mode and not follow link
-   * mode. The "follow link" mode will crawl everything from the URLs we got
-   * from OAI response following links on each page within crawl spec.
-   * The "not follow link" mode will crawl just the URLs we got from OAI
-   * repsonse, it will follow the link from the content of the URLs.
+   * Once we get back a list of URLs from the OAI-PMH request, we have two
+   * options: just fetch those (as they match the crawl rules) or use those
+   * as a starting point for the rest of our crawl.  We call the latter "follow
+   * link mode".
+   * @returns false if the crawl encountered fatal errors, false otherwise
    */
   protected boolean doCrawl0(){
     if (shouldFollowLink() ) {
       logger.info("crawling in follow link mode");
     } else {
-      logger.info("crawling in not follow link mode");
+      logger.info("crawling in don't follow link mode");
     }
     return super.doCrawl0();
+  }
+  /**
+   * Here for the test code to override
+   * @return
+   */
+  protected OaiHandler getOaiHandler() {
+    return new OaiHandler();
   }
 
   /***
@@ -111,7 +118,7 @@ public class OaiCrawler extends FollowLinkCrawler {
     Set extractedUrls = new HashSet();
     OaiRequestData oaiRequestData = spec.getOaiRequestData();
 
-    OaiHandler oaiHandler = new OaiHandler();
+    OaiHandler oaiHandler = getOaiHandler();
     oaiHandler.issueRequest(oaiRequestData, getFromTime(), getUntilTime());
     oaiHandler.processResponse(maxOaiRetries);
 
