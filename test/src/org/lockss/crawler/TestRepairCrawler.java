@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.33 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestRepairCrawler.java,v 1.34 2005-10-13 22:44:44 troberts Exp $
  */
 
 /*
@@ -98,7 +98,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(url1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(100));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(100));
   }
 
   public void testMrcThrowsForNullAu() {
@@ -300,7 +301,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(100));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(100));
 
     Properties p = new Properties();
     p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "true");
@@ -462,7 +464,8 @@ public class TestRepairCrawler extends LockssTestCase {
     assertFalse("doCrawl() returned true", crawler.doCrawl());
     assertTrue("Fetch from caches occur, fetchCacheCnt = " +
 	       crawler.getFetchCacheCnt() , crawler.getFetchCacheCnt() == 2);
-    assertTrue("Fetch from publisher never occur", crawler.getFetchPubCnt() == 0);
+    assertTrue("Fetch from publisher never occur",
+               crawler.getFetchPubCnt() == 0);
   }
 
   public void testFetchFromCacheFailureNoMap() {
@@ -605,7 +608,6 @@ public class TestRepairCrawler extends LockssTestCase {
 
 
     Properties p = new Properties();
-    //   p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
     p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
@@ -629,7 +631,6 @@ public class TestRepairCrawler extends LockssTestCase {
 
 
     Properties p = new Properties();
-    //   p.setProperty(RepairCrawler.PARAM_FETCH_FROM_OTHER_CACHES_ONLY, "false");
     p.setProperty(RepairCrawler.PARAM_NUM_RETRIES_FROM_CACHES, ""+2);
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
@@ -722,8 +723,8 @@ public class TestRepairCrawler extends LockssTestCase {
     ConfigurationUtil.setCurrentConfigFromProps(p);
 
     String repairUrl = "http://example.com/blah.html";
-    MyRepairCrawler crawler = makeCrawlerWPermission(mau, spec, aus,
-                                                     ListUtil.list(repairUrl),0);
+    MyRepairCrawler crawler =
+      makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
     ((CrawlerImpl)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
@@ -788,7 +789,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(0));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(0));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
 
@@ -815,7 +817,8 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(0));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(0));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
 
@@ -838,7 +841,8 @@ public class TestRepairCrawler extends LockssTestCase {
   public void testIgnorePermissionDefault() {
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(0));
+    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+      ListUtil.list(new MockPermissionChecker(0));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
 
