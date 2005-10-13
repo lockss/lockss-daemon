@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.7 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: V3Poller.java,v 1.8 2005-10-13 22:43:49 troberts Exp $
  */
 
 /*
@@ -552,7 +552,7 @@ public class V3Poller extends BasePoll {
    *
    * @param block The hashblock being tallied.
    * @param blockIndex The index of the voter's vote block to examine.
-   * @return A tally for the block.
+   * @returns A tally for the block.
    */
   protected void tallyBlock(HashBlock block, int blockIndex) {
     tally.reset();

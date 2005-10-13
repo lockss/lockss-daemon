@@ -1,5 +1,5 @@
 /*
- * $Id: XmlDomBuilder.java,v 1.1 2004-02-20 05:27:20 eaalto Exp $
+ * $Id: XmlDomBuilder.java,v 1.2 2005-10-13 22:43:49 troberts Exp $
  */
 
 /*
@@ -96,7 +96,6 @@ public class XmlDomBuilder {
    * @param document the Document
    * @param name the root name
    * @return root Element
-   * @throws XmlDomException
    */
   public Element createRoot(Document document, String name) {
     Element element;

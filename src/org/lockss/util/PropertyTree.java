@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: PropertyTree.java,v 1.4 2005-10-13 22:43:49 troberts Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
+// $Id: PropertyTree.java,v 1.4 2005-10-13 22:43:49 troberts Exp $
 // ========================================================================
 
 package org.lockss.util;
@@ -277,7 +277,6 @@ public class PropertyTree extends Properties
 
   /* ------------------------------------------------------------ */
   /** Enumerate non wild tree node names below given node.
-   * @param wild If false, only non-wild nodes are returned.
    * @return Enumeration of tree node names.
    */
   public Enumeration getRealNodes()
@@ -288,7 +287,6 @@ public class PropertyTree extends Properties
   /* ------------------------------------------------------------ */
   /** Enumerate non wild tree node names below given node.
    * @param key Key of the node.
-   * @param wild If false, only non-wild nodes are returned.
    * @return Enumeration of tree node names.
    */
   public Enumeration getRealNodes(String key)

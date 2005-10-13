@@ -1,5 +1,5 @@
 /*
- * $Id: TestResourceManager.java,v 1.4 2005-10-11 05:49:28 tlipkis Exp $
+ * $Id: TestResourceManager.java,v 1.5 2005-10-13 22:43:49 troberts Exp $
  */
 
 /*
@@ -36,7 +36,7 @@ import org.lockss.util.*;
 import org.lockss.test.*;
 
 /**
- * <p>Test class for {@link ResourceManager).</p>
+ * <p>Test class for {@link ResourceManager}.</p>
  */
 public class TestResourceManager extends LockssTestCase {
   private ResourceManager rmgr;
