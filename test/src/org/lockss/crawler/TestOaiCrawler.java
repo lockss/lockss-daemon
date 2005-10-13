@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.7 2005-10-13 20:42:26 troberts Exp $
+ * $Id: TestOaiCrawler.java,v 1.8 2005-10-13 22:45:47 troberts Exp $
  */
 
 /*
@@ -31,20 +31,16 @@ in this Software without prior written authorization from Stanford University.
 */
 
 package org.lockss.crawler;
-import java.util.*;
-import java.io.*;
-
+import java.io.Reader;
 import java.text.SimpleDateFormat;
-import org.lockss.oai.*;
-import org.lockss.config.ConfigManager;
-import org.lockss.config.Configuration;
+import java.util.*;
+
 import org.lockss.daemon.*;
-import org.lockss.util.*;
-import org.lockss.plugin.*;
+import org.lockss.oai.OaiHandler;
+import org.lockss.plugin.ArchivalUnit;
+import org.lockss.state.AuState;
 import org.lockss.test.*;
-import org.lockss.state.*;
-import org.lockss.util.urlconn.*;
-import ORG.oclc.oai.harvester2.verb.ListRecords;
+import org.lockss.util.*;
 
 public class TestOaiCrawler extends LockssTestCase {
 
@@ -162,17 +158,24 @@ public class TestOaiCrawler extends LockssTestCase {
     assertFalse(((OaiCrawler)crawler).shouldFollowLink());
   }
 
-  public void testSimpleCrawlReturnTrue(){
+  /**
+   * Test a base case for a first crawl on an AU, ie we have no content
+   *
+   */
+  public void testSimpleCrawl() {
     //set the urls to be crawl
     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
     String url1="http://www.example.com/blah.html";
     mau.addUrl(url1, false, true);
     crawlRule.addUrlToCrawl(url1);
 
+    MockOaiHandler oaiHandler = new MockOaiHandler();
+    oaiHandler.setUpdatedUrls(SetUtil.set(url1));
+
     //set the crawler
-    crawler = new MyOaiCrawler(mau, spec, aus);
-    ((MyOaiCrawler)crawler).setUrlsToFollow(SetUtil.set(url1));
-    ((MyOaiCrawler)crawler).daemonPermissionCheckers =
+    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+    crawler.setOaiHandler(oaiHandler);
+    crawler.daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
     //do the crawl
@@ -180,9 +183,50 @@ public class TestOaiCrawler extends LockssTestCase {
     //verify the crawl result
     Set expected = SetUtil.set(url1, permissionUrl);
     assertEquals(expected, cus.getCachedUrls());
+    assertEquals(SetUtil.set(), cus.getForceCachedUrls());
   }
 
-  private class MyMockPermissionChecker implements PermissionChecker{
+  /**
+   * We have content, verify that we don't force recrawl it
+   *
+   */
+  public void testSimpleCrawlHasContent() {
+    //set the urls to be crawl
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    String url1="http://www.example.com/blah.html";
+    mau.addUrl(url1, true, true); //exists, and should be cached
+    crawlRule.addUrlToCrawl(url1);
+
+    MockOaiHandler oaiHandler = new MockOaiHandler();
+    oaiHandler.setUpdatedUrls(SetUtil.set(url1));
+
+    //set the crawler
+    MyOaiCrawler crawler = new MyOaiCrawler(mau, spec, aus);
+    crawler.setOaiHandler(oaiHandler);
+    crawler.daemonPermissionCheckers =
+      ListUtil.list(new MyMockPermissionChecker(1));
+
+    //do the crawl
+    assertTrue(crawler.doCrawl());
+    //verify the crawl result
+    Set expected = SetUtil.set(url1, permissionUrl);
+    assertEquals(expected, cus.getCachedUrls());
+    assertEquals(SetUtil.set(), cus.getForceCachedUrls());
+  }
+
+
+  /**
+   * Testing the simple accessor methods
+   *
+   */
+  public void testAccessors() {
+    assertEquals("OAI", crawler.getTypeString());
+    assertEquals(Crawler.OAI, crawler.getType());
+    assertTrue(crawler.isWholeAU());
+  }
+
+
+  private class MyMockPermissionChecker implements PermissionChecker {
     int numPermissionGranted=0;
 
     MyMockPermissionChecker(int numPermissionGranted) {
@@ -194,10 +238,8 @@ public class TestOaiCrawler extends LockssTestCase {
     }
 
     /**
-     * checkPermission
-     *
      * @param reader Reader
-     * @return boolean
+     * @return true numPermissionGranted times, then false
      */
     public boolean checkPermission(Reader reader, String permissionUrl) {
       if (numPermissionGranted-- > 0) {
@@ -209,26 +251,25 @@ public class TestOaiCrawler extends LockssTestCase {
     }
   }
 
-  private class MyOaiCrawler extends OaiCrawler{
-
-    Set updatedUrls;
+  private class MyOaiCrawler extends OaiCrawler {
+    OaiHandler oaiHandler;
 
     public MyOaiCrawler(ArchivalUnit au, CrawlSpec crawlSpec, AuState aus){
       super(au, crawlSpec, aus);
     }
 
-    protected Set getUrlsToFollow(){
-      return updatedUrls;
+    protected OaiHandler getOaiHandler() {
+      return this.oaiHandler;
     }
 
-    protected void setUrlsToFollow(Set urls){
-      updatedUrls = urls;
+    public void setOaiHandler(OaiHandler oaiHandler) {
+      this.oaiHandler = oaiHandler;
     }
 
     /** suppress these actions */
     protected void doCrawlEndActions() {
     }
-  }//end of MyOaiCrawler
+  }
 
   public static void main(String[] argv) {
     String[] testCaseList = {TestOaiCrawler.class.getName()};
