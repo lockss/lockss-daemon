@@ -1,5 +1,5 @@
 /*
- * $Id: TestRepairCrawler.java,v 1.34 2005-10-13 22:44:44 troberts Exp $
+ * $Id: TestRepairCrawler.java,v 1.35 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -59,7 +59,7 @@ public class TestRepairCrawler extends LockssTestCase {
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
   private List startUrls = ListUtil.list(startUrl);
-  private CrawlerImpl crawler = null;
+  private BaseCrawler crawler = null;
   private MockContentParser parser = new MockContentParser();
   private MockIdentityManager idm;
   private MockLockssDaemon theDaemon = getMockLockssDaemon();
@@ -98,7 +98,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     List repairUrls = ListUtil.list(url1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
   }
 
@@ -202,7 +202,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     assertTrue(crawler.doCrawl());
@@ -223,7 +223,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     crawler.doCrawl();
@@ -251,7 +251,7 @@ public class TestRepairCrawler extends LockssTestCase {
     List repairUrls = ListUtil.list(repairUrl1, repairUrl2);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     crawler.doCrawl();
@@ -301,7 +301,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     MyRepairCrawler crawler =
       new MyRepairCrawler(mau, spec, aus, ListUtil.list(repairUrl),0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     Properties p = new Properties();
@@ -659,7 +659,7 @@ public class TestRepairCrawler extends LockssTestCase {
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus,
                              ListUtil.list(repairUrl1, repairUrl2), 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     mau.addUrl(repairUrl1);
@@ -690,7 +690,7 @@ public class TestRepairCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(repairUrl);
     spec = new SpiderCrawlSpec(startUrls, permissionPages, crawlRule, 1);
     crawler = new RepairCrawler(mau, spec, aus, repairUrls, 0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     crawler.doCrawl();
@@ -710,7 +710,7 @@ public class TestRepairCrawler extends LockssTestCase {
                                                  float percentFetchFromCache) {
     MyRepairCrawler crawler =
       new MyRepairCrawler(au, spec, aus, repairUrls, percentFetchFromCache);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
     return crawler;
   }
@@ -725,7 +725,7 @@ public class TestRepairCrawler extends LockssTestCase {
     String repairUrl = "http://example.com/blah.html";
     MyRepairCrawler crawler =
       makeCrawlerWPermission(mau, spec, aus, ListUtil.list(repairUrl),0);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(100));
 
     crawler.setTimesToThrow(3);
@@ -789,7 +789,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(0));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
@@ -817,7 +817,7 @@ public class TestRepairCrawler extends LockssTestCase {
 
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(0));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);
@@ -841,7 +841,7 @@ public class TestRepairCrawler extends LockssTestCase {
   public void testIgnorePermissionDefault() {
     String repairUrl1 = "http://www.example.com/url1.html";
     String repairUrl2 = "http://www.example.com/url2.html";
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MockPermissionChecker(0));
     mau.addUrl(repairUrl1);
     mau.addUrl(repairUrl2);

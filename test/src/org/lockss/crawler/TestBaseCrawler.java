@@ -1,5 +1,5 @@
 /*
- * $Id: TestCrawlerImpl.java,v 1.34 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestBaseCrawler.java,v 1.1 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -45,19 +45,19 @@ import org.lockss.util.urlconn.*;
 import org.lockss.test.*;
 
 /**
- * This is the test class for org.lockss.crawler.CrawlerImpl
+ * This is the test class for org.lockss.crawler.BaseCrawler
  *
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-public class TestCrawlerImpl extends LockssTestCase {
-  static final String PERMISSION_STRING = CrawlerImpl.LOCKSS_PERMISSION_STRING;
+public class TestBaseCrawler extends LockssTestCase {
+  static final String PERMISSION_STRING = BaseCrawler.LOCKSS_PERMISSION_STRING;
 //   private PermissionChecker checker;
   private MockArchivalUnit mau = null;
   private List startUrls = null;
 
 //   private Crawler crawler = null;
-  private TestableCrawlerImpl crawler = null;
+  private TestableBaseCrawler crawler = null;
 
   private CrawlSpec spec = null;
 
@@ -71,7 +71,7 @@ public class TestCrawlerImpl extends LockssTestCase {
   private MockContentParser parser = new MockContentParser();
 
   private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
+    Configuration.PREFIX + "BaseCrawler.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
   private MockCachedUrlSet cus;
@@ -79,7 +79,7 @@ public class TestCrawlerImpl extends LockssTestCase {
   private String permissionPage2 = "http://example.com/permission.html";
 
   public static Class testedClasses[] = {
-    org.lockss.crawler.CrawlerImpl.class
+    org.lockss.crawler.BaseCrawler.class
   };
 
   public void setUp() throws Exception {
@@ -100,8 +100,8 @@ public class TestCrawlerImpl extends LockssTestCase {
 			       crawlRule, 1);
 
     getMockLockssDaemon().getAlertManager();
-    crawler = new TestableCrawlerImpl(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    crawler = new TestableBaseCrawler(mau, spec, aus);
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(true));
 
     mau.setParser(parser);
@@ -114,34 +114,34 @@ public class TestCrawlerImpl extends LockssTestCase {
 
   public void testConstructorNullAu() {
     try {
-      new TestableCrawlerImpl(null, spec, aus);
-      fail("Trying to create a CrawlerImpl with a null au should throw");
+      new TestableBaseCrawler(null, spec, aus);
+      fail("Trying to create a BaseCrawler with a null au should throw");
     } catch (IllegalArgumentException e) {
     }
   }
 
   public void testConstructorNullSpec() {
     try {
-      new TestableCrawlerImpl(mau, null, aus);
-      fail("Trying to create a CrawlerImpl with a null spec should throw");
+      new TestableBaseCrawler(mau, null, aus);
+      fail("Trying to create a BaseCrawler with a null spec should throw");
     } catch (IllegalArgumentException e) {
     }
   }
 
   public void testConstructorNullAuState() {
     try {
-      new TestableCrawlerImpl(mau, spec, null);
-      fail("Trying to create a CrawlerImpl with a null aus should throw");
+      new TestableBaseCrawler(mau, spec, null);
+      fail("Trying to create a BaseCrawler with a null aus should throw");
     } catch (IllegalArgumentException e) {
     }
   }
 
   public void testIsSupportedUrlProtocol() {
-    assertTrue(CrawlerImpl.isSupportedUrlProtocol("http://www.example.com"));
-    assertTrue(CrawlerImpl.isSupportedUrlProtocol("HTTP://www.example.com"));
-    assertFalse(CrawlerImpl.isSupportedUrlProtocol("ftp://www.example.com"));
-    assertFalse(CrawlerImpl.isSupportedUrlProtocol("gopher://www.example.com"));
-    assertFalse(CrawlerImpl.isSupportedUrlProtocol("https://www.example.com"));
+    assertTrue(BaseCrawler.isSupportedUrlProtocol("http://www.example.com"));
+    assertTrue(BaseCrawler.isSupportedUrlProtocol("HTTP://www.example.com"));
+    assertFalse(BaseCrawler.isSupportedUrlProtocol("ftp://www.example.com"));
+    assertFalse(BaseCrawler.isSupportedUrlProtocol("gopher://www.example.com"));
+    assertFalse(BaseCrawler.isSupportedUrlProtocol("https://www.example.com"));
   }
 
   public void testGetAu() {
@@ -149,14 +149,14 @@ public class TestCrawlerImpl extends LockssTestCase {
   }
 
   public void testDoCrawlSignalsEndOfCrawl() {
-    TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
     crawler.doCrawl();
     MockCrawlStatus status = (MockCrawlStatus)crawler.getStatus();
     assertTrue(status.crawlEndSignaled());
   }
 
   public void testDoCrawlSignalsEndOfCrawlExceptionThrown() {
-    TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
     crawler.setDoCrawlThrowException(new RuntimeException("Blah"));
     try {
       crawler.doCrawl();
@@ -173,7 +173,7 @@ public class TestCrawlerImpl extends LockssTestCase {
    */
   public void testSetWatchDog() {
     LockssWatchdog wdog = new MockLockssWatchdog();
-    TestableCrawlerImpl crawler = new TestableCrawlerImpl(mau, spec, aus);
+    TestableBaseCrawler crawler = new TestableBaseCrawler(mau, spec, aus);
     crawler.setWatchdog(wdog);
     assertSame(wdog, crawler.wdog);
   }
@@ -201,7 +201,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 
   public void testToString() {
-    assertTrue(crawler.toString().startsWith("[CrawlerImpl:"));
+    assertTrue(crawler.toString().startsWith("[BaseCrawler:"));
   }
 
   public void testAbortedCrawlDoesntStart() {
@@ -461,9 +461,9 @@ public class TestCrawlerImpl extends LockssTestCase {
 //     crawlRule.addUrlToCrawl(url3);
 
 
-//     crawler = new TestableCrawlerImpl(mau, spec, aus);
+//     crawler = new TestableBaseCrawler(mau, spec, aus);
 // //     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-//     ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(true));
+//     ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MockPermissionChecker(true));
 
 //     mau.setParser(parser);
 //     crawler.doCrawl();
@@ -576,9 +576,9 @@ public class TestCrawlerImpl extends LockssTestCase {
     }
   }
 
-  private static class TestableCrawlerImpl extends CrawlerImpl {
+  private static class TestableBaseCrawler extends BaseCrawler {
     RuntimeException crawlExceptionToThrow = null;
-    protected TestableCrawlerImpl(ArchivalUnit au,
+    protected TestableBaseCrawler(ArchivalUnit au,
 				  CrawlSpec spec, AuState aus) {
       super(au, spec, aus);
       crawlStatus = new MockCrawlStatus();
@@ -610,7 +610,7 @@ public class TestCrawlerImpl extends LockssTestCase {
 
 
   public static void main(String[] argv) {
-   String[] testCaseList = {TestCrawlerImpl.class.getName()};
+   String[] testCaseList = {TestBaseCrawler.class.getName()};
    junit.textui.TestRunner.main(testCaseList);
   }
 }

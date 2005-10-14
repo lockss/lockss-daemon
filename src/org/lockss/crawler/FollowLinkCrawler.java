@@ -1,5 +1,5 @@
 /*
- * $Id: FollowLinkCrawler.java,v 1.33 2005-10-11 05:43:54 tlipkis Exp $
+ * $Id: FollowLinkCrawler.java,v 1.34 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -47,41 +47,41 @@ import org.lockss.state.*;
  * it has the follow link mechanism that used by NewContentCrawler
  * and OaiCrawler.
  */
-public abstract class FollowLinkCrawler extends CrawlerImpl {
+public abstract class FollowLinkCrawler extends BaseCrawler {
 
   static Logger logger = Logger.getLogger("FollowLinkCrawler");
   private Set failedUrls = new HashSet();
 
   private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
+    Configuration.PREFIX + "BaseCrawler.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
   public static final String PARAM_RETRY_PAUSE =
-    Configuration.PREFIX + "CrawlerImpl.retryPause";
+    Configuration.PREFIX + "BaseCrawler.retryPause";
   public static final long DEFAULT_RETRY_PAUSE = 10*Constants.SECOND;
 
   public static final String PARAM_REPARSE_ALL =
-    Configuration.PREFIX + "CrawlerImpl.reparse_all";
+    Configuration.PREFIX + "BaseCrawler.reparse_all";
   public static final boolean DEFAULT_REPARSE_ALL = true;
 
   public static final String PARAM_PERSIST_CRAWL_LIST =
-    Configuration.PREFIX + "CrawlerImpl.persist_crawl_list";
+    Configuration.PREFIX + "BaseCrawler.persist_crawl_list";
   public static final boolean DEFAULT_PERSIST_CRAWL_LIST = false;
 
   public static final String PARAM_REFETCH_DEPTH =
     Configuration.PREFIX + "crawler.refetchDepth.au.<auid>";
 
   public static final String PARAM_MAX_CRAWL_DEPTH =
-    Configuration.PREFIX + "CrawlerImpl.maxCrawlDepth";
+    Configuration.PREFIX + "BaseCrawler.maxCrawlDepth";
   //testing max. crawl Depth of a site, subject to be changed
   public static final int DEFAULT_MAX_CRAWL_DEPTH = 1000;
 
   public static final String PARAM_CLEAR_DAMAGE_ON_FETCH =
-    Configuration.PREFIX + "CrawlerImpl.clearDamageOnFetch";
+    Configuration.PREFIX + "BaseCrawler.clearDamageOnFetch";
   public static final boolean DEFAULT_CLEAR_DAMAGE_ON_FETCH = true;
 
   public static final String PARAM_REFETCH_IF_DAMAGED =
-    Configuration.PREFIX + "CrawlerImpl.refetchIfDamaged";
+    Configuration.PREFIX + "BaseCrawler.refetchIfDamaged";
   public static final boolean DEFAULT_REFETCH_IF_DAMAGED = true;
 
   private boolean alwaysReparse = DEFAULT_REPARSE_ALL;

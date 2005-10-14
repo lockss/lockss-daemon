@@ -285,7 +285,7 @@ public class CrawlRuleTester extends Thread {
         m_extracted.add(url);
 	try {
 	  String normUrl = UrlUtil.normalizeUrl(url);
-	  if (CrawlerImpl.isSupportedUrlProtocol(normUrl) &&
+	  if (BaseCrawler.isSupportedUrlProtocol(normUrl) &&
 	      m_crawlSpec.isIncluded(normUrl)) {
 	    m_incls.add(normUrl);
 	  }

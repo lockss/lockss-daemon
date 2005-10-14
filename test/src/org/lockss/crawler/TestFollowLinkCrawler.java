@@ -1,5 +1,5 @@
 /*
- * $Id: TestFollowLinkCrawler.java,v 1.9 2005-10-11 05:49:13 tlipkis Exp $
+ * $Id: TestFollowLinkCrawler.java,v 1.10 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -53,11 +53,11 @@ public class TestFollowLinkCrawler extends LockssTestCase {
   private MockCrawlRule crawlRule = null;
   private String startUrl = "http://www.example.com/index.html";
   private List startUrls = ListUtil.list(startUrl);
-  private CrawlerImpl crawler = null;
+  private BaseCrawler crawler = null;
   private MockContentParser parser = new MockContentParser();
 
   private static final String PARAM_RETRY_TIMES =
-    Configuration.PREFIX + "CrawlerImpl.numCacheRetries";
+    Configuration.PREFIX + "BaseCrawler.numCacheRetries";
   private static final int DEFAULT_RETRY_TIMES = 3;
 
   public void setUp() throws Exception {
@@ -76,7 +76,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     crawlRule.addUrlToCrawl(startUrl);
     spec = new SpiderCrawlSpec(startUrls, startUrls, crawlRule, 1);
     crawler = new TestableFollowLinkCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
 
     mau.setParser(parser);
@@ -441,7 +441,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     //    crawler = new NewContentCrawler(mau, spec, aus);
     //     crawler = new NewContentCrawler(mau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(100));
+    ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(new MyMockPermissionChecker(100));
 
     //    mau.setParser(parser);
 
@@ -690,7 +690,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
 
     //set Crawler
     crawler = new TestableFollowLinkCrawler(mmau, spec, new MockAuState());
-    ((CrawlerImpl)crawler).daemonPermissionCheckers = ListUtil.list(
+    ((BaseCrawler)crawler).daemonPermissionCheckers = ListUtil.list(
         new MyMockPermissionChecker(passPermissionCheck));
 
     //set parser
@@ -779,7 +779,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
+    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.fromList(urls));
@@ -801,7 +801,7 @@ public class TestFollowLinkCrawler extends LockssTestCase {
     MockCachedUrlSet cus = permissionPageTestSetup(permissionList,100,
 						   urls, mau);
 
-    setProperty(CrawlerImpl.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
+    setProperty(BaseCrawler.PARAM_REFETCH_PERMISSIONS_PAGE, ""+true);
 
     ((TestableFollowLinkCrawler)crawler).setUrlsToFollow(
         SetUtil.set(url1, url2));

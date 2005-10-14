@@ -1,5 +1,5 @@
 /*
- * $Id: RepairCrawler.java,v 1.53 2005-10-11 05:43:53 tlipkis Exp $
+ * $Id: RepairCrawler.java,v 1.54 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ import org.lockss.state.*;
  * <br>
  * That will set the retry limit to 2.
  */
-public class RepairCrawler extends CrawlerImpl {
+public class RepairCrawler extends BaseCrawler {
 
   private static Logger logger = Logger.getLogger("RepairCrawler");
 

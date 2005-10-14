@@ -1,5 +1,5 @@
 /*
- * $Id: TestOaiCrawler.java,v 1.8 2005-10-13 22:45:47 troberts Exp $
+ * $Id: TestOaiCrawler.java,v 1.9 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ public class TestOaiCrawler extends LockssTestCase {
   private String handlerUrl = "http://www.example.com/handler.html";
   private String permissionUrl = "http://www.example.com/permission.html";
   private List permissionList = ListUtil.list(permissionUrl);
-  private CrawlerImpl crawler = null;
+  private BaseCrawler crawler = null;
 
   SimpleDateFormat iso8601DateFormatter = new SimpleDateFormat ("yyyy-MM-dd");
 
@@ -73,7 +73,7 @@ public class TestOaiCrawler extends LockssTestCase {
     mau.addUrl(permissionUrl);
     spec = new OaiCrawlSpec(handlerUrl, crawlRule, permissionList, false);
     crawler = new OaiCrawler(mau, spec, aus);
-    ((CrawlerImpl)crawler).daemonPermissionCheckers =
+    ((BaseCrawler)crawler).daemonPermissionCheckers =
       ListUtil.list(new MyMockPermissionChecker(1));
   }
 

@@ -1,5 +1,5 @@
 /*
- * $Id: CrawlerImpl.java,v 1.51 2005-10-13 22:44:44 troberts Exp $
+ * $Id: BaseCrawler.java,v 1.1 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -52,7 +52,7 @@ import org.lockss.util.urlconn.*;
  * @author  Thomas S. Robertson
  * @version 0.0
  */
-public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
+public abstract class BaseCrawler implements Crawler, PermissionMapSource {
   /**
    * TODO
    * 1) write state to harddrive using whatever system we come up for for the
@@ -60,7 +60,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
    * 2) check deadline and die if we run too long
    */
 
-  private static Logger logger = Logger.getLogger("CrawlerImpl");
+  private static Logger logger = Logger.getLogger("BaseCrawler");
 
   // See comments regarding connect timeouts in HttpClientUrlConnection
   public static final String PARAM_CONNECT_TIMEOUT =
@@ -88,7 +88,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
   "LOCKSS system has permission to collect, preserve, and serve this Archival Unit";
 
   public static final String PARAM_ABORT_WHILE_PERMISSION_OTHER_THAN_OK =
-    Configuration.PREFIX + "CrawlerImpl.abortWhilePermissionOtherThanOk";
+    Configuration.PREFIX + "BaseCrawler.abortWhilePermissionOtherThanOk";
   public static final boolean DEFAULT_ABORT_WHILE_PERMISSION_OTHER_THAN_OK = 
     false;
 
@@ -128,7 +128,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
 
   protected PermissionMap permissionMap = null;
 
-  protected CrawlerImpl(ArchivalUnit au, CrawlSpec spec, AuState aus) {
+  protected BaseCrawler(ArchivalUnit au, CrawlSpec spec, AuState aus) {
     if (au == null) {
       throw new IllegalArgumentException("Called with null au");
     } else if (spec == null) {
@@ -502,7 +502,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
     Iterator permissionUrls = permissionList.iterator();
     while (permissionUrls.hasNext()) {
       String permissionPage = (String)permissionUrls.next();
-      // it is the real thing that do the checking of permission, crawlPermission dwell in CrawlerImpl.java
+      // it is the real thing that do the checking of permission, crawlPermission dwell in BaseCrawler.java
       int permissionStatus = crawlPermission(permissionPage);
       // if permission status is something other than OK and the abortWhilePermissionOtherThanOk flag is on
        if (permissionStatus != PermissionRecord.PERMISSION_OK &&
@@ -594,7 +594,7 @@ public abstract class CrawlerImpl implements Crawler, PermissionMapSource {
 
   public String toString() {
     StringBuffer sb = new StringBuffer();
-    sb.append("[CrawlerImpl: ");
+    sb.append("[BaseCrawler: ");
     sb.append(au.toString());
     sb.append("]");
     return sb.toString();

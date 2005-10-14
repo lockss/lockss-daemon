@@ -1,5 +1,5 @@
 /*
- * $Id: SimulatedContentGenerator.java,v 1.19 2005-10-11 05:50:15 tlipkis Exp $
+ * $Id: SimulatedContentGenerator.java,v 1.20 2005-10-14 22:40:34 troberts Exp $
  */
 
 /*
@@ -355,7 +355,7 @@ public class SimulatedContentGenerator {
       generateFile(treeRoot, jj, 0, 0,
 		   (alterFile && (jj==getAbnormalFileNumber())));
     }
-    generateIndexFile(treeRoot, CrawlerImpl.LOCKSS_PERMISSION_STRING);
+    generateIndexFile(treeRoot, BaseCrawler.LOCKSS_PERMISSION_STRING);
     return treeRoot.toString();
   }
 
