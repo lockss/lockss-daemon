@@ -1,10 +1,10 @@
 /*
- * $Id: IpAccessControl.java,v 1.29 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.30 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -40,7 +40,6 @@ import org.mortbay.html.*;
 import org.lockss.util.*;
 import org.lockss.config.ConfigManager;
 import org.lockss.config.Configuration;
-import org.lockss.jetty.*;
 
 /** Display and update IP access control lists.
  */
@@ -74,7 +73,6 @@ public abstract class IpAccessControl extends LockssServlet {
   // Used to insert error messages into the page
   private Vector inclErrs;
   private Vector exclErrs;
-  protected String errMsg;
   protected boolean isForm;
 
   public void init(ServletConfig config) throws ServletException {
@@ -157,9 +155,9 @@ public abstract class IpAccessControl extends LockssServlet {
     page.add("<br>");
 
     // Create and layout form
-    Form form = new Form();
+    Form form = newForm();
     if (errMsg != null) { layoutIpAllowDenyError(form, errMsg); }
-    layoutIpAllowDenyTable(page, incl, excl, footIP, inclErrs,
+    layoutIpAllowDenyTable(form, incl, excl, footIP, inclErrs,
         exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
     additionalFormLayout(form);
     layoutIpAllowDenySubmit(form);

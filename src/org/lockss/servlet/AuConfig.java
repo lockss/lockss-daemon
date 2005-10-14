@@ -1,5 +1,5 @@
 /*
- * $Id: AuConfig.java,v 1.45 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: AuConfig.java,v 1.46 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -75,10 +75,6 @@ public class AuConfig extends LockssServlet {
   private PluginManager pluginMgr;
   private ConfigManager configMgr;
   private RemoteApi remoteApi;
-
-  // Used to insert messages into the page
-  private String errMsg;
-  private String statusMsg;
 
   String action;			// action request by form
   PluginProxy plugin;			// current plugin
@@ -181,7 +177,7 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
     Collection allAUs = remoteApi.getAllAus();
     addJavaScript(page);
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page, "Add a new Archival Unit" +
 	(allAUs.isEmpty() ? "." : ", or edit an existing one."));
 
@@ -241,7 +237,7 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
     fetchAuConfig(au);
 
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page,
         "Editing configuration of: " + encodedAuName(au));
 
@@ -259,7 +255,7 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
     fetchAuConfig(au);
 
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page,
         "Restoring configuration of: " + encodedAuName(au));
 
@@ -282,7 +278,7 @@ public class AuConfig extends LockssServlet {
       displayAuSummary();
       return;
     }
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page,
         "Reactivating: " + encodedAuName(au));
 
@@ -342,7 +338,7 @@ public class AuConfig extends LockssServlet {
       }
     }
     Page page = newPage();
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
 
     StringBuffer exp = new StringBuffer();
     exp.append("Creating new Archival Unit");
@@ -373,7 +369,7 @@ public class AuConfig extends LockssServlet {
   private void displayAddAu() throws IOException {
     Page page = newPage();
     addJavaScript(page);
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     String addExp = "Adding new Archival Unit" +
       "<br>First, select a title or a publisher plugin." +
       addFootnote("Configuring an AU requires choosing a publisher-dependent"
@@ -772,7 +768,7 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
     fetchAuConfig(au);
 
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page, "Are you sure you want to delete" +
 	addFootnote(deleteFoot) + ": " + encodedAuName(au));
 
@@ -814,7 +810,7 @@ public class AuConfig extends LockssServlet {
     Page page = newPage();
     fetchAuConfig(au);
 
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page, "Are you sure you want to deactivate" +
         addFootnote(deactivateFoot) + ": " + encodedAuName(au));
 
@@ -902,22 +898,6 @@ public class AuConfig extends LockssServlet {
       ? StringUtil.isNullString(oldVal)
       : formVal.equals(oldVal);
     }
-
-  /** Create message and error message block */
-  private Composite getErrBlock() {
-    Composite comp = new Composite();
-    if (errMsg != null) {
-      comp.add("<center><font color=red size=+1>");
-      comp.add(errMsg);
-      comp.add("</font></center><br>");
-    }
-    if (statusMsg != null) {
-      comp.add("<center><font size=+1>");
-      comp.add(statusMsg);
-      comp.add("</font></center><br>");
-    }
-    return comp;
-  }
 
   /** Add auid to form in a hidden field */
   private void addAuId(Composite comp, AuProxy au) {

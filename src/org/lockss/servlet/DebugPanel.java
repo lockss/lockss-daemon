@@ -1,5 +1,5 @@
 /*
- * $Id: DebugPanel.java,v 1.6 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: DebugPanel.java,v 1.7 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -75,9 +75,6 @@ public class DebugPanel extends LockssServlet {
   String text;
   ArchivalUnit au;
   boolean showResult;
-  private String errMsg;
-  private String statusMsg;
-
   protected void resetLocals() {
     resetVars();
     super.resetLocals();
@@ -116,7 +113,7 @@ public class DebugPanel extends LockssServlet {
 
   private void displayPage() throws IOException {
     Page page = newPage();
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page, "Debug Actions");
     page.add(makeForm());
     page.add("<br>");
@@ -133,22 +130,6 @@ public class DebugPanel extends LockssServlet {
     setTabOrder(submit);
     frm.add("<br><center>"+submit+"</center>");
     comp.add(frm);
-    return comp;
-  }
-
-  /** Create message and error message block */
-  private Composite getErrBlock() {
-    Composite comp = new Composite();
-    if (errMsg != null) {
-      comp.add("<center><font color=red size=+1>");
-      comp.add(errMsg);
-      comp.add("</font></center><br>");
-    }
-    if (statusMsg != null) {
-      comp.add("<center><font size=+1>");
-      comp.add(statusMsg);
-      comp.add("</font></center><br>");
-    }
     return comp;
   }
 

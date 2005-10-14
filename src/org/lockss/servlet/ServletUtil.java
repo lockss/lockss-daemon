@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.12 2005-10-14 17:29:27 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.13 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,18 @@ import org.mortbay.html.*;
 
 public class ServletUtil {
 
+  private static final String ERRORBLOCK_STATUS_AFTER =
+    "<center><font size=\"+1\">";
+
+  private static final String ERRORBLOCK_ERROR_AFTER =
+    "</font></center><br>";
+
+  private static final String ERRORBLOCK_ERROR_BEFORE =
+    "<center><font color=\"red\" size=\"+1\">";
+
+  private static final String ERRORBLOCK_STATUS_BEFORE =
+    "<center><font color=\"red\" size=\"+1\">";
+
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
     new SimpleDateFormat("HH:mm:ss MM/dd/yy");
@@ -69,10 +81,10 @@ public class ServletUtil {
   private static final int ALLOWDENY_COLUMNS = 30;
 
   private static final String ALLOWDENY_ERROR_AFTER =
-    "</font></center><br>";
+    ERRORBLOCK_ERROR_AFTER;
 
   private static final String ALLOWDENY_ERROR_BEFORE =
-    "<center><font color=\"red\" size=\"+1\">";
+    ERRORBLOCK_ERROR_BEFORE;
 
   private static final int ALLOWDENY_LINES = 15;
 
@@ -193,6 +205,23 @@ public class ServletUtil {
         table.add(StringUtil.separatedString(usablePorts, ", "));
       }
     }
+  }
+
+  public static void layoutErrorBlock(Composite composite,
+                                      String errMsg,
+                                      String statusMsg) {
+    Composite block = new Composite();
+    if (errMsg != null) {
+      block.add(ERRORBLOCK_ERROR_BEFORE);
+      block.add(errMsg);
+      block.add(ERRORBLOCK_ERROR_AFTER);
+    }
+    if (statusMsg != null) {
+      block.add(ERRORBLOCK_STATUS_BEFORE);
+      block.add(statusMsg);
+      block.add(ERRORBLOCK_STATUS_AFTER);
+    }
+    composite.add(block);
   }
 
   public static void layoutExplanationBlock(Composite composite,

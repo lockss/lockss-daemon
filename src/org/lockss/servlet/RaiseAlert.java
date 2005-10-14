@@ -1,5 +1,5 @@
 /*
- * $Id: RaiseAlert.java,v 1.9 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: RaiseAlert.java,v 1.10 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -75,9 +75,6 @@ public class RaiseAlert extends LockssServlet {
   String text;
   ArchivalUnit au;
   boolean showResult;
-  private String errMsg;
-  private String statusMsg;
-
   protected void resetLocals() {
     resetVars();
     super.resetLocals();
@@ -133,7 +130,7 @@ public class RaiseAlert extends LockssServlet {
 
   private void displayPage() throws IOException {
     Page page = newPage();
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     layoutExplanationBlock(page, "Raise an Alert");
     page.add(makeForm());
     page.add("<br>");
@@ -218,22 +215,6 @@ public class RaiseAlert extends LockssServlet {
     in.setSize(size);
     setTabOrder(in);
     tbl.add(in);
-  }
-
-  /** Create message and error message block */
-  private Composite getErrBlock() {
-    Composite comp = new Composite();
-    if (errMsg != null) {
-      comp.add("<center><font color=red size=+1>");
-      comp.add(errMsg);
-      comp.add("</font></center><br>");
-    }
-    if (statusMsg != null) {
-      comp.add("<center><font size=+1>");
-      comp.add(statusMsg);
-      comp.add("</font></center><br>");
-    }
-    return comp;
   }
 
   Alert findProtoAlert(String name) {

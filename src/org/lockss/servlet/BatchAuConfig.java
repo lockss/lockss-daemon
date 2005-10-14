@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.17 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: BatchAuConfig.java,v 1.18 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -113,10 +113,6 @@ public class BatchAuConfig extends LockssServlet {
   private ConfigManager configMgr;
   private RemoteApi remoteApi;
 
-  // Used to insert messages into the page
-  private String errMsg;
-  private String statusMsg;
-
   String action;			// action request by form
   Verb verb;
 
@@ -189,7 +185,7 @@ public class BatchAuConfig extends LockssServlet {
   /** Display top lebel batch config choices */
   private void displayMenu() throws IOException {
     Page page = newPage();
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     int numActive = remoteApi.getAllAus().size();
     int numInactive = remoteApi.getInactiveAus().size();
 
@@ -249,7 +245,7 @@ public class BatchAuConfig extends LockssServlet {
     Collection sets = pluginMgr.getTitleSets();
     Page page = newPage();
     addJavaScript(page);
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     Block topSelButtonRow = null;
     if (sets.size() >= 10) {
@@ -355,7 +351,7 @@ public class BatchAuConfig extends LockssServlet {
     boolean repoFlg = verb.isAdd && repos.size() > 1;
     Page page = newPage();
     addJavaScript(page);
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     String buttonText = verb.cap + " Selected AUs";
     Object expl;
     if (repoFlg) {
@@ -425,7 +421,7 @@ public class BatchAuConfig extends LockssServlet {
       throws IOException {
     Page page = newPage();
     addJavaScript(page);
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     page.add(getNonOperableAuTable(bas,
 				   "No AUs in set can be " + verb.past));
     endPage(page);
@@ -756,7 +752,7 @@ public class BatchAuConfig extends LockssServlet {
   private void displayRestore() throws IOException {
     Page page = newPage();
     addJavaScript(page);
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     frm.attribute("enctype", "multipart/form-data");
@@ -801,7 +797,7 @@ public class BatchAuConfig extends LockssServlet {
   private void displayBatchAuStatus(RemoteApi.BatchAuStatus status)
       throws IOException {
     Page page = newPage();
-    page.add(getErrBlock());
+    layoutErrorBlock(page);
     java.util.List statusList = status.getStatusList();
     int okCnt = status.getOkCnt();
     int errCnt = statusList.size() - okCnt;
@@ -828,22 +824,6 @@ public class BatchAuConfig extends LockssServlet {
     }
     page.add(tbl);
     endPage(page);
-  }
-
-  /** Create message and error message block */
-  private Composite getErrBlock() {
-    Composite comp = new Composite();
-    if (errMsg != null) {
-      comp.add("<center><font color=red size=+1>");
-      comp.add(errMsg);
-      comp.add("</font></center><br>");
-    }
-    if (statusMsg != null) {
-      comp.add("<center><font size=+1>");
-      comp.add(statusMsg);
-      comp.add("</font></center><br>");
-    }
-    return comp;
   }
 
   /** Common and page adds Back link, footer */

@@ -1,5 +1,5 @@
 /*
- * $Id: DaemonStatus.java,v 1.57 2005-10-11 05:46:57 tlipkis Exp $
+ * $Id: DaemonStatus.java,v 1.58 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -289,15 +289,6 @@ public class DaemonStatus extends LockssServlet {
     return rowList;
   }
 
-  /** Create message and error message block */
-  private Composite getErrBlock(String errMsg) {
-    Composite comp = new Composite();
-    comp.add("<center><font size=+1>");
-    comp.add(errMsg);
-    comp.add("</font></center><br>");
-    return comp;
-  }
-
   // Build the table, adding elements to page
   private Page doHtmlStatusTable0() throws IOException {
     Page page;
@@ -306,11 +297,13 @@ public class DaemonStatus extends LockssServlet {
       statTable = makeTable();
     } catch (StatusService.NoSuchTableException e) {
       page = newTablePage();
-      page.add(getErrBlock("No such table: " + e.getMessage()));
+      errMsg = "No such table: " + e.getMessage();
+      layoutErrorBlock(page);
       return page;
     } catch (Exception e) {
       page = newTablePage();
-      page.add(getErrBlock("Error getting table: " + e.toString()));
+      errMsg = "Error getting table: " + e.toString();
+      layoutErrorBlock(page);
       if (isDebugUser()) {
 	page.add("<br><pre>    ");
 	page.add(StringUtil.trimStackTrace(e.toString(),

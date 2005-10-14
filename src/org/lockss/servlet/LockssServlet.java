@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.72 2005-10-14 16:51:31 thib_gc Exp $
+ * $Id: LockssServlet.java,v 1.73 2005-10-14 21:24:13 thib_gc Exp $
  */
 
 /*
@@ -674,6 +674,10 @@ public abstract class LockssServlet extends HttpServlet
 
   private boolean isFramed = false;
 
+  protected String errMsg;
+
+  protected String statusMsg;
+
   protected boolean isFramed() {
     return isFramed;
   }
@@ -999,6 +1003,12 @@ public abstract class LockssServlet extends HttpServlet
   /** Convenience method */
   protected String encodeAttr(String s) {
     return HtmlUtil.encode(s, HtmlUtil.ENCODE_ATTR);
+  }
+
+  /** Create message and error message block 
+   * @param composite TODO*/
+  protected void layoutErrorBlock(Composite composite) {
+    ServletUtil.layoutErrorBlock(composite, errMsg, statusMsg);
   }
 
   /** Exception thrown if multipart form data is longer than the
