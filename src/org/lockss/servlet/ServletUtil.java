@@ -1,5 +1,5 @@
 /*
- * $Id: ServletUtil.java,v 1.10 2005-10-10 17:09:14 thib_gc Exp $
+ * $Id: ServletUtil.java,v 1.11 2005-10-14 16:51:31 thib_gc Exp $
  */
 
 /*
@@ -45,6 +45,12 @@ import org.mortbay.html.*;
 
 public class ServletUtil {
 
+  private static final String EXPLANATION_CELL_ATTRIBUTES = "align=\"center\"";
+
+  private static final String EXPLANATION_ATTRIBUTES = "width=\"85%\"";
+
+  private static final int EXPLANATION_BORDER = 0;
+
   /** Format to display date/time in headers */
   public static final DateFormat headerDf =
     new SimpleDateFormat("HH:mm:ss MM/dd/yy");
@@ -64,7 +70,7 @@ public class ServletUtil {
   private static final int ALLOWDENY_BORDER = 1;
 
   private static final String ALLOWDENY_CELL_ATTRIBUTES =
-    "align=\"center\"";
+    EXPLANATION_CELL_ATTRIBUTES;
 
   private static final int ALLOWDENY_COLUMNS = 30;
 
@@ -85,7 +91,8 @@ public class ServletUtil {
   private static final String ALLOWDENYERRORS_AFTER =
     "</font><br>";
 
-  private static final String ALLOWDENYERRORS_BEFORE = "<font color=\"red\">";
+  private static final String ALLOWDENYERRORS_BEFORE =
+    "<font color=\"red\">";
 
   private static final String FOOTER_ATTRIBUTES =
     "cellspacing=\"0\" cellpadding=\"0\" align=\"center\"";
@@ -186,6 +193,15 @@ public class ServletUtil {
     }
   }
 
+  public static void layoutExplanationBlock(Composite composite,
+                                            String text) {
+    Table exp = new Table(EXPLANATION_BORDER, EXPLANATION_ATTRIBUTES);
+    exp.center();
+    exp.newCell(EXPLANATION_CELL_ATTRIBUTES);
+    exp.add(text);
+    composite.add(exp);
+  }
+
   // Common page footer
   public static void layoutFooter(Page page,
                                   Iterator notesIterator,
@@ -252,32 +268,31 @@ public class ServletUtil {
     page.add(comp);
   }
 
-  public static void layoutIpAllowDeny(LockssServlet servlet,
-                                       Page page,
-                                       Vector allow,
-                                       Vector deny,
-                                       String ipFootnote,
-                                       String errMsg,
-                                       Vector allowErrs,
-                                       Vector denyErrs,
-                                       String allowName,
-                                       String denyName,
-                                       Composite additional) {
-    String allowStr = null;
-    String denyStr = null;
+  public static void layoutIpAllowDenyError(Composite composite,
+                                            String errMsg) {
+    Composite errcmp = new Composite();
+    errcmp.add(ALLOWDENY_ERROR_BEFORE);
+    errcmp.add(errMsg);
+    errcmp.add(ALLOWDENY_ERROR_AFTER);
+    composite.add(errcmp);
+  }
 
-    Composite comp = new Composite();
-    Form form = new Form(servlet.srvURL(servlet.myServletDescr()));
-    form.method("POST");
+  public static void layoutIpAllowDenySubmit(LockssServlet servlet,
+                                             Composite composite) {
+    Input submit = new Input(Input.Submit, "action", "Update");
+    servlet.setTabOrder(submit);
+    composite.add("<br><center>" + submit + "</center>");
+  }
 
-    if (errMsg != null) {
-      Composite errcmp = new Composite();
-      errcmp.add(ALLOWDENY_ERROR_BEFORE);
-      errcmp.add(errMsg);
-      errcmp.add(ALLOWDENY_ERROR_AFTER);
-      form.add(errcmp);
-    }
-
+  public static void layoutIpAllowDenyTable(LockssServlet servlet,
+                                            Composite composite,
+                                            Vector allow,
+                                            Vector deny,
+                                            String ipFootnote,
+                                            Vector allowErrs,
+                                            Vector denyErrs,
+                                            String allowName,
+                                            String denyName) {
     Table table = new Table(ALLOWDENY_BORDER, ALLOWDENY_TABLE_ATTRIBUTES);
 
     table.newRow(ALLOWDENY_ROW_ATTRIBUTES);
@@ -300,8 +315,8 @@ public class ServletUtil {
       layoutIpAllowDenyErrors(table, denyErrs);
     }
 
-    allowStr = StringUtil.terminatedSeparatedString(allow, "\n", "\n");
-    denyStr = StringUtil.terminatedSeparatedString(deny, "\n", "\n");
+    String allowStr = StringUtil.terminatedSeparatedString(allow, "\n", "\n");
+    String denyStr = StringUtil.terminatedSeparatedString(deny, "\n", "\n");
 
     TextArea incArea = new MyTextArea(allowName);
     incArea.setSize(ALLOWDENY_COLUMNS, ALLOWDENY_LINES);
@@ -318,18 +333,7 @@ public class ServletUtil {
     table.newCell(ALLOWDENY_CELL_ATTRIBUTES);
     servlet.setTabOrder(excArea);
     table.add(excArea);
-    form.add(table);
-
-    if (additional != null) {
-      form.add(additional);
-    }
-
-    Input submit = new Input(Input.Submit, "action", "Update");
-    servlet.setTabOrder(submit);
-
-    form.add("<br><center>" + submit + "</center>");
-    comp.add(form);
-    page.add(comp);
+    composite.add(table);
   }
 
   public static void layoutMenu(LockssServlet servlet,
@@ -349,6 +353,13 @@ public class ServletUtil {
     page.add(table);
   }
 
+  public static void layoutUpdateButton(LockssServlet servlet,
+                                        Form form) {
+    Input submit = new Input(Input.Submit, "action", "Update");
+    servlet.setTabOrder(submit);
+    form.add("<br><center>" + submit + "</center>");
+  }
+
   public static Image makeImage(String file,
                                 int width,
                                 int height,
@@ -366,6 +377,12 @@ public class ServletUtil {
     img.alt(tooltip);			// some browsers (IE) use alt tag
     img.attribute("title", tooltip);	// some (Mozilla) use title tag
     return img;
+  }
+
+  public static Form newForm(LockssServlet servlet) {
+    Form form = new Form(servlet.srvURL(servlet.myServletDescr()));
+    form.method("POST");
+    return form;
   }
 
   public static Page newPage(String pageTitle,
@@ -391,22 +408,22 @@ public class ServletUtil {
     comp.add("</a>");
   }
 
-  private static void layoutIpAllowDenyErrors(Table table,
+  private static void layoutIpAllowDenyErrors(Composite composite,
                                               Vector errs) {
     int size;
     if (errs != null && (size = errs.size()) > 0) {
-      table.add(ALLOWDENYERRORS_BEFORE);
-      table.add(Integer.toString(size));
-      table.add(size == 1 ? " entry has" : " entries have");
-      table.add(" errors:");
-      table.add(ALLOWDENYERRORS_AFTER);
+      composite.add(ALLOWDENYERRORS_BEFORE);
+      composite.add(Integer.toString(size));
+      composite.add(size == 1 ? " entry has" : " entries have");
+      composite.add(" errors:");
+      composite.add(ALLOWDENYERRORS_AFTER);
       for (Iterator iter = errs.iterator() ; iter.hasNext() ; ) {
-        table.add((String)iter.next());
-        table.add("<br>");
+        composite.add((String)iter.next());
+        composite.add("<br>");
       }
     }
     else {
-      table.add("&nbsp");
+      composite.add("&nbsp");
     }
   }
 

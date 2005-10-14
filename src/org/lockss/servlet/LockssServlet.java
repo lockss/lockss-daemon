@@ -1,5 +1,5 @@
 /*
- * $Id: LockssServlet.java,v 1.71 2005-10-11 05:46:57 tlipkis Exp $
+ * $Id: LockssServlet.java,v 1.72 2005-10-14 16:51:31 thib_gc Exp $
  */
 
 /*
@@ -616,12 +616,8 @@ public abstract class LockssServlet extends HttpServlet
     return d.isInNav() && (!d.isPerClient() || isPerClient());
   }
 
-  protected Table getExplanationBlock(Object text) {
-    Table exp = new Table(0, "width=\"85%\"");
-    exp.center();
-    exp.newCell("align=center");
-    exp.add(text);
-    return exp;
+  protected void layoutExplanationBlock(Composite composite, String text) {
+    ServletUtil.layoutExplanationBlock(composite, text);
   }
 
   protected String getRequestKey() {
@@ -630,6 +626,10 @@ public abstract class LockssServlet extends HttpServlet
       return key.substring(1);
     }
     return key;
+  }
+
+  protected Form newForm() {
+    return ServletUtil.newForm(this);
   }
 
   /** Common page setup. */
@@ -662,6 +662,9 @@ public abstract class LockssServlet extends HttpServlet
   }
 
   protected Page addBarePageHeading(Page page) {
+// FIXME: Move the following line elsewhere
+// It causes the doctype stsatement to appear in the middle,
+// after the <body> tag.
     page.add("<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">");
     page.addHeader("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\">");
     page.addHeader("<meta http-equiv=\"content-type\" content=\"text/html;charset=ISO-8859-1\">");
@@ -921,16 +924,9 @@ public abstract class LockssServlet extends HttpServlet
       String enableDescription, String enableFootnote,
       String filterFootnote, String portFieldName, String defaultPort,
       List usablePorts) {
-    ServletUtil.layoutEnablePortRow(this,
-                                    table,
-                                    enableFieldName,
-                                    defaultEnable,
-                                    enableDescription,
-                                    enableFootnote,
-                                    filterFootnote,
-                                    portFieldName,
-                                    defaultPort,
-                                    usablePorts);
+    ServletUtil.layoutEnablePortRow(this, table, enableFieldName,
+        defaultEnable, enableDescription, enableFootnote, filterFootnote,
+        portFieldName, defaultPort, usablePorts);
   }
 
   protected void layoutFooter(Page page) {
@@ -942,12 +938,20 @@ public abstract class LockssServlet extends HttpServlet
     }
   }
 
-  protected void layoutIpAllowDeny(Page page, Vector allow,
-      Vector deny, String ipFootnote, String errMsg, Vector allowErrs,
-      Vector denyErrs, String allowName, String denyName,
-      Composite additional) {
-    ServletUtil.layoutIpAllowDeny(this, page, allow, deny, ipFootnote,
-        errMsg, allowErrs, denyErrs, allowName, denyName, additional);
+  protected void layoutIpAllowDenyError(Composite composite,
+                                        String errMsg) {
+    ServletUtil.layoutIpAllowDenyError(composite, errMsg);
+  }
+
+  protected void layoutIpAllowDenySubmit(Composite composite) {
+    ServletUtil.layoutIpAllowDenySubmit(this, composite);
+  }
+
+  protected void layoutIpAllowDenyTable(Composite composite,
+      Vector allow, Vector deny, String ipFootnote, Vector allowErrs,
+      Vector denyErrs, String allowName, String denyName) {
+    ServletUtil.layoutIpAllowDenyTable(this, composite, allow,
+        deny, ipFootnote, allowErrs, denyErrs, allowName, denyName);
   }
 
   protected void layoutMenu(Page page, Iterator descrIterator) {

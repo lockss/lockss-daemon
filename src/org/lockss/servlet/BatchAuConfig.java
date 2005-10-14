@@ -1,5 +1,5 @@
 /*
- * $Id: BatchAuConfig.java,v 1.16 2005-10-11 05:46:57 tlipkis Exp $
+ * $Id: BatchAuConfig.java,v 1.17 2005-10-14 16:51:31 thib_gc Exp $
  */
 
 /*
@@ -295,9 +295,8 @@ public class BatchAuConfig extends LockssServlet {
 	// more than 10 actual rows, so remove the button.
 	topSelButtonRow.reset();
       }
-      page.add(getExplanationBlock("Select one or more collections of " +
-				   "titles to " + verb.word +
-				   ", then click Select Titles."));
+      layoutExplanationBlock(page, "Select one or more collections of " +
+          "titles to " + verb.word + ", then click Select Titles.");
       tbl.newRow();
       tbl.newCell("align=center colspan=2");
       tbl.add(submitButton("Select Titles", ACTION_SELECT_AUS));
@@ -308,8 +307,8 @@ public class BatchAuConfig extends LockssServlet {
       frm.add(tbl);
       page.add(frm);
     } else {
-      page.add(getExplanationBlock("All titles in all predefined collections" +
-				   " of titles already exist on this cache."));
+      layoutExplanationBlock(page, "All titles in all predefined collections"
+          + " of titles already exist on this cache.");
     }
     endPage(page);
   }
@@ -369,8 +368,7 @@ public class BatchAuConfig extends LockssServlet {
       expl = "Select the AUs you wish to " + verb.word +
 	". Then click " + buttonText + ".";
     }
-    Element exp = getExplanationBlock(expl);
-    page.add(exp);
+    layoutExplanationBlock(page, expl.toString());
     Form frm = new Form(srvURL(myServletDescr()));
     frm.method("POST");
     frm.add(new Input(Input.Hidden, ACTION_TAG));
@@ -807,8 +805,8 @@ public class BatchAuConfig extends LockssServlet {
     java.util.List statusList = status.getStatusList();
     int okCnt = status.getOkCnt();
     int errCnt = statusList.size() - okCnt;
-    page.add(getExplanationBlock(okCnt + " AUs " + verb.past + ", " +
-				 errCnt + " skipped"));
+    layoutExplanationBlock(page, okCnt + " AUs " + verb.past +
+        ", " + errCnt + " skipped");
     Table tbl = new Table(0, "align=center cellspacing=4 cellpadding=0");
     tbl.addHeading("Status");
     tbl.addHeading("Archival Unit");

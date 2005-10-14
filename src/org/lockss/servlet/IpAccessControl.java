@@ -1,5 +1,5 @@
 /*
- * $Id: IpAccessControl.java,v 1.28 2005-10-07 23:35:54 thib_gc Exp $
+ * $Id: IpAccessControl.java,v 1.29 2005-10-14 16:51:31 thib_gc Exp $
  */
 
 /*
@@ -151,17 +151,27 @@ public abstract class IpAccessControl extends LockssServlet {
    */
   private void displayPage(Vector incl, Vector excl)
       throws IOException {
+    // Create and start laying out page
     Page page = newPage();
-    page.add(getExplanationBlock(getExplanation()));
+    layoutExplanationBlock(page, getExplanation());
     page.add("<br>");
-    layoutIpAllowDeny(page, incl, excl, footIP, errMsg, inclErrs, exclErrs,
-        ALLOW_IPS_NAME, DENY_IPS_NAME, getAdditionalFormElement());
+
+    // Create and layout form
+    Form form = new Form();
+    if (errMsg != null) { layoutIpAllowDenyError(form, errMsg); }
+    layoutIpAllowDenyTable(page, incl, excl, footIP, inclErrs,
+        exclErrs, ALLOW_IPS_NAME, DENY_IPS_NAME);
+    additionalFormLayout(form);
+    layoutIpAllowDenySubmit(form);
+    page.add(form);
+
+    // Finish laying out page
     layoutFooter(page);
     page.write(resp.getWriter());
   }
 
-  protected Composite getAdditionalFormElement() {
-    return null;
+  protected void additionalFormLayout(Composite composite) {
+    // nothing by default
   }
 
   /**

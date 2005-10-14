@@ -1,5 +1,5 @@
 /*
- * $Id: HashCUS.java,v 1.26 2005-10-07 23:46:46 smorabito Exp $
+ * $Id: HashCUS.java,v 1.27 2005-10-14 16:51:31 thib_gc Exp $
  */
 
 /*
@@ -278,8 +278,8 @@ public class HashCUS extends LockssServlet {
   private void displayPage() throws IOException {
     Page page = newPage();
     page.add(getErrBlock());
-    page.add(getExplanationBlock("Hash a CachedUrlSet" +
-				 addFootnote(FOOT_EXPLANATION)));
+    layoutExplanationBlock(page, "Hash a CachedUrlSet" +
+	addFootnote(FOOT_EXPLANATION));
     page.add(makeForm());
     page.add("<br>");
     if (showResult) {

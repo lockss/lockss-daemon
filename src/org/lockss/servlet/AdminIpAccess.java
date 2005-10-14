@@ -1,10 +1,10 @@
 /*
- * $Id: AdminIpAccess.java,v 1.4 2005-01-20 04:25:42 tlipkis Exp $
+ * $Id: AdminIpAccess.java,v 1.5 2005-10-14 16:51:31 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,6 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.servlet;
 
 import org.lockss.config.ConfigManager;
-import org.lockss.daemon.*;
 
 /** Display and update admin UI IP access control lists.
  */
