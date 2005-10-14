@@ -1,5 +1,5 @@
 /*
- * $Id: XmlPropertyLoader.java,v 1.25 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: XmlPropertyLoader.java,v 1.25.2.1 2005-10-14 23:48:35 smorabito Exp $
  */
 
 /*
@@ -110,6 +110,15 @@ public class XmlPropertyLoader {
   }
 
   /**
+   * Representation of the currently nested 'if'.
+   */
+  private static final class If {
+    public boolean inThen = false;
+    public boolean inElse = false;
+    public boolean evalIf = false;
+  }
+
+  /**
    * SAX parser handler.
    */
   class LockssConfigHandler extends DefaultHandler {
@@ -122,6 +131,10 @@ public class XmlPropertyLoader {
     // a conditional statement.
     private Stack m_condStack = new Stack();
 
+    // Stack of if's (and corresponding 'then' and 'else' blocks, if
+    // present) being evaluated.
+    private Stack m_ifStack = new Stack();
+
     // The current state of the test.
     private boolean m_testEval = false;
 
@@ -132,16 +145,6 @@ public class XmlPropertyLoader {
     private boolean m_inValue = false;
     // True iff the parser is currently inside a "list" element.
     private boolean m_inList  = false;
-    // True iff the parser is currently inside an "if" element.
-    private boolean m_inIf = false;
-    // True iff the parser is currently inside an "else" element.
-    private boolean m_inElse = false;
-    // True iff the parser is currently inside a "then" element.
-    private boolean m_inThen = false;
-
-    // False iff the conditions in the propgroup attribute conditionals
-    // are not satisfied.
-    private boolean m_evalIf = false;
 
     // The property tree we're adding to.
     private PropertyTree m_props;
@@ -192,10 +195,13 @@ public class XmlPropertyLoader {
      * </ol>
      */
     private boolean doEval() {
-      return (!m_inIf ||
-	      ((m_evalIf && m_inThen) ||
-	       (!m_evalIf && m_inElse)) ||
-	      (m_evalIf && !m_inThen && !m_inElse));
+      if (m_ifStack.empty()) {
+        return true;
+      }
+      If curIf = (If)m_ifStack.peek();
+      return ((curIf.evalIf && curIf.inThen) ||
+          (!curIf.evalIf && curIf.inElse) ||
+          (curIf.evalIf && !curIf.inThen && !curIf.inElse));
     }
 
     /**
@@ -284,7 +290,7 @@ public class XmlPropertyLoader {
      * Handle encountering the start of an "else" tag.
      */
     private void startElseTag() {
-      m_inElse = true;
+      ((If)m_ifStack.peek()).inElse = true;
     }
 
     /**
@@ -325,17 +331,19 @@ public class XmlPropertyLoader {
      * the conditional attributes and acting on them accordingly.
      */
     private void startIfTag(Attributes attrs) {
-      m_inIf = true;
+      If curIf = new If();
       if (attrs.getLength() > 0) {
-	m_evalIf = evaluateAttributes(attrs);
+	curIf.evalIf = evaluateAttributes(attrs);
       }
+      m_ifStack.push(curIf);
     }
 
     /**
      * Handle encountering a starting "then" tag.
      */
     private void startThenTag() {
-      m_inThen = true;
+      If curIf = (If)m_ifStack.peek();
+      curIf.inThen = true;
     }
 
     /**
@@ -357,7 +365,7 @@ public class XmlPropertyLoader {
      */
     private void startAndTag() {
       if (m_condStack.isEmpty()) {
-	m_evalIf = true; // 'and' expressions start out true
+	((If)m_ifStack.peek()).evalIf = true; // 'and' expressions start out true
       }
 
       m_condStack.push(TAG_AND);
@@ -368,7 +376,7 @@ public class XmlPropertyLoader {
      */
     private void startOrTag() {
       if (m_condStack.isEmpty()) {
-	m_evalIf = false; // 'or' expressions start out false
+        ((If)m_ifStack.peek()).evalIf = false; // 'or' expressions start out false
       }
 
       m_condStack.push(TAG_OR);
@@ -379,7 +387,7 @@ public class XmlPropertyLoader {
      */
     private void startNotTag() {
       if (m_condStack.isEmpty()) {
-	m_evalIf = true; // 'not' expressions start out true
+        ((If)m_ifStack.peek()).evalIf = true;
       }
 
       m_condStack.push(TAG_NOT);
@@ -399,7 +407,7 @@ public class XmlPropertyLoader {
      * Handle encoutering the end of an "else" tag.
      */
     private void endElseTag() {
-      m_inElse = false;
+      ((If)m_ifStack.peek()).inElse = false;
     }
 
     /**
@@ -428,8 +436,7 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "propgroup" tag.
      */
     private void endIfTag() {
-      m_inIf = false;
-      m_evalIf = false; // Reset the evaluation boolean.
+      m_ifStack.pop();
     }
 
 
@@ -437,7 +444,7 @@ public class XmlPropertyLoader {
      * Handle encountering the end of a "then" tag.
      */
     private void endThenTag() {
-      m_inThen = false;
+      ((If)m_ifStack.peek()).inThen = false;
     }
 
     /**
@@ -487,7 +494,7 @@ public class XmlPropertyLoader {
 	// If we're not in a conditional at all, this should be a single
 	// <test>, i.e. <if><test foo="bar"/><then>...</then></if>. Just
 	// apply the current test results
-	m_evalIf = m_testEval;
+	((If)m_ifStack.peek()).evalIf = m_testEval;
       } else {
 	evalCurrentCondStackLevel();
       }
@@ -496,12 +503,13 @@ public class XmlPropertyLoader {
     // Utility method used by endCondTag and endTestTag
     private void evalCurrentCondStackLevel() {
       String cond = (String)m_condStack.peek();
+      If curIf = (If)m_ifStack.peek();
       if (cond == TAG_AND) {
-	m_evalIf &= m_testEval;
+	curIf.evalIf &= m_testEval;
       } else if (cond == TAG_OR) {
-	m_evalIf |= m_testEval;
+	curIf.evalIf |= m_testEval;
       } else if (cond == TAG_NOT) {
-	m_evalIf &= !m_testEval;
+        curIf.evalIf &= !m_testEval;
       }
     }
 
@@ -548,8 +556,8 @@ public class XmlPropertyLoader {
       for (int i = 0; i < len; i++) {
 	String attrName = attrs.getQName(i);
 	if (!conditionals.contains(attrName)) {
-	  log.debug2("Found unexpected conditional '" + attrName +
-		     "', returning false for test.");
+	  log.warning("Found unexpected conditional '" + attrName +
+	              "', returning false for test.");
 	  return false;
 	}
       }

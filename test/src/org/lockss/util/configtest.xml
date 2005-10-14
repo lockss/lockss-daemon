@@ -9,8 +9,8 @@
   <!ELEMENT or (and|or|not|test)*>
   <!ELEMENT not (and|or|not|test)*>
   <!ELEMENT if (and|or|not|then|else|test|property)*>
-  <!ELEMENT then (property)*>
-  <!ELEMENT else (property)*>
+  <!ELEMENT then (if|property)*>
+  <!ELEMENT else (if|property)*>
   <!ATTLIST property name CDATA #REQUIRED>
   <!ATTLIST property value CDATA #IMPLIED>
   <!ATTLIST test hostname CDATA #IMPLIED>
@@ -400,6 +400,113 @@
       </then>
       <else>
 	<property name="not.g" value="bar"/>
+      </else>
+    </if>
+
+    <!-- Test nested ifs -->
+    <if>
+      <test hostname="testhost" /> <!-- true -->
+      <then>
+      	<if>
+          <test group="beta"/> <!-- true -->
+          <then>
+            <property name="nestedIf.a" value="foo" /> <!-- expected -->
+          </then>
+          <else>
+            <property name="nestedIf.a" value="bar" />
+          </else>
+        </if>
+    	</then>
+      <else>
+        <property name="nestedIf.a" value="baz" />
+      </else>
+    </if>
+
+    <if>
+      <test hostname="testhost" /> <!-- true -->
+      <then>
+      	<if>
+          <test group="prod"/> <!-- false -->
+          <then>
+            <property name="nestedIf.b" value="foo" />
+          </then>
+          <else>
+            <property name="nestedIf.b" value="bar" /> <!-- expected -->
+          </else>
+        </if>
+      </then>
+      <else>
+        <property name="nestedIf.b" value="baz" />
+      </else>
+    </if>
+
+    <if>
+      <test hostname="badhost" /> <!-- false -->
+      <then>
+      	<if>
+          <test group="beta"/>
+          <then>
+            <property name="nestedIf.c" value="foo" />
+          </then>
+          <else>
+            <property name="nestedIf.c" value="bar" />
+          </else>
+        </if>
+    	</then>
+      <else>
+        <property name="nestedIf.c" value="baz" /> <!-- expected -->
+      </else>
+    </if>
+
+    <if>
+      <test hostname="badhost" /> <!-- false -->
+      <then>
+      	<if>
+          <test group="beta"/>
+          <then>
+            <property name="nestedIf.d" value="foo" />
+          </then>
+          <else>
+            <property name="nestedIf.d" value="bar" />
+          </else>
+        </if>
+    	</then>
+      <else>
+        <if>
+          <test group="beta"/> <!-- true -->
+          <then>
+            <property name="nestedIf.d" value="baz" /> <!-- expected -->
+          </then>
+          <else>
+            <property name="nestedIf.d" value="quux" />
+          </else>
+        </if>
+      </else>
+    </if>
+
+    <if>
+      <test hostname="badhost" /> <!-- false -->
+      <then>
+      	<if>
+          <test group="beta"/>
+          <then>
+            <property name="nestedIf.e" value="foo" />
+          </then>
+          <else>
+            <property name="nestedIf.e" value="bar" />
+          </else>
+        </if>
+    	</then>
+      <else>
+        <if>
+          <test group="prod"/> <!-- false -->
+          <then>
+            <property name="nestedIf.e" value="baz" />
+          </then>
+          <else>
+            <property name="nestedIf.e" value="quux" /> <!-- expected -->
+          </else>
+        </if>
       </else>
     </if>
 
