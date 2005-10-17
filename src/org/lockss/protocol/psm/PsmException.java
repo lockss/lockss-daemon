@@ -1,10 +1,10 @@
 /*
-* $Id: PsmException.java,v 1.4 2005-06-15 01:17:49 tlipkis Exp $
+* $Id: PsmException.java,v 1.5 2005-10-17 07:49:03 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,11 +32,9 @@ in this Software without prior written authorization from Stanford University.
 package org.lockss.protocol.psm;
 
 /**
- * Root of Protocol State Machine exceptions.  For now these are all
- * unchecked exceptions, but that might change
+ * Root of Protocol State Machine exceptions.
  */
-public class PsmException extends RuntimeException {
-  private Throwable nestedException;
+public class PsmException extends Exception {
 
   /** Create a PsmException with the supplied message. */
   public PsmException(String msg) {
@@ -45,52 +43,19 @@ public class PsmException extends RuntimeException {
 
   /** Create a PsmException wrapping the throwable. */
   public PsmException(Throwable nested) {
-    super(nested.toString());
-    this.nestedException = nested;
+    super(nested);
   }
 
   /** Create a PsmException with the supplied message, wrapping the
    * throwable. */
   public PsmException(String msg, Throwable nested) {
-    super(msg);
-    this.nestedException = nested;
-  }
-
-  /** Return the wrapped exception, if any */
-  public Throwable getNestedException() {
-    return nestedException;
-  }
-
-  /** Print the nested excpetion's stack track is preference to ours. */
-  public void printStackTrace() {
-    if (nestedException != null) {
-      nestedException.printStackTrace();
-    } else {
-      super.printStackTrace();
-    }
-  }
-
-  /** Print the nested excpetion's stack track is preference to ours. */
-  public void printStackTrace(java.io.PrintStream s) {
-    if (nestedException != null) {
-      nestedException.printStackTrace(s);
-    } else {
-      super.printStackTrace(s);
-    }
-  }
-
-  /** Print the nested excpetion's stack track is preference to ours. */
-  public void printStackTrace(java.io.PrintWriter s) {
-    if (nestedException != null) {
-      nestedException.printStackTrace(s);
-    } else {
-      super.printStackTrace(s);
-    }
+    super(msg, nested);
   }
 
   /** Something about the state machine itself is illegal.  Thrown by state
    * machine component constructors */
-  public static class IllegalStateMachine extends PsmException {
+  // XXX rename me
+  public static class IllegalStateMachine extends RuntimeException {
     public IllegalStateMachine(String msg) {
       super(msg);
     }
@@ -137,4 +102,13 @@ public class PsmException extends RuntimeException {
     }
   }
 
+  /** The machine cannot be resumed at the designated state.  Likely means
+   * that the machine definition has changed since the state was saved */
+  public static class IllegalResumptionState extends PsmException {
+    public IllegalResumptionState(String msg) {
+      super(msg);
+    }
+  }
+
+  // 
 }

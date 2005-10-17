@@ -1,5 +1,5 @@
 /*
- * $Id: TestPsmState.java,v 1.4 2005-06-04 21:37:12 tlipkis Exp $
+ * $Id: TestPsmState.java,v 1.5 2005-10-17 07:49:03 tlipkis Exp $
  */
 
 /*
@@ -120,6 +120,16 @@ public class TestPsmState extends LockssTestCase {
     assertSame(r2b, s1.getResponse(Vote));
     assertSame(r2, s1.getResponse(Solicit));
     assertSame(r2, s1.getResponse(new PsmMsgEvent()));
+  }
+
+  public void testResumable() {
+    PsmState s1 = new PsmState("s1");
+    PsmState s2 = new PsmState("s2", action);
+    assertFalse(s1.isResumable());
+    assertSame(s1, s1.setResumable(true));
+    assertTrue(s1.isResumable());
+    assertSame(s1, s1.setResumable(false));
+    assertFalse(s1.isResumable());
   }
 
   public void testIsFinal() {

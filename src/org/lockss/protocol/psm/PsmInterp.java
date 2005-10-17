@@ -1,10 +1,10 @@
 /*
-* $Id: PsmInterp.java,v 1.11 2005-10-11 05:46:14 tlipkis Exp $
+* $Id: PsmInterp.java,v 1.12 2005-10-17 07:49:03 tlipkis Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -48,42 +48,26 @@ public class PsmInterp {
   private boolean isWaiting;
   private int curEventNum;
   private PsmInterpStateBean stateBean;
+  private Checkpointer checkpointer;
 
   /** Create a state machine interpreter that will run the specified state
-   * machine
+   * machine.  The newly created machine should be either {@link
+   * #start()}ed or {@link #resume(PsmInterpStateBean)}d.
    * @param stateMachine the state machine
    * @param userData arbitrary user object for use by state machine's
    * actions
    */
   public PsmInterp(PsmMachine stateMachine, Object userData) {
-    this(stateMachine, userData, null);
-  }
-
-  /**
-   * <p>Create a state machine interpreter that will run the specified
-   * state machine, optionally restoring its state from a
-   * PsmInterpStateBean.</p>
-   *
-   * @param stateMachine the state machine
-   * @param userData arbitrary user object for use by state machine's actions
-   * @param stateBean state bean, or null to create a new state bean and start
-   *                  in the stateMachines initial state.
-   */
-  public PsmInterp(PsmMachine stateMachine, Object userData,
-                   PsmInterpStateBean stateBean) {
     if (stateMachine == null)
-      throw new RuntimeException("stateMachine is null");
-    if (stateBean == null) {
-      stateBean = new PsmInterpStateBean();
-      stateBean.setLastRestorableStateName(stateMachine.getInitialState().getName());
-    }
-    if (stateBean.getLastRestorableStateName() == null) {
-      throw new IllegalArgumentException("state bean does not have a " +
-                "restorable state!");
-    }
-    this.stateBean = stateBean;
+      throw new NullPointerException("null stateMachine");
     this.machine = stateMachine;
     this.userData = userData;
+  }
+
+  /** Set the Checkpointer that will be called whenever the machine enters
+   * a resumable state */
+  public void setCheckpointer(Checkpointer ch) {
+    checkpointer = ch;
   }
 
   /** Return the user object associated with the running state machine */
@@ -94,20 +78,57 @@ public class PsmInterp {
   /** Enter the start state of the state machine, performing any entry
    * action and following transitions until machine waits..  Must be called
    * before processing events. */
-  public synchronized void init() {
+  public synchronized void start() throws PsmException {
+    init();
+    // XXX hack remove this
+    if (hackResumeBean != null) {
+      resume(hackResumeBean);
+      return;
+    }
+    stateBean = new PsmInterpStateBean();
+    enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
+  }
+
+  /** Resume execution of the machine at the state indicated by
+   * resumeStateBean.  The resumable state will receive a PsmEvents.Resume
+   * event. */
+  public synchronized void resume(PsmInterpStateBean resumeStateBean)
+      throws PsmException {
+    init();
+    stateBean = resumeStateBean;
+    String name = stateBean.getLastResumableStateName();
+    if (name == null) {
+      throw new PsmException.IllegalResumptionState("No saved state");
+    }
+    PsmState state = machine.getState(name);
+    if (state == null) {
+      throw new PsmException.IllegalResumptionState("Not found: " + name);
+    }
+    if (!state.isResumable()) {
+      throw new PsmException.IllegalResumptionState("Not resumable: " + name);
+    }
+    enterState(state, PsmEvents.Resume, maxChainedEvents);
+  }
+
+  private PsmInterpStateBean hackResumeBean = null;
+  /** Temporary hack until V3Poller changed to call restore()
+   * @deprecated
+   */
+  public void setResumeStateHack(PsmInterpStateBean resumeStateBean) {
+    hackResumeBean = resumeStateBean;
+  }
+
+  private void init() {
     if (curState != null) {
-      throw new IllegalStateException("already inited");
+      throw new IllegalStateException("already started or resumed");
     }
     isWaiting = false;
-    // enterState(machine.getInitialState(), PsmEvents.Start, maxChainedEvents);
-    enterState(machine.getState(stateBean.getLastRestorableStateName()),
-               PsmEvents.Start, maxChainedEvents);
   }
 
   /** Process an event generated from outside the state machine (such as
    * message recept).  Perform any entry action, follow transitions until
    * machine waits. */
-  public synchronized void handleEvent(PsmEvent event) {
+  public synchronized void handleEvent(PsmEvent event) throws PsmException {
     isWaiting = false;
     handleEvent1(event, maxChainedEvents);
   }
@@ -124,14 +145,6 @@ public class PsmInterp {
 
   public PsmState getCurrentState() {
     return curState;
-  }
-
-  public PsmInterpStateBean getStateBean() {
-    return stateBean;
-  }
-
-  public void setStateBean(PsmInterpStateBean stateBean) {
-    this.stateBean = stateBean;
   }
 
   /** Return true if the machine is waiting for an event. */
@@ -159,12 +172,12 @@ public class PsmInterp {
     }
   }
 
-  private void handleEvent1(PsmEvent event, int eventCtr) {
+  private void handleEvent1(PsmEvent event, int eventCtr) throws PsmException {
     if (curState == null) {
-      throw new IllegalStateException("hasn't been inited");
+      throw new IllegalStateException("Not started or resumed");
     }
     if (event == null) {
-      throw new PsmException.NullEvent("Null event signalled");
+      throw new NullPointerException("Null event");
     }
     if (eventCtr-- <= 0) {
       throw new
@@ -191,8 +204,9 @@ public class PsmInterp {
   }
 
   private void performAction(PsmAction action, PsmEvent triggerEvent,
-			     int eventCtr) {
-    if (log.isDebug2()) log.debug2("Action: " + action);
+			     int eventCtr)
+    throws PsmException {
+  if (log.isDebug2()) log.debug2("Action: " + action);
     eventMonitor(curState, triggerEvent, action, null);
     PsmEvent event;
     try {
@@ -220,11 +234,11 @@ public class PsmInterp {
   }
 
   private void enterState(PsmState newState, PsmEvent triggerEvent,
-			  int eventCtr) {
+			  int eventCtr)
+      throws PsmException {
     if (log.isDebug2()) log.debug2("Enter state: " + newState.getName());
-    if (newState.isRestorable()) {
-      stateBean.setLastRestorableStateName(newState.getName());
-      store();
+    if (newState.isResumable()) {
+      checkpoint(newState);
     }
     eventMonitor(curState, triggerEvent, null, newState);
     curState = newState;
@@ -281,13 +295,21 @@ public class PsmInterp {
     }
 
     /** Send a Timeout event iff no events have been processed since the
-     * timer was set */
-    void timerExpired() {
+     * timer was set.  If the event is not handled, log and ignore it */
+    void timerExpired() { 
       synchronized (PsmInterp.this) {
 	timer = null;
 	if (timingEvent == curEventNum) {
 	  log.debug2("Signalling Timeout event");
-	  handleEvent(PsmEvents.Timeout);
+	  try {
+	    handleEvent(PsmEvents.Timeout);
+	  } catch (PsmException.UnknownEvent e) {
+	    log.warning("Timeout event not handled in state: " + curState);
+	  } catch (PsmException e) {
+	    log.error("In state: " + curState, e);
+	    // XXX Need a field to keep track of error state of machine for
+	    // errors that can't be thrown to user?
+	  }
 	} else {
 	  log.debug2("Not signalling Timeout event, state changed.");
 	}
@@ -322,10 +344,22 @@ public class PsmInterp {
 			      PsmAction action, PsmState newState) {
   }
 
-  /** Hook for subclasses to override if they want to store the state of the
-   * interpreter.  This implementation does nothing.
-   */
-  protected void store() {
+  /** Update the state bean and call the checkpointer to checkpoint the
+   * state */
+  private void checkpoint(PsmState state) {
+    String name = state.getName();
+    if (!name.equals(stateBean.getLastResumableStateName())) {
+      stateBean.setLastResumableStateName(name);
+      if (checkpointer != null) {
+	checkpointer.checkpoint(stateBean);
+      }
+    }
   }
 
+  /** State checkpointer interface */
+  public interface Checkpointer {
+    /** Called whenever the machine enters a resumable state (before the
+     * state actions are executed). */
+    void checkpoint(PsmInterpStateBean resumeStateBean);
+  }
 }
