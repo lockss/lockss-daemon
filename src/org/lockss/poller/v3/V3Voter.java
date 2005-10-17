@@ -1,5 +1,5 @@
 /*
- * $Id: V3Voter.java,v 1.5 2005-10-10 22:19:48 smorabito Exp $
+ * $Id: V3Voter.java,v 1.6 2005-10-17 07:48:25 tlipkis Exp $
  */
 
 /*
@@ -66,7 +66,7 @@ public class V3Voter extends BasePoll {
   public static String PARAM_MAX_NOMINATION_SIZE = PREFIX + "maxNominationSize";
   public static int DEFAULT_MAX_NOMINATION_SIZE = 5;
 
-  private V3VoterInterp stateMachine;
+  private PsmInterp stateMachine;
   private VoterUserData voterUserData;
   private LockssDaemon theDaemon;
   private V3VoterSerializer pollSerializer;
@@ -147,20 +147,31 @@ public class V3Voter extends BasePoll {
     log.debug("Starting poll " + voterUserData.getPollKey());
     PsmMachine machine = VoterStateMachineFactory.
       getMachine(getVoterActionsClass());
+    stateMachine = new PsmInterp(machine, voterUserData);
+    stateMachine.setCheckpointer(voterUserData);
     if (continuedPoll) {
+      // XXX get interp state from voter state
+      PsmInterpStateBean resumeState = null;
+//       try {
+// 	// XXX
+// 	resumeState = pollSerializer.loadVoterInterpState();
+//       } catch (V3Serializer.PollSerializerException ex) {
+//         log.error("Unable to restore poll state!");
+//         stopPoll();
+//         return;
+//       }
       try {
-        stateMachine = new V3VoterInterp(machine, voterUserData,
-                                         pollSerializer.loadVoterInterpState(),
-                                         pollSerializer);
-      } catch (V3Serializer.PollSerializerException ex) {
-        log.error("Unable to restore poll state!");
-        stopPoll();
-        return;
+	stateMachine.resume(resumeState);
+      } catch (PsmException e) {
+	log.warning("State machine error", e);
       }
     } else {
-      stateMachine = new V3VoterInterp(machine, voterUserData, pollSerializer);
+      try {
+	stateMachine.start();
+      } catch (PsmException e) {
+	log.warning("State machine error", e);
+      }
     }
-    stateMachine.init();
   }
 
   public void stopPoll() {
@@ -206,7 +217,11 @@ public class V3Voter extends BasePoll {
     case V3LcapMessage.MSG_REPAIR_REQ:
     case V3LcapMessage.MSG_EVALUATION_RECEIPT:
       PsmMsgEvent evt = V3Events.fromMessage(msg);
-      stateMachine.handleEvent(evt);
+      try {
+	stateMachine.handleEvent(evt);
+      } catch (PsmException e) {
+	log.warning("State machine error", e);
+      }
       return;
     default:
       log.debug2("Ignoring message: " + msg);
@@ -291,10 +306,14 @@ public class V3Voter extends BasePoll {
     // If we've received a vote request, send our vote right away.  Otherwise,
     // wait for a vote request.
     voterUserData.hashingDone(true);
-    if (voterUserData.voteRequested()) {
-      stateMachine.handleEvent(V3Events.evtReadyToVote);
-    } else {
-      stateMachine.handleEvent(V3Events.evtWaitVoteRequest);
+    try {
+      if (voterUserData.voteRequested()) {
+	stateMachine.handleEvent(V3Events.evtReadyToVote);
+      } else {
+	stateMachine.handleEvent(V3Events.evtWaitVoteRequest);
+      }
+    } catch (PsmException e) {
+      log.warning("State machine error", e);
     }
   }
 

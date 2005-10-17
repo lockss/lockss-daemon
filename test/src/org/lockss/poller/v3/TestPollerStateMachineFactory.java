@@ -1,5 +1,5 @@
 /*
- * $Id: TestPollerStateMachineFactory.java,v 1.4 2005-10-11 05:50:29 tlipkis Exp $
+ * $Id: TestPollerStateMachineFactory.java,v 1.5 2005-10-17 07:48:25 tlipkis Exp $
  */
 
 /*
@@ -117,7 +117,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testNoRepairMachineOrder() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(NoRepairTestActions.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -142,7 +142,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testRepairMachineOrder() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(RepairTestActions.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -174,7 +174,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testProveIntroEffortError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors2.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertTrue(interp.isFinalState());
     String[] expectedResults = new String[] {"error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
@@ -186,7 +186,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testSendPollError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors3.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertTrue(interp.isFinalState());
     String[] expectedResults = new String[] {"proveIntroEffort", "error"};
     assertIsomorphic(ListUtil.fromArray(expectedResults),
@@ -198,7 +198,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testWaitPollAckError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors4.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertTrue(interp.isFinalState());
@@ -212,7 +212,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testVerifyPollAckEffortError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors5.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertTrue(interp.isFinalState());
@@ -227,7 +227,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testProveRemainingEffortError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors6.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertTrue(interp.isFinalState());
@@ -244,7 +244,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testSendPollProofError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors7.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertTrue(interp.isFinalState());
@@ -262,7 +262,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testWaitNominateError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors8.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -282,7 +282,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testSendVoteRequestError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors9.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -302,7 +302,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testWaitVoteError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors10.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -326,7 +326,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testTallyVoteError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors11.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -350,7 +350,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testProveRepairEffortError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors12.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -375,7 +375,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testSendRepairRequestError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors13.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -400,7 +400,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testWaitRepairError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors14.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -429,7 +429,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testProcessRepairError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors15.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");
@@ -457,7 +457,7 @@ public class TestPollerStateMachineFactory extends LockssTestCase {
   public void testSendReceiptError() throws Exception {
     PsmMachine mach = PollerStateMachineFactory.getMachine(Errors16.class);
     PsmInterp interp = new PsmInterp(mach, new ArrayList());
-    interp.init();
+    interp.start();
     assertWaiting(interp, "WaitPollAck");
     interp.handleEvent(msgPollAck);
     assertWaiting(interp, "WaitNominate");

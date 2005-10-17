@@ -1,5 +1,5 @@
 /*
- * $Id: VoterUserData.java,v 1.6 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: VoterUserData.java,v 1.7 2005-10-17 07:48:25 tlipkis Exp $
  */
 
 /*
@@ -39,12 +39,14 @@ import java.util.*;
 import org.lockss.plugin.*;
 import org.lockss.poller.*;
 import org.lockss.protocol.*;
+import org.lockss.protocol.psm.*;
 import org.lockss.util.*;
 
 /**
  * Persistent user data state object used by V3Voter state machine.
  */
-public class VoterUserData implements LockssSerializable {
+public class VoterUserData
+  implements PsmInterp.Checkpointer, LockssSerializable {
 
   // XXX: May not be serializable after repair is implemented!
   private LcapMessage pollMessage;
@@ -340,6 +342,14 @@ public class VoterUserData implements LockssSerializable {
 
   public boolean generateVote() throws NoSuchAlgorithmException {
     return voter.generateVote();
+  }
+
+  private PsmInterpStateBean interpStateBean;
+
+  /** State machine has entered resumable state; save state */
+  public void checkpoint(PsmInterpStateBean resumeStateBean) {
+    interpStateBean = resumeStateBean;
+    saveState();
   }
 
   /* Utility methods */

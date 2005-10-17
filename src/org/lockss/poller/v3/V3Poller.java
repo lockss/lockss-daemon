@@ -1,5 +1,5 @@
 /*
- * $Id: V3Poller.java,v 1.8 2005-10-13 22:43:49 troberts Exp $
+ * $Id: V3Poller.java,v 1.9 2005-10-17 07:48:25 tlipkis Exp $
  */
 
 /*
@@ -234,9 +234,13 @@ public class V3Poller extends BasePoll {
    */
   private void pollInnerCircle() {
     for (Iterator it = theVoters.values().iterator(); it.hasNext();) {
-      V3PollerInterp interp = (V3PollerInterp) it.next();
+      PsmInterp interp = (PsmInterp) it.next();
       if (interp != null) {
-        interp.init();
+	try {
+	  interp.start();
+	} catch (PsmException e) {
+	  log.warning("State machine error", e);
+	}
       }
     }
   }
@@ -254,7 +258,7 @@ public class V3Poller extends BasePoll {
       // First pass: determine the correct number of nominees to invite
       // from each peer.
       for (Iterator it = theVoters.values().iterator(); it.hasNext(); ) {
-        V3PollerInterp interp = (V3PollerInterp)it.next();
+        PsmInterp interp = (PsmInterp)it.next();
         if (interp != null) {
           PollerUserData ud = (PollerUserData)interp.getUserData();
           List nominees = ud.getNominees();
@@ -266,7 +270,7 @@ public class V3Poller extends BasePoll {
       // Second pass: Randomly select 'minCount' peers from each voter's
       // nominee list.
       for (Iterator it = theVoters.values().iterator(); it.hasNext(); ) {
-        V3PollerInterp interp = (V3PollerInterp)it.next();
+        PsmInterp interp = (PsmInterp)it.next();
         if (interp != null) {
           PollerUserData ud = (PollerUserData)interp.getUserData();
           List nominees = ud.getNominees();
@@ -283,7 +287,11 @@ public class V3Poller extends BasePoll {
         if (!theVoters.containsKey(id)) {
           log.debug2("Adding new peer " + id + " to the outer circle");
           PsmInterp interp = addOuterCircleVoter(id);
-          interp.init();
+	  try {
+	    interp.start();
+	  } catch (PsmException e) {
+	    log.warning("State machine error", e);
+	  }
         } else {
           log.debug2("We already have peer " + id + " in our list of voters");
         }
@@ -339,11 +347,10 @@ public class V3Poller extends BasePoll {
     ud.setPollerNonce(makePollerNonce());
     PsmMachine machine =
       PollerStateMachineFactory.getMachine(getPollerActionsClass());
-    V3PollerInterp interp = null;
+    PsmInterp interp = new PsmInterp(machine, ud);
+//     interp.setCheckpointer(...);
     if (psmState != null) {
-      interp = new V3PollerInterp(machine, ud, psmState, serializer);
-    } else {
-      interp = new V3PollerInterp(machine, ud, serializer);
+      interp.setResumeStateHack(psmState);
     }
     return interp;
   }
@@ -436,7 +443,7 @@ public class V3Poller extends BasePoll {
     byte[][] initBytes = new byte[len][];
     int ix = 0;
     for (Iterator it = theVoters.values().iterator(); it.hasNext();) {
-      V3PollerInterp interp = (V3PollerInterp) it.next();
+      PsmInterp interp = (PsmInterp) it.next();
       // null check required to skip over removed voters
       if (interp != null) {
         PollerUserData ud = (PollerUserData)interp.getUserData();
@@ -566,7 +573,7 @@ public class V3Poller extends BasePoll {
 
     int digestIndex = 0;
     for (Iterator iter = theVoters.values().iterator(); iter.hasNext(); ) {
-      V3PollerInterp interp = (V3PollerInterp)iter.next();
+      PsmInterp interp = (PsmInterp)iter.next();
       // null check required to skip over removed voters.
       if (interp != null) {
         PollerUserData voterState = (PollerUserData)interp.getUserData();
@@ -621,10 +628,14 @@ public class V3Poller extends BasePoll {
   private void hashComplete() {
     log.debug("Hashing is complete for this CUS.");
     for (Iterator iter = theVoters.values().iterator(); iter.hasNext();) {
-      V3PollerInterp interp = (V3PollerInterp) iter.next();
+      PsmInterp interp = (PsmInterp) iter.next();
       // null check required to skip over removed voters.
       if (interp != null) {
-        interp.handleEvent(V3Events.evtVoteComplete);
+	try {
+	  interp.handleEvent(V3Events.evtVoteComplete);
+	} catch (PsmException e) {
+	  log.warning("State machine error", e);
+	}
         if (log.isDebug2()) {
           PollerUserData ud = (PollerUserData)interp.getUserData();
           log.debug2("Gave peer " + ud.getVoterId()
@@ -691,10 +702,14 @@ public class V3Poller extends BasePoll {
     V3LcapMessage msg = (V3LcapMessage)message;
 
     PeerIdentity sender = msg.getOriginatorId();
-    V3PollerInterp interp = (V3PollerInterp) theVoters.get(sender);
+    PsmInterp interp = (PsmInterp) theVoters.get(sender);
     if (interp != null) {
       PsmMsgEvent evt = V3Events.fromMessage(msg);
-      interp.handleEvent(evt);
+      try {
+	interp.handleEvent(evt);
+      } catch (PsmException e) {
+	log.warning("State machine error", e);
+      }
     } else {
       log.error("No voter user data for peer.  May have " +
                 "been removed from poll: " + msg.getOriginatorId());

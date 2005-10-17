@@ -117,16 +117,16 @@ public class TestV3Serializer extends LockssTestCase {
     File pollDir  = (File)PrivilegedAccessor.getValue(pollerSerializer,
                                                       "pollDir");
     PsmInterpStateBean ub1 = new PsmInterpStateBean();
-    ub1.setLastRestorableStateName("TestState");
+    ub1.setLastResumableStateName("TestState");
     PeerIdentity id = new MockPeerIdentity("10.1.2.3:8000");
     pollerSerializer.savePollerInterpState(id, ub1);
     PsmInterpStateBean ub2 = pollerSerializer.loadPollerInterpState(id);
-    assertEquals(ub1.getLastRestorableStateName(),
-                 ub2.getLastRestorableStateName());
+    assertEquals(ub1.getLastResumableStateName(),
+                 ub2.getLastResumableStateName());
     pollerSerializer = new V3PollerSerializer(pollDir.getName());
     PsmInterpStateBean ub3 = pollerSerializer.loadPollerInterpState(id);
-    assertEquals(ub1.getLastRestorableStateName(),
-                 ub3.getLastRestorableStateName());
+    assertEquals(ub1.getLastResumableStateName(),
+                 ub3.getLastResumableStateName());
   }
 
   public void testSaveAndLoadVoterUserData() throws Exception {
@@ -147,15 +147,15 @@ public class TestV3Serializer extends LockssTestCase {
     File pollDir = (File)PrivilegedAccessor.getValue(voterSerializer,
                                                      "pollDir");
     PsmInterpStateBean ub1 = new PsmInterpStateBean();
-    ub1.setLastRestorableStateName("TestState");
+    ub1.setLastResumableStateName("TestState");
     voterSerializer.saveVoterInterpState(ub1);
     PsmInterpStateBean ub2 = voterSerializer.loadVoterInterpState();
-    assertEquals(ub1.getLastRestorableStateName(),
-                 ub2.getLastRestorableStateName());
+    assertEquals(ub1.getLastResumableStateName(),
+                 ub2.getLastResumableStateName());
     voterSerializer = new V3VoterSerializer(pollDir.getName());
     PsmInterpStateBean ub3 = voterSerializer.loadVoterInterpState();
-    assertEquals(ub1.getLastRestorableStateName(),
-                 ub3.getLastRestorableStateName());
+    assertEquals(ub1.getLastResumableStateName(),
+                 ub3.getLastResumableStateName());
   }
 
   public void testLoadInnerCircleStates() throws Exception {
