@@ -1,5 +1,5 @@
 /*
- * $Id: PropertyTree.java,v 1.4 2005-10-13 22:43:49 troberts Exp $
+ * $Id: PropertyTree.java,v 1.5 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -35,7 +35,7 @@ in this Software without prior written authorization from Stanford University.
 
 // ========================================================================
 // Copyright (c) 1999 Mort Bay Consulting (Australia) Pty. Ltd.
-// $Id: PropertyTree.java,v 1.4 2005-10-13 22:43:49 troberts Exp $
+// $Id: PropertyTree.java,v 1.5 2005-10-19 20:13:05 troberts Exp $
 // ========================================================================
 
 package org.lockss.util;
@@ -212,7 +212,7 @@ public class PropertyTree extends Properties
   /** Return a sub tree of the PropertyTree.
    * Changes made in the sub tree are reflected in the original tree,
    * unless the sub tree is cloned.
-   * @param name The name of the sub node
+   * @param key The name of the sub node
    * @return null if none.
    */
   public PropertyTree getTree(String key)

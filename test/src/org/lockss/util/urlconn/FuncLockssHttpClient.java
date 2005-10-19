@@ -1,5 +1,5 @@
 /*
- * $Id: FuncLockssHttpClient.java,v 1.4 2005-10-11 05:52:45 tlipkis Exp $
+ * $Id: FuncLockssHttpClient.java,v 1.5 2005-10-19 20:13:06 troberts Exp $
  */
 
 /*
@@ -575,7 +575,7 @@ public class FuncLockssHttpClient extends LockssTestCase {
 
   /**
    * Abort the connection after a timeout
-   * @param ms interval to wait before aborting
+   * @param inMs interval to wait before aborting
    * @param conn the LockssUrlConnection to abort
    * @return a ConnAbort
    */

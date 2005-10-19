@@ -1,5 +1,5 @@
 /*
- * $Id: IcpEncoder.java,v 1.6 2005-10-10 16:34:39 thib_gc Exp $
+ * $Id: IcpEncoder.java,v 1.7 2005-10-19 20:13:06 troberts Exp $
  */
 
 /*
@@ -67,7 +67,6 @@ public interface IcpEncoder {
    * argument equal to {@link IcpMessage#ICP_PORT}.</p>
    * @param message
    * @param recipient
-   * @return
    */
   DatagramPacket encode(IcpMessage message,
                         IPAddr recipient);

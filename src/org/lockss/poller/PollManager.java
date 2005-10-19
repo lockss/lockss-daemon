@@ -1,5 +1,5 @@
 /*
- * $Id: PollManager.java,v 1.159 2005-10-11 05:45:39 tlipkis Exp $
+ * $Id: PollManager.java,v 1.160 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -358,7 +358,6 @@ public class PollManager
    * @return <code>Poll</code> which matches the message opcode, or a new
    * poll, or null if the new poll would conflict with a currently running poll.
    * @throws IOException if message opcode is unknown.
-   * @see <code>Poll.createPoll</code>
    */
   synchronized BasePoll findPoll(LcapMessage msg) throws IOException {
     String key = msg.getKey();

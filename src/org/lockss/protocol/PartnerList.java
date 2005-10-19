@@ -1,5 +1,5 @@
 /*
- * $Id: PartnerList.java,v 1.27 2005-03-01 03:51:33 tlipkis Exp $
+ * $Id: PartnerList.java,v 1.28 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -127,23 +127,25 @@ class PartnerList {
     return new ArrayList(partners.keySet());
   }
 
-  /** Inform the PartnerList that a multicast packet was received.
-   * @param ip the address of the packet sender
+  /**
+   * Inform the PartnerList that a multicast packet was received.
+   * @param id the PeerIdentity of the packet sender
    */
   public void multicastPacketReceivedFrom(PeerIdentity id) {
     removePartner(id);
     lastMulticastReceived.put(id, nowLong());
   }
 
-  /** Return true if the id is currently on the partner list
-   * @param ip the address of the packet sender
+  /**
+   * Return true if the id is currently on the partner list
+   * @param id the PeerIdentity to check
    */
   public boolean isPartner(PeerIdentity id) {
     return partners.containsKey(id);
   }
 
   /** Possibly add a partner to the list
-   * @param partnerIP the address of the partner
+   * @param id the PeerIdentity of the partner
    * @probability the probability of adding the partner
    */
   public void addPartner(PeerIdentity id, double probability) {
@@ -195,7 +197,7 @@ class PartnerList {
   }
 
   /** Remove a partner from the list
-   * @param partnerIP the partner to remove
+   * @param id the partner to remove
    */
   public void removePartner(PeerIdentity id) {
     if (isPartner(id)) {

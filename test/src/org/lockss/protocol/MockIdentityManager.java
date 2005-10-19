@@ -1,5 +1,5 @@
 /*
-* $Id: MockIdentityManager.java,v 1.8 2005-10-11 05:50:53 tlipkis Exp $
+* $Id: MockIdentityManager.java,v 1.9 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -268,20 +268,6 @@ public class MockIdentityManager implements IdentityManager {
   public void writeIdentityDbTo(OutputStream out) throws IOException {
 //     throw new UnsupportedOperationException("not implemented");
   }
-
-   /**
-    * Change the the reputation of the peer
-    * @param peer the PeerIdentity
-    * @param reputation the new reputation
-    */
-//    public void setReputation(PeerIdentity peer, int reputation) {
-//      try {
-//        LcapIdentity lid = findLcapIdentity(peer, peer.getIdString());
-//        lid.changeReputation(reputation - lid.getReputation());
-//      } catch (IdentityManager.MalformedIdentityKeyException e) {
-//        throw new RuntimeException(e.toString());
-//      }
-//    }
 
    public void setAgeedForAu(ArchivalUnit au, Map map) {
      agreeMap.put(au, map);

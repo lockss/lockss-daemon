@@ -1,5 +1,5 @@
 /*
- * $Id: ObjectSerializer.java,v 1.11 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: ObjectSerializer.java,v 1.12 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -196,7 +196,7 @@ public abstract class ObjectSerializer {
    * @param outputFile A File instance representing the file into
    *                   which the object is being serialized.
    * @param obj    An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws FileNotFoundException    if the given file is invalid.
@@ -219,7 +219,7 @@ public abstract class ObjectSerializer {
    * @param outputFile A File instance representing the file into
    *                   which the object is being serialized.
    * @param obj    An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws FileNotFoundException    if the given file is invalid.
@@ -242,7 +242,7 @@ public abstract class ObjectSerializer {
    * @param outputStream An output stream instance into which the
    *                     object is being serialized.
    * @param obj          An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws IOException              if input or output fails.
@@ -264,7 +264,7 @@ public abstract class ObjectSerializer {
    * @param outputStream An output stream instance into which the
    *                     object is being serialized.
    * @param obj          An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws IOException              if input or output fails.
@@ -286,7 +286,7 @@ public abstract class ObjectSerializer {
    * @param outputFilename A file name representing the file into which
    *                       the object is being serialized.
    * @param obj            An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws FileNotFoundException    if the given file is invalid.
@@ -309,7 +309,7 @@ public abstract class ObjectSerializer {
    * @param outputFilename A file name representing the file into which
    *                       the object is being serialized.
    * @param obj            An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws FileNotFoundException    if the given file is invalid.
@@ -329,7 +329,7 @@ public abstract class ObjectSerializer {
    * @param writer A Writer instance ready to write to the XML file
    *               into which the object is being serialized.
    * @param obj    An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws IOException              if input or output fails.
@@ -348,7 +348,7 @@ public abstract class ObjectSerializer {
    * @param writer A Writer instance ready to write to the XML file
    *               into which the object is being serialized.
    * @param obj    An object to be serialized.
-   * @throws NullArgumentException    if obj is null.
+   * @throws NullPointerException    if obj is null.
    * @throws NotSerializableException if the object graph is not
    *                                  serializable.
    * @throws IOException              if input or output fails.

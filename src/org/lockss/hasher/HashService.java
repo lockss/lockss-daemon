@@ -1,5 +1,5 @@
 /*
- * $Id: HashService.java,v 1.25 2005-10-07 16:19:56 thib_gc Exp $
+ * $Id: HashService.java,v 1.26 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -137,7 +137,7 @@ public interface HashService extends LockssManager {
      * is null,  or has failed otherwise.
      * @param urlset  the <code>CachedUrlSet</code> being hashed.
      * @param cookie  used to disambiguate callbacks.
-     * @param digest  the <code>MessageDigest</code> object that
+     * @param hasher  the <code>CachedUrlSetHasher</code> object that
      *                contains the hash.
      * @param e       the exception that caused the hash to fail.
      */

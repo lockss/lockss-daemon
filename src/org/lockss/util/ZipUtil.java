@@ -1,5 +1,5 @@
 /*
- * $Id: ZipUtil.java,v 1.2 2005-10-11 05:48:29 tlipkis Exp $
+ * $Id: ZipUtil.java,v 1.3 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public class ZipUtil {
    * Expand the zip file to the specified directory.  Does not allow any
    * files to be created outside of specified dir.
    * @param zip zip file
-   * @param dir dir under which to expand zip contents
+   * @param toDir dir under which to expand zip contents
    * @throws ZipException if the zip file is invalid
    * @throws IOException
    */
@@ -99,7 +99,7 @@ public class ZipUtil {
    * the specified directory.  Does not allow any files to be created
    * outside of specified dir.
    * @param in InputStream open on zip-like content
-   * @param dir dir under which to expand zip contents
+   * @param toDir dir under which to expand zip contents
    * @throws ZipException if the zip file is invalid
    * @throws IOException
    */

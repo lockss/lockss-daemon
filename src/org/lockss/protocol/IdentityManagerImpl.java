@@ -1,5 +1,5 @@
 /*
- * $Id: IdentityManagerImpl.java,v 1.6 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: IdentityManagerImpl.java,v 1.7 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -737,7 +737,7 @@ public class IdentityManagerImpl extends BaseLockssDaemonManager
 
   /**
    * <p>Copies the identity database file to the stream.</p>
-   * @param An OutputStream instance.
+   * @param out OutputStream instance.
    */
   public void writeIdentityDbTo(OutputStream out) throws IOException {
     // XXX hokey way to have the acceess performed by the object that has the

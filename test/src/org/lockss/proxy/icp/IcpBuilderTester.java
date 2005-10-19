@@ -1,5 +1,5 @@
 /*
- * $Id: IcpBuilderTester.java,v 1.6 2005-10-11 05:51:04 tlipkis Exp $
+ * $Id: IcpBuilderTester.java,v 1.7 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -261,7 +261,6 @@ public abstract class IcpBuilderTester extends LockssTestCase {
 
   /**
    * <p>Tests {@link IcpBuilder#makeSourceEcho}.</p>
-   * @throws Exception if an error occurs.
    */
   public void testMakeSourceEcho() {
     // Unimplemented

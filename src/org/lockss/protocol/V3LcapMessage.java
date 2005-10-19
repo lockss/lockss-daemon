@@ -1,5 +1,5 @@
 /*
- * $Id: V3LcapMessage.java,v 1.11 2005-10-11 05:46:14 tlipkis Exp $
+ * $Id: V3LcapMessage.java,v 1.12 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -503,7 +503,6 @@ public class V3LcapMessage extends LcapMessage implements LockssSerializable {
    * @param deadline the deadline for this poll
    * @param origin the identity of the requestor
    * @return message the new V3LcapMessage
-   * @throws IOException if unable to create message
    */
   static public V3LcapMessage makeRequestMsg(PollSpec ps, String key,
                                              byte[] pollerNonce,

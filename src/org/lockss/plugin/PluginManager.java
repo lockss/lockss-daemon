@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.150 2005-10-19 17:05:39 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.151 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -1133,7 +1133,7 @@ public class PluginManager
    * Find an AU's top level CachedUrlSet.
    *
    * @param auId
-   * @return
+   * @return top level <code>CachedUrlSet</code> for the specified auId
    */
   public CachedUrlSet findCachedUrlSet(String auId) {
     ArchivalUnit au = getAuFromId(auId);

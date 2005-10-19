@@ -1,5 +1,5 @@
 /*
-* $Id: BasePoll.java,v 1.16 2005-10-11 05:45:39 tlipkis Exp $
+* $Id: BasePoll.java,v 1.17 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -64,7 +64,7 @@ public abstract class BasePoll implements Poll {
   /**
    * Return the identity of the caller of this poll.
    *
-   * @return
+   * @return PeerIdentity representing the identity of the caller of this poll
    */
   abstract public PeerIdentity getCallerID();
 

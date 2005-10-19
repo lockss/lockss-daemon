@@ -1,5 +1,5 @@
 /*
- * $Id: StatusService.java,v 1.12 2005-10-11 05:44:14 tlipkis Exp $
+ * $Id: StatusService.java,v 1.13 2005-10-19 20:13:06 troberts Exp $
  */
 
 /*
@@ -80,7 +80,7 @@ public interface StatusService {
    * Register a StatusAccessor that knows how to get a table for a certain name
    * @param tableName name of the table that statusAccessor can provide
    * @param statusAccessor StatusAccessor that can provide the specified table
-   * @throws StatusService.MultpleRegistrationException if multiple
+   * @throws StatusService.MultipleRegistrationException if multiple
    * StatusAccessors are registered to the same tableName
    * @throws StatusService.InvalidTableNameException if you attempt to register
    * a StatusAccessor for a table name that has anything other than
@@ -130,7 +130,7 @@ public interface StatusService {
    * ObjectReferenceAccessor can create references.
    * @param objRefAccessor ObjectReferenceAccessor that creates references
    * to named table
-   * @throws StatusService.MultpleRegistrationException if multiple
+   * @throws StatusService.MultipleRegistrationException if multiple
    * ObjectReferenceAccessor are registered for the same table
    * @throws StatusService.InvalidTableNameException if you attempt to register
    * a StatusAccessor for a table name that has anything other than

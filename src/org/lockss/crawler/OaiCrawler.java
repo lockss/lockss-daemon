@@ -1,5 +1,5 @@
 /*
- * $Id: OaiCrawler.java,v 1.12 2005-10-13 22:45:13 troberts Exp $
+ * $Id: OaiCrawler.java,v 1.13 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -102,7 +102,7 @@ public class OaiCrawler extends FollowLinkCrawler {
   }
   /**
    * Here for the test code to override
-   * @return
+   * @return a new instance of OaiHandler
    */
   protected OaiHandler getOaiHandler() {
     return new OaiHandler();

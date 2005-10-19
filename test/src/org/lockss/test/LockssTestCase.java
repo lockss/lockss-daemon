@@ -1,5 +1,5 @@
 /*
- * $Id: LockssTestCase.java,v 1.74 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: LockssTestCase.java,v 1.75 2005-10-19 20:13:06 troberts Exp $
  */
 
 /*
@@ -1503,7 +1503,7 @@ public class LockssTestCase extends TestCase {
 
   /**
    * Close the socket after a timeout
-   * @param ms interval to wait before interrupting
+   * @param inMs interval to wait before interrupting
    * @param sock the Socket to close
    * @return a SockAbort
    */
@@ -1518,7 +1518,7 @@ public class LockssTestCase extends TestCase {
 
   /**
    * Close the socket after a timeout
-   * @param ms interval to wait before interrupting
+   * @param inMs interval to wait before interrupting
    * @param sock the ServerSocket to close
    * @return a SockAbort
    */

@@ -1,5 +1,5 @@
 /*
- * $Id: UrlCacher.java,v 1.21 2005-10-11 05:45:13 tlipkis Exp $
+ * $Id: UrlCacher.java,v 1.22 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -123,14 +123,14 @@ public interface UrlCacher {
   /** Set the host and port the UrlCache should proxy through */
   public void setProxy(String proxyHost, int proxyPort);
 
-  /** Determines whether content will be refetched even if already present
-   * and up-to-date.  The default behavior is to not refetch if not
-   * necessary (by sending an If-Modified-Since header with the date of the
-   * content currently on disk, if any).
-   * @param force if true, fetches the URL unconditionally.
+  /**
+   * Sets various attributes of the fetch operation
+   * Currently these are:
+   * refetch - refetch the content even if it's already present and up to date
+   * clear damage - clear the damage flag for this node if we fetch it
+   * refetch if damage - refetch this content if damaged
+   * @param fetchFlags BitSet encapsulating the fetch flags
    */
-//   public void setForceRefetch(boolean force);
-
   public void setFetchFlags(BitSet fetchFlags);
 
   /** Set a request header, overwriting any previous value */

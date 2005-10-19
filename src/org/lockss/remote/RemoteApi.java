@@ -1,5 +1,5 @@
 /*
- * $Id: RemoteApi.java,v 1.43 2005-10-11 05:46:28 tlipkis Exp $
+ * $Id: RemoteApi.java,v 1.44 2005-10-19 20:13:06 troberts Exp $
  */
 
 /*
@@ -605,8 +605,6 @@ public class RemoteApi
   }
 
   /** Batch create AUs from AU config backup file.
-   * @param doCreate if false, AUs aren't actually configured, just checked
-   * for compatibility, etc.
    * @param configBackupStream InputStream open on backup file to be restored
    * @return BatchAuStatus object describing the results.  If doCreate was
    * false, the status reflects the possibility that the AUs could be

@@ -1,5 +1,5 @@
 /*
- * $Id: PermutationIterator.java,v 1.3 2005-10-11 05:48:30 tlipkis Exp $
+ * $Id: PermutationIterator.java,v 1.4 2005-10-19 20:13:05 troberts Exp $
  */
 
 /*
@@ -82,8 +82,9 @@ public class PermutationIterator implements Iterator {
     return indices;
   }
 
-  /** Unsupported.
-   * @throws UnsupportedOperationException.
+  /**
+   * Unsupported.
+   * @throws UnsupportedOperationException
    */
   public void remove() {
     throw new UnsupportedOperationException();
