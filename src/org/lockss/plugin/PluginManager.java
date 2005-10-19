@@ -1,5 +1,5 @@
 /*
- * $Id: PluginManager.java,v 1.149 2005-10-11 05:45:13 tlipkis Exp $
+ * $Id: PluginManager.java,v 1.150 2005-10-19 17:05:39 tlipkis Exp $
  */
 
 /*
@@ -307,7 +307,9 @@ public class PluginManager
   private void configureAllPlugins(Configuration config) {
     Configuration allPlugs = config.getConfigTree(PARAM_AU_TREE);
     if (!allPlugs.equals(currentAllPlugs)) {
-      for (Iterator iter = allPlugs.nodeIterator(); iter.hasNext(); ) {
+      List plugList = ListUtil.fromIterator(allPlugs.nodeIterator());
+      plugList = CollectionUtil.randomPermutation(plugList);
+      for (Iterator iter = plugList.iterator(); iter.hasNext(); ) {
 	String pluginKey = (String)iter.next();
 	log.debug("Configuring plugin key: " + pluginKey);
 	Configuration pluginConf = allPlugs.getConfigTree(pluginKey);
@@ -490,8 +492,10 @@ public class PluginManager
 
   private void configurePlugin(String pluginKey, Configuration pluginConf,
 			       Configuration oldPluginConf) {
+    List auList = ListUtil.fromIterator(pluginConf.nodeIterator());
+    auList = CollectionUtil.randomPermutation(auList);
     nextAU:
-    for (Iterator iter = pluginConf.nodeIterator(); iter.hasNext(); ) {
+    for (Iterator iter = auList.iterator(); iter.hasNext(); ) {
       String auKey = (String)iter.next();
       String auId = generateAuId(pluginKey, auKey);
       try {
