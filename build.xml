@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 ========================================================================
- $Id: build.xml,v 1.164 2005-10-06 08:16:44 tlipkis Exp $
+ $Id: build.xml,v 1.165 2005-10-19 06:48:47 tlipkis Exp $
  Ant build file for LOCKSS daemon
 ========================================================================
 Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
@@ -181,7 +181,7 @@ Args:
   <property name="commons.codec.jar"
   				  value="${lib}/commons-codec-1.3.jar"/>
   <property name="commons.httpclient.jar"
-  			value="${lib}/commons-httpclient-3.0-nightly.jar"/>
+  			value="${lib}/commons-httpclient-3.0-rc4.jar"/>
   <property name="commons.jxpath.jar"
   				value="${lib}/commons-jxpath-1.2.jar"/>
   <property name="concurrent.jar" value="${lib}/concurrent.jar"/>
