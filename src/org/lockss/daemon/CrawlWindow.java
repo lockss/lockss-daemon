@@ -1,10 +1,10 @@
 /*
- * $Id: CrawlWindow.java,v 1.4 2005-10-19 02:47:35 smorabito Exp $
+ * $Id: CrawlWindow.java,v 1.5 2005-10-19 16:52:54 thib_gc Exp $
  */
 
 /*
 
-Copyright (c) 2000-2003 Board of Trustees of Leland Stanford Jr. University,
+Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
 all rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ package org.lockss.daemon;
 
 import java.util.*;
 
-import org.lockss.util.*;
+import org.lockss.util.LockssSerializable;
 
 /**
  * Interface for crawl windows, used to determine whether a crawl should be
@@ -42,6 +42,7 @@ import org.lockss.util.*;
  * implementations in {@link CrawlWindows}.
  */
 public interface CrawlWindow extends LockssSerializable {
+
   /**
    * Returns true if a crawl is permitted, using the current system time.
    * @return true iff permitted
@@ -54,4 +55,5 @@ public interface CrawlWindow extends LockssSerializable {
    * @return true iff permitted
    */
   public boolean canCrawl(Date date);
+
 }

@@ -1,9 +1,10 @@
 /*
- * $Id: TestEditableDefinablePlugin.java,v 1.13 2005-10-11 05:53:19 tlipkis Exp $
+ * $Id: TestEditableDefinablePlugin.java,v 1.14 2005-10-19 16:52:54 thib_gc Exp $
  */
 
 /*
- Copyright (c) 2000-2004 Board of Trustees of Leland Stanford Jr. University,
+
+ Copyright (c) 2000-2005 Board of Trustees of Leland Stanford Jr. University,
  all rights reserved.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,6 +29,7 @@
  in this Software without prior written authorization from Stanford University.
 
  */
+
 package org.lockss.devtools.plugindef;
 
 import java.io.*;
@@ -226,6 +228,7 @@ public class TestEditableDefinablePlugin
 
     edPlugin.setPluginName(name);
     edPlugin.setPluginVersion(version);
+    edPlugin.setAuCrawlWindow(makeCrawlWindow());
     edPlugin.writeMap(location, mapFile);
     // remove the items so we know we really loaded them
     edPlugin.removePluginName();
@@ -276,14 +279,7 @@ public class TestEditableDefinablePlugin
 
     CrawlWindow defWindow = null;
     CrawlWindow actWindow = null;
-    Calendar start = Calendar.getInstance();
-    start.set(Calendar.HOUR_OF_DAY,1);
-    start.set(Calendar.MINUTE,13);
-    Calendar end   = Calendar.getInstance();
-    start.set(Calendar.HOUR_OF_DAY,22);
-    start.set(Calendar.MINUTE,52);
-    TimeZone timezone = TimeZone.getTimeZone("America/Los_Angeles");
-    CrawlWindow expWindow = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
+    CrawlWindow expWindow = makeCrawlWindow();
 
     // test default
     actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
@@ -298,6 +294,18 @@ public class TestEditableDefinablePlugin
     edPlugin.removeAuCrawlWindow();
     actWindow = (CrawlWindow) edPlugin.getMap().getMapElement(EditableDefinablePlugin.AU_CRAWL_WINDOW);
     assertEquals("default window", defWindow, actWindow);
+  }
+
+  private CrawlWindow makeCrawlWindow() {
+    Calendar start = Calendar.getInstance();
+    start.set(Calendar.HOUR_OF_DAY,1);
+    start.set(Calendar.MINUTE,13);
+    Calendar end   = Calendar.getInstance();
+    start.set(Calendar.HOUR_OF_DAY,22);
+    start.set(Calendar.MINUTE,52);
+    TimeZone timezone = TimeZone.getTimeZone("America/Los_Angeles");
+    CrawlWindow expWindow = new CrawlWindows.Interval(start,end,CrawlWindows.TIME,timezone);
+    return expWindow;
   }
 
   public void testSetAndRemoveAuExpectedBasePath() {
