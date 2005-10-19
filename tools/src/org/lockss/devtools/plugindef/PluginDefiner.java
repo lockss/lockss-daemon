@@ -1,5 +1,5 @@
 /*
- * $Id: PluginDefiner.java,v 1.14 2005-10-11 05:53:07 tlipkis Exp $
+ * $Id: PluginDefiner.java,v 1.15 2005-10-19 02:47:35 smorabito Exp $
  */
 
 /*
@@ -236,7 +236,7 @@ public class PluginDefiner extends JFrame {
     dlg.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x, (frmSize.height - dlgSize.height) / 2 + loc.y);
     dlg.setModal(true);
     dlg.pack();
-    dlg.show();
+    dlg.setVisible(true);
   }
 
   //Overridden so we can exit when window is closed
@@ -372,7 +372,7 @@ public class PluginDefiner extends JFrame {
     Point loc = getLocation();
     dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
                        (frmSize.height - dlgSize.height) / 2 + loc.y);
-    dialog.show();
+    dialog.setVisible(true);
   }
 
   void filtersTestMenuItem_actionPerformed(ActionEvent e) {
@@ -382,7 +382,7 @@ public class PluginDefiner extends JFrame {
     Point loc = getLocation();
     dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
                        (frmSize.height - dlgSize.height) / 2 + loc.y);
-    dialog.show();
+    dialog.setVisible(true);
   }
 
   void validatePluginMenuItem_actionPerformed(ActionEvent e) {
@@ -392,7 +392,7 @@ public class PluginDefiner extends JFrame {
     Point loc = getLocation();
     dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
                        (frmSize.height - dlgSize.height) / 2 + loc.y);
-    dialog.show();
+    dialog.setVisible(true);
   }
 
 

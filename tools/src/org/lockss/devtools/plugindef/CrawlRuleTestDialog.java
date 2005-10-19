@@ -167,7 +167,7 @@ public class CrawlRuleTestDialog extends JDialog {
     //test_dlg.setLocation(r.x  + dlgSize.width, r.y  + dlgSize.height);
     test_dlg.pack();
     setVisible(false);
-    test_dlg.show();
+    test_dlg.setVisible(true);
   }
 
   void cancelButton_actionPerformed(ActionEvent e) {

@@ -1,5 +1,5 @@
 /*
- * $Id: DNSSupportTest.java,v 1.3 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: DNSSupportTest.java,v 1.4 2005-10-19 02:47:35 smorabito Exp $
  */
 
 /*
@@ -382,7 +382,7 @@ public class DNSSupportTest extends LockssTestCase {
     }
 
     for (int i = 0; i < thr.length; i++) {
-      thr[i].stop();
+      thr[i].interrupt();
       thr[i] = null;
     }
     try {

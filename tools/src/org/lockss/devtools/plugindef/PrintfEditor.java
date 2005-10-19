@@ -1,5 +1,5 @@
 /*
- * $Id: PrintfEditor.java,v 1.19 2005-10-05 18:35:52 troberts Exp $
+ * $Id: PrintfEditor.java,v 1.20 2005-10-19 02:47:35 smorabito Exp $
  */
 
 /*
@@ -287,7 +287,7 @@ public class PrintfEditor extends JDialog implements EDPEditor, ConfigParamListe
           Point pos = this.getLocationOnScreen();
           dialog.setLocation(pos.x, pos.y);
           dialog.pack();
-          dialog.show();
+          dialog.setVisible(true);
           StringBuffer fbuf = new StringBuffer("%");
           int width = dialog.getPaddingSize();
           boolean is_zero = dialog.useZero();
