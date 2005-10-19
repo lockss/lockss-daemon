@@ -1,5 +1,5 @@
 /*
- * $Id: FuncFilesystem.java,v 1.3 2005-10-11 05:52:05 tlipkis Exp $
+ * $Id: FuncFilesystem.java,v 1.4 2005-10-19 20:21:58 smorabito Exp $
  */
 
 /*
@@ -46,7 +46,7 @@ public class FuncFilesystem extends LockssTestCase {
   // with "Too many open files" in the message.
   public void testTooManyOpenFiles() throws IOException {
     int nfiles = 1;
-    int nstreams = 10000;
+    int nstreams = 100000;
     File[] files = new File[nfiles];
     for (int ix = 0; ix < nfiles; ix++) {
       files[ix] = FileTestUtil.writeTempFile("test", "foobar");
