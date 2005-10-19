@@ -1,5 +1,5 @@
 /*
- * $Id: FuncHashService.java,v 1.11 2005-10-11 05:49:44 tlipkis Exp $
+ * $Id: FuncHashService.java,v 1.12 2005-10-19 00:23:55 tlipkis Exp $
  */
 
 /*
@@ -88,7 +88,7 @@ public class FuncHashService extends LockssTestCase {
     super.tearDown();
   }
 
-  boolean hashContent(String cookie, int duration, int eachStepTime,
+  MyMockCUSH hashContent(String cookie, int duration, int eachStepTime,
 		      long deadInOrAt, HashService.Callback cb) {
     MyMockCUSH hasher = new MyMockCUSH(cus, duration, eachStepTime, cookie);
     //    hasher.setNumBytes(bytes);
@@ -97,8 +97,11 @@ public class FuncHashService extends LockssTestCase {
     Deadline deadline =
       (TimeBase.isSimulated()
        ? Deadline.at(deadInOrAt) : Deadline.in(deadInOrAt));
-    return svc.scheduleHash(cus.getContentHasher(dig),
-			    deadline, cb, null);
+    if (svc.scheduleHash(cus.getContentHasher(dig), deadline, cb, null)) {
+      return hasher;
+    } else {
+      return null;
+    }
   }
 
   void waitUntilDone() throws Exception {
@@ -148,7 +151,7 @@ public class FuncHashService extends LockssTestCase {
 
   public void testSimulatedTimeStep() throws Exception {
     TimeBase.setSimulated();
-    hashContent("1", 300, -100, 500, hashCB());
+    MyMockCUSH hasher = hashContent("1", 300, -100, 500, hashCB());
     waitUntilDone();
     assertEquals(ListUtil.list(new Work(0, "1", stepBytes(), 1000),
 			       new Work(100, "1", stepBytes(), 1000),
@@ -156,6 +159,7 @@ public class FuncHashService extends LockssTestCase {
 		 work);
     assertEquals(300, cus.actualHashDuration);
     assertNull(cus.actualHashException);
+    assertFalse(hasher.isAborted);
   }
 
   int stepBytes() {
@@ -163,6 +167,19 @@ public class FuncHashService extends LockssTestCase {
 				     HashService.DEFAULT_STEP_BYTES);
   }
 
+  public void testAbort() throws Exception {
+    TimeBase.setSimulated();
+
+    MyMockCUSH hasher = new MyMockCUSH(cus, 1000, -100, "1");
+    cus.setContentHasher(hasher);
+    cus.setEstimatedHashDuration(100);
+    svc.scheduleHash(cus.getContentHasher(dig),
+		     Deadline.at(100), hashCB(), null);
+
+
+    waitUntilDone();
+    assertTrue(hasher.isAborted);
+  }
 
   // hash step work record
   class Work {
@@ -229,6 +246,7 @@ public class FuncHashService extends LockssTestCase {
     int eachStepBytes = 1000;
     String cookie;
 
+    boolean isAborted = false;
     Deadline finishedAt;
     Error toThrow;
 
@@ -266,6 +284,10 @@ public class FuncHashService extends LockssTestCase {
 
     public boolean finished() {
       return finishedAt.expired();
+    }
+
+    public void abortHash() {
+      isAborted = true;
     }
 
     public int hashStep(int numBytes) {

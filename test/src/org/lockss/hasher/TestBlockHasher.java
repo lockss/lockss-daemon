@@ -1,5 +1,5 @@
 /*
- * $Id: TestBlockHasher.java,v 1.2 2005-10-05 23:12:41 troberts Exp $
+ * $Id: TestBlockHasher.java,v 1.3 2005-10-19 00:23:55 tlipkis Exp $
  */
 
 /*
@@ -238,6 +238,42 @@ public class TestBlockHasher extends LockssTestCase {
     testOneContent(100);
   }
 
+  public void testInputStreamIsClosed() throws IOException {
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(urls[4]);
+    MockInputStream is = new MockInputStream();
+    is.setContent("asdf");
+    cu.setInputStream(is);
+    cu.setExists(true);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    assertEquals(4, hashToEnd(hasher, 100));
+    assertTrue(hasher.finished());
+    assertTrue(is.isClosed());
+  }
+
+  public void testInputStreamIsClosedAfterAbort() throws IOException {
+    RecordingEventHandler handRec = new RecordingEventHandler();
+    MockArchivalUnit mau = setupContentTree();
+    MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
+    MockCachedUrl cu = (MockCachedUrl)mau.makeCachedUrl(urls[4]);
+    MockInputStream is = new MockInputStream();
+    is.setContent("asdf");
+    cu.setInputStream(is);
+    cu.setExists(true);
+    MessageDigest[] digs = { dig };
+    byte[][] inits = {null};
+    CachedUrlSetHasher hasher = new BlockHasher(cus, digs, inits, handRec);
+    hasher.hashStep(2);
+    assertFalse(hasher.finished());
+    assertFalse(is.isClosed());
+    hasher.abortHash();
+    assertTrue(is.isClosed());
+  }
+
   String s1 = "foo";
   String s2 = "bar";
   String s3 =
@@ -375,27 +411,6 @@ public class TestBlockHasher extends LockssTestCase {
     testMultipleDigestsWithInit(1);
     testMultipleDigestsWithInit(1000);
   }
-
-//   public void testInputStreamIsClosed() throws IOException {
-//     MockCachedUrl cu = new MockCachedUrl("http://www.example.com");
-//     MockInputStream is = new MockInputStream();
-//     is.setContent("blah");
-//     cu.setInputStream(is);
-//     cu.setExists(true);
-
-//     Vector files = new Vector();
-//     files.add(cu);
-//     MockArchivalUnit mau = newMockArchivalUnit(TEST_URL_BASE);
-//     MockCachedUrlSet cus = (MockCachedUrlSet)mau.getAuCachedUrlSet();
-//     mau.addUrl(TEST_URL_BASE, true, true);
-//     mau.addContent(TEST_URL_BASE,  TEST_FILE_CONTENT+" base");
-//     cus.setHashIterator(files.iterator());
-
-//     BlockHasher hasher = new BlockHasher(cus, dig);
-//     hasher.hashStep(100);
-//     assertTrue(hasher.finished());
-//     assertTrue(is.isClosed());
-//   }
 
   class Event {
     HashBlock hblock;
